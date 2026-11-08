@@ -277,27 +277,27 @@ final class DiskCacheWorker implements Runnable {
           jl.field_d = param6;
           PotEvent.field_l = param9;
           IntrusiveNodeHashTable.field_i = NameEntryPopup.a(0, "lobby", param14, "gameprivacy");
-          c.field_c = NameEntryPopup.a(0, "lobby", param14, "ratedgame");
+          QuickChatMenuSupport.field_c = NameEntryPopup.a(0, "lobby", param14, "ratedgame");
           RasterBuffer.field_a = NameEntryPopup.a(0, "lobby", param14, "opentome");
           hh.field_f = NameEntryPopup.a(0, "lobby", param14, "allowspectators");
           pn.field_i = new String[5];
           pn.field_i[4] = CipherPacketBuffer.multiconstOpen;
           pn.field_i[2] = DialogLayer.multiconstFriends;
-          pn.field_i[0] = ab.multiconstInviteOnly;
+          pn.field_i[0] = ArchiveAvailabilitySupport.multiconstInviteOnly;
           pn.field_i[1] = UsernameAvailabilityValidator.multiconstClan;
           pn.field_i[3] = hf.multiconstSimilarRating;
-          c.field_e = new UiComponent(0L, (UiComponent) null);
-          d.field_f = new UiComponent(0L, lf.field_d, jh.muLobbyName);
+          QuickChatMenuSupport.field_e = new UiComponent(0L, (UiComponent) null);
+          MeshBoundsSupport.field_f = new UiComponent(0L, lf.field_d, jh.muLobbyName);
           if (param4 <= 59) {
             return;
           }
           CueAim.field_a = new UiComponent(0L, Under13NoticePanel.field_Q, IntKeyLookup.muLobbyRating);
           DebugTuningSlider.field_c = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), AlternateLongAndTextLoginPayload.field_n, RasterBuffer.field_f);
-          c.field_e.addChild(116, d.field_f);
+          QuickChatMenuSupport.field_e.addChild(116, MeshBoundsSupport.field_f);
           if (tq.field_p) {
-            c.field_e.addChild(-94, CueAim.field_a);
+            QuickChatMenuSupport.field_e.addChild(-94, CueAim.field_a);
           }
-          c.field_e.addChild(-113, DebugTuningSlider.field_c);
+          QuickChatMenuSupport.field_e.addChild(-113, DebugTuningSlider.field_c);
           DebugTuningSlider.field_c.viewport.copyStyle((byte) -87, AlignedIconLabel.field_Lb);
           DebugTuningSlider.field_c.viewport.verticalAlignment = 1;
           var23 = DebugTuningSlider.field_c.viewport;
@@ -310,7 +310,7 @@ final class DiskCacheWorker implements Runnable {
           pk.field_a = new UiComponent(0L, CheckboxWidget.field_P);
           MessageDialogContent.field_N = new UiComponent(0L, lf.field_d, IntKeyLookup.muGamelistStatus);
           pp.field_c = new UiComponent(0L, f.field_e, ByteStorage.muGamelistOwner);
-          KillerBallSkin.field_p = new UiComponent(0L, f.field_e, a.muGamelistPlayers);
+          KillerBallSkin.field_p = new UiComponent(0L, f.field_e, Cp1252DecodingSupport.muGamelistPlayers);
           Camera.field_g = new UiComponent(0L, f.field_e, ol.muGamelistAvgRating);
           DualLinkDequeIterator.field_e = new UiComponent(0L, f.field_e, LabeledChildWidget.muGamelistOptions);
           l.field_f = new UiComponent(0L, Under13NoticePanel.field_Q, ml.muGamelistElapsedTime);
@@ -359,54 +359,54 @@ final class DiskCacheWorker implements Runnable {
           LimitedRandomAccessFile.field_j.verticalAlignment = 1;
           var16 = LimitedRandomAccessFile.field_j;
           var16.horizontalAlignment = 1;
-          cl.field_d = new UiComponent(0L, (UiComponent) null);
+          ProjectedLineSupport.field_d = new UiComponent(0L, (UiComponent) null);
           MarkerSliderPainter.field_c = new UiComponent(0L, AlignedIconLabel.field_Lb);
           MarkerSliderPainter.field_c.horizontalAlignment = 1;
           LoginRequiredScreen.field_M = new UiComponent(0L, lf.field_d, jh.muLobbyName);
           jh.field_a = new UiComponent(0L, Under13NoticePanel.field_Q, IntKeyLookup.muLobbyRating);
           DualLinkDeque.field_f = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), AlternateLongAndTextLoginPayload.field_n, RasterBuffer.field_f);
-          cl.field_d.addChild(-119, MarkerSliderPainter.field_c);
-          cl.field_d.addChild(-104, LoginRequiredScreen.field_M);
+          ProjectedLineSupport.field_d.addChild(-119, MarkerSliderPainter.field_c);
+          ProjectedLineSupport.field_d.addChild(-104, LoginRequiredScreen.field_M);
           if (tq.field_p) {
-            cl.field_d.addChild(9, jh.field_a);
+            ProjectedLineSupport.field_d.addChild(9, jh.field_a);
           }
-          cl.field_d.addChild(-109, DualLinkDeque.field_f);
+          ProjectedLineSupport.field_d.addChild(-109, DualLinkDeque.field_f);
           ContentTransitionDialog.field_ob = new UiComponent(0L, tg.field_d, dk.returntolobby.toUpperCase());
           ii.field_e = new UiComponent(0L, rl.field_d);
           MusicCrossfadeStream.field_x = new UiComponent(0L, CheckboxWidget.field_P);
-          oi.field_q = new UiComponent(0L, bh.field_b, ArchiveRequest.muOptions.toUpperCase());
+          oi.field_q = new UiComponent(0L, MirroredSceneSupport.field_b, ArchiveRequest.muOptions.toUpperCase());
           oi.field_v = new UiComponent[4 + param3];
           FreePlayRules.field_f = new AlignedIconLabel[param3 + 4][];
-          oi.field_v[0] = new UiComponent(0L, GameApplet.field_a, fr.muOptionsWhocanjoin);
+          oi.field_v[0] = new UiComponent(0L, GameApplet.field_a, DelayedServerPacket.muOptionsWhocanjoin);
           FreePlayRules.field_f[0] = new AlignedIconLabel[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            FreePlayRules.field_f[0][1 + var17_int] = new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, IntrusiveNodeHashTable.field_i[var17_int], pn.field_i[var17_int]);
+            FreePlayRules.field_f[0][1 + var17_int] = new AlignedIconLabel(0L, FaceNormal.field_c, (UiComponent) null, UiWidget.field_A, IntrusiveNodeHashTable.field_i[var17_int], pn.field_i[var17_int]);
           }
           if (DiskArchiveRequest.field_T.length >= 2) {
-            oi.field_v[1] = new UiComponent(0L, GameApplet.field_a, ab.muOptionsPlayers);
+            oi.field_v[1] = new UiComponent(0L, GameApplet.field_a, ArchiveAvailabilitySupport.muOptionsPlayers);
             array$0 = new AlignedIconLabel[DiskArchiveRequest.field_T.length + 1];
             FreePlayRules.field_f[1] = array$0;
-            FreePlayRules.field_f[1][0] = new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, AudioService.muOptionsDontmind);
+            FreePlayRules.field_f[1][0] = new AlignedIconLabel(0L, FaceNormal.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, AudioService.muOptionsDontmind);
             for (var17_intLifetime1 = 0; DiskArchiveRequest.field_T.length > var17_intLifetime1; var17_intLifetime1++) {
-              FreePlayRules.field_f[1][1 + var17_intLifetime1] = new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, Integer.toString(DiskArchiveRequest.field_T[var17_intLifetime1]));
+              FreePlayRules.field_f[1][1 + var17_intLifetime1] = new AlignedIconLabel(0L, FaceNormal.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, Integer.toString(DiskArchiveRequest.field_T[var17_intLifetime1]));
             }
           }
           oi.field_v[2] = new UiComponent(0L, GameApplet.field_a, BitmapTextLayout.muOptionsAllowSpectate);
-          FreePlayRules.field_f[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, AudioService.muOptionsDontmind), new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, hh.field_f[0], ByteStorage.no), new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, hh.field_f[1], rm.yes)};
+          FreePlayRules.field_f[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, FaceNormal.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, AudioService.muOptionsDontmind), new AlignedIconLabel(0L, FaceNormal.field_c, (UiComponent) null, UiWidget.field_A, hh.field_f[0], ByteStorage.no), new AlignedIconLabel(0L, FaceNormal.field_c, (UiComponent) null, UiWidget.field_A, hh.field_f[1], rm.yes)};
           if (1 < ji.field_g) {
             oi.field_v[3] = new UiComponent(0L, GameApplet.field_a, pk.muOptionsRatedgametype);
             array$1 = new AlignedIconLabel[1 + ji.field_g];
             FreePlayRules.field_f[3] = array$1;
-            FreePlayRules.field_f[3][0] = new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, AudioService.muOptionsDontmind);
+            FreePlayRules.field_f[3][0] = new AlignedIconLabel(0L, FaceNormal.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, AudioService.muOptionsDontmind);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < ji.field_g; var17_intLifetime2++) {
-              FreePlayRules.field_f[3][var17_intLifetime2 + 1] = new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, ln.field_r[var17_intLifetime2]);
+              FreePlayRules.field_f[3][var17_intLifetime2 + 1] = new AlignedIconLabel(0L, FaceNormal.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, ln.field_r[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param3 > var17_intLifetime3; var17_intLifetime3++) {
             oi.field_v[var17_intLifetime3 + 4] = new UiComponent(0L, GameApplet.field_a, ValidationMessageWidget.field_R[var17_intLifetime3]);
             array$2 = new AlignedIconLabel[ArchiveLoadSequence.b(255, (int) ArchiveRequest.field_E[var17_intLifetime3]) + 1];
             FreePlayRules.field_f[4 + var17_intLifetime3] = array$2;
-            FreePlayRules.field_f[4 + var17_intLifetime3][0] = new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, AudioService.muOptionsDontmind);
+            FreePlayRules.field_f[4 + var17_intLifetime3][0] = new AlignedIconLabel(0L, FaceNormal.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) null, AudioService.muOptionsDontmind);
             for (var18 = 0; var18 < (255 & ArchiveRequest.field_E[var17_intLifetime3]); var18++) {
               if (null == jl.field_d) {
                 var19_ref = null;
@@ -426,7 +426,7 @@ final class DiskCacheWorker implements Runnable {
               } else {
                 var20 = null;
               }
-              FreePlayRules.field_f[4 + var17_intLifetime3][1 + var18] = new AlignedIconLabel(0L, ef.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) (var19_ref), (String) (var20));
+              FreePlayRules.field_f[4 + var17_intLifetime3][1 + var18] = new AlignedIconLabel(0L, FaceNormal.field_c, (UiComponent) null, UiWidget.field_A, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param3 > var17_intLifetime4; var17_intLifetime4++) {
@@ -443,7 +443,7 @@ final class DiskCacheWorker implements Runnable {
             }
           }
           kc.field_b = new UiComponent(0L, mg.field_c);
-          d.field_c = new UiComponent(0L, mg.field_c);
+          MeshBoundsSupport.field_c = new UiComponent(0L, mg.field_c);
           TextHotspotRegion.field_o = new UiComponent(0L, TimeTrialSelectScreen.field_M);
           TextHotspotRegion.field_o.copyStyle((byte) -87, AlignedIconLabel.field_Lb);
           var17 = TextHotspotRegion.field_o;
@@ -466,7 +466,7 @@ final class DiskCacheWorker implements Runnable {
             }
           }
           Bzip2DecoderState.field_f.addChild(-120, kc.field_b);
-          Bzip2DecoderState.field_f.addChild(-117, d.field_c);
+          Bzip2DecoderState.field_f.addChild(-117, MeshBoundsSupport.field_c);
           Bzip2DecoderState.field_f.addChild(-121, TextHotspotRegion.field_o);
           Pool.field_P = new UiComponent(0L, DiskArchiveRequest.field_J, LimitedRandomAccessFile.muInvitePlayers.toUpperCase());
           AccountContentDialog.field_vb = new UiComponent(0L, rp.field_d, th.close.toUpperCase());
@@ -614,7 +614,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 10) {
           instructionsTitles = (String[]) null;
         }

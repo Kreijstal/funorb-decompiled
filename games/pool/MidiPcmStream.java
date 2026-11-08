@@ -271,11 +271,11 @@ final class MidiPcmStream extends PcmStream {
             return stackIn_7_0;
           }
           if (3 == param1) {
-            stackIn_11_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, da.muXEnteredOtherGame);
+            stackIn_11_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, MenuLabelSupport.muXEnteredOtherGame);
             return stackIn_11_0;
           }
           if (param1 == 4) {
-            stackIn_15_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, s.muXLeftLobby);
+            stackIn_15_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, DisplayModeSupport.muXLeftLobby);
             return stackIn_15_0;
           }
           if (param1 == 5) {

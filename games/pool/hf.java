@@ -44,7 +44,7 @@ final class hf {
           return dq.field_i;
         }
         if (var2 == 2) {
-          return bc.field_c;
+          return FontPaletteSupport.field_c;
         }
         var2Lifetime1 = -97 % ((14 - param1) / 35);
         return null;

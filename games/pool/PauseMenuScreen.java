@@ -59,51 +59,51 @@ class PauseMenuScreen extends MenuScreen {
     }
 
     final static void applyScreenLayouts(byte param0) {
-        MenuScreen var1 = s.field_c[0];
+        MenuScreen var1 = DisplayModeSupport.field_c[0];
         var1.buttonSpacing = 26;
         var1.buttonTop = 153;
         var1.drawsBackground = true;
         var1.hasButtonBackdrop = false;
-        MenuScreen var4 = s.field_c[13];
+        MenuScreen var4 = DisplayModeSupport.field_c[13];
         var4.enableFramedPanel(20, 100, -10);
         var4.hasButtonBackdrop = true;
         var4.buttonTop = 370;
         var4.framedPanel = true;
-        MenuScreen var5 = s.field_c[1];
+        MenuScreen var5 = DisplayModeSupport.field_c[1];
         var5.enableFramedPanel(120, 100, -10);
         var5.hasButtonBackdrop = true;
         var5.buttonSpacing = 60;
-        var1 = s.field_c[6];
+        var1 = DisplayModeSupport.field_c[6];
         var1.hasButtonBackdrop = true;
         var1.framedPanel = true;
         var1.buttonTop = 365;
         int var2 = 240;
         var1.buttonRight = -20 + (SoftwareRasterizer.width >> 1);
         var1.buttonLeft = (SoftwareRasterizer.width >> 1) - var2 - 20;
-        MenuScreen var6 = s.field_c[7];
+        MenuScreen var6 = DisplayModeSupport.field_c[7];
         var6.enableFramedPanel(40, 85, -10);
         var6.hasButtonBackdrop = true;
-        MenuScreen var7 = s.field_c[18];
+        MenuScreen var7 = DisplayModeSupport.field_c[18];
         var7.enableFramedPanel(20, 80, -10);
         var7.buttonLeft = 80;
         var7.hasButtonBackdrop = true;
         var7.buttonTop = 390;
-        MenuScreen var8 = s.field_c[17];
+        MenuScreen var8 = DisplayModeSupport.field_c[17];
         var8.enableFramedPanel(20, 80, -10);
         var8.buttonTop = 390;
         var8.buttonLeft = 80;
         var8.hasButtonBackdrop = true;
-        MenuScreen var9 = s.field_c[15];
+        MenuScreen var9 = DisplayModeSupport.field_c[15];
         var9.enableFramedPanel(20, 85, -10);
         var9.hasButtonBackdrop = true;
         var9.buttonTop = 120;
         var9.buttonSpacing = 45;
-        MenuScreen var10 = s.field_c[16];
+        MenuScreen var10 = DisplayModeSupport.field_c[16];
         var10.enableFramedPanel(20, 85, -10);
         var10.hasButtonBackdrop = true;
         var10.buttonSpacing = 45;
         var10.buttonTop = 120;
-        MenuScreen var11 = s.field_c[14];
+        MenuScreen var11 = DisplayModeSupport.field_c[14];
         var11.framedPanel = true;
         var11.setPanelBounds(-320 + SoftwareRasterizer.width, 140, 160, 300, 0);
         var11.buttonSpacing = 30;
@@ -111,7 +111,7 @@ class PauseMenuScreen extends MenuScreen {
         var11.buttonTop = 200;
         var11.buttonLeft = -240 + SoftwareRasterizer.width >> 1;
         var11.hasButtonBackdrop = false;
-        MenuScreen var12 = s.field_c[2];
+        MenuScreen var12 = DisplayModeSupport.field_c[2];
         var12.setPanelBounds(-320 + SoftwareRasterizer.width, 140, 160, 280, 0);
         var12.buttonRight = SoftwareRasterizer.width + 240 >> 1;
         var12.buttonLeft = SoftwareRasterizer.width - 240 >> 1;
@@ -119,30 +119,30 @@ class PauseMenuScreen extends MenuScreen {
         var12.hasButtonBackdrop = true;
         var12.buttonSpacing = 50;
         var12.buttonTop = 205;
-        var1 = s.field_c[9];
+        var1 = DisplayModeSupport.field_c[9];
         var1.drawsBackground = false;
-        var1 = s.field_c[10];
+        var1 = DisplayModeSupport.field_c[10];
         var1.drawsBackground = false;
-        var1 = s.field_c[11];
+        var1 = DisplayModeSupport.field_c[11];
         var1.drawsBackground = false;
-        var1 = s.field_c[12];
+        var1 = DisplayModeSupport.field_c[12];
         var1.drawsBackground = false;
-        var1 = s.field_c[8];
+        var1 = DisplayModeSupport.field_c[8];
         var1.drawsBackground = false;
-        var1 = s.field_c[9];
+        var1 = DisplayModeSupport.field_c[9];
         var1.drawsBackground = false;
-        var1 = s.field_c[3];
+        var1 = DisplayModeSupport.field_c[3];
         var1.drawsBackground = false;
-        var1 = s.field_c[22];
+        var1 = DisplayModeSupport.field_c[22];
         var1.drawsBackground = false;
-        var1 = s.field_c[24];
+        var1 = DisplayModeSupport.field_c[24];
         var1.drawsBackground = false;
-        var1 = s.field_c[23];
+        var1 = DisplayModeSupport.field_c[23];
         var1.drawsBackground = false;
-        var1 = s.field_c[21];
+        var1 = DisplayModeSupport.field_c[21];
         int var3 = 122 / ((param0 + 66) / 32);
         var1.drawsBackground = true;
-        MenuScreen var13 = s.field_c[19];
+        MenuScreen var13 = DisplayModeSupport.field_c[19];
         var13.hasButtonBackdrop = true;
         var13.buttonSpacing = 40;
         var13.buttonTop = 260;
@@ -458,7 +458,7 @@ class PauseMenuScreen extends MenuScreen {
         return;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 8) {
           return;
         }

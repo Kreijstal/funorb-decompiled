@@ -243,7 +243,7 @@ final class OpacityWidget extends SingleChildWidget {
         return sm.field_C != null ? true : false;
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         statusWantsToDraw = null;
         field_P = null;
         field_O = null;

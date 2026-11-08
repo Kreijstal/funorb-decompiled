@@ -672,7 +672,7 @@ final class RankingsScreen extends MenuScreen {
                         md.field_c[var9] = (byte) 0;
                       }
                     } else {
-                      md.field_c[var7 / 8] = (byte)cq.a((int) md.field_c[var7 / 8], 1 << ArchiveLoadSequence.b(var7, 7));
+                      md.field_c[var7 / 8] = (byte)TutorialFactory.bitwiseXor((int) md.field_c[var7 / 8], 1 << ArchiveLoadSequence.b(var7, 7));
                     }
                   }
                 }
@@ -788,7 +788,7 @@ final class RankingsScreen extends MenuScreen {
                   TextLayout.field_a[var7] != null &&
                   (~DateInputWidget.field_S & TextLayout.field_a[var7][var9]) > 0) {
                   var14 = 1;
-                  var15 = s.highestOneBit(TextLayout.field_a[var7][var9] & ~DateInputWidget.field_S, (byte) 87);
+                  var15 = DisplayModeSupport.highestOneBit(TextLayout.field_a[var7][var9] & ~DateInputWidget.field_S, (byte) 87);
                 }
                 if (Pocket.field_j != null &&
                   null != Pocket.field_j[var7] &&
@@ -890,7 +890,7 @@ final class RankingsScreen extends MenuScreen {
                       AgeValidator.field_s[var18 / 8] = (byte)ArchiveLoadSequence.b((int) AgeValidator.field_s[var18 / 8], ~(1 << ArchiveLoadSequence.b(7, var18)));
                     }
                   } else {
-                    AgeValidator.field_s[(var9 + var6Lifetime4) / 8] = (byte)cq.a((int) AgeValidator.field_s[(var9 + var6Lifetime4) / 8], 1 << ArchiveLoadSequence.b(var9 + var6Lifetime4, 7));
+                    AgeValidator.field_s[(var9 + var6Lifetime4) / 8] = (byte)TutorialFactory.bitwiseXor((int) AgeValidator.field_s[(var9 + var6Lifetime4) / 8], 1 << ArchiveLoadSequence.b(var9 + var6Lifetime4, 7));
                   }
                 } else {
                   if (var16Lifetime1 == 0 &&
@@ -988,7 +988,7 @@ final class RankingsScreen extends MenuScreen {
                   !PoolUiText.field_b) {
                   var22 = null;
                   if (ln.field_p) {
-                    var22 = "</col>" + ab.muOptionsPlayers + "<col=A00000>";
+                    var22 = "</col>" + ArchiveAvailabilitySupport.muOptionsPlayers + "<col=A00000>";
                     var25Lifetime1 = var22;
                     var22 = var25Lifetime1;
                     var25Lifetime1Lifetime1 = var22;
@@ -1158,7 +1158,7 @@ final class RankingsScreen extends MenuScreen {
             param3 < 2) {
             var7 = FreePlayRules.field_e.field_U[param1];
             var5 = var7;
-            stackIn_8_0 = ag.createTextLabelSprite((byte) 89, var7[var7.length >> 1], param0);
+            stackIn_8_0 = ScreenProjectionSupport.createTextLabelSprite((byte) 89, var7[var7.length >> 1], param0);
             return stackIn_8_0;
           }
           stackIn_6_0 = super.createButtonLabel(param0, param1, 0, param3);
@@ -1253,14 +1253,14 @@ final class RankingsScreen extends MenuScreen {
         ModernTableScene.field_Z.drawCentered(ImageProducerRasterBuffer.ratingPlayed, LongAndTextLoginPayload.field_i[1], var2, var3Lifetime1, -1);
         ModernTableScene.field_Z.drawCentered(TextLineLayout.ratingWon, LongAndTextLoginPayload.field_i[2], var2, var3Lifetime1, -1);
         ModernTableScene.field_Z.drawCentered(ShotRecord.ratingLost, LongAndTextLoginPayload.field_i[3], var2, var3Lifetime1, -1);
-        ModernTableScene.field_Z.drawCentered(um.ratingDrawn, LongAndTextLoginPayload.field_i[4], var2, var3Lifetime1, -1);
+        ModernTableScene.field_Z.drawCentered(MeshBase.ratingDrawn, LongAndTextLoginPayload.field_i[4], var2, var3Lifetime1, -1);
         if (param0 <= 36) {
           return;
         }
         regionExit1: {
           var2 = var2 + (8 + (ModernTableScene.field_Z.maxDescent + sa.field_h.maxAscent));
           if (!BallSkin.field_b.field_v) {
-            var4 = cl.pleasewaitDotdotdot;
+            var4 = ProjectedLineSupport.pleasewaitDotdotdot;
           } else {
             if (BallSkin.field_b.field_n != null) {
               var4 = Camera.ratingNoratings;
@@ -1397,10 +1397,10 @@ final class RankingsScreen extends MenuScreen {
     }
 
     final static void d(int param0, boolean param1) {
-        fl.field_q.drawRoot((byte) -79, param1);
+        IntLookupQuery.field_q.drawRoot((byte) -79, param1);
         jj var2 = ThemeSelectScreen.field_J;
         if (var2 != null) {
-          var2.renderWidgetPassesAndTooltip(fl.field_q.screenX, (byte) 74, fl.field_q.screenY);
+          var2.renderWidgetPassesAndTooltip(IntLookupQuery.field_q.screenX, (byte) 74, IntLookupQuery.field_q.screenY);
         }
         if (param0 >= -74) {
           field_I = (int[]) null;

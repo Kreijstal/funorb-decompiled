@@ -79,7 +79,7 @@ final class AlphaFont extends BitmapFont {
         return param1;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyphVertical(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -122,7 +122,7 @@ final class AlphaFont extends BitmapFont {
           if (!param6) {
             AlphaFont.a(SoftwareRasterizer.pixels, this.field_U[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           } else {
-            BinaryBitmapFont.a(SoftwareRasterizer.pixels, this.field_U[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+            BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.pixels, this.field_U[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           }
           return;
         }
@@ -190,7 +190,7 @@ final class AlphaFont extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphVerticalAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var9;
         int var10;
         int var11;
@@ -233,7 +233,7 @@ final class AlphaFont extends BitmapFont {
           if (!param7) {
             AlphaFont.a(SoftwareRasterizer.pixels, this.field_U[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           } else {
-            BinaryBitmapFont.a(SoftwareRasterizer.pixels, this.field_U[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+            BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.pixels, this.field_U[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           }
           return;
         }

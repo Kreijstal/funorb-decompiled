@@ -156,7 +156,7 @@ abstract class TextLayout {
             TextLayout.a((int[]) null, -54, (int[]) null, -45, (int[]) null, (byte) 22, 22, (int[]) null, (int[]) null, (byte) 2, (int[]) null);
           }
           for (var4 = 0; param1.length > var4; var4++) {
-            var6[var4] = de.scaleByPowerOfTwo(-1, param0, param1[var4]);
+            var6[var4] = DebugTuningSupport.scaleByPowerOfTwo(-1, param0, param1[var4]);
           }
           stackIn_6_0 = var6;
           return stackIn_6_0;
@@ -275,15 +275,15 @@ abstract class TextLayout {
                 var11_intLifetime2 = 0;
                 if (var13 == null) {
                   ThreeSliceButtonPainter.field_w = var14.field_f;
-                  fr.field_u = var14.field_m;
+                  DelayedServerPacket.field_u = var14.field_m;
                 } else {
-                  fr.field_u = var14.field_k;
+                  DelayedServerPacket.field_u = var14.field_k;
                   ThreeSliceButtonPainter.field_w = var14.field_i;
                 }
               } else {
                 var11_intLifetime2 = 2;
               }
-              bo.$cfr$intArgs$a$29f688675a86(var14.field_j[0], param6, 19, var14.field_h[1], var14.field_q[1], var14.field_q[0], var14.field_h[0], var11_intLifetime2, var14.field_j[1], param7, var12Lifetime1);
+              FixedAngleSupport.$cfr$intArgs$a$29f688675a86(var14.field_j[0], param6, 19, var14.field_h[1], var14.field_q[1], var14.field_q[0], var14.field_h[0], var11_intLifetime2, var14.field_j[1], param7, var12Lifetime1);
             }
             var13 = var14;
             var14 = var15Lifetime4;

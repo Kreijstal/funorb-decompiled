@@ -16,7 +16,7 @@ final class ChatMessageLine extends IntrusiveNode {
     static boolean field_o;
     int field_p;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         tutorialEightBallAftergrouppot = null;
         field_w = null;
         gameoptMembersonly = null;
@@ -29,7 +29,7 @@ final class ChatMessageLine extends IntrusiveNode {
         int var2 = sa.field_h.b(this.text);
         this.renderedSprite = new Sprite(2 + var2, sa.field_h.maxAscent - (-sa.field_h.maxDescent - 2));
         this.renderedSprite.bindAsRenderTarget();
-        sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
+        sa.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
         sa.field_h.d(this.text, 1, 1 + sa.field_h.maxAscent, this.color, param0);
         OpacityWidget.field_P.bindAsRenderTarget(param0 ^ -15101);
         this.renderedSprite.addOutline((16711423 & this.color) >> 1);

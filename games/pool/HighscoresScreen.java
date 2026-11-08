@@ -114,7 +114,7 @@ final class HighscoresScreen extends MenuScreen {
             }
             var2 = fh.serviceunavailable;
           } else {
-            var2 = cl.pleasewaitDotdotdot;
+            var2 = ProjectedLineSupport.pleasewaitDotdotdot;
           }
         }
         sa.field_h.drawCentered(var2, SoftwareRasterizer.width >> 1, 202, 16777215, -1);
@@ -269,7 +269,7 @@ final class HighscoresScreen extends MenuScreen {
             3 > param3) {
             var6 = FreePlayRules.field_e.field_U[param1];
             var5 = var6;
-            stackIn_5_0 = ag.createTextLabelSprite((byte) 89, var6[var6.length >> 1], param0);
+            stackIn_5_0 = ScreenProjectionSupport.createTextLabelSprite((byte) 89, var6[var6.length >> 1], param0);
             return stackIn_5_0;
           }
           stackIn_7_0 = super.createButtonLabel(param0, param1, 0, param3);
@@ -437,10 +437,10 @@ final class HighscoresScreen extends MenuScreen {
           DualLinkDeque.a(1, param9);
           DiskCacheWorker.a(param10, param14, args, param2, (byte) 60, param12, param18, param15, param1, param5, param11, param19, param16, param7, param9);
           CueStick.a(param3, false, param9, param6);
-          ef.a(-74);
+          FaceNormal.a(-74);
           var20_int = -118 % ((26 - param17) / 52);
           DelegatingCanvas.a(-119);
-          ho.c((byte) -22);
+          ReflectionCheck.c((byte) -22);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

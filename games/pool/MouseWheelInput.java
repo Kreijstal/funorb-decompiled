@@ -96,12 +96,12 @@ abstract class MouseWheelInput {
         if (param0 >= -8) {
           return;
         }
-        SocketArchiveNetworkClient.field_u = hj.field_l;
+        SocketArchiveNetworkClient.field_u = QuickChatDynamicCommand.field_l;
         PoolMatchController.field_X = 0;
         KillerRules.field_f = 0;
         IsaacCipher.field_d = 0;
         jc.field_j = new MenuSelection(2);
-        jc.field_j.initializeSelection(param1, -1, ho.a((byte) -84, wn.field_i, DebouncedValidationProvider.field_f), true);
+        jc.field_j.initializeSelection(param1, -1, ReflectionCheck.a((byte) -84, wn.field_i, DebouncedValidationProvider.field_f), true);
     }
 
     final static void c(int param0) {
@@ -117,7 +117,7 @@ abstract class MouseWheelInput {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        eh var4 = null;
+        HighScoreRequest var4 = null;
         long var4_long = 0L;
         int var5 = 0;
         int var6 = 0;
@@ -153,16 +153,16 @@ abstract class MouseWheelInput {
           var2 = var27.readUnsignedByte(-107);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(-1034);
-            var4 = (eh) (StateIconLabel.field_Lb.last((byte) -36));
+            var4 = (HighScoreRequest) (StateIconLabel.field_Lb.last((byte) -36));
             while (var4 != null) {
               if (var3 != var4.field_A) {
-                var4 = (eh) (StateIconLabel.field_Lb.previous((byte) -5));
+                var4 = (HighScoreRequest) (StateIconLabel.field_Lb.previous((byte) -5));
                 continue;
               }
               break;
             }
             if (var4 == null) {
-              dn.c(118);
+              ShotEvent.c(118);
               return;
             }
             var5 = var27.readUnsignedByte(-79);
@@ -261,7 +261,7 @@ abstract class MouseWheelInput {
               break;
             }
             if (var6_ref_oj == null) {
-              dn.c(-101);
+              ShotEvent.c(-101);
               return;
             }
             var6_ref_oj.field_w = var4_long;
@@ -269,7 +269,7 @@ abstract class MouseWheelInput {
             return;
           }
           GrowableIntList.reportClientError((Throwable) null, "HS1: " + t.formatPacketDump(112), -8555);
-          dn.c(-101);
+          ShotEvent.c(-101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -374,7 +374,7 @@ abstract class MouseWheelInput {
 
     abstract void attach(byte param0, java.awt.Component param1);
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 != 35) {

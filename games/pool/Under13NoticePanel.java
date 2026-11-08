@@ -89,7 +89,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         orbpointsColon = null;
         playerIsGroupName = null;
         rule13 = null;

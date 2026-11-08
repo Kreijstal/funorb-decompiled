@@ -499,7 +499,7 @@ class TextWidgetPainter implements WidgetPainter, io {
           if ((float)param1[9] * ((float)(-param1[0]) + param2[0]) + (float)param1[10] * ((float)(-param1[1]) + param2[1]) + (param2[2] - (float)param1[2]) * (float)param1[11] < 0.0f) {
             return false;
           }
-          ag.projectToScreen(param1, param2, 9);
+          ScreenProjectionSupport.projectToScreen(param1, param2, 9);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -153,7 +153,7 @@ final class ie {
           if (param0 != -2656) {
             ie.a(true, -83, -119);
           }
-          d.computeMeshBounds(param2, -23109);
+          MeshBoundsSupport.computeMeshBounds(param2, -23109);
           param1[0] = (int)Math.ceil((double)(param2.field_w - param2.field_D) / ((double)ModelMesh.field_Y.length / 2.5));
           param1[1] = (int)Math.ceil((double)(param2.field_S - param2.field_y) / ((double)ModelMesh.field_Y.length / 2.5));
           param1[2] = (int)Math.ceil((double)(param2.field_x - param2.field_V) / ((double)ModelMesh.field_Y.length / 2.5));

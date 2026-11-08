@@ -193,7 +193,7 @@ final class TextLineLayout {
         return 0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         playerYouAreOut = null;
         tutorialBasicComplete = null;
@@ -201,7 +201,7 @@ final class TextLineLayout {
         ratingWon = null;
         field_c = null;
         if (param0 != -27731) {
-          TextLineLayout.b(-11);
+          TextLineLayout.releaseStatics(-11);
         }
     }
 

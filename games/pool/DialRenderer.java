@@ -89,7 +89,7 @@ final class DialRenderer implements WidgetPainter {
         return (TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipTop << 2) + (param2 << 11) / param0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         textBenefits = null;
         messageGame = null;
         ticketingOneunread = null;

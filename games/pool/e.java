@@ -157,7 +157,7 @@ final class e {
             var2 = param1.gameModel.currentShot(60);
             LobbyGame.field_Vb.updateRoot(true, false);
             if (NanoTickClock.field_t.pressedButton == 1) {
-              var2.makeChoice(ag.field_a, true);
+              var2.makeChoice(ScreenProjectionSupport.field_a, true);
               GzipDecoder.field_h = false;
               RasterSnapshot.a(param1, -16813);
               return true;

@@ -125,7 +125,7 @@ final class pp {
           param3[0] = param3[0] + var6;
           param3[1] = param3[1] + var7;
           param3[2] = param3[2] + var8;
-          cq.a(var6, 85, var8, param0, var7);
+          TutorialFactory.translateMeshOrigin(var6, 85, var8, param0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,7 +177,7 @@ final class pp {
           var4 = AlignedIconLabel.field_Lb.font.countWrappedLines(param0, 500);
           var5 = 6 + AlignedIconLabel.field_Lb.font.a(param0, 500);
           var6 = 2 + var4 * ArchiveIndex.field_x;
-          var7 = de.a(var5, 12, var2_int, 0);
+          var7 = DebugTuningSupport.adjustWidthForRightEdge(var5, 12, var2_int, 0);
           var8 = OpacityWidget.a(var6, var3, -1, 20);
           SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, var5 - 2, -2 + var6, 16777088);

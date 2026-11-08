@@ -147,20 +147,20 @@ final class LocalGameSetupScreen extends MenuScreen {
           rf.field_g = WidgetStyleLayer.loadSprite("benefits", (byte) 118, "members_benefits_logo", ViewportController.field_q);
           QuickChatMenu.field_Rb = WidgetStyleLayer.loadSprite("benefits", (byte) 69, "members_benefits_price", ViewportController.field_q);
           var5 = new Sprite(rl.field_h.getFileByName(false, "members_benefits_screenshots.jpg", "benefits/"), (java.awt.Component) ((Object) TextLineLayout.a((byte) -67)));
-          dn.field_o = new Sprite[3];
-          for (var2 = 0; var2 < dn.field_o.length; var2++) {
-            var3 = new Sprite(var5.field_w, var5.field_y / dn.field_o.length);
+          ShotEvent.field_o = new Sprite[3];
+          for (var2 = 0; var2 < ShotEvent.field_o.length; var2++) {
+            var3 = new Sprite(var5.field_w, var5.field_y / ShotEvent.field_o.length);
             var3.bindAsRenderTarget();
-            var5.a(0, -var2 * var5.field_y / dn.field_o.length);
-            dn.field_o[var2] = var3;
+            var5.a(0, -var2 * var5.field_y / ShotEvent.field_o.length);
+            ShotEvent.field_o[var2] = var3;
           }
           if (param0 != 109) {
             return true;
           }
           OpacityWidget.field_P.bindAsRenderTarget(15100);
-          ef.a(-2107, PotEvent.field_m, ReportAbuseDialog.textGameName);
-          bq.a(40, QuickChatMenu.field_Rb, 80, 80, 15, -2400, 2, -1, 40);
-          GameApplet.a(dn.field_o, -58);
+          FaceNormal.a(-2107, PotEvent.field_m, ReportAbuseDialog.textGameName);
+          AchievementNotice.a(40, QuickChatMenu.field_Rb, 80, 80, 15, -2400, 2, -1, 40);
+          GameApplet.a(ShotEvent.field_o, -58);
           CheckboxPainter.a(rf.field_g, 106);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,8 +190,8 @@ final class LocalGameSetupScreen extends MenuScreen {
           if (var4 != 64) {
             if (var4 == 63) {
               if (this.selection.isPressActivated((byte) 89) &&
-                fr.field_n < 8) {
-                fr.field_n = fr.field_n + 1;
+                DelayedServerPacket.field_n < 8) {
+                DelayedServerPacket.field_n = DelayedServerPacket.field_n + 1;
                 KillerRules.c((byte) -45);
               }
             } else {
@@ -236,8 +236,8 @@ final class LocalGameSetupScreen extends MenuScreen {
             }
           } else {
             if (this.selection.isPressActivated((byte) 59) &&
-              2 < fr.field_n) {
-              fr.field_n = fr.field_n - 1;
+              2 < DelayedServerPacket.field_n) {
+              DelayedServerPacket.field_n = DelayedServerPacket.field_n - 1;
               KillerRules.c((byte) -45);
             }
           }
@@ -282,7 +282,7 @@ final class LocalGameSetupScreen extends MenuScreen {
         IterableNodeHashTable.field_e.addChild(-116, jq.field_f);
         this.g(4);
         PoolGameModel.field_v = new UiComponent(-1L, (UiComponent) null, 290, IterableNodeHashTable.field_e.localY, 270, 60, (String) null);
-        PoolGameModel.field_v.sprite = dq.createTextLabelSprite(4, 0, ab.muOptionsPlayers);
+        PoolGameModel.field_v.sprite = dq.createTextLabelSprite(4, 0, ArchiveAvailabilitySupport.muOptionsPlayers);
         PoolGameModel.field_v.sprite.field_G = 10;
         PoolGameModel.field_v.frameSprites = rm.field_g;
         dk.a(PoolGameModel.field_v, (byte) 93);
@@ -327,8 +327,8 @@ final class LocalGameSetupScreen extends MenuScreen {
         CacheEntry.field_x.frameSprites = rm.field_g;
         CacheEntry.field_x.horizontalAlignment = 0;
         CacheEntry.field_x.selectedFrameSprites = ln.field_s;
-        CacheEntry.field_x.sprite = dq.createTextLabelSprite(4, 0, s.gameoptlabels[3]);
-        CacheEntry.field_x.selectedSprite = dq.createTextLabelSprite(3, 0, s.gameoptlabels[3]);
+        CacheEntry.field_x.sprite = dq.createTextLabelSprite(4, 0, DisplayModeSupport.gameoptlabels[3]);
+        CacheEntry.field_x.selectedSprite = dq.createTextLabelSprite(3, 0, DisplayModeSupport.gameoptlabels[3]);
         CacheEntry.field_x.sprite.field_G = PoolGameModel.field_v.sprite.field_G;
         CacheEntry.field_x.selectedSprite.field_G = PoolGameModel.field_v.sprite.field_G;
         dk.a(CacheEntry.field_x, (byte) 93);
@@ -464,10 +464,10 @@ final class LocalGameSetupScreen extends MenuScreen {
     }
 
     final static void f(int param0) {
-        bj var1 = (bj) (BallSkin.field_i.last((byte) -105));
+        DottedRectangleSupport var1 = (DottedRectangleSupport) (BallSkin.field_i.last((byte) -105));
         int var2 = -46 / ((-18 - param0) / 38);
         if (var1 == null) {
-          dn.c(-127);
+          ShotEvent.c(-127);
           return;
         }
         CipherPacketBuffer var3 = PlayerContextMenu.field_e;

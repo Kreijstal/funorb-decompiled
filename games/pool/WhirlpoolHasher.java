@@ -87,9 +87,9 @@ final class WhirlpoolHasher {
         if (HighscoresScreen.field_P > 0) {
           HighscoresScreen.field_P = HighscoresScreen.field_P - 1;
         }
-        if (OpacityWidget.field_P.height != cb.field_g) {
-          StrongCacheEntry.field_J = StrongCacheEntry.field_J + (OpacityWidget.field_P.height - cb.field_g);
-          cb.field_g = OpacityWidget.field_P.height;
+        if (OpacityWidget.field_P.height != AwtEventQueueSupport.field_g) {
+          StrongCacheEntry.field_J = StrongCacheEntry.field_J + (OpacityWidget.field_P.height - AwtEventQueueSupport.field_g);
+          AwtEventQueueSupport.field_g = OpacityWidget.field_P.height;
         }
         int var1 = 37 / ((param0 + 53) / 53);
         if (0 < HighscoresScreen.field_P) {

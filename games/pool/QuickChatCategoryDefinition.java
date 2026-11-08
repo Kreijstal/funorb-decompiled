@@ -53,7 +53,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
                 stackIn_17_0 = this.subcategoryShortcuts;
                 stackIn_17_1 = var5;
                 if (var6 != 0) {
-                  stackIn_18_2 = s.decodeCp1252Byte((byte) var6, 8);
+                  stackIn_18_2 = DisplayModeSupport.decodeCp1252Byte((byte) var6, 8);
                 } else {
                   stackIn_18_2 = 0;
                 }
@@ -70,7 +70,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
                   stackIn_11_0 = this.phraseShortcuts;
                   stackIn_11_1 = var5;
                   if (var6 != 0) {
-                    stackIn_12_2 = s.decodeCp1252Byte((byte) var6, 8);
+                    stackIn_12_2 = DisplayModeSupport.decodeCp1252Byte((byte) var6, 8);
                   } else {
                     stackIn_12_2 = 0;
                   }

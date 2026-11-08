@@ -43,7 +43,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
 
     final static int[] a(int param0, int param1) {
         if (param0 == -9) {
-          return param1 != 0 ? param1 == 8 ? sa.field_q : 8 <= param1 ? om.field_r : PotEvent.field_p : ae.field_e;
+          return param1 != 0 ? param1 == 8 ? sa.field_q : 8 <= param1 ? om.field_r : PotEvent.field_p : MembershipBenefitsLoader.field_e;
         }
         return (int[]) null;
     }

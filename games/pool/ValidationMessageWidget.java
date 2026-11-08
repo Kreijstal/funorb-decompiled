@@ -119,7 +119,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var9 = this.widgetX + param2;
           var11 = var35.textTop(param3, (UiWidget) (this), (byte) -7) + (var35.ensureTextLayout(0, (UiWidget) (this)).totalHeight((byte) 66) >> 1);
           if (ji.field_h == var6) {
-            var21 = bo.field_a[0];
+            var21 = FixedAngleSupport.field_a[0];
             var12 = var21.field_w << 1;
             var13 = var21.field_y << 1;
             if (this.field_U == null) {
@@ -146,18 +146,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           }
           if (Js5Transport.field_k != var6) {
             if (gp.field_d == var6) {
-              var22 = bo.field_a[2];
+              var22 = FixedAngleSupport.field_a[2];
               var22.drawAdditive(var9, var11 - (var22.field_A >> 1), 256);
               return;
             }
             if (ProxySocketConnector.field_e != var6) {
               return;
             }
-            var23 = bo.field_a[1];
+            var23 = FixedAngleSupport.field_a[1];
             var23.drawAdditive(var9, var11 - (var23.field_A >> 1), 256);
             return;
           }
-          var20 = bo.field_a[0];
+          var20 = FixedAngleSupport.field_a[0];
           var12Lifetime4 = var20.field_w << 1;
           var13Lifetime4 = var20.field_y << 1;
           if (this.field_U != null &&
@@ -187,7 +187,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var9Lifetime1 = this.widgetX + param2;
           var11Lifetime1 = var36.textTop(param3, (UiWidget) (this), (byte) -7) + (var36.ensureTextLayout(0, (UiWidget) (this)).totalHeight((byte) 66) >> 1);
           if (ji.field_h == var6) {
-            var27 = bo.field_a[0];
+            var27 = FixedAngleSupport.field_a[0];
             var12Lifetime1 = var27.field_w << 1;
             var13Lifetime1 = var27.field_y << 1;
             if (this.field_U == null) {
@@ -214,18 +214,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           }
           if (Js5Transport.field_k != var6) {
             if (gp.field_d == var6) {
-              var28 = bo.field_a[2];
+              var28 = FixedAngleSupport.field_a[2];
               var28.drawAdditive(var9Lifetime1, var11Lifetime1 - (var28.field_A >> 1), 256);
               return;
             }
             if (ProxySocketConnector.field_e != var6) {
               return;
             }
-            var29 = bo.field_a[1];
+            var29 = FixedAngleSupport.field_a[1];
             var29.drawAdditive(var9Lifetime1, var11Lifetime1 - (var29.field_A >> 1), 256);
             return;
           }
-          var26 = bo.field_a[0];
+          var26 = FixedAngleSupport.field_a[0];
           var12Lifetime1Lifetime1 = var26.field_w << 1;
           var13Lifetime1Lifetime1 = var26.field_y << 1;
           if (this.field_U != null &&
@@ -257,7 +257,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         var9Lifetime2 = this.widgetX + param2;
         var11Lifetime2 = var37.textTop(param3, (UiWidget) (this), (byte) -7) + (var37.ensureTextLayout(0, (UiWidget) (this)).totalHeight((byte) 66) >> 1);
         if (ji.field_h == var6Lifetime1) {
-          var32 = bo.field_a[0];
+          var32 = FixedAngleSupport.field_a[0];
           var12Lifetime2 = var32.field_w << 1;
           var13Lifetime2 = var32.field_y << 1;
           if (this.field_U == null) {
@@ -284,18 +284,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         }
         if (Js5Transport.field_k != var6Lifetime1) {
           if (gp.field_d == var6Lifetime1) {
-            var33 = bo.field_a[2];
+            var33 = FixedAngleSupport.field_a[2];
             var33.drawAdditive(var9Lifetime2, var11Lifetime2 - (var33.field_A >> 1), 256);
             return;
           }
           if (ProxySocketConnector.field_e != var6Lifetime1) {
             return;
           }
-          var34 = bo.field_a[1];
+          var34 = FixedAngleSupport.field_a[1];
           var34.drawAdditive(var9Lifetime2, var11Lifetime2 - (var34.field_A >> 1), 256);
           return;
         }
-        var31 = bo.field_a[0];
+        var31 = FixedAngleSupport.field_a[0];
         var12Lifetime3 = var31.field_w << 1;
         var13Lifetime3 = var31.field_y << 1;
         if (this.field_U != null &&

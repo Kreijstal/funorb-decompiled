@@ -10,13 +10,13 @@ abstract class BallSkin {
     Sprite[] field_e;
     private int[][] field_k;
     static IntrusiveDeque field_i;
-    static ea field_b;
-    static cd field_h;
+    static RankingsRequest field_b;
+    static ClientInputResetSupport field_h;
     static int[] field_c;
 
     void drawBall(int[] param0, int[] param1, int param2, int param3) {
         try {
-          this.field_j[param2].b(param1, param0);
+          this.field_j[param2].drawTransformed(param1, param0);
           if (param3 != -3637) {
             this.ballColor(-49, false);
           }
@@ -40,7 +40,7 @@ abstract class BallSkin {
         }
         try {
           this.drawBallShadow(param4, param2, param1, param3, -20263);
-          this.field_j[param1].b(param3, param2);
+          this.field_j[param1].drawTransformed(param3, param2);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tm.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -58,12 +58,12 @@ abstract class BallSkin {
         }
     }
 
-    final static hj a(int param0, int param1) {
-        hj[] var2;
+    final static QuickChatDynamicCommand a(int param0, int param1) {
+        QuickChatDynamicCommand[] var2;
         int var3;
         int var4;
         int var5;
-        hj[] var6;
+        QuickChatDynamicCommand[] var6;
         var5 = Pool.field_O;
         var6 = SpaceBallSkin.a((byte) -32);
         var2 = var6;
@@ -176,7 +176,7 @@ abstract class BallSkin {
         var28 = Pool.field_O;
         var29 = new MeshBuilder((3 + MatchingTextValidator.field_v) * (ViewportController.field_b + 1), 2 * (ViewportController.field_b * MatchingTextValidator.field_v), MatchingTextValidator.field_v);
         if (param0 != -930305852) {
-          field_h = (cd) null;
+          field_h = (ClientInputResetSupport) null;
         }
         var3 = var29.addVertex(-383, -383, 384);
         var4 = var29.addVertex(384, -383, 384);
@@ -282,7 +282,7 @@ abstract class BallSkin {
             return stackIn_4_0;
           }
           if (this.c(2)) {
-            stackIn_7_0 = ho.eightBallNumbers[param0];
+            stackIn_7_0 = ReflectionCheck.eightBallNumbers[param0];
             return stackIn_7_0;
           }
           if (0 != param0 &&
@@ -290,7 +290,7 @@ abstract class BallSkin {
             stackIn_14_0 = this.groupName((byte) 33, param0 >> 3 & 1);
             return stackIn_14_0;
           }
-          stackIn_12_0 = ho.eightBallNumbers[param0];
+          stackIn_12_0 = ReflectionCheck.eightBallNumbers[param0];
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -375,6 +375,6 @@ abstract class BallSkin {
     static {
         field_i = new IntrusiveDeque();
         field_b = null;
-        field_h = new cd();
+        field_h = new ClientInputResetSupport();
     }
 }

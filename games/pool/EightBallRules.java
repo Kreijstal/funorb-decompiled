@@ -65,7 +65,7 @@ final class EightBallRules extends GameRules {
         var14 = Pool.field_O;
         try {
           var6_int = 8 + param1 + 8 + 487 + param3;
-          ProgressDialog.field_hb.setBounds(3, 2147483647, 3, var6_int - 6, fl.field_q.height - 6);
+          ProgressDialog.field_hb.setBounds(3, 2147483647, 3, var6_int - 6, IntLookupQuery.field_q.height - 6);
           var7 = -5 + ProgressDialog.field_hb.height;
           ph.field_d.setBounds(-param2 + var7, 2147483647, 5, param3 + 2 + 485 + param1, param2);
           TimeTrialSelectScreen.field_J.setBounds(0, 2147483647, param1, -param1 + (ph.field_d.width - NineBallRules.field_j.width), param2);
@@ -75,7 +75,7 @@ final class EightBallRules extends GameRules {
           if (ThemeSelectScreen.field_J != null) {
             ThemeSelectScreen.field_J.setWidgetBounds(Js5ArchiveManager.field_b.width, Js5ArchiveManager.field_b.localX, Js5ArchiveManager.field_b.height, false, Js5ArchiveManager.field_b.localY);
           }
-          var8 = fl.field_q.width + (-param1 - var6_int);
+          var8 = IntLookupQuery.field_q.width + (-param1 - var6_int);
           var9 = var8 / 2;
           if (param4 != 36) {
             muYouDeclinedInvite = (String) null;
@@ -85,16 +85,16 @@ final class EightBallRules extends GameRules {
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
               il.field_g[var12] != null) {
-              var13 = var11 * (-6 + (fl.field_q.height + 2)) / (bq.field_m + 1) + 3;
+              var13 = var11 * (-6 + (IntLookupQuery.field_q.height + 2)) / (AchievementNotice.field_m + 1) + 3;
               var11++;
-              var7Lifetime1 = -var13 + 1 + (2 + (-6 + fl.field_q.height)) * var11 / (1 + bq.field_m);
+              var7Lifetime1 = -var13 + 1 + (2 + (-6 + IntLookupQuery.field_q.height)) * var11 / (1 + AchievementNotice.field_m);
               if (5 > var12) {
                 il.field_g[var12].setBounds(var13, 2147483647, var6_int, var8, var7Lifetime1);
                 ln.field_v[var12].setBounds(0, param4 ^ 2147483611, param1, var9 - param1, var7Lifetime1);
                 AlignedIconLabel.field_Mb[var12].setBounds(param5, 2147483647, var9, param0, var7Lifetime1 - param5 - param5);
                 ta.field_b[var12].setBounds(param5, 2147483647, var10, -var10 + var8 - param1, -param5 + (var7Lifetime1 - param5));
               } else {
-                d.field_e.setBounds(var13, 2147483647, var6_int, var8, var7Lifetime1);
+                MeshBoundsSupport.field_e.setBounds(var13, 2147483647, var6_int, var8, var7Lifetime1);
               }
             }
           }
@@ -118,7 +118,7 @@ final class EightBallRules extends GameRules {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         muYouDeclinedInvite = null;
         if (param0 >= -2) {
           EightBallRules.a(-47, 110, -56, 55, 78);
@@ -192,7 +192,7 @@ final class EightBallRules extends GameRules {
         DraggableWidget.field_S[11] = dq.field_a.groupName((byte) 40, 1);
     }
 
-    final int b(int param0) {
+    final int defaultBallInHandMode(int param0) {
         int var2 = 90 % ((-79 - param0) / 38);
         return 1;
     }
@@ -276,7 +276,7 @@ final class EightBallRules extends GameRules {
         if (this.field_d.isCueBallPotted((byte) 123)) {
           var14.addEvent(3, -14, new int[]{this.field_d.field_A});
           var14.field_t = true;
-          var4 = var4 | (this.foulFlagsCueBallPotted(1) | um.field_c);
+          var4 = var4 | (this.foulFlagsCueBallPotted(1) | MeshBase.field_c);
           var14.field_w = (byte)(var14.field_w - 1);
         }
         if (var14.field_n != 8) {
@@ -310,7 +310,7 @@ final class EightBallRules extends GameRules {
             var5 == 1 &&
             8 == ((PotEvent) (var14.pottedBalls.last((byte) -25))).ballIndex &&
             var3 == 2) {
-            return ag.field_e;
+            return ScreenProjectionSupport.field_e;
           }
           var6_ref_aa = new IntrusiveDequeCursor(var14.pottedBalls);
           var7_ref_cr = (PotEvent) (var6_ref_aa.last((byte) -92));
@@ -618,7 +618,7 @@ final class EightBallRules extends GameRules {
 
     final static void a(int param0, boolean param1) {
         oi var3 = null;
-        fl var4 = null;
+        IntLookupQuery var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -630,10 +630,10 @@ final class EightBallRules extends GameRules {
           if (!param1) {
             return;
           }
-          var4 = (fl) (cq.field_g.last((byte) 83));
+          var4 = (IntLookupQuery) (TutorialFactory.field_g.last((byte) 83));
           while (var4 != null) {
             pm.a(var4, param0, true);
-            var4 = (fl) (cq.field_g.previous((byte) -5));
+            var4 = (IntLookupQuery) (TutorialFactory.field_g.previous((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -802,7 +802,7 @@ final class EightBallRules extends GameRules {
 
     final boolean isBallInGroup(int param0, byte param1, int param2) {
         if (param1 <= 122) {
-          this.b(-73);
+          this.defaultBallInHandMode(-73);
         }
         return this.ballMatchesGroup(param0, (byte) 122, param2);
     }
@@ -843,7 +843,7 @@ final class EightBallRules extends GameRules {
         return stackIn_12_0;
     }
 
-    final int m(int param0) {
+    final int rulesStateByteLength(int param0) {
         if (param0 != 0) {
           EightBallRules.a(108, false);
         }
@@ -961,15 +961,15 @@ final class EightBallRules extends GameRules {
             var6 = var5 % var3_int;
             if (var6 != 0) {
               if (var3_int - 1 != var6) {
-                var4[var5 / var3_int][var6] = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1[var5]}, param0 - 2, bc.playerListMiddle);
+                var4[var5 / var3_int][var6] = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1[var5]}, param0 - 2, FontPaletteSupport.playerListMiddle);
               } else {
                 var4[var5 / var3_int][var6] = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1[var5]}, param0 - 2, DialogLayer.playerListLast);
               }
             } else {
-              var4[var5 / var3_int][var6] = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1[var5]}, -1, en.playerListFirst);
+              var4[var5 / var3_int][var6] = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1[var5]}, -1, QuaternionRotationSupport.playerListFirst);
             }
           }
-          stackIn_14_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{aq.joinCharSequences(-107, (CharSequence[]) ((Object) var4[0])), aq.joinCharSequences(-86, (CharSequence[]) ((Object) var4[1]))}, -1, AlternateLongAndTextLoginPayload.playerListVsPlayerList);
+          stackIn_14_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{DebugOverlayLayoutSupport.joinCharSequences(-107, (CharSequence[]) ((Object) var4[0])), DebugOverlayLayoutSupport.joinCharSequences(-86, (CharSequence[]) ((Object) var4[1]))}, -1, AlternateLongAndTextLoginPayload.playerListVsPlayerList);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

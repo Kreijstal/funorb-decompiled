@@ -7,9 +7,9 @@ final class ic {
     static String whoCanJoin;
 
     final static void a(byte param0, int param1) {
-        hj.field_g = 400 * param1 / 150;
-        hj.field_f = (param1 << 16) / 150;
-        hj.field_l = param1 * 100 / 150;
+        QuickChatDynamicCommand.field_g = 400 * param1 / 150;
+        QuickChatDynamicCommand.field_f = (param1 << 16) / 150;
+        QuickChatDynamicCommand.field_l = param1 * 100 / 150;
         int var2 = 59 / ((-23 - param0) / 46);
     }
 

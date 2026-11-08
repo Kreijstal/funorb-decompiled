@@ -133,7 +133,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             }
           } else {
             this.loginButton = new ButtonWidget(QuickChatPhraseDefinition.retry, (WidgetListener) null);
-            this.secondaryButton = new ButtonWidget(dj.quittowebsite, (WidgetListener) null);
+            this.secondaryButton = new ButtonWidget(FullscreenDisplayMode.quittowebsite, (WidgetListener) null);
             this.usernameInput.enabled = false;
           }
           this.usernameInput.renderer = (WidgetPainter) ((Object) new om(10000536));

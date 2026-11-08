@@ -252,7 +252,7 @@ final class TutorialController {
             var8 = -var6 + (var7 + (var4 - var5));
             for (var9 = var5; var4 > var9; var9++) {
               for (var10 = var6; var7 > var10; var10++) {
-                if (ThreeSliceButtonPainter.field_s + MaxLengthTextInputWidget.nextRandomInt(5, true, ea.field_r) - 3 >= 25 * (-var6 + (var10 - var5) + var9) / var8) {
+                if (ThreeSliceButtonPainter.field_s + MaxLengthTextInputWidget.nextRandomInt(5, true, RankingsRequest.field_r) - 3 >= 25 * (-var6 + (var10 - var5) + var9) / var8) {
                   stackIn_21_0 = NanoTickClock.field_r;
                 } else {
                   stackIn_21_0 = NetworkGameClient.field_s;
@@ -425,9 +425,9 @@ final class TutorialController {
           }
         } else {
           if (this.field_a.gameModel.rules.initialGroup(-1) == -1) {
-            var4_int = MaxLengthTextInputWidget.nextRandomInt(2, true, ea.field_r);
-            var5_int = MaxLengthTextInputWidget.nextRandomInt(7, true, ea.field_r) - (-(var4_int << 3) - 1);
-            var6 = MaxLengthTextInputWidget.nextRandomInt(this.field_a.gameModel.pockets.length, true, ea.field_r);
+            var4_int = MaxLengthTextInputWidget.nextRandomInt(2, true, RankingsRequest.field_r);
+            var5_int = MaxLengthTextInputWidget.nextRandomInt(7, true, RankingsRequest.field_r) - (-(var4_int << 3) - 1);
+            var6 = MaxLengthTextInputWidget.nextRandomInt(this.field_a.gameModel.pockets.length, true, RankingsRequest.field_r);
             var16 = this.field_a.gameModel.pockets[var6];
             var18 = var16;
             var18 = var16;
@@ -686,7 +686,7 @@ final class TutorialController {
 
     final static int a(int param0, int param1, int param2) {
         if (param2 == param0 &&
-          bo.isLeapYear(param1, (byte) 43)) {
+          FixedAngleSupport.isLeapYear(param1, (byte) 43)) {
           return 29;
         }
         return TickClock.field_d[param0];
@@ -718,7 +718,7 @@ final class TutorialController {
         if (param0 != -29322) {
           field_c = -7;
         }
-        int var1 = ee.b((byte) -62);
+        int var1 = QuickChatCategoryCache.b((byte) -62);
         int var2 = CheckboxPainter.a(23467);
         Pool.field_I.draw(var1 + (TutorialStep.field_v << 1), -WhirlpoolHasher.field_b + PasswordValidator.field_n, -6316, -TutorialStep.field_v + PlasmaTableScene.field_Z, (WhirlpoolHasher.field_b << 1) + var2);
         e.a(param0 ^ 29411);
@@ -984,7 +984,7 @@ final class TutorialController {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         joinRequestsMany = null;
         findOpponentsPlural = null;
         sendQcToX = null;

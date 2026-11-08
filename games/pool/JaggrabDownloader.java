@@ -120,7 +120,7 @@ final class JaggrabDownloader implements Runnable {
           AccountWelcomePanel.field_P = param8.faceVertexC;
           ro.field_d = param8.vertexZ;
           sa.field_r = param8.vertexY;
-          eh.field_w = param1.vertexX;
+          HighScoreRequest.field_w = param1.vertexX;
           gn.field_e = param8;
           TranslatedUiText.field_b = param1.faceVertexC;
           wn.field_d = param1.faceVertexA;
@@ -148,9 +148,9 @@ final class JaggrabDownloader implements Runnable {
           param1.vertexZ = sa.field_w;
           param1.faceVertexB = f.field_b;
           param1.vertexY = mj.field_a;
-          param1.vertexX = eh.field_w;
+          param1.vertexX = HighScoreRequest.field_w;
           param1.field_M = MidiPcmStream.field_bb;
-          param1.vertexCount = de.field_a;
+          param1.vertexCount = DebugTuningSupport.field_a;
           param1.faceCount = DateInputWidget.field_R;
           param1.faceVertexC = TranslatedUiText.field_b;
           param1.field_l = ja.field_a;
@@ -542,7 +542,7 @@ final class JaggrabDownloader implements Runnable {
             param4.field_K != null) {
             AgeValidator.h(0);
           }
-          eh.field_x = 0;
+          HighScoreRequest.field_x = 0;
           for (var9 = 0; param4.field_d > var9; var9++) {
             boolean decompiledFrameCompleted0 = true;
             var10 = param4.field_y[var9];
@@ -590,7 +590,7 @@ final class JaggrabDownloader implements Runnable {
                         dupTemp$0 = param4.field_K[var9];
                         ProgressDialog.field_ib[dupTemp$0] = ProgressDialog.field_ib[dupTemp$0] + 1;
                       }
-                      eh.field_x = eh.field_x + 1;
+                      HighScoreRequest.field_x = HighScoreRequest.field_x + 1;
                     }
                   }
                 }

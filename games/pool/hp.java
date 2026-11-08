@@ -12,7 +12,7 @@ final class hp {
         if (param0) {
           hp.a(-113, false, -92, -109);
         }
-        return tq.a(false, c.field_d, ResourceArchive.field_a);
+        return tq.a(false, QuickChatMenuSupport.field_d, ResourceArchive.field_a);
     }
 
     final static void openSupportPage(byte param0, java.applet.Applet param1) {

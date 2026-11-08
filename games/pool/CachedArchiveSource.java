@@ -292,7 +292,7 @@ final class CachedArchiveSource extends ArchiveProvider {
           }
         }
         if (param0 != -21) {
-          CachedArchiveSource.a(false);
+          CachedArchiveSource.releaseStatics(false);
         }
         this.indexRequest = null;
         if (this.groupDiskCache != null) {
@@ -301,7 +301,7 @@ final class CachedArchiveSource extends ArchiveProvider {
         return this.index;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         menuRematchGame = null;
         field_M = null;
         muXJoinedYourGame = null;

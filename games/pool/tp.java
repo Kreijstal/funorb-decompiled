@@ -36,14 +36,14 @@ final class tp {
     final static void a(boolean param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
-        bj var4 = null;
+        DottedRectangleSupport var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          var4 = (bj) (BallSkin.field_i.last((byte) 73));
+          var4 = (DottedRectangleSupport) (BallSkin.field_i.last((byte) 73));
           while (var4 != null) {
             un.a(param1, var4, (byte) -51);
-            var4 = (bj) (BallSkin.field_i.previous((byte) -5));
+            var4 = (DottedRectangleSupport) (BallSkin.field_i.previous((byte) -5));
           }
           if (param0) {
             return;

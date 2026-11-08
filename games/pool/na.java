@@ -54,7 +54,7 @@ final class na {
               var6.field_n.addAction(var7, 17130, 14);
             }
             var8 = PlasmaBallSkin.field_m;
-            var9 = fl.quickchatLobby;
+            var9 = IntLookupQuery.quickchatLobby;
             var8.field_n.addAction(var9, 17130, 20);
           }
           if (1 == param0.field_p &&
@@ -73,7 +73,7 @@ final class na {
           PlasmaBallSkin.field_m.addInviteActions(2616);
           PlasmaBallSkin.field_m.addGameInviteActions((byte) 124, false);
           if (param1 != 122) {
-            na.a((byte) -50);
+            na.releaseStatics((byte) -50);
           }
           PlasmaBallSkin.field_m.buildPlayerMenu(param0.field_p, param0.field_d, (byte) 64);
           PlasmaBallSkin.field_m.addReportAbuseAction((byte) 95);
@@ -184,14 +184,14 @@ final class na {
         try {
           CheckboxWidget.field_N = param1;
           if (param0 != -58) {
-            na.a((byte) -95);
+            na.releaseStatics((byte) -95);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "na.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         tutorialShotModePower = null;
         connectionlostReconnecting = null;

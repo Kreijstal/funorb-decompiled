@@ -8,7 +8,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     static Sprite field_h;
     static int field_c;
     static UiComponent field_a;
-    static en field_l;
+    static QuaternionRotationSupport field_l;
     public static boolean field_k;
     public static int field_i;
     public static boolean field_d;
@@ -164,12 +164,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           TimeTrialSelectScreen.field_K.setVisible(true);
           if (TextLayout.field_e == var2) {
             var3 = TextLayout.field_e.getInsets();
-            TimeTrialSelectScreen.field_K.setLocation(var3.left + cl.field_e, UsernameAvailabilityValidator.field_v + var3.top);
+            TimeTrialSelectScreen.field_K.setLocation(var3.left + ProjectedLineSupport.field_e, UsernameAvailabilityValidator.field_v + var3.top);
             if (var4 != 0) {
-              TimeTrialSelectScreen.field_K.setLocation(cl.field_e, UsernameAvailabilityValidator.field_v);
+              TimeTrialSelectScreen.field_K.setLocation(ProjectedLineSupport.field_e, UsernameAvailabilityValidator.field_v);
             }
           } else {
-            TimeTrialSelectScreen.field_K.setLocation(cl.field_e, UsernameAvailabilityValidator.field_v);
+            TimeTrialSelectScreen.field_K.setLocation(ProjectedLineSupport.field_e, UsernameAvailabilityValidator.field_v);
           }
           TimeTrialSelectScreen.field_K.addFocusListener((java.awt.event.FocusListener) (this));
           TimeTrialSelectScreen.field_K.requestFocus();
@@ -177,7 +177,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           PlasmaBallSkin.field_q = true;
-          um.field_e = true;
+          MeshBase.field_e = true;
           he.field_c = true;
           TabbedPane.field_Sb = false;
           ph.field_b = rl.monotonicTimeMillis((byte) -94);
@@ -345,8 +345,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 > -19) {
             return;
           }
-          var4 = dj.field_l[t.field_d];
-          dj.field_l[t.field_d] = var2_long;
+          var4 = FullscreenDisplayMode.field_l[t.field_d];
+          FullscreenDisplayMode.field_l[t.field_d] = var2_long;
           t.field_d = 31 & t.field_d + 1;
           if (0L != var4 &&
             var2_long > var4) {
@@ -363,12 +363,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (null != TextLayout.field_e &&
               RasterBuffer.field_l == null) {
               var6 = TextLayout.field_e.getInsets();
-              TimeTrialSelectScreen.field_K.setLocation(var6.left + cl.field_e, var6.top + UsernameAvailabilityValidator.field_v);
+              TimeTrialSelectScreen.field_K.setLocation(var6.left + ProjectedLineSupport.field_e, var6.top + UsernameAvailabilityValidator.field_v);
               if (Pool.field_O != 0) {
-                TimeTrialSelectScreen.field_K.setLocation(cl.field_e, UsernameAvailabilityValidator.field_v);
+                TimeTrialSelectScreen.field_K.setLocation(ProjectedLineSupport.field_e, UsernameAvailabilityValidator.field_v);
               }
             } else {
-              TimeTrialSelectScreen.field_K.setLocation(cl.field_e, UsernameAvailabilityValidator.field_v);
+              TimeTrialSelectScreen.field_K.setLocation(ProjectedLineSupport.field_e, UsernameAvailabilityValidator.field_v);
             }
           }
           this.paintFrame((byte) 120);
@@ -439,7 +439,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           TickClock.field_e = 31 & 1 + TickClock.field_e;
           var6 = this;
           synchronized (var6) {
-            um.field_e = PlasmaBallSkin.field_q;
+            MeshBase.field_e = PlasmaBallSkin.field_q;
           }
           this.updateGame((byte) -99);
           return;
@@ -547,7 +547,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   if (stackIn_82_0 < stackIn_82_1) {
                     break;
                   }
-                  bq.field_o = true;
+                  AchievementNotice.field_o = true;
                   break;
                 }
               }
@@ -588,7 +588,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(var3 < DiskCacheWorker.field_b)) {
                       this.drawFrameWithTiming((byte) -30);
-                      cb.a(TimeTrialSelectScreen.field_K, StatefulTextPainter.field_s, 125);
+                      AwtEventQueueSupport.pumpAwtEventQueue(TimeTrialSelectScreen.field_K, StatefulTextPainter.field_s, 125);
                       break;
                     }
                     this.tickWithTiming(-15568);
@@ -765,7 +765,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 return;
               }
               ContentTransitionDialog.field_rb = param0;
-              cl.field_e = 0;
+              ProjectedLineSupport.field_e = 0;
               ModernTableScene.field_ib = this;
               ArchiveIndex.field_c = param1;
               ArchiveLoadSequence.field_f = param1;
@@ -826,7 +826,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (ModernTableScene.field_ib == this &&
             !AgeValidator.field_p) {
             he.field_c = true;
-            if (bq.field_o &&
+            if (AchievementNotice.field_o &&
               -ph.field_b + rl.monotonicTimeMillis((byte) -128) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {

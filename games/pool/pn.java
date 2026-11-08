@@ -18,7 +18,7 @@ final class pn {
     int field_m;
     static String statusConcluded;
     String field_j;
-    static hj field_k;
+    static QuickChatDynamicCommand field_k;
     static String loginUsernameTooltip;
     static Sprite field_l;
     static int field_s;
@@ -139,7 +139,7 @@ final class pn {
 
     pn(boolean param0) {
         this.field_n = tp.field_g;
-        this.field_p = um.field_d;
+        this.field_p = MeshBase.field_d;
         if (!param0) {
           this.field_d = null;
         } else {
@@ -178,7 +178,7 @@ final class pn {
     static {
         statusConcluded = "Concluded";
         ballsetPlasmaGroup0Nocolour = "Reds";
-        field_k = new hj(15, 0, 1, 0);
+        field_k = new QuickChatDynamicCommand(15, 0, 1, 0);
         loginUsernameTooltip = "The account name you use to access RuneScape and other Jagex.com games";
         field_r = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
     }

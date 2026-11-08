@@ -69,7 +69,7 @@ final class EmailValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.validationStateForText(param0, true) == gp.field_d) {
-            stackIn_3_0 = fr.createAlertInvalidemail;
+            stackIn_3_0 = DelayedServerPacket.createAlertInvalidemail;
             return stackIn_3_0;
           }
           if (param1 != 0) {

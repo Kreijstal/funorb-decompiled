@@ -179,16 +179,16 @@ final class MultiHandleSliderWidget extends ButtonWidget {
     }
 
     final static boolean g(byte param0) {
-        ho var1 = null;
+        ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        ho var5 = null;
+        ReflectionCheck var5 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = Pool.field_O;
         try {
-          var5 = (ho) (MessageScreen.field_H.last((byte) -88));
+          var5 = (ReflectionCheck) (MessageScreen.field_H.last((byte) -88));
           var1 = var5;
           if (var1 == null) {
             return false;

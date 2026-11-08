@@ -86,7 +86,7 @@ final class DebugTuningSlider {
             return;
           }
           if (var3 == 2) {
-            dj.field_g = param1 >> 8;
+            FullscreenDisplayMode.field_g = param1 >> 8;
             return;
           }
           if (var3 == 3) {
@@ -139,7 +139,7 @@ final class DebugTuningSlider {
           return;
         }
         if (var3Lifetime1 == 2) {
-          dj.field_g = param1 >> 8;
+          FullscreenDisplayMode.field_g = param1 >> 8;
           return;
         }
         if (var3Lifetime1 == 3) {
@@ -210,7 +210,7 @@ final class DebugTuningSlider {
     final boolean b(int param0) {
         String discarded$0 = null;
         if (param0 == 59) {
-          if (cd.field_b == 0) {
+          if (ClientInputResetSupport.field_b == 0) {
             return false;
           }
           if (wn.field_i < this.field_j) {
@@ -229,7 +229,7 @@ final class DebugTuningSlider {
           return true;
         }
         discarded$0 = this.b((byte) 118);
-        if (cd.field_b == 0) {
+        if (ClientInputResetSupport.field_b == 0) {
           return false;
         }
         if (wn.field_i < this.field_j) {
@@ -253,7 +253,7 @@ final class DebugTuningSlider {
           TriangleMesh.field_B = param4;
           IntrusiveNodeHashTable.field_d = param2;
           rm.field_e = param5;
-          bj.field_m = param0;
+          DottedRectangleSupport.field_m = param0;
           IterableDualLinkDeque.field_g = param3;
           if (param1 != 26790) {
             String var7 = (String) null;
@@ -293,7 +293,7 @@ final class DebugTuningSlider {
           return TextPairLoginPayload.field_l << 8;
         }
         if (var2 == 2) {
-          return dj.field_g << 8;
+          return FullscreenDisplayMode.field_g << 8;
         }
         if (var2 == 3) {
           return kp.field_m << 8;

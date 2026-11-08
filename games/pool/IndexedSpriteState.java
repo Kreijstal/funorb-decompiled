@@ -87,7 +87,7 @@ abstract class IndexedSpriteState {
               if (param6) {
                 stackIn_27_0 = TickClock.field_g[var12];
               } else {
-                stackIn_27_0 = ah.field_c[var12];
+                stackIn_27_0 = VertexNormal.field_c[var12];
               }
               var13 = stackIn_27_0;
               if (var13 <= var7_int) {
@@ -135,9 +135,9 @@ abstract class IndexedSpriteState {
 
     abstract void draw(int param0, int param1);
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -43) {
-          IndexedSpriteState.a((byte) 122);
+          IndexedSpriteState.releaseStatics((byte) 122);
         }
         year = null;
         field_c = null;

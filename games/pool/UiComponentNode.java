@@ -99,7 +99,7 @@ class UiComponentNode extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         playerYouFirstListAreOfferingRematch = null;
         youLostALife = null;
         if (param0 > 89) {
@@ -237,7 +237,7 @@ class UiComponentNode extends DualLinkNode {
             }
           }
           if (param2 != -24984) {
-            UiComponentNode.e(82);
+            UiComponentNode.releaseStatics(82);
           }
           stackIn_68_0 = var6_int;
           return stackIn_68_0;

@@ -168,9 +168,9 @@ final class ji {
             } else {
               this.field_l[var2].field_c = true;
               dupTemp$1 = this.field_l[var2];
-              dupTemp$1.field_b = (short)(dupTemp$1.field_b + (MaxLengthTextInputWidget.nextRandomInt(17, true, ea.field_r) - 8));
+              dupTemp$1.field_b = (short)(dupTemp$1.field_b + (MaxLengthTextInputWidget.nextRandomInt(17, true, RankingsRequest.field_r) - 8));
               dupTemp$2 = this.field_l[var2];
-              dupTemp$2.field_k = (short)(dupTemp$2.field_k + (-8 + MaxLengthTextInputWidget.nextRandomInt(17, true, ea.field_r)));
+              dupTemp$2.field_k = (short)(dupTemp$2.field_k + (-8 + MaxLengthTextInputWidget.nextRandomInt(17, true, RankingsRequest.field_r)));
             }
           } else {
             dupTemp$3 = this.field_l[var2];

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ModelInstance implements eb {
+final class ModelInstance implements SceneDrawable {
     short field_o;
     static String mpXOffersrematch;
     short field_p;
@@ -174,7 +174,7 @@ final class ModelInstance implements eb {
 
     public final void draw(int[] param0, int param1) {
         try {
-          this.mesh.b(param0, this.transform);
+          this.mesh.drawTransformed(param0, this.transform);
           if (param1 != -32215) {
             this.field_m = (short) -26;
           }
@@ -305,7 +305,7 @@ final class ModelInstance implements eb {
         try {
           var5 = new float[]{(float)(this.field_h + this.field_p) / 2.0f, (float)(this.field_m + this.field_a) / 2.0f, (float)(this.field_o + this.field_f) / 2.0f};
           var6 = var5;
-          ag.projectToScreen(param2, var6, 9);
+          ScreenProjectionSupport.projectToScreen(param2, var6, 9);
           if (param0 <= 20) {
             this.a(-74, 99, 4);
           }

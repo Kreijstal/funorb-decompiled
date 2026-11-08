@@ -172,7 +172,7 @@ final class nj {
     final static void a(int param0, int param1, int param2) {
         int var3 = 93 / ((-77 - param2) / 47);
         nn.field_c = param1;
-        cd.field_e = param0;
+        ClientInputResetSupport.field_e = param0;
     }
 
     final static boolean a(int param0, int param1, byte[] param2, int[][] param3) {
@@ -262,13 +262,13 @@ final class nj {
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
-        dj[] var6 = null;
+        FullscreenDisplayMode[] var6 = null;
         RuntimeException var6_ref = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
         PlatformTaskDispatcher var10 = null;
-        dj[] var11 = null;
+        FullscreenDisplayMode[] var11 = null;
         AsyncRequest var12 = null;
         var9 = Pool.field_O;
         try {
@@ -280,7 +280,7 @@ final class nj {
             return null;
           }
           if (param5 == 0) {
-            var11 = s.queryDisplayModes((byte) -112, param1);
+            var11 = DisplayModeSupport.queryDisplayModes((byte) -112, param1);
             var6 = var11;
             if (var6 == null) {
               stackIn_10_0 = null;

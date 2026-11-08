@@ -153,7 +153,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
     private ThreeSliceButtonPainter(int param0, int param1, int param2) {
         this.field_y = jj.field_S;
         this.field_z = param2;
-        this.font = bi.field_e;
+        this.font = LoginPayloadFactory.field_e;
         this.field_r = param0;
         this.field_u = param1;
     }

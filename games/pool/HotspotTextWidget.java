@@ -183,7 +183,7 @@ class HotspotTextWidget extends ButtonWidget {
           var8 = var6.textLeft(5286, (UiWidget) (this), param2);
           var9 = var6.textTop(param3, (UiWidget) (this), (byte) -7);
           do {
-            bj.drawDottedRectangle(var9 + var7.field_p - 2, var7.field_q + 2, 2 + var7.field_w, var7.field_n + (var8 - 2), 2187);
+            DottedRectangleSupport.drawDottedRectangle(var9 + var7.field_p - 2, var7.field_q + 2, 2 + var7.field_w, var7.field_n + (var8 - 2), 2187);
             var7 = var7.field_l;
           } while (var7 != null);
         }

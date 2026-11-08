@@ -80,7 +80,7 @@ final class MenuSelection {
         }
         if (this.heldCode == 0) {
           if (MatchingTextValidator.field_s == 0 &&
-            0 == cd.field_b) {
+            0 == ClientInputResetSupport.field_b) {
             this.heldCode = 0;
             if (this.heldCode == 0) {
               if (!this.pointerDriven &&
@@ -125,9 +125,9 @@ final class MenuSelection {
           this.selectedIndex = param1;
           return;
         }
-        if (cd.field_b == 0) {
+        if (ClientInputResetSupport.field_b == 0) {
           if (MatchingTextValidator.field_s == 0 &&
-            0 == cd.field_b) {
+            0 == ClientInputResetSupport.field_b) {
             this.heldCode = 0;
             if (this.heldCode == 0) {
               if (!this.pointerDriven &&
@@ -175,7 +175,7 @@ final class MenuSelection {
         if (this.field_i > 0) {
           this.field_i = this.field_i - 1;
           if (MatchingTextValidator.field_s == 0 &&
-            0 == cd.field_b) {
+            0 == ClientInputResetSupport.field_b) {
             this.heldCode = 0;
           }
           if (this.heldCode != 0) {
@@ -226,7 +226,7 @@ final class MenuSelection {
           this.selectedIndex = param1;
           return;
         }
-        if (0 != cd.field_b) {
+        if (0 != ClientInputResetSupport.field_b) {
           if (this.heldCode != 0) {
             return;
           }
@@ -282,10 +282,10 @@ final class MenuSelection {
           NodeHashTableIterator.field_a = NodeHashTableIterator.field_a - 1;
           if (NodeHashTableIterator.field_a <= 0) {
             if (0 < PoolMatchController.field_z) {
-              fr.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
+              DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
             }
             if (nj.field_b > 0) {
-              fr.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
+              DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
             }
             if (param0 != -13953) {
               MenuSelection.releaseStatics(67);
@@ -295,16 +295,16 @@ final class MenuSelection {
           IterableDualLinkDeque.a((byte) -80);
           if (0 >= PoolMatchController.field_z) {
             if (nj.field_b > 0) {
-              fr.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
+              DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
             }
             if (param0 != -13953) {
               MenuSelection.releaseStatics(67);
             }
             return;
           }
-          fr.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
+          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
           if (nj.field_b > 0) {
-            fr.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
+            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
           }
           if (param0 == -13953) {
             return;
@@ -318,10 +318,10 @@ final class MenuSelection {
             IterableDualLinkDeque.a((byte) -80);
           }
           if (0 < PoolMatchController.field_z) {
-            fr.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
+            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
           }
           if (nj.field_b > 0) {
-            fr.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
+            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
           }
           if (param0 == -13953) {
             return;
@@ -334,19 +334,19 @@ final class MenuSelection {
             IterableDualLinkDeque.a((byte) -80);
           }
           if (0 < PoolMatchController.field_z) {
-            fr.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
+            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
           }
         } else {
           nj.field_b = nj.field_b - 1;
           if (NodeHashTableIterator.field_a > 0) {
             IterableDualLinkDeque.a((byte) -80);
             if (0 < PoolMatchController.field_z) {
-              fr.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
+              DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
             }
           } else {
             if (0 >= PoolMatchController.field_z) {
               if (nj.field_b > 0) {
-                fr.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
+                DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
               }
               if (param0 == -13953) {
                 return;
@@ -354,11 +354,11 @@ final class MenuSelection {
               MenuSelection.releaseStatics(67);
               return;
             }
-            fr.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
+            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
           }
         }
         if (nj.field_b > 0) {
-          fr.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
+          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
         }
         if (param0 != -13953) {
           MenuSelection.releaseStatics(67);

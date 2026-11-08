@@ -60,7 +60,7 @@ final class Texture extends IntrusiveNode {
         this.pixels = new int[var4Lifetime1];
         for (var5 = 0; var5 < this.field_m.length; var5++) {
           var6 = sb.a(-7575, param2, this.field_m[var5]);
-          var6.b();
+          var6.normalizeCanvas();
           var17 = var6.field_j;
           var15 = var17;
           var7 = var15;

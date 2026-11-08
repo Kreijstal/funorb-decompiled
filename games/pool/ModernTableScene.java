@@ -231,7 +231,7 @@ final class ModernTableScene extends ModelTableScene {
           var4[0] = ArchiveLoadSequence.b(var36[0], -4);
           this.e(true);
           this.prepareBallDrawOrder(false, var36, var20);
-          PlayingSound.sortParallelArrays(ag.field_c, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ChatMessageLine.field_m);
+          PlayingSound.sortParallelArrays(ScreenProjectionSupport.field_c, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ChatMessageLine.field_m);
           PlayingSound.sortParallelArrays(ol.field_a, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, w.field_h);
           PlayingSound.sortParallelArrays(CushionSegment.field_k, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, NodeHashTableIterator.field_l);
           var21 = this.field_bb;
@@ -273,7 +273,7 @@ final class ModernTableScene extends ModelTableScene {
           var24 = this.field_R;
           var55 = GzipDecoder.field_d;
           var24.sortModelsByDepth((byte) -113, 0, var24.field_j.length, var55);
-          en.b(param0 + 55);
+          QuaternionRotationSupport.b(param0 + 55);
           this.a(false, param1);
           var56 = new int[3];
           ViewportController.a(th.field_l[PolarTableScene.field_lb].transform[0], var56, GzipDecoder.field_d, th.field_l[PolarTableScene.field_lb].transform[1], th.field_l[PolarTableScene.field_lb].transform[2], (byte) 9);
@@ -422,7 +422,7 @@ final class ModernTableScene extends ModelTableScene {
             th.field_l[var5Lifetime2].c(6710886, GzipDecoder.field_d);
           }
           var11 = ChatMessageLine.field_m;
-          var12 = ag.field_c;
+          var12 = ScreenProjectionSupport.field_c;
           for (var13 = var12 - 1; var11 <= var13; var13--) {
             th.field_l[ph.field_g[var13]].c(6710886, GzipDecoder.field_d);
           }
@@ -447,7 +447,7 @@ final class ModernTableScene extends ModelTableScene {
             th.field_l[ph.field_g[var13Lifetime2]].c(param0 ^ -6710865, GzipDecoder.field_d);
           }
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
-            param1.z((byte) 1);
+            param1.drawGradientGuide((byte) 1);
           }
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
             for (var11Lifetime3 = 0; var20.length > var11Lifetime3; var11Lifetime3++) {
@@ -624,12 +624,12 @@ final class ModernTableScene extends ModelTableScene {
         int var18Lifetime1;
         int var19Lifetime1;
         var20 = Pool.field_O;
-        var3 = -CueAim.field_b + eh.field_t;
+        var3 = -CueAim.field_b + HighScoreRequest.field_t;
         var4 = new MeshBuilder[var3][];
         var38 = new int[var3][][];
         var21 = var38;
         var5 = var21;
-        var6 = this.a(CueAim.field_b, var4, var38, -57, eh.field_t);
+        var6 = this.a(CueAim.field_b, var4, var38, -57, HighScoreRequest.field_t);
         var7 = -ResizableDialog.field_fb + MarkerSliderPainter.field_m;
         var8 = new MeshBuilder[var7][];
         var39 = new int[var7][][];
@@ -649,7 +649,7 @@ final class ModernTableScene extends ModelTableScene {
         th.field_l = new ModelInstance[-1 * (-WidgetContainer.field_G + EightBallRules.field_e) + -1 * (WidgetStyleLayer.field_k - fc.field_c) + (TableScene.field_I - IntrusiveNodeHashTable.field_l) * 3 + (TextureCache.field_l - qr.field_d) * 3 + (-var3 + (var6 + this.field_O.length + var10 + (-var7 + -1 * (-ArchiveLoadSequence.field_a + DualLinkNode.field_u))))];
         var11Lifetime2 = 0;
         PolarTableScene.field_lb = var11Lifetime2;
-        for (var2 = CueAim.field_b; var2 < eh.field_t; var2++) {
+        for (var2 = CueAim.field_b; var2 < HighScoreRequest.field_t; var2++) {
           var12_intLifetime2 = var11Lifetime2;
           var23 = var4[var2 - CueAim.field_b];
           var24 = var5[var2 - CueAim.field_b];
@@ -685,7 +685,7 @@ final class ModernTableScene extends ModelTableScene {
           this.a(var27, 0, 0, false, this.field_O[var12_intLifetime4], var14_int, this.field_M[var12_intLifetime4], 0);
           var11Lifetime2 += 4;
         }
-        ag.field_c = var11Lifetime2;
+        ScreenProjectionSupport.field_c = var11Lifetime2;
         NodeHashTableIterator.field_l = var11Lifetime2;
         for (var2Lifetime3 = IntrusiveNodeHashTable.field_l; TableScene.field_I > var2Lifetime3; var2Lifetime3++) {
           var12_intLifetime5 = var2Lifetime3;
@@ -736,7 +736,7 @@ final class ModernTableScene extends ModelTableScene {
           var46 = this.field_M[var2Lifetime5];
           var29 = this.field_U.field_b;
           var19 = var15;
-          bh.a(var29, false, var46[1] - 0, var46[2] + 0, var31, 0 + var46[0], var19);
+          MirroredSceneSupport.buildMirroredSceneEntries(var29, false, var46[1] - 0, var46[2] + 0, var31, 0 + var46[0], var19);
           var15 += 4;
         }
         var15 = 0;
@@ -745,7 +745,7 @@ final class ModernTableScene extends ModelTableScene {
           var47 = this.field_M[var2Lifetime6];
           var32 = this.field_jb.field_b;
           var19Lifetime1 = var15;
-          bh.a(var32, false, 0 + var47[1], var47[2] - 0, var34, 0 + var47[0], var19Lifetime1);
+          MirroredSceneSupport.buildMirroredSceneEntries(var32, false, 0 + var47[1], var47[2] - 0, var34, 0 + var47[0], var19Lifetime1);
           var15 += 4;
         }
         var15 = 0;
@@ -754,7 +754,7 @@ final class ModernTableScene extends ModelTableScene {
           var35 = this.field_gb.field_b;
           var18 = var15;
           var48 = this.field_M[var16];
-          bh.a(var35, false, var48[1], var48[2], this.field_O[var16], var48[0], var18);
+          MirroredSceneSupport.buildMirroredSceneEntries(var35, false, var48[1], var48[2], this.field_O[var16], var48[0], var18);
           var15 += 4;
         }
         for (var2Lifetime8 = ArchiveLoadSequence.field_a; DualLinkNode.field_u > var2Lifetime8; var2Lifetime8++) {
@@ -951,7 +951,7 @@ final class ModernTableScene extends ModelTableScene {
           incrementValue$11 = var3_int;
           var3_int++;
           this.field_O[incrementValue$11] = MeshBuilder.loadFromArchive(param0, "", "new_classic_table/floor_texture");
-          eh.field_t = var3_int;
+          HighScoreRequest.field_t = var3_int;
           ResizableDialog.field_fb = var3_int;
           incrementValue$12 = var3_int;
           var3_int++;
@@ -1009,7 +1009,7 @@ final class ModernTableScene extends ModelTableScene {
           var9 = 2147483647;
           var10 = -2147483648;
           for (var4Lifetime1 = IntrusiveNodeHashTable.field_l; var4Lifetime1 < TableScene.field_I; var4Lifetime1++) {
-            d.computeMeshBounds(this.field_O[var4Lifetime1], -23109);
+            MeshBoundsSupport.computeMeshBounds(this.field_O[var4Lifetime1], -23109);
             if (var5 > this.field_O[var4Lifetime1].field_D) {
               var5 = this.field_O[var4Lifetime1].field_D;
             }
@@ -1035,13 +1035,13 @@ final class ModernTableScene extends ModelTableScene {
           var12 = (var8 + var7) / 2;
           var13 = var10;
           for (var4Lifetime2 = 0; this.field_O.length > var4Lifetime2; var4Lifetime2++) {
-            cq.a(var11, 59, var13, this.field_O[var4Lifetime2], var12);
+            TutorialFactory.translateMeshOrigin(var11, 59, var13, this.field_O[var4Lifetime2], var12);
           }
           this.field_M = new int[this.field_O.length][3];
           for (var4Lifetime3 = 0; this.field_O.length > var4Lifetime3; var4Lifetime3++) {
             ln.recenterModel(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
           }
-          for (var4Lifetime4 = CueAim.field_b; var4Lifetime4 < eh.field_t; var4Lifetime4++) {
+          for (var4Lifetime4 = CueAim.field_b; var4Lifetime4 < HighScoreRequest.field_t; var4Lifetime4++) {
             var31 = new MeshBuilder[4];
             var14 = var31;
             var15 = var4Lifetime4;
@@ -1050,7 +1050,7 @@ final class ModernTableScene extends ModelTableScene {
             var53 = this.field_M[var15];
             var25 = var16;
             var19 = var25;
-            var27 = a.mirrorVertically(true, new MeshBuilder(var23, false, false, false, false));
+            var27 = Cp1252DecodingSupport.mirrorVertically(true, new MeshBuilder(var23, false, false, false, false));
             var42 = mj.identityTransform(-31121);
             var26 = var42;
             var20 = var26;
@@ -1096,7 +1096,7 @@ final class ModernTableScene extends ModelTableScene {
             var54 = this.field_M[var15Lifetime1];
             var34 = var16Lifetime1;
             var19Lifetime1 = var34;
-            var36 = a.mirrorVertically(true, new MeshBuilder(var32, false, false, false, false));
+            var36 = Cp1252DecodingSupport.mirrorVertically(true, new MeshBuilder(var32, false, false, false, false));
             var47 = mj.identityTransform(-31121);
             var35 = var47;
             var20Lifetime1 = var35;
@@ -1183,7 +1183,7 @@ final class ModernTableScene extends ModelTableScene {
           }
         }
         if (MatchingTextValidator.field_w >= 0) {
-          s.field_c[MatchingTextValidator.field_w].c((byte) -126);
+          DisplayModeSupport.field_c[MatchingTextValidator.field_w].c((byte) -126);
         }
     }
 

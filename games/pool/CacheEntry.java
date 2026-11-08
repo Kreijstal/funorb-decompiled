@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class CacheEntry extends DualLinkNode {
-    static hj field_A;
+    static QuickChatDynamicCommand field_A;
     int weight;
     static int[][] field_C;
     static AudioOutput field_D;
@@ -23,7 +23,7 @@ abstract class CacheEntry extends DualLinkNode {
         ReportAbuseDialog.field_Nb = param0;
         BallEvent.field_a = param2;
         if (param6 != 1727215554) {
-          CacheEntry.f(-21);
+          CacheEntry.releaseStatics(-21);
         }
         la.field_f = param3;
         if (na.field_f - param1 >= la.field_f - param5) {
@@ -77,18 +77,18 @@ abstract class CacheEntry extends DualLinkNode {
     }
 
     final static void g(int param0) {
-        s.field_c[16].setItems(dj.field_m, true);
-        s.field_c[15].setItems(UsernameAvailabilityValidator.field_t, true);
-        s.field_c[17].setItems(ml.field_k, true);
+        DisplayModeSupport.field_c[16].setItems(FullscreenDisplayMode.field_m, true);
+        DisplayModeSupport.field_c[15].setItems(UsernameAvailabilityValidator.field_t, true);
+        DisplayModeSupport.field_c[17].setItems(ml.field_k, true);
         int var1 = 125 % ((-17 - param0) / 34);
         if (!mg.a(true)) {
-          s.field_c[3].setItems(OpacityWidget.field_O, true);
-          s.field_c[10].setItems(kc.field_h, true);
-          s.field_c[11].setItems(AccountCreationDialog.field_Hb, true);
-          s.field_c[12].setItems(ScrollPaneWithFooter.field_Nb, true);
-          s.field_c[8].setItems(KillerBallSkin.field_r, true);
-          s.field_c[24].setItems(SingleChildWidget.field_G, true);
-          s.field_c[9].setItems(w.field_d, true);
+          DisplayModeSupport.field_c[3].setItems(OpacityWidget.field_O, true);
+          DisplayModeSupport.field_c[10].setItems(kc.field_h, true);
+          DisplayModeSupport.field_c[11].setItems(AccountCreationDialog.field_Hb, true);
+          DisplayModeSupport.field_c[12].setItems(ScrollPaneWithFooter.field_Nb, true);
+          DisplayModeSupport.field_c[8].setItems(KillerBallSkin.field_r, true);
+          DisplayModeSupport.field_c[24].setItems(SingleChildWidget.field_G, true);
+          DisplayModeSupport.field_c[9].setItems(w.field_d, true);
         }
     }
 
@@ -216,7 +216,7 @@ abstract class CacheEntry extends DualLinkNode {
               if (ClientException.field_h != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = DualLinkNode.a(DraggableWidget.field_T, ih.field_c, de.fsTimeout, dq.field_f, param1 ^ 4);
+              var3_int = DualLinkNode.a(DraggableWidget.field_T, ih.field_c, DebugTuningSupport.fsTimeout, dq.field_f, param1 ^ 4);
               var4 = 3 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
               dq.field_j = new String[var4];
@@ -289,7 +289,7 @@ abstract class CacheEntry extends DualLinkNode {
             dq.field_j[1] = jc.fsButtonAccept;
             ByteStorage.field_c = new int[2];
             IterableNodeHashTable.field_c[1] = 0;
-            dq.field_j[0] = cl.fsAcceptBeforeaccept;
+            dq.field_j[0] = ProjectedLineSupport.fsAcceptBeforeaccept;
             IterableNodeHashTable.field_c[3] = 1;
             dq.field_j[3] = ArchiveIndex.fsButtonCancel;
             ByteStorage.field_c[1] = 2;
@@ -354,7 +354,7 @@ abstract class CacheEntry extends DualLinkNode {
           }
           PlasmaTableScene.field_Z = nn.field_c - (var3_intLifetime1 >> 1);
           rl.field_a = (IterableDualLinkDeque.field_e + NineBallRules.field_h << 1) * LabeledChildWidget.field_W.itemCount;
-          ah.field_i = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + nn.field_c);
+          VertexNormal.field_i = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + nn.field_c);
           for (var4Lifetime2 = 0; var4Lifetime2 < dq.field_j.length; var4Lifetime2++) {
             stackIn_114_0 = rl.field_a;
             if (0 > IterableNodeHashTable.field_c[var4Lifetime2]) {
@@ -364,7 +364,7 @@ abstract class CacheEntry extends DualLinkNode {
             }
             rl.field_a = stackIn_114_0 + stackIn_115_1;
           }
-          PasswordValidator.field_n = cd.field_e - (rl.field_a >> 1);
+          PasswordValidator.field_n = ClientInputResetSupport.field_e - (rl.field_a >> 1);
           ra.field_b = new int[dq.field_j.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = PasswordValidator.field_n;
@@ -409,7 +409,7 @@ abstract class CacheEntry extends DualLinkNode {
         this.weight = param0;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_x = null;
         field_B = null;
         field_A = null;
@@ -424,7 +424,7 @@ abstract class CacheEntry extends DualLinkNode {
 
     static {
         ticketingGotowebsite = "Visit the Account Management section on the main site to view.";
-        field_A = new hj(4, 1, 1, 1);
+        field_A = new QuickChatDynamicCommand(4, 1, 1, 1);
         field_F = 1;
         ballsetPlasmaGroup0 = "<col=ff9999>Reds</col>";
     }

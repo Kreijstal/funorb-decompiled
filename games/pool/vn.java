@@ -44,7 +44,7 @@ final class vn {
           String var16 = null;
           String var17 = null;
           int var18 = 0;
-          ho var19 = null;
+          ReflectionCheck var19 = null;
           byte[][] var20 = null;
           String var21 = null;
           String var22 = null;
@@ -52,7 +52,7 @@ final class vn {
           int var14Lifetime1;
           var15 = Pool.field_O;
           try {
-            var19 = new ho();
+            var19 = new ReflectionCheck();
             var19.field_t = param3.readUnsignedByte(-105);
             var19.field_o = param3.readInt(true);
             var19.field_w = new byte[var19.field_t][][];
@@ -176,7 +176,7 @@ final class vn {
         PoolUiText.field_e.setBounds(2 + ArchiveIndex.field_x, 2147483647, 0, -80 + (-2 - TranslatedUiText.field_n) + (SingleChildWidget.field_J.width - 2), 18);
         ByteStorage.field_f.setBounds(ArchiveIndex.field_x + 2, 2147483647, -2 + SingleChildWidget.field_J.width + (-TranslatedUiText.field_n - 80), 82 + TranslatedUiText.field_n, 18);
         NameEntryPopup.field_Mb.setPaneFooterBounds(0, SingleChildWidget.field_J.width, 8, 2, TranslatedUiText.field_n, 20, -22 - ArchiveIndex.field_x + SingleChildWidget.field_J.height, 20 + (2 + ArchiveIndex.field_x));
-        cp.field_c.layoutPaneFooter(20, TranslatedUiText.field_n, 0, 2);
+        InputIdleSupport.field_c.layoutPaneFooter(20, TranslatedUiText.field_n, 0, 2);
         int var8 = 111 % ((param4 + 58) / 45);
     }
 
@@ -184,15 +184,15 @@ final class vn {
         String[] var3 = null;
         UiComponent[] var4 = null;
         try {
-          var3 = new String[]{param0, cl.muChatFriends, ll.muChatIgnore};
-          var4 = new UiComponent[]{param1, SingleChildWidget.field_J, (UiComponent) ((Object) cp.field_c)};
-          this.field_i = new TabbedPane(0L, IndexedSpriteState.field_c, var3, ea.field_u, var4, 0);
+          var3 = new String[]{param0, ProjectedLineSupport.muChatFriends, ll.muChatIgnore};
+          var4 = new UiComponent[]{param1, SingleChildWidget.field_J, (UiComponent) ((Object) InputIdleSupport.field_c)};
+          this.field_i = new TabbedPane(0L, IndexedSpriteState.field_c, var3, RankingsRequest.field_u, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         membersExpansionBenefits = null;
         field_h = null;

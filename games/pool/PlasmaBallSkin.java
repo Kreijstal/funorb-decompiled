@@ -33,7 +33,7 @@ final class PlasmaBallSkin extends BallSkin {
           }
           var15_int = param7.maxDescent + param7.field_L;
           var16 = param7.field_L;
-          eh.a(param5, var16, param4, param7, param1, param10, param14, param6, 19539, param0, param2, var16, param13, param7, param3, param8, param12, param9, var15_int, var15_int);
+          HighScoreRequest.a(param5, var16, param4, param7, param1, param10, param14, param6, 19539, param0, param2, var16, param13, param7, param3, param8, param12, param9, var15_int, var15_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,8 +77,8 @@ final class PlasmaBallSkin extends BallSkin {
           sa.field_q = WidgetStyleLayer.loadSprite("", (byte) 101, "grad_ball_purple", param1).field_D;
           om.field_r = WidgetStyleLayer.loadSprite("", (byte) 113, "grad_ball_blue", param1).field_D;
           PotEvent.field_p = WidgetStyleLayer.loadSprite("", (byte) 126, "grad_ball_red", param1).field_D;
-          ae.field_e = WidgetStyleLayer.loadSprite("", (byte) 86, "grad_ball_white", param1).field_D;
-          bc.field_c = WidgetStyleLayer.loadSprite("", (byte) 68, "grad_lightning_purple", param1).field_D;
+          MembershipBenefitsLoader.field_e = WidgetStyleLayer.loadSprite("", (byte) 86, "grad_ball_white", param1).field_D;
+          FontPaletteSupport.field_c = WidgetStyleLayer.loadSprite("", (byte) 68, "grad_lightning_purple", param1).field_D;
           if (param0 != 198123656) {
             field_p = (boolean[]) null;
           }
@@ -135,7 +135,7 @@ final class PlasmaBallSkin extends BallSkin {
           if (param1 != -21972) {
             return;
           }
-          if (de.field_g) {
+          if (DebugTuningSupport.field_g) {
             return;
           }
           if (param0 != -1) {
@@ -147,7 +147,7 @@ final class PlasmaBallSkin extends BallSkin {
             }
             if (!param3) {
               if (param0 >= 0) {
-                s.field_c[param0].b(0);
+                DisplayModeSupport.field_c[param0].b(0);
               }
               if (!(param0 >= 0) ||
                 var5 != 0) {
@@ -156,9 +156,9 @@ final class PlasmaBallSkin extends BallSkin {
                   om.a(-96, false);
                   if (param0 < 0) {
                     SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
-                    s.field_c[param0].darkenBackground((byte) 108);
+                    DisplayModeSupport.field_c[param0].darkenBackground((byte) 108);
                   } else {
-                    s.field_c[param0].darkenBackground((byte) 108);
+                    DisplayModeSupport.field_c[param0].darkenBackground((byte) 108);
                   }
                 }
               }} else {
@@ -166,13 +166,13 @@ final class PlasmaBallSkin extends BallSkin {
               if (param0 < 0) {
                 SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                 if (var5 != 0) {
-                  s.field_c[param0].darkenBackground((byte) 108);
+                  DisplayModeSupport.field_c[param0].darkenBackground((byte) 108);
                 }
               } else {
-                s.field_c[param0].darkenBackground((byte) 108);
+                DisplayModeSupport.field_c[param0].darkenBackground((byte) 108);
               }
             }
-            s.field_c[param0].drawScreen(param1 ^ -21891);
+            DisplayModeSupport.field_c[param0].drawScreen(param1 ^ -21891);
             if (var5 == 0) {
               return;
             }
@@ -273,7 +273,7 @@ final class PlasmaBallSkin extends BallSkin {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (dj.field_b.indexOf(var5Lifetime1) == -1) {
+              if (FullscreenDisplayMode.field_b.indexOf(var5Lifetime1) == -1) {
                 stackIn_63_0 = MessageScreen.field_K;
                 return stackIn_63_0;
               }
@@ -377,11 +377,11 @@ final class PlasmaBallSkin extends BallSkin {
           var19Lifetime2 = 0;
           scanLoop1: while (true) {
             regionExit2: {
-              if (var19Lifetime2 < hj.field_d[param2].length) {
-                var20Lifetime2 = 2 + (128 * var19Lifetime2 / hj.field_d[param2].length - 64);
-                kp.field_i[param2][var19Lifetime2] = var20Lifetime2 * var15 + var12 * ResizableDialog.field_ab[param2][var19Lifetime2] + hj.field_d[param2][var19Lifetime2] * var9 >> 16;
-                field_n[param2][var19Lifetime2] = var13 * ResizableDialog.field_ab[param2][var19Lifetime2] + (var10 * hj.field_d[param2][var19Lifetime2] + var16 * var20Lifetime2) >> 16;
-                var20Lifetime2 = var14 * ResizableDialog.field_ab[param2][var19Lifetime2] + hj.field_d[param2][var19Lifetime2] * var11 + var20Lifetime2 * var17 >> 16;
+              if (var19Lifetime2 < QuickChatDynamicCommand.field_d[param2].length) {
+                var20Lifetime2 = 2 + (128 * var19Lifetime2 / QuickChatDynamicCommand.field_d[param2].length - 64);
+                kp.field_i[param2][var19Lifetime2] = var20Lifetime2 * var15 + var12 * ResizableDialog.field_ab[param2][var19Lifetime2] + QuickChatDynamicCommand.field_d[param2][var19Lifetime2] * var9 >> 16;
+                field_n[param2][var19Lifetime2] = var13 * ResizableDialog.field_ab[param2][var19Lifetime2] + (var10 * QuickChatDynamicCommand.field_d[param2][var19Lifetime2] + var16 * var20Lifetime2) >> 16;
+                var20Lifetime2 = var14 * ResizableDialog.field_ab[param2][var19Lifetime2] + QuickChatDynamicCommand.field_d[param2][var19Lifetime2] * var11 + var20Lifetime2 * var17 >> 16;
                 dupTemp$2 = kp.field_i[param2];
                 dupTemp$2[var19Lifetime2] = dupTemp$2[var19Lifetime2] + var6_int;
                 dupTemp$3 = field_n[param2];
@@ -419,7 +419,7 @@ final class PlasmaBallSkin extends BallSkin {
             stackIn_27_1 = 0;
             break;
           }
-          wn.$cfr$intArgs$a$2435eea43ef1(stackIn_27_0, stackIn_27_1, s.a(param2, 115), field_n[param2], 32512 - param4 * 127 >> 8, 0, kp.field_i[param2], TikiBallSkin.field_o[param2]);
+          wn.$cfr$intArgs$a$2435eea43ef1(stackIn_27_0, stackIn_27_1, DisplayModeSupport.a(param2, 115), field_n[param2], 32512 - param4 * 127 >> 8, 0, kp.field_i[param2], TikiBallSkin.field_o[param2]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -459,11 +459,11 @@ final class PlasmaBallSkin extends BallSkin {
         var8 = Pool.field_O;
         try {
           var3 = -74 / ((29 - param0) / 44);
-          var4 = hj.field_d[0].length;
-          for (var5 = 0; hj.field_d.length > var5; var5++) {
+          var4 = QuickChatDynamicCommand.field_d[0].length;
+          for (var5 = 0; QuickChatDynamicCommand.field_d.length > var5; var5++) {
             dupTemp$2 = ie.field_a[var5];
-            dupTemp$2[1] = dupTemp$2[1] + (-3 + MaxLengthTextInputWidget.nextRandomInt(5, true, ea.field_r));
-            ie.field_a[var5][hj.field_d[var5].length - 1] = 0;
+            dupTemp$2[1] = dupTemp$2[1] + (-3 + MaxLengthTextInputWidget.nextRandomInt(5, true, RankingsRequest.field_r));
+            ie.field_a[var5][QuickChatDynamicCommand.field_d[var5].length - 1] = 0;
             if (48 >= ie.field_a[var5][1]) {
               if (ie.field_a[var5][1] < 16) {
                 ie.field_a[var5][1] = 16;
@@ -478,20 +478,20 @@ final class PlasmaBallSkin extends BallSkin {
           for (var5Lifetime1 = 1; (var4 - 1) > var5Lifetime1; var5Lifetime1++) {
             var2_int = var5Lifetime1 - var4 / 2;
             var6Lifetime1 = rf.inverseSquareRoot(65536 - (var2_int * var2_int << 16) / (var4 * var4 / 4), -120) * 8 >> 13 >> 1;
-            for (var7 = 0; var7 < hj.field_d.length; var7++) {
+            for (var7 = 0; var7 < QuickChatDynamicCommand.field_d.length; var7++) {
               if (var6Lifetime1 > 0) {
-                hj.field_d[var7][var5Lifetime1] = hj.field_d[var7][var5Lifetime1] + hj.field_d[var7][-1 + var5Lifetime1] >> 1;
+                QuickChatDynamicCommand.field_d[var7][var5Lifetime1] = QuickChatDynamicCommand.field_d[var7][var5Lifetime1] + QuickChatDynamicCommand.field_d[var7][-1 + var5Lifetime1] >> 1;
                 ResizableDialog.field_ab[var7][var5Lifetime1] = ResizableDialog.field_ab[var7][var5Lifetime1] + ResizableDialog.field_ab[var7][var5Lifetime1 - 1] >> 1;
-                dupTemp$0 = hj.field_d[var7];
-                dupTemp$0[var5Lifetime1] = dupTemp$0[var5Lifetime1] + (MaxLengthTextInputWidget.nextRandomInt(5, true, ea.field_r) - 2);
+                dupTemp$0 = QuickChatDynamicCommand.field_d[var7];
+                dupTemp$0[var5Lifetime1] = dupTemp$0[var5Lifetime1] + (MaxLengthTextInputWidget.nextRandomInt(5, true, RankingsRequest.field_r) - 2);
                 dupTemp$1 = ResizableDialog.field_ab[var7];
-                dupTemp$1[var5Lifetime1] = dupTemp$1[var5Lifetime1] + (MaxLengthTextInputWidget.nextRandomInt(5, true, ea.field_r) - 2);
-                if (var6Lifetime1 >= hj.field_d[var7][var5Lifetime1]) {
-                  if (-var6Lifetime1 > hj.field_d[var7][var5Lifetime1]) {
-                    hj.field_d[var7][var5Lifetime1] = -var6Lifetime1;
+                dupTemp$1[var5Lifetime1] = dupTemp$1[var5Lifetime1] + (MaxLengthTextInputWidget.nextRandomInt(5, true, RankingsRequest.field_r) - 2);
+                if (var6Lifetime1 >= QuickChatDynamicCommand.field_d[var7][var5Lifetime1]) {
+                  if (-var6Lifetime1 > QuickChatDynamicCommand.field_d[var7][var5Lifetime1]) {
+                    QuickChatDynamicCommand.field_d[var7][var5Lifetime1] = -var6Lifetime1;
                   }
                 } else {
-                  hj.field_d[var7][var5Lifetime1] = var6Lifetime1;
+                  QuickChatDynamicCommand.field_d[var7][var5Lifetime1] = var6Lifetime1;
                 }
                 if (ResizableDialog.field_ab[var7][var5Lifetime1] <= var6Lifetime1) {
                   if (ResizableDialog.field_ab[var7][var5Lifetime1] < -var6Lifetime1) {
@@ -511,7 +511,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           muRequestWithdrawn = null;
           int var1_int = -50 % ((40 - param0) / 58);
@@ -538,22 +538,22 @@ final class PlasmaBallSkin extends BallSkin {
         int var5 = 0;
         var5 = Pool.field_O;
         try {
-          hj.field_d = new int[param1.balls.length][12];
+          QuickChatDynamicCommand.field_d = new int[param1.balls.length][12];
           ResizableDialog.field_ab = new int[param1.balls.length][12];
           ie.field_a = new int[param1.balls.length][12];
-          kp.field_i = new int[hj.field_d.length][hj.field_d[0].length];
-          field_n = new int[hj.field_d.length][hj.field_d[0].length];
-          TikiBallSkin.field_o = new int[hj.field_d.length][hj.field_d[0].length];
+          kp.field_i = new int[QuickChatDynamicCommand.field_d.length][QuickChatDynamicCommand.field_d[0].length];
+          field_n = new int[QuickChatDynamicCommand.field_d.length][QuickChatDynamicCommand.field_d[0].length];
+          TikiBallSkin.field_o = new int[QuickChatDynamicCommand.field_d.length][QuickChatDynamicCommand.field_d[0].length];
           var3_int = 0;
           scanLoop1: while (true) {
-            if (hj.field_d.length > var3_int) {
+            if (QuickChatDynamicCommand.field_d.length > var3_int) {
               stackIn_13_0 = 0;
               if (var5 != 0) {
                 break scanLoop1;
               }
               var4 = stackIn_13_0;
-              while (var4 < hj.field_d[var3_int].length) {
-                hj.field_d[var3_int][var4] = 0;
+              while (var4 < QuickChatDynamicCommand.field_d[var3_int].length) {
+                QuickChatDynamicCommand.field_d[var3_int][var4] = 0;
                 ResizableDialog.field_ab[var3_int][var4] = 0;
                 ie.field_a[var3_int][var4] = 16;
                 var4++;
@@ -822,7 +822,7 @@ final class PlasmaBallSkin extends BallSkin {
         try {
           var1_long = rl.monotonicTimeMillis((byte) -101);
           if (param0 != 12000) {
-            PlasmaBallSkin.i(32);
+            PlasmaBallSkin.releaseStatics(32);
           }
           var3 = var1_long - VerticalScrollbar.field_Pb;
           if (var3 <= 30000L) {
@@ -871,7 +871,7 @@ final class PlasmaBallSkin extends BallSkin {
           if (param0 != 384) {
             this.a((int[]) null, (int[]) null, 41, (byte) 82, 126);
           }
-          stackIn_4_0 = hj.field_d.length;
+          stackIn_4_0 = QuickChatDynamicCommand.field_d.length;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -976,7 +976,7 @@ final class PlasmaBallSkin extends BallSkin {
               var4 != 0)) {
               if (var3_int == 8 &&
                 var4 == 0) {
-                stackIn_82_0 = bc.field_c;
+                stackIn_82_0 = FontPaletteSupport.field_c;
                 return stackIn_82_0;
               }
               if (var3_int != 9 && (var3_int != 10 ||

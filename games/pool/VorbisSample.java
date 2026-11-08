@@ -602,7 +602,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = TextHotspotRegion.a(var5 - 1, 0);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = c.reverseBits(var11, var10, (byte) -87);
+            var9[var11] = QuickChatMenuSupport.reverseBits(var11, var10, (byte) -87);
           }
           if (var1 == 0) {
             shortTrigA = var6_ref_float__;

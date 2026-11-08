@@ -320,8 +320,8 @@ final class ProxySocketConnector extends SocketConnector {
     final static void a(boolean param0) {
         String var1 = null;
         if (ro.field_e) {
-          if (d.field_d != null) {
-            d.field_d.dismissDialog(17);
+          if (MeshBoundsSupport.field_d != null) {
+            MeshBoundsSupport.field_d.dismissDialog(17);
           }
           var1 = BitmapTextLayout.d(120);
           TextLineLayout.field_j = new LoginForm(var1, (String) null, true, false, param0);
@@ -343,7 +343,7 @@ final class ProxySocketConnector extends SocketConnector {
           hn.field_b = 2;
           var5 = (CharSequence) ((Object) param2);
           ResourceArchive.field_a = TutorialController.normalizeDisplayName(88, var5);
-          c.field_d = param1;
+          QuickChatMenuSupport.field_d = param1;
           DualLinkNode.field_p = true;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

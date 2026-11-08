@@ -114,7 +114,7 @@ final class Bzip2DecoderState {
           if (param3 > -52) {
             field_i = (PcmSample) null;
           }
-          hj.field_c = param4;
+          QuickChatDynamicCommand.field_c = param4;
           AccountWelcomePanel.field_T = true;
           ie.field_e = param1;
           PasswordValidator.field_x = param0;

@@ -28,7 +28,7 @@ final class PlayerContextMenu {
           }
           if (param0.field_p == 0) {
             if (BallDebugOverlay.field_i == 0) {
-              this.field_n.addAction(cl.muChatLobbyFriendsOnly, 17130, 12);
+              this.field_n.addAction(ProjectedLineSupport.muChatLobbyFriendsOnly, 17130, 12);
             }
             this.field_n.addAction(Pool.muChatLobbyHide, 17130, 13);
           }
@@ -69,7 +69,7 @@ final class PlayerContextMenu {
                 AccountCreationForm.a(this.field_b, true, param1);
               } else {
                 if (param2 == 10) {
-                  ef.a(this.field_b, 3, param1);
+                  FaceNormal.a(this.field_b, 3, param1);
                 } else {
                   if (param2 == 15) {
                     SocialListEntry.a(param1, this.field_b, 11);
@@ -117,14 +117,14 @@ final class PlayerContextMenu {
               this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, jh.addXToIgnore), 17130, 6);
               if (param1 != null &&
                 param0 != 2 &&
-                !ea.field_z) {
+                !RankingsRequest.field_z) {
                 this.field_h = param1;
                 this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, TranslatedUiText.field_k), 17130, 19);
               }
             }
             if (var5 != null) {
               if (!NineBallRules.a(this.field_m, (byte) -101) &&
-                !ea.field_z) {
+                !RankingsRequest.field_z) {
                 if (!ViewportController.field_y) {
                   this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, rp.sendPmToX), 17130, 8);
                 }
@@ -134,7 +134,7 @@ final class PlayerContextMenu {
                   this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, TranslatedUiText.field_k), 17130, 19);
                 }
               }
-              this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, ef.rmXFromFriends), 17130, 5);
+              this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, FaceNormal.rmXFromFriends), 17130, 5);
             }
             if (var6 != 0) {
               this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, ph.rmXFromIgnore), 17130, 7);
@@ -191,7 +191,7 @@ final class PlayerContextMenu {
                       if (param2 != 19) {
                         return false;
                       }
-                      hj.a(this.field_a, this.field_h, this.field_l, this.field_m, (byte) 76);
+                      QuickChatDynamicCommand.a(this.field_a, this.field_h, this.field_l, this.field_m, (byte) 76);
                     }
                   }
                 } else {
@@ -275,7 +275,7 @@ final class PlayerContextMenu {
               if (param0 != 7) {
                 return false;
               }
-              var4_ref = ae.a(-3266, this.field_d, this.field_m, param1);
+              var4_ref = MembershipBenefitsLoader.removeIgnore(-3266, this.field_d, this.field_m, param1);
             }
           }
         }
@@ -324,7 +324,7 @@ final class PlayerContextMenu {
           }
         }
         if (param0 != 124) {
-          PlayerContextMenu.c((byte) 66);
+          PlayerContextMenu.releaseStatics((byte) 66);
         }
     }
 
@@ -403,7 +403,7 @@ final class PlayerContextMenu {
             var3 = var4.field_Ob;
             if (var4.field_Xb) {
               this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, BallEvent.inviteAcceptXsGame), param0 ^ 18642, 2);
-              this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, hj.inviteDeclineXsGame), 17130, 3);
+              this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, QuickChatDynamicCommand.inviteDeclineXsGame), 17130, 3);
             } else {
               if (var4.field_ic) {
                 this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, param0 ^ -2617, LongAndTextLoginPayload.joinXsGame), param0 ^ 18642, 2);
@@ -411,7 +411,7 @@ final class PlayerContextMenu {
                 if (!var4.field_fc &&
                   var4.field_Dc && (!var4.field_ec ||
                   var4.field_ic)) {
-                  this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, dn.joinRequestXsGame), param0 ^ 18642, 2);
+                  this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, ShotEvent.joinRequestXsGame), param0 ^ 18642, 2);
                 }
               }
               if (var4.field_fc) {
@@ -425,7 +425,7 @@ final class PlayerContextMenu {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_g = null;
         invite = null;

@@ -39,7 +39,7 @@ final class TutorialStep extends IntrusiveNode {
 
     final void buildOutline(int param0) {
         try {
-          this.field_q = ag.findHotspotRegion(-PoolGameModel.field_k.localY + DebouncedValidationProvider.field_f, this.field_r, wn.field_i - PoolGameModel.field_k.localX, 15395);
+          this.field_q = ScreenProjectionSupport.findHotspotRegion(-PoolGameModel.field_k.localY + DebouncedValidationProvider.field_f, this.field_r, wn.field_i - PoolGameModel.field_k.localX, 15395);
           int var2_int = 25 % ((param0 - 39) / 62);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bk.A(" + param0 + ')');
@@ -126,8 +126,8 @@ final class TutorialStep extends IntrusiveNode {
           }
           this.field_z = new Sprite(PoolGameModel.field_k.width, this.field_t + 10);
           this.field_z.bindAsRenderTarget();
-          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
-          sa.field_h.drawParagraph(ef.a("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);
+          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
+          sa.field_h.drawParagraph(FaceNormal.a("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);
           this.field_r = SocketArchiveNetworkClient.a(new int[]{this.field_y}, this.field_n, this.field_p, 7, sa.field_h, true, 10);
           OpacityWidget.field_P.bindAsRenderTarget(15100);
           return;

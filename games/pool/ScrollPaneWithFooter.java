@@ -135,7 +135,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         if (param0) {
           return;
         }
-        cb.field_d = 0;
+        AwtEventQueueSupport.field_d = 0;
     }
 
     ScrollPaneWithFooter(long param0, UiComponent param1, UiComponent param2, VerticalScrollbar param3, UiComponent param4, String param5, String param6) {

@@ -20,23 +20,23 @@ final class ProgressDialog extends ResizableDialog {
         int var2 = -(HighscoresScreen.field_P * HighscoresScreen.field_P) + var1;
         int var3Lifetime1;
         if (param0 == 23323) {
-          var3 = StrongCacheEntry.field_J + (-StrongCacheEntry.field_J + cb.field_g) * var2 / var1;
-          fl.field_q.setBounds(var3, 2147483647, RasterSnapshot.field_u, 640, 120);
-          Camera.a(ja.field_b, cb.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
+          var3 = StrongCacheEntry.field_J + (-StrongCacheEntry.field_J + AwtEventQueueSupport.field_g) * var2 / var1;
+          IntLookupQuery.field_q.setBounds(var3, 2147483647, RasterSnapshot.field_u, 640, 120);
+          Camera.a(ja.field_b, AwtEventQueueSupport.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
           return;
         }
         field_ib = (int[]) null;
-        var3Lifetime1 = StrongCacheEntry.field_J + (-StrongCacheEntry.field_J + cb.field_g) * var2 / var1;
-        fl.field_q.setBounds(var3Lifetime1, 2147483647, RasterSnapshot.field_u, 640, 120);
-        Camera.a(ja.field_b, cb.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
+        var3Lifetime1 = StrongCacheEntry.field_J + (-StrongCacheEntry.field_J + AwtEventQueueSupport.field_g) * var2 / var1;
+        IntLookupQuery.field_q.setBounds(var3Lifetime1, 2147483647, RasterSnapshot.field_u, 640, 120);
+        Camera.a(ja.field_b, AwtEventQueueSupport.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
     }
 
     final void drawDialogFrame(int param0, int param1, int param2) {
         super.drawDialogFrame(param0, param1, param2);
-        bi.field_e.drawCentered(this.statusText, param0 + (this.widgetWidth >> 1), param1 + 103, 16777215, -1);
+        LoginPayloadFactory.field_e.drawCentered(this.statusText, param0 + (this.widgetWidth >> 1), param1 + 103, 16777215, -1);
         if (null != this.introductoryText) {
           SoftwareRasterizer.drawHorizontalLine(param0 + 20, -7 + (param1 + 120), 260, 8421504);
-          bi.field_e.drawParagraph(this.introductoryText, param0 + 20, 8 + (param1 + 120), 260, 100, 16777215, -1, 1, 0, bi.field_e.maxAscent);
+          LoginPayloadFactory.field_e.drawParagraph(this.introductoryText, param0 + 20, 8 + (param1 + 120), 260, 100, 16777215, -1, 1, 0, LoginPayloadFactory.field_e.maxAscent);
         }
     }
 
@@ -46,7 +46,7 @@ final class ProgressDialog extends ResizableDialog {
         try {
           this.introductoryText = param1;
           if (null != this.introductoryText) {
-            var3_int = bi.field_e.measureWrappedHeight(this.introductoryText, 260, bi.field_e.maxAscent);
+            var3_int = LoginPayloadFactory.field_e.measureWrappedHeight(this.introductoryText, 260, LoginPayloadFactory.field_e.maxAscent);
             this.resizeAndCenter(150 + var3_int, 31936, 300);
           }
           this.progressBar = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);

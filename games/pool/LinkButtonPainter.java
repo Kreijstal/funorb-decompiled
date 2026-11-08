@@ -89,7 +89,7 @@ final class LinkButtonPainter implements WidgetPainter {
             } else {
               var10 = var10 + (-var8 + param4.widgetHeight);
             }
-            bj.drawDottedRectangle(var10 + 2, var8, var7 + 4, -2 + var9, 2187);
+            DottedRectangleSupport.drawDottedRectangle(var10 + 2, var8, var7 + 4, -2 + var9, 2187);
           }
           var7Lifetime1 = 88 / ((param2 - 2) / 41);
           return;

@@ -126,7 +126,7 @@ final class ShotRecord extends IntrusiveNode {
         if (param0 > -66) {
           return false;
         }
-        if (0 == (ab.field_g & this.endResolution)) {
+        if (0 == (ArchiveAvailabilitySupport.field_g & this.endResolution)) {
           return false;
         }
         if ((24 & this.field_l) == 0) {
@@ -146,7 +146,7 @@ final class ShotRecord extends IntrusiveNode {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         unableToDeleteFriend = null;
         rulePillar0 = null;
         timerMinutesSecondsFractions = null;
@@ -170,7 +170,7 @@ final class ShotRecord extends IntrusiveNode {
           if (null == this.field_R) {
             this.field_R = new IntrusiveDeque();
           }
-          this.field_R.addFirst((byte) 124, new dn(param0, param2));
+          this.field_R.addFirst((byte) 124, new ShotEvent(param0, param2));
           if (param1 != -14) {
             field_S = (TriangleMesh[]) null;
           }
@@ -617,10 +617,10 @@ final class ShotRecord extends IntrusiveNode {
 
     final String describeOutcome(int param0) {
         if (param0 == 26859) {
-          return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.size(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.describeResolutionFlags(this.endResolution, (byte) 10);
+          return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.size(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ArchiveAvailabilitySupport.describeResolutionFlags(this.endResolution, (byte) 10);
         }
         menu = (String) null;
-        return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.size(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.describeResolutionFlags(this.endResolution, (byte) 10);
+        return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.size(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ArchiveAvailabilitySupport.describeResolutionFlags(this.endResolution, (byte) 10);
     }
 
     final boolean isGroupChoicePending(boolean param0) {
@@ -669,7 +669,7 @@ final class ShotRecord extends IntrusiveNode {
         var4 = Pool.field_O;
         if ((ClientException.field_b & this.endResolution) != 0) {
           if ((3 & param0) == 0) {
-            if ((ab.field_g & this.endResolution) != 0 &&
+            if ((ArchiveAvailabilitySupport.field_g & this.endResolution) != 0 &&
               (param0 & 24) != 0) {
               var3 = this.field_l & 24;
               if (var3 == 0) {
@@ -681,7 +681,7 @@ final class ShotRecord extends IntrusiveNode {
                 }
               }
             }
-            if ((a.field_d & this.endResolution) != 0 &&
+            if ((Cp1252DecodingSupport.field_d & this.endResolution) != 0 &&
               (96 & param0) != 0) {
               var3Lifetime4 = this.field_l & 96;
               if (var3Lifetime4 != 0) {
@@ -708,7 +708,7 @@ final class ShotRecord extends IntrusiveNode {
             if (var3Lifetime2 != param0) {
               throw new IllegalStateException("Already made another group choice!");
             }
-            if ((ab.field_g & this.endResolution) != 0 &&
+            if ((ArchiveAvailabilitySupport.field_g & this.endResolution) != 0 &&
               (param0 & 24) != 0) {
               var3Lifetime2 = this.field_l & 24;
               if (var3Lifetime2 == 0) {
@@ -720,7 +720,7 @@ final class ShotRecord extends IntrusiveNode {
                 }
               }
             }
-            if ((a.field_d & this.endResolution) != 0 &&
+            if ((Cp1252DecodingSupport.field_d & this.endResolution) != 0 &&
               (96 & param0) != 0) {
               var3Lifetime2 = this.field_l & 96;
               if (var3Lifetime2 != 0) {
@@ -746,8 +746,8 @@ final class ShotRecord extends IntrusiveNode {
           var3Lifetime3 = param0;
           this.field_l = (byte)(this.field_l | param0);
         }
-        if ((ab.field_g & this.endResolution) == 0) {
-          if ((a.field_d & this.endResolution) != 0 &&
+        if ((ArchiveAvailabilitySupport.field_g & this.endResolution) == 0) {
+          if ((Cp1252DecodingSupport.field_d & this.endResolution) != 0 &&
             (96 & param0) != 0) {
             var3Lifetime1 = this.field_l & 96;
             if (var3Lifetime1 == 0) {
@@ -761,7 +761,7 @@ final class ShotRecord extends IntrusiveNode {
           }
         } else {
           if ((param0 & 24) == 0) {
-            if ((a.field_d & this.endResolution) != 0 &&
+            if ((Cp1252DecodingSupport.field_d & this.endResolution) != 0 &&
               (96 & param0) != 0) {
               var3Lifetime1 = this.field_l & 96;
               if (var3Lifetime1 == 0) {
@@ -778,7 +778,7 @@ final class ShotRecord extends IntrusiveNode {
             if (var3Lifetime1 == 0) {
               var3Lifetime1 = param0;
               this.field_l = (byte)(this.field_l | param0);
-              if ((a.field_d & this.endResolution) != 0 &&
+              if ((Cp1252DecodingSupport.field_d & this.endResolution) != 0 &&
                 (96 & param0) != 0) {
                 var3Lifetime1 = this.field_l & 96;
                 if (var3Lifetime1 == 0) {
@@ -794,7 +794,7 @@ final class ShotRecord extends IntrusiveNode {
               if (param0 != var3Lifetime1) {
                 throw new IllegalStateException("Already made another play/pass choice!");
               }
-              if ((a.field_d & this.endResolution) != 0 &&
+              if ((Cp1252DecodingSupport.field_d & this.endResolution) != 0 &&
                 (96 & param0) != 0) {
                 var3Lifetime1 = this.field_l & 96;
                 if (var3Lifetime1 == 0) {
@@ -861,7 +861,7 @@ final class ShotRecord extends IntrusiveNode {
           }
           this.setEndResolution(2, var3_int);
           if ((LinkButtonPainter.field_i & 2097152L) != 0L) {
-            System.out.println("->S2C_END_SHOT: " + ab.describeResolutionFlags(this.endResolution, (byte) 10));
+            System.out.println("->S2C_END_SHOT: " + ArchiveAvailabilitySupport.describeResolutionFlags(this.endResolution, (byte) 10));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -909,7 +909,7 @@ final class ShotRecord extends IntrusiveNode {
         boolean stackIn_27_0 = false;
         boolean stackIn_101_0 = false;
         if ((this.endResolution & ClientException.field_b) == 0) {
-          if ((ab.field_g & this.endResolution) != 0 &&
+          if ((ArchiveAvailabilitySupport.field_g & this.endResolution) != 0 &&
             0 != (24 & param1)) {
             if ((24 & this.field_l) == 0) {
               return true;
@@ -921,7 +921,7 @@ final class ShotRecord extends IntrusiveNode {
           }
           if (param0 != -28872) {
             this.elevation = (short) 5;
-            if ((this.endResolution & a.field_d) == 0) {
+            if ((this.endResolution & Cp1252DecodingSupport.field_d) == 0) {
               return (param1 == 0);
             }
             if ((param1 & 96) == 0) {
@@ -942,7 +942,7 @@ final class ShotRecord extends IntrusiveNode {
             }
             return stackIn_101_0;
           }
-          if ((ab.field_g & this.endResolution) != 0 &&
+          if ((ArchiveAvailabilitySupport.field_g & this.endResolution) != 0 &&
             0 != (24 & param1)) {
             if ((24 & this.field_l) == 0) {
               return true;
@@ -953,7 +953,7 @@ final class ShotRecord extends IntrusiveNode {
             return true;
           }
           if (param0 == -28872) {
-            if ((this.endResolution & a.field_d) == 0) {
+            if ((this.endResolution & Cp1252DecodingSupport.field_d) == 0) {
               return (param1 == 0);
             }
             if ((param1 & 96) == 0) {
@@ -969,7 +969,7 @@ final class ShotRecord extends IntrusiveNode {
           }
           this.elevation = (short) 5;
         }
-        if ((this.endResolution & a.field_d) == 0) {
+        if ((this.endResolution & Cp1252DecodingSupport.field_d) == 0) {
           return (param1 == 0);
         }
         if ((param1 & 96) == 0) {
@@ -987,7 +987,7 @@ final class ShotRecord extends IntrusiveNode {
     final boolean isOpponentChoicePending(byte param0) {
         if (param0 <= 73) {
           this.field_H = (byte) 46;
-          if ((this.endResolution & a.field_d) == 0) {
+          if ((this.endResolution & Cp1252DecodingSupport.field_d) == 0) {
             return false;
           }
           if ((this.field_l & 96) == 0) {
@@ -995,7 +995,7 @@ final class ShotRecord extends IntrusiveNode {
           }
           return false;
         }
-        if ((this.endResolution & a.field_d) == 0) {
+        if ((this.endResolution & Cp1252DecodingSupport.field_d) == 0) {
           return false;
         }
         if ((this.field_l & 96) == 0) {

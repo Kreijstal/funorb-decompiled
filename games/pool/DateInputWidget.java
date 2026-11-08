@@ -6,7 +6,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
     static int field_W;
     static int field_R;
     static String ratingRating;
-    static eh field_V;
+    static HighScoreRequest field_V;
     static Sprite[] field_Q;
     static String tutorialNineBallAfterbreak;
     static int field_Y;
@@ -76,8 +76,8 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
     }
 
     final static void i(byte param0) {
-        s.field_c = new MenuScreen[25];
-        MenuScreen discarded$0 = new MenuScreen(cl.field_m, 0, 180, 460, 160, 24, new int[]{39, 43, 0, 1, 5, 47, 4, 48, 22, 19});
+        DisplayModeSupport.field_c = new MenuScreen[25];
+        MenuScreen discarded$0 = new MenuScreen(ProjectedLineSupport.field_m, 0, 180, 460, 160, 24, new int[]{39, 43, 0, 1, 5, 47, 4, 48, 22, 19});
         OptionsScreen discarded$1 = new OptionsScreen(14, 180, 460, 160, 24, MusicCrossfadeStream.field_B);
         TimeTrialSelectScreen discarded$2 = new TimeTrialSelectScreen(DialogLayer.field_Q, 2, 180, 460, 160, 24, new int[]{50, 51, 8});
         PauseMenuScreen discarded$3 = new PauseMenuScreen((Sprite) null, 3, 180, 460, 160, 24, ArchiveIndex.field_o);

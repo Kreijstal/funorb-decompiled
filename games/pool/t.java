@@ -170,7 +170,7 @@ final class t {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = (int[][][]) null;
         gameoptPlayersdontqualifySelectgametab = null;
         field_b = null;

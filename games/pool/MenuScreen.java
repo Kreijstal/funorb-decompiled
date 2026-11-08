@@ -549,7 +549,7 @@ class MenuScreen extends jh {
                                                                 if ((GameRules.field_b != this.parentScreenId)) {
                                                                   stackIn_151_0 = -3405;
                                                                   stackIn_151_1 = this.parentScreenId;
-                                                                  stackIn_151_2 = s.field_c;
+                                                                  stackIn_151_2 = DisplayModeSupport.field_c;
                                                                   if (0 <= this.parentScreenId) {
                                                                     stackIn_152_3 = this.parentScreenId;
                                                                   } else {
@@ -661,7 +661,7 @@ class MenuScreen extends jh {
                                                                             var6 != 9) {
                                                                             if (10 == var6) {
                                                                               if (!(!this.selection.isPressActivated((byte) 104))) {
-                                                                                AccountContentDialog.field_ub.k((byte) -97);
+                                                                                AccountContentDialog.field_ub.notifyBallEventsProcessed((byte) -97);
                                                                                 var6 = param1 ? 1 : 0;
                                                                                 stackIn_212_0 = -3405;
                                                                                 stackIn_212_1 = -1;
@@ -714,7 +714,7 @@ class MenuScreen extends jh {
                                                                                           AccountCreationDialog.a(param0 ^ 19737, -5, GameRules.field_b, var6 != 0);
                                                                                         }
                                                                                         if (!(!mj.field_e)) {
-                                                                                          ef.a(0, 3, 11);
+                                                                                          FaceNormal.a(0, 3, 11);
                                                                                         }
                                                                                       }
                                                                                       break regionExit1;
@@ -1040,7 +1040,7 @@ class MenuScreen extends jh {
           }
         }
         if (0 == this.screenId) {
-          cl.field_k.draw(0, SoftwareRasterizer.height - cl.field_k.field_y);
+          ProjectedLineSupport.field_k.draw(0, SoftwareRasterizer.height - ProjectedLineSupport.field_k.field_y);
           FullscreenFocusCanvas.field_a.draw(SoftwareRasterizer.width - FullscreenFocusCanvas.field_a.field_w, SoftwareRasterizer.height - FullscreenFocusCanvas.field_a.field_y);
         }
     }
@@ -1209,7 +1209,7 @@ class MenuScreen extends jh {
           this.buttonSpacing = param5;
           this.buttonRight = param3;
           this.buttonTop = param4;
-          s.field_c[param1] = this;
+          DisplayModeSupport.field_c[param1] = this;
           this.screenId = param1;
           this.setItems(param6, true);
         } catch (RuntimeException runtimeException) {

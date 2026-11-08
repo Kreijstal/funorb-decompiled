@@ -146,7 +146,7 @@ final class CueAim {
             var60 = var44.field_K;
             IntrusiveDeque.a(ProgressDialog.field_ib, 0, var60, 0, -147296924);
           } else {
-            bo.a(-94);
+            FixedAngleSupport.a(-94);
           }
           var54 = new int[param2.field_o];
           var49 = var54;
@@ -172,7 +172,7 @@ final class CueAim {
             }
             var14Lifetime2 = stackIn_14_0;
             var15 = param4 * var62[var13] + param6 * var61[var13] + var63[var13] * param0 >> 8;
-            stackIn_16_0 = cp.field_d;
+            stackIn_16_0 = InputIdleSupport.field_d;
             if (var15 >= 0) {
               stackIn_17_1 = var15;
             } else {
@@ -188,7 +188,7 @@ final class CueAim {
           }
           var43 = 0;
           var13Lifetime1 = var43;
-          while (var43 < eh.field_x) {
+          while (var43 < HighScoreRequest.field_x) {
             var14Lifetime1 = RankingsScreen.field_I[var43];
             var15Lifetime1 = param2.field_y[var14Lifetime1];
             var16 = param2.field_r[var14Lifetime1];

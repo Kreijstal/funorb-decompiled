@@ -115,14 +115,14 @@ final class ValidationIconWidget extends ButtonWidget {
         if (ji.field_h != var9 &&
           Js5Transport.field_k != var9) {
           if (var9 == gp.field_d) {
-            var15 = bo.field_a[2];
+            var15 = FixedAngleSupport.field_a[2];
             var15.drawAdditive(-(var15.field_z >> 1) + var5, var6 - (var15.field_A >> 1), 256);
           } else if (var9 == ProxySocketConnector.field_e) {
-            var14 = bo.field_a[1];
+            var14 = FixedAngleSupport.field_a[1];
             var14.drawAdditive(-(var14.field_z >> 1) + var5, -(var14.field_A >> 1) + var6, 256);
           }
         } else {
-          var13 = bo.field_a[0];
+          var13 = FixedAngleSupport.field_a[0];
           var10 = var13.field_w << 1;
           var11 = var13.field_y << 1;
           if (null != sm.field_z &&
@@ -140,7 +140,7 @@ final class ValidationIconWidget extends ButtonWidget {
         }
     }
 
-    final static int a(int param0, int param1, eh param2, oj param3) {
+    final static int a(int param0, int param1, HighScoreRequest param2, oj param3) {
         int var6 = 0;
         int var7 = 0;
         int stackIn_7_0 = 0;

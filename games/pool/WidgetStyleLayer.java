@@ -11,7 +11,7 @@ final class WidgetStyleLayer {
     private int offsetY;
     Sprite sprite;
     private int textColor;
-    static hj field_e;
+    static QuickChatDynamicCommand field_e;
     static int field_k;
     static String tutorialOptionNineBall;
 
@@ -56,7 +56,7 @@ final class WidgetStyleLayer {
           if (param0 <= 125) {
             WidgetStyleLayer.b(3, -70);
           }
-          stackIn_3_0 = de.scaleByPowerOfTwo(-1, 16, param1);
+          stackIn_3_0 = DebugTuningSupport.scaleByPowerOfTwo(-1, 16, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -364,7 +364,7 @@ final class WidgetStyleLayer {
         try {
           this.textColor = param0;
           if (param1 <= 3) {
-            field_e = (hj) null;
+            field_e = (QuickChatDynamicCommand) null;
           }
           return this;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -394,7 +394,7 @@ final class WidgetStyleLayer {
         try {
           var4_int = param3.getGroupId(param0, -1);
           if (param1 <= 29) {
-            field_e = (hj) null;
+            field_e = (QuickChatDynamicCommand) null;
           }
           var5 = param3.getFileId(var4_int, 0, param2);
           stackIn_3_0 = UiComponent.a(var4_int, param3, -55, var5);
@@ -629,7 +629,7 @@ final class WidgetStyleLayer {
     }
 
     static {
-        field_e = new hj(11, 0, 1, 2);
+        field_e = new QuickChatDynamicCommand(11, 0, 1, 2);
         tutorialOptionNineBall = "Nine-ball";
     }
 }

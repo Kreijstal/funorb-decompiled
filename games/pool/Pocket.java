@@ -39,8 +39,8 @@ final class Pocket {
           for (var1_int = param0; var1_int < ml.field_h.length; var1_int++) {
             if (ml.field_h[var1_int][0] != 2 &&
               ml.field_h[var1_int][2] != 2 &&
-              en.a(ml.field_h[var1_int][1], ml.field_h[var1_int][0], 115) &&
-              en.a(ml.field_h[var1_int][3], ml.field_h[var1_int][2], 110)) {
+              QuaternionRotationSupport.a(ml.field_h[var1_int][1], ml.field_h[var1_int][0], 115) &&
+              QuaternionRotationSupport.a(ml.field_h[var1_int][3], ml.field_h[var1_int][2], 110)) {
               return false;
             }
           }

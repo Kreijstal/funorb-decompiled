@@ -52,7 +52,7 @@ final class ro {
           var4 = new nj[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!FullscreenErrorDialog.readBooleanBit((byte) 118, param1)) {
-              var6 = param1.readBits(fr.bitLength(16, -1 + var5), 105);
+              var6 = param1.readBits(DelayedServerPacket.bitLength(16, -1 + var5), 105);
               var4[var5] = var4[var6];
             } else {
               var6_ref_nj = new nj();
@@ -105,7 +105,7 @@ final class ro {
             return;
           }
           if (null == ta.field_g) {
-            ta.field_g = bo.a(4, 47);
+            ta.field_g = FixedAngleSupport.a(4, 47);
           }
           if (ta.field_g.field_s) {
             var12 = ClientException.field_g;
@@ -137,7 +137,7 @@ final class ro {
             CacheEntry.g(47);
             if (MatchingTextValidator.field_w == 18) {
               if (FadingDialog.a(false, hp.field_c)) {
-                s.field_c[18].onEnter(0, 0, false);
+                DisplayModeSupport.field_c[18].onEnter(0, 0, false);
               } else {
                 MatchingTextValidator.field_w = 16;
                 AccountCreationDialog.a(-3405, 16, GameRules.field_b, false);

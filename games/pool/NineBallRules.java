@@ -174,7 +174,7 @@ final class NineBallRules extends GameRules {
         }
     }
 
-    final int b(int param0) {
+    final int defaultBallInHandMode(int param0) {
         int var2 = 77 / ((param0 + 79) / 38);
         return 1;
     }
@@ -221,7 +221,7 @@ final class NineBallRules extends GameRules {
             return stackIn_2_0;
           }
           if (param0.groupBefore != -1) {
-            stackIn_7_0 = d.field_a[param0.groupBefore];
+            stackIn_7_0 = MeshBoundsSupport.field_a[param0.groupBefore];
             return stackIn_7_0;
           }
           stackIn_5_0 = ClassicBallSkin.field_n;
@@ -289,7 +289,7 @@ final class NineBallRules extends GameRules {
         var3 = 0;
         if (this.field_d.isCueBallPotted((byte) 118)) {
           var9.addEvent(3, -14, new int[]{this.field_d.field_A});
-          var3 = var3 | (this.foulFlagsCueBallPotted((byte) -47) | um.field_c);
+          var3 = var3 | (this.foulFlagsCueBallPotted((byte) -47) | MeshBase.field_c);
           var9.field_t = true;
           var9.field_w = (byte)(var9.field_w - 1);
         }
@@ -328,7 +328,7 @@ final class NineBallRules extends GameRules {
             while (var6_ref != null) {
               if (var6_ref.ballIndex == 9) {
                 var9.addEvent(10, -14, new int[]{this.field_d.field_A});
-                return ag.field_e;
+                return ScreenProjectionSupport.field_e;
               }
               var3 = var3 | MarkerSliderPainter.field_j;
               var9.field_w = (byte)(var9.field_w + 1);
@@ -412,9 +412,9 @@ final class NineBallRules extends GameRules {
         IsaacCipher var3 = var6;
         for (var4 = 0; var4 < 7; var4++) {
           CachedArchiveSource.field_M[var4] = var4 + 2;
-          dj.field_a[var4] = var6.a(23165, 2048);
+          FullscreenDisplayMode.field_a[var4] = var6.a(23165, 2048);
         }
-        StrongCacheEntry.a(dj.field_a, CachedArchiveSource.field_M, (byte) -54);
+        StrongCacheEntry.a(FullscreenDisplayMode.field_a, CachedArchiveSource.field_M, (byte) -54);
         Js5Transport.field_s[1] = 1;
         Js5Transport.field_s[0] = 0;
         Js5Transport.field_s[3] = CachedArchiveSource.field_M[1];

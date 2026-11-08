@@ -21,7 +21,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         ChatMessageLine var5 = null;
         try {
           if (param0 != 8) {
-            LabeledChildWidget.g((byte) 74);
+            LabeledChildWidget.releaseStatics((byte) 74);
           }
           var5 = new ChatMessageLine();
           var5.color = param2;
@@ -56,7 +56,7 @@ final class LabeledChildWidget extends SingleChildWidget {
           if (ja.field_c == WireframeQuad.field_s) {
             return false;
           }
-          IterableDualLinkDeque.field_a = ee.field_b[WireframeQuad.field_s];
+          IterableDualLinkDeque.field_a = QuickChatCategoryCache.field_b[WireframeQuad.field_s];
           ml.field_b = ek.field_c[WireframeQuad.field_s];
           WireframeQuad.field_s = param0 & WireframeQuad.field_s + 1;
           stackIn_6_0 = true;
@@ -204,7 +204,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Z = null;
         ratedGameTipsSetupPlural = null;
         statusResigned = null;

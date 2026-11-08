@@ -184,13 +184,13 @@ final class HuffmanCodec {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          de.createDebugSliders(-100);
+          DebugTuningSupport.createDebugSliders(-100);
           var1_int = 4 + sa.field_h.maxDescent + sa.field_h.maxAscent;
-          SoftwareRasterizer.fillRectangleAlpha(0, -var1_int + 376, 32 + aq.field_a.length * 32, var1_int + 112, 8421504, 127);
+          SoftwareRasterizer.fillRectangleAlpha(0, -var1_int + 376, 32 + DebugOverlayLayoutSupport.field_a.length * 32, var1_int + 112, 8421504, 127);
           var2 = 0;
           var3 = 56 / ((-35 - param0) / 33);
-          while (var2 < aq.field_a.length) {
-            aq.field_a[var2].draw(3);
+          while (var2 < DebugOverlayLayoutSupport.field_a.length) {
+            DebugOverlayLayoutSupport.field_a[var2].draw(3);
             var2++;
           }
           return;
@@ -412,7 +412,7 @@ final class HuffmanCodec {
                   var12.field_Zb.text = OptionsScreen.cancel;
                 } else {
                   if (var12.field_Yb) {
-                    var12.field_ac.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, dj.xWantsToJoin);
+                    var12.field_ac.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, FullscreenDisplayMode.xWantsToJoin);
                     var12.field_lc.text = ie.accept;
                     var12.field_Zb.text = qa.reject;
                   } else {
@@ -529,7 +529,7 @@ final class HuffmanCodec {
                       var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{null, Integer.toString(var6)}, -1, WhirlpoolHasher.gameoptYouneedrating);
                     } else {
                       if ((var8 & ~var12.field_Nb) != 0) {
-                        var25_int = s.highestOneBit(~var12.field_Nb & var8, (byte) 111);
+                        var25_int = DisplayModeSupport.highestOneBit(~var12.field_Nb & var8, (byte) 111);
                         var24Lifetime2 = Pocket.gameoptYouhaventunlocked;
                         if (var25_int > 0 &&
                           null != WeightedLruCache.field_f &&
@@ -549,8 +549,8 @@ final class HuffmanCodec {
                   if (var7 <= var12.field_Xb) {
                     if (var6 <= var12.field_Rb) {
                       if ((var8 & ~var12.field_Nb) != 0) {
-                        var25_int = s.highestOneBit(~var12.field_Nb & var8, (byte) 100);
-                        var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, en.gameoptPlayerhasntunlocked);
+                        var25_int = DisplayModeSupport.highestOneBit(~var12.field_Nb & var8, (byte) 100);
+                        var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, QuaternionRotationSupport.gameoptPlayerhasntunlocked);
                         if (var25_int > 0 &&
                           WeightedLruCache.field_f != null &&
                           var25_int <= WeightedLruCache.field_f.length &&
@@ -979,9 +979,9 @@ final class HuffmanCodec {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
-        fr var4_ref_fr = null;
+        DelayedServerPacket var4_ref_fr = null;
         int var4 = 0;
-        fr var5 = null;
+        DelayedServerPacket var5 = null;
         int var7 = 0;
         var7 = Pool.field_O;
         try {
@@ -991,7 +991,7 @@ final class HuffmanCodec {
           var2_long = rl.monotonicTimeMillis((byte) -103);
           if (param0 != ii.field_d &&
             wq.field_b < 0) {
-            var4_ref_fr = (fr) (vn.field_g.last((byte) -112));
+            var4_ref_fr = (DelayedServerPacket) (vn.field_g.last((byte) -112));
             if (var4_ref_fr != null &&
               var4_ref_fr.field_p < var2_long) {
               var4_ref_fr.unlink((byte) -117);
@@ -1049,7 +1049,7 @@ final class HuffmanCodec {
                 var4 = 0;
               }
             }
-            var5 = new fr(var2_long + (long)var4, wq.field_b, new byte[ScrollPane.field_Pb]);
+            var5 = new DelayedServerPacket(var2_long + (long)var4, wq.field_b, new byte[ScrollPane.field_Pb]);
             for (var6 = 0; var6 < ScrollPane.field_Pb; var6++) {
               var5.field_l[var6] = PlayerContextMenu.field_e.payload[var6];
             }
@@ -1079,7 +1079,7 @@ final class HuffmanCodec {
         return ResourceArchive.field_e + (ol.field_e << 2) + (BallDebugOverlay.field_i << 4);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         playerYouFirstListAreOut = null;
         fsFocusOrResolution = null;
         waitingforSoundeffects = null;

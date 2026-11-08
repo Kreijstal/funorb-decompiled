@@ -470,7 +470,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(35, e.createPasswordConfirm, this.passwordConfirmInput, AimTarget.createPasswordHint, 170, var3));
         var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(35, KillerBallSkin.createDisplayname, this.displayNameInput, LongAndTextLoginPayload.createDisplaynameHint, 170, var3));
         var3 = var3 + this.a(MusicPatch.createAge, (byte) -114, 170, var3, this.ageInput);
-        LabeledChildWidget var4 = new LabeledChildWidget(46, var3, -90 + this.widgetWidth, 25, this.newsOptInCheckbox, true, -120 + this.widgetWidth, 5, PoolUiText.field_a, 11579568, ab.createOptinNews);
+        LabeledChildWidget var4 = new LabeledChildWidget(46, var3, -90 + this.widgetWidth, 25, this.newsOptInCheckbox, true, -120 + this.widgetWidth, 5, PoolUiText.field_a, 11579568, ArchiveAvailabilitySupport.createOptinNews);
         this.addChild(true, var4);
         var3 = var3 + var4.widgetHeight;
         TextWidgetPainter var5 = new TextWidgetPainter(ValidationIconWidget.field_O, 0, 0, 0, 0, 16777215, -1, 0, 0, ValidationIconWidget.field_O.maxAscent, -1, 2147483647, true);

@@ -43,8 +43,8 @@ final class StrongCacheEntry extends CacheEntry {
         var5 = Pool.field_O;
         try {
           IsaacCipher.field_d = IsaacCipher.field_d + 65536;
-          while (ThreeSliceButtonPainter.fixedMultiply(hj.field_f, param1 - 65, IsaacCipher.field_d) >= 65536) {
-            IsaacCipher.field_d = IsaacCipher.field_d - hj.field_f;
+          while (ThreeSliceButtonPainter.fixedMultiply(QuickChatDynamicCommand.field_f, param1 - 65, IsaacCipher.field_d) >= 65536) {
+            IsaacCipher.field_d = IsaacCipher.field_d - QuickChatDynamicCommand.field_f;
             PoolMatchController.field_X = PoolMatchController.field_X + 1;
           }
           var2_int = -1;
@@ -60,23 +60,23 @@ final class StrongCacheEntry extends CacheEntry {
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (hj.field_g > SocketArchiveNetworkClient.field_u) {
+            if (QuickChatDynamicCommand.field_g > SocketArchiveNetworkClient.field_u) {
               SocketArchiveNetworkClient.field_u = SocketArchiveNetworkClient.field_u + 1;
-              if (SocketArchiveNetworkClient.field_u > hj.field_l && (AccountCreationForm.field_V == null ||
+              if (SocketArchiveNetworkClient.field_u > QuickChatDynamicCommand.field_l && (AccountCreationForm.field_V == null ||
                 AccountCreationForm.field_V[KillerRules.field_f] == null)) {
                 SocketArchiveNetworkClient.field_u = SocketArchiveNetworkClient.field_u - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (SocketArchiveNetworkClient.field_u >= hj.field_g &&
+                if (SocketArchiveNetworkClient.field_u >= QuickChatDynamicCommand.field_g &&
                   null == AccountCreationForm.field_V[(1 + KillerRules.field_f) % var2_int]) {
                   SocketArchiveNetworkClient.field_u = SocketArchiveNetworkClient.field_u - 1;
                 }
               }
             }
-            if (SocketArchiveNetworkClient.field_u >= hj.field_g) {
+            if (SocketArchiveNetworkClient.field_u >= QuickChatDynamicCommand.field_g) {
               SoundCache.field_b = KillerRules.field_f;
-              SocketArchiveNetworkClient.field_u = SocketArchiveNetworkClient.field_u - hj.field_g;
+              SocketArchiveNetworkClient.field_u = SocketArchiveNetworkClient.field_u - QuickChatDynamicCommand.field_g;
               if (!InstructionsScreen.field_K) {
                 KillerRules.field_f = KillerRules.field_f - 1;
                 if (KillerRules.field_f < 0) {
@@ -89,7 +89,7 @@ final class StrongCacheEntry extends CacheEntry {
                 }
               }
             }
-            if (SocketArchiveNetworkClient.field_u > hj.field_l) {
+            if (SocketArchiveNetworkClient.field_u > QuickChatDynamicCommand.field_l) {
               InstructionsScreen.field_K = true;
             }
           }
@@ -102,34 +102,34 @@ final class StrongCacheEntry extends CacheEntry {
               if (-ContextMenu.field_Yb.field_z + 269 < DialogLayer.field_W &&
                 269 > DialogLayer.field_W) {
                 InstructionsScreen.field_K = false;
-                SocketArchiveNetworkClient.field_u = hj.field_g;
+                SocketArchiveNetworkClient.field_u = QuickChatDynamicCommand.field_g;
                 var4 = 1;
               }
               if (586 < DialogLayer.field_W &&
                 DialogLayer.field_W < 586 + ContextMenu.field_Yb.field_z) {
                 var4 = 1;
                 InstructionsScreen.field_K = true;
-                SocketArchiveNetworkClient.field_u = hj.field_g;
+                SocketArchiveNetworkClient.field_u = QuickChatDynamicCommand.field_g;
               }
             }
             if (var4 == 0 &&
-              hj.field_l < SocketArchiveNetworkClient.field_u &&
+              QuickChatDynamicCommand.field_l < SocketArchiveNetworkClient.field_u &&
               DebouncedValidationProvider.field_f > var3 &&
               DebouncedValidationProvider.field_f < var3 + ContextMenu.field_Yb.field_A) {
               if (-ContextMenu.field_Yb.field_z + 269 < wn.field_i &&
                 wn.field_i < 269) {
-                SocketArchiveNetworkClient.field_u = hj.field_l;
+                SocketArchiveNetworkClient.field_u = QuickChatDynamicCommand.field_l;
               }
               if (586 < wn.field_i &&
                 wn.field_i < 586 + ContextMenu.field_Yb.field_z) {
-                SocketArchiveNetworkClient.field_u = hj.field_l;
+                SocketArchiveNetworkClient.field_u = QuickChatDynamicCommand.field_l;
               }
             }
           }
           if (!param0) {
             return 0;
           }
-          jc.field_j.a(ho.a((byte) -82, DialogLayer.field_W, UsernameAvailabilityValidator.field_o), ho.a((byte) -21, wn.field_i, DebouncedValidationProvider.field_f), param1 - 192);
+          jc.field_j.a(ReflectionCheck.a((byte) -82, DialogLayer.field_W, UsernameAvailabilityValidator.field_o), ReflectionCheck.a((byte) -21, wn.field_i, DebouncedValidationProvider.field_f), param1 - 192);
           if (jc.field_j.isPressActivated((byte) 62)) {
             if (jc.field_j.selectedIndex == 0) {
               stackIn_60_0 = 3;

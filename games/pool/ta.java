@@ -20,8 +20,8 @@ final class ta {
     }
 
     final static void a(int param0) {
-        if (d.field_d != null) {
-          d.field_d.dismissDialog(17);
+        if (MeshBoundsSupport.field_d != null) {
+          MeshBoundsSupport.field_d.dismissDialog(17);
         }
         tg.field_a = new DisplayNamePanel();
         if (param0 == -984040272) {

@@ -145,9 +145,9 @@ abstract class ModelTableScene extends TableScene {
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
           if (PlasmaTableScene.field_ab == 11) {
-            bi.b(-125);
+            LoginPayloadFactory.validateLoginFactoryGuard(-125);
           }
-          a.showLoadingProgress(TextWidgetPainter.field_n, param0, PasswordValidator.field_o, CacheEntry.field_w);
+          Cp1252DecodingSupport.showLoadingProgress(TextWidgetPainter.field_n, param0, PasswordValidator.field_o, CacheEntry.field_w);
           if (!param0) {
             optionsmenuNotpaused = (String) null;
           }
@@ -172,7 +172,7 @@ abstract class ModelTableScene extends TableScene {
         int[] var9Lifetime2;
         int[] var9Lifetime3;
         try {
-          var10 = a.mirrorVertically(!param3 ? true : false, new MeshBuilder(param4, false, param3, false, false));
+          var10 = Cp1252DecodingSupport.mirrorVertically(!param3 ? true : false, new MeshBuilder(param4, false, param3, false, false));
           var15 = mj.identityTransform(-31121);
           var11 = var15;
           var9 = var11;
@@ -225,8 +225,8 @@ abstract class ModelTableScene extends TableScene {
         try {
           try {
             var9 = TimeTrialSelectScreen.field_K.getGraphics();
-            if (cl.field_c == null) {
-              cl.field_c = new java.awt.Font("Helvetica", 1, 13);
+            if (ProjectedLineSupport.field_c == null) {
+              ProjectedLineSupport.field_c = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param0) {
               var9.setColor(java.awt.Color.black);
@@ -246,7 +246,7 @@ abstract class ModelTableScene extends TableScene {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(param4 * 3 + 2, 2, -(3 * param4) + 300, 30);
-              var10.setFont(cl.field_c);
+              var10.setFont(ProjectedLineSupport.field_c);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (304 - param2.length() * 6) / 2, 22);
               var9.drawImage(wf.field_c, ml.field_d / 2 - 152, ArchiveIndex.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
@@ -261,12 +261,12 @@ abstract class ModelTableScene extends TableScene {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(1 + var7, 1 + var8, 301, 31);
               var9.fillRect(param4 * 3 + (var7 + 2), 2 + var8, 300 - 3 * param4, 30);
-              var9.setFont(cl.field_c);
+              var9.setFont(ProjectedLineSupport.field_c);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param2, (-(6 * param2.length()) + 304) / 2 + var7, 22 + var8);
             }
             if (null != ImageProducerRasterBuffer.field_o) {
-              var9.setFont(cl.field_c);
+              var9.setFont(ProjectedLineSupport.field_c);
               var9.setColor(java.awt.Color.white);
               var9.drawString(ImageProducerRasterBuffer.field_o, ml.field_d / 2 - ImageProducerRasterBuffer.field_o.length() * 6 / 2, ArchiveIndex.field_c / 2 - 26);
             }

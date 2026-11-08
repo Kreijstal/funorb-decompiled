@@ -6,7 +6,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     private ButtonWidget okButton;
     private MaxLengthTextInputWidget displayNameInput;
     static int field_V;
-    static ee field_N;
+    static QuickChatCategoryCache field_N;
     static Sprite field_T;
     private ButtonWidget cancelButton;
     static MeshBuilder field_P;
@@ -94,7 +94,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         String var4 = null;
         try {
           if (param1 != 35) {
-            field_N = (ee) null;
+            field_N = (QuickChatCategoryCache) null;
           }
           var3 = this.displayNameInput;
           var4 = param0;

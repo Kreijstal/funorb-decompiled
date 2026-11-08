@@ -11,7 +11,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     private OpacityWidget contentOpacityWidget;
     static TextWidgetPainter field_mb;
     private int contentVerticalInset;
-    private cd contentTransitionPhase;
+    private ClientInputResetSupport contentTransitionPhase;
     static UiComponent field_ob;
     private UiWidget pendingContent;
 
@@ -35,8 +35,8 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             this.startResizeTransition((byte) -77, this.pendingContent.widgetHeight + (12 + this.contentVerticalInset), 12 + this.pendingContent.widgetWidth, this.contentResizeDurationTicks);
             this.contentFadeTick = 0;
           } else {
-            if (dj.field_c != this.contentTransitionPhase) {
-              this.contentTransitionPhase = dj.field_c;
+            if (FullscreenDisplayMode.field_c != this.contentTransitionPhase) {
+              this.contentTransitionPhase = FullscreenDisplayMode.field_c;
               this.contentFadeTick = 0;
               return;
             }
@@ -191,7 +191,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         int var3;
         var3 = Pool.field_O;
         if (this.contentTransitionPhase != null) {
-          if (this.contentTransitionPhase == dj.field_c) {
+          if (this.contentTransitionPhase == FullscreenDisplayMode.field_c) {
             fieldTemp$4 = this.contentFadeTick + 1;
             this.contentFadeTick = this.contentFadeTick + 1;
             if (this.fadeOutDurationTicks != fieldTemp$4) {
@@ -222,7 +222,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     }
 
     final void onResizeTransitionComplete(int param0) {
-        if (this.contentTransitionPhase == dj.field_c) {
+        if (this.contentTransitionPhase == FullscreenDisplayMode.field_c) {
           return;
         }
         this.contentTransitionPhase = BallSkin.field_h;

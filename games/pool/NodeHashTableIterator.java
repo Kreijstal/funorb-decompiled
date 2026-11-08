@@ -56,7 +56,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         createIneligible = null;
         if (param0 != 0) {
           mouseYAxisInverted = (String) null;

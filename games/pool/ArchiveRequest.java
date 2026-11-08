@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ArchiveRequest extends DualLinkNode {
-    static hj field_G;
+    static QuickChatDynamicCommand field_G;
     static UiComponent field_y;
     static String playerNameTwoShots;
     static int field_z;
@@ -117,6 +117,6 @@ abstract class ArchiveRequest extends DualLinkNode {
         muOptions = "Game options";
         field_w = new int[12];
         playerNameTwoShots = "<%0>: Two shots!";
-        field_G = new hj(0, 2, 2, 1);
+        field_G = new QuickChatDynamicCommand(0, 2, 2, 1);
     }
 }

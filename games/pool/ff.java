@@ -44,10 +44,10 @@ final class ff {
         if (HighscoresScreen.field_P != BufferedFile.field_h) {
           var2 = BufferedFile.field_h * BufferedFile.field_h;
           var3 = -(HighscoresScreen.field_P * HighscoresScreen.field_P) + var2;
-          param1 = param1 + var3 * (-param1 + cb.field_g) / var2;
+          param1 = param1 + var3 * (-param1 + AwtEventQueueSupport.field_g) / var2;
         }
-        fl.field_q.setBounds(param1, param0 - 2147483625, RasterSnapshot.field_u, 640, 120);
-        Camera.a(ja.field_b, param0 + cb.field_g, 0, 640, 5, 125, CueAim.field_j);
+        IntLookupQuery.field_q.setBounds(param1, param0 - 2147483625, RasterSnapshot.field_u, 640, 120);
+        Camera.a(ja.field_b, param0 + AwtEventQueueSupport.field_g, 0, 640, 5, 125, CueAim.field_j);
     }
 
     static {

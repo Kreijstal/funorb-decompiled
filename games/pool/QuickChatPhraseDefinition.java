@@ -215,10 +215,10 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           ArchiveIndex.field_x = 15;
           ja.field_b = 2;
           var7 = he.a(param4, "largefont", 0, param0, "lobby");
-          ae.field_a = he.a(param4, "generalfont", 0, param0, "lobby");
+          MembershipBenefitsLoader.field_a = he.a(param4, "generalfont", 0, param0, "lobby");
           ol.field_c = he.a(param4, "chatfont", 0, param0, "lobby");
           var7.setInlineSprites(var5, var24);
-          ae.field_a.setInlineSprites(var5, var24);
+          MembershipBenefitsLoader.field_a.setInlineSprites(var5, var24);
           ol.field_c.setInlineSprites(var5, var24);
           var8 = new UiComponent(0L, (UiComponent) null);
           var8.font = (BitmapFont) ((Object) var7);
@@ -230,7 +230,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           var10 = new UiComponent(0L, (UiComponent) null);
           var10.lineSpacing = ArchiveIndex.field_x;
           var10.textColor = 16777215;
-          var10.font = (BitmapFont) ((Object) ae.field_a);
+          var10.font = (BitmapFont) ((Object) MembershipBenefitsLoader.field_a);
           var10.verticalAlignment = 1;
           var11 = var10;
           var11.horizontalAlignment = 1;
@@ -238,8 +238,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           rl.field_d.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "heading"), 12519);
           md.field_d = new UiComponent(0L, (UiComponent) null);
           md.field_d.frameSprites = IterableDualLinkDeque.a(8421504, 4210752, false, 120, -86, false);
-          ag.field_f = new UiComponent(0L, (UiComponent) null);
-          ag.field_f.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, 1, 114, 6316128, 6316128);
+          ScreenProjectionSupport.field_f = new UiComponent(0L, (UiComponent) null);
+          ScreenProjectionSupport.field_f.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, 1, 114, 6316128, 6316128);
           ProgressDialog.field_qb = new UiComponent(0L, (UiComponent) null);
           ProgressDialog.field_qb.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "popup"), 12519);
           var12 = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "popup_mouseover"), 12519);
@@ -250,8 +250,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           qg.field_f = new UiComponent(0L, (UiComponent) null);
           qg.field_f.sprite = WidgetStyleLayer.loadSprite("lobby", (byte) 115, "closebutton", param4);
           qg.field_f.activeSprite = WidgetStyleLayer.loadSprite("lobby", (byte) 101, "closebutton_mouseover", param4);
-          bh.field_b = new UiComponent(0L, var8);
-          bh.field_b.frameSprites = IterableDualLinkDeque.a(3815994, 2039583, true, 40, -86, true);
+          MirroredSceneSupport.field_b = new UiComponent(0L, var8);
+          MirroredSceneSupport.field_b.frameSprites = IterableDualLinkDeque.a(3815994, 2039583, true, 40, -86, true);
           lf.field_d = new UiComponent(0L, var10);
           lf.field_d.textInset = 2;
           lf.field_d.frameSprites = IterableDualLinkDeque.a(3815994, 2039583, false, 30, -111, true);
@@ -263,7 +263,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           Under13NoticePanel.field_Q.frameSprites = IterableDualLinkDeque.a(3815994, 2039583, true, 30, -107, false);
           AlignedIconLabel.field_Lb = new UiComponent(0L, (UiComponent) null);
           AlignedIconLabel.field_Lb.verticalAlignment = 1;
-          AlignedIconLabel.field_Lb.font = (BitmapFont) ((Object) ae.field_a);
+          AlignedIconLabel.field_Lb.font = (BitmapFont) ((Object) MembershipBenefitsLoader.field_a);
           AlignedIconLabel.field_Lb.textColor = 13421772;
           AlignedIconLabel.field_Lb.lineSpacing = ArchiveIndex.field_x;
           UiWidget.field_A = new UiComponent(0L, AlignedIconLabel.field_Lb);
@@ -304,8 +304,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           IndexedSpriteState.field_c.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "tab_inactive"), 12519);
           IndexedSpriteState.field_c.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "tab_mouseover"), 12519);
           IndexedSpriteState.field_c.selectedFrameSprites = var14;
-          ea.field_u = new UiComponent(0L, (UiComponent) null);
-          ea.field_u.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, -1, 206, 1856141, 1127256);
+          RankingsRequest.field_u = new UiComponent(0L, (UiComponent) null);
+          RankingsRequest.field_u.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, -1, 206, 1856141, 1127256);
           CheckboxWidget.field_P = new UiComponent(0L, (UiComponent) null);
           CheckboxWidget.field_P.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, -1, 290, 11579568, 6052956);
           mg.field_c = new UiComponent(0L, var15);
@@ -325,8 +325,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           ArchiveProvider.field_g = new UiComponent(0L, ButtonPainter.field_a);
           tg.field_d = new UiComponent(0L, mg.field_c);
           i.field_l = new UiComponent(0L, ButtonPainter.field_a);
-          cq.field_d = new UiComponent(0L, ButtonPainter.field_a);
-          ef.field_c = new UiComponent(0L, ButtonPainter.field_a);
+          TutorialFactory.field_d = new UiComponent(0L, ButtonPainter.field_a);
+          FaceNormal.field_c = new UiComponent(0L, ButtonPainter.field_a);
           ButtonPainter.field_a.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "smallbutton"), 12519);
           ButtonPainter.field_a.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "smallbutton_mouseover"), 12519);
           dupTemp$0 = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "smallbutton_active"), 12519);
@@ -350,25 +350,25 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           tg.field_d.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "backbutton_mouseover"), 12519);
           tg.field_d.capturedFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "backbutton_mouseheld"), 12519);
           tg.field_d.disabledFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "backbutton_disabled"), 12519);
-          ef.field_c.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "gameoptionbutton"), 12519);
-          ef.field_c.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "gameoptionbutton_mouseover"), 12519);
+          FaceNormal.field_c.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "gameoptionbutton"), 12519);
+          FaceNormal.field_c.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "gameoptionbutton_mouseover"), 12519);
           if (param1) {
             return;
           }
           dupTemp$1 = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "gameoptionbutton_active"), 12519);
-          ef.field_c.selectedFrameSprites = dupTemp$1;
-          ef.field_c.capturedFrameSprites = dupTemp$1;
-          ef.field_c.disabledFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "gameoptionbutton_disabled"), 12519);
+          FaceNormal.field_c.selectedFrameSprites = dupTemp$1;
+          FaceNormal.field_c.capturedFrameSprites = dupTemp$1;
+          FaceNormal.field_c.disabledFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "gameoptionbutton_disabled"), 12519);
           i.field_l.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatbutton"), 12519);
           i.field_l.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatbutton_mouseover"), 12519);
           dupTemp$2 = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatbutton_active"), 12519);
           i.field_l.selectedFrameSprites = dupTemp$2;
           i.field_l.capturedFrameSprites = dupTemp$2;
-          cq.field_d.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatfilterbutton"), 12519);
-          cq.field_d.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatfilterbutton_mouseover"), 12519);
+          TutorialFactory.field_d.frameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatfilterbutton"), 12519);
+          TutorialFactory.field_d.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatfilterbutton_mouseover"), 12519);
           dupTemp$3 = CachedArchiveSource.a(NameEntryPopup.a(0, "lobby", param4, "chatfilterbutton_active"), 12519);
-          cq.field_d.selectedFrameSprites = dupTemp$3;
-          cq.field_d.capturedFrameSprites = dupTemp$3;
+          TutorialFactory.field_d.selectedFrameSprites = dupTemp$3;
+          TutorialFactory.field_d.capturedFrameSprites = dupTemp$3;
           var17 = NameEntryPopup.a(0, "lobby", param4, "checkbox");
           e.field_e = new StateIconLabel(0L, var17[1], var17[0], 1, UiWidget.field_A, (String) null);
           LabeledChildWidget.field_R = new UiComponent(0L, (UiComponent) null);
@@ -437,7 +437,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        hj var7 = null;
+        QuickChatDynamicCommand var7 = null;
         int var9 = 0;
         var9 = Pool.field_O;
         try {

@@ -19,7 +19,7 @@ final class Ball {
     static String[] plusgoodShot;
     int lastAdvanceTime;
     int velocityY;
-    static hj field_J;
+    static QuickChatDynamicCommand field_J;
     int velocityZ;
     Quaternion orientation;
     boolean transformDirty;
@@ -167,7 +167,7 @@ final class Ball {
         return "Sliding";
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_z = null;
         field_i = null;
         field_F = null;
@@ -269,7 +269,7 @@ final class Ball {
         ta.field_h.setDampingTimeMicros(param5);
         ta.field_h.setWetGain(param0);
         if (param6 != -1) {
-          field_J = (hj) null;
+          field_J = (QuickChatDynamicCommand) null;
         }
         ta.field_h.d(param2);
         ta.field_h.setStereoWidth(param3);
@@ -471,7 +471,7 @@ final class Ball {
 
     final int d(int param0) {
         if (param0 != 1) {
-          Ball.b((byte) -120);
+          Ball.releaseStatics((byte) -120);
         }
         if (this.inPlay) {
           return 21;
@@ -509,7 +509,7 @@ final class Ball {
         field_i = null;
         plusgoodShot = new String[]{"Great shot!", "Silky skills!", "Awesome!", "What a star!"};
         playerYouX2AreOfferingRematch = "You and <%0> are offering a rematch.";
-        field_J = new hj(12, 0, 1, 0);
+        field_J = new QuickChatDynamicCommand(12, 0, 1, 0);
         raExplanation = "A detailed explanation of each rule can be found through the link on our website.<br>(in the Help Section)";
         field_f = 0;
     }

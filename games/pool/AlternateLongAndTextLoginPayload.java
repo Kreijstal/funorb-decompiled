@@ -20,7 +20,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         }
     }
 
-    final static void a(eh param0, int param1, byte param2) {
+    final static void a(HighScoreRequest param0, int param1, byte param2) {
         RuntimeException runtimeException = null;
         CipherPacketBuffer var3 = null;
         RuntimeException stackIn_8_0 = null;
@@ -317,9 +317,9 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
           var14[5] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          fl.field_q = new UiComponent(0L, param0);
+          IntLookupQuery.field_q = new UiComponent(0L, param0);
           ProgressDialog.field_hb = new UiComponent(0L, param10);
-          fl.field_q.addChild(-1, ProgressDialog.field_hb);
+          IntLookupQuery.field_q.addChild(-1, ProgressDialog.field_hb);
           var17 = new UiComponent(0L, (UiComponent) null);
           var17.children = new IntrusiveDeque();
           Js5ArchiveManager.field_b = new ScrollPane(0L, var17, param9, param3);
@@ -371,8 +371,8 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
                 il.field_g[var18].addChild(68, AlignedIconLabel.field_Mb[var18]);
                 il.field_g[var18].addChild(72, ta.field_b[var18]);
                 il.field_g[var18].markDescendantsToInheritVisualState((byte) -126);
-                fl.field_q.addChild(104, il.field_g[var18]);
-                bq.field_m = bq.field_m + 1;
+                IntLookupQuery.field_q.addChild(104, il.field_g[var18]);
+                AchievementNotice.field_m = AchievementNotice.field_m + 1;
               }
               var18++;
               continue;
@@ -380,11 +380,11 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            d.field_e = new UiComponent(0L, param7);
-            d.field_e.text = HuffmanCodec.reportabuse;
-            fl.field_q.addChild(25, d.field_e);
+            MeshBoundsSupport.field_e = new UiComponent(0L, param7);
+            MeshBoundsSupport.field_e.text = HuffmanCodec.reportabuse;
+            IntLookupQuery.field_q.addChild(25, MeshBoundsSupport.field_e);
             if (!mg.a(61) ||
-              ea.field_z) {
+              RankingsRequest.field_z) {
               ThemeSelectScreen.field_J = new jj(0, 0, 0, 0);
             }
             stackIn_35_0 = -31;

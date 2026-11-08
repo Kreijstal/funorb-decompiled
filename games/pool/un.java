@@ -48,12 +48,12 @@ final class un {
             } else {
               var6 = ReportAbuseDialog.a(true, param0 ^ -35, QuickChatMenu.field_Sb[var3_int]);
               var7 = ArchiveIndex.field_u - (var6 >> 1);
-              var4 = var4 + bj.field_m;
+              var4 = var4 + DottedRectangleSupport.field_m;
               if (ResizableDialog.a(param2, -59, LobbyGame.field_yc + (TriangleMesh.field_B << 1), param1, var6 + (IterableDualLinkDeque.field_g << 1), var4, -IterableDualLinkDeque.field_g + var7)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
-              var4 = var4 + (LobbyGame.field_yc + (TriangleMesh.field_B << 1) + bj.field_m);
+              var4 = var4 + (LobbyGame.field_yc + (TriangleMesh.field_B << 1) + DottedRectangleSupport.field_m);
             }
             var3_int++;
           }
@@ -68,11 +68,11 @@ final class un {
 
     final static void b(int param0) {
         int var1 = 69 % ((param0 + 18) / 59);
-        if (LobbyPlayer.field_fc == 0 - cl.field_h) {
+        if (LobbyPlayer.field_fc == 0 - ProjectedLineSupport.field_h) {
           LobbyPlayer.field_fc = LobbyPlayer.field_fc + 1;
           return;
         }
-        if (LobbyPlayer.field_fc == 250 - cl.field_h) {
+        if (LobbyPlayer.field_fc == 250 - ProjectedLineSupport.field_h) {
           LobbyPlayer.field_fc = LobbyPlayer.field_fc + 1;
           return;
         }
@@ -88,7 +88,7 @@ final class un {
         MatchingTextValidator.field_r.clear((byte) 47);
     }
 
-    final static void a(int param0, bj param1, byte param2) {
+    final static void a(int param0, DottedRectangleSupport param1, byte param2) {
         CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;

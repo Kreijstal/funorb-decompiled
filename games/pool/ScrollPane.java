@@ -5,7 +5,7 @@ final class ScrollPane extends UiComponent {
     UiComponent content;
     UiComponent viewport;
     VerticalScrollbar scrollbar;
-    static hj field_Tb;
+    static QuickChatDynamicCommand field_Tb;
     static String playerX2AreGroupName;
     static ProgressDialog field_Nb;
     static int field_Pb;
@@ -98,7 +98,7 @@ final class ScrollPane extends UiComponent {
         int var3 = Pool.field_O;
         try {
           if (param0 <= 16) {
-            field_Tb = (hj) null;
+            field_Tb = (QuickChatDynamicCommand) null;
           }
           for (var2_int = 0; nn.field_b.length > var2_int; var2_int++) {
             nn.field_b[var2_int].loadBackdrop(5, param1);
@@ -212,7 +212,7 @@ final class ScrollPane extends UiComponent {
 
     static {
         playerX2AreGroupName = "<%0> and <%1> are <%2>.";
-        field_Tb = new hj(9, 0, 4, 1);
+        field_Tb = new QuickChatDynamicCommand(9, 0, 4, 1);
         field_Lb = new byte[]{(byte)2, (byte) 0, (byte) 0, (byte) 0};
         ratedGame = "Rated game";
     }

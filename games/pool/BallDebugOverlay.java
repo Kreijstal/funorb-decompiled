@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class BallDebugOverlay implements eb {
+final class BallDebugOverlay implements SceneDrawable {
     static byte[][] field_g;
     static Sprite field_d;
     static char[] field_j;
@@ -99,16 +99,16 @@ final class BallDebugOverlay implements eb {
             if (this.field_a.velocityX != 0 ||
               this.field_a.velocityY != 0 ||
               this.field_a.velocityZ != 0) {
-              cl.drawProjectedLine(16711680, 1, param0, ol.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), ol.a(new int[]{this.field_a.positionX + this.field_a.velocityX * 40, this.field_a.positionY + this.field_a.velocityY * 40, this.field_a.positionZ}, (byte) 1));
+              ProjectedLineSupport.drawProjectedLine(16711680, 1, param0, ol.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), ol.a(new int[]{this.field_a.positionX + this.field_a.velocityX * 40, this.field_a.positionY + this.field_a.velocityY * 40, this.field_a.positionZ}, (byte) 1));
             }
             if (this.field_a.angularVelocityX != 0 ||
               this.field_a.angularVelocityY != 0 ||
               0 != this.field_a.angularVelocityZ) {
-              cl.drawProjectedLine(65280, 1, param0, ol.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), ol.a(new int[]{40 * this.field_a.angularVelocityX + this.field_a.positionX, this.field_a.positionY + this.field_a.angularVelocityY * 40, this.field_a.angularVelocityZ * 40 + this.field_a.positionZ}, (byte) 1));
+              ProjectedLineSupport.drawProjectedLine(65280, 1, param0, ol.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), ol.a(new int[]{40 * this.field_a.angularVelocityX + this.field_a.positionX, this.field_a.positionY + this.field_a.angularVelocityY * 40, this.field_a.angularVelocityZ * 40 + this.field_a.positionZ}, (byte) 1));
             }
             if (0 != this.field_a.field_l ||
               this.field_a.field_h != 0) {
-              cl.drawProjectedLine(16776960, 1, param0, ol.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), ol.a(new int[]{40 * this.field_a.field_l + this.field_a.positionX, this.field_a.positionY + this.field_a.field_h * 40, this.field_a.positionZ}, (byte) 1));
+              ProjectedLineSupport.drawProjectedLine(16776960, 1, param0, ol.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), ol.a(new int[]{40 * this.field_a.field_l + this.field_a.positionX, this.field_a.positionY + this.field_a.field_h * 40, this.field_a.positionZ}, (byte) 1));
             }
           }
           if (param1 != -32215) {
@@ -201,7 +201,7 @@ final class BallDebugOverlay implements eb {
         return PlayerContextMenu.field_e.j(-125);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = (byte[][]) null;
         field_d = null;
         field_j = null;

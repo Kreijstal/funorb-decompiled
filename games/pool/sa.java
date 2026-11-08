@@ -35,7 +35,7 @@ final class sa {
           return ContextMenu.field_Xb;
         }
         if (param0) {
-          sa.a(38);
+          sa.releaseStatics(38);
           if (TimeTrialSelectScreen.field_I == ra.field_e) {
             return l.field_c;
           }
@@ -85,7 +85,7 @@ final class sa {
               MenuSelection.field_l = stackIn_8_0;
               RankingsScreen.field_J = Js5Transport.field_h;
               ArrayWidgetGroup.a(JaggrabDownloader.field_j, true, kc.field_c, LobbyGame.field_uc, lf.field_b);
-              de.a(-1, 0);
+              DebugTuningSupport.flushClientPackets(-1, 0);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
@@ -109,7 +109,7 @@ final class sa {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_m = null;
         field_v = null;

@@ -89,7 +89,7 @@ final class TextHotspotRegion extends IntrusiveNode {
         int var12Lifetime1;
         int var13Lifetime1;
         try {
-          eh.field_p = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          HighScoreRequest.field_p = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = ShotRecord.field_S.length;
           var20 = new int[var1_int];
           var19 = var20;
@@ -101,17 +101,17 @@ final class TextHotspotRegion extends IntrusiveNode {
             var5 = var4_ref_oc.minX + var4_ref_oc.maxX >> 1;
             var6 = var4_ref_oc.maxY + var4_ref_oc.minY >> 1;
             var7 = var4_ref_oc.minZ + var4_ref_oc.maxZ >> 1;
-            var8 = eh.field_p[9] >> 2;
-            var9 = eh.field_p[10] >> 2;
-            var10_int = eh.field_p[11] >> 2;
+            var8 = HighScoreRequest.field_p[9] >> 2;
+            var9 = HighScoreRequest.field_p[10] >> 2;
+            var10_int = HighScoreRequest.field_p[11] >> 2;
             var11 = var10_int * IsaacCipher.field_b[5] + (var8 * IsaacCipher.field_b[3] + var9 * IsaacCipher.field_b[4]) >> 14;
             var12 = IsaacCipher.field_b[8] * var10_int + IsaacCipher.field_b[6] * var8 + var9 * IsaacCipher.field_b[7] >> 14;
             var13 = IsaacCipher.field_b[10] * var9 + (IsaacCipher.field_b[9] * var8 + IsaacCipher.field_b[11] * var10_int) >> 14;
             var2[var3] = var7 * var13 + (var11 * var5 + var12 * var6) >> 16;
           }
-          var3Lifetime1 = eh.field_p[9] >> 8;
-          var4 = eh.field_p[10] >> 8;
-          var5Lifetime1 = eh.field_p[11] >> 8;
+          var3Lifetime1 = HighScoreRequest.field_p[9] >> 8;
+          var4 = HighScoreRequest.field_p[10] >> 8;
+          var5Lifetime1 = HighScoreRequest.field_p[11] >> 8;
           var6Lifetime1 = LobbyPlayer.field_fc << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = EightBallRules.sineLookup((byte) -123, var6Lifetime1) >> 8;
@@ -149,7 +149,7 @@ final class TextHotspotRegion extends IntrusiveNode {
             for (var18 = 0; var18 < 3; var18++) {
               IsaacCipher.field_b[var18] = IsaacCipher.field_b[var18] + QuickChatMenu.field_gc[var15][var18];
             }
-            BitmapTextLayout.a(param0 + 21815, false, eh.field_p, false, true, IsaacCipher.field_b, var17);
+            BitmapTextLayout.a(param0 + 21815, false, HighScoreRequest.field_p, false, true, IsaacCipher.field_b, var17);
             CueAim.a(var14, 8355711, var17, var8Lifetime1, var13Lifetime1, var9Lifetime1, var12Lifetime1, var7Lifetime1);
           }
           return;

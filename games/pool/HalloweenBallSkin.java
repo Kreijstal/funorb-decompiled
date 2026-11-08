@@ -17,7 +17,7 @@ final class HalloweenBallSkin extends BallSkin {
         if (param0 != 3) {
           return;
         }
-        ea.field_z = false;
+        RankingsRequest.field_z = false;
         ViewportController.field_y = 0 == PlayerContextMenu.field_e.readUnsignedByte(-83) ? true : false;
     }
 
@@ -91,7 +91,7 @@ final class HalloweenBallSkin extends BallSkin {
         if (param0 < 9) {
           return (String) null;
         }
-        return ae.ballsetEnglishGroup0;
+        return MembershipBenefitsLoader.ballsetEnglishGroup0;
     }
 
     final void a(int param0, byte param1, Ball[] param2) {

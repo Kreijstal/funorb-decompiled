@@ -98,7 +98,7 @@ final class ContextMenu extends UiComponent {
         }
         var6 = var6 + 2 * this.borderInsetX;
         var7Lifetime1 = this.itemCount * this.itemHeight + this.borderInsetY + this.borderInsetY;
-        var8Lifetime1 = de.a(var6, param0, param2, 0);
+        var8Lifetime1 = DebugTuningSupport.adjustWidthForRightEdge(var6, param0, param2, 0);
         var9 = OpacityWidget.a(var7Lifetime1, param4, param3 - 1, param1);
         this.setBounds(var9, 2147483647, var8Lifetime1, var6, var7Lifetime1);
         for (var10 = param3; this.itemCount > var10; var10++) {

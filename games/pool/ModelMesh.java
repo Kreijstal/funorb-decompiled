@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ModelMesh extends fa {
+final class ModelMesh extends RenderableModel {
     private byte[] field_bb;
     private int[] field_y;
     private boolean boundsValid;
@@ -106,7 +106,7 @@ final class ModelMesh extends fa {
         return this.maxZ;
     }
 
-    final void b(int[] param0, int[] param1) {
+    final void drawTransformed(int[] param0, int[] param1) {
         int stackIn_15_0 = 0;
         int stackIn_21_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -711,7 +711,7 @@ final class ModelMesh extends fa {
         return this.maxY;
     }
 
-    private final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final boolean isPointInTriangleBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param1 < param2 &&
           param1 < param3 &&
           param1 < param4) {
@@ -904,7 +904,7 @@ final class ModelMesh extends fa {
                 break regionExit1;
               }
               if (param1 &&
-                this.a(tp.field_b + TriangleRasterizer.projectionCenterX, ScrollPaneWithFooter.field_Rb + TriangleRasterizer.projectionCenterY, field_v[var9], field_v[var10], field_v[var11], var12, var13, var14_int)) {
+                this.isPointInTriangleBounds(tp.field_b + TriangleRasterizer.projectionCenterX, ScrollPaneWithFooter.field_Rb + TriangleRasterizer.projectionCenterY, field_v[var9], field_v[var10], field_v[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = Js5ArchiveManager.field_g;
                 Js5ArchiveManager.field_g = Js5ArchiveManager.field_g + 1;
                 dq.field_d[fieldTemp$13] = param2;
@@ -1251,13 +1251,13 @@ final class ModelMesh extends fa {
         int var10;
         int var11;
         int var12;
-        ah var13;
+        VertexNormal var13;
         int var14;
         int var15;
         int var16;
         int[] var17;
-        ef var18;
-        ef var19;
+        FaceNormal var18;
+        FaceNormal var19;
         int[] var20;
         int var9Lifetime1;
         int var10Lifetime1;

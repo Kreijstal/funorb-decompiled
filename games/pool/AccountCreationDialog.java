@@ -12,10 +12,10 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
 
     final static boolean m(int param0) {
         if (param0 == 0) {
-          return null == MatchingTextValidator.field_u ? um.field_e : true;
+          return null == MatchingTextValidator.field_u ? MeshBase.field_e : true;
         }
         AccountCreationDialog.m(71);
-        return null == MatchingTextValidator.field_u ? um.field_e : true;
+        return null == MatchingTextValidator.field_u ? MeshBase.field_e : true;
     }
 
     public static void releaseStatics(int param0) {
@@ -47,7 +47,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               var4 = param0.field_b;
               if (param0.field_g == 248) {
                 if (!param2) {
-                  PoolMatchController.r((byte) -80);
+                  PoolMatchController.setTuhstatbutCookie((byte) -80);
                 }
                 var4 = NodeHashTableIterator.createIneligible;
                 this.field_Eb = true;
@@ -61,7 +61,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           } else {
             var4 = SingleChildWidget.createAccountSuccess;
           }
-          var5 = new MessageDialogContent((MessageDialog) (this), bi.field_e, var4);
+          var5 = new MessageDialogContent((MessageDialog) (this), LoginPayloadFactory.field_e, var4);
           if (param0.field_f) {
             if (param0.field_e) {
               this.replaceContent(new Under13NoticePanel(this), 30);
@@ -74,7 +74,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             } else {
               if (param0.field_g == 5) {
                 var5.addActionButton(11, NodeHashTableIterator.reloadgame, param1 ^ 4);
-                var5.addActionButton(17, dj.quittowebsite, 1);
+                var5.addActionButton(17, FullscreenDisplayMode.quittowebsite, 1);
               } else {
                 var5.addActionButton(-1, CueStick.back, param1 ^ 4);
               }
@@ -154,7 +154,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     }
 
     AccountCreationDialog(DialogLayer param0, AccountCreationForm param1) {
-        super(param0, bi.field_e, DualLinkNodeHashTable.creatingyouraccount, false, false);
+        super(param0, LoginPayloadFactory.field_e, DualLinkNodeHashTable.creatingyouraccount, false, false);
         try {
           this.field_Cb = param1;
         } catch (RuntimeException runtimeException) {
@@ -178,7 +178,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           return;
         }
         MaxLengthTextInputWidget.m(param0 ^ 22150);
-        if (!dn.a(true, GameRules.field_b)) {
+        if (!ShotEvent.a(true, GameRules.field_b)) {
           if (GameRules.field_b < 0) {
             if (-2 == GameRules.field_b) {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
@@ -196,7 +196,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               }
             }
           } else {
-            if (s.field_c[GameRules.field_b].field_n) {
+            if (DisplayModeSupport.field_c[GameRules.field_b].field_n) {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
             } else {
               if (-2 == GameRules.field_b) {
@@ -221,12 +221,12 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           TextLineLayout.a((byte) -27, il.field_c[3]);
           return;
         }
-        s.field_c[GameRules.field_b].parentScreenId = param2;
+        DisplayModeSupport.field_c[GameRules.field_b].parentScreenId = param2;
         var4 = 0;
         if (GameRules.field_b == 21) {
           var4 = -1;
         }
-        s.field_c[GameRules.field_b].onEnter(0, var4, param3);
+        DisplayModeSupport.field_c[GameRules.field_b].onEnter(0, var4, param3);
         if (GameRules.field_b != 21) {
           if (GameRules.field_b < 0) {
             if (-2 == GameRules.field_b) {
@@ -250,7 +250,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
             }
           } else {
-            if (s.field_c[GameRules.field_b].field_n) {
+            if (DisplayModeSupport.field_c[GameRules.field_b].field_n) {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
             } else {
               if (-2 == GameRules.field_b) {
@@ -307,7 +307,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
             }
           } else {
-            if (s.field_c[GameRules.field_b].field_n) {
+            if (DisplayModeSupport.field_c[GameRules.field_b].field_n) {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {

@@ -64,9 +64,9 @@ final class SpaceTableScene extends ModelTableScene {
               if (var8 == 0) {
                 var8 = -1;
               }
-              s.field_b[0][var3_int] = var9 / var8 + 5120;
-              s.field_b[1][var3_int] = 3840 + var10 / var8;
-              s.field_b[2][var3_int] = var8;
+              DisplayModeSupport.field_b[0][var3_int] = var9 / var8 + 5120;
+              DisplayModeSupport.field_b[1][var3_int] = 3840 + var10 / var8;
+              DisplayModeSupport.field_b[2][var3_int] = var8;
               var3_int++;
               var5++;
               continue;
@@ -95,13 +95,13 @@ final class SpaceTableScene extends ModelTableScene {
           Bzip2DecoderState.field_i = param0.getVorbisSound("space_ball_2", true, "");
           IntrusiveNode.field_a = param0.getVorbisSound("space_ball_3", true, "");
           int var3_int = -40 / ((39 - param1) / 38);
-          hj.field_j = param0.getVorbisSound("space_ball_4", true, "");
+          QuickChatDynamicCommand.field_j = param0.getVorbisSound("space_ball_4", true, "");
           wn.field_b = param0.getVorbisSound("space_ball_cushion1", true, "");
           PotEvent.field_o = param0.getVorbisSound("space_ball_cushion2", true, "");
           PacketBuffer.field_q = param0.getVorbisSound("space_ball_cushion3", true, "");
           IterableDualLinkDeque.field_f = param0.getVorbisSound("space_ball_cushion4", true, "");
           PolarBallSkin.field_l = param0.getVorbisSound("space_respot_the_white", true, "");
-          bh.field_a = param0.getSynthesizedSound("", "space_ball_pot", (byte) 125);
+          MirroredSceneSupport.field_a = param0.getSynthesizedSound("", "space_ball_pot", (byte) 125);
           Ball.field_L = param0.getSynthesizedSound("", "space_cue_hard", (byte) 126);
           IsaacCipher.field_l = param0.getSynthesizedSound("", "space_cue_soft", (byte) 126);
           param0.getSynthesizedSound("", "cueball_rolling_loop", (byte) 125);
@@ -200,7 +200,7 @@ final class SpaceTableScene extends ModelTableScene {
         ra.field_f = null;
         TextInputValidator.field_h = null;
         DialogLayer.field_R = null;
-        s.field_b = (int[][]) null;
+        DisplayModeSupport.field_b = (int[][]) null;
         CacheEntry.field_C = (int[][]) null;
     }
 
@@ -295,7 +295,7 @@ final class SpaceTableScene extends ModelTableScene {
         return DebugTuningSlider.field_c.content;
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         waitingforFonts = null;
         if (param0 != -116) {
           String var2 = (String) null;
@@ -313,7 +313,7 @@ final class SpaceTableScene extends ModelTableScene {
         var6 = param0;
         if (var6 != 5) {
           if (2 == var6) {
-            var6 = MaxLengthTextInputWidget.nextRandomInt(2, true, ea.field_r);
+            var6 = MaxLengthTextInputWidget.nextRandomInt(2, true, RankingsRequest.field_r);
             if (var6 == 0) {
               kp.a(100, ie.field_f, param3, param1);
             } else {
@@ -323,10 +323,10 @@ final class SpaceTableScene extends ModelTableScene {
             }
           } else {
             if (var6 == 3) {
-              var6 = MaxLengthTextInputWidget.nextRandomInt(2, true, ea.field_r);
+              var6 = MaxLengthTextInputWidget.nextRandomInt(2, true, RankingsRequest.field_r);
               if (var6 != 0) {
                 if (var6 == 1) {
-                  kp.a(100, hj.field_j, param3, param1);
+                  kp.a(100, QuickChatDynamicCommand.field_j, param3, param1);
                 }
               } else {
                 kp.a(100, Bzip2DecoderState.field_i, param3, param1);
@@ -342,7 +342,7 @@ final class SpaceTableScene extends ModelTableScene {
                     kp.a(100, PolarBallSkin.field_l, param3, param1);
                   } else {
                     if (var6 == 4) {
-                      kp.a(100, bh.field_a, param3, param1);
+                      kp.a(100, MirroredSceneSupport.field_a, param3, param1);
                     }
                   }
                 }
@@ -350,7 +350,7 @@ final class SpaceTableScene extends ModelTableScene {
             }
           }
         } else {
-          var6 = MaxLengthTextInputWidget.nextRandomInt(4, true, ea.field_r);
+          var6 = MaxLengthTextInputWidget.nextRandomInt(4, true, RankingsRequest.field_r);
           if (var6 == 0) {
             kp.a(100, wn.field_b, param3, param1);
           } else {
@@ -477,20 +477,20 @@ final class SpaceTableScene extends ModelTableScene {
           var20 = var53;
           var12 = var20;
           var5_ref_int__Lifetime1 = var12;
-          eh.field_s[1] = -1152 + var53[1] >> 3;
-          eh.field_s[2] = var53[2] >> 3;
-          if (var5_ref_int__Lifetime1 != eh.field_s) {
-            eh.field_s[6] = var53[6];
-            eh.field_s[7] = var53[7];
-            eh.field_s[8] = var53[8];
-            eh.field_s[10] = var53[10];
-            eh.field_s[5] = var53[5];
-            eh.field_s[4] = var53[4];
-            eh.field_s[3] = var53[3];
-            eh.field_s[11] = var53[11];
-            eh.field_s[9] = var53[9];
+          HighScoreRequest.field_s[1] = -1152 + var53[1] >> 3;
+          HighScoreRequest.field_s[2] = var53[2] >> 3;
+          if (var5_ref_int__Lifetime1 != HighScoreRequest.field_s) {
+            HighScoreRequest.field_s[6] = var53[6];
+            HighScoreRequest.field_s[7] = var53[7];
+            HighScoreRequest.field_s[8] = var53[8];
+            HighScoreRequest.field_s[10] = var53[10];
+            HighScoreRequest.field_s[5] = var53[5];
+            HighScoreRequest.field_s[4] = var53[4];
+            HighScoreRequest.field_s[3] = var53[3];
+            HighScoreRequest.field_s[11] = var53[11];
+            HighScoreRequest.field_s[9] = var53[9];
           }
-          eh.field_s[0] = -2304 + var53[0] >> 3;
+          HighScoreRequest.field_s[0] = -2304 + var53[0] >> 3;
           var54 = var4;
           var21 = var54;
           var13 = var21;
@@ -581,8 +581,8 @@ final class SpaceTableScene extends ModelTableScene {
           SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 51);
           this.a(param1, param0 ^ -61);
           for (var5Lifetime2 = 0; var5Lifetime2 < CacheEntry.field_C[0].length; var5Lifetime2++) {
-            if (s.field_b[2][var5Lifetime2] >= 0) {
-              SoftwareRasterizer.fillRadialGlow(s.field_b[0][var5Lifetime2], s.field_b[1][var5Lifetime2], var5Lifetime2 % ThreeSliceButtonPainter.field_t.length + 2 << 3, 255, DiskArchiveRequest.field_K);
+            if (DisplayModeSupport.field_b[2][var5Lifetime2] >= 0) {
+              SoftwareRasterizer.fillRadialGlow(DisplayModeSupport.field_b[0][var5Lifetime2], DisplayModeSupport.field_b[1][var5Lifetime2], var5Lifetime2 % ThreeSliceButtonPainter.field_t.length + 2 << 3, 255, DiskArchiveRequest.field_K);
             }
           }
           NodeHashTableIterator.field_k.a(PoolUiText.field_d, PasswordValidator.field_t[1], 4096, (byte) 113, PasswordValidator.field_t[0]);
@@ -754,7 +754,7 @@ final class SpaceTableScene extends ModelTableScene {
           incrementValue$14 = var3_int;
           var3_int++;
           this.field_O[incrementValue$14] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_shuttle");
-          da.field_b = var3_int;
+          MenuLabelSupport.field_b = var3_int;
           incrementValue$15 = var3_int;
           var3_int++;
           this.field_O[incrementValue$15] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_door_a");
@@ -797,7 +797,7 @@ final class SpaceTableScene extends ModelTableScene {
           incrementValue$25 = var3_int;
           var3_int++;
           this.field_O[incrementValue$25] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_top_b");
-          pc.field_b = var3_int;
+          ShotPreviewState.field_b = var3_int;
           this.field_A = new CueStick();
           this.field_A.a(MeshBuilder.loadFromArchive(param0, "", "cues/space_cue"), (byte) -115);
           for (var4 = 0; this.field_O.length > var4; var4++) {
@@ -809,8 +809,8 @@ final class SpaceTableScene extends ModelTableScene {
           var8 = -2147483648;
           var9 = 2147483647;
           var10 = -2147483648;
-          for (var4Lifetime1 = HuffmanCodec.field_d; pc.field_b > var4Lifetime1; var4Lifetime1++) {
-            d.computeMeshBounds(this.field_O[var4Lifetime1], -23109);
+          for (var4Lifetime1 = HuffmanCodec.field_d; ShotPreviewState.field_b > var4Lifetime1; var4Lifetime1++) {
+            MeshBoundsSupport.computeMeshBounds(this.field_O[var4Lifetime1], -23109);
             if (var7 > this.field_O[var4Lifetime1].field_y) {
               var7 = this.field_O[var4Lifetime1].field_y;
             }
@@ -836,13 +836,13 @@ final class SpaceTableScene extends ModelTableScene {
           var12 = var7 + var8 >> 1;
           var13 = var10;
           for (var4Lifetime2 = 0; this.field_O.length > var4Lifetime2; var4Lifetime2++) {
-            cq.a(var11, 70, var13, this.field_O[var4Lifetime2], var12);
+            TutorialFactory.translateMeshOrigin(var11, 70, var13, this.field_O[var4Lifetime2], var12);
           }
           this.field_M = new int[this.field_O.length][3];
           for (var4Lifetime3 = 0; var4Lifetime3 < this.field_O.length; var4Lifetime3++) {
             ln.recenterModel(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
           }
-          pp.a(this.field_O[da.field_b], (short) -8246, true, this.field_M[da.field_b], SingleChildWidget.field_I);
+          pp.a(this.field_O[MenuLabelSupport.field_b], (short) -8246, true, this.field_M[MenuLabelSupport.field_b], SingleChildWidget.field_I);
           if (param1 >= -43) {
             this.initializeScene(false);
           }
@@ -899,7 +899,7 @@ final class SpaceTableScene extends ModelTableScene {
         int var3Lifetime1;
         int var3Lifetime2;
         wb.field_c = dupTemp$0;
-        SceneNode dupTemp$1 = new SceneNode(4 * (-HuffmanCodec.field_d + pc.field_b));
+        SceneNode dupTemp$1 = new SceneNode(4 * (-HuffmanCodec.field_d + ShotPreviewState.field_b));
         ff.field_d = dupTemp$1;
         SceneNode dupTemp$2 = new SceneNode(4 * (-vn.field_f + PolarBallSkin.field_o));
         tq.field_o = dupTemp$2;
@@ -912,7 +912,7 @@ final class SpaceTableScene extends ModelTableScene {
           var12 = wb.field_c.field_b;
           var6 = var3;
           var25 = this.field_M[var4];
-          bh.a(var12, false, var25[1], var25[2], this.field_O[var4], var25[0], var6);
+          MirroredSceneSupport.buildMirroredSceneEntries(var12, false, var25[1], var25[2], this.field_O[var4], var25[0], var6);
           var3 += 4;
         }
         for (var2Lifetime1 = ShotRecord.field_J; CachedArchiveSource.field_l > var2Lifetime1; var2Lifetime1++) {
@@ -926,12 +926,12 @@ final class SpaceTableScene extends ModelTableScene {
           waitingforFonts = (String) null;
         }
         var3Lifetime1 = 0;
-        for (var2Lifetime2 = HuffmanCodec.field_d; var2Lifetime2 < pc.field_b; var2Lifetime2++) {
+        for (var2Lifetime2 = HuffmanCodec.field_d; var2Lifetime2 < ShotPreviewState.field_b; var2Lifetime2++) {
           var4 = var2Lifetime2;
           var15 = ff.field_d.field_b;
           var6 = var3Lifetime1;
           var26 = this.field_M[var4];
-          bh.a(var15, false, var26[1], var26[2], this.field_O[var4], var26[0], var6);
+          MirroredSceneSupport.buildMirroredSceneEntries(var15, false, var26[1], var26[2], this.field_O[var4], var26[0], var6);
           var3Lifetime1 += 4;
         }
         var3Lifetime2 = 0;
@@ -940,10 +940,10 @@ final class SpaceTableScene extends ModelTableScene {
           var17 = tq.field_o.field_b;
           var6 = var3Lifetime2;
           var27 = this.field_M[var4];
-          bh.a(var17, false, var27[1], var27[2], this.field_O[var4], var27[0], var6);
+          MirroredSceneSupport.buildMirroredSceneEntries(var17, false, var27[1], var27[2], this.field_O[var4], var27[0], var6);
           var3Lifetime2 += 4;
         }
-        TextInputValidator.field_h = new SceneNode(new SceneNode[]{hc.a(this.field_O[SectorCacheStore.field_d], this.field_M[SectorCacheStore.field_d], (byte) 101), hc.a(this.field_O[da.field_b], this.field_M[da.field_b], (byte) 101), hc.a(this.field_O[StatefulTextPainter.field_x], this.field_M[StatefulTextPainter.field_x], (byte) 101)});
+        TextInputValidator.field_h = new SceneNode(new SceneNode[]{hc.a(this.field_O[SectorCacheStore.field_d], this.field_M[SectorCacheStore.field_d], (byte) 101), hc.a(this.field_O[MenuLabelSupport.field_b], this.field_M[MenuLabelSupport.field_b], (byte) 101), hc.a(this.field_O[StatefulTextPainter.field_x], this.field_M[StatefulTextPainter.field_x], (byte) 101)});
         TextInputValidator.field_h.mergeChildMeshes(false);
         TextInputValidator.field_h.normalizeOffsets(0);
         TextInputValidator.field_h.bakeModels(this.field_q, this.field_e, this.field_F, (byte) -101, this.field_u, this.field_C);
@@ -957,12 +957,12 @@ final class SpaceTableScene extends ModelTableScene {
         tq.field_o.allocateModelArrays(90);
         LobbyGame.field_rc = new boolean[tq.field_o.field_j.length];
         CacheEntry.field_C = new int[3][4096];
-        s.field_b = new int[3][CacheEntry.field_C[0].length];
+        DisplayModeSupport.field_b = new int[3][CacheEntry.field_C[0].length];
         for (var9 = 0; var9 < CacheEntry.field_C[0].length; var9++) {
           do {
-            var4 = MaxLengthTextInputWidget.nextRandomInt(255, param0, ea.field_r) - 127;
-            var5 = MaxLengthTextInputWidget.nextRandomInt(255, param0, ea.field_r) - 127;
-            var6 = MaxLengthTextInputWidget.nextRandomInt(255, param0, ea.field_r) - 127;
+            var4 = MaxLengthTextInputWidget.nextRandomInt(255, param0, RankingsRequest.field_r) - 127;
+            var5 = MaxLengthTextInputWidget.nextRandomInt(255, param0, RankingsRequest.field_r) - 127;
+            var6 = MaxLengthTextInputWidget.nextRandomInt(255, param0, RankingsRequest.field_r) - 127;
             var7 = 256;
             var10 = var4 * var4 + (var5 * var5 + var6 * var6);
             var8 = rf.inverseSquareRoot(var10, -121);

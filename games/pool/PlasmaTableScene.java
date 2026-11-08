@@ -103,7 +103,7 @@ final class PlasmaTableScene extends TableScene {
         super.playTableSound(param0, param1, (byte) -104, param3);
         var6 = param0;
         if (var6 == 5) {
-          var6 = MaxLengthTextInputWidget.nextRandomInt(4, true, ea.field_r);
+          var6 = MaxLengthTextInputWidget.nextRandomInt(4, true, RankingsRequest.field_r);
           if (0 == var6) {
             kp.a(100, this.field_hb, param3, param1);
           } else {
@@ -221,7 +221,7 @@ final class PlasmaTableScene extends TableScene {
         AccountContentDialog.field_tb = stackIn_2_0[stackIn_3_1];
         IterableNodeHashTable.field_h = 64 + ClassicBallSkin.field_l;
         ArchiveLoadSequence.field_g = 128 + ClassicBallSkin.field_l;
-        cl.field_g = LimitedRandomAccessFile.field_i[64 + (ClassicBallSkin.field_l >> 1)];
+        ProjectedLineSupport.field_g = LimitedRandomAccessFile.field_i[64 + (ClassicBallSkin.field_l >> 1)];
         DateInputWidget.field_Y = 192 + ClassicBallSkin.field_l;
         gn.field_d = 256 + ClassicBallSkin.field_l;
         pn.field_s = LimitedRandomAccessFile.field_i[128 + (ClassicBallSkin.field_l >> 1)];
@@ -364,7 +364,7 @@ final class PlasmaTableScene extends TableScene {
                   if (param1 < 0) {
                     param1 = -param1;
                   }
-                  param0 = cl.field_g;
+                  param0 = ProjectedLineSupport.field_g;
                   param1 = 255 - param1 >> 1;
                   param2 = (param0 & 16711935) * param1;
                   param0 = (param2 & -16711936) + (param0 * param1 - param2 & 16711680) >>> 8;
@@ -497,7 +497,7 @@ final class PlasmaTableScene extends TableScene {
                 var5_int = 0;
               }
               dupTemp$0 = ArrayWidgetGroup.field_K[var5_int][var4_int];
-              dupTemp$0.field_g = dupTemp$0.field_g + (1024 + MaxLengthTextInputWidget.nextRandomInt(256, true, ea.field_r));
+              dupTemp$0.field_g = dupTemp$0.field_g + (1024 + MaxLengthTextInputWidget.nextRandomInt(256, true, RankingsRequest.field_r));
             }
           }
           var3 = ArrayWidgetGroup.field_K[0];
@@ -687,7 +687,7 @@ final class PlasmaTableScene extends TableScene {
                 this.field_M[var10] = (this.field_M[var10] << 16) / this.field_L[var10];
                 var10++;
               }
-              var5 = bc.field_c;
+              var5 = FontPaletteSupport.field_c;
               if (param2.gameModel.rules instanceof EightBallRules) {
                 var6Lifetime1 = ((EightBallRules) (param2.gameModel.rules)).initialGroup(-1);
                 if (-1 != var6Lifetime1) {
@@ -796,14 +796,14 @@ final class PlasmaTableScene extends TableScene {
                 } else {
                   var7_ref_bl.field_E = var7_ref_bl.field_E + 2;
                   if (var7_ref_bl.field_E >= 256) {
-                    if (0 == MaxLengthTextInputWidget.nextRandomInt(10, true, ea.field_r)) {
+                    if (0 == MaxLengthTextInputWidget.nextRandomInt(10, true, RankingsRequest.field_r)) {
                       var7_ref_bl.field_y = var7_ref_bl.field_y + 1;
                     }
                     var7_ref_bl.field_c = false;
                   }
                 }
               } else {
-                if (MaxLengthTextInputWidget.nextRandomInt(2500, true, ea.field_r) == 0) {
+                if (MaxLengthTextInputWidget.nextRandomInt(2500, true, RankingsRequest.field_r) == 0) {
                   var7_ref_bl.field_E = 1;
                   var7_ref_bl.field_c = true;
                 } else {
@@ -842,20 +842,20 @@ final class PlasmaTableScene extends TableScene {
               if (128 < var12.field_E) {
                 boolean decompiledFrameRemainder1 = true;
                 if (var11.field_E == 0) {
-                  if (MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) == 0) {
+                  if (MaxLengthTextInputWidget.nextRandomInt(250, true, RankingsRequest.field_r) == 0) {
                     var11.field_E = var11.field_E + 1;
                   }
                   if (var13.field_E != 0) {
                     if (((var9.field_E == 0)) &&
-                      ((MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) == 0))) {
+                      ((MaxLengthTextInputWidget.nextRandomInt(250, true, RankingsRequest.field_r) == 0))) {
                       var9.field_E = var9.field_E + 1;
                     }
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    if (MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) != 0) {
+                    if (MaxLengthTextInputWidget.nextRandomInt(250, true, RankingsRequest.field_r) != 0) {
                       if (((var9.field_E == 0)) &&
-                        ((MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) == 0))) {
+                        ((MaxLengthTextInputWidget.nextRandomInt(250, true, RankingsRequest.field_r) == 0))) {
                         var9.field_E = var9.field_E + 1;
                       }
                       decompiledFrameRemainder1 = false;
@@ -867,15 +867,15 @@ final class PlasmaTableScene extends TableScene {
                 } else {
                   if (var13.field_E != 0) {
                     if (((var9.field_E == 0)) &&
-                      ((MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) == 0))) {
+                      ((MaxLengthTextInputWidget.nextRandomInt(250, true, RankingsRequest.field_r) == 0))) {
                       var9.field_E = var9.field_E + 1;
                     }
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    if (MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) != 0) {
+                    if (MaxLengthTextInputWidget.nextRandomInt(250, true, RankingsRequest.field_r) != 0) {
                       if (((var9.field_E == 0)) &&
-                        ((MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) == 0))) {
+                        ((MaxLengthTextInputWidget.nextRandomInt(250, true, RankingsRequest.field_r) == 0))) {
                         var9.field_E = var9.field_E + 1;
                       }
                       decompiledFrameRemainder1 = false;
@@ -886,11 +886,11 @@ final class PlasmaTableScene extends TableScene {
                   }
                 }
                 if ((decompiledFrameRemainder1) && (var9.field_E == 0 &&
-                  MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r) == 0)) {
+                  MaxLengthTextInputWidget.nextRandomInt(250, true, RankingsRequest.field_r) == 0)) {
                   var9.field_E = var9.field_E + 1;
                 }
                 if (var15.field_E == 0 &&
-                  0 == MaxLengthTextInputWidget.nextRandomInt(250, true, ea.field_r)) {
+                  0 == MaxLengthTextInputWidget.nextRandomInt(250, true, RankingsRequest.field_r)) {
                   var15.field_E = var15.field_E + 1;
                 }
               }
@@ -992,7 +992,7 @@ final class PlasmaTableScene extends TableScene {
           var13 = var16;
           var4 = var13;
           this.prepareBallDrawOrder(false, var16, var14);
-          en.b(0);
+          QuaternionRotationSupport.b(0);
           PlasmaTableScene.a(var16);
           var17 = f.a((byte) 77, var16);
           var15 = var17;
@@ -1029,7 +1029,7 @@ final class PlasmaTableScene extends TableScene {
               this.field_M[var12] = (this.field_M[var12] << 16) / this.field_L[var12];
               var12++;
             }
-            var6 = bc.field_c;
+            var6 = FontPaletteSupport.field_c;
             if (param1.gameModel.rules instanceof EightBallRules) {
               var7Lifetime1 = ((EightBallRules) (param1.gameModel.rules)).initialGroup(-1);
               if (var7Lifetime1 != -1) {

@@ -45,7 +45,7 @@ final class hc {
             1 == var4[2]) {
             var9.field_i = param0;
           } else {
-            d.computeMeshBounds(param0, param2 - 23210);
+            MeshBoundsSupport.computeMeshBounds(param0, param2 - 23210);
             var5 = LocalGameSetupScreen.a(param0, var4, true);
             var6 = var5.length;
             for (var7 = 0; var5.length > var7; var7++) {

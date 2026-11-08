@@ -62,7 +62,7 @@ final class LoginRequiredScreen extends MenuScreen {
         int var3 = ti.field_d != null ? 1 : 0;
         if (param0 > 36) {
           var4 = FadingDialog.mustloginNotloggedin;
-          var4 = var4 + " " + UiComponentNode.replaceChar('#', "<br><br>", AccountWelcomePanel.substituteTemplateArguments(new String[]{de.discard}, -1, LabeledChildWidget.a(var2 != 0, var3 != 0, false, (byte) 39)), 1);
+          var4 = var4 + " " + UiComponentNode.replaceChar('#', "<br><br>", AccountWelcomePanel.substituteTemplateArguments(new String[]{DebugTuningSupport.discard}, -1, LabeledChildWidget.a(var2 != 0, var3 != 0, false, (byte) 39)), 1);
           this.renderParagraphSprite(sa.field_h, new int[]{sa.field_h.baselineHeight}, 140, -16097, var4, 280, 15658734);
           this.drawParagraphSprite(140, false);
           return;

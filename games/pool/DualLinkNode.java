@@ -29,7 +29,7 @@ class DualLinkNode extends IntrusiveNode {
         this.field_m = param0;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         playerX2AreOfferingDraw = null;
         statusOutOfLives = null;
         field_r = null;

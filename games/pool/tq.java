@@ -24,7 +24,7 @@ final class tq extends IntrusiveNode {
           return false;
         }
         if (param0 != -75) {
-          tq.a(75);
+          tq.releaseStatics(75);
         }
         return true;
     }
@@ -34,7 +34,7 @@ final class tq extends IntrusiveNode {
         Sprite var5 = new Sprite(1024, 64);
         Sprite var3 = var5;
         if (param2) {
-          tq.a(57);
+          tq.releaseStatics(57);
         }
         for (var4 = 0; var3.field_D.length > var4; var4++) {
           var5.field_D[var4] = TriangleRasterizer.colorPalette[var4];
@@ -45,7 +45,7 @@ final class tq extends IntrusiveNode {
         return var3.field_D;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         raSuggestmute = null;
         field_m = null;
@@ -103,7 +103,7 @@ final class tq extends IntrusiveNode {
           }
           var5 = (CharSequence) ((Object) param2);
           ResourceArchive.field_a = TutorialController.normalizeDisplayName(117, var5);
-          c.field_d = param0;
+          QuickChatMenuSupport.field_d = param0;
           jq.a((byte) 11);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tq.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

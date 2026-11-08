@@ -159,7 +159,7 @@ final class MarkerSliderPainter implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         var27 = Pool.field_O;
         try {
-          d.computeMeshBounds(param0, -23109);
+          MeshBoundsSupport.computeMeshBounds(param0, -23109);
           if (param1 != -37) {
             MarkerSliderPainter.b((byte) 33);
           }

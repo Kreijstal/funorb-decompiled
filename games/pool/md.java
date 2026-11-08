@@ -29,7 +29,7 @@ final class md {
         ResourceArchive.a(0);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         achievementNames = null;
         field_d = null;
         if (param0) {

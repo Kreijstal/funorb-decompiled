@@ -219,7 +219,7 @@ final class BufferedSocket implements Runnable {
           var9 = new AccountCreationDialog(TabbedPane.field_Ub, param3);
           var8 = 91 / ((48 - param2) / 53);
           TabbedPane.field_Ub.showDialog(var9, 30000);
-          if (GameRules.k(0)) {
+          if (GameRules.loadAppletCookies(0)) {
             var9.p((byte) -52);
             return true;
           }

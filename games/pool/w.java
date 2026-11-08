@@ -10,7 +10,7 @@ final class w {
     static String[] field_k;
     static int[] field_d;
     static QuickChatMenu field_b;
-    static eb[] field_a;
+    static SceneDrawable[] field_a;
     static String playerX2HaveResigned;
     static String playerVsPlayer;
     static int[][] field_j;

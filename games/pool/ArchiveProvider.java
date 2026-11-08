@@ -14,7 +14,7 @@ abstract class ArchiveProvider {
 
     abstract int getGroupProgress(int param0, int param1);
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         createAlertPassrepeated = null;
         field_c = null;
         createAgreeterms = null;
@@ -27,7 +27,7 @@ abstract class ArchiveProvider {
           muCreateUnrated = null;
           return;
         }
-        ArchiveProvider.a((byte) -14);
+        ArchiveProvider.releaseStatics((byte) -14);
         field_f = null;
         muCreateUnrated = null;
     }

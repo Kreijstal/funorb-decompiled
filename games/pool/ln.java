@@ -64,7 +64,7 @@ final class ln extends IntrusiveNode {
         int var3_intLifetime2;
         var7 = Pool.field_O;
         try {
-          d.computeMeshBounds(param2, -23109);
+          MeshBoundsSupport.computeMeshBounds(param2, -23109);
           var4 = (param2.field_D + param2.field_w) / 2;
           var5 = (param2.field_y + param2.field_S) / 2;
           var6 = (param2.field_x + param2.field_V) / 2;

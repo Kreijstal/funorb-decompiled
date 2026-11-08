@@ -15,7 +15,7 @@ final class he {
         RuntimeException decompiledCaughtException = null;
         try {
           HighscoresScreen.a((java.awt.Component) ((Object) param0), (byte) -39);
-          hj.detachMouseListeners((java.awt.Component) ((Object) param0), false);
+          QuickChatDynamicCommand.detachMouseListeners((java.awt.Component) ((Object) param0), false);
           if (param1 != 0) {
             return;
           }
@@ -49,10 +49,10 @@ final class he {
           he.detachInputListeners((java.awt.Canvas) null, -1);
         }
         if (!param1) {
-          if (ah.field_c[param0] < ah.field_c[param2]) {
+          if (VertexNormal.field_c[param0] < VertexNormal.field_c[param2]) {
             return true;
           }
-          if (ah.field_c[param2] < ah.field_c[param0]) {
+          if (VertexNormal.field_c[param2] < VertexNormal.field_c[param0]) {
             return false;
           }
           if (TickClock.field_g[param2] > TickClock.field_g[param0]) {
@@ -77,10 +77,10 @@ final class he {
         if (TickClock.field_g[param2] < TickClock.field_g[param0]) {
           return false;
         }
-        if (ah.field_c[param2] > ah.field_c[param0]) {
+        if (VertexNormal.field_c[param2] > VertexNormal.field_c[param0]) {
           return true;
         }
-        if (ah.field_c[param2] < ah.field_c[param0]) {
+        if (VertexNormal.field_c[param2] < VertexNormal.field_c[param0]) {
           return false;
         }
         var4Lifetime1 = gd.field_d[param0] + (MenuScreen.field_y[param0] + om.field_s[param0]);
@@ -98,7 +98,7 @@ final class he {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         plusungoodShot = null;
         gameoptUnratedonly = null;
         field_b = null;
@@ -122,7 +122,7 @@ final class he {
             return false;
           }
           if (param2 != 15692) {
-            he.a(-56);
+            he.releaseStatics(-56);
           }
           var3_int = param1.length();
           if (var3_int >= 12) {

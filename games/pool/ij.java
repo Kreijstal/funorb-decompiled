@@ -30,7 +30,7 @@ final class ij extends IntrusiveNode {
     static String ballsetPolarGroup0;
     int field_J;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         playerYouFirstListAreGroupName = null;
         if (param0 == -273542815) {
@@ -40,7 +40,7 @@ final class ij extends IntrusiveNode {
           createAlertInvaliddate = null;
           return;
         }
-        ij.a(118);
+        ij.releaseStatics(118);
         ballsetPolarGroup0 = null;
         field_o = null;
         loginNoDisplayname = null;

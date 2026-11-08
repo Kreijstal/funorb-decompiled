@@ -249,7 +249,7 @@ final class BirthDateInputWidget extends DateInputWidget {
         param2 = param2 + this.widgetX;
         int var5 = 30 % ((-42 - param1) / 53);
         this.drawCenteredLabel(param2, param3, 75, this.field_Z, TextureCache.day);
-        this.drawCenteredLabel(param2, param3, 114, this.field_bb, pc.month);
+        this.drawCenteredLabel(param2, param3, 114, this.field_bb, ShotPreviewState.month);
         this.drawCenteredLabel(param2, param3, 91, this.field_eb, IndexedSpriteState.year);
     }
 

@@ -465,7 +465,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                   this.socket.a(var6, param0 + -2147483648, this.currentRequest.responseBuffer.position, this.currentRequest.responseBuffer.payload);
                   if (this.field_c != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.currentRequest.responseBuffer.payload[var7 + this.currentRequest.responseBuffer.position] = (byte)cq.a((int) this.currentRequest.responseBuffer.payload[var7 + this.currentRequest.responseBuffer.position], (int) this.field_c);
+                      this.currentRequest.responseBuffer.payload[var7 + this.currentRequest.responseBuffer.position] = (byte)TutorialFactory.bitwiseXor((int) this.currentRequest.responseBuffer.payload[var7 + this.currentRequest.responseBuffer.position], (int) this.field_c);
                     }
                   }
                   this.currentRequest.responseBuffer.position = this.currentRequest.responseBuffer.position + var6;
@@ -487,7 +487,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                   this.socket.a(var5, 0, this.incomingHeader.position, this.incomingHeader.payload);
                   if (this.field_c != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.incomingHeader.payload[this.incomingHeader.position + var6] = (byte)cq.a((int) this.incomingHeader.payload[this.incomingHeader.position + var6], (int) this.field_c);
+                      this.incomingHeader.payload[this.incomingHeader.position + var6] = (byte)TutorialFactory.bitwiseXor((int) this.incomingHeader.payload[this.incomingHeader.position + var6], (int) this.field_c);
                     }
                   }
                   this.incomingHeader.position = this.incomingHeader.position + var5;
@@ -719,7 +719,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
               var2.writeInt(true, SpaceObject.field_f);
               dq.field_h.a(var2.payload, (byte) 72, 13, 0);
               rl.field_e = rl.field_e + 1;
-              ae.field_d = rl.monotonicTimeMillis((byte) -105) + 30000L;
+              MembershipBenefitsLoader.field_d = rl.monotonicTimeMillis((byte) -105) + 30000L;
             }
             if (rl.field_e == 3) {
               if (0 < dq.field_h.readByte(72)) {
@@ -730,7 +730,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                 }
                 rl.field_e = rl.field_e + 1;
               } else {
-                if (rl.monotonicTimeMillis((byte) -110) > ae.field_d) {
+                if (rl.monotonicTimeMillis((byte) -110) > MembershipBenefitsLoader.field_d) {
                   stackIn_24_0 = Under13NoticePanel.a(false, -2);
                   return stackIn_24_0;
                 }

@@ -471,19 +471,19 @@ final class SectorCacheStore {
                 hn.field_c = TickClock.a(false, param1, -5790, param5);
               } else {
                 var11 = (String) null;
-                hn.field_c = bi.createLoginPayload(Quaternion.field_a, -16595, param5, false, (String) null);
+                hn.field_c = LoginPayloadFactory.createLoginPayload(Quaternion.field_a, -16595, param5, false, (String) null);
               }
               JaggrabDownloader.field_j.position = 0;
               JaggrabDownloader.field_j.writeByte(14, false);
               JaggrabDownloader.field_j.writeByte(hn.field_c.payloadKind((byte) -101).wireId, false);
-              de.a(-1, 0);
+              DebugTuningSupport.flushClientPackets(-1, 0);
               RankingsScreen.field_J = vn.field_d;
             }
             if (vn.field_d == RankingsScreen.field_J &&
               DialogLayer.b((byte) 87, 1)) {
               var6_int = PlayerContextMenu.field_e.readUnsignedByte(-82);
               if (var6_int == 0) {
-                RankingsScreen.field_J = fr.field_o;
+                RankingsScreen.field_J = DelayedServerPacket.field_o;
               } else {
                 Bzip2DecoderState.field_c = var6_int;
                 ScrollPane.field_Pb = -1;
@@ -491,7 +491,7 @@ final class SectorCacheStore {
               }
               PlayerContextMenu.field_e.position = 0;
             }
-            if (fr.field_o == RankingsScreen.field_J &&
+            if (DelayedServerPacket.field_o == RankingsScreen.field_J &&
               DialogLayer.b((byte) 43, 8)) {
               Pool.field_Q = PlayerContextMenu.field_e.readLong(-412303328);
               PlayerContextMenu.field_e.position = 0;
@@ -513,7 +513,7 @@ final class SectorCacheStore {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  dn.c(-115);
+                  ShotEvent.c(-115);
                   ArchiveLoadStep.field_e = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
@@ -540,12 +540,12 @@ final class SectorCacheStore {
               NineSliceFrame.field_b = stackIn_44_0;
               if (!param2) {
                 stackIn_48_0 = ((8 & var7) != 0);
-                ea.field_z = stackIn_48_0;
+                RankingsRequest.field_z = stackIn_48_0;
                 stackIn_51_0 = ((4 & var7) != 0);
                 AccountCreationDialog.field_Gb = stackIn_51_0;
                 stackIn_54_0 = ((2 & var7) != 0);
                 ViewportController.field_y = stackIn_54_0;
-                if (ea.field_z) {
+                if (RankingsRequest.field_z) {
                   ViewportController.field_y = true;
                 }
               }
@@ -611,7 +611,7 @@ final class SectorCacheStore {
             }
             if (RankingsScreen.field_J == Quaternion.field_k &&
               wf.hasCompletePacket((byte) 39)) {
-              dn.c(-64);
+              ShotEvent.c(-64);
               if (Bzip2DecoderState.field_c == 7 &&
                 !ArchiveLoadStep.field_e) {
                 ArchiveLoadStep.field_e = true;
@@ -638,9 +638,9 @@ final class SectorCacheStore {
                 return stackIn_107_0;
               }
               var6_intLifetime2 = TextLineLayout.field_d;
-              TextLineLayout.field_d = cq.field_a;
+              TextLineLayout.field_d = TutorialFactory.field_a;
               ArchiveLoadStep.field_e = true;
-              cq.field_a = var6_intLifetime2;
+              TutorialFactory.field_a = var6_intLifetime2;
             }
             stackIn_110_0 = -1;
             return stackIn_110_0;

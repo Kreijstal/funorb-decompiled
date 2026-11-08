@@ -200,7 +200,7 @@ final class WireframeQuad {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         gameOptionsChanged = null;
         if (param0 <= 116) {
           field_r = (int[]) null;

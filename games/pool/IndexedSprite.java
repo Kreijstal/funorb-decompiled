@@ -67,7 +67,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void b() {
+    final void normalizeCanvas() {
         int var3 = 0;
         int var4 = 0;
         int incrementValue$0 = 0;

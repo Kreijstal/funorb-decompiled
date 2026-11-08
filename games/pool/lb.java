@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lb extends PauseMenuScreen {
-    static hj field_N;
+    static QuickChatDynamicCommand field_N;
     static String createUsernameAvailable;
     static Sprite[] field_O;
     static String[][] field_P;
@@ -75,7 +75,7 @@ final class lb extends PauseMenuScreen {
     }
 
     static {
-        field_N = new hj(1, 2, 2, 0);
+        field_N = new QuickChatDynamicCommand(1, 2, 2, 0);
         createUsernameAvailable = "Name is available";
     }
 }

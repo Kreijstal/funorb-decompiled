@@ -119,7 +119,7 @@ abstract class TickClock {
             var7 = (CharSequence) ((Object) param1);
             var4_long = td.encodeBase37((byte) 52, var7);
           }
-          stackIn_6_0 = bi.createLoginPayload(var4_long, param2 - 10805, param3, param0, (String) (var6));
+          stackIn_6_0 = LoginPayloadFactory.createLoginPayload(var4_long, param2 - 10805, param3, param0, (String) (var6));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

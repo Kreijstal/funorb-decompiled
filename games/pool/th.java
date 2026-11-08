@@ -19,11 +19,11 @@ final class th {
         kg.field_q = kc.field_g[param1];
         BufferedFile.field_b = CueAim.field_i[param1];
         if (param0 < -55) {
-          SingleChildWidget.field_F = cb.field_f[param1];
+          SingleChildWidget.field_F = AwtEventQueueSupport.field_f[param1];
           return;
         }
         field_j = (byte[][]) null;
-        SingleChildWidget.field_F = cb.field_f[param1];
+        SingleChildWidget.field_F = AwtEventQueueSupport.field_f[param1];
     }
 
     final static boolean handleChatKey(int param0, int param1, int param2) {
@@ -97,7 +97,7 @@ final class th {
               if (UiWidget.a((byte) -71, var5_ref_String)) {
                 var13 = (String) null;
                 var12 = (String) null;
-                jh.a(0, hj.unableToSendMessagePasswordA, (String) null, 2, (String) null, true);
+                jh.a(0, QuickChatDynamicCommand.unableToSendMessagePasswordA, (String) null, 2, (String) null, true);
                 var15 = (String) null;
                 var14 = (String) null;
                 jh.a(0, DebugTuningSlider.unableToSendMessagePasswordB, (String) null, 2, (String) null, true);
@@ -114,7 +114,7 @@ final class th {
               }
             }
           }
-          cl.a(14851);
+          ProjectedLineSupport.resetChatComposition(14851);
           return true;
         }
         if (IterableDualLinkDeque.field_a == 85) {

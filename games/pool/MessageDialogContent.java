@@ -124,18 +124,18 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         try {
           TriangleRasterizer.useRasterClip();
           MenuScreen.field_i = 11;
-          cp.field_d = new int[260];
+          InputIdleSupport.field_d = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
-            cp.field_d[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+            InputIdleSupport.field_d[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
           if (param0 != -257) {
             return;
           }
           var4 = 256;
           var1_intLifetime1 = var4;
-          while (var4 < cp.field_d.length) {
-            cp.field_d[var4] = 255;
+          while (var4 < InputIdleSupport.field_d.length) {
+            InputIdleSupport.field_d[var4] = 255;
             var4++;
           }
           return;
@@ -166,7 +166,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         try {
           var4_int = this.actionButtonCount;
           this.ensureButtonCapacity((byte) 122, var4_int + param2);
-          this.actionButtons[var4_int] = this.addButton(param1, cq.a(param2, -115), (WidgetListener) (this));
+          this.actionButtons[var4_int] = this.addButton(param1, TutorialFactory.bitwiseXor(param2, -115), (WidgetListener) (this));
           this.actionIds[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -210,13 +210,13 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         int var10Lifetime1;
         var12 = Pool.field_O;
         try {
-          fr.$cfr$intArgs$a$e9dea5688aa5(-100, PoolMatchController.field_z);
+          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-100, PoolMatchController.field_z);
           if (null != tp.field_e) {
             var4 = kc.field_b;
             kc.field_b.height = 0;
             var4.width = 0;
-            var5 = d.field_c;
-            d.field_c.height = 0;
+            var5 = MeshBoundsSupport.field_c;
+            MeshBoundsSupport.field_c.height = 0;
             var5.width = 0;
             TextHotspotRegion.field_o.height = 0;
             var6 = TextHotspotRegion.field_o;
@@ -224,7 +224,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
             ii.field_e.text = ScrollPane.ratedGame.toUpperCase();
             var7 = (Bzip2DecoderState.field_f.width + 2) / 2;
             TextHotspotRegion.field_o.setBounds(Bzip2DecoderState.field_f.height - 40, 2147483647, 0, var7 - 2, 40);
-            d.field_c.setBounds(-40 + Bzip2DecoderState.field_f.height, 2147483647, var7, -var7 + Bzip2DecoderState.field_f.width, 40);
+            MeshBoundsSupport.field_c.setBounds(-40 + Bzip2DecoderState.field_f.height, 2147483647, var7, -var7 + Bzip2DecoderState.field_f.width, 40);
             if (DiskArchiveRequest.field_T.length == 1 &&
               DiskArchiveRequest.field_T[0] == 2) {
               var8 = 0;
@@ -254,9 +254,9 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
                 break;
               }
             }
-            d.field_c.enabled = true;
+            MeshBoundsSupport.field_c.enabled = true;
             if (!LobbyGame.field_Ac) {
-              stackIn_36_0 = d.field_c;
+              stackIn_36_0 = MeshBoundsSupport.field_c;
               if (var8 != 0) {
                 stackIn_37_1 = TutorialController.findOpponentsPlural;
               } else {
@@ -264,7 +264,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
               }
               stackIn_36_0.text = ((String) (Object) stackIn_37_1).toUpperCase();
               stackIn_39_0 = LimitedRandomAccessFile.field_j;
-              stackIn_39_1 = new String[]{d.field_c.text};
+              stackIn_39_1 = new String[]{MeshBoundsSupport.field_c.text};
               stackIn_39_2 = -1;
               if (var8 != 0) {
                 stackIn_40_3 = LabeledChildWidget.ratedGameTipsSetupPlural;
@@ -295,11 +295,11 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
                 }
               }
               if (!PoolUiText.field_b) {
-                d.field_c.enabled = false;
-                if (d.field_c.hovered) {
+                MeshBoundsSupport.field_c.enabled = false;
+                if (MeshBoundsSupport.field_c.hovered) {
                   var9 = null;
                   if (ln.field_p) {
-                    var9 = "<col=A00000>" + ab.muOptionsPlayers + "</col>";
+                    var9 = "<col=A00000>" + ArchiveAvailabilitySupport.muOptionsPlayers + "</col>";
                     var11 = var9;
                     var9 = var11;
                     var11Lifetime1 = var9;
@@ -345,7 +345,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
                 var9 = (String) (var9) + "...";
               }
               TextHotspotRegion.field_o.text = (String) (var9);
-              d.field_c.text = OptionsScreen.cancel.toUpperCase();
+              MeshBoundsSupport.field_c.text = OptionsScreen.cancel.toUpperCase();
             }
           }
           stackIn_68_0 = SceneNode.field_k;
@@ -354,7 +354,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           stackIn_73_0 = Bzip2DecoderState.field_f;
           stackIn_74_1 = (param2) && (!param0) && (!AccountWelcomePanel.field_bb);
           ((UiComponent) (Object) stackIn_73_0).updateRoot(stackIn_74_1, false);
-          stackIn_78_0 = de.field_b;
+          stackIn_78_0 = DebugTuningSupport.field_b;
           stackIn_79_1 = (param2) && (!param0) && (AccountWelcomePanel.field_bb);
           ((UiComponent) (Object) stackIn_78_0).updateRoot(stackIn_79_1, false);
           na.field_e.field_i.processTabPresses(true);
@@ -363,7 +363,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
             if (ContentTransitionDialog.field_ob.pressedButton != 0) {
               te.b(param1, -29);
             }
-            if (0 != d.field_c.pressedButton) {
+            if (0 != MeshBoundsSupport.field_c.pressedButton) {
               if (LobbyGame.field_Ac) {
                 EmailAvailabilityValidator.b(-118, param1);
               } else {

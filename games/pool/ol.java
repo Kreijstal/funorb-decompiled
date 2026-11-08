@@ -229,7 +229,7 @@ final class ol {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         muGamelistAvgRating = null;
         if (param0 != 1430775248) {
           return;

@@ -61,7 +61,7 @@ final class NameEntryPopup extends UiComponent {
           this.inputText.setBounds(ArchiveIndex.field_x + 3, 2147483647, 5, var9_int, ArchiveIndex.field_x);
           var10 = 5 + (5 + var9_int);
           var11 = 3 + (2 * ArchiveIndex.field_x + 3);
-          var12 = de.a(var10, param2, param0, 0);
+          var12 = DebugTuningSupport.adjustWidthForRightEdge(var10, param2, param0, 0);
           var13 = OpacityWidget.a(var11, param1, -1, param3);
           this.setBounds(var13, 2147483647, var12, var10, var11);
           return;

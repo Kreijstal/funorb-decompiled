@@ -14,7 +14,7 @@ final class VerticalScrollbar extends UiComponent {
     static GzipDecoder field_Qb;
     static Sprite field_Wb;
     private int repeatDelay;
-    static cd field_Ub;
+    static ClientInputResetSupport field_Ub;
     static UiTheme field_Sb;
 
     final void layoutScrollbar(int param0, int param1, boolean param2, int param3) {
@@ -283,9 +283,9 @@ final class VerticalScrollbar extends UiComponent {
     final static UiComponent f(byte param0) {
         if (param0 != 13) {
           VerticalScrollbar.releaseStatics((byte) -72);
-          return cp.field_c.content;
+          return InputIdleSupport.field_c.content;
         }
-        return cp.field_c.content;
+        return InputIdleSupport.field_c.content;
     }
 
     final boolean pollLineDown(byte param0) {
@@ -406,31 +406,31 @@ final class VerticalScrollbar extends UiComponent {
 
     final static void a(int param0, boolean param1) {
         if (param0 == 27194) {
-          na.field_e = !param1 ? new vn(Camera.muChatGame, cl.field_d) : new vn(je.muChatTips, LimitedRandomAccessFile.field_j);
+          na.field_e = !param1 ? new vn(Camera.muChatGame, ProjectedLineSupport.field_d) : new vn(je.muChatTips, LimitedRandomAccessFile.field_j);
           SceneNode.field_k = new UiComponent(0L, (UiComponent) null);
           SceneNode.field_k.addChild(64, na.field_e.field_i);
           SceneNode.field_k.addChild(-96, ContentTransitionDialog.field_ob);
-          de.field_b = new UiComponent(0L, tq.field_m);
+          DebugTuningSupport.field_b = new UiComponent(0L, tq.field_m);
           IntrusiveDequeCursor.field_b = new UiComponent(0L, (UiComponent) null);
-          de.field_b.addChild(param0 ^ -27208, Pool.field_P);
-          de.field_b.addChild(68, IntrusiveDequeCursor.field_b);
-          IntrusiveDequeCursor.field_b.addChild(-96, c.field_e);
+          DebugTuningSupport.field_b.addChild(param0 ^ -27208, Pool.field_P);
+          DebugTuningSupport.field_b.addChild(68, IntrusiveDequeCursor.field_b);
+          IntrusiveDequeCursor.field_b.addChild(-96, QuickChatMenuSupport.field_e);
           IntrusiveDequeCursor.field_b.addChild(90, AccountContentDialog.field_vb);
-          PoolGameModel.a(param1, 0);
+          PoolGameModel.layoutLobbyAndChatPanels(param1, 0);
           return;
         }
         VerticalScrollbar.f((byte) 19);
-        na.field_e = !param1 ? new vn(Camera.muChatGame, cl.field_d) : new vn(je.muChatTips, LimitedRandomAccessFile.field_j);
+        na.field_e = !param1 ? new vn(Camera.muChatGame, ProjectedLineSupport.field_d) : new vn(je.muChatTips, LimitedRandomAccessFile.field_j);
         SceneNode.field_k = new UiComponent(0L, (UiComponent) null);
         SceneNode.field_k.addChild(64, na.field_e.field_i);
         SceneNode.field_k.addChild(-96, ContentTransitionDialog.field_ob);
-        de.field_b = new UiComponent(0L, tq.field_m);
+        DebugTuningSupport.field_b = new UiComponent(0L, tq.field_m);
         IntrusiveDequeCursor.field_b = new UiComponent(0L, (UiComponent) null);
-        de.field_b.addChild(param0 ^ -27208, Pool.field_P);
-        de.field_b.addChild(68, IntrusiveDequeCursor.field_b);
-        IntrusiveDequeCursor.field_b.addChild(-96, c.field_e);
+        DebugTuningSupport.field_b.addChild(param0 ^ -27208, Pool.field_P);
+        DebugTuningSupport.field_b.addChild(68, IntrusiveDequeCursor.field_b);
+        IntrusiveDequeCursor.field_b.addChild(-96, QuickChatMenuSupport.field_e);
         IntrusiveDequeCursor.field_b.addChild(90, AccountContentDialog.field_vb);
-        PoolGameModel.a(param1, 0);
+        PoolGameModel.layoutLobbyAndChatPanels(param1, 0);
     }
 
     final void setScrollbarBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -537,6 +537,6 @@ final class VerticalScrollbar extends UiComponent {
 
     static {
         field_Qb = new GzipDecoder();
-        field_Ub = new cd();
+        field_Ub = new ClientInputResetSupport();
     }
 }

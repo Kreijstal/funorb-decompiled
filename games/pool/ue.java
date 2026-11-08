@@ -113,7 +113,7 @@ final class ue {
 
     final static boolean a(int param0) {
         if (param0 == 11) {
-          bi.field_f = true;
+          LoginPayloadFactory.field_f = true;
           MenuSelection.field_k = rl.monotonicTimeMillis((byte) -110) + 15000L;
           return 11 == PlasmaTableScene.field_ab ? true : false;
         }

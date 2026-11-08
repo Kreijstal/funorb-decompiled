@@ -152,14 +152,14 @@ final class PolarTableScene extends ModelTableScene {
           var17 = gf.field_e;
           var62 = GzipDecoder.field_d;
           var17.sortModelsByDepth((byte) -122, 0, var17.field_j.length, var62);
-          for (var3_int = 0; bc.field_j.length > var3_int; var3_int++) {
+          for (var3_int = 0; FontPaletteSupport.field_j.length > var3_int; var3_int++) {
             var40 = gf.field_e.field_c[var3_int];
             var19 = var40;
             var12 = var19;
             var6_ref_int__Lifetime1 = var12;
             var7 = 576;
             var8 = 288;
-            stackIn_13_0 = bc.field_j;
+            stackIn_13_0 = FontPaletteSupport.field_j;
             stackIn_13_1 = var3_int;
             stackIn_13_2 = -GzipDecoder.field_d[0] + var40[0];
             if (var40[0] >= -var7) {
@@ -209,7 +209,7 @@ final class PolarTableScene extends ModelTableScene {
           }
           var30 = gf.field_e;
           var68 = GzipDecoder.field_d;
-          var69 = bc.field_j;
+          var69 = FontPaletteSupport.field_j;
           var30.drawSortedModels(false, 0, var30.field_j.length, (byte) 100, var68, var69);
           if (0L == (1073741824L & LinkButtonPainter.field_i)) {
             stackIn_37_0 = this;
@@ -228,7 +228,7 @@ final class PolarTableScene extends ModelTableScene {
           }
           var33 = gf.field_e;
           var70 = GzipDecoder.field_d;
-          var71 = bc.field_j;
+          var71 = FontPaletteSupport.field_j;
           var33.drawSortedModels(true, 0, var33.field_j.length, (byte) 117, var70, var71);
           if ((LinkButtonPainter.field_i & 256L) != 0L) {
             FadingDialog.field_U.drawAllModels(GzipDecoder.field_d, 0);
@@ -334,7 +334,7 @@ final class PolarTableScene extends ModelTableScene {
         var6 = new SceneNode();
         var7 = new SceneNode();
         var8 = new SceneNode();
-        var9 = new SceneNode(hj.field_a - ContextMenu.field_Ob);
+        var9 = new SceneNode(QuickChatDynamicCommand.field_a - ContextMenu.field_Ob);
         SceneNode dupTemp$489 = new SceneNode(BirthDateInputWidget.field_db - kg.field_n);
         var10 = dupTemp$489;
         SceneNode dupTemp$490 = new SceneNode((ol.field_d - DialWidget.field_S) * 4);
@@ -347,7 +347,7 @@ final class PolarTableScene extends ModelTableScene {
         var13 = dupTemp$493;
         SceneNode dupTemp$494 = new SceneNode(new SceneNode[]{dupTemp$492, var7, dupTemp$493});
         FadingDialog.field_U = dupTemp$494;
-        SceneNode dupTemp$495 = new SceneNode(4 * (DraggableWidget.field_V - fr.field_t));
+        SceneNode dupTemp$495 = new SceneNode(4 * (DraggableWidget.field_V - DelayedServerPacket.field_t));
         sa.field_s = dupTemp$495;
         SceneNode dupTemp$496 = new SceneNode(new SceneNode[]{var8, var9});
         EmailAvailabilityValidator.field_y = dupTemp$496;
@@ -362,7 +362,7 @@ final class PolarTableScene extends ModelTableScene {
           var12.field_b[var2Lifetime1 - kg.field_n] = hc.a(var22, this.field_M[var2Lifetime1], (byte) 101);
           var10.field_b[-kg.field_n + var2Lifetime1] = hc.a(var23, this.field_M[var2Lifetime1], (byte) 101);
         }
-        for (var2Lifetime2 = ContextMenu.field_Ob; hj.field_a > var2Lifetime2; var2Lifetime2++) {
+        for (var2Lifetime2 = ContextMenu.field_Ob; QuickChatDynamicCommand.field_a > var2Lifetime2; var2Lifetime2++) {
           var9.field_b[-ContextMenu.field_Ob + var2Lifetime2] = hc.a(this.field_O[var2Lifetime2], this.field_M[var2Lifetime2], (byte) 101);
         }
         for (var2Lifetime3 = FullscreenErrorDialog.field_hb; ClassicBallSkin.field_m > var2Lifetime3; var2Lifetime3++) {
@@ -420,7 +420,7 @@ final class PolarTableScene extends ModelTableScene {
           var47 = this.field_M[var2Lifetime4];
           var34 = var11.field_b;
           var19 = var15;
-          bh.a(var34, false, var47[1] - 0, 0 + var47[2], var36, var47[0] - 0, var19);
+          MirroredSceneSupport.buildMirroredSceneEntries(var34, false, var47[1] - 0, 0 + var47[2], var36, var47[0] - 0, var19);
           var15 += 4;
         }
         var15Lifetime1 = 0;
@@ -429,7 +429,7 @@ final class PolarTableScene extends ModelTableScene {
           var37 = var13.field_b;
           var18 = var15Lifetime1;
           var48 = this.field_M[var16];
-          bh.a(var37, false, var48[1], var48[2], this.field_O[var16], var48[0], var18);
+          MirroredSceneSupport.buildMirroredSceneEntries(var37, false, var48[1], var48[2], this.field_O[var16], var48[0], var18);
           var15Lifetime1 += 4;
         }
         for (var2Lifetime6 = rl.field_f; var2Lifetime6 < hf.field_c; var2Lifetime6++) {
@@ -440,14 +440,14 @@ final class PolarTableScene extends ModelTableScene {
           var15Lifetime1 += 2;
         }
         var15Lifetime2 = 0;
-        for (var2Lifetime7 = fr.field_t; var2Lifetime7 < DraggableWidget.field_V; var2Lifetime7++) {
+        for (var2Lifetime7 = DelayedServerPacket.field_t; var2Lifetime7 < DraggableWidget.field_V; var2Lifetime7++) {
           var16Lifetime2 = var2Lifetime7;
           var17 = sa.field_s.field_b;
           var18Lifetime2 = var15Lifetime2;
           var49 = this.field_M[var16Lifetime2];
           stackIn_34_0 = var17;
           stackIn_35_1 = !(param0);
-          bh.a(stackIn_34_0, stackIn_35_1, var49[1], var49[2], this.field_O[var16Lifetime2], var49[0], var18Lifetime2);
+          MirroredSceneSupport.buildMirroredSceneEntries(stackIn_34_0, stackIn_35_1, var49[1], var49[2], this.field_O[var16Lifetime2], var49[0], var18Lifetime2);
           var15Lifetime2 += 4;
         }
         var14.normalizeOffsets(0);
@@ -455,7 +455,7 @@ final class PolarTableScene extends ModelTableScene {
         new SceneNode(new SceneNode[]{var6, var7}).mergeChildMeshes(false);
         var14.bakeModels(this.field_q, this.field_e, this.field_F, (byte) -79, this.field_u, this.field_C);
         gf.field_e.allocateModelArrays(115);
-        bc.field_j = new boolean[gf.field_e.field_j.length];
+        FontPaletteSupport.field_j = new boolean[gf.field_e.field_j.length];
         FadingDialog.field_U.allocateModelArrays(101);
         sa.field_s.allocateModelArrays(97);
         EmailAvailabilityValidator.field_y.allocateModelArrays(92);
@@ -757,7 +757,7 @@ final class PolarTableScene extends ModelTableScene {
           incrementValue$96 = var3_int;
           var3_int++;
           this.field_O[incrementValue$96] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_p");
-          hj.field_a = var3_int;
+          QuickChatDynamicCommand.field_a = var3_int;
           incrementValue$97 = var3_int;
           var3_int++;
           this.field_O[incrementValue$97] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_sea");
@@ -834,7 +834,7 @@ final class PolarTableScene extends ModelTableScene {
           incrementValue$119 = var3_int;
           var3_int++;
           this.field_O[incrementValue$119] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_side_c");
-          fr.field_t = var3_int;
+          DelayedServerPacket.field_t = var3_int;
           ol.field_d = var3_int;
           incrementValue$120 = var3_int;
           var3_int++;
@@ -854,8 +854,8 @@ final class PolarTableScene extends ModelTableScene {
           var8 = -2147483648;
           var9 = 2147483647;
           var10 = -2147483648;
-          for (var4Lifetime1 = fr.field_t; DraggableWidget.field_V > var4Lifetime1; var4Lifetime1++) {
-            d.computeMeshBounds(this.field_O[var4Lifetime1], -23109);
+          for (var4Lifetime1 = DelayedServerPacket.field_t; DraggableWidget.field_V > var4Lifetime1; var4Lifetime1++) {
+            MeshBoundsSupport.computeMeshBounds(this.field_O[var4Lifetime1], -23109);
             if (this.field_O[var4Lifetime1].field_D < var5) {
               var5 = this.field_O[var4Lifetime1].field_D;
             }
@@ -881,7 +881,7 @@ final class PolarTableScene extends ModelTableScene {
           var12 = (var7 + var8) / 2;
           var13 = var10;
           for (var4Lifetime2 = 0; var4Lifetime2 < this.field_O.length; var4Lifetime2++) {
-            cq.a(var11, 57, var13, this.field_O[var4Lifetime2], var12);
+            TutorialFactory.translateMeshOrigin(var11, 57, var13, this.field_O[var4Lifetime2], var12);
           }
           this.field_M = new int[this.field_O.length][3];
           if (param1 >= -43) {
@@ -963,7 +963,7 @@ final class PolarTableScene extends ModelTableScene {
           var5 = -125 / ((-44 - param2) / 56);
           var6 = param0;
           if (var6 == 5) {
-            var6 = MaxLengthTextInputWidget.nextRandomInt(3, true, ea.field_r);
+            var6 = MaxLengthTextInputWidget.nextRandomInt(3, true, RankingsRequest.field_r);
             switch (var6) {
               case 1:
                 kp.a(100, this.field_cb, param3, param1);

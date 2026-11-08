@@ -92,8 +92,8 @@ final class rf {
           if (param1 > -116) {
             field_g = (Sprite) null;
           }
-          if (d.field_d != null) {
-            d.field_d.dismissDialog(17);
+          if (MeshBoundsSupport.field_d != null) {
+            MeshBoundsSupport.field_d.dismissDialog(17);
           }
           TextLineLayout.field_j = new LoginForm(param2, param0, false, true, true);
           RasterSnapshot.field_n.replaceContent(TextLineLayout.field_j, 30);

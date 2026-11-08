@@ -21,7 +21,7 @@ final class wb {
         }
     }
 
-    final static void a(ea param0, int param1, byte param2) {
+    final static void a(RankingsRequest param0, int param1, byte param2) {
         CipherPacketBuffer var3 = null;
         if (param2 != -96) {
           return;
@@ -45,8 +45,8 @@ final class wb {
           muGameHasStarted = null;
           return;
         }
-        ea var2 = (ea) null;
-        wb.a((ea) null, 39, (byte) 43);
+        RankingsRequest var2 = (RankingsRequest) null;
+        wb.a((RankingsRequest) null, 39, (byte) 43);
         field_c = null;
         privatechatBlankareaExplanation = null;
         sendPm = null;

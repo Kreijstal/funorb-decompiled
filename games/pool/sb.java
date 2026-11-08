@@ -55,8 +55,8 @@ final class sb {
         if (param0 < 107) {
           return (Boolean) null;
         }
-        Boolean var1 = bq.field_q;
-        bq.field_q = null;
+        Boolean var1 = AchievementNotice.field_q;
+        AchievementNotice.field_q = null;
         return var1;
     }
 

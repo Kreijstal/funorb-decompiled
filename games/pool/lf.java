@@ -71,14 +71,14 @@ final class lf {
         int var9Lifetime1;
         try {
           var7_int = w.a(8, param4);
-          if (null == cb.field_a) {
-            cb.field_a = new java.security.SecureRandom();
+          if (null == AwtEventQueueSupport.field_a) {
+            AwtEventQueueSupport.field_a = new java.security.SecureRandom();
           }
           var12 = new int[4];
           var11 = var12;
           var8 = var11;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = cb.field_a.nextInt();
+            var8[var9] = AwtEventQueueSupport.field_a.nextInt();
           }
           if (null == gd.field_f ||
             !(var7_int <= gd.field_f.payload.length)) {
@@ -137,7 +137,7 @@ final class lf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         youHaveBeenRemovedFromXsGame = null;
         field_a = null;
         if (param0 != 112) {

@@ -18,25 +18,25 @@ final class DraggableWidget extends SingleChildWidget {
     final static void a(int param0, boolean param1) {
         if (NodeHashTableIterator.field_a > 0 &&
           LoginPayloadKind.field_d) {
-          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, fl.field_q.screenY);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, IntLookupQuery.field_q.screenY);
           ln.field_q.drawRoot((byte) -79, param1);
         }
         if (PoolMatchController.field_z > 0) {
           if (AccountWelcomePanel.field_bb) {
-            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, fl.field_q.screenY);
-            de.field_b.drawRoot((byte) -79, param1);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, IntLookupQuery.field_q.screenY);
+            DebugTuningSupport.field_b.drawRoot((byte) -79, param1);
           }
         } else {
           if (nj.field_b > 0 &&
             AccountWelcomePanel.field_bb) {
-            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, fl.field_q.screenY);
-            de.field_b.drawRoot((byte) -79, param1);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, IntLookupQuery.field_q.screenY);
+            DebugTuningSupport.field_b.drawRoot((byte) -79, param1);
           }
         }
         if (param0 < -42) {
           return;
         }
-        DraggableWidget.h(-57);
+        DraggableWidget.releaseStatics(-57);
     }
 
     final void refreshChildLayout(byte param0) {
@@ -102,7 +102,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_S = null;
         playerYouFirstListHaveResigned = null;
         if (param0 >= -33) {
@@ -138,7 +138,7 @@ final class DraggableWidget extends SingleChildWidget {
 
     final static void a(ResourceArchive param0, int param1, boolean param2, PcmStreamMixer param3) {
         try {
-          cl.field_h = param1 * CachedArchiveSource.a(-21282) / 1000;
+          ProjectedLineSupport.field_h = param1 * CachedArchiveSource.a(-21282) / 1000;
           if (param2) {
             field_S = (String[]) null;
           }
@@ -147,7 +147,7 @@ final class DraggableWidget extends SingleChildWidget {
           dr.loadFinalFrame((byte) -65, param0);
           MessageDialogContent.a(-257);
           SpaceBallSkin.i(23);
-          LobbyPlayer.field_fc = 0 - cl.field_h;
+          LobbyPlayer.field_fc = 0 - ProjectedLineSupport.field_h;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

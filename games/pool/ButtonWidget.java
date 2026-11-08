@@ -117,14 +117,14 @@ class ButtonWidget extends UiWidget {
         var18 = null;
         var19 = Pool.field_O;
         try {
-          fr.$cfr$intArgs$a$e9dea5688aa5(-58, nj.field_b);
+          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-58, nj.field_b);
           if (null != HighscoresScreen.field_L) {
             ContentTransitionDialog.field_ob.enabled = true;
             kc.field_b.height = 0;
             var5 = kc.field_b;
             var5.width = 0;
-            d.field_c.height = 0;
-            var6 = d.field_c;
+            MeshBoundsSupport.field_c.height = 0;
+            var6 = MeshBoundsSupport.field_c;
             var6.width = 0;
             TextHotspotRegion.field_o.height = 0;
             var7 = TextHotspotRegion.field_o;
@@ -160,10 +160,10 @@ class ButtonWidget extends UiWidget {
                 }
                 kc.field_b.text = kc.field_b.text + "<br>" + var10_ref_String;
               }
-              d.field_c.setBounds(Bzip2DecoderState.field_f.height - 40, 2147483647, var9, -var9 + Bzip2DecoderState.field_f.width, 40);
-              d.field_c.text = UsernameAvailabilityValidator.startgame.toUpperCase();
-              var8 = d.field_c;
-              stackIn_20_0 = d.field_c;
+              MeshBoundsSupport.field_c.setBounds(Bzip2DecoderState.field_f.height - 40, 2147483647, var9, -var9 + Bzip2DecoderState.field_f.width, 40);
+              MeshBoundsSupport.field_c.text = UsernameAvailabilityValidator.startgame.toUpperCase();
+              var8 = MeshBoundsSupport.field_c;
+              stackIn_20_0 = MeshBoundsSupport.field_c;
               stackIn_21_1 = (param0) && (StrongCacheEntry.field_K == 0L);
               stackIn_20_0.enabled = stackIn_21_1;
               var10 = 2;
@@ -259,8 +259,8 @@ class ButtonWidget extends UiWidget {
               }
               boolean decompiledFrameRemainder0 = true;
               if (var10 < 2) {
-                d.field_c.enabled = false;
-                decompiledFrameRemainder0 = !(!d.field_c.hovered);
+                MeshBoundsSupport.field_c.enabled = false;
+                decompiledFrameRemainder0 = !(!MeshBoundsSupport.field_c.hovered);
                 if (decompiledFrameRemainder0) {
                   var11_ref = null;
                   var12 = 0;
@@ -292,14 +292,14 @@ class ButtonWidget extends UiWidget {
                     var13_ref_String = NameEntryPopup.gameoptBadnumplayers;
                     boolean decompiledSharedTail0 = (var12 == 0);
                     if (!decompiledSharedTail0) {
-                      var14_ref_String = ab.gameoptInviteplayersOrTrychanging2 + (String) (var11_ref);
+                      var14_ref_String = ArchiveAvailabilitySupport.gameoptInviteplayersOrTrychanging2 + (String) (var11_ref);
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {
                       var14_ref_String = AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var11_ref)}, -1, EmailAvailabilityValidator.gameoptInviteplayersOrTrychanging1);
                     }
                   } else {
-                    var13_ref_String = ah.gameoptUnselectedoptions;
+                    var13_ref_String = VertexNormal.gameoptUnselectedoptions;
                     if (var12 == 0) {
                       var14_ref_String = AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var11_ref)}, -1, ArrayWidgetGroup.gameoptPleaseselectoption1);
                       if (var19 != 0) {
@@ -421,8 +421,8 @@ class ButtonWidget extends UiWidget {
                   var16 = 0;
                 }
                 if (var16 != 0) {
-                  d.field_c.enabled = false;
-                  if (d.field_c.hovered) {
+                  MeshBoundsSupport.field_c.enabled = false;
+                  if (MeshBoundsSupport.field_c.hovered) {
                     if (na.field_e.field_i.selectedTab != 0) {
                       CacheEntry.field_B = AccountWelcomePanel.substituteTemplateArguments(new String[]{Camera.muChatGame}, -1, t.gameoptPlayersdontqualifySelectgametab);
                       if (var19 != 0) {
@@ -465,7 +465,7 @@ class ButtonWidget extends UiWidget {
           stackIn_179_1 = (param2) && (!param1) && (!AccountWelcomePanel.field_bb);
           ((UiComponent) (Object) stackIn_178_0).updateRoot(stackIn_179_1, false);
           var5_int = 92 / ((0 - param3) / 63);
-          stackIn_183_0 = de.field_b;
+          stackIn_183_0 = DebugTuningSupport.field_b;
           stackIn_184_1 = (param2) && (!param1) && (AccountWelcomePanel.field_bb);
           ((UiComponent) (Object) stackIn_183_0).updateRoot(stackIn_184_1, false);
           na.field_e.field_i.processTabPresses(true);
@@ -476,7 +476,7 @@ class ButtonWidget extends UiWidget {
             if (kc.field_b.pressedButton != 0) {
               AccountWelcomePanel.field_bb = true;
             }
-            if (d.field_c.pressedButton != 0) {
+            if (MeshBoundsSupport.field_c.pressedButton != 0) {
               HighscoresScreen.field_N = true;
             }
             if (AccountContentDialog.field_vb.pressedButton != 0) {
@@ -541,11 +541,11 @@ class ButtonWidget extends UiWidget {
         try {
           super.updatePointerState(param0, param1, param2, param3);
           if (this.pressedPointerButton != 0) {
-            if (~cd.field_b == ~this.pressedPointerButton) {
+            if (~ClientInputResetSupport.field_b == ~this.pressedPointerButton) {
               return;
             }
             if (this.containsPointer(param2, param3, wn.field_i, -1, DebouncedValidationProvider.field_f) &&
-              cd.field_b == 0) {
+              ClientInputResetSupport.field_b == 0) {
               this.activateButton(16, -param2 + wn.field_i, -param3 + DebouncedValidationProvider.field_f, this.pressedPointerButton);
             }
             this.handlePointerRelease(param2, wn.field_i, param3, DebouncedValidationProvider.field_f, (byte) 115, param0);
@@ -618,8 +618,8 @@ class ButtonWidget extends UiWidget {
             this.requestKeyboardFocus(param0, (byte) 122);
             this.pressedPointerButton = param3;
             if (this.listener != null &&
-              this.listener instanceof bn) {
-              ((bn) (this.listener)).a((byte) -123, param5, this, param1, param3, param6, param4);
+              this.listener instanceof PointerButtonListener) {
+              ((PointerButtonListener) (this.listener)).onPointerPress((byte) -123, param5, this, param1, param3, param6, param4);
             }
             return true;
           }
@@ -811,8 +811,8 @@ class ButtonWidget extends UiWidget {
     final void handlePointerRelease(int param0, int param1, int param2, int param3, byte param4, UiWidget param5) {
         try {
           if (null != this.listener &&
-            this.listener instanceof bn) {
-            ((bn) (this.listener)).a(param3, this, param2, param0, -116, param1);
+            this.listener instanceof PointerButtonListener) {
+            ((PointerButtonListener) (this.listener)).onPointerRelease(param3, this, param2, param0, -116, param1);
           }
           if (param4 <= 62) {
             this.handlePointerPress((UiWidget) null, -88, true, 21, -27, 5, -59);

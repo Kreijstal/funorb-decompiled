@@ -124,7 +124,7 @@ final class jj extends ArrayWidgetGroup implements ButtonActivationListener {
             var7 = ReportAbuseDialog.a(stackIn_10_0, param0 ^ -9377, var6);
             var8 = ArchiveIndex.field_u - (var7 >> 1);
             if (var4 >= 0) {
-              var2 = var2 + bj.field_m;
+              var2 = var2 + DottedRectangleSupport.field_m;
               if (un.field_f.selectedIndex == var4) {
                 stackIn_15_0 = IntrusiveNodeHashTable.field_d;
               } else {
@@ -138,7 +138,7 @@ final class jj extends ArrayWidgetGroup implements ButtonActivationListener {
             }
             if (var4 >= 0) {
               qa.field_t.d(var6, var8, var2 + qr.field_g, var5, -1);
-              var2 = var2 + (LobbyGame.field_yc + (TriangleMesh.field_B + bj.field_m));
+              var2 = var2 + (LobbyGame.field_yc + (TriangleMesh.field_B + DottedRectangleSupport.field_m));
             } else {
               QuickChatMenu.field_ec.d(var6, var8, un.field_h + var2, var5, -1);
               var2 = var2 + MenuScreen.field_u;

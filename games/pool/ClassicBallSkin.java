@@ -67,7 +67,7 @@ final class ClassicBallSkin extends BallSkin {
         try {
           dupTemp$0 = NameEntryPopup.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
           this.field_e = dupTemp$0;
-          d.field_a = dupTemp$0;
+          MeshBoundsSupport.field_a = dupTemp$0;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

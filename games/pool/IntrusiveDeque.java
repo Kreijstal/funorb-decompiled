@@ -109,7 +109,7 @@ final class IntrusiveDeque {
           return true;
         }
         int var2 = -43 % ((param1 + 69) / 57);
-        return (cb.field_d & 1 << param0) != 0 ? true : false;
+        return (AwtEventQueueSupport.field_d & 1 << param0) != 0 ? true : false;
     }
 
     final static void g(byte param0) {

@@ -102,7 +102,7 @@ final class oj extends IntrusiveNode {
             var3 != 0) {
             return false;
           }
-          return hj.a(hg.field_a, DiskCacheWorker.field_g, hp.field_a, ro.field_s, (byte) 76);
+          return QuickChatDynamicCommand.a(hg.field_a, DiskCacheWorker.field_g, hp.field_a, ro.field_s, (byte) 76);
         }
         if (IterableDualLinkDeque.field_a == 10) {
           if (var3 != 0) {
@@ -116,7 +116,7 @@ final class oj extends IntrusiveNode {
             return false;
           }
           if (tq.field_t == 2 &&
-            !tq.a(false, hj.field_c, ie.field_e)) {
+            !tq.a(false, QuickChatDynamicCommand.field_c, ie.field_e)) {
             return false;
           }
           if (2 != tq.field_t &&

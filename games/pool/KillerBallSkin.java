@@ -161,9 +161,9 @@ final class KillerBallSkin extends BallSkin {
           return (String) null;
         }
         if (param1 == 0) {
-          return ae.ballsetEnglishGroup0;
+          return MembershipBenefitsLoader.ballsetEnglishGroup0;
         }
-        return ae.ballsetEnglishGroup0;
+        return MembershipBenefitsLoader.ballsetEnglishGroup0;
     }
 
     final boolean c(int param0) {

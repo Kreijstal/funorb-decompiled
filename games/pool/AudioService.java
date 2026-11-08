@@ -70,7 +70,7 @@ final class AudioService implements Runnable {
               }
             }
             SoundCache.a(-105, 10L);
-            cb.a((Object) null, this.tasks, 120);
+            AwtEventQueueSupport.pumpAwtEventQueue((Object) null, this.tasks, 120);
           }
         } catch (Exception exception) {
           String var5 = (String) null;
@@ -86,7 +86,7 @@ final class AudioService implements Runnable {
         this.running = false;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         loadingSoundeffects = null;
         if (param0) {
           return;

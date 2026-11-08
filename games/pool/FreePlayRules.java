@@ -81,7 +81,7 @@ final class FreePlayRules extends GameRules {
         return false;
     }
 
-    final int b(int param0) {
+    final int defaultBallInHandMode(int param0) {
         int var2 = 101 % ((param0 + 79) / 38);
         return 1;
     }
@@ -151,7 +151,7 @@ final class FreePlayRules extends GameRules {
         int var2 = -96 / ((param0 + 37) / 60);
         int var3 = ll.field_f;
         if (this.field_d.isCueBallPotted((byte) 85)) {
-          var3 = var3 | um.field_c;
+          var3 = var3 | MeshBase.field_c;
         }
         return var3;
     }

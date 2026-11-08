@@ -77,7 +77,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         if (!this.field_tb) {
           return;
         }
-        bh.b(false);
+        MirroredSceneSupport.b(false);
     }
 
     final void m(byte param0) {
@@ -85,13 +85,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         MessageDialogContent var2Lifetime1;
         this.statusProgressBar.setStripeColors(4210752, 19365, 2121792);
         if (param0 == -33) {
-          var2 = new MessageDialogContent(this, this.messageFont, ag.connectionrestored);
+          var2 = new MessageDialogContent(this, this.messageFont, ScreenProjectionSupport.connectionrestored);
           var2.addActionButton(15, ti.returntogame, param0 + 34);
           this.replaceContent(var2, param0 + 63);
           return;
         }
         this.field_tb = false;
-        var2Lifetime1 = new MessageDialogContent(this, this.messageFont, ag.connectionrestored);
+        var2Lifetime1 = new MessageDialogContent(this, this.messageFont, ScreenProjectionSupport.connectionrestored);
         var2Lifetime1.addActionButton(15, ti.returntogame, param0 + 34);
         this.replaceContent(var2Lifetime1, param0 + 63);
     }
@@ -129,7 +129,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           var5 = new MessageDialogContent(this, this.messageFont, param0);
           if (param1 == 5) {
             var5.addActionButton(11, NodeHashTableIterator.reloadgame, 1);
-            var5.addActionButton(17, dj.quittowebsite, 1);
+            var5.addActionButton(17, FullscreenDisplayMode.quittowebsite, 1);
           } else {
             if (param1 != 256) {
               stackIn_10_0 = var5;

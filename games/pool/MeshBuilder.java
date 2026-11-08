@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MeshBuilder extends um {
+final class MeshBuilder extends MeshBase {
     private short[] field_W;
     byte[] field_F;
     int faceCount;
@@ -13,19 +13,19 @@ final class MeshBuilder extends um {
     int[] vertexX;
     int field_M;
     int[] faceVertexC;
-    ef[] field_J;
+    FaceNormal[] field_J;
     byte[] field_k;
     short[] field_E;
     int[] faceVertexA;
     byte[] field_j;
     int[] faceVertexB;
     int vertexCount;
-    ah[] field_Z;
+    VertexNormal[] field_Z;
     private int[][] field_U;
     private int[] field_ab;
     byte[] field_i;
     private static int field_G;
-    ah[] field_m;
+    VertexNormal[] field_m;
     short[] field_H;
     byte[] field_R;
     private static int[] field_I;
@@ -65,26 +65,26 @@ final class MeshBuilder extends um {
         return fieldTemp$0;
     }
 
-    final void mergeFrom(um param0, int param1, int param2, int param3, boolean param4) {
+    final void mergeFrom(MeshBase param0, int param1, int param2, int param3, boolean param4) {
         int var15 = 0;
-        ah dupTemp$0 = null;
-        ah dupTemp$1 = null;
+        VertexNormal dupTemp$0 = null;
+        VertexNormal dupTemp$1 = null;
         MeshBuilder var6;
         int var7;
         int var9;
         int var10;
-        ah var11;
+        VertexNormal var11;
         int var12;
         int var13;
         int var14;
-        ah var16;
-        ah var17;
-        ah var18;
+        VertexNormal var16;
+        VertexNormal var17;
+        VertexNormal var18;
         int[] var22;
         int var10Lifetime1;
         int var10Lifetime1Lifetime1;
-        ah var16Lifetime1;
-        ah var16Lifetime2;
+        VertexNormal var16Lifetime1;
+        VertexNormal var16Lifetime2;
         var6 = (MeshBuilder) (param0);
         var6.computeBounds();
         var6.computeNormals();
@@ -113,20 +113,20 @@ final class MeshBuilder extends um {
                       var12 == var6.vertexY[var15] &&
                       var16Lifetime2.field_a != 0) {
                       if (this.field_m == null) {
-                        this.field_m = new ah[this.field_M];
+                        this.field_m = new VertexNormal[this.field_M];
                       }
                       if (var6.field_m == null) {
-                        var6.field_m = new ah[var9];
+                        var6.field_m = new VertexNormal[var9];
                       }
                       var17 = this.field_m[var10];
                       if (var17 == null) {
-                        dupTemp$0 = new ah(var11);
+                        dupTemp$0 = new VertexNormal(var11);
                         this.field_m[var10] = dupTemp$0;
                         var17 = dupTemp$0;
                       }
                       var18 = var6.field_m[var15];
                       if (var18 == null) {
-                        dupTemp$1 = new ah(var16Lifetime2);
+                        dupTemp$1 = new VertexNormal(var16Lifetime2);
                         var6.field_m[var15] = dupTemp$1;
                         var18 = dupTemp$1;
                       }
@@ -174,7 +174,7 @@ final class MeshBuilder extends um {
         }
     }
 
-    final fa createModelMeshTransformed(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    final RenderableModel createModelMeshTransformed(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         return this.createModelMesh(param0, param1, param2 * param5[3] + param3 * param5[4] + param4 * param5[5] >> 16, param2 * param5[6] + param3 * param5[7] + param4 * param5[8] >> 16, param2 * param5[9] + param3 * param5[10] + param4 * param5[11] >> 16);
     }
 
@@ -186,8 +186,8 @@ final class MeshBuilder extends um {
         return new MeshBuilder(var3);
     }
 
-    final fa createModelMesh(int param0, int param1, int param2, int param3, int param4) {
-        return (fa) ((Object) new ModelMesh(this, param0, param1, param2, param3, param4));
+    final RenderableModel createModelMesh(int param0, int param1, int param2, int param3, int param4) {
+        return (RenderableModel) ((Object) new ModelMesh(this, param0, param1, param2, param3, param4));
     }
 
     final void scaleVertices(int param0, int param1, int param2, int param3) {
@@ -334,7 +334,7 @@ final class MeshBuilder extends um {
     }
 
     final void computeNormals() {
-        ef dupTemp$0 = null;
+        FaceNormal dupTemp$0 = null;
         int var1;
         int var2;
         int var3;
@@ -350,17 +350,17 @@ final class MeshBuilder extends um {
         int var13;
         int var14;
         int var15;
-        ef var16;
-        ah var17;
-        ah var18;
-        ah var19;
+        FaceNormal var16;
+        VertexNormal var17;
+        VertexNormal var18;
+        VertexNormal var19;
         int var1Lifetime1;
         if (this.field_Z != null) {
           return;
         }
-        this.field_Z = new ah[this.field_M];
+        this.field_Z = new VertexNormal[this.field_M];
         for (var1 = 0; var1 < this.field_M; var1++) {
-          this.field_Z[var1] = new ah();
+          this.field_Z[var1] = new VertexNormal();
         }
         var1Lifetime1 = 0;
         while (true) {
@@ -401,9 +401,9 @@ final class MeshBuilder extends um {
               if (var15 != 0) {
                 if (var15 == 1) {
                   if (this.field_J == null) {
-                    this.field_J = new ef[this.faceCount];
+                    this.field_J = new FaceNormal[this.faceCount];
                   }
-                  dupTemp$0 = new ef();
+                  dupTemp$0 = new FaceNormal();
                   this.field_J[var1Lifetime1] = dupTemp$0;
                   var16 = dupTemp$0;
                   var16.field_b = var11;

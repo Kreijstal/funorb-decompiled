@@ -41,7 +41,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
             if (0 <= var2_int) {
               var3 = TextLayout.field_h + 1 & 127;
               if (var3 != WireframeQuad.field_s) {
-                ee.field_b[TextLayout.field_h] = var2_int;
+                QuickChatCategoryCache.field_b[TextLayout.field_h] = var2_int;
                 ek.field_c[TextLayout.field_h] = (char)0;
                 TextLayout.field_h = var3;
               }
@@ -142,7 +142,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
               PlayerContextMenu.isValidNameCharacter((byte) 112, (char) var2_int)) {
               var3 = 1 + TextLayout.field_h & 127;
               if (WireframeQuad.field_s != var3) {
-                ee.field_b[TextLayout.field_h] = -1;
+                QuickChatCategoryCache.field_b[TextLayout.field_h] = -1;
                 ek.field_c[TextLayout.field_h] = (char)var2_int;
                 TextLayout.field_h = var3;
               }

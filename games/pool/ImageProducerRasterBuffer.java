@@ -161,16 +161,16 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     ImageProducerRasterBuffer() {
     }
 
-    final static eh a(int param0, int param1, int param2, int param3, int param4) {
+    final static HighScoreRequest a(int param0, int param1, int param2, int param3, int param4) {
         int var7 = Pool.field_O;
-        eh var5 = (eh) (StateIconLabel.field_Lb.last((byte) 118));
+        HighScoreRequest var5 = (HighScoreRequest) (StateIconLabel.field_Lb.last((byte) 118));
         while (var5 != null) {
           if (~var5.field_A == ~param2) {
             return var5;
           }
-          var5 = (eh) (StateIconLabel.field_Lb.previous((byte) -5));
+          var5 = (HighScoreRequest) (StateIconLabel.field_Lb.previous((byte) -5));
         }
-        eh var8 = new eh();
+        HighScoreRequest var8 = new HighScoreRequest();
         var5 = var8;
         var8.field_A = param2;
         int var6 = -73 / ((param0 - 60) / 49);

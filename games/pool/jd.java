@@ -78,7 +78,7 @@ final class jd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         rule04 = null;
         gameoptPlayerneeds1ratedgame = null;
         quickchatHelpTitle = null;
@@ -181,7 +181,7 @@ final class jd {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          d.computeMeshBounds(param1, -23109);
+          MeshBoundsSupport.computeMeshBounds(param1, -23109);
           var2 = new int[]{3, 1, 1};
           if (param0 <= 65) {
             field_b = 76;
@@ -207,14 +207,14 @@ final class jd {
         if (param1 != 1164778608) {
           field_h = (int[]) null;
           if (param0 < param2) {
-            return 2048 - bo.arcTangent(-65536, (param0 << 16) / param2);
+            return 2048 - FixedAngleSupport.arcTangent(-65536, (param0 << 16) / param2);
           }
-          return bo.arcTangent(-65536, (param2 << 16) / param0);
+          return FixedAngleSupport.arcTangent(-65536, (param2 << 16) / param0);
         }
         if (param0 < param2) {
-          return 2048 - bo.arcTangent(-65536, (param0 << 16) / param2);
+          return 2048 - FixedAngleSupport.arcTangent(-65536, (param0 << 16) / param2);
         }
-        return bo.arcTangent(-65536, (param2 << 16) / param0);
+        return FixedAngleSupport.arcTangent(-65536, (param2 << 16) / param0);
     }
 
     static {

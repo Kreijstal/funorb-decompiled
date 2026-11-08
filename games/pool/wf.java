@@ -48,8 +48,8 @@ final class wf {
         try {
           NetworkGameClient.field_z = true;
           PolarBallSkin.field_q = param0 ? true : false;
-          d.field_d = new MessageDialog(TabbedPane.field_Ub, bi.field_e, param1, ro.field_e, PolarBallSkin.field_q);
-          TabbedPane.field_Ub.showDialog(d.field_d, 30000);
+          MeshBoundsSupport.field_d = new MessageDialog(TabbedPane.field_Ub, LoginPayloadFactory.field_e, param1, ro.field_e, PolarBallSkin.field_q);
+          TabbedPane.field_Ub.showDialog(MeshBoundsSupport.field_d, 30000);
           if (param2 > -122) {
             field_a = (Sprite) null;
           }
@@ -58,7 +58,7 @@ final class wf {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -118,7 +118,7 @@ final class wf {
           if (param1) {
             if (AgeValidator.field_r != PlasmaBallSkin.field_m.field_b) {
               var13 = PlasmaBallSkin.field_m;
-              var14 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param3}, param0 + 109, bi.showPlayersInXsGame);
+              var14 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param3}, param0 + 109, LoginPayloadFactory.showPlayersInXsGame);
               var13.field_n.addAction(var14, param0 + 17240, 15);
             } else {
               var11 = PlasmaBallSkin.field_m;

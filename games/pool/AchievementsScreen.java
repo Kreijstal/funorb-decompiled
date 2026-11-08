@@ -112,9 +112,9 @@ final class AchievementsScreen extends MenuScreen {
           } else {
             if (UsernameSuggestionsPanel.field_V <= 0 &&
               QuickChatPhraseDefinition.field_w[var6Lifetime1]) {
-              stackIn_47_1 = cl.memberslevelName;
+              stackIn_47_1 = ProjectedLineSupport.memberslevelName;
             } else {
-              stackIn_47_1 = bc.notyetachieved;
+              stackIn_47_1 = FontPaletteSupport.notyetachieved;
             }
           }
           ((BinaryBitmapFont) (Object) stackIn_46_0).d(stackIn_47_1, 225, sa.field_h.maxAscent + 240, 13412966, -1);
@@ -137,7 +137,7 @@ final class AchievementsScreen extends MenuScreen {
           } else {
             if (null == PolarObject.field_g ||
               var6Lifetime1 != AlignedIconLabel.field_Qb) {
-              PolarObject.field_g = ef.a("</col>", kc.achievementCriteria[var6Lifetime1], (byte) 4, "<col=aaaaff>");
+              PolarObject.field_g = FaceNormal.a("</col>", kc.achievementCriteria[var6Lifetime1], (byte) 4, "<col=aaaaff>");
               ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(new int[]{var8}, 260, kc.achievementCriteria[var6Lifetime1], 260, sa.field_h, true, 225);
               AlignedIconLabel.field_Qb = var6Lifetime1;
               IterableDualLinkDeque.field_b = sa.field_h.measureWrappedHeight(PolarObject.field_g, 260, var8);
@@ -166,7 +166,7 @@ final class AchievementsScreen extends MenuScreen {
           }
         }
         if (this.selection.itemCount == 1) {
-          sa.field_h.drawParagraph(ab.achievementsOnlyInRated, 220, 390, 360, 36, 15658734, -1, 1, 1, 0);
+          sa.field_h.drawParagraph(ArchiveAvailabilitySupport.achievementsOnlyInRated, 220, 390, 360, 36, 15658734, -1, 1, 1, 0);
         }
         var7Lifetime2 = TextureCache.a(104);
         if (-1 != var7Lifetime2) {
@@ -345,7 +345,7 @@ final class AchievementsScreen extends MenuScreen {
         if (ScrollPaneWithFooter.field_Lb != null &&
           null != PolarObject.field_g &&
           -1 != AlignedIconLabel.field_Qb) {
-          this.field_G = ag.findHotspotRegion(-(70 - IterableDualLinkDeque.field_b >> 1) + DebouncedValidationProvider.field_f, ScrollPaneWithFooter.field_Lb, wn.field_i, param0 ^ -15396);
+          this.field_G = ScreenProjectionSupport.findHotspotRegion(-(70 - IterableDualLinkDeque.field_b >> 1) + DebouncedValidationProvider.field_f, ScrollPaneWithFooter.field_Lb, wn.field_i, param0 ^ -15396);
           LongAndTextLoginPayload.field_l = 12;
           SocialListEntry.field_Vb = 12;
           stackIn_12_0 = 0;

@@ -68,7 +68,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
               }
             } else {
               if (param1 == ModernTableScene.field_eb) {
-                var3 = de.fsTimeout;
+                var3 = DebugTuningSupport.fsTimeout;
                 this.widgetHeight = this.widgetHeight + 30;
               }
             }

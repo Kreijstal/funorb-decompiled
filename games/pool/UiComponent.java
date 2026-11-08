@@ -565,7 +565,7 @@ class UiComponent extends UiComponentNode {
         if (param1) {
           this.sprite = (Sprite) null;
         }
-        cl.field_f = !param0 ? true : false;
+        ProjectedLineSupport.field_f = !param0 ? true : false;
         this.updateTree(0, true, SoftwareRasterizer.width, SoftwareRasterizer.height, (byte) 107, 0);
     }
 
@@ -653,12 +653,12 @@ class UiComponent extends UiComponentNode {
           }
           this.pressedButton = 0;
         }
-        if (0 == cd.field_b) {
+        if (0 == ClientInputResetSupport.field_b) {
           this.capturedButton = 0;
         }
-        stackIn_33_1 = (!cl.field_f) && (SoftwareRasterizer.clipLeft <= wn.field_i) && (wn.field_i < SoftwareRasterizer.clipRight) && (DebouncedValidationProvider.field_f >= SoftwareRasterizer.clipTop) && (SoftwareRasterizer.clipBottom > DebouncedValidationProvider.field_f);
+        stackIn_33_1 = (!ProjectedLineSupport.field_f) && (SoftwareRasterizer.clipLeft <= wn.field_i) && (wn.field_i < SoftwareRasterizer.clipRight) && (DebouncedValidationProvider.field_f >= SoftwareRasterizer.clipTop) && (SoftwareRasterizer.clipBottom > DebouncedValidationProvider.field_f);
         this.hovered = stackIn_33_1;
-        stackIn_38_1 = (this.hovered) && (this.capturedButton == cd.field_b) && (param1);
+        stackIn_38_1 = (this.hovered) && (this.capturedButton == ClientInputResetSupport.field_b) && (param1);
         this.activeInside = stackIn_38_1;
         if (this.children != null) {
           var14 = (UiComponent) (this.children.first((byte) -127));
@@ -671,7 +671,7 @@ class UiComponent extends UiComponentNode {
           rc.field_d = true;
         }
         if (this.hovered) {
-          cl.field_f = true;
+          ProjectedLineSupport.field_f = true;
         }
         SoftwareRasterizer.setClip(var8, var9, var10, var12);
         if (this.capturedButton != 0 &&

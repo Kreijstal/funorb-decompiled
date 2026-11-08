@@ -4,7 +4,7 @@
 final class mj {
     static Sprite field_b;
     static int[] field_a;
-    static hj field_d;
+    static QuickChatDynamicCommand field_d;
     static String[][] field_c;
     static boolean field_e;
 
@@ -100,6 +100,6 @@ final class mj {
     }
 
     static {
-        field_d = new hj(10, 2, 2, 0);
+        field_d = new QuickChatDynamicCommand(10, 2, 2, 0);
     }
 }

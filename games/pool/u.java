@@ -192,18 +192,18 @@ final class u {
             ViewportController.field_n = new int[var24_intLifetime1];
           }
           var24 = QuickChatPhraseRegistry.field_j;
-          if (cd.field_d == null) {
-            cd.field_d = new int[16];
+          if (ClientInputResetSupport.field_d == null) {
+            ClientInputResetSupport.field_d = new int[16];
           }
           var25 = MultiHandleSliderWidget.field_T;
-          var26 = cd.field_d;
+          var26 = ClientInputResetSupport.field_d;
           if (!param3) {
             u.a((byte) 100, -4, 66, true, 88);
           }
           var27 = ViewportController.field_n;
           TranslatedUiText.field_a = 0;
           PoolMatchController.field_W = 0;
-          de.field_a = 0;
+          DebugTuningSupport.field_a = 0;
           var28 = ArchiveRequest.field_B;
           DateInputWidget.field_R = 0;
           if (QuickChatMenu.field_Yb == null ||
@@ -224,11 +224,11 @@ final class u {
             hf.field_d = new int[param12 + 100];
             te.field_o = new int[100 + param12];
           }
-          if (null == eh.field_w ||
-            !(eh.field_w.length >= param22)) {
+          if (null == HighScoreRequest.field_w ||
+            !(HighScoreRequest.field_w.length >= param22)) {
             mj.field_a = new int[param22 + 100];
             sa.field_w = new int[param22 + 100];
-            eh.field_w = new int[param22 + 100];
+            HighScoreRequest.field_w = new int[param22 + 100];
           }
           if (wn.field_d == null ||
             !(wn.field_d.length >= param12)) {
@@ -301,19 +301,19 @@ final class u {
                     ArrayOperations.copy(ro.field_d, 0, var54Lifetime5, 0, TranslatedUiText.field_a);
                     ro.field_d = var54Lifetime5;
                   }
-                  if ((4 + (var31 + param22)) > eh.field_w.length) {
+                  if ((4 + (var31 + param22)) > HighScoreRequest.field_w.length) {
                     var54Lifetime1 = new int[104 + (var31 + param22)];
-                    ArrayOperations.copy(eh.field_w, 0, var54Lifetime1, 0, de.field_a);
-                    eh.field_w = var54Lifetime1;
+                    ArrayOperations.copy(HighScoreRequest.field_w, 0, var54Lifetime1, 0, DebugTuningSupport.field_a);
+                    HighScoreRequest.field_w = var54Lifetime1;
                     var54Lifetime1Lifetime1 = new int[var31 + (param22 + 104)];
-                    ArrayOperations.copy(mj.field_a, 0, var54Lifetime1Lifetime1, 0, de.field_a);
+                    ArrayOperations.copy(mj.field_a, 0, var54Lifetime1Lifetime1, 0, DebugTuningSupport.field_a);
                     mj.field_a = var54Lifetime1Lifetime1;
                     var54Lifetime1Lifetime2 = new int[var31 + param22 + 104];
-                    ArrayOperations.copy(sa.field_w, 0, var54Lifetime1Lifetime2, 0, de.field_a);
+                    ArrayOperations.copy(sa.field_w, 0, var54Lifetime1Lifetime2, 0, DebugTuningSupport.field_a);
                     sa.field_w = var54Lifetime1Lifetime2;
                   }
                   var55 = TranslatedUiText.field_a;
-                  var56 = de.field_a;
+                  var56 = DebugTuningSupport.field_a;
                   var57 = 0;
                   var58 = 0;
                   if (null == param14) {
@@ -365,7 +365,7 @@ final class u {
                       var56++;
                       var34 = incrementValue$1;
                       var25[var39] = incrementValue$1;
-                      eh.field_w[var34] = var42;
+                      HighScoreRequest.field_w[var34] = var42;
                       mj.field_a[var34] = var43;
                       sa.field_w[var34] = var44;
                     }
@@ -393,7 +393,7 @@ final class u {
                     incrementValue$3 = var56;
                     var56++;
                     var34 = incrementValue$3;
-                    eh.field_w[var34] = var59;
+                    HighScoreRequest.field_w[var34] = var59;
                     mj.field_a[var34] = var60;
                     sa.field_w[var34] = var61;
                     var26[4 + var58] = var34;
@@ -422,7 +422,7 @@ final class u {
                       var56++;
                       var34 = incrementValue$5;
                       var25[var40] = incrementValue$5;
-                      eh.field_w[var34] = var45;
+                      HighScoreRequest.field_w[var34] = var45;
                       mj.field_a[var34] = var46;
                       sa.field_w[var34] = var47;
                     }
@@ -450,7 +450,7 @@ final class u {
                     var56++;
                     var34 = incrementValue$7;
                     var57++;
-                    eh.field_w[var34] = var59Lifetime1;
+                    HighScoreRequest.field_w[var34] = var59Lifetime1;
                     mj.field_a[var34] = var60Lifetime1;
                     sa.field_w[var34] = var61Lifetime1;
                     var26[4 + var58] = var34;
@@ -479,7 +479,7 @@ final class u {
                       var56++;
                       var34 = incrementValue$9;
                       var25[var41] = incrementValue$9;
-                      eh.field_w[var34] = var48;
+                      HighScoreRequest.field_w[var34] = var48;
                       mj.field_a[var34] = var49;
                       sa.field_w[var34] = var50;
                     }
@@ -506,7 +506,7 @@ final class u {
                     incrementValue$11 = var56;
                     var56++;
                     var34 = incrementValue$11;
-                    eh.field_w[var34] = var59Lifetime2;
+                    HighScoreRequest.field_w[var34] = var59Lifetime2;
                     mj.field_a[var34] = var60Lifetime2;
                     sa.field_w[var34] = var61Lifetime2;
                     var26[4 + var58] = var34;
@@ -569,9 +569,9 @@ final class u {
                     var27[var33Lifetime2++] = var38;
                     var30++;
                   }
-                  var31 = var31 + (var56 - de.field_a);
+                  var31 = var31 + (var56 - DebugTuningSupport.field_a);
                   PoolMatchController.field_W = var33Lifetime2;
-                  de.field_a = var56;
+                  DebugTuningSupport.field_a = var56;
                   var33Lifetime2 = DateInputWidget.field_R;
                   if (wn.field_d.length < (-2 + var58 + param12 + var32)) {
                     var54Lifetime3 = new int[param12 + (var32 + var58 + 98)];
@@ -633,33 +633,33 @@ final class u {
                   var33Lifetime2 = fieldTemp$16;
                   var34 = var25[var39];
                   if (var34 < 0) {
-                    fieldTemp$17 = de.field_a;
-                    de.field_a = de.field_a + 1;
+                    fieldTemp$17 = DebugTuningSupport.field_a;
+                    DebugTuningSupport.field_a = DebugTuningSupport.field_a + 1;
                     var34 = fieldTemp$17;
                     var25[var39] = fieldTemp$17;
-                    eh.field_w[var34] = var42;
+                    HighScoreRequest.field_w[var34] = var42;
                     mj.field_a[var34] = var43;
                     sa.field_w[var34] = var44;
                   }
                   wn.field_d[var33Lifetime2] = var34;
                   var34 = var25[var40];
                   if (var34 < 0) {
-                    fieldTemp$18 = de.field_a;
-                    de.field_a = de.field_a + 1;
+                    fieldTemp$18 = DebugTuningSupport.field_a;
+                    DebugTuningSupport.field_a = DebugTuningSupport.field_a + 1;
                     var34 = fieldTemp$18;
                     var25[var40] = fieldTemp$18;
-                    eh.field_w[var34] = var45;
+                    HighScoreRequest.field_w[var34] = var45;
                     mj.field_a[var34] = var46;
                     sa.field_w[var34] = var47;
                   }
                   f.field_b[var33Lifetime2] = var34;
                   var34 = var25[var41];
                   if (0 > var34) {
-                    fieldTemp$19 = de.field_a;
-                    de.field_a = de.field_a + 1;
+                    fieldTemp$19 = DebugTuningSupport.field_a;
+                    DebugTuningSupport.field_a = DebugTuningSupport.field_a + 1;
                     var34 = fieldTemp$19;
                     var25[var41] = fieldTemp$19;
-                    eh.field_w[var34] = var48;
+                    HighScoreRequest.field_w[var34] = var48;
                     mj.field_a[var34] = var49;
                     sa.field_w[var34] = var50;
                   }
@@ -723,7 +723,7 @@ final class u {
           if (decompiledNaturalLoopExit0) {
             ja.field_a = param19;
             WhirlpoolHasher.field_g = param19;
-            MidiPcmStream.field_bb = de.field_a;
+            MidiPcmStream.field_bb = DebugTuningSupport.field_a;
             nj.field_d = TranslatedUiText.field_a;
             stackIn_266_0 = -1;
             stackIn_266_1 = ~param19;
@@ -764,11 +764,11 @@ final class u {
                       gn.field_e.field_p[var38Lifetime1] = (short)var34Lifetime1;
                       var34Lifetime1 = var25[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
-                        fieldTemp$26 = de.field_a;
-                        de.field_a = de.field_a + 1;
+                        fieldTemp$26 = DebugTuningSupport.field_a;
+                        DebugTuningSupport.field_a = DebugTuningSupport.field_a + 1;
                         var34Lifetime1 = fieldTemp$26;
                         var25[var33Lifetime3] = fieldTemp$26;
-                        eh.field_w[var34Lifetime1] = param6[var33Lifetime3];
+                        HighScoreRequest.field_w[var34Lifetime1] = param6[var33Lifetime3];
                         mj.field_a[var34Lifetime1] = param13[var33Lifetime3];
                         sa.field_w[var34Lifetime1] = param10[var33Lifetime3];
                       }
@@ -787,11 +787,11 @@ final class u {
                       gn.field_e.field_H[var38Lifetime1] = (short)var34Lifetime1;
                       var34Lifetime1 = var25[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
-                        fieldTemp$28 = de.field_a;
-                        de.field_a = de.field_a + 1;
+                        fieldTemp$28 = DebugTuningSupport.field_a;
+                        DebugTuningSupport.field_a = DebugTuningSupport.field_a + 1;
                         var34Lifetime1 = fieldTemp$28;
                         var25[var33Lifetime3] = fieldTemp$28;
-                        eh.field_w[var34Lifetime1] = param6[var33Lifetime3];
+                        HighScoreRequest.field_w[var34Lifetime1] = param6[var33Lifetime3];
                         mj.field_a[var34Lifetime1] = param13[var33Lifetime3];
                         sa.field_w[var34Lifetime1] = param10[var33Lifetime3];
                       }
@@ -810,11 +810,11 @@ final class u {
                       gn.field_e.field_C[var38Lifetime1] = (short)var34Lifetime1;
                       var34Lifetime1 = var25[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
-                        fieldTemp$30 = de.field_a;
-                        de.field_a = de.field_a + 1;
+                        fieldTemp$30 = DebugTuningSupport.field_a;
+                        DebugTuningSupport.field_a = DebugTuningSupport.field_a + 1;
                         var34Lifetime1 = fieldTemp$30;
                         var25[var33Lifetime3] = fieldTemp$30;
-                        eh.field_w[var34Lifetime1] = param6[var33Lifetime3];
+                        HighScoreRequest.field_w[var34Lifetime1] = param6[var33Lifetime3];
                         mj.field_a[var34Lifetime1] = param13[var33Lifetime3];
                         sa.field_w[var34Lifetime1] = param10[var33Lifetime3];
                       }
@@ -896,11 +896,11 @@ final class u {
               BitmapTextLayout.field_w[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
               var34Lifetime1Lifetime1 = var25[var33Lifetime3Lifetime1];
               if (var34Lifetime1Lifetime1 < 0) {
-                fieldTemp$43 = de.field_a;
-                de.field_a = de.field_a + 1;
+                fieldTemp$43 = DebugTuningSupport.field_a;
+                DebugTuningSupport.field_a = DebugTuningSupport.field_a + 1;
                 var34Lifetime1Lifetime1 = fieldTemp$43;
                 var25[var33Lifetime3Lifetime1] = fieldTemp$43;
-                eh.field_w[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
+                HighScoreRequest.field_w[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
                 mj.field_a[var34Lifetime1Lifetime1] = param13[var33Lifetime3Lifetime1];
                 sa.field_w[var34Lifetime1Lifetime1] = param10[var33Lifetime3Lifetime1];
               }
@@ -919,11 +919,11 @@ final class u {
               kc.field_e[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
               var34Lifetime1Lifetime1 = var25[var33Lifetime3Lifetime1];
               if (var34Lifetime1Lifetime1 < 0) {
-                fieldTemp$45 = de.field_a;
-                de.field_a = de.field_a + 1;
+                fieldTemp$45 = DebugTuningSupport.field_a;
+                DebugTuningSupport.field_a = DebugTuningSupport.field_a + 1;
                 var34Lifetime1Lifetime1 = fieldTemp$45;
                 var25[var33Lifetime3Lifetime1] = fieldTemp$45;
-                eh.field_w[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
+                HighScoreRequest.field_w[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
                 mj.field_a[var34Lifetime1Lifetime1] = param13[var33Lifetime3Lifetime1];
                 sa.field_w[var34Lifetime1Lifetime1] = param10[var33Lifetime3Lifetime1];
               }
@@ -942,11 +942,11 @@ final class u {
               CueStick.field_h[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
               var34Lifetime1Lifetime1 = var25[var33Lifetime3Lifetime1];
               if (var34Lifetime1Lifetime1 < 0) {
-                fieldTemp$47 = de.field_a;
-                de.field_a = de.field_a + 1;
+                fieldTemp$47 = DebugTuningSupport.field_a;
+                DebugTuningSupport.field_a = DebugTuningSupport.field_a + 1;
                 var34Lifetime1Lifetime1 = fieldTemp$47;
                 var25[var33Lifetime3Lifetime1] = fieldTemp$47;
-                eh.field_w[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
+                HighScoreRequest.field_w[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
                 mj.field_a[var34Lifetime1Lifetime1] = param13[var33Lifetime3Lifetime1];
                 sa.field_w[var34Lifetime1Lifetime1] = param10[var33Lifetime3Lifetime1];
               }
@@ -1074,14 +1074,14 @@ final class u {
           if (!param3) {
             stackIn_11_1 = ProgressBarWidget.field_T;
           } else {
-            stackIn_11_1 = ag.field_b;
+            stackIn_11_1 = ScreenProjectionSupport.field_b;
           }
           stackIn_10_0.disabledSprite = stackIn_11_1;
           stackIn_14_0 = var6;
           if (param3) {
             stackIn_15_1 = wf.field_a;
           } else {
-            stackIn_15_1 = eh.field_y;
+            stackIn_15_1 = HighScoreRequest.field_y;
           }
           stackIn_14_0.selectedSprite = stackIn_15_1;
           stackIn_16_0 = var6;

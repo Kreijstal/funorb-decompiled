@@ -199,7 +199,7 @@ final class wp implements si {
                   var5 = var7;
                   if (var7.serverName != null &&
                     !NineBallRules.a(PlasmaBallSkin.field_m.field_m, (byte) -101) &&
-                    !ea.field_z) {
+                    !RankingsRequest.field_z) {
                     if (!ViewportController.field_y) {
                       var17 = PlasmaBallSkin.field_m;
                       var18 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var16}, -1, rp.sendPmToX);
@@ -219,7 +219,7 @@ final class wp implements si {
               var7 = (SocialListEntry) (var4.previous((byte) -5));
             }
             if (0 != NameEntryPopup.field_Mb.leftFooter.pressedButton) {
-              sm.field_C = new NameEntryPopup(NameEntryPopup.field_Mb.leftFooter.screenX, NameEntryPopup.field_Mb.leftFooter.screenY, NameEntryPopup.field_Mb.leftFooter.width, NameEntryPopup.field_Mb.leftFooter.height, cq.enterfriendAdd, ProgressDialog.field_qb, AlignedIconLabel.field_Lb, AlignedIconLabel.field_Lb);
+              sm.field_C = new NameEntryPopup(NameEntryPopup.field_Mb.leftFooter.screenX, NameEntryPopup.field_Mb.leftFooter.screenY, NameEntryPopup.field_Mb.leftFooter.width, NameEntryPopup.field_Mb.leftFooter.height, TutorialFactory.enterfriendAdd, ProgressDialog.field_qb, AlignedIconLabel.field_Lb, AlignedIconLabel.field_Lb);
               MatchingTextValidator.field_m = 0;
             }
             if (NameEntryPopup.field_Mb.rightFooter.pressedButton != 0) {
@@ -228,7 +228,7 @@ final class wp implements si {
             }
           } else {
             SingleChildWidget.field_J.enabled = false;
-            AccountContentDialog.field_sb.text = cl.pleasewaitDotdotdot;
+            AccountContentDialog.field_sb.text = ProjectedLineSupport.pleasewaitDotdotdot;
             if (th.field_a == 1) {
               NameEntryPopup.field_Mb.scrollPane.viewport.text = CheckboxWidget.connectingToFriendServerTwoline;
             } else {
@@ -246,16 +246,16 @@ final class wp implements si {
         }
     }
 
-    final static ea a(int param0, int param1, byte param2, int param3) {
-        ea var4 = null;
+    final static RankingsRequest a(int param0, int param1, byte param2, int param3) {
+        RankingsRequest var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ea stackIn_12_0 = null;
-        ea stackIn_16_0 = null;
+        RankingsRequest stackIn_12_0 = null;
+        RankingsRequest stackIn_16_0 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = Pool.field_O;
         try {
-          var4 = (ea) (rc.field_c.last((byte) -82));
+          var4 = (RankingsRequest) (rc.field_c.last((byte) -82));
           if (param2 <= 27) {
             field_g = (MouseHandler) null;
           }
@@ -266,13 +266,13 @@ final class wp implements si {
                 stackIn_12_0 = var4;
                 return stackIn_12_0;
               }
-              var4 = (ea) (rc.field_c.previous((byte) -5));
+              var4 = (RankingsRequest) (rc.field_c.previous((byte) -5));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            var4 = new ea();
+            var4 = new RankingsRequest();
             var4.field_o = param1;
             var4.field_s = param0;
             rc.field_c.addFirst((byte) -114, var4);
@@ -328,7 +328,7 @@ final class wp implements si {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {

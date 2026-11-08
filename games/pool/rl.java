@@ -154,7 +154,7 @@ final class rl {
                 var5 = new LobbyGame(dr.field_c);
                 lf.field_a.put(-6946, (long)var4, var5);
               }
-              d.a(var5, -13, var1, true);
+              MeshBoundsSupport.a(var5, -13, var1, true);
               TextureCache.a(-115, var5);
               return;
             }
@@ -247,7 +247,7 @@ final class rl {
                     return;
                   }
                   if (20 == var2) {
-                    d.a(HighscoresScreen.field_L, -116, var1, false);
+                    MeshBoundsSupport.a(HighscoresScreen.field_L, -116, var1, false);
                     return;
                   }
                   if (var2 == 21) {
@@ -269,7 +269,7 @@ final class rl {
                     return;
                   }
                   GrowableIntList.reportClientError((Throwable) null, "L1: " + t.formatPacketDump(120), -8555);
-                  dn.c(-119);
+                  ShotEvent.c(-119);
                   return;
                 }
                 var4_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-412303328);
@@ -351,7 +351,7 @@ final class rl {
             var4Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-1034);
             HighscoresScreen.field_L = new LobbyGame(dr.field_c);
             HighscoresScreen.field_L.a((long)var4Lifetime1, 45);
-            d.a(HighscoresScreen.field_L, 119, var1, false);
+            MeshBoundsSupport.a(HighscoresScreen.field_L, 119, var1, false);
             StrongCacheEntry.field_K = 0L;
           }
           if (var2 != 2 &&
@@ -395,7 +395,7 @@ final class rl {
         return var1 + CheckboxWidget.field_S;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 > -88) {
           field_b = (UiComponent) null;

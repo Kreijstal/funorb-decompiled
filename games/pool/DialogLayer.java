@@ -45,17 +45,17 @@ final class DialogLayer extends SingleChildWidget {
               return true;
             }
             if (var2_int < 0) {
-              dn.c(64);
+              ShotEvent.c(64);
             } else {
               if (CushionSegment.d((byte) 127) <= 30000L) {
                 return false;
               }
-              dn.c(64);
+              ShotEvent.c(64);
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
-            dn.c(43);
+            ShotEvent.c(43);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -95,9 +95,9 @@ final class DialogLayer extends SingleChildWidget {
         pn var9 = null;
         var7 = Pool.field_O;
         try {
-          if (OpacityWidget.field_P.height != cb.field_g) {
-            StrongCacheEntry.field_J = StrongCacheEntry.field_J + (OpacityWidget.field_P.height - cb.field_g);
-            cb.field_g = OpacityWidget.field_P.height;
+          if (OpacityWidget.field_P.height != AwtEventQueueSupport.field_g) {
+            StrongCacheEntry.field_J = StrongCacheEntry.field_J + (OpacityWidget.field_P.height - AwtEventQueueSupport.field_g);
+            AwtEventQueueSupport.field_g = OpacityWidget.field_P.height;
           }
           if (BufferedFile.field_h > HighscoresScreen.field_P) {
             HighscoresScreen.field_P = HighscoresScreen.field_P + 1;
@@ -106,12 +106,12 @@ final class DialogLayer extends SingleChildWidget {
             return;
           }
           ProgressDialog.l(23323);
-          fl.field_q.updateRoot(param1, false);
+          IntLookupQuery.field_q.updateRoot(param1, false);
           if (null != ThemeSelectScreen.field_J) {
-            if (!ea.field_z) {
+            if (!RankingsRequest.field_z) {
               ThemeSelectScreen.field_J = null;
             } else {
-              ThemeSelectScreen.field_J.processPointerFrame(-125, fl.field_q.screenX, param1, fl.field_q.screenY);
+              ThemeSelectScreen.field_J.processPointerFrame(-125, IntLookupQuery.field_q.screenX, param1, IntLookupQuery.field_q.screenY);
             }
           }
           for (var4_int = 0; 5 > var4_int; var4_int++) {
@@ -125,8 +125,8 @@ final class DialogLayer extends SingleChildWidget {
               ta.field_b[var4_int].text = TranslatedUiText.field_i[var6];
             }
           }
-          if (param2 != d.field_e.pressedButton) {
-            fc.field_b = new ReportAbuseDialog(d.field_e.screenX, d.field_e.screenY, d.field_e.width, d.field_e.height, param3, tq.field_m, DiskArchiveRequest.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A, (String) null, 0L);
+          if (param2 != MeshBoundsSupport.field_e.pressedButton) {
+            fc.field_b = new ReportAbuseDialog(MeshBoundsSupport.field_e.screenX, MeshBoundsSupport.field_e.screenY, MeshBoundsSupport.field_e.width, MeshBoundsSupport.field_e.height, param3, tq.field_m, DiskArchiveRequest.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A, (String) null, 0L);
           }
           var9 = IntrusiveNodeHashTable.a(param0, (byte) -126, ArchiveIndex.field_x, CueAim.field_j);
           if (var9 != null) {
@@ -264,7 +264,7 @@ final class DialogLayer extends SingleChildWidget {
           LobbyPlayer.field_Ub.resetSelection(17517);
         }
         if (0 != hn.field_b) {
-          cl.a(param0 ^ 1124);
+          ProjectedLineSupport.resetChatComposition(param0 ^ 1124);
         }
         ProgressBarWidget.field_G = 0;
     }

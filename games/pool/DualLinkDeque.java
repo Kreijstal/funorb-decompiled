@@ -56,7 +56,7 @@ final class DualLinkDeque {
         try {
           oi.field_o = WidgetStyleLayer.loadSprite("basic", (byte) 54, "display_name_changed", param1);
           NameEntryPopup.field_Mb = new ScrollPaneWithFooter(0L, HighscoresScreen.field_J, StateIconLabel.muLobbyFriendAdd, PacketBuffer.muLobbyFriendRm);
-          cp.field_c = new ScrollPaneWithFooter(0L, HighscoresScreen.field_J, ag.muLobbyNameAdd, tp.muLobbyNameRm);
+          InputIdleSupport.field_c = new ScrollPaneWithFooter(0L, HighscoresScreen.field_J, ScreenProjectionSupport.muLobbyNameAdd, tp.muLobbyNameRm);
           SingleChildWidget.field_J = new UiComponent(0L, (UiComponent) null);
           AccountContentDialog.field_sb = new UiComponent(0L, AlignedIconLabel.field_Lb);
           AccountContentDialog.field_sb.horizontalAlignment = param0;
@@ -73,9 +73,9 @@ final class DualLinkDeque {
           var5 = NameEntryPopup.field_Mb.scrollPane.viewport;
           var6 = var5;
           var6.horizontalAlignment = 1;
-          cp.field_c.scrollPane.viewport.copyStyle((byte) -87, AlignedIconLabel.field_Lb);
-          var3 = cp.field_c.scrollPane.viewport;
-          cp.field_c.scrollPane.viewport.verticalAlignment = 1;
+          InputIdleSupport.field_c.scrollPane.viewport.copyStyle((byte) -87, AlignedIconLabel.field_Lb);
+          var3 = InputIdleSupport.field_c.scrollPane.viewport;
+          InputIdleSupport.field_c.scrollPane.viewport.verticalAlignment = 1;
           var3.horizontalAlignment = 1;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wo.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -114,7 +114,7 @@ final class DualLinkDeque {
         return var2;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         doubleplusgoodShot = null;
         if (!param0) {
           return;

@@ -126,7 +126,7 @@ final class AlignedIconLabel extends UiComponent {
             }
             var11 = (tq) (NodeHashTableIterator.field_j.last((byte) 77));
             if (var11 == null) {
-              dn.c(-107);
+              ShotEvent.c(-107);
               return;
             }
             var11.field_l = var3;
@@ -137,7 +137,7 @@ final class AlignedIconLabel extends UiComponent {
           if (var2 == 1) {
             var12 = (i) (ue.field_b.last((byte) -19));
             if (var12 == null) {
-              dn.c(-69);
+              ShotEvent.c(-69);
               return;
             }
             var12.unlink((byte) -117);
@@ -145,7 +145,7 @@ final class AlignedIconLabel extends UiComponent {
             if (2 == var2) {
               var14 = (tq) (NodeHashTableIterator.field_j.last((byte) -112));
               if (var14 == null) {
-                dn.c(-81);
+                ShotEvent.c(-81);
                 return;
               }
               var14.field_l = ek.a(117);
@@ -153,7 +153,7 @@ final class AlignedIconLabel extends UiComponent {
               var14.unlink((byte) -117);
             } else {
               GrowableIntList.reportClientError((Throwable) null, "A1: " + t.formatPacketDump(99), -8555);
-              dn.c(84);
+              ShotEvent.c(84);
             }
           }
           return;

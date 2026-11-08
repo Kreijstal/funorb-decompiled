@@ -208,9 +208,9 @@ final class QuickChatMenu extends UiComponent {
               }
               var7 = (String) null;
               AlternateLongAndTextLoginPayload.a((byte) 117, (String) null, param3, ArrayWidgetGroup.field_I, hn.field_b, var5);
-              Bzip2DecoderState.a(var5, ArrayWidgetGroup.field_I, hn.field_b, (byte) -76, c.field_d);
+              Bzip2DecoderState.a(var5, ArrayWidgetGroup.field_I, hn.field_b, (byte) -76, QuickChatMenuSupport.field_d);
               DialogLayer.i(15975);
-              cp.a(false);
+              InputIdleSupport.resetInputIdleTimer(false);
             } else {
               ClassicBallSkin.j(1);
               DialogLayer.i(15975);
@@ -222,14 +222,14 @@ final class QuickChatMenu extends UiComponent {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_Sb = null;
         field_Yb = null;
         playerYouX2AreOfferingDraw = null;
         loginUsername = null;
         field_Zb = null;
         if (param0 >= -103) {
-          QuickChatMenu.h(78);
+          QuickChatMenu.releaseStatics(78);
         }
         field_Rb = null;
         field_gc = (int[][]) null;

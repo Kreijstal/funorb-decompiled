@@ -152,7 +152,7 @@ final class TriangleRasterizer {
         textureProvider = param0;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    private final static void drawTexturedScanline(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         int dupTemp$18 = 0;
         int dupTemp$19 = 0;
         int dupTemp$20 = 0;
@@ -1790,7 +1790,7 @@ final class TriangleRasterizer {
                 while (true) {
                   param2--;
                   if (param2 >= 0) {
-                    TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                    TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                     param4 = param4 + var28;
                     param3 = param3 + var26;
                     param6 = param6 + var31;
@@ -1804,7 +1804,7 @@ final class TriangleRasterizer {
                 }
                 param1--;
                 while (param1 >= 0) {
-                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var27;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
@@ -1822,7 +1822,7 @@ final class TriangleRasterizer {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
@@ -1836,7 +1836,7 @@ final class TriangleRasterizer {
               }
               param1--;
               while (param1 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
@@ -1875,7 +1875,7 @@ final class TriangleRasterizer {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
@@ -1889,7 +1889,7 @@ final class TriangleRasterizer {
               }
               param2--;
               while (param2 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param4 = param4 + var27;
                 param6 = param6 + var31;
@@ -1907,7 +1907,7 @@ final class TriangleRasterizer {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
@@ -1921,7 +1921,7 @@ final class TriangleRasterizer {
             }
             param2--;
             while (param2 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
               param5 = param5 + var28;
               param4 = param4 + var27;
               param6 = param6 + var31;
@@ -1970,7 +1970,7 @@ final class TriangleRasterizer {
                 while (true) {
                   param1--;
                   if (param1 >= 0) {
-                    TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                    TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                     param3 = param3 + var27;
                     param5 = param5 + var28;
                     param8 = param8 + var31;
@@ -1984,7 +1984,7 @@ final class TriangleRasterizer {
                 }
                 param0--;
                 while (param0 >= 0) {
-                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var26;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
@@ -2002,7 +2002,7 @@ final class TriangleRasterizer {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param3 = param3 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
@@ -2016,7 +2016,7 @@ final class TriangleRasterizer {
               }
               param0--;
               while (param0 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var26;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
@@ -2053,7 +2053,7 @@ final class TriangleRasterizer {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
@@ -2067,7 +2067,7 @@ final class TriangleRasterizer {
               }
               param1--;
               while (param1 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param3 = param3 + var26;
                 param8 = param8 + var31;
@@ -2085,7 +2085,7 @@ final class TriangleRasterizer {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
@@ -2099,7 +2099,7 @@ final class TriangleRasterizer {
             }
             param1--;
             while (param1 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param8 = param8 + var31;
@@ -2147,7 +2147,7 @@ final class TriangleRasterizer {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var26;
                   param4 = param4 + var27;
                   param7 = param7 + var31;
@@ -2161,7 +2161,7 @@ final class TriangleRasterizer {
               }
               param2--;
               while (param2 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var28;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
@@ -2179,7 +2179,7 @@ final class TriangleRasterizer {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
@@ -2193,7 +2193,7 @@ final class TriangleRasterizer {
             }
             param2--;
             while (param2 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var28;
               param4 = param4 + var27;
               param7 = param7 + var31;
@@ -2232,7 +2232,7 @@ final class TriangleRasterizer {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
@@ -2246,7 +2246,7 @@ final class TriangleRasterizer {
             }
             param0--;
             while (param0 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param5 = param5 + var28;
               param7 = param7 + var31;
@@ -2264,7 +2264,7 @@ final class TriangleRasterizer {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param4 = param4 + var27;
               param7 = param7 + var31;
@@ -2278,7 +2278,7 @@ final class TriangleRasterizer {
           }
           param0--;
           while (param0 >= 0) {
-            TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+            TriangleRasterizer.drawTexturedScanline(SoftwareRasterizer.pixels, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
             param3 = param3 + var26;
             param5 = param5 + var28;
             param7 = param7 + var31;

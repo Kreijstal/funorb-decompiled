@@ -150,32 +150,32 @@ final class SoundCache {
           IntrusiveNodeHashTable.field_g = WidgetStyleLayer.loadSprite("", (byte) 62, "select_table_thumbnail_shuttle_locked", param1);
           MatchingTextValidator.field_t = new Sprite[]{null, null, pk.field_b, tq.field_n, IntrusiveNodeHashTable.field_g};
           TutorialSelectScreen.field_K = new Sprite[]{uj.field_c, NineSliceFrame.field_d, sk.field_b, LobbyPlayer.field_Vb, wn.field_e};
-          nn.field_a[0] = NameEntryPopup.a(cq.a(param0, 0), "", param1, "gameopt_listicons_turntime");
+          nn.field_a[0] = NameEntryPopup.a(TutorialFactory.bitwiseXor(param0, 0), "", param1, "gameopt_listicons_turntime");
           nn.field_a[2] = NameEntryPopup.a(param0 + 0, "", param1, "gameopt_listicons_theme");
-          nn.field_a[1] = NameEntryPopup.a(cq.a(param0, 0), "", param1, "gameopt_listicons_ruleset");
+          nn.field_a[1] = NameEntryPopup.a(TutorialFactory.bitwiseXor(param0, 0), "", param1, "gameopt_listicons_ruleset");
           nn.field_a[3] = NameEntryPopup.a(0, "", param1, "gameopt_listicons_guides");
           ff.field_f[0] = nn.field_a[0];
-          ff.field_f[2] = NameEntryPopup.a(cq.a(param0, 0), "", param1, "gameopt_buttonicons_theme");
+          ff.field_f[2] = NameEntryPopup.a(TutorialFactory.bitwiseXor(param0, 0), "", param1, "gameopt_buttonicons_theme");
           ff.field_f[3] = nn.field_a[3];
           ff.field_f[1] = nn.field_a[1];
           rm.field_g = gn.a(NameEntryPopup.a(0, "", param1, "frame"), (byte) -29);
           MidiPcmStream.field_y = gn.a(NameEntryPopup.a(0, "", param1, "frame_dark"), (byte) -29);
           UsernameSuggestionsPanel.field_N = gn.a(NameEntryPopup.a(param0 + 0, "", param1, "frame_black"), (byte) -29);
           ln.field_s = gn.a(NameEntryPopup.a(0, "", param1, "frame_selected"), (byte) -29);
-          cq.field_b = gn.a(NameEntryPopup.a(0, "", param1, "menu_main_frame"), (byte) -29);
+          TutorialFactory.field_b = gn.a(NameEntryPopup.a(0, "", param1, "menu_main_frame"), (byte) -29);
           DisplayNamePanel.field_T = WidgetStyleLayer.loadSprite("", (byte) 109, "menu_main_frame_pocket_bottom", param1);
           mj.field_b = WidgetStyleLayer.loadSprite("", (byte) 104, "menu_main_frame_pocket_top", param1);
-          bi.field_a = WidgetStyleLayer.loadSprite("", (byte) 47, "menu_main_frame_pocket_left", param1);
+          LoginPayloadFactory.field_a = WidgetStyleLayer.loadSprite("", (byte) 47, "menu_main_frame_pocket_left", param1);
           MessageDialogContent.field_T = WidgetStyleLayer.loadSprite("", (byte) 123, "menu_main_frame_pocket_right", param1);
           FullscreenFocusCanvas.field_a = lb.loadSprite(param1, -45, "", "title_corner_ball8");
-          cl.field_k = lb.loadSprite(param1, param0 ^ 101, "", "title_corner_ball9");
+          ProjectedLineSupport.field_k = lb.loadSprite(param1, param0 ^ 101, "", "title_corner_ball9");
           IsaacCipher.field_f = NameEntryPopup.a(0, "", param1, "achievements");
           for (var2_intLifetime2 = 0; IsaacCipher.field_f.length > var2_intLifetime2; var2_intLifetime2++) {
             TextInputValidator.a(IsaacCipher.field_f[var2_intLifetime2], (byte) -12);
           }
           te.field_n = lb.loadSprite(param1, 99, "", "achievement_highlight_hover");
           td.field_g = lb.loadSprite(param1, 109, "", "achievement_highlight_selected");
-          cl.field_m = lb.loadSprite(param1, -10, "", "title_pool_logo_withalpha");
+          ProjectedLineSupport.field_m = lb.loadSprite(param1, -10, "", "title_pool_logo_withalpha");
           var11 = RankingsScreen.a(param1, 3812, "gradient_arrow_left", "");
           var25 = var11.field_i;
           var23 = new int[var25.length];
@@ -185,9 +185,9 @@ final class SoundCache {
             var23[var5_int] = var5_int;
           }
           StrongCacheEntry.a(var25, var23, (byte) -54);
-          var5 = dn.a(var4_ref_int__, (byte) 117, ta.buildGradientPalette(new int[]{0, 16744192, var25.length, 16777087}, param0 ^ -126));
-          var6 = dn.a(var4_ref_int__, (byte) 10, ta.buildGradientPalette(new int[]{0, 16776960, var25.length, 16777023}, 18));
-          var7 = dn.a(var4_ref_int__, (byte) 7, ta.buildGradientPalette(new int[]{0, 8355711, var25.length, 16777215}, param0 ^ 70));
+          var5 = ShotEvent.a(var4_ref_int__, (byte) 117, ta.buildGradientPalette(new int[]{0, 16744192, var25.length, 16777087}, param0 ^ -126));
+          var6 = ShotEvent.a(var4_ref_int__, (byte) 10, ta.buildGradientPalette(new int[]{0, 16776960, var25.length, 16777023}, 18));
+          var7 = ShotEvent.a(var4_ref_int__, (byte) 7, ta.buildGradientPalette(new int[]{0, 8355711, var25.length, 16777215}, param0 ^ 70));
           var11.field_i = var5;
           dupTemp$0 = ii.a(2, var11);
           hp.field_b = dupTemp$0;
@@ -199,7 +199,7 @@ final class SoundCache {
           var8.field_G = 0;
           var11.field_i = var6;
           dupTemp$1 = ii.a(2, var11);
-          eh.field_y = dupTemp$1;
+          HighScoreRequest.field_y = dupTemp$1;
           var15 = dupTemp$1;
           var8Lifetime1 = var15;
           var8Lifetime1.field_w = var15.field_z;
@@ -236,7 +236,7 @@ final class SoundCache {
           var8Lifetime4.field_B = 0;
           var11.field_i = var7;
           dupTemp$5 = ii.a(2, var11);
-          ag.field_b = dupTemp$5;
+          ScreenProjectionSupport.field_b = dupTemp$5;
           var19 = dupTemp$5;
           var8Lifetime5 = var19;
           var8Lifetime5.field_y = var19.field_A;
@@ -274,7 +274,7 @@ final class SoundCache {
           DialogLayer.field_Q = var3[incrementValue$14];
           il.field_f = WidgetStyleLayer.loadSprite("", (byte) 84, "side_power_bar", param1);
           LimitedRandomAccessFile.field_c = WidgetStyleLayer.loadSprite("", (byte) 94, "side_power_bar_fill", param1);
-          bq.field_n = WidgetStyleLayer.loadSprite("", (byte) 102, "top_bar_inner", param1);
+          AchievementNotice.field_n = WidgetStyleLayer.loadSprite("", (byte) 102, "top_bar_inner", param1);
           Js5Transport.field_q = WidgetStyleLayer.loadSprite("", (byte) 115, "top_bar", param1);
           ClassicBallSkin.field_n = WidgetStyleLayer.loadSprite("", (byte) 80, "top_bar_ball_open", param1);
           Quaternion.field_l = NameEntryPopup.a(0, "", param1, "hud_chat_tab_frame_empty");
@@ -311,7 +311,7 @@ final class SoundCache {
           PolarObject.field_d = NameEntryPopup.a(0, "", param1, "tutorial_controls");
           qg.field_b = WidgetStyleLayer.loadSprite("", (byte) 52, "tutorial_box_progress", param1);
           AccountCreationForm.field_Z = ArchiveRequest.a(param1, "", -24155, "controls");
-          bi.field_d = new int[AccountCreationForm.field_Z.length];
+          LoginPayloadFactory.field_d = new int[AccountCreationForm.field_Z.length];
           TextLayout.field_f = 0;
           for (var4 = 0; AccountCreationForm.field_Z.length > var4; var4++) {
             var21 = AccountCreationForm.field_Z[var4];
@@ -319,12 +319,12 @@ final class SoundCache {
             var21.fullHeight = var21.height;
             var21.fullWidth = var21.width;
             var21.trimY = 0;
-            bi.field_d[var4] = var21.fullHeight + sa.field_h.maxAscent - sa.field_h.maxDescent >> 1;
+            LoginPayloadFactory.field_d[var4] = var21.fullHeight + sa.field_h.maxAscent - sa.field_h.maxDescent >> 1;
             if (TextLayout.field_f < var21.height) {
               TextLayout.field_f = var21.height;
             }
           }
-          bc.b((byte) 17);
+          FontPaletteSupport.buildFontColorPalettes((byte) 17);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cf.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

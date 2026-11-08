@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class GlowSprite implements eb {
+final class GlowSprite implements SceneDrawable {
     int field_c;
     int field_e;
     int field_a;

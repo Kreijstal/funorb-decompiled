@@ -18,14 +18,14 @@ final class hn {
     }
 
     final static String formatCookieDate(long param0, boolean param1) {
-        aq.field_b.setTime(new Date(param0));
-        int var3 = aq.field_b.get(7);
-        int var4 = aq.field_b.get(5);
-        int var5 = aq.field_b.get(2);
-        int var6 = aq.field_b.get(1);
-        int var7 = aq.field_b.get(11);
-        int var8 = aq.field_b.get(12);
-        int var9 = aq.field_b.get(13);
+        DebugOverlayLayoutSupport.field_b.setTime(new Date(param0));
+        int var3 = DebugOverlayLayoutSupport.field_b.get(7);
+        int var4 = DebugOverlayLayoutSupport.field_b.get(5);
+        int var5 = DebugOverlayLayoutSupport.field_b.get(2);
+        int var6 = DebugOverlayLayoutSupport.field_b.get(1);
+        int var7 = DebugOverlayLayoutSupport.field_b.get(11);
+        int var8 = DebugOverlayLayoutSupport.field_b.get(12);
+        int var9 = DebugOverlayLayoutSupport.field_b.get(13);
         if (!param1) {
           return kc.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + AimTarget.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }

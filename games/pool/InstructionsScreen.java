@@ -24,11 +24,11 @@ final class InstructionsScreen extends MenuScreen {
           if (DiskCacheWorker.instructionsTitles[this.pageIndex] == pl.field_f) {
             pl.field_a.draw(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -FreePlayRules.field_e.maxAscent + var3);
             var3 += 5;
-            if (bq.field_p != this.pageIndex ||
+            if (AchievementNotice.field_p != this.pageIndex ||
               null == LocalGameSetupScreen.field_K) {
               ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-              LocalGameSetupScreen.field_K = ef.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
-              bq.field_p = this.pageIndex;
+              LocalGameSetupScreen.field_K = FaceNormal.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
+              AchievementNotice.field_p = this.pageIndex;
             }
           } else {
             dupTemp$2 = DiskCacheWorker.instructionsTitles[this.pageIndex];
@@ -36,20 +36,20 @@ final class InstructionsScreen extends MenuScreen {
             pl.field_a = dq.createTextLabelSprite(4, 0, dupTemp$2);
             pl.field_a.draw(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -FreePlayRules.field_e.maxAscent + var3);
             var3 += 5;
-            if (bq.field_p != this.pageIndex ||
+            if (AchievementNotice.field_p != this.pageIndex ||
               null == LocalGameSetupScreen.field_K) {
               ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-              LocalGameSetupScreen.field_K = ef.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
-              bq.field_p = this.pageIndex;
+              LocalGameSetupScreen.field_K = FaceNormal.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
+              AchievementNotice.field_p = this.pageIndex;
             }
           }
-          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
+          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
           this.renderParagraphSprite(sa.field_h, NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], 10 + var3, -16097, LocalGameSetupScreen.field_K, var2, 13421772);
           nj.drawNineSlice(MidiPcmStream.field_y, (byte) 21, 20 + var2, -10 + (SoftwareRasterizer.width - var2 >> 1), var3, 190);
           this.drawParagraphSprite(10 + var3, false);
           if (this.pageIndex != Js5ArchiveManager.field_k) {
             Js5ArchiveManager.field_k = this.pageIndex;
-            GameApplet.field_h = dq.createTextLabelSprite(2, 0, aq.formatPageIndicator(this.pageIndex, 121));
+            GameApplet.field_h = dq.createTextLabelSprite(2, 0, DebugOverlayLayoutSupport.formatPageIndicator(this.pageIndex, 121));
           }
           GameApplet.field_h.draw(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
           var4 = TextureCache.a(104);
@@ -68,19 +68,19 @@ final class InstructionsScreen extends MenuScreen {
         if (DiskCacheWorker.instructionsTitles[this.pageIndex] == pl.field_f) {
           pl.field_a.draw(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -FreePlayRules.field_e.maxAscent + var3Lifetime1);
           var3Lifetime1 += 5;
-          if (bq.field_p != this.pageIndex ||
+          if (AchievementNotice.field_p != this.pageIndex ||
             null == LocalGameSetupScreen.field_K) {
             ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-            LocalGameSetupScreen.field_K = ef.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
-            bq.field_p = this.pageIndex;
+            LocalGameSetupScreen.field_K = FaceNormal.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
+            AchievementNotice.field_p = this.pageIndex;
           }
-          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
+          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
           this.renderParagraphSprite(sa.field_h, NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], 10 + var3Lifetime1, -16097, LocalGameSetupScreen.field_K, var2, 13421772);
           nj.drawNineSlice(MidiPcmStream.field_y, (byte) 21, 20 + var2, -10 + (SoftwareRasterizer.width - var2 >> 1), var3Lifetime1, 190);
           this.drawParagraphSprite(10 + var3Lifetime1, false);
           if (this.pageIndex != Js5ArchiveManager.field_k) {
             Js5ArchiveManager.field_k = this.pageIndex;
-            GameApplet.field_h = dq.createTextLabelSprite(2, 0, aq.formatPageIndicator(this.pageIndex, 121));
+            GameApplet.field_h = dq.createTextLabelSprite(2, 0, DebugOverlayLayoutSupport.formatPageIndicator(this.pageIndex, 121));
           }
           GameApplet.field_h.draw(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
           var4Lifetime1 = TextureCache.a(104);
@@ -97,17 +97,17 @@ final class InstructionsScreen extends MenuScreen {
         pl.field_a = dq.createTextLabelSprite(4, 0, dupTemp$3);
         pl.field_a.draw(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -FreePlayRules.field_e.maxAscent + var3Lifetime1);
         var3Lifetime1 += 5;
-        if (bq.field_p != this.pageIndex) {
+        if (AchievementNotice.field_p != this.pageIndex) {
           ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-          LocalGameSetupScreen.field_K = ef.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
-          bq.field_p = this.pageIndex;
-          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
+          LocalGameSetupScreen.field_K = FaceNormal.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
+          AchievementNotice.field_p = this.pageIndex;
+          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
           this.renderParagraphSprite(sa.field_h, NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], 10 + var3Lifetime1, -16097, LocalGameSetupScreen.field_K, var2, 13421772);
           nj.drawNineSlice(MidiPcmStream.field_y, (byte) 21, 20 + var2, -10 + (SoftwareRasterizer.width - var2 >> 1), var3Lifetime1, 190);
           this.drawParagraphSprite(10 + var3Lifetime1, false);
           if (this.pageIndex != Js5ArchiveManager.field_k) {
             Js5ArchiveManager.field_k = this.pageIndex;
-            GameApplet.field_h = dq.createTextLabelSprite(2, 0, aq.formatPageIndicator(this.pageIndex, 121));
+            GameApplet.field_h = dq.createTextLabelSprite(2, 0, DebugOverlayLayoutSupport.formatPageIndicator(this.pageIndex, 121));
           }
           GameApplet.field_h.draw(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
           var4Lifetime2 = TextureCache.a(104);
@@ -121,16 +121,16 @@ final class InstructionsScreen extends MenuScreen {
         }
         if (null == LocalGameSetupScreen.field_K) {
           ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-          LocalGameSetupScreen.field_K = ef.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
-          bq.field_p = this.pageIndex;
+          LocalGameSetupScreen.field_K = FaceNormal.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
+          AchievementNotice.field_p = this.pageIndex;
         }
-        sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
+        sa.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
         this.renderParagraphSprite(sa.field_h, NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], 10 + var3Lifetime1, -16097, LocalGameSetupScreen.field_K, var2, 13421772);
         nj.drawNineSlice(MidiPcmStream.field_y, (byte) 21, 20 + var2, -10 + (SoftwareRasterizer.width - var2 >> 1), var3Lifetime1, 190);
         this.drawParagraphSprite(10 + var3Lifetime1, false);
         if (this.pageIndex != Js5ArchiveManager.field_k) {
           Js5ArchiveManager.field_k = this.pageIndex;
-          GameApplet.field_h = dq.createTextLabelSprite(2, 0, aq.formatPageIndicator(this.pageIndex, 121));
+          GameApplet.field_h = dq.createTextLabelSprite(2, 0, DebugOverlayLayoutSupport.formatPageIndicator(this.pageIndex, 121));
         }
         GameApplet.field_h.draw(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
         var4Lifetime3 = TextureCache.a(104);
@@ -324,8 +324,8 @@ final class InstructionsScreen extends MenuScreen {
         if (null == LocalGameSetupScreen.field_K) {
           return;
         }
-        if (bq.field_p != -1) {
-          this.field_G = ag.findHotspotRegion(DebouncedValidationProvider.field_f, ScrollPaneWithFooter.field_Lb, wn.field_i, 15395);
+        if (AchievementNotice.field_p != -1) {
+          this.field_G = ScreenProjectionSupport.findHotspotRegion(DebouncedValidationProvider.field_f, ScrollPaneWithFooter.field_Lb, wn.field_i, 15395);
           LongAndTextLoginPayload.field_l = 12;
           SocialListEntry.field_Vb = 12;
           PauseMenuScreen.g(0, null == this.field_G ? -1 : this.field_G.field_p);

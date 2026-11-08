@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MicrosoftDirectSoundInitializer implements dm {
+final class MicrosoftDirectSoundInitializer implements MicrosoftDirectSoundMarker {
     private com.ms.directX.DSBufferDesc[] field_a;
     private com.ms.directX.DSCursors[] field_b;
 

@@ -10,28 +10,28 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static boolean field_a;
 
     final static UiTheme createUiTheme(int param0) {
-        if (null == ae.field_c) {
-          ae.field_c = new UiTheme();
-          ae.field_c.initializePainters(ValidationIconWidget.field_O, -76);
-          ae.field_c.tooltipLeftPadding = 6;
-          ae.field_c.tooltipBottomPadding = 4;
-          ae.field_c.tooltipFont = PoolUiText.field_a;
-          ae.field_c.tooltipBackgroundColor = 2763306;
-          ae.field_c.tooltipBorderColor = 7697781;
-          ae.field_c.tooltipTopPadding = 0;
-          ae.field_c.tooltipLineSpacing = 14;
-          ae.field_c.tooltipRightPadding = 5;
+        if (null == MembershipBenefitsLoader.field_c) {
+          MembershipBenefitsLoader.field_c = new UiTheme();
+          MembershipBenefitsLoader.field_c.initializePainters(ValidationIconWidget.field_O, -76);
+          MembershipBenefitsLoader.field_c.tooltipLeftPadding = 6;
+          MembershipBenefitsLoader.field_c.tooltipBottomPadding = 4;
+          MembershipBenefitsLoader.field_c.tooltipFont = PoolUiText.field_a;
+          MembershipBenefitsLoader.field_c.tooltipBackgroundColor = 2763306;
+          MembershipBenefitsLoader.field_c.tooltipBorderColor = 7697781;
+          MembershipBenefitsLoader.field_c.tooltipTopPadding = 0;
+          MembershipBenefitsLoader.field_c.tooltipLineSpacing = 14;
+          MembershipBenefitsLoader.field_c.tooltipRightPadding = 5;
           if (param0 != 14) {
             field_c = (String[]) null;
-            return ae.field_c;
+            return MembershipBenefitsLoader.field_c;
           }
-          return ae.field_c;
+          return MembershipBenefitsLoader.field_c;
         }
         if (param0 == 14) {
-          return ae.field_c;
+          return MembershipBenefitsLoader.field_c;
         }
         field_c = (String[]) null;
-        return ae.field_c;
+        return MembershipBenefitsLoader.field_c;
     }
 
     public static void releaseStatics(int param0) {

@@ -158,8 +158,8 @@ final class sm extends om {
           if (param1.endX != param1.startX) {
             if (param1.endY != param1.startY) {
               var9 = (long)(NameEntryPopup.a(param3.velocityX, false, var4_int) + NameEntryPopup.a(param3.velocityY, false, var5));
-              param3.velocityX = (int)((long)param3.velocityX - (FullscreenFocusCanvas.multiplyFixedChecked((long)var4_int, var9, false) * (long)(256 + dj.field_g) >> 8));
-              param3.velocityY = (int)((long)param3.velocityY - (FullscreenFocusCanvas.multiplyFixedChecked((long)var5, var9, false) * (long)(256 + dj.field_g) >> 8));
+              param3.velocityX = (int)((long)param3.velocityX - (FullscreenFocusCanvas.multiplyFixedChecked((long)var4_int, var9, false) * (long)(256 + FullscreenDisplayMode.field_g) >> 8));
+              param3.velocityY = (int)((long)param3.velocityY - (FullscreenFocusCanvas.multiplyFixedChecked((long)var5, var9, false) * (long)(256 + FullscreenDisplayMode.field_g) >> 8));
               param3.angularVelocityY = 0;
               param3.angularVelocityX = 0;
               if (td.field_b < nn.field_e.length) {
@@ -170,7 +170,7 @@ final class sm extends om {
             } else {
               param3.angularVelocityX = -(param3.angularVelocityX * kp.field_m) >> 8;
               param3.angularVelocityY = param3.angularVelocityY * kp.field_m >> 8;
-              param3.velocityY = -(dj.field_g * param3.velocityY) >> 8;
+              param3.velocityY = -(FullscreenDisplayMode.field_g * param3.velocityY) >> 8;
               if (td.field_b < nn.field_e.length) {
                 nn.field_e[td.field_b][0] = param3.positionX;
                 stackIn_12_0 = nn.field_e[td.field_b];
@@ -187,7 +187,7 @@ final class sm extends om {
             }
           } else {
             param3.angularVelocityX = param3.angularVelocityX * kp.field_m >> 8;
-            param3.velocityX = -(param3.velocityX * dj.field_g) >> 8;
+            param3.velocityX = -(param3.velocityX * FullscreenDisplayMode.field_g) >> 8;
             param3.angularVelocityY = -(kp.field_m * param3.angularVelocityY) >> 8;
             if (td.field_b < nn.field_e.length) {
               stackIn_6_0 = nn.field_e[td.field_b];

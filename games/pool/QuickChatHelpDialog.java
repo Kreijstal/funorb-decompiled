@@ -23,10 +23,10 @@ final class QuickChatHelpDialog extends UiComponent {
           if (Ball.field_B.length <= UiComponentNode.field_y) {
             return false;
           }
-          for (var1_int = 0; pc.field_a.length > var1_int; var1_int++) {
-            Ball.field_B[UiComponentNode.field_y][var1_int].copyFrom(pc.field_a[var1_int], (byte) -12);
+          for (var1_int = 0; ShotPreviewState.field_a.length > var1_int; var1_int++) {
+            Ball.field_B[UiComponentNode.field_y][var1_int].copyFrom(ShotPreviewState.field_a[var1_int], (byte) -12);
           }
-          pc.field_a = Ball.field_B[UiComponentNode.field_y];
+          ShotPreviewState.field_a = Ball.field_B[UiComponentNode.field_y];
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -261,10 +261,10 @@ final class QuickChatHelpDialog extends UiComponent {
           var9.horizontalAlignment = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; bj.quickchatShortcutHelp.length > var12; var12++) {
+          for (var12 = 0; DottedRectangleSupport.quickchatShortcutHelp.length > var12; var12++) {
             var13 = new UiComponent(0L, param3, ValidationMessageWidget.quickchatShortcutKeys[var12]);
-            var14 = new UiComponent(0L, param3, bj.quickchatShortcutHelp[var12]);
-            var15 = param3.font.b(bj.quickchatShortcutHelp[var12]);
+            var14 = new UiComponent(0L, param3, DottedRectangleSupport.quickchatShortcutHelp[var12]);
+            var15 = param3.font.b(DottedRectangleSupport.quickchatShortcutHelp[var12]);
             var13.setBounds(var10, 2147483647, 20, 65, 15);
             if (var11 < var15) {
               var11 = var15;

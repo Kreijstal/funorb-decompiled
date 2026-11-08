@@ -38,7 +38,7 @@ final class TikiTableScene extends ModelTableScene {
         this.field_l = sa.progressJungleBulk;
         this.field_G = 17;
         this.field_H = 0;
-        de.field_g = param0 ? true : false;
+        DebugTuningSupport.field_g = param0 ? true : false;
     }
 
     final static StringBuilder a(char param0, int param1, int param2, StringBuilder param3) {
@@ -104,7 +104,7 @@ final class TikiTableScene extends ModelTableScene {
           }
           if (500 > ln.field_t) {
             this.updateRollingSounds(128, 50, (byte) 71, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
-            if (MaxLengthTextInputWidget.nextRandomInt(400, true, ea.field_r) == 0) {
+            if (MaxLengthTextInputWidget.nextRandomInt(400, true, RankingsRequest.field_r) == 0) {
               this.playAmbientSounds(-4577, 32);
             }
           } else {
@@ -112,7 +112,7 @@ final class TikiTableScene extends ModelTableScene {
               if (ln.field_t < 2000) {
                 var3_int = (128 * ln.field_t - 64000) / 1500;
                 this.updateRollingSounds(128 - var3_int * 7 / 8, 50, (byte) 34, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
-                if (MaxLengthTextInputWidget.nextRandomInt(800, true, ea.field_r) == 0) {
+                if (MaxLengthTextInputWidget.nextRandomInt(800, true, RankingsRequest.field_r) == 0) {
                   this.playAmbientSounds(-4577, 128 - 7 * var3_int / 8 >> 2);
                 }
                 RankingsScreen.field_N.setChannelVolumeScale((byte) 77, -1, var3_int);
@@ -129,7 +129,7 @@ final class TikiTableScene extends ModelTableScene {
                   } else {
                     var3_int = 128 * (12200 - ln.field_t) / 1000;
                     this.updateRollingSounds(128 - 7 * var3_int / 8, 50, (byte) -126, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
-                    if (MaxLengthTextInputWidget.nextRandomInt(800, true, ea.field_r) == 0) {
+                    if (MaxLengthTextInputWidget.nextRandomInt(800, true, RankingsRequest.field_r) == 0) {
                       this.playAmbientSounds(-4577, 128 - var3_int * 7 / 8 >> 2);
                     }
                     RankingsScreen.field_N.setChannelVolumeScale((byte) 32, -1, var3_int);
@@ -324,7 +324,7 @@ final class TikiTableScene extends ModelTableScene {
           var9 = 2147483647;
           var10 = -2147483648;
           for (var4Lifetime1 = AgeValidator.field_q; om.field_x > var4Lifetime1; var4Lifetime1++) {
-            d.computeMeshBounds(this.field_O[var4Lifetime1], -23109);
+            MeshBoundsSupport.computeMeshBounds(this.field_O[var4Lifetime1], -23109);
             if (this.field_O[var4Lifetime1].field_S > var8) {
               var8 = this.field_O[var4Lifetime1].field_S;
             }
@@ -351,7 +351,7 @@ final class TikiTableScene extends ModelTableScene {
           var13 = var10;
           for (var4Lifetime2 = 0; this.field_O.length > var4Lifetime2; var4Lifetime2++) {
             if (null != this.field_O[var4Lifetime2]) {
-              cq.a(var11, 90, var13, this.field_O[var4Lifetime2], var12);
+              TutorialFactory.translateMeshOrigin(var11, 90, var13, this.field_O[var4Lifetime2], var12);
             }
           }
           this.field_M = new int[this.field_O.length][3];
@@ -367,7 +367,7 @@ final class TikiTableScene extends ModelTableScene {
             var17 = this.field_O[var15];
             var34 = this.field_M[var15];
             var19 = var16;
-            var21 = a.mirrorVertically(true, new MeshBuilder(var17, false, false, false, false));
+            var21 = Cp1252DecodingSupport.mirrorVertically(true, new MeshBuilder(var17, false, false, false, false));
             var29 = mj.identityTransform(-31121);
             var24 = var29;
             var20 = var24;
@@ -575,7 +575,7 @@ final class TikiTableScene extends ModelTableScene {
             kp.a(100, this.field_bb, param3, param1);
           }
         } else {
-          var6 = MaxLengthTextInputWidget.nextRandomInt(3, true, ea.field_r);
+          var6 = MaxLengthTextInputWidget.nextRandomInt(3, true, RankingsRequest.field_r);
           if (var6 != 0) {
             if (var6 != 1) {
               if (var6 == 2) {
@@ -782,7 +782,7 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         playerXNowHasNLives = null;
         field_fb = null;
         monthnames = null;
@@ -899,8 +899,8 @@ final class TikiTableScene extends ModelTableScene {
             var19.sortModelsByDepth((byte) 112, 0, var19.field_j.length, var39);
           }
           this.prepareBallDrawOrder(false, var30, var21);
-          PlayingSound.sortParallelArrays(ta.field_c, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, cq.field_c);
-          PlayingSound.sortParallelArrays(TextWidgetPainter.field_h, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, c.field_b);
+          PlayingSound.sortParallelArrays(ta.field_c, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, TutorialFactory.field_c);
+          PlayingSound.sortParallelArrays(TextWidgetPainter.field_h, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, QuickChatMenuSupport.field_b);
           PlayingSound.sortParallelArrays(gf.field_d, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, CheckboxPainter.field_n);
           PlayingSound.sortParallelArrays(DelegatingCanvas.field_d, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ClientException.field_e);
           PlayingSound.sortParallelArrays(wn.field_j, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ue.field_a);
@@ -909,7 +909,7 @@ final class TikiTableScene extends ModelTableScene {
           this.a(256, 3, 256, (byte) -86);
           var6 = TriangleRasterizer.colorPalette;
           for (var5Lifetime1 = ln.field_u.length - 1; 1 < var5Lifetime1; var5Lifetime1--) {
-            TriangleRasterizer.colorPalette = dn.field_m[-1 + var5Lifetime1];
+            TriangleRasterizer.colorPalette = ShotEvent.field_m[-1 + var5Lifetime1];
             var22 = ln.field_u[var5Lifetime1];
             var40 = ArchiveRequest.field_w;
             var22.drawModelRange((byte) -122, 0, var22.field_j.length, var40);
@@ -917,7 +917,7 @@ final class TikiTableScene extends ModelTableScene {
               ln.field_u[var5Lifetime1].drawAllModels(ArchiveRequest.field_w, 0);
             }
           }
-          TriangleRasterizer.colorPalette = dn.field_m[0];
+          TriangleRasterizer.colorPalette = ShotEvent.field_m[0];
           if (param0 != -55) {
             var12 = (MeshBuilder) null;
             this.a((int[]) null, (IntrusiveDeque[]) null, (MeshBuilder) null, -92);
@@ -938,10 +938,10 @@ final class TikiTableScene extends ModelTableScene {
           if ((4194304L & LinkButtonPainter.field_i) != 0L) {
             return;
           }
-          for (var5Lifetime2 = -1 + ta.field_c; cq.field_c <= var5Lifetime2; var5Lifetime2--) {
+          for (var5Lifetime2 = -1 + ta.field_c; TutorialFactory.field_c <= var5Lifetime2; var5Lifetime2--) {
             th.field_l[ph.field_g[var5Lifetime2]].c(6710886, GzipDecoder.field_d);
           }
-          for (var5Lifetime3 = -1 + TextWidgetPainter.field_h; c.field_b <= var5Lifetime3; var5Lifetime3--) {
+          for (var5Lifetime3 = -1 + TextWidgetPainter.field_h; QuickChatMenuSupport.field_b <= var5Lifetime3; var5Lifetime3--) {
             th.field_l[ph.field_g[var5Lifetime3]].c(6710886, GzipDecoder.field_d);
           }
           for (var5Lifetime4 = gf.field_d - 1; var5Lifetime4 >= CheckboxPainter.field_n; var5Lifetime4--) {
@@ -1128,16 +1128,16 @@ final class TikiTableScene extends ModelTableScene {
           var4Lifetime1 = this.field_O[var9].field_x + var5;
           var9++;
         }
-        dn.field_m = new int[ThemeSelectScreen.field_K][];
+        ShotEvent.field_m = new int[ThemeSelectScreen.field_K][];
         ln.field_u = new SceneNode[ThemeSelectScreen.field_K];
-        ah.field_e = new SceneNode[ThemeSelectScreen.field_K];
+        VertexNormal.field_e = new SceneNode[ThemeSelectScreen.field_K];
         for (var5 = 0; ThemeSelectScreen.field_K > var5; var5++) {
           var6 = 63 + var5 * 192 / ThemeSelectScreen.field_K;
           var7 = 128;
-          dn.field_m[var5] = tq.a(md.bitwiseOr(var7, md.bitwiseOr(var7 << 16, var7 << 8)), var6, false);
-          ah.field_e[var5] = new SceneNode();
-          ah.field_e[var5].setChildren((byte) -112, var3[var5]);
-          ValidationMessageWidget.field_Y[var5].addFirst((byte) -52, new pm(ah.field_e[var5]));
+          ShotEvent.field_m[var5] = tq.a(md.bitwiseOr(var7, md.bitwiseOr(var7 << 16, var7 << 8)), var6, false);
+          VertexNormal.field_e[var5] = new SceneNode();
+          VertexNormal.field_e[var5].setChildren((byte) -112, var3[var5]);
+          ValidationMessageWidget.field_Y[var5].addFirst((byte) -52, new pm(VertexNormal.field_e[var5]));
           ln.field_u[var5] = new SceneNode();
           ln.field_u[var5].setChildren((byte) -121, ValidationMessageWidget.field_Y[var5]);
           ln.field_u[var5].normalizeOffsets(0);
@@ -1224,59 +1224,59 @@ final class TikiTableScene extends ModelTableScene {
             FreePlayRules.field_j[var3].field_o.isSamplePositionOutOfRange() ||
             !FreePlayRules.field_j[var3].field_o.b(param0 ^ 4492)) {
             stackIn_11_0 = (FreePlayRules.field_j[var3] == null) ? 11 : 22;
-            var4 = MaxLengthTextInputWidget.nextRandomInt(stackIn_11_0, true, ea.field_r);
+            var4 = MaxLengthTextInputWidget.nextRandomInt(stackIn_11_0, true, RankingsRequest.field_r);
             var6 = var4;
             if (var6 == 0) {
-              FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_db, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+              FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_db, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
             } else {
               if (var6 != 1) {
                 if (2 == var6) {
-                  FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_kb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+                  FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_kb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                 } else {
                   if (var6 != 3) {
                     if (4 != var6) {
                       if (var6 == 5) {
-                        FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_Z, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+                        FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_Z, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                       } else {
                         if (var6 != 6) {
                           if (var6 != 7) {
                             if (var6 != 8) {
                               if (var6 != 9) {
                                 if (var6 == 10) {
-                                  FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_gb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+                                  FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_gb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                                 } else {
                                   var5 = (PcmSample) (FreePlayRules.field_j[var3].field_o.field_n);
                                   if (var5 != this.field_X &&
                                     this.field_cb != var5 &&
                                     var5 != this.field_Y &&
                                     this.field_gb != var5) {
-                                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+                                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                                   } else {
-                                    FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+                                    FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                                   }
                                 }
                               } else {
-                                FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(101, PcmSampleStream.createAtRatePercentQ6(this.field_Y, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+                                FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(101, PcmSampleStream.createAtRatePercentQ6(this.field_Y, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                               }
                             } else {
-                              FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(124, PcmSampleStream.createAtRatePercentQ6(this.field_cb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+                              FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(124, PcmSampleStream.createAtRatePercentQ6(this.field_cb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                             }
                           } else {
-                            FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_X, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+                            FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_X, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                           }
                         } else {
-                          FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_ab, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+                          FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_ab, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                         }
                       }
                     } else {
-                      FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_T, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+                      FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_T, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                     }
                   } else {
-                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(cq.a(param0, 20231), PcmSampleStream.createAtRatePercentQ6(this.field_pb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(TutorialFactory.bitwiseXor(param0, 20231), PcmSampleStream.createAtRatePercentQ6(this.field_pb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                   }
                 }
               } else {
-                FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_nb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, ea.field_r)));
+                FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_nb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
               }
             }
           }
@@ -1379,7 +1379,7 @@ final class TikiTableScene extends ModelTableScene {
         var7 = Pool.field_O;
         th.field_l = new ModelInstance[-ThemeSelectScreen.field_S + MarkerSliderPainter.field_l + (DualLinkDequeIterator.field_a - FullscreenErrorDialog.field_ib + (-ViewportController.field_t + AccountCreationForm.field_T) + (this.field_O.length - kp.field_f + (ml.field_j - BallDebugOverlay.field_c))) - (-LobbyPlayer.field_Wb - UiComponent.field_L + (SpaceObject.field_i - 3 * (-AgeValidator.field_q + om.field_x)) + (-((-BallEvent.field_h + Camera.field_i) * 3) - 3 * (TextPairLoginPayload.field_h - NineSliceFrame.field_e)))];
         var3 = 0;
-        cq.field_c = var3;
+        TutorialFactory.field_c = var3;
         var2 = BallDebugOverlay.field_c;
         if (param0 > -11) {
           var8 = (PoolMatchController) null;
@@ -1393,7 +1393,7 @@ final class TikiTableScene extends ModelTableScene {
           var3 += 2;
           var2++;
         }
-        c.field_b = var3;
+        QuickChatMenuSupport.field_b = var3;
         ta.field_c = var3;
         for (var2Lifetime1 = SpaceObject.field_i; UiComponent.field_L > var2Lifetime1; var2Lifetime1++) {
           var4Lifetime1 = var2Lifetime1;

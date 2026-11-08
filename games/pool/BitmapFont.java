@@ -381,9 +381,9 @@ abstract class BitmapFont extends DualLinkNode {
         return var11;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
+    abstract void drawGlyphVerticalAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
-    public static void a() {
+    public static void releaseStatics() {
         field_z = null;
         wrappedLines = null;
     }
@@ -470,14 +470,14 @@ abstract class BitmapFont extends DualLinkNode {
               } else {
                 if (currentAlpha != 256) {
                   if (currentShadowColor != -1) {
-                    this.a(var8, param1 + this.field_y[var8] + 1, param2 - this.field_x[var8] + 1, var11, var9, currentShadowColor, currentAlpha, true);
+                    this.drawGlyphVerticalAlpha(var8, param1 + this.field_y[var8] + 1, param2 - this.field_x[var8] + 1, var11, var9, currentShadowColor, currentAlpha, true);
                   }
-                  this.a(var8, param1 + this.field_y[var8], param2 - this.field_x[var8], var11, var9, currentTextColor, currentAlpha, false);
+                  this.drawGlyphVerticalAlpha(var8, param1 + this.field_y[var8], param2 - this.field_x[var8], var11, var9, currentTextColor, currentAlpha, false);
                 } else {
                   if (currentShadowColor != -1) {
-                    this.a(var8, param1 + this.field_y[var8] + 1, param2 - this.field_x[var8] + 1, var11, var9, currentShadowColor, true);
+                    this.drawGlyphVertical(var8, param1 + this.field_y[var8] + 1, param2 - this.field_x[var8] + 1, var11, var9, currentShadowColor, true);
                   }
-                  this.a(var8, param1 + this.field_y[var8], param2 - this.field_x[var8], var11, var9, currentTextColor, false);
+                  this.drawGlyphVertical(var8, param1 + this.field_y[var8], param2 - this.field_x[var8], var11, var9, currentTextColor, false);
                 }
               }
               if (field_J != -1) {
@@ -933,7 +933,7 @@ abstract class BitmapFont extends DualLinkNode {
         return this.drawParagraphAlpha(text, left, top, width, height, textColor, shadow, 256, horizontalAlignment, verticalAlignment, lineSpacing);
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
+    abstract void drawGlyphVertical(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
     final void drawCentered(String text, int centerX, int baselineY, int textColor, int shadow) {
         if (text == null) {

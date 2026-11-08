@@ -160,7 +160,7 @@ final class GrowableIntList {
           try {
             var3 = "";
             if (param0 != null) {
-              var3 = ee.formatThrowable(5, param0);
+              var3 = QuickChatCategoryCache.formatThrowable(5, param0);
             }
             if (param1 != null) {
               if (param0 != null) {

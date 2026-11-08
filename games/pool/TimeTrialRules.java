@@ -47,7 +47,7 @@ final class TimeTrialRules extends GameRules {
 
     final int[] rackOrder(int param0, byte param1) {
         if (param1 != -32) {
-          this.b(79);
+          this.defaultBallInHandMode(79);
         }
         return uj.field_a;
     }
@@ -60,7 +60,7 @@ final class TimeTrialRules extends GameRules {
         return false;
     }
 
-    final int b(int param0) {
+    final int defaultBallInHandMode(int param0) {
         int var2 = -28 % ((-79 - param0) / 38);
         return 1;
     }
@@ -195,7 +195,7 @@ final class TimeTrialRules extends GameRules {
             if (param2 < 71) {
               return;
             }
-            cq.field_a = param5;
+            TutorialFactory.field_a = param5;
             kc.field_c = param12;
             NanoTickClock.field_s = param6;
             PlayerContextMenu.field_j = param13;
@@ -238,7 +238,7 @@ final class TimeTrialRules extends GameRules {
         }
     }
 
-    public static void p(int param0) {
+    public static void releaseStatics(int param0) {
         playerNameYouHaveAnExtraShot = null;
         if (param0 != -9) {
           TimeTrialRules.configureClientConnection(89, 15, (byte) -50, true, -63, 93, true, (String) null, (PlatformTaskDispatcher) null, -10, -14, -81, -56, -98L);
@@ -325,7 +325,7 @@ final class TimeTrialRules extends GameRules {
           var11.addEvent(3, -14, new int[]{var10.playerIndex});
           var11.field_w = (byte)(var11.field_w - 1);
           var11.field_t = true;
-          var5 = var5 | (AccountWelcomePanel.field_R | (um.field_c | OptionsScreen.field_I));
+          var5 = var5 | (AccountWelcomePanel.field_R | (MeshBase.field_c | OptionsScreen.field_I));
         }
         if (8 == var11.field_n &&
           var4 != 2) {
@@ -346,7 +346,7 @@ final class TimeTrialRules extends GameRules {
           var6 == 1 &&
           ((PotEvent) (var11.pottedBalls.last((byte) 62))).ballIndex == 8 &&
           var4 == 2) {
-          return ag.field_e;
+          return ScreenProjectionSupport.field_e;
         }
         var7 = new IntrusiveDequeCursor(var11.pottedBalls);
         var8 = (PotEvent) (var7.last((byte) -92));

@@ -27,7 +27,7 @@ final class ViewportController {
     static boolean field_y;
     private int field_d;
     static int field_t;
-    private bd field_o;
+    private ViewportResizeListener field_o;
 
     final static void a(ResourceArchive param0, int param1) {
         Object var2 = null;
@@ -100,17 +100,17 @@ final class ViewportController {
           return;
         }
         if (ml.field_d < this.field_j) {
-          cl.field_e = (this.field_j - ml.field_d) / 2;
+          ProjectedLineSupport.field_e = (this.field_j - ml.field_d) / 2;
         } else {
           if (0 < this.field_j) {
-            cl.field_e = 0;
+            ProjectedLineSupport.field_e = 0;
           }
         }
         if (ml.field_d == this.field_d &&
           ArchiveIndex.field_c == this.field_h) {
           return;
         }
-        this.field_o.a(this.field_h, this.field_d, 110);
+        this.field_o.onViewportResize(this.field_h, this.field_d, 110);
     }
 
     public static void releaseStatics(int param0) {
@@ -145,7 +145,7 @@ final class ViewportController {
           var6 = UsernameAvailabilityValidator.field_o;
           var4Lifetime1.field_n.layoutAtAnchor(0, 0, var5, 0, var6);
         }
-        d.a(param2, (byte) 21, param0);
+        MeshBoundsSupport.a(param2, (byte) 21, param0);
     }
 
     final static void a(float[] param0, int param1, int param2, int[] param3) {
@@ -156,7 +156,7 @@ final class ViewportController {
           return;
         }
         try {
-          ag.projectToScreen(param3, param0, 9);
+          ScreenProjectionSupport.projectToScreen(param3, param0, 9);
           SoftwareRasterizer.drawLine((int)param0[0], -4 + (int)param0[1], (int)param0[0], 4 + (int)param0[1], param1);
           int var4_int = 91 / ((55 - param2) / 46);
           SoftwareRasterizer.drawLine((int)param0[0] - 4, (int)param0[1], (int)param0[0] + 4, (int)param0[1], param1);
@@ -166,7 +166,7 @@ final class ViewportController {
     }
 
     final void d(int param0) {
-        this.field_o.a(this.field_i, this.field_u, param0 ^ 22433);
+        this.field_o.onViewportResize(this.field_i, this.field_u, param0 ^ 22433);
         if (param0 != 22472) {
           muRequestDeclined = (String) null;
         }
@@ -201,7 +201,7 @@ final class ViewportController {
     final FullscreenFocusCanvas b(int param0) {
         this.field_u = ml.field_d;
         this.field_i = ArchiveIndex.field_c;
-        this.field_o.a(this.field_p, this.field_a, 117);
+        this.field_o.onViewportResize(this.field_p, this.field_a, 117);
         int var2 = 35 % ((58 - param0) / 41);
         TabbedPane.field_Sb = false;
         FullscreenFocusCanvas var3 = wp.openFullscreenCanvas(this.field_a, StatefulTextPainter.field_s, (byte) 0, this.field_p, 0, 0);
@@ -266,10 +266,10 @@ final class ViewportController {
         }
         if (ml.field_d != var2 ||
           ArchiveIndex.field_c != var3) {
-          this.field_o.a(var3, var2, param0 + 99);
+          this.field_o.onViewportResize(var3, var2, param0 + 99);
         }
         if (this.field_j > 0) {
-          cl.field_e = (-ml.field_d + this.field_j) / 2;
+          ProjectedLineSupport.field_e = (-ml.field_d + this.field_j) / 2;
         }
     }
 

@@ -36,7 +36,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           int var3_intLifetime2;
           var7 = Pool.field_O;
           try {
-            d.computeMeshBounds(param2, -23109);
+            MeshBoundsSupport.computeMeshBounds(param2, -23109);
             var4 = param2.field_D + param2.field_w >> 1;
             var5 = param2.field_y + param2.field_S >> 1;
             var6 = param2.field_V + param2.field_x >> 1;
@@ -228,7 +228,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         for (var7 = IntrusiveDequeCursor.field_e - 1; var7 >= 0; var7--) {
           var8_ref_pn = wb.field_e[var7];
           var9 = 0;
-          if (!ea.field_z &&
+          if (!RankingsRequest.field_z &&
             var5 < QuickChatPhraseDefinition.field_E) {
             var10_int = f.a(5, var8_ref_pn.field_p);
             if (var8_ref_pn.b(14842) >= var10_int && (var8_ref_pn.field_g ||

@@ -51,13 +51,13 @@ final class DropTargetWidget extends SingleChildWidget {
     final static void g(byte param0) {
         if (param0 != 96) {
           field_O = (BallDebugOverlay[]) null;
-          if (!bj.c(1)) {
+          if (!DottedRectangleSupport.c(1)) {
             return;
           }
           CacheEntry.a(false, 4, 4);
           return;
         }
-        if (!bj.c(1)) {
+        if (!DottedRectangleSupport.c(1)) {
           return;
         }
         CacheEntry.a(false, 4, 4);

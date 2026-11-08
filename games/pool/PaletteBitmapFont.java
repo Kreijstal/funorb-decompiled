@@ -45,7 +45,7 @@ final class PaletteBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            PaletteBitmapFont.b(0, SoftwareRasterizer.pixels, this.field_V[param0], this.field_U[param5], var12, var9, param3, param4, var10, var11, param6);
+            PaletteBitmapFont.blitPaletteGlyphAlpha(0, SoftwareRasterizer.pixels, this.field_V[param0], this.field_U[param5], var12, var9, param3, param4, var10, var11, param6);
           } else {
             BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.pixels, this.field_V[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
@@ -53,7 +53,7 @@ final class PaletteBitmapFont extends BitmapFont {
         }
     }
 
-    private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitPaletteGlyph(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         byte dupTemp$4 = 0;
@@ -148,7 +148,7 @@ final class PaletteBitmapFont extends BitmapFont {
         this.field_U[0] = param5;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphVerticalAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var9;
         int var10;
         int var11;
@@ -189,9 +189,9 @@ final class PaletteBitmapFont extends BitmapFont {
           param4 > 0) {
           var12 = var12 - var11 * param3;
           if (!param7) {
-            PaletteBitmapFont.a(0, SoftwareRasterizer.pixels, this.field_V[param0], this.field_U[param5], var13, var9, var11, param3, param4, var10, var12, param6);
+            PaletteBitmapFont.blitPaletteGlyphVerticalAlpha(0, SoftwareRasterizer.pixels, this.field_V[param0], this.field_U[param5], var13, var9, var11, param3, param4, var10, var12, param6);
           } else {
-            BinaryBitmapFont.a(SoftwareRasterizer.pixels, this.field_V[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+            BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.pixels, this.field_V[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           }
           return;
         }
@@ -237,7 +237,7 @@ final class PaletteBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            PaletteBitmapFont.a(0, SoftwareRasterizer.pixels, this.field_V[param0], this.field_U[param5], var11, var8, param3, param4, var9, var10);
+            PaletteBitmapFont.blitPaletteGlyph(0, SoftwareRasterizer.pixels, this.field_V[param0], this.field_U[param5], var11, var8, param3, param4, var9, var10);
           } else {
             BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.pixels, this.field_V[param0], param5, var11, var8, param3, param4, var9, var10);
           }
@@ -245,7 +245,7 @@ final class PaletteBitmapFont extends BitmapFont {
         }
     }
 
-    private final static void b(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    private final static void blitPaletteGlyphAlpha(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var12 = 0;
         int var13 = 0;
         int incrementValue$16 = 0;
@@ -276,7 +276,7 @@ final class PaletteBitmapFont extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyphVertical(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -319,13 +319,13 @@ final class PaletteBitmapFont extends BitmapFont {
           if (!param6) {
             PaletteBitmapFont.a(0, SoftwareRasterizer.pixels, this.field_V[param0], this.field_U[param5], var12, var8, var10, param3, param4, var9, var11);
           } else {
-            BinaryBitmapFont.a(SoftwareRasterizer.pixels, this.field_V[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+            BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.pixels, this.field_V[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           }
           return;
         }
     }
 
-    private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitPaletteGlyphVerticalAlpha(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         byte dupTemp$0 = 0;

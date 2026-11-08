@@ -168,7 +168,7 @@ final class ii {
                 var5 = jd.a(param1, var4, param0 ^ -31666);
               }
               if (MatchingTextValidator.field_m == 3) {
-                var5 = ae.a(-3266, var4, var4, param1);
+                var5 = MembershipBenefitsLoader.removeIgnore(-3266, var4, var4, param1);
               }
               if (var5 == null) {
                 MatchingTextValidator.field_m = -1;

@@ -32,14 +32,14 @@ final class ti {
           if (0L == (LinkButtonPainter.field_i & 1L)) {
             return false;
           }
-          de.createDebugSliders(-105);
+          DebugTuningSupport.createDebugSliders(-105);
           var1_int = 0;
           var2 = -112 / ((-54 - param0) / 32);
           while (true) {
-            if (aq.field_a.length <= var1_int) {
+            if (DebugOverlayLayoutSupport.field_a.length <= var1_int) {
               return false;
             }
-            if (!aq.field_a[var1_int].b(59)) {
+            if (!DebugOverlayLayoutSupport.field_a[var1_int].b(59)) {
               var1_int++;
               continue;
             }

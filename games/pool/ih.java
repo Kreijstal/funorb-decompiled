@@ -66,12 +66,12 @@ final class ih {
           }
           if (Js5Transport.field_h == RankingsScreen.field_J) {
             JaggrabDownloader.field_j.position = 0;
-            bq.field_q = null;
+            AchievementNotice.field_q = null;
             if (param0 == null) {
-              bc.field_b.position = 0;
-              bc.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
-              bc.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
-              stackIn_17_0 = bc.field_b;
+              FontPaletteSupport.field_b.position = 0;
+              FontPaletteSupport.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
+              FontPaletteSupport.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
+              stackIn_17_0 = FontPaletteSupport.field_b;
               stackIn_17_1 = false;
               if (param4.isIncludedInLookupRequest(true)) {
                 stackIn_18_2 = var13;
@@ -79,7 +79,7 @@ final class ih {
                 stackIn_18_2 = "";
               }
               ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
-              stackIn_20_0 = bc.field_b;
+              stackIn_20_0 = FontPaletteSupport.field_b;
               stackIn_20_1 = false;
               if (!param5.isIncludedInLookupRequest(true)) {
                 stackIn_21_2 = "";
@@ -90,23 +90,23 @@ final class ih {
               JaggrabDownloader.field_j.writeByte(16, false);
               JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 1;
               var9 = JaggrabDownloader.field_j.position;
-              ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, bc.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
+              ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, FontPaletteSupport.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
               JaggrabDownloader.field_j.writeByteLengthPrefix(-var9 + JaggrabDownloader.field_j.position, true);
             } else {
               var9 = 0;
               if (param3) {
                 var9 = var9 | 1;
               }
-              bc.field_b.position = 0;
-              bc.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
-              bc.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
-              bc.field_b.a(false, var13);
-              bc.field_b.a(false, var8);
+              FontPaletteSupport.field_b.position = 0;
+              FontPaletteSupport.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
+              FontPaletteSupport.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
+              FontPaletteSupport.field_b.a(false, var13);
+              FontPaletteSupport.field_b.a(false, var8);
               var14 = (CharSequence) ((Object) param0);
-              bc.field_b.a(false, DelegatingCanvas.normalizeUsername(-28, var14));
-              bc.field_b.writeShort((byte) -81, param2);
-              bc.field_b.writeByte(param6, false);
-              bc.field_b.writeByte(var9, false);
+              FontPaletteSupport.field_b.a(false, DelegatingCanvas.normalizeUsername(-28, var14));
+              FontPaletteSupport.field_b.writeShort((byte) -81, param2);
+              FontPaletteSupport.field_b.writeByte(param6, false);
+              FontPaletteSupport.field_b.writeByte(var9, false);
               JaggrabDownloader.field_j.writeByte(18, false);
               JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 2;
               var10 = JaggrabDownloader.field_j.position;
@@ -115,10 +115,10 @@ final class ih {
                 var11_ref_String = "";
               }
               JaggrabDownloader.field_j.a(-9946, var11_ref_String);
-              ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, bc.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
+              ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, FontPaletteSupport.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
               JaggrabDownloader.field_j.writeShortLengthPrefix(-var10 + JaggrabDownloader.field_j.position, (byte) -92);
             }
-            de.a(-1, 0);
+            DebugTuningSupport.flushClientPackets(-1, 0);
             RankingsScreen.field_J = dr.field_a;
           }
           if (RankingsScreen.field_J == dr.field_a &&
@@ -127,23 +127,23 @@ final class ih {
             PlayerContextMenu.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
-              bi.field_b = new String[-100 + var9Lifetime1];
+              LoginPayloadFactory.field_b = new String[-100 + var9Lifetime1];
               RankingsScreen.field_J = TutorialSelectScreen.field_L;
             } else {
               if (var9Lifetime1 == 248) {
                 PotEvent.a(16, NanoTickClock.getApplet(71));
                 LoginTextValue.field_g = FadingDialog.createUnable;
-                dn.c(-70);
+                ShotEvent.c(-70);
                 ArchiveLoadStep.field_e = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
               }
               if (99 == var9Lifetime1) {
                 DialogLayer.b((byte) 63, WhirlpoolHasher.a(0));
-                bq.field_q = new Boolean(de.readBoolean((byte) 104, PlayerContextMenu.field_e));
+                AchievementNotice.field_q = new Boolean(DebugTuningSupport.readBoolean((byte) 104, PlayerContextMenu.field_e));
                 PlayerContextMenu.field_e.position = 0;
               } else {
-                RankingsScreen.field_J = eh.field_l;
+                RankingsScreen.field_J = HighScoreRequest.field_l;
                 Bzip2DecoderState.field_c = var9Lifetime1;
                 ScrollPane.field_Pb = -1;
               }
@@ -155,18 +155,18 @@ final class ih {
               var10Lifetime1 = PlayerContextMenu.field_e.readUnsignedShort(-1034);
               PlayerContextMenu.field_e.position = 0;
               if (DialogLayer.b((byte) 49, var10Lifetime1)) {
-                var11 = bi.field_b.length;
+                var11 = LoginPayloadFactory.field_b.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  bi.field_b[var12] = PlayerContextMenu.field_e.readString(10762);
+                  LoginPayloadFactory.field_b[var12] = PlayerContextMenu.field_e.readString(10762);
                 }
-                dn.c(53);
+                ShotEvent.c(53);
                 ArchiveLoadStep.field_e = false;
                 stackIn_43_0 = var11 + 100;
                 return stackIn_43_0;
               }
             }
           }
-          if (RankingsScreen.field_J == eh.field_l &&
+          if (RankingsScreen.field_J == HighScoreRequest.field_l &&
             wf.hasCompletePacket((byte) 39)) {
             if (Bzip2DecoderState.field_c != 255) {
               LoginTextValue.field_g = PlayerContextMenu.field_e.j(-122);
@@ -176,7 +176,7 @@ final class ih {
                 WeightedLruCache.writeSettingsCookie(NanoTickClock.getApplet(86), -128, var9_ref_String);
               }
             }
-            dn.c(55);
+            ShotEvent.c(55);
             ArchiveLoadStep.field_e = false;
             stackIn_53_0 = Bzip2DecoderState.field_c;
             return stackIn_53_0;
@@ -196,9 +196,9 @@ final class ih {
               return stackIn_62_0;
             }
             var9Lifetime3 = TextLineLayout.field_d;
-            TextLineLayout.field_d = cq.field_a;
+            TextLineLayout.field_d = TutorialFactory.field_a;
             ArchiveLoadStep.field_e = true;
-            cq.field_a = var9Lifetime3;
+            TutorialFactory.field_a = var9Lifetime3;
           }
           stackIn_65_0 = -1;
           return stackIn_65_0;

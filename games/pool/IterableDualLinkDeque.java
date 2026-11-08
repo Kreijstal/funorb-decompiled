@@ -92,7 +92,7 @@ final class IterableDualLinkDeque implements Iterable {
     final static void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        int var1 = (-640 + fr.field_s) / 2;
+        int var1 = (-640 + DelayedServerPacket.field_s) / 2;
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0 < -71) {
@@ -121,7 +121,7 @@ final class IterableDualLinkDeque implements Iterable {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != 14676) {
           muGameoptInviteXToGame = (String) null;

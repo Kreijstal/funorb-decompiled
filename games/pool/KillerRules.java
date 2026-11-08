@@ -49,7 +49,7 @@ final class KillerRules extends GameRules {
           var4 = 1;
         }
         if (IterableDualLinkDeque.field_a == 13) {
-          cl.a(param2 + 14852);
+          ProjectedLineSupport.resetChatComposition(param2 + 14852);
           DualLinkNode.field_p = false;
           var4 = 1;
         }
@@ -89,7 +89,7 @@ final class KillerRules extends GameRules {
         }
         var4 = ll.field_f;
         if (this.field_d.isCueBallPotted((byte) 125)) {
-          var4 = var4 | (AccountWelcomePanel.field_R | um.field_c);
+          var4 = var4 | (AccountWelcomePanel.field_R | MeshBase.field_c);
           var10.field_t = true;
           var10.field_w = (byte)(var10.field_w - 1);
           var10.addEvent(3, -14, new int[]{var9.playerIndex});
@@ -151,7 +151,7 @@ final class KillerRules extends GameRules {
           }
         } else {
           if (this.isPlayerActive((byte) 36, var10.playerIndex)) {
-            var4 = var4 | ag.field_e;
+            var4 = var4 | ScreenProjectionSupport.field_e;
           } else {
             var4 = var4 | Quaternion.field_e;
           }
@@ -271,7 +271,7 @@ final class KillerRules extends GameRules {
         if (param1 != 3) {
           return -1.207617998123169f;
         }
-        return de.scaleByPowerOfTwo(-1, 3, param0);
+        return DebugTuningSupport.scaleByPowerOfTwo(-1, 3, param0);
     }
 
     private final int countActivePlayers(byte param0) {
@@ -301,7 +301,7 @@ final class KillerRules extends GameRules {
         return false;
     }
 
-    final int b(int param0) {
+    final int defaultBallInHandMode(int param0) {
         int var2 = -32 / ((-79 - param0) / 38);
         return 1;
     }
@@ -351,7 +351,7 @@ final class KillerRules extends GameRules {
         return uj.field_a;
     }
 
-    final int m(int param0) {
+    final int rulesStateByteLength(int param0) {
         if (param0 != 0) {
           statusSpectate = (String) null;
         }
@@ -388,7 +388,7 @@ final class KillerRules extends GameRules {
         this.loseLife(var6.playerIndex, 8640);
         if (this.countActivePlayers((byte) -125) <= 1) {
           if (this.isPlayerActive((byte) -99, var6.playerIndex)) {
-            var3Lifetime1 = var3Lifetime1 | ag.field_e;
+            var3Lifetime1 = var3Lifetime1 | ScreenProjectionSupport.field_e;
           } else {
             var3Lifetime1 = var3Lifetime1 | Quaternion.field_e;
           }
@@ -419,7 +419,7 @@ final class KillerRules extends GameRules {
           this.field_e[param0] = this.field_e[param0] + 1;
         }
         if (param1 != 165) {
-          this.m(-27);
+          this.rulesStateByteLength(-27);
         }
     }
 
@@ -427,17 +427,17 @@ final class KillerRules extends GameRules {
         int var2 = 0;
         if (IntrusiveDeque.a(param0, (byte) 99) &&
           this.field_d.field_s == 2) {
-          var2 = MaxLengthTextInputWidget.nextRandomInt(14, true, ea.field_r);
+          var2 = MaxLengthTextInputWidget.nextRandomInt(14, true, RankingsRequest.field_r);
           return var2 - (-1 - var2 / 7);
         }
         return -1;
     }
 
     final static void c(byte param0) {
-        PoolUiText.field_f.sprite = dq.createTextLabelSprite(1, param0 ^ -45, Integer.toString(fr.field_n));
+        PoolUiText.field_f.sprite = dq.createTextLabelSprite(1, param0 ^ -45, Integer.toString(DelayedServerPacket.field_n));
         dk.a(PoolUiText.field_f, (byte) 93);
-        RasterSnapshot.field_w.enabled = 2 < fr.field_n ? true : false;
-        ih.field_e.enabled = fr.field_n < 8 ? true : false;
+        RasterSnapshot.field_w.enabled = 2 < DelayedServerPacket.field_n ? true : false;
+        ih.field_e.enabled = DelayedServerPacket.field_n < 8 ? true : false;
         if (param0 != -45) {
           KillerRules.c((byte) -61);
         }
@@ -495,7 +495,7 @@ final class KillerRules extends GameRules {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         muChatOff = null;
         if (param0 >= -61) {
           statusSpectate = (String) null;

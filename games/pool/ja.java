@@ -11,17 +11,17 @@ final class ja {
         if (!param2) {
           return;
         }
-        nj.drawNineSlice(cq.field_b, (byte) -125, param0, param3, param4, param1);
+        nj.drawNineSlice(TutorialFactory.field_b, (byte) -125, param0, param3, param4, param1);
         if (param0 > param1) {
           mj.field_b.draw(param3 + (-mj.field_b.field_w + param0 >> 1), param4);
           DisplayNamePanel.field_T.draw(param3 + (-DisplayNamePanel.field_T.field_w + param0 >> 1), -DisplayNamePanel.field_T.field_y + (param1 + param4));
         } else {
-          bi.field_a.draw(param3, (param1 - bi.field_a.field_y >> 1) + param4);
+          LoginPayloadFactory.field_a.draw(param3, (param1 - LoginPayloadFactory.field_a.field_y >> 1) + param4);
           MessageDialogContent.field_T.draw(param3 + param0 - MessageDialogContent.field_T.field_w, param4 + (-MessageDialogContent.field_T.field_y + param1 >> 1));
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 726237729) {
           ja.acquireByteArray(50, -94);
         }
@@ -67,14 +67,14 @@ final class ja {
           field_c = 109;
         }
         if (null != TranslatedUiText.field_l) {
-          for (var2 = 0; var2 < s.field_f.length; var2++) {
-            if (s.field_f[var2] == param0 &&
-              ho.field_l[var2] > 0) {
-              dupTemp$3 = ho.field_l[var2] - 1;
+          for (var2 = 0; var2 < DisplayModeSupport.field_f.length; var2++) {
+            if (DisplayModeSupport.field_f[var2] == param0 &&
+              ReflectionCheck.field_l[var2] > 0) {
+              dupTemp$3 = ReflectionCheck.field_l[var2] - 1;
               arrayValue$4 = TranslatedUiText.field_l[var2];
-              ho.field_l[var2] = dupTemp$3;
+              ReflectionCheck.field_l[var2] = dupTemp$3;
               var3 = arrayValue$4[dupTemp$3];
-              TranslatedUiText.field_l[var2][ho.field_l[var2]] = null;
+              TranslatedUiText.field_l[var2][ReflectionCheck.field_l[var2]] = null;
               return var3;
             }
           }

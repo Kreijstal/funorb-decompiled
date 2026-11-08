@@ -63,9 +63,9 @@ final class gn {
           } else {
             if (gd.field_d.length < param0) {
               gd.field_d = new int[param0 * 2];
-              if (ah.field_c == null ||
-                !(ah.field_c.length >= param0)) {
-                ah.field_c = new int[param0 * 2];
+              if (VertexNormal.field_c == null ||
+                !(VertexNormal.field_c.length >= param0)) {
+                VertexNormal.field_c = new int[param0 * 2];
               }
               if (NetworkGameClient.field_H == null ||
                 !(param1 + param0 <= NetworkGameClient.field_H.length)) {
@@ -83,8 +83,8 @@ final class gn {
               return;
             }
           }
-          if (ah.field_c == null) {
-            ah.field_c = new int[param0 * 2];
+          if (VertexNormal.field_c == null) {
+            VertexNormal.field_c = new int[param0 * 2];
             if (NetworkGameClient.field_H == null ||
               !(param1 + param0 <= NetworkGameClient.field_H.length)) {
               NetworkGameClient.field_H = new int[2 * (param1 + param0)];
@@ -94,8 +94,8 @@ final class gn {
               LobbyPlayer.field_cc = new boolean[2 * param0];
             }
           } else {
-            if (ah.field_c.length < param0) {
-              ah.field_c = new int[param0 * 2];
+            if (VertexNormal.field_c.length < param0) {
+              VertexNormal.field_c = new int[param0 * 2];
               if (NetworkGameClient.field_H == null ||
                 !(param1 + param0 <= NetworkGameClient.field_H.length)) {
                 NetworkGameClient.field_H = new int[2 * (param1 + param0)];
@@ -152,9 +152,9 @@ final class gn {
             } else {
               if (gd.field_d.length < param0) {
                 gd.field_d = new int[param0 * 2];
-                if (ah.field_c == null ||
-                  !(ah.field_c.length >= param0)) {
-                  ah.field_c = new int[param0 * 2];
+                if (VertexNormal.field_c == null ||
+                  !(VertexNormal.field_c.length >= param0)) {
+                  VertexNormal.field_c = new int[param0 * 2];
                 }
                 if (NetworkGameClient.field_H == null ||
                   !(param1 + param0 <= NetworkGameClient.field_H.length)) {
@@ -172,8 +172,8 @@ final class gn {
                 return;
               }
             }
-            if (ah.field_c == null) {
-              ah.field_c = new int[param0 * 2];
+            if (VertexNormal.field_c == null) {
+              VertexNormal.field_c = new int[param0 * 2];
               if (NetworkGameClient.field_H == null ||
                 !(param1 + param0 <= NetworkGameClient.field_H.length)) {
                 NetworkGameClient.field_H = new int[2 * (param1 + param0)];
@@ -183,8 +183,8 @@ final class gn {
                 LobbyPlayer.field_cc = new boolean[2 * param0];
               }
             } else {
-              if (ah.field_c.length < param0) {
-                ah.field_c = new int[param0 * 2];
+              if (VertexNormal.field_c.length < param0) {
+                VertexNormal.field_c = new int[param0 * 2];
                 if (NetworkGameClient.field_H == null ||
                   !(param1 + param0 <= NetworkGameClient.field_H.length)) {
                   NetworkGameClient.field_H = new int[2 * (param1 + param0)];
@@ -241,9 +241,9 @@ final class gn {
             } else {
               if (gd.field_d.length < param0) {
                 gd.field_d = new int[param0 * 2];
-                if (ah.field_c == null ||
-                  !(ah.field_c.length >= param0)) {
-                  ah.field_c = new int[param0 * 2];
+                if (VertexNormal.field_c == null ||
+                  !(VertexNormal.field_c.length >= param0)) {
+                  VertexNormal.field_c = new int[param0 * 2];
                 }
                 if (NetworkGameClient.field_H == null ||
                   !(param1 + param0 <= NetworkGameClient.field_H.length)) {
@@ -261,8 +261,8 @@ final class gn {
                 return;
               }
             }
-            if (ah.field_c == null) {
-              ah.field_c = new int[param0 * 2];
+            if (VertexNormal.field_c == null) {
+              VertexNormal.field_c = new int[param0 * 2];
               if (NetworkGameClient.field_H == null) {
                 NetworkGameClient.field_H = new int[2 * (param1 + param0)];
                 if (LobbyPlayer.field_cc == null ||
@@ -287,8 +287,8 @@ final class gn {
                 }
               }
             } else {
-              if (ah.field_c.length < param0) {
-                ah.field_c = new int[param0 * 2];
+              if (VertexNormal.field_c.length < param0) {
+                VertexNormal.field_c = new int[param0 * 2];
                 if (NetworkGameClient.field_H == null ||
                   !(param1 + param0 <= NetworkGameClient.field_H.length)) {
                   NetworkGameClient.field_H = new int[2 * (param1 + param0)];
@@ -356,7 +356,7 @@ final class gn {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           return;
         }

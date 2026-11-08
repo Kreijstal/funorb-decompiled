@@ -1,0 +1,204 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ArchiveAvailabilitySupport {
+    static String createOptinNews;
+    static String gameoptInviteplayersOrTrychanging2;
+    static String multiconstInviteOnly;
+    static String createSelectAlternative;
+    static String achievementsOnlyInRated;
+    private static int field_f;
+    static int field_g;
+    static String muOptionsPlayers;
+    static String rule01;
+
+    final static boolean isArchiveFullyAvailable(ResourceArchive param0, boolean param1) {
+        RuntimeException var2 = null;
+        boolean stackIn_4_0 = false;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1) {
+            stackIn_4_0 = param0.ensureAllGroupsAvailable(-63);
+            return stackIn_4_0;
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("ab.D(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        rule01 = null;
+        achievementsOnlyInRated = null;
+        if (param0 <= -46) {
+          createSelectAlternative = null;
+          createOptinNews = null;
+          gameoptInviteplayersOrTrychanging2 = null;
+          muOptionsPlayers = null;
+          multiconstInviteOnly = null;
+          return;
+        }
+        achievementsOnlyInRated = (String) null;
+        createSelectAlternative = null;
+        createOptinNews = null;
+        gameoptInviteplayersOrTrychanging2 = null;
+        muOptionsPlayers = null;
+        multiconstInviteOnly = null;
+    }
+
+    final static void notifyBrowserResize(int param0, int param1) {
+        try {
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          if (param0 != 25692) {
+            gameoptInviteplayersOrTrychanging2 = (String) null;
+          }
+          try {
+            JavaScriptBridge.callWindowFunctionWithArguments("resizing", new Object[]{new Integer(param1)}, param0 ^ 25619, NanoTickClock.getApplet(116));
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = decompiledCaughtException;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static void showLoginAndResetClientStage(int param0) {
+        if (!FullscreenErrorDialog.field_kb) {
+          throw new IllegalStateException();
+        }
+        ClassicBallSkin.field_o = true;
+        ii.a(false, param0 ^ param0);
+        PlasmaTableScene.field_ab = 0;
+    }
+
+    final static String describeResolutionFlags(int param0, byte param1) {
+        StringBuilder stackIn_4_0 = null;
+        String stackIn_5_1 = null;
+        StringBuilder stackIn_7_0 = null;
+        String stackIn_8_1 = null;
+        StringBuilder stackIn_10_0 = null;
+        String stackIn_11_1 = null;
+        StringBuilder stackIn_13_0 = null;
+        String stackIn_14_1 = null;
+        StringBuilder stackIn_16_0 = null;
+        String stackIn_17_1 = null;
+        StringBuilder stackIn_19_0 = null;
+        String stackIn_20_1 = null;
+        StringBuilder stackIn_22_0 = null;
+        String stackIn_23_1 = null;
+        StringBuilder stackIn_25_0 = null;
+        String stackIn_26_1 = null;
+        StringBuilder stackIn_28_0 = null;
+        String stackIn_29_1 = null;
+        StringBuilder stackIn_31_0 = null;
+        String stackIn_32_1 = null;
+        StringBuilder stackIn_34_0 = null;
+        String stackIn_35_1 = null;
+        StringBuilder stackIn_37_0 = null;
+        String stackIn_38_1 = null;
+        if (param1 != 10) {
+          ArchiveAvailabilitySupport.describeResolutionFlags(-112, (byte) -4);
+        }
+        stackIn_4_0 = new StringBuilder();
+        if ((param0 & MarkerSliderPainter.field_j) != 0) {
+          stackIn_5_1 = "cont vis|";
+        } else {
+          stackIn_5_1 = "";
+        }
+        stackIn_7_0 = ((StringBuilder) (Object) stackIn_4_0).append(stackIn_5_1);
+        if ((param0 & ThemeSelectScreen.field_O) == 0) {
+          stackIn_8_1 = "";
+        } else {
+          stackIn_8_1 = "gv visit+1|";
+        }
+        stackIn_10_0 = ((StringBuilder) (Object) stackIn_7_0).append(stackIn_8_1);
+        if ((param0 & OptionsScreen.field_I) == 0) {
+          stackIn_11_1 = "";
+        } else {
+          stackIn_11_1 = "gv shot+1|";
+        }
+        stackIn_13_0 = ((StringBuilder) (Object) stackIn_10_0).append(stackIn_11_1);
+        if ((param0 & AccountWelcomePanel.field_Q) != 0) {
+          stackIn_14_1 = "gv BiH anywhere|";
+        } else {
+          stackIn_14_1 = "";
+        }
+        stackIn_16_0 = ((StringBuilder) (Object) stackIn_13_0).append(stackIn_14_1);
+        if ((param0 & AccountWelcomePanel.field_R) != 0) {
+          stackIn_17_1 = "gv BiH kitchen|";
+        } else {
+          stackIn_17_1 = "";
+        }
+        stackIn_19_0 = ((StringBuilder) (Object) stackIn_16_0).append(stackIn_17_1);
+        if ((param0 & AccountWelcomePanel.field_V) != 0) {
+          stackIn_20_1 = "gv BiH in D|";
+        } else {
+          stackIn_20_1 = "";
+        }
+        stackIn_22_0 = ((StringBuilder) (Object) stackIn_19_0).append(stackIn_20_1);
+        if ((ScreenProjectionSupport.field_e & param0) != 0) {
+          stackIn_23_1 = "wins|";
+        } else {
+          stackIn_23_1 = "";
+        }
+        stackIn_25_0 = ((StringBuilder) (Object) stackIn_22_0).append(stackIn_23_1);
+        if (0 == (param0 & Quaternion.field_e)) {
+          stackIn_26_1 = "";
+        } else {
+          stackIn_26_1 = "loses|";
+        }
+        stackIn_28_0 = ((StringBuilder) (Object) stackIn_25_0).append(stackIn_26_1);
+        if (0 == (param0 & ClientException.field_b)) {
+          stackIn_29_1 = "";
+        } else {
+          stackIn_29_1 = "group choice|";
+        }
+        stackIn_31_0 = ((StringBuilder) (Object) stackIn_28_0).append(stackIn_29_1);
+        if ((param0 & MeshBase.field_c) == 0) {
+          stackIn_32_1 = "";
+        } else {
+          stackIn_32_1 = "respot white|";
+        }
+        stackIn_34_0 = ((StringBuilder) (Object) stackIn_31_0).append(stackIn_32_1);
+        if ((param0 & MenuScreen.field_F) != 0) {
+          stackIn_35_1 = "rerack|";
+        } else {
+          stackIn_35_1 = "";
+        }
+        stackIn_37_0 = ((StringBuilder) (Object) stackIn_34_0).append(stackIn_35_1);
+        if (0 != (ll.field_f & param0)) {
+          stackIn_38_1 = "ends turn|";
+        } else {
+          stackIn_38_1 = "";
+        }
+        return ((StringBuilder) (Object) stackIn_37_0).append(stackIn_38_1).toString();
+    }
+
+    static {
+        field_f = 14;
+        createSelectAlternative = "Use this alternative as your account name";
+        createOptinNews = "Please send me news and updates (I can unsubscribe at any time)";
+        gameoptInviteplayersOrTrychanging2 = "Invite more players, or alternatively try changing the following settings:  ";
+        field_g = 1 << field_f;
+        muOptionsPlayers = "Players";
+        multiconstInviteOnly = "Invite only";
+        achievementsOnlyInRated = "Achievements are only awarded in Rated games,<br>unless stated otherwise.";
+        rule01 = "Encouraging rule breaking";
+    }
+}

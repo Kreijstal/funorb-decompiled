@@ -5,7 +5,7 @@ final class CueStick {
     private ModelMesh[] field_m;
     private MeshBuilder[] segments;
     boolean field_g;
-    static hj field_i;
+    static QuickChatDynamicCommand field_i;
     private double[] segmentOffsets;
     static String timerHoursMinutesSeconds;
     static String youLostTwoLives;
@@ -18,16 +18,16 @@ final class CueStick {
 
     final static void a(boolean param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         try {
-          AlternateLongAndTextLoginPayload.a(md.field_d, ol.field_c, cq.field_d, RasterBuffer.field_f, AlignedIconLabel.field_Lb, UiWidget.field_A, TimeTrialSelectScreen.field_M, i.field_l, param0, GameApplet.field_a, ag.field_f, (byte) 37);
+          AlternateLongAndTextLoginPayload.a(md.field_d, ol.field_c, TutorialFactory.field_d, RasterBuffer.field_f, AlignedIconLabel.field_Lb, UiWidget.field_A, TimeTrialSelectScreen.field_M, i.field_l, param0, GameApplet.field_a, ScreenProjectionSupport.field_f, (byte) 37);
           if (param1) {
             ResourceArchive var5 = (ResourceArchive) null;
             CueStick.a(true, true, (ResourceArchive) null, (ResourceArchive) null);
           }
           ThemeSelectScreen.field_M = NameEntryPopup.a(0, "lobby", param2, "chatfilter");
-          TranslatedUiText.field_i[1] = cl.muChatFriends;
+          TranslatedUiText.field_i[1] = ProjectedLineSupport.muChatFriends;
           TranslatedUiText.field_i[2] = KillerRules.muChatOff;
           TranslatedUiText.field_i[0] = AccountCreationDialog.muChatOn;
-          c.createQuickChatMenu(ae.field_a, param1, param3);
+          QuickChatMenuSupport.createQuickChatMenu(MembershipBenefitsLoader.field_a, param1, param3);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jk.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -88,7 +88,7 @@ final class CueStick {
             this.segments[var4].clearCaches();
             this.segments[var4].computeBounds();
             var6 = this.segments[var4];
-            d.computeMeshBounds(var6, -23109);
+            MeshBoundsSupport.computeMeshBounds(var6, -23109);
             var5 = (var6.field_V + var6.field_x) / 2;
             for (var7_int = 0; var6.vertexZ.length > var7_int; var7_int++) {
               var6.vertexZ[var7_int] = var6.vertexZ[var7_int] - var5;
@@ -256,7 +256,7 @@ final class CueStick {
         TriangleMesh.a(114);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         playerXLostALife = null;
         timerHoursMinutesSeconds = null;
@@ -364,7 +364,7 @@ final class CueStick {
         timerHoursMinutesSeconds = "hh:mm:ss";
         playerYouFirstListAreOfferingDraw = "You<%0> all want to draw.";
         youLostTwoLives = "You lost 2 lives!";
-        field_i = new hj(7, 0, 1, 1);
+        field_i = new QuickChatDynamicCommand(7, 0, 1, 1);
         back = "Back";
         playerXLostALife = "<%0> lost 1 life!";
     }

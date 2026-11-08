@@ -87,7 +87,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         int var3 = 22 / ((-52 - param0) / 62);
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_r = null;
         field_p = null;
         field_y = null;

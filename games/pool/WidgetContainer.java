@@ -4,7 +4,7 @@
 import java.util.*;
 
 class WidgetContainer extends UiWidget implements ChildWidgetOwner {
-    static hj field_K;
+    static QuickChatDynamicCommand field_K;
     IntrusiveDeque children;
     static String newgame;
     static int field_G;
@@ -397,7 +397,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         if (param0 <= -10) {
           return null;
         }
-        field_K = (hj) null;
+        field_K = (QuickChatDynamicCommand) null;
         return null;
     }
 
@@ -645,7 +645,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         field_K = null;
         field_J = null;
         if (param0 != 2) {
-          field_K = (hj) null;
+          field_K = (QuickChatDynamicCommand) null;
         }
     }
 
@@ -698,7 +698,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
 
     static {
         newgame = "New Game";
-        field_K = new hj(13, 0, 1, 0);
+        field_K = new QuickChatDynamicCommand(13, 0, 1, 0);
         field_J = new int[]{1, 1, 2, 2, 5, 3, 1, 2, 3, 2, 5, 5, 3, 2, 10, 5, 5, 3, 5, 10, 3, 2, 3, 5, 3, 5, 2};
         field_M = new int[8192];
     }

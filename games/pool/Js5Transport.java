@@ -10,7 +10,7 @@ abstract class Js5Transport {
     static Sprite field_q;
     DualLinkDeque prefetchPending;
     static int[] field_n;
-    static hj field_g;
+    static QuickChatDynamicCommand field_g;
     DualLinkDeque prefetchInFlight;
     PacketBuffer outgoingControl;
     long field_d;
@@ -313,7 +313,7 @@ abstract class Js5Transport {
         field_s = new int[16];
         field_h = new nl();
         field_n = new int[16];
-        field_g = new hj(8, 0, 4, 1);
+        field_g = new QuickChatDynamicCommand(8, 0, 4, 1);
         mpGamedrawn = "Game drawn";
     }
 }

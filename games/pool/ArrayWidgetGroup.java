@@ -436,7 +436,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
             var5.field_H = LobbyGame.a(16, var5.field_H, (byte) 110, param1);
           }
           if (FullscreenErrorDialog.readBooleanBit((byte) 118, param1)) {
-            var5.field_K = cb.a(50, 16, param1, var5.field_K);
+            var5.field_K = AwtEventQueueSupport.readPackedByteArray(50, 16, param1, var5.field_K);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_K.length; var7++) {
               if ((var5.field_K[var7] & 255) > var6) {
@@ -848,7 +848,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         try {
           MessageScreen.field_J.resetTiming((byte) 26);
           for (var1_int = param0; var1_int < 32; var1_int++) {
-            dj.field_l[var1_int] = 0L;
+            FullscreenDisplayMode.field_l[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
             ClientException.field_f[var1_intLifetime1] = 0L;

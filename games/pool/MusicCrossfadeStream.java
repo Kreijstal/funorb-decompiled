@@ -290,7 +290,7 @@ final class MusicCrossfadeStream extends PcmStream {
         }
         int var6 = param5 + (param4 + param0);
         int var7 = var6 == 0 ? 0 : 1000 * param4 / var6;
-        ah.field_c[jh.field_c] = var7;
+        VertexNormal.field_c[jh.field_c] = var7;
         if (var7 < DiskCacheWorker.field_d) {
           DiskCacheWorker.field_d = var7;
         }
@@ -475,13 +475,13 @@ final class MusicCrossfadeStream extends PcmStream {
         RuntimeException var2 = null;
         int var4 = 0;
         int var6 = 0;
-        fr var6_ref_fr = null;
+        DelayedServerPacket var6_ref_fr = null;
         int var7 = 0;
         byte[] var8 = null;
-        fr var9 = null;
+        DelayedServerPacket var9 = null;
         int var10 = 0;
         byte[] var11 = null;
-        fr var13 = null;
+        DelayedServerPacket var13 = null;
         byte[] var14 = null;
         byte[] var17 = null;
         int var6Lifetime1;
@@ -504,11 +504,11 @@ final class MusicCrossfadeStream extends PcmStream {
               for (var6 = 0; var6 < var14.length; var6++) {
                 var8[var6] = JaggrabDownloader.field_j.payload[var6];
               }
-              var6_ref_fr = new fr((long)var4 + var2_long, JaggrabDownloader.field_j.position, var17);
+              var6_ref_fr = new DelayedServerPacket((long)var4 + var2_long, JaggrabDownloader.field_j.position, var17);
               field_q.addFirst((byte) 90, var6_ref_fr);
               JaggrabDownloader.field_j.position = 0;
             }
-            var9 = (fr) (field_q.last((byte) -73));
+            var9 = (DelayedServerPacket) (field_q.last((byte) -73));
             var13 = var9;
             if (var13 != null &&
               var13.field_p < var2_long) {
@@ -525,7 +525,7 @@ final class MusicCrossfadeStream extends PcmStream {
           if (param0 >= -16) {
             MusicCrossfadeStream.a((byte) -17, -81);
           }
-          de.a(param1, 0);
+          DebugTuningSupport.flushClientPackets(param1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

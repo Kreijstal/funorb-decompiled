@@ -172,7 +172,7 @@ final class mk {
                 var12.field_Sb.addChild(param1 - 116, var12.field_hc);
               }
               var12.field_lc = new UiComponent(0L, (UiComponent) null);
-              if (0 != (1 << eh.field_o & var14)) {
+              if (0 != (1 << HighScoreRequest.field_o & var14)) {
                 var12.field_Sb.addChild(126, var12.field_lc);
               }
               var12.field_kc = new UiComponent(0L, (UiComponent) null);
@@ -382,14 +382,14 @@ final class mk {
                 var12.field_hc.setBounds(0, param1 ^ 2147483647, var34_int, var52_ref.field_w, var12.field_Sb.height);
                 var34_int = var34_int + (var52_ref.field_w + ja.field_b);
               }
-              if ((var14Lifetime1 & 1 << eh.field_o) != 0) {
+              if ((var14Lifetime1 & 1 << HighScoreRequest.field_o) != 0) {
                 var53_ref = hh.field_f[-1 + var12.field_Yb];
                 var12.field_lc.sprite = var53_ref;
                 var12.field_lc.setBounds(0, 2147483647, var34_int, var53_ref.field_w, var12.field_Sb.height);
                 var34_int = var34_int + (ja.field_b + var53_ref.field_w);
               }
               if ((1 << ti.field_b & var14Lifetime1) != 0) {
-                stackIn_91_0 = c.field_c;
+                stackIn_91_0 = QuickChatMenuSupport.field_c;
                 if (var12.field_wc) {
                   stackIn_92_1 = 1;
                 } else {
@@ -521,7 +521,7 @@ final class mk {
               if (!var12.field_ic &&
                 !var12.field_Xb) {
                 if (!var12.field_Dc) {
-                  stackIn_166_0 = a.youCannotJoinInProgress;
+                  stackIn_166_0 = Cp1252DecodingSupport.youCannotJoinInProgress;
                 } else {
                   stackIn_166_0 = LobbyPlayer.youCanAskToJoin;
                 }
@@ -532,7 +532,7 @@ final class mk {
             }
             if (var12.field_lc.activeInside) {
               if (2 != var12.field_Yb) {
-                stackIn_172_0 = bh.youCanNotSpectate;
+                stackIn_172_0 = MirroredSceneSupport.youCanNotSpectate;
               } else {
                 stackIn_172_0 = OpacityWidget.youCanSpectate;
               }
@@ -550,7 +550,7 @@ final class mk {
                 if (var12.field_ec && (!var12.field_Dc ||
                   !var12.field_ic &&
                   !var12.field_Xb)) {
-                  ef.a(var12.getGameId(20872), param1 + 3, param2);
+                  FaceNormal.a(var12.getGameId(20872), param1 + 3, param2);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -659,7 +659,7 @@ final class mk {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           UiComponent var2 = (UiComponent) null;
           mk.a((UiComponent) null, -99, (UiComponent) null, -55, (byte[]) null, -33, 73, (UiComponent) null, 92, -39);

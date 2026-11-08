@@ -133,7 +133,7 @@ final class ButtonPainter implements WidgetPainter {
           var7 = -103 / ((param2 - 2) / 41);
           var8 = param3 + param4.widgetY;
           HotspotTextWidget.a(var6_int, var8, param4.widgetHeight, param4.widgetWidth, false);
-          var9 = bo.field_a[1];
+          var9 = FixedAngleSupport.field_a[1];
           if (param4 instanceof ButtonWidget &&
             ((ButtonWidget) (param4)).active) {
             var9.drawAdditive(var6_int + (1 + (param4.widgetWidth - var9.field_w >> 1)), (param4.widgetHeight - var9.field_y >> 1) + (1 + var8), 256);
@@ -141,7 +141,7 @@ final class ButtonPainter implements WidgetPainter {
           if (!param4.hasKeyboardFocus(126)) {
             return;
           }
-          bj.drawDottedRectangle(2 + var8, param4.widgetHeight - 4, param4.widgetWidth - 4, 2 + var6_int, 2187);
+          DottedRectangleSupport.drawDottedRectangle(2 + var8, param4.widgetHeight - 4, param4.widgetWidth - 4, 2 + var6_int, 2187);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

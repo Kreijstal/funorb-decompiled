@@ -240,13 +240,13 @@ abstract class LoginPayload {
           }
           DualLinkDeque.field_c = false;
           NetworkGameClient.field_z = false;
-          if (null != d.field_d &&
-            d.field_d.dialogOpen) {
+          if (null != MeshBoundsSupport.field_d &&
+            MeshBoundsSupport.field_d.dialogOpen) {
             if (8 == param2) {
               if (ro.field_e) {
                 param1 = ThreeSliceButtonPainter.invalidpass;
               } else {
-                param1 = eh.invaliduserorpass;
+                param1 = HighScoreRequest.invaliduserorpass;
               }
               param2 = 2;
               TextLineLayout.field_j.prefillUsername(8, SpriteState.field_x);
@@ -263,7 +263,7 @@ abstract class LoginPayload {
               if (PolarBallSkin.field_q) {
                 param1 = BufferedFile.pleasetryagain;
               }
-              d.field_d.installErrorContent(param1, param2, -257);
+              MeshBoundsSupport.field_d.installErrorContent(param1, param2, -257);
             }
             if (param2 != 256 &&
               param2 != 10) {

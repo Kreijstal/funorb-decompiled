@@ -48,7 +48,7 @@ final class wn {
           int var12 = 0;
           java.lang.reflect.Field var15 = null;
           Object var16 = null;
-          ho var16_ref = null;
+          ReflectionCheck var16_ref = null;
           Object var17 = null;
           Object var18 = null;
           java.lang.reflect.Field var19 = null;
@@ -67,7 +67,7 @@ final class wn {
           var22 = null;
           var12 = Pool.field_O;
           try {
-            var16_ref = (ho) (MessageScreen.field_H.last((byte) -89));
+            var16_ref = (ReflectionCheck) (MessageScreen.field_H.last((byte) -89));
             if (var16_ref == null) {
               return;
             }
@@ -288,7 +288,7 @@ final class wn {
           var10 = var8_int;
           ThreeSliceButtonPainter.field_w = var8_int;
           var11 = var9;
-          fr.field_u = var9;
+          DelayedServerPacket.field_u = var9;
           var15 = 1;
           var12Lifetime1 = var15;
           while (var15 < param6.length) {
@@ -325,10 +325,10 @@ final class wn {
             } else {
               stackIn_22_10 = param1;
             }
-            bo.$cfr$intArgs$a$29f688675a86(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
+            FixedAngleSupport.$cfr$intArgs$a$29f688675a86(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
             ThreeSliceButtonPainter.field_w = MatchingTextValidator.field_q;
             var9 = var11;
-            fr.field_u = ResourceArchive.field_h;
+            DelayedServerPacket.field_u = ResourceArchive.field_h;
             var8_int = var10;
             var15++;
           }
@@ -422,7 +422,7 @@ final class wn {
           var10 = var8_int;
           ThreeSliceButtonPainter.field_w = var8_int;
           var11 = var9;
-          fr.field_u = var9;
+          DelayedServerPacket.field_u = var9;
           var15 = 1;
           var12Lifetime1 = var15;
           while (var15 < param6.length) {
@@ -459,10 +459,10 @@ final class wn {
             } else {
               stackIn_22_10 = param1;
             }
-            bo.$cfr$intArgs$a$29f688675a86(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
+            FixedAngleSupport.$cfr$intArgs$a$29f688675a86(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
             ThreeSliceButtonPainter.field_w = MatchingTextValidator.field_q;
             var9 = var11;
-            fr.field_u = ResourceArchive.field_h;
+            DelayedServerPacket.field_u = ResourceArchive.field_h;
             var8_int = var10;
             var15++;
           }

@@ -64,14 +64,14 @@ final class MessageScreen extends MenuScreen {
           Pool.field_L[1] = ValidationIconWidget.field_P.nextInt();
           Pool.field_L[2] = (int)(Pool.field_Q >> 32);
           Pool.field_L[3] = (int)Pool.field_Q;
-          bc.field_b.position = 0;
-          bc.field_b.writeInt(true, Pool.field_L[0]);
-          bc.field_b.writeInt(true, Pool.field_L[1]);
-          bc.field_b.writeInt(true, Pool.field_L[2]);
-          bc.field_b.writeInt(true, Pool.field_L[3]);
-          OptionsScreen.a(bc.field_b, 0);
-          bc.field_b.writeShort((byte) -81, param4);
-          param1.writePayload((byte) 121, bc.field_b);
+          FontPaletteSupport.field_b.position = 0;
+          FontPaletteSupport.field_b.writeInt(true, Pool.field_L[0]);
+          FontPaletteSupport.field_b.writeInt(true, Pool.field_L[1]);
+          FontPaletteSupport.field_b.writeInt(true, Pool.field_L[2]);
+          FontPaletteSupport.field_b.writeInt(true, Pool.field_L[3]);
+          OptionsScreen.a(FontPaletteSupport.field_b, 0);
+          FontPaletteSupport.field_b.writeShort((byte) -81, param4);
+          param1.writePayload((byte) 121, FontPaletteSupport.field_b);
           JaggrabDownloader.field_j.position = 0;
           if (param0) {
             JaggrabDownloader.field_j.writeByte(18, false);
@@ -104,9 +104,9 @@ final class MessageScreen extends MenuScreen {
           if (null != CheckboxWidget.field_N) {
             JaggrabDownloader.field_j.a(false, CheckboxWidget.field_N);
           }
-          ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, bc.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
+          ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, FontPaletteSupport.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
           JaggrabDownloader.field_j.writeShortLengthPrefix(JaggrabDownloader.field_j.position - var5_int, (byte) -92);
-          de.a(-1, 0);
+          DebugTuningSupport.flushClientPackets(-1, 0);
           if (param3 != -98300704) {
             MessageScreen.releaseStatics(false);
           }
@@ -181,10 +181,10 @@ final class MessageScreen extends MenuScreen {
               SceneNode.field_h.drawParagraph(UiComponentNode.loading, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
-          if (SocketArchiveNetworkClient.field_u < hj.field_l) {
+          if (SocketArchiveNetworkClient.field_u < QuickChatDynamicCommand.field_l) {
             var7 = AccountCreationForm.field_V[SoundCache.field_b];
             if (var7 != null) {
-              var2_int = (var7.field_w + 60) * SocketArchiveNetworkClient.field_u / hj.field_l;
+              var2_int = (var7.field_w + 60) * SocketArchiveNetworkClient.field_u / QuickChatDynamicCommand.field_l;
               var3 = var2_int - 30;
               if (!InstructionsScreen.field_K) {
                 ml.a(var3 * -256 / 30, (byte) 63, 245, 199, var7, (var7.field_w - var3) * 256 / 30);

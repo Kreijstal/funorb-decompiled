@@ -84,7 +84,7 @@ final class qr {
             }
           } else {
             MatchingTextValidator.field_u = PlasmaTableScene.field_gb.b(-71);
-            ab.notifyBrowserResize(25692, 2);
+            ArchiveAvailabilitySupport.notifyBrowserResize(25692, 2);
             if (null != MatchingTextValidator.field_u) {
               var2 = 2;
               kc.attachInputListeners(MatchingTextValidator.field_u, param0 ^ -28040);

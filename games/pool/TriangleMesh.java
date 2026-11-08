@@ -84,7 +84,7 @@ final class TriangleMesh {
           field_t = (java.applet.Applet) null;
         }
         var1.pixels = null;
-        cb.field_e.addFirst((byte) -23, var1);
+        AwtEventQueueSupport.field_e.addFirst((byte) -23, var1);
     }
 
     public static void releaseStatics(int param0) {

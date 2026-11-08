@@ -133,13 +133,13 @@ final class pm extends IntrusiveNode {
     final static int a(int param0) {
         if (param0 != -27011) {
           pm.a((byte[]) null, (byte[]) null, (String[][]) null, (ResourceArchive) null, (Sprite[][]) null, 100, (IndexedSprite[]) null, (int[]) null, (Sprite[][]) null, 104, (String[]) null, (ResourceArchive) null, false, (int[]) null, (ResourceArchive) null, (String[][]) null, 112);
-          if (cl.isPointerInside(1, pl.field_b)) {
+          if (ProjectedLineSupport.isPointerInside(1, pl.field_b)) {
             return 0;
           }
-          if (cl.isPointerInside(1, jq.field_d)) {
+          if (ProjectedLineSupport.isPointerInside(1, jq.field_d)) {
             return 1;
           }
-          if (!cl.isPointerInside(1, qa.field_v)) {
+          if (!ProjectedLineSupport.isPointerInside(1, qa.field_v)) {
             return -1;
           }
           if (PolarObject.field_d[5] == qa.field_v.sprite) {
@@ -147,13 +147,13 @@ final class pm extends IntrusiveNode {
           }
           return 2;
         }
-        if (cl.isPointerInside(1, pl.field_b)) {
+        if (ProjectedLineSupport.isPointerInside(1, pl.field_b)) {
           return 0;
         }
-        if (cl.isPointerInside(1, jq.field_d)) {
+        if (ProjectedLineSupport.isPointerInside(1, jq.field_d)) {
           return 1;
         }
-        if (!cl.isPointerInside(1, qa.field_v)) {
+        if (!ProjectedLineSupport.isPointerInside(1, qa.field_v)) {
           return -1;
         }
         if (PolarObject.field_d[5] == qa.field_v.sprite) {
@@ -162,7 +162,7 @@ final class pm extends IntrusiveNode {
         return 2;
     }
 
-    final static void a(fl param0, int param1, boolean param2) {
+    final static void a(IntLookupQuery param0, int param1, boolean param2) {
         CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;

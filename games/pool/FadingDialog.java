@@ -113,22 +113,22 @@ abstract class FadingDialog extends WidgetContainer {
                       stackIn_18_0 = param2[var6].lastAdvanceTime;
                     }
                     if (stackIn_18_0 <= var8_int) {
-                      var5_int = bq.a((byte) -124, var5_int, -1, var7_int, -1, var6, var8_int);
+                      var5_int = AchievementNotice.a((byte) -124, var5_int, -1, var7_int, -1, var6, var8_int);
                     }
                   }
                 }
               }
               if (0 != param2[var6].motionState) {
                 for (var7_intLifetime1 = 0; var7_intLifetime1 < param0.length; var7_intLifetime1++) {
-                  var8_intLifetime1 = c.a(param2[var6].lastAdvanceTime, param0[var7_intLifetime1].endX, param2[var6].positionY, param0[var7_intLifetime1].startY, param2[var6].velocityY, param2[var6].positionX, 8, param0[var7_intLifetime1].endY, (byte) 98, param0[var7_intLifetime1].startX, param2[var6].velocityX);
+                  var8_intLifetime1 = QuickChatMenuSupport.a(param2[var6].lastAdvanceTime, param0[var7_intLifetime1].endX, param2[var6].positionY, param0[var7_intLifetime1].startY, param2[var6].velocityY, param2[var6].positionX, 8, param0[var7_intLifetime1].endY, (byte) 98, param0[var7_intLifetime1].startX, param2[var6].velocityX);
                   if (param1 < var8_intLifetime1) {
-                    var5_int = bq.a((byte) -128, var5_int, -1, -1, var7_intLifetime1, var6, var8_intLifetime1);
+                    var5_int = AchievementNotice.a((byte) -128, var5_int, -1, -1, var7_intLifetime1, var6, var8_intLifetime1);
                   }
                 }
                 for (var7_intLifetime1Lifetime1 = 0; var7_intLifetime1Lifetime1 < param3.length; var7_intLifetime1Lifetime1++) {
                   var8_intLifetime1Lifetime1 = ButtonPainter.a(param2[var6].positionY, param3[var7_intLifetime1Lifetime1][0], param2[var6].velocityX, param2[var6].velocityY, param2[var6].lastAdvanceTime, 8, param2[var6].positionX, (byte) -121, param3[var7_intLifetime1Lifetime1][1]);
                   if (var8_intLifetime1Lifetime1 > param1) {
-                    var5_int = bq.a((byte) -123, var5_int, var7_intLifetime1Lifetime1, -1, -1, var6, var8_intLifetime1Lifetime1);
+                    var5_int = AchievementNotice.a((byte) -123, var5_int, var7_intLifetime1Lifetime1, -1, -1, var6, var8_intLifetime1Lifetime1);
                   }
                 }
               }

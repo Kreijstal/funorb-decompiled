@@ -35,7 +35,7 @@ final class PasswordValidator extends TextInputValidator {
             return;
           }
           DualLinkNode.field_p = false;
-          if (ea.field_z) {
+          if (RankingsRequest.field_z) {
             var5 = WeightedLruCache.dobChatdisabled;
           } else {
             if (!ViewportController.field_y) {

@@ -36,7 +36,7 @@ final class IterableNodeHashTable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         createAlertPasschars = null;
         if (param0 <= 30) {
           field_h = 17;
@@ -91,7 +91,7 @@ final class IterableNodeHashTable {
           return;
         }
         if ((1 << AccountContentDialog.field_ub.localPlayerIndex & AccountContentDialog.field_ub.gameModel.field_x) != 0) {
-          TranslatedUiText.field_f[10] = dj.canceldraw;
+          TranslatedUiText.field_f[10] = FullscreenDisplayMode.canceldraw;
         } else {
           if (AccountContentDialog.field_ub.gameModel.field_x == 0) {
             TranslatedUiText.field_f[10] = DateInputWidget.offerdraw;

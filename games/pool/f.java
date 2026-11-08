@@ -56,13 +56,13 @@ final class f {
 
     final static void layoutLobbyPanels(int param0) {
         field_h = SoftwareRasterizer.height;
-        fr.field_s = SoftwareRasterizer.width;
+        DelayedServerPacket.field_s = SoftwareRasterizer.width;
         IterableDualLinkDeque.a((byte) -95);
         kg.field_l.a(BufferedFile.field_a.height - 40 - 2, BufferedFile.field_a.width, 0, 0, (byte) -124);
         pm.field_m.setBounds(0, 2147483647, 0, BirthDateValidator.field_m.width, ArchiveIndex.field_x);
         int var1 = 2 + ArchiveIndex.field_x;
-        c.field_e.setBounds(!tq.field_p ? 0 : var1, 2147483647, 0, BirthDateValidator.field_m.width, -(!tq.field_p ? 0 : var1) + BirthDateValidator.field_m.height);
-        da.a(true);
+        QuickChatMenuSupport.field_e.setBounds(!tq.field_p ? 0 : var1, 2147483647, 0, BirthDateValidator.field_m.width, -(!tq.field_p ? 0 : var1) + BirthDateValidator.field_m.height);
+        MenuLabelSupport.layoutChatPanelControls(true);
         ProgressBarWidget.field_K.setBounds(BufferedFile.field_a.height - 40, 2147483647, 0, BufferedFile.field_a.width, 40);
         ll.field_d.setBounds(0, 2147483647, 0, oi.field_n.width, 30);
         pk.field_a.setBounds(30, 2147483647, 0, oi.field_n.width, -70 + (oi.field_n.height - 2));

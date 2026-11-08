@@ -36,7 +36,7 @@ final class ReportAbuseDialog extends UiComponent {
         try {
           param2 += 8;
           if (param1 > -125) {
-            ReportAbuseDialog.f((byte) -116);
+            ReportAbuseDialog.releaseStatics((byte) -116);
           }
           var6_int = param0.font.measureWrappedHeight(param0.text, -(param0.textInset * 2) + param4, param0.lineSpacing);
           param0.setBounds(param2, 2147483647, 0, param4, var6_int);
@@ -92,7 +92,7 @@ final class ReportAbuseDialog extends UiComponent {
             stackIn_6_0.selected = stackIn_7_1;
           }
           this.nameDisplay.width = -this.nameDisplay.localX + this.width;
-          for (var3 = 0; var3 < cd.field_a; var3++) {
+          for (var3 = 0; var3 < ClientInputResetSupport.field_a; var3++) {
             if (this.reasonButtons[var3] != null) {
               stackIn_15_0 = this.reasonButtons[var3];
               stackIn_16_1 = !(this.reportedName.length() <= 0);
@@ -254,8 +254,8 @@ final class ReportAbuseDialog extends UiComponent {
             this.body.addChild(-118, var27[1]);
             var27[2] = new UiComponent(0L, (UiComponent) null);
             this.body.addChild(-117, var27[2]);
-            this.reasonButtons = new UiComponent[cd.field_a];
-            for (var16 = 0; var16 < cd.field_a; var16++) {
+            this.reasonButtons = new UiComponent[ClientInputResetSupport.field_a];
+            for (var16 = 0; var16 < ClientInputResetSupport.field_a; var16++) {
               if (LocalGameSetupScreen.field_L[var16] != null) {
                 this.reasonButtons[var16] = new UiComponent(0L, param10, LocalGameSetupScreen.field_L[var16]);
                 this.reasonButtons[var16].horizontalAlignment = 0;
@@ -282,7 +282,7 @@ final class ReportAbuseDialog extends UiComponent {
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
-            for (var17Lifetime4 = 0; cd.field_a > var17Lifetime4; var17Lifetime4++) {
+            for (var17Lifetime4 = 0; ClientInputResetSupport.field_a > var17Lifetime4; var17Lifetime4++) {
               if (this.reasonButtons[var17Lifetime4] != null) {
                 var18 = this.reasonButtons[var17Lifetime4].getContentWidth(true);
                 if (var18 > var16Lifetime2) {
@@ -357,7 +357,7 @@ final class ReportAbuseDialog extends UiComponent {
             this.body.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, 2105376, this.body.height, 11579568, 8421504);
             var23 = 13 + var19 + 13;
             var24 = 10 + var17Lifetime5 + (var22 + 24);
-            var25 = de.a(var23, param2, param0, 0);
+            var25 = DebugTuningSupport.adjustWidthForRightEdge(var23, param2, param0, 0);
             var26 = OpacityWidget.a(var24, param1, -1, param3);
             this.setBounds(var26, 2147483647, var25, var23, var24);
             return;
@@ -375,7 +375,7 @@ final class ReportAbuseDialog extends UiComponent {
           this.body.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, 2105376, this.body.height, 11579568, 8421504);
           var18Lifetime1 = var15_int + 13 + 13;
           var19Lifetime1 = 34 + var16Lifetime1;
-          var20Lifetime1 = de.a(var18Lifetime1, param2, param0, 0);
+          var20Lifetime1 = DebugTuningSupport.adjustWidthForRightEdge(var18Lifetime1, param2, param0, 0);
           var21Lifetime1 = OpacityWidget.a(var19Lifetime1, param1, -1, param3);
           this.setBounds(var21Lifetime1, 2147483647, var20Lifetime1, var18Lifetime1, var19Lifetime1);
           return;
@@ -441,26 +441,26 @@ final class ReportAbuseDialog extends UiComponent {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        bc.field_b.position = 0;
-        bc.field_b.writeByte(12, false);
-        bc.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
+        FontPaletteSupport.field_b.position = 0;
+        FontPaletteSupport.field_b.writeByte(12, false);
+        FontPaletteSupport.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
         if (param0 >= -116) {
           field_Wb = (char[]) null;
         }
-        bc.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
-        bc.field_b.writeByte(param3, false);
-        bc.field_b.writeByte(param2, false);
-        bc.field_b.writeShort((byte) -81, param1);
-        bc.field_b.a(ArchiveLoadSequence.field_l, 124, UiWidget.field_q);
+        FontPaletteSupport.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
+        FontPaletteSupport.field_b.writeByte(param3, false);
+        FontPaletteSupport.field_b.writeByte(param2, false);
+        FontPaletteSupport.field_b.writeShort((byte) -81, param1);
+        FontPaletteSupport.field_b.a(ArchiveLoadSequence.field_l, 124, UiWidget.field_q);
         JaggrabDownloader.field_j.writeCipheredOpcode(false, 18);
         int fieldTemp$0 = JaggrabDownloader.field_j.position + 1;
         JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 1;
         int var4 = fieldTemp$0;
-        JaggrabDownloader.field_j.a(bc.field_b.payload, (byte) 0, 0, bc.field_b.position);
+        JaggrabDownloader.field_j.a(FontPaletteSupport.field_b.payload, (byte) 0, 0, FontPaletteSupport.field_b.position);
         JaggrabDownloader.field_j.writeByteLengthPrefix(-var4 + JaggrabDownloader.field_j.position, true);
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         mbIncludingGamename = null;
         loginEmail = null;
         field_Wb = null;
@@ -539,7 +539,7 @@ final class ReportAbuseDialog extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 18) {
-            ReportAbuseDialog.f((byte) 15);
+            ReportAbuseDialog.releaseStatics((byte) 15);
           }
           if (!param0) {
             stackIn_6_0 = QuickChatMenu.field_ec.b(param2);

@@ -242,7 +242,7 @@ final class TikiBallSkin extends BallSkin {
         if (param1 != 20) {
           return (Sprite[]) null;
         }
-        return cq.a(1, 4578, param0, param2);
+        return TutorialFactory.createPanelSpritesWithCenter(1, 4578, param0, param2);
     }
 
     TikiBallSkin() {

@@ -7,7 +7,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
     static String rulePillar2;
     static int field_I;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }
@@ -21,16 +21,16 @@ final class MembershipBenefitsScreen extends MenuScreen {
         var3 = Pool.field_O;
         pn.field_l.a(0, 0);
         if (LocalGameSetupScreen.f((byte) 109)) {
-          ae.loadBenefitsScreenAssets(-2);
-          if (!ea.field_l) {
+          MembershipBenefitsLoader.loadBenefitsScreenAssets(-2);
+          if (!RankingsRequest.field_l) {
             for (var2 = 0; var2 < PotEvent.field_m.field_D.length; var2++) {
               if ((PotEvent.field_m.field_D[var2] & -16777216) == 0 &&
                 0 != (PotEvent.field_m.field_D[var2] & 16777215)) {
                 PotEvent.field_m.field_D[var2] = md.bitwiseOr(PotEvent.field_m.field_D[var2], -16777216);
               }
             }
-            ea.field_l = true;
-            ae.loadBenefitsScreenAssets(-2);
+            RankingsRequest.field_l = true;
+            MembershipBenefitsLoader.loadBenefitsScreenAssets(-2);
           }
         }
         if (param0 <= 36) {
@@ -111,14 +111,14 @@ final class MembershipBenefitsScreen extends MenuScreen {
         if (param0 == -1) {
           var2 = StrongCacheEntry.a(!ue.a(11) ? true : false, (byte) 65);
         } else {
-          MembershipBenefitsScreen.b(false);
+          MembershipBenefitsScreen.releaseStatics(false);
           var2 = StrongCacheEntry.a(!ue.a(11) ? true : false, (byte) 65);
         }
         if (3 == var2) {
           if (MatchingTextValidator.field_u != null) {
             tq.d((byte) -106);
           }
-          s.openSubscribePage(NanoTickClock.getApplet(58), 2056898529);
+          DisplayModeSupport.openSubscribePage(NanoTickClock.getApplet(58), 2056898529);
         }
         if (var2 == 1) {
           AccountCreationDialog.a(-3405, 0, GameRules.field_b, false);

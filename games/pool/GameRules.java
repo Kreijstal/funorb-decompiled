@@ -16,10 +16,10 @@ abstract class GameRules {
         return this.field_d.playerCount;
     }
 
-    final static boolean k(int param0) {
+    final static boolean loadAppletCookies(int param0) {
         if (param0 != 0) {
           String var2 = (String) null;
-          GameRules.a((String[]) null, false, -52, (String) null);
+          GameRules.handleLoginResponse((String[]) null, false, -52, (String) null);
         }
         return ie.loadBrowserCookies((byte) 28, NanoTickClock.getApplet(71));
     }
@@ -64,7 +64,7 @@ abstract class GameRules {
 
     abstract int ballCount(int param0);
 
-    abstract int b(int param0);
+    abstract int defaultBallInHandMode(int param0);
 
     void onShotStart(int param0) {
         if (param0 != 11828) {
@@ -76,7 +76,7 @@ abstract class GameRules {
 
     final void prepareShot(int param0) {
         ShotRecord var2 = this.field_d.currentShot(45);
-        var2.ballInHandMode = this.b(-120);
+        var2.ballInHandMode = this.defaultBallInHandMode(-120);
         int var3 = -67 % ((param0 + 14) / 58);
         if (!(0 > var2.playerIndex)) {
           this.initializeShot(var2, false);
@@ -87,7 +87,7 @@ abstract class GameRules {
 
     int teamIndex(int param0, int param1) {
         if (param0 >= -36) {
-          GameRules.k(73);
+          GameRules.loadAppletCookies(73);
         }
         return param1;
     }
@@ -100,14 +100,14 @@ abstract class GameRules {
         field_a = null;
         if (param0 != 13) {
           String var2 = (String) null;
-          GameRules.a((String[]) null, false, 81, (String) null);
+          GameRules.handleLoginResponse((String[]) null, false, 81, (String) null);
         }
         field_c = null;
     }
 
     abstract Sprite targetBallSprite(ShotRecord param0, int param1);
 
-    int m(int param0) {
+    int rulesStateByteLength(int param0) {
         if (param0 != 0) {
           field_a = (int[]) null;
           return 0;
@@ -122,7 +122,7 @@ abstract class GameRules {
         PoolGameModel.field_B[2] = (BallSkin) ((Object) new TikiBallSkin());
         PoolGameModel.field_B[3] = (BallSkin) ((Object) new PolarBallSkin());
         if (param0 != 118) {
-          GameRules.k(35);
+          GameRules.loadAppletCookies(35);
         }
         PoolGameModel.field_B[4] = (BallSkin) ((Object) new SpaceBallSkin());
         PoolGameModel.field_B[5] = (BallSkin) ((Object) new KillerBallSkin());
@@ -171,14 +171,14 @@ abstract class GameRules {
 
     abstract boolean isTargetVisible(int param0, int param1);
 
-    final static int g(int param0) {
+    final static int getAudioBufferMillis(int param0) {
         if (param0 <= 107) {
-          GameRules.k(-99);
+          GameRules.loadAppletCookies(-99);
         }
         return BallEvent.field_b;
     }
 
-    final static void a(String[] args, boolean param1, int param2, String param3) {
+    final static void handleLoginResponse(String[] args, boolean param1, int param2, String param3) {
         String[] var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_15_0 = null;

@@ -60,7 +60,7 @@ final class ml {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         mustloginAlternate = null;
         tutorialShow = null;
         if (param0 != -26458) {

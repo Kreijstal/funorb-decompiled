@@ -125,7 +125,7 @@ final class ArchiveLoadSequence {
             MessageDialog.o((byte) -125);
           }
           int var6_int = 102 % ((-49 - param3) / 58);
-          ag.field_a = param5;
+          ScreenProjectionSupport.field_a = param5;
           NanoTickClock.field_t.text = param2;
           EmailAvailabilityValidator.field_n = param4;
           rl.field_b.text = param1;

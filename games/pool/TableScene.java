@@ -58,10 +58,10 @@ abstract class TableScene {
         }
     }
 
-    final fa createModelMeshWithTransform(int[] param0, MeshBuilder param1, int param2) {
+    final RenderableModel createModelMeshWithTransform(int[] param0, MeshBuilder param1, int param2) {
         RuntimeException var4 = null;
         ResourceArchive var5 = null;
-        fa stackIn_3_0 = null;
+        RenderableModel stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -665,10 +665,10 @@ abstract class TableScene {
         return;
     }
 
-    final fa createModelMeshAtPosition(int[] param0, byte param1, MeshBuilder param2) {
+    final RenderableModel createModelMeshAtPosition(int[] param0, byte param1, MeshBuilder param2) {
         RuntimeException var4 = null;
-        fa stackIn_2_0 = null;
-        fa stackIn_4_0 = null;
+        RenderableModel stackIn_2_0 = null;
+        RenderableModel stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -680,7 +680,7 @@ abstract class TableScene {
             stackIn_4_0 = param2.createModelMeshTransformed(this.field_d, this.field_t, -param0[0] + (2304 + this.field_q), 1152 + (this.field_e - param0[1]), this.field_u - param0[2], param0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (fa) null;
+          stackIn_2_0 = (RenderableModel) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -774,10 +774,10 @@ abstract class TableScene {
         return "lighting amb=" + this.field_d + ", cont=" + this.field_m;
     }
 
-    final fa createModelMeshWithBallTransform(int[] param0, MeshBuilder param1, int param2) {
+    final RenderableModel createModelMeshWithBallTransform(int[] param0, MeshBuilder param1, int param2) {
         RuntimeException var4 = null;
         Ball[] var5 = null;
-        fa stackIn_3_0 = null;
+        RenderableModel stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -846,15 +846,15 @@ abstract class TableScene {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          d.field_b = new MeshBuilder(17, 16, 1);
+          MeshBoundsSupport.field_b = new MeshBuilder(17, 16, 1);
           for (var3_int = 0; var3_int < 16; var3_int++) {
             var4_double = Math.sin(2.0 * (3.141592653589793 * (double)var3_int) / 16.0);
             var6 = Math.cos(3.141592653589793 * (double)var3_int * 2.0 / 16.0);
             var8 = Math.sin(2.0 * (3.141592653589793 * (double)(var3_int + 1)) / 16.0);
             var10 = Math.cos(3.141592653589793 * (double)(var3_int + 1) * 2.0 / 16.0);
-            d.field_b.addFace(d.field_b.addVertex(0, 0, 0), d.field_b.addVertex(PotEvent.a(4885, 18.0 * var10), PotEvent.a(4885, var8 * 18.0), 0), d.field_b.addVertex(PotEvent.a(4885, 18.0 * var6), PotEvent.a(4885, 18.0 * var4_double), 0), (byte) 1, (short) 127, (byte) 127);
+            MeshBoundsSupport.field_b.addFace(MeshBoundsSupport.field_b.addVertex(0, 0, 0), MeshBoundsSupport.field_b.addVertex(PotEvent.a(4885, 18.0 * var10), PotEvent.a(4885, var8 * 18.0), 0), MeshBoundsSupport.field_b.addVertex(PotEvent.a(4885, 18.0 * var6), PotEvent.a(4885, 18.0 * var4_double), 0), (byte) 1, (short) 127, (byte) 127);
           }
-          var12 = (ModelMesh) (this.createModelMeshUntransformed(-113, d.field_b));
+          var12 = (ModelMesh) (this.createModelMeshUntransformed(-113, MeshBoundsSupport.field_b));
           var3 = var12;
           LimitedRandomAccessFile.field_g = new ModelInstance[param0.length];
           if (param1 >= -16) {
@@ -982,10 +982,10 @@ abstract class TableScene {
               if (var8 > var6_int) {
                 var9 = var6_int - var8;
               }
-              param4[var7].setPanAndRampVolume(var9 + MaxLengthTextInputWidget.nextRandomInt(64, true, ea.field_r) + var8, 441, 128);
+              param4[var7].setPanAndRampVolume(var9 + MaxLengthTextInputWidget.nextRandomInt(64, true, RankingsRequest.field_r) + var8, 441, 128);
             } else if ((param4[var7] == null ||
-              param4[var7].field_o.isSamplePositionOutOfRange()) && MaxLengthTextInputWidget.nextRandomInt(param1, true, ea.field_r) == 0) {
-              param4[var7] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentPan(param3[MaxLengthTextInputWidget.nextRandomInt(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
+              param4[var7].field_o.isSamplePositionOutOfRange()) && MaxLengthTextInputWidget.nextRandomInt(param1, true, RankingsRequest.field_r) == 0) {
+              param4[var7] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentPan(param3[MaxLengthTextInputWidget.nextRandomInt(param3.length, true, RankingsRequest.field_r)], 100, var6_int, 8192 * var7 + 4096));
             }
           }
           var7Lifetime1 = -14 % ((-11 - param2) / 44);
@@ -1045,10 +1045,10 @@ abstract class TableScene {
         }
     }
 
-    final fa createModelMeshUntransformed(int param0, MeshBuilder param1) {
+    final RenderableModel createModelMeshUntransformed(int param0, MeshBuilder param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        fa stackIn_1_0 = null;
+        RenderableModel stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -1202,12 +1202,12 @@ abstract class TableScene {
               param2[var4_int].updateRenderTransform(2);
               dq.field_a.buildBallModel(false, param2[var4_int].renderTransform, var4_int);
             }
-            w.field_a[var4_int] = (eb) ((Object) DropTargetWidget.field_O[var4_int]);
+            w.field_a[var4_int] = (SceneDrawable) ((Object) DropTargetWidget.field_O[var4_int]);
             LinkButtonPainter.field_f[var4_int] = var4_int;
             GrowableIntList.field_d[var4_int] = w.field_a[var4_int].viewDepth(param1, -111);
           }
           for (var5 = 0; var5 < QuickChatPhraseRegistry.field_g; var5++) {
-            w.field_a[var4_int] = (eb) ((Object) ArchiveLoadSequence.field_e[var5]);
+            w.field_a[var4_int] = (SceneDrawable) ((Object) ArchiveLoadSequence.field_e[var5]);
             LinkButtonPainter.field_f[var4_int] = var4_int;
             GrowableIntList.field_d[var4_int] = w.field_a[var4_int].viewDepth(param1, -114);
             var4_int++;
@@ -1297,7 +1297,7 @@ abstract class TableScene {
         int var3_intLifetime1;
         try {
           DropTargetWidget.field_O = new BallDebugOverlay[param0.balls.length];
-          w.field_a = new eb[ArchiveLoadSequence.field_e.length + param0.balls.length];
+          w.field_a = new SceneDrawable[ArchiveLoadSequence.field_e.length + param0.balls.length];
           var3_int = param1;
           for (var3_intLifetime1 = 0; var3_intLifetime1 < param0.balls.length; var3_intLifetime1++) {
             DropTargetWidget.field_O[var3_intLifetime1] = new BallDebugOverlay(var3_intLifetime1, param0);

@@ -32,7 +32,7 @@ final class dk {
           param4 = param4 / var9;
           if (param4 > -23170 &&
             param4 < 23170) {
-            SoftwareRasterizer.fillRadialGlow(var10, var11, param4, 4, bc.field_c);
+            SoftwareRasterizer.fillRadialGlow(var10, var11, param4, 4, FontPaletteSupport.field_c);
           }
         }
     }
@@ -158,7 +158,7 @@ final class dk {
           var2 = null;
           if (0 == hn.field_b &&
             tp.field_e != null) {
-            var2 = cl.publicchatUnavailableRatedgame;
+            var2 = ProjectedLineSupport.publicchatUnavailableRatedgame;
           }
           if (hn.field_b == 2 &&
             !hp.a(false)) {
@@ -222,7 +222,7 @@ final class dk {
               }
               var8 = stackIn_59_0;
               var4 = var4 + var3 + var8;
-              boolean decompiledSharedTail0 = !(ea.field_z);
+              boolean decompiledSharedTail0 = !(RankingsRequest.field_z);
               if (!decompiledSharedTail0) {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + WeightedLruCache.dobChatdisabled + "</col>";
@@ -237,7 +237,7 @@ final class dk {
               if (!MenuSelection.b(param0 ^ -2)) {
                 if (TimeTrialSelectScreen.field_J.activeInside &&
                   -TimeTrialSelectScreen.field_J.screenX + wn.field_i < var9) {
-                  if (ea.field_z) {
+                  if (RankingsRequest.field_z) {
                     var1 = "Broken!";
                   } else {
                     var1 = je.clickToQuickchat;
@@ -245,7 +245,7 @@ final class dk {
                 }
                 if (TimeTrialSelectScreen.field_J.pressedButton != 0 &&
                   var9 > TimeTrialSelectScreen.field_J.pressLocalX &&
-                  !ea.field_z) {
+                  !RankingsRequest.field_z) {
                   EmailValidator.c((byte) 68);
                 }
               }
@@ -279,7 +279,7 @@ final class dk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         returntolobby = null;
         if (param0 != 113) {
           return;

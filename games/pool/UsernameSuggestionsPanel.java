@@ -60,7 +60,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
             for (var5 = 0; var5 < var3_int; var5++) {
               this.suggestionButtons[var5] = new ButtonWidget(this.suggestions[var5], (WidgetListener) (this));
               this.suggestionButtons[var5].renderer = (WidgetPainter) ((Object) var4);
-              this.suggestionButtons[var5].hoverText = ab.createSelectAlternative;
+              this.suggestionButtons[var5].hoverText = ArchiveAvailabilitySupport.createSelectAlternative;
               this.suggestionButtons[var5].setWidgetBounds(80, 0, 15, false, 20 + 16 * var5);
               this.addChild(true, this.suggestionButtons[var5]);
             }
@@ -134,21 +134,21 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         if (param5 != 13375) {
           return;
         }
-        if (!param4 && (fr.field_s != SoftwareRasterizer.width ||
+        if (!param4 && (DelayedServerPacket.field_s != SoftwareRasterizer.width ||
           SoftwareRasterizer.height != f.field_h) && (SoftwareRasterizer.height == OpacityWidget.field_P.height &&
           OpacityWidget.field_P.width == SoftwareRasterizer.width)) {
           if (null == HighscoresScreen.field_L) {
             if (tp.field_e == null) {
               f.layoutLobbyPanels(48);
             } else {
-              PoolGameModel.a(true, 0);
+              PoolGameModel.layoutLobbyAndChatPanels(true, 0);
             }
           } else {
-            PoolGameModel.a(false, 0);
+            PoolGameModel.layoutLobbyAndChatPanels(false, 0);
           }
         }
         if (!param4) {
-          RasterSnapshot.field_u = (fr.field_s - 640) / 2;
+          RasterSnapshot.field_u = (DelayedServerPacket.field_s - 640) / 2;
         } else {
           RasterSnapshot.field_u = StrongCacheEntry.field_I;
         }
@@ -167,10 +167,10 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         if (AccountWelcomePanel.field_bb &&
           HighscoresScreen.field_L.field_Nb <= HighscoresScreen.field_L.field_mc) {
           DebugTuningSlider.field_c.viewport.text = ro.gameFull;
-          c.field_e.enabled = false;
+          QuickChatMenuSupport.field_e.enabled = false;
           AudioService.a(DebugTuningSlider.field_c.content, (byte) 109);
         } else {
-          c.field_e.enabled = true;
+          QuickChatMenuSupport.field_e.enabled = true;
           DebugTuningSlider.field_c.viewport.text = null;
           HuffmanCodec.a(param7, param0, DebugTuningSlider.field_c, param9, (byte) -83);
         }

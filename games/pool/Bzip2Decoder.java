@@ -194,7 +194,7 @@ final class Bzip2Decoder {
         return;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_a = null;
     }
 

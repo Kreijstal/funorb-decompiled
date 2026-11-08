@@ -89,7 +89,7 @@ final class SpaceObject {
             }
             this.field_o = (ModelMesh) (this.field_n.createModelMeshTransformed(param1.field_C, param1.field_F, param1.field_q, param1.field_e, param1.field_u, this.field_g));
           }
-          this.field_o.b(param0, this.field_g);
+          this.field_o.drawTransformed(param0, this.field_g);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -212,22 +212,22 @@ final class SpaceObject {
         this.field_o = null;
         try {
           this.field_n = param0;
-          var2_int = MaxLengthTextInputWidget.nextRandomInt(8192, true, ea.field_r);
+          var2_int = MaxLengthTextInputWidget.nextRandomInt(8192, true, RankingsRequest.field_r);
           var3 = 1024;
-          dupTemp$0 = -134217728 + MaxLengthTextInputWidget.nextRandomInt(268435456, true, ea.field_r);
+          dupTemp$0 = -134217728 + MaxLengthTextInputWidget.nextRandomInt(268435456, true, RankingsRequest.field_r);
           this.field_q = dupTemp$0;
           dupTemp$1 = EightBallRules.sineLookup((byte) -128, var2_int) * var3;
           this.field_m = dupTemp$1;
           dupTemp$2 = UiComponentNode.sineFixed(var2_int, (byte) 77) * var3;
           this.field_a = dupTemp$2;
           this.field_g = new int[]{dupTemp$0 >> 13, dupTemp$1 >> 13, dupTemp$2 >> 13, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
-          this.field_b = -(65536 + MaxLengthTextInputWidget.nextRandomInt(131072, true, ea.field_r));
-          this.field_c = MaxLengthTextInputWidget.nextRandomInt(9, true, ea.field_r) - 5;
-          this.field_h = -5 + MaxLengthTextInputWidget.nextRandomInt(9, true, ea.field_r);
-          this.field_p = new Quaternion(MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r) - 16384, MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r) - 16384, MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r) - 16384, -16384 + MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r));
+          this.field_b = -(65536 + MaxLengthTextInputWidget.nextRandomInt(131072, true, RankingsRequest.field_r));
+          this.field_c = MaxLengthTextInputWidget.nextRandomInt(9, true, RankingsRequest.field_r) - 5;
+          this.field_h = -5 + MaxLengthTextInputWidget.nextRandomInt(9, true, RankingsRequest.field_r);
+          this.field_p = new Quaternion(MaxLengthTextInputWidget.nextRandomInt(32768, true, RankingsRequest.field_r) - 16384, MaxLengthTextInputWidget.nextRandomInt(32768, true, RankingsRequest.field_r) - 16384, MaxLengthTextInputWidget.nextRandomInt(32768, true, RankingsRequest.field_r) - 16384, -16384 + MaxLengthTextInputWidget.nextRandomInt(32768, true, RankingsRequest.field_r));
           this.field_p.normalise(true);
           this.field_e = new Quaternion();
-          this.field_e.setFromAxisAngle(60, MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r) - 16384, -16384 + MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r), -16384 + MaxLengthTextInputWidget.nextRandomInt(32768, true, ea.field_r), 1 + MaxLengthTextInputWidget.nextRandomInt(8, true, ea.field_r));
+          this.field_e.setFromAxisAngle(60, MaxLengthTextInputWidget.nextRandomInt(32768, true, RankingsRequest.field_r) - 16384, -16384 + MaxLengthTextInputWidget.nextRandomInt(32768, true, RankingsRequest.field_r), -16384 + MaxLengthTextInputWidget.nextRandomInt(32768, true, RankingsRequest.field_r), 1 + MaxLengthTextInputWidget.nextRandomInt(8, true, RankingsRequest.field_r));
           this.field_e.normalise(true);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ')');

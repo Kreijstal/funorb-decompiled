@@ -136,11 +136,11 @@ final class SpaceBallSkin extends BallSkin {
         }
     }
 
-    final static hj[] a(byte param0) {
+    final static QuickChatDynamicCommand[] a(byte param0) {
         if (param0 == -32) {
-          return new hj[]{ArchiveRequest.field_G, lb.field_N, TranslatedUiText.field_g, CacheEntry.field_A, en.field_c, CueStick.field_i, Js5Transport.field_g, ScrollPane.field_Tb, mj.field_d, WidgetStyleLayer.field_e, Ball.field_J, WidgetContainer.field_K, bq.field_r, pn.field_k};
+          return new QuickChatDynamicCommand[]{ArchiveRequest.field_G, lb.field_N, TranslatedUiText.field_g, CacheEntry.field_A, QuaternionRotationSupport.field_c, CueStick.field_i, Js5Transport.field_g, ScrollPane.field_Tb, mj.field_d, WidgetStyleLayer.field_e, Ball.field_J, WidgetContainer.field_K, AchievementNotice.field_r, pn.field_k};
         }
-        return (hj[]) null;
+        return (QuickChatDynamicCommand[]) null;
     }
 
     final int ballColor(int param0, boolean param1) {

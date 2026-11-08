@@ -199,7 +199,7 @@ final class IntKeyLookup {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        fl var4_ref_fl = null;
+        IntLookupQuery var4_ref_fl = null;
         oi var5 = null;
         int var5_int = 0;
         int[] var6 = null;
@@ -216,9 +216,9 @@ final class IntKeyLookup {
           var2 = var9.readUnsignedByte(-125);
           var3 = var9.readUnsignedByte(param0 ^ -151);
           if (var2 == 0) {
-            var4_ref_fl = (fl) (cq.field_g.last((byte) -124));
+            var4_ref_fl = (IntLookupQuery) (TutorialFactory.field_g.last((byte) -124));
             if (var4_ref_fl == null) {
-              dn.c(param0 - 79);
+              ShotEvent.c(param0 - 79);
               return;
             }
             var5_int = ScrollPane.field_Pb - var9.position;
@@ -246,14 +246,14 @@ final class IntKeyLookup {
               break;
             }
             if (var5 == null) {
-              dn.c(118);
+              ShotEvent.c(118);
               return;
             }
             var5.unlink((byte) -117);
             return;
           }
           GrowableIntList.reportClientError((Throwable) null, "LR1: " + t.formatPacketDump(param0 ^ 159), param0 - 8754);
-          dn.c(125);
+          ShotEvent.c(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

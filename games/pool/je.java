@@ -29,7 +29,7 @@ final class je {
 
     final static boolean b(byte param0) {
         if (param0 < 95) {
-          je.a((byte) -44);
+          je.releaseStatics((byte) -44);
           if (PlasmaTableScene.field_gb == null) {
             return false;
           }
@@ -47,7 +47,7 @@ final class je {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         clickToQuickchat = null;
         tutorialShotModeEnter = null;
         muChatTips = null;

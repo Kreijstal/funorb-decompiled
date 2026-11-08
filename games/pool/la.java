@@ -54,7 +54,7 @@ final class la {
         try {
           if (ph.field_d.pressedButton == 0) {
           } else {
-            if (!ea.field_z) {
+            if (!RankingsRequest.field_z) {
               if (!ViewportController.field_y) {
                 DualLinkNode.field_p = true;
               } else {
@@ -75,7 +75,7 @@ final class la {
             if (0 == wn.field_g.pressedButton) {
               return;
             }
-            cl.a(14851);
+            ProjectedLineSupport.resetChatComposition(14851);
             DualLinkNode.field_p = false;
           }
         } catch (RuntimeException runtimeException) {

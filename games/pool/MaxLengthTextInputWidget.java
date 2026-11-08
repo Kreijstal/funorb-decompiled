@@ -167,7 +167,7 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
             }
             if (var2 != 4) {
               GrowableIntList.reportClientError((Throwable) null, "F1: " + t.formatPacketDump(93), param0 ^ -21796);
-              dn.c(99);
+              ShotEvent.c(99);
               return;
             }
             th.field_a = 1;
@@ -367,13 +367,13 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
     }
 
     final static void m(int param0) {
-        jc.field_e = new Quaternion(MaxLengthTextInputWidget.nextRandomInt(262144, true, ea.field_r) - 131072, -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, ea.field_r), -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, ea.field_r), -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, ea.field_r));
+        jc.field_e = new Quaternion(MaxLengthTextInputWidget.nextRandomInt(262144, true, RankingsRequest.field_r) - 131072, -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, RankingsRequest.field_r), -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, RankingsRequest.field_r), -131072 + MaxLengthTextInputWidget.nextRandomInt(262144, true, RankingsRequest.field_r));
         jc.field_e.normalise(true);
         LoginPayloadKind.field_a = dq.field_a;
         if (LoginPayloadKind.field_a == null) {
           LoginPayloadKind.field_a = PoolGameModel.field_B[0];
         }
-        vn.field_e = MaxLengthTextInputWidget.nextRandomInt(LoginPayloadKind.field_a.meshCount(param0 + 23883), true, ea.field_r);
+        vn.field_e = MaxLengthTextInputWidget.nextRandomInt(LoginPayloadKind.field_a.meshCount(param0 + 23883), true, RankingsRequest.field_r);
         tp.field_h[1] = 0;
         tp.field_h[0] = -140;
         CushionSegment.field_i = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};

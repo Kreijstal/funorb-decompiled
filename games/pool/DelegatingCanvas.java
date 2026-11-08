@@ -22,7 +22,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             openinpopupwindow = (String) null;
           }
           if (TextLineLayout.a(param2, param0, param1, (byte) 121)) {
-            stackIn_6_0 = cl.createAlphaFont(param3.getFileBytesUnkeyed(param4 - 24766, param1, param2), true);
+            stackIn_6_0 = ProjectedLineSupport.createAlphaFont(param3.getFileBytesUnkeyed(param4 - 24766, param1, param2), true);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -52,7 +52,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         if (tq.field_p) {
           BirthDateValidator.field_m.addChild(21, pm.field_m);
         }
-        BirthDateValidator.field_m.addChild(39, c.field_e);
+        BirthDateValidator.field_m.addChild(39, QuickChatMenuSupport.field_e);
         kg.field_l = new vn(BirthDateValidator.muChatLobby, BirthDateValidator.field_m);
         BufferedFile.field_a = new UiComponent(0L, (UiComponent) null);
         BufferedFile.field_a.addChild(-117, kg.field_l.field_i);

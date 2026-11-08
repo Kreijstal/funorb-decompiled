@@ -4,7 +4,7 @@
 final class BinaryBitmapFont extends BitmapFont {
     private byte[][] glyphMasks;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyphVertical(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var13 = 0;
         int var8 = param1 + param2 * SoftwareRasterizer.width;
         int var9 = SoftwareRasterizer.width - param3;
@@ -41,7 +41,7 @@ final class BinaryBitmapFont extends BitmapFont {
           return;
         }
         var11 = var11 - var10 * param3;
-        BinaryBitmapFont.a(SoftwareRasterizer.pixels, this.glyphMasks[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+        BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.pixels, this.glyphMasks[param0], param5, var12, var8, var10, param3, param4, var9, var11);
     }
 
     final static void blitBinaryGlyphWithAlpha(int[] destination, byte[] param1, int param2, int sourceIndex, int destinationIndex, int width, int height, int destinationRowSkip, int sourceRowSkip, int alpha) {
@@ -67,7 +67,7 @@ final class BinaryBitmapFont extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphVerticalAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var14 = 0;
         int var9 = param1 + param2 * SoftwareRasterizer.width;
         int var10 = SoftwareRasterizer.width - param3;
@@ -104,7 +104,7 @@ final class BinaryBitmapFont extends BitmapFont {
           return;
         }
         var12 = var12 - var11 * param3;
-        BinaryBitmapFont.a(SoftwareRasterizer.pixels, this.glyphMasks[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+        BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.pixels, this.glyphMasks[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
     }
 
     BinaryBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
@@ -113,7 +113,7 @@ final class BinaryBitmapFont extends BitmapFont {
         this.glyphMasks = param5;
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blitBinaryGlyph(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var10;
         int var12;
@@ -263,7 +263,7 @@ final class BinaryBitmapFont extends BitmapFont {
         BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.pixels, this.glyphMasks[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void blitBinaryGlyphWithAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$0 = 0;

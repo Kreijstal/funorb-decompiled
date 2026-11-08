@@ -77,12 +77,12 @@ final class AimTarget {
           return TickClock.loadingFonts + " - " + PolarTableScene.field_nb.getGroupProgressByName(100, "commonui") + "%";
         }
         if (!DualLinkNode.field_r.isIndexReady(66)) {
-          return de.waitingforExtradata;
+          return DebugTuningSupport.waitingforExtradata;
         }
         if (!DualLinkNode.field_r.ensureAllGroupsAvailable(-63)) {
           return SoundCache.loadingExtradata + " - " + DualLinkNode.field_r.getOverallProgress(0) + "%";
         }
-        return cl.pleasewaitDotdotdot;
+        return ProjectedLineSupport.pleasewaitDotdotdot;
     }
 
     final void computeDistance(int param0, Ball param1, PoolGameModel param2) {
@@ -144,7 +144,7 @@ final class AimTarget {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 >= 82) {
           field_a = null;
@@ -222,7 +222,7 @@ final class AimTarget {
         if (param0 != 1048576) {
           return -61;
         }
-        return dn.a(ArchiveProvider.divideFixed16(this.distance, (byte) -112, this.targetIsBall ? 1048576L : 524288L), false);
+        return ShotEvent.a(ArchiveProvider.divideFixed16(this.distance, (byte) -112, this.targetIsBall ? 1048576L : 524288L), false);
     }
 
     static {

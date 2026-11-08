@@ -5,7 +5,7 @@ final class nl {
     static String field_d;
     static String[] mustlogin4;
     static BufferedFile field_c;
-    static en field_b;
+    static QuaternionRotationSupport field_b;
 
     final boolean b(int param0) {
         if (param0 != 719) {

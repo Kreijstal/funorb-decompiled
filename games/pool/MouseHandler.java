@@ -94,7 +94,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           if (wp.field_g == null) {
             return;
           }
-          ho.field_v = 0;
+          ReflectionCheck.field_v = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,7 +123,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         try {
           if (wp.field_g != null) {
             PoolUiText.field_g = 0;
-            ho.field_v = 0;
+            ReflectionCheck.field_v = 0;
             m.field_d = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 4) != 0) {
@@ -242,10 +242,10 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
             rl.monotonicTimeMillis((byte) -115);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               CueAim.field_c = 2;
-              ho.field_v = 2;
+              ReflectionCheck.field_v = 2;
             } else {
               CueAim.field_c = 1;
-              ho.field_v = 1;
+              ReflectionCheck.field_v = 1;
             }
             var2_int = param0.getModifiers();
             if (0 == (var2_int & 8)) {
