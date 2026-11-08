@@ -121,10 +121,10 @@ final class CheckboxPainter implements WidgetPainter {
               var1_int = var1_int + LeagueRatingRequirements.field_d;
             }
             if (var4 < 0) {
-              MeshObject.field_f.a(var6, var8Lifetime1, InputLayoutState.field_d + var1_int, var5, -1);
+              MeshObject.field_f.drawText(var6, var8Lifetime1, InputLayoutState.field_d + var1_int, var5, -1);
               var1_int = var1_int + PlayArea.field_c;
             } else {
-              MainMenuScreen.field_F.a(var6, var8Lifetime1, ConsoleExpression.field_g + var1_int, var5, -1);
+              MainMenuScreen.field_F.drawText(var6, var8Lifetime1, ConsoleExpression.field_g + var1_int, var5, -1);
               var1_int = var1_int + (PlayerModelPreview.field_j + ThreadSleepSupport.field_a + LeagueRatingRequirements.field_d);
             }
           }
@@ -398,7 +398,7 @@ final class CheckboxPainter implements WidgetPainter {
           var8 = param4 - (-param3.field_t - this.field_f);
           var9 = this.field_n + (param2 + param3.field_g);
           int var10 = -126 / ((59 - param0) / 53);
-          SoftwareRasterizer.d(var8, var9, this.field_h, this.field_g, 5592405);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_h, this.field_g, 5592405);
           SoftwareRasterizer.fillRect(var8, var9, this.field_h, this.field_g, var7);
           if (var12.field_A) {
             SoftwareRasterizer.drawLine(var8, var9, this.field_h + var8, this.field_g + var9, 1);
@@ -406,7 +406,7 @@ final class CheckboxPainter implements WidgetPainter {
           }
           if (null != this.field_m) {
             var11 = this.field_h + (this.field_f + this.field_i);
-            this.field_m.a(param3.field_q, var11 + param3.field_t + param4, this.field_p + param2 + param3.field_g, -this.field_i - var11 + param3.field_n, param3.field_i - (this.field_i << 1), this.field_e, this.field_l, this.field_d, this.field_j, 0);
+            this.field_m.drawParagraph(param3.field_q, var11 + param3.field_t + param4, this.field_p + param2 + param3.field_g, -this.field_i - var11 + param3.field_n, param3.field_i - (this.field_i << 1), this.field_e, this.field_l, this.field_d, this.field_j, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

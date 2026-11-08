@@ -60,7 +60,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_g[var3Lifetime1] = SpriteBackgroundSupport.xor(this.field_g[var3Lifetime1], ValidationHelpWidget.field_W[var4][TextLayoutLine.b((int)(this.field_p[TextLayoutLine.b(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
+              this.field_g[var3Lifetime1] = SpriteBackgroundSupport.xor(this.field_g[var3Lifetime1], ValidationHelpWidget.field_W[var4][TextLayoutLine.bitwiseAnd((int)(this.field_p[TextLayoutLine.bitwiseAnd(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -75,7 +75,7 @@ final class WhirlpoolHasher {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_g[var3Lifetime1Lifetime2] = SpriteBackgroundSupport.xor(this.field_g[var3Lifetime1Lifetime2], ValidationHelpWidget.field_W[var7][TextLayoutLine.b(255, (int)(this.field_c[TextLayoutLine.b(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1))]);
+              this.field_g[var3Lifetime1Lifetime2] = SpriteBackgroundSupport.xor(this.field_g[var3Lifetime1Lifetime2], ValidationHelpWidget.field_W[var7][TextLayoutLine.bitwiseAnd(255, (int)(this.field_c[TextLayoutLine.bitwiseAnd(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -373,7 +373,7 @@ final class WhirlpoolHasher {
         String var9 = null;
         var8 = Kickabout.field_G;
         try {
-          this.field_e[this.field_l] = (byte)PainterStyle.a((int) this.field_e[this.field_l], 128 >>> TextLayoutLine.b(7, this.field_o));
+          this.field_e[this.field_l] = (byte)PainterStyle.bitwiseOr((int) this.field_e[this.field_l], 128 >>> TextLayoutLine.bitwiseAnd(7, this.field_o));
           this.field_l = this.field_l + 1;
           if (this.field_l > 32) {
             while (this.field_l < 64) {
@@ -472,7 +472,7 @@ final class WhirlpoolHasher {
             var8 = 255 & param2[var5_int] << var6 | (255 & param2[1 + var5_int]) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_e[this.field_l] = (byte)PainterStyle.a((int) this.field_e[this.field_l], var8 >>> var7);
+              this.field_e[this.field_l] = (byte)PainterStyle.bitwiseOr((int) this.field_e[this.field_l], var8 >>> var7);
               this.field_o = this.field_o + (8 - var7);
               this.field_l = this.field_l + 1;
               if (512 == this.field_o) {
@@ -480,7 +480,7 @@ final class WhirlpoolHasher {
                 this.field_l = 0;
                 this.field_o = 0;
               }
-              this.field_e[this.field_l] = (byte)TextLayoutLine.b(255, var8 << -var7 + 8);
+              this.field_e[this.field_l] = (byte)TextLayoutLine.bitwiseAnd(255, var8 << -var7 + 8);
               this.field_o = this.field_o + var7;
               var5_int++;
               param1 = param1 - 8L;
@@ -492,7 +492,7 @@ final class WhirlpoolHasher {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param2[var5_int] << var6 & 255;
-            this.field_e[this.field_l] = (byte)PainterStyle.a((int) this.field_e[this.field_l], var8Lifetime1 >>> var7);
+            this.field_e[this.field_l] = (byte)PainterStyle.bitwiseOr((int) this.field_e[this.field_l], var8Lifetime1 >>> var7);
           }
           if (8L > param1 + (long)var7) {
             this.field_o = (int)((long)this.field_o + param1);
@@ -505,7 +505,7 @@ final class WhirlpoolHasher {
               this.field_o = 0;
               this.field_l = 0;
             }
-            this.field_e[this.field_l] = (byte)TextLayoutLine.b(255, var8Lifetime1 << -var7 + 8);
+            this.field_e[this.field_l] = (byte)TextLayoutLine.bitwiseAnd(255, var8Lifetime1 << -var7 + 8);
             this.field_o = this.field_o + (int)param1;
           }
           return;

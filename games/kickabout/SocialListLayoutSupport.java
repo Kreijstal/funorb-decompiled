@@ -119,7 +119,7 @@ final class SocialListLayoutSupport {
             }
             stackIn_18_0 = var6.field_Bb;
             if (0 < var10) {
-              stackIn_19_1 = BitmapFont.a(var6.field_Bb.field_X, var6.name, var10);
+              stackIn_19_1 = BitmapFont.truncateWithEllipsis(var6.field_Bb.field_X, var6.name, var10);
             } else {
               stackIn_19_1 = var6.name;
             }

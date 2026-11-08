@@ -45,9 +45,9 @@ final class MainMenuScreen extends ButtonMenuScreen {
           super.drawOverlay(param0, 110);
           SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
           this.field_B.draw(76, param0);
-          ByteArrayPool.field_d.c(LoadingProgressSupport.field_b, this.field_B.field_F + (this.field_B.field_q >> 1), (this.field_B.field_mb >> 1) + (this.field_B.field_T - 28), 16777215, -1, this.field_E);
-          ByteArrayPool.field_d.c(TextFieldValidator.field_e.toUpperCase(), (this.field_B.field_q >> 1) + this.field_B.field_F, 6 + this.field_B.field_T + (this.field_B.field_mb >> 1), 16777215, -1, this.field_E);
-          ByteArrayPool.field_d.a(BeveledTextPainter.field_v.toLowerCase(), this.field_B.field_F, this.field_B.field_mb + this.field_B.field_T, this.field_B.field_q, 80, 16777215, -1, this.field_E, 1, 1, 0);
+          ByteArrayPool.field_d.drawCenteredAlpha(LoadingProgressSupport.field_b, this.field_B.field_F + (this.field_B.field_q >> 1), (this.field_B.field_mb >> 1) + (this.field_B.field_T - 28), 16777215, -1, this.field_E);
+          ByteArrayPool.field_d.drawCenteredAlpha(TextFieldValidator.field_e.toUpperCase(), (this.field_B.field_q >> 1) + this.field_B.field_F, 6 + this.field_B.field_T + (this.field_B.field_mb >> 1), 16777215, -1, this.field_E);
+          ByteArrayPool.field_d.drawParagraph(BeveledTextPainter.field_v.toLowerCase(), this.field_B.field_F, this.field_B.field_mb + this.field_B.field_T, this.field_B.field_q, 80, 16777215, -1, this.field_E, 1, 1, 0);
           if (!GameLoopApplet.field_E.field_J[0]) {
             SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
             return;
@@ -61,9 +61,9 @@ final class MainMenuScreen extends ButtonMenuScreen {
         super.drawOverlay(param0, 110);
         SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
         this.field_B.draw(76, param0);
-        ByteArrayPool.field_d.c(LoadingProgressSupport.field_b, this.field_B.field_F + (this.field_B.field_q >> 1), (this.field_B.field_mb >> 1) + (this.field_B.field_T - 28), 16777215, -1, this.field_E);
-        ByteArrayPool.field_d.c(TextFieldValidator.field_e.toUpperCase(), (this.field_B.field_q >> 1) + this.field_B.field_F, 6 + this.field_B.field_T + (this.field_B.field_mb >> 1), 16777215, -1, this.field_E);
-        ByteArrayPool.field_d.a(BeveledTextPainter.field_v.toLowerCase(), this.field_B.field_F, this.field_B.field_mb + this.field_B.field_T, this.field_B.field_q, 80, 16777215, -1, this.field_E, 1, 1, 0);
+        ByteArrayPool.field_d.drawCenteredAlpha(LoadingProgressSupport.field_b, this.field_B.field_F + (this.field_B.field_q >> 1), (this.field_B.field_mb >> 1) + (this.field_B.field_T - 28), 16777215, -1, this.field_E);
+        ByteArrayPool.field_d.drawCenteredAlpha(TextFieldValidator.field_e.toUpperCase(), (this.field_B.field_q >> 1) + this.field_B.field_F, 6 + this.field_B.field_T + (this.field_B.field_mb >> 1), 16777215, -1, this.field_E);
+        ByteArrayPool.field_d.drawParagraph(BeveledTextPainter.field_v.toLowerCase(), this.field_B.field_F, this.field_B.field_mb + this.field_B.field_T, this.field_B.field_q, 80, 16777215, -1, this.field_E, 1, 1, 0);
         if (!GameLoopApplet.field_E.field_J[0]) {
           SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
           return;

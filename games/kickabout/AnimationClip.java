@@ -17,7 +17,7 @@ final class AnimationClip {
     static ReverbPcmStream field_k;
     static String field_a;
 
-    final static Sprite a(int param0, int param1, Sprite param2) {
+    final static Sprite tintGrayscaleSprite(int param0, int param1, Sprite param2) {
         int var6 = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -67,7 +67,7 @@ final class AnimationClip {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int getPreparationProgress(byte param0, int param1) {
         int var2 = param1 >= SelectionMarkerSupport.field_a.length ? 100 : SelectionMarkerSupport.field_a[param1];
         if (param0 >= -89) {
           return 7;
@@ -289,7 +289,7 @@ final class AnimationClip {
         }
     }
 
-    private final void a(int param0, PacketBuffer param1) {
+    private final void decode(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -348,7 +348,7 @@ final class AnimationClip {
           var9 = var10;
           var4 = var9;
           if (var9 != null) {
-            this.a(-1, new PacketBuffer(var11));
+            this.decode(-1, new PacketBuffer(var11));
           }
           var5 = 0;
           for (var6 = 0; this.field_e.length > var6; var6++) {

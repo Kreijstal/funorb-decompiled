@@ -383,7 +383,7 @@ final class DialogOverlay implements OverlayLayer {
               } else {
                 var12.field_Ib.setBounds(true, 68, 0, var31, LineupPositionSupport.field_c);
               }
-              var12.field_Jb.field_E = BitmapFont.a(var12.field_Jb.field_X, var32, 78);
+              var12.field_Jb.field_E = BitmapFont.truncateWithEllipsis(var12.field_Jb.field_X, var32, 78);
               stackIn_64_0 = var12.field_Jb;
               stackIn_65_1 = !(param1);
               ((UiLayoutNode) (Object) stackIn_64_0).setBounds(stackIn_65_1, 78, 70, var31, LineupPositionSupport.field_c);
@@ -398,7 +398,7 @@ final class DialogOverlay implements OverlayLayer {
               } else {
                 var12.field_kc.field_A = 2;
                 var12.field_jc.field_E = "/" + var12.field_bc;
-                var33_int = (-var12.field_jc.field_X.a("/") + 348) / 2;
+                var33_int = (-var12.field_jc.field_X.stringWidth("/") + 348) / 2;
                 var12.field_kc.setBounds(true, var33_int - 150, 150, var31, LineupPositionSupport.field_c);
                 var12.field_jc.setBounds(true, -var33_int + 198, var33_int, var31, LineupPositionSupport.field_c);
               }
@@ -506,7 +506,7 @@ final class DialogOverlay implements OverlayLayer {
                 }
                 var38 = var37.toString();
                 var12.field_fc.field_E = var38;
-                var39Lifetime1 = var12.field_fc.field_X.b(var38, -(var12.field_fc.field_kb * 2) + var12.field_q);
+                var39Lifetime1 = var12.field_fc.field_X.wrappedLineCount(var38, -(var12.field_fc.field_kb * 2) + var12.field_q);
                 var12.field_fc.setBounds(true, var12.field_q, 0, var31, LineupPositionSupport.field_c * var39Lifetime1);
                 var31 = var31 + LineupPositionSupport.field_c * var39Lifetime1;
               }
@@ -525,7 +525,7 @@ final class DialogOverlay implements OverlayLayer {
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Bb.field_X.b(var33, var12.field_q - (DiskCacheWorker.field_b + DiskCacheWorker.field_b));
+              var34_intLifetime1 = var12.field_Bb.field_X.wrappedLineCount(var33, var12.field_q - (DiskCacheWorker.field_b + DiskCacheWorker.field_b));
               var12.field_Bb.field_E = var33;
               var12.field_Bb.field_U = 256 * var12.field_Db / PlayerInputFactory.field_c;
               var12.field_Bb.setBounds(true, -(DiskCacheWorker.field_b * 2) + var12.field_q, DiskCacheWorker.field_b, var31, var34_intLifetime1 * LineupPositionSupport.field_c);

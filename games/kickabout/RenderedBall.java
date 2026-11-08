@@ -226,14 +226,14 @@ final class RenderedBall extends BallAgent {
           var5 = 26 / ((param1 + 55) / 54);
           var3 = IsSixCommand.field_C;
           var4 = 300;
-          var6 = ((BitmapFont) ((Object) var3)).b(var2, var4);
+          var6 = ((BitmapFont) ((Object) var3)).wrappedLineCount(var2, var4);
           if (var6 > 3) {
-            while (((BitmapFont) ((Object) var3)).b(var2, var4) > 3) {
+            while (((BitmapFont) ((Object) var3)).wrappedLineCount(var2, var4) > 3) {
               var4 += 20;
             }
           } else {
             if (var6 > 1) {
-              while (((BitmapFont) ((Object) var3)).b(var2, var4) == var6) {
+              while (((BitmapFont) ((Object) var3)).wrappedLineCount(var2, var4) == var6) {
                 var4 += 20;
               }
               if (var4 > 500) {
@@ -351,14 +351,14 @@ final class RenderedBall extends BallAgent {
           var6 = BufferedSocket.field_f;
           var7 = EmailAvailabilityValidator.field_q.resultValues;
           for (var4 = 0; var4 < 8; var4++) {
-            var6[var4] = PainterStyle.a(var6[var4], var7[var4]);
+            var6[var4] = PainterStyle.bitwiseOr(var6[var4], var7[var4]);
           }
           var8 = WelcomeDialog.field_F;
           var9 = EmailAvailabilityValidator.field_q.resultValues;
           var10 = 0;
           var4Lifetime1 = var10;
           while (8 > var10) {
-            var8[var10] = TextLayoutLine.b(var8[var10], ~var9[var10]);
+            var8[var10] = TextLayoutLine.bitwiseAnd(var8[var10], ~var9[var10]);
             var10++;
           }
           EmailAvailabilityValidator.field_q = null;
@@ -393,7 +393,7 @@ final class RenderedBall extends BallAgent {
         int var5 = 4 * InstrumentNoteMask.field_i >> 8;
         int var6 = -1 + WhirlpoolHasher.field_d.length;
         int var7 = (var2Lifetime1 * (var6 >> 1) >> 8) + (var6 >> 1);
-        SpritePixelSupport.a(SocialListLayoutSupport.worldToScreenX(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, WhirlpoolHasher.field_d);
+        SpritePixelSupport.drawRadialShadow(SocialListLayoutSupport.worldToScreenX(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, WhirlpoolHasher.field_d);
     }
 
     final void a(MatchAgent param0, int param1, int param2, int param3) {

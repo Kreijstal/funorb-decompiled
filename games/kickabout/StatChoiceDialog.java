@@ -335,8 +335,8 @@ final class StatChoiceDialog extends MessageDialog {
         }
         TeamManagementScreen.e(123);
         ClientPacketFlushSupport.field_b.drawHalfSize(40 + param1, param2 + 80);
-        IsSixCommand.field_C.d(this.field_J.getDisplayName(100), param1 + 90, param2 + 190, 16777215, -1);
-        SoftwareDrawingSupport.a(param1 + 40, 200 + param2, this.field_J.experience, 3, true, 0);
+        IsSixCommand.field_C.drawCentered(this.field_J.getDisplayName(100), param1 + 90, param2 + 190, 16777215, -1);
+        SoftwareDrawingSupport.drawStatBar(param1 + 40, 200 + param2, this.field_J.experience, 3, true, 0);
         for (var4 = 0; var4 < 3; var4++) {
           var5 = this.field_O[var4].field_F;
           var6 = this.field_O[var4].field_T;
@@ -345,16 +345,16 @@ final class StatChoiceDialog extends MessageDialog {
           if (var4 != this.field_H) {
             if (!this.field_O[var4].field_gb) {
               if (this.field_M[var4] >= 100) {
-                ConsoleTokenCursor.field_d.a(GameplayHelpScreen.field_L, 123 + var5, var6 + 19, 13382451, 65793);
+                ConsoleTokenCursor.field_d.drawText(GameplayHelpScreen.field_L, 123 + var5, var6 + 19, 13382451, 65793);
               }
             } else {
               SoftwareRasterizer.drawRoundedRectangle(var5, var6, var7, var8, 8, 4473924);
-              ConsoleTokenCursor.field_d.a("+1%", 123 + var5, var6 + 19, 5592405, -1);
+              ConsoleTokenCursor.field_d.drawText("+1%", 123 + var5, var6 + 19, 5592405, -1);
             }
           } else {
             SoftwareRasterizer.fillRoundedRectangleBlended(var5, var6, var7, var8, 8, 65793, 128);
             SoftwareRasterizer.drawRoundedRectangle(var5, var6, var7, var8, 8, 10066329);
-            ConsoleTokenCursor.field_d.a("+1%", 123 + var5, 19 + var6, 16777215, 65793);
+            ConsoleTokenCursor.field_d.drawText("+1%", 123 + var5, 19 + var6, 16777215, 65793);
           }
           var9 = 0;
           if (0 == var4) {
@@ -366,7 +366,7 @@ final class StatChoiceDialog extends MessageDialog {
           if (var4 == 2) {
             var9 = this.field_J.trinketTackleBonus((byte) 120, IntValueNode.b(27));
           }
-          SoftwareDrawingSupport.a(16 + var5, 9 + var6, this.field_M[var4], var4, true, var9);
+          SoftwareDrawingSupport.drawStatBar(16 + var5, 9 + var6, this.field_M[var4], var4, true, var9);
         }
     }
 

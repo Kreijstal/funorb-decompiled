@@ -369,10 +369,10 @@ final class VerticalScrollbar extends UiLayoutNode {
               var2 = var2 + IsSixCommand.field_H;
             }
             if (var4 < 0) {
-              UrlRequest.field_i.a(var6, var8, var2 + ClientException.field_f, var5, -1);
+              UrlRequest.field_i.drawText(var6, var8, var2 + ClientException.field_f, var5, -1);
               var2 = var2 + AccountMessagePanel.field_H;
             } else {
-              UrlRequest.field_a.a(var6, var8, var2 + SoundStreamHandle.field_g, var5, -1);
+              UrlRequest.field_a.drawText(var6, var8, var2 + SoundStreamHandle.field_g, var5, -1);
               var2 = var2 + (IsSixCommand.field_H + FriendRemovalSupport.field_a + ScrollContainer.field_zb);
             }
           }

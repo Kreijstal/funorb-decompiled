@@ -459,7 +459,7 @@ final class MenuButton {
           var5 = this.field_k >> 1;
           param1 = param1 + (-20 + (-AlternateKeyedLoginCredentials.field_m + TutorialChoiceDialog.field_J) - var5);
           var6 = param1 - (-var5 - 20);
-          SoftwareRasterizer.e(var6, param0 - 2, AlternateKeyedLoginCredentials.field_m, 4, 65793);
+          SoftwareRasterizer.drawRectangle(var6, param0 - 2, AlternateKeyedLoginCredentials.field_m, 4, 65793);
           if (this.kind != 17) {
             stackIn_46_0 = IntrusiveNode.b((byte) -61);
           } else {
@@ -486,7 +486,7 @@ final class MenuButton {
         if (param2 != 13800) {
           return;
         }
-        DirectByteStorage.field_o.d(this.field_p, param1, 2 + param0, 16777215, -1);
+        DirectByteStorage.field_o.drawCentered(this.field_p, param1, 2 + param0, 16777215, -1);
         if (this.kind == 1 && (!GameLoopApplet.field_E.field_J[0] ||
           PlayArea.a(100))) {
           param0 -= 4;
@@ -576,7 +576,7 @@ final class MenuButton {
           stackIn_37_1 = this.field_p.toUpperCase();
         }
         this.field_p = stackIn_37_1;
-        this.field_k = DirectByteStorage.field_o.a(this.field_p);
+        this.field_k = DirectByteStorage.field_o.stringWidth(this.field_p);
         var5 = this.field_a;
         if (this.field_a == -4) {
           var5 = 40 + this.field_k;
@@ -609,7 +609,7 @@ final class MenuButton {
                 for (var8 = 0; var11.length > var8; var8++) {
                   var7[var8] = 131586 * var8;
                 }
-                SpritePixelSupport.a(4, 6, -4 + SoftwareRasterizer.field_g, 6, 8, -40 + var11.length, var11);
+                SpritePixelSupport.drawGlowingLine(4, 6, -4 + SoftwareRasterizer.field_g, 6, 8, -40 + var11.length, var11);
                 TeamManagementScreen.e(127);
                 TeamManagementScreen.e(125);
                 this.field_n[1] = (Sprite) ((Object) var6);

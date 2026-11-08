@@ -13,7 +13,7 @@ final class WorldDrawEntry extends IntrusiveNode {
     boolean field_n;
     private int field_j;
 
-    final static int a(AppScreen param0, int param1) {
+    final static int getScreenBackgroundOpacity(AppScreen param0, int param1) {
         int stackIn_18_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;

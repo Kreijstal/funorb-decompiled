@@ -78,7 +78,7 @@ final class SpriteResourceSupport {
           var8.drawHalfSize(0, 0);
           TeamManagementScreen.e(119);
           for (var4 = 0; var9.field_y.length > var4; var4++) {
-            var9.field_y[var4] = PainterStyle.a(var9.field_y[var4] << 24, 1118668);
+            var9.field_y[var4] = PainterStyle.bitwiseOr(var9.field_y[var4] << 24, 1118668);
           }
           return var9;
         }
@@ -94,7 +94,7 @@ final class SpriteResourceSupport {
         var6.drawHalfSize(0, 0);
         TeamManagementScreen.e(119);
         for (var4Lifetime1 = 0; var7.field_y.length > var4Lifetime1; var4Lifetime1++) {
-          var7.field_y[var4Lifetime1] = PainterStyle.a(var7.field_y[var4Lifetime1] << 24, 1118668);
+          var7.field_y[var4Lifetime1] = PainterStyle.bitwiseOr(var7.field_y[var4Lifetime1] << 24, 1118668);
         }
         return var7;
     }

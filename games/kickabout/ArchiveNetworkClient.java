@@ -54,7 +54,7 @@ abstract class ArchiveNetworkClient {
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (PainterStyle.a(param0, -3)) {
+          if (PainterStyle.containsNonAlphanumeric(param0, -3)) {
             return false;
           }
           if (ArchivePreloader.a(true, param0)) {
@@ -75,7 +75,7 @@ abstract class ArchiveNetworkClient {
           if (SetLagCommand.a(63, param0, param2)) {
             return false;
           }
-          if (!TextLine.a((byte) -120, param2, param0)) {
+          if (!TextLine.containsNameOrReverse((byte) -120, param2, param0)) {
             return true;
           }
           return false;

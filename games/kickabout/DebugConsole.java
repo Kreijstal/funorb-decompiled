@@ -150,7 +150,7 @@ final class DebugConsole extends ConsolePanel {
             if (var14.field_k == ContextMenuItem.field_Ab &&
               var8_int > 0) {
               var6Lifetime2 = var14.field_h.substring(0, Math.min(var14.field_h.length(), var8_int));
-              this.field_j.field_s = this.field_d.a(var13.substring(0, var14.field_f));
+              this.field_j.field_s = this.field_d.stringWidth(var13.substring(0, var14.field_f));
             } else {
               var9 = var5;
               var10 = 0;
@@ -170,7 +170,7 @@ final class DebugConsole extends ConsolePanel {
               if (var9 > 0 &&
                 var4[var9 - 1].field_k == ContextMenuItem.field_Ab) {
                 var6Lifetime2 = var4[var9 - 1].field_h;
-                this.field_j.field_s = this.field_d.a(var13.substring(0, var4[var9 - 1].field_f));
+                this.field_j.field_s = this.field_d.stringWidth(var13.substring(0, var4[var9 - 1].field_f));
               }
             }
           }

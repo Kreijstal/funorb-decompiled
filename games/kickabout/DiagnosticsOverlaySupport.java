@@ -95,9 +95,9 @@ final class DiagnosticsOverlaySupport {
           }
           var1_int = var1_int * 20 + 10;
           SoftwareRasterizer.fillRect(470, 10, 160, var1_int, 34);
-          SoftwareRasterizer.e(470, 10, 160, var1_int, 3355477);
-          SoftwareRasterizer.e(471, 11, 158, -2 + var1_int, 11184844);
-          SoftwareRasterizer.e(472, 12, 156, var1_int - 4, 5592439);
+          SoftwareRasterizer.drawRectangle(470, 10, 160, var1_int, 3355477);
+          SoftwareRasterizer.drawRectangle(471, 11, 158, -2 + var1_int, 11184844);
+          SoftwareRasterizer.drawRectangle(472, 12, 156, var1_int - 4, 5592439);
           if (param0 < 13) {
             return;
           }
@@ -106,12 +106,12 @@ final class DiagnosticsOverlaySupport {
             var3_long = Runtime.getRuntime().totalMemory();
             var5_long = Runtime.getRuntime().freeMemory();
             var7 = (-var5_long + var3_long) / 1024L + " kB / " + var3_long / 1024L + " kB";
-            IsSixCommand.field_C.c(var7, 620, var2, 16777215, 0);
+            IsSixCommand.field_C.drawRightAligned(var7, 620, var2, 16777215, 0);
             var2 += 20;
           }
           if (LookupRecordUpdate.field_k) {
             var9 = TexturedPanelPainter.field_h + " fps / " + NumericDateInputWidget.field_T + " lps";
-            IsSixCommand.field_C.c(var9, 620, var2, 16777215, 0);
+            IsSixCommand.field_C.drawRightAligned(var9, 620, var2, 16777215, 0);
             var2 += 20;
           }
           if (LineupAgent.field_o &&
@@ -120,28 +120,28 @@ final class DiagnosticsOverlaySupport {
               stackIn_42_0 = (~var3 == ~MachineTokenStorageSupport.field_e.localSeat) ? 16777215 : 11184812;
               var4 = stackIn_42_0;
               var10 = MachineTokenStorageSupport.field_e.matchState.field_S[var3] + ": " + MachineTokenStorageSupport.field_e.field_z[var3] + "ms / team " + MachineTokenStorageSupport.field_e.matchState.field_g[var3].team;
-              IsSixCommand.field_C.c(var10, 620, var2, var4, 0);
+              IsSixCommand.field_C.drawRightAligned(var10, 620, var2, var4, 0);
               var2 += 20;
             }
           }
           if (SquadPickerDialog.field_K) {
             var11 = "Synchronisation disabled";
-            IsSixCommand.field_C.c(var11, 620, var2, 16777215, 0);
+            IsSixCommand.field_C.drawRightAligned(var11, 620, var2, 16777215, 0);
             var2 += 20;
           }
           if (IsSixCommand.field_B) {
             var12 = "Camera boundary disabled";
-            IsSixCommand.field_C.c(var12, 620, var2, 16777215, 0);
+            IsSixCommand.field_C.drawRightAligned(var12, 620, var2, 16777215, 0);
             var2 += 20;
           }
           if (ChatComposeSupport.field_e) {
             var13 = "Response Filter disabled";
-            IsSixCommand.field_C.c(var13, 620, var2, 16777215, 0);
+            IsSixCommand.field_C.drawRightAligned(var13, 620, var2, 16777215, 0);
             var2 += 20;
           }
           if (LeaderboardParticipant.field_f) {
             var14 = "Smoothing disabled";
-            IsSixCommand.field_C.c(var14, 620, var2, 16777215, 0);
+            IsSixCommand.field_C.drawRightAligned(var14, 620, var2, 16777215, 0);
             var2 += 20;
           }
           if (PendingRequestAcknowledgement.field_j != 0) {
@@ -156,7 +156,7 @@ final class DiagnosticsOverlaySupport {
             if (PendingRequestAcknowledgement.field_j == 3) {
               var3_ref_String = var3_ref_String + " Ball & Player";
             }
-            IsSixCommand.field_C.c(var3_ref_String, 620, var2, 16777215, 0);
+            IsSixCommand.field_C.drawRightAligned(var3_ref_String, 620, var2, 16777215, 0);
             var2 += 20;
           }
           if (LineupAgent.field_g) {
@@ -170,7 +170,7 @@ final class DiagnosticsOverlaySupport {
             var16 = stackIn_70_0;
             var5 = var16;
             var6 = "Viewing AI: " + var3Lifetime1 + "," + var16;
-            IsSixCommand.field_C.c(var6, 620, var2, 16777215, 0);
+            IsSixCommand.field_C.drawRightAligned(var6, 620, var2, 16777215, 0);
             var2 += 20;
           }
           return;

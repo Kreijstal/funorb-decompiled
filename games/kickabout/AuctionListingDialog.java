@@ -24,7 +24,7 @@ final class AuctionListingDialog extends MessageDialog {
           dupTemp$0 = this.field_i[0];
           dupTemp$0.field_s = dupTemp$0.field_s - 30;
           var4 = SharedPanelFactory.getMessageButtonLabels(false, 21)[1];
-          var5 = 20 + ByteArrayPool.field_d.a(var4);
+          var5 = 20 + ByteArrayPool.field_d.stringWidth(var4);
           this.field_i[1] = SoftwareDrawingSupport.createRenderedButton(var4, 7126504, ByteArrayPool.field_d, var5, false);
           this.field_i[1].field_J = this.field_i[0].field_J;
           this.field_i[1].field_s = this.field_i[0].field_s + (this.field_i[0].field_q + 20);

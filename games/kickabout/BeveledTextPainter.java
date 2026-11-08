@@ -487,7 +487,7 @@ class BeveledTextPainter extends TextWidgetPainter {
           var11 = 0;
           var4Lifetime1 = var11;
           while (var3.field_y.length > var11) {
-            var3.field_y[var11] = PainterStyle.a(TextLayoutLine.b(var3.field_y[var11], 16777215), TextLayoutLine.b(param0.field_y[var11], -16777216));
+            var3.field_y[var11] = PainterStyle.bitwiseOr(TextLayoutLine.bitwiseAnd(var3.field_y[var11], 16777215), TextLayoutLine.bitwiseAnd(param0.field_y[var11], -16777216));
             var11++;
           }
           stackIn_15_0 = var3;
@@ -620,7 +620,7 @@ class BeveledTextPainter extends TextWidgetPainter {
               var10 = var15;
               var10 = var15;
               var10 = var15;
-              var11Lifetime1 = MarkerSliderWidget.field_F.field_X.a(var15) + MarkerSliderWidget.field_F.field_X.charWidth('.') * 3;
+              var11Lifetime1 = MarkerSliderWidget.field_F.field_X.stringWidth(var15) + MarkerSliderWidget.field_F.field_X.charWidth('.') * 3;
               if (16 == (GameKeyHandler.field_c & 48)) {
                 var10 = var15 + ".";
               }
@@ -712,7 +712,7 @@ class BeveledTextPainter extends TextWidgetPainter {
           stackIn_75_1 = 0;
           stackIn_76_2 = (param2) && (!param1) && (TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_75_0).updateInput(stackIn_75_1, stackIn_76_2);
-          HighScoreQuery.field_l.tabs.h((byte) 118);
+          HighScoreQuery.field_l.tabs.processTabClicks((byte) 118);
           if (null != ArchiveSource.field_b) {
             stackIn_78_0 = 0;
             if (stackIn_78_0 != TrinketUnlockNotice.field_b.field_sb) {

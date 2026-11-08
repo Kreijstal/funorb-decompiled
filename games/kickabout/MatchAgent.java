@@ -91,7 +91,7 @@ abstract class MatchAgent {
         byte[] var2 = SquadPickerDialog.field_O[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = PlayAreaMovementSupport.field_a[TextLayoutLine.b(255, (int) var2[var4_int])];
+          var3[var4_int] = PlayAreaMovementSupport.field_a[TextLayoutLine.bitwiseAnd(255, (int) var2[var4_int])];
         }
         Sprite var4 = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], LoginResponseUiSupport.field_g[param0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], var3);
         ScrollContainer.h((byte) -81);

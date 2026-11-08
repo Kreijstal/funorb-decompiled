@@ -104,7 +104,7 @@ final class LineupView extends MatchPhaseView {
         }
         ((Sprite) (Object) stackIn_17_0).drawScaledAlpha(stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5);
         if (param1) {
-          ByteArrayPool.field_d.d(Integer.toString(1 + param2), (var7 >> 1) + var5, 23 + var12, 65793, -1);
+          ByteArrayPool.field_d.drawCentered(Integer.toString(1 + param2), (var7 >> 1) + var5, 23 + var12, 65793, -1);
         }
     }
 
@@ -455,9 +455,9 @@ final class LineupView extends MatchPhaseView {
             var7 = -16 + this.field_t[var4Lifetime4].field_T + this.field_t[var4Lifetime4].field_mb;
             PacketBuffer.a(67, QuickChatCommandType.field_b);
             SoftwareRasterizer.clearFramebuffer();
-            ConsoleTokenCursor.field_d.d(this.field_a.field_S[var5_int].toLowerCase(), SoftwareRasterizer.field_g >> 1, -1 + SoftwareRasterizer.field_f, 16777062, -1);
+            ConsoleTokenCursor.field_d.drawCentered(this.field_a.field_S[var5_int].toLowerCase(), SoftwareRasterizer.field_g >> 1, -1 + SoftwareRasterizer.field_f, 16777062, -1);
             TeamManagementScreen.e(param0 + 116);
-            SoftwareDrawingSupport.a(QuickChatCommandType.field_b, 65793);
+            SoftwareDrawingSupport.outlineSpriteInPlace(QuickChatCommandType.field_b, 65793);
             QuickChatCommandType.field_b.c(-(QuickChatCommandType.field_b.field_o >> 1) + var6, var7 - QuickChatCommandType.field_b.field_v);
           }
         }
@@ -506,7 +506,7 @@ final class LineupView extends MatchPhaseView {
           TextInputUiSupport.drawWrappedTextPanel(230, 1, 105, true, (byte) -123, 210, 18, 390, 1, HighScoreQuery.field_q);
         }
         if (this.field_a.field_f) {
-          ByteArrayPool.field_d.a("FB", 5, 17, 16777215, -1);
+          ByteArrayPool.field_d.drawText("FB", 5, 17, 16777215, -1);
         }
     }
 

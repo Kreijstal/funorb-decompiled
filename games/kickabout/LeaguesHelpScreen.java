@@ -114,13 +114,13 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         if (0 == this.pageIndex) {
           MusicVolumeSupport.drawMessagePanel(GuestLoginSupport.field_b, 40 + this.slideOffsetX, 280, true, 0, 263);
           SoftwareRasterizer.fillRoundedRectangleBlended(350 + this.slideOffsetX, 144, 226, 232, 10, 65793, 140);
-          ByteArrayPool.field_d.a(RegistrationRequestState.field_b.toLowerCase(), 370 + this.slideOffsetX, 172, 16777215, -1);
+          ByteArrayPool.field_d.drawText(RegistrationRequestState.field_b.toLowerCase(), 370 + this.slideOffsetX, 172, 16777215, -1);
           var3 = this.slideOffsetX + 370;
           SoftwareRasterizer.fillRectangleAlpha(var3, 186, 184, 174, 16777215, 30);
           SoftwareRasterizer.drawRectangleAlpha(var3 - 1, 185, 186, 176, 16777215, 128);
           for (var4 = 0; var4 < 6; var4++) {
-            IsSixCommand.field_C.c(ConsoleTokenCursor.field_h[var4 + 1], 120 + var3, 180 + (var4 + 1) * 28, 16777215, -1);
-            IsSixCommand.field_C.a(Integer.toString(LoginCredentials.field_d[1 + var4]), 134 + var3, var4 * 28 + 28 + 180, 16777215, -1);
+            IsSixCommand.field_C.drawRightAligned(ConsoleTokenCursor.field_h[var4 + 1], 120 + var3, 180 + (var4 + 1) * 28, 16777215, -1);
+            IsSixCommand.field_C.drawText(Integer.toString(LoginCredentials.field_d[1 + var4]), 134 + var3, var4 * 28 + 28 + 180, 16777215, -1);
           }
           SoftwareRasterizer.drawVerticalLineAlpha(var3 + 127, 186, 174, 16777215, 128);
           for (var4Lifetime2 = 0; var4Lifetime2 < 5; var4Lifetime2++) {
@@ -147,7 +147,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
               var9 = IsSixCommand.field_C.paragraphHeight(var8, 245, 16);
               if (var7 + var9 <= 396) {
                 var11++;
-                var7 = var7 + (16 * IsSixCommand.field_C.a(var8, var6, var7, 245, 999, 16777215, -1, 0, 0, 16) + 25);
+                var7 = var7 + (16 * IsSixCommand.field_C.drawParagraph(var8, var6, var7, 245, 999, 16777215, -1, 0, 0, 16) + 25);
                 continue;
               }
               break;
@@ -194,11 +194,11 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
               var6 = IntKeyLookup.a((byte) -114, var2_ref_gm.field_bb >> 16);
               if (InstrumentNoteMask.field_i == 256) {
                 var7 = var4 >> 1;
-                SoftwareDrawingSupport.a((byte[]) (var3), -var7 + var5Lifetime1, -var7 + var6, var4);
+                SoftwareDrawingSupport.drawWhiteAlphaMask((byte[]) (var3), -var7 + var5Lifetime1, -var7 + var6, var4);
               } else {
                 var7 = InstrumentNoteMask.field_i * var4 >> 8;
                 var8 = var7 >> 1;
-                SoftwareDrawingSupport.a((byte[]) (var3), -var8 + var5Lifetime1, -var8 + var6, var4, var7);
+                SoftwareDrawingSupport.drawScaledWhiteAlphaMask((byte[]) (var3), -var8 + var5Lifetime1, -var8 + var6, var4, var7);
               }
             }
           }

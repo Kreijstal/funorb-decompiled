@@ -82,9 +82,9 @@ final class TextInputUiSupport {
           for (var4 = 0; TickClock.field_a > var4; var4++) {
             TutorialScenerySupport.field_a.d(var2_int + var4, var3 - 368);
           }
-          SoftwareRasterizer.c(var2_int, var3, TickClock.field_a, 112, 2, 65793);
+          SoftwareRasterizer.drawThickRectangle(var2_int, var3, TickClock.field_a, 112, 2, 65793);
           if (param1 != null) {
-            ByteArrayPool.field_d.a(param1.toLowerCase(), 20 + var2_int, var3 + 22, 16777215, -1);
+            ByteArrayPool.field_d.drawText(param1.toLowerCase(), 20 + var2_int, var3 + 22, 16777215, -1);
           }
           var2_int += 10;
           TeamManagementScreen.e(param0 ^ -7);
@@ -265,7 +265,7 @@ final class TextInputUiSupport {
             }
             SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_7_0, stackIn_7_1 + stackIn_8_2, param5, var10_int, 10, 65793, 140);
           }
-          IsSixCommand.field_C.a(param9, param7 + 10, param2, -10 + param5 - 10, param0, 16777215, -1, param8, param1, param6);
+          IsSixCommand.field_C.drawParagraph(param9, param7 + 10, param2, -10 + param5 - 10, param0, 16777215, -1, param8, param1, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

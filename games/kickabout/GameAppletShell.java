@@ -90,7 +90,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    private final void d(int param0) {
+    private final void paintTimedFrame(int param0) {
         int fieldTemp$1 = 0;
         RuntimeException runtimeException = null;
         long var2_long = 0L;
@@ -143,7 +143,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void windowDeactivated(java.awt.event.WindowEvent param0) {
     }
 
-    final static void a(ResourceArchive param0, byte param1) {
+    final static void decodeLogoAudio(ResourceArchive param0, byte param1) {
         RuntimeException runtimeException = null;
         VorbisSample var2 = null;
         int var3 = 0;
@@ -389,7 +389,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void windowDeiconified(java.awt.event.WindowEvent param0) {
     }
 
-    final synchronized void f(byte param0) {
+    final synchronized void replaceCanvas(byte param0) {
         Object var2 = null;
         java.awt.Insets var3 = null;
         int var4 = 0;
@@ -536,14 +536,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     var2.equals("1.5") ||
                     var2.startsWith("1.5.") ||
                     var2.equals("1.6.0")) {
-                    this.a((byte) 79, "wrongjava");
+                    this.showGameErrorPage((byte) 79, "wrongjava");
                     decompiledFrameRemainder3 = (var5 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_68_0 = IntrusiveNode.a(12105, var2.charAt(var3));
+                      stackIn_68_0 = IntrusiveNode.isAsciiDigit(12105, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -558,7 +558,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                       var4 = var2.substring(6, var3);
                       if (ClubState.a((byte) 15, (CharSequence) ((Object) var4)) &&
                         !(TextEntrySupport.parseDecimalInt(10, (CharSequence) ((Object) var4)) >= 10)) {
-                        this.a((byte) 118, "wrongjava");
+                        this.showGameErrorPage((byte) 118, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
                     }
@@ -614,7 +614,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   }
                 }
                 SingleChildContainer.i(-1);
-                this.f((byte) -105);
+                this.replaceCanvas((byte) -105);
                 ColorQuantizationBox.field_f = DelayedServerPacket.a(105, SpriteNumberPainter.field_d, ReceivedAuctionItem.field_B, (java.awt.Component) ((Object) RegistrationRequestState.field_d));
                 this.onStartup((byte) -76);
                 SplashScreen.field_k = SumIntegersCommand.h(3);
@@ -635,11 +635,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   var3 = stackIn_99_0;
                   do {
                     if (!(var3 < SectorCacheStore.field_b)) {
-                      this.d(-43);
+                      this.paintTimedFrame(-43);
                       ReflectionCheck.a((byte) 41, PlatformTaskState.field_c, RegistrationRequestState.field_d);
                       break;
                     }
-                    this.a(true);
+                    this.runTimedFrameStep(true);
                     var3++;
                   } while (var5 == 0);
                 } while (var5 == 0);
@@ -648,7 +648,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
               UnreadMessagesScreen.a((String) null, (Throwable) (var1), 1);
-              this.a((byte) 60, "crash");
+              this.showGameErrorPage((byte) 60, "crash");
             }
             this.shutdownShell(true, (byte) -119);
             return;
@@ -704,7 +704,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
-                this.a((byte) 14, "alreadyloaded");
+                this.showGameErrorPage((byte) 14, "alreadyloaded");
                 return;
               }
               SpriteNumberPainter.field_d = param1;
@@ -736,7 +736,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
               UnreadMessagesScreen.a((String) null, var8_ref, 1);
-              this.a((byte) -118, "crash");
+              this.showGameErrorPage((byte) -118, "crash");
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -793,7 +793,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         return super.getCodeBase();
     }
 
-    public static void c(int param0) {
+    public static void releaseAppletResources(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -813,7 +813,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    final void a(byte param0, String param1) {
+    final void showGameErrorPage(byte param0, String param1) {
         try {
           int var3_int = 0;
           if (this.field_e) {
@@ -837,7 +837,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    private final void a(boolean param0) {
+    private final void runTimedFrameStep(boolean param0) {
         RuntimeException runtimeException = null;
         long var2_long = 0L;
         long var4 = 0L;

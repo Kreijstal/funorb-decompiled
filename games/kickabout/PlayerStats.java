@@ -953,7 +953,7 @@ final class PlayerStats implements PopupCard {
         while (var16_int < 4) {
           if (var26[var16_int] != 0) {
             SoftwareRasterizer.fillRectangleAlpha(param1, var15, var13, var26[var16_int] + 1, var25[var14], var10[var14]);
-            SoftwareRasterizer.e(param1, var15, var13, var26[var16_int] + 1, 65793);
+            SoftwareRasterizer.drawRectangle(param1, var15, var13, var26[var16_int] + 1, 65793);
             var15 = var15 + var26[var16_int];
             var14 = var14 ^ 1;
           }
@@ -985,8 +985,8 @@ final class PlayerStats implements PopupCard {
         } else {
           var16.c(7 + param1, 50 + param6 - (var16.field_v + 1));
         }
-        ConsoleTokenCursor.field_d.c(this.getDisplayName(100), -10 + var13 + param1, 22 + param6, 16777215, 65793);
-        ConsoleTokenCursor.field_d.c(RegistrationUiSupport.field_e[this.archetype], -10 + param1 + var13, 36 + param6, 16777215, 65793);
+        ConsoleTokenCursor.field_d.drawRightAligned(this.getDisplayName(100), -10 + var13 + param1, 22 + param6, 16777215, 65793);
+        ConsoleTokenCursor.field_d.drawRightAligned(RegistrationUiSupport.field_e[this.archetype], -10 + param1 + var13, 36 + param6, 16777215, 65793);
         param6 = param6 + var26[0];
         var17_int = 0;
         while (true) {
@@ -1002,7 +1002,7 @@ final class PlayerStats implements PopupCard {
                 var20 = GeneratedPanelPainter.field_g[this.trinketIds[var23]];
                 var21 = var20.d(false);
                 ((Sprite) ((Object) var21)).drawHalfSize(var17_int - (((Sprite) ((Object) var21)).field_o >> 2), -(((Sprite) ((Object) var21)).field_v >> 2) + var18);
-                ConsoleTokenCursor.field_d.a(var20.getName((byte) -1), 15 + var17_int, var18 + 4, 16777215, 65793);
+                ConsoleTokenCursor.field_d.drawText(var20.getName((byte) -1), 15 + var17_int, var18 + 4, 16777215, 65793);
                 var18 += 18;
                 var23++;
               }
@@ -1010,12 +1010,12 @@ final class PlayerStats implements PopupCard {
             if (this.f(13467)) {
               SoftwareDrawingSupport.darkenRectangle(1 + param1, 1 + param6, var13, var26[2] - 1);
               SoftwareRasterizer.drawVerticalLine(-1 + var13 + param1, param6, var26[2] + 1, 65793);
-              ConsoleTokenCursor.field_d.d(PlatformTaskState.field_h, (var13 >> 1) + param1, -4 + var26[2] + param6, 16777215, 65793);
+              ConsoleTokenCursor.field_d.drawCentered(PlatformTaskState.field_h, (var13 >> 1) + param1, -4 + var26[2] + param6, 16777215, 65793);
             }
             param6 = param6 + var26[2];
             if (param2) {
               var17 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NamedValueContainer.field_g, new String[]{LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.a(this, true), 26300)});
-              ConsoleTokenCursor.field_d.a(var17, param1 + 10, param6 + 15, 16777215, 65793);
+              ConsoleTokenCursor.field_d.drawText(var17, param1 + 10, param6 + 15, 16777215, 65793);
             }
             return;
           }
@@ -1047,7 +1047,7 @@ final class PlayerStats implements PopupCard {
             }
           }
           var19Lifetime1 = stackIn_58_0;
-          SoftwareDrawingSupport.a(param1 + (-100 + var13 >> 1), 9 + (param6 + 16 * var17_int), var18Lifetime1, var17_int, true, var19Lifetime1);
+          SoftwareDrawingSupport.drawStatBar(param1 + (-100 + var13 >> 1), 9 + (param6 + 16 * var17_int), var18Lifetime1, var17_int, true, var19Lifetime1);
           var17_int++;
         }
     }

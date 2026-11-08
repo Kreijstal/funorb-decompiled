@@ -168,7 +168,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         var6Lifetime1 = this.field_R.getValidationState(-24407);
         var8 = (WidgetTextLayout) ((Object) this.field_r);
         var9 = param2 + this.field_t;
-        var10 = var8.textOriginY(true, (UiWidget) (this), param3) + (var8.ensureTextLayout(5035, (UiWidget) (this)).a(-1761) >> 1);
+        var10 = var8.textOriginY(true, (UiWidget) (this), param3) + (var8.ensureTextLayout(5035, (UiWidget) (this)).height(-1761) >> 1);
         if (var6Lifetime1 != IconButtonPainter.field_c &&
           var6Lifetime1 != PlayerSurnameSortCriterion.field_p) {
           if (PitchOptionTile.field_Bb == var6Lifetime1) {

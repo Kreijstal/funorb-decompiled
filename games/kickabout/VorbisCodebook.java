@@ -124,7 +124,7 @@ final class VorbisCodebook {
         }
     }
 
-    final float[] c() {
+    final float[] decodeVector() {
         return this.field_f[this.decodeScalar()];
     }
 

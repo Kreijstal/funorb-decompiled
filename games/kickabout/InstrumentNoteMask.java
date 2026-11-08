@@ -105,11 +105,11 @@ final class InstrumentNoteMask extends IntrusiveNode {
         field_i = (int)field_f >> 3;
         field_h = new int[255];
         for (var0 = 0; 255 > var0; var0++) {
-          field_h[var0] = PainterStyle.a(var0 << 16, var0 << 8);
+          field_h[var0] = PainterStyle.bitwiseOr(var0 << 16, var0 << 8);
         }
         field_e = new int[255];
         for (var0Lifetime1 = 0; var0Lifetime1 < 255; var0Lifetime1++) {
-          field_e[var0Lifetime1] = PainterStyle.a(var0Lifetime1 << 16, var0Lifetime1);
+          field_e[var0Lifetime1] = PainterStyle.bitwiseOr(var0Lifetime1 << 16, var0Lifetime1);
         }
     }
 }

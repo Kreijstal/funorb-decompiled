@@ -456,7 +456,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           SoftwareRasterizer.fillRoundedRectangle(param3, param4, 160, 42, 10, 65793);
           TeamManagementScreen.e(123);
           if (param2 != null) {
-            ByteArrayPool.field_d.d(param2, 80 + param3, 17 + param4, 16777215, -1);
+            ByteArrayPool.field_d.drawCentered(param2, 80 + param3, 17 + param4, 16777215, -1);
           }
           var7 = 0;
           while (param1 > var7) {

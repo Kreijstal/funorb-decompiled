@@ -12,7 +12,7 @@ final class TextLine extends IntrusiveNode {
     static String field_k;
     static int field_h;
 
-    final static boolean a(boolean param0) {
+    final static boolean isAvailabilityCheckPending(boolean param0) {
         if (!param0) {
           return !DualLinkDequeIterator.field_e.isComplete((byte) -80) ? true : false;
         }
@@ -20,7 +20,7 @@ final class TextLine extends IntrusiveNode {
         return !DualLinkDequeIterator.field_e.isComplete((byte) -80) ? true : false;
     }
 
-    final static boolean a(byte param0, String param1, String param2) {
+    final static boolean containsNameOrReverse(byte param0, String param1, String param2) {
         String var3 = null;
         int var4 = 0;
         boolean stackIn_5_0 = false;
@@ -57,7 +57,7 @@ final class TextLine extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_j = null;
         field_m = null;
@@ -73,7 +73,7 @@ final class TextLine extends IntrusiveNode {
 
     final static int a(int param0, boolean param1) {
         if (param1) {
-          TextLine.a(-13);
+          TextLine.releaseStatics(-13);
           return 23 * param0 >> 8;
         }
         return 23 * param0 >> 8;

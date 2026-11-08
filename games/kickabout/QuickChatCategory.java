@@ -348,13 +348,13 @@ final class QuickChatCategory extends DualLinkNode {
           var4 = 0;
           var2 = var4;
           while (var4 < this.subcategoryIds.length) {
-            this.subcategoryIds[var4] = PainterStyle.a(this.subcategoryIds[var4], 32768);
+            this.subcategoryIds[var4] = PainterStyle.bitwiseOr(this.subcategoryIds[var4], 32768);
             var4++;
           }
           return;
         }
         for (var2Lifetime1 = 0; this.phraseIds.length > var2Lifetime1; var2Lifetime1++) {
-          this.phraseIds[var2Lifetime1] = PainterStyle.a(this.phraseIds[var2Lifetime1], 32768);
+          this.phraseIds[var2Lifetime1] = PainterStyle.bitwiseOr(this.phraseIds[var2Lifetime1], 32768);
         }
         if (param0 >= -81) {
           return;
@@ -365,7 +365,7 @@ final class QuickChatCategory extends DualLinkNode {
         var4Lifetime1 = 0;
         var2Lifetime2 = var4Lifetime1;
         while (var4Lifetime1 < this.subcategoryIds.length) {
-          this.subcategoryIds[var4Lifetime1] = PainterStyle.a(this.subcategoryIds[var4Lifetime1], 32768);
+          this.subcategoryIds[var4Lifetime1] = PainterStyle.bitwiseOr(this.subcategoryIds[var4Lifetime1], 32768);
           var4Lifetime1++;
         }
         return;

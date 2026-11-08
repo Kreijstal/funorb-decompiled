@@ -54,7 +54,7 @@ final class SpritePixelSupport {
         field_b = null;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitScaledAlphaTestedPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -76,7 +76,7 @@ final class SpritePixelSupport {
         }
     }
 
-    final static void a(ArgbSprite param0, int param1, int param2) {
+    final static void drawAlphaTestedArgb(ArgbSprite param0, int param1, int param2) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -117,10 +117,10 @@ final class SpritePixelSupport {
           var5 <= 0) {
           return;
         }
-        SpritePixelSupport.a(SoftwareRasterizer.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
+        SpritePixelSupport.blitAlphaTestedPixels(SoftwareRasterizer.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final static ArgbSprite a(Sprite param0) {
+    final static ArgbSprite downsampleSpriteHalfToArgb(Sprite param0) {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -159,7 +159,7 @@ final class SpritePixelSupport {
         return var4;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    final static void drawGlowingLine(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int var15 = 0;
         int var7 = param2 - param0;
         int var8 = param3 - param1;
@@ -205,7 +205,7 @@ final class SpritePixelSupport {
         field_d = (var11 - param0) * var7;
         field_f = (var11 - param0) * var8;
         field_b = param6;
-        SpritePixelSupport.a(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_a, var12 * SoftwareRasterizer.field_g + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_g - (var13 - var11));
+        SpritePixelSupport.addGlowingLinePixels(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_a, var12 * SoftwareRasterizer.field_g + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_g - (var13 - var11));
     }
 
     private final static int hsvToRgb(int param0) {
@@ -246,7 +246,7 @@ final class SpritePixelSupport {
         return 16711935;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void addGlowingLinePixels(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
         int var14;
@@ -297,7 +297,7 @@ final class SpritePixelSupport {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitAlphaTestedPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -344,7 +344,7 @@ final class SpritePixelSupport {
         }
     }
 
-    final static void a(Sprite param0, int param1, int param2) {
+    final static void drawSpriteShadowMask(Sprite param0, int param1, int param2) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -385,7 +385,7 @@ final class SpritePixelSupport {
           var5 <= 0) {
           return;
         }
-        SpritePixelSupport.b(SoftwareRasterizer.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
+        SpritePixelSupport.darkenSpriteMaskPixels(SoftwareRasterizer.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final static void adjustHsv(int[] param0, double param1, double param2, double param3) {
@@ -424,7 +424,7 @@ final class SpritePixelSupport {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4) {
+    final static void drawRadialShadow(int param0, int param1, int param2, int param3, int[] param4) {
         int var5 = param2 * param2;
         int var6 = param0 - param2 >> 4;
         int var7 = param0 + param2 + 15 >> 4;
@@ -462,7 +462,7 @@ final class SpritePixelSupport {
         int var21 = var20 - var19;
         int var22 = var6 + var8 * SoftwareRasterizer.field_g;
         int var23 = SoftwareRasterizer.field_g + var6 - var7;
-        SpritePixelSupport.a(0, 0, 0, 0, 0, var15, var5, var22, SoftwareRasterizer.field_a, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        SpritePixelSupport.darkenRadialGradientPixels(0, 0, 0, 0, 0, var15, var5, var22, SoftwareRasterizer.field_a, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
     final static Sprite toMaskedSprite(ArgbSprite param0) {
@@ -498,7 +498,7 @@ final class SpritePixelSupport {
         return var1;
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void darkenSpriteMaskPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -522,7 +522,7 @@ final class SpritePixelSupport {
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
+    private final static void darkenRadialGradientPixels(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
         int var19 = 0;
         int var18 = 0;
         while (param17 < 0) {
@@ -546,7 +546,7 @@ final class SpritePixelSupport {
         }
     }
 
-    final static void a(ArgbSprite param0, int param1, int param2, int param3, int param4) {
+    final static void drawScaledAlphaTestedArgb(ArgbSprite param0, int param1, int param2, int param3, int param4) {
         int var13 = 0;
         int var15 = 0;
         int var13Lifetime1;
@@ -604,7 +604,7 @@ final class SpritePixelSupport {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        SpritePixelSupport.a(SoftwareRasterizer.field_a, param0.field_y, 0, var7, var8, var13Lifetime2, var14, param3, param4, var11, var12, var5);
+        SpritePixelSupport.blitScaledAlphaTestedPixels(SoftwareRasterizer.field_a, param0.field_y, 0, var7, var8, var13Lifetime2, var14, param3, param4, var11, var12, var5);
     }
 
     final static void adjustSpriteHsv(Sprite param0, double param1, double param2, double param3) {

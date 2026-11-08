@@ -157,7 +157,7 @@ final class CascadingMenu extends UiLayoutNode {
             }
             this.field_Eb[var13] = new ContextMenuItem(0L, param2, (UiLayoutNode) null, param3, (Sprite) (var14), param6[var13]);
             this.addChild((byte) -112, (UiLayoutNode) (this.field_Eb[var13]));
-            var15 = var17.a(param6[var13]);
+            var15 = var17.stringWidth(param6[var13]);
             if (var15 > this.field_Gb) {
               this.field_Gb = var15;
             }

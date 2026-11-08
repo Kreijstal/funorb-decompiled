@@ -145,7 +145,7 @@ class IntrusiveNode {
         return IconButtonPainter.field_a;
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAsciiDigit(int param0, char param1) {
         if (param0 != 12105) {
           StringBuilder var3 = (StringBuilder) null;
           IntrusiveNode.a(-48, 1, 77, (StringBuilder) null);

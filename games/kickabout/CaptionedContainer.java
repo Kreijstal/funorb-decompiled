@@ -123,7 +123,7 @@ final class CaptionedContainer extends SingleChildContainer {
           return;
         }
         int var7 = !this.field_B ? 0 : -(2 * this.field_J) - this.field_M + this.field_n;
-        this.field_I.a(this.field_A, var5 + (var7 + this.field_J), this.field_J + var6, -this.field_J + this.field_M, this.field_i - this.field_J * 2, this.field_C, -1, this.field_B ? 0 : 2, 1, this.field_I.field_G);
+        this.field_I.drawParagraph(this.field_A, var5 + (var7 + this.field_J), this.field_J + var6, -this.field_J + this.field_M, this.field_i - this.field_J * 2, this.field_C, -1, this.field_B ? 0 : 2, 1, this.field_I.field_G);
     }
 
     final String getTooltip(int param0) {

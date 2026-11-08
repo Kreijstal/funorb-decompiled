@@ -68,8 +68,8 @@ final class ColourSwatchTile extends UiLayoutNode {
           var5 = -4 + var3;
           var7 = 29;
         }
-        SoftwareRasterizer.e(var5 + 1, var6, -2 + var7, var7, 0);
-        SoftwareRasterizer.e(var5, 1 + var6, var7, var7 - 2, 0);
+        SoftwareRasterizer.drawRectangle(var5 + 1, var6, -2 + var7, var7, 0);
+        SoftwareRasterizer.drawRectangle(var5, 1 + var6, var7, var7 - 2, 0);
         SoftwareRasterizer.fillRect(2 + var5, var6 + 2, -4 + var7, -4 + var7, this.field_Cb);
         if (var2 != 0) {
           if (!this.field_gb) {

@@ -39,7 +39,7 @@ final class PlayArea {
         int var5 = -var3 + SocialListLayoutSupport.worldToScreenX(param0 ^ param0, this.field_i >> 16);
         int var6 = -var4 + IntKeyLookup.a((byte) -117, this.field_h >> 16);
         SoftwareRasterizer.fillRectangleAlpha(var3, var4, var5, var6, param1, 50);
-        SoftwareRasterizer.e(var3, var4, var5, var6, param1);
+        SoftwareRasterizer.drawRectangle(var3, var4, var5, var6, param1);
     }
 
     final static void a(CommonGame param0, int param1) {

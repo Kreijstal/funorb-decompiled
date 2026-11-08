@@ -63,7 +63,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           }
           SoftwareRasterizer.fillRoundedRectangleBlended(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
           PlayerContextMenu.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
-          ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
+          ConsoleTokenCursor.field_d.drawText(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
           if (param0 < -114) {
             if (this.field_Fb == null) {
               return;
@@ -90,17 +90,17 @@ final class SquadSlotWidget extends UiLayoutNode {
         this.field_Db.renderModel(var3[this.field_Eb.archetype], 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, (byte) -122);
         TeamManagementScreen.e(117);
         if (this.field_zb) {
-          SoftwareDrawingSupport.a(PortraitCacheOrder.field_b, 1);
-          SoftwareDrawingSupport.a(PortraitCacheOrder.field_b, 2);
+          SoftwareDrawingSupport.outlineSpriteInPlace(PortraitCacheOrder.field_b, 1);
+          SoftwareDrawingSupport.outlineSpriteInPlace(PortraitCacheOrder.field_b, 2);
         } else {
           if (this.field_Kb) {
-            SoftwareDrawingSupport.a(PortraitCacheOrder.field_b, 1);
-            SoftwareDrawingSupport.a(PortraitCacheOrder.field_b, 2);
+            SoftwareDrawingSupport.outlineSpriteInPlace(PortraitCacheOrder.field_b, 1);
+            SoftwareDrawingSupport.outlineSpriteInPlace(PortraitCacheOrder.field_b, 2);
             PortraitCacheOrder.field_b.drawHalfSize(this.field_F, this.field_T);
             if (this.field_Hb) {
               SoftwareRasterizer.fillRoundedRectangleBlended(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
               PlayerContextMenu.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
-              ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
+              ConsoleTokenCursor.field_d.drawText(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
             }
             if (param0 >= -114) {
               this.h((byte) -68);
@@ -115,7 +115,7 @@ final class SquadSlotWidget extends UiLayoutNode {
         if (this.field_Hb) {
           SoftwareRasterizer.fillRoundedRectangleBlended(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
           PlayerContextMenu.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
-          ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
+          ConsoleTokenCursor.field_d.drawText(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
         }
         if (param0 >= -114) {
           this.h((byte) -68);

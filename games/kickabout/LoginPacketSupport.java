@@ -30,7 +30,7 @@ final class LoginPacketSupport {
           var5 = 0;
           for (var6 = 0; var6 < AsciiCharacterSupport.field_c.playerCount; var6++) {
             TrinketPickerDialog.field_G[var6] = AsciiCharacterSupport.field_c.field_S[var6].toLowerCase();
-            var7 = ((BitmapFont) ((Object) var9)).a(TrinketPickerDialog.field_G[var6]);
+            var7 = ((BitmapFont) ((Object) var9)).stringWidth(TrinketPickerDialog.field_G[var6]);
             if (var7 > var5) {
               var5 = var7;
             }

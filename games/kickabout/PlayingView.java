@@ -361,7 +361,7 @@ final class PlayingView extends MatchPhaseView {
         if (param0 != -1) {
           PlayingView.d((byte) -2);
         }
-        return new LoginText(LobbyPlayerRow.a(320), TextLine.a(false));
+        return new LoginText(LobbyPlayerRow.a(320), TextLine.isAvailabilityCheckPending(false));
     }
 
     private final void queueMouseMove(int param0, int param1, int param2) {
@@ -604,7 +604,7 @@ final class PlayingView extends MatchPhaseView {
                 this.field_G = -1;
               } else {
                 this.field_z = AccountTermsPanel.screenToWorldX(ArrayWidgetContainer.field_x, 6784) - var4.pixelX(-103);
-                this.field_G = TextLayoutLine.a(-6779, TutorialCaptionSupport.field_j) - var4.pixelY(true);
+                this.field_G = TextLayoutLine.screenToWorldY(-6779, TutorialCaptionSupport.field_j) - var4.pixelY(true);
               }
             }
             if (var4.action == 1) {
@@ -622,7 +622,7 @@ final class PlayingView extends MatchPhaseView {
                     this.field_k = false;
                   }
                   if (this.field_m) {
-                    this.switchToNearestTeammate(TextLayoutLine.a(-6779, TutorialCaptionSupport.field_j), AccountTermsPanel.screenToWorldX(ArrayWidgetContainer.field_x, 6784), 1);
+                    this.switchToNearestTeammate(TextLayoutLine.screenToWorldY(-6779, TutorialCaptionSupport.field_j), AccountTermsPanel.screenToWorldX(ArrayWidgetContainer.field_x, 6784), 1);
                     this.field_m = false;
                   }
                 } else {
@@ -1303,15 +1303,15 @@ final class PlayingView extends MatchPhaseView {
         }
         if (this.isLocalParticipantActive((byte) 13) &&
           !this.field_l) {
-          ByteArrayPool.field_d.d(PitchDecorationSupport.field_f.toUpperCase(), 320, 30, 16777215, -1);
+          ByteArrayPool.field_d.drawCentered(PitchDecorationSupport.field_f.toUpperCase(), 320, 30, 16777215, -1);
         }
         if (this.field_a.field_f) {
-          ByteArrayPool.field_d.a("FB", 5, 17, 16777215, -1);
+          ByteArrayPool.field_d.drawText("FB", 5, 17, 16777215, -1);
         }
         if (SelectionMarkerSupport.field_g) {
           var2Lifetime2 = 370;
           var3Lifetime2 = -45;
-          SoftwareRasterizer.e(SocialListLayoutSupport.worldToScreenX(0, var2Lifetime2), IntKeyLookup.a((byte) -89, var3Lifetime2), 155 * InstrumentNoteMask.field_i >> 8, 45 * InstrumentNoteMask.field_i >> 8, 16711935);
+          SoftwareRasterizer.drawRectangle(SocialListLayoutSupport.worldToScreenX(0, var2Lifetime2), IntKeyLookup.a((byte) -89, var3Lifetime2), 155 * InstrumentNoteMask.field_i >> 8, 45 * InstrumentNoteMask.field_i >> 8, 16711935);
           LongPlusOneCommand.a(this.field_a, param0 ^ 72, 0);
           LongPlusOneCommand.a(this.field_a, 48, 1);
         }

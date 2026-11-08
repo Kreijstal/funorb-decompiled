@@ -48,7 +48,7 @@ final class TutorialCaptionSupport extends IntrusiveNode {
         if (AnimationPlayer.field_f < 60) {
           var9 = TutorialMessages.field_c[var2];
           var3 = var9;
-          var4 = IsSixCommand.field_C.b(var9, TickClock.field_a - 44);
+          var4 = IsSixCommand.field_C.wrappedLineCount(var9, TickClock.field_a - 44);
           if (!(AnimationPlayer.field_f <= 0)) {
             var6 = 60;
             var7 = AnimationPlayer.field_f;
@@ -61,7 +61,7 @@ final class TutorialCaptionSupport extends IntrusiveNode {
           }
           var5 = var4 != 1 ? var4 != 2 ? 0 : 6 : 16;
           var3 = WidgetContainer.a("</>", "</shad></col>", true, WidgetContainer.a("<>", "<col=ffff00><shad=010101>", true, var3));
-          IsSixCommand.field_C.a(var3, (-TickClock.field_a + 640 >> 1) + 72, -10 + (var5 + 458) - 48, -44 + TickClock.field_a - 50, 48, 16777215, -1, 0, 0, 16);
+          IsSixCommand.field_C.drawParagraph(var3, (-TickClock.field_a + 640 >> 1) + 72, -10 + (var5 + 458) - 48, -44 + TickClock.field_a - 50, 48, 16777215, -1, 0, 0, 16);
           return;
         }
     }

@@ -586,9 +586,9 @@ final class MatchScreen extends AppScreen {
         }
         if (!this.stateReceived) {
           var3_ref_uo = IsSixCommand.field_C;
-          var4 = 90 + ((BitmapFont) ((Object) var3_ref_uo)).a(AuctionListingDialog.field_K) >> 1;
+          var4 = 90 + ((BitmapFont) ((Object) var3_ref_uo)).stringWidth(AuctionListingDialog.field_K) >> 1;
           SoftwareRasterizer.fillRoundedRectangleBlended(320 - var4, 223, var4 + var4, 34, 6, 65793, 128);
-          ((BitmapFont) ((Object) var3_ref_uo)).d(AuctionListingDialog.field_K, 320, 246, 16777215, -1);
+          ((BitmapFont) ((Object) var3_ref_uo)).drawCentered(AuctionListingDialog.field_K, 320, 246, 16777215, -1);
           return;
         }
         this.phaseController.drawContent(1);

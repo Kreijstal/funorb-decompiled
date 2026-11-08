@@ -183,7 +183,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var3 = Kickabout.field_G;
         if (this.field_n != null) {
           for (var2 = 0; this.field_n.length > var2; var2++) {
-            this.field_n[var2] = PainterStyle.a(this.field_n[var2], 32768);
+            this.field_n[var2] = PainterStyle.bitwiseOr(this.field_n[var2], 32768);
           }
         }
         if (param0) {

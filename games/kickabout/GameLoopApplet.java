@@ -318,8 +318,8 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
             return;
           }
           for (var1_int = 0; MatchHudSupport.field_a.length > var1_int; var1_int++) {
-            ClubStateFactory.field_d[var1_int] = AnimationClip.a(16729156, TrinketShopDialog.b((int) param0, 85), MatchHudSupport.field_a[var1_int]);
-            ValidationIndicator.field_G[var1_int] = AnimationClip.a(4521796, -92, MatchHudSupport.field_a[var1_int]);
+            ClubStateFactory.field_d[var1_int] = AnimationClip.tintGrayscaleSprite(16729156, TrinketShopDialog.b((int) param0, 85), MatchHudSupport.field_a[var1_int]);
+            ValidationIndicator.field_G[var1_int] = AnimationClip.tintGrayscaleSprite(4521796, -92, MatchHudSupport.field_a[var1_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

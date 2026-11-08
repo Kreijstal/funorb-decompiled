@@ -90,8 +90,8 @@ final class ShopPlayerSlot extends ListRow {
           SoftwareRasterizer.field_e <= this.field_T + this.field_mb) {
           if (this.field_Lb) {
             PlayerContextMenu.a(56 + this.field_F, (byte) 95, 39 + this.field_T);
-            var3 = ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b);
-            ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, 70 + this.field_F, this.field_T + 44, 16763955, 5583616);
+            var3 = ConsoleTokenCursor.field_d.stringWidth(WeightedLruCache.field_b);
+            ConsoleTokenCursor.field_d.drawText(WeightedLruCache.field_b, 70 + this.field_F, this.field_T + 44, 16763955, 5583616);
             ClientPacketFlushSupport.a(31, 28 + (this.field_F + 56 + var3), this.field_T + 39, 8000);
           }
           var3Lifetime1 = this.field_F;
@@ -101,9 +101,9 @@ final class ShopPlayerSlot extends ListRow {
           } else {
             ReceivedAuctionItemRow.a(19 + (1 + var3Lifetime1), -92, 23 + (this.field_T + 4));
           }
-          this.field_X.a(this.field_Sb.getDisplayName(100), var3Lifetime1 + 40, 4 + (this.field_mb >> 1) + this.field_T, this.field_y, -1);
+          this.field_X.drawText(this.field_Sb.getDisplayName(100), var3Lifetime1 + 40, 4 + (this.field_mb >> 1) + this.field_T, this.field_y, -1);
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[param0];
-          this.field_X.a(RegistrationUiSupport.field_e[this.field_Sb.archetype], 8 + var3Lifetime1, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
+          this.field_X.drawText(RegistrationUiSupport.field_e[this.field_Sb.archetype], 8 + var3Lifetime1, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[1];
           var5 = 6 + var3Lifetime1;
           for (var6 = 0; 3 > var6; var6++) {
@@ -133,19 +133,19 @@ final class ShopPlayerSlot extends ListRow {
             stackIn_24_2 = var8;
             stackIn_24_3 = var6;
             stackIn_26_4 = (this.field_gb) || (param1 == 2);
-            SoftwareDrawingSupport.a(stackIn_24_0, stackIn_24_1, stackIn_24_2, stackIn_24_3, stackIn_26_4, var9);
+            SoftwareDrawingSupport.drawStatBar(stackIn_24_0, stackIn_24_1, stackIn_24_2, stackIn_24_3, stackIn_26_4, var9);
           }
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[2];
           if (this.field_Sb.trinketIds.length == 0) {
-            IsSixCommand.field_C.d(DiskCacheRequest.field_w, var3Lifetime1 + (this.field_Pb[3] >> 1), (this.field_mb >> 1) + this.field_T + 4, 16777215, -1);
+            IsSixCommand.field_C.drawCentered(DiskCacheRequest.field_w, var3Lifetime1 + (this.field_Pb[3] >> 1), (this.field_mb >> 1) + this.field_T + 4, 16777215, -1);
           }
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[3];
-          var3Lifetime1 = var3Lifetime1 + (this.field_Pb[4] + IsSixCommand.field_C.a(this.field_Nb) >> 1);
+          var3Lifetime1 = var3Lifetime1 + (this.field_Pb[4] + IsSixCommand.field_C.stringWidth(this.field_Nb) >> 1);
           var6Lifetime1 = -5 + (this.field_q + this.field_F);
           if (var6Lifetime1 < var3Lifetime1) {
             var3Lifetime1 = var6Lifetime1;
           }
-          IsSixCommand.field_C.c(this.field_Nb, var3Lifetime1, 17 + this.field_T, 16777215, -1);
+          IsSixCommand.field_C.drawRightAligned(this.field_Nb, var3Lifetime1, 17 + this.field_T, 16777215, -1);
           return;
         }
     }

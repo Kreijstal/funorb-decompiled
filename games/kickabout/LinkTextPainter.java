@@ -85,11 +85,11 @@ final class LinkTextPainter implements WidgetPainter {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
-          this.field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_q + "</u>", param4 + param3.field_t, param3.field_g + param2, param3.field_n, param3.field_i, var6_int, -1, this.field_a, this.field_i, this.field_h.field_p + this.field_h.field_G);
+          this.field_h.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_q + "</u>", param4 + param3.field_t, param3.field_g + param2, param3.field_n, param3.field_i, var6_int, -1, this.field_a, this.field_i, this.field_h.field_p + this.field_h.field_G);
           if (!param3.isFocused(93)) {
             return;
           }
-          var8 = this.field_h.a(param3.field_q);
+          var8 = this.field_h.stringWidth(param3.field_q);
           var9 = this.field_h.field_p + this.field_h.field_G;
           var10 = param4 + param3.field_t;
           var11 = param2 + param3.field_g;

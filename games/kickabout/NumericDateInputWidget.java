@@ -156,7 +156,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           if (param3 < 86) {
             field_R = 41;
           }
-          EmailSyntaxValidator.field_k.d(param1, param4 + param0.field_t + (param0.field_n >> 1), -5 + param0.field_g + param2, 16777215, -1);
+          EmailSyntaxValidator.field_k.drawCentered(param1, param4 + param0.field_t + (param0.field_n >> 1), -5 + param0.field_g + param2, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fb.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

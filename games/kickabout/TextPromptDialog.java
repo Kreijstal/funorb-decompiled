@@ -156,7 +156,7 @@ final class TextPromptDialog extends UiLayoutNode {
         this.updateInput(param1, param0);
         if (null != this.field_Fb) {
           this.field_Fb.field_E = this.field_Db.toString();
-          this.field_Fb.field_s = (this.field_q - this.field_Fb.field_X.a(this.field_Fb.field_E)) / 2;
+          this.field_Fb.field_s = (this.field_q - this.field_Fb.field_X.stringWidth(this.field_Fb.field_E)) / 2;
           if (null != this.field_zb &&
             0 != this.field_zb.field_sb) {
             stackIn_6_0 = this.field_zb;
@@ -389,15 +389,15 @@ final class TextPromptDialog extends UiLayoutNode {
               discarded$0 = this.field_Db.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_X.a(BuyPlayerDialog.field_F);
+            var17 = param6.field_X.stringWidth(BuyPlayerDialog.field_F);
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_X.a(DateInputWidget.field_H);
+            var17Lifetime2 = param6.field_X.stringWidth(DateInputWidget.field_H);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_X.a(ScrollContainer.field_Hb);
+            var17Lifetime3 = param6.field_X.stringWidth(ScrollContainer.field_Hb);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -487,7 +487,7 @@ final class TextPromptDialog extends UiLayoutNode {
           this.field_Nb.addChild((byte) -110, this.field_Cb);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Cb.field_X.b(this.field_Cb.field_E, var15_int);
+          var17Lifetime1 = this.field_Cb.field_X.wrappedLineCount(this.field_Cb.field_E, var15_int);
           this.field_Cb.setBounds(true, var15_int, 13, var16Lifetime1, var17Lifetime1 * LineupPositionSupport.field_c);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * LineupPositionSupport.field_c;
           this.field_Nb.setBounds(true, 13 + var15_int + 13, 0, 24, var16Lifetime1 + 10);

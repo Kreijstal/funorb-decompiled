@@ -116,22 +116,22 @@ final class RankingRowNode extends UiLayoutNode {
         SoftwareRasterizer.fillRectangleAlpha(46 + this.field_F, this.field_T, 196, this.field_mb, 0, var2);
         SoftwareRasterizer.fillRectangleAlpha(248 + this.field_F, this.field_T, 70, this.field_mb, 0, var2);
         if (null == this.field_Hb) {
-          ConsoleTokenCursor.field_d.a(RegistrationUiSupport.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
+          ConsoleTokenCursor.field_d.drawText(RegistrationUiSupport.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
           var3 = 52 % ((-31 - param0) / 59);
           return;
         }
         if (null != this.field_Eb) {
-          ConsoleTokenCursor.field_d.a(this.field_Bb, this.field_F + 5, 4 + this.field_mb / 2 + this.field_T, this.field_Jb, -1);
-          ConsoleTokenCursor.field_d.a(this.field_Eb.toUpperCase(), 60 + this.field_F, this.field_mb / 2 + this.field_T + 4, this.field_Jb, -1);
+          ConsoleTokenCursor.field_d.drawText(this.field_Bb, this.field_F + 5, 4 + this.field_mb / 2 + this.field_T, this.field_Jb, -1);
+          ConsoleTokenCursor.field_d.drawText(this.field_Eb.toUpperCase(), 60 + this.field_F, this.field_mb / 2 + this.field_T + 4, this.field_Jb, -1);
           var3Lifetime1 = this.field_Jb;
           if (this.field_Ab == 6) {
             var3Lifetime1 = 16777028;
           }
-          ConsoleTokenCursor.field_d.a(this.field_zb, 258 + this.field_F, 4 + this.field_mb / 2 + this.field_T, var3Lifetime1, -1);
+          ConsoleTokenCursor.field_d.drawText(this.field_zb, 258 + this.field_F, 4 + this.field_mb / 2 + this.field_T, var3Lifetime1, -1);
           var3Lifetime1Lifetime1 = 52 % ((-31 - param0) / 59);
           return;
         }
-        ConsoleTokenCursor.field_d.a(RegistrationUiSupport.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
+        ConsoleTokenCursor.field_d.drawText(RegistrationUiSupport.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
         var3Lifetime2 = 52 % ((-31 - param0) / 59);
     }
 

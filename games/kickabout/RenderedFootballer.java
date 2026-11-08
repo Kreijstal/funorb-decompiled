@@ -135,15 +135,15 @@ final class RenderedFootballer extends FootballerAgent {
               ((Sprite) ((Object) var4)).c(var5 - (((Sprite) ((Object) var4)).field_o >> 1), var6 - (((Sprite) ((Object) var4)).field_v >> 1));
             }
             var7 = LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.a(param3.field_Eb, true), 26300);
-            var8 = Math.max(param2.field_F + 15, 66 + (param2.field_F - (IsSixCommand.field_C.a(var7) >> 1)));
-            IsSixCommand.field_C.a(var7, var8, param2.field_T + 51, 16777215, -1);
+            var8 = Math.max(param2.field_F + 15, 66 + (param2.field_F - (IsSixCommand.field_C.stringWidth(var7) >> 1)));
+            IsSixCommand.field_C.drawText(var7, var8, param2.field_T + 51, 16777215, -1);
             if (!param1) {
               var9 = BlobSubmission.field_l;
-              var10 = Math.max(param2.field_F + 15, param2.field_F - (-66 + (IsSixCommand.field_C.a(var9) >> 1)));
-              IsSixCommand.field_C.a(var9, var10, 73 + param2.field_T, 13369344, 65793);
+              var10 = Math.max(param2.field_F + 15, param2.field_F - (-66 + (IsSixCommand.field_C.stringWidth(var9) >> 1)));
+              IsSixCommand.field_C.drawText(var9, var10, 73 + param2.field_T, 13369344, 65793);
             }
           } else {
-            IsSixCommand.field_C.a(StrongCacheEntry.field_A, param2.field_F + 18, 40 + param2.field_T, param2.field_q - 36, param2.field_mb - 50, 11184810, -1, 1, 0, 16);
+            IsSixCommand.field_C.drawParagraph(StrongCacheEntry.field_A, param2.field_F + 18, 40 + param2.field_T, param2.field_q - 36, param2.field_mb - 50, 11184810, -1, 1, 0, 16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -340,14 +340,14 @@ final class RenderedFootballer extends FootballerAgent {
           var15 = ConsoleTokenCursor.field_d;
           var16 = var13 + 11;
           for (var17 = 0; var8_ref_String__.length > var17; var17++) {
-            var15.c(var8_ref_String__[var17], 10 + (var12 >> 1), var16, 16777215, -1);
-            var15.a(var9_ref_String__[var17], (var12 >> 1) + 15, var16, 16777215, -1);
+            var15.drawRightAligned(var8_ref_String__[var17], 10 + (var12 >> 1), var16, 16777215, -1);
+            var15.drawText(var9_ref_String__[var17], (var12 >> 1) + 15, var16, 16777215, -1);
             var16 += 10;
           }
           var16 += 2;
-          var15.a(var10.toString(), 20, var16, 16777215, -1);
+          var15.drawText(var10.toString(), 20, var16, 16777215, -1);
           var16 += 10;
-          var15.a(var11_ref_StringBuilder.toString(), 20, var16, 16777215, -1);
+          var15.drawText(var11_ref_StringBuilder.toString(), 20, var16, 16777215, -1);
           TeamManagementScreen.e(125);
           var17Lifetime1 = var14.field_o * InstrumentNoteMask.field_i >> 8;
           var18 = InstrumentNoteMask.field_i * var14.field_v >> 8;
@@ -387,11 +387,11 @@ final class RenderedFootballer extends FootballerAgent {
           this.renderModel(var2, var8, 128, 190, (byte) -91);
           TeamManagementScreen.e(119);
           if (this.field_T) {
-            SoftwareDrawingSupport.a(AvailabilityCheckRequest.field_f, -16777215);
-            SoftwareDrawingSupport.a(AvailabilityCheckRequest.field_f, -16777214);
-            SoftwareDrawingSupport.a(AvailabilityCheckRequest.field_f, -16777215);
-            SoftwareDrawingSupport.a(AvailabilityCheckRequest.field_f, -16777214);
-            SoftwareDrawingSupport.a(AvailabilityCheckRequest.field_f, -16777215);
+            SoftwareDrawingSupport.outlineSpriteInPlace(AvailabilityCheckRequest.field_f, -16777215);
+            SoftwareDrawingSupport.outlineSpriteInPlace(AvailabilityCheckRequest.field_f, -16777214);
+            SoftwareDrawingSupport.outlineSpriteInPlace(AvailabilityCheckRequest.field_f, -16777215);
+            SoftwareDrawingSupport.outlineSpriteInPlace(AvailabilityCheckRequest.field_f, -16777214);
+            SoftwareDrawingSupport.outlineSpriteInPlace(AvailabilityCheckRequest.field_f, -16777215);
             for (var9_int = 0; AvailabilityCheckRequest.field_f.field_y.length > var9_int; var9_int++) {
               if (AvailabilityCheckRequest.field_f.field_y[var9_int] > 0) {
                 AvailabilityCheckRequest.field_f.field_y[var9_int] = 0;

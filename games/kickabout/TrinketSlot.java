@@ -31,16 +31,16 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
         if (this.field_Bb.field_h != 0) {
           SoftwareRasterizer.fillRectangleAlpha(var6, var7, var4, 50, 16777215, 60);
         }
-        SoftwareRasterizer.e(var6, var7, var4, var5, 65793);
-        ConsoleTokenCursor.field_d.c(this.field_yb, -10 + (var6 + var4), 22 + var7, 16777215, 65793);
-        ConsoleTokenCursor.field_d.c(this.field_Hb, -10 + (var6 + var4), var7 + 36, 16777215, 65793);
+        SoftwareRasterizer.drawRectangle(var6, var7, var4, var5, 65793);
+        ConsoleTokenCursor.field_d.drawRightAligned(this.field_yb, -10 + (var6 + var4), 22 + var7, 16777215, 65793);
+        ConsoleTokenCursor.field_d.drawRightAligned(this.field_Hb, -10 + (var6 + var4), var7 + 36, 16777215, 65793);
         if (param1 != 23) {
           this.field_Hb = (String) null;
         }
         this.field_Cb.c(var6 + 8, 9 + var7);
         if (0 != this.field_Bb.field_h) {
           SoftwareRasterizer.drawHorizontalLine(var6, var7 + 50, var4, 65793);
-          ConsoleTokenCursor.field_d.a(this.field_Gb, 5 + var6, var7 + 50, var4 - 10, var5 - 50 - 2, 16777215, 65793, 0, 1, 12);
+          ConsoleTokenCursor.field_d.drawParagraph(this.field_Gb, 5 + var6, var7 + 50, var4 - 10, var5 - 50 - 2, 16777215, 65793, 0, 1, 12);
         }
     }
 

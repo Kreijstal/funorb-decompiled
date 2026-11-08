@@ -216,7 +216,7 @@ final class LeaderboardParticipant {
           }
           for (var17_intLifetime3 = 0; param4 > var17_intLifetime3; var17_intLifetime3++) {
             SessionUrlSupport.field_b[4 + var17_intLifetime3] = new UiLayoutNode(0L, DisplayModeSupport.field_b, Cp1252EncodingSupport.field_b[var17_intLifetime3]);
-            array$2 = new ContextMenuItem[TextLayoutLine.b(255, (int) NamedValueEntry.field_k[var17_intLifetime3]) + 1];
+            array$2 = new ContextMenuItem[TextLayoutLine.bitwiseAnd(255, (int) NamedValueEntry.field_k[var17_intLifetime3]) + 1];
             SocialTabsPanel.field_c[var17_intLifetime3 + 4] = array$2;
             SocialTabsPanel.field_c[4 + var17_intLifetime3][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, TextInputUiSupport.field_c, (Sprite) null, FaceNormal.field_b);
             for (var18 = 0; (255 & NamedValueEntry.field_k[var17_intLifetime3]) > var18; var18++) {
@@ -383,7 +383,7 @@ final class LeaderboardParticipant {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
-              var10[var6] = PlayAreaMovementSupport.field_a[TextLayoutLine.b((int) var21[var6], 255)];
+              var10[var6] = PlayAreaMovementSupport.field_a[TextLayoutLine.bitwiseAnd((int) var21[var6], 255)];
             }
             var1[var2] = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], LoginResponseUiSupport.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var22);
           } else {
@@ -395,7 +395,7 @@ final class LeaderboardParticipant {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = PainterStyle.a(PlayAreaMovementSupport.field_a[TextLayoutLine.b((int) var21[var7], 255)], TextLayoutLine.b(-16777216, var16[var7] << 24));
+              var6_ref_int__[var7] = PainterStyle.bitwiseOr(PlayAreaMovementSupport.field_a[TextLayoutLine.bitwiseAnd((int) var21[var7], 255)], TextLayoutLine.bitwiseAnd(-16777216, var16[var7] << 24));
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], LoginResponseUiSupport.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var17));
           }

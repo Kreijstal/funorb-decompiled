@@ -97,7 +97,7 @@ final class CachedTextLayout extends TextLayout {
           var8 = this.createSingleLine(param4, true, param3, param1);
           var9 = var8;
           var8.field_b[0] = param0;
-          var9.field_b[param1.length()] = param3.a(param1) + param0;
+          var9.field_b[param1.length()] = param3.stringWidth(param1) + param0;
           if (param2 != 80) {
             CommonGame var7 = (CommonGame) null;
             CachedTextLayout.a((CommonGame) null, -19, 117);
@@ -164,7 +164,7 @@ final class CachedTextLayout extends TextLayout {
           this.field_g = param1;
           this.field_p = param6;
           this.field_k = param3;
-          var16 = new String[1 + param1.b(param6, param0)];
+          var16 = new String[1 + param1.wrappedLineCount(param6, param0)];
           var17 = var16;
           var10 = Math.max(1, param1.wrapText(param6, new int[]{param0}, var17));
           if (param5 < 89) {
@@ -211,12 +211,12 @@ final class CachedTextLayout extends TextLayout {
             var14 = new TextLayoutLine(stackIn_36_2, stackIn_36_3, stackIn_37_4);
             var14.field_b[0] = 0;
             if (var13 != null) {
-              var14.field_b[var13.length()] = param1.a(var13);
+              var14.field_b[var13.length()] = param1.stringWidth(var13);
               stackIn_40_0 = (BitmapFont) (param1);
               stackIn_40_1 = var13;
               stackIn_40_2 = var14;
               if (param4 == 3) {
-                stackIn_41_3 = this.a(param0, -61, param1.a(var13), var13);
+                stackIn_41_3 = this.justificationSpacing(param0, -61, param1.stringWidth(var13), var13);
               } else {
                 stackIn_41_3 = 0;
               }
@@ -267,7 +267,7 @@ final class CachedTextLayout extends TextLayout {
         try {
           var8 = this.createSingleLine(param2, true, param4, param1);
           var9 = var8;
-          var9.field_b[0] = -param4.a(param1) + param3;
+          var9.field_b[0] = -param4.stringWidth(param1) + param3;
           var9.field_b[param1.length()] = param3;
           TextLineLayoutSupport.computeCharacterPositions(param4, param1, var9, 0, -1942293368);
         } catch (RuntimeException runtimeException) {
@@ -303,7 +303,7 @@ final class CachedTextLayout extends TextLayout {
           this.field_h = true;
           this.field_g = param2;
           var8 = this.createSingleLine(param4, true, param2, param3);
-          var7 = param2.a(param3);
+          var7 = param2.stringWidth(param3);
           var8.field_b[0] = param1 - (var7 >> 1);
           var8.field_b[param3.length()] = (var7 >> 1) + param1;
           TextLineLayoutSupport.computeCharacterPositions(param2, param3, var8, 0, -1942293368);

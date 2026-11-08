@@ -82,7 +82,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_D != null) {
-          ModelMaterial.field_a.a(this.field_D, 20 + param2 + this.field_t, 15 + param3 + this.field_g, -40 + this.field_n, this.field_i, 16777215, -1, 1, 0, ModelMaterial.field_a.field_G);
+          ModelMaterial.field_a.drawParagraph(this.field_D, 20 + param2 + this.field_t, 15 + param3 + this.field_g, -40 + this.field_n, this.field_i, 16777215, -1, 1, 0, ModelMaterial.field_a.field_G);
         }
         if (null != this.field_L) {
           SoftwareRasterizer.drawHorizontalLine(param2 + 10, param3 + 134, -20 + this.field_n, 4210752);

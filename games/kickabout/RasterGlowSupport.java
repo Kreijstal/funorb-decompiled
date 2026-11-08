@@ -36,7 +36,7 @@ final class RasterGlowSupport {
             int[] var5 = var9;
             var6 = param1;
             var7 = param3;
-            var9[var6] = var7 + (TextLayoutLine.b(var9[var6], 16711422) >> 1);
+            var9[var6] = var7 + (TextLayoutLine.bitwiseAnd(var9[var6], 16711422) >> 1);
             param1++;
           }
           int var5_int = -26 / ((42 - param4) / 56);

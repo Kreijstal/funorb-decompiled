@@ -274,7 +274,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_8_0 = MySquadScreen.field_M;
             return stackIn_8_0;
           }
-          if (PainterStyle.a(var5, -3)) {
+          if (PainterStyle.containsNonAlphanumeric(var5, -3)) {
             stackIn_11_0 = GoalStateAgent.field_h;
             return stackIn_11_0;
           }
@@ -298,7 +298,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_26_0 = AppScreen.field_f;
             return stackIn_26_0;
           }
-          if (!TextLine.a((byte) 69, var6, var5)) {
+          if (!TextLine.containsNameOrReverse((byte) 69, var6, var5)) {
             return MySquadScreen.field_M;
           }
           stackIn_30_0 = ClientUiUpdateSupport.field_b;
@@ -332,8 +332,8 @@ final class PasswordValidator extends TextFieldValidator {
           return;
         }
         try {
-          var4 = Math.max(((BitmapFont) ((Object) var11)).a(NotificationPanelPositionSupport.field_d[0]), Math.max(((BitmapFont) ((Object) var11)).a(NotificationPanelPositionSupport.field_d[3]), ((BitmapFont) ((Object) var11)).a(NotificationPanelPositionSupport.field_d[4]))) + 20;
-          var5 = Math.max(((BitmapFont) ((Object) var11)).a(NotificationPanelPositionSupport.field_d[1]), ((BitmapFont) ((Object) var11)).a(NotificationPanelPositionSupport.field_d[2])) + 20;
+          var4 = Math.max(((BitmapFont) ((Object) var11)).stringWidth(NotificationPanelPositionSupport.field_d[0]), Math.max(((BitmapFont) ((Object) var11)).stringWidth(NotificationPanelPositionSupport.field_d[3]), ((BitmapFont) ((Object) var11)).stringWidth(NotificationPanelPositionSupport.field_d[4]))) + 20;
+          var5 = Math.max(((BitmapFont) ((Object) var11)).stringWidth(NotificationPanelPositionSupport.field_d[1]), ((BitmapFont) ((Object) var11)).stringWidth(NotificationPanelPositionSupport.field_d[2])) + 20;
           var6 = var5 + var5 + var4;
           var7 = -(var6 >> 1) + param1;
           var8 = -34 + param0;
@@ -345,17 +345,17 @@ final class PasswordValidator extends TextFieldValidator {
           SoftwareRasterizer.drawVerticalLineAlpha(var7 + var4, 4 + var8, 59, 16777215, 100);
           SoftwareRasterizer.drawVerticalLineAlpha(var4 + var7 + var5, 4 + var8, 59, 16777215, 100);
           var9Lifetime1 = 22 + var8 - 4;
-          ((BitmapFont) ((Object) var3)).c(NotificationPanelPositionSupport.field_d[0], var7 - (-var4 + 5), var9Lifetime1, 16777215, 65793);
-          ((BitmapFont) ((Object) var3)).d(NotificationPanelPositionSupport.field_d[1], (var5 >> 1) + (var7 + var4), var9Lifetime1, 16777215, 65793);
-          ((BitmapFont) ((Object) var3)).d(NotificationPanelPositionSupport.field_d[2], (var5 >> 1) + (var5 + var7 + var4), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).drawRightAligned(NotificationPanelPositionSupport.field_d[0], var7 - (-var4 + 5), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).drawCentered(NotificationPanelPositionSupport.field_d[1], (var5 >> 1) + (var7 + var4), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).drawCentered(NotificationPanelPositionSupport.field_d[2], (var5 >> 1) + (var5 + var7 + var4), var9Lifetime1, 16777215, 65793);
           var9Lifetime1 += 22;
-          ((BitmapFont) ((Object) var3)).c(NotificationPanelPositionSupport.field_d[3], -5 + var7 + var4, var9Lifetime1, 16777215, 65793);
-          ((BitmapFont) ((Object) var3)).d("+30", (var5 >> 1) + (var4 + var7), var9Lifetime1, 16777215, 65793);
-          ((BitmapFont) ((Object) var3)).d("+3", -2 + var7 + (var4 + (var5 + (var5 >> 1))), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).drawRightAligned(NotificationPanelPositionSupport.field_d[3], -5 + var7 + var4, var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).drawCentered("+30", (var5 >> 1) + (var4 + var7), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).drawCentered("+3", -2 + var7 + (var4 + (var5 + (var5 >> 1))), var9Lifetime1, 16777215, 65793);
           var9Lifetime1 += 22;
-          ((BitmapFont) ((Object) var3)).c(NotificationPanelPositionSupport.field_d[4], -5 + (var4 + var7), var9Lifetime1, 16777215, 65793);
-          ((BitmapFont) ((Object) var3)).d("-10", (var5 >> 1) + (var4 + var7), var9Lifetime1, 16777215, 65793);
-          ((BitmapFont) ((Object) var3)).d("0", -2 + (var4 + var7 - (-var5 - (var5 >> 1))), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).drawRightAligned(NotificationPanelPositionSupport.field_d[4], -5 + (var4 + var7), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).drawCentered("-10", (var5 >> 1) + (var4 + var7), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).drawCentered("0", -2 + (var4 + var7 - (-var5 - (var5 >> 1))), var9Lifetime1, 16777215, 65793);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lo.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }

@@ -279,7 +279,7 @@ abstract class PopupDialog extends IntrusiveNode {
         }
         AuctionLogEntry.field_j.drawScaledAdditive(param1 - 10, 15 + param2, AuctionLogEntry.field_j.field_o * 2 / 3, 2 * AuctionLogEntry.field_j.field_v / 3, param0);
         this.drawBody((byte) -29, param1, param2);
-        SoftwareRasterizer.c(param1, param2, this.field_e, this.field_r, 2, 65793);
+        SoftwareRasterizer.drawThickRectangle(param1, param2, this.field_e, this.field_r, 2, 65793);
         TeamManagementScreen.e(124);
     }
 

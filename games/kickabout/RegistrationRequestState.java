@@ -52,15 +52,15 @@ final class RegistrationRequestState {
             var12 = var12 >> 1;
           }
           SoftwareRasterizer.fillRoundedRectangleBlended(param7, param4, param0, var9, var12, 65793, 140);
-          IsSixCommand.field_C.a(param1, var10, var11, var8_int, var9, 16777215, -1, 0, 0, 16);
+          IsSixCommand.field_C.drawParagraph(param1, var10, var11, var8_int, var9, 16777215, -1, 0, 0, 16);
           if (param3 == null) {
             return;
           }
           if (!param2) {
-            ByteArrayPool.field_d.a(param3, var10, -10 + var11, 16777215, -1);
+            ByteArrayPool.field_d.drawText(param3, var10, -10 + var11, 16777215, -1);
             return;
           }
-          ByteArrayPool.field_d.d(param3, var10 + (var8_int >> 1), var11 - 10, 16777215, -1);
+          ByteArrayPool.field_d.drawCentered(param3, var10 + (var8_int >> 1), var11 - 10, 16777215, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

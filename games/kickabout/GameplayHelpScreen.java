@@ -253,11 +253,11 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var6 = ChatMessage.field_f[var2][0] + this.slideOffsetX;
           var7 = ChatMessage.field_f[var2][1];
           if (var2 == ArchiveManager.field_d) {
-            SoftwareDrawingSupport.a(UrlRequest.field_k, 65793);
-            SoftwareDrawingSupport.a(UrlRequest.field_k, 11184810);
-            SoftwareDrawingSupport.a(UrlRequest.field_k, 12303291);
-            SoftwareDrawingSupport.a(UrlRequest.field_k, 8947848);
-            SoftwareDrawingSupport.a(UrlRequest.field_k, 4473924);
+            SoftwareDrawingSupport.outlineSpriteInPlace(UrlRequest.field_k, 65793);
+            SoftwareDrawingSupport.outlineSpriteInPlace(UrlRequest.field_k, 11184810);
+            SoftwareDrawingSupport.outlineSpriteInPlace(UrlRequest.field_k, 12303291);
+            SoftwareDrawingSupport.outlineSpriteInPlace(UrlRequest.field_k, 8947848);
+            SoftwareDrawingSupport.outlineSpriteInPlace(UrlRequest.field_k, 4473924);
           }
           UrlRequest.field_k.drawHalfSize(-(UrlRequest.field_k.field_o >> 2) + var6, var7 - (UrlRequest.field_k.field_v >> 2));
         }
@@ -298,7 +298,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             var8 = IsSixCommand.field_C.paragraphHeight(var7, 245, 16);
             if (var8 + var6 <= 396) {
               var2++;
-              var6 = var6 + (20 + IsSixCommand.field_C.a(var7, var5, var6, 245, 999, 16777215, -1, 0, 0, 16) * 16);
+              var6 = var6 + (20 + IsSixCommand.field_C.drawParagraph(var7, var5, var6, 245, 999, 16777215, -1, 0, 0, 16) * 16);
               continue;
             }
             break;
@@ -327,14 +327,14 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         if (var2 != 0) {
           DirectByteStorage.field_g.c(this.slideOffsetX + 490, 112);
         }
-        IsSixCommand.field_C.a(ListingRowCache.field_g, this.slideOffsetX + 60, 136, 16777215, -1);
+        IsSixCommand.field_C.drawText(ListingRowCache.field_g, this.slideOffsetX + 60, 136, 16777215, -1);
         var3 = 40 + this.slideOffsetX;
         for (var4 = 0; var4 < 2; var4++) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3, 150, 210, 200, 10, 65793, 140);
-          ByteArrayPool.field_d.a(LoginRequiredDialog.field_L[var4].toUpperCase(), 20 + var3, 175, 16777215, -1);
+          ByteArrayPool.field_d.drawText(LoginRequiredDialog.field_L[var4].toUpperCase(), 20 + var3, 175, 16777215, -1);
           for (var5 = 0; var5 < 2; var5++) {
             var6 = var5 * 120 + (var3 + 20);
-            IsSixCommand.field_C.a(JaggrabDownloader.field_e[var4][var5], 90 + (var3 - 80 * var5), 84 * var5 + 185, 110, 70, 16777215, -1, var5 << 1, 1, 16);
+            IsSixCommand.field_C.drawParagraph(JaggrabDownloader.field_e[var4][var5], 90 + (var3 - 80 * var5), 84 * var5 + 185, 110, 70, 16777215, -1, var5 << 1, 1, 16);
             var7 = 186 + 74 * var5;
             if (var5 == 0) {
               stackIn_12_0 = RegistrationRequestDialog.field_qb;
@@ -355,7 +355,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         if (param0 != -128) {
           GameplayHelpScreen.j((byte) 0);
         }
-        IsSixCommand.field_C.a(ModelMaterial.field_d, 150 + this.slideOffsetX, 360, 300, 43, 16777215, -1, 0, 1, 16);
+        IsSixCommand.field_C.drawParagraph(ModelMaterial.field_d, 150 + this.slideOffsetX, 360, 300, 43, 16777215, -1, 0, 1, 16);
         if (var2 != 0) {
           var10 = 0;
           var4Lifetime1 = var10;
@@ -504,7 +504,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var13 = Kickabout.field_G;
         stackIn_3_0 = (null == AccountRegistrationPanel.field_C) ? 0 : 1;
         var2 = stackIn_3_0;
-        IsSixCommand.field_C.a(ReceivedAuctionItemRow.field_Fb, 60 + this.slideOffsetX, 136, 16777215, -1);
+        IsSixCommand.field_C.drawText(ReceivedAuctionItemRow.field_Fb, 60 + this.slideOffsetX, 136, 16777215, -1);
         var3 = this.slideOffsetX + 40;
         if (param0 != 96) {
           this.field_F = (PlayerStats[]) null;
@@ -518,7 +518,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             stackIn_10_1 = 60;
           }
           var5 = stackIn_9_0 + stackIn_10_1;
-          ByteArrayPool.field_d.a(DelegatingCanvas.field_d[var4].toUpperCase(), var3 + 20, 180, 16777215, -1);
+          ByteArrayPool.field_d.drawText(DelegatingCanvas.field_d[var4].toUpperCase(), var3 + 20, 180, 16777215, -1);
           PacketBuffer.a(param0 ^ -19, UrlRequest.field_k);
           SoftwareRasterizer.clearFramebuffer();
           CalendarSupport.field_a[var4].renderModel(950, 300, SoftwareRasterizer.field_g >> 1, (SoftwareRasterizer.field_f >> 1) + 60, (byte) -71);
@@ -563,14 +563,14 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           } else {
             stackIn_32_2 = 0;
           }
-          ((BinaryBitmapFont) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_32_2 + 10 + var3, 185, 160, 70, 16777215, -1, 1, 1, 16);
+          ((BinaryBitmapFont) (Object) stackIn_31_0).drawParagraph(stackIn_31_1, stackIn_32_2 + 10 + var3, 185, 160, 70, 16777215, -1, 1, 1, 16);
           if (CalendarSupport.field_a[var4].action == 4) {
             stackIn_38_0 = (CalendarSupport.field_a[var4].actionTime > BuyPitchDialog.field_I[4] - 13) ? 1 : 0;
           } else {
             stackIn_38_0 = 0;
           }
           var10Lifetime1 = stackIn_38_0;
-          IsSixCommand.field_C.d(DelegatingCanvas.field_c[var4], var3 + 137, 382, 16777215, -1);
+          IsSixCommand.field_C.drawCentered(DelegatingCanvas.field_c[var4], var3 + 137, 382, 16777215, -1);
           if (var2 != 0) {
             stackIn_42_0 = DebugConsole.field_y[var4];
             if (var10Lifetime1 == 0) {
@@ -627,18 +627,18 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         int var7 = Kickabout.field_G;
         int var5Lifetime1;
         SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 121, 560, 60, 10, 65793, param0);
-        IsSixCommand.field_C.a(ReceivedAuctionItem.field_H, this.slideOffsetX + 55, 131, 530, 40, 16777215, -1, 0, 1, 16);
+        IsSixCommand.field_C.drawParagraph(ReceivedAuctionItem.field_H, this.slideOffsetX + 55, 131, 530, 40, 16777215, -1, 0, 1, 16);
         int var2 = 40 + this.slideOffsetX;
         int[][] var3 = new int[][]{new int[]{0, 1, 2, 3}, new int[]{4, 36, 80, 87}};
         for (var4 = 0; var4 < 2; var4++) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var2, 190, 275, 208, 10, 65793, 140);
-          ByteArrayPool.field_d.a(ModelMaterial.field_e[var4].toLowerCase(), var2 + 10, 212, 16777215, -1);
+          ByteArrayPool.field_d.drawText(ModelMaterial.field_e[var4].toLowerCase(), var2 + 10, 212, 16777215, -1);
           for (var5 = 0; var5 < 4; var5++) {
             GeneratedPanelPainter.field_g[var3[var4][var5]].d(false).c(110 + (var2 + var5 * 40), 200);
           }
           var5Lifetime1 = 242;
           for (var6 = 0; var6 < GoalkeeperAiSupport.field_c[var4].length; var6++) {
-            var5Lifetime1 = var5Lifetime1 + (10 + 16 * IsSixCommand.field_C.a(GoalkeeperAiSupport.field_c[var4][var6], 10 + var2, var5Lifetime1, 255, 1000, 16777215, -1, 0, 0, 16));
+            var5Lifetime1 = var5Lifetime1 + (10 + 16 * IsSixCommand.field_C.drawParagraph(GoalkeeperAiSupport.field_c[var4][var6], 10 + var2, var5Lifetime1, 255, 1000, 16777215, -1, 0, 0, 16));
           }
           var2 += 285;
         }
@@ -679,7 +679,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           this.field_K[var3Lifetime1].h((byte) -122);
         }
         SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 40, 120, 560, 50, 10, 65793, 140);
-        IsSixCommand.field_C.a(LineupPositionSupport.field_e, 70 + this.slideOffsetX, 126, 500, 40, 16777215, -1, 0, 1, 16);
+        IsSixCommand.field_C.drawParagraph(LineupPositionSupport.field_e, 70 + this.slideOffsetX, 126, 500, 40, 16777215, -1, 0, 1, 16);
         SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 210, 178, 390, 225, 10, 65793, 140);
         this.field_E.draw(94, false);
         AuctionListing.a(this.field_E.field_Gb.field_q + this.field_E.field_F, -22914, this.field_E.field_F, this.field_E.field_T + this.field_E.field_Gb.field_mb, this.field_E.field_T);
@@ -687,10 +687,10 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var4 = 30 + this.field_E.field_Db.field_T;
         var5 = var4;
         for (var6 = 0; var6 < 4; var6++) {
-          ByteArrayPool.field_d.a(LobbyMatchPreview.field_d[var6].toLowerCase(), var3Lifetime2 - 6, var5, 16777215, -1);
-          SoftwareDrawingSupport.a(200 + var3Lifetime2, -12 + var5, 10 + 17 * ((1 + var6) % 4) % 30, var6, true, 0);
+          ByteArrayPool.field_d.drawText(LobbyMatchPreview.field_d[var6].toLowerCase(), var3Lifetime2 - 6, var5, 16777215, -1);
+          SoftwareDrawingSupport.drawStatBar(200 + var3Lifetime2, -12 + var5, 10 + 17 * ((1 + var6) % 4) % 30, var6, true, 0);
           var5 += 6;
-          var5 = var5 + IsSixCommand.field_C.a(ServerTextTemplate.field_k[var6], var3Lifetime2 - 5, var5, 340, 1000, 14540253, -1, 0, 0, 17) * 17;
+          var5 = var5 + IsSixCommand.field_C.drawParagraph(ServerTextTemplate.field_k[var6], var3Lifetime2 - 5, var5, 340, 1000, 14540253, -1, 0, 0, 17) * 17;
           var5 += 50;
         }
         var6Lifetime1 = -10 - var4 + var5;

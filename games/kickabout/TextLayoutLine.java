@@ -21,7 +21,7 @@ final class TextLayoutLine {
         return 0;
     }
 
-    final static int a(int param0, int param1) {
+    final static int screenToWorldY(int param0, int param1) {
         int var2 = MatchHudSupport.screenToWorldY(param1, param0 ^ -2167);
         if (FaceNormal.field_c) {
           var2 = -var2 + 1344;
@@ -33,7 +33,7 @@ final class TextLayoutLine {
         return var2;
     }
 
-    final int a(byte param0, int param1) {
+    final int nearestCharacterIndex(byte param0, int param1) {
         int var3;
         int var4;
         int var3Lifetime1;
@@ -67,7 +67,7 @@ final class TextLayoutLine {
         return this.field_b.length - 1;
     }
 
-    static int b(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 
@@ -75,7 +75,7 @@ final class TextLayoutLine {
         field_a = null;
         field_c = null;
         if (param0 >= -25) {
-          TextLayoutLine.a(75, 93);
+          TextLayoutLine.screenToWorldY(75, 93);
           field_f = null;
           return;
         }

@@ -688,9 +688,9 @@ final class TextFieldNode extends UiLayoutNode {
             this.field_Fb = dupTemp$0;
             this.field_Mb = dupTemp$0;
           }
-          this.field_yb.field_s = this.field_Lb.field_X.a(this.field_Ub.toString().substring(0, this.field_Mb));
+          this.field_yb.field_s = this.field_Lb.field_X.stringWidth(this.field_Ub.toString().substring(0, this.field_Mb));
           if (this.field_Fb != this.field_Mb) {
-            var3 = this.field_Lb.field_s + this.field_Lb.field_X.a(this.field_Ub.toString().substring(0, this.field_Fb));
+            var3 = this.field_Lb.field_s + this.field_Lb.field_X.stringWidth(this.field_Ub.toString().substring(0, this.field_Fb));
             if (var3 < this.field_yb.field_s) {
               stackIn_28_0 = var3;
             } else {

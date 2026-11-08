@@ -38,8 +38,8 @@ class SharedWidgetFactory extends DualLinkNode {
         RuntimeException var2 = null;
         var21 = Kickabout.field_G;
         try {
-          var2_int = param0.a(MatchingTextValidator.field_o[16]);
-          var3 = param0.a(MatchingTextValidator.field_o[17]);
+          var2_int = param0.stringWidth(MatchingTextValidator.field_o[16]);
+          var3 = param0.stringWidth(MatchingTextValidator.field_o[17]);
           DraggableWidget.a(Math.max(var2_int, var3), param0, (byte) -46);
           var4 = new UiLayoutNode();
           var4.field_R = LeaguesScreen.field_B;
@@ -57,10 +57,10 @@ class SharedWidgetFactory extends DualLinkNode {
           TextEntrySupport.field_b = new ScrollBar("scrollbar", var6, var7, var5, var4, true);
           ParticipantAgent.field_m = new ScrollBar("scrollbar", ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, true);
           SocialListLayoutSupport.field_b = new Sprite[2][2];
-          SocialListLayoutSupport.field_b[0][0] = AnimationClip.a(16679959, -87, ButtonMenuScreen.field_u);
-          SocialListLayoutSupport.field_b[0][1] = AnimationClip.a(16679959, -104, PlayerInputFactory.field_g);
-          SocialListLayoutSupport.field_b[1][0] = AnimationClip.a(7126504, -119, ButtonMenuScreen.field_u);
-          SocialListLayoutSupport.field_b[1][1] = AnimationClip.a(7126504, -76, PlayerInputFactory.field_g);
+          SocialListLayoutSupport.field_b[0][0] = AnimationClip.tintGrayscaleSprite(16679959, -87, ButtonMenuScreen.field_u);
+          SocialListLayoutSupport.field_b[0][1] = AnimationClip.tintGrayscaleSprite(16679959, -104, PlayerInputFactory.field_g);
+          SocialListLayoutSupport.field_b[1][0] = AnimationClip.tintGrayscaleSprite(7126504, -119, ButtonMenuScreen.field_u);
+          SocialListLayoutSupport.field_b[1][1] = AnimationClip.tintGrayscaleSprite(7126504, -76, PlayerInputFactory.field_g);
           var8 = new MenuButton[57];
           var8[0] = new MenuButton(-2, 7465472, 0);
           var8[1] = new MenuButton(-2, 15147554, 1);

@@ -101,9 +101,9 @@ final class FormationMaskSupport {
             TriangleRasterizer.setProjectionCenter(SoftwareRasterizer.field_g >> 1, 410);
             var8.a(0, var12[var4], 0, 0, 0, 0, 0, 350);
             TeamManagementScreen.e(127);
-            SoftwareDrawingSupport.a(GameSoundEffect.field_j[var4], 65793);
-            SoftwareDrawingSupport.a(GameSoundEffect.field_j[var4], 66049);
-            SoftwareDrawingSupport.a(GameSoundEffect.field_j[var4], 65793);
+            SoftwareDrawingSupport.outlineSpriteInPlace(GameSoundEffect.field_j[var4], 65793);
+            SoftwareDrawingSupport.outlineSpriteInPlace(GameSoundEffect.field_j[var4], 66049);
+            SoftwareDrawingSupport.outlineSpriteInPlace(GameSoundEffect.field_j[var4], 65793);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

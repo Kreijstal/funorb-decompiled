@@ -81,7 +81,7 @@ abstract class ModalPanel extends WidgetContainer {
             var4 = SquadPickerDialog.field_O[var2];
             var5 = new int[var3];
             for (var6 = 0; var3 > var6; var6++) {
-              var5[var6] = PlayAreaMovementSupport.field_a[TextLayoutLine.b((int) var4[var6], 255)];
+              var5[var6] = PlayAreaMovementSupport.field_a[TextLayoutLine.bitwiseAnd((int) var4[var6], 255)];
             }
             var1[var2] = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], LoginResponseUiSupport.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var5);
           }

@@ -50,7 +50,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
           AuctionLogEntry.field_j.drawAdditive(-40 + param0, param2 - 290, 32);
           SoftwareRasterizer.restoreClip(var11);
           for (var7 = 0; var7 < 2; var7++) {
-            SoftwareRasterizer.e(var7 + param0, var7 + param2, -var7 - var7 + param3, param1 - var7 - var7, 65793);
+            SoftwareRasterizer.drawRectangle(var7 + param0, var7 + param2, -var7 - var7 + param3, param1 - var7 - var7, 65793);
           }
           return;
         }
@@ -58,7 +58,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
         AuctionLogEntry.field_j.drawAdditive(-40 + param0, param2 - 290, 32);
         SoftwareRasterizer.restoreClip(var11);
         for (var7Lifetime1 = 0; var7Lifetime1 < 2; var7Lifetime1++) {
-          SoftwareRasterizer.e(var7Lifetime1 + param0, var7Lifetime1 + param2, -var7Lifetime1 - var7Lifetime1 + param3, param1 - var7Lifetime1 - var7Lifetime1, 65793);
+          SoftwareRasterizer.drawRectangle(var7Lifetime1 + param0, var7Lifetime1 + param2, -var7Lifetime1 - var7Lifetime1 + param3, param1 - var7Lifetime1 - var7Lifetime1, 65793);
         }
     }
 

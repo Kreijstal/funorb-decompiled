@@ -274,7 +274,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         this.field_L.addChild((byte) -110, (UiLayoutNode) (this.field_J));
         this.field_L.addChild((byte) -111, this.field_Q);
         this.field_L.addChild((byte) -111, this.field_G);
-        this.field_U = SoftwareDrawingSupport.a(MyKitScreen.field_M, 15147554);
+        this.field_U = SoftwareDrawingSupport.createTextButton(MyKitScreen.field_M, 15147554);
         this.field_U.field_J = 56;
         this.field_U.field_s = 66 - (this.field_U.field_q >> 1);
     }
@@ -282,10 +282,10 @@ final class PlayerShopScreen extends TeamManagementScreen {
     final void drawScreen(int param0, boolean param1) {
         super.drawScreen(param0, param1);
         SoftwareRasterizer.fillRectangleAlpha(this.field_Q.field_F, this.field_Q.field_T, this.field_Q.field_q, this.field_Q.field_mb, 65793, 96);
-        ByteArrayPool.field_d.a(ArchivePreloadEntry.field_b, 14 + this.field_Q.field_F, this.field_Q.field_T + 25, 16777215, -1);
+        ByteArrayPool.field_d.drawText(ArchivePreloadEntry.field_b, 14 + this.field_Q.field_F, this.field_Q.field_T + 25, 16777215, -1);
         this.field_T.k((byte) 55);
         SoftwareRasterizer.fillRectangleAlpha(this.field_G.field_F, this.field_G.field_T, this.field_G.field_q, this.field_G.field_mb, 65793, 96);
-        ByteArrayPool.field_d.a(MusicPatchNode.field_i, 14 + this.field_G.field_F, 21 + this.field_G.field_T, 16777215, -1);
+        ByteArrayPool.field_d.drawText(MusicPatchNode.field_i, 14 + this.field_G.field_F, 21 + this.field_G.field_T, 16777215, -1);
         RenderedFootballer.a(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.getSelectedSlot((byte) 21));
         this.field_J.a(-120);
         this.field_L.draw(75, false);

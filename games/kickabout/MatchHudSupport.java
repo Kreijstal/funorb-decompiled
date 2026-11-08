@@ -55,7 +55,7 @@ final class MatchHudSupport {
             }
           }
           MarkerSliderPainter.field_i.c(TextLayoutLine.field_e + param0, ArchiveNetworkClient.field_i + (18 + var2_int));
-          ByteArrayPool.field_d.a(SharedChatLayoutSupport.field_c, 13 + TextLayoutLine.field_e + param0, var2_int / 2 + (20 + ArchiveNetworkClient.field_i), 16777215, -1);
+          ByteArrayPool.field_d.drawText(SharedChatLayoutSupport.field_c, 13 + TextLayoutLine.field_e + param0, var2_int / 2 + (20 + ArchiveNetworkClient.field_i), 16777215, -1);
           var3Lifetime1 = 0;
           if (param1 != -12452) {
             field_c = -16;
@@ -82,11 +82,11 @@ final class MatchHudSupport {
               var3Lifetime2Lifetime1++;
             }
             if (PortraitCacheOrder.field_d < 0) {
-              ByteArrayPool.field_d.a(LoginMethod.field_b, TextLayoutLine.field_e + (140 - var3Lifetime2Lifetime1 * field_a[0].field_q + param0), ArchiveNetworkClient.field_i - (-35 + 2 * (-CachedArchiveSource.field_s + 18)), 16729156, -1);
+              ByteArrayPool.field_d.drawText(LoginMethod.field_b, TextLayoutLine.field_e + (140 - var3Lifetime2Lifetime1 * field_a[0].field_q + param0), ArchiveNetworkClient.field_i - (-35 + 2 * (-CachedArchiveSource.field_s + 18)), 16729156, -1);
             } else {
-              ByteArrayPool.field_d.a(HuffmanCodec.field_b, -(var3Lifetime2Lifetime1 * field_a[0].field_q) + (TextLayoutLine.field_e + 140 + param0), 35 + ArchiveNetworkClient.field_i - 2 * (18 - CachedArchiveSource.field_s), 4521796, -1);
+              ByteArrayPool.field_d.drawText(HuffmanCodec.field_b, -(var3Lifetime2Lifetime1 * field_a[0].field_q) + (TextLayoutLine.field_e + 140 + param0), 35 + ArchiveNetworkClient.field_i - 2 * (18 - CachedArchiveSource.field_s), 4521796, -1);
             }
-            ByteArrayPool.field_d.a("-----------", 64 + TextLayoutLine.field_e, -(2 * (18 - CachedArchiveSource.field_s)) + 44 + ArchiveNetworkClient.field_i, 16777215, -1);
+            ByteArrayPool.field_d.drawText("-----------", 64 + TextLayoutLine.field_e, -(2 * (18 - CachedArchiveSource.field_s)) + 44 + ArchiveNetworkClient.field_i, 16777215, -1);
             TeamManagementScreen.e(param1 ^ -12506);
           }
           var4Lifetime2 = GoalStateAgent.field_l;
@@ -121,7 +121,7 @@ final class MatchHudSupport {
         int var4 = LineupPositionSupport.lineupSlotX(70, param2);
         int var5 = AchievementsScreen.a((byte) -27, param3);
         RenderedFootballer var6 = (RenderedFootballer) (ThumbnailStateFactory.field_d.field_P[param3][param2]);
-        int var7 = !param0 ? 80 + TextLayoutLine.a(-6779, 480) : TextLayoutLine.a(-6779, 0) - 50;
+        int var7 = !param0 ? 80 + TextLayoutLine.screenToWorldY(-6779, 480) : TextLayoutLine.screenToWorldY(-6779, 0) - 50;
         if (var6.positionY != var5 &&
           QuickChatCategory.advanceToPoint(4, (byte) 106, var6.positionX, var6, var7 << 16)) {
           var6.setPosition(var4, false, 0, var5);
@@ -189,7 +189,7 @@ final class MatchHudSupport {
           var5 = var16;
           for (var6_int = 0; var16.length > var6_int; var6_int++) {
             var17 = var16[var6_int];
-            var8 = ((BitmapFont) ((Object) var3)).a(var17);
+            var8 = ((BitmapFont) ((Object) var3)).stringWidth(var17);
             if (var4 < var8) {
               var4 = var8;
             }
@@ -197,7 +197,7 @@ final class MatchHudSupport {
           var5Lifetime1 = DialogOverlay.field_g;
           for (var6_intLifetime1 = 0; var5Lifetime1.length > var6_intLifetime1; var6_intLifetime1++) {
             var18 = var5Lifetime1[var6_intLifetime1];
-            var8Lifetime1 = ((BitmapFont) ((Object) var3)).a(var18);
+            var8Lifetime1 = ((BitmapFont) ((Object) var3)).stringWidth(var18);
             if (var4 < var8Lifetime1) {
               var4 = var8Lifetime1;
             }
@@ -227,7 +227,7 @@ final class MatchHudSupport {
           var9_ref_String__ = var6;
           for (var10 = 0; var10 < var9_ref_String__.length; var10++) {
             var11_ref_String = var9_ref_String__[var10];
-            var12 = ((BitmapFont) ((Object) var3)).a(var11_ref_String);
+            var12 = ((BitmapFont) ((Object) var3)).stringWidth(var11_ref_String);
             if (var12 > var8Lifetime2) {
               var8Lifetime2 = var12;
             }
@@ -238,12 +238,12 @@ final class MatchHudSupport {
           SoftwareRasterizer.fillRoundedRectangleBlended(-var9 + 644, var11, var9, var10Lifetime1, 2, 0, param2);
           var12Lifetime1 = 619 - (var4 + 20);
           var13 = 6 + var11 + TextPromptDialog.field_yb;
-          ((BitmapFont) ((Object) var3)).c(var20, 599, var13, param1, -1);
+          ((BitmapFont) ((Object) var3)).drawRightAligned(var20, 599, var13, param1, -1);
           var13 = var13 + (TextPromptDialog.field_yb + 6);
           for (var14 = 0; var6.length > var14; var14++) {
-            ((BitmapFont) ((Object) var3)).a(':', var12Lifetime1, var13, 16777215);
-            ((BitmapFont) ((Object) var3)).c(var6[var14], -20 + var12Lifetime1, var13, 16777215, -1);
-            ((BitmapFont) ((Object) var3)).a(var21[var14], 20 + var12Lifetime1, var13, 16777215, -1);
+            ((BitmapFont) ((Object) var3)).drawCenteredCharacter(':', var12Lifetime1, var13, 16777215);
+            ((BitmapFont) ((Object) var3)).drawRightAligned(var6[var14], -20 + var12Lifetime1, var13, 16777215, -1);
+            ((BitmapFont) ((Object) var3)).drawText(var21[var14], 20 + var12Lifetime1, var13, 16777215, -1);
             var13 = var13 + (2 + TextPromptDialog.field_yb);
           }
           return;

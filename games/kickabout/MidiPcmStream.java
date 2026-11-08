@@ -219,67 +219,67 @@ final class MidiPcmStream extends PcmStream {
         var5Lifetime4 = 127 & param1 >> 8;
         var6Lifetime3 = (8349360 & param1) >> 16;
         if (var5Lifetime4 == 0) {
-          this.channelBanks[var4Lifetime4] = TextLayoutLine.b(this.channelBanks[var4Lifetime4], -2080769) + (var6Lifetime3 << 14);
+          this.channelBanks[var4Lifetime4] = TextLayoutLine.bitwiseAnd(this.channelBanks[var4Lifetime4], -2080769) + (var6Lifetime3 << 14);
         }
         if (var5Lifetime4 == 32) {
-          this.channelBanks[var4Lifetime4] = TextLayoutLine.b(-16257, this.channelBanks[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.channelBanks[var4Lifetime4] = TextLayoutLine.bitwiseAnd(-16257, this.channelBanks[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 1) {
-          this.modulation[var4Lifetime4] = TextLayoutLine.b(this.modulation[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.modulation[var4Lifetime4] = TextLayoutLine.bitwiseAnd(this.modulation[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (33 == var5Lifetime4) {
-          this.modulation[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.b(-128, this.modulation[var4Lifetime4]);
+          this.modulation[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.bitwiseAnd(-128, this.modulation[var4Lifetime4]);
         }
         if (var5Lifetime4 == 5) {
-          this.portamentoTime[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.b(this.portamentoTime[var4Lifetime4], -16257);
+          this.portamentoTime[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.bitwiseAnd(this.portamentoTime[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 37) {
-          this.portamentoTime[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.b(this.portamentoTime[var4Lifetime4], -128);
+          this.portamentoTime[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.bitwiseAnd(this.portamentoTime[var4Lifetime4], -128);
         }
         if (var5Lifetime4 == 7) {
-          this.channelVolume[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.b(this.channelVolume[var4Lifetime4], -16257);
+          this.channelVolume[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.bitwiseAnd(this.channelVolume[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 39) {
-          this.channelVolume[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.b(-128, this.channelVolume[var4Lifetime4]);
+          this.channelVolume[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.bitwiseAnd(-128, this.channelVolume[var4Lifetime4]);
         }
         if (10 == var5Lifetime4) {
-          this.channelPan[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.b(this.channelPan[var4Lifetime4], -16257);
+          this.channelPan[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.bitwiseAnd(this.channelPan[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 42) {
-          this.channelPan[var4Lifetime4] = TextLayoutLine.b(this.channelPan[var4Lifetime4], -128) + var6Lifetime3;
+          this.channelPan[var4Lifetime4] = TextLayoutLine.bitwiseAnd(this.channelPan[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 11) {
-          this.channelExpression[var4Lifetime4] = TextLayoutLine.b(this.channelExpression[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelExpression[var4Lifetime4] = TextLayoutLine.bitwiseAnd(this.channelExpression[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 43) {
-          this.channelExpression[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.b(-128, this.channelExpression[var4Lifetime4]);
+          this.channelExpression[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.bitwiseAnd(-128, this.channelExpression[var4Lifetime4]);
         }
         if (var5Lifetime4 == 64) {
           if (var6Lifetime3 >= 64) {
-            this.field_i[var4Lifetime4] = PainterStyle.a(this.field_i[var4Lifetime4], 1);
+            this.field_i[var4Lifetime4] = PainterStyle.bitwiseOr(this.field_i[var4Lifetime4], 1);
           } else {
-            this.field_i[var4Lifetime4] = TextLayoutLine.b(this.field_i[var4Lifetime4], -2);
+            this.field_i[var4Lifetime4] = TextLayoutLine.bitwiseAnd(this.field_i[var4Lifetime4], -2);
           }
         }
         if (65 == var5Lifetime4) {
           if (var6Lifetime3 < 64) {
             this.releasePortamentoNotes(-1, var4Lifetime4);
-            this.field_i[var4Lifetime4] = TextLayoutLine.b(this.field_i[var4Lifetime4], -3);
+            this.field_i[var4Lifetime4] = TextLayoutLine.bitwiseAnd(this.field_i[var4Lifetime4], -3);
           } else {
-            this.field_i[var4Lifetime4] = PainterStyle.a(this.field_i[var4Lifetime4], 2);
+            this.field_i[var4Lifetime4] = PainterStyle.bitwiseOr(this.field_i[var4Lifetime4], 2);
           }
         }
         if (var5Lifetime4 == 99) {
-          this.field_z[var4Lifetime4] = TextLayoutLine.b(this.field_z[var4Lifetime4], 127) + (var6Lifetime3 << 7);
+          this.field_z[var4Lifetime4] = TextLayoutLine.bitwiseAnd(this.field_z[var4Lifetime4], 127) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 98) {
-          this.field_z[var4Lifetime4] = TextLayoutLine.b(16256, this.field_z[var4Lifetime4]) + var6Lifetime3;
+          this.field_z[var4Lifetime4] = TextLayoutLine.bitwiseAnd(16256, this.field_z[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 101) {
-          this.field_z[var4Lifetime4] = 16384 - (-TextLayoutLine.b(this.field_z[var4Lifetime4], 127) - (var6Lifetime3 << 7));
+          this.field_z[var4Lifetime4] = 16384 - (-TextLayoutLine.bitwiseAnd(this.field_z[var4Lifetime4], 127) - (var6Lifetime3 << 7));
         }
         if (var5Lifetime4 == 100) {
-          this.field_z[var4Lifetime4] = var6Lifetime3 + (16384 + TextLayoutLine.b(16256, this.field_z[var4Lifetime4]));
+          this.field_z[var4Lifetime4] = var6Lifetime3 + (16384 + TextLayoutLine.bitwiseAnd(16256, this.field_z[var4Lifetime4]));
         }
         if (120 == var5Lifetime4) {
           this.allSoundOff(var4Lifetime4, 100);
@@ -293,27 +293,27 @@ final class MidiPcmStream extends PcmStream {
         if (var5Lifetime4 == 6) {
           var7 = this.field_z[var4Lifetime4];
           if (var7 == 16384) {
-            this.pitchBendSensitivity[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.b(-16257, this.pitchBendSensitivity[var4Lifetime4]);
+            this.pitchBendSensitivity[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.bitwiseAnd(-16257, this.pitchBendSensitivity[var4Lifetime4]);
           }
         }
         if (var5Lifetime4 == 38) {
           var7Lifetime1 = this.field_z[var4Lifetime4];
           if (var7Lifetime1 == 16384) {
-            this.pitchBendSensitivity[var4Lifetime4] = TextLayoutLine.b(-128, this.pitchBendSensitivity[var4Lifetime4]) + var6Lifetime3;
+            this.pitchBendSensitivity[var4Lifetime4] = TextLayoutLine.bitwiseAnd(-128, this.pitchBendSensitivity[var4Lifetime4]) + var6Lifetime3;
           }
         }
         if (var5Lifetime4 == 16) {
-          this.sampleOffsets[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.b(-16257, this.sampleOffsets[var4Lifetime4]);
+          this.sampleOffsets[var4Lifetime4] = (var6Lifetime3 << 7) + TextLayoutLine.bitwiseAnd(-16257, this.sampleOffsets[var4Lifetime4]);
         }
         if (48 == var5Lifetime4) {
-          this.sampleOffsets[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.b(-128, this.sampleOffsets[var4Lifetime4]);
+          this.sampleOffsets[var4Lifetime4] = var6Lifetime3 + TextLayoutLine.bitwiseAnd(-128, this.sampleOffsets[var4Lifetime4]);
         }
         if (var5Lifetime4 == 81) {
           if (64 > var6Lifetime3) {
             this.resetRetriggerPhase(-28723, var4Lifetime4);
-            this.field_i[var4Lifetime4] = TextLayoutLine.b(this.field_i[var4Lifetime4], -5);
+            this.field_i[var4Lifetime4] = TextLayoutLine.bitwiseAnd(this.field_i[var4Lifetime4], -5);
           } else {
-            this.field_i[var4Lifetime4] = PainterStyle.a(this.field_i[var4Lifetime4], 4);
+            this.field_i[var4Lifetime4] = PainterStyle.bitwiseOr(this.field_i[var4Lifetime4], 4);
           }
         }
         if (17 == var5Lifetime4) {
@@ -884,7 +884,7 @@ final class MidiPcmStream extends PcmStream {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (var5 < 16) {
-          this.channelBanks[var5] = TextLayoutLine.b(-128, this.initialPrograms[var5]);
+          this.channelBanks[var5] = TextLayoutLine.bitwiseAnd(-128, this.initialPrograms[var5]);
           var5++;
         }
     }
@@ -1177,7 +1177,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void applyInitialProgram(int param0, int param1, byte param2) {
         this.initialPrograms[param0] = param1;
-        this.channelBanks[param0] = TextLayoutLine.b(param1, -128);
+        this.channelBanks[param0] = TextLayoutLine.bitwiseAnd(param1, -128);
         this.changeProgram(param1, param2 ^ 164, param0);
         if (param2 != 36) {
           this.firstSubstream();

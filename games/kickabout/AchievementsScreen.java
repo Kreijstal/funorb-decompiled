@@ -84,9 +84,9 @@ final class AchievementsScreen extends ButtonMenuScreen {
         SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 135, 280, 244, 145, 8, 0, 148);
         if (-1 == var5) {
           if (!PlayArea.a(100)) {
-            IsSixCommand.field_C.a(StatChoiceDialog.field_K, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.drawParagraph(StatChoiceDialog.field_K, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
           } else {
-            IsSixCommand.field_C.a(LineupPositionSupport.field_b, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.drawParagraph(LineupPositionSupport.field_b, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
           }
           return;
         }
@@ -95,77 +95,77 @@ final class AchievementsScreen extends ButtonMenuScreen {
           if (var5 == 32 &&
             TextFieldValidator.f(-1)) {
             GameModesHelpScreen.field_L.c(5 + this.slideOffsetX, 290);
-            var10 = var18.a('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
+            var10 = var18.drawParagraph('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
             var11 = var8 + var10 * 16 + 5;
-            ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11 + 6, 16711680, -1);
+            ConsoleTokenCursor.field_d.drawCentered(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11 + 6, 16711680, -1);
             var11 += 10;
             var12 = ProxyAuthenticationRequiredException.field_a[var5];
             if (FadingSoundSupport.field_a[var5]) {
               var12 = field_A;
             }
             var11 += 16;
-            var13 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(SocialRowOrderSupport.field_d)) + 30;
-            var18.c(ImageProducerRasterBuffer.field_l, var7 + var13, var11, 16777215, -1);
-            var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13 + var7, var11, 16777215, -1);
+            var13 = Math.max(var18.stringWidth(ImageProducerRasterBuffer.field_l), var18.stringWidth(SocialRowOrderSupport.field_d)) + 30;
+            var18.drawRightAligned(ImageProducerRasterBuffer.field_l, var7 + var13, var11, 16777215, -1);
+            var18.drawText(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13 + var7, var11, 16777215, -1);
             var11 += 18;
-            var18.c(SocialRowOrderSupport.field_d, var7 + var13, var11, 16777215, -1);
+            var18.drawRightAligned(SocialRowOrderSupport.field_d, var7 + var13, var11, 16777215, -1);
             for (var14 = WidgetTheme.field_g[var5] / 100; var14 > 0; var14--) {
               var15 = 5 * var14 + (var13 + (var7 - 2));
               PlayerShopScreen.field_R.drawHalfSize(var15, -14 + var11);
             }
             var11 += 9;
             var14Lifetime5 = 16;
-            if (3 < var18.b(var12, var9)) {
+            if (3 < var18.wrappedLineCount(var12, var9)) {
               var11 -= 4;
               var14Lifetime5 = 15;
             }
-            var18.a(var12, var7, var11, var9, 200, 16777215, -1, 0, 0, var14Lifetime5);
+            var18.drawParagraph(var12, var7, var11, var9, 200, 16777215, -1, 0, 0, var14Lifetime5);
             return;
           }
           StrongCacheEntry.field_w.c(5 + this.slideOffsetX, 290);
-          var10Lifetime2 = var18.a('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
+          var10Lifetime2 = var18.drawParagraph('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
           var11Lifetime2 = var8 + var10Lifetime2 * 16 + 5;
-          ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime2 + 6, 16711680, -1);
+          ConsoleTokenCursor.field_d.drawCentered(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime2 + 6, 16711680, -1);
           var11Lifetime2 += 10;
           var12Lifetime2 = ProxyAuthenticationRequiredException.field_a[var5];
           if (FadingSoundSupport.field_a[var5]) {
             var12Lifetime2 = field_A;
           }
           var11Lifetime2 += 16;
-          var13Lifetime2 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(SocialRowOrderSupport.field_d)) + 30;
-          var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
-          var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime2 + var7, var11Lifetime2, 16777215, -1);
+          var13Lifetime2 = Math.max(var18.stringWidth(ImageProducerRasterBuffer.field_l), var18.stringWidth(SocialRowOrderSupport.field_d)) + 30;
+          var18.drawRightAligned(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
+          var18.drawText(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime2 + var7, var11Lifetime2, 16777215, -1);
           var11Lifetime2 += 18;
-          var18.c(SocialRowOrderSupport.field_d, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
+          var18.drawRightAligned(SocialRowOrderSupport.field_d, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
           for (var14Lifetime3 = WidgetTheme.field_g[var5] / 100; var14Lifetime3 > 0; var14Lifetime3--) {
             var15Lifetime2 = 5 * var14Lifetime3 + (var13Lifetime2 + (var7 - 2));
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime2, -14 + var11Lifetime2);
           }
           var11Lifetime2 += 9;
           var14Lifetime4 = 16;
-          if (3 < var18.b(var12Lifetime2, var9)) {
+          if (3 < var18.wrappedLineCount(var12Lifetime2, var9)) {
             var11Lifetime2 -= 4;
             var14Lifetime4 = 15;
           }
-          var18.a(var12Lifetime2, var7, var11Lifetime2, var9, 200, 16777215, -1, 0, 0, var14Lifetime4);
+          var18.drawParagraph(var12Lifetime2, var7, var11Lifetime2, var9, 200, 16777215, -1, 0, 0, var14Lifetime4);
           return;
         }
         ArchivePreloader.field_i[PacketBuffer.field_e[var5]].c(5 + this.slideOffsetX, 290);
-        var10Lifetime1 = var18.a('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
+        var10Lifetime1 = var18.drawParagraph('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
         var11Lifetime1 = var8 + var10Lifetime1 * 16 + 5;
         if (var6 == 0) {
-          ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime1 + 6, 16711680, -1);
+          ConsoleTokenCursor.field_d.drawCentered(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime1 + 6, 16711680, -1);
           var11Lifetime1 += 10;
           var12Lifetime1 = ProxyAuthenticationRequiredException.field_a[var5];
           if (FadingSoundSupport.field_a[var5]) {
             var12Lifetime1 = field_A;
           }
           var11Lifetime1 += 16;
-          var13Lifetime1 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(SocialRowOrderSupport.field_d)) + 30;
-          var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
-          var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
+          var13Lifetime1 = Math.max(var18.stringWidth(ImageProducerRasterBuffer.field_l), var18.stringWidth(SocialRowOrderSupport.field_d)) + 30;
+          var18.drawRightAligned(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
+          var18.drawText(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
           var11Lifetime1 += 18;
-          var18.c(SocialRowOrderSupport.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
+          var18.drawRightAligned(SocialRowOrderSupport.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
           for (var14Lifetime1 = WidgetTheme.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
             var15Lifetime1 = 5 * var14Lifetime1 + (var13Lifetime1 + (var7 - 2));
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime1, -14 + var11Lifetime1);
@@ -177,11 +177,11 @@ final class AchievementsScreen extends ButtonMenuScreen {
             var12Lifetime1 = field_A;
           }
           var11Lifetime1 += 16;
-          var13Lifetime1 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(SocialRowOrderSupport.field_d)) + 30;
-          var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
-          var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
+          var13Lifetime1 = Math.max(var18.stringWidth(ImageProducerRasterBuffer.field_l), var18.stringWidth(SocialRowOrderSupport.field_d)) + 30;
+          var18.drawRightAligned(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
+          var18.drawText(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
           var11Lifetime1 += 18;
-          var18.c(SocialRowOrderSupport.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
+          var18.drawRightAligned(SocialRowOrderSupport.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
           for (var14Lifetime1 = WidgetTheme.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
             var15Lifetime1 = 5 * var14Lifetime1 + (var13Lifetime1 + (var7 - 2));
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime1, -14 + var11Lifetime1);
@@ -189,19 +189,19 @@ final class AchievementsScreen extends ButtonMenuScreen {
         }
         var11Lifetime1 += 9;
         var14Lifetime2 = 16;
-        if (3 < var18.b(var12Lifetime1, var9)) {
+        if (3 < var18.wrappedLineCount(var12Lifetime1, var9)) {
           var11Lifetime1 -= 4;
           var14Lifetime2 = 15;
         }
-        var18.a(var12Lifetime1, var7, var11Lifetime1, var9, 200, 16777215, -1, 0, 0, var14Lifetime2);
+        var18.drawParagraph(var12Lifetime1, var7, var11Lifetime1, var9, 200, 16777215, -1, 0, 0, var14Lifetime2);
     }
 
     final void buildWidgets(int param0) {
         int var2 = 0;
         UiLayoutNode var3 = null;
         int var4 = Kickabout.field_G;
-        MatchUiLayoutSupport.field_d = SoftwareDrawingSupport.a(false);
-        ModalPanel.field_D = SoftwareDrawingSupport.a(true);
+        MatchUiLayoutSupport.field_d = SoftwareDrawingSupport.createDefaultButtonNode(false);
+        ModalPanel.field_D = SoftwareDrawingSupport.createDefaultButtonNode(true);
         for (var2 = 0; 2 > var2; var2++) {
           var3 = var2 == 0 ? MatchUiLayoutSupport.field_d : ModalPanel.field_D;
           var3.field_N.rotateClockwise();

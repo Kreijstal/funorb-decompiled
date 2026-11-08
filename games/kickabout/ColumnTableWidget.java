@@ -328,7 +328,7 @@ class ColumnTableWidget extends UiLayoutNode {
           var7 = -5 + (20 + var13.field_T);
           if (this.field_Db == var2) {
             var6 -= 4;
-            var8 = (ConsoleTokenCursor.field_d.a(var13.field_E) >> 1) + (4 + var6);
+            var8 = (ConsoleTokenCursor.field_d.stringWidth(var13.field_E) >> 1) + (4 + var6);
             var9 = -10 + var7;
             var10 = this.field_zb[this.field_Db];
             if (var10.directionCount(-113) == 2) {
@@ -346,7 +346,7 @@ class ColumnTableWidget extends UiLayoutNode {
               }
             }
           }
-          ConsoleTokenCursor.field_d.d(var13.field_E, var6, var7, 16777215, var5_int);
+          ConsoleTokenCursor.field_d.drawCentered(var13.field_E, var6, var7, 16777215, var5_int);
         }
         AuctionListing.a(this.field_Cb.field_q + this.field_Cb.field_F, -22914, this.field_Cb.field_F, this.field_Cb.field_mb + this.field_Cb.field_T, this.field_Cb.field_T);
         var2Lifetime1 = 103 % ((param0 - 33) / 56);
@@ -364,14 +364,14 @@ class ColumnTableWidget extends UiLayoutNode {
                   SoftwareRasterizer.fillRectangleAlpha(var7Lifetime1, var5.field_T, this.field_Bb[var8Lifetime1].field_q, var5.field_mb, 2280703, 90);
                   stackIn_35_0 = (var8Lifetime1 == this.field_Bb.length - 1) ? 0 : 1;
                   var9Lifetime1 = stackIn_35_0;
-                  SoftwareRasterizer.e(var7Lifetime1, var5.field_T, var9Lifetime1 + this.field_Bb[var8Lifetime1].field_q, var5.field_mb, 65793);
+                  SoftwareRasterizer.drawRectangle(var7Lifetime1, var5.field_T, var9Lifetime1 + this.field_Bb[var8Lifetime1].field_q, var5.field_mb, 65793);
                 }
                 var7Lifetime1 = var7Lifetime1 + this.field_Bb[var8Lifetime1].field_q;
               }
             } else {
               SoftwareRasterizer.fillRectangleAlpha(var5.field_F, var5.field_T, var5.field_q, var5.field_mb, 2280703, 90);
             }
-            SoftwareRasterizer.e(var5.field_F, var5.field_T, var5.field_q, var5.field_mb, 65793);
+            SoftwareRasterizer.drawRectangle(var5.field_F, var5.field_T, var5.field_q, var5.field_mb, 65793);
             for (var8Lifetime1Lifetime1 = 0; var8Lifetime1Lifetime1 < 4; var8Lifetime1Lifetime1++) {
               SoftwareRasterizer.drawRectangleAlpha(-var8Lifetime1Lifetime1 + (var5.field_F + 3), -var8Lifetime1Lifetime1 + 3 + var5.field_T, var8Lifetime1Lifetime1 - 6 + (var5.field_q + var8Lifetime1Lifetime1), var5.field_mb + (-6 + var8Lifetime1Lifetime1 + var8Lifetime1Lifetime1), 65793, var8Lifetime1Lifetime1 << 4);
             }

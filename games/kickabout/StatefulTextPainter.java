@@ -11,7 +11,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
     static int field_v;
     static UiLayoutNode field_s;
 
-    final PainterStyle a(int param0, int param1) {
+    final PainterStyle createStateStyle(int param0, int param1) {
         if (param1 != -12085) {
           return (PainterStyle) null;
         }
@@ -52,7 +52,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
                 } else {
                   stackIn_8_1 = var6;
                 }
-                ((PainterStyle) (Object) stackIn_7_0).a(stackIn_8_1, -2147483648);
+                ((PainterStyle) (Object) stackIn_7_0).copyTo(stackIn_8_1, -2147483648);
               }
             }
           } else {
@@ -297,24 +297,24 @@ final class StatefulTextPainter extends TextWidgetPainter {
             param1 = param1 & var10.field_y;
           }
           var7 = this.field_w[0];
-          this.field_x.a(-13136);
-          var7.a(param2, -2147483648, this, param3, param4, this.field_x);
+          this.field_x.reset(-13136);
+          var7.mergeInto(param2, -2147483648, this, param3, param4, this.field_x);
           if (var10 != null) {
             if (var10.field_A) {
               var11 = this.field_w[1];
               if (var11 != null) {
-                var11.a(param2, -2147483648, this, param3, param4, this.field_x);
+                var11.mergeInto(param2, -2147483648, this, param3, param4, this.field_x);
               }
             }
             if (var10.field_m) {
               var13 = this.field_w[3];
               if (0 != var10.field_p &&
                 var13 != null) {
-                var13.a(param2, -2147483648, this, param3, param4, this.field_x);
+                var13.mergeInto(param2, -2147483648, this, param3, param4, this.field_x);
               } else {
                 var12 = this.field_w[2];
                 if (var12 != null) {
-                  var12.a(param2, -2147483648, this, param3, param4, this.field_x);
+                  var12.mergeInto(param2, -2147483648, this, param3, param4, this.field_x);
                 }
               }
             }
@@ -323,16 +323,16 @@ final class StatefulTextPainter extends TextWidgetPainter {
           if (param3.isFocused(15)) {
             var14 = this.field_w[5];
             if (var14 != null) {
-              var14.a(param2, -2147483648, this, param3, param4, this.field_x);
+              var14.mergeInto(param2, -2147483648, this, param3, param4, this.field_x);
             }
           }
           if (!param1) {
             var15 = this.field_w[4];
             if (var15 != null) {
-              var15.a(param2, -2147483648, this, param3, param4, this.field_x);
+              var15.mergeInto(param2, -2147483648, this, param3, param4, this.field_x);
             }
           }
-          this.field_x.a(param3, this, param2, param4, 0);
+          this.field_x.paint(param3, this, param2, param4, 0);
           TeamManagementScreen.e(127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -355,7 +355,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         PainterStyle dupTemp$0 = new PainterStyle();
         this.field_w[0] = dupTemp$0;
         PainterStyle var1 = dupTemp$0;
-        var1.a(-13136);
+        var1.reset(-13136);
     }
 
     public static void releaseStatics(int param0) {
@@ -417,7 +417,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final void a(int param0, Sprite[] param1, int param2) {
+    final void setStatePanelSprites(int param0, Sprite[] param1, int param2) {
         int var5 = 0;
         try {
           int var4_int = -99 / ((11 - param2) / 60);

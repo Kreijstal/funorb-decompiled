@@ -6,15 +6,15 @@ abstract class TextLayout {
     static String[] field_a;
     static String field_b;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 0) {
-          TextLayout.$cfr$intArgs$a$8e2a9e3a0d15(-59, 98, 114, 64, -128);
+          TextLayout.drawNumberDigits(-59, 98, 114, 64, -128);
         }
     }
 
-    final int a(byte param0) {
+    final int width(byte param0) {
         int var4 = 0;
         int var2;
         TextLayoutLine[] var3;
@@ -41,7 +41,7 @@ abstract class TextLayout {
         return var2;
     }
 
-    final int a(int param0) {
+    final int height(int param0) {
         int stackIn_6_0 = 0;
         if (param0 != -1761) {
           field_b = (String) null;
@@ -55,7 +55,7 @@ abstract class TextLayout {
         return stackIn_6_0;
     }
 
-    final static int a(byte param0, int param1, int param2, int param3, int param4) {
+    final static int drawNumberDigits(byte param0, int param1, int param2, int param3, int param4) {
         Sprite var5 = SocketArchiveNetworkClient.field_q[param3 % 10];
         if (param0 >= -66) {
           return -2;
@@ -64,12 +64,12 @@ abstract class TextLayout {
         var5.drawAdditive(-var5.field_s + param2, param1, param4);
         param2 -= 3;
         if (param3 >= 10) {
-          param2 = TextLayout.$cfr$intArgs$a$8e2a9e3a0d15(-109, param1, param2, param3 / 10, param4);
+          param2 = TextLayout.drawNumberDigits(-109, param1, param2, param3 / 10, param4);
         }
         return param2;
     }
 
-    final int a(int param0, int param1, int param2, String param3) {
+    final int justificationSpacing(int param0, int param1, int param2, String param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -87,7 +87,7 @@ abstract class TextLayout {
         try {
           var5_int = 0;
           if (param1 != -61) {
-            this.a(75, -37, -61);
+            this.hitTestCharacter(75, -37, -61);
           }
           var6 = 0;
           var7 = param3.length();
@@ -126,7 +126,7 @@ abstract class TextLayout {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int lineIndexForCharacter(int param0, int param1) {
         int var3 = 0;
         TextLayoutLine var4 = null;
         int var5 = Kickabout.field_G;
@@ -140,7 +140,7 @@ abstract class TextLayout {
         return this.field_c.length;
     }
 
-    final int b(int param0, int param1) {
+    final int characterX(int param0, int param1) {
         int var4 = 0;
         TextLayoutLine var5 = null;
         int var6 = Kickabout.field_G;
@@ -156,7 +156,7 @@ abstract class TextLayout {
         return 0;
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int hitTestCharacter(int param0, int param1, int param2) {
         int var5 = 0;
         int var4;
         TextLayoutLine var6;
@@ -170,17 +170,17 @@ abstract class TextLayout {
             return -1;
           }
           if (this.field_c.length == 1) {
-            return this.field_c[0].a((byte) 101, param1);
+            return this.field_c[0].nearestCharacterIndex((byte) 101, param1);
           }
           var4 = 0;
           if (param2 != 29889) {
-            this.b(19, -114);
+            this.characterX(19, -114);
           }
           for (var5 = 0; this.field_c.length > var5; var5++) {
             var6 = this.field_c[var5];
             if (var6.field_g <= param0 &&
               var6.field_d >= param0) {
-              var7 = var6.a((byte) 101, param1);
+              var7 = var6.nearestCharacterIndex((byte) 101, param1);
               if (var7 == -1) {
                 return -1;
               }
@@ -199,7 +199,7 @@ abstract class TextLayout {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$8e2a9e3a0d15(int param0, int param1, int param2, int param3, int param4) {
+    final static int drawNumberDigits(int param0, int param1, int param2, int param3, int param4) {
         Sprite var5 = SocketArchiveNetworkClient.field_q[param3 % 10];
         if (param0 >= -66) {
           return -2;
@@ -208,7 +208,7 @@ abstract class TextLayout {
         var5.drawAdditive(-var5.field_s + param2, param1, param4);
         param2 -= 3;
         if (param3 >= 10) {
-          param2 = TextLayout.$cfr$intArgs$a$8e2a9e3a0d15(-109, param1, param2, param3 / 10, param4);
+          param2 = TextLayout.drawNumberDigits(-109, param1, param2, param3 / 10, param4);
         }
         return param2;
     }

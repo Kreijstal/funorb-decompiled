@@ -194,7 +194,7 @@ final class SplashScreen extends AppScreen {
             if (LineupView.field_u == param0) {
               var21 += 42;
             }
-            var33 = BitmapFont.a(var12.field_Lb.field_X, var32, var21);
+            var33 = BitmapFont.truncateWithEllipsis(var12.field_Lb.field_X, var32, var21);
             var20 = var33;
             stackIn_62_0 = (var33.equals(var12.field_Nb)) ? 0 : 1;
             var22 = stackIn_62_0;
@@ -302,7 +302,7 @@ final class SplashScreen extends AppScreen {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_zb.field_X.b(var23, -DiskCacheWorker.field_b + var12.field_q - DiskCacheWorker.field_b);
+              var24_intLifetime1 = var12.field_zb.field_X.wrappedLineCount(var23, -DiskCacheWorker.field_b + var12.field_q - DiskCacheWorker.field_b);
               var12.field_zb.field_E = var23;
               var12.field_zb.field_U = var12.field_Jb * 256 / PlayerInputFactory.field_c;
               var12.field_zb.setBounds(true, -(2 * DiskCacheWorker.field_b) + var12.field_q, DiskCacheWorker.field_b, var19, LineupPositionSupport.field_c * var24_intLifetime1);

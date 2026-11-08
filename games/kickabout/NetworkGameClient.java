@@ -411,18 +411,18 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (RowRangeRequest.field_h != 4) {
                 if (RowRangeRequest.field_h != 2) {
                   if (5 == RowRangeRequest.field_h) {
-                    this.a((byte) -66, "outofdate");
+                    this.showGameErrorPage((byte) -66, "outofdate");
                   } else {
-                    this.a((byte) -123, "js5connect");
+                    this.showGameErrorPage((byte) -123, "js5connect");
                   }
                 } else {
-                  this.a((byte) -101, "js5connect_full");
+                  this.showGameErrorPage((byte) -101, "js5connect_full");
                 }
               } else {
-                this.a((byte) -124, "js5io");
+                this.showGameErrorPage((byte) -124, "js5io");
               }
             } else {
-              this.a((byte) 27, "js5crc");
+              this.showGameErrorPage((byte) 27, "js5crc");
             }
           } else {
             if (10 <= RasterGlowSupport.field_c) {
@@ -561,7 +561,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (!param1 &&
           SquadGridWidget.field_Ib) {
           SumIntegersCommand.a(-113, RegistrationRequestState.field_d);
-          this.f((byte) -88);
+          this.replaceCanvas((byte) -88);
           CanvasInputBindings.attachInputHandlers(RegistrationRequestState.field_d, (byte) -64);
         }
         if (LookupRecordUpdate.field_h[8]) {
@@ -768,7 +768,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            TextHotspotRegion.field_h[var7 / 8] = (byte)PainterStyle.a((int) TextHotspotRegion.field_h[var7 / 8], 1 << var7 % 8);
+            TextHotspotRegion.field_h[var7 / 8] = (byte)PainterStyle.bitwiseOr((int) TextHotspotRegion.field_h[var7 / 8], 1 << var7 % 8);
           }
           if (decompiledFrameRemainder1) {
             stackIn_68_0 = (param3) ? -1 : 0;
@@ -788,7 +788,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                         TextHotspotRegion.field_h[var9] = (byte) 0;
                       }
                     } else {
-                      TextHotspotRegion.field_h[var7 / 8] = (byte)TrinketShopDialog.b((int) TextHotspotRegion.field_h[var7 / 8], 1 << TextLayoutLine.b(7, var7));
+                      TextHotspotRegion.field_h[var7 / 8] = (byte)TrinketShopDialog.b((int) TextHotspotRegion.field_h[var7 / 8], 1 << TextLayoutLine.bitwiseAnd(7, var7));
                     }
                   }
                 } else {
@@ -1006,10 +1006,10 @@ abstract class NetworkGameClient extends GameAppletShell {
                 if (param3) {
                   if (-1 == var9) {
                     for (var18 = var6Lifetime3; var6Lifetime3 - (-var30.length + 1) > var18; var18++) {
-                      SocialTabsPanel.field_d[var18 / 8] = (byte)TextLayoutLine.b((int) SocialTabsPanel.field_d[var18 / 8], ~(1 << TextLayoutLine.b(var18, 7)));
+                      SocialTabsPanel.field_d[var18 / 8] = (byte)TextLayoutLine.bitwiseAnd((int) SocialTabsPanel.field_d[var18 / 8], ~(1 << TextLayoutLine.bitwiseAnd(var18, 7)));
                     }
                   } else {
-                    SocialTabsPanel.field_d[(var9 + var6Lifetime3) / 8] = (byte)TrinketShopDialog.b((int) SocialTabsPanel.field_d[(var9 + var6Lifetime3) / 8], 1 << TextLayoutLine.b(var6Lifetime3 + var9, 7));
+                    SocialTabsPanel.field_d[(var9 + var6Lifetime3) / 8] = (byte)TrinketShopDialog.b((int) SocialTabsPanel.field_d[(var9 + var6Lifetime3) / 8], 1 << TextLayoutLine.bitwiseAnd(var6Lifetime3 + var9, 7));
                   }
                 } else {
                   if (var16Lifetime1 == 0 &&
@@ -1021,7 +1021,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               }
               if (param3 &&
                 var16Lifetime1 != 0) {
-                SocialTabsPanel.field_d[(var6Lifetime3 + var9) / 8] = (byte)TextLayoutLine.b((int) SocialTabsPanel.field_d[(var6Lifetime3 + var9) / 8], ~(1 << TextLayoutLine.b(7, var9 + var6Lifetime3)));
+                SocialTabsPanel.field_d[(var6Lifetime3 + var9) / 8] = (byte)TextLayoutLine.bitwiseAnd((int) SocialTabsPanel.field_d[(var6Lifetime3 + var9) / 8], ~(1 << TextLayoutLine.bitwiseAnd(7, var9 + var6Lifetime3)));
               }
               if (var9 >= 0 &&
                 var17.field_Q) {
@@ -1297,7 +1297,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   var9 = (String) null;
                   NamedValueEntry.a((String) null, (byte) -118);
                 } else {
-                  var7 = PainterStyle.a((byte) -122, var12.field_n, 0, var12.field_f);
+                  var7 = PainterStyle.decodeCp1252((byte) -122, var12.field_n, 0, var12.field_f);
                   NamedValueEntry.a(var7, (byte) -49);
                 }
                 WorldSpriteSequence.field_d = null;
@@ -1380,7 +1380,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             UnreadMessagesScreen.a((String) null, (Throwable) ((Object) var6_ref), 1);
-            this.a((byte) 87, "crash");
+            this.showGameErrorPage((byte) 87, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -1444,7 +1444,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           return var2;
         }
         if (!DisplayModeSupport.field_e) {
-          this.a((byte) 61, "reconnect");
+          this.showGameErrorPage((byte) 61, "reconnect");
         }
         AccountNameCharacterSupport.a((byte) -74);
         LoginResponseUiSupport.showLoginResponse(ListingRowCache.field_b, var2, 71);

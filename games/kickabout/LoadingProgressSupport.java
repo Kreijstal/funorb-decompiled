@@ -94,8 +94,8 @@ final class LoadingProgressSupport {
           var5 = (float)param2 / (float)param1;
           var6 = (int)(var5 * 100.0f);
           int var8 = -80 / ((param0 - 12) / 58);
-          var7 = AnimationClip.a((byte) -100, field_c);
-          var9 = AnimationClip.a((byte) -99, field_c + 1);
+          var7 = AnimationClip.getPreparationProgress((byte) -100, field_c);
+          var9 = AnimationClip.getPreparationProgress((byte) -99, field_c + 1);
           var10 = -var7 + var9;
           var11 = var5 * (float)var10 + (float)var7;
           var13 = LeagueWinnerDialog.field_K[field_c];

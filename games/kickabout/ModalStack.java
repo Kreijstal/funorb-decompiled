@@ -197,7 +197,7 @@ final class ModalStack extends SingleChildContainer {
                 }
                 stackIn_36_0 = var7.field_Bb;
                 if (var14 > 0) {
-                  stackIn_37_1 = BitmapFont.a(var7.field_Bb.field_X, var7.name, var14);
+                  stackIn_37_1 = BitmapFont.truncateWithEllipsis(var7.field_Bb.field_X, var7.name, var14);
                 } else {
                   stackIn_37_1 = var7.name;
                 }
@@ -491,7 +491,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isAsciiLetter(byte param0, char param1) {
         RuntimeException var2 = null;
         boolean stackIn_16_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -520,7 +520,7 @@ final class ModalStack extends SingleChildContainer {
         var4 = Kickabout.field_G;
         try {
           if (param0 != 2) {
-            ModalStack.a((byte) 111, '\007');
+            ModalStack.isAsciiLetter((byte) 111, '\007');
           }
           var2 = new IntrusiveDequeCursor(this.field_A);
           var3 = (ModalPanel) (var2.a((byte) 107));

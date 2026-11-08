@@ -111,41 +111,41 @@ final class SquadPickerDialog extends MessageDialog {
             if (!GameLoopApplet.field_E.a((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
               if (AuctionLogEntry.e(15137) &&
                 !ScrollPane.h((byte) 5)) {
-                IsSixCommand.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.drawParagraph("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
               if (this.field_H.field_Fb != -1 &&
                 PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.drawParagraph(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
-              IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
-            IsSixCommand.field_C.d(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
+            IsSixCommand.field_C.drawCentered(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
           }
           if (!AuctionLogEntry.e(15137)) {
             if (this.field_H.field_Fb == -1) {
-              IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             } else {
               if (PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+                IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
-                IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.drawParagraph(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
               }
             }
             return;
           }
           if (!ScrollPane.h((byte) 5)) {
-            IsSixCommand.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.drawParagraph("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
             return;
           }
           if (this.field_H.field_Fb != -1 &&
             PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-            IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.drawParagraph(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
             return;
           }
-          IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+          IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
           return;
         }
         field_J = -68;
@@ -160,50 +160,50 @@ final class SquadPickerDialog extends MessageDialog {
             if (!AuctionLogEntry.e(15137)) {
               if (this.field_H.field_Fb != -1 &&
                 PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.drawParagraph(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
-              IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
             if (!ScrollPane.h((byte) 5)) {
-              IsSixCommand.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+              IsSixCommand.field_C.drawParagraph("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
             } else {
               if (this.field_H.field_Fb == -1) {
-                IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+                IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
                 if (PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                  IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+                  IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
                 } else {
-                  IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                  IsSixCommand.field_C.drawParagraph(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 }
               }
             }
             return;
           }
-          IsSixCommand.field_C.d(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
+          IsSixCommand.field_C.drawCentered(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
         }
         if (!AuctionLogEntry.e(15137)) {
           if (this.field_H.field_Fb == -1) {
-            IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+            IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
           } else {
             if (PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-              IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+              IsSixCommand.field_C.drawParagraph(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
             } else {
-              IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             }
           }
         } else {
           if (!ScrollPane.h((byte) 5)) {
-            IsSixCommand.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.drawParagraph("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
           } else {
             if (this.field_H.field_Fb == -1) {
-              IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             } else {
               if (PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+                IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
-                IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                IsSixCommand.field_C.drawParagraph(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
               }
             }
           }

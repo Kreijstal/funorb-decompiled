@@ -78,7 +78,7 @@ final class TeamSelectionView extends MatchPhaseView {
         for (var5 = 0; var5 < this.field_a.playerCount; var5++) {
           var6 = this.field_k[var5];
           if (!this.field_a.participantStatus[var5].isActive(3511)) {
-            var7 = ByteArrayPool.field_d.a(var6.field_E);
+            var7 = ByteArrayPool.field_d.stringWidth(var6.field_E);
             var8 = (var6.field_q - var7 >> 1) + var6.field_F;
             var9 = 20;
             SoftwareRasterizer.drawLine(var8, 6 + var4Lifetime1, var7 + var8, var4Lifetime1 + var9 - 2, 13382451);
@@ -97,7 +97,7 @@ final class TeamSelectionView extends MatchPhaseView {
           }
         }
         if (this.field_a.field_f) {
-          ByteArrayPool.field_d.a("FB", 5, 17, 16777215, -1);
+          ByteArrayPool.field_d.drawText("FB", 5, 17, 16777215, -1);
         }
     }
 

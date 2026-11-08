@@ -150,10 +150,10 @@ class ButtonMenuScreen extends AppScreen {
           var5_ref_ut.d(-var5_ref_ut.field_o + FormationAgent.field_f, var3Lifetime1);
           var6Lifetime1Lifetime1 = var3Lifetime1 - (-var5_ref_ut.field_v + 18);
           if (null != this.field_w) {
-            ByteArrayPool.field_d.a(this.field_w, 10, var6Lifetime1Lifetime1, 16777215, -1);
+            ByteArrayPool.field_d.drawText(this.field_w, 10, var6Lifetime1Lifetime1, 16777215, -1);
           }
           if (null != this.field_s) {
-            ByteArrayPool.field_d.c(this.field_s, this.field_p, var6Lifetime1Lifetime1, 16777215, -1);
+            ByteArrayPool.field_d.drawRightAligned(this.field_s, this.field_p, var6Lifetime1Lifetime1, 16777215, -1);
           }
         }
         if (this.field_m) {

@@ -62,7 +62,7 @@ final class HuffmanTextSupport {
             }
             var4 = new byte[var3_int];
             param2.field_n = param2.field_n + Bzip2State.field_I.decompress(param2.field_n, var4, var3_int, param2.field_f, 0, false);
-            var5 = PainterStyle.a((byte) -121, var3_int, 0, var4);
+            var5 = PainterStyle.decodeCp1252((byte) -121, var3_int, 0, var4);
             stackIn_6_0 = var5;
             return stackIn_6_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

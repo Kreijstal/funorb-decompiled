@@ -308,19 +308,19 @@ class TextHotspotWidget extends TextButton {
           var6 = this.field_q.substring(9 + var5, var7);
           var7Lifetime1 = Integer.parseInt(var6);
           var2 = this.field_q.indexOf("</hotspot>", var5);
-          var8 = var4.a(param0 + 41, var5);
-          var9 = var4.a(0, var2);
+          var8 = var4.lineIndexForCharacter(param0 + 41, var5);
+          var9 = var4.lineIndexForCharacter(0, var2);
           var10 = null;
           for (var11 = var8; var11 <= var9; var11++) {
             var12 = var4.field_c[var11];
             if (var11 == var8) {
-              stackIn_9_0 = var4.b(0, var5);
+              stackIn_9_0 = var4.characterX(0, var5);
             } else {
               stackIn_9_0 = var12.field_b[0];
             }
             var13 = stackIn_9_0;
             if (var11 == var9) {
-              stackIn_14_0 = var4.b(param0 + 41, var2);
+              stackIn_14_0 = var4.characterX(param0 + 41, var2);
             } else {
               if (var12 != null) {
                 stackIn_14_0 = var12.field_b[-1 + var12.field_b.length];

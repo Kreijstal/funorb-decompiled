@@ -118,7 +118,7 @@ final class ClientUiUpdateSupport {
           stackIn_22_2 = (param0) && (!param1) && (TextWidgetPainter.field_f);
           ((UiLayoutNode) (Object) stackIn_21_0).updateInput(stackIn_21_1, stackIn_22_2);
         }
-        SocialUiState.field_d.tabs.h((byte) 47);
+        SocialUiState.field_d.tabs.processTabClicks((byte) 47);
         if (MouseWheelInput.field_a.field_sb != 0) {
           PlayerInputFactory.field_f = true;
         }

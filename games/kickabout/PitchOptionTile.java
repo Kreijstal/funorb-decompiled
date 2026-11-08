@@ -195,9 +195,9 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_77_3 = -2 + this.field_F - var6;
                 stackIn_78_4 = (var2 != 0) ? false : true;
                 DraggableWidget.a(stackIn_77_0, stackIn_77_1, stackIn_77_2, stackIn_77_3, stackIn_78_4, var3 != 0, 4);
-                ConsoleTokenCursor.field_d.d(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
+                ConsoleTokenCursor.field_d.drawCentered(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
                 if (var2 == 0) {
-                  IsSixCommand.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
+                  IsSixCommand.field_C.drawCentered(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
                 }
                 if (var4 != 0) {
                   LoginResponseUiSupport.field_h.c(this.field_F + (-LoginResponseUiSupport.field_h.field_o + this.field_q >> 1), this.field_T + (-LoginResponseUiSupport.field_h.field_v + this.field_mb >> 1) + 10);
@@ -218,9 +218,9 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               stackIn_90_3 = -2 + this.field_F - var6;
               stackIn_91_4 = (var2 != 0) ? false : true;
               DraggableWidget.a(stackIn_90_0, stackIn_90_1, stackIn_90_2, stackIn_90_3, stackIn_91_4, var3 != 0, 4);
-              ConsoleTokenCursor.field_d.d(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
+              ConsoleTokenCursor.field_d.drawCentered(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
               if (var2 == 0) {
-                IsSixCommand.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
+                IsSixCommand.field_C.drawCentered(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
               }
               if (var4 != 0) {
                 LoginResponseUiSupport.field_h.c(this.field_F + (-LoginResponseUiSupport.field_h.field_o + this.field_q >> 1), this.field_T + (-LoginResponseUiSupport.field_h.field_v + this.field_mb >> 1) + 10);
@@ -245,9 +245,9 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
             }
           }
         }
-        ConsoleTokenCursor.field_d.d(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
+        ConsoleTokenCursor.field_d.drawCentered(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
         if (var2 == 0) {
-          IsSixCommand.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
+          IsSixCommand.field_C.drawCentered(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
         }
         if (var4 != 0) {
           LoginResponseUiSupport.field_h.c(this.field_F + (-LoginResponseUiSupport.field_h.field_o + this.field_q >> 1), this.field_T + (-LoginResponseUiSupport.field_h.field_v + this.field_mb >> 1) + 10);
@@ -559,7 +559,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_49_3 = var5;
                 stackIn_50_4 = (this.i(-29050)) ? false : true;
                 DraggableWidget.a(stackIn_49_0, stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_50_4, false, param1 ^ 19);
-                ConsoleTokenCursor.field_d.d(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
+                ConsoleTokenCursor.field_d.drawCentered(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
                 return;
               }
               var5 += 4;
@@ -620,7 +620,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
             }
           }
         }
-        ConsoleTokenCursor.field_d.d(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
+        ConsoleTokenCursor.field_d.drawCentered(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
     }
 
     final static boolean updateOutfielderAI(CommonGame param0, byte param1, int param2, int param3) {

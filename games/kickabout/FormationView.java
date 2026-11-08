@@ -77,13 +77,13 @@ final class FormationView extends MatchPhaseView {
         var6 = stackIn_22_0 + stackIn_23_1;
         SoftwareRasterizer.drawRoundedRectangle(390, var5, 205, var6, 10, 983040);
         SoftwareRasterizer.fillRoundedRectangleBlended(390, var5, 205, var6, 10, 65793, 140);
-        IsSixCommand.field_C.a(var2_ref_String, 400, var5 + 8, 185, var6, 16777215, -1, param0, 0, 16);
+        IsSixCommand.field_C.drawParagraph(var2_ref_String, 400, var5 + 8, 185, var6, 16777215, -1, param0, 0, 16);
         this.positionButtons(param0 - 95);
         this.drawCountdown(param0 ^ -2352, this.field_a.phaseTime);
         var2 = this.field_a.field_C.formationChoice[this.field_h];
         SoftwareRasterizer.fillRoundedRectangleBlended(220, 332, 150, 26, 8, 65793, 128);
         var3 = AuctionsHelpScreen.field_F[var2].toLowerCase();
-        ByteArrayPool.field_d.d(var3, 293, 351, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(var3, 293, 351, 16777215, -1);
         TextLayoutLine.field_f.c(220, 100);
         for (var4Lifetime2 = 0; 4 > var4Lifetime2; var4Lifetime2++) {
           var5Lifetime1 = -(RowRangeRequest.field_f.field_o >> 1) + 147 * AccountNameCharacterSupport.field_b[var2][var4Lifetime2] / 896 + 220;
@@ -105,7 +105,7 @@ final class FormationView extends MatchPhaseView {
         this.a(0, var4Lifetime3, (byte) -107, 30);
         this.a(1, var5Lifetime2, (byte) -78, 30);
         if (this.field_a.field_f) {
-          ByteArrayPool.field_d.a("FB", 5, 17, 16777215, -1);
+          ByteArrayPool.field_d.drawText("FB", 5, 17, 16777215, -1);
         }
     }
 
@@ -115,8 +115,8 @@ final class FormationView extends MatchPhaseView {
         int var5 = 0;
         try {
           this.field_c[0] = new MenuButton(-4, 7126504, 41);
-          this.field_k = SoftwareDrawingSupport.a(false);
-          this.field_p = SoftwareDrawingSupport.a(true);
+          this.field_k = SoftwareDrawingSupport.createDefaultButtonNode(false);
+          this.field_p = SoftwareDrawingSupport.createDefaultButtonNode(true);
           var4_int = this.field_k.field_N.field_o;
           var5 = this.field_k.field_N.field_v;
           this.field_k.field_s = -3 - var4_int + (this.buttonX(127, 0) - (this.field_c[0].width >> 1));

@@ -41,7 +41,7 @@ final class ThumbnailStateFactory {
             }
             stackIn_12_0 = (var6 != 0) ? 2 : 0;
             var7 = stackIn_12_0;
-            ByteArrayPool.field_d.d(param1.toLowerCase(), var7 + (SoftwareRasterizer.field_g >> 1), -13 + (SoftwareRasterizer.field_f + var7), 0, -1);
+            ByteArrayPool.field_d.drawCentered(param1.toLowerCase(), var7 + (SoftwareRasterizer.field_g >> 1), -13 + (SoftwareRasterizer.field_f + var7), 0, -1);
             TeamManagementScreen.e(123);
             SpriteBackgroundSupport.fillTransparentBackground(var9[var5], (byte) -51);
           }

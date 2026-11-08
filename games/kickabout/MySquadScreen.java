@@ -183,17 +183,17 @@ final class MySquadScreen extends TeamManagementScreen {
         var3 = (UiLayoutNode) (this.field_Y.field_jb.g(24009));
         while (var3 != null) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3.field_F, var3.field_T, var3.field_q, var3.field_mb, 10, 65793, 96);
-          ByteArrayPool.field_d.a(var3.field_E, var3.field_F + 10, var3.field_T + 20, 16777215, -1);
+          ByteArrayPool.field_d.drawText(var3.field_E, var3.field_F + 10, var3.field_T + 20, 16777215, -1);
           var3 = (UiLayoutNode) (this.field_Y.field_jb.c(33));
         }
         boolean decompiledFrameRemainder0 = true;
         SoftwareRasterizer.darkenRectangle(this.field_V.field_F, this.field_V.field_T, this.field_V.field_q, this.field_V.field_mb);
-        ByteArrayPool.field_d.a(ArchivePreloadEntry.field_b, 14 + this.field_V.field_F, 25 + this.field_V.field_T, 16777215, -1);
+        ByteArrayPool.field_d.drawText(ArchivePreloadEntry.field_b, 14 + this.field_V.field_F, 25 + this.field_V.field_T, 16777215, -1);
         this.field_L.k((byte) -109);
         var4 = this.field_L.getSelectedSlot((byte) 21);
         var5 = IsSixCommand.field_C;
         if (var4 == null) {
-          var5.a(ContextMenu.field_Db, 20 + this.field_I.field_F, this.field_I.field_T + 10, this.field_I.field_q - 40, -10 + this.field_I.field_mb, 14540253, -1, 1, 1, 16);
+          var5.drawParagraph(ContextMenu.field_Db, 20 + this.field_I.field_F, this.field_I.field_T + 10, this.field_I.field_q - 40, -10 + this.field_I.field_mb, 14540253, -1, 1, 1, 16);
         } else {
           var26 = this.field_L.getSelectedSlot((byte) 21).field_Eb;
           stackIn_6_0 = var26;
@@ -213,27 +213,27 @@ final class MySquadScreen extends TeamManagementScreen {
           var10 = 60 + this.field_I.field_F;
           var11 = 44 + this.field_I.field_T;
           var12 = 10;
-          var5.c(field_O, var10, var11, 268435455, -1);
-          var5.a(var26.getDisplayName(100), var10 + var12, var11, 268435455, -1);
+          var5.drawRightAligned(field_O, var10, var11, 268435455, -1);
+          var5.drawText(var26.getDisplayName(100), var10 + var12, var11, 268435455, -1);
           var11 += 22;
-          var5.c(PromotionDialog.field_H, var10, var11, 268435455, -1);
-          var5.a(RegistrationUiSupport.field_e[var26.archetype], var10 + var12, var11, 268435455, -1);
+          var5.drawRightAligned(PromotionDialog.field_H, var10, var11, 268435455, -1);
+          var5.drawText(RegistrationUiSupport.field_e[var26.archetype], var10 + var12, var11, 268435455, -1);
           var11Lifetime1 = -10 + (this.field_I.field_T + this.field_I.field_mb);
           var13 = this.field_W.field_F + (-100 + this.field_W.field_q >> 1);
           var14 = this.field_W.field_T + 32;
-          SoftwareDrawingSupport.a(var13, var14, var26.power, 0, true, var26.trinketPowerBonus(true, IntValueNode.b(param0 - 73)));
+          SoftwareDrawingSupport.drawStatBar(var13, var14, var26.power, 0, true, var26.trinketPowerBonus(true, IntValueNode.b(param0 - 73)));
           var14 += 18;
-          SoftwareDrawingSupport.a(var13, var14, var26.speed, 1, true, var26.trinketSpeedBonus(param0 + 5210, IntValueNode.b(-89)));
+          SoftwareDrawingSupport.drawStatBar(var13, var14, var26.speed, 1, true, var26.trinketSpeedBonus(param0 + 5210, IntValueNode.b(-89)));
           var14 += 18;
-          SoftwareDrawingSupport.a(var13, var14, var26.tackle, 2, true, var26.trinketTackleBonus((byte) 108, IntValueNode.b(param0 ^ 95)));
+          SoftwareDrawingSupport.drawStatBar(var13, var14, var26.tackle, 2, true, var26.trinketTackleBonus((byte) 108, IntValueNode.b(param0 ^ 95)));
           if (var26.power == 100 &&
             100 == var26.tackle &&
             var26.speed == 100) {
-            var5.a(AccountRegistrationPanel.field_M, this.field_P.field_F + 10, this.field_P.field_T + 31, -20 + this.field_P.field_q, -60 + this.field_P.field_mb, 11184810, -1, 0, 1, 16);
+            var5.drawParagraph(AccountRegistrationPanel.field_M, this.field_P.field_F + 10, this.field_P.field_T + 31, -20 + this.field_P.field_q, -60 + this.field_P.field_mb, 11184810, -1, 0, 1, 16);
           } else {
             var15_int = this.field_P.field_F + (-100 + this.field_P.field_q >> 1);
             var16 = 36 + this.field_P.field_T;
-            SoftwareDrawingSupport.a(var15_int, var16, var26.experience, 3, true, 0);
+            SoftwareDrawingSupport.drawStatBar(var15_int, var16, var26.experience, 3, true, 0);
             if (!this.field_Q.isLinked((byte) -113)) {
               if (!this.field_L.getSelectedSlot((byte) 21).field_Gb) {
                 stackIn_22_0 = SessionUrlSupport.field_a;
@@ -241,20 +241,20 @@ final class MySquadScreen extends TeamManagementScreen {
                 stackIn_22_0 = TournamentChampionDialog.field_H;
               }
               var17 = stackIn_22_0;
-              var5.a(var17, this.field_P.field_F + 10, 51 + this.field_P.field_T, -20 + this.field_P.field_q, this.field_P.field_mb - 60, 11184810, -1, 0, 1, 16);
+              var5.drawParagraph(var17, this.field_P.field_F + 10, 51 + this.field_P.field_T, -20 + this.field_P.field_q, this.field_P.field_mb - 60, 11184810, -1, 0, 1, 16);
             }
           }
           var14 += 18;
           if (var26.trinketIds.length == 0 &&
             !TextFieldValidator.f(param0 + 4)) {
-            var5.a(MenuButton.field_o, this.field_X.field_F, this.field_X.field_T, this.field_X.field_q, this.field_X.field_mb, 16777215, -1, 1, 1, 0);
+            var5.drawParagraph(MenuButton.field_o, this.field_X.field_F, this.field_X.field_T, this.field_X.field_q, this.field_X.field_mb, 16777215, -1, 1, 1, 0);
           } else {
             var23 = this.field_T;
             var15 = var23;
             for (var16Lifetime1 = 0; var23.length > var16Lifetime1; var16Lifetime1++) {
               var24 = var23[var16Lifetime1];
               var27 = var24;
-              ConsoleTokenCursor.field_d.d(ValidationState.field_b[var24.field_Bb.field_h], var27.field_F + (var27.field_q >> 1), var27.field_mb + var27.field_T + 14, 16777215, -1);
+              ConsoleTokenCursor.field_d.drawCentered(ValidationState.field_b[var24.field_Bb.field_h], var27.field_F + (var27.field_q >> 1), var27.field_mb + var27.field_T + 14, 16777215, -1);
             }
           }
           var28 = MessageDialog.field_A[RegistrationRequestState.field_h.field_q[this.field_L.field_Fb]];
@@ -289,8 +289,8 @@ final class MySquadScreen extends TeamManagementScreen {
                       }
                     }
                   }
-                  var5.c(WaitForPlayersView.field_j[var17_int], -7 + var18, var19, var21, -1);
-                  var5.a(var20, var18, var19, 16777215, -1);
+                  var5.drawRightAligned(WaitForPlayersView.field_j[var17_int], -7 + var18, var19, var21, -1);
+                  var5.drawText(var20, var18, var19, 16777215, -1);
                 }
                 var17Lifetime1 = SquadSlotWidget.field_Bb;
                 var18Lifetime1 = 65280;
@@ -298,15 +298,15 @@ final class MySquadScreen extends TeamManagementScreen {
                   var18Lifetime1 = 16711680;
                   var17Lifetime1 = ClientException.field_b;
                 }
-                var5.a(var17Lifetime1, 10 + this.field_G.field_F, 75 + this.field_G.field_T, -20 + this.field_G.field_q, 50, var18Lifetime1, -1, 1, 1, 0);
+                var5.drawParagraph(var17Lifetime1, 10 + this.field_G.field_F, 75 + this.field_G.field_T, -20 + this.field_G.field_q, 50, var18Lifetime1, -1, 1, 1, 0);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              var5.a(VerticalScrollbar.field_Eb, 10 + this.field_G.field_F, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
+              var5.drawParagraph(VerticalScrollbar.field_Eb, 10 + this.field_G.field_F, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
             }
           } else {
-            var5.a(BufferedCacheFile.field_d, this.field_G.field_F + 10, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
+            var5.drawParagraph(BufferedCacheFile.field_d, this.field_G.field_F + 10, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
           }
         }
         this.field_R.draw(param0 + 129, false);
@@ -318,11 +318,11 @@ final class MySquadScreen extends TeamManagementScreen {
               SoftwareDrawingSupport.darkenRectangle(this.field_X.field_F, this.field_X.field_T, this.field_X.field_q, this.field_X.field_mb);
             }
             var6 = AuctionsScreen.field_M;
-            var5.c(var6, this.field_X.field_q + this.field_X.field_F - 20, 22 + this.field_X.field_T, 16777215, -1);
+            var5.drawRightAligned(var6, this.field_X.field_q + this.field_X.field_F - 20, 22 + this.field_X.field_T, 16777215, -1);
           } else {
             if (var4.field_Gb) {
               var6 = OffscreenPlayerArrow.field_e;
-              var5.d(var6, (this.field_X.field_q >> 1) + this.field_X.field_F, 109 + this.field_X.field_T, 11184810, -1);
+              var5.drawCentered(var6, (this.field_X.field_q >> 1) + this.field_X.field_F, 109 + this.field_X.field_T, 11184810, -1);
             }
           }
         }
@@ -371,7 +371,7 @@ final class MySquadScreen extends TeamManagementScreen {
               stackIn_15_0 = DateInputWidget.field_E;
             }
             var10 = stackIn_15_0;
-            this.field_K[var7] = SoftwareDrawingSupport.a(var10, 7126504);
+            this.field_K[var7] = SoftwareDrawingSupport.createTextButton(var10, 7126504);
             var11 = var6 + var7 * 150;
             var9.field_s = var11 - (var9.field_q >> 1);
             var9.field_J = 36;
@@ -411,7 +411,7 @@ final class MySquadScreen extends TeamManagementScreen {
         this.field_P.field_E = ConsoleParseException.field_d.toLowerCase();
         this.field_G.field_E = GradientRasterSupport.field_d.toLowerCase();
         this.field_X.field_E = BlobSubmission.field_k.toLowerCase();
-        this.field_Q = SoftwareDrawingSupport.a(NodeHashTableIterator.field_c, 7126504);
+        this.field_Q = SoftwareDrawingSupport.createTextButton(NodeHashTableIterator.field_c, 7126504);
         this.field_K = new UiLayoutNode[]{};
         this.field_T = new TrinketSlot[]{};
         this.field_Q.field_s = -this.field_Q.field_q + this.field_P.field_q >> 1;

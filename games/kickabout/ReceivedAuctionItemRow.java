@@ -175,20 +175,20 @@ final class ReceivedAuctionItemRow extends ListRow {
             } else {
               ReceivedAuctionItemRow.a(1 + var4 + 19, -97, this.field_T + 4 + 23);
             }
-            this.field_X.a(var12.getDisplayName(100), 45 + var4, (this.field_mb >> 1) + this.field_T + 4, this.field_y, -1);
+            this.field_X.drawText(var12.getDisplayName(100), 45 + var4, (this.field_mb >> 1) + this.field_T + 4, this.field_y, -1);
             var4 = var4 + this.field_Db[0];
             if (GameLoopApplet.field_E.hasBidOrBuyEntry(this.field_Hb.field_a, (byte) -79)) {
-              ConsoleTokenCursor.field_d.c(IntrusiveDeque.field_b.toUpperCase(), var4 - 10, -7 + (this.field_mb + this.field_T), 6745702, -1);
+              ConsoleTokenCursor.field_d.drawRightAligned(IntrusiveDeque.field_b.toUpperCase(), var4 - 10, -7 + (this.field_mb + this.field_T), 6745702, -1);
             } else {
               if (!GameLoopApplet.field_E.hasOwnEntry(1, this.field_Hb.field_a)) {
                 if (GameLoopApplet.field_E.hasOutbidEntry(30524, this.field_Hb.field_a)) {
-                  ConsoleTokenCursor.field_d.c(NumericDateInputWidget.field_O.toUpperCase(), -10 + var4, -7 + this.field_mb + this.field_T, 16777028, -1);
+                  ConsoleTokenCursor.field_d.drawRightAligned(NumericDateInputWidget.field_O.toUpperCase(), -10 + var4, -7 + this.field_mb + this.field_T, 16777028, -1);
                 }
               } else {
-                ConsoleTokenCursor.field_d.c(CalendarSupport.field_g.toUpperCase(), -10 + var4, this.field_T - (-this.field_mb + 7), 16737894, -1);
+                ConsoleTokenCursor.field_d.drawRightAligned(CalendarSupport.field_g.toUpperCase(), -10 + var4, this.field_T - (-this.field_mb + 7), 16737894, -1);
               }
             }
-            this.field_X.a(RegistrationUiSupport.field_e[var12.archetype], 12 + var4, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
+            this.field_X.drawText(RegistrationUiSupport.field_e[var12.archetype], 12 + var4, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
             var4 = var4 + this.field_Db[1];
             var6 = 7 + var4;
             for (var7 = 0; 3 > var7; var7++) {
@@ -218,21 +218,21 @@ final class ReceivedAuctionItemRow extends ListRow {
               stackIn_44_2 = var9_int;
               stackIn_44_3 = var7;
               stackIn_46_4 = (this.field_gb) || (param1 == 2);
-              SoftwareDrawingSupport.a(stackIn_44_0, stackIn_44_1, stackIn_44_2, stackIn_44_3, stackIn_46_4, var10);
+              SoftwareDrawingSupport.drawStatBar(stackIn_44_0, stackIn_44_1, stackIn_44_2, stackIn_44_3, stackIn_46_4, var10);
             }
             var4 = var4 + this.field_Db[2];
             if (this.field_Hb.playerStats.trinketIds.length == 0) {
-              IsSixCommand.field_C.d(DiskCacheRequest.field_w, var4 + (this.field_Db[3] >> 1), 4 + (this.field_T + (this.field_mb >> 1)), 16777215, -1);
+              IsSixCommand.field_C.drawCentered(DiskCacheRequest.field_w, var4 + (this.field_Db[3] >> 1), 4 + (this.field_T + (this.field_mb >> 1)), 16777215, -1);
             }
             var4 = var4 + this.field_Db[3];
             var7Lifetime1 = this.field_y;
             if (this.field_Hb.field_j) {
-              this.field_X.d(BeveledTextPainter.field_s, (this.field_Db[4] >> 1) + var4, 4 + this.field_T + (this.field_mb >> 1), 16711680, -1);
+              this.field_X.drawCentered(BeveledTextPainter.field_s, (this.field_Db[4] >> 1) + var4, 4 + this.field_T + (this.field_mb >> 1), 16711680, -1);
             } else {
-              this.field_X.d(MatchHudRoutingSupport.field_c[this.field_Hb.field_s], (this.field_Db[4] >> 1) + var4, 4 + ((this.field_mb >> 1) + this.field_T), var7Lifetime1, -1);
+              this.field_X.drawCentered(MatchHudRoutingSupport.field_c[this.field_Hb.field_s], (this.field_Db[4] >> 1) + var4, 4 + ((this.field_mb >> 1) + this.field_T), var7Lifetime1, -1);
             }
             var4 = var4 + this.field_Db[4];
-            this.field_X.d(LocalizedTextLoader.formatCurrencyAmount(this.field_Hb.field_i, 26300), (this.field_Db[5] >> 1) + var4, -7 + ((this.field_mb >> 1) + this.field_T), this.field_y, -1);
+            this.field_X.drawCentered(LocalizedTextLoader.formatCurrencyAmount(this.field_Hb.field_i, 26300), (this.field_Db[5] >> 1) + var4, -7 + ((this.field_mb >> 1) + this.field_T), this.field_y, -1);
             var4 = var4 + this.field_Db[5];
             var8Lifetime1 = -1;
             if (this.field_Hb.field_r) {
@@ -244,7 +244,7 @@ final class ReceivedAuctionItemRow extends ListRow {
               stackIn_58_0 = ListRow.field_zb;
             }
             var9 = stackIn_58_0;
-            this.field_X.d(var9, (this.field_Db[5] >> 1) + var4, -7 + (this.field_mb >> 1) + this.field_T, this.field_y, -1);
+            this.field_X.drawCentered(var9, (this.field_Db[5] >> 1) + var4, -7 + (this.field_mb >> 1) + this.field_T, this.field_y, -1);
             var4 = var4 + this.field_Db[6];
             return;
           }
@@ -252,7 +252,7 @@ final class ReceivedAuctionItemRow extends ListRow {
             if (this.field_Ib != null) {
               SoftwareRasterizer.drawRoundedRectangle(this.field_F + (-320 + this.field_q >> 1), 23 + this.field_T, 320, 27, 8, 65793);
               SoftwareRasterizer.fillRoundedRectangleBlended((-320 + this.field_q >> 1) + this.field_F, this.field_T + 23, 320, 27, 8, 65793, 160);
-              IsSixCommand.field_C.d(this.field_Ib, this.field_F + (this.field_q >> 1), this.field_T + 42, 16777215, -1);
+              IsSixCommand.field_C.drawCentered(this.field_Ib, this.field_F + (this.field_q >> 1), this.field_T + 42, 16777215, -1);
             }
           } else {
             ReceivedAuctionItemRow.a(this.field_Db[1] + (this.field_Db[0] + this.field_F + (this.field_Db[2] - 30)), -96, this.field_T + 23);

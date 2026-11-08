@@ -604,14 +604,14 @@ class TextInputWidget extends TextButton {
         var10 = (WidgetTextLayout) ((Object) this.field_r);
         var3 = 21 / ((param0 - 45) / 37);
         var4 = var10.ensureTextLayout(5035, (UiWidget) (this));
-        var5 = var4.a((byte) -25);
+        var5 = var4.width((byte) -25);
         var6 = var10.contentWidth((byte) -124, (UiWidget) (this));
         var7 = var10.lineHeight((byte) -76) >> 1;
         if (var5 < var6 - var7) {
           this.field_s = 0;
           this.field_o = 0;
         } else {
-          var8 = this.field_s + var4.b(0, this.field_I);
+          var8 = this.field_s + var4.characterX(0, this.field_I);
           if (-var7 + var6 >= var8) {
             if (var8 < var7) {
               this.field_s = var7 + (-var8 + this.field_s);

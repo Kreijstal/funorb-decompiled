@@ -96,7 +96,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         super.drawLayer(param0, (int) (char)param1, param2, param3);
-        this.field_B.a(this.field_D, 14 + (param2 + this.field_t), 10 + (this.field_g + param3), -28 + this.field_n, this.field_i, 16777215, -1, 0, 0, this.field_B.field_G);
+        this.field_B.drawParagraph(this.field_D, 14 + (param2 + this.field_t), 10 + (this.field_g + param3), -28 + this.field_n, this.field_i, 16777215, -1, 0, 0, this.field_B.field_G);
     }
 
     final TextButton a(String param0, UiListener param1, byte param2) {

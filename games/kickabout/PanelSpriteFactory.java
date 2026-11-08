@@ -52,7 +52,7 @@ final class PanelSpriteFactory {
             var24.e();
             SoftwareRasterizer.fillRect(0, 0, 16, 16, param2);
           }
-          SoftwareRasterizer.a(var18, var7, var8);
+          SoftwareRasterizer.setRasterBuffer(var18, var7, var8);
           return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var22, var23, var22};
         }
         field_a = (String[]) null;
@@ -69,7 +69,7 @@ final class PanelSpriteFactory {
           var21.e();
           SoftwareRasterizer.fillRect(0, 0, 16, 16, param2);
         }
-        SoftwareRasterizer.a(var18, var7, var8);
+        SoftwareRasterizer.setRasterBuffer(var18, var7, var8);
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var19, var20, var19};
     }
 

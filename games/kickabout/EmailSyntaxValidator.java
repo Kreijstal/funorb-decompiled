@@ -96,7 +96,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (var5 < var2.field_y.length) {
-          var2.field_y[var5] = PainterStyle.a(var2.field_y[var5] << 24, 16777215);
+          var2.field_y[var5] = PainterStyle.bitwiseOr(var2.field_y[var5] << 24, 16777215);
           var5++;
         }
         return var2;

@@ -77,9 +77,9 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
         String[] var3 = var7;
         String var4 = var7[this.pageIndex].toUpperCase();
         SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 40, 76, 560, 36, 10, 65793, 140);
-        ByteArrayPool.field_d.d(var4, this.slideOffsetX + 320, 101, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(var4, this.slideOffsetX + 320, 101, 16777215, -1);
         String var5 = this.pageIndex + 1 + " / " + var7.length;
-        ByteArrayPool.field_d.c(var5, 580 + this.slideOffsetX, 101, 16777215, -1);
+        ByteArrayPool.field_d.drawRightAligned(var5, 580 + this.slideOffsetX, 101, 16777215, -1);
     }
 
     final static StringBuilder a(int param0, char param1, int param2, StringBuilder param3) {

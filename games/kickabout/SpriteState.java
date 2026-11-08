@@ -368,7 +368,7 @@ abstract class SpriteState extends DualLinkNode {
           stackIn_166_1 = 0;
           stackIn_167_2 = (param0) && (!param4) && (TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_166_0).updateInput(stackIn_166_1, stackIn_167_2);
-          HighScoreQuery.field_l.tabs.h((byte) 71);
+          HighScoreQuery.field_l.tabs.processTabClicks((byte) 71);
           if (null != PlayerContextMenu.field_i) {
             if (TrinketUnlockNotice.field_b.field_sb != 0) {
               ContextMenu.a(PlayerContextMenu.field_i.h((byte) 73), (byte) -108, param1);
@@ -431,7 +431,7 @@ abstract class SpriteState extends DualLinkNode {
         int var6Lifetime1;
         var13 = Kickabout.field_G;
         try {
-          var5_int = param0.a(param1);
+          var5_int = param0.stringWidth(param1);
           if (param4 >= var5_int &&
             param1.indexOf("<br>") == -1) {
             param3[0] = param1;
@@ -452,7 +452,7 @@ abstract class SpriteState extends DualLinkNode {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param1.substring(var7, 1 + var9).trim();
-              var12 = param0.a(var11);
+              var12 = param0.stringWidth(var11);
               if (var12 >= param4) {
                 var7 = 1 + var9;
                 incrementValue$1 = var6Lifetime1;

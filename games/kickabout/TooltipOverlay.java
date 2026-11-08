@@ -172,8 +172,8 @@ final class TooltipOverlay implements OverlayLayer {
           for (var9 = 0; var6.length > var9; var9++) {
             if (null != var6[var9]) {
               var8++;
-              if (var7 < ((BitmapFont) ((Object) var4)).a(var6[var9])) {
-                var7 = ((BitmapFont) ((Object) var4)).a(var6[var9]);
+              if (var7 < ((BitmapFont) ((Object) var4)).stringWidth(var6[var9])) {
+                var7 = ((BitmapFont) ((Object) var4)).stringWidth(var6[var9]);
               }
             }
           }
@@ -183,11 +183,11 @@ final class TooltipOverlay implements OverlayLayer {
           var3 = var27[1];
           var2 = var27[0];
           SoftwareRasterizer.fillRectangleAlpha(4 + var2, 3 + var3, var9Lifetime1, var10, 65793, 128);
-          SoftwareRasterizer.e(var2 - 1, var3 - 1, 2 + var9Lifetime1, var10 + 2, 65793);
+          SoftwareRasterizer.drawRectangle(var2 - 1, var3 - 1, 2 + var9Lifetime1, var10 + 2, 65793);
           SoftwareRasterizer.fillRect(var2, var3, var9Lifetime1, var10, 16777185);
           for (var12 = 0; var6.length > var12; var12++) {
             if (null != var6[var12]) {
-              ((BitmapFont) ((Object) var4)).a(var6[var12], var2 + 5, 5 + (12 * var12 + 12) + var3, 65793, -1);
+              ((BitmapFont) ((Object) var4)).drawText(var6[var12], var2 + 5, 5 + (12 * var12 + 12) + var3, 65793, -1);
             }
           }
         } else {
@@ -213,21 +213,21 @@ final class TooltipOverlay implements OverlayLayer {
               DisplayNameUiSupport.field_a.drawCentered((var7 >> 1) + var3, 23, var2 + (var6_int >> 1));
             } else {
               if (AuctionItem.field_e == 1) {
-                var6_int = ((BitmapFont) ((Object) var4)).b(LeaderboardParticipant.field_h, 200);
+                var6_int = ((BitmapFont) ((Object) var4)).wrappedLineCount(LeaderboardParticipant.field_h, 200);
                 if (var6_int != 1) {
                   var7 = 10 + ((BitmapFont) ((Object) var4)).maxLineWidth(LeaderboardParticipant.field_h, 200);
                   var8 = 12 * var6_int + 10;
                 } else {
                   var8 = 22;
-                  var7 = ((BitmapFont) ((Object) var4)).a(LeaderboardParticipant.field_h) + 10;
+                  var7 = ((BitmapFont) ((Object) var4)).stringWidth(LeaderboardParticipant.field_h) + 10;
                 }
                 var25 = GameModesHelpScreen.a(var2, var8, var7, 0, var3);
                 var3 = var25[1];
                 var2 = var25[0];
                 SoftwareRasterizer.fillRectangleAlpha(3 + var2, var3 + 2, var7, var8, 65793, 128);
-                SoftwareRasterizer.e(var2 - 1, -1 + var3, 2 + var7, var8 + 2, 65793);
+                SoftwareRasterizer.drawRectangle(var2 - 1, -1 + var3, 2 + var7, var8 + 2, 65793);
                 SoftwareRasterizer.fillRect(var2, var3, var7, var8, 16777185);
-                ((BitmapFont) ((Object) var4)).a(LeaderboardParticipant.field_h, 5 + var2, -2 + var3 + 5, var7 - 10, var8, 65793, -1, 0, 0, 12);
+                ((BitmapFont) ((Object) var4)).drawParagraph(LeaderboardParticipant.field_h, 5 + var2, -2 + var3 + 5, var7 - 10, var8, 65793, -1, 0, 0, 12);
               }
             }
           }

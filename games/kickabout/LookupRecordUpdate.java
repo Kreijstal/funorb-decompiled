@@ -14,7 +14,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
     int field_n;
 
     final static void b(int param0) {
-        MarkerSliderPainter.field_n = param0 + Math.max(ConsoleTokenCursor.field_d.a(SoundStreamHandle.field_l), ConsoleTokenCursor.field_d.a(QuickChatMenuBuilder.field_a));
+        MarkerSliderPainter.field_n = param0 + Math.max(ConsoleTokenCursor.field_d.stringWidth(SoundStreamHandle.field_l), ConsoleTokenCursor.field_d.stringWidth(QuickChatMenuBuilder.field_a));
     }
 
     public static void releaseStatics(int param0) {
@@ -93,16 +93,16 @@ final class LookupRecordUpdate extends IntrusiveNode {
             var3 = var15.field_v;
             var4_int = -1 + AccountTermsPanel.screenToWorldX(0, 6784) / var2_int;
             var5 = 1 + AccountTermsPanel.screenToWorldX(640, 6784) / var2_int;
-            var6 = TextLayoutLine.a(-6779, 0) / var3 - 1;
-            var7 = TextLayoutLine.a(-6779, 640) / var3 + 1;
+            var6 = TextLayoutLine.screenToWorldY(-6779, 0) / var3 - 1;
+            var7 = TextLayoutLine.screenToWorldY(-6779, 640) / var3 + 1;
             for (var8 = var4_int; var8 < var5; var8++) {
               for (var9 = var6; var7 > var9; var9++) {
                 var10 = SocialListLayoutSupport.worldToScreenX(param0 ^ -48, var8 * var2_int);
                 var11 = IntKeyLookup.a((byte) -85, var9 * var3);
                 var12 = SocialListLayoutSupport.worldToScreenX(param0 + 48, var8 * var2_int + var2_int);
                 var13 = IntKeyLookup.a((byte) -97, var3 * var9 + var3);
-                SoftwareRasterizer.e(var10, var11, var12 - var10, var13 - var11, 65793);
-                IsSixCommand.field_C.d('(' + Integer.toString(var8) + ',' + Integer.toString(var9) + ')', var10 + (-var10 + var12 >> 1), (-var11 + var13 >> 1) + var11, 16777215, 65793);
+                SoftwareRasterizer.drawRectangle(var10, var11, var12 - var10, var13 - var11, 65793);
+                IsSixCommand.field_C.drawCentered('(' + Integer.toString(var8) + ',' + Integer.toString(var9) + ')', var10 + (-var10 + var12 >> 1), (-var11 + var13 >> 1) + var11, 16777215, 65793);
               }
             }
           }

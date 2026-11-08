@@ -215,7 +215,7 @@ final class HoverTooltip extends UiLayoutNode {
                 discarded$9 = this.field_yb.append((char) var2);
               }
             }
-            if (ModalStack.a((byte) -118, (char) var2)) {
+            if (ModalStack.isAsciiLetter((byte) -118, (char) var2)) {
               discarded$10 = this.field_yb.append((char) var2);
               var2 = -60 % ((-76 - param0) / 48);
               if (FixedQuaternion.field_e == 84) {
@@ -232,7 +232,7 @@ final class HoverTooltip extends UiLayoutNode {
               this.field_Fb = 1;
               return true;
             }
-            if (IntrusiveNode.a(12105, (char) var2)) {
+            if (IntrusiveNode.isAsciiDigit(12105, (char) var2)) {
               discarded$11 = this.field_yb.append((char) var2);
               var2 = -60 % ((-76 - param0) / 48);
               if (FixedQuaternion.field_e == 84) {
@@ -278,7 +278,7 @@ final class HoverTooltip extends UiLayoutNode {
                 discarded$5 = this.field_yb.append((char) var2Lifetime1);
               }
             }
-            if (ModalStack.a((byte) -118, (char) var2Lifetime1)) {
+            if (ModalStack.isAsciiLetter((byte) -118, (char) var2Lifetime1)) {
               discarded$7 = this.field_yb.append((char) var2Lifetime1);
               var2Lifetime1 = -60 % ((-76 - param0) / 48);
               if (FixedQuaternion.field_e == 84) {
@@ -294,7 +294,7 @@ final class HoverTooltip extends UiLayoutNode {
               }
               return true;
             }
-            if (IntrusiveNode.a(12105, (char) var2Lifetime1)) {
+            if (IntrusiveNode.isAsciiDigit(12105, (char) var2Lifetime1)) {
               discarded$6 = this.field_yb.append((char) var2Lifetime1);
               var2Lifetime1 = -60 % ((-76 - param0) / 48);
               if (FixedQuaternion.field_e == 84) {
@@ -356,7 +356,7 @@ final class HoverTooltip extends UiLayoutNode {
             discarded$1 = this.field_yb.append((char) var2Lifetime3);
           }
         }
-        if (ModalStack.a((byte) -118, (char) var2Lifetime3)) {
+        if (ModalStack.isAsciiLetter((byte) -118, (char) var2Lifetime3)) {
           discarded$3 = this.field_yb.append((char) var2Lifetime3);
           var2Lifetime3 = -60 % ((-76 - param0) / 48);
           if (FixedQuaternion.field_e == 84) {
@@ -372,7 +372,7 @@ final class HoverTooltip extends UiLayoutNode {
           }
           return true;
         }
-        if (IntrusiveNode.a(12105, (char) var2Lifetime3)) {
+        if (IntrusiveNode.isAsciiDigit(12105, (char) var2Lifetime3)) {
           discarded$2 = this.field_yb.append((char) var2Lifetime3);
           var2Lifetime3 = -60 % ((-76 - param0) / 48);
           if (FixedQuaternion.field_e != 84) {

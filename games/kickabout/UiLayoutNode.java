@@ -442,7 +442,7 @@ class UiLayoutNode extends SharedWidgetFactory {
               }
             }
             var16 = var7Lifetime6 + var15 + ": ";
-            var5Lifetime1 = var5Lifetime1 - FootballerAgent.field_i.a(var16);
+            var5Lifetime1 = var5Lifetime1 - FootballerAgent.field_i.stringWidth(var16);
           } else {
             var18 = (CharSequence) ((Object) TrinketTile.field_Kb);
             var14 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{GoalkeeperAiSupport.normalizeBase37Name(false, var18)});
@@ -451,15 +451,15 @@ class UiLayoutNode extends SharedWidgetFactory {
             var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, field_ib, new String[]{var12});
             var7Lifetime6 = var8;
             var7Lifetime6 = var8;
-            var9 = FootballerAgent.field_i.a(var14);
-            var10 = FootballerAgent.field_i.a(var8);
+            var9 = FootballerAgent.field_i.stringWidth(var14);
+            var10 = FootballerAgent.field_i.stringWidth(var8);
             if (var10 >= var9) {
               var5Lifetime1 = var5Lifetime1 - var10;
             } else {
               var5Lifetime1 = var5Lifetime1 - var9;
             }
           }
-          if (FootballerAgent.field_i.a(AuctionLogEntry.field_m.toString()) > var5Lifetime1) {
+          if (FootballerAgent.field_i.stringWidth(AuctionLogEntry.field_m.toString()) > var5Lifetime1) {
             PagedHelpScreen.a(AuctionLogEntry.field_m.length() - 1, ' ', -11407, AuctionLogEntry.field_m);
           }
         }
@@ -827,7 +827,7 @@ class UiLayoutNode extends SharedWidgetFactory {
             null != this.field_V) {
             var23Lifetime2 = var26 + this.field_V;
           }
-          if (this.field_X.a(var23Lifetime2) <= (this.field_q - 2 * this.field_kb) &&
+          if (this.field_X.stringWidth(var23Lifetime2) <= (this.field_q - 2 * this.field_kb) &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.field_p != 1) {
               if (2 == this.field_p) {
@@ -837,22 +837,22 @@ class UiLayoutNode extends SharedWidgetFactory {
               var22 = var22 + (-this.field_X.field_p + (this.field_mb - this.field_X.field_G)) / 2;
             }
             if (this.field_A == 0) {
-              this.field_X.b(var23Lifetime2, var21 + (this.field_F + this.field_kb), this.field_X.field_G + this.field_T + var22, var18, -1, this.field_U);
+              this.field_X.drawTextAlpha(var23Lifetime2, var21 + (this.field_F + this.field_kb), this.field_X.field_G + this.field_T + var22, var18, -1, this.field_U);
             } else {
               if (this.field_A == 1) {
-                this.field_X.c(var23Lifetime2, this.field_kb + this.field_F + var21 + (-(2 * this.field_kb) + this.field_q) / 2, this.field_X.field_G + this.field_T + var22, var18, -1, this.field_U);
+                this.field_X.drawCenteredAlpha(var23Lifetime2, this.field_kb + this.field_F + var21 + (-(2 * this.field_kb) + this.field_q) / 2, this.field_X.field_G + this.field_T + var22, var18, -1, this.field_U);
               } else {
                 if (2 != this.field_A) {
-                  this.field_X.a(var23Lifetime2, var21 + (this.field_kb + this.field_F), this.field_T + var22, this.field_q - this.field_kb * 2, this.field_mb, var18, -1, this.field_U, this.field_A, this.field_p, this.field_xb);
+                  this.field_X.drawParagraph(var23Lifetime2, var21 + (this.field_kb + this.field_F), this.field_T + var22, this.field_q - this.field_kb * 2, this.field_mb, var18, -1, this.field_U, this.field_A, this.field_p, this.field_xb);
                 } else {
-                  this.field_X.a(var23Lifetime2, -(2 * this.field_kb) + this.field_q + this.field_F - (-this.field_kb - var21), this.field_X.field_G + this.field_T + var22, var18, -1, this.field_U);
+                  this.field_X.drawRightAlignedAlpha(var23Lifetime2, -(2 * this.field_kb) + this.field_q + this.field_F - (-this.field_kb - var21), this.field_X.field_G + this.field_T + var22, var18, -1, this.field_U);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_X.a(var23Lifetime2, this.field_F - (-this.field_kb - var21), this.field_T + var22, this.field_q - 2 * this.field_kb, this.field_mb, var18, -1, this.field_U, this.field_A, this.field_p, this.field_xb);
+            this.field_X.drawParagraph(var23Lifetime2, this.field_F - (-this.field_kb - var21), this.field_T + var22, this.field_q - 2 * this.field_kb, this.field_mb, var18, -1, this.field_U, this.field_A, this.field_p, this.field_xb);
           }
         }
         if (null != this.field_jb) {

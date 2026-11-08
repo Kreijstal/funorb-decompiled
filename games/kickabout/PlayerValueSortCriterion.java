@@ -139,7 +139,7 @@ final class PlayerValueSortCriterion extends SortCriterion {
             if (var10 > 99) {
               var10 = 99;
             }
-            ((BitmapFont) ((Object) var4)).d(Integer.toString(var10), -2 + (-VertexNormal.field_c + 644 - ThumbnailStateFactory.field_c + (VertexNormal.field_c >> 1)) + 1, (var24[var9Lifetime1] + VertexNormal.field_c >> 1) + var25[var9Lifetime1] - 2, 16777215, -1);
+            ((BitmapFont) ((Object) var4)).drawCentered(Integer.toString(var10), -2 + (-VertexNormal.field_c + 644 - ThumbnailStateFactory.field_c + (VertexNormal.field_c >> 1)) + 1, (var24[var9Lifetime1] + VertexNormal.field_c >> 1) + var25[var9Lifetime1] - 2, 16777215, -1);
             var11 = 0;
             for (var12 = 0; AsciiCharacterSupport.field_c.playerCount > var12; var12++) {
               if (~var9Lifetime1 == ~AsciiCharacterSupport.field_c.field_g[var12].team) {
@@ -155,18 +155,18 @@ final class PlayerValueSortCriterion extends SortCriterion {
                 }
                 stackIn_29_0 = (AsciiCharacterSupport.field_c.participantStatus[var12].isActive(3511)) ? 16777215 : 11184810;
                 var16 = stackIn_29_0;
-                ((BitmapFont) ((Object) var4)).a(TrinketPickerDialog.field_G[var12], -ThumbnailStateFactory.field_c + 644 + 10, var13, var16, -1);
+                ((BitmapFont) ((Object) var4)).drawText(TrinketPickerDialog.field_G[var12], -ThumbnailStateFactory.field_c + 644 + 10, var13, var16, -1);
                 if (AsciiCharacterSupport.field_c.participantStatus[var12].isActive(3511)) {
                   if (AsciiCharacterSupport.field_c.participantStatus[var12].offerDraw) {
-                    var17 = ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A) + 12;
+                    var17 = ((BitmapFont) ((Object) var4)).stringWidth(AlphaContainer.field_A) + 12;
                     AuctionListing.a(-VertexNormal.field_c + (-ThumbnailStateFactory.field_c + 642) - 1, -22914, 0, 480, 0);
                     SoftwareRasterizer.fillRoundedRectangleBlended(642 - (ThumbnailStateFactory.field_c + (VertexNormal.field_c + var17)), var13 - VertexNormal.field_c + 3, var17 + 4, VertexNormal.field_c - 2, 6, 65793, param1);
-                    ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A, 7 + (-ThumbnailStateFactory.field_c + 644 - VertexNormal.field_c - (2 + var17)), var13, 16777215, -1);
+                    ((BitmapFont) ((Object) var4)).drawText(AlphaContainer.field_A, 7 + (-ThumbnailStateFactory.field_c + 644 - VertexNormal.field_c - (2 + var17)), var13, 16777215, -1);
                     TeamManagementScreen.e(119);
                   }
                 } else {
                   var17 = 644 + (-ThumbnailStateFactory.field_c + 10);
-                  var18 = ((BitmapFont) ((Object) var4)).a(TrinketPickerDialog.field_G[var12]);
+                  var18 = ((BitmapFont) ((Object) var4)).stringWidth(TrinketPickerDialog.field_G[var12]);
                   SoftwareRasterizer.drawLine(var17, -2 + (var13 - TextPromptDialog.field_yb), var18 + var17, var13 - 1, 13382451);
                   SoftwareRasterizer.drawLine(var17, -1 + var13, var17 + var18, -2 - TextPromptDialog.field_yb + var13, 13382451);
                 }

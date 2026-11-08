@@ -126,7 +126,7 @@ final class PlayerInputEvent extends DualLinkNode {
                 WidgetStyleFactory.appendRankingStatistics(AuctionsHelpScreen.field_E, (byte) -106, MenuButton.field_j, var6_intLifetime1, FormationView.field_r, GameOptionMenuSupport.field_d);
               }
             }
-            TabStrip.a(var5, (byte) 63);
+            TabStrip.selectTopRankingRows(var5, (byte) 63);
             dupTemp$0 = new String[2][var5];
             var3.field_i = dupTemp$0;
             var6 = dupTemp$0;

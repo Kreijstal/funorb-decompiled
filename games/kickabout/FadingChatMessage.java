@@ -35,9 +35,9 @@ final class FadingChatMessage extends IntrusiveNode {
         int var4 = FriendsListPanel.getHudOpacity(true, (byte) -120);
         SoftwareRasterizer.fillRoundedRectangleBlended(95, param1 + 1, this.field_e, 17, 6, 0, var4 * this.alpha >> 8);
         if (256 != this.alpha) {
-          AuctionLogEntry.field_e.b(this.text, 107, -4 + (18 + param1), 16777215, -1, this.alpha);
+          AuctionLogEntry.field_e.drawTextAlpha(this.text, 107, -4 + (18 + param1), 16777215, -1, this.alpha);
         } else {
-          AuctionLogEntry.field_e.a(this.text, 107, -4 + (param1 + 18), 16777215, -1);
+          AuctionLogEntry.field_e.drawText(this.text, 107, -4 + (param1 + 18), 16777215, -1);
         }
     }
 
@@ -106,7 +106,7 @@ final class FadingChatMessage extends IntrusiveNode {
           this.field_j = param1 ? true : false;
           this.text = param0;
           this.age = this.field_j ? 500 : 0;
-          var3_int = 20 + AuctionLogEntry.field_e.a(this.text);
+          var3_int = 20 + AuctionLogEntry.field_e.stringWidth(this.text);
           this.field_e = Math.max(400, var3_int);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

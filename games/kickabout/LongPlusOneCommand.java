@@ -141,7 +141,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
           var15Lifetime1 = SocialListLayoutSupport.worldToScreenX(0, var7.pixelX(-116));
           var16Lifetime1 = IntKeyLookup.a((byte) -82, var7.pixelY(true));
           SoftwareRasterizer.fillRectangleAlpha(var15Lifetime1 - 50, -6 + var16Lifetime1, 100, 12, 65793, 208);
-          ConsoleTokenCursor.field_d.d("DMG=" + var7.field_o + "  A=" + var7.action + "  T=" + var7.actionTime, var15Lifetime1, var16Lifetime1 + 4, 16777215, -1);
+          ConsoleTokenCursor.field_d.drawCentered("DMG=" + var7.field_o + "  A=" + var7.action + "  T=" + var7.actionTime, var15Lifetime1, var16Lifetime1 + 4, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ev.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -169,7 +169,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
               var4 = 20 + 20 * var1;
               var3 = 0;
             }
-            field_B[var0 + 16 * var1] = PainterStyle.a(PainterStyle.a(var3 << 7, var2 << 10), var4);
+            field_B[var0 + 16 * var1] = PainterStyle.bitwiseOr(PainterStyle.bitwiseOr(var3 << 7, var2 << 10), var4);
           }
         }
         field_A = "Passwords must be between 5 and 20 letters and numbers";

@@ -57,7 +57,7 @@ final class LoginDialog extends ContentTransitionDialog {
             var6_int = param1.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = 2 + var6_int; var5 < var3_int; var5++) {
-                if (IntrusiveNode.a(12105, param1.charAt(var5))) {
+                if (IntrusiveNode.isAsciiDigit(12105, param1.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -94,7 +94,7 @@ final class LoginDialog extends ContentTransitionDialog {
             }
             stackIn_21_0 = 2 + var8Lifetime1;
             for (var5Lifetime1 = stackIn_21_0; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (IntrusiveNode.a(12105, param1.charAt(var5Lifetime1))) {
+              if (IntrusiveNode.isAsciiDigit(12105, param1.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
@@ -350,7 +350,7 @@ final class LoginDialog extends ContentTransitionDialog {
             var6_int = param1.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = 2 + var6_int; var5 < var3_int; var5++) {
-                if (IntrusiveNode.a(12105, param1.charAt(var5))) {
+                if (IntrusiveNode.isAsciiDigit(12105, param1.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -387,7 +387,7 @@ final class LoginDialog extends ContentTransitionDialog {
             }
             stackIn_21_0 = 2 + var8Lifetime1;
             for (var5Lifetime1 = stackIn_21_0; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (IntrusiveNode.a(12105, param1.charAt(var5Lifetime1))) {
+              if (IntrusiveNode.isAsciiDigit(12105, param1.charAt(var5Lifetime1))) {
                 continue;
               }
               break;

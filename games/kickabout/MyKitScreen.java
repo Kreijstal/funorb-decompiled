@@ -270,9 +270,9 @@ final class MyKitScreen extends TeamManagementScreen {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3_ref_hd.field_F, var3_ref_hd.field_T, var3_ref_hd.field_q, var3_ref_hd.field_mb, 10, 65793, 96);
           var3_ref_hd = (UiLayoutNode) (this.field_P.field_jb.c(33));
         }
-        ByteArrayPool.field_d.a(ExceptionTextSupport.field_c, -26 + this.field_G.field_F, this.field_G.field_T - 16, 16777215, -1);
+        ByteArrayPool.field_d.drawText(ExceptionTextSupport.field_c, -26 + this.field_G.field_F, this.field_G.field_T - 16, 16777215, -1);
         for (var3 = 0; var3 < 2; var3++) {
-          ByteArrayPool.field_d.a(ImageProducerRasterBuffer.field_j[var3], 6 + this.field_J[var3].field_F, -8 + this.field_J[var3].field_T, 16777215, -1);
+          ByteArrayPool.field_d.drawText(ImageProducerRasterBuffer.field_j[var3], 6 + this.field_J[var3].field_F, -8 + this.field_J[var3].field_T, 16777215, -1);
         }
         this.field_P.draw(114, false);
         AuctionListing.a(this.field_G.field_F + this.field_G.field_q, -22914, this.field_G.field_F, this.field_G.field_mb + this.field_G.field_T, this.field_G.field_T);
@@ -315,8 +315,8 @@ final class MyKitScreen extends TeamManagementScreen {
         this.field_P.addChild((byte) -113, var7);
         this.field_F = new UiLayoutNode();
         this.field_G = new UiLayoutNode();
-        this.field_eb = SoftwareDrawingSupport.a(false);
-        this.field_H = SoftwareDrawingSupport.a(true);
+        this.field_eb = SoftwareDrawingSupport.createDefaultButtonNode(false);
+        this.field_H = SoftwareDrawingSupport.createDefaultButtonNode(true);
         this.field_eb.field_s = 5;
         this.field_H.field_s = this.field_X.field_q - (this.field_H.field_q + 5);
         this.field_H.field_J = -this.field_eb.field_mb + this.field_X.field_mb >> 1;
@@ -340,8 +340,8 @@ final class MyKitScreen extends TeamManagementScreen {
         }
         UiLayoutNode dupTemp$0 = this.field_J[1];
         dupTemp$0.field_J = dupTemp$0.field_J + ((var7.field_mb >> 1) - 6);
-        this.field_Y = SoftwareDrawingSupport.a(false);
-        this.field_K = SoftwareDrawingSupport.a(true);
+        this.field_Y = SoftwareDrawingSupport.createDefaultButtonNode(false);
+        this.field_K = SoftwareDrawingSupport.createDefaultButtonNode(true);
         var3Lifetime1 = 5;
         this.field_Y.field_s = -this.field_Y.field_q + (-var3Lifetime1 + 532);
         this.field_K.field_s = 532 + var3Lifetime1;
@@ -455,9 +455,9 @@ final class MyKitScreen extends TeamManagementScreen {
           var6 = var12[0] * TriangleRasterizer.field_f[var3] >> 16;
           var7 = (ModelMesh) (this.field_cb.applyCurrentFrame(this.field_db.createModelMesh(var12[2], var12[3], var5, var12[1], var6), false, true, true));
           var7.a(0, var3, 0, 0, 0, 0, 0, 540);
-          var8 = Math.max(120, IsSixCommand.field_C.a(this.field_T) + 30);
+          var8 = Math.max(120, IsSixCommand.field_C.stringWidth(this.field_T) + 30);
           SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + (532 - (var8 >> 1)), 412, var8, 56, 12, 65793, 128);
-          IsSixCommand.field_C.d(this.field_T, 532 + this.slideOffsetX, 430, 16777215, -1);
+          IsSixCommand.field_C.drawCentered(this.field_T, 532 + this.slideOffsetX, 430, 16777215, -1);
           this.field_ab.draw(123, false);
         }
     }

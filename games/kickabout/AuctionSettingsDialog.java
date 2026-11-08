@@ -217,7 +217,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         var12 = Kickabout.field_G;
         super.drawBody((byte) -124, param1, param2);
         ClubStateFactory.field_c.drawCentered(150 + param2, 23, param1 + 98);
-        IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 25 + param1, param2 + 270, 150, 40, 16729156, -1, 1, 1, 0);
+        IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 25 + param1, param2 + 270, 150, 40, 16729156, -1, 1, 1, 0);
         if (param0 > -11) {
           field_J = (UiLayoutNode) null;
         }
@@ -229,15 +229,15 @@ final class AuctionSettingsDialog extends MessageDialog {
         var9 = 75 + var8 + 6;
         SoftwareRasterizer.fillRoundedRectangleBlended(-47 + var4, var6, 90, 75, 10, 65793, 128);
         SoftwareRasterizer.fillRoundedRectangleBlended(160 + var5 + 7, var6, 90, 75, 10, 65793, 128);
-        ByteArrayPool.field_d.d(LoadingProgressDialog.field_T.toLowerCase(), var4 - 2, var6 + 30, 16777215, -1);
-        IsSixCommand.field_C.d(LocalizedTextLoader.formatCurrencyAmount(QuickChatPhraseCache.field_c, 26300), var4 - 2, var6 + 54, 16777215, -1);
-        ByteArrayPool.field_d.d(GameLoopApplet.field_D.toLowerCase(), 52 + (160 + var5), var6 + 30, 16777215, -1);
-        IsSixCommand.field_C.d(LocalizedTextLoader.formatCurrencyAmount(IndexedSpriteState.field_g, 26300), 52 + (160 + var5), 54 + var6, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(LoadingProgressDialog.field_T.toLowerCase(), var4 - 2, var6 + 30, 16777215, -1);
+        IsSixCommand.field_C.drawCentered(LocalizedTextLoader.formatCurrencyAmount(QuickChatPhraseCache.field_c, 26300), var4 - 2, var6 + 54, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(GameLoopApplet.field_D.toLowerCase(), 52 + (160 + var5), var6 + 30, 16777215, -1);
+        IsSixCommand.field_C.drawCentered(LocalizedTextLoader.formatCurrencyAmount(IndexedSpriteState.field_g, 26300), 52 + (160 + var5), 54 + var6, 16777215, -1);
         SoftwareRasterizer.fillRoundedRectangleBlended(var5, var6, 160, 75, 10, 65793, 128);
         SoftwareRasterizer.fillRoundedRectangleBlended(var7, var8, 160, 75, 10, 65793, 128);
         SoftwareRasterizer.fillRoundedRectangleBlended(var4, var9, 260, 120, 10, 65793, 128);
-        ByteArrayPool.field_d.d(InstrumentEnvelope.field_f.toLowerCase(), 130 + var4, 21 + var6, 16777215, -1);
-        ByteArrayPool.field_d.d(Kickabout.field_F.toLowerCase(), var4 + 130, var9 + 21, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(InstrumentEnvelope.field_f.toLowerCase(), 130 + var4, 21 + var6, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(Kickabout.field_F.toLowerCase(), var4 + 130, var9 + 21, 16777215, -1);
         if (StrongCacheEntry.g(2368)) {
           stackIn_8_0 = (MonotonicClock.monotonicMillis(-51) % 500L < 250L) ? 1 : 0;
         } else {
@@ -247,42 +247,42 @@ final class AuctionSettingsDialog extends MessageDialog {
         ChatInputState.field_b.field_s = var4 + 10;
         ChatInputState.field_b.field_J = 27 + var6;
         SoftwareRasterizer.fillRectangleAlpha(ChatInputState.field_b.field_s + 85, ChatInputState.field_b.field_J + 6, UnreadMessagesScreen.field_A.field_q + 4, -4 + UnreadMessagesScreen.field_A.field_mb, 7829367, 128);
-        IsSixCommand.field_C.a('£', 91 + ChatInputState.field_b.field_s, ChatInputState.field_b.field_J + 19, 16777215);
+        IsSixCommand.field_C.drawCenteredCharacter('£', 91 + ChatInputState.field_b.field_s, ChatInputState.field_b.field_J + 19, 16777215);
         ChatInputState.field_b.draw(110, var10 != 0 & this.field_F);
         OverlayLayerSupport.field_b.field_J = 5 + (var8 - 13);
         OverlayLayerSupport.field_b.field_s = var4 + 10;
         SoftwareRasterizer.fillRectangleAlpha(OverlayLayerSupport.field_b.field_s + 85, 40 + OverlayLayerSupport.field_b.field_J, StatChoiceDialog.field_F.field_q + 4, -4 + StatChoiceDialog.field_F.field_mb, 7829367, 128);
         if (ServerTextTemplate.field_e) {
-          IsSixCommand.field_C.a('£', OverlayLayerSupport.field_b.field_s + 91, 53 + OverlayLayerSupport.field_b.field_J, 16777215);
+          IsSixCommand.field_C.drawCenteredCharacter('£', OverlayLayerSupport.field_b.field_s + 91, 53 + OverlayLayerSupport.field_b.field_J, 16777215);
         }
         OverlayLayerSupport.field_b.draw(94, var10 != 0 & this.field_I);
         DisplayModeSupport.field_a.a(false, (byte) 46);
         if (LocalizedTextLoader.field_f < QuickChatPhraseCache.field_c) {
-          IsSixCommand.field_C.d(IntDoubleCommand.field_E, var4 + 130, 75 + var6 - 8, 16711680, -1);
+          IsSixCommand.field_C.drawCentered(IntDoubleCommand.field_E, var4 + 130, 75 + var6 - 8, 16711680, -1);
         } else {
           if (IndexedSpriteState.field_g >= LocalizedTextLoader.field_f) {
             if (ServerTextTemplate.field_e &&
               LocalizedTextLoader.field_f > AuctionBidDialog.field_L) {
-              IsSixCommand.field_C.d(CheckboxLabelWidget.field_Eb, var4 + 130, -8 + var6 + 75, 16711680, -1);
+              IsSixCommand.field_C.drawCentered(CheckboxLabelWidget.field_Eb, var4 + 130, -8 + var6 + 75, 16711680, -1);
             }
           } else {
-            IsSixCommand.field_C.d(TextEntrySupport.field_d, 130 + var4, 75 + var6 - 8, 16711680, -1);
+            IsSixCommand.field_C.drawCentered(TextEntrySupport.field_d, 130 + var4, 75 + var6 - 8, 16711680, -1);
           }
         }
         if (ServerTextTemplate.field_e) {
           if (AuctionBidDialog.field_L < QuickChatPhraseCache.field_c) {
-            IsSixCommand.field_C.d(IntDoubleCommand.field_E, 130 + var4, 75 + var8 - 8, 16711680, -1);
+            IsSixCommand.field_C.drawCentered(IntDoubleCommand.field_E, 130 + var4, 75 + var8 - 8, 16711680, -1);
           } else {
             if (AuctionBidDialog.field_L <= IndexedSpriteState.field_g) {
               if (AuctionBidDialog.field_L < LocalizedTextLoader.field_f) {
-                IsSixCommand.field_C.d(SpriteNumberPainter.field_b, 130 + var4, 67 + var8, 16711680, -1);
+                IsSixCommand.field_C.drawCentered(SpriteNumberPainter.field_b, 130 + var4, 67 + var8, 16711680, -1);
               }
             } else {
-              IsSixCommand.field_C.d(TextEntrySupport.field_d, 130 + var4, var8 + 67, 16711680, -1);
+              IsSixCommand.field_C.drawCentered(TextEntrySupport.field_d, 130 + var4, var8 + 67, 16711680, -1);
             }
           }
         } else {
-          IsSixCommand.field_C.d(MachineTokenStorageSupport.field_f, var4 + 130, var8 + 67, 16711680, -1);
+          IsSixCommand.field_C.drawCentered(MachineTokenStorageSupport.field_f, var4 + 130, var8 + 67, 16711680, -1);
         }
         for (var11 = 0; var11 < 5; var11++) {
           FriendRemovalSupport.field_d[var11].setBounds(true, FriendRemovalSupport.field_d[var11].field_q, var4 + 10, 26 + (var9 + var11 * 18), FriendRemovalSupport.field_d[var11].field_mb);

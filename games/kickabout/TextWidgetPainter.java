@@ -158,7 +158,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param5 != 0) {
             field_n = (UiLayoutNode) null;
           }
-          stackIn_3_0 = param1.field_h.a(param0 - this.textOriginY(true, param1, param4), param2 - this.textOriginX(param1, param3, -1), 29889);
+          stackIn_3_0 = param1.field_h.hitTestCharacter(param0 - this.textOriginY(true, param1, param4), param2 - this.textOriginX(param1, param3, -1), 29889);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -196,9 +196,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param4.isFocused(67)) {
             var13 = this.ensureTextLayout(5035, param4);
             var14 = var13;
-            var7 = var14.a(0, param0);
+            var7 = var14.lineIndexForCharacter(0, param0);
             var8 = var13.field_c[var7];
-            var9 = var14.b(0, param0);
+            var9 = var14.characterX(0, param0);
             var10 = this.textXForOffset(-31112, param4, param1, var9);
             var11 = this.textOriginY(true, param4, param2) + Math.max(0, var8.field_g);
             stackIn_3_0 = this.textOriginY(true, param4, param2);
@@ -261,7 +261,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           boolean decompiledFrameRemainder0 = true;
           var10 = this.contentHeight((byte) -123, param4);
           if (this.field_k) {
-            this.field_a.a(this.displayText((byte) -64, param4), this.textXForOffset(-31112, param4, param2, param6), this.textYForOffset(param7, (byte) 90, param4, param5), var9_int, var10, param0, param1, this.field_e, this.field_m, this.field_p);
+            this.field_a.drawParagraph(this.displayText((byte) -64, param4), this.textXForOffset(-31112, param4, param2, param6), this.textYForOffset(param7, (byte) 90, param4, param5), var9_int, var10, param0, param1, this.field_e, this.field_m, this.field_p);
           } else {
             var12 = this.field_m;
             if (var12 != 0) {
@@ -280,16 +280,16 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_a.d(this.displayText((byte) -123, param4), this.textXForOffset(-31112, param4, param2, param6) + (var9_int >> 1), var11 + this.textYForOffset(param7, (byte) 90, param4, param5), param0, param1);
+                this.field_a.drawCentered(this.displayText((byte) -123, param4), this.textXForOffset(-31112, param4, param2, param6) + (var9_int >> 1), var11 + this.textYForOffset(param7, (byte) 90, param4, param5), param0, param1);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_a.c(this.displayText((byte) -113, param4), var9_int + this.textXForOffset(-31112, param4, param2, param6), this.textYForOffset(param7, (byte) 90, param4, param5) + var11, param0, param1);
+                  this.field_a.drawRightAligned(this.displayText((byte) -113, param4), var9_int + this.textXForOffset(-31112, param4, param2, param6), this.textYForOffset(param7, (byte) 90, param4, param5) + var11, param0, param1);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_a.a(this.displayText((byte) -103, param4), this.textXForOffset(-31112, param4, param2, param6), this.textYForOffset(param7, (byte) 90, param4, param5) + var11, param0, param1);
+              this.field_a.drawText(this.displayText((byte) -103, param4), this.textXForOffset(-31112, param4, param2, param6), this.textYForOffset(param7, (byte) 90, param4, param5) + var11, param0, param1);
             }
           }
           TeamManagementScreen.e(126);
@@ -393,7 +393,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_n = null;
         field_d = null;
         if (!param0) {
@@ -444,7 +444,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             field_f = true;
           }
           this.ensureTextLayout(5035, param1);
-          stackIn_3_0 = param1.field_h.a(-1761) + this.field_q + this.field_o;
+          stackIn_3_0 = param1.field_h.height(-1761) + this.field_q + this.field_o;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -471,7 +471,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           this.ensureTextLayout(5035, param0);
           var3_int = -96 % ((-65 - param1) / 56);
-          stackIn_1_0 = param0.field_h.a((byte) -25) + this.field_h + this.field_l;
+          stackIn_1_0 = param0.field_h.width((byte) -25) + this.field_h + this.field_l;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -760,19 +760,19 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               var8 = param1;
               var9 = param2;
             }
-            var10 = var18.a(0, var8);
-            var11 = var18.a(0, var9);
+            var10 = var18.lineIndexForCharacter(0, var8);
+            var11 = var18.lineIndexForCharacter(0, var9);
             AuctionListing.a(param3.field_n + (param3.field_t + param0), -22914, param3.field_t + param0, param3.field_i + param5 + param3.field_g, param3.field_g + param5);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var17.field_c[var12];
               if (var12 != var10) {
                 stackIn_14_0 = var13.field_b[0];
               } else {
-                stackIn_14_0 = var18.b(0, var8);
+                stackIn_14_0 = var18.characterX(0, var8);
               }
               var14 = stackIn_14_0;
               if (var11 == var12) {
-                stackIn_19_0 = var18.b(0, var9);
+                stackIn_19_0 = var18.characterX(0, var9);
               } else {
                 if (var13 != null) {
                   stackIn_19_0 = var13.field_b[var13.field_b.length - 1];

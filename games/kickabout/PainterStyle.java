@@ -13,7 +13,7 @@ final class PainterStyle {
     Sprite field_j;
     private int field_c;
 
-    final void a(int param0) {
+    final void reset(int param0) {
         this.field_h = 0;
         this.field_i = 256;
         this.field_j = null;
@@ -26,7 +26,7 @@ final class PainterStyle {
         this.field_c = -1;
     }
 
-    final PainterStyle a(boolean param0, Sprite[] param1) {
+    final PainterStyle withPanelSprites(boolean param0, Sprite[] param1) {
         RuntimeException var3 = null;
         PainterStyle var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -36,7 +36,7 @@ final class PainterStyle {
         try {
           if (!param0) {
             var4 = (PainterStyle) null;
-            this.a((PainterStyle) null, -70);
+            this.copyTo((PainterStyle) null, -70);
           }
           this.field_g = param1;
           return this;
@@ -54,15 +54,15 @@ final class PainterStyle {
         }
     }
 
-    final PainterStyle b(byte param0, int param1) {
+    final PainterStyle withOffsetY(byte param0, int param1) {
         if (param0 < 89) {
-          PainterStyle.a(true);
+          PainterStyle.releaseStatics(true);
         }
         this.field_h = param1;
         return this;
     }
 
-    final PainterStyle a(int param0, boolean param1) {
+    final PainterStyle withShadowColor(int param0, boolean param1) {
         if (!param1) {
           this.field_j = (Sprite) null;
         }
@@ -70,7 +70,7 @@ final class PainterStyle {
         return this;
     }
 
-    final static String a(byte param0, int param1, int param2, byte[] param3) {
+    final static String decodeCp1252(byte param0, int param1, int param2, byte[] param3) {
         int var6 = 0;
         int incrementValue$0 = 0;
         char[] var4 = null;
@@ -111,7 +111,7 @@ final class PainterStyle {
           }
           if (param0 >= -119) {
             var10 = (String) null;
-            PainterStyle.a((String) null, 99);
+            PainterStyle.containsNonAlphanumeric((String) null, 99);
           }
           stackIn_16_0 = new String(var12, 0, var5);
           return stackIn_16_0;
@@ -129,11 +129,11 @@ final class PainterStyle {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseOr(int param0, int param1) {
         return param0 | param1;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_e = (PlatformTaskDispatcher) null;
         }
@@ -141,7 +141,7 @@ final class PainterStyle {
         field_a = null;
     }
 
-    final PainterStyle a(byte param0, int param1) {
+    final PainterStyle withOffsetX(byte param0, int param1) {
         this.field_b = param1;
         if (param0 >= -26) {
           this.field_d = true;
@@ -149,13 +149,13 @@ final class PainterStyle {
         return this;
     }
 
-    final PainterStyle a(boolean param0, byte param1) {
+    final PainterStyle withFlushPreviousLayer(boolean param0, byte param1) {
         int var3 = 19 / ((41 - param1) / 47);
         this.field_d = param0 ? true : false;
         return this;
     }
 
-    final void a(int param0, int param1, StatefulTextPainter param2, UiWidget param3, int param4, PainterStyle param5) {
+    final void mergeInto(int param0, int param1, StatefulTextPainter param2, UiWidget param3, int param4, PainterStyle param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -167,8 +167,8 @@ final class PainterStyle {
         RuntimeException var7 = null;
         try {
           if (this.field_d) {
-            param5.a(param3, param2, param0, param4, 0);
-            param5.a(-13136);
+            param5.paint(param3, param2, param0, param4, 0);
+            param5.reset(-13136);
           }
           if (this.field_i != param1) {
             param5.field_i = this.field_i;
@@ -218,7 +218,7 @@ final class PainterStyle {
         }
     }
 
-    final PainterStyle b(int param0, int param1) {
+    final PainterStyle withTextColor(int param0, int param1) {
         if (param0 != -2) {
           return (PainterStyle) null;
         }
@@ -226,7 +226,7 @@ final class PainterStyle {
         return this;
     }
 
-    final void a(PainterStyle param0, int param1) {
+    final void copyTo(PainterStyle param0, int param1) {
         try {
           param0.field_h = this.field_h;
           param0.field_b = this.field_b;
@@ -244,7 +244,7 @@ final class PainterStyle {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean containsNonAlphanumeric(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -257,12 +257,12 @@ final class PainterStyle {
         try {
           var2_int = 0;
           if (param1 != -3) {
-            PainterStyle.a(false);
+            PainterStyle.releaseStatics(false);
           }
           while (var2_int < param0.length()) {
             var3 = param0.charAt(var2_int);
-            if (!ModalStack.a((byte) -113, (char) var3) &&
-              !IntrusiveNode.a(12105, (char) var3)) {
+            if (!ModalStack.isAsciiLetter((byte) -113, (char) var3) &&
+              !IntrusiveNode.isAsciiDigit(12105, (char) var3)) {
               return true;
             }
             var2_int++;
@@ -304,7 +304,7 @@ final class PainterStyle {
           var3_int = stackIn_4_0;
           if (param2 < 26) {
             var9 = (String) null;
-            PainterStyle.a((String) null, 97);
+            PainterStyle.containsNonAlphanumeric((String) null, 97);
           }
           stackIn_9_0 = (var3_int != 0) ? -1 : 1345;
           var4 = stackIn_9_0;
@@ -335,7 +335,7 @@ final class PainterStyle {
         }
     }
 
-    final void a(UiWidget param0, StatefulTextPainter param1, int param2, int param3, int param4) {
+    final void paint(UiWidget param0, StatefulTextPainter param1, int param2, int param3, int param4) {
         BitmapFont stackIn_21_0;
         String stackIn_21_1;
         int stackIn_21_2;
@@ -365,7 +365,7 @@ final class PainterStyle {
         try {
           if (param4 != 0) {
             var8 = (PainterStyle) null;
-            this.a((PainterStyle) null, 96);
+            this.copyTo((PainterStyle) null, 96);
           }
           ColorQuantizationBox.drawNineSlicePanel(param2 + param0.field_g, param0.field_i, param0.field_t + param3, (byte) 79, this.field_g, param0.field_n);
           if (null != this.field_j) {
@@ -418,7 +418,7 @@ final class PainterStyle {
             } else {
               stackIn_28_8 = this.field_i;
             }
-            ((BitmapFont) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param1.field_e, param1.field_m, param1.field_p);
+            ((BitmapFont) (Object) stackIn_21_0).drawParagraph(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param1.field_e, param1.field_m, param1.field_p);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

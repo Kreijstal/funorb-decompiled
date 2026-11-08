@@ -39,7 +39,7 @@ final class AlternateKeyedLoginCredentials extends KeyedLoginCredentials {
               param0.b(var7, var8, param3);
               return;
             }
-            SpritePixelSupport.a(param0, var7, var8);
+            SpritePixelSupport.drawAlphaTestedArgb(param0, var7, var8);
             return;
           }
           var9 = var5 * InstrumentNoteMask.field_i >> 8;
@@ -47,7 +47,7 @@ final class AlternateKeyedLoginCredentials extends KeyedLoginCredentials {
             param0.drawScaledAlpha((-var9 + var5 >> 1) + var7, (var6 - var9 >> 1) + var8, var9, var9, param3);
             return;
           }
-          SpritePixelSupport.a(param0, (-var9 + var5 >> 1) + var7, (var6 - var9 >> 1) + var8, var9, var9);
+          SpritePixelSupport.drawScaledAlphaTestedArgb(param0, (-var9 + var5 >> 1) + var7, (var6 - var9 >> 1) + var8, var9, var9);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

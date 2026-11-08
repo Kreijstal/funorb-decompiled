@@ -10,7 +10,7 @@ final class TabStrip extends UiLayoutNode {
     private UiLayoutNode field_Cb;
     static String field_zb;
 
-    final static void a(int param0, byte param1) {
+    final static void selectTopRankingRows(int param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -18,7 +18,7 @@ final class TabStrip extends UiLayoutNode {
         var3 = Kickabout.field_G;
         try {
           if (param1 != 63) {
-            TabStrip.c(true);
+            TabStrip.releaseStatics(true);
           }
           VerticalScrollbar.a(BlackFadeScreen.field_g, true, AuctionsScreen.field_O, TextHotspotRegion.field_k, 1, param0, 0);
           for (var2_int = 0; var2_int < AuctionsScreen.field_O; var2_int++) {
@@ -36,7 +36,7 @@ final class TabStrip extends UiLayoutNode {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setBoundsAndUpdateTabs(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.field_q = param6;
         this.field_mb = param1;
         this.field_s = param2;
@@ -149,7 +149,7 @@ final class TabStrip extends UiLayoutNode {
         }
     }
 
-    final void h(byte param0) {
+    final void processTabClicks(byte param0) {
         int var2 = 0;
         UiLayoutNode dupTemp$0 = null;
         UiLayoutNode dupTemp$1 = null;
@@ -172,11 +172,11 @@ final class TabStrip extends UiLayoutNode {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_yb = null;
         field_zb = null;
         if (!param0) {
-          TabStrip.a(67, (byte) -66);
+          TabStrip.selectTopRankingRows(67, (byte) -66);
         }
     }
 

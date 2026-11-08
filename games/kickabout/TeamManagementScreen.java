@@ -116,7 +116,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
           java.math.BigInteger var2 = (java.math.BigInteger) null;
           TeamManagementScreen.writeEncryptedLoginBlock((PacketBuffer) null, (java.math.BigInteger) null, -77, 44, (byte[]) null, -52, (java.math.BigInteger) null);
         }
-        SoftwareRasterizer.a(var1.field_h, var1.field_g, var1.field_j);
+        SoftwareRasterizer.setRasterBuffer(var1.field_h, var1.field_g, var1.field_j);
         SoftwareRasterizer.setClip(var1.field_e, var1.field_l, var1.field_i, var1.field_f);
         var1.field_h = null;
         ScrollContainer.field_Ab.addLast(var1, 3);

@@ -432,7 +432,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             }
           }
           for (var8Lifetime2 = 0; FindingOpponentScreen.field_D > var8Lifetime2; var8Lifetime2++) {
-            param1[var8Lifetime2] = var18[TextLayoutLine.b(var24[CascadingMenu.field_Mb[var8Lifetime2]], 255)];
+            param1[var8Lifetime2] = var18[TextLayoutLine.bitwiseAnd(var24[CascadingMenu.field_Mb[var8Lifetime2]], 255)];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

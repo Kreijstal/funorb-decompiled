@@ -273,11 +273,11 @@ final class AuctionsScreen extends ButtonMenuScreen {
               var6[var10].drawHalfSize(-7 + (SoftwareRasterizer.field_g >> 1), var12 + 5);
             } else {
               var14 = TutorialScenerySupport.field_b[var16[var10]].toLowerCase();
-              ByteArrayPool.field_d.d(var14, (SoftwareRasterizer.field_g >> 1) + var12, 18 + var12, 65793, -1);
+              ByteArrayPool.field_d.drawCentered(var14, (SoftwareRasterizer.field_g >> 1) + var12, 18 + var12, 65793, -1);
             }
             TeamManagementScreen.e(120);
             SpriteBackgroundSupport.fillTransparentBackground(var13, (byte) -51);
-            var7[var8 >> 3][TextLayoutLine.b(3, var8 >> 1)][TextLayoutLine.b(var8, 1)] = var13;
+            var7[var8 >> 3][TextLayoutLine.bitwiseAnd(3, var8 >> 1)][TextLayoutLine.bitwiseAnd(var8, 1)] = var13;
           }
           stackIn_28_0 = var7;
           return stackIn_28_0;
@@ -374,7 +374,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         super.drawScreen(param0, param1);
         SoftwareRasterizer.fillRectangleAlpha(this.field_K.field_F, this.field_K.field_T, this.field_K.field_q, this.field_K.field_mb, 65793, 96);
         SoftwareRasterizer.fillRoundedRectangleBlended(this.field_K.field_F + 8, 23 + this.field_K.field_T, this.field_K.field_q - 16, -30 + this.field_K.field_mb, 10, 65793, 96);
-        ByteArrayPool.field_d.a(this.field_K.field_E, 13 + this.field_K.field_F, 17 + this.field_K.field_T, 16777215, -1);
+        ByteArrayPool.field_d.drawText(this.field_K.field_E, 13 + this.field_K.field_F, 17 + this.field_K.field_T, 16777215, -1);
         for (var3_int = 0; 4 > var3_int; var3_int++) {
           this.field_E[var3_int].a(false, (byte) 46);
         }
@@ -387,7 +387,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             stackIn_8_0 = BufferedSocket.field_t;
           }
           var3 = stackIn_8_0;
-          IsSixCommand.field_C.d(var3, this.field_G.field_F + (this.field_G.field_q >> 1), (this.field_G.field_mb >> 1) + this.field_G.field_T, 16777215, -1);
+          IsSixCommand.field_C.drawCentered(var3, this.field_G.field_F + (this.field_G.field_q >> 1), (this.field_G.field_mb >> 1) + this.field_G.field_T, 16777215, -1);
         }
         if (PlayArea.a(param0 ^ -97)) {
           SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX, 48, 640, 383, 0, 196);
@@ -395,7 +395,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         if (ModelMaterialDecoder.field_g ||
           NineSlicePanelPainter.field_e) {
           SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX, 48, 640, 383, 0, 196);
-          IsSixCommand.field_C.a(BufferedCacheFile.field_d, this.slideOffsetX, 0, 640, 480, 16777215, -1, 1, 1, 0);
+          IsSixCommand.field_C.drawParagraph(BufferedCacheFile.field_d, this.slideOffsetX, 0, 640, 480, 16777215, -1, 1, 1, 0);
         }
     }
 

@@ -104,7 +104,7 @@ abstract class RasterBuffer {
     }
 
     final void bindAsTarget(int param0) {
-        SoftwareRasterizer.a(this.field_b, this.field_a, this.field_e);
+        SoftwareRasterizer.setRasterBuffer(this.field_b, this.field_a, this.field_e);
         if (param0 != 32) {
           this.field_a = -72;
         }

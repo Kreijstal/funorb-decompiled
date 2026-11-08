@@ -129,15 +129,15 @@ final class WriteIntegersCommand extends ConsoleCommand {
           for (var2 = 0; 2 > var2; var2++) {
             var3 = 102 * var2 + 20;
             SoftwareRasterizer.fillRoundedRectangleBlended(var1_int, var3, 160, 92, 12, 65793, 128);
-            ByteArrayPool.field_d.d(RandomAccessCacheFile.field_f[var2].toLowerCase(), 80 + var1_int, var3 + 20, 16777215, -1);
+            ByteArrayPool.field_d.drawCentered(RandomAccessCacheFile.field_f[var2].toLowerCase(), 80 + var1_int, var3 + 20, 16777215, -1);
             var4 = AccountRegistrationPanel.field_C[var2];
             var4[0][1].drawScaledAveraged(14 + var1_int, 49 + var3, 20, 20);
             var4[1][1].drawScaledAveraged(var1_int + 14 + 38, var3 + 49, 20, 20);
             var4[2][1].drawScaledAveraged(19 + (14 + var1_int), 1 + (var3 + 49 - 20), 20, 20);
             var4[3][1].drawScaledAveraged(20 + (var1_int + 13), 49 + var3, 20, 20);
-            IsSixCommand.field_C.d(BallAgent.field_g, 14 + (var1_int + 20) + 10, 20 + var3 + 65, 16777215, -1);
+            IsSixCommand.field_C.drawCentered(BallAgent.field_g, 14 + (var1_int + 20) + 10, 20 + var3 + 65, 16777215, -1);
             if (HuffmanCodec.field_e > 1) {
-              IsSixCommand.field_C.d(PlayerModelPreview.field_k, 115 + var1_int, 20 + (var3 + 49 + 16), 16777215, -1);
+              IsSixCommand.field_C.drawCentered(PlayerModelPreview.field_k, 115 + var1_int, 20 + (var3 + 49 + 16), 16777215, -1);
               var5 = DebugConsole.field_y[var2][1];
               var6 = 180 * var5.field_o >> 8;
               var7 = 180 * var5.field_v >> 8;

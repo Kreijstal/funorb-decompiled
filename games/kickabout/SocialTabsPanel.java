@@ -135,7 +135,7 @@ final class SocialTabsPanel {
     final void layout(int param0, int param1, int param2, int param3, byte param4) {
         int var6 = 24;
         int var7 = 5;
-        this.tabs.a(true, param3, param0, var6, var7, param2, param1);
+        this.tabs.setBoundsAndUpdateTabs(true, param3, param0, var6, var7, param2, param1);
         MarkerSliderPainter.field_f.setBounds(true, TriangleMesh.field_R.field_q, 0, 0, LineupPositionSupport.field_c);
         int var8 = 17 % ((-10 - param4) / 63);
         AlphaContainer.field_E.setBounds(true, -2 - TeamSelectionAgent.field_f + (TriangleMesh.field_R.field_q - 80) - 2, 0, 2 + LineupPositionSupport.field_c, 18);
@@ -197,12 +197,12 @@ final class SocialTabsPanel {
           PlayerStatSortCriterion.field_n = new int[16];
           TrinketUnlockNotice.field_a = new byte[16][];
           for (var3Lifetime2 = 0; var3Lifetime2 < 210; var3Lifetime2++) {
-            LoginKind.field_b[var3Lifetime2] = SoftwareDrawingSupport.a(var13, var3Lifetime2, 210);
+            LoginKind.field_b[var3Lifetime2] = SoftwareDrawingSupport.createRotatingArcMask(var13, var3Lifetime2, 210);
           }
           var4Lifetime2 = -20 % ((param0 + 71) / 47);
           for (var3Lifetime3 = 0; var3Lifetime3 < 16; var3Lifetime3++) {
             PlayerStatSortCriterion.field_n[var3Lifetime3] = (-(90 * var3Lifetime3) + 1440 >> 4) + 72;
-            TrinketUnlockNotice.field_a[var3Lifetime3] = SoftwareDrawingSupport.a(var14, var3Lifetime3, 16, PlayerStatSortCriterion.field_n[var3Lifetime3]);
+            TrinketUnlockNotice.field_a[var3Lifetime3] = SoftwareDrawingSupport.createFadingRadialMask(var14, var3Lifetime3, 16, PlayerStatSortCriterion.field_n[var3Lifetime3]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -204,7 +204,7 @@ final class BlackFadeScreen extends AppScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_4_0 = PainterStyle.a((byte) -127, param0.length, 0, param0);
+            stackIn_4_0 = PainterStyle.decodeCp1252((byte) -127, param0.length, 0, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

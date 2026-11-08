@@ -44,7 +44,7 @@ abstract class ConsolePanel implements OverlayLayer {
           var6 = var5;
           for (var7 = 0; var7 < var6.length; var7++) {
             var8 = var6[var7];
-            if (this.field_d.a(var8) >= var4_int) {
+            if (this.field_d.stringWidth(var8) >= var4_int) {
               var9 = this.b(0, var8, var4_int);
               var10 = (TextLine) (var9.g(24009));
               while (var10 != null) {
@@ -109,7 +109,7 @@ abstract class ConsolePanel implements OverlayLayer {
           var6 = 0;
           var4Lifetime1 = var6;
           while (this.field_c.length > var6) {
-            this.field_d.a(this.field_c[var6], 10 + this.field_j.field_F, var3Lifetime1, 13421772, -1);
+            this.field_d.drawText(this.field_c[var6], 10 + this.field_j.field_F, var3Lifetime1, 13421772, -1);
             var3Lifetime1 = var3Lifetime1 + this.field_f;
             var6++;
           }
@@ -141,7 +141,7 @@ abstract class ConsolePanel implements OverlayLayer {
           var4 = new IntrusiveDeque();
           while (param1 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var5 = this.field_d.a(param1);
+            var5 = this.field_d.stringWidth(param1);
             var6 = param1;
             if (var5 > param2) {
               var7 = param1.length() - 1;
@@ -156,7 +156,7 @@ abstract class ConsolePanel implements OverlayLayer {
                 break;
               }
               if (var7 == 0) {
-                var5 = this.field_d.a(param1);
+                var5 = this.field_d.stringWidth(param1);
                 var7 = -1 + param1.length();
                 while (param2 < var5) {
                   incrementValue$2 = var7;
@@ -342,7 +342,7 @@ abstract class ConsolePanel implements OverlayLayer {
           var4 = new UiLayoutNode(0L, (UiLayoutNode) null, param1);
           var4.field_X = this.field_d;
           var4.field_y = param0;
-          var4.setBounds(true, this.field_d.a(var4.field_E), 5, 0, this.field_f);
+          var4.setBounds(true, this.field_d.stringWidth(var4.field_E), 5, 0, this.field_f);
           if (param2 > 0) {
             var5 = (String) null;
             this.print((String) null, (byte) -100);
@@ -476,7 +476,7 @@ abstract class ConsolePanel implements OverlayLayer {
           if (null != this.field_c) {
             var3 = 0;
             for (var4 = 0; var4 < this.field_c.length; var4++) {
-              var5 = this.field_d.a(this.field_c[var4]);
+              var5 = this.field_d.stringWidth(this.field_c[var4]);
               if (var3 < var5) {
                 var3 = var5;
               }

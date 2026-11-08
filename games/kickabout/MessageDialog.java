@@ -288,7 +288,7 @@ class MessageDialog extends PopupDialog {
         int var6 = -20 + this.dialogWidth(-1379118556);
         int var7 = -20 + this.dialogHeight((byte) 80) - 80;
         SoftwareRasterizer.fillRoundedRectangleBlended(var4, var5, var6, var7, 10, 65793, 140);
-        ByteArrayPool.field_d.a(this.field_u, 5 + var4, var5 - 12, 16777215, -1);
+        ByteArrayPool.field_d.drawText(this.field_u, 5 + var4, var5 - 12, 16777215, -1);
         int var8 = 25 + param2 + 35;
         if (27 == this.field_y) {
           var8 -= 15;
@@ -296,7 +296,7 @@ class MessageDialog extends PopupDialog {
         if (param0 >= -11) {
           return;
         }
-        IsSixCommand.field_C.a(this.field_v, -15 + this.dialogWidth(-1379118556) + (param1 + (-10 - this.field_s)), var8, this.field_s, this.field_C, 16777215, -1, 0, 1, 16);
+        IsSixCommand.field_C.drawParagraph(this.field_v, -15 + this.dialogWidth(-1379118556) + (param1 + (-10 - this.field_s)), var8, this.field_s, this.field_C, 16777215, -1, 0, 1, 16);
         if (this.field_t != null) {
           this.field_t.drawCentered((var7 >> 1) + var5, 23, (this.field_t.getWidth(0) >> 1) + (var4 + 15));
           return;

@@ -198,7 +198,7 @@ final class TournamentLobbyScreen extends AppScreen {
         int var2 = 20;
         SoftwareRasterizer.fillRoundedRectangleBlended(-(this.field_A >> 1) + 320, var2, this.field_A, this.field_n, 8, 0, 128);
         SoftwareRasterizer.fillRoundedRectangleBlended(-(-20 + this.field_A >> 1) + 320, var2 + 10, this.field_A - 20, 30, 8, 65793, 128);
-        ByteArrayPool.field_d.d("<u=ffffff>" + LoggedPlayer.field_e[2].toUpperCase() + "</u> " + (null != this.field_r ? this.field_r : ""), 320, var2 + 30, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered("<u=ffffff>" + LoggedPlayer.field_e[2].toUpperCase() + "</u> " + (null != this.field_r ? this.field_r : ""), 320, var2 + 30, 16777215, -1);
         var2 = var2 + AchievementSubmission.field_l;
         int var3 = 22;
         int var4 = 80;
@@ -207,32 +207,32 @@ final class TournamentLobbyScreen extends AppScreen {
         var2 += 60;
         AuctionListing.a(var5, -22914, var3, var6, var4);
         SoftwareRasterizer.fillRoundedRectangleBlended(-(-60 + this.field_A >> 1) + 320, 10 + var2, -60 + this.field_A, 30, 8, 65793, 128);
-        ByteArrayPool.field_d.d(ProxyAuthenticationRequiredException.field_f.toUpperCase(), 320, var2 + 30, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(ProxyAuthenticationRequiredException.field_f.toUpperCase(), 320, var2 + 30, 16777215, -1);
         var2 += 120;
-        SoftwareDrawingSupport.a(250, var2, ArchivePreloader.field_j, this.field_O, (String[]) null, 160, 21, this.field_Q.length, this.field_Q, -1);
+        SoftwareDrawingSupport.drawStatisticsTable(250, var2, ArchivePreloader.field_j, this.field_O, (String[]) null, 160, 21, this.field_Q.length, this.field_Q, -1);
         var2 = var2 + 32 * this.field_O.length;
         var2 += 20;
         SoftwareRasterizer.fillRoundedRectangleBlended(320 - (this.field_A - 60 >> 1), var2 + 10, -60 + this.field_A, 30, 8, 65793, 128);
-        ByteArrayPool.field_d.d(LocalizedTextLoader.field_b.toUpperCase(), 320, 30 + var2, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(LocalizedTextLoader.field_b.toUpperCase(), 320, 30 + var2, 16777215, -1);
         var2 += 120;
-        SoftwareDrawingSupport.a(250, var2, FixedVelocitySupport.field_c, this.field_D, (String[]) null, 160, 21, this.field_Q.length, this.field_Q, -1);
+        SoftwareDrawingSupport.drawStatisticsTable(250, var2, FixedVelocitySupport.field_c, this.field_D, (String[]) null, 160, 21, this.field_Q.length, this.field_Q, -1);
         var2 = var2 + this.field_D.length * param0;
         var2 += 20;
         SoftwareRasterizer.fillRoundedRectangleBlended(320 - (-60 + this.field_A >> 1), var2 + 10, this.field_A - 60, 30, 8, 65793, 128);
-        ByteArrayPool.field_d.d(TeamSelectionAgent.field_j.toUpperCase(), 320, var2 + 30, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(TeamSelectionAgent.field_j.toUpperCase(), 320, var2 + 30, 16777215, -1);
         var2 += 120;
-        SoftwareDrawingSupport.a(250, var2, SortCriterion.field_g, this.field_Y, new String[]{"", "%"}, 160, 21, this.field_Q.length, this.field_Q, -1);
+        SoftwareDrawingSupport.drawStatisticsTable(250, var2, SortCriterion.field_g, this.field_Y, new String[]{"", "%"}, 160, 21, this.field_Q.length, this.field_Q, -1);
         var2 = var2 + this.field_Y.length * 32;
         var2 += 20;
         TeamManagementScreen.e(117);
         if (this.field_k != 0 &&
           this.field_h > this.field_k) {
           SoftwareRasterizer.fillRoundedRectangleBlended(this.field_m, this.field_u, 570, 12, 3, this.field_i ? 11184810 : this.field_s, 128);
-          ByteArrayPool.field_d.d(ButtonMenuScreen.field_h, this.field_m + 285, -1 + this.field_u + 12, this.field_i ? 65793 : 11184810, -1);
+          ByteArrayPool.field_d.drawCentered(ButtonMenuScreen.field_h, this.field_m + 285, -1 + this.field_u + 12, this.field_i ? 65793 : 11184810, -1);
         }
         if (this.field_h != 0) {
           SoftwareRasterizer.fillRoundedRectangleBlended(this.field_G, this.field_q, 570, 12, 3, this.field_U ? 11184810 : this.field_s, 128);
-          ByteArrayPool.field_d.d(ContextMenu.field_Ib, this.field_G + 285, 12 + (this.field_q - 1), !this.field_U ? 11184810 : 65793, -1);
+          ByteArrayPool.field_d.drawCentered(ContextMenu.field_Ib, this.field_G + 285, 12 + (this.field_q - 1), !this.field_U ? 11184810 : 65793, -1);
         }
     }
 
@@ -832,13 +832,13 @@ final class TournamentLobbyScreen extends AppScreen {
         } else {
           stackIn_3_2 = this.field_r;
         }
-        ((CoverageBitmapFont) (Object) stackIn_2_0).d(((StringBuilder) (Object) stackIn_2_1).append(stackIn_3_2).toString(), 320, 50, 16777215, -1);
+        ((CoverageBitmapFont) (Object) stackIn_2_0).drawCentered(((StringBuilder) (Object) stackIn_2_1).append(stackIn_3_2).toString(), 320, 50, 16777215, -1);
         AuctionListing.a(640, -22914, 0, 88, 60);
         SoftwareRasterizer.fillRoundedRectangleBlended(224, 66, 372, 50, 8, 65793, 196);
-        ByteArrayPool.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClubStateFactory.field_e, new String[]{LobbyGameRecord.field_g[this.field_W].toLowerCase()}), 410, 82, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClubStateFactory.field_e, new String[]{LobbyGameRecord.field_g[this.field_W].toLowerCase()}), 410, 82, 16777215, -1);
         var2 = 46;
         SoftwareRasterizer.fillRoundedRectangleBlended(var2, 66, 175, 50, 8, 65793, 196);
-        ByteArrayPool.field_d.d(TexturedPanelPainter.field_g, var2 + 87, 82, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(TexturedPanelPainter.field_g, var2 + 87, 82, 16777215, -1);
         TeamManagementScreen.e(120);
         var3 = 17;
         var4 = -var3 + 88;
@@ -858,17 +858,17 @@ final class TournamentLobbyScreen extends AppScreen {
             stackIn_17_0 = (var8 != 0) ? 5592405 : 16777215;
             var9 = stackIn_17_0;
             AuctionListing.a(var2 + var5, -22914, 20 + var2, var4 + 20, var4);
-            if (-20 + var5 >= ByteArrayPool.field_d.a(var7)) {
-              ByteArrayPool.field_d.d(var7, var2 + (var5 >> 1), var4 + 13, var9, -1);
+            if (-20 + var5 >= ByteArrayPool.field_d.stringWidth(var7)) {
+              ByteArrayPool.field_d.drawCentered(var7, var2 + (var5 >> 1), var4 + 13, var9, -1);
             } else {
-              var10 = (double)(ByteArrayPool.field_d.a(var7) + 20 - var5);
+              var10 = (double)(ByteArrayPool.field_d.stringWidth(var7) + 20 - var5);
               var12 = -(int)(var10 * Math.sin((double)this.field_E / 50.0) - 5.0);
-              ByteArrayPool.field_d.d(var7, var2 + (var5 >> 1) + var12, 13 + var4, var9, -1);
+              ByteArrayPool.field_d.drawCentered(var7, var2 + (var5 >> 1) + var12, 13 + var4, var9, -1);
             }
             TeamManagementScreen.e(param0 + 21236);
             if (var8 != 0) {
-              SoftwareRasterizer.drawLineBlendedInclusive(-(ByteArrayPool.field_d.a(var7) >> 1) + (var5 >> 1) + (var2 - 8), 8 + var4, 8 + ((var5 >> 1) + var2) + (ByteArrayPool.field_d.a(var7) >> 1), var4 + 8, 11141377, 196);
-              SoftwareRasterizer.drawLineBlendedInclusive(-(ByteArrayPool.field_d.a(var7) >> 1) + ((var5 >> 1) + var2 - 8), var4 + 9, (var5 >> 1) + (var2 + (ByteArrayPool.field_d.a(var7) >> 1)) + 8, var4 + 9, 11141377, 196);
+              SoftwareRasterizer.drawLineBlendedInclusive(-(ByteArrayPool.field_d.stringWidth(var7) >> 1) + (var5 >> 1) + (var2 - 8), 8 + var4, 8 + ((var5 >> 1) + var2) + (ByteArrayPool.field_d.stringWidth(var7) >> 1), var4 + 8, 11141377, 196);
+              SoftwareRasterizer.drawLineBlendedInclusive(-(ByteArrayPool.field_d.stringWidth(var7) >> 1) + ((var5 >> 1) + var2 - 8), var4 + 9, (var5 >> 1) + (var2 + (ByteArrayPool.field_d.stringWidth(var7) >> 1)) + 8, var4 + 9, 11141377, 196);
             }
             MySquadScreen.field_U[this.field_H[var6]].c(var2, var4 - 1);
           }
@@ -891,7 +891,7 @@ final class TournamentLobbyScreen extends AppScreen {
             }
           }
         } else {
-          ByteArrayPool.field_d.a(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ValidationState.field_a, new String[]{"<col=FF0000>" + Integer.toString(1 + this.field_x / 50) + "</col>"}), 224, 90, 372, 320, 16777215, -1, 1, 1, 0);
+          ByteArrayPool.field_d.drawParagraph(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ValidationState.field_a, new String[]{"<col=FF0000>" + Integer.toString(1 + this.field_x / 50) + "</col>"}), 224, 90, 372, 320, 16777215, -1, 1, 1, 0);
         }
     }
 
@@ -993,7 +993,7 @@ final class TournamentLobbyScreen extends AppScreen {
         } else {
           stackIn_11_2 = "";
         }
-        ((CoverageBitmapFont) (Object) stackIn_10_0).d(((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).toString(), 320, 50, 16777215, -1);
+        ((CoverageBitmapFont) (Object) stackIn_10_0).drawCentered(((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).toString(), 320, 50, 16777215, -1);
         var5 = 110;
         var6 = 40;
         var7 = (var5 << 1) / 3;
@@ -1048,7 +1048,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (var2 <= 1) {
           var13--;
         }
-        ByteArrayPool.field_d.d(LobbyGameRecord.field_g[var13].toLowerCase(), var11, var12 + (-(var6 >> 1) - 4), 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(LobbyGameRecord.field_g[var13].toLowerCase(), var11, var12 + (-(var6 >> 1) - 4), 16777215, -1);
         for (var14_int = 0; var2 > var14_int; var14_int++) {
           if (null != this.field_T) {
             stackIn_49_0 = this.field_T;
@@ -1104,7 +1104,7 @@ final class TournamentLobbyScreen extends AppScreen {
                 stackIn_72_0 = stackIn_69_0[stackIn_69_1[stackIn_70_2]];
               }
               var17_ref_String = stackIn_72_0;
-              SoftwareDrawingSupport.a(var15_ref_kp, var16_ref_String, var17_ref_String, var11 - (var5 >> 1), var12 - (var6 >> 1), var5, var6);
+              SoftwareDrawingSupport.drawMatchScoreSummary(var15_ref_kp, var16_ref_String, var17_ref_String, var11 - (var5 >> 1), var12 - (var6 >> 1), var5, var6);
             }
           }
           if (var2 - 1 != var14_int) {
@@ -1150,7 +1150,7 @@ final class TournamentLobbyScreen extends AppScreen {
             var12 = var10;
             var13--;
             if (var13 >= 0) {
-              ByteArrayPool.field_d.d(LobbyGameRecord.field_g[var13].toLowerCase(), var11, -4 + var12 - (var6 >> 1), 16777215, -1);
+              ByteArrayPool.field_d.drawCentered(LobbyGameRecord.field_g[var13].toLowerCase(), var11, -4 + var12 - (var6 >> 1), 16777215, -1);
             }
           }
         }
@@ -1161,8 +1161,8 @@ final class TournamentLobbyScreen extends AppScreen {
           var15 = (var6 << 1) + (var6 >> 1);
           var12 = var12 + var15;
           AuctionListing.a(var11 + var5, -22914, var11 - var5, -(var6 >> 1) + var12, -var6 + var12);
-          SoftwareRasterizer.fillRoundedRectangleBlended(-(ByteArrayPool.field_d.a(WeightedLruCache.field_g) >> 1) + var11 - 10, var12 - var6, 20 + ByteArrayPool.field_d.a(WeightedLruCache.field_g), var6, 8, 65793, 128);
-          ByteArrayPool.field_d.d(WeightedLruCache.field_g, var11, var12 + (-(var6 >> 1) - 4), -1, -1);
+          SoftwareRasterizer.fillRoundedRectangleBlended(-(ByteArrayPool.field_d.stringWidth(WeightedLruCache.field_g) >> 1) + var11 - 10, var12 - var6, 20 + ByteArrayPool.field_d.stringWidth(WeightedLruCache.field_g), var6, 8, 65793, 128);
+          ByteArrayPool.field_d.drawCentered(WeightedLruCache.field_g, var11, var12 + (-(var6 >> 1) - 4), -1, -1);
           TeamManagementScreen.e(126);
           SoftwareRasterizer.fillRectangleAlpha(-(var5 >> 1) + var11, -(var6 >> 1) + var12, var5, var6, 65793, 128);
           WriteIntegersCommand.field_E[6].c(var11 + (var5 >> 1) - (WriteIntegersCommand.field_E[6].field_o - 4), -(WriteIntegersCommand.field_E[6].field_v >> 1) + var12);
@@ -1184,7 +1184,7 @@ final class TournamentLobbyScreen extends AppScreen {
             stackIn_107_0 = DiskCacheRequest.field_w;
           }
           var18 = stackIn_107_0;
-          ByteArrayPool.field_d.d(var18, 10 - (WriteIntegersCommand.field_E[6].field_o >> 1) + var11, 4 + var12, 16777215, -1);
+          ByteArrayPool.field_d.drawCentered(var18, 10 - (WriteIntegersCommand.field_E[6].field_o >> 1) + var11, 4 + var12, 16777215, -1);
         }
     }
 
@@ -1240,7 +1240,7 @@ final class TournamentLobbyScreen extends AppScreen {
           ScrollPane.a(var4, -123, 14 + var3);
           ScrollPane.a(var4, param0 + 113, MarkerSliderPainter.field_n + (30 + var3));
           var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NanoTickClock.field_o, new String[]{TutorialScenerySupport.field_b[ClassDescriptorSupport.field_h]});
-          ConsoleTokenCursor.field_d.a(var8, var3 + 20, var4, var7, -1);
+          ConsoleTokenCursor.field_d.drawText(var8, var3 + 20, var4, var7, -1);
           TeamManagementScreen.e(118);
         }
     }

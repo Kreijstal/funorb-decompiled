@@ -183,7 +183,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         }
         BitmapFont var5 = ModelMaterial.field_a;
         if (null != this.field_H) {
-          var5.a(CheatCodeListener.field_d, param2 + this.field_t, param3 + this.field_g, this.field_n, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_p);
+          var5.drawParagraph(CheatCodeListener.field_d, param2 + this.field_t, param3 + this.field_g, this.field_n, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_p);
         }
     }
 

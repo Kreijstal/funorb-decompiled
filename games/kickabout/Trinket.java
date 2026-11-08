@@ -274,13 +274,13 @@ final class Trinket {
                 }
                 boolean decompiledSharedTail0 = (InstrumentNoteMask.field_i != 256);
                 if (!decompiledSharedTail0) {
-                  SoftwareDrawingSupport.b(var6_ref_byte__, -48 + var2_int, var3 - 48, 96, 96);
+                  SoftwareDrawingSupport.drawPackedShadowMask(var6_ref_byte__, -48 + var2_int, var3 - 48, 96, 96);
                   decompiledSharedTail0 = (var9 != 0);
                 }
                 if (decompiledSharedTail0) {
                   var7 = 96 * InstrumentNoteMask.field_i >> 8;
                   var8 = 48 * InstrumentNoteMask.field_i >> 8;
-                  SoftwareDrawingSupport.a(var6_ref_byte__, var2_int - var8, var3 - var8, 96, 96, var7, var7);
+                  SoftwareDrawingSupport.drawScaledPackedShadowMask(var6_ref_byte__, var2_int - var8, var3 - var8, 96, 96, var7, var7);
                 }
                 if (var9 == 0) {
                   return;
@@ -293,10 +293,10 @@ final class Trinket {
               }
               var6 = stackIn_49_0;
               CanvasResizePolicy.a(param0.field_U, param0.field_mb, param0.field_R, false, var6);
-              SpritePixelSupport.a(BuyPitchDialog.field_F, var2_int - 48, var3 - 48);
+              SpritePixelSupport.drawSpriteShadowMask(BuyPitchDialog.field_F, var2_int - 48, var3 - 48);
               return;
             }
-            SpritePixelSupport.a(var2_int << 4, var3 << 4, 28 * InstrumentNoteMask.field_i >> 4, 11, ClientUiOverlay.field_e);
+            SpritePixelSupport.drawRadialShadow(var2_int << 4, var3 << 4, 28 * InstrumentNoteMask.field_i >> 4, 11, ClientUiOverlay.field_e);
             return;
           }
           return;
@@ -333,7 +333,7 @@ final class Trinket {
           var3 = 0;
           while (var3 < 15) {
             var2.drawSilhouette(-2, -2, 16777215);
-            SoftwareRasterizer.b(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
               return;
@@ -587,7 +587,7 @@ final class Trinket {
             if (var6 == 2) {
               var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{TrinketTile.field_Kb});
               var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{var3});
-              var7 = -485 + WeightedCacheEntry.field_s.field_q + (RotaryDialPainter.field_b.field_q + (FootballerAgent.field_i.a(var8) - FootballerAgent.field_i.a(var4)));
+              var7 = -485 + WeightedCacheEntry.field_s.field_q + (RotaryDialPainter.field_b.field_q + (FootballerAgent.field_i.stringWidth(var8) - FootballerAgent.field_i.stringWidth(var4)));
               if (0 > var7) {
                 var7 = 0;
               }
@@ -630,7 +630,7 @@ final class Trinket {
                 var4 = "<col=999999>" + var4 + MidiPcmStream.field_t + "</col>";
                 var5 = "";
               }
-              var9 = FootballerAgent.field_i.a(var4);
+              var9 = FootballerAgent.field_i.stringWidth(var4);
               if (!PitchDecorationSupport.hasSavedInputLayout(119)) {
                 if (RotaryDialPainter.field_b.field_gb &&
                   BytePlusOneCommand.field_A - RotaryDialPainter.field_b.field_F < var9) {

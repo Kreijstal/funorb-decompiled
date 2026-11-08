@@ -73,7 +73,7 @@ final class BinaryBitmapFont extends BitmapFont {
         BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.field_a, this.field_B[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphVerticalAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var14 = 0;
         int var9 = param1 + param2 * SoftwareRasterizer.field_g;
         int var10 = SoftwareRasterizer.field_g - param3;
@@ -313,7 +313,7 @@ final class BinaryBitmapFont extends BitmapFont {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyphVertical(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var13 = 0;
         int var8 = param1 + param2 * SoftwareRasterizer.field_g;
         int var9 = SoftwareRasterizer.field_g - param3;

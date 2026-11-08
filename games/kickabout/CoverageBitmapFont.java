@@ -4,7 +4,7 @@
 final class CoverageBitmapFont extends BitmapFont {
     private byte[][] field_B;
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyphVertical(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -205,7 +205,7 @@ final class CoverageBitmapFont extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphVerticalAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var9;
         int var10;
         int var11;

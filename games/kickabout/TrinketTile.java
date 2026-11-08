@@ -77,7 +77,7 @@ final class TrinketTile extends UiLayoutNode {
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
-          SoftwareRasterizer.a(var16, var5, var6);
+          SoftwareRasterizer.setRasterBuffer(var16, var5, var6);
           ChatComposeSupport.field_h = QuickChatMenuBuilder.buildCategoryMenu(param2 ^ -32, var4, FullscreenErrorDialog.field_S, NameSuggestionsPanel.field_E, RegistrationRequestState.field_a);
           LeaguesHelpScreen.field_E.field_jb = new IntrusiveDeque();
           return;
@@ -135,11 +135,11 @@ final class TrinketTile extends UiLayoutNode {
           SoftwareRasterizer.field_h < this.field_T) {
           return;
         }
-        ByteArrayPool.field_d.a(this.field_zb, this.field_F + 50, (this.field_mb >> 1) + this.field_T, 16777215, -1);
+        ByteArrayPool.field_d.drawText(this.field_zb, this.field_F + 50, (this.field_mb >> 1) + this.field_T, 16777215, -1);
         if (param0 != -76) {
           this.field_Db = 84;
         }
-        IsSixCommand.field_C.c(this.field_Eb, this.field_F + 160, -6 + this.field_T + this.field_mb, this.c(true), -1);
+        IsSixCommand.field_C.drawRightAligned(this.field_Eb, this.field_F + 160, -6 + this.field_T + this.field_mb, this.c(true), -1);
     }
 
     static {

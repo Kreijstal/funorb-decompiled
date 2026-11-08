@@ -70,9 +70,9 @@ final class DraggableWidget extends SingleChildContainer {
             SoftwareRasterizer.clearFramebuffer();
             var7.c(4, 4);
             SpritePixelSupport.adjustSpriteHsv(LobbyGameRecord.field_m, 0.0, 1.3, 1.2);
-            SoftwareDrawingSupport.a(LobbyGameRecord.field_m, 65793);
-            SoftwareDrawingSupport.a(LobbyGameRecord.field_m, 16777215);
-            SoftwareDrawingSupport.a(LobbyGameRecord.field_m, 7829367);
+            SoftwareDrawingSupport.outlineSpriteInPlace(LobbyGameRecord.field_m, 65793);
+            SoftwareDrawingSupport.outlineSpriteInPlace(LobbyGameRecord.field_m, 16777215);
+            SoftwareDrawingSupport.outlineSpriteInPlace(LobbyGameRecord.field_m, 7829367);
             AuctionListing.a(95, -22914, 14, 88, 22);
             var12 = new int[255];
             var11 = var12;
@@ -80,7 +80,7 @@ final class DraggableWidget extends SingleChildContainer {
             for (var9 = 0; var9 < 255; var9++) {
               var8[var9] = 65793 * var9;
             }
-            SpritePixelSupport.a(20, 40, -20 + SoftwareRasterizer.field_g, 40, 28, 40, var12);
+            SpritePixelSupport.drawGlowingLine(20, 40, -20 + SoftwareRasterizer.field_g, 40, 28, 40, var12);
             TeamManagementScreen.e(119);
             TeamManagementScreen.e(param6 + 123);
             DualLinkNode.field_k = param0;

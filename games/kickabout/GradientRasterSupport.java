@@ -74,7 +74,7 @@ final class GradientRasterSupport {
             var13 = param8;
             var14 = param3;
             var15 = 8355711 & var17[var11] >> 1;
-            var10[var11] = TextLayoutLine.b(var13 >> 9, 65280) + TextLayoutLine.b(var12 >> 1, 16711680) + TextLayoutLine.b(255, var14 >> 17) + var15;
+            var10[var11] = TextLayoutLine.bitwiseAnd(var13 >> 9, 65280) + TextLayoutLine.bitwiseAnd(var12 >> 1, 16711680) + TextLayoutLine.bitwiseAnd(255, var14 >> 17) + var15;
             param8 = param8 + param1;
             param3 = param3 + param7;
             param2++;

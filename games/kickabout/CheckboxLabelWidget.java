@@ -227,7 +227,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                 if (param0 &&
                   this.field_lb) {
                   if (this.field_gb) {
-                    this.field_X.c(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
+                    this.field_X.drawRightAligned(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
                     var6.c(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
                     return;
                   }
@@ -236,7 +236,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                     SoftwareRasterizer.drawRoundedRectangle(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7);
                   }
                 }
-                this.field_X.c(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
+                this.field_X.drawRightAligned(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
                 var6.c(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
                 return;
               }
@@ -275,7 +275,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
             SoftwareRasterizer.drawRoundedRectangle(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7Lifetime1);
           }
         }
-        this.field_X.c(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
+        this.field_X.drawRightAligned(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
         var6.c(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
     }
 
@@ -283,7 +283,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
         try {
           this.field_X = param1;
           this.field_Hb = param0;
-          this.field_zb = 45 + this.field_X.a(param0);
+          this.field_zb = 45 + this.field_X.stringWidth(param0);
           this.field_mb = 30;
           this.field_q = -1 == param2 ? this.field_zb : param2;
         } catch (RuntimeException runtimeException) {

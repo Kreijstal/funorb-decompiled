@@ -29,7 +29,7 @@ final class WidgetTheme {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_a.a(param3);
+          var5_int = this.field_a.stringWidth(param3);
           var6 = this.field_a.field_L + this.field_a.field_p;
           var7 = param0;
           if (var7 + var5_int + 6 > SoftwareRasterizer.field_g) {
@@ -39,10 +39,10 @@ final class WidgetTheme {
           if (!(var6 + var8 + 6 <= SoftwareRasterizer.field_f)) {
             var8 = -6 + (SoftwareRasterizer.field_f - var6);
           }
-          SoftwareRasterizer.e(var7, var8, 6 + var5_int, 6 + var6, this.field_b);
+          SoftwareRasterizer.drawRectangle(var7, var8, 6 + var5_int, 6 + var6, this.field_b);
           int var9 = -76 / ((param2 - 58) / 54);
           SoftwareRasterizer.fillRect(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_t);
-          this.field_a.a(param3, var7 + 3, 3 + var8 + this.field_a.field_L, this.field_b, -1);
+          this.field_a.drawText(param3, var7 + 3, 3 + var8 + this.field_a.field_L, this.field_b, -1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wc.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -126,9 +126,9 @@ final class WidgetTheme {
         this.field_b = 15658734;
         this.field_j = 15658734;
         this.field_f = -1;
-        var4.a(0, param1 ^ -8811).b(-2, 15658734).a(true, TrinketCountSortCriterion.createPanelSprites(7829367, 10066329, 8947848, (byte) -88));
-        var4.a(1, -12085).a(true, TrinketCountSortCriterion.createPanelSprites(13421772, 10066329, 11184810, (byte) 46));
-        var4.a(3, -12085).a(true, TrinketCountSortCriterion.createPanelSprites(10066329, 7829367, 8947848, (byte) 46)).a((byte) -90, 1).b((byte) 111, 1);
+        var4.createStateStyle(0, param1 ^ -8811).withTextColor(-2, 15658734).withPanelSprites(true, TrinketCountSortCriterion.createPanelSprites(7829367, 10066329, 8947848, (byte) -88));
+        var4.createStateStyle(1, -12085).withPanelSprites(true, TrinketCountSortCriterion.createPanelSprites(13421772, 10066329, 11184810, (byte) 46));
+        var4.createStateStyle(3, -12085).withPanelSprites(true, TrinketCountSortCriterion.createPanelSprites(10066329, 7829367, 8947848, (byte) 46)).withOffsetX((byte) -90, 1).withOffsetY((byte) 111, 1);
         Sprite[] var5 = new Sprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
@@ -140,22 +140,22 @@ final class WidgetTheme {
         }
         try {
           var5[4] = (Sprite) ((Object) var18);
-          var4.a(4, -12085).a(true, (byte) 113).a(true, var5);
-          var4.a(5, -12085).a(true, InstrumentEnvelope.createPanelSpriteSlices(65793, (byte) 115, 0, 0, 0)).a(true, (byte) -90).b(param1 - 3424, -1);
+          var4.createStateStyle(4, -12085).withFlushPreviousLayer(true, (byte) 113).withPanelSprites(true, var5);
+          var4.createStateStyle(5, -12085).withPanelSprites(true, InstrumentEnvelope.createPanelSpriteSlices(65793, (byte) 115, 0, 0, 0)).withFlushPreviousLayer(true, (byte) -90).withTextColor(param1 - 3424, -1);
           this.field_l = (WidgetPainter) ((Object) var4);
           var6 = new StatefulTextPainter(var4, true);
           var6.field_e = 0;
           var7 = new StatefulTextPainter(var4, true);
           var7.field_e = 0;
           var7.a(ShopPlayerSlot.a((byte) 26, 8947848), -23952);
-          var7.a(1, -12085).a(true, ShopPlayerSlot.a((byte) 26, 11184810)).b(-2, 2236962);
+          var7.createStateStyle(1, -12085).withPanelSprites(true, ShopPlayerSlot.a((byte) 26, 11184810)).withTextColor(-2, 2236962);
           this.field_o = (WidgetPainter) ((Object) new CheckboxPainter(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new RotaryDialPainter(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MarkerSliderPainter(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulTextPainter();
           var17.copyStyleTo(var8, (byte) -87);
-          var8.a(0, param1 ^ -8811).a(true, TrinketCountSortCriterion.createPanelSprites(10066329, 7829367, 15658734, (byte) -118)).b(-2, 1118481).a(-1, true);
-          var8.a(4, param1 ^ -8811).a(true, (byte) -58).a(true, var5);
+          var8.createStateStyle(0, param1 ^ -8811).withPanelSprites(true, TrinketCountSortCriterion.createPanelSprites(10066329, 7829367, 15658734, (byte) -118)).withTextColor(-2, 1118481).withShadowColor(-1, true);
+          var8.createStateStyle(4, param1 ^ -8811).withFlushPreviousLayer(true, (byte) -58).withPanelSprites(true, var5);
           this.field_h = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
@@ -166,8 +166,8 @@ final class WidgetTheme {
           var10[4].field_y = new int[]{6710886, 7829367};
           var11 = new StatefulTextPainter();
           var12 = new StatefulTextPainter();
-          var11.a(0, var9, 79);
-          var12.a(0, var10, -77);
+          var11.setStatePanelSprites(0, var9, 79);
+          var12.setStatePanelSprites(0, var10, -77);
           var13 = new Sprite(7, 4);
           var13.field_y = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new StatefulTextPainter(var4, true);
@@ -251,7 +251,7 @@ final class WidgetTheme {
             var7 = this.field_a.field_p + this.field_a.field_G;
           }
           var8 = SoftwareRasterizer.field_g >> 2;
-          var9 = this.field_a.a(param1);
+          var9 = this.field_a.stringWidth(param1);
           var10 = this.field_a.field_G + this.field_a.field_p;
           var11 = 1;
           if (var8 < var9 ||
@@ -269,7 +269,7 @@ final class WidgetTheme {
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_a.a(ConsoleTokenParser.field_a[var13Lifetime2]);
+              var14 = this.field_a.stringWidth(ConsoleTokenParser.field_a[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -283,9 +283,9 @@ final class WidgetTheme {
           if (SoftwareRasterizer.field_f < var6 + (var13Lifetime1 + var10)) {
             var13Lifetime1 = -var10 + (param3 - var6);
           }
-          SoftwareRasterizer.e(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_j);
+          SoftwareRasterizer.drawRectangle(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_j);
           SoftwareRasterizer.fillRect(1 + var12, 1 + var13Lifetime1, -2 + var9 + var5_int, -2 + (var6 + var10), this.field_t);
-          this.field_a.a(param1, var12 + this.field_i, this.field_m + var13Lifetime1, var9, var10, this.field_b, -1, 0, 0, var7);
+          this.field_a.drawParagraph(param1, var12 + this.field_i, this.field_m + var13Lifetime1, var9, var10, this.field_b, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

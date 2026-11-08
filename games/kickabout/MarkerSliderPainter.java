@@ -54,7 +54,7 @@ final class MarkerSliderPainter implements WidgetPainter {
           if (null == this.field_m) {
             return;
           }
-          this.field_m.d(var13.field_q, var8 + var7 / 2, var13.field_J + this.field_m.field_x + var9, this.field_c, this.field_o);
+          this.field_m.drawCentered(var13.field_q, var8 + var7 / 2, var13.field_J + this.field_m.field_x + var9, this.field_c, this.field_o);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

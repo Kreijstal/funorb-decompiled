@@ -67,7 +67,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         var11 = Kickabout.field_G;
         var6 = 0;
         if (param3 == -1) {
-          var17 = AnimationClip.a(param4, -74, DirectByteStorage.field_m);
+          var17 = AnimationClip.tintGrayscaleSprite(param4, -74, DirectByteStorage.field_m);
           var5 = var17;
           PacketBuffer.a(param1 + 13, var17);
         } else {
@@ -79,7 +79,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             } else {
               stackIn_6_2 = PlayerContextMenu.field_m;
             }
-            var14 = AnimationClip.a(stackIn_5_0, stackIn_5_1, stackIn_6_2);
+            var14 = AnimationClip.tintGrayscaleSprite(stackIn_5_0, stackIn_5_1, stackIn_6_2);
             stackIn_8_0 = param4;
             stackIn_8_1 = -95;
             if (param0) {
@@ -87,7 +87,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             } else {
               stackIn_9_2 = SetLagCommand.field_B;
             }
-            var16 = AnimationClip.a(stackIn_8_0, stackIn_8_1, stackIn_9_2);
+            var16 = AnimationClip.tintGrayscaleSprite(stackIn_8_0, stackIn_8_1, stackIn_9_2);
             stackIn_11_0 = param4;
             stackIn_11_1 = -113;
             if (!param0) {
@@ -95,7 +95,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             } else {
               stackIn_12_2 = TooltipOverlay.field_b;
             }
-            var9_ref_ut = AnimationClip.a(stackIn_11_0, stackIn_11_1, stackIn_12_2);
+            var9_ref_ut = AnimationClip.tintGrayscaleSprite(stackIn_11_0, stackIn_11_1, stackIn_12_2);
             var15 = new Sprite(param3, var14.field_v);
             var5 = var15;
             PacketBuffer.a(-116, var15);
@@ -106,7 +106,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             var6 = 1;
             var14.d(0, 0);
           } else {
-            var13 = AnimationClip.a(param4, -85, TextHotspotWidget.field_L);
+            var13 = AnimationClip.tintGrayscaleSprite(param4, -85, TextHotspotWidget.field_L);
             var5 = var13;
             PacketBuffer.a(98, var13);
           }
@@ -123,8 +123,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             var7_ref_int__[var12] = 263172 * var12;
             var12++;
           }
-          SpritePixelSupport.a(10, 6, SoftwareRasterizer.field_g - 10, 6, 6, 8, var25);
-          SpritePixelSupport.a(10, 8, SoftwareRasterizer.field_g - 10, 8, 6, 8, var25);
+          SpritePixelSupport.drawGlowingLine(10, 6, SoftwareRasterizer.field_g - 10, 6, 6, 8, var25);
+          SpritePixelSupport.drawGlowingLine(10, 8, SoftwareRasterizer.field_g - 10, 8, 6, 8, var25);
         } else if (1 == param2) {
           PacketBuffer.a(109, var5);
           var5.drawAdditive(0, 0, 60);
@@ -135,7 +135,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           for (var8 = 0; var24.length > var8; var8++) {
             var7_ref_int__[var8] = 197379 * var8;
           }
-          SpritePixelSupport.a(4, 6, SoftwareRasterizer.field_g - 4, 6, 8, -40 + var24.length, var24);
+          SpritePixelSupport.drawGlowingLine(4, 6, SoftwareRasterizer.field_g - 4, 6, 8, -40 + var24.length, var24);
         } else if (2 == param2) {
           TeamManagementScreen.e(param1 ^ -69);
           TeamManagementScreen.e(123);
@@ -143,7 +143,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           var18 = new Sprite(var5.field_o, var5.field_v);
           var5 = var18;
           PacketBuffer.a(-45, var18);
-          SoftwareDrawingSupport.a(var19, 0, 0, 230);
+          SoftwareDrawingSupport.drawSpriteWithBrightness(var19, 0, 0, 230);
           AuctionListing.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
           var23 = new int[64];
           var20 = var23;
@@ -151,7 +151,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           for (var9 = 0; var9 < var23.length; var9++) {
             var8_ref_int__[var9] = 197379 * var9;
           }
-          SpritePixelSupport.a(4, 6, SoftwareRasterizer.field_g, 6, 8, -40 + var23.length, var23);
+          SpritePixelSupport.drawGlowingLine(4, 6, SoftwareRasterizer.field_g, 6, 8, -40 + var23.length, var23);
         } else {
           if (3 == param2) {
             SpritePixelSupport.adjustSpriteHsv(var5, 0.0, 0.0, 0.7);

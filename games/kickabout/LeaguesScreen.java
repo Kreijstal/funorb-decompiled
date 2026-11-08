@@ -86,7 +86,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           FadingSoundPlayer.field_w = FadingSoundPlayer.field_w - 1;
         }
         var5 = AnimationSkeleton.field_k;
-        if (SpriteBackgroundSupport.field_b + ByteArrayPool.field_d.a(ContextMenu.field_Jb) >= 20) {
+        if (SpriteBackgroundSupport.field_b + ByteArrayPool.field_d.stringWidth(ContextMenu.field_Jb) >= 20) {
           SpriteBackgroundSupport.field_b = SpriteBackgroundSupport.field_b - 1;
         } else {
           SpriteBackgroundSupport.field_b = 370;
@@ -193,7 +193,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         DialogOverlay.field_b.a(param0 - 592, 145, 64, 4 + (ConsoleTokenCursor.field_d.field_G + ConsoleTokenCursor.field_d.field_p), 160);
         var8.field_X = (BitmapFont) ((Object) ConsoleTokenCursor.field_d);
         DialogOverlay.field_b.field_R = null;
-        ScrollPane.field_Cb = SoftwareDrawingSupport.a(RegistrationRequestState.field_j, 7126504);
+        ScrollPane.field_Cb = SoftwareDrawingSupport.createTextButton(RegistrationRequestState.field_j, 7126504);
         ScrollPane.field_Cb.setBounds(true, ScrollPane.field_Cb.field_q, 310, 61, ScrollPane.field_Cb.field_mb);
         WelcomeDialog.field_H = new UiLayoutNode[7];
         for (var6 = 6; var6 >= 0; var6--) {
@@ -259,7 +259,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         var6 = Kickabout.field_G;
         SoftwareRasterizer.fillRectangleAlpha(AuctionTableWidget.field_Hb.field_F + this.slideOffsetX, -4 + AuctionTableWidget.field_Hb.field_T, AuctionTableWidget.field_Hb.field_q + 4, AuctionTableWidget.field_Hb.field_mb + 6, 0, 128);
         SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 20, 60, 134 + DialogOverlay.field_b.field_q + ScrollPane.field_Cb.field_q, 29, 10, 0, 128);
-        ConsoleTokenCursor.field_d.c(ArchiveNetworkClient.field_e.toUpperCase(), DialogOverlay.field_b.field_F, DialogOverlay.field_b.field_T + 15, 16777215, -1);
+        ConsoleTokenCursor.field_d.drawRightAligned(ArchiveNetworkClient.field_e.toUpperCase(), DialogOverlay.field_b.field_F, DialogOverlay.field_b.field_T + 15, 16777215, -1);
         SoftwareRasterizer.fillRectangleAlpha(DialogOverlay.field_b.field_F, DialogOverlay.field_b.field_T + 4, DialogOverlay.field_b.field_q, DialogOverlay.field_b.field_mb - 5, 7829367, 128);
         if (AuctionTableWidget.field_Hb.field_Eb.isLinked((byte) -113)) {
           var3 = AuctionTableWidget.field_Hb.field_Eb;
@@ -286,8 +286,8 @@ final class LeaguesScreen extends ButtonMenuScreen {
           AnimationSkeleton.field_k < ConsoleTokenCursor.field_h.length) {
           var3_ref = ConsoleTokenCursor.field_h[AnimationSkeleton.field_k];
         }
-        ByteArrayPool.field_d.d(var3_ref.toLowerCase(), this.slideOffsetX + 194, 156, 16679959, -1);
-        var4Lifetime1 = ByteArrayPool.field_d.a(var3_ref.toLowerCase());
+        ByteArrayPool.field_d.drawCentered(var3_ref.toLowerCase(), this.slideOffsetX + 194, 156, 16679959, -1);
+        var4Lifetime1 = ByteArrayPool.field_d.stringWidth(var3_ref.toLowerCase());
         if (SoftwareDrawingSupport.field_f != null) {
           SoftwareDrawingSupport.field_f[AnimationSkeleton.field_k].a(194 + this.slideOffsetX - (var4Lifetime1 >> 1) - 28, 146);
           SoftwareDrawingSupport.field_f[AnimationSkeleton.field_k].a(14 + ((var4Lifetime1 >> 1) + this.slideOffsetX) + 194, 146);
@@ -309,27 +309,27 @@ final class LeaguesScreen extends ButtonMenuScreen {
           AuctionTableWidget.field_Hb.field_Db.field_jb.a(false) == 0) {
           if (!PlayArea.a(100)) {
             if (!PlayerContextMenu.field_f) {
-              ByteArrayPool.field_d.d(PasswordValidator.field_k.toLowerCase(), 194 + this.slideOffsetX, 290, 16777215, -1);
+              ByteArrayPool.field_d.drawCentered(PasswordValidator.field_k.toLowerCase(), 194 + this.slideOffsetX, 290, 16777215, -1);
             } else {
               ReceivedAuctionItemRow.a(this.slideOffsetX + 194, -65, 290);
             }
           } else {
-            IsSixCommand.field_C.d(LineupPositionSupport.field_b, this.slideOffsetX + 194, 290, 16777215, -1);
+            IsSixCommand.field_C.drawCentered(LineupPositionSupport.field_b, this.slideOffsetX + 194, 290, 16777215, -1);
           }
         }
         SoftwareRasterizer.fillRectangleAlpha(AuctionTableWidget.field_Hb.field_F, 4 + (AuctionTableWidget.field_Hb.field_mb + AuctionTableWidget.field_Hb.field_T), 4 + AuctionTableWidget.field_Hb.field_q, 24, 0, 196);
         AuctionListing.a(AuctionTableWidget.field_Hb.field_F + (AuctionTableWidget.field_Hb.field_q + 2), -22914, 1 + AuctionTableWidget.field_Hb.field_F, AuctionTableWidget.field_Hb.field_T + (AuctionTableWidget.field_Hb.field_mb + 4) + 24, 4 + (AuctionTableWidget.field_Hb.field_mb + AuctionTableWidget.field_Hb.field_T));
         if (FadingSoundPlayer.field_w > 0) {
-          ByteArrayPool.field_d.d(SectorCacheStore.field_e.toLowerCase(), (AuctionTableWidget.field_Hb.field_q >> 1) + AuctionTableWidget.field_Hb.field_F, 423, 16679959, -1);
+          ByteArrayPool.field_d.drawCentered(SectorCacheStore.field_e.toLowerCase(), (AuctionTableWidget.field_Hb.field_q >> 1) + AuctionTableWidget.field_Hb.field_F, 423, 16679959, -1);
         } else {
-          ByteArrayPool.field_d.a(ContextMenu.field_Jb.toLowerCase(), SpriteBackgroundSupport.field_b + this.slideOffsetX, 423, 16679959, -1);
+          ByteArrayPool.field_d.drawText(ContextMenu.field_Jb.toLowerCase(), SpriteBackgroundSupport.field_b + this.slideOffsetX, 423, 16679959, -1);
         }
         TeamManagementScreen.e(param0 + 128);
         if (PlayArea.a(100) ||
           TextEntrySupport.field_f) {
           SoftwareRasterizer.darkenRectangle(this.slideOffsetX, 48, 450, 382);
           if (TextEntrySupport.field_f) {
-            IsSixCommand.field_C.a(PlayerMeshFactory.field_d, this.slideOffsetX, 48, 450, 382, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.drawParagraph(PlayerMeshFactory.field_d, this.slideOffsetX, 48, 450, 382, 16777215, -1, 1, 1, 0);
           }
         }
         super.drawScreen(param0, param1);

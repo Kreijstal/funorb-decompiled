@@ -24,13 +24,13 @@ final class SoftwareDrawingSupport {
     private static int[] field_o;
 
     final static void drawRectangleOutline(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareDrawingSupport.a(param0, param1, param2, param4, param5);
-        SoftwareDrawingSupport.a(param0, param1 + param3 - 1, param2, param4, param5);
-        SoftwareDrawingSupport.c(param0 + param2 - 1, param1, param3, param4, param5);
-        SoftwareDrawingSupport.c(param0, param1, param3, param4, param5);
+        SoftwareDrawingSupport.drawDashedHorizontalLineAlpha(param0, param1, param2, param4, param5);
+        SoftwareDrawingSupport.drawDashedHorizontalLineAlpha(param0, param1 + param3 - 1, param2, param4, param5);
+        SoftwareDrawingSupport.drawDashedVerticalLineAlpha(param0 + param2 - 1, param1, param3, param4, param5);
+        SoftwareDrawingSupport.drawDashedVerticalLineAlpha(param0, param1, param3, param4, param5);
     }
 
-    private final static void a(int param0, int param1, int param2, boolean param3) {
+    private final static void setCircleAlphaNoise(int param0, int param1, int param2, boolean param3) {
         int incrementValue$5 = 0;
         int incrementValue$6 = 0;
         int fieldTemp$7 = 0;
@@ -188,7 +188,7 @@ final class SoftwareDrawingSupport {
         field_o = null;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void fillRowsFromColorTable(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         for (var8 = -param7; var8 < 0; var8++) {
@@ -237,7 +237,7 @@ final class SoftwareDrawingSupport {
         param1.field_v = param0.field_v >> 1;
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void addRectangleBorderAlphaNoise(int param0, int param1, int param2, int param3, int param4) {
         int incrementValue$6 = 0;
         int fieldTemp$7 = 0;
         int incrementValue$4 = 0;
@@ -357,20 +357,20 @@ final class SoftwareDrawingSupport {
         int var7 = 640 - param3;
         int var8 = param2 * 640;
         if (param5 == 256) {
-          SoftwareDrawingSupport.a(SoftwareRasterizer.field_a, param0.field_y, 0, param6, param1 + var8, var7, param3, param4);
+          SoftwareDrawingSupport.fillRowsFromColorTable(SoftwareRasterizer.field_a, param0.field_y, 0, param6, param1 + var8, var7, param3, param4);
         } else {
           if (param5 == 240) {
-            SoftwareDrawingSupport.b(SoftwareRasterizer.field_a, param0.field_y, 0, param6, param1 + var8, var7, param3, param4);
+            SoftwareDrawingSupport.blendRowsFifteenSixteenths(SoftwareRasterizer.field_a, param0.field_y, 0, param6, param1 + var8, var7, param3, param4);
           } else {
-            SoftwareDrawingSupport.a(SoftwareRasterizer.field_a, param0.field_y, 0, param6, param1 + var8, var7, param3, param4, param5);
+            SoftwareDrawingSupport.blendRowsFromColorTable(SoftwareRasterizer.field_a, param0.field_y, 0, param6, param1 + var8, var7, param3, param4, param5);
           }
         }
     }
 
-    private final static void a(String param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void drawRotatedParagraph(String param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         Sprite var8 = new Sprite(param4, param5);
         PacketBuffer.a(-79, var8);
-        param1.a(param0, 0, 0, param4, param5, param6, -1, 1, 1, 0);
+        param1.drawParagraph(param0, 0, 0, param4, param5, param6, -1, 1, 1, 0);
         TeamManagementScreen.e(126);
         var8.c(param2, param3, param7, 4096);
     }
@@ -395,7 +395,7 @@ final class SoftwareDrawingSupport {
         return stackIn_7_0;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitBrightnessPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int var12;
@@ -422,7 +422,7 @@ final class SoftwareDrawingSupport {
         }
     }
 
-    final static void a(LobbyGameRecord param0, String param1, String param2, int param3, int param4, int param5, int param6) {
+    final static void drawMatchScoreSummary(LobbyGameRecord param0, String param1, String param2, int param3, int param4, int param5, int param6) {
         double var12 = 0.0;
         int var14 = 0;
         double var7 = (double)MonotonicClock.monotonicMillis(120);
@@ -440,15 +440,15 @@ final class SoftwareDrawingSupport {
         SoftwareRasterizer.fillRectangleAlpha(param3, param4, param5 - 20, param6 - 2 >> 1, 65793, 128);
         SoftwareRasterizer.fillRectangleAlpha(param3 + param5 - 19, param4, 20, param6 - 2 >> 1, 65793, 128);
         AuctionListing.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
-        if (ByteArrayPool.field_d.a(param2) > param5 - 20) {
-          var12 = (double)(IsSixCommand.field_C.a(param2) - (param5 - 30));
+        if (ByteArrayPool.field_d.stringWidth(param2) > param5 - 20) {
+          var12 = (double)(IsSixCommand.field_C.stringWidth(param2) - (param5 - 30));
           var14 = -(int)(Math.sin(var7 / 1000.0) * var12 + var12 / 2.0);
-          IsSixCommand.field_C.a(param2, param3 + 8 + var14, param4 + (param6 >> 1) - 3, var11, -1);
+          IsSixCommand.field_C.drawText(param2, param3 + 8 + var14, param4 + (param6 >> 1) - 3, var11, -1);
         } else {
-          IsSixCommand.field_C.a(param2, param3 + 8, param4 + (param6 >> 1) - 3, var11, -1);
+          IsSixCommand.field_C.drawText(param2, param3 + 8, param4 + (param6 >> 1) - 3, var11, -1);
         }
         TeamManagementScreen.e(125);
-        IsSixCommand.field_C.d(Integer.toString(param0.field_b), param3 + param5 - 8, param4 + (param6 >> 1) - 3, var11, -1);
+        IsSixCommand.field_C.drawCentered(Integer.toString(param0.field_b), param3 + param5 - 8, param4 + (param6 >> 1) - 3, var11, -1);
         if (var9 == 0) {
           SoftwareRasterizer.drawLineBlendedInclusive(param3 + 2, param4 + (param6 >> 2), param3 + param5 - 1, param4 + (param6 >> 2), 11141377, 196);
           SoftwareRasterizer.drawLineBlendedInclusive(param3 + 2, param4 + (param6 >> 2) - 1, param3 + param5 - 1, param4 + (param6 >> 2) - 1, 11141377, 196);
@@ -456,15 +456,15 @@ final class SoftwareDrawingSupport {
         SoftwareRasterizer.fillRectangleAlpha(param3, param4 + (param6 >> 1), param5 - 20, param6 - 2 >> 1, 65793, 128);
         SoftwareRasterizer.fillRectangleAlpha(param3 + param5 - 19, param4 + (param6 >> 1), 20, param6 - 2 >> 1, 65793, 128);
         AuctionListing.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
-        if (ByteArrayPool.field_d.a(param1) > param5 - 20) {
-          var12Lifetime1 = (double)(IsSixCommand.field_C.a(param1) - (param5 - 30));
+        if (ByteArrayPool.field_d.stringWidth(param1) > param5 - 20) {
+          var12Lifetime1 = (double)(IsSixCommand.field_C.stringWidth(param1) - (param5 - 30));
           var14Lifetime1 = -(int)(Math.sin(var7 / 1000.0) * var12Lifetime1 + var12Lifetime1 / 2.0);
-          IsSixCommand.field_C.a(param1, param3 + 8 + var14Lifetime1, param4 + param6 - 3, var10, -1);
+          IsSixCommand.field_C.drawText(param1, param3 + 8 + var14Lifetime1, param4 + param6 - 3, var10, -1);
         } else {
-          IsSixCommand.field_C.a(param1, param3 + 8, param4 + param6 - 3, var10, -1);
+          IsSixCommand.field_C.drawText(param1, param3 + 8, param4 + param6 - 3, var10, -1);
         }
         TeamManagementScreen.e(124);
-        IsSixCommand.field_C.d(Integer.toString(param0.field_j), param3 + param5 - 8, param4 + param6 - 3, var10, -1);
+        IsSixCommand.field_C.drawCentered(Integer.toString(param0.field_j), param3 + param5 - 8, param4 + param6 - 3, var10, -1);
         if (var9 == 1) {
           SoftwareRasterizer.drawLineBlendedInclusive(param3 + 2, param4 + 3 * (param6 >> 2), param3 + param5 - 1, param4 + 3 * (param6 >> 2), 11141377, 196);
           SoftwareRasterizer.drawLineBlendedInclusive(param3 + 2, param4 + 3 * (param6 >> 2) - 1, param3 + param5 - 1, param4 + 3 * (param6 >> 2) - 1, 11141377, 196);
@@ -472,7 +472,7 @@ final class SoftwareDrawingSupport {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blendWhiteMaskPixels(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$11 = 0;
@@ -502,7 +502,7 @@ final class SoftwareDrawingSupport {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
+    final static void drawCircleCrosshair(int param0, int param1, int param2, int param3) {
         SoftwareRasterizer.drawCircle(param0, param1, param2, param3);
         SoftwareRasterizer.drawHorizontalLine(param0 - param2, param1, param2 << 1, param3);
         SoftwareRasterizer.drawVerticalLine(param0, param1 - param2, param2 << 1, param3);
@@ -520,12 +520,12 @@ final class SoftwareDrawingSupport {
         return var3;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
-        SoftwareDrawingSupport.a(param0, param1, param2, true);
-        SoftwareDrawingSupport.a(param0, param1, param2 - param3, false);
+    final static void addRingAlphaNoise(int param0, int param1, int param2, int param3) {
+        SoftwareDrawingSupport.setCircleAlphaNoise(param0, param1, param2, true);
+        SoftwareDrawingSupport.setCircleAlphaNoise(param0, param1, param2 - param3, false);
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    private final static void drawStatBarStrip(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var8 = 0;
         int var9 = 0;
         int var7 = 0;
@@ -544,7 +544,7 @@ final class SoftwareDrawingSupport {
         SoftwareRasterizer.fillVerticalGradientAdditive(param0, param1 + 2, 100, 4, var7Lifetime2, 0);
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blendRowsFifteenSixteenths(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -561,7 +561,7 @@ final class SoftwareDrawingSupport {
         }
     }
 
-    final static void a() {
+    final static void buildSharedControlSprites() {
         int var6 = 0;
         int stackIn_20_0 = 0;
         Object stackIn_23_0 = null;
@@ -582,7 +582,7 @@ final class SoftwareDrawingSupport {
         field_c = new ArgbSprite[3][4];
         for (var0_int = 0; var0_int < 3; var0_int++) {
           field_r[var0_int][0] = field_k[var0_int];
-          field_r[var0_int][1] = SoftwareDrawingSupport.b((Sprite) (field_r[var0_int][0]));
+          field_r[var0_int][1] = SoftwareDrawingSupport.createHighlightedArgbCopy((Sprite) (field_r[var0_int][0]));
           field_r[var0_int][2] = field_i[var0_int];
           field_r[var0_int][3] = field_k[var0_int].copyArgb();
           SpritePixelSupport.adjustSpriteHsv(field_r[var0_int][3], 0.0, 0.0, 0.7);
@@ -619,37 +619,37 @@ final class SoftwareDrawingSupport {
         var2 = stackIn_23_0;
         stackIn_26_0 = (var1Lifetime1 == 0) ? 24 : 12;
         var3 = stackIn_26_0;
-        var4 = ((BitmapFont) (var2)).a(var0) + var3;
+        var4 = ((BitmapFont) (var2)).stringWidth(var0) + var3;
         field_n = new Sprite[4];
         for (var5 = 0; var5 < 4; var5++) {
           field_n[var5] = AccountRegistrationPanel.createButtonStateSprite(true, (byte) -52, var5, var4, 7126504);
           PacketBuffer.a(-41, field_n[var5]);
-          ((BitmapFont) (var2)).d(var0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, 16777215, -1);
+          ((BitmapFont) (var2)).drawCentered(var0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, 16777215, -1);
           TeamManagementScreen.e(127);
         }
         field_g = new Sprite(102, 13);
         PacketBuffer.a(-67, field_g);
-        SoftwareDrawingSupport.a(1, 1, 10066329, 2, 20, 0, 200);
-        SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 65793);
+        SoftwareDrawingSupport.drawStatBarStrip(1, 1, 10066329, 2, 20, 0, 200);
+        SoftwareRasterizer.drawRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 65793);
         TeamManagementScreen.e(124);
         field_h = new Sprite[4][4];
         for (var5Lifetime1 = 0; var5Lifetime1 < 4; var5Lifetime1++) {
           for (var6 = 0; var6 < 4; var6++) {
             var7 = new Sprite(100, 11);
             PacketBuffer.a(81, var7);
-            SoftwareDrawingSupport.a(0, 0, LoginForm.field_B[var5Lifetime1], var6, 40, 90, 160);
+            SoftwareDrawingSupport.drawStatBarStrip(0, 0, LoginForm.field_B[var5Lifetime1], var6, 40, 90, 160);
             TeamManagementScreen.e(120);
             field_h[var5Lifetime1][var6] = var7;
           }
         }
     }
 
-    private final static UiLayoutNode a(String param0, int param1, BitmapFont param2) {
-        int var3 = param2.a(param0) + 24;
+    private final static UiLayoutNode createTextButton(String param0, int param1, BitmapFont param2) {
+        int var3 = param2.stringWidth(param0) + 24;
         return SoftwareDrawingSupport.createRenderedButton(param0, param1, param2, var3, true);
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void darkenScaledPackedMaskPixels(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -689,7 +689,7 @@ final class SoftwareDrawingSupport {
         return var0;
     }
 
-    final static void a(Sprite param0, int param1, int param2, int param3) {
+    final static void drawSpriteWithBrightness(Sprite param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -734,7 +734,7 @@ final class SoftwareDrawingSupport {
           if (var6 <= 0) {
             return;
           }
-          SoftwareDrawingSupport.a(SoftwareRasterizer.field_a, param0.field_y, 0, var5, var4, var7, var6, var8, var9, param3);
+          SoftwareDrawingSupport.blitBrightnessPixels(SoftwareRasterizer.field_a, param0.field_y, 0, var5, var4, var7, var6, var8, var9, param3);
           return;
         }
     }
@@ -765,7 +765,7 @@ final class SoftwareDrawingSupport {
         return var1;
     }
 
-    private final static ArgbSprite b(Sprite param0) {
+    private final static ArgbSprite createHighlightedArgbCopy(Sprite param0) {
         ArgbSprite var1 = ((ArgbSprite) (param0)).copyArgb();
         PacketBuffer.a(-112, var1);
         param0.drawAdditive(0, 0, 90);
@@ -773,7 +773,7 @@ final class SoftwareDrawingSupport {
         return var1;
     }
 
-    final static void b(byte[] param0, int param1, int param2, int param3, int param4) {
+    final static void drawPackedShadowMask(byte[] param0, int param1, int param2, int param3, int param4) {
         int var10 = 0;
         int var5 = param1 + param2 * SoftwareRasterizer.field_g;
         int var6 = 0;
@@ -812,12 +812,12 @@ final class SoftwareDrawingSupport {
           if (param4 <= 0) {
             return;
           }
-          SoftwareDrawingSupport.a(SoftwareRasterizer.field_a, param0, (byte) 0, (byte) var9, var6, var5, param3, param4, var7, var8 >> 3);
+          SoftwareDrawingSupport.darkenPackedMaskPixels(SoftwareRasterizer.field_a, param0, (byte) 0, (byte) var9, var6, var5, param3, param4, var7, var8 >> 3);
           return;
         }
     }
 
-    private final static void c(int param0, int param1, int param2, int param3, int param4) {
+    private final static void drawDashedVerticalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var13 = 0;
         int var5;
         int var6;
@@ -870,7 +870,7 @@ final class SoftwareDrawingSupport {
           var5[var6_int] = AccountRegistrationPanel.createButtonStateSprite(param4, (byte) -52, var6_int, param3, param1);
           PacketBuffer.a(-52, var5[var6_int]);
           var7 = param4 ? 8 : 9;
-          param2.d(param0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - var7, 16777215, -1);
+          param2.drawCentered(param0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - var7, 16777215, -1);
           TeamManagementScreen.e(122);
         }
         UiLayoutNode var6 = new UiLayoutNode();
@@ -883,14 +883,14 @@ final class SoftwareDrawingSupport {
         return var6;
     }
 
-    final static byte[] a(int[] param0, int param1, int param2, int param3) {
+    final static byte[] createFadingRadialMask(int[] param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var4 = 256 - (param2 - param1 << 8) / param2;
         ArgbSprite var5 = new ArgbSprite(param3, param3);
         PacketBuffer.a(-38, var5);
-        SoftwareRasterizer.a(SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, SoftwareRasterizer.field_g << 3, param0.length - 1, param0);
+        SoftwareRasterizer.drawRadialGlow(SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, SoftwareRasterizer.field_g << 3, param0.length - 1, param0);
         TeamManagementScreen.e(122);
         byte[] var6 = new byte[var5.field_y.length];
         for (var7 = 0; var7 < var6.length; var7++) {
@@ -921,7 +921,7 @@ final class SoftwareDrawingSupport {
         return var3;
     }
 
-    final static void a(byte[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawScaledPackedShadowMask(byte[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var13 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -952,10 +952,10 @@ final class SoftwareDrawingSupport {
           var7 = var7 + var9 * var13Lifetime2;
           var12 = var12 + var13Lifetime2;
         }
-        SoftwareDrawingSupport.a(SoftwareRasterizer.field_a, param0, 0, var7, var8, var11, var12, param5, param6, var9, var10, param3 >> 3);
+        SoftwareDrawingSupport.darkenScaledPackedMaskPixels(SoftwareRasterizer.field_a, param0, 0, var7, var8, var11, var12, param5, param6, var9, var10, param3 >> 3);
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
+    final static void addRectangleAlphaNoise(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         int incrementValue$0 = 0;
@@ -974,7 +974,7 @@ final class SoftwareDrawingSupport {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
+    final static void drawStatBar(int param0, int param1, int param2, int param3, boolean param4, int param5) {
         Sprite var6_ref_ut = null;
         int var7 = 0;
         int var8 = 0;
@@ -990,7 +990,7 @@ final class SoftwareDrawingSupport {
         if (param2 > 100) {
           var6_ref_ut = new Sprite(102, 13);
           PacketBuffer.a(73, var6_ref_ut);
-          SoftwareDrawingSupport.a(0, 0, param2 - 100, param3, false, 0);
+          SoftwareDrawingSupport.drawStatBar(0, 0, param2 - 100, param3, false, 0);
           TeamManagementScreen.e(126);
           var6_ref_ut.b(param0 + 3, param1 + 7, 128);
           param5 = param5 + (param2 - 100);
@@ -1002,14 +1002,14 @@ final class SoftwareDrawingSupport {
         AuctionListing.a(param0 + param2, -22914, param0, param1 + 11, param1);
         field_h[param3][var6].d(param0, param1);
         TeamManagementScreen.e(127);
-        SoftwareRasterizer.e(param0 - 1, param1 - 1, 102, 13, 65793);
+        SoftwareRasterizer.drawRectangle(param0 - 1, param1 - 1, 102, 13, 65793);
         if (param4) {
           PacketBuffer.a(-38, field_d);
           SoftwareRasterizer.clearFramebuffer();
           var7 = 131586;
           var8 = 10;
           var9 = 54 - (param5 != 0 ? var8 : 0);
-          ConsoleTokenCursor.field_d.c(AccountChoicePanel.field_G[param3], var9, 10, 16777215, var7);
+          ConsoleTokenCursor.field_d.drawRightAligned(AccountChoicePanel.field_G[param3], var9, 10, 16777215, var7);
           var10 = new StringBuilder(Integer.toString(param2));
           if (param5 != 0) {
             discarded$12 = var10.append("<col=");
@@ -1020,15 +1020,15 @@ final class SoftwareDrawingSupport {
             discarded$41 = var10.append("</col>");
           }
           discarded$42 = var10.append('%');
-          ConsoleTokenCursor.field_d.a(var10.toString(), var9 + 4, 10, 16777215, var7);
+          ConsoleTokenCursor.field_d.drawText(var10.toString(), var9 + 4, 10, 16777215, var7);
           TeamManagementScreen.e(127);
-          SoftwareDrawingSupport.a(field_d, 65793);
+          SoftwareDrawingSupport.outlineSpriteInPlace(field_d, 65793);
           field_d.c(param0, param1);
           return;
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void initializeAlphaNoise(int param0, int param1) {
         int var3 = 0;
         Random var2 = new Random();
         for (var3 = 0; var3 < field_o.length; var3++) {
@@ -1036,7 +1036,7 @@ final class SoftwareDrawingSupport {
         }
     }
 
-    final static int a(int param0, int param1, String[] param2, int[][] param3, String[] param4, int param5, int param6, int param7, String[] param8, int param9) {
+    final static int drawStatisticsTable(int param0, int param1, String[] param2, int[][] param3, String[] param4, int param5, int param6, int param7, String[] param8, int param9) {
         int var22 = 0;
         CoverageBitmapFont stackIn_12_0;
         String stackIn_12_1;
@@ -1081,7 +1081,7 @@ final class SoftwareDrawingSupport {
             SoftwareRasterizer.drawLineBlendedInclusive(param0, param1, param0 + var13, param1 - var12, var16, var15);
             param0++;
           }
-          SoftwareDrawingSupport.a(param2[var18], ByteArrayPool.field_d, param0, param1 - (var12 >> 1), var11, var12, 16777215, 8192);
+          SoftwareDrawingSupport.drawRotatedParagraph(param2[var18], ByteArrayPool.field_d, param0, param1 - (var12 >> 1), var11, var12, 16777215, 8192);
           param0 = param0 + var17;
         }
         param0 = var10;
@@ -1103,7 +1103,7 @@ final class SoftwareDrawingSupport {
           } else {
             stackIn_13_4 = 16777215;
           }
-          ((CoverageBitmapFont) (Object) stackIn_12_0).d(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4, -1);
+          ((CoverageBitmapFont) (Object) stackIn_12_0).drawCentered(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4, -1);
           for (var22 = 0; var22 < var14; var22++) {
             SoftwareRasterizer.fillRectangleAlpha(param0 + var22 * (var11 + var17), param1 + var19Lifetime1 * (param6 + var17), var11, param6, var20, var15);
             if (param3 != null) {
@@ -1126,7 +1126,7 @@ final class SoftwareDrawingSupport {
             } else {
               stackIn_23_4 = 16777215;
             }
-            ((CoverageBitmapFont) (Object) stackIn_22_0).d(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_23_4, -1);
+            ((CoverageBitmapFont) (Object) stackIn_22_0).drawCentered(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_23_4, -1);
           }
         }
         for (var19Lifetime2 = 0; var19Lifetime2 < 16; var19Lifetime2++) {
@@ -1138,11 +1138,11 @@ final class SoftwareDrawingSupport {
         return param1;
     }
 
-    final static UiLayoutNode a(String param0, int param1) {
-        return SoftwareDrawingSupport.a(param0, param1, ByteArrayPool.field_d);
+    final static UiLayoutNode createTextButton(String param0, int param1) {
+        return SoftwareDrawingSupport.createTextButton(param0, param1, ByteArrayPool.field_d);
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blendRowsFromColorTable(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1160,7 +1160,7 @@ final class SoftwareDrawingSupport {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, byte param2, byte param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void darkenPackedMaskPixels(int[] param0, byte[] param1, byte param2, byte param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var12 = 0;
         int incrementValue$0 = 0;
         int var13 = 0;
@@ -1198,7 +1198,7 @@ final class SoftwareDrawingSupport {
         }
     }
 
-    final static void a(byte[] param0, int param1, int param2, int param3) {
+    final static void drawWhiteAlphaMask(byte[] param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var4 = param1 + param2 * SoftwareRasterizer.field_g;
         int var5 = 0;
@@ -1237,12 +1237,12 @@ final class SoftwareDrawingSupport {
           if (var6 <= 0) {
             return;
           }
-          SoftwareDrawingSupport.a(SoftwareRasterizer.field_a, param0, var5, var4, var7, var6, var8, var9);
+          SoftwareDrawingSupport.blendWhiteMaskPixels(SoftwareRasterizer.field_a, param0, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4) {
+    private final static void drawDashedHorizontalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var13 = 0;
         int incrementValue$0 = 0;
         int var5;
@@ -1288,7 +1288,7 @@ final class SoftwareDrawingSupport {
         return;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    private final static void multiplyScaledPixels(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         long var17 = 0L;
         int var19 = 0;
         int var20 = 0;
@@ -1320,7 +1320,7 @@ final class SoftwareDrawingSupport {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    private final static void blendScaledWhiteMaskPixels(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -1350,7 +1350,7 @@ final class SoftwareDrawingSupport {
         }
     }
 
-    final static void a(Sprite param0, int param1, int param2, int param3, int param4) {
+    final static void drawScaledMultiplySprite(Sprite param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1417,12 +1417,12 @@ final class SoftwareDrawingSupport {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          SoftwareDrawingSupport.a(0, 0, 0, var7, param0.field_y, SoftwareRasterizer.field_a, 0, 0, -param4, var8, var13Lifetime2, var14, param3, var11, var12, var5);
+          SoftwareDrawingSupport.multiplyScaledPixels(0, 0, 0, var7, param0.field_y, SoftwareRasterizer.field_a, 0, 0, -param4, var8, var13Lifetime2, var14, param3, var11, var12, var5);
           return;
         }
     }
 
-    final static byte[] a(int[] param0, int param1, int param2) {
+    final static byte[] createRotatingArcMask(int[] param0, int param1, int param2) {
         int var9 = 0;
         int var10 = 0;
         int var3;
@@ -1439,7 +1439,7 @@ final class SoftwareDrawingSupport {
         var5 = var3 * var3 >> 12;
         var6 = new ArgbSprite(72, 72);
         PacketBuffer.a(-115, var6);
-        SoftwareRasterizer.a(SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, SoftwareRasterizer.field_g << 3, param0.length - 1, param0);
+        SoftwareRasterizer.drawRadialGlow(SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, SoftwareRasterizer.field_g << 3, param0.length - 1, param0);
         TeamManagementScreen.e(119);
         var7 = new byte[var6.field_y.length];
         var8 = 0;
@@ -1460,7 +1460,7 @@ final class SoftwareDrawingSupport {
         return var7;
     }
 
-    final static void a(Sprite param0, Sprite param1, int param2) {
+    final static void captureRasterThroughSpriteMask(Sprite param0, Sprite param1, int param2) {
         int var10 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -1539,7 +1539,7 @@ final class SoftwareDrawingSupport {
         return var3;
     }
 
-    final static void a(Sprite param0, int param1) {
+    final static void outlineSpriteInPlace(Sprite param0, int param1) {
         int var6 = 0;
         int var7 = 0;
         int var2;
@@ -1588,7 +1588,7 @@ final class SoftwareDrawingSupport {
         }
     }
 
-    final static void a(byte[] param0, int param1, int param2, int param3, int param4) {
+    final static void drawScaledWhiteAlphaMask(byte[] param0, int param1, int param2, int param3, int param4) {
         int var19 = 0;
         int var5 = param4;
         int var6 = param4;
@@ -1633,10 +1633,10 @@ final class SoftwareDrawingSupport {
           var11 = var11 + var15 * var19Lifetime2;
           var18 = var18 + var19Lifetime2;
         }
-        SoftwareDrawingSupport.a(SoftwareRasterizer.field_a, param0, var11, var12, var17, var18, var5, var6, var15, var16, var9);
+        SoftwareDrawingSupport.blendScaledWhiteMaskPixels(SoftwareRasterizer.field_a, param0, var11, var12, var17, var18, var5, var6, var15, var16, var9);
     }
 
-    final static UiLayoutNode a(boolean param0) {
+    final static UiLayoutNode createDefaultButtonNode(boolean param0) {
         return SoftwareDrawingSupport.createButtonNode(param0, 0);
     }
 

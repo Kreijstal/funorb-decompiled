@@ -23,14 +23,14 @@ final class BrowserUiSupport {
         try {
           var2_int = BytePlusOneCommand.field_A;
           var3 = ArchiveManager.field_m;
-          var4 = ConsoleEvaluationException.field_e.field_X.b(param1, 500);
+          var4 = ConsoleEvaluationException.field_e.field_X.wrappedLineCount(param1, 500);
           var5 = 6 + ConsoleEvaluationException.field_e.field_X.maxLineWidth(param1, 500);
           var6 = 2 + var4 * LineupPositionSupport.field_c;
           var7 = StripedProgressBar.b(var5, var2_int, 12, 127);
           var8 = MonotonicClock.placePopupVertically(var3, 20, var6, 29079);
-          SoftwareRasterizer.e(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRect(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);
-          ConsoleEvaluationException.field_e.field_X.a(param1, 3 + var7, var8 - (-1 - MatchHudSupport.field_c) - ConsoleEvaluationException.field_e.field_X.field_G, 500, 1000, 0, -1, 0, 0, LineupPositionSupport.field_c);
+          ConsoleEvaluationException.field_e.field_X.drawParagraph(param1, 3 + var7, var8 - (-1 - MatchHudSupport.field_c) - ConsoleEvaluationException.field_e.field_X.field_G, 500, 1000, 0, -1, 0, 0, LineupPositionSupport.field_c);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ar.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

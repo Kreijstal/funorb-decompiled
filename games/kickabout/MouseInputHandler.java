@@ -13,7 +13,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         SoftwareRasterizer.fillRoundedRectangleBlended(param2 - 8, param4 - 11, MarkerSliderPainter.field_n, 20, 6, param5, param1);
         String var6 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, !QuickChatCategoryCache.field_e ? SoundStreamHandle.field_l : QuickChatMenuBuilder.field_a, new String[]{TutorialScenerySupport.field_b[ClassDescriptorSupport.field_h]});
-        ConsoleTokenCursor.field_d.a(var6, param2, param4, param0, param3);
+        ConsoleTokenCursor.field_d.drawText(var6, param2, param4, param0, param3);
     }
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {

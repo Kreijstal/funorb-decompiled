@@ -313,10 +313,10 @@ final class IsaacRandom {
             }
           }
           this.field_g = this.field_g + this.field_i[var2 + 128 & 255];
-          dupTemp$1 = this.field_d + this.field_g + this.field_i[TextLayoutLine.b(255, var3 >> 2)];
+          dupTemp$1 = this.field_d + this.field_g + this.field_i[TextLayoutLine.bitwiseAnd(255, var3 >> 2)];
           var4 = dupTemp$1;
           this.field_i[var2] = dupTemp$1;
-          dupTemp$2 = this.field_i[TextLayoutLine.b(var4 >> 8 >> 2, 255)] + var3;
+          dupTemp$2 = this.field_i[TextLayoutLine.bitwiseAnd(var4 >> 8 >> 2, 255)] + var3;
           this.field_d = dupTemp$2;
           this.field_a[var2] = dupTemp$2;
         }

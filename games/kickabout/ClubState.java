@@ -1249,8 +1249,8 @@ final class ClubState {
           }
           for (var13Lifetime1 = 0; 40 > var13Lifetime1; var13Lifetime1++) {
             var14 = param1.readUnsignedByte((byte) -109);
-            this.field_N[2 * var13Lifetime1] = TextLayoutLine.b(15, var14);
-            this.field_N[1 + var13Lifetime1 * 2] = TextLayoutLine.b(241, var14) >> 4;
+            this.field_N[2 * var13Lifetime1] = TextLayoutLine.bitwiseAnd(15, var14);
+            this.field_N[1 + var13Lifetime1 * 2] = TextLayoutLine.bitwiseAnd(241, var14) >> 4;
           }
           this.field_C = param1.readUnsignedShort((byte) 81);
           this.field_b = param1.readUnsignedShort((byte) 81);

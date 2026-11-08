@@ -125,13 +125,13 @@ final class PlayerPortraitCacheEntry {
             var15 = this.portrait.field_y[var13];
             incrementValue$4 = var13;
             var13++;
-            this.portrait.field_y[incrementValue$4] = PainterStyle.a(TextLayoutLine.b(var15, -33554431) >>> 1, TextLayoutLine.b(var15, 16777215));
+            this.portrait.field_y[incrementValue$4] = PainterStyle.bitwiseOr(TextLayoutLine.bitwiseAnd(var15, -33554431) >>> 1, TextLayoutLine.bitwiseAnd(var15, 16777215));
           }
           for (var14Lifetime1 = -this.portrait.field_o; 0 > var14Lifetime1; var14Lifetime1++) {
             var15Lifetime1 = this.portrait.field_y[var13];
             incrementValue$3 = var13;
             var13++;
-            this.portrait.field_y[incrementValue$3] = PainterStyle.a(TextLayoutLine.b(var15Lifetime1, 16777215), TextLayoutLine.b(-1090519040, var15Lifetime1 >>> 2));
+            this.portrait.field_y[incrementValue$3] = PainterStyle.bitwiseOr(TextLayoutLine.bitwiseAnd(var15Lifetime1, 16777215), TextLayoutLine.bitwiseAnd(-1090519040, var15Lifetime1 >>> 2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

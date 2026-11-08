@@ -117,7 +117,7 @@ final class GameResourceLoader implements LoadingSequence {
           LoadingProgressSupport.reportStageProgress(83, 100, 10);
           var6 = SpriteResourceSupport.loadNamedSprite((byte) 100, "basic", var16, "orbcoin");
           LoggedGoal.a(var6, (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "locked")), (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "unachieved")), -123);
-          LineupPositionSupport.field_g = SpritePixelSupport.downscaleArgbByHalf(SpritePixelSupport.a(var6));
+          LineupPositionSupport.field_g = SpritePixelSupport.downscaleArgbByHalf(SpritePixelSupport.downsampleSpriteHalfToArgb(var6));
           AccountChoicePanel.field_B = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 69, "divider"));
           SocialListProtocolSupport.field_e = SpriteResourceSupport.loadNamedSprite((byte) 122, "menu", QuickChatKeysHelpPanel.field_Cb, "button_left_shine");
           GameAppletShell.field_l = SpriteResourceSupport.loadNamedSprite((byte) 106, "menu", QuickChatKeysHelpPanel.field_Cb, "button_middle_shine");
@@ -503,7 +503,7 @@ final class GameResourceLoader implements LoadingSequence {
         var5 = Kickabout.field_G;
         AnimationClip.a(0, -76, false, ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, 3, new Random()));
         CipherPacketBuffer.k(param0 ^ 12774, 7);
-        TriangleRasterizer.a(0.6000000238418579f);
+        TriangleRasterizer.setBrightnessAndRebuildPalette(0.6000000238418579f);
         GrayscalePaletteSupport.initializeGrayscalePalette(false);
         Trinket.i(18);
         AchievementSubmission.buildTrinketPreviewSprites(65280);
@@ -512,7 +512,7 @@ final class GameResourceLoader implements LoadingSequence {
         LoadingProgressSupport.reportStageProgress(118, 2, 1);
         CipherPacketBuffer.k(61, 9);
         LoadingProgressSupport.reportStageProgress(84, 6, 1);
-        SoftwareDrawingSupport.a();
+        SoftwareDrawingSupport.buildSharedControlSprites();
         LoadingProgressSupport.reportStageProgress(-46, 6, 2);
         SharedWidgetFactory.createSharedWidgets(ByteArrayPool.field_d, (byte) 113);
         LoadingProgressSupport.reportStageProgress(-89, 6, 3);
@@ -536,7 +536,7 @@ final class GameResourceLoader implements LoadingSequence {
           TeamManagementScreen.e(param0 - 12637);
           for (var4 = 0; var3.field_y.length > var4; var4++) {
             if (var3.field_y[var4] != 0) {
-              var3.field_y[var4] = PainterStyle.a(var3.field_y[var4], -16777216);
+              var3.field_y[var4] = PainterStyle.bitwiseOr(var3.field_y[var4], -16777216);
             }
           }
           var3.addOutline(-16777216);

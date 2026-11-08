@@ -77,7 +77,7 @@ final class HuffmanCodec {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var3[var10] = PainterStyle.a(var11, var12);
+                  var3[var10] = PainterStyle.bitwiseOr(var11, var12);
                   var10--;
                 }
                 if (decompiledFrameCompleted1) {
@@ -393,7 +393,7 @@ final class HuffmanCodec {
             var14 = (var13 - (-var11 + 1) >> 3) + var12;
             var8 = var8 + var11;
             var13 += 24;
-            dupTemp$0 = PainterStyle.a(var7_int, var10 >>> var13);
+            dupTemp$0 = PainterStyle.bitwiseOr(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param3[var12] = (byte)dupTemp$0;
             if (var14 > var12) {

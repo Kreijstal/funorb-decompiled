@@ -108,10 +108,10 @@ final class LoginText {
             return stackIn_2_0;
           }
           if (!param0) {
-            stackIn_7_0 = UrlRequest.field_i.a(param1);
+            stackIn_7_0 = UrlRequest.field_i.stringWidth(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = UrlRequest.field_a.a(param1);
+          stackIn_5_0 = UrlRequest.field_a.stringWidth(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

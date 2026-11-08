@@ -37,7 +37,7 @@ final class TextLineLayoutSupport {
           for (var7 = 1; var7 < param1.length(); var7++) {
             var8 = param1.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + param2.field_b[0] + param0.a(param1.substring(0, var7));
+              var6 = (var5_int >> 8) + param2.field_b[0] + param0.stringWidth(param1.substring(0, var7));
             }
             if (var6 != -1) {
               param2.field_b[var7] = var6;
@@ -45,7 +45,7 @@ final class TextLineLayoutSupport {
               if (var8 == 32) {
                 var5_int = var5_int + param3;
               }
-              param2.field_b[var7] = param2.field_b[0] + (var5_int >> 8) + param0.a(param1.substring(0, var7 + 1)) - param0.charWidth((char) var8);
+              param2.field_b[var7] = param2.field_b[0] + (var5_int >> 8) + param0.stringWidth(param1.substring(0, var7 + 1)) - param0.charWidth((char) var8);
             }
             if (var8 == 62) {
               var6 = -1;

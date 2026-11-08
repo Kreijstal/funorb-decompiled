@@ -29,7 +29,7 @@ final class ServerMessageScreen extends ButtonMenuScreen {
         int var6 = ((BitmapFont) ((Object) var3)).field_p + ((BitmapFont) ((Object) var3)).field_G;
         int var7 = ((BitmapFont) ((Object) var3)).paragraphHeight(MatchTextInputOverlay.field_p, -var4 + var5, var6);
         SoftwareRasterizer.fillRoundedRectangleBlended(-12 + var4, 155, -var4 + (var5 + 24), 12 + var7, 6, 0, 128);
-        ((BitmapFont) ((Object) var3)).a(MatchTextInputOverlay.field_p, var4, 160, -var4 + var5, 1000, 16777215, -1, 0, 0, var6);
+        ((BitmapFont) ((Object) var3)).drawParagraph(MatchTextInputOverlay.field_p, var4, 160, -var4 + var5, 1000, 16777215, -1, 0, 0, var6);
     }
 
     final static double a(int param0, int param1, byte param2, int param3, ColorQuantizationBox param4, int param5, int param6, int param7, int param8) {

@@ -100,13 +100,13 @@ final class TrinketPickerDialog extends MessageDialog {
             SoftwareRasterizer.fillRoundedRectangleBlended(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 65793, 128);
             SoftwareRasterizer.drawRoundedRectangle(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 6710886);
             ArchivePreloader.field_i[PacketBuffer.field_e[var6.field_Bb]].c(64 + param1, param2 + 70);
-            ByteArrayPool.field_d.d(AvailabilityCheckRequest.field_c[var6.field_Bb].toLowerCase(), (ArchivePreloader.field_i[PacketBuffer.field_e[var6.field_Bb]].field_q >> 1) + (64 + param1), 205 + param2, 16777215, -1);
+            ByteArrayPool.field_d.drawCentered(AvailabilityCheckRequest.field_c[var6.field_Bb].toLowerCase(), (ArchivePreloader.field_i[PacketBuffer.field_e[var6.field_Bb]].field_q >> 1) + (64 + param1), 205 + param2, 16777215, -1);
             var7 = new String[16];
             var8 = ByteArrayPool.field_d.wrapText(ProxyAuthenticationRequiredException.field_a[var6.field_Bb], new int[]{240}, var7);
             var9 = 0;
             var10 = ByteArrayPool.field_d.field_p + ByteArrayPool.field_d.field_L;
             for (var11 = 0; var11 < var8; var11++) {
-              ByteArrayPool.field_d.a(var7[var11].toLowerCase(), -20 + param1, var9 + 162 + param2, 300, 100, 11184810, -1, 1, 1, 0);
+              ByteArrayPool.field_d.drawParagraph(var7[var11].toLowerCase(), -20 + param1, var9 + 162 + param2, 300, 100, 11184810, -1, 1, 1, 0);
               var9 = var9 + var10;
             }
           }

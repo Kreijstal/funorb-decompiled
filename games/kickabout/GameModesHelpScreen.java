@@ -264,7 +264,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
             this.field_K[var12Lifetime4].h((byte) -123);
           }
           SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
-          IsSixCommand.field_C.a(ClientUiOverlay.field_c, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
+          IsSixCommand.field_C.drawParagraph(ClientUiOverlay.field_c, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
           SoftwareRasterizer.fillRoundedRectangleBlended(210 + this.slideOffsetX, 178, 390, 225, 10, 65793, 140);
           var12Lifetime5 = 0;
           var13 = this.slideOffsetX + 230;
@@ -275,14 +275,14 @@ final class GameModesHelpScreen extends PagedHelpScreen {
             if (var14 + var16 > var6 + var4) {
               break;
             }
-            var14 = var14 + (var10 * IsSixCommand.field_C.a(var15_ref_String, var13, var14, var9, 999, 16777215, -1, 0, 0, var10) + 20);
+            var14 = var14 + (var10 * IsSixCommand.field_C.drawParagraph(var15_ref_String, var13, var14, var9, 999, 16777215, -1, 0, 0, var10) + 20);
             var12Lifetime5++;
           }
         }
         if (this.pageIndex == 1) {
           SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
           var6 -= 50;
-          IsSixCommand.field_C.a(PopupDialog.field_h, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
+          IsSixCommand.field_C.drawParagraph(PopupDialog.field_h, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
           var4 += 50;
           for (var11Lifetime1 = 0; var11Lifetime1 < 2; var11Lifetime1++) {
             stackIn_26_0 = (1 != var11Lifetime1) ? 0 : 1;
@@ -298,13 +298,13 @@ final class GameModesHelpScreen extends PagedHelpScreen {
             var14Lifetime1 = 40 + var7;
             for (var15 = 0; SocialUiState.field_g[var11Lifetime1].length > var15; var15++) {
               var26 = SocialUiState.field_g[var11Lifetime1][var15];
-              var14Lifetime1 = var14Lifetime1 + (15 + IsSixCommand.field_C.a(var26, var13Lifetime1, var14Lifetime1, var9, 999, 16777215, -1, 0, 0, var10) * var10);
+              var14Lifetime1 = var14Lifetime1 + (15 + IsSixCommand.field_C.drawParagraph(var26, var13Lifetime1, var14Lifetime1, var9, 999, 16777215, -1, 0, 0, var10) * var10);
             }
           }
         }
         if (this.pageIndex == 2) {
           SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
-          IsSixCommand.field_C.a(DirectByteStorage.field_l, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
+          IsSixCommand.field_C.drawParagraph(DirectByteStorage.field_l, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
           SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 178, 275, 225, 10, 65793, 140);
           var4 = 195;
           var11Lifetime2 = 0;
@@ -316,7 +316,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
             var15Lifetime1 = IsSixCommand.field_C.paragraphHeight(var14_ref_String, var9, var10);
             if (var15Lifetime1 + var13Lifetime2 <= var4 + var6) {
               var11Lifetime2++;
-              var13Lifetime2 = var13Lifetime2 + (20 + IsSixCommand.field_C.a(var14_ref_String, var12Lifetime2, var13Lifetime2, var9, 999, 16777215, -1, 0, 0, var10) * var10);
+              var13Lifetime2 = var13Lifetime2 + (20 + IsSixCommand.field_C.drawParagraph(var14_ref_String, var12Lifetime2, var13Lifetime2, var9, 999, 16777215, -1, 0, 0, var10) * var10);
               continue;
             }
             break;
@@ -375,7 +375,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
                 stackIn_62_0 = stackIn_59_0[stackIn_59_1[stackIn_60_2]];
               }
               var24 = stackIn_62_0;
-              SoftwareDrawingSupport.a(var22, var23, var24, -(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), var15Lifetime1Lifetime1, var16Lifetime1);
+              SoftwareDrawingSupport.drawMatchScoreSummary(var22, var23, var24, -(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), var15Lifetime1Lifetime1, var16Lifetime1);
               SoftwareRasterizer.drawLineBlendedInclusive(-(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, -(var16Lifetime1 >> 1) + var13Lifetime2Lifetime1, 11184810, 128);
               SoftwareRasterizer.drawLineBlendedInclusive(var12Lifetime2Lifetime1 - (var15Lifetime1Lifetime1 >> 1), (var16Lifetime1 >> 1) + var13Lifetime2Lifetime1, var12Lifetime2Lifetime1 + (var15Lifetime1Lifetime1 >> 1), var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1), 11184810, 128);
               SoftwareRasterizer.drawLineBlendedInclusive(var12Lifetime2Lifetime1 - (var15Lifetime1Lifetime1 >> 1), -(var16Lifetime1 >> 1) + (var13Lifetime2Lifetime1 + 1), -(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, -1 + ((var16Lifetime1 >> 1) + var13Lifetime2Lifetime1), 11184810, 128);
@@ -432,7 +432,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
             SoftwareRasterizer.fillRoundedRectangleBlended(var13Lifetime3 - var8, var4, var5, var6, 10, 65793, 140);
             for (var15Lifetime2 = 0; PlayingView.field_y[var11Lifetime3].length > var15Lifetime2; var15Lifetime2++) {
               var27 = PlayingView.field_y[var11Lifetime3][var15Lifetime2];
-              var14Lifetime3 = var14Lifetime3 + (IsSixCommand.field_C.a(var27, var13Lifetime3, var14Lifetime3, var9, 999, 16777215, -1, 0, 0, var10) * var10 + 15);
+              var14Lifetime3 = var14Lifetime3 + (IsSixCommand.field_C.drawParagraph(var27, var13Lifetime3, var14Lifetime3, var9, 999, 16777215, -1, 0, 0, var10) * var10 + 15);
             }
           }
         }

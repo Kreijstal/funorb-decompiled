@@ -63,7 +63,7 @@ final class HighScoreSubmission extends IntrusiveNode {
               var6 = var12.length << 2;
             }
             for (var8 = 0; var6 > var8; var8++) {
-              var7[var8 >> 2] = var7[var8 >> 2] + (var2.readUnsignedByte((byte) -118) << (TextLayoutLine.b(3, var8) << 8));
+              var7[var8 >> 2] = var7[var8 >> 2] + (var2.readUnsignedByte((byte) -118) << (TextLayoutLine.bitwiseAnd(3, var8) << 8));
             }
             var5.c((byte) -109);
             return;

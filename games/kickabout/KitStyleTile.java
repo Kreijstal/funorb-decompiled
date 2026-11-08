@@ -138,10 +138,10 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
 
     public final void drawCentered(int param0, int param1, int param2) {
         AppScreen.renderModelToSprite(this.field_Eb, this.field_Db, PlayArea.field_e, -83);
-        SoftwareDrawingSupport.a(PlayArea.field_e, 131586);
-        SoftwareDrawingSupport.a(PlayArea.field_e, 16777215);
-        SoftwareDrawingSupport.a(PlayArea.field_e, 13421772);
-        SoftwareDrawingSupport.a(PlayArea.field_e, 11184810);
+        SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 131586);
+        SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 16777215);
+        SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 13421772);
+        SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 11184810);
         if (param1 != 23) {
           PcmStreamMixer var5 = (PcmStreamMixer) null;
           KitStyleTile.a(-77, (ResourceArchive) null, 47, (PcmStreamMixer) null);
@@ -216,18 +216,18 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
             if (var3 == 0) {
               if (this.field_Fb == 15 ||
                 15 == this.field_Ab) {
-                SoftwareDrawingSupport.a(PlayArea.field_e, 16777215);
-                SoftwareDrawingSupport.a(PlayArea.field_e, 7829367);
+                SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 16777215);
+                SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 7829367);
               }
             } else {
-              SoftwareDrawingSupport.a(PlayArea.field_e, 131586);
-              SoftwareDrawingSupport.a(PlayArea.field_e, 65793);
+              SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 131586);
+              SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 65793);
             }
           } else {
-            SoftwareDrawingSupport.a(PlayArea.field_e, 131586);
-            SoftwareDrawingSupport.a(PlayArea.field_e, 16777215);
-            SoftwareDrawingSupport.a(PlayArea.field_e, 13421772);
-            SoftwareDrawingSupport.a(PlayArea.field_e, 11184810);
+            SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 131586);
+            SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 16777215);
+            SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 13421772);
+            SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 11184810);
           }
           PlayArea.field_e.drawHalfSize(this.field_Jb.field_F + (-50 + this.field_Jb.field_q >> 1), (this.field_Jb.field_mb - 50 >> 1) + this.field_Jb.field_T);
         }
@@ -238,9 +238,9 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           var10.c(-(var10.field_q >> 1) + var5, var6 - (var10.field_w >> 1));
           var8 = new ArgbSprite(18, 13);
           PacketBuffer.a(param0 ^ -24576, var8);
-          ConsoleTokenCursor.field_d.d("10", SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 2, -1, -1);
-          SoftwareDrawingSupport.a(var8, -16711423);
-          SoftwareDrawingSupport.a(var8, 1996554497);
+          ConsoleTokenCursor.field_d.drawCentered("10", SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 2, -1, -1);
+          SoftwareDrawingSupport.outlineSpriteInPlace(var8, -16711423);
+          SoftwareDrawingSupport.outlineSpriteInPlace(var8, 1996554497);
           TeamManagementScreen.e(122);
           ((Sprite) ((Object) var8)).c(-(((Sprite) ((Object) var8)).field_o >> 1) + var5, -(((Sprite) ((Object) var8)).field_v >> 1) + var6);
         }
@@ -254,7 +254,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
     final static void a(int param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
         try {
           ButtonMenuScreen.field_l = GameSoundEffect.b((byte) 119) * param0 / 1000;
-          GameAppletShell.a(param1, (byte) 60);
+          GameAppletShell.decodeLogoAudio(param1, (byte) 60);
           StripedProgressBar.a((byte) 49, param1);
           CipherPacketBuffer.a(3, param1);
           RasterGammaSupport.initializeIntensityLookup(false);

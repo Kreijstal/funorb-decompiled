@@ -107,13 +107,13 @@ final class TrinketShopDialog extends MessageDialog {
           var9 = this.field_H.field_Cb.getHeight(15);
           SoftwareRasterizer.fillRoundedRectangleBlended(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
           this.field_H.field_Cb.drawCentered(var7, 23, var6);
-          IsSixCommand.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
+          IsSixCommand.field_C.drawCentered(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
           if (!(this.field_H.field_Db <= RegistrationRequestState.field_h.field_x)) {
-            IsSixCommand.field_C.d(AnimationFrameset.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
+            IsSixCommand.field_C.drawCentered(AnimationFrameset.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
           }
         }
         this.field_L.draw(117, false);
-        IsSixCommand.field_C.d(CheckboxLabelWidget.field_Bb, (this.dialogWidth(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
+        IsSixCommand.field_C.drawCentered(CheckboxLabelWidget.field_Bb, (this.dialogWidth(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
     }
 
     final static void g(int param0) {

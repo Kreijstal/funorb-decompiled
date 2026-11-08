@@ -3304,7 +3304,7 @@ final class CommonGame {
               stackIn_9_2 = null;
               stackIn_9_3 = null;
               stackIn_9_4 = var10_int;
-              if (1 != TextLayoutLine.b(this.field_c >> var10_int, 1)) {
+              if (1 != TextLayoutLine.bitwiseAnd(this.field_c >> var10_int, 1)) {
                 stackIn_10_2 = null;
                 stackIn_10_3 = null;
                 stackIn_10_5 = false;

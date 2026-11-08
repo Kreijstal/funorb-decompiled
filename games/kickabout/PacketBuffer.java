@@ -70,7 +70,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == 0) {
           return "";
         }
-        return PainterStyle.a((byte) -123, var4, var3, this.field_f);
+        return PainterStyle.decodeCp1252((byte) -123, var4, var3, this.field_f);
     }
 
     final void writeMedium(int param0, byte param1) {
@@ -393,7 +393,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == 0) {
           return "";
         }
-        return PainterStyle.a((byte) -123, var4, var2, this.field_f);
+        return PainterStyle.decodeCp1252((byte) -123, var4, var2, this.field_f);
     }
 
     final int readUnsignedShort(byte param0) {
@@ -514,7 +514,7 @@ class PacketBuffer extends IntrusiveNode {
         try {
           int var2_int = 120 % ((param0 - 9) / 46);
           ClientUiOverlay.pushRasterState(-12974);
-          SoftwareRasterizer.a(param1.field_y, param1.field_o, param1.field_v);
+          SoftwareRasterizer.setRasterBuffer(param1.field_y, param1.field_o, param1.field_v);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "iw.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

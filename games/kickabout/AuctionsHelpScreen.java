@@ -132,10 +132,10 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         if (this.pageIndex == 0) {
           SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 40, 198, 560, 200, 10, 65793, 128);
           MusicVolumeSupport.drawMessagePanel(SpriteResourceSupport.field_b, this.slideOffsetX + 40, 560, false, 0, 126);
-          ByteArrayPool.field_d.a(ClientPacketFlushSupport.field_h.toLowerCase(), 56 + this.slideOffsetX, 222, 16777215, -1);
+          ByteArrayPool.field_d.drawText(ClientPacketFlushSupport.field_h.toLowerCase(), 56 + this.slideOffsetX, 222, 16777215, -1);
           for (var3 = 0; var3 < 3; var3++) {
-            IsSixCommand.field_C.c(CipherPacketBuffer.field_t[var3], 150 + this.slideOffsetX, 256 + 50 * var3, 16777215, -1);
-            IsSixCommand.field_C.a(AuctionHelpResources.field_a[var3], this.slideOffsetX + 170, 243 + var3 * 50, 420, 300, 16777215, -1, 0, 0, 16);
+            IsSixCommand.field_C.drawRightAligned(CipherPacketBuffer.field_t[var3], 150 + this.slideOffsetX, 256 + 50 * var3, 16777215, -1);
+            IsSixCommand.field_C.drawParagraph(AuctionHelpResources.field_a[var3], this.slideOffsetX + 170, 243 + var3 * 50, 420, 300, 16777215, -1, 0, 0, 16);
           }
         } else {
           if (this.pageIndex == 1) {
@@ -152,7 +152,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
               }
               for (var7 = 0; var7 < BallAgent.field_w[var3].length; var7++) {
                 var8 = BallAgent.field_w[var3][var7];
-                var6 = var6 + (20 + IsSixCommand.field_C.a(var8, var5, var6, 245, 999, 16777215, -1, 0, 0, 16) * 16);
+                var6 = var6 + (20 + IsSixCommand.field_C.drawParagraph(var8, var5, var6, 245, 999, 16777215, -1, 0, 0, 16) * 16);
               }
             }
             for (var3 = 0; var3 < 4; var3++) {

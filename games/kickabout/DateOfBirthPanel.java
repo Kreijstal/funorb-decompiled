@@ -72,7 +72,7 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         super.drawLayer(param0, (int) (char)param1, param2, param3);
-        EmailSyntaxValidator.field_k.a(DebugConsole.field_v, 4 + param2 + this.field_t, 4 + EmailSyntaxValidator.field_k.field_G + (this.field_g + param3), 16777215, -1);
+        EmailSyntaxValidator.field_k.drawText(DebugConsole.field_v, 4 + param2 + this.field_t, 4 + EmailSyntaxValidator.field_k.field_G + (this.field_g + param3), 16777215, -1);
     }
 
     DateOfBirthPanel(int param0, int param1, int param2, int param3) {

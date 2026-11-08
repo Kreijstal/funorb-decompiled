@@ -72,10 +72,10 @@ final class ColorQuantizationBox {
           }
           var15 = ByteArrayPool.field_d;
           if (MonotonicClock.monotonicMillis(107) % 1000L < 500L) {
-            ((BitmapFont) ((Object) var15)).d(":", var11, var12, 16777215, -1);
+            ((BitmapFont) ((Object) var15)).drawCentered(":", var11, var12, 16777215, -1);
           }
-          ((BitmapFont) ((Object) var15)).c(Integer.toString(var7), var11 - 3, var12, 16777215, -1);
-          ((BitmapFont) ((Object) var15)).a(var10, var11 + 3, var12, 16777215, -1);
+          ((BitmapFont) ((Object) var15)).drawRightAligned(Integer.toString(var7), var11 - 3, var12, 16777215, -1);
+          ((BitmapFont) ((Object) var15)).drawText(var10, var11 + 3, var12, 16777215, -1);
           if (param5 >= -39) {
             field_f = (RasterBuffer) null;
           }

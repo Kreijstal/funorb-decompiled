@@ -58,7 +58,7 @@ final class NotCommand extends ConsoleCommand {
             SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
             SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
           }
-          SoftwareRasterizer.a(var16, var7, var8);
+          SoftwareRasterizer.setRasterBuffer(var16, var7, var8);
           return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
         }
         field_E = (String) null;
@@ -85,7 +85,7 @@ final class NotCommand extends ConsoleCommand {
           SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
           SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
         }
-        SoftwareRasterizer.a(var16, var7, var8);
+        SoftwareRasterizer.setRasterBuffer(var16, var7, var8);
         return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 

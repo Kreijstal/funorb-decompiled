@@ -51,7 +51,7 @@ final class WaitForPlayersView extends MatchPhaseView {
         if (param0 != 1) {
           this.drawContent(-98);
           if (this.field_a.field_f) {
-            ByteArrayPool.field_d.a("FB", 5, 17, 16777215, -1);
+            ByteArrayPool.field_d.drawText("FB", 5, 17, 16777215, -1);
             return;
           }
           return;
@@ -59,7 +59,7 @@ final class WaitForPlayersView extends MatchPhaseView {
         if (!this.field_a.field_f) {
           return;
         }
-        ByteArrayPool.field_d.a("FB", 5, 17, 16777215, -1);
+        ByteArrayPool.field_d.drawText("FB", 5, 17, 16777215, -1);
     }
 
     public static void f(int param0) {

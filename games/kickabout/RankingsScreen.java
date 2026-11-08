@@ -106,7 +106,7 @@ final class RankingsScreen extends ButtonMenuScreen {
           SoftwareRasterizer.fillRectangleAlpha(var11 + this.slideOffsetX, param8 - 17, var12Lifetime1, 25, 0, var10_int);
           var13 = param1 + (param4 + param6);
           if (param7 != -1) {
-            ConsoleTokenCursor.field_d.c(param7 + 1 + ". ", this.slideOffsetX + 35, param8, param5, -1);
+            ConsoleTokenCursor.field_d.drawRightAligned(param7 + 1 + ". ", this.slideOffsetX + 35, param8, param5, -1);
           }
           if (var13 != 0) {
             param4 = (var13 + param4 * 200) / (2 * var13);
@@ -114,18 +114,18 @@ final class RankingsScreen extends ButtonMenuScreen {
             param6 = (param6 * 200 + var13) / (2 * var13);
           }
           var15 = param3;
-          ConsoleTokenCursor.field_d.a(var15, 35 + this.slideOffsetX, param8, param5, -1);
+          ConsoleTokenCursor.field_d.drawText(var15, 35 + this.slideOffsetX, param8, param5, -1);
           var14 = Integer.toString(param0);
-          ConsoleTokenCursor.field_d.d(var14, CipherPacketBuffer.field_r[0] + this.slideOffsetX, param8, param5, -1);
+          ConsoleTokenCursor.field_d.drawCentered(var14, CipherPacketBuffer.field_r[0] + this.slideOffsetX, param8, param5, -1);
           var16 = 9999 > var13 ? Integer.toString(var13) : "9999+";
           var14Lifetime1 = var16;
-          ConsoleTokenCursor.field_d.d(var16, CipherPacketBuffer.field_r[1] + this.slideOffsetX, param8, param5, -1);
+          ConsoleTokenCursor.field_d.drawCentered(var16, CipherPacketBuffer.field_r[1] + this.slideOffsetX, param8, param5, -1);
           var17 = param4 + "%";
-          ConsoleTokenCursor.field_d.d(var17, this.slideOffsetX + CipherPacketBuffer.field_r[2], param8, param5, -1);
+          ConsoleTokenCursor.field_d.drawCentered(var17, this.slideOffsetX + CipherPacketBuffer.field_r[2], param8, param5, -1);
           var14Lifetime2 = param1 + "%";
-          ConsoleTokenCursor.field_d.d(var14Lifetime2, CipherPacketBuffer.field_r[3] + this.slideOffsetX, param8, param5, -1);
+          ConsoleTokenCursor.field_d.drawCentered(var14Lifetime2, CipherPacketBuffer.field_r[3] + this.slideOffsetX, param8, param5, -1);
           var18 = param6 + "%";
-          ConsoleTokenCursor.field_d.d(var18, this.slideOffsetX + CipherPacketBuffer.field_r[4], param8, param5, -1);
+          ConsoleTokenCursor.field_d.drawCentered(var18, this.slideOffsetX + CipherPacketBuffer.field_r[4], param8, param5, -1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rm.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -141,11 +141,11 @@ final class RankingsScreen extends ButtonMenuScreen {
 
     private final void drawLoginRequiredText(byte param0) {
         if (param0 == -4) {
-          IsSixCommand.field_C.d(LineupPositionSupport.field_b, 192 + this.slideOffsetX, ConsoleTokenCursor.field_d.field_G + 275 - 38, 16777215, -1);
+          IsSixCommand.field_C.drawCentered(LineupPositionSupport.field_b, 192 + this.slideOffsetX, ConsoleTokenCursor.field_d.field_G + 275 - 38, 16777215, -1);
           return;
         }
         field_B = (boolean[]) null;
-        IsSixCommand.field_C.d(LineupPositionSupport.field_b, 192 + this.slideOffsetX, ConsoleTokenCursor.field_d.field_G + 275 - 38, 16777215, -1);
+        IsSixCommand.field_C.drawCentered(LineupPositionSupport.field_b, 192 + this.slideOffsetX, ConsoleTokenCursor.field_d.field_G + 275 - 38, 16777215, -1);
     }
 
     final static void queueNewAuctionDialog(int param0) {
@@ -248,11 +248,11 @@ final class RankingsScreen extends ButtonMenuScreen {
         }
         var3 = 99;
         var4 = 11184810;
-        ConsoleTokenCursor.field_d.d(CachedArchiveSource.field_p, CipherPacketBuffer.field_r[0] + this.slideOffsetX, var3, var4, -1);
-        ConsoleTokenCursor.field_d.d(StreetSceneryLoader.field_e, this.slideOffsetX + CipherPacketBuffer.field_r[1], var3, var4, -1);
-        ConsoleTokenCursor.field_d.d(GoalSpriteLoader.field_e, this.slideOffsetX + CipherPacketBuffer.field_r[2], var3, var4, -1);
-        ConsoleTokenCursor.field_d.d(TeamManagementScreen.field_D, CipherPacketBuffer.field_r[3] + this.slideOffsetX, var3, var4, -1);
-        ConsoleTokenCursor.field_d.d(MouseInputHandler.field_e, CipherPacketBuffer.field_r[4] + this.slideOffsetX, var3, var4, -1);
+        ConsoleTokenCursor.field_d.drawCentered(CachedArchiveSource.field_p, CipherPacketBuffer.field_r[0] + this.slideOffsetX, var3, var4, -1);
+        ConsoleTokenCursor.field_d.drawCentered(StreetSceneryLoader.field_e, this.slideOffsetX + CipherPacketBuffer.field_r[1], var3, var4, -1);
+        ConsoleTokenCursor.field_d.drawCentered(GoalSpriteLoader.field_e, this.slideOffsetX + CipherPacketBuffer.field_r[2], var3, var4, -1);
+        ConsoleTokenCursor.field_d.drawCentered(TeamManagementScreen.field_D, CipherPacketBuffer.field_r[3] + this.slideOffsetX, var3, var4, -1);
+        ConsoleTokenCursor.field_d.drawCentered(MouseInputHandler.field_e, CipherPacketBuffer.field_r[4] + this.slideOffsetX, var3, var4, -1);
         var3 = var3 + (ConsoleTokenCursor.field_d.field_G + 8);
         if (!SocialListLayoutSupport.field_e.field_e) {
           var5 = RegistrationUiSupport.field_a;
@@ -262,7 +262,7 @@ final class RankingsScreen extends ButtonMenuScreen {
             var13 = var12;
             var13Lifetime2 = var12;
             var3 = 385 + ConsoleTokenCursor.field_d.field_G;
-            ByteArrayPool.field_d.d(var12.toLowerCase(), this.slideOffsetX + 185, 260, 16777215, -1);
+            ByteArrayPool.field_d.drawCentered(var12.toLowerCase(), this.slideOffsetX + 185, 260, 16777215, -1);
             return;
           }
           var5 = CheckboxLabelWidget.field_Fb;
@@ -290,7 +290,7 @@ final class RankingsScreen extends ButtonMenuScreen {
           }
         }
         var3Lifetime1 = 385 + ConsoleTokenCursor.field_d.field_G;
-        ByteArrayPool.field_d.d(var5.toLowerCase(), this.slideOffsetX + 185, 260, 16777215, -1);
+        ByteArrayPool.field_d.drawCentered(var5.toLowerCase(), this.slideOffsetX + 185, 260, 16777215, -1);
     }
 
     public static void f(int param0) {
