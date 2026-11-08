@@ -7,7 +7,7 @@ final class IntKeyLookup {
     static ri field_b;
     static String field_h;
     static int field_a;
-    static kc field_g;
+    static SceneWidget field_g;
     static IntrusiveDequeCursor field_d;
     static String field_e;
 
@@ -74,7 +74,7 @@ final class IntKeyLookup {
         if (SoundCache.field_a > 200) {
           var5 = (-SoundCache.field_a + 250 << 8) / 50;
         }
-        fk.setSpriteRasterTarget(rc.field_h, -23095);
+        fk.setSpriteRasterTarget(LoadingTracker.field_h, -23095);
         MeshRasterState.useRasterClip();
         SoftwareRasterizer.clear();
         cg.f(252566882);
@@ -83,7 +83,7 @@ final class IntKeyLookup {
         }
         oo.popClipState(-15405);
         if (SoundCache.field_a < 150) {
-          rc.field_h.drawHalfSize(var3, var4);
+          LoadingTracker.field_h.drawHalfSize(var3, var4);
           var6 = -125 + SoundCache.field_a;
           if (param2 != 1) {
             return;

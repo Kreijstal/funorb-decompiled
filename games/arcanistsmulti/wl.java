@@ -71,7 +71,7 @@ final class wl extends mg {
           return (jg) null;
         }
         if (!param0) {
-          fe.field_p = rm.a(var8, 80, -79);
+          fe.field_p = WhirlpoolHasher.readHuffmanString(var8, 80, -79);
           ImageProducerRasterBuffer.field_s = null;
           return new jg(param0);
         }
@@ -140,7 +140,7 @@ final class wl extends mg {
           param3 = param3 + this.field_j;
           this.a(param3, ne.field_f, this.field_T, -5187, param1);
           this.a(param3, ud.field_y, this.field_Q, -5187, param1);
-          this.a(param3, rc.field_g, this.field_J, -5187, param1);
+          this.a(param3, LoadingTracker.field_g, this.field_J, -5187, param1);
           return;
         }
         super.drawLayer((byte) -57, param1, param2, param3);
@@ -151,7 +151,7 @@ final class wl extends mg {
         param3 = param3 + this.field_j;
         this.a(param3, ne.field_f, this.field_T, -5187, param1);
         this.a(param3, ud.field_y, this.field_Q, -5187, param1);
-        this.a(param3, rc.field_g, this.field_J, -5187, param1);
+        this.a(param3, LoadingTracker.field_g, this.field_J, -5187, param1);
     }
 
     public static void releaseStatics(int param0) {
@@ -208,7 +208,7 @@ final class wl extends mg {
           return;
         }
         try {
-          vc.field_e.drawCentered(param1, (param2.field_v >> 1) + (param4 + param2.field_n), -5 + (param2.field_j + param0), 16777215, -1);
+          WidgetStyleLayer.field_e.drawCentered(param1, (param2.field_v >> 1) + (param4 + param2.field_n), -5 + (param2.field_j + param0), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "wl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

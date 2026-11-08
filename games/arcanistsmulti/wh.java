@@ -15,7 +15,7 @@ final class wh {
     static String field_j;
     static ResourceArchive field_l;
 
-    final static int a(int param0, int param1) {
+    final static int nextPowerOfTwo(int param0, int param1) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;
@@ -31,7 +31,7 @@ final class wh {
     public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 > -83) {
-          wh.a(-29);
+          wh.createSpriteFromPalette(-29);
         }
         field_e = null;
         field_h = null;
@@ -46,12 +46,12 @@ final class wh {
 
     final static void a(byte param0, boolean param1) {
         if (param0 != 117) {
-          wh.a(89);
+          wh.createSpriteFromPalette(89);
         }
         SingleChildContainer.field_z.a(param1, (byte) -127);
     }
 
-    final static Sprite a(int param0) {
+    final static Sprite createSpriteFromPalette(int param0) {
         int var4_int = 0;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 > -100) {

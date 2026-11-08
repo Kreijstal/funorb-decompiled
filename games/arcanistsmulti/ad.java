@@ -7,7 +7,7 @@ final class ad {
     static int[] field_f;
     static String field_a;
     static String field_g;
-    static kc field_c;
+    static SceneWidget field_c;
     static String field_b;
     private static String field_z;
 

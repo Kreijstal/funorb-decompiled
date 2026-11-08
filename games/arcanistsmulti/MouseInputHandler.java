@@ -49,8 +49,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (ob.field_hb != null) {
             rf.field_o = 0;
             bo.field_e = param0.getX();
-            wd.field_j = param0.getY();
-            qj.b(-26572);
+            ResizableViewResizeListener.field_j = param0.getY();
+            qj.monotonicTimeMillis(-26572);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               ValidationState.field_c = 2;
               rk.field_K = 2;
@@ -257,11 +257,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (param3) {
             if (eo.field_c.field_e != ki.field_q) {
               var13 = eo.field_c;
-              var14 = tj.a(-50, new String[]{param2}, rd.field_f);
+              var14 = tj.a(-50, new String[]{param2}, FixedViewResizeListener.field_f);
               var13.field_l.a(15, var14, (byte) -26);
             } else {
               var11 = eo.field_c;
-              var12 = tj.a(-50, new String[]{param2}, rc.field_o);
+              var12 = tj.a(-50, new String[]{param2}, LoadingTracker.field_o);
               var11.field_l.a(16, var12, (byte) -26);
             }
           }

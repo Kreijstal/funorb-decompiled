@@ -30,7 +30,7 @@ final class ie extends ed implements ButtonListener {
         if (CacheEntry.field_o.field_e == 0) {
           return false;
         }
-        dupTemp$2 = qj.b(-26572);
+        dupTemp$2 = qj.monotonicTimeMillis(-26572);
         fo.field_d = dupTemp$2;
         hi.field_d = dupTemp$2;
         if (CacheEntry.field_o.field_e != 1) {
@@ -224,8 +224,8 @@ final class ie extends ed implements ButtonListener {
     }
 
     final static void l(byte param0) {
-        uc.field_d.a(-(!fc.field_a ? 0 : 40 + (2 + (CacheEntry.field_p + 2))) + mj.field_s.field_x, 0, 0, 18, (byte) -120);
-        StrongCacheEntry.field_z.a(CacheEntry.field_p + 42, -40 + (-CacheEntry.field_p + mj.field_s.field_x) - 2, 0, 18, (byte) -120);
+        uc.field_d.setBounds(-(!fc.field_a ? 0 : 40 + (2 + (CacheEntry.field_p + 2))) + mj.field_s.field_x, 0, 0, 18, (byte) -120);
+        StrongCacheEntry.field_z.setBounds(CacheEntry.field_p + 42, -40 + (-CacheEntry.field_p + mj.field_s.field_x) - 2, 0, 18, (byte) -120);
         nj.field_m.a(20, CacheEntry.field_p, mj.field_s.field_x, false, 0, mj.field_s.field_I - 20, 2);
         int var1 = -112 % ((param0 - 45) / 37);
     }

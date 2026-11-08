@@ -219,7 +219,7 @@ class UsernameCredentials extends LoginCredentials {
           if (param4 != -22836) {
             field_f = (String) null;
           }
-          sm.a(param4 ^ 22876, param5, param0, param1, param3, 1024, param2, param0);
+          sm.initializeAudio(param4 ^ 22876, param5, param0, param1, param3, 1024, param2, param0);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "im.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

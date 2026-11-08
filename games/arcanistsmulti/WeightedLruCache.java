@@ -68,11 +68,11 @@ final class WeightedLruCache {
             if (var19 == 0) {
               if (stackIn_10_0) {
                 var12 = ud.field_p[var9];
-                var13 = v.field_g[var9];
+                var13 = ViewportController.field_g[var9];
                 var14 = -var12 + ud.field_p[var10];
                 var15 = -var12 + ud.field_p[var11];
-                var16 = -var13 + v.field_g[var10];
-                var17 = v.field_g[var11] - var13;
+                var16 = -var13 + ViewportController.field_g[var10];
+                var17 = ViewportController.field_g[var11] - var13;
               }
               if (!stackIn_10_0 ||
                 !(-(var15 * var16) + var14 * var17 >= 0)) {
@@ -341,7 +341,7 @@ final class WeightedLruCache {
           if (ce.field_h > 0 &&
             IntrusiveNode.field_d) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_e, IntKeyLookup.field_g.field_nb);
-            LinkButtonPainter.field_h.a(param1, true);
+            LinkButtonPainter.field_h.drawFullScreen(param1, true);
           }
           if (sm.field_a <= param0 &&
             oo.field_y <= 0) {
@@ -349,7 +349,7 @@ final class WeightedLruCache {
           }
           if (so.field_j) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_e, IntKeyLookup.field_g.field_nb);
-            nl.field_Fb.a(param1, true);
+            nl.field_Fb.drawFullScreen(param1, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

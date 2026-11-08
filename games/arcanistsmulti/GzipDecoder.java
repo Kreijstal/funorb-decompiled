@@ -20,7 +20,7 @@ final class GzipDecoder {
         }
         if (ah.field_c > 0) {
           if (ob.field_Y != null) {
-            ProxySocketConnector.field_m = ob.field_Y.a(param1 + 122);
+            ProxySocketConnector.field_m = ob.field_Y.enterFullscreen(param1 + 122);
             li.a(2, 0);
           } else {
             ProxySocketConnector.field_m = CameraFollowTarget.createFullscreenCanvas(0, 0, false, fi.field_d, 480, 640);

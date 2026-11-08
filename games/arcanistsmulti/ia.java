@@ -3,8 +3,8 @@
  */
 final class ia {
     static BitmapFont field_c;
-    static kc[] field_b;
-    static kc field_a;
+    static SceneWidget[] field_b;
+    static SceneWidget field_a;
 
     public static void releaseStatics(boolean param0) {
         field_c = null;
@@ -17,7 +17,7 @@ final class ia {
 
     final static void a(int param0, int param1) {
         if (param0 != -14296) {
-          field_b = (kc[]) null;
+          field_b = (SceneWidget[]) null;
           le.h(param0 + 12303);
           return;
         }

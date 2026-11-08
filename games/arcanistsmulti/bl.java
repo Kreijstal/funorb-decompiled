@@ -25,9 +25,9 @@ final class bl extends DebouncedValidator implements TextInputListener, ak {
             if (var5 < 0) {
               var4 = var4 + qj.field_a;
             } else {
-              var6 = vh.a(true, (byte) 29, ib.field_v[var3_int]);
+              var6 = UiTheme.measureText(true, (byte) 29, ib.field_v[var3_int]);
               var4 = var4 + da.field_c;
-              var7 = vd.field_l - (var6 >> 1);
+              var7 = TextLine.field_l - (var6 >> 1);
               if (bj.a(param0, 30, var4, var6 + (la.field_d << 1), IntrusiveNodeHashTable.field_h + (bm.field_h << 1), param2, -la.field_d + var7)) {
                 stackIn_6_0 = var5;
                 return stackIn_6_0;
@@ -54,7 +54,7 @@ final class bl extends DebouncedValidator implements TextInputListener, ak {
         int var1 = -117 / ((-16 - param0) / 36);
     }
 
-    final static ij a(boolean param0, kc param1, kc param2, oo param3, kc param4) {
+    final static ij a(boolean param0, SceneWidget param1, SceneWidget param2, oo param3, SceneWidget param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
@@ -208,14 +208,14 @@ final class bl extends DebouncedValidator implements TextInputListener, ak {
 
     final static boolean d(int param0) {
         int var2 = 0;
-        oh var1 = null;
+        ReflectionCheckRequest var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
-        oh var4 = null;
+        ReflectionCheckRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var4 = (oh) (la.field_b.first(12623));
+          var4 = (ReflectionCheckRequest) (la.field_b.first(12623));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -285,7 +285,7 @@ final class bl extends DebouncedValidator implements TextInputListener, ak {
           var2_int = this.field_h.h(68);
           var3 = this.field_h.g(105);
           var4 = this.field_h.e(param0);
-          var5 = ra.a(-109);
+          var5 = ra.currentYear(-109);
           if (1890 <= var4 &&
             var4 <= -3 + var5) {
             if (tn.a(var3, (byte) 119, var4, var2_int)) {
@@ -318,7 +318,7 @@ final class bl extends DebouncedValidator implements TextInputListener, ak {
           var2_int = this.field_h.h(69);
           var3 = this.field_h.g(param0 + 134);
           var4 = this.field_h.e(true);
-          var5 = ra.a(-26);
+          var5 = ra.currentYear(-26);
           if (1890 > var4) {
             stackIn_2_0 = ra.field_k;
             return stackIn_2_0;

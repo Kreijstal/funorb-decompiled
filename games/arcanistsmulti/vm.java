@@ -23,7 +23,7 @@ final class vm {
         }
     }
 
-    final static void a(int param0) {
+    final static void pollMouseInput(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         var1 = ob.field_hb;
@@ -36,7 +36,7 @@ final class vm {
           qa.field_g = false;
           re.field_r = ValidationState.field_c;
           pb.field_h = bo.field_e;
-          ja.field_s = wd.field_j;
+          ja.field_s = ResizableViewResizeListener.field_j;
           ValidationState.field_c = param0;
         }
     }

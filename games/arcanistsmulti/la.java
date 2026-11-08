@@ -6,7 +6,7 @@ final class la implements ok {
     static int field_f;
     static boolean field_a;
     static IntrusiveDeque field_b;
-    static kc field_c;
+    static SceneWidget field_c;
     static int field_d;
 
     public static void releaseStatics(byte param0) {

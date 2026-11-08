@@ -154,13 +154,13 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.field_f;
                 switch (var2_int) {
                   case 1:
-                    if (qj.b(-26572) < field_w) {
+                    if (qj.monotonicTimeMillis(-26572) < field_w) {
                       throw new IOException();
                     }
                     var8.field_g = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_b)), var8.field_c);
                     break;
                   case 22:
-                    if (qj.b(-26572) < field_w) {
+                    if (qj.monotonicTimeMillis(-26572) < field_w) {
                       throw new IOException();
                     }
                     try {
@@ -204,7 +204,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     switch (var2_int) {
                       case 21:
-                        if (field_w > qj.b(-26572)) {
+                        if (field_w > qj.monotonicTimeMillis(-26572)) {
                           throw new IOException();
                         }
                         var8.field_g = java.net.InetAddress.getByName((String) (var8.field_b)).getAddress();
@@ -300,7 +300,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 3:
-                        if (field_w > qj.b(-26572)) {
+                        if (field_w > qj.monotonicTimeMillis(-26572)) {
                           throw new IOException();
                         }
                         var10 = (var8.field_c >> 24 & 255) + "." + ((var8.field_c & 16726054) >> 16) + "." + ((65321 & var8.field_c) >> 8) + "." + (var8.field_c & 255);
@@ -317,7 +317,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_g = ((Class) (var9[0])).getDeclaredField((String) (var9[1]));
                     break;
                   case 4:
-                    if (qj.b(-26572) < field_w) {
+                    if (qj.monotonicTimeMillis(-26572) < field_w) {
                       throw new IOException();
                     }
                     var8.field_g = new DataInputStream(((java.net.URL) (var8.field_b)).openStream());

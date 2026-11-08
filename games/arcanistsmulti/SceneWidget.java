@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kc extends to {
+class SceneWidget extends SceneWidgetNode {
     int field_I;
     int field_z;
     int field_x;
@@ -63,7 +63,7 @@ class kc extends to {
     boolean field_H;
     boolean field_ab;
 
-    private final void a(boolean param0, boolean param1, boolean param2, int param3, boolean param4, int param5, int param6, byte param7, boolean param8, boolean param9, int param10) {
+    private final void drawTree(boolean param0, boolean param1, boolean param2, int param3, boolean param4, int param5, int param6, byte param7, boolean param8, boolean param9, int param10) {
         boolean stackIn_4_0 = false;
         int var12;
         int var13;
@@ -79,7 +79,7 @@ class kc extends to {
         int var23;
         int var24_int;
         String var24;
-        kc var24_ref;
+        SceneWidget var24_ref;
         int var25;
         int var26;
         String var27;
@@ -236,26 +236,26 @@ class kc extends to {
           }
         }
         if (this.field_G != null) {
-          var24_ref = (kc) (this.field_G.first(12623));
+          var24_ref = (SceneWidget) (this.field_G.first(12623));
           while (var24_ref != null) {
-            var24_ref.a(param0, param1, param2, this.field_I, param4, this.field_x, this.field_V + var19, (byte) 84, param8, this.field_Q, this.field_nb + var20);
-            var24_ref = (kc) (this.field_G.next(0));
+            var24_ref.drawTree(param0, param1, param2, this.field_I, param4, this.field_x, this.field_V + var19, (byte) 84, param8, this.field_Q, this.field_nb + var20);
+            var24_ref = (SceneWidget) (this.field_G.next(0));
           }
         }
         SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
-    final void b(boolean param0, byte param1) {
+    final void updateInputFullScreen(boolean param0, byte param1) {
         fd.field_i = !param0 ? true : false;
         ui.field_v = !param0 ? true : false;
         if (param1 < 28) {
           this.field_xb = (Sprite[]) null;
         }
-        this.a(SoftwareRasterizer.field_e, 0, true, -1, SoftwareRasterizer.field_j, 0);
+        this.updateInputTree(SoftwareRasterizer.field_e, 0, true, -1, SoftwareRasterizer.field_j, 0);
     }
 
-    final int a(int param0, int param1) {
-        kc var5 = null;
+    final int measureContentWidth(int param0, int param1) {
+        SceneWidget var5 = null;
         int var6 = 0;
         int var5_int = 0;
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
@@ -276,19 +276,19 @@ class kc extends to {
           }
         }
         if (null != this.field_G) {
-          var5 = (kc) (this.field_G.first(12623));
+          var5 = (SceneWidget) (this.field_G.first(12623));
           while (var5 != null) {
             var6 = var5.field_x + var5.field_T;
             if (var6 > var4) {
               var4 = var6;
             }
-            var5 = (kc) (this.field_G.next(0));
+            var5 = (SceneWidget) (this.field_G.next(0));
           }
         }
         return var4;
     }
 
-    final void a(kc param0, byte param1) {
+    final void applyStyle(SceneWidget param0, byte param1) {
         boolean stackIn_93_1 = false;
         RuntimeException stackIn_104_0 = null;
         StringBuilder stackIn_104_1 = null;
@@ -430,8 +430,8 @@ class kc extends to {
         }
     }
 
-    final void a(byte param0, kc param1, kc param2, int param3) {
-        kc var6 = null;
+    final void positionAfter(byte param0, SceneWidget param1, SceneWidget param2, int param3) {
+        SceneWidget var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -448,8 +448,8 @@ class kc extends to {
             param2.field_bb = param1.field_bb + param1.field_B;
           }
           if (param0 <= 104) {
-            var6 = (kc) null;
-            this.a((kc) null, -87);
+            var6 = (SceneWidget) null;
+            this.addChild((SceneWidget) null, -87);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -472,7 +472,7 @@ class kc extends to {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, byte param4) {
         this.field_I = param3;
         this.field_db = param2;
         this.field_bb = 0;
@@ -486,27 +486,27 @@ class kc extends to {
         }
     }
 
-    kc(long param0, kc param1) {
+    SceneWidget(long param0, SceneWidget param1) {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final void e(byte param0) {
-        kc var4 = null;
+    final void markTreeDirty(byte param0) {
+        SceneWidget var4 = null;
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != 20) {
-          this.e((byte) -84);
+          this.markTreeDirty((byte) -84);
         }
         if (null != this.field_G) {
-          var4 = (kc) (this.field_G.last(true));
+          var4 = (SceneWidget) (this.field_G.last(true));
           while (var4 != null) {
             var4.field_E = true;
-            var4.e((byte) 20);
-            var4 = (kc) (this.field_G.previous((byte) 120));
+            var4.markTreeDirty((byte) 20);
+            var4 = (SceneWidget) (this.field_G.previous((byte) 120));
           }
         }
     }
 
-    final void a(kc param0, int param1) {
+    final void addChild(SceneWidget param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -539,13 +539,13 @@ class kc extends to {
         field_M = null;
         field_kb = null;
         if (param0 != -21224) {
-          kc.releaseStatics(53);
+          SceneWidget.releaseStatics(53);
         }
         field_N = null;
     }
 
-    final void a(boolean param0, int param1, boolean param2, int param3) {
-        kc var10_ref_kc = null;
+    final void layoutVerticalContent(boolean param0, int param1, boolean param2, int param3) {
+        SceneWidget var10_ref_kc = null;
         int var10 = 0;
         int var9 = 0;
         int var11 = ArcanistsMulti.field_G ? 1 : 0;
@@ -556,11 +556,11 @@ class kc extends to {
         int var9Lifetime1;
         if (!param2) {
           var9 = 0;
-          var10_ref_kc = (kc) (this.field_G.first(12623));
+          var10_ref_kc = (SceneWidget) (this.field_G.first(12623));
           while (var10_ref_kc != null) {
             var10_ref_kc.field_bb = var9 - var10_ref_kc.field_db;
             var9 = var9 + (var10_ref_kc.field_B + (var10_ref_kc.field_I + param1));
-            var10_ref_kc = (kc) (this.field_G.next(0));
+            var10_ref_kc = (SceneWidget) (this.field_G.next(0));
           }
           var8 = var9 - param1;
         }
@@ -587,7 +587,7 @@ class kc extends to {
         }
     }
 
-    private final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
+    private final void updateInputTree(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         boolean stackIn_30_1 = false;
         boolean stackIn_38_1 = false;
         int var7;
@@ -596,7 +596,7 @@ class kc extends to {
         int var10;
         int var11;
         int var12;
-        kc var13;
+        SceneWidget var13;
         int var14;
         int var7Lifetime1;
         int var7Lifetime2;
@@ -665,10 +665,10 @@ class kc extends to {
         stackIn_38_1 = (this.field_A) && (this.field_P == PacketBuffer.field_m) && (param2);
         this.field_C = stackIn_38_1;
         if (this.field_G != null) {
-          var13 = (kc) (this.field_G.last(true));
+          var13 = (SceneWidget) (this.field_G.last(true));
           while (var13 != null) {
-            var13.a(this.field_x, this.field_nb, param2, -1, this.field_I, this.field_V);
-            var13 = (kc) (this.field_G.previous((byte) 31));
+            var13.updateInputTree(this.field_x, this.field_nb, param2, -1, this.field_I, this.field_V);
+            var13 = (SceneWidget) (this.field_G.previous((byte) 31));
           }
         }
         if (this.field_A) {
@@ -701,22 +701,22 @@ class kc extends to {
         }
     }
 
-    final int c(int param0) {
+    final int getContentWidth(int param0) {
         if (param0 != -25921) {
-          this.a(97, -108, -2, -111, (byte) -5);
+          this.setBounds(97, -108, -2, -111, (byte) -5);
         }
-        return this.a(2147483647, -119);
+        return this.measureContentWidth(2147483647, -119);
     }
 
-    kc(long param0, kc param1, String param2) {
+    SceneWidget(long param0, SceneWidget param1, String param2) {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
-    final void a(boolean param0, boolean param1) {
-        this.a(false, false, param1, SoftwareRasterizer.field_j, param0, SoftwareRasterizer.field_e, 0, (byte) -78, false, false, 0);
+    final void drawFullScreen(boolean param0, boolean param1) {
+        this.drawTree(false, false, param1, SoftwareRasterizer.field_j, param0, SoftwareRasterizer.field_e, 0, (byte) -78, false, false, 0);
     }
 
-    protected kc() {
+    protected SceneWidget() {
         this.field_O = 256;
         this.field_eb = -1;
         this.field_u = 256;
@@ -734,7 +734,7 @@ class kc extends to {
         this.field_sb = -1;
     }
 
-    kc(long param0, kc param1, int param2, int param3, int param4, int param5, String param6) {
+    SceneWidget(long param0, SceneWidget param1, int param2, int param3, int param4, int param5, String param6) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -763,7 +763,7 @@ class kc extends to {
           this.field_x = param4;
           this.key = param0;
           this.field_db = param3;
-          this.a(param1, (byte) 124);
+          this.applyStyle(param1, (byte) 124);
           if (param6 != null) {
             this.field_rb = param6;
           }

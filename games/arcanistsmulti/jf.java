@@ -8,7 +8,7 @@ final class jf implements Iterator {
     private int field_b;
     private IntrusiveNode field_g;
     private pk field_c;
-    static kc field_d;
+    static SceneWidget field_d;
     private IntrusiveNode field_h;
     static String field_i;
     static boolean field_e;
@@ -146,7 +146,7 @@ final class jf implements Iterator {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param0.length() != param2) {
-                var5Lifetime6 = var7 + "; Expires=" + NodeHashTable.a(-62, 94608000000L + qj.b(-26572)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + NodeHashTable.a(-62, 94608000000L + qj.monotonicTimeMillis(-26572)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

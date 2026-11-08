@@ -117,7 +117,7 @@ final class oo extends DualLinkNode {
     }
 
     final static void popClipState(int param0) {
-        uh var1 = (uh) (Js5Transport.field_j.removeLast(true));
+        ClipState var1 = (ClipState) (Js5Transport.field_j.removeLast(true));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -130,13 +130,13 @@ final class oo extends DualLinkNode {
         }
     }
 
-    final static vh d(int param0) {
+    final static UiTheme d(int param0) {
         if (null == fm.field_c) {
-          fm.field_c = new vh();
-          fm.field_c.a((byte) -105, ia.field_c);
+          fm.field_c = new UiTheme();
+          fm.field_c.initialize((byte) -105, ia.field_c);
           fm.field_c.field_d = 14;
           fm.field_c.field_c = 2763306;
-          fm.field_c.field_q = vc.field_e;
+          fm.field_c.field_q = WidgetStyleLayer.field_e;
           fm.field_c.field_w = 6;
           fm.field_c.field_e = 0;
           fm.field_c.field_C = 7697781;

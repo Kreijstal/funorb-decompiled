@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dn extends kc {
+final class dn extends SceneWidget {
     static String field_Bb;
-    kc field_Hb;
+    SceneWidget field_Hb;
     static String field_Gb;
     in field_Eb;
-    kc field_Cb;
+    SceneWidget field_Cb;
     static int field_Jb;
     static boolean field_Db;
     static String field_Fb;
@@ -76,7 +76,7 @@ final class dn extends kc {
           stackIn_28_0 = ((var4_int & param3) == 0) ? 0 : 1;
           var6 = stackIn_28_0;
           param1.field_Db = param0.readUnsignedShort(param3 ^ -100);
-          param1.field_Yb = qj.b(param3 - 26574) - (long)param0.readInt(-10674);
+          param1.field_Yb = qj.monotonicTimeMillis(param3 - 26574) - (long)param0.readInt(-10674);
           if (var5 == 0) {
             param1.field_nc = -1;
           } else {
@@ -248,52 +248,52 @@ final class dn extends kc {
         if (!param1) {
           if (!this.field_C) {
             var8 = 0;
-            this.field_Cb.a(true, param2, var8 != 0, this.field_Hb.field_I);
+            this.field_Cb.layoutVerticalContent(true, param2, var8 != 0, this.field_Hb.field_I);
             this.a(param6, param0, false, (byte) 63, param3);
             if (param4 == -5368) {
               return var8 != 0;
             }
-            this.field_Cb = (kc) null;
+            this.field_Cb = (SceneWidget) null;
             return var8 != 0;
           }
           if (param5) {
             var8Lifetime2 = 0;
-            this.field_Cb.a(true, param2, var8Lifetime2 != 0, this.field_Hb.field_I);
+            this.field_Cb.layoutVerticalContent(true, param2, var8Lifetime2 != 0, this.field_Hb.field_I);
             this.a(param6, param0, false, (byte) 63, param3);
             if (param4 == -5368) {
               return var8Lifetime2 != 0;
             }
-            this.field_Cb = (kc) null;
+            this.field_Cb = (SceneWidget) null;
             return var8Lifetime2 != 0;
           }
           var8Lifetime3 = 1;
-          this.field_Cb.a(true, param2, var8Lifetime3 != 0, this.field_Hb.field_I);
+          this.field_Cb.layoutVerticalContent(true, param2, var8Lifetime3 != 0, this.field_Hb.field_I);
           this.a(param6, param0, false, (byte) 63, param3);
           if (param4 == -5368) {
             return var8Lifetime3 != 0;
           }
-          this.field_Cb = (kc) null;
+          this.field_Cb = (SceneWidget) null;
           return var8Lifetime3 != 0;
         }
         var8Lifetime1 = 1;
-        this.field_Cb.a(true, param2, var8Lifetime1 != 0, this.field_Hb.field_I);
+        this.field_Cb.layoutVerticalContent(true, param2, var8Lifetime1 != 0, this.field_Hb.field_I);
         this.a(param6, param0, false, (byte) 63, param3);
         if (param4 == -5368) {
           return var8Lifetime1 != 0;
         }
-        this.field_Cb = (kc) null;
+        this.field_Cb = (SceneWidget) null;
         return var8Lifetime1 != 0;
     }
 
-    dn(long param0, kc param1, kc param2, in param3) {
-        super(param0, (kc) null);
+    dn(long param0, SceneWidget param1, SceneWidget param2, in param3) {
+        super(param0, (SceneWidget) null);
         try {
-          this.field_Hb = new kc(0L, param2);
+          this.field_Hb = new SceneWidget(0L, param2);
           this.field_Eb = new in(0L, param3);
-          this.a(this.field_Hb, 49);
-          this.a(this.field_Eb, 79);
+          this.addChild(this.field_Hb, 49);
+          this.addChild(this.field_Eb, 79);
           this.field_Cb = param1;
-          this.field_Hb.a(param1, 62);
+          this.field_Hb.addChild(param1, 62);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "dn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -364,7 +364,7 @@ final class dn extends kc {
           if (AudioService.field_i != null) {
             he.field_e.writeVersionedString(AudioService.field_i, (byte) -110);
           }
-          vd.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
+          TextLine.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
           if (param2 != 116) {
             dn.releaseStatics(-40);
           }
@@ -428,7 +428,7 @@ final class dn extends kc {
         }
     }
 
-    final static kc f(byte param0) {
+    final static SceneWidget f(byte param0) {
         if (param0 >= -45) {
           dn.f((byte) 61);
           return na.f((byte) 111);

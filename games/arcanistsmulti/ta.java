@@ -5,7 +5,7 @@ final class ta {
     static int field_e;
     static String field_a;
     String field_f;
-    static kc[] field_i;
+    static SceneWidget[] field_i;
     int field_h;
     static boolean field_b;
     String field_j;

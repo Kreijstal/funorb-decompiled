@@ -7,7 +7,7 @@ final class ml extends DualLinkNode {
     ml field_s;
     int field_G;
     boolean field_D;
-    static kc field_V;
+    static SceneWidget field_V;
     int field_db;
     int field_T;
     int field_kb;
@@ -45,7 +45,7 @@ final class ml extends DualLinkNode {
     int field_ib;
     private Sprite field_Q;
     private Sprite field_fb;
-    static kc field_S;
+    static SceneWidget field_S;
     private int field_Z;
     int field_x;
     Sprite field_I;
@@ -769,7 +769,7 @@ final class ml extends DualLinkNode {
                               break regionExit1;
                             }
                             if (13 == this.field_jb &&
-                              rc.field_d != null) {
+                              LoadingTracker.field_d != null) {
                               var7 = 0;
                               if (1.5 < this.field_F) {
                                 var7 = 1;
@@ -790,9 +790,9 @@ final class ml extends DualLinkNode {
                                 }
                               }
                               if (this.field_E != -1) {
-                                rc.field_d[var7].draw(-(this.field_Y >> 1) + var41[0], -this.field_Y + var41[1]);
+                                LoadingTracker.field_d[var7].draw(-(this.field_Y >> 1) + var41[0], -this.field_Y + var41[1]);
                               } else {
-                                rc.field_d[var7].drawFlippedHorizontal(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
+                                LoadingTracker.field_d[var7].drawFlippedHorizontal(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
                               }
                               break regionExit1;
                             }
@@ -1296,7 +1296,7 @@ final class ml extends DualLinkNode {
                 var12Lifetime1 = 1;
               }
               if (var7Lifetime2 == 6) {
-                var13 = rc.field_k;
+                var13 = LoadingTracker.field_k;
                 var12Lifetime1 = 1;
               }
               if (var7Lifetime2 == 7) {
@@ -1678,8 +1678,8 @@ final class ml extends DualLinkNode {
                 }
               }
               if (var2_int == 6 &&
-                null != rc.field_k) {
-                if (13 <= SpriteState.field_v / 10 % rc.field_k.length &&
+                null != LoadingTracker.field_k) {
+                if (13 <= SpriteState.field_v / 10 % LoadingTracker.field_k.length &&
                   !this.field_z) {
                   var5_int = this.field_lb;
                   var3 = this.field_lb;
@@ -1691,7 +1691,7 @@ final class ml extends DualLinkNode {
                 }
               }
               if (2 == var2_int &&
-                null != rc.field_k) {
+                null != LoadingTracker.field_k) {
                 if (SpriteState.field_v / 10 % ij.field_Pb.length >= ij.field_Pb.length - 1 &&
                   !this.field_z) {
                   var5_int = this.field_lb;
@@ -2118,8 +2118,8 @@ final class ml extends DualLinkNode {
                                 SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                               }
                               var25 = new int[]{28, 0, 29, 33, 47, 50, var7, 0, 0};
-                              var13_ref_qb____ = new Sprite[][]{kc.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
-                              if (kc.field_kb != null) {
+                              var13_ref_qb____ = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+                              if (SceneWidget.field_kb != null) {
                                 var23 = new int[]{204, 170, 238};
                                 var3 = var23;
                                 var21 = new int[]{32, 32, 32};
@@ -2406,8 +2406,8 @@ final class ml extends DualLinkNode {
                                   var16++;
                                 }
                               }
-                              var9 = new Sprite[][]{kc.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
-                              if (kc.field_kb == null) {
+                              var9 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+                              if (SceneWidget.field_kb == null) {
                                 this.field_J = false;
                               } else {
                                 var31 = new Sprite(64, 96);

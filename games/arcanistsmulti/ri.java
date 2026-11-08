@@ -59,7 +59,7 @@ final class ri {
 
     final static boolean a(int param0) {
         oj.field_h = true;
-        tn.field_Hb = qj.b(-26572) + 15000L;
+        tn.field_Hb = qj.monotonicTimeMillis(-26572) + 15000L;
         if (param0 <= -87) {
           return fj.field_j == 11 ? true : false;
         }

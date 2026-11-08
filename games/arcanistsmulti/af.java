@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class af extends kc {
+final class af extends SceneWidget {
     static Sprite[] field_Jb;
     static int field_Eb;
     static boolean field_Ib;
-    private kc field_Db;
+    private SceneWidget field_Db;
     static String field_Gb;
     static String field_Kb;
     static String field_Cb;
     static String[] field_Bb;
     static float field_Hb;
-    private kc field_Fb;
+    private SceneWidget field_Fb;
 
     final static IndexedSprite a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
@@ -61,7 +61,7 @@ final class af extends kc {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.a(param2, param0, param3, param1, (byte) -120);
+        this.setBounds(param2, param0, param3, param1, (byte) -120);
         this.b(param5, 196);
         if (param4 != -31179) {
           field_Hb = -0.7085046172142029f;
@@ -313,20 +313,20 @@ final class af extends kc {
         int var3 = 0;
         int var3Lifetime1;
         if (param1 == 196) {
-          this.field_Fb.a(this.field_Fb.c(param1 - 26117), 0, 0, this.field_I, (byte) -120);
+          this.field_Fb.setBounds(this.field_Fb.getContentWidth(param1 - 26117), 0, 0, this.field_I, (byte) -120);
           var3 = this.field_Fb.field_x + param0;
-          this.field_Db.a(-var3 + this.field_x, var3, 0, this.field_I, (byte) -120);
+          this.field_Db.setBounds(-var3 + this.field_x, var3, 0, this.field_I, (byte) -120);
           return;
         }
         this.a(28, 56, 27, -126, 76, 103);
-        this.field_Fb.a(this.field_Fb.c(param1 - 26117), 0, 0, this.field_I, (byte) -120);
+        this.field_Fb.setBounds(this.field_Fb.getContentWidth(param1 - 26117), 0, 0, this.field_I, (byte) -120);
         var3Lifetime1 = this.field_Fb.field_x + param0;
-        this.field_Db.a(-var3Lifetime1 + this.field_x, var3Lifetime1, 0, this.field_I, (byte) -120);
+        this.field_Db.setBounds(-var3Lifetime1 + this.field_x, var3Lifetime1, 0, this.field_I, (byte) -120);
     }
 
     final int a(int param0, byte param1) {
         if (param1 == -126) {
-          return this.field_Fb.c(param1 - 25795) + param0 + this.field_Db.c(-25921);
+          return this.field_Fb.getContentWidth(param1 - 25795) + param0 + this.field_Db.getContentWidth(-25921);
         }
         return -111;
     }
@@ -340,8 +340,8 @@ final class af extends kc {
         int var1 = 66 / ((-6 - param0) / 44);
     }
 
-    af(long param0, Sprite param1, Sprite param2, int param3, kc param4, String param5) {
-        this(param0, (kc) null, param4, param5);
+    af(long param0, Sprite param1, Sprite param2, int param3, SceneWidget param4, String param5) {
+        this(param0, (SceneWidget) null, param4, param5);
         try {
           this.field_Fb.field_gb = param3;
           this.field_Fb.field_W = param2;
@@ -351,15 +351,15 @@ final class af extends kc {
         }
     }
 
-    private af(long param0, kc param1, kc param2, String param3) {
-        super(param0, (kc) null);
+    private af(long param0, SceneWidget param1, SceneWidget param2, String param3) {
+        super(param0, (SceneWidget) null);
         try {
-          this.field_Fb = new kc(0L, param1);
-          this.field_Db = new kc(0L, param2);
+          this.field_Fb = new SceneWidget(0L, param1);
+          this.field_Db = new SceneWidget(0L, param2);
           this.field_Db.field_rb = param3;
-          this.a(this.field_Fb, 51);
-          this.a(this.field_Db, 106);
-          this.e((byte) 20);
+          this.addChild(this.field_Fb, 51);
+          this.addChild(this.field_Db, 106);
+          this.markTreeDirty((byte) 20);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "af.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

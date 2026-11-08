@@ -151,8 +151,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 tg.field_e = ki.createFrameClock((byte) -126);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (wd.field_b != 0L) {
-                    stackIn_100_0 = $cfr$lcmp(~wd.field_b, ~qj.b(-26572));
+                  if (ResizableViewResizeListener.field_b != 0L) {
+                    stackIn_100_0 = $cfr$lcmp(~ResizableViewResizeListener.field_b, ~qj.monotonicTimeMillis(-26572));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_100_0 >= 0)) {
@@ -201,7 +201,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (this == IsaacCipher.field_k &&
             !jg.field_r) {
-            wd.field_b = 0L;
+            ResizableViewResizeListener.field_b = 0L;
             return;
           }
           return;
@@ -224,7 +224,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             !jg.field_r) {
             hj.field_d = true;
             if (EmailLoginCredentials.field_l &&
-              1000L < qj.b(-26572) - oo.field_s) {
+              1000L < qj.monotonicTimeMillis(-26572) - oo.field_s) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < tn.field_Eb) {
@@ -383,7 +383,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          wd.field_b = qj.b(-26572);
+          ResizableViewResizeListener.field_b = qj.monotonicTimeMillis(-26572);
           ao.a(5000L, 1);
           rb.field_k = null;
           this.a(false, -29);
@@ -473,7 +473,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.b(true);
           }
           jm.field_j = false;
-          oo.field_s = qj.b(-26572);
+          oo.field_s = qj.monotonicTimeMillis(-26572);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -490,7 +490,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.awt.Insets var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_long = qj.b(-26572);
+          var2_long = qj.monotonicTimeMillis(-26572);
           var4 = TextFieldValidator.field_l[ClientException.field_e];
           TextFieldValidator.field_l[ClientException.field_e] = var2_long;
           if (0L != var4 &&
@@ -671,7 +671,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          wd.field_b = 4000L + qj.b(-26572);
+          ResizableViewResizeListener.field_b = 4000L + qj.monotonicTimeMillis(-26572);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "dc.stop()");
         }
@@ -713,7 +713,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException var2 = null;
         Object var6 = null;
         try {
-          var2_long = qj.b(-26572);
+          var2_long = qj.monotonicTimeMillis(-26572);
           var4 = kn.field_tb[qo.field_e];
           kn.field_tb[qo.field_e] = var2_long;
           if (param0 > -59) {

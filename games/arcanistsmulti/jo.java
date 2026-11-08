@@ -4,7 +4,7 @@
 final class jo {
     static String field_d;
     static int field_c;
-    static kc field_a;
+    static SceneWidget field_a;
     static boolean field_b;
     static int field_e;
 
@@ -26,7 +26,7 @@ final class jo {
           jo.releaseStatics(19);
         }
         if (ce.field_h > 0) {
-          vc.a((byte) 37);
+          WidgetStyleLayer.a((byte) 37);
         }
         if (sm.field_a > 0) {
           ej.a(16, sm.field_a);

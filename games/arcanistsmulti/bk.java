@@ -6,7 +6,7 @@ final class bk extends TextButton {
     static int field_I;
     static String field_K;
     static String field_H;
-    static kc field_M;
+    static SceneWidget field_M;
     static nf field_J;
 
     final void activate(int param0, int param1, int param2, int param3) {

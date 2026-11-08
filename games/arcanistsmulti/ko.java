@@ -3,7 +3,7 @@
  */
 final class ko extends IntrusiveNode {
     int field_l;
-    static kc field_h;
+    static SceneWidget field_h;
     int field_i;
     static String field_g;
     static int field_k;
@@ -50,7 +50,7 @@ final class ko extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, kc param1, byte param2) {
+    final static void a(int param0, SceneWidget param1, byte param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -102,7 +102,7 @@ final class ko extends IntrusiveNode {
             var11 = ArchiveProvider.field_a[0];
             var20 = var11;
             var20Lifetime2 = var11;
-            var12 = oh.field_q;
+            var12 = ReflectionCheckRequest.field_q;
             var10.field_l.a((byte) -32, 11, var11, var12);
             var13 = eo.field_c;
             var14 = ArchiveProvider.field_a[1];
@@ -278,7 +278,7 @@ final class ko extends IntrusiveNode {
                 DirectByteStorage.field_f != null) {
                 var5 = 1;
               }
-              if (oh.a((byte) 117, var5) != 2) {
+              if (ReflectionCheckRequest.a((byte) 117, var5) != 2) {
                 BufferedRandomAccessFile.a(-1, var4_ref_String, 82, param1, nj.field_c, so.field_p);
               } else {
                 DiskCacheRequest.a(param2, 1, true, var5);
@@ -291,7 +291,7 @@ final class ko extends IntrusiveNode {
               ao.a(0, (byte) 83, cd.field_q, (String) null, 2, (String) null);
               var15 = (String) null;
               var14 = (String) null;
-              ao.a(0, (byte) 73, rg.field_b, (String) null, 2, (String) null);
+              ao.a(0, (byte) 73, TextTableInitializer.field_b, (String) null, 2, (String) null);
               ue.b(10);
             }
           }
@@ -304,7 +304,7 @@ final class ko extends IntrusiveNode {
           if (hi.field_e.length() <= 0) {
             return true;
           }
-          qj.a(hi.field_e.length() - 1, hi.field_e, ' ', false);
+          qj.padToLength(hi.field_e.length() - 1, hi.field_e, ' ', false);
           return true;
         }
         var4 = ed.field_Bb;
@@ -330,7 +330,7 @@ final class ko extends IntrusiveNode {
             if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
               return true;
             }
-            qj.a(-1 + hi.field_e.length(), hi.field_e, ' ', false);
+            qj.padToLength(-1 + hi.field_e.length(), hi.field_e, ' ', false);
             return true;
           }
           if (DirectByteStorage.field_f == null &&
@@ -345,7 +345,7 @@ final class ko extends IntrusiveNode {
               if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
                 return true;
               }
-              qj.a(-1 + hi.field_e.length(), hi.field_e, ' ', false);
+              qj.padToLength(-1 + hi.field_e.length(), hi.field_e, ' ', false);
               return true;
             }
             if (he.field_d == null) {
@@ -355,7 +355,7 @@ final class ko extends IntrusiveNode {
               if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
                 return true;
               }
-              qj.a(-1 + hi.field_e.length(), hi.field_e, ' ', false);
+              qj.padToLength(-1 + hi.field_e.length(), hi.field_e, ' ', false);
               return true;
             }
             var7Lifetime1 = "[" + he.field_d + "] ";
@@ -364,7 +364,7 @@ final class ko extends IntrusiveNode {
           var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var62);
         } else {
           var64 = (CharSequence) ((Object) so.field_p);
-          var18 = tj.a(-45, new String[]{qo.a((byte) 84, var64)}, ge.field_n);
+          var18 = tj.a(-45, new String[]{qo.normalizeName((byte) 84, var64)}, ge.field_n);
           var8 = tj.a(113, new String[]{var16}, pk.field_f);
           var9 = oo.field_x.textWidth(var18);
           var10 = oo.field_x.textWidth(var8);
@@ -377,7 +377,7 @@ final class ko extends IntrusiveNode {
         if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
           return true;
         }
-        qj.a(-1 + hi.field_e.length(), hi.field_e, ' ', false);
+        qj.padToLength(-1 + hi.field_e.length(), hi.field_e, ' ', false);
         return true;
     }
 
@@ -442,7 +442,7 @@ final class ko extends IntrusiveNode {
         try {
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!uh.a((char) var3, (byte) -122) &&
+            if (!ClipState.a((char) var3, (byte) -122) &&
               !LoginPanel.a(30, (char) var3)) {
               return true;
             }

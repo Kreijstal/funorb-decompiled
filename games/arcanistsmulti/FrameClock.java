@@ -4,8 +4,8 @@
 abstract class FrameClock {
     static PlatformTask field_a;
     static String field_c;
-    static kc field_e;
-    static kc field_d;
+    static SceneWidget field_e;
+    static SceneWidget field_d;
     static volatile int field_b;
 
     final int sleepAndCountTicks(long param0, int param1) {
@@ -14,7 +14,7 @@ abstract class FrameClock {
           ao.a(var4, 1);
         }
         if (param1 != -1) {
-          field_e = (kc) null;
+          field_e = (SceneWidget) null;
         }
         return this.waitForTicks(param0, (byte) -44);
     }
@@ -29,7 +29,7 @@ abstract class FrameClock {
     final static void a(int param0, boolean param1, boolean param2) {
         dn stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
-        kc stackIn_21_0 = null;
+        SceneWidget stackIn_21_0 = null;
         String stackIn_22_1 = null;
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -72,22 +72,22 @@ abstract class FrameClock {
           while (var6 != null) {
             var7 = 0;
             if (var6.field_G == null) {
-              var6.field_Jb = new kc(0L, qa.field_j);
-              var6.a(var6.field_Jb, 96);
-              var6.field_Mb = new kc(0L, qa.field_j);
-              var6.a(var6.field_Mb, 112);
+              var6.field_Jb = new SceneWidget(0L, qa.field_j);
+              var6.addChild(var6.field_Jb, 96);
+              var6.field_Mb = new SceneWidget(0L, qa.field_j);
+              var6.addChild(var6.field_Mb, 112);
               var7 = 1;
-              var6.e((byte) 20);
+              var6.markTreeDirty((byte) 20);
             }
             var6.field_x = dd.field_c.field_Eb.field_x;
-            var6.field_Jb.a(var6.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+            var6.field_Jb.setBounds(var6.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
             var8 = 0;
             if (var6.field_Gb != null &&
               !var6.field_Gb.equals("")) {
               var6.field_Mb.field_eb = 16737894;
               var6.field_Mb.field_W = eb.field_d;
               var8 = 1;
-              var6.field_Mb.a(eb.field_d.field_n + 3, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+              var6.field_Mb.setBounds(eb.field_d.field_n + 3, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
             }
             var9 = 0;
             var10 = var6.field_x;
@@ -104,12 +104,12 @@ abstract class FrameClock {
             stackIn_21_0.field_rb = stackIn_22_1;
             stackIn_25_0 = (var6.field_Jb.field_rb.equals(var6.field_Cb)) ? 0 : 1;
             var11 = stackIn_25_0;
-            var6.field_Jb.a(var10, var9, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+            var6.field_Jb.setBounds(var10, var9, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
             if (var3_int == 0) {
               var6.field_B = ImageProducerRasterBuffer.field_r - var6.field_I;
             }
             if (var7 != 0) {
-              dd.field_c.field_Eb.a((byte) 125, (kc) (var5), var6, 2);
+              dd.field_c.field_Eb.positionAfter((byte) 125, (SceneWidget) (var5), var6, 2);
             }
             if (null != var6.field_Mb &&
               var6.field_Mb.field_C) {
@@ -135,13 +135,13 @@ abstract class FrameClock {
           }
           if (dd.field_c.field_Jb.field_U != 0) {
             tc.field_A = new dh(dd.field_c.field_Jb.field_V, dd.field_c.field_Jb.field_nb, dd.field_c.field_Jb.field_x, dd.field_c.field_Jb.field_I, fh.field_a, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
-            vd.field_h = 2;
+            TextLine.field_h = 2;
           }
           if (dd.field_c.field_Lb.field_U == 0) {
             return;
           }
-          tc.field_A = new dh(dd.field_c.field_Lb.field_V, dd.field_c.field_Lb.field_nb, dd.field_c.field_Lb.field_x, dd.field_c.field_Lb.field_I, wd.field_i, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
-          vd.field_h = 3;
+          tc.field_A = new dh(dd.field_c.field_Lb.field_V, dd.field_c.field_Lb.field_nb, dd.field_c.field_Lb.field_x, dd.field_c.field_Lb.field_I, ResizableViewResizeListener.field_i, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
+          TextLine.field_h = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,7 +169,7 @@ abstract class FrameClock {
 
     final static int a(byte param0, int param1) {
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
-        uh.field_m = 0;
+        ClipState.field_m = 0;
         td.field_E = null;
         field_a = null;
         int var2 = ed.field_Hb;
@@ -197,7 +197,7 @@ abstract class FrameClock {
           return 1;
         }
         if (param0 != 110) {
-          field_e = (kc) null;
+          field_e = (SceneWidget) null;
         }
         return -1;
     }
@@ -247,7 +247,7 @@ abstract class FrameClock {
             field_b = 88;
           }
           Bzip2State.a(md.field_b, mi.field_A, nj.field_d, ml.field_S, MouseWheelHandler.field_c, param1, j.field_f, th.field_k, 27874, MouseWheelHandler.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
-          ArchiveProvider.field_a = qe.a(param2, "chatfilter", "lobby", 119);
+          ArchiveProvider.field_a = qe.loadSpriteSheet(param2, "chatfilter", "lobby", 119);
           cf.field_b[2] = TextButton.field_A;
           cf.field_b[1] = u.field_d;
           cf.field_b[0] = GzipDecoder.field_e;

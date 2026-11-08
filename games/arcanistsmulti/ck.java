@@ -4,23 +4,23 @@
 final class ck {
     static String field_f;
     static String field_c;
-    static kc field_d;
+    static SceneWidget field_d;
     static String field_e;
-    static kc field_a;
+    static SceneWidget field_a;
     static ResourceArchive field_b;
     static String field_g;
 
-    final static kc createTextComponent(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, int param11, int param12) {
-        kc var13 = null;
+    final static SceneWidget createTextComponent(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, int param11, int param12) {
+        SceneWidget var13 = null;
         RuntimeException var13_ref = null;
         BitmapFont var14 = null;
-        kc stackIn_3_0 = null;
+        SceneWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var13 = new kc(0L, (kc) null);
+          var13 = new SceneWidget(0L, (SceneWidget) null);
           var13.field_v = fk.a(param0, 43, param4);
           if (param8 < 56) {
             var14 = (BitmapFont) null;

@@ -49,7 +49,7 @@ final class jn {
         }
     }
 
-    final static void a(int param0, kc param1, int param2, kc param3, byte[] param4, kc param5, int param6, int param7, int param8, int param9) {
+    final static void a(int param0, SceneWidget param1, int param2, SceneWidget param3, byte[] param4, SceneWidget param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -93,8 +93,8 @@ final class jn {
           if (null == param3.field_G) {
             param3.field_G = new IntrusiveDeque();
           }
-          vh.field_a = param3.field_G;
-          vh.field_a.clear(param2 + 13049);
+          UiTheme.field_a = param3.field_G;
+          UiTheme.field_a.clear(param2 + 13049);
           nk.field_q = new IntrusiveNodeHashTable(param6);
           if (null == param5.field_G) {
             param5.field_G = new IntrusiveDeque();
@@ -106,7 +106,7 @@ final class jn {
           if (param2 != -13173) {
             field_a = (int[]) null;
           }
-          vd.field_i = param0;
+          TextLine.field_i = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

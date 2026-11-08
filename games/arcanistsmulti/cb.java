@@ -32,10 +32,10 @@ final class cb {
         try {
           param0.unlink(true);
           var3 = 19 % ((-78 - param1) / 48);
-          var2 = (na) (vh.field_a.first(12623));
+          var2 = (na) (UiTheme.field_a.first(12623));
           while (var2 != null) {
             if (var2.a(param0, 2)) {
-              var2 = (na) (vh.field_a.next(0));
+              var2 = (na) (UiTheme.field_a.next(0));
               continue;
             }
             break;
@@ -44,7 +44,7 @@ final class cb {
             da.insertBefore(var2, 20, param0);
             return;
           }
-          vh.field_a.addLast(param0, -1);
+          UiTheme.field_a.addLast(param0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

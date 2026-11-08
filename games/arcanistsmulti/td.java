@@ -10,8 +10,8 @@ final class td extends UiContainer implements ButtonListener {
     private TextButton field_F;
 
     final static void a(boolean param0, int param1, int param2) {
-        vd.field_l = param2;
-        to.field_p = param1;
+        TextLine.field_l = param2;
+        SceneWidgetNode.field_p = param1;
         if (!param0) {
           field_E = (k) null;
         }
@@ -33,7 +33,7 @@ final class td extends UiContainer implements ButtonListener {
         super(0, 0, 476, 225, (WidgetPainter) null);
         this.field_C = new TextButton(ib.field_t, (UiListener) null);
         this.field_F = new TextButton(kn.field_rb, (UiListener) null);
-        this.field_H = new TextButton(rc.field_n, (UiListener) null);
+        this.field_H = new TextButton(LoadingTracker.field_n, (UiListener) null);
         mm var1 = new mm();
         this.field_C.field_r = (WidgetPainter) ((Object) var1);
         this.field_F.field_r = (WidgetPainter) ((Object) var1);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rd implements ViewResizeListener {
+final class FixedViewResizeListener implements ViewResizeListener {
     static int field_a;
     static String field_f;
     static int field_b;

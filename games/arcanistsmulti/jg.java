@@ -9,7 +9,7 @@ final class jg {
     static IndexedSprite[] field_c;
     static IndexedSprite[] field_l;
     int field_k;
-    kc field_a;
+    SceneWidget field_a;
     String field_e;
     String field_n;
     long field_h;
@@ -39,7 +39,7 @@ final class jg {
         if (param0 <= -19) {
           return 0;
         }
-        this.field_a = (kc) null;
+        this.field_a = (SceneWidget) null;
         return 0;
     }
 
@@ -51,7 +51,7 @@ final class jg {
         if (param0 != -3) {
           field_c = (IndexedSprite[]) null;
           if ((SpriteState.field_z.field_D & 1 << SpriteState.field_z.field_I) != 0) {
-            ce.field_g[10] = uh.field_s;
+            ce.field_g[10] = ClipState.field_s;
             return;
           }
           if (0 != SpriteState.field_z.field_D) {
@@ -62,7 +62,7 @@ final class jg {
           return;
         }
         if ((SpriteState.field_z.field_D & 1 << SpriteState.field_z.field_I) != 0) {
-          ce.field_g[10] = uh.field_s;
+          ce.field_g[10] = ClipState.field_s;
           return;
         }
         if (0 != SpriteState.field_z.field_D) {

@@ -5,7 +5,7 @@ final class aj {
     static String[] field_a;
     int field_e;
     static String field_b;
-    static kc field_d;
+    static SceneWidget field_d;
     static String field_i;
     int field_c;
     static String field_f;
@@ -23,7 +23,7 @@ final class aj {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = (mi) (uh.field_n.removeFirst(true));
+          var2 = (mi) (ClipState.field_n.removeFirst(true));
           if (var2 == null) {
             stackIn_3_0 = new mi(param0);
             return stackIn_3_0;

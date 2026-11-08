@@ -5,7 +5,7 @@ final class NanoFrameClock extends FrameClock {
     static String field_m;
     private int field_r;
     static String[][] field_o;
-    static kc field_t;
+    static SceneWidget field_t;
     static int[] field_u;
     private long[] field_h;
     static int field_k;
@@ -13,7 +13,7 @@ final class NanoFrameClock extends FrameClock {
     private long field_i;
     private long field_s;
     static int[] field_g;
-    static kc field_j;
+    static SceneWidget field_j;
     static String field_q;
     private int field_l;
     static int[] field_n;
@@ -109,7 +109,7 @@ final class NanoFrameClock extends FrameClock {
           param1 != 1 && (param1 != 7 ||
           null == SpriteState.field_z &&
           null == r.field_b)) {
-          ql.a(640, 480, 0);
+          LoginMethod.a(640, 480, 0);
         }
         if (param1 == 0) {
           var8 = new Sprite(640, 480);
@@ -126,7 +126,7 @@ final class NanoFrameClock extends FrameClock {
           MusicPatchNode.field_F.drawTransparent(-64 + lm.field_e[param1], var3 - 80);
           j.field_a.drawTransparent(eo.field_b[param1] - 110, -70 + var3);
           pe.field_Ib.drawTransparent(lm.field_e[param1] - 39, tg.field_f[param1] - 66);
-          rg.field_a.drawTransparent(-150 + eo.field_b[param1], -80 + tg.field_f[param1]);
+          TextTableInitializer.field_a.drawTransparent(-150 + eo.field_b[param1], -80 + tg.field_f[param1]);
           var5 = fj.loadSprite(ec.field_c, -22612, ue.field_d, "");
           if (ec.field_c.equals("underdark")) {
             var5.drawSilhouette(0, -8 + (-var5.field_y + 480), 16777215);
@@ -143,7 +143,7 @@ final class NanoFrameClock extends FrameClock {
           MusicPatchNode.field_F.drawTransparent(lm.field_e[param1] - 64, var3 - 80);
           j.field_a.drawTransparent(eo.field_b[param1] - 110, -70 + var3);
           pe.field_Ib.drawTransparent(lm.field_e[param1] - 39, -66 + tg.field_f[param1]);
-          rg.field_a.drawTransparent(-150 + eo.field_b[param1], tg.field_f[param1] - 80);
+          TextTableInitializer.field_a.drawTransparent(-150 + eo.field_b[param1], tg.field_f[param1] - 80);
           if (!ec.field_c.equals("underdark")) {
             if (ec.field_c.equals("clockwork")) {
               var5.drawTransparent(0, 480 - var5.field_y - 46);

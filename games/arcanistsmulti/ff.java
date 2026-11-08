@@ -41,7 +41,7 @@ final class ff {
         field_e = null;
     }
 
-    final static ij a(int[] param0, int param1, kc param2, kc param3, kc param4) {
+    final static ij a(int[] param0, int param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
@@ -125,17 +125,17 @@ final class ff {
 
     final static Sprite[] a(byte param0, int param1, int param2, int param3) {
         if (param0 > 25) {
-          return qa.a(param3, param1, 1, param2, (byte) 123);
+          return qa.createFrameSprites(param3, param1, 1, param2, (byte) 123);
         }
         oo var5 = (oo) null;
         ff.a((byte) -74, (oo) null);
-        return qa.a(param3, param1, 1, param2, (byte) 123);
+        return qa.createFrameSprites(param3, param1, 1, param2, (byte) 123);
     }
 
     final static void a(boolean param0, String param1, byte param2, String param3) {
         try {
           ge.field_g = param3;
-          vh.field_o = param1;
+          UiTheme.field_o = param1;
           jn.a(bj.field_qb, param0, -1);
           if (param2 != -97) {
             field_c = 14;

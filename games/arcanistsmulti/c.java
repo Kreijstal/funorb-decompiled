@@ -60,7 +60,7 @@ final class c {
     }
 
     final static void a(int param0, boolean param1, boolean param2, int param3, boolean param4) {
-        kc stackIn_19_0 = null;
+        SceneWidget stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
         int stackIn_34_0 = 0;
         int stackIn_34_1 = 0;
@@ -74,20 +74,20 @@ final class c {
         boolean stackIn_136_0 = false;
         boolean stackIn_154_0 = false;
         int stackIn_161_0 = 0;
-        kc stackIn_182_0 = null;
+        SceneWidget stackIn_182_0 = null;
         boolean stackIn_183_1 = false;
-        kc stackIn_187_0 = null;
+        SceneWidget stackIn_187_0 = null;
         boolean stackIn_188_1 = false;
-        kc stackIn_192_0 = null;
+        SceneWidget stackIn_192_0 = null;
         boolean stackIn_193_1 = false;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_107_0;
         boolean stackOut_135_0;
         boolean stackOut_153_0;
         RuntimeException var5 = null;
-        kc var6 = null;
-        kc var7 = null;
-        kc var8 = null;
+        SceneWidget var6 = null;
+        SceneWidget var7 = null;
+        SceneWidget var8 = null;
         int var9 = 0;
         String var9_ref_String = null;
         String var10_ref_String = null;
@@ -109,12 +109,12 @@ final class c {
         cg var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
-        kc var22 = null;
+        SceneWidget var22 = null;
         int[] var23 = null;
         String var24 = null;
         String var25 = null;
         int[] var26 = null;
-        kc var27 = null;
+        SceneWidget var27 = null;
         int stackIn_52_0Lifetime1;
         int stackIn_52_1Lifetime1;
         int stackIn_61_0Lifetime1;
@@ -139,8 +139,8 @@ final class c {
             var7.field_x = 0;
             if (qk.k((byte) 105)) {
               nl.field_Db.field_rb = fb.field_c.toUpperCase();
-              var9 = (2 + oh.field_h.field_x) / 2;
-              SocketConnector.field_d.a(-2 + var9, 0, -40 + oh.field_h.field_I, 40, (byte) -120);
+              var9 = (2 + ReflectionCheckRequest.field_h.field_x) / 2;
+              SocketConnector.field_d.setBounds(-2 + var9, 0, -40 + ReflectionCheckRequest.field_h.field_I, 40, (byte) -120);
               if (DirectByteStorage.field_f.field_Rb < DirectByteStorage.field_f.field_dc) {
                 SocketConnector.field_d.field_rb = mb.field_O.toUpperCase();
                 SocketConnector.field_d.field_ub = true;
@@ -168,7 +168,7 @@ final class c {
                 }
                 SocketConnector.field_d.field_rb = SocketConnector.field_d.field_rb + "<br>" + var10_ref_String;
               }
-              CanvasRasterBuffer.field_k.a(oh.field_h.field_x - var9, var9, -40 + oh.field_h.field_I, 40, (byte) -120);
+              CanvasRasterBuffer.field_k.setBounds(ReflectionCheckRequest.field_h.field_x - var9, var9, -40 + ReflectionCheckRequest.field_h.field_I, 40, (byte) -120);
               CanvasRasterBuffer.field_k.field_rb = CacheEntry.field_m.toUpperCase();
               stackIn_19_0 = CanvasRasterBuffer.field_k;
               stackIn_20_1 = (param2) && (PatchEnvelopeSet.field_a == 0L);
@@ -479,19 +479,19 @@ final class c {
               if (var19 != 0) {
                 var9_ref_String = DirectByteStorage.field_f.field_ic;
                 nl.field_Db.field_rb = tj.a(param3 ^ 118, new String[]{var9_ref_String}, Bzip2State.field_j).toUpperCase();
-                jf.field_d.a(oh.field_h.field_x, 0, oh.field_h.field_I - 40, 40, (byte) -120);
+                jf.field_d.setBounds(ReflectionCheckRequest.field_h.field_x, 0, ReflectionCheckRequest.field_h.field_I - 40, 40, (byte) -120);
                 jf.field_d.field_rb = tj.a(param3 + 112, new String[]{var9_ref_String}, uf.field_b);
                 var8 = jf.field_d;
               }
             } else {
               var9_ref_String = DirectByteStorage.field_f.field_ic;
               nl.field_Db.field_rb = tj.a(param3 ^ 118, new String[]{var9_ref_String}, Bzip2State.field_j).toUpperCase();
-              jf.field_d.a(oh.field_h.field_x, 0, oh.field_h.field_I - 40, 40, (byte) -120);
+              jf.field_d.setBounds(ReflectionCheckRequest.field_h.field_x, 0, ReflectionCheckRequest.field_h.field_I - 40, 40, (byte) -120);
               jf.field_d.field_rb = tj.a(param3 + 112, new String[]{var9_ref_String}, uf.field_b);
               var8 = jf.field_d;
             }
             if (PatchEnvelopeSet.field_a != 0L) {
-              var9 = (int)(PatchEnvelopeSet.field_a - qj.b(param3 ^ -26570));
+              var9 = (int)(PatchEnvelopeSet.field_a - qj.monotonicTimeMillis(param3 ^ -26570));
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;
@@ -502,13 +502,13 @@ final class c {
           }
           stackIn_182_0 = hl.field_m;
           stackIn_183_1 = (param4) && (!param1) && (!so.field_j);
-          ((kc) (Object) stackIn_182_0).b(stackIn_183_1, (byte) 60);
-          stackIn_187_0 = oh.field_h;
+          ((SceneWidget) (Object) stackIn_182_0).updateInputFullScreen(stackIn_183_1, (byte) 60);
+          stackIn_187_0 = ReflectionCheckRequest.field_h;
           stackIn_188_1 = (param4) && (!param1) && (!so.field_j);
-          ((kc) (Object) stackIn_187_0).b(stackIn_188_1, (byte) 69);
+          ((SceneWidget) (Object) stackIn_187_0).updateInputFullScreen(stackIn_188_1, (byte) 69);
           stackIn_192_0 = nl.field_Fb;
           stackIn_193_1 = (param4) && (!param1) && (so.field_j);
-          ((kc) (Object) stackIn_192_0).b(stackIn_193_1, (byte) 115);
+          ((SceneWidget) (Object) stackIn_192_0).updateInputFullScreen(stackIn_193_1, (byte) 115);
           tn.field_Ob.field_c.h((byte) 118);
           if (param3 != 2) {
             return;

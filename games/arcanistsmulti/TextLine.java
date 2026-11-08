@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vd {
+final class TextLine {
     static int field_h;
     int[] field_f;
     int field_g;
@@ -15,7 +15,7 @@ final class vd {
     int field_e;
     static String field_a;
 
-    final int a(int param0, int param1) {
+    final int characterIndexAt(int param0, int param1) {
         int var3 = 0;
         int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
@@ -37,16 +37,16 @@ final class vd {
     final static void a(int param0, int param1, int param2, boolean param3) {
         if (param1 < 120) {
           java.math.BigInteger var5 = (java.math.BigInteger) null;
-          vd.a(true, (PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null);
+          TextLine.a(true, (PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null);
         }
         qn.a(ra.field_h, -115, ImageProducerRasterBuffer.field_r, param2, param3, param0, dh.field_Gb);
     }
 
     final static void a(boolean param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
-          we.a(param4, 0, param3.payload, param1, 0, param2, param3.position);
+          we.writeSecureLoginBlock(param4, 0, param3.payload, param1, 0, param2, param3.position);
           if (param0) {
-            vd.a(-96, -100, -118, true);
+            TextLine.a(-96, -100, -118, true);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "vd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -129,21 +129,21 @@ final class vd {
         field_c = null;
         if (param0 != 0) {
           jg var2 = (jg) null;
-          vd.a((jg) null, (byte) -101);
+          TextLine.a((jg) null, (byte) -101);
         }
         field_d = null;
     }
 
-    vd(int param0, int param1, int param2) {
+    TextLine(int param0, int param1, int param2) {
         this.field_f = new int[1 + param2];
         this.field_e = param1;
         this.field_g = param0;
     }
 
-    final int b(int param0) {
+    final int width(int param0) {
         int stackIn_7_0 = 0;
         if (param0 > -107) {
-          vd.releaseStatics(-125);
+          TextLine.releaseStatics(-125);
         }
         if (this.field_f != null &&
           0 != this.field_f.length) {

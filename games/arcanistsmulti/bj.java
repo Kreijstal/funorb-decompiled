@@ -63,13 +63,13 @@ final class bj extends ob implements ButtonListener {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_V = qj.b(-26572);
+          this.field_V = qj.monotonicTimeMillis(-26572);
           var2 = new UiComponent(qj.field_i, (UiListener) null);
           var2.field_k = 100;
           var2.field_v = this.field_v;
           var2.field_n = 0;
           var2.field_j = 50;
-          var2.field_r = (WidgetPainter) ((Object) new jm(vc.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2.field_r = (WidgetPainter) ((Object) new jm(WidgetStyleLayer.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-67, var2);
           this.field_rb = new UiComponent(qj.field_i, (UiListener) null);
           this.field_rb.field_j = 20 + var2.field_k + var2.field_j;
@@ -165,7 +165,7 @@ final class bj extends ob implements ButtonListener {
           if (ArchiveProvider.field_d) {
             param0.blur((byte) 29);
           }
-          var5_long = qj.b(-26572) - this.field_V;
+          var5_long = qj.monotonicTimeMillis(-26572) - this.field_V;
           var7 = (int)((-var5_long + 10999L) / 1000L);
           if (var7 <= 0) {
             u.b(6);
@@ -204,9 +204,9 @@ final class bj extends ob implements ButtonListener {
     final static wa a(boolean param0, int param1, int param2) {
         dn stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
-        kc stackIn_32_0 = null;
+        SceneWidget stackIn_32_0 = null;
         String stackIn_33_1 = null;
-        kc stackIn_36_0 = null;
+        SceneWidget stackIn_36_0 = null;
         String stackIn_37_1 = null;
         int stackIn_41_0 = 0;
         Object stackIn_98_0 = null;
@@ -250,15 +250,15 @@ final class bj extends ob implements ButtonListener {
                 var8 = 0;
                 if (var19 == 0) {
                   if (null == var7.field_G) {
-                    var7.field_Jb = new kc(0L, qa.field_j);
-                    var7.a(var7.field_Jb, 117);
-                    var7.field_Fb = new kc(0L, le.field_E);
-                    var7.a(var7.field_Fb, 26);
-                    var7.field_Mb = new kc(0L, qa.field_j);
-                    var7.a(var7.field_Mb, 71);
+                    var7.field_Jb = new SceneWidget(0L, qa.field_j);
+                    var7.addChild(var7.field_Jb, 117);
+                    var7.field_Fb = new SceneWidget(0L, le.field_E);
+                    var7.addChild(var7.field_Fb, 26);
+                    var7.field_Mb = new SceneWidget(0L, qa.field_j);
+                    var7.addChild(var7.field_Mb, 71);
                     var7.field_Fb.field_X = 2;
                     var8 = 1;
-                    var7.e((byte) 20);
+                    var7.markTreeDirty((byte) 20);
                   }
                   var7.field_x = nl.field_Gb.field_Eb.field_x;
                   var9 = 0;
@@ -277,7 +277,7 @@ final class bj extends ob implements ButtonListener {
                     !var7.field_Gb.equals("")) {
                     var7.field_Mb.field_eb = var11;
                     var7.field_Mb.field_W = eb.field_d;
-                    var7.field_Mb.a(eb.field_d.field_n + 3, 0, var9, ImageProducerRasterBuffer.field_r, (byte) -120);
+                    var7.field_Mb.setBounds(eb.field_d.field_n + 3, 0, var9, ImageProducerRasterBuffer.field_r, (byte) -120);
                     var12 = 1;
                   }
                   var7.field_Fb.field_eb = var11;
@@ -301,7 +301,7 @@ final class bj extends ob implements ButtonListener {
                     stackIn_33_1 = BitmapFont.truncateWithEllipsis(var7.field_Jb.field_Z, var7.field_Cb, var14);
                   }
                   stackIn_32_0.field_rb = stackIn_33_1;
-                  var7.field_Jb.a(var14, var13, var9, ImageProducerRasterBuffer.field_r, (byte) -120);
+                  var7.field_Jb.setBounds(var14, var13, var9, ImageProducerRasterBuffer.field_r, (byte) -120);
                   stackIn_36_0 = var7.field_Fb;
                   if (var7.field_Lb == null) {
                     stackIn_37_1 = nk.field_o;
@@ -309,7 +309,7 @@ final class bj extends ob implements ButtonListener {
                     stackIn_37_1 = var7.field_Lb;
                   }
                   stackIn_36_0.field_rb = stackIn_37_1;
-                  var7.field_Fb.a(80, -80 + var7.field_x, var9, ImageProducerRasterBuffer.field_r, (byte) -120);
+                  var7.field_Fb.setBounds(80, -80 + var7.field_x, var9, ImageProducerRasterBuffer.field_r, (byte) -120);
                   stackIn_41_0 = (var7.field_Jb.field_rb.equals(var7.field_Cb)) ? 0 : 1;
                   var15 = stackIn_41_0;
                   var9 = var9 + ImageProducerRasterBuffer.field_r;
@@ -317,7 +317,7 @@ final class bj extends ob implements ButtonListener {
                     var7.field_B = var9 - var7.field_I;
                   }
                   if (var8 != 0) {
-                    nl.field_Gb.field_Eb.a((byte) 123, (kc) (var6), var7, 2);
+                    nl.field_Gb.field_Eb.positionAfter((byte) 123, (SceneWidget) (var6), var7, 2);
                   }
                   var6 = var7;
                   if (var7.field_Mb == null ||
@@ -356,12 +356,12 @@ final class bj extends ob implements ButtonListener {
                 }
                 tc.field_A = new dh(nl.field_Gb.field_Jb.field_V, nl.field_Gb.field_Jb.field_nb, nl.field_Gb.field_Jb.field_x, nl.field_Gb.field_Jb.field_I, NameValidator.field_v, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
               }
-              vd.field_h = 0;
+              TextLine.field_h = 0;
               break;
             }
             if (nl.field_Gb.field_Lb.field_U != 0) {
               tc.field_A = new dh(nl.field_Gb.field_Lb.field_V, nl.field_Gb.field_Lb.field_nb, nl.field_Gb.field_Lb.field_x, nl.field_Gb.field_Lb.field_I, af.field_Gb, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
-              vd.field_h = 1;
+              TextLine.field_h = 1;
             }
             decompiledFrameRemainder0 = false;
           }
@@ -543,7 +543,7 @@ final class bj extends ob implements ButtonListener {
           if (param2 != -71) {
             field_ub = false;
           }
-          if (!qo.a(param0, param2 + 71)) {
+          if (!qo.isAllowedNameCharacter(param0, param2 + 71)) {
             return false;
           }
           if (param1 == null) {

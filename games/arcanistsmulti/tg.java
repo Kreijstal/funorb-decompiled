@@ -35,10 +35,10 @@ final class tg {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (param1 >= 22) {
-          return rg.a(param0, param2, 13, param3);
+          return TextTableInitializer.a(param0, param2, 13, param3);
         }
         tg.a(101, false, -57, -39);
-        return rg.a(param0, param2, 13, param3);
+        return TextTableInitializer.a(param0, param2, 13, param3);
     }
 
     final DualLinkNode e(int param0) {

@@ -5,7 +5,7 @@ class IntrusiveNode {
     static boolean field_d;
     IntrusiveNode next;
     long key;
-    static kc field_c;
+    static SceneWidget field_c;
     static BufferedRandomAccessFile field_f;
     IntrusiveNode previous;
 

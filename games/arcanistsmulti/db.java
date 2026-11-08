@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class db {
-    static kc field_b;
+    static SceneWidget field_b;
     static String field_c;
     static String field_d;
     static int field_e;
@@ -12,7 +12,7 @@ final class db {
         throw new IllegalStateException();
     }
 
-    final static kc a(boolean param0) {
+    final static SceneWidget a(boolean param0) {
         if (oo.field_y > 0) {
           return mi.field_m;
         }
@@ -20,7 +20,7 @@ final class db {
           return mi.field_m;
         }
         if (param0) {
-          return (kc) null;
+          return (SceneWidget) null;
         }
         return null;
     }

@@ -7,7 +7,7 @@ final class gn {
     private ResourceArchive field_h;
     private ResourceArchive field_d;
     static ResourceArchive field_e;
-    static kc field_c;
+    static SceneWidget field_c;
     static int field_k;
     static int[][] field_g;
     static int field_b;

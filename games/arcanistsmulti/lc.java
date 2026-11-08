@@ -240,7 +240,7 @@ final class lc {
             stackIn_7_0 = ob.field_T.textWidth(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = vd.field_c.textWidth(param1);
+          stackIn_5_0 = TextLine.field_c.textWidth(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -479,7 +479,7 @@ final class lc {
                   mi.field_B.drawParagraph(var2, var10, var3 - 65, 286, 60, 0, -1, 0, 1, mi.field_B.field_m + mi.field_B.field_C);
                   var4 = var7;
                   SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
-                  var2 = rc.field_f;
+                  var2 = LoadingTracker.field_f;
                   var3 = var3 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, mi.field_B.field_m + mi.field_B.field_C);
                   bb.field_g[4].drawTransparent(var4, var3);
                   var4 += 40;
@@ -671,7 +671,7 @@ final class lc {
                     pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 109, kg.field_d[1], IsaacRandom.field_j[so.field_c[0]], var4);
                     var3 -= 8;
                     var3 -= 16;
-                    pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 47, kg.field_d[1], kc.field_kb[so.field_c[1]], var4);
+                    pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 47, kg.field_d[1], SceneWidget.field_kb[so.field_c[1]], var4);
                     var3 += 16;
                     pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -99, kg.field_d[1], hn.field_d[so.field_c[5]], var4);
                     if (so.field_c[5] != 53 &&
@@ -713,7 +713,7 @@ final class lc {
                           if (ArcanistsMulti.i((byte) -99)) {
                             var12_int = 74 + bi.field_I + tj.field_t.textWidth(var2);
                             ii.field_d.drawScaled(var12_int, -2 + var3, 32, 32);
-                            mi.field_B.drawText(kc.field_M, var12_int + 40, (mi.field_B.field_C + tj.field_t.field_C) / 2 + var3, 16711680, -1);
+                            mi.field_B.drawText(SceneWidget.field_M, var12_int + 40, (mi.field_B.field_C + tj.field_t.field_C) / 2 + var3, 16711680, -1);
                           }
                           var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
                           var2 = GzipDecoder.field_c;
@@ -721,7 +721,7 @@ final class lc {
                           var2 = ArrayWidgetContainer.field_F;
                           var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 6);
                           var11 = new int[]{16711935, 16711680, 16746632, 16776960, 65535, 34816, 16777215, 4521762, 1364125, 16755302};
-                          var2 = uh.field_q;
+                          var2 = ClipState.field_q;
                           mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
                           var2 = tj.a(-115, new String[]{Integer.toString(var11[1], 16)}, ArchiveRequest.field_s);
                           var3 = var3 + (2 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
@@ -801,7 +801,7 @@ final class lc {
                                   var2 = b.field_c;
                                   var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
                                   this.a(var3, var4, (byte) -42, 7);
-                                  var2 = uh.field_l;
+                                  var2 = ClipState.field_l;
                                   mi.field_B.drawParagraph(var2, 320 + bi.field_I, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
                                   bb.field_g[85].drawTransparent(var4, 120 + (-40 + var3));
                                 } else {
@@ -879,8 +879,8 @@ final class lc {
                       var3 += 24;
                       var2 = fo.field_j;
                       var3 -= 32;
-                      rm.field_o[9].drawHalfSize(64 + bi.field_I, var3);
-                      rm.field_o[2].drawHalfSize(bi.field_I + 64, var3);
+                      WhirlpoolHasher.field_o[9].drawHalfSize(64 + bi.field_I, var3);
+                      WhirlpoolHasher.field_o[2].drawHalfSize(bi.field_I + 64, var3);
                       tk.field_x[4].drawHalfSize(56 + bi.field_I, var3);
                       var3 += 16;
                       var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, 136 + bi.field_I, var3, 440, EmailLoginCredentials.field_j, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m) + 16);
@@ -1253,7 +1253,7 @@ final class lc {
                         } else {
                             /* Inlined CFG state: 21. */
                             {
-                                var4 = kc.field_kb;
+                                var4 = SceneWidget.field_kb;
                                 statePc = 22;
                                 continue scanLoop1;
                             }
@@ -1667,7 +1667,7 @@ final class lc {
                         if (var13 == 6) {
                             /* Inlined CFG state: 73. */
                             {
-                                var16_ref = rc.field_k;
+                                var16_ref = LoadingTracker.field_k;
                                 var14 = 1;
                                 statePc = 74;
                                 continue scanLoop1;
@@ -2323,7 +2323,7 @@ final class lc {
                         pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -92, kg.field_d[1], IsaacRandom.field_j[so.field_c[0]], var2_int);
                         var3 -= 8;
                         var3 -= 16;
-                        pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 75, kg.field_d[1], kc.field_kb[so.field_c[1]], var2_int);
+                        pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 75, kg.field_d[1], SceneWidget.field_kb[so.field_c[1]], var2_int);
                         var3 += 16;
                         pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -80, kg.field_d[1], hn.field_d[so.field_c[5]], var2_int);
                         if (so.field_c[5] == 53) {
@@ -2408,10 +2408,10 @@ final class lc {
                                     {
                                         /* Sequential CFG blocks: 174, 176. */
                                         {
-                                            to.field_q.drawSilhouette(225 + bi.field_I, 182 + uc.field_a, 0);
+                                            SceneWidgetNode.field_q.drawSilhouette(225 + bi.field_I, 182 + uc.field_a, 0);
                                         }
                                         {
-                                            to.field_q.drawAlpha(225 + bi.field_I, uc.field_a + 182, 128);
+                                            SceneWidgetNode.field_q.drawAlpha(225 + bi.field_I, uc.field_a + 182, 128);
                                             statePc = 177;
                                             continue scanLoop1;
                                         }
@@ -2429,7 +2429,7 @@ final class lc {
                                                 {
                                                 }
                                                 {
-                                                    if (~EmailLoginCredentials.field_g <= ~(to.field_q.field_n + bi.field_I + 225)) {
+                                                    if (~EmailLoginCredentials.field_g <= ~(SceneWidgetNode.field_q.field_n + bi.field_I + 225)) {
                                                         statePc = 172;
                                                         continue scanLoop1;
                                                     } else {
@@ -2478,7 +2478,7 @@ final class lc {
                         {
                         }
                         {
-                            if (~me.field_I <= ~(to.field_q.field_w + (uc.field_a + 182))) {
+                            if (~me.field_I <= ~(SceneWidgetNode.field_q.field_w + (uc.field_a + 182))) {
                                 statePc = 172;
                                 continue scanLoop1;
                             } else {
@@ -2488,8 +2488,8 @@ final class lc {
                                     {
                                     }
                                     {
-                                        to.field_q.drawSilhouette(225 + bi.field_I, 182 + uc.field_a, 16777215);
-                                        to.field_q.drawAlpha(bi.field_I + 225, 182 + uc.field_a, 128);
+                                        SceneWidgetNode.field_q.drawSilhouette(225 + bi.field_I, 182 + uc.field_a, 16777215);
+                                        SceneWidgetNode.field_q.drawAlpha(bi.field_I + 225, 182 + uc.field_a, 128);
                                         this.field_i = -3;
                                         this.field_m = 6;
                                         statePc = 177;
@@ -2509,7 +2509,7 @@ final class lc {
                 }
                 case 172: {
                     try {
-                        to.field_q.drawTransparent(225 + bi.field_I, uc.field_a + 182);
+                        SceneWidgetNode.field_q.drawTransparent(225 + bi.field_I, uc.field_a + 182);
                         statePc = 177;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_172) {
@@ -2534,13 +2534,13 @@ final class lc {
                         } else {
                             /* Inlined CFG state: 178. */
                             {
-                                if (mi.a(to.field_q.field_w, uc.field_a + 182, to.field_q.field_n, param0 ^ -12, 590 + bi.field_I)) {
+                                if (mi.a(SceneWidgetNode.field_q.field_w, uc.field_a + 182, SceneWidgetNode.field_q.field_n, param0 ^ -12, 590 + bi.field_I)) {
                                     /* Inlined CFG state: 183. */
                                     {
                                         if (this.field_b == null) {
                                             /* Inlined CFG state: 187. */
                                             {
-                                                this.field_b = to.field_q.copyFlippedHorizontal();
+                                                this.field_b = SceneWidgetNode.field_q.copyFlippedHorizontal();
                                                 statePc = 188;
                                                 continue scanLoop1;
                                             }
@@ -2559,7 +2559,7 @@ final class lc {
                                         {
                                         }
                                         {
-                                            to.field_q.drawHorizontalFlip(bi.field_I + 590, uc.field_a + 182);
+                                            SceneWidgetNode.field_q.drawHorizontalFlip(bi.field_I + 590, uc.field_a + 182);
                                             statePc = 191;
                                             continue scanLoop1;
                                         }
@@ -6015,7 +6015,7 @@ final class lc {
                                 SoftwareRasterizer.fillRectangle(1 + (var22 * var23 + var2_int), 1 + var22 * var24 + var3, 30, 30, 9996941);
                                 ((Sprite) (((Object[]) (var4))[var21])).drawDownscaledAveraged(-(((Sprite) (((Object[]) (var4))[var21])).field_q / 4) + 16 + var2_int + var23 * var22 - ((Sprite) (((Object[]) (var4))[var21])).field_x / 2, -(((Sprite) (((Object[]) (var4))[var21])).field_y / 4) + (-(((Sprite) (((Object[]) (var4))[var21])).field_o / 2) + var3) - (-(var24 * var22) - 16), 32, 32);
                                 SoftwareRasterizer.fillRectangleAlpha(var2_int + var22 * var23 + 1, var3 + (var22 * var24 + 1), 30, 30, 0, 192);
-                                vd.field_b.drawDownscaledAveraged(var2_int + var22 * var23 + 20, var24 * var22 + var3 + 20, 12, 12);
+                                TextLine.field_b.drawDownscaledAveraged(var2_int + var22 * var23 + 20, var24 * var22 + var3 + 20, 12, 12);
                                 statePc = 648;
                                 continue scanLoop1;
                             }
@@ -7802,7 +7802,7 @@ final class lc {
                             !(oj.field_e >= SpriteState.field_v));
                           if (decompiledFrameRemainder0) {
                             if (null != cf.field_h[CacheEntry.field_n[0][2]]) {
-                              ti.a((byte) -30, to.field_r[CacheEntry.field_n[0][2]], cf.field_h[CacheEntry.field_n[0][2]]);
+                              ti.a((byte) -30, SceneWidgetNode.field_r[CacheEntry.field_n[0][2]], cf.field_h[CacheEntry.field_n[0][2]]);
                             }
                             oj.field_e = 20 + SpriteState.field_v;
                             return;
@@ -8050,7 +8050,7 @@ final class lc {
             } else {
               if (this.field_g.b(true)) {
                 if (lc.a((byte) 112)) {
-                  ke.a(wd.field_h, param0, mi.field_B, 1, ArchiveRequest.field_t, 0, EmailLoginCredentials.field_j / 2, 16, mi.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, ud.field_o, true, mi.field_B.field_o + mi.field_B.field_m, -21071);
+                  ke.a(ResizableViewResizeListener.field_h, param0, mi.field_B, 1, ArchiveRequest.field_t, 0, EmailLoginCredentials.field_j / 2, 16, mi.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, ud.field_o, true, mi.field_B.field_o + mi.field_B.field_m, -21071);
                 } else {
                   var6 = param0 ? 1 : 0;
                   gj.a(var6 != 0, true, -4, mn.field_r);
@@ -8260,7 +8260,7 @@ final class lc {
           if (ArcanistsMulti.i((byte) -127)) {
             stackIn_35_0 = ii.field_d;
           } else {
-            stackIn_35_0 = vd.field_b;
+            stackIn_35_0 = TextLine.field_b;
           }
           var8 = stackIn_35_0;
           var9 = 60;
@@ -8331,7 +8331,7 @@ final class lc {
             if (var17Lifetime1 != 0) {
               IntrusiveNodeHashTable.field_a[var15Lifetime1].drawTransparent(340 + bi.field_I, var18 + uc.field_a);
             } else {
-              vd.field_b.drawTransparent(340 + bi.field_I, var18 + uc.field_a);
+              TextLine.field_b.drawTransparent(340 + bi.field_I, var18 + uc.field_a);
             }
             var18 = var18 + tj.field_t.field_C;
             var18 = var18 + tj.field_t.field_C;
@@ -8625,7 +8625,7 @@ final class lc {
           var9 = new int[]{0, 255, 0};
           var10 = new int[]{0, 0, 255};
           var11 = new int[]{255, 255, 255};
-          var12 = new Sprite[][]{kc.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+          var12 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
           var13 = new double[]{-0.75, 0.75, -0.5, 0.5, -0.25, 0.25};
           var14 = 0;
           while (true) {
@@ -8896,7 +8896,7 @@ final class lc {
           var10 = new int[]{0, 255, 0};
           var11 = new int[]{0, 0, 255};
           var12 = new int[]{255, 255, 255};
-          var13 = new Sprite[][]{kc.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+          var13 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
           var14 = new StringBuilder(20);
           if (null != var2.field_w) {
             var2.field_V = var2.field_w;
@@ -9307,7 +9307,7 @@ final class lc {
           var2_int = 125 + uc.field_a - 16;
           var2_int += 16;
           var3 = 0;
-          mi.field_B.drawCentered(rd.field_d, no.field_tb[0] + bi.field_I, var2_int, var3, -1);
+          mi.field_B.drawCentered(FixedViewResizeListener.field_d, no.field_tb[0] + bi.field_I, var2_int, var3, -1);
           mi.field_B.drawCentered(ej.field_H, no.field_tb[1] + bi.field_I, var2_int, var3, -1);
           mi.field_B.drawCentered(oo.field_o, no.field_tb[2] + bi.field_I, var2_int, var3, -1);
           mi.field_B.drawCentered(fc.field_d, no.field_tb[3] + bi.field_I, var2_int, var3, -1);
@@ -9321,7 +9321,7 @@ final class lc {
             var4 = PatchEnvelopeSet.field_f;
           } else {
             if (null != nj.field_e.field_r) {
-              var4 = rm.field_d;
+              var4 = WhirlpoolHasher.field_d;
               var5 = nj.field_e.field_r[ie.field_Sb];
               var6 = nj.field_e.field_l[ie.field_Sb];
               var7 = 0;
@@ -9848,11 +9848,11 @@ final class lc {
               if (this.field_h != 9) {
                 if (0L == (1L << -14 + 8 * this.field_h & cb.field_e) &&
                   1 < this.field_h) {
-                  rm.field_o[10].drawSilhouette(26 + (bi.field_I + (245 - rm.field_o[9].field_n) / 2), (-rm.field_o[9].field_w + 245) / 2 + 178 + uc.field_a, var12 >> 1 & 8355711 | 8421504);
-                  rm.field_o[var9].drawSilhouette(bi.field_I + (32 - (6 - (-rm.field_o[var9].field_n + 245) / 2)), (-rm.field_o[9].field_w + 245) / 2 + 178 + uc.field_a, 8355711 & var12 >> 1 | 8421504);
+                  WhirlpoolHasher.field_o[10].drawSilhouette(26 + (bi.field_I + (245 - WhirlpoolHasher.field_o[9].field_n) / 2), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + uc.field_a, var12 >> 1 & 8355711 | 8421504);
+                  WhirlpoolHasher.field_o[var9].drawSilhouette(bi.field_I + (32 - (6 - (-WhirlpoolHasher.field_o[var9].field_n + 245) / 2)), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + uc.field_a, 8355711 & var12 >> 1 | 8421504);
                   SoftwareRasterizer.blurRectangle(6, 6, 8 + (32 + bi.field_I), 186 + uc.field_a, 229, 229);
-                  rm.field_o[10].drawTransparentWithOpacity((-rm.field_o[9].field_n + 245) / 2 + bi.field_I + 26, (245 - rm.field_o[9].field_w) / 2 + uc.field_a + 178, 64);
-                  rm.field_o[var9].drawTransparentWithOpacity((245 - rm.field_o[var9].field_n) / 2 + (-6 + bi.field_I + 32), (245 - rm.field_o[9].field_w) / 2 + uc.field_a + 178, 64);
+                  WhirlpoolHasher.field_o[10].drawTransparentWithOpacity((-WhirlpoolHasher.field_o[9].field_n + 245) / 2 + bi.field_I + 26, (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178, 64);
+                  WhirlpoolHasher.field_o[var9].drawTransparentWithOpacity((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (-6 + bi.field_I + 32), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178, 64);
                   ce.field_m.a(true);
                   var14 = 416 + (bi.field_I << 4) + 1960;
                   var15 = 2848 + ((uc.field_a << 4) + 1960);
@@ -9877,33 +9877,33 @@ final class lc {
                   decompiledFrameRemainder2 = false;
                 }
                 else {
-                  rm.field_o[10].drawSilhouette(32 + (bi.field_I - 6) + (-rm.field_o[9].field_n + 245) / 2, 178 + uc.field_a + (245 - rm.field_o[9].field_w) / 2, (16711422 & var12) >> 1 | 8421504);
-                  rm.field_o[var9].drawSilhouette(-6 + bi.field_I - (-32 - (-rm.field_o[var9].field_n + 245) / 2), (245 - rm.field_o[9].field_w) / 2 + uc.field_a + 178, 8421504 | (var12 & 16711422) >> 1);
+                  WhirlpoolHasher.field_o[10].drawSilhouette(32 + (bi.field_I - 6) + (-WhirlpoolHasher.field_o[9].field_n + 245) / 2, 178 + uc.field_a + (245 - WhirlpoolHasher.field_o[9].field_w) / 2, (16711422 & var12) >> 1 | 8421504);
+                  WhirlpoolHasher.field_o[var9].drawSilhouette(-6 + bi.field_I - (-32 - (-WhirlpoolHasher.field_o[var9].field_n + 245) / 2), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178, 8421504 | (var12 & 16711422) >> 1);
                   SoftwareRasterizer.blurRectangle(6, 6, 8 + bi.field_I + 32, 8 + uc.field_a + 178, 229, 229);
-                  rm.field_o[10].drawTransparent((245 - rm.field_o[9].field_n) / 2 + bi.field_I + 26, uc.field_a + 178 + (245 - rm.field_o[9].field_w) / 2);
-                  rm.field_o[var9].drawTransparent(-6 + bi.field_I + (32 + (245 - rm.field_o[var9].field_n) / 2), (245 - rm.field_o[9].field_w) / 2 + (uc.field_a + 178));
+                  WhirlpoolHasher.field_o[10].drawTransparent((245 - WhirlpoolHasher.field_o[9].field_n) / 2 + bi.field_I + 26, uc.field_a + 178 + (245 - WhirlpoolHasher.field_o[9].field_w) / 2);
+                  WhirlpoolHasher.field_o[var9].drawTransparent(-6 + bi.field_I + (32 + (245 - WhirlpoolHasher.field_o[var9].field_n) / 2), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + (uc.field_a + 178));
                 }
               } else {
                 if (ArcanistsMulti.i((byte) -72) &&
                   0 >= ad.field_d) {
-                  rm.field_o[10].drawSilhouette(32 + (bi.field_I - 6 + (245 - rm.field_o[9].field_n) / 2), 178 + uc.field_a + (245 - rm.field_o[9].field_w) / 2, (16711422 & var12 | 16843009) >> 1);
-                  rm.field_o[var9].drawSilhouette((245 - rm.field_o[var9].field_n) / 2 + (bi.field_I + 32 - 6), 178 + (uc.field_a + (245 - rm.field_o[9].field_w) / 2), (var12 & 16711422 | 16843009) >> 1);
+                  WhirlpoolHasher.field_o[10].drawSilhouette(32 + (bi.field_I - 6 + (245 - WhirlpoolHasher.field_o[9].field_n) / 2), 178 + uc.field_a + (245 - WhirlpoolHasher.field_o[9].field_w) / 2, (16711422 & var12 | 16843009) >> 1);
+                  WhirlpoolHasher.field_o[var9].drawSilhouette((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (bi.field_I + 32 - 6), 178 + (uc.field_a + (245 - WhirlpoolHasher.field_o[9].field_w) / 2), (var12 & 16711422 | 16843009) >> 1);
                   SoftwareRasterizer.blurRectangle(6, 6, bi.field_I + 32 + 8, 8 + (uc.field_a + 178), 229, 229);
-                  rm.field_o[10].drawTransparentWithOpacity(-6 + (bi.field_I + 32 + (-rm.field_o[9].field_n + 245) / 2), (-rm.field_o[9].field_w + 245) / 2 + 178 + uc.field_a, 64);
-                  rm.field_o[var9].drawTransparentWithOpacity((245 - rm.field_o[var9].field_n) / 2 + (bi.field_I + 26), uc.field_a - (-178 - (-rm.field_o[9].field_w + 245) / 2), 64);
+                  WhirlpoolHasher.field_o[10].drawTransparentWithOpacity(-6 + (bi.field_I + 32 + (-WhirlpoolHasher.field_o[9].field_n + 245) / 2), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + uc.field_a, 64);
+                  WhirlpoolHasher.field_o[var9].drawTransparentWithOpacity((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (bi.field_I + 26), uc.field_a - (-178 - (-WhirlpoolHasher.field_o[9].field_w + 245) / 2), 64);
                   ce.field_m.a(true);
                 } else {
-                  rm.field_o[10].drawSilhouette((-rm.field_o[9].field_n + 245) / 2 - 6 + (bi.field_I + 32), 178 + (uc.field_a + (-rm.field_o[9].field_w + 245) / 2), (16843008 | var12 & 16711422) >> 1);
-                  rm.field_o[var9].drawSilhouette(32 + (bi.field_I + (-6 + (245 - rm.field_o[var9].field_n) / 2)), (245 - rm.field_o[9].field_w) / 2 + uc.field_a + 178, var12 >> 1 & 8355711 | 8421504);
+                  WhirlpoolHasher.field_o[10].drawSilhouette((-WhirlpoolHasher.field_o[9].field_n + 245) / 2 - 6 + (bi.field_I + 32), 178 + (uc.field_a + (-WhirlpoolHasher.field_o[9].field_w + 245) / 2), (16843008 | var12 & 16711422) >> 1);
+                  WhirlpoolHasher.field_o[var9].drawSilhouette(32 + (bi.field_I + (-6 + (245 - WhirlpoolHasher.field_o[var9].field_n) / 2)), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178, var12 >> 1 & 8355711 | 8421504);
                   SoftwareRasterizer.blurRectangle(6, 6, 32 + bi.field_I + 8, 8 + (uc.field_a + 178), 229, 229);
-                  rm.field_o[10].drawTransparent((245 - rm.field_o[9].field_n) / 2 + 32 + (bi.field_I - 6), (245 - rm.field_o[9].field_w) / 2 + uc.field_a + 178);
-                  rm.field_o[var9].drawTransparent(-6 + bi.field_I + (32 + (245 - rm.field_o[var9].field_n) / 2), 178 + (uc.field_a + (-rm.field_o[9].field_w + 245) / 2));
+                  WhirlpoolHasher.field_o[10].drawTransparent((245 - WhirlpoolHasher.field_o[9].field_n) / 2 + 32 + (bi.field_I - 6), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178);
+                  WhirlpoolHasher.field_o[var9].drawTransparent(-6 + bi.field_I + (32 + (245 - WhirlpoolHasher.field_o[var9].field_n) / 2), 178 + (uc.field_a + (-WhirlpoolHasher.field_o[9].field_w + 245) / 2));
                   ce.field_m.a(true);
                 }
               }
             }
-            rm.field_o[10].drawHalfSize(2 + var10, var11);
-            rm.field_o[var9].drawHalfSize(var10 + 2, var11);
+            WhirlpoolHasher.field_o[10].drawHalfSize(2 + var10, var11);
+            WhirlpoolHasher.field_o[var9].drawHalfSize(var10 + 2, var11);
             if (mi.a(65, var11, 65, -8, var10)) {
               this.field_m = 0;
               this.field_i = var9;
@@ -10532,7 +10532,7 @@ final class lc {
                       }
                       if (6 == Math.abs(this.field_h)) {
                         var14_ref_String = ej.field_M;
-                        var13 = wd.field_k + var3;
+                        var13 = ResizableViewResizeListener.field_k + var3;
                       }
                       if (7 == Math.abs(this.field_h)) {
                         var13 = NameValidator.field_q + var3;
@@ -10601,7 +10601,7 @@ final class lc {
               10 > ad.field_d)) {
               var13 = ti.field_F;
               if (this.field_m == 9) {
-                var35 = vh.field_h;
+                var35 = UiTheme.field_h;
                 var14 = 250 + ad.field_d * 250;
                 var13 = var35 + tj.a(param0 ^ -50, new String[]{Integer.toString(var14)}, ck.field_e);
               }
@@ -10640,7 +10640,7 @@ final class lc {
                     }
                   }
                 } else {
-                  vd.field_b.drawQuarterSize(var15Lifetime3Lifetime2 - 15, -16 + var16Lifetime4Lifetime2);
+                  TextLine.field_b.drawQuarterSize(var15Lifetime3Lifetime2 - 15, -16 + var16Lifetime4Lifetime2);
                 }
               }
               return;
@@ -11213,7 +11213,7 @@ final class lc {
           }
           if (this.field_l == 16) {
             SoftwareRasterizer.clear();
-            to.field_s.drawBackground((byte) -102);
+            SceneWidgetNode.field_s.drawBackground((byte) -102);
             return;
           }
           if (this.field_l == 5 ||
@@ -11299,16 +11299,16 @@ final class lc {
               var4Lifetime1 = var3Lifetime1 - 200;
               var4Lifetime1 = EmailLoginCredentials.field_f * var4Lifetime1 / 640;
               for (var5Lifetime1 = 0; var5Lifetime1 < 3; var5Lifetime1++) {
-                rc.field_d[var2_intLifetime1].drawAlpha(-(120 * var5Lifetime1) + var4Lifetime1, var5Lifetime1 * 30 + 240, 32);
+                LoadingTracker.field_d[var2_intLifetime1].drawAlpha(-(120 * var5Lifetime1) + var4Lifetime1, var5Lifetime1 * 30 + 240, 32);
               }
             } else {
-              rc.field_d[var2_intLifetime1].flipHorizontally();
+              LoadingTracker.field_d[var2_intLifetime1].flipHorizontally();
               var4Lifetime1 = -var3Lifetime1 + 2200;
               var4Lifetime1 = EmailLoginCredentials.field_f * var4Lifetime1 / 640;
               for (var5Lifetime1 = 0; 3 > var5Lifetime1; var5Lifetime1++) {
-                rc.field_d[var2_intLifetime1].drawAlpha(-(var5Lifetime1 * 120) + var4Lifetime1, -(30 * var5Lifetime1) + 200, 32);
+                LoadingTracker.field_d[var2_intLifetime1].drawAlpha(-(var5Lifetime1 * 120) + var4Lifetime1, -(30 * var5Lifetime1) + 200, 32);
               }
-              rc.field_d[var2_intLifetime1].flipHorizontally();
+              LoadingTracker.field_d[var2_intLifetime1].flipHorizontally();
             }
           }
           if (this.field_l == 1 ||
@@ -11357,7 +11357,7 @@ final class lc {
             pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 68, kg.field_d[1], IsaacRandom.field_j[so.field_c[0]], var15);
             var16 -= 8;
             var16 -= 16;
-            pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 43, kg.field_d[1], kc.field_kb[so.field_c[1]], var15);
+            pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 43, kg.field_d[1], SceneWidget.field_kb[so.field_c[1]], var15);
             var16 += 16;
             pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 45, kg.field_d[1], hn.field_d[so.field_c[5]], var15);
             if (53 != so.field_c[5] &&
@@ -11530,7 +11530,7 @@ final class lc {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = param0 / 8;
-          if (wd.field_d <= var3_int) {
+          if (ResizableViewResizeListener.field_d <= var3_int) {
             return false;
           }
           var4 = 7 - (7 & param0);
@@ -11823,9 +11823,9 @@ final class lc {
             this.f(-1);
           }
           if (16 == this.field_l) {
-            var2 = to.field_s;
+            var2 = SceneWidgetNode.field_s;
             stackIn_71_0 = var2;
-            stackIn_72_1 = (!rc.b(-1)) && (~mn.field_r == ~this.field_l);
+            stackIn_72_1 = (!LoadingTracker.b(-1)) && (~mn.field_r == ~this.field_l);
             var3 = ((MembershipOfferScreen) (Object) stackIn_71_0).advanceAnimation(stackIn_72_1, true);
             if (var3 != 3 && (var3 == 1 ||
               var3 == 2)) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh {
+final class UiTheme {
     int field_c;
     int field_C;
     WidgetPainter field_y;
@@ -13,7 +13,7 @@ final class vh {
     BitmapFont field_q;
     static boolean field_n;
     WidgetPainter field_u;
-    static ql field_f;
+    static LoginMethod field_f;
     int field_k;
     WidgetPainter field_l;
     static int field_t;
@@ -105,12 +105,12 @@ final class vh {
         }
     }
 
-    final void a(String param0, byte param1, int param2, int param3) {
+    final void drawText(String param0, byte param1, int param2, int param3) {
         try {
           if (this.field_i) {
-            this.b(param2, 106, param0, param3);
+            this.drawWrappedText(param2, 106, param0, param3);
           } else {
-            this.a(-1, param3, param0, param2);
+            this.drawTooltip(-1, param3, param0, param2);
           }
           int var5_int = 115 % ((8 - param1) / 44);
         } catch (RuntimeException runtimeException) {
@@ -125,7 +125,7 @@ final class vh {
         }
     }
 
-    private final void a(int param0, int param1, String param2, int param3) {
+    private final void drawTooltip(int param0, int param1, String param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -149,7 +149,7 @@ final class vh {
         }
     }
 
-    private final void b(int param0, int param1, String param2, int param3) {
+    private final void drawWrappedText(int param0, int param1, String param2, int param3) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -234,11 +234,11 @@ final class vh {
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
         SoftwareRasterizer.drawLine(param1, param4, param0, param2, param3);
         if (param5 <= 48) {
-          vh.releaseStatics(127);
+          UiTheme.releaseStatics(127);
         }
     }
 
-    final void a(byte param0, BitmapFont param1) {
+    final void initialize(byte param0, BitmapFont param1) {
         int var7_int = 0;
         mj var14 = null;
         mj var19 = null;
@@ -261,9 +261,9 @@ final class vh {
         this.field_d = -1;
         var4.field_e = 11711154;
         this.field_C = 15658734;
-        var4.a((byte) -37, 0).b(0, 15658734).a((byte) -71, ff.a((byte) 109, 7829367, 10066329, 8947848));
-        var4.a((byte) -121, 1).a((byte) -71, ff.a((byte) 35, 13421772, 10066329, 11184810));
-        var4.a((byte) -68, 3).a((byte) -71, ff.a((byte) 53, 10066329, 7829367, 8947848)).c(-1, 1).a(1, (byte) 120);
+        var4.a((byte) -37, 0).b(0, 15658734).withFrameSprites((byte) -71, ff.a((byte) 109, 7829367, 10066329, 8947848));
+        var4.a((byte) -121, 1).withFrameSprites((byte) -71, ff.a((byte) 35, 13421772, 10066329, 11184810));
+        var4.a((byte) -68, 3).withFrameSprites((byte) -71, ff.a((byte) 53, 10066329, 7829367, 8947848)).c(-1, 1).a(1, (byte) 120);
         Sprite[] var5 = new Sprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
@@ -271,22 +271,22 @@ final class vh {
           var16.field_A[var7_int] = 1077952576;
         }
         var5[4] = (Sprite) ((Object) var18);
-        var4.a((byte) -62, 4).a(true, -5859).a((byte) -71, var5);
-        var4.a((byte) -113, 5).a((byte) -71, le.a(0, 0, 1, 0, 65793)).a(true, -5859).b(0, -1);
+        var4.a((byte) -62, 4).a(true, -5859).withFrameSprites((byte) -71, var5);
+        var4.a((byte) -113, 5).withFrameSprites((byte) -71, le.a(0, 0, 1, 0, 65793)).a(true, -5859).b(0, -1);
         this.field_u = (WidgetPainter) ((Object) var4);
         mj var6 = new mj(var4, true);
         var6.field_i = 0;
         mj var7 = new mj(var4, true);
         var7.field_i = 0;
         var7.a(q.a(8947848, 0), -23165);
-        var7.a((byte) -28, 1).a((byte) -71, q.a(11184810, 0)).b(0, 2236962);
+        var7.a((byte) -28, 1).withFrameSprites((byte) -71, q.a(11184810, 0)).b(0, 2236962);
         this.field_b = (WidgetPainter) ((Object) new si(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
         of discarded$0 = new of(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
         lh discarded$1 = new lh(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
         mj var8 = new mj();
         var17.a(var8, 1881);
-        var8.a((byte) -25, 0).a((byte) -71, ff.a((byte) 104, 10066329, 7829367, 15658734)).b(0, 1118481).a(125, -1);
-        var8.a((byte) -100, 4).a(true, -5859).a((byte) -71, var5);
+        var8.a((byte) -25, 0).withFrameSprites((byte) -71, ff.a((byte) 104, 10066329, 7829367, 15658734)).b(0, 1118481).a(125, -1);
+        var8.a((byte) -100, 4).a(true, -5859).withFrameSprites((byte) -71, var5);
         this.field_l = (WidgetPainter) ((Object) var8);
         Sprite[] var9 = new Sprite[9];
         Sprite[] var10 = new Sprite[9];
@@ -334,7 +334,7 @@ final class vh {
         field_a = null;
     }
 
-    final static int a(boolean param0, byte param1, String param2) {
+    final static int measureText(boolean param0, byte param1, String param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -368,7 +368,7 @@ final class vh {
         }
     }
 
-    final static java.awt.Frame a(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame openFullscreenFrame(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_5_0 = null;
         Object stackIn_29_0 = null;
@@ -449,7 +449,7 @@ final class vh {
         oo.popClipState(-15405);
         if (param0 <= 86) {
           String var3 = (String) null;
-          this.a((String) null, (byte) -95, 123, -107);
+          this.drawText((String) null, (byte) -95, 123, -107);
         }
     }
 
@@ -460,13 +460,13 @@ final class vh {
         SoftwareRasterizer.fillRectangleAlpha(param6, param1, param3, param0, param2, param4);
     }
 
-    public vh() {
+    public UiTheme() {
         this.field_i = true;
     }
 
     static {
         field_n = false;
-        field_f = new ql("");
+        field_f = new LoginMethod("");
         field_h = "Purchasing a prestige hat will cause you to lose ALL the current wands and spells that you have purchased. Are you sure you wish to do this? If you are certain, hold '<col=ffffff>CTRL</col>' and click the mouse.";
         field_m = "This is your RuneScape clan if you have one.";
     }

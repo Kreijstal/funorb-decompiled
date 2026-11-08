@@ -4,7 +4,7 @@
 final class qa extends IntrusiveNode {
     int field_n;
     static char[] field_i;
-    static kc field_j;
+    static SceneWidget field_j;
     static String[][] field_o;
     static byte[] field_l;
     static String field_k;
@@ -13,7 +13,7 @@ final class qa extends IntrusiveNode {
     static volatile boolean field_g;
     static String field_p;
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
+    final static Sprite[] createFrameSprites(int param0, int param1, int param2, int param3, byte param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
         if (param4 != 123) {
@@ -272,13 +272,13 @@ final class qa extends IntrusiveNode {
               }
               stackIn_50_0[stackIn_50_1] = stackIn_51_2;
             }
-            qj.b(-26572);
+            qj.monotonicTimeMillis(-26572);
           }
           hi.field_h.field_f = hn.field_k.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; ib.field_v.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_93_0 = !(0 > oe.field_c[var4Lifetime1]);
-            var5Lifetime1 = vh.a(stackIn_93_0, (byte) 10, ib.field_v[var4Lifetime1]);
+            var5Lifetime1 = UiTheme.measureText(stackIn_93_0, (byte) 10, ib.field_v[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -288,7 +288,7 @@ final class qa extends IntrusiveNode {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = vh.a(false, (byte) 37, var11);
+              var7Lifetime1 = UiTheme.measureText(false, (byte) 37, var11);
               if (var3_intLifetime1 < var7Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -296,31 +296,31 @@ final class qa extends IntrusiveNode {
             var4_ref_String__Lifetime1 = ik.field_c;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = vh.a(false, (byte) 96, var12);
+              var7Lifetime1Lifetime1 = UiTheme.measureText(false, (byte) 96, var12);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
             }
           }
-          rd.field_a = (bm.field_h + da.field_c << 1) * hi.field_h.field_f;
+          FixedViewResizeListener.field_a = (bm.field_h + da.field_c << 1) * hi.field_h.field_f;
           for (var4Lifetime2 = 0; ib.field_v.length > var4Lifetime2; var4Lifetime2++) {
-            stackIn_114_0 = rd.field_a;
+            stackIn_114_0 = FixedViewResizeListener.field_a;
             if (oe.field_c[var4Lifetime2] < 0) {
               stackIn_115_1 = qj.field_a;
             } else {
               stackIn_115_1 = IntrusiveNodeHashTable.field_h;
             }
-            rd.field_a = stackIn_114_0 + stackIn_115_1;
+            FixedViewResizeListener.field_a = stackIn_114_0 + stackIn_115_1;
           }
-          MembershipOfferScreen.field_r = to.field_p - (rd.field_a >> 1);
+          MembershipOfferScreen.field_r = SceneWidgetNode.field_p - (FixedViewResizeListener.field_a >> 1);
           wh.field_d = new int[ib.field_v.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = MembershipOfferScreen.field_r;
           while (var4Lifetime3 < ib.field_v.length) {
             var6Lifetime1 = oe.field_c[var4Lifetime3];
             if (0 <= var6Lifetime1) {
-              var7Lifetime2 = vh.a(true, (byte) 111, ib.field_v[var4Lifetime3]);
-              var8Lifetime1 = -(var7Lifetime2 >> 1) + vd.field_l;
+              var7Lifetime2 = UiTheme.measureText(true, (byte) 111, ib.field_v[var4Lifetime3]);
+              var8Lifetime1 = -(var7Lifetime2 >> 1) + TextLine.field_l;
               var5Lifetime3 = var5Lifetime3 + da.field_c;
               wh.field_d[var4Lifetime3] = new int[4];
               wh.field_d[var4Lifetime3][0] = var8Lifetime1 - la.field_d;

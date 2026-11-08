@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rc {
+final class LoadingTracker {
     float field_b;
     static String field_o;
     static Sprite field_h;
@@ -20,7 +20,7 @@ final class rc {
     static IndexedSprite[] field_d;
     static String field_i;
 
-    private final void a(ta param0, int param1, int param2) {
+    private final void updateTaskProgress(ta param0, int param1, int param2) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -61,7 +61,7 @@ final class rc {
         return null != tc.field_A ? true : false;
     }
 
-    final static BinaryBitmapFont a(ResourceArchive param0, int param1, String param2, String param3, ResourceArchive param4) {
+    final static BinaryBitmapFont loadBinaryFont(ResourceArchive param0, int param1, String param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -157,34 +157,34 @@ final class rc {
           if (DiskCacheRequest.field_F != jo.field_e) {
             var2 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
             var3 = var2 - jo.field_e * jo.field_e;
-            param0 = param0 + var3 * (vd.field_k - param0) / var2;
+            param0 = param0 + var3 * (TextLine.field_k - param0) / var2;
           }
-          IntKeyLookup.field_g.a(640, sa.field_Hb, param0, 120, (byte) -120);
-          IsaacRandom.a(5, vd.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
+          IntKeyLookup.field_g.setBounds(640, sa.field_Hb, param0, 120, (byte) -120);
+          IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
           return;
         }
         CharSequence var4 = (CharSequence) null;
-        rc.a((byte) 20, (CharSequence) null, -57);
+        LoadingTracker.parseIntegerRadix((byte) 20, (CharSequence) null, -57);
         ma.field_N = param0;
         if (DiskCacheRequest.field_F != jo.field_e) {
           var2Lifetime1 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
           var3Lifetime1 = var2Lifetime1 - jo.field_e * jo.field_e;
-          param0 = param0 + var3Lifetime1 * (vd.field_k - param0) / var2Lifetime1;
+          param0 = param0 + var3Lifetime1 * (TextLine.field_k - param0) / var2Lifetime1;
         }
-        IntKeyLookup.field_g.a(640, sa.field_Hb, param0, 120, (byte) -120);
-        IsaacRandom.a(5, vd.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
+        IntKeyLookup.field_g.setBounds(640, sa.field_Hb, param0, 120, (byte) -120);
+        IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
     }
 
     final static boolean b(int param0) {
         if (param0 != -1) {
           CharSequence var2 = (CharSequence) null;
-          rc.a((byte) 9, (CharSequence) null, 44);
+          LoadingTracker.parseIntegerRadix((byte) 9, (CharSequence) null, 44);
           return ri.a(-97);
         }
         return ri.a(-97);
     }
 
-    final static int a(byte param0, CharSequence param1, int param2) {
+    final static int parseIntegerRadix(byte param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -210,7 +210,7 @@ final class rc {
         }
     }
 
-    final boolean d(int param0) {
+    final boolean advanceTasks(int param0) {
         ta var2;
         int var3;
         ec var4;
@@ -218,30 +218,30 @@ final class rc {
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 <= 78) {
           var4 = (ec) null;
-          rc.a((ec) null, -3, -38, 35, (ec) null, -83);
+          LoadingTracker.a((ec) null, -3, -38, 35, (ec) null, -83);
         }
         while (this.field_q < this.field_e) {
           var5 = this.field_c[this.field_q];
           var2 = var5;
           if (!var5.field_c.c(-10923)) {
-            this.a(var5, 0, -123);
+            this.updateTaskProgress(var5, 0, -123);
             return false;
           }
           if (var5.field_h >= 0 &&
             !var5.field_c.a(true, var5.field_h)) {
-            this.a(var2, var5.field_c.a(var5.field_h, -23760), -112);
+            this.updateTaskProgress(var2, var5.field_c.a(var5.field_h, -23760), -112);
             return false;
           }
           if (var5.field_g != null &&
             !var5.field_c.a(var5.field_g, -24417)) {
-            this.a(var2, var5.field_c.b(var5.field_g, 108), -126);
+            this.updateTaskProgress(var2, var5.field_c.b(var5.field_g, 108), -126);
             return false;
           }
           if (var5.field_h < 0 &&
             var5.field_g == null &&
             var5.field_f != null &&
             !var5.field_c.a(-105)) {
-            this.a(var2, var5.field_c.a((byte) -116), -118);
+            this.updateTaskProgress(var2, var5.field_c.a((byte) -116), -118);
             return false;
           }
           this.field_q = this.field_q + 1;
@@ -249,7 +249,7 @@ final class rc {
         return true;
     }
 
-    private rc() throws Throwable {
+    private LoadingTracker() throws Throwable {
         throw new Error();
     }
 

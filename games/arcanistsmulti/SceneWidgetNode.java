@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class to extends DualLinkNode {
+class SceneWidgetNode extends DualLinkNode {
     static Sprite field_q;
     static String field_n;
     static int[] field_r;
@@ -17,7 +17,7 @@ class to extends DualLinkNode {
         RuntimeException var1 = null;
         try {
           if (param0) {
-            to.d(true);
+            SceneWidgetNode.d(true);
           }
           field_s = null;
           field_o = null;
@@ -44,7 +44,7 @@ class to extends DualLinkNode {
           var2_int = 125 / ((25 - param1) / 59);
           if (ua.field_J) {
             SoftwareRasterizer.darkenRectangle(tn.field_Ob.field_c.field_T, tn.field_Ob.field_c.field_db, tn.field_Ob.field_c.field_x, tn.field_Ob.field_c.field_I);
-            tn.field_Ob.field_c.a(param0, true);
+            tn.field_Ob.field_c.drawFullScreen(param0, true);
           }
           ByteStorage.a(param0, (byte) -73);
           return;
@@ -55,7 +55,7 @@ class to extends DualLinkNode {
         }
     }
 
-    to() {
+    SceneWidgetNode() {
     }
 
     final static void a(byte[] param0, boolean param1, int[] param2, int param3, int param4) {
@@ -160,57 +160,57 @@ class to extends DualLinkNode {
               return stackIn_8_0;
             }
             if (!param0) {
-              to.a((byte[]) null, false, (int[]) null, -92, -42);
+              SceneWidgetNode.a((byte[]) null, false, (int[]) null, -92, -42);
             }
             try {
-              if (0 == uh.field_m) {
+              if (0 == ClipState.field_m) {
                 FrameClock.field_a = ri.field_g.a(ed.field_Hb, true, IsaacRandom.field_g);
-                uh.field_m = uh.field_m + 1;
+                ClipState.field_m = ClipState.field_m + 1;
               }
-              if (uh.field_m == 1) {
+              if (ClipState.field_m == 1) {
                 if (FrameClock.field_a.field_e == 2) {
                   stackIn_23_0 = FrameClock.a((byte) 110, -1);
                   return stackIn_23_0;
                 }
                 if (FrameClock.field_a.field_e == 1) {
-                  uh.field_m = uh.field_m + 1;
+                  ClipState.field_m = ClipState.field_m + 1;
                 }
               }
-              if (uh.field_m == 2) {
+              if (ClipState.field_m == 2) {
                 td.field_E = new k((java.net.Socket) (FrameClock.field_a.field_g), ri.field_g);
                 var1 = new PacketBuffer(13);
                 SpriteState.a(var1, ne.field_b, ib.field_u, ce.field_o, 123);
                 var1.writeByte(15, (byte) -28);
                 var1.writeInt(hd.field_a, (byte) -101);
                 td.field_E.a(13, 0, (byte) 126, var1.payload);
-                uh.field_m = uh.field_m + 1;
-                ud.field_E = qj.b(-26572) + 30000L;
+                ClipState.field_m = ClipState.field_m + 1;
+                ud.field_E = qj.monotonicTimeMillis(-26572) + 30000L;
               }
               boolean decompiledFrameRemainder0 = true;
-              if (3 == uh.field_m) {
+              if (3 == ClipState.field_m) {
                 if (td.field_E.b(0) > 0) {
                   var1_int = td.field_E.a((byte) 120);
                   if (var1_int != 0) {
                     stackIn_39_0 = FrameClock.a((byte) 110, var1_int);
                     return stackIn_39_0;
                   }
-                  uh.field_m = uh.field_m + 1;
+                  ClipState.field_m = ClipState.field_m + 1;
                   decompiledFrameRemainder0 = !(!ArcanistsMulti.field_G);
                 }
                 if ((decompiledFrameRemainder0) &&
-                  (qj.b(-26572) > ud.field_E)) {
+                  (qj.monotonicTimeMillis(-26572) > ud.field_E)) {
                   stackIn_47_0 = FrameClock.a((byte) 110, -2);
                   return stackIn_47_0;
                 }
               }
-              if (uh.field_m != 4) {
+              if (ClipState.field_m != 4) {
                 stackIn_52_0 = -1;
                 return stackIn_52_0;
               }
               GrowableIntList.field_c.a(CipherPacketBuffer.field_n, true, td.field_E);
               FrameClock.field_a = null;
               td.field_E = null;
-              uh.field_m = 0;
+              ClipState.field_m = 0;
               stackIn_50_0 = 0;
               return stackIn_50_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -340,7 +340,7 @@ class to extends DualLinkNode {
               else {
                 if (stackIn_57_0 <= stackIn_57_1) {
                   ud.field_p[var24Lifetime2] = var28Lifetime1 / var30Lifetime1 + var22Lifetime2;
-                  v.field_g[var24Lifetime2] = var29Lifetime1 / var30Lifetime1 + var23Lifetime2;
+                  ViewportController.field_g[var24Lifetime2] = var29Lifetime1 / var30Lifetime1 + var23Lifetime2;
                   if (var30Lifetime1 > var8) {
                     var8 = var30Lifetime1;
                   }
@@ -377,7 +377,7 @@ class to extends DualLinkNode {
                   var27Lifetime1Lifetime1 = param4.field_x[var24Lifetime2];
                   sl.field_V[var24Lifetime2] = (var16 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var12 + var19 * var27Lifetime1Lifetime1) >> 16) + var9;
                   k.field_m[var24Lifetime2] = var10 + (var27Lifetime1Lifetime1 * var20 + var26Lifetime1Lifetime1 * var17 + var25Lifetime1Lifetime1 * var13 >> 16);
-                  kc.field_N[var24Lifetime2] = (var21 * var27Lifetime1Lifetime1 + var18 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var14 >> 16) + var11;
+                  SceneWidget.field_N[var24Lifetime2] = (var21 * var27Lifetime1Lifetime1 + var18 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var14 >> 16) + var11;
                   var25Lifetime1Lifetime1 = param4.field_J[var24Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_a[var24Lifetime2];
                   var27Lifetime1Lifetime1 = param4.field_j[var24Lifetime2];

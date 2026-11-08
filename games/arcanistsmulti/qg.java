@@ -31,7 +31,7 @@ final class qg extends RuntimeException {
             decompiledFrameRemainder0 = (cb.field_c == null);
           }
           if (decompiledFrameRemainder0) {
-            if (!oh.field_i) {
+            if (!ReflectionCheckRequest.field_i) {
               if (DelegatingCanvas.field_f >= oa.field_e) {
                 stackIn_17_0 = (DelegatingCanvas.field_f < qc.field_e + oa.field_e) ? 1 : 0;
               } else {
@@ -44,7 +44,7 @@ final class qg extends RuntimeException {
             if (param1 == null) {
               DelegatingCanvas.field_f = 0;
             } else {
-              if (oh.field_i) {
+              if (ReflectionCheckRequest.field_i) {
                 DelegatingCanvas.field_f = oa.field_e;
               } else {
                 if (var2_int == 0) {
@@ -55,10 +55,10 @@ final class qg extends RuntimeException {
               }
             }
             if (param1 != null) {
-              oh.field_i = false;
+              ReflectionCheckRequest.field_i = false;
             } else {
               if (var2_int != 0) {
-                oh.field_i = true;
+                ReflectionCheckRequest.field_i = true;
               }
             }
             IntrusiveNodeHashTable.field_p = TextFieldValidator.field_m;
@@ -66,7 +66,7 @@ final class qg extends RuntimeException {
           }
           var2_intLifetime1 = -49 / ((param0 + 45) / 60);
           cb.field_c = param1;
-          if (!oh.field_i &&
+          if (!ReflectionCheckRequest.field_i &&
             oa.field_e > DelegatingCanvas.field_f &&
             ArchiveProvider.field_d) {
             IntrusiveNodeHashTable.field_p = TextFieldValidator.field_m;
@@ -75,12 +75,12 @@ final class qg extends RuntimeException {
           }
           TextFieldValidator.field_m = -1;
           ln.field_J = -1;
-          if (oh.field_i) {
+          if (ReflectionCheckRequest.field_i) {
             if (mk.field_Q != DelegatingCanvas.field_f) {
               return;
             }
             DelegatingCanvas.field_f = 0;
-            oh.field_i = false;
+            ReflectionCheckRequest.field_i = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

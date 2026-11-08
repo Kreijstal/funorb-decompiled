@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class w extends kc {
+final class w extends SceneWidget {
     long field_Fb;
-    private kc field_Eb;
+    private SceneWidget field_Eb;
     private af field_Kb;
     static String field_Bb;
-    private kc field_Gb;
-    private kc field_Ib;
+    private SceneWidget field_Gb;
+    private SceneWidget field_Ib;
     private int field_Hb;
     static boolean field_Cb;
     static int[] field_Lb;
     private StringBuilder field_Db;
-    private kc field_Mb;
+    private SceneWidget field_Mb;
     static String field_Qb;
-    private kc field_Pb;
-    private kc field_Nb;
+    private SceneWidget field_Pb;
+    private SceneWidget field_Nb;
     static String field_Jb;
-    private kc[] field_Ob;
+    private SceneWidget[] field_Ob;
 
     final static boolean a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         if (pn.a((byte) -123)) {
@@ -46,7 +46,7 @@ final class w extends kc {
         return stackIn_6_0;
     }
 
-    w(int param0, int param1, int param2, int param3, int param4, kc param5, kc param6, kc param7, kc param8, af param9, kc param10, String param11, long param12) {
+    w(int param0, int param1, int param2, int param3, int param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, af param9, SceneWidget param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         int var15_int = 0;
@@ -66,7 +66,7 @@ final class w extends kc {
         af stackIn_9_1;
         af stackIn_9_2;
         String stackIn_9_5;
-        kc stackIn_15_0 = null;
+        SceneWidget stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -84,14 +84,14 @@ final class w extends kc {
         StringBuilder stackIn_69_1 = null;
         String stackIn_70_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kc[] var15 = null;
+        SceneWidget[] var15 = null;
         RuntimeException var15_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        kc[] var28 = null;
+        SceneWidget[] var28 = null;
         Object stackIn_7_0Lifetime1;
         Object stackIn_9_0Lifetime1;
         af stackIn_9_1Lifetime1;
@@ -116,25 +116,25 @@ final class w extends kc {
         this.field_Hb = -2;
         try {
           this.field_Fb = param12;
-          this.field_Nb = new kc(0L, param6, qj.field_e.toUpperCase());
+          this.field_Nb = new SceneWidget(0L, param6, qj.field_e.toUpperCase());
           this.field_Nb.field_X = 1;
-          this.a(this.field_Nb, 81);
-          this.field_Gb = new kc(0L, param7);
-          this.field_Nb.a(this.field_Gb, 10);
-          this.field_Pb = new kc(0L, (kc) null);
-          this.a(this.field_Pb, 89);
+          this.addChild(this.field_Nb, 81);
+          this.field_Gb = new SceneWidget(0L, param7);
+          this.field_Nb.addChild(this.field_Gb, 10);
+          this.field_Pb = new SceneWidget(0L, (SceneWidget) null);
+          this.addChild(this.field_Pb, 89);
           if (param11 != null) {
-            this.field_Eb = new kc(0L, param8, da.field_e);
+            this.field_Eb = new SceneWidget(0L, param8, da.field_e);
             this.field_Eb.field_ob = 11184810;
             this.field_Eb.field_X = 1;
-            this.field_Pb.a(this.field_Eb, 104);
-            this.field_Ib = new kc(0L, param8, rf.field_q);
+            this.field_Pb.addChild(this.field_Eb, 104);
+            this.field_Ib = new SceneWidget(0L, param8, rf.field_q);
             this.field_Ib.field_X = 1;
             this.field_Ib.field_ob = 11184810;
-            this.field_Pb.a(this.field_Ib, 61);
-            this.field_Mb = new kc(0L, param8);
+            this.field_Pb.addChild(this.field_Ib, 61);
+            this.field_Mb = new SceneWidget(0L, param8);
             this.field_Mb.field_ob = 16764006;
-            this.field_Pb.a(this.field_Mb, 95);
+            this.field_Pb.addChild(this.field_Mb, 95);
             this.field_Mb.field_L = "|";
             if (!(5 > ib.field_r) ||
               !(qf.field_d < 2)) {
@@ -151,7 +151,7 @@ final class w extends kc {
                     stackIn_9_0 = this;
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;
-                    stackIn_9_5 = vd.field_a;
+                    stackIn_9_5 = TextLine.field_a;
                     break regionExit1;
                   }
                 }
@@ -161,25 +161,25 @@ final class w extends kc {
                 stackIn_9_5 = no.field_wb;
               }
               this.field_Kb = new af(stackIn_7_3, stackIn_7_4, stackIn_9_5);
-              this.field_Pb.a(this.field_Kb, 31);
+              this.field_Pb.addChild(this.field_Kb, 31);
             }
-            var28 = new kc[3];
+            var28 = new SceneWidget[3];
             var15 = var28;
-            var28[0] = new kc(0L, (kc) null);
-            this.field_Pb.a(var28[0], 7);
-            var28[1] = new kc(0L, (kc) null);
-            this.field_Pb.a(var28[1], 107);
-            var28[2] = new kc(0L, (kc) null);
-            this.field_Pb.a(var28[2], 60);
-            this.field_Ob = new kc[aj.field_g];
+            var28[0] = new SceneWidget(0L, (SceneWidget) null);
+            this.field_Pb.addChild(var28[0], 7);
+            var28[1] = new SceneWidget(0L, (SceneWidget) null);
+            this.field_Pb.addChild(var28[1], 107);
+            var28[2] = new SceneWidget(0L, (SceneWidget) null);
+            this.field_Pb.addChild(var28[2], 60);
+            this.field_Ob = new SceneWidget[aj.field_g];
             for (var16 = 0; aj.field_g > var16; var16++) {
               if (h.field_K[var16] != null) {
-                this.field_Ob[var16] = new kc(0L, param10, h.field_K[var16]);
+                this.field_Ob[var16] = new SceneWidget(0L, param10, h.field_K[var16]);
                 this.field_Ob[var16].field_X = 0;
                 stackIn_15_0 = this.field_Ob[var16];
                 stackIn_16_1 = (param11 != null);
                 stackIn_15_0.field_ub = stackIn_16_1;
-                this.field_Pb.a(this.field_Ob[var16], 97);
+                this.field_Pb.addChild(this.field_Ob[var16], 97);
               }
             }
             this.field_Db = new StringBuilder(12);
@@ -201,7 +201,7 @@ final class w extends kc {
             }
             for (var17Lifetime4 = 0; aj.field_g > var17Lifetime4; var17Lifetime4++) {
               if (this.field_Ob[var17Lifetime4] != null) {
-                var18 = this.field_Ob[var17Lifetime4].c(-25921);
+                var18 = this.field_Ob[var17Lifetime4].getContentWidth(-25921);
                 if (var18 > var16Lifetime2) {
                   var16Lifetime2 = var18;
                 }
@@ -242,7 +242,7 @@ final class w extends kc {
               var17Lifetime5 = var18Lifetime5;
             }
             var19 = 26 + 3 * var16Lifetime2;
-            var20 = this.field_Nb.c(-25921);
+            var20 = this.field_Nb.getContentWidth(-25921);
             if (var20 > var19) {
               var19 = var20;
             }
@@ -252,49 +252,49 @@ final class w extends kc {
                 var19 = var20Lifetime2;
               }
             }
-            this.field_Nb.a(var19 + 13 + 13, 0, 0, 24, (byte) -120);
-            this.field_Gb.a(15, -20 + this.field_Nb.field_x, 5, 15, (byte) -120);
+            this.field_Nb.setBounds(var19 + 13 + 13, 0, 0, 24, (byte) -120);
+            this.field_Gb.setBounds(15, -20 + this.field_Nb.field_x, 5, 15, (byte) -120);
             var21 = 10;
-            this.field_Eb.a(var19, 13, var21, 2 * ImageProducerRasterBuffer.field_r, (byte) -120);
+            this.field_Eb.setBounds(var19, 13, var21, 2 * ImageProducerRasterBuffer.field_r, (byte) -120);
             var21 = var21 + 2 * ImageProducerRasterBuffer.field_r;
-            this.field_Ib.a(var19, 13, var21, ImageProducerRasterBuffer.field_r * 2, (byte) -120);
+            this.field_Ib.setBounds(var19, 13, var21, ImageProducerRasterBuffer.field_r * 2, (byte) -120);
             var21 = var21 + (ImageProducerRasterBuffer.field_r * 2 + 10);
-            this.field_Mb.a(0, 0, var21, ImageProducerRasterBuffer.field_r, (byte) -120);
+            this.field_Mb.setBounds(0, 0, var21, ImageProducerRasterBuffer.field_r, (byte) -120);
             var21 = var21 + (ImageProducerRasterBuffer.field_r + 10);
             if (null != this.field_Kb) {
               var20Lifetime3 = this.field_Kb.a(4, (byte) -126);
               this.field_Kb.a(13 + (-var20Lifetime3 + var19) / 2, ImageProducerRasterBuffer.field_r, var20Lifetime3, var21, -31179, 4);
               var21 = var21 + (ImageProducerRasterBuffer.field_r + 10);
             }
-            var28[0].a(var16Lifetime2, 13, var21, var17Lifetime5, (byte) -120);
-            var28[1].a(var16Lifetime2, 13 + var16Lifetime2 + 13, var21, var17Lifetime5, (byte) -120);
-            var28[2].a(var16Lifetime2, 39 + 2 * var16Lifetime2, var21, var17Lifetime5, (byte) -120);
+            var28[0].setBounds(var16Lifetime2, 13, var21, var17Lifetime5, (byte) -120);
+            var28[1].setBounds(var16Lifetime2, 13 + var16Lifetime2 + 13, var21, var17Lifetime5, (byte) -120);
+            var28[2].setBounds(var16Lifetime2, 39 + 2 * var16Lifetime2, var21, var17Lifetime5, (byte) -120);
             var22 = var21;
-            this.field_Pb.a(var19 + 26, 0, 24, 10 + (var22 + var17Lifetime5), (byte) -120);
+            this.field_Pb.setBounds(var19 + 26, 0, 24, 10 + (var22 + var17Lifetime5), (byte) -120);
             this.field_Pb.field_v = of.a(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
             var23 = 13 + (13 + var19);
             var24 = 34 + var22 + var17Lifetime5;
             var25 = ih.clampToScreenX(param0, var23, param2, 246);
-            var26 = ql.a(10, param3, var24, param1);
-            this.a(var23, var25, var26, var24, (byte) -120);
+            var26 = LoginMethod.clampToScreenY(10, param3, var24, param1);
+            this.setBounds(var23, var25, var26, var24, (byte) -120);
             return;
           }
-          this.field_Eb = new kc(0L, param8, mn.field_x);
+          this.field_Eb = new SceneWidget(0L, param8, mn.field_x);
           this.field_Eb.field_ob = 11184810;
           this.field_Eb.field_X = 1;
-          this.field_Pb.a(this.field_Eb, 109);
+          this.field_Pb.addChild(this.field_Eb, 109);
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Eb.field_Z.wrappedLineCount(this.field_Eb.field_rb, var15_int);
-          this.field_Eb.a(var15_int, 13, var16Lifetime1, ImageProducerRasterBuffer.field_r * var17Lifetime1, (byte) -120);
+          this.field_Eb.setBounds(var15_int, 13, var16Lifetime1, ImageProducerRasterBuffer.field_r * var17Lifetime1, (byte) -120);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * ImageProducerRasterBuffer.field_r;
-          this.field_Pb.a(13 + var15_int + 13, 0, 24, 10 + var16Lifetime1, (byte) -120);
+          this.field_Pb.setBounds(13 + var15_int + 13, 0, 24, 10 + var16Lifetime1, (byte) -120);
           this.field_Pb.field_v = of.a(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
           var18Lifetime1 = var15_int + 26;
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = ih.clampToScreenX(param0, var18Lifetime1, param2, 246);
-          var21Lifetime1 = ql.a(10, param3, var19Lifetime1, param1);
-          this.a(var18Lifetime1, var20Lifetime1, var21Lifetime1, var19Lifetime1, (byte) -120);
+          var21Lifetime1 = LoginMethod.clampToScreenY(10, param3, var19Lifetime1, param1);
+          this.setBounds(var18Lifetime1, var20Lifetime1, var21Lifetime1, var19Lifetime1, (byte) -120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -346,8 +346,8 @@ final class w extends kc {
         }
     }
 
-    private final int a(kc param0, int param1, kc param2, String param3, int param4, byte param5) {
-        kc var7 = null;
+    private final int a(SceneWidget param0, int param1, SceneWidget param2, String param3, int param4, byte param5) {
+        SceneWidget var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -359,8 +359,8 @@ final class w extends kc {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new kc(0L, param0, 0, param1, param4, 24, param3);
-          param2.a(var7, 20);
+          var7 = new SceneWidget(0L, param0, 0, param1, param4, 24, param3);
+          param2.addChild(var7, 20);
           param1 += 32;
           if (param5 < 125) {
             field_Cb = true;
@@ -462,7 +462,7 @@ final class w extends kc {
         return this.field_Db.toString();
     }
 
-    private final int a(int param0, int param1, kc param2, int param3, kc param4) {
+    private final int a(int param0, int param1, SceneWidget param2, int param3, SceneWidget param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -477,9 +477,9 @@ final class w extends kc {
           var6_int = 2 / ((param3 + 64) / 34);
           param1 += 8;
           var7 = param4.field_Z.paragraphHeight(param4.field_rb, -(param4.field_t * 2) + param0, param4.field_z);
-          param4.a(param0, 0, param1, var7, (byte) -120);
+          param4.setBounds(param0, 0, param1, var7, (byte) -120);
           param1 = param1 + (var7 + 0);
-          param2.a(param4, 89);
+          param2.addChild(param4, 89);
           stackIn_1_0 = param1;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -506,11 +506,11 @@ final class w extends kc {
         int var3 = 0;
         af stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
-        kc stackIn_17_0 = null;
+        SceneWidget stackIn_17_0 = null;
         boolean stackIn_18_1 = false;
         int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        this.b(param0, (byte) 90);
+        this.updateInputFullScreen(param0, (byte) 90);
         if (null != this.field_Mb) {
           this.field_Mb.field_rb = this.field_Db.toString();
           this.field_Mb.field_T = (this.field_x - this.field_Mb.field_Z.textWidth(this.field_Mb.field_rb)) / 2;

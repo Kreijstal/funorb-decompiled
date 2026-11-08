@@ -32,7 +32,7 @@ final class ValidationState {
             field_e = (Sprite) null;
           }
           var10 = (CharSequence) ((Object) param2);
-          var3_int = wa.a(param1, var10, (byte) -16);
+          var3_int = wa.countCharacter(param1, var10, (byte) -16);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
@@ -84,7 +84,7 @@ final class ValidationState {
           return ln.field_U.processKey(ed.field_Bb, (byte) 123, IntrusiveDeque.field_d);
         }
         if (oj.field_i) {
-          return rg.a(param3, -14, param2);
+          return TextTableInitializer.a(param3, -14, param2);
         }
         if (rk.a((byte) -60, param3, param2)) {
           return true;
@@ -207,15 +207,15 @@ final class ValidationState {
     }
 
     final static void a(boolean param0, boolean param1, int param2, int param3) {
-        kc stackIn_11_0 = null;
+        SceneWidget stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
-        kc stackIn_18_0 = null;
+        SceneWidget stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
-        kc stackIn_23_0 = null;
+        SceneWidget stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         int var5;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
-        vc.a((byte) -126);
+        WidgetStyleLayer.a((byte) -126);
         if (param2 != 4) {
           field_b = (String) null;
         }
@@ -226,13 +226,13 @@ final class ValidationState {
         }
         stackIn_11_0 = k.field_d;
         stackIn_12_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == DirectByteStorage.field_f) && (om.field_x == null);
-        ((kc) (Object) stackIn_11_0).b(stackIn_12_1, (byte) 75);
+        ((SceneWidget) (Object) stackIn_11_0).updateInputFullScreen(stackIn_12_1, (byte) 75);
         stackIn_18_0 = fn.field_e;
         stackIn_19_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == DirectByteStorage.field_f) && (null == om.field_x);
-        ((kc) (Object) stackIn_18_0).b(stackIn_19_1, (byte) 121);
+        ((SceneWidget) (Object) stackIn_18_0).updateInputFullScreen(stackIn_19_1, (byte) 121);
         stackIn_23_0 = LinkButtonPainter.field_h;
         stackIn_24_1 = (param0) && (!param1) && (IntrusiveNode.field_d);
-        ((kc) (Object) stackIn_23_0).b(stackIn_24_1, (byte) 115);
+        ((SceneWidget) (Object) stackIn_23_0).updateInputFullScreen(stackIn_24_1, (byte) 115);
         aj.field_h.field_c.h((byte) 100);
         if (0 != ii.field_b.field_U) {
           dh.field_Mb = true;

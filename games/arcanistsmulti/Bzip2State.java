@@ -78,7 +78,7 @@ final class Bzip2State {
         }
     }
 
-    final static void a(kc param0, kc param1, kc param2, kc param3, kc param4, boolean param5, kc param6, BitmapFont param7, int param8, kc param9, kc param10, in param11) {
+    final static void a(SceneWidget param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4, boolean param5, SceneWidget param6, BitmapFont param7, int param8, SceneWidget param9, SceneWidget param10, in param11) {
         String stackIn_13_0 = null;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;
@@ -110,22 +110,22 @@ final class Bzip2State {
         int[] var14 = null;
         int[] var15 = null;
         Sprite[] var16 = null;
-        kc var17 = null;
+        SceneWidget var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
         var20 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           oo.field_x = param7;
-          wd.field_c[3] = 16736511;
+          ResizableViewResizeListener.field_c[3] = 16736511;
           nf.field_A = param2;
-          wd.field_c[2] = 9474303;
-          wd.field_c[1] = 6356832;
+          ResizableViewResizeListener.field_c[2] = 9474303;
+          ResizableViewResizeListener.field_c[1] = 6356832;
           hm.field_c = param5;
-          wd.field_c[0] = 16764000;
-          wd.field_c[4] = 16711935;
+          ResizableViewResizeListener.field_c[0] = 16764000;
+          ResizableViewResizeListener.field_c[4] = 16711935;
           EmailLoginCredentials.field_h[0] = 16764000;
-          wd.field_c[4] = 16711935;
+          ResizableViewResizeListener.field_c[4] = 16711935;
           ArchiveIndex.field_u = 8421504;
           EmailLoginCredentials.field_h[2] = 16736352;
           EmailLoginCredentials.field_h[3] = 16736511;
@@ -140,26 +140,26 @@ final class Bzip2State {
           var14[5] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          IntKeyLookup.field_g = new kc(0L, param0);
-          NanoFrameClock.field_t = new kc(0L, param4);
-          IntKeyLookup.field_g.a(NanoFrameClock.field_t, param8 ^ 27890);
-          var17 = new kc(0L, (kc) null);
+          IntKeyLookup.field_g = new SceneWidget(0L, param0);
+          NanoFrameClock.field_t = new SceneWidget(0L, param4);
+          IntKeyLookup.field_g.addChild(NanoFrameClock.field_t, param8 ^ 27890);
+          var17 = new SceneWidget(0L, (SceneWidget) null);
           var17.field_G = new IntrusiveDeque();
           qo.field_f = new dn(0L, var17, param1, param11);
-          NanoFrameClock.field_t.a(qo.field_f, 96);
-          CredentialKind.field_d = new kc(0L, param6);
-          NanoFrameClock.field_t.a(CredentialKind.field_d, 61);
-          SingleChildContainer.field_D = new kc(0L, param10);
+          NanoFrameClock.field_t.addChild(qo.field_f, 96);
+          CredentialKind.field_d = new SceneWidget(0L, param6);
+          NanoFrameClock.field_t.addChild(CredentialKind.field_d, 61);
+          SingleChildContainer.field_D = new SceneWidget(0L, param10);
           SingleChildContainer.field_D.field_Z = oo.field_x;
-          CredentialKind.field_d.a(SingleChildContainer.field_D, 24);
-          CredentialKind.field_d.e((byte) 20);
-          sa.field_Cb = new kc(0L, (kc) null);
+          CredentialKind.field_d.addChild(SingleChildContainer.field_D, 24);
+          CredentialKind.field_d.markTreeDirty((byte) 20);
+          sa.field_Cb = new SceneWidget(0L, (SceneWidget) null);
           sa.field_Cb.field_v = var16;
-          CredentialKind.field_d.a(sa.field_Cb, 112);
-          ta.field_i = new kc[5];
-          IntrusiveDequeCursor.field_f = new kc[5];
-          ia.field_b = new kc[5];
-          mn.field_s = new kc[5];
+          CredentialKind.field_d.addChild(sa.field_Cb, 112);
+          ta.field_i = new SceneWidget[5];
+          IntrusiveDequeCursor.field_f = new SceneWidget[5];
+          ia.field_b = new SceneWidget[5];
+          mn.field_s = new SceneWidget[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -184,17 +184,17 @@ final class Bzip2State {
                 }
               }
               if (decompiledFrameRemainder0) {
-                mn.field_s[var18] = new kc(0L, param9);
-                ta.field_i[var18] = new kc(0L, nf.field_A, var19);
-                ia.field_b[var18] = new kc(0L, (kc) null);
+                mn.field_s[var18] = new SceneWidget(0L, param9);
+                ta.field_i[var18] = new SceneWidget(0L, nf.field_A, var19);
+                ia.field_b[var18] = new SceneWidget(0L, (SceneWidget) null);
                 ia.field_b[var18].field_gb = 1;
-                IntrusiveDequeCursor.field_f[var18] = new kc(0L, nf.field_A);
+                IntrusiveDequeCursor.field_f[var18] = new SceneWidget(0L, nf.field_A);
                 IntrusiveDequeCursor.field_f[var18].field_gb = 1;
-                mn.field_s[var18].a(ta.field_i[var18], param8 - 27777);
-                mn.field_s[var18].a(ia.field_b[var18], 81);
-                mn.field_s[var18].a(IntrusiveDequeCursor.field_f[var18], 102);
-                mn.field_s[var18].e((byte) 20);
-                IntKeyLookup.field_g.a(mn.field_s[var18], 73);
+                mn.field_s[var18].addChild(ta.field_i[var18], param8 - 27777);
+                mn.field_s[var18].addChild(ia.field_b[var18], 81);
+                mn.field_s[var18].addChild(IntrusiveDequeCursor.field_f[var18], 102);
+                mn.field_s[var18].markTreeDirty((byte) 20);
+                IntKeyLookup.field_g.addChild(mn.field_s[var18], 73);
                 lf.field_g = lf.field_g + 1;
               }
               var18++;
@@ -203,9 +203,9 @@ final class Bzip2State {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            g.field_g = new kc(0L, param3);
+            g.field_g = new SceneWidget(0L, param3);
             g.field_g.field_rb = qn.field_nb;
-            IntKeyLookup.field_g.a(g.field_g, 56);
+            IntKeyLookup.field_g.addChild(g.field_g, 56);
             if (!td.a(-91) ||
               wh.field_g) {
               ln.field_U = new cn(0, 0, 0, 0);

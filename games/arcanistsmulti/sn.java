@@ -219,7 +219,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
     public sn() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_D = new bi("", (UiListener) null, 12);
-        jm var1 = new jm(vc.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_c.field_C, -1, 2147483647, true);
+        jm var1 = new jm(WidgetStyleLayer.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_c.field_C, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(wl.field_H, var1, (UiListener) null);
         this.field_O = new TextButton(UsernameCredentials.field_f, (UiListener) null);
         this.field_I = new TextButton(sa.field_Eb, (UiListener) null);

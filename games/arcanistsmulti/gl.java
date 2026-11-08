@@ -6,7 +6,7 @@ final class gl {
     static String field_d;
     static aj field_b;
     static String field_a;
-    static kc field_c;
+    static SceneWidget field_c;
     static String field_f;
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, byte param9) {

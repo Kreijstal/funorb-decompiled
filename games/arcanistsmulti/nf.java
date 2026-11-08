@@ -54,7 +54,7 @@ final class nf {
     int[] field_s;
     private int field_xb;
     int[] field_wb;
-    static kc field_j;
+    static SceneWidget field_j;
     int[] field_b;
     private IntrusiveDeque field_Db;
     private int[][] field_lb;
@@ -95,7 +95,7 @@ final class nf {
     private int field_O;
     static String field_yb;
     static String field_e;
-    static kc field_A;
+    static SceneWidget field_A;
     static int[] field_Lb;
 
     private final int c(int param0, boolean param1) {
@@ -3245,7 +3245,7 @@ final class nf {
                 continue;
               }
             } else {
-              if (1 < tm.a(var3, (byte) -68)) {
+              if (1 < tm.bitCount(var3, (byte) -68)) {
                 if (var7 == 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -4521,7 +4521,7 @@ final class nf {
         if (param1 == 30) {
           return true;
         }
-        if (rd.field_e[param1] == 4) {
+        if (FixedViewResizeListener.field_e[param1] == 4) {
           return true;
         }
         if (param1 == 114) {
@@ -5823,7 +5823,7 @@ final class nf {
           if (this.field_sb[ah.field_f[0 + this.field_x[param0]]] == null) {
             return;
           }
-          ti.a((byte) -30, to.field_r[ah.field_f[0 + this.field_x[param0] + 0]], this.field_sb[ah.field_f[this.field_x[param0] + 0]]);
+          ti.a((byte) -30, SceneWidgetNode.field_r[ah.field_f[0 + this.field_x[param0] + 0]], this.field_sb[ah.field_f[this.field_x[param0] + 0]]);
           if (var6 == 0) {
             return;
           }
@@ -7118,7 +7118,7 @@ final class nf {
               param1.followUnit(-85, var12);
               if (this.field_sb != null &&
                 this.field_sb[225] != null) {
-                ti.a((byte) -30, to.field_r[225], this.field_sb[225]);
+                ti.a((byte) -30, SceneWidgetNode.field_r[225], this.field_sb[225]);
               }
             }
             return;
@@ -7178,7 +7178,7 @@ final class nf {
           }
           if (this.field_sb != null &&
             null != this.field_sb[64 + var10]) {
-            ti.a((byte) -30, to.field_r[64 + var10], this.field_sb[64 + var10]);
+            ti.a((byte) -30, SceneWidgetNode.field_r[64 + var10], this.field_sb[64 + var10]);
           }
           if (var7 < -480) {
             var7 = -480;
@@ -7206,13 +7206,13 @@ final class nf {
           }
           this.field_t = var9;
           if (!this.field_Gb) {
-            if (1 == rd.field_e[var10] &&
+            if (1 == FixedViewResizeListener.field_e[var10] &&
               var8 == -1000 &&
               var15Lifetime1 > 32) {
               var11 = 0;
             }
-            if (2 == rd.field_e[var10] ||
-              rd.field_e[var10] == 4) {
+            if (2 == FixedViewResizeListener.field_e[var10] ||
+              FixedViewResizeListener.field_e[var10] == 4) {
               var9 = var7;
               var8 = var6;
             }
@@ -7222,7 +7222,7 @@ final class nf {
               var11 = 0;
             }
           }
-          if (rd.field_e[var10] == 0 &&
+          if (FixedViewResizeListener.field_e[var10] == 0 &&
             var12.t(44)) {
             this.field_Z = true;
           }
@@ -9043,7 +9043,7 @@ final class nf {
               param0 != 92) &&
               (decompiledFrameRemainder0 = !(param0 >= 156)) &&
               (decompiledFrameRemainder0 = !(param0 <= -1)) &&
-              (decompiledFrameRemainder0 = (rd.field_e[param0] == 4))) {
+              (decompiledFrameRemainder0 = (FixedViewResizeListener.field_e[param0] == 4))) {
               if (4 < 1 + this.c((byte) -116, param1.field_u)) {
                 cf.field_f = true;
                 return false;

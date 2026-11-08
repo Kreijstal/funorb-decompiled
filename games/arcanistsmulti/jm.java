@@ -292,7 +292,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        vd var13 = null;
+        TextLine var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -388,7 +388,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
         TextLayout var13 = null;
         TextLayout var14 = null;
         int var7 = 0;
-        vd var8 = null;
+        TextLine var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;

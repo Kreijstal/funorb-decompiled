@@ -577,27 +577,27 @@ final class sc extends ej {
         }
         if (null == pn.field_c) {
           if (null != pn.field_c) {
-            uh.a(pn.field_c, param0 + 0);
+            ClipState.a(pn.field_c, param0 + 0);
             return;
           }
           pn.field_c = new Sprite(param2 / 2, param1 / 2);
           pn.field_c.makeRasterTarget();
-          ql.a(param2, param1, 0);
+          LoginMethod.a(param2, param1, 0);
           ce.field_m.a(true);
-          uh.a(pn.field_c, param0 + 0);
+          ClipState.a(pn.field_c, param0 + 0);
           return;
         }
         if (pn.field_c.field_n == param2 / 2) {
           if (param1 / 2 == pn.field_c.field_w) {
             if (null != pn.field_c) {
-              uh.a(pn.field_c, param0 + 0);
+              ClipState.a(pn.field_c, param0 + 0);
               return;
             }
             pn.field_c = new Sprite(param2 / 2, param1 / 2);
             pn.field_c.makeRasterTarget();
-            ql.a(param2, param1, 0);
+            LoginMethod.a(param2, param1, 0);
             ce.field_m.a(true);
-            uh.a(pn.field_c, param0 + 0);
+            ClipState.a(pn.field_c, param0 + 0);
             return;
           }
           if (mn.field_r == si.field_g) {
@@ -605,39 +605,39 @@ final class sc extends ej {
             System.gc();
           }
           if (null != pn.field_c) {
-            uh.a(pn.field_c, param0 + 0);
+            ClipState.a(pn.field_c, param0 + 0);
             return;
           }
           pn.field_c = new Sprite(param2 / 2, param1 / 2);
           pn.field_c.makeRasterTarget();
-          ql.a(param2, param1, 0);
+          LoginMethod.a(param2, param1, 0);
           ce.field_m.a(true);
-          uh.a(pn.field_c, param0 + 0);
+          ClipState.a(pn.field_c, param0 + 0);
           return;
         }
         if (mn.field_r != si.field_g) {
           if (null != pn.field_c) {
-            uh.a(pn.field_c, param0 + 0);
+            ClipState.a(pn.field_c, param0 + 0);
             return;
           }
           pn.field_c = new Sprite(param2 / 2, param1 / 2);
           pn.field_c.makeRasterTarget();
-          ql.a(param2, param1, 0);
+          LoginMethod.a(param2, param1, 0);
           ce.field_m.a(true);
-          uh.a(pn.field_c, param0 + 0);
+          ClipState.a(pn.field_c, param0 + 0);
           return;
         }
         pn.field_c = null;
         System.gc();
         if (null != pn.field_c) {
-          uh.a(pn.field_c, param0 + 0);
+          ClipState.a(pn.field_c, param0 + 0);
           return;
         }
         pn.field_c = new Sprite(param2 / 2, param1 / 2);
         pn.field_c.makeRasterTarget();
-        ql.a(param2, param1, 0);
+        LoginMethod.a(param2, param1, 0);
         ce.field_m.a(true);
-        uh.a(pn.field_c, param0 + 0);
+        ClipState.a(pn.field_c, param0 + 0);
     }
 
     sc(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {

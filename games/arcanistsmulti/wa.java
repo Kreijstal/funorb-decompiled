@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wa extends kc {
+final class wa extends SceneWidget {
     static String field_Db;
     String field_Cb;
     String field_Lb;
-    kc field_Fb;
-    kc field_Jb;
+    SceneWidget field_Fb;
+    SceneWidget field_Jb;
     int field_Bb;
     static boolean field_Nb;
     static String field_Hb;
     static boolean field_Kb;
-    static kc field_Pb;
+    static SceneWidget field_Pb;
     String field_Gb;
-    kc field_Mb;
+    SceneWidget field_Mb;
     static String field_Eb;
     String field_Ib;
     static boolean field_Ob;
@@ -21,7 +21,7 @@ final class wa extends kc {
     public static void releaseStatics(byte param0) {
         if (param0 >= -62) {
           CharSequence var2 = (CharSequence) null;
-          wa.a(';', (CharSequence) null, (byte) -35);
+          wa.countCharacter(';', (CharSequence) null, (byte) -35);
         }
         field_Db = null;
         field_Eb = null;
@@ -30,10 +30,10 @@ final class wa extends kc {
     }
 
     wa() {
-        super(0L, (kc) null);
+        super(0L, (SceneWidget) null);
     }
 
-    final static int a(char param0, CharSequence param1, byte param2) {
+    final static int countCharacter(char param0, CharSequence param1, byte param2) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;

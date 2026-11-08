@@ -58,17 +58,17 @@ final class ui extends TextFieldValidator {
             return stackIn_32_0;
           }
           if (hm.containsNameVariant(var5, var6, -1)) {
-            stackIn_22_0 = rg.field_f;
+            stackIn_22_0 = TextTableInitializer.field_f;
             return stackIn_22_0;
           }
-          if (sm.a(22230, var5, var6)) {
+          if (sm.passwordContainsName(22230, var5, var6)) {
             stackIn_26_0 = cj.field_e;
             return stackIn_26_0;
           }
           if (!w.a(var6, var5, 0)) {
             return KeyboardInputHandler.field_i;
           }
-          stackIn_30_0 = rg.field_f;
+          stackIn_30_0 = TextTableInitializer.field_f;
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

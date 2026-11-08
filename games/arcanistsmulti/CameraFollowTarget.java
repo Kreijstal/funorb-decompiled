@@ -111,7 +111,7 @@ final class CameraFollowTarget {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = vh.a(param1, param3, param5, param4, 10, param0);
+          var8 = UiTheme.openFullscreenFrame(param1, param3, param5, param4, 10, param0);
           var6 = var8;
           if (var8 == null) {
             return null;

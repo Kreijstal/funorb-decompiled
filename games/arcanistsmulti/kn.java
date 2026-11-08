@@ -180,7 +180,7 @@ final class kn extends ob implements ButtonListener {
                 }
                 if (ob.field_Y != null &&
                   null != this.field_V[var2_int] &&
-                  !ob.field_Y.a(this.field_V[var2_int].field_g, this.field_V[var2_int].field_e, -17969)) {
+                  !ob.field_Y.isSizeAllowed(this.field_V[var2_int].field_g, this.field_V[var2_int].field_e, -17969)) {
                   this.field_V[var2_int] = null;
                 }
               }
@@ -325,7 +325,7 @@ final class kn extends ob implements ButtonListener {
     }
 
     final static void a(int param0, int param1, int param2, byte param3) {
-        ql.field_a = param2;
+        LoginMethod.field_a = param2;
         pn.field_d = param0;
         wm.field_I = param1;
         if (param3 != -43) {
@@ -427,7 +427,7 @@ final class kn extends ob implements ButtonListener {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        kc var5 = null;
+        SceneWidget var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
@@ -437,15 +437,15 @@ final class kn extends ob implements ButtonListener {
           if (jo.field_e < DiskCacheRequest.field_F) {
             jo.field_e = jo.field_e + 1;
           }
-          if (vd.field_k != ce.field_m.field_m) {
-            ma.field_N = ma.field_N + (ce.field_m.field_m - vd.field_k);
-            vd.field_k = ce.field_m.field_m;
+          if (TextLine.field_k != ce.field_m.field_m) {
+            ma.field_N = ma.field_N + (ce.field_m.field_m - TextLine.field_k);
+            TextLine.field_k = ce.field_m.field_m;
           }
           if (jo.field_e <= 0) {
             return;
           }
           ed.j(120);
-          IntKeyLookup.field_g.b(param3, (byte) 60);
+          IntKeyLookup.field_g.updateInputFullScreen(param3, (byte) 60);
           if (param2) {
             field_tb = (long[]) null;
           }
@@ -462,7 +462,7 @@ final class kn extends ob implements ButtonListener {
               if (var5.field_U != 0) {
                 ko.a(var4_int, var5, (byte) -86);
               }
-              var6 = oh.a((byte) 119, var4_int);
+              var6 = ReflectionCheckRequest.a((byte) 119, var4_int);
               ia.field_b[var4_int].field_W = ArchiveProvider.field_a[var6];
               IntrusiveDequeCursor.field_f[var4_int].field_rb = cf.field_b[var6];
             }
@@ -507,7 +507,7 @@ final class kn extends ob implements ButtonListener {
               if (this.field_zb != null) {
                 var2Lifetime2 = this.field_zb.g((byte) 37);
                 if (var2Lifetime2 >= 0) {
-                  ob.field_Y.a(this.field_V[var2Lifetime2].field_e, this.field_V[var2Lifetime2].field_g, (byte) -64);
+                  ob.field_Y.setWindowedSize(this.field_V[var2Lifetime2].field_e, this.field_V[var2Lifetime2].field_g, (byte) -64);
                 }
               }
               GzipDecoder.a(true, 5);

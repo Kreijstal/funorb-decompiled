@@ -10,9 +10,9 @@ final class ub {
     static IndexedSprite[] field_e;
     static int field_g;
     static String field_d;
-    static kc field_c;
+    static SceneWidget field_c;
 
-    final static byte[] a(int param0, CipherPacketBuffer param1, int param2, byte[] param3) {
+    final static byte[] readPackedBytes(int param0, CipherPacketBuffer param1, int param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

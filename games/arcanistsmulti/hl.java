@@ -5,7 +5,7 @@ final class hl extends IntrusiveNode {
     int field_g;
     static String field_i;
     static String field_h;
-    static kc field_m;
+    static SceneWidget field_m;
     int field_k;
     static int[] field_l;
     PacketBuffer field_j;
@@ -123,7 +123,7 @@ final class hl extends IntrusiveNode {
           field_i = null;
           return;
         }
-        field_m = (kc) null;
+        field_m = (SceneWidget) null;
         field_m = null;
         field_h = null;
         field_l = null;

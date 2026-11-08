@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends kc {
+final class tn extends SceneWidget {
     static String field_Lb;
     int field_Mb;
-    private kc field_Jb;
+    private SceneWidget field_Jb;
     static String field_Kb;
     static long field_Hb;
     static int field_Eb;
-    private kc[] field_Nb;
+    private SceneWidget[] field_Nb;
     static int field_Fb;
     static String field_Ib;
     static boolean field_Cb;
     static int[] field_Gb;
-    private kc[] field_Bb;
+    private SceneWidget[] field_Bb;
     static String field_Db;
     static i field_Ob;
 
@@ -28,8 +28,8 @@ final class tn extends kc {
         this.a(1, param3, param2);
     }
 
-    tn(long param0, kc param1, String[] param2, kc param3, kc[] param4, int param5) {
-        super(param0, (kc) null);
+    tn(long param0, SceneWidget param1, String[] param2, SceneWidget param3, SceneWidget[] param4, int param5) {
+        super(param0, (SceneWidget) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -42,24 +42,24 @@ final class tn extends kc {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        kc var9 = null;
+        SceneWidget var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Bb = new kc[param2.length];
-          this.field_Jb = new kc(0L, param3);
+          this.field_Bb = new SceneWidget[param2.length];
+          this.field_Jb = new SceneWidget(0L, param3);
           this.field_Nb = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
-            var9 = new kc(0L, param1);
+            var9 = new SceneWidget(0L, param1);
             var9.field_rb = param2[var8_int];
             this.field_Bb[var8_int] = var9;
-            this.a(var9, 22);
+            this.addChild(var9, 22);
           }
-          this.a(this.field_Jb, 53);
+          this.addChild(this.field_Jb, 53);
           var11 = 0;
           var8_intLifetime1 = var11;
           while (param4.length > var11) {
-            this.field_Jb.a(param4[var11], 84);
+            this.field_Jb.addChild(param4[var11], 84);
             var11++;
           }
           this.field_Mb = param5;
@@ -114,8 +114,8 @@ final class tn extends kc {
 
     final void h(byte param0) {
         int var2 = 0;
-        kc dupTemp$0 = null;
-        kc dupTemp$1 = null;
+        SceneWidget dupTemp$0 = null;
+        SceneWidget dupTemp$1 = null;
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 < 73) {
@@ -146,7 +146,7 @@ final class tn extends kc {
     }
 
     private final void a(int param0, int param1, int param2) {
-        kc dupTemp$0 = null;
+        SceneWidget dupTemp$0 = null;
         int var4;
         int var5;
         int var6;
@@ -162,14 +162,14 @@ final class tn extends kc {
           this.field_Bb[var4].field_x = var6 - var5;
           this.field_Bb[var4].field_I = param1;
         }
-        this.field_Jb.a(this.field_x, 0, param1, this.field_I - param1, (byte) -120);
+        this.field_Jb.setBounds(this.field_x, 0, param1, this.field_I - param1, (byte) -120);
         if (param0 != 1) {
           tn.releaseStatics((byte) 87);
         }
         var8 = 0;
         var4Lifetime1 = var8;
         while (var8 < this.field_Nb.length) {
-          this.field_Nb[var8].a(-(2 * param2) + this.field_Jb.field_x, param2, param2, this.field_Jb.field_I - param2 * 2, (byte) -120);
+          this.field_Nb[var8].setBounds(-(2 * param2) + this.field_Jb.field_x, param2, param2, this.field_Jb.field_I - param2 * 2, (byte) -120);
           if (this.field_Mb != var8) {
             dupTemp$0 = this.field_Nb[var8];
             dupTemp$0.field_T = dupTemp$0.field_T + 10000;

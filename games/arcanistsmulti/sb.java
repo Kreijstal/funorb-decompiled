@@ -18,7 +18,7 @@ final class sb {
         field_g = null;
         field_f = null;
         if (param0 != -1) {
-          sb.a(-119);
+          sb.shutdownAudioOutputs(-119);
         }
         field_d = null;
     }
@@ -27,7 +27,7 @@ final class sb {
         int var2 = 0;
         int var3 = 0;
         if (param0 <= 42) {
-          sb.a(-95);
+          sb.shutdownAudioOutputs(-95);
         }
         rb var4 = (rb) (pb.field_m.first(12623));
         if (var4 != null) {
@@ -51,7 +51,7 @@ final class sb {
         }
     }
 
-    final static void a(boolean param0, byte param1, MusicTrack param2, int param3) {
+    final static void changeMusicTrack(boolean param0, byte param1, MusicTrack param2, int param3) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException stackIn_18_0 = null;
@@ -65,14 +65,14 @@ final class sb {
             on.a(1048576, param3, param0, true, param2);
           }
           if (null != GrowableIntList.field_h) {
-            var4_ref = oh.field_k;
+            var4_ref = ReflectionCheckRequest.field_k;
             synchronized (var4_ref) {
               GrowableIntList.field_h.b(-1, (byte) 69, param3);
               if (f.field_g == param2) {
                 return;
               }
               GrowableIntList.field_h.a((byte) -128);
-              oh.field_k.flushDeviceSafely();
+              ReflectionCheckRequest.field_k.flushDeviceSafely();
               f.field_g = param2;
               if (f.field_g != null) {
                 GrowableIntList.field_h.a((byte) -96, param0, f.field_g);
@@ -237,7 +237,7 @@ final class sb {
           if (var3 != null) {
             ej.b(0, param0);
           } else {
-            vh.field_n = false;
+            UiTheme.field_n = false;
           }
           if (null != IntrusiveNodeHashTable.field_f &&
             param0) {
@@ -270,9 +270,9 @@ final class sb {
         }
     }
 
-    final static void a(int param0) {
-        if (null != oh.field_k) {
-          oh.field_k.shutdown();
+    final static void shutdownAudioOutputs(int param0) {
+        if (null != ReflectionCheckRequest.field_k) {
+          ReflectionCheckRequest.field_k.shutdown();
         }
         if (null != lf.field_a) {
           lf.field_a.shutdown();

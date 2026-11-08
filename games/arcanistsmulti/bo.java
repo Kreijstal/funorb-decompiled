@@ -43,13 +43,13 @@ final class bo {
             stackIn_13_0 = tj.a(-30, new String[]{param0}, gj.field_e);
             return stackIn_13_0;
           }
-          if (rc.field_m >= 100 &&
+          if (LoadingTracker.field_m >= 100 &&
             ah.field_c <= 0) {
-            stackIn_17_0 = rg.field_e;
+            stackIn_17_0 = TextTableInitializer.field_e;
             return stackIn_17_0;
           }
-          if (200 <= rc.field_m) {
-            stackIn_21_0 = rg.field_e;
+          if (200 <= LoadingTracker.field_m) {
+            stackIn_21_0 = TextTableInitializer.field_e;
             return stackIn_21_0;
           }
           if (param1 != -26) {

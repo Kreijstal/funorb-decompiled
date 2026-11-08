@@ -107,7 +107,7 @@ final class pb extends IntrusiveNode {
         wm.field_H[15].drawScaled(var2, var4Lifetime1, 160, 160);
         SoftwareRasterizer.blurRectangle(3, 3, 16 + var2, 16 + var4Lifetime1, 128, 128);
         SoftwareRasterizer.drawRectangle(-64 + (80 + var2) - 1, 15 + var4Lifetime1, 130, 130, 0);
-        wd.field_e.drawTransparent(-64 + (var2 + 80), var4Lifetime1 + 16);
+        ResizableViewResizeListener.field_e.drawTransparent(-64 + (var2 + 80), var4Lifetime1 + 16);
         var4Lifetime2 = 48 + bo.field_d;
         var5Lifetime1 = 176;
         int var6 = var2 + 160;

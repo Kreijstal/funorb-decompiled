@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sa extends kc {
+final class sa extends SceneWidget {
     static String field_Gb;
     static int field_Bb;
     static int field_Hb;
     static int field_Db;
     static String field_Eb;
-    private kc field_Fb;
-    static kc field_Cb;
+    private SceneWidget field_Fb;
+    static SceneWidget field_Cb;
 
-    sa(kc param0, kc param1, kc param2, kc param3, kc param4, kc param5) {
+    sa(SceneWidget param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4, SceneWidget param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -27,48 +27,48 @@ final class sa extends kc {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        kc var8 = null;
-        kc var9 = null;
+        SceneWidget var8 = null;
+        SceneWidget var9 = null;
         int var10 = 0;
         int var11 = 0;
-        kc var13 = null;
-        kc var14 = null;
+        SceneWidget var13 = null;
+        SceneWidget var14 = null;
         int var15 = 0;
-        kc var17 = null;
+        SceneWidget var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new kc(0L, param1, IntrusiveNodeHashTable.field_j.toUpperCase());
+          var17 = new SceneWidget(0L, param1, IntrusiveNodeHashTable.field_j.toUpperCase());
           var17.field_X = 1;
-          this.field_Fb = new kc(0L, param2);
-          var8 = new kc(0L, param3);
-          var9 = new kc(0L, param3, li.field_H);
+          this.field_Fb = new SceneWidget(0L, param2);
+          var8 = new SceneWidget(0L, param3);
+          var9 = new SceneWidget(0L, param3, li.field_H);
           var9.field_X = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; var12 < me.field_L.length; var12++) {
-            var13 = new kc(0L, param3, no.field_vb[var12]);
-            var14 = new kc(0L, param3, me.field_L[var12]);
+            var13 = new SceneWidget(0L, param3, no.field_vb[var12]);
+            var14 = new SceneWidget(0L, param3, me.field_L[var12]);
             var15 = param3.field_Z.textWidth(me.field_L[var12]);
-            var13.a(65, 20, var10, 15, (byte) -120);
+            var13.setBounds(65, 20, var10, 15, (byte) -120);
             if (var11 < var15) {
               var11 = var15;
             }
-            var14.a(640, 90, var10, 15, (byte) -120);
-            var8.a(var13, 60);
-            var8.a(var14, 77);
+            var14.setBounds(640, 90, var10, 15, (byte) -120);
+            var8.addChild(var13, 60);
+            var8.addChild(var14, 77);
             var10 += 30;
           }
           var10 += 15;
-          var17.a(20 + (var11 + 90), 0, 0, 24, (byte) -120);
-          this.a(var17.field_x, 100, 100, var17.field_I + var10, (byte) -120);
-          this.field_Fb.a(15, -20 + var17.field_x, 5, 15, (byte) -120);
-          var8.a(this.field_x, 0, var17.field_I, this.field_I - var17.field_I, (byte) -120);
-          var9.a(this.field_x, 0, 20, 15, (byte) -120);
+          var17.setBounds(20 + (var11 + 90), 0, 0, 24, (byte) -120);
+          this.setBounds(var17.field_x, 100, 100, var17.field_I + var10, (byte) -120);
+          this.field_Fb.setBounds(15, -20 + var17.field_x, 5, 15, (byte) -120);
+          var8.setBounds(this.field_x, 0, var17.field_I, this.field_I - var17.field_I, (byte) -120);
+          var9.setBounds(this.field_x, 0, 20, 15, (byte) -120);
           var8.field_v = of.a(3, var8.field_I, 1, 2105376, 11579568, 8421504);
-          var17.a(this.field_Fb, 27);
-          var8.a(var9, 126);
-          this.a(var17, 21);
-          this.a(var8, 17);
+          var17.addChild(this.field_Fb, 27);
+          var8.addChild(var9, 126);
+          this.addChild(var17, 21);
+          this.addChild(var8, 17);
           this.field_T = 320 - (this.field_x >> 1);
           var10Lifetime1 = -(this.field_I >> 1) + 240;
           return;
@@ -147,7 +147,7 @@ final class sa extends kc {
 
     final boolean c(boolean param0, byte param1) {
         boolean stackIn_9_0 = false;
-        this.b(true, (byte) 46);
+        this.updateInputFullScreen(true, (byte) 46);
         if (param1 != 48) {
           return true;
         }

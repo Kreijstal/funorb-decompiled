@@ -69,7 +69,7 @@ final class cf {
     }
 
     final static void a(int param0) {
-        mh.field_K = qj.b(-26572);
+        mh.field_K = qj.monotonicTimeMillis(-26572);
         int var1 = 27 % ((-47 - param0) / 44);
         ik.field_b = 0;
     }

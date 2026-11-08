@@ -212,7 +212,7 @@ final class rk extends TextButton {
         if (IntrusiveDeque.field_d == 11 &&
           bo.field_c) {
           if (2 == qj.field_c &&
-            !kg.a(rf.field_n, true, vh.field_A)) {
+            !kg.a(rf.field_n, true, UiTheme.field_A)) {
             return false;
           }
           if (qj.field_c != 2 &&
@@ -223,7 +223,7 @@ final class rk extends TextButton {
             return true;
           }
           String var5 = (String) null;
-          BufferedRandomAccessFile.a(hi.field_g, (String) null, 68, param1, qj.field_c, vh.field_A);
+          BufferedRandomAccessFile.a(hi.field_g, (String) null, 68, param1, qj.field_c, UiTheme.field_A);
           return true;
         }
         return false;
@@ -307,7 +307,7 @@ final class rk extends TextButton {
         if (param0 >= -45) {
           rk.a((byte) -44, 74, 126);
         }
-        return -hi.field_d + qj.b(-26572);
+        return -hi.field_d + qj.monotonicTimeMillis(-26572);
     }
 
     private rk() throws Throwable {

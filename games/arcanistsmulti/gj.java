@@ -8,7 +8,7 @@ final class gj {
     static IndexedSprite[] field_f;
     static String field_b;
     static int[] field_g;
-    static kc field_d;
+    static SceneWidget field_d;
 
     final static void a(boolean param0, boolean param1, int param2, int param3) {
         int var4;

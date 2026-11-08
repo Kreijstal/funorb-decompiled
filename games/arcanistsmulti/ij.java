@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends kc {
+final class ij extends SceneWidget {
     private int field_Db;
     private char[] field_Lb;
     private int field_Kb;
@@ -25,7 +25,7 @@ final class ij extends kc {
 
     private final static void a(int param0, int param1, int param2, long param3, String param4) {
         rf.field_n = param3;
-        vh.field_A = param4;
+        UiTheme.field_A = param4;
         qj.field_c = param1;
         if (param0 != -1) {
           return;
@@ -70,7 +70,7 @@ final class ij extends kc {
                 null != DirectByteStorage.field_f) {
                 var6 = 1;
               }
-              if (oh.a((byte) 122, var6) == 2) {
+              if (ReflectionCheckRequest.a((byte) 122, var6) == 2) {
                 DiskCacheRequest.a(param2, 1, true, var6);
               }
               var8 = (String) null;
@@ -159,7 +159,7 @@ final class ij extends kc {
         }
     }
 
-    ij(long param0, kc param1, kc param2, kc param3, ij[] param4, int[] param5, String[] param6, char[] param7) {
+    ij(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, ij[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -206,16 +206,16 @@ final class ij extends kc {
             var14 = null;
             if (this.field_Fb[var13] != null ||
               -1 == this.field_Ib[var13]) {
-              var14 = ql.field_c;
+              var14 = LoginMethod.field_c;
             }
-            this.field_Bb[var13] = new nl(0L, param2, (kc) null, param3, (Sprite) (var14), param6[var13]);
-            this.a(this.field_Bb[var13], 90);
+            this.field_Bb[var13] = new nl(0L, param2, (SceneWidget) null, param3, (Sprite) (var14), param6[var13]);
+            this.addChild(this.field_Bb[var13], 90);
             var15 = var17.textWidth(param6[var13]);
             if (var15 > this.field_Kb) {
               this.field_Kb = var15;
             }
           }
-          this.field_Kb = this.field_Kb + (ql.field_c.field_n + 10);
+          this.field_Kb = this.field_Kb + (LoginMethod.field_c.field_n + 10);
           this.c(-70, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -295,7 +295,7 @@ final class ij extends kc {
         int var7Lifetime1;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         this.field_Nb = this.field_Kb + 2 * param0;
-        this.a(this.field_Nb, param1, param2 - this.field_Eb, this.field_Eb, (byte) -120);
+        this.setBounds(this.field_Nb, param1, param2 - this.field_Eb, this.field_Eb, (byte) -120);
         if (this.field_Mb != param4) {
           this.field_Mb = param4;
           this.c(-95, this.field_Qb);

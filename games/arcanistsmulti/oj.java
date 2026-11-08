@@ -12,17 +12,17 @@ final class oj {
     static int field_e;
     static String field_d;
 
-    final static ql readLastLoginMethod(int param0, java.applet.Applet param1) {
+    final static LoginMethod readLastLoginMethod(int param0, java.applet.Applet param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
-        ql[] var3 = null;
+        LoginMethod[] var3 = null;
         int var4 = 0;
-        ql var5 = null;
+        LoginMethod var5 = null;
         int var6 = 0;
-        ql stackIn_3_0 = null;
-        ql stackIn_6_0 = null;
-        ql stackIn_11_0 = null;
-        ql stackIn_14_0 = null;
+        LoginMethod stackIn_3_0 = null;
+        LoginMethod stackIn_6_0 = null;
+        LoginMethod stackIn_11_0 = null;
+        LoginMethod stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -31,22 +31,22 @@ final class oj {
         try {
           var2 = fd.getCookie(28, param1, "jagex-last-login-method");
           if (var2 == null) {
-            stackIn_3_0 = vh.field_f;
+            stackIn_3_0 = UiTheme.field_f;
             return stackIn_3_0;
           }
-          var3 = rm.b(1283220456);
+          var3 = WhirlpoolHasher.getLoginMethods(1283220456);
           if (param0 <= 106) {
-            stackIn_6_0 = (ql) null;
+            stackIn_6_0 = (LoginMethod) null;
             return stackIn_6_0;
           }
           var4 = 0;
           while (true) {
             if (var3.length <= var4) {
-              stackIn_14_0 = vh.field_f;
+              stackIn_14_0 = UiTheme.field_f;
               return stackIn_14_0;
             }
             var5 = var3[var4];
-            if (!var5.a(var2, -90)) {
+            if (!var5.hasCookieName(var2, -90)) {
               var4++;
               continue;
             }

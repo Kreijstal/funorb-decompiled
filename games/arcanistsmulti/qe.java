@@ -14,9 +14,9 @@ final class qe extends IntrusiveNode {
     static String field_s;
     static int field_h;
     long field_q;
-    static kc field_m;
+    static SceneWidget field_m;
 
-    final static String a(String param0, int param1, ResourceArchive param2, String param3) {
+    final static String formatLoadingProgress(String param0, int param1, ResourceArchive param2, String param3) {
         RuntimeException var4 = null;
         String var5 = null;
         String stackIn_5_0 = null;
@@ -32,7 +32,7 @@ final class qe extends IntrusiveNode {
         try {
           if (param1 < 68) {
             var5 = (String) null;
-            qe.a((String) null, -87, (ResourceArchive) null, (String) null);
+            qe.formatLoadingProgress((String) null, -87, (ResourceArchive) null, (String) null);
           }
           if (!param2.c(-10923)) {
             stackIn_5_0 = (String) (param3);
@@ -66,7 +66,7 @@ final class qe extends IntrusiveNode {
         }
     }
 
-    final static void a(PlatformTaskDispatcher param0, int param1, PacketBuffer param2, int param3) {
+    final static void handleReflectionCheck(PlatformTaskDispatcher param0, int param1, PacketBuffer param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -96,14 +96,14 @@ final class qe extends IntrusiveNode {
           String var15 = null;
           String var16 = null;
           int var17 = 0;
-          oh var18 = null;
+          ReflectionCheckRequest var18 = null;
           byte[][] var19 = null;
           String var20 = null;
           byte[][] var21 = null;
           int var13Lifetime1;
           var14 = ArcanistsMulti.field_G ? 1 : 0;
           try {
-            var18 = new oh();
+            var18 = new ReflectionCheckRequest();
             var18.field_s = param2.readUnsignedByte((byte) 99);
             var18.field_m = param2.readInt(-10674);
             var18.field_p = new int[var18.field_s];
@@ -222,7 +222,7 @@ final class qe extends IntrusiveNode {
         var3.writeShort(param0, (byte) -85);
     }
 
-    final static Sprite[] a(ResourceArchive param0, String param1, String param2, int param3) {
+    final static Sprite[] loadSpriteSheet(ResourceArchive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -269,7 +269,7 @@ final class qe extends IntrusiveNode {
         }
     }
 
-    final static java.awt.Container a(int param0) {
+    final static java.awt.Container getTopContainer(int param0) {
         if (Js5ArchiveManager.field_c != null) {
           return (java.awt.Container) ((Object) Js5ArchiveManager.field_c);
         }
@@ -285,7 +285,7 @@ final class qe extends IntrusiveNode {
         field_j = null;
         if (param0 >= -53) {
           String var2 = (String) null;
-          qe.a((ResourceArchive) null, (String) null, (String) null, 12);
+          qe.loadSpriteSheet((ResourceArchive) null, (String) null, (String) null, 12);
         }
         field_s = null;
         field_n = null;

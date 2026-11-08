@@ -256,8 +256,8 @@ final class ArchiveIndex {
         field_o = null;
         field_j = null;
         if (param0 != 0) {
-          v var2 = (v) null;
-          ArchiveIndex.a(2, (v) null);
+          ViewportController var2 = (ViewportController) null;
+          ArchiveIndex.a(2, (ViewportController) null);
         }
         field_v = null;
     }
@@ -335,7 +335,7 @@ final class ArchiveIndex {
         }
     }
 
-    final static void a(int param0, v param1) {
+    final static void a(int param0, ViewportController param1) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

@@ -5,7 +5,7 @@ final class bi extends EditableTextWidget implements ValidationProviderSource {
     static int field_I;
     private int field_V;
     private ValidationProvider field_T;
-    static kc field_U;
+    static SceneWidget field_U;
     static String field_W;
 
     final static void a(byte param0, int param1) {
@@ -20,7 +20,7 @@ final class bi extends EditableTextWidget implements ValidationProviderSource {
             ki.field_r[var2_int + param1] = var2_int;
           }
           if (param0 > -103) {
-            field_U = (kc) null;
+            field_U = (SceneWidget) null;
           }
           GzipDecoder.a(false, AlternateUsernameCredentials.field_m, -24595, param1, param1 + MouseInputHandler.field_b, param1 + param1, qa.field_m);
           if (param1 >= MouseInputHandler.field_b) {
@@ -47,7 +47,7 @@ final class bi extends EditableTextWidget implements ValidationProviderSource {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            field_U = (kc) null;
+            field_U = (SceneWidget) null;
           }
           if (param2 == null) {
             return null;
@@ -80,7 +80,7 @@ final class bi extends EditableTextWidget implements ValidationProviderSource {
 
     final String getTooltip(boolean param0) {
         if (param0) {
-          field_U = (kc) null;
+          field_U = (SceneWidget) null;
           if (!this.field_w) {
             return null;
           }

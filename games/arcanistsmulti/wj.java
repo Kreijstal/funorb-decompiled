@@ -3,7 +3,7 @@
  */
 final class wj {
     static GzipDecoder field_a;
-    static kc field_b;
+    static SceneWidget field_b;
     private int[][] field_d;
     static String field_c;
     static String field_e;
@@ -158,7 +158,7 @@ final class wj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
         try {
-          MidiPcmStream.a(ClientException.field_c, param13, param9, param12, param1, param5, to.field_m, 480, param7, 0, 0, param3, (Sprite[]) null, param14, param11, (byte) -105, param4, param0, sl.field_T, param8, param10);
+          MidiPcmStream.a(ClientException.field_c, param13, param9, param12, param1, param5, SceneWidgetNode.field_m, 480, param7, 0, 0, param3, (Sprite[]) null, param14, param11, (byte) -105, param4, param0, sl.field_T, param8, param10);
           if (param2 < 108) {
             wj.a(-97);
           }
@@ -203,7 +203,7 @@ final class wj {
           field_e = null;
           field_a = null;
           if (param0 != 0) {
-            field_b = (kc) null;
+            field_b = (SceneWidget) null;
           }
           field_c = null;
           field_b = null;

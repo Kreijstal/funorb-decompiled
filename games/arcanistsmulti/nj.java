@@ -4,7 +4,7 @@
 final class nj {
     static String field_i;
     static String field_f;
-    static kc field_d;
+    static SceneWidget field_d;
     static String field_g;
     static String field_j;
     static int field_c;
@@ -60,7 +60,7 @@ final class nj {
           field_k = null;
           return;
         }
-        field_d = (kc) null;
+        field_d = (SceneWidget) null;
         field_b = null;
         field_d = null;
         field_m = null;

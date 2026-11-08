@@ -3,7 +3,7 @@
  */
 final class ih {
     static Sprite field_e;
-    static kc field_d;
+    static SceneWidget field_d;
     static int field_f;
     static String field_a;
     static char[] field_c;

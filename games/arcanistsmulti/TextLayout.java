@@ -6,7 +6,7 @@ abstract class TextLayout {
     static String field_a;
     static u field_g;
     static String field_c;
-    vd[] field_f;
+    TextLine[] field_f;
     static boolean field_b;
     static IndexedSprite field_d;
 
@@ -98,7 +98,7 @@ abstract class TextLayout {
 
     final int lineForCharacter(byte param0, int param1) {
         int var4 = 0;
-        vd var5 = null;
+        TextLine var5 = null;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
         int var3 = 65 % ((param0 - 1) / 45);
         for (var4 = 0; this.field_f.length > var4; var4++) {
@@ -165,8 +165,8 @@ abstract class TextLayout {
     final int maxLineWidth(byte param0) {
         int var4 = 0;
         int var2;
-        vd[] var3;
-        vd var5;
+        TextLine[] var3;
+        TextLine var5;
         int var7;
         int var6;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
@@ -179,7 +179,7 @@ abstract class TextLayout {
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5 != null) {
-              var6 = var5.b(-121);
+              var6 = var5.width(-121);
               if (var2 < var6) {
                 var2 = var6;
               }
@@ -259,7 +259,7 @@ abstract class TextLayout {
           if (!param8) {
             field_e = (String) null;
           }
-          vd.field_c = param12;
+          TextLine.field_c = param12;
           ob.field_T = param16;
           ib.a(param4, param6, param10, param11, 109);
           sk.a(param14, -28995, param2, param17);
@@ -307,7 +307,7 @@ abstract class TextLayout {
 
     final int characterAt(int param0, int param1, boolean param2) {
         int var5 = 0;
-        vd var6 = null;
+        TextLine var6 = null;
         int var7 = 0;
         int var8 = ArcanistsMulti.field_G ? 1 : 0;
         if (null == this.field_f ||
@@ -319,7 +319,7 @@ abstract class TextLayout {
           return -1;
         }
         if (this.field_f.length == 1) {
-          return this.field_f[0].a(param1, 122);
+          return this.field_f[0].characterIndexAt(param1, 122);
         }
         int var4 = 0;
         if (!param2) {
@@ -329,7 +329,7 @@ abstract class TextLayout {
           var6 = this.field_f[var5];
           if (param0 >= var6.field_g &&
             !(var6.field_e < param0)) {
-            var7 = var6.a(param1, 31);
+            var7 = var6.characterIndexAt(param1, 31);
             if (var7 == -1) {
               return -1;
             }
@@ -342,10 +342,10 @@ abstract class TextLayout {
 
     final int characterOffset(int param0, int param1) {
         int var4 = 0;
-        vd var5 = null;
+        TextLine var5 = null;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
-        vd[] var7 = this.field_f;
-        vd[] var3 = var7;
+        TextLine[] var7 = this.field_f;
+        TextLine[] var3 = var7;
         for (var4 = param1; var7.length > var4; var4++) {
           var5 = var7[var4];
           if (!(param0 >= var5.field_f.length)) {

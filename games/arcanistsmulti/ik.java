@@ -53,17 +53,17 @@ final class ik {
     }
 
     final static void a(boolean param0, int param1) {
-        tn.field_Ob = !param0 ? new i(ec.field_b, bk.field_M) : new i(CipherPacketBuffer.field_r, vc.field_c);
-        hl.field_m = new kc(0L, (kc) null);
-        hl.field_m.a(tn.field_Ob.field_c, 89);
+        tn.field_Ob = !param0 ? new i(ec.field_b, bk.field_M) : new i(CipherPacketBuffer.field_r, WidgetStyleLayer.field_c);
+        hl.field_m = new SceneWidget(0L, (SceneWidget) null);
+        hl.field_m.addChild(tn.field_Ob.field_c, 89);
         int var2 = 34 / ((param1 - 24) / 48);
-        hl.field_m.a(IntrusiveNodeHashTable.field_o, 55);
-        nl.field_Fb = new kc(0L, mf.field_d);
-        Js5ArchiveManager.field_g = new kc(0L, (kc) null);
-        nl.field_Fb.a(MembershipOfferScreen.field_t, 61);
-        nl.field_Fb.a(Js5ArchiveManager.field_g, 89);
-        Js5ArchiveManager.field_g.a(mj.field_s, 25);
-        Js5ArchiveManager.field_g.a(gj.field_d, 43);
+        hl.field_m.addChild(IntrusiveNodeHashTable.field_o, 55);
+        nl.field_Fb = new SceneWidget(0L, mf.field_d);
+        Js5ArchiveManager.field_g = new SceneWidget(0L, (SceneWidget) null);
+        nl.field_Fb.addChild(MembershipOfferScreen.field_t, 61);
+        nl.field_Fb.addChild(Js5ArchiveManager.field_g, 89);
+        Js5ArchiveManager.field_g.addChild(mj.field_s, 25);
+        Js5ArchiveManager.field_g.addChild(gj.field_d, 43);
         MusicCrossfadeStream.a(125, param0);
     }
 
@@ -97,15 +97,15 @@ final class ik {
         if (param0 != -85) {
           return;
         }
-        se.field_H = new kc(0L, (kc) null);
+        se.field_H = new SceneWidget(0L, (SceneWidget) null);
         if (fc.field_a) {
-          se.field_H.a(kg.field_c, 14);
+          se.field_H.addChild(kg.field_c, 14);
         }
-        se.field_H.a(mj.field_s, 39);
+        se.field_H.addChild(mj.field_s, 39);
         aj.field_h = new i(NanoFrameClock.field_p, se.field_H);
-        k.field_d = new kc(0L, (kc) null);
-        k.field_d.a(aj.field_h.field_c, param0 ^ -74);
-        k.field_d.a(ii.field_b, param0 ^ -54);
+        k.field_d = new SceneWidget(0L, (SceneWidget) null);
+        k.field_d.addChild(aj.field_h.field_c, param0 ^ -74);
+        k.field_d.addChild(ii.field_b, param0 ^ -54);
         ao.a((byte) -120);
     }
 

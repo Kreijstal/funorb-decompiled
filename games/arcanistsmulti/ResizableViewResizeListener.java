@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd implements ViewResizeListener {
+final class ResizableViewResizeListener implements ViewResizeListener {
     static Sprite field_e;
     static String field_i;
     static Sprite[] field_h;
     static long field_b;
-    static kc field_a;
+    static SceneWidget field_a;
     static int[] field_c;
     static volatile int field_j;
-    static kc[] field_g;
+    static SceneWidget[] field_g;
     static String field_k;
     static String field_f;
     static int field_d;

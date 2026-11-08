@@ -277,7 +277,7 @@ class TextButton extends UiComponent {
           return;
         }
         try {
-          co.field_f.a(CacheEntry.field_q, 60);
+          co.field_f.addChild(CacheEntry.field_q, 60);
           oj.field_i = true;
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ag.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -5,7 +5,7 @@ final class md {
     static String field_e;
     static Sprite[] field_f;
     static String field_d;
-    static kc field_b;
+    static SceneWidget field_b;
     static int field_c;
     static String[] field_a;
 

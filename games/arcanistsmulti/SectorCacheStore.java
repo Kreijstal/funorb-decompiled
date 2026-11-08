@@ -14,10 +14,10 @@ final class SectorCacheStore {
     static boolean field_g;
     static String field_i;
     static String field_a;
-    static kc field_b;
+    static SceneWidget field_b;
     static int field_f;
     private BufferedRandomAccessFile field_c;
-    static kc field_l;
+    static SceneWidget field_l;
 
     final boolean writeEntry(byte[] param0, boolean param1, int param2, int param3) {
         Object var5 = null;
@@ -395,7 +395,7 @@ final class SectorCacheStore {
         }
     }
 
-    final static void a(int param0, vd param1, String param2, BitmapFont param3, byte param4) {
+    final static void a(int param0, TextLine param1, String param2, BitmapFont param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;

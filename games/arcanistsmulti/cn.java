@@ -36,7 +36,7 @@ final class cn extends ArrayWidgetContainer implements ButtonListener {
 
     final void drawLayer(byte param0, int param1, int param2, int param3) {
         super.drawLayer((byte) -94, param1, param2, param3);
-        vc.field_e.drawText(sm.field_b, 4 + param1 + this.field_n, vc.field_e.field_C + (param3 + (this.field_j + 4)), 16777215, -1);
+        WidgetStyleLayer.field_e.drawText(sm.field_b, 4 + param1 + this.field_n, WidgetStyleLayer.field_e.field_C + (param3 + (this.field_j + 4)), 16777215, -1);
         if (param0 > -52) {
           field_J = (String) null;
         }

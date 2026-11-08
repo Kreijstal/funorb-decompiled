@@ -10,7 +10,7 @@ final class th {
     static BinaryBitmapFont field_k;
     static String field_j;
     private we field_e;
-    static kc field_c;
+    static SceneWidget field_c;
     static String field_a;
     static int[] field_b;
 
@@ -122,7 +122,7 @@ final class th {
           hb.field_Gb = ScreenDisplayMode.field_h;
           in.field_Gb = ScreenDisplayMode.field_h;
           if (param3 != -40) {
-            field_c = (kc) null;
+            field_c = (SceneWidget) null;
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "th.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

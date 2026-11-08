@@ -67,14 +67,14 @@ final class q extends SingleChildContainer {
           var2[4] = ce.createFilledSprite(64, param0, MouseWheelHandler.a(param1, 21385));
           return var2;
         }
-        kc var3 = (kc) null;
-        q.a((kc) null, false, (kc) null, (kc) null, (kc) null);
+        SceneWidget var3 = (SceneWidget) null;
+        q.a((SceneWidget) null, false, (SceneWidget) null, (SceneWidget) null, (SceneWidget) null);
         var2Lifetime1 = new Sprite[9];
         var2Lifetime1[4] = ce.createFilledSprite(64, param0, MouseWheelHandler.a(param1, 21385));
         return var2Lifetime1;
     }
 
-    final static void a(kc param0, boolean param1, kc param2, kc param3, kc param4) {
+    final static void a(SceneWidget param0, boolean param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -91,7 +91,7 @@ final class q extends SingleChildContainer {
         String var7 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (wd.field_a != null) {
+          if (ResizableViewResizeListener.field_a != null) {
             return;
           }
           SocketJs5Transport.field_r = param1;
@@ -107,26 +107,26 @@ final class q extends SingleChildContainer {
           var7 = (String) null;
           rb.a(ArchiveIndex.field_u, var5, 0, (String) null, 97);
           lo.field_y = sa.field_Cb;
-          wd.field_a = SingleChildContainer.field_D;
+          ResizableViewResizeListener.field_a = SingleChildContainer.field_D;
           SingleChildContainer.field_D.field_J = ArchiveIndex.field_u + (-(8355711 & ArchiveIndex.field_u >> 1) + ((16711422 & nf.field_A.field_J) >> 1));
           SingleChildContainer.field_D.field_eb = -((16711423 & ArchiveIndex.field_u) >> 1) + ArchiveIndex.field_u + (8355711 & nf.field_A.field_eb >> 1);
           SingleChildContainer.field_D.field_zb = ((nf.field_A.field_zb & 16711422) >> 1) + (-(8355711 & ArchiveIndex.field_u >> 1) + ArchiveIndex.field_u);
-          tm.field_d = new kc(0L, param3);
-          bi.field_U = new kc(0L, param2);
-          in.field_Jb = new kc(0L, (kc) null);
-          ck.field_d = new kc(0L, param4);
-          SingleChildContainer.field_D = new kc(0L, param0);
+          tm.field_d = new SceneWidget(0L, param3);
+          bi.field_U = new SceneWidget(0L, param2);
+          in.field_Jb = new SceneWidget(0L, (SceneWidget) null);
+          ck.field_d = new SceneWidget(0L, param4);
+          SingleChildContainer.field_D = new SceneWidget(0L, param0);
           SingleChildContainer.field_D.field_Z = oo.field_x;
-          ck.field_d.a(SingleChildContainer.field_D, 41);
-          sa.field_Cb = new kc(0L, lo.field_y);
-          ck.field_d.a(sa.field_Cb, 97);
-          MembershipOfferScreen.field_f = new kc(0L, nf.field_A, fe.field_k);
-          ih.field_d = new kc(0L, nf.field_A);
-          tm.field_d.a(bi.field_U, 65);
-          tm.field_d.a(in.field_Jb, 126);
-          in.field_Jb.a(ck.field_d, 115);
-          in.field_Jb.a(MembershipOfferScreen.field_f, 81);
-          in.field_Jb.a(ih.field_d, 69);
+          ck.field_d.addChild(SingleChildContainer.field_D, 41);
+          sa.field_Cb = new SceneWidget(0L, lo.field_y);
+          ck.field_d.addChild(sa.field_Cb, 97);
+          MembershipOfferScreen.field_f = new SceneWidget(0L, nf.field_A, fe.field_k);
+          ih.field_d = new SceneWidget(0L, nf.field_A);
+          tm.field_d.addChild(bi.field_U, 65);
+          tm.field_d.addChild(in.field_Jb, 126);
+          in.field_Jb.addChild(ck.field_d, 115);
+          in.field_Jb.addChild(MembershipOfferScreen.field_f, 81);
+          in.field_Jb.addChild(ih.field_d, 69);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

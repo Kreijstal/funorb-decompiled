@@ -208,7 +208,7 @@ final class IsaacRandom {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
-        co.field_f.a(param3, param0, param5, param1, (byte) -120);
+        co.field_f.setBounds(param3, param0, param5, param1, (byte) -120);
         if (null != CacheEntry.field_q) {
           CacheEntry.field_q.a(param6, -ng.field_K + param6, param1, true, param1, param4);
         }

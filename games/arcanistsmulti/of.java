@@ -7,14 +7,14 @@ final class of implements WidgetPainter {
     private BitmapFont field_d;
     private int field_f;
     private int field_h;
-    static ql field_n;
+    static LoginMethod field_n;
     private int field_o;
     static String field_l;
     static long field_j;
     static String field_c;
     static String[] field_e;
     private int field_b;
-    static kc field_a;
+    static SceneWidget field_a;
     private int field_m;
     static String field_k;
 
@@ -220,7 +220,7 @@ final class of implements WidgetPainter {
     }
 
     static {
-        field_n = new ql("usename");
+        field_n = new LoginMethod("usename");
         field_k = "Status";
         field_e = new String[16];
         field_l = "Unfortunately your configuration doesn't support fullscreen mode.";

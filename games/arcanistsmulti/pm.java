@@ -3,7 +3,7 @@
  */
 final class pm {
     static String field_g;
-    static rc field_h;
+    static LoadingTracker field_h;
     static String[] field_f;
     static h field_e;
     static IndexedSprite[] field_d;
@@ -80,7 +80,7 @@ final class pm {
         try {
           var2_int = param1.length();
           if (0 == var2_int) {
-            stackIn_3_0 = uh.field_i;
+            stackIn_3_0 = ClipState.field_i;
             return stackIn_3_0;
           }
           if (var2_int > 64) {

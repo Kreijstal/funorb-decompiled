@@ -6,7 +6,7 @@ final class fm {
     static String field_a;
     String[] field_b;
     long field_f;
-    static vh field_c;
+    static UiTheme field_c;
     long field_d;
 
     final static void a(int param0, boolean param1) {

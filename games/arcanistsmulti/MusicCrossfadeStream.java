@@ -14,7 +14,7 @@ final class MusicCrossfadeStream extends PcmStream {
     private boolean field_w;
     static String field_z;
     private int field_D;
-    static vh field_n;
+    static UiTheme field_n;
     private int field_r;
     private MidiPcmStream field_l;
     static String field_x;
@@ -388,7 +388,7 @@ final class MusicCrossfadeStream extends PcmStream {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_4_1 = 0;
-        kc stackIn_6_0 = null;
+        SceneWidget stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
         int stackIn_41_0 = 0;
@@ -401,15 +401,15 @@ final class MusicCrossfadeStream extends PcmStream {
         int var6 = 0;
         int var8 = 0;
         int var9 = 0;
-        kc var9_ref_kc = null;
+        SceneWidget var9_ref_kc = null;
         nl var10 = null;
         int var10_int = 0;
         nl var11 = null;
         int var11_int = 0;
         int var13 = 0;
         int var14 = 0;
-        kc var15 = null;
-        kc var16 = null;
+        SceneWidget var15 = null;
+        SceneWidget var16 = null;
         int var17 = 0;
         var14 = ArcanistsMulti.field_G ? 1 : 0;
         try {
@@ -423,7 +423,7 @@ final class MusicCrossfadeStream extends PcmStream {
           }
           ej.a(stackIn_3_0, stackIn_4_1);
           tn.field_Ob.a(0, 0, -42 + hl.field_m.field_I, hl.field_m.field_x, 5);
-          aj.field_d.a(bk.field_M.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+          aj.field_d.setBounds(bk.field_M.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
           stackIn_6_0 = qc.field_d;
           stackIn_6_1 = bk.field_M.field_x;
           if (!fc.field_a) {
@@ -431,13 +431,13 @@ final class MusicCrossfadeStream extends PcmStream {
           } else {
             stackIn_7_2 = CacheEntry.field_p + 2 + 42;
           }
-          ((kc) (Object) stackIn_6_0).a(stackIn_6_1 - stackIn_7_2, 0, ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
-          MembershipOfferScreen.field_q.a(CacheEntry.field_p + 42, -40 + (bk.field_M.field_x - CacheEntry.field_p - 2), ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
+          ((SceneWidget) (Object) stackIn_6_0).setBounds(stackIn_6_1 - stackIn_7_2, 0, ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
+          MembershipOfferScreen.field_q.setBounds(CacheEntry.field_p + 42, -40 + (bk.field_M.field_x - CacheEntry.field_p - 2), ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
           lf.field_b.a(ImageProducerRasterBuffer.field_r + 22, CacheEntry.field_p, bk.field_M.field_x, false, 0, bk.field_M.field_I - (ImageProducerRasterBuffer.field_r + 2) - 20, 2);
           var2_int = -29 / ((84 - param0) / 36);
-          IntrusiveNodeHashTable.field_o.a(hl.field_m.field_x, 0, -40 + hl.field_m.field_I, 40, (byte) -120);
-          nl.field_Db.a(oh.field_h.field_x, 0, 0, 30, (byte) -120);
-          mi.field_m.a(oh.field_h.field_x, 0, 30, -42 + oh.field_h.field_I - 30, (byte) -120);
+          IntrusiveNodeHashTable.field_o.setBounds(hl.field_m.field_x, 0, -40 + hl.field_m.field_I, 40, (byte) -120);
+          nl.field_Db.setBounds(ReflectionCheckRequest.field_h.field_x, 0, 0, 30, (byte) -120);
+          mi.field_m.setBounds(ReflectionCheckRequest.field_h.field_x, 0, 30, -42 + ReflectionCheckRequest.field_h.field_I - 30, (byte) -120);
           var3 = 3 + vf.field_l;
           if (ao.field_h.length < 2) {
             var3--;
@@ -453,7 +453,7 @@ final class MusicCrossfadeStream extends PcmStream {
           if (var5 > 40) {
             var5 = 40;
           }
-          ib.field_s.a(-5 + mi.field_m.field_x - 5, 5, 5, var5, (byte) -120);
+          ib.field_s.setBounds(-5 + mi.field_m.field_x - 5, 5, 5, var5, (byte) -120);
           var6 = var5 + 7;
           for (var7 = 0; var7 < 4 + vf.field_l; var7++) {
             if ((var7 != 1 ||
@@ -461,8 +461,8 @@ final class MusicCrossfadeStream extends PcmStream {
               !(le.field_q <= 1))) {
               if (!param1 &&
                 3 == var7) {
-                var16 = wd.field_g[var7];
-                wd.field_g[var7].field_I = 0;
+                var16 = ResizableViewResizeListener.field_g[var7];
+                ResizableViewResizeListener.field_g[var7].field_I = 0;
                 var16.field_x = 0;
                 for (var9 = 0; IndexedSpriteState.field_e[var7].length > var9; var9++) {
                   if (IndexedSpriteState.field_e[var7][var9] != null) {
@@ -473,8 +473,8 @@ final class MusicCrossfadeStream extends PcmStream {
                 }
               } else if (param1 &&
                 0 == var7) {
-                var15 = wd.field_g[var7];
-                wd.field_g[var7].field_I = 0;
+                var15 = ResizableViewResizeListener.field_g[var7];
+                ResizableViewResizeListener.field_g[var7].field_I = 0;
                 var15.field_x = 0;
                 for (var9 = 0; IndexedSpriteState.field_e[var7].length > var9; var9++) {
                   if (IndexedSpriteState.field_e[var7][var9] != null) {
@@ -499,8 +499,8 @@ final class MusicCrossfadeStream extends PcmStream {
                 }
                 var8 = stackIn_41_0;
                 if (var8 != 0) {
-                  var9_ref_kc = wd.field_g[var7];
-                  wd.field_g[var7].field_I = 0;
+                  var9_ref_kc = ResizableViewResizeListener.field_g[var7];
+                  ResizableViewResizeListener.field_g[var7].field_I = 0;
                   var9_ref_kc.field_x = 0;
                   var17 = 0;
                   var10_int = var17;
@@ -513,7 +513,7 @@ final class MusicCrossfadeStream extends PcmStream {
                     var17++;
                   }
                 } else {
-                  wd.field_g[var7].a(103, 5, var6, var4, (byte) -120);
+                  ResizableViewResizeListener.field_g[var7].setBounds(103, 5, var6, var4, (byte) -120);
                   var9 = 110;
                   if (param1) {
                     IndexedSpriteState.field_e[var7][0].a(2, 0, var4, 38, var9, var6, mm.field_p);
@@ -525,7 +525,7 @@ final class MusicCrossfadeStream extends PcmStream {
                       var10.field_x = 0;
                     }
                   }
-                  var10_int = 2 + oh.field_h.field_x - 5 - var9;
+                  var10_int = 2 + ReflectionCheckRequest.field_h.field_x - 5 - var9;
                   var11_int = -1 + IndexedSpriteState.field_e[var7].length;
                   for (var12 = 0; var12 < var11_int; var12++) {
                     var13 = var10_int * var12 / var11_int;
@@ -536,12 +536,12 @@ final class MusicCrossfadeStream extends PcmStream {
               }
             }
           }
-          nl.field_Fb.a(360, -360 + SoftwareRasterizer.field_e >> 1, 10, -14 + (-120 + (SoftwareRasterizer.field_j - 10)), (byte) -120);
-          MembershipOfferScreen.field_t.a(nl.field_Fb.field_x, 0, 0, 24, (byte) -120);
-          Js5ArchiveManager.field_g.a(nl.field_Fb.field_x, 0, 24, -24 + nl.field_Fb.field_I, (byte) -120);
+          nl.field_Fb.setBounds(360, -360 + SoftwareRasterizer.field_e >> 1, 10, -14 + (-120 + (SoftwareRasterizer.field_j - 10)), (byte) -120);
+          MembershipOfferScreen.field_t.setBounds(nl.field_Fb.field_x, 0, 0, 24, (byte) -120);
+          Js5ArchiveManager.field_g.setBounds(nl.field_Fb.field_x, 0, 24, -24 + nl.field_Fb.field_I, (byte) -120);
           Js5ArchiveManager.field_g.field_v = of.a(3, Js5ArchiveManager.field_g.field_I, 1, 1, 11579568, 8421504);
-          mj.field_s.a(-10 + Js5ArchiveManager.field_g.field_x, 5, 5, -2 + (-34 + Js5ArchiveManager.field_g.field_I), (byte) -120);
-          gj.field_d.a(80, (-80 + Js5ArchiveManager.field_g.field_x) / 2, Js5ArchiveManager.field_g.field_I - 5 - 24, 24, (byte) -120);
+          mj.field_s.setBounds(-10 + Js5ArchiveManager.field_g.field_x, 5, 5, -2 + (-34 + Js5ArchiveManager.field_g.field_I), (byte) -120);
+          gj.field_d.setBounds(80, (-80 + Js5ArchiveManager.field_g.field_x) / 2, Js5ArchiveManager.field_g.field_I - 5 - 24, 24, (byte) -120);
           ie.l((byte) 112);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

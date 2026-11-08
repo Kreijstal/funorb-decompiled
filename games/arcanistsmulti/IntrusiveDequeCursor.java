@@ -6,7 +6,7 @@ final class IntrusiveDequeCursor {
     static int field_j;
     static String field_h;
     static int field_i;
-    static kc[] field_f;
+    static SceneWidget[] field_f;
     static String field_d;
     private IntrusiveDeque field_e;
     private IntrusiveNode field_c;
@@ -173,11 +173,11 @@ final class IntrusiveDequeCursor {
         var14 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var6_int = 16 - (-param3 - 485 - (2 + param1));
-          NanoFrameClock.field_t.a(var6_int - 6, 3, 3, IntKeyLookup.field_g.field_I - 6, (byte) -120);
+          NanoFrameClock.field_t.setBounds(var6_int - 6, 3, 3, IntKeyLookup.field_g.field_I - 6, (byte) -120);
           var7 = -5 + NanoFrameClock.field_t.field_I;
-          CredentialKind.field_d.a(2 + (485 + param3) + param1, 5, -param4 + var7, param4, (byte) -120);
-          SingleChildContainer.field_D.a(-sa.field_Cb.field_x - param3 + CredentialKind.field_d.field_x, param3, 0, param4, (byte) -120);
-          sa.field_Cb.a(sa.field_Cb.field_x, param3 + SingleChildContainer.field_D.field_x, 0, param4, (byte) -120);
+          CredentialKind.field_d.setBounds(2 + (485 + param3) + param1, 5, -param4 + var7, param4, (byte) -120);
+          SingleChildContainer.field_D.setBounds(-sa.field_Cb.field_x - param3 + CredentialKind.field_d.field_x, param3, 0, param4, (byte) -120);
+          sa.field_Cb.setBounds(sa.field_Cb.field_x, param3 + SingleChildContainer.field_D.field_x, 0, param4, (byte) -120);
           var7 = var7 - (2 + param4);
           qo.field_f.a(5, param1, param1 + param3 + 487, false, 5, var7 - 5, 2);
           if (ln.field_U != null) {
@@ -194,12 +194,12 @@ final class IntrusiveDequeCursor {
               var11++;
               var7Lifetime1 = (-6 + IntKeyLookup.field_g.field_I + 2) * var11 / (lf.field_g + 1) + 3 - 2 - var13;
               if (var12 >= 5) {
-                g.field_g.a(var8, var6_int, var13, var7Lifetime1, (byte) -120);
+                g.field_g.setBounds(var8, var6_int, var13, var7Lifetime1, (byte) -120);
               } else {
-                mn.field_s[var12].a(var8, var6_int, var13, var7Lifetime1, (byte) -120);
-                ta.field_i[var12].a(-param3 + var9, param3, 0, var7Lifetime1, (byte) -120);
-                ia.field_b[var12].a(param2, var9, param5, -param5 + var7Lifetime1 - param5, (byte) -120);
-                field_f[var12].a(-var10 + (-param3 + var8), var10, param5, -param5 + var7Lifetime1 - param5, (byte) -120);
+                mn.field_s[var12].setBounds(var8, var6_int, var13, var7Lifetime1, (byte) -120);
+                ta.field_i[var12].setBounds(-param3 + var9, param3, 0, var7Lifetime1, (byte) -120);
+                ia.field_b[var12].setBounds(param2, var9, param5, -param5 + var7Lifetime1 - param5, (byte) -120);
+                field_f[var12].setBounds(-var10 + (-param3 + var8), var10, param5, -param5 + var7Lifetime1 - param5, (byte) -120);
               }
             }
           }

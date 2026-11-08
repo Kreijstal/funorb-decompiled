@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class co {
-    static kc field_f;
+    static SceneWidget field_f;
     static am field_h;
     static String field_b;
     static String field_d;
@@ -74,7 +74,7 @@ final class co {
         ml var6 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          rm.field_k = 0;
+          WhirlpoolHasher.field_k = 0;
           rk.field_O.field_X[0] = 0;
           qn.field_ob.field_t = false;
           rk.field_O.field_D = false;

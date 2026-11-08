@@ -12,7 +12,7 @@ abstract class ob extends vi {
     static String field_X;
     static am field_eb;
     static BitmapFont field_T;
-    static v field_Y;
+    static ViewportController field_Y;
     static int field_ab;
     private int field_cb;
     private int field_Z;

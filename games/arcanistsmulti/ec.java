@@ -6,7 +6,7 @@ final class ec {
     private Sprite[] field_f;
     static String field_h;
     static String field_e;
-    static kc field_d;
+    static SceneWidget field_d;
     static af field_g;
     static String field_b;
     static String field_c;
@@ -15,7 +15,7 @@ final class ec {
     final void draw(int param0, int param1, int param2, int param3, int param4) {
         gl.drawNineSliceFrame(param4, param0, -27327, param3, this.field_f, param1);
         if (param2 >= -85) {
-          field_d = (kc) null;
+          field_d = (SceneWidget) null;
         }
     }
 
@@ -34,14 +34,14 @@ final class ec {
     }
 
     final static void pushClipState(int param0) {
-        uh var1 = (uh) (km.field_a.removeLast(true));
+        ClipState var1 = (ClipState) (km.field_a.removeLast(true));
         if (var1 == null) {
-          var1 = new uh();
+          var1 = new ClipState();
         }
         if (param0 != 65280) {
           return;
         }
-        var1.a(SoftwareRasterizer.field_c, SoftwareRasterizer.field_l, (byte) 27, SoftwareRasterizer.field_k, SoftwareRasterizer.field_h, SoftwareRasterizer.field_j, SoftwareRasterizer.field_e, SoftwareRasterizer.field_i);
+        var1.set(SoftwareRasterizer.field_c, SoftwareRasterizer.field_l, (byte) 27, SoftwareRasterizer.field_k, SoftwareRasterizer.field_h, SoftwareRasterizer.field_j, SoftwareRasterizer.field_e, SoftwareRasterizer.field_i);
         Js5Transport.field_j.addLast(var1, -1);
     }
 

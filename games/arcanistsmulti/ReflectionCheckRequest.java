@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oh extends IntrusiveNode {
+final class ReflectionCheckRequest extends IntrusiveNode {
     PlatformTask[] field_n;
     int[] field_p;
     PlatformTask[] field_g;
@@ -14,7 +14,7 @@ final class oh extends IntrusiveNode {
     static AudioOutput field_k;
     int[] field_j;
     byte[][][] field_l;
-    static kc field_h;
+    static SceneWidget field_h;
 
     public static void releaseStatics(int param0) {
         field_k = null;
@@ -46,7 +46,7 @@ final class oh extends IntrusiveNode {
         return 99;
     }
 
-    oh() {
+    ReflectionCheckRequest() {
     }
 
     static {

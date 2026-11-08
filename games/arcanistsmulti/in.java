@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class in extends kc {
-    private kc field_Ib;
-    static kc field_Jb;
-    private kc field_Cb;
-    private kc field_Mb;
+final class in extends SceneWidget {
+    private SceneWidget field_Ib;
+    static SceneWidget field_Jb;
+    private SceneWidget field_Cb;
+    private SceneWidget field_Mb;
     static co field_Gb;
     private int field_Bb;
     static java.awt.Frame field_Eb;
-    private kc field_Lb;
+    private SceneWidget field_Lb;
     static byte[] field_Nb;
     static int[] field_Fb;
-    private kc field_Hb;
+    private SceneWidget field_Hb;
     static String field_Kb;
-    private kc field_Db;
+    private SceneWidget field_Db;
 
     final boolean e(int param0) {
         int var2 = 0;
@@ -52,7 +52,7 @@ final class in extends kc {
           if (param0 == 59) {
             return false;
           }
-          field_Jb = (kc) null;
+          field_Jb = (SceneWidget) null;
           return false;
         }
         if (this.field_Bb > 0) {
@@ -62,7 +62,7 @@ final class in extends kc {
             return true;
           }
           if (param0 != 59) {
-            field_Jb = (kc) null;
+            field_Jb = (SceneWidget) null;
             return false;
           }
           return false;
@@ -74,7 +74,7 @@ final class in extends kc {
         if (param0 == 59) {
           return false;
         }
-        field_Jb = (kc) null;
+        field_Jb = (SceneWidget) null;
         return false;
     }
 
@@ -94,18 +94,18 @@ final class in extends kc {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        kc var14 = null;
-        kc var15 = null;
-        kc var16 = null;
-        kc var17 = null;
-        kc var18 = null;
-        kc var19 = null;
-        kc var14Lifetime1;
-        kc var15Lifetime1;
-        kc var16Lifetime1;
-        kc var17Lifetime1;
-        kc var18Lifetime1;
-        kc var19Lifetime1;
+        SceneWidget var14 = null;
+        SceneWidget var15 = null;
+        SceneWidget var16 = null;
+        SceneWidget var17 = null;
+        SceneWidget var18 = null;
+        SceneWidget var19 = null;
+        SceneWidget var14Lifetime1;
+        SceneWidget var15Lifetime1;
+        SceneWidget var16Lifetime1;
+        SceneWidget var17Lifetime1;
+        SceneWidget var18Lifetime1;
+        SceneWidget var19Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
@@ -229,8 +229,8 @@ final class in extends kc {
         field_Eb = null;
     }
 
-    in(long param0, kc param1, kc param2, kc param3, kc param4) {
-        super(param0, (kc) null);
+    in(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
+        super(param0, (SceneWidget) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -242,26 +242,26 @@ final class in extends kc {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        kc var9 = null;
-        kc var10 = null;
+        SceneWidget var9 = null;
+        SceneWidget var10 = null;
         try {
-          this.field_Mb = new kc(0L, param1);
-          this.field_Ib = new kc(0L, param2);
-          this.a(this.field_Mb, 116);
-          this.a(this.field_Ib, 105);
-          this.field_Lb = new kc(0L, (kc) null);
-          this.a(this.field_Lb, 107);
-          this.field_Hb = new kc(0L, param3);
-          this.field_Db = new kc(0L, param3);
+          this.field_Mb = new SceneWidget(0L, param1);
+          this.field_Ib = new SceneWidget(0L, param2);
+          this.addChild(this.field_Mb, 116);
+          this.addChild(this.field_Ib, 105);
+          this.field_Lb = new SceneWidget(0L, (SceneWidget) null);
+          this.addChild(this.field_Lb, 107);
+          this.field_Hb = new SceneWidget(0L, param3);
+          this.field_Db = new SceneWidget(0L, param3);
           var9 = this.field_Hb;
           var10 = var9;
           this.field_Db.field_yb = true;
           var10.field_yb = true;
-          this.field_Lb.a(this.field_Hb, 72);
-          this.field_Lb.a(this.field_Db, 83);
-          this.field_Cb = new kc(0L, param4);
+          this.field_Lb.addChild(this.field_Hb, 72);
+          this.field_Lb.addChild(this.field_Db, 83);
+          this.field_Cb = new SceneWidget(0L, param4);
           this.field_Cb.field_H = true;
-          this.field_Lb.a(this.field_Cb, 89);
+          this.field_Lb.addChild(this.field_Cb, 89);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

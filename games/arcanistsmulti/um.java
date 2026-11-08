@@ -32,7 +32,7 @@ final class um {
         return sb.field_a;
     }
 
-    final static void a(String param0, java.applet.Applet param1, int param2) {
+    final static void setSessionCookie(String param0, java.applet.Applet param1, int param2) {
         try {
           String var7 = null;
           String var4 = null;
@@ -50,7 +50,7 @@ final class um {
             ei.a("document.cookie=\"" + var5 + "\"", param1, 269);
             if (param2 != 13680) {
               java.applet.Applet var6 = (java.applet.Applet) null;
-              um.a((String) null, (java.applet.Applet) null, -110);
+              um.setSessionCookie((String) null, (java.applet.Applet) null, -110);
             }
             ml.a(-104, param1);
           } catch (RuntimeException runtimeException) {

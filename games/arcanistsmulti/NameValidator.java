@@ -84,9 +84,9 @@ final class NameValidator extends TextFieldValidator {
         if (param0 > -52) {
           return;
         }
-        if (ce.field_m.field_m != vd.field_k) {
-          ma.field_N = ma.field_N + (ce.field_m.field_m - vd.field_k);
-          vd.field_k = ce.field_m.field_m;
+        if (ce.field_m.field_m != TextLine.field_k) {
+          ma.field_N = ma.field_N + (ce.field_m.field_m - TextLine.field_k);
+          TextLine.field_k = ce.field_m.field_m;
         }
         if (!(jo.field_e <= 0)) {
           jo.field_e = jo.field_e - 1;

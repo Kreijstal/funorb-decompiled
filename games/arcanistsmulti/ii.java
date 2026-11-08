@@ -3,7 +3,7 @@
  */
 final class ii implements WidgetPainter {
     static boolean field_f;
-    static kc field_b;
+    static SceneWidget field_b;
     static Sprite field_d;
     static int field_c;
     static int field_a;

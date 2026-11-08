@@ -151,7 +151,7 @@ final class SocketJs5Transport extends Js5Transport {
             if (!param1) {
               field_q = (String) null;
             }
-            this.field_p = qj.b(-26572);
+            this.field_p = qj.monotonicTimeMillis(-26572);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -245,7 +245,7 @@ final class SocketJs5Transport extends Js5Transport {
           Js5NetworkRequest var2Lifetime1;
           var16 = ArcanistsMulti.field_G ? 1 : 0;
           if (this.field_w != null) {
-            var2_long = qj.b(-26572);
+            var2_long = qj.monotonicTimeMillis(-26572);
             var4 = (int)(-this.field_p + var2_long);
             this.field_p = var2_long;
             if (200 < var4) {

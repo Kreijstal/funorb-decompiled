@@ -7,7 +7,7 @@ final class CredentialKind {
     static int field_b;
     int field_g;
     static KeyboardInputHandler field_a;
-    static kc field_d;
+    static SceneWidget field_d;
     static String field_e;
     static String field_h;
 

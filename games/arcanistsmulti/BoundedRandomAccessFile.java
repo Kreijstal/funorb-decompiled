@@ -47,7 +47,7 @@ final class BoundedRandomAccessFile {
         if (param2 != -32507) {
           return;
         }
-        co.field_f.b(param0, (byte) 75);
+        co.field_f.updateInputFullScreen(param0, (byte) 75);
         var4 = CacheEntry.field_q.f((byte) 93) ? 1 : 0;
         if (re.field_r != 0 &&
           var4 == 0) {
@@ -70,11 +70,11 @@ final class BoundedRandomAccessFile {
             ng.field_K = ng.field_K - 5;
             return;
           }
-          co.field_f.b(param0, (byte) 66);
+          co.field_f.updateInputFullScreen(param0, (byte) 66);
         } else {
           CacheEntry.field_q.a(param1, -10284, param3);
           if (var4 != 0) {
-            co.field_f.b(param0, (byte) 66);
+            co.field_f.updateInputFullScreen(param0, (byte) 66);
           }
         }
         var5Lifetime1 = CacheEntry.field_q.f(0) + CacheEntry.field_q.field_V;

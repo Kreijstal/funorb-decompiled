@@ -53,9 +53,9 @@ final class i {
         int var6 = 24;
         int var7 = param4;
         this.field_c.a(param0, param2, var7, var6, 0, param3, param1);
-        NanoFrameClock.field_j.a(ec.field_d.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
-        ClientException.field_d.a(-80 + (-2 + ec.field_d.field_x) - (CacheEntry.field_p + 2), 0, 2 + ImageProducerRasterBuffer.field_r, 18, (byte) -120);
-        nk.field_n.a(CacheEntry.field_p + 82, ec.field_d.field_x - (CacheEntry.field_p + 2) - 80, ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
+        NanoFrameClock.field_j.setBounds(ec.field_d.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+        ClientException.field_d.setBounds(-80 + (-2 + ec.field_d.field_x) - (CacheEntry.field_p + 2), 0, 2 + ImageProducerRasterBuffer.field_r, 18, (byte) -120);
+        nk.field_n.setBounds(CacheEntry.field_p + 82, ec.field_d.field_x - (CacheEntry.field_p + 2) - 80, ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
         nl.field_Gb.a(20, 2, ec.field_d.field_I - ImageProducerRasterBuffer.field_r - 2 - 20, ec.field_d.field_x, 2 + ImageProducerRasterBuffer.field_r + 20, 0, -16624, CacheEntry.field_p);
         dd.field_c.a(2, 20, CacheEntry.field_p, false);
     }
@@ -259,15 +259,15 @@ final class i {
     final static void b(int param0) {
         lo.field_q = 200;
         int var1 = 63 % ((-66 - param0) / 47);
-        vh.field_n = false;
+        UiTheme.field_n = false;
     }
 
-    i(String param0, kc param1) {
+    i(String param0, SceneWidget param1) {
         String[] var3 = null;
-        kc[] var4 = null;
+        SceneWidget[] var4 = null;
         try {
           var3 = new String[]{param0, u.field_d, lm.field_g};
-          var4 = new kc[]{param1, ec.field_d, (kc) ((Object) dd.field_c)};
+          var4 = new SceneWidget[]{param1, ec.field_d, (SceneWidget) ((Object) dd.field_c)};
           this.field_c = new tn(0L, ub.field_c, var3, mn.field_t, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "i.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

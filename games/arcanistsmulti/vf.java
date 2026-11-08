@@ -6,14 +6,14 @@ final class vf extends IntrusiveNode {
     byte[] field_t;
     static ed field_k;
     static ec field_s;
-    static kc field_i;
+    static SceneWidget field_i;
     static int field_m;
     static String field_p;
     static int field_o;
     static int field_q;
     static int field_r;
     static int[] field_n;
-    static kc field_u;
+    static SceneWidget field_u;
     static int field_l;
     static int[] field_v;
     static String field_h;
@@ -54,7 +54,7 @@ final class vf extends IntrusiveNode {
             field_o = -110;
           }
           if (param2 == 9) {
-            stackIn_19_0 = v.field_n;
+            stackIn_19_0 = ViewportController.field_n;
             return stackIn_19_0;
           }
           if (10 == param2) {
@@ -62,7 +62,7 @@ final class vf extends IntrusiveNode {
             return stackIn_23_0;
           }
           if (11 == param2) {
-            stackIn_27_0 = wd.field_f;
+            stackIn_27_0 = ResizableViewResizeListener.field_f;
             return stackIn_27_0;
           }
           if (param2 != 14) {

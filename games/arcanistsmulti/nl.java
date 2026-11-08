@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nl extends kc {
+final class nl extends SceneWidget {
     static am field_Ib;
     static String field_Bb;
-    private kc field_Cb;
+    private SceneWidget field_Cb;
     static String field_Hb;
-    kc field_Eb;
-    static kc field_Db;
-    static kc field_Fb;
+    SceneWidget field_Eb;
+    static SceneWidget field_Db;
+    static SceneWidget field_Fb;
     static java.math.BigInteger field_Jb;
     static hb field_Gb;
 
@@ -32,7 +32,7 @@ final class nl extends kc {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(param3, param4, param5, param2, (byte) -120);
+        this.setBounds(param3, param4, param5, param2, (byte) -120);
         this.a(param0, param6, false);
         if (param1 != 0) {
           this.a(38, -70, true);
@@ -44,10 +44,10 @@ final class nl extends kc {
         int var4 = -param0;
         int var6 = -param0;
         if (null != this.field_Cb) {
-          var4 = this.field_Cb.c(-25921);
+          var4 = this.field_Cb.getContentWidth(-25921);
         }
         if (this.field_Eb != null) {
-          var6 = this.field_Eb.c(-25921);
+          var6 = this.field_Eb.getContentWidth(-25921);
         }
         return param1 + (var6 + var4 + param1) + param0;
     }
@@ -112,7 +112,7 @@ final class nl extends kc {
         }
     }
 
-    nl(long param0, kc param1, kc param2, kc param3, Sprite param4, String param5) {
+    nl(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -129,16 +129,16 @@ final class nl extends kc {
         RuntimeException var8 = null;
         try {
           if (param4 != null) {
-            this.field_Cb = new kc(0L, param2);
+            this.field_Cb = new SceneWidget(0L, param2);
             this.field_Cb.field_W = param4;
-            this.a(this.field_Cb, 116);
+            this.addChild(this.field_Cb, 116);
           }
           if (param5 != null) {
-            this.field_Eb = new kc(0L, param3, param5);
-            this.a(this.field_Eb, 99);
-            this.e((byte) 20);
+            this.field_Eb = new SceneWidget(0L, param3, param5);
+            this.addChild(this.field_Eb, 99);
+            this.markTreeDirty((byte) 20);
           } else {
-            this.e((byte) 20);
+            this.markTreeDirty((byte) 20);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -189,10 +189,10 @@ final class nl extends kc {
         }
         var5 = -param1;
         if (this.field_Cb != null) {
-          var4 = this.field_Cb.c(-25921);
+          var4 = this.field_Cb.getContentWidth(-25921);
         }
         if (this.field_Eb != null) {
-          var5 = this.field_Eb.a(-var4 + (-param0 + (this.field_x + (-param1 - param0))), -123);
+          var5 = this.field_Eb.measureContentWidth(-var4 + (-param0 + (this.field_x + (-param1 - param0))), -123);
         }
         var6 = var5 + (param1 + var4) + param0 + param0;
         if (var6 > this.field_x) {
@@ -206,13 +206,13 @@ final class nl extends kc {
           param0 = param0 + (this.field_x - var6);
         }
         if (null != this.field_Cb) {
-          this.field_Cb.a(var4, param0, 0, this.field_I, (byte) -120);
+          this.field_Cb.setBounds(var4, param0, 0, this.field_I, (byte) -120);
           this.field_Cb.field_gb = this.field_gb;
         }
         if (this.field_Eb == null) {
           return;
         }
-        this.field_Eb.a(var5, param1 + (var4 + param0), 0, this.field_I, (byte) -120);
+        this.field_Eb.setBounds(var5, param1 + (var4 + param0), 0, this.field_I, (byte) -120);
         if (null == this.field_Cb) {
           this.field_Eb.field_X = this.field_X;
         } else {

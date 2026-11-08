@@ -445,7 +445,7 @@ final class u {
                 var8_ref_cg = new cg(var21, var22, var3_long);
                 bc.field_c.put(var8_ref_cg, var3_long, (byte) 126);
               }
-              var8_ref_cg.field_Ob = qj.b(-26572) - (long)((PacketBuffer) ((Object) var1)).readInt(-10674);
+              var8_ref_cg.field_Ob = qj.monotonicTimeMillis(-26572) - (long)((PacketBuffer) ((Object) var1)).readInt(-10674);
               var8_ref_cg.field_Pb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
               var10 = ((PacketBuffer) ((Object) var1)).readVarInt(31);
               stackIn_51_0 = var8_ref_cg;
@@ -467,7 +467,7 @@ final class u {
                   var24.field_Kb = false;
                 }
                 if (var5 != 0) {
-                  var24.field_Eb = vd.field_i;
+                  var24.field_Eb = TextLine.field_i;
                   var24.field_Sb = var5;
                 } else {
                   var24.unlink(true);
@@ -508,18 +508,18 @@ final class u {
               if (var4_int == 0) {
                 var31.unlink(true);
               } else {
-                var15.field_bc = vd.field_i;
+                var15.field_bc = TextLine.field_i;
                 var15.field_ac = var4_int;
               }
               var31.unlinkSecondary((byte) 88);
               return;
             }
             if (var2 == 10) {
-              var32 = (na) (vh.field_a.first(12623));
+              var32 = (na) (UiTheme.field_a.first(12623));
               while (var32 != null) {
                 var32.unlink(true);
                 var32.unlinkSecondary((byte) 88);
-                var32 = (na) (vh.field_a.next(0));
+                var32 = (na) (UiTheme.field_a.next(0));
               }
               return;
             }
@@ -535,7 +535,7 @@ final class u {
                   var6 = var13;
                   if (0 != var4_intLifetime1) {
                     var17_ref.field_ac = var4_intLifetime1;
-                    var17_ref.field_bc = vd.field_i;
+                    var17_ref.field_bc = TextLine.field_i;
                   }
                   var13.field_Hb = false;
                   cb.a(var17_ref, 25);
@@ -579,7 +579,7 @@ final class u {
                       var28.unlink(true);
                     } else {
                       var14.field_Sb = var5Lifetime1;
-                      var14.field_Eb = vd.field_i;
+                      var14.field_Eb = TextLine.field_i;
                     }
                     var28.unlinkSecondary((byte) 88);
                     DirectByteStorage.field_f.field_Rb = DirectByteStorage.field_f.field_Rb - 1;
@@ -595,7 +595,7 @@ final class u {
                       PatchEnvelopeSet.field_a = 0L;
                       return;
                     }
-                    PatchEnvelopeSet.field_a = qj.b(-26572) + (long)var3Lifetime5;
+                    PatchEnvelopeSet.field_a = qj.monotonicTimeMillis(-26572) + (long)var3Lifetime5;
                     return;
                   }
                   if (var2 == 22) {
@@ -616,7 +616,7 @@ final class u {
                 var29 = fn.lookupEntry(var3_longLifetime2, 123);
                 if (var29 != null) {
                   if (var5Lifetime1Lifetime1 != 0) {
-                    var29.field_Eb = vd.field_i;
+                    var29.field_Eb = TextLine.field_i;
                     var29.field_Sb = var5Lifetime1Lifetime1;
                   }
                   if (var2 == 15) {
@@ -731,7 +731,7 @@ final class u {
         ProxySocketConnector.field_m.a(fi.field_d, (byte) 67);
         ProxySocketConnector.field_m = null;
         if (ob.field_Y != null) {
-          ob.field_Y.a(true);
+          ob.field_Y.restoreWindowedSize(true);
         }
         on.field_c.requestFocus();
     }

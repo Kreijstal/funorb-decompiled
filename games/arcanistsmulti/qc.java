@@ -8,17 +8,17 @@ final class qc {
     static String field_g;
     static String field_f;
     static int field_a;
-    static kc field_d;
+    static SceneWidget field_d;
 
     final static void a(boolean param0) {
         hi.installViewController(-123, param0);
-        ob.field_Y.b(480, 8110, 640);
-        ob.field_Y.a((byte) -119, 1024, 1280);
+        ob.field_Y.setMinimumSize(480, 8110, 640);
+        ob.field_Y.setMaximumSize((byte) -119, 1024, 1280);
         dh.defineScreen(TextFieldValidator.field_h, 9, 6);
         dh.defineScreen(me.field_H, 9, 8);
         if (!ArcanistsMulti.i((byte) -77)) {
           dh.defineScreen(MidiPcmStream.field_l, 9, 1);
-          dh.defineScreen(ql.field_b, 9, 2);
+          dh.defineScreen(LoginMethod.field_b, 9, 2);
           dh.defineScreen(ResourceArchive.field_g, 9, 4);
         }
     }
@@ -38,7 +38,7 @@ final class qc {
         var3.writeShort(param1, (byte) -60);
     }
 
-    final static boolean a(int param0, boolean param1, CharSequence param2) {
+    final static boolean isValidDisplayName(int param0, boolean param1, CharSequence param2) {
         int var6 = 0;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;

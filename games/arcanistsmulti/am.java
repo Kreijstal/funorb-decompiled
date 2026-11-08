@@ -4,12 +4,12 @@
 final class am {
     static String field_a;
     static String field_b;
-    static kc field_c;
+    static SceneWidget field_c;
 
     public static void releaseStatics(boolean param0) {
         field_a = null;
         if (param0) {
-          field_c = (kc) null;
+          field_c = (SceneWidget) null;
         }
         field_c = null;
         field_b = null;
@@ -40,7 +40,7 @@ final class am {
           if (param0 != 26) {
             return false;
           }
-          var2_long = qj.b(-26572);
+          var2_long = qj.monotonicTimeMillis(-26572);
           if (ob.field_ab != 0 &&
             so.field_d < 0) {
             var4_ref_qe = (qe) (uf.field_a.first(12623));

@@ -26,7 +26,7 @@ final class qo {
         var4.writeByteLengthAtMark(var4.position - var5, (byte) 43);
     }
 
-    final static void a(int param0, int param1) {
+    final static void decodeChatSettings(int param0, int param1) {
         on.field_h = (param1 & 48) >> 4;
         if (on.field_h > 2) {
           on.field_h = 2;
@@ -74,7 +74,7 @@ final class qo {
         he.field_e.writeByteLengthAtMark(he.field_e.position - var4Lifetime1, (byte) 43);
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String normalizeName(byte param0, CharSequence param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -87,7 +87,7 @@ final class qo {
           var2 = TextFieldValidator.decodeBase37(SectorCacheStore.encodeBase37(param1, false), 29424);
           if (param0 < 67) {
             var3 = (CharSequence) null;
-            qo.a((byte) -47, (CharSequence) null);
+            qo.normalizeName((byte) -47, (CharSequence) null);
           }
           if (var2 == null) {
             var2 = "";
@@ -125,7 +125,7 @@ final class qo {
         field_f = null;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isAllowedNameCharacter(char param0, int param1) {
         char[] var2 = null;
         int var3 = 0;
         int var4 = 0;

@@ -19,7 +19,7 @@ final class hd {
           if (param1 != 59) {
             field_a = -65;
           }
-          if (!qc.a(640, param2, param0)) {
+          if (!qc.isValidDisplayName(640, param2, param0)) {
             return false;
           }
           for (var3_int = 0; var3_int < param0.length(); var3_int++) {

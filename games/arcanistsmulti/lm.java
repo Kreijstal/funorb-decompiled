@@ -158,7 +158,7 @@ final class lm {
               if (!qk.k((byte) 111)) {
                 TextLayout.field_c = tj.a(param3 ^ -111, new String[]{DirectByteStorage.field_f.field_ic}, ed.field_tb);
               } else {
-                TextLayout.field_c = vh.field_m;
+                TextLayout.field_c = UiTheme.field_m;
               }
             }
           } else {

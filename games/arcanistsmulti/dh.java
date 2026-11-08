@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dh extends kc {
+final class dh extends SceneWidget {
     static int field_Lb;
-    private kc field_Cb;
+    private SceneWidget field_Cb;
     static String field_Nb;
     private int field_Eb;
     static IndexedSprite[] field_Jb;
     static String field_Bb;
     static boolean[] field_Fb;
-    private kc field_Ob;
+    private SceneWidget field_Ob;
     static int field_Gb;
     static boolean field_Mb;
     static String[] field_Kb;
@@ -30,7 +30,7 @@ final class dh extends kc {
         field_Hb = (boolean[][]) null;
     }
 
-    dh(int param0, int param1, int param2, int param3, String param4, kc param5, kc param6, kc param7) {
+    dh(int param0, int param1, int param2, int param3, String param4, SceneWidget param5, SceneWidget param6, SceneWidget param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -50,21 +50,21 @@ final class dh extends kc {
         int var13 = 0;
         this.field_Eb = 0;
         try {
-          this.field_Cb = new kc(0L, param6, param4);
-          this.a(this.field_Cb, 119);
-          this.field_Ob = new kc(0L, param7);
+          this.field_Cb = new SceneWidget(0L, param6, param4);
+          this.addChild(this.field_Cb, 119);
+          this.field_Ob = new SceneWidget(0L, param7);
           this.field_Ob.field_ob = 16764006;
-          this.a(this.field_Ob, 107);
+          this.addChild(this.field_Ob, 107);
           this.field_Ob.field_L = "|";
           this.field_Ib = new StringBuilder(12);
-          var9_int = this.field_Cb.c(-25921);
-          this.field_Cb.a(var9_int, 5, 3, ImageProducerRasterBuffer.field_r, (byte) -120);
-          this.field_Ob.a(var9_int, 5, 3 + ImageProducerRasterBuffer.field_r, ImageProducerRasterBuffer.field_r, (byte) -120);
+          var9_int = this.field_Cb.getContentWidth(-25921);
+          this.field_Cb.setBounds(var9_int, 5, 3, ImageProducerRasterBuffer.field_r, (byte) -120);
+          this.field_Ob.setBounds(var9_int, 5, 3 + ImageProducerRasterBuffer.field_r, ImageProducerRasterBuffer.field_r, (byte) -120);
           var10 = 5 + (5 + var9_int);
           var11 = 3 + (3 + 2 * ImageProducerRasterBuffer.field_r);
           var12 = ih.clampToScreenX(param0, var10, param2, 246);
-          var13 = ql.a(10, param3, var11, param1);
-          this.a(var10, var12, var13, var11, (byte) -120);
+          var13 = LoginMethod.clampToScreenY(10, param3, var11, param1);
+          this.setBounds(var10, var12, var13, var11, (byte) -120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -206,8 +206,8 @@ final class dh extends kc {
           ScreenDisplayMode.field_i[6] = fj.loadSprite("", MouseWheelHandler.a((int) param1, 22546), param0, "clocktower");
           gj.field_f = pk.a("", 0, "16", param0);
           tg.field_b = pk.a("", 0, "32", param0);
-          tk.field_x = qe.a(param0, "64", "", 122);
-          md.field_f = qe.a(param0, "128", "", 46);
+          tk.field_x = qe.loadSpriteSheet(param0, "64", "", 122);
+          md.field_f = qe.loadSpriteSheet(param0, "128", "", 46);
           vg.field_M = af.a("volcano", "", 19412, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -230,12 +230,12 @@ final class dh extends kc {
         int stackIn_26_1 = 0;
         int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        this.b(param1, (byte) 92);
+        this.updateInputFullScreen(param1, (byte) 92);
         if (param1) {
           while (ib.b(param0)) {
             if (IntrusiveDeque.field_d == 85 &&
               this.field_Ib.length() > 0) {
-              qj.a(-1 + this.field_Ib.length(), this.field_Ib, ' ', false);
+              qj.padToLength(-1 + this.field_Ib.length(), this.field_Ib, ' ', false);
             }
             if (bj.a(ed.field_Bb, (CharSequence) ((Object) this.field_Ib), (byte) -71) ||
               (this.field_Ib.length() == 0 &&
@@ -617,7 +617,7 @@ final class dh extends kc {
         }
         if (IntrusiveDeque.field_d == 85 &&
           0 < this.field_Ib.length()) {
-          qj.a(this.field_Ib.length() - 1, this.field_Ib, ' ', false);
+          qj.padToLength(this.field_Ib.length() - 1, this.field_Ib, ' ', false);
         }
         if (this.field_Ib.length() < 12) {
           var2 = Character.toLowerCase(ed.field_Bb);
@@ -628,7 +628,7 @@ final class dh extends kc {
             this.field_Ib.length() > 0) {
             discarded$2 = this.field_Ib.append((char) var2);
           }
-          if (uh.a((char) var2, (byte) -127) ||
+          if (ClipState.a((char) var2, (byte) -127) ||
             LoginPanel.a(30, (char) var2)) {
             discarded$3 = this.field_Ib.append((char) var2);
           }

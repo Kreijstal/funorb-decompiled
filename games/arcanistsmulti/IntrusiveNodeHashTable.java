@@ -3,7 +3,7 @@
  */
 final class IntrusiveNodeHashTable {
     static String field_l;
-    static kc field_o;
+    static SceneWidget field_o;
     private int bucketCount;
     private DualLinkNode[] buckets;
     static int field_p;
@@ -207,7 +207,7 @@ final class IntrusiveNodeHashTable {
             return stackIn_3_0;
           }
           if (var2_int == 0) {
-            stackIn_7_0 = uh.field_i;
+            stackIn_7_0 = ClipState.field_i;
             return stackIn_7_0;
           }
           if (var2_int > 63) {
@@ -332,7 +332,7 @@ final class IntrusiveNodeHashTable {
         fk var1Lifetime1;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          oh.field_k.serviceOutput();
+          ReflectionCheckRequest.field_k.serviceOutput();
           lf.field_a.serviceOutput();
           if (param0 != 200) {
             field_a = (Sprite[]) null;

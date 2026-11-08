@@ -78,7 +78,7 @@ final class pn {
         int var1;
         boolean stackIn_7_0 = false;
         var1 = 75 / ((param0 - 48) / 54);
-        stackIn_7_0 = (eo.field_c != null) || (rc.c(-1321)) || (null != db.field_a) || (we.a((byte) -80));
+        stackIn_7_0 = (eo.field_c != null) || (LoadingTracker.c(-1321)) || (null != db.field_a) || (we.a((byte) -80));
         return stackIn_7_0;
     }
 
@@ -171,7 +171,7 @@ final class pn {
             param1.length() != 0) {
             var2_int = param1.indexOf('@');
             if (var2_int == -1) {
-              stackIn_7_0 = uh.field_i;
+              stackIn_7_0 = ClipState.field_i;
               return stackIn_7_0;
             }
             if (param0 != 78) {

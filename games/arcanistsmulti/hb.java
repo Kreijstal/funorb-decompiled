@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hb extends kc {
+final class hb extends SceneWidget {
     static co field_Gb;
     static String field_Bb;
-    kc field_Eb;
+    SceneWidget field_Eb;
     static String field_Ib;
     static String field_Hb;
     dn field_Db;
-    kc field_Jb;
-    kc field_Lb;
+    SceneWidget field_Jb;
+    SceneWidget field_Lb;
     static ResourceArchive field_Fb;
     static double field_Cb;
     static int field_Kb;
 
-    hb(long param0, kc param1, kc param2, in param3, kc param4, String param5, String param6) {
+    hb(long param0, SceneWidget param1, SceneWidget param2, in param3, SceneWidget param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_Eb = new kc(0L, (kc) null);
+          this.field_Eb = new SceneWidget(0L, (SceneWidget) null);
           this.field_Db = new dn(0L, this.field_Eb, param2, param3);
-          this.field_Jb = new kc(0L, param4);
-          this.field_Lb = new kc(0L, param4);
+          this.field_Jb = new SceneWidget(0L, param4);
+          this.field_Lb = new SceneWidget(0L, param4);
           this.field_Jb.field_rb = param5;
           this.field_Lb.field_rb = param6;
-          this.a(this.field_Db, 84);
-          this.a(this.field_Jb, 38);
-          this.a(this.field_Lb, 31);
+          this.addChild(this.field_Db, 84);
+          this.addChild(this.field_Jb, 38);
+          this.addChild(this.field_Lb, 31);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "hb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
@@ -141,7 +141,7 @@ final class hb extends kc {
     final static void f(byte param0) {
         IntrusiveNodeHashTable.field_p = -1;
         cb.field_c = null;
-        oh.field_i = false;
+        ReflectionCheckRequest.field_i = false;
         int var1 = 57 / ((param0 + 19) / 41);
         DelegatingCanvas.field_f = 0;
         ProxySocketConnector.field_p = -1;

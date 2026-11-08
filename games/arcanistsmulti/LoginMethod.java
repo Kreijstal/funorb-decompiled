@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ql {
+final class LoginMethod {
     static int field_a;
     static String field_e;
     static Sprite field_c;
@@ -35,7 +35,7 @@ final class ql {
             gd.field_rb = param0.field_m;
             of.field_c = param0.field_n;
           }
-          vd.a(param0, (byte) -74);
+          TextLine.a(param0, (byte) -74);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ql.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -154,14 +154,14 @@ final class ql {
         field_e = null;
     }
 
-    final static kc a(int param0) {
+    final static SceneWidget a(int param0) {
         if (param0 != 1) {
-          return (kc) null;
+          return (SceneWidget) null;
         }
         return mc.a((byte) 21);
     }
 
-    final static Sprite[] a(int param0, byte param1, int param2, int param3) {
+    final static Sprite[] createSolidFrame(int param0, byte param1, int param2, int param3) {
         int var5 = 0;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
         Sprite[] var7 = new Sprite[9];
@@ -177,18 +177,18 @@ final class ql {
         return var4;
     }
 
-    final void a(java.applet.Applet param0, byte param1) {
+    final void saveAsLastLoginMethod(java.applet.Applet param0, byte param1) {
         try {
           if (param1 > -3) {
             field_a = 59;
           }
-          sm.a(31536000L, "jagex-last-login-method", param0, -15367, this.field_d);
+          sm.setCookie(31536000L, "jagex-last-login-method", param0, -15367, this.field_d);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ql.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean hasCookieName(String param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -219,7 +219,7 @@ final class ql {
         throw new IllegalStateException();
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int clampToScreenY(int param0, int param1, int param2, int param3) {
         if (SoftwareRasterizer.field_j >= param2 + (param1 + param3)) {
           return param3 + param1;
         }
@@ -232,7 +232,7 @@ final class ql {
         return SoftwareRasterizer.field_j - param2;
     }
 
-    ql(String param0) {
+    LoginMethod(String param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

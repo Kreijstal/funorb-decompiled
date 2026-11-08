@@ -196,7 +196,7 @@ final class li extends UiContainer implements ButtonListener {
             var3_int = param0.length;
             this.field_K = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_K[var4_int] = qo.a((byte) 80, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
+              this.field_K[var4_int] = qo.normalizeName((byte) 80, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
             var4 = new LinkButtonPainter(ia.field_c, 0, 1);
             this.field_J = new TextButton[var3_int + 1];

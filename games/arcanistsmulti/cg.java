@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends kc {
-    kc field_Cb;
-    kc field_Gb;
+final class cg extends SceneWidget {
+    SceneWidget field_Cb;
+    SceneWidget field_Gb;
     int field_Vb;
     int field_Eb;
-    kc field_Fb;
+    SceneWidget field_Fb;
     static ValidationState field_Wb;
-    kc field_Ub;
+    SceneWidget field_Ub;
     int field_Bb;
     int field_Mb;
     boolean field_Kb;
-    kc field_Hb;
+    SceneWidget field_Hb;
     long field_Nb;
     static int field_Lb;
     long field_Ob;
@@ -178,7 +178,7 @@ final class cg extends kc {
             for (var18 = 0; var18 < 3; var18++) {
               tn.field_Gb[var18] = tn.field_Gb[var18] + gn.field_g[var15][var18];
             }
-            to.a((byte) -61, EmailLoginCredentials.field_e, tn.field_Gb, true, var17, false, false);
+            SceneWidgetNode.a((byte) -61, EmailLoginCredentials.field_e, tn.field_Gb, true, var17, false, false);
             cj.drawModel(var8Lifetime1, var13Lifetime1, var12Lifetime1, 20133, var17, var9Lifetime1, var7Lifetime1, var14);
           }
           return;
@@ -199,7 +199,7 @@ final class cg extends kc {
     }
 
     cg(String param0, String param1, long param2) {
-        super(0L, (kc) null);
+        super(0L, (SceneWidget) null);
         CharSequence var6 = null;
         try {
           this.field_Nb = param2;

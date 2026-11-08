@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ClientException extends RuntimeException {
-    static kc field_d;
+    static SceneWidget field_d;
     static h field_b;
     static int field_c;
     Throwable cause;

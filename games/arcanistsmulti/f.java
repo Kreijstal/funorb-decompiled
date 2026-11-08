@@ -55,7 +55,7 @@ final class f extends IntrusiveNode {
           var9 = 0;
           if (!wh.field_g &&
             var5 < hj.field_b) {
-            var10_int = oh.a((byte) 126, var8_ref_jg.field_m);
+            var10_int = ReflectionCheckRequest.a((byte) 126, var8_ref_jg.field_m);
             if (var8_ref_jg.b(-84) >= var10_int && (var8_ref_jg.field_i ||
               !sa.a(var8_ref_jg.field_n, 320))) {
               var9 = 1;
@@ -69,12 +69,12 @@ final class f extends IntrusiveNode {
               var5++;
             } else {
               if (var8_ref_jg.field_a == null) {
-                vh.field_t = vh.field_t + 1;
+                UiTheme.field_t = UiTheme.field_t + 1;
               }
               var10 = ArchiveIndex.a(3, var8_ref_jg);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_jg.field_e);
-              var12 = rm.a(var8_ref_jg, (byte) 106);
-              var8_ref_jg.field_a = new kc(0L, nf.field_A, var11);
+              var12 = WhirlpoolHasher.a(var8_ref_jg, (byte) 106);
+              var8_ref_jg.field_a = new SceneWidget(0L, nf.field_A, var11);
               var6 = var6 + param2;
               var8_ref_jg.field_a.field_ob = var12;
               var8_ref_jg.field_a.field_J = var12 + (-((var12 & 16711422) >> 1) + ((16711422 & nf.field_A.field_J) >> 1));
@@ -88,8 +88,8 @@ final class f extends IntrusiveNode {
         for (var8 = 0; SecondaryNodeDeque.field_f > var8; var8++) {
           var9_ref_jg = g.field_d[var8];
           if (null != var9_ref_jg.field_a) {
-            qo.field_f.field_Cb.a(var9_ref_jg.field_a, 110);
-            var9_ref_jg.field_a.a(var9_ref_jg.field_a.c(-25921), param3, var7Lifetime1, param2, (byte) -120);
+            qo.field_f.field_Cb.addChild(var9_ref_jg.field_a, 110);
+            var9_ref_jg.field_a.setBounds(var9_ref_jg.field_a.getContentWidth(-25921), param3, var7Lifetime1, param2, (byte) -120);
             if (0 != var9_ref_jg.field_a.field_U) {
               var4 = var9_ref_jg;
             }

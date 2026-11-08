@@ -11,7 +11,7 @@ final class Js5ArchiveManager {
     private tj[] field_b;
     static String[] field_f;
     private DiskCacheWorker field_e;
-    static kc field_g;
+    static SceneWidget field_g;
     static PcmStreamMixer field_k;
     static String field_a;
 
@@ -103,7 +103,7 @@ final class Js5ArchiveManager {
             }
             this.field_d.position = 6 + 72 * param4;
             if (param2 > -51) {
-              field_g = (kc) null;
+              field_g = (SceneWidget) null;
             }
             var6_int = this.field_d.readInt(-10674);
             var7 = this.field_d.readInt(-10674);
@@ -258,7 +258,7 @@ final class Js5ArchiveManager {
             break;
           }
           if (param1 != -13) {
-            field_g = (kc) null;
+            field_g = (SceneWidget) null;
           }
           while (var2_int < var3) {
             if (rk.a((byte) -16, param0.charAt(-1 + var3))) {
@@ -277,7 +277,7 @@ final class Js5ArchiveManager {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param0.charAt(var6);
-            if (qo.a((char) var7, param1 ^ -13)) {
+            if (qo.isAllowedNameCharacter((char) var7, param1 ^ -13)) {
               var8 = af.a((char) var7, (byte) 22);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);

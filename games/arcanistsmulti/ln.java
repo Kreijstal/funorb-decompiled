@@ -224,10 +224,10 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
         var3 = var3 + this.a(this.field_N, bk.field_K, var3, 170, 109);
         var3 = var3 + (5 + this.a("", this.field_D, 25, 20, 170, dn.field_Gb, var3));
         var3 = var3 + this.a(this.field_P, ValidationState.field_a, var3, 170, 126);
-        var3 = var3 + (5 + this.a(var3, this.field_E, rm.field_p, 99, 170, le.field_A));
+        var3 = var3 + (5 + this.a(var3, this.field_E, WhirlpoolHasher.field_p, 99, 170, le.field_A));
         var3 = var3 + (5 + this.a(var3, this.field_K, bj.field_kb, -67, 170, CredentialKind.field_h));
         var3 = var3 + this.a(ProxySocketConnector.field_n, this.field_H, (byte) -71, 170, var3);
-        ke var4 = new ke(46, var3, this.field_v - 90, 25, this.field_F, true, this.field_v - 120, 5, vc.field_e, 11579568, AudioService.field_c);
+        ke var4 = new ke(46, var3, this.field_v - 90, 25, this.field_F, true, this.field_v - 120, 5, WidgetStyleLayer.field_e, 11579568, AudioService.field_c);
         this.addChild(-114, var4);
         var3 = var3 + var4.field_k;
         jm var5 = new jm(ia.field_c, 0, 0, 0, 0, 16777215, -1, 0, 0, ia.field_c.field_C, -1, 2147483647, true);
@@ -358,14 +358,14 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
         try {
           if (0 != param3) {
             if (1 == param3) {
-              uh.a(126, "privacy.ws");
+              ClipState.a(126, "privacy.ws");
             } else {
               if (param3 == 2) {
-                uh.a(127, "conduct.ws");
+                ClipState.a(127, "conduct.ws");
               }
             }
           } else {
-            uh.a(param2 + 1734, "terms.ws");
+            ClipState.a(param2 + 1734, "terms.ws");
           }
           if (param2 == -1607) {
             return;

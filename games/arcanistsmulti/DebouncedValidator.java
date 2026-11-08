@@ -127,7 +127,7 @@ abstract class DebouncedValidator implements ValidationProvider {
         if (this.isEmpty((byte) -90)) {
           return null;
         }
-        if (qj.b(-26572) >= 350L + this.field_e) {
+        if (qj.monotonicTimeMillis(-26572) >= 350L + this.field_e) {
           return this.computeMessage(true);
         }
         return null;
@@ -136,10 +136,10 @@ abstract class DebouncedValidator implements ValidationProvider {
     public final void restartDebounce(int param0) {
         if (param0 != -17444) {
           DebouncedValidator.logMaxMemory(false);
-          this.field_e = qj.b(-26572);
+          this.field_e = qj.monotonicTimeMillis(-26572);
           return;
         }
-        this.field_e = qj.b(-26572);
+        this.field_e = qj.monotonicTimeMillis(-26572);
     }
 
     final static void logMaxMemory(boolean param0) {
@@ -235,12 +235,12 @@ abstract class DebouncedValidator implements ValidationProvider {
         }
         if (param0 > -65) {
           this.restartDebounce(-88);
-          if (!(this.field_e + 350L <= qj.b(-26572))) {
+          if (!(this.field_e + 350L <= qj.monotonicTimeMillis(-26572))) {
             return da.field_f;
           }
           return this.computeState((byte) -66);
         }
-        if (!(this.field_e + 350L <= qj.b(-26572))) {
+        if (!(this.field_e + 350L <= qj.monotonicTimeMillis(-26572))) {
           return da.field_f;
         }
         return this.computeState((byte) -66);

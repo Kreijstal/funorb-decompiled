@@ -469,7 +469,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
-        ql var9 = null;
+        LoginMethod var9 = null;
         ke var10 = null;
         int var11 = 0;
         ke var10Lifetime1;
@@ -499,7 +499,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             if (this.field_N) {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = rc.field_n;
+              stackIn_18_3 = LoadingTracker.field_n;
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;

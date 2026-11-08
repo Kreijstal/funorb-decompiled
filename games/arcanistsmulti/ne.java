@@ -12,7 +12,7 @@ final class ne {
     private int field_i;
     private long field_d;
     int field_e;
-    kc field_c;
+    SceneWidget field_c;
     static int field_b;
     static String field_f;
 
@@ -108,7 +108,7 @@ final class ne {
         if (param1 == -64) {
           return false;
         }
-        this.field_c = (kc) null;
+        this.field_c = (SceneWidget) null;
         return false;
     }
 
@@ -158,7 +158,7 @@ final class ne {
           if (ob.field_Y == null) {
             return false;
           }
-          if (ob.field_Y.d((byte) -126)) {
+          if (ob.field_Y.isFullscreenAvailable((byte) -126)) {
             return true;
           }
           return false;
@@ -166,7 +166,7 @@ final class ne {
         if (ob.field_Y == null) {
           return false;
         }
-        if (ob.field_Y.d((byte) -126)) {
+        if (ob.field_Y.isFullscreenAvailable((byte) -126)) {
           return true;
         }
         return false;
@@ -378,10 +378,10 @@ final class ne {
     final void a(int param0, boolean param1) {
         if (param0 != -22717) {
           field_b = -81;
-          this.field_l.a(param1, true);
+          this.field_l.drawFullScreen(param1, true);
           return;
         }
-        this.field_l.a(param1, true);
+        this.field_l.drawFullScreen(param1, true);
     }
 
     final void a(int param0, int[] param1, int param2) {
@@ -514,7 +514,7 @@ final class ne {
             return true;
           }
         } else {
-          this.field_c = (kc) null;
+          this.field_c = (SceneWidget) null;
           if (8 == param0) {
             GzipDecoder.a(this.field_h, this.field_d, -26510);
             return true;
@@ -580,7 +580,7 @@ final class ne {
         field_j = null;
     }
 
-    ne(kc param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    ne(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_l = new pe(ml.field_H);
           param0.field_ab = true;

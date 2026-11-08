@@ -11,7 +11,7 @@ final class DiskCacheRequest extends ArchiveRequest {
     static String field_I;
     static String field_D;
     static Sprite[] field_E;
-    static ql field_y;
+    static LoginMethod field_y;
     int field_A;
     static int field_F;
     static BinaryBitmapFont field_w;
@@ -190,7 +190,7 @@ final class DiskCacheRequest extends ArchiveRequest {
         field_G = "Some players haven't unlocked the currently selected game options.<br>Please see the player list on the left for details.";
         field_I = "Declined";
         field_D = "Checking";
-        field_y = new ql("email");
+        field_y = new LoginMethod("email");
         field_F = 20;
     }
 }

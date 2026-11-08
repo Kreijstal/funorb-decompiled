@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uh extends IntrusiveNode {
+final class ClipState extends IntrusiveNode {
     static ri field_i;
     static int field_m;
     static String field_s;
@@ -235,7 +235,7 @@ final class uh extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -120) {
-            uh.a((int[]) null, 98, -65, 94, (int[]) null, (int[]) null, -75, 116, (byte) -14, (int[]) null, -110, 9, (int[]) null, -39, (int[]) null, -48);
+            ClipState.a((int[]) null, 98, -65, 94, (int[]) null, (int[]) null, -75, 116, (byte) -14, (int[]) null, -110, 9, (int[]) null, -39, (int[]) null, -48);
           }
           stackIn_16_0 = ((!(param0 < 65) &&
             !(90 < param0)) ||
@@ -269,7 +269,7 @@ final class uh extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int[] param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
+    final void set(int param0, int[] param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -341,7 +341,7 @@ final class uh extends IntrusiveNode {
         }
     }
 
-    uh() {
+    ClipState() {
     }
 
     static {

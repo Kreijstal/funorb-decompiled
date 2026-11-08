@@ -3,7 +3,7 @@
  */
 final class StrongCacheEntry extends CacheEntry {
     static String field_x;
-    static kc field_z;
+    static SceneWidget field_z;
     static String field_B;
     static String field_y;
     private Object field_A;
@@ -68,7 +68,7 @@ final class StrongCacheEntry extends CacheEntry {
           return;
         }
         try {
-          vd.a(param1, 121, param2, param3);
+          TextLine.a(param1, 121, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "nh.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -204,12 +204,12 @@ final class StrongCacheEntry extends CacheEntry {
             var3 = var1.readString(-1);
             ie.field_Nb = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) 110);
-            qo.a(2, var4);
+            qo.decodeChatSettings(2, var4);
             return;
           }
           if (null == ie.field_Qb) {
             ie.field_Qb = new IntrusiveNodeHashTable(128);
-            rc.field_m = 0;
+            LoadingTracker.field_m = 0;
           }
           var3Lifetime1 = var1.readString(-1);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -227,10 +227,10 @@ final class StrongCacheEntry extends CacheEntry {
           if (null == var6Lifetime1) {
             var6Lifetime1 = new wa();
             ie.field_Qb.put(var6Lifetime1, (long)Js5ArchiveManager.a((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 110);
-            fieldTemp$0 = rc.field_m;
-            rc.field_m = rc.field_m + 1;
+            fieldTemp$0 = LoadingTracker.field_m;
+            LoadingTracker.field_m = LoadingTracker.field_m + 1;
             var6Lifetime1.field_Bb = fieldTemp$0;
-            vd.field_d.addLast(var6Lifetime1, -1);
+            TextLine.field_d.addLast(var6Lifetime1, -1);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -239,10 +239,10 @@ final class StrongCacheEntry extends CacheEntry {
           var6Lifetime1.field_Cb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Lb = (String) (var3Lifetime1);
           var6Lifetime1.unlink(true);
-          var7 = (wa) (vd.field_d.first(12623));
+          var7 = (wa) (TextLine.field_d.first(12623));
           while (null != var7) {
             if (qa.a(false, var6Lifetime1, var7)) {
-              var7 = (wa) (vd.field_d.next(0));
+              var7 = (wa) (TextLine.field_d.next(0));
               if (var9 == 0) {
                 continue;
               }
@@ -255,7 +255,7 @@ final class StrongCacheEntry extends CacheEntry {
               return;
             }
           }
-          vd.field_d.addLast(var6Lifetime1, -1);
+          TextLine.field_d.addLast(var6Lifetime1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

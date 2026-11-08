@@ -10,7 +10,7 @@ abstract class SocketConnector {
     String field_e;
     static BitmapFont field_k;
     int field_b;
-    static kc field_d;
+    static SceneWidget field_d;
     static am field_c;
     static int field_i;
     static int field_g;

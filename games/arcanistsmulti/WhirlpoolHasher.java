@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rm {
+final class WhirlpoolHasher {
     private long[] field_j;
     static String field_d;
     private int field_n;
@@ -19,7 +19,7 @@ final class rm {
     private byte[] field_b;
     static String[][] field_l;
 
-    private final void d(int param0) {
+    private final void processBuffer(int param0) {
         long dupTemp$0 = 0L;
         long arrayValue$1 = 0L;
         int var2;
@@ -88,7 +88,7 @@ final class rm {
         }
     }
 
-    final void a(long param0, int param1, byte[] param2) {
+    final void update(long param0, int param1, byte[] param2) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -126,7 +126,7 @@ final class rm {
               this.field_n = this.field_n + 1;
               this.field_h = this.field_h + (-var7 + 8);
               if (512 == this.field_h) {
-                this.d(param1 + 116);
+                this.processBuffer(param1 + 116);
                 this.field_n = 0;
                 this.field_h = 0;
               }
@@ -151,7 +151,7 @@ final class rm {
             this.field_h = this.field_h + (-var7 + 8);
             this.field_n = this.field_n + 1;
             if (this.field_h == 512) {
-              this.d(124);
+              this.processBuffer(124);
               this.field_h = 0;
               this.field_n = 0;
             }
@@ -173,7 +173,7 @@ final class rm {
         }
     }
 
-    final void a(byte param0, int param1, byte[] param2) {
+    final void finish(byte param0, int param1, byte[] param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -195,7 +195,7 @@ final class rm {
               this.field_n = this.field_n + 1;
               this.field_b[fieldTemp$0] = (byte) 0;
             }
-            this.d(127);
+            this.processBuffer(127);
             this.field_n = 0;
           }
           while (32 > this.field_n) {
@@ -207,7 +207,7 @@ final class rm {
           if (param0 < 73) {
             this.field_n = -98;
           }
-          this.d(1);
+          this.processBuffer(1);
           var4_int = 0;
           var5 = param1;
           while (var4_int < 8) {
@@ -259,7 +259,7 @@ final class rm {
             } else {
               if (param0.field_d == 0 &&
                 param0.field_k == 0) {
-                var3Lifetime1 = wd.field_c[param0.field_m];
+                var3Lifetime1 = ResizableViewResizeListener.field_c[param0.field_m];
               } else {
                 var3Lifetime1 = EmailLoginCredentials.field_h[param0.field_m];
               }
@@ -269,7 +269,7 @@ final class rm {
               var3Lifetime1 = EmailLoginCredentials.field_h[param0.field_m];
             } else {
               if (param0.field_h == qf.field_a) {
-                var3Lifetime1 = wd.field_c[param0.field_m];
+                var3Lifetime1 = ResizableViewResizeListener.field_c[param0.field_m];
               } else {
                 var3Lifetime1 = EmailLoginCredentials.field_h[param0.field_m];
               }
@@ -300,11 +300,11 @@ final class rm {
         field_p = null;
         if (param0 != -6566) {
           PacketBuffer var2 = (PacketBuffer) null;
-          rm.a((PacketBuffer) null, 18, 22);
+          WhirlpoolHasher.readHuffmanString((PacketBuffer) null, 18, 22);
         }
     }
 
-    final void c(int param0) {
+    final void reset(int param0) {
         int var2 = 0;
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         int var2Lifetime1;
@@ -319,11 +319,11 @@ final class rm {
         }
         if (param0 != -23645) {
           ml var4 = (ml) null;
-          rm.a((ml) null, false);
+          WhirlpoolHasher.a((ml) null, false);
         }
     }
 
-    final static String a(PacketBuffer param0, int param1, int param2) {
+    final static String readHuffmanString(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -387,7 +387,7 @@ final class rm {
           }
           if (!param1) {
             var3 = (jg) null;
-            rm.a((jg) null, (byte) -20);
+            WhirlpoolHasher.a((jg) null, (byte) -20);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -404,7 +404,7 @@ final class rm {
         }
     }
 
-    final static CoverageBitmapFont a(String param0, ResourceArchive param1, String param2, int param3, ResourceArchive param4) {
+    final static CoverageBitmapFont loadCoverageFont(String param0, ResourceArchive param1, String param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -459,7 +459,7 @@ final class rm {
         }
     }
 
-    rm() {
+    WhirlpoolHasher() {
         this.field_n = 0;
         this.field_f = new long[8];
         this.field_e = new long[8];
@@ -471,11 +471,11 @@ final class rm {
         this.field_b = new byte[64];
     }
 
-    final static ql[] b(int param0) {
+    final static LoginMethod[] getLoginMethods(int param0) {
         if (param0 != 1283220456) {
-          rm.b(95);
+          WhirlpoolHasher.getLoginMethods(95);
         }
-        return new ql[]{DiskCacheRequest.field_y, of.field_n, vh.field_f};
+        return new LoginMethod[]{DiskCacheRequest.field_y, of.field_n, UiTheme.field_f};
     }
 
     static {

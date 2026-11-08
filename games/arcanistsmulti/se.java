@@ -6,7 +6,7 @@ import java.util.*;
 final class se extends SingleChildContainer {
     private int field_F;
     private boolean field_N;
-    static kc field_H;
+    static SceneWidget field_H;
     static int field_I;
     static char field_E;
     private boolean field_K;

@@ -5,7 +5,7 @@ final class dd {
     static int[] field_f;
     static int field_g;
     static int field_d;
-    static kc field_b;
+    static SceneWidget field_b;
     static String field_e;
     static int field_j;
     static volatile int field_i;
@@ -40,7 +40,7 @@ final class dd {
           if (param0 != 99) {
             return true;
           }
-          if (sm.a(22230, param1, param2)) {
+          if (sm.passwordContainsName(22230, param1, param2)) {
             return false;
           }
           if (!w.a(param2, param1, 0)) {

@@ -248,7 +248,7 @@ final class DiskCacheWorker implements Runnable {
         jn.a(fi.field_a, false, -1);
     }
 
-    final static kc c(byte param0) {
+    final static SceneWidget c(byte param0) {
         if (param0 > -83) {
           DiskCacheWorker.b((byte) -7);
           return pe.f(0);

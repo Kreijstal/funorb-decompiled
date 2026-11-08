@@ -139,7 +139,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
-          sm.a(var4, var2, param1, param0 - 15368, var3);
+          sm.setCookie(var4, var2, param1, param0 - 15368, var3);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "df.QB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

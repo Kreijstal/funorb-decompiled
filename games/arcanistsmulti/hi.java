@@ -30,21 +30,21 @@ final class hi {
         if (param0 < -45) {
           var2 = null;
           if (!param1) {
-            var2Lifetime3 = new rd();
+            var2Lifetime3 = new FixedViewResizeListener();
           } else {
-            var2Lifetime3 = new wd();
+            var2Lifetime3 = new ResizableViewResizeListener();
           }
-          ArchiveIndex.a(-113, new v((ViewResizeListener) (var2Lifetime3)));
+          ArchiveIndex.a(-113, new ViewportController((ViewResizeListener) (var2Lifetime3)));
           return;
         }
         hi.installViewController(23, true);
         var2Lifetime1 = null;
         if (!param1) {
-          var2Lifetime2 = new rd();
+          var2Lifetime2 = new FixedViewResizeListener();
         } else {
-          var2Lifetime2 = new wd();
+          var2Lifetime2 = new ResizableViewResizeListener();
         }
-        ArchiveIndex.a(-113, new v((ViewResizeListener) (var2Lifetime2)));
+        ArchiveIndex.a(-113, new ViewportController((ViewResizeListener) (var2Lifetime2)));
     }
 
     static {

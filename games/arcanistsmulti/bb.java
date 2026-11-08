@@ -134,11 +134,11 @@ final class bb {
           if (param1 < 41) {
             bb.c((byte) -67);
             if (param0 == 5000 &&
-              kc.field_D > 0) {
-              fieldTemp$23 = kc.field_D - 1;
-              kc.field_D = kc.field_D - 1;
+              SceneWidget.field_D > 0) {
+              fieldTemp$23 = SceneWidget.field_D - 1;
+              SceneWidget.field_D = SceneWidget.field_D - 1;
               var2_ref_byte__ = sn.field_F[fieldTemp$23];
-              sn.field_F[kc.field_D] = null;
+              sn.field_F[SceneWidget.field_D] = null;
               return var2_ref_byte__;
             }
             if (param0 == 30000 &&
@@ -190,11 +190,11 @@ final class bb {
             }
             return new byte[param0];
           }
-          if (kc.field_D > 0) {
-            fieldTemp$22 = kc.field_D - 1;
-            kc.field_D = kc.field_D - 1;
+          if (SceneWidget.field_D > 0) {
+            fieldTemp$22 = SceneWidget.field_D - 1;
+            SceneWidget.field_D = SceneWidget.field_D - 1;
             var2_ref_byte__Lifetime7 = sn.field_F[fieldTemp$22];
-            sn.field_F[kc.field_D] = null;
+            sn.field_F[SceneWidget.field_D] = null;
             return var2_ref_byte__Lifetime7;
           }
           if (param0 == 30000 &&
@@ -231,11 +231,11 @@ final class bb {
         if (param1 < 41) {
           bb.c((byte) -67);
           if (param0 == 5000 &&
-            kc.field_D > 0) {
-            fieldTemp$9 = kc.field_D - 1;
-            kc.field_D = kc.field_D - 1;
+            SceneWidget.field_D > 0) {
+            fieldTemp$9 = SceneWidget.field_D - 1;
+            SceneWidget.field_D = SceneWidget.field_D - 1;
             var2_ref_byte__Lifetime2 = sn.field_F[fieldTemp$9];
-            sn.field_F[kc.field_D] = null;
+            sn.field_F[SceneWidget.field_D] = null;
             return var2_ref_byte__Lifetime2;
           }
           if (param0 != 30000) {
@@ -302,11 +302,11 @@ final class bb {
           }
           return new byte[param0];
         }
-        if (kc.field_D > 0) {
-          fieldTemp$5 = kc.field_D - 1;
-          kc.field_D = kc.field_D - 1;
+        if (SceneWidget.field_D > 0) {
+          fieldTemp$5 = SceneWidget.field_D - 1;
+          SceneWidget.field_D = SceneWidget.field_D - 1;
           var2_ref_byte__Lifetime4 = sn.field_F[fieldTemp$5];
-          sn.field_F[kc.field_D] = null;
+          sn.field_F[SceneWidget.field_D] = null;
           return var2_ref_byte__Lifetime4;
         }
         if (param0 == 30000 &&

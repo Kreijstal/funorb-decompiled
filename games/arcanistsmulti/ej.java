@@ -139,7 +139,7 @@ class ej extends TextButton {
         int var8;
         int var9;
         Object var10;
-        vd var12;
+        TextLine var12;
         int var13;
         int var14;
         vl var15;
@@ -219,13 +219,13 @@ class ej extends TextButton {
     }
 
     final static void a(int param0, boolean param1) {
-        kc stackIn_7_0 = null;
+        SceneWidget stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        kc stackIn_11_0 = null;
+        SceneWidget stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
-        kc stackIn_24_0 = null;
+        SceneWidget stackIn_24_0 = null;
         boolean stackIn_25_1 = false;
-        kc stackIn_28_0 = null;
+        SceneWidget stackIn_28_0 = null;
         boolean stackIn_29_1 = false;
         da.clipToRectangle(640 + SoftwareRasterizer.field_e >> 1, SoftwareRasterizer.field_j, param0 ^ -11846, -640 + SoftwareRasterizer.field_e >> 1, 0);
         if (ce.field_h > 0) {
@@ -234,10 +234,10 @@ class ej extends TextButton {
           }
           stackIn_7_0 = k.field_d;
           stackIn_8_1 = (param1) && (!IntrusiveNode.field_d);
-          ((kc) (Object) stackIn_7_0).a(stackIn_8_1, true);
+          ((SceneWidget) (Object) stackIn_7_0).drawFullScreen(stackIn_8_1, true);
           stackIn_11_0 = fn.field_e;
           stackIn_12_1 = (param1) && (!IntrusiveNode.field_d);
-          ((kc) (Object) stackIn_11_0).a(stackIn_12_1, true);
+          ((SceneWidget) (Object) stackIn_11_0).drawFullScreen(stackIn_12_1, true);
         }
         if (param0 != -11837) {
           field_Q = (String) null;
@@ -249,10 +249,10 @@ class ej extends TextButton {
           }
           stackIn_24_0 = hl.field_m;
           stackIn_25_1 = (param1) && (!so.field_j);
-          ((kc) (Object) stackIn_24_0).a(stackIn_25_1, true);
-          stackIn_28_0 = oh.field_h;
+          ((SceneWidget) (Object) stackIn_24_0).drawFullScreen(stackIn_25_1, true);
+          stackIn_28_0 = ReflectionCheckRequest.field_h;
           stackIn_29_1 = (param1) && (!so.field_j);
-          ((kc) (Object) stackIn_28_0).a(stackIn_29_1, true);
+          ((SceneWidget) (Object) stackIn_28_0).drawFullScreen(stackIn_29_1, true);
         }
         oo.popClipState(-15405);
     }
@@ -285,8 +285,8 @@ class ej extends TextButton {
           return;
         }
         int var4 = var3 - param1 * param1;
-        hl.field_m.a(199, -(var4 * 199 / var3) + var2, 90, -4 + SoftwareRasterizer.field_j - 120 - 90, (byte) -120);
-        oh.field_h.a(438, 202 + (var2 + 438 * var4 / var3), 0, -4 + SoftwareRasterizer.field_j - 120, (byte) -120);
+        hl.field_m.setBounds(199, -(var4 * 199 / var3) + var2, 90, -4 + SoftwareRasterizer.field_j - 120 - 90, (byte) -120);
+        ReflectionCheckRequest.field_h.setBounds(438, 202 + (var2 + 438 * var4 / var3), 0, -4 + SoftwareRasterizer.field_j - 120, (byte) -120);
     }
 
     String getTooltip(boolean param0) {
@@ -684,7 +684,7 @@ class ej extends TextButton {
                           }
                           if (lm.field_f[mf.field_g] == 87 &&
                             var28.o(param0 - 22625) == 19) {
-                            var15 = rc.field_l;
+                            var15 = LoadingTracker.field_l;
                           }
                           if (lm.field_f[mf.field_g] == 116) {
                             var15 = ConditionalTextValue.field_g;
@@ -791,7 +791,7 @@ class ej extends TextButton {
               }
             }
           }
-          vh.field_n = true;
+          UiTheme.field_n = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

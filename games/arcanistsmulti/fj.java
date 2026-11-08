@@ -136,7 +136,7 @@ final class fj extends IntrusiveNode {
             field_h = -32;
           }
           var5 = param2.a(param3, (byte) 106, var4_int);
-          stackIn_3_0 = r.a(param1 + 4684, var5, var4_int, param2);
+          stackIn_3_0 = r.loadSpriteFromGroup(param1 + 4684, var5, var4_int, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

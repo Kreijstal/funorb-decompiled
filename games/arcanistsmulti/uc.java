@@ -4,10 +4,10 @@
 final class uc {
     static IntrusiveNodeHashTable field_c;
     static int field_b;
-    static kc field_d;
+    static SceneWidget field_d;
     static int field_a;
 
-    final static kc b(int param0) {
+    final static SceneWidget b(int param0) {
         int var1 = 103 % ((param0 - 47) / 39);
         return nl.field_Gb.field_Eb;
     }

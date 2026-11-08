@@ -26,7 +26,7 @@ final class fk extends IntrusiveNode {
           Sprite var4 = (Sprite) null;
           fk.a((nf) null, -111, (IndexedSprite) null, 35, (byte) -40, (Sprite) null);
         }
-        return ql.a(1, (byte) 127, param2, param0);
+        return LoginMethod.createSolidFrame(1, (byte) 127, param2, param0);
     }
 
     final static void d(int param0) {
@@ -362,7 +362,7 @@ final class fk extends IntrusiveNode {
           var5 = 6 + IntrusiveNode.field_c.field_Z.getWrappedWidth(param1, 500);
           var6 = 2 + var4 * ImageProducerRasterBuffer.field_r;
           var7 = ih.clampToScreenX(var2_int, var5, 12, 246);
-          var8 = ql.a(param0 + 10, 20, var6, var3);
+          var8 = LoginMethod.clampToScreenY(param0 + 10, 20, var6, var3);
           SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, -2 + var5, -2 + var6, 16777088);
           IntrusiveNode.field_c.field_Z.drawParagraph(param1, var7 + 3, 1 + (var8 + IntrusiveDequeCursor.field_i - IntrusiveNode.field_c.field_Z.field_C), 500, 1000, 0, -1, param0, 0, ImageProducerRasterBuffer.field_r);

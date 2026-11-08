@@ -120,7 +120,7 @@ final class tk extends DualLinkNode {
         if (param0 > -94) {
           field_p = (String) null;
         }
-        return null != wd.field_a ? true : false;
+        return null != ResizableViewResizeListener.field_a ? true : false;
     }
 
     final static int a(int param0, int param1) {
@@ -196,16 +196,16 @@ final class tk extends DualLinkNode {
                 var4 = tc.field_A.field_rb;
               }
               var5 = null;
-              if (vd.field_h == 0) {
+              if (TextLine.field_h == 0) {
                 var5 = bo.a(var4, (byte) -26, param2);
               }
-              if (1 == vd.field_h) {
+              if (1 == TextLine.field_h) {
                 var5 = oe.a(var4, 29140, param2);
               }
-              if (vd.field_h == 2) {
+              if (TextLine.field_h == 2) {
                 var5 = ValidationState.a((byte) -48, param2, var4);
               }
-              if (vd.field_h == 3) {
+              if (TextLine.field_h == 3) {
                 var5 = MembershipOfferScreen.a(var4, var4, param2, param0 ^ 10068666);
               }
               if (var5 != null) {
@@ -213,10 +213,10 @@ final class tk extends DualLinkNode {
                 ao.a(0, (byte) 126, (String) (var5), var4, 2, (String) null);
               }
               tc.field_A = null;
-              vd.field_h = -1;
+              TextLine.field_h = -1;
             } else {
               tc.field_A = null;
-              vd.field_h = -1;
+              TextLine.field_h = -1;
             }
           }
         }

@@ -10,7 +10,7 @@ final class GrowableIntList {
     private boolean field_d;
     static String field_e;
     static String field_l;
-    static kc field_a;
+    static SceneWidget field_a;
     static Js5Transport field_c;
     static String field_b;
     static String[] field_g;
@@ -35,10 +35,10 @@ final class GrowableIntList {
           var4 = -22 % ((-64 - param0) / 46);
           var4Lifetime1 = la.field_c.field_Z.paragraphHeight(param1, 272, la.field_c.field_z);
           var5 = -103 + var3 / 2 - var4Lifetime1 / 2;
-          LinkButtonPainter.field_h.a(320, (-320 + var2_int) / 2, var5, -120 + var3 - 2 * var5, (byte) -120);
+          LinkButtonPainter.field_h.setBounds(320, (-320 + var2_int) / 2, var5, -120 + var3 - 2 * var5, (byte) -120);
           LinkButtonPainter.field_h.field_v = of.a(3, LinkButtonPainter.field_h.field_I, 1, 2105376, 11579568, 8421504);
-          la.field_c.a(-24 + (LinkButtonPainter.field_h.field_x - 24), 24, 16, -20 + (LinkButtonPainter.field_h.field_I - 24), (byte) -120);
-          dm.field_E.a(80, 120, LinkButtonPainter.field_h.field_I - 44, 24, (byte) -120);
+          la.field_c.setBounds(-24 + (LinkButtonPainter.field_h.field_x - 24), 24, 16, -20 + (LinkButtonPainter.field_h.field_I - 24), (byte) -120);
+          dm.field_E.setBounds(80, 120, LinkButtonPainter.field_h.field_I - 44, 24, (byte) -120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -219,7 +219,7 @@ final class GrowableIntList {
                 }
               }
             }
-            rb.a(wd.field_c[var6], var4 + BitmapFont.escapeMarkup(hi.field_e.toString()), var7, var5, -126);
+            rb.a(ResizableViewResizeListener.field_c[var6], var4 + BitmapFont.escapeMarkup(hi.field_e.toString()), var7, var5, -126);
             if (!SocketJs5Transport.field_r) {
               sa.field_Cb.field_C = false;
             }

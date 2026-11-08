@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelHandler {
-    static kc field_d;
+    static SceneWidget field_d;
     static java.applet.Applet field_e;
-    static kc field_c;
+    static SceneWidget field_c;
     static int[] field_b;
     static String field_a;
 
@@ -19,7 +19,7 @@ abstract class MouseWheelHandler {
           field_d = null;
           return;
         }
-        field_d = (kc) null;
+        field_d = (SceneWidget) null;
         field_b = null;
         field_c = null;
         field_d = null;

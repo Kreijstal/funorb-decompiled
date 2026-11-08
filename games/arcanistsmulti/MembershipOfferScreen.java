@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MembershipOfferScreen {
-    static kc field_f;
+    static SceneWidget field_f;
     static String field_m;
     static Sprite field_o;
     private int field_p;
     private String field_j;
     private int field_n;
     private Sprite field_k;
-    static kc field_q;
+    static SceneWidget field_q;
     static int field_r;
     private int field_l;
     static String field_b;
     private int field_c;
     private int field_u;
     private boolean field_h;
-    static kc field_t;
+    static SceneWidget field_t;
     private String[] field_a;
     private Sprite field_e;
     private int field_s;
@@ -215,8 +215,8 @@ final class MembershipOfferScreen {
           bb.field_a.a("pump32", -24417)) {
           SectorCacheStore.field_j = af.a("frame", "members_expansion_screen", 19412, EmailLoginCredentials.field_o);
           cg.field_Ib = fj.loadSprite("members_expansion_screen", -22612, EmailLoginCredentials.field_o, "arrow");
-          li.field_F = rc.a(bb.field_a, -24755, "arialish12", "", EmailLoginCredentials.field_o);
-          fd.field_b = rm.a("", bb.field_a, "pump32", -119, EmailLoginCredentials.field_o);
+          li.field_F = LoadingTracker.loadBinaryFont(bb.field_a, -24755, "arialish12", "", EmailLoginCredentials.field_o);
+          fd.field_b = WhirlpoolHasher.loadCoverageFont("", bb.field_a, "pump32", -119, EmailLoginCredentials.field_o);
           fd.field_f = cg.a("benefit_orbs", (byte) 113, EmailLoginCredentials.field_o, "members_expansion_screen");
           qf.field_b = cg.a("button_text", (byte) 116, EmailLoginCredentials.field_o, "members_expansion_screen");
           KeyboardInputHandler.field_c = nl.a((byte) 31, EmailLoginCredentials.field_o, "button_highlights", "members_expansion_screen");
@@ -314,7 +314,7 @@ final class MembershipOfferScreen {
           var6 = var5.position;
           var5.writeByte(3, (byte) -99);
           if (param3 != 10068666) {
-            field_t = (kc) null;
+            field_t = (SceneWidget) null;
           }
           var5.writeString(param0, 23333);
           var5.writeByteLengthAtMark(-var6 + var5.position, (byte) 43);
@@ -381,7 +381,7 @@ final class MembershipOfferScreen {
           }
           if (null != this.field_i &&
             3 <= this.field_i.length) {
-            v.field_t = param4;
+            ViewportController.field_t = param4;
             return;
           }
           throw new IllegalArgumentException("");
@@ -448,7 +448,7 @@ final class MembershipOfferScreen {
           fk.setSpriteRasterTarget(var5, param0 ^ -16170116);
           SoftwareRasterizer.fillVerticalGradient(0, 0, var5.field_q, var5.field_y / 2, param0, 16306250);
           SoftwareRasterizer.fillVerticalGradient(0, var5.field_y / 2, var5.field_q, var5.field_y, 16306250, 15568919);
-          var6 = vc.field_l;
+          var6 = WidgetStyleLayer.field_l;
           var7 = ph.field_b;
           this.drawScaledCaption(var5, 0.5f, 0, 127, var5.field_y, var13, -16, fd.field_b, var6, var5.field_q);
           this.drawScaledCaption(var5, 0.5f, 0, 127, var5.field_y, var13, 20, fd.field_b, var7, var5.field_q);
@@ -671,7 +671,7 @@ final class MembershipOfferScreen {
               return 2;
             }
           }
-          if (v.field_t) {
+          if (ViewportController.field_t) {
             while (ib.b(false)) {
               var5 = this.updateOffer((byte) -73);
               if (0 == var5) {
@@ -739,7 +739,7 @@ final class MembershipOfferScreen {
         try {
           var5_int = param3.textWidth(param1);
           if (param4 != 21230) {
-            field_q = (kc) null;
+            field_q = (SceneWidget) null;
           }
           if (param2 >= var5_int &&
             param1.indexOf("<br>") == -1) {

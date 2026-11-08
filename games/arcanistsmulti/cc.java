@@ -5,14 +5,14 @@ final class cc {
     static IntrusiveDeque field_e;
     private static jm field_f;
     static String field_b;
-    static kc field_a;
+    static SceneWidget field_a;
     static boolean[] field_d;
     static String field_c;
 
     final static jm getDefaultTextPainter(byte param0) {
         int var1 = 125 % ((34 - param0) / 49);
         if (field_f == null) {
-          field_f = new jm(vc.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, vc.field_e.field_C, -1, 2147483647, true);
+          field_f = new jm(WidgetStyleLayer.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, WidgetStyleLayer.field_e.field_C, -1, 2147483647, true);
         }
         return field_f;
     }

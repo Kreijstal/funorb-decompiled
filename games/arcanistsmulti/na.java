@@ -3,46 +3,46 @@
  */
 import java.io.*;
 
-final class na extends kc {
+final class na extends SceneWidget {
     int field_ac;
-    kc field_hc;
+    SceneWidget field_hc;
     String field_ic;
     static String field_Sb;
     int field_Fb;
-    kc field_Kb;
+    SceneWidget field_Kb;
     long field_Yb;
-    kc field_fc;
-    kc field_Vb;
-    kc field_Mb;
-    kc[] field_pc;
+    SceneWidget field_fc;
+    SceneWidget field_Vb;
+    SceneWidget field_Mb;
+    SceneWidget[] field_pc;
     int field_nc;
-    kc field_Ib;
-    kc field_Gb;
+    SceneWidget field_Ib;
+    SceneWidget field_Gb;
     boolean field_Lb;
-    kc field_jc;
-    kc field_Jb;
+    SceneWidget field_jc;
+    SceneWidget field_Jb;
     static String field_gc;
     long field_Bb;
     int field_Db;
     int field_bc;
     boolean field_Hb;
-    kc field_Zb;
+    SceneWidget field_Zb;
     byte[] field_Wb;
     int field_Rb;
-    kc field_Eb;
-    kc field_Ub;
-    kc field_cc;
+    SceneWidget field_Eb;
+    SceneWidget field_Ub;
+    SceneWidget field_cc;
     int field_dc;
     boolean field_oc;
     boolean field_Ob;
-    kc field_Cb;
-    kc field_ec;
+    SceneWidget field_Cb;
+    SceneWidget field_ec;
     int field_Pb;
     static String field_lc;
     static String field_Tb;
     boolean field_kc;
     boolean field_mc;
-    kc field_Xb;
+    SceneWidget field_Xb;
     String[] field_Qb;
     boolean field_Nb;
 
@@ -273,7 +273,7 @@ final class na extends kc {
         }
     }
 
-    final static kc f(byte param0) {
+    final static SceneWidget f(byte param0) {
         if (param0 <= 13) {
           na.i((byte) 105);
           return nj.field_m.field_Cb;
@@ -282,7 +282,7 @@ final class na extends kc {
     }
 
     na(int param0) {
-        super(0L, (kc) null);
+        super(0L, (SceneWidget) null);
         this.field_Wb = new byte[param0];
     }
 

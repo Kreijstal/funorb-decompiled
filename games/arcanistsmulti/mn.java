@@ -6,8 +6,8 @@ final class mn extends TextFieldValidator {
     static String field_v;
     static String field_q;
     static int field_r;
-    static kc[] field_s;
-    static kc field_t;
+    static SceneWidget[] field_s;
+    static SceneWidget field_t;
     static IndexedSprite field_y;
     private EditableTextWidget field_u;
     static String field_x;
@@ -97,7 +97,7 @@ final class mn extends TextFieldValidator {
                 var5 = pn.field_d;
               }
             } else {
-              var5 = ql.field_a;
+              var5 = LoginMethod.field_a;
             }
             var6 = pm.field_f[var3];
             stackIn_13_0 = !(0 > var4);
@@ -117,7 +117,7 @@ final class mn extends TextFieldValidator {
               var2 = var2 + FullscreenFocusCanvas.field_d;
             }
             if (0 <= var4) {
-              vd.field_c.drawText(var6, var8, mh.field_H + var2, var5, -1);
+              TextLine.field_c.drawText(var6, var8, mh.field_H + var2, var5, -1);
               var2 = var2 + (ic.field_a + (FullscreenFocusCanvas.field_d + tm.field_b));
             } else {
               ob.field_T.drawText(var6, var8, var2 + NanoFrameClock.field_k, var5, -1);
@@ -192,11 +192,11 @@ final class mn extends TextFieldValidator {
     }
 
     final static void e(int param0) {
-        if (null != wd.field_a) {
-          SingleChildContainer.field_D = wd.field_a;
+        if (null != ResizableViewResizeListener.field_a) {
+          SingleChildContainer.field_D = ResizableViewResizeListener.field_a;
           sa.field_Cb = lo.field_y;
           SingleChildContainer.field_D.field_J = -1;
-          wd.field_a = null;
+          ResizableViewResizeListener.field_a = null;
           lo.field_y = null;
           SingleChildContainer.field_D.field_eb = -1;
         }
@@ -212,8 +212,8 @@ final class mn extends TextFieldValidator {
     }
 
     final static void a(boolean param0, int param1) {
-        to.a(param0, (byte) 124);
-        uh.a(param0, 116);
+        SceneWidgetNode.a(param0, (byte) 124);
+        ClipState.a(param0, 116);
         int var2 = -38 / ((28 - param1) / 55);
     }
 

@@ -117,10 +117,10 @@ final class qn extends ob implements ButtonListener {
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
         DualLinkNode var1Lifetime1;
         try {
-          rc.field_m = 0;
+          LoadingTracker.field_m = 0;
           ie.field_Nb = null;
           pc.field_b = 0;
-          vd.field_d.clear(-124);
+          TextLine.field_d.clear(-124);
           oo.field_B.clear(-124);
           var1 = ie.field_Qb.f(-118);
           while (var1 != null) {
@@ -247,7 +247,7 @@ final class qn extends ob implements ButtonListener {
           var4.field_j = 50;
           var4.field_k = 80;
           var4.field_n = 0;
-          var4.field_r = (WidgetPainter) ((Object) new jm(vc.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_r = (WidgetPainter) ((Object) new jm(WidgetStyleLayer.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-86, var4);
           this.field_V = this.a((UiListener) (this), dd.field_e, (byte) 113);
           return;

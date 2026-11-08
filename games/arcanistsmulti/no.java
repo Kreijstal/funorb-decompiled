@@ -74,7 +74,7 @@ final class no extends qk {
             }
             var1 = (cg) (LinkButtonPainter.field_j.next(0));
           }
-          var1_ref = (na) (vh.field_a.first(param0 + 12624));
+          var1_ref = (na) (UiTheme.field_a.first(param0 + 12624));
           while (var1_ref != null) {
             if (var1_ref.field_bc > 0) {
               var1_ref.field_bc = var1_ref.field_bc - 1;
@@ -85,7 +85,7 @@ final class no extends qk {
                 }
               }
             }
-            var1_ref = (na) (vh.field_a.next(0));
+            var1_ref = (na) (UiTheme.field_a.next(0));
           }
           var1Lifetime1 = (cg) (ph.field_a.first(param0 ^ -12624));
           while (var1Lifetime1 != null) {

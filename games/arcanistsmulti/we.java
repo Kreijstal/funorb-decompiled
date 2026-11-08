@@ -19,12 +19,12 @@ final class we {
             if (0 <= param0) {
               decompiledFrameRemainder0 = (qc.field_c == ob.field_eb);
               if ((decompiledFrameRemainder0) && (he.field_e.position == 0 &&
-                qj.b(-26572) > 10000L + fo.field_d)) {
+                qj.monotonicTimeMillis(-26572) > 10000L + fo.field_d)) {
                 he.field_e.writeOpcode((byte) -50, param0);
               }
             } else {
               if (he.field_e.position == 0 &&
-                qj.b(-26572) > 10000L + fo.field_d) {
+                qj.monotonicTimeMillis(-26572) > 10000L + fo.field_d) {
                 he.field_e.writeOpcode((byte) -50, param0);
               }
             }
@@ -35,7 +35,7 @@ final class we {
               if (he.field_e.position > 0) {
                 try {
                   CredentialKind.field_c.a(he.field_e.position, 0, (byte) 122, he.field_e.payload);
-                  fo.field_d = qj.b(-26572);
+                  fo.field_d = qj.monotonicTimeMillis(-26572);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
@@ -119,7 +119,7 @@ final class we {
         return true;
     }
 
-    final static void a(java.math.BigInteger param0, int param1, byte[] param2, PacketBuffer param3, int param4, java.math.BigInteger param5, int param6) {
+    final static void writeSecureLoginBlock(java.math.BigInteger param0, int param1, byte[] param2, PacketBuffer param3, int param4, java.math.BigInteger param5, int param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -215,9 +215,9 @@ final class we {
     final long a(int param0) {
         if (param0 != 0) {
           field_a = (String) null;
-          return qj.b(-26572);
+          return qj.monotonicTimeMillis(-26572);
         }
-        return qj.b(-26572);
+        return qj.monotonicTimeMillis(-26572);
     }
 
     static {

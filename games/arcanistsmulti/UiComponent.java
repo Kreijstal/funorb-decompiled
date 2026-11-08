@@ -165,7 +165,7 @@ class UiComponent extends IntrusiveNode {
           return;
         }
         if (var5 != null) {
-          MusicCrossfadeStream.field_n.a(var5, (byte) 60, ProxySocketConnector.field_p, IntrusiveNodeHashTable.field_p);
+          MusicCrossfadeStream.field_n.drawText(var5, (byte) 60, ProxySocketConnector.field_p, IntrusiveNodeHashTable.field_p);
         }
     }
 

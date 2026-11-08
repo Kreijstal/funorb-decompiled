@@ -58,12 +58,12 @@ final class oe {
           }
           var8 = UsernameCredentials.a(0, param0);
           if (var8 == null) {
-            stackIn_12_0 = tj.a(122, new String[]{param0}, rd.field_c);
+            stackIn_12_0 = tj.a(122, new String[]{param0}, FixedViewResizeListener.field_c);
             return stackIn_12_0;
           }
-          vd.field_d.a(var8, 121);
+          TextLine.field_d.a(var8, 121);
           while (true) {
-            var7 = (wa) (vd.field_d.next(param1 ^ 29140));
+            var7 = (wa) (TextLine.field_d.next(param1 ^ 29140));
             if (var7 != null) {
               var7.field_Bb = var7.field_Bb - 1;
               continue;
@@ -72,7 +72,7 @@ final class oe {
           }
           var8.unlink(true);
           var8.unlinkSecondary((byte) 88);
-          rc.field_m = rc.field_m - 1;
+          LoadingTracker.field_m = LoadingTracker.field_m - 1;
           if (param1 != 29140) {
             stackIn_19_0 = (String) null;
             return stackIn_19_0;

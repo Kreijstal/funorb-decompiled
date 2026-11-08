@@ -148,7 +148,7 @@ final class gf extends ob implements ButtonListener {
           var2.field_v = this.field_v;
           var2.field_k = 80;
           var2.field_n = 0;
-          var2.field_r = (WidgetPainter) ((Object) new jm(vc.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2.field_r = (WidgetPainter) ((Object) new jm(WidgetStyleLayer.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-107, var2);
           if (lc.a((byte) 112)) {
             this.field_lb = this.a((byte) 103, la.field_e, (UiListener) (this));
@@ -387,34 +387,34 @@ final class gf extends ob implements ButtonListener {
     }
 
     final static void a(byte param0, ResourceArchive param1) {
-        kc var6 = null;
-        kc var7 = null;
-        kc var3 = null;
+        SceneWidget var6 = null;
+        SceneWidget var7 = null;
+        SceneWidget var3 = null;
         try {
           eb.field_d = fj.loadSprite("basic", param0 ^ -22556, param1, "display_name_changed");
-          nl.field_Gb = new hb(0L, oh.field_r, ln.field_T, Js5NetworkRequest.field_z);
-          dd.field_c = new hb(0L, oh.field_r, dm.field_I, wl.field_M);
-          ec.field_d = new kc(0L, (kc) null);
-          NanoFrameClock.field_j = new kc(0L, IntrusiveNode.field_c);
+          nl.field_Gb = new hb(0L, ReflectionCheckRequest.field_r, ln.field_T, Js5NetworkRequest.field_z);
+          dd.field_c = new hb(0L, ReflectionCheckRequest.field_r, dm.field_I, wl.field_M);
+          ec.field_d = new SceneWidget(0L, (SceneWidget) null);
+          NanoFrameClock.field_j = new SceneWidget(0L, IntrusiveNode.field_c);
           NanoFrameClock.field_j.field_X = 1;
-          ClientException.field_d = new kc(0L, vf.field_u, hb.field_Bb);
-          nk.field_n = new kc(0L, vf.field_i, ConditionalTextValue.field_d);
-          cc.field_a = new kc(0L, nj.field_d);
-          ec.field_d.a(NanoFrameClock.field_j, 106);
-          ec.field_d.a(ClientException.field_d, param0 + 14);
-          ec.field_d.a(nk.field_n, 8);
-          ec.field_d.a(nl.field_Gb, param0 - 61);
-          ec.field_d.a(cc.field_a, 85);
+          ClientException.field_d = new SceneWidget(0L, vf.field_u, hb.field_Bb);
+          nk.field_n = new SceneWidget(0L, vf.field_i, ConditionalTextValue.field_d);
+          cc.field_a = new SceneWidget(0L, nj.field_d);
+          ec.field_d.addChild(NanoFrameClock.field_j, 106);
+          ec.field_d.addChild(ClientException.field_d, param0 + 14);
+          ec.field_d.addChild(nk.field_n, 8);
+          ec.field_d.addChild(nl.field_Gb, param0 - 61);
+          ec.field_d.addChild(cc.field_a, 85);
           if (param0 != 72) {
             ResourceArchive var4 = (ResourceArchive) null;
             gf.a((byte) 119, (ResourceArchive) null);
           }
-          nl.field_Gb.field_Db.field_Hb.a(IntrusiveNode.field_c, (byte) 127);
+          nl.field_Gb.field_Db.field_Hb.applyStyle(IntrusiveNode.field_c, (byte) 127);
           nl.field_Gb.field_Db.field_Hb.field_gb = 1;
           var6 = nl.field_Gb.field_Db.field_Hb;
           var7 = var6;
           var7.field_X = 1;
-          dd.field_c.field_Db.field_Hb.a(IntrusiveNode.field_c, (byte) 114);
+          dd.field_c.field_Db.field_Hb.applyStyle(IntrusiveNode.field_c, (byte) 114);
           var3 = dd.field_c.field_Db.field_Hb;
           dd.field_c.field_Db.field_Hb.field_gb = 1;
           var3.field_X = 1;

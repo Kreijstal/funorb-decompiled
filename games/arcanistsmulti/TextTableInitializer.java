@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rg {
+final class TextTableInitializer {
     static Sprite field_a;
     static String field_e;
     static String field_b;
@@ -19,7 +19,7 @@ final class rg {
           field_d = null;
           field_e = null;
           if (param0 != 35) {
-            rg.a(59);
+            TextTableInitializer.a(59);
           }
           field_a = null;
           return;
@@ -60,7 +60,7 @@ final class rg {
         RuntimeException var4 = null;
         try {
           if (param2 != 13) {
-            rg.a(-21, -66, -84, -38);
+            TextTableInitializer.a(-21, -66, -84, -38);
           }
           if (pm.field_b != null &&
             13 == IntrusiveDeque.field_d) {
@@ -79,7 +79,7 @@ final class rg {
               }
               return false;
             }
-            stackIn_35_0 = rg.a(param1, -14, param3);
+            stackIn_35_0 = TextTableInitializer.a(param1, -14, param3);
             return stackIn_35_0;
           }
           if (!tn.g((byte) -40)) {
@@ -105,7 +105,7 @@ final class rg {
         }
     }
 
-    final static void a(ResourceArchive param0, byte param1) {
+    final static void initializeTextTable(ResourceArchive param0, byte param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_3095_0;
             StringBuilder stackIn_3095_1;
@@ -2334,39 +2334,39 @@ final class rg {
                 }
                 var2 = tj.a("gameopt_buttonnames,0,0", -75);
                 if (null != var2) {
-                  rm.field_l[0][0] = sc.a((byte) 89, var2);
+                  WhirlpoolHasher.field_l[0][0] = sc.a((byte) 89, var2);
                 }
                 var2 = tj.a("gameopt_buttonnames,0,1", -127);
                 if (null != var2) {
-                  rm.field_l[0][1] = sc.a((byte) 106, var2);
+                  WhirlpoolHasher.field_l[0][1] = sc.a((byte) 106, var2);
                 }
                 var2 = tj.a("gameopt_buttonnames,0,2", param1 - 142);
                 if (null != var2) {
-                  rm.field_l[0][2] = sc.a((byte) 107, var2);
+                  WhirlpoolHasher.field_l[0][2] = sc.a((byte) 107, var2);
                 }
                 var2 = tj.a("gameopt_buttonnames,0,3", -72);
                 if (null != var2) {
-                  rm.field_l[0][3] = sc.a((byte) 105, var2);
+                  WhirlpoolHasher.field_l[0][3] = sc.a((byte) 105, var2);
                 }
                 var2 = tj.a("gameopt_buttonnames,0,4", -99);
                 if (null != var2) {
-                  rm.field_l[0][4] = sc.a((byte) 93, var2);
+                  WhirlpoolHasher.field_l[0][4] = sc.a((byte) 93, var2);
                 }
                 var2 = tj.a("gameopt_buttonnames,0,5", param1 - 112);
                 if (null != var2) {
-                  rm.field_l[0][5] = sc.a((byte) 95, var2);
+                  WhirlpoolHasher.field_l[0][5] = sc.a((byte) 95, var2);
                 }
                 var2 = tj.a("gameopt_buttonnames,0,6", -92);
                 if (var2 != null) {
-                  rm.field_l[0][6] = sc.a((byte) 94, var2);
+                  WhirlpoolHasher.field_l[0][6] = sc.a((byte) 94, var2);
                 }
                 var2 = tj.a("gameopt_buttonnames,2,0", -83);
                 if (null != var2) {
-                  rm.field_l[2][0] = sc.a((byte) 94, var2);
+                  WhirlpoolHasher.field_l[2][0] = sc.a((byte) 94, var2);
                 }
                 var2 = tj.a("gameopt_buttonnames,2,1", -121);
                 if (var2 != null) {
-                  rm.field_l[2][1] = sc.a((byte) 102, var2);
+                  WhirlpoolHasher.field_l[2][1] = sc.a((byte) 102, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,0,0", param1 - 92);
                 if (var2 != null) {
@@ -2626,7 +2626,7 @@ final class rg {
                 }
                 var2 = tj.a("overdisc2", -117);
                 if (var2 != null) {
-                  wd.field_k = sc.a((byte) 108, var2);
+                  ResizableViewResizeListener.field_k = sc.a((byte) 108, var2);
                 }
                 var2 = tj.a("underdisc2", -71);
                 if (var2 != null) {
@@ -3023,7 +3023,7 @@ final class rg {
                 }
                 var2 = tj.a("ins23", -108);
                 if (var2 != null) {
-                  rc.field_f = sc.a((byte) 122, var2);
+                  LoadingTracker.field_f = sc.a((byte) 122, var2);
                 }
                 var2 = tj.a("ins22", -103);
                 if (var2 != null) {
@@ -3195,7 +3195,7 @@ final class rg {
                 }
                 var2 = tj.a("tut51", param1 - 121);
                 if (var2 != null) {
-                  vd.field_j = sc.a((byte) 88, var2);
+                  TextLine.field_j = sc.a((byte) 88, var2);
                 }
                 var2 = tj.a("tut50", -111);
                 if (var2 != null) {
@@ -3239,7 +3239,7 @@ final class rg {
                 }
                 var2 = tj.a("tut40", param1 ^ -124);
                 if (var2 != null) {
-                  to.field_o = sc.a((byte) 96, var2);
+                  SceneWidgetNode.field_o = sc.a((byte) 96, var2);
                 }
                 var2 = tj.a("tut39", -78);
                 if (null != var2) {
@@ -3399,7 +3399,7 @@ final class rg {
                 }
                 var2 = tj.a("tut0", -102);
                 if (var2 != null) {
-                  vc.field_f = sc.a((byte) 99, var2);
+                  WidgetStyleLayer.field_f = sc.a((byte) 99, var2);
                 }
                 var2 = tj.a("youfallenintowater4", -85);
                 if (null != var2) {
@@ -3491,7 +3491,7 @@ final class rg {
                 }
                 var2 = tj.a("rumrumrum", -100);
                 if (null != var2) {
-                  uh.field_l = sc.a((byte) 114, var2);
+                  ClipState.field_l = sc.a((byte) 114, var2);
                 }
                 var2 = tj.a("mosletitle", -119);
                 if (var2 != null) {
@@ -3543,7 +3543,7 @@ final class rg {
                 }
                 var2 = tj.a("flamup", param1 - 121);
                 if (var2 != null) {
-                  uh.field_q = sc.a((byte) 121, var2);
+                  ClipState.field_q = sc.a((byte) 121, var2);
                 }
                 var2 = tj.a("familarpowers", -85);
                 if (var2 != null) {
@@ -3551,7 +3551,7 @@ final class rg {
                 }
                 var2 = tj.a("mustbeamemeberforanimals", param1 ^ -78);
                 if (var2 != null) {
-                  kc.field_M = sc.a((byte) 114, var2);
+                  SceneWidget.field_M = sc.a((byte) 114, var2);
                 }
                 var2 = tj.a("famtitle", param1 ^ -67);
                 if (null != var2) {
@@ -3583,7 +3583,7 @@ final class rg {
                 }
                 var2 = tj.a("tradeinnowdammit", -85);
                 if (var2 != null) {
-                  vh.field_h = sc.a((byte) 104, var2);
+                  UiTheme.field_h = sc.a((byte) 104, var2);
                 }
                 var2 = tj.a("earnedlotstradeinnow", param1 ^ -75);
                 if (null != var2) {
@@ -3603,7 +3603,7 @@ final class rg {
                 }
                 var2 = tj.a("nocastvinewhileflying", -99);
                 if (null != var2) {
-                  rc.field_l = sc.a((byte) 109, var2);
+                  LoadingTracker.field_l = sc.a((byte) 109, var2);
                 }
                 var2 = tj.a("wateronlyspell", param1 - 150);
                 if (var2 != null) {
@@ -3625,7 +3625,7 @@ final class rg {
                 }
                 var2 = tj.a("alreadyatmax", -108);
                 if (var2 != null) {
-                  rc.field_i = sc.a((byte) 98, var2);
+                  LoadingTracker.field_i = sc.a((byte) 98, var2);
                 }
                 var2 = tj.a("notenoughhp", param1 - 141);
                 if (null != var2) {

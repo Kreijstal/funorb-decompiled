@@ -14,7 +14,7 @@ final class tj extends ArchiveProvider {
     private DiskCacheWorker field_s;
     static int[] field_u;
     private int field_v;
-    static kc field_o;
+    static SceneWidget field_o;
     private SectorCacheStore field_D;
     private SectorCacheStore field_F;
     private ArchiveIndex field_k;
@@ -396,7 +396,7 @@ final class tj extends ArchiveProvider {
             }
           }
           if (this.field_z &&
-            this.field_r <= qj.b(-26572)) {
+            this.field_r <= qj.monotonicTimeMillis(-26572)) {
             var2_ref = (ArchiveRequest) (this.field_n.a(10));
             while (var2_ref != null) {
               if (!var2_ref.field_p) {
@@ -411,7 +411,7 @@ final class tj extends ArchiveProvider {
               }
               var2_ref = (ArchiveRequest) (this.field_n.c(-87));
             }
-            this.field_r = qj.b(-26572) + 1000L;
+            this.field_r = qj.monotonicTimeMillis(-26572) + 1000L;
           }
           if (param0 < 54) {
             this.a(15, (byte) -128);

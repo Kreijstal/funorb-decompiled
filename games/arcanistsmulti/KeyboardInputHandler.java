@@ -106,7 +106,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             if (var2_int >= 0) {
               var3 = 1 + pi.field_a & 127;
               if (var3 != Js5NetworkRequest.field_u) {
-                v.field_p[pi.field_a] = var2_int;
+                ViewportController.field_p[pi.field_a] = var2_int;
                 qa.field_i[pi.field_a] = (char)0;
                 pi.field_a = var3;
               }
@@ -139,7 +139,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           field_e = (String) null;
         }
         if (tc.field_A != null) {
-          tc.field_A.a(param0, true);
+          tc.field_A.drawFullScreen(param0, true);
         }
     }
 
@@ -331,7 +331,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
               MembershipOfferScreen.isTypeableCharacter((char) var2_int, (byte) 123)) {
               var3 = 1 + pi.field_a & 127;
               if (var3 != Js5NetworkRequest.field_u) {
-                v.field_p[pi.field_a] = -1;
+                ViewportController.field_p[pi.field_a] = -1;
                 qa.field_i[pi.field_a] = (char)var2_int;
                 pi.field_a = var3;
               }

@@ -33,7 +33,7 @@ abstract class ud extends GameAppletShell {
         na.a(this.field_B, param2, this.field_l, 0, this.field_s, this.field_q, param4, this.field_x, LinkButtonPainter.field_f, 5000, this.field_v, this.field_C, fi.field_d, param0);
         ArchiveRequest.a((byte) -81, LinkButtonPainter.field_f, this.field_C, this.field_x, fi.field_d, param2, this.field_B, this.field_l, this.field_q);
         TextButton.initializeKeyCodeMap((byte) -60);
-        StrongCacheEntry.field_w = qj.a((byte) -86);
+        StrongCacheEntry.field_w = qj.createMouseWheelHandler((byte) -86);
         IntKeyLookup.attachInputHandlers(on.field_c, (byte) 122);
         sa.field_Bb = param6;
         u.field_g = param1;
@@ -358,7 +358,7 @@ abstract class ud extends GameAppletShell {
           }
           oa.a(true, var2, me.field_E);
           kg.field_f = true;
-          tn.field_Hb = qj.b(-26572) + 15000L;
+          tn.field_Hb = qj.monotonicTimeMillis(-26572) + 15000L;
           return var2;
         }
         if (fj.field_j != 11) {
@@ -404,11 +404,11 @@ abstract class ud extends GameAppletShell {
     }
 
     private final void f(int param0) {
-        String var2 = qj.a(10040319);
+        String var2 = qj.readIncomingString(10040319);
         if (param0 != -18075) {
           return;
         }
-        um.a(var2, cd.getApplet(105), param0 ^ -29675);
+        um.setSessionCookie(var2, cd.getApplet(105), param0 ^ -29675);
     }
 
     final void g(int param0) {
@@ -444,7 +444,7 @@ abstract class ud extends GameAppletShell {
                         this.f(-18075);
                       } else {
                         if (var2 == 8) {
-                          qe.a(fi.field_d, fj.field_h, UiContainer.field_z, 0);
+                          qe.handleReflectionCheck(fi.field_d, fj.field_h, UiContainer.field_z, 0);
                         } else {
                           if (var2 != 16) {
                             if (var2 != 11 &&
@@ -467,9 +467,9 @@ abstract class ud extends GameAppletShell {
                             }
                             stackIn_31_0 = (var2 == 12);
                             var3 = wl.a(stackIn_31_0, 86);
-                            ql.a(var3, (byte) 111);
+                            LoginMethod.a(var3, (byte) 111);
                           } else {
-                            ql.a(true);
+                            LoginMethod.a(true);
                           }
                         }
                       }
@@ -511,14 +511,14 @@ abstract class ud extends GameAppletShell {
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (ob.field_Y != null) {
           if (ProxySocketConnector.field_m == null) {
-            var6 = qe.a(-4);
+            var6 = qe.getTopContainer(-4);
             var4 = var6.getSize();
-            ob.field_Y.a(var4.height, var4.width, true);
+            ob.field_Y.setRequestedSize(var4.height, var4.width, true);
           }
-          ob.field_Y.a((byte) 93);
+          ob.field_Y.update((byte) 93);
         }
         j.a(24);
-        vm.a(0);
+        vm.pollMouseInput(0);
         if (!IntrusiveDequeCursor.a(-15576) &&
           fj.field_j != 11) {
           i.a(0);
@@ -537,7 +537,7 @@ abstract class ud extends GameAppletShell {
             oa.a(true, 2, TextFieldValidator.field_j);
             hm.b(0);
             kg.field_f = true;
-            tn.field_Hb = 15000L + qj.b(-26572);
+            tn.field_Hb = 15000L + qj.monotonicTimeMillis(-26572);
           }
         }
         if (u.field_b == -1 ||
@@ -553,7 +553,7 @@ abstract class ud extends GameAppletShell {
           }
           if (u.field_b != -1 &&
             u.field_b != 0) {
-            tn.field_Hb = qj.b(-26572) + 15000L;
+            tn.field_Hb = qj.monotonicTimeMillis(-26572) + 15000L;
           }
         }
         if (u.field_b != -1 &&
@@ -603,7 +603,7 @@ abstract class ud extends GameAppletShell {
         if ((u.field_b != -1 &&
           u.field_b != 0 ||
           ProxySocketConnector.c((byte) -44)) &&
-          qj.b(-26572) >= tn.field_Hb) {
+          qj.monotonicTimeMillis(-26572) >= tn.field_Hb) {
           kg.field_f = false;
           if (u.field_b != -1 &&
             0 != u.field_b) {
@@ -626,12 +626,12 @@ abstract class ud extends GameAppletShell {
           if (LinkButtonPainter.field_f != 0) {
             lh.field_g = BufferedRandomAccessFile.a(ce.field_n, (byte) 65);
           }
-          da.field_b = v.a((byte) -93, false, true, cj.field_d, 1);
-          DiskCacheRequest.field_C = v.a((byte) -93, false, true, dm.field_H, 1);
-          ho.field_g = v.a((byte) -93, false, true, u.field_g, 1);
+          da.field_b = ViewportController.a((byte) -93, false, true, cj.field_d, 1);
+          DiskCacheRequest.field_C = ViewportController.a((byte) -93, false, true, dm.field_H, 1);
+          ho.field_g = ViewportController.a((byte) -93, false, true, u.field_g, 1);
           field_D = DiskCacheRequest.field_C;
           ih.field_f = 2;
-          rc.field_a = da.field_b;
+          LoadingTracker.field_a = da.field_b;
         }
         if (ih.field_f == 2) {
           if (lh.field_g != null &&
@@ -690,7 +690,7 @@ abstract class ud extends GameAppletShell {
         if (ih.field_f == 11) {
           if (null != va.field_c && (!va.field_c.c(-10923) ||
             !va.field_c.a(-49))) {
-            rb.a(qe.a(AlternateUsernameCredentials.field_o, 87, va.field_c, IntrusiveDeque.field_f), false, 0.0f);
+            rb.a(qe.formatLoadingProgress(AlternateUsernameCredentials.field_o, 87, va.field_c, IntrusiveDeque.field_f), false, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -705,7 +705,7 @@ abstract class ud extends GameAppletShell {
         if (ih.field_f == 13) {
           var3Lifetime2 = 1;
           if (pm.field_h != null) {
-            stackIn_133_0 = (!pm.field_h.d(93)) ? 0 : 1;
+            stackIn_133_0 = (!pm.field_h.advanceTasks(93)) ? 0 : 1;
             var3Lifetime2 = stackIn_133_0;
             rb.a(pm.field_h.field_j, false, pm.field_h.field_b);
           }

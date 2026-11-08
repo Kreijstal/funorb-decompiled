@@ -13,7 +13,7 @@ final class sk {
     static Sprite[] field_f;
 
     final static String a(int param0) {
-        if (oh.field_i) {
+        if (ReflectionCheckRequest.field_i) {
           if (param0 != -14150) {
             return (String) null;
           }

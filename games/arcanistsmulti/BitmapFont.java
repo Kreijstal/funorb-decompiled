@@ -284,7 +284,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_t = rc.a((byte) 92, var7, 16);
+                                field_t = LoadingTracker.parseIntegerRadix((byte) 92, var7, 16);
                               }
                             } else {
                               field_z = -1;
@@ -294,7 +294,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_z = rc.a((byte) 122, var6, 16);
+                          field_z = LoadingTracker.parseIntegerRadix((byte) 122, var6, 16);
                         }
                       } else {
                         field_n = -1;
@@ -304,7 +304,7 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_n = rc.a((byte) -73, var5, 16);
+                    field_n = LoadingTracker.parseIntegerRadix((byte) -73, var5, 16);
                   }
                 } else {
                   field_G = field_E;
@@ -318,7 +318,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_A = rc.a((byte) 120, var3, 16);
+            field_A = LoadingTracker.parseIntegerRadix((byte) 120, var3, 16);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -355,7 +355,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        qj.a(0, field_F, ' ', false);
+        qj.padToLength(0, field_F, ' ', false);
         var4 = 0;
         var5 = 0;
         var6 = -1;

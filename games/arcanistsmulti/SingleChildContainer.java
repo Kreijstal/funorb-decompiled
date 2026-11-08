@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class SingleChildContainer extends UiComponent implements UiContainerMarker {
-    static kc field_D;
+    static SceneWidget field_D;
     static String field_x;
     static String field_A;
     static km field_z;
@@ -189,9 +189,9 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
                 UiContainer.field_z.readUnsignedByte((byte) 110);
                 ne.field_g = UiContainer.field_z.readUnsignedByte((byte) -115);
                 UiContainer.field_z.readInt(-10674);
-                wd.field_d = UiContainer.field_z.readUnsignedShort(-98);
-                ra.field_f = new byte[wd.field_d];
-                for (var8 = 0; var8 < wd.field_d; var8++) {
+                ResizableViewResizeListener.field_d = UiContainer.field_z.readUnsignedShort(-98);
+                ra.field_f = new byte[ResizableViewResizeListener.field_d];
+                for (var8 = 0; var8 < ResizableViewResizeListener.field_d; var8++) {
                   ra.field_f[var8] = UiContainer.field_z.readByte(6);
                 }
               }
@@ -201,10 +201,10 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               dd.field_j = UiContainer.field_z.readUnsignedByte((byte) 65);
               ob.field_eb = qc.field_c;
               if (fd.field_e.getCredentialKind(0) == k.field_q) {
-                DiskCacheRequest.field_y.a(cd.getApplet(118), (byte) -93);
+                DiskCacheRequest.field_y.saveAsLastLoginMethod(cd.getApplet(118), (byte) -93);
               } else {
                 if (fd.field_e.getCredentialKind(0) == MusicPatchPcmStream.field_m) {
-                  of.field_n.a(cd.getApplet(120), (byte) -118);
+                  of.field_n.saveAsLastLoginMethod(cd.getApplet(120), (byte) -118);
                 }
               }
               bb.field_h = false;

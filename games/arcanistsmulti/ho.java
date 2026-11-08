@@ -43,10 +43,10 @@ final class ho {
           Object var10 = null;
           ObjectInputStream var11 = null;
           int var12 = 0;
-          oh var13 = null;
+          ReflectionCheckRequest var13 = null;
           Object var16 = null;
           java.lang.reflect.Field var16_ref = null;
-          oh var17 = null;
+          ReflectionCheckRequest var17 = null;
           Object var18 = null;
           Object var19 = null;
           java.lang.reflect.Field var20 = null;
@@ -68,7 +68,7 @@ final class ho {
             if (param0 != -5534) {
               field_d = (String) null;
             }
-            var13 = (oh) (la.field_b.first(12623));
+            var13 = (ReflectionCheckRequest) (la.field_b.first(12623));
             var17 = var13;
             if (var17 == null) {
               return;

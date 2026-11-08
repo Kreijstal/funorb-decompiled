@@ -6,7 +6,7 @@ final class pi {
     static IntrusiveDequeCursor field_b;
     static boolean field_c;
     static int field_a;
-    static kc field_d;
+    static SceneWidget field_d;
 
     final static void a(boolean param0) {
         la.field_b = new IntrusiveDeque();

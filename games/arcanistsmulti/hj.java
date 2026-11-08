@@ -31,7 +31,7 @@ final class hj extends IOException {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var3_int = LinkButtonPainter.field_f;
-          co.field_f = new kc(0L, (kc) null);
+          co.field_f = new SceneWidget(0L, (SceneWidget) null);
           if (param1 == null) {
             var10 = (Throwable) null;
             DelegatingCanvas.a((Throwable) null, "QC1", (byte) 20);
@@ -58,8 +58,8 @@ final class hj extends IOException {
           var5 = SoftwareRasterizer.field_e;
           var6 = SoftwareRasterizer.field_j;
           var16 = SoftwareRasterizer.field_l;
-          ql.field_c = new Sprite(10, 14);
-          ql.field_c.makeRasterTarget();
+          LoginMethod.field_c = new Sprite(10, 14);
+          LoginMethod.field_c.makeRasterTarget();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }

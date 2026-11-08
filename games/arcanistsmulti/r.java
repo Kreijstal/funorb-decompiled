@@ -12,12 +12,12 @@ final class r {
         ed.j(120);
         if (param0) {
           ResourceArchive var2 = (ResourceArchive) null;
-          r.a(51, -102, 48, (ResourceArchive) null);
+          r.loadSpriteFromGroup(51, -102, 48, (ResourceArchive) null);
         }
         IntrusiveDequeCursor.a(112, CacheEntry.field_p, ArchiveProvider.field_a[0].field_n, dh.field_Gb, ImageProducerRasterBuffer.field_r, ra.field_h);
     }
 
-    final static Sprite a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static Sprite loadSpriteFromGroup(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite stackIn_6_0 = null;
@@ -33,7 +33,7 @@ final class r {
           if (param0 != -17928) {
             field_a = (String) null;
           }
-          stackIn_6_0 = wh.a(-112);
+          stackIn_6_0 = wh.createSpriteFromPalette(-112);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

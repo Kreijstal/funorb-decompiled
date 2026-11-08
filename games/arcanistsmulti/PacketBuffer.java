@@ -10,7 +10,7 @@ class PacketBuffer extends IntrusiveNode {
     static String field_i;
     static Sprite field_l;
 
-    final static kc f(byte param0) {
+    final static SceneWidget f(byte param0) {
         if (param0 != -125) {
           field_i = (String) null;
         }

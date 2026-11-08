@@ -7,7 +7,7 @@ final class kg {
     private WeightedLruCache field_g;
     private ResourceArchive field_e;
     static ec field_h;
-    static kc field_c;
+    static SceneWidget field_c;
     static int[][] field_d;
     private ResourceArchive field_i;
     static boolean field_a;

@@ -12,7 +12,7 @@ final class LinkButtonPainter implements WidgetPainter {
     static int field_d;
     static int field_a;
     static int field_f;
-    static kc field_h;
+    static SceneWidget field_h;
     private int field_k;
     static String field_b;
     static boolean field_c;

@@ -4,7 +4,7 @@
 final class ci {
     static String field_b;
     static gd field_c;
-    static kc field_a;
+    static SceneWidget field_a;
     static Sprite field_e;
     static pb field_d;
 

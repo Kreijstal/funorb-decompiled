@@ -1165,7 +1165,7 @@ final class MidiPcmStream extends PcmStream {
             java.applet.Applet var3 = (java.applet.Applet) null;
             MidiPcmStream.a(87, (java.applet.Applet) null);
           }
-          um.a("", param1, 13680);
+          um.setSessionCookie("", param1, 13680);
           mc.reloadPage(param0 ^ 30451, param1);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "gh.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

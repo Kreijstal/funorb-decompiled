@@ -341,11 +341,11 @@ final class IntrusiveDeque {
         RuntimeException decompiledCaughtException = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (!qc.a(param1 + 640, true, param0)) {
+          if (!qc.isValidDisplayName(param1 + 640, true, param0)) {
             return false;
           }
           for (var2_int = param1; var2_int < param0.length(); var2_int++) {
-            if (!qo.a(param0.charAt(var2_int), 0)) {
+            if (!qo.isAllowedNameCharacter(param0.charAt(var2_int), 0)) {
               return false;
             }
           }

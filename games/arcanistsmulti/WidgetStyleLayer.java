@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vc {
+final class WidgetStyleLayer {
     private int field_a;
     static BitmapFont field_e;
     private int field_m;
     private boolean field_k;
     Sprite[] field_b;
-    static kc field_c;
-    static kc field_j;
+    static SceneWidget field_c;
+    static SceneWidget field_j;
     static String field_l;
     static String field_f;
     private int field_g;
@@ -16,7 +16,7 @@ final class vc {
     private int field_i;
     private int field_h;
 
-    final void a(vc param0, boolean param1) {
+    final void copyTo(WidgetStyleLayer param0, boolean param1) {
         try {
           if (param1) {
             this.field_m = -107;
@@ -34,10 +34,10 @@ final class vc {
         }
     }
 
-    final vc a(int param0, byte param1) {
+    final WidgetStyleLayer a(int param0, byte param1) {
         this.field_a = param0;
         if (param1 <= 114) {
-          return (vc) null;
+          return (WidgetStyleLayer) null;
         }
         return this;
     }
@@ -51,13 +51,13 @@ final class vc {
           field_l = null;
           return;
         }
-        vc.releaseStatics(58);
+        WidgetStyleLayer.releaseStatics(58);
         field_e = null;
         field_c = null;
         field_l = null;
     }
 
-    final vc a(boolean param0, int param1) {
+    final WidgetStyleLayer a(boolean param0, int param1) {
         if (param1 == -5859) {
           this.field_k = param0 ? true : false;
           return this;
@@ -67,13 +67,13 @@ final class vc {
         return this;
     }
 
-    final vc a(int param0, int param1) {
+    final WidgetStyleLayer a(int param0, int param1) {
         this.field_h = param1;
         int var3 = 122 % ((38 - param0) / 46);
         return this;
     }
 
-    final vc a(byte param0, Sprite[] param1) {
+    final WidgetStyleLayer withFrameSprites(byte param0, Sprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -99,7 +99,7 @@ final class vc {
         }
     }
 
-    final void a(int param0) {
+    final void reset(int param0) {
         this.field_g = 0;
         this.field_i = 256;
         this.field_a = 0;
@@ -112,7 +112,7 @@ final class vc {
         }
     }
 
-    final void a(int param0, mj param1, byte param2, UiComponent param3, int param4) {
+    final void paint(int param0, mj param1, byte param2, UiComponent param3, int param4) {
         BitmapFont stackIn_19_0 = null;
         String stackIn_19_1 = null;
         int stackIn_19_2 = 0;
@@ -209,7 +209,7 @@ final class vc {
         }
     }
 
-    final vc c(int param0, int param1) {
+    final WidgetStyleLayer c(int param0, int param1) {
         if (param0 != -1) {
           this.a(35, -108);
           this.field_g = param1;
@@ -219,7 +219,7 @@ final class vc {
         return this;
     }
 
-    final vc b(int param0, int param1) {
+    final WidgetStyleLayer b(int param0, int param1) {
         if (param0 != 0) {
           this.a(-22, -123);
           this.field_m = param1;
@@ -234,11 +234,11 @@ final class vc {
         int var3 = -12 % ((-49 - param0) / 62);
         int var2 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
         int var4 = -(ce.field_h * ce.field_h) + var2;
-        k.field_d.a(199, -(199 * var4 / var2) + var1, 90, -94 + (-120 + SoftwareRasterizer.field_j), (byte) -120);
-        fn.field_e.a(438, 202 + (var1 + 438 * var4 / var2), 0, -120 + SoftwareRasterizer.field_j - 4, (byte) -120);
+        k.field_d.setBounds(199, -(199 * var4 / var2) + var1, 90, -94 + (-120 + SoftwareRasterizer.field_j), (byte) -120);
+        fn.field_e.setBounds(438, 202 + (var1 + 438 * var4 / var2), 0, -120 + SoftwareRasterizer.field_j - 4, (byte) -120);
     }
 
-    final void a(UiComponent param0, int param1, vc param2, mj param3, int param4, int param5) {
+    final void applyTo(UiComponent param0, int param1, WidgetStyleLayer param2, mj param3, int param4, int param5) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -250,8 +250,8 @@ final class vc {
         RuntimeException var7 = null;
         try {
           if (this.field_k) {
-            param2.a(param1, param3, (byte) -62, param0, param5);
-            param2.a(-17238);
+            param2.paint(param1, param3, (byte) -62, param0, param5);
+            param2.reset(-17238);
           }
           if (this.field_m >= -1) {
             param2.field_m = this.field_m;
@@ -302,7 +302,7 @@ final class vc {
         }
     }
 
-    vc() {
+    WidgetStyleLayer() {
         this.field_m = -2;
         this.field_k = false;
         this.field_g = -2147483648;

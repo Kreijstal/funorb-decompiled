@@ -13,7 +13,7 @@ final class qj {
     static String field_f;
     static int field_g;
 
-    final static StringBuilder a(int param0, StringBuilder param1, char param2, boolean param3) {
+    final static StringBuilder padToLength(int param0, StringBuilder param1, char param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -53,7 +53,7 @@ final class qj {
         }
     }
 
-    final static MouseWheelHandler a(byte param0) {
+    final static MouseWheelHandler createMouseWheelHandler(byte param0) {
         try {
           MouseWheelHandler stackIn_1_0 = null;
           Throwable decompiledCaughtException = null;
@@ -75,7 +75,7 @@ final class qj {
         }
     }
 
-    final synchronized static long b(int param0) {
+    final synchronized static long monotonicTimeMillis(int param0) {
         if (param0 != -26572) {
           return -111L;
         }
@@ -87,9 +87,9 @@ final class qj {
         return var1 + wl.field_O;
     }
 
-    final static String a(int param0) {
+    final static String readIncomingString(int param0) {
         if (param0 != 10040319) {
-          qj.b(-91);
+          qj.monotonicTimeMillis(-91);
         }
         return UiContainer.field_z.readString(-1);
     }

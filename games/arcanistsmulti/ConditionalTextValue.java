@@ -20,12 +20,12 @@ final class ConditionalTextValue {
         if (param0 >= -105) {
           field_d = (String) null;
           if (sk.field_a != in.field_Gb) {
-            return vh.field_o;
+            return UiTheme.field_o;
           }
           return kf.field_a;
         }
         if (sk.field_a != in.field_Gb) {
-          return vh.field_o;
+          return UiTheme.field_o;
         }
         return kf.field_a;
     }

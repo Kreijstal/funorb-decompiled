@@ -5,7 +5,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     static boolean field_n;
     static String field_q;
     private int bitPosition;
-    static kc field_p;
+    static SceneWidget field_p;
     static String field_r;
     private IsaacCipher opcodeCipher;
     static String field_s;
@@ -133,14 +133,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         while (var4 < bitCount) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.payload[incrementValue$0] & rg.field_d[var4]) << bitCount - var4);
+          var5 = var5 + ((this.payload[incrementValue$0] & TextTableInitializer.field_d[var4]) << bitCount - var4);
           bitCount = bitCount - var4;
           var4 = 8;
         }
         if (var4 == bitCount) {
-          var5 = var5 + (rg.field_d[var4] & this.payload[var3]);
+          var5 = var5 + (TextTableInitializer.field_d[var4] & this.payload[var3]);
         } else {
-          var5 = var5 + (this.payload[var3] >> -bitCount + var4 & rg.field_d[bitCount]);
+          var5 = var5 + (this.payload[var3] >> -bitCount + var4 & TextTableInitializer.field_d[bitCount]);
         }
         if (obfuscationGuard == 28089) {
           return var5;

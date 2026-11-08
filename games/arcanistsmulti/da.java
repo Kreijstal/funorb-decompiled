@@ -14,7 +14,7 @@ final class da {
           if (param2 != -119) {
             field_a = (String) null;
           }
-          sb.a(param1, (byte) -33, param0, 256);
+          sb.changeMusicTrack(param1, (byte) -33, param0, 256);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "da.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

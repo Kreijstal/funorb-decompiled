@@ -7,7 +7,7 @@ final class dm extends SingleChildContainer {
     static String field_J;
     static int field_H;
     static int[] field_G;
-    static kc field_E;
+    static SceneWidget field_E;
     static String field_F;
 
     final static void g(byte param0) {

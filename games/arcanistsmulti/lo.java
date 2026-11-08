@@ -9,8 +9,8 @@ final class lo extends TextFieldValidator {
     static SoundCache field_w;
     static String field_z;
     static String field_v;
-    static kc field_y;
-    static kc field_r;
+    static SceneWidget field_y;
+    static SceneWidget field_r;
     static String field_t;
 
     final static boolean e(boolean param0) {

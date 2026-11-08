@@ -5,7 +5,7 @@ final class j implements WidgetPainter {
     static String field_c;
     static String field_e;
     static Sprite field_a;
-    static kc field_f;
+    static SceneWidget field_f;
     static String field_b;
     private ti field_d;
     static volatile int field_g;
@@ -78,7 +78,7 @@ final class j implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = 117 % ((param2 + 43) / 50);
-          var7 = (mi) (uh.field_n.removeFirst(true));
+          var7 = (mi) (ClipState.field_n.removeFirst(true));
           if (var7 == null) {
             stackIn_2_0 = new mi(param6, param4, param5, param1, param0, param3);
             return stackIn_2_0;

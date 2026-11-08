@@ -31,7 +31,7 @@ final class le {
     private int[] field_v;
     int field_I;
     boolean field_H;
-    static kc field_E;
+    static SceneWidget field_E;
     static int field_q;
     private int[] field_l;
     private boolean field_U;
@@ -499,7 +499,7 @@ final class le {
               mi.field_B.drawText(var13, var12 - 1, mi.field_B.field_C / 2 + 3 + (-8 + param0) + (this.field_l[param2] - 8 + 4), 0, 0);
               mi.field_B.drawText(var13, var12, mi.field_B.field_C / 2 + 3 + (-8 + (this.field_l[param2] + param0 - 8)) + 4, var8, -1);
             }
-            var11 = qo.a((byte) 121, (CharSequence) ((Object) this.field_V.field_k[param2]));
+            var11 = qo.normalizeName((byte) 121, (CharSequence) ((Object) this.field_V.field_k[param2]));
             mi.field_B.drawCentered(var11, 12 + param1 / 2 + 25, mi.field_B.field_C / 2 + (-1 + param0 + this.field_l[param2] / 2), 8421504 ^ (var8 | 8421504), 0);
             mi.field_B.drawCentered(var11, 12 + param1 / 2 + 26, -1 + (-1 + this.field_l[param2] / 2 + param0 + mi.field_B.field_C / 2), 8421504 ^ (8421504 | var8), 0);
             mi.field_B.drawCentered(var11, param1 / 2 + 12 + 26, -1 + (param0 + this.field_l[param2] / 2 + mi.field_B.field_C / 2), var8, -1);
@@ -815,7 +815,7 @@ final class le {
             if (6 <= mj.field_p) {
               this.field_O = true;
             }
-            rm.field_k = rm.field_k + 1;
+            WhirlpoolHasher.field_k = WhirlpoolHasher.field_k + 1;
           }
           if (td.e(true) &&
             ri.field_b[82] &&
@@ -1239,12 +1239,12 @@ final class le {
               } else {
                 var8 = 0;
                 if (ConditionalTextValue.field_f) {
-                  IntrusiveNodeHashTable.field_f = vm.field_d[128 + (this.field_V.field_x[this.field_I] + 12)] + rc.field_i;
+                  IntrusiveNodeHashTable.field_f = vm.field_d[128 + (this.field_V.field_x[this.field_I] + 12)] + LoadingTracker.field_i;
                   if (8 == this.field_V.field_x[this.field_I]) {
-                    IntrusiveNodeHashTable.field_f = vm.field_d[156] + rc.field_i;
+                    IntrusiveNodeHashTable.field_f = vm.field_d[156] + LoadingTracker.field_i;
                   }
                   if (this.field_V.field_x[this.field_I] == 9) {
-                    IntrusiveNodeHashTable.field_f = vm.field_d[157] + rc.field_i;
+                    IntrusiveNodeHashTable.field_f = vm.field_d[157] + LoadingTracker.field_i;
                   }
                 }
               }
@@ -1279,9 +1279,9 @@ final class le {
             }
             SoftwareRasterizer.resetClip();
             if (var8 == 0) {
-              rm.field_o[this.field_V.field_x[this.field_I] + 1].drawHalfSize(var6 - 32, var7Lifetime1 - 48);
+              WhirlpoolHasher.field_o[this.field_V.field_x[this.field_I] + 1].drawHalfSize(var6 - 32, var7Lifetime1 - 48);
             } else {
-              rm.field_o[this.field_V.field_x[this.field_I] + 1].drawHalfSize(-32 + var6, -48 + (var7Lifetime1 - (int)(4.0 * Math.sin((double)SpriteState.field_v * 0.5) + 4.0)));
+              WhirlpoolHasher.field_o[this.field_V.field_x[this.field_I] + 1].drawHalfSize(-32 + var6, -48 + (var7Lifetime1 - (int)(4.0 * Math.sin((double)SpriteState.field_v * 0.5) + 4.0)));
             }
             if (!(this.field_V.field_X[this.field_I] <= 0)) {
               var9 = this.field_V.field_X[this.field_I] / 20;
@@ -1313,7 +1313,7 @@ final class le {
             stackIn_143_2 = 32;
             stackIn_143_3 = 32;
             stackIn_143_4 = 15;
-            if (vh.field_t > 0) {
+            if (UiTheme.field_t > 0) {
               stackIn_146_0 = stackIn_143_0;
               stackIn_146_1 = stackIn_143_1;
               stackIn_146_2 = stackIn_143_2;
@@ -1345,7 +1345,7 @@ final class le {
             SoftwareRasterizer.fillRoundedRectangle(stackIn_147_0, stackIn_147_1, stackIn_147_2, stackIn_147_3, stackIn_147_4, stackIn_147_5);
             SoftwareRasterizer.drawRoundedRectangle(var6 - 16, -16 + var7Lifetime2, 32, 32, 15, 0);
             stackIn_152_0 = tg.field_b;
-            if (0 >= vh.field_t) {
+            if (0 >= UiTheme.field_t) {
               stackIn_153_0 = stackIn_152_0;
               stackIn_153_1 = 9;
             } else {
@@ -1367,16 +1367,16 @@ final class le {
               }
               SoftwareRasterizer.fillCircleAlpha(var6, var7Lifetime2, 16, 16777215, 128);
               mf.field_g = -3;
-              var10Lifetime1 = rm.field_a;
+              var10Lifetime1 = WhirlpoolHasher.field_a;
               if (!ao.field_d) {
-                if (1 >= vh.field_t) {
-                  if (vh.field_t != 1) {
+                if (1 >= UiTheme.field_t) {
+                  if (UiTheme.field_t != 1) {
                     var10Lifetime1 = bm.field_b;
                   } else {
                     var10Lifetime1 = am.field_a;
                   }
                 } else {
-                  var10Lifetime1 = tj.a(120, new String[]{Integer.toString(vh.field_t)}, WeightedLruCache.field_d);
+                  var10Lifetime1 = tj.a(120, new String[]{Integer.toString(UiTheme.field_t)}, WeightedLruCache.field_d);
                 }
               }
               mi.field_B.drawText(var10Lifetime1, 5 + var6, var7Lifetime2 - 1, 0, 0);
@@ -1643,7 +1643,7 @@ final class le {
           }
           KeyboardInputHandler.a(param1, (byte) -101);
           if (db.field_a != null) {
-            db.field_a.a(param1, true);
+            db.field_a.drawFullScreen(param1, true);
           }
           ed.a((byte) 90, param1);
           if (param0 != 1) {
@@ -1712,7 +1712,7 @@ final class le {
           if (ti.field_N >= 0 &&
             ti.field_N != -1 &&
             null == eb.field_b) {
-            var6_int = rd.field_e[ti.field_N];
+            var6_int = FixedViewResizeListener.field_e[ti.field_N];
             if (1 == var6_int &&
               this.field_s == -1000 &&
               !this.field_V.c((byte) 89)) {
@@ -2230,7 +2230,7 @@ final class le {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 1) {
-            field_E = (kc) null;
+            field_E = (SceneWidget) null;
           }
           stackIn_3_0 = th.a(param4, 1, 3, param0, param2 - 32574, param3, 1, 1, param1);
           return stackIn_3_0;
@@ -2797,7 +2797,7 @@ final class le {
             stackIn_9_0 = !(ao.field_d);
             ao.field_d = stackIn_9_0;
             if (ao.field_d) {
-              vh.field_t = 0;
+              UiTheme.field_t = 0;
             }
           }
           var2_int = IntKeyLookup.field_g.field_nb;
@@ -2957,7 +2957,7 @@ final class le {
           if ((var9 == null ||
             !(0 >= ((this.field_J | this.field_a) & 1 << var9.y(17571)))) && (0 == param2 ||
             !qg.a(-113) ||
-            rm.field_k == 6)) {
+            WhirlpoolHasher.field_k == 6)) {
             var5 = 16777215;
             var8 = this.field_V.field_k[param2];
             var6 = var8;
@@ -3263,7 +3263,7 @@ final class le {
             }
           }
           if (mj.field_p == 6) {
-            if (rm.field_k < 5) {
+            if (WhirlpoolHasher.field_k < 5) {
               this.field_G = false;
             } else {
               this.field_G = true;
@@ -3499,7 +3499,7 @@ final class le {
         RuntimeException var1 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var1_long = qj.b(-26572);
+          var1_long = qj.monotonicTimeMillis(-26572);
           if (param0 <= 67) {
             return true;
           }
@@ -3727,7 +3727,7 @@ final class le {
                 if ((!(this.field_ab)) &&
                   (!(!qg.a(-92))) &&
                   ((mj.field_p != 7))) {
-                  rm.a(var6, true);
+                  WhirlpoolHasher.a(var6, true);
                 }
                 decompiledFrameRemainder3 = false;
               }
@@ -3773,7 +3773,7 @@ final class le {
                   this.field_Y = this.field_Y - 1;
                 } else {
                   if (cf.field_h[224] != null) {
-                    ti.a((byte) -30, to.field_r[224], cf.field_h[224]);
+                    ti.a((byte) -30, SceneWidgetNode.field_r[224], cf.field_h[224]);
                   }
                   this.field_Y = 25;
                   var6 = this.q(10781);
@@ -3840,7 +3840,7 @@ final class le {
                 }
                 th.field_g[9] = 42;
                 if (null != cf.field_h[th.field_g[var8Lifetime1]]) {
-                  ti.a((byte) -30, to.field_r[th.field_g[var8Lifetime1]], cf.field_h[th.field_g[var8Lifetime1]]);
+                  ti.a((byte) -30, SceneWidgetNode.field_r[th.field_g[var8Lifetime1]], cf.field_h[th.field_g[var8Lifetime1]]);
                 }
                 this.field_s = -1000;
               }
@@ -3888,7 +3888,7 @@ final class le {
                 !(ti.field_N < 0))) && this.field_u < 100) {
                 if (re.field_r == 1 &&
                   cf.field_h[222] != null) {
-                  ti.a((byte) -30, to.field_r[222], cf.field_h[222]);
+                  ti.a((byte) -30, SceneWidgetNode.field_r[222], cf.field_h[222]);
                 }
                 if (null == sm.field_e) {
                   var9Lifetime1 = -12 + ti.field_N;
@@ -3896,11 +3896,11 @@ final class le {
                     var9Lifetime1 < 96 &&
                     var9Lifetime1 / 12 != 6) {
                     if (null != cf.field_h[wh.field_i[var9Lifetime1 / 12]]) {
-                      sm.field_e = PcmSampleStream.createAtRatePercent(cf.field_h[wh.field_i[var9Lifetime1 / 12]], 100, to.field_r[wh.field_i[var9Lifetime1 / 12]]);
+                      sm.field_e = PcmSampleStream.createAtRatePercent(cf.field_h[wh.field_i[var9Lifetime1 / 12]], 100, SceneWidgetNode.field_r[wh.field_i[var9Lifetime1 / 12]]);
                     }
                   } else {
                     if (cf.field_h[wh.field_i[0]] != null) {
-                      sm.field_e = PcmSampleStream.createAtRatePercent(cf.field_h[wh.field_i[0]], 100, to.field_r[wh.field_i[0]]);
+                      sm.field_e = PcmSampleStream.createAtRatePercent(cf.field_h[wh.field_i[0]], 100, SceneWidgetNode.field_r[wh.field_i[0]]);
                     }
                   }
                   if (null != sm.field_e) {
@@ -3917,7 +3917,7 @@ final class le {
                 }
                 if (ti.field_N >= 0 &&
                   !this.field_V.c((byte) 89) &&
-                  rd.field_e[ti.field_N] == 1 &&
+                  FixedViewResizeListener.field_e[ti.field_N] == 1 &&
                   this.field_s == -1000) {
                   this.field_u = 0;
                   this.field_s = var4;
@@ -3927,7 +3927,7 @@ final class le {
               if (0 > ti.field_N) {
                 var8Lifetime1Lifetime1 = 1;
               } else {
-                var9Lifetime1Lifetime1 = rd.field_e[ti.field_N];
+                var9Lifetime1Lifetime1 = FixedViewResizeListener.field_e[ti.field_N];
                 if ((var9Lifetime1Lifetime1 == 2 ||
                   var9Lifetime1Lifetime1 == 4 ||
                   3 == var9Lifetime1Lifetime1) && 0 < this.field_u) {
@@ -3955,13 +3955,13 @@ final class le {
                 var14 = (int)Math.sqrt((double)(var12 * var12 + var13 * var13));
                 if (0 <= ti.field_N &&
                   !this.field_V.c((byte) 89)) {
-                  if (rd.field_e[ti.field_N] == 1 &&
+                  if (FixedViewResizeListener.field_e[ti.field_N] == 1 &&
                     -1000 == this.field_s) {
                     this.field_u = 0;
                   }
-                  if (rd.field_e[ti.field_N] != 2 &&
-                    rd.field_e[ti.field_N] != 4) {
-                    if (((rd.field_e[ti.field_N] == 3)) &&
+                  if (FixedViewResizeListener.field_e[ti.field_N] != 2 &&
+                    FixedViewResizeListener.field_e[ti.field_N] != 4) {
+                    if (((FixedViewResizeListener.field_e[ti.field_N] == 3)) &&
                       (!(this.field_V.a(var6, var6.i((byte) -111), var6.f(param1 ^ -103), -129, ti.field_N)))) {
                       this.field_u = 0;
                     }
@@ -4003,7 +4003,7 @@ final class le {
                       if (this.field_h > 0) {
                         this.i(2000);
                       }
-                      if (rd.field_e[ti.field_N] == 3) {
+                      if (FixedViewResizeListener.field_e[ti.field_N] == 3) {
                         this.a(ti.field_N, var4, this.field_V.n((byte) -75), this.field_bb, var5, (byte) -30, var6.f(-80), var6.i((byte) 113), this.field_u);
                       } else {
                         this.a(ti.field_N, var4, this.field_V.n((byte) -75), this.field_bb, var5, (byte) -30, this.field_s, this.field_r, this.field_u);
@@ -4069,7 +4069,7 @@ final class le {
           if (ti.field_N >= 0 &&
             ti.field_N != -1 &&
             null == eb.field_b) {
-            var3_int = rd.field_e[ti.field_N];
+            var3_int = FixedViewResizeListener.field_e[ti.field_N];
             if (var3_int == 3 && ((ti.field_N == 10 ||
               ti.field_N == 123 ||
               ti.field_N == 125 ||

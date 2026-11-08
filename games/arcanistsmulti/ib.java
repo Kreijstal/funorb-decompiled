@@ -5,7 +5,7 @@ class ib extends jm {
     static String[] field_v;
     static int field_r;
     static aj field_q;
-    static kc field_s;
+    static SceneWidget field_s;
     static String field_t;
     static int field_u;
     static String field_p;
@@ -59,7 +59,7 @@ class ib extends jm {
           if (gn.field_b == Js5NetworkRequest.field_u) {
             return false;
           }
-          IntrusiveDeque.field_d = v.field_p[Js5NetworkRequest.field_u];
+          IntrusiveDeque.field_d = ViewportController.field_p[Js5NetworkRequest.field_u];
           ed.field_Bb = qa.field_i[Js5NetworkRequest.field_u];
           Js5NetworkRequest.field_u = 1 + Js5NetworkRequest.field_u & 127;
           if (param0) {

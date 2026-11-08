@@ -80,7 +80,7 @@ final class cj {
           if (var45.field_H != null &&
             1 < var45.field_F) {
             var61 = var45.field_H;
-            to.a(var61, false, SpriteState.field_s, 0, 0);
+            SceneWidgetNode.a(var61, false, SpriteState.field_s, 0, 0);
           } else {
             CameraFollowTarget.a((byte) 91);
           }
@@ -155,11 +155,11 @@ final class cj {
             }
             var21 = stackIn_37_0;
             var22 = ud.field_p[var15Lifetime1];
-            var23 = v.field_g[var15Lifetime1];
+            var23 = ViewportController.field_g[var15Lifetime1];
             var24 = ud.field_p[var16];
-            var25 = v.field_g[var16];
+            var25 = ViewportController.field_g[var16];
             var26 = ud.field_p[var17];
-            var27 = v.field_g[var17];
+            var27 = ViewportController.field_g[var17];
             if (var18 == var19 &&
               var19 == var20) {
               var28 = var55[var18];
@@ -233,7 +233,7 @@ final class cj {
         if (param0 < -98) {
           if (oj.field_i) {
             SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, SoftwareRasterizer.field_h - SoftwareRasterizer.field_i, SoftwareRasterizer.field_k - SoftwareRasterizer.field_c);
-            co.field_f.a(false, true);
+            co.field_f.drawFullScreen(false, true);
           }
           return;
         }
@@ -321,7 +321,7 @@ final class cj {
               he.field_e.writeByte(16, (byte) -75);
               he.field_e.position = he.field_e.position + 1;
               var9 = he.field_e.position;
-              vd.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
+              TextLine.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
               he.field_e.writeByteLengthAtMark(he.field_e.position - var9, (byte) 43);
             } else {
               var9 = 0;
@@ -346,7 +346,7 @@ final class cj {
                 var11_ref_StringLifetime4 = "";
               }
               he.field_e.writeString(var11_ref_StringLifetime4, 23333);
-              vd.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
+              TextLine.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
               he.field_e.writeShortLengthAtMark(he.field_e.position - var10, -19571);
             }
             we.a(-1, (byte) 113);

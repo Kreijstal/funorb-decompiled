@@ -4,7 +4,7 @@
 final class mi extends DualLinkNode {
     int field_v;
     int field_F;
-    static kc field_A;
+    static SceneWidget field_A;
     private PcmSampleStream field_D;
     int field_z;
     private int field_n;
@@ -25,7 +25,7 @@ final class mi extends DualLinkNode {
     int field_u;
     int field_G;
     private int field_r;
-    static kc field_m;
+    static SceneWidget field_m;
 
     final boolean d(int param0) {
         RuntimeException decompiledCaughtException = null;
@@ -118,7 +118,7 @@ final class mi extends DualLinkNode {
           }
           if (null != this.field_q.field_sb &&
             this.field_q.field_sb[param0] != null) {
-            ti.a((byte) -30, to.field_r[param0], this.field_q.field_sb[param0]);
+            ti.a((byte) -30, SceneWidgetNode.field_r[param0], this.field_q.field_sb[param0]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -848,7 +848,7 @@ final class mi extends DualLinkNode {
                                               if (this.field_y == 225 &&
                                                 this.field_q.field_sb != null &&
                                                 null != this.field_q.field_sb[74]) {
-                                                ti.a((byte) -30, to.field_r[220] >> 2, this.field_q.field_sb[74]);
+                                                ti.a((byte) -30, SceneWidgetNode.field_r[220] >> 2, this.field_q.field_sb[74]);
                                               }
                                             }
                                           }
@@ -1303,13 +1303,13 @@ final class mi extends DualLinkNode {
                                                               if ((this.field_I != 143) &&
                                                                 (decompiledFrameRemainder10 = (null != this.field_q.field_sb)) &&
                                                                 (decompiledFrameRemainder10 = (this.field_q.field_sb[CacheEntry.field_n[7][1]] != null))) {
-                                                                ii.playSample(200 + (int)(Math.random() * 500.0), false, this.field_q.field_sb[CacheEntry.field_n[7][1]], to.field_r[CacheEntry.field_n[7][1]] / 4);
+                                                                ii.playSample(200 + (int)(Math.random() * 500.0), false, this.field_q.field_sb[CacheEntry.field_n[7][1]], SceneWidgetNode.field_r[CacheEntry.field_n[7][1]] / 4);
                                                                 decompiledFrameRemainder10 = (var19 != 0);
                                                               }
                                                               if ((decompiledFrameRemainder10) &&
                                                                 (null != this.field_q.field_sb) &&
                                                                 (this.field_q.field_sb[CacheEntry.field_n[7][0]] != null)) {
-                                                                ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][0]], to.field_r[CacheEntry.field_n[7][0]] / 8);
+                                                                ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][0]], SceneWidgetNode.field_r[CacheEntry.field_n[7][0]] / 8);
                                                                 if (var19 != 0) {
                                                                   this.a(1, (byte) 37, 3);
                                                                 }
@@ -1597,13 +1597,13 @@ final class mi extends DualLinkNode {
                                                               if ((this.field_I != 143) &&
                                                                 (decompiledFrameRemainder7 = (null != this.field_q.field_sb)) &&
                                                                 (decompiledFrameRemainder7 = (this.field_q.field_sb[CacheEntry.field_n[7][1]] != null))) {
-                                                                ii.playSample(200 + (int)(Math.random() * 500.0), false, this.field_q.field_sb[CacheEntry.field_n[7][1]], to.field_r[CacheEntry.field_n[7][1]] / 4);
+                                                                ii.playSample(200 + (int)(Math.random() * 500.0), false, this.field_q.field_sb[CacheEntry.field_n[7][1]], SceneWidgetNode.field_r[CacheEntry.field_n[7][1]] / 4);
                                                                 decompiledFrameRemainder7 = (var19 != 0);
                                                               }
                                                               if ((decompiledFrameRemainder7) &&
                                                                 (null != this.field_q.field_sb) &&
                                                                 (this.field_q.field_sb[CacheEntry.field_n[7][0]] != null)) {
-                                                                ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][0]], to.field_r[CacheEntry.field_n[7][0]] / 8);
+                                                                ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][0]], SceneWidgetNode.field_r[CacheEntry.field_n[7][0]] / 8);
                                                                 if (var19 != 0) {
                                                                   this.a(1, (byte) 37, 3);
                                                                 }
@@ -2195,7 +2195,7 @@ final class mi extends DualLinkNode {
                                             if (this.field_I == 143) {
                                               if (null != this.field_q.field_sb &&
                                                 null != this.field_q.field_sb[CacheEntry.field_n[7][2]]) {
-                                                ii.playSample((int)(Math.random() * 50.0) + 100, false, this.field_q.field_sb[CacheEntry.field_n[7][2]], to.field_r[CacheEntry.field_n[7][2]] / 2);
+                                                ii.playSample((int)(Math.random() * 50.0) + 100, false, this.field_q.field_sb[CacheEntry.field_n[7][2]], SceneWidgetNode.field_r[CacheEntry.field_n[7][2]] / 2);
                                               }
                                               var5 = this.a(-32 + this.field_v, (ml) null, (byte) 81, 131, this.field_G, this.field_q);
                                               this.field_q.b(param0 - 5964, (mi) (var5));
@@ -3588,7 +3588,7 @@ final class mi extends DualLinkNode {
           }
           if (null != this.field_q.field_sb &&
             this.field_q.field_sb[CacheEntry.field_n[param2][param0]] != null) {
-            ti.a((byte) -30, to.field_r[CacheEntry.field_n[param2][param0]], this.field_q.field_sb[CacheEntry.field_n[param2][param0]]);
+            ti.a((byte) -30, SceneWidgetNode.field_r[CacheEntry.field_n[param2][param0]], this.field_q.field_sb[CacheEntry.field_n[param2][param0]]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4110,7 +4110,7 @@ final class mi extends DualLinkNode {
                 if ((this.field_y == 100 ||
                   this.field_y == 150) && (null != this.field_q.field_sb &&
                   null != this.field_q.field_sb[103])) {
-                  ti.a((byte) -30, to.field_r[103], this.field_q.field_sb[103]);
+                  ti.a((byte) -30, SceneWidgetNode.field_r[103], this.field_q.field_sb[103]);
                 }
                 var5 = this.a(this.field_t.field_lb, (ml) null, (byte) 81, 100, this.field_t.field_db - (this.field_t.field_Y >> 1), this.field_q);
                 ((mi) (var5)).field_u = (int)(64.0 * Math.sin(0.1 * (double)this.field_y));
@@ -4650,7 +4650,7 @@ final class mi extends DualLinkNode {
                                               if (this.field_y == 50 &&
                                                 this.field_q.field_sb != null &&
                                                 null != this.field_q.field_sb[90]) {
-                                                ti.a((byte) -30, to.field_r[90], this.field_q.field_sb[90]);
+                                                ti.a((byte) -30, SceneWidgetNode.field_r[90], this.field_q.field_sb[90]);
                                               }
                                               this.field_y = this.field_y + 1;
                                               if (this.field_y % 15 == 1) {
@@ -5217,7 +5217,7 @@ final class mi extends DualLinkNode {
                                                                     var5 = this.a(var10Lifetime1, (ml) null, (byte) 81, 135, var11Lifetime1, this.field_q);
                                                                     if (this.field_q.field_sb != null &&
                                                                       null != this.field_q.field_sb[CacheEntry.field_n[7][1]]) {
-                                                                      ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][1]], to.field_r[CacheEntry.field_n[7][1]] / 8);
+                                                                      ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][1]], SceneWidgetNode.field_r[CacheEntry.field_n[7][1]] / 8);
                                                                     }
                                                                     ((mi) (var5)).field_u = of.a(113, var12Lifetime1) >> 11;
                                                                     ((mi) (var5)).field_F = (j.a(var12Lifetime1, -101) >> 11) + 32;
@@ -7008,7 +7008,7 @@ final class mi extends DualLinkNode {
           var3.field_v = this.field_v;
           var3.field_G = this.field_G;
           if (param0 != 21310) {
-            field_m = (kc) null;
+            field_m = (SceneWidget) null;
           }
           var3.field_z = this.field_z;
           var3.i(44);

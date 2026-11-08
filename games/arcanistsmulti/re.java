@@ -17,7 +17,7 @@ final class re extends TextLayout {
     private int field_h;
 
     final void a(String param0, int param1, int param2, byte param3, BitmapFont param4) {
-        vd discarded$0 = null;
+        TextLine discarded$0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -27,7 +27,7 @@ final class re extends TextLayout {
         RuntimeException var6 = null;
         int var7 = 0;
         String var8 = null;
-        vd var9 = null;
+        TextLine var9 = null;
         try {
           if (param0 == null) {
             this.field_f = null;
@@ -74,8 +74,8 @@ final class re extends TextLayout {
     }
 
     final void a(int param0, byte param1, BitmapFont param2, int param3, String param4) {
-        vd var9 = null;
-        vd var10 = null;
+        TextLine var9 = null;
+        TextLine var10 = null;
         if (param4 == null) {
           this.field_f = null;
           return;
@@ -100,12 +100,12 @@ final class re extends TextLayout {
         }
     }
 
-    private final vd a(BitmapFont param0, int param1, int param2, String param3) {
-        vd var5 = null;
+    private final TextLine a(BitmapFont param0, int param1, int param2, String param3) {
+        TextLine var5 = null;
         RuntimeException var5_ref = null;
-        vd var6 = null;
-        vd stackIn_2_0 = null;
-        vd stackIn_4_0 = null;
+        TextLine var6 = null;
+        TextLine stackIn_2_0 = null;
+        TextLine stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -113,13 +113,13 @@ final class re extends TextLayout {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new vd(param2 - param0.field_C, param2 + param0.field_m, param3.length());
+          var6 = new TextLine(param2 - param0.field_C, param2 + param0.field_m, param3.length());
           var5 = var6;
           if (param1 != 0) {
-            stackIn_2_0 = (vd) null;
+            stackIn_2_0 = (TextLine) null;
             return stackIn_2_0;
           }
-          this.field_f = new vd[]{var6};
+          this.field_f = new TextLine[]{var6};
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -204,12 +204,12 @@ final class re extends TextLayout {
     }
 
     final void a(byte param0, BitmapFont param1, int param2, int param3, int param4, int param5, String param6, int param7) {
-        vd stackIn_37_0;
-        vd stackIn_37_1;
+        TextLine stackIn_37_0;
+        TextLine stackIn_37_1;
         int stackIn_37_2;
         int stackIn_37_3;
-        vd stackIn_38_0 = null;
-        vd stackIn_38_1 = null;
+        TextLine stackIn_38_0 = null;
+        TextLine stackIn_38_1 = null;
         int stackIn_38_4 = 0;
         int stackIn_43_0 = 0;
         RuntimeException stackIn_48_0 = null;
@@ -223,7 +223,7 @@ final class re extends TextLayout {
         int var11 = 0;
         int var12 = 0;
         String var13 = null;
-        vd var14 = null;
+        TextLine var14 = null;
         int var15 = 0;
         String[] var16 = null;
         String[] var17 = null;
@@ -266,7 +266,7 @@ final class re extends TextLayout {
             1 == var10) {
             this.field_s = 1;
           }
-          this.field_f = new vd[var10];
+          this.field_f = new TextLine[var10];
           if (this.field_s == 0) {
             var11 = param1.field_C;
           } else {
@@ -300,7 +300,7 @@ final class re extends TextLayout {
               stackIn_38_1 = null;
               stackIn_38_4 = var13.length();
             }
-            var14 = new vd(stackIn_37_2, stackIn_37_3, stackIn_38_4);
+            var14 = new TextLine(stackIn_37_2, stackIn_37_3, stackIn_38_4);
             var14.field_f[0] = 0;
             if (var13 != null) {
               var14.field_f[var13.length()] = param1.textWidth(var13);
@@ -344,8 +344,8 @@ final class re extends TextLayout {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         String var7 = null;
-        vd var8 = null;
-        vd var9 = null;
+        TextLine var8 = null;
+        TextLine var9 = null;
         try {
           if (param1 > -109) {
             var7 = (String) null;

@@ -106,7 +106,7 @@ final class ja extends TextFieldValidator {
         }
     }
 
-    final static kc d(byte param0) {
+    final static SceneWidget d(byte param0) {
         if (param0 != 90) {
           ja.d((byte) -69);
           return lf.field_b.field_Cb;

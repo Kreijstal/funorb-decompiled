@@ -26,14 +26,14 @@ final class aa extends IntrusiveNode {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          fk.field_g = qe.a(param3, "frame_top", "commonui", 87);
-          vi.field_E = qe.a(param3, "frame_bottom", "commonui", 118);
+          fk.field_g = qe.loadSpriteSheet(param3, "frame_top", "commonui", 87);
+          vi.field_E = qe.loadSpriteSheet(param3, "frame_bottom", "commonui", 118);
           ci.field_e = fj.loadSprite("commonui", -22612, param3, "jagex_logo_grey");
-          af.field_Jb = qe.a(param3, "button", "commonui", 86);
+          af.field_Jb = qe.loadSpriteSheet(param3, "button", "commonui", 86);
           qk.field_lb = nl.a((byte) 31, param3, "validation", "commonui");
-          vc.field_e = (BitmapFont) ((Object) rm.a("arezzo12", param1, "commonui", -119, param3));
-          ia.field_c = (BitmapFont) ((Object) rm.a("arezzo14", param1, "commonui", -120, param3));
-          SocketConnector.field_k = (BitmapFont) ((Object) rm.a("arezzo14bold", param1, "commonui", -123, param3));
+          WidgetStyleLayer.field_e = (BitmapFont) ((Object) WhirlpoolHasher.loadCoverageFont("arezzo12", param1, "commonui", -119, param3));
+          ia.field_c = (BitmapFont) ((Object) WhirlpoolHasher.loadCoverageFont("arezzo14", param1, "commonui", -120, param3));
+          SocketConnector.field_k = (BitmapFont) ((Object) WhirlpoolHasher.loadCoverageFont("arezzo14bold", param1, "commonui", -123, param3));
           var17 = new Sprite(param2.a("", "button.gif", -1), (java.awt.Component) ((Object) on.field_c));
           af.a("dropdown", "commonui", 19412, param3);
           var5 = pk.a("commonui", 0, "screen_options", param3);

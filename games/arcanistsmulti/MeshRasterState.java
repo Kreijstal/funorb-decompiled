@@ -31,7 +31,7 @@ final class MeshRasterState {
         field_b = param3 - param1;
         MeshRasterState.centerProjection();
         if (field_f.length < field_b) {
-          field_f = new int[wh.a(field_b, 678231216)];
+          field_f = new int[wh.nextPowerOfTwo(field_b, 678231216)];
         }
         int var4 = param1 * SoftwareRasterizer.field_e + param0;
         for (var5 = 0; var5 < field_b; var5++) {

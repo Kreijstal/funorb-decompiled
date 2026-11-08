@@ -43,22 +43,22 @@ final class ng extends UiContainer implements pj, ButtonListener {
     final static void a(boolean param0, int param1, boolean param2, int param3) {
         int stackIn_10_0 = 0;
         String stackIn_24_0 = null;
-        kc stackIn_33_0 = null;
+        SceneWidget stackIn_33_0 = null;
         String stackIn_34_1 = null;
-        kc stackIn_36_0 = null;
+        SceneWidget stackIn_36_0 = null;
         int stackIn_36_1 = 0;
         String[] stackIn_36_2 = null;
         String stackIn_37_3 = null;
-        kc stackIn_64_0 = null;
+        SceneWidget stackIn_64_0 = null;
         boolean stackIn_65_1 = false;
-        kc stackIn_69_0 = null;
+        SceneWidget stackIn_69_0 = null;
         boolean stackIn_70_1 = false;
-        kc stackIn_74_0 = null;
+        SceneWidget stackIn_74_0 = null;
         boolean stackIn_75_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        kc var5 = null;
-        kc var6 = null;
+        SceneWidget var5 = null;
+        SceneWidget var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -69,9 +69,9 @@ final class ng extends UiContainer implements pj, ButtonListener {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        kc var15 = null;
+        SceneWidget var15 = null;
         String var16 = null;
-        kc var17 = null;
+        SceneWidget var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
@@ -90,9 +90,9 @@ final class ng extends UiContainer implements pj, ButtonListener {
             jf.field_d.field_I = 0;
             var6.field_x = 0;
             nl.field_Db.field_rb = ri.field_c.toUpperCase();
-            var7 = (oh.field_h.field_x + 2) / 2;
-            jf.field_d.a(-2 + var7, 0, -40 + oh.field_h.field_I, 40, (byte) -120);
-            CanvasRasterBuffer.field_k.a(-var7 + oh.field_h.field_x, var7, oh.field_h.field_I - 40, 40, (byte) -120);
+            var7 = (ReflectionCheckRequest.field_h.field_x + 2) / 2;
+            jf.field_d.setBounds(-2 + var7, 0, -40 + ReflectionCheckRequest.field_h.field_I, 40, (byte) -120);
+            CanvasRasterBuffer.field_k.setBounds(-var7 + ReflectionCheckRequest.field_h.field_x, var7, ReflectionCheckRequest.field_h.field_I - 40, 40, (byte) -120);
             if (ao.field_h.length == 1 &&
               ao.field_h[0] == 2) {
               var8 = 0;
@@ -131,7 +131,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
                 stackIn_34_1 = fi.field_b;
               }
               stackIn_33_0.field_rb = ((String) (Object) stackIn_34_1).toUpperCase();
-              stackIn_36_0 = vc.field_c;
+              stackIn_36_0 = WidgetStyleLayer.field_c;
               stackIn_36_1 = -96;
               stackIn_36_2 = new String[]{CanvasRasterBuffer.field_k.field_rb};
               if (var8 == 0) {
@@ -190,9 +190,9 @@ final class ng extends UiContainer implements pj, ButtonListener {
               }
             } else {
               IntrusiveNodeHashTable.field_o.field_ub = false;
-              vc.field_c.field_rb = j.field_e;
+              WidgetStyleLayer.field_c.field_rb = j.field_e;
               if (var8 == 0) {
-                stackIn_24_0 = ql.field_e;
+                stackIn_24_0 = LoginMethod.field_e;
               } else {
                 stackIn_24_0 = bb.field_f;
               }
@@ -218,13 +218,13 @@ final class ng extends UiContainer implements pj, ButtonListener {
           }
           stackIn_64_0 = hl.field_m;
           stackIn_65_1 = (param2) && (!param0) && (!so.field_j);
-          ((kc) (Object) stackIn_64_0).b(stackIn_65_1, (byte) 33);
-          stackIn_69_0 = oh.field_h;
+          ((SceneWidget) (Object) stackIn_64_0).updateInputFullScreen(stackIn_65_1, (byte) 33);
+          stackIn_69_0 = ReflectionCheckRequest.field_h;
           stackIn_70_1 = (param2) && (!param0) && (!so.field_j);
-          ((kc) (Object) stackIn_69_0).b(stackIn_70_1, (byte) 90);
+          ((SceneWidget) (Object) stackIn_69_0).updateInputFullScreen(stackIn_70_1, (byte) 90);
           stackIn_74_0 = nl.field_Fb;
           stackIn_75_1 = (param2) && (!param0) && (so.field_j);
-          ((kc) (Object) stackIn_74_0).b(stackIn_75_1, (byte) 64);
+          ((SceneWidget) (Object) stackIn_74_0).updateInputFullScreen(stackIn_75_1, (byte) 64);
           tn.field_Ob.field_c.h((byte) 101);
           if (null != om.field_x) {
             if (IntrusiveNodeHashTable.field_o.field_U != 0) {
@@ -328,14 +328,14 @@ final class ng extends UiContainer implements pj, ButtonListener {
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (0 == param3) {
-            uh.a(126, "terms.ws");
+            ClipState.a(126, "terms.ws");
           } else {
             if (param3 != 1) {
               if (param3 == 2) {
-                uh.a(127, "conduct.ws");
+                ClipState.a(127, "conduct.ws");
               }
             } else {
-              uh.a(126, "privacy.ws");
+              ClipState.a(126, "privacy.ws");
             }
           }
           if (param2 != -1607) {

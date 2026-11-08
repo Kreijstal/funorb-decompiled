@@ -19,7 +19,7 @@ final class ra {
     static IndexedSprite[] field_c;
     static byte[] field_f;
 
-    final static int a(int param0) {
+    final static int currentYear(int param0) {
         int var1 = -69 / ((53 - param0) / 62);
         return new Date().getYear() + 1900;
     }
@@ -40,13 +40,13 @@ final class ra {
           field_l = null;
           return;
         }
-        kc var2 = (kc) null;
-        ra.a((kc) null, 47, (kc) null);
+        SceneWidget var2 = (SceneWidget) null;
+        ra.a((SceneWidget) null, 47, (SceneWidget) null);
         field_e = null;
         field_l = null;
     }
 
-    final static void a(kc param0, int param1, kc param2) {
+    final static void a(SceneWidget param0, int param1, SceneWidget param2) {
         try {
           if (null == param0.field_G) {
             param0.field_G = new IntrusiveDeque();
@@ -60,7 +60,7 @@ final class ra {
           if (null == uc.field_c) {
             uc.field_c = new IntrusiveNodeHashTable(64);
           }
-          vd.field_d = param0.field_G;
+          TextLine.field_d = param0.field_G;
           if (param1 != 64) {
             field_e = (String) null;
           }

@@ -6,7 +6,7 @@ final class fn {
     static String[] field_g;
     static String field_a;
     static String field_h;
-    static kc field_e;
+    static SceneWidget field_e;
     static String field_i;
     static String field_f;
     static Sprite[] field_b;
@@ -23,23 +23,23 @@ final class fn {
         }
         int var9_int = 495;
         int var10 = 5;
-        ck.field_d.a(-10 + var9_int, 5, var10, param2, (byte) -120);
-        SingleChildContainer.field_D.a(-sa.field_Cb.field_x + ck.field_d.field_x, 0, 0, param2, (byte) -120);
+        ck.field_d.setBounds(-10 + var9_int, 5, var10, param2, (byte) -120);
+        SingleChildContainer.field_D.setBounds(-sa.field_Cb.field_x + ck.field_d.field_x, 0, 0, param2, (byte) -120);
         if (param4 != -104) {
           return;
         }
         try {
           var10 = var10 + (param6 + param2);
-          sa.field_Cb.a(sa.field_Cb.field_x, SingleChildContainer.field_D.field_x, 0, param2, (byte) -120);
-          MembershipOfferScreen.field_f.a(MembershipOfferScreen.field_f.c(-25921), 5, var10, param3, (byte) -120);
-          var11 = ih.field_d.c(-25921);
-          ih.field_d.a(var11, -5 + (var9_int - var11), var10, param3, (byte) -120);
-          bi.field_U.a(var9_int, 0, 0, param0, (byte) -120);
+          sa.field_Cb.setBounds(sa.field_Cb.field_x, SingleChildContainer.field_D.field_x, 0, param2, (byte) -120);
+          MembershipOfferScreen.field_f.setBounds(MembershipOfferScreen.field_f.getContentWidth(-25921), 5, var10, param3, (byte) -120);
+          var11 = ih.field_d.getContentWidth(-25921);
+          ih.field_d.setBounds(var11, -5 + (var9_int - var11), var10, param3, (byte) -120);
+          bi.field_U.setBounds(var9_int, 0, 0, param0, (byte) -120);
           var12 = var10 + param3 + 5;
-          in.field_Jb.a(var9_int, 0, param0, var12, (byte) -120);
+          in.field_Jb.setBounds(var9_int, 0, param0, var12, (byte) -120);
           in.field_Jb.field_v = of.a(3, in.field_Jb.field_I, 1, 2105376, 11579568, 8421504);
           var12 = var12 + param0;
-          tm.field_d.a(var9_int, -(var9_int / 2) + param7, param8 - var12 / 2, var12, (byte) -120);
+          tm.field_d.setBounds(var9_int, -(var9_int / 2) + param7, param8 - var12 / 2, var12, (byte) -120);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "fn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -203,7 +203,7 @@ final class fn {
         boolean stackIn_44_1 = false;
         int stackIn_47_0 = 0;
         int stackIn_61_0 = 0;
-        kc stackIn_98_0 = null;
+        SceneWidget stackIn_98_0 = null;
         int stackIn_98_1 = 0;
         int stackIn_99_2 = 0;
         RuntimeException stackIn_216_0 = null;
@@ -222,11 +222,11 @@ final class fn {
         Object var11 = null;
         cg var12 = null;
         int var13 = 0;
-        kc var14 = null;
-        kc var15 = null;
-        kc var16 = null;
-        kc var17 = null;
-        kc var18 = null;
+        SceneWidget var14 = null;
+        SceneWidget var15 = null;
+        SceneWidget var16 = null;
+        SceneWidget var17 = null;
+        SceneWidget var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -318,20 +318,20 @@ final class fn {
           while (var12 != null) {
             var13 = 0;
             if (var12.field_G == null) {
-              var12.field_Fb = new kc(0L, qa.field_j);
-              var12.a(var12.field_Fb, 114);
-              var12.field_Gb = new kc(0L, le.field_E);
+              var12.field_Fb = new SceneWidget(0L, qa.field_j);
+              var12.addChild(var12.field_Fb, 114);
+              var12.field_Gb = new SceneWidget(0L, le.field_E);
               if (fc.field_a) {
-                var12.a(var12.field_Gb, 17);
+                var12.addChild(var12.field_Gb, 17);
               }
               var12.field_Gb.field_X = 2;
-              var12.field_Cb = new kc(0L, IntrusiveNode.field_c);
-              var12.a(var12.field_Cb, 109);
-              var12.e((byte) 20);
-              var12.field_Hb = new kc(0L, ml.field_V);
-              var12.a(var12.field_Hb, 43);
-              var12.field_Ub = new kc(0L, sl.field_S);
-              var12.a(var12.field_Ub, 107);
+              var12.field_Cb = new SceneWidget(0L, IntrusiveNode.field_c);
+              var12.addChild(var12.field_Cb, 109);
+              var12.markTreeDirty((byte) 20);
+              var12.field_Hb = new SceneWidget(0L, ml.field_V);
+              var12.addChild(var12.field_Hb, 43);
+              var12.field_Ub = new SceneWidget(0L, sl.field_S);
+              var12.addChild(var12.field_Ub, 107);
               var13 = 1;
             }
             var12.field_Fb.field_rb = null;
@@ -424,17 +424,17 @@ final class fn {
                 qk.k((byte) 110) &&
                 ~qf.field_a != ~var12.field_Nb) {
                 if (var12.field_Hb.field_rb != null) {
-                  var26 = var12.field_Hb.c(-25921) + dh.field_Gb * 2;
-                  var12.field_Hb.a(var26, var25_int, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
+                  var26 = var12.field_Hb.getContentWidth(-25921) + dh.field_Gb * 2;
+                  var12.field_Hb.setBounds(var26, var25_int, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Ub.field_rb) {
                   if (param1 == lf.field_b) {
                     var26Lifetime2 = 40;
                   } else {
-                    var26Lifetime2 = var12.field_Ub.c(-25921) + dh.field_Gb * 2;
+                    var26Lifetime2 = var12.field_Ub.getContentWidth(-25921) + dh.field_Gb * 2;
                   }
-                  var12.field_Ub.a(var26Lifetime2, var25_int, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
+                  var12.field_Ub.setBounds(var26Lifetime2, var25_int, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -445,9 +445,9 @@ final class fn {
               } else {
                 stackIn_99_2 = 0;
               }
-              ((kc) (Object) stackIn_98_0).a(stackIn_98_1 - stackIn_99_2, var25_int, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
+              ((SceneWidget) (Object) stackIn_98_0).setBounds(stackIn_98_1 - stackIn_99_2, var25_int, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
               var12.field_Gb.field_rb = Integer.toString(var12.field_Pb);
-              var12.field_Gb.a(40, -40 + var12.field_x, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
+              var12.field_Gb.setBounds(40, -40 + var12.field_x, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
               var19 = var19 + ImageProducerRasterBuffer.field_r;
               if (var12.field_Fb.field_C &&
                 var22 != 0) {
@@ -474,15 +474,15 @@ final class fn {
             if (var23 != null) {
               var24_intLifetime1 = var12.field_Cb.field_Z.wrappedLineCount(var23, var12.field_x - (dh.field_Gb + dh.field_Gb));
               var12.field_Cb.field_rb = var23;
-              var12.field_Cb.field_u = var12.field_Eb * 256 / vd.field_i;
-              var12.field_Cb.a(-(dh.field_Gb * 2) + var12.field_x, dh.field_Gb, var19, ImageProducerRasterBuffer.field_r * var24_intLifetime1, (byte) -120);
+              var12.field_Cb.field_u = var12.field_Eb * 256 / TextLine.field_i;
+              var12.field_Cb.setBounds(-(dh.field_Gb * 2) + var12.field_x, dh.field_Gb, var19, ImageProducerRasterBuffer.field_r * var24_intLifetime1, (byte) -120);
               var19 = var19 + var24_intLifetime1 * ImageProducerRasterBuffer.field_r;
             }
             if (var9Lifetime1 == 0) {
               var12.field_B = -var12.field_I + var19;
             }
             if (var13 != 0) {
-              param1.field_Cb.a((byte) 119, (kc) (var11), var12, 2);
+              param1.field_Cb.positionAfter((byte) 119, (SceneWidget) (var11), var12, 2);
             }
             if (var12.field_U != 0 &&
               !var12.e(183874081)) {
@@ -518,7 +518,7 @@ final class fn {
                     var25 = var30Lifetime1Lifetime1;
                   } else {
                     if (var6 > var12.field_Pb) {
-                      var24Lifetime2 = tj.a(-24, new String[]{null, Integer.toString(var6)}, to.field_n);
+                      var24Lifetime2 = tj.a(-24, new String[]{null, Integer.toString(var6)}, SceneWidgetNode.field_n);
                     } else {
                       if ((var8 & ~var12.field_Bb) != 0) {
                         var25_int = bj.a(~var12.field_Bb & var8, (byte) 108);

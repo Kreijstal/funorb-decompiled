@@ -101,7 +101,7 @@ final class vl extends IntrusiveNode {
     final static void a(byte param0, ij param1) {
         try {
           int var2_int = 72 % ((param0 - 77) / 38);
-          co.field_f.a(param1, 9);
+          co.field_f.addChild(param1, 9);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "vl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -172,7 +172,7 @@ final class vl extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        if (!vh.field_n) {
+        if (!UiTheme.field_n) {
           lo.field_q = (1600 + lo.field_q * 120) / 128;
         } else {
           lo.field_q = 120 * lo.field_q / 128;

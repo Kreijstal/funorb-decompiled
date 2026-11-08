@@ -14,7 +14,7 @@ abstract class CanvasRasterBuffer {
     int field_m;
     static String field_h;
     java.awt.Image field_j;
-    static kc field_k;
+    static SceneWidget field_k;
 
     final static void a(int param0) {
         ho.field_i = null;
@@ -30,7 +30,7 @@ abstract class CanvasRasterBuffer {
 
     final void a(boolean param0) {
         if (!param0) {
-          field_k = (kc) null;
+          field_k = (SceneWidget) null;
         }
         SoftwareRasterizer.setTarget(this.field_l, this.field_e, this.field_m);
     }

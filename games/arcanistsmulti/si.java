@@ -106,13 +106,13 @@ final class si implements WidgetPainter {
           if (GrowableIntList.field_c.e(param0 - 3261)) {
             return 0;
           }
-          return to.d(true);
+          return SceneWidgetNode.d(true);
         }
         mk.field_O.a(-8456);
         if (GrowableIntList.field_c.e(param0 - 3261)) {
           return 0;
         }
-        return to.d(true);
+        return SceneWidgetNode.d(true);
     }
 
     final static java.net.URL a(byte param0, String param1, String param2, int param3, java.net.URL param4) {

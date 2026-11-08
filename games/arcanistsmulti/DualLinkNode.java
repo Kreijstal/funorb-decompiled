@@ -41,7 +41,7 @@ class DualLinkNode extends IntrusiveNode {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_4_0 = uh.field_i;
+            stackIn_4_0 = ClipState.field_i;
             return stackIn_4_0;
           }
           if (255 < var2_int) {
@@ -54,7 +54,7 @@ class DualLinkNode extends IntrusiveNode {
             return stackIn_11_0;
           }
           if (var3.length < 2) {
-            stackIn_15_0 = uh.field_i;
+            stackIn_15_0 = ClipState.field_i;
             return stackIn_15_0;
           }
           var4 = var3;

@@ -6,7 +6,7 @@ final class tm {
     static int[] field_a;
     static int field_g;
     static int field_b;
-    static kc field_d;
+    static SceneWidget field_d;
     static String field_f;
     static String field_e;
 
@@ -15,13 +15,13 @@ final class tm {
         field_a = null;
         field_e = null;
         if (param0 >= -40) {
-          tm.a(-22, (byte) -122);
+          tm.bitCount(-22, (byte) -122);
         }
         field_f = null;
         field_c = null;
     }
 
-    final static void a(int param0) {
+    final static void buildIntensityTable(int param0) {
         int var1_int = 0;
         double var2 = 0.0;
         int var4 = 0;
@@ -55,7 +55,7 @@ final class tm {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int bitCount(int param0, byte param1) {
         param0 = (1431655765 & param0 >>> 1) + (param0 & 1431655765);
         param0 = (858993459 & param0) + ((param0 & -858993460) >>> 2);
         param0 = 252645135 & param0 + (param0 >>> 4);
@@ -70,7 +70,7 @@ final class tm {
     final static boolean a(boolean param0) {
         boolean stackIn_6_0 = false;
         if (!param0) {
-          tm.a(126, (byte) -31);
+          tm.bitCount(126, (byte) -31);
         }
         stackIn_6_0 = (null != CredentialKind.field_c) && (ob.field_eb.a((byte) 74));
         return stackIn_6_0;

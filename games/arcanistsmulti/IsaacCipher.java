@@ -36,7 +36,7 @@ final class IsaacCipher {
           }
           LoginPanel.b(1, param8, param12, param1, param2);
           td.a(true, param17, param5);
-          rc.a(param14, 120, param16, param15, param19, param18);
+          LoadingTracker.a(param14, 120, param16, param15, param19, param18);
           NanoFrameClock.a(param10, param11, param7, 69);
           vi.a(-1, param6, param20, param9);
           return;
@@ -85,7 +85,7 @@ final class IsaacCipher {
           ArcanistsMulti.a(param2, (byte) -80);
           int var4_int = 88 % ((81 - param3) / 36);
           fl.loadFinalFrameImage(-2389, param2);
-          tm.a(5968);
+          tm.buildIntensityTable(5968);
           h.j(0);
           SoundCache.field_a = -sn.field_G + 0;
         } catch (RuntimeException runtimeException) {

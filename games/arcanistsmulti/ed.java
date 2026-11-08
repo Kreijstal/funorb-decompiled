@@ -392,16 +392,16 @@ class ed extends qk implements ButtonListener {
         }
         if (pm.field_b != null) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_h, SoftwareRasterizer.field_k - SoftwareRasterizer.field_c);
-          pm.field_b.a(param1, true);
+          pm.field_b.drawFullScreen(param1, true);
         }
     }
 
     final static void j(int param0) {
         int var1 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
         int var2 = -(jo.field_e * jo.field_e) + var1;
-        int var3 = (-ma.field_N + vd.field_k) * var2 / var1 + ma.field_N;
-        IntKeyLookup.field_g.a(640, sa.field_Hb, var3, param0, (byte) -120);
-        IsaacRandom.a(5, vd.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
+        int var3 = (-ma.field_N + TextLine.field_k) * var2 / var1 + ma.field_N;
+        IntKeyLookup.field_g.setBounds(640, sa.field_Hb, var3, param0, (byte) -120);
+        IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
     }
 
     static {

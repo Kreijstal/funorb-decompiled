@@ -69,12 +69,12 @@ abstract class CacheEntry extends DualLinkNode {
         nl[] array$1 = null;
         nl[] array$2 = null;
         int var19 = 0;
-        kc stackIn_5_0;
-        kc stackIn_5_1;
+        SceneWidget stackIn_5_0;
+        SceneWidget stackIn_5_1;
         long stackIn_5_2;
-        kc stackIn_5_3;
-        kc stackIn_6_0 = null;
-        kc stackIn_6_1 = null;
+        SceneWidget stackIn_5_3;
+        SceneWidget stackIn_6_0 = null;
+        SceneWidget stackIn_6_1 = null;
         String stackIn_6_4 = null;
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
@@ -101,15 +101,15 @@ abstract class CacheEntry extends DualLinkNode {
         String stackIn_107_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        kc var16 = null;
+        SceneWidget var16 = null;
         int var17_int = 0;
-        kc var17 = null;
+        SceneWidget var17 = null;
         int var18 = 0;
         Object var19_ref = null;
         Object var20 = null;
         int var21 = 0;
-        kc var23 = null;
-        kc var24 = null;
+        SceneWidget var23 = null;
+        SceneWidget var24 = null;
         int var18Lifetime1;
         int var18Lifetime2;
         int var17_intLifetime1;
@@ -130,43 +130,43 @@ abstract class CacheEntry extends DualLinkNode {
           ob.field_bb = param10;
           ml.field_m = param9;
           SecondaryNodeDeque.field_d = param0;
-          IntrusiveNodeHashTable.field_b = qe.a(param8, "gameprivacy", "lobby", 92);
-          re.field_j = qe.a(param8, "ratedgame", "lobby", 81);
-          sk.field_f = qe.a(param8, "opentome", "lobby", 71);
-          ec.field_i = qe.a(param8, "allowspectators", "lobby", 88);
+          IntrusiveNodeHashTable.field_b = qe.loadSpriteSheet(param8, "gameprivacy", "lobby", 92);
+          re.field_j = qe.loadSpriteSheet(param8, "ratedgame", "lobby", 81);
+          sk.field_f = qe.loadSpriteSheet(param8, "opentome", "lobby", 71);
+          ec.field_i = qe.loadSpriteSheet(param8, "allowspectators", "lobby", 88);
           vm.field_c = new String[5];
           vm.field_c[4] = MusicCrossfadeStream.field_C;
           vm.field_c[1] = ne.field_a;
           vm.field_c[0] = wm.field_F;
           vm.field_c[2] = um.field_d;
           vm.field_c[3] = NanoFrameClock.field_m;
-          mj.field_s = new kc(0L, (kc) null);
-          uc.field_d = new kc(0L, vf.field_u, hb.field_Bb);
-          StrongCacheEntry.field_z = new kc(0L, vf.field_i, SocketJs5Transport.field_q);
-          nj.field_m = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
-          mj.field_s.a(uc.field_d, param14 + 87);
+          mj.field_s = new SceneWidget(0L, (SceneWidget) null);
+          uc.field_d = new SceneWidget(0L, vf.field_u, hb.field_Bb);
+          StrongCacheEntry.field_z = new SceneWidget(0L, vf.field_i, SocketJs5Transport.field_q);
+          nj.field_m = new dn(0L, new SceneWidget(0L, (SceneWidget) null), am.field_c, IntrusiveDeque.field_i);
+          mj.field_s.addChild(uc.field_d, param14 + 87);
           if (fc.field_a) {
-            mj.field_s.a(StrongCacheEntry.field_z, 41);
+            mj.field_s.addChild(StrongCacheEntry.field_z, 41);
           }
-          mj.field_s.a(nj.field_m, 47);
-          nj.field_m.field_Hb.a(IntrusiveNode.field_c, (byte) 126);
+          mj.field_s.addChild(nj.field_m, 47);
+          nj.field_m.field_Hb.applyStyle(IntrusiveNode.field_c, (byte) 126);
           var23 = nj.field_m.field_Hb;
           var24 = var23;
           nj.field_m.field_Hb.field_gb = 1;
           var24.field_X = 1;
-          kg.field_c = new kc(0L, IntrusiveNode.field_c);
+          kg.field_c = new SceneWidget(0L, IntrusiveNode.field_c);
           kg.field_c.field_X = 1;
-          ii.field_b = new kc(0L, th.field_c, ti.field_M.toUpperCase());
-          sm.field_c = new kc(0L, wa.field_Pb, hb.field_Ib.toUpperCase());
-          ad.field_c = new kc(0L, ia.field_a);
-          tj.field_o = new kc(0L, vf.field_u, of.field_k);
-          FrameClock.field_e = new kc(0L, EditableTextWidget.field_S, lc.field_c);
-          ci.field_a = new kc(0L, EditableTextWidget.field_S, PatchEnvelopeSet.field_c);
-          lo.field_r = new kc(0L, EditableTextWidget.field_S, CanvasRasterBuffer.field_h);
-          vc.field_j = new kc(0L, EditableTextWidget.field_S, g.field_b);
-          jo.field_a = new kc(0L, vf.field_i, TextLayout.field_a);
-          DebouncedValidator.field_g = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
-          of.field_a = new kc(0L, ko.field_h, fi.field_f.toUpperCase());
+          ii.field_b = new SceneWidget(0L, th.field_c, ti.field_M.toUpperCase());
+          sm.field_c = new SceneWidget(0L, wa.field_Pb, hb.field_Ib.toUpperCase());
+          ad.field_c = new SceneWidget(0L, ia.field_a);
+          tj.field_o = new SceneWidget(0L, vf.field_u, of.field_k);
+          FrameClock.field_e = new SceneWidget(0L, EditableTextWidget.field_S, lc.field_c);
+          ci.field_a = new SceneWidget(0L, EditableTextWidget.field_S, PatchEnvelopeSet.field_c);
+          lo.field_r = new SceneWidget(0L, EditableTextWidget.field_S, CanvasRasterBuffer.field_h);
+          WidgetStyleLayer.field_j = new SceneWidget(0L, EditableTextWidget.field_S, g.field_b);
+          jo.field_a = new SceneWidget(0L, vf.field_i, TextLayout.field_a);
+          DebouncedValidator.field_g = new dn(0L, new SceneWidget(0L, (SceneWidget) null), am.field_c, IntrusiveDeque.field_i);
+          of.field_a = new SceneWidget(0L, ko.field_h, fi.field_f.toUpperCase());
           of.field_a.field_ub = fc.field_a;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
@@ -181,83 +181,83 @@ abstract class CacheEntry extends DualLinkNode {
             stackIn_6_1 = null;
             stackIn_6_4 = sl.field_K;
           }
-          GrowableIntList.field_a = new kc(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
-          fn.field_e = new kc(0L, (kc) null);
-          fn.field_e.a(sm.field_c, 23);
-          fn.field_e.a(ad.field_c, 36);
-          ad.field_c.a(tj.field_o, 106);
-          ad.field_c.a(FrameClock.field_e, 50);
-          ad.field_c.a(ci.field_a, param14 + 20);
+          GrowableIntList.field_a = new SceneWidget(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
+          fn.field_e = new SceneWidget(0L, (SceneWidget) null);
+          fn.field_e.addChild(sm.field_c, 23);
+          fn.field_e.addChild(ad.field_c, 36);
+          ad.field_c.addChild(tj.field_o, 106);
+          ad.field_c.addChild(FrameClock.field_e, 50);
+          ad.field_c.addChild(ci.field_a, param14 + 20);
           if (fc.field_a) {
-            ad.field_c.a(lo.field_r, 44);
+            ad.field_c.addChild(lo.field_r, 44);
           }
-          ad.field_c.a(vc.field_j, param14 + 47);
-          ad.field_c.a(jo.field_a, 29);
-          ad.field_c.a(DebouncedValidator.field_g, 124);
+          ad.field_c.addChild(WidgetStyleLayer.field_j, param14 + 47);
+          ad.field_c.addChild(jo.field_a, 29);
+          ad.field_c.addChild(DebouncedValidator.field_g, 124);
           if (fc.field_a) {
-            fn.field_e.a(of.field_a, 20);
+            fn.field_e.addChild(of.field_a, 20);
           }
-          fn.field_e.a(GrowableIntList.field_a, 15);
-          la.field_c = new kc(0L, IntrusiveNode.field_c);
+          fn.field_e.addChild(GrowableIntList.field_a, 15);
+          la.field_c = new SceneWidget(0L, IntrusiveNode.field_c);
           la.field_c.field_gb = 0;
           la.field_c.field_X = 1;
-          dm.field_E = new kc(0L, gn.field_c, UsernameCredentials.field_f.toUpperCase());
-          LinkButtonPainter.field_h = new kc(0L, mf.field_d);
-          LinkButtonPainter.field_h.a(la.field_c, 110);
-          LinkButtonPainter.field_h.a(dm.field_E, 121);
-          vc.field_c = new kc(0L, am.field_c);
-          vc.field_c.a(IntrusiveNode.field_c, (byte) 119);
-          vc.field_c.field_gb = 1;
-          var16 = vc.field_c;
+          dm.field_E = new SceneWidget(0L, gn.field_c, UsernameCredentials.field_f.toUpperCase());
+          LinkButtonPainter.field_h = new SceneWidget(0L, mf.field_d);
+          LinkButtonPainter.field_h.addChild(la.field_c, 110);
+          LinkButtonPainter.field_h.addChild(dm.field_E, 121);
+          WidgetStyleLayer.field_c = new SceneWidget(0L, am.field_c);
+          WidgetStyleLayer.field_c.applyStyle(IntrusiveNode.field_c, (byte) 119);
+          WidgetStyleLayer.field_c.field_gb = 1;
+          var16 = WidgetStyleLayer.field_c;
           var16.field_X = 1;
-          bk.field_M = new kc(0L, (kc) null);
-          aj.field_d = new kc(0L, IntrusiveNode.field_c);
+          bk.field_M = new SceneWidget(0L, (SceneWidget) null);
+          aj.field_d = new SceneWidget(0L, IntrusiveNode.field_c);
           aj.field_d.field_X = 1;
-          qc.field_d = new kc(0L, vf.field_u, hb.field_Bb);
-          MembershipOfferScreen.field_q = new kc(0L, vf.field_i, SocketJs5Transport.field_q);
-          lf.field_b = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
-          bk.field_M.a(aj.field_d, 30);
-          bk.field_M.a(qc.field_d, 51);
+          qc.field_d = new SceneWidget(0L, vf.field_u, hb.field_Bb);
+          MembershipOfferScreen.field_q = new SceneWidget(0L, vf.field_i, SocketJs5Transport.field_q);
+          lf.field_b = new dn(0L, new SceneWidget(0L, (SceneWidget) null), am.field_c, IntrusiveDeque.field_i);
+          bk.field_M.addChild(aj.field_d, 30);
+          bk.field_M.addChild(qc.field_d, 51);
           if (fc.field_a) {
-            bk.field_M.a(MembershipOfferScreen.field_q, param14 + 10);
+            bk.field_M.addChild(MembershipOfferScreen.field_q, param14 + 10);
           }
-          bk.field_M.a(lf.field_b, 31);
-          IntrusiveNodeHashTable.field_o = new kc(0L, th.field_c, SecondaryNodeDeque.field_a.toUpperCase());
-          nl.field_Db = new kc(0L, wa.field_Pb);
-          mi.field_m = new kc(0L, ia.field_a);
-          ib.field_s = new kc(0L, dd.field_b, MusicPatchNode.field_o.toUpperCase());
+          bk.field_M.addChild(lf.field_b, 31);
+          IntrusiveNodeHashTable.field_o = new SceneWidget(0L, th.field_c, SecondaryNodeDeque.field_a.toUpperCase());
+          nl.field_Db = new SceneWidget(0L, wa.field_Pb);
+          mi.field_m = new SceneWidget(0L, ia.field_a);
+          ib.field_s = new SceneWidget(0L, dd.field_b, MusicPatchNode.field_o.toUpperCase());
           IndexedSpriteState.field_e = new nl[param2 + 4][];
-          wd.field_g = new kc[4 + param2];
-          wd.field_g[0] = new kc(0L, mi.field_A, gg.field_i);
+          ResizableViewResizeListener.field_g = new SceneWidget[4 + param2];
+          ResizableViewResizeListener.field_g[0] = new SceneWidget(0L, mi.field_A, gg.field_i);
           IndexedSpriteState.field_e[0] = new nl[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            IndexedSpriteState.field_e[0][var17_int + 1] = new nl(0L, nf.field_j, (kc) null, nj.field_d, IntrusiveNodeHashTable.field_b[var17_int], vm.field_c[var17_int]);
+            IndexedSpriteState.field_e[0][var17_int + 1] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, IntrusiveNodeHashTable.field_b[var17_int], vm.field_c[var17_int]);
           }
           if (ao.field_h.length >= 2) {
-            wd.field_g[1] = new kc(0L, mi.field_A, w.field_Bb);
+            ResizableViewResizeListener.field_g[1] = new SceneWidget(0L, mi.field_A, w.field_Bb);
             array$0 = new nl[ao.field_h.length + 1];
             IndexedSpriteState.field_e[1] = array$0;
-            IndexedSpriteState.field_e[1][0] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, ij.field_Rb);
+            IndexedSpriteState.field_e[1][0] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, ij.field_Rb);
             for (var17_intLifetime1 = 0; ao.field_h.length > var17_intLifetime1; var17_intLifetime1++) {
-              IndexedSpriteState.field_e[1][var17_intLifetime1 + 1] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, Integer.toString(ao.field_h[var17_intLifetime1]));
+              IndexedSpriteState.field_e[1][var17_intLifetime1 + 1] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, Integer.toString(ao.field_h[var17_intLifetime1]));
             }
           }
-          wd.field_g[2] = new kc(0L, mi.field_A, SecondaryNodeDeque.field_b);
-          IndexedSpriteState.field_e[param14] = new nl[]{new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, ij.field_Rb), new nl(0L, nf.field_j, (kc) null, nj.field_d, ec.field_i[0], StrongCacheEntry.field_B), new nl(0L, nf.field_j, (kc) null, nj.field_d, ec.field_i[1], cf.field_d)};
+          ResizableViewResizeListener.field_g[2] = new SceneWidget(0L, mi.field_A, SecondaryNodeDeque.field_b);
+          IndexedSpriteState.field_e[param14] = new nl[]{new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, ij.field_Rb), new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, ec.field_i[0], StrongCacheEntry.field_B), new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, ec.field_i[1], cf.field_d)};
           if (le.field_q > 1) {
-            wd.field_g[3] = new kc(0L, mi.field_A, fm.field_e);
+            ResizableViewResizeListener.field_g[3] = new SceneWidget(0L, mi.field_A, fm.field_e);
             array$1 = new nl[le.field_q + 1];
             IndexedSpriteState.field_e[3] = array$1;
-            IndexedSpriteState.field_e[3][0] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, ij.field_Rb);
+            IndexedSpriteState.field_e[3][0] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, ij.field_Rb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < le.field_q; var17_intLifetime2++) {
-              IndexedSpriteState.field_e[3][1 + var17_intLifetime2] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, fl.field_b[var17_intLifetime2]);
+              IndexedSpriteState.field_e[3][1 + var17_intLifetime2] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, fl.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param2 > var17_intLifetime3; var17_intLifetime3++) {
-            wd.field_g[var17_intLifetime3 + 4] = new kc(0L, mi.field_A, ob.field_bb[var17_intLifetime3]);
+            ResizableViewResizeListener.field_g[var17_intLifetime3 + 4] = new SceneWidget(0L, mi.field_A, ob.field_bb[var17_intLifetime3]);
             array$2 = new nl[1 + NameValidator.bitAnd((int) SecondaryNodeDeque.field_d[var17_intLifetime3], 255)];
             IndexedSpriteState.field_e[var17_intLifetime3 + 4] = array$2;
-            IndexedSpriteState.field_e[4 + var17_intLifetime3][0] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, ij.field_Rb);
+            IndexedSpriteState.field_e[4 + var17_intLifetime3][0] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, ij.field_Rb);
             for (var18 = 0; var18 < (SecondaryNodeDeque.field_d[var17_intLifetime3] & 255); var18++) {
               if (null == pn.field_b) {
                 var19_ref = null;
@@ -277,12 +277,12 @@ abstract class CacheEntry extends DualLinkNode {
                   var20 = null;
                 }
               }
-              IndexedSpriteState.field_e[4 + var17_intLifetime3][var18 + 1] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) (var19_ref), (String) (var20));
+              IndexedSpriteState.field_e[4 + var17_intLifetime3][var18 + 1] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param2 + 4 > var17_intLifetime4; var17_intLifetime4++) {
-            if (wd.field_g[var17_intLifetime4] != null) {
-              wd.field_g[var17_intLifetime4].field_z = 11;
+            if (ResizableViewResizeListener.field_g[var17_intLifetime4] != null) {
+              ResizableViewResizeListener.field_g[var17_intLifetime4].field_z = 11;
             }
             if (IndexedSpriteState.field_e[var17_intLifetime4] != null) {
               for (var18Lifetime1 = 0; IndexedSpriteState.field_e[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
@@ -293,34 +293,34 @@ abstract class CacheEntry extends DualLinkNode {
               }
             }
           }
-          SocketConnector.field_d = new kc(0L, ko.field_h);
-          CanvasRasterBuffer.field_k = new kc(0L, ko.field_h);
-          jf.field_d = new kc(0L, j.field_f);
-          jf.field_d.a(IntrusiveNode.field_c, (byte) 119);
+          SocketConnector.field_d = new SceneWidget(0L, ko.field_h);
+          CanvasRasterBuffer.field_k = new SceneWidget(0L, ko.field_h);
+          jf.field_d = new SceneWidget(0L, j.field_f);
+          jf.field_d.applyStyle(IntrusiveNode.field_c, (byte) 119);
           var17 = jf.field_d;
           jf.field_d.field_gb = 1;
           var17.field_X = 1;
-          oh.field_h = new kc(0L, (kc) null);
-          oh.field_h.a(nl.field_Db, 19);
-          oh.field_h.a(mi.field_m, 49);
-          mi.field_m.a(ib.field_s, 98);
+          ReflectionCheckRequest.field_h = new SceneWidget(0L, (SceneWidget) null);
+          ReflectionCheckRequest.field_h.addChild(nl.field_Db, 19);
+          ReflectionCheckRequest.field_h.addChild(mi.field_m, 49);
+          mi.field_m.addChild(ib.field_s, 98);
           for (var18Lifetime2 = 0; var18Lifetime2 < param2 + 4; var18Lifetime2++) {
             if ((1 != var18Lifetime2 ||
               !(2 > ao.field_h.length)) && (3 != var18Lifetime2 ||
               !(1 >= le.field_q))) {
-              mi.field_m.a(wd.field_g[var18Lifetime2], param14 + 5);
+              mi.field_m.addChild(ResizableViewResizeListener.field_g[var18Lifetime2], param14 + 5);
               for (var19 = 0; IndexedSpriteState.field_e[var18Lifetime2].length > var19; var19++) {
                 if (IndexedSpriteState.field_e[var18Lifetime2][var19] != null) {
-                  mi.field_m.a(IndexedSpriteState.field_e[var18Lifetime2][var19], 92);
+                  mi.field_m.addChild(IndexedSpriteState.field_e[var18Lifetime2][var19], 92);
                 }
               }
             }
           }
-          oh.field_h.a(SocketConnector.field_d, 13);
-          oh.field_h.a(CanvasRasterBuffer.field_k, 23);
-          oh.field_h.a(jf.field_d, 110);
-          MembershipOfferScreen.field_t = new kc(0L, SectorCacheStore.field_l, mb.field_O.toUpperCase());
-          gj.field_d = new kc(0L, gn.field_c, f.field_i.toUpperCase());
+          ReflectionCheckRequest.field_h.addChild(SocketConnector.field_d, 13);
+          ReflectionCheckRequest.field_h.addChild(CanvasRasterBuffer.field_k, 23);
+          ReflectionCheckRequest.field_h.addChild(jf.field_d, 110);
+          MembershipOfferScreen.field_t = new SceneWidget(0L, SectorCacheStore.field_l, mb.field_O.toUpperCase());
+          gj.field_d = new SceneWidget(0L, gn.field_c, f.field_i.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -409,7 +409,7 @@ abstract class CacheEntry extends DualLinkNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        rm var5 = null;
+        WhirlpoolHasher var5 = null;
         byte[] var6 = null;
         byte[] var9 = null;
         byte[] var10 = null;
@@ -424,16 +424,16 @@ abstract class CacheEntry extends DualLinkNode {
           } else {
             var4 = param2;
           }
-          var5 = new rm();
+          var5 = new WhirlpoolHasher();
           if (param1 != -93) {
             CacheEntry.a((byte[]) null, (int[]) null, 89, (Sprite[][]) null, -13, (String[]) null, (String[][]) null, (String[]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (String[][]) null, 28, (Sprite[][]) null, -101);
           }
-          var5.c(-23645);
-          var5.a((long)(8 * param0), 8, var4);
+          var5.reset(-23645);
+          var5.update((long)(8 * param0), 8, var4);
           var10 = new byte[64];
           var9 = var10;
           var6 = var9;
-          var5.a((byte) 119, 0, var10);
+          var5.finish((byte) 119, 0, var10);
           stackIn_9_0 = var6;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

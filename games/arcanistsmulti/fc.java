@@ -100,9 +100,9 @@ final class fc {
         }
     }
 
-    final static void resetChildOffsets(byte param0, kc param1) {
+    final static void resetChildOffsets(byte param0, SceneWidget param1) {
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
-        kc var4 = (kc) (param1.field_G.first(12623));
+        SceneWidget var4 = (SceneWidget) (param1.field_G.first(12623));
         if (param0 >= -60) {
           return;
         }
@@ -112,7 +112,7 @@ final class fc {
             var4.field_I = 0;
             var4.field_bb = 0;
             var4.field_B = 0;
-            var4 = (kc) (param1.field_G.next(0));
+            var4 = (SceneWidget) (param1.field_G.next(0));
           }
           param1.field_I = 0;
           param1.field_bb = 0;

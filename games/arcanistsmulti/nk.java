@@ -5,7 +5,7 @@ final class nk extends IntrusiveNode {
     int[][] field_l;
     static Sprite[][] field_m;
     int field_h;
-    static kc field_n;
+    static SceneWidget field_n;
     int field_i;
     int field_k;
     String[][] field_r;

@@ -42,7 +42,7 @@ abstract class vi extends UiContainer {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        to.field_m = param3;
+        SceneWidgetNode.field_m = param3;
         if (param0 != -1) {
           return;
         }

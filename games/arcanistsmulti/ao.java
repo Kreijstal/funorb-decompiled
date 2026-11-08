@@ -56,7 +56,7 @@ final class ao {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new jg(param4, param3, param0, param5, param2);
-          vd.a(var6, (byte) -74);
+          TextLine.a(var6, (byte) -74);
           if (param1 > 68) {
             return;
           }
@@ -129,39 +129,39 @@ final class ao {
         int var3Lifetime1;
         fh.field_g = SoftwareRasterizer.field_e;
         ri.field_a = SoftwareRasterizer.field_j;
-        vc.a((byte) -128);
+        WidgetStyleLayer.a((byte) -128);
         aj.field_h.a(0, 0, -40 + (k.field_d.field_I - 2), k.field_d.field_x, 5);
-        kg.field_c.a(se.field_H.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+        kg.field_c.setBounds(se.field_H.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
         int var1 = 2 + ImageProducerRasterBuffer.field_r;
-        mj.field_s.a(se.field_H.field_x, 0, !fc.field_a ? 0 : var1, -(fc.field_a ? var1 : 0) + se.field_H.field_I, (byte) -120);
+        mj.field_s.setBounds(se.field_H.field_x, 0, !fc.field_a ? 0 : var1, -(fc.field_a ? var1 : 0) + se.field_H.field_I, (byte) -120);
         ie.l((byte) 100);
-        ii.field_b.a(k.field_d.field_x, 0, k.field_d.field_I - 40, 40, (byte) -120);
-        sm.field_c.a(fn.field_e.field_x, 0, 0, 30, (byte) -120);
-        ad.field_c.a(fn.field_e.field_x, 0, 30, -30 + (-40 + (fn.field_e.field_I - 2)), (byte) -120);
-        tj.field_o.a(68, 5, 5, 30, (byte) -120);
-        FrameClock.field_e.a(78, 75, 5, 30, (byte) -120);
-        ci.field_a.a(48, 155, 5, 30, (byte) -120);
-        lo.field_r.a(48, 205, 5, 30, (byte) -120);
+        ii.field_b.setBounds(k.field_d.field_x, 0, k.field_d.field_I - 40, 40, (byte) -120);
+        sm.field_c.setBounds(fn.field_e.field_x, 0, 0, 30, (byte) -120);
+        ad.field_c.setBounds(fn.field_e.field_x, 0, 30, -30 + (-40 + (fn.field_e.field_I - 2)), (byte) -120);
+        tj.field_o.setBounds(68, 5, 5, 30, (byte) -120);
+        FrameClock.field_e.setBounds(78, 75, 5, 30, (byte) -120);
+        ci.field_a.setBounds(48, 155, 5, 30, (byte) -120);
+        lo.field_r.setBounds(48, 205, 5, 30, (byte) -120);
         int var2 = !fc.field_a ? 200 : 250;
-        vc.field_j.a(-var2 + 363, 5 + var2, 5, 30, (byte) -120);
-        jo.field_a.a(-10 + fn.field_e.field_x - 365, 370, 5, 30, (byte) -120);
+        WidgetStyleLayer.field_j.setBounds(-var2 + 363, 5 + var2, 5, 30, (byte) -120);
+        jo.field_a.setBounds(-10 + fn.field_e.field_x - 365, 370, 5, 30, (byte) -120);
         DebouncedValidator.field_g.a(37, CacheEntry.field_p, -5 + (-5 + ad.field_c.field_x), false, 5, -5 + (ad.field_c.field_I - 5) - 32, 2);
         if (param0 <= -111) {
           var3 = (fn.field_e.field_x + 2) / 2;
-          of.field_a.a(-2 + var3, 0, fn.field_e.field_I - 40, 40, (byte) -120);
+          of.field_a.setBounds(-2 + var3, 0, fn.field_e.field_I - 40, 40, (byte) -120);
           if (!fc.field_a) {
             var3 = 0;
           }
-          GrowableIntList.field_a.a(fn.field_e.field_x - var3, var3, fn.field_e.field_I - 40, 40, (byte) -120);
+          GrowableIntList.field_a.setBounds(fn.field_e.field_x - var3, var3, fn.field_e.field_I - 40, 40, (byte) -120);
           return;
         }
         ao.a((byte) 81);
         var3Lifetime1 = (fn.field_e.field_x + 2) / 2;
-        of.field_a.a(-2 + var3Lifetime1, 0, fn.field_e.field_I - 40, 40, (byte) -120);
+        of.field_a.setBounds(-2 + var3Lifetime1, 0, fn.field_e.field_I - 40, 40, (byte) -120);
         if (!fc.field_a) {
           var3Lifetime1 = 0;
         }
-        GrowableIntList.field_a.a(fn.field_e.field_x - var3Lifetime1, var3Lifetime1, fn.field_e.field_I - 40, 40, (byte) -120);
+        GrowableIntList.field_a.setBounds(fn.field_e.field_x - var3Lifetime1, var3Lifetime1, fn.field_e.field_I - 40, 40, (byte) -120);
     }
 
     final static int a(int param0, int param1, int param2) {

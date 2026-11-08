@@ -336,7 +336,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_invite_withdrawn", (byte) -45);
                 if (var2 != null) {
-                  v.field_n = sc.a((byte) 127, var2);
+                  ViewportController.field_n = sc.a((byte) 127, var2);
                 }
                 var2 = MusicPatch.a("mu_request_declined", (byte) -45);
                 if (null != var2) {
@@ -344,7 +344,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_request_withdrawn", (byte) -45);
                 if (null != var2) {
-                  wd.field_f = sc.a((byte) 107, var2);
+                  ResizableViewResizeListener.field_f = sc.a((byte) 107, var2);
                 }
                 var2 = MusicPatch.a("mu_all_players_have_left", (byte) -45);
                 if (var2 != null) {
@@ -532,11 +532,11 @@ final class on {
                 }
                 var2 = MusicPatch.a("unable_to_send_message_password_b", (byte) -45);
                 if (var2 != null) {
-                  rg.field_b = sc.a((byte) 120, var2);
+                  TextTableInitializer.field_b = sc.a((byte) 120, var2);
                 }
                 var2 = MusicPatch.a("mu_chat_lobby_show_all", (byte) -45);
                 if (var2 != null) {
-                  oh.field_q = sc.a((byte) 124, var2);
+                  ReflectionCheckRequest.field_q = sc.a((byte) 124, var2);
                 }
                 var2 = MusicPatch.a("mu_chat_lobby_friends_only", (byte) -45);
                 if (null != var2) {
@@ -608,7 +608,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("searching_for_opponent_singular", (byte) -45);
                 if (var2 != null) {
-                  ql.field_e = sc.a((byte) 113, var2);
+                  LoginMethod.field_e = sc.a((byte) 113, var2);
                 }
                 var2 = MusicPatch.a("searching_for_opponents_plural", (byte) -45);
                 if (null != var2) {
@@ -776,11 +776,11 @@ final class on {
                 }
                 var2 = MusicPatch.a("hide_players_in_xs_game", (byte) -45);
                 if (null != var2) {
-                  rc.field_o = sc.a((byte) 89, var2);
+                  LoadingTracker.field_o = sc.a((byte) 89, var2);
                 }
                 var2 = MusicPatch.a("show_players_in_xs_game", (byte) -45);
                 if (null != var2) {
-                  rd.field_f = sc.a((byte) 107, var2);
+                  FixedViewResizeListener.field_f = sc.a((byte) 107, var2);
                 }
                 var2 = MusicPatch.a("connecting_to_friend_server_twoline", (byte) -45);
                 if (var2 != null) {
@@ -880,7 +880,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("thisisrunescapeclan", (byte) -45);
                 if (null != var2) {
-                  vh.field_m = sc.a((byte) 102, var2);
+                  UiTheme.field_m = sc.a((byte) 102, var2);
                 }
                 var2 = MusicPatch.a("thisisrunescapeclan_notowner", (byte) -45);
                 if (var2 != null) {
@@ -940,7 +940,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("gameopt_youneedrating", (byte) -45);
                 if (var2 != null) {
-                  to.field_n = sc.a((byte) 111, var2);
+                  SceneWidgetNode.field_n = sc.a((byte) 111, var2);
                 }
                 var2 = MusicPatch.a("gameopt_playerneedsratedgames", (byte) -45);
                 if (null != var2) {
@@ -1038,7 +1038,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("ra_suggestmute", (byte) -45);
                 if (null != var2) {
-                  vd.field_a = sc.a((byte) 108, var2);
+                  TextLine.field_a = sc.a((byte) 108, var2);
                 }
                 var2 = MusicPatch.a("ra_intro", (byte) -45);
                 if (null != var2) {
@@ -1178,7 +1178,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("justplay", (byte) -45);
                 if (null != var2) {
-                  rc.field_n = sc.a((byte) 125, var2);
+                  LoadingTracker.field_n = sc.a((byte) 125, var2);
                 }
                 var2 = MusicPatch.a("justplay_excl", (byte) -45);
                 if (var2 != null) {
@@ -1450,7 +1450,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("year", (byte) -45);
                 if (var2 != null) {
-                  rc.field_g = sc.a((byte) 119, var2);
+                  LoadingTracker.field_g = sc.a((byte) 119, var2);
                 }
                 var2 = MusicPatch.a("monthnames,0", (byte) -45);
                 if (var2 != null) {
@@ -1650,7 +1650,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("create_password_hint", (byte) -45);
                 if (null != var2) {
-                  rm.field_p = sc.a((byte) 120, var2);
+                  WhirlpoolHasher.field_p = sc.a((byte) 120, var2);
                 }
                 var2 = MusicPatch.a("create_password_confirm_tooltip", (byte) -45);
                 if (null != var2) {
@@ -1734,7 +1734,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("create_alert_passcontainsname", (byte) -45);
                 if (var2 != null) {
-                  rg.field_f = sc.a((byte) 125, var2);
+                  TextTableInitializer.field_f = sc.a((byte) 125, var2);
                 }
                 var2 = MusicPatch.a("create_alert_passcontainsemail", (byte) -45);
                 if (null != var2) {
@@ -1810,7 +1810,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("friendlistfull", (byte) -45);
                 if (var2 != null) {
-                  rg.field_e = sc.a((byte) 112, var2);
+                  TextTableInitializer.field_e = sc.a((byte) 112, var2);
                 }
                 var2 = MusicPatch.a("friendlistdupe", (byte) -45);
                 if (var2 != null) {
@@ -1818,7 +1818,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("friendnotfound", (byte) -45);
                 if (var2 != null) {
-                  rd.field_c = sc.a((byte) 126, var2);
+                  FixedViewResizeListener.field_c = sc.a((byte) 126, var2);
                 }
                 var2 = MusicPatch.a("ignorelistfull", (byte) -45);
                 if (null != var2) {
@@ -1856,7 +1856,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("enterignore_del", (byte) -45);
                 if (null != var2) {
-                  wd.field_i = sc.a((byte) 106, var2);
+                  ResizableViewResizeListener.field_i = sc.a((byte) 106, var2);
                 }
                 var2 = MusicPatch.a("text_removed_from_game", (byte) -45);
                 if (null != var2) {
@@ -2196,7 +2196,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("canceldraw", (byte) -45);
                 if (null != var2) {
-                  uh.field_s = sc.a((byte) 93, var2);
+                  ClipState.field_s = sc.a((byte) 93, var2);
                 }
                 var2 = MusicPatch.a("acceptdraw", (byte) -45);
                 if (null != var2) {
@@ -2560,7 +2560,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mp_hidechat", (byte) -45);
                 if (null != var2) {
-                  rm.field_a = sc.a((byte) 119, var2);
+                  WhirlpoolHasher.field_a = sc.a((byte) 119, var2);
                 }
                 var2 = MusicPatch.a("mp_showchat_nounread", (byte) -45);
                 if (var2 != null) {
@@ -2644,11 +2644,11 @@ final class on {
                 }
                 var2 = MusicPatch.a("rating_noratings", (byte) -45);
                 if (null != var2) {
-                  rm.field_d = sc.a((byte) 102, var2);
+                  WhirlpoolHasher.field_d = sc.a((byte) 102, var2);
                 }
                 var2 = MusicPatch.a("rating_rating", (byte) -45);
                 if (null != var2) {
-                  rd.field_d = sc.a((byte) 109, var2);
+                  FixedViewResizeListener.field_d = sc.a((byte) 109, var2);
                 }
                 var2 = MusicPatch.a("rating_played", (byte) -45);
                 if (null != var2) {
@@ -2692,7 +2692,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("members_expansion_price_top", (byte) -45);
                 if (var2 != null) {
-                  vc.field_l = sc.a((byte) 111, var2);
+                  WidgetStyleLayer.field_l = sc.a((byte) 111, var2);
                 }
                 var2 = MusicPatch.a("members_expansion_price_bottom", (byte) -45);
                 if (null != var2) {

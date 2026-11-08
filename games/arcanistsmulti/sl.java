@@ -3,7 +3,7 @@
  */
 final class sl extends ArrayWidgetContainer {
     static String field_R;
-    static kc field_S;
+    static SceneWidget field_S;
     static int[] field_H;
     static String field_N;
     private boolean field_J;

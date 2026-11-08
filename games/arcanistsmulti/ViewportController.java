@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class v {
+final class ViewportController {
     private int field_v;
     private int field_q;
     private int field_o;
@@ -25,7 +25,7 @@ final class v {
     private int field_i;
     private int field_r;
 
-    final FullscreenFocusCanvas a(int param0) {
+    final FullscreenFocusCanvas enterFullscreen(int param0) {
         this.field_j = MusicPatchNode.field_r;
         this.field_r = co.field_c;
         this.field_a.a(this.field_m, this.field_c, 120);
@@ -33,29 +33,29 @@ final class v {
         FullscreenFocusCanvas var2 = CameraFollowTarget.createFullscreenCanvas(0, 0, false, fi.field_d, this.field_c, this.field_m);
         if (param0 > 116) {
           if (var2 == null) {
-            this.a(true);
+            this.restoreWindowedSize(true);
           }
           return var2;
         }
         this.field_b = -0.11936065554618835f;
         if (var2 == null) {
-          this.a(true);
+          this.restoreWindowedSize(true);
         }
         return var2;
     }
 
-    final static kc b(byte param0) {
+    final static SceneWidget b(byte param0) {
         if (param0 <= 112) {
-          v.a((byte) -59, true, false, -83, -46);
+          ViewportController.a((byte) -59, true, false, -83, -46);
           return uc.b(115);
         }
         return uc.b(115);
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean isSizeAllowed(int param0, int param1, int param2) {
         boolean stackIn_13_0 = false;
         if (param2 != -17969) {
-          this.a((byte) 7, -10, -36);
+          this.setMaximumSize((byte) 7, -10, -36);
           if (param0 < this.field_f) {
             return false;
           }
@@ -95,7 +95,7 @@ final class v {
         return false;
     }
 
-    private final void c(byte param0) {
+    private final void applyRequestedSize(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -110,7 +110,7 @@ final class v {
         var2 = this.field_d;
         if (param0 > 82) {
           var3 = this.field_u;
-          if (!this.d((byte) 127)) {
+          if (!this.isFullscreenAvailable((byte) 127)) {
             this.field_l = false;
             return;
           }
@@ -165,9 +165,9 @@ final class v {
           }
           return;
         }
-        this.b(-127, -102, 24);
+        this.setMinimumSize(-127, -102, 24);
         var3Lifetime1 = this.field_u;
-        if (!this.d((byte) 127)) {
+        if (!this.isFullscreenAvailable((byte) 127)) {
           this.field_l = false;
           return;
         }
@@ -261,7 +261,7 @@ final class v {
         return;
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void setWindowedSize(int param0, int param1, byte param2) {
         if (param2 > -23) {
           return;
         }
@@ -269,7 +269,7 @@ final class v {
         this.field_c = param0;
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void setRequestedSize(int param0, int param1, boolean param2) {
         if (!param2) {
           return;
         }
@@ -277,7 +277,7 @@ final class v {
         this.field_u = param0;
     }
 
-    final boolean d(byte param0) {
+    final boolean isFullscreenAvailable(byte param0) {
         int var2 = 40 % ((32 - param0) / 43);
         if (this.field_q > wl.field_K) {
           return false;
@@ -292,13 +292,13 @@ final class v {
         if (param0 == -93) {
           return me.a(param3, param2, param0 + 2097245, param1, param4, false);
         }
-        v.a((byte) -92, false, true, 53, 6);
+        ViewportController.a((byte) -92, false, true, 53, 6);
         return me.a(param3, param2, param0 + 2097245, param1, param4, false);
     }
 
     final boolean b(boolean param0) {
         if (param0) {
-          this.a(-12, -65, (byte) -64);
+          this.setWindowedSize(-12, -65, (byte) -64);
           if (ah.field_c <= 0) {
             return false;
           }
@@ -316,33 +316,33 @@ final class v {
         return false;
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void setMinimumSize(int param0, int param1, int param2) {
         if (param1 == 8110) {
           this.field_f = param2;
           this.field_v = param0;
           return;
         }
-        this.b(38, -64, 88);
+        this.setMinimumSize(38, -64, 88);
         this.field_f = param2;
         this.field_v = param0;
     }
 
-    final void a(boolean param0) {
+    final void restoreWindowedSize(boolean param0) {
         if (!param0) {
           return;
         }
         this.field_a.a(this.field_j, this.field_r, 9);
     }
 
-    v(ViewResizeListener param0) {
+    ViewportController(ViewResizeListener param0) {
         this(640, 480, 1280, 1024, 640, 480, 122, 16, param0);
     }
 
-    final void a(byte param0) {
+    final void update(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         if (param0 != 93) {
-          v.releaseStatics(1);
+          ViewportController.releaseStatics(1);
           if (ProxySocketConnector.field_m != null) {
             return;
           }
@@ -359,7 +359,7 @@ final class v {
             if (this.field_q > wl.field_K) {
               this.field_l = false;
             } else {
-              this.c((byte) 89);
+              this.applyRequestedSize((byte) 89);
             }
             return;
           }
@@ -393,7 +393,7 @@ final class v {
             if (this.field_q > wl.field_K) {
               this.field_l = false;
             } else {
-              this.c((byte) 89);
+              this.applyRequestedSize((byte) 89);
             }
             return;
           }
@@ -425,15 +425,15 @@ final class v {
         field_p = null;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setMaximumSize(byte param0, int param1, int param2) {
         this.field_h = param1;
         this.field_k = param2;
         if (param0 > -14) {
-          this.c((byte) -10);
+          this.applyRequestedSize((byte) -10);
         }
     }
 
-    private v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, ViewResizeListener param8) {
+    private ViewportController(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, ViewResizeListener param8) {
         try {
           this.field_c = 480;
           this.field_h = param3;

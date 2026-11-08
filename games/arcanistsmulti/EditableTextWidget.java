@@ -4,12 +4,12 @@
 class EditableTextWidget extends TextButton {
     private boolean field_R;
     private int field_O;
-    static kc field_S;
+    static SceneWidget field_S;
     private long field_P;
     private int field_N;
     private long field_Q;
     private boolean field_M;
-    static kc field_L;
+    static SceneWidget field_L;
     private int field_H;
     static String field_K;
     private int field_J;
@@ -50,7 +50,7 @@ class EditableTextWidget extends TextButton {
         }
         if (!jf.field_e) {
           if (0 == (1 & ne.field_g)) {
-            var1 = wd.field_d;
+            var1 = ResizableViewResizeListener.field_d;
             if (0 >= var1 &&
               qf.field_d >= 2) {
               System.out.println("No data to pull");
@@ -103,7 +103,7 @@ class EditableTextWidget extends TextButton {
             if (this.field_N != this.field_J) {
               var5.a(param3, (UiComponent) (this), param1, 6600, this.field_N, this.field_J);
             }
-            var6 = qj.b(-26572);
+            var6 = qj.monotonicTimeMillis(-26572);
             if ((-this.field_Q + var6) % 1000L < 500L) {
               var5.a(79, param3, param1, this.field_N, (UiComponent) (this));
             }
@@ -160,7 +160,7 @@ class EditableTextWidget extends TextButton {
                 this.field_N = var6;
               }
             }
-            this.field_Q = qj.b(-26572);
+            this.field_Q = qj.monotonicTimeMillis(-26572);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -215,9 +215,9 @@ class EditableTextWidget extends TextButton {
             LinkButtonPainter.field_j = null;
           }
           bc.field_c = null;
-          if (null != vh.field_a) {
-            vh.field_a.clear(99);
-            vh.field_a = null;
+          if (null != UiTheme.field_a) {
+            UiTheme.field_a.clear(99);
+            UiTheme.field_a = null;
           }
           nk.field_q = null;
           if (ph.field_a != null) {
@@ -283,7 +283,7 @@ class EditableTextWidget extends TextButton {
           this.field_H = param2;
           this.setText(true, param0, false);
           this.field_M = true;
-          this.field_Q = qj.b(-26572);
+          this.field_Q = qj.monotonicTimeMillis(-26572);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "rn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -310,7 +310,7 @@ class EditableTextWidget extends TextButton {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_Q = qj.b(-26572);
+          this.field_Q = qj.monotonicTimeMillis(-26572);
           if (param2 != 60 &&
             param2 != 62) {
             if (param1 >= -120) {
@@ -635,7 +635,7 @@ class EditableTextWidget extends TextButton {
             var5.field_z = eo.readPackedShorts(param1, var5.field_z, 16, 16);
           }
           if (hd.readBitFlag(param1, (byte) 120)) {
-            var5.field_H = ub.a(3, param1, 16, var5.field_H);
+            var5.field_H = ub.readPackedBytes(3, param1, 16, var5.field_H);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_H.length; var7++) {
               if ((var5.field_H[var7] & 255) > var6) {
@@ -712,7 +712,7 @@ class EditableTextWidget extends TextButton {
             stackIn_6_2 = 0;
           }
           this.setCaret(stackIn_5_1, stackIn_6_2);
-          var9 = qj.b(-26572);
+          var9 = qj.monotonicTimeMillis(-26572);
           stackIn_9_1 = !(-this.field_P + var9 >= 250L);
           this.field_R = stackIn_9_1;
           if (this.field_R) {

@@ -14,9 +14,9 @@ final class mc {
         }
     }
 
-    final static kc a(byte param0) {
+    final static SceneWidget a(byte param0) {
         if (param0 != 21) {
-          return (kc) null;
+          return (SceneWidget) null;
         }
         return DebouncedValidator.field_g.field_Cb;
     }

@@ -6,7 +6,7 @@ import java.io.*;
 final class k implements Runnable {
     private int field_s;
     private PlatformTaskDispatcher field_h;
-    static kc field_d;
+    static SceneWidget field_d;
     static CredentialKind field_q;
     private boolean field_g;
     static String field_f;

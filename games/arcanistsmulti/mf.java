@@ -4,7 +4,7 @@
 final class mf {
     static int field_g;
     static int[] field_b;
-    static kc field_d;
+    static SceneWidget field_d;
     static int field_c;
     static String field_f;
     static String field_e;

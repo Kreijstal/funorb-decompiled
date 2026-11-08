@@ -4,7 +4,7 @@
 final class g {
     static Sprite field_a;
     static String field_c;
-    static kc field_g;
+    static SceneWidget field_g;
     static jg[] field_d;
     static IndexedSprite[] field_f;
     static no field_e;
