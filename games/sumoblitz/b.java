@@ -201,7 +201,7 @@ final class b {
               var14.field_k = var14.field_m[0];
               var14.unlink(false);
             } else {
-              IntrusiveNode.reportClientError("A1: " + di.b((byte) 110), (Throwable) null, 0);
+              IntrusiveNode.reportClientError("A1: " + VictoryScreen.b((byte) 110), (Throwable) null, 0);
               kk.a((byte) -120);
             }
           } else {

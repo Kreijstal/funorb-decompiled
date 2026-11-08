@@ -315,7 +315,7 @@ final class dd extends hf implements ai {
         try {
           var4 = (lt) (em.field_d.first(-75));
           while (var4 != null) {
-            cl.a((byte) -97, var4, param1);
+            DroneChargeParticle.a((byte) -97, var4, param1);
             var4 = (lt) (em.field_d.next((byte) 18));
           }
           var5 = (qv) (MenuScreen.field_b.first(109));

@@ -15,7 +15,7 @@ final class jg {
     }
 
     final static void b(int param0, int param1) {
-        pl var2 = as.field_v;
+        pl var2 = InwardSparkParticle.field_v;
         var2.g(param1, 8);
         var2.b((byte) 106, 1);
         if (param0 == 11044) {

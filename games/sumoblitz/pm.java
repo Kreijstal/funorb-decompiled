@@ -12,7 +12,7 @@ final class pm {
         pl var5 = null;
         int var4 = 0;
         try {
-          var5 = as.field_v;
+          var5 = InwardSparkParticle.field_v;
           var5.g(param0, 8);
           var5.position = var5.position + 1;
           var4 = var5.position;

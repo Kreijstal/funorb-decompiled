@@ -14,7 +14,7 @@ final class ss {
     final static void a(PcmStreamMixer param0, byte param1, ResourceArchive param2, int param3) {
         try {
           gi.field_i = vm.a(-32) * param3 / 1000;
-          MenuScreen.a(param2, 100);
+          MenuScreen.initializeLogoAudio(param2, 100);
           wq.a(false, param2);
           lq.a(param2, -84);
           qt.b(true);
@@ -31,7 +31,7 @@ final class ss {
     final static void a(int param0, int param1, qv param2) {
         pl var3 = null;
         try {
-          var3 = as.field_v;
+          var3 = InwardSparkParticle.field_v;
           if (param1 != 1000) {
             restartLevelText = (String) null;
           }

@@ -1093,7 +1093,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("tocustomersupport", (byte) -23);
                 if (null != var2) {
-                  eq.toCustomerSupportText = MusicVoice.a(param0 - 7, var2);
+                  PowerupTrailParticle.toCustomerSupportText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("changedisplayname", (byte) -23);
                 if (null != var2) {
@@ -1544,7 +1544,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("login_create_tooltip", (byte) -23);
                 if (var2 != null) {
-                  aj.createYourOwnFreeText = MusicVoice.a(0, var2);
+                  DroneDebris.createYourOwnFreeText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_justplay_tooltip", (byte) -23);
                 if (null != var2) {
@@ -1680,7 +1680,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("create_alert_invalidemail", (byte) -23);
                 if (null != var2) {
-                  aj.pleaseCheckIfAddressText = MusicVoice.a(0, var2);
+                  DroneDebris.pleaseCheckIfAddressText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_email_unavailable", (byte) -23);
                 if (var2 != null) {
@@ -1832,7 +1832,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("waitingfor_levels", (byte) -23);
                 if (var2 != null) {
-                  nm.waitingForLevelsText = MusicVoice.a(0, var2);
+                  ArenaPad.waitingForLevelsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_extradata", (byte) -23);
                 if (var2 != null) {
@@ -2630,19 +2630,19 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("reconnect_lost_seq,0", (byte) -23);
                 if (null != var2) {
-                  fe.field_S[0] = MusicVoice.a(0, var2);
+                  PlayerDrone.reconnectStatusFrames[0] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_lost_seq,1", (byte) -23);
                 if (var2 != null) {
-                  fe.field_S[1] = MusicVoice.a(0, var2);
+                  PlayerDrone.reconnectStatusFrames[1] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_lost_seq,2", (byte) -23);
                 if (var2 != null) {
-                  fe.field_S[2] = MusicVoice.a(0, var2);
+                  PlayerDrone.reconnectStatusFrames[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_lost_seq,3", (byte) -23);
                 if (null != var2) {
-                  fe.field_S[3] = MusicVoice.a(0, var2);
+                  PlayerDrone.reconnectStatusFrames[3] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_lost", (byte) -23);
                 if (null != var2) {

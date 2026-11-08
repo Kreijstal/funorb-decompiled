@@ -11,7 +11,7 @@ final class ng extends ShaderEffect {
     static String noHighscoresText;
 
     final void a(boolean param0, byte param1) {
-        this.field_b.a((byte) -83, lf.field_e, vi.field_v);
+        this.field_b.a((byte) -83, lf.field_e, SlowBurstParticle.field_v);
         if (param1 > -71) {
           this.field_i = (ef[]) null;
         }
@@ -36,7 +36,7 @@ final class ng extends ShaderEffect {
         if (param0 > -9) {
           return;
         }
-        jp.b((byte) 126);
+        LevelCompleteUpgradeScreen.b((byte) 126);
     }
 
     final void c(boolean param0) {
@@ -53,23 +53,23 @@ final class ng extends ShaderEffect {
           this.field_b.a(13754, lf.field_c);
           this.field_b.l(0);
           if (!this.field_g) {
-            this.field_b.a((byte) -83, vi.field_v, vi.field_v);
+            this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
             this.field_b.a(jq.field_a, 0, 0);
             this.field_b.g(2, -117);
-            this.field_b.a((byte) -83, vi.field_v, vi.field_v);
+            this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
             this.field_b.a(jq.field_a, 0, 0);
             this.field_b.a(ta.field_a, 1, 0);
             this.field_b.a(jq.field_a, 0, true);
             this.field_b.a((ed) null, 110);
           } else {
-            this.field_b.a((byte) -83, vi.field_v, vi.field_v);
+            this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
             this.field_b.a(jq.field_a, 0, 0);
             this.field_b.a(jq.field_a, 0, true);
           }
           this.field_b.g(0, -126);
           this.field_h = false;
         }
-        this.field_b.a((byte) -83, vi.field_v, vi.field_v);
+        this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -259,7 +259,7 @@ final class ng extends ShaderEffect {
             var6.a((byte) 79, 1024);
             this.field_b.a(ip.field_y, 28880);
             if (!this.field_g) {
-              this.field_b.a((byte) -83, vi.field_v, lf.field_e);
+              this.field_b.a((byte) -83, SlowBurstParticle.field_v, lf.field_e);
               this.field_b.a(ta.field_a, 0, param1 ^ 20186);
               this.field_b.g(2, param1 - 20295);
               this.field_b.a((byte) -83, lf.field_e, cv.field_F);

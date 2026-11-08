@@ -249,7 +249,7 @@ final class pe extends WidgetContainer implements ai {
           bl.field_a = SpriteData.a(param3, "", "bounceup");
           uj.field_c = SpriteData.b(param3, "", "powerups");
           df.field_d = SpriteData.a(param3, "", "particle");
-          cl.field_v = SpriteData.b(param3, "", "particles");
+          DroneChargeParticle.field_v = SpriteData.b(param3, "", "particles");
           kq.field_T = SpriteData.a(param3, "", "particle_alpha");
           dq.field_v = SpriteData.b(param3, "", "particles_alpha");
           kf.field_w = SpriteData.b(param3, "", "particle_ring");
@@ -275,7 +275,7 @@ final class pe extends WidgetContainer implements ai {
           ei.field_b = SpriteData.b(param3, "", "attractor");
           rs.field_e = SpriteData.a(param3, "", "bouncer");
           kq.field_S = SpriteData.b(param3, "", "landmine");
-          nn.field_a = SpriteData.b(param3, "", "repeller");
+          ByteArrayStorage.field_a = SpriteData.b(param3, "", "repeller");
           we.field_C = SpriteData.b(param3, "", "accelerator");
           pc.field_b = SpriteData.b(param3, "", "teleporter");
           mc.field_F = SpriteData.b(param3, "", "ice");

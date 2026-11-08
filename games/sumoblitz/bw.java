@@ -39,7 +39,7 @@ final class bw extends qt {
             var7 = up.field_c;
             wo.a(var7, 100, var6, 0, 1, var5, 250, 200, 1, true);
             if (this.field_a == var4) {
-              be.field_t.a(vd.field_a[var4], -1, -16777216, 258, var3_int + 125 - 4, 0);
+              ForceFieldRingEffect.field_t.a(vd.field_a[var4], -1, -16777216, 258, var3_int + 125 - 4, 0);
             } else {
               hc.field_e.a(vd.field_a[var4], -1, -16777216, 260, 125 + var3_int, 0);
             }
@@ -102,7 +102,7 @@ final class bw extends qt {
           }
           var2++;
         }
-        tl.a((byte) -46);
+        PowerupPickup.releaseSpriteDecoderArrays((byte) -46);
         return var1;
     }
 

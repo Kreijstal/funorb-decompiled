@@ -44,7 +44,7 @@ final class sk {
             var19 = var22;
             var18 = var19;
             var2 = var18;
-            ab.field_b = aj.a((byte) -121, var22, false);
+            ab.field_b = DroneDebris.storeByteArray((byte) -121, var22, false);
           }
           var23 = ab.a(false, ab.field_b, 0);
           var20 = var23;
@@ -117,22 +117,22 @@ final class sk {
           var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param2);
           jaggl.OpenGL.glShaderSourceARB(var4_long, param3);
           jaggl.OpenGL.glCompileShaderARB(var4_long);
-          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, cl.field_z, 0);
+          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, DroneChargeParticle.field_z, 0);
           if (param1) {
             stackIn_2_0 = (mk) null;
             return stackIn_2_0;
           }
-          if (cl.field_z[0] == 0) {
-            if (cl.field_z[0] == 0) {
+          if (DroneChargeParticle.field_z[0] == 0) {
+            if (DroneChargeParticle.field_z[0] == 0) {
               System.out.println("Shader compile failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, cl.field_z, 1);
-            if (cl.field_z[1] > 1) {
-              var10 = new byte[cl.field_z[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var4_long, cl.field_z[1], cl.field_z, 0, var10, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, DroneChargeParticle.field_z, 1);
+            if (DroneChargeParticle.field_z[1] > 1) {
+              var10 = new byte[DroneChargeParticle.field_z[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var4_long, DroneChargeParticle.field_z[1], DroneChargeParticle.field_z, 0, var10, 0);
               System.out.println(new String(var10));
             }
-            if (0 == cl.field_z[0]) {
+            if (0 == DroneChargeParticle.field_z[0]) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               stackIn_13_0 = null;
               return (mk) (stackIn_13_0);
@@ -187,7 +187,7 @@ final class sk {
             !this.field_a.a(io.field_g, ps.field_c, 6)) {
             return;
           }
-          as.f(23369);
+          InwardSparkParticle.f(23369);
           if (!this.field_g) {
             this.field_d = new ru[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {

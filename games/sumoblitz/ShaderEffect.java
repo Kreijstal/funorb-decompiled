@@ -92,7 +92,7 @@ abstract class ShaderEffect {
             stackIn_4_0 = 7681;
             return stackIn_4_0;
           }
-          if (param1 == vi.field_v) {
+          if (param1 == SlowBurstParticle.field_v) {
             stackIn_16_0 = 8448;
             return stackIn_16_0;
           }

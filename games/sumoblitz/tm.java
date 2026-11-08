@@ -31,7 +31,7 @@ final class tm implements mh {
           RuntimeException var15_ref = null;
           try {
             ig.field_a = new pl(param3);
-            as.field_v = new pl(param8);
+            InwardSparkParticle.field_v = new pl(param8);
             ql.field_v = param5;
             vp.field_a = param7;
             jm.field_b = param13;

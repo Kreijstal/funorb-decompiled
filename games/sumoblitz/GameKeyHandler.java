@@ -97,7 +97,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static void a(ah param0, int param1) {
+    final static void a(Drone param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -108,16 +108,16 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           return;
         }
         try {
-          var2_int = param0.field_C;
-          var3 = param0.field_z;
-          var4 = -param0.field_E;
-          var5 = param0.field_A;
+          var2_int = param0.xQ8;
+          var3 = param0.yQ8;
+          var4 = -param0.velocityXQ8;
+          var5 = param0.velocityYQ8;
           if (param1 != -1) {
             field_a = (id) null;
           }
           var6 = 1;
-          var7 = fi.a(5, he.field_o, (byte) -96);
-          bj.field_b.addLast((IntrusiveNode) (new tl(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
+          var7 = ExpandingRingEffect.nextRandomInt(5, he.field_o, (byte) -96);
+          bj.field_b.addLast((IntrusiveNode) (new PowerupPickup(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

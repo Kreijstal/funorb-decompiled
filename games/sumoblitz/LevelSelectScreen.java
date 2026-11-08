@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tr extends MenuScreen {
+final class LevelSelectScreen extends MenuScreen {
     static jj field_j;
     private int field_i;
 
-    final void a(int param0, GraphicsToolkit param1, int param2) {
+    final void render(int opacity, GraphicsToolkit toolkit, int guard) {
         int stackIn_4_0 = 0;
         ToolkitSprite stackIn_30_0 = null;
         int stackIn_30_1 = 0;
@@ -37,11 +37,11 @@ final class tr extends MenuScreen {
         int var9Lifetime1;
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4_int = param0 << 24;
-          wo.a(up.field_c, 410, -5, var4_int, 3, param1, 650, 35, 1, true);
-          be.field_t.a(mm.field_g.toUpperCase(), var4_int | 5023231, -1, 90, 320, 0);
+          var4_int = opacity << 24;
+          wo.a(up.field_c, 410, -5, var4_int, 3, toolkit, 650, 35, 1, true);
+          ForceFieldRingEffect.field_t.a(mm.field_g.toUpperCase(), var4_int | 5023231, -1, 90, 320, 0);
           hc.field_e.a(mm.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
-          wo.a(up.field_c, 60, 44, var4_int, 3, param1, 325, 370, 1, true);
+          wo.a(up.field_c, 60, 44, var4_int, 3, toolkit, 325, 370, 1, true);
           MusicCrossfadeStream.field_q[0].a(80.0f, 402.0f, 1600, 0, 1, 0, 2);
           qv.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.field_f), (byte) -110, -1);
           uq.field_a.a(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.field_f), (byte) -35, -1);
@@ -63,11 +63,11 @@ final class tr extends MenuScreen {
           for (var8 = 108; -120 + rl.field_k > var8; var8 += 52) {
             for (var9 = 44; ArchiveCatalog.field_c - 96 > var9; var9 += 112) {
               if (var7 == 1 + bl.field_e &&
-                param0 >= 250 &&
+                opacity >= 250 &&
                 !MusicPatchEnvelope.a(8230, 25)) {
-                param1.aa(var9, var8, 100, 42, var6 << 24 | 5023231, 1);
+                toolkit.aa(var9, var8, 100, 42, var6 << 24 | 5023231, 1);
               }
-              wo.a(up.field_c, 42, var9, var4_int, 3, param1, 100, var8, 1, true);
+              wo.a(up.field_c, 42, var9, var4_int, 3, toolkit, 100, var8, 1, true);
               if (var7 <= bl.field_e + 1 &&
                 var7 < 25) {
                 qv.field_k.a(Integer.toString(var7 + 1), 5023231 | var4_int, -1, 28 + var8, var9 + 48, 0);
@@ -78,23 +78,23 @@ final class tr extends MenuScreen {
               var7++;
             }
           }
-          super.a(param0, param1, param2);
+          super.render(opacity, toolkit, guard);
           if (this.field_i != -1) {
             if (1 + bl.field_e < this.field_i) {
               return;
             }
             var8Lifetime1 = 5 + this.field_i % 5 * 112 + 44;
             var9Lifetime1 = this.field_i / 5 * 52 + 108;
-            var10_ref_ha = param1;
+            var10_ref_ha = toolkit;
             var11 = -25 + var8Lifetime1;
             var12 = -21 + var9Lifetime1;
             var13 = up.field_c;
             wo.a(var13, 84, var11, 0, 1, var10_ref_ha, 142, var12, 1, true);
             if (wm.field_f[this.field_i]) {
               gt.field_db.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
-              LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), param2 + 2355);
+              LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), guard + 2355);
               gt.field_db.a(ps.scoreText.toLowerCase() + go.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
-              LegacyOpenGlEffect.field_c.a(ps.scoreText.toLowerCase() + go.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, param2 + 2355);
+              LegacyOpenGlEffect.field_c.a(ps.scoreText.toLowerCase() + go.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard + 2355);
               var10 = 0;
               if (up.field_g[this.field_i]) {
                 var10++;
@@ -129,31 +129,31 @@ final class tr extends MenuScreen {
               return;
             }
             gt.field_db.a(bi.notCompletedText, var4_int | 5023231, -1, var9Lifetime1 + 20, -8 + (var8Lifetime1 + 50), 0);
-            LegacyOpenGlEffect.field_c.a(bi.notCompletedText, var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, param2 ^ -2355);
+            LegacyOpenGlEffect.field_c.a(bi.notCompletedText, var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard ^ -2355);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_42_0 = var4;
-          stackIn_42_1 = new StringBuilder().append("tr.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_42_1 = new StringBuilder().append("tr.B(").append(opacity).append(',');
+          if (toolkit == null) {
             stackIn_43_2 = "null";
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void b(int param0) {
+    final void update(int param0) {
         int var5 = 0;
         int var2;
         int var3;
         int var4;
         int var6;
         var6 = Sumoblitz.field_L ? 1 : 0;
-        super.b(param0 + 0);
+        super.update(param0 + 0);
         var2 = (-44 + ko.field_p) / 112;
         var3 = (pi.field_e - 108) / 52;
         var4 = 5 * var3 + var2;
@@ -195,14 +195,14 @@ final class tr extends MenuScreen {
         }
     }
 
-    public tr() {
+    public LevelSelectScreen() {
         super(7);
         this.field_i = -1;
     }
 
     public static void releaseStatics(int param0) {
         if (param0 != 1) {
-          tr.releaseStatics(-101);
+          LevelSelectScreen.releaseStatics(-101);
         }
         field_j = null;
     }

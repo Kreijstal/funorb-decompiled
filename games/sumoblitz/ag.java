@@ -130,9 +130,9 @@ abstract class ag {
         }
         String var1 = wh.a((byte) -72);
         no.field_a = new cv(var1, (String) null, true, false, false);
-        rf.field_a.a((byte) 114, vi.field_y);
-        vi.field_y.b((byte) -118, no.field_a);
-        vi.field_y.f((byte) -128);
+        rf.field_a.a((byte) 114, SlowBurstParticle.field_y);
+        SlowBurstParticle.field_y.b((byte) -118, no.field_a);
+        SlowBurstParticle.field_y.f((byte) -128);
     }
 
     final static void a(int param0, int param1) {

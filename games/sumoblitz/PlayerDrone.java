@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fe extends ah {
-    static String[] field_S;
+final class PlayerDrone extends Drone {
+    static String[] reconnectStatusFrames;
     static int field_T;
 
-    fe(int param0, int param1) {
-        super(0, 0, param0, param1);
+    PlayerDrone(int xQ8, int yQ8) {
+        super(0, 0, xQ8, yQ8);
     }
 
     final static dj a(int param0, PcmSample param1) {
@@ -35,18 +35,18 @@ final class fe extends ah {
         }
     }
 
-    public static void n(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -63) {
           PcmSample var2 = (PcmSample) null;
-          fe.a(44, (PcmSample) null);
-          field_S = null;
+          PlayerDrone.a(44, (PcmSample) null);
+          reconnectStatusFrames = null;
           return;
         }
-        field_S = null;
+        reconnectStatusFrames = null;
     }
 
     static {
-        field_S = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
+        reconnectStatusFrames = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
         field_T = 10;
     }
 }

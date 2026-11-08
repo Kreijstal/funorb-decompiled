@@ -29,12 +29,12 @@ final class InstrumentNoteMask extends IntrusiveNode {
         }
         if (param0 == -8) {
           var4 = new Sprite(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], var3);
-          tl.a((byte) -59);
+          PowerupPickup.releaseSpriteDecoderArrays((byte) -59);
           return var4;
         }
         InstrumentNoteMask.c((byte) -8);
         var4Lifetime1 = new Sprite(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], var3);
-        tl.a((byte) -59);
+        PowerupPickup.releaseSpriteDecoderArrays((byte) -59);
         return var4Lifetime1;
     }
 

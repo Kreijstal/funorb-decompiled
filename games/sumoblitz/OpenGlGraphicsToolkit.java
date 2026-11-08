@@ -1530,7 +1530,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           if (this.field_l == lh.field_n) {
             jaggl.OpenGL.glBlendFunc(1, 1);
           } else {
-            if (gb.field_t == this.field_l) {
+            if (ShrinkingRingEffect.field_t == this.field_l) {
               jaggl.OpenGL.glBlendFunc(774, 1);
             }
           }

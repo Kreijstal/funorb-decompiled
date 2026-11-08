@@ -178,7 +178,7 @@ abstract class en {
         }
         for (var3Lifetime1 = param0; var3Lifetime1 < 255; var3Lifetime1++) {
           var4 = 255 - var3Lifetime1;
-          var5 = fi.a(var4, var2, (byte) -96);
+          var5 = ExpandingRingEffect.nextRandomInt(var4, var2, (byte) -96);
           var6 = this.field_f[var5];
           this.field_f[var5] = this.field_f[var4];
           this.field_f[var4 + 256] = (short) var6;

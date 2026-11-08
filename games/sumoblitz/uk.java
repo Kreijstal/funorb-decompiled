@@ -77,7 +77,7 @@ final class uk extends gt implements ai {
                 this.b((byte) -123, var6);
                 return;
               }
-              var6.a(eq.toCustomerSupportText, 9, true);
+              var6.a(PowerupTrailParticle.toCustomerSupportText, 9, true);
             }
           } else {
             if (param2.field_c) {

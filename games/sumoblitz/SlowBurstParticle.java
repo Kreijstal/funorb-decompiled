@@ -1,63 +1,63 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vi extends TimedSceneEffect {
-    private int field_w;
+final class SlowBurstParticle extends TimedSceneEffect {
+    private int velocityXQ8;
     static tg field_v;
-    private int field_t;
-    private int field_x;
+    private int initialLifetime;
+    private int velocityYQ8;
     static int[] field_z;
     boolean field_u;
     static dc field_y;
-    private int field_s;
+    private int textureKind;
 
     final static void e(int param0) {
         od.a(5178);
         rd.a(param0, param0 - 31);
     }
 
-    final boolean a(int param0) {
+    final boolean updateAndIsExpired(int param0) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
-        if (this.field_t <= this.field_p) {
+        if (this.initialLifetime <= this.remainingTicks) {
         } else {
-          this.field_k = this.field_k + this.field_w;
-          this.field_o = this.field_o + this.field_x;
-          this.field_w = this.field_w * 251 / 300;
-          this.field_x = this.field_x * 251 / 300;
-          if (this.field_w >= 0) {
-            this.field_w = this.field_w + 1;
+          this.x = this.x + this.velocityXQ8;
+          this.y = this.y + this.velocityYQ8;
+          this.velocityXQ8 = this.velocityXQ8 * 251 / 300;
+          this.velocityYQ8 = this.velocityYQ8 * 251 / 300;
+          if (this.velocityXQ8 >= 0) {
+            this.velocityXQ8 = this.velocityXQ8 + 1;
           } else {
-            this.field_w = this.field_w - 1;
+            this.velocityXQ8 = this.velocityXQ8 - 1;
           }
-          if (this.field_x >= 0) {
-            this.field_x = this.field_x + 1;
+          if (this.velocityYQ8 >= 0) {
+            this.velocityYQ8 = this.velocityYQ8 + 1;
           } else {
-            this.field_x = this.field_x - 1;
+            this.velocityYQ8 = this.velocityYQ8 - 1;
           }
         }
         if (param0 != -2567) {
           return true;
         }
-        return super.a(-2567);
+        return super.updateAndIsExpired(-2567);
     }
 
     final static boolean f(int param0) {
         if (null != kd.field_a[0]) {
           return false;
         }
-        si.a(135, 38, 148, 2, new int[]{0, 23, 24, 3, 2, 14, 11}, 0, 492);
-        si.a(150, 38, 170, param0 - 3, new int[]{1, 28, 12, 13, 3, 7}, 1, 470);
-        si.a(150, 38, 170, param0 - 3, new int[]{12, 13, 27, 4, param0}, 8, 470);
-        si.a(400, 38, 150, 2, new int[]{15, 5}, 2, 490);
-        si.a(430, 38, 170, 2, new int[]{18, 6, 17}, 3, 470);
-        si.a(430, 38, 170, 2, new int[]{15, 5}, 4, 470);
-        si.a(430, 38, 170, 2, new int[]{2, 5}, 5, 470);
-        si.a(200, 96, 170, param0 - 3, new int[]{15, 16}, 6, 470);
-        si.a(390, 38, 170, 2, new int[]{29, 5}, 7, 468);
-        si.a(400, 38, 200, 2, new int[]{30, 6}, 9, 440);
-        si.a(370, 38, 200, 2, new int[]{31, 32}, 10, 440);
-        si.a(240, 38, 200, 2, new int[]{28, 33}, 11, 440);
-        si.a(370, 38, 200, 2, new int[]{33}, 12, 440);
+        DirectByteArrayStorage.a(135, 38, 148, 2, new int[]{0, 23, 24, 3, 2, 14, 11}, 0, 492);
+        DirectByteArrayStorage.a(150, 38, 170, param0 - 3, new int[]{1, 28, 12, 13, 3, 7}, 1, 470);
+        DirectByteArrayStorage.a(150, 38, 170, param0 - 3, new int[]{12, 13, 27, 4, param0}, 8, 470);
+        DirectByteArrayStorage.a(400, 38, 150, 2, new int[]{15, 5}, 2, 490);
+        DirectByteArrayStorage.a(430, 38, 170, 2, new int[]{18, 6, 17}, 3, 470);
+        DirectByteArrayStorage.a(430, 38, 170, 2, new int[]{15, 5}, 4, 470);
+        DirectByteArrayStorage.a(430, 38, 170, 2, new int[]{2, 5}, 5, 470);
+        DirectByteArrayStorage.a(200, 96, 170, param0 - 3, new int[]{15, 16}, 6, 470);
+        DirectByteArrayStorage.a(390, 38, 170, 2, new int[]{29, 5}, 7, 468);
+        DirectByteArrayStorage.a(400, 38, 200, 2, new int[]{30, 6}, 9, 440);
+        DirectByteArrayStorage.a(370, 38, 200, 2, new int[]{31, 32}, 10, 440);
+        DirectByteArrayStorage.a(240, 38, 200, 2, new int[]{28, 33}, 11, 440);
+        DirectByteArrayStorage.a(370, 38, 200, 2, new int[]{33}, 12, 440);
         t.field_q = (int)((double)ma.field_b.a(GameClientShell.field_u[12], 0) * 1.5);
         int var1 = (int)((double)ma.field_b.a(GameClientShell.field_u[13], 0) * 1.5);
         if (t.field_q < var1) {
@@ -72,23 +72,23 @@ final class vi extends TimedSceneEffect {
         field_z = null;
         field_v = null;
         if (!param0) {
-          vi.c((byte) 28);
+          SlowBurstParticle.c((byte) 28);
         }
     }
 
-    final void a(GraphicsToolkit param0, int param1) {
+    final void render(GraphicsToolkit toolkit, int guard) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.field_s == 0) {
-            uc.field_a.a((float)(this.field_k >> 8), (float)(this.field_o >> 8), 2048, 0, 3, 16777215 + (this.field_p * (256 / this.field_t) << 24), 1);
+          if (this.textureKind == 0) {
+            uc.field_a.a((float)(this.x >> 8), (float)(this.y >> 8), 2048, 0, 3, 16777215 + (this.remainingTicks * (256 / this.initialLifetime) << 24), 1);
           } else {
-            im.field_a.a((float)(this.field_k >> 8), (float)(this.field_o >> 8), 8192, 0, 0, (256 / this.field_t * this.field_p << 24) + this.field_q, 1);
+            im.field_a.a((float)(this.x >> 8), (float)(this.y >> 8), 8192, 0, 0, (256 / this.initialLifetime * this.remainingTicks << 24) + this.color, 1);
           }
-          if (param1 > -121) {
+          if (guard > -121) {
             field_v = (tg) null;
           }
           return;
@@ -97,21 +97,21 @@ final class vi extends TimedSceneEffect {
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
           stackIn_8_1 = new StringBuilder().append("vi.C(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    vi(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        super(param0, param1, param2, param3);
-        this.field_s = param6;
-        this.field_x = param5;
-        this.field_t = param0;
-        this.field_w = param4;
+    SlowBurstParticle(int lifetimeTicks, int xQ8, int yQ8, int color, int velocityXQ8, int velocityYQ8, int textureKind) {
+        super(lifetimeTicks, xQ8, yQ8, color);
+        this.textureKind = textureKind;
+        this.velocityYQ8 = velocityYQ8;
+        this.initialLifetime = lifetimeTicks;
+        this.velocityXQ8 = velocityXQ8;
     }
 
     final static void c(byte param0) {
@@ -165,11 +165,11 @@ final class vi extends TimedSceneEffect {
             }
             tn.b(var4, -2147483648, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
-              nm.a(var15, (byte) 61);
+              ArenaPad.a(var15, (byte) 61);
               if (var6_intLifetime1 == 0) {
-                oc.a(bb.field_l, qk.field_U, true, var6_intLifetime1, sd.field_f, ch.field_d);
+                oc.a(ReassignUpgradesScreen.field_l, qk.field_U, true, var6_intLifetime1, sd.field_f, ch.field_d);
               } else {
-                oc.a(bb.field_l, qk.field_U, true, var6_intLifetime1, sd.field_f, ch.field_d);
+                oc.a(ReassignUpgradesScreen.field_l, qk.field_U, true, var6_intLifetime1, sd.field_f, ch.field_d);
               }
             }
             qr.a(13136, var5);

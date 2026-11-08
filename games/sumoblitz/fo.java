@@ -39,7 +39,7 @@ final class fo extends WidgetContainer implements ai {
           } else {
             if (param2 != this.field_B) {
               if (this.field_C == param2) {
-                vi.e(4);
+                SlowBurstParticle.e(4);
               }
             } else {
               rv.a((byte) 114);
@@ -81,7 +81,7 @@ final class fo extends WidgetContainer implements ai {
         this.field_B.a(-112, -var3 + this.field_q >> 1, -(var2 * 2) + this.field_p - 78, 30, var3);
         this.field_A.field_o = (qm) (this);
         this.field_B.field_o = (qm) (this);
-        this.field_B.field_t = aj.createYourOwnFreeText;
+        this.field_B.field_t = DroneDebris.createYourOwnFreeText;
         this.field_C.field_o = (qm) (this);
         this.field_C.field_t = hg.playTheGameWithoutText;
         this.a(this.field_A, 120);

@@ -54,8 +54,8 @@ final class ea {
         try {
           rf.field_a.a((byte) -34);
           no.field_a = new cv(ac.field_F, (String) null, pg.field_a, param3, param1);
-          vi.field_y = new dc(rf.field_a, no.field_a);
-          rf.field_a.a((byte) 104, vi.field_y);
+          SlowBurstParticle.field_y = new dc(rf.field_a, no.field_a);
+          rf.field_a.a((byte) 104, SlowBurstParticle.field_y);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -104,7 +104,7 @@ final class ea {
     }
 
     final static void a(ResourceArchive param0, boolean param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
-        ut.field_o = aj.a(false, "");
+        ut.field_o = DroneDebris.a(false, "");
         ut.field_o.a(113, false);
         da.a(param4, param3, 17474, param0);
         if (param2 < 20) {

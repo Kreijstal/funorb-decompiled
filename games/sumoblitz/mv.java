@@ -276,7 +276,7 @@ final class mv extends da {
           !param4) {
           this.field_f.a((byte) -83, lf.field_e, lf.field_e);
         } else {
-          this.field_f.a((byte) -83, vi.field_v, lf.field_e);
+          this.field_f.a((byte) -83, SlowBurstParticle.field_v, lf.field_e);
           this.field_f.a(mm.field_h, 0, 0);
           this.field_f.a(false, param3);
         }

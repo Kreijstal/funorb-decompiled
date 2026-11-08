@@ -89,7 +89,7 @@ final class iu implements mh {
           if (param0 != -1) {
             field_e = 23;
           }
-          var3 = as.field_v;
+          var3 = InwardSparkParticle.field_v;
           var3.g(param2, param0 ^ -9);
           var3.b((byte) 85, param1.field_n);
           var3.b((byte) 23, param1.field_l);

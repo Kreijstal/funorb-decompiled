@@ -69,9 +69,9 @@ final class vs {
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;
-        ub var5_ref_ub = null;
+        DelayedInboundPacket var5_ref_ub = null;
         int var5 = 0;
-        ub var6 = null;
+        DelayedInboundPacket var6 = null;
         int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
@@ -82,19 +82,19 @@ final class vs {
           var2_long = wq.a(-45);
           if (0 != jo.field_c &&
             lq.field_b < 0) {
-            var5_ref_ub = (ub) (un.field_b.first(-99));
+            var5_ref_ub = (DelayedInboundPacket) (un.field_b.first(-99));
             if (var5_ref_ub != null &&
-              var2_long > var5_ref_ub.field_m) {
+              var2_long > var5_ref_ub.deliveryTimeMillis) {
               var5_ref_ub.unlink(false);
-              gu.field_d = var5_ref_ub.field_k.length;
+              gu.field_d = var5_ref_ub.payload.length;
               ig.field_a.position = 0;
               for (var6_int = 0; var6_int < gu.field_d; var6_int++) {
-                ig.field_a.payload[var6_int] = var5_ref_ub.field_k[var6_int];
+                ig.field_a.payload[var6_int] = var5_ref_ub.payload[var6_int];
               }
               li.field_r = vb.field_I;
               vb.field_I = ur.field_Q;
               ur.field_Q = iw.field_a;
-              iw.field_a = var5_ref_ub.field_l;
+              iw.field_a = var5_ref_ub.opcode;
               return true;
             }
           }
@@ -140,9 +140,9 @@ final class vs {
                 var5 = 0;
               }
             }
-            var6 = new ub((long)var5 + var2_long, lq.field_b, new byte[gu.field_d]);
+            var6 = new DelayedInboundPacket((long)var5 + var2_long, lq.field_b, new byte[gu.field_d]);
             for (var7 = 0; gu.field_d > var7; var7++) {
-              var6.field_k[var7] = ig.field_a.payload[var7];
+              var6.payload[var7] = ig.field_a.payload[var7];
             }
             un.field_b.addLast((IntrusiveNode) (var6), (byte) 39);
             lq.field_b = -1;

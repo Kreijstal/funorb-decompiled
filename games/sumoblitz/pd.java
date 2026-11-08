@@ -32,7 +32,7 @@ final class pd extends IntrusiveNode {
           if (param0 != -65) {
             field_m = (hv) null;
           }
-          var3 = as.field_v;
+          var3 = InwardSparkParticle.field_v;
           var3.g(param1, 8);
           var3.b((byte) 103, 5);
           var3.b((byte) 46, 0);

@@ -19,7 +19,7 @@ final class jl {
         if (param0 >= -19) {
           jl.a(0, false);
         }
-        stackIn_7_0 = (25 > oh.field_e) && (aa.field_a[0] != null) && (aa.field_a[0].a((byte) 115));
+        stackIn_7_0 = (25 > oh.field_e) && (aa.field_a[0] != null) && (aa.field_a[0].isActive((byte) 115));
         return stackIn_7_0;
     }
 
@@ -154,11 +154,11 @@ final class jl {
             return false;
           }
         }
-        var4 = vi.field_z[param1] + ic.field_c[param1] + jf.field_f[param1];
+        var4 = SlowBurstParticle.field_z[param1] + ic.field_c[param1] + jf.field_f[param1];
         if (param3 != 98) {
           return true;
         }
-        var5 = vi.field_z[param0] + jf.field_f[param0] + ic.field_c[param0];
+        var5 = SlowBurstParticle.field_z[param0] + jf.field_f[param0] + ic.field_c[param0];
         if (var4 < var5) {
           return true;
         }

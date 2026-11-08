@@ -103,7 +103,7 @@ final class qw {
         ou.a(false, 4, (byte) -24);
     }
 
-    final static void a(int param0, ah param1) {
+    final static void a(int param0, Drone param1) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -113,31 +113,31 @@ final class qw {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ah var6 = null;
-        ah var7 = null;
+        Drone var6 = null;
+        Drone var7 = null;
         int var3Lifetime1;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 < 57) {
             return;
           }
-          if (param1.field_Q == 0) {
+          if (param1.droneType == 0) {
             return;
           }
           if (jc.b(true) > 20) {
             return;
           }
-          var2_int = fi.a(2, he.field_o, (byte) -96);
+          var2_int = ExpandingRingEffect.nextRandomInt(2, he.field_o, (byte) -96);
           if (1 == var2_int) {
-            var3 = param1.field_Q + 1;
+            var3 = param1.droneType + 1;
             if (6 <= var3) {
               var3 = 5;
             }
-            var6 = uj.a(var3, 26 + fi.a(588, ResourceArchive.field_b, (byte) -96) << 8, param1.field_N, (byte) 84, 26 + fi.a(428, ResourceArchive.field_b, (byte) -96) << 8);
+            var6 = uj.createEnemyDrone(var3, 26 + ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) << 8, param1.variant, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
             oc.a(var6, false);
             return;
           }
-          var3Lifetime1 = param1.field_N;
+          var3Lifetime1 = param1.variant;
           var4 = var3Lifetime1;
           if (var4 == 4) {
             var3Lifetime1 = 0;
@@ -161,7 +161,7 @@ final class qw {
           if (var3Lifetime1 >= 7) {
             var3Lifetime1 = 6;
           }
-          var7 = uj.a(param1.field_Q, 26 + fi.a(588, ResourceArchive.field_b, (byte) -96) << 8, var3Lifetime1, (byte) 84, 26 + fi.a(428, ResourceArchive.field_b, (byte) -96) << 8);
+          var7 = uj.createEnemyDrone(param1.droneType, 26 + ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) << 8, var3Lifetime1, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
           oc.a(var7, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

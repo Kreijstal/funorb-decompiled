@@ -131,7 +131,7 @@ final class up {
                   gi.field_k[var23Lifetime2] = -2147483648;
                 }
                 if (param3) {
-                  eq.field_v[var23Lifetime2] = var27Lifetime1 >> IntrusiveDeque.field_b;
+                  PowerupTrailParticle.field_v[var23Lifetime2] = var27Lifetime1 >> IntrusiveDeque.field_b;
                   ad.field_q[var23Lifetime2] = var28Lifetime1 >> IntrusiveDeque.field_b;
                   field_f[var23Lifetime2] = var29Lifetime1;
                 }
@@ -168,7 +168,7 @@ final class up {
                   var26Lifetime1Lifetime1 = param4.field_s[var23Lifetime2];
                   ua.field_h[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var15 + var24Lifetime1Lifetime1 * var12) >> 16);
                   jf.field_e[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var19 * var26Lifetime1Lifetime1 >> 16);
-                  tl.field_k[var23Lifetime2] = var11 + (var17 * var25Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1 >> 16);
+                  PowerupPickup.field_k[var23Lifetime2] = var11 + (var17 * var25Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1 >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
                     return;

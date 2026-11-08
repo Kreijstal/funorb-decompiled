@@ -82,7 +82,7 @@ abstract class RasterBuffer {
         try {
           if (ut.field_o.a(true) &&
             !param1.equals(ut.field_o.b(66))) {
-            ut.field_o = aj.a(false, param1);
+            ut.field_o = DroneDebris.a(false, param1);
           }
           if (param0 != 1) {
             quitText = (String) null;

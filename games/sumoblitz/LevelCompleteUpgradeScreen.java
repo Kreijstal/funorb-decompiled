@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jp extends MenuScreen {
+final class LevelCompleteUpgradeScreen extends MenuScreen {
     private int field_i;
     static int[] field_k;
     static Sprite[] field_j;
 
-    final void b(int param0) {
+    final void update(int param0) {
         int var2;
         int var3;
         int var3Lifetime1;
-        super.b(param0);
+        super.update(param0);
         var2 = (ko.field_p - 140) / 126;
         if (ko.field_p < 140) {
           var2 = -1;
@@ -291,7 +291,7 @@ final class jp extends MenuScreen {
         }
     }
 
-    final void a(int param0, GraphicsToolkit param1, int param2) {
+    final void render(int opacity, GraphicsToolkit toolkit, int guard) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -308,22 +308,22 @@ final class jp extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          wo.a(up.field_c, 490, -20 + (-(MouseWheelInput.field_b.c() / 2) + 290), param0 << 24, 3, param1, 100 + MouseWheelInput.field_b.c(), -5, 1, true);
-          be.field_t.a(cm.levelCompleteText, 5023231 | param0 << 24, -1, 55, 320, 0);
+          wo.a(up.field_c, 490, -20 + (-(MouseWheelInput.field_b.c() / 2) + 290), opacity << 24, 3, toolkit, 100 + MouseWheelInput.field_b.c(), -5, 1, true);
+          ForceFieldRingEffect.field_t.a(cm.levelCompleteText, 5023231 | opacity << 24, -1, 55, 320, 0);
           hc.field_e.a(cm.levelCompleteText, -1, -1, 55, 320, 0);
-          if (param2 != -2355) {
+          if (guard != -2355) {
             this.field_i = 108;
           }
-          qv.field_k.a(100, param0 << 24 | 5023231, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, param2 - 6432, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + dp.b(jk.field_a, param2 - 21265), (aa) null, 1, 1);
+          qv.field_k.a(100, opacity << 24 | 5023231, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, guard - 6432, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + dp.b(jk.field_a, guard - 21265), (aa) null, 1, 1);
           uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, -8787, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + dp.b(jk.field_a, -23620), (aa) null, 1, 1);
-          gt.field_db.a(200, 5023231 | param0 << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, -8787, wh.clickToAssignPointsText, (aa) null, 1, 0);
-          LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, param2 ^ 11104, wh.clickToAssignPointsText, (aa) null, 1, 0);
-          qv.field_k.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(oc.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), param0 << 24 | 5023231, -1, 180, 320, 0);
+          gt.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, -8787, wh.clickToAssignPointsText, (aa) null, 1, 0);
+          LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, guard ^ 11104, wh.clickToAssignPointsText, (aa) null, 1, 0);
+          qv.field_k.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(oc.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), opacity << 24 | 5023231, -1, 180, 320, 0);
           uq.field_a.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(oc.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
           var4_int = 140;
           var5 = 0;
           while (400 > var4_int) {
-            var6_ref_ha = param1;
+            var6_ref_ha = toolkit;
             var7 = -10 + var4_int;
             if (this.field_i == var5) {
               stackIn_8_0 = IntrusiveDeque.field_c;
@@ -338,35 +338,35 @@ final class jp extends MenuScreen {
               stackIn_14_0 = 0;
             }
             var6 = stackIn_14_0;
-            qv.field_k.a(UpgradeStatNames.names[var5].toUpperCase(), param0 << 24 | 5023231, -1, 225, -4 + (var4_int + 55), param2 + 2355);
-            uq.field_a.a(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, -4 + (var4_int + 55), param2 ^ -2355);
+            qv.field_k.a(UpgradeStatNames.names[var5].toUpperCase(), opacity << 24 | 5023231, -1, 225, -4 + (var4_int + 55), guard + 2355);
+            uq.field_a.a(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, -4 + (var4_int + 55), guard ^ -2355);
             if (var6 != 0) {
               MusicCrossfadeStream.field_q[15 + var5].a(55 + (var4_int - (MusicCrossfadeStream.field_q[var5].b() >> 1)), 200 + (MusicCrossfadeStream.field_q[var5].d() >> 1), 1, 0, 2);
             } else {
               MusicCrossfadeStream.field_q[var5].a(-(MusicCrossfadeStream.field_q[var5].b() >> 1) + 55 + var4_int, 200 + (MusicCrossfadeStream.field_q[var5].d() >> 1), 1, 0, 2);
             }
-            qv.field_k.a(Integer.toString(wt.field_h[var5]), 5023231 | param0 << 24, -16777216, 320, 55 + var4_int, 0);
+            qv.field_k.a(Integer.toString(wt.field_h[var5]), 5023231 | opacity << 24, -16777216, 320, 55 + var4_int, 0);
             uq.field_a.a(Integer.toString(wt.field_h[var5]), -1, -16777216, 320, var4_int + 55, 0);
             var5++;
             var4_int += 126;
           }
-          super.a(param0, param1, param2 ^ 0);
+          super.render(opacity, toolkit, guard ^ 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_22_0 = runtimeException;
-          stackIn_22_1 = new StringBuilder().append("jp.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_22_1 = new StringBuilder().append("jp.B(").append(opacity).append(',');
+          if (toolkit == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    public jp() {
+    public LevelCompleteUpgradeScreen() {
         super(10);
     }
 
@@ -379,14 +379,14 @@ final class jp extends MenuScreen {
           }
           lf.a(-var1 + kr.field_c, (byte) -58);
           if (param0 < 121) {
-            jp.b((byte) -57);
+            LevelCompleteUpgradeScreen.b((byte) -57);
             return;
           }
           return;
         }
         lf.a(0, (byte) -58);
         if (param0 < 121) {
-          jp.b((byte) -57);
+          LevelCompleteUpgradeScreen.b((byte) -57);
           return;
         }
     }

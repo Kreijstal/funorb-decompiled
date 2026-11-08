@@ -1,41 +1,41 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends TimedSceneEffect {
+final class ForceFieldRingEffect extends TimedSceneEffect {
     static ResourceArchive field_s;
-    private boolean field_u;
+    private boolean expanding;
     private static long[] field_v;
     static da field_t;
 
-    final void a(GraphicsToolkit param0, int param1) {
+    final void render(GraphicsToolkit toolkit, int guard) {
         int var3_int = 0;
         int var4 = 0;
         int var4Lifetime1;
         try {
-          var3_int = (int)((double)this.field_p / 100.0 * 255.0);
-          if (param1 > -121) {
+          var3_int = (int)((double)this.remainingTicks / 100.0 * 255.0);
+          if (guard > -121) {
             GraphicsToolkit var5 = (GraphicsToolkit) null;
-            this.a((GraphicsToolkit) null, 95);
+            this.render((GraphicsToolkit) null, 95);
           }
           var3_int += 20;
           var4 = 0;
-          if (this.field_u) {
-            var4Lifetime1 = (int)((double)(100 - this.field_p) / 100.0 * 4096.0);
+          if (this.expanding) {
+            var4Lifetime1 = (int)((double)(100 - this.remainingTicks) / 100.0 * 4096.0);
           } else {
-            var4Lifetime1 = (int)(4096.0 * ((double)this.field_p / 100.0));
+            var4Lifetime1 = (int)(4096.0 * ((double)this.remainingTicks / 100.0));
           }
-          vl.field_c.a((float)this.field_k, (float)this.field_o, var4Lifetime1, 0, 0, (var3_int << 24) + this.field_q, 1);
+          vl.field_c.a((float)this.x, (float)this.y, var4Lifetime1, 0, 0, (var3_int << 24) + this.color, 1);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "be.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "be.C(" + (toolkit != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int glBaseFormat(boolean param0, int param1) {
         if (6407 != param1 &&
           param1 != 34843 &&
           param1 != 34837) {
           if (param0) {
-            be.a(true, -56);
+            ForceFieldRingEffect.glBaseFormat(true, -56);
           }
           if (6408 != param1 &&
             param1 != 34842 &&
@@ -71,9 +71,9 @@ final class be extends TimedSceneEffect {
         field_s = null;
     }
 
-    be(int param0, int param1, int param2, boolean param3) {
-        super(100, param0, param1, param2);
-        this.field_u = param3 ? true : false;
+    ForceFieldRingEffect(int xPixels, int yPixels, int color, boolean expanding) {
+        super(100, xPixels, yPixels, color);
+        this.expanding = expanding ? true : false;
     }
 
     static {

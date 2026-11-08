@@ -13,7 +13,7 @@ final class ct extends ml {
         super(8, 5, 8, 8, 2, 0.10000000149011612f, 0.550000011920929f, 3.0f);
     }
 
-    final static void a(int param0, ah param1) {
+    final static void a(int param0, Drone param1) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -23,27 +23,27 @@ final class ct extends ml {
         int var4 = 0;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param1.field_Q != 0) {
-            var2_double = vp.field_d[param1.field_N] * (double)gq.field_q[param1.field_Q];
+          if (param1.droneType != 0) {
+            var2_double = vp.field_d[param1.variant] * (double)gq.field_q[param1.droneType];
             var2_double = var2_double + (double)(param1.field_G / 50);
             var2_double = var2_double * (double)pd.field_p;
             IntrusiveDequeCursor.a((int)var2_double, -1372239541);
-            if ((1 << param1.field_Q & qk.field_T) == 0) {
-              qk.field_T = qk.field_T | 1 << param1.field_Q;
+            if ((1 << param1.droneType & qk.field_T) == 0) {
+              qk.field_T = qk.field_T | 1 << param1.droneType;
               bi.field_c = bi.field_c + 1;
             } else {
               qk.field_T = 0;
               bi.field_c = 1;
-              qk.field_T = qk.field_T | 1 << param1.field_Q;
+              qk.field_T = qk.field_T | 1 << param1.droneType;
             }
-            rn.a(Integer.toString((int)var2_double), param1.field_C >> 8, param1.field_z >> 8, 16777215, 28807);
+            rn.a(Integer.toString((int)var2_double), param1.xQ8 >> 8, param1.yQ8 >> 8, 16777215, 28807);
             if (qk.field_T != 0 &&
               ps.field_e[13] == bi.field_c) {
               th.b(24753, 242, 13);
             }
             if (7 == oh.field_e &&
               0 == an.field_a) {
-              if (param1.field_N == 5) {
+              if (param1.variant == 5) {
                 ei.field_a = ei.field_a + 1;
               } else {
                 ei.field_a = ei.field_a - 1;
@@ -56,7 +56,7 @@ final class ct extends ml {
           if (param0 != 6510) {
             ct.b(true);
           }
-          od.a(param1.field_N, (byte) 73);
+          od.a(param1.variant, (byte) 73);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -103,7 +103,7 @@ final class ct extends ml {
     }
 
     final static void b(boolean param0) {
-        aa.field_a = new ah[100];
+        aa.field_a = new Drone[100];
         sm.a(72);
         bj.field_b = new IntrusiveDeque();
         is.field_c = new IntrusiveDeque();

@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-final class si extends nn {
-    private java.nio.ByteBuffer field_b;
+final class DirectByteArrayStorage extends ByteArrayStorage {
+    private java.nio.ByteBuffer buffer;
     static int field_c;
     static ToolkitSprite field_e;
     static ToolkitSprite field_d;
@@ -65,7 +65,7 @@ final class si extends nn {
           return var2Lifetime1;
         }
         var3 = (File) null;
-        si.a((File) null, (byte) 38);
+        DirectByteArrayStorage.readEntireFile((File) null, (byte) 38);
         if (param0 < -256) {
           param0 = param0 >> 8;
           var2Lifetime1 += 8;
@@ -85,18 +85,18 @@ final class si extends nn {
         return var2Lifetime1;
     }
 
-    final void a(byte[] param0, int param1) {
+    final void setBytes(byte[] bytes, int guard) {
         try {
-          int var3_int = -124 % ((param1 + 47) / 62);
-          this.field_b = java.nio.ByteBuffer.allocateDirect(param0.length);
-          this.field_b.position(0);
-          this.field_b.put(param0);
+          int var3_int = -124 % ((guard + 47) / 62);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(bytes.length);
+          this.buffer.position(0);
+          this.buffer.put(bytes);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "si.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "si.G(" + (bytes != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final static byte[] a(File param0, byte param1) {
+    final static byte[] readEntireFile(File param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;
@@ -122,27 +122,27 @@ final class si extends nn {
         }
     }
 
-    si() {
+    DirectByteArrayStorage() {
     }
 
-    final byte[] a(int param0, int param1, int param2) {
+    final byte[] copyRange(int offset, int length, int guard) {
         byte[] var6 = null;
         byte[] var4 = null;
         byte[] var6Lifetime1;
         byte[] var4Lifetime1;
-        if (param2 == 15747) {
-          var6 = new byte[param1];
+        if (guard == 15747) {
+          var6 = new byte[length];
           var4 = var6;
-          this.field_b.position(param0);
-          this.field_b.get(var6, 0, param1);
+          this.buffer.position(offset);
+          this.buffer.get(var6, 0, length);
           return var6;
         }
         java.applet.Applet var5 = (java.applet.Applet) null;
-        si.a((java.applet.Applet) null, (byte) 104);
-        var6Lifetime1 = new byte[param1];
+        DirectByteArrayStorage.a((java.applet.Applet) null, (byte) 104);
+        var6Lifetime1 = new byte[length];
         var4Lifetime1 = var6Lifetime1;
-        this.field_b.position(param0);
-        this.field_b.get(var6Lifetime1, 0, param1);
+        this.buffer.position(offset);
+        this.buffer.get(var6Lifetime1, 0, length);
         return var6Lifetime1;
     }
 
@@ -201,15 +201,15 @@ final class si extends nn {
         }
     }
 
-    final byte[] a(boolean param0) {
-        byte[] var3 = new byte[this.field_b.capacity()];
+    final byte[] copyBytes(boolean param0) {
+        byte[] var3 = new byte[this.buffer.capacity()];
         byte[] var2 = var3;
-        this.field_b.position(0);
-        this.field_b.get(var3);
+        this.buffer.position(0);
+        this.buffer.get(var3);
         if (!param0) {
           return var3;
         }
-        this.a(false);
+        this.copyBytes(false);
         return var3;
     }
 

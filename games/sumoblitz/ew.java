@@ -24,7 +24,7 @@ final class ew extends na {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a((byte) 26, param1) == qr.field_e) {
-            stackIn_2_0 = aj.pleaseCheckIfAddressText;
+            stackIn_2_0 = DroneDebris.pleaseCheckIfAddressText;
             return stackIn_2_0;
           }
           if (param0 == 0) {

@@ -45,7 +45,7 @@ final class lg extends qt {
             if (var4 != this.field_a) {
               hc.field_e.a(lb.yesNoLabels[var4], -1, -16777216, 260, 100 + var3_int, 0);
             } else {
-              be.field_t.a(lb.yesNoLabels[var4], -1, -16777216, 258, -4 + (var3_int + 100), param1 ^ 22707);
+              ForceFieldRingEffect.field_t.a(lb.yesNoLabels[var4], -1, -16777216, 258, -4 + (var3_int + 100), param1 ^ 22707);
             }
             var3_int += 300;
             var4++;

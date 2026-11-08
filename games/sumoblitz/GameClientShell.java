@@ -60,7 +60,7 @@ abstract class GameClientShell extends GameApplet {
         var5 = Sumoblitz.field_L ? 1 : 0;
         if (SecondaryNodeDequeIterator.field_b != null) {
           if (null == CompactMeshGeometry.field_o) {
-            var6 = km.c(false);
+            var6 = km.gameContainer(false);
             var4 = var6.getSize();
             SecondaryNodeDequeIterator.field_b.a(var4.height, var4.width, (byte) -123);
           }
@@ -72,8 +72,8 @@ abstract class GameClientShell extends GameApplet {
           11 != jv.field_a) {
           ip.d(1886067877);
         }
-        if (null != as.field_w) {
-          OpenGlUnderwaterEffect.field_r = as.field_w.a(-88);
+        if (null != InwardSparkParticle.field_w) {
+          OpenGlUnderwaterEffect.field_r = InwardSparkParticle.field_w.a(-88);
         }
         if (param1 >= -97) {
           this.field_D = (String) null;
@@ -216,7 +216,7 @@ abstract class GameClientShell extends GameApplet {
             ea.a(stackIn_106_0, stackIn_107_1, stackIn_109_2, stackIn_110_3);
           }
           if (gn.field_b) {
-            vi.e(4);
+            SlowBurstParticle.e(4);
           }
           if (hh.field_d == null) {
             hh.field_d = ea.a(14263);
@@ -226,7 +226,7 @@ abstract class GameClientShell extends GameApplet {
           hw.field_a = null;
           eb.field_f = null;
           wd.field_j = null;
-          si.a((java.applet.Applet) (this), (byte) -96);
+          DirectByteArrayStorage.a((java.applet.Applet) (this), (byte) -96);
           ls.b(0);
           mp.field_a = 10;
         }
@@ -264,7 +264,7 @@ abstract class GameClientShell extends GameApplet {
           }
         }
         if (!param0 &&
-          aj.field_A) {
+          DroneDebris.field_A) {
           wr.a(true, qn.field_f);
           this.e(1000);
           db.a(false, qn.field_f);
@@ -387,13 +387,13 @@ abstract class GameClientShell extends GameApplet {
                                 LegacyOpenGlEffect.a(8192);
                                 return;
                               }
-                              IntrusiveNode.reportClientError("MGS1: " + di.b((byte) -22), (Throwable) null, 0);
+                              IntrusiveNode.reportClientError("MGS1: " + VictoryScreen.b((byte) -22), (Throwable) null, 0);
                               kk.a((byte) -128);
                               return;
                             }
                             stackIn_28_0 = (var2 == 12);
                             var3 = r.a(stackIn_28_0, (byte) -62);
-                            nn.a(var3, (byte) 60);
+                            ByteArrayStorage.a(var3, (byte) 60);
                           }
                         } else {
                           ro.a((byte) 127, ig.field_a, lt.field_m, gu.field_d);
@@ -402,7 +402,7 @@ abstract class GameClientShell extends GameApplet {
                         this.o(-1);
                       }
                     } else {
-                      vi.c((byte) -77);
+                      SlowBurstParticle.c((byte) -77);
                     }
                   } else {
                     ar.e((byte) -93);
@@ -417,7 +417,7 @@ abstract class GameClientShell extends GameApplet {
           }
           return;
         }
-        IntrusiveNode.reportClientError("MGS2: " + di.b((byte) 86), (Throwable) null, 0);
+        IntrusiveNode.reportClientError("MGS2: " + VictoryScreen.b((byte) 86), (Throwable) null, 0);
         kk.a((byte) -112);
         return;
     }
@@ -463,7 +463,7 @@ abstract class GameClientShell extends GameApplet {
             dq.a((byte) 115, 2);
           }
           if (wp.field_z[2]) {
-            vi.a(3, (byte) -73);
+            SlowBurstParticle.a(3, (byte) -73);
           }
           if (wp.field_z[3]) {
             ko.a(0, 4);
@@ -688,7 +688,7 @@ abstract class GameClientShell extends GameApplet {
             us.a(ra.c(2), (byte) -124);
           }
           if (var4 == 10) {
-            as.field_v.g(17, param0 ^ 16989);
+            InwardSparkParticle.field_v.g(17, param0 ^ 16989);
           }
           if (var4 == 11) {
             of.a(8192, ra.c(2));
@@ -769,7 +769,7 @@ abstract class GameClientShell extends GameApplet {
         tm.a(param0, (byte) 84, lt.field_m, 5000, this.field_E, param1, this.field_C, this.field_r, 5000, this.field_D, this.field_q, this.field_x, dk.field_c, this.field_y);
         PacketBuffer.a(lt.field_m, this.field_r, this.field_E, this.field_D, (byte) -56, this.field_C, this.field_x, param1, dk.field_c);
         rp.a(false);
-        as.field_w = dk.a((byte) -126);
+        InwardSparkParticle.field_w = dk.a((byte) -126);
         int var10 = -116 / ((2 - param2) / 36);
         db.a(false, qn.field_f);
         MenuScreen.field_f = param7;

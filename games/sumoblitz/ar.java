@@ -126,7 +126,7 @@ class ar extends wp {
               var5_ref_db.unlink(false);
               return;
             }
-            IntrusiveNode.reportClientError("A1: " + di.b((byte) -9), (Throwable) null, 0);
+            IntrusiveNode.reportClientError("A1: " + VictoryScreen.b((byte) -9), (Throwable) null, 0);
             kk.a((byte) -128);
           }
           return;

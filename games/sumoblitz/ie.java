@@ -36,11 +36,11 @@ abstract class ie extends UiWidget implements ug {
 
     final static jj[] a(int param0) {
         if (param0 == 32) {
-          return new jj[]{go.field_m, tr.field_j, na.field_c};
+          return new jj[]{go.field_m, LevelSelectScreen.field_j, na.field_c};
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
         ie.a(-3, (String) null, (java.applet.Applet) null);
-        return new jj[]{go.field_m, tr.field_j, na.field_c};
+        return new jj[]{go.field_m, LevelSelectScreen.field_j, na.field_c};
     }
 
     final void a(int param0, StringBuilder param1, Hashtable param2, byte param3) {

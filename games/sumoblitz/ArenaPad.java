@@ -3,39 +3,39 @@
  */
 import java.util.*;
 
-final class nm extends IntrusiveNode {
-    private int field_A;
-    int field_m;
-    private boolean field_z;
-    int field_y;
+final class ArenaPad extends IntrusiveNode {
+    private int highlightAlpha;
+    int radiusPixels;
+    private boolean contactThisTick;
+    int padType;
     static String[] waitingForTextTranslations;
     static String waitingForLevelsText;
-    private int field_o;
-    private int field_B;
-    int field_l;
-    private int field_r;
-    private boolean field_x;
+    private int orientation;
+    private int acceleratorTargetXQ8;
+    int yQ8;
+    private int acceleratorTargetYQ8;
+    private boolean exploding;
     int field_s;
-    private int field_v;
-    private int field_k;
-    private int field_t;
-    private IntrusiveDeque field_w;
-    int field_q;
-    private int field_p;
+    private int teleportCooldownTicks;
+    private int explosionTicksRemaining;
+    private int triggerCooldownTicks;
+    private IntrusiveDeque effects;
+    int xQ8;
+    private int ageTicks;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           waitingForLevelsText = null;
           waitingForTextTranslations = null;
           if (param0 != 1432625512) {
-            nm.a((PacketBuffer) null, (byte) -50);
+            ArenaPad.a((PacketBuffer) null, (byte) -50);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nm.B(" + param0 + ')');
         }
     }
 
-    private final void a(ah param0, int param1) {
+    private final void bounceDrone(Drone drone, int guard) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
@@ -51,49 +51,49 @@ final class nm extends IntrusiveNode {
         int var8_int = 0;
         int var7Lifetime1;
         try {
-          var3_int = param0.field_m + (this.field_m << 8);
-          var4 = param0.field_C - this.field_q;
-          var5 = param0.field_z - this.field_l;
+          var3_int = drone.radiusQ8 + (this.radiusPixels << 8);
+          var4 = drone.xQ8 - this.xQ8;
+          var5 = drone.yQ8 - this.yQ8;
           var6 = (int)Math.round(Math.max(1.0, Math.sqrt((double)((float)var5 * (float)var5 + (float)var4 * (float)var4))));
           if (var3_int > var6) {
             var7 = var4 * (-var6 + var3_int) / var6;
-            param0.field_C = param0.field_C + (var7 << 1);
+            drone.xQ8 = drone.xQ8 + (var7 << 1);
             var8_int = var5 * (var3_int - var6) / var6;
-            param0.field_z = param0.field_z + (var8_int << 1);
+            drone.yQ8 = drone.yQ8 + (var8_int << 1);
           }
           var4 = (var4 << 8) / var6;
           var5 = (var5 << 8) / var6;
-          param0.field_d = 0;
-          if (param1 >= -61) {
-            this.field_q = -35;
+          drone.field_d = 0;
+          if (guard >= -61) {
+            this.xQ8 = -35;
           }
-          var7Lifetime1 = -(var4 * param0.field_A) + param0.field_E * var5 >> 8;
+          var7Lifetime1 = -(var4 * drone.velocityYQ8) + drone.velocityXQ8 * var5 >> 8;
           var8 = 2.0;
-          if (this.field_x) {
+          if (this.exploding) {
             var8 = 5.0;
           }
-          if (6 == this.field_y) {
+          if (6 == this.padType) {
             var8 = 0.5;
           }
           var10 = (int)(var8 * 800.0) << 8;
-          param0.field_E = var5 * var7Lifetime1 + var10 * var4 / param0.field_o >> 8;
-          param0.field_A = var5 * var10 / param0.field_o - var4 * var7Lifetime1 >> 8;
+          drone.velocityXQ8 = var5 * var7Lifetime1 + var10 * var4 / drone.mass >> 8;
+          drone.velocityYQ8 = var5 * var10 / drone.mass - var4 * var7Lifetime1 >> 8;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_16_0 = runtimeException;
           stackIn_16_1 = new StringBuilder().append("nm.A(");
-          if (param0 == null) {
+          if (drone == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void b(ah param0, int param1) {
+    final void applyToDrone(Drone drone, int guard) {
         int stackIn_145_0 = 0;
         int stackIn_145_1 = 0;
         RuntimeException stackIn_164_0 = null;
@@ -106,7 +106,7 @@ final class nm extends IntrusiveNode {
         IntrusiveDeque var5 = null;
         IntrusiveDequeCursor var6 = null;
         int var7 = 0;
-        nm var8 = null;
+        ArenaPad var8 = null;
         int var9 = 0;
         int var10 = 0;
         double var11 = 0.0;
@@ -120,7 +120,7 @@ final class nm extends IntrusiveNode {
         int var4Lifetime2;
         var17 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0.g(57)) {
+          if (drone.isBlastActive(57)) {
             return;
           }
           boolean decompiledFrameRemainder7 = true;
@@ -132,7 +132,7 @@ final class nm extends IntrusiveNode {
           boolean decompiledFrameRemainder2 = true;
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameRemainder0 = true;
-          var9 = this.field_y;
+          var9 = this.padType;
           if ((var9 != 7 ||
             var17 != 0) &&
             (decompiledFrameRemainder0 = (6 != var9 ||
@@ -156,17 +156,17 @@ final class nm extends IntrusiveNode {
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            if (!this.field_x &&
-              0 >= this.field_t) {
-              this.field_k = 12;
-              this.field_t = 200;
-              this.field_x = true;
+            if (!this.exploding &&
+              0 >= this.triggerCooldownTicks) {
+              this.explosionTicksRemaining = 12;
+              this.triggerCooldownTicks = 200;
+              this.exploding = true;
               gn.a(3, true);
-              ts.a(this.field_q, this.field_w, -16240, 25, 65535, this.field_l);
+              ts.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
             }
-            decompiledFrameRemainder7 = !(this.field_k <= 0);
+            decompiledFrameRemainder7 = !(this.explosionTicksRemaining <= 0);
             if (decompiledFrameRemainder7) {
-              this.a(param0, param1 ^ -16777041);
+              this.bounceDrone(drone, guard ^ -16777041);
               decompiledFrameRemainder7 = (var17 != 0);
             }
           }
@@ -177,54 +177,54 @@ final class nm extends IntrusiveNode {
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1)) {
-            if (this.field_t > 0) {
-              this.a(param0, param1 - 16777029);
+            if (this.triggerCooldownTicks > 0) {
+              this.bounceDrone(drone, guard - 16777029);
               decompiledFrameRemainder7 = (var17 != 0);
             }
             if ((decompiledFrameRemainder7) &&
-              (decompiledFrameRemainder7 = (!(param0.g(param1 ^ 16776998)) ||
+              (decompiledFrameRemainder7 = (!(drone.isBlastActive(guard ^ 16776998)) ||
               var17 != 0))) {
-              if (param0.field_N == 1 &&
-                param0.field_v == 0) {
-                var9Lifetime1 = -param0.field_C + this.field_q;
-                var10 = this.field_l - param0.field_z;
+              if (drone.variant == 1 &&
+                drone.variantCooldownTicks == 0) {
+                var9Lifetime1 = -drone.xQ8 + this.xQ8;
+                var10 = this.yQ8 - drone.yQ8;
                 var11 = Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + var10 * var10));
                 var13 = Math.asin((double)var9Lifetime1 / var11);
                 var15 = var13 + 3.141592653589793;
-                if (!(Math.abs(-param0.field_s + var15) < 1.5707963267948966)) {
-                  ro.a(param0, (byte) 113);
-                  this.field_t = 200;
+                if (!(Math.abs(-drone.facingRadians + var15) < 1.5707963267948966)) {
+                  ro.a(drone, (byte) 113);
+                  this.triggerCooldownTicks = 200;
                   if (12 == oh.field_e) {
                     bn.field_P = true;
                   }
-                  ts.a(this.field_q, this.field_w, -16240, 25, 65535, this.field_l);
+                  ts.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
                   decompiledFrameRemainder7 = (var17 != 0);
                 }
                 if (decompiledFrameRemainder7) {
-                  if (param0.field_A < 0 &&
-                    -this.field_l + param0.field_z > 0 ||
-                    !(0 >= param0.field_A) &&
-                    !(param0.field_z - this.field_l >= 0)) {
-                    param0.field_A = param0.field_A * -2;
+                  if (drone.velocityYQ8 < 0 &&
+                    -this.yQ8 + drone.yQ8 > 0 ||
+                    !(0 >= drone.velocityYQ8) &&
+                    !(drone.yQ8 - this.yQ8 >= 0)) {
+                    drone.velocityYQ8 = drone.velocityYQ8 * -2;
                   }
-                  if (param0.field_E < 0 &&
-                    0 < -this.field_q + param0.field_C ||
-                    !(0 >= param0.field_E) &&
-                    !(-this.field_q + param0.field_C >= 0)) {
-                    param0.field_E = param0.field_E * -2;
+                  if (drone.velocityXQ8 < 0 &&
+                    0 < -this.xQ8 + drone.xQ8 ||
+                    !(0 >= drone.velocityXQ8) &&
+                    !(-this.xQ8 + drone.xQ8 >= 0)) {
+                    drone.velocityXQ8 = drone.velocityXQ8 * -2;
                   }
-                  param0.h((byte) -55);
-                  this.field_t = 200;
+                  drone.onVariantContact((byte) -55);
+                  this.triggerCooldownTicks = 200;
                   decompiledFrameRemainder7 = (var17 != 0);
                 }
               }
               if (decompiledFrameRemainder7) {
-                ro.a(param0, (byte) 113);
+                ro.a(drone, (byte) 113);
                 if (oh.field_e == 12) {
                   bn.field_P = true;
                 }
-                this.field_t = 200;
-                ts.a(this.field_q, this.field_w, -16240, 25, 65535, this.field_l);
+                this.triggerCooldownTicks = 200;
+                ts.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
                 decompiledFrameRemainder7 = (var17 != 0);
               }
             }
@@ -235,12 +235,12 @@ final class nm extends IntrusiveNode {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
-            var3_int = -param0.field_C + this.field_B;
-            var4 = -param0.field_z + this.field_r;
-            param0.field_E = (int)((double)param0.field_E + 0.00016 * (double)RasterBuffer.a(-63, var3_int) * Math.pow((double)var3_int, 2.0) / (double)param0.field_o);
-            param0.field_A = (int)((double)param0.field_A + (double)RasterBuffer.a(-69, var4) * 0.00016 * Math.pow((double)var4, 2.0) / (double)param0.field_o);
-            param0.field_D = true;
-            tq.a(-111, fi.a(4, he.field_o, (byte) -96) + 6, false);
+            var3_int = -drone.xQ8 + this.acceleratorTargetXQ8;
+            var4 = -drone.yQ8 + this.acceleratorTargetYQ8;
+            drone.velocityXQ8 = (int)((double)drone.velocityXQ8 + 0.00016 * (double)RasterBuffer.a(-63, var3_int) * Math.pow((double)var3_int, 2.0) / (double)drone.mass);
+            drone.velocityYQ8 = (int)((double)drone.velocityYQ8 + (double)RasterBuffer.a(-69, var4) * 0.00016 * Math.pow((double)var4, 2.0) / (double)drone.mass);
+            drone.steeringSuppressed = true;
+            tq.a(-111, ExpandingRingEffect.nextRandomInt(4, he.field_o, (byte) -96) + 6, false);
             decompiledFrameRemainder7 = (var17 != 0);
           }
           if ((decompiledFrameRemainder7) &&
@@ -248,8 +248,8 @@ final class nm extends IntrusiveNode {
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
-            param0.field_f = true;
-            this.field_z = true;
+            drone.onIce = true;
+            this.contactThisTick = true;
             tq.a(-112, 1, false);
             decompiledFrameRemainder7 = (var17 != 0);
           }
@@ -260,22 +260,22 @@ final class nm extends IntrusiveNode {
             var5 = is.field_c;
             var7 = 0;
             var6 = new IntrusiveDequeCursor(var5);
-            var8 = (nm) (var6.first((byte) -80));
+            var8 = (ArenaPad) (var6.first((byte) -80));
             while (true) {
               if (null != var8) {
-                stackIn_145_0 = var8.field_y;
+                stackIn_145_0 = var8.padType;
                 stackIn_145_1 = 2;
                 if (var17 == 0) {
                   if (stackIn_145_0 == stackIn_145_1 &&
-                    0 >= this.field_v &&
+                    0 >= this.teleportCooldownTicks &&
                     ~var8.field_s != ~this.field_s &&
-                    0 == fi.a(6, he.field_o, (byte) -96)) {
-                    param0.field_C = var8.field_q;
-                    param0.field_z = var8.field_l;
-                    var8.field_v = 60;
+                    0 == ExpandingRingEffect.nextRandomInt(6, he.field_o, (byte) -96)) {
+                    drone.xQ8 = var8.xQ8;
+                    drone.yQ8 = var8.yQ8;
+                    var8.teleportCooldownTicks = 60;
                     var7 = 1;
                   }
-                  var8 = (nm) (var6.next(param1 ^ 16776960));
+                  var8 = (ArenaPad) (var6.next(guard ^ 16776960));
                   continue;
                 }
               } else {
@@ -290,7 +290,7 @@ final class nm extends IntrusiveNode {
             }
             if (decompiledFrameCompleted0) {
               gn.a(stackIn_145_0, stackIn_145_1 != 0);
-              ts.a(this.field_q, this.field_w, -16240, 10, 16776960, this.field_l);
+              ts.a(this.xQ8, this.effects, -16240, 10, 16776960, this.yQ8);
               decompiledFrameRemainder7 = (var17 != 0);
             }
           }
@@ -298,11 +298,11 @@ final class nm extends IntrusiveNode {
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5) &&
             (decompiledFrameCompleted0)) {
-            this.a(param0, -68);
+            this.bounceDrone(drone, -68);
             gn.a(13, true);
-            decompiledFrameRemainder7 = (param0.field_Q == 0);
+            decompiledFrameRemainder7 = (drone.droneType == 0);
             if (decompiledFrameRemainder7) {
-              tl.field_v = tl.field_v + 1;
+              PowerupPickup.field_v = PowerupPickup.field_v + 1;
               decompiledFrameRemainder7 = !(gt.field_ab > 0);
               if (decompiledFrameRemainder7) {
                 gt.field_ab = 250;
@@ -313,25 +313,25 @@ final class nm extends IntrusiveNode {
           if ((decompiledFrameRemainder7) &&
             (decompiledFrameRemainder6) &&
             (decompiledFrameCompleted0)) {
-            var3_intLifetime2 = this.field_q - param0.field_C;
-            var4Lifetime2 = -param0.field_z + this.field_l;
-            param0.field_E = (int)((double)param0.field_E + (double)RasterBuffer.a(param1 ^ -16777002, var3_intLifetime2) * 0.000035 * Math.pow((double)var3_intLifetime2, 2.0) / (double)param0.field_o);
-            param0.field_A = (int)((double)param0.field_A + (double)RasterBuffer.a(-115, var4Lifetime2) * 0.000035 * Math.pow((double)var4Lifetime2, 2.0) / (double)param0.field_o);
-            this.field_z = true;
+            var3_intLifetime2 = this.xQ8 - drone.xQ8;
+            var4Lifetime2 = -drone.yQ8 + this.yQ8;
+            drone.velocityXQ8 = (int)((double)drone.velocityXQ8 + (double)RasterBuffer.a(guard ^ -16777002, var3_intLifetime2) * 0.000035 * Math.pow((double)var3_intLifetime2, 2.0) / (double)drone.mass);
+            drone.velocityYQ8 = (int)((double)drone.velocityYQ8 + (double)RasterBuffer.a(-115, var4Lifetime2) * 0.000035 * Math.pow((double)var4Lifetime2, 2.0) / (double)drone.mass);
+            this.contactThisTick = true;
             tq.a(-119, 1, true);
             decompiledFrameRemainder7 = (var17 != 0);
           }
           if ((decompiledFrameRemainder7) &&
             (decompiledFrameCompleted0)) {
-            var4Lifetime1 = this.field_l - param0.field_z;
-            var3_intLifetime1 = -param0.field_C + this.field_q;
-            param0.field_E = (int)((double)param0.field_E - (double)RasterBuffer.a(-56, var3_intLifetime1) * 0.000035 * Math.pow((double)var3_intLifetime1, 2.0) / (double)param0.field_o);
-            param0.field_A = (int)((double)param0.field_A - 0.000035 * (double)RasterBuffer.a(-52, var4Lifetime1) * Math.pow((double)var4Lifetime1, 2.0) / (double)param0.field_o);
-            this.field_z = true;
+            var4Lifetime1 = this.yQ8 - drone.yQ8;
+            var3_intLifetime1 = -drone.xQ8 + this.xQ8;
+            drone.velocityXQ8 = (int)((double)drone.velocityXQ8 - (double)RasterBuffer.a(-56, var3_intLifetime1) * 0.000035 * Math.pow((double)var3_intLifetime1, 2.0) / (double)drone.mass);
+            drone.velocityYQ8 = (int)((double)drone.velocityYQ8 - 0.000035 * (double)RasterBuffer.a(-52, var4Lifetime1) * Math.pow((double)var4Lifetime1, 2.0) / (double)drone.mass);
+            this.contactThisTick = true;
             tq.a(-123, 2, true);
           }
-          if (param1 != 16776960) {
-            this.field_t = 113;
+          if (guard != 16776960) {
+            this.triggerCooldownTicks = 113;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -339,16 +339,16 @@ final class nm extends IntrusiveNode {
           var3 = decompiledCaughtException;
           stackIn_164_0 = var3;
           stackIn_164_1 = new StringBuilder().append("nm.D(");
-          if (param0 == null) {
+          if (drone == null) {
             stackIn_165_2 = "null";
           } else {
             stackIn_165_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_164_0), ((StringBuilder) (Object) stackIn_164_1).append(stackIn_165_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_164_0), ((StringBuilder) (Object) stackIn_164_1).append(stackIn_165_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final boolean c(ah param0, int param1) {
+    final boolean overlapsDrone(Drone drone, int guard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
@@ -357,27 +357,27 @@ final class nm extends IntrusiveNode {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 2145812808) {
-            this.a((ah) null, 12);
+          if (guard != 2145812808) {
+            this.bounceDrone((Drone) null, 12);
           }
-          var3_int = param0.field_m + (this.field_m << 8);
-          stackIn_4_0 = wn.a(param0.field_z, var3_int, -114, this.field_q, param0.field_C, this.field_l);
+          var3_int = drone.radiusQ8 + (this.radiusPixels << 8);
+          stackIn_4_0 = wn.a(drone.yQ8, var3_int, -114, this.xQ8, drone.xQ8, this.yQ8);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
           stackIn_8_1 = new StringBuilder().append("nm.C(");
-          if (param0 == null) {
+          if (drone == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void a(GraphicsToolkit param0, int param1) {
+    final void render(GraphicsToolkit toolkit, int guard) {
         RuntimeException stackIn_97_0 = null;
         StringBuilder stackIn_97_1 = null;
         String stackIn_98_2 = null;
@@ -396,7 +396,7 @@ final class nm extends IntrusiveNode {
           boolean decompiledFrameRemainder2 = true;
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameRemainder0 = true;
-          var3_int = this.field_y;
+          var3_int = this.padType;
           if ((var3_int != 6 ||
             var4 != 0) &&
             (decompiledFrameRemainder0 = (var3_int != 7)) &&
@@ -419,10 +419,10 @@ final class nm extends IntrusiveNode {
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            o.field_b[0].a((this.field_q >> 8) - (o.field_b[0].c() >> 1), (this.field_l >> 8) - (o.field_b[0].a() >> 1));
-            decompiledFrameRemainder7 = !(this.field_t > 5);
+            o.field_b[0].a((this.xQ8 >> 8) - (o.field_b[0].c() >> 1), (this.yQ8 >> 8) - (o.field_b[0].a() >> 1));
+            decompiledFrameRemainder7 = !(this.triggerCooldownTicks > 5);
             if (decompiledFrameRemainder7) {
-              o.field_b[1].a((float)(this.field_q >> 8), (float)(this.field_l >> 8), 4096, (this.field_p << 10) % 65536, 1, 0, 2);
+              o.field_b[1].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, (this.ageTicks << 10) % 65536, 1, 0, 2);
               decompiledFrameRemainder7 = (var4 != 0);
             }
           }
@@ -433,15 +433,15 @@ final class nm extends IntrusiveNode {
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1)) {
-            go.field_p[0].a((this.field_q >> 8) - (go.field_p[0].c() >> 1), (this.field_l >> 8) - (go.field_p[0].a() >> 1));
-            if (this.field_t <= 5 &&
-              (this.field_p >> 5) % 2 == 1) {
-              go.field_p[1].a((this.field_q >> 8) - (go.field_p[1].c() >> 1), (this.field_l >> 8) - (go.field_p[1].a() >> 1), 1, 0, 2);
+            go.field_p[0].a((this.xQ8 >> 8) - (go.field_p[0].c() >> 1), (this.yQ8 >> 8) - (go.field_p[0].a() >> 1));
+            if (this.triggerCooldownTicks <= 5 &&
+              (this.ageTicks >> 5) % 2 == 1) {
+              go.field_p[1].a((this.xQ8 >> 8) - (go.field_p[1].c() >> 1), (this.yQ8 >> 8) - (go.field_p[1].a() >> 1), 1, 0, 2);
             }
-            decompiledFrameRemainder7 = (this.field_x);
+            decompiledFrameRemainder7 = (this.exploding);
             if ((decompiledFrameRemainder7) &&
               (decompiledFrameRemainder7 = (ul.field_f == 0))) {
-              kw.field_a.a((float)(this.field_q >> 8), (float)(this.field_l >> 8), (int)((double)this.field_m / 28.0 * 3072.0), 0, 1, 0, 2);
+              kw.field_a.a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)this.radiusPixels / 28.0 * 3072.0), 0, 1, 0, 2);
               decompiledFrameRemainder7 = (var4 != 0);
             }
           }
@@ -451,8 +451,8 @@ final class nm extends IntrusiveNode {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
-            rb.field_a[0].a((float)(this.field_q >> 8), (float)(this.field_l >> 8), 2048, this.field_o);
-            rb.field_a[(this.field_p >> 5) % rb.field_a.length].a((float)(this.field_q >> 8), (float)(this.field_l >> 8), 2048, this.field_o, 1, 0, 2);
+            rb.field_a[0].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, this.orientation);
+            rb.field_a[(this.ageTicks >> 5) % rb.field_a.length].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, this.orientation, 1, 0, 2);
             decompiledFrameRemainder7 = (var4 != 0);
           }
           if ((decompiledFrameRemainder7) &&
@@ -460,49 +460,49 @@ final class nm extends IntrusiveNode {
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
-            uc.field_e[0].a((this.field_q >> 8) - (uc.field_e[0].c() >> 1), (this.field_l >> 8) - (uc.field_e[0].a() >> 1));
-            uc.field_e[1].a((this.field_q >> 8) - (uc.field_e[1].c() >> 1), (this.field_l >> 8) - (uc.field_e[1].a() >> 1), 1, 0, 2);
-            si.field_e.a((this.field_q >> 8) - (si.field_e.c() >> 1), (this.field_l >> 8) - (si.field_e.a() >> 1), 0, 16777215 + (this.field_A << 24), 1);
+            uc.field_e[0].a((this.xQ8 >> 8) - (uc.field_e[0].c() >> 1), (this.yQ8 >> 8) - (uc.field_e[0].a() >> 1));
+            uc.field_e[1].a((this.xQ8 >> 8) - (uc.field_e[1].c() >> 1), (this.yQ8 >> 8) - (uc.field_e[1].a() >> 1), 1, 0, 2);
+            DirectByteArrayStorage.field_e.a((this.xQ8 >> 8) - (DirectByteArrayStorage.field_e.c() >> 1), (this.yQ8 >> 8) - (DirectByteArrayStorage.field_e.a() >> 1), 0, 16777215 + (this.highlightAlpha << 24), 1);
             decompiledFrameRemainder7 = (var4 != 0);
           }
           if ((decompiledFrameRemainder7) &&
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4)) {
-            uj.field_b[0].a((float)(this.field_q >> 8), (float)(this.field_l >> 8), 4096, 0);
-            uj.field_b[1].a((float)(this.field_q >> 8), (float)(this.field_l >> 8), 4096, (this.field_p << 10) % 65536, 1, 0, 2);
+            uj.field_b[0].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, 0);
+            uj.field_b[1].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 4096, (this.ageTicks << 10) % 65536, 1, 0, 2);
             decompiledFrameRemainder7 = (var4 != 0);
           }
           if ((decompiledFrameRemainder7) &&
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5)) {
-            kk.field_f.a((this.field_q >> 8) - (kk.field_f.c() >> 1), (this.field_l >> 8) - (kk.field_f.a() >> 1), 1, 0, 2);
+            kk.field_f.a((this.xQ8 >> 8) - (kk.field_f.c() >> 1), (this.yQ8 >> 8) - (kk.field_f.a() >> 1), 1, 0, 2);
             decompiledFrameRemainder7 = (var4 != 0);
           }
           if ((decompiledFrameRemainder7) &&
             (decompiledFrameRemainder6)) {
-            f.field_r[0].a((this.field_q >> 8) - (f.field_r[0].c() >> 1), (this.field_l >> 8) - (f.field_r[0].a() >> 1));
-            f.field_r[1].a((this.field_q >> 8) - (f.field_r[1].c() >> 1), (this.field_l >> 8) - (f.field_r[1].a() >> 1), 0, -15687169, 1);
+            f.field_r[0].a((this.xQ8 >> 8) - (f.field_r[0].c() >> 1), (this.yQ8 >> 8) - (f.field_r[0].a() >> 1));
+            f.field_r[1].a((this.xQ8 >> 8) - (f.field_r[1].c() >> 1), (this.yQ8 >> 8) - (f.field_r[1].a() >> 1), 0, -15687169, 1);
             decompiledFrameRemainder7 = (ul.field_f == 1);
             if (decompiledFrameRemainder7) {
-              vl.field_c.a((this.field_q >> 8) - (vl.field_c.c() >> 1), (this.field_l >> 8) - (vl.field_c.a() >> 1), 0, -15687169, 1);
+              vl.field_c.a((this.xQ8 >> 8) - (vl.field_c.c() >> 1), (this.yQ8 >> 8) - (vl.field_c.a() >> 1), 0, -15687169, 1);
               decompiledFrameRemainder7 = (var4 != 0);
             }
           }
           if (decompiledFrameRemainder7) {
-            f.field_r[0].a((this.field_q >> 8) - (f.field_r[0].c() >> 1), (this.field_l >> 8) - (f.field_r[0].a() >> 1));
-            f.field_r[1].a((this.field_q >> 8) - (f.field_r[1].c() >> 1), (this.field_l >> 8) - (f.field_r[1].a() >> 1), 0, -31744, 1);
+            f.field_r[0].a((this.xQ8 >> 8) - (f.field_r[0].c() >> 1), (this.yQ8 >> 8) - (f.field_r[0].a() >> 1));
+            f.field_r[1].a((this.xQ8 >> 8) - (f.field_r[1].c() >> 1), (this.yQ8 >> 8) - (f.field_r[1].a() >> 1), 0, -31744, 1);
             if (1 == ul.field_f) {
-              vl.field_c.a((this.field_q >> 8) - (vl.field_c.c() >> 1), (this.field_l >> 8) - (vl.field_c.a() >> 1), 0, -31744, 1);
+              vl.field_c.a((this.xQ8 >> 8) - (vl.field_c.c() >> 1), (this.yQ8 >> 8) - (vl.field_c.a() >> 1), 0, -31744, 1);
             }
           }
-          if (param1 != -15687169) {
-            this.c((ah) null, -20);
+          if (guard != -15687169) {
+            this.overlapsDrone((Drone) null, -20);
           }
-          var3 = (TimedSceneEffect) (this.field_w.first(67));
+          var3 = (TimedSceneEffect) (this.effects.first(67));
           while (var3 != null) {
-            var3.a(param0, -128);
-            var3 = (TimedSceneEffect) (this.field_w.next((byte) 18));
+            var3.render(toolkit, -128);
+            var3 = (TimedSceneEffect) (this.effects.next((byte) 18));
             if (var4 != 0) {
               return;
             }
@@ -513,16 +513,16 @@ final class nm extends IntrusiveNode {
           var3_ref = decompiledCaughtException;
           stackIn_97_0 = var3_ref;
           stackIn_97_1 = new StringBuilder().append("nm.H(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_98_2 = "null";
           } else {
             stackIn_98_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void a(int param0) {
+    final void update(int param0) {
         boolean stackIn_33_0 = false;
         int stackIn_40_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -533,64 +533,64 @@ final class nm extends IntrusiveNode {
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 != 1048149637) {
-            this.field_A = -49;
+            this.highlightAlpha = -49;
           }
-          if (!this.field_z) {
-            if (this.field_A > 72) {
-              this.field_A = this.field_A - 2;
+          if (!this.contactThisTick) {
+            if (this.highlightAlpha > 72) {
+              this.highlightAlpha = this.highlightAlpha - 2;
               if (var3 != 0 &&
-                200 > this.field_A) {
-                this.field_A = this.field_A + 2;
+                200 > this.highlightAlpha) {
+                this.highlightAlpha = this.highlightAlpha + 2;
               }
             }
           } else {
-            if (200 > this.field_A) {
-              this.field_A = this.field_A + 2;
+            if (200 > this.highlightAlpha) {
+              this.highlightAlpha = this.highlightAlpha + 2;
             }
           }
-          if (this.field_x) {
-            this.field_k = this.field_k - 1;
-            this.field_m = this.field_m + 2;
-            if (this.field_k == 0) {
-              this.field_m = 20;
-              this.field_x = false;
+          if (this.exploding) {
+            this.explosionTicksRemaining = this.explosionTicksRemaining - 1;
+            this.radiusPixels = this.radiusPixels + 2;
+            if (this.explosionTicksRemaining == 0) {
+              this.radiusPixels = 20;
+              this.exploding = false;
             }
           }
-          if (this.field_v > 0) {
-            this.field_v = this.field_v - 1;
+          if (this.teleportCooldownTicks > 0) {
+            this.teleportCooldownTicks = this.teleportCooldownTicks - 1;
           }
-          if (this.field_t > 0) {
-            this.field_t = this.field_t - 1;
+          if (this.triggerCooldownTicks > 0) {
+            this.triggerCooldownTicks = this.triggerCooldownTicks - 1;
           }
-          var2 = (TimedSceneEffect) (this.field_w.first(74));
+          var2 = (TimedSceneEffect) (this.effects.first(74));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var2))) {
-            stackOut_32_0 = var2.a(-2567);
+            stackOut_32_0 = var2.updateAndIsExpired(-2567);
             stackIn_40_0 = stackOut_32_0 ? 1 : 0;
             stackIn_33_0 = stackOut_32_0;
             if (var3 == 0) {
               if (stackIn_33_0) {
                 var2.unlink(false);
               }
-              var2 = (TimedSceneEffect) (this.field_w.next((byte) 18));
+              var2 = (TimedSceneEffect) (this.effects.next((byte) 18));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            this.field_p = this.field_p + 1;
-            this.field_z = false;
-            stackIn_40_0 = ~this.field_y;
+            this.ageTicks = this.ageTicks + 1;
+            this.contactThisTick = false;
+            stackIn_40_0 = ~this.padType;
           }
           if (stackIn_40_0 == -6 &&
-            this.field_p % 50 == 0 &&
+            this.ageTicks % 50 == 0 &&
             ul.field_f == 0) {
-            this.field_w.addLast((IntrusiveNode) (new be(this.field_q >> 8, this.field_l >> 8, 16745472, true)), (byte) 39);
+            this.effects.addLast((IntrusiveNode) (new ForceFieldRingEffect(this.xQ8 >> 8, this.yQ8 >> 8, 16745472, true)), (byte) 39);
           }
-          if (this.field_y == 4 &&
-            0 == this.field_p % 50 &&
+          if (this.padType == 4 &&
+            0 == this.ageTicks % 50 &&
             ul.field_f == 0) {
-            this.field_w.addLast((IntrusiveNode) (new be(this.field_q >> 8, this.field_l >> 8, 1090047, false)), (byte) 39);
+            this.effects.addLast((IntrusiveNode) (new ForceFieldRingEffect(this.xQ8 >> 8, this.yQ8 >> 8, 1090047, false)), (byte) 39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -611,7 +611,7 @@ final class nm extends IntrusiveNode {
         int var2_intLifetime2;
         try {
           if (param1 < 30) {
-            nm.c(-34);
+            ArenaPad.releaseStatics(-34);
           }
           qk.field_U = param0.a(255) << 5;
           var2_int = param0.e(-31302);
@@ -620,11 +620,11 @@ final class nm extends IntrusiveNode {
           sd.field_f = sd.field_f + (param0.a(255) << 2);
           var2_intLifetime1 = param0.e(-31302);
           sd.field_f = sd.field_f + (var2_intLifetime1 >> 6);
-          bb.field_l = (63 & var2_intLifetime1) << 15;
-          bb.field_l = bb.field_l + (param0.e(-31302) << 7);
+          ReassignUpgradesScreen.field_l = (63 & var2_intLifetime1) << 15;
+          ReassignUpgradesScreen.field_l = ReassignUpgradesScreen.field_l + (param0.e(-31302) << 7);
           var2_intLifetime2 = param0.e(-31302);
           ch.field_d = 65536 & var2_intLifetime2 << 16;
-          bb.field_l = bb.field_l + (var2_intLifetime2 >> 1);
+          ReassignUpgradesScreen.field_l = ReassignUpgradesScreen.field_l + (var2_intLifetime2 >> 1);
           ch.field_d = ch.field_d + param0.a(255);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -641,14 +641,14 @@ final class nm extends IntrusiveNode {
         }
     }
 
-    private final void a(byte param0) {
+    private final void initializePad(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = this.field_y;
+          var2_int = this.padType;
           switch ((var3 == 0
             || var2_int == 0
             || var2_int == 1
@@ -659,50 +659,50 @@ final class nm extends IntrusiveNode {
             || var2_int == 7
             ) ? var2_int : -1) {
             case 0:
-              this.field_m = 20;
-              this.c((byte) 47);
+              this.radiusPixels = 20;
+              this.computeAcceleratorTarget((byte) 47);
               if (var3 == 0) {
                 break;
               }
             case 1:
-              this.field_m = 55;
+              this.radiusPixels = 55;
               if (var3 == 0) {
                 break;
               }
             case 2:
-              this.field_m = 20;
+              this.radiusPixels = 20;
               if (var3 == 0) {
                 break;
               }
             case 3:
-              this.field_m = 20;
+              this.radiusPixels = 20;
               if (var3 == 0) {
                 break;
               }
             case 4:
-              this.field_m = 75;
+              this.radiusPixels = 75;
               if (var3 == 0) {
                 break;
               }
             case 5:
-              this.field_m = 75;
+              this.radiusPixels = 75;
               if (var3 == 0) {
                 break;
               }
             case 6:
-              this.field_m = 15;
+              this.radiusPixels = 15;
               if (var3 == 0) {
                 break;
               }
             case 7:
-              this.field_m = 20;
+              this.radiusPixels = 20;
             default:
               break;
           }
           if (param0 != -115) {
-            this.a(89);
+            this.update(89);
           }
-          this.field_w = new IntrusiveDeque();
+          this.effects = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -711,32 +711,32 @@ final class nm extends IntrusiveNode {
         }
     }
 
-    private final void c(byte param0) {
+    private final void computeAcceleratorTarget(byte param0) {
         double var2_double = 0.0;
         double var4 = 0.0;
         double var7 = 0.0;
         try {
-          var2_double = -1.5707963267948966 + (double)this.field_o / 65536.0 * 6.283185307179586;
+          var2_double = -1.5707963267948966 + (double)this.orientation / 65536.0 * 6.283185307179586;
           int var6 = 20 % ((param0 + 24) / 41);
           var4 = 19200.0 * Math.sin(-var2_double);
           var7 = 19200.0 * Math.cos(-var2_double);
-          this.field_r = (int)((double)this.field_l + var4);
-          this.field_B = (int)(var7 + (double)this.field_q);
+          this.acceleratorTargetYQ8 = (int)((double)this.yQ8 + var4);
+          this.acceleratorTargetXQ8 = (int)(var7 + (double)this.xQ8);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nm.I(" + param0 + ')');
         }
     }
 
-    nm(int param0, int param1, int param2, int param3) {
-        this.field_A = 72;
+    ArenaPad(int padType, int xPixels, int yPixels, int orientation) {
+        this.highlightAlpha = 72;
         try {
-          this.field_l = param2 << 8;
-          this.field_q = param1 << 8;
-          this.field_o = param3;
-          this.field_y = param0;
-          this.a((byte) -115);
+          this.yQ8 = yPixels << 8;
+          this.xQ8 = xPixels << 8;
+          this.orientation = orientation;
+          this.padType = padType;
+          this.initializePad((byte) -115);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nm.<init>(" + padType + ',' + xPixels + ',' + yPixels + ',' + orientation + ')');
         }
     }
 

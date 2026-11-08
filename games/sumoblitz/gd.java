@@ -130,12 +130,12 @@ abstract class gd {
           while (true) {
             stackIn_10_0 = (var6_int == 0) ? 50 : 25;
             if (stackIn_10_0 > var7) {
-              var8 = new float[]{0.0f, (float)(-(fi.a(param0, he.field_o, (byte) -96) + 1))};
+              var8 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param0, he.field_o, (byte) -96) + 1))};
               var13 = kt.a((byte) -81, var8, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7) + 0.0));
               var12 = var13;
               var10 = var12;
               var8Lifetime2 = var10;
-              param2.addLast((IntrusiveNode) (new as(64, ((int)var13[0] << 11) + param4, ((int)var13[1] << 11) + param1, param5, -(int)var13[0] << 8, -(int)var13[1] << 8, 0)), (byte) 39);
+              param2.addLast((IntrusiveNode) (new InwardSparkParticle(64, ((int)var13[0] << 11) + param4, ((int)var13[1] << 11) + param1, param5, -(int)var13[0] << 8, -(int)var13[1] << 8, 0)), (byte) 39);
               var7++;
               continue;
             }
@@ -147,11 +147,11 @@ abstract class gd {
             if (stackIn_16_0 <= var7Lifetime1) {
               return;
             }
-            var8Lifetime1 = new float[]{0.0f, (float)(-(1 + fi.a(param0, he.field_o, (byte) -96)))};
+            var8Lifetime1 = new float[]{0.0f, (float)(-(1 + ExpandingRingEffect.nextRandomInt(param0, he.field_o, (byte) -96)))};
             dupTemp$0 = kt.a((byte) -20, var8Lifetime1, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7Lifetime1) + 0.0));
             var11 = dupTemp$0;
             var8Lifetime1Lifetime1 = dupTemp$0;
-            param2.addLast((IntrusiveNode) (new as(64, param4 + ((int)var11[0] << 11), ((int)var11[1] << 11) + param1, param5, -(int)var11[0] << 8, -(int)var11[1] << 8, 1)), (byte) 39);
+            param2.addLast((IntrusiveNode) (new InwardSparkParticle(64, param4 + ((int)var11[0] << 11), ((int)var11[1] << 11) + param1, param5, -(int)var11[0] << 8, -(int)var11[1] << 8, 1)), (byte) 39);
             var7Lifetime1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

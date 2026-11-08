@@ -179,7 +179,7 @@ final class cv extends WidgetContainer implements pw, ai {
             this.field_D.field_w = (mh) ((Object) var6);
           }
           if (null != this.field_D) {
-            this.field_D.field_t = aj.createYourOwnFreeText;
+            this.field_D.field_t = DroneDebris.createYourOwnFreeText;
           }
           if (this.field_B) {
             this.field_N.field_t = rv.warningIfYouQuitText;
@@ -199,7 +199,7 @@ final class cv extends WidgetContainer implements pw, ai {
           var8 = OpenGlEnvironmentWaterEffect.loginText;
           var9 = lv.a(ra.c(2), 1);
           if (go.field_m != var9) {
-            if (tr.field_j == var9) {
+            if (LevelSelectScreen.field_j == var9) {
               var8 = ph.usernameText;
             }
           } else {

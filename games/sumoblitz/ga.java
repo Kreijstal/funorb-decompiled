@@ -15,24 +15,24 @@ final class ga extends LegacyOpenGlEffect {
     private vk field_e;
     static int field_h;
 
-    final static MenuScreen a(int param0, byte param1) {
-        if (param0 == 7) {
-          return (MenuScreen) ((Object) new tr());
+    final static MenuScreen createMenuScreen(int screenId, byte guard) {
+        if (screenId == 7) {
+          return (MenuScreen) ((Object) new LevelSelectScreen());
         }
-        if (param0 == 9) {
-          return (MenuScreen) ((Object) new bb());
+        if (screenId == 9) {
+          return (MenuScreen) ((Object) new ReassignUpgradesScreen());
         }
-        if (param0 == 10) {
-          return (MenuScreen) ((Object) new jp());
+        if (screenId == 10) {
+          return (MenuScreen) ((Object) new LevelCompleteUpgradeScreen());
         }
-        int var2 = -9 % ((-5 - param1) / 35);
-        if (11 == param0) {
-          return (MenuScreen) ((Object) new lp());
+        int var2 = -9 % ((-5 - guard) / 35);
+        if (11 == screenId) {
+          return (MenuScreen) ((Object) new GameOverScreen());
         }
-        if (param0 != 12) {
-          return new MenuScreen(param0);
+        if (screenId != 12) {
+          return new MenuScreen(screenId);
         }
-        return (MenuScreen) ((Object) new di());
+        return (MenuScreen) ((Object) new VictoryScreen());
     }
 
     public static void releaseStatics(boolean param0) {

@@ -90,7 +90,7 @@ final class br {
         this.field_c = jt.field_w;
         this.field_f = is.field_a;
         this.field_a = wn.field_a;
-        this.field_j = bb.field_j;
+        this.field_j = ReassignUpgradesScreen.field_j;
         this.field_h = eh.field_c;
         this.field_g = jb.field_h;
         this.field_e = oi.field_c;

@@ -234,7 +234,7 @@ final class ok {
           }
           while (var3 > var5) {
             if (!kh.a(param1, false)) {
-              var6 = param1.b(si.c(-1 + var5, 1), (byte) -123);
+              var6 = param1.b(DirectByteArrayStorage.c(-1 + var5, 1), (byte) -123);
               var4[var5] = var4[var6];
             } else {
               var6_ref_l = new l();

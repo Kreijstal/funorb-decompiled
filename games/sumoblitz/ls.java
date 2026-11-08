@@ -28,7 +28,7 @@ final class ls {
           for (var1_intLifetime1 = param0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             fa.field_a[var1_intLifetime1] = 0L;
           }
-          vt.field_t = 0;
+          BurstParticle.field_t = 0;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ls.A(" + param0 + ')');
         }

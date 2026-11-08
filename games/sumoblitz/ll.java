@@ -89,9 +89,9 @@ final class ll {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_a[0][var0] = fi.a(var12, fi.a(var4 << 8, fi.a(fi.a(fi.a(fi.a(var6 << 40, fi.a(var2 << 48, var2 << 56)), var2 << 32), var10 << 24), var8 << 16)));
+            field_a[0][var0] = ExpandingRingEffect.bitwiseOr(var12, ExpandingRingEffect.bitwiseOr(var4 << 8, ExpandingRingEffect.bitwiseOr(ExpandingRingEffect.bitwiseOr(ExpandingRingEffect.bitwiseOr(ExpandingRingEffect.bitwiseOr(var6 << 40, ExpandingRingEffect.bitwiseOr(var2 << 48, var2 << 56)), var2 << 32), var10 << 24), var8 << 16)));
             for (var14 = 1; 8 > var14; var14++) {
-                field_a[var14][var0] = fi.a(field_a[var14 - 1][var0] >>> 8, field_a[var14 - 1][var0] << 56);
+                field_a[var14][var0] = ExpandingRingEffect.bitwiseOr(field_a[var14 - 1][var0] >>> 8, field_a[var14 - 1][var0] << 56);
             }
             var0++;
         }

@@ -5,7 +5,7 @@ final class iq {
     final static byte[] a(Object param0, int param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        nn var5 = null;
+        ByteArrayStorage var5 = null;
         byte[] stackIn_6_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_12_0 = null;
@@ -22,9 +22,9 @@ final class iq {
             stackIn_6_0 = ad.a(var4, param2, param3, (byte) 53);
             return stackIn_6_0;
           }
-          if (param0 instanceof nn) {
-            var5 = (nn) (param0);
-            stackIn_9_0 = var5.a(param3, param2, 15747);
+          if (param0 instanceof ByteArrayStorage) {
+            var5 = (ByteArrayStorage) (param0);
+            stackIn_9_0 = var5.copyRange(param3, param2, 15747);
             return stackIn_9_0;
           }
           if (param1 == 14381) {

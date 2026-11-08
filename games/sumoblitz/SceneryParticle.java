@@ -16,7 +16,7 @@ final class SceneryParticle extends TimedSceneEffect {
     private double field_x;
     private int field_s;
 
-    final void a(GraphicsToolkit param0, int param1) {
+    final void render(GraphicsToolkit toolkit, int guard) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -25,12 +25,12 @@ final class SceneryParticle extends TimedSceneEffect {
         try {
           if (0 != this.field_t) {
             if (this.field_t == 1) {
-              tc.field_j[this.field_z].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), this.field_y << 1, 0, 3, this.field_D << 24, 1);
+              tc.field_j[this.field_z].a((float)(this.x >> 8), (float)(this.y >> 8), this.field_y << 1, 0, 3, this.field_D << 24, 1);
             }
           } else {
-            wo.field_b[this.field_z].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), this.field_y, (int)(65535.0 * this.field_x), 3, 570425344, 1);
+            wo.field_b[this.field_z].a((float)(this.x >> 8), (float)(this.y >> 8), this.field_y, (int)(65535.0 * this.field_x), 3, 570425344, 1);
           }
-          if (param1 < -121) {
+          if (guard < -121) {
             return;
           }
           this.field_y = -125;
@@ -40,12 +40,12 @@ final class SceneryParticle extends TimedSceneEffect {
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("gw.C(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -57,16 +57,16 @@ final class SceneryParticle extends TimedSceneEffect {
         this.field_z = param5;
         this.field_s = param9;
         this.field_u = param7;
-        this.field_y = fi.a(2048, ResourceArchive.field_b, (byte) -96) + 512;
-        this.field_D = fi.a(128, ResourceArchive.field_b, (byte) -96);
+        this.field_y = ExpandingRingEffect.nextRandomInt(2048, ResourceArchive.field_b, (byte) -96) + 512;
+        this.field_D = ExpandingRingEffect.nextRandomInt(128, ResourceArchive.field_b, (byte) -96);
     }
 
-    final boolean a(int param0) {
-        this.field_o = this.field_o + this.field_s;
+    final boolean updateAndIsExpired(int param0) {
+        this.y = this.y + this.field_s;
         if (param0 == -2567) {
           this.field_x = this.field_x + this.field_u;
-          this.field_k = this.field_k + this.field_w;
-          return super.a(param0 + 0);
+          this.x = this.x + this.field_w;
+          return super.updateAndIsExpired(param0 + 0);
         }
         return false;
     }

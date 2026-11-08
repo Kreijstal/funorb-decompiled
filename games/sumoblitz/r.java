@@ -25,7 +25,7 @@ abstract class r extends DualLinkNode {
         stackIn_3_0 = (0 != (var3 & 128));
         is.field_a = stackIn_3_0;
         wn.field_a = var8.e(-31302);
-        bb.field_j = var8.a((byte) 113);
+        ReassignUpgradesScreen.field_j = var8.a((byte) 113);
         if (2 == jb.field_h) {
           eh.field_c = var8.a(255);
           jt.field_w = var8.c((byte) 126);

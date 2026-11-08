@@ -47,42 +47,42 @@ final class ad extends za {
     final static void c(int param0) {
         kd.field_a[4] = new int[]{5};
         LegacyOpenGlEffectManager.field_g[4] = new MenuScreen(4);
-        si.a(400, 38, 10, 2, new int[]{8, 9, 10, 21, 20, 5}, 2, 468);
+        DirectByteArrayStorage.a(400, 38, 10, 2, new int[]{8, 9, 10, 21, 20, 5}, 2, 468);
         LegacyOpenGlEffectManager.field_g[2] = new MenuScreen(2);
         if (0 >= ct.field_x) {
           if (!(2 > ku.field_j)) {
-            si.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+            DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
           if (MusicPatchEnvelope.a(8230, 25)) {
-            si.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+            DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
           ut.field_j = param0;
           return;
         }
         if (uc.a((byte) -29, lt.field_m)) {
-          si.a(150, 38, 170, 2, new int[]{1, 28, 12, 13, 4, 3, 7}, 1, 470);
+          DirectByteArrayStorage.a(150, 38, 170, 2, new int[]{1, 28, 12, 13, 4, 3, 7}, 1, 470);
           LegacyOpenGlEffectManager.field_g[1] = new MenuScreen(1);
-          si.a(150, 38, 170, 2, new int[]{12, 13, 27, 4, 5}, 8, 470);
+          DirectByteArrayStorage.a(150, 38, 170, 2, new int[]{12, 13, 27, 4, 5}, 8, 470);
           LegacyOpenGlEffectManager.field_g[8] = new MenuScreen(8);
           if (!(2 > ku.field_j)) {
-            si.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+            DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
           if (MusicPatchEnvelope.a(8230, 25)) {
-            si.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+            DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
           ut.field_j = param0;
           return;
         }
         if (!(2 > ku.field_j)) {
-          si.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+          DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
           LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         }
         if (MusicPatchEnvelope.a(8230, 25)) {
-          si.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+          DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
           LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         }
         ut.field_j = param0;
@@ -137,7 +137,7 @@ final class ad extends za {
         ne var1 = null;
         if (param0 == 12768) {
           var1 = new ne(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], ag.field_d[0], LegacyOpenGlEffectManager.field_l);
-          tl.a((byte) -20);
+          PowerupPickup.releaseSpriteDecoderArrays((byte) -20);
           return var1;
         }
         return (ne) null;

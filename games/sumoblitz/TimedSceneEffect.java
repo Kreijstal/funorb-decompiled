@@ -4,32 +4,32 @@
 import java.io.*;
 
 class TimedSceneEffect extends IntrusiveNode {
-    int field_q;
+    int color;
     static String challengeText;
-    int field_o;
+    int y;
     static PcmSample[][] field_n;
     static boolean field_r;
-    int field_k;
-    int field_p;
+    int x;
+    int remainingTicks;
     static MusicTrack[] field_m;
 
-    boolean a(int param0) {
-        this.field_p = this.field_p - 1;
+    boolean updateAndIsExpired(int param0) {
+        this.remainingTicks = this.remainingTicks - 1;
         if (param0 == -2567) {
-          return this.field_p == 0 ? true : false;
+          return this.remainingTicks == 0 ? true : false;
         }
-        this.field_p = -86;
-        return this.field_p == 0 ? true : false;
+        this.remainingTicks = -86;
+        return this.remainingTicks == 0 ? true : false;
     }
 
-    void a(GraphicsToolkit param0, int param1) {
-        if (param1 >= -121) {
+    void render(GraphicsToolkit toolkit, int guard) {
+        if (guard >= -121) {
           return;
         }
         try {
-          ua.field_g[0].a((float)this.field_k, (float)this.field_o, 1848 - (int)((double)this.field_p / 30.0 * 2048.0), 0, 1, 0, 2);
+          ua.field_g[0].a((float)this.x, (float)this.y, 1848 - (int)((double)this.remainingTicks / 30.0 * 2048.0), 0, 1, 0, 2);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nt.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nt.C(" + (toolkit != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -60,7 +60,7 @@ class TimedSceneEffect extends IntrusiveNode {
         rd.a(17, -103);
     }
 
-    final static void a(byte[] param0, int param1, File param2, int param3) throws IOException {
+    final static void readFileFully(byte[] param0, int param1, File param2, int param3) throws IOException {
         DataInputStream var4 = null;
         try {
           var4 = new DataInputStream((InputStream) ((Object) new BufferedInputStream((InputStream) ((Object) new FileInputStream(param2)))));
@@ -74,11 +74,11 @@ class TimedSceneEffect extends IntrusiveNode {
         }
     }
 
-    TimedSceneEffect(int param0, int param1, int param2, int param3) {
-        this.field_q = param3;
-        this.field_k = param1;
-        this.field_p = param0;
-        this.field_o = param2;
+    TimedSceneEffect(int lifetimeTicks, int x, int y, int color) {
+        this.color = color;
+        this.x = x;
+        this.remainingTicks = lifetimeTicks;
+        this.y = y;
     }
 
     public static void releaseStatics(int param0) {

@@ -10,13 +10,13 @@ final class jq {
     final static void a(int param0, int param1) {
         if (param1 == 13586) {
           pi.field_b = wh.field_w[param0];
-          ek.field_k = nm.waitingForTextTranslations[param0];
+          ek.field_k = ArenaPad.waitingForTextTranslations[param0];
           mm.field_c = qi.loadingTextTranslations[param0];
           return;
         }
         field_a = (mi) null;
         pi.field_b = wh.field_w[param0];
-        ek.field_k = nm.waitingForTextTranslations[param0];
+        ek.field_k = ArenaPad.waitingForTextTranslations[param0];
         mm.field_c = qi.loadingTextTranslations[param0];
     }
 

@@ -57,7 +57,7 @@ final class ue extends gm {
           var7 = stackIn_16_0;
           stackIn_19_0 = (!param3) ? 7105644 : 16777215;
           var8 = stackIn_19_0;
-          nn.a(var7, param0.field_q, param0.field_v + (param1 + (-this.field_r[0].field_w + param0.field_p >> 1)), 67, this.field_r, param0.field_r + param4);
+          ByteArrayStorage.drawHorizontalSpriteStrip(var7, param0.field_q, param0.field_v + (param1 + (-this.field_r[0].field_w + param0.field_p >> 1)), 67, this.field_r, param0.field_r + param4);
           this.field_e.a(param0.field_m, param4 + param0.field_r, param0.field_v + (param1 - 2), param0.field_q, param0.field_p, var8, -1, 1, 1, this.field_e.field_s);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -238,7 +238,7 @@ final class ue extends gm {
             var6.unlink(false);
             return;
           }
-          IntrusiveNode.reportClientError("HS1: " + di.b((byte) -124), (Throwable) null, 0);
+          IntrusiveNode.reportClientError("HS1: " + VictoryScreen.b((byte) -124), (Throwable) null, 0);
           kk.a((byte) -121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -250,7 +250,7 @@ final class ue extends gm {
 
     private ue(int param0, int param1, int param2) {
         this.field_q = param2;
-        this.field_r = jp.field_j;
+        this.field_r = LevelCompleteUpgradeScreen.field_j;
         this.field_e = tq.field_a;
         this.field_s = param1;
         this.field_n = param0;

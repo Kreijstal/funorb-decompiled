@@ -96,7 +96,7 @@ class jb extends se {
               if (param1.length() == 0) {
                 var6Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var6Lifetime6 = var8 + "; Expires=" + fi.a(94608000000L + wq.a(-6), true) + "; Max-Age=" + 94608000L;
+                var6Lifetime6 = var8 + "; Expires=" + ExpandingRingEffect.formatCookieDate(94608000000L + wq.a(-6), true) + "; Max-Age=" + 94608000L;
               }
               tw.a("document.cookie=\"" + var6Lifetime6 + "\"", -15428, param2);
             } catch (Throwable throwable) {
@@ -160,9 +160,9 @@ class jb extends se {
               } else {
                 kb.field_d = MouseInputHandler.a(false, param0, param5, (byte) -94);
               }
-              as.field_v.position = 0;
-              as.field_v.b((byte) 42, 14);
-              as.field_v.b((byte) 96, kb.field_d.a((byte) 126).field_c);
+              InwardSparkParticle.field_v.position = 0;
+              InwardSparkParticle.field_v.b((byte) 42, 14);
+              InwardSparkParticle.field_v.b((byte) 96, kb.field_d.a((byte) 126).field_c);
               gt.a(0, -1);
               kw.field_c = gi.field_g;
             }
@@ -247,7 +247,7 @@ class jb extends se {
               kw.field_c = ga.field_j;
               if (kb.field_d.a((byte) 113) != pb.field_b) {
                 if (kb.field_d.a((byte) 89) == hh.field_c) {
-                  tr.field_j.a(true, ra.c(2));
+                  LevelSelectScreen.field_j.a(true, ra.c(2));
                 }
               } else {
                 go.field_m.a(true, ra.c(2));
@@ -275,7 +275,7 @@ class jb extends se {
               if (ct.field_x > 0) {
                 qn.field_a = true;
               }
-              as.field_v.a((byte) 64, bk.field_e);
+              InwardSparkParticle.field_v.a((byte) 64, bk.field_e);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 bk.field_e[var8Lifetime1] = bk.field_e[var8Lifetime1] + 50;
               }

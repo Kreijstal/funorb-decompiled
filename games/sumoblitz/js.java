@@ -245,7 +245,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
               return;
             }
             if (var2 != 4) {
-              IntrusiveNode.reportClientError("F1: " + di.b((byte) 104), (Throwable) null, 0);
+              IntrusiveNode.reportClientError("F1: " + VictoryScreen.b((byte) 104), (Throwable) null, 0);
               kk.a((byte) -112);
               if (param0 <= 71) {
                 field_G = (ts) null;

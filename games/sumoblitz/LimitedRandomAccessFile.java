@@ -50,7 +50,7 @@ final class LimitedRandomAccessFile {
     }
 
     final static void d(int param0) {
-        si.a(115, 38, 148, param0 - 22028, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
+        DirectByteArrayStorage.a(115, 38, 148, param0 - 22028, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
         LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         if (param0 != 22030) {
           LimitedRandomAccessFile.d(35);

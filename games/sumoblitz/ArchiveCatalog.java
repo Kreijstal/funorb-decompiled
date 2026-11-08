@@ -551,7 +551,7 @@ final class ArchiveCatalog {
         byte[] var2Lifetime247;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          ah.field_J = param0;
+          Drone.field_J = param0;
           var2 = ke.a((byte) 98, "gamename");
           if (var2 != null) {
             MusicVoice.a(param1 ^ -5, var2);
@@ -1373,7 +1373,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime204 = ke.a((byte) 105, "hudLives");
           if (var2Lifetime204 != null) {
-            as.livesText = MusicVoice.a(param1 ^ -5, var2Lifetime204);
+            InwardSparkParticle.livesText = MusicVoice.a(param1 ^ -5, var2Lifetime204);
           }
           var2Lifetime205 = ke.a((byte) 99, "hudMultiplier");
           if (var2Lifetime205 != null) {
@@ -1547,7 +1547,7 @@ final class ArchiveCatalog {
           if (var2Lifetime247 != null) {
             LimitedRandomAccessFile.droneDescriptions[37] = MusicVoice.a(jg.a(param1, -5), var2Lifetime247);
           }
-          ah.field_J = null;
+          Drone.field_J = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

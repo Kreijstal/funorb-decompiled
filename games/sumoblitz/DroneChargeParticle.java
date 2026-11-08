@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends TimedSceneEffect {
-    private int field_y;
+final class DroneChargeParticle extends TimedSceneEffect {
+    private int velocityYQ8;
     static int field_s;
-    private int field_u;
-    private ah field_x;
+    private int textureKind;
+    private Drone drone;
     static boolean field_w;
-    private int field_t;
+    private int velocityXQ8;
     static SpriteData[] field_v;
     static int[] field_z;
 
-    final void a(GraphicsToolkit param0, int param1) {
+    final void render(GraphicsToolkit toolkit, int guard) {
         RuntimeException var3 = null;
         GraphicsToolkit var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -19,28 +19,28 @@ final class cl extends TimedSceneEffect {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (0 != this.field_u) {
-            im.field_a.a(this.field_x.field_C + this.field_k >> 8, this.field_x.field_z + this.field_o >> 8, 0, this.field_q + (4 * this.field_p << 24), 1);
+          if (0 != this.textureKind) {
+            im.field_a.a(this.drone.xQ8 + this.x >> 8, this.drone.yQ8 + this.y >> 8, 0, this.color + (4 * this.remainingTicks << 24), 1);
           } else {
-            uc.field_a.a((float)(this.field_x.field_C + this.field_k >> 8), (float)(this.field_o + this.field_x.field_z >> 8), 1024, 0, 3, 16777215 + (this.field_p * 4 << 24), 1);
+            uc.field_a.a((float)(this.drone.xQ8 + this.x >> 8), (float)(this.y + this.drone.yQ8 >> 8), 1024, 0, 3, 16777215 + (this.remainingTicks * 4 << 24), 1);
           }
-          if (param1 <= -121) {
+          if (guard <= -121) {
             return;
           }
           var4 = (GraphicsToolkit) null;
-          this.a((GraphicsToolkit) null, 121);
+          this.render((GraphicsToolkit) null, 121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
           stackIn_8_1 = new StringBuilder().append("cl.C(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -52,7 +52,7 @@ final class cl extends TimedSceneEffect {
         field_v = null;
     }
 
-    final static void e(int param0) {
+    final static void initializeMenuLabels(int param0) {
         if (null != GameClientShell.field_u) {
           return;
         }
@@ -95,73 +95,73 @@ final class cl extends TimedSceneEffect {
         GameClientShell.field_u[31] = ls.continueText;
     }
 
-    final boolean a(int param0) {
+    final boolean updateAndIsExpired(int param0) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
         if (param0 != -2567) {
           field_z = (int[]) null;
-          if (this.field_p >= 64) {
-            return super.a(-2567);
+          if (this.remainingTicks >= 64) {
+            return super.updateAndIsExpired(-2567);
           }
-          this.field_o = this.field_o + this.field_y;
-          this.field_k = this.field_k + this.field_t;
-          this.field_t = this.field_t * 251 / 285;
-          this.field_y = this.field_y * 251 / 285;
-          if (0 > this.field_y) {
-            this.field_y = this.field_y - 1;
-            if (this.field_t >= 0) {
-              this.field_t = this.field_t + 1;
-              return super.a(-2567);
+          this.y = this.y + this.velocityYQ8;
+          this.x = this.x + this.velocityXQ8;
+          this.velocityXQ8 = this.velocityXQ8 * 251 / 285;
+          this.velocityYQ8 = this.velocityYQ8 * 251 / 285;
+          if (0 > this.velocityYQ8) {
+            this.velocityYQ8 = this.velocityYQ8 - 1;
+            if (this.velocityXQ8 >= 0) {
+              this.velocityXQ8 = this.velocityXQ8 + 1;
+              return super.updateAndIsExpired(-2567);
             }
-            this.field_t = this.field_t - 1;
-            return super.a(-2567);
+            this.velocityXQ8 = this.velocityXQ8 - 1;
+            return super.updateAndIsExpired(-2567);
           }
-          this.field_y = this.field_y + 1;
-          if (this.field_t >= 0) {
-            this.field_t = this.field_t + 1;
-            return super.a(-2567);
+          this.velocityYQ8 = this.velocityYQ8 + 1;
+          if (this.velocityXQ8 >= 0) {
+            this.velocityXQ8 = this.velocityXQ8 + 1;
+            return super.updateAndIsExpired(-2567);
           }
-          this.field_t = this.field_t - 1;
-          return super.a(-2567);
+          this.velocityXQ8 = this.velocityXQ8 - 1;
+          return super.updateAndIsExpired(-2567);
         }
-        if (this.field_p >= 64) {
-          return super.a(-2567);
+        if (this.remainingTicks >= 64) {
+          return super.updateAndIsExpired(-2567);
         }
-        this.field_o = this.field_o + this.field_y;
-        this.field_k = this.field_k + this.field_t;
-        this.field_t = this.field_t * 251 / 285;
-        this.field_y = this.field_y * 251 / 285;
-        if (0 > this.field_y) {
-          this.field_y = this.field_y - 1;
-          if (this.field_t >= 0) {
-            this.field_t = this.field_t + 1;
-            return super.a(-2567);
+        this.y = this.y + this.velocityYQ8;
+        this.x = this.x + this.velocityXQ8;
+        this.velocityXQ8 = this.velocityXQ8 * 251 / 285;
+        this.velocityYQ8 = this.velocityYQ8 * 251 / 285;
+        if (0 > this.velocityYQ8) {
+          this.velocityYQ8 = this.velocityYQ8 - 1;
+          if (this.velocityXQ8 >= 0) {
+            this.velocityXQ8 = this.velocityXQ8 + 1;
+            return super.updateAndIsExpired(-2567);
           }
-          this.field_t = this.field_t - 1;
-          return super.a(-2567);
+          this.velocityXQ8 = this.velocityXQ8 - 1;
+          return super.updateAndIsExpired(-2567);
         }
-        this.field_y = this.field_y + 1;
-        if (this.field_t >= 0) {
-          this.field_t = this.field_t + 1;
-          return super.a(-2567);
+        this.velocityYQ8 = this.velocityYQ8 + 1;
+        if (this.velocityXQ8 >= 0) {
+          this.velocityXQ8 = this.velocityXQ8 + 1;
+          return super.updateAndIsExpired(-2567);
         }
-        this.field_t = this.field_t - 1;
-        return super.a(-2567);
+        this.velocityXQ8 = this.velocityXQ8 - 1;
+        return super.updateAndIsExpired(-2567);
     }
 
-    cl(int param0, int param1, int param2, int param3, int param4, int param5, int param6, ah param7) {
-        super(param0, param1, param2, param3);
+    DroneChargeParticle(int lifetimeTicks, int offsetXQ8, int offsetYQ8, int color, int velocityXQ8, int velocityYQ8, int textureKind, Drone drone) {
+        super(lifetimeTicks, offsetXQ8, offsetYQ8, color);
         try {
-          this.field_u = param6;
-          this.field_t = param4;
-          this.field_x = param7;
-          this.field_y = param5;
+          this.textureKind = textureKind;
+          this.velocityXQ8 = velocityXQ8;
+          this.drone = drone;
+          this.velocityYQ8 = velocityYQ8;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cl.<init>(" + lifetimeTicks + ',' + offsetXQ8 + ',' + offsetYQ8 + ',' + color + ',' + velocityXQ8 + ',' + velocityYQ8 + ',' + textureKind + ',' + (drone != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0, lt param1, int param2) {
-        pl var5 = as.field_v;
+        pl var5 = InwardSparkParticle.field_v;
         var5.g(param2, param0 ^ -105);
         var5.position = var5.position + 1;
         int var4 = var5.position;

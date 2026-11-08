@@ -21,7 +21,7 @@ abstract class pt {
         if (param1) {
           jj.field_d = jj.field_d - 1;
           if (jj.field_d == 0) {
-            bb.field_i = null;
+            ReassignUpgradesScreen.field_i = null;
           }
         }
     }
@@ -111,7 +111,7 @@ abstract class pt {
             kk.a((byte) -114);
             return;
           }
-          IntrusiveNode.reportClientError("LR1: " + di.b((byte) 126), (Throwable) null, 0);
+          IntrusiveNode.reportClientError("LR1: " + VictoryScreen.b((byte) 126), (Throwable) null, 0);
           kk.a((byte) -119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

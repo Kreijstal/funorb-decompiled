@@ -30,7 +30,7 @@ final class uv extends gm {
         float[] dupTemp$2 = null;
         int var6_int = 0;
         float[] var7 = null;
-        vt var8 = null;
+        BurstParticle var8 = null;
         int var9 = 0;
         float[] var10 = null;
         float[] var11 = null;
@@ -42,7 +42,7 @@ final class uv extends gm {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         float[] var7Lifetime1;
-        vt var8Lifetime1;
+        BurstParticle var8Lifetime1;
         float[] var7Lifetime2;
         float[] var7Lifetime1Lifetime1;
         int var6_intLifetime1;
@@ -53,21 +53,21 @@ final class uv extends gm {
             return;
           }
           while (8 > var6_int) {
-            var7 = new float[]{0.0f, (float)(-(fi.a(param5, he.field_o, (byte) -96) + 1))};
+            var7 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param5, he.field_o, (byte) -96) + 1))};
             var13 = kt.a((byte) -115, var7, (float)(0.0 + (double)(2048.0f / (float)var6_int) * 0.017453292519943295));
             var12 = var13;
             var10 = var12;
             var7Lifetime2 = var10;
-            var8 = new vt(24, param3, param1, param0, (int)var13[0] << 8, (int)var13[1] << 8, 0);
+            var8 = new BurstParticle(24, param3, param1, param0, (int)var13[0] << 8, (int)var13[1] << 8, 0);
             param4.addLast((IntrusiveNode) (var8), (byte) 39);
             var6_int++;
           }
           for (var6_intLifetime1 = 0; var6_intLifetime1 < 8; var6_intLifetime1++) {
-            var7Lifetime1 = new float[]{0.0f, (float)(-(1 + fi.a(param5, he.field_o, (byte) -96)))};
+            var7Lifetime1 = new float[]{0.0f, (float)(-(1 + ExpandingRingEffect.nextRandomInt(param5, he.field_o, (byte) -96)))};
             dupTemp$2 = kt.a((byte) -92, var7Lifetime1, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var6_intLifetime1)));
             var11 = dupTemp$2;
             var7Lifetime1Lifetime1 = dupTemp$2;
-            var8Lifetime1 = new vt(24, param3, param1, param0, (int)var11[0] << 8, (int)var11[1] << 8, 1);
+            var8Lifetime1 = new BurstParticle(24, param3, param1, param0, (int)var11[0] << 8, (int)var11[1] << 8, 1);
             param4.addLast((IntrusiveNode) (var8Lifetime1), (byte) 39);
           }
           return;

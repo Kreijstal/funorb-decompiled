@@ -51,9 +51,9 @@ final class GameplaySession {
             if (var3_int == -1) {
               var3_int = 0;
             }
-            var4_int = (tl.field_t + 1) % bi.field_a[var3_int].length;
-            var5 = (2 + tl.field_t) % bi.field_a[var3_int].length;
-            var6 = bi.field_a[var3_int][tl.field_t];
+            var4_int = (PowerupPickup.field_t + 1) % bi.field_a[var3_int].length;
+            var5 = (2 + PowerupPickup.field_t) % bi.field_a[var3_int].length;
+            var6 = bi.field_a[var3_int][PowerupPickup.field_t];
             var7 = bi.field_a[var3_int][var4_int];
             var8 = bi.field_a[var3_int][var5];
             if (uk.field_ob) {
@@ -73,7 +73,7 @@ final class GameplaySession {
                 } else {
                   stackIn_34_1 = (var3_int - 1) % 6;
                 }
-                var6 = stackIn_33_0[stackIn_34_1][tl.field_t];
+                var6 = stackIn_33_0[stackIn_34_1][PowerupPickup.field_t];
               }
               if (kr.field_e == 3) {
                 stackIn_41_0 = bi.field_a;
@@ -91,9 +91,9 @@ final class GameplaySession {
             }
             this.field_c = nf.a(var6, (byte) -117, 501, var7);
             this.field_g = nf.a(var7, (byte) -87, 501, var8);
-            tl.field_t = tl.field_t + 1;
-            if (bi.field_a[var3_int].length <= tl.field_t) {
-              tl.field_t = 0;
+            PowerupPickup.field_t = PowerupPickup.field_t + 1;
+            if (bi.field_a[var3_int].length <= PowerupPickup.field_t) {
+              PowerupPickup.field_t = 0;
             }
           }
           var3 = nf.a(this.field_c[lg.field_c % 500], (byte) -118, 480, this.field_g[lg.field_c % 500]);
@@ -112,7 +112,7 @@ final class GameplaySession {
                 if (null != ni.field_e) {
                   var4 = (SceneryParticle) (ni.field_e.first(125));
                   while (var4 != null) {
-                    var4.a(var2, -123);
+                    var4.render(var2, -123);
                     var4 = (SceneryParticle) (ni.field_e.next((byte) 18));
                     if (var9 != 0) {
                       decompiledFrameCompleted0 = false;
@@ -240,20 +240,20 @@ final class GameplaySession {
     final void a(int param0, GraphicsToolkit param1, boolean param2) {
         Object stackIn_20_0 = null;
         int stackIn_34_0 = 0;
-        to stackIn_44_0 = null;
+        HudMessage stackIn_44_0 = null;
         Object stackIn_54_0 = null;
         RuntimeException stackIn_68_0 = null;
         StringBuilder stackIn_68_1 = null;
         String stackIn_69_2 = null;
         RuntimeException decompiledCaughtException = null;
-        to stackOut_43_0;
-        nm var4 = null;
+        HudMessage stackOut_43_0;
+        ArenaPad var4 = null;
         int var4_int = 0;
-        tl var4_ref = null;
-        to var4_ref2 = null;
+        PowerupPickup var4_ref = null;
+        HudMessage var4_ref2 = null;
         TimedSceneEffect var4_ref3 = null;
         RuntimeException var4_ref4 = null;
-        ah var5 = null;
+        Drone var5 = null;
         int var6 = 0;
         int var4_intLifetime1;
         var6 = Sumoblitz.field_L ? 1 : 0;
@@ -263,10 +263,10 @@ final class GameplaySession {
           param1.GA(0);
           this.b(60);
           if (null != is.field_c) {
-            var4 = (nm) (is.field_c.first(-81));
+            var4 = (ArenaPad) (is.field_c.first(-81));
             while (var4 != null) {
-              var4.a(param1, -15687169);
-              var4 = (nm) (is.field_c.next((byte) 18));
+              var4.render(param1, -15687169);
+              var4 = (ArenaPad) (is.field_c.next((byte) 18));
               if (var6 != 0) {
                 decompiledFrameCompleted4 = false;
                 break;
@@ -284,7 +284,7 @@ final class GameplaySession {
                 break;
               }
               if (stackIn_20_0 != var5) {
-                var5.a(param1, 19399);
+                var5.render(param1, 19399);
               }
               var4_int++;
             }
@@ -295,10 +295,10 @@ final class GameplaySession {
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameCompleted2 = true;
           if (stackIn_20_0 != bj.field_b) {
-            var4_ref = (tl) (bj.field_b.first(-90));
+            var4_ref = (PowerupPickup) (bj.field_b.first(-90));
             while (var4_ref != null) {
-              var4_ref.a(-62, param1);
-              var4_ref = (tl) (bj.field_b.next((byte) 18));
+              var4_ref.render(-62, param1);
+              var4_ref = (PowerupPickup) (bj.field_b.next((byte) 18));
               if (var6 != 0) {
                 decompiledFrameCompleted2 = false;
                 break;
@@ -332,9 +332,9 @@ final class GameplaySession {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted1 = true;
           if (!MusicPatch.field_m) {
-            var4_ref2 = (to) (ig.field_b.first(-59));
+            var4_ref2 = (HudMessage) (ig.field_b.first(-59));
             while (var4_ref2 != null) {
-              stackOut_43_0 = (to) (var4_ref2);
+              stackOut_43_0 = (HudMessage) (var4_ref2);
               stackIn_54_0 = stackOut_43_0;
               stackIn_44_0 = stackOut_43_0;
               if (var6 != 0) {
@@ -342,9 +342,9 @@ final class GameplaySession {
                 break;
               }
               if (stackIn_44_0 != null) {
-                var4_ref2.a((byte) -70);
+                var4_ref2.render((byte) -70);
               }
-              var4_ref2 = (to) (ig.field_b.next((byte) 18));
+              var4_ref2 = (HudMessage) (ig.field_b.next((byte) 18));
             }
           }
           if ((decompiledFrameCompleted1) &&
@@ -354,7 +354,7 @@ final class GameplaySession {
           if (decompiledFrameRemainder0) {
             var4_ref3 = (TimedSceneEffect) (stackIn_54_0);
             while (null != var4_ref3) {
-              var4_ref3.a(param1, -127);
+              var4_ref3.render(param1, -127);
               var4_ref3 = (TimedSceneEffect) (rc.field_m.next((byte) 18));
               if (var6 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -388,9 +388,9 @@ final class GameplaySession {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         IntrusiveDequeCursor var3 = null;
-        nm var4 = null;
+        ArenaPad var4 = null;
         int var5 = 0;
-        ah var6 = null;
+        Drone var6 = null;
         int var7 = 0;
         int stackIn_20_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -401,10 +401,10 @@ final class GameplaySession {
           if (param0 < 59) {
             return;
           }
-          var4 = (nm) (var3.first((byte) -80));
+          var4 = (ArenaPad) (var3.first((byte) -80));
           scanLoop1: while (true) {
             if (var4 != null) {
-              var4.a(1048149637);
+              var4.update(1048149637);
               stackIn_20_0 = 0;
               if (var7 != 0) {
                 break scanLoop1;
@@ -413,13 +413,13 @@ final class GameplaySession {
               while (var5 < aa.field_a.length) {
                 var6 = aa.field_a[var5];
                 if (null != var6 &&
-                  var4.c(var6, 2145812808)) {
+                  var4.overlapsDrone(var6, 2145812808)) {
                   var2_int = 1;
-                  var4.b(var6, 16776960);
+                  var4.applyToDrone(var6, 16776960);
                 }
                 var5++;
               }
-              var4 = (nm) (var3.next(0));
+              var4 = (ArenaPad) (var3.next(0));
               continue scanLoop1;
             }
             stackIn_20_0 = var2_int;
@@ -674,7 +674,7 @@ final class GameplaySession {
           var2 = (SceneryParticle) (ni.field_e.first(-68));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var2))) {
-            stackOut_3_0 = var2.a(-2567);
+            stackOut_3_0 = var2.updateAndIsExpired(-2567);
             stackIn_11_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
             if (var4 == 0) {
@@ -700,54 +700,54 @@ final class GameplaySession {
 
     private final void f(int param0) {
         RuntimeException decompiledCaughtException = null;
-        ah var2 = null;
+        Drone var2 = null;
         RuntimeException var2_ref = null;
-        tl var3 = null;
+        PowerupPickup var3 = null;
         int var4 = 0;
         int var5 = 0;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
           var2 = aa.field_a[0];
-          var3 = (tl) (bj.field_b.first(param0 + 14762));
+          var3 = (PowerupPickup) (bj.field_b.first(param0 + 14762));
           while (var3 != null) {
-            var3.c(param0 - 16401);
+            var3.update(param0 - 16401);
             if (var5 != 0) {
               return;
             }
             if (null != var2) {
-              var4 = var2.field_m + var3.a(-127);
-              if (wn.a(var2.field_z, var4, -127, var3.c((byte) 70), var2.field_C, var3.d(param0 ^ 14936)) &&
-                !var3.g(0)) {
-                var2.a((byte) 88, var3);
+              var4 = var2.radiusQ8 + var3.radiusQ8(-127);
+              if (wn.a(var2.yQ8, var4, -127, var3.xQ8((byte) 70), var2.xQ8, var3.yQ8(param0 ^ 14936)) &&
+                !var3.isMoving(0)) {
+                var2.applyPowerup((byte) 88, var3);
                 gn.a(27, true);
-                if (2 == var3.field_n) {
+                if (2 == var3.effectIndex) {
                   b.field_c = true;
-                  rn.a(UpgradeStatNames.names[2] + "+", var2.field_C >> 8, var2.field_z >> 8, 16732416, 28807);
-                } else if (var3.field_n != 0) {
-                  if (var3.field_n == 1) {
-                    cl.field_w = true;
-                    rn.a(UpgradeStatNames.names[1] + "+", var2.field_C >> 8, var2.field_z >> 8, 12714108, param0 + 43661);
-                  } else if (3 != var3.field_n) {
-                    if (4 == var3.field_n) {
-                      cl.field_w = true;
-                      rn.a(UpgradeStatNames.names[4], var2.field_C >> 8, var2.field_z >> 8, 44031, param0 + 43661);
+                  rn.a(UpgradeStatNames.names[2] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 16732416, 28807);
+                } else if (var3.effectIndex != 0) {
+                  if (var3.effectIndex == 1) {
+                    DroneChargeParticle.field_w = true;
+                    rn.a(UpgradeStatNames.names[1] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 12714108, param0 + 43661);
+                  } else if (3 != var3.effectIndex) {
+                    if (4 == var3.effectIndex) {
+                      DroneChargeParticle.field_w = true;
+                      rn.a(UpgradeStatNames.names[4], var2.xQ8 >> 8, var2.yQ8 >> 8, 44031, param0 + 43661);
                     }
                   } else {
-                    cl.field_w = true;
-                    rn.a(UpgradeStatNames.names[3], var2.field_C >> 8, var2.field_z >> 8, 16711680, 28807);
+                    DroneChargeParticle.field_w = true;
+                    rn.a(UpgradeStatNames.names[3], var2.xQ8 >> 8, var2.yQ8 >> 8, 16711680, 28807);
                   }
                 } else {
                   SecondaryNodeDeque.field_e = true;
-                  rn.a(UpgradeStatNames.names[0] + "+", var2.field_C >> 8, var2.field_z >> 8, 32780, 28807);
+                  rn.a(UpgradeStatNames.names[0] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 32780, 28807);
                 }
                 vb.field_E = true;
                 var3.unlink(false);
               }
             }
-            if (var3.field_q <= 0) {
+            if (var3.remainingTicks <= 0) {
               var3.unlink(false);
             }
-            var3 = (tl) (bj.field_b.next((byte) 18));
+            var3 = (PowerupPickup) (bj.field_b.next((byte) 18));
           }
           if (param0 != -14854) {
             field_k = -94;
@@ -825,19 +825,19 @@ final class GameplaySession {
                     return;
                   }
                 }
-                aa.field_a[0].a(-42, 2);
+                aa.field_a[0].upgradeStat(-42, 2);
                 f.field_w = true;
                 if (var3 == 0) {
                   return;
                 }
               }
-              aa.field_a[0].a(-34, 1);
+              aa.field_a[0].upgradeStat(-34, 1);
               f.field_w = true;
               if (var3 == 0) {
                 return;
               }
             }
-            aa.field_a[0].a(-32, 0);
+            aa.field_a[0].upgradeStat(-32, 0);
             f.field_w = true;
             if (var3 == 0) {
               return;
@@ -1014,18 +1014,18 @@ final class GameplaySession {
         int stackIn_158_0 = 0;
         int stackIn_233_0 = 0;
         Object stackIn_336_0 = null;
-        ah stackIn_336_1 = null;
+        Drone stackIn_336_1 = null;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_150_0;
         TimedSceneEffect var3 = null;
-        ah var3_ref = null;
-        to var3_ref2 = null;
+        Drone var3_ref = null;
+        HudMessage var3_ref2 = null;
         RuntimeException var3_ref3 = null;
         int var4_int = 0;
-        ah var4 = null;
+        Drone var4 = null;
         int var5 = 0;
         int var6 = 0;
-        ah var4Lifetime1;
+        Drone var4Lifetime1;
         int var4_intLifetime1;
         int var5Lifetime1;
         var6 = Sumoblitz.field_L ? 1 : 0;
@@ -1055,7 +1055,7 @@ final class GameplaySession {
           if (null != rc.field_m) {
             var3 = (TimedSceneEffect) (rc.field_m.first(95));
             while (null != var3) {
-              stackIn_31_0 = var3.a(-2567);
+              stackIn_31_0 = var3.updateAndIsExpired(-2567);
               if (var6 != 0) {
                 decompiledFrameCompleted2 = false;
                 break;
@@ -1124,8 +1124,8 @@ final class GameplaySession {
           MusicPatch.c((byte) 77);
           if (iw.field_b != uc.field_f &&
             (iw.field_b - uc.field_f) % 50 == 0 &&
-            !aj.field_C) {
-            aj.field_C = ig.b(114);
+            !DroneDebris.field_C) {
+            DroneDebris.field_C = ig.b(114);
           }
           if (MusicPatch.field_m) {
             return;
@@ -1137,12 +1137,12 @@ final class GameplaySession {
           this.d(-112);
           boolean decompiledSharedTail1 = !(gt.field_ab <= 0);
           if (!decompiledSharedTail1) {
-            tl.field_v = 0;
+            PowerupPickup.field_v = 0;
             decompiledSharedTail1 = (var6 != 0);
           }
           if (decompiledSharedTail1) {
             gt.field_ab = gt.field_ab - 1;
-            if (tl.field_v >= ps.field_e[11]) {
+            if (PowerupPickup.field_v >= ps.field_e[11]) {
               th.b(24753, 244, 11);
             }
           }
@@ -1158,23 +1158,23 @@ final class GameplaySession {
             if (decompiledFrameRemainder1) {
               var3_ref = aa.field_a[0];
               if (fa.field_b <= 0 &&
-                !var3_ref.g(126)) {
-                if (wn.a(field_l, var3_ref.field_m, -105, var3_ref.field_C, ua.field_d, var3_ref.field_z)) {
+                !var3_ref.isBlastActive(126)) {
+                if (wn.a(field_l, var3_ref.radiusQ8, -105, var3_ref.xQ8, ua.field_d, var3_ref.yQ8)) {
                   ro.a(var3_ref, (byte) 113);
                   if (ul.field_f == 0) {
-                    rc.field_m.addLast((IntrusiveNode) (new fi(ua.field_d, field_l, -1)), (byte) 39);
+                    rc.field_m.addLast((IntrusiveNode) (new ExpandingRingEffect(ua.field_d, field_l, -1)), (byte) 39);
                   }
                   gn.a(30, true);
                 }
                 fa.field_b = 250;
               }
-              field_l = var3_ref.field_z;
-              ua.field_d = var3_ref.field_C;
+              field_l = var3_ref.yQ8;
+              ua.field_d = var3_ref.xQ8;
               fa.field_b = fa.field_b - 1;
             }
             if (fa.field_b == 30 &&
               0 == ul.field_f) {
-              rc.field_m.addLast((IntrusiveNode) (new gb(ua.field_d, field_l, -1)), (byte) 39);
+              rc.field_m.addLast((IntrusiveNode) (new ShrinkingRingEffect(ua.field_d, field_l, -1)), (byte) 39);
             }
             if (30 == fa.field_b) {
               gn.a(32, true);
@@ -1183,17 +1183,17 @@ final class GameplaySession {
               gd.a(10, field_l, rc.field_m, 61, ua.field_d, 16711680);
             }
           }
-          var3_ref2 = (to) (ig.field_b.first(111));
+          var3_ref2 = (HudMessage) (ig.field_b.first(111));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var3_ref2))) {
-            stackOut_150_0 = var3_ref2.a(80);
+            stackOut_150_0 = var3_ref2.updateAndIsExpired(80);
             stackIn_158_0 = stackOut_150_0 ? 1 : 0;
             stackIn_151_0 = stackOut_150_0;
             if (var6 == 0) {
               if (stackIn_151_0) {
                 var3_ref2.unlink(false);
               }
-              var3_ref2 = (to) (ig.field_b.next((byte) 18));
+              var3_ref2 = (HudMessage) (ig.field_b.next((byte) 18));
               continue;
             }
             break;
@@ -1236,7 +1236,7 @@ final class GameplaySession {
                 if (incrementValue$0 <= 0) {
                   break;
                 }
-                oc.a(uj.a(Math.max(7, fi.a((int)(Math.log((double)in.field_z) / Math.log(10.0)), ResourceArchive.field_b, (byte) -96)), fi.a(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 0, (byte) 84, 26 + fi.a(428, ResourceArchive.field_b, (byte) -96) << 8), false);
+                oc.a(uj.createEnemyDrone(Math.max(7, ExpandingRingEffect.nextRandomInt((int)(Math.log((double)in.field_z) / Math.log(10.0)), ResourceArchive.field_b, (byte) -96)), ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 0, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8), false);
                 if (var6 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -1251,17 +1251,17 @@ final class GameplaySession {
           if (decompiledFrameCompleted1) {
             if (param0 &&
               null != aa.field_a[0]) {
-              ub.a(20);
+              DelayedInboundPacket.updatePlayerControls(20);
             }
             if (kp.field_a) {
-              km.a((byte) 32);
+              km.updateEnemySteering((byte) 32);
             }
             boolean decompiledFrameRemainder0 = true;
             er.c((byte) 54);
             if ((gt.field_bb) &&
               (decompiledFrameRemainder0 = (0 == iw.field_b % 250)) &&
               (decompiledFrameRemainder0 = !(jc.b(true) >= (aa.field_a.length - 1)))) {
-              var4 = uj.a(1, fi.a(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 4, (byte) 84, 26 + fi.a(428, ResourceArchive.field_b, (byte) -96) << 8);
+              var4 = uj.createEnemyDrone(1, ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 4, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
               oc.a(var4, false);
               decompiledFrameRemainder0 = (var6 != 0);
             }
@@ -1292,7 +1292,7 @@ final class GameplaySession {
                   if (stackIn_233_0 == -1) {
                     break;
                   }
-                  if (!aj.field_C) {
+                  if (!DroneDebris.field_C) {
                     break;
                   }
                   if (~an.field_a != ~(-1 + ku.field_J.length)) {
@@ -1321,7 +1321,7 @@ final class GameplaySession {
                   if (sl.a((byte) 90, 25)) {
                     th.b(24753, 236, 19);
                   }
-                  if (nn.a(25, 115)) {
+                  if (ByteArrayStorage.a(25, 115)) {
                     th.b(24753, 234, 21);
                   }
                 }
@@ -1334,7 +1334,7 @@ final class GameplaySession {
                   th.b(24753, 250, 5);
                 }
                 if (nq.field_i == 5 &&
-                  !cl.field_w) {
+                  !DroneChargeParticle.field_w) {
                   th.b(24753, 249, 6);
                 }
                 if (nq.field_i == 5 &&
@@ -1365,7 +1365,7 @@ final class GameplaySession {
                       th.b(24753, 253, 2);
                     }
                   }
-                  ua.a(35040, new fe(81920, 61440));
+                  ua.a(35040, new PlayerDrone(81920, 61440));
                   av.a(-7753, true, 12);
                   ag.a(0, 6);
                   return;
@@ -1405,10 +1405,10 @@ final class GameplaySession {
           }
           if (null != aa.field_a[0]) {
             var4Lifetime1 = aa.field_a[0];
-            if (var4Lifetime1.i(-2)) {
+            if (var4Lifetime1.isBlastChargeParticleTick(-2)) {
               this.a(231, 6356832, pu.blastReadyText);
             }
-            if (var4Lifetime1.g((byte) -59) &&
+            if (var4Lifetime1.isBlastWarningTick((byte) -59) &&
               this.field_b) {
               wd.a((byte) 99, 17);
               this.field_b = false;
@@ -1417,7 +1417,7 @@ final class GameplaySession {
           if (null != bj.field_b) {
             this.f(-14854);
           }
-          lp.a(true);
+          GameOverScreen.a(true);
           if (gt.field_bb &&
             aa.field_a[0] != null) {
             if (300 <= iw.field_b * 20 / 1000) {
@@ -1456,7 +1456,7 @@ final class GameplaySession {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ig.field_b.addLast((IntrusiveNode) (new to(param2, param1)), (byte) 39);
+          ig.field_b.addLast((IntrusiveNode) (new HudMessage(param2, param1)), (byte) 39);
           if (param0 != 231) {
             this.c(-6);
           }
@@ -1520,8 +1520,8 @@ final class GameplaySession {
           if (lg.field_c % param0 == 0 ||
             this.field_h == this.field_a &&
             this.field_m == this.field_f) {
-            var2_int = fi.a(640 + OpenGlEnvironmentWaterEffect.field_i.c(), ResourceArchive.field_b, (byte) -96) - OpenGlEnvironmentWaterEffect.field_i.c();
-            var3 = fi.a(480 + OpenGlEnvironmentWaterEffect.field_i.a(), ResourceArchive.field_b, (byte) -96) - OpenGlEnvironmentWaterEffect.field_i.a();
+            var2_int = ExpandingRingEffect.nextRandomInt(640 + OpenGlEnvironmentWaterEffect.field_i.c(), ResourceArchive.field_b, (byte) -96) - OpenGlEnvironmentWaterEffect.field_i.c();
+            var3 = ExpandingRingEffect.nextRandomInt(480 + OpenGlEnvironmentWaterEffect.field_i.a(), ResourceArchive.field_b, (byte) -96) - OpenGlEnvironmentWaterEffect.field_i.a();
             this.field_d = (-this.field_f + (double)var3) / 2500.0;
             this.field_e = (-this.field_a + (double)var2_int) / 2500.0;
           }
@@ -1529,19 +1529,19 @@ final class GameplaySession {
             ni.field_e != null) {
             var2_intLifetime1 = 0;
             var3Lifetime1 = 0;
-            if (0 == fi.a(2, ResourceArchive.field_b, (byte) -96)) {
-              var2_intLifetime1 = fi.a(163840, ResourceArchive.field_b, (byte) -96);
+            if (0 == ExpandingRingEffect.nextRandomInt(2, ResourceArchive.field_b, (byte) -96)) {
+              var2_intLifetime1 = ExpandingRingEffect.nextRandomInt(163840, ResourceArchive.field_b, (byte) -96);
               if (var10 != 0) {
-                var3Lifetime1 = fi.a(163840, ResourceArchive.field_b, (byte) -96);
+                var3Lifetime1 = ExpandingRingEffect.nextRandomInt(163840, ResourceArchive.field_b, (byte) -96);
               }
             } else {
-              var3Lifetime1 = fi.a(163840, ResourceArchive.field_b, (byte) -96);
+              var3Lifetime1 = ExpandingRingEffect.nextRandomInt(163840, ResourceArchive.field_b, (byte) -96);
             }
-            var4 = fi.a(65536, ResourceArchive.field_b, (byte) -96);
+            var4 = ExpandingRingEffect.nextRandomInt(65536, ResourceArchive.field_b, (byte) -96);
             var5 = Math.random() / 500.0;
-            var7 = 1 + fi.a(256, ResourceArchive.field_b, (byte) -96);
-            var8 = 1 + fi.a(256, ResourceArchive.field_b, (byte) -96);
-            if (fi.a(2, ResourceArchive.field_b, (byte) -96) == 0) {
+            var7 = 1 + ExpandingRingEffect.nextRandomInt(256, ResourceArchive.field_b, (byte) -96);
+            var8 = 1 + ExpandingRingEffect.nextRandomInt(256, ResourceArchive.field_b, (byte) -96);
+            if (ExpandingRingEffect.nextRandomInt(2, ResourceArchive.field_b, (byte) -96) == 0) {
               if (var2_intLifetime1 > 0) {
                 var8 = var8 * -1;
                 var3Lifetime1 = 122880;
@@ -1580,19 +1580,19 @@ final class GameplaySession {
             ni.field_e != null) {
             var2_intLifetime2 = 0;
             var3Lifetime2 = 0;
-            if (0 != fi.a(2, ResourceArchive.field_b, (byte) -96)) {
-              var3Lifetime2 = fi.a(163840, ResourceArchive.field_b, (byte) -96);
+            if (0 != ExpandingRingEffect.nextRandomInt(2, ResourceArchive.field_b, (byte) -96)) {
+              var3Lifetime2 = ExpandingRingEffect.nextRandomInt(163840, ResourceArchive.field_b, (byte) -96);
               if (var10 != 0) {
-                var2_intLifetime2 = fi.a(163840, ResourceArchive.field_b, (byte) -96);
+                var2_intLifetime2 = ExpandingRingEffect.nextRandomInt(163840, ResourceArchive.field_b, (byte) -96);
               }
             } else {
-              var2_intLifetime2 = fi.a(163840, ResourceArchive.field_b, (byte) -96);
+              var2_intLifetime2 = ExpandingRingEffect.nextRandomInt(163840, ResourceArchive.field_b, (byte) -96);
             }
-            var4Lifetime1 = fi.a(65536, ResourceArchive.field_b, (byte) -96);
+            var4Lifetime1 = ExpandingRingEffect.nextRandomInt(65536, ResourceArchive.field_b, (byte) -96);
             var5Lifetime1 = Math.random() / 1000.0;
-            var7Lifetime1 = fi.a(64, ResourceArchive.field_b, (byte) -96) + 1;
-            var8Lifetime1 = 1 + fi.a(64, ResourceArchive.field_b, (byte) -96);
-            if (fi.a(2, ResourceArchive.field_b, (byte) -96) == 0) {
+            var7Lifetime1 = ExpandingRingEffect.nextRandomInt(64, ResourceArchive.field_b, (byte) -96) + 1;
+            var8Lifetime1 = 1 + ExpandingRingEffect.nextRandomInt(64, ResourceArchive.field_b, (byte) -96);
+            if (ExpandingRingEffect.nextRandomInt(2, ResourceArchive.field_b, (byte) -96) == 0) {
               if (0 < var2_intLifetime2) {
                 var3Lifetime2 = 122880;
                 var8Lifetime1 = var8Lifetime1 * -1;
@@ -1683,7 +1683,7 @@ final class GameplaySession {
         RuntimeException decompiledCaughtException = null;
         pm var3 = null;
         RuntimeException var3_ref = null;
-        fe var4 = null;
+        PlayerDrone var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1696,42 +1696,42 @@ final class GameplaySession {
           var3 = wq.a(param1, (byte) 36);
           if ((0 != nd.field_F ||
             MusicPatch.field_m) && !MusicPatch.field_m) {
-            var4 = (fe) (aa.field_a[0]);
+            var4 = (PlayerDrone) (aa.field_a[0]);
             if (!gt.field_bb &&
               ku.field_J != null) {
-              to.field_s[0].a(55, 0);
-              to.field_s[1].a(to.field_s[0].c() + 55, 0);
-              var5 = 55 + to.field_s[1].c() * 2;
+              HudMessage.field_s[0].a(55, 0);
+              HudMessage.field_s[1].a(HudMessage.field_s[0].c() + 55, 0);
+              var5 = 55 + HudMessage.field_s[1].c() * 2;
               while (true) {
                 if (var5 < 530) {
-                  to.field_s[2].a(var5, 0);
-                  var5 = var5 + to.field_s[1].c();
+                  HudMessage.field_s[2].a(var5, 0);
+                  var5 = var5 + HudMessage.field_s[1].c();
                   if (var7 == 0) {
                     continue;
                   }
                 } else {
-                  to.field_s[3].a(-to.field_s[4].c() + 567, 0);
-                  to.field_s[4].a(567, 0);
+                  HudMessage.field_s[3].a(-HudMessage.field_s[4].c() + 567, 0);
+                  HudMessage.field_s[4].a(567, 0);
                   qv.field_k.a(19, 85, -11753985, ps.scoreText + "" + in.field_z, (byte) -21, -1);
                   uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + in.field_z, (byte) -18, -1);
-                  qv.field_k.a(-1, 560, pl.levelText + "" + (oh.field_e + 1) + " " + fq.multiplierText + "" + pd.field_p + "x " + as.livesText + "" + nd.field_F + "", 19, -11753985, 74);
+                  qv.field_k.a(-1, 560, pl.levelText + "" + (oh.field_e + 1) + " " + fq.multiplierText + "" + pd.field_p + "x " + InwardSparkParticle.livesText + "" + nd.field_F + "", 19, -11753985, 74);
                 }
                 break;
               }
-              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + oh.field_e) + "<col=ffffff> " + fq.multiplierText + "</col>" + pd.field_p + "x" + "<col=ffffff> " + as.livesText + "</col>" + nd.field_F + "", 19, -4720129, 120);
+              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + oh.field_e) + "<col=ffffff> " + fq.multiplierText + "</col>" + pd.field_p + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + nd.field_F + "", 19, -4720129, 120);
             }
             SpriteState.field_B[0].a(139, 448);
-            SpriteState.field_B[1].a(-16 + to.field_s[0].c() + 155, 448);
-            var5Lifetime1 = 145 + 2 * to.field_s[1].c();
+            SpriteState.field_B[1].a(-16 + HudMessage.field_s[0].c() + 155, 448);
+            var5Lifetime1 = 145 + 2 * HudMessage.field_s[1].c();
             while (true) {
               if (var5Lifetime1 < 408) {
                 SpriteState.field_B[2].a(-6 + var5Lifetime1, 448);
-                var5Lifetime1 = var5Lifetime1 + to.field_s[1].c();
+                var5Lifetime1 = var5Lifetime1 + HudMessage.field_s[1].c();
                 if (var7 == 0) {
                   continue;
                 }
               } else {
-                SpriteState.field_B[3].a(-to.field_s[4].c() + 475 - 16, 448);
+                SpriteState.field_B[3].a(-HudMessage.field_s[4].c() + 475 - 16, 448);
                 SpriteState.field_B[4].a(459, 448);
                 qv.field_k.a(473, 320, -11753985, InstrumentNoteMask.timeText + dp.b(iw.field_b, -23620) + "", (byte) -73, -1);
                 uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + InstrumentNoteMask.timeText + "</col>" + dp.b(iw.field_b, -23620) + "</col>", (byte) -76, -1);
@@ -1741,10 +1741,10 @@ final class GameplaySession {
                 uq.field_a.a(473, 175, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + in.field_z, (byte) -112, -1);
               }
               pr.field_k[0].a(3, 42);
-              var3.a((byte) 75, 395 - var4.d((byte) -106) + 42, 42 + pr.field_k[0].a(), 0, 40);
+              var3.a((byte) 75, 395 - var4.blastChargeGaugeWidth((byte) -106) + 42, 42 + pr.field_k[0].a(), 0, 40);
               pr.field_k[1].a(3, 42);
               var3.a(29709);
-              if (var4.j(20)) {
+              if (var4.isBlastReady(20)) {
                 var5Lifetime1 = lg.field_c << 2;
                 if (255 >= var5Lifetime1 % 510) {
                   stackIn_40_0 = var5Lifetime1 % 255;
@@ -1761,14 +1761,14 @@ final class GameplaySession {
                 break;
               }
               MusicCrossfadeStream.field_q[0].a(190.0f, 468.0f, 1600, 0, 1, 0, 2);
-              qv.field_k.a(473, 202, -11753985, Integer.toString(var4.field_I), (byte) -10, -1);
-              uq.field_a.a(473, 202, -1, Integer.toString(var4.field_I), (byte) -30, -1);
+              qv.field_k.a(473, 202, -11753985, Integer.toString(var4.speedLevel), (byte) -10, -1);
+              uq.field_a.a(473, 202, -1, Integer.toString(var4.speedLevel), (byte) -30, -1);
               MusicCrossfadeStream.field_q[1].a(240.0f, 468.0f, 1600, 0, 1, 0, 2);
-              qv.field_k.a(473, 252, -11753985, Integer.toString(var4.field_y), (byte) -30, -1);
-              uq.field_a.a(473, 252, -1, Integer.toString(var4.field_y), (byte) -30, -1);
+              qv.field_k.a(473, 252, -11753985, Integer.toString(var4.tractionLevel), (byte) -30, -1);
+              uq.field_a.a(473, 252, -1, Integer.toString(var4.tractionLevel), (byte) -30, -1);
               MusicCrossfadeStream.field_q[2].a(290.0f, 468.0f, 1600, 0, 1, 0, 2);
-              qv.field_k.a(473, 302, -11753985, Integer.toString(var4.field_t), (byte) -34, -1);
-              uq.field_a.a(473, 302, -1, Integer.toString(var4.field_t), (byte) -24, -1);
+              qv.field_k.a(473, 302, -11753985, Integer.toString(var4.bounceLevel), (byte) -34, -1);
+              uq.field_a.a(473, 302, -1, Integer.toString(var4.bounceLevel), (byte) -24, -1);
               break;
             }
           }
@@ -1797,7 +1797,7 @@ final class GameplaySession {
           ig.field_b.clear(117);
           an.field_a = -1;
           MusicPatch.field_m = true;
-          aa.field_a = new ah[100];
+          aa.field_a = new Drone[100];
           if (param0 < 53) {
             GameplaySession.a(-125, (CompactMeshGeometry) null, -52, -77, 38, -62, (byte) 105, 54);
           }
@@ -1849,15 +1849,15 @@ final class GameplaySession {
     }
 
     GameplaySession() {
-        jp discarded$0 = null;
-        lp discarded$1 = null;
+        LevelCompleteUpgradeScreen discarded$0 = null;
+        GameOverScreen discarded$1 = null;
         try {
           ni.field_e = new IntrusiveDeque();
           rc.field_m = new IntrusiveDeque();
           this.a(127);
-          discarded$0 = new jp();
+          discarded$0 = new LevelCompleteUpgradeScreen();
           ld.field_N = new bw();
-          discarded$1 = new lp();
+          discarded$1 = new GameOverScreen();
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qu.<init>()");
         }

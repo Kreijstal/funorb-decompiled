@@ -51,7 +51,7 @@ final class ji {
               var2.e(48, qq.field_P);
               InstrumentNoteMask.field_n.a(0, -2, var2.payload, 13);
               cd.field_d = cd.field_d + 1;
-              gb.field_s = wq.a(-109) + 30000L;
+              ShrinkingRingEffect.field_s = wq.a(-109) + 30000L;
             }
             if (cd.field_d == 3) {
               if (InstrumentNoteMask.field_n.c(-91) > 0) {
@@ -62,7 +62,7 @@ final class ji {
                 }
                 cd.field_d = cd.field_d + 1;
               } else {
-                if (wq.a(-52) > gb.field_s) {
+                if (wq.a(-52) > ShrinkingRingEffect.field_s) {
                   stackIn_27_0 = tm.a(-2, -89);
                   return stackIn_27_0;
                 }

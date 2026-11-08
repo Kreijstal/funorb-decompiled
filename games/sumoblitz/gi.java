@@ -59,13 +59,13 @@ final class gi extends LegacyOpenGlEffect {
           return vr.field_G;
         }
         if (vm.field_c == ad.field_p) {
-          return tl.field_s;
+          return PowerupPickup.field_s;
         }
         if (param0 != -2) {
           return (String) null;
         }
         if (!ut.field_o.a(true)) {
-          return tl.field_s;
+          return PowerupPickup.field_s;
         }
         return ac.field_F;
     }

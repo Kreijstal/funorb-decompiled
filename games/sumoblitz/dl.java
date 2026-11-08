@@ -209,8 +209,8 @@ final class dl extends eu {
             vp.field_c[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; kb.field_a > var2_intLifetime1; var2_intLifetime1++) {
-            if (aj.field_D[var2_intLifetime1].field_g == param0.field_g) {
-              dupTemp$3 = aj.field_D[var2_intLifetime1].c(-112);
+            if (DroneDebris.field_D[var2_intLifetime1].field_g == param0.field_g) {
+              dupTemp$3 = DroneDebris.field_D[var2_intLifetime1].c(-112);
               vp.field_c[dupTemp$3] = vp.field_c[dupTemp$3] + 1;
             }
           }
@@ -222,8 +222,8 @@ final class dl extends eu {
           var2_intLifetime2 = 0;
           for (var3 = 0; kb.field_a > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param0.field_g == aj.field_D[var3].field_g) {
-              var4 = aj.field_D[var3].c(-120);
+            if (param0.field_g == DroneDebris.field_D[var3].field_g) {
+              var4 = DroneDebris.field_D[var3].c(-120);
               if (ro.field_c < vp.field_c[var4]) {
                 vp.field_c[var4] = vp.field_c[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -232,13 +232,13 @@ final class dl extends eu {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              aj.field_D[incrementValue$2] = aj.field_D[var3];
+              DroneDebris.field_D[incrementValue$2] = DroneDebris.field_D[var3];
             }
           }
           kb.field_a = var2_intLifetime2;
           fieldTemp$1 = kb.field_a;
           kb.field_a = kb.field_a + 1;
-          aj.field_D[fieldTemp$1] = param0;
+          DroneDebris.field_D[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

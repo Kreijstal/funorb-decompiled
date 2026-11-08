@@ -4,7 +4,7 @@
 abstract class aa {
     static String arcadeModeUnlockedText;
     static char[] field_c;
-    static ah[] field_a;
+    static Drone[] field_a;
     static int[] field_d;
 
     protected aa() throws Throwable {

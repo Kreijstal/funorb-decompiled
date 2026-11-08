@@ -131,13 +131,13 @@ final class sb {
           var2_int = param1.a(param0 ^ param0, "levels/");
           var24 = param1.a(var2_int, -25915);
           var5 = new vl[var24.length];
-          dr.field_S = new vl[25];
+          EnemyDrone.field_S = new vl[25];
           for (var6 = 0; var24.length > var6; var6++) {
             var14 = new PacketBuffer(param1.a((byte) 98, var24[var6], var2_int));
             var14.position = var14.position + 1;
             var5[var6] = pi.a(var14, true, 102);
             if (25 > var5[var6].field_e) {
-              dr.field_S[var5[var6].field_e] = var5[var6];
+              EnemyDrone.field_S[var5[var6].field_e] = var5[var6];
             }
           }
           ab.field_a = new IntrusiveNodeHashTable(16);

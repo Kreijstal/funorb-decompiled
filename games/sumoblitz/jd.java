@@ -341,7 +341,7 @@ final class jd extends ag {
           }
           if (kw.field_c == gg.field_t) {
             HardwareGraphicsToolkit.field_j = null;
-            as.field_v.position = 0;
+            InwardSparkParticle.field_v.position = 0;
             if (param6 != null) {
               var9 = 0;
               if (param4) {
@@ -357,16 +357,16 @@ final class jd extends ag {
               sd.field_e.b(-69, param3);
               sd.field_e.b((byte) 50, param1);
               sd.field_e.b((byte) 50, var9);
-              as.field_v.b((byte) 114, 18);
-              as.field_v.position = as.field_v.position + 2;
-              var10 = as.field_v.position;
+              InwardSparkParticle.field_v.b((byte) 114, 18);
+              InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 2;
+              var10 = InwardSparkParticle.field_v.position;
               var11_ref_String = dv.a(-94, ra.c(2));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              as.field_v.a(var11_ref_String, (byte) -115);
-              ks.a(gh.field_a, oh.field_c, false, as.field_v, sd.field_e);
-              as.field_v.a(0, as.field_v.position - var10);
+              InwardSparkParticle.field_v.a(var11_ref_String, (byte) -115);
+              ks.a(gh.field_a, oh.field_c, false, InwardSparkParticle.field_v, sd.field_e);
+              InwardSparkParticle.field_v.a(0, InwardSparkParticle.field_v.position - var10);
             } else {
               sd.field_e.position = 0;
               sd.field_e.e(48, fd.field_d.nextInt());
@@ -385,11 +385,11 @@ final class jd extends ag {
                 stackIn_17_1 = var8;
               }
               ((PacketBuffer) (Object) stackIn_16_0).b(stackIn_17_1, (byte) 101);
-              as.field_v.b((byte) 108, 16);
-              as.field_v.position = as.field_v.position + 1;
-              var9 = as.field_v.position;
-              ks.a(gh.field_a, oh.field_c, false, as.field_v, sd.field_e);
-              as.field_v.c(as.field_v.position - var9, -13745);
+              InwardSparkParticle.field_v.b((byte) 108, 16);
+              InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 1;
+              var9 = InwardSparkParticle.field_v.position;
+              ks.a(gh.field_a, oh.field_c, false, InwardSparkParticle.field_v, sd.field_e);
+              InwardSparkParticle.field_v.c(InwardSparkParticle.field_v.position - var9, -13745);
             }
             gt.a(0, -1);
             kw.field_c = vf.field_c;

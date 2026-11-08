@@ -37,7 +37,7 @@ final class sj {
             sj.releaseStatics(false);
           }
           var2 = 0;
-          if (cl.field_s == 2) {
+          if (DroneChargeParticle.field_s == 2) {
             var3_long = wq.a(-124) - LegacyOpenGlEffectManager.field_f;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
@@ -56,7 +56,7 @@ final class sj {
               var5 = ke.field_d;
             }
             var6 = bf.field_c[var3];
-            if (2 == cl.field_s &&
+            if (2 == DroneChargeParticle.field_s &&
               1 == var2) {
               if (no.field_b.length >= hf.field_F.length) {
                 stackIn_20_0 = no.field_b.length;

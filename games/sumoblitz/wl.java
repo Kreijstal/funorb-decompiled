@@ -43,8 +43,8 @@ final class wl {
                     return false;
                   }
                   this.field_e.a(-7564, (long)(6 * param3));
-                  this.field_e.a(6, 0, to.field_t, -111);
-                  var7_int = (to.field_t[3] << 16 & 16711680) + (to.field_t[4] << 8 & 65280) + (255 & to.field_t[5]);
+                  this.field_e.a(6, 0, HudMessage.field_t, -111);
+                  var7_int = (HudMessage.field_t[3] << 16 & 16711680) + (HudMessage.field_t[4] << 8 & 65280) + (255 & HudMessage.field_t[5]);
                   if (0 >= var7_int ||
                     !((this.field_c.a((byte) -60) / 520L) >= (long)var7_int)) {
                     return false;
@@ -55,14 +55,14 @@ final class wl {
                     var7_int = 1;
                   }
                 }
-                to.field_t[1] = (byte)(param2 >> 8);
-                to.field_t[4] = (byte)(var7_int >> 8);
-                to.field_t[5] = (byte)var7_int;
-                to.field_t[3] = (byte)(var7_int >> 16);
-                to.field_t[2] = (byte)param2;
-                to.field_t[0] = (byte)(param2 >> 16);
+                HudMessage.field_t[1] = (byte)(param2 >> 8);
+                HudMessage.field_t[4] = (byte)(var7_int >> 8);
+                HudMessage.field_t[5] = (byte)var7_int;
+                HudMessage.field_t[3] = (byte)(var7_int >> 16);
+                HudMessage.field_t[2] = (byte)param2;
+                HudMessage.field_t[0] = (byte)(param2 >> 16);
                 this.field_e.a(-7564, (long)(6 * param3));
-                this.field_e.a(to.field_t, 6, (byte) -50, 0);
+                this.field_e.a(HudMessage.field_t, 6, (byte) -50, 0);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -73,7 +73,7 @@ final class wl {
                       this.field_c.a(-7564, (long)(var7_int * 520));
                       if (param3 <= 65535) {
                         try {
-                          this.field_c.a(8, 0, to.field_t, -64);
+                          this.field_c.a(8, 0, HudMessage.field_t, -64);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,13 +83,13 @@ final class wl {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var10 = (255 & to.field_t[6]) + (16711680 & to.field_t[4] << 16) + ((to.field_t[5] & 255) << 8);
-                        var13 = to.field_t[7] & 255;
-                        var11 = (to.field_t[1] & 255) + (65280 & to.field_t[0] << 8);
-                        var12 = ((255 & to.field_t[2]) << 8) + (to.field_t[3] & 255);
+                        var10 = (255 & HudMessage.field_t[6]) + (16711680 & HudMessage.field_t[4] << 16) + ((HudMessage.field_t[5] & 255) << 8);
+                        var13 = HudMessage.field_t[7] & 255;
+                        var11 = (HudMessage.field_t[1] & 255) + (65280 & HudMessage.field_t[0] << 8);
+                        var12 = ((255 & HudMessage.field_t[2]) << 8) + (HudMessage.field_t[3] & 255);
                       } else {
                         try {
-                          this.field_c.a(10, 0, to.field_t, -108);
+                          this.field_c.a(10, 0, HudMessage.field_t, -108);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -99,10 +99,10 @@ final class wl {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var13 = to.field_t[9] & 255;
-                        var10 = ((255 & to.field_t[7]) << 8) + (((to.field_t[6] & 255) << 16) + (255 & to.field_t[8]));
-                        var11 = (255 & to.field_t[3]) + (to.field_t[1] << 16 & 16711680) + ((to.field_t[0] & 255) << 24) + (65280 & to.field_t[2] << 8);
-                        var12 = (255 & to.field_t[5]) + ((255 & to.field_t[4]) << 8);
+                        var13 = HudMessage.field_t[9] & 255;
+                        var10 = ((255 & HudMessage.field_t[7]) << 8) + (((HudMessage.field_t[6] & 255) << 16) + (255 & HudMessage.field_t[8]));
+                        var11 = (255 & HudMessage.field_t[3]) + (HudMessage.field_t[1] << 16 & 16711680) + ((HudMessage.field_t[0] & 255) << 24) + (65280 & HudMessage.field_t[2] << 8);
+                        var12 = (255 & HudMessage.field_t[5]) + ((255 & HudMessage.field_t[4]) << 8);
                       }
                       if ((param3 == var11 &&
                         var9 == var12 &&
@@ -129,16 +129,16 @@ final class wl {
                       var10 = 0;
                     }
                     if (param3 <= 65535) {
-                      to.field_t[4] = (byte)(var10 >> 16);
-                      to.field_t[5] = (byte)(var10 >> 8);
-                      to.field_t[2] = (byte)(var9 >> 8);
-                      to.field_t[0] = (byte)(param3 >> 8);
-                      to.field_t[7] = (byte)this.field_d;
-                      to.field_t[6] = (byte)var10;
-                      to.field_t[3] = (byte)var9;
-                      to.field_t[1] = (byte)param3;
+                      HudMessage.field_t[4] = (byte)(var10 >> 16);
+                      HudMessage.field_t[5] = (byte)(var10 >> 8);
+                      HudMessage.field_t[2] = (byte)(var9 >> 8);
+                      HudMessage.field_t[0] = (byte)(param3 >> 8);
+                      HudMessage.field_t[7] = (byte)this.field_d;
+                      HudMessage.field_t[6] = (byte)var10;
+                      HudMessage.field_t[3] = (byte)var9;
+                      HudMessage.field_t[1] = (byte)param3;
                       this.field_c.a(param4 - 7819, (long)(var7_int * 520));
-                      this.field_c.a(to.field_t, 8, (byte) 65, 0);
+                      this.field_c.a(HudMessage.field_t, 8, (byte) 65, 0);
                       var11 = -var8 + param2;
                       if (var11 > 512) {
                         var11 = 512;
@@ -146,18 +146,18 @@ final class wl {
                       this.field_c.a(param0, var11, (byte) -121, var8);
                       var8 = var8 + var11;
                     } else {
-                      to.field_t[8] = (byte)var10;
-                      to.field_t[7] = (byte)(var10 >> 8);
-                      to.field_t[6] = (byte)(var10 >> 16);
-                      to.field_t[3] = (byte)param3;
-                      to.field_t[9] = (byte)this.field_d;
-                      to.field_t[5] = (byte)var9;
-                      to.field_t[0] = (byte)(param3 >> 24);
-                      to.field_t[4] = (byte)(var9 >> 8);
-                      to.field_t[1] = (byte)(param3 >> 16);
-                      to.field_t[2] = (byte)(param3 >> 8);
+                      HudMessage.field_t[8] = (byte)var10;
+                      HudMessage.field_t[7] = (byte)(var10 >> 8);
+                      HudMessage.field_t[6] = (byte)(var10 >> 16);
+                      HudMessage.field_t[3] = (byte)param3;
+                      HudMessage.field_t[9] = (byte)this.field_d;
+                      HudMessage.field_t[5] = (byte)var9;
+                      HudMessage.field_t[0] = (byte)(param3 >> 24);
+                      HudMessage.field_t[4] = (byte)(var9 >> 8);
+                      HudMessage.field_t[1] = (byte)(param3 >> 16);
+                      HudMessage.field_t[2] = (byte)(param3 >> 8);
                       this.field_c.a(-7564, (long)(var7_int * 520));
-                      this.field_c.a(to.field_t, 10, (byte) 126, 0);
+                      this.field_c.a(HudMessage.field_t, 10, (byte) 126, 0);
                       var11 = param2 - var8;
                       if (510 < var11) {
                         var11 = 510;
@@ -245,9 +245,9 @@ final class wl {
                 return (byte[]) (stackIn_3_0);
               }
               this.field_e.a(-7564, (long)(6 * param1));
-              this.field_e.a(6, 0, to.field_t, -104);
-              var4_int = (65280 & to.field_t[1] << 8) + (((255 & to.field_t[0]) << 16) + (255 & to.field_t[2]));
-              var5 = ((255 & to.field_t[3]) << 16) + (65280 & to.field_t[4] << 8) + (255 & to.field_t[5]);
+              this.field_e.a(6, 0, HudMessage.field_t, -104);
+              var4_int = (65280 & HudMessage.field_t[1] << 8) + (((255 & HudMessage.field_t[0]) << 16) + (255 & HudMessage.field_t[2]));
+              var5 = ((255 & HudMessage.field_t[3]) << 16) + (65280 & HudMessage.field_t[4] << 8) + (255 & HudMessage.field_t[5]);
               if (var4_int < 0) {
                 return null;
               }
@@ -275,21 +275,21 @@ final class wl {
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_c.a(var9 + var14, 0, to.field_t, -55);
-                  var11 = (255 & to.field_t[3]) + ((255 & to.field_t[2]) << 8);
-                  var13 = to.field_t[7] & 255;
-                  var12 = (255 & to.field_t[6]) + (((255 & to.field_t[5]) << 8) + (16711680 & to.field_t[4] << 16));
-                  var10 = ((to.field_t[0] & 255) << 8) + (to.field_t[1] & 255);
+                  this.field_c.a(var9 + var14, 0, HudMessage.field_t, -55);
+                  var11 = (255 & HudMessage.field_t[3]) + ((255 & HudMessage.field_t[2]) << 8);
+                  var13 = HudMessage.field_t[7] & 255;
+                  var12 = (255 & HudMessage.field_t[6]) + (((255 & HudMessage.field_t[5]) << 8) + (16711680 & HudMessage.field_t[4] << 16));
+                  var10 = ((HudMessage.field_t[0] & 255) << 8) + (HudMessage.field_t[1] & 255);
                 } else {
                   if (var9 > 510) {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_c.a(var9 + var14, 0, to.field_t, -93);
-                  var10 = (to.field_t[3] & 255) + (to.field_t[2] << 8 & 65280) + ((to.field_t[1] & 255) << 16) + ((to.field_t[0] & 255) << 24);
-                  var13 = to.field_t[9] & 255;
-                  var12 = (to.field_t[8] & 255) + (to.field_t[7] << 8 & 65280) + ((to.field_t[6] & 255) << 16);
-                  var11 = ((255 & to.field_t[4]) << 8) + (to.field_t[5] & 255);
+                  this.field_c.a(var9 + var14, 0, HudMessage.field_t, -93);
+                  var10 = (HudMessage.field_t[3] & 255) + (HudMessage.field_t[2] << 8 & 65280) + ((HudMessage.field_t[1] & 255) << 16) + ((HudMessage.field_t[0] & 255) << 24);
+                  var13 = HudMessage.field_t[9] & 255;
+                  var12 = (HudMessage.field_t[8] & 255) + (HudMessage.field_t[7] << 8 & 65280) + ((HudMessage.field_t[6] & 255) << 16);
+                  var11 = ((255 & HudMessage.field_t[4]) << 8) + (HudMessage.field_t[5] & 255);
                 }
                 if (var10 != param1) {
                   return null;
@@ -311,7 +311,7 @@ final class wl {
                 for (var16 = var14; var16 < var15; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = to.field_t[var16];
+                  var6[incrementValue$2] = HudMessage.field_t[var16];
                 }
                 var5 = var12;
                 var8++;

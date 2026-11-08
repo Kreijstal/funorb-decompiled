@@ -24,7 +24,7 @@ final class wr extends wp {
         }
     }
 
-    final static void a(int param0, ah param1) {
+    final static void a(int param0, Drone param1) {
         int stackIn_8_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_26_0 = 0;
@@ -51,16 +51,16 @@ final class wr extends wp {
         try {
           var2_int = 588;
           var3 = 428;
-          var4 = param1.field_C >> 8;
-          var5 = param1.field_z >> 8;
-          var6 = param1.field_m >> 8;
+          var4 = param1.xQ8 >> 8;
+          var5 = param1.yQ8 >> 8;
+          var6 = param1.radiusQ8 >> 8;
           var7 = 0;
           var8 = 0;
           var9 = 0;
           var10 = ro.a(var4, var2_int, 26, 614, var5, false, 26, var6, 26);
           if (var10 != -1) {
-            if (-1.5707963267948966 < param1.field_s) {
-              stackIn_8_0 = (param1.field_s < 1.5707963267948966) ? 1 : 0;
+            if (-1.5707963267948966 < param1.facingRadians) {
+              stackIn_8_0 = (param1.facingRadians < 1.5707963267948966) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
             }
@@ -73,10 +73,10 @@ final class wr extends wp {
             if (-1 != var10) {
               var8 = var10;
               var9 = 454;
-              if (-1.5707963267948966 > param1.field_s) {
+              if (-1.5707963267948966 > param1.facingRadians) {
                 stackIn_19_0 = 1;
               } else {
-                stackIn_19_0 = (param1.field_s > 1.5707963267948966) ? 1 : 0;
+                stackIn_19_0 = (param1.facingRadians > 1.5707963267948966) ? 1 : 0;
               }
               var7 = stackIn_19_0;
             }
@@ -84,7 +84,7 @@ final class wr extends wp {
           if (var10 == -1) {
             var10 = ro.a(var4, var3, 26, 26, var5, false, 454, var6, 26);
             if (var10 != -1) {
-              stackIn_26_0 = (!(param1.field_s > 0.0)) ? 0 : 1;
+              stackIn_26_0 = (!(param1.facingRadians > 0.0)) ? 0 : 1;
               var7 = stackIn_26_0;
               var8 = 26;
               var9 = var10;
@@ -95,7 +95,7 @@ final class wr extends wp {
             if (var10 != -1) {
               var9 = var10;
               var8 = 614;
-              stackIn_32_0 = (!(param1.field_s < 0.0)) ? 0 : 1;
+              stackIn_32_0 = (!(param1.facingRadians < 0.0)) ? 0 : 1;
               var7 = stackIn_32_0;
             }
           }
@@ -103,47 +103,47 @@ final class wr extends wp {
           var12 = -var9 + var5;
           var13 = Math.sqrt((double)(var11 * var11 + var12 * var12));
           Math.asin((double)var11 / var13);
-          if (!param1.a(true)) {
+          if (!param1.isPlayerProtected(true)) {
             if (var7 == 0) {
               ro.a(param1, (byte) 113);
               return;
             }
-            if (param1.field_p == 0) {
+            if (param1.armourHitsRemaining == 0) {
               ro.a(param1, (byte) 113);
               return;
             }
           }
           if (var4 <= 26 &&
-            0 > param1.field_E) {
-            param1.field_E = -param1.field_E;
-            if (param1.field_E == 0) {
-              param1.field_E = 256;
+            0 > param1.velocityXQ8) {
+            param1.velocityXQ8 = -param1.velocityXQ8;
+            if (param1.velocityXQ8 == 0) {
+              param1.velocityXQ8 = 256;
             }
           } else {
             if (ArchiveCatalog.field_c - 52 < var4 &&
-              param1.field_E > 0) {
-              param1.field_E = -param1.field_E;
-              if (param1.field_E == 0) {
-                param1.field_E = -256;
+              param1.velocityXQ8 > 0) {
+              param1.velocityXQ8 = -param1.velocityXQ8;
+              if (param1.velocityXQ8 == 0) {
+                param1.velocityXQ8 = -256;
               }
             }
           }
           if (var5 <= 26 &&
-            param1.field_A < 0) {
-            param1.field_A = -param1.field_A;
-            if (param1.field_A != 0) {
+            param1.velocityYQ8 < 0) {
+            param1.velocityYQ8 = -param1.velocityYQ8;
+            if (param1.velocityYQ8 != 0) {
               return;
             }
-            param1.field_A = 256;
+            param1.velocityYQ8 = 256;
             return;
           }
           if (-52 + rl.field_k < var5) {
-            if (param1.field_A <= 0) {
+            if (param1.velocityYQ8 <= 0) {
               return;
             }
-            param1.field_A = -param1.field_A;
-            if (0 == param1.field_A) {
-              param1.field_A = 256;
+            param1.velocityYQ8 = -param1.velocityYQ8;
+            if (0 == param1.velocityYQ8) {
+              param1.velocityYQ8 = 256;
               return;
             }
           }
@@ -191,8 +191,8 @@ final class wr extends wp {
           if (!param0) {
             field_F = -67;
           }
-          if (as.field_w != null) {
-            as.field_w.a((java.awt.Component) ((Object) param1), (byte) 76);
+          if (InwardSparkParticle.field_w != null) {
+            InwardSparkParticle.field_w.a((java.awt.Component) ((Object) param1), (byte) 76);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -227,7 +227,7 @@ final class wr extends wp {
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ah[] var3 = null;
+        Drone[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -239,15 +239,15 @@ final class wr extends wp {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        ah var15 = null;
+        Drone var15 = null;
         int var16 = 0;
-        ah[] var17 = null;
+        Drone[] var17 = null;
         var16 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (!param0) {
             param1.position = 0;
           }
-          var17 = new ah[100];
+          var17 = new Drone[100];
           var3 = var17;
           var4 = 1;
           var5 = param1.e(-31302);
@@ -279,7 +279,7 @@ final class wr extends wp {
               var10 < 8 &&
               var11 >= 0 &&
               var11 < 7) {
-              var15 = uj.a(var10, var12, var11, (byte) 84, var13);
+              var15 = uj.createEnemyDrone(var10, var12, var11, (byte) 84, var13);
               var15.field_F = var14;
               incrementValue$0 = var4;
               var4++;

@@ -35,7 +35,7 @@ final class uo extends ShaderEffect {
     }
 
     final void a(boolean param0, byte param1) {
-        this.field_b.a((byte) -83, lf.field_e, vi.field_v);
+        this.field_b.a((byte) -83, lf.field_e, SlowBurstParticle.field_v);
         if (param1 > -71) {
           this.field_f = false;
         }
@@ -675,7 +675,7 @@ final class uo extends ShaderEffect {
           if (this.field_f) {
             this.field_b.g(1, -111);
             this.field_b.a(13754, lf.field_c);
-            this.field_b.a((byte) -83, vi.field_v, vi.field_v);
+            this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
             this.field_b.a(mm.field_h, 2, 0);
             this.field_b.a(jq.field_a, 0, true);
             this.field_b.l(0);
@@ -685,14 +685,14 @@ final class uo extends ShaderEffect {
           } else {
             this.field_b.a(jq.field_a, 0, !param0 ? true : false);
           }
-          this.field_b.a((byte) -83, vi.field_v, vi.field_v);
+          this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
           return;
         }
         this.field_f = false;
         if (this.field_f) {
           this.field_b.g(1, -111);
           this.field_b.a(13754, lf.field_c);
-          this.field_b.a((byte) -83, vi.field_v, vi.field_v);
+          this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
           this.field_b.a(mm.field_h, 2, 0);
           this.field_b.a(jq.field_a, 0, !param0 ? true : false);
           this.field_b.l(0);
@@ -702,7 +702,7 @@ final class uo extends ShaderEffect {
         } else {
           this.field_b.a(jq.field_a, 0, !param0 ? true : false);
         }
-        this.field_b.a((byte) -83, vi.field_v, vi.field_v);
+        this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
     }
 
     final void a(int param0, int param1, ed param2) {

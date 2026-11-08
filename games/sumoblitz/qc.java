@@ -125,7 +125,7 @@ final class qc {
             av.a(-7753, param0, 0);
           }
         }
-        dr.o(250);
+        EnemyDrone.o(250);
         ph.field_b.a(66);
         if (!param1) {
           return;

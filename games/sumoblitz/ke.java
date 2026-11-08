@@ -29,7 +29,7 @@ final class ke {
           if (param0 < 87) {
             field_a = (GameApplet) null;
           }
-          stackIn_3_0 = ah.field_J.a(param1, "", -1);
+          stackIn_3_0 = Drone.field_J.a(param1, "", -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +63,7 @@ final class ke {
           ig.b(120);
           uc.field_f = iw.field_b;
           kp.field_a = false;
-          aj.field_C = false;
+          DroneDebris.field_C = false;
         }
     }
 

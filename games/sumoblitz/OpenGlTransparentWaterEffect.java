@@ -133,8 +133,8 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         int stackIn_24_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        ah var2 = null;
-        ah var4 = null;
+        Drone var2 = null;
+        Drone var4 = null;
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -165,78 +165,78 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
             for (var1_int = 0; var1_int < db.field_l; var1_int++) {
               var2 = aa.field_a[var1_int];
               if (var2 != null &&
-                var2.a((byte) 113)) {
+                var2.isActive((byte) 113)) {
                 for (var3 = 1 + var1_int; db.field_l > var3; var3++) {
                   var4 = aa.field_a[var3];
                   if (var4 != null &&
-                    var4.a((byte) 113)) {
-                    var5 = var2.field_m + var4.field_m;
-                    if (wn.a(var2.field_z, var5, -119, var4.field_C, var2.field_C, var4.field_z)) {
-                      if (var2.field_x >= 0) {
-                        var2.field_x = 150;
+                    var4.isActive((byte) 113)) {
+                    var5 = var2.radiusQ8 + var4.radiusQ8;
+                    if (wn.a(var2.yQ8, var5, -119, var4.xQ8, var2.xQ8, var4.yQ8)) {
+                      if (var2.awakeTicksRemaining >= 0) {
+                        var2.awakeTicksRemaining = 150;
                       }
-                      if (var4.field_x >= 0) {
-                        var4.field_x = 150;
+                      if (var4.awakeTicksRemaining >= 0) {
+                        var4.awakeTicksRemaining = 150;
                       }
-                      var6 = var2.field_o;
-                      var7 = var2.field_L;
-                      var9 = var4.field_o;
-                      var10 = var4.field_L;
-                      var12 = var4.field_C - var2.field_C;
-                      var13 = -var2.field_z + var4.field_z;
+                      var6 = var2.mass;
+                      var7 = var2.bounceScale;
+                      var9 = var4.mass;
+                      var10 = var4.bounceScale;
+                      var12 = var4.xQ8 - var2.xQ8;
+                      var13 = -var2.yQ8 + var4.yQ8;
                       var14 = Math.sqrt((double)(var13 * var13 + var12 * var12));
                       var16 = (float)((double)var12 / var14);
                       var17 = (float)((double)var13 / var14);
-                      var18 = (float)Math.sin(var2.field_s);
-                      var19 = (float)Math.cos(var2.field_s);
-                      var20 = (float)Math.sin(var4.field_s);
-                      var21 = (float)Math.cos(var4.field_s);
+                      var18 = (float)Math.sin(var2.facingRadians);
+                      var19 = (float)Math.cos(var2.facingRadians);
+                      var20 = (float)Math.sin(var4.facingRadians);
+                      var21 = (float)Math.cos(var4.facingRadians);
                       stackIn_21_0 = (!(0.0f < st.a(86, new float[]{var18, var19}, new float[]{var16, var17}))) ? 0 : 1;
                       var22 = stackIn_21_0;
                       stackIn_24_0 = (!(st.a(89, new float[]{var20, var21}, new float[]{var16, var17}) < 0.0f)) ? 0 : 1;
                       var23 = stackIn_24_0;
                       if (var23 != 0) {
-                        if (var4.field_N == 2 &&
-                          var4.field_v == 0) {
+                        if (var4.variant == 2 &&
+                          var4.variantCooldownTicks == 0) {
                           ro.a(var2, (byte) 113);
-                          var4.h((byte) -55);
+                          var4.onVariantContact((byte) -55);
                         }
-                        if (var4.field_N == 3 &&
-                          var4.field_v == 0) {
-                          var4.field_j = 25;
-                          var4.h((byte) -55);
+                        if (var4.variant == 3 &&
+                          var4.variantCooldownTicks == 0) {
+                          var4.detonationCountdown = 25;
+                          var4.onVariantContact((byte) -55);
                         }
                       }
                       if (var22 != 0) {
-                        if (var2.field_N == 2 &&
-                          var2.field_v == 0) {
+                        if (var2.variant == 2 &&
+                          var2.variantCooldownTicks == 0) {
                           ro.a(var4, (byte) 113);
-                          var2.h((byte) -55);
+                          var2.onVariantContact((byte) -55);
                         }
-                        if (3 == var2.field_N &&
-                          var2.field_v == 0) {
-                          var2.field_j = 25;
-                          var2.h((byte) -55);
+                        if (3 == var2.variant &&
+                          var2.variantCooldownTicks == 0) {
+                          var2.detonationCountdown = 25;
+                          var2.onVariantContact((byte) -55);
                         }
                       }
-                      if (1 == var2.field_N) {
-                        var2.h((byte) -55);
+                      if (1 == var2.variant) {
+                        var2.onVariantContact((byte) -55);
                       }
-                      if (var4.field_N == 1) {
-                        var4.h((byte) -55);
+                      if (var4.variant == 1) {
+                        var4.onVariantContact((byte) -55);
                       }
                       var2.field_d = 0;
                       var2.field_P = var3;
                       var4.field_P = var1_int;
                       var4.field_d = 0;
-                      if (var2.field_Q == 0 &&
-                        var2.g(param0 - 22379)) {
+                      if (var2.droneType == 0 &&
+                        var2.isBlastActive(param0 - 22379)) {
                         var4.field_R = true;
                       } else {
                         var4.field_R = false;
                       }
-                      if (var4.field_Q == 0 &&
-                        var4.g(96)) {
+                      if (var4.droneType == 0 &&
+                        var4.isBlastActive(96)) {
                         var2.field_R = true;
                       } else {
                         var2.field_R = false;
@@ -244,22 +244,22 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
                       var24 = (int)Math.round(Math.max(1.0, Math.sqrt((double)((float)var12 * (float)var12 + (float)var13 * (float)var13))));
                       if (var24 < var5) {
                         var25 = var12 * (var5 - var24) / var24;
-                        var4.field_C = var4.field_C + var25;
+                        var4.xQ8 = var4.xQ8 + var25;
                         var26 = (var5 - var24) * var13 / var24;
-                        var4.field_z = var4.field_z + var26;
-                        var2.field_C = var2.field_C - var25;
-                        var2.field_z = var2.field_z - var26;
+                        var4.yQ8 = var4.yQ8 + var26;
+                        var2.xQ8 = var2.xQ8 - var25;
+                        var2.yQ8 = var2.yQ8 - var26;
                       }
-                      if (!var2.g(param0 - 22327)) {
-                        if (var4.g(22)) {
-                          if (var4.field_Q != 0) {
+                      if (!var2.isBlastActive(param0 - 22327)) {
+                        if (var4.isBlastActive(22)) {
+                          if (var4.droneType != 0) {
                             var10 = var10 * 8.0;
                           } else {
                             var10 = var10 * 10.0;
                           }
                         }
                       } else {
-                        if (0 != var2.field_Q) {
+                        if (0 != var2.droneType) {
                           var7 = var7 * 8.0;
                         } else {
                           var7 = var7 * 10.0;
@@ -267,28 +267,28 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
                       }
                       var12 = (var12 << 8) / var24;
                       var13 = (var13 << 8) / var24;
-                      var25Lifetime1 = (int)(var7 * (double)(Math.max(0, var12 * var2.field_E + var13 * var2.field_A >> 8) * (var6 * 2)));
-                      var26Lifetime1 = -(var12 * var2.field_A) + var13 * var2.field_E >> 8;
-                      var27 = (int)((double)(Math.max(0, -(var4.field_A * var13) + var12 * -var4.field_E >> 8) * (var9 * 2)) * var10);
-                      var28 = var4.field_A * var12 + -var4.field_E * var13 >> 8;
-                      var2.field_E = var13 * var26Lifetime1 + -var27 * var12 / var6 >> 8;
-                      var2.field_A = -var27 * var13 / var6 - var26Lifetime1 * var12 >> 8;
-                      var4.field_E = -(var28 * var13) + var12 * var25Lifetime1 / var9 >> 8;
-                      var4.field_A = var25Lifetime1 * var13 / var9 + var28 * var12 >> 8;
-                      if (!var2.g(63)) {
-                        if (var4.g(param0 - 22319)) {
-                          var2.field_E = var2.field_E << 1;
-                          var2.field_A = var2.field_A << 1;
+                      var25Lifetime1 = (int)(var7 * (double)(Math.max(0, var12 * var2.velocityXQ8 + var13 * var2.velocityYQ8 >> 8) * (var6 * 2)));
+                      var26Lifetime1 = -(var12 * var2.velocityYQ8) + var13 * var2.velocityXQ8 >> 8;
+                      var27 = (int)((double)(Math.max(0, -(var4.velocityYQ8 * var13) + var12 * -var4.velocityXQ8 >> 8) * (var9 * 2)) * var10);
+                      var28 = var4.velocityYQ8 * var12 + -var4.velocityXQ8 * var13 >> 8;
+                      var2.velocityXQ8 = var13 * var26Lifetime1 + -var27 * var12 / var6 >> 8;
+                      var2.velocityYQ8 = -var27 * var13 / var6 - var26Lifetime1 * var12 >> 8;
+                      var4.velocityXQ8 = -(var28 * var13) + var12 * var25Lifetime1 / var9 >> 8;
+                      var4.velocityYQ8 = var25Lifetime1 * var13 / var9 + var28 * var12 >> 8;
+                      if (!var2.isBlastActive(63)) {
+                        if (var4.isBlastActive(param0 - 22319)) {
+                          var2.velocityXQ8 = var2.velocityXQ8 << 1;
+                          var2.velocityYQ8 = var2.velocityYQ8 << 1;
                         }
                       } else {
-                        var4.field_A = var4.field_A << 1;
-                        var4.field_E = var4.field_E << 1;
+                        var4.velocityYQ8 = var4.velocityYQ8 << 1;
+                        var4.velocityXQ8 = var4.velocityXQ8 << 1;
                       }
-                      if (var4.field_Q == 0) {
-                        Sumoblitz.playEntityCollisionSound(var2.field_Q, var2.field_N, (byte) -111);
+                      if (var4.droneType == 0) {
+                        Sumoblitz.playEntityCollisionSound(var2.droneType, var2.variant, (byte) -111);
                       }
-                      if (0 == var2.field_Q) {
-                        Sumoblitz.playEntityCollisionSound(var4.field_Q, var4.field_N, (byte) -93);
+                      if (0 == var2.droneType) {
+                        Sumoblitz.playEntityCollisionSound(var4.droneType, var4.variant, (byte) -93);
                       }
                     }
                   }

@@ -6,11 +6,11 @@ final class uj {
     static SpriteData[] field_c;
     static ToolkitSprite field_a;
 
-    final static ah a(int param0, int param1, int param2, byte param3, int param4) {
-        if (param3 != 84) {
-          return (ah) null;
+    final static Drone createEnemyDrone(int droneType, int xQ8, int variant, byte guard, int yQ8) {
+        if (guard != 84) {
+          return (Drone) null;
         }
-        return (ah) ((Object) new dr(param0, param2, param1, param4));
+        return (Drone) ((Object) new EnemyDrone(droneType, variant, xQ8, yQ8));
     }
 
     public static void releaseStatics(boolean param0) {

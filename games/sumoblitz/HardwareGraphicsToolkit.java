@@ -602,8 +602,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_K = new tg[this.field_cc];
         this.field_B = new tg[this.field_cc];
         for (var2 = 0; this.field_cc > var2; var2++) {
-          this.field_B[var2] = vi.field_v;
-          this.field_K[var2] = vi.field_v;
+          this.field_B[var2] = SlowBurstParticle.field_v;
+          this.field_K[var2] = SlowBurstParticle.field_v;
           this.field_wb[var2] = ar.field_L;
           this.field_V[var2] = new ut();
         }
@@ -1220,7 +1220,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
               var3 = lh.field_n;
             } else {
               if (param0 == 128) {
-                var3 = gb.field_t;
+                var3 = ShrinkingRingEffect.field_t;
                 var5 = 1;
                 var4 = 1;
               } else {
@@ -1948,13 +1948,13 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.a((byte) -83, lf.field_e, lf.field_e);
         } else {
           if (0 == param1) {
-            this.a((byte) -83, vi.field_v, vi.field_v);
+            this.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
           } else {
             if (param1 == 2) {
               this.a((byte) -83, lf.field_e, ua.field_n);
             } else {
               if (param1 == 3) {
-                this.a((byte) -83, vi.field_v, cv.field_F);
+                this.a((byte) -83, SlowBurstParticle.field_v, cv.field_F);
               } else {
                 if (param1 == 4) {
                   this.a((byte) -83, bj.field_c, bj.field_c);

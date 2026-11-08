@@ -225,24 +225,24 @@ class gt extends ur implements ai {
           Throwable decompiledCaughtException = null;
           if (qk.field_O != null && (0 > param1 ||
             ga.field_j == kw.field_c)) {
-            if (as.field_v.position == 0 &&
+            if (InwardSparkParticle.field_v.position == 0 &&
               (ArchiveCatalog.field_a + 10000L) < wq.a(param0 - 14)) {
-              as.field_v.g(param1, 8);
+              InwardSparkParticle.field_v.g(param1, 8);
             }
-            if (as.field_v.position > param0) {
+            if (InwardSparkParticle.field_v.position > param0) {
               try {
-                qk.field_O.a(0, -2, as.field_v.payload, as.field_v.position);
+                qk.field_O.a(0, -2, InwardSparkParticle.field_v.payload, InwardSparkParticle.field_v.position);
                 ArchiveCatalog.field_a = wq.a(-21);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 kk.a((byte) -115);
               }
-              as.field_v.position = 0;
+              InwardSparkParticle.field_v.position = 0;
             }
             return;
           }
-          as.field_v.position = 0;
+          InwardSparkParticle.field_v.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -262,7 +262,7 @@ class gt extends ur implements ai {
         }
         fu.a(-1);
         if (pe.a((byte) -98)) {
-          as.field_v.g(1, 8);
+          InwardSparkParticle.field_v.g(1, 8);
           gt.a(0, 0);
         }
         kk.a((byte) -127);
@@ -319,7 +319,7 @@ class gt extends ur implements ai {
                 }
                 var6.a(pl.changeDisplayNameText, (byte) -123, (qm) (this));
               } else {
-                var6.a(eq.toCustomerSupportText, 9, true);
+                var6.a(PowerupTrailParticle.toCustomerSupportText, 9, true);
               }
             } else {
               var6.a(ch.playFreeVersionText, 8, true);

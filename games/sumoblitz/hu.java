@@ -20,7 +20,7 @@ final class hu {
           }
           he.field_n.a(false, param1, param0, param2);
           SoftwareRasterizer.b();
-          vt.a(true, true);
+          BurstParticle.a(true, true);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hu.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

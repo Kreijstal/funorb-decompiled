@@ -58,7 +58,7 @@ final class gj {
               if (param0 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + fi.a(param0 * 1000L + wq.a(-123), true) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + ExpandingRingEffect.formatCookieDate(param0 * 1000L + wq.a(-123), true) + "; Max-Age=" + param0;
               }
               tw.a("document.cookie=\"" + var7Lifetime4 + "\"", -15428, param1);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -486,7 +486,7 @@ final class gj {
         if (param0 != -84) {
           gj.a((byte) 37, 116);
         }
-        return fi.a(param1, LegacyOpenGlEffectManager.field_b, (byte) -96);
+        return ExpandingRingEffect.nextRandomInt(param1, LegacyOpenGlEffectManager.field_b, (byte) -96);
     }
 
     static {

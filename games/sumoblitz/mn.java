@@ -90,7 +90,7 @@ final class mn {
     }
 
     final static void a(db param0, int param1, int param2) {
-        pl var5 = as.field_v;
+        pl var5 = InwardSparkParticle.field_v;
         pl var3 = var5;
         var5.g(param2, 8);
         var5.position = var5.position + 1;

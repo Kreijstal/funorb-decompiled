@@ -87,12 +87,12 @@ final class kt {
             }
           } else {
             if (var2 != 0 &&
-              cl.field_s != 2) {
+              DroneChargeParticle.field_s != 2) {
               GraphicsToolkit.b(23639);
             }
           }
           if (var3 == 0 &&
-            2 == cl.field_s) {
+            2 == DroneChargeParticle.field_s) {
             var5 = -LegacyOpenGlEffectManager.field_f + wq.a(-84);
             var7 = (int)((10999L - var5) / 1000L);
             if (var7 <= 0) {

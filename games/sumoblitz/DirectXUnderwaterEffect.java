@@ -47,7 +47,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
     final void c(boolean param0) {
         this.field_b.g(1, -121);
         this.field_b.a((ed) null, 100);
-        this.field_b.a((byte) -83, vi.field_v, vi.field_v);
+        this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
         this.field_b.a(jq.field_a, 0, 0);
         if (param0) {
           this.a(-69, 14, -105);

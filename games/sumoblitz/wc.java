@@ -3,7 +3,7 @@
  */
 final class wc {
     int field_a;
-    ah[] field_b;
+    Drone[] field_b;
 
     final int a(int param0) {
         int var3 = 0;
@@ -46,7 +46,7 @@ final class wc {
         }
     }
 
-    wc(ah[] param0, int param1, boolean param2) {
+    wc(Drone[] param0, int param1, boolean param2) {
         try {
           this.field_a = param1;
           this.field_b = param0;

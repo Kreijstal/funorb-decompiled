@@ -181,7 +181,7 @@ final class tc extends na {
         bn.field_P = false;
         ei.field_a = 0;
         if (param0 >= 85) {
-          cl.field_w = false;
+          DroneChargeParticle.field_w = false;
           bi.field_c = 0;
           ew.field_e = 0;
           b.field_c = false;

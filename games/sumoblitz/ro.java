@@ -253,7 +253,7 @@ final class ro {
             }
             param6 = param6 - param2;
             param3 = param3 - param8;
-            return vt.a(-var9Lifetime1 + param2 * param2 + param8 * param8, -103, param2 * param6 + param8 * param3 << 1, param6 * param6 + param3 * param3 << 1, param1);
+            return BurstParticle.a(-var9Lifetime1 + param2 * param2 + param8 * param8, -103, param2 * param6 + param8 * param3 << 1, param6 * param6 + param3 * param3 << 1, param1);
           }
           return -1;
         }
@@ -319,17 +319,17 @@ final class ro {
         return var2;
     }
 
-    final static void a(ah param0, byte param1) {
+    final static void a(Drone param0, byte param1) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (param0.a(true)) {
+          if (param0.isPlayerProtected(true)) {
             return;
           }
-          param0.l((byte) 0);
+          param0.beginDestruction((byte) 0);
           bn.f(param1 - 111);
           if (param1 != 113) {
             field_d = 68;

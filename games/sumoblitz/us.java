@@ -94,7 +94,7 @@ class us extends ht {
           this.field_o = param4;
           this.field_l = param3;
           this.field_d.a(27, (ht) (this));
-          jaggl.OpenGL.glTexImage2Dub(this.field_c, 0, this.field_a, param3, param4, 0, be.a(false, this.field_a), 5121, (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_c, 0, this.field_a, param3, param4, 0, ForceFieldRingEffect.glBaseFormat(false, this.field_a), 5121, (byte[]) null, 0);
           this.a(true, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "us.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

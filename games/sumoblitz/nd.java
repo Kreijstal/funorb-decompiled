@@ -229,13 +229,13 @@ final class nd extends ao {
               qk.field_O = new BufferedSocket((java.net.Socket) (tm.field_a.field_d), jt.field_t);
               var4 = ig.field_a;
               var5 = var4;
-              as.field_v.position = 0;
+              InwardSparkParticle.field_v.position = 0;
               var5.position = 0;
               li.field_r = param1 ? -2 : -1;
               vb.field_I = param1 ? -2 : -1;
               ur.field_Q = param1 ? -2 : -1;
               kw.field_c = gg.field_t;
-              sb.a(s.field_o, 81, jt.field_r, ql.field_v, as.field_v);
+              sb.a(s.field_o, 81, jt.field_r, ql.field_v, InwardSparkParticle.field_v);
               gt.a(0, -1);
             } catch (IOException iOException) {
               kw.field_c = lr.field_b;

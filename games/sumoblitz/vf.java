@@ -13,22 +13,22 @@ final class vf {
           hc.field_c.n(-7);
           if (param0 == -49) {
             ro.field_a = new vq();
-            vi.field_y.b((byte) -94, ro.field_a);
+            SlowBurstParticle.field_y.b((byte) -94, ro.field_a);
             return;
           }
           vf.a(3);
           ro.field_a = new vq();
-          vi.field_y.b((byte) -94, ro.field_a);
+          SlowBurstParticle.field_y.b((byte) -94, ro.field_a);
           return;
         }
         if (param0 != -49) {
           vf.a(3);
           ro.field_a = new vq();
-          vi.field_y.b((byte) -94, ro.field_a);
+          SlowBurstParticle.field_y.b((byte) -94, ro.field_a);
           return;
         }
         ro.field_a = new vq();
-        vi.field_y.b((byte) -94, ro.field_a);
+        SlowBurstParticle.field_y.b((byte) -94, ro.field_a);
     }
 
     final static bo a(ResourceArchive param0, boolean param1, String param2, String param3, ResourceArchive param4) {

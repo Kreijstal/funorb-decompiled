@@ -263,9 +263,9 @@ class UiWidget extends IntrusiveNode {
           }
           return;
         }
-        ah.field_g = GameApplet.c(-5204);
-        if (null != ah.field_g) {
-          pd.a(ah.field_g, 6, 5412);
+        Drone.field_g = GameApplet.c(-5204);
+        if (null != Drone.field_g) {
+          pd.a(Drone.field_g, 6, 5412);
           if (param0 >= -15) {
             UiWidget.d((byte) -33);
             return;

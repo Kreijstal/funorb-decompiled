@@ -55,7 +55,7 @@ final class ib extends ShaderEffect {
     final void c(boolean param0) {
         this.field_b.g(1, -115);
         if (!param0) {
-          this.field_b.a((byte) -83, vi.field_v, vi.field_v);
+          this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
           this.field_b.a(jq.field_a, 0, 0);
           this.field_b.a(jq.field_a, 0, true);
           this.field_b.c(1, 110);
@@ -147,11 +147,11 @@ final class ib extends ShaderEffect {
 
     final void a(boolean param0, byte param1) {
         if (param1 <= -71) {
-          this.field_b.a((byte) -83, lf.field_e, vi.field_v);
+          this.field_b.a((byte) -83, lf.field_e, SlowBurstParticle.field_v);
           return;
         }
         this.a((byte) 54);
-        this.field_b.a((byte) -83, lf.field_e, vi.field_v);
+        this.field_b.a((byte) -83, lf.field_e, SlowBurstParticle.field_v);
     }
 
     static {

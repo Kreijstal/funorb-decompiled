@@ -97,7 +97,7 @@ final class kq extends hf implements ai {
             try {
               var4 = new byte[param0];
               var3 = var4;
-              TimedSceneEffect.a(var4, 7039, param1, param0);
+              TimedSceneEffect.readFileFully(var4, 7039, param1, param0);
               if (param2 <= 41) {
                 tryAgainText = (String) null;
               }

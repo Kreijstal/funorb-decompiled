@@ -81,14 +81,14 @@ final class sm {
     }
 
     final static void a(int param0) {
-        aa.field_a[0] = (ah) ((Object) new fe(81920, 61440));
-        aa.field_a[0].field_I = !rf.a(false) ? 5 : 10;
-        aa.field_a[0].field_y = !rf.a(false) ? 5 : 10;
-        aa.field_a[0].field_t = rf.a(false) ? 10 : 5;
+        aa.field_a[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
+        aa.field_a[0].speedLevel = !rf.a(false) ? 5 : 10;
+        aa.field_a[0].tractionLevel = !rf.a(false) ? 5 : 10;
+        aa.field_a[0].bounceLevel = rf.a(false) ? 10 : 5;
         if (param0 <= 68) {
           sm.releaseStatics((byte) 108);
         }
-        aa.field_a[0].c((byte) 35);
+        aa.field_a[0].recomputeUpgradeStats((byte) 35);
         fa.field_b = 250;
     }
 

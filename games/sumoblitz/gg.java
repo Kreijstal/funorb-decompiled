@@ -78,7 +78,7 @@ final class gg extends DualLinkNode {
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           ig.field_b.clear(122);
-          aa.field_a = new ah[100];
+          aa.field_a = new Drone[100];
           ds.a(85);
           if (param0 <= 81) {
             field_t = (qr) null;
@@ -86,7 +86,7 @@ final class gg extends DualLinkNode {
           bj.field_b = new IntrusiveDeque();
           is.field_c = new IntrusiveDeque();
           if (oh.field_e != -1) {
-            is.field_c = dr.field_S[oh.field_e].field_d;
+            is.field_c = EnemyDrone.field_S[oh.field_e].field_d;
           }
           he.field_o = new Random();
           db.field_l = 1;

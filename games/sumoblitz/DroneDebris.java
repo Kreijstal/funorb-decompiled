@@ -3,34 +3,34 @@
  */
 import java.util.*;
 
-final class aj extends TimedSceneEffect {
+final class DroneDebris extends TimedSceneEffect {
     static String pleaseCheckIfAddressText;
     static int field_B;
-    private int field_E;
-    private int field_w;
-    private int field_s;
-    private double field_z;
-    private int field_v;
+    private int fragmentIndex;
+    private int radiusPixels;
+    private int droneType;
+    private double spin;
+    private int velocityYQ8;
     static volatile boolean field_A;
-    private double field_F;
+    private double rotation;
     static Calendar field_y;
     static String createYourOwnFreeText;
     static br[] field_D;
-    private int field_u;
+    private int velocityXQ8;
     static boolean field_C;
 
-    aj(int param0, int param1, int param2, int param3, double param4, double param5, int param6, int param7, int param8, int param9, int param10) {
-        super(param0, param1, param2, param3);
-        this.field_E = param9;
-        this.field_s = param8;
-        this.field_F = param4;
-        this.field_v = param7;
-        this.field_u = param6;
-        this.field_w = param10;
-        this.field_z = param5;
+    DroneDebris(int lifetimeTicks, int xQ8, int yQ8, int color, double rotation, double spin, int velocityXQ8, int velocityYQ8, int droneType, int fragmentIndex, int radiusPixels) {
+        super(lifetimeTicks, xQ8, yQ8, color);
+        this.fragmentIndex = fragmentIndex;
+        this.droneType = droneType;
+        this.rotation = rotation;
+        this.velocityYQ8 = velocityYQ8;
+        this.velocityXQ8 = velocityXQ8;
+        this.radiusPixels = radiusPixels;
+        this.spin = spin;
     }
 
-    final void a(GraphicsToolkit param0, int param1) {
+    final void render(GraphicsToolkit toolkit, int guard) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -39,48 +39,48 @@ final class aj extends TimedSceneEffect {
         int var4 = 0;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param1 >= -121) {
+          if (guard >= -121) {
             field_A = false;
           }
-          if (this.field_s == 0) {
-            ht.field_e[2 + this.field_E].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), (int)((double)this.field_w / 14.0 * 3072.0), (int)(65535.0 * this.field_F), 1, 0, 2);
+          if (this.droneType == 0) {
+            ht.field_e[2 + this.fragmentIndex].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
           } else {
-            if (this.field_s == 1) {
-              dc.field_ab[this.field_E + 2].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), (int)((double)this.field_w / 14.0 * 3072.0), (int)(this.field_F * 65535.0), 1, 0, 2);
+            if (this.droneType == 1) {
+              dc.field_ab[this.fragmentIndex + 2].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(this.rotation * 65535.0), 1, 0, 2);
             } else {
-              if (this.field_s != 2) {
-                if (this.field_s != 3) {
-                  if (this.field_s == 4) {
-                    MenuScreen.field_a[2 + this.field_E].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), (int)((double)this.field_w / 14.0 * 3072.0), (int)(this.field_F * 65535.0), 1, 0, 2);
+              if (this.droneType != 2) {
+                if (this.droneType != 3) {
+                  if (this.droneType == 4) {
+                    MenuScreen.field_a[2 + this.fragmentIndex].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(this.rotation * 65535.0), 1, 0, 2);
                   } else {
-                    if (this.field_s == 5) {
-                      mr.field_e[2 + this.field_E].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), (int)(3072.0 * ((double)this.field_w / 14.0)), (int)(this.field_F * 65535.0), 1, 0, 2);
+                    if (this.droneType == 5) {
+                      mr.field_e[2 + this.fragmentIndex].a((float)(this.x >> 8), (float)(this.y >> 8), (int)(3072.0 * ((double)this.radiusPixels / 14.0)), (int)(this.rotation * 65535.0), 1, 0, 2);
                     }
                   }
                 } else {
-                  s.field_n[2 + this.field_E].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), (int)((double)this.field_w / 14.0 * 3072.0), (int)(65535.0 * this.field_F), 1, 0, 2);
+                  s.field_n[2 + this.fragmentIndex].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
                 }
               } else {
-                hv.field_d[2 + this.field_E].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), (int)((double)this.field_w / 14.0 * 3072.0), (int)(65535.0 * this.field_F), 1, 0, 2);
+                hv.field_d[2 + this.fragmentIndex].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
               }
             }
           }
-          if (90 > this.field_p) {
+          if (90 > this.remainingTicks) {
             return;
           }
-          th.field_B.a((float)(this.field_k >> 8), (float)(this.field_o >> 8), (int)((double)this.field_w / 14.0 * 3072.0), (int)(65535.0 * this.field_F), 1, 0, 2);
+          th.field_B.a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_21_0 = var3;
           stackIn_21_1 = new StringBuilder().append("aj.C(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class aj extends TimedSceneEffect {
         try {
           if (param0) {
             var3 = (String) null;
-            aj.a(true, (String) null);
+            DroneDebris.a(true, (String) null);
           }
           stackIn_3_0 = new bj(param1);
           return stackIn_3_0;
@@ -113,11 +113,11 @@ final class aj extends TimedSceneEffect {
         }
     }
 
-    final static Object a(byte param0, byte[] param1, boolean param2) {
-        si var3 = null;
+    final static Object storeByteArray(byte guard, byte[] bytes, boolean copy) {
+        DirectByteArrayStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
-        si stackIn_5_0 = null;
+        DirectByteArrayStorage stackIn_5_0 = null;
         Object stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
@@ -126,58 +126,58 @@ final class aj extends TimedSceneEffect {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == null) {
+          if (bytes == null) {
             stackIn_2_0 = null;
             return stackIn_2_0;
           }
-          if (136 < param1.length) {
-            var3 = new si();
-            ((nn) ((Object) var3)).a(param1, -112);
+          if (136 < bytes.length) {
+            var3 = new DirectByteArrayStorage();
+            ((ByteArrayStorage) ((Object) var3)).setBytes(bytes, -112);
             stackIn_5_0 = var3;
             return stackIn_5_0;
           }
-          if (param0 >= -116) {
+          if (guard >= -116) {
             stackIn_8_0 = (Object) null;
             return stackIn_8_0;
           }
-          if (!param2) {
-            stackIn_13_0 = (byte[]) (param1);
+          if (!copy) {
+            stackIn_13_0 = (byte[]) (bytes);
             return stackIn_13_0;
           }
-          stackIn_11_0 = cp.a(param1, 0);
+          stackIn_11_0 = cp.a(bytes, 0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("aj.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("aj.D(").append(guard).append(',');
+          if (bytes == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(copy).append(')').toString());
         }
     }
 
-    final boolean a(int param0) {
-        if (!(90 <= this.field_p)) {
-          this.field_o = this.field_o + this.field_v;
-          this.field_k = this.field_k + this.field_u;
-          this.field_F = this.field_F + this.field_z;
-          this.field_u = 251 * this.field_u / 256;
-          this.field_v = 251 * this.field_v / 256;
-          this.field_v = this.field_v + 1;
-          this.field_u = this.field_u + 1;
+    final boolean updateAndIsExpired(int param0) {
+        if (!(90 <= this.remainingTicks)) {
+          this.y = this.y + this.velocityYQ8;
+          this.x = this.x + this.velocityXQ8;
+          this.rotation = this.rotation + this.spin;
+          this.velocityXQ8 = 251 * this.velocityXQ8 / 256;
+          this.velocityYQ8 = 251 * this.velocityYQ8 / 256;
+          this.velocityYQ8 = this.velocityYQ8 + 1;
+          this.velocityXQ8 = this.velocityXQ8 + 1;
         }
         if (param0 == -2567) {
-          return super.a(-2567);
+          return super.updateAndIsExpired(-2567);
         }
         field_A = false;
-        return super.a(-2567);
+        return super.updateAndIsExpired(-2567);
     }
 
-    final static ToolkitSprite[] a(SpriteData[] param0, GraphicsToolkit param1, int param2) {
+    final static ToolkitSprite[] createToolkitSprites(SpriteData[] sprites, GraphicsToolkit toolkit, int guard) {
         int var4 = 0;
         ToolkitSprite[] var3 = null;
         RuntimeException var3_ref = null;
@@ -192,12 +192,12 @@ final class aj extends TimedSceneEffect {
         RuntimeException decompiledCaughtException = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var6 = new ToolkitSprite[param0.length];
+          var6 = new ToolkitSprite[sprites.length];
           var3 = var6;
-          for (var4 = 0; param0.length > var4; var4++) {
-            var6[var4] = param1.a(param0[var4], false);
+          for (var4 = 0; sprites.length > var4; var4++) {
+            var6[var4] = toolkit.a(sprites[var4], false);
           }
-          if (param2 != 28513) {
+          if (guard != 28513) {
             field_B = 75;
           }
           stackIn_7_0 = var3;
@@ -207,22 +207,22 @@ final class aj extends TimedSceneEffect {
           var3_ref = decompiledCaughtException;
           stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("aj.B(");
-          if (param0 == null) {
+          if (sprites == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param1 == null) {
+          if (toolkit == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_y = null;
         if (param0 == 2) {
           createYourOwnFreeText = null;
@@ -231,7 +231,7 @@ final class aj extends TimedSceneEffect {
           return;
         }
         GraphicsToolkit var2 = (GraphicsToolkit) null;
-        aj.a((SpriteData[]) null, (GraphicsToolkit) null, -61);
+        DroneDebris.createToolkitSprites((SpriteData[]) null, (GraphicsToolkit) null, -61);
         createYourOwnFreeText = null;
         pleaseCheckIfAddressText = null;
         field_D = null;

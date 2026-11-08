@@ -14,19 +14,19 @@ final class jv {
           SoftwareRasterizer.b();
           if (param1 != -71) {
             field_b = 40;
-            vt.a(param0, true);
+            BurstParticle.a(param0, true);
             return;
           }
-          vt.a(param0, true);
+          BurstParticle.a(param0, true);
           return;
         }
         SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, 0, 192);
         if (param1 != -71) {
           field_b = 40;
-          vt.a(param0, true);
+          BurstParticle.a(param0, true);
           return;
         }
-        vt.a(param0, true);
+        BurstParticle.a(param0, true);
     }
 
     final static void a(int param0, String[] param1, String param2, boolean param3) {
@@ -51,7 +51,7 @@ final class jv {
             stackIn_7_0 = !(lq.field_d >= 13);
             jh.field_z = LegacyOpenGlEffect.a(stackIn_7_0, 8192);
             var6 = (String[]) null;
-            as.a(256, (String[]) null);
+            InwardSparkParticle.a(256, (String[]) null);
             return;
           }
           if (100 > param0) {
@@ -63,7 +63,7 @@ final class jv {
             return;
           }
           var7 = param1;
-          as.a(256, var7);
+          InwardSparkParticle.a(256, var7);
           jh.field_z = qr.a(param1, 8192);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

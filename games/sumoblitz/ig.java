@@ -9,14 +9,14 @@ final class ig {
 
     final static boolean b(int param0) {
         int var5 = 0;
-        ah[] var2 = null;
+        Drone[] var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var11 = 0;
         wc var12 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        ah var6 = null;
+        Drone var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -40,12 +40,12 @@ final class ig {
             if (var2[var5] != null &&
               var2[var5].field_F == SocketConnector.field_c) {
               var6 = var2[var5];
-              var7 = var6.field_C;
-              var8 = var6.field_z;
-              var9 = var6.field_Q;
-              var10 = var6.field_N;
+              var7 = var6.xQ8;
+              var8 = var6.yQ8;
+              var9 = var6.droneType;
+              var10 = var6.variant;
               var3 = 1;
-              oc.a(uj.a(var9, var7, var10, (byte) 84, var8), false);
+              oc.a(uj.createEnemyDrone(var9, var7, var10, (byte) 84, var8), false);
             }
           }
           SocketConnector.field_c = SocketConnector.field_c + 1;
@@ -141,7 +141,7 @@ final class ig {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             var6 = 1;
-            var14 = si.a(var11, (byte) -23);
+            var14 = DirectByteArrayStorage.readEntireFile(var11, (byte) -23);
             var12 = var14;
             var7 = var12;
             if (var7 != null &&

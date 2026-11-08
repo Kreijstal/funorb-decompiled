@@ -43,7 +43,7 @@ final class k {
           if (param2 < 93) {
             startGameText = (String) null;
           }
-          var3 = as.field_v;
+          var3 = InwardSparkParticle.field_v;
           var3.g(param1, 8);
           var3.b((byte) 111, param0.field_k);
           var3.b(-10, param0.field_o);

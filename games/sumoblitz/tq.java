@@ -72,7 +72,7 @@ final class tq {
         return (param2 & 256) != 0 ? true : false;
     }
 
-    final static void a(byte param0, ah param1) {
+    final static void a(byte param0, Drone param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

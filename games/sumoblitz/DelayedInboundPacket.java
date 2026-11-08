@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub extends IntrusiveNode {
-    byte[] field_k;
-    int field_l;
-    long field_m;
+final class DelayedInboundPacket extends IntrusiveNode {
+    byte[] payload;
+    int opcode;
+    long deliveryTimeMillis;
 
-    final static void a(int param0) {
+    final static void updatePlayerControls(int param0) {
         int stackIn_9_0 = 0;
         int stackIn_13_1 = 0;
         int stackIn_17_0 = 0;
         int stackIn_22_1 = 0;
-        ah var1;
+        Drone var1;
         int var2;
         int var3;
         int var4;
-        ah var5;
+        Drone var5;
         var4 = Sumoblitz.field_L ? 1 : 0;
         var5 = aa.field_a[0];
         var1 = var5;
@@ -51,21 +51,21 @@ final class ub extends IntrusiveNode {
           var2 = stackIn_17_0 + stackIn_22_1;
           if (var2 != 0 &&
             var3 != 0) {
-            var5.b(-109, var3 / 22, var2 / 22);
+            var5.steerNormalized(-109, var3 / 22, var2 / 22);
             kp.field_a = true;
             if (!hw.field_b[83]) {
-              var5.m(-95);
+              var5.resetBlastButtonHold(-95);
               return;
             }
-            if (var5.n(123)) {
-              var5.k((byte) -90);
+            if (var5.isBlastButtonHoldComplete(123)) {
+              var5.activateBlast((byte) -90);
               return;
             }
-            var5.b(false);
-            if (var5.field_l != 1) {
+            var5.advanceBlastButtonHold(false);
+            if (var5.blastButtonHeldTicks != 1) {
               return;
             }
-            if (!var5.j(20)) {
+            if (!var5.isBlastReady(20)) {
               gn.a(33, true);
             } else {
               gn.a(29, true);
@@ -73,25 +73,25 @@ final class ub extends IntrusiveNode {
             return;
           }
           if (var2 != 0) {
-            var5.b(-119, var3, var2);
+            var5.steerNormalized(-119, var3, var2);
             kp.field_a = true;
           } else {
             if (var3 != 0) {
-              var5.b(-119, var3, var2);
+              var5.steerNormalized(-119, var3, var2);
               kp.field_a = true;
               if (!hw.field_b[83]) {
-                var5.m(-95);
+                var5.resetBlastButtonHold(-95);
                 return;
               }
-              if (var5.n(123)) {
-                var5.k((byte) -90);
+              if (var5.isBlastButtonHoldComplete(123)) {
+                var5.activateBlast((byte) -90);
                 return;
               }
-              var5.b(false);
-              if (var5.field_l != 1) {
+              var5.advanceBlastButtonHold(false);
+              if (var5.blastButtonHeldTicks != 1) {
                 return;
               }
-              if (!var5.j(20)) {
+              if (!var5.isBlastReady(20)) {
                 gn.a(33, true);
               } else {
                 gn.a(29, true);
@@ -100,35 +100,35 @@ final class ub extends IntrusiveNode {
             }
           }
         } else {
-          var5.a(false, pi.field_e << 8, ko.field_p << 8);
+          var5.steerTowardPoint(false, pi.field_e << 8, ko.field_p << 8);
           kp.field_a = true;
         }
         if (!hw.field_b[83]) {
-          var5.m(-95);
+          var5.resetBlastButtonHold(-95);
           return;
         }
-        if (var5.n(123)) {
-          var5.k((byte) -90);
+        if (var5.isBlastButtonHoldComplete(123)) {
+          var5.activateBlast((byte) -90);
           return;
         }
-        var5.b(false);
-        if (var5.field_l != 1) {
+        var5.advanceBlastButtonHold(false);
+        if (var5.blastButtonHeldTicks != 1) {
           return;
         }
-        if (!var5.j(20)) {
+        if (!var5.isBlastReady(20)) {
           gn.a(33, true);
         } else {
           gn.a(29, true);
         }
     }
 
-    ub(long param0, int param1, byte[] param2) {
+    DelayedInboundPacket(long deliveryTimeMillis, int opcode, byte[] payload) {
         try {
-          this.field_l = param1;
-          this.field_k = param2;
-          this.field_m = param0;
+          this.opcode = opcode;
+          this.payload = payload;
+          this.deliveryTimeMillis = deliveryTimeMillis;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ub.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ub.<init>(" + deliveryTimeMillis + ',' + opcode + ',' + (payload != null ? "{...}" : "null") + ')');
         }
     }
 

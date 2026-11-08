@@ -23,7 +23,7 @@ class nl extends gm {
     public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
         try {
           if (param3) {
-            nn.a(param0.field_p, param0.field_r + param4, param0.field_q, (byte) -84, param1 + param0.field_v);
+            ByteArrayStorage.drawBeveledBorder(param0.field_p, param0.field_r + param4, param0.field_q, (byte) -84, param1 + param0.field_v);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

@@ -104,6 +104,6 @@ final class fv extends rw {
     static {
         field_v = new float[4];
         field_y = new mi();
-        nn.b(50, -120);
+        ByteArrayStorage.compatibilityNoOp(50, -120);
     }
 }

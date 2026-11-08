@@ -506,8 +506,8 @@ abstract class da {
         li.field_v = kb.a("frame_top", param0, true, "commonui");
         hd.field_O = kb.a("frame_bottom", param0, true, "commonui");
         ar.field_E = jb.a("commonui", "jagex_logo_grey", -104, param0);
-        jp.field_j = kb.a("button", param0, true, "commonui");
-        fw.field_m = ub.a(param0, "commonui", (byte) -56, "validation");
+        LevelCompleteUpgradeScreen.field_j = kb.a("button", param0, true, "commonui");
+        fw.field_m = DelayedInboundPacket.a(param0, "commonui", (byte) -56, "validation");
         jm.field_a = (vn) ((Object) vf.a(param1, true, "commonui", "arezzo12", param0));
         kw.field_b = (vn) ((Object) vf.a(param1, true, "commonui", "arezzo14", param0));
         tq.field_a = (vn) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
@@ -555,7 +555,7 @@ abstract class da {
           var12.d();
           var17.c(-var9, 0);
           ClientException.a((byte) -73);
-          jp.field_j = new Sprite[]{var15, var12, var11};
+          LevelCompleteUpgradeScreen.field_j = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

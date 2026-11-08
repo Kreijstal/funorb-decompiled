@@ -34,7 +34,7 @@ final class ou extends na {
             nq.field_g = null;
           }
         }
-        if (null == ah.field_g) {
+        if (null == Drone.field_g) {
           ResourceArchive.b(6);
         }
     }
@@ -43,7 +43,7 @@ final class ou extends na {
         if (param0 < 107) {
           ou.a(-41, -16);
         }
-        pl var2 = as.field_v;
+        pl var2 = InwardSparkParticle.field_v;
         var2.g(param1, 8);
         var2.b((byte) 116, 1);
         var2.b((byte) 107, 2);
@@ -207,8 +207,8 @@ final class ou extends na {
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
           LimitedRandomAccessFile.field_d = true;
-          cl.field_s = param1;
-          if (0 == cl.field_s) {
+          DroneChargeParticle.field_s = param1;
+          if (0 == DroneChargeParticle.field_s) {
             var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = 3 + var3_int;
             bf.field_c = new String[var4];
@@ -227,7 +227,7 @@ final class ou extends na {
             bf.field_c[-1 + var4] = jh.closeText;
             eb.field_a[-1 + var4] = 1;
             jo.field_b[1] = 5;
-          } else if (cl.field_s == 1) {
+          } else if (DroneChargeParticle.field_s == 1) {
             var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = var3_int + 2;
             eb.field_a = new int[var4];
@@ -243,8 +243,8 @@ final class ou extends na {
             bf.field_c[-1 + var4] = jh.closeText;
             eb.field_a[var4 - 1] = 0;
             jo.field_b[0] = 5;
-          } else if (cl.field_s != 2) {
-            if (cl.field_s == 3) {
+          } else if (DroneChargeParticle.field_s != 2) {
+            if (DroneChargeParticle.field_s == 3) {
               if (!lt.field_m.field_f) {
                 var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, LegacyOpenGlGraphicsToolkit.unfortunatelyYourConfigurationDoesnText);
               } else {
@@ -264,7 +264,7 @@ final class ou extends na {
               bf.field_c[-1 + var4] = jh.closeText;
               eb.field_a[-1 + var4] = 0;
               jo.field_b[0] = 5;
-            } else if (4 == cl.field_s) {
+            } else if (4 == DroneChargeParticle.field_s) {
               var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, LimitedRandomAccessFile.field_c);
               var4 = var3_int + 2;
               bf.field_c = new String[var4];
@@ -281,7 +281,7 @@ final class ou extends na {
               eb.field_a[var4 - 1] = 0;
               jo.field_b[0] = 5;
             } else {
-              if (cl.field_s != 5) {
+              if (DroneChargeParticle.field_s != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, ua.fullscreenModeWasCancelledText);
@@ -402,7 +402,7 @@ final class ou extends na {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (cl.field_s == 2) {
+          if (DroneChargeParticle.field_s == 2) {
             var11 = no.field_b;
             var4_ref_String__ = var11;
             for (var5Lifetime2 = 0; var11.length > var5Lifetime2; var5Lifetime2++) {
@@ -455,7 +455,7 @@ final class ou extends na {
             }
             var5Lifetime3++;
           }
-          if (cl.field_s == 2) {
+          if (DroneChargeParticle.field_s == 2) {
             nj.field_a.a(param0, 84, -1, -1);
           } else {
             nj.field_a.a(param0, -27, wg.b(pi.field_e, 1882601153, ko.field_p), 0);

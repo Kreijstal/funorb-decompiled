@@ -15,9 +15,9 @@ final class tn extends jb {
               !(param0 <= ic.field_c.length)) {
               ic.field_c = new int[2 * param0];
             }
-            if (vi.field_z == null ||
-              !(param0 <= vi.field_z.length)) {
-              vi.field_z = new int[param0 * 2];
+            if (SlowBurstParticle.field_z == null ||
+              !(param0 <= SlowBurstParticle.field_z.length)) {
+              SlowBurstParticle.field_z = new int[param0 * 2];
             }
             if (uc.field_c == null ||
               !(param0 <= uc.field_c.length)) {
@@ -37,9 +37,9 @@ final class tn extends jb {
                 !(param0 <= ic.field_c.length)) {
                 ic.field_c = new int[2 * param0];
               }
-              if (vi.field_z == null ||
-                !(param0 <= vi.field_z.length)) {
-                vi.field_z = new int[param0 * 2];
+              if (SlowBurstParticle.field_z == null ||
+                !(param0 <= SlowBurstParticle.field_z.length)) {
+                SlowBurstParticle.field_z = new int[param0 * 2];
               }
               if (uc.field_c == null ||
                 !(param0 <= uc.field_c.length)) {
@@ -59,9 +59,9 @@ final class tn extends jb {
                 !(param0 <= ic.field_c.length)) {
                 ic.field_c = new int[2 * param0];
               }
-              if (vi.field_z == null ||
-                !(param0 <= vi.field_z.length)) {
-                vi.field_z = new int[param0 * 2];
+              if (SlowBurstParticle.field_z == null ||
+                !(param0 <= SlowBurstParticle.field_z.length)) {
+                SlowBurstParticle.field_z = new int[param0 * 2];
               }
               if (uc.field_c == null ||
                 !(param0 <= uc.field_c.length)) {
@@ -88,9 +88,9 @@ final class tn extends jb {
               !(param0 <= ic.field_c.length)) {
               ic.field_c = new int[2 * param0];
             }
-            if (vi.field_z == null ||
-              !(param0 <= vi.field_z.length)) {
-              vi.field_z = new int[param0 * 2];
+            if (SlowBurstParticle.field_z == null ||
+              !(param0 <= SlowBurstParticle.field_z.length)) {
+              SlowBurstParticle.field_z = new int[param0 * 2];
             }
             if (uc.field_c == null) {
               uc.field_c = new int[2 * param0];
@@ -131,9 +131,9 @@ final class tn extends jb {
             }
             if (ic.field_c == null) {
               ic.field_c = new int[2 * param0];
-              if (vi.field_z == null ||
-                !(param0 <= vi.field_z.length)) {
-                vi.field_z = new int[param0 * 2];
+              if (SlowBurstParticle.field_z == null ||
+                !(param0 <= SlowBurstParticle.field_z.length)) {
+                SlowBurstParticle.field_z = new int[param0 * 2];
               }
               if (uc.field_c == null) {
                 uc.field_c = new int[2 * param0];
@@ -169,9 +169,9 @@ final class tn extends jb {
               }
             } else {
               if (param0 <= ic.field_c.length) {
-                if (vi.field_z == null ||
-                  !(param0 <= vi.field_z.length)) {
-                  vi.field_z = new int[param0 * 2];
+                if (SlowBurstParticle.field_z == null ||
+                  !(param0 <= SlowBurstParticle.field_z.length)) {
+                  SlowBurstParticle.field_z = new int[param0 * 2];
                 }
                 if (uc.field_c == null) {
                   uc.field_c = new int[2 * param0];
@@ -207,9 +207,9 @@ final class tn extends jb {
                 }
               } else {
                 ic.field_c = new int[2 * param0];
-                if (vi.field_z == null ||
-                  !(param0 <= vi.field_z.length)) {
-                  vi.field_z = new int[param0 * 2];
+                if (SlowBurstParticle.field_z == null ||
+                  !(param0 <= SlowBurstParticle.field_z.length)) {
+                  SlowBurstParticle.field_z = new int[param0 * 2];
                 }
                 if (uc.field_c == null) {
                   uc.field_c = new int[2 * param0];

@@ -228,7 +228,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   return;
                 }
               }
-              aj.field_A = true;
+              DroneDebris.field_A = true;
             }
             return;
           }
@@ -347,7 +347,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               SpriteState.field_s = param4;
               gi.field_h = param3;
               vs.field_b = param3;
-              si.field_c = 0;
+              DirectByteArrayStorage.field_c = 0;
               wq.field_b = param1;
               lw.field_b = param1;
               ct.field_z = ra.c(2);
@@ -447,7 +447,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (var4 != (long)param0 &&
             var4 < var2_long) {
             var6_int = (int)(var2_long - var4);
-            aj.field_B = (32000 + (var6_int >> 1)) / var6_int;
+            DroneDebris.field_B = (32000 + (var6_int >> 1)) / var6_int;
           }
           ql.field_B = 1 + ql.field_B & 31;
           fieldTemp$1 = rb.field_b;
@@ -460,12 +460,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (null != ck.field_c &&
               null == of.field_n) {
               var6 = ck.field_c.getInsets();
-              qn.field_f.setLocation(var6.left + th.field_H, var6.top + si.field_c);
+              qn.field_f.setLocation(var6.left + th.field_H, var6.top + DirectByteArrayStorage.field_c);
               if (Sumoblitz.field_L) {
-                qn.field_f.setLocation(th.field_H, si.field_c);
+                qn.field_f.setLocation(th.field_H, DirectByteArrayStorage.field_c);
               }
             } else {
-              qn.field_f.setLocation(th.field_H, si.field_c);
+              qn.field_f.setLocation(th.field_H, DirectByteArrayStorage.field_c);
             }
           }
           this.renderFrame(0);
@@ -615,12 +615,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           qn.field_f.setVisible(true);
           boolean decompiledSharedTail0 = (ck.field_c == var2);
           if (!decompiledSharedTail0) {
-            qn.field_f.setLocation(th.field_H, si.field_c);
+            qn.field_f.setLocation(th.field_H, DirectByteArrayStorage.field_c);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = ck.field_c.getInsets();
-            qn.field_f.setLocation(var3.left + th.field_H, var3.top + si.field_c);
+            qn.field_f.setLocation(var3.left + th.field_H, var3.top + DirectByteArrayStorage.field_c);
           }
           qn.field_f.addFocusListener((java.awt.event.FocusListener) (this));
           qn.field_f.requestFocus();
@@ -630,7 +630,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != 1000) {
             return;
           }
-          aj.field_A = false;
+          DroneDebris.field_A = false;
           bt.field_f = wq.a(param0 ^ -912);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -906,12 +906,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    vt.field_t = jl.field_a.b(4007, DualLinkNode.field_p);
+                    BurstParticle.field_t = jl.field_a.b(4007, DualLinkNode.field_p);
                     stackIn_105_0 = 0;
                   }
                   var3 = stackIn_105_0;
                   do {
-                    if (!(vt.field_t > var3)) {
+                    if (!(BurstParticle.field_t > var3)) {
                       this.h(0);
                       rd.a(qn.field_f, lt.field_m, -11030);
                       break;

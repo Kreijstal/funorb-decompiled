@@ -29,11 +29,11 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final static nm a(int param0, int param1, int param2, int param3, byte param4) {
+    final static ArenaPad a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 != -113) {
-          return (nm) null;
+          return (ArenaPad) null;
         }
-        return new nm(param3, param1, param2, param0);
+        return new ArenaPad(param3, param1, param2, param0);
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {

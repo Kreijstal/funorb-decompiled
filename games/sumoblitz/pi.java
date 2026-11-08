@@ -48,7 +48,7 @@ final class pi {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        nm var13 = null;
+        ArenaPad var13 = null;
         int var14 = 0;
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {

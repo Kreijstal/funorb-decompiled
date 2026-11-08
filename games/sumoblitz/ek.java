@@ -19,7 +19,7 @@ final class ek extends ht {
           this.field_q = param3;
           this.field_o = param4;
           this.field_d.a(63, (ht) (this));
-          jaggl.OpenGL.glTexImage3Dub(this.field_c, 0, this.field_a, this.field_p, this.field_q, this.field_o, 0, be.a(false, this.field_a), 5121, (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage3Dub(this.field_c, 0, this.field_a, this.field_p, this.field_q, this.field_o, 0, ForceFieldRingEffect.glBaseFormat(false, this.field_a), 5121, (byte[]) null, 0);
           this.a(true, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -108,7 +108,7 @@ final class ek extends ht {
             hq.field_b = tm.field_d;
           }
           if (up.field_d &&
-            qf.field_a == fe.field_T) {
+            qf.field_a == PlayerDrone.field_T) {
             qf.field_a = 0;
             up.field_d = false;
           }

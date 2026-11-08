@@ -107,7 +107,7 @@ final class jc extends na {
           }
           while (var2 < aa.field_a.length) {
             if (aa.field_a[var2] != null &&
-              aa.field_a[var2].field_Q != 0) {
+              aa.field_a[var2].droneType != 0) {
               var1_int++;
             }
             var2++;

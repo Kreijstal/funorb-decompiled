@@ -37,7 +37,7 @@ final class oj implements mh {
             emailAddressIsUnavailableText = (String) null;
           }
           var7 = param1 + param0.field_v;
-          nn.a(param0.field_p, var6_int, param0.field_q, (byte) -84, var7);
+          ByteArrayStorage.drawBeveledBorder(param0.field_p, var6_int, param0.field_q, (byte) -84, var7);
           var8 = fw.field_m[1];
           if (param0 instanceof wp &&
             ((wp) (param0)).field_C) {

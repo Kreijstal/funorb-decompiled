@@ -318,9 +318,9 @@ final class ResourceArchive {
           km.field_o = gd.a((byte) -82, 6);
         }
         if (km.field_o.field_o) {
-          ah.field_g = km.field_o.field_m;
+          Drone.field_g = km.field_o.field_m;
           km.field_o = null;
-          if (ah.field_g == null) {
+          if (Drone.field_g == null) {
             return true;
           }
           kf.a((byte) 111);
@@ -413,7 +413,7 @@ final class ResourceArchive {
         if (this.field_a) {
           this.field_d[param0] = this.field_e.a(param0, false);
         } else {
-          this.field_d[param0] = aj.a((byte) -121, this.field_e.a(param0, false), false);
+          this.field_d[param0] = DroneDebris.storeByteArray((byte) -121, this.field_e.a(param0, false), false);
         }
     }
 
@@ -625,7 +625,7 @@ final class ResourceArchive {
                   var18 = var34[var17];
                 }
                 if (this.field_c == 0) {
-                  var7[var18] = aj.a((byte) -119, var39[var17], false);
+                  var7[var18] = DroneDebris.storeByteArray((byte) -119, var39[var17], false);
                 } else {
                   var7[var18] = var39[var17];
                 }
@@ -641,7 +641,7 @@ final class ResourceArchive {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = aj.a((byte) -119, var43, false);
+            var7[var11] = DroneDebris.storeByteArray((byte) -119, var43, false);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

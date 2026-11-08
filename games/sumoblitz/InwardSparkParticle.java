@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class as extends TimedSceneEffect {
-    private int field_z;
-    private int field_s;
+final class InwardSparkParticle extends TimedSceneEffect {
+    private int velocityYQ8;
+    private int initialLifetime;
     static String livesText;
-    private int field_t;
+    private int textureKind;
     static int[] field_y;
     static pl field_v;
-    private int field_u;
+    private int velocityXQ8;
     static MouseWheelInput field_w;
 
     final static void f(int param0) {
@@ -19,12 +19,12 @@ final class as extends TimedSceneEffect {
         if (null == pd.field_n) {
           var1 = new ct();
           var3 = var1.a(128, 128, false, 16);
-          pd.field_n = aj.a((byte) -125, var3, false);
+          pd.field_n = DroneDebris.storeByteArray((byte) -125, var3, false);
         }
         if (mk.field_d == null) {
           var1_ref = new ks();
           var4 = var1_ref.b(1, 128, 128, 16);
-          mk.field_d = aj.a((byte) -120, var4, false);
+          mk.field_d = DroneDebris.storeByteArray((byte) -120, var4, false);
         }
         if (param0 != 23369) {
           livesText = (String) null;
@@ -39,20 +39,20 @@ final class as extends TimedSceneEffect {
         int var1 = -34 % ((param0 + 2) / 42);
     }
 
-    final void a(GraphicsToolkit param0, int param1) {
+    final void render(GraphicsToolkit toolkit, int guard) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param1 > -121) {
-            this.a(-59);
+          if (guard > -121) {
+            this.updateAndIsExpired(-59);
           }
-          if (0 != this.field_t) {
-            im.field_a.a((float)(this.field_k >> 8), (float)(this.field_o >> 8), 4096, 0, 0, (this.field_p * (128 / this.field_s) << 24) + this.field_q, 1);
+          if (0 != this.textureKind) {
+            im.field_a.a((float)(this.x >> 8), (float)(this.y >> 8), 4096, 0, 0, (this.remainingTicks * (128 / this.initialLifetime) << 24) + this.color, 1);
           } else {
-            uc.field_a.a((float)(this.field_k >> 8), (float)(this.field_o >> 8), 1024, 0, 0, (this.field_p * (128 / this.field_s) << 24) + this.field_q, 1);
+            uc.field_a.a((float)(this.x >> 8), (float)(this.y >> 8), 1024, 0, 0, (this.remainingTicks * (128 / this.initialLifetime) << 24) + this.color, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,21 +60,21 @@ final class as extends TimedSceneEffect {
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
           stackIn_8_1 = new StringBuilder().append("as.C(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    as(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        super(param0, param1, param2, param3);
-        this.field_z = param5;
-        this.field_t = param6;
-        this.field_s = param0;
-        this.field_u = param4;
+    InwardSparkParticle(int lifetimeTicks, int xQ8, int yQ8, int color, int velocityXQ8, int velocityYQ8, int textureKind) {
+        super(lifetimeTicks, xQ8, yQ8, color);
+        this.velocityYQ8 = velocityYQ8;
+        this.textureKind = textureKind;
+        this.initialLifetime = lifetimeTicks;
+        this.velocityXQ8 = velocityXQ8;
     }
 
     final static void a(int param0, String[] param1) {
@@ -108,28 +108,28 @@ final class as extends TimedSceneEffect {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean updateAndIsExpired(int param0) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
-        if (this.field_s > this.field_p) {
-          this.field_k = this.field_k + this.field_u;
-          this.field_o = this.field_o + this.field_z;
-          this.field_u = this.field_u * 251 / 285;
-          this.field_z = this.field_z * 251 / 285;
-          if (this.field_u < 0) {
-            this.field_u = this.field_u - 1;
+        if (this.initialLifetime > this.remainingTicks) {
+          this.x = this.x + this.velocityXQ8;
+          this.y = this.y + this.velocityYQ8;
+          this.velocityXQ8 = this.velocityXQ8 * 251 / 285;
+          this.velocityYQ8 = this.velocityYQ8 * 251 / 285;
+          if (this.velocityXQ8 < 0) {
+            this.velocityXQ8 = this.velocityXQ8 - 1;
           } else {
-            this.field_u = this.field_u + 1;
+            this.velocityXQ8 = this.velocityXQ8 + 1;
           }
-          if (this.field_z < 0) {
-            this.field_z = this.field_z - 1;
+          if (this.velocityYQ8 < 0) {
+            this.velocityYQ8 = this.velocityYQ8 - 1;
           } else {
-            this.field_z = this.field_z + 1;
+            this.velocityYQ8 = this.velocityYQ8 + 1;
           }
         }
         if (param0 != -2567) {
-          as.releaseStatics(-88);
+          InwardSparkParticle.releaseStatics(-88);
         }
-        return super.a(param0 + 0);
+        return super.updateAndIsExpired(param0 + 0);
     }
 
     static {

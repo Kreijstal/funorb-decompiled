@@ -82,7 +82,7 @@ final class av extends jt {
           field_C = (int[]) null;
         }
         if (!(0 > rc.field_k)) {
-          LegacyOpenGlEffectManager.field_g[rc.field_k].b(param0 - 875, param1);
+          LegacyOpenGlEffectManager.field_g[rc.field_k].resetSelection(param0 - 875, param1);
         }
         if (0 == rc.field_k &&
           7 != nj.field_b) {

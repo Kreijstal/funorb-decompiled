@@ -17,7 +17,7 @@ final class oc extends ShaderEffect {
         super(param0);
     }
 
-    final static void a(ah param0, boolean param1) {
+    final static void a(Drone param0, boolean param1) {
         int var2_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_53_0 = null;
@@ -25,7 +25,7 @@ final class oc extends ShaderEffect {
         String stackIn_54_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        nm var3 = null;
+        ArenaPad var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -33,7 +33,7 @@ final class oc extends ShaderEffect {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ah var11 = null;
+        Drone var11 = null;
         IntrusiveDequeCursor var12 = null;
         int var4Lifetime1;
         int var4Lifetime2;
@@ -47,10 +47,10 @@ final class oc extends ShaderEffect {
           for (var2_int = 0; db.field_l > var2_int; var2_int++) {
             var11 = aa.field_a[var2_int];
             if (var11 != null) {
-              var4 = var11.field_m + param0.field_m;
-              if (wn.a(var11.field_z, var4, -104, param0.field_C, var11.field_C, param0.field_z)) {
-                var5 = -var11.field_C + param0.field_C;
-                var6 = param0.field_z - var11.field_z;
+              var4 = var11.radiusQ8 + param0.radiusQ8;
+              if (wn.a(var11.yQ8, var4, -104, param0.xQ8, var11.xQ8, param0.yQ8)) {
+                var5 = -var11.xQ8 + param0.xQ8;
+                var6 = param0.yQ8 - var11.yQ8;
                 if (var5 == 0) {
                   var5 = -1 + (2 & iw.field_b << 1);
                 }
@@ -61,51 +61,51 @@ final class oc extends ShaderEffect {
                 if (var4 > var7) {
                   var8 = var5 * (-var7 + var4) / var7;
                   var9 = (var4 - var7) * var6 / var7;
-                  param0.field_C = param0.field_C + var8;
-                  param0.field_z = param0.field_z + var9;
-                  var11.field_C = var11.field_C - var8;
-                  var11.field_z = var11.field_z - var9;
+                  param0.xQ8 = param0.xQ8 + var8;
+                  param0.yQ8 = param0.yQ8 + var9;
+                  var11.xQ8 = var11.xQ8 - var8;
+                  var11.yQ8 = var11.yQ8 - var9;
                 }
               }
             }
           }
           var12 = new IntrusiveDequeCursor(is.field_c);
-          var3 = (nm) (var12.first((byte) -80));
+          var3 = (ArenaPad) (var12.first((byte) -80));
           if (param1) {
             return;
           }
           while (var3 != null) {
-            var4Lifetime1 = (var3.field_m << 8) + param0.field_m;
-            if (wn.a(param0.field_z, var4Lifetime1, -114, var3.field_q, param0.field_C, var3.field_l)) {
-              var5Lifetime1 = -var3.field_q + param0.field_C;
+            var4Lifetime1 = (var3.radiusPixels << 8) + param0.radiusQ8;
+            if (wn.a(param0.yQ8, var4Lifetime1, -114, var3.xQ8, param0.xQ8, var3.yQ8)) {
+              var5Lifetime1 = -var3.xQ8 + param0.xQ8;
               if (var5Lifetime1 == 0) {
                 var5Lifetime1 = -1 + (2 & iw.field_b << 1);
               }
-              var6Lifetime1 = -var3.field_l + param0.field_z;
+              var6Lifetime1 = -var3.yQ8 + param0.yQ8;
               if (var6Lifetime1 == 0) {
                 var6Lifetime1 = -1 + ((iw.field_b & 1) << 1);
               }
               var7Lifetime1 = (int)Math.round(Math.sqrt((double)((float)var6Lifetime1 * (float)var6Lifetime1 + (float)var5Lifetime1 * (float)var5Lifetime1)));
               if (var4Lifetime1 > var7Lifetime1) {
                 var8Lifetime1 = var5Lifetime1 * (-var7Lifetime1 + var4Lifetime1) / var7Lifetime1;
-                param0.field_C = param0.field_C + (var8Lifetime1 << 1);
+                param0.xQ8 = param0.xQ8 + (var8Lifetime1 << 1);
                 var9Lifetime1 = (var4Lifetime1 - var7Lifetime1) * var6Lifetime1 / var7Lifetime1;
-                param0.field_z = param0.field_z + (var9Lifetime1 << 1);
+                param0.yQ8 = param0.yQ8 + (var9Lifetime1 << 1);
               }
             }
-            var3 = (nm) (var12.next(0));
+            var3 = (ArenaPad) (var12.next(0));
           }
-          if (-param0.field_m + param0.field_C < 6656) {
-            param0.field_C = param0.field_C + (26 << 9 + param0.field_m);
+          if (-param0.radiusQ8 + param0.xQ8 < 6656) {
+            param0.xQ8 = param0.xQ8 + (26 << 9 + param0.radiusQ8);
           }
-          if (-param0.field_m + param0.field_z < 6656) {
-            param0.field_z = param0.field_z + (26 << param0.field_m + 9);
+          if (-param0.radiusQ8 + param0.yQ8 < 6656) {
+            param0.yQ8 = param0.yQ8 + (26 << param0.radiusQ8 + 9);
           }
-          if (param0.field_m + param0.field_C > ArchiveCatalog.field_c - 26 << 8) {
-            param0.field_C = param0.field_C - (26 << 9 + param0.field_m);
+          if (param0.radiusQ8 + param0.xQ8 > ArchiveCatalog.field_c - 26 << 8) {
+            param0.xQ8 = param0.xQ8 - (26 << 9 + param0.radiusQ8);
           }
-          if (rl.field_k - 26 << 8 < param0.field_m + param0.field_z) {
-            param0.field_z = param0.field_z - (26 << 9 + param0.field_m);
+          if (rl.field_k - 26 << 8 < param0.radiusQ8 + param0.yQ8) {
+            param0.yQ8 = param0.yQ8 - (26 << 9 + param0.radiusQ8);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < db.field_l; var4Lifetime2++) {
             if (aa.field_a[var4Lifetime2] == null &&
@@ -179,8 +179,8 @@ final class oc extends ShaderEffect {
 
     final boolean b(byte param0) {
         if (param0 > -8) {
-          ah var3 = (ah) null;
-          oc.a((ah) null, false);
+          Drone var3 = (Drone) null;
+          oc.a((Drone) null, false);
         }
         return true;
     }
@@ -206,7 +206,7 @@ final class oc extends ShaderEffect {
         }
         jf.field_f[se.field_d] = param1;
         ic.field_c[se.field_d] = param4;
-        vi.field_z[se.field_d] = param0;
+        SlowBurstParticle.field_z[se.field_d] = param0;
         int var6 = param0 + param4 + param1;
         if (!param2) {
           String var8 = (String) null;

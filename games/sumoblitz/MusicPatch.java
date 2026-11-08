@@ -180,7 +180,7 @@ final class MusicPatch extends IntrusiveNode {
           }
           for (var5Lifetime1 = 0; 255 > var5Lifetime1; var5Lifetime1++) {
             var6 = 255 - var5Lifetime1;
-            var7 = fi.a(var6, var4, (byte) -96);
+            var7 = ExpandingRingEffect.nextRandomInt(var6, var4, (byte) -96);
             var8 = var11[var7];
             var3_ref_byte__[var7] = var11[var6];
             var3_ref_byte__[-var5Lifetime1 + 511] = (byte) var8;
@@ -236,7 +236,7 @@ final class MusicPatch extends IntrusiveNode {
 
     final static void c(byte param0) {
         int var1_int = 0;
-        ah var2 = null;
+        Drone var2 = null;
         int var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 != 77) {
@@ -246,7 +246,7 @@ final class MusicPatch extends IntrusiveNode {
             for (var1_int = 0; var1_int < db.field_l; var1_int++) {
               var2 = aa.field_a[var1_int];
               if (var2 != null) {
-                var2.d(-76);
+                var2.update(-76);
               }
             }
           }

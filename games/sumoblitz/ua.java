@@ -99,12 +99,12 @@ abstract class ua implements ot {
         }
     }
 
-    final static void a(int param0, ah param1) {
+    final static void a(int param0, Drone param1) {
         try {
           kf.field_u = param1;
           im.field_b = new IntrusiveDeque();
-          up.field_a = fi.a(640, he.field_o, (byte) -96) << 8;
-          cv.field_E = fi.a(480, he.field_o, (byte) -96) << 8;
+          up.field_a = ExpandingRingEffect.nextRandomInt(640, he.field_o, (byte) -96) << 8;
+          cv.field_E = ExpandingRingEffect.nextRandomInt(480, he.field_o, (byte) -96) << 8;
           LimitedRandomAccessFile.d(22030);
           if (param0 != 35040) {
             ua.a(116, -119);
@@ -121,8 +121,8 @@ abstract class ua implements ot {
         if (!this.field_f.field_Nc) {
           this.field_c = 0;
         } else {
-          jaggl.OpenGL.glGenBuffersARB(1, jp.field_k, 0);
-          this.field_c = jp.field_k[0];
+          jaggl.OpenGL.glGenBuffersARB(1, LevelCompleteUpgradeScreen.field_k, 0);
+          this.field_c = LevelCompleteUpgradeScreen.field_k[0];
           jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_c);
         }
         if (param0 != 0) {

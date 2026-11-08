@@ -20,10 +20,10 @@ final class db extends IntrusiveNode {
           }
           lq.a(0, (java.awt.Component) ((Object) param1));
           gs.a((java.awt.Component) ((Object) param1), true);
-          if (null == as.field_w) {
+          if (null == InwardSparkParticle.field_w) {
             return;
           }
-          as.field_w.a(true, (java.awt.Component) ((Object) param1));
+          InwardSparkParticle.field_w.a(true, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -102,7 +102,7 @@ final class wv {
             String var4 = (String) null;
             wv.a(false, (String) null, (String) null);
           }
-          vi.field_y.b((byte) -119, no.field_a);
+          SlowBurstParticle.field_y.b((byte) -119, no.field_a);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wv.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

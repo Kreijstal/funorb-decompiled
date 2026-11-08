@@ -31,16 +31,16 @@ final class fb {
           av.a(sd.field_e, true);
           sd.field_e.b(param2 + 12917, param3);
           param4.a(sd.field_e, (byte) -113);
-          as.field_v.position = 0;
+          InwardSparkParticle.field_v.position = 0;
           if (param0) {
-            as.field_v.b((byte) 89, 18);
+            InwardSparkParticle.field_v.b((byte) 89, 18);
           } else {
-            as.field_v.b((byte) 96, 16);
+            InwardSparkParticle.field_v.b((byte) 96, 16);
           }
-          as.field_v.position = as.field_v.position + 2;
-          var5_int = as.field_v.position;
-          as.field_v.e(48, MidiNoteMixer.field_p);
-          as.field_v.a(false, jm.field_b);
+          InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 2;
+          var5_int = InwardSparkParticle.field_v.position;
+          InwardSparkParticle.field_v.e(48, MidiNoteMixer.field_p);
+          InwardSparkParticle.field_v.a(false, jm.field_b);
           var6 = 0;
           if (qn.field_a) {
             var6 = var6 | 1;
@@ -54,17 +54,17 @@ final class fb {
           if (rp.field_b != null) {
             var6 = var6 | 16;
           }
-          as.field_v.b((byte) 108, var6);
+          InwardSparkParticle.field_v.b((byte) 108, var6);
           var7 = dv.a(-22, ra.c(2));
           if (var7 == null) {
             var7 = "";
           }
-          as.field_v.a(var7, (byte) -106);
+          InwardSparkParticle.field_v.a(var7, (byte) -106);
           if (rp.field_b != null) {
-            as.field_v.b(rp.field_b, (byte) 19);
+            InwardSparkParticle.field_v.b(rp.field_b, (byte) 19);
           }
-          ks.a(gh.field_a, oh.field_c, false, as.field_v, sd.field_e);
-          as.field_v.a(param2 + 12793, as.field_v.position - var5_int);
+          ks.a(gh.field_a, oh.field_c, false, InwardSparkParticle.field_v, sd.field_e);
+          InwardSparkParticle.field_v.a(param2 + 12793, InwardSparkParticle.field_v.position - var5_int);
           gt.a(param2 + 12793, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

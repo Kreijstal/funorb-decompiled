@@ -23,7 +23,7 @@ final class dv implements mh {
           }
           var6_int = param0.field_r + param4;
           var7 = param1 + param0.field_v;
-          nn.a(param0.field_p, var6_int, param0.field_q, (byte) -84, var7);
+          ByteArrayStorage.drawBeveledBorder(param0.field_p, var6_int, param0.field_q, (byte) -84, var7);
           if (param0.d(-1)) {
             pp.a(var7 + 2, param0.field_q - 4, -13181, var6_int + 2, -4 + param0.field_p);
           }
@@ -64,7 +64,7 @@ final class dv implements mh {
         for (var2 = 0; var2 < rl.field_n; var2++) {
           var1[var2] = new ne(vf.field_d, li.field_u, er.field_h[var2], av.field_C[var2], vg.field_k[var2], we.field_B[var2], ag.field_d[var2], LegacyOpenGlEffectManager.field_l);
         }
-        tl.a((byte) -68);
+        PowerupPickup.releaseSpriteDecoderArrays((byte) -68);
         return var1;
     }
 

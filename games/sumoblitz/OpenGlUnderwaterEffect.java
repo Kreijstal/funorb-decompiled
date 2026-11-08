@@ -170,7 +170,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
     final void c(boolean param0) {
         this.field_b.g(1, -119);
         this.field_b.a((ed) null, 113);
-        this.field_b.a((byte) -83, vi.field_v, vi.field_v);
+        this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
         this.field_b.a(jq.field_a, 0, 0);
         this.field_b.a(mm.field_h, 2, 0);
         this.field_b.a(jq.field_a, 0, true);

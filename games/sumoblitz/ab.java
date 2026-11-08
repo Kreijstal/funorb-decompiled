@@ -12,7 +12,7 @@ abstract class ab {
 
     abstract void a(float param0, int param1, float param2, float param3, int param4, int param5, int param6, float[] param7, int param8, float param9, int param10);
 
-    final static void a(int param0, IntrusiveDeque param1, ah param2, int param3, int param4, int param5, byte param6) {
+    final static void a(int param0, IntrusiveDeque param1, Drone param2, int param3, int param4, int param5, byte param6) {
         float[] dupTemp$0 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
@@ -45,12 +45,12 @@ abstract class ab {
           while (true) {
             stackIn_8_0 = (var7_int == 0) ? 30 : 15;
             if (stackIn_8_0 > var8) {
-              var9 = new float[]{0.0f, (float)(-(fi.a(param3, he.field_o, (byte) -96) + 1))};
+              var9 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param3, he.field_o, (byte) -96) + 1))};
               var15 = kt.a((byte) -33, var9, (float)((double)(2048.0f / (float)var8) * 0.017453292519943295 + 0.0));
               var14 = var15;
               var12 = var14;
               var9Lifetime2 = var12;
-              param1.addLast((IntrusiveNode) (new cl(64, (int)var15[0] << 11, (int)var15[1] << 11, param0, -(int)var15[0] << 8, -(int)var15[1] << 8, 0, param2)), (byte) 39);
+              param1.addLast((IntrusiveNode) (new DroneChargeParticle(64, (int)var15[0] << 11, (int)var15[1] << 11, param0, -(int)var15[0] << 8, -(int)var15[1] << 8, 0, param2)), (byte) 39);
               var8++;
               continue;
             }
@@ -66,11 +66,11 @@ abstract class ab {
             if (stackIn_16_0 <= var8Lifetime1) {
               return;
             }
-            var9Lifetime1 = new float[]{0.0f, (float)(-(1 + fi.a(param3, he.field_o, (byte) -96)))};
+            var9Lifetime1 = new float[]{0.0f, (float)(-(1 + ExpandingRingEffect.nextRandomInt(param3, he.field_o, (byte) -96)))};
             dupTemp$0 = kt.a((byte) -52, var9Lifetime1, (float)(0.0 + (double)(2048.0f / (float)var8Lifetime1) * 0.017453292519943295));
             var13 = dupTemp$0;
             var9Lifetime1Lifetime1 = dupTemp$0;
-            param1.addLast((IntrusiveNode) (new cl(64, (int)var13[0] << 11, (int)var13[1] << 11, param0, -(int)var13[0] << 8, -(int)var13[1] << 8, 1, param2)), (byte) 39);
+            param1.addLast((IntrusiveNode) (new DroneChargeParticle(64, (int)var13[0] << 11, (int)var13[1] << 11, param0, -(int)var13[0] << 8, -(int)var13[1] << 8, 1, param2)), (byte) 39);
             var8Lifetime1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -96,7 +96,7 @@ abstract class ab {
     final static byte[] a(boolean param0, Object param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        nn var4 = null;
+        ByteArrayStorage var4 = null;
         Object stackIn_2_0 = null;
         byte[] stackIn_6_0 = null;
         byte[] stackIn_8_0 = null;
@@ -122,11 +122,11 @@ abstract class ab {
           if (param2 != 0) {
             ab.releaseStatics(-28);
           }
-          if (!(param1 instanceof nn)) {
+          if (!(param1 instanceof ByteArrayStorage)) {
             throw new IllegalArgumentException();
           }
-          var4 = (nn) (param1);
-          stackIn_13_0 = var4.a(false);
+          var4 = (ByteArrayStorage) (param1);
+          stackIn_13_0 = var4.copyBytes(false);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

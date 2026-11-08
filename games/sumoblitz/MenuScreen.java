@@ -5,7 +5,7 @@ class MenuScreen {
     private er field_g;
     private int field_c;
     static int field_f;
-    private int field_h;
+    private int screenId;
     private int field_d;
     private int field_e;
     static IntrusiveDeque field_b;
@@ -377,7 +377,7 @@ class MenuScreen {
           var6_int = this.g(param1, 108);
           var7 = this.b(param1, 50);
           discarded$0 = this.f(-116, param1);
-          var8 = kd.field_a[this.field_h][param1];
+          var8 = kd.field_a[this.screenId][param1];
           var9 = GameClientShell.field_u[var8].toUpperCase();
           if (var9 == null) {
             var9 = "ERROR: missing text";
@@ -410,9 +410,9 @@ class MenuScreen {
           var14 = null;
           var15 = null;
           var16 = 0;
-          if (this.field_h == 0 &&
+          if (this.screenId == 0 &&
             param1 < 2) {
-            var14_ref = be.field_t;
+            var14_ref = ForceFieldRingEffect.field_t;
             var15_ref = ma.field_b;
             var13_ref = hc.field_e;
           } else {
@@ -511,54 +511,54 @@ class MenuScreen {
     }
 
     private final int g(int param0, int param1) {
-        if (this.field_h == 2 &&
+        if (this.screenId == 2 &&
           !vs.b((byte) 9)) {
           if (param0 >= 5) {
-            return -6 + (DualLinkNode.field_k[this.field_h] + MidiNoteMixer.field_s[this.field_h]);
+            return -6 + (DualLinkNode.field_k[this.screenId] + MidiNoteMixer.field_s[this.screenId]);
           }
-          return -6 + DualLinkNode.field_k[this.field_h];
+          return -6 + DualLinkNode.field_k[this.screenId];
         }
-        if (this.field_h == 2 &&
+        if (this.screenId == 2 &&
           vs.b((byte) 9)) {
-          return DualLinkNode.field_k[this.field_h] - (-(param0 * MidiNoteMixer.field_s[this.field_h]) + 6);
+          return DualLinkNode.field_k[this.screenId] - (-(param0 * MidiNoteMixer.field_s[this.screenId]) + 6);
         }
-        if (this.field_h != 3 &&
-          this.field_h != 4 &&
-          this.field_h != 5) {
-          if (this.field_h != 9 &&
-            this.field_h != 7 &&
-            this.field_h != 10 &&
-            this.field_h != 11) {
-            if (5 == this.field_h) {
-              if (kd.field_a[this.field_h].length > 1) {
+        if (this.screenId != 3 &&
+          this.screenId != 4 &&
+          this.screenId != 5) {
+          if (this.screenId != 9 &&
+            this.screenId != 7 &&
+            this.screenId != 10 &&
+            this.screenId != 11) {
+            if (5 == this.screenId) {
+              if (kd.field_a[this.screenId].length > 1) {
                 return 382;
               }
-              return 430 + param0 * MidiNoteMixer.field_s[this.field_h] - 4;
+              return 430 + param0 * MidiNoteMixer.field_s[this.screenId] - 4;
             }
-            if (this.field_h != 0) {
+            if (this.screenId != 0) {
               if (param1 <= 79) {
-                this.field_h = 83;
+                this.screenId = 83;
               }
-              return MidiNoteMixer.field_s[this.field_h] * param0 + DualLinkNode.field_k[this.field_h];
+              return MidiNoteMixer.field_s[this.screenId] * param0 + DualLinkNode.field_k[this.screenId];
             }
             if (param0 < 2) {
-              return param0 * (int)((double)MidiNoteMixer.field_s[this.field_h] * 2.0) + DualLinkNode.field_k[this.field_h] + 28;
+              return param0 * (int)((double)MidiNoteMixer.field_s[this.screenId] * 2.0) + DualLinkNode.field_k[this.screenId] + 28;
             }
             if (param0 > 1 &&
               param0 < 4) {
-              return MidiNoteMixer.field_s[this.field_h] * 2 + DualLinkNode.field_k[this.field_h] + 100;
+              return MidiNoteMixer.field_s[this.screenId] * 2 + DualLinkNode.field_k[this.screenId] + 100;
             }
             if (param0 == 6) {
-              return (-1 + param0) * MidiNoteMixer.field_s[this.field_h] + DualLinkNode.field_k[this.field_h] + 100;
+              return (-1 + param0) * MidiNoteMixer.field_s[this.screenId] + DualLinkNode.field_k[this.screenId] + 100;
             }
             if (4 <= param0) {
-              return DualLinkNode.field_k[this.field_h] + 100 + MidiNoteMixer.field_s[this.field_h] * (-1 + param0);
+              return DualLinkNode.field_k[this.screenId] + 100 + MidiNoteMixer.field_s[this.screenId] * (-1 + param0);
             }
-            return MidiNoteMixer.field_s[this.field_h] * param0 + DualLinkNode.field_k[this.field_h] + 128;
+            return MidiNoteMixer.field_s[this.screenId] * param0 + DualLinkNode.field_k[this.screenId] + 128;
           }
-          return DualLinkNode.field_k[this.field_h];
+          return DualLinkNode.field_k[this.screenId];
         }
-        return DualLinkNode.field_k[this.field_h] - 32;
+        return DualLinkNode.field_k[this.screenId] - 32;
     }
 
     private final void a(byte param0) {
@@ -567,7 +567,7 @@ class MenuScreen {
         if (param0 < 122) {
           return;
         }
-        if (this.field_h == 2 &&
+        if (this.screenId == 2 &&
           !vs.b((byte) 9)) {
           if (tg.field_a == 96) {
             if (0 < this.field_g.field_g) {
@@ -617,7 +617,7 @@ class MenuScreen {
           this.field_g.f(-22);
           return;
         }
-        if (this.field_h == 3) {
+        if (this.screenId == 3) {
           this.field_g.a(-20);
           if (tg.field_a != 96 &&
             97 != tg.field_a) {
@@ -653,19 +653,19 @@ class MenuScreen {
         int stackIn_19_0 = 0;
         var7 = Sumoblitz.field_L ? 1 : 0;
         if (param1 <= 28) {
-          this.b(-8, true);
+          this.resetSelection(-8, true);
         }
         var4 = 0;
-        while (kd.field_a[this.field_h].length > var4) {
+        while (kd.field_a[this.screenId].length > var4) {
           var5 = this.g(var4, 111);
           var6 = this.c(8, var4);
           stackIn_19_0 = 0;
           if (var7 != 0) {
             return stackIn_19_0;
           }
-          if (stackIn_19_0 == this.field_h &&
+          if (stackIn_19_0 == this.screenId &&
             2 > var4 ||
-            this.field_h == 11) {
+            this.screenId == 11) {
             var5 -= 28;
             var6 += 28;
           }
@@ -681,20 +681,20 @@ class MenuScreen {
         return -1;
     }
 
-    final void b(int param0, boolean param1) {
+    final void resetSelection(int param0, boolean param1) {
         if (param0 != -8628) {
           return;
         }
         int var3 = 0;
-        if (this.field_h == 0 &&
+        if (this.screenId == 0 &&
           this.field_g.field_g != -1) {
           var3 = this.field_g.field_g;
         }
-        if (this.field_h == 1 && this.field_g.field_g != -1 &&
+        if (this.screenId == 1 && this.field_g.field_g != -1 &&
           nj.field_b != -1) {
           var3 = this.field_g.field_g;
         }
-        if (this.field_h == 3) {
+        if (this.screenId == 3) {
           var3 = 2;
         }
         this.field_g.a(param1, -123, this.a(ko.field_p, (byte) 41, pi.field_e), var3);
@@ -725,7 +725,7 @@ class MenuScreen {
         hv.field_d[0].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
         hv.field_d[1].a((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
         if (!param0) {
-          this.b(-98, false);
+          this.resetSelection(-98, false);
         }
         gt.field_db.a(var5, 60 + var3, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[5], (byte) -92, 0);
         LegacyOpenGlEffect.field_c.a(var5, var3 + 60, 5023231 | param1 << 24, GameInstructions.dronesHelpLines[5], (byte) -59, 0);
@@ -743,14 +743,14 @@ class MenuScreen {
         int var8;
         int var9;
         var9 = Sumoblitz.field_L ? 1 : 0;
-        var4 = kd.field_a[this.field_h][param2];
+        var4 = kd.field_a[this.screenId][param2];
         if (this.field_g.d(-31260)) {
           if (var4 != 5) {
             gn.a(16, true);
             if (var9 != 0) {
               gn.a(15, true);
               if (var4 != this.field_d &&
-                kd.field_a[this.field_h].length != 1) {
+                kd.field_a[this.screenId].length != 1) {
                 this.field_d = var4;
                 gn.a(17, true);
               }
@@ -758,14 +758,14 @@ class MenuScreen {
           } else {
             gn.a(15, true);
             if ((var9 != 0) && (var4 != this.field_d &&
-              kd.field_a[this.field_h].length != 1)) {
+              kd.field_a[this.screenId].length != 1)) {
               this.field_d = var4;
               gn.a(17, true);
             }
           }
         } else {
           if (var4 != this.field_d &&
-            kd.field_a[this.field_h].length != 1) {
+            kd.field_a[this.screenId].length != 1) {
             this.field_d = var4;
             gn.a(17, true);
           }
@@ -777,7 +777,7 @@ class MenuScreen {
               var9 == 0) {
               if (!(!this.field_g.d(-31260))) {
                 av.a(-7753, param0, 7);
-                ut.field_j = this.field_h;
+                ut.field_j = this.screenId;
               }
               break regionExit2;
             } else {
@@ -827,7 +827,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     av.a(-7753, param0, -1);
-                    ut.field_j = this.field_h;
+                    ut.field_j = this.screenId;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -837,7 +837,7 @@ class MenuScreen {
                     }
                     ph.field_b.b((byte) -120);
                     av.a(-7753, param0, -1);
-                    ut.field_j = this.field_h;
+                    ut.field_j = this.screenId;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1026,7 +1026,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     av.a(-7753, param0, 4);
-                    ut.field_j = this.field_h;
+                    ut.field_j = this.screenId;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1036,7 +1036,7 @@ class MenuScreen {
                     }
                     fl.field_n = 0;
                     av.a(-7753, param0, 3);
-                    ut.field_j = this.field_h;
+                    ut.field_j = this.screenId;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1209,9 +1209,9 @@ class MenuScreen {
                     if (!this.field_g.d(-31260)) {
                       break regionExit2;
                     }
-                    if (this.field_h != 4 &&
-                      this.field_h != 2) {
-                      if (this.field_h != 6) {
+                    if (this.screenId != 4 &&
+                      this.screenId != 2) {
+                      if (this.screenId != 6) {
                         break regionExit2;
                       }
                       stackIn_247_0 = 4025;
@@ -1225,7 +1225,7 @@ class MenuScreen {
                         break regionExit2;
                       }
                     }
-                    ul.a(4025, this.field_h, this.field_h);
+                    ul.a(4025, this.screenId, this.screenId);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1236,11 +1236,11 @@ class MenuScreen {
                     if (!this.e(param2, 7746)) {
                       break regionExit2;
                     }
-                    if (this.field_h == 3) {
+                    if (this.screenId == 3) {
                       fl.field_n = fl.field_n - 1;
                     }
-                    if (4 != this.field_h &&
-                      this.field_h != 5) {
+                    if (4 != this.screenId &&
+                      this.screenId != 5) {
                     }
                     if (this.e(param2, 7746)) {
                       break regionExit2;
@@ -1256,11 +1256,11 @@ class MenuScreen {
                     if (!this.e(param2, 7746)) {
                       break regionExit2;
                     }
-                    if (this.field_h == 3) {
+                    if (this.screenId == 3) {
                       fl.field_n = fl.field_n + 1;
                     }
-                    if (this.field_h != 4 &&
-                      this.field_h != 5) {
+                    if (this.screenId != 4 &&
+                      this.screenId != 5) {
                     }
                     if (this.e(param2, 7746)) {
                       break regionExit2;
@@ -1330,11 +1330,11 @@ class MenuScreen {
         gt.field_db.a(100, param0 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[4], (aa) null, 0, 0);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[4], (aa) null, 0, 0);
         if (param1 >= -25) {
-          this.b(-117);
+          this.update(-117);
         }
     }
 
-    void a(int param0, GraphicsToolkit param1, int param2) {
+    void render(int opacity, GraphicsToolkit toolkit, int guard) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_18_0 = 0;
@@ -1382,17 +1382,17 @@ class MenuScreen {
         int var6Lifetime2;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param2 != -2355) {
+          if (guard != -2355) {
             this.a((byte) 91);
           }
           stackIn_6_0 = (ul.field_f == 0) ? 3 : 1;
           var4_int = stackIn_6_0;
           stackIn_9_0 = (ku.field_j < 2) ? 0 : 1;
           var5 = stackIn_9_0;
-          if (0 == this.field_h ||
-            1 == this.field_h ||
-            this.field_h == 8) {
-            wo.a(up.field_c, 490, 320 + (-(MouseWheelInput.field_b.c() / 2) - 20), param0 << 24, var4_int, param1, MouseWheelInput.field_b.c() + 40, -5, 1, true);
+          if (0 == this.screenId ||
+            1 == this.screenId ||
+            this.screenId == 8) {
+            wo.a(up.field_c, 490, 320 + (-(MouseWheelInput.field_b.c() / 2) - 20), opacity << 24, var4_int, toolkit, MouseWheelInput.field_b.c() + 40, -5, 1, true);
             if (ul.field_f == 0 &&
               !OpenGlTransparentWaterEffect.field_k) {
               stackIn_18_0 = 3;
@@ -1400,74 +1400,74 @@ class MenuScreen {
               stackIn_18_0 = 1;
             }
             var6 = stackIn_18_0;
-            MouseWheelInput.field_b.a(-(MouseWheelInput.field_b.c() / 2) + 320, 20, var6, param0 << 24, 1);
+            MouseWheelInput.field_b.a(-(MouseWheelInput.field_b.c() / 2) + 320, 20, var6, opacity << 24, 1);
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_h != 2) {
-            if (3 == this.field_h) {
-              this.b((byte) 120, param0);
+          if (this.screenId != 2) {
+            if (3 == this.screenId) {
+              this.b((byte) 120, opacity);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (this.field_h == 4) {
-                this.a(false, param2 ^ 2407, param0);
+              if (this.screenId == 4) {
+                this.a(false, guard ^ 2407, opacity);
                 decompiledFrameRemainder0 = (var8 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (this.field_h == 5) {
-                  this.a(true, -70, param0);
+                if (this.screenId == 5) {
+                  this.a(true, -70, opacity);
                   decompiledFrameRemainder0 = (var8 != 0);
                 }
                 if ((decompiledFrameRemainder0) &&
-                  (this.field_h == 6)) {
-                  wo.a(up.field_c, 380, -5, param0 << 24, var4_int, param1, 650, 55, 1, true);
-                  DualLinkNode.field_k[this.field_h] = 200;
+                  (this.screenId == 6)) {
+                  wo.a(up.field_c, 380, -5, opacity << 24, var4_int, toolkit, 650, 55, 1, true);
+                  DualLinkNode.field_k[this.screenId] = 200;
                   var6Lifetime1 = 200 - (-SocketConnector.field_a.field_i + 70);
                   var7 = 4 + SocketConnector.field_a.field_c + SocketConnector.field_a.field_h;
-                  qv.field_k.a(b.youAreNotCurrentlyText, 5023231 | param0 << 24, -1, var6Lifetime1, 320, 0);
+                  qv.field_k.a(b.youAreNotCurrentlyText, 5023231 | opacity << 24, -1, var6Lifetime1, 320, 0);
                   stackIn_32_0 = qv.field_k;
                   stackIn_32_1 = false;
                   stackIn_33_2 = (0 != IntrusiveNodeHashTable.field_c);
                   stackIn_36_3 = (OpenGlTransparentWaterEffect.field_e != 0);
-                  ((da) (Object) stackIn_32_0).a(fl.a(stackIn_32_1, stackIn_33_2, stackIn_36_3, (byte) 63), 5023231 | param0 << 24, -1, var7 + var6Lifetime1, 320, 0);
+                  ((da) (Object) stackIn_32_0).a(fl.a(stackIn_32_1, stackIn_33_2, stackIn_36_3, (byte) 63), 5023231 | opacity << 24, -1, var7 + var6Lifetime1, 320, 0);
                   stackIn_38_0 = qv.field_k;
                   stackIn_38_1 = 26;
                   stackIn_39_2 = (OpenGlTransparentWaterEffect.field_e != 0);
                   stackIn_41_3 = false;
                   stackIn_42_4 = (0 != IntrusiveNodeHashTable.field_c);
-                  ((da) (Object) stackIn_38_0).a(pe.$cfr$intArgs$a$c7de0d339b2a(stackIn_38_1, stackIn_39_2, stackIn_41_3, stackIn_42_4), param0 << 24 | 5023231, -1, 32 + (var7 * 4 + var6Lifetime1), 320, 0);
+                  ((da) (Object) stackIn_38_0).a(pe.$cfr$intArgs$a$c7de0d339b2a(stackIn_38_1, stackIn_39_2, stackIn_41_3, stackIn_42_4), opacity << 24 | 5023231, -1, 32 + (var7 * 4 + var6Lifetime1), 320, 0);
                   stackIn_44_0 = qv.field_k;
                   stackIn_44_1 = 0;
                   stackIn_45_2 = (IntrusiveNodeHashTable.field_c != 0);
                   stackIn_47_3 = false;
                   stackIn_48_4 = (0 != OpenGlTransparentWaterEffect.field_e);
-                  ((da) (Object) stackIn_44_0).a(vi.a(stackIn_44_1, stackIn_45_2, stackIn_47_3, stackIn_48_4), param0 << 24 | 5023231, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
-                  uq.field_a.a(b.youAreNotCurrentlyText, param0 << 24 | 16777215, -1, var6Lifetime1, 320, 0);
+                  ((da) (Object) stackIn_44_0).a(SlowBurstParticle.a(stackIn_44_1, stackIn_45_2, stackIn_47_3, stackIn_48_4), opacity << 24 | 5023231, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
+                  uq.field_a.a(b.youAreNotCurrentlyText, opacity << 24 | 16777215, -1, var6Lifetime1, 320, 0);
                   stackIn_50_0 = uq.field_a;
                   stackIn_50_1 = false;
                   stackIn_51_2 = (IntrusiveNodeHashTable.field_c != 0);
                   stackIn_54_3 = (OpenGlTransparentWaterEffect.field_e != 0);
-                  ((da) (Object) stackIn_50_0).a(fl.a(stackIn_50_1, stackIn_51_2, stackIn_54_3, (byte) 63), param0 << 24 | 16777215, -1, var6Lifetime1 + var7, 320, 0);
+                  ((da) (Object) stackIn_50_0).a(fl.a(stackIn_50_1, stackIn_51_2, stackIn_54_3, (byte) 63), opacity << 24 | 16777215, -1, var6Lifetime1 + var7, 320, 0);
                   stackIn_56_0 = uq.field_a;
                   stackIn_56_1 = 26;
                   stackIn_57_2 = (OpenGlTransparentWaterEffect.field_e != 0);
                   stackIn_59_3 = false;
                   stackIn_60_4 = (0 != IntrusiveNodeHashTable.field_c);
-                  ((da) (Object) stackIn_56_0).a(pe.$cfr$intArgs$a$c7de0d339b2a(stackIn_56_1, stackIn_57_2, stackIn_59_3, stackIn_60_4), param0 << 24 | 16777215, -1, 32 + var7 * 4 + var6Lifetime1, 320, 0);
+                  ((da) (Object) stackIn_56_0).a(pe.$cfr$intArgs$a$c7de0d339b2a(stackIn_56_1, stackIn_57_2, stackIn_59_3, stackIn_60_4), opacity << 24 | 16777215, -1, 32 + var7 * 4 + var6Lifetime1, 320, 0);
                   stackIn_62_0 = uq.field_a;
                   stackIn_62_1 = 0;
                   stackIn_63_2 = (IntrusiveNodeHashTable.field_c != 0);
                   stackIn_65_3 = false;
                   stackIn_66_4 = (OpenGlTransparentWaterEffect.field_e != 0);
-                  ((da) (Object) stackIn_62_0).a(vi.a(stackIn_62_1, stackIn_63_2, stackIn_65_3, stackIn_66_4), 16777215 | param0 << 24, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
+                  ((da) (Object) stackIn_62_0).a(SlowBurstParticle.a(stackIn_62_1, stackIn_63_2, stackIn_65_3, stackIn_66_4), 16777215 | opacity << 24, -1, 64 + var7 * 7 + var6Lifetime1, 320, 0);
                   if (var8 != 0) {
-                    this.h(param0, 1);
+                    this.h(opacity, 1);
                   }
                 }
               }
             }
           } else {
-            this.h(param0, 1);
+            this.h(opacity, 1);
           }
           boolean decompiledFrameCompleted0 = true;
           if (var5 == 0 ||
@@ -1482,7 +1482,7 @@ class MenuScreen {
               }
               if (stackIn_83_0) {
                 stackIn_80_1 = (var6Lifetime2 == this.field_g.field_g);
-                this.a(stackIn_80_1, var6Lifetime2, -112, param1, param0);
+                this.a(stackIn_80_1, var6Lifetime2, -112, toolkit, opacity);
               }
               var6Lifetime2++;
             }
@@ -1491,20 +1491,20 @@ class MenuScreen {
             stackIn_83_0 = hg.field_o.a(false);
           }
           if (stackIn_83_0) {
-            hg.field_o.a(param1, 22707);
+            hg.field_o.a(toolkit, 22707);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_89_0 = var4;
-          stackIn_89_1 = new StringBuilder().append("ak.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_89_1 = new StringBuilder().append("ak.B(").append(opacity).append(',');
+          if (toolkit == null) {
             stackIn_90_2 = "null";
           } else {
             stackIn_90_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -1525,7 +1525,7 @@ class MenuScreen {
         MusicCrossfadeStream.field_q[1].a((float)(var3 + 30), (float)(20 + var5), 2048, 0, 1, 0, 2);
         gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[3], (aa) null, 0, 1);
         if (param0 > -54) {
-          this.field_h = 74;
+          this.screenId = 74;
         }
         LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[3], (aa) null, 0, 1);
         var5 += 35;
@@ -1663,7 +1663,7 @@ class MenuScreen {
     }
 
     private final boolean e(int param0, int param1) {
-        if (this.field_h == 3) {
+        if (this.screenId == 3) {
           if (0 == param0 &&
             fl.field_n == 0) {
             return false;
@@ -1673,13 +1673,13 @@ class MenuScreen {
             return false;
           }
         }
-        if (this.field_h != 4 &&
-          this.field_h == 5) {
+        if (this.screenId != 4 &&
+          this.screenId == 5) {
         }
         if (param1 != 7746) {
           return false;
         }
-        if (this.field_h != 2) {
+        if (this.screenId != 2) {
           return true;
         }
         if (param0 == 3 &&
@@ -1697,58 +1697,58 @@ class MenuScreen {
 
     private final int b(int param0, int param1) {
         int var3;
-        if (this.field_h == 2 &&
+        if (this.screenId == 2 &&
           !vs.b((byte) 9)) {
           if (3 != param0 &&
             4 != param0) {
             if (param0 == 5) {
               return 240;
             }
-            return 155 * (param0 % 3) + za.field_l[this.field_h];
+            return 155 * (param0 % 3) + za.field_l[this.screenId];
           }
-          return 465 + za.field_l[this.field_h];
+          return 465 + za.field_l[this.screenId];
         }
         var3 = 27 / ((-40 - param1) / 47);
-        if (this.field_h == 3) {
+        if (this.screenId == 3) {
           return 20 + param0 * 200;
         }
-        if (this.field_h != 9 &&
-          10 != this.field_h) {
-          if (this.field_h == 7) {
+        if (this.screenId != 9 &&
+          10 != this.screenId) {
+          if (this.screenId == 7) {
             return 200 * param0 + 205;
           }
-          if (this.field_h == 11) {
+          if (this.screenId == 11) {
             return 40 + 280 * param0;
           }
-          if (this.field_h == 4 &&
+          if (this.screenId == 4 &&
             !vs.b((byte) 9)) {
             return 220;
           }
-          if (4 == this.field_h &&
+          if (4 == this.screenId &&
             vs.b((byte) 9)) {
             return 20 + 300 * param0;
           }
-          if (this.field_h == 0 &&
+          if (this.screenId == 0 &&
             1 < param0 &&
             4 > param0) {
             return -14 + (-163 + 163 * param0);
           }
-          if (this.field_h == 5 &&
+          if (this.screenId == 5 &&
             vs.b((byte) 9)) {
             return 300 * param0 + 20;
           }
-          if (this.field_h == 5) {
+          if (this.screenId == 5) {
             return 120 + 200 * param0;
           }
-          return za.field_l[this.field_h];
+          return za.field_l[this.screenId];
         }
         return 120 + param0 * 200;
     }
 
     private final int c(int param0, int param1) {
-        if (this.field_h != 11 &&
-          12 != this.field_h) {
-          if (0 == this.field_h &&
+        if (this.screenId != 11 &&
+          12 != this.screenId) {
+          if (0 == this.screenId &&
             param1 < 2) {
             return 48;
           }
@@ -1760,7 +1760,7 @@ class MenuScreen {
         return 48;
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void initializeLogoAudio(ResourceArchive param0, int param1) {
         q var2 = null;
         try {
           if (param1 != 100) {
@@ -1774,7 +1774,7 @@ class MenuScreen {
         }
     }
 
-    void b(int param0) {
+    void update(int param0) {
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (oj.a(false)) {
@@ -1793,7 +1793,7 @@ class MenuScreen {
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (!wd.c(-102)))) {
           if (tg.field_a == 13) {
-            if (this.field_h == 1) {
+            if (this.screenId == 1) {
               av.a(-7753, false, -1);
               ph.field_b.c((byte) 112);
               ut.field_j = 0;
@@ -1802,16 +1802,16 @@ class MenuScreen {
                 continue;
               }
             }
-            if (this.field_h == 6) {
+            if (this.screenId == 6) {
               continue;
             }
-            if (this.field_h == 10) {
+            if (this.screenId == 10) {
               continue;
             }
-            if (11 == this.field_h) {
+            if (11 == this.screenId) {
               continue;
             }
-            if (this.field_h == 12) {
+            if (this.screenId == 12) {
               continue;
             }
             av.a(-7753, false, ut.field_j);
@@ -1855,35 +1855,35 @@ class MenuScreen {
     private final int f(int param0, int param1) {
         int var3;
         var3 = 121 % ((-59 - param0) / 50);
-        if (this.field_h == 2 &&
+        if (this.screenId == 2 &&
           !vs.b((byte) 9)) {
           return 170 + this.b(param1, -92);
         }
-        if (3 == this.field_h) {
+        if (3 == this.screenId) {
           return 200 + this.b(param1, -106);
         }
-        if (!vs.b((byte) 9) && (this.field_h == 4 ||
-          this.field_h == 5)) {
+        if (!vs.b((byte) 9) && (this.screenId == 4 ||
+          this.screenId == 5)) {
           return 200 + this.b(param1, -88);
         }
-        if (vs.b((byte) 9) && (this.field_h == 4 ||
-          5 == this.field_h)) {
+        if (vs.b((byte) 9) && (this.screenId == 4 ||
+          5 == this.screenId)) {
           return this.b(param1, 41) + 300;
         }
-        if (this.field_h != 9 &&
-          this.field_h != 10) {
-          if (this.field_h == 7) {
+        if (this.screenId != 9 &&
+          this.screenId != 10) {
+          if (this.screenId == 7) {
             return this.b(param1, -121) + 165;
           }
-          if (this.field_h == 11) {
+          if (this.screenId == 11) {
             return 280 + this.b(param1, -121);
           }
-          if (0 == this.field_h &&
+          if (0 == this.screenId &&
             param1 > 1 &&
             param1 < 4) {
             return 179 + this.b(param1, 77);
           }
-          return nj.field_d[this.field_h];
+          return nj.field_d[this.screenId];
         }
         return 200 + this.b(param1, -108);
     }
@@ -2039,9 +2039,9 @@ class MenuScreen {
         try {
           ma.field_b.a(param0, 0);
           if (param2 != 29228) {
-            this.b(-7, true);
+            this.resetSelection(-7, true);
           }
-          be.field_t.a(param0, 5023231 | param1 << 24, -1, 96, 320, 0);
+          ForceFieldRingEffect.field_t.a(param0, 5023231 | param1 << 24, -1, 96, 320, 0);
           hc.field_e.a(param0, 16777215 | param1 << 24, -1, 96, 320, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ak.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -2050,7 +2050,7 @@ class MenuScreen {
 
     MenuScreen(int param0) {
         this.field_c = -1;
-        this.field_h = param0;
+        this.screenId = param0;
         this.field_g = new er(kd.field_a[param0].length);
     }
 
@@ -2095,7 +2095,7 @@ class MenuScreen {
                 bt.field_e.a(var3Lifetime1 + 16, 14 + var5);
               }
             } else {
-              to.field_m.a(28 + var3Lifetime1, var5 + 20);
+              HudMessage.field_m.a(28 + var3Lifetime1, var5 + 20);
             }
             if (var6 == 2) {
               var5 += 80;

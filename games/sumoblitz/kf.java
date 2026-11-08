@@ -3,7 +3,7 @@
  */
 final class kf extends DualLinkNode implements ft {
     int field_x;
-    static ah field_u;
+    static Drone field_u;
     static ResourceArchive field_v;
     int field_s;
     private int field_y;
@@ -73,7 +73,7 @@ final class kf extends DualLinkNode implements ft {
         PacketBuffer var6 = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var6 = new PacketBuffer(ah.field_g);
+          var6 = new PacketBuffer(Drone.field_g);
           var2 = var6.e(-31302);
           if (var2 < 1) {
             return;

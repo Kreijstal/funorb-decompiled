@@ -8,9 +8,9 @@ final class km extends IntrusiveNode {
     static long field_k;
     static String acceptText;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -11807) {
-          km.c(false);
+          km.gameContainer(false);
         }
         field_o = null;
         acceptText = null;
@@ -23,7 +23,7 @@ final class km extends IntrusiveNode {
         int var6 = 0;
         int var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var8 = as.field_v;
+          var8 = InwardSparkParticle.field_v;
           var9 = var8;
           var9.g(param1, 8);
           var9.position = var9.position + 1;
@@ -48,21 +48,21 @@ final class km extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0) {
+    final static void updateEnemySteering(byte param0) {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
-        ah var2 = null;
-        ah var3 = null;
+        Drone var2 = null;
+        Drone var3 = null;
         int var4 = 0;
-        ah var6 = null;
+        Drone var6 = null;
         int var7 = 0;
-        ah var3Lifetime1;
-        ah var3Lifetime2;
-        ah var6Lifetime1;
-        ah var6Lifetime1Lifetime1;
-        ah var6Lifetime1Lifetime2;
+        Drone var3Lifetime1;
+        Drone var3Lifetime2;
+        Drone var6Lifetime1;
+        Drone var6Lifetime1Lifetime1;
+        Drone var6Lifetime1Lifetime2;
         int var1_intLifetime1;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
@@ -76,17 +76,17 @@ final class km extends IntrusiveNode {
               var3Lifetime1 = var2;
               if (var2 != null &&
                 var1_int != 0 &&
-                !var2.h(-1)) {
+                !var2.isAsleep(-1)) {
                 var3Lifetime2 = aa.field_a[0];
                 var6Lifetime1 = var3Lifetime2;
                 var6Lifetime1Lifetime1 = var3Lifetime2;
                 if (var3Lifetime2 != null) {
                   var4 = var2.field_a;
                   if (gt.field_bb) {
-                    if (wn.a(var3Lifetime2.field_z, var4, -114, var2.field_C, var3Lifetime2.field_C, var2.field_z) &&
-                      var3Lifetime2.f((byte) -63) &&
-                      var3Lifetime2.i((byte) 125)) {
-                      var2.a(false, var3Lifetime2.field_z, var3Lifetime2.field_C);
+                    if (wn.a(var3Lifetime2.yQ8, var4, -114, var2.xQ8, var3Lifetime2.xQ8, var2.yQ8) &&
+                      var3Lifetime2.isAliveAndSpawned((byte) -63) &&
+                      var3Lifetime2.hasVelocityOnBothAxes((byte) 125)) {
+                      var2.steerTowardPoint(false, var3Lifetime2.yQ8, var3Lifetime2.xQ8);
                       decompiledFrameRemainder0 = false;
                     }
                     else {
@@ -94,10 +94,10 @@ final class km extends IntrusiveNode {
                         var6Lifetime1Lifetime2 = aa.field_a[var5];
                         if (~var5 != ~var1_int &&
                           var6Lifetime1Lifetime2 != null &&
-                          var6Lifetime1Lifetime2.i((byte) 125) &&
-                          wn.a(var6Lifetime1Lifetime2.field_z, var4, -114, var2.field_C, var6Lifetime1Lifetime2.field_C, var2.field_z) &&
-                          var6Lifetime1Lifetime2.f((byte) -63)) {
-                          var2.a(false, var3Lifetime2.field_z, var3Lifetime2.field_C);
+                          var6Lifetime1Lifetime2.hasVelocityOnBothAxes((byte) 125) &&
+                          wn.a(var6Lifetime1Lifetime2.yQ8, var4, -114, var2.xQ8, var6Lifetime1Lifetime2.xQ8, var2.yQ8) &&
+                          var6Lifetime1Lifetime2.isAliveAndSpawned((byte) -63)) {
+                          var2.steerTowardPoint(false, var3Lifetime2.yQ8, var3Lifetime2.xQ8);
                           decompiledFrameCompleted0 = false;
                           break;
                         }
@@ -105,10 +105,10 @@ final class km extends IntrusiveNode {
                       decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                     }
                   }
-                  if ((decompiledFrameRemainder0) && (decompiledFrameCompleted0) && (wn.a(var3Lifetime2.field_z, var4, -115, var2.field_C, var3Lifetime2.field_C, var2.field_z) &&
-                    var3Lifetime2.f((byte) -63) &&
-                    var3Lifetime2.i((byte) 125))) {
-                    var2.a(false, var3Lifetime2.field_z, var3Lifetime2.field_C);
+                  if ((decompiledFrameRemainder0) && (decompiledFrameCompleted0) && (wn.a(var3Lifetime2.yQ8, var4, -115, var2.xQ8, var3Lifetime2.xQ8, var2.yQ8) &&
+                    var3Lifetime2.isAliveAndSpawned((byte) -63) &&
+                    var3Lifetime2.hasVelocityOnBothAxes((byte) 125))) {
+                    var2.steerTowardPoint(false, var3Lifetime2.yQ8, var3Lifetime2.xQ8);
                   }
                 }
               }
@@ -123,7 +123,7 @@ final class km extends IntrusiveNode {
         }
     }
 
-    final static java.awt.Container c(boolean param0) {
+    final static java.awt.Container gameContainer(boolean param0) {
         if (param0) {
           field_o = (lh) null;
         }

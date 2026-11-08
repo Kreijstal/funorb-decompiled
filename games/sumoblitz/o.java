@@ -71,10 +71,10 @@ final class o {
         int var26 = 0;
         var26 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (null != bb.field_i) {
+          if (null != ReassignUpgradesScreen.field_i) {
             return;
           }
-          bb.field_i = new int[65536];
+          ReassignUpgradesScreen.field_i = new int[65536];
           var1_double = Math.random() * 0.03 - 0.015 + 0.7;
           for (var3 = 0; var3 < 65536; var3++) {
             var4 = (double)(var3 >> 10 & 63) / 64.0 + 0.0078125;
@@ -146,7 +146,7 @@ final class o {
             var17 = (int)(256.0 * var12);
             var18 = (int)(var14 * 256.0);
             var19 = (var16 << 16) - (-(var17 << 8) - var18);
-            bb.field_i[var3] = var19;
+            ReassignUpgradesScreen.field_i[var3] = var19;
           }
           if (param0 != -56) {
             field_b = (ToolkitSprite[]) null;

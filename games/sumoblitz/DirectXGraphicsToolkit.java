@@ -418,7 +418,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (lf.field_e == param0) {
           return 2;
         }
-        if (vi.field_v == param0) {
+        if (SlowBurstParticle.field_v == param0) {
           return 4;
         }
         if (param0 == ua.field_n) {
@@ -635,7 +635,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           this.field_Cc.SetRenderState(20, 6);
         } else {
           if (lh.field_n != this.field_l) {
-            if (this.field_l == gb.field_t) {
+            if (this.field_l == ShrinkingRingEffect.field_t) {
               this.field_Cc.SetRenderState(19, 9);
               this.field_Cc.SetRenderState(20, 2);
             }

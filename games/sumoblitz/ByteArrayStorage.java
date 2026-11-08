@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nn {
+abstract class ByteArrayStorage {
     static SpriteData[] field_a;
 
     final static void a(br param0, byte param1) {
@@ -24,7 +24,7 @@ abstract class nn {
           if (param0.field_h != 0 ||
             0 != param0.field_c) {
             for (var2_int = 0; kb.field_a > var2_int; var2_int++) {
-              var3 = aj.field_D[var2_int];
+              var3 = DroneDebris.field_D[var2_int];
               if (var3.field_g == 2 &&
                 param0.field_h == var3.field_h &&
                 var3.field_c == param0.field_c) {
@@ -50,7 +50,7 @@ abstract class nn {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4) {
+    final static void drawBeveledBorder(int param0, int param1, int param2, byte param3, int param4) {
         int var7 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -86,7 +86,7 @@ abstract class nn {
         }
     }
 
-    abstract byte[] a(int param0, int param1, int param2);
+    abstract byte[] copyRange(int offset, int length, int guard);
 
     final static boolean a(int param0, int param1) {
         int var2_int = 0;
@@ -116,11 +116,11 @@ abstract class nn {
         }
     }
 
-    abstract byte[] a(boolean param0);
+    abstract byte[] copyBytes(boolean param0);
 
-    abstract void a(byte[] param0, int param1);
+    abstract void setBytes(byte[] bytes, int guard);
 
-    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5) {
+    final static void drawHorizontalSpriteStrip(int param0, int param1, int param2, int param3, Sprite[] param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -156,9 +156,9 @@ abstract class nn {
         field_a = null;
     }
 
-    final static void b(int param0, int param1) {
+    final static void compatibilityNoOp(int param0, int param1) {
         if (param1 > -95) {
-          nn.a(27, 41, -94, (byte) -104, 35);
+          ByteArrayStorage.drawBeveledBorder(27, 41, -94, (byte) -104, 35);
         }
     }
 
