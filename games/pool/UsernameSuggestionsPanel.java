@@ -128,7 +128,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, boolean param8, int param9) {
+    final static void updateLobbyInterface(int param0, boolean param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, boolean param8, int param9) {
         int var11;
         var11 = Pool.field_O;
         if (param5 != 13375) {
@@ -168,7 +168,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           HighscoresScreen.field_L.field_Nb <= HighscoresScreen.field_L.field_mc) {
           DebugTuningSlider.field_c.viewport.text = ProjectedVertex.gameFull;
           QuickChatMenuSupport.field_e.enabled = false;
-          AudioService.a(DebugTuningSlider.field_c.content, (byte) 109);
+          AudioService.collapseComponentHeights(DebugTuningSlider.field_c.content, (byte) 109);
         } else {
           QuickChatMenuSupport.field_e.enabled = true;
           DebugTuningSlider.field_c.viewport.text = null;
@@ -227,14 +227,14 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         }
     }
 
-    final static void a(int param0, int param1, NineSliceFrame param2, int param3) {
+    final static void configureSharedChoiceFrame(int verticalPadding, int horizontalPadding, NineSliceFrame frame, int obfuscationGuard) {
         try {
-          MusicPatchEnvelope.field_d = param1;
-          ShotRecord.field_o = param0;
-          int var4_int = 87 % ((40 - param3) / 48);
-          VerticalScrollbar.field_Vb = param2;
+          MusicPatchEnvelope.field_d = horizontalPadding;
+          ShotRecord.field_o = verticalPadding;
+          int var4_int = 87 % ((40 - obfuscationGuard) / 48);
+          VerticalScrollbar.field_Vb = frame;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mp.T(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mp.T(" + verticalPadding + ',' + horizontalPadding + ',' + (frame != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

@@ -27,18 +27,18 @@ final class TransformSupport {
         field_c = (String[][]) null;
     }
 
-    final static void a(boolean param0) {
-        if (!param0) {
+    final static void advanceInterfaceTransitions(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           TransformSupport.identityTransform(-35);
-          WhirlpoolHasher.a((byte) -120);
+          WhirlpoolHasher.advanceBottomPanelLayout((byte) -120);
           MenuSelection.advanceSlidingGamePanels(-13953);
           return;
         }
-        WhirlpoolHasher.a((byte) -120);
+        WhirlpoolHasher.advanceBottomPanelLayout((byte) -120);
         MenuSelection.advanceSlidingGamePanels(-13953);
     }
 
-    final static void b(int param0) {
+    final static void clearLobbyState(int obfuscationGuard) {
         RuntimeException var1 = null;
         int var2 = 0;
         LobbyPlayer var3 = null;
@@ -48,8 +48,8 @@ final class TransformSupport {
           LobbyGame.field_Ac = false;
           LookupRetrySupport.field_e = null;
           HighscoresScreen.field_L = null;
-          if (param0 != 0) {
-            TransformSupport.a(99, 12);
+          if (obfuscationGuard != 0) {
+            TransformSupport.sendChatFilterSettings(99, 12);
           }
           if (null != IntrusiveNode.field_i) {
             IntrusiveNode.field_i.clear((byte) 49);
@@ -72,28 +72,28 @@ final class TransformSupport {
           var3 = (LobbyPlayer) (ModelOriginSupport.field_n.firstForIteration((byte) -127));
           while (var3 != null) {
             var3.unlinkNode(false);
-            var3 = (LobbyPlayer) (ModelOriginSupport.field_n.nextForIteration(param0 ^ 29));
+            var3 = (LobbyPlayer) (ModelOriginSupport.field_n.nextForIteration(obfuscationGuard ^ 29));
           }
           ModelOriginSupport.field_n = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "mj.D(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "mj.D(" + obfuscationGuard + ')');
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendChatFilterSettings(int opcode, int obfuscationGuard) {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
-        if (param1 == 27712) {
-          var2.writeCipheredOpcode(false, param0);
+        if (obfuscationGuard == 27712) {
+          var2.writeCipheredOpcode(false, opcode);
           var2.writeByte(2, false);
           var2.writeByte(4, false);
           var2.writeByte(HuffmanCodec.b(true), false);
           return;
         }
-        TransformSupport.a(true);
-        var2.writeCipheredOpcode(false, param0);
+        TransformSupport.advanceInterfaceTransitions(true);
+        var2.writeCipheredOpcode(false, opcode);
         var2.writeByte(2, false);
         var2.writeByte(4, false);
         var2.writeByte(HuffmanCodec.b(true), false);

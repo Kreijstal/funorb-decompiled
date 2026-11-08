@@ -187,7 +187,7 @@ final class NanoTickClock extends TickClock {
         youNowHaveNLives = null;
         field_r = null;
         if (param0 != 122) {
-          NanoTickClock.c(-66);
+          NanoTickClock.drawSharedChoicePanel(-66);
         }
         field_t = null;
     }
@@ -213,9 +213,9 @@ final class NanoTickClock extends TickClock {
         return (java.applet.Applet) ((Object) ModernTableScene.field_ib);
     }
 
-    final static void c(int param0) {
+    final static void drawSharedChoicePanel(int obfuscationGuard) {
         int var1 = LoginMethod.getSharedPanelWidth(27);
-        if (param0 != 1527590113) {
+        if (obfuscationGuard != 1527590113) {
           return;
         }
         int var2 = ContentTransitionDialog.k((byte) 59);

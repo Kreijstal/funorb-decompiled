@@ -480,7 +480,7 @@ final class SectorCacheStore {
               RankingsScreen.field_J = ReflectionRequestSupport.field_d;
             }
             if (ReflectionRequestSupport.field_d == RankingsScreen.field_J &&
-              DialogLayer.b((byte) 87, 1)) {
+              DialogLayer.pollPacketBytes((byte) 87, 1)) {
               var6_int = PlayerContextMenu.field_e.readUnsignedByte(-82);
               if (var6_int == 0) {
                 RankingsScreen.field_J = DelayedServerPacket.field_o;
@@ -492,7 +492,7 @@ final class SectorCacheStore {
               PlayerContextMenu.field_e.position = 0;
             }
             if (DelayedServerPacket.field_o == RankingsScreen.field_J &&
-              DialogLayer.b((byte) 43, 8)) {
+              DialogLayer.pollPacketBytes((byte) 43, 8)) {
               Pool.field_Q = PlayerContextMenu.field_e.readLong(-412303328);
               PlayerContextMenu.field_e.position = 0;
               MessageScreen.a(param2, CookieDateSupport.field_c, param3, -98300704, param4);
@@ -500,7 +500,7 @@ final class SectorCacheStore {
             }
             boolean decompiledFrameRemainder0 = true;
             if (RankingsScreen.field_J == DualLinkDeque.field_g &&
-              DialogLayer.b((byte) 79, 1)) {
+              DialogLayer.pollPacketBytes((byte) 79, 1)) {
               var6_intLifetime1 = PlayerContextMenu.field_e.readUnsignedByte(-110);
               PlayerContextMenu.field_e.position = 0;
               CheckboxWidget.field_N = null;

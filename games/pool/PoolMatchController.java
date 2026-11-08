@@ -503,7 +503,7 @@ final class PoolMatchController {
             if (MusicCrossfadeStream.a(64, UsernameAvailabilityValidator.field_o, false, this.cameraGoal.getDistance(8), DialogLayer.field_W, var2, this.viewMatrix)) {
               this.cameraGoal.targetX = var2[0];
               this.cameraGoal.targetY = var2[1];
-              this.cameraGoal.c((byte) -40);
+              this.cameraGoal.clampToTableScene((byte) -40);
               this.idleOrbitStep = -1;
               this.cameraPresetIndex = -1;
             }
@@ -868,10 +868,10 @@ final class PoolMatchController {
           return;
         }
         try {
-          this.cuePower = this.cueAim.field_n;
+          this.cuePower = this.cueAim.power;
           this.powerPulseTick = 0;
           if (null != this.remoteCueTarget) {
-            this.remoteCueTarget.b((byte) 63);
+            this.remoteCueTarget.disable((byte) 63);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uf.B(" + param0 + ')');
@@ -1160,10 +1160,10 @@ final class PoolMatchController {
           }
           if ((this.modeFlags & TutorialController.field_c) != 0 &&
             !this.isLocalPlayersTurn(-1) &&
-            this.remoteCueTarget.a(false)) {
+            this.remoteCueTarget.isEnabled(false)) {
             this.cueAim.easeToward(255, this.remoteCueTarget);
             if (this.cueAim.equalsAim(-2043, this.remoteCueTarget)) {
-              this.remoteCueTarget.b((byte) 94);
+              this.remoteCueTarget.disable((byte) 94);
             }
             PackedColorSupport.field_c = true;
             MouseWheelInput.field_c.field_g = true;
@@ -1375,7 +1375,7 @@ final class PoolMatchController {
               this.mouseDragMode != 5 &&
               this.mouseDragMode != 4) {
               if (this.gameModel.currentShot(112).phase == 0) {
-                this.setCuePower(this.cueAim.field_n + (int)(0.5 + 192.0 * Math.sin(3.141592653589793 * (double)this.powerPulseTick * 2.0 / 150.0)), true);
+                this.setCuePower(this.cueAim.power + (int)(0.5 + 192.0 * Math.sin(3.141592653589793 * (double)this.powerPulseTick * 2.0 / 150.0)), true);
               }
               if (0L != (LinkButtonPainter.field_i & 1024L)) {
                 this.powerPulseTick = 0;
@@ -1439,7 +1439,7 @@ final class PoolMatchController {
           }
           LongAndTextLoginPayload.field_l = 12;
           SocialListEntry.field_Vb = 12;
-          PauseMenuScreen.g(0, var7);
+          PauseMenuScreen.advanceHotspotTooltip(0, var7);
           if (LogoJingleLoader.field_b.enabled &&
             LogoJingleLoader.field_b.activeInside &&
             -1 != TextureCache.getVisibleTooltipIndex(104)) {
@@ -2023,13 +2023,13 @@ final class PoolMatchController {
           if (!param0) {
             return;
           }
-          if (~param1 != ~this.cueAim.field_n) {
+          if (~param1 != ~this.cueAim.power) {
             var3 = this.findValidCueAim(this.cueAim.field_e, this.cueAim.field_d, this.cueAim.polarAngle, param1, (byte) 95, this.cueAim.azimuth);
             if (var3 == null) {
               this.raiseCueBlockedWarning(97);
             } else {
-              this.cueAim.field_n = param1;
-              LobbyGame.field_gc.updateHumPitch(99, this.cueAim.field_n);
+              this.cueAim.power = param1;
+              LobbyGame.field_gc.updateHumPitch(99, this.cueAim.power);
               this.cueAim.field_e = var3[2];
               this.cueAim.field_d = var3[1];
               this.cueAim.polarAngle = var3[0];
@@ -2196,7 +2196,7 @@ final class PoolMatchController {
             return;
           }
           if (this.checkTutorialAction(1, 5, false)) {
-            this.setAimPower(true, param1 + this.cueAim.field_n);
+            this.setAimPower(true, param1 + this.cueAim.power);
             this.setCuePower(param1 + this.cuePower, true);
           }
           return;
@@ -2211,7 +2211,7 @@ final class PoolMatchController {
         try {
           AlignedIconLabel.c(false);
           this.shotModeActive = false;
-          this.cuePower = this.cueAim.field_n;
+          this.cuePower = this.cueAim.power;
           LobbyGame.field_gc.stopTableSound((byte) 124, param0, 9);
           if (param1 >= -100) {
             this.cueSyncTicks = -118;
@@ -2255,9 +2255,9 @@ final class PoolMatchController {
           stackIn_3_0 = LobbyGame.field_gc;
           stackIn_3_1 = 1336449640;
           stackIn_3_2 = this.viewMatrix;
-          stackIn_3_3 = 32 + 192 * this.cueAim.field_n / 4096;
+          stackIn_3_3 = 32 + 192 * this.cueAim.power / 4096;
           stackIn_3_4 = MouseWheelInput.field_c.field_l;
-          if (this.cueAim.field_n > 2048) {
+          if (this.cueAim.power > 2048) {
             stackIn_4_5 = 7;
           } else {
             stackIn_4_5 = 8;
@@ -2297,7 +2297,7 @@ final class PoolMatchController {
           TextInputValidator.field_j = GzipDecoder.a(-71, "");
           TextInputValidator.field_j.complete(false, (byte) 120);
           PoolMatchController.loadCommonUiSprites(param3, -22764, param2, param4);
-          MarkerSliderPainter.b((byte) -124);
+          MarkerSliderPainter.initializeAccountDialogs((byte) -124);
           TimeTrialSelectScreen.field_I = IntrusiveDequeCursor.field_c;
           TabbedPane.field_Lb = IntrusiveDequeCursor.field_c;
           return;
@@ -2489,13 +2489,13 @@ final class PoolMatchController {
             if (var2.phase >= 1) {
               return;
             }
-            this.cueAim.field_n = this.cuePower;
+            this.cueAim.power = this.cuePower;
             this.shotConfirmedByServer = false;
             var2.endResolution = IntrusiveNodeHashTable.field_a;
             var3 = var2;
             var4 = this.cueAim;
             var3.aimAngle = (short)((1024 + var4.azimuth) % 2048);
-            var3.power = (short)var4.field_n;
+            var3.power = (short)var4.power;
             var3.field_D = (byte)var4.field_d;
             var3.elevation = (short)var4.polarAngle;
             var3.field_H = (byte)var4.field_e;
@@ -2821,8 +2821,8 @@ final class PoolMatchController {
             } else {
               this.keyPowerRamp = this.keyPowerRamp + (var4 << 15);
             }
-            this.cueAim.field_n = this.cuePower;
-            LobbyGame.field_gc.updateHumPitch(101, this.cueAim.field_n);
+            this.cueAim.power = this.cuePower;
+            LobbyGame.field_gc.updateHumPitch(101, this.cueAim.power);
             if (this.keyPowerRamp >= 0) {
               this.powerPulseTick = 75;
             } else {
@@ -2849,7 +2849,7 @@ final class PoolMatchController {
         RuntimeException var2 = null;
         try {
           this.cameraPresetIndex = -1;
-          this.cameraGoal.a(105);
+          this.cameraGoal.lookAtTableCenter(105);
           if (param0 != -23095) {
             this.strikeAnimationFrame = 121;
           }
@@ -2907,12 +2907,12 @@ final class PoolMatchController {
                 (decompiledFrameRemainder0 = ((TutorialController.field_c & this.modeFlags) == 0 ||
                 this.shotConfirmedByServer))) {
                 MouseWheelInput.field_c.field_g = true;
-                this.cuePullbackDistance = -this.strikeAnimationFrame * this.cueAim.field_n * 228 / 4096 / 12;
+                this.cuePullbackDistance = -this.strikeAnimationFrame * this.cueAim.power * 228 / 4096 / 12;
                 this.strikeAnimationFrame = this.strikeAnimationFrame + 1;
                 decompiledFrameRemainder0 = (var9 != 0);
               }
               if (decompiledFrameRemainder0) {
-                this.cuePullbackDistance = (this.strikeAnimationFrame + 37) * this.cueAim.field_n * 228 / 4096 / 25;
+                this.cuePullbackDistance = (this.strikeAnimationFrame + 37) * this.cueAim.power * 228 / 4096 / 25;
                 MouseWheelInput.field_c.field_g = true;
                 this.strikeAnimationFrame = this.strikeAnimationFrame + 1;
                 decompiledFrameRemainder0 = (var9 != 0);
@@ -2923,19 +2923,19 @@ final class PoolMatchController {
                 this.cuePullbackDistance = 57;
                 if (this.isLocalPlayersTurn(-1)) {
                   stackIn_34_0 = LobbyGame.field_gc;
-                  if (this.cueAim.field_n > 2048) {
+                  if (this.cueAim.power > 2048) {
                     stackIn_35_1 = 0;
                   } else {
                     stackIn_35_1 = 1;
                   }
-                  ((TableScene) (Object) stackIn_34_0).playTableSound(stackIn_35_1, this.cueAim.field_n * 128 / 4096 + 32, (byte) -115, 128);
+                  ((TableScene) (Object) stackIn_34_0).playTableSound(stackIn_35_1, this.cueAim.power * 128 / 4096 + 32, (byte) -115, 128);
                   if (var9 != 0) {
                     stackIn_41_0 = LobbyGame.field_gc;
                     stackIn_41_1 = 1336449640;
                     stackIn_41_2 = this.viewMatrix;
-                    stackIn_41_3 = 32 + this.cueAim.field_n * 128 / 4096;
+                    stackIn_41_3 = 32 + this.cueAim.power * 128 / 4096;
                     stackIn_41_4 = MouseWheelInput.field_c.field_l;
-                    if (this.cueAim.field_n > 2048) {
+                    if (this.cueAim.power > 2048) {
                       stackIn_42_5 = 0;
                     } else {
                       stackIn_42_5 = 1;
@@ -2946,9 +2946,9 @@ final class PoolMatchController {
                   stackIn_41_0 = LobbyGame.field_gc;
                   stackIn_41_1 = 1336449640;
                   stackIn_41_2 = this.viewMatrix;
-                  stackIn_41_3 = 32 + this.cueAim.field_n * 128 / 4096;
+                  stackIn_41_3 = 32 + this.cueAim.power * 128 / 4096;
                   stackIn_41_4 = MouseWheelInput.field_c.field_l;
-                  if (this.cueAim.field_n > 2048) {
+                  if (this.cueAim.power > 2048) {
                     stackIn_42_5 = 0;
                   } else {
                     stackIn_42_5 = 1;
@@ -2977,7 +2977,7 @@ final class PoolMatchController {
                   if (var3_int == 0 &&
                     param1.field_n != -1 &&
                     !this.gameModel.rules.isFirstContactLegal(param1, -110) &&
-                    !UiTheme.a((byte) 49, 4)) {
+                    !UiTheme.hasNotification((byte) 49, 4)) {
                     var5 = ProgressBarWidget.replaceNotification(true, 4, AchievementNotice.foulExclamation, (String) null);
                     var6 = ReportAbuseDialog.field_ac[0];
                     param1.field_t = true;
@@ -3002,7 +3002,7 @@ final class PoolMatchController {
                         break;
                       }
                       if (!stackIn_85_0 &&
-                        !UiTheme.a((byte) 95, 4)) {
+                        !UiTheme.hasNotification((byte) 95, 4)) {
                         var7_ref_ij = ProgressBarWidget.replaceNotification(true, 4, AchievementNotice.foulExclamation, (String) null);
                         var8 = this.gameModel.pockets[var6_ref.pocketIndex];
                         if ((16711680 & PacketDecodeState.field_c) != 16711680) {
@@ -3207,7 +3207,7 @@ final class PoolMatchController {
           this.cueAim.field_d = var2.field_D;
           this.cueAim.field_e = var2.field_H;
           this.cuePower = var2.power;
-          this.cueAim.field_n = var2.power;
+          this.cueAim.power = var2.power;
           this.cueAim.azimuth = (1024 + var2.aimAngle) % 2048;
           this.cueAim.polarAngle = var2.elevation;
           System.out.println("Redoing shot: " + var2.describeAim(0));
@@ -3926,7 +3926,7 @@ final class PoolMatchController {
               var2[var5_int] = 0.0f;
             }
             var3[2] = var5_int * 9216 / 640;
-            IntrusiveNode.a(2, var3, var4);
+            IntrusiveNode.computeSpatialSoundParameters(2, var3, var4);
             var2[var5_int] = (float)DualLinkDequeIterator.field_g;
           }
           CollisionContact.field_h.drawLeft("audio falloff start=" + LoginPayload.field_a + " speed=" + DropTargetWidget.formatDecimalFixedPoint((long)QuickChatPhraseDefinition.field_G, 3, true, 8) + " (" + QuickChatPhraseDefinition.field_G + ")" + ", slope=" + StartupInterfaceSupport.field_e, 10, 50, 65280, 3355443);
@@ -4601,7 +4601,7 @@ final class PoolMatchController {
             var4_ref_qe = new ShotRecord();
             var5_ref_qe = var4_ref_qe;
             var6_ref_kj = this.cueAim;
-            var5_ref_qe.power = (short)var6_ref_kj.field_n;
+            var5_ref_qe.power = (short)var6_ref_kj.power;
             var5_ref_qe.elevation = (short)var6_ref_kj.polarAngle;
             var5_ref_qe.field_H = (byte)var6_ref_kj.field_e;
             var5_ref_qe.field_D = (byte)var6_ref_kj.field_d;
@@ -4825,10 +4825,10 @@ final class PoolMatchController {
           this.cameraGoal.setDistance(true, 1.0);
           this.shotModeActive = true;
           AlignedIconLabel.c(false);
-          this.cueAim.field_n = this.cuePower;
+          this.cueAim.power = this.cuePower;
           this.idleOrbitStep = -1;
           LobbyGame.field_gc.playTableSound(9, 256, (byte) -112, 128);
-          LobbyGame.field_gc.updateHumPitch(-50, this.cueAim.field_n);
+          LobbyGame.field_gc.updateHumPitch(-50, this.cueAim.power);
           this.powerPulseTick = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7008,7 +7008,7 @@ final class PoolMatchController {
             }
             if ((decompiledFrameRemainder46) &&
               (decompiledFrameRemainder45)) {
-              IsaacCipher.a(2243, this.gameModel);
+              IsaacCipher.printReplay(2243, this.gameModel);
               if (var8 == 0) {
                 return;
               }
@@ -7500,7 +7500,7 @@ final class PoolMatchController {
             (decompiledFrameRemainder17) &&
             (decompiledFrameRemainder16) &&
             (decompiledFrameRemainder15)) {
-            DirectByteStorage.g(-128);
+            DirectByteStorage.initializeCameraPresets(-128);
             if (var8 == 0) {
               return;
             }
@@ -8282,7 +8282,7 @@ final class PoolMatchController {
             var3_ref_qe.field_H = (byte)var4_ref_kj.field_e;
             var3_ref_qe.aimAngle = (short)((1024 + var4_ref_kj.azimuth) % 2048);
             var3_ref_qe.field_D = (byte)var4_ref_kj.field_d;
-            var3_ref_qe.power = (short)var4_ref_kj.field_n;
+            var3_ref_qe.power = (short)var4_ref_kj.power;
             var3_ref_qe.elevation = (short)var4_ref_kj.polarAngle;
             var2.power = (short) 2048;
             var3_ref_al = this.gameModel;

@@ -44,7 +44,7 @@ abstract class NetworkGameClient extends GameApplet {
         String var10 = null;
         try {
           try {
-            if (!this.b(param3 ^ -26164)) {
+            if (!this.canStartApplet(param3 ^ -26164)) {
               return;
             }
             this.field_t = this.getCodeBase().getHost();
@@ -72,7 +72,7 @@ abstract class NetworkGameClient extends GameApplet {
               this.field_w = Integer.parseInt(var9);
             }
             Under13NoticePanel.field_T = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(this.field_D, param2, param1, (byte) 115, 32, param4, param0);
+            this.startAppletThread(this.field_D, param2, param1, (byte) 115, 32, param4, param0);
             if (param3 != 0) {
               this.initializeFramework(-57, 27, 54, 110, 115, false, -63, 23);
             }
@@ -146,7 +146,7 @@ abstract class NetworkGameClient extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = TickClock.pollAccountLookup(9539, StatefulTextPainter.c(5), HighScoreRequest.createLoginTextValue(8388));
+            var5_int = TickClock.pollAccountLookup(9539, StatefulTextPainter.createAccountNameValue(5), HighScoreRequest.createLoginTextValue(8388));
             if (-1 != var5_int) {
               GameRules.handleLoginResponse(LoginPayloadFactory.field_b, false, var5_int, LoginTextValue.field_g);
               LoginPayloadFactory.field_b = null;
@@ -158,7 +158,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = QuickChatHelpDialog.pollAccountCreationRequest(LoginTextSupport.getAccountName(true), this.field_w, CollisionContact.a(false), 50, DelegatingCanvas.getAccountCreationRequestFlag((byte) 108), ByteRecordSubmission.getAccountPassword((byte) 64), ThreeSliceButtonPainter.c(12854));
+            var5_intLifetime1 = QuickChatHelpDialog.pollAccountCreationRequest(LoginTextSupport.getAccountName(true), this.field_w, CollisionContact.a(false), 50, DelegatingCanvas.getAccountCreationRequestFlag((byte) 108), ByteRecordSubmission.getAccountPassword((byte) 64), ThreeSliceButtonPainter.getAccountAge(12854));
             if (-1 != var5_intLifetime1) {
               LoginTextValue.completeAccountCreationRequest(LoginTextValue.field_g, var5_intLifetime1, LoginPayloadFactory.field_b, (byte) -16);
               LoginPayloadFactory.field_b = null;
@@ -306,7 +306,7 @@ abstract class NetworkGameClient extends GameApplet {
                 LocalGameSetupScreen.readLookupAcknowledgement(80);
                 break;
               case 2:
-                MouseWheelInput.c(param0 - 14873);
+                MouseWheelInput.readHighScoreResponse(param0 - 14873);
                 break;
               case 4:
                 IntKeyLookup.a(199);
@@ -666,7 +666,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (LobbyPlayerLookupSupport.a(-66)) {
           var3 = CachedArchiveSource.getTargetFramesPerSecond(-21282) * 1200;
           if (this.field_C ||
-            !(var3 >= LogoMaterial.a(-21055)) &&
+            !(var3 >= LogoMaterial.getKeyboardSnapshotCount(-21055)) &&
             !(PaletteFontLoader.getMouseIdleTicks((byte) 119) <= var3)) {
             this.field_C = false;
             ShotEvent.closeClientSocket(-80);

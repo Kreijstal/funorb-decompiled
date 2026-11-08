@@ -83,7 +83,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(byte param0) {
+    final static void advanceBottomPanelLayout(byte obfuscationGuard) {
         if (HighscoresScreen.field_P > 0) {
           HighscoresScreen.field_P = HighscoresScreen.field_P - 1;
         }
@@ -91,13 +91,13 @@ final class WhirlpoolHasher {
           StrongCacheEntry.field_J = StrongCacheEntry.field_J + (OpacityWidget.field_P.height - AwtEventQueueSupport.field_g);
           AwtEventQueueSupport.field_g = OpacityWidget.field_P.height;
         }
-        int var1 = 37 / ((param0 + 53) / 53);
+        int var1 = 37 / ((obfuscationGuard + 53) / 53);
         if (0 < HighscoresScreen.field_P) {
           ProgressDialog.l(23323);
         }
     }
 
-    final static QuickChatMenu a(byte param0, UiComponent param1, int[] param2, UiComponent param3, UiComponent param4) {
+    final static QuickChatMenu buildQuickChatPhraseMenu(byte param0, UiComponent param1, int[] param2, UiComponent param3, UiComponent param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
@@ -271,7 +271,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final void a(boolean param0) {
+    final void reset(boolean obfuscationGuard) {
         int var2 = 0;
         int var3 = Pool.field_O;
         int var2Lifetime1;
@@ -282,7 +282,7 @@ final class WhirlpoolHasher {
         this.field_j = 0;
         this.field_k = 0;
         var2Lifetime1 = 0;
-        if (param0) {
+        if (obfuscationGuard) {
           this.field_m = (long[]) null;
         }
         while (var2Lifetime1 < 8) {

@@ -53,7 +53,7 @@ final class CueStick {
         int[] var13 = null;
         var9 = Pool.field_O;
         try {
-          BrowserCookieWriter.a(mesh, true);
+          BrowserCookieWriter.swapMeshXZ(mesh, true);
           RankingsBufferSupport.mirrorAlongZ(mesh, 5);
           mesh.computeBounds();
           while (1500 > -mesh.field_V + mesh.field_x) {

@@ -26,10 +26,10 @@ abstract class ByteStorage {
         field_f = null;
     }
 
-    final static void b(int param0) {
+    final static void showEmptyLoginForm(int obfuscationGuard) {
         String var2 = (String) null;
         AccountDisplayNameSupport.showLoginForm((String) null, -125, "");
-        if (param0 != 3) {
+        if (obfuscationGuard != 3) {
           field_f = (UiComponent) null;
         }
     }
@@ -42,14 +42,14 @@ abstract class ByteStorage {
         if (LookupProtocolSupport.field_e != 0) {
           TextureCache.field_c.sprite = TransformRotationSupport.createTextLabelSprite(2, 0, BeveledFrameSpriteFactory.off);
           if (param0 > -97) {
-            ByteStorage.b(111);
+            ByteStorage.showEmptyLoginForm(111);
             return;
           }
           return;
         }
         TextureCache.field_c.sprite = TransformRotationSupport.createTextLabelSprite(3, 0, AppletUrlSupport.on);
         if (param0 > -97) {
-          ByteStorage.b(111);
+          ByteStorage.showEmptyLoginForm(111);
           return;
         }
     }

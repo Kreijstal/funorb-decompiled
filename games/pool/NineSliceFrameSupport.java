@@ -37,7 +37,7 @@ final class NineSliceFrameSupport {
           }
           SoundCache.field_k = param0.children;
           QuickChatNavigationSupport.field_c = param1.children;
-          DialogLayer.l(-65);
+          DialogLayer.clearSocialLists(-65);
           int var3_int = 107 / ((param2 - 50) / 36);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rp.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

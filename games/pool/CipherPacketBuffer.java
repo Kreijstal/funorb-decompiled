@@ -43,7 +43,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           for (var5_int = 0; var5_int < param3; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param2[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.opcodeCipher.a((byte) 7));
+            param2[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.opcodeCipher.nextInt((byte) 7));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -71,7 +71,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.opcodeCipher.a((byte) 7) + param1);
+        this.payload[fieldTemp$0] = (byte)(this.opcodeCipher.nextInt((byte) 7) + param1);
     }
 
     final static void increaseMusicVolume(int obfuscationGuard) {
@@ -91,7 +91,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         int var2 = -125 % ((14 - param0) / 47);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$0] - this.opcodeCipher.a((byte) 7);
+        return 255 & this.payload[fieldTemp$0] - this.opcodeCipher.nextInt((byte) 7);
     }
 
     final int readBits(int param0, int param1) {

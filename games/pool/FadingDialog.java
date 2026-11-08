@@ -232,7 +232,7 @@ abstract class FadingDialog extends WidgetContainer {
           !(this.widgetHeight <= ArchiveIndex.field_y.field_A)) {
           ArchiveIndex.field_y = new Sprite(this.widgetWidth, this.widgetHeight);
         }
-        CueAim.a(117, ArchiveIndex.field_y);
+        CueAim.pushSpriteRenderTarget(117, ArchiveIndex.field_y);
         SoftwareRasterizer.clear();
         this.drawDialogFrame(0, 0, 260);
         super.renderWidget(param0, (byte) 48, -this.widgetX - param2, -this.widgetY - param3);

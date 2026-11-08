@@ -10,7 +10,7 @@ final class VorbisResidue {
     private int field_c;
     private int[] field_b;
 
-    final void a(float[] param0, int param1, boolean param2) {
+    final void decode(float[] output, int length, boolean skipResidue) {
         int var8 = 0;
         int var17 = 0;
         int var16 = 0;
@@ -34,10 +34,10 @@ final class VorbisResidue {
         int var10Lifetime1;
         int var11Lifetime1;
         int[] var22Lifetime1;
-        for (var4 = 0; var4 < param1; var4++) {
-          param0[var4] = 0.0f;
+        for (var4 = 0; var4 < length; var4++) {
+          output[var4] = 0.0f;
         }
-        if (param2) {
+        if (skipResidue) {
           return;
         }
         var4Lifetime1 = VorbisSample.codebooks[this.field_d].field_e;
@@ -71,7 +71,7 @@ final class VorbisResidue {
                   while (var15 < this.field_f) {
                     var28 = var14.decodeVector();
                     for (var17 = 0; var17 < var14.field_e; var17++) {
-                      param0[var13 + var15] = param0[var13 + var15] + var28[var17];
+                      output[var13 + var15] = output[var13 + var15] + var28[var17];
                       var15++;
                     }
                   }
@@ -80,7 +80,7 @@ final class VorbisResidue {
                   for (var16 = 0; var16 < var15; var16++) {
                     var27 = var14.decodeVector();
                     for (var18 = 0; var18 < var14.field_e; var18++) {
-                      param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
+                      output[var13 + var16 + var18 * var15] = output[var13 + var16 + var18 * var15] + var27[var18];
                     }
                   }
                 }

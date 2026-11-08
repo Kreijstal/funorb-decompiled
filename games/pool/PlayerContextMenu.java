@@ -49,9 +49,9 @@ final class PlayerContextMenu {
         }
     }
 
-    final void a(boolean param0, int param1) {
-        this.field_n.drawRoot((byte) -79, param0);
-        if (param1 != 12887) {
+    final void draw(boolean active, int obfuscationGuard) {
+        this.field_n.drawRoot((byte) -79, active);
+        if (obfuscationGuard != 12887) {
           field_c = (int[]) null;
         }
     }
@@ -141,7 +141,7 @@ final class PlayerContextMenu {
             }
           }
           if (param2 < 43) {
-            discarded$0 = this.a(63, 79, -128);
+            discarded$0 = this.executeSocialAction(63, 79, -128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -225,10 +225,10 @@ final class PlayerContextMenu {
         return true;
     }
 
-    final boolean b(byte param0) {
+    final boolean handleCancelKey(byte obfuscationGuard) {
         boolean stackIn_6_0 = false;
-        if (param0 != 111) {
-          this.a(true, 110);
+        if (obfuscationGuard != 111) {
+          this.draw(true, 110);
         }
         stackIn_6_0 = (this.field_n != null) && (this.field_n.handleCancelKey((byte) -49));
         return stackIn_6_0;
@@ -243,7 +243,7 @@ final class PlayerContextMenu {
           return false;
         }
         boolean discarded$0 = this.executeListAction((byte) 98, param1, var6);
-        boolean discarded$1 = this.a(var6, param4, 6);
+        boolean discarded$1 = this.executeSocialAction(var6, param4, 6);
         boolean discarded$2 = this.executePlayerAction(param4, (byte) 115, var6);
         boolean discarded$3 = this.openReportAbuse((byte) -75, param0, var6);
         return true;
@@ -258,24 +258,24 @@ final class PlayerContextMenu {
         DualLinkNodeHashTable.field_f.enabled = ChatPanelSupport.field_a < -1 + ByteArrayNode.field_p[0] ? true : false;
     }
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean executeSocialAction(int action, int opcode, int obfuscationGuard) {
         Object var4;
         String var4_ref;
         String var5;
         var4 = null;
-        if (param0 == 4) {
-          var4_ref = MultiHandleSliderWidget.a(this.field_m, param1, 88);
+        if (action == 4) {
+          var4_ref = MultiHandleSliderWidget.a(this.field_m, opcode, 88);
         } else {
-          if (param0 == 5) {
-            var4_ref = HalloweenBallSkin.removeFriend((byte) 91, this.field_m, param1);
+          if (action == 5) {
+            var4_ref = HalloweenBallSkin.removeFriend((byte) 91, this.field_m, opcode);
           } else {
-            if (param0 == 6) {
-              var4_ref = Atan2Support.a(param1, this.field_m, param2 ^ 4);
+            if (action == 6) {
+              var4_ref = Atan2Support.addIgnore(opcode, this.field_m, obfuscationGuard ^ 4);
             } else {
-              if (param0 != 7) {
+              if (action != 7) {
                 return false;
               }
-              var4_ref = MembershipBenefitsLoader.removeIgnore(-3266, this.field_d, this.field_m, param1);
+              var4_ref = MembershipBenefitsLoader.removeIgnore(-3266, this.field_d, this.field_m, opcode);
             }
           }
         }
@@ -283,7 +283,7 @@ final class PlayerContextMenu {
           var5 = (String) null;
           MenuScreenBase.appendChatMessage(0, var4_ref, (String) null, 2, this.field_m, true);
         }
-        if (param2 == 6) {
+        if (obfuscationGuard == 6) {
           return true;
         }
         return false;

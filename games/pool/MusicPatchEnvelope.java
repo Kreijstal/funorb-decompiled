@@ -18,12 +18,12 @@ final class MusicPatchEnvelope {
     static int field_m;
     static MeshBuilder field_h;
 
-    final static void a(HuffmanCodec param0, byte param1) {
+    final static void setChatHuffmanCodec(HuffmanCodec codec, byte obfuscationGuard) {
         try {
-          int var2_int = 75 % ((0 - param1) / 57);
-          Pool.field_J = param0;
+          int var2_int = 75 % ((0 - obfuscationGuard) / 57);
+          Pool.field_J = codec;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kp.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kp.C(" + (codec != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class MusicPatchEnvelope {
         field_h = null;
     }
 
-    final static PlayingSound a(int param0, PcmSample param1, int param2, int param3) {
+    final static PlayingSound playSoundEffect(int obfuscationGuard, PcmSample sample, int pan, int volume) {
         RuntimeException var4 = null;
         PlayingSound stackIn_2_0 = null;
         PlayingSound stackIn_4_0 = null;
@@ -43,8 +43,8 @@ final class MusicPatchEnvelope {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == 100) {
-            stackIn_4_0 = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(param1, 100, param3, param2));
+          if (obfuscationGuard == 100) {
+            stackIn_4_0 = DualLinkDequeIterator.registerSoundEffectStream(-24296, PcmSampleStream.createAtRatePercentQ6(sample, 100, volume, pan));
             return stackIn_4_0;
           }
           stackIn_2_0 = (PlayingSound) null;
@@ -53,20 +53,20 @@ final class MusicPatchEnvelope {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_7_0 = var4;
-          stackIn_7_1 = new StringBuilder().append("kp.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("kp.D(").append(obfuscationGuard).append(',');
+          if (sample == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(pan).append(',').append(volume).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendAccountStateQuery(int packetLength, int opcode) {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
-        var2.writeCipheredOpcode(false, param1);
-        var2.writeByte(param0, false);
+        var2.writeCipheredOpcode(false, opcode);
+        var2.writeByte(packetLength, false);
         var2.writeByte(2, false);
     }
 

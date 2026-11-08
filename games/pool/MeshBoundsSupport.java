@@ -138,7 +138,7 @@ final class MeshBoundsSupport {
             ChatInputSupport.field_a != 1) {
             InputIdleSupport.field_c.enabled = false;
             InputIdleSupport.field_c.scrollPane.viewport.text = UiComponentNode.loading;
-            AudioService.a(InputIdleSupport.field_c.content, (byte) 109);
+            AudioService.collapseComponentHeights(InputIdleSupport.field_c.content, (byte) 109);
           } else {
             InputIdleSupport.field_c.enabled = true;
             InputIdleSupport.field_c.scrollPane.viewport.text = null;

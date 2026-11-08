@@ -1024,7 +1024,7 @@ final class HuffmanCodec {
           while (true) {
             if (stackIn_17_0 < 0) {
               PlayerContextMenu.field_e.position = 0;
-              if (!DialogLayer.b((byte) 107, 1)) {
+              if (!DialogLayer.pollPacketBytes((byte) 107, 1)) {
                 return false;
               }
               PacketDecodeState.field_b = PlayerContextMenu.field_e.readCipheredOpcode(param0 + 107);

@@ -117,7 +117,7 @@ final class QuickChatMenu extends UiComponent {
         if (this.openSubmenu == null &&
           LobbyPlayer.field_Ub == this &&
           var4 != 0) {
-          DialogLayer.i(15975);
+          DialogLayer.hideQuickChatOverlay(15975);
           return true;
         }
         int var5 = LoginMethod.field_b;
@@ -209,11 +209,11 @@ final class QuickChatMenu extends UiComponent {
               var7 = (String) null;
               AlternateLongAndTextLoginPayload.a((byte) 117, (String) null, param3, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, var5);
               Bzip2DecoderState.a(var5, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, (byte) -76, QuickChatMenuSupport.field_d);
-              DialogLayer.i(15975);
+              DialogLayer.hideQuickChatOverlay(15975);
               InputIdleSupport.resetInputIdleTimer(false);
             } else {
               ClassicBallSkin.createQuickChatHelpDialog(1);
-              DialogLayer.i(15975);
+              DialogLayer.hideQuickChatOverlay(15975);
             }
           }
         } else {

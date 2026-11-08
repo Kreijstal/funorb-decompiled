@@ -67,8 +67,8 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         }
     }
 
-    final static int c(int param0) {
-        if (param0 != 12854) {
+    final static int getAccountAge(int obfuscationGuard) {
+        if (obfuscationGuard != 12854) {
           return 100;
         }
         return ButtonPainter.field_b;

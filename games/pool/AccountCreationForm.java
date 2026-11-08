@@ -114,7 +114,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           var3.writeShort((byte) -81, param0);
           return;
         }
-        AccountCreationForm.g((byte) 125);
+        AccountCreationForm.getLobbyGamePlayersContent((byte) 125);
         var3.writeShort((byte) -81, param0);
     }
 
@@ -123,7 +123,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           ((UsernameAvailabilityValidator) (this.displayNameInput.getValidationProvider(-91))).invalidateCachedUsernameAvailability(18);
           return;
         }
-        String discarded$0 = this.j(24);
+        String discarded$0 = this.getLinkOpeningTag(24);
         ((UsernameAvailabilityValidator) (this.displayNameInput.getValidationProvider(-91))).invalidateCachedUsernameAvailability(18);
     }
 
@@ -252,7 +252,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         }
     }
 
-    private final int a(byte param0, UiWidget param1, int param2, int param3, String param4) {
+    private final int addLabeledInputRow(byte obfuscationGuard, UiWidget input, int y, int inputWidth, String label) {
         LabeledChildWidget var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -264,8 +264,8 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new LabeledChildWidget(20, param2, param3 + 120, 25, param1, false, 120, 3, ValidationIconWidget.field_O, 16777215, param4);
-          if (param0 != 44) {
+          var6 = new LabeledChildWidget(20, y, inputWidth + 120, 25, input, false, 120, 3, ValidationIconWidget.field_O, 16777215, label);
+          if (obfuscationGuard != 44) {
             stackIn_2_0 = 118;
             return stackIn_2_0;
           }
@@ -276,14 +276,14 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
           stackIn_7_0 = var6_ref;
-          stackIn_7_1 = new StringBuilder().append("nf.T(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("nf.T(").append(obfuscationGuard).append(',');
+          if (input == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(y).append(',').append(inputWidth).append(',');
+          if (label == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -301,8 +301,8 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         }
     }
 
-    final static UiComponent g(byte param0) {
-        if (param0 != 103) {
+    final static UiComponent getLobbyGamePlayersContent(byte obfuscationGuard) {
+        if (obfuscationGuard != 103) {
           field_S = (IntrusiveDeque) null;
           return DualLinkDeque.field_f.content;
         }
@@ -462,11 +462,11 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         PasswordInputPainter dupTemp$1 = new PasswordInputPainter(10000536);
         this.passwordConfirmInput.renderer = (WidgetPainter) ((Object) dupTemp$1);
         this.passwordInput.renderer = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.j(0), this.closeLinkMarkup(11579568)}, -1, ArchiveProvider.createAgreeterms);
+        String var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.getLinkOpeningTag(0), this.closeLinkMarkup(11579568)}, -1, ArchiveProvider.createAgreeterms);
         int var3 = 20;
-        var3 = var3 + this.a((byte) 44, this.emailInput, var3, 170, ThreeSliceButtonPainter.createEmail);
+        var3 = var3 + this.addLabeledInputRow((byte) 44, this.emailInput, var3, 170, ThreeSliceButtonPainter.createEmail);
         var3 = var3 + (5 + this.a(ProxyAuthenticationRequiredException.createEmailConfirm, this.emailConfirmInput, 20, 170, "", var3, (byte) -76));
-        var3 = var3 + this.a((byte) 44, this.passwordInput, var3, 170, PolarBallSkin.createPassword);
+        var3 = var3 + this.addLabeledInputRow((byte) 44, this.passwordInput, var3, 170, PolarBallSkin.createPassword);
         var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(35, ChoiceButtonSupport.createPasswordConfirm, this.passwordConfirmInput, AimTarget.createPasswordHint, 170, var3));
         var3 = var3 + (5 + this.addLabeledFieldWithDefaultMessageWidth(35, KillerBallSkin.createDisplayname, this.displayNameInput, LongAndTextLoginPayload.createDisplaynameHint, 170, var3));
         var3 = var3 + this.a(MusicPatch.createAge, (byte) -114, 170, var3, this.ageInput);
@@ -496,7 +496,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.setWidgetBounds(496, 0, var3 + 55 + var6, false, 0);
     }
 
-    final static AvailabilityQueryResult b(byte param0, String param1) {
+    final static AvailabilityQueryResult ensureAccountNameLookup(byte obfuscationGuard, String name) {
         RuntimeException var2 = null;
         AvailabilityQueryResult stackIn_2_0 = null;
         AvailabilityQueryResult stackIn_7_0 = null;
@@ -505,13 +505,13 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -25) {
+          if (obfuscationGuard != -25) {
             stackIn_2_0 = (AvailabilityQueryResult) null;
             return stackIn_2_0;
           }
-          if (TextInputValidator.field_j.isComplete(param0 + 121) &&
-            !param1.equals(TextInputValidator.field_j.getText(2))) {
-            TextInputValidator.field_j = GzipDecoder.a(117, param1);
+          if (TextInputValidator.field_j.isComplete(obfuscationGuard + 121) &&
+            !name.equals(TextInputValidator.field_j.getText(2))) {
+            TextInputValidator.field_j = GzipDecoder.a(117, name);
           }
           stackIn_7_0 = TextInputValidator.field_j;
           return stackIn_7_0;
@@ -519,8 +519,8 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_10_0 = var2;
-          stackIn_10_1 = new StringBuilder().append("nf.O(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("nf.O(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -529,8 +529,8 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         }
     }
 
-    private final String j(int param0) {
-        if (param0 != 0) {
+    private final String getLinkOpeningTag(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           UiWidget var3 = (UiWidget) null;
           this.handleKeyInput('￴', -47, false, (UiWidget) null);
           return "<u=2164A2><col=2164A2>";
@@ -558,7 +558,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         if (param0 >= 94) {
           return BufferedSocket.a(this.newsOptInCheckbox.active, this.passwordInput.widgetText, (byte) 114, this, var2, this.emailInput.widgetText, this.displayNameInput.widgetText);
         }
-        AccountCreationForm.g((byte) -63);
+        AccountCreationForm.getLobbyGamePlayersContent((byte) -63);
         return BufferedSocket.a(this.newsOptInCheckbox.active, this.passwordInput.widgetText, (byte) 114, this, var2, this.emailInput.widgetText, this.displayNameInput.widgetText);
     }
 

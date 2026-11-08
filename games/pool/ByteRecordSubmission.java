@@ -56,7 +56,7 @@ final class ByteRecordSubmission extends IntrusiveNode {
         throw new Error();
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4) {
+    final static void configureClientNoticeMetrics(int param0, boolean param1, int param2, int param3, int param4) {
         ShotRecord.field_y = param2;
         if (param1) {
           ModelTableScene.field_K = param4;
@@ -64,7 +64,7 @@ final class ByteRecordSubmission extends IntrusiveNode {
           Camera.field_b = param0;
           return;
         }
-        ByteRecordSubmission.a(-104, true, -107, 21, 17);
+        ByteRecordSubmission.configureClientNoticeMetrics(-104, true, -107, 21, 17);
         ModelTableScene.field_K = param4;
         WidgetContainer.field_I = param3;
         Camera.field_b = param0;

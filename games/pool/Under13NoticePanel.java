@@ -21,7 +21,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.continueButton == param3) {
-            NineSliceFrame.a((byte) 41);
+            NineSliceFrame.loginWithCreatedAccount((byte) 41);
             this.owner.dismissDialog(17);
           }
           if (param0) {

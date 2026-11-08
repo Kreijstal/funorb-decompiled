@@ -60,7 +60,7 @@ final class SceneNodeFactory {
               if (var5[var7Lifetime1].faceCount > 0) {
                 incrementValue$0 = var6Lifetime1;
                 var6Lifetime1++;
-                var10.field_b[incrementValue$0] = MarkerSliderPainter.a(109, var5[var7Lifetime1], SupportPageLauncher.copyIntArray(var10.field_d, (byte) 32));
+                var10.field_b[incrementValue$0] = MarkerSliderPainter.createRecenteredSceneNode(109, var5[var7Lifetime1], SupportPageLauncher.copyIntArray(var10.field_d, (byte) 32));
               }
             }
           }

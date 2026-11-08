@@ -76,7 +76,7 @@ final class Bzip2DecoderState {
             LobbyGame.field_Pb = 200;
             var1 = (PlayingSound) (HighScoreSubmission.field_o.last((byte) 116));
             while (var1 != null) {
-              if (!var1.field_m.b(-126)) {
+              if (!var1.field_m.isLinked(-126)) {
                 var1.unlink((byte) -117);
               }
               var1 = (PlayingSound) (HighScoreSubmission.field_o.previous((byte) -5));
@@ -84,7 +84,7 @@ final class Bzip2DecoderState {
             if (UsernameSuggestionsPanel.field_R != null) {
               var1Lifetime1 = (PlayingSound) (UsernameSuggestionsPanel.field_R.last((byte) -84));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_m.b(-117)) {
+                if (!var1Lifetime1.field_m.isLinked(-117)) {
                   var1Lifetime1.unlink((byte) -117);
                 }
                 var1Lifetime1 = (PlayingSound) (UsernameSuggestionsPanel.field_R.previous((byte) -5));

@@ -354,7 +354,7 @@ final class AchievementsScreen extends MenuScreen {
           } else {
             stackIn_13_1 = this.field_G.field_p;
           }
-          PauseMenuScreen.g(stackIn_12_0, stackIn_13_1);
+          PauseMenuScreen.advanceHotspotTooltip(stackIn_12_0, stackIn_13_1);
         }
     }
 

@@ -40,7 +40,7 @@ final class QuickChatDynamicCommand {
           var7 = (CharSequence) ((Object) recipientName);
           ResourceArchive.field_a = TutorialController.normalizeDisplayName(62, var7);
           QuickChatMenuSupport.field_d = recipientId;
-          var6 = WhirlpoolHasher.a((byte) 92, LoginRequiredScreen.field_J, options, LookupRetrySupport.field_i, CushionSegment.field_c);
+          var6 = WhirlpoolHasher.buildQuickChatPhraseMenu((byte) 92, LoginRequiredScreen.field_J, options, LookupRetrySupport.field_i, CushionSegment.field_c);
           CueStick.showQuickChatMenu(111, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

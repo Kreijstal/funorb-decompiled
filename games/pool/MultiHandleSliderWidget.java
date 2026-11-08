@@ -137,7 +137,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
             stackIn_10_0 = QuickChatHelpDialog.cannotAddYourself;
             return stackIn_10_0;
           }
-          if (DialogLayer.a(param0, -1)) {
+          if (DialogLayer.isFriendName(param0, -1)) {
             stackIn_13_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, RankingsScreen.friendlistdupe);
             return stackIn_13_0;
           }

@@ -322,13 +322,13 @@ final class ChatInputSupport {
     final static void b(int param0) {
         if (param0 == -1) {
           if (ArrayWidgetGroup.field_H) {
-            DialogLayer.i(param0 + 15976);
+            DialogLayer.hideQuickChatOverlay(param0 + 15976);
           }
           return;
         }
         ChatInputSupport.a((byte) -3, 101);
         if (ArrayWidgetGroup.field_H) {
-          DialogLayer.i(param0 + 15976);
+          DialogLayer.hideQuickChatOverlay(param0 + 15976);
         }
     }
 

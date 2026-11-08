@@ -150,10 +150,10 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    final static void g(int param0) {
+    final static void initializeCameraPresets(int obfuscationGuard) {
         LobbyPanelLayoutSupport.field_c = RasterStateSupport.a(true, new double[][][]{new double[][]{TextInputPainter.scaleTableCoordinates(-93, new double[]{0.5, 0.5, -1.0, 0.5, 0.5, 0.0})}, BufferedFile.createOppositeTableLines(-122, TextInputPainter.scaleTableCoordinates(-100, new double[]{1.22, 0.5, -0.45, 0.73, 0.5, 0.0})), MeshSymmetrySupport.createSymmetricCopies(TextInputPainter.scaleTableCoordinates(-84, new double[]{1.22, 1.323, -0.402, 0.83, 0.72, 0.0}), 123), MeshSymmetrySupport.createSymmetricCopies(TextInputPainter.scaleTableCoordinates(-77, new double[]{0.79, 1.6, -0.804, 0.55, 0.67, 0.0}), 126)});
         LobbyPanelLayoutSupport.field_a = RasterStateSupport.a(true, new double[][][]{new double[][]{TextInputPainter.scaleTableCoordinates(-92, new double[]{0.5, 0.65, -1.0, 0.5, 0.65, 0.0})}, BufferedFile.createOppositeTableLines(-101, TextInputPainter.scaleTableCoordinates(-62, new double[]{1.41, 0.5, -0.6, 0.81, 0.5, 0.0})), MeshSymmetrySupport.createSymmetricCopies(TextInputPainter.scaleTableCoordinates(-107, new double[]{1.28, 1.48, -0.478, 0.85, 0.81, 0.0}), 126), MeshSymmetrySupport.createSymmetricCopies(TextInputPainter.scaleTableCoordinates(-83, new double[]{0.761, 1.846, -0.865, 0.593, 0.831, 0.0}), -115)});
-        if (param0 >= -127) {
+        if (obfuscationGuard >= -127) {
           ballsetPlasmaGroup1 = (String) null;
         }
     }
@@ -194,10 +194,10 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendByteRecordQuery(int packetLength, int opcode) {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
-        var2.writeCipheredOpcode(false, param1);
-        var2.writeByte(param0, false);
+        var2.writeCipheredOpcode(false, opcode);
+        var2.writeByte(packetLength, false);
         var2.writeByte(0, false);
     }
 

@@ -209,7 +209,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final boolean b(int param0) {
+    final boolean canStartApplet(int obfuscationGuard) {
         return true;
     }
 
@@ -273,19 +273,19 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static void a(Sprite[] param0, int param1) {
+    final static void setMembershipSlides(Sprite[] slides, int obfuscationGuard) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          AccountCreationForm.field_V = param0;
-          if (param1 != -58) {
+          AccountCreationForm.field_V = slides;
+          if (obfuscationGuard != -58) {
             field_a = (UiComponent) null;
           }
           if (null != AccountCreationForm.field_V &&
-            param0.length < 3) {
+            slides.length < 3) {
             throw new IllegalArgumentException("");
           }
           return;
@@ -294,12 +294,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var2 = decompiledCaughtException;
           stackIn_14_0 = var2;
           stackIn_14_1 = new StringBuilder().append("kq.O(");
-          if (param0 == null) {
+          if (slides == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -509,7 +509,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (AgeValidator.isFriend(10, (CharSequence) ((Object) var4)) &&
-                        !(GameApplet.a((byte) 105, (CharSequence) ((Object) var4)) >= 10)) {
+                        !(GameApplet.parseDecimalInt((byte) 105, (CharSequence) ((Object) var4)) >= 10)) {
                         this.redirectToErrorPage((byte) -89, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -697,7 +697,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static int a(byte param0, CharSequence param1) {
+    final static int parseDecimalInt(byte obfuscationGuard, CharSequence text) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -705,17 +705,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 <= 56) {
+          if (obfuscationGuard <= 56) {
             field_c = 38;
           }
-          stackIn_4_0 = ScrollPaneWithFooter.parseIntWithRadix(10, true, true, param1);
+          stackIn_4_0 = ScrollPaneWithFooter.parseIntWithRadix(10, true, true, text);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("kq.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("kq.G(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -741,7 +741,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     abstract void updateGame(byte param0);
 
-    final void a(int param0, int param1, String param2, byte param3, int param4, int param5, int param6) {
+    final void startAppletThread(int param0, int param1, String param2, byte param3, int param4, int param5, int param6) {
         try {
           PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_25_0 = null;

@@ -15,12 +15,12 @@ final class DialogLayer extends SingleChildWidget {
     static int field_V;
     static int field_W;
 
-    final static boolean b(byte param0, int param1) {
+    final static boolean pollPacketBytes(byte obfuscationGuard, int requiredBytes) {
         try {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (param1 <= PlayerContextMenu.field_e.position) {
+          if (requiredBytes <= PlayerContextMenu.field_e.position) {
             return true;
           }
           if (null == Atan2Support.field_c) {
@@ -28,17 +28,17 @@ final class DialogLayer extends SingleChildWidget {
           }
           try {
             var2_int = Atan2Support.field_c.availableBytes(107);
-            if (param0 < 27) {
+            if (obfuscationGuard < 27) {
               connectionlostWithreason = (String) null;
             }
             if (0 < var2_int) {
-              if (var2_int > param1 - PlayerContextMenu.field_e.position) {
-                var2_int = param1 - PlayerContextMenu.field_e.position;
+              if (var2_int > requiredBytes - PlayerContextMenu.field_e.position) {
+                var2_int = requiredBytes - PlayerContextMenu.field_e.position;
               }
               Atan2Support.field_c.readFully(var2_int, 0, PlayerContextMenu.field_e.position, PlayerContextMenu.field_e.payload);
               MenuScreen.field_v = MonotonicClock.monotonicTimeMillis((byte) -97);
               PlayerContextMenu.field_e.position = PlayerContextMenu.field_e.position + var2_int;
-              if (param1 > PlayerContextMenu.field_e.position) {
+              if (requiredBytes > PlayerContextMenu.field_e.position) {
                 return false;
               }
               PlayerContextMenu.field_e.position = 0;
@@ -84,7 +84,7 @@ final class DialogLayer extends SingleChildWidget {
         this.child = null;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
+    final static void updateBottomChatPanel(int param0, boolean param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -158,7 +158,7 @@ final class DialogLayer extends SingleChildWidget {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isFriendName(String name, int obfuscationGuard) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -166,22 +166,22 @@ final class DialogLayer extends SingleChildWidget {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -1) {
-            DialogLayer.i(82);
+          if (obfuscationGuard != -1) {
+            DialogLayer.hideQuickChatOverlay(82);
           }
-          stackIn_5_0 = (UsernameSuggestionSupport.findSocialEntryByName(param1 ^ 88, param0) != null);
+          stackIn_5_0 = (UsernameSuggestionSupport.findSocialEntryByName(obfuscationGuard ^ 88, name) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
           stackIn_8_1 = new StringBuilder().append("lq.T(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class DialogLayer extends SingleChildWidget {
         if (param0 == -1) {
           return null;
         }
-        DialogLayer.i(65);
+        DialogLayer.hideQuickChatOverlay(65);
         return null;
     }
 
@@ -237,9 +237,9 @@ final class DialogLayer extends SingleChildWidget {
         TranslatedUiText.b(-31384);
         AccountMenuText.field_b = null;
         if (!param0) {
-          DialogLayer.i(114);
+          DialogLayer.hideQuickChatOverlay(114);
         }
-        DialogLayer.i(15975);
+        DialogLayer.hideQuickChatOverlay(15975);
     }
 
     public static void releaseStatics(byte param0) {
@@ -255,16 +255,16 @@ final class DialogLayer extends SingleChildWidget {
         field_Q = null;
     }
 
-    final static void i(int param0) {
+    final static void hideQuickChatOverlay(int obfuscationGuard) {
         ArrayWidgetGroup.field_H = false;
-        if (param0 != 15975) {
+        if (obfuscationGuard != 15975) {
           connectionlostWithreason = (String) null;
         }
         if (null != LobbyPlayer.field_Ub) {
           LobbyPlayer.field_Ub.resetSelection(17517);
         }
         if (0 != CookieDateSupport.field_b) {
-          ProjectedLineSupport.resetChatComposition(param0 ^ 1124);
+          ProjectedLineSupport.resetChatComposition(obfuscationGuard ^ 1124);
         }
         ProgressBarWidget.field_G = 0;
     }
@@ -286,13 +286,13 @@ final class DialogLayer extends SingleChildWidget {
         return null;
     }
 
-    final static void l(int param0) {
+    final static void clearSocialLists(int obfuscationGuard) {
         DualLinkNode var2 = null;
         int var3 = Pool.field_O;
         DualLinkNode var2Lifetime1;
         try {
           TextHotspotRegion.field_t = 0;
-          int var1_int = 83 % ((17 - param0) / 34);
+          int var1_int = 83 % ((17 - obfuscationGuard) / 34);
           LocalGameSetupScreen.field_J = null;
           AccountWelcomePanel.field_S = 0;
           SoundCache.field_k.clear((byte) 69);
@@ -309,7 +309,7 @@ final class DialogLayer extends SingleChildWidget {
           }
           ChatInputSupport.field_a = 0;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lq.GA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lq.GA(" + obfuscationGuard + ')');
         }
     }
 

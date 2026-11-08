@@ -19,7 +19,7 @@ final class MarkerSliderPainter implements WidgetPainter {
     private BitmapFont font;
     static UiComponent field_c;
 
-    final static SceneNode a(int param0, MeshBuilder param1, int[] param2) {
+    final static SceneNode createRecenteredSceneNode(int obfuscationGuard, MeshBuilder mesh, int[] transform) {
         SceneNode var3 = null;
         RuntimeException var3_ref = null;
         SceneNode stackIn_2_0 = null;
@@ -31,28 +31,28 @@ final class MarkerSliderPainter implements WidgetPainter {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 2) {
+          if (obfuscationGuard < 2) {
             stackIn_2_0 = (SceneNode) null;
             return stackIn_2_0;
           }
           var3 = new SceneNode();
-          var3.field_d = BeveledFrameSpriteFactory.completeTransform((byte) 112, param2);
-          var3.field_i = param1;
-          IntrusiveNodeHashTable.a(var3.field_d, -123, var3.field_i);
+          var3.field_d = BeveledFrameSpriteFactory.completeTransform((byte) 112, transform);
+          var3.field_i = mesh;
+          IntrusiveNodeHashTable.recenterMeshAndAdjustTransform(var3.field_d, -123, var3.field_i);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_7_0 = var3_ref;
-          stackIn_7_1 = new StringBuilder().append("nd.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("nd.C(").append(obfuscationGuard).append(',');
+          if (mesh == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param2 == null) {
+          if (transform == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -121,10 +121,10 @@ final class MarkerSliderPainter implements WidgetPainter {
         }
     }
 
-    final static void b(byte param0) {
+    final static void initializeAccountDialogs(byte obfuscationGuard) {
         VerticalScrollbar.field_Sb = ProxyAuthenticationRequiredException.createUiTheme(14);
         TabbedPane.field_Ub = new DialogLayer();
-        if (param0 > -82) {
+        if (obfuscationGuard > -82) {
           field_i = (IntrusiveDeque) null;
         }
         PacketDiagnosticsSupport.a(110, true, true);
@@ -161,7 +161,7 @@ final class MarkerSliderPainter implements WidgetPainter {
         try {
           MeshBoundsSupport.computeMeshBounds(param0, -23109);
           if (param1 != -37) {
-            MarkerSliderPainter.b((byte) 33);
+            MarkerSliderPainter.initializeAccountDialogs((byte) 33);
           }
           var2_int = (param0.field_w + param0.field_D) / 2;
           var3 = (param0.field_S + param0.field_y) / 2;

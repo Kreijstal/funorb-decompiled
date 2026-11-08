@@ -248,7 +248,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = GameApplet.a((byte) 123, var18);
+                                    var16_int = GameApplet.parseDecimalInt((byte) 123, var18);
                                     var4 = var4 + this.inlineSprites[var16_int].fullWidth;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -532,7 +532,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = GameApplet.a((byte) 120, var10);
+                                  var9_int = GameApplet.parseDecimalInt((byte) 120, var10);
                                   var4 = var4 + this.inlineSprites[var9_int].fullWidth;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -625,7 +625,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = GameApplet.a((byte) 77, var13);
+                                  var10 = GameApplet.parseDecimalInt((byte) 77, var13);
                                   var11_ref_bb = this.inlineSprites[var10];
                                   if (this.inlineSpriteBaselines == null) {
                                     stackIn_27_0 = var11_ref_bb.fullHeight;
@@ -906,7 +906,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                currentAlpha = GameApplet.a((byte) 74, var4);
+                currentAlpha = GameApplet.parseDecimalInt((byte) 74, var4);
               }
             } else {
               currentTextColor = defaultTextColor;

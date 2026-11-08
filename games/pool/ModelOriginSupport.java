@@ -18,7 +18,7 @@ final class ModelOriginSupport extends IntrusiveNode {
         throw new Error();
     }
 
-    final static Sprite[] a(int param0, byte param1, ResourceArchive param2, int param3) {
+    final static Sprite[] loadSpriteSheet(int groupId, byte obfuscationGuard, ResourceArchive archive, int fileId) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Sprite[] stackIn_4_0 = null;
@@ -27,23 +27,23 @@ final class ModelOriginSupport extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!TextLineLayout.a(param0, param2, param3, (byte) 121)) {
+          if (!TextLineLayout.a(groupId, archive, fileId, (byte) 121)) {
             return null;
           }
-          var4_int = -39 / ((param1 + 12) / 57);
+          var4_int = -39 / ((obfuscationGuard + 12) / 57);
           stackIn_4_0 = ThemeSelectScreen.h(152);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_7_0 = var4;
-          stackIn_7_1 = new StringBuilder().append("ln.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_7_1 = new StringBuilder().append("ln.B(").append(groupId).append(',').append(obfuscationGuard).append(',');
+          if (archive == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(fileId).append(')').toString());
         }
     }
 

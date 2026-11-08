@@ -606,8 +606,8 @@ final class PoolGameModel {
           var7_int = 0;
           var8 = 0;
           if (param2 != null) {
-            var7_int = param2.a(23165, 524288);
-            var8 = -262144 + param2.a(23165, 524288);
+            var7_int = param2.nextInt(23165, 524288);
+            var8 = -262144 + param2.nextInt(23165, 524288);
           }
           var9 = this.balls[param4];
           var9.field_o = false;
@@ -1230,8 +1230,8 @@ final class PoolGameModel {
         }
         if (ClientUiResourceState.field_a) {
           DialogLayer.a(true);
-          TransformSupport.b(0);
-          DialogLayer.l(-121);
+          TransformSupport.clearLobbyState(0);
+          DialogLayer.clearSocialLists(-121);
           ClientUiResourceState.field_a = false;
         }
     }
@@ -1373,18 +1373,18 @@ final class PoolGameModel {
           scanLoop1: while (true) {
             if (var11 < var7) {
               if (var21[var9] != -1) {
-                var12 = var6.a(23165, 65536);
-                var13 = var6.a(23165, 65536);
+                var12 = var6.nextInt(23165, 65536);
+                var13 = var6.nextInt(23165, 65536);
                 var14 = 524288 * var12 / 65536 / 96;
                 var15 = var13 * 524288 / 65536 / 96;
                 var16 = this.balls[var21[var9]];
                 var16.positionX = var2 + var14;
                 var16.positionZ = -524288;
                 var16.positionY = var11 * 34603008 / 32 + var3 + var15;
-                var16.orientation.x = var6.a(23165, 65536);
-                var16.orientation.y = var6.a(23165, 65536);
-                var16.orientation.z = var6.a(23165, 65536);
-                var16.orientation.w = var6.a(23165, 65536);
+                var16.orientation.x = var6.nextInt(23165, 65536);
+                var16.orientation.y = var6.nextInt(23165, 65536);
+                var16.orientation.z = var6.nextInt(23165, 65536);
+                var16.orientation.w = var6.nextInt(23165, 65536);
                 var16.orientation.normalise(true);
                 var16.inPlay = true;
                 var16.transformDirty = true;

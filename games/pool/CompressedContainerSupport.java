@@ -234,7 +234,7 @@ final class CompressedContainerSupport implements QuickChatResolverMarker {
             } else {
               NameEntryPopup.field_Mb.scrollPane.viewport.text = UiComponentNode.loading;
             }
-            AudioService.a(NameEntryPopup.field_Mb.content, (byte) 109);
+            AudioService.collapseComponentHeights(NameEntryPopup.field_Mb.content, (byte) 109);
           }
           var6 = -31 / ((param2 - 31) / 62);
           stackIn_88_0 = var5;

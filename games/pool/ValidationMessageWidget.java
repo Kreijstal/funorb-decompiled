@@ -124,18 +124,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             var13 = var21.field_y << 1;
             if (this.field_U == null) {
               this.field_U = new Sprite(var12, var13);
-              CueAim.a(81, this.field_U);
+              CueAim.pushSpriteRenderTarget(81, this.field_U);
             } else {
               if (this.field_U.field_z < var12) {
                 this.field_U = new Sprite(var12, var13);
-                CueAim.a(81, this.field_U);
+                CueAim.pushSpriteRenderTarget(81, this.field_U);
               } else {
                 if (var13 <= this.field_U.field_A) {
-                  CueAim.a(53, this.field_U);
+                  CueAim.pushSpriteRenderTarget(53, this.field_U);
                   SoftwareRasterizer.clear();
                 } else {
                   this.field_U = new Sprite(var12, var13);
-                  CueAim.a(81, this.field_U);
+                  CueAim.pushSpriteRenderTarget(81, this.field_U);
                 }
               }
             }
@@ -163,11 +163,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (this.field_U != null &&
             this.field_U.field_z >= var12Lifetime4 &&
             var13Lifetime4 <= this.field_U.field_A) {
-            CueAim.a(53, this.field_U);
+            CueAim.pushSpriteRenderTarget(53, this.field_U);
             SoftwareRasterizer.clear();
           } else {
             this.field_U = new Sprite(var12Lifetime4, var13Lifetime4);
-            CueAim.a(81, this.field_U);
+            CueAim.pushSpriteRenderTarget(81, this.field_U);
           }
           var20.drawRotatedAboutPivot(112, 144, var20.field_w << 4, var20.field_y << 4, -this.field_V << 10, 4096);
           TriangleMesh.a(126);
@@ -192,18 +192,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             var13Lifetime1 = var27.field_y << 1;
             if (this.field_U == null) {
               this.field_U = new Sprite(var12Lifetime1, var13Lifetime1);
-              CueAim.a(81, this.field_U);
+              CueAim.pushSpriteRenderTarget(81, this.field_U);
             } else {
               if (this.field_U.field_z < var12Lifetime1) {
                 this.field_U = new Sprite(var12Lifetime1, var13Lifetime1);
-                CueAim.a(81, this.field_U);
+                CueAim.pushSpriteRenderTarget(81, this.field_U);
               } else {
                 if (var13Lifetime1 <= this.field_U.field_A) {
-                  CueAim.a(53, this.field_U);
+                  CueAim.pushSpriteRenderTarget(53, this.field_U);
                   SoftwareRasterizer.clear();
                 } else {
                   this.field_U = new Sprite(var12Lifetime1, var13Lifetime1);
-                  CueAim.a(81, this.field_U);
+                  CueAim.pushSpriteRenderTarget(81, this.field_U);
                 }
               }
             }
@@ -231,11 +231,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (this.field_U != null &&
             this.field_U.field_z >= var12Lifetime1Lifetime1 &&
             var13Lifetime1Lifetime1 <= this.field_U.field_A) {
-            CueAim.a(53, this.field_U);
+            CueAim.pushSpriteRenderTarget(53, this.field_U);
             SoftwareRasterizer.clear();
           } else {
             this.field_U = new Sprite(var12Lifetime1Lifetime1, var13Lifetime1Lifetime1);
-            CueAim.a(81, this.field_U);
+            CueAim.pushSpriteRenderTarget(81, this.field_U);
           }
           var26.drawRotatedAboutPivot(112, 144, var26.field_w << 4, var26.field_y << 4, -this.field_V << 10, 4096);
           TriangleMesh.a(126);
@@ -262,17 +262,17 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var13Lifetime2 = var32.field_y << 1;
           if (this.field_U == null) {
             this.field_U = new Sprite(var12Lifetime2, var13Lifetime2);
-            CueAim.a(81, this.field_U);
+            CueAim.pushSpriteRenderTarget(81, this.field_U);
           } else {
             if (this.field_U.field_z < var12Lifetime2) {
               this.field_U = new Sprite(var12Lifetime2, var13Lifetime2);
-              CueAim.a(81, this.field_U);
+              CueAim.pushSpriteRenderTarget(81, this.field_U);
             } else {
               if (var13Lifetime2 > this.field_U.field_A) {
                 this.field_U = new Sprite(var12Lifetime2, var13Lifetime2);
-                CueAim.a(81, this.field_U);
+                CueAim.pushSpriteRenderTarget(81, this.field_U);
               } else {
-                CueAim.a(53, this.field_U);
+                CueAim.pushSpriteRenderTarget(53, this.field_U);
                 SoftwareRasterizer.clear();
               }
             }
@@ -301,11 +301,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         if (this.field_U != null &&
           this.field_U.field_z >= var12Lifetime3 &&
           var13Lifetime3 <= this.field_U.field_A) {
-          CueAim.a(53, this.field_U);
+          CueAim.pushSpriteRenderTarget(53, this.field_U);
           SoftwareRasterizer.clear();
         } else {
           this.field_U = new Sprite(var12Lifetime3, var13Lifetime3);
-          CueAim.a(81, this.field_U);
+          CueAim.pushSpriteRenderTarget(81, this.field_U);
         }
         var31.drawRotatedAboutPivot(112, 144, var31.field_w << 4, var31.field_y << 4, -this.field_V << 10, 4096);
         TriangleMesh.a(126);

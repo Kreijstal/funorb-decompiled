@@ -115,7 +115,7 @@ class UiComponentNode extends DualLinkNode {
     final static void c(byte param0) {
         if (FullscreenErrorDialog.field_kb) {
           ClassicBallSkin.field_o = true;
-          ProxyConnectorSupport.a(true, 0);
+          ProxyConnectorSupport.showLoginDialog(true, 0);
           PlasmaTableScene.field_ab = 0;
           if (param0 <= 18) {
             rule02 = (String) null;

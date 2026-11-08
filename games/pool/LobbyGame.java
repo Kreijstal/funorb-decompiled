@@ -519,7 +519,7 @@ final class LobbyGame extends UiComponent {
         }
     }
 
-    final static void a(String param0, TextLineLayout param1, int param2, int param3, BitmapFont param4) {
+    final static void computeCaretPositions(String text, TextLineLayout layout, int obfuscationGuard, int spaceAdvanceQ8, BitmapFont font) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -537,22 +537,22 @@ final class LobbyGame extends UiComponent {
         var9 = Pool.field_O;
         try {
           var5_int = 0;
-          if (param2 != 6110) {
+          if (obfuscationGuard != 6110) {
             LobbyGame.releaseStatics((byte) -86);
           }
           var6 = -1;
-          for (var7 = 1; param0.length() > var7; var7++) {
-            var8 = param0.charAt(var7);
+          for (var7 = 1; text.length() > var7; var7++) {
+            var8 = text.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + param1.caretXs[0] + param4.stringWidth(param0.substring(0, var7));
+              var6 = (var5_int >> 8) + layout.caretXs[0] + font.stringWidth(text.substring(0, var7));
             }
             if (var6 == -1) {
               if (var8 == 32) {
-                var5_int = var5_int + param3;
+                var5_int = var5_int + spaceAdvanceQ8;
               }
-              param1.caretXs[var7] = param1.caretXs[0] + (var5_int >> 8) + param4.stringWidth(param0.substring(0, 1 + var7)) - param4.measureCharacterAdvance((char) var8);
+              layout.caretXs[var7] = layout.caretXs[0] + (var5_int >> 8) + font.stringWidth(text.substring(0, 1 + var7)) - font.measureCharacterAdvance((char) var8);
             } else {
-              param1.caretXs[var7] = var6;
+              layout.caretXs[var7] = var6;
             }
             if (var8 == 62) {
               var6 = -1;
@@ -564,19 +564,19 @@ final class LobbyGame extends UiComponent {
           var5 = decompiledCaughtException;
           stackIn_22_0 = var5;
           stackIn_22_1 = new StringBuilder().append("kh.D(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
           stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
-          if (param1 == null) {
+          if (layout == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(obfuscationGuard).append(',').append(spaceAdvanceQ8).append(',');
+          if (font == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";

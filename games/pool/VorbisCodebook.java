@@ -15,7 +15,7 @@ final class VorbisCodebook {
 
     private final static int lookup1ValueCount(int param0, int param1) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; EmailAvailabilityValidator.a(param1, var2, -1) > param0; var2--) {
+        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; EmailAvailabilityValidator.integerPower(param1, var2, -1) > param0; var2--) {
         }
         return var2;
     }

@@ -14,7 +14,7 @@ abstract class CacheEntry extends DualLinkNode {
     static String ballsetPlasmaGroup0;
     static UiComponent field_x;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void setStrokeClipBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
@@ -417,7 +417,7 @@ abstract class CacheEntry extends DualLinkNode {
         field_C = (int[][]) null;
         field_D = null;
         if (param0 != 1) {
-          CacheEntry.a(-127, 17, -14, 121, -101, -122, -96);
+          CacheEntry.setStrokeClipBounds(-127, 17, -14, 121, -101, -122, -96);
         }
         ballsetPlasmaGroup0 = null;
     }

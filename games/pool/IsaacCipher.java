@@ -24,27 +24,27 @@ final class IsaacCipher {
         field_b = null;
         if (param0 >= 0) {
           PoolGameModel var2 = (PoolGameModel) null;
-          IsaacCipher.a(57, (PoolGameModel) null);
+          IsaacCipher.printReplay(57, (PoolGameModel) null);
         }
     }
 
-    final int a(int param0, int param1) {
+    final int nextInt(int obfuscationGuard, int bound) {
         int var4 = 0;
-        if (param1 <= 0) {
+        if (bound <= 0) {
           throw new IllegalArgumentException();
         }
-        int var3 = 2147483647 - (int)(4294967296L % (long)param1);
-        if (param0 != 23165) {
+        int var3 = 2147483647 - (int)(4294967296L % (long)bound);
+        if (obfuscationGuard != 23165) {
           PoolGameModel var5 = (PoolGameModel) null;
-          IsaacCipher.a(73, (PoolGameModel) null);
+          IsaacCipher.printReplay(73, (PoolGameModel) null);
         }
         do {
-          var4 = this.a((byte) 7);
+          var4 = this.nextInt((byte) 7);
         } while (var4 > var3);
-        return NameEntryPopup.floorModPositiveDivisor(true, param1, var4);
+        return NameEntryPopup.floorModPositiveDivisor(true, bound, var4);
     }
 
-    private final void a(boolean param0) {
+    private final void generateBlock(boolean obfuscationGuard) {
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
         int var2;
@@ -54,8 +54,8 @@ final class IsaacCipher {
         this.field_i = this.field_i + 1;
         this.field_k = this.field_k + fieldTemp$0;
         var2 = 0;
-        if (!param0) {
-          this.b(9);
+        if (!obfuscationGuard) {
+          this.initialize(9);
         }
         while (var2 < 256) {
           var3 = this.field_a[var2];
@@ -83,11 +83,11 @@ final class IsaacCipher {
         }
     }
 
-    private final void b(int param0) {
+    private final void initialize(int obfuscationGuard) {
         int var2 = 0;
         int var2Lifetime1;
         int var2Lifetime2;
-        if (param0 != 2) {
+        if (obfuscationGuard != 2) {
           this.field_j = (int[]) null;
         }
         int var4 = -1640531527;
@@ -208,11 +208,11 @@ final class IsaacCipher {
           this.field_a[6 + var2Lifetime2] = var9;
           this.field_a[var2Lifetime2 + 7] = var10;
         }
-        this.a(true);
+        this.generateBlock(true);
         this.field_c = 256;
     }
 
-    final static void a(MeshBuilder param0, int param1) {
+    final static void rebuildTextureTriangles(MeshBuilder mesh, int startFace) {
         int var2_int = 0;
         int var3 = 0;
         int var12 = 0;
@@ -246,21 +246,21 @@ final class IsaacCipher {
         var12 = Pool.field_O;
         try {
           var2_int = 0;
-          for (var3 = param1; param0.faceCount > var3; var3++) {
-            if (param0.field_L[var3] != -1) {
+          for (var3 = startFace; mesh.faceCount > var3; var3++) {
+            if (mesh.field_L[var3] != -1) {
               var2_int++;
             }
           }
-          param0.field_o = OpacityWidget.a((byte) 60, param0.field_o, var2_int);
-          param0.field_p = QuickChatPhraseDefinition.resizeShortArray(param0.field_p, (byte) -73, var2_int * 3);
-          param0.field_H = QuickChatPhraseDefinition.resizeShortArray(param0.field_H, (byte) -73, var2_int * 3);
-          param0.field_C = QuickChatPhraseDefinition.resizeShortArray(param0.field_C, (byte) -73, var2_int * 3);
-          param0.vertexX = MenuScreenBase.extendIntArray(var2_int * 3, (byte) 108, param0.vertexX);
-          param0.vertexY = MenuScreenBase.extendIntArray(3 * var2_int, (byte) 108, param0.vertexY);
-          param0.vertexZ = MenuScreenBase.extendIntArray(var2_int * 3, (byte) 108, param0.vertexZ);
-          for (var2_intLifetime1 = 0; param0.faceCount > var2_intLifetime1; var2_intLifetime1++) {
-            if (param0.field_L[var2_intLifetime1] != -1) {
-              var3Lifetime1 = param0.field_k[var2_intLifetime1];
+          mesh.field_o = OpacityWidget.a((byte) 60, mesh.field_o, var2_int);
+          mesh.field_p = QuickChatPhraseDefinition.resizeShortArray(mesh.field_p, (byte) -73, var2_int * 3);
+          mesh.field_H = QuickChatPhraseDefinition.resizeShortArray(mesh.field_H, (byte) -73, var2_int * 3);
+          mesh.field_C = QuickChatPhraseDefinition.resizeShortArray(mesh.field_C, (byte) -73, var2_int * 3);
+          mesh.vertexX = MenuScreenBase.extendIntArray(var2_int * 3, (byte) 108, mesh.vertexX);
+          mesh.vertexY = MenuScreenBase.extendIntArray(3 * var2_int, (byte) 108, mesh.vertexY);
+          mesh.vertexZ = MenuScreenBase.extendIntArray(var2_int * 3, (byte) 108, mesh.vertexZ);
+          for (var2_intLifetime1 = 0; mesh.faceCount > var2_intLifetime1; var2_intLifetime1++) {
+            if (mesh.field_L[var2_intLifetime1] != -1) {
+              var3Lifetime1 = mesh.field_k[var2_intLifetime1];
               var31 = new float[3];
               var32 = new float[3];
               var26 = new int[3];
@@ -281,27 +281,27 @@ final class IsaacCipher {
               var22 = new int[3];
               var14 = var22;
               var11 = var14;
-              var6[0] = param0.vertexX[param0.faceVertexA[var2_intLifetime1]];
-              var6[1] = param0.vertexX[param0.faceVertexB[var2_intLifetime1]];
-              var6[2] = param0.vertexX[param0.faceVertexC[var2_intLifetime1]];
-              var7[0] = param0.vertexY[param0.faceVertexA[var2_intLifetime1]];
-              var7[1] = param0.vertexY[param0.faceVertexB[var2_intLifetime1]];
-              var7[2] = param0.vertexY[param0.faceVertexC[var2_intLifetime1]];
-              var8[0] = param0.vertexZ[param0.faceVertexA[var2_intLifetime1]];
-              var8[1] = param0.vertexZ[param0.faceVertexB[var2_intLifetime1]];
-              var8[2] = param0.vertexZ[param0.faceVertexC[var2_intLifetime1]];
-              var9[0] = param0.vertexX[param0.field_p[var3Lifetime1]];
-              var9[1] = param0.vertexX[param0.field_H[var3Lifetime1]];
-              var9[2] = param0.vertexX[param0.field_C[var3Lifetime1]];
-              var10[0] = param0.vertexY[param0.field_p[var3Lifetime1]];
-              var10[1] = param0.vertexY[param0.field_H[var3Lifetime1]];
-              var10[2] = param0.vertexY[param0.field_C[var3Lifetime1]];
-              var11[0] = param0.vertexZ[param0.field_p[var3Lifetime1]];
-              var11[1] = param0.vertexZ[param0.field_H[var3Lifetime1]];
-              var11[2] = param0.vertexZ[param0.field_C[var3Lifetime1]];
+              var6[0] = mesh.vertexX[mesh.faceVertexA[var2_intLifetime1]];
+              var6[1] = mesh.vertexX[mesh.faceVertexB[var2_intLifetime1]];
+              var6[2] = mesh.vertexX[mesh.faceVertexC[var2_intLifetime1]];
+              var7[0] = mesh.vertexY[mesh.faceVertexA[var2_intLifetime1]];
+              var7[1] = mesh.vertexY[mesh.faceVertexB[var2_intLifetime1]];
+              var7[2] = mesh.vertexY[mesh.faceVertexC[var2_intLifetime1]];
+              var8[0] = mesh.vertexZ[mesh.faceVertexA[var2_intLifetime1]];
+              var8[1] = mesh.vertexZ[mesh.faceVertexB[var2_intLifetime1]];
+              var8[2] = mesh.vertexZ[mesh.faceVertexC[var2_intLifetime1]];
+              var9[0] = mesh.vertexX[mesh.field_p[var3Lifetime1]];
+              var9[1] = mesh.vertexX[mesh.field_H[var3Lifetime1]];
+              var9[2] = mesh.vertexX[mesh.field_C[var3Lifetime1]];
+              var10[0] = mesh.vertexY[mesh.field_p[var3Lifetime1]];
+              var10[1] = mesh.vertexY[mesh.field_H[var3Lifetime1]];
+              var10[2] = mesh.vertexY[mesh.field_C[var3Lifetime1]];
+              var11[0] = mesh.vertexZ[mesh.field_p[var3Lifetime1]];
+              var11[1] = mesh.vertexZ[mesh.field_H[var3Lifetime1]];
+              var11[2] = mesh.vertexZ[mesh.field_C[var3Lifetime1]];
               PacketBuffer.computeTriangleBarycentrics(var31, var22, var23, var32, var25, var26, var27, (byte) 111, var28);
               MenuScreen.a(var22, var27, var23, var28, var31, var26, var32, 0, var25);
-              param0.field_k[var2_intLifetime1] = param0.addTextureTriangle((short)param0.addVertex(PauseMenuScreen.shiftLeft(0, -54264319, var25[0]), PauseMenuScreen.shiftLeft(0, -54264319, var27[0]), PauseMenuScreen.shiftLeft(0, -54264319, var22[0])), (short)param0.addVertex(PauseMenuScreen.shiftLeft(0, TutorialFactory.bitwiseXor(param1, -54264319), var25[1]), PauseMenuScreen.shiftLeft(0, -54264319, var27[1]), PauseMenuScreen.shiftLeft(0, -54264319, var22[1])), (short)param0.addVertex(PauseMenuScreen.shiftLeft(0, -54264319, var25[2]), PauseMenuScreen.shiftLeft(0, -54264319, var27[2]), PauseMenuScreen.shiftLeft(0, -54264319, var22[2])));
+              mesh.field_k[var2_intLifetime1] = mesh.addTextureTriangle((short)mesh.addVertex(PauseMenuScreen.shiftLeft(0, -54264319, var25[0]), PauseMenuScreen.shiftLeft(0, -54264319, var27[0]), PauseMenuScreen.shiftLeft(0, -54264319, var22[0])), (short)mesh.addVertex(PauseMenuScreen.shiftLeft(0, TutorialFactory.bitwiseXor(startFace, -54264319), var25[1]), PauseMenuScreen.shiftLeft(0, -54264319, var27[1]), PauseMenuScreen.shiftLeft(0, -54264319, var22[1])), (short)mesh.addVertex(PauseMenuScreen.shiftLeft(0, -54264319, var25[2]), PauseMenuScreen.shiftLeft(0, -54264319, var27[2]), PauseMenuScreen.shiftLeft(0, -54264319, var22[2])));
             }
           }
           return;
@@ -310,12 +310,12 @@ final class IsaacCipher {
           var2 = decompiledCaughtException;
           stackIn_18_0 = var2;
           stackIn_18_1 = new StringBuilder().append("li.C(");
-          if (param0 == null) {
+          if (mesh == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(startFace).append(')').toString());
         }
     }
 
@@ -327,18 +327,18 @@ final class IsaacCipher {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_j[var2_int] = param0[var2_int];
           }
-          this.b(2);
+          this.initialize(2);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int a(byte param0) {
-        if (param0 != 7) {
+    final int nextInt(byte obfuscationGuard) {
+        if (obfuscationGuard != 7) {
           return -38;
         }
         if (this.field_c == 0) {
-          this.a(true);
+          this.generateBlock(true);
           this.field_c = 256;
         }
         int fieldTemp$0 = this.field_c - 1;
@@ -346,7 +346,7 @@ final class IsaacCipher {
         return this.field_j[fieldTemp$0];
     }
 
-    final static void a(int param0, PoolGameModel param1) {
+    final static void printReplay(int obfuscationGuard, PoolGameModel game) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -356,20 +356,20 @@ final class IsaacCipher {
         ShotRecord var4 = null;
         CipherPacketBuffer var5 = null;
         try {
-          if (param0 != 2243) {
+          if (obfuscationGuard != 2243) {
             field_d = 116;
           }
           var5 = new CipherPacketBuffer(4096);
-          var3 = new IntrusiveDequeCursor(param1.shots);
-          if (param1.rules instanceof EightBallRules) {
+          var3 = new IntrusiveDequeCursor(game.shots);
+          if (game.rules instanceof EightBallRules) {
             var5.writeByte(0, false);
           } else {
-            if (!(param1.rules instanceof NineBallRules)) {
-              if (param1.rules instanceof KillerRules) {
+            if (!(game.rules instanceof NineBallRules)) {
+              if (game.rules instanceof KillerRules) {
                 var5.writeByte(2, false);
               } else {
-                if (!(param1.rules instanceof FreePlayRules)) {
-                  if (param1.rules instanceof TimeTrialRules) {
+                if (!(game.rules instanceof FreePlayRules)) {
+                  if (game.rules instanceof TimeTrialRules) {
                     var5.writeByte(4, false);
                   } else {
                     var5.writeByte(-1, false);
@@ -411,8 +411,8 @@ final class IsaacCipher {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_24_0 = var2;
-          stackIn_24_1 = new StringBuilder().append("li.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_24_1 = new StringBuilder().append("li.D(").append(obfuscationGuard).append(',');
+          if (game == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";

@@ -200,14 +200,14 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5, boolean param6, boolean param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    final static void updateLobbyFrame(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5, boolean param6, boolean param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         CacheEntry.field_B = null;
         BallEvent.c((byte) 4);
         param6 = IntKeyLookup.a(param0, param3, param11, param9, param6, (byte) 33, param10);
-        UsernameSuggestionsPanel.a(param1, param6, param8, param13, param5, 13375, param2, param4, param7, param3);
+        UsernameSuggestionsPanel.updateLobbyInterface(param1, param6, param8, param13, param5, 13375, param2, param4, param7, param3);
         int var14 = 36 / ((param12 + 84) / 37);
         ViewportController.updateIgnoreListInteraction(param4, -108, param1);
-        DialogLayer.a(param1, param6, 0, param11);
+        DialogLayer.updateBottomChatPanel(param1, param6, 0, param11);
     }
 
     final static void a(String[][] param0, String[] param1, String[] param2, int param3, byte param4, byte[] param5, Sprite[][] param6, Sprite[][] param7, int param8, int param9, String[] param10, int[] param11, String[][] param12, byte[] param13, ResourceArchive param14) {

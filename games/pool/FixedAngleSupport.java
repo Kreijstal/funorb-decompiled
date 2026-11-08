@@ -44,7 +44,7 @@ final class FixedAngleSupport {
         if (obfuscationGuard >= 9) {
           var2 = new AccountStateQuery();
           NodeHashTableIterator.field_j.addFirst((byte) 127, var2);
-          MusicPatchEnvelope.a(1, opcode);
+          MusicPatchEnvelope.sendAccountStateQuery(1, opcode);
           return var2;
         }
         return (AccountStateQuery) null;
@@ -80,7 +80,7 @@ final class FixedAngleSupport {
           param6 = param6 & -4;
           param0 = param0 & -4;
           param4 = param4 & -4;
-          CacheEntry.a(param8, param6, param0, param4, param5, param3, 1727215554);
+          CacheEntry.setStrokeClipBounds(param8, param6, param0, param4, param5, param3, 1727215554);
           var12 = -IntegerSyntaxSupport.field_f + ChatPanelSupport.field_f;
           var13 = ReportAbuseDialog.field_Nb - BallEvent.field_a;
           var14 = var13 * var13 + var12 * var12 >> 2;
@@ -268,7 +268,7 @@ final class FixedAngleSupport {
           param6 = param6 & -4;
           param0 = param0 & -4;
           param4 = param4 & -4;
-          CacheEntry.a(param8, param6, param0, param4, param5, param3, 1727215554);
+          CacheEntry.setStrokeClipBounds(param8, param6, param0, param4, param5, param3, 1727215554);
           var12 = -IntegerSyntaxSupport.field_f + ChatPanelSupport.field_f;
           var13 = ReportAbuseDialog.field_Nb - BallEvent.field_a;
           var14 = var13 * var13 + var12 * var12 >> 2;

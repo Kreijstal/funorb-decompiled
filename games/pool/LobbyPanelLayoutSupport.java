@@ -94,7 +94,7 @@ final class LobbyPanelLayoutSupport {
     }
 
     static {
-        DirectByteStorage.g(-128);
+        DirectByteStorage.initializeCameraPresets(-128);
         muLobbyLocation = "Location";
         field_f = 8;
         field_g = 12;

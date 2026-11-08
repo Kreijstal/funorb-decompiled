@@ -222,7 +222,7 @@ final class VorbisSample extends IntrusiveNode {
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.submaps; var17_intLifetime1++) {
           var42 = residues[var14.submapResidues[var17_intLifetime1]];
           var52 = field_R;
-          var42.a(var52, var4 >> 1, var16Lifetime1 != 0);
+          var42.decode(var52, var4 >> 1, var16Lifetime1 != 0);
         }
         if (var15 == 0) {
           var17_intLifetime2 = var14.mux;

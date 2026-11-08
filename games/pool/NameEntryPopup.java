@@ -132,7 +132,7 @@ final class NameEntryPopup extends UiComponent {
         try {
           var4_int = archive.getGroupId(groupName, obfuscationGuard - 1);
           var5 = archive.getFileId(var4_int, obfuscationGuard, fileName);
-          stackIn_1_0 = ModelOriginSupport.a(var4_int, (byte) 110, archive, var5);
+          stackIn_1_0 = ModelOriginSupport.loadSpriteSheet(var4_int, (byte) 110, archive, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

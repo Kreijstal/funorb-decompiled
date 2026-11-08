@@ -104,7 +104,7 @@ abstract class MouseWheelInput {
         AppletUrlSupport.field_j.initializeSelection(pointerDriven, -1, ReflectionCheck.hitTestMembershipButtons((byte) -84, ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f), true);
     }
 
-    final static void c(int param0) {
+    final static void readHighScoreResponse(int obfuscationGuard) {
         int var8_int = 0;
         String[][] dupTemp$0 = null;
         long[][] dupTemp$1 = null;
@@ -146,7 +146,7 @@ abstract class MouseWheelInput {
         int var25Lifetime2;
         var26 = Pool.field_O;
         try {
-          if (param0 < 95) {
+          if (obfuscationGuard < 95) {
             MouseWheelInput.initializeMembershipSlideshow(33, true);
           }
           var27 = PlayerContextMenu.field_e;
@@ -274,7 +274,7 @@ abstract class MouseWheelInput {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "id.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "id.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -343,7 +343,7 @@ abstract class MouseWheelInput {
             var6 = sprites[2].field_w;
             var7 = sprites[1].field_w;
             if (obfuscationGuard != 23) {
-              MouseWheelInput.c(-44);
+              MouseWheelInput.readHighScoreResponse(-44);
             }
             sprites[0].draw(x, y);
             sprites[2].draw(-var6 + (width + x), y);
@@ -378,7 +378,7 @@ abstract class MouseWheelInput {
         field_a = null;
         field_c = null;
         if (param0 != 35) {
-          MouseWheelInput.c(109);
+          MouseWheelInput.readHighScoreResponse(109);
         }
         menuOptionReturnToTutorial = null;
     }

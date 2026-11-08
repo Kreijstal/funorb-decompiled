@@ -45,7 +45,7 @@ final class ClassicBallSkin extends BallSkin {
           }
           for (var3_int = 1; this.field_a.length > var3_int; var3_int++) {
             this.field_a[var3_int].scaleVertices(8, 8, 8, 4);
-            IsaacCipher.a(this.field_a[var3_int], 0);
+            IsaacCipher.rebuildTextureTriangles(this.field_a[var3_int], 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -83,7 +83,7 @@ final class ClassicBallSkin extends BallSkin {
     final static void createQuickChatHelpDialog(int obfuscationGuard) {
         if (obfuscationGuard != 1) {
           NineSliceFrame var2 = (NineSliceFrame) null;
-          ClassicBallSkin.a((byte) -32, 29, (NineSliceFrame) null, (NineSliceFrame) null, -126, -60);
+          ClassicBallSkin.configureClientNoticeFrames((byte) -32, 29, (NineSliceFrame) null, (NineSliceFrame) null, -126, -60);
           CollisionContact.field_f = new QuickChatHelpDialog(AccountStateQuery.field_m, DiskArchiveRequest.field_J, VertexTransformSupport.field_f, AlignedIconLabel.field_Lb, ChoiceButtonSupport.field_e, UiWidget.field_A);
           return;
         }
@@ -101,7 +101,7 @@ final class ClassicBallSkin extends BallSkin {
         return 0 == param1 ? EmailAvailabilityValidator.ballsetUsa8Group0 : PolarTableScene.ballsetUsa8Group1;
     }
 
-    final static void a(byte param0, int param1, NineSliceFrame param2, NineSliceFrame param3, int param4, int param5) {
+    final static void configureClientNoticeFrames(byte param0, int param1, NineSliceFrame param2, NineSliceFrame param3, int param4, int param5) {
         Base37Support.field_e = param2;
         IterableDualLinkDeque.field_e = param1;
         NineBallRules.field_h = param5;

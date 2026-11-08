@@ -11,10 +11,10 @@ final class FreePlayRules extends GameRules {
     static int field_g;
     static AlignedIconLabel[][] field_f;
 
-    final static void c(byte param0) {
+    final static void layoutDecisionDialog(byte obfuscationGuard) {
         int var1 = 0;
         LobbyGame.field_Vb.height = 240;
-        if (param0 < -68) {
+        if (obfuscationGuard < -68) {
           LobbyGame.field_Vb.horizontalAlignment = 3;
           LobbyGame.field_Vb.contentOffsetY = LobbyGame.field_Vb.frameSprites[1].field_A;
           LobbyGame.field_Vb.localY = 120;

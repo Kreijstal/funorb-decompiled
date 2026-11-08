@@ -14,20 +14,20 @@ final class ValidationIconWidget extends ButtonWidget {
     static String unpackingModels;
     static BitmapFont field_O;
 
-    final static void a(boolean param0, String param1, int param2, int param3, long param4, int param5) {
+    final static void sendAbuseReport(boolean muteRequested, String reportedName, int reason, int opcode, long targetId, int obfuscationGuard) {
         int var7_int = 0;
         try {
-          JaggrabDownloader.field_j.writeCipheredOpcode(false, param3);
+          JaggrabDownloader.field_j.writeCipheredOpcode(false, opcode);
           JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 1;
-          int var8 = 55 % ((param5 + 38) / 51);
+          int var8 = 55 % ((obfuscationGuard + 38) / 51);
           var7_int = JaggrabDownloader.field_j.position;
-          JaggrabDownloader.field_j.writeLong(param4, (byte) -79);
-          JaggrabDownloader.field_j.writeNullTerminatedString(-9946, param1);
-          JaggrabDownloader.field_j.writeByte(param2, false);
-          JaggrabDownloader.field_j.writeByte(!param0 ? 0 : 1, false);
+          JaggrabDownloader.field_j.writeLong(targetId, (byte) -79);
+          JaggrabDownloader.field_j.writeNullTerminatedString(-9946, reportedName);
+          JaggrabDownloader.field_j.writeByte(reason, false);
+          JaggrabDownloader.field_j.writeByte(!muteRequested ? 0 : 1, false);
           JaggrabDownloader.field_j.writeByteLengthPrefix(JaggrabDownloader.field_j.position - var7_int, true);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lc.B(" + muteRequested + ',' + (reportedName != null ? "{...}" : "null") + ',' + reason + ',' + opcode + ',' + targetId + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -128,11 +128,11 @@ final class ValidationIconWidget extends ButtonWidget {
           if (null != PasswordInputPainter.field_z &&
             PasswordInputPainter.field_z.field_z >= var10 &&
             PasswordInputPainter.field_z.field_A >= var11) {
-            CueAim.a(104, PasswordInputPainter.field_z);
+            CueAim.pushSpriteRenderTarget(104, PasswordInputPainter.field_z);
             SoftwareRasterizer.clear();
           } else {
             PasswordInputPainter.field_z = new Sprite(var10, var11);
-            CueAim.a(56, PasswordInputPainter.field_z);
+            CueAim.pushSpriteRenderTarget(56, PasswordInputPainter.field_z);
           }
           var13.drawRotatedAboutPivot(112, 144, var13.field_w << 4, var13.field_y << 4, -this.animationTicks << 10, 4096);
           TriangleMesh.a(112);
@@ -140,7 +140,7 @@ final class ValidationIconWidget extends ButtonWidget {
         }
     }
 
-    final static int a(int param0, int param1, HighScoreRequest param2, HighScoreSubmission param3) {
+    final static int findSubmittedHighScoreRow(int tableIndex, int startRow, HighScoreRequest request, HighScoreSubmission submission) {
         int var6 = 0;
         int var7 = 0;
         int stackIn_7_0 = 0;
@@ -158,18 +158,18 @@ final class ValidationIconWidget extends ButtonWidget {
         int var8 = 0;
         var8 = Pool.field_O;
         try {
-          if (param2 != null &&
-            param2.field_z != null &&
-            param3 != null &&
-            param2.field_A == param3.field_l) {
-            var4_int = param3.field_z.length;
-            var5 = param2.field_z[param0].length / var4_int;
-            for (var6 = param1; var6 < var5; var6++) {
+          if (request != null &&
+            request.field_z != null &&
+            submission != null &&
+            request.field_A == submission.field_l) {
+            var4_int = submission.field_z.length;
+            var5 = request.field_z[tableIndex].length / var4_int;
+            for (var6 = startRow; var6 < var5; var6++) {
               boolean decompiledFrameCompleted0 = true;
-              if (param3.field_w == param2.field_q[param0][var6] &&
-                BallEvent.a((byte) 3, param2.field_m[param0][var6])) {
+              if (submission.field_w == request.field_q[tableIndex][var6] &&
+                BallEvent.a((byte) 3, request.field_m[tableIndex][var6])) {
                 for (var7 = 0; var7 < var4_int; var7++) {
-                  if (param3.field_z[var7] != param2.field_z[param0][var7 + var6 * var4_int]) {
+                  if (submission.field_z[var7] != request.field_z[tableIndex][var7 + var6 * var4_int]) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
@@ -189,14 +189,14 @@ final class ValidationIconWidget extends ButtonWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_24_0 = var4;
-          stackIn_24_1 = new StringBuilder().append("lc.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_24_1 = new StringBuilder().append("lc.C(").append(tableIndex).append(',').append(startRow).append(',');
+          if (request == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
           stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',');
-          if (param3 == null) {
+          if (submission == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";

@@ -23,7 +23,7 @@ final class EmailValidator extends TextInputValidator {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (Camera.a(-1, param0) != null) ? 0 : 1;
+          stackIn_3_0 = (Camera.validateEmailAddress(-1, param0) != null) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (var3_int == 0) {
             stackIn_6_0 = AchievementProtocolSupport.field_d;

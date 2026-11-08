@@ -69,7 +69,7 @@ class HotspotTextWidget extends ButtonWidget {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static void drawGrayGradientBorder(int x, int y, int height, int width, boolean obfuscationGuard) {
         int var7 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -80,27 +80,27 @@ class HotspotTextWidget extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         var10 = Pool.field_O;
         try {
-          SoftwareRasterizer.drawHorizontalLine(param0, param1, 1 + param3, 10000536);
-          SoftwareRasterizer.drawHorizontalLine(param0, param1 + param2, 1 + param3, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(x, y, 1 + width, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(x, y + height, 1 + width, 12105912);
           var5_int = 1;
-          var6 = param2;
-          if (SoftwareRasterizer.clipTop > var5_int + param1) {
-            var5_int = -param1 + SoftwareRasterizer.clipTop;
+          var6 = height;
+          if (SoftwareRasterizer.clipTop > var5_int + y) {
+            var5_int = -y + SoftwareRasterizer.clipTop;
           }
-          if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-            var6 = SoftwareRasterizer.clipBottom - param1;
+          if (y + var6 > SoftwareRasterizer.clipBottom) {
+            var6 = SoftwareRasterizer.clipBottom - y;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
-            var8 = 152 + 48 * var7 / param2;
+            var8 = 152 + 48 * var7 / height;
             var9 = var8 << 8 | var8 << 16 | var8;
-            SoftwareRasterizer.pixels[SoftwareRasterizer.width * (var7 + param1) + param0] = var9;
-            SoftwareRasterizer.pixels[(param1 + var7) * SoftwareRasterizer.width + param0 + param3] = var9;
+            SoftwareRasterizer.pixels[SoftwareRasterizer.width * (var7 + y) + x] = var9;
+            SoftwareRasterizer.pixels[(y + var7) * SoftwareRasterizer.width + x + width] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5), "mh.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5), "mh.O(" + x + ',' + y + ',' + height + ',' + width + ',' + obfuscationGuard + ')');
         }
     }
 

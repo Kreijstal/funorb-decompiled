@@ -71,9 +71,9 @@ final class ReflectionCheck extends IntrusiveNode {
         return -1;
     }
 
-    final static void c(byte param0) {
+    final static void layoutLobbyOptionPanel(byte obfuscationGuard) {
         ProgressDialog.l(23323);
-        int var1 = 95 / ((param0 - 47) / 60);
+        int var1 = 95 / ((obfuscationGuard - 47) / 60);
         EightBallRules.layoutLobbyOptionRows(ThemeSelectScreen.field_M[0].field_w, CueAim.field_j, ArchiveIndex.field_x, TranslatedUiText.field_n, (byte) 36, DualLinkNodeHashTable.field_i);
     }
 

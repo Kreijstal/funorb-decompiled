@@ -165,7 +165,7 @@ final class ProxyConnectorSupport {
                 var5 = HalloweenBallSkin.removeFriend((byte) 83, var4, opcode);
               }
               if (MatchingTextValidator.field_m == 2) {
-                var5 = Atan2Support.a(opcode, var4, obfuscationGuard ^ -31666);
+                var5 = Atan2Support.addIgnore(opcode, var4, obfuscationGuard ^ -31666);
               }
               if (MatchingTextValidator.field_m == 3) {
                 var5 = MembershipBenefitsLoader.removeIgnore(-3266, var4, var4, opcode);
@@ -190,9 +190,9 @@ final class ProxyConnectorSupport {
 
     }
 
-    final static void a(boolean param0, int param1) {
-        PacketDiagnosticsSupport.a(117, param0, false);
-        if (param1 != 0) {
+    final static void showLoginDialog(boolean mode, int obfuscationGuard) {
+        PacketDiagnosticsSupport.a(117, mode, false);
+        if (obfuscationGuard != 0) {
           field_d = -51;
         }
     }

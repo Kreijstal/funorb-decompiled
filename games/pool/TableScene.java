@@ -111,7 +111,7 @@ abstract class TableScene {
     }
 
     final void a(int[] param0, int param1, int param2, int[] param3) {
-        IntrusiveNode.a(2, param3, param0);
+        IntrusiveNode.computeSpatialSoundParameters(2, param3, param0);
         if (param2 > -74) {
           return;
         }
@@ -985,7 +985,7 @@ abstract class TableScene {
               param4[var7].setPanAndRampVolume(var9 + MaxLengthTextInputWidget.nextRandomInt(64, true, RankingsRequest.field_r) + var8, 441, 128);
             } else if ((param4[var7] == null ||
               param4[var7].field_o.isSamplePositionOutOfRange()) && MaxLengthTextInputWidget.nextRandomInt(param1, true, RankingsRequest.field_r) == 0) {
-              param4[var7] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentPan(param3[MaxLengthTextInputWidget.nextRandomInt(param3.length, true, RankingsRequest.field_r)], 100, var6_int, 8192 * var7 + 4096));
+              param4[var7] = DualLinkDequeIterator.registerSoundEffectStream(-24296, PcmSampleStream.createAtRatePercentPan(param3[MaxLengthTextInputWidget.nextRandomInt(param3.length, true, RankingsRequest.field_r)], 100, var6_int, 8192 * var7 + 4096));
             }
           }
           var7Lifetime1 = -14 % ((-11 - param2) / 44);
@@ -1114,7 +1114,7 @@ abstract class TableScene {
 
     final void a(int param0, int[] param1, int param2, int[] param3, int param4) {
         try {
-          IntrusiveNode.a(param0 - 1336449638, param3, param1);
+          IntrusiveNode.computeSpatialSoundParameters(param0 - 1336449638, param3, param1);
           this.playTableSound(param4, DualLinkDequeIterator.field_g * param2 >> 8, (byte) -111, LoginRequiredScreen.field_I);
           if (param0 != 1336449640) {
             this.field_j = 1.1224327362689441;

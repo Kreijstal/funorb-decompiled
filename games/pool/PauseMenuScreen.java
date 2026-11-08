@@ -38,7 +38,7 @@ class PauseMenuScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 57) {
-            PauseMenuScreen.g(-2, 69);
+            PauseMenuScreen.advanceHotspotTooltip(-2, 69);
           }
           var2 = new LoginResponse(false);
           var2.field_c = suggestions;
@@ -166,15 +166,15 @@ class PauseMenuScreen extends MenuScreen {
         return value << distance;
     }
 
-    final static void g(int param0, int param1) {
+    final static void advanceHotspotTooltip(int obfuscationGuard, int hotspotId) {
         int stackIn_52_0 = 0;
         int stackIn_128_0 = 0;
         int var2;
         int var2Lifetime1;
         PackedColorSupport.field_a = PackedColorSupport.field_a + 1;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           playerNs = (String[]) null;
-          if (KillerBallSkin.field_m == param1) {
+          if (KillerBallSkin.field_m == hotspotId) {
             if (!ClientException.field_j &&
               PackedColorSupport.field_a < LongAndTextLoginPayload.field_l &&
               LoginPayload.field_c) {
@@ -185,7 +185,7 @@ class PauseMenuScreen extends MenuScreen {
           } else {
             if (ClientException.field_j) {
               var2 = 0;
-              if (param1 != -1) {
+              if (hotspotId != -1) {
                 if (!ClientException.field_j &&
                   var2 == 0) {
                   PackedColorSupport.field_a = 0;
@@ -196,7 +196,7 @@ class PauseMenuScreen extends MenuScreen {
                 PackedColorSupport.field_a = 0;
               }
               TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
-              if (param1 == -1) {
+              if (hotspotId == -1) {
                 if (var2 != 0) {
                   ClientException.field_j = true;
                 }
@@ -207,7 +207,7 @@ class PauseMenuScreen extends MenuScreen {
             } else {
               if (PackedColorSupport.field_a < LongAndTextLoginPayload.field_l) {
                 var2 = 0;
-                if (param1 != -1) {
+                if (hotspotId != -1) {
                   if (ClientException.field_j) {
                     PackedColorSupport.field_a = LongAndTextLoginPayload.field_l;
                   } else {
@@ -221,7 +221,7 @@ class PauseMenuScreen extends MenuScreen {
                   PackedColorSupport.field_a = 0;
                 }
                 TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
-                if (param1 == -1) {
+                if (hotspotId == -1) {
                   if (var2 != 0) {
                     ClientException.field_j = true;
                   }
@@ -233,7 +233,7 @@ class PauseMenuScreen extends MenuScreen {
                 stackIn_52_0 = (FadingDialog.field_Q + LongAndTextLoginPayload.field_l <= PackedColorSupport.field_a) ? 0 : 1;
                 boolean decompiledFrameRemainder1 = true;
                 var2 = stackIn_52_0;
-                if (param1 != -1) {
+                if (hotspotId != -1) {
                   if (ClientException.field_j) {
                     PackedColorSupport.field_a = LongAndTextLoginPayload.field_l;
                     decompiledFrameRemainder1 = false;
@@ -250,7 +250,7 @@ class PauseMenuScreen extends MenuScreen {
                 }
                 boolean decompiledFrameRemainder0 = true;
                 TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
-                if (param1 == -1) {
+                if (hotspotId == -1) {
                   if (var2 != 0) {
                     ClientException.field_j = true;
                     SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
@@ -272,7 +272,7 @@ class PauseMenuScreen extends MenuScreen {
               PackedColorSupport.field_a = 0;
             }
           }
-          KillerBallSkin.field_m = param1;
+          KillerBallSkin.field_m = hotspotId;
           if (ClientException.field_j &&
             SocialListEntry.field_Vb == PackedColorSupport.field_a) {
             PackedColorSupport.field_a = 0;
@@ -280,7 +280,7 @@ class PauseMenuScreen extends MenuScreen {
           }
           return;
         }
-        if (KillerBallSkin.field_m == param1) {
+        if (KillerBallSkin.field_m == hotspotId) {
           if (!ClientException.field_j &&
             PackedColorSupport.field_a < LongAndTextLoginPayload.field_l &&
             LoginPayload.field_c) {
@@ -288,7 +288,7 @@ class PauseMenuScreen extends MenuScreen {
             TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
             PackedColorSupport.field_a = 0;
           }
-          KillerBallSkin.field_m = param1;
+          KillerBallSkin.field_m = hotspotId;
           if (ClientException.field_j &&
             SocialListEntry.field_Vb == PackedColorSupport.field_a) {
             PackedColorSupport.field_a = 0;
@@ -307,10 +307,10 @@ class PauseMenuScreen extends MenuScreen {
           stackIn_128_0 = 0;
         }
         var2Lifetime1 = stackIn_128_0;
-        if (param1 == -1) {
+        if (hotspotId == -1) {
           PackedColorSupport.field_a = 0;
           TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
-          if (param1 != -1) {
+          if (hotspotId != -1) {
             ClientException.field_j = false;
             SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
             if (!ClientException.field_j &&
@@ -319,7 +319,7 @@ class PauseMenuScreen extends MenuScreen {
               SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
               TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
               PackedColorSupport.field_a = 0;
-              KillerBallSkin.field_m = param1;
+              KillerBallSkin.field_m = hotspotId;
               if (ClientException.field_j &&
                 SocialListEntry.field_Vb == PackedColorSupport.field_a) {
                 PackedColorSupport.field_a = 0;
@@ -337,7 +337,7 @@ class PauseMenuScreen extends MenuScreen {
                 SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
                 TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
                 PackedColorSupport.field_a = 0;
-                KillerBallSkin.field_m = param1;
+                KillerBallSkin.field_m = hotspotId;
                 if (ClientException.field_j &&
                   SocialListEntry.field_Vb == PackedColorSupport.field_a) {
                   PackedColorSupport.field_a = 0;
@@ -360,7 +360,7 @@ class PauseMenuScreen extends MenuScreen {
           if (ClientException.field_j) {
             PackedColorSupport.field_a = LongAndTextLoginPayload.field_l;
             TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
-            if (param1 == -1) {
+            if (hotspotId == -1) {
               if (var2Lifetime1 != 0) {
                 ClientException.field_j = true;
               }
@@ -375,7 +375,7 @@ class PauseMenuScreen extends MenuScreen {
               TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
               PackedColorSupport.field_a = 0;
             }
-            KillerBallSkin.field_m = param1;
+            KillerBallSkin.field_m = hotspotId;
             if (ClientException.field_j &&
               SocialListEntry.field_Vb == PackedColorSupport.field_a) {
               PackedColorSupport.field_a = 0;
@@ -386,7 +386,7 @@ class PauseMenuScreen extends MenuScreen {
           if (var2Lifetime1 != 0) {
             PackedColorSupport.field_a = LongAndTextLoginPayload.field_l;
             TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
-            if (param1 == -1) {
+            if (hotspotId == -1) {
               ClientException.field_j = true;
             } else {
               ClientException.field_j = false;
@@ -399,7 +399,7 @@ class PauseMenuScreen extends MenuScreen {
               TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
               PackedColorSupport.field_a = 0;
             }
-            KillerBallSkin.field_m = param1;
+            KillerBallSkin.field_m = hotspotId;
             if (ClientException.field_j &&
               SocialListEntry.field_Vb == PackedColorSupport.field_a) {
               PackedColorSupport.field_a = 0;
@@ -410,7 +410,7 @@ class PauseMenuScreen extends MenuScreen {
           }
           PackedColorSupport.field_a = 0;
           TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
-          if (param1 != -1) {
+          if (hotspotId != -1) {
             ClientException.field_j = false;
           } else {
             SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
@@ -421,7 +421,7 @@ class PauseMenuScreen extends MenuScreen {
               TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
               PackedColorSupport.field_a = 0;
             }
-            KillerBallSkin.field_m = param1;
+            KillerBallSkin.field_m = hotspotId;
             if (ClientException.field_j &&
               SocialListEntry.field_Vb == PackedColorSupport.field_a) {
               PackedColorSupport.field_a = 0;
@@ -437,7 +437,7 @@ class PauseMenuScreen extends MenuScreen {
             SceneNodeEntry.field_p = DebouncedValidationProvider.field_f;
             TimeTrialSelectScreen.field_H = ReflectionReplySupport.field_i;
             PackedColorSupport.field_a = 0;
-            KillerBallSkin.field_m = param1;
+            KillerBallSkin.field_m = hotspotId;
             if (ClientException.field_j &&
               SocialListEntry.field_Vb == PackedColorSupport.field_a) {
               PackedColorSupport.field_a = 0;
@@ -446,7 +446,7 @@ class PauseMenuScreen extends MenuScreen {
             return;
           }
         }
-        KillerBallSkin.field_m = param1;
+        KillerBallSkin.field_m = hotspotId;
         if (!ClientException.field_j) {
           return;
         }
@@ -526,7 +526,7 @@ class PauseMenuScreen extends MenuScreen {
         if (param0 == -16470) {
           return;
         }
-        PauseMenuScreen.g(-10, -105);
+        PauseMenuScreen.advanceHotspotTooltip(-10, -105);
     }
 
     static {

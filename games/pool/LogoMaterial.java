@@ -330,8 +330,8 @@ final class LogoMaterial {
         }
     }
 
-    final static int a(int param0) {
-        if (param0 != -21055) {
+    final static int getKeyboardSnapshotCount(int obfuscationGuard) {
+        if (obfuscationGuard != -21055) {
           return -11;
         }
         return DebugSliderInputSupport.field_e;

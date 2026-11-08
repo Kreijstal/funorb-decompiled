@@ -159,7 +159,7 @@ public final class Pool extends NetworkGameClient {
               DualLinkNode.field_p) {
               var3_int = 0;
             }
-            AchievementSubmission.a(10, var3_int != 0);
+            AchievementSubmission.serviceLobbyFrame(10, var3_int != 0);
             if (TransformSupport.field_e) {
               stackIn_26_0 = TextWidgetPainter.field_e;
               stackIn_27_1 = (0 != IntLookupQuery.field_q.pressedButton);
@@ -191,7 +191,7 @@ public final class Pool extends NetworkGameClient {
             }
           }
           if (!Base37Support.field_d) {
-            TransformSupport.a(true);
+            TransformSupport.advanceInterfaceTransitions(true);
           }
           if (!LookupProtocolSupport.field_b) {
             if (DateInputWidget.field_U > 0) {
@@ -415,7 +415,7 @@ public final class Pool extends NetworkGameClient {
             PlasmaBallSkin.drawActiveScreen(MatchingTextValidator.field_w, -21972, false, TranslatedUiText.field_d);
             SoftwareRasterizer.resetClip();
             TriangleRasterizer.useRasterClip();
-            BrowserCookieWriter.a(true, 32, ThemeSelectScreen.field_P);
+            BrowserCookieWriter.drawBallPreview(true, 32, ThemeSelectScreen.field_P);
           }
         } else {
           PlasmaBallSkin.drawActiveScreen(MatchingTextValidator.field_w, -21972, true, TranslatedUiText.field_d);
@@ -473,7 +473,7 @@ public final class Pool extends NetworkGameClient {
           if (RenderingInitializationSupport.a((byte) -84) &&
             !LookupQuery.isClientNoticeOpen(1)) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
-            NanoTickClock.c(1527590113);
+            NanoTickClock.drawSharedChoicePanel(1527590113);
           }
         }
         if (EmailAvailabilityValidator.field_o != EmailAvailabilityValidator.field_s) {
@@ -993,7 +993,7 @@ public final class Pool extends NetworkGameClient {
           }
           if (Bzip2DecoderState.field_c == 14) {
             PoolGameModel.applyPendingScreenTransition(-124);
-            SharedWidgetLayoutSupport.a(PackedColorSupport.getAccountDialogContent((byte) 1), 1024, AccountCreationForm.g((byte) 103), 150, ByteArrayNode.field_p, ByteArrayNode.nextPowerOfTwo(-17931, 8), ByteArrayNode.nextPowerOfTwo(-17931, 2000), SpaceTableScene.getChatScrollContent(true), 4, 13162);
+            SharedWidgetLayoutSupport.a(PackedColorSupport.getAccountDialogContent((byte) 1), 1024, AccountCreationForm.getLobbyGamePlayersContent((byte) 103), 150, ByteArrayNode.field_p, ByteArrayNode.nextPowerOfTwo(-17931, 8), ByteArrayNode.nextPowerOfTwo(-17931, 2000), SpaceTableScene.getChatScrollContent(true), 4, 13162);
             NineSliceFrameSupport.a(LobbyPlayer.getNamePopupContent(0), VerticalScrollbar.getIgnoreListContent((byte) 13), -36);
             AlternateLongAndTextLoginPayload.field_p = false;
             LookupProtocolSupport.field_b = true;
@@ -1006,7 +1006,7 @@ public final class Pool extends NetworkGameClient {
             if (Base37Support.field_d) {
               PoolGameModel.applyPendingScreenTransition(obfuscationGuard - 127);
               DialogLayer.a(true);
-              IntrusiveDeque.g((byte) 74);
+              IntrusiveDeque.clearChatHistory((byte) 74);
               GameRules.field_b = 0;
               TransformSupport.field_e = false;
               ContextMenu.field_Sb = true;
@@ -1169,7 +1169,7 @@ public final class Pool extends NetworkGameClient {
                 if (AccountContentDialog.field_ub == null) {
                   continue;
                 }
-                ModernTableScene.f((byte) -119);
+                ModernTableScene.refreshRematchMenuLabel((byte) -119);
                 continue;
               }
               if (73 == Bzip2DecoderState.field_c) {
@@ -1178,7 +1178,7 @@ public final class Pool extends NetworkGameClient {
                 if (null == AccountContentDialog.field_ub) {
                   continue;
                 }
-                ModernTableScene.f((byte) -119);
+                ModernTableScene.refreshRematchMenuLabel((byte) -119);
                 continue;
               }
             }
@@ -1231,7 +1231,7 @@ public final class Pool extends NetworkGameClient {
             MidiNoteMixer.field_v = true;
             AccountContentDialog.field_ub = var7;
             IterableNodeHashTable.updateDrawOfferLabel(false);
-            ModernTableScene.f((byte) -119);
+            ModernTableScene.refreshRematchMenuLabel((byte) -119);
             CueAim.a((byte) -109);
           }
           LoginRequiredScreen.field_H = false;
@@ -1283,7 +1283,7 @@ public final class Pool extends NetworkGameClient {
         AchievementSubmission var6;
         int var3Lifetime1;
         var5 = field_O;
-        LogoMaterial.a(-21055);
+        LogoMaterial.getKeyboardSnapshotCount(-21055);
         MessageDialogContent.field_P = PaletteFontLoader.getMouseIdleTicks((byte) 64);
         Bzip2DecoderState.a((byte) -92);
         if (MatchingTextValidator.field_u != null &&
@@ -1625,7 +1625,7 @@ public final class Pool extends NetworkGameClient {
             this.releaseAllStatics((byte) 13);
           }
           if (ArchiveFactory.field_b != null) {
-            MusicPatchEnvelope.a(new HuffmanCodec(ArchiveFactory.field_b.getFileByName(false, "huffman", "")), (byte) -92);
+            MusicPatchEnvelope.setChatHuffmanCodec(new HuffmanCodec(ArchiveFactory.field_b.getFileByName(false, "huffman", "")), (byte) -92);
             ArchiveFactory.field_b = null;
             ArrayWidgetGroup.resetFrameTiming(0);
             return false;

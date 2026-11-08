@@ -152,7 +152,7 @@ final class TutorialController {
         if (this.field_b) {
           PoolGameModel.field_k.updateRoot(true, false);
         }
-        if (!HotspotRectangle.field_v.b(param0 - 142)) {
+        if (!HotspotRectangle.field_v.isLinked(param0 - 142)) {
           HotspotRectangle.field_v.updateRoot(true, false);
         }
         if (ThreeSliceButtonPainter.field_s >= 0) {
@@ -210,7 +210,7 @@ final class TutorialController {
           if (0 <= TextPairLoginPayload.field_i) {
             this.renderPanel(10, (-TextPairLoginPayload.field_i + 25) * 255 / 25);
           }
-          if (!HotspotRectangle.field_v.b(-119)) {
+          if (!HotspotRectangle.field_v.isLinked(-119)) {
             HotspotRectangle.field_v.drawRoot((byte) -79, false);
           }
         } else {

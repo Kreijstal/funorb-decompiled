@@ -104,20 +104,20 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final static boolean a(int param0, byte param1) {
-        if (-1 == param0) {
+    final static boolean hasClientOption(int optionIndex, byte obfuscationGuard) {
+        if (-1 == optionIndex) {
           return true;
         }
-        int var2 = -43 % ((param1 + 69) / 57);
-        return (AwtEventQueueSupport.field_d & 1 << param0) != 0 ? true : false;
+        int var2 = -43 % ((obfuscationGuard + 69) / 57);
+        return (AwtEventQueueSupport.field_d & 1 << optionIndex) != 0 ? true : false;
     }
 
-    final static void g(byte param0) {
+    final static void clearChatHistory(byte obfuscationGuard) {
         int var1_int = 0;
         int var2 = Pool.field_O;
         try {
           var1_int = 0;
-          if (param0 < 73) {
+          if (obfuscationGuard < 73) {
             muChatLobbyShowAll = (String) null;
           }
           while (IntrusiveDequeCursor.field_e > var1_int) {
@@ -126,7 +126,7 @@ final class IntrusiveDeque {
           }
           IntrusiveDequeCursor.field_e = 0;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ko.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ko.B(" + obfuscationGuard + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class IntrusiveDeque {
             param1.unlink((byte) -117);
           }
           if (param0 != -84) {
-            IntrusiveDeque.a(-104, (byte) -10);
+            IntrusiveDeque.hasClientOption(-104, (byte) -10);
           }
           param1.next = this.field_e;
           param1.previous = this.field_e.previous;
@@ -173,7 +173,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+    final IntrusiveNode iterateBackwardFrom(IntrusiveNode node, int obfuscationGuard) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         IntrusiveNode stackIn_5_0 = null;
@@ -184,12 +184,12 @@ final class IntrusiveDeque {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != null) {
-            var3 = param0;
+          if (node != null) {
+            var3 = node;
           } else {
             var3 = this.field_e.previous;
           }
-          if (param1 != 0) {
+          if (obfuscationGuard != 0) {
             stackIn_5_0 = (IntrusiveNode) null;
             return stackIn_5_0;
           }
@@ -206,12 +206,12 @@ final class IntrusiveDeque {
           var3_ref = decompiledCaughtException;
           stackIn_13_0 = var3_ref;
           stackIn_13_1 = new StringBuilder().append("ko.K(");
-          if (param0 == null) {
+          if (node == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -230,7 +230,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final static void a(int[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static void groupBucketedFacesByPriority(int[] param0, int param1, byte[] param2, int param3, int param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$2 = 0;

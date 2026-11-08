@@ -445,12 +445,12 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         RuntimeException var21 = null;
         try {
           ScrollPaneWithFooter.configureSharedTextStyle((byte) -83, param0, param2, param4);
-          ByteRecordSubmission.a(param12, true, param13, param5, param19);
+          ByteRecordSubmission.configureClientNoticeMetrics(param12, true, param13, param5, param19);
           LogoMaterial.a(param8, param9, -128);
           if (param16 != 255) {
             field_P = 121;
           }
-          ClassicBallSkin.a((byte) -91, param1, param10, param7, param3, param14);
+          ClassicBallSkin.configureClientNoticeFrames((byte) -91, param1, param10, param7, param3, param14);
           BitmapTextLayout.a(111, param15, param17, param18);
           GradientPaletteSupport.a((byte) -96, param11, param20, param6);
           return;

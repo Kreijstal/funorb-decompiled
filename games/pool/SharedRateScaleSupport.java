@@ -21,7 +21,7 @@ final class SharedRateScaleSupport {
         field_c = null;
     }
 
-    final static byte a(int[] param0, int param1, int[] param2, int[] param3, int[] param4, int param5) {
+    final static byte clipPerspectiveSegment(int[] y, int startIndex, int[] x, int[] attribute, int[] depth, int obfuscationGuard) {
         int stackIn_3_0 = 0;
         int stackIn_49_0 = 0;
         RuntimeException stackIn_52_0 = null;
@@ -67,13 +67,13 @@ final class SharedRateScaleSupport {
         int var20Lifetime2;
         int var20Lifetime3;
         try {
-          var6_int = param2[1 + param1] - param2[param1];
-          var7 = -param0[param1] + param0[param1 + 1];
-          var8 = -param4[param1] + param4[1 + param1];
-          if (param3 == null) {
+          var6_int = x[1 + startIndex] - x[startIndex];
+          var7 = -y[startIndex] + y[startIndex + 1];
+          var8 = -depth[startIndex] + depth[1 + startIndex];
+          if (attribute == null) {
             stackIn_3_0 = 0;
           } else {
-            stackIn_3_0 = -param3[param1] + param3[1 + param1];
+            stackIn_3_0 = -attribute[startIndex] + attribute[1 + startIndex];
           }
           var9 = stackIn_3_0;
           var10 = 0;
@@ -84,10 +84,10 @@ final class SharedRateScaleSupport {
           var15 = var11;
           var16 = -(512 * var6_int) + var11 * var8;
           if (var16 != 0) {
-            var19 = (512 * param2[param1] - var11 * param4[param1] << 8) / var16;
+            var19 = (512 * x[startIndex] - var11 * depth[startIndex] << 8) / var16;
             if (var19 > var17 &&
               var18 > var19) {
-              var20 = ((param4[param1] << 8) + var8 * var19) / 512;
+              var20 = ((depth[startIndex] << 8) + var8 * var19) / 512;
               if (var20 > 0) {
                 if (0 >= var6_int * var13 + var8 * var15) {
                   var18 = var19;
@@ -105,10 +105,10 @@ final class SharedRateScaleSupport {
           var16Lifetime1 = var11Lifetime1 * var8 - var6_int * 512;
           var14 = -512;
           if (var16Lifetime1 != 0) {
-            var19Lifetime1 = (512 * param2[param1] - param4[param1] * var11Lifetime1 << 8) / var16Lifetime1;
+            var19Lifetime1 = (512 * x[startIndex] - depth[startIndex] * var11Lifetime1 << 8) / var16Lifetime1;
             if (var19Lifetime1 > var17 &&
               var18 > var19Lifetime1) {
-              var20Lifetime1 = ((param4[param1] << 8) + var8 * var19Lifetime1) / 512;
+              var20Lifetime1 = ((depth[startIndex] << 8) + var8 * var19Lifetime1) / 512;
               if (var20Lifetime1 > 0) {
                 if (var15Lifetime1 * var8 + var13Lifetime1 * var6_int <= 0) {
                   var18 = var19Lifetime1;
@@ -120,17 +120,17 @@ final class SharedRateScaleSupport {
               }
             }
           }
-          if (param5 != 4) {
+          if (obfuscationGuard != 4) {
             field_a = -4;
           }
           var12 = -TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipBottom;
           var15Lifetime2 = var12;
           var16Lifetime2 = var12 * var8 - var7 * 512;
           if (0 != var16Lifetime2) {
-            var19Lifetime2 = (-(var12 * param4[param1]) + 512 * param0[param1] << 8) / var16Lifetime2;
+            var19Lifetime2 = (-(var12 * depth[startIndex]) + 512 * y[startIndex] << 8) / var16Lifetime2;
             if (var17 < var19Lifetime2 &&
               var19Lifetime2 < var18) {
-              var20Lifetime2 = (var8 * var19Lifetime2 + (param4[param1] << 8)) / 512;
+              var20Lifetime2 = (var8 * var19Lifetime2 + (depth[startIndex] << 8)) / 512;
               if (0 < var20Lifetime2) {
                 if (var8 * var15Lifetime2 + var14 * var7 > 0) {
                   var17 = var19Lifetime2;
@@ -147,10 +147,10 @@ final class SharedRateScaleSupport {
           var15Lifetime3 = -var12Lifetime1;
           var16Lifetime3 = -(512 * var7) + var12Lifetime1 * var8;
           if (var16Lifetime3 != 0) {
-            var19Lifetime3 = (512 * param0[param1] - var12Lifetime1 * param4[param1] << 8) / var16Lifetime3;
+            var19Lifetime3 = (512 * y[startIndex] - var12Lifetime1 * depth[startIndex] << 8) / var16Lifetime3;
             if (var17 < var19Lifetime3 &&
               var19Lifetime3 < var18) {
-              var20Lifetime3 = ((param4[param1] << 8) + var19Lifetime3 * var8) / 512;
+              var20Lifetime3 = ((depth[startIndex] << 8) + var19Lifetime3 * var8) / 512;
               if (var20Lifetime3 > 0) {
                 if (var15Lifetime3 * var8 + var14Lifetime1 * var7 > 0) {
                   var17 = var19Lifetime3;
@@ -163,19 +163,19 @@ final class SharedRateScaleSupport {
             }
           }
           if (var17 != 0) {
-            param2[param1] = param2[param1] + (var6_int * var17 >> 8);
-            param0[param1] = param0[param1] + (var7 * var17 >> 8);
-            param4[param1] = param4[param1] + (var17 * var8 >> 8);
-            if (param3 != null) {
-              param3[param1] = param3[param1] + (var17 * var9 >> 8);
+            x[startIndex] = x[startIndex] + (var6_int * var17 >> 8);
+            y[startIndex] = y[startIndex] + (var7 * var17 >> 8);
+            depth[startIndex] = depth[startIndex] + (var17 * var8 >> 8);
+            if (attribute != null) {
+              attribute[startIndex] = attribute[startIndex] + (var17 * var9 >> 8);
             }
           }
           if (256 != var18) {
-            param2[param1 + 1] = param2[param1 + 1] - (var6_int * (256 - var18) >> 8);
-            param0[param1 + 1] = param0[param1 + 1] - (var7 * (-var18 + 256) >> 8);
-            param4[1 + param1] = param4[1 + param1] - ((-var18 + 256) * var8 >> 8);
-            if (param3 != null) {
-              param3[1 + param1] = param3[1 + param1] - (var9 * (-var18 + 256) >> 8);
+            x[startIndex + 1] = x[startIndex + 1] - (var6_int * (256 - var18) >> 8);
+            y[startIndex + 1] = y[startIndex + 1] - (var7 * (-var18 + 256) >> 8);
+            depth[1 + startIndex] = depth[1 + startIndex] - ((-var18 + 256) * var8 >> 8);
+            if (attribute != null) {
+              attribute[1 + startIndex] = attribute[1 + startIndex] - (var9 * (-var18 + 256) >> 8);
             }
           }
           stackIn_49_0 = var10;
@@ -185,30 +185,30 @@ final class SharedRateScaleSupport {
           var6 = decompiledCaughtException;
           stackIn_52_0 = var6;
           stackIn_52_1 = new StringBuilder().append("ic.D(");
-          if (param0 == null) {
+          if (y == null) {
             stackIn_53_2 = "null";
           } else {
             stackIn_53_2 = "{...}";
           }
-          stackIn_55_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_55_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(startIndex).append(',');
+          if (x == null) {
             stackIn_56_2 = "null";
           } else {
             stackIn_56_2 = "{...}";
           }
           stackIn_58_1 = ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',');
-          if (param3 == null) {
+          if (attribute == null) {
             stackIn_59_2 = "null";
           } else {
             stackIn_59_2 = "{...}";
           }
           stackIn_61_1 = ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',');
-          if (param4 == null) {
+          if (depth == null) {
             stackIn_62_2 = "null";
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

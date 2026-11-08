@@ -83,7 +83,7 @@ class DualLinkNode extends IntrusiveNode {
         } else {
           var7 = RankingsProtocolSupport.sendPm;
         }
-        ChatPanelSupport.a(-57, param1, param2, param5, var7, param3, param0, param6);
+        ChatPanelSupport.updateChatCompositionPanel(-57, param1, param2, param5, var7, param3, param0, param6);
     }
 
     final static int a(int param0, String[] param1, String param2, BitmapFont param3, int param4) {

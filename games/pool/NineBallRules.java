@@ -412,7 +412,7 @@ final class NineBallRules extends GameRules {
         IsaacCipher var3 = var6;
         for (var4 = 0; var4 < 7; var4++) {
           CachedArchiveSource.field_M[var4] = var4 + 2;
-          FullscreenDisplayMode.field_a[var4] = var6.a(23165, 2048);
+          FullscreenDisplayMode.field_a[var4] = var6.nextInt(23165, 2048);
         }
         StrongCacheEntry.sortPairedArrays(FullscreenDisplayMode.field_a, CachedArchiveSource.field_M, (byte) -54);
         Js5Transport.field_s[1] = 1;

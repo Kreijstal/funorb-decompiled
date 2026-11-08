@@ -160,7 +160,7 @@ final class LocalGameSetupScreen extends MenuScreen {
           OpacityWidget.field_P.bindAsRenderTarget(15100);
           FaceNormal.configureMembershipBenefitsBackground(-2107, PotEvent.field_m, ReportAbuseDialog.textGameName);
           AchievementNotice.configureMembershipBenefitsHeader(40, QuickChatMenu.field_Rb, 80, 80, 15, -2400, 2, -1, 40);
-          GameApplet.a(ShotEvent.field_o, -58);
+          GameApplet.setMembershipSlides(ShotEvent.field_o, -58);
           CheckboxPainter.setMembershipPreviewSprite(AccountDisplayNameSupport.field_g, 106);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

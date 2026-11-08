@@ -8,10 +8,10 @@ final class BrowserCookieWriter {
     static Sprite[][] field_a;
     static int[][] field_e;
 
-    final static void a(boolean param0, int param1, int param2) {
-        ScrollPane.a(param1, (byte) 0, param2);
+    final static void drawBallPreview(boolean enabled, int transitionDuration, int transitionTick) {
+        ScrollPane.a(transitionDuration, (byte) 0, transitionTick);
         AppletUrlSupport.field_e.toRotationMatrix(LookupRetrySupport.field_h, -59);
-        if (!param0) {
+        if (!enabled) {
           return;
         }
         if (null != LoginPayloadKind.field_a.field_a) {
@@ -31,21 +31,21 @@ final class BrowserCookieWriter {
         }
     }
 
-    final static void a(MeshBuilder param0, boolean param1) {
+    final static void swapMeshXZ(MeshBuilder mesh, boolean obfuscationGuard) {
         int[] var4 = null;
         try {
-          if (!param1) {
+          if (!obfuscationGuard) {
             String var3 = (String) null;
             BrowserCookieWriter.setBrowserCookie(-76L, (byte) -91, (java.applet.Applet) null, (String) null, (String) null);
           }
-          var4 = param0.vertexZ;
+          var4 = mesh.vertexZ;
           int[] var2 = var4;
-          param0.vertexZ = param0.vertexX;
-          param0.vertexX = var4;
-          ImageProducerRasterBuffer.reverseFaceWinding(param0, (byte) 38);
-          param0.clearCaches();
+          mesh.vertexZ = mesh.vertexX;
+          mesh.vertexX = var4;
+          ImageProducerRasterBuffer.reverseFaceWinding(mesh, (byte) 38);
+          mesh.clearCaches();
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nn.A(" + (mesh != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

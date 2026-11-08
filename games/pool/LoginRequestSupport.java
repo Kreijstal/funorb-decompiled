@@ -122,7 +122,7 @@ final class LoginRequestSupport {
             RankingsScreen.field_J = LogoFinalFrameLoader.field_a;
           }
           if (RankingsScreen.field_J == LogoFinalFrameLoader.field_a &&
-            DialogLayer.b((byte) 118, 1)) {
+            DialogLayer.pollPacketBytes((byte) 118, 1)) {
             var9Lifetime1 = PlayerContextMenu.field_e.readUnsignedByte(-80);
             PlayerContextMenu.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -139,7 +139,7 @@ final class LoginRequestSupport {
                 return stackIn_33_0;
               }
               if (99 == var9Lifetime1) {
-                DialogLayer.b((byte) 63, WhirlpoolHasher.constantOne(0));
+                DialogLayer.pollPacketBytes((byte) 63, WhirlpoolHasher.constantOne(0));
                 AchievementNotice.field_q = new Boolean(DebugTuningSupport.readBoolean((byte) 104, PlayerContextMenu.field_e));
                 PlayerContextMenu.field_e.position = 0;
               } else {
@@ -151,10 +151,10 @@ final class LoginRequestSupport {
           }
           if (RankingsScreen.field_J == TutorialSelectScreen.field_L) {
             var9Lifetime2 = 2;
-            if (DialogLayer.b((byte) 44, var9Lifetime2)) {
+            if (DialogLayer.pollPacketBytes((byte) 44, var9Lifetime2)) {
               var10Lifetime1 = PlayerContextMenu.field_e.readUnsignedShort(-1034);
               PlayerContextMenu.field_e.position = 0;
-              if (DialogLayer.b((byte) 49, var10Lifetime1)) {
+              if (DialogLayer.pollPacketBytes((byte) 49, var10Lifetime1)) {
                 var11 = LoginPayloadFactory.field_b.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   LoginPayloadFactory.field_b[var12] = PlayerContextMenu.field_e.readString(10762);

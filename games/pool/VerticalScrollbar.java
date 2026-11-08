@@ -463,7 +463,7 @@ final class VerticalScrollbar extends UiComponent {
           }
           var2 = NodeHashTableIterator.field_j.last((byte) 87);
           while (var2 != null) {
-            MusicPatchEnvelope.a(obfuscationGuard ^ 59, opcode);
+            MusicPatchEnvelope.sendAccountStateQuery(obfuscationGuard ^ 59, opcode);
             var2 = NodeHashTableIterator.field_j.previous((byte) -5);
           }
           if (obfuscationGuard == 58) {

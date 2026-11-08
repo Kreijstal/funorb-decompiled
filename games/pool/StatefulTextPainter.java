@@ -123,7 +123,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             this.stateLayers[var4_int] = new WidgetStyleLayer();
           }
           if (param0 != -79) {
-            StatefulTextPainter.c(-45);
+            StatefulTextPainter.createAccountNameValue(-45);
           }
           this.stateLayers[param1].frameSprites = param2;
         } catch (RuntimeException runtimeException) {
@@ -279,11 +279,11 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static LoginTextValue c(int param0) {
-        if (param0 != 5) {
-          StatefulTextPainter.c(-37);
+    final static LoginTextValue createAccountNameValue(int obfuscationGuard) {
+        if (obfuscationGuard != 5) {
+          StatefulTextPainter.createAccountNameValue(-37);
         }
-        return new LoginTextValue(LoginTextSupport.getAccountName(true), DualLinkDequeIterator.a(true));
+        return new LoginTextValue(LoginTextSupport.getAccountName(true), DualLinkDequeIterator.isAccountNameInputIncomplete(true));
     }
 
     static {

@@ -38,7 +38,7 @@ final class BallDebugOverlay implements SceneDrawable {
           var6 = param4.getParameter("currency");
           if (var6 != null &&
             AgeValidator.isFriend(10, (CharSequence) ((Object) var6))) {
-            VertexTransformSupport.field_e = GameApplet.a((byte) 63, (CharSequence) ((Object) var6));
+            VertexTransformSupport.field_e = GameApplet.parseDecimalInt((byte) 63, (CharSequence) ((Object) var6));
           } else {
             VertexTransformSupport.field_e = 2;
           }

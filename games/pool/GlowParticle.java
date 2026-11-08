@@ -162,7 +162,7 @@ final class GlowParticle {
           }
           if (CookieDateSupport.field_b == 2 &&
             !SupportPageLauncher.isQuickChatRecipientAvailable(false)) {
-            boolean decompiledSharedTail2 = !(!DialogLayer.a(ResourceArchive.field_a, -1));
+            boolean decompiledSharedTail2 = !(!DialogLayer.isFriendName(ResourceArchive.field_a, -1));
             if (!decompiledSharedTail2) {
               var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ArrayWidgetGroup.field_I}, obfuscationGuard ^ -2, LookupRetrySupport.privatechatFriendNotlisted);
               decompiledSharedTail2 = (var10 != 0);

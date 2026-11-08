@@ -130,7 +130,7 @@ final class ArchiveLoadSequence {
           EmailAvailabilityValidator.field_n = param4;
           MonotonicClock.field_b.text = param1;
           LobbyGame.field_Vb.text = param0;
-          FreePlayRules.c((byte) -86);
+          FreePlayRules.layoutDecisionDialog((byte) -86);
           GzipDecoder.field_h = true;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rb.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');

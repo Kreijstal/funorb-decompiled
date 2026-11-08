@@ -222,7 +222,7 @@ final class ViewportController {
           ViewportController.updateIgnoreListInteraction(true, 91, 8);
         }
         HotspotRectangle.a((byte) 55, active);
-        AudioService.a(0, active);
+        AudioService.drawTransientInterface(0, active);
     }
 
     private final void applyConstrainedViewportSize(int obfuscationGuard) {

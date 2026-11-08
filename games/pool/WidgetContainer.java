@@ -136,7 +136,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           }
           var9 = (UiWidget) (var8.last((byte) -92));
           while (var9 != null) {
-            if (var9.b(-109)) {
+            if (var9.isLinked(-109)) {
               if (var9.handlePointerPress(param0, param1 + this.widgetX, true, param3, param4, this.widgetY + param5, param6)) {
                 return true;
               }
@@ -175,7 +175,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var5 = new IntrusiveDequeCursor(this.children);
           var6 = (UiWidget) (var5.last((byte) -92));
           while (var6 != null) {
-            if (var6.b(-107)) {
+            if (var6.isLinked(-107)) {
               var6.updatePointerState(param0, param1 ^ 0, param2 + this.widgetX, this.widgetY + param3);
               var6 = (UiWidget) (var5.previous(-89));
               continue;
@@ -214,7 +214,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             field_I = 75;
           }
           while (var8 != null) {
-            if (var8.b(-128)) {
+            if (var8.isLinked(-128)) {
               var8.handlePointerRelease(param0 + this.widgetX, param1, this.widgetY + param2, param3, (byte) 94, param5);
               var8 = (UiWidget) (var7.previous(-82));
               continue;
@@ -333,7 +333,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           }
           var9 = (UiWidget) (var8.last((byte) -92));
           while (var9 != null) {
-            if (var9.b(-116)) {
+            if (var9.isLinked(-116)) {
               if (var9.hasKeyboardFocus(-122) &&
                 var9.handlePointerWheel(param0, param1, param2, param3, (byte) -127, param5, param6)) {
                 return true;
@@ -442,7 +442,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var5 = new IntrusiveDequeCursor(this.children);
           var8 = (UiWidget) (var5.last((byte) -92));
           while (var8 != null) {
-            if (var8.b(-115)) {
+            if (var8.isLinked(-115)) {
               if (var8.hasKeyboardFocus(109) &&
                 var8.handleKeyInput(param0, param1, false, param3)) {
                 return true;

@@ -150,7 +150,7 @@ final class TextHotspotRegion extends IntrusiveNode {
               IsaacCipher.field_b[var18] = IsaacCipher.field_b[var18] + QuickChatMenu.field_gc[var15][var18];
             }
             BitmapTextLayout.a(obfuscationGuard + 21815, false, HighScoreRequest.field_p, false, true, IsaacCipher.field_b, var17);
-            CueAim.a(var14, 8355711, var17, var8Lifetime1, var13Lifetime1, var9Lifetime1, var12Lifetime1, var7Lifetime1);
+            CueAim.drawLitMeshFaces(var14, 8355711, var17, var8Lifetime1, var13Lifetime1, var9Lifetime1, var12Lifetime1, var7Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -180,7 +180,7 @@ final class TextHotspotRegion extends IntrusiveNode {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (EmailAvailabilityValidator.a(-2, notificationId) == null) {
+          if (EmailAvailabilityValidator.findNotification(-2, notificationId) == null) {
             var4 = new AnimatedNotification(notificationId);
             var4.renderNotificationText(firstLine, (byte) 120, secondLine);
             MarkerSliderPainter.field_i.addFirst((byte) -20, var4);

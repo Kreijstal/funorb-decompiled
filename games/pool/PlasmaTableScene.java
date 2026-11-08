@@ -105,58 +105,58 @@ final class PlasmaTableScene extends TableScene {
         if (var6 == 5) {
           var6 = MaxLengthTextInputWidget.nextRandomInt(4, true, RankingsRequest.field_r);
           if (0 == var6) {
-            MusicPatchEnvelope.a(100, this.field_hb, param3, param1);
+            MusicPatchEnvelope.playSoundEffect(100, this.field_hb, param3, param1);
           } else {
             if (var6 != 1) {
               if (var6 == 2) {
-                MusicPatchEnvelope.a(100, this.field_db, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, this.field_db, param3, param1);
               } else {
                 if (var6 == 3) {
-                  MusicPatchEnvelope.a(100, this.field_T, param3, param1);
+                  MusicPatchEnvelope.playSoundEffect(100, this.field_T, param3, param1);
                 }
               }
             } else {
-              MusicPatchEnvelope.a(100, this.field_N, param3, param1);
+              MusicPatchEnvelope.playSoundEffect(100, this.field_N, param3, param1);
             }
           }
         } else {
           if (2 != var6) {
             if (3 != var6) {
               if (var6 == 7) {
-                MusicPatchEnvelope.a(100, this.field_W, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, this.field_W, param3, param1);
               } else {
                 if (var6 == 8) {
-                  MusicPatchEnvelope.a(100, this.field_Q, param3, param1);
+                  MusicPatchEnvelope.playSoundEffect(100, this.field_Q, param3, param1);
                 } else {
                   if (var6 != 6) {
                     if (var6 == 4) {
-                      MusicPatchEnvelope.a(100, this.field_J, param3, param1);
+                      MusicPatchEnvelope.playSoundEffect(100, this.field_J, param3, param1);
                     } else {
                       if (var6 != 9) {
                         if (var6 == 10) {
-                          MusicPatchEnvelope.a(100, this.field_fb, param3, param1 * 64 >> 8);
+                          MusicPatchEnvelope.playSoundEffect(100, this.field_fb, param3, param1 * 64 >> 8);
                         }
                       } else {
                         if (null != this.field_bb) {
                           this.stopTableSound((byte) 73, true, param0);
                         }
                         this.field_bb = PcmSampleStream.createAtStepAndVolume(this.field_U, 256, 0);
-                        this.field_bb.e(-1);
-                        DualLinkDequeIterator.a(-24296, this.field_bb);
+                        this.field_bb.setLoopCount(-1);
+                        DualLinkDequeIterator.registerSoundEffectStream(-24296, this.field_bb);
                         this.field_bb.rampVolumeInSteps(4096, 16 * param1 >> 8);
                       }
                     }
                   } else {
-                    MusicPatchEnvelope.a(100, this.field_O, param3, param1);
+                    MusicPatchEnvelope.playSoundEffect(100, this.field_O, param3, param1);
                     System.out.println("playing respot the white");
                   }
                 }
               }
             } else {
-              MusicPatchEnvelope.a(100, this.field_Y, param3, param1);
+              MusicPatchEnvelope.playSoundEffect(100, this.field_Y, param3, param1);
             }
           } else {
-            MusicPatchEnvelope.a(100, this.field_P, param3, param1);
+            MusicPatchEnvelope.playSoundEffect(100, this.field_P, param3, param1);
           }
         }
     }
@@ -678,7 +678,7 @@ final class PlasmaTableScene extends TableScene {
               return;
             }
             if (!NanoTickClock.isSegmentOutsideViewFrustum(113, this.field_R[1], this.field_R[0], this.field_X[1], this.field_L[1], this.field_L[0], this.field_X[0])) {
-              this.field_S = SharedRateScaleSupport.a(this.field_X, 0, this.field_R, this.field_M, this.field_L, 4);
+              this.field_S = SharedRateScaleSupport.clipPerspectiveSegment(this.field_X, 0, this.field_R, this.field_M, this.field_L, 4);
               var10 = 0;
               var5_intLifetime1 = var10;
               while (this.field_R.length > var10) {
@@ -1020,7 +1020,7 @@ final class PlasmaTableScene extends TableScene {
           }
           if ((this.field_L[0] > 0 ||
             this.field_L[1] > 0) && !NanoTickClock.isSegmentOutsideViewFrustum(59, this.field_R[1], this.field_R[0], this.field_X[1], this.field_L[1], this.field_L[0], this.field_X[0])) {
-            this.field_S = SharedRateScaleSupport.a(this.field_X, 0, this.field_R, this.field_M, this.field_L, 4);
+            this.field_S = SharedRateScaleSupport.clipPerspectiveSegment(this.field_X, 0, this.field_R, this.field_M, this.field_L, 4);
             var12 = 0;
             var6_intLifetime1 = var12;
             while (this.field_R.length > var12) {

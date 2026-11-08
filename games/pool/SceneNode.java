@@ -333,7 +333,7 @@ final class SceneNode {
               var13[1 + var15] >= 0 &&
               !NanoTickClock.isSegmentOutsideViewFrustum(101, var11[var15 + 1], var11[var15], var12[var15 + 1], var13[1 + var15], var13[var15], var12[var15])) {
               var18 = (int[]) null;
-              SharedRateScaleSupport.a(var12, var15, var11, (int[]) null, var13, 4);
+              SharedRateScaleSupport.clipPerspectiveSegment(var12, var15, var11, (int[]) null, var13, 4);
               if (var13[var15] == 0) {
                 var13[var15] = 1;
               }

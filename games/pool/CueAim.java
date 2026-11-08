@@ -6,7 +6,7 @@ final class CueAim {
     int polarAngle;
     static int field_m;
     static int field_b;
-    int field_n;
+    int power;
     int field_d;
     static int field_j;
     int field_e;
@@ -31,7 +31,7 @@ final class CueAim {
         if (param0 != -14513) {
           return (CueAim) null;
         }
-        return new CueAim(this.field_n, this.azimuth, this.polarAngle, this.field_d, this.field_e);
+        return new CueAim(this.power, this.azimuth, this.polarAngle, this.field_d, this.field_e);
     }
 
     final void aimAt(Camera param0, Ball param1, byte param2) {
@@ -51,19 +51,19 @@ final class CueAim {
         }
     }
 
-    final void b(byte param0) {
-        this.field_n = -1;
-        if (param0 < 61) {
+    final void disable(byte obfuscationGuard) {
+        this.power = -1;
+        if (obfuscationGuard < 61) {
           CueAim.a((byte) 30);
         }
     }
 
-    final boolean a(boolean param0) {
-        if (param0) {
+    final boolean isEnabled(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           Ball var3 = (Ball) null;
           this.aimAt((Camera) null, (Ball) null, (byte) 16);
         }
-        return 0 <= this.field_n ? true : false;
+        return 0 <= this.power ? true : false;
     }
 
     final void writeTo(PacketBuffer param0, byte param1) {
@@ -71,7 +71,7 @@ final class CueAim {
           return;
         }
         try {
-          param0.writeShort((byte) -81, this.field_n);
+          param0.writeShort((byte) -81, this.power);
           param0.writeShort((byte) -81, this.azimuth & 2047);
           param0.writeShort((byte) -81, this.polarAngle);
           param0.writeByte(this.field_d, false);
@@ -81,7 +81,7 @@ final class CueAim {
         }
     }
 
-    final static void a(int param0, int param1, TriangleMesh param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawLitMeshFaces(int param0, int param1, TriangleMesh param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_14_0 = 0;
         int[] stackIn_16_0 = null;
         int stackIn_17_1 = 0;
@@ -144,7 +144,7 @@ final class CueAim {
           if (var44.field_K != null &&
             var44.field_I > 1) {
             var60 = var44.field_K;
-            IntrusiveDeque.a(ProgressDialog.field_ib, 0, var60, 0, -147296924);
+            IntrusiveDeque.groupBucketedFacesByPriority(ProgressDialog.field_ib, 0, var60, 0, -147296924);
           } else {
             FixedAngleSupport.compactFaceBuckets(-94);
           }
@@ -286,7 +286,7 @@ final class CueAim {
         PasswordValidator.a(-124, AlternateLongAndTextLoginPayload.field_n, AlignedIconLabel.field_Lb, DiskArchiveRequest.field_J, AccountStateQuery.field_m);
         if (param0 > -97) {
           TriangleMesh var2 = (TriangleMesh) null;
-          CueAim.a(-66, 60, (TriangleMesh) null, -82, -71, 60, 97, 51);
+          CueAim.drawLitMeshFaces(-66, 60, (TriangleMesh) null, -82, -71, 60, 97, 51);
         }
     }
 
@@ -304,13 +304,13 @@ final class CueAim {
         int var3_intLifetime4;
         var4 = Pool.field_O;
         try {
-          if (this.field_n != param1.field_n) {
-            var3_int = param1.field_n - this.field_n;
+          if (this.power != param1.power) {
+            var3_int = param1.power - this.power;
             if (8 > var3_int &&
               var3_int > -8) {
-              this.field_n = param1.field_n;
+              this.power = param1.power;
             } else {
-              this.field_n = this.field_n + var3_int / 8;
+              this.power = this.power + var3_int / 8;
             }
           }
           if (param0 != 255) {
@@ -374,16 +374,16 @@ final class CueAim {
         }
     }
 
-    final static void a(int param0, Sprite param1) {
+    final static void pushSpriteRenderTarget(int obfuscationGuard, Sprite sprite) {
         try {
           RasterStateSupport.pushRasterSnapshot((byte) 90);
-          SoftwareRasterizer.setTarget(param1.field_D, param1.field_w, param1.field_y);
-          if (param0 < 38) {
+          SoftwareRasterizer.setTarget(sprite.field_D, sprite.field_w, sprite.field_y);
+          if (obfuscationGuard < 38) {
             Sprite var3 = (Sprite) null;
-            CueAim.a(30, (Sprite) null);
+            CueAim.pushSpriteRenderTarget(30, (Sprite) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kj.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kj.G(" + obfuscationGuard + ',' + (sprite != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -398,7 +398,7 @@ final class CueAim {
           if (param0 != -2043) {
             field_j = -19;
           }
-          stackIn_9_0 = (param1.field_n == this.field_n) && (param1.azimuth == this.azimuth) && (param1.polarAngle == this.polarAngle) && (this.field_d == param1.field_d) && (param1.field_e == this.field_e);
+          stackIn_9_0 = (param1.power == this.power) && (param1.azimuth == this.azimuth) && (param1.polarAngle == this.polarAngle) && (this.field_d == param1.field_d) && (param1.field_e == this.field_e);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -415,7 +415,7 @@ final class CueAim {
     }
 
     final void readFrom(int param0, PacketBuffer param1) {
-        this.field_n = param1.readUnsignedShort(-1034);
+        this.power = param1.readUnsignedShort(-1034);
         this.azimuth = param1.readUnsignedShort(-1034);
         this.polarAngle = param1.readUnsignedShort(param0 ^ -64266);
         if (param0 != 65280) {
@@ -433,11 +433,11 @@ final class CueAim {
         try {
           this.azimuth = param1.azimuth;
           this.field_d = param1.field_d;
-          this.field_n = param1.field_n;
+          this.power = param1.power;
           this.polarAngle = param1.polarAngle;
           if (param0 < 21) {
             TriangleMesh var4 = (TriangleMesh) null;
-            CueAim.a(63, -58, (TriangleMesh) null, 93, 55, 29, 35, -81);
+            CueAim.drawLitMeshFaces(63, -58, (TriangleMesh) null, 93, 55, 29, 35, -81);
           }
           this.field_e = param1.field_e;
         } catch (RuntimeException runtimeException) {
@@ -450,11 +450,11 @@ final class CueAim {
         this.polarAngle = 576;
         this.field_e = 0;
         this.azimuth = 0;
-        this.field_n = 2048;
+        this.power = 2048;
     }
 
     private CueAim(int param0, int param1, int param2, int param3, int param4) {
-        this.field_n = param0;
+        this.power = param0;
         this.field_d = param3;
         this.polarAngle = param2;
         this.azimuth = param1;

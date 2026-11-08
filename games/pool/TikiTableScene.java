@@ -548,16 +548,16 @@ final class TikiTableScene extends ModelTableScene {
         if (5 != var6) {
           if (2 != var6) {
             if (var6 == 3) {
-              MusicPatchEnvelope.a(100, this.field_S, param3, param1);
+              MusicPatchEnvelope.playSoundEffect(100, this.field_S, param3, param1);
             } else {
               if (0 == var6) {
-                MusicPatchEnvelope.a(100, this.field_rb, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, this.field_rb, param3, param1);
               } else {
                 if (var6 == 1) {
-                  MusicPatchEnvelope.a(100, this.field_mb, param3, param1);
+                  MusicPatchEnvelope.playSoundEffect(100, this.field_mb, param3, param1);
                 } else {
                   if (var6 == 6) {
-                    MusicPatchEnvelope.a(100, this.field_W, param3, param1);
+                    MusicPatchEnvelope.playSoundEffect(100, this.field_W, param3, param1);
                     System.out.println("playing respot the white");
                   } else {
                     if (var6 != 4) {
@@ -565,27 +565,27 @@ final class TikiTableScene extends ModelTableScene {
                         super.playTableSound(param0, param1, (byte) -102, param3);
                       }
                     } else {
-                      MusicPatchEnvelope.a(100, this.field_sb, param3, param1);
+                      MusicPatchEnvelope.playSoundEffect(100, this.field_sb, param3, param1);
                     }
                   }
                 }
               }
             }
           } else {
-            MusicPatchEnvelope.a(100, this.field_bb, param3, param1);
+            MusicPatchEnvelope.playSoundEffect(100, this.field_bb, param3, param1);
           }
         } else {
           var6 = MaxLengthTextInputWidget.nextRandomInt(3, true, RankingsRequest.field_r);
           if (var6 != 0) {
             if (var6 != 1) {
               if (var6 == 2) {
-                MusicPatchEnvelope.a(100, this.field_jb, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, this.field_jb, param3, param1);
               }
             } else {
-              MusicPatchEnvelope.a(100, this.field_ib, param3, param1);
+              MusicPatchEnvelope.playSoundEffect(100, this.field_ib, param3, param1);
             }
           } else {
-            MusicPatchEnvelope.a(100, this.field_Q, param3, param1);
+            MusicPatchEnvelope.playSoundEffect(100, this.field_Q, param3, param1);
           }
         }
     }
@@ -1167,7 +1167,7 @@ final class TikiTableScene extends ModelTableScene {
         int var9 = 0;
         var9 = Pool.field_O;
         try {
-          var3_int = param0.camera.b(param1 - 9419);
+          var3_int = param0.camera.getBackdropPitchOffset(param1 - 9419);
           if (param1 != 9291) {
             return;
           }
@@ -1222,21 +1222,21 @@ final class TikiTableScene extends ModelTableScene {
         for (var3 = 2; var3 < FreePlayRules.field_j.length; var3++) {
           if (null == FreePlayRules.field_j[var3] ||
             FreePlayRules.field_j[var3].field_o.isSamplePositionOutOfRange() ||
-            !FreePlayRules.field_j[var3].field_o.b(param0 ^ 4492)) {
+            !FreePlayRules.field_j[var3].field_o.isLinked(param0 ^ 4492)) {
             stackIn_11_0 = (FreePlayRules.field_j[var3] == null) ? 11 : 22;
             var4 = MaxLengthTextInputWidget.nextRandomInt(stackIn_11_0, true, RankingsRequest.field_r);
             var6 = var4;
             if (var6 == 0) {
-              FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_db, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+              FreePlayRules.field_j[var3] = DualLinkDequeIterator.registerSoundEffectStream(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_db, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
             } else {
               if (var6 != 1) {
                 if (2 == var6) {
-                  FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_kb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+                  FreePlayRules.field_j[var3] = DualLinkDequeIterator.registerSoundEffectStream(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_kb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                 } else {
                   if (var6 != 3) {
                     if (4 != var6) {
                       if (var6 == 5) {
-                        FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_Z, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+                        FreePlayRules.field_j[var3] = DualLinkDequeIterator.registerSoundEffectStream(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_Z, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                       } else {
                         if (var6 != 6) {
                           if (var6 != 7) {
@@ -1250,7 +1250,7 @@ final class TikiTableScene extends ModelTableScene {
                                     this.field_cb != var5 &&
                                     var5 != this.field_Y &&
                                     this.field_gb != var5) {
-                                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+                                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.registerSoundEffectStream(-24296, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                                   } else {
                                     FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                                   }
@@ -1265,18 +1265,18 @@ final class TikiTableScene extends ModelTableScene {
                             FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_X, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                           }
                         } else {
-                          FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_ab, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+                          FreePlayRules.field_j[var3] = DualLinkDequeIterator.registerSoundEffectStream(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_ab, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                         }
                       }
                     } else {
-                      FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_T, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+                      FreePlayRules.field_j[var3] = DualLinkDequeIterator.registerSoundEffectStream(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_T, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                     }
                   } else {
-                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(TutorialFactory.bitwiseXor(param0, 20231), PcmSampleStream.createAtRatePercentQ6(this.field_pb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.registerSoundEffectStream(TutorialFactory.bitwiseXor(param0, 20231), PcmSampleStream.createAtRatePercentQ6(this.field_pb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                   }
                 }
               } else {
-                FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_nb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+                FreePlayRules.field_j[var3] = DualLinkDequeIterator.registerSoundEffectStream(-24296, PcmSampleStream.createAtRatePercentQ6(this.field_nb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
               }
             }
           }

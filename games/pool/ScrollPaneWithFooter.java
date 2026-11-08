@@ -125,7 +125,7 @@ final class ScrollPaneWithFooter extends UiComponent {
           if (param0 != -83) {
             field_Lb = (IntrusiveDeque) null;
           }
-          ByteRecordSubmission.a(param3.field_L, true, param2.maxDescent + param2.field_L, param3.maxDescent + param3.field_L, param2.field_L);
+          ByteRecordSubmission.configureClientNoticeMetrics(param3.field_L, true, param2.maxDescent + param2.field_L, param3.maxDescent + param3.field_L, param2.field_L);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ao.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

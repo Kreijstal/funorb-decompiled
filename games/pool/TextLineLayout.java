@@ -159,7 +159,7 @@ final class TextLineLayout {
           if (param0 != -27) {
             ratingWon = (String) null;
           }
-          stackIn_3_0 = DualLinkDequeIterator.a(param0 ^ 24317, PcmSampleStream.createAtRatePercent(param1, 100, 96));
+          stackIn_3_0 = DualLinkDequeIterator.registerSoundEffectStream(param0 ^ 24317, PcmSampleStream.createAtRatePercent(param1, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -74,7 +74,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 continue;
               }
               var5++;
-              var8 = GameApplet.a((byte) 89, (CharSequence) ((Object) var7_ref_String));
+              var8 = GameApplet.parseDecimalInt((byte) 89, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (-var5 + var6_int + args[var8].length());
               continue;
             }
@@ -107,7 +107,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
               continue;
             }
             var5Lifetime1++;
-            var10 = GameApplet.a((byte) 88, (CharSequence) ((Object) var9));
+            var10 = GameApplet.parseDecimalInt((byte) 88, (CharSequence) ((Object) var9));
             discarded$0 = var6.append(param2.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$1 = var6.append(args[var10]);
@@ -159,7 +159,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
               }
             }
           } else {
-            ByteStorage.b(3);
+            ByteStorage.showEmptyLoginForm(3);
           }
           if (!param0) {
             var8 = (ButtonWidget) null;

@@ -127,8 +127,8 @@ final class PcmSampleStream extends PcmStream {
         return param5 >> 1;
     }
 
-    final synchronized void e(int param0) {
-        this.field_p = param0;
+    final synchronized void setLoopCount(int loops) {
+        this.field_p = loops;
     }
 
     final int getSchedulingCost() {
@@ -617,15 +617,15 @@ final class PcmSampleStream extends PcmStream {
         }
     }
 
-    final synchronized void g(int param0) {
+    final synchronized void setPositionQ8(int position) {
         int var2 = ((PcmSample) (this.field_n)).field_n.length << 8;
-        if (param0 < -1) {
-          param0 = -1;
+        if (position < -1) {
+          position = -1;
         }
-        if (param0 > var2) {
-          param0 = var2;
+        if (position > var2) {
+          position = var2;
         }
-        this.field_t = param0;
+        this.field_t = position;
     }
 
     final synchronized boolean isRamping() {

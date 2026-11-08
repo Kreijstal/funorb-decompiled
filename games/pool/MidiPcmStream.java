@@ -868,7 +868,7 @@ final class MidiPcmStream extends PcmStream {
           var7.field_o = PcmSampleStream.createAtStepQ8(var6, this.computeNoteSampleStep(param0 + 1, var7), this.computeNoteVolume(true, var7), this.computeNotePan((byte) 121, var7));
         }
         if (var11.field_s[param1] < 0) {
-          var7.field_o.e(-1);
+          var7.field_o.setLoopCount(-1);
         }
         if (var7.field_n >= 0) {
           var8 = this.notesByKeyGroup[param3][var7.field_n];
@@ -1109,7 +1109,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             var5 = (int)((long)var4_int * (long)this.field_U[param1.field_t] >> 6);
           }
-          param1.field_o.g(var5);
+          param1.field_o.setPositionQ8(var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

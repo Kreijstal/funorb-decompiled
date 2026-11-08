@@ -676,7 +676,7 @@ final class PlasmaBallSkin extends BallSkin {
             if (var3_int != -2) {
               if (var3_int != -1) {
                 var4 = AccountMenuText.field_b.isMuteRequested(-10459) ? 1 : 0;
-                ValidationIconWidget.a(var4 != 0, AccountMenuText.field_b.getReportedName(1), var3_int, param1, AccountMenuText.field_b.reportTargetId, -121);
+                ValidationIconWidget.sendAbuseReport(var4 != 0, AccountMenuText.field_b.getReportedName(1), var3_int, param1, AccountMenuText.field_b.reportTargetId, -121);
               }
               AccountMenuText.field_b = null;
               ProgressDialog.m(8421504);

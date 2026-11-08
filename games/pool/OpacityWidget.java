@@ -272,7 +272,7 @@ final class OpacityWidget extends SingleChildWidget {
           return;
         }
         Sprite var6 = new Sprite(this.child.widgetWidth, this.child.widgetHeight);
-        CueAim.a(110, var6);
+        CueAim.pushSpriteRenderTarget(110, var6);
         this.child.renderWidget(param0, (byte) -126, 0, 0);
         TriangleMesh.a(118);
         var6.drawShadedGrayscale(param2 + this.widgetX, this.widgetY + param3, this.opacity);
@@ -343,12 +343,12 @@ final class OpacityWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2, int param3, int param4, byte param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
+    final static void updateLobbyFrame(boolean param0, int param1, boolean param2, int param3, int param4, byte param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
         if (param5 != -12) {
           LobbyGame var13 = (LobbyGame) null;
           OpacityWidget.a(-82, 16, -99, true, (LobbyGame) null, -40, 16, false);
         }
-        DiskCacheWorker.a(param1, param6, param11, param3, param10, param8, param2, param0, 16777215, param9, param4, param7, -124, 16777215);
+        DiskCacheWorker.updateLobbyFrame(param1, param6, param11, param3, param10, param8, param2, param0, 16777215, param9, param4, param7, -124, 16777215);
     }
 
     static {
@@ -359,11 +359,11 @@ final class OpacityWidget extends SingleChildWidget {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$a4481b60e878(boolean param0, int param1, boolean param2, int param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
+    final static void updateLobbyFrameIntArgs(boolean param0, int param1, boolean param2, int param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
         if (param5 != -12) {
           LobbyGame var13 = (LobbyGame) null;
           OpacityWidget.a(-82, 16, -99, true, (LobbyGame) null, -40, 16, false);
         }
-        DiskCacheWorker.a(param1, param6, param11, param3, param10, param8, param2, param0, 16777215, param9, param4, param7, -124, 16777215);
+        DiskCacheWorker.updateLobbyFrame(param1, param6, param11, param3, param10, param8, param2, param0, 16777215, param9, param4, param7, -124, 16777215);
     }
 }

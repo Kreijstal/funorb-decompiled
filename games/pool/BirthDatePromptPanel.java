@@ -50,7 +50,7 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
           var6 = 0;
           while (true) {
             if (var6 >= var5.length) {
-              stackIn_20_0 = ChatPanelSupport.a(0, var3[var3.length - 1]);
+              stackIn_20_0 = ChatPanelSupport.validateNumericDomainSuffix(0, var3[var3.length - 1]);
               return stackIn_20_0;
             }
             var7 = var5[var6];

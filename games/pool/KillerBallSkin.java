@@ -258,8 +258,8 @@ final class KillerBallSkin extends BallSkin {
           }
           this.field_a[1].scaleVertices(8, 8, 8, 4);
           this.field_a[8].scaleVertices(8, 8, 8, 4);
-          IsaacCipher.a(this.field_a[1], 0);
-          IsaacCipher.a(this.field_a[8], 0);
+          IsaacCipher.rebuildTextureTriangles(this.field_a[1], 0);
+          IsaacCipher.rebuildTextureTriangles(this.field_a[8], 0);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ac.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

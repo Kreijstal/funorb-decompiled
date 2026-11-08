@@ -12,48 +12,48 @@ final class AudioService implements Runnable {
     static String loadingSoundeffects;
     volatile boolean stopRequested;
 
-    final static void a(UiComponent param0, byte param1) {
+    final static void collapseComponentHeights(UiComponent component, byte obfuscationGuard) {
         UiComponent var3 = null;
         UiComponent var2 = null;
         UiComponent var2Lifetime1;
         try {
-          if (param1 != 109) {
+          if (obfuscationGuard != 109) {
             field_f = 43;
           }
-          var3 = (UiComponent) (param0.children.last((byte) -74));
+          var3 = (UiComponent) (component.children.last((byte) -74));
           var2 = var3;
           while (var3 != null) {
             var3.height = 0;
             var3.remainingHeight = 0;
             var3.localY = 0;
             var3.remainingY = 0;
-            var3 = (UiComponent) (param0.children.previous((byte) -5));
+            var3 = (UiComponent) (component.children.previous((byte) -5));
             var2Lifetime1 = var3;
           }
-          param0.height = 0;
-          param0.localY = 0;
-          param0.remainingY = 0;
-          param0.remainingHeight = 0;
+          component.height = 0;
+          component.localY = 0;
+          component.remainingY = 0;
+          component.remainingHeight = 0;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mq.A(" + (component != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawTransientInterface(int obfuscationGuard, boolean active) {
         if (null != CacheEntry.field_B) {
           MeshColorSupport.a(CacheEntry.field_B, 1259627265);
         }
         if (PlasmaBallSkin.field_m != null) {
-          PlasmaBallSkin.field_m.a(param1, 12887);
+          PlasmaBallSkin.field_m.draw(active, 12887);
         }
-        LoginPayload.drawNamePopup(-113, param1);
-        if (param0 != 0) {
+        LoginPayload.drawNamePopup(-113, active);
+        if (obfuscationGuard != 0) {
           field_f = 63;
         }
         if (AccountMenuText.field_b != null) {
-          AccountMenuText.field_b.drawRoot((byte) -79, param1);
+          AccountMenuText.field_b.drawRoot((byte) -79, active);
         }
-        PacketDiagnosticsSupport.a(48, param1);
+        PacketDiagnosticsSupport.a(48, active);
     }
 
     public final void run() {

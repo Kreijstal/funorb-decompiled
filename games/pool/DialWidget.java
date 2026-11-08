@@ -57,7 +57,7 @@ final class DialWidget extends ButtonWidget {
         if (!(LobbyPlayer.field_fc <= 200)) {
           var5 = (-LobbyPlayer.field_fc + 250 << 8) / 50;
         }
-        CueAim.a(63, LookupProtocolSupport.field_c);
+        CueAim.pushSpriteRenderTarget(63, LookupProtocolSupport.field_c);
         TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clear();
         TextHotspotRegion.drawIntroMeshes(-21818);

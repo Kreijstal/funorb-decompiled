@@ -69,7 +69,7 @@ final class MidiNoteMixer extends PcmStream {
                 ((MidiPcmStream) (Object) stackIn_9_0).applyNoteSampleOffset(stackIn_9_1, stackIn_9_2, stackIn_10_3);
               }
               if (voice.field_u.field_s[voice.field_A] < 0) {
-                voice.field_o.e(-1);
+                voice.field_o.setLoopCount(-1);
               }
               frames = voice.field_y / var4_int;
             }
@@ -141,7 +141,7 @@ final class MidiNoteMixer extends PcmStream {
                 voice.field_o = PcmSampleStream.createAtStepQ8(voice.field_C, var11.getSampleStepMagnitude(), var11.getVolume(), var11.getPan());
               }
               if (voice.field_u.field_s[voice.field_A] < 0) {
-                voice.field_o.e(-1);
+                voice.field_o.setLoopCount(-1);
               }
               var11.fadeOutAndUnlink(var9);
               var11.mixInto(destination, offset, endOffset - offset);

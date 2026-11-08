@@ -141,7 +141,7 @@ final class PolarTableScene extends ModelTableScene {
           CookieDateSupport.fillScreenWhite(-3143);
           this.a(true, param1);
           this.a();
-          this.a(GzipDecoder.field_d, param1.camera.b(param0 - 72));
+          this.a(GzipDecoder.field_d, param1.camera.getBackdropPitchOffset(param0 - 72));
           this.prepareBallDrawOrder(false, var37, var4);
           if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
             this.drawBallsInOrder(var37, (byte) 122, false, var4, false);
@@ -966,13 +966,13 @@ final class PolarTableScene extends ModelTableScene {
             var6 = MaxLengthTextInputWidget.nextRandomInt(3, true, RankingsRequest.field_r);
             switch (var6) {
               case 1:
-                MusicPatchEnvelope.a(100, this.field_cb, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, this.field_cb, param3, param1);
                 break;
               case 2:
-                MusicPatchEnvelope.a(100, this.field_ab, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, this.field_ab, param3, param1);
                 break;
               case 0:
-                MusicPatchEnvelope.a(100, this.field_ib, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, this.field_ib, param3, param1);
                 break;
               default:
                 break;
@@ -984,29 +984,29 @@ final class PolarTableScene extends ModelTableScene {
                   var6 != 3) {
                   switch (var6) {
                     case 0:
-                      MusicPatchEnvelope.a(100, this.field_Y, param3, param1);
+                      MusicPatchEnvelope.playSoundEffect(100, this.field_Y, param3, param1);
                       break regionExit1;
                     case 1:
-                      MusicPatchEnvelope.a(100, this.field_X, param3, param1);
+                      MusicPatchEnvelope.playSoundEffect(100, this.field_X, param3, param1);
                       break regionExit1;
                     case 6:
-                      MusicPatchEnvelope.a(100, this.field_S, param3, param1);
+                      MusicPatchEnvelope.playSoundEffect(100, this.field_S, param3, param1);
                       System.out.println("playing respot the white");
                       break regionExit1;
                     case 4:
-                      MusicPatchEnvelope.a(100, this.field_jb, param3, param1);
+                      MusicPatchEnvelope.playSoundEffect(100, this.field_jb, param3, param1);
                       break regionExit1;
                     default:
                       super.playTableSound(param0, param1, (byte) 115, param3);
                       break regionExit1;
                   }
                 }
-                MusicPatchEnvelope.a(100, this.field_hb, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, this.field_hb, param3, param1);
               } else {
-                MusicPatchEnvelope.a(100, this.field_bb, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, this.field_bb, param3, param1);
               }
             } else {
-              MusicPatchEnvelope.a(100, this.field_mb, param3, param1);
+              MusicPatchEnvelope.playSoundEffect(100, this.field_mb, param3, param1);
             }
           }
         }
@@ -1034,7 +1034,7 @@ final class PolarTableScene extends ModelTableScene {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param1.camera.b(-128);
+          var3_int = param1.camera.getBackdropPitchOffset(-128);
           if (!param0) {
             PolarTableScene.clearSharedReferences((byte) -126);
           }

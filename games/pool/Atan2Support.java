@@ -13,7 +13,7 @@ final class Atan2Support {
     static BufferedSocket field_c;
     int field_g;
 
-    final static String a(int param0, String param1, int param2) {
+    final static String addIgnore(int opcode, String name, int operation) {
         RuntimeException var3 = null;
         int var4 = 0;
         CipherPacketBuffer var5 = null;
@@ -30,12 +30,12 @@ final class Atan2Support {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = (CharSequence) ((Object) param1);
-          if (!ProgressBarWidget.isAllowedDisplayName(param2 ^ -25906, var6)) {
+          var6 = (CharSequence) ((Object) name);
+          if (!ProgressBarWidget.isAllowedDisplayName(operation ^ -25906, var6)) {
             stackIn_2_0 = ModelInstance.invalidName;
             return stackIn_2_0;
           }
-          if (BallEvent.a((byte) 3, param1)) {
+          if (BallEvent.a((byte) 3, name)) {
             stackIn_6_0 = QuickChatHelpDialog.cannotAddYourself;
             return stackIn_6_0;
           }
@@ -43,24 +43,24 @@ final class Atan2Support {
             stackIn_10_0 = MonotonicClock.unableToAddIgnore;
             return stackIn_10_0;
           }
-          if (MenuSelection.isIgnoredName(param1, 24552)) {
-            stackIn_13_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, LobbyPlayerLookupSupport.ignorelistdupe);
+          if (MenuSelection.isIgnoredName(name, 24552)) {
+            stackIn_13_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, LobbyPlayerLookupSupport.ignorelistdupe);
             return stackIn_13_0;
           }
           if (TextHotspotRegion.field_t >= 100) {
             stackIn_17_0 = DebugTuningSlider.ignorelistfull;
             return stackIn_17_0;
           }
-          if (DialogLayer.a(param1, -1)) {
-            stackIn_21_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, UsernameSuggestionSupport.removefriendfirst);
+          if (DialogLayer.isFriendName(name, -1)) {
+            stackIn_21_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, UsernameSuggestionSupport.removefriendfirst);
             return stackIn_21_0;
           }
           var5 = JaggrabDownloader.field_j;
-          var5.writeCipheredOpcode(false, param0);
+          var5.writeCipheredOpcode(false, opcode);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.writeByte(param2, false);
-          var5.writeNullTerminatedString(param2 - 9948, param1);
+          var5.writeByte(operation, false);
+          var5.writeNullTerminatedString(operation - 9948, name);
           var5.writeByteLengthPrefix(var5.position - var4, true);
           stackIn_23_0 = null;
           return (String) (stackIn_23_0);
@@ -68,13 +68,13 @@ final class Atan2Support {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_26_0 = var3;
-          stackIn_26_1 = new StringBuilder().append("jd.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_26_1 = new StringBuilder().append("jd.C(").append(opcode).append(',');
+          if (name == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(operation).append(')').toString());
         }
     }
 

@@ -83,7 +83,7 @@ final class ArchiveAvailabilitySupport {
           throw new IllegalStateException();
         }
         ClassicBallSkin.field_o = true;
-        ProxyConnectorSupport.a(false, param0 ^ param0);
+        ProxyConnectorSupport.showLoginDialog(false, param0 ^ param0);
         PlasmaTableScene.field_ab = 0;
     }
 

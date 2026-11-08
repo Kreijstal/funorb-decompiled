@@ -167,7 +167,7 @@ final class HalloweenBallSkin extends BallSkin {
             stackIn_10_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, IntrusiveDequeCursor.friendnotfound);
             return stackIn_10_0;
           }
-          SoundCache.field_k.a(var8, 0);
+          SoundCache.field_k.iterateBackwardFrom(var8, 0);
           while (true) {
             var7 = (SocialListEntry) (SoundCache.field_k.previous((byte) -5));
             if (var7 != null) {

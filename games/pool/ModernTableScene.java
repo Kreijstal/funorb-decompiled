@@ -55,7 +55,7 @@ final class ModernTableScene extends ModelTableScene {
             this.field_hb == null) {
             dupTemp$0 = PcmSampleStream.createAtRatePercentQ6(this.field_db, 100, this.field_ab.getTargetVolume(), this.field_ab.getPanSteps());
             this.field_hb = dupTemp$0;
-            DualLinkDequeIterator.a(-24296, dupTemp$0);
+            DualLinkDequeIterator.registerSoundEffectStream(-24296, dupTemp$0);
             this.field_ab = null;
           }
           UiWidget.field_u = UiWidget.field_u + 1;
@@ -64,7 +64,7 @@ final class ModernTableScene extends ModelTableScene {
               return;
             }
             var3_int = 0;
-            var4 = 128 + param1.camera.b(-128);
+            var4 = 128 + param1.camera.getBackdropPitchOffset(-128);
             if (var4 > 0) {
               var5 = -this.field_B.field_A + var4 + 111;
               if (UsernameAvailabilityValidator.field_o > var5 &&
@@ -274,7 +274,7 @@ final class ModernTableScene extends ModelTableScene {
           var55 = GzipDecoder.field_d;
           var24.sortModelsByDepth((byte) -113, 0, var24.field_j.length, var55);
           QuaternionRotationSupport.clearScreenForTransition(param0 + 55);
-          this.a(false, param1);
+          this.drawScrollingBackdrop(false, param1);
           var56 = new int[3];
           ViewportController.projectWorldPoint(ChatInputSupport.field_l[PolarTableScene.field_lb].transform[0], var56, GzipDecoder.field_d, ChatInputSupport.field_l[PolarTableScene.field_lb].transform[1], ChatInputSupport.field_l[PolarTableScene.field_lb].transform[2], (byte) 9);
           dupTemp$0 = var56[1];
@@ -512,34 +512,34 @@ final class ModernTableScene extends ModelTableScene {
         var6 = param0;
         if (var6 != 5) {
           if (2 == var6) {
-            MusicPatchEnvelope.a(100, this.field_X, param3, param1);
+            MusicPatchEnvelope.playSoundEffect(100, this.field_X, param3, param1);
           } else {
             if (var6 != 3) {
               if (0 == var6) {
-                MusicPatchEnvelope.a(100, this.field_fb, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, this.field_fb, param3, param1);
               } else {
                 if (var6 != 1) {
                   if (var6 == 4) {
                     dupTemp$0 = PcmSampleStream.createAtRatePercentQ6(this.field_Y, 100, param1, param3);
                     this.field_ab = dupTemp$0;
-                    DualLinkDequeIterator.a(-24296, dupTemp$0);
+                    DualLinkDequeIterator.registerSoundEffectStream(-24296, dupTemp$0);
                   } else {
                     if (var6 != 6) {
                       super.playTableSound(param0, param1, (byte) -104, param3);
                     } else {
-                      MusicPatchEnvelope.a(100, this.field_cb, param3, param1);
+                      MusicPatchEnvelope.playSoundEffect(100, this.field_cb, param3, param1);
                     }
                   }
                 } else {
-                  MusicPatchEnvelope.a(100, this.field_W, param3, param1);
+                  MusicPatchEnvelope.playSoundEffect(100, this.field_W, param3, param1);
                 }
               }
             } else {
-              MusicPatchEnvelope.a(100, this.field_Q, param3, param1);
+              MusicPatchEnvelope.playSoundEffect(100, this.field_Q, param3, param1);
             }
           }
         } else {
-          MusicPatchEnvelope.a(100, this.field_V, param3, param1);
+          MusicPatchEnvelope.playSoundEffect(100, this.field_V, param3, param1);
         }
     }
 
@@ -819,14 +819,14 @@ final class ModernTableScene extends ModelTableScene {
           this.field_B = new Sprite(param1.getFileByName(false, "modern-sky.jpg", ""), (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
           if (param0 != 5) {
             PoolMatchController var4 = (PoolMatchController) null;
-            this.a(false, (PoolMatchController) null);
+            this.drawScrollingBackdrop(false, (PoolMatchController) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ni.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(boolean param0, PoolMatchController param1) {
+    private final void drawScrollingBackdrop(boolean obfuscationGuard, PoolMatchController session) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -838,13 +838,13 @@ final class ModernTableScene extends ModelTableScene {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = 128 + param1.camera.b(-127);
-          if (param0) {
+          var3_int = 128 + session.camera.getBackdropPitchOffset(-127);
+          if (obfuscationGuard) {
             this.initializeScene(true);
           }
           if (var3_int > 0) {
-            stackIn_6_0 = param1.camera;
-            stackIn_7_1 = !(param0);
+            stackIn_6_0 = session.camera;
+            stackIn_7_1 = !(obfuscationGuard);
             var4 = (int)(-((Camera) (Object) stackIn_6_0).getYaw(stackIn_7_1) * (double)this.field_B.field_z / 2.0 / 3.141592653589793);
             var5 = -this.field_B.field_A + var3_int;
             this.field_B.drawAt(-this.field_B.field_z + var4, var5);
@@ -857,8 +857,8 @@ final class ModernTableScene extends ModelTableScene {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("ni.L(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("ni.L(").append(obfuscationGuard).append(',');
+          if (session == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -1164,9 +1164,9 @@ final class ModernTableScene extends ModelTableScene {
         }
     }
 
-    final static void f(byte param0) {
+    final static void refreshRematchMenuLabel(byte obfuscationGuard) {
         int var2 = Pool.field_O;
-        if (param0 != -119) {
+        if (obfuscationGuard != -119) {
           field_eb = (CanvasInputSupport) null;
         }
         if ((AccountContentDialog.field_ub.gameModel.field_b & 1 << AccountContentDialog.field_ub.localPlayerIndex) != 0) {

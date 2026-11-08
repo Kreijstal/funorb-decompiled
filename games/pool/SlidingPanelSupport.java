@@ -47,7 +47,7 @@ final class SlidingPanelSupport {
           param1 = param1 + var3 * (-param1 + AwtEventQueueSupport.field_g) / var2;
         }
         IntLookupQuery.field_q.setBounds(param1, param0 - 2147483625, RasterSnapshot.field_u, 640, 120);
-        Camera.a(ByteArrayPool.field_b, param0 + AwtEventQueueSupport.field_g, 0, 640, 5, 125, CueAim.field_j);
+        Camera.layoutQuickChatOverlay(ByteArrayPool.field_b, param0 + AwtEventQueueSupport.field_g, 0, 640, 5, 125, CueAim.field_j);
     }
 
     static {

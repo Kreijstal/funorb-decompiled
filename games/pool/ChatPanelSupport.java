@@ -11,7 +11,7 @@ final class ChatPanelSupport {
     static int field_e;
     static int field_f;
 
-    final static BrowserCookieSupport a(int param0, String param1) {
+    final static BrowserCookieSupport validateNumericDomainSuffix(int startIndex, String suffix) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -24,9 +24,9 @@ final class ChatPanelSupport {
         RuntimeException decompiledCaughtException = null;
         var5 = Pool.field_O;
         try {
-          var2_int = param1.length();
-          for (var3 = param0; var2_int > var3; var3++) {
-            var4 = param1.charAt(var3);
+          var2_int = suffix.length();
+          for (var3 = startIndex; var2_int > var3; var3++) {
+            var4 = suffix.charAt(var3);
             if (48 > var4) {
               return null;
             }
@@ -40,8 +40,8 @@ final class ChatPanelSupport {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_13_0 = var2;
-          stackIn_13_1 = new StringBuilder().append("la.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("la.A(").append(startIndex).append(',');
+          if (suffix == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -50,7 +50,7 @@ final class ChatPanelSupport {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, boolean param5, int param6, int param7) {
+    final static void updateChatCompositionPanel(int param0, int param1, int param2, int param3, String param4, boolean param5, int param6, int param7) {
         try {
           if (AccountProtocolStage.field_d.pressedButton == 0) {
           } else {

@@ -11,7 +11,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
         if (null != PlasmaBallSkin.field_m) {
-          if (PlasmaBallSkin.field_m.b((byte) 111)) {
+          if (PlasmaBallSkin.field_m.handleCancelKey((byte) 111)) {
             ProgressDialog.m(8421504);
             return true;
           }

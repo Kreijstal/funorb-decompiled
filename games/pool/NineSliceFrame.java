@@ -11,8 +11,8 @@ final class NineSliceFrame {
     static boolean field_b;
     private Sprite[] field_h;
 
-    final static void a(byte param0) {
-        if (param0 != 41) {
+    final static void loginWithCreatedAccount(byte obfuscationGuard) {
+        if (obfuscationGuard != 41) {
           return;
         }
         HotspotRectangle.a(true, LoginPayload.field_d, -104, SocialListEntry.field_Rb);
@@ -22,7 +22,7 @@ final class NineSliceFrame {
     final void draw(int param0, int param1, int param2, int param3, int param4) {
         LogoMaterial.drawNineSlice(this.field_h, (byte) -72, param0, param3, param1, param4);
         if (param2 != -6316) {
-          NineSliceFrame.a((byte) -25);
+          NineSliceFrame.loginWithCreatedAccount((byte) -25);
         }
     }
 

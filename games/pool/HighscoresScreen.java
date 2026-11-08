@@ -77,7 +77,7 @@ final class HighscoresScreen extends MenuScreen {
               var5 = 180;
               ModernTableScene.field_Z.drawCentered(Cp1252CharacterSupport.highscoreHeaderTime, 438, var5, 15658734, -1);
               var5 = var5 + (ModernTableScene.field_Z.maxAscent + 8);
-              var6 = ValidationIconWidget.a(MembershipBenefitsScreen.field_J, param0 ^ -3, DateInputWidget.field_V, DebugSliderInputSupport.field_d);
+              var6 = ValidationIconWidget.findSubmittedHighScoreRow(MembershipBenefitsScreen.field_J, param0 ^ -3, DateInputWidget.field_V, DebugSliderInputSupport.field_d);
               for (var7 = 0; var7 < 10; var7++) {
                 if (null != var3[var7]) {
                   stackIn_13_0 = 162;
@@ -440,7 +440,7 @@ final class HighscoresScreen extends MenuScreen {
           FaceNormal.initializeRuleDescriptions(-74);
           var20_int = -118 % ((26 - param17) / 52);
           DelegatingCanvas.initializeLobbyChatPanels(-119);
-          ReflectionCheck.c((byte) -22);
+          ReflectionCheck.layoutLobbyOptionPanel((byte) -22);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

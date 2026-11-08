@@ -425,7 +425,7 @@ final class KillerRules extends GameRules {
 
     final int pickAutoPotBall(int param0) {
         int var2 = 0;
-        if (IntrusiveDeque.a(param0, (byte) 99) &&
+        if (IntrusiveDeque.hasClientOption(param0, (byte) 99) &&
           this.field_d.field_s == 2) {
           var2 = MaxLengthTextInputWidget.nextRandomInt(14, true, RankingsRequest.field_r);
           return var2 - (-1 - var2 / 7);

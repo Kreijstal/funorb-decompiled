@@ -168,7 +168,7 @@ final class SpaceTableScene extends ModelTableScene {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = session.camera.b(-127) + (this.field_B.field_A >> 1);
+          var3_int = session.camera.getBackdropPitchOffset(-127) + (this.field_B.field_A >> 1);
           if (obfuscationGuard != 10) {
             waitingforFonts = (String) null;
           }
@@ -315,10 +315,10 @@ final class SpaceTableScene extends ModelTableScene {
           if (2 == var6) {
             var6 = MaxLengthTextInputWidget.nextRandomInt(2, true, RankingsRequest.field_r);
             if (var6 == 0) {
-              MusicPatchEnvelope.a(100, BrowserCookieSupport.field_f, param3, param1);
+              MusicPatchEnvelope.playSoundEffect(100, BrowserCookieSupport.field_f, param3, param1);
             } else {
               if (var6 == 1) {
-                MusicPatchEnvelope.a(100, IntrusiveNode.field_a, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, IntrusiveNode.field_a, param3, param1);
               }
             }
           } else {
@@ -326,23 +326,23 @@ final class SpaceTableScene extends ModelTableScene {
               var6 = MaxLengthTextInputWidget.nextRandomInt(2, true, RankingsRequest.field_r);
               if (var6 != 0) {
                 if (var6 == 1) {
-                  MusicPatchEnvelope.a(100, QuickChatDynamicCommand.field_j, param3, param1);
+                  MusicPatchEnvelope.playSoundEffect(100, QuickChatDynamicCommand.field_j, param3, param1);
                 }
               } else {
-                MusicPatchEnvelope.a(100, Bzip2DecoderState.field_i, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, Bzip2DecoderState.field_i, param3, param1);
               }
             } else {
               if (var6 == 7) {
-                MusicPatchEnvelope.a(100, Ball.field_L, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, Ball.field_L, param3, param1);
               } else {
                 if (var6 == 8) {
-                  MusicPatchEnvelope.a(100, IsaacCipher.field_l, param3, param1);
+                  MusicPatchEnvelope.playSoundEffect(100, IsaacCipher.field_l, param3, param1);
                 } else {
                   if (var6 == 6) {
-                    MusicPatchEnvelope.a(100, PolarBallSkin.field_l, param3, param1);
+                    MusicPatchEnvelope.playSoundEffect(100, PolarBallSkin.field_l, param3, param1);
                   } else {
                     if (var6 == 4) {
-                      MusicPatchEnvelope.a(100, MirroredSceneSupport.field_a, param3, param1);
+                      MusicPatchEnvelope.playSoundEffect(100, MirroredSceneSupport.field_a, param3, param1);
                     }
                   }
                 }
@@ -352,18 +352,18 @@ final class SpaceTableScene extends ModelTableScene {
         } else {
           var6 = MaxLengthTextInputWidget.nextRandomInt(4, true, RankingsRequest.field_r);
           if (var6 == 0) {
-            MusicPatchEnvelope.a(100, ReflectionReplySupport.field_b, param3, param1);
+            MusicPatchEnvelope.playSoundEffect(100, ReflectionReplySupport.field_b, param3, param1);
           } else {
             if (1 != var6) {
               if (var6 == 2) {
-                MusicPatchEnvelope.a(100, PacketBuffer.field_q, param3, param1);
+                MusicPatchEnvelope.playSoundEffect(100, PacketBuffer.field_q, param3, param1);
               } else {
                 if (var6 == 3) {
-                  MusicPatchEnvelope.a(100, IterableDualLinkDeque.field_f, param3, param1);
+                  MusicPatchEnvelope.playSoundEffect(100, IterableDualLinkDeque.field_f, param3, param1);
                 }
               }
             } else {
-              MusicPatchEnvelope.a(100, PotEvent.field_o, param3, param1);
+              MusicPatchEnvelope.playSoundEffect(100, PotEvent.field_o, param3, param1);
             }
           }
         }

@@ -132,7 +132,7 @@ final class ButtonPainter implements WidgetPainter {
           var6_int = param4.widgetX + param1;
           var7 = -103 / ((param2 - 2) / 41);
           var8 = param3 + param4.widgetY;
-          HotspotTextWidget.a(var6_int, var8, param4.widgetHeight, param4.widgetWidth, false);
+          HotspotTextWidget.drawGrayGradientBorder(var6_int, var8, param4.widgetHeight, param4.widgetWidth, false);
           var9 = FixedAngleSupport.field_a[1];
           if (param4 instanceof ButtonWidget &&
             ((ButtonWidget) (param4)).active) {

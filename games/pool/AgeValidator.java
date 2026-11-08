@@ -30,7 +30,7 @@ final class AgeValidator extends TextInputValidator {
             return stackIn_2_0;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3_int = GameApplet.a((byte) 114, var5);
+          var3_int = GameApplet.parseDecimalInt((byte) 114, var5);
           if (!param1) {
             field_s = (byte[]) null;
           }
@@ -103,7 +103,7 @@ final class AgeValidator extends TextInputValidator {
           }
           var2 = (PlayingSound) (HighScoreSubmission.field_o.last((byte) -36));
           while (var2 != null) {
-            if (var2.field_m.b(-108)) {
+            if (var2.field_m.isLinked(-108)) {
               var2.field_o.setVolume(BallDebugOverlay.field_b * var2.field_n + 128 >> 8);
             } else {
               var2.unlink((byte) -117);
@@ -113,7 +113,7 @@ final class AgeValidator extends TextInputValidator {
           if (null != UsernameSuggestionsPanel.field_R) {
             var2Lifetime1 = (PlayingSound) (UsernameSuggestionsPanel.field_R.last((byte) 113));
             while (var2Lifetime1 != null) {
-              if (!var2Lifetime1.field_m.b(-113)) {
+              if (!var2Lifetime1.field_m.isLinked(-113)) {
                 var2Lifetime1.unlink((byte) -117);
               } else {
                 var2Lifetime1.field_o.setVolume(128 + var2Lifetime1.field_n * BallDebugOverlay.field_b >> 8);

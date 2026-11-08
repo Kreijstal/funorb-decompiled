@@ -328,7 +328,7 @@ final class InstructionsScreen extends MenuScreen {
           this.field_G = ScreenProjectionSupport.findHotspotRegion(DebouncedValidationProvider.field_f, ScrollPaneWithFooter.field_Lb, ReflectionReplySupport.field_i, 15395);
           LongAndTextLoginPayload.field_l = 12;
           SocialListEntry.field_Vb = 12;
-          PauseMenuScreen.g(0, null == this.field_G ? -1 : this.field_G.field_p);
+          PauseMenuScreen.advanceHotspotTooltip(0, null == this.field_G ? -1 : this.field_G.field_p);
         }
     }
 

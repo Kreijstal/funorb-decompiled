@@ -109,15 +109,15 @@ final class Camera {
         return 1.5707963267948966;
     }
 
-    final void c(byte param0) {
+    final void clampToTableScene(byte obfuscationGuard) {
         LobbyGame.field_gc.clampCamera(false, this);
-        if (param0 != -40) {
+        if (obfuscationGuard != -40) {
           Camera.releaseStatics(26);
         }
     }
 
-    final int b(int param0) {
-        if (param0 > -126) {
+    final int getBackdropPitchOffset(int obfuscationGuard) {
+        if (obfuscationGuard > -126) {
           Camera.releaseStatics(46);
         }
         double var2 = this.getPitch((byte) 103) - Math.atan(0.625);
@@ -158,10 +158,10 @@ final class Camera {
         return Math.sqrt(var6 * var6 + (var4 * var4 + var2 * var2));
     }
 
-    final void a(int param0) {
+    final void lookAtTableCenter(int obfuscationGuard) {
         this.targetZ = -8.0;
         this.targetY = 144.0;
-        int var2 = 114 % ((param0 + 5) / 47);
+        int var2 = 114 % ((obfuscationGuard + 5) / 47);
         this.targetX = 288.0;
     }
 
@@ -188,7 +188,7 @@ final class Camera {
         return Math.atan2(var6, this.eyeZ - this.targetZ);
     }
 
-    final static BrowserCookieSupport a(int param0, String param1) {
+    final static BrowserCookieSupport validateEmailAddress(int missingAtIndex, String address) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -203,15 +203,15 @@ final class Camera {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != null &&
-            param1.length() != 0) {
-            var2_int = param1.indexOf('@');
-            if (param0 == var2_int) {
+          if (address != null &&
+            address.length() != 0) {
+            var2_int = address.indexOf('@');
+            if (missingAtIndex == var2_int) {
               stackIn_8_0 = WorldPointProjectionSupport.field_e;
               return stackIn_8_0;
             }
-            var3 = param1.substring(0, var2_int);
-            var4 = param1.substring(var2_int + 1);
+            var3 = address.substring(0, var2_int);
+            var4 = address.substring(var2_int + 1);
             var5 = PlasmaBallSkin.validateEmailLocalPart(7, var3);
             if (var5 == null) {
               stackIn_13_0 = BirthDatePromptPanel.validateEmailDomain(102, var4);
@@ -226,8 +226,8 @@ final class Camera {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_16_0 = var2;
-          stackIn_16_1 = new StringBuilder().append("mm.R(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("mm.R(").append(missingAtIndex).append(',');
+          if (address == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -280,10 +280,10 @@ final class Camera {
         this.eyeX = this.targetX + param1 * var4 / var10;
         this.eyeY = this.targetY + param1 * var6 / var10;
         this.eyeZ = this.targetZ + var8 * param1 / var10;
-        this.c((byte) -40);
+        this.clampToTableScene((byte) -40);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void layoutQuickChatOverlay(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         ChoiceButtonSupport.field_a.setBounds(param2, 2147483647, param4, param3, param1);
         if (LobbyPlayer.field_Ub != null) {
           LobbyPlayer.field_Ub.layoutMenuChain(param0, param6, -ProgressBarWidget.field_G + param6, (byte) 127, param1, param1);
@@ -314,7 +314,7 @@ final class Camera {
           field_c = (Sprite) null;
         }
         this.positionEyeFromOrbit(param0, param1, param2, 144);
-        this.c((byte) -40);
+        this.clampToTableScene((byte) -40);
     }
 
     final boolean easeTowards(Camera param0, byte param1) {
@@ -386,7 +386,7 @@ final class Camera {
             var5 = 1;
           }
           if (param1 != -78) {
-            this.b(-34);
+            this.getBackdropPitchOffset(-34);
           }
           if (param0.targetZ != this.targetZ) {
             var3_doubleLifetime5 = -this.targetZ + param0.targetZ;
@@ -399,7 +399,7 @@ final class Camera {
             }
           }
           this.sanitizeNaN((byte) 108);
-          this.c((byte) -40);
+          this.clampToTableScene((byte) -40);
           stackIn_42_0 = var5;
           return stackIn_42_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -455,7 +455,7 @@ final class Camera {
             }
           }
           if (param0 != -11024) {
-            this.c((byte) -115);
+            this.clampToTableScene((byte) -115);
           }
           this.setFromArray(param1[var3_int], (byte) -86);
           stackIn_13_0 = var3_int;
@@ -505,7 +505,7 @@ final class Camera {
           QuickChatMenu.field_ec = param14;
           HotspotRectangle.field_t = param4;
           AchievementsScreen.configureInterfaceMetrics(84, param1, param7, param6, param12);
-          UsernameSuggestionsPanel.a(param18, param0, param13, -92);
+          UsernameSuggestionsPanel.configureSharedChoiceFrame(param18, param0, param13, -92);
           if (param16 != 2) {
             return;
           }

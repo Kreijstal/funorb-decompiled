@@ -18,7 +18,7 @@ final class UiTheme {
     BitmapFont tooltipFont;
     int tooltipBorderColor;
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean hasNotification(byte obfuscationGuard, int notificationId) {
         IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
         AnimatedNotification var3 = null;
@@ -31,10 +31,10 @@ final class UiTheme {
           var3 = (AnimatedNotification) (var2.last((byte) -92));
           while (true) {
             if (var3 == null) {
-              var4 = 116 / ((param0 + 61) / 60);
+              var4 = 116 / ((obfuscationGuard + 61) / 60);
               return false;
             }
-            if (~var3.field_m != ~param1) {
+            if (~var3.field_m != ~notificationId) {
               var3 = (AnimatedNotification) (var2.previous(-100));
               continue;
             }
@@ -44,7 +44,7 @@ final class UiTheme {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "nq.D(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "nq.D(" + obfuscationGuard + ',' + notificationId + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class UiTheme {
           }
           if (param0 > -42) {
             var6 = (java.awt.Component) null;
-            UiTheme.a((MidiPcmStream) null, (PlatformTaskDispatcher) null, (java.awt.Component) null, -58, true, 17, true, -29);
+            UiTheme.initializeAudioOutputs((MidiPcmStream) null, (PlatformTaskDispatcher) null, (java.awt.Component) null, -58, true, 17, true, -29);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -318,7 +318,7 @@ final class UiTheme {
         }
     }
 
-    final static void a(MidiPcmStream param0, PlatformTaskDispatcher param1, java.awt.Component param2, int param3, boolean param4, int param5, boolean param6, int param7) {
+    final static void initializeAudioOutputs(MidiPcmStream param0, PlatformTaskDispatcher param1, java.awt.Component param2, int param3, boolean param4, int param5, boolean param6, int param7) {
         try {
           AudioOutput.configure(param7, param6, 10);
           MidiNoteMixer.field_s = AudioOutput.createOutput(param1, param2, 0, param3);

@@ -36,7 +36,7 @@ final class ProgressBarWidget extends UiWidget {
           this.renderWidget(-24, (byte) -90, 11, -53);
         }
         Sprite var13 = new Sprite(2 * this.stripeWidth, this.widgetHeight);
-        CueAim.a(113, var13);
+        CueAim.pushSpriteRenderTarget(113, var13);
         int var5 = this.widgetHeight >> 1;
         for (var6 = 0; var6 < this.widgetHeight; var6++) {
           var7 = (2 * this.stripeWidth - 1) * (var6 >> 1) % (this.stripeWidth * 2);
@@ -107,7 +107,7 @@ final class ProgressBarWidget extends UiWidget {
         Sprite discarded$0 = null;
         int var2 = this.widgetHeight >> 1;
         Sprite var3 = new Sprite(var2, this.widgetHeight);
-        CueAim.a(55, var3);
+        CueAim.pushSpriteRenderTarget(55, var3);
         for (var4 = 0; var4 < this.widgetHeight; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
             var6 = (double)var5 * (double)var5 / (double)((-var4 + this.widgetHeight) * var4);
@@ -146,7 +146,7 @@ final class ProgressBarWidget extends UiWidget {
           }
           TriangleMesh.a(121);
           if (SoftwareRasterizer.clipLeft <= param1 + this.field_U.field_z) {
-            CueAim.a(43, this.field_H);
+            CueAim.pushSpriteRenderTarget(43, this.field_H);
             param3.draw(-this.stripeOffset, 0);
             param3.draw(-this.stripeOffset + 2 * this.stripeWidth, 0);
             this.field_F.drawMultiply(0, 0);
@@ -154,7 +154,7 @@ final class ProgressBarWidget extends UiWidget {
             this.field_H.draw(param1, param2);
           }
           if (var5_int - this.field_U.field_z <= SoftwareRasterizer.clipRight) {
-            CueAim.a(86, this.field_H);
+            CueAim.pushSpriteRenderTarget(86, this.field_H);
             for (var7 = -this.field_U.field_z + (this.widgetWidth + this.stripeOffset); var7 > this.stripeWidth * 2; var7 = var7 - this.stripeWidth * 2) {
             }
             param3.draw(-var7, 0);

@@ -12,7 +12,7 @@ final class SpaceBallSkin extends BallSkin {
         try {
           var1 = new Sprite(540, 140);
           int var2 = -31 / ((79 - obfuscationGuard) / 34);
-          CueAim.a(62, var1);
+          CueAim.pushSpriteRenderTarget(62, var1);
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clear();
           LobbyPlayer.field_fc = 0;

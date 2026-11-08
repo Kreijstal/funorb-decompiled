@@ -187,7 +187,7 @@ final class ThemeSelectScreen extends MenuScreen {
 
     final static void a(java.awt.Component param0, MidiPcmStream param1, int param2, PlatformTaskDispatcher param3, int param4, boolean param5) {
         try {
-          UiTheme.a(param1, param3, param0, param2, false, 1024, param5, param2);
+          UiTheme.initializeAudioOutputs(param1, param3, param0, param2, false, 1024, param5, param2);
           if (param4 != 10282) {
             PlatformTaskDispatcher var7 = (PlatformTaskDispatcher) null;
             ThemeSelectScreen.a((java.awt.Component) null, (MidiPcmStream) null, 11, (PlatformTaskDispatcher) null, -77, false);

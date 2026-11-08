@@ -69,24 +69,24 @@ final class PacketAvailabilitySupport {
 
     final static boolean hasCompletePacket(byte param0) {
         if (-1 == ScrollPane.field_Pb) {
-          if (!DialogLayer.b((byte) 114, 1)) {
+          if (!DialogLayer.pollPacketBytes((byte) 114, 1)) {
             return false;
           }
           ScrollPane.field_Pb = PlayerContextMenu.field_e.readUnsignedByte(-86);
           PlayerContextMenu.field_e.position = 0;
         }
         if (ScrollPane.field_Pb == -2) {
-          if (!DialogLayer.b((byte) 76, 2)) {
+          if (!DialogLayer.pollPacketBytes((byte) 76, 2)) {
             return false;
           }
           ScrollPane.field_Pb = PlayerContextMenu.field_e.readUnsignedShort(-1034);
           PlayerContextMenu.field_e.position = 0;
         }
         if (param0 == 39) {
-          return DialogLayer.b((byte) 67, ScrollPane.field_Pb);
+          return DialogLayer.pollPacketBytes((byte) 67, ScrollPane.field_Pb);
         }
         field_a = (Sprite) null;
-        return DialogLayer.b((byte) 67, ScrollPane.field_Pb);
+        return DialogLayer.pollPacketBytes((byte) 67, ScrollPane.field_Pb);
     }
 
     final static void a(byte param0, boolean param1, LobbyGame param2, String param3) {

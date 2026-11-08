@@ -12,7 +12,7 @@ final class DualLinkDequeIterator implements Iterator {
     static String progressJungleFinishing;
     private IterableDualLinkDeque deque;
 
-    final static PlayingSound a(int param0, PcmSampleStream param1) {
+    final static PlayingSound registerSoundEffectStream(int obfuscationGuard, PcmSampleStream stream) {
         PlayingSound var2 = null;
         RuntimeException var2_ref = null;
         PlayingSound stackIn_3_0 = null;
@@ -21,20 +21,20 @@ final class DualLinkDequeIterator implements Iterator {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new PlayingSound(param1, param1);
+          var2 = new PlayingSound(stream, stream);
           HighScoreSubmission.field_o.addFirst((byte) -74, var2);
-          if (param0 != -24296) {
+          if (obfuscationGuard != -24296) {
             DualLinkDequeIterator.releaseStatics(-16);
           }
-          SpaceObject.field_d.addSubstream(param1);
+          SpaceObject.field_d.addSubstream(stream);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_6_0 = var2_ref;
-          stackIn_6_1 = new StringBuilder().append("mn.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("mn.A(").append(obfuscationGuard).append(',');
+          if (stream == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -47,8 +47,8 @@ final class DualLinkDequeIterator implements Iterator {
         return this.deque.sentinel != this.nextNode;
     }
 
-    final static boolean a(boolean param0) {
-        if (param0) {
+    final static boolean isAccountNameInputIncomplete(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return !TextInputValidator.field_j.isComplete(114) ? true : false;
         }
         DualLinkDequeIterator.releaseStatics(69);

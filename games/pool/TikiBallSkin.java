@@ -128,7 +128,7 @@ final class TikiBallSkin extends BallSkin {
             var4 = source;
           }
           var5 = new WhirlpoolHasher();
-          var5.a(false);
+          var5.reset(false);
           var5.updateBits(var4, 0, (long)(8 * length));
           var6 = new byte[64];
           if (obfuscationGuard >= -42) {

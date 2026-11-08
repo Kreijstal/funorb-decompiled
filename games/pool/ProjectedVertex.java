@@ -270,7 +270,7 @@ final class ProjectedVertex {
           this.field_j[1] = param1.field_u;
           this.field_c[1] = param1.field_a;
           this.field_h[1] = param1.field_l;
-          this.field_r = SharedRateScaleSupport.a(this.field_j, 0, this.field_q, this.field_h, this.field_c, param0 - 56);
+          this.field_r = SharedRateScaleSupport.clipPerspectiveSegment(this.field_j, 0, this.field_q, this.field_h, this.field_c, param0 - 56);
           if ((this.field_r & 15) == 0) {
             this.field_q[0] = this.field_b;
             this.field_j[0] = this.field_o;

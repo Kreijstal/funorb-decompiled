@@ -56,7 +56,7 @@ class TextInputPainter extends TextWidgetPainter {
     public final void paintWidget(boolean param0, int param1, byte param2, int param3, UiWidget param4) {
         try {
           if (param0) {
-            HotspotTextWidget.a(param4.widgetX + param1, param4.widgetY + param3, param4.widgetHeight, param4.widgetWidth, false);
+            HotspotTextWidget.drawGrayGradientBorder(param4.widgetX + param1, param4.widgetY + param3, param4.widgetHeight, param4.widgetWidth, false);
           }
           int var6_int = 5 / ((2 - param2) / 41);
           super.paintWidget(param0, param1, (byte) -73, param3, param4);
@@ -78,14 +78,14 @@ class TextInputPainter extends TextWidgetPainter {
                 }
                 LoginEncryptionSupport.field_c = true;
                 ResourceArchive.field_e = param0;
-                TransformSupport.a(param2, 27712);
+                TransformSupport.sendChatFilterSettings(param2, 27712);
               }
               return;
             }
             if (param0 != FixedPointVectorSupport.field_e) {
               FixedPointVectorSupport.field_e = param0;
               LoginEncryptionSupport.field_c = true;
-              TransformSupport.a(param2, 27712);
+              TransformSupport.sendChatFilterSettings(param2, 27712);
             }
             if (2 != param1) {
               return;
@@ -93,20 +93,20 @@ class TextInputPainter extends TextWidgetPainter {
             if (~ResourceArchive.field_e != ~param0) {
               LoginEncryptionSupport.field_c = true;
               ResourceArchive.field_e = param0;
-              TransformSupport.a(param2, 27712);
+              TransformSupport.sendChatFilterSettings(param2, 27712);
             }
             return;
           }
           LoginEncryptionSupport.field_c = true;
           BallDebugOverlay.field_i = param0;
-          TransformSupport.a(param2, 27712);
+          TransformSupport.sendChatFilterSettings(param2, 27712);
         }
         var4Lifetime1 = 101 % ((59 - param3) / 59);
         if (param1 == 1 &&
           param0 != FixedPointVectorSupport.field_e) {
           FixedPointVectorSupport.field_e = param0;
           LoginEncryptionSupport.field_c = true;
-          TransformSupport.a(param2, 27712);
+          TransformSupport.sendChatFilterSettings(param2, 27712);
         }
         if (2 == param1) {
           if (~ResourceArchive.field_e == ~param0) {
@@ -114,7 +114,7 @@ class TextInputPainter extends TextWidgetPainter {
           }
           LoginEncryptionSupport.field_c = true;
           ResourceArchive.field_e = param0;
-          TransformSupport.a(param2, 27712);
+          TransformSupport.sendChatFilterSettings(param2, 27712);
         }
     }
 

@@ -60,7 +60,7 @@ final class ChatMessage {
           if (param3 != 120) {
             field_i = (String[]) null;
           }
-          stackIn_6_0 = EmailAvailabilityValidator.h(0);
+          stackIn_6_0 = EmailAvailabilityValidator.createDecodedIndexedSprites(0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,7 +98,7 @@ final class ChatMessage {
             if (ChatInputSupport.field_a != 2) {
               return 0;
             }
-            if (DialogLayer.a(this.field_q, -1)) {
+            if (DialogLayer.isFriendName(this.field_q, -1)) {
               return 1;
             }
             return 0;
@@ -108,7 +108,7 @@ final class ChatMessage {
         if (ChatInputSupport.field_a != 2) {
           return 0;
         }
-        if (!DialogLayer.a(this.field_q, -1)) {
+        if (!DialogLayer.isFriendName(this.field_q, -1)) {
           return 0;
         }
         return 1;

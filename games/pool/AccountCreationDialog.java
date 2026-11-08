@@ -110,7 +110,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           PacketDiagnosticsSupport.a(115, false, true);
           return;
         }
-        NineSliceFrame.a((byte) 41);
+        NineSliceFrame.loginWithCreatedAccount((byte) 41);
         if (!param0) {
           return;
         }

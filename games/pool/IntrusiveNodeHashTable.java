@@ -18,7 +18,7 @@ final class IntrusiveNodeHashTable implements Iterable {
     private IntrusiveNode field_e;
     static int field_j;
 
-    final static void a(int[] param0, int param1, MeshBuilder param2) {
+    final static void recenterMeshAndAdjustTransform(int[] transform, int obfuscationGuard, MeshBuilder mesh) {
         try {
           RuntimeException stackIn_29_0 = null;
           StringBuilder stackIn_29_1 = null;
@@ -36,58 +36,58 @@ final class IntrusiveNodeHashTable implements Iterable {
           int var3_intLifetime2;
           var7 = Pool.field_O;
           try {
-            MeshBoundsSupport.computeMeshBounds(param2, -23109);
-            var4 = param2.field_D + param2.field_w >> 1;
-            var5 = param2.field_y + param2.field_S >> 1;
-            var6 = param2.field_V + param2.field_x >> 1;
-            for (var3_int = 0; param2.vertexX.length > var3_int; var3_int++) {
-              param2.vertexX[var3_int] = param2.vertexX[var3_int] - var4;
+            MeshBoundsSupport.computeMeshBounds(mesh, -23109);
+            var4 = mesh.field_D + mesh.field_w >> 1;
+            var5 = mesh.field_y + mesh.field_S >> 1;
+            var6 = mesh.field_V + mesh.field_x >> 1;
+            for (var3_int = 0; mesh.vertexX.length > var3_int; var3_int++) {
+              mesh.vertexX[var3_int] = mesh.vertexX[var3_int] - var4;
             }
-            for (var3_intLifetime1 = 0; var3_intLifetime1 < param2.vertexY.length; var3_intLifetime1++) {
-              param2.vertexY[var3_intLifetime1] = param2.vertexY[var3_intLifetime1] - var5;
+            for (var3_intLifetime1 = 0; var3_intLifetime1 < mesh.vertexY.length; var3_intLifetime1++) {
+              mesh.vertexY[var3_intLifetime1] = mesh.vertexY[var3_intLifetime1] - var5;
             }
-            for (var3_intLifetime2 = 0; var3_intLifetime2 < param2.vertexZ.length; var3_intLifetime2++) {
-              param2.vertexZ[var3_intLifetime2] = param2.vertexZ[var3_intLifetime2] - var6;
+            for (var3_intLifetime2 = 0; var3_intLifetime2 < mesh.vertexZ.length; var3_intLifetime2++) {
+              mesh.vertexZ[var3_intLifetime2] = mesh.vertexZ[var3_intLifetime2] - var6;
             }
-            if (param1 >= -121) {
+            if (obfuscationGuard >= -121) {
               field_i = (Sprite[]) null;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (param0.length == 12 && (65536 != param0[3] ||
-              param0[4] != 0 ||
-              0 != param0[5] ||
-              0 != param0[6] ||
-              param0[7] != 65536 ||
-              param0[8] != 0 ||
-              param0[9] != 0 ||
-              param0[10] != 0 ||
-              param0[11] != 65536)) {
+            if (transform.length == 12 && (65536 != transform[3] ||
+              transform[4] != 0 ||
+              0 != transform[5] ||
+              0 != transform[6] ||
+              transform[7] != 65536 ||
+              transform[8] != 0 ||
+              transform[9] != 0 ||
+              transform[10] != 0 ||
+              transform[11] != 65536)) {
               System.out.println("Recentring with transformation");
               new Throwable().printStackTrace();
-              param0[1] = param0[1] + (var4 * param0[6] + (var5 * param0[7] + param0[8] * var6) >> 16);
-              param0[2] = param0[2] + (param0[11] * var6 + param0[9] * var4 + var5 * param0[10] >> 16);
-              param0[0] = param0[0] + (param0[4] * var5 + var4 * param0[3] + var6 * param0[5] >> 16);
+              transform[1] = transform[1] + (var4 * transform[6] + (var5 * transform[7] + transform[8] * var6) >> 16);
+              transform[2] = transform[2] + (transform[11] * var6 + transform[9] * var4 + var5 * transform[10] >> 16);
+              transform[0] = transform[0] + (transform[4] * var5 + var4 * transform[3] + var6 * transform[5] >> 16);
               decompiledFrameRemainder0 = false;
             }
             else {
-              param0[1] = param0[1] + var5;
-              param0[2] = param0[2] + var6;
-              param0[0] = param0[0] + var4;
+              transform[1] = transform[1] + var5;
+              transform[2] = transform[2] + var6;
+              transform[0] = transform[0] + var4;
             }
-            param2.clearCaches();
+            mesh.clearCaches();
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
             stackIn_29_0 = var3;
             stackIn_29_1 = new StringBuilder().append("uk.F(");
-            if (param0 == null) {
+            if (transform == null) {
               stackIn_30_2 = "null";
             } else {
               stackIn_30_2 = "{...}";
             }
-            stackIn_32_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',');
-            if (param2 == null) {
+            stackIn_32_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(obfuscationGuard).append(',');
+            if (mesh == null) {
               stackIn_33_2 = "null";
             } else {
               stackIn_33_2 = "{...}";
@@ -181,7 +181,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           param0.previous.next = param0;
           if (!param1) {
             var6 = (MeshBuilder) null;
-            IntrusiveNodeHashTable.a((int[]) null, 89, (MeshBuilder) null);
+            IntrusiveNodeHashTable.recenterMeshAndAdjustTransform((int[]) null, 89, (MeshBuilder) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

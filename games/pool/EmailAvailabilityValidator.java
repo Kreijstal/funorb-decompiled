@@ -16,18 +16,18 @@ final class EmailAvailabilityValidator extends TextInputValidator {
     private MatchingTextValidator emailMatchValidator;
     static int field_n;
 
-    final static IndexedSprite[] h(int param0) {
+    final static IndexedSprite[] createDecodedIndexedSprites(int startIndex) {
         int var2 = 0;
         int var3 = Pool.field_O;
         IndexedSprite[] var1 = new IndexedSprite[PacketAvailabilitySupport.field_d];
-        for (var2 = param0; PacketAvailabilitySupport.field_d > var2; var2++) {
+        for (var2 = startIndex; PacketAvailabilitySupport.field_d > var2; var2++) {
           var1[var2] = new IndexedSprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[var2], LoginRequestSupport.field_d[var2], LinkButtonPainter.field_a[var2], AccountTextSupport.field_f[var2], LimitedRandomAccessFile.field_b[var2], IntrusiveNode.field_h);
         }
         OpacityWidget.releaseSpriteDecoderArrays(-1);
         return var1;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int integerPower(int exponent, int base, int obfuscationGuard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -35,43 +35,43 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != -1) {
+          if (obfuscationGuard != -1) {
             stackIn_2_0 = -80;
             return stackIn_2_0;
           }
           var3_int = 1;
-          while (param0 > 1) {
-            if ((param0 & 1) != 0) {
-              var3_int = var3_int * param1;
+          while (exponent > 1) {
+            if ((exponent & 1) != 0) {
+              var3_int = var3_int * base;
             }
-            param1 = param1 * param1;
-            param0 = param0 >> 1;
+            base = base * base;
+            exponent = exponent >> 1;
           }
-          if (param0 != 1) {
+          if (exponent != 1) {
             stackIn_13_0 = var3_int;
             return stackIn_13_0;
           }
-          stackIn_11_0 = var3_int * param1;
+          stackIn_11_0 = var3_int * base;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "me.N(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "me.N(" + exponent + ',' + base + ',' + obfuscationGuard + ')');
         }
     }
 
-    final static AnimatedNotification a(int param0, int param1) {
+    final static AnimatedNotification findNotification(int obfuscationGuard, int notificationId) {
         IntrusiveDequeCursor var2;
         AnimatedNotification var3;
         int var4;
         var4 = Pool.field_O;
-        if (param0 != -2) {
+        if (obfuscationGuard != -2) {
           return (AnimatedNotification) null;
         }
         var2 = new IntrusiveDequeCursor(MarkerSliderPainter.field_i);
         var3 = (AnimatedNotification) (var2.last((byte) -92));
         while (var3 != null) {
-          if (param1 == var3.field_m) {
+          if (notificationId == var3.field_m) {
             return var3;
           }
           var3 = (AnimatedNotification) (var2.previous(-86));
@@ -128,7 +128,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
             return stackIn_3_0;
           }
           if (!param0.equals(this.cachedEmailCandidate)) {
-            var3 = AccountCreationForm.b((byte) -25, param0);
+            var3 = AccountCreationForm.ensureAccountNameLookup((byte) -25, param0);
             if (!var3.isComplete(80)) {
               stackIn_8_0 = Js5Transport.field_k;
               return stackIn_8_0;
@@ -175,7 +175,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
             return stackIn_5_0;
           }
           if (param1 != 0) {
-            EmailAvailabilityValidator.a(-101, -109);
+            EmailAvailabilityValidator.findNotification(-101, -109);
           }
           stackIn_9_0 = NodeHashTableIterator.createEmailvalid;
           return stackIn_9_0;

@@ -112,7 +112,7 @@ final class BitmapTextLayout extends TextLayout {
           var6 = this.createSingleLine(param2, param0, true, param1);
           var6.caretXs[0] = param4;
           var6.caretXs[param1.length()] = param4 + param2.stringWidth(param1);
-          LobbyGame.a(param1, var6, 6110, 0, param2);
+          LobbyGame.computeCaretPositions(param1, var6, 6110, 0, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -221,7 +221,7 @@ final class BitmapTextLayout extends TextLayout {
           var7 = param0.stringWidth(param3);
           var6.caretXs[0] = param1 - (var7 >> 1);
           var6.caretXs[param3.length()] = (var7 >> 1) + param1;
-          LobbyGame.a(param3, var6, 6110, 0, param0);
+          LobbyGame.computeCaretPositions(param3, var6, 6110, 0, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -274,7 +274,7 @@ final class BitmapTextLayout extends TextLayout {
           var6 = this.createSingleLine(param1, param3, true, param0);
           var6.caretXs[0] = param4 - param1.stringWidth(param0);
           var6.caretXs[param0.length()] = param4;
-          LobbyGame.a(param0, var6, 6110, 0, param1);
+          LobbyGame.computeCaretPositions(param0, var6, 6110, 0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -417,7 +417,7 @@ final class BitmapTextLayout extends TextLayout {
               } else {
                 stackIn_71_3 = 0;
               }
-              LobbyGame.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_71_3, param2);
+              LobbyGame.computeCaretPositions(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_71_3, param2);
             }
             this.field_b[var12Lifetime1] = var14;
             var11 = var11 + param4;

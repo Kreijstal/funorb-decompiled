@@ -24,7 +24,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             return;
           }
           if (this.cancelButton == param3) {
-            ByteStorage.b(3);
+            ByteStorage.showEmptyLoginForm(3);
             return;
           }
           if (this.okButton != param3) {
