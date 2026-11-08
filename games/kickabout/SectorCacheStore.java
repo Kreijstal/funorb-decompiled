@@ -443,7 +443,7 @@ final class SectorCacheStore {
         try {
           var8 = new IntrusiveDeque();
           if (AuctionTableWidget.field_Hb.field_Db.field_jb != null) {
-            AuctionTableWidget.field_Hb.field_Db.field_jb.a(-17481, var8);
+            AuctionTableWidget.field_Hb.field_Db.field_jb.moveAllTo(-17481, var8);
           }
           var2 = SquadGridWidget.field_Gb;
           if (var2 < 0) {
@@ -453,11 +453,11 @@ final class SectorCacheStore {
           var4 = 5 + var2 * 18;
           scanLoop1: while (AuctionTableWidget.field_Hb.field_Gb.field_mb - (-15 + AuctionTableWidget.field_Hb.field_Db.field_J) > var4) {
             if (TrinketSlot.field_Db[var3] > var2) {
-              var5 = (RankingRowNode) (var8.g(24009));
+              var5 = (RankingRowNode) (var8.first(24009));
               while (var5 != null) {
                 if (var5.field_yb != var2 ||
                   var5.field_Ab != var3) {
-                  var5 = (RankingRowNode) (var8.c(33));
+                  var5 = (RankingRowNode) (var8.next(33));
                   continue;
                 }
                 break;

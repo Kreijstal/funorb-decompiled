@@ -7,7 +7,7 @@ final class TrinketCatalog {
     static int field_d;
     static Sprite field_c;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_d = 121;
           field_c = null;
@@ -693,7 +693,7 @@ final class TrinketCatalog {
         ScrollBar.field_Db[incrementValue$221] = 0;
     }
 
-    final static void a(int param0) {
+    final static void resetChatComposition(int param0) {
         AuctionLogEntry.field_m.setLength(0);
         int var1 = -33 % ((-43 - param0) / 47);
         NodeHashTableIterator.field_b = 0;

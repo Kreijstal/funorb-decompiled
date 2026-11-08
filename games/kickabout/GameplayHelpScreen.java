@@ -634,7 +634,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           SoftwareRasterizer.fillRoundedRectangleBlended(var2, 190, 275, 208, 10, 65793, 140);
           ByteArrayPool.field_d.drawText(ModelMaterial.field_e[var4].toLowerCase(), var2 + 10, 212, 16777215, -1);
           for (var5 = 0; var5 < 4; var5++) {
-            GeneratedPanelPainter.field_g[var3[var4][var5]].d(false).c(110 + (var2 + var5 * 40), 200);
+            GeneratedPanelPainter.field_g[var3[var4][var5]].getIconSprite(false).c(110 + (var2 + var5 * 40), 200);
           }
           var5Lifetime1 = 242;
           for (var6 = 0; var6 < GoalkeeperAiSupport.field_c[var4].length; var6++) {

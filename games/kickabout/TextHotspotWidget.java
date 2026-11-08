@@ -18,7 +18,7 @@ class TextHotspotWidget extends TextButton {
         TextHotspotRegion var5;
         int var6;
         var6 = Kickabout.field_G;
-        var4 = (TextHotspotRegion) (this.field_E.g(24009));
+        var4 = (TextHotspotRegion) (this.field_E.first(24009));
         if (param1 != 2) {
           this.field_I = (TextHotspotRegion) null;
         }
@@ -33,7 +33,7 @@ class TextHotspotWidget extends TextButton {
             }
             var5 = var5.nextLineRegion;
           }
-          var4 = (TextHotspotRegion) (this.field_E.c(param1 ^ 35));
+          var4 = (TextHotspotRegion) (this.field_E.next(param1 ^ 35));
         }
         return null;
     }

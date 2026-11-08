@@ -21,7 +21,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
             this.enableHandlerGroup5(10);
             this.enableHandlerGroup4(13);
             this.enableHandlerGroup(6);
-            this.i(13);
+            this.enableChatResponseHandlers(13);
             IntTripleCommand.field_A[10] = -1;
             IntTripleCommand.field_A[9] = -1;
             UrlRequest.field_g = new Vector();
@@ -77,13 +77,13 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
         stackIn_6_1 = 0;
         stackIn_7_2 = (SplashScreen.field_m != null);
-        this.c(stackIn_6_1, stackIn_7_2);
+        this.serviceClientInfrastructure(stackIn_6_1, stackIn_7_2);
         if (PitchBoundaryCacheState.field_c) {
           NetworkGameClient.field_t.bindArchives(7312);
           PitchBoundaryCacheState.field_c = false;
         }
         if (RegistrationUiSupport.c(608)) {
-          this.n(-93);
+          this.processStartupInterface(-93);
           if (RegistrationUiSupport.c(608)) {
             return;
           }
@@ -184,10 +184,10 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
               this.update(param0 - 18886, false);
             }
           } else {
-            if (PlayerStats.a((byte) -3)) {
+            if (PlayerStats.beginReconnectGracePeriod((byte) -3)) {
               stackIn_28_1 = param0 - 18856;
               stackIn_29_2 = (null != SplashScreen.field_m);
-              var3 = this.b(stackIn_28_1, stackIn_29_2);
+              var3 = this.pollAccountMenuSelection(stackIn_28_1, stackIn_29_2);
               if (var3 != 1 &&
                 var3 != 2) {
                 this.update(param0 ^ -18870, false);

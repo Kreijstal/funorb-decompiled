@@ -87,11 +87,11 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
           FootballerAiOverlaySupport.field_d.writeIsaacByte(81, (byte) 99);
           FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 2;
           var1_int = FootballerAiOverlaySupport.field_d.field_n;
-          FootballerAiOverlaySupport.field_d.writeByte(109, MusicPatchNode.field_h.a(false));
-          var2 = (ManagerAction) (MusicPatchNode.field_h.g(param0 + 24065));
+          FootballerAiOverlaySupport.field_d.writeByte(109, MusicPatchNode.field_h.size(false));
+          var2 = (ManagerAction) (MusicPatchNode.field_h.first(param0 + 24065));
           while (var2 != null) {
             var2.writeToPacket(1, FootballerAiOverlaySupport.field_d);
-            var2 = (ManagerAction) (MusicPatchNode.field_h.c(param0 ^ -23));
+            var2 = (ManagerAction) (MusicPatchNode.field_h.next(param0 ^ -23));
           }
           FootballerAiOverlaySupport.field_d.backpatchShortLength(FootballerAiOverlaySupport.field_d.field_n - var1_int, param0 + 118);
           MusicPatchNode.field_h.clear(param0 + 23053);

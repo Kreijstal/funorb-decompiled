@@ -27,7 +27,7 @@ abstract class MouseWheelInput {
           param1 = false;
         }
         ScrollBar.a((byte) 123, param1);
-        NetworkGameClient.k(1);
+        NetworkGameClient.drawQuickChatOverlay(1);
         if (param0 < -115) {
           return;
         }

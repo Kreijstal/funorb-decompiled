@@ -213,7 +213,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           if (!RankingRowFactory.decodeSpriteSheetFromArchive(param1, param2, param0, param3 ^ -105)) {
             return null;
           }
-          stackIn_7_0 = MatchAgent.b(param3 + 9);
+          stackIn_7_0 = MatchAgent.buildFirstDecodedSprite(param3 + 9);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

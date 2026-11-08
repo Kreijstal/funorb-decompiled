@@ -92,7 +92,7 @@ final class ConsoleArgumentSupport {
           TrinketTile.field_Kb = param1;
           NodeHashTableIterator.field_b = param3;
           var7 = (CharSequence) ((Object) param1);
-          PlayerStatSortCriterion.field_o = MatchAgent.a(0, var7);
+          PlayerStatSortCriterion.field_o = MatchAgent.normalizeAccountName(0, var7);
           if (param2 < 114) {
             field_d = -66;
           }

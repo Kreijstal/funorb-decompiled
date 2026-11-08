@@ -12,7 +12,7 @@ final class IntValueNode extends IntrusiveNode {
 
     final static boolean b(int param0) {
         int var1 = 66 % ((param0 + 43) / 35);
-        if (TextFieldValidator.f(-1)) {
+        if (TextFieldValidator.areAccountTrinketsDisabled(-1)) {
           return false;
         }
         if (WeightedLruCache.field_d > 0) {

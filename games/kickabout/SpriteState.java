@@ -263,7 +263,7 @@ abstract class SpriteState extends DualLinkNode {
                   }
                   var16Lifetime1Lifetime1 = 0;
                   var17 = ClientException.field_c.field_Ab.field_jb;
-                  var18_ref = (LobbyPlayerRow) (var17.g(24009));
+                  var18_ref = (LobbyPlayerRow) (var17.first(24009));
                   scanLoop4: while (true) {
                     if (var18_ref != null) {
                       if (!var18_ref.isDetachedFromPlayerTable(-13356)) {
@@ -289,7 +289,7 @@ abstract class SpriteState extends DualLinkNode {
                           break scanLoop4;
                         }
                       }
-                      var18_ref = (LobbyPlayerRow) (var17.c(param2 ^ -33));
+                      var18_ref = (LobbyPlayerRow) (var17.next(param2 ^ -33));
                       continue;
                     }
                     break;
@@ -382,7 +382,7 @@ abstract class SpriteState extends DualLinkNode {
             if (BlackFadeScreen.field_i.field_sb != 0) {
               TrinketCatalog.field_b = false;
             }
-            NetworkGameClient.a(param1, (byte) -57, PlayerContextMenu.field_i, false);
+            NetworkGameClient.updateGameOptionControls(param1, (byte) -57, PlayerContextMenu.field_i, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

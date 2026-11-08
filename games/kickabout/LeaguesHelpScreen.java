@@ -64,7 +64,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
     LeaguesHelpScreen() {
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         field_F = null;
         field_H = null;

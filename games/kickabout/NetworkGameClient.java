@@ -17,13 +17,13 @@ abstract class NetworkGameClient extends GameAppletShell {
     private boolean field_q;
     private boolean field_o;
 
-    final void i(int param0) {
+    final void enableChatResponseHandlers(int param0) {
         LookupRecordUpdate.field_h[11] = true;
         LookupRecordUpdate.field_h[param0] = true;
         LookupRecordUpdate.field_h[12] = true;
     }
 
-    final static UiLayoutNode f(int param0) {
+    final static UiLayoutNode getLobbyPlayerListContent(int param0) {
         if (param0 != 0) {
           return (UiLayoutNode) null;
         }
@@ -99,7 +99,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         LookupRecordUpdate.field_h[2] = true;
     }
 
-    final void a(String param0, int param1, byte param2) {
+    final void initializeAppletParameters(String param0, int param1, byte param2) {
         try {
           if (param2 != -60) {
             this.field_A = true;
@@ -156,7 +156,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         AccountNameAvailabilityValidator.writeSessionCookie(AppletContextSupport.getActiveApplet(19), var2, (byte) 15);
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_y = null;
         field_t = null;
         if (!param0) {
@@ -165,7 +165,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         field_w = null;
     }
 
-    final static void b(boolean param0) {
+    final static void showPendingServerNotice(boolean param0) {
         String var2 = null;
         if (QuickChatMenuBuilder.field_f != null) {
           var2 = QuickChatMenuBuilder.field_f;
@@ -174,11 +174,11 @@ abstract class NetworkGameClient extends GameAppletShell {
           QuickChatMenuBuilder.field_f = null;
         }
         if (!param0) {
-          NetworkGameClient.k((byte) 24);
+          NetworkGameClient.updateChatPanelTransition((byte) 24);
         }
     }
 
-    final static void k(byte param0) {
+    final static void updateChatPanelTransition(byte param0) {
         if (VerticalScrollbar.field_Ab != ColorQuantizationBox.field_f.field_e) {
           ClientPacketFlushSupport.field_c = ClientPacketFlushSupport.field_c + (ColorQuantizationBox.field_f.field_e - VerticalScrollbar.field_Ab);
           VerticalScrollbar.field_Ab = ColorQuantizationBox.field_f.field_e;
@@ -249,7 +249,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var4;
         var4 = Kickabout.field_G;
         if (param0 < 83) {
-          NetworkGameClient.b(false);
+          NetworkGameClient.showPendingServerNotice(false);
         }
         var2 = AppletContextSupport.field_b;
         if (var2 < 64 &&
@@ -281,7 +281,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                                 return;
                               }
                               if (var2 == 17) {
-                                this.j((byte) -1);
+                                this.readExternalUrlPacket((byte) -1);
                                 return;
                               }
                               if (var2 == 18) {
@@ -321,13 +321,13 @@ abstract class NetworkGameClient extends GameAppletShell {
         FormationView.b((byte) -116);
     }
 
-    final void n(int param0) {
+    final void processStartupInterface(int param0) {
         int discarded$1 = 0;
         int discarded$2 = 0;
         int var3 = Kickabout.field_G;
         int var2 = 31 / ((param0 - 61) / 48);
         if (FullscreenFailureReason.b((byte) 97)) {
-          discarded$1 = this.a(false, true, null != SplashScreen.field_m ? true : false);
+          discarded$1 = this.processAccountMenu(false, true, null != SplashScreen.field_m ? true : false);
         } else {
           if (10 > DateInputValidator.field_d) {
           } else {
@@ -337,14 +337,14 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (RasterGlowSupport.field_c != 0) {
                 CachedListingRow.a(59, StatefulTextPainter.field_v);
               } else {
-                discarded$2 = this.a(false, true, false);
+                discarded$2 = this.processAccountMenu(false, true, false);
               }
             }
           }
         }
     }
 
-    final void c(int param0, boolean param1) {
+    final void serviceClientInfrastructure(int param0, boolean param1) {
         int stackIn_24_0 = 0;
         int stackIn_102_0 = 0;
         boolean stackIn_103_1 = false;
@@ -569,11 +569,11 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    final int b(int param0, boolean param1) {
+    final int pollAccountMenuSelection(int param0, boolean param1) {
         if (param0 != 5) {
           this.enableHandlerGroup5(-23);
         }
-        return this.a(true, true, param1);
+        return this.processAccountMenu(true, true, param1);
     }
 
     final void enableHandlerGroup4(int param0) {
@@ -583,7 +583,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         LookupRecordUpdate.field_h[4] = true;
     }
 
-    final static void a(int param0, byte param1, GameSetupPanel param2, boolean param3) {
+    final static void updateGameOptionControls(int param0, byte param1, GameSetupPanel param2, boolean param3) {
         ContextMenuItem dupTemp$0 = null;
         int var17_int = 0;
         int var24 = 0;
@@ -1188,7 +1188,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    private final int a(boolean param0, boolean param1, boolean param2) {
+    private final int processAccountMenu(boolean param0, boolean param1, boolean param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -1364,7 +1364,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               this.field_p = Integer.parseInt(var8);
             }
             if (param4 >= -78) {
-              this.i(38);
+              this.enableChatResponseHandlers(38);
             }
             if (this.field_p >= 5) {
               this.field_p = 0;
@@ -1397,7 +1397,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    final static void k(int param0) {
+    final static void drawQuickChatOverlay(int param0) {
         if (DebugConsole.field_s) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, SoftwareRasterizer.field_c - SoftwareRasterizer.field_b, SoftwareRasterizer.field_h - SoftwareRasterizer.field_e);
           LeaguesHelpScreen.field_E.draw(46, false);
@@ -1411,7 +1411,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     NetworkGameClient() {
     }
 
-    private final void j(byte param0) {
+    private final void readExternalUrlPacket(byte param0) {
         int var2 = ByteArrayPool.field_e.readUnsignedByte((byte) -122);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = MusicVolumeSupport.field_b - 1;

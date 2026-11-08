@@ -46,10 +46,10 @@ abstract class ConsolePanel implements OverlayLayer {
             var8 = var6[var7];
             if (this.field_d.stringWidth(var8) >= var4_int) {
               var9 = this.b(0, var8, var4_int);
-              var10 = (TextLine) (var9.g(24009));
+              var10 = (TextLine) (var9.first(24009));
               while (var10 != null) {
                 this.a(31779, param0, var10.text);
-                var10 = (TextLine) (var9.c(33));
+                var10 = (TextLine) (var9.next(33));
               }
             } else {
               this.a(31779, param0, var8);
@@ -208,15 +208,15 @@ abstract class ConsolePanel implements OverlayLayer {
         int var6 = Kickabout.field_G;
         try {
           this.field_g.field_Ab.addChild((byte) -109, this.a(param1, param2, -73));
-          if (!(256 >= this.field_g.field_Ab.field_jb.a(false))) {
+          if (!(256 >= this.field_g.field_Ab.field_jb.size(false))) {
             this.field_g.field_Ab.field_jb.removeFirst((byte) 125);
           }
           var4_int = 5;
-          var5 = (UiLayoutNode) (this.field_g.field_Ab.field_jb.g(24009));
+          var5 = (UiLayoutNode) (this.field_g.field_Ab.field_jb.first(24009));
           while (var5 != null) {
             var5.field_J = var4_int;
             var4_int = var4_int + this.field_f;
-            var5 = (UiLayoutNode) (this.field_g.field_Ab.field_jb.c(param0 - 31746));
+            var5 = (UiLayoutNode) (this.field_g.field_Ab.field_jb.next(param0 - 31746));
           }
           if (param0 != 31779) {
             this.field_p = (String) null;
@@ -257,7 +257,7 @@ abstract class ConsolePanel implements OverlayLayer {
             if (this.field_o == null ||
               this.field_m.field_c != this.field_o.field_d) {
               if (null == this.field_o) {
-                stackIn_26_1 = this.field_m.g(param0 ^ 28981);
+                stackIn_26_1 = this.field_m.first(param0 ^ 28981);
               } else {
                 stackIn_26_1 = this.field_o.field_d;
               }
@@ -306,12 +306,12 @@ abstract class ConsolePanel implements OverlayLayer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = (TextLine) (this.field_m.g(24009));
+          var3 = (TextLine) (this.field_m.first(24009));
           if (var3 == null ||
             !param0.equals(var3.text)) {
-            this.field_m.a(0, new TextLine(param0));
+            this.field_m.addFirst(0, new TextLine(param0));
           }
-          if (this.field_m.a(false) > param1) {
+          if (this.field_m.size(false) > param1) {
             this.field_m.removeLast(-124);
           }
           return;

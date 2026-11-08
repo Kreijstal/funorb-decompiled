@@ -83,7 +83,7 @@ final class TrinketShopDialog extends MessageDialog {
         }
         AuctionListing.pushRasterClip(-2 + (var11.field_F - (-var11.field_q + 15)), -22914, 0, -2 + (var11.field_mb + var11.field_T) - 15, var11.field_T);
         Object var5 = null;
-        TrinketTile var6_ref_at = (TrinketTile) (this.field_L.field_Db.field_jb.g(24009));
+        TrinketTile var6_ref_at = (TrinketTile) (this.field_L.field_Db.field_jb.first(24009));
         while (var6_ref_at != null) {
           if (this.field_H == var6_ref_at) {
             SoftwareRasterizer.fillRoundedRectangleBlended(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 65793, 128);
@@ -94,7 +94,7 @@ final class TrinketShopDialog extends MessageDialog {
             }
           }
           var6_ref_at.i((byte) -76);
-          var6_ref_at = (TrinketTile) (this.field_L.field_Db.field_jb.c(33));
+          var6_ref_at = (TrinketTile) (this.field_L.field_Db.field_jb.next(33));
         }
         if (this.field_t != var5) {
           this.a(this.field_v, (PopupCard) (var5), (Sprite) null, -94, this.field_u);
@@ -149,7 +149,7 @@ final class TrinketShopDialog extends MessageDialog {
         if (param0 != 3) {
           this.drawBody((byte) 5, 15, 25);
         }
-        var4 = (TrinketTile) (this.field_L.field_Db.field_jb.g(param0 + 24006));
+        var4 = (TrinketTile) (this.field_L.field_Db.field_jb.first(param0 + 24006));
         while (var4 != null) {
           if (1 == var4.field_sb) {
             LoginKind.a((byte) -98);
@@ -159,7 +159,7 @@ final class TrinketShopDialog extends MessageDialog {
               this.field_H = null;
             }
           }
-          var4 = (TrinketTile) (this.field_L.field_Db.field_jb.c(param0 + 30));
+          var4 = (TrinketTile) (this.field_L.field_Db.field_jb.next(param0 + 30));
         }
         stackIn_23_0 = this.field_i[0];
         stackIn_24_1 = (this.field_H != null) && (this.field_H.field_Db <= RegistrationRequestState.field_h.field_x);

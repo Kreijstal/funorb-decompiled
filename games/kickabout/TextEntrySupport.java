@@ -125,7 +125,7 @@ final class TextEntrySupport {
           }
           NodeHashTableIterator.field_b = 2;
           var5 = (CharSequence) ((Object) param0);
-          PlayerStatSortCriterion.field_o = MatchAgent.a(param1 ^ -70, var5);
+          PlayerStatSortCriterion.field_o = MatchAgent.normalizeAccountName(param1 ^ -70, var5);
           IntDoubleCommand.field_A = param2;
           PlayArea.showCurrentQuickChatMenu(true);
         } catch (RuntimeException runtimeException) {

@@ -268,7 +268,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
           }
           AchievementSubmission.a((byte) -117);
           if (PlayArea.isGuestSession(100)) {
-            ButtonMenuScreen.a(16144);
+            ButtonMenuScreen.enqueueLoginRequiredDialog(16144);
           } else {
             if (!GameLoopApplet.field_E.field_J[0]) {
               SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 40);
@@ -292,7 +292,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
         }
         AchievementSubmission.a((byte) -117);
         if (PlayArea.isGuestSession(100)) {
-          ButtonMenuScreen.a(16144);
+          ButtonMenuScreen.enqueueLoginRequiredDialog(16144);
         } else {
           if (!GameLoopApplet.field_E.field_J[0]) {
             SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 40);

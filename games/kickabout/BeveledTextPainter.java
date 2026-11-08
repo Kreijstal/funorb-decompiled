@@ -722,10 +722,10 @@ class BeveledTextPainter extends TextWidgetPainter {
               if (InstrumentNoteMask.field_k) {
                 BlobSubmission.a(param3, (byte) 79);
               } else {
-                PlayerStats.a(param3, 0);
+                PlayerStats.sendLobbyGamePreferences(param3, 0);
               }
             }
-            NetworkGameClient.a(param3, (byte) -127, ArchiveSource.field_b, true);
+            NetworkGameClient.updateGameOptionControls(param3, (byte) -127, ArchiveSource.field_b, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -797,7 +797,7 @@ class BeveledTextPainter extends TextWidgetPainter {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_u = null;
         if (!param0) {
           field_s = (String) null;

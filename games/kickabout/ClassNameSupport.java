@@ -46,7 +46,7 @@ final class ClassNameSupport {
           var2_long = MonotonicClock.monotonicMillis(-90);
           if (RankingRowFactory.field_c != 0 &&
             DirectByteStorage.field_i < 0) {
-            var4_ref_jm = (DelayedServerPacket) (ConsolePanel.field_i.g(24009));
+            var4_ref_jm = (DelayedServerPacket) (ConsolePanel.field_i.first(24009));
             if (var4_ref_jm != null &&
               var4_ref_jm.dueTime < var2_long) {
               var4_ref_jm.c((byte) -109);

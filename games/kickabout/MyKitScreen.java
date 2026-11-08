@@ -47,22 +47,22 @@ final class MyKitScreen extends TeamManagementScreen {
         this.field_ab.updateInput(0, param1);
         var3 = 44 / ((38 - param0) / 60);
         this.handleScrollButtons(0);
-        var4_ref_nt = (KitStyleTile) (this.field_F.field_jb.g(24009));
+        var4_ref_nt = (KitStyleTile) (this.field_F.field_jb.first(24009));
         while (var4_ref_nt != null) {
           var4_ref_nt.c(-1, param1);
           if (var4_ref_nt.field_Jb.field_sb == 0) {
-            var4_ref_nt = (KitStyleTile) (this.field_F.field_jb.c(33));
+            var4_ref_nt = (KitStyleTile) (this.field_F.field_jb.next(33));
             continue;
           }
           if (!var4_ref_nt.field_Ib &&
             !var4_ref_nt.field_Kb) {
             ModalPanel.a(var4_ref_nt.field_Cb.styleId, (byte) -38);
           }
-          var4_ref_nt = (KitStyleTile) (this.field_F.field_jb.c(33));
+          var4_ref_nt = (KitStyleTile) (this.field_F.field_jb.next(33));
         }
         for (var4 = 0; 2 > var4; var4++) {
           var5 = this.field_J[var4].field_jb;
-          var6 = (ColourSwatchTile) (var5.g(24009));
+          var6 = (ColourSwatchTile) (var5.first(24009));
           while (var6 != null) {
             if (0 != var6.field_sb) {
               if (var4 != 0) {
@@ -72,7 +72,7 @@ final class MyKitScreen extends TeamManagementScreen {
               }
               LoginKind.a((byte) -117);
             }
-            var6 = (ColourSwatchTile) (var5.c(33));
+            var6 = (ColourSwatchTile) (var5.next(33));
           }
         }
         var4Lifetime1 = 0;
@@ -128,13 +128,13 @@ final class MyKitScreen extends TeamManagementScreen {
         }
         this.field_F.field_jb = var11;
         var5 = 5;
-        var6 = (UiLayoutNode) (this.field_F.field_jb.g(24009));
+        var6 = (UiLayoutNode) (this.field_F.field_jb.first(24009));
         while (var6 != null) {
           var6.field_mb = this.field_F.field_mb;
           var6.field_s = var5;
           var6.field_J = 0;
           var5 = var5 + (12 + var6.field_q);
-          var6 = (UiLayoutNode) (this.field_F.field_jb.c(33));
+          var6 = (UiLayoutNode) (this.field_F.field_jb.next(33));
         }
         this.field_F.field_s = 0;
         this.field_V = param0;
@@ -265,10 +265,10 @@ final class MyKitScreen extends TeamManagementScreen {
         var6 = Kickabout.field_G;
         super.drawScreen(param0, param1);
         SoftwareRasterizer.fillRectangleAlpha(this.field_P.field_F - 8, -8 + this.field_P.field_T, this.field_P.field_q + 16, this.field_P.field_mb + 16, 65793, 96);
-        var3_ref_hd = (UiLayoutNode) (this.field_P.field_jb.g(param0 + 24014));
+        var3_ref_hd = (UiLayoutNode) (this.field_P.field_jb.first(param0 + 24014));
         while (var3_ref_hd != null) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3_ref_hd.field_F, var3_ref_hd.field_T, var3_ref_hd.field_q, var3_ref_hd.field_mb, 10, 65793, 96);
-          var3_ref_hd = (UiLayoutNode) (this.field_P.field_jb.c(33));
+          var3_ref_hd = (UiLayoutNode) (this.field_P.field_jb.next(33));
         }
         ByteArrayPool.field_d.drawText(ExceptionTextSupport.field_c, -26 + this.field_G.field_F, this.field_G.field_T - 16, 16777215, -1);
         for (var3 = 0; var3 < 2; var3++) {
@@ -276,22 +276,22 @@ final class MyKitScreen extends TeamManagementScreen {
         }
         this.field_P.draw(114, false);
         AuctionListing.pushRasterClip(this.field_G.field_F + this.field_G.field_q, -22914, this.field_G.field_F, this.field_G.field_mb + this.field_G.field_T, this.field_G.field_T);
-        var7 = (KitStyleTile) (this.field_F.field_jb.g(24009));
+        var7 = (KitStyleTile) (this.field_F.field_jb.first(24009));
         while (var7 != null) {
           var7.h(-24508);
-          var7 = (KitStyleTile) (this.field_F.field_jb.c(33));
+          var7 = (KitStyleTile) (this.field_F.field_jb.next(33));
         }
         TeamManagementScreen.e(124);
         for (var3Lifetime1 = 0; var3Lifetime1 < 2; var3Lifetime1++) {
           var4 = null;
-          var5 = (ColourSwatchTile) (this.field_J[var3Lifetime1].field_jb.g(24009));
+          var5 = (ColourSwatchTile) (this.field_J[var3Lifetime1].field_jb.first(24009));
           while (var5 != null) {
             if (!var5.isSelectedColor(false)) {
               var5.a(param0 ^ -8);
             } else {
               var4 = var5;
             }
-            var5 = (ColourSwatchTile) (this.field_J[var3Lifetime1].field_jb.c(33));
+            var5 = (ColourSwatchTile) (this.field_J[var3Lifetime1].field_jb.next(33));
           }
           if (var4 != null) {
             ((ColourSwatchTile) (var4)).a(param0 + 8);
@@ -409,10 +409,10 @@ final class MyKitScreen extends TeamManagementScreen {
           stackIn_15_5 = RegistrationRequestState.field_h.field_w;
           stackIn_15_6 = var3;
           stackIn_15_7 = -107;
-          stackIn_16_8 = !(TextFieldValidator.f(-1));
+          stackIn_16_8 = !(TextFieldValidator.areAccountTrinketsDisabled(-1));
           boolean decompiledFrameRemainder0 = true;
           stackIn_19_0 = this;
-          if (((PlayerStats) stackIn_15_6).c((byte) stackIn_15_7, stackIn_16_8)) {
+          if (((PlayerStats) stackIn_15_6).hasActiveHorrorCostume((byte) stackIn_15_7, stackIn_16_8)) {
             stackIn_19_0Lifetime1 = this;
             if (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 110)) {
               stackIn_20_6 = true;

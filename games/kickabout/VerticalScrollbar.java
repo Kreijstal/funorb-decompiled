@@ -589,11 +589,11 @@ final class VerticalScrollbar extends UiLayoutNode {
               return;
             }
             if (7 == var2) {
-              var15 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.g(24009));
+              var15 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.first(24009));
               while (var15 != null) {
                 var15.c((byte) -109);
                 var15.unlinkSecondary(-5);
-                var15 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.c(33));
+                var15 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.next(33));
               }
               SharedSpriteTables.field_b = 0;
               return;
@@ -625,11 +625,11 @@ final class VerticalScrollbar extends UiLayoutNode {
               return;
             }
             if (10 == var2) {
-              var30 = (GameSetupPanel) (SquadSlotWidget.field_yb.g(24009));
+              var30 = (GameSetupPanel) (SquadSlotWidget.field_yb.first(24009));
               while (var30 != null) {
                 var30.c((byte) -109);
                 var30.unlinkSecondary(-98);
-                var30 = (GameSetupPanel) (SquadSlotWidget.field_yb.c(33));
+                var30 = (GameSetupPanel) (SquadSlotWidget.field_yb.next(33));
               }
               return;
             }
@@ -771,11 +771,11 @@ final class VerticalScrollbar extends UiLayoutNode {
             FullscreenErrorDialog.a(var24, (byte) -119);
             return;
           }
-          var3_ref_he = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.g(24009));
+          var3_ref_he = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.first(24009));
           while (var3_ref_he != null) {
             var3_ref_he.c((byte) -109);
             var3_ref_he.unlinkSecondary(9);
-            var3_ref_he = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.c(33));
+            var3_ref_he = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.next(33));
           }
           var3_ref_heLifetime1 = (LobbyPlayerRow) (SquadPickerDialog.field_N.first((byte) 72));
           while (var3_ref_heLifetime1 != null) {

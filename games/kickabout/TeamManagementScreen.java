@@ -128,7 +128,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
         QuickChatCategory.a(RegistrationRequestState.field_h.field_x, 5464);
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_D = null;
         field_C = null;
         field_B = null;

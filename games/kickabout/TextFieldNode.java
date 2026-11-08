@@ -201,7 +201,7 @@ final class TextFieldNode extends UiLayoutNode {
               DualLinkNode.field_g.addLast(var6_ref_jm, 3);
               FootballerAiOverlaySupport.field_d.field_n = 0;
             }
-            var9 = (DelayedServerPacket) (DualLinkNode.field_g.g(24009));
+            var9 = (DelayedServerPacket) (DualLinkNode.field_g.first(24009));
             var13 = var9;
             if (var13 != null &&
               var13.dueTime < var2_long) {

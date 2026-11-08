@@ -26,18 +26,18 @@ final class PromotionDialog extends MessageDialog {
         RuntimeException var2 = null;
         var3 = Kickabout.field_G;
         try {
-          var4 = (LookupRecordUpdate) (NamedValueContainer.field_c.g(24009));
+          var4 = (LookupRecordUpdate) (NamedValueContainer.field_c.first(24009));
           while (var4 != null) {
             SocialTabsPanel.writeLookupRecordUpdate(var4, param0, true);
-            var4 = (LookupRecordUpdate) (NamedValueContainer.field_c.c(33));
+            var4 = (LookupRecordUpdate) (NamedValueContainer.field_c.next(33));
           }
           if (param1 >= -120) {
             PromotionDialog.releaseStatics(96);
           }
-          var5 = (LookupQuery) (MidiPcmStream.field_M.g(24009));
+          var5 = (LookupQuery) (MidiPcmStream.field_M.first(24009));
           while (var5 != null) {
             ByteStorage.writeLookupQuery(param0, var5, (byte) -114);
-            var5 = (LookupQuery) (MidiPcmStream.field_M.c(33));
+            var5 = (LookupQuery) (MidiPcmStream.field_M.next(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

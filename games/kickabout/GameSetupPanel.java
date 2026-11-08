@@ -48,7 +48,7 @@ final class GameSetupPanel extends UiLayoutNode {
         return (int)this.getSecondaryKey((byte) 98);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_Qb = null;
         field_Vb = null;
         field_lc = null;

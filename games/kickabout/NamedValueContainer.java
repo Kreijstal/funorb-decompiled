@@ -14,14 +14,14 @@ final class NamedValueContainer {
         NamedValueEntry var3;
         int var4;
         var4 = Kickabout.field_G;
-        var3 = (NamedValueEntry) (this.field_e.g(param1 + 24008));
+        var3 = (NamedValueEntry) (this.field_e.first(param1 + 24008));
         if (param1 == 1) {
           while (var3 != null) {
             if (null == var3.field_j &&
               param0 == var3.field_e) {
               return var3;
             }
-            var3 = (NamedValueEntry) (this.field_e.c(33));
+            var3 = (NamedValueEntry) (this.field_e.next(33));
           }
           return null;
         }
@@ -31,7 +31,7 @@ final class NamedValueContainer {
             param0 == var3.field_e) {
             return var3;
           }
-          var3 = (NamedValueEntry) (this.field_e.c(33));
+          var3 = (NamedValueEntry) (this.field_e.next(33));
         }
         return null;
     }
@@ -314,13 +314,13 @@ final class NamedValueContainer {
         RuntimeException decompiledCaughtException = null;
         var5 = Kickabout.field_G;
         try {
-          var3 = (NamedValueEntry) (this.field_e.g(24009));
+          var3 = (NamedValueEntry) (this.field_e.first(24009));
           while (var3 != null) {
             if (var3.field_j.equals(param1)) {
               stackIn_6_0 = var3;
               return stackIn_6_0;
             }
-            var3 = (NamedValueEntry) (this.field_e.c(33));
+            var3 = (NamedValueEntry) (this.field_e.next(33));
           }
           var4 = 108 % ((36 - param0) / 34);
           stackIn_9_0 = null;

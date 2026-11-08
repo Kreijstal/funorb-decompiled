@@ -55,12 +55,12 @@ final class AchievementsScreen extends ButtonMenuScreen {
         ModalPanel.field_D.draw(97, false);
         ContextMenuItem.field_Ib.draw(param0 + 84, false);
         AuctionListing.pushRasterClip(ContextMenuItem.field_Ib.field_F + ContextMenuItem.field_Ib.field_q, param0 - 22909, ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_mb + ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_T);
-        var3 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
+        var3 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.first(24009));
         while (var3 != null) {
           if (var3 instanceof SelectableTrinketIcon) {
             ((SelectableTrinketIcon) (var3)).c(true);
           }
-          var3 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.c(33));
+          var3 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.next(33));
         }
         TeamManagementScreen.e(117);
         var18 = IsSixCommand.field_C;
@@ -93,7 +93,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         if (var6 == 0 &&
           !DisplayNameUiSupport.field_e) {
           if (var5 == 32 &&
-            TextFieldValidator.f(-1)) {
+            TextFieldValidator.areAccountTrinketsDisabled(-1)) {
             GameModesHelpScreen.field_L.c(5 + this.slideOffsetX, 290);
             var10 = var18.drawParagraph('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
             var11 = var8 + var10 * 16 + 5;
@@ -243,12 +243,12 @@ final class AchievementsScreen extends ButtonMenuScreen {
           MatchUiLayoutSupport.field_d.updateInput(0, param1);
           ModalPanel.field_D.updateInput(0, param1);
           RenderedBall.field_C = -1;
-          var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
+          var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.first(24009));
           while (var5 != null) {
             if (var5 instanceof SelectableTrinketIcon) {
               ((SelectableTrinketIcon) (var5)).a(param1, -60);
             }
-            var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.c(33));
+            var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.next(33));
           }
           this.handleScrollButtons(-1);
           if (ContextMenuItem.field_Ib.field_Db.field_J <= var4) {
@@ -288,12 +288,12 @@ final class AchievementsScreen extends ButtonMenuScreen {
         MatchUiLayoutSupport.field_d.updateInput(0, param1);
         ModalPanel.field_D.updateInput(0, param1);
         RenderedBall.field_C = -1;
-        var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
+        var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.first(24009));
         while (var5 != null) {
           if (var5 instanceof SelectableTrinketIcon) {
             ((SelectableTrinketIcon) (var5)).a(param1, -60);
           }
-          var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.c(33));
+          var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.next(33));
         }
         this.handleScrollButtons(-1);
         if (ContextMenuItem.field_Ib.field_Db.field_J > var4Lifetime1 &&
@@ -433,7 +433,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = MatchAgent.a(0, var6);
+          var2 = MatchAgent.normalizeAccountName(0, var6);
           if (param1 != 145) {
             field_C = (UiLayoutNode) null;
           }
@@ -443,7 +443,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var3 = (SocialPlayerRow) (HighScoreQuery.field_m.get(-3611, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.name);
-            var4 = MatchAgent.a(0, var7);
+            var4 = MatchAgent.normalizeAccountName(0, var7);
             if (var4 == null) {
               var4 = var3.name;
             }

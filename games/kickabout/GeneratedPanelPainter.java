@@ -8,7 +8,7 @@ final class GeneratedPanelPainter extends NineSlicePanelPainter {
     static String field_j;
     static Trinket[] field_g;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         field_g = null;
         field_i = null;

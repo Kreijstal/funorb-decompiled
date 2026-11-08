@@ -23,7 +23,7 @@ final class QuickChatCategoryCache {
           }
         } else {
           if (MachineTokenStorageSupport.field_e.isSpectator(param0 - 2) &&
-            !MachineTokenStorageSupport.field_e.b(-21660)) {
+            !MachineTokenStorageSupport.field_e.usesTournamentSpectatorControls(-21660)) {
             GameLoopApplet.b(param0 + 15848, 11, 0);
           } else {
             ContextMenu.a(PlayerContextMenu.field_i.getGameId((byte) 74), (byte) -114, 11);

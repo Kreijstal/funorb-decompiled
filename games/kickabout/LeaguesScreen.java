@@ -298,15 +298,15 @@ final class LeaguesScreen extends ButtonMenuScreen {
         ((UiLayoutNode) (Object) stackIn_26_0).draw(stackIn_26_1, stackIn_27_2);
         if (AuctionTableWidget.field_Hb.field_Db.field_jb != null) {
           AuctionListing.pushRasterClip(-2 + AuctionTableWidget.field_Hb.field_q + (AuctionTableWidget.field_Hb.field_F - 15), -22914, AuctionTableWidget.field_Hb.field_F, 12 + (AuctionTableWidget.field_Hb.field_T - (-AuctionTableWidget.field_Hb.field_mb + 15)), AuctionTableWidget.field_Hb.field_T);
-          var7 = (RankingRowNode) (AuctionTableWidget.field_Hb.field_Db.field_jb.g(24009));
+          var7 = (RankingRowNode) (AuctionTableWidget.field_Hb.field_Db.field_jb.first(24009));
           while (var7 != null) {
             var7.b(-104);
-            var7 = (RankingRowNode) (AuctionTableWidget.field_Hb.field_Db.field_jb.c(param0 ^ -38));
+            var7 = (RankingRowNode) (AuctionTableWidget.field_Hb.field_Db.field_jb.next(param0 ^ -38));
           }
           TeamManagementScreen.e(118);
         }
         if (AuctionTableWidget.field_Hb.field_Db.field_jb == null ||
-          AuctionTableWidget.field_Hb.field_Db.field_jb.a(false) == 0) {
+          AuctionTableWidget.field_Hb.field_Db.field_jb.size(false) == 0) {
           if (!PlayArea.isGuestSession(100)) {
             if (!PlayerContextMenu.field_f) {
               ByteArrayPool.field_d.drawCentered(PasswordValidator.field_k.toLowerCase(), 194 + this.slideOffsetX, 290, 16777215, -1);

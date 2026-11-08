@@ -94,10 +94,10 @@ final class PlayerInputEvent extends DualLinkNode {
         try {
           var14 = ByteArrayPool.field_e;
           var2 = var14.readUnsignedByte((byte) -109);
-          var3 = (RankingsRequest) (WorldDrawEntry.field_i.g(24009));
+          var3 = (RankingsRequest) (WorldDrawEntry.field_i.first(24009));
           while (var3 != null) {
             if (var2 != var3.field_k) {
-              var3 = (RankingsRequest) (WorldDrawEntry.field_i.c(33));
+              var3 = (RankingsRequest) (WorldDrawEntry.field_i.next(33));
               continue;
             }
             break;

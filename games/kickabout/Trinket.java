@@ -47,7 +47,7 @@ final class Trinket {
         }
     }
 
-    final ArgbSprite d(boolean param0) {
+    final ArgbSprite getIconSprite(boolean param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ArgbSprite stackIn_2_0 = null;
@@ -148,7 +148,7 @@ final class Trinket {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 256) {
-            Trinket.q(88);
+            Trinket.releaseStatics(88);
           }
           stackIn_7_0 = (0 == this.field_h);
           return stackIn_7_0;
@@ -159,7 +159,7 @@ final class Trinket {
         }
     }
 
-    final int a(byte param0) {
+    final int tackleStunBonus(byte param0) {
         RuntimeException var2 = null;
         int stackIn_8_0 = 0;
         int stackIn_10_0 = 0;
@@ -229,7 +229,7 @@ final class Trinket {
         }
     }
 
-    final static void a(RenderedFootballer param0, int param1) {
+    final static void drawFootballerShadow(RenderedFootballer param0, int param1) {
         int stackIn_49_0 = 0;
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
@@ -314,7 +314,7 @@ final class Trinket {
         }
     }
 
-    final static void d(byte param0) {
+    final static void buildBlurredModelSprite(byte param0) {
         RuntimeException runtimeException = null;
         Sprite var1 = null;
         Sprite var2 = null;
@@ -387,7 +387,7 @@ final class Trinket {
         }
     }
 
-    final static void i(int param0) {
+    final static void initializeAfterimagePool(int param0) {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;
@@ -411,7 +411,7 @@ final class Trinket {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void setSoundEffectVolume(int param0, byte param1) {
         boolean stackIn_19_0 = false;
         RuntimeException decompiledCaughtException = null;
         SoundStreamHandle var2 = null;
@@ -423,7 +423,7 @@ final class Trinket {
         try {
           IconButtonPainter.field_a = param0;
           var3 = -110 / ((67 - param1) / 54);
-          var2 = (SoundStreamHandle) (LoginCredentials.field_a.g(24009));
+          var2 = (SoundStreamHandle) (LoginCredentials.field_a.first(24009));
           scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (var2 != null) {
@@ -434,7 +434,7 @@ final class Trinket {
                     var2.stream.setInternalVolume(var2.baseVolume * IconButtonPainter.field_a + 128 >> 8);
                   }
                   var2.c((byte) -109);
-                  var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.c(33));
+                  var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.next(33));
                   decompiledFrameCompleted0 = false;
                   break;
                 }
@@ -447,7 +447,7 @@ final class Trinket {
                   var4 != 0) {
                   var2.stream.setInternalVolume(128 + IconButtonPainter.field_a * var2.baseVolume >> 8);
                 }
-                var2 = (SoundStreamHandle) (LoginCredentials.field_a.c(33));
+                var2 = (SoundStreamHandle) (LoginCredentials.field_a.next(33));
                 if (var4 == 0) {
                   continue;
                 }
@@ -455,7 +455,7 @@ final class Trinket {
             }
             if ((decompiledFrameCompleted0) &&
               (IndexedSpriteState.field_c != null)) {
-              var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.g(24009));
+              var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.first(24009));
               while (var2 != null) {
                 if (var4 != 0) {
                   break scanLoop1;
@@ -466,7 +466,7 @@ final class Trinket {
                 } else {
                   var2.c((byte) -109);
                 }
-                var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.c(33));
+                var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.next(33));
               }
             }
             RankingsRequest.field_n[1] = param0;
@@ -485,7 +485,7 @@ final class Trinket {
         }
     }
 
-    final static void a(byte param0, String param1) {
+    final static void showLoginWithExtraText(byte param0, String param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -529,7 +529,7 @@ final class Trinket {
         }
     }
 
-    final static String f(int param0) {
+    final static String updateChatComposeDisplay(int param0) {
         String stackIn_63_0 = null;
         Object stackIn_99_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -670,7 +670,7 @@ final class Trinket {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 65) {
-            Trinket.a((RenderedFootballer) null, -74);
+            Trinket.drawFootballerShadow((RenderedFootballer) null, -74);
           }
           stackIn_7_0 = (this.field_h == 65);
           return stackIn_7_0;
@@ -746,7 +746,7 @@ final class Trinket {
         }
     }
 
-    public static void q(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -754,7 +754,7 @@ final class Trinket {
           field_a = null;
           field_g = null;
           if (param0 != 140) {
-            Trinket.a((byte) -7, (String) null);
+            Trinket.showLoginWithExtraText((byte) -7, (String) null);
           }
           field_j = null;
           field_f = null;
@@ -774,7 +774,7 @@ final class Trinket {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            Trinket.a((RenderedFootballer) null, 63);
+            Trinket.drawFootballerShadow((RenderedFootballer) null, 63);
           }
           stackIn_7_0 = (this.field_h == 71);
           return stackIn_7_0;
@@ -824,7 +824,7 @@ final class Trinket {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            this.d(true);
+            this.getIconSprite(true);
           }
           stackIn_7_0 = (this.field_h == 62);
           return stackIn_7_0;

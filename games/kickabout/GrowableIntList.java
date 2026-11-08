@@ -116,9 +116,9 @@ final class GrowableIntList {
           if (param2 == 3) {
             var11.addLast(new IntValueNode(6), 3);
           }
-          var4 = 100.0 / (double)var11.a(false);
+          var4 = 100.0 / (double)var11.size(false);
           var6 = 0.0;
-          var8 = (IntValueNode) (var11.g(param0 + 18545));
+          var8 = (IntValueNode) (var11.first(param0 + 18545));
           while (true) {
             if (var8 == null) {
               stackIn_25_0 = -1;
@@ -127,7 +127,7 @@ final class GrowableIntList {
             var9 = TooltipOverlay.loadSoundGroup(var8.field_j, (byte) 19);
             if (var9 == -1) {
               var6 = var6 + var4;
-              var8 = (IntValueNode) (var11.c(33));
+              var8 = (IntValueNode) (var11.next(33));
               continue;
             }
             break;

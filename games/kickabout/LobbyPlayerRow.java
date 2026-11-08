@@ -171,7 +171,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
                   var6.field_h == IntrusiveDequeCursor.field_b.participantStatus[var8].controlledSlot) {
                   var7 = var8;
                 }
-                var6.a(var2, var3, var7, -113);
+                var6.updateScreenIntersection(var2, var3, var7, -113);
               }
             }
             return;
@@ -192,7 +192,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
           this.field_Rb = param0;
           this.field_Nb = param1;
           var6 = (CharSequence) ((Object) this.field_Rb);
-          MatchAgent.a(0, var6);
+          MatchAgent.normalizeAccountName(0, var6);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -249,7 +249,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         try {
           this.field_Nb = param1;
           var5 = (CharSequence) ((Object) this.field_Rb);
-          MatchAgent.a(param0 ^ -2, var5);
+          MatchAgent.normalizeAccountName(param0 ^ -2, var5);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

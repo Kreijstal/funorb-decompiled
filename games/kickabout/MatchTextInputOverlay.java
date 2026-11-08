@@ -159,8 +159,8 @@ final class MatchTextInputOverlay implements OverlayLayer {
         if (this.isMatchInputActive(8)) {
           if (SortCriterion.field_l == null) {
             if (MachineTokenStorageSupport.field_e != null &&
-              MachineTokenStorageSupport.field_e.field_A && (!MachineTokenStorageSupport.field_e.isSpectator(param0 ^ 25) ||
-              MachineTokenStorageSupport.field_e.b(-21660))) {
+              MachineTokenStorageSupport.field_e.isTournamentMatch && (!MachineTokenStorageSupport.field_e.isSpectator(param0 ^ 25) ||
+              MachineTokenStorageSupport.field_e.usesTournamentSpectatorControls(-21660))) {
               NetworkArchiveRequest.h(param0 ^ 15419);
               ReceivedAuctionItem.a(AccountRegistrationResponse.field_h, param0 ^ 24);
               AuctionTableWidget.a(6356832, (byte) -25);

@@ -188,7 +188,7 @@ final class MeshPreviewSupport {
     }
 
     final static void a(int param0, byte param1) {
-        Trinket.a(param0, (byte) -32);
+        Trinket.setSoundEffectVolume(param0, (byte) -32);
         if (param1 >= -114) {
           Sprite var3 = (Sprite) null;
           MeshPreviewSupport.renderMeshPreview((ModelMesh) null, (Sprite) null, -104, -61);

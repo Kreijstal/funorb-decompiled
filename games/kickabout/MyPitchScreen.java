@@ -113,8 +113,8 @@ final class MyPitchScreen extends TeamManagementScreen {
         SoftwareRasterizer.fillRoundedRectangleBlended(var3, 95, 348, 106, 10, 65793, 96);
         SoftwareRasterizer.fillRoundedRectangleBlended(var3, 207, 348, 102, 10, 65793, 96);
         SoftwareRasterizer.fillRoundedRectangleBlended(var3, 314, 348, 100, 10, 65793, 96);
-        for (var4 = 0; var4 < RankingRowNode.field_Gb.field_jb.f(606511077).length; var4++) {
-          ((PitchOptionTile) (RankingRowNode.field_Gb.field_jb.f(param0 ^ -606511074)[var4])).j(0);
+        for (var4 = 0; var4 < RankingRowNode.field_Gb.field_jb.toArray(606511077).length; var4++) {
+          ((PitchOptionTile) (RankingRowNode.field_Gb.field_jb.toArray(param0 ^ -606511074)[var4])).j(0);
         }
         RankingRowNode.field_Gb.draw(96, false);
         if (!this.field_F) {
@@ -161,7 +161,7 @@ final class MyPitchScreen extends TeamManagementScreen {
         super.updateScreen((byte) 101, param1);
         RankingRowNode.field_Gb.field_s = this.slideOffsetX + 25;
         RankingRowNode.field_Gb.updateInput(0, param1);
-        var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.g(24009));
+        var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.first(24009));
         while (var3_ref_jt != null) {
           var3_ref_jt.c(3784, param1);
           if (var3_ref_jt.field_Ab != null &&
@@ -171,13 +171,13 @@ final class MyPitchScreen extends TeamManagementScreen {
             if (var3_ref_jt.field_sb != 0 &&
               var3_ref_jt.i(-29050)) {
               if (var3_ref_jt.k(-9)) {
-                var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.c(33));
+                var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.next(33));
                 continue;
               }
               StatChoiceDialog.b(var3_ref_jt.field_Db, 97, var3_ref_jt.field_zb);
             }
           }
-          var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.c(33));
+          var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.next(33));
         }
         QuickChatCategory.a(RegistrationRequestState.field_h.field_x, 5464);
         var3 = 4 % ((param0 - 38) / 60);

@@ -145,7 +145,7 @@ final class TeamSelectionView extends MatchPhaseView {
                 TextFieldNode.field_Wb = false;
               }
               if (0 != MySquadScreen.field_N.field_sb) {
-                TrinketCatalog.a(76);
+                TrinketCatalog.resetChatComposition(76);
                 TextFieldNode.field_Wb = false;
               }
             }

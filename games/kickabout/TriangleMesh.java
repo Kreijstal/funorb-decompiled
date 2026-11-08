@@ -176,7 +176,7 @@ final class TriangleMesh {
         RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
         try {
-          var2 = param1.g(24009);
+          var2 = param1.first(24009);
           if (param0 != -27054) {
             var4 = (IntrusiveDeque) null;
             TriangleMesh.a(-43, (IntrusiveDeque) null);

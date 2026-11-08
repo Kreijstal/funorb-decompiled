@@ -49,7 +49,7 @@ final class FormationView extends MatchPhaseView {
         this.drawTitle(false, ConsoleTokenParser.field_b);
         if (!this.field_a.field_C.formationConfirmed[this.field_h]) {
           if (this.field_g != -2 &&
-            this.field_g == this.field_a.b((byte) -89, this.field_h)) {
+            this.field_g == this.field_a.findActiveTeamParticipant((byte) -89, this.field_h)) {
             var3_int = 0;
             for (var4 = 0; var4 < this.field_a.playerCount; var4++) {
               if (~this.field_a.field_g[var4].team == ~this.field_h) {
@@ -161,7 +161,7 @@ final class FormationView extends MatchPhaseView {
           return false;
         }
         var3 = this.field_a.field_g[this.field_g].team;
-        if (this.field_a.b((byte) -71, this.field_a.field_g[this.field_g].team) != this.field_g) {
+        if (this.field_a.findActiveTeamParticipant((byte) -71, this.field_a.field_g[this.field_g].team) != this.field_g) {
           return false;
         }
         if (this.field_a.field_C.formationConfirmed[var3]) {

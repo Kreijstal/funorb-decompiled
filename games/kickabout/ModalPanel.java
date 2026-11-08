@@ -99,12 +99,12 @@ abstract class ModalPanel extends WidgetContainer {
           if (param1 >= -23) {
             field_G = (IndexedSprite[]) null;
           }
-          var2 = (ManagerAction) (MusicPatchNode.field_h.g(24009));
+          var2 = (ManagerAction) (MusicPatchNode.field_h.first(24009));
           while (var2 != null) {
             if (var2.actionType == 4) {
               var2.c((byte) -109);
             }
-            var2 = (ManagerAction) (MusicPatchNode.field_h.c(33));
+            var2 = (ManagerAction) (MusicPatchNode.field_h.next(33));
           }
           var2Lifetime1 = new ManagerAction(4, new int[]{param0});
           AchievementSubmission.applyAndQueueManagerAction(var2Lifetime1, 102);

@@ -396,7 +396,7 @@ final class RenderedBall extends BallAgent {
         SpritePixelSupport.drawRadialShadow(SocialListLayoutSupport.worldToScreenX(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.projectPitchY((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, WhirlpoolHasher.field_d);
     }
 
-    final void a(MatchAgent param0, int param1, int param2, int param3) {
+    final void reconcileStateFrom(MatchAgent param0, int param1, int param2, int param3) {
         BallAgent var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -409,10 +409,10 @@ final class RenderedBall extends BallAgent {
         RuntimeException var5_ref = null;
         try {
           var5 = (BallAgent) (param0);
-          if (this.a(-108, var5, param2, param1)) {
+          if (this.shouldDeferStateCorrection(-108, var5, param2, param1)) {
             return;
           }
-          this.a(param0, false);
+          this.copyCompleteStateFrom(param0, false);
           if (param3 < 38) {
             this.field_D = (int[]) null;
           }
@@ -669,7 +669,7 @@ final class RenderedBall extends BallAgent {
     RenderedBall(BallAgent param0) {
         this.field_I = true;
         try {
-          this.a(param0, false);
+          this.copyCompleteStateFrom(param0, false);
           this.field_G = new int[12];
           this.field_Q = new FixedQuaternion();
           this.field_Q.toRotationMatrix(8, this.field_G);

@@ -108,7 +108,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
     }
 
     final static FadingSoundPlayer a(int param0, boolean param1, boolean param2, int param3, int param4, int param5) {
-        if (StrongCacheEntry.field_z.a(false) >= 16) {
+        if (StrongCacheEntry.field_z.size(false) >= 16) {
           return null;
         }
         int var7 = -79 % ((-85 - param5) / 32);

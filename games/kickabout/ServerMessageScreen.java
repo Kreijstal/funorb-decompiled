@@ -7,7 +7,7 @@ final class ServerMessageScreen extends ButtonMenuScreen {
     static BinaryBitmapFont field_E;
     static java.awt.Frame field_A;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_D = null;
         if (param0) {
           field_E = null;

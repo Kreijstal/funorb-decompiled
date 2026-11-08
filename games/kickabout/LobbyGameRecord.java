@@ -26,15 +26,15 @@ final class LobbyGameRecord {
         RuntimeException var2_ref = null;
         var3 = Kickabout.field_G;
         try {
-          var4 = (AchievementSubmission) (ClassDescriptorSupport.field_a.g(24009));
+          var4 = (AchievementSubmission) (ClassDescriptorSupport.field_a.first(24009));
           while (var4 != null) {
             QuickChatMenuFactory.writeAchievementSubmission(param0, var4, (byte) -112);
-            var4 = (AchievementSubmission) (ClassDescriptorSupport.field_a.c(33));
+            var4 = (AchievementSubmission) (ClassDescriptorSupport.field_a.next(33));
           }
-          var2 = MatchScreen.field_j.g(24009);
+          var2 = MatchScreen.field_j.first(24009);
           while (var2 != null) {
             TextHotspotWidget.a((byte) -105, param0);
-            var2 = MatchScreen.field_j.c(33);
+            var2 = MatchScreen.field_j.next(33);
           }
           if (param1 > -36) {
             field_g = (String[]) null;
@@ -57,7 +57,7 @@ final class LobbyGameRecord {
         LobbyPlayerRow var1Lifetime1;
         var3 = Kickabout.field_G;
         try {
-          var1 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.g(24009));
+          var1 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.first(24009));
           while (var1 != null) {
             if (var1.field_Jb > 0) {
               var1.field_Jb = var1.field_Jb - 1;
@@ -68,14 +68,14 @@ final class LobbyGameRecord {
                 }
               }
             }
-            var1 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.c(33));
+            var1 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.next(33));
           }
-          var1_ref = (GameSetupPanel) (SquadSlotWidget.field_yb.g(24009));
+          var1_ref = (GameSetupPanel) (SquadSlotWidget.field_yb.first(24009));
           while (var1_ref != null) {
             if (0 < var1_ref.field_Db) {
               var1_ref.field_Db = var1_ref.field_Db - 1;
               if (var1_ref.field_Db != 0) {
-                var1_ref = (GameSetupPanel) (SquadSlotWidget.field_yb.c(33));
+                var1_ref = (GameSetupPanel) (SquadSlotWidget.field_yb.next(33));
                 continue;
               }
               var1_ref.field_Ab = 0;
@@ -83,9 +83,9 @@ final class LobbyGameRecord {
                 var1_ref.c((byte) -109);
               }
             }
-            var1_ref = (GameSetupPanel) (SquadSlotWidget.field_yb.c(33));
+            var1_ref = (GameSetupPanel) (SquadSlotWidget.field_yb.next(33));
           }
-          var1Lifetime1 = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.g(24009));
+          var1Lifetime1 = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.first(24009));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_Jb > 0) {
               var1Lifetime1.field_Jb = var1Lifetime1.field_Jb - 1;
@@ -96,7 +96,7 @@ final class LobbyGameRecord {
                 }
               }
             }
-            var1Lifetime1 = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.c(33));
+            var1Lifetime1 = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.next(33));
           }
           var2 = -47 / ((39 - param0) / 42);
           return;

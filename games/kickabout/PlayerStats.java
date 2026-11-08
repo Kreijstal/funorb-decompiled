@@ -21,7 +21,7 @@ final class PlayerStats implements PopupCard {
     int field_i;
     int experience;
 
-    final boolean c(boolean param0, int param1) {
+    final boolean usesRangerAbilities(boolean param0, int param1) {
         int[] var7 = null;
         int var4 = 0;
         int var5 = 0;
@@ -42,12 +42,12 @@ final class PlayerStats implements PopupCard {
         return 3 == this.archetype ? true : false;
     }
 
-    final boolean b(boolean param0, int param1) {
+    final boolean hasSlalom(boolean param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = Kickabout.field_G;
         if (param1 != 100) {
-          this.a(false, false);
+          this.getTackleStunBonus(false, false);
         }
         if (!param0) {
           return false;
@@ -118,9 +118,9 @@ final class PlayerStats implements PopupCard {
         }
     }
 
-    final boolean f(int param0) {
+    final boolean areTrinketsDisabled(int param0) {
         if (this.field_i == 0) {
-          return TextFieldValidator.f(-1);
+          return TextFieldValidator.areAccountTrinketsDisabled(-1);
         }
         if (param0 != 13467) {
           return true;
@@ -146,7 +146,7 @@ final class PlayerStats implements PopupCard {
         return var3;
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendLobbyGamePreferences(int param0, int param1) {
         CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
         var2.writeIsaacByte(param0, (byte) 85);
         var2.field_n = var2.field_n + 1;
@@ -239,7 +239,7 @@ final class PlayerStats implements PopupCard {
         return var3;
     }
 
-    final boolean a(boolean param0, byte param1) {
+    final boolean hasShinPads(boolean param0, byte param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = Kickabout.field_G;
@@ -260,7 +260,7 @@ final class PlayerStats implements PopupCard {
         return false;
     }
 
-    final boolean a(boolean param0, int param1, boolean param2) {
+    final boolean hasCheatTrinket(boolean param0, int param1, boolean param2) {
         int var5 = 0;
         int[] var4;
         int var6;
@@ -329,9 +329,9 @@ final class PlayerStats implements PopupCard {
 
     public final int getHeight(int param0) {
         if (param0 != 15) {
-          this.f(71);
+          this.areTrinketsDisabled(71);
         }
-        return this.a(false, false, (byte) 91);
+        return this.getDetailsPanelHeight(false, false, (byte) 91);
     }
 
     final int getHighestBaseStat(byte param0) {
@@ -351,7 +351,7 @@ final class PlayerStats implements PopupCard {
         return var2;
     }
 
-    final static void e(int param0) {
+    final static void finishUiTransitions(int param0) {
         if (RankingsRequest.field_l != null) {
           RankingsRequest.field_l.finishModalAnimations(param0 ^ -5172);
         }
@@ -376,7 +376,7 @@ final class PlayerStats implements PopupCard {
         try {
           param1.writeByte(param0 ^ 78, 1);
           if (param0 != 40) {
-            this.a((byte) 59, -29, true, 95, 97, 106, -90, true);
+            this.drawDetailsPanel((byte) 59, -29, true, 95, 97, 106, -90, true);
           }
           param1.writeByte(param0 + 71, 1 + this.archetype);
           param1.writeShort(-1207444472, this.appearance);
@@ -418,7 +418,7 @@ final class PlayerStats implements PopupCard {
         return var3;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void setChatPanelY(int param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
         ClientPacketFlushSupport.field_c = param0;
@@ -428,7 +428,7 @@ final class PlayerStats implements PopupCard {
           param0 = param0 + var3 * (-param0 + VerticalScrollbar.field_Ab) / var2;
         }
         if (param1 >= -65) {
-          PlayerStats.a(-79, -94);
+          PlayerStats.sendLobbyGamePreferences(-79, -94);
         }
         GrayscalePaletteSupport.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, param0, 120);
         RankingRowNode.a(119, PitchAppearanceSupport.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, 0);
@@ -454,7 +454,7 @@ final class PlayerStats implements PopupCard {
         return var3;
     }
 
-    final boolean a(byte param0, boolean param1) {
+    final boolean usesTankAbilities(byte param0, boolean param1) {
         int var4 = 0;
         int[] var3;
         int var5;
@@ -479,7 +479,7 @@ final class PlayerStats implements PopupCard {
         return stackIn_14_0;
     }
 
-    final int a(boolean param0, boolean param1) {
+    final int getTackleStunBonus(boolean param0, boolean param1) {
         int var5 = 0;
         int var3;
         int[] var4;
@@ -490,20 +490,20 @@ final class PlayerStats implements PopupCard {
           return 0;
         }
         if (param1) {
-          this.a((byte) -111, 93, false, 15, -32, 70, -71, false);
+          this.drawDetailsPanel((byte) -111, 93, false, 15, -32, 70, -71, false);
         }
         var3 = 0;
         var4 = this.trinketIds;
         for (var5 = 0; var4.length > var5; var5++) {
           var6 = var4[var5];
-          if (GeneratedPanelPainter.field_g[var6].a((byte) -124) > var3) {
-            var3 = GeneratedPanelPainter.field_g[var6].a((byte) -122);
+          if (GeneratedPanelPainter.field_g[var6].tackleStunBonus((byte) -124) > var3) {
+            var3 = GeneratedPanelPainter.field_g[var6].tackleStunBonus((byte) -122);
           }
         }
         return var3;
     }
 
-    final boolean b(boolean param0, byte param1) {
+    final boolean hasTackleProtection(boolean param0, byte param1) {
         int var4 = 0;
         int[] var3;
         int var5;
@@ -636,7 +636,7 @@ final class PlayerStats implements PopupCard {
           var6 = var7.field_R;
           var5 = var7.field_k;
         }
-        this.a((byte) 70, -(this.getWidth(0) >> 1) + param2, false, var6, var4, var5, -(this.getHeight(param1 ^ 24) >> 1) + param0, false);
+        this.drawDetailsPanel((byte) 70, -(this.getWidth(0) >> 1) + param2, false, var6, var4, var5, -(this.getHeight(param1 ^ 24) >> 1) + param0, false);
     }
 
     final void clear(byte param0) {
@@ -654,7 +654,7 @@ final class PlayerStats implements PopupCard {
         }
     }
 
-    final boolean c(byte param0, boolean param1) {
+    final boolean hasActiveHorrorCostume(byte param0, boolean param1) {
         int var5 = 0;
         int var6 = Kickabout.field_G;
         if (!param1) {
@@ -675,7 +675,7 @@ final class PlayerStats implements PopupCard {
         return false;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean beginReconnectGracePeriod(byte param0) {
         DisplayModeSupport.field_e = true;
         if (param0 != -3) {
           return true;
@@ -684,7 +684,7 @@ final class PlayerStats implements PopupCard {
         return RasterGlowSupport.field_c == 11 ? true : false;
     }
 
-    final boolean c(boolean param0, byte param1) {
+    final boolean usesHotshotAbilities(boolean param0, byte param1) {
         int[] var7 = null;
         int var4 = 0;
         int var5 = 0;
@@ -705,7 +705,7 @@ final class PlayerStats implements PopupCard {
         return this.archetype == 1 ? true : false;
     }
 
-    final boolean b(boolean param0, boolean param1) {
+    final boolean canTackleTeammates(boolean param0, boolean param1) {
         int var4 = 0;
         int[] var3;
         int var5;
@@ -751,7 +751,7 @@ final class PlayerStats implements PopupCard {
         return var2;
     }
 
-    final int a(boolean param0, boolean param1, byte param2) {
+    final int getDetailsPanelHeight(boolean param0, boolean param1, byte param2) {
         if (this.power == 100 && 100 == this.tackle &&
           this.speed == 100) {
           param1 = false;
@@ -759,7 +759,7 @@ final class PlayerStats implements PopupCard {
         int var4 = 0;
         var4 += 50;
         var4 = var4 + (60 + (!param1 ? 0 : this.experience > 100 ? 23 : 15));
-        var4 = var4 + ((this.trinketIds.length > 0 ? (!this.f(13467) ? 0 : 12) + 6 : 0) + this.trinketIds.length * 18);
+        var4 = var4 + ((this.trinketIds.length > 0 ? (!this.areTrinketsDisabled(13467) ? 0 : 12) + 6 : 0) + this.trinketIds.length * 18);
         var4 = var4 + (param0 ? 20 : 0);
         if (param2 < 75) {
           return -16;
@@ -776,7 +776,7 @@ final class PlayerStats implements PopupCard {
         }
         int var3 = 0;
         if (!param0) {
-          this.c(true, -116);
+          this.usesRangerAbilities(true, -116);
         }
         int[] var4 = this.trinketIds;
         for (var5 = 0; var4.length > var5; var5++) {
@@ -861,7 +861,7 @@ final class PlayerStats implements PopupCard {
         return "Empty PlayerStats";
     }
 
-    final void a(byte param0, int param1, boolean param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawDetailsPanel(byte param0, int param1, boolean param2, int param3, int param4, int param5, int param6, boolean param7) {
         int stackIn_7_0 = 0;
         int[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
@@ -935,7 +935,7 @@ final class PlayerStats implements PopupCard {
         if (this.trinketIds.length <= 0) {
           stackIn_18_2 = 0;
         } else {
-          stackIn_16_2 = (!this.f(13467)) ? 0 : 12;
+          stackIn_16_2 = (!this.areTrinketsDisabled(13467)) ? 0 : 12;
           stackIn_18_2 = stackIn_16_2 + 6;
         }
         stackIn_17_0[stackIn_17_1] = stackIn_18_2 + this.trinketIds.length * 18;
@@ -966,10 +966,10 @@ final class PlayerStats implements PopupCard {
         stackIn_31_4 = param5;
         stackIn_31_5 = this;
         stackIn_31_6 = -107;
-        stackIn_32_7 = !(this.f(13467));
+        stackIn_32_7 = !(this.areTrinketsDisabled(13467));
         boolean decompiledFrameRemainder0 = true;
         stackIn_35_2 = this;
-        if (this.c((byte) stackIn_31_6, stackIn_32_7)) {
+        if (this.hasActiveHorrorCostume((byte) stackIn_31_6, stackIn_32_7)) {
           stackIn_35_2Lifetime1 = this;
           if (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) -121)) {
             stackIn_36_5 = true;
@@ -1000,14 +1000,14 @@ final class PlayerStats implements PopupCard {
               var19 = var23;
               while (this.trinketIds.length > var23) {
                 var20 = GeneratedPanelPainter.field_g[this.trinketIds[var23]];
-                var21 = var20.d(false);
+                var21 = var20.getIconSprite(false);
                 ((Sprite) ((Object) var21)).drawHalfSize(var17_int - (((Sprite) ((Object) var21)).field_o >> 2), -(((Sprite) ((Object) var21)).field_v >> 2) + var18);
                 ConsoleTokenCursor.field_d.drawText(var20.getName((byte) -1), 15 + var17_int, var18 + 4, 16777215, 65793);
                 var18 += 18;
                 var23++;
               }
             }
-            if (this.f(13467)) {
+            if (this.areTrinketsDisabled(13467)) {
               SoftwareDrawingSupport.darkenRectangle(1 + param1, 1 + param6, var13, var26[2] - 1);
               SoftwareRasterizer.drawVerticalLine(-1 + var13 + param1, param6, var26[2] + 1, 65793);
               ConsoleTokenCursor.field_d.drawCentered(PlatformTaskState.field_h, (var13 >> 1) + param1, -4 + var26[2] + param6, 16777215, 65793);
@@ -1056,8 +1056,8 @@ final class PlayerStats implements PopupCard {
         int var3 = param1;
         var3 = var3 + this.power;
         var3 = var3 + this.trinketPowerBonus(true, param0);
-        if (this.c(param0, param1 ^ -105) &&
-          !this.c(param0, (byte) -62)) {
+        if (this.usesRangerAbilities(param0, param1 ^ -105) &&
+          !this.usesHotshotAbilities(param0, (byte) -62)) {
           var3 = 8 * var3 / 10;
         }
         return var3;

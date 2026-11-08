@@ -49,11 +49,11 @@ final class PlayerShopScreen extends TeamManagementScreen {
         this.refreshSellButton(false);
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_H = null;
         field_P = null;
         if (param0 > -105) {
-          PlayerShopScreen.h((byte) -97);
+          PlayerShopScreen.releaseStatics((byte) -97);
         }
         field_M = null;
         field_V = null;
@@ -221,14 +221,14 @@ final class PlayerShopScreen extends TeamManagementScreen {
                 var5 = WelcomeDialog.a(RegistrationRequestState.field_h.field_e, var4_int, RegistrationRequestState.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
                 stackIn_16_0 = (~BufferedSocket.field_k != ~var3) ? 0 : 1;
                 var6 = stackIn_16_0;
-                var7 = (IntValueNode) (this.field_I.g(24009));
+                var7 = (IntValueNode) (this.field_I.first(24009));
                 while (var7 != null) {
                   var8 = var7.field_j;
                   if (~(var8 >> 16) == ~var3 &&
                     (var8 & 65535) == var4_int) {
                     var6 = 1;
                   }
-                  var7 = (IntValueNode) (this.field_I.c(33));
+                  var7 = (IntValueNode) (this.field_I.next(33));
                 }
                 var10.addLast(new ShopPlayerSlot(var5, MusicPatchNode.field_x, var3, var4_int, var6 != 0), 3);
               }
@@ -238,13 +238,13 @@ final class PlayerShopScreen extends TeamManagementScreen {
           }
           break;
         }
-        this.field_F = new ShopPlayerSlot[var10.a(false)];
+        this.field_F = new ShopPlayerSlot[var10.size(false)];
         var3Lifetime1 = 0;
-        var4 = (ShopPlayerSlot) (var10.g(24009));
+        var4 = (ShopPlayerSlot) (var10.first(24009));
         while (var4 != null) {
           this.field_F[var3Lifetime1] = var4;
           var3Lifetime1++;
-          var4 = (ShopPlayerSlot) (var10.c(33));
+          var4 = (ShopPlayerSlot) (var10.next(33));
         }
         this.field_J.setRows(this.field_F, 0);
         return;

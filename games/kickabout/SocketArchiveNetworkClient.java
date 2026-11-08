@@ -247,10 +247,10 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             if (WidgetStyleFactory.field_c != null) {
               WidgetStyleFactory.field_c.beginClose(19910);
             }
-            var5 = (PopupDialog) (ScrollPane.field_Jb.g(24009));
+            var5 = (PopupDialog) (ScrollPane.field_Jb.first(24009));
             while (var5 != null) {
               var5.c((byte) -109);
-              var5 = (PopupDialog) (ScrollPane.field_Jb.c(33));
+              var5 = (PopupDialog) (ScrollPane.field_Jb.next(33));
             }
           }
           ScrollPane.field_Jb.addLast(new MessageDialog(param1), 3);

@@ -296,12 +296,12 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           return;
         }
         if (param0 < -58) {
-          Trinket.a((byte) 19, this.field_C.field_q);
+          Trinket.showLoginWithExtraText((byte) 19, this.field_C.field_q);
           return;
         }
         String var3 = (String) null;
         this.onSuggestionChosen((String) null, -109);
-        Trinket.a((byte) 19, this.field_C.field_q);
+        Trinket.showLoginWithExtraText((byte) 19, this.field_C.field_q);
     }
 
     static {

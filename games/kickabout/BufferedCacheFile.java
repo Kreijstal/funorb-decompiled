@@ -65,7 +65,7 @@ final class BufferedCacheFile {
           if (NodeHashTableIterator.field_b == 2 &&
             null != PlayerStatSortCriterion.field_o) {
             var3 = (CharSequence) ((Object) param1);
-            if (!PlayerStatSortCriterion.field_o.equals(MatchAgent.a(0, var3))) {
+            if (!PlayerStatSortCriterion.field_o.equals(MatchAgent.normalizeAccountName(0, var3))) {
               return false;
             }
             return true;

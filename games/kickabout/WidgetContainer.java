@@ -25,13 +25,13 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           if (param0) {
             field_v = (MeshData[][]) null;
           }
-          var3 = (UiWidget) (var2.a((byte) 77));
+          var3 = (UiWidget) (var2.first((byte) 77));
           while (null != var3) {
             if (var3.isFocused(42)) {
               stackIn_8_0 = var3;
               return stackIn_8_0;
             }
-            var3 = (UiWidget) (var2.a(0));
+            var3 = (UiWidget) (var2.next(0));
             if (var4 == 0) {
               continue;
             }
@@ -89,7 +89,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             return false;
           }
           var3 = new IntrusiveDequeCursor(this.field_y);
-          var4 = (UiWidget) (var3.a((byte) 73));
+          var4 = (UiWidget) (var3.first((byte) 73));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 == null))) {
             stackOut_11_0 = var4.isFocused(24);
@@ -98,8 +98,8 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             if (var7 == 0) {
               if (stackIn_12_0) {
                 var5 = new IntrusiveDequeCursor(this.field_y);
-                var5.a(395869153, var4);
-                var6 = (UiWidget) (var5.a(0));
+                var5.firstFrom(395869153, var4);
+                var6 = (UiWidget) (var5.next(0));
                 while (var6 != null) {
                   stackOut_20_0 = var6.requestKeyboardFocus(param0, 0);
                   stackIn_30_0 = stackOut_20_0;
@@ -107,10 +107,10 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                   if (stackIn_21_0) {
                     return true;
                   }
-                  var6 = (UiWidget) (var5.a(0));
+                  var6 = (UiWidget) (var5.next(0));
                 }
               }
-              var4 = (UiWidget) (var3.a(0));
+              var4 = (UiWidget) (var3.next(0));
               continue;
             }
             break;
@@ -151,7 +151,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             return false;
           }
           var3 = new IntrusiveDequeCursor(this.field_y);
-          var4 = (UiWidget) (var3.a((byte) -97));
+          var4 = (UiWidget) (var3.first((byte) -97));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var4))) {
             stackOut_6_0 = var4.requestKeyboardFocus(param0, 0);
@@ -161,7 +161,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
               if (stackIn_7_0) {
                 return true;
               }
-              var4 = (UiWidget) (var3.a(0));
+              var4 = (UiWidget) (var3.next(0));
               continue;
             }
             break;
@@ -225,7 +225,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         var10 = Kickabout.field_G;
         try {
           var8 = new IntrusiveDequeCursor(this.field_y);
-          var9 = (UiWidget) (var8.a((byte) 111));
+          var9 = (UiWidget) (var8.first((byte) 111));
           if (!param0) {
             field_x = (int[]) null;
           }
@@ -241,7 +241,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                 if (var9.handlePointerPress(param0, param1 + this.field_g, param2, param3, param4, param5 + this.field_t, param6)) {
                   return true;
                 }
-                var9 = (UiWidget) (var8.a(0));
+                var9 = (UiWidget) (var8.next(0));
                 continue;
               }
             }
@@ -275,10 +275,10 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           if (param0 != 84) {
             this.requestKeyboardFocus((UiWidget) null, -46);
           }
-          var3 = (UiWidget) (var2.a((byte) -99));
+          var3 = (UiWidget) (var2.first((byte) -99));
           while (var3 != null) {
             var3.clearKeyboardFocus(param0 ^ 0);
-            var3 = (UiWidget) (var2.a(0));
+            var3 = (UiWidget) (var2.next(0));
             if (var4 != 0) {
               return;
             }
@@ -306,7 +306,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         try {
           var2_int = 0;
           var3 = new IntrusiveDequeCursor(this.field_y);
-          var4 = (UiWidget) (var3.a((byte) -80));
+          var4 = (UiWidget) (var3.first((byte) -80));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 == null))) {
             var5 = var4.getLastRenderPass((byte) 118);
@@ -316,7 +316,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
               if (stackIn_11_0 < stackIn_11_1) {
                 var2_int = var5;
               }
-              var4 = (UiWidget) (var3.a(0));
+              var4 = (UiWidget) (var3.next(0));
               continue;
             }
             break;
@@ -359,7 +359,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             return false;
           }
           var3 = new IntrusiveDequeCursor(this.field_y);
-          var4 = (UiWidget) (var3.b(0));
+          var4 = (UiWidget) (var3.last(0));
           if (param1 != -100) {
             this.addChild(-56, (UiWidget) null);
           }
@@ -371,8 +371,8 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             if (var7 == 0) {
               if (stackIn_11_0) {
                 var5 = new IntrusiveDequeCursor(this.field_y);
-                var5.a((byte) 104, (IntrusiveNode) (var4));
-                var6 = (UiWidget) (var5.b((byte) 46));
+                var5.lastFrom((byte) 104, (IntrusiveNode) (var4));
+                var6 = (UiWidget) (var5.previous((byte) 46));
                 while (var6 != null) {
                   stackOut_19_0 = var6.requestKeyboardFocus(param0, 0);
                   stackIn_29_0 = stackOut_19_0;
@@ -380,10 +380,10 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                   if (stackIn_20_0) {
                     return true;
                   }
-                  var6 = (UiWidget) (var5.b((byte) 46));
+                  var6 = (UiWidget) (var5.previous((byte) 46));
                 }
               }
-              var4 = (UiWidget) (var3.b((byte) 46));
+              var4 = (UiWidget) (var3.previous((byte) 46));
               continue;
             }
             break;
@@ -422,10 +422,10 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             this.field_r.drawWidget(-103, true, param3, (UiWidget) (this), param2);
           }
           var5 = new IntrusiveDequeCursor(this.field_y);
-          var6 = (UiWidget) (var5.b(0));
+          var6 = (UiWidget) (var5.last(0));
           while (var6 != null) {
             var6.drawLayer(param0, 65, this.field_t + param2, this.field_g + param3);
-            var6 = (UiWidget) (var5.b((byte) 46));
+            var6 = (UiWidget) (var5.previous((byte) 46));
             if (var7 != 0) {
               return;
             }
@@ -766,11 +766,11 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             WidgetContainer.a(104, (TriangleMesh) null, 40, 112, false);
           }
           var7 = new IntrusiveDequeCursor(this.field_y);
-          var8 = (UiWidget) (var7.a((byte) -93));
+          var8 = (UiWidget) (var7.first((byte) -93));
           while (var8 != null) {
             if (var8.isLinked((byte) -113)) {
               var8.handlePointerRelease(param0 + this.field_g, param1, param2, param3, -1, this.field_t + param5);
-              var8 = (UiWidget) (var7.a(0));
+              var8 = (UiWidget) (var7.next(0));
               if (var9 == 0) {
                 continue;
               }
@@ -812,7 +812,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           if (param3 != 24745) {
             return;
           }
-          var6 = (UiWidget) (var5.a((byte) 63));
+          var6 = (UiWidget) (var5.first((byte) 63));
           while (null != var6) {
             discarded$2 = param0.append('\n');
             if (var8 != 0) {
@@ -824,7 +824,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
               var7++;
             }
             var6.appendDebugTree(param3 ^ 9586, 1 + param2, param1, param0);
-            var6 = (UiWidget) (var5.a(0));
+            var6 = (UiWidget) (var5.next(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -869,7 +869,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         var5 = Kickabout.field_G;
         try {
           var2 = new IntrusiveDequeCursor(this.field_y);
-          var3 = (UiWidget) (var2.a((byte) -56));
+          var3 = (UiWidget) (var2.first((byte) -56));
           if (param0 != -1) {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
@@ -883,7 +883,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                 stackIn_12_0 = var4;
                 return stackIn_12_0;
               }
-              var3 = (UiWidget) (var2.a(0));
+              var3 = (UiWidget) (var2.next(0));
               continue;
             }
             break;
@@ -958,7 +958,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             field_A = 114;
           }
           var5 = new IntrusiveDequeCursor(this.field_y);
-          var6_ref_fd = (UiWidget) (var5.a((byte) -108));
+          var6_ref_fd = (UiWidget) (var5.first((byte) -108));
           scanLoop1: while (true) {
             if (var6_ref_fd != null) {
               stackOut_6_0 = var6_ref_fd.isLinked((byte) -113);
@@ -972,7 +972,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                   var6_ref_fd.handleKeyInput(param0, (byte) -76, param2, param3)) {
                   return true;
                 }
-                var6_ref_fd = (UiWidget) (var5.a(0));
+                var6_ref_fd = (UiWidget) (var5.next(0));
                 continue;
               }
             }
@@ -1016,11 +1016,11 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         try {
           super.updatePointerState(param0, param1, param2, param3);
           var5 = new IntrusiveDequeCursor(this.field_y);
-          var6 = (UiWidget) (var5.a((byte) -34));
+          var6 = (UiWidget) (var5.first((byte) -34));
           while (null != var6) {
             if (var6.isLinked((byte) -113)) {
               var6.updatePointerState((byte) 12, param1, this.field_t + param2, param3 + this.field_g);
-              var6 = (UiWidget) (var5.a(0));
+              var6 = (UiWidget) (var5.next(0));
               if (var7 == 0) {
                 continue;
               }
@@ -1054,10 +1054,10 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           if (param0 != 5) {
             WidgetContainer.releaseStatics(-127);
           }
-          var3 = (UiWidget) (var2.a((byte) 106));
+          var3 = (UiWidget) (var2.first((byte) 106));
           while (null != var3) {
             var3.refreshLayout(-1947);
-            var3 = (UiWidget) (var2.a(0));
+            var3 = (UiWidget) (var2.next(0));
             if (var4 != 0) {
               return;
             }
@@ -1086,7 +1086,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         var11 = Kickabout.field_G;
         try {
           var8 = new IntrusiveDequeCursor(this.field_y);
-          var9 = (UiWidget) (var8.a((byte) 54));
+          var9 = (UiWidget) (var8.first((byte) 54));
           var10 = -61 % ((63 - param6) / 56);
           scanLoop1: while (true) {
             if (var9 != null) {
@@ -1101,7 +1101,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
                   var9.handlePointerWheel(param0, param1, param2, param3, param4, param5, -10)) {
                   return true;
                 }
-                var9 = (UiWidget) (var8.a(0));
+                var9 = (UiWidget) (var8.next(0));
                 continue;
               }
             }

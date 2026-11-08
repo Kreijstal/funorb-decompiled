@@ -91,7 +91,7 @@ final class AvailabilityCheckRequest {
         int var3 = Kickabout.field_G;
         ManagerAction var2Lifetime1;
         try {
-          var2 = (ManagerAction) (MusicPatchNode.field_h.g(24009));
+          var2 = (ManagerAction) (MusicPatchNode.field_h.first(24009));
           if (param0 < 104) {
             field_i = -30;
           }
@@ -99,7 +99,7 @@ final class AvailabilityCheckRequest {
             if (5 == var2.actionType) {
               var2.c((byte) -109);
             }
-            var2 = (ManagerAction) (MusicPatchNode.field_h.c(33));
+            var2 = (ManagerAction) (MusicPatchNode.field_h.next(33));
           }
           var2Lifetime1 = new ManagerAction(5, new int[]{param1});
           AchievementSubmission.applyAndQueueManagerAction(var2Lifetime1, 118);

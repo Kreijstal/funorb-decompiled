@@ -167,8 +167,8 @@ final class ReceivedAuctionItemRow extends ListRow {
             stackIn_14_1 = 0;
             stackIn_14_2 = var12;
             stackIn_14_3 = -107;
-            stackIn_15_4 = !(TextFieldValidator.f(-1));
-            stackIn_19_2 = (((PlayerStats) (Object) stackIn_14_2).c((byte) stackIn_14_3, stackIn_15_4)) && (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 1));
+            stackIn_15_4 = !(TextFieldValidator.areAccountTrinketsDisabled(-1));
+            stackIn_19_2 = (((PlayerStats) (Object) stackIn_14_2).hasActiveHorrorCostume((byte) stackIn_14_3, stackIn_15_4)) && (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 1));
             var5 = TriangleMesh.a(stackIn_14_0, stackIn_14_1, stackIn_19_2);
             if (var5 != null) {
               var5.c(1 + var4, this.field_T + 4);

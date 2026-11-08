@@ -59,7 +59,7 @@ final class GameOverView extends MatchPhaseView {
     int[][] field_p;
     int[][] field_ab;
 
-    private final boolean b(byte param0) {
+    private final boolean canTrainAnySquadPlayer(byte param0) {
         int discarded$1 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -645,7 +645,7 @@ final class GameOverView extends MatchPhaseView {
               (!this.field_a.field_e ||
               56 != var3_int) &&
               (44 != var3_int ||
-              !(Cp1252EncodingSupport.field_a.a(false) > 0)))) {
+              !(Cp1252EncodingSupport.field_a.size(false) > 0)))) {
               stackIn_69_0 = false;
               decompiledFrameRemainder1 = false;
             }
@@ -659,7 +659,7 @@ final class GameOverView extends MatchPhaseView {
             47 != var3_int) && (this.field_a.field_e ||
             var3_int != 50) && (!this.field_a.field_e ||
             var3_int != 56) && var3_int != 11 && (44 != var3_int ||
-            !(Cp1252EncodingSupport.field_a.a(false) > 0))) {
+            !(Cp1252EncodingSupport.field_a.size(false) > 0))) {
             stackIn_40_0 = false;
             decompiledFrameRemainder0 = false;
           }
@@ -864,7 +864,7 @@ final class GameOverView extends MatchPhaseView {
         }
     }
 
-    final IntrusiveDeque h(int param0) {
+    final IntrusiveDeque getTrainingActions(int param0) {
         RuntimeException var2 = null;
         IntrusiveDeque stackIn_2_0 = null;
         IntrusiveDeque stackIn_4_0 = null;
@@ -1160,7 +1160,7 @@ final class GameOverView extends MatchPhaseView {
           if (this.isButtonEnabled(0, param0 ^ 51) &&
             0 == this.field_S &&
             0 <= this.field_g &&
-            this.b((byte) -109)) {
+            this.canTrainAnySquadPlayer((byte) -109)) {
             var3Lifetime1 = this.buttonX(param0 ^ 126, 0);
             var4Lifetime1 = this.buttonY(342, 0);
             AuctionListing.pushRasterClip(31 + var3Lifetime1, -22914, -31 + var3Lifetime1, var4Lifetime1 - 17, -37 + var4Lifetime1);
@@ -1225,7 +1225,7 @@ final class GameOverView extends MatchPhaseView {
           if (this.field_a.field_e) {
             return;
           }
-          var5 = (ManagerAction) (this.field_gb.g(24009));
+          var5 = (ManagerAction) (this.field_gb.first(24009));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var5))) {
             stackOut_5_0 = param1.isSameAction(var5, 114);
@@ -1235,7 +1235,7 @@ final class GameOverView extends MatchPhaseView {
               if (stackIn_6_0) {
                 return;
               }
-              var5 = (ManagerAction) (this.field_gb.c(param0 ^ 32));
+              var5 = (ManagerAction) (this.field_gb.next(param0 ^ 32));
               continue;
             }
             break;
@@ -1297,7 +1297,7 @@ final class GameOverView extends MatchPhaseView {
         var15 = Kickabout.field_G;
         try {
           boolean decompiledFrameCompleted0 = true;
-          if (param0.a(false) != 0) {
+          if (param0.size(false) != 0) {
             var5_int = 150 + param1;
             var6 = 2 + (160 + var5_int);
             var7 = 244 + var5_int;
@@ -1312,7 +1312,7 @@ final class GameOverView extends MatchPhaseView {
             ByteArrayPool.field_d.drawCentered(PlayAreaMovementSupport.field_e, var7 + (var9 >> 1), 17 + param2, 16777215, -1);
             TeamManagementScreen.e(122);
             var10 = 0;
-            var11_ref_ch = (LoggedGoal) (param0.g(24009));
+            var11_ref_ch = (LoggedGoal) (param0.first(24009));
             while (null != var11_ref_ch) {
               param2 += 23;
               var12 = 65793;
@@ -1338,9 +1338,9 @@ final class GameOverView extends MatchPhaseView {
               var10++;
               ByteArrayPool.field_d.drawCentered(Integer.toString(var10), -14 + var5_int, 16 + param2, 16777215, -1);
               ByteArrayPool.field_d.drawCentered(var14, (var8 >> 1) + var5_int, 16 + param2, 16777215, -1);
-              ByteArrayPool.field_d.drawCentered(this.g(var11_ref_ch.goalType, -16305), var6 + (var9 >> 1), param2 + 16, 16777215, -1);
+              ByteArrayPool.field_d.drawCentered(this.kickActionName(var11_ref_ch.goalType, -16305), var6 + (var9 >> 1), param2 + 16, 16777215, -1);
               ByteArrayPool.field_d.drawCentered(this.formatMatchTime((byte) -110, var11_ref_ch.time), (var9 >> 1) + var7, 16 + param2, 16777215, -1);
-              var11_ref_ch = (LoggedGoal) (param0.c(33));
+              var11_ref_ch = (LoggedGoal) (param0.next(33));
             }
             if (decompiledFrameCompleted0) {
               param2 += 23;
@@ -1665,7 +1665,7 @@ final class GameOverView extends MatchPhaseView {
         }
     }
 
-    private final int a(int param0, byte param1, int param2) {
+    private final int approachEased(int param0, byte param1, int param2) {
         RuntimeException var4 = null;
         int var5 = 0;
         int stackIn_16_0 = 0;
@@ -1710,7 +1710,7 @@ final class GameOverView extends MatchPhaseView {
         }
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
+    final static java.awt.Frame tryEnterFullscreen(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         Object stackIn_5_0 = null;
         Object stackIn_9_0 = null;
         int stackIn_36_0 = 0;
@@ -1838,7 +1838,7 @@ final class GameOverView extends MatchPhaseView {
         var15 = Kickabout.field_G;
         try {
           super.update(-94, param1);
-          var3_int = this.field_bb.a(false) + this.field_q.a(false);
+          var3_int = this.field_bb.size(false) + this.field_q.size(false);
           this.field_lb = -((this.field_a.playerCount + 1) * 50 + 100);
           if (0 >= var3_int) {
             stackIn_5_1 = 0;
@@ -1889,8 +1889,8 @@ final class GameOverView extends MatchPhaseView {
             if (this.field_X != this.field_ib) {
               this.field_M = 0;
             }
-            this.field_ib = this.a(this.field_ib, (byte) -49, this.field_X);
-            this.field_Q = this.a(this.field_Q, (byte) -49, this.field_M);
+            this.field_ib = this.approachEased(this.field_ib, (byte) -49, this.field_X);
+            this.field_Q = this.approachEased(this.field_Q, (byte) -49, this.field_M);
             this.field_T = 596 + this.field_ib + 32;
             this.field_H = 32 + (1192 + this.field_ib);
             this.field_v = 32 + (1192 + this.field_ib);
@@ -2085,7 +2085,7 @@ final class GameOverView extends MatchPhaseView {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_E = null;
           field_n = null;
@@ -2097,7 +2097,7 @@ final class GameOverView extends MatchPhaseView {
         }
     }
 
-    private final String g(int param0, int param1) {
+    private final String kickActionName(int param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;

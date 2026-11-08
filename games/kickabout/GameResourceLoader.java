@@ -20,12 +20,12 @@ final class GameResourceLoader implements LoadingSequence {
         if (!this.field_a &&
           RenderedBall.m(99)) {
           this.field_a = true;
-          var2_ref_oi = (IntValueNode) (LoginText.field_f.g(24009));
+          var2_ref_oi = (IntValueNode) (LoginText.field_f.first(24009));
           while (var2_ref_oi != null) {
             if (ClientPacketFlushSupport.isBitSet(var2_ref_oi.field_j, 0, BufferedSocket.field_f)) {
               var2_ref_oi.c((byte) -109);
             }
-            var2_ref_oi = (IntValueNode) (LoginText.field_f.c(param0 ^ -27629));
+            var2_ref_oi = (IntValueNode) (LoginText.field_f.next(param0 ^ -27629));
           }
           Cp1252EncodingSupport.field_a.clear(22997);
           RasterBuffer.a(20164);
@@ -69,7 +69,7 @@ final class GameResourceLoader implements LoadingSequence {
           this.a(28, (ArgbSprite) null);
         }
         SquadGridWidget.h((byte) -19);
-        PlayerStats.e(-1456);
+        PlayerStats.finishUiTransitions(-1456);
         ResourceArchive var16 = CanvasResizePolicy.field_g;
         ResourceArchive var17 = IterableNodeHashTable.field_b;
         if (null != IterableNodeHashTable.field_c &&
@@ -138,7 +138,7 @@ final class GameResourceLoader implements LoadingSequence {
           MouseInputHandler.field_g = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -121, "hud", "cones");
           SpriteState.field_p = ServerTextTemplate.a("tutorial", "hud", 2, QuickChatKeysHelpPanel.field_Cb);
           SocialUiState.field_e = SpriteResourceSupport.loadNamedSprite((byte) 114, "hud", QuickChatKeysHelpPanel.field_Cb, "arrow");
-          IntrusiveDequeCursor.a(-128, SpriteResourceSupport.loadNamedSprite((byte) 114, "hud", QuickChatKeysHelpPanel.field_Cb, "cursor"));
+          IntrusiveDequeCursor.buildDirectionalMarkerSprites(-128, SpriteResourceSupport.loadNamedSprite((byte) 114, "hud", QuickChatKeysHelpPanel.field_Cb, "cursor"));
           LoadingProgressSupport.reportStageProgress(86, 100, 45);
           TickClock.field_k = ServerTextTemplate.a("dialog_icon", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
           ArrayWidgetContainer.field_y = SpriteResourceSupport.loadNamedSprite((byte) 107, "menu", QuickChatKeysHelpPanel.field_Cb, "star");
@@ -505,7 +505,7 @@ final class GameResourceLoader implements LoadingSequence {
         CipherPacketBuffer.advanceLoadingProgress(param0 ^ 12774, 7);
         TriangleRasterizer.setBrightnessAndRebuildPalette(0.6000000238418579f);
         GrayscalePaletteSupport.initializeGrayscalePalette(false);
-        Trinket.i(18);
+        Trinket.initializeAfterimagePool(18);
         AchievementSubmission.buildTrinketPreviewSprites(65280);
         CipherPacketBuffer.advanceLoadingProgress(61, 8);
         TrinketCatalog.buildTrinketTable(param0 - 12854);

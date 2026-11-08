@@ -327,7 +327,7 @@ class ButtonMenuScreen extends AppScreen {
           this.field_m = stackIn_3_1;
           this.screenId = param10;
           if (param3 != -46) {
-            ButtonMenuScreen.c((byte) 105);
+            ButtonMenuScreen.releaseStatics((byte) 105);
           }
           this.field_t = param1;
           if (param6 == null) {
@@ -470,7 +470,7 @@ class ButtonMenuScreen extends AppScreen {
             return stackIn_45_0;
           }
           if (param0 != -8) {
-            ButtonMenuScreen.c((byte) -118);
+            ButtonMenuScreen.releaseStatics((byte) -118);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -574,7 +574,7 @@ class ButtonMenuScreen extends AppScreen {
         var4Lifetime2 = -54 % ((38 - param0) / 60);
     }
 
-    final static void a(int param0) {
+    final static void enqueueLoginRequiredDialog(int param0) {
         ScrollPane.field_Jb.addLast(new LoginRequiredDialog(), 3);
         if (param0 != 16144) {
           ButtonMenuScreen.d(-47);
@@ -608,7 +608,7 @@ class ButtonMenuScreen extends AppScreen {
         RasterGlowSupport.returnToPreviousScreen(106, false);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_y = null;
         field_n = null;
         field_z = null;

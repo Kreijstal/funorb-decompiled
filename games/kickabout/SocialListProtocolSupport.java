@@ -67,7 +67,7 @@ final class SocialListProtocolSupport {
             }
             var6 = AchievementsScreen.a(var4_ref_String, 145);
             var7 = var1.readString(-113);
-            var8 = MatchAgent.a(0, (CharSequence) ((Object) var4_ref_String));
+            var8 = MatchAgent.normalizeAccountName(0, (CharSequence) ((Object) var4_ref_String));
             if (null == var8) {
               var8 = var4_ref_String;
             }
@@ -132,12 +132,12 @@ final class SocialListProtocolSupport {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = ClientUiOverlay.a(var5Lifetime1, (byte) 40);
             if (null != var6Lifetime1) {
-              AvailabilityCheckRequest.field_b.put(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              AvailabilityCheckRequest.field_b.put(var6Lifetime1, (byte) -4, (long)MatchAgent.normalizeAccountName(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new SocialPlayerRow();
-            AvailabilityCheckRequest.field_b.put(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            AvailabilityCheckRequest.field_b.put(var6Lifetime1, (byte) -4, (long)MatchAgent.normalizeAccountName(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$1 = ListingRow.field_d;
             ListingRow.field_d = ListingRow.field_d + 1;
             var6Lifetime1.listIndex = fieldTemp$1;
@@ -150,7 +150,7 @@ final class SocialListProtocolSupport {
           var6Lifetime1.field_zb = (String) (var3Lifetime1);
           var6Lifetime1.name = var4_ref_StringLifetime1;
           var6Lifetime1.c((byte) -109);
-          var7_ref = (SocialPlayerRow) (GameplayHelpScreen.field_I.g(24009));
+          var7_ref = (SocialPlayerRow) (GameplayHelpScreen.field_I.first(24009));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (null != var7_ref) {
@@ -160,7 +160,7 @@ final class SocialListProtocolSupport {
               decompiledFrameRemainder0 = (var9 == 0);
               if ((decompiledFrameRemainder0) &&
                 (SocialRowOrderSupport.precedesSocialRow(stackIn_61_0, stackIn_61_1, stackIn_61_2))) {
-                var7_ref = (SocialPlayerRow) (GameplayHelpScreen.field_I.c(33));
+                var7_ref = (SocialPlayerRow) (GameplayHelpScreen.field_I.next(33));
                 continue;
               }
             }

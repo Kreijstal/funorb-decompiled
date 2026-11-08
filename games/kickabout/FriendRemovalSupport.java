@@ -51,9 +51,9 @@ final class FriendRemovalSupport {
             stackIn_11_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionPriceLimits.field_c, new String[]{param2});
             return stackIn_11_0;
           }
-          GameplayHelpScreen.field_I.b(-7584, var8);
+          GameplayHelpScreen.field_I.firstFrom(-7584, var8);
           while (true) {
-            var7 = (SocialPlayerRow) (GameplayHelpScreen.field_I.c(33));
+            var7 = (SocialPlayerRow) (GameplayHelpScreen.field_I.next(33));
             if (var7 != null) {
               var7.listIndex = var7.listIndex - 1;
               continue;

@@ -180,11 +180,11 @@ final class MySquadScreen extends TeamManagementScreen {
         super.drawScreen(param0, param1);
         var25 = this.field_Y;
         SoftwareRasterizer.fillRectangleAlpha(var25.field_F, var25.field_T, var25.field_q, var25.field_mb, 65793, 96);
-        var3 = (UiLayoutNode) (this.field_Y.field_jb.g(24009));
+        var3 = (UiLayoutNode) (this.field_Y.field_jb.first(24009));
         while (var3 != null) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3.field_F, var3.field_T, var3.field_q, var3.field_mb, 10, 65793, 96);
           ByteArrayPool.field_d.drawText(var3.field_E, var3.field_F + 10, var3.field_T + 20, 16777215, -1);
-          var3 = (UiLayoutNode) (this.field_Y.field_jb.c(33));
+          var3 = (UiLayoutNode) (this.field_Y.field_jb.next(33));
         }
         boolean decompiledFrameRemainder0 = true;
         SoftwareRasterizer.darkenRectangle(this.field_V.field_F, this.field_V.field_T, this.field_V.field_q, this.field_V.field_mb);
@@ -200,8 +200,8 @@ final class MySquadScreen extends TeamManagementScreen {
           stackIn_6_1 = 0;
           stackIn_6_2 = var26;
           stackIn_6_3 = -107;
-          stackIn_7_4 = !(TextFieldValidator.f(param0 ^ 4));
-          stackIn_11_2 = (((PlayerStats) (Object) stackIn_6_2).c((byte) stackIn_6_3, stackIn_7_4)) && (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 47));
+          stackIn_7_4 = !(TextFieldValidator.areAccountTrinketsDisabled(param0 ^ 4));
+          stackIn_11_2 = (((PlayerStats) (Object) stackIn_6_2).hasActiveHorrorCostume((byte) stackIn_6_3, stackIn_7_4)) && (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 47));
           var7 = TriangleMesh.a(stackIn_6_0, stackIn_6_1, stackIn_11_2);
           var8 = -36 + this.field_I.field_F + this.field_I.field_q;
           var9 = this.field_I.field_T + 40;
@@ -246,7 +246,7 @@ final class MySquadScreen extends TeamManagementScreen {
           }
           var14 += 18;
           if (var26.trinketIds.length == 0 &&
-            !TextFieldValidator.f(param0 + 4)) {
+            !TextFieldValidator.areAccountTrinketsDisabled(param0 + 4)) {
             var5.drawParagraph(MenuButton.field_o, this.field_X.field_F, this.field_X.field_T, this.field_X.field_q, this.field_X.field_mb, 16777215, -1, 1, 1, 0);
           } else {
             var23 = this.field_T;
@@ -311,7 +311,7 @@ final class MySquadScreen extends TeamManagementScreen {
         }
         this.field_R.draw(param0 + 129, false);
         if (var4 != null) {
-          if (TextFieldValidator.f(-1)) {
+          if (TextFieldValidator.areAccountTrinketsDisabled(-1)) {
             stackIn_61_0 = -1;
             stackIn_61_1 = ~this.field_L.getSelectedSlot((byte) 21).field_Eb.trinketIds.length;
             if (stackIn_61_0 > stackIn_61_1) {
@@ -381,7 +381,7 @@ final class MySquadScreen extends TeamManagementScreen {
             this.field_T[var7] = var9;
             this.field_X.addChild((byte) -117, (UiLayoutNode) (this.field_T[var7]));
             if (!var13.field_Gb &&
-              !TextFieldValidator.f(-1)) {
+              !TextFieldValidator.areAccountTrinketsDisabled(-1)) {
               this.field_X.addChild((byte) -108, this.field_K[var7]);
             }
           }

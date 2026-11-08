@@ -235,7 +235,7 @@ abstract class AppScreen {
               }
               ArchiveSource.field_e = ByteArrayPool.field_e.readString(8);
               var12 = (CharSequence) ((Object) ArchiveSource.field_e);
-              DebugConsole.field_w = MatchAgent.a(0, var12);
+              DebugConsole.field_w = MatchAgent.normalizeAccountName(0, var12);
               PlayerArchetypeSortCriterion.field_n = ByteArrayPool.field_e.readUnsignedByte((byte) -128);
               ByteArrayPool.field_c = RegistrationRequestDialog.field_rb;
               if (FullscreenFocusCanvas.field_h.getLoginKind((byte) -109) != LoginRequiredDialog.field_K) {

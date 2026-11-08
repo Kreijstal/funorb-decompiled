@@ -14,7 +14,7 @@ final class OffscreenPlayerArrow {
     static String field_e;
     static String field_j;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void updateScreenIntersection(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -123,7 +123,7 @@ final class OffscreenPlayerArrow {
         }
     }
 
-    final void a(byte param0) {
+    final void draw(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -199,7 +199,7 @@ final class OffscreenPlayerArrow {
           }
         }
         if (param0 != 10) {
-          this.a((byte) -83);
+          this.draw((byte) -83);
         }
     }
 

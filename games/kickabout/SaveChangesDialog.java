@@ -68,7 +68,7 @@ final class SaveChangesDialog extends MessageDialog {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 13) {
           field_H = (ModelMaterial[]) null;
         }

@@ -116,15 +116,15 @@ final class ConsoleExpression extends IntrusiveNode {
             if (this.field_k == ContextMenuItem.field_Ab) {
               stackIn_5_0 = this.field_j;
               stackIn_6_1 = !(param0);
-              var7 = new ConsoleValue[((IntrusiveDeque) (Object) stackIn_5_0).a(stackIn_6_1)];
+              var7 = new ConsoleValue[((IntrusiveDeque) (Object) stackIn_5_0).size(stackIn_6_1)];
               var8 = var7;
               var4 = 0;
-              var5 = (ConsoleExpression) (this.field_j.g(24009));
+              var5 = (ConsoleExpression) (this.field_j.first(24009));
               while (var5 != null) {
                 incrementValue$0 = var4;
                 var4++;
                 var7[incrementValue$0] = var5.a(true, param1);
-                var5 = (ConsoleExpression) (this.field_j.c(33));
+                var5 = (ConsoleExpression) (this.field_j.next(33));
               }
               stackIn_10_0 = PasswordValidator.a(var8, false, param1, this.field_h);
               return stackIn_10_0;

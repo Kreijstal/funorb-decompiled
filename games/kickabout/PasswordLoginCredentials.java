@@ -37,23 +37,23 @@ final class PasswordLoginCredentials extends LoginCredentials {
           BeveledTextPainter.field_r = BeveledTextPainter.field_r - 1;
           if (BeveledTextPainter.field_r == 0) {
             BeveledTextPainter.field_r = 200;
-            var1 = (SoundStreamHandle) (LoginCredentials.field_a.g(param0 + 24037));
+            var1 = (SoundStreamHandle) (LoginCredentials.field_a.first(param0 + 24037));
             while (var1 != null) {
               if (!var1.owner.isLinked((byte) -113)) {
                 var1.c((byte) -109);
               }
-              var1 = (SoundStreamHandle) (LoginCredentials.field_a.c(param0 ^ -59));
+              var1 = (SoundStreamHandle) (LoginCredentials.field_a.next(param0 ^ -59));
             }
             if (null == IndexedSpriteState.field_c) {
               return;
             }
-            var1Lifetime1 = (SoundStreamHandle) (IndexedSpriteState.field_c.g(24009));
+            var1Lifetime1 = (SoundStreamHandle) (IndexedSpriteState.field_c.first(24009));
             while (var1Lifetime1 != null) {
               stackIn_15_0 = var1Lifetime1.owner.isLinked((byte) -113);
               if (!stackIn_15_0) {
                 var1Lifetime1.c((byte) -109);
               }
-              var1Lifetime1 = (SoundStreamHandle) (IndexedSpriteState.field_c.c(33));
+              var1Lifetime1 = (SoundStreamHandle) (IndexedSpriteState.field_c.next(33));
             }
           }
           return;

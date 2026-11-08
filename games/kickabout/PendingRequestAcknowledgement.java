@@ -17,7 +17,7 @@ final class PendingRequestAcknowledgement extends IntrusiveNode {
         }
         int var1 = -60 % ((-56 - param0) / 56);
         if (0 != NodeHashTableIterator.field_b) {
-          TrinketCatalog.a(29);
+          TrinketCatalog.resetChatComposition(29);
         }
         NumericDateInputWidget.field_I = 0;
     }

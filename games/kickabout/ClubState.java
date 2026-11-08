@@ -79,12 +79,12 @@ final class ClubState {
 
     final boolean a(int param0) {
         int var3 = Kickabout.field_G;
-        AuctionLogEntry var2 = (AuctionLogEntry) (this.auctionLog.g(24009));
+        AuctionLogEntry var2 = (AuctionLogEntry) (this.auctionLog.first(24009));
         while (var2 != null) {
           if (var2.logType != 3) {
             return true;
           }
-          var2 = (AuctionLogEntry) (this.auctionLog.c(33));
+          var2 = (AuctionLogEntry) (this.auctionLog.next(33));
         }
         if (param0 != -4) {
           return false;
@@ -95,12 +95,12 @@ final class ClubState {
     final boolean canStartAuction(int param0) {
         int var4 = Kickabout.field_G;
         int var2 = 0;
-        AuctionLogEntry var3 = (AuctionLogEntry) (this.auctionLog.g(24009));
+        AuctionLogEntry var3 = (AuctionLogEntry) (this.auctionLog.first(24009));
         while (var3 != null) {
           if (var3.logType != 3) {
             var2++;
           }
-          var3 = (AuctionLogEntry) (this.auctionLog.c(param0 ^ -36));
+          var3 = (AuctionLogEntry) (this.auctionLog.next(param0 ^ -36));
         }
         if (param0 != -3) {
           this.canStartAuction(-68);
@@ -166,20 +166,20 @@ final class ClubState {
             this.field_q[var3_intLifetime1] = param0.field_q[var3_intLifetime1];
           }
           this.auctionLog = new IntrusiveDeque();
-          var3 = (AuctionLogEntry) (param0.auctionLog.g(24009));
+          var3 = (AuctionLogEntry) (param0.auctionLog.first(24009));
           while (var3 != null) {
             var4 = new AuctionLogEntry(var3.logType, var3.slotIndex, var3.auctionId);
             this.auctionLog.addLast(var4, 3);
-            var3 = (AuctionLogEntry) (param0.auctionLog.c(33));
+            var3 = (AuctionLogEntry) (param0.auctionLog.next(33));
           }
           this.auctionListings = new IntrusiveDeque();
-          var8 = (AuctionListing) (param0.auctionListings.g(24009));
+          var8 = (AuctionListing) (param0.auctionListings.first(24009));
           while (var8 != null) {
             var9 = new PlayerStats();
             var9.copyFrom((byte) -65, var8.getPlayerStats(-128));
             var5 = new AuctionListing(var8.getAuctionId(-29), var8.getListingType((byte) 37), var8.getSlotIndex(3), var8.b(6), var9);
             this.auctionListings.addLast(var5, 3);
-            var8 = (AuctionListing) (param0.auctionListings.c(33));
+            var8 = (AuctionListing) (param0.auctionListings.next(33));
           }
           this.field_p = param0.field_p;
           this.field_F = param0.field_F;
@@ -440,11 +440,11 @@ final class ClubState {
         var24 = var1Lifetime36 + "\n";
         var25 = var24;
         var1Lifetime37 = var25;
-        var1Lifetime38 = var24 + "Auction Log Size - " + this.auctionLog.a(false) + "\n";
+        var1Lifetime38 = var24 + "Auction Log Size - " + this.auctionLog.size(false) + "\n";
         var25Lifetime1 = var1Lifetime38;
         var1Lifetime39 = var25Lifetime1;
         var2Lifetime3 = 0;
-        var4_ref_cq = (AuctionLogEntry) (this.auctionLog.g(24009));
+        var4_ref_cq = (AuctionLogEntry) (this.auctionLog.first(24009));
         while (var4_ref_cq != null) {
           incrementValue$1 = var2Lifetime3;
           var2Lifetime3++;
@@ -453,17 +453,17 @@ final class ClubState {
           var1Lifetime39 = var27;
           var1Lifetime39 = var25Lifetime2;
           var1Lifetime39 = var25Lifetime2 + "   " + var4_ref_cq + "\n";
-          var4_ref_cq = (AuctionLogEntry) (this.auctionLog.c(33));
+          var4_ref_cq = (AuctionLogEntry) (this.auctionLog.next(33));
         }
         var26 = var1Lifetime39 + "\n";
         var27Lifetime1 = var26;
         var1Lifetime40 = var27Lifetime1;
         var1Lifetime41 = var26;
         var2Lifetime4 = 0;
-        var1Lifetime42 = var26 + "Resolve Log Size - " + this.auctionListings.a(false) + "\n";
+        var1Lifetime42 = var26 + "Resolve Log Size - " + this.auctionListings.size(false) + "\n";
         var27Lifetime2 = var1Lifetime42;
         var1Lifetime43 = var27Lifetime2;
-        var4_ref_pt = (AuctionListing) (this.auctionListings.g(24009));
+        var4_ref_pt = (AuctionListing) (this.auctionListings.first(24009));
         while (var4_ref_pt != null) {
           incrementValue$0 = var2Lifetime4;
           var2Lifetime4++;
@@ -471,7 +471,7 @@ final class ClubState {
           var1Lifetime43 = var27Lifetime3;
           var1Lifetime43 = var27Lifetime3;
           var1Lifetime43 = var27Lifetime3 + "   " + var4_ref_pt + "\n";
-          var4_ref_pt = (AuctionListing) (this.auctionListings.c(33));
+          var4_ref_pt = (AuctionListing) (this.auctionListings.next(33));
         }
         var28 = var1Lifetime43 + "\n";
         var1Lifetime44 = var28;
@@ -561,13 +561,13 @@ final class ClubState {
         if (param1 != -79) {
           this.field_P = false;
         }
-        AuctionLogEntry var4 = (AuctionLogEntry) (this.auctionLog.g(24009));
+        AuctionLogEntry var4 = (AuctionLogEntry) (this.auctionLog.first(24009));
         while (var4 != null) {
           if ((var4.logType == 0 || var4.logType == 1) &&
             ~param0 == ~var4.auctionId) {
             return true;
           }
-          var4 = (AuctionLogEntry) (this.auctionLog.c(33));
+          var4 = (AuctionLogEntry) (this.auctionLog.next(33));
         }
         return false;
     }
@@ -704,13 +704,13 @@ final class ClubState {
 
     final boolean hasOwnEntry(int param0, long param1) {
         int var5 = Kickabout.field_G;
-        AuctionLogEntry var4 = (AuctionLogEntry) (this.auctionLog.g(24009));
+        AuctionLogEntry var4 = (AuctionLogEntry) (this.auctionLog.first(24009));
         while (var4 != null) {
           if (var4.logType == 2 &&
             ~param1 == ~var4.auctionId) {
             return true;
           }
-          var4 = (AuctionLogEntry) (this.auctionLog.c(param0 ^ 32));
+          var4 = (AuctionLogEntry) (this.auctionLog.next(param0 ^ 32));
         }
         if (param0 != 1) {
           this.field_t = -7;
@@ -721,13 +721,13 @@ final class ClubState {
 
     final boolean hasOutbidEntry(int param0, long param1) {
         int var5 = Kickabout.field_G;
-        AuctionLogEntry var4 = (AuctionLogEntry) (this.auctionLog.g(param0 - 6515));
+        AuctionLogEntry var4 = (AuctionLogEntry) (this.auctionLog.first(param0 - 6515));
         while (var4 != null) {
           if (var4.logType == 3 &&
             var4.auctionId == param1) {
             return true;
           }
-          var4 = (AuctionLogEntry) (this.auctionLog.c(33));
+          var4 = (AuctionLogEntry) (this.auctionLog.next(33));
         }
         if (param0 != 30524) {
           this.createOrderSwapAction(-50, 63, 62);
@@ -738,13 +738,13 @@ final class ClubState {
 
     final AuctionLogEntry findLogEntryBySlot(byte param0, int param1) {
         int var4 = Kickabout.field_G;
-        AuctionLogEntry var3_ref_cq = (AuctionLogEntry) (this.auctionLog.g(24009));
+        AuctionLogEntry var3_ref_cq = (AuctionLogEntry) (this.auctionLog.first(24009));
         while (var3_ref_cq != null) {
           if (var3_ref_cq.logType != 3 &&
             param1 == var3_ref_cq.slotIndex) {
             return var3_ref_cq;
           }
-          var3_ref_cq = (AuctionLogEntry) (this.auctionLog.c(33));
+          var3_ref_cq = (AuctionLogEntry) (this.auctionLog.next(33));
         }
         int var3 = 120 / ((-34 - param0) / 56);
         return null;

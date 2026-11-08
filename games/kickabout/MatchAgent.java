@@ -4,19 +4,19 @@
 import java.io.*;
 
 abstract class MatchAgent {
-    private int field_c;
-    int field_b;
+    private int deferredCorrectionCount;
+    int controlSourceAge;
     static String field_d;
     static String field_a;
-    int field_e;
+    int controlSourceParticipant;
 
-    private final void a(MatchAgent param0, int param1) {
+    private final void copySynchronizationMetadata(MatchAgent param0, int param1) {
         if (param1 != 0) {
           return;
         }
         try {
-          this.field_e = param0.field_e;
-          this.field_b = param0.field_b;
+          this.controlSourceParticipant = param0.controlSourceParticipant;
+          this.controlSourceAge = param0.controlSourceAge;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mo.VA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -26,12 +26,12 @@ abstract class MatchAgent {
         field_d = null;
         if (param0 != -3) {
           CharSequence var2 = (CharSequence) null;
-          MatchAgent.a(86, (CharSequence) null);
+          MatchAgent.normalizeAccountName(86, (CharSequence) null);
         }
         field_a = null;
     }
 
-    final boolean a(int param0, MatchAgent param1, int param2, int param3) {
+    final boolean shouldDeferStateCorrection(int param0, MatchAgent param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -39,21 +39,21 @@ abstract class MatchAgent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!ChatComposeSupport.field_e &&
-            this.field_c < 64) {
-            if (param1.field_b > this.field_b &&
-              param3 == this.field_e &&
-              this.field_b < param2) {
-              this.field_c = this.field_c + 1;
+            this.deferredCorrectionCount < 64) {
+            if (param1.controlSourceAge > this.controlSourceAge &&
+              param3 == this.controlSourceParticipant &&
+              this.controlSourceAge < param2) {
+              this.deferredCorrectionCount = this.deferredCorrectionCount + 1;
               return true;
             }
-            if (param1.field_b < this.field_b &&
-              param1.field_e == param3 &&
-              param2 > param1.field_b) {
-              this.field_c = this.field_c + 1;
+            if (param1.controlSourceAge < this.controlSourceAge &&
+              param1.controlSourceParticipant == param3 &&
+              param2 > param1.controlSourceAge) {
+              this.deferredCorrectionCount = this.deferredCorrectionCount + 1;
               return true;
             }
           }
-          this.field_c = 0;
+          this.deferredCorrectionCount = 0;
           if (param0 < -82) {
             return false;
           }
@@ -72,19 +72,19 @@ abstract class MatchAgent {
         }
     }
 
-    final void a(MatchAgent param0, boolean param1) {
+    final void copyCompleteStateFrom(MatchAgent param0, boolean param1) {
         try {
           this.copyStateFrom((byte) -105, param0);
           if (param1) {
-            this.field_c = -29;
+            this.deferredCorrectionCount = -29;
           }
-          this.a(param0, 0);
+          this.copySynchronizationMetadata(param0, 0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mo.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static Sprite b(int param0) {
+    final static Sprite buildFirstDecodedSprite(int param0) {
         int var4_int = 0;
         int var5 = Kickabout.field_G;
         int var1 = MouseInputHandler.field_c[0] * PasswordValidator.field_j[0];
@@ -98,20 +98,20 @@ abstract class MatchAgent {
         return var4;
     }
 
-    void a(MatchAgent param0, byte param1) {
+    void inheritControlSource(MatchAgent param0, byte param1) {
         try {
-          this.field_b = 0;
+          this.controlSourceAge = 0;
           if (param1 != 84) {
             MatchAgent var4 = (MatchAgent) null;
-            this.a((MatchAgent) null, (byte) 91);
+            this.inheritControlSource((MatchAgent) null, (byte) 91);
           }
-          this.field_e = param0.field_e;
+          this.controlSourceParticipant = param0.controlSourceParticipant;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mo.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(CipherPacketBuffer param0, int param1) {
+    final static void writeReflectionCheckReply(CipherPacketBuffer param0, int param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -162,7 +162,7 @@ abstract class MatchAgent {
           var23 = null;
           var12 = Kickabout.field_G;
           try {
-            var13 = (ReflectionCheck) (MarkerSliderWidget.field_N.g(24009));
+            var13 = (ReflectionCheck) (MarkerSliderWidget.field_N.first(24009));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -320,7 +320,7 @@ abstract class MatchAgent {
 
     abstract void copyStateFrom(byte param0, MatchAgent param1);
 
-    final static String a(int param0, CharSequence param1) {
+    final static String normalizeAccountName(int param0, CharSequence param1) {
         int var6 = 0;
         StringBuilder discarded$0 = null;
         Object stackIn_16_0 = null;
@@ -393,21 +393,21 @@ abstract class MatchAgent {
         }
     }
 
-    void a(MatchAgent param0, int param1, int param2, int param3) {
+    void reconcileStateFrom(MatchAgent param0, int param1, int param2, int param3) {
         if (param3 <= 38) {
-          this.field_e = -23;
+          this.controlSourceParticipant = -23;
         }
-        if (this.a(-86, param0, param2, param1)) {
+        if (this.shouldDeferStateCorrection(-86, param0, param2, param1)) {
           return;
         }
         try {
-          this.a(param0, false);
+          this.copyCompleteStateFrom(param0, false);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mo.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void b(CipherPacketBuffer param0, int param1) {
+    final void readSynchronizationMetadata(CipherPacketBuffer param0, int param1) {
         MatchAgent var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -419,9 +419,9 @@ abstract class MatchAgent {
             var4 = (MatchAgent) null;
             this.copyStateFrom((byte) 17, (MatchAgent) null);
           }
-          this.field_b = -ClientInteractionSupport.a(22531, 6, param0, 0) + 64;
+          this.controlSourceAge = -ClientInteractionSupport.a(22531, 6, param0, 0) + 64;
           if (ContentTransitionDialog.a(param0, (byte) -39)) {
-            this.field_e = param0.readBits(4, param1 + 55) - 1;
+            this.controlSourceParticipant = param0.readBits(4, param1 + 55) - 1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -439,7 +439,7 @@ abstract class MatchAgent {
     }
 
     MatchAgent() {
-        this.field_e = -1;
+        this.controlSourceParticipant = -1;
     }
 
     static {

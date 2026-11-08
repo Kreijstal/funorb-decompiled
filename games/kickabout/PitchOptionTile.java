@@ -27,12 +27,12 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
 
     final static RankingsRequest a(int param0, byte param1, int param2, int param3) {
         int var5 = Kickabout.field_G;
-        RankingsRequest var4 = (RankingsRequest) (WorldDrawEntry.field_i.g(param1 + 23909));
+        RankingsRequest var4 = (RankingsRequest) (WorldDrawEntry.field_i.first(param1 + 23909));
         while (var4 != null) {
           if (var4.field_k == param2) {
             return var4;
           }
-          var4 = (RankingsRequest) (WorldDrawEntry.field_i.c(33));
+          var4 = (RankingsRequest) (WorldDrawEntry.field_i.next(33));
         }
         var4 = new RankingsRequest();
         var4.field_p = param0;

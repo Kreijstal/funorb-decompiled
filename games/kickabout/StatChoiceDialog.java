@@ -99,7 +99,7 @@ final class StatChoiceDialog extends MessageDialog {
             stackIn_10_3 = var6.field_k;
             stackIn_10_4 = this.field_J;
             stackIn_10_5 = -107;
-            if (!TextFieldValidator.f(-1)) {
+            if (!TextFieldValidator.areAccountTrinketsDisabled(-1)) {
               stackIn_10_0Lifetime1 = this;
               if (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) -3)) {
                 stackIn_11_0 = this;
@@ -110,7 +110,7 @@ final class StatChoiceDialog extends MessageDialog {
             stackIn_11_0Lifetime1 = this;
             stackIn_11_6 = false;
           }
-          this.field_I = PlayerInputFactory.createRenderedPlayer(stackIn_10_1, stackIn_10_2, stackIn_10_3, ((PlayerStats) (Object) stackIn_10_4).c((byte) stackIn_10_5, stackIn_11_6), var6.field_R, (byte) 120);
+          this.field_I = PlayerInputFactory.createRenderedPlayer(stackIn_10_1, stackIn_10_2, stackIn_10_3, ((PlayerStats) (Object) stackIn_10_4).hasActiveHorrorCostume((byte) stackIn_10_5, stackIn_11_6), var6.field_R, (byte) 120);
           this.field_i[0].field_lb = false;
           this.field_I.field_nb = true;
           return;
@@ -305,7 +305,7 @@ final class StatChoiceDialog extends MessageDialog {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         if (param0 != 25996) {
           StatChoiceDialog.b(-32, 113, 1);
@@ -372,7 +372,7 @@ final class StatChoiceDialog extends MessageDialog {
 
     final int dialogWidth(int param0) {
         if (param0 != -1379118556) {
-          StatChoiceDialog.g(-26);
+          StatChoiceDialog.releaseStatics(-26);
         }
         return 370;
     }
@@ -382,12 +382,12 @@ final class StatChoiceDialog extends MessageDialog {
         int var4 = Kickabout.field_G;
         ManagerAction var3Lifetime1;
         try {
-          var3 = (ManagerAction) (MusicPatchNode.field_h.g(24009));
+          var3 = (ManagerAction) (MusicPatchNode.field_h.first(24009));
           while (var3 != null) {
             if (8 == var3.actionType) {
               var3.c((byte) -109);
             }
-            var3 = (ManagerAction) (MusicPatchNode.field_h.c(33));
+            var3 = (ManagerAction) (MusicPatchNode.field_h.next(33));
           }
           if (param1 <= 32) {
             field_F = (TextFieldNode) null;

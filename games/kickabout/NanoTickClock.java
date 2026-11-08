@@ -181,7 +181,7 @@ final class NanoTickClock extends TickClock {
           field_t = (PlayArea[]) null;
         }
         if (null != MachineTokenStorageSupport.field_e &&
-          MachineTokenStorageSupport.field_e.field_A) {
+          MachineTokenStorageSupport.field_e.isTournamentMatch) {
           var1 = MachineTokenStorageSupport.field_e.field_B;
         } else {
           if (null != SortCriterion.field_l) {

@@ -438,7 +438,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_O = null;
         field_F = (int[][][]) null;
         field_H = null;

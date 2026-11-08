@@ -21,15 +21,15 @@ final class ProxySocketConnector extends SocketConnector {
           if (param0 != -1) {
             return;
           }
-          var4 = (BlobSubmission) (ExceptionTextSupport.field_d.g(24009));
+          var4 = (BlobSubmission) (ExceptionTextSupport.field_d.first(24009));
           while (var4 != null) {
             KeyedLoginCredentials.writeBlobSubmission((byte) 20, param1, var4);
-            var4 = (BlobSubmission) (ExceptionTextSupport.field_d.c(33));
+            var4 = (BlobSubmission) (ExceptionTextSupport.field_d.next(33));
           }
-          var2 = IterableDualLinkDeque.field_f.g(24009);
+          var2 = IterableDualLinkDeque.field_f.first(24009);
           while (var2 != null) {
             AuctionListing.a(true, param1);
-            var2 = IterableDualLinkDeque.field_f.c(33);
+            var2 = IterableDualLinkDeque.field_f.next(33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

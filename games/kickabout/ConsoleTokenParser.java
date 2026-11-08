@@ -67,10 +67,10 @@ final class ConsoleTokenParser {
           }
           if (var2 == 0) {
             var3 = var28.readUnsignedShort((byte) 81);
-            var4 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.g(24009));
+            var4 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.first(24009));
             while (var4 != null) {
               if (var3 != var4.field_o) {
-                var4 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.c(33));
+                var4 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.next(33));
                 continue;
               }
               break;
@@ -163,10 +163,10 @@ final class ConsoleTokenParser {
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort((byte) 81);
             var28.readLong((byte) -124);
-            var4_ref = (HighScoreSubmission) (FaceNormal.field_d.g(24009));
+            var4_ref = (HighScoreSubmission) (FaceNormal.field_d.first(24009));
             while (var4_ref != null) {
               if (var3Lifetime1 != var4_ref.field_k) {
-                var4_ref = (HighScoreSubmission) (FaceNormal.field_d.c(param0 + 31));
+                var4_ref = (HighScoreSubmission) (FaceNormal.field_d.next(param0 + 31));
                 continue;
               }
               break;

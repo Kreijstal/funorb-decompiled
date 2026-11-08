@@ -124,10 +124,10 @@ final class AnimationFrameset extends DualLinkNode {
           var9.field_n = 1;
           var10 = var9.readUnsignedShort((byte) 81);
           var11 = null;
-          var12 = (AnimationSkeleton) (var3.g(24009));
+          var12 = (AnimationSkeleton) (var3.first(24009));
           while (var12 != null) {
             if (~var12.field_l != ~var10) {
-              var12 = (AnimationSkeleton) (var3.c(33));
+              var12 = (AnimationSkeleton) (var3.next(33));
               continue;
             }
             var11 = var12;

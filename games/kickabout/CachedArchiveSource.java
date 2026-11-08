@@ -73,7 +73,7 @@ final class CachedArchiveSource extends ArchiveSource {
           if (this.getIndex(param0 - 42991) == null) {
             return;
           }
-          var2 = this.field_F.g(24009);
+          var2 = this.field_F.first(24009);
           while (var2 != null) {
             var3 = (int)var2.field_a;
             if (var3 >= 0) {
@@ -97,7 +97,7 @@ final class CachedArchiveSource extends ArchiveSource {
             } else {
               var2.c((byte) -109);
             }
-            var2 = this.field_F.c(33);
+            var2 = this.field_F.next(33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -284,7 +284,7 @@ final class CachedArchiveSource extends ArchiveSource {
             }
             if (this.field_n) {
               var2_int = 1;
-              var3 = this.field_t.g(24009);
+              var3 = this.field_t.first(24009);
               while (var3 != null) {
                 var4 = (int)var3.field_a;
                 if (this.field_r[var4] == 0) {
@@ -295,7 +295,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 } else {
                   var3.c((byte) -109);
                 }
-                var3 = this.field_t.c(33);
+                var3 = this.field_t.next(33);
               }
               while (this.field_z.field_i.length > this.field_i) {
                 if (this.field_z.field_i[this.field_i] == 0) {
@@ -327,7 +327,7 @@ final class CachedArchiveSource extends ArchiveSource {
             else {
               if (this.field_g) {
                 var2_intLifetime2 = 1;
-                var3Lifetime1 = this.field_t.g(24009);
+                var3Lifetime1 = this.field_t.first(24009);
                 while (var3Lifetime1 != null) {
                   var4Lifetime1 = (int)var3Lifetime1.field_a;
                   if (this.field_r[var4Lifetime1] != 1) {
@@ -338,7 +338,7 @@ final class CachedArchiveSource extends ArchiveSource {
                   } else {
                     var3Lifetime1.c((byte) -109);
                   }
-                  var3Lifetime1 = this.field_t.c(33);
+                  var3Lifetime1 = this.field_t.next(33);
                 }
                 while (this.field_i < this.field_z.field_i.length) {
                   if (this.field_z.field_i[this.field_i] == 0) {

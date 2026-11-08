@@ -256,7 +256,7 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
           this.field_mb = 32;
           this.field_q = 32;
           this.field_Bb = param0;
-          this.field_Cb = param0.d(false);
+          this.field_Cb = param0.getIconSprite(false);
           this.field_N = (Sprite) ((Object) this.field_Cb);
           if (param1) {
             this.field_q = this.field_q >> 1;

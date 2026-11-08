@@ -340,7 +340,7 @@ class SharedWidgetFactory extends DualLinkNode {
           var3_int = param2.length();
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var4 = MatchAgent.a(0, param2);
+            var4 = MatchAgent.normalizeAccountName(0, param2);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!GradientRasterSupport.isNameSeparator(false, var4.charAt(0)) &&

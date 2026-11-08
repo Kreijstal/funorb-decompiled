@@ -21,12 +21,12 @@ final class ColourSwatchTile extends UiLayoutNode {
           if (param0 != 140) {
             ColourSwatchTile.b(108);
           }
-          var4 = (AuctionListing) (BuyPlayerDialog.field_K.g(param0 ^ 23877));
+          var4 = (AuctionListing) (BuyPlayerDialog.field_K.first(param0 ^ 23877));
           while (var4 != null) {
             if (var4.isSameListing(param1, 5250)) {
               return false;
             }
-            var4 = (AuctionListing) (BuyPlayerDialog.field_K.c(param0 ^ 173));
+            var4 = (AuctionListing) (BuyPlayerDialog.field_K.next(param0 ^ 173));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,10 +123,10 @@ final class ColourSwatchTile extends UiLayoutNode {
         var2 = Kickabout.field_G;
         try {
           PasswordLoginCredentials.serviceAudioOutputs((byte) -28);
-          var3 = (FadingSoundPlayer) (StrongCacheEntry.field_z.g(24009));
+          var3 = (FadingSoundPlayer) (StrongCacheEntry.field_z.first(24009));
           while (var3 != null) {
             var3.update((byte) -127);
-            var3 = (FadingSoundPlayer) (StrongCacheEntry.field_z.c(33));
+            var3 = (FadingSoundPlayer) (StrongCacheEntry.field_z.next(33));
           }
           if (param0 == 17702) {
             return;

@@ -64,7 +64,7 @@ final class DualLinkDequeIterator implements Iterator {
         }
         if (StreetSceneryLoader.field_m.field_E.charAt(0) != 91) {
           var7 = (CharSequence) ((Object) StreetSceneryLoader.field_m.field_E);
-          var4 = MatchAgent.a(0, var7);
+          var4 = MatchAgent.normalizeAccountName(0, var7);
           var5 = var4;
           var5Lifetime2 = var4;
         } else {

@@ -155,7 +155,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
     }
 
     final static void c(boolean param0) {
-        PlayerStats.e(-1456);
+        PlayerStats.finishUiTransitions(-1456);
         if (param0) {
           PcmStreamMixer var2 = (PcmStreamMixer) null;
           KitStyleTile.a(-120, (ResourceArchive) null, 13, (PcmStreamMixer) null);
@@ -258,7 +258,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           StripedProgressBar.a((byte) 49, param1);
           CipherPacketBuffer.loadSplitFinalFrameSprites(3, param1);
           RasterGammaSupport.initializeIntensityLookup(false);
-          Trinket.d((byte) -128);
+          Trinket.buildBlurredModelSprite((byte) -128);
           PlayerStats.field_p = 0 - ButtonMenuScreen.field_l;
           int var4_int = -119 / ((param2 + 39) / 58);
         } catch (RuntimeException runtimeException) {

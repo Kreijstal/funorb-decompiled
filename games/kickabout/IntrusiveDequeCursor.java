@@ -16,7 +16,7 @@ final class IntrusiveDequeCursor {
         field_b = null;
     }
 
-    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+    final IntrusiveNode lastFrom(byte param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
@@ -56,7 +56,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+    final IntrusiveNode firstFrom(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_6_0 = null;
@@ -98,7 +98,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         int var2 = -27 % ((param0 - 9) / 40);
         IntrusiveNode var3 = this.field_e.field_c.field_d;
         if (var3 == this.field_e.field_c) {
@@ -109,7 +109,7 @@ final class IntrusiveDequeCursor {
         return var3;
     }
 
-    final static void a(int param0, Sprite param1) {
+    final static void buildDirectionalMarkerSprites(int param0, Sprite param1) {
         try {
           SceneSpriteFactory.field_e = new Sprite[4];
           SceneSpriteFactory.field_e[1] = param1;
@@ -127,12 +127,12 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode next(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 0) {
           Sprite var3 = (Sprite) null;
-          IntrusiveDequeCursor.a(-36, (Sprite) null);
+          IntrusiveDequeCursor.buildDirectionalMarkerSprites(-36, (Sprite) null);
           var2 = this.field_f;
           if (this.field_e.field_c != var2) {
             this.field_f = var2.field_d;
@@ -150,7 +150,7 @@ final class IntrusiveDequeCursor {
         return null;
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode last(int param0) {
         IntrusiveNode var2 = this.field_e.field_c.field_b;
         if (param0 != 0) {
           field_d = -67;
@@ -169,12 +169,12 @@ final class IntrusiveDequeCursor {
         return null;
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode previous(byte param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 46) {
           IntrusiveNode var3 = (IntrusiveNode) null;
-          this.a((byte) -96, (IntrusiveNode) null);
+          this.lastFrom((byte) -96, (IntrusiveNode) null);
           var2 = this.field_f;
           if (var2 != this.field_e.field_c) {
             this.field_f = var2.field_b;

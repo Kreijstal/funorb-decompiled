@@ -62,7 +62,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         this.field_X = true;
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 25 / ((-15 - param0) / 39);
         field_Q = (String[][]) null;
         field_R = null;

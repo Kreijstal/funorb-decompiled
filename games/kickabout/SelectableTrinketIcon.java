@@ -85,7 +85,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
                 if (this.field_Bb != 32) {
                   StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                 } else {
-                  if (TextFieldValidator.f(-1)) {
+                  if (TextFieldValidator.areAccountTrinketsDisabled(-1)) {
                     GameModesHelpScreen.field_L.drawQuarterSize(this.field_F, this.field_T);
                   } else {
                     StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
@@ -100,7 +100,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
             } else {
               if (!DisplayNameUiSupport.field_e) {
                 if (this.field_Bb == 32) {
-                  if (!TextFieldValidator.f(-1)) {
+                  if (!TextFieldValidator.areAccountTrinketsDisabled(-1)) {
                     StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                   } else {
                     GameModesHelpScreen.field_L.drawQuarterSize(this.field_F, this.field_T);
@@ -128,7 +128,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
                 if (this.field_Bb != 32) {
                   StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                 } else {
-                  if (!TextFieldValidator.f(-1)) {
+                  if (!TextFieldValidator.areAccountTrinketsDisabled(-1)) {
                     StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                   } else {
                     GameModesHelpScreen.field_L.drawQuarterSize(this.field_F, this.field_T);
@@ -143,7 +143,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
             } else {
               if (!DisplayNameUiSupport.field_e) {
                 if (this.field_Bb == 32) {
-                  if (!TextFieldValidator.f(-1)) {
+                  if (!TextFieldValidator.areAccountTrinketsDisabled(-1)) {
                     StrongCacheEntry.field_w.drawQuarterSize(this.field_F, this.field_T);
                   } else {
                     GameModesHelpScreen.field_L.drawQuarterSize(this.field_F, this.field_T);

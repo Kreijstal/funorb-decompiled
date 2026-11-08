@@ -89,7 +89,7 @@ final class ModelMaterial {
             for (var8 = 0; var7 > var8; var8++) {
               var11[var8] = ((PacketBuffer) ((Object) var6)).readInt(4);
             }
-            var13 = (AchievementQuery) (MatchScreen.field_j.g(24009));
+            var13 = (AchievementQuery) (MatchScreen.field_j.first(24009));
             if (var13 == null) {
               FormationView.b((byte) -116);
               return;
@@ -100,7 +100,7 @@ final class ModelMaterial {
             return;
           }
           if (var3 == 1) {
-            var14 = (AchievementSubmission) (ClassDescriptorSupport.field_a.g(24009));
+            var14 = (AchievementSubmission) (ClassDescriptorSupport.field_a.first(24009));
             if (var14 != null) {
               var14.c((byte) -109);
               return;
@@ -113,7 +113,7 @@ final class ModelMaterial {
             FormationView.b((byte) -116);
             return;
           }
-          var16_ref = (AchievementQuery) (MatchScreen.field_j.g(24009));
+          var16_ref = (AchievementQuery) (MatchScreen.field_j.first(24009));
           if (var16_ref == null) {
             FormationView.b((byte) -116);
             return;
@@ -141,7 +141,7 @@ final class ModelMaterial {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = GameOverView.a(param1 ^ -9027, param4, param2, param3, param0, param5);
+          var8 = GameOverView.tryEnterFullscreen(param1 ^ -9027, param4, param2, param3, param0, param5);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;

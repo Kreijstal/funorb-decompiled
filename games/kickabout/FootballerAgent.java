@@ -109,7 +109,7 @@ class FootballerAgent extends MatchAgent {
             this.action == 12 ||
             this.action == 13) {
             if (!this.field_s) {
-              if (this.stats.a((byte) 44, this.member) &&
+              if (this.stats.usesTankAbilities((byte) 44, this.member) &&
                 this.directionMask != 0) {
                 this.setDirectionFromMask(this.directionMask, param0 ^ 26212);
                 if (this.directionY != 0 &&
@@ -155,7 +155,7 @@ class FootballerAgent extends MatchAgent {
               stackIn_40_0 = this.field_A;
             }
             var7Lifetime2 = stackIn_40_0 << 1;
-            if (this.stats.b(this.member, 100)) {
+            if (this.stats.hasSlalom(this.member, 100)) {
               this.setDirectionFromMask(this.directionMask, 26214);
             }
             var6 = var7Lifetime2 * this.directionY;
@@ -203,7 +203,7 @@ class FootballerAgent extends MatchAgent {
               var8Lifetime1 = 73728;
             }
             if (1 == this.action) {
-              if (!this.stats.c(this.member, (byte) -62)) {
+              if (!this.stats.usesHotshotAbilities(this.member, (byte) -62)) {
                 var8Lifetime1 = var8Lifetime1 >> 2;
               } else {
                 var8Lifetime1 = var8Lifetime1 >> 1;
@@ -467,7 +467,7 @@ class FootballerAgent extends MatchAgent {
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.action != 0 && (this.action != 4 ||
-          !this.stats.a((byte) 44, this.member))) {
+          !this.stats.usesTankAbilities((byte) 44, this.member))) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -563,14 +563,14 @@ class FootballerAgent extends MatchAgent {
           stackIn_3_1 = (param0);
           this.member = stackIn_3_1;
           this.archetype = this.stats.archetype;
-          if (this.stats.c(this.member, param2 - 109)) {
+          if (this.stats.usesRangerAbilities(this.member, param2 - 109)) {
             stackIn_6_0 = 3;
           } else {
             stackIn_6_0 = this.archetype;
           }
           var4_int = stackIn_6_0;
           this.field_A = ColorQuantizationBox.field_j[var4_int] + (MenuButton.field_q[var4_int] - ColorQuantizationBox.field_j[var4_int]) * this.stats.effectiveSpeed(this.member, (byte) -84) / 100;
-          if (this.stats.a((byte) 44, this.member)) {
+          if (this.stats.usesTankAbilities((byte) 44, this.member)) {
             stackIn_9_0 = 0;
           } else {
             stackIn_9_0 = this.archetype;

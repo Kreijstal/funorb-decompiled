@@ -25,7 +25,7 @@ final class PlayerPortraitCacheEntry {
           if (param0 <= 70) {
             PlayerPortraitCacheEntry.releaseStatics(50);
           }
-          var2 = StrongCacheEntry.field_z.g(24009);
+          var2 = StrongCacheEntry.field_z.first(24009);
           while (var2 instanceof FadingSoundPlayer) {
             if (((FadingSoundPlayer) (var2)).getSoundId(false) == param1) {
               return true;

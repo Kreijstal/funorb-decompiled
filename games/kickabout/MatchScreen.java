@@ -4,10 +4,10 @@
 final class MatchScreen extends AppScreen {
     private ClubState field_n;
     int localSeat;
-    boolean field_A;
+    boolean isTournamentMatch;
     CommonGame matchState;
     private boolean field_D;
-    boolean field_v;
+    boolean tournamentSpectatorControlsEnabled;
     private int field_E;
     private boolean field_y;
     int[] field_z;
@@ -147,14 +147,14 @@ final class MatchScreen extends AppScreen {
         return stackIn_16_0;
     }
 
-    private final boolean b(byte param0) {
+    private final boolean isTournamentSpectator(byte param0) {
         AppScreen var3;
         boolean stackIn_6_0 = false;
         if (param0 != -73) {
           var3 = (AppScreen) null;
           this.setTransitionProgress(9, true, -127, (AppScreen) null);
         }
-        stackIn_6_0 = (this.isSpectator(-2)) && (this.field_A);
+        stackIn_6_0 = (this.isSpectator(-2)) && (this.isTournamentMatch);
         return stackIn_6_0;
     }
 
@@ -221,7 +221,7 @@ final class MatchScreen extends AppScreen {
           for (var5 = 0; var5 < this.matchState.playerCount; var5++) {
             this.announceParticipantStatusChange(var4, 20700, var5);
           }
-          this.matchState.a(this.field_i, this.localSeat, var4, -6);
+          this.matchState.reconcileAgentStatesFrom(this.field_i, this.localSeat, var4, -6);
         }
         FullscreenErrorDialog.q(-28033);
         if (this.field_E > 0) {
@@ -282,7 +282,7 @@ final class MatchScreen extends AppScreen {
           this.field_q = stackIn_13_1;
           this.field_B = param13;
           stackIn_16_1 = (param10);
-          this.field_A = stackIn_16_1;
+          this.isTournamentMatch = stackIn_16_1;
           this.field_n = param14;
           QuickChatCategoryCache.field_e = false;
           stackIn_19_1 = (param4);
@@ -295,7 +295,7 @@ final class MatchScreen extends AppScreen {
             var21[var17] = 0;
           }
           this.field_z = new int[param2.length];
-          this.matchState = new CommonGame(param2, param6, param7, param8, param9, this.field_A, this.field_D, this.field_y, this.field_s);
+          this.matchState = new CommonGame(param2, param6, param7, param8, param9, this.isTournamentMatch, this.field_D, this.field_y, this.field_s);
           if (this.isOnlineMatch) {
             this.field_i = new CommonGame(this.matchState);
             this.field_m = new CommonGame(this.matchState);
@@ -378,7 +378,7 @@ final class MatchScreen extends AppScreen {
         if (!this.isGameOverViewShown((byte) -59)) {
           return null;
         }
-        return ((GameOverView) (this.phaseController)).h(-19510);
+        return ((GameOverView) (this.phaseController)).getTrainingActions(-19510);
     }
 
     final void readParticipantPingTimes(int param0, CipherPacketBuffer param1) {
@@ -418,7 +418,7 @@ final class MatchScreen extends AppScreen {
         ParticipantStatus var7;
         var7 = this.matchState.participantStatus[param2];
         var5 = this.field_i.participantStatus[param2];
-        if (var7.a(-93, var5, param0, this.localSeat)) {
+        if (var7.shouldDeferStateCorrection(-93, var5, param0, this.localSeat)) {
           return;
         }
         var6 = null;
@@ -447,12 +447,12 @@ final class MatchScreen extends AppScreen {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean usesTournamentSpectatorControls(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -21660) {
           this.field_q = true;
         }
-        stackIn_6_0 = (this.b((byte) -73)) && (this.field_v);
+        stackIn_6_0 = (this.isTournamentSpectator((byte) -73)) && (this.tournamentSpectatorControlsEnabled);
         return stackIn_6_0;
     }
 
@@ -558,7 +558,7 @@ final class MatchScreen extends AppScreen {
         try {
           ((GameOverView) (this.phaseController)).applyTrainingAction(1, param1, param0, param3);
           if (param2 > -71) {
-            this.field_v = true;
+            this.tournamentSpectatorControlsEnabled = true;
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ap.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -714,7 +714,7 @@ final class MatchScreen extends AppScreen {
           var4 = 1;
           if (this.isOnlineMatch) {
             var4 = 2;
-            if (this.field_A) {
+            if (this.isTournamentMatch) {
               var4 = 3;
             }
             if (!this.isSpectator(-2) &&
@@ -724,7 +724,7 @@ final class MatchScreen extends AppScreen {
               return true;
             }
             var4 = 5;
-            if (this.field_A) {
+            if (this.isTournamentMatch) {
               var4 = 6;
             }
           }
@@ -783,7 +783,7 @@ final class MatchScreen extends AppScreen {
         try {
           this.stateReceived = true;
           this.captureFadeSnapshot(9);
-          this.field_i.a(param1, this.localSeat, param0 ^ -18);
+          this.field_i.readFullState(param1, this.localSeat, param0 ^ -18);
           this.field_m.copyStateFrom(this.field_i, (byte) 77);
           if (this.field_i.phase > 0) {
             stackIn_4_0 = 1;

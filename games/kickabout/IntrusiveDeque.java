@@ -54,7 +54,7 @@ final class IntrusiveDeque {
         return;
     }
 
-    final IntrusiveNode b(int param0, IntrusiveNode param1) {
+    final IntrusiveNode firstFrom(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         IntrusiveNode stackIn_2_0 = null;
@@ -109,7 +109,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode g(int param0) {
+    final IntrusiveNode first(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 24009) {
@@ -131,7 +131,7 @@ final class IntrusiveDeque {
         return null;
     }
 
-    final static int a(boolean param0, CharSequence param1) {
+    final static int hashCp1252(boolean param0, CharSequence param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -168,19 +168,19 @@ final class IntrusiveDeque {
         }
     }
 
-    final void a(int param0, IntrusiveDeque param1) {
+    final void moveAllTo(int param0, IntrusiveDeque param1) {
         try {
-          this.a(param1, this.field_c.field_d, 123);
+          this.moveTailTo(param1, this.field_c.field_d, 123);
           if (param0 != -17481) {
             IntrusiveNode var4 = (IntrusiveNode) null;
-            this.a((IntrusiveDeque) null, (IntrusiveNode) null, -14);
+            this.moveTailTo((IntrusiveDeque) null, (IntrusiveNode) null, -14);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "tf.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final IntrusiveNode[] f(int param0) {
+    final IntrusiveNode[] toArray(int param0) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         IntrusiveNode[] var6 = null;
@@ -195,7 +195,7 @@ final class IntrusiveDeque {
         if (param0 != 606511077) {
           IntrusiveDeque.releaseStatics(113);
         } else {
-          var6 = new IntrusiveNode[this.a(false)];
+          var6 = new IntrusiveNode[this.size(false)];
           var2 = var6;
           var3 = 0;
           var4 = this.field_c.field_d;
@@ -207,7 +207,7 @@ final class IntrusiveDeque {
           }
           return var2;
         }
-        var6Lifetime1 = new IntrusiveNode[this.a(false)];
+        var6Lifetime1 = new IntrusiveNode[this.size(false)];
         var2Lifetime1 = var6Lifetime1;
         var3Lifetime1 = 0;
         var4Lifetime1 = this.field_c.field_d;
@@ -220,7 +220,7 @@ final class IntrusiveDeque {
         return var2Lifetime1;
     }
 
-    final IntrusiveNode e(int param0) {
+    final IntrusiveNode previous(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 33) {
@@ -264,7 +264,7 @@ final class IntrusiveDeque {
         return this.field_c == this.field_c.field_d ? true : false;
     }
 
-    final void a(int param0, IntrusiveNode param1) {
+    final void addFirst(int param0, IntrusiveNode param1) {
         try {
           if (param1.field_b != null) {
             param1.c((byte) -109);
@@ -281,7 +281,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode next(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 33) {
@@ -303,7 +303,7 @@ final class IntrusiveDeque {
         return null;
     }
 
-    private final void a(IntrusiveDeque param0, IntrusiveNode param1, int param2) {
+    private final void moveTailTo(IntrusiveDeque param0, IntrusiveNode param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         IntrusiveNode var5 = null;
@@ -355,7 +355,7 @@ final class IntrusiveDeque {
         field_h = null;
     }
 
-    final int a(boolean param0) {
+    final int size(boolean param0) {
         int var2 = 0;
         IntrusiveNode var3 = null;
         int var4 = Kickabout.field_G;

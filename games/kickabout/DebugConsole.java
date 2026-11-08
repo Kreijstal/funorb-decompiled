@@ -213,14 +213,14 @@ final class DebugConsole extends ConsolePanel {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_t = new ConsoleCommand[param0.a(false)];
+          this.field_t = new ConsoleCommand[param0.size(false)];
           var4_int = 0;
-          var5 = (ConsoleCommand) (param0.g(24009));
+          var5 = (ConsoleCommand) (param0.first(24009));
           while (var5 != null) {
             incrementValue$3 = var4_int;
             var4_int++;
             this.field_t[incrementValue$3] = var5;
-            var5 = (ConsoleCommand) (param0.c(33));
+            var5 = (ConsoleCommand) (param0.next(33));
           }
           this.print("# <col=ffaaff>FunOrbConsole (loaded " + this.field_t.length + " methods at " + new Date() + ")</col>", (byte) 94);
           return;

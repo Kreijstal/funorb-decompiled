@@ -22,7 +22,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
         int var4;
         int var4Lifetime1;
         super.updateScreen((byte) 117, param1);
-        stackIn_3_0 = !(PlayerStats.a((byte) -3));
+        stackIn_3_0 = !(PlayerStats.beginReconnectGracePeriod((byte) -3));
         var3 = PasswordFieldPainter.a(stackIn_3_0, -587);
         if (var3 != 3) {
           if (var3 == 1) {

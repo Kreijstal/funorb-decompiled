@@ -297,7 +297,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
 
     private final int headerRowCount(byte param0) {
         int var2 = -70 % ((param0 - 8) / 47);
-        return this.field_T.a(false) > 0 ? 2 + this.field_T.a(false) : 0;
+        return this.field_T.size(false) > 0 ? 2 + this.field_T.size(false) : 0;
     }
 
     final void enterScreen(int param0, int param1, boolean param2) {
@@ -333,7 +333,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         RuntimeException var3_ref = null;
         var4 = Kickabout.field_G;
         try {
-          var3 = (ReceivedAuctionItem) (this.field_T.g(24009));
+          var3 = (ReceivedAuctionItem) (this.field_T.first(24009));
           if (param1 != 640) {
             this.field_B = (ReceivedAuctionItemRow[]) null;
           }
@@ -341,7 +341,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             if (var3.field_a == param0.field_a) {
               var3 = param0;
             }
-            var3 = (ReceivedAuctionItem) (this.field_T.c(param1 ^ 673));
+            var3 = (ReceivedAuctionItem) (this.field_T.next(param1 ^ 673));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -411,12 +411,12 @@ final class AuctionsScreen extends ButtonMenuScreen {
         var5 = Kickabout.field_G;
         try {
           var3_int = 4 / ((40 - param1) / 37);
-          var4 = (ReceivedAuctionItem) (this.field_T.g(24009));
+          var4 = (ReceivedAuctionItem) (this.field_T.first(24009));
           while (var4 != null) {
             if (param0.field_a == var4.field_a) {
               return true;
             }
-            var4 = (ReceivedAuctionItem) (this.field_T.c(33));
+            var4 = (ReceivedAuctionItem) (this.field_T.next(33));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -470,8 +470,8 @@ final class AuctionsScreen extends ButtonMenuScreen {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (this.field_T.a(false) > param3) {
-            var18 = (ReceivedAuctionItem) (this.field_T.g(24009));
+          if (this.field_T.size(false) > param3) {
+            var18 = (ReceivedAuctionItem) (this.field_T.first(24009));
             while (var18 != null) {
               if (var7 >= param3) {
                 if (var7 == 0) {
@@ -490,7 +490,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
                 var17.addLast(var10_ref_jrLifetime2, 3);
               }
               var7++;
-              var18 = (ReceivedAuctionItem) (this.field_T.c(33));
+              var18 = (ReceivedAuctionItem) (this.field_T.next(33));
             }
           }
           if (var7 > 0) {
@@ -540,10 +540,10 @@ final class AuctionsScreen extends ButtonMenuScreen {
             this.field_B[var12].field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             this.field_B[var12].field_y = 16777215;
           }
-          var12_ref_jr = (ReceivedAuctionItemRow) (var17.g(24009));
+          var12_ref_jr = (ReceivedAuctionItemRow) (var17.first(24009));
           while (var12_ref_jr != null) {
             this.field_B[var11] = var12_ref_jr;
-            var12_ref_jr = (ReceivedAuctionItemRow) (var17.c(33));
+            var12_ref_jr = (ReceivedAuctionItemRow) (var17.next(33));
             var11++;
           }
           for (var12Lifetime1 = var11; var12Lifetime1 < this.field_B.length; var12Lifetime1++) {
@@ -552,7 +552,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             this.field_B[var12Lifetime1].field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             this.field_B[var12Lifetime1].field_y = 16777215;
           }
-          if (this.field_T.a(false) + var6 == 0) {
+          if (this.field_T.size(false) + var6 == 0) {
             this.field_N = true;
           } else {
             this.field_N = false;
@@ -774,7 +774,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             ModelMaterialDecoder.field_g) {
             return;
           }
-          if (this.field_D - 5 <= this.field_T.a(false)) {
+          if (this.field_D - 5 <= this.field_T.size(false)) {
             this.requestAuctionRefresh(30353);
           }
           FootballerAiOverlaySupport.field_d.writeIsaacByte(param0 ? 83 : 55, (byte) -91);

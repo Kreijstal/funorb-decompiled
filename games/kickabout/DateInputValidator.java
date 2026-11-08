@@ -13,14 +13,14 @@ final class DateInputValidator extends DebouncedValidationProvider implements Te
         int var3 = Kickabout.field_G;
         UiLayoutNode var2Lifetime1;
         try {
-          var4 = (UiLayoutNode) (param1.field_jb.g(24009));
+          var4 = (UiLayoutNode) (param1.field_jb.first(24009));
           var2 = var4;
           while (var4 != null) {
             var4.field_J = 0;
             var4.field_mb = 0;
             var4.field_L = 0;
             var4.field_v = 0;
-            var4 = (UiLayoutNode) (param1.field_jb.c(33));
+            var4 = (UiLayoutNode) (param1.field_jb.next(33));
             var2Lifetime1 = var4;
           }
           if (!param0) {

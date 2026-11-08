@@ -95,7 +95,7 @@ class IntrusiveNode {
     final static void readAccountNameUpdate(int param0) {
         ArchiveSource.field_e = ByteArrayPool.field_e.readString(-117);
         CharSequence var2 = (CharSequence) ((Object) ArchiveSource.field_e);
-        DebugConsole.field_w = MatchAgent.a(0, var2);
+        DebugConsole.field_w = MatchAgent.normalizeAccountName(0, var2);
         if (param0 != -49) {
           field_c = (String) null;
         }

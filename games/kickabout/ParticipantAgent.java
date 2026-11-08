@@ -142,7 +142,7 @@ final class ParticipantAgent extends MatchAgent {
         }
     }
 
-    final void a(MatchAgent param0, byte param1) {
+    final void inheritControlSource(MatchAgent param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -178,7 +178,7 @@ final class ParticipantAgent extends MatchAgent {
         this.participantIndex = param0;
         this.field_g = 0;
         this.field_k = 0;
-        this.field_e = this.participantIndex;
+        this.controlSourceParticipant = this.participantIndex;
         this.field_o = new int[4];
     }
 

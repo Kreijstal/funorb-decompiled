@@ -93,7 +93,7 @@ final class IntTripleCommand extends ConsoleCommand {
           }
           stackIn_7_0 = -27054;
           while (!TriangleMesh.a(stackIn_7_0, param0)) {
-            var2 = param0.g(24009);
+            var2 = param0.first(24009);
             while (var2 instanceof WorldDrawEntry) {
               if (var2.field_d instanceof WorldDrawEntry) {
                 var3 = var2.field_d;

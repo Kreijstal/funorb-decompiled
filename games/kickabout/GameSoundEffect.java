@@ -71,7 +71,7 @@ final class GameSoundEffect {
         if (param0 != 64) {
           return false;
         }
-        return MusicPatchNode.field_h.a(false) > 0 ? true : false;
+        return MusicPatchNode.field_h.size(false) > 0 ? true : false;
     }
 
     final static void a(byte param0) {

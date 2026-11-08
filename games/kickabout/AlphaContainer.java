@@ -42,10 +42,10 @@ final class AlphaContainer extends SingleChildContainer {
           }
           ((Sprite) (Object) stackIn_6_0).d(stackIn_7_1, 0);
           var4.c(0, 0);
-          var6 = (PlayerModelPreview) (param2.g(24009));
+          var6 = (PlayerModelPreview) (param2.first(24009));
           while (var6 != null) {
             var6.a(param3, -2);
-            var6 = (PlayerModelPreview) (param2.c(33));
+            var6 = (PlayerModelPreview) (param2.next(33));
           }
           if (param1 > -41) {
             field_D = (String) null;

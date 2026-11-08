@@ -50,7 +50,7 @@ final class HighScoreSubmission extends IntrusiveNode {
           var3 = var2.readUnsignedByte((byte) -123);
           var4 = var2.readUnsignedByte((byte) -112);
           if (0 == var3) {
-            var5 = (LookupQuery) (MidiPcmStream.field_M.g(24009));
+            var5 = (LookupQuery) (MidiPcmStream.field_M.first(24009));
             if (var5 == null) {
               FormationView.b((byte) -116);
               return;
@@ -74,11 +74,11 @@ final class HighScoreSubmission extends IntrusiveNode {
             return;
           }
           var5_int = var2.readSignedSmart(85);
-          var6_ref_hr = (LookupRecordUpdate) (NamedValueContainer.field_c.g(24009));
+          var6_ref_hr = (LookupRecordUpdate) (NamedValueContainer.field_c.first(24009));
           while (var6_ref_hr != null) {
             if (var6_ref_hr.tableId != var4 ||
               var6_ref_hr.recordId != var5_int) {
-              var6_ref_hr = (LookupRecordUpdate) (NamedValueContainer.field_c.c(33));
+              var6_ref_hr = (LookupRecordUpdate) (NamedValueContainer.field_c.next(33));
               continue;
             }
             break;

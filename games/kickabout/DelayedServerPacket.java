@@ -104,15 +104,15 @@ final class DelayedServerPacket extends IntrusiveNode {
             MachineTokenStorageSupport.field_e.isGameOverViewShown((byte) 95)) {
             var8 = MachineTokenStorageSupport.field_e.getGameOverEntries((byte) -123);
             if (var8 != null &&
-              var8.a(false) > 0) {
+              var8.size(false) > 0) {
               FootballerAiOverlaySupport.field_d.writeIsaacByte(81, (byte) 127);
               FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 2;
               var4 = FootballerAiOverlaySupport.field_d.field_n;
-              FootballerAiOverlaySupport.field_d.writeByte(param2 ^ -106, var8.a(false));
-              var7 = (ManagerAction) (var8.g(24009));
+              FootballerAiOverlaySupport.field_d.writeByte(param2 ^ -106, var8.size(false));
+              var7 = (ManagerAction) (var8.first(24009));
               while (var7 != null) {
                 var7.writeToPacket(1, FootballerAiOverlaySupport.field_d);
-                var7 = (ManagerAction) (var8.c(param2 ^ -33));
+                var7 = (ManagerAction) (var8.next(param2 ^ -33));
               }
               FootballerAiOverlaySupport.field_d.backpatchShortLength(-var4 + FootballerAiOverlaySupport.field_d.field_n, 62);
             }

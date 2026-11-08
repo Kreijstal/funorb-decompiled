@@ -25,13 +25,13 @@ final class ModalStack extends SingleChildContainer {
           if (param0 != 0) {
             this.field_A = (IntrusiveDeque) null;
           }
-          var3 = (ModalPanel) (var2.a((byte) 98));
+          var3 = (ModalPanel) (var2.first((byte) 98));
           while (var3 != null) {
             if (var3.field_C) {
               stackIn_10_0 = var3.findFocusedChild(false);
               return stackIn_10_0;
             }
-            var3 = (ModalPanel) (var2.a(param0 ^ 0));
+            var3 = (ModalPanel) (var2.next(param0 ^ 0));
             if (var4 == 0) {
               continue;
             }
@@ -140,7 +140,7 @@ final class ModalStack extends SingleChildContainer {
             MarkerSliderPainter.field_f.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RegistrationUiSupport.field_d, new String[]{BufferedSocket.field_h});
             RotaryDialPainter.field_d.field_Cb.field_zb.field_E = null;
             var6 = null;
-            var7 = (SocialPlayerRow) (var4.g(24009));
+            var7 = (SocialPlayerRow) (var4.first(24009));
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var7 == null))) {
               var8 = 0;
@@ -246,7 +246,7 @@ final class ModalStack extends SingleChildContainer {
                     UrlRequest.field_e = var7.name;
                   }
                 }
-                var7 = (SocialPlayerRow) (var4.c(33));
+                var7 = (SocialPlayerRow) (var4.next(33));
                 continue;
               }
               break;
@@ -301,10 +301,10 @@ final class ModalStack extends SingleChildContainer {
             this.field_r.drawWidget(113, true, param3, (UiWidget) (this), param2);
           }
           var5 = new IntrusiveDequeCursor(this.field_A);
-          var6 = (UiWidget) (var5.b(0));
+          var6 = (UiWidget) (var5.last(0));
           while (null != var6) {
             var6.drawLayer(param0, 65, param2 + this.field_t, this.field_g + param3);
-            var6 = (UiWidget) (var5.b((byte) 46));
+            var6 = (UiWidget) (var5.previous((byte) 46));
             if (var7 != 0) {
               return;
             }
@@ -333,13 +333,13 @@ final class ModalStack extends SingleChildContainer {
             return stackIn_3_0;
           }
           var2 = new IntrusiveDequeCursor(this.field_A);
-          var3 = (ModalPanel) (var2.a((byte) 70));
+          var3 = (ModalPanel) (var2.first((byte) 70));
           while (null != var3) {
             if (var3.field_C) {
               stackIn_8_0 = var3;
               return stackIn_8_0;
             }
-            var3 = (ModalPanel) (var2.a(0));
+            var3 = (ModalPanel) (var2.next(0));
             if (var4 == 0) {
               continue;
             }
@@ -366,7 +366,7 @@ final class ModalStack extends SingleChildContainer {
           if (param0 != 4508) {
             return;
           }
-          var3 = (ModalPanel) (var2.a((byte) -107));
+          var3 = (ModalPanel) (var2.first((byte) -107));
           while (null != var3) {
             if (var4 != 0) {
               return;
@@ -374,7 +374,7 @@ final class ModalStack extends SingleChildContainer {
             if (var3.finishAnimationAndCheckClosed(param0 - 4521)) {
               var3.c((byte) -109);
             }
-            var3 = (ModalPanel) (var2.a(0));
+            var3 = (ModalPanel) (var2.next(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -396,7 +396,7 @@ final class ModalStack extends SingleChildContainer {
             throw new IllegalArgumentException();
           }
           var3 = (ModalPanel) (param0);
-          this.field_A.a(0, var3);
+          this.field_A.addFirst(0, var3);
           if (param1) {
             this.field_A = (IntrusiveDeque) null;
           }
@@ -457,10 +457,10 @@ final class ModalStack extends SingleChildContainer {
           if (param0 <= 82) {
             this.topActiveModal((byte) 110);
           }
-          var3 = (ModalPanel) (var2.a((byte) 110));
+          var3 = (ModalPanel) (var2.first((byte) 110));
           while (null != var3) {
             var3.field_C = false;
-            var3 = (ModalPanel) (var2.a(0));
+            var3 = (ModalPanel) (var2.next(0));
             if (var4 != 0) {
               return;
             }
@@ -523,7 +523,7 @@ final class ModalStack extends SingleChildContainer {
             ModalStack.isAsciiLetter((byte) 111, '\007');
           }
           var2 = new IntrusiveDequeCursor(this.field_A);
-          var3 = (ModalPanel) (var2.a((byte) 107));
+          var3 = (ModalPanel) (var2.first((byte) 107));
           while (null != var3) {
             if (var4 != 0) {
               return;
@@ -531,7 +531,7 @@ final class ModalStack extends SingleChildContainer {
             if (var3.advanceDialogAnimation(-1)) {
               var3.c((byte) -109);
             }
-            var3 = (ModalPanel) (var2.a(0));
+            var3 = (ModalPanel) (var2.next(0));
           }
           this.field_z = (UiWidget) ((Object) this.topActiveModal((byte) 18));
           return;

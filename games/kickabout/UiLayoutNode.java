@@ -115,11 +115,11 @@ class UiLayoutNode extends SharedWidgetFactory {
         int var8 = var7 + this.field_L;
         if (!param3) {
           var9 = 0;
-          var10_ref_hd = (UiLayoutNode) (this.field_jb.g(24009));
+          var10_ref_hd = (UiLayoutNode) (this.field_jb.first(24009));
           while (var10_ref_hd != null) {
             var10_ref_hd.field_v = var9 - var10_ref_hd.field_J;
             var9 = var9 + (param1 + var10_ref_hd.field_L + var10_ref_hd.field_mb);
-            var10_ref_hd = (UiLayoutNode) (this.field_jb.c(33));
+            var10_ref_hd = (UiLayoutNode) (this.field_jb.next(33));
           }
           var8 = var9 - param1;
         }
@@ -164,13 +164,13 @@ class UiLayoutNode extends SharedWidgetFactory {
           }
         }
         if (null != this.field_jb) {
-          var4 = (UiLayoutNode) (this.field_jb.g(24009));
+          var4 = (UiLayoutNode) (this.field_jb.first(24009));
           while (var4 != null) {
             var5 = var4.field_s + var4.field_q;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (UiLayoutNode) (this.field_jb.c(param1 + 33));
+            var4 = (UiLayoutNode) (this.field_jb.next(param1 + 33));
           }
         }
         return var3;
@@ -378,7 +378,7 @@ class UiLayoutNode extends SharedWidgetFactory {
             if (NodeHashTableIterator.field_b == 0) {
               return true;
             }
-            TrinketCatalog.a(-108);
+            TrinketCatalog.resetChatComposition(-108);
           } else {
             if (AuctionLogEntry.field_m.length() > 0) {
               var4_ref_String = AuctionLogEntry.field_m.toString();
@@ -397,7 +397,7 @@ class UiLayoutNode extends SharedWidgetFactory {
                 PasswordLoginCredentials.sendChatPacket(-1, 82, NodeHashTableIterator.field_b, param1, TrinketTile.field_Kb, var4_ref_String);
               }
             }
-            TrinketCatalog.a(99);
+            TrinketCatalog.resetChatComposition(99);
           }
           return true;
         }
@@ -565,7 +565,7 @@ class UiLayoutNode extends SharedWidgetFactory {
           var13 = (UiLayoutNode) (this.field_jb.last(param1 ^ 9032));
           while (var13 != null) {
             var13.updateInputTree(this.field_F, param1 ^ 0, param2, this.field_mb, this.field_T, this.field_q);
-            var13 = (UiLayoutNode) (this.field_jb.e(33));
+            var13 = (UiLayoutNode) (this.field_jb.previous(33));
           }
         }
         if (this.field_Q) {
@@ -663,7 +663,7 @@ class UiLayoutNode extends SharedWidgetFactory {
           while (var4 != null) {
             var4.field_z = true;
             var4.invalidateChildren(param0);
-            var4 = (UiLayoutNode) (this.field_jb.e(33));
+            var4 = (UiLayoutNode) (this.field_jb.previous(33));
           }
         }
     }
@@ -856,10 +856,10 @@ class UiLayoutNode extends SharedWidgetFactory {
           }
         }
         if (null != this.field_jb) {
-          var23_ref = (UiLayoutNode) (this.field_jb.g(24009));
+          var23_ref = (UiLayoutNode) (this.field_jb.first(24009));
           while (var23_ref != null) {
             var23_ref.drawTree(param0, -114, this.field_wb, var20 + this.field_T, param4, var19 + this.field_F, param6, this.field_q, param8, param9, this.field_mb);
-            var23_ref = (UiLayoutNode) (this.field_jb.c(33));
+            var23_ref = (UiLayoutNode) (this.field_jb.next(33));
           }
         }
         SoftwareRasterizer.setClip(var12, var13, var14, var15);
@@ -873,10 +873,10 @@ class UiLayoutNode extends SharedWidgetFactory {
         try {
           if (this.field_jb != null) {
             var3 = new IntrusiveDequeCursor(this.field_jb);
-            var4 = (UiLayoutNode) (var3.a((byte) 54));
+            var4 = (UiLayoutNode) (var3.first((byte) 54));
             while (var4 != null) {
               var4.setFocusedNode(103, param1);
-              var4 = (UiLayoutNode) (var3.a(0));
+              var4 = (UiLayoutNode) (var3.next(0));
             }
           }
           this.field_wb = param1 == this ? true : false;

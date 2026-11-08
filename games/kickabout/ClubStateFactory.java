@@ -108,10 +108,10 @@ final class ClubStateFactory {
           if (param0 != 50) {
             field_a = (String) null;
           }
-          var3 = (ManagerAction) (MusicPatchNode.field_h.g(24009));
+          var3 = (ManagerAction) (MusicPatchNode.field_h.first(24009));
           while (var3 != null) {
             GameLoopApplet.field_E.applyAction(var3, false, 0);
-            var3 = (ManagerAction) (MusicPatchNode.field_h.c(param0 ^ 19));
+            var3 = (ManagerAction) (MusicPatchNode.field_h.next(param0 ^ 19));
           }
           MusicPatchNode.field_h.clear(22997);
         } catch (RuntimeException runtimeException) {

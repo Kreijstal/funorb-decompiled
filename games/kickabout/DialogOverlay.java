@@ -174,7 +174,7 @@ final class DialogOverlay implements OverlayLayer {
           var8 = ShopPlayerSlot.field_Jb.field_Ab.field_jb;
           var9 = MonotonicClock.monotonicMillis(97);
           var11 = null;
-          var12 = (GameSetupPanel) (var8.g(24009));
+          var12 = (GameSetupPanel) (var8.first(24009));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_jb == null) {
@@ -609,7 +609,7 @@ final class DialogOverlay implements OverlayLayer {
                 }
               }
             }
-            var12 = (GameSetupPanel) (var8.c(33));
+            var12 = (GameSetupPanel) (var8.next(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -641,18 +641,18 @@ final class DialogOverlay implements OverlayLayer {
             return stackIn_3_0;
           }
           var2 = ConsoleLexer.tokenize(false, param0);
-          var3 = new ConsoleExpression[var2.a(false)];
+          var3 = new ConsoleExpression[var2.size(false)];
           if (param1 > -8) {
             stackIn_6_0 = (ConsoleExpression[]) null;
             return stackIn_6_0;
           }
           var4 = 0;
-          var5 = (ConsoleExpression) (var2.g(24009));
+          var5 = (ConsoleExpression) (var2.first(24009));
           while (var5 != null) {
             incrementValue$1 = var4;
             var4++;
             var3[incrementValue$1] = var5;
-            var5 = (ConsoleExpression) (var2.c(33));
+            var5 = (ConsoleExpression) (var2.next(33));
           }
           TextPromptState.field_e = param0;
           SortCriterion.field_a = var3;
@@ -694,14 +694,14 @@ final class DialogOverlay implements OverlayLayer {
         var4 = Kickabout.field_G;
         if (NineSlicePanelPainter.field_e ||
           ModelMaterialDecoder.field_g) {
-          var3 = (PopupDialog) (ScrollPane.field_Jb.g(param0 ^ -24018));
+          var3 = (PopupDialog) (ScrollPane.field_Jb.first(param0 ^ -24018));
           while (var3 != null) {
             if (var3 instanceof AuctionBidDialog ||
               var3 instanceof AuctionSettingsDialog ||
               var3 instanceof SquadPickerDialog) {
               var3.beginClose(19910);
             }
-            var3 = (PopupDialog) (ScrollPane.field_Jb.c(33));
+            var3 = (PopupDialog) (ScrollPane.field_Jb.next(33));
           }
           if (WidgetStyleFactory.field_c != null && (WidgetStyleFactory.field_c instanceof AuctionBidDialog ||
             WidgetStyleFactory.field_c instanceof AuctionSettingsDialog ||

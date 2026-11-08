@@ -47,7 +47,7 @@ final class NodeHashTableIterator implements Iterator {
             field_b = -112;
           }
           while (!DemoIntegersCommand.a(param0, false)) {
-            var2_ref = param0.g(24009);
+            var2_ref = param0.first(24009);
             while (var2_ref instanceof WorldDrawEntry) {
               if (!(var2_ref.field_d instanceof WorldDrawEntry)) {
                 break;

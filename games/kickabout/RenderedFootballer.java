@@ -124,8 +124,8 @@ final class RenderedFootballer extends FootballerAgent {
             stackIn_7_1 = 0;
             stackIn_7_2 = param3.field_Eb;
             stackIn_7_3 = -107;
-            stackIn_8_4 = !(TextFieldValidator.f(param0 ^ 5185));
-            stackIn_12_2 = (((PlayerStats) (Object) stackIn_7_2).c((byte) stackIn_7_3, stackIn_8_4)) && (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 83));
+            stackIn_8_4 = !(TextFieldValidator.areAccountTrinketsDisabled(param0 ^ 5185));
+            stackIn_12_2 = (((PlayerStats) (Object) stackIn_7_2).hasActiveHorrorCostume((byte) stackIn_7_3, stackIn_8_4)) && (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 83));
             var4 = TriangleMesh.a(stackIn_7_0, stackIn_7_1, stackIn_12_2);
             var5 = param2.field_q + param2.field_F - 38;
             var6 = param2.field_T + 58;
@@ -422,7 +422,7 @@ final class RenderedFootballer extends FootballerAgent {
         this(param0, param1, param2);
         try {
           this.applyPlayerStats(param3.member, param3.stats, 3);
-          this.a(param3, false);
+          this.copyCompleteStateFrom(param3, false);
           this.setPosition(this.positionX, false, this.height, this.positionY);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -724,7 +724,7 @@ final class RenderedFootballer extends FootballerAgent {
         }
         if (this.action == 1 &&
           this.e(292603688)) {
-          var8 = (!this.stats.c(this.member, (byte) -62)) ? 0.25 : 0.5;
+          var8 = (!this.stats.usesHotshotAbilities(this.member, (byte) -62)) ? 0.25 : 0.5;
         }
         if (!this.field_nb) {
           this.setAnimationClip((byte) -128, var7Lifetime1);
@@ -765,12 +765,12 @@ final class RenderedFootballer extends FootballerAgent {
           }
         }
         if (this.action == 4 &&
-          this.stats.c(this.member, -94) &&
+          this.stats.usesRangerAbilities(this.member, -94) &&
           this.actionTime % 2 == 0) {
           PanelSpriteFactory.captureFootballer(100, this, 109);
         }
         if (3 == this.action &&
-          this.stats.a((byte) 44, this.member) &&
+          this.stats.usesTankAbilities((byte) 44, this.member) &&
           this.actionTime % 2 == 0) {
           PanelSpriteFactory.captureFootballer(60, this, 104);
         }
@@ -795,7 +795,7 @@ final class RenderedFootballer extends FootballerAgent {
           this.action == 10 ||
           this.action == 12) &&
           (this.field_s ||
-          !this.stats.a((byte) 44, this.member))) {
+          !this.stats.usesTankAbilities((byte) 44, this.member))) {
           return (PlayerContextMenu.b(this.field_m >> 8, this.field_k >> 8, (byte) 2) + 6144) % 8192 >> 2;
         }
         var2 = -68 / ((param0 + 17) / 51);
@@ -823,7 +823,7 @@ final class RenderedFootballer extends FootballerAgent {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, boolean param11, int param12, int param13) {
         UrlRequest.field_e = null;
-        NetworkGameClient.b(true);
+        NetworkGameClient.showPendingServerNotice(true);
         param11 = UiInputRoutingSupport.routePointerInput(param4, 50, param5, param11, param13, param12, param1);
         MatchTransitionScreen.a(false, param7, param9, param8, param10, param6, param5, param11, param3, param2);
         StringCursor.a(param9, false, param8);
@@ -877,7 +877,7 @@ final class RenderedFootballer extends FootballerAgent {
         field_S = null;
     }
 
-    final void a(MatchAgent param0, int param1, int param2, int param3) {
+    final void reconcileStateFrom(MatchAgent param0, int param1, int param2, int param3) {
         FootballerAgent var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -893,10 +893,10 @@ final class RenderedFootballer extends FootballerAgent {
             return;
           }
           var5 = (FootballerAgent) (param0);
-          if (this.a(-93, var5, param2, param1)) {
+          if (this.shouldDeferStateCorrection(-93, var5, param2, param1)) {
             return;
           }
-          this.a(param0, false);
+          this.copyCompleteStateFrom(param0, false);
           if (!this.field_Z) {
             var6 = this.field_kb - this.positionX >> 16;
             var7 = this.field_bb - this.positionY >> 16;

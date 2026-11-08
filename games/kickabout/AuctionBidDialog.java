@@ -65,7 +65,7 @@ final class AuctionBidDialog extends MessageDialog {
         this.field_M = -1L;
         try {
           this.field_M = param0.field_a;
-          if (TextFieldValidator.f(-1) &&
+          if (TextFieldValidator.areAccountTrinketsDisabled(-1) &&
             param0.playerStats.trinketIds.length > 0) {
             stackIn_5_0 = "<br><br>" + BlobSubmission.field_n;
           } else {

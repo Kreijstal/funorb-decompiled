@@ -62,7 +62,7 @@ final class RotaryDialWidget extends TextButton {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           field_F = (String) null;
           field_M = null;

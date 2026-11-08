@@ -99,7 +99,7 @@ final class SumIntegersCommand extends ConsoleCommand {
         try {
           var2_int = -120 / ((-16 - param0) / 48);
           var3 = (CharSequence) ((Object) param1);
-          stackIn_1_0 = DebugConsole.field_w.equals(MatchAgent.a(0, var3));
+          stackIn_1_0 = DebugConsole.field_w.equals(MatchAgent.normalizeAccountName(0, var3));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,16 +124,16 @@ final class SumIntegersCommand extends ConsoleCommand {
         RuntimeException var2 = null;
         var4 = Kickabout.field_G;
         try {
-          var5 = (HighScoreSubmission) (FaceNormal.field_d.g(24009));
+          var5 = (HighScoreSubmission) (FaceNormal.field_d.first(24009));
           while (var5 != null) {
             BlobSubmission.writeHighScoreSubmission(50, param1, var5);
-            var5 = (HighScoreSubmission) (FaceNormal.field_d.c(33));
+            var5 = (HighScoreSubmission) (FaceNormal.field_d.next(33));
           }
           var3 = -93 % ((param0 - 72) / 43);
-          var6 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.g(24009));
+          var6 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.first(24009));
           while (var6 != null) {
             FadingChatMessage.a(param1, 112, var6);
-            var6 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.c(33));
+            var6 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.next(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

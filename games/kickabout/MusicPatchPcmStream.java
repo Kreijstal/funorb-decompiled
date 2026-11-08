@@ -15,7 +15,7 @@ final class MusicPatchPcmStream extends PcmStream {
     final PcmStream nextSubstream() {
         MusicPatchNode var1;
         while (true) {
-          var1 = (MusicPatchNode) (this.field_j.c(33));
+          var1 = (MusicPatchNode) (this.field_j.next(33));
           if (var1 == null) {
             return null;
           }
@@ -26,7 +26,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream firstSubstream() {
-        MusicPatchNode var1 = (MusicPatchNode) (this.field_j.g(24009));
+        MusicPatchNode var1 = (MusicPatchNode) (this.field_j.first(24009));
         if (var1 == null) {
           return null;
         }
@@ -43,7 +43,7 @@ final class MusicPatchPcmStream extends PcmStream {
         boolean stackIn_3_0 = false;
         var4 = Kickabout.field_G;
         this.field_i.skipFrames(param0);
-        var3 = (MusicPatchNode) (this.field_j.g(24009));
+        var3 = (MusicPatchNode) (this.field_j.first(24009));
         while (var3 != null) {
           stackIn_3_0 = this.field_l.removeNoteWithoutStream(-25102, var3);
           boolean decompiledFrameCompleted0 = true;
@@ -62,7 +62,7 @@ final class MusicPatchPcmStream extends PcmStream {
               var3.field_B = var3.field_B - var2;
             }
           }
-          var3 = (MusicPatchNode) (this.field_j.c(33));
+          var3 = (MusicPatchNode) (this.field_j.next(33));
         }
     }
 
@@ -133,7 +133,7 @@ final class MusicPatchPcmStream extends PcmStream {
         var7 = Kickabout.field_G;
         try {
           this.field_i.mixInto(param0, param1, param2);
-          var6 = (MusicPatchNode) (this.field_j.g(24009));
+          var6 = (MusicPatchNode) (this.field_j.first(24009));
           while (var6 != null) {
             stackIn_4_0 = this.field_l.removeNoteWithoutStream(-25102, var6);
             boolean decompiledFrameCompleted0 = true;
@@ -154,7 +154,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var6.field_B = var6.field_B - var5;
               }
             }
-            var6 = (MusicPatchNode) (this.field_j.c(33));
+            var6 = (MusicPatchNode) (this.field_j.next(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -526,7 +526,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_m = null;
         field_k = null;
         if (param0) {

@@ -66,10 +66,10 @@ final class ServerTextTemplate {
           DelayedServerPacket.a(100, 9863, (param5 - param0) * var9Lifetime1 / 6 + param0);
           var10 = QuickChatCategoryCache.buildStadiumSeatColumn(-127, param4, param3);
           PacketBuffer.a(87, var10);
-          var17 = (PlayerModelPreview) (var8.g(24009));
+          var17 = (PlayerModelPreview) (var8.first(24009));
           while (var17 != null) {
             var17.a(var9Lifetime1, -2);
-            var17 = (PlayerModelPreview) (var8.c(33));
+            var17 = (PlayerModelPreview) (var8.next(33));
           }
           TeamManagementScreen.e(121);
           var6[var9Lifetime1] = SoftwareDrawingSupport.toIndexedSprite(var10);

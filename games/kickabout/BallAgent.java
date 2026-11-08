@@ -25,7 +25,7 @@ class BallAgent extends MatchAgent {
     int possessorTeam;
     int positionY;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = (String[][]) null;
         field_f = null;
         field_g = null;

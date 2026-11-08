@@ -230,7 +230,7 @@ final class MenuButton {
                   }
                 }
               } else {
-                ButtonMenuScreen.a(16144);
+                ButtonMenuScreen.enqueueLoginRequiredDialog(16144);
                 SpriteButtonPainter.field_v = -3;
               }
             }

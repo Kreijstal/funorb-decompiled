@@ -90,7 +90,7 @@ final class SocialListLayoutSupport {
           TournamentChampionDialog.field_F.field_lb = true;
           TournamentChampionDialog.field_F.field_Cb.field_zb.field_E = null;
           var5 = null;
-          var6 = (SocialPlayerRow) (var4.g(24009));
+          var6 = (SocialPlayerRow) (var4.first(24009));
           while (var6 != null) {
             var7 = 0;
             if (null == var6.field_jb) {
@@ -153,7 +153,7 @@ final class SocialListLayoutSupport {
               var17.field_j.layoutItems(0, 0, var13, var14, 0);
             }
             var5 = var6;
-            var6 = (SocialPlayerRow) (var4.c(33));
+            var6 = (SocialPlayerRow) (var4.next(33));
           }
           if (TournamentChampionDialog.field_F.field_Eb.field_sb != 0) {
             StreetSceneryLoader.field_m = new HoverTooltip(TournamentChampionDialog.field_F.field_Eb.field_F, TournamentChampionDialog.field_F.field_Eb.field_T, TournamentChampionDialog.field_F.field_Eb.field_q, TournamentChampionDialog.field_F.field_Eb.field_mb, ParticipantStatus.field_j, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);

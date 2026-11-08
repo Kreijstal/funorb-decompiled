@@ -196,12 +196,12 @@ final class TooltipOverlay implements OverlayLayer {
               return;
             }
             var6_int = 6 + AccountTermsPanel.field_G.getWidth(0);
-            var7 = AccountTermsPanel.field_G.a(Cp1252EncodingSupport.field_c, CachedListingRow.field_j, (byte) 77) + 7;
+            var7 = AccountTermsPanel.field_G.getDetailsPanelHeight(Cp1252EncodingSupport.field_c, CachedListingRow.field_j, (byte) 77) + 7;
             var24 = GameModesHelpScreen.a(var2, var7, var6_int, 0, var3);
             var3 = var24[1];
             var2 = var24[0];
             SoftwareRasterizer.fillRoundedRectangleBlended(var2 - 2, var3 - 2, 4 + var6_int, var7 + 4, 6, 65793, 200);
-            AccountTermsPanel.field_G.a((byte) 77, 3 + var2, Cp1252EncodingSupport.field_c, VerticalScrollbar.field_Ib, MessageDialog.field_x, LinkTextPainter.field_c, var3 + 3, CachedListingRow.field_j);
+            AccountTermsPanel.field_G.drawDetailsPanel((byte) 77, 3 + var2, Cp1252EncodingSupport.field_c, VerticalScrollbar.field_Ib, MessageDialog.field_x, LinkTextPainter.field_c, var3 + 3, CachedListingRow.field_j);
           } else {
             if (AuctionItem.field_e == 6) {
               var6_int = DisplayNameUiSupport.field_a.getWidth(0) + 6;

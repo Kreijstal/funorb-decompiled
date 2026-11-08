@@ -110,7 +110,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           if (var9 != null) {
             LineupView.a(var9, (byte) -60);
           }
-          var5 = Trinket.f(-3);
+          var5 = Trinket.updateChatComposeDisplay(-3);
           if (var5 != null) {
             UrlRequest.field_e = var5;
           }
@@ -172,7 +172,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           if (param1) {
             return false;
           }
-          var2 = param0.g(24009);
+          var2 = param0.first(24009);
           while (var2 instanceof WorldDrawEntry) {
             if (var2.field_d instanceof WorldDrawEntry) {
               if (((WorldDrawEntry) (var2)).getSortY((byte) -56) < ((WorldDrawEntry) (var2.field_d)).getSortY((byte) -9)) {

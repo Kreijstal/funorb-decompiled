@@ -57,7 +57,7 @@ final class CheatCodeListener implements OverlayLayer {
             IterableDualLinkDeque.a(false);
           }
         }
-        if (PlayerStats.a((byte) -3) &&
+        if (PlayerStats.beginReconnectGracePeriod((byte) -3) &&
           !ServerTextTemplate.a(param0 ^ 27302)) {
           stackIn_12_0 = 100;
           if (SplashScreen.field_m == null) {

@@ -211,7 +211,7 @@ final class ClientUiOverlay implements OverlayLayer {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = MatchAgent.a(0, var6);
+          var2 = MatchAgent.normalizeAccountName(0, var6);
           if (param1 != 40) {
             field_g = (String) null;
           }
@@ -222,7 +222,7 @@ final class ClientUiOverlay implements OverlayLayer {
           var3 = (SocialPlayerRow) (AvailabilityCheckRequest.field_b.get(param1 ^ -3635, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.name);
-            var4 = MatchAgent.a(param1 ^ 40, var7);
+            var4 = MatchAgent.normalizeAccountName(param1 ^ 40, var7);
             if (var4.equals(var2)) {
               stackIn_19_0 = var3;
               return stackIn_19_0;
@@ -293,7 +293,7 @@ final class ClientUiOverlay implements OverlayLayer {
           }
           var3 = -(this.field_a * this.field_a) + 400;
           var4 = var3 * (-ScrollPane.field_Bb + 480) / 400 + ScrollPane.field_Bb;
-          PlayerStats.a(var4, (byte) -124);
+          PlayerStats.setChatPanelY(var4, (byte) -124);
           this.field_h = this.field_h + 1;
           LobbyGameRecord.a(-121);
           if (null != PlayerContextMenu.field_i) {

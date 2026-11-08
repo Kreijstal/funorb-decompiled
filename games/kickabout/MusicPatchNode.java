@@ -157,13 +157,13 @@ final class MusicPatchNode extends IntrusiveNode {
         RuntimeException var2 = null;
         var3 = Kickabout.field_G;
         try {
-          var4 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.g(param0 + 24009));
+          var4 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.first(param0 + 24009));
           if (param0 != 0) {
             MusicPatchNode.closePlayerContextMenu(79);
           }
           while (var4 != null) {
             ShopPlayerSlot.a(param1, var4, -51265247);
-            var4 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.c(33));
+            var4 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.next(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -149,13 +149,13 @@ final class ContextMenu extends UiLayoutNode {
         RuntimeException var3_ref = null;
         var4 = Kickabout.field_G;
         try {
-          var3 = (PopupDialog) (ScrollPane.field_Jb.g(24009));
+          var3 = (PopupDialog) (ScrollPane.field_Jb.first(24009));
           while (var3 != null) {
             if (var3 instanceof AuctionListingDialog &&
               ((AuctionListingDialog) (var3)).field_J.isSameListing(param1, param0 ^ -5275)) {
               return;
             }
-            var3 = (PopupDialog) (ScrollPane.field_Jb.c(33));
+            var3 = (PopupDialog) (ScrollPane.field_Jb.next(33));
           }
           ScrollPane.field_Jb.addLast(new AuctionListingDialog(param1, param2), 3);
           if (param0 != -25) {

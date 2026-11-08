@@ -16,9 +16,9 @@ final class ReflectionCheck extends IntrusiveNode {
     static int field_k;
     static int field_g;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          ReflectionCheck.a(45);
+          ReflectionCheck.releaseStatics(45);
           field_i = null;
           field_q = null;
           field_j = null;
@@ -53,7 +53,7 @@ final class ReflectionCheck extends IntrusiveNode {
             break;
           }
           if (param0 != 41) {
-            ReflectionCheck.a(-5);
+            ReflectionCheck.releaseStatics(-5);
           }
           try {
             if (param2 == null) {

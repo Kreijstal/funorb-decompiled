@@ -545,10 +545,10 @@ final class SquadGridWidget extends UiLayoutNode {
           if (param1 >= -70) {
             field_yb = (String) null;
           }
-          var4 = (RankingsRequest) (WorldDrawEntry.field_i.g(24009));
+          var4 = (RankingsRequest) (WorldDrawEntry.field_i.first(24009));
           while (var4 != null) {
             TextFieldNode.writeRankingsRequest(true, var4, param0);
-            var4 = (RankingsRequest) (WorldDrawEntry.field_i.c(33));
+            var4 = (RankingsRequest) (WorldDrawEntry.field_i.next(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

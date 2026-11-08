@@ -176,7 +176,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         field_i = null;
     }
 
-    final static boolean f(int param0) {
+    final static boolean areAccountTrinketsDisabled(int param0) {
         if (param0 != -1) {
           return false;
         }

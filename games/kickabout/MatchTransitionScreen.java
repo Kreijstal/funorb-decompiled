@@ -625,7 +625,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           }
         }
         if (13 == FixedQuaternion.field_e) {
-          TrinketCatalog.a(89);
+          TrinketCatalog.resetChatComposition(89);
           var4 = 1;
           TextFieldNode.field_Wb = false;
         }

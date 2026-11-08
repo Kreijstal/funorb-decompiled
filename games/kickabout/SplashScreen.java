@@ -147,7 +147,7 @@ final class SplashScreen extends AppScreen {
             SplashScreen.releaseStatics(112);
           }
           var11 = null;
-          var12 = (LobbyPlayerRow) (var10.g(24009));
+          var12 = (LobbyPlayerRow) (var10.first(24009));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_jb == null) {
@@ -329,7 +329,7 @@ final class SplashScreen extends AppScreen {
             var11 = var12;
             if (var12.field_Q) {
               if (var12.isDetachedFromPlayerTable(-13356)) {
-                var12 = (LobbyPlayerRow) (var10.c(33));
+                var12 = (LobbyPlayerRow) (var10.next(33));
                 continue;
               }
               var24Lifetime2 = null;
@@ -479,7 +479,7 @@ final class SplashScreen extends AppScreen {
                 UrlRequest.field_e = (String) (var24Lifetime2);
               }
             }
-            var12 = (LobbyPlayerRow) (var10.c(33));
+            var12 = (LobbyPlayerRow) (var10.next(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

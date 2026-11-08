@@ -204,15 +204,15 @@ final class ConsoleTokenCursor {
         RuntimeException var2 = null;
         this.field_a = 0;
         try {
-          this.field_g = new ConsoleExpression[param0.a(false)];
+          this.field_g = new ConsoleExpression[param0.size(false)];
           var2_int = 0;
-          var3 = (ConsoleExpression) (param0.g(24009));
+          var3 = (ConsoleExpression) (param0.first(24009));
           while (var3 != null) {
             var3.c((byte) -109);
             incrementValue$2 = var2_int;
             var2_int++;
             this.field_g[incrementValue$2] = var3;
-            var3 = (ConsoleExpression) (param0.c(33));
+            var3 = (ConsoleExpression) (param0.next(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

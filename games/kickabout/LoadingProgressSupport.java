@@ -29,7 +29,7 @@ final class LoadingProgressSupport {
         CipherPacketBuffer var2Lifetime1;
         if (!param0) {
           LoadingProgressSupport.reportStageProgress(-17, -97, 99);
-          var1 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.g(24009));
+          var1 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.first(24009));
           if (var1 == null) {
             FormationView.b((byte) -116);
             return;
@@ -42,7 +42,7 @@ final class LoadingProgressSupport {
           var1.c((byte) -109);
           return;
         }
-        var1Lifetime1 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.g(24009));
+        var1Lifetime1 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.first(24009));
         if (var1Lifetime1 == null) {
           FormationView.b((byte) -116);
           return;

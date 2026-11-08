@@ -24,9 +24,9 @@ final class TrinketPickerDialog extends MessageDialog {
         TrinketIcon var3 = null;
         int incrementValue$0 = 0;
         this.field_K = new UiLayoutNode();
-        this.field_I = new TrinketIcon[Cp1252EncodingSupport.field_a.a(false)];
+        this.field_I = new TrinketIcon[Cp1252EncodingSupport.field_a.size(false)];
         int var1 = 0;
-        IntValueNode var2 = (IntValueNode) (Cp1252EncodingSupport.field_a.g(24009));
+        IntValueNode var2 = (IntValueNode) (Cp1252EncodingSupport.field_a.first(24009));
         while (var2 != null) {
           var3 = new TrinketIcon(var2.field_j);
           var3.field_J = var3.field_mb * (var1 / 5);
@@ -35,7 +35,7 @@ final class TrinketPickerDialog extends MessageDialog {
           incrementValue$0 = var1;
           var1++;
           this.field_I[incrementValue$0] = var3;
-          var2 = (IntValueNode) (Cp1252EncodingSupport.field_a.c(33));
+          var2 = (IntValueNode) (Cp1252EncodingSupport.field_a.next(33));
         }
         this.field_K.setBounds(true, 300, 100, 80, 200);
     }

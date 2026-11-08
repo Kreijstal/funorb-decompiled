@@ -59,10 +59,10 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
             return;
           }
           param0.c((byte) -109);
-          var2 = (GameSetupPanel) (SquadSlotWidget.field_yb.g(24009));
+          var2 = (GameSetupPanel) (SquadSlotWidget.field_yb.first(24009));
           while (var2 != null) {
             if (var2.a(param1 + 20843, param0)) {
-              var2 = (GameSetupPanel) (SquadSlotWidget.field_yb.c(33));
+              var2 = (GameSetupPanel) (SquadSlotWidget.field_yb.next(33));
               continue;
             }
             break;

@@ -139,7 +139,7 @@ final class PlayingView extends MatchPhaseView {
         if (param0 != -41) {
           this.field_m = false;
         }
-        return this.isLocalParticipantActive((byte) 13) ? this.field_g : this.field_a.b((byte) -69, this.field_h);
+        return this.isLocalParticipantActive((byte) 13) ? this.field_g : this.field_a.findActiveTeamParticipant((byte) -69, this.field_h);
     }
 
     private final void updateMatchAudio(int param0) {
@@ -380,7 +380,7 @@ final class PlayingView extends MatchPhaseView {
             }
             var4 = (byte)param0;
             var5 = (byte)param1;
-            if (this.field_a.c(this.field_g, -111)) {
+            if (this.field_a.participantHasBall(this.field_g, -111)) {
               stackIn_10_0 = this.field_a.getControlledFootballer((byte) 97, this.field_g).actionTime;
             } else {
               stackIn_10_0 = 0;
@@ -615,7 +615,7 @@ final class PlayingView extends MatchPhaseView {
             } else {
               if (-1 != ArrayWidgetContainer.field_x ||
                 TutorialCaptionSupport.field_j != -1) {
-                if (!this.field_a.c(this.field_g, -115)) {
+                if (!this.field_a.participantHasBall(this.field_g, -115)) {
                   if (var2 != 0 &&
                     var4.d((byte) 102)) {
                     this.queueMouseMove(this.field_z, this.field_G, -1);
@@ -695,11 +695,11 @@ final class PlayingView extends MatchPhaseView {
           var3_intLifetime1 = -88 / ((4 - param1) / 50);
           this.field_r.addLast(CheckboxPainter.a(false, 92), 3);
           if (param0 != null) {
-            var4 = (WorldDrawEntry) (param0.g(24009));
+            var4 = (WorldDrawEntry) (param0.first(24009));
             while (var4 != null) {
               var4.c((byte) -109);
               this.field_r.addLast(var4, 3);
-              var4 = (WorldDrawEntry) (param0.c(33));
+              var4 = (WorldDrawEntry) (param0.next(33));
             }
           }
           IntTripleCommand.a(this.field_r, -22488);
@@ -800,7 +800,7 @@ final class PlayingView extends MatchPhaseView {
                 var11 = (var14_int & 245) >> 4;
               }
               if (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 24)) {
-                stackIn_22_0 = (param0.field_P[var4_int][var8].stats.c((byte) -107, param0.field_P[var4_int][var8].member)) ? 1 : 0;
+                stackIn_22_0 = (param0.field_P[var4_int][var8].stats.hasActiveHorrorCostume((byte) -107, param0.field_P[var4_int][var8].member)) ? 1 : 0;
               } else {
                 stackIn_22_0 = 0;
               }
@@ -851,7 +851,7 @@ final class PlayingView extends MatchPhaseView {
             ((RenderedFootballer) (this.field_a.getControlledFootballer((byte) 105, this.field_g))).field_Z = false;
           }
           if (2 == param1.eventType &&
-            this.field_a.c(this.field_g, -7) &&
+            this.field_a.participantHasBall(this.field_g, -7) &&
             RotaryDialPainter.field_n &&
             !MyKitScreen.field_O) {
             this.switchToPredictedReceiver(InstrumentNoteMask.createMouseEvent(param1.participant, param1.value, -115, param1.field_p, param1.field_o), -122);
@@ -902,7 +902,7 @@ final class PlayingView extends MatchPhaseView {
         }
         var2 = this.getFocusedParticipant(-41);
         var3 = (RenderedFootballer) (this.field_a.getControlledFootballer((byte) -70, var2));
-        if (this.field_a.c(var2, -67)) {
+        if (this.field_a.participantHasBall(var2, -67)) {
           var4 = var3.getRenderedX(1606384336);
           var5 = var3.h(1000);
           var6 = var3.directionX * 0;
@@ -953,7 +953,7 @@ final class PlayingView extends MatchPhaseView {
         var4 = (RenderedFootballer) (this.field_a.getControlledFootballer((byte) 93, this.field_g));
         var5 = SocialListLayoutSupport.worldToScreenX(0, var4.field_kb >> 16);
         var6 = IntKeyLookup.projectPitchY((byte) -110, var4.field_bb >> 16);
-        if (this.field_a.c(this.field_g, -50) &&
+        if (this.field_a.participantHasBall(this.field_g, -50) &&
           var4.action != 2) {
           if (this.field_a.field_y) {
             return;
@@ -1261,7 +1261,7 @@ final class PlayingView extends MatchPhaseView {
         ReceivedAuctionItem.i((byte) 45);
         for (var2 = 0; 2 > var2; var2++) {
           for (var3 = 0; var3 < 5; var3++) {
-            Trinket.a((RenderedFootballer) (this.field_a.field_P[var2][var3]), 100);
+            Trinket.drawFootballerShadow((RenderedFootballer) (this.field_a.field_P[var2][var3]), 100);
           }
         }
         ((RenderedBall) (this.field_a.field_V)).drawShadow(param0 - 13);
@@ -1269,10 +1269,10 @@ final class PlayingView extends MatchPhaseView {
         if (param0 != 1) {
           return;
         }
-        var6 = (WorldDrawEntry) (this.field_r.g(24009));
+        var6 = (WorldDrawEntry) (this.field_r.first(24009));
         while (var6 != null) {
           var6.draw(192);
-          var6 = (WorldDrawEntry) (this.field_r.c(33));
+          var6 = (WorldDrawEntry) (this.field_r.next(33));
         }
         if (MyKitScreen.field_O) {
           MessageDialog.f(70);
@@ -1292,7 +1292,7 @@ final class PlayingView extends MatchPhaseView {
           NotificationPanelPositionSupport.updateBottomPanelOffset(3585);
           MusicPatch.drawMatchMinimap(16777215);
           if (this.isLocalParticipantActive((byte) 13)) {
-            CommonGame.b(false);
+            CommonGame.drawOffscreenPlayerArrows(false);
           }
         } else {
           NamedValueEntry.a((byte) 70);
@@ -1390,7 +1390,7 @@ final class PlayingView extends MatchPhaseView {
             }
             if (var5 != -1 &&
               null != GameLoopApplet.field_E) {
-              if (!this.field_a.a(var5, false, GameLoopApplet.field_E.field_e, this.field_g, ScrollContainer.field_Ib)) {
+              if (!this.field_a.canParticipantUseCheat(var5, false, GameLoopApplet.field_E.field_e, this.field_g, ScrollContainer.field_Ib)) {
                 return true;
               }
               if (var5 != 11 &&
@@ -1482,7 +1482,7 @@ final class PlayingView extends MatchPhaseView {
               var7 = 0;
             }
             if (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) -86)) {
-              stackIn_27_0 = (this.field_a.field_P[var2][var6].stats.c((byte) -107, this.field_a.field_P[var2][var6].member)) ? 1 : 0;
+              stackIn_27_0 = (this.field_a.field_P[var2][var6].stats.hasActiveHorrorCostume((byte) -107, this.field_a.field_P[var2][var6].member)) ? 1 : 0;
             } else {
               stackIn_27_0 = 0;
             }

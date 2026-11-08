@@ -113,7 +113,7 @@ abstract class ConsoleCommand extends DualLinkNode {
           if (param0 != -16000) {
             return true;
           }
-          var4 = (ReflectionCheck) (MarkerSliderWidget.field_N.g(param0 ^ -25527));
+          var4 = (ReflectionCheck) (MarkerSliderWidget.field_N.first(param0 ^ -25527));
           var1 = var4;
           if (var1 == null) {
             return false;

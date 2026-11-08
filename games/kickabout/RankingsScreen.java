@@ -46,7 +46,7 @@ final class RankingsScreen extends ButtonMenuScreen {
             return stackIn_20_0;
           }
           if (param1 < 105) {
-            RankingsScreen.f(37);
+            RankingsScreen.releaseStatics(37);
           }
           if (Double.class.isInstance(param0)) {
             stackIn_25_0 = Double.TYPE;
@@ -293,7 +293,7 @@ final class RankingsScreen extends ButtonMenuScreen {
         ByteArrayPool.field_d.drawCentered(var5.toLowerCase(), this.slideOffsetX + 185, 260, 16777215, -1);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_B = null;
         field_A = null;
         if (param0 > -20) {
