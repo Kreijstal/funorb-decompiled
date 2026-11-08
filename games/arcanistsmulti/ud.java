@@ -30,7 +30,7 @@ abstract class ud extends GameAppletShell {
         this.setBackground(java.awt.Color.black);
         LinkButtonPainter.field_f = this.field_n;
         StrongCacheEntry.a(false, LinkButtonPainter.field_f);
-        na.a(this.field_B, param2, this.field_l, 0, this.field_s, this.field_q, param4, this.field_x, LinkButtonPainter.field_f, 5000, this.field_v, this.field_C, fi.field_d, param0);
+        LobbyGameEntry.initializeConnectionState(this.field_B, param2, this.field_l, 0, this.field_s, this.field_q, param4, this.field_x, LinkButtonPainter.field_f, 5000, this.field_v, this.field_C, fi.field_d, param0);
         ArchiveRequest.a((byte) -81, LinkButtonPainter.field_f, this.field_C, this.field_x, fi.field_d, param2, this.field_B, this.field_l, this.field_q);
         TextButton.initializeKeyCodeMap((byte) -60);
         StrongCacheEntry.field_w = qj.createMouseWheelHandler((byte) -86);
@@ -171,12 +171,12 @@ abstract class ud extends GameAppletShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = ArcanistsMulti.field_G ? 1 : 0;
-          var4 = tg.a(SingleChildContainer.field_y, param2, LinkButtonPainter.field_f, 17);
+          var4 = DualLinkDeque.a(SingleChildContainer.field_y, param2, LinkButtonPainter.field_f, 17);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = LoginPanel.submitAccountCreation(nl.f((byte) 13), -67, ModalPanelStack.createRememberedUsername((byte) 126));
+            var5_int = LoginPanel.submitAccountCreation(IconTextSceneWidget.f((byte) 13), -67, ModalPanelStack.createRememberedUsername((byte) 126));
             if (var5_int != -1) {
               fl.a(20657, MenuButtonPanel.field_E, Bzip2State.field_M, var5_int);
               Bzip2State.field_M = null;
@@ -188,7 +188,7 @@ abstract class ud extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = tk.a(ho.a((byte) 93), IsaacRandom.b(-94), ed.getStatusMessage(-952), ConditionalTextValue.b((byte) -107), this.field_m, k.a(0), (byte) -110);
+            var5_intLifetime1 = tk.a(ho.a((byte) 93), IsaacRandom.b(-94), ed.getStatusMessage(-952), ConditionalTextValue.b((byte) -107), this.field_m, BufferedSocket.a(0), (byte) -110);
             if (var5_intLifetime1 != -1) {
               pn.a(Bzip2State.field_M, var5_intLifetime1, -42, MenuButtonPanel.field_E);
               MenuButtonPanel.field_E = null;
@@ -624,7 +624,7 @@ abstract class ud extends GameAppletShell {
         }
         if (1 == ih.field_f) {
           if (LinkButtonPainter.field_f != 0) {
-            lh.field_g = BufferedRandomAccessFile.a(ce.field_n, (byte) 65);
+            lh.field_g = BufferedRandomAccessFile.openArchive(ce.field_n, (byte) 65);
           }
           da.field_b = ViewportController.a((byte) -93, false, true, cj.field_d, 1);
           DiskCacheRequest.field_C = ViewportController.a((byte) -93, false, true, dm.field_H, 1);
@@ -635,11 +635,11 @@ abstract class ud extends GameAppletShell {
         }
         if (ih.field_f == 2) {
           if (lh.field_g != null &&
-            lh.field_g.c(-10923)) {
-            if (!lh.field_g.a(true, "")) {
+            lh.field_g.ensureIndex(-10923)) {
+            if (!lh.field_g.hasGroupName(true, "")) {
               lh.field_g = null;
             } else {
-              if (lh.field_g.a("", -24417)) {
+              if (lh.field_g.isGroupAvailableByName("", -24417)) {
                 on.a((byte) -84, lh.field_g);
                 lh.field_g = null;
                 Checkbox.a(2);
@@ -651,7 +651,7 @@ abstract class ud extends GameAppletShell {
           }
         }
         if (ih.field_f == 3 &&
-          IntrusiveDeque.a(ho.field_g, param0, DiskCacheRequest.field_C, da.field_b) &&
+          IntrusiveDeque.areCommonUiResourcesReady(ho.field_g, param0, DiskCacheRequest.field_C, da.field_b) &&
           ValidationState.a(18306, ho.field_g)) {
           rk.f(-73);
           cj.composeAgreementText(-128);
@@ -682,14 +682,14 @@ abstract class ud extends GameAppletShell {
         }
         if (ih.field_f == 10) {
           if (LinkButtonPainter.field_f != 0) {
-            va.field_c = BufferedRandomAccessFile.a(sa.field_Bb, (byte) 94);
+            va.field_c = BufferedRandomAccessFile.openArchive(sa.field_Bb, (byte) 94);
           }
           ih.field_f = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (ih.field_f == 11) {
-          if (null != va.field_c && (!va.field_c.c(-10923) ||
-            !va.field_c.a(-49))) {
+          if (null != va.field_c && (!va.field_c.ensureIndex(-10923) ||
+            !va.field_c.areAllGroupsAvailable(-49))) {
             rb.a(qe.formatLoadingProgress(AlternateUsernameCredentials.field_o, 87, va.field_c, IntrusiveDeque.field_f), false, 0.0f);
             decompiledFrameRemainder0 = false;
           }
@@ -733,7 +733,7 @@ abstract class ud extends GameAppletShell {
         if (param0) {
           discarded$0 = this.a(false, true, false);
         }
-        UiContainer.field_z.a(var5, (byte) 108, 0, var4);
+        UiContainer.field_z.readEncryptedBytes(var5, (byte) 108, 0, var4);
         DelegatingCanvas.a(ValidationHelpWidget.a((byte) 113, var5), IconButtonPainter.getApplet(127), var3 != 0, (byte) -116);
     }
 

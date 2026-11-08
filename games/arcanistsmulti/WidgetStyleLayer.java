@@ -230,11 +230,11 @@ final class WidgetStyleLayer {
     }
 
     final static void a(byte param0) {
-        int var1 = (fh.field_g - 640) / 2;
+        int var1 = (SecondaryNodeDequeIterator.field_g - 640) / 2;
         int var3 = -12 % ((-49 - param0) / 62);
         int var2 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
         int var4 = -(ce.field_h * ce.field_h) + var2;
-        k.field_d.setBounds(199, -(199 * var4 / var2) + var1, 90, -94 + (-120 + SoftwareRasterizer.field_j), (byte) -120);
+        BufferedSocket.field_d.setBounds(199, -(199 * var4 / var2) + var1, 90, -94 + (-120 + SoftwareRasterizer.field_j), (byte) -120);
         fn.field_e.setBounds(438, 202 + (var1 + 438 * var4 / var2), 0, -120 + SoftwareRasterizer.field_j - 4, (byte) -120);
     }
 

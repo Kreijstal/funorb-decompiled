@@ -34,7 +34,7 @@ final class we {
               }
               if (he.field_e.position > 0) {
                 try {
-                  CredentialKind.field_c.a(he.field_e.position, 0, (byte) 122, he.field_e.payload);
+                  CredentialKind.field_c.write(he.field_e.position, 0, (byte) 122, he.field_e.payload);
                   fo.field_d = qj.monotonicTimeMillis(-26572);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

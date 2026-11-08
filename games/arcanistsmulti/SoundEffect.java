@@ -12,7 +12,7 @@ final class SoundEffect {
     }
 
     final static SoundEffect load(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.b(param2, 26219, param1);
+        byte[] var3 = param0.getFile(param2, 26219, param1);
         if (var3 == null) {
           return null;
         }
@@ -20,7 +20,7 @@ final class SoundEffect {
     }
 
     final static SoundEffect loadNamed(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, param1, -1);
+        byte[] var3 = param0.getNamedFile(param2, param1, -1);
         if (var3 == null) {
           return null;
         }

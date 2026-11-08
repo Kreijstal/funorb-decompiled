@@ -27,7 +27,7 @@ final class bb {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ScreenDisplayMode.field_h != in.field_Gb) {
+          if (ScreenDisplayMode.field_h != SceneScrollbar.field_Gb) {
             return false;
           }
           if (param4 != -30001) {
@@ -43,7 +43,7 @@ final class bb {
           AccountRegistrationPanel.field_Q = param1;
           i.field_i = null;
           UiComponent.field_u = param2;
-          in.field_Gb = sk.field_a;
+          SceneScrollbar.field_Gb = sk.field_a;
           on.field_d = param5;
           bj.field_mb = param6;
           kf.field_a = param0;
@@ -352,7 +352,7 @@ final class bb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (jf.field_j < 153 &&
+          if (NodeHashTableIterator.field_j < 153 &&
             ad.field_d >= 10) {
             return;
           }
@@ -380,31 +380,31 @@ final class bb {
           return field_e;
         }
         if (lh.field_g != null) {
-          if (!lh.field_g.c(-10923)) {
+          if (!lh.field_g.ensureIndex(-10923)) {
             return IntrusiveDeque.field_f;
           }
           return AlternateUsernameCredentials.field_o;
         }
-        if (!da.field_b.c(-10923)) {
+        if (!da.field_b.ensureIndex(-10923)) {
           return ValidationHelpWidget.field_Z;
         }
-        if (!da.field_b.a("commonui", -24417)) {
-          return LoadingProgressDialog.field_nb + " - " + da.field_b.b("commonui", 100) + "%";
+        if (!da.field_b.isGroupAvailableByName("commonui", -24417)) {
+          return LoadingProgressDialog.field_nb + " - " + da.field_b.getGroupIdByName("commonui", 100) + "%";
         }
-        if (!DiskCacheRequest.field_C.c(-10923)) {
+        if (!DiskCacheRequest.field_C.ensureIndex(-10923)) {
           return wh.field_a;
         }
         if (param0 > -121) {
           return (String) null;
         }
-        if (!DiskCacheRequest.field_C.a("commonui", -24417)) {
-          return ra.field_d + " - " + DiskCacheRequest.field_C.b("commonui", 104) + "%";
+        if (!DiskCacheRequest.field_C.isGroupAvailableByName("commonui", -24417)) {
+          return ra.field_d + " - " + DiskCacheRequest.field_C.getGroupIdByName("commonui", 104) + "%";
         }
-        if (!ho.field_g.c(-10923)) {
+        if (!ho.field_g.ensureIndex(-10923)) {
           return NodeHashTable.field_c;
         }
-        if (!ho.field_g.a(123)) {
-          return MenuButtonPainter.field_t + " - " + ho.field_g.a((byte) 79) + "%";
+        if (!ho.field_g.areAllGroupsAvailable(123)) {
+          return MenuButtonPainter.field_t + " - " + ho.field_g.getOverallProgress((byte) 79) + "%";
         }
         return PatchEnvelopeSet.field_f;
     }

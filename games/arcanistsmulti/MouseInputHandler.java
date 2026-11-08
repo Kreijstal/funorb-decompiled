@@ -227,7 +227,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static void a(int param0, na param1, String param2, boolean param3) {
+    final static void a(int param0, LobbyGameEntry param1, String param2, boolean param3) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -246,29 +246,29 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String var14 = null;
         ne var15 = null;
         try {
-          ArcanistsMulti.a(-26335, (int[]) null, DebouncedValidator.field_g, (String) null, 0L, -1, param1.h((byte) 73), (String) null, param1);
+          ArcanistsMulti.a(-26335, (int[]) null, DebouncedValidator.field_g, (String) null, 0L, -1, param1.getSortKey((byte) 73), (String) null, param1);
           if (param1.field_Lb && (2 == param1.field_Fb ||
             !(qf.field_d < 2))) {
             var9 = eo.field_c;
-            var10 = tj.a(param0 - 949002960, new String[]{param2}, LinkButtonPainter.field_i);
-            var9.field_l.a(10, var10, (byte) -26);
+            var10 = CachedArchiveProvider.formatTemplate(param0 - 949002960, new String[]{param2}, LinkButtonPainter.field_i);
+            var9.field_l.addAction(10, var10, (byte) -26);
           }
           eo.field_c.a(param0 ^ 949002929);
           if (param3) {
             if (eo.field_c.field_e != ki.field_q) {
               var13 = eo.field_c;
-              var14 = tj.a(-50, new String[]{param2}, FixedViewResizeListener.field_f);
-              var13.field_l.a(15, var14, (byte) -26);
+              var14 = CachedArchiveProvider.formatTemplate(-50, new String[]{param2}, FixedViewResizeListener.field_f);
+              var13.field_l.addAction(15, var14, (byte) -26);
             } else {
               var11 = eo.field_c;
-              var12 = tj.a(-50, new String[]{param2}, LoadingTracker.field_o);
-              var11.field_l.a(16, var12, (byte) -26);
+              var12 = CachedArchiveProvider.formatTemplate(-50, new String[]{param2}, LoadingTracker.field_o);
+              var11.field_l.addAction(16, var12, (byte) -26);
             }
           }
           var15 = eo.field_c;
           var5 = pb.field_h;
           var6 = ja.field_s;
-          var15.field_l.a(0, 0, param0 - 949032396, var6, var5);
+          var15.field_l.openAt(0, 0, param0 - 949032396, var6, var5);
           if (param0 == 949002930) {
             return;
           }

@@ -46,7 +46,7 @@ final class gg {
         for (var2 = param0; var2 < ModalPanelStack.field_J; var2++) {
           var3 = ho.field_i[var2] * jg.field_p[var2];
           var20 = AccountRegistrationPanel.field_I[var2];
-          if (!dn.field_Ib[var2]) {
+          if (!SceneScrollPane.field_Ib[var2]) {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var3 > var6_int; var6_int++) {

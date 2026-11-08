@@ -53,7 +53,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         var18 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var20 = pk.a("lobby", 0, "crowns", param1);
+          var20 = IterableNodeHashTable.loadIndexedSpritesByName("lobby", 0, "crowns", param1);
           var5 = var20;
           NameValidator.field_u = var20.length;
           if (param3 != null) {
@@ -104,7 +104,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             }
           }
           ImageProducerRasterBuffer.field_r = 15;
-          dh.field_Gb = 4;
+          SceneTextInput.field_Gb = 4;
           MenuButtonPainter.field_p = 2;
           IntrusiveDequeCursor.field_i = 11;
           ra.field_h = 2;
@@ -181,7 +181,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           qa.field_j = new SceneWidget(0L, mi.field_A);
           qa.field_j.applyStyle(nj.field_d, (byte) 119);
           var16 = qe.loadSpriteSheet(param1, "button_mouseover", "lobby", param0 + 91);
-          ml.field_H = new pe(ck.field_a, var12, IntrusiveNode.field_c, nj.field_d, 3, 2, MenuButtonPainter.field_p, 3, ImageProducerRasterBuffer.field_r);
+          ml.field_H = new ContextActionMenu(ck.field_a, var12, IntrusiveNode.field_c, nj.field_d, 3, 2, MenuButtonPainter.field_p, 3, ImageProducerRasterBuffer.field_r);
           EditableTextWidget.field_L = new SceneWidget(0L, nj.field_d);
           EditableTextWidget.field_L.field_Y = 1;
           EditableTextWidget.field_L.field_wb = 1;
@@ -282,7 +282,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           db.field_b.field_lb = fj.loadSprite("lobby", -22612, param1, "downbutton_mouseover");
           db.field_b.field_vb = fj.loadSprite("lobby", -22612, param1, "downbutton_mouseheld");
           db.field_b.field_R = fj.loadSprite("lobby", -22612, param1, "downbutton_disabled");
-          IntrusiveDeque.field_i = new in(0L, pi.field_d, db.field_b, qe.field_m, SectorCacheStore.field_b);
+          IntrusiveDeque.field_i = new SceneScrollbar(0L, pi.field_d, db.field_b, qe.field_m, SectorCacheStore.field_b);
           ReflectionCheckRequest.field_r = new hb(0L, (SceneWidget) null, am.field_c, IntrusiveDeque.field_i, FrameClock.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -357,11 +357,11 @@ abstract class ArchiveRequest extends DualLinkNode {
         int var3 = 0;
         int var3Lifetime1;
         if (null != db.field_a) {
-          var3 = db.field_a.c(param1, (byte) 33);
+          var3 = db.field_a.processInput(param1, (byte) 33);
           if (var3 != -2) {
             if (var3 != -1) {
-              var4 = db.field_a.h((byte) 122) ? 1 : 0;
-              fn.a(118, var4 != 0, db.field_a.f((byte) 51), db.field_a.field_Fb, var3, param0);
+              var4 = db.field_a.isSendActive((byte) 122) ? 1 : 0;
+              fn.a(118, var4 != 0, db.field_a.getText((byte) 51), db.field_a.field_Fb, var3, param0);
             }
             db.field_a = null;
             IntrusiveDequeCursor.a(false);

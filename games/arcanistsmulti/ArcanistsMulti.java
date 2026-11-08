@@ -51,19 +51,19 @@ public final class ArcanistsMulti extends ud {
             va.field_c = null;
             Checkbox.a(2);
           }
-          hb.field_Fb = BufferedRandomAccessFile.a(6, (byte) 62);
-          ue.field_d = BufferedRandomAccessFile.a(1, (byte) 23);
-          so.field_k = BufferedRandomAccessFile.a(7, (byte) 11);
-          vg.field_l = BufferedRandomAccessFile.a(2, (byte) 55);
-          DateInputWidget.field_E = BufferedRandomAccessFile.a(3, (byte) 36);
+          hb.field_Fb = BufferedRandomAccessFile.openArchive(6, (byte) 62);
+          ue.field_d = BufferedRandomAccessFile.openArchive(1, (byte) 23);
+          so.field_k = BufferedRandomAccessFile.openArchive(7, (byte) 11);
+          vg.field_l = BufferedRandomAccessFile.openArchive(2, (byte) 55);
+          DateInputWidget.field_E = BufferedRandomAccessFile.openArchive(3, (byte) 36);
           if (!param0) {
             this.m(-126);
           }
-          ki.field_s = BufferedRandomAccessFile.a(4, (byte) 123);
-          PasswordFieldPainter.field_x = BufferedRandomAccessFile.a(5, (byte) 121);
-          ck.field_b = BufferedRandomAccessFile.a(10, (byte) 6);
-          wh.field_l = BufferedRandomAccessFile.a(12, (byte) 49);
-          GridContainer.field_K = BufferedRandomAccessFile.a(13, (byte) 27);
+          ki.field_s = BufferedRandomAccessFile.openArchive(4, (byte) 123);
+          PasswordFieldPainter.field_x = BufferedRandomAccessFile.openArchive(5, (byte) 121);
+          ck.field_b = BufferedRandomAccessFile.openArchive(10, (byte) 6);
+          wh.field_l = BufferedRandomAccessFile.openArchive(12, (byte) 49);
+          GridContainer.field_K = BufferedRandomAccessFile.openArchive(13, (byte) 27);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -176,7 +176,7 @@ public final class ArcanistsMulti extends ud {
         try {
           SectorCacheStore.a(1497225488);
           MusicPatchPcmStream.field_o = ao.a(true);
-          IntrusiveNodeHashTable.e(200);
+          IntrusiveNodeHashTable.serviceAudio(200);
           if (null != ProxySocketConnector.field_m &&
             ProxySocketConnector.field_m.field_e) {
             u.b(6);
@@ -309,7 +309,7 @@ public final class ArcanistsMulti extends ud {
                 }
                 if (on.field_g == 14) {
                   lf.switchToRequestedScreen((byte) 80);
-                  jn.a(150, dn.f((byte) -112), -13173, LoginMethod.a(1), NameSuggestionsPanel.field_E, PacketBuffer.f((byte) -125), 1024, wh.nextPowerOfTwo(1000, 678231216), wh.nextPowerOfTwo(6, 678231216), ArchiveIndex.field_a.length);
+                  jn.a(150, SceneScrollPane.f((byte) -112), -13173, LoginMethod.a(1), NameSuggestionsPanel.field_E, PacketBuffer.f((byte) -125), 1024, wh.nextPowerOfTwo(1000, 678231216), wh.nextPowerOfTwo(6, 678231216), ArchiveIndex.field_a.length);
                   ra.a(ViewportController.b((byte) 115), 64, DiskCacheWorker.c((byte) -122));
                   mn.field_r = -2;
                   wa.field_Ob = true;
@@ -349,7 +349,7 @@ public final class ArcanistsMulti extends ud {
                     if (stackIn_137_0 > stackIn_137_1) {
                       var3_ref_int__[var4] = UiContainer.field_z.readInt(-10674);
                       var3_ref_int__[var4] = NameValidator.bitAnd(var3_ref_int__[var4], ~ad.field_f[var4]);
-                      stackIn_99_0 = pe.field_Jb;
+                      stackIn_99_0 = ContextActionMenu.field_Jb;
                       if (stackIn_99_0) {
                         var5 = 0;
                         while (var5 < 32) {
@@ -373,15 +373,15 @@ public final class ArcanistsMulti extends ud {
                 }
                 if (on.field_g == 74) {
                   if (!td.e(true)) {
-                    jf.field_j = UiContainer.field_z.readUnsignedShort(-98);
+                    NodeHashTableIterator.field_j = UiContainer.field_z.readUnsignedShort(-98);
                     cb.field_e = UiContainer.field_z.readLong(-943038560);
                     ad.field_d = UiContainer.field_z.readUnsignedByte((byte) -100);
                   } else {
                     var2_intLifetime1 = UiContainer.field_z.readUnsignedShort(-98);
                     var3_long = UiContainer.field_z.readLong(-943038560);
                     ad.field_d = UiContainer.field_z.readUnsignedByte((byte) 62);
-                    if (var2_intLifetime1 > jf.field_j) {
-                      jf.field_j = var2_intLifetime1;
+                    if (var2_intLifetime1 > NodeHashTableIterator.field_j) {
+                      NodeHashTableIterator.field_j = var2_intLifetime1;
                     }
                     cb.field_e = cb.field_e | var3_long;
                   }
@@ -488,17 +488,17 @@ public final class ArcanistsMulti extends ud {
                   mi.a(DelegatingCanvas.field_c[var17.field_V.a(-31497) + 1], 3);
                   var17.m(413355681);
                   if (var13 != 0) {
-                    var18 = ij.field_Tb.field_A.length;
+                    var18 = SceneTabbedPanel.field_Tb.field_A.length;
                     var19 = 0;
                     while (var19 < var18) {
-                      var20 = ij.field_Tb.field_A[var19];
+                      var20 = SceneTabbedPanel.field_Tb.field_A[var19];
                       var21 = (var20 & 16711680) >> 16;
                       var22 = var20 >> 8 & 255;
                       var23 = 255 & var20;
                       var24 = (var21 + var22) / 2;
                       var25 = (var23 + var21) / 2;
                       var26 = (var22 + var23) / 2;
-                      ij.field_Tb.field_A[var19] = (var25 << 8) + ((var24 << 16) + var26);
+                      SceneTabbedPanel.field_Tb.field_A[var19] = (var25 << 8) + ((var24 << 16) + var26);
                       var19++;
                     }
                   }
@@ -619,8 +619,8 @@ public final class ArcanistsMulti extends ud {
                 var4Lifetime1 = 0;
               }
               if (var4Lifetime1 != 0 &&
-                null != tj.field_t) {
-                ah.a(ArchiveRequest.field_t, tj.field_t.field_o, 8, 8, ResizableViewResizeListener.field_h, tj.field_t, EmailLoginCredentials.field_f / 2, EmailLoginCredentials.field_j / 2, 2, tj.field_t.field_m + tj.field_t.field_o, -97);
+                null != CachedArchiveProvider.field_t) {
+                ah.a(ArchiveRequest.field_t, CachedArchiveProvider.field_t.field_o, 8, 8, ResizableViewResizeListener.field_h, CachedArchiveProvider.field_t, EmailLoginCredentials.field_f / 2, EmailLoginCredentials.field_j / 2, 2, CachedArchiveProvider.field_t.field_m + CachedArchiveProvider.field_t.field_o, -97);
               }
             }
             return;
@@ -724,37 +724,37 @@ public final class ArcanistsMulti extends ud {
           }
           DropdownList.initializeCaptionTable((byte) -90);
           if (null != vg.field_l) {
-            if (LoadingTracker.field_a.c(-10923) &&
-              LoadingTracker.field_a.a("basic", -24417)) {
-              if (LoadingTracker.field_a.c(-10923) &&
-                LoadingTracker.field_a.a("roman20", -24417)) {
-                if (ud.field_D.c(-10923) &&
-                  ud.field_D.a("roman20", -24417)) {
-                  if (LoadingTracker.field_a.c(-10923) &&
-                    LoadingTracker.field_a.a("lobby", -24417)) {
-                    if (ud.field_D.c(-10923) &&
-                      ud.field_D.a("lobby", -24417)) {
-                      if (vg.field_l.c(-10923) &&
-                        vg.field_l.a(106)) {
-                        if (DateInputWidget.field_E.c(-10923) &&
-                          DateInputWidget.field_E.a(-15)) {
-                          if (ki.field_s.c(-10923) &&
-                            ki.field_s.a(125)) {
-                            if (PasswordFieldPainter.field_x.c(-10923) &&
-                              PasswordFieldPainter.field_x.a(true, "arcanists_titlescreen", "") &&
-                              PasswordFieldPainter.field_x.a(true, "arcanists_grassland", "")) {
-                              if (ue.field_d.c(-10923) &&
-                                ue.field_d.a("", -24417)) {
-                                if (!ue.field_d.a(ec.field_c, -24417)) {
+            if (LoadingTracker.field_a.ensureIndex(-10923) &&
+              LoadingTracker.field_a.isGroupAvailableByName("basic", -24417)) {
+              if (LoadingTracker.field_a.ensureIndex(-10923) &&
+                LoadingTracker.field_a.isGroupAvailableByName("roman20", -24417)) {
+                if (ud.field_D.ensureIndex(-10923) &&
+                  ud.field_D.isGroupAvailableByName("roman20", -24417)) {
+                  if (LoadingTracker.field_a.ensureIndex(-10923) &&
+                    LoadingTracker.field_a.isGroupAvailableByName("lobby", -24417)) {
+                    if (ud.field_D.ensureIndex(-10923) &&
+                      ud.field_D.isGroupAvailableByName("lobby", -24417)) {
+                      if (vg.field_l.ensureIndex(-10923) &&
+                        vg.field_l.areAllGroupsAvailable(106)) {
+                        if (DateInputWidget.field_E.ensureIndex(-10923) &&
+                          DateInputWidget.field_E.areAllGroupsAvailable(-15)) {
+                          if (ki.field_s.ensureIndex(-10923) &&
+                            ki.field_s.areAllGroupsAvailable(125)) {
+                            if (PasswordFieldPainter.field_x.ensureIndex(-10923) &&
+                              PasswordFieldPainter.field_x.isNamedFileAvailable(true, "arcanists_titlescreen", "") &&
+                              PasswordFieldPainter.field_x.isNamedFileAvailable(true, "arcanists_grassland", "")) {
+                              if (ue.field_d.ensureIndex(-10923) &&
+                                ue.field_d.isGroupAvailableByName("", -24417)) {
+                                if (!ue.field_d.isGroupAvailableByName(ec.field_c, -24417)) {
                                   rb.a(nm.formatArchiveProgress(17153, LoadingProgressDialog.field_nb, ue.field_d, ValidationHelpWidget.field_Z, ec.field_c), false, 40.0f);
                                   return false;
                                 }
-                                if (so.field_k.c(-10923) &&
-                                  so.field_k.a(109)) {
-                                  if (hb.field_Fb.c(-10923) &&
-                                    hb.field_Fb.a(-33)) {
-                                    if (GridContainer.field_K.c(-10923) &&
-                                      GridContainer.field_K.a(-121)) {
+                                if (so.field_k.ensureIndex(-10923) &&
+                                  so.field_k.areAllGroupsAvailable(109)) {
+                                  if (hb.field_Fb.ensureIndex(-10923) &&
+                                    hb.field_Fb.areAllGroupsAvailable(-33)) {
+                                    if (GridContainer.field_K.ensureIndex(-10923) &&
+                                      GridContainer.field_K.areAllGroupsAvailable(-121)) {
                                       wm.g(0);
                                       rb.a(DisplayNameForm.field_N, false, 60.0f);
                                       this.updateClient((byte) -89);
@@ -849,7 +849,7 @@ public final class ArcanistsMulti extends ud {
               pm.field_a = fj.loadSprite("", -22612, ue.field_d, "cldgame");
               TextTableInitializer.field_a = fj.loadSprite("", -22612, ue.field_d, "cldtr");
               MusicPatchNode.field_F = fj.loadSprite("", -22612, ue.field_d, "cldbl");
-              pe.field_Ib = fj.loadSprite("", -22612, ue.field_d, "cldtl");
+              ContextActionMenu.field_Ib = fj.loadSprite("", -22612, ue.field_d, "cldtl");
               BevelBoxPainter.field_a = fj.loadSprite("", -22612, ue.field_d, "cldbr");
               LoadingProgressDialog.field_mb = fj.loadSprite("", -22612, ue.field_d, "cldflat");
               fe.field_o = fj.loadSprite("", -22612, ue.field_d, "spell_book");
@@ -887,8 +887,8 @@ public final class ArcanistsMulti extends ud {
                 DiskCacheRequest.field_E[0] = null;
                 IntrusiveDeque.field_b = null;
                 ce.field_m.a(true);
-                dh.loadSceneSprites(ue.field_d, (byte) -66);
-                tj.field_t = LoadingTracker.loadBinaryFont(so.field_k, -24755, "", "font", ue.field_d);
+                SceneTextInput.loadSceneSprites(ue.field_d, (byte) -66);
+                CachedArchiveProvider.field_t = LoadingTracker.loadBinaryFont(so.field_k, -24755, "", "font", ue.field_d);
                 mi.field_B = LoadingTracker.loadBinaryFont(so.field_k, -24755, "", "smallfont", ue.field_d);
                 Checkbox.a(2);
                 stackIn_188_0 = 0;
@@ -898,7 +898,7 @@ public final class ArcanistsMulti extends ud {
             if (mb.field_ab == null) {
               rb.a(hi.field_c, false, 93.0f);
               this.updateClient((byte) -89);
-              mb.field_ab = pk.a("", 0, "spellclasses", ue.field_d);
+              mb.field_ab = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "spellclasses", ue.field_d);
               TextLine.field_b = fj.loadSprite("basic", -22612, LoadingTracker.field_a, "unachieved");
               ii.field_d = fj.loadSprite("basic", -22612, LoadingTracker.field_a, "locked");
               NodeHashTable.field_d = fj.loadSprite("basic", -22612, LoadingTracker.field_a, "orbcoin");
@@ -907,17 +907,17 @@ public final class ArcanistsMulti extends ud {
               DiskCacheRequest.field_u = qe.loadSpriteSheet(ue.field_d, "phands", "", 58);
               qe.field_i = qe.loadSpriteSheet(ue.field_d, "mhands", "", 57);
               hn.field_d = qe.loadSpriteSheet(ue.field_d, "beards", "", 106);
-              tj.field_A = qe.loadSpriteSheet(ue.field_d, "hats", "", 124);
+              CachedArchiveProvider.field_A = qe.loadSpriteSheet(ue.field_d, "hats", "", 124);
               bo.field_a = qe.loadSpriteSheet(ue.field_d, "mouths", "", 42);
               ModalPanelStack.field_I = qe.loadSpriteSheet(ue.field_d, "pfeet", "", 58);
               fn.field_b = qe.loadSpriteSheet(ue.field_d, "mfeet", "", 113);
               Checkbox.a(2);
               return false;
             }
-            if (null == ij.field_Pb) {
+            if (null == SceneTabbedPanel.field_Pb) {
               rb.a(hi.field_c, false, 94.0f);
               this.updateClient((byte) -89);
-              ij.field_Pb = qe.loadSpriteSheet(ue.field_d, "conductororb", "", 60);
+              SceneTabbedPanel.field_Pb = qe.loadSpriteSheet(ue.field_d, "conductororb", "", 60);
               fc.field_e = qe.loadSpriteSheet(ue.field_d, "phylactery", "", 92);
               DualLinkNode.field_j = qe.loadSpriteSheet(ue.field_d, "stonemonster", "", 64);
               fo.field_g = qe.loadSpriteSheet(ue.field_d, "frostsprite", "", 56);
@@ -928,7 +928,7 @@ public final class ArcanistsMulti extends ud {
               ae.field_a = qe.loadSpriteSheet(ue.field_d, "clockwork", "", 93);
               wg.field_J = qe.loadSpriteSheet(ue.field_d, "aura", "", 124);
               ArrayWidgetContainer.field_E = qe.loadSpriteSheet(ue.field_d, "clockworkaura", "", 75);
-              jg.field_c = pk.a("", 0, "runes", ue.field_d);
+              jg.field_c = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "runes", ue.field_d);
               WhirlpoolHasher.field_o = qe.loadSpriteSheet(ue.field_d, "spellbooks", "", 93);
               Checkbox.a(2);
               return false;
@@ -976,7 +976,7 @@ public final class ArcanistsMulti extends ud {
               SingleChildContainer.setDefaultFont((byte) 111, LoadingTracker.loadBinaryFont(ud.field_D, -24755, "lobby", "chatfont", LoadingTracker.field_a));
               LoadingTracker.field_a.field_f = 1;
               ud.field_D.field_f = 1;
-              var4 = pk.a("", 0, "minibonushats", ue.field_d);
+              var4 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "minibonushats", ue.field_d);
               var5 = new Sprite[3][];
               var6 = new Sprite[3][];
               var5[0] = qe.loadSpriteSheet(ue.field_d, "turntime_icons", "", 76);
@@ -999,14 +999,14 @@ public final class ArcanistsMulti extends ud {
               fn.a(200, (byte) -106);
               um.field_a = qf.field_c;
               LinkButtonPainter.field_c = false;
-              dh.field_Hb = co.field_a;
+              SceneTextInput.field_Hb = co.field_a;
               qn.a(-24539, LoadingTracker.field_a, ud.field_D);
               ud.field_D = null;
               so.field_k = null;
               if (lc.a((byte) 112) ||
                 !(0 < ah.field_c)) {
-                var8 = pk.a("", 0, "expansion_screens", ue.field_d);
-                SceneWidgetNode.field_s = new MembershipOfferScreen((java.applet.Applet) (this), SectorCacheStore.field_i, var8, dh.field_Kb);
+                var8 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "expansion_screens", ue.field_d);
+                SceneWidgetNode.field_s = new MembershipOfferScreen((java.applet.Applet) (this), SectorCacheStore.field_i, var8, SceneTextInput.field_Kb);
               }
               Checkbox.a(2);
               return false;
@@ -1016,7 +1016,7 @@ public final class ArcanistsMulti extends ud {
             PacketBuffer.d((byte) -98);
             return true;
           }
-          MidiPcmStream.a(-92, new u(hb.field_Fb.a("huffman", "", -1)));
+          MidiPcmStream.a(-92, new u(hb.field_Fb.getNamedFile("huffman", "", -1)));
           hb.field_Fb = null;
           Checkbox.a(2);
           return false;
@@ -1047,9 +1047,9 @@ public final class ArcanistsMulti extends ud {
               }
               if (var1_int != 1 ||
                 var2 != 0) {
-                MusicPatch.field_o = tj.a(param0 ^ -80, new String[]{Integer.toString(var1_int)}, sk.field_g);
+                MusicPatch.field_o = CachedArchiveProvider.formatTemplate(param0 ^ -80, new String[]{Integer.toString(var1_int)}, sk.field_g);
               }
-              MusicPatch.field_o = GridContainer.joinText(new CharSequence[]{(CharSequence) ((Object) MusicPatch.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) nl.field_Hb)}, -93);
+              MusicPatch.field_o = GridContainer.joinText(new CharSequence[]{(CharSequence) ((Object) MusicPatch.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IconTextSceneWidget.field_Hb)}, -93);
             }
             vf.field_k.dismiss(77);
             PatchEnvelopeSet.c(0);
@@ -1066,7 +1066,7 @@ public final class ArcanistsMulti extends ud {
         }
     }
 
-    final static void a(int param0, int[] param1, dn param2, String param3, long param4, int param5, int param6, String param7, SceneWidget param8) {
+    final static void a(int param0, int[] param1, SceneScrollPane param2, String param3, long param4, int param5, int param6, String param7, SceneWidget param8) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1181,7 +1181,7 @@ public final class ArcanistsMulti extends ud {
           DiskCacheWorker.releaseStatics(32336);
           Js5ArchiveManager.releaseStatics((byte) -90);
           BufferedRandomAccessFile.releaseStatics(-1);
-          k.releaseStatics(11138);
+          BufferedSocket.releaseStatics(11138);
           nf.releaseStatics(0);
           IntrusiveNode.releaseStatics((byte) -115);
           pn.releaseStatics((byte) 122);
@@ -1233,22 +1233,22 @@ public final class ArcanistsMulti extends ud {
           g.releaseStatics(30586);
           tm.releaseStatics(-79);
           cf.releaseStatics((byte) 83);
-          nl.releaseStatics(-10765);
-          dn.releaseStatics(1);
+          IconTextSceneWidget.releaseStatics(-10765);
+          SceneScrollPane.releaseStatics(1);
           af.releaseStatics(93);
-          in.releaseStatics((byte) -120);
-          pe.releaseStatics(0);
+          SceneScrollbar.releaseStatics((byte) -120);
+          ContextActionMenu.releaseStatics(0);
           hb.releaseStatics(0);
           ne.releaseStatics(-14);
-          w.releaseStatics((byte) 126);
-          cg.releaseStatics(param0);
+          ChatInputWidget.releaseStatics((byte) 126);
+          SocialListEntry.releaseStatics(param0);
           i.releaseStatics((byte) 6);
-          na.releaseStatics((byte) 120);
+          LobbyGameEntry.releaseStatics((byte) 120);
           SpriteState.releaseStatics(122);
           we.releaseStatics(120);
           wj.a(0);
           IntrusiveNodeHashTable.releaseStatics(0);
-          tg.releaseStatics(-92);
+          DualLinkDeque.releaseStatics(-92);
           mc.releaseStatics(73);
           ao.releaseStatics(0);
           sb.releaseStatics(-1);
@@ -1300,7 +1300,7 @@ public final class ArcanistsMulti extends ud {
           Js5NetworkRequest.releaseStatics((byte) 20);
           SectorCacheStore.releaseStatics((byte) -60);
           DiskCacheRequest.releaseStatics((byte) 78);
-          tj.b(107);
+          CachedArchiveProvider.b(107);
           jo.releaseStatics(0);
           ArchiveRequest.releaseStatics(2039583);
           b.releaseStatics(67);
@@ -1326,7 +1326,7 @@ public final class ArcanistsMulti extends ud {
           sk.releaseStatics(121);
           la.releaseStatics((byte) 49);
           hd.releaseStatics((byte) 107);
-          ij.releaseStatics(12);
+          SceneTabbedPanel.releaseStatics(12);
           kg.releaseStatics(0);
           gn.releaseStatics((byte) -122);
           oo.releaseStatics(31908);
@@ -1360,7 +1360,7 @@ public final class ArcanistsMulti extends ud {
           rk.releaseStatics(-116);
           wg.releaseStatics(param0);
           tn.releaseStatics((byte) -97);
-          dh.releaseStatics((byte) 77);
+          SceneTextInput.releaseStatics((byte) 77);
           fd.releaseStatics(-1);
           DateOfBirthValidator.releaseStatics((byte) -79);
           NumericDateInputWidget.releaseStatics(0);
@@ -1376,15 +1376,15 @@ public final class ArcanistsMulti extends ud {
           wm.releaseStatics(-5903);
           Scrollbar.releaseStatics((byte) 54);
           DirectByteStorage.releaseStatics(92);
-          pk.releaseStatics(-14987);
+          IterableNodeHashTable.releaseStatics(-14987);
           SecondaryNodeDeque.releaseStatics((byte) 33);
           CacheEntry.releaseStatics(63);
           aj.releaseStatics(20028);
           StrongCacheEntry.h((byte) -102);
           ProxySocketConnector.releaseStatics(-1);
           sm.a(false);
-          jf.releaseStatics((byte) -120);
-          fh.releaseStatics((byte) 88);
+          NodeHashTableIterator.releaseStatics((byte) -120);
+          SecondaryNodeDequeIterator.releaseStatics((byte) 88);
           fk.releaseStatics(-1333592895);
           nk.releaseStatics(30025);
           ce.releaseStatics(false);
@@ -1514,15 +1514,15 @@ public final class ArcanistsMulti extends ud {
                 if (!lc.a((byte) 112)) {
                   mn.field_r = cj.field_b;
                   Js5NetworkRequest.c(false);
-                  if (w.field_Cb) {
-                    w.field_Cb = false;
+                  if (ChatInputWidget.field_Cb) {
+                    ChatInputWidget.field_Cb = false;
                     km.a(1, 10, 240, 16, mi.field_B, 320, (byte) 40, mi.field_B.field_o, false, ResizableViewResizeListener.field_h, mi.field_B.field_m + mi.field_B.field_o, ArchiveRequest.field_t);
                   }
                   if (pi.field_c) {
                     pi.field_c = false;
                     gj.a(false, true, -4, mn.field_r);
                   }
-                  if (ij.b(mn.field_r, 10)) {
+                  if (SceneTabbedPanel.isNonNegative(mn.field_r, 10)) {
                     lf.switchToRequestedScreen((byte) 80);
                   }
                 }
@@ -1534,7 +1534,7 @@ public final class ArcanistsMulti extends ud {
               u.field_i = u.field_i + 1;
               decompiledFrameRemainder2 = (u.field_i == 16);
               if (decompiledFrameRemainder2) {
-                if (!w.field_Cb) {
+                if (!ChatInputWidget.field_Cb) {
                   IntrusiveDeque.a((byte) 4);
                   if (var13 != 0) {
                     am.a(3020);
@@ -1571,7 +1571,7 @@ public final class ArcanistsMulti extends ud {
                     CheckboxPainter.field_g != 2 &&
                     CheckboxPainter.field_g != 4) {
                     if ((CheckboxPainter.field_g != -2) &&
-                      (decompiledFrameRemainder1 = !(!ij.b(CheckboxPainter.field_g, param0 ^ -83)))) {
+                      (decompiledFrameRemainder1 = !(!SceneTabbedPanel.isNonNegative(CheckboxPainter.field_g, param0 ^ -83)))) {
                       ArchiveProvider.field_f[CheckboxPainter.field_g].b(91);
                       decompiledFrameRemainder1 = (var13 != 0);
                     }
@@ -1634,12 +1634,12 @@ public final class ArcanistsMulti extends ud {
                     boolean decompiledFrameRemainder0 = true;
                     if (stackIn_152_0) {
                       if ((hi.field_a) &&
-                        (decompiledFrameRemainder0 = !(!tg.a(12, 27, 15, 13)))) {
+                        (decompiledFrameRemainder0 = !(!DualLinkDeque.a(12, 27, 15, 13)))) {
                         SpriteState.field_z.field_O = true;
                         continue;
                       }
                       if (decompiledFrameRemainder0) {
-                        pe.a(15, 12, (byte) 32, 13);
+                        ContextActionMenu.a(15, 12, (byte) 32, 13);
                       }
                     }
                     if (StatefulTextPainter.field_w) {
@@ -1685,7 +1685,7 @@ public final class ArcanistsMulti extends ud {
           if (mn.field_r == -3) {
             var3 = ah.field_b;
             if (var3 == null) {
-              var3 = k.field_p;
+              var3 = BufferedSocket.field_p;
             }
             var4_ref_String__ = new String[]{var3, ImageProducerRasterBuffer.field_n, rf.field_l, TextTableInitializer.field_c};
             var5_array = new int[6][18];
@@ -1793,7 +1793,7 @@ public final class ArcanistsMulti extends ud {
             TextLayout.field_b = true;
           }
           if (mn.field_r == -5) {
-            qc.a(false, DirectByteStorage.field_f.h((byte) 72), 11);
+            qc.a(false, DirectByteStorage.field_f.getSortKey((byte) 72), 11);
             IntrusiveDequeCursor.field_g = true;
             mn.field_r = CheckboxPainter.field_g;
           }
@@ -1819,7 +1819,7 @@ public final class ArcanistsMulti extends ud {
           SecondaryNodeDeque.a((byte) -9);
           la.field_a = false;
           nm.field_h = -1;
-          jf.field_j = 0;
+          NodeHashTableIterator.field_j = 0;
           GridContainer.field_P = 0;
           kg.field_a = false;
           cb.field_e = 0L;
@@ -1925,19 +1925,19 @@ public final class ArcanistsMulti extends ud {
           var2 = stackIn_5_0;
           ce.field_m.a(true);
           if (obfuscationGuard != -89) {
-            ArcanistsMulti.a(66, (int[]) null, (dn) null, (String) null, 78L, -15, 110, (String) null, (SceneWidget) null);
+            ArcanistsMulti.a(66, (int[]) null, (SceneScrollPane) null, (String) null, 78L, -15, 110, (String) null, (SceneWidget) null);
           }
           if (IntrusiveDequeCursor.a(-15576)) {
             TextLayout.a((byte) 14, (java.awt.Canvas) (var2), MusicPatchPcmStream.c(0));
             return;
           }
           if (!ue.field_e) {
-            ResourceArchive.a((java.awt.Canvas) (var2), (byte) -29);
+            ResourceArchive.presentFrame((java.awt.Canvas) (var2), (byte) -29);
             return;
           }
           if (!hn.a((byte) 87)) {
             rb.a(MenuButtonPainter.field_t, false, 100.0f);
-            ResourceArchive.a((java.awt.Canvas) (var2), (byte) -62);
+            ResourceArchive.presentFrame((java.awt.Canvas) (var2), (byte) -62);
             return;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -2055,7 +2055,7 @@ public final class ArcanistsMulti extends ud {
               pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -90, kg.field_d[1], hn.field_d[so.field_c[5]], var12);
               pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -117, kg.field_d[1], bo.field_a[var11], var12);
               var13 -= 16;
-              pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -127, kg.field_d[1], tj.field_A[so.field_c[4]], var12);
+              pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -127, kg.field_d[1], CachedArchiveProvider.field_A[so.field_c[4]], var12);
               var13 += 8;
               var13 += 16;
               pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var6 + var13, kg.field_d[3], kg.field_d[0], -113, kg.field_d[1], ModalPanelStack.field_I[0], var12 + var5Lifetime2);
@@ -2143,13 +2143,13 @@ public final class ArcanistsMulti extends ud {
             } else {
               var4Lifetime1 = -32 + var5Lifetime1 / 2;
             }
-            SoftwareRasterizer.drawRectangle(4, -4 + var4Lifetime1, tj.field_t.textWidth(rb.field_n[var3.field_n]) + 56, 40, 0);
-            SoftwareRasterizer.drawRectangle(5, var4Lifetime1 - 3, 54 + tj.field_t.textWidth(rb.field_n[var3.field_n]), 38, 16741888);
-            SoftwareRasterizer.drawRectangle(6, var4Lifetime1 - 2, tj.field_t.textWidth(rb.field_n[var3.field_n]) + 52, 36, 0);
+            SoftwareRasterizer.drawRectangle(4, -4 + var4Lifetime1, CachedArchiveProvider.field_t.textWidth(rb.field_n[var3.field_n]) + 56, 40, 0);
+            SoftwareRasterizer.drawRectangle(5, var4Lifetime1 - 3, 54 + CachedArchiveProvider.field_t.textWidth(rb.field_n[var3.field_n]), 38, 16741888);
+            SoftwareRasterizer.drawRectangle(6, var4Lifetime1 - 2, CachedArchiveProvider.field_t.textWidth(rb.field_n[var3.field_n]) + 52, 36, 0);
             IntrusiveNodeHashTable.field_a[var3.field_n].drawScaled(8, var4Lifetime1, 32, 32);
-            tj.field_t.drawText(rb.field_n[var3.field_n], 47, tj.field_t.field_C + var4Lifetime1, 0, 0);
-            tj.field_t.drawText(rb.field_n[var3.field_n], 48, -1 + (var4Lifetime1 + tj.field_t.field_C), 0, 0);
-            tj.field_t.drawText(rb.field_n[var3.field_n], 48, tj.field_t.field_C + var4Lifetime1, 16746496, -1);
+            CachedArchiveProvider.field_t.drawText(rb.field_n[var3.field_n], 47, CachedArchiveProvider.field_t.field_C + var4Lifetime1, 0, 0);
+            CachedArchiveProvider.field_t.drawText(rb.field_n[var3.field_n], 48, -1 + (var4Lifetime1 + CachedArchiveProvider.field_t.field_C), 0, 0);
+            CachedArchiveProvider.field_t.drawText(rb.field_n[var3.field_n], 48, CachedArchiveProvider.field_t.field_C + var4Lifetime1, 16746496, -1);
           }
           boolean decompiledSharedTail0 = !(LoadingTracker.b(obfuscationGuard ^ 88));
           if (!decompiledSharedTail0) {
@@ -2196,7 +2196,7 @@ public final class ArcanistsMulti extends ud {
         int var7 = 0;
         var7 = field_G ? 1 : 0;
         try {
-          var2 = new CipherPacketBuffer(param0.a("", "logo.fo3d", -1));
+          var2 = new CipherPacketBuffer(param0.getNamedFile("", "logo.fo3d", -1));
           var3 = var2.readUnsignedByte((byte) -121);
           var2.beginBitAccess(param1 + 166);
           ph.field_e = Scrollbar.a((byte) -101, var2);
@@ -2248,7 +2248,7 @@ public final class ArcanistsMulti extends ud {
     final static void a(int param0, byte param1) {
         try {
           int var2_int = 84 % ((param1 - 57) / 54);
-          gl.drawNineSliceFrame(28 + ValidationHelpWidget.field_U[param0] * NumericDateInputWidget.field_L[param0].length, -8 + lm.field_e[param0], -27327, 14 - (-eo.field_b[param0] + lm.field_e[param0]), kf.field_b, tg.field_f[param0] - 16);
+          gl.drawNineSliceFrame(28 + ValidationHelpWidget.field_U[param0] * NumericDateInputWidget.field_L[param0].length, -8 + lm.field_e[param0], -27327, 14 - (-eo.field_b[param0] + lm.field_e[param0]), kf.field_b, DualLinkDeque.field_f[param0] - 16);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ArcanistsMulti.OA(" + param0 + ',' + param1 + ')');
         }
@@ -2278,7 +2278,7 @@ public final class ArcanistsMulti extends ud {
           if (0 == jo.field_c) {
             pi.field_e = DebouncedValidator.field_a;
             if (null == DelegatingCanvas.field_c[0] &&
-              PasswordFieldPainter.field_x.a(true, "arcanists_titlescreen", "")) {
+              PasswordFieldPainter.field_x.isNamedFileAvailable(true, "arcanists_titlescreen", "")) {
               DelegatingCanvas.field_c[0] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_titlescreen");
               jo.field_c = 1;
               GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[0], -123);
@@ -2288,64 +2288,64 @@ public final class ArcanistsMulti extends ud {
           }
           if (SingleChildContainer.field_C < 52) {
             if (SingleChildContainer.field_C != 0 ||
-              !ue.field_d.a(true, "imp", "streamed")) {
+              !ue.field_d.isNamedFileAvailable(true, "imp", "streamed")) {
               if (SingleChildContainer.field_C == 1 &&
-                ue.field_d.a(true, "arcaneexplosion", "streamed")) {
-                BirthDateEntryPanel.field_N = pk.a("streamed", param0 ^ 15433, "arcaneexplosion", ue.field_d);
+                ue.field_d.isNamedFileAvailable(true, "arcaneexplosion", "streamed")) {
+                BirthDateEntryPanel.field_N = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 ^ 15433, "arcaneexplosion", ue.field_d);
                 SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                 if (var3 == 0) {
                   return;
                 }
               }
               if (SingleChildContainer.field_C == 2 &&
-                ue.field_d.a(true, "flameexplosion", "streamed")) {
-                DisplayNameForm.field_E = pk.a("streamed", 0, "flameexplosion", ue.field_d);
+                ue.field_d.isNamedFileAvailable(true, "flameexplosion", "streamed")) {
+                DisplayNameForm.field_E = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "flameexplosion", ue.field_d);
                 SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                 if (var3 == 0) {
                   return;
                 }
               }
               if (SingleChildContainer.field_C != 3 ||
-                !ue.field_d.a(true, "smokeexplosion", "streamed")) {
+                !ue.field_d.isNamedFileAvailable(true, "smokeexplosion", "streamed")) {
                 if (SingleChildContainer.field_C == 4 &&
-                  ue.field_d.a(true, "flamepuff", "streamed")) {
-                  DebouncedValidator.field_b = pk.a("streamed", param0 - 15433, "flamepuff", ue.field_d);
+                  ue.field_d.isNamedFileAvailable(true, "flamepuff", "streamed")) {
+                  DebouncedValidator.field_b = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 - 15433, "flamepuff", ue.field_d);
                   SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                   if (var3 == 0) {
                     return;
                   }
                 }
                 if (SingleChildContainer.field_C == 5 &&
-                  ue.field_d.a(true, "smokepuff", "streamed")) {
-                  FadingModalPanel.field_M = pk.a("streamed", 0, "smokepuff", ue.field_d);
+                  ue.field_d.isNamedFileAvailable(true, "smokepuff", "streamed")) {
+                  FadingModalPanel.field_M = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "smokepuff", ue.field_d);
                   SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                   if (var3 == 0) {
                     return;
                   }
                 }
                 if (SingleChildContainer.field_C != 6 ||
-                  !ue.field_d.a(true, "stormpuff", "streamed")) {
+                  !ue.field_d.isNamedFileAvailable(true, "stormpuff", "streamed")) {
                   if (SingleChildContainer.field_C == 7 &&
-                    ue.field_d.a(true, "stormexplosion", "streamed")) {
-                    u.field_j = pk.a("streamed", param0 - 15433, "stormexplosion", ue.field_d);
+                    ue.field_d.isNamedFileAvailable(true, "stormexplosion", "streamed")) {
+                    u.field_j = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 - 15433, "stormexplosion", ue.field_d);
                     SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                     if (var3 == 0) {
                       return;
                     }
                   }
                   if (SingleChildContainer.field_C == 8 &&
-                    ue.field_d.a(true, "cyclopstest", "streamed")) {
-                    SecondaryNodeDeque.field_c = pk.a("streamed", 0, "cyclopstest", ue.field_d);
+                    ue.field_d.isNamedFileAvailable(true, "cyclopstest", "streamed")) {
+                    SecondaryNodeDeque.field_c = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "cyclopstest", ue.field_d);
                     SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                     if (var3 == 0) {
                       return;
                     }
                   }
                   if (SingleChildContainer.field_C != 9 ||
-                    !ue.field_d.a(true, "sylph", "streamed")) {
+                    !ue.field_d.isNamedFileAvailable(true, "sylph", "streamed")) {
                     if (SingleChildContainer.field_C == 10 &&
-                      ue.field_d.a(true, "frostgiant", "streamed")) {
-                      DiskCacheRequest.field_v = pk.a("streamed", 0, "frostgiant", ue.field_d);
+                      ue.field_d.isNamedFileAvailable(true, "frostgiant", "streamed")) {
+                      DiskCacheRequest.field_v = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "frostgiant", ue.field_d);
                       SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                       pi.field_e = vm.field_f;
                       if (var3 == 0) {
@@ -2353,357 +2353,357 @@ public final class ArcanistsMulti extends ud {
                       }
                     }
                     if (SingleChildContainer.field_C != 11 ||
-                      !ue.field_d.a(true, "dwarf", "streamed")) {
+                      !ue.field_d.isNamedFileAvailable(true, "dwarf", "streamed")) {
                       if (12 != SingleChildContainer.field_C ||
-                        !ue.field_d.a(true, "clockworkrecallsoldier", "streamed")) {
+                        !ue.field_d.isNamedFileAvailable(true, "clockworkrecallsoldier", "streamed")) {
                         if (SingleChildContainer.field_C != 13 ||
-                          !ue.field_d.a(true, "golem", "streamed")) {
+                          !ue.field_d.isNamedFileAvailable(true, "golem", "streamed")) {
                           if (SingleChildContainer.field_C != 14 ||
-                            !ue.field_d.a(true, "flamedragon", "streamed")) {
+                            !ue.field_d.isNamedFileAvailable(true, "flamedragon", "streamed")) {
                             if (15 != SingleChildContainer.field_C ||
-                              !ue.field_d.a(true, "frostdragon", "streamed")) {
+                              !ue.field_d.isNamedFileAvailable(true, "frostdragon", "streamed")) {
                               if (SingleChildContainer.field_C == 16 &&
-                                ue.field_d.a(true, "stormdragon", "streamed")) {
-                                ArchiveIndex.field_m = pk.a("streamed", 0, "stormdragon", ue.field_d);
+                                ue.field_d.isNamedFileAvailable(true, "stormdragon", "streamed")) {
+                                ArchiveIndex.field_m = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "stormdragon", ue.field_d);
                                 SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                 if (var3 == 0) {
                                   return;
                                 }
                               }
                               if (SingleChildContainer.field_C != 17 ||
-                                !ue.field_d.a(true, "zombiedragon", "streamed")) {
+                                !ue.field_d.isNamedFileAvailable(true, "zombiedragon", "streamed")) {
                                 if (SingleChildContainer.field_C == 18 &&
-                                  ue.field_d.a(true, "clockworkdragon", "streamed")) {
-                                  ub.field_e = pk.a("streamed", 0, "clockworkdragon", ue.field_d);
+                                  ue.field_d.isNamedFileAvailable(true, "clockworkdragon", "streamed")) {
+                                  ub.field_e = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "clockworkdragon", ue.field_d);
                                   SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                   if (var3 == 0) {
                                     return;
                                   }
                                 }
                                 if (SingleChildContainer.field_C != 19 ||
-                                  !ue.field_d.a(true, "brinegoblin", "streamed")) {
+                                  !ue.field_d.isNamedFileAvailable(true, "brinegoblin", "streamed")) {
                                   if (20 != SingleChildContainer.field_C ||
-                                    !ue.field_d.a(true, "ent", "streamed")) {
+                                    !ue.field_d.isNamedFileAvailable(true, "ent", "streamed")) {
                                     if (SingleChildContainer.field_C != 21 ||
-                                      !ue.field_d.a(true, "elf", "streamed")) {
+                                      !ue.field_d.isNamedFileAvailable(true, "elf", "streamed")) {
                                       if (SingleChildContainer.field_C != 22 ||
-                                        !ue.field_d.a(true, "monkey", "streamed")) {
+                                        !ue.field_d.isNamedFileAvailable(true, "monkey", "streamed")) {
                                         if (SingleChildContainer.field_C != 23 ||
-                                          !ue.field_d.a(true, "darkknight", "streamed")) {
+                                          !ue.field_d.isNamedFileAvailable(true, "darkknight", "streamed")) {
                                           if (SingleChildContainer.field_C == 24 &&
-                                            ue.field_d.a(true, "wraith", "streamed")) {
-                                            pm.field_d = pk.a("streamed", 0, "wraith", ue.field_d);
+                                            ue.field_d.isNamedFileAvailable(true, "wraith", "streamed")) {
+                                            pm.field_d = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "wraith", ue.field_d);
                                             SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                             if (var3 == 0) {
                                               return;
                                             }
                                           }
                                           if (SingleChildContainer.field_C != 25 ||
-                                            !ue.field_d.a(true, "swarm", "streamed")) {
+                                            !ue.field_d.isNamedFileAvailable(true, "swarm", "streamed")) {
                                             if (26 != SingleChildContainer.field_C ||
-                                              !ue.field_d.a(true, "pixies", "streamed")) {
+                                              !ue.field_d.isNamedFileAvailable(true, "pixies", "streamed")) {
                                               if (27 == SingleChildContainer.field_C &&
-                                                ue.field_d.a(true, "paladin", "streamed")) {
-                                                qj.field_d = pk.a("streamed", 0, "paladin", ue.field_d);
+                                                ue.field_d.isNamedFileAvailable(true, "paladin", "streamed")) {
+                                                qj.field_d = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "paladin", ue.field_d);
                                                 SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                 if (var3 == 0) {
                                                   return;
                                                 }
                                               }
                                               if (SingleChildContainer.field_C != 28 ||
-                                                !ue.field_d.a(true, "pegasus", "streamed")) {
+                                                !ue.field_d.isNamedFileAvailable(true, "pegasus", "streamed")) {
                                                 if (29 == SingleChildContainer.field_C &&
-                                                  ue.field_d.a(true, "phoenix", "streamed")) {
-                                                  SoundCache.field_m = pk.a("streamed", param0 - 15433, "phoenix", ue.field_d);
+                                                  ue.field_d.isNamedFileAvailable(true, "phoenix", "streamed")) {
+                                                  SoundCache.field_m = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 - 15433, "phoenix", ue.field_d);
                                                   SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                   if (var3 == 0) {
                                                     return;
                                                   }
                                                 }
                                                 if (SingleChildContainer.field_C != 30 ||
-                                                  !ue.field_d.a(true, "watertroll", "streamed")) {
+                                                  !ue.field_d.isNamedFileAvailable(true, "watertroll", "streamed")) {
                                                   if (SingleChildContainer.field_C == 31 &&
-                                                    ue.field_d.a(true, "freshwatertroll", "streamed")) {
-                                                    c.field_a = pk.a("streamed", 0, "freshwatertroll", ue.field_d);
+                                                    ue.field_d.isNamedFileAvailable(true, "freshwatertroll", "streamed")) {
+                                                    c.field_a = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "freshwatertroll", ue.field_d);
                                                     SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                     if (var3 == 0) {
                                                       return;
                                                     }
                                                   }
                                                   if (SingleChildContainer.field_C == 32 &&
-                                                    ue.field_d.a(true, "hardwatertroll", "streamed")) {
-                                                    vm.field_g = pk.a("streamed", 0, "hardwatertroll", ue.field_d);
+                                                    ue.field_d.isNamedFileAvailable(true, "hardwatertroll", "streamed")) {
+                                                    vm.field_g = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "hardwatertroll", ue.field_d);
                                                     SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                     if (var3 == 0) {
                                                       return;
                                                     }
                                                   }
                                                   if (SingleChildContainer.field_C != 33 ||
-                                                    !ue.field_d.a(true, "waterlord", "streamed")) {
+                                                    !ue.field_d.isNamedFileAvailable(true, "waterlord", "streamed")) {
                                                     if (SingleChildContainer.field_C != 34 ||
-                                                      !ue.field_d.a(true, "flameshield", "streamed")) {
+                                                      !ue.field_d.isNamedFileAvailable(true, "flameshield", "streamed")) {
                                                       if (SingleChildContainer.field_C != 35 ||
-                                                        !ue.field_d.a(true, "clockworkexplosion", "streamed")) {
+                                                        !ue.field_d.isNamedFileAvailable(true, "clockworkexplosion", "streamed")) {
                                                         if (SingleChildContainer.field_C == 36 &&
-                                                          ue.field_d.a(true, "clockworkpuff", "streamed")) {
-                                                          wh.field_k = pk.a("streamed", param0 ^ 15433, "clockworkpuff", ue.field_d);
+                                                          ue.field_d.isNamedFileAvailable(true, "clockworkpuff", "streamed")) {
+                                                          wh.field_k = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 ^ 15433, "clockworkpuff", ue.field_d);
                                                           SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                           if (var3 == 0) {
                                                             return;
                                                           }
                                                         }
                                                         if (SingleChildContainer.field_C == 37 &&
-                                                          ue.field_d.a(true, "windshield", "streamed")) {
-                                                          pk.field_a = pk.a("streamed", 0, "windshield", ue.field_d);
+                                                          ue.field_d.isNamedFileAvailable(true, "windshield", "streamed")) {
+                                                          IterableNodeHashTable.field_a = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "windshield", ue.field_d);
                                                           SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                           if (var3 == 0) {
                                                             return;
                                                           }
                                                         }
                                                         if (SingleChildContainer.field_C == 38 &&
-                                                          ue.field_d.a(true, "stormshield", "streamed")) {
-                                                          i.field_a = pk.a("streamed", 0, "stormshield", ue.field_d);
+                                                          ue.field_d.isNamedFileAvailable(true, "stormshield", "streamed")) {
+                                                          i.field_a = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "stormshield", ue.field_d);
                                                           SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                           if (var3 == 0) {
                                                             return;
                                                           }
                                                         }
                                                         if (SingleChildContainer.field_C == 39 &&
-                                                          ue.field_d.a(true, "flamewall", "streamed")) {
-                                                          cj.field_f = pk.a("streamed", param0 - 15433, "flamewall", ue.field_d);
+                                                          ue.field_d.isNamedFileAvailable(true, "flamewall", "streamed")) {
+                                                          cj.field_f = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 - 15433, "flamewall", ue.field_d);
                                                           SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                           if (var3 == 0) {
                                                             return;
                                                           }
                                                         }
                                                         if (40 == SingleChildContainer.field_C &&
-                                                          ue.field_d.a(true, "stonepuff", "streamed")) {
-                                                          nm.field_c = pk.a("streamed", 0, "stonepuff", ue.field_d);
+                                                          ue.field_d.isNamedFileAvailable(true, "stonepuff", "streamed")) {
+                                                          nm.field_c = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "stonepuff", ue.field_d);
                                                           SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                           if (var3 == 0) {
                                                             return;
                                                           }
                                                         }
                                                         if (41 != SingleChildContainer.field_C ||
-                                                          !ue.field_d.a(true, "frostpuff", "streamed")) {
+                                                          !ue.field_d.isNamedFileAvailable(true, "frostpuff", "streamed")) {
                                                           if (SingleChildContainer.field_C != 42 ||
-                                                            !ue.field_d.a(true, "underexplosion", "streamed")) {
+                                                            !ue.field_d.isNamedFileAvailable(true, "underexplosion", "streamed")) {
                                                             if (43 == SingleChildContainer.field_C &&
-                                                              ue.field_d.a(true, "skullexplosion", "streamed")) {
-                                                              MusicPatchNode.field_E = pk.a("streamed", 0, "skullexplosion", ue.field_d);
+                                                              ue.field_d.isNamedFileAvailable(true, "skullexplosion", "streamed")) {
+                                                              MusicPatchNode.field_E = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "skullexplosion", ue.field_d);
                                                               SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                               if (var3 == 0) {
                                                                 return;
                                                               }
                                                             }
                                                             if (SingleChildContainer.field_C == 44 &&
-                                                              ue.field_d.a(true, "thornexplosion", "streamed")) {
-                                                              CheckboxPainter.field_p = pk.a("streamed", 0, "thornexplosion", ue.field_d);
+                                                              ue.field_d.isNamedFileAvailable(true, "thornexplosion", "streamed")) {
+                                                              CheckboxPainter.field_p = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "thornexplosion", ue.field_d);
                                                               SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                               if (var3 == 0) {
                                                                 return;
                                                               }
                                                             }
                                                             if (SingleChildContainer.field_C != 45 ||
-                                                              !ue.field_d.a(true, "vineexplosion", "streamed")) {
+                                                              !ue.field_d.isNamedFileAvailable(true, "vineexplosion", "streamed")) {
                                                               if (SingleChildContainer.field_C == 46 &&
-                                                                ue.field_d.a(true, "vinepuff", "streamed")) {
-                                                                vl.field_i = pk.a("streamed", param0 ^ 15433, "vinepuff", ue.field_d);
+                                                                ue.field_d.isNamedFileAvailable(true, "vinepuff", "streamed")) {
+                                                                vl.field_i = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 ^ 15433, "vinepuff", ue.field_d);
                                                                 SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                                 if (var3 == 0) {
                                                                   return;
                                                                 }
                                                               }
                                                               if (47 != SingleChildContainer.field_C ||
-                                                                !ue.field_d.a(true, "waterexplosion", "streamed")) {
+                                                                !ue.field_d.isNamedFileAvailable(true, "waterexplosion", "streamed")) {
                                                                 if (48 == SingleChildContainer.field_C &&
-                                                                  ue.field_d.a(true, "brineexplosion", "streamed")) {
-                                                                  DiskCacheRequest.field_H = pk.a("streamed", 0, "brineexplosion", ue.field_d);
+                                                                  ue.field_d.isNamedFileAvailable(true, "brineexplosion", "streamed")) {
+                                                                  DiskCacheRequest.field_H = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "brineexplosion", ue.field_d);
                                                                   SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                                   if (var3 == 0) {
                                                                     return;
                                                                   }
                                                                 }
                                                                 if (49 == SingleChildContainer.field_C &&
-                                                                  ue.field_d.a(true, "stoneexplosion", "streamed")) {
-                                                                  ie.field_Tb = pk.a("streamed", 0, "stoneexplosion", ue.field_d);
+                                                                  ue.field_d.isNamedFileAvailable(true, "stoneexplosion", "streamed")) {
+                                                                  ie.field_Tb = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "stoneexplosion", ue.field_d);
                                                                   SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                                   if (var3 == 0) {
                                                                     return;
                                                                   }
                                                                 }
                                                                 if (SingleChildContainer.field_C != 50 ||
-                                                                  !ue.field_d.a(true, "frostexplosion", "streamed")) {
+                                                                  !ue.field_d.isNamedFileAvailable(true, "frostexplosion", "streamed")) {
                                                                   if (SingleChildContainer.field_C != 51) {
                                                                     return;
                                                                   }
-                                                                  if (!ue.field_d.a(true, "watersplash", "streamed")) {
+                                                                  if (!ue.field_d.isNamedFileAvailable(true, "watersplash", "streamed")) {
                                                                     return;
                                                                   }
-                                                                  ResizableModalPanel.field_db = pk.a("streamed", 0, "watersplash", ue.field_d);
+                                                                  ResizableModalPanel.field_db = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "watersplash", ue.field_d);
                                                                   pi.field_e = FadingModalPanel.field_Q;
                                                                   SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                                   if (var3 == 0) {
                                                                     return;
                                                                   }
                                                                 }
-                                                                lf.field_e = pk.a("streamed", 0, "frostexplosion", ue.field_d);
+                                                                lf.field_e = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "frostexplosion", ue.field_d);
                                                                 SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                                 if (var3 == 0) {
                                                                   return;
                                                                 }
                                                               }
-                                                              mb.field_cb = pk.a("streamed", param0 - 15433, "waterexplosion", ue.field_d);
+                                                              mb.field_cb = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 - 15433, "waterexplosion", ue.field_d);
                                                               SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                               if (var3 == 0) {
                                                                 return;
                                                               }
                                                             }
-                                                            rf.field_j = pk.a("streamed", param0 - 15433, "vineexplosion", ue.field_d);
+                                                            rf.field_j = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 - 15433, "vineexplosion", ue.field_d);
                                                             SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                             if (var3 == 0) {
                                                               return;
                                                             }
                                                           }
-                                                          jg.field_l = pk.a("streamed", 0, "underexplosion", ue.field_d);
+                                                          jg.field_l = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "underexplosion", ue.field_d);
                                                           SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                           if (var3 == 0) {
                                                             return;
                                                           }
                                                         }
-                                                        ArrayWidgetContainer.field_G = pk.a("streamed", 0, "frostpuff", ue.field_d);
+                                                        ArrayWidgetContainer.field_G = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "frostpuff", ue.field_d);
                                                         SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                         if (var3 == 0) {
                                                           return;
                                                         }
                                                       }
-                                                      MouseInputHandler.field_a = pk.a("streamed", 0, "clockworkexplosion", ue.field_d);
+                                                      MouseInputHandler.field_a = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "clockworkexplosion", ue.field_d);
                                                       SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                       if (var3 == 0) {
                                                         return;
                                                       }
                                                     }
-                                                    BirthDateEntryPanel.field_S = pk.a("streamed", param0 ^ 15433, "flameshield", ue.field_d);
+                                                    BirthDateEntryPanel.field_S = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 ^ 15433, "flameshield", ue.field_d);
                                                     SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                     if (var3 == 0) {
                                                       return;
                                                     }
                                                   }
-                                                  nj.field_k = pk.a("streamed", param0 - 15433, "waterlord", ue.field_d);
+                                                  nj.field_k = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 - 15433, "waterlord", ue.field_d);
                                                   SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                   if (var3 == 0) {
                                                     return;
                                                   }
                                                 }
-                                                g.field_f = pk.a("streamed", param0 ^ 15433, "watertroll", ue.field_d);
+                                                g.field_f = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 ^ 15433, "watertroll", ue.field_d);
                                                 SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                 if (var3 == 0) {
                                                   return;
                                                 }
                                               }
-                                              ra.field_c = pk.a("streamed", 0, "pegasus", ue.field_d);
+                                              ra.field_c = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "pegasus", ue.field_d);
                                               SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                               if (var3 == 0) {
                                                 return;
                                               }
                                             }
-                                            oe.field_d = pk.a("streamed", 0, "pixies", ue.field_d);
+                                            oe.field_d = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "pixies", ue.field_d);
                                             SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                             if (var3 == 0) {
                                               return;
                                             }
                                           }
-                                          NumericDateInputWidget.field_U = pk.a("streamed", 0, "swarm", ue.field_d);
+                                          NumericDateInputWidget.field_U = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "swarm", ue.field_d);
                                           SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                           if (var3 == 0) {
                                             return;
                                           }
                                         }
-                                        ra.field_j = pk.a("streamed", param0 - 15433, "darkknight", ue.field_d);
+                                        ra.field_j = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 - 15433, "darkknight", ue.field_d);
                                         SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                         if (var3 == 0) {
                                           return;
                                         }
                                       }
-                                      LoginPanel.field_I = pk.a("streamed", 0, "monkey", ue.field_d);
+                                      LoginPanel.field_I = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "monkey", ue.field_d);
                                       SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                       if (var3 == 0) {
                                         return;
                                       }
                                     }
-                                    ArchiveIndex.field_n = pk.a("streamed", 0, "elf", ue.field_d);
+                                    ArchiveIndex.field_n = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "elf", ue.field_d);
                                     SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                     if (var3 == 0) {
                                       return;
                                     }
                                   }
-                                  Js5NetworkRequest.field_w = pk.a("streamed", 0, "ent", ue.field_d);
+                                  Js5NetworkRequest.field_w = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "ent", ue.field_d);
                                   SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                   if (var3 == 0) {
                                     return;
                                   }
                                 }
-                                ml.field_v = pk.a("streamed", 0, "brinegoblin", ue.field_d);
+                                ml.field_v = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "brinegoblin", ue.field_d);
                                 SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                 if (var3 == 0) {
                                   return;
                                 }
                               }
-                              ff.field_b = pk.a("streamed", 0, "zombiedragon", ue.field_d);
+                              ff.field_b = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "zombiedragon", ue.field_d);
                               SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                               if (var3 == 0) {
                                 return;
                               }
                             }
-                            Checkbox.field_L = pk.a("streamed", param0 ^ 15433, "frostdragon", ue.field_d);
+                            Checkbox.field_L = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 ^ 15433, "frostdragon", ue.field_d);
                             SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                             if (var3 == 0) {
                               return;
                             }
                           }
-                          LoadingTracker.field_d = pk.a("streamed", 0, "flamedragon", ue.field_d);
+                          LoadingTracker.field_d = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "flamedragon", ue.field_d);
                           SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                           if (var3 == 0) {
                             return;
                           }
                         }
-                        i.field_g = pk.a("streamed", param0 ^ 15433, "golem", ue.field_d);
+                        i.field_g = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 ^ 15433, "golem", ue.field_d);
                         SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                         if (var3 == 0) {
                           return;
                         }
                       }
-                      fe.field_h = pk.a("streamed", 0, "clockworkrecallsoldier", ue.field_d);
+                      fe.field_h = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "clockworkrecallsoldier", ue.field_d);
                       SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                       if (var3 == 0) {
                         return;
                       }
                     }
-                    dh.field_Jb = pk.a("streamed", 0, "dwarf", ue.field_d);
+                    SceneTextInput.field_Jb = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "dwarf", ue.field_d);
                     SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                     if (var3 == 0) {
                       return;
                     }
                   }
-                  bj.field_ob = pk.a("streamed", 0, "sylph", ue.field_d);
+                  bj.field_ob = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "sylph", ue.field_d);
                   SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                   if (var3 == 0) {
                     return;
                   }
                 }
-                fd.field_j = pk.a("streamed", 0, "stormpuff", ue.field_d);
+                fd.field_j = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "stormpuff", ue.field_d);
                 SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                 if (var3 == 0) {
                   return;
                 }
               }
-              DiskCacheWorker.field_a = pk.a("streamed", 0, "smokeexplosion", ue.field_d);
+              DiskCacheWorker.field_a = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "smokeexplosion", ue.field_d);
               SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
               if (var3 == 0) {
                 return;
               }
             }
-            fb.field_a = pk.a("streamed", 0, "imp", ue.field_d);
+            fb.field_a = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "imp", ue.field_d);
             SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
             return;
           }
@@ -2712,7 +2712,7 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (DelegatingCanvas.field_c[4] == null &&
-              PasswordFieldPainter.field_x.a(true, "arcanists_grassland", "")) {
+              PasswordFieldPainter.field_x.isNamedFileAvailable(true, "arcanists_grassland", "")) {
               DelegatingCanvas.field_c[4] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_grassland");
               jo.field_c = 2;
               if (var3 == 0) {
@@ -2727,7 +2727,7 @@ public final class ArcanistsMulti extends ud {
               }
             }
             if (null == DelegatingCanvas.field_c[1] &&
-              PasswordFieldPainter.field_x.a(true, "arcanists_giant_mountains", "")) {
+              PasswordFieldPainter.field_x.isNamedFileAvailable(true, "arcanists_giant_mountains", "")) {
               DelegatingCanvas.field_c[1] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_giant_mountains");
               jo.field_c = 4;
               if (var3 == 0) {
@@ -2736,7 +2736,7 @@ public final class ArcanistsMulti extends ud {
             }
             if (jo.field_c != 4) {
               if (null == DelegatingCanvas.field_c[2] &&
-                PasswordFieldPainter.field_x.a(true, "arcanists_elven", "")) {
+                PasswordFieldPainter.field_x.isNamedFileAvailable(true, "arcanists_elven", "")) {
                 DelegatingCanvas.field_c[2] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_elven");
                 jo.field_c = 6;
                 if (var3 == 0) {
@@ -2745,13 +2745,13 @@ public final class ArcanistsMulti extends ud {
               }
               if (jo.field_c != 6) {
                 if (DelegatingCanvas.field_c[3] != null ||
-                  !PasswordFieldPainter.field_x.a(true, "arcanists_goblin_caves", "")) {
+                  !PasswordFieldPainter.field_x.isNamedFileAvailable(true, "arcanists_goblin_caves", "")) {
                   if (jo.field_c != 8) {
                     if (null != DelegatingCanvas.field_c[5] ||
-                      !PasswordFieldPainter.field_x.a(true, "arcanists_swamp", "")) {
+                      !PasswordFieldPainter.field_x.isNamedFileAvailable(true, "arcanists_swamp", "")) {
                       if (jo.field_c != 10) {
                         if (null != DelegatingCanvas.field_c[6] ||
-                          !PasswordFieldPainter.field_x.a(true, "arcanists_graveyard", "")) {
+                          !PasswordFieldPainter.field_x.isNamedFileAvailable(true, "arcanists_graveyard", "")) {
                           if (jo.field_c == 12) {
                             jo.field_c = 13;
                             GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[6], param0 ^ -15414);
@@ -2760,10 +2760,10 @@ public final class ArcanistsMulti extends ud {
                             }
                           }
                           if (DelegatingCanvas.field_c[7] != null ||
-                            !PasswordFieldPainter.field_x.a(true, "arcanists_skycastles", "")) {
+                            !PasswordFieldPainter.field_x.isNamedFileAvailable(true, "arcanists_skycastles", "")) {
                             if (jo.field_c != 14) {
                               if (null != DelegatingCanvas.field_c[8] ||
-                                !PasswordFieldPainter.field_x.a(true, "arcanists_beach_cove", "")) {
+                                !PasswordFieldPainter.field_x.isNamedFileAvailable(true, "arcanists_beach_cove", "")) {
                                 if (jo.field_c == 16) {
                                   jo.field_c = 17;
                                   GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[8], 50);
@@ -2772,7 +2772,7 @@ public final class ArcanistsMulti extends ud {
                                   }
                                 }
                                 if (null != DelegatingCanvas.field_c[9] ||
-                                  !PasswordFieldPainter.field_x.a(true, "arcanists_arcane_crystal_cavern", "")) {
+                                  !PasswordFieldPainter.field_x.isNamedFileAvailable(true, "arcanists_arcane_crystal_cavern", "")) {
                                   if (jo.field_c != 18) {
                                     return;
                                   }
@@ -2850,16 +2850,16 @@ public final class ArcanistsMulti extends ud {
             GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[1], param0 - 15553);
             return;
           }
-          if (!ck.field_b.c(-10923)) {
+          if (!ck.field_b.ensureIndex(-10923)) {
             return;
           }
-          if (!wh.field_l.c(-10923)) {
+          if (!wh.field_l.ensureIndex(-10923)) {
             return;
           }
           if (null != ck.field_b) {
             if (SectorCacheStore.field_f < 18) {
-              if (SectorCacheStore.field_f == 0 && (!ck.field_b.a("spell_select", -24417) ||
-                !wh.field_l.a("spell_select", -24417))) {
+              if (SectorCacheStore.field_f == 0 && (!ck.field_b.isGroupAvailableByName("spell_select", -24417) ||
+                !wh.field_l.isGroupAvailableByName("spell_select", -24417))) {
                 return;
               }
               pi.field_e = FadingModalPanel.field_Q;
@@ -2990,8 +2990,8 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (SectorCacheStore.field_f < 44) {
-              if (18 == SectorCacheStore.field_f && (!ck.field_b.a("spell_impact", -24417) ||
-                !wh.field_l.a("spell_impact", param0 - 39850))) {
+              if (18 == SectorCacheStore.field_f && (!ck.field_b.isGroupAvailableByName("spell_impact", -24417) ||
+                !wh.field_l.isGroupAvailableByName("spell_impact", param0 - 39850))) {
                 return;
               }
               pi.field_e = DebouncedValidator.field_a;
@@ -3178,8 +3178,8 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (44 == SectorCacheStore.field_f &&
-              ck.field_b.a("spell_charge", -24417) &&
-              wh.field_l.a("spell_charge", param0 ^ -25386)) {
+              ck.field_b.isGroupAvailableByName("spell_charge", -24417) &&
+              wh.field_l.isGroupAvailableByName("spell_charge", param0 ^ -25386)) {
               SectorCacheStore.field_f = 45;
               pi.field_e = vm.field_f;
               this.a(98, wh.field_i[0], VorbisSample.loadNamed(ck.field_b, "spell_charge", "arcanists_chargeup_flame").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3205,8 +3205,8 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (SectorCacheStore.field_f == 45 &&
-              ck.field_b.a("spell_cast_universal", -24417) &&
-              wh.field_l.a("spell_cast_universal", -24417)) {
+              ck.field_b.isGroupAvailableByName("spell_cast_universal", -24417) &&
+              wh.field_l.isGroupAvailableByName("spell_cast_universal", -24417)) {
               pi.field_e = SocketConnector.field_h;
               SectorCacheStore.field_f = 46;
               this.a(120, 64, VorbisSample.loadNamed(ck.field_b, "spell_cast_universal", "arcanists_cast_01_arcane_arrow").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3222,8 +3222,8 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (46 == SectorCacheStore.field_f &&
-              ck.field_b.a("spell_cast_flame", -24417) &&
-              wh.field_l.a("spell_cast_flame", -24417)) {
+              ck.field_b.isGroupAvailableByName("spell_cast_flame", -24417) &&
+              wh.field_l.isGroupAvailableByName("spell_cast_flame", -24417)) {
               pi.field_e = PatchEnvelopeSet.field_b;
               SectorCacheStore.field_f = 47;
               this.a(73, 76, VorbisSample.loadNamed(ck.field_b, "spell_cast_flame", "arcanists_cast_07_fire_ball").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3241,7 +3241,7 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (SectorCacheStore.field_f == 47 &&
-              ck.field_b.a("spell_cast_frost", -24417)) {
+              ck.field_b.isGroupAvailableByName("spell_cast_frost", -24417)) {
               pi.field_e = wh.field_j;
               SectorCacheStore.field_f = 48;
               this.a(63, 112, VorbisSample.loadNamed(ck.field_b, "spell_cast_frost", "arcanists_cast_43_ice_ball").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3259,8 +3259,8 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (SectorCacheStore.field_f == 48 &&
-              ck.field_b.a("spell_cast_rock", -24417) &&
-              wh.field_l.a("spell_cast_rock", -24417)) {
+              ck.field_b.isGroupAvailableByName("spell_cast_rock", -24417) &&
+              wh.field_l.isGroupAvailableByName("spell_cast_rock", -24417)) {
               pi.field_e = fe.field_m;
               SectorCacheStore.field_f = 49;
               this.a(134, 88, SoundEffect.loadNamed(wh.field_l, "spell_cast_rock", "arcanists_cast_19_pebble_shot").toPcmSample(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3278,8 +3278,8 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (49 == SectorCacheStore.field_f &&
-              ck.field_b.a("spell_cast_storm", -24417) &&
-              wh.field_l.a("spell_cast_storm", -24417)) {
+              ck.field_b.isGroupAvailableByName("spell_cast_storm", -24417) &&
+              wh.field_l.isGroupAvailableByName("spell_cast_storm", -24417)) {
               pi.field_e = AlternateUsernameCredentials.field_j;
               SectorCacheStore.field_f = 50;
               this.a(107, 100, VorbisSample.loadNamed(ck.field_b, "spell_cast_storm", "arcanists_cast_31_thunder_shock").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3297,8 +3297,8 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (SectorCacheStore.field_f == 50 &&
-              ck.field_b.a("spell_cast_overlight", param0 - 39850) &&
-              wh.field_l.a("spell_cast_overlight", -24417)) {
+              ck.field_b.isGroupAvailableByName("spell_cast_overlight", param0 - 39850) &&
+              wh.field_l.isGroupAvailableByName("spell_cast_overlight", -24417)) {
               SectorCacheStore.field_f = 51;
               pi.field_e = fl.field_c;
               this.a(123, 145, VorbisSample.loadNamed(ck.field_b, "spell_cast_overlight", "arcanists_cast_67_castle_of_light").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3316,7 +3316,7 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (SectorCacheStore.field_f == 51 &&
-              ck.field_b.a("spell_cast_underdark", -24417)) {
+              ck.field_b.isGroupAvailableByName("spell_cast_underdark", -24417)) {
               pi.field_e = mn.field_v;
               SectorCacheStore.field_f = 52;
               this.a(156, 124, VorbisSample.loadNamed(ck.field_b, "spell_cast_underdark", "arcanists_cast_55_den_of_darkness").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3334,7 +3334,7 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (52 == SectorCacheStore.field_f &&
-              wh.field_l.a("spell_cast_ocean", -24417)) {
+              wh.field_l.isGroupAvailableByName("spell_cast_ocean", -24417)) {
               SectorCacheStore.field_f = 53;
               pi.field_e = lo.field_s;
               this.a(255, 160, SoundEffect.loadNamed(wh.field_l, "spell_cast_ocean", "arcanists_cast_waterball").toPcmSample(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3349,7 +3349,7 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (SectorCacheStore.field_f == 53 &&
-              wh.field_l.a("spell_cast_nature", -24417)) {
+              wh.field_l.isGroupAvailableByName("spell_cast_nature", -24417)) {
               pi.field_e = ArchiveProvider.field_g;
               SectorCacheStore.field_f = 54;
               this.a(255, 148, SoundEffect.loadNamed(wh.field_l, "spell_cast_nature", "arcanists_cast_79_thornball").toPcmSample(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3365,8 +3365,8 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (54 == SectorCacheStore.field_f &&
-              ck.field_b.a("spell_cast_cogs", -24417) &&
-              wh.field_l.a("spell_cast_cogs", -24417)) {
+              ck.field_b.isGroupAvailableByName("spell_cast_cogs", -24417) &&
+              wh.field_l.isGroupAvailableByName("spell_cast_cogs", -24417)) {
               SectorCacheStore.field_f = 55;
               pi.field_e = Scrollbar.field_I;
               this.a(255, 172, VorbisSample.loadNamed(ck.field_b, "spell_cast_cogs", "arcanists_cog_static_ball_shield_cast").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3387,8 +3387,8 @@ public final class ArcanistsMulti extends ud {
             }
             if (SectorCacheStore.field_f == 55) {
               pi.field_e = md.field_d;
-              if (ck.field_b.a(117) &&
-                wh.field_l.a(113)) {
+              if (ck.field_b.areAllGroupsAvailable(117) &&
+                wh.field_l.areAllGroupsAvailable(113)) {
                 SectorCacheStore.field_f = 56;
                 this.a(255, 154, VorbisSample.loadNamed(ck.field_b, "plant_minion", "arcanists_plant_minion_summon").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
                 this.a(255, 156, VorbisSample.loadNamed(ck.field_b, "elves", "arcanists_elf_summon").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3430,9 +3430,9 @@ public final class ArcanistsMulti extends ud {
                 this.a(147, PasswordFieldPainter.field_B[0], VorbisSample.loadNamed(ck.field_b, "rock_golem", "arcanists_rock_golem_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(128, PasswordFieldPainter.field_B[2], VorbisSample.loadNamed(ck.field_b, "rock_golem", "arcanists_rock_golem_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(148, PasswordFieldPainter.field_B[1], VorbisSample.loadNamed(ck.field_b, "rock_golem", "arcanists_rock_golem_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.a(125, in.field_Fb[0], VorbisSample.loadNamed(ck.field_b, "slyph", "arcanists_slyph_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.a(159, in.field_Fb[2], VorbisSample.loadNamed(ck.field_b, "slyph", "arcanists_slyph_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.a(181, in.field_Fb[1], VorbisSample.loadNamed(ck.field_b, "slyph", "arcanists_slyph_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(125, SceneScrollbar.field_Fb[0], VorbisSample.loadNamed(ck.field_b, "slyph", "arcanists_slyph_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(159, SceneScrollbar.field_Fb[2], VorbisSample.loadNamed(ck.field_b, "slyph", "arcanists_slyph_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(181, SceneScrollbar.field_Fb[1], VorbisSample.loadNamed(ck.field_b, "slyph", "arcanists_slyph_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(161, 185, VorbisSample.loadNamed(ck.field_b, "slyph", "arcanists_slyph_arrow_attack").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
                 this.a(138, IndexedSpriteState.field_i[0], VorbisSample.loadNamed(ck.field_b, "wraith", "arcanists_wraith_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(178, IndexedSpriteState.field_i[2], VorbisSample.loadNamed(ck.field_b, "wraith", "arcanists_wraith_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);

@@ -52,7 +52,7 @@ final class ml extends DualLinkNode {
     boolean field_z;
     static String field_K;
     int field_Y;
-    static pe field_H;
+    static ContextActionMenu field_H;
 
     final boolean c(int param0) {
         boolean stackIn_8_0 = false;
@@ -1282,7 +1282,7 @@ final class ml extends DualLinkNode {
               }
               if (var7Lifetime2 == 2) {
                 var12Lifetime1 = 1;
-                var13 = ij.field_Pb;
+                var13 = SceneTabbedPanel.field_Pb;
               }
               if (3 == var7Lifetime2) {
                 var13 = fo.field_g;
@@ -1429,10 +1429,10 @@ final class ml extends DualLinkNode {
             if (0 < this.field_q) {
               var7Lifetime3 = var7Lifetime3 + this.field_q;
             }
-            var8Lifetime3 = tj.field_t.field_C / 2;
-            mi.field_B.drawParagraph(Integer.toString(var7Lifetime3), -var8Lifetime3 + param1 + this.field_lb, -(var8Lifetime3 * 2) + (param0 + this.field_db) + (-this.field_Y - 2), var8Lifetime3 * 2, var8Lifetime3 * 2, (var5 | 8421504) ^ 8421504, 0, 1, 1, tj.field_t.field_C);
-            mi.field_B.drawParagraph(Integer.toString(var7Lifetime3), -1 + (-var8Lifetime3 + (param1 + this.field_lb)), -this.field_Y + param0 + (this.field_db - var8Lifetime3 * 2 - 1), 2 * var8Lifetime3, var8Lifetime3 * 2, 8421504 ^ (var5 | 8421504), 0, 1, 1, tj.field_t.field_C);
-            mi.field_B.drawParagraph(Integer.toString(var7Lifetime3), param1 + this.field_lb - var8Lifetime3, -(2 * var8Lifetime3) + (this.field_db + param0) - (this.field_Y + 1), var8Lifetime3 * 2, var8Lifetime3 * 2, var5, -1, 1, 1, tj.field_t.field_C);
+            var8Lifetime3 = CachedArchiveProvider.field_t.field_C / 2;
+            mi.field_B.drawParagraph(Integer.toString(var7Lifetime3), -var8Lifetime3 + param1 + this.field_lb, -(var8Lifetime3 * 2) + (param0 + this.field_db) + (-this.field_Y - 2), var8Lifetime3 * 2, var8Lifetime3 * 2, (var5 | 8421504) ^ 8421504, 0, 1, 1, CachedArchiveProvider.field_t.field_C);
+            mi.field_B.drawParagraph(Integer.toString(var7Lifetime3), -1 + (-var8Lifetime3 + (param1 + this.field_lb)), -this.field_Y + param0 + (this.field_db - var8Lifetime3 * 2 - 1), 2 * var8Lifetime3, var8Lifetime3 * 2, 8421504 ^ (var5 | 8421504), 0, 1, 1, CachedArchiveProvider.field_t.field_C);
+            mi.field_B.drawParagraph(Integer.toString(var7Lifetime3), param1 + this.field_lb - var8Lifetime3, -(2 * var8Lifetime3) + (this.field_db + param0) - (this.field_Y + 1), var8Lifetime3 * 2, var8Lifetime3 * 2, var5, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
             if (null == this.field_s &&
               this.field_T < this.field_L.field_q &&
               this.field_L.field_S[this.field_T] > 0) {
@@ -1692,7 +1692,7 @@ final class ml extends DualLinkNode {
               }
               if (2 == var2_int &&
                 null != LoadingTracker.field_k) {
-                if (SpriteState.field_v / 10 % ij.field_Pb.length >= ij.field_Pb.length - 1 &&
+                if (SpriteState.field_v / 10 % SceneTabbedPanel.field_Pb.length >= SceneTabbedPanel.field_Pb.length - 1 &&
                   !this.field_z) {
                   var5_int = this.field_lb;
                   var3 = this.field_lb;
@@ -2118,7 +2118,7 @@ final class ml extends DualLinkNode {
                                 SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                               }
                               var25 = new int[]{28, 0, 29, 33, 47, 50, var7, 0, 0};
-                              var13_ref_qb____ = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
+                              var13_ref_qb____ = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
                               if (SceneWidget.field_kb != null) {
                                 var23 = new int[]{204, 170, 238};
                                 var3 = var23;
@@ -2240,7 +2240,7 @@ final class ml extends DualLinkNode {
                                     if (1 == this.field_jb) {
                                       this.field_Y = 32;
                                       this.field_ib = 50;
-                                      var11 = dh.field_Jb;
+                                      var11 = SceneTextInput.field_Jb;
                                     }
                                     if (this.field_jb == 33) {
                                       var11 = ArchiveIndex.field_n;
@@ -2251,7 +2251,7 @@ final class ml extends DualLinkNode {
                                       this.field_ib = 25;
                                       this.field_Y = 32;
                                       var11 = LoginPanel.field_I;
-                                      if (Js5Transport.a(0, (byte) -127)) {
+                                      if (Js5Transport.isFeatureEnabled(0, (byte) -127)) {
                                         this.field_U = true;
                                         this.field_ib = 75;
                                       }
@@ -2406,7 +2406,7 @@ final class ml extends DualLinkNode {
                                   var16++;
                                 }
                               }
-                              var9 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
+                              var9 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
                               if (SceneWidget.field_kb == null) {
                                 this.field_J = false;
                               } else {
@@ -3794,7 +3794,7 @@ final class ml extends DualLinkNode {
                 this.field_z = true;
                 this.field_eb = -16;
                 if (((this.field_jb == 36)) && ((!(this.field_U) ||
-                  Js5Transport.a(0, (byte) -61)))) {
+                  Js5Transport.isFeatureEnabled(0, (byte) -61)))) {
                   this.field_kb = 0;
                 }
                 decompiledFrameRemainder0 = false;
@@ -3897,7 +3897,7 @@ final class ml extends DualLinkNode {
               }
             }
             if (36 == this.field_jb && (!this.field_U ||
-              Js5Transport.a(0, (byte) -88))) {
+              Js5Transport.isFeatureEnabled(0, (byte) -88))) {
               this.field_kb = 0;
               this.field_eb = -32;
             }
@@ -3945,7 +3945,7 @@ final class ml extends DualLinkNode {
               }
             }
             if (this.field_jb == 36 && (!this.field_U ||
-              Js5Transport.a(0, (byte) -23))) {
+              Js5Transport.isFeatureEnabled(0, (byte) -23))) {
               this.field_eb = -32;
               this.field_kb = 0;
             }
@@ -4198,7 +4198,7 @@ final class ml extends DualLinkNode {
             this.b(-30225, PasswordFieldPainter.field_B[param1]);
           }
           if (this.field_jb == 4) {
-            this.b(-30225, in.field_Fb[param1]);
+            this.b(-30225, SceneScrollbar.field_Fb[param1]);
           }
           if (this.field_jb == 8) {
             this.b(-30225, IndexedSpriteState.field_i[param1]);

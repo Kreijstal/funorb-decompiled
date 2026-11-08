@@ -29,7 +29,7 @@ final class i {
         }
         int var1 = jg.field_p[0] * ho.field_i[0];
         byte[] var16 = AccountRegistrationPanel.field_I[0];
-        if (!dn.field_Ib[0]) {
+        if (!SceneScrollPane.field_Ib[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var5_int < var1; var5_int++) {
             var8[var5_int] = ph.field_c[NameValidator.bitAnd((int) var16[var5_int], 255)];
@@ -52,12 +52,12 @@ final class i {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 24;
         int var7 = param4;
-        this.field_c.a(param0, param2, var7, var6, 0, param3, param1);
+        this.field_c.setBoundsAndLayout(param0, param2, var7, var6, 0, param3, param1);
         NanoFrameClock.field_j.setBounds(ec.field_d.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
         ClientException.field_d.setBounds(-80 + (-2 + ec.field_d.field_x) - (CacheEntry.field_p + 2), 0, 2 + ImageProducerRasterBuffer.field_r, 18, (byte) -120);
         nk.field_n.setBounds(CacheEntry.field_p + 82, ec.field_d.field_x - (CacheEntry.field_p + 2) - 80, ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
-        nl.field_Gb.a(20, 2, ec.field_d.field_I - ImageProducerRasterBuffer.field_r - 2 - 20, ec.field_d.field_x, 2 + ImageProducerRasterBuffer.field_r + 20, 0, -16624, CacheEntry.field_p);
-        dd.field_c.a(2, 20, CacheEntry.field_p, false);
+        IconTextSceneWidget.field_Gb.setBoundsAndLayout(20, 2, ec.field_d.field_I - ImageProducerRasterBuffer.field_r - 2 - 20, ec.field_d.field_x, 2 + ImageProducerRasterBuffer.field_r + 20, 0, -16624, CacheEntry.field_p);
+        dd.field_c.layoutColumns(2, 20, CacheEntry.field_p, false);
     }
 
     public static void releaseStatics(byte param0) {
@@ -210,8 +210,8 @@ final class i {
             var2 = var6;
             if (IntrusiveNode.field_f != null) {
               try {
-                IntrusiveNode.field_f.a(0L, -97);
-                IntrusiveNode.field_f.a(-13848, var6);
+                IntrusiveNode.field_f.seek(0L, -97);
+                IntrusiveNode.field_f.readFully(-13848, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;

@@ -41,7 +41,7 @@ final class StrongCacheEntry extends CacheEntry {
           return;
         }
         try {
-          IntrusiveDeque.field_f = k.field_k[param1];
+          IntrusiveDeque.field_f = BufferedSocket.field_k[param1];
           AlternateUsernameCredentials.field_o = fn.field_c[param1];
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "nh.J(" + param0 + ',' + param1 + ')');

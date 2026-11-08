@@ -56,7 +56,7 @@ final class hn implements Runnable {
         }
         if (this.field_b == 0) {
           if (this.field_a == null) {
-            this.field_a = this.field_n.a(true, this.field_m);
+            this.field_a = this.field_n.queueUrlOpen(true, this.field_m);
           }
           if (0 == this.field_a.field_e) {
             return false;
@@ -69,7 +69,7 @@ final class hn implements Runnable {
         }
         if (this.field_b == 1) {
           if (null == this.field_j) {
-            this.field_j = this.field_n.a(443, true, this.field_m.getHost());
+            this.field_j = this.field_n.queueDirectSocketOpen(443, true, this.field_m.getHost());
           }
           if (this.field_j.field_e == 0) {
             return false;
@@ -108,7 +108,7 @@ final class hn implements Runnable {
               return false;
             }
             if (this.field_g == null) {
-              this.field_g = this.field_n.a(124, 5, (Runnable) (this));
+              this.field_g = this.field_n.queueThreadStart(124, 5, (Runnable) (this));
             }
             if (this.field_g.field_e == 0) {
               return false;
@@ -125,7 +125,7 @@ final class hn implements Runnable {
           return false;
         }
         if (this.field_g == null) {
-          this.field_g = this.field_n.a(124, 5, (Runnable) (this));
+          this.field_g = this.field_n.queueThreadStart(124, 5, (Runnable) (this));
         }
         if (this.field_g.field_e == 0) {
           return false;
@@ -255,13 +255,13 @@ final class hn implements Runnable {
 
     final static boolean a(byte param0) {
         int var1 = 85 % ((param0 - 10) / 60);
-        if (!jf.field_e) {
+        if (!NodeHashTableIterator.field_e) {
           if (!lc.a((byte) 112)) {
             return false;
           }
           return true;
         }
-        if (!pe.field_Jb) {
+        if (!ContextActionMenu.field_Jb) {
           if (!lc.a((byte) 112)) {
             return false;
           }

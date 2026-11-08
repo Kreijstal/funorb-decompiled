@@ -13,7 +13,7 @@ final class om extends UiComponent {
     private int field_G;
     static String field_L;
     private Sprite field_A;
-    static na field_x;
+    static LobbyGameEntry field_x;
     static int field_H;
     private int field_z;
     static int[] field_B;
@@ -57,7 +57,7 @@ final class om extends UiComponent {
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param0 != 29) {
-            field_x = (na) null;
+            field_x = (LobbyGameEntry) null;
           }
           var9 = UiContainer.field_z;
           var2 = var9.readUnsignedByte((byte) 105);

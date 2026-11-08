@@ -48,7 +48,7 @@ final class oe {
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param0);
-          if (!IntrusiveDeque.a(var10, param1 - 29140)) {
+          if (!IntrusiveDeque.isValidDisplayNameText(var10, param1 - 29140)) {
             stackIn_4_0 = fn.field_h;
             return stackIn_4_0;
           }
@@ -58,10 +58,10 @@ final class oe {
           }
           var8 = UsernameCredentials.a(0, param0);
           if (var8 == null) {
-            stackIn_12_0 = tj.a(122, new String[]{param0}, FixedViewResizeListener.field_c);
+            stackIn_12_0 = CachedArchiveProvider.formatTemplate(122, new String[]{param0}, FixedViewResizeListener.field_c);
             return stackIn_12_0;
           }
-          TextLine.field_d.a(var8, 121);
+          TextLine.field_d.firstFrom(var8, 121);
           while (true) {
             var7 = (wa) (TextLine.field_d.next(param1 ^ 29140));
             if (var7 != null) {

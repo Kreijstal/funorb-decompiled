@@ -10,19 +10,19 @@ final class EmptyPainter implements WidgetPainter {
     final static nk a(boolean param0, int param1, int param2, int param3) {
         nk var6 = null;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
-        nk var4 = (nk) (pe.field_Lb.first(12623));
+        nk var4 = (nk) (ContextActionMenu.field_Lb.first(12623));
         if (param0) {
           while (var4 != null) {
             if (param2 == var4.field_p) {
               return var4;
             }
-            var4 = (nk) (pe.field_Lb.next(0));
+            var4 = (nk) (ContextActionMenu.field_Lb.next(0));
           }
           var6 = new nk();
           var4 = var6;
           var6.field_p = param2;
           var6.field_t = param1;
-          pe.field_Lb.addLast(var6, -1);
+          ContextActionMenu.field_Lb.addLast(var6, -1);
           fj.a(-26971, var6, param3);
           return var6;
         }
@@ -31,13 +31,13 @@ final class EmptyPainter implements WidgetPainter {
           if (param2 == var4.field_p) {
             return var4;
           }
-          var4 = (nk) (pe.field_Lb.next(0));
+          var4 = (nk) (ContextActionMenu.field_Lb.next(0));
         }
         nk var7 = new nk();
         var4 = var7;
         var7.field_p = param2;
         var7.field_t = param1;
-        pe.field_Lb.addLast(var7, -1);
+        ContextActionMenu.field_Lb.addLast(var7, -1);
         fj.a(-26971, var7, param3);
         return var7;
     }
@@ -116,7 +116,7 @@ final class EmptyPainter implements WidgetPainter {
           } else {
             stackIn_3_6 = 0;
           }
-          ArcanistsMulti.a(stackIn_2_0, (int[]) (stackIn_2_1), (dn) (stackIn_2_2), stackIn_2_3, stackIn_2_4, stackIn_2_5, stackIn_3_6, param1.field_g, param1.field_a);
+          ArcanistsMulti.a(stackIn_2_0, (int[]) (stackIn_2_1), (SceneScrollPane) (stackIn_2_2), stackIn_2_3, stackIn_2_4, stackIn_2_5, stackIn_3_6, param1.field_g, param1.field_a);
           if (param1.field_m == param0 &&
             !Js5Transport.f(-1) &&
             DirectByteStorage.field_f == null &&
@@ -124,24 +124,24 @@ final class EmptyPainter implements WidgetPainter {
             if (!AlternateUsernameCredentials.field_p) {
               var5 = eo.field_c;
               var6 = IsaacRandom.field_i;
-              var5.field_l.a(14, var6, (byte) -26);
+              var5.field_l.addAction(14, var6, (byte) -26);
             }
             var7 = eo.field_c;
             var8 = Js5Transport.field_h;
-            var7.field_l.a(20, var8, (byte) -26);
+            var7.field_l.addAction(20, var8, (byte) -26);
           }
           if (param1.field_m == 1 &&
             !Js5Transport.f(-1) &&
             null != DirectByteStorage.field_f &&
-            param1.field_q == DirectByteStorage.field_f.h((byte) 78)) {
+            param1.field_q == DirectByteStorage.field_f.getSortKey((byte) 78)) {
             if (!AlternateUsernameCredentials.field_p) {
               var9 = eo.field_c;
               var10 = Js5NetworkRequest.field_v;
-              var9.field_l.a(14, var10, (byte) -26);
+              var9.field_l.addAction(14, var10, (byte) -26);
             }
             var11 = eo.field_c;
             var12 = SocketJs5Transport.field_s;
-            var11.field_l.a(20, var12, (byte) -26);
+            var11.field_l.addAction(20, var12, (byte) -26);
           }
           eo.field_c.a(3);
           eo.field_c.a((byte) 72, false);
@@ -151,7 +151,7 @@ final class EmptyPainter implements WidgetPainter {
           var13 = eo.field_c;
           var3 = pb.field_h;
           var4 = ja.field_s;
-          var13.field_l.a(0, 0, -29466, var4, var3);
+          var13.field_l.openAt(0, 0, -29466, var4, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,7 +182,7 @@ final class EmptyPainter implements WidgetPainter {
           CameraFollowTarget.field_f = new ec(param0);
           StatefulTextPainter.field_r = param3;
           int var4_int = -103 / ((param2 - 31) / 55);
-          tg.field_d = param1;
+          DualLinkDeque.field_d = param1;
           ResourceArchive.b(403300833);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "eb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class na extends SceneWidget {
+final class LobbyGameEntry extends SceneWidget {
     int field_ac;
     SceneWidget field_hc;
     String field_ic;
@@ -46,7 +46,7 @@ final class na extends SceneWidget {
     String[] field_Qb;
     boolean field_Nb;
 
-    final int h(byte param0) {
+    final int getSortKey(byte param0) {
         if (param0 < 46) {
           return 4;
         }
@@ -61,22 +61,22 @@ final class na extends SceneWidget {
           field_gc = null;
           return;
         }
-        na.i((byte) 112);
+        LobbyGameEntry.i((byte) 112);
         field_lc = null;
         field_Tb = null;
         field_Sb = null;
         field_gc = null;
     }
 
-    final boolean e(int param0) {
+    final boolean isUnlisted(int param0) {
         if (param0 < -34) {
           return !this.isSecondaryLinked((byte) -17) ? true : false;
         }
-        this.e(102);
+        this.isUnlisted(102);
         return !this.isSecondaryLinked((byte) -17) ? true : false;
     }
 
-    final boolean a(na param0, int param1) {
+    final boolean sortsBefore(LobbyGameEntry param0, int param1) {
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -210,7 +210,7 @@ final class na extends SceneWidget {
         int var1 = -86 % ((param0 + 14) / 33);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, String param5, int param6, int param7, int param8, int param9, long param10, int param11, PlatformTaskDispatcher param12, boolean param13) {
+    final static void initializeConnectionState(int param0, int param1, int param2, int param3, boolean param4, String param5, int param6, int param7, int param8, int param9, long param10, int param11, PlatformTaskDispatcher param12, boolean param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -235,7 +235,7 @@ final class na extends SceneWidget {
             if (param3 != 0) {
               field_gc = (String) null;
             }
-            dh.field_Lb = param7;
+            SceneTextInput.field_Lb = param7;
             qg.field_b = param12;
             if (qg.field_b.field_n == null) {
               return;
@@ -275,13 +275,13 @@ final class na extends SceneWidget {
 
     final static SceneWidget f(byte param0) {
         if (param0 <= 13) {
-          na.i((byte) 105);
+          LobbyGameEntry.i((byte) 105);
           return nj.field_m.field_Cb;
         }
         return nj.field_m.field_Cb;
     }
 
-    na(int param0) {
+    LobbyGameEntry(int param0) {
         super(0L, (SceneWidget) null);
         this.field_Wb = new byte[param0];
     }

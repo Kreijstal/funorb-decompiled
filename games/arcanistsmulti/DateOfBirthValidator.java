@@ -54,13 +54,13 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         int var1 = -117 / ((-16 - param0) / 36);
     }
 
-    final static ij a(boolean param0, SceneWidget param1, SceneWidget param2, oo param3, SceneWidget param4) {
+    final static SceneTabbedPanel a(boolean param0, SceneWidget param1, SceneWidget param2, oo param3, SceneWidget param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
-        ij stackIn_9_0 = null;
+        SceneTabbedPanel stackIn_9_0 = null;
         int stackIn_13_0 = 0;
-        ij stackIn_28_0 = null;
+        SceneTabbedPanel stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -78,7 +78,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         String[] var8 = null;
         char[] var9 = null;
         int[] var10 = null;
-        ij[] var11 = null;
+        SceneTabbedPanel[] var11 = null;
         int var12 = 0;
         oo var13_ref_oo = null;
         int var13 = 0;
@@ -94,7 +94,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         try {
           if (param3 == null) {
             stackIn_3_0 = null;
-            return (ij) (stackIn_3_0);
+            return (SceneTabbedPanel) (stackIn_3_0);
           }
           if (null != param3.field_p) {
             stackIn_7_0 = param3.field_p.length;
@@ -103,7 +103,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           }
           var5_int = stackIn_7_0;
           if (!param0) {
-            stackIn_9_0 = (ij) null;
+            stackIn_9_0 = (SceneTabbedPanel) null;
             return stackIn_9_0;
           }
           if (param3.field_D != null) {
@@ -120,7 +120,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           var20 = new int[var7];
           var18 = var20;
           var10 = var18;
-          var11 = new ij[var7];
+          var11 = new SceneTabbedPanel[var7];
           if (param3.field_p != null) {
             for (var12 = 0; var12 < param3.field_p.length; var12++) {
               var13_ref_oo = ByteStorage.field_d.a(3, param3.field_p[var12]);
@@ -150,7 +150,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
               }
             }
           }
-          stackIn_28_0 = new ij(0L, param2, param4, param1, var11, var20, var8, var21);
+          stackIn_28_0 = new SceneTabbedPanel(0L, param2, param4, param1, var11, var20, var8, var21);
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -288,12 +288,12 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           var5 = ra.currentYear(-109);
           if (1890 <= var4 &&
             var4 <= -3 + var5) {
-            if (tn.a(var3, (byte) 119, var4, var2_int)) {
+            if (tn.isValidDate(var3, (byte) 119, var4, var2_int)) {
               stackIn_7_0 = null;
               return (String) (stackIn_7_0);
             }
           } else {
-            stackIn_4_0 = tj.a(125, new String[]{"1890", Integer.toString(-3 + var5)}, af.field_Kb);
+            stackIn_4_0 = CachedArchiveProvider.formatTemplate(125, new String[]{"1890", Integer.toString(-3 + var5)}, af.field_Kb);
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -331,7 +331,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
             var6 = (EditableTextWidget) null;
             this.onTextChanged((EditableTextWidget) null, -112);
           }
-          if (!tn.a(var3, (byte) 115, var4, var2_int)) {
+          if (!tn.isValidDate(var3, (byte) 115, var4, var2_int)) {
             stackIn_11_0 = ra.field_k;
             return stackIn_11_0;
           }

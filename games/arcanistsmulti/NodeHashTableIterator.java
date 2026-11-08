@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class jf implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     static PacketBuffer field_a;
     private int field_b;
     private IntrusiveNode field_g;
-    private pk field_c;
+    private IterableNodeHashTable field_c;
     static SceneWidget field_d;
     private IntrusiveNode field_h;
     static String field_i;
@@ -15,10 +15,10 @@ final class jf implements Iterator {
     static String field_f;
     static int field_j;
 
-    final static void a(cg param0, byte param1) {
+    final static void insertSorted(SocialListEntry param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        cg var3 = null;
+        SocialListEntry var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -28,10 +28,10 @@ final class jf implements Iterator {
         try {
           var2_int = 63 / ((64 - param1) / 44);
           param0.unlink(true);
-          var3 = (cg) (LinkButtonPainter.field_j.first(12623));
+          var3 = (SocialListEntry) (LinkButtonPainter.field_j.first(12623));
           while (var3 != null) {
-            if (var3.a((byte) 121, param0)) {
-              var3 = (cg) (LinkButtonPainter.field_j.next(0));
+            if (var3.sortsBefore((byte) 121, param0)) {
+              var3 = (SocialListEntry) (LinkButtonPainter.field_j.next(0));
               continue;
             }
             break;
@@ -89,7 +89,7 @@ final class jf implements Iterator {
         this.field_h = null;
     }
 
-    private final void a(int param0) {
+    private final void reset(int param0) {
         this.field_h = null;
         this.field_g = this.field_c.field_c[0].next;
         if (param0 == -1) {
@@ -121,7 +121,7 @@ final class jf implements Iterator {
         return true;
     }
 
-    final static void a(String param0, java.applet.Applet param1, int param2) {
+    final static void setSettingsCookie(String param0, java.applet.Applet param1, int param2) {
         try {
           String var6 = null;
           String var5 = null;
@@ -177,11 +177,11 @@ final class jf implements Iterator {
         field_d = null;
     }
 
-    jf(pk param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_h = null;
         try {
           this.field_c = param0;
-          this.a(-1);
+          this.reset(-1);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

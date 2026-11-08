@@ -89,7 +89,7 @@ class AudioOutput {
                 field_o == null) {
                 field_o = new AudioService();
                 field_o.field_f = param0;
-                param0.a(127, field_f, (Runnable) ((Object) field_o));
+                param0.queueThreadStart(127, field_f, (Runnable) ((Object) field_o));
               }
               if (field_o != null) {
                 if (field_o.field_b[param2] != null) {

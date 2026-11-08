@@ -4,7 +4,7 @@
 final class ne {
     String field_h;
     static String field_j;
-    pe field_l;
+    ContextActionMenu field_l;
     private String field_k;
     static String field_a;
     private int[] field_m;
@@ -79,7 +79,7 @@ final class ne {
         int var6Lifetime1;
         if (param4 != 12815) {
           this.d(102);
-          var6 = this.field_l.a(-1, param0);
+          var6 = this.field_l.processInput(-1, param0);
           if (var6 == -2) {
             return false;
           }
@@ -89,7 +89,7 @@ final class ne {
           discarded$3 = this.a(param1, (byte) -64, var6);
           return true;
         }
-        var6Lifetime1 = this.field_l.a(-1, param0);
+        var6Lifetime1 = this.field_l.processInput(-1, param0);
         if (var6Lifetime1 == -2) {
           return false;
         }
@@ -102,7 +102,7 @@ final class ne {
 
     private final boolean a(int param0, byte param1, int param2) {
         if (param2 == 17) {
-          db.field_a = new w(this.field_c.field_V, this.field_c.field_nb, this.field_c.field_x, this.field_c.field_I, param0, mf.field_d, SectorCacheStore.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, this.field_h, this.field_d);
+          db.field_a = new ChatInputWidget(this.field_c.field_V, this.field_c.field_nb, this.field_c.field_x, this.field_c.field_I, param0, mf.field_d, SectorCacheStore.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, this.field_h, this.field_d);
           return true;
         }
         if (param1 == -64) {
@@ -124,7 +124,7 @@ final class ne {
           }
           var3 = this.a((byte) 32);
           String var2 = var3;
-          this.field_l.a(17, tj.a(-38, new String[]{var3}, ad.field_b), (byte) -26);
+          this.field_l.addAction(17, CachedArchiveProvider.formatTemplate(-38, new String[]{var3}, ad.field_b), (byte) -26);
         }
         if (param0 == 5552) {
           return;
@@ -183,21 +183,21 @@ final class ne {
           }
           if (param1.field_m == 0) {
             if (0 == on.field_h) {
-              this.field_l.a(12, MusicPatch.field_g, (byte) -26);
+              this.field_l.addAction(12, MusicPatch.field_g, (byte) -26);
             }
-            this.field_l.a(13, jg.field_j, (byte) -26);
+            this.field_l.addAction(13, jg.field_j, (byte) -26);
           }
           if (param1.field_m == 1) {
             if (ra.field_m == 0) {
-              this.field_l.a(12, SocketConnector.field_a, (byte) -26);
+              this.field_l.addAction(12, SocketConnector.field_a, (byte) -26);
             }
-            this.field_l.a(13, dm.field_J, (byte) -26);
+            this.field_l.addAction(13, dm.field_J, (byte) -26);
           }
           if (param1.field_m == 2) {
             if (hd.field_b == 0) {
-              this.field_l.a(12, va.field_d, (byte) -26);
+              this.field_l.addAction(12, va.field_d, (byte) -26);
             }
-            this.field_l.a(13, CameraFollowTarget.field_c, (byte) -26);
+            this.field_l.addAction(13, CameraFollowTarget.field_c, (byte) -26);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ne.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -205,12 +205,12 @@ final class ne {
     }
 
     final void a(byte param0, boolean param1) {
-        cg var4;
+        SocialListEntry var4;
         String var5;
         int var6;
-        cg var11;
-        cg var12;
-        cg var4Lifetime1;
+        SocialListEntry var11;
+        SocialListEntry var12;
+        SocialListEntry var4Lifetime1;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != 72) {
           this.a((byte) -94, false);
@@ -227,11 +227,11 @@ final class ne {
             var5 = this.a((byte) 32);
             if (var4 != null) {
               if (!DirectByteStorage.field_f.field_Lb) {
-                this.field_l.a(1, tj.a(-18, new String[]{var5}, gg.field_a), (byte) -26);
+                this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(-18, new String[]{var5}, gg.field_a), (byte) -26);
                 return;
               }
               if (DirectByteStorage.field_f.field_nc >= 0) {
-                this.field_l.a(1, tj.a(-18, new String[]{var5}, gg.field_a), (byte) -26);
+                this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(-18, new String[]{var5}, gg.field_a), (byte) -26);
                 return;
               }
             } else {
@@ -241,16 +241,16 @@ final class ne {
                   return;
                 }
                 if (var12.field_Db) {
-                  this.field_l.a(1, tj.a(124, new String[]{var5}, na.field_gc), (byte) -26);
+                  this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(124, new String[]{var5}, LobbyGameEntry.field_gc), (byte) -26);
                   return;
                 }
                 if (param1 &&
                   var12.field_Kb) {
-                  this.field_l.a(0, tj.a(-55, new String[]{var5}, DraggableWidget.field_L), (byte) -26);
-                  this.field_l.a(1, tj.a(param0 + 54, new String[]{var5}, MidiPcmStream.field_z), (byte) -26);
+                  this.field_l.addAction(0, CachedArchiveProvider.formatTemplate(-55, new String[]{var5}, DraggableWidget.field_L), (byte) -26);
+                  this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(param0 + 54, new String[]{var5}, MidiPcmStream.field_z), (byte) -26);
                   return;
                 }
-                this.field_l.a(0, tj.a(param0 + 48, new String[]{var5}, StrongCacheEntry.field_x), (byte) -26);
+                this.field_l.addAction(0, CachedArchiveProvider.formatTemplate(param0 + 48, new String[]{var5}, StrongCacheEntry.field_x), (byte) -26);
                 return;
               }
             }
@@ -277,7 +277,7 @@ final class ne {
             DirectByteStorage.field_f.field_nc < 0) {
             return;
           }
-          this.field_l.a(1, tj.a(-18, new String[]{var5}, gg.field_a), (byte) -26);
+          this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(-18, new String[]{var5}, gg.field_a), (byte) -26);
           return;
         }
         if (var11 == null) {
@@ -290,25 +290,25 @@ final class ne {
           return;
         }
         if (var11.field_Db) {
-          this.field_l.a(1, tj.a(124, new String[]{var5}, na.field_gc), (byte) -26);
+          this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(124, new String[]{var5}, LobbyGameEntry.field_gc), (byte) -26);
           return;
         }
         if (param1 &&
           var11.field_Kb) {
-          this.field_l.a(0, tj.a(-55, new String[]{var5}, DraggableWidget.field_L), (byte) -26);
-          this.field_l.a(1, tj.a(param0 + 54, new String[]{var5}, MidiPcmStream.field_z), (byte) -26);
+          this.field_l.addAction(0, CachedArchiveProvider.formatTemplate(-55, new String[]{var5}, DraggableWidget.field_L), (byte) -26);
+          this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(param0 + 54, new String[]{var5}, MidiPcmStream.field_z), (byte) -26);
           return;
         }
-        this.field_l.a(0, tj.a(param0 + 48, new String[]{var5}, StrongCacheEntry.field_x), (byte) -26);
+        this.field_l.addAction(0, CachedArchiveProvider.formatTemplate(param0 + 48, new String[]{var5}, StrongCacheEntry.field_x), (byte) -26);
     }
 
     final void a(int param0) {
         String var3;
         int var4;
         Sprite[] var5;
-        na var6;
-        na var7;
-        na var8;
+        LobbyGameEntry var6;
+        LobbyGameEntry var7;
+        LobbyGameEntry var8;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != 3) {
           var5 = (Sprite[]) null;
@@ -322,18 +322,18 @@ final class ne {
           }
           var3 = var8.field_ic;
           if (var8.field_Hb) {
-            this.field_l.a(2, tj.a(-106, new String[]{var3}, na.field_Sb), (byte) -26);
-            this.field_l.a(3, tj.a(-91, new String[]{var3}, ValidationStatusIcon.field_I), (byte) -26);
+            this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(-106, new String[]{var3}, LobbyGameEntry.field_Sb), (byte) -26);
+            this.field_l.addAction(3, CachedArchiveProvider.formatTemplate(-91, new String[]{var3}, ValidationStatusIcon.field_I), (byte) -26);
             return;
           }
           if (var8.field_Ob) {
-            this.field_l.a(2, tj.a(118, new String[]{var3}, ec.field_a), (byte) -26);
+            this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(118, new String[]{var3}, ec.field_a), (byte) -26);
           } else {
             if (!var8.field_Nb &&
               var8.field_kc &&
               (!var8.field_Lb ||
               var8.field_Ob)) {
-              this.field_l.a(2, tj.a(-53, new String[]{var3}, bm.field_i), (byte) -26);
+              this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(-53, new String[]{var3}, bm.field_i), (byte) -26);
             }
           }
           if (!var8.field_Nb) {
@@ -350,20 +350,20 @@ final class ne {
           }
           var3 = var7.field_ic;
           if (var7.field_Hb) {
-            this.field_l.a(2, tj.a(-106, new String[]{var3}, na.field_Sb), (byte) -26);
-            this.field_l.a(3, tj.a(-91, new String[]{var3}, ValidationStatusIcon.field_I), (byte) -26);
+            this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(-106, new String[]{var3}, LobbyGameEntry.field_Sb), (byte) -26);
+            this.field_l.addAction(3, CachedArchiveProvider.formatTemplate(-91, new String[]{var3}, ValidationStatusIcon.field_I), (byte) -26);
             return;
           }
           if (var7.field_Ob) {
-            this.field_l.a(2, tj.a(118, new String[]{var3}, ec.field_a), (byte) -26);
+            this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(118, new String[]{var3}, ec.field_a), (byte) -26);
           } else {
             if (!var7.field_Nb &&
               var7.field_kc) {
               if (!var7.field_Lb) {
-                this.field_l.a(2, tj.a(-53, new String[]{var3}, bm.field_i), (byte) -26);
+                this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(-53, new String[]{var3}, bm.field_i), (byte) -26);
               } else {
                 if (var7.field_Ob) {
-                  this.field_l.a(2, tj.a(-53, new String[]{var3}, bm.field_i), (byte) -26);
+                  this.field_l.addAction(2, CachedArchiveProvider.formatTemplate(-53, new String[]{var3}, bm.field_i), (byte) -26);
                 }
               }
             }
@@ -372,7 +372,7 @@ final class ne {
             return;
           }
         }
-        this.field_l.a(3, tj.a(-82, new String[]{var3}, hl.field_h), (byte) -26);
+        this.field_l.addAction(3, CachedArchiveProvider.formatTemplate(-82, new String[]{var3}, hl.field_h), (byte) -26);
     }
 
     final void a(int param0, boolean param1) {
@@ -404,31 +404,31 @@ final class ne {
             var6 = sa.a(this.field_h, param2 ^ 333) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_l.a(4, tj.a(param2 - 80, new String[]{var8}, ArcanistsMulti.field_F), (byte) -26);
-              this.field_l.a(6, tj.a(-108, new String[]{var8}, tn.field_Lb), (byte) -26);
+              this.field_l.addAction(4, CachedArchiveProvider.formatTemplate(param2 - 80, new String[]{var8}, ArcanistsMulti.field_F), (byte) -26);
+              this.field_l.addAction(6, CachedArchiveProvider.formatTemplate(-108, new String[]{var8}, tn.field_Lb), (byte) -26);
               if (param1 != null &&
                 param0 != 2 &&
                 !wh.field_g) {
                 this.field_m = param1;
-                this.field_l.a(19, tj.a(-25, new String[]{var8}, MidiPcmStream.field_O), (byte) -26);
+                this.field_l.addAction(19, CachedArchiveProvider.formatTemplate(-25, new String[]{var8}, MidiPcmStream.field_O), (byte) -26);
               }
             }
             if (var5 != null) {
               if (!PasswordFieldPainter.a(this.field_h, -31046) &&
                 !wh.field_g) {
                 if (!AlternateUsernameCredentials.field_p) {
-                  this.field_l.a(8, tj.a(-94, new String[]{var8}, mb.field_S), (byte) -26);
+                  this.field_l.addAction(8, CachedArchiveProvider.formatTemplate(-94, new String[]{var8}, mb.field_S), (byte) -26);
                 }
-                this.field_l.a(18, tj.a(127, new String[]{var8}, bh.field_b), (byte) -26);
+                this.field_l.addAction(18, CachedArchiveProvider.formatTemplate(127, new String[]{var8}, bh.field_b), (byte) -26);
                 if (param1 != null) {
                   this.field_m = param1;
-                  this.field_l.a(19, tj.a(-98, new String[]{var8}, MidiPcmStream.field_O), (byte) -26);
+                  this.field_l.addAction(19, CachedArchiveProvider.formatTemplate(-98, new String[]{var8}, MidiPcmStream.field_O), (byte) -26);
                 }
               }
-              this.field_l.a(5, tj.a(param2 - 48, new String[]{var8}, LabeledField.field_F), (byte) -26);
+              this.field_l.addAction(5, CachedArchiveProvider.formatTemplate(param2 - 48, new String[]{var8}, LabeledField.field_F), (byte) -26);
             }
             if (var6 != 0) {
-              this.field_l.a(7, tj.a(126, new String[]{var8}, ja.field_t), (byte) -26);
+              this.field_l.addAction(7, CachedArchiveProvider.formatTemplate(126, new String[]{var8}, ja.field_t), (byte) -26);
             }
           }
           if (param2 == 13) {
@@ -461,7 +461,7 @@ final class ne {
           return true;
         }
         if (param2 == 1) {
-          na.a(this.field_d, 126, param0);
+          LobbyGameEntry.a(this.field_d, 126, param0);
           return true;
         }
         if (param2 == 2) {
@@ -561,7 +561,7 @@ final class ne {
         if (this.field_l == null) {
           return false;
         }
-        if (this.field_l.e(param0 ^ -22615)) {
+        if (this.field_l.handleEscape(param0 ^ -22615)) {
           return true;
         }
         return false;
@@ -582,7 +582,7 @@ final class ne {
 
     ne(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_l = new pe(ml.field_H);
+          this.field_l = new ContextActionMenu(ml.field_H);
           param0.field_ab = true;
           this.field_i = param5;
           this.field_m = param6;

@@ -36,8 +36,8 @@ final class fn {
           ih.field_d.setBounds(var11, -5 + (var9_int - var11), var10, param3, (byte) -120);
           ValidatedTextWidget.field_U.setBounds(var9_int, 0, 0, param0, (byte) -120);
           var12 = var10 + param3 + 5;
-          in.field_Jb.setBounds(var9_int, 0, param0, var12, (byte) -120);
-          in.field_Jb.field_v = of.a(3, in.field_Jb.field_I, 1, 2105376, 11579568, 8421504);
+          SceneScrollbar.field_Jb.setBounds(var9_int, 0, param0, var12, (byte) -120);
+          SceneScrollbar.field_Jb.field_v = of.a(3, SceneScrollbar.field_Jb.field_I, 1, 2105376, 11579568, 8421504);
           var12 = var12 + param0;
           tm.field_d.setBounds(var9_int, -(var9_int / 2) + param7, param8 - var12 / 2, var12, (byte) -120);
         } catch (RuntimeException runtimeException) {
@@ -144,7 +144,7 @@ final class fn {
         int var10;
         int var11;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
-        if (!param3 && (fh.field_g != SoftwareRasterizer.field_e ||
+        if (!param3 && (SecondaryNodeDequeIterator.field_g != SoftwareRasterizer.field_e ||
           ri.field_a != SoftwareRasterizer.field_j) && (SoftwareRasterizer.field_j == ce.field_m.field_m &&
           SoftwareRasterizer.field_e == ce.field_m.field_e)) {
           if (DirectByteStorage.field_f != null) {
@@ -158,7 +158,7 @@ final class fn {
           }
         }
         if (!param3) {
-          sa.field_Hb = (fh.field_g - 640) / 2;
+          sa.field_Hb = (SecondaryNodeDequeIterator.field_g - 640) / 2;
         } else {
           sa.field_Hb = LoginCredentials.field_a;
         }
@@ -166,8 +166,8 @@ final class fn {
         if (ce.field_h > 0) {
           ValidationState.a(param1, param3, 4, param7);
         }
-        jf.field_d.field_X = 1;
-        jf.field_d.field_t = BevelBoxPainter.field_f.field_t;
+        NodeHashTableIterator.field_d.field_X = 1;
+        NodeHashTableIterator.field_d.field_t = BevelBoxPainter.field_f.field_t;
         if (sm.field_a > 0) {
           ng.a(param3, param7, param1, 118);
         }
@@ -185,21 +185,21 @@ final class fn {
           fn.a(param2, nj.field_m, param6, param7, true);
         }
         var10 = -105 / ((-23 - param9) / 50);
-        pe.a(param7, param2, param5, 0, param4, param8, param6);
+        ContextActionMenu.a(param7, param2, param5, 0, param4, param8, param6);
         fn.a(param2, lf.field_b, param6, param7, true);
         sb.field_e = sb.field_e + 1;
     }
 
-    final static cg lookupEntry(long param0, int param1) {
+    final static SocialListEntry lookupEntry(long param0, int param1) {
         if (param1 < 109) {
-          return (cg) null;
+          return (SocialListEntry) null;
         }
-        return (cg) (bc.field_c.get(param0, (byte) -63));
+        return (SocialListEntry) (bc.field_c.get(param0, (byte) -63));
     }
 
-    private final static void a(int param0, dn param1, boolean param2, int param3, boolean param4) {
+    private final static void a(int param0, SceneScrollPane param1, boolean param2, int param3, boolean param4) {
         int var27_int = 0;
-        dn stackIn_43_0 = null;
+        SceneScrollPane stackIn_43_0 = null;
         boolean stackIn_44_1 = false;
         int stackIn_47_0 = 0;
         int stackIn_61_0 = 0;
@@ -220,7 +220,7 @@ final class fn {
         IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
-        cg var12 = null;
+        SocialListEntry var12 = null;
         int var13 = 0;
         SceneWidget var14 = null;
         SceneWidget var15 = null;
@@ -269,20 +269,20 @@ final class fn {
             fn.releaseStatics((byte) -126);
           }
           var8 = 0;
-          if (DirectByteStorage.field_f != null && (dh.field_Hb != null ||
-            pe.field_Fb != null ||
+          if (DirectByteStorage.field_f != null && (SceneTextInput.field_Hb != null ||
+            ContextActionMenu.field_Fb != null ||
             CanvasRasterBuffer.field_a != null ||
             null != ue.field_b)) {
             for (var9 = 0; var9 < vf.field_l; var9++) {
               var10_int = 255 & DirectByteStorage.field_f.field_Wb[var9];
-              if (null != dh.field_Hb &&
-                null != dh.field_Hb[var9] &&
-                dh.field_Hb[var9][var10_int]) {
+              if (null != SceneTextInput.field_Hb &&
+                null != SceneTextInput.field_Hb[var9] &&
+                SceneTextInput.field_Hb[var9][var10_int]) {
                 var5_int = 1;
               }
-              if (pe.field_Fb != null &&
-                pe.field_Fb[var9] != null) {
-                var11_int = pe.field_Fb[var9][var10_int];
+              if (ContextActionMenu.field_Fb != null &&
+                ContextActionMenu.field_Fb[var9] != null) {
+                var11_int = ContextActionMenu.field_Fb[var9][var10_int];
                 if (var11_int != 0 &&
                   !LinkButtonPainter.field_c) {
                   var5_int = 1;
@@ -308,13 +308,13 @@ final class fn {
               }
             }
           }
-          stackIn_43_0 = (dn) (param1);
+          stackIn_43_0 = (SceneScrollPane) (param1);
           stackIn_44_1 = (dd.field_h == param1);
-          stackIn_47_0 = (!((dn) (Object) stackIn_43_0).a(stackIn_44_1, (byte) 98, 2 * (ImageProducerRasterBuffer.field_r + 2), 2, (8 + 4 * ImageProducerRasterBuffer.field_r) * param0, param2)) ? 0 : 1;
+          stackIn_47_0 = (!((SceneScrollPane) (Object) stackIn_43_0).relayout(stackIn_44_1, (byte) 98, 2 * (ImageProducerRasterBuffer.field_r + 2), 2, (8 + 4 * ImageProducerRasterBuffer.field_r) * param0, param2)) ? 0 : 1;
           var9Lifetime1 = stackIn_47_0;
           var10 = param1.field_Cb.field_G;
           var11 = null;
-          var12 = (cg) (var10.first(12623));
+          var12 = (SocialListEntry) (var10.first(12623));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_G == null) {
@@ -378,7 +378,7 @@ final class fn {
             }
             boolean decompiledFrameRemainder0 = true;
             var12.field_Fb.field_rb = var20;
-            if (!var12.e(183874081)) {
+            if (!var12.isUnlisted(183874081)) {
               var23_int = 16764006;
               var24_int = 16777215;
               if (var5_int != 0 &&
@@ -410,12 +410,12 @@ final class fn {
                   if (!var12.field_Kb) {
                     var12.field_Hb.field_rb = ah.field_a;
                   } else {
-                    var12.field_Fb.field_rb = tj.a(-37, new String[]{var20}, TextFieldValidator.field_n);
-                    var12.field_Hb.field_rb = dh.field_Nb;
+                    var12.field_Fb.field_rb = CachedArchiveProvider.formatTemplate(-37, new String[]{var20}, TextFieldValidator.field_n);
+                    var12.field_Hb.field_rb = SceneTextInput.field_Nb;
                     var12.field_Ub.field_rb = qc.field_f;
                   }
                 } else {
-                  var12.field_Fb.field_rb = tj.a(-123, new String[]{var20}, mf.field_h);
+                  var12.field_Fb.field_rb = CachedArchiveProvider.formatTemplate(-123, new String[]{var20}, mf.field_h);
                   var12.field_Ub.field_rb = sa.field_Eb;
                 }
               }
@@ -424,7 +424,7 @@ final class fn {
                 ContentTransitionDialog.k((byte) 110) &&
                 ~qf.field_a != ~var12.field_Nb) {
                 if (var12.field_Hb.field_rb != null) {
-                  var26 = var12.field_Hb.getContentWidth(-25921) + dh.field_Gb * 2;
+                  var26 = var12.field_Hb.getContentWidth(-25921) + SceneTextInput.field_Gb * 2;
                   var12.field_Hb.setBounds(var26, var25_int, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
                   var25_int = var25_int + var26;
                 }
@@ -432,7 +432,7 @@ final class fn {
                   if (param1 == lf.field_b) {
                     var26Lifetime2 = 40;
                   } else {
-                    var26Lifetime2 = var12.field_Ub.getContentWidth(-25921) + dh.field_Gb * 2;
+                    var26Lifetime2 = var12.field_Ub.getContentWidth(-25921) + SceneTextInput.field_Gb * 2;
                   }
                   var12.field_Ub.setBounds(var26Lifetime2, var25_int, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
                   var25_int = var25_int + var26Lifetime2;
@@ -472,10 +472,10 @@ final class fn {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_Cb.field_Z.wrappedLineCount(var23, var12.field_x - (dh.field_Gb + dh.field_Gb));
+              var24_intLifetime1 = var12.field_Cb.field_Z.wrappedLineCount(var23, var12.field_x - (SceneTextInput.field_Gb + SceneTextInput.field_Gb));
               var12.field_Cb.field_rb = var23;
               var12.field_Cb.field_u = var12.field_Eb * 256 / TextLine.field_i;
-              var12.field_Cb.setBounds(-(dh.field_Gb * 2) + var12.field_x, dh.field_Gb, var19, ImageProducerRasterBuffer.field_r * var24_intLifetime1, (byte) -120);
+              var12.field_Cb.setBounds(-(SceneTextInput.field_Gb * 2) + var12.field_x, SceneTextInput.field_Gb, var19, ImageProducerRasterBuffer.field_r * var24_intLifetime1, (byte) -120);
               var19 = var19 + var24_intLifetime1 * ImageProducerRasterBuffer.field_r;
             }
             if (var9Lifetime1 == 0) {
@@ -485,20 +485,20 @@ final class fn {
               param1.field_Cb.positionAfter((byte) 119, (SceneWidget) (var11), var12, 2);
             }
             if (var12.field_U != 0 &&
-              !var12.e(183874081)) {
+              !var12.isUnlisted(183874081)) {
               if (var12.field_Hb.field_U != 0) {
                 qo.a(param3, (byte) -85, var12.field_Nb);
               } else {
                 if (var12.field_Ub.field_U == 0) {
                   StatefulTextPainter.a(0, var12, 3, pb.field_h, param1, 0, ja.field_s);
                 } else {
-                  na.a(var12.field_Nb, -89, param3);
+                  LobbyGameEntry.a(var12.field_Nb, -89, param3);
                 }
               }
             }
             var11 = var12;
             if (var12.field_A &&
-              !var12.e(183874081)) {
+              !var12.isUnlisted(183874081)) {
               var24Lifetime2 = null;
               if (~var12.field_Nb == ~qf.field_a) {
                 if (var5_int != 0 &&
@@ -510,7 +510,7 @@ final class fn {
                     if (var25_int == 1) {
                       var24Lifetime2 = kj.field_a;
                     }
-                    var24Lifetime2 = tj.a(117, new String[]{null, Integer.toString(var25_int)}, UiContainer.field_A);
+                    var24Lifetime2 = CachedArchiveProvider.formatTemplate(117, new String[]{null, Integer.toString(var25_int)}, UiContainer.field_A);
                     var30Lifetime1 = var24Lifetime2;
                     var25 = var30Lifetime1;
                     var24Lifetime2 = var25;
@@ -518,11 +518,11 @@ final class fn {
                     var25 = var30Lifetime1Lifetime1;
                   } else {
                     if (var6 > var12.field_Pb) {
-                      var24Lifetime2 = tj.a(-24, new String[]{null, Integer.toString(var6)}, SceneWidgetNode.field_n);
+                      var24Lifetime2 = CachedArchiveProvider.formatTemplate(-24, new String[]{null, Integer.toString(var6)}, SceneWidgetNode.field_n);
                     } else {
                       if ((var8 & ~var12.field_Bb) != 0) {
                         var25_int = bj.a(~var12.field_Bb & var8, (byte) 108);
-                        var24Lifetime2 = cg.field_Rb;
+                        var24Lifetime2 = SocialListEntry.field_Rb;
                         if (var25_int > 0 &&
                           null != Scrollbar.field_P &&
                           var25_int <= Scrollbar.field_P.length &&
@@ -536,26 +536,26 @@ final class fn {
               } else {
                 if (var5_int != 0 &&
                   !var12.field_Jb) {
-                  var24Lifetime2 = tj.a(-39, new String[]{var20}, UiComponent.field_p);
+                  var24Lifetime2 = CachedArchiveProvider.formatTemplate(-39, new String[]{var20}, UiComponent.field_p);
                 } else {
                   if (var7 > var12.field_Vb) {
                     var25_int = var7 - var12.field_Vb;
                     if (var25_int == 1) {
-                      var24Lifetime2 = tj.a(-115, new String[]{var20}, nm.field_g);
+                      var24Lifetime2 = CachedArchiveProvider.formatTemplate(-115, new String[]{var20}, nm.field_g);
                     }
-                    var24Lifetime2 = tj.a(127, new String[]{var20, Integer.toString(var25_int)}, IndexedSpriteState.field_b);
+                    var24Lifetime2 = CachedArchiveProvider.formatTemplate(127, new String[]{var20, Integer.toString(var25_int)}, IndexedSpriteState.field_b);
                   } else {
                     if (var12.field_Pb < var6) {
-                      var24Lifetime2 = tj.a(126, new String[]{var20, Integer.toString(var6)}, um.field_c);
+                      var24Lifetime2 = CachedArchiveProvider.formatTemplate(126, new String[]{var20, Integer.toString(var6)}, um.field_c);
                     } else {
                       if ((var8 & ~var12.field_Bb) != 0) {
                         var25_int = bj.a(~var12.field_Bb & var8, (byte) 96);
-                        var24Lifetime2 = tj.a(116, new String[]{var20}, nm.field_a);
+                        var24Lifetime2 = CachedArchiveProvider.formatTemplate(116, new String[]{var20}, nm.field_a);
                         if (var25_int > 0 &&
                           null != Scrollbar.field_P &&
                           Scrollbar.field_P.length >= var25_int &&
                           null != Scrollbar.field_P[var25_int - 1]) {
-                          var24Lifetime2 = tj.a(-80, new String[]{var20}, Scrollbar.field_P[var25_int - 1][2]);
+                          var24Lifetime2 = CachedArchiveProvider.formatTemplate(-80, new String[]{var20}, Scrollbar.field_P[var25_int - 1][2]);
                         }
                       }
                     }
@@ -574,15 +574,15 @@ final class fn {
                 for (var27_int = 0; var27_int < vf.field_l; var27_int++) {
                   var28 = DirectByteStorage.field_f.field_Wb[var27_int] & 255;
                   var29 = 0;
-                  if (null != dh.field_Hb &&
-                    null != dh.field_Hb[var27_int] &&
-                    dh.field_Hb[var27_int][var28] &&
+                  if (null != SceneTextInput.field_Hb &&
+                    null != SceneTextInput.field_Hb[var27_int] &&
+                    SceneTextInput.field_Hb[var27_int][var28] &&
                     !var12.field_Jb) {
                     var29 = 1;
                   }
-                  if (pe.field_Fb != null &&
-                    pe.field_Fb[var27_int] != null) {
-                    var30_int = pe.field_Fb[var27_int][var28];
+                  if (ContextActionMenu.field_Fb != null &&
+                    ContextActionMenu.field_Fb[var27_int] != null) {
+                    var30_int = ContextActionMenu.field_Fb[var27_int][var28];
                     if (var30_int != 0 &&
                       !LinkButtonPainter.field_c &&
                       !var12.field_Jb) {
@@ -627,7 +627,7 @@ final class fn {
                 if (lf.field_b == param1 &&
                   ContentTransitionDialog.k((byte) 101)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + tj.a(119, new String[]{(String) (var25)}, vg.field_t);
+                    var24Lifetime2 = var34 + "<br>" + CachedArchiveProvider.formatTemplate(119, new String[]{(String) (var25)}, vg.field_t);
                   } else {
                     var24Lifetime2 = var34 + "<br>" + ie.field_Ub + (String) (var25);
                   }
@@ -635,18 +635,18 @@ final class fn {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + LoginCredentials.field_d + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + tj.a(-18, new String[]{(String) (var25)}, NumericDateInputWidget.field_I);
+                    var24Lifetime2 = var34 + "<br>" + CachedArchiveProvider.formatTemplate(-18, new String[]{(String) (var25)}, NumericDateInputWidget.field_I);
                   }
                 }
                 if (lf.field_b == param1 &&
                   !ContentTransitionDialog.k((byte) 72)) {
                   var27 = DirectByteStorage.field_f.field_ic;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + tj.a(126, new String[]{var27}, ArchiveProvider.field_c);
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + CachedArchiveProvider.formatTemplate(126, new String[]{var27}, ArchiveProvider.field_c);
                 }
                 TextLayout.field_c = (String) (var24Lifetime2);
               }
             }
-            var12 = (cg) (var10.next(0));
+            var12 = (SocialListEntry) (var10.next(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

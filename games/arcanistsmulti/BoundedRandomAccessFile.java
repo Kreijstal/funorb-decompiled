@@ -10,7 +10,7 @@ final class BoundedRandomAccessFile {
     private long field_b;
     private long field_a;
 
-    final void c(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         int var2 = -83 % ((param0 - 52) / 34);
         if (this.field_d != null) {
           this.field_d.close();
@@ -18,7 +18,7 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] buildPaletteRamp(int param0, int param1, int param2) {
         int var10 = 0;
         int var11 = 0;
         int var12 = ArcanistsMulti.field_G ? 1 : 0;
@@ -48,7 +48,7 @@ final class BoundedRandomAccessFile {
           return;
         }
         co.field_f.updateInputFullScreen(param0, (byte) 75);
-        var4 = CacheEntry.field_q.f((byte) 93) ? 1 : 0;
+        var4 = CacheEntry.field_q.isAnyTabActive((byte) 93) ? 1 : 0;
         if (re.field_r != 0 &&
           var4 == 0) {
           param0 = false;
@@ -56,7 +56,7 @@ final class BoundedRandomAccessFile {
         }
         if (!param0) {
           if (var4 == 0) {
-            var5 = CacheEntry.field_q.f(0) + CacheEntry.field_q.field_V;
+            var5 = CacheEntry.field_q.totalHeight(0) + CacheEntry.field_q.field_V;
             if (var5 > 640) {
               ng.field_K = ng.field_K + 5;
               return;
@@ -72,12 +72,12 @@ final class BoundedRandomAccessFile {
           }
           co.field_f.updateInputFullScreen(param0, (byte) 66);
         } else {
-          CacheEntry.field_q.a(param1, -10284, param3);
+          CacheEntry.field_q.updateTabs(param1, -10284, param3);
           if (var4 != 0) {
             co.field_f.updateInputFullScreen(param0, (byte) 66);
           }
         }
-        var5Lifetime1 = CacheEntry.field_q.f(0) + CacheEntry.field_q.field_V;
+        var5Lifetime1 = CacheEntry.field_q.totalHeight(0) + CacheEntry.field_q.field_V;
         if (var5Lifetime1 > 640) {
           ng.field_K = ng.field_K + 5;
           return;
@@ -92,7 +92,7 @@ final class BoundedRandomAccessFile {
         return;
     }
 
-    final int a(byte[] param0, boolean param1, int param2, int param3) throws IOException {
+    final int read(byte[] param0, boolean param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
@@ -126,7 +126,7 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final long a(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != -2775) {
           BoundedRandomAccessFile.a(true, 53, -119, -107);
           return this.field_d.length();
@@ -134,7 +134,7 @@ final class BoundedRandomAccessFile {
         return this.field_d.length();
     }
 
-    final void a(byte param0, long param1) throws IOException {
+    final void seek(byte param0, long param1) throws IOException {
         this.field_d.seek(param1);
         if (param0 == -123) {
           this.field_a = param1;
@@ -147,14 +147,14 @@ final class BoundedRandomAccessFile {
     protected final void finalize() throws Throwable {
         if (this.field_d != null) {
           System.out.println("");
-          this.c(87);
+          this.close(87);
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         try {
           if (param0 != 1) {
-            BoundedRandomAccessFile.a(86, -91, -113);
+            BoundedRandomAccessFile.buildPaletteRamp(86, -91, -113);
           }
           if (this.field_b < this.field_a + (long)param2) {
             this.field_d.seek(this.field_b);

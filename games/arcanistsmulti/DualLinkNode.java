@@ -60,7 +60,7 @@ class DualLinkNode extends IntrusiveNode {
           var4 = var3;
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
-            var7 = IntrusiveNodeHashTable.a(var6, 45);
+            var7 = IntrusiveNodeHashTable.validateEmailDomain(var6, 45);
             if (var7 != null) {
               stackIn_21_0 = var7;
               return stackIn_21_0;

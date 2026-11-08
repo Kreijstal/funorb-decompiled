@@ -120,7 +120,7 @@ final class th {
           aa.loadCommonUiSprites(param3 ^ -121, param2, param1, param0);
           ci.a((byte) 50);
           hb.field_Gb = ScreenDisplayMode.field_h;
-          in.field_Gb = ScreenDisplayMode.field_h;
+          SceneScrollbar.field_Gb = ScreenDisplayMode.field_h;
           if (param3 != -40) {
             field_c = (SceneWidget) null;
           }

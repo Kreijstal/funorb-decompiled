@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nl extends SceneWidget {
+final class IconTextSceneWidget extends SceneWidget {
     static am field_Ib;
     static String field_Bb;
     private SceneWidget field_Cb;
@@ -12,7 +12,7 @@ final class nl extends SceneWidget {
     static java.math.BigInteger field_Jb;
     static hb field_Gb;
 
-    final static void b(int param0, int param1, int param2) {
+    final static void setViewSize(int param0, int param1, int param2) {
         if (param1 != 19129) {
           return;
         }
@@ -25,21 +25,21 @@ final class nl extends SceneWidget {
 
     final static ConditionalTextValue f(byte param0) {
         if (param0 == 13) {
-          return new ConditionalTextValue(k.a(param0 ^ 13), ImageProducerRasterBuffer.b(3236));
+          return new ConditionalTextValue(BufferedSocket.a(param0 ^ 13), ImageProducerRasterBuffer.b(3236));
         }
         field_Hb = (String) null;
-        return new ConditionalTextValue(k.a(param0 ^ 13), ImageProducerRasterBuffer.b(3236));
+        return new ConditionalTextValue(BufferedSocket.a(param0 ^ 13), ImageProducerRasterBuffer.b(3236));
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.setBounds(param3, param4, param5, param2, (byte) -120);
-        this.a(param0, param6, false);
+        this.layoutIconAndText(param0, param6, false);
         if (param1 != 0) {
-          this.a(38, -70, true);
+          this.layoutIconAndText(38, -70, true);
         }
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int contentWidth(int param0, int param1, int param2) {
         int var5 = -36 % ((param2 - 17) / 45);
         int var4 = -param0;
         int var6 = -param0;
@@ -52,7 +52,7 @@ final class nl extends SceneWidget {
         return param1 + (var6 + var4 + param1) + param0;
     }
 
-    final static Sprite[] a(byte param0, ResourceArchive param1, String param2, String param3) {
+    final static Sprite[] loadSpritesByName(byte param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -69,8 +69,8 @@ final class nl extends SceneWidget {
           if (param0 != 31) {
             field_Hb = (String) null;
           }
-          var4_int = param1.c(param3, param0 ^ 65);
-          var5 = param1.a(param2, (byte) 29, var4_int);
+          var4_int = param1.getGroupProgressByName(param3, param0 ^ 65);
+          var5 = param1.getFileId(param2, (byte) 29, var4_int);
           stackIn_3_0 = om.a(var5, var4_int, (byte) -123, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -112,7 +112,7 @@ final class nl extends SceneWidget {
         }
     }
 
-    nl(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, Sprite param4, String param5) {
+    IconTextSceneWidget(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -179,7 +179,7 @@ final class nl extends SceneWidget {
         }
     }
 
-    private final void a(int param0, int param1, boolean param2) {
+    private final void layoutIconAndText(int param0, int param1, boolean param2) {
         int var4;
         int var5;
         int var6;

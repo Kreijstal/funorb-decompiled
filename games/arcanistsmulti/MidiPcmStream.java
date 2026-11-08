@@ -405,7 +405,7 @@ final class MidiPcmStream extends PcmStream {
             var10 = (int)var9.key;
             var11 = (MusicPatch) (this.field_F.a((long)var10, -102));
             if (var11 == null) {
-              var11 = IntrusiveNodeHashTable.a((byte) -127, param2, var10);
+              var11 = IntrusiveNodeHashTable.loadMusicPatch((byte) -127, param2, var10);
               if (var11 != null) {
                 this.field_F.a(var11, true, (long)var10);
               } else {

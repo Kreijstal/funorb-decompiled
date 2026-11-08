@@ -98,7 +98,7 @@ final class vl extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, ij param1) {
+    final static void a(byte param0, SceneTabbedPanel param1) {
         try {
           int var2_int = 72 % ((param0 - 77) / 38);
           co.field_f.addChild(param1, 9);
@@ -178,8 +178,8 @@ final class vl extends IntrusiveNode {
           lo.field_q = 120 * lo.field_q / 128;
         }
         if (param0 != 128) {
-          ij var2 = (ij) null;
-          vl.a((byte) 37, (ij) null);
+          SceneTabbedPanel var2 = (SceneTabbedPanel) null;
+          vl.a((byte) 37, (SceneTabbedPanel) null);
         }
     }
 

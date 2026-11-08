@@ -45,8 +45,8 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static void a(int param0, byte param1, boolean param2, na param3, int param4, int param5, int param6, int param7) {
-        nl[][] stackIn_6_0 = null;
+    final static void a(int param0, byte param1, boolean param2, LobbyGameEntry param3, int param4, int param5, int param6, int param7) {
+        IconTextSceneWidget[][] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_26_0 = 0;
         int stackIn_27_1 = 0;
@@ -57,7 +57,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         String stackIn_107_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
-        nl[] var8 = null;
+        IconTextSceneWidget[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
         int[] var10 = null;
@@ -65,11 +65,11 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        nl var13_ref_nl = null;
+        IconTextSceneWidget var13_ref_nl = null;
         int var14 = 0;
         int var15 = 0;
-        nl[] var16 = null;
-        nl[] var17 = null;
+        IconTextSceneWidget[] var16 = null;
+        IconTextSceneWidget[] var17 = null;
         int[] var18 = null;
         int[] var19 = null;
         int var10_intLifetime1;
@@ -173,7 +173,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 var9 = 0;
                 break;
               }
-              param7 = param7 + (in.field_Nb[param6] & 255);
+              param7 = param7 + (SceneScrollbar.field_Nb[param6] & 255);
             }
           }
           var10_intLifetime1 = 0;

@@ -110,8 +110,8 @@ final class BevelBoxPainter implements WidgetPainter {
         try {
           if (null != IntrusiveNode.field_f) {
             try {
-              IntrusiveNode.field_f.a(0L, -101);
-              IntrusiveNode.field_f.a((byte) -53, UiContainer.field_z.position, UiContainer.field_z.payload, 24);
+              IntrusiveNode.field_f.seek(0L, -101);
+              IntrusiveNode.field_f.write((byte) -53, UiContainer.field_z.position, UiContainer.field_z.payload, 24);
             } catch (Exception exception) {
             }
           }

@@ -13,7 +13,7 @@ final class ClientException extends RuntimeException {
     static String field_h;
     static int field_e;
 
-    final static boolean a(int param0, String param1) {
+    final static boolean containsFilterWord(int param0, String param1) {
         RuntimeException var2 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
@@ -57,7 +57,7 @@ final class ClientException extends RuntimeException {
           return;
         }
         String var10 = (String) null;
-        ClientException.a(2, (String) null);
+        ClientException.containsFilterWord(2, (String) null);
         he.field_e.writeOpcode((byte) -124, 58);
         he.field_e.writeByte(param0, (byte) -82);
         he.field_e.writeShort(param6, (byte) -68);

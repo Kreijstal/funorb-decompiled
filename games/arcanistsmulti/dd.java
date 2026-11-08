@@ -10,7 +10,7 @@ final class dd {
     static int field_j;
     static volatile int field_i;
     static String field_a;
-    static dn field_h;
+    static SceneScrollPane field_h;
     static hb field_c;
 
     final static boolean isPasswordAcceptable(int param0, String param1, String param2) {
@@ -43,7 +43,7 @@ final class dd {
           if (sm.passwordContainsName(22230, param1, param2)) {
             return false;
           }
-          if (!w.a(param2, param1, 0)) {
+          if (!ChatInputWidget.a(param2, param1, 0)) {
             return true;
           }
           return false;

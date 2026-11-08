@@ -3,7 +3,7 @@
  */
 final class qo {
     static String field_d;
-    static dn field_f;
+    static SceneScrollPane field_f;
     static int field_e;
     static int field_b;
     static String field_c;
@@ -45,32 +45,32 @@ final class qo {
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var4Lifetime1;
-        jf.field_a.position = 0;
-        jf.field_a.writeByte(12, (byte) -45);
-        jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
-        jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
-        jf.field_a.writeByte(param0, (byte) -10);
+        NodeHashTableIterator.field_a.position = 0;
+        NodeHashTableIterator.field_a.writeByte(12, (byte) -45);
+        NodeHashTableIterator.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
+        NodeHashTableIterator.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
+        NodeHashTableIterator.field_a.writeByte(param0, (byte) -10);
         if (param3 < -125) {
-          jf.field_a.writeByte(param1, (byte) -50);
-          jf.field_a.writeShort(param2, (byte) -66);
-          jf.field_a.rsaEncrypt(DropTargetWidget.field_K, (byte) 98, nl.field_Jb);
+          NodeHashTableIterator.field_a.writeByte(param1, (byte) -50);
+          NodeHashTableIterator.field_a.writeShort(param2, (byte) -66);
+          NodeHashTableIterator.field_a.rsaEncrypt(DropTargetWidget.field_K, (byte) 98, IconTextSceneWidget.field_Jb);
           he.field_e.writeOpcode((byte) -25, 18);
           fieldTemp$0 = he.field_e.position + 1;
           he.field_e.position = he.field_e.position + 1;
           var4 = fieldTemp$0;
-          he.field_e.writeBytes(jf.field_a.payload, 0, (byte) -86, jf.field_a.position);
+          he.field_e.writeBytes(NodeHashTableIterator.field_a.payload, 0, (byte) -86, NodeHashTableIterator.field_a.position);
           he.field_e.writeByteLengthAtMark(he.field_e.position - var4, (byte) 43);
           return;
         }
         qo.a(5, 14, 54, (byte) 68);
-        jf.field_a.writeByte(param1, (byte) -50);
-        jf.field_a.writeShort(param2, (byte) -66);
-        jf.field_a.rsaEncrypt(DropTargetWidget.field_K, (byte) 98, nl.field_Jb);
+        NodeHashTableIterator.field_a.writeByte(param1, (byte) -50);
+        NodeHashTableIterator.field_a.writeShort(param2, (byte) -66);
+        NodeHashTableIterator.field_a.rsaEncrypt(DropTargetWidget.field_K, (byte) 98, IconTextSceneWidget.field_Jb);
         he.field_e.writeOpcode((byte) -25, 18);
         int fieldTemp$1 = he.field_e.position + 1;
         he.field_e.position = he.field_e.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        he.field_e.writeBytes(jf.field_a.payload, 0, (byte) -86, jf.field_a.position);
+        he.field_e.writeBytes(NodeHashTableIterator.field_a.payload, 0, (byte) -86, NodeHashTableIterator.field_a.position);
         he.field_e.writeByteLengthAtMark(he.field_e.position - var4Lifetime1, (byte) 43);
     }
 

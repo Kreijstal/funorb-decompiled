@@ -28,7 +28,7 @@ final class ArchiveIndex {
     IntKeyLookup field_l;
     static String field_v;
 
-    private final void a(byte[] param0, int param1) {
+    private final void decode(byte[] param0, int param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int[] array$2 = null;
@@ -257,12 +257,12 @@ final class ArchiveIndex {
         field_j = null;
         if (param0 != 0) {
           ViewportController var2 = (ViewportController) null;
-          ArchiveIndex.a(2, (ViewportController) null);
+          ArchiveIndex.setViewportController(2, (ViewportController) null);
         }
         field_v = null;
     }
 
-    final static String a(int param0, jg param1) {
+    final static String formatChatLine(int param0, jg param1) {
         String stackIn_33_0 = null;
         Object stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
@@ -277,7 +277,7 @@ final class ArchiveIndex {
         try {
           if (param0 != 3) {
             var5 = (jg) null;
-            ArchiveIndex.a(-73, (jg) null);
+            ArchiveIndex.formatChatLine(-73, (jg) null);
           }
           var2 = null;
           if (param1.field_g != null) {
@@ -297,7 +297,7 @@ final class ArchiveIndex {
               var3 = "[" + NanoFrameClock.field_p + "] ";
             }
             if (param1.field_m == 1) {
-              var3 = "[" + tj.a(-44, new String[]{param1.field_o}, Bzip2State.field_j) + "] ";
+              var3 = "[" + CachedArchiveProvider.formatTemplate(-44, new String[]{param1.field_o}, Bzip2State.field_j) + "] ";
             }
             if (param1.field_m == 4 &&
               null != he.field_d) {
@@ -313,9 +313,9 @@ final class ArchiveIndex {
             if (!param1.field_i) {
               if (param1.field_d == 0 &&
                 0 == param1.field_k) {
-                var3 = tj.a(param0 - 130, new String[]{(String) (var2)}, ge.field_n);
+                var3 = CachedArchiveProvider.formatTemplate(param0 - 130, new String[]{(String) (var2)}, ge.field_n);
               } else {
-                var3 = tj.a(-18, new String[]{(String) (var2)}, pk.field_f);
+                var3 = CachedArchiveProvider.formatTemplate(-18, new String[]{(String) (var2)}, IterableNodeHashTable.field_f);
               }
             }
           }
@@ -335,7 +335,7 @@ final class ArchiveIndex {
         }
     }
 
-    final static void a(int param0, ViewportController param1) {
+    final static void setViewportController(int param0, ViewportController param1) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -403,7 +403,7 @@ final class ArchiveIndex {
           } else {
             if (0 == SpriteState.field_z.field_b) {
               if ((1 << SpriteState.field_z.field_I | SpriteState.field_z.field_a) != -1 + (1 << SpriteState.field_z.field_V.s(param0 ^ 121))) {
-                ce.field_g[12] = nl.field_Bb;
+                ce.field_g[12] = IconTextSceneWidget.field_Bb;
               } else {
                 ce.field_g[12] = so.field_b;
               }
@@ -432,7 +432,7 @@ final class ArchiveIndex {
               }
             }
           }
-          this.a(param0, 12);
+          this.decode(param0, 12);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

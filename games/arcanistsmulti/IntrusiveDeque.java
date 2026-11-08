@@ -5,7 +5,7 @@ final class IntrusiveDeque {
     static int field_g;
     IntrusiveNode sentinel;
     static int field_d;
-    static in field_i;
+    static SceneScrollbar field_i;
     private IntrusiveNode traversalCursor;
     static int field_c;
     static String field_j;
@@ -49,14 +49,14 @@ final class IntrusiveDeque {
           throw new IllegalStateException();
         }
         lh.field_n = true;
-        tj.a(true, (byte) -125);
+        CachedArchiveProvider.a(true, (byte) -125);
         if (param0 != 4) {
           field_d = 12;
         }
         fj.field_j = 0;
     }
 
-    private final void a(IntrusiveDeque param0, int param1, IntrusiveNode param2) {
+    private final void insertAllBefore(IntrusiveDeque param0, int param1, IntrusiveNode param2) {
         IntrusiveNode var4 = null;
         IntrusiveNode var5 = null;
         RuntimeException stackIn_7_0 = null;
@@ -69,7 +69,7 @@ final class IntrusiveDeque {
         try {
           if (param1 != 3) {
             var5 = (IntrusiveNode) null;
-            this.a((IntrusiveNode) null, -100);
+            this.firstFrom((IntrusiveNode) null, -100);
           }
           var4 = this.sentinel.previous;
           this.sentinel.previous = param2.previous;
@@ -101,12 +101,12 @@ final class IntrusiveDeque {
         }
     }
 
-    final void a(IntrusiveDeque param0, boolean param1) {
+    final void appendAllFrom(IntrusiveDeque param0, boolean param1) {
         try {
-          this.a(param0, 3, this.sentinel.next);
+          this.insertAllBefore(param0, 3, this.sentinel.next);
           if (param1) {
             ResourceArchive var4 = (ResourceArchive) null;
-            IntrusiveDeque.a((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
+            IntrusiveDeque.areCommonUiResourcesReady((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "vn.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -224,7 +224,7 @@ final class IntrusiveDeque {
           }
           if (param3 < 102) {
             var15 = (CharSequence) null;
-            IntrusiveDeque.a((CharSequence) null, -78);
+            IntrusiveDeque.isValidDisplayNameText((CharSequence) null, -78);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -247,7 +247,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+    final IntrusiveNode firstFrom(IntrusiveNode param0, int param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -331,7 +331,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean isValidDisplayNameText(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -393,7 +393,7 @@ final class IntrusiveDeque {
         field_a = null;
         if (!param0) {
           ResourceArchive var2 = (ResourceArchive) null;
-          IntrusiveDeque.a((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
+          IntrusiveDeque.areCommonUiResourcesReady((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
         }
         field_j = null;
         field_i = null;
@@ -424,7 +424,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final static boolean a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
+    final static boolean areCommonUiResourcesReady(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -438,16 +438,16 @@ final class IntrusiveDeque {
           if (!param1) {
             IntrusiveDeque.releaseStatics(true);
           }
-          if (param3.c(-10923) &&
-            param3.a("commonui", -24417)) {
-            if (!param2.c(-10923)) {
+          if (param3.ensureIndex(-10923) &&
+            param3.isGroupAvailableByName("commonui", -24417)) {
+            if (!param2.ensureIndex(-10923)) {
               return false;
             }
-            if (!param2.a("commonui", -24417)) {
+            if (!param2.isGroupAvailableByName("commonui", -24417)) {
               return false;
             }
-            if (param0.c(-10923) &&
-              param0.a("button.gif", -24417)) {
+            if (param0.ensureIndex(-10923) &&
+              param0.isGroupAvailableByName("button.gif", -24417)) {
               return true;
             }
             return false;

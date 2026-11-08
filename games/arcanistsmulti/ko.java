@@ -96,61 +96,61 @@ final class ko extends IntrusiveNode {
         Sprite var20Lifetime5;
         Sprite var20Lifetime6;
         try {
-          ArcanistsMulti.a(-26335, (int[]) null, (dn) null, (String) null, 0L, param0, -1, (String) null, param1);
+          ArcanistsMulti.a(-26335, (int[]) null, (SceneScrollPane) null, (String) null, 0L, param0, -1, (String) null, param1);
           if (param0 == 0) {
             var10 = eo.field_c;
             var11 = ArchiveProvider.field_a[0];
             var20 = var11;
             var20Lifetime2 = var11;
             var12 = ReflectionCheckRequest.field_q;
-            var10.field_l.a((byte) -32, 11, var11, var12);
+            var10.field_l.addIconAction((byte) -32, 11, var11, var12);
             var13 = eo.field_c;
             var14 = ArchiveProvider.field_a[1];
             var20Lifetime3 = var14;
             var20Lifetime4 = var14;
             var15 = cj.field_c;
-            var13.field_l.a((byte) -32, 12, var14, var15);
+            var13.field_l.addIconAction((byte) -32, 12, var14, var15);
             var16 = eo.field_c;
             var17 = ArchiveProvider.field_a[2];
             var20Lifetime5 = var17;
             var20Lifetime6 = var17;
             var18 = jg.field_j;
-            var16.field_l.a((byte) -32, 13, var17, var18);
+            var16.field_l.addIconAction((byte) -32, 13, var17, var18);
           }
           if (1 == param0) {
             var19 = eo.field_c;
             var20Lifetime1 = ArchiveProvider.field_a[0];
             var21 = IsaacCipher.field_f;
-            var19.field_l.a((byte) -32, 11, var20Lifetime1, var21);
+            var19.field_l.addIconAction((byte) -32, 11, var20Lifetime1, var21);
             var22 = eo.field_c;
             var23 = ArchiveProvider.field_a[1];
             var24 = wa.field_Hb;
-            var22.field_l.a((byte) -32, 12, var23, var24);
+            var22.field_l.addIconAction((byte) -32, 12, var23, var24);
             var25 = eo.field_c;
             var26 = ArchiveProvider.field_a[2];
             var27 = dm.field_J;
-            var25.field_l.a((byte) -32, 13, var26, var27);
+            var25.field_l.addIconAction((byte) -32, 13, var26, var27);
           }
           if (param0 == 2) {
             var28 = eo.field_c;
             var29 = ArchiveProvider.field_a[0];
-            var30 = w.field_Jb;
-            var28.field_l.a((byte) -32, 11, var29, var30);
+            var30 = ChatInputWidget.field_Jb;
+            var28.field_l.addIconAction((byte) -32, 11, var29, var30);
             var31 = eo.field_c;
             var32 = ArchiveProvider.field_a[1];
             var33 = Js5Transport.field_l;
-            var31.field_l.a((byte) -32, 12, var32, var33);
+            var31.field_l.addIconAction((byte) -32, 12, var32, var33);
             var34 = eo.field_c;
             var35 = ArchiveProvider.field_a[2];
             var36 = CameraFollowTarget.field_c;
-            var34.field_l.a((byte) -32, 13, var35, var36);
+            var34.field_l.addIconAction((byte) -32, 13, var35, var36);
           }
           var37 = eo.field_c;
           var4 = param1.field_V;
           var5 = param1.field_nb;
           var6 = param1.field_x;
           var7 = param1.field_I;
-          var37.field_l.a(var6, var7, -29466, var5, var4);
+          var37.field_l.openAt(var6, var7, -29466, var5, var4);
           if (param2 > -51) {
             var8 = (ResourceArchive) null;
             ko.a(99, (byte) -116, 31, (ResourceArchive) null);
@@ -272,7 +272,7 @@ final class ko extends IntrusiveNode {
             var4_ref_String = hi.field_e.toString();
             var7 = var4_ref_String;
             var7Lifetime2 = var4_ref_String;
-            if (!ClientException.a(-1, var4_ref_String)) {
+            if (!ClientException.containsFilterWord(-1, var4_ref_String)) {
               var5 = nj.field_c;
               if (0 == var5 &&
                 DirectByteStorage.field_f != null) {
@@ -339,7 +339,7 @@ final class ko extends IntrusiveNode {
           }
           if (null != DirectByteStorage.field_f) {
             if (!oe.field_a) {
-              var60 = "[" + tj.a(-68, new String[]{DirectByteStorage.field_f.field_ic}, Bzip2State.field_j) + "] ";
+              var60 = "[" + CachedArchiveProvider.formatTemplate(-68, new String[]{DirectByteStorage.field_f.field_ic}, Bzip2State.field_j) + "] ";
               var61 = var60 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var61);
               if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
@@ -349,7 +349,7 @@ final class ko extends IntrusiveNode {
               return true;
             }
             if (he.field_d == null) {
-              var58 = "[" + tj.a(-68, new String[]{DirectByteStorage.field_f.field_ic}, Bzip2State.field_j) + "] ";
+              var58 = "[" + CachedArchiveProvider.formatTemplate(-68, new String[]{DirectByteStorage.field_f.field_ic}, Bzip2State.field_j) + "] ";
               var59 = var58 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var59);
               if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
@@ -364,8 +364,8 @@ final class ko extends IntrusiveNode {
           var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var62);
         } else {
           var64 = (CharSequence) ((Object) so.field_p);
-          var18 = tj.a(-45, new String[]{qo.normalizeName((byte) 84, var64)}, ge.field_n);
-          var8 = tj.a(113, new String[]{var16}, pk.field_f);
+          var18 = CachedArchiveProvider.formatTemplate(-45, new String[]{qo.normalizeName((byte) 84, var64)}, ge.field_n);
+          var8 = CachedArchiveProvider.formatTemplate(113, new String[]{var16}, IterableNodeHashTable.field_f);
           var9 = oo.field_x.textWidth(var18);
           var10 = oo.field_x.textWidth(var8);
           if (var10 >= var9) {

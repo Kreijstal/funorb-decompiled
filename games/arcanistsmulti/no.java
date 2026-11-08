@@ -54,55 +54,55 @@ final class no extends ContentTransitionDialog {
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        cg var1 = null;
-        na var1_ref = null;
+        SocialListEntry var1 = null;
+        LobbyGameEntry var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
-        cg var1Lifetime1;
+        SocialListEntry var1Lifetime1;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var1 = (cg) (LinkButtonPainter.field_j.first(param0 + 12624));
+          var1 = (SocialListEntry) (LinkButtonPainter.field_j.first(param0 + 12624));
           while (var1 != null) {
             if (var1.field_Eb > 0) {
               var1.field_Eb = var1.field_Eb - 1;
               if (var1.field_Eb == 0) {
                 var1.field_Sb = 0;
-                if (var1.e(183874081)) {
+                if (var1.isUnlisted(183874081)) {
                   var1.unlink(true);
                 }
               }
             }
-            var1 = (cg) (LinkButtonPainter.field_j.next(0));
+            var1 = (SocialListEntry) (LinkButtonPainter.field_j.next(0));
           }
-          var1_ref = (na) (UiTheme.field_a.first(param0 + 12624));
+          var1_ref = (LobbyGameEntry) (UiTheme.field_a.first(param0 + 12624));
           while (var1_ref != null) {
             if (var1_ref.field_bc > 0) {
               var1_ref.field_bc = var1_ref.field_bc - 1;
               if (var1_ref.field_bc == 0) {
                 var1_ref.field_ac = 0;
-                if (var1_ref.e(-100)) {
+                if (var1_ref.isUnlisted(-100)) {
                   var1_ref.unlink(true);
                 }
               }
             }
-            var1_ref = (na) (UiTheme.field_a.next(0));
+            var1_ref = (LobbyGameEntry) (UiTheme.field_a.next(0));
           }
-          var1Lifetime1 = (cg) (ph.field_a.first(param0 ^ -12624));
+          var1Lifetime1 = (SocialListEntry) (ph.field_a.first(param0 ^ -12624));
           while (var1Lifetime1 != null) {
             stackIn_25_0 = ~var1Lifetime1.field_Eb;
             stackIn_25_1 = -1;
             if (stackIn_25_0 < stackIn_25_1) {
               var1Lifetime1.field_Eb = var1Lifetime1.field_Eb - 1;
               if (0 != var1Lifetime1.field_Eb) {
-                var1Lifetime1 = (cg) (ph.field_a.next(0));
+                var1Lifetime1 = (SocialListEntry) (ph.field_a.next(0));
                 continue;
               }
               var1Lifetime1.field_Sb = 0;
-              if (var1Lifetime1.e(183874081)) {
+              if (var1Lifetime1.isUnlisted(183874081)) {
                 var1Lifetime1.unlink(true);
               }
             }
-            var1Lifetime1 = (cg) (ph.field_a.next(0));
+            var1Lifetime1 = (SocialListEntry) (ph.field_a.next(0));
           }
           if (param0 != -1) {
             no.releaseStatics((byte) 65);

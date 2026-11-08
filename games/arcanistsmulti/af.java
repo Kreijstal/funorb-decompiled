@@ -13,7 +13,7 @@ final class af extends SceneWidget {
     static float field_Hb;
     private SceneWidget field_Fb;
 
-    final static IndexedSprite a(String param0, String param1, int param2, ResourceArchive param3) {
+    final static IndexedSprite loadIndexedSpriteByName(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -30,8 +30,8 @@ final class af extends SceneWidget {
           if (param2 != 19412) {
             field_Gb = (String) null;
           }
-          var4_int = param3.c(param1, 90);
-          var5 = param3.a(param0, (byte) 98, var4_int);
+          var4_int = param3.getGroupProgressByName(param1, 90);
+          var5 = param3.getFileId(param0, (byte) 98, var4_int);
           stackIn_3_0 = MenuButtonPanel.loadIndexedSprite(param3, 31027, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,15 +60,15 @@ final class af extends SceneWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.setBounds(param2, param0, param3, param1, (byte) -120);
-        this.b(param5, 196);
+        this.layoutChildren(param5, 196);
         if (param4 != -31179) {
           field_Hb = -0.7085046172142029f;
         }
     }
 
-    final static char a(char param0, byte param1) {
+    final static char normalizeNameCharacter(char param0, byte param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -309,7 +309,7 @@ final class af extends SceneWidget {
         this(param0, param1.field_Fb, param1.field_Db, param2);
     }
 
-    private final void b(int param0, int param1) {
+    private final void layoutChildren(int param0, int param1) {
         int var3 = 0;
         int var3Lifetime1;
         if (param1 == 196) {
@@ -318,13 +318,13 @@ final class af extends SceneWidget {
           this.field_Db.setBounds(-var3 + this.field_x, var3, 0, this.field_I, (byte) -120);
           return;
         }
-        this.a(28, 56, 27, -126, 76, 103);
+        this.setBoundsAndLayout(28, 56, 27, -126, 76, 103);
         this.field_Fb.setBounds(this.field_Fb.getContentWidth(param1 - 26117), 0, 0, this.field_I, (byte) -120);
         var3Lifetime1 = this.field_Fb.field_x + param0;
         this.field_Db.setBounds(-var3Lifetime1 + this.field_x, var3Lifetime1, 0, this.field_I, (byte) -120);
     }
 
-    final int a(int param0, byte param1) {
+    final int combinedContentWidth(int param0, byte param1) {
         if (param1 == -126) {
           return this.field_Fb.getContentWidth(param1 - 25795) + param0 + this.field_Db.getContentWidth(-25921);
         }

@@ -10,7 +10,7 @@ class TextButton extends UiComponent {
     static boolean field_E;
     boolean field_z;
     boolean field_B;
-    static ij field_C;
+    static SceneTabbedPanel field_C;
     static String field_A;
     private boolean field_G;
     static String field_x;
@@ -267,7 +267,7 @@ class TextButton extends UiComponent {
         }
     }
 
-    final static void a(ij param0, byte param1) {
+    final static void a(SceneTabbedPanel param0, byte param1) {
         if (param0 == null) {
           return;
         }

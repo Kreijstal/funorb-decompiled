@@ -19,12 +19,12 @@ final class ConditionalTextValue {
     final static String b(byte param0) {
         if (param0 >= -105) {
           field_d = (String) null;
-          if (sk.field_a != in.field_Gb) {
+          if (sk.field_a != SceneScrollbar.field_Gb) {
             return UiTheme.field_o;
           }
           return kf.field_a;
         }
-        if (sk.field_a != in.field_Gb) {
+        if (sk.field_a != SceneScrollbar.field_Gb) {
           return UiTheme.field_o;
         }
         return kf.field_a;

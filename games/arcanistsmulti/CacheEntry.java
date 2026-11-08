@@ -3,7 +3,7 @@
  */
 abstract class CacheEntry extends DualLinkNode {
     static String field_t;
-    static ij field_q;
+    static SceneTabbedPanel field_q;
     static ValidationState field_s;
     static String field_m;
     static int field_p;
@@ -65,9 +65,9 @@ abstract class CacheEntry extends DualLinkNode {
     }
 
     final static void a(byte[] param0, int[] param1, int param2, Sprite[][] param3, int param4, String[] param5, String[][] param6, String[] param7, ResourceArchive param8, byte[] param9, String[] param10, String[][] param11, int param12, Sprite[][] param13, int param14) {
-        nl[] array$0 = null;
-        nl[] array$1 = null;
-        nl[] array$2 = null;
+        IconTextSceneWidget[] array$0 = null;
+        IconTextSceneWidget[] array$1 = null;
+        IconTextSceneWidget[] array$2 = null;
         int var19 = 0;
         SceneWidget stackIn_5_0;
         SceneWidget stackIn_5_1;
@@ -143,7 +143,7 @@ abstract class CacheEntry extends DualLinkNode {
           StatefulTextPainter.field_s = new SceneWidget(0L, (SceneWidget) null);
           uc.field_d = new SceneWidget(0L, vf.field_u, hb.field_Bb);
           StrongCacheEntry.field_z = new SceneWidget(0L, vf.field_i, SocketJs5Transport.field_q);
-          nj.field_m = new dn(0L, new SceneWidget(0L, (SceneWidget) null), am.field_c, IntrusiveDeque.field_i);
+          nj.field_m = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), am.field_c, IntrusiveDeque.field_i);
           StatefulTextPainter.field_s.addChild(uc.field_d, param14 + 87);
           if (fc.field_a) {
             StatefulTextPainter.field_s.addChild(StrongCacheEntry.field_z, 41);
@@ -159,13 +159,13 @@ abstract class CacheEntry extends DualLinkNode {
           ii.field_b = new SceneWidget(0L, th.field_c, DropdownList.field_M.toUpperCase());
           sm.field_c = new SceneWidget(0L, wa.field_Pb, hb.field_Ib.toUpperCase());
           ad.field_c = new SceneWidget(0L, ia.field_a);
-          tj.field_o = new SceneWidget(0L, vf.field_u, of.field_k);
+          CachedArchiveProvider.field_o = new SceneWidget(0L, vf.field_u, of.field_k);
           FrameClock.field_e = new SceneWidget(0L, EditableTextWidget.field_S, lc.field_c);
           ci.field_a = new SceneWidget(0L, EditableTextWidget.field_S, PatchEnvelopeSet.field_c);
           lo.field_r = new SceneWidget(0L, EditableTextWidget.field_S, CanvasRasterBuffer.field_h);
           WidgetStyleLayer.field_j = new SceneWidget(0L, EditableTextWidget.field_S, g.field_b);
           jo.field_a = new SceneWidget(0L, vf.field_i, TextLayout.field_a);
-          DebouncedValidator.field_g = new dn(0L, new SceneWidget(0L, (SceneWidget) null), am.field_c, IntrusiveDeque.field_i);
+          DebouncedValidator.field_g = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), am.field_c, IntrusiveDeque.field_i);
           of.field_a = new SceneWidget(0L, ko.field_h, fi.field_f.toUpperCase());
           of.field_a.field_ub = fc.field_a;
           stackIn_5_0 = null;
@@ -185,7 +185,7 @@ abstract class CacheEntry extends DualLinkNode {
           fn.field_e = new SceneWidget(0L, (SceneWidget) null);
           fn.field_e.addChild(sm.field_c, 23);
           fn.field_e.addChild(ad.field_c, 36);
-          ad.field_c.addChild(tj.field_o, 106);
+          ad.field_c.addChild(CachedArchiveProvider.field_o, 106);
           ad.field_c.addChild(FrameClock.field_e, 50);
           ad.field_c.addChild(ci.field_a, param14 + 20);
           if (fc.field_a) {
@@ -215,7 +215,7 @@ abstract class CacheEntry extends DualLinkNode {
           aj.field_d.field_X = 1;
           qc.field_d = new SceneWidget(0L, vf.field_u, hb.field_Bb);
           MembershipOfferScreen.field_q = new SceneWidget(0L, vf.field_i, SocketJs5Transport.field_q);
-          lf.field_b = new dn(0L, new SceneWidget(0L, (SceneWidget) null), am.field_c, IntrusiveDeque.field_i);
+          lf.field_b = new SceneScrollPane(0L, new SceneWidget(0L, (SceneWidget) null), am.field_c, IntrusiveDeque.field_i);
           Checkbox.field_M.addChild(aj.field_d, 30);
           Checkbox.field_M.addChild(qc.field_d, 51);
           if (fc.field_a) {
@@ -223,41 +223,41 @@ abstract class CacheEntry extends DualLinkNode {
           }
           Checkbox.field_M.addChild(lf.field_b, 31);
           IntrusiveNodeHashTable.field_o = new SceneWidget(0L, th.field_c, SecondaryNodeDeque.field_a.toUpperCase());
-          nl.field_Db = new SceneWidget(0L, wa.field_Pb);
+          IconTextSceneWidget.field_Db = new SceneWidget(0L, wa.field_Pb);
           mi.field_m = new SceneWidget(0L, ia.field_a);
           BevelTextPainter.field_s = new SceneWidget(0L, dd.field_b, MusicPatchNode.field_o.toUpperCase());
-          IndexedSpriteState.field_e = new nl[param2 + 4][];
+          IndexedSpriteState.field_e = new IconTextSceneWidget[param2 + 4][];
           ResizableViewResizeListener.field_g = new SceneWidget[4 + param2];
           ResizableViewResizeListener.field_g[0] = new SceneWidget(0L, mi.field_A, gg.field_i);
-          IndexedSpriteState.field_e[0] = new nl[6];
+          IndexedSpriteState.field_e[0] = new IconTextSceneWidget[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            IndexedSpriteState.field_e[0][var17_int + 1] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, IntrusiveNodeHashTable.field_b[var17_int], vm.field_c[var17_int]);
+            IndexedSpriteState.field_e[0][var17_int + 1] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, IntrusiveNodeHashTable.field_b[var17_int], vm.field_c[var17_int]);
           }
           if (ao.field_h.length >= 2) {
-            ResizableViewResizeListener.field_g[1] = new SceneWidget(0L, mi.field_A, w.field_Bb);
-            array$0 = new nl[ao.field_h.length + 1];
+            ResizableViewResizeListener.field_g[1] = new SceneWidget(0L, mi.field_A, ChatInputWidget.field_Bb);
+            array$0 = new IconTextSceneWidget[ao.field_h.length + 1];
             IndexedSpriteState.field_e[1] = array$0;
-            IndexedSpriteState.field_e[1][0] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, ij.field_Rb);
+            IndexedSpriteState.field_e[1][0] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
             for (var17_intLifetime1 = 0; ao.field_h.length > var17_intLifetime1; var17_intLifetime1++) {
-              IndexedSpriteState.field_e[1][var17_intLifetime1 + 1] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, Integer.toString(ao.field_h[var17_intLifetime1]));
+              IndexedSpriteState.field_e[1][var17_intLifetime1 + 1] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, Integer.toString(ao.field_h[var17_intLifetime1]));
             }
           }
           ResizableViewResizeListener.field_g[2] = new SceneWidget(0L, mi.field_A, SecondaryNodeDeque.field_b);
-          IndexedSpriteState.field_e[param14] = new nl[]{new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, ij.field_Rb), new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, ec.field_i[0], StrongCacheEntry.field_B), new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, ec.field_i[1], cf.field_d)};
+          IndexedSpriteState.field_e[param14] = new IconTextSceneWidget[]{new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb), new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, ec.field_i[0], StrongCacheEntry.field_B), new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, ec.field_i[1], cf.field_d)};
           if (le.field_q > 1) {
             ResizableViewResizeListener.field_g[3] = new SceneWidget(0L, mi.field_A, fm.field_e);
-            array$1 = new nl[le.field_q + 1];
+            array$1 = new IconTextSceneWidget[le.field_q + 1];
             IndexedSpriteState.field_e[3] = array$1;
-            IndexedSpriteState.field_e[3][0] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, ij.field_Rb);
+            IndexedSpriteState.field_e[3][0] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < le.field_q; var17_intLifetime2++) {
-              IndexedSpriteState.field_e[3][1 + var17_intLifetime2] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, fl.field_b[var17_intLifetime2]);
+              IndexedSpriteState.field_e[3][1 + var17_intLifetime2] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, fl.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param2 > var17_intLifetime3; var17_intLifetime3++) {
             ResizableViewResizeListener.field_g[var17_intLifetime3 + 4] = new SceneWidget(0L, mi.field_A, ResizableModalPanel.field_bb[var17_intLifetime3]);
-            array$2 = new nl[1 + NameValidator.bitAnd((int) SecondaryNodeDeque.field_d[var17_intLifetime3], 255)];
+            array$2 = new IconTextSceneWidget[1 + NameValidator.bitAnd((int) SecondaryNodeDeque.field_d[var17_intLifetime3], 255)];
             IndexedSpriteState.field_e[var17_intLifetime3 + 4] = array$2;
-            IndexedSpriteState.field_e[4 + var17_intLifetime3][0] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, ij.field_Rb);
+            IndexedSpriteState.field_e[4 + var17_intLifetime3][0] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
             for (var18 = 0; var18 < (SecondaryNodeDeque.field_d[var17_intLifetime3] & 255); var18++) {
               if (null == pn.field_b) {
                 var19_ref = null;
@@ -277,7 +277,7 @@ abstract class CacheEntry extends DualLinkNode {
                   var20 = null;
                 }
               }
-              IndexedSpriteState.field_e[4 + var17_intLifetime3][var18 + 1] = new nl(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) (var19_ref), (String) (var20));
+              IndexedSpriteState.field_e[4 + var17_intLifetime3][var18 + 1] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param2 + 4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -295,13 +295,13 @@ abstract class CacheEntry extends DualLinkNode {
           }
           SocketConnector.field_d = new SceneWidget(0L, ko.field_h);
           CanvasRasterBuffer.field_k = new SceneWidget(0L, ko.field_h);
-          jf.field_d = new SceneWidget(0L, BevelBoxPainter.field_f);
-          jf.field_d.applyStyle(IntrusiveNode.field_c, (byte) 119);
-          var17 = jf.field_d;
-          jf.field_d.field_gb = 1;
+          NodeHashTableIterator.field_d = new SceneWidget(0L, BevelBoxPainter.field_f);
+          NodeHashTableIterator.field_d.applyStyle(IntrusiveNode.field_c, (byte) 119);
+          var17 = NodeHashTableIterator.field_d;
+          NodeHashTableIterator.field_d.field_gb = 1;
           var17.field_X = 1;
           ReflectionCheckRequest.field_h = new SceneWidget(0L, (SceneWidget) null);
-          ReflectionCheckRequest.field_h.addChild(nl.field_Db, 19);
+          ReflectionCheckRequest.field_h.addChild(IconTextSceneWidget.field_Db, 19);
           ReflectionCheckRequest.field_h.addChild(mi.field_m, 49);
           mi.field_m.addChild(BevelTextPainter.field_s, 98);
           for (var18Lifetime2 = 0; var18Lifetime2 < param2 + 4; var18Lifetime2++) {
@@ -318,7 +318,7 @@ abstract class CacheEntry extends DualLinkNode {
           }
           ReflectionCheckRequest.field_h.addChild(SocketConnector.field_d, 13);
           ReflectionCheckRequest.field_h.addChild(CanvasRasterBuffer.field_k, 23);
-          ReflectionCheckRequest.field_h.addChild(jf.field_d, 110);
+          ReflectionCheckRequest.field_h.addChild(NodeHashTableIterator.field_d, 110);
           MembershipOfferScreen.field_t = new SceneWidget(0L, SectorCacheStore.field_l, mb.field_O.toUpperCase());
           gj.field_d = new SceneWidget(0L, gn.field_c, f.field_i.toUpperCase());
           return;

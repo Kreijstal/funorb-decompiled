@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class pk implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static String field_b;
     static String field_f;
     private IntrusiveNode field_e;
@@ -12,7 +12,7 @@ final class pk implements Iterable {
     static IndexedSprite[] field_a;
     static String field_g;
 
-    final static Sprite[] a(byte param0) {
+    final static Sprite[] createDecodedSprites(byte param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -37,17 +37,17 @@ final class pk implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new jf(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final void a(byte param0, IntrusiveNode param1, long param2) {
+    final void put(byte param0, IntrusiveNode param1, long param2) {
         IntrusiveNode var5 = null;
         try {
           if (param1.previous != null) {
             param1.unlink(true);
           }
           if (param0 > -17) {
-            pk.releaseStatics(75);
+            IterableNodeHashTable.releaseStatics(75);
           }
           var5 = this.field_c[(int)(param2 & (long)(-1 + this.field_d))];
           param1.previous = var5.previous;
@@ -70,7 +70,7 @@ final class pk implements Iterable {
         field_b = null;
     }
 
-    final IntrusiveNode a(byte param0, long param1) {
+    final IntrusiveNode get(byte param0, long param1) {
         IntrusiveNode var6 = null;
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
         int var5 = -25 / ((param0 - 51) / 52);
@@ -88,7 +88,7 @@ final class pk implements Iterable {
         return null;
     }
 
-    pk(int param0) {
+    IterableNodeHashTable(int param0) {
         int var2 = 0;
         IntrusiveNode dupTemp$0 = null;
         IntrusiveNode var3 = null;
@@ -103,7 +103,7 @@ final class pk implements Iterable {
         }
     }
 
-    final static IndexedSprite[] a(String param0, int param1, String param2, ResourceArchive param3) {
+    final static IndexedSprite[] loadIndexedSpritesByName(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -117,11 +117,11 @@ final class pk implements Iterable {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.c(param0, -91);
+          var4_int = param3.getGroupProgressByName(param0, -91);
           if (param1 != 0) {
             field_b = (String) null;
           }
-          var5 = param3.a(param2, (byte) 96, var4_int);
+          var5 = param3.getFileId(param2, (byte) 96, var4_int);
           stackIn_3_0 = ko.a(var4_int, (byte) 126, var5, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

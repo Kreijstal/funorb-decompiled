@@ -289,13 +289,13 @@ final class MusicPatchPcmStream extends PcmStream {
         field_s = false;
         if (param0 == -24225) {
           DebouncedValidator.a(-1, (byte) 30);
-          in.field_Gb = ScreenDisplayMode.field_h;
+          SceneScrollbar.field_Gb = ScreenDisplayMode.field_h;
           hb.field_Gb = ScreenDisplayMode.field_h;
           return;
         }
         MusicPatchPcmStream.b(true);
         DebouncedValidator.a(-1, (byte) 30);
-        in.field_Gb = ScreenDisplayMode.field_h;
+        SceneScrollbar.field_Gb = ScreenDisplayMode.field_h;
         hb.field_Gb = ScreenDisplayMode.field_h;
     }
 

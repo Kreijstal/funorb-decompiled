@@ -423,8 +423,8 @@ final class WhirlpoolHasher {
           if (param3 > -117) {
             field_l = (String[][]) null;
           }
-          var5_int = param4.c(param2, -48);
-          var6 = param4.a(param0, (byte) 33, var5_int);
+          var5_int = param4.getGroupProgressByName(param2, -48);
+          var6 = param4.getFileId(param0, (byte) 33, var5_int);
           stackIn_3_0 = UsernameCredentials.a(param4, var6, param1, 101, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -127,25 +127,25 @@ final class ao {
     final static void a(byte param0) {
         int var3 = 0;
         int var3Lifetime1;
-        fh.field_g = SoftwareRasterizer.field_e;
+        SecondaryNodeDequeIterator.field_g = SoftwareRasterizer.field_e;
         ri.field_a = SoftwareRasterizer.field_j;
         WidgetStyleLayer.a((byte) -128);
-        aj.field_h.a(0, 0, -40 + (k.field_d.field_I - 2), k.field_d.field_x, 5);
+        aj.field_h.a(0, 0, -40 + (BufferedSocket.field_d.field_I - 2), BufferedSocket.field_d.field_x, 5);
         kg.field_c.setBounds(DraggableWidget.field_H.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
         int var1 = 2 + ImageProducerRasterBuffer.field_r;
         StatefulTextPainter.field_s.setBounds(DraggableWidget.field_H.field_x, 0, !fc.field_a ? 0 : var1, -(fc.field_a ? var1 : 0) + DraggableWidget.field_H.field_I, (byte) -120);
         ie.l((byte) 100);
-        ii.field_b.setBounds(k.field_d.field_x, 0, k.field_d.field_I - 40, 40, (byte) -120);
+        ii.field_b.setBounds(BufferedSocket.field_d.field_x, 0, BufferedSocket.field_d.field_I - 40, 40, (byte) -120);
         sm.field_c.setBounds(fn.field_e.field_x, 0, 0, 30, (byte) -120);
         ad.field_c.setBounds(fn.field_e.field_x, 0, 30, -30 + (-40 + (fn.field_e.field_I - 2)), (byte) -120);
-        tj.field_o.setBounds(68, 5, 5, 30, (byte) -120);
+        CachedArchiveProvider.field_o.setBounds(68, 5, 5, 30, (byte) -120);
         FrameClock.field_e.setBounds(78, 75, 5, 30, (byte) -120);
         ci.field_a.setBounds(48, 155, 5, 30, (byte) -120);
         lo.field_r.setBounds(48, 205, 5, 30, (byte) -120);
         int var2 = !fc.field_a ? 200 : 250;
         WidgetStyleLayer.field_j.setBounds(-var2 + 363, 5 + var2, 5, 30, (byte) -120);
         jo.field_a.setBounds(-10 + fn.field_e.field_x - 365, 370, 5, 30, (byte) -120);
-        DebouncedValidator.field_g.a(37, CacheEntry.field_p, -5 + (-5 + ad.field_c.field_x), false, 5, -5 + (ad.field_c.field_I - 5) - 32, 2);
+        DebouncedValidator.field_g.setBoundsAndLayout(37, CacheEntry.field_p, -5 + (-5 + ad.field_c.field_x), false, 5, -5 + (ad.field_c.field_I - 5) - 32, 2);
         if (param0 <= -111) {
           var3 = (fn.field_e.field_x + 2) / 2;
           of.field_a.setBounds(-2 + var3, 0, fn.field_e.field_I - 40, 40, (byte) -120);

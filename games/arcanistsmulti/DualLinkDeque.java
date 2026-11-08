@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tg {
+final class DualLinkDeque {
     static String field_g;
     static FrameClock field_e;
     static String field_a;
@@ -11,7 +11,7 @@ final class tg {
     private DualLinkNode field_c;
     static IndexedSprite[] field_b;
 
-    final void a(DualLinkNode param0, int param1) {
+    final void addLast(DualLinkNode param0, int param1) {
         try {
           if (param0.secondaryPrevious != null) {
             param0.unlinkSecondary((byte) 88);
@@ -20,7 +20,7 @@ final class tg {
           param0.secondaryPrevious = this.field_h.secondaryPrevious;
           param0.secondaryPrevious.secondaryNext = param0;
           if (param1 != 15893) {
-            this.a((byte) -116);
+            this.removeFirst((byte) -116);
           }
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
@@ -28,7 +28,7 @@ final class tg {
         }
     }
 
-    final boolean d(int param0) {
+    final boolean isEmpty(int param0) {
         int var2 = -79 / ((param0 - 63) / 45);
         return this.field_h == this.field_h.secondaryNext ? true : false;
     }
@@ -37,11 +37,11 @@ final class tg {
         if (param1 >= 22) {
           return TextTableInitializer.a(param0, param2, 13, param3);
         }
-        tg.a(101, false, -57, -39);
+        DualLinkDeque.a(101, false, -57, -39);
         return TextTableInitializer.a(param0, param2, 13, param3);
     }
 
-    final DualLinkNode e(int param0) {
+    final DualLinkNode next(int param0) {
         DualLinkNode var2 = this.field_c;
         if (this.field_h != var2) {
           this.field_c = var2.secondaryNext;
@@ -52,11 +52,11 @@ final class tg {
         return null;
     }
 
-    final DualLinkNode a(byte param0) {
+    final DualLinkNode removeFirst(byte param0) {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
         if (param0 < 115) {
-          this.a(-116);
+          this.clear(-116);
           var2 = this.field_h.secondaryNext;
           if (var2 != this.field_h) {
             var2.unlinkSecondary((byte) 88);
@@ -72,7 +72,7 @@ final class tg {
         return null;
     }
 
-    final int b(byte param0) {
+    final int size(byte param0) {
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
         int var2 = 0;
         DualLinkNode var3 = this.field_h.secondaryNext;
@@ -83,11 +83,11 @@ final class tg {
         if (param0 < -64) {
           return var2;
         }
-        this.a((byte) 126);
+        this.removeFirst((byte) 126);
         return var2;
     }
 
-    final void a(int param0) {
+    final void clear(int param0) {
         DualLinkNode var2;
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
@@ -103,7 +103,7 @@ final class tg {
           this.field_c = null;
           return;
         }
-        this.b(100);
+        this.first(100);
         this.field_c = null;
         return;
     }
@@ -119,7 +119,7 @@ final class tg {
         field_g = null;
     }
 
-    final DualLinkNode b(int param0) {
+    final DualLinkNode first(int param0) {
         if (param0 < 23) {
           return (DualLinkNode) null;
         }
@@ -132,7 +132,7 @@ final class tg {
         return var2;
     }
 
-    public tg() {
+    public DualLinkDeque() {
         this.field_h = new DualLinkNode();
         this.field_h.secondaryPrevious = this.field_h;
         this.field_h.secondaryNext = this.field_h;

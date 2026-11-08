@@ -204,7 +204,7 @@ final class pm {
           for (var3 = 1; var2_int > var3; var3++) {
             var4 = param0[var3];
             for (var5 = var3 - 1; var5 >= 0; var5--) {
-              if (cg.a((byte) -111, param0[var5], var4)) {
+              if (SocialListEntry.compareDisplayModes((byte) -111, param0[var5], var4)) {
                 param0[var5 + 1] = param0[var5];
                 continue;
               }

@@ -56,7 +56,7 @@ final class SecondaryNodeDeque implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new fh(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     final static String getSettingsCookie(java.applet.Applet param0, int param1) {
@@ -172,7 +172,7 @@ final class SecondaryNodeDeque implements Iterable {
     final static void a(int param0) {
         oj.field_i = false;
         if (CacheEntry.field_q != null) {
-          CacheEntry.field_q.e(-111);
+          CacheEntry.field_q.clearTabStates(-111);
         }
         if (param0 != 14) {
           java.applet.Applet var2 = (java.applet.Applet) null;

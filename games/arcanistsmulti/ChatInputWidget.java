@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class w extends SceneWidget {
+final class ChatInputWidget extends SceneWidget {
     long field_Fb;
     private SceneWidget field_Eb;
     private af field_Kb;
@@ -37,16 +37,16 @@ final class w extends SceneWidget {
         return param4;
     }
 
-    final boolean h(byte param0) {
+    final boolean isSendActive(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 < 105) {
-          this.c(true, (byte) -123);
+          this.processInput(true, (byte) -123);
         }
         stackIn_6_0 = (null != this.field_Kb) && (this.field_Kb.field_ab);
         return stackIn_6_0;
     }
 
-    w(int param0, int param1, int param2, int param3, int param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, af param9, SceneWidget param10, String param11, long param12) {
+    ChatInputWidget(int param0, int param1, int param2, int param3, int param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, af param9, SceneWidget param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         int var15_int = 0;
@@ -213,31 +213,31 @@ final class w extends SceneWidget {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(param6, var18Lifetime3, var28[0], ri.field_e, var16Lifetime2, (byte) 126);
-            var18Lifetime3 = this.a(var16Lifetime2, var18Lifetime3, var28[0], 77, this.field_Ob[6]);
-            var18Lifetime3 = this.a(var16Lifetime2, var18Lifetime3, var28[0], 15, this.field_Ob[9]);
-            var18Lifetime3 = this.a(var16Lifetime2, var18Lifetime3, var28[0], 103, this.field_Ob[5]);
-            var18Lifetime3 = this.a(var16Lifetime2, var18Lifetime3, var28[0], 97, this.field_Ob[7]);
-            var18Lifetime3 = this.a(var16Lifetime2, var18Lifetime3, var28[0], 94, this.field_Ob[15]);
-            var18Lifetime3 = this.a(var16Lifetime2, var18Lifetime3, var28[0], -7, this.field_Ob[4]);
+            var18Lifetime3 = this.addLabel(param6, var18Lifetime3, var28[0], ri.field_e, var16Lifetime2, (byte) 126);
+            var18Lifetime3 = this.addParagraph(var16Lifetime2, var18Lifetime3, var28[0], 77, this.field_Ob[6]);
+            var18Lifetime3 = this.addParagraph(var16Lifetime2, var18Lifetime3, var28[0], 15, this.field_Ob[9]);
+            var18Lifetime3 = this.addParagraph(var16Lifetime2, var18Lifetime3, var28[0], 103, this.field_Ob[5]);
+            var18Lifetime3 = this.addParagraph(var16Lifetime2, var18Lifetime3, var28[0], 97, this.field_Ob[7]);
+            var18Lifetime3 = this.addParagraph(var16Lifetime2, var18Lifetime3, var28[0], 94, this.field_Ob[15]);
+            var18Lifetime3 = this.addParagraph(var16Lifetime2, var18Lifetime3, var28[0], -7, this.field_Ob[4]);
             if (var18Lifetime3 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(param6, var18Lifetime4, var28[1], Bzip2State.field_s, var16Lifetime2, (byte) 127);
-            var18Lifetime4 = this.a(var16Lifetime2, var18Lifetime4, var28[1], -104, this.field_Ob[16]);
-            var18Lifetime4 = this.a(var16Lifetime2, var18Lifetime4, var28[1], -107, this.field_Ob[17]);
-            var18Lifetime4 = this.a(var16Lifetime2, var18Lifetime4, var28[1], -117, this.field_Ob[18]);
-            var18Lifetime4 = this.a(var16Lifetime2, var18Lifetime4, var28[1], -111, this.field_Ob[19]);
-            var18Lifetime4 = this.a(var16Lifetime2, var18Lifetime4, var28[1], -110, this.field_Ob[20]);
+            var18Lifetime4 = this.addLabel(param6, var18Lifetime4, var28[1], Bzip2State.field_s, var16Lifetime2, (byte) 127);
+            var18Lifetime4 = this.addParagraph(var16Lifetime2, var18Lifetime4, var28[1], -104, this.field_Ob[16]);
+            var18Lifetime4 = this.addParagraph(var16Lifetime2, var18Lifetime4, var28[1], -107, this.field_Ob[17]);
+            var18Lifetime4 = this.addParagraph(var16Lifetime2, var18Lifetime4, var28[1], -117, this.field_Ob[18]);
+            var18Lifetime4 = this.addParagraph(var16Lifetime2, var18Lifetime4, var28[1], -111, this.field_Ob[19]);
+            var18Lifetime4 = this.addParagraph(var16Lifetime2, var18Lifetime4, var28[1], -110, this.field_Ob[20]);
             if (var18Lifetime4 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(param6, var18Lifetime5, var28[2], ed.field_Db, var16Lifetime2, (byte) 127);
-            var18Lifetime5 = this.a(var16Lifetime2, var18Lifetime5, var28[2], -118, this.field_Ob[13]);
-            var18Lifetime5 = this.a(var16Lifetime2, var18Lifetime5, var28[2], 94, this.field_Ob[21]);
-            var18Lifetime5 = this.a(var16Lifetime2, var18Lifetime5, var28[2], -126, this.field_Ob[11]);
+            var18Lifetime5 = this.addLabel(param6, var18Lifetime5, var28[2], ed.field_Db, var16Lifetime2, (byte) 127);
+            var18Lifetime5 = this.addParagraph(var16Lifetime2, var18Lifetime5, var28[2], -118, this.field_Ob[13]);
+            var18Lifetime5 = this.addParagraph(var16Lifetime2, var18Lifetime5, var28[2], 94, this.field_Ob[21]);
+            var18Lifetime5 = this.addParagraph(var16Lifetime2, var18Lifetime5, var28[2], -126, this.field_Ob[11]);
             if (var18Lifetime5 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime5;
             }
@@ -247,7 +247,7 @@ final class w extends SceneWidget {
               var19 = var20;
             }
             if (null != this.field_Kb) {
-              var20Lifetime2 = this.field_Kb.a(4, (byte) -126);
+              var20Lifetime2 = this.field_Kb.combinedContentWidth(4, (byte) -126);
               if (var20Lifetime2 > var19) {
                 var19 = var20Lifetime2;
               }
@@ -262,8 +262,8 @@ final class w extends SceneWidget {
             this.field_Mb.setBounds(0, 0, var21, ImageProducerRasterBuffer.field_r, (byte) -120);
             var21 = var21 + (ImageProducerRasterBuffer.field_r + 10);
             if (null != this.field_Kb) {
-              var20Lifetime3 = this.field_Kb.a(4, (byte) -126);
-              this.field_Kb.a(13 + (-var20Lifetime3 + var19) / 2, ImageProducerRasterBuffer.field_r, var20Lifetime3, var21, -31179, 4);
+              var20Lifetime3 = this.field_Kb.combinedContentWidth(4, (byte) -126);
+              this.field_Kb.setBoundsAndLayout(13 + (-var20Lifetime3 + var19) / 2, ImageProducerRasterBuffer.field_r, var20Lifetime3, var21, -31179, 4);
               var21 = var21 + (ImageProducerRasterBuffer.field_r + 10);
             }
             var28[0].setBounds(var16Lifetime2, 13, var21, var17Lifetime5, (byte) -120);
@@ -346,7 +346,7 @@ final class w extends SceneWidget {
         }
     }
 
-    private final int a(SceneWidget param0, int param1, SceneWidget param2, String param3, int param4, byte param5) {
+    private final int addLabel(SceneWidget param0, int param1, SceneWidget param2, String param3, int param4, byte param5) {
         SceneWidget var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_3_0 = 0;
@@ -393,7 +393,7 @@ final class w extends SceneWidget {
         }
     }
 
-    final boolean i(byte param0) {
+    final boolean handleEscape(byte param0) {
         if (param0 != 2) {
           return false;
         }
@@ -455,14 +455,14 @@ final class w extends SceneWidget {
         }
     }
 
-    final String f(byte param0) {
+    final String getText(byte param0) {
         if (param0 != 51) {
-          this.h((byte) -75);
+          this.isSendActive((byte) -75);
         }
         return this.field_Db.toString();
     }
 
-    private final int a(int param0, int param1, SceneWidget param2, int param3, SceneWidget param4) {
+    private final int addParagraph(int param0, int param1, SceneWidget param2, int param3, SceneWidget param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -502,7 +502,7 @@ final class w extends SceneWidget {
         }
     }
 
-    final int c(boolean param0, byte param1) {
+    final int processInput(boolean param0, byte param1) {
         int var3 = 0;
         af stackIn_8_0 = null;
         boolean stackIn_9_1 = false;

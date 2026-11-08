@@ -318,7 +318,7 @@ class ed extends ContentTransitionDialog implements ButtonListener {
     final static String getStatusMessage(int param0) {
         if (param0 != -952) {
           field_tb = (String) null;
-          if (in.field_Gb == sk.field_a) {
+          if (SceneScrollbar.field_Gb == sk.field_a) {
             return AccountRegistrationPanel.field_Q;
           }
           if (hb.field_Gb == sk.field_a) {
@@ -329,7 +329,7 @@ class ed extends ContentTransitionDialog implements ButtonListener {
           }
           return ge.field_g;
         }
-        if (in.field_Gb == sk.field_a) {
+        if (SceneScrollbar.field_Gb == sk.field_a) {
           return AccountRegistrationPanel.field_Q;
         }
         if (hb.field_Gb == sk.field_a) {
@@ -344,7 +344,7 @@ class ed extends ContentTransitionDialog implements ButtonListener {
     final static void loadJagexLogoSound(byte param0, ResourceArchive param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.decodeSetup(param1.a("", "headers.packvorbis", -1));
+          VorbisSample.decodeSetup(param1.getNamedFile("", "headers.packvorbis", -1));
           if (param0 != -17) {
             field_tb = (String) null;
           }
@@ -401,7 +401,7 @@ class ed extends ContentTransitionDialog implements ButtonListener {
         int var2 = -(jo.field_e * jo.field_e) + var1;
         int var3 = (-Scrollbar.field_N + TextLine.field_k) * var2 / var1 + Scrollbar.field_N;
         IntKeyLookup.field_g.setBounds(640, sa.field_Hb, var3, param0, (byte) -120);
-        IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, dh.field_Gb);
+        IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, SceneTextInput.field_Gb);
     }
 
     static {

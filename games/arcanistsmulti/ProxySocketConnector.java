@@ -160,7 +160,7 @@ final class ProxySocketConnector extends SocketConnector {
 
     final static void closeActiveConnection(boolean param0) {
         if (CredentialKind.field_c != null) {
-          CredentialKind.field_c.d(-23482);
+          CredentialKind.field_c.close(-23482);
           CredentialKind.field_c = null;
         }
         if (param0) {

@@ -5,7 +5,7 @@ final class DirectByteStorage extends ByteStorage {
     static int field_h;
     static String field_i;
     static String field_g;
-    static na field_f;
+    static LobbyGameEntry field_f;
     private java.nio.ByteBuffer field_k;
     static String field_j;
 

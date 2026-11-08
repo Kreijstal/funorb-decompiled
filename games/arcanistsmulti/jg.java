@@ -55,7 +55,7 @@ final class jg {
             return;
           }
           if (0 != SpriteState.field_z.field_D) {
-            ce.field_g[10] = pe.field_Nb;
+            ce.field_g[10] = ContextActionMenu.field_Nb;
             return;
           }
           ce.field_g[10] = BirthDateEntryPanel.field_K;
@@ -66,7 +66,7 @@ final class jg {
           return;
         }
         if (0 != SpriteState.field_z.field_D) {
-          ce.field_g[10] = pe.field_Nb;
+          ce.field_g[10] = ContextActionMenu.field_Nb;
           return;
         }
         ce.field_g[10] = BirthDateEntryPanel.field_K;

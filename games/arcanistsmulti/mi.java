@@ -3430,7 +3430,7 @@ final class mi extends DualLinkNode {
               var5 = this.a(this.field_v, this.field_t, (byte) 81, 124, this.field_G, this.field_q);
             }
             if (this.field_I == 153) {
-              boolean decompiledSharedTail1 = !(!Js5Transport.a(0, (byte) -89));
+              boolean decompiledSharedTail1 = !(!Js5Transport.isFeatureEnabled(0, (byte) -89));
               if (!decompiledSharedTail1) {
                 var5 = this.a(this.field_v, this.field_t, (byte) 81, 115, this.field_G, this.field_q);
                 decompiledSharedTail1 = (var19 != 0);
@@ -6678,7 +6678,7 @@ final class mi extends DualLinkNode {
                       var11Lifetime1Lifetime1 = this.field_o - var10_ref_mi.field_o;
                       var12Lifetime1Lifetime1 = this.field_z - var10_ref_mi.field_z;
                       if (var9 * (var9 >> 4) > (var12Lifetime1Lifetime1 >> 4) * var12Lifetime1Lifetime1 + (var11Lifetime1Lifetime1 >> 4) * var11Lifetime1Lifetime1) {
-                        this.field_q.field_h.a(var10_ref_mi, 15893);
+                        this.field_q.field_h.addLast(var10_ref_mi, 15893);
                       }
                     }
                     var10_ref_mi = (mi) (MidiPcmStream.field_L.next(-18502));
@@ -6859,19 +6859,19 @@ final class mi extends DualLinkNode {
             this.field_p = gj.field_f[12].toRgbSprite();
           }
           if (this.field_I == 24) {
-            this.field_p = tg.field_b[2].toRgbSprite();
+            this.field_p = DualLinkDeque.field_b[2].toRgbSprite();
           }
           if (this.field_I == 26) {
             this.field_p = tk.field_x[0];
           }
           if (this.field_I == 23) {
-            this.field_p = tg.field_b[2].toRgbSprite();
+            this.field_p = DualLinkDeque.field_b[2].toRgbSprite();
           }
           if (this.field_I == 82) {
             this.field_p = gj.field_f[4].toRgbSprite();
           }
           if (this.field_I == 25) {
-            this.field_p = tg.field_b[1].toRgbSprite();
+            this.field_p = DualLinkDeque.field_b[1].toRgbSprite();
           }
           if (this.field_I == 28) {
             this.field_p = tk.field_x[0];
@@ -6920,7 +6920,7 @@ final class mi extends DualLinkNode {
             this.field_p = gj.field_f[15].toRgbSprite();
           }
           if (this.field_I == 133) {
-            this.field_p = tg.field_b[12].toRgbSprite();
+            this.field_p = DualLinkDeque.field_b[12].toRgbSprite();
           }
           if (145 == this.field_I) {
             this.field_p = gj.field_f[24].toRgbSprite();
@@ -6938,7 +6938,7 @@ final class mi extends DualLinkNode {
             this.field_p = gj.field_f[22].toRgbSprite();
           }
           if (120 == this.field_I) {
-            this.field_p = tg.field_b[13].toRgbSprite();
+            this.field_p = DualLinkDeque.field_b[13].toRgbSprite();
           }
           if (this.field_I == 117) {
             this.field_p = gj.field_f[20].toRgbSprite();
@@ -6956,16 +6956,16 @@ final class mi extends DualLinkNode {
             this.field_p = gj.field_f[29].toRgbSprite();
           }
           if (this.field_I == 165) {
-            this.field_p = tg.field_b[16].toRgbSprite();
+            this.field_p = DualLinkDeque.field_b[16].toRgbSprite();
           }
           if (this.field_I == 161) {
-            this.field_p = tg.field_b[17].toRgbSprite();
+            this.field_p = DualLinkDeque.field_b[17].toRgbSprite();
           }
           if (this.field_I == 158) {
-            this.field_p = tg.field_b[18].toRgbSprite();
+            this.field_p = DualLinkDeque.field_b[18].toRgbSprite();
           }
           if (this.field_I == 162) {
-            this.field_p = tg.field_b[19].toRgbSprite();
+            this.field_p = DualLinkDeque.field_b[19].toRgbSprite();
           }
           if (this.field_I == 160) {
             this.field_p = md.field_f[3];
@@ -8164,7 +8164,7 @@ final class mi extends DualLinkNode {
         try {
           var2 = gj.field_f[0].toRgbSprite();
           var3 = gj.field_f[5].toRgbSprite();
-          var4 = tg.field_b[2].toRgbSprite();
+          var4 = DualLinkDeque.field_b[2].toRgbSprite();
           var5 = new IntrusiveDequeCursor(this.field_q.field_i);
           var6_ref_ml = (ml) (var5.first(-36));
           boolean decompiledNaturalLoopExit0 = false;
@@ -9162,14 +9162,14 @@ final class mi extends DualLinkNode {
                                                                                           if (this.field_F >= 0) {
                                                                                             var5 = this.field_v + param2;
                                                                                             var6_int = param0 + this.field_G;
-                                                                                            tg.field_b[14].draw(var5 - 16, -12 + var6_int);
+                                                                                            DualLinkDeque.field_b[14].draw(var5 - 16, -12 + var6_int);
                                                                                             if (var16 == 0) {
                                                                                               return;
                                                                                             }
                                                                                           }
                                                                                           var5 = param2 + this.field_v;
                                                                                           var6_int = param0 + this.field_G;
-                                                                                          tg.field_b[15].draw(-16 + var5, -12 + var6_int);
+                                                                                          DualLinkDeque.field_b[15].draw(-16 + var5, -12 + var6_int);
                                                                                           if (var16 == 0) {
                                                                                             return;
                                                                                           }
@@ -9412,13 +9412,13 @@ final class mi extends DualLinkNode {
                                                                         var8 = 512 * SpriteState.field_v;
                                                                         var6_int = (int)((double)(this.field_v + param2) + Math.sin((double)SpriteState.field_v * 0.1 - 1.6) * (double)var5);
                                                                         var7 = (int)((double)(-var5 + param0 + this.field_G) + (double)var5 * Math.cos(0.09 * (double)SpriteState.field_v - 1.6));
-                                                                        tg.field_b[13].toRgbSprite().a(2000, var7, 127, var6_int, var8);
+                                                                        DualLinkDeque.field_b[13].toRgbSprite().a(2000, var7, 127, var6_int, var8);
                                                                         var6_int = (int)((double)(this.field_v + param2) + (double)var5 * Math.sin((double)SpriteState.field_v * 0.1 - 0.8));
                                                                         var7 = (int)((double)(this.field_G + param0 - var5) + (double)var5 * Math.cos(-0.8 + 0.09 * (double)SpriteState.field_v));
-                                                                        tg.field_b[13].toRgbSprite().a(2500, var7, 124, var6_int, var8);
+                                                                        DualLinkDeque.field_b[13].toRgbSprite().a(2500, var7, 124, var6_int, var8);
                                                                         var6_int = (int)((double)(this.field_v + param2) + Math.sin(0.1 * (double)SpriteState.field_v) * (double)var5);
                                                                         var7 = (int)((double)(-var5 + this.field_G + param0) + (double)var5 * Math.cos((double)SpriteState.field_v * 0.09));
-                                                                        tg.field_b[13].toRgbSprite().a(3000, var7, 123, var6_int, var8);
+                                                                        DualLinkDeque.field_b[13].toRgbSprite().a(3000, var7, 123, var6_int, var8);
                                                                         if (var16 == 0) {
                                                                           return;
                                                                         }
@@ -9590,19 +9590,19 @@ final class mi extends DualLinkNode {
                                     return;
                                   }
                                 }
-                                if (null == pk.field_a) {
+                                if (null == IterableNodeHashTable.field_a) {
                                   return;
                                 }
                                 if (this.field_t == null) {
                                   return;
                                 }
                                 if (this.field_y >= 250) {
-                                  pk.field_a[this.field_x >> 1].draw(param2 + (this.field_v - 24), -(this.field_t.field_Y >> 1) + this.field_G - (-param0 + 32));
+                                  IterableNodeHashTable.field_a[this.field_x >> 1].draw(param2 + (this.field_v - 24), -(this.field_t.field_Y >> 1) + this.field_G - (-param0 + 32));
                                   if (var16 == 0) {
                                     return;
                                   }
                                 }
-                                pk.field_a[this.field_x >> 1].draw(param2 + this.field_v - 24, this.field_G + param0 + (-32 - (this.field_t.field_Y >> 1)));
+                                IterableNodeHashTable.field_a[this.field_x >> 1].draw(param2 + this.field_v - 24, this.field_G + param0 + (-32 - (this.field_t.field_Y >> 1)));
                                 if (var16 == 0) {
                                   return;
                                 }
@@ -9761,7 +9761,7 @@ final class mi extends DualLinkNode {
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var2 = new Sprite[]{gj.field_f[22].toRgbSprite(), gj.field_f[26].toRgbSprite(), gj.field_f[27].toRgbSprite()};
-          var3 = tg.field_b[13].toRgbSprite();
+          var3 = DualLinkDeque.field_b[13].toRgbSprite();
           if (param0 < 9) {
             this.field_x = 106;
           }

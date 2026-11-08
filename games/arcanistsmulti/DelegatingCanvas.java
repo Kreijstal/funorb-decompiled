@@ -669,7 +669,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               stackIn_15_3 = null;
               stackIn_15_6 = fj.field_i;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_l).append("&v2=").append(PlatformTaskDispatcher.field_c).append("&e=").append(var8).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).queueUrlOpen(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_l).append("&v2=").append(PlatformTaskDispatcher.field_c).append("&e=").append(var8).toString()));
             while (var4.field_e == 0) {
               ao.a(1L, 1);
             }

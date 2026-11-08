@@ -37,7 +37,7 @@ final class EmailLoginCredentials extends LoginCredentials {
         if (param0 != 0) {
           return (CredentialKind) null;
         }
-        return k.field_q;
+        return BufferedSocket.field_q;
     }
 
     EmailLoginCredentials(String param0, String param1) {

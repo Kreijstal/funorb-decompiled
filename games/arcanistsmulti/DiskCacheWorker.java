@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DiskCacheWorker implements Runnable {
-    private tg field_e;
+    private DualLinkDeque field_e;
     static IndexedSprite[] field_a;
     static String field_c;
     private Thread field_h;
@@ -29,7 +29,7 @@ final class DiskCacheWorker implements Runnable {
           var4.field_A = 1;
           var5 = this.field_e;
           synchronized (var5) {
-            var6 = (DiskCacheRequest) (this.field_e.b(37));
+            var6 = (DiskCacheRequest) (this.field_e.first(37));
             while (var6 != null) {
               if (~(long)param1 == ~var6.secondaryKey &&
                 param0 == var6.field_x &&
@@ -39,7 +39,7 @@ final class DiskCacheWorker implements Runnable {
                 stackIn_8_0 = var4;
                 return stackIn_8_0;
               }
-              var6 = (DiskCacheRequest) (this.field_e.e(4));
+              var6 = (DiskCacheRequest) (this.field_e.next(4));
             }
           }
           var4.field_z = param0.readEntry(param1, -93);
@@ -157,7 +157,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var3_ref = this.field_e;
           synchronized (var3_ref) {
-            this.field_e.a(param1, 15893);
+            this.field_e.addLast(param1, 15893);
             this.field_d = this.field_d + 1;
             this.field_e.notifyAll();
           }
@@ -195,7 +195,7 @@ final class DiskCacheWorker implements Runnable {
           while (!this.field_b) {
             var2 = this.field_e;
             synchronized (var2) {
-              var7 = (DiskCacheRequest) (this.field_e.a((byte) 124));
+              var7 = (DiskCacheRequest) (this.field_e.removeFirst((byte) 124));
               if (var7 == null) {
                 try {
                   this.field_e.wait();
@@ -251,9 +251,9 @@ final class DiskCacheWorker implements Runnable {
     final static SceneWidget c(byte param0) {
         if (param0 > -83) {
           DiskCacheWorker.b((byte) -7);
-          return pe.f(0);
+          return ContextActionMenu.f(0);
         }
-        return pe.f(0);
+        return ContextActionMenu.f(0);
     }
 
     final DiskCacheRequest queueRead(int param0, boolean param1, SectorCacheStore param2) {
@@ -294,11 +294,11 @@ final class DiskCacheWorker implements Runnable {
 
     DiskCacheWorker(PlatformTaskDispatcher param0) {
         PlatformTask var2 = null;
-        this.field_e = new tg();
+        this.field_e = new DualLinkDeque();
         this.field_b = false;
         this.field_d = 0;
         try {
-          var2 = param0.a(126, 5, (Runnable) (this));
+          var2 = param0.queueThreadStart(126, 5, (Runnable) (this));
           while (0 == var2.field_e) {
             ao.a(10L, 1);
           }

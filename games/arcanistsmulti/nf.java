@@ -6,7 +6,7 @@ import java.util.*;
 final class nf {
     int field_mb;
     private int field_w;
-    private tg field_I;
+    private DualLinkDeque field_I;
     IndexedSprite field_V;
     private int[] field_ib;
     int field_t;
@@ -68,7 +68,7 @@ final class nf {
     int[] field_K;
     private IndexedSprite field_Jb;
     int[] field_Nb;
-    tg field_h;
+    DualLinkDeque field_h;
     int field_H;
     int[] field_S;
     int field_Y;
@@ -1394,12 +1394,12 @@ final class nf {
               } while (var5 == 0);
               do {
                 if (var3_ref == null) {
-                  if (param1.field_I.b(116) == null &&
+                  if (param1.field_I.first(116) == null &&
                     param1.field_kb.isEmpty(true) &&
-                    param1.field_h.d(122)) {
-                    this.field_I.a(17);
+                    param1.field_h.isEmpty(122)) {
+                    this.field_I.clear(17);
                     this.field_kb.clear(74);
-                    this.field_h.a(17);
+                    this.field_h.clear(17);
                     var3_int = 0;
                     break scanLoop1;
                   }
@@ -1713,7 +1713,7 @@ final class nf {
 
     final void a(ml param0, int param1) {
         try {
-          pe.a(-(param0.field_Y >> 1) + param0.field_lb, this, (byte) 0, param0.field_db - param0.field_Y, 21374, param0.field_w, this.field_Jb);
+          ContextActionMenu.a(-(param0.field_Y >> 1) + param0.field_lb, this, (byte) 0, param0.field_db - param0.field_Y, 21374, param0.field_w, this.field_Jb);
           if (param1 != 0) {
             this.a((int[]) null, (byte) 67);
           }
@@ -1836,7 +1836,7 @@ final class nf {
 
     final int l(int param0) {
         if (7 == this.field_O &&
-          Js5Transport.a(0, (byte) -52)) {
+          Js5Transport.isFeatureEnabled(0, (byte) -52)) {
           return 0;
         }
         if (param0 != 4) {
@@ -2223,7 +2223,7 @@ final class nf {
 
     final void a(int param0, ml param1) {
         try {
-          pe.a(param1.field_lb - (param1.field_Y >> 1), this, (byte) -1, -param1.field_Y + param1.field_db, 21374, param1.field_w, this.field_Jb);
+          ContextActionMenu.a(param1.field_lb - (param1.field_Y >> 1), this, (byte) -1, -param1.field_Y + param1.field_db, 21374, param1.field_w, this.field_Jb);
           if (param0 > -36) {
             field_z = (int[]) null;
           }
@@ -4641,7 +4641,7 @@ final class nf {
         var16 = new IsaacRandom(new int[]{this.field_Q, -1});
         this.field_O = this.field_xb;
         if (this.field_O == 9) {
-          this.field_O = dh.floorMod(this.field_Q, true, 8);
+          this.field_O = SceneTextInput.floorMod(this.field_Q, true, 8);
         }
         if (ed.field_Cb != -1) {
           this.field_O = ed.field_Cb;
@@ -6211,7 +6211,7 @@ final class nf {
               this.field_fb[var6] = var5;
             }
             var6++;
-            if (Js5Transport.a(0, (byte) -63) && (-1 == this.field_fb[var6] ||
+            if (Js5Transport.isFeatureEnabled(0, (byte) -63) && (-1 == this.field_fb[var6] ||
               this.field_b[this.field_fb[var6]] < this.field_b[var5]) && this.field_b[var5] >= 1) {
               this.field_fb[var6] = var5;
             }
@@ -6736,28 +6736,28 @@ final class nf {
         mi var2 = null;
         int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
-        var2 = (mi) (this.field_I.b(117));
+        var2 = (mi) (this.field_I.first(117));
         do {
           if (var2 == null) {
-            var2 = (mi) (this.field_h.b(117));
+            var2 = (mi) (this.field_h.first(117));
             break;
           }
           var2.unlink(true);
-          var2 = (mi) (this.field_I.e(-124));
+          var2 = (mi) (this.field_I.next(-124));
         } while (var3 == 0);
         do {
           if (var2 == null) {
-            this.field_kb.a(this.field_Kb, false);
-            this.field_I.a(17);
+            this.field_kb.appendAllFrom(this.field_Kb, false);
+            this.field_I.clear(17);
             break;
           }
           this.field_r.addLast(var2, -1);
-          var2 = (mi) (this.field_h.e(123));
+          var2 = (mi) (this.field_h.next(123));
         } while (var3 == 0);
         if (param0 <= 71) {
           this.a(-89, (byte) 119, 52, (IndexedSprite) null, (Sprite) null);
         }
-        this.field_h.a(17);
+        this.field_h.clear(17);
         this.field_kb.clear(-128);
         return;
     }
@@ -9200,7 +9200,7 @@ final class nf {
           if (param0 != -1) {
             this.field_fb = (int[]) null;
           }
-          this.field_I.a(param1, 15893);
+          this.field_I.addLast(param1, 15893);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -9544,11 +9544,11 @@ final class nf {
               this.field_i = new IntrusiveDeque();
               this.field_B = new IntrusiveNodeHashTable(32);
               this.field_Kb = new IntrusiveDeque();
-              this.field_I = new tg();
+              this.field_I = new DualLinkDeque();
               this.field_kb = new IntrusiveDeque();
               this.field_Db = new IntrusiveDeque();
               this.field_r = new IntrusiveDeque();
-              this.field_h = new tg();
+              this.field_h = new DualLinkDeque();
               this.field_v = new int[this.field_q][16];
               this.field_x = new int[this.field_q];
               this.field_lb = new int[this.field_q][];

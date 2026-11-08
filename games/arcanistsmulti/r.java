@@ -14,7 +14,7 @@ final class r {
           ResourceArchive var2 = (ResourceArchive) null;
           r.loadSpriteFromGroup(51, -102, 48, (ResourceArchive) null);
         }
-        IntrusiveDequeCursor.a(112, CacheEntry.field_p, ArchiveProvider.field_a[0].field_n, dh.field_Gb, ImageProducerRasterBuffer.field_r, ra.field_h);
+        IntrusiveDequeCursor.a(112, CacheEntry.field_p, ArchiveProvider.field_a[0].field_n, SceneTextInput.field_Gb, ImageProducerRasterBuffer.field_r, ra.field_h);
     }
 
     final static Sprite loadSpriteFromGroup(int param0, int param1, int param2, ResourceArchive param3) {
@@ -79,12 +79,12 @@ final class r {
           if (DiskCacheWorker.field_g == hb.field_Gb &&
             param0.equals(KeyboardInputHandler.field_j)) {
             hb.field_Gb = ScreenDisplayMode.field_h;
-            stackIn_11_0 = fh.field_i;
+            stackIn_11_0 = SecondaryNodeDequeIterator.field_i;
             return stackIn_11_0;
           }
           hb.field_Gb = sk.field_a;
           KeyboardInputHandler.field_j = param0;
-          fh.field_i = null;
+          SecondaryNodeDequeIterator.field_i = null;
           stackIn_9_0 = null;
           return (ho) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

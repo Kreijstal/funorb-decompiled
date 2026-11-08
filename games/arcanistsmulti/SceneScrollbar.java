@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class in extends SceneWidget {
+final class SceneScrollbar extends SceneWidget {
     private SceneWidget field_Ib;
     static SceneWidget field_Jb;
     private SceneWidget field_Cb;
@@ -16,7 +16,7 @@ final class in extends SceneWidget {
     static String field_Kb;
     private SceneWidget field_Db;
 
-    final boolean e(int param0) {
+    final boolean consumeUpArrowPress(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         int var2Lifetime2;
@@ -43,7 +43,7 @@ final class in extends SceneWidget {
         return false;
     }
 
-    final boolean f(byte param0) {
+    final boolean consumeTrackUpPress(byte param0) {
         if (this.field_Mb.field_U != 0) {
           this.field_Bb = 20;
           return true;
@@ -78,16 +78,16 @@ final class in extends SceneWidget {
         return false;
     }
 
-    final boolean f(int param0) {
+    final boolean isThumbHeld(int param0) {
         int var2 = -50 / ((param0 - 44) / 41);
         return this.field_Cb.field_P != 0 ? true : false;
     }
 
-    in(long param0, in param1) {
+    SceneScrollbar(long param0, SceneScrollbar param1) {
         this(param0, param1.field_Mb, param1.field_Ib, param1.field_Hb, param1.field_Cb);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void layoutParts(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var5 = 0;
         int var9 = 0;
@@ -229,7 +229,7 @@ final class in extends SceneWidget {
         field_Eb = null;
     }
 
-    in(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
+    SceneScrollbar(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
         super(param0, (SceneWidget) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -295,7 +295,7 @@ final class in extends SceneWidget {
         }
     }
 
-    final int a(int param0, int param1, boolean param2, byte param3) {
+    final int scrollOffset(int param0, int param1, boolean param2, byte param3) {
         int var5;
         int var6;
         int var7;
@@ -310,7 +310,7 @@ final class in extends SceneWidget {
             var5 = (var8 * var7 + var6 / 2) / var6;
           }
         } else {
-          this.a(-125, 112, -79, 37);
+          this.layoutParts(-125, 112, -79, 37);
           if (var6 > 0) {
             var7 = this.field_Cb.field_db;
             var8 = -param0 + param1;
@@ -337,20 +337,20 @@ final class in extends SceneWidget {
         return var5Lifetime1;
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setBoundsAndLayout(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (!param1) {
           this.field_T = param7;
           this.field_x = param5;
           this.field_db = param0;
           this.field_I = param2;
-          this.a(89, param6, param4, param3);
+          this.layoutParts(89, param6, param4, param3);
           return;
         }
     }
 
-    final boolean e(boolean param0) {
+    final boolean consumeDownArrowPress(boolean param0) {
         if (!param0) {
-          this.f(116);
+          this.isThumbHeld(116);
         }
         if (this.field_Ib.field_U != 0) {
           this.field_Bb = 20;
@@ -369,7 +369,7 @@ final class in extends SceneWidget {
         return true;
     }
 
-    final boolean f(boolean param0) {
+    final boolean consumeTrackDownPress(boolean param0) {
         if (this.field_Db.field_U != 0) {
           this.field_Bb = 20;
           return true;

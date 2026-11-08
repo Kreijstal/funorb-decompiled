@@ -15,7 +15,7 @@ final class nj {
     static IndexedSprite[] field_k;
     static int[] field_a;
     static int[] field_n;
-    static dn field_m;
+    static SceneScrollPane field_m;
 
     final static km a(String param0, int param1) {
         int var2_int = 0;

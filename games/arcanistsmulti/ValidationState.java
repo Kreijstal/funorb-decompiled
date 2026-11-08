@@ -118,7 +118,7 @@ final class ValidationState {
         CharSequence var7 = null;
         try {
           var7 = (CharSequence) ((Object) param2);
-          if (!IntrusiveDeque.a(var7, 0)) {
+          if (!IntrusiveDeque.isValidDisplayNameText(var7, 0)) {
             stackIn_3_0 = fn.field_h;
             return stackIn_3_0;
           }
@@ -131,7 +131,7 @@ final class ValidationState {
             return stackIn_11_0;
           }
           if (sa.a(param2, 320)) {
-            stackIn_15_0 = tj.a(119, new String[]{param2}, ValidationHelpWidget.field_bb);
+            stackIn_15_0 = CachedArchiveProvider.formatTemplate(119, new String[]{param2}, ValidationHelpWidget.field_bb);
             return stackIn_15_0;
           }
           if (pc.field_b >= 100) {
@@ -139,7 +139,7 @@ final class ValidationState {
             return stackIn_19_0;
           }
           if (ArrayWidgetContainer.a(param2, 1)) {
-            stackIn_23_0 = tj.a(114, new String[]{param2}, ImageProducerRasterBuffer.field_q);
+            stackIn_23_0 = CachedArchiveProvider.formatTemplate(114, new String[]{param2}, ImageProducerRasterBuffer.field_q);
             return stackIn_23_0;
           }
           var6 = he.field_e;
@@ -190,7 +190,7 @@ final class ValidationState {
           if (param0 != 18306) {
             ValidationState.releaseStatics((byte) 21);
           }
-          stackIn_3_0 = param1.a(-27);
+          stackIn_3_0 = param1.areAllGroupsAvailable(-27);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,11 +220,11 @@ final class ValidationState {
           field_b = (String) null;
         }
         if (sk.field_e >= 0) {
-          kg.field_c.field_rb = tj.a(-14, new String[]{Integer.toString(sk.field_e)}, SoundCache.field_j);
+          kg.field_c.field_rb = CachedArchiveProvider.formatTemplate(-14, new String[]{Integer.toString(sk.field_e)}, SoundCache.field_j);
         } else {
           kg.field_c.field_rb = null;
         }
-        stackIn_11_0 = k.field_d;
+        stackIn_11_0 = BufferedSocket.field_d;
         stackIn_12_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == DirectByteStorage.field_f) && (om.field_x == null);
         ((SceneWidget) (Object) stackIn_11_0).updateInputFullScreen(stackIn_12_1, (byte) 75);
         stackIn_18_0 = fn.field_e;
@@ -233,9 +233,9 @@ final class ValidationState {
         stackIn_23_0 = LinkButtonPainter.field_h;
         stackIn_24_1 = (param0) && (!param1) && (IntrusiveNode.field_d);
         ((SceneWidget) (Object) stackIn_23_0).updateInputFullScreen(stackIn_24_1, (byte) 115);
-        aj.field_h.field_c.h((byte) 100);
+        aj.field_h.field_c.updateTabs((byte) 100);
         if (0 != ii.field_b.field_U) {
-          dh.field_Mb = true;
+          SceneTextInput.field_Mb = true;
         }
         boolean decompiledFrameRemainder0 = true;
         if (of.field_a.field_U != 0) {
@@ -261,7 +261,7 @@ final class ValidationState {
             SocketJs5Transport.field_t != ao.field_h[0]) {
             SocketJs5Transport.field_t = ao.field_h[0];
           }
-          dn.sendBytesPacket(param2 - 13218, 0, ml.field_m, param3, SocketJs5Transport.field_t, true);
+          SceneScrollPane.sendBytesPacket(param2 - 13218, 0, ml.field_m, param3, SocketJs5Transport.field_t, true);
         }
         if (0 != dm.field_E.field_U) {
           IntrusiveNode.field_d = false;

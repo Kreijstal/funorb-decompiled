@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class k implements Runnable {
+final class BufferedSocket implements Runnable {
     private int field_s;
     private PlatformTaskDispatcher field_h;
     static SceneWidget field_d;
@@ -24,7 +24,7 @@ final class k implements Runnable {
     static int[] field_m;
     static int field_o;
 
-    final void a(boolean param0) throws IOException {
+    final void checkWriteError(boolean param0) throws IOException {
         if (param0) {
           return;
         }
@@ -37,11 +37,11 @@ final class k implements Runnable {
         }
     }
 
-    final static void a(le param0, boolean param1) {
+    final static void setActiveBattleScreen(le param0, boolean param1) {
         try {
           if (!param1) {
             le var3 = (le) null;
-            k.a((le) null, false);
+            BufferedSocket.setActiveBattleScreen((le) null, false);
           }
           rk.field_O = param0.field_V;
           qn.field_ob = param0;
@@ -62,7 +62,7 @@ final class k implements Runnable {
         field_m = null;
     }
 
-    final void a(byte[] param0, byte param1, int param2, int param3) throws IOException {
+    final void readFully(byte[] param0, byte param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -101,7 +101,7 @@ final class k implements Runnable {
         }
     }
 
-    final void a(int param0, int param1, byte param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, byte param2, byte[] param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -132,7 +132,7 @@ final class k implements Runnable {
               }
             }
             if (this.field_a == null) {
-              this.field_a = this.field_h.a(124, 3, (Runnable) (this));
+              this.field_a = this.field_h.queueThreadStart(124, 3, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -154,7 +154,7 @@ final class k implements Runnable {
         }
     }
 
-    final void d(int param0) {
+    final void close(int param0) {
         try {
           int var4 = 0;
           var4 = ArcanistsMulti.field_G ? 1 : 0;
@@ -282,12 +282,12 @@ final class k implements Runnable {
         }
     }
 
-    k(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
     final static String a(int param0) {
-        if (in.field_Gb == sk.field_a) {
+        if (SceneScrollbar.field_Gb == sk.field_a) {
           return on.field_d;
         }
         if (param0 != 0) {
@@ -303,10 +303,10 @@ final class k implements Runnable {
     }
 
     protected final void finalize() {
-        this.d(-23482);
+        this.close(-23482);
     }
 
-    final int b(int param0) throws IOException {
+    final int available(int param0) throws IOException {
         if (param0 != 0) {
           this.field_s = -21;
         }
@@ -316,17 +316,17 @@ final class k implements Runnable {
         return this.field_i.available();
     }
 
-    final int a(byte param0) throws IOException {
+    final int read(byte param0) throws IOException {
         if (this.field_g) {
           return 0;
         }
         if (param0 != 120) {
-          this.d(-9);
+          this.close(-9);
         }
         return this.field_i.read();
     }
 
-    private k(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_s = 0;
         this.field_l = false;
         this.field_g = false;

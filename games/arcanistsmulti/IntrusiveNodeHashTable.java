@@ -19,7 +19,7 @@ final class IntrusiveNodeHashTable {
     private long field_m;
     static String field_j;
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode nextInTraversal(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
@@ -59,13 +59,13 @@ final class IntrusiveNodeHashTable {
         return var9;
     }
 
-    final DualLinkNode f(int param0) {
+    final DualLinkNode firstInTraversal(int param0) {
         this.traversalIndex = 0;
         int var2 = -85 / ((param0 - 26) / 58);
-        return this.a(-1);
+        return this.nextInTraversal(-1);
     }
 
-    final static MusicPatch a(byte param0, ResourceArchive param1, int param2) {
+    final static MusicPatch loadMusicPatch(byte param0, ResourceArchive param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -79,7 +79,7 @@ final class IntrusiveNodeHashTable {
           if (param0 != -127) {
             field_j = (String) null;
           }
-          var4 = param1.d(param2, 31662);
+          var4 = param1.getFirstFile(param2, 31662);
           var3 = var4;
           if (var4 != null) {
             stackIn_6_0 = new MusicPatch(var4);
@@ -161,11 +161,11 @@ final class IntrusiveNodeHashTable {
             eo.field_c.a((byte) 72, false);
             var4 = eo.field_c;
             var5_ref_String = Js5NetworkRequest.field_z;
-            var4.field_l.a(5, var5_ref_String, (byte) -26);
+            var4.field_l.addAction(5, var5_ref_String, (byte) -26);
             var4Lifetime2 = eo.field_c;
             var5 = pb.field_h;
             var6 = ja.field_s;
-            var4Lifetime2.field_l.a(0, 0, param0 - 29467, var6, var5);
+            var4Lifetime2.field_l.openAt(0, 0, param0 - 29467, var6, var5);
           }
           FrameClock.a(param2, param1, false);
           return;
@@ -175,16 +175,16 @@ final class IntrusiveNodeHashTable {
           eo.field_c.a((byte) 72, false);
           var4Lifetime1 = eo.field_c;
           var5_ref_StringLifetime1 = Js5NetworkRequest.field_z;
-          var4Lifetime1.field_l.a(5, var5_ref_StringLifetime1, (byte) -26);
+          var4Lifetime1.field_l.addAction(5, var5_ref_StringLifetime1, (byte) -26);
           var4Lifetime1Lifetime1 = eo.field_c;
           var5Lifetime1 = pb.field_h;
           var6Lifetime1 = ja.field_s;
-          var4Lifetime1Lifetime1.field_l.a(0, 0, param0 - 29467, var6Lifetime1, var5Lifetime1);
+          var4Lifetime1Lifetime1.field_l.openAt(0, 0, param0 - 29467, var6Lifetime1, var5Lifetime1);
         }
         FrameClock.a(param2, param1, false);
     }
 
-    final static ri a(String param0, int param1) {
+    final static ri validateEmailDomain(String param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
@@ -323,7 +323,7 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final static void e(int param0) {
+    final static void serviceAudio(int param0) {
         fk var1 = null;
         int var2 = 0;
         boolean stackIn_19_0 = false;

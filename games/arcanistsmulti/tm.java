@@ -35,7 +35,7 @@ final class tm {
             return;
           }
           MeshRasterState.useRasterClip();
-          tj.field_C = 11;
+          CachedArchiveProvider.field_C = 11;
           vf.field_n = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;

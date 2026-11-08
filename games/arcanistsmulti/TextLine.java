@@ -39,7 +39,7 @@ final class TextLine {
           java.math.BigInteger var5 = (java.math.BigInteger) null;
           TextLine.a(true, (PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null);
         }
-        qn.a(ra.field_h, -115, ImageProducerRasterBuffer.field_r, param2, param3, param0, dh.field_Gb);
+        qn.a(ra.field_h, -115, ImageProducerRasterBuffer.field_r, param2, param3, param0, SceneTextInput.field_Gb);
     }
 
     final static void a(boolean param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, java.math.BigInteger param4) {

@@ -179,7 +179,7 @@ final class IntrusiveDequeCursor {
           SingleChildContainer.field_D.setBounds(-sa.field_Cb.field_x - param3 + CredentialKind.field_d.field_x, param3, 0, param4, (byte) -120);
           sa.field_Cb.setBounds(sa.field_Cb.field_x, param3 + SingleChildContainer.field_D.field_x, 0, param4, (byte) -120);
           var7 = var7 - (2 + param4);
-          qo.field_f.a(5, param1, param1 + param3 + 487, false, 5, var7 - 5, 2);
+          qo.field_f.setBoundsAndLayout(5, param1, param1 + param3 + 487, false, 5, var7 - 5, 2);
           if (AccountRegistrationPanel.field_U != null) {
             AccountRegistrationPanel.field_U.setBounds(qo.field_f.field_I, qo.field_f.field_db, qo.field_f.field_x, qo.field_f.field_T, -104);
           }

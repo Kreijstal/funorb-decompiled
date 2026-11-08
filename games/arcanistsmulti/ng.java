@@ -86,12 +86,12 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
             CanvasRasterBuffer.field_k.field_I = 0;
             var5 = CanvasRasterBuffer.field_k;
             var5.field_x = 0;
-            var6 = jf.field_d;
-            jf.field_d.field_I = 0;
+            var6 = NodeHashTableIterator.field_d;
+            NodeHashTableIterator.field_d.field_I = 0;
             var6.field_x = 0;
-            nl.field_Db.field_rb = ri.field_c.toUpperCase();
+            IconTextSceneWidget.field_Db.field_rb = ri.field_c.toUpperCase();
             var7 = (ReflectionCheckRequest.field_h.field_x + 2) / 2;
-            jf.field_d.setBounds(-2 + var7, 0, -40 + ReflectionCheckRequest.field_h.field_I, 40, (byte) -120);
+            NodeHashTableIterator.field_d.setBounds(-2 + var7, 0, -40 + ReflectionCheckRequest.field_h.field_I, 40, (byte) -120);
             CanvasRasterBuffer.field_k.setBounds(-var7 + ReflectionCheckRequest.field_h.field_x, var7, ReflectionCheckRequest.field_h.field_I - 40, 40, (byte) -120);
             if (ao.field_h.length == 1 &&
               ao.field_h[0] == 2) {
@@ -123,7 +123,7 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
               }
             }
             CanvasRasterBuffer.field_k.field_ub = true;
-            if (!dn.field_Db) {
+            if (!SceneScrollPane.field_Db) {
               stackIn_33_0 = CanvasRasterBuffer.field_k;
               if (var8 == 0) {
                 stackIn_34_1 = ah.field_d;
@@ -139,8 +139,8 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
               } else {
                 stackIn_37_3 = km.field_g;
               }
-              stackIn_36_0.field_rb = tj.a(stackIn_36_1, stackIn_36_2, stackIn_37_3);
-              jf.field_d.field_rb = MenuButtonPanel.field_R;
+              stackIn_36_0.field_rb = CachedArchiveProvider.formatTemplate(stackIn_36_1, stackIn_36_2, stackIn_37_3);
+              NodeHashTableIterator.field_d.field_rb = MenuButtonPanel.field_R;
               IntrusiveNodeHashTable.field_o.field_ub = true;
               ByteStorage.field_a = true;
               if (um.field_a != null) {
@@ -167,7 +167,7 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
                 if (CanvasRasterBuffer.field_k.field_A) {
                   var9 = null;
                   if (GzipDecoder.field_d) {
-                    var9 = "<col=A00000>" + w.field_Bb + "</col>";
+                    var9 = "<col=A00000>" + ChatInputWidget.field_Bb + "</col>";
                     var11 = var9;
                     var9 = var11;
                     var11Lifetime1 = var9;
@@ -200,19 +200,19 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = jf.field_d.field_Z.textWidth(var16) + 3 * jf.field_d.field_Z.charWidth('.');
-              jf.field_d.field_X = 0;
+              var10Lifetime1 = NodeHashTableIterator.field_d.field_Z.textWidth(var16) + 3 * NodeHashTableIterator.field_d.field_Z.charWidth('.');
+              NodeHashTableIterator.field_d.field_X = 0;
               if (16 == (sb.field_e & 48)) {
                 var9 = var16 + ".";
               }
-              jf.field_d.field_t = (jf.field_d.field_x - var10Lifetime1) / 2;
+              NodeHashTableIterator.field_d.field_t = (NodeHashTableIterator.field_d.field_x - var10Lifetime1) / 2;
               if ((sb.field_e & 48) == 32) {
                 var9 = (String) (var9) + "..";
               }
               if ((sb.field_e & 48) == 48) {
                 var9 = (String) (var9) + "...";
               }
-              jf.field_d.field_rb = (String) (var9);
+              NodeHashTableIterator.field_d.field_rb = (String) (var9);
               CanvasRasterBuffer.field_k.field_rb = sa.field_Eb.toUpperCase();
             }
           }
@@ -222,16 +222,16 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
           stackIn_69_0 = ReflectionCheckRequest.field_h;
           stackIn_70_1 = (param2) && (!param0) && (!so.field_j);
           ((SceneWidget) (Object) stackIn_69_0).updateInputFullScreen(stackIn_70_1, (byte) 90);
-          stackIn_74_0 = nl.field_Fb;
+          stackIn_74_0 = IconTextSceneWidget.field_Fb;
           stackIn_75_1 = (param2) && (!param0) && (so.field_j);
           ((SceneWidget) (Object) stackIn_74_0).updateInputFullScreen(stackIn_75_1, (byte) 64);
-          tn.field_Ob.field_c.h((byte) 101);
+          tn.field_Ob.field_c.updateTabs((byte) 101);
           if (null != om.field_x) {
             if (IntrusiveNodeHashTable.field_o.field_U != 0) {
               bc.a(param1, -14431);
             }
             if (CanvasRasterBuffer.field_k.field_U != 0) {
-              if (!dn.field_Db) {
+              if (!SceneScrollPane.field_Db) {
                 fm.a(param1, true);
               } else {
                 uc.a(param1, (byte) -96);
@@ -394,7 +394,7 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
           this.field_E = param0;
           this.field_F = new TextButton(qn.field_lb, (UiListener) null);
           this.field_F.field_r = (WidgetPainter) ((Object) new MenuButtonPainter());
-          var7 = tj.a(125, new String[]{this.g(-7), this.g((byte) 94)}, ud.field_r);
+          var7 = CachedArchiveProvider.formatTemplate(125, new String[]{this.g(-7), this.g((byte) 94)}, ud.field_r);
           var3 = 20;
           var4 = new TextWidgetPainter(ia.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_c.field_C, -1, 2147483647, true);
           this.field_J = new TextHotspotWidget(var7, var4);

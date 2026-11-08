@@ -33,15 +33,15 @@ final class fl {
               param3 <= 105) {
               var8 = param2;
               ao.a(var8, param0 ^ -20688);
-              fh.field_i = ho.createWithLines((byte) 120, param2);
+              SecondaryNodeDequeIterator.field_i = ho.createWithLines((byte) 120, param2);
               return;
             }
-            fh.field_i = CipherPacketBuffer.a(param0 - 20657, param3, param1);
+            SecondaryNodeDequeIterator.field_i = CipherPacketBuffer.createMessage(param0 - 20657, param3, param1);
             return;
           }
           stackIn_6_0 = param0 ^ 12212;
           stackIn_7_1 = !(13 <= UiComponent.field_u);
-          fh.field_i = oj.a(stackIn_6_0, stackIn_7_1);
+          SecondaryNodeDequeIterator.field_i = oj.a(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
           ao.a((String[]) null, -127);
           return;
@@ -86,7 +86,7 @@ final class fl {
           if (param0 != -2389) {
             field_a = true;
           }
-          var2 = new Sprite(param1.a("", "final_frame.jpg", -1), (java.awt.Component) ((Object) on.field_c));
+          var2 = new Sprite(param1.getNamedFile("", "final_frame.jpg", -1), (java.awt.Component) ((Object) on.field_c));
           var3 = var2.field_q;
           var4 = var2.field_y;
           ec.pushClipState(65280);

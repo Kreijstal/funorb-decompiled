@@ -27,14 +27,14 @@ final class nm {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.c(param0 - 28076)) {
+          if (!param2.ensureIndex(param0 - 28076)) {
             stackIn_2_0 = (String) (param3);
             return stackIn_2_0;
           }
           if (param0 != 17153) {
             field_b = (String) null;
           }
-          stackIn_6_0 = param1 + " - " + param2.b(param4, 119) + "%";
+          stackIn_6_0 = param1 + " - " + param2.getGroupIdByName(param4, 119) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

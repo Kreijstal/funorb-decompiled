@@ -184,7 +184,7 @@ final class tk extends DualLinkNode {
           tk.releaseStatics(-48);
         }
         if (PasswordFieldPainter.field_A != null) {
-          var3 = PasswordFieldPainter.field_A.b(false, param1);
+          var3 = PasswordFieldPainter.field_A.processTextInput(false, param1);
           if (var3 != 0) {
             if (var3 == 2 &&
               PasswordFieldPainter.field_A.field_rb != null &&

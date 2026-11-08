@@ -103,13 +103,13 @@ final class CheckboxPainter implements WidgetPainter {
         if (param0 != 116) {
           field_q = (String) null;
           ValidationStatusIcon.field_O.a(-8456);
-          if (GrowableIntList.field_c.e(param0 - 3261)) {
+          if (GrowableIntList.field_c.process(param0 - 3261)) {
             return 0;
           }
           return SceneWidgetNode.d(true);
         }
         ValidationStatusIcon.field_O.a(-8456);
-        if (GrowableIntList.field_c.e(param0 - 3261)) {
+        if (GrowableIntList.field_c.process(param0 - 3261)) {
           return 0;
         }
         return SceneWidgetNode.d(true);

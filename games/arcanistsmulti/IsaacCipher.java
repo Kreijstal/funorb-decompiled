@@ -93,7 +93,7 @@ final class IsaacCipher {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void generateResults(boolean param0) {
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
         int var2;
@@ -104,7 +104,7 @@ final class IsaacCipher {
         this.field_j = this.field_j + fieldTemp$0;
         var2 = 0;
         if (param0) {
-          this.b(false);
+          this.generateResults(false);
         }
         while (var2 < 256) {
           var3 = this.field_g[var2];
@@ -132,7 +132,7 @@ final class IsaacCipher {
         }
     }
 
-    private final void a(byte param0) {
+    private final void initializeState(byte param0) {
         int var2 = 0;
         int var11 = ArcanistsMulti.field_G ? 1 : 0;
         int var7 = -1640531527;
@@ -258,7 +258,7 @@ final class IsaacCipher {
           this.field_g[6 + var2Lifetime2] = var9;
           this.field_g[7 + var2Lifetime2] = var10;
         }
-        this.b(false);
+        this.generateResults(false);
         this.field_b = 256;
     }
 
@@ -267,7 +267,7 @@ final class IsaacCipher {
           return -76;
         }
         if (this.field_b == 0) {
-          this.b(obfuscationGuard);
+          this.generateResults(obfuscationGuard);
           this.field_b = 256;
         }
         int fieldTemp$0 = this.field_b - 1;
@@ -283,7 +283,7 @@ final class IsaacCipher {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_e[var2_int] = param0[var2_int];
           }
-          this.a((byte) 126);
+          this.initializeState((byte) 126);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ug.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

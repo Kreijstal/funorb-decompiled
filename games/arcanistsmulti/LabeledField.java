@@ -83,7 +83,7 @@ final class LabeledField extends SingleChildContainer {
             var16 = (String) null;
             LabeledField.a((Sprite[]) null, true, (BitmapFont) null, -83, (Sprite[]) null, -13, 81, -125, 45, -81, 29, (String) null, true, 61, -12);
           }
-          TextLayout.a(param6, param3, StatefulTextPainter.field_r, param7, param8, param10, param13, param9, true, new ec(param4), param8, param13, param2, pn.field_d, CameraFollowTarget.field_f, LoginMethod.field_a, param2, tg.field_d, new ec(param0), wm.field_I);
+          TextLayout.a(param6, param3, StatefulTextPainter.field_r, param7, param8, param10, param13, param9, true, new ec(param4), param8, param13, param2, pn.field_d, CameraFollowTarget.field_f, LoginMethod.field_a, param2, DualLinkDeque.field_d, new ec(param0), wm.field_I);
           CanvasRasterBuffer.a(param11, (byte) -72, param12, param5, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

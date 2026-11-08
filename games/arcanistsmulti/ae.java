@@ -107,9 +107,9 @@ final class ae {
                   he.field_e.writeOpcode((byte) -22, 57);
                   bj.field_ub = false;
                 }
-                if (dh.field_Mb) {
+                if (SceneTextInput.field_Mb) {
                   he.field_e.writeOpcode((byte) -114, 10);
-                  dh.field_Mb = false;
+                  SceneTextInput.field_Mb = false;
                 }
                 if (!MenuButtonPanel.field_C) {
                   return;
@@ -134,9 +134,9 @@ final class ae {
               he.field_e.writeOpcode((byte) -22, 57);
               bj.field_ub = false;
             }
-            if (dh.field_Mb) {
+            if (SceneTextInput.field_Mb) {
               he.field_e.writeOpcode((byte) -114, 10);
-              dh.field_Mb = false;
+              SceneTextInput.field_Mb = false;
             }
             if (!MenuButtonPanel.field_C) {
               return;
@@ -160,9 +160,9 @@ final class ae {
                 he.field_e.writeOpcode((byte) -22, 57);
                 bj.field_ub = false;
               }
-              if (dh.field_Mb) {
+              if (SceneTextInput.field_Mb) {
                 he.field_e.writeOpcode((byte) -114, 10);
-                dh.field_Mb = false;
+                SceneTextInput.field_Mb = false;
               }
               if (!MenuButtonPanel.field_C) {
                 return;
@@ -188,9 +188,9 @@ final class ae {
           he.field_e.writeOpcode((byte) -22, 57);
           bj.field_ub = false;
         }
-        if (dh.field_Mb) {
+        if (SceneTextInput.field_Mb) {
           he.field_e.writeOpcode((byte) -114, 10);
-          dh.field_Mb = false;
+          SceneTextInput.field_Mb = false;
         }
         if (!MenuButtonPanel.field_C) {
           return;

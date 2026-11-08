@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CredentialKind {
-    static k field_c;
+    static BufferedSocket field_c;
     static String field_f;
     static int field_b;
     int field_g;

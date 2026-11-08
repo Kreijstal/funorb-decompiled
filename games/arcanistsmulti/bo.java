@@ -27,7 +27,7 @@ final class bo {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          if (!IntrusiveDeque.a(var6, 0)) {
+          if (!IntrusiveDeque.isValidDisplayNameText(var6, 0)) {
             stackIn_3_0 = fn.field_h;
             return stackIn_3_0;
           }
@@ -40,7 +40,7 @@ final class bo {
             return stackIn_9_0;
           }
           if (ArrayWidgetContainer.a(param0, 1)) {
-            stackIn_13_0 = tj.a(-30, new String[]{param0}, gj.field_e);
+            stackIn_13_0 = CachedArchiveProvider.formatTemplate(-30, new String[]{param0}, gj.field_e);
             return stackIn_13_0;
           }
           if (LoadingTracker.field_m >= 100 &&
@@ -56,7 +56,7 @@ final class bo {
             bo.releaseStatics(9);
           }
           if (sa.a(param0, 320)) {
-            stackIn_26_0 = tj.a(125, new String[]{param0}, r.field_a);
+            stackIn_26_0 = CachedArchiveProvider.formatTemplate(125, new String[]{param0}, r.field_a);
             return stackIn_26_0;
           }
           var5 = he.field_e;
@@ -105,8 +105,8 @@ final class bo {
             return false;
           }
           if (param2 < -32) {
-            var4 = tj.field_u[param1] + (ConditionalTextValue.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
-            var5 = tj.field_u[param3] + ConditionalTextValue.field_e[param3] + PatchEnvelopeSet.field_o[param3];
+            var4 = CachedArchiveProvider.field_u[param1] + (ConditionalTextValue.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
+            var5 = CachedArchiveProvider.field_u[param3] + ConditionalTextValue.field_e[param3] + PatchEnvelopeSet.field_o[param3];
             if (var5 > var4) {
               return true;
             }
@@ -116,8 +116,8 @@ final class bo {
             return !(param3 <= param1);
           }
           bo.isRankedBefore(true, 73, (byte) 32, -114);
-          var4Lifetime3 = tj.field_u[param1] + (ConditionalTextValue.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
-          var5Lifetime3 = tj.field_u[param3] + ConditionalTextValue.field_e[param3] + PatchEnvelopeSet.field_o[param3];
+          var4Lifetime3 = CachedArchiveProvider.field_u[param1] + (ConditionalTextValue.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
+          var5Lifetime3 = CachedArchiveProvider.field_u[param3] + ConditionalTextValue.field_e[param3] + PatchEnvelopeSet.field_o[param3];
           if (var5Lifetime3 > var4Lifetime3) {
             return true;
           }
@@ -139,8 +139,8 @@ final class bo {
           return false;
         }
         if (param2 < -32) {
-          var4Lifetime1 = tj.field_u[param1] + (ConditionalTextValue.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
-          var5Lifetime1 = tj.field_u[param3] + ConditionalTextValue.field_e[param3] + PatchEnvelopeSet.field_o[param3];
+          var4Lifetime1 = CachedArchiveProvider.field_u[param1] + (ConditionalTextValue.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
+          var5Lifetime1 = CachedArchiveProvider.field_u[param3] + ConditionalTextValue.field_e[param3] + PatchEnvelopeSet.field_o[param3];
           if (var5Lifetime1 > var4Lifetime1) {
             return true;
           }
@@ -150,8 +150,8 @@ final class bo {
           return !(param3 <= param1);
         }
         bo.isRankedBefore(true, 73, (byte) 32, -114);
-        var4Lifetime2 = tj.field_u[param1] + (ConditionalTextValue.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
-        var5Lifetime2 = tj.field_u[param3] + ConditionalTextValue.field_e[param3] + PatchEnvelopeSet.field_o[param3];
+        var4Lifetime2 = CachedArchiveProvider.field_u[param1] + (ConditionalTextValue.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
+        var5Lifetime2 = CachedArchiveProvider.field_u[param3] + ConditionalTextValue.field_e[param3] + PatchEnvelopeSet.field_o[param3];
         if (var5Lifetime2 > var4Lifetime2) {
           return true;
         }

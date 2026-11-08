@@ -390,7 +390,7 @@ final class UiTheme {
           if (param4 != 10) {
             field_m = (String) null;
           }
-          if (!param1.a((byte) 46)) {
+          if (!param1.isFullscreenSupported((byte) 46)) {
             stackIn_5_0 = null;
             return (java.awt.Frame) (stackIn_5_0);
           }
@@ -416,7 +416,7 @@ final class UiTheme {
               return (java.awt.Frame) (stackIn_29_0);
             }
           }
-          var11 = param1.a(param2, param5, param4 ^ 122, param3, param0);
+          var11 = param1.queueDisplayModeChange(param2, param5, param4 ^ 122, param3, param0);
           while (var11.field_e == 0) {
             ao.a(10L, param4 ^ 11);
           }
@@ -428,7 +428,7 @@ final class UiTheme {
             stackIn_40_0 = var7;
             return stackIn_40_0;
           }
-          fh.a(100, param1, var7);
+          SecondaryNodeDequeIterator.closeFullscreenFrame(100, param1, var7);
           stackIn_38_0 = null;
           return (java.awt.Frame) (stackIn_38_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

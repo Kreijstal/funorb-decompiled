@@ -101,7 +101,7 @@ abstract class ByteStorage {
           if (param0 > qf.field_d) {
             return;
           }
-          if (GridContainer.field_P + ta.a(true, param1) > jf.field_j) {
+          if (GridContainer.field_P + ta.a(true, param1) > NodeHashTableIterator.field_j) {
             return;
           }
           if ((cb.field_e & 1L << param1) == 0L) {
@@ -122,7 +122,7 @@ abstract class ByteStorage {
         if (param0 > qf.field_d) {
           return;
         }
-        if (GridContainer.field_P + ta.a(true, param1) > jf.field_j) {
+        if (GridContainer.field_P + ta.a(true, param1) > NodeHashTableIterator.field_j) {
           return;
         }
         if ((cb.field_e & 1L << param1) == 0L) {

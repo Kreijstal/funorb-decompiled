@@ -9,7 +9,7 @@ final class uc {
 
     final static SceneWidget b(int param0) {
         int var1 = 103 % ((param0 - 47) / 39);
-        return nl.field_Gb.field_Eb;
+        return IconTextSceneWidget.field_Gb.field_Eb;
     }
 
     final static void a(int param0, byte param1) {

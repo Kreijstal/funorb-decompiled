@@ -120,13 +120,13 @@ final class NanoFrameClock extends FrameClock {
           var9.drawAdditive(0, 0, 128);
         }
         if (param1 == 0) {
-          var3 = ValidationHelpWidget.field_U[param1] * NumericDateInputWidget.field_L[param1].length + tg.field_f[param1];
+          var3 = ValidationHelpWidget.field_U[param1] * NumericDateInputWidget.field_L[param1].length + DualLinkDeque.field_f[param1];
           var4 = new Sprite(640, 480);
           var4.makeRasterTarget();
           MusicPatchNode.field_F.drawTransparent(-64 + lm.field_e[param1], var3 - 80);
           BevelBoxPainter.field_a.drawTransparent(eo.field_b[param1] - 110, -70 + var3);
-          pe.field_Ib.drawTransparent(lm.field_e[param1] - 39, tg.field_f[param1] - 66);
-          TextTableInitializer.field_a.drawTransparent(-150 + eo.field_b[param1], -80 + tg.field_f[param1]);
+          ContextActionMenu.field_Ib.drawTransparent(lm.field_e[param1] - 39, DualLinkDeque.field_f[param1] - 66);
+          TextTableInitializer.field_a.drawTransparent(-150 + eo.field_b[param1], -80 + DualLinkDeque.field_f[param1]);
           var5 = fj.loadSprite(ec.field_c, -22612, ue.field_d, "");
           if (ec.field_c.equals("underdark")) {
             var5.drawSilhouette(0, -8 + (-var5.field_y + 480), 16777215);
@@ -142,8 +142,8 @@ final class NanoFrameClock extends FrameClock {
           var4.drawAdditive(0, 0, 255);
           MusicPatchNode.field_F.drawTransparent(lm.field_e[param1] - 64, var3 - 80);
           BevelBoxPainter.field_a.drawTransparent(eo.field_b[param1] - 110, -70 + var3);
-          pe.field_Ib.drawTransparent(lm.field_e[param1] - 39, -66 + tg.field_f[param1]);
-          TextTableInitializer.field_a.drawTransparent(-150 + eo.field_b[param1], tg.field_f[param1] - 80);
+          ContextActionMenu.field_Ib.drawTransparent(lm.field_e[param1] - 39, -66 + DualLinkDeque.field_f[param1]);
+          TextTableInitializer.field_a.drawTransparent(-150 + eo.field_b[param1], DualLinkDeque.field_f[param1] - 80);
           if (!ec.field_c.equals("underdark")) {
             if (ec.field_c.equals("clockwork")) {
               var5.drawTransparent(0, 480 - var5.field_y - 46);

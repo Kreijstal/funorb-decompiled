@@ -62,7 +62,7 @@ final class am {
           while (true) {
             if (0 > so.field_d) {
               UiContainer.field_z.position = 0;
-              if (!pe.a((byte) -86, 1)) {
+              if (!ContextActionMenu.hasIncomingBytes((byte) -86, 1)) {
                 return false;
               }
               so.field_d = UiContainer.field_z.readOpcode((byte) 62);
@@ -124,7 +124,7 @@ final class am {
           field_a = (String) null;
         }
         lh.field_n = true;
-        tj.a(false, (byte) -106);
+        CachedArchiveProvider.a(false, (byte) -106);
         fj.field_j = 0;
     }
 

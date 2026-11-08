@@ -22,7 +22,7 @@ final class ie extends ed implements ButtonListener {
     final static boolean a(int param0, boolean param1) {
         long dupTemp$2 = 0L;
         if (CacheEntry.field_o == null) {
-          CacheEntry.field_o = qg.field_b.a(ng.field_G, true, ProxySocketConnector.field_q);
+          CacheEntry.field_o = qg.field_b.queueDirectSocketOpen(ng.field_G, true, ProxySocketConnector.field_q);
         }
         if (param0 >= -35) {
           ie.l((byte) 23);
@@ -35,7 +35,7 @@ final class ie extends ed implements ButtonListener {
         hi.field_d = dupTemp$2;
         if (CacheEntry.field_o.field_e != 1) {
         }
-        ResizableModalPanel.field_eb = nl.field_Ib;
+        ResizableModalPanel.field_eb = IconTextSceneWidget.field_Ib;
         CacheEntry.field_o = null;
         return true;
     }
@@ -72,7 +72,7 @@ final class ie extends ed implements ButtonListener {
         }
         if (this.field_G &&
           !this.field_Ob) {
-          var2 = pe.e(false);
+          var2 = ContextActionMenu.e(false);
           if (var2 != null) {
             this.a(var2, (byte) 119, false);
           }
@@ -144,7 +144,7 @@ final class ie extends ed implements ButtonListener {
     }
 
     final void showMessageById(int param0) {
-        this.a(CipherPacketBuffer.a(0, param0, g.field_c), (byte) 124, true);
+        this.a(CipherPacketBuffer.createMessage(0, param0, g.field_c), (byte) 124, true);
     }
 
     private final void a(ho param0, byte param1, boolean param2) {
@@ -167,7 +167,7 @@ final class ie extends ed implements ButtonListener {
               var4 = param0.field_e;
               if (param0.field_a == 248) {
                 if (!param2) {
-                  na.i((byte) 105);
+                  LobbyGameEntry.i((byte) 105);
                 }
                 var4 = g.field_c;
                 this.field_Wb = true;
@@ -226,7 +226,7 @@ final class ie extends ed implements ButtonListener {
     final static void l(byte param0) {
         uc.field_d.setBounds(-(!fc.field_a ? 0 : 40 + (2 + (CacheEntry.field_p + 2))) + StatefulTextPainter.field_s.field_x, 0, 0, 18, (byte) -120);
         StrongCacheEntry.field_z.setBounds(CacheEntry.field_p + 42, -40 + (-CacheEntry.field_p + StatefulTextPainter.field_s.field_x) - 2, 0, 18, (byte) -120);
-        nj.field_m.a(20, CacheEntry.field_p, StatefulTextPainter.field_s.field_x, false, 0, StatefulTextPainter.field_s.field_I - 20, 2);
+        nj.field_m.setBoundsAndLayout(20, CacheEntry.field_p, StatefulTextPainter.field_s.field_x, false, 0, StatefulTextPainter.field_s.field_I - 20, 2);
         int var1 = -112 % ((param0 - 45) / 37);
     }
 

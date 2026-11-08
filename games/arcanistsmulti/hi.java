@@ -34,7 +34,7 @@ final class hi {
           } else {
             var2Lifetime3 = new ResizableViewResizeListener();
           }
-          ArchiveIndex.a(-113, new ViewportController((ViewResizeListener) (var2Lifetime3)));
+          ArchiveIndex.setViewportController(-113, new ViewportController((ViewResizeListener) (var2Lifetime3)));
           return;
         }
         hi.installViewController(23, true);
@@ -44,7 +44,7 @@ final class hi {
         } else {
           var2Lifetime2 = new ResizableViewResizeListener();
         }
-        ArchiveIndex.a(-113, new ViewportController((ViewResizeListener) (var2Lifetime2)));
+        ArchiveIndex.setViewportController(-113, new ViewportController((ViewResizeListener) (var2Lifetime2)));
     }
 
     static {

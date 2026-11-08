@@ -109,7 +109,7 @@ final class LoginMethod {
             if (var3_int == 0) {
               for (var10 = var9Lifetime1; param1 > var10; var10++) {
                 var11 = (-var9Lifetime1 + var10) % var6.field_y * var6.field_q;
-                var11 = dh.floorMod(var11, true, var6.field_A.length);
+                var11 = SceneTextInput.floorMod(var11, true, var6.field_A.length);
                 for (var12 = var8Lifetime1; param0 > var12; var12++) {
                   SoftwareRasterizer.addPixelScaled(var12, var10, 6035051, -(var6.field_A[var11] & 255) + 255 >> 2);
                   var11++;
@@ -122,7 +122,7 @@ final class LoginMethod {
             }
             for (var10Lifetime1 = var9Lifetime1; var10Lifetime1 < param1; var10Lifetime1 += 2) {
               var11Lifetime1 = var6.field_q * ((-var9Lifetime1 + var10Lifetime1) % var6.field_y);
-              var11Lifetime1 = dh.floorMod(var11Lifetime1, true, var6.field_A.length);
+              var11Lifetime1 = SceneTextInput.floorMod(var11Lifetime1, true, var6.field_A.length);
               for (var12Lifetime1 = var8Lifetime1; param0 > var12Lifetime1; var12Lifetime1 += 2) {
                 SoftwareRasterizer.addPixelScaled(var12Lifetime1 / 2, var10Lifetime1 / 2, 6035051, -(var6.field_A[var11Lifetime1] & 255) + 255 >> 2);
                 var11Lifetime1++;

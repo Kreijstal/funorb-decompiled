@@ -73,7 +73,7 @@ final class le {
         RuntimeException var1 = null;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          ClientException.field_b.processPointerInput(ValidationStatusIcon.field_S, dn.field_Jb, true, (byte) -100);
+          ClientException.field_b.processPointerInput(ValidationStatusIcon.field_S, SceneScrollPane.field_Jb, true, (byte) -100);
           ClientException.field_b.updatePanels(4);
           while (BevelTextPainter.pollKeyEvent(false)) {
             ClientException.field_b.processKey(ed.field_Bb, (byte) -89, IntrusiveDeque.field_d);
@@ -100,7 +100,7 @@ final class le {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }
-          if (in.field_Gb == sk.field_a) {
+          if (SceneScrollbar.field_Gb == sk.field_a) {
             stackIn_26_0 = 2;
             return stackIn_26_0;
           }
@@ -567,7 +567,7 @@ final class le {
             !this.field_V.n(4)) {
             SoftwareRasterizer.fillRectangle(param4, param2, param6, param1, 0);
             var8 = rb.field_l + " - " + this.field_L + "%";
-            tj.field_t.drawParagraph(var8, param4, param2, param6, param1, 16777215, -1, 1, 1, 0);
+            CachedArchiveProvider.field_t.drawParagraph(var8, param4, param2, param6, param1, 16777215, -1, 1, 1, 0);
             return;
           }
           var8_int = 2158624;
@@ -662,7 +662,7 @@ final class le {
                 }
                 var12Lifetime2 = EmailLoginCredentials.field_f / 2;
                 mi.field_B.drawCentered(co.field_i, var12Lifetime2, 16, var9_intLifetime1, -1);
-                tj.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), var12Lifetime2, 40, var9_intLifetime1, -1);
+                CachedArchiveProvider.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), var12Lifetime2, 40, var9_intLifetime1, -1);
                 SoftwareRasterizer.blurRectangle(5, 5, var12Lifetime2 - 48, 0, 96, 44);
                 SoftwareRasterizer.drawRectangle(-48 + var12Lifetime2, 0, 96, 44, 0);
                 SoftwareRasterizer.drawRectangle(-1 + var12Lifetime2 - 48, 0, 98, 45, 11768360);
@@ -672,9 +672,9 @@ final class le {
                 mi.field_B.drawCentered(co.field_i, var12Lifetime2, 15, 0, 0);
                 mi.field_B.drawCentered(co.field_i, var12Lifetime2, 16, var9_intLifetime1, -1);
                 if (var11_refLifetime1Lifetime1 != null) {
-                  tj.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), -1 + var12Lifetime2, 40, 0, 0);
-                  tj.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), var12Lifetime2, 39, 0, 0);
-                  tj.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), var12Lifetime2, 40, var9_intLifetime1, -1);
+                  CachedArchiveProvider.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), -1 + var12Lifetime2, 40, 0, 0);
+                  CachedArchiveProvider.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), var12Lifetime2, 39, 0, 0);
+                  CachedArchiveProvider.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), var12Lifetime2, 40, var9_intLifetime1, -1);
                 }
               }
             }
@@ -717,9 +717,9 @@ final class le {
                   } else {
                     if ((this.field_b & 1 << var10Lifetime1) != 0) {
                       if (this.field_i) {
-                        var11_refLifetime2 = tj.a(-69, new String[]{var15_ref}, pb.field_i);
+                        var11_refLifetime2 = CachedArchiveProvider.formatTemplate(-69, new String[]{var15_ref}, pb.field_i);
                       } else {
-                        var11_refLifetime2 = tj.a(param5 - 127, new String[]{var15_ref}, tj.field_y);
+                        var11_refLifetime2 = CachedArchiveProvider.formatTemplate(param5 - 127, new String[]{var15_ref}, CachedArchiveProvider.field_y);
                       }
                     } else {
                       if ((this.field_J & 1 << var10Lifetime1) != 0) {
@@ -731,7 +731,7 @@ final class le {
                         if ((this.field_D & 1 << var10Lifetime1) == 0) {
                           break regionExit1;
                         }
-                        var11_refLifetime2 = tj.a(-19, new String[]{var15_ref}, ph.field_d);
+                        var11_refLifetime2 = CachedArchiveProvider.formatTemplate(-19, new String[]{var15_ref}, ph.field_d);
                       }
                     }
                   }
@@ -763,14 +763,14 @@ final class le {
               var10Lifetime2 = var11 / 2 - 32;
             }
             IntrusiveNodeHashTable.field_a[var9.field_n].drawScaled(8, var10Lifetime2, 32, 32);
-            tj.field_t.drawText(rb.field_n[var9.field_n], 48, tj.field_t.field_C + var10Lifetime2, 0, -1);
+            CachedArchiveProvider.field_t.drawText(rb.field_n[var9.field_n], 48, CachedArchiveProvider.field_t.field_C + var10Lifetime2, 0, -1);
           }
           if (SpriteState.field_p) {
             if (null != this.field_V) {
-              tj.field_t.drawText("Visible c-sum" + this.field_V.o(4), 64, 64, 16776960, 0);
+              CachedArchiveProvider.field_t.drawText("Visible c-sum" + this.field_V.o(4), 64, 64, 16776960, 0);
             }
             if (null != this.field_w) {
-              tj.field_t.drawText("Backup c-sum" + this.field_w.o(4), 64, 96, 65535, 0);
+              CachedArchiveProvider.field_t.drawText("Backup c-sum" + this.field_w.o(4), 64, 96, 65535, 0);
             }
           }
           sb.b(param5 ^ 47);
@@ -1150,11 +1150,11 @@ final class le {
                 if (5 > var8) {
                   var8 = 5;
                 }
-                IntrusiveNodeHashTable.field_f = in.field_Kb;
+                IntrusiveNodeHashTable.field_f = SceneScrollbar.field_Kb;
                 if (var6 >= var5_ref_ml.m(-20357)) {
                   IntrusiveNodeHashTable.field_f = ml.field_K;
                 }
-                IntrusiveNodeHashTable.field_f = tj.a(-33, new String[]{Integer.toString(var6), Integer.toString(var8)}, IntrusiveNodeHashTable.field_f);
+                IntrusiveNodeHashTable.field_f = CachedArchiveProvider.formatTemplate(-33, new String[]{Integer.toString(var6), Integer.toString(var8)}, IntrusiveNodeHashTable.field_f);
                 if (var8 >= var5_ref_ml.m(-20357)) {
                   if (!this.field_ab) {
                     this.d(false);
@@ -1168,7 +1168,7 @@ final class le {
                 if (var5_ref_ml.m(-20357) <= var6) {
                   IntrusiveNodeHashTable.field_f = bc.field_a;
                 }
-                IntrusiveNodeHashTable.field_f = tj.a(-44, new String[]{Integer.toString(var6)}, IntrusiveNodeHashTable.field_f);
+                IntrusiveNodeHashTable.field_f = CachedArchiveProvider.formatTemplate(-44, new String[]{Integer.toString(var6)}, IntrusiveNodeHashTable.field_f);
               }
               ArrayWidgetContainer.field_A = 270;
             }
@@ -1292,7 +1292,7 @@ final class le {
                   var9 = 5;
                 }
               }
-              var12 = tj.a(120, new String[]{Integer.toString(var9)}, Checkbox.field_H);
+              var12 = CachedArchiveProvider.formatTemplate(120, new String[]{Integer.toString(var9)}, Checkbox.field_H);
               var10 = var12;
               var10Lifetime2 = var12;
               var7Lifetime1 += 16;
@@ -1344,7 +1344,7 @@ final class le {
             }
             SoftwareRasterizer.fillRoundedRectangle(stackIn_147_0, stackIn_147_1, stackIn_147_2, stackIn_147_3, stackIn_147_4, stackIn_147_5);
             SoftwareRasterizer.drawRoundedRectangle(var6 - 16, -16 + var7Lifetime2, 32, 32, 15, 0);
-            stackIn_152_0 = tg.field_b;
+            stackIn_152_0 = DualLinkDeque.field_b;
             if (0 >= UiTheme.field_t) {
               stackIn_153_0 = stackIn_152_0;
               stackIn_153_1 = 9;
@@ -1376,7 +1376,7 @@ final class le {
                     var10Lifetime1 = am.field_a;
                   }
                 } else {
-                  var10Lifetime1 = tj.a(120, new String[]{Integer.toString(UiTheme.field_t)}, WeightedLruCache.field_d);
+                  var10Lifetime1 = CachedArchiveProvider.formatTemplate(120, new String[]{Integer.toString(UiTheme.field_t)}, WeightedLruCache.field_d);
                 }
               }
               mi.field_B.drawText(var10Lifetime1, 5 + var6, var7Lifetime2 - 1, 0, 0);
@@ -1521,7 +1521,7 @@ final class le {
             SoftwareRasterizer.drawRectangle(-var7 + (-var3 + EmailLoginCredentials.field_f - var6), -var7 - var6 + (var5 - var4), var3 + var7 * 2, var4 + var7 * 2, 0);
             var7++;
             SoftwareRasterizer.setClip(EmailLoginCredentials.field_f - (var3 + var6), -var4 + (var5 - var6), -var6 + EmailLoginCredentials.field_f, -var6 + var5);
-            SoftwareRasterizer.fillVerticalGradient(-var6 - var3 + EmailLoginCredentials.field_f, var5 - (var4 + var6), var3, var4, GzipDecoder.field_a, cg.field_Lb);
+            SoftwareRasterizer.fillVerticalGradient(-var6 - var3 + EmailLoginCredentials.field_f, var5 - (var4 + var6), var3, var4, GzipDecoder.field_a, SocialListEntry.field_Lb);
             this.field_V.m((byte) 69).drawScaled(-var6 + (-var3 + EmailLoginCredentials.field_f), -var4 + var5 - var6, var3, var4);
             SoftwareRasterizer.drawRectangleAlpha(EmailLoginCredentials.field_f - var3 - (var6 - (-(EmailLoginCredentials.field_f >> 1) + IntrusiveDeque.field_c >> this.field_K)), (CameraFollowTarget.field_g - (var5 >> 1) >> this.field_K) + var5 + (-var4 - var6), EmailLoginCredentials.field_f >> this.field_K, var5 >> this.field_K, 16777215, 128);
             var8 = this.field_V.g((byte) 61);
@@ -1542,10 +1542,10 @@ final class le {
                   gn.a(14 + (var9.p(-8323) >> 1) >> this.field_K, (byte) 72, 255, var11_int, var12_int);
                   if (var9.y(param0 + 17563) == this.field_V.d(false)) {
                     if (this.field_K == 4) {
-                      tg.field_b[3].drawQuarterSize(-3 + var11_int, var12_int - (var9.p(-8323) >> this.field_K + 1) - 8);
+                      DualLinkDeque.field_b[3].drawQuarterSize(-3 + var11_int, var12_int - (var9.p(-8323) >> this.field_K + 1) - 8);
                     }
                     if (this.field_K == 2) {
-                      tg.field_b[6].draw(var11_int - 16, 8 + var12_int);
+                      DualLinkDeque.field_b[6].draw(var11_int - 16, 8 + var12_int);
                     }
                   }
                 }
@@ -1718,7 +1718,7 @@ final class le {
               !this.field_V.c((byte) 89)) {
               var7 = EmailLoginCredentials.field_g;
               var8 = MenuButtonPanel.field_I;
-              tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var7, var8, this.field_P << 8, 4096 - Math.abs(this.field_P - 128));
+              DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var7, var8, this.field_P << 8, 4096 - Math.abs(this.field_P - 128));
             }
           }
           if (this.field_V.d(false) != this.field_I &&
@@ -1754,7 +1754,7 @@ final class le {
                 if (this.field_V.c((byte) 89)) {
                   return;
                 }
-                tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var11_int, var12, this.field_P << 8, var9_intLifetime1 * (4096 - 64 * Math.abs((this.field_P & 31) - 16)) / 32);
+                DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var11_int, var12, this.field_P << 8, var9_intLifetime1 * (4096 - 64 * Math.abs((this.field_P & 31) - 16)) / 32);
                 return;
               }
               if (DropdownList.field_N == 150) {
@@ -1771,7 +1771,7 @@ final class le {
                 if (this.field_V.c((byte) 89)) {
                   return;
                 }
-                tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var11_intLifetime1, var12Lifetime1, this.field_P << 8, var9_intLifetime2 * (-(Math.abs((this.field_P & 31) - 16) * 64) + 4096) / 32);
+                DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var11_intLifetime1, var12Lifetime1, this.field_P << 8, var9_intLifetime2 * (-(Math.abs((this.field_P & 31) - 16) * 64) + 4096) / 32);
                 return;
               }
               if (DropdownList.field_N != 56 &&
@@ -1810,7 +1810,7 @@ final class le {
                   if (this.field_V.c((byte) 89)) {
                     return;
                   }
-                  tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var11_intLifetime2, var12Lifetime2, this.field_P << 8, (4096 - 64 * Math.abs((this.field_P & 31) - 16)) * var10Lifetime4 / 32);
+                  DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var11_intLifetime2, var12Lifetime2, this.field_P << 8, (4096 - 64 * Math.abs((this.field_P & 31) - 16)) * var10Lifetime4 / 32);
                   return;
                 }
                 if (DropdownList.field_N != 5) {
@@ -1825,7 +1825,7 @@ final class le {
                   if (decompiledFrameRemainder0) {
                     var9_intLifetime3Lifetime1 = -param1 + this.field_s + (EmailLoginCredentials.field_f >> 1);
                     var10Lifetime4 = -param2 + this.field_r + (var4_int >> 1);
-                    tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var9_intLifetime3Lifetime1, var10Lifetime4, this.field_P << 8, -Math.abs(-128 + this.field_P) + 4096);
+                    DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var9_intLifetime3Lifetime1, var10Lifetime4, this.field_P << 8, -Math.abs(-128 + this.field_P) + 4096);
                     return;
                   }
                 }
@@ -1853,7 +1853,7 @@ final class le {
                   if (this.field_V.c((byte) 89)) {
                     return;
                   }
-                  tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var13, var14, this.field_P << 8, (4096 - 64 * Math.abs((this.field_P & 31) - 16)) * var10Lifetime4 / 32);
+                  DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var13, var14, this.field_P << 8, (4096 - 64 * Math.abs((this.field_P & 31) - 16)) * var10Lifetime4 / 32);
                   return;
                 }
               }
@@ -1931,7 +1931,7 @@ final class le {
                 if (this.field_V.c((byte) 89)) {
                   return;
                 }
-                tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var13Lifetime1, var14Lifetime1, this.field_P << 8, var9_intLifetime4 * (4096 - 64 * Math.abs(-16 + (this.field_P & 31))) / 32);
+                DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var13Lifetime1, var14Lifetime1, this.field_P << 8, var9_intLifetime4 * (4096 - 64 * Math.abs(-16 + (this.field_P & 31))) / 32);
                 return;
               }
             }
@@ -2060,26 +2060,26 @@ final class le {
         int var5 = 0;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (ij.field_Tb == null) {
-            ij.field_Tb = new Sprite(640, 480);
+          if (SceneTabbedPanel.field_Tb == null) {
+            SceneTabbedPanel.field_Tb = new Sprite(640, 480);
           }
-          ij.field_Tb.makeRasterTarget();
+          SceneTabbedPanel.field_Tb.makeRasterTarget();
           var2_int = wm.statusColour(this.field_V.a(-31497), (byte) -124);
           var3 = ng.rankColour((byte) -124, this.field_V.a(-31497));
           GzipDecoder.field_a = var2_int;
-          cg.field_Lb = var3;
+          SocialListEntry.field_Lb = var3;
           SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, var2_int, var3);
           if (null == LoginPanel.field_M[this.field_V.a(-31497)]) {
             ue.field_d.field_f = 0;
-            af.a(tj.a(115, new String[]{Integer.toString(this.field_V.a(-31497))}, "background<%0>"), "", 19412, ue.field_d).drawScaled(0, 0, 640, 480);
+            af.loadIndexedSpriteByName(CachedArchiveProvider.formatTemplate(115, new String[]{Integer.toString(this.field_V.a(-31497))}, "background<%0>"), "", 19412, ue.field_d).drawScaled(0, 0, 640, 480);
           }
           if (param0 != 413355681) {
             this.field_S = 49;
           }
           SoftwareRasterizer.blurRectangle(2, 2, 0, 0, 640, 480);
-          for (var4 = 0; var4 < ij.field_Tb.field_A.length; var4++) {
-            if (ij.field_Tb.field_A[var4] == 0) {
-              ij.field_Tb.field_A[var4] = 1;
+          for (var4 = 0; var4 < SceneTabbedPanel.field_Tb.field_A.length; var4++) {
+            if (SceneTabbedPanel.field_Tb.field_A[var4] == 0) {
+              SceneTabbedPanel.field_Tb.field_A[var4] = 1;
             }
           }
           return;
@@ -2516,9 +2516,9 @@ final class le {
             var6 = 0;
           }
           if (960 < EmailLoginCredentials.field_j) {
-            ij.field_Tb.drawScaled(var5_intLifetime1, 0, 1280, EmailLoginCredentials.field_j);
+            SceneTabbedPanel.field_Tb.drawScaled(var5_intLifetime1, 0, 1280, EmailLoginCredentials.field_j);
           } else {
-            ij.field_Tb.drawScaled(var5_intLifetime1, var6, 1280, 960);
+            SceneTabbedPanel.field_Tb.drawScaled(var5_intLifetime1, var6, 1280, 960);
           }
           ge.field_r = ge.field_r + 1;
           if (ge.field_r > 128) {
@@ -2963,15 +2963,15 @@ final class le {
             var6 = var8;
             if ((1 << param2 & this.field_J) > 0) {
               if ((1 << param2 & this.field_a) > 0) {
-                var6Lifetime1 = tj.a(param1 ^ -124, new String[]{var8}, qc.field_g);
+                var6Lifetime1 = CachedArchiveProvider.formatTemplate(param1 ^ -124, new String[]{var8}, qc.field_g);
               } else {
-                var6Lifetime1 = tj.a(param1 + 116, new String[]{var8}, lc.field_a);
+                var6Lifetime1 = CachedArchiveProvider.formatTemplate(param1 + 116, new String[]{var8}, lc.field_a);
               }
             } else {
               if (0 >= (1 << param2 & this.field_a)) {
-                var6Lifetime1 = tj.a(122, new String[]{var8}, GrowableIntList.field_i);
+                var6Lifetime1 = CachedArchiveProvider.formatTemplate(122, new String[]{var8}, GrowableIntList.field_i);
               } else {
-                var6Lifetime1 = tj.a(param1 - 14, new String[]{var8}, BirthDateEntryPanel.field_Q);
+                var6Lifetime1 = CachedArchiveProvider.formatTemplate(param1 - 14, new String[]{var8}, BirthDateEntryPanel.field_Q);
               }
             }
             mi.field_B.drawText(var6Lifetime1, 3, mi.field_B.field_C / 2 + (param0 + 8), 15790320 ^ (var5 | 15790320), 0);
@@ -4387,13 +4387,13 @@ final class le {
             var16Lifetime1 = 100 + var15Lifetime1;
             var14Lifetime1 = (var3_int >> 1) - CameraFollowTarget.field_g + var10 * (var16Lifetime1 - 50) / var11 + (-var15Lifetime1 + var7);
             var13Lifetime1 = (EmailLoginCredentials.field_f >> 1) + (var9 * (-50 + var16Lifetime1) / var11 + var6) - IntrusiveDeque.field_c;
-            tg.field_b[4].draw(-16 + var13Lifetime1, -16 + var14Lifetime1);
+            DualLinkDeque.field_b[4].draw(-16 + var13Lifetime1, -16 + var14Lifetime1);
             var14Lifetime2 = (var3_int >> 1) + ((var16Lifetime1 - 50 - 16) * var10 / var11 - (var15Lifetime1 - var7 + CameraFollowTarget.field_g));
             var13Lifetime2 = -IntrusiveDeque.field_c + (var9 * (-50 + (var16Lifetime1 - 16)) / var11 + var6) + (EmailLoginCredentials.field_f >> 1);
-            tg.field_b[4].drawHalfSize(var13Lifetime2 - 8, var14Lifetime2 - 8);
+            DualLinkDeque.field_b[4].drawHalfSize(var13Lifetime2 - 8, var14Lifetime2 - 8);
             var14Lifetime3 = (var3_int >> 1) + var7 - var15Lifetime1 + (var10 * (-24 + (var16Lifetime1 - 50)) / var11 - CameraFollowTarget.field_g);
             var13Lifetime3 = -IntrusiveDeque.field_c + var6 + var9 * (-24 + var16Lifetime1 - 50) / var11 + (EmailLoginCredentials.field_f >> 1);
-            tg.field_b[4].drawQuarterSize(var13Lifetime3 - 4, var14Lifetime3 - 4);
+            DualLinkDeque.field_b[4].drawQuarterSize(var13Lifetime3 - 4, var14Lifetime3 - 4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4508,7 +4508,7 @@ final class le {
               var8Lifetime1 = -64 + var6Lifetime1.i((byte) 117) + (-param0 + ((var4_int >> 1) - var6Lifetime1.p(-8323))) - this.field_M;
               var9 = nj.field_n[this.field_V.d(false)];
               if (this.field_V.d(false) >= 0) {
-                tg.field_b[3].drawTinted(var7Lifetime1 - 16, -(int)(Math.sin(3.14 * (double)this.field_P / 32.0) * 32.0) - 16 + var8Lifetime1, var9);
+                DualLinkDeque.field_b[3].drawTinted(var7Lifetime1 - 16, -(int)(Math.sin(3.14 * (double)this.field_P / 32.0) * 32.0) - 16 + var8Lifetime1, var9);
               }
             }
             this.g(0);
@@ -4681,9 +4681,9 @@ final class le {
             SoftwareRasterizer.fillRoundedRectangle(-2 + var2_int, var3 - 2, 44, 44, 6, 16777215);
             bb.field_g[var4].drawAlpha(var2_int, var3, -var5 + 256);
             var6 = (-1 + this.field_V.l(4) + (-this.field_V.n((byte) -75) + this.field_V.s(0))) / this.field_V.s(0);
-            tj.field_t.drawParagraph(Integer.toString(var6), -4 + var2_int, -4 + (var3 - 1), 48, 48, 8355711, 0, 1, 1, tj.field_t.field_C);
-            tj.field_t.drawParagraph(Integer.toString(var6), -5 + var2_int, -4 + var3, 48, 48, 8355711, 0, 1, 1, tj.field_t.field_C);
-            tj.field_t.drawParagraph(Integer.toString(var6), -4 + var2_int, -4 + var3, 48, 48, 16777215, -1, 1, 1, tj.field_t.field_C);
+            CachedArchiveProvider.field_t.drawParagraph(Integer.toString(var6), -4 + var2_int, -4 + (var3 - 1), 48, 48, 8355711, 0, 1, 1, CachedArchiveProvider.field_t.field_C);
+            CachedArchiveProvider.field_t.drawParagraph(Integer.toString(var6), -5 + var2_int, -4 + var3, 48, 48, 8355711, 0, 1, 1, CachedArchiveProvider.field_t.field_C);
+            CachedArchiveProvider.field_t.drawParagraph(Integer.toString(var6), -4 + var2_int, -4 + var3, 48, 48, 16777215, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4848,12 +4848,12 @@ final class le {
           this.field_m = new CameraFollowTarget();
           this.field_cb = new IntrusiveDeque();
           if (!this.field_ab) {
-            k.a(this, true);
+            BufferedSocket.setActiveBattleScreen(this, true);
             UiContainer.a((byte) 83, 0);
             this.field_V.field_sb = cf.field_h;
             this.field_V.field_rb = FullscreenFocusCanvas.field_g;
           } else {
-            tj.c(63);
+            CachedArchiveProvider.c(63);
             this.field_w = new nf(false, false, param1, param2, param3, param4, param9, param10, param6, param7, param8, var15_int, param13);
             this.field_w.p(63);
             this.field_w.c(true);

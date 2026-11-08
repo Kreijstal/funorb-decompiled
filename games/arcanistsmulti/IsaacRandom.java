@@ -210,7 +210,7 @@ final class IsaacRandom {
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
         co.field_f.setBounds(param3, param0, param5, param1, (byte) -120);
         if (null != CacheEntry.field_q) {
-          CacheEntry.field_q.a(param6, -ng.field_K + param6, param1, true, param1, param4);
+          CacheEntry.field_q.layout(param6, -ng.field_K + param6, param1, true, param1, param4);
         }
         if (param2 != 19) {
           field_e = (String) null;
@@ -230,7 +230,7 @@ final class IsaacRandom {
         do {
           var4 = this.nextInt((byte) -46);
         } while (var3 < var4);
-        return dh.floorMod(var4, true, param0);
+        return SceneTextInput.floorMod(var4, true, param0);
     }
 
     final static int b(int param0) {

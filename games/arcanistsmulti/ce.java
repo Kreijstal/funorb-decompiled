@@ -54,19 +54,19 @@ final class ce extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, int param2) {
-        na var7 = null;
+        LobbyGameEntry var7 = null;
         CipherPacketBuffer var9 = null;
         CipherPacketBuffer var10 = null;
         CipherPacketBuffer var11 = null;
-        na var6 = null;
-        na var6Lifetime1;
-        na var6Lifetime2;
+        LobbyGameEntry var6 = null;
+        LobbyGameEntry var6Lifetime1;
+        LobbyGameEntry var6Lifetime2;
         if (param2 >= -65) {
           field_n = 98;
           if (param0 == ki.field_q) {
             return;
           }
-          var6 = (na) (nk.field_q.get((long)ki.field_q, (byte) -109));
+          var6 = (LobbyGameEntry) (nk.field_q.get((long)ki.field_q, (byte) -109));
           var7 = var6;
           var6Lifetime2 = var7;
           ki.field_q = param0;
@@ -90,8 +90,8 @@ final class ce extends IntrusiveNode {
         if (param0 == ki.field_q) {
           return;
         }
-        var6Lifetime1 = (na) (nk.field_q.get((long)ki.field_q, (byte) -109));
-        na var8 = var6Lifetime1;
+        var6Lifetime1 = (LobbyGameEntry) (nk.field_q.get((long)ki.field_q, (byte) -109));
+        LobbyGameEntry var8 = var6Lifetime1;
         ki.field_q = param0;
         if (var8 != null) {
           var8.field_Qb = null;

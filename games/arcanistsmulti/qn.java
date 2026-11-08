@@ -122,18 +122,18 @@ final class qn extends ResizableModalPanel implements ButtonListener {
           pc.field_b = 0;
           TextLine.field_d.clear(-124);
           oo.field_B.clear(-124);
-          var1 = ie.field_Qb.f(-118);
+          var1 = ie.field_Qb.firstInTraversal(-118);
           while (var1 != null) {
             var1.unlinkSecondary((byte) 88);
-            var1 = ie.field_Qb.a(-1);
+            var1 = ie.field_Qb.nextInTraversal(-1);
           }
           if (param0 < 30) {
             field_ob = (le) null;
           }
-          var1Lifetime1 = uc.field_c.f(-63);
+          var1Lifetime1 = uc.field_c.firstInTraversal(-63);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkSecondary((byte) 88);
-            var1Lifetime1 = uc.field_c.a(-1);
+            var1Lifetime1 = uc.field_c.nextInTraversal(-1);
           }
           SpriteState.field_t = 0;
         } catch (RuntimeException runtimeException) {

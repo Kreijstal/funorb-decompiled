@@ -58,10 +58,10 @@ final class ik {
         hl.field_m.addChild(tn.field_Ob.field_c, 89);
         int var2 = 34 / ((param1 - 24) / 48);
         hl.field_m.addChild(IntrusiveNodeHashTable.field_o, 55);
-        nl.field_Fb = new SceneWidget(0L, mf.field_d);
+        IconTextSceneWidget.field_Fb = new SceneWidget(0L, mf.field_d);
         Js5ArchiveManager.field_g = new SceneWidget(0L, (SceneWidget) null);
-        nl.field_Fb.addChild(MembershipOfferScreen.field_t, 61);
-        nl.field_Fb.addChild(Js5ArchiveManager.field_g, 89);
+        IconTextSceneWidget.field_Fb.addChild(MembershipOfferScreen.field_t, 61);
+        IconTextSceneWidget.field_Fb.addChild(Js5ArchiveManager.field_g, 89);
         Js5ArchiveManager.field_g.addChild(StatefulTextPainter.field_s, 25);
         Js5ArchiveManager.field_g.addChild(gj.field_d, 43);
         MusicCrossfadeStream.a(125, param0);
@@ -103,9 +103,9 @@ final class ik {
         }
         DraggableWidget.field_H.addChild(StatefulTextPainter.field_s, 39);
         aj.field_h = new i(NanoFrameClock.field_p, DraggableWidget.field_H);
-        k.field_d = new SceneWidget(0L, (SceneWidget) null);
-        k.field_d.addChild(aj.field_h.field_c, param0 ^ -74);
-        k.field_d.addChild(ii.field_b, param0 ^ -54);
+        BufferedSocket.field_d = new SceneWidget(0L, (SceneWidget) null);
+        BufferedSocket.field_d.addChild(aj.field_h.field_c, param0 ^ -74);
+        BufferedSocket.field_d.addChild(ii.field_b, param0 ^ -54);
         ao.a((byte) -120);
     }
 

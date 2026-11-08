@@ -68,15 +68,15 @@ final class jn {
         try {
           qf.field_a = -1L;
           sa.field_Db = param9;
-          in.field_Nb = param4;
+          SceneScrollbar.field_Nb = param4;
           vf.field_l = param4.length;
           DirectByteStorage.field_f = null;
           om.field_x = null;
           MidiPcmStream.field_E = new byte[(7 + sa.field_Db) / 8];
-          dn.field_Db = false;
+          SceneScrollPane.field_Db = false;
           var10_int = 0;
-          for (var11 = 0; var11 < in.field_Nb.length; var11++) {
-            var10_int = var10_int + (in.field_Nb[var11] & 255);
+          for (var11 = 0; var11 < SceneScrollbar.field_Nb.length; var11++) {
+            var10_int = var10_int + (SceneScrollbar.field_Nb[var11] & 255);
           }
           var10_int = (var10_int + 7) / 8;
           ng.field_D = new byte[var10_int];

@@ -98,14 +98,14 @@ final class pn {
           if (param2 >= -35) {
             return;
           }
-          in.field_Gb = DiskCacheWorker.field_g;
+          SceneScrollbar.field_Gb = DiskCacheWorker.field_g;
           if (255 != param1) {
             if (param1 >= 100 &&
               param1 <= 105) {
               i.field_i = ho.createWithLines((byte) 102, args);
               return;
             }
-            i.field_i = CipherPacketBuffer.a(0, param1, param3);
+            i.field_i = CipherPacketBuffer.createMessage(0, param1, param3);
           } else {
             stackIn_6_0 = 32517;
             stackIn_7_1 = !(UiComponent.field_u >= 13);
@@ -134,14 +134,14 @@ final class pn {
 
     final static boolean b(int param0) {
         if (-1 == fj.field_h) {
-          if (!pe.a((byte) -86, 1)) {
+          if (!ContextActionMenu.hasIncomingBytes((byte) -86, 1)) {
             return false;
           }
           fj.field_h = UiContainer.field_z.readUnsignedByte((byte) -108);
           UiContainer.field_z.position = 0;
         }
         if (fj.field_h == -2) {
-          if (!pe.a((byte) -86, 2)) {
+          if (!ContextActionMenu.hasIncomingBytes((byte) -86, 2)) {
             return false;
           }
           fj.field_h = UiContainer.field_z.readUnsignedShort(-98);
@@ -150,7 +150,7 @@ final class pn {
         if (param0 != -12564) {
           return false;
         }
-        return pe.a((byte) -86, fj.field_h);
+        return ContextActionMenu.hasIncomingBytes((byte) -86, fj.field_h);
     }
 
     final static ri validateEmailAddress(byte param0, String param1) {

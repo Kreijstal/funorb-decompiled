@@ -91,11 +91,11 @@ class SceneWidgetNode extends DualLinkNode {
                 if (incrementValue$0 != 0) {
                   incrementValue$1 = var6;
                   var6++;
-                  param4 = w.field_Lb[incrementValue$1];
+                  param4 = ChatInputWidget.field_Lb[incrementValue$1];
                   dupTemp$2 = param0[param4];
                   dupTemp$3 = param2[dupTemp$2];
                   param2[dupTemp$2] = dupTemp$3 + 1;
-                  w.field_Lb[dupTemp$3] = param4;
+                  ChatInputWidget.field_Lb[dupTemp$3] = param4;
                   continue;
                 }
                 break;
@@ -164,7 +164,7 @@ class SceneWidgetNode extends DualLinkNode {
             }
             try {
               if (0 == ClipState.field_m) {
-                FrameClock.field_a = ri.field_g.a(ed.field_Hb, true, IsaacRandom.field_g);
+                FrameClock.field_a = ri.field_g.queueDirectSocketOpen(ed.field_Hb, true, IsaacRandom.field_g);
                 ClipState.field_m = ClipState.field_m + 1;
               }
               if (ClipState.field_m == 1) {
@@ -177,19 +177,19 @@ class SceneWidgetNode extends DualLinkNode {
                 }
               }
               if (ClipState.field_m == 2) {
-                td.field_E = new k((java.net.Socket) (FrameClock.field_a.field_g), ri.field_g);
+                td.field_E = new BufferedSocket((java.net.Socket) (FrameClock.field_a.field_g), ri.field_g);
                 var1 = new PacketBuffer(13);
                 SpriteState.a(var1, ne.field_b, BevelTextPainter.field_u, ce.field_o, 123);
                 var1.writeByte(15, (byte) -28);
                 var1.writeInt(hd.field_a, (byte) -101);
-                td.field_E.a(13, 0, (byte) 126, var1.payload);
+                td.field_E.write(13, 0, (byte) 126, var1.payload);
                 ClipState.field_m = ClipState.field_m + 1;
                 ud.field_E = qj.monotonicTimeMillis(-26572) + 30000L;
               }
               boolean decompiledFrameRemainder0 = true;
               if (3 == ClipState.field_m) {
-                if (td.field_E.b(0) > 0) {
-                  var1_int = td.field_E.a((byte) 120);
+                if (td.field_E.available(0) > 0) {
+                  var1_int = td.field_E.read((byte) 120);
                   if (var1_int != 0) {
                     stackIn_39_0 = FrameClock.a((byte) 110, var1_int);
                     return stackIn_39_0;
@@ -207,7 +207,7 @@ class SceneWidgetNode extends DualLinkNode {
                 stackIn_52_0 = -1;
                 return stackIn_52_0;
               }
-              GrowableIntList.field_c.a(CipherPacketBuffer.field_n, true, td.field_E);
+              GrowableIntList.field_c.setConnection(CipherPacketBuffer.field_n, true, td.field_E);
               FrameClock.field_a = null;
               td.field_E = null;
               ClipState.field_m = 0;
@@ -313,8 +313,8 @@ class SceneWidgetNode extends DualLinkNode {
           var22Lifetime1 = -param1[0] + param2[0];
           var23Lifetime1 = param2[1] - param1[1];
           var24Lifetime1 = -param1[2] + param2[2];
-          var9 = var24Lifetime1 * param1[5] + (param1[3] * var22Lifetime1 + param1[4] * var23Lifetime1) >> 16 - tj.field_C;
-          var10 = var24Lifetime1 * param1[8] + (param1[7] * var23Lifetime1 + var22Lifetime1 * param1[6]) >> 16 - tj.field_C;
+          var9 = var24Lifetime1 * param1[5] + (param1[3] * var22Lifetime1 + param1[4] * var23Lifetime1) >> 16 - CachedArchiveProvider.field_C;
+          var10 = var24Lifetime1 * param1[8] + (param1[7] * var23Lifetime1 + var22Lifetime1 * param1[6]) >> 16 - CachedArchiveProvider.field_C;
           var11 = var24Lifetime1 * param1[11] + (var23Lifetime1 * param1[10] + param1[9] * var22Lifetime1) >> 16;
           var22Lifetime2 = MeshRasterState.field_i;
           var23Lifetime2 = MeshRasterState.field_g;
@@ -325,8 +325,8 @@ class SceneWidgetNode extends DualLinkNode {
               var25Lifetime1 = param4.field_b[var24Lifetime2];
               var26Lifetime1 = param4.field_B[var24Lifetime2];
               var27Lifetime1 = param4.field_L[var24Lifetime2];
-              var28Lifetime1 = var9 + (var25Lifetime1 * var12 - (-(var26Lifetime1 * var16) - var27Lifetime1 * var19) >> -tj.field_C + 16);
-              var29Lifetime1 = (var20 * var27Lifetime1 + var17 * var26Lifetime1 + var13 * var25Lifetime1 >> 16 - tj.field_C) + var10;
+              var28Lifetime1 = var9 + (var25Lifetime1 * var12 - (-(var26Lifetime1 * var16) - var27Lifetime1 * var19) >> -CachedArchiveProvider.field_C + 16);
+              var29Lifetime1 = (var20 * var27Lifetime1 + var17 * var26Lifetime1 + var13 * var25Lifetime1 >> 16 - CachedArchiveProvider.field_C) + var10;
               var30Lifetime1 = var11 + (var27Lifetime1 * var21 + var14 * var25Lifetime1 + var18 * var26Lifetime1 >> 16);
               stackIn_57_0 = 50;
               stackIn_57_1 = var30Lifetime1;
@@ -352,8 +352,8 @@ class SceneWidgetNode extends DualLinkNode {
                   ResourceArchive.field_a[var24Lifetime2] = -2147483648;
                 }
                 if (param6) {
-                  PatchEnvelopeSet.field_k[var24Lifetime2] = var28Lifetime1 >> tj.field_C;
-                  vf.field_v[var24Lifetime2] = var29Lifetime1 >> tj.field_C;
+                  PatchEnvelopeSet.field_k[var24Lifetime2] = var28Lifetime1 >> CachedArchiveProvider.field_C;
+                  vf.field_v[var24Lifetime2] = var29Lifetime1 >> CachedArchiveProvider.field_C;
                   LinkButtonPainter.field_g[var24Lifetime2] = var30Lifetime1;
                 }
                 var24Lifetime2++;
@@ -376,14 +376,14 @@ class SceneWidgetNode extends DualLinkNode {
                   var26Lifetime1Lifetime1 = param4.field_g[var24Lifetime2];
                   var27Lifetime1Lifetime1 = param4.field_x[var24Lifetime2];
                   ScrollContainer.field_V[var24Lifetime2] = (var16 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var12 + var19 * var27Lifetime1Lifetime1) >> 16) + var9;
-                  k.field_m[var24Lifetime2] = var10 + (var27Lifetime1Lifetime1 * var20 + var26Lifetime1Lifetime1 * var17 + var25Lifetime1Lifetime1 * var13 >> 16);
+                  BufferedSocket.field_m[var24Lifetime2] = var10 + (var27Lifetime1Lifetime1 * var20 + var26Lifetime1Lifetime1 * var17 + var25Lifetime1Lifetime1 * var13 >> 16);
                   SceneWidget.field_N[var24Lifetime2] = (var21 * var27Lifetime1Lifetime1 + var18 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var14 >> 16) + var11;
                   var25Lifetime1Lifetime1 = param4.field_J[var24Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_a[var24Lifetime2];
                   var27Lifetime1Lifetime1 = param4.field_j[var24Lifetime2];
                   BirthDateEntryPanel.field_M[var24Lifetime2] = var9 + (var27Lifetime1Lifetime1 * var19 + (var16 * var26Lifetime1Lifetime1 + var12 * var25Lifetime1Lifetime1) >> 16);
                   DropTargetWidget.field_E[var24Lifetime2] = (var25Lifetime1Lifetime1 * var13 + var26Lifetime1Lifetime1 * var17 + var27Lifetime1Lifetime1 * var20 >> 16) + var10;
-                  dh.field_Db[var24Lifetime2] = (var26Lifetime1Lifetime1 * var18 + var25Lifetime1Lifetime1 * var14 + var27Lifetime1Lifetime1 * var21 >> 16) + var11;
+                  SceneTextInput.field_Db[var24Lifetime2] = (var26Lifetime1Lifetime1 * var18 + var25Lifetime1Lifetime1 * var14 + var27Lifetime1Lifetime1 * var21 >> 16) + var11;
                   var25Lifetime1Lifetime1 = param4.field_o[var24Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_E[var24Lifetime2];
                   var27Lifetime1Lifetime1 = param4.field_p[var24Lifetime2];

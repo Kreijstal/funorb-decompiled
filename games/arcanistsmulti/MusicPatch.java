@@ -77,7 +77,7 @@ final class MusicPatch extends IntrusiveNode {
             var3 = (String) null;
             MusicPatch.a((String) null, (byte) -82);
           }
-          stackIn_3_0 = AlternateUsernameCredentials.field_q.a(param0, "", -1);
+          stackIn_3_0 = AlternateUsernameCredentials.field_q.getNamedFile(param0, "", -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

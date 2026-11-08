@@ -146,7 +146,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
         try {
           Object var6 = null;
           Object var7 = null;
-          tj var8 = null;
+          CachedArchiveProvider var8 = null;
           ResourceArchive stackIn_2_0 = null;
           ResourceArchive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
@@ -174,7 +174,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
             }
             var8 = ValidationStatusIcon.field_O.a((SectorCacheStore) (var6), param5, -113, (SectorCacheStore) (var7), param0);
             if (param3) {
-              var8.g((byte) 53);
+              var8.enablePrefetch((byte) 53);
             }
             stackIn_15_0 = new ResourceArchive(var8, param1, param4);
             return stackIn_15_0;

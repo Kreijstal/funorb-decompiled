@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class Js5Transport {
-    tg field_b;
+    DualLinkDeque field_b;
     static IntrusiveDeque field_j;
     static String field_l;
     static boolean field_d;
-    tg field_g;
+    DualLinkDeque field_g;
     static String field_h;
-    tg field_f;
-    tg field_m;
+    DualLinkDeque field_f;
+    DualLinkDeque field_m;
     int field_k;
     PacketBuffer field_c;
     long field_p;
@@ -19,26 +19,26 @@ abstract class Js5Transport {
     volatile int field_i;
     Js5NetworkRequest field_n;
 
-    final boolean c(byte param0) {
+    final boolean isUrgentQueueFull(byte param0) {
         int var2 = 68 / ((param0 + 24) / 40);
-        return this.b((byte) 88) >= 20 ? true : false;
+        return this.pendingUrgentCount((byte) 88) >= 20 ? true : false;
     }
 
-    final boolean b(int param0) {
+    final boolean isNormalQueueFull(int param0) {
         if (param0 == -21) {
-          return this.a(-88) >= 20 ? true : false;
+          return this.pendingRequestCount(-88) >= 20 ? true : false;
         }
-        this.a(-35, true, 82, (byte) 60, (byte) -102);
-        return this.a(-88) >= 20 ? true : false;
+        this.requestGroup(-35, true, 82, (byte) 60, (byte) -102);
+        return this.pendingRequestCount(-88) >= 20 ? true : false;
     }
 
-    abstract void c(int param0);
+    abstract void closeConnection(int param0);
 
-    abstract void a(byte param0);
+    abstract void dropConnection(byte param0);
 
-    final int a(int param0) {
+    final int pendingRequestCount(int param0) {
         int var2 = 52 / ((param0 + 23) / 41);
-        return this.field_f.b((byte) -123) + this.field_m.b((byte) -90);
+        return this.field_f.size((byte) -123) + this.field_m.size((byte) -90);
     }
 
     final static boolean f(int param0) {
@@ -51,23 +51,23 @@ abstract class Js5Transport {
         return false;
     }
 
-    final static boolean a(int param0, byte param1) {
+    final static boolean isFeatureEnabled(int param0, byte param1) {
         if (param1 > -3) {
           Js5Transport.f(-108);
           if (-1 == param0) {
             return true;
           }
-          return (1 << param0 & k.field_o) != 0 ? true : false;
+          return (1 << param0 & BufferedSocket.field_o) != 0 ? true : false;
         }
         if (-1 == param0) {
           return true;
         }
-        return (1 << param0 & k.field_o) != 0 ? true : false;
+        return (1 << param0 & BufferedSocket.field_o) != 0 ? true : false;
     }
 
-    abstract boolean e(int param0);
+    abstract boolean process(int param0);
 
-    abstract void a(boolean param0, boolean param1, Object param2);
+    abstract void setConnection(boolean param0, boolean param1, Object param2);
 
     final static String a(String param0, int param1, int param2, String param3) {
         le var4 = null;
@@ -116,15 +116,15 @@ abstract class Js5Transport {
         }
     }
 
-    final static void a(int param0, int param1, String param2, int param3, int param4, int param5) {
+    final static void drawShadowedText(int param0, int param1, String param2, int param3, int param4, int param5) {
         try {
-          tj.field_t.drawText(param2, param1 + 1, 1 + tj.field_t.field_C + param0, (16711422 & param3) >> 1, 4144959 & param3 >> 2);
+          CachedArchiveProvider.field_t.drawText(param2, param1 + 1, 1 + CachedArchiveProvider.field_t.field_C + param0, (16711422 & param3) >> 1, 4144959 & param3 >> 2);
           if (param5 >= -104) {
             Js5Transport.f(68);
           }
-          tj.field_t.drawText(param2, param1, tj.field_t.field_C + (param0 - 1), param3, param3);
-          tj.field_t.drawText(param2, -1 + param1, tj.field_t.field_C + param0, param3, param3);
-          tj.field_t.drawText(param2, param1, param0 + tj.field_t.field_C, param4, -1);
+          CachedArchiveProvider.field_t.drawText(param2, param1, CachedArchiveProvider.field_t.field_C + (param0 - 1), param3, param3);
+          CachedArchiveProvider.field_t.drawText(param2, -1 + param1, CachedArchiveProvider.field_t.field_C + param0, param3, param3);
+          CachedArchiveProvider.field_t.drawText(param2, param1, param0 + CachedArchiveProvider.field_t.field_C, param4, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "lk.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -139,7 +139,7 @@ abstract class Js5Transport {
         }
     }
 
-    final Js5NetworkRequest a(int param0, boolean param1, int param2, byte param3, byte param4) {
+    final Js5NetworkRequest requestGroup(int param0, boolean param1, int param2, byte param3, byte param4) {
         Js5NetworkRequest stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         Js5NetworkRequest stackIn_15_0 = null;
@@ -156,19 +156,19 @@ abstract class Js5Transport {
           stackIn_15_0.field_q = stackIn_16_1;
           var8.secondaryKey = var6;
           if (!param1) {
-            if (this.a(-72) >= 20) {
+            if (this.pendingRequestCount(-72) >= 20) {
               throw new RuntimeException();
             }
-            this.field_f.a(var8, param3 ^ -15963);
+            this.field_f.addLast(var8, param3 ^ -15963);
             return var8;
           }
-          if (this.b((byte) 88) >= 20) {
+          if (this.pendingUrgentCount((byte) 88) >= 20) {
             throw new RuntimeException();
           }
-          this.field_b.a(var8, 15893);
+          this.field_b.addLast(var8, 15893);
           return var8;
         }
-        this.c((byte) -127);
+        this.isUrgentQueueFull((byte) -127);
         var8Lifetime1 = new Js5NetworkRequest();
         var8Lifetime1.field_y = param4;
         stackIn_3_0 = var8Lifetime1;
@@ -176,32 +176,32 @@ abstract class Js5Transport {
         stackIn_3_0.field_q = stackIn_4_1;
         var8Lifetime1.secondaryKey = var6;
         if (!param1) {
-          if (this.a(-72) >= 20) {
+          if (this.pendingRequestCount(-72) >= 20) {
             throw new RuntimeException();
           }
-          this.field_f.a(var8Lifetime1, param3 ^ -15963);
+          this.field_f.addLast(var8Lifetime1, param3 ^ -15963);
           return var8Lifetime1;
         }
-        if (this.b((byte) 88) >= 20) {
+        if (this.pendingUrgentCount((byte) 88) >= 20) {
           throw new RuntimeException();
         }
-        this.field_b.a(var8Lifetime1, 15893);
+        this.field_b.addLast(var8Lifetime1, 15893);
         return var8Lifetime1;
     }
 
-    final int b(byte param0) {
+    final int pendingUrgentCount(byte param0) {
         if (param0 == 88) {
-          return this.field_b.b((byte) -112) + this.field_g.b((byte) -68);
+          return this.field_b.size((byte) -112) + this.field_g.size((byte) -68);
         }
         this.field_p = -111L;
-        return this.field_b.b((byte) -112) + this.field_g.b((byte) -68);
+        return this.field_b.size((byte) -112) + this.field_g.size((byte) -68);
     }
 
     Js5Transport() {
-        this.field_b = new tg();
-        this.field_g = new tg();
-        this.field_f = new tg();
-        this.field_m = new tg();
+        this.field_b = new DualLinkDeque();
+        this.field_g = new DualLinkDeque();
+        this.field_f = new DualLinkDeque();
+        this.field_m = new DualLinkDeque();
         this.field_c = new PacketBuffer(6);
         this.field_i = 0;
         this.field_a = (byte) 0;

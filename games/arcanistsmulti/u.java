@@ -337,7 +337,7 @@ final class u {
           do {
             var4 = param0.nextInt((byte) -46);
           } while (var3_int <= var4);
-          stackIn_10_0 = dh.floorMod(var4, true, param2);
+          stackIn_10_0 = SceneTextInput.floorMod(var4, true, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -355,9 +355,9 @@ final class u {
 
     final static void a(byte param0) {
         int stackIn_45_0 = 0;
-        cg stackIn_51_0 = null;
+        SocialListEntry stackIn_51_0 = null;
         boolean stackIn_52_1 = false;
-        cg stackIn_93_0 = null;
+        SocialListEntry stackIn_93_0 = null;
         boolean stackIn_94_1 = false;
         RuntimeException decompiledCaughtException = null;
         CipherPacketBuffer var1 = null;
@@ -365,41 +365,41 @@ final class u {
         int var2 = 0;
         int var3 = 0;
         long var3_long = 0L;
-        cg var3_ref_cg = null;
-        na var4 = null;
+        SocialListEntry var3_ref_cg = null;
+        LobbyGameEntry var4 = null;
         int var4_int = 0;
         int var5 = 0;
-        na var6 = null;
-        cg var7 = null;
+        LobbyGameEntry var6 = null;
+        SocialListEntry var7 = null;
         int var8 = 0;
-        cg var8_ref_cg = null;
+        SocialListEntry var8_ref_cg = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        na var13 = null;
-        cg var14 = null;
-        na var15 = null;
+        LobbyGameEntry var13 = null;
+        SocialListEntry var14 = null;
+        LobbyGameEntry var15 = null;
         Object var16 = null;
         Object var17 = null;
-        na var17_ref = null;
+        LobbyGameEntry var17_ref = null;
         Object var18 = null;
         Object var19 = null;
-        na var19_ref = null;
+        LobbyGameEntry var19_ref = null;
         String var20 = null;
         String var21 = null;
         String var22 = null;
-        cg var23 = null;
-        cg var24 = null;
-        na var25 = null;
+        SocialListEntry var23 = null;
+        SocialListEntry var24 = null;
+        LobbyGameEntry var25 = null;
         String var26 = null;
         String var27 = null;
-        cg var28 = null;
-        cg var29 = null;
-        cg var30 = null;
-        na var31 = null;
-        na var32 = null;
-        cg var33 = null;
-        cg var3_ref_cgLifetime1;
+        SocialListEntry var28 = null;
+        SocialListEntry var29 = null;
+        SocialListEntry var30 = null;
+        LobbyGameEntry var31 = null;
+        LobbyGameEntry var32 = null;
+        SocialListEntry var33 = null;
+        SocialListEntry var3_ref_cgLifetime1;
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
@@ -439,10 +439,10 @@ final class u {
               var9 = stackIn_45_0;
               if (var23 != null) {
                 if (var9 != 0) {
-                  var23.a(var21, var22, 93);
+                  var23.setNames(var21, var22, 93);
                 }
               } else {
-                var8_ref_cg = new cg(var21, var22, var3_long);
+                var8_ref_cg = new SocialListEntry(var21, var22, var3_long);
                 bc.field_c.put(var8_ref_cg, var3_long, (byte) 126);
               }
               var8_ref_cg.field_Ob = qj.monotonicTimeMillis(-26572) - (long)((PacketBuffer) ((Object) var1)).readInt(-10674);
@@ -454,7 +454,7 @@ final class u {
               var8_ref_cg.field_Vb = var10 >> 1;
               var8_ref_cg.field_Mb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -123);
               var8_ref_cg.field_Bb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 100);
-              jf.a(var8_ref_cg, (byte) 1);
+              NodeHashTableIterator.insertSorted(var8_ref_cg, (byte) 1);
               return;
             }
             if (6 == var2) {
@@ -477,30 +477,30 @@ final class u {
               return;
             }
             if (var2 == 7) {
-              var33 = (cg) (LinkButtonPainter.field_j.first(12623));
+              var33 = (SocialListEntry) (LinkButtonPainter.field_j.first(12623));
               while (var33 != null) {
                 var33.unlink(true);
                 var33.unlinkSecondary((byte) 88);
-                var33 = (cg) (LinkButtonPainter.field_j.next(0));
+                var33 = (SocialListEntry) (LinkButtonPainter.field_j.next(0));
               }
               oe.field_b = 0;
               return;
             }
             if (var2 == 8) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
-              var4 = (na) (nk.field_q.get((long)var3, (byte) -93));
+              var4 = (LobbyGameEntry) (nk.field_q.get((long)var3, (byte) -93));
               if (var4 == null) {
-                var4 = new na(vf.field_l);
+                var4 = new LobbyGameEntry(vf.field_l);
                 nk.field_q.put(var4, (long)var3, (byte) 116);
               }
-              dn.a(var1, var4, true, 2);
+              SceneScrollPane.readGameEntry(var1, var4, true, 2);
               cb.a(var4, 67);
               return;
             }
             if (var2 == 9) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
               var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 105);
-              var15 = (na) (nk.field_q.get((long)var3Lifetime4, (byte) -70));
+              var15 = (LobbyGameEntry) (nk.field_q.get((long)var3Lifetime4, (byte) -70));
               var31 = var15;
               if (var15 == null) {
                 return;
@@ -515,11 +515,11 @@ final class u {
               return;
             }
             if (var2 == 10) {
-              var32 = (na) (UiTheme.field_a.first(12623));
+              var32 = (LobbyGameEntry) (UiTheme.field_a.first(12623));
               while (var32 != null) {
                 var32.unlink(true);
                 var32.unlinkSecondary((byte) 88);
-                var32 = (na) (UiTheme.field_a.next(0));
+                var32 = (LobbyGameEntry) (UiTheme.field_a.next(0));
               }
               return;
             }
@@ -528,7 +528,7 @@ final class u {
               if (var2 == 13) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
                 var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -107);
-                var17_ref = (na) (nk.field_q.get((long)var3Lifetime5, (byte) -105));
+                var17_ref = (LobbyGameEntry) (nk.field_q.get((long)var3Lifetime5, (byte) -105));
                 if (var17_ref != null) {
                   var17_ref.field_Nb = false;
                   var13 = var17_ref;
@@ -552,7 +552,7 @@ final class u {
                     var27 = ((PacketBuffer) ((Object) var1)).readString(-1);
                     var7 = vf.a(var3_longLifetime2, 8192);
                     if (var7 == null) {
-                      var7 = new cg(var26, var27, var3_longLifetime2);
+                      var7 = new SocialListEntry(var26, var27, var3_longLifetime2);
                       OptionsDialog.field_qb.put(var7, var3_longLifetime2, (byte) 121);
                       DirectByteStorage.field_f.field_Rb = DirectByteStorage.field_f.field_Rb + 1;
                     }
@@ -586,7 +586,7 @@ final class u {
                     return;
                   }
                   if (var2 == 20) {
-                    dn.a(var1, DirectByteStorage.field_f, false, 2);
+                    SceneScrollPane.readGameEntry(var1, DirectByteStorage.field_f, false, 2);
                     return;
                   }
                   if (var2 == 21) {
@@ -627,7 +627,7 @@ final class u {
                       oe.field_b = oe.field_b - 1;
                     }
                   }
-                  jf.a(var29, (byte) 15);
+                  NodeHashTableIterator.insertSorted(var29, (byte) 15);
                 }
                 return;
               }
@@ -642,12 +642,12 @@ final class u {
                 } else {
                   var30.field_Db = true;
                 }
-                jf.a(var30, (byte) 127);
+                NodeHashTableIterator.insertSorted(var30, (byte) 127);
               }
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
-            var19_ref = (na) (nk.field_q.get((long)var3Lifetime6, (byte) -98));
+            var19_ref = (LobbyGameEntry) (nk.field_q.get((long)var3Lifetime6, (byte) -98));
             var25 = var19_ref;
             if (var25 != null) {
               if (var2 != 11) {
@@ -659,13 +659,13 @@ final class u {
             }
             return;
           }
-          var3_ref_cg = (cg) (ph.field_a.first(12623));
+          var3_ref_cg = (SocialListEntry) (ph.field_a.first(12623));
           while (var3_ref_cg != null) {
             var3_ref_cg.unlink(true);
             var3_ref_cg.unlinkSecondary((byte) 88);
-            var3_ref_cg = (cg) (ph.field_a.next(0));
+            var3_ref_cg = (SocialListEntry) (ph.field_a.next(0));
           }
-          var3_ref_cgLifetime1 = (cg) (bc.field_c.f(-79));
+          var3_ref_cgLifetime1 = (SocialListEntry) (bc.field_c.firstInTraversal(-79));
           while (var3_ref_cgLifetime1 != null) {
             if (var3_ref_cgLifetime1.field_Db ||
               var3_ref_cgLifetime1.field_Kb) {
@@ -674,9 +674,9 @@ final class u {
                 var3_ref_cgLifetime1.field_Kb = false;
               }
               var3_ref_cgLifetime1.field_Db = false;
-              jf.a(var3_ref_cgLifetime1, (byte) -109);
+              NodeHashTableIterator.insertSorted(var3_ref_cgLifetime1, (byte) -109);
             }
-            var3_ref_cgLifetime1 = (cg) (bc.field_c.a(-1));
+            var3_ref_cgLifetime1 = (SocialListEntry) (bc.field_c.nextInTraversal(-1));
           }
           if (var2 == 1 &&
             DirectByteStorage.field_f != null) {
@@ -684,9 +684,9 @@ final class u {
           }
           if (var2 == 4) {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
-            DirectByteStorage.field_f = new na(vf.field_l);
+            DirectByteStorage.field_f = new LobbyGameEntry(vf.field_l);
             DirectByteStorage.field_f.a(46, (long)var3Lifetime1);
-            dn.a(var1, DirectByteStorage.field_f, false, 2);
+            SceneScrollPane.readGameEntry(var1, DirectByteStorage.field_f, false, 2);
             PatchEnvelopeSet.field_a = 0L;
           } else {
             DirectByteStorage.field_f = null;
@@ -696,14 +696,14 @@ final class u {
             om.field_x = null;
           } else {
             if (null == om.field_x) {
-              om.field_x = new na(vf.field_l);
+              om.field_x = new LobbyGameEntry(vf.field_l);
             }
           }
           if (var2 != 3) {
-            dn.field_Db = false;
+            SceneScrollPane.field_Db = false;
             return;
           }
-          dn.field_Db = true;
+          SceneScrollPane.field_Db = true;
           for (var3Lifetime2 = 0; MidiPcmStream.field_E.length > var3Lifetime2; var3Lifetime2++) {
             MidiPcmStream.field_E[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte(6);
           }
@@ -870,43 +870,43 @@ final class u {
         RuntimeException var3 = null;
         try {
           if (1 == param1) {
-            stackIn_2_0 = tj.a(126, new String[]{param2}, BoundedRandomAccessFile.field_e);
+            stackIn_2_0 = CachedArchiveProvider.formatTemplate(126, new String[]{param2}, BoundedRandomAccessFile.field_e);
             return stackIn_2_0;
           }
           if (param1 == 2) {
-            stackIn_6_0 = tj.a(-73, new String[]{param2}, AudioService.field_h);
+            stackIn_6_0 = CachedArchiveProvider.formatTemplate(-73, new String[]{param2}, AudioService.field_h);
             return stackIn_6_0;
           }
           if (param1 == 3) {
-            stackIn_9_0 = tj.a(-54, new String[]{param2}, ij.field_Gb);
+            stackIn_9_0 = CachedArchiveProvider.formatTemplate(-54, new String[]{param2}, SceneTabbedPanel.field_Gb);
             return stackIn_9_0;
           }
           if (param1 == 4) {
-            stackIn_13_0 = tj.a(125, new String[]{param2}, DropTargetWidget.field_M);
+            stackIn_13_0 = CachedArchiveProvider.formatTemplate(125, new String[]{param2}, DropTargetWidget.field_M);
             return stackIn_13_0;
           }
           if (5 == param1) {
-            stackIn_16_0 = tj.a(-95, new String[]{param2}, LinkButtonPainter.field_n);
+            stackIn_16_0 = CachedArchiveProvider.formatTemplate(-95, new String[]{param2}, LinkButtonPainter.field_n);
             return stackIn_16_0;
           }
           if (param1 == 6) {
-            stackIn_20_0 = tj.a(120, new String[]{param2}, b.field_b);
+            stackIn_20_0 = CachedArchiveProvider.formatTemplate(120, new String[]{param2}, b.field_b);
             return stackIn_20_0;
           }
           if (param1 == 7) {
-            stackIn_23_0 = tj.a(122, new String[]{param2}, ho.field_d);
+            stackIn_23_0 = CachedArchiveProvider.formatTemplate(122, new String[]{param2}, ho.field_d);
             return stackIn_23_0;
           }
           if (param1 == 8) {
-            stackIn_26_0 = tj.a(122, new String[]{param2}, c.field_c);
+            stackIn_26_0 = CachedArchiveProvider.formatTemplate(122, new String[]{param2}, c.field_c);
             return stackIn_26_0;
           }
           if (param1 == 11) {
-            stackIn_30_0 = tj.a(-92, new String[]{param2}, ui.field_w);
+            stackIn_30_0 = CachedArchiveProvider.formatTemplate(-92, new String[]{param2}, ui.field_w);
             return stackIn_30_0;
           }
           if (param1 == 12) {
-            stackIn_34_0 = tj.a(-85, new String[]{param2}, so.field_n);
+            stackIn_34_0 = CachedArchiveProvider.formatTemplate(-85, new String[]{param2}, so.field_n);
             return stackIn_34_0;
           }
           if (param0 >= -125) {
@@ -915,7 +915,7 @@ final class u {
           if (param1 != 13) {
             return null;
           }
-          stackIn_40_0 = tj.a(-123, new String[]{param2}, qo.field_d);
+          stackIn_40_0 = CachedArchiveProvider.formatTemplate(-123, new String[]{param2}, qo.field_d);
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

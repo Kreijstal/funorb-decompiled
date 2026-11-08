@@ -19,8 +19,8 @@ final class cb {
         field_c = null;
     }
 
-    final static void a(na param0, int param1) {
-        na var2 = null;
+    final static void a(LobbyGameEntry param0, int param1) {
+        LobbyGameEntry var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -32,10 +32,10 @@ final class cb {
         try {
           param0.unlink(true);
           var3 = 19 % ((-78 - param1) / 48);
-          var2 = (na) (UiTheme.field_a.first(12623));
+          var2 = (LobbyGameEntry) (UiTheme.field_a.first(12623));
           while (var2 != null) {
-            if (var2.a(param0, 2)) {
-              var2 = (na) (UiTheme.field_a.next(0));
+            if (var2.sortsBefore(param0, 2)) {
+              var2 = (LobbyGameEntry) (UiTheme.field_a.next(0));
               continue;
             }
             break;

@@ -22,7 +22,7 @@ final class gj {
           }
           mn.field_r = param2;
           km.field_c = 0;
-          if (ij.b(mn.field_r, 10)) {
+          if (SceneTabbedPanel.isNonNegative(mn.field_r, 10)) {
             var4 = 0;
             if (mn.field_r == 10) {
               var4 = -1;
@@ -39,7 +39,7 @@ final class gj {
           }
           mn.field_r = param2;
           km.field_c = 0;
-          if (ij.b(mn.field_r, 10)) {
+          if (SceneTabbedPanel.isNonNegative(mn.field_r, 10)) {
             var4 = 0;
             if (mn.field_r == 10) {
               var4 = -1;

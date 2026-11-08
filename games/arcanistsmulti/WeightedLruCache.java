@@ -8,7 +8,7 @@ final class WeightedLruCache {
     static int field_g;
     private int field_f;
     private SecondaryNodeDeque field_b;
-    private pk field_c;
+    private IterableNodeHashTable field_c;
 
     final static void a(boolean param0, vg param1, int param2, byte param3, int param4) {
         byte dupTemp$0 = 0;
@@ -105,7 +105,7 @@ final class WeightedLruCache {
                         stackIn_40_0Lifetime1 = var17;
                         stackIn_40_1Lifetime1 = var16 << 4;
                         var18 = stackIn_40_0Lifetime1 + stackIn_40_1Lifetime1;
-                        w.field_Lb[var18] = var8;
+                        ChatInputWidget.field_Lb[var18] = var8;
                         ArrayWidgetContainer.field_B[var16] = 1 + var17;
                         if (param1.field_F > 0 &&
                           null != param1.field_H) {
@@ -181,7 +181,7 @@ final class WeightedLruCache {
             break;
           }
           var6_ref = new StrongCacheEntry(param3, param1);
-          this.field_c.a((byte) -68, var6_ref, param2);
+          this.field_c.put((byte) -68, var6_ref, param2);
           this.field_b.addLast((byte) 37, var6_ref);
           ((CacheEntry) ((Object) var6_ref)).secondaryKey = 0L;
           if (param0 >= -99) {
@@ -208,7 +208,7 @@ final class WeightedLruCache {
           return;
         }
         try {
-          var4 = (CacheEntry) (this.field_c.a((byte) -79, param1));
+          var4 = (CacheEntry) (this.field_c.get((byte) -79, param1));
           this.removeEntry(var4, 2147483647);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ig.B(" + param0 + ',' + param1 + ')');
@@ -224,7 +224,7 @@ final class WeightedLruCache {
         try {
           this.put((byte) -102, 1, param1, param0);
           if (param2 >= -59) {
-            this.field_c = (pk) null;
+            this.field_c = (IterableNodeHashTable) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -282,7 +282,7 @@ final class WeightedLruCache {
         Object stackIn_17_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = (CacheEntry) (this.field_c.a((byte) 118, param0));
+          var4 = (CacheEntry) (this.field_c.get((byte) 118, param0));
           if (var4 == null) {
             stackIn_2_0 = null;
             return stackIn_2_0;
@@ -307,7 +307,7 @@ final class WeightedLruCache {
           }
           if (decompiledSharedTail0) {
             var6 = new StrongCacheEntry(var5, var4.field_r);
-            this.field_c.a((byte) -99, var6, var4.key);
+            this.field_c.put((byte) -99, var6, var4.key);
             this.field_b.addLast((byte) 37, var6);
             ((CacheEntry) ((Object) var6)).secondaryKey = 0L;
             var4.unlink(true);
@@ -349,7 +349,7 @@ final class WeightedLruCache {
           }
           if (so.field_j) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_e, IntKeyLookup.field_g.field_nb);
-            nl.field_Fb.drawFullScreen(param1, true);
+            IconTextSceneWidget.field_Fb.drawFullScreen(param1, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -383,7 +383,7 @@ final class WeightedLruCache {
             }
             break;
           }
-          this.field_c = new pk(var3_int);
+          this.field_c = new IterableNodeHashTable(var3_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

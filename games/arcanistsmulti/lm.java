@@ -12,62 +12,62 @@ final class lm {
     static int[] field_i;
     static String field_d;
 
-    final static void a(boolean param0, int param1, na param2, int param3) {
-        nl dupTemp$0 = null;
-        nl dupTemp$1 = null;
+    final static void a(boolean param0, int param1, LobbyGameEntry param2, int param3) {
+        IconTextSceneWidget dupTemp$0 = null;
+        IconTextSceneWidget dupTemp$1 = null;
         int var17_int = 0;
         int var24 = 0;
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
-        nl stackIn_26_0 = null;
+        IconTextSceneWidget stackIn_26_0 = null;
         boolean stackIn_27_1 = false;
-        nl stackIn_33_0 = null;
+        IconTextSceneWidget stackIn_33_0 = null;
         boolean stackIn_34_1 = false;
         int stackIn_47_0 = 0;
         int stackIn_55_0 = 0;
         int stackIn_63_0 = 0;
-        nl stackIn_76_0 = null;
+        IconTextSceneWidget stackIn_76_0 = null;
         boolean stackIn_76_1 = false;
         boolean stackIn_77_2 = false;
-        nl stackIn_89_0 = null;
+        IconTextSceneWidget stackIn_89_0 = null;
         boolean stackIn_89_1 = false;
         boolean stackIn_90_2 = false;
-        nl stackIn_93_0 = null;
+        IconTextSceneWidget stackIn_93_0 = null;
         int stackIn_93_1 = 0;
         byte stackIn_93_2 = 0;
         int stackIn_93_3 = 0;
         boolean stackIn_96_1 = false;
-        nl stackIn_99_0 = null;
+        IconTextSceneWidget stackIn_99_0 = null;
         boolean stackIn_100_1 = false;
-        nl stackIn_104_0 = null;
+        IconTextSceneWidget stackIn_104_0 = null;
         boolean stackIn_105_1 = false;
         int stackIn_109_0 = 0;
-        nl stackIn_124_0 = null;
+        IconTextSceneWidget stackIn_124_0 = null;
         boolean stackIn_125_1 = false;
-        nl stackIn_128_0 = null;
+        IconTextSceneWidget stackIn_128_0 = null;
         boolean stackIn_129_1 = false;
-        nl stackIn_132_0 = null;
+        IconTextSceneWidget stackIn_132_0 = null;
         boolean stackIn_133_1 = false;
-        nl stackIn_136_0 = null;
+        IconTextSceneWidget stackIn_136_0 = null;
         boolean stackIn_137_1 = false;
         String stackIn_151_0 = null;
-        nl stackIn_155_0 = null;
+        IconTextSceneWidget stackIn_155_0 = null;
         boolean stackIn_156_1 = false;
-        nl stackIn_158_0 = null;
+        IconTextSceneWidget stackIn_158_0 = null;
         boolean stackIn_159_1 = false;
         int stackIn_165_0 = 0;
         int stackIn_211_0 = 0;
         int stackIn_223_0 = 0;
-        nl stackIn_325_0 = null;
+        IconTextSceneWidget stackIn_325_0 = null;
         boolean stackIn_326_1 = false;
-        nl stackIn_330_0 = null;
+        IconTextSceneWidget stackIn_330_0 = null;
         int stackIn_330_1 = 0;
         int stackIn_330_2 = 0;
         boolean stackIn_333_1 = false;
-        nl stackIn_338_0 = null;
+        IconTextSceneWidget stackIn_338_0 = null;
         boolean stackIn_338_1 = false;
         boolean stackIn_339_2 = false;
-        nl stackIn_343_0 = null;
+        IconTextSceneWidget stackIn_343_0 = null;
         boolean stackIn_344_1 = false;
         RuntimeException stackIn_353_0 = null;
         StringBuilder stackIn_353_1 = null;
@@ -80,7 +80,7 @@ final class lm {
         int var7 = 0;
         int var8_int = 0;
         String var8 = null;
-        nl[] var8_array = null;
+        IconTextSceneWidget[] var8_array = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -89,7 +89,7 @@ final class lm {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        nl var17 = null;
+        IconTextSceneWidget var17 = null;
         int var18 = 0;
         Object var18_ref = null;
         Object var19 = null;
@@ -102,9 +102,9 @@ final class lm {
         String var25_ref = null;
         int var26 = 0;
         int var27 = 0;
-        nl var28 = null;
-        nl var29 = null;
-        nl[] var30 = null;
+        IconTextSceneWidget var28 = null;
+        IconTextSceneWidget var29 = null;
+        IconTextSceneWidget[] var30 = null;
         String var31 = null;
         String var32 = null;
         String var33 = null;
@@ -123,7 +123,7 @@ final class lm {
         var26 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param0) {
-            stackIn_12_0 = (dn.field_Db) ? 0 : 1;
+            stackIn_12_0 = (SceneScrollPane.field_Db) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
             if (ContentTransitionDialog.k((byte) 106)) {
@@ -156,7 +156,7 @@ final class lm {
             }
             if (IndexedSpriteState.field_e[0][2].field_A) {
               if (!ContentTransitionDialog.k((byte) 111)) {
-                TextLayout.field_c = tj.a(param3 ^ -111, new String[]{DirectByteStorage.field_f.field_ic}, ed.field_tb);
+                TextLayout.field_c = CachedArchiveProvider.formatTemplate(param3 ^ -111, new String[]{DirectByteStorage.field_f.field_ic}, ed.field_tb);
               } else {
                 TextLayout.field_c = UiTheme.field_m;
               }
@@ -346,15 +346,15 @@ final class lm {
                   var15 = bj.a(ue.field_b[var7][var9] & ~IntKeyLookup.field_a, (byte) 104);
                   var14 = 1;
                 }
-                if (dh.field_Hb != null &&
-                  null != dh.field_Hb[var7] &&
+                if (SceneTextInput.field_Hb != null &&
+                  null != SceneTextInput.field_Hb[var7] &&
                   ah.field_c <= 0 &&
-                  dh.field_Hb[var7][var9]) {
+                  SceneTextInput.field_Hb[var7][var9]) {
                   var10 = 1;
                 }
-                if (null != pe.field_Fb &&
-                  null != pe.field_Fb[var7]) {
-                  var16 = pe.field_Fb[var7][var9];
+                if (null != ContextActionMenu.field_Fb &&
+                  null != ContextActionMenu.field_Fb[var7]) {
+                  var16 = ContextActionMenu.field_Fb[var7][var9];
                   if (0 < var16 &&
                     var16 > sk.field_e) {
                     var12 = 1;
@@ -418,7 +418,7 @@ final class lm {
               if (var16Lifetime1 == 0 &&
                 var9 >= 0 &&
                 null != um.field_a && (!param0 ||
-                !dn.field_Db)) {
+                !SceneScrollPane.field_Db)) {
                 if (qa.field_l == null) {
                   tk.field_q = new boolean[vf.field_l];
                   qa.field_l = new byte[vf.field_l];
@@ -493,11 +493,11 @@ final class lm {
                       if (var22_int == 1) {
                         var21 = ta.field_a;
                       } else {
-                        var21 = tj.a(param3 + 114, new String[]{Integer.toString(var22_int)}, wa.field_Db);
+                        var21 = CachedArchiveProvider.formatTemplate(param3 + 114, new String[]{Integer.toString(var22_int)}, wa.field_Db);
                       }
                     }
                     if (var12 != 0) {
-                      var31 = tj.a(123, new String[]{Integer.toString(sk.field_e), Integer.toString(pe.field_Fb[var7][var9])}, MembershipOfferScreen.field_m);
+                      var31 = CachedArchiveProvider.formatTemplate(123, new String[]{Integer.toString(sk.field_e), Integer.toString(ContextActionMenu.field_Fb[var7][var9])}, MembershipOfferScreen.field_m);
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -544,7 +544,7 @@ final class lm {
                   !ByteStorage.field_a) {
                   var22 = null;
                   if (GzipDecoder.field_d) {
-                    var22 = "</col>" + w.field_Bb + "<col=A00000>";
+                    var22 = "</col>" + ChatInputWidget.field_Bb + "<col=A00000>";
                     var25Lifetime1 = var22;
                     var22 = var25Lifetime1;
                     var25Lifetime1Lifetime1 = var22;
@@ -569,7 +569,7 @@ final class lm {
                     }
                   }
                   if (var23 == 0) {
-                    var21 = tj.a(param3 + 125, new String[]{(String) (var22)}, gf.field_jb);
+                    var21 = CachedArchiveProvider.formatTemplate(param3 + 125, new String[]{(String) (var22)}, gf.field_jb);
                   } else {
                     var21 = ContentTransitionDialog.field_qb + (String) (var22);
                   }
@@ -615,7 +615,7 @@ final class lm {
               stackIn_344_1 = (var4_int != 0) && (var16Lifetime1 == 0);
               stackIn_343_0.field_ub = stackIn_344_1;
             }
-            var6Lifetime3 = var6Lifetime3 + (in.field_Nb[var7] & 255);
+            var6Lifetime3 = var6Lifetime3 + (SceneScrollbar.field_Nb[var7] & 255);
           }
           if (var5 != 0) {
             if (param0) {

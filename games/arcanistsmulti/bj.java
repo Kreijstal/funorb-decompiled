@@ -202,7 +202,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
     }
 
     final static wa a(boolean param0, int param1, int param2) {
-        dn stackIn_4_0 = null;
+        SceneScrollPane stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         SceneWidget stackIn_32_0 = null;
         String stackIn_33_1 = null;
@@ -233,16 +233,16 @@ final class bj extends ResizableModalPanel implements ButtonListener {
         String var18Lifetime1;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          stackIn_4_0 = nl.field_Gb.field_Db;
-          stackIn_5_1 = (dd.field_h == nl.field_Gb.field_Db);
+          stackIn_4_0 = IconTextSceneWidget.field_Gb.field_Db;
+          stackIn_5_1 = (dd.field_h == IconTextSceneWidget.field_Gb.field_Db);
           boolean decompiledFrameRemainder0 = true;
-          var3_int = ((dn) (Object) stackIn_4_0).a(stackIn_5_1, (byte) 98, ImageProducerRasterBuffer.field_r + 2, 2, (3 * ImageProducerRasterBuffer.field_r + 6) * param2, param0) ? 1 : 0;
-          var4 = nl.field_Gb.field_Eb.field_G;
+          var3_int = ((SceneScrollPane) (Object) stackIn_4_0).relayout(stackIn_5_1, (byte) 98, ImageProducerRasterBuffer.field_r + 2, 2, (3 * ImageProducerRasterBuffer.field_r + 6) * param2, param0) ? 1 : 0;
+          var4 = IconTextSceneWidget.field_Gb.field_Eb.field_G;
           var5 = null;
           if (param1 == ~SpriteState.field_t) {
             ec.field_d.field_ub = true;
-            NanoFrameClock.field_j.field_rb = tj.a(param1 - 94, new String[]{ie.field_Nb}, LoginPanel.field_C);
-            nl.field_Gb.field_Db.field_Hb.field_rb = null;
+            NanoFrameClock.field_j.field_rb = CachedArchiveProvider.formatTemplate(param1 - 94, new String[]{ie.field_Nb}, LoginPanel.field_C);
+            IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_rb = null;
             var6 = null;
             var7 = (wa) (var4.first(param1 ^ -12622));
             scanLoop1: while (true) {
@@ -260,7 +260,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
                     var8 = 1;
                     var7.markTreeDirty((byte) 20);
                   }
-                  var7.field_x = nl.field_Gb.field_Eb.field_x;
+                  var7.field_x = IconTextSceneWidget.field_Gb.field_Eb.field_x;
                   var9 = 0;
                   if (null == var7.field_Lb) {
                     var10 = 13369344;
@@ -317,7 +317,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
                     var7.field_B = var9 - var7.field_I;
                   }
                   if (var8 != 0) {
-                    nl.field_Gb.field_Eb.positionAfter((byte) 123, (SceneWidget) (var6), var7, 2);
+                    IconTextSceneWidget.field_Gb.field_Eb.positionAfter((byte) 123, (SceneWidget) (var6), var7, 2);
                   }
                   var6 = var7;
                   if (var7.field_Mb == null ||
@@ -329,18 +329,18 @@ final class bj extends ResizableModalPanel implements ButtonListener {
                       }
                     } else {
                       var16 = var7.field_Cb;
-                      ArcanistsMulti.a(-26335, (int[]) null, nl.field_Gb.field_Db, var16, 0L, -1, -1, (String) null, var7);
+                      ArcanistsMulti.a(-26335, (int[]) null, IconTextSceneWidget.field_Gb.field_Db, var16, 0L, -1, -1, (String) null, var7);
                       if (var7.field_Lb != null &&
                         !PasswordFieldPainter.a(eo.field_c.field_h, -31046) &&
                         !wh.field_g) {
                         if (!AlternateUsernameCredentials.field_p) {
                           var17 = eo.field_c;
-                          var18 = tj.a(param1 ^ -125, new String[]{var16}, mb.field_S);
-                          var17.field_l.a(8, var18, (byte) -26);
+                          var18 = CachedArchiveProvider.formatTemplate(param1 ^ -125, new String[]{var16}, mb.field_S);
+                          var17.field_l.addAction(8, var18, (byte) -26);
                         }
                         var17Lifetime1 = eo.field_c;
-                        var18Lifetime1 = tj.a(-73, new String[]{var16}, bh.field_b);
-                        var17Lifetime1.field_l.a(18, var18Lifetime1, (byte) -26);
+                        var18Lifetime1 = CachedArchiveProvider.formatTemplate(-73, new String[]{var16}, bh.field_b);
+                        var17Lifetime1.field_l.addAction(18, var18Lifetime1, (byte) -26);
                       }
                       var5 = var7;
                     }
@@ -351,16 +351,16 @@ final class bj extends ResizableModalPanel implements ButtonListener {
                   continue;
                 }
               } else {
-                if (0 == nl.field_Gb.field_Jb.field_U) {
+                if (0 == IconTextSceneWidget.field_Gb.field_Jb.field_U) {
                   break scanLoop1;
                 }
-                PasswordFieldPainter.field_A = new dh(nl.field_Gb.field_Jb.field_V, nl.field_Gb.field_Jb.field_nb, nl.field_Gb.field_Jb.field_x, nl.field_Gb.field_Jb.field_I, NameValidator.field_v, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
+                PasswordFieldPainter.field_A = new SceneTextInput(IconTextSceneWidget.field_Gb.field_Jb.field_V, IconTextSceneWidget.field_Gb.field_Jb.field_nb, IconTextSceneWidget.field_Gb.field_Jb.field_x, IconTextSceneWidget.field_Gb.field_Jb.field_I, NameValidator.field_v, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
               }
               TextLine.field_h = 0;
               break;
             }
-            if (nl.field_Gb.field_Lb.field_U != 0) {
-              PasswordFieldPainter.field_A = new dh(nl.field_Gb.field_Lb.field_V, nl.field_Gb.field_Lb.field_nb, nl.field_Gb.field_Lb.field_x, nl.field_Gb.field_Lb.field_I, af.field_Gb, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
+            if (IconTextSceneWidget.field_Gb.field_Lb.field_U != 0) {
+              PasswordFieldPainter.field_A = new SceneTextInput(IconTextSceneWidget.field_Gb.field_Lb.field_V, IconTextSceneWidget.field_Gb.field_Lb.field_nb, IconTextSceneWidget.field_Gb.field_Lb.field_x, IconTextSceneWidget.field_Gb.field_Lb.field_I, af.field_Gb, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
               TextLine.field_h = 1;
             }
             decompiledFrameRemainder0 = false;
@@ -369,14 +369,14 @@ final class bj extends ResizableModalPanel implements ButtonListener {
             NanoFrameClock.field_j.field_rb = PatchEnvelopeSet.field_f;
             ec.field_d.field_ub = false;
             if (SpriteState.field_t == 1) {
-              nl.field_Gb.field_Db.field_Hb.field_rb = le.field_db;
+              IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_rb = le.field_db;
               if (var19 != 0) {
-                nl.field_Gb.field_Db.field_Hb.field_rb = hn.field_l;
+                IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_rb = hn.field_l;
               }
             } else {
-              nl.field_Gb.field_Db.field_Hb.field_rb = hn.field_l;
+              IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_rb = hn.field_l;
             }
-            fc.resetChildOffsets((byte) -77, nl.field_Gb.field_Eb);
+            fc.resetChildOffsets((byte) -77, IconTextSceneWidget.field_Gb.field_Eb);
           }
           stackIn_98_0 = var5;
           return (wa) (stackIn_98_0);

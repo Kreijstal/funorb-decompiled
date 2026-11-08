@@ -17,7 +17,7 @@ final class tn extends SceneWidget {
     static String field_Db;
     static i field_Ob;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param4 != 0) {
           field_Gb = (int[]) null;
         }
@@ -25,7 +25,7 @@ final class tn extends SceneWidget {
         this.field_I = param1;
         this.field_T = param0;
         this.field_db = param6;
-        this.a(1, param3, param2);
+        this.layoutTabs(1, param3, param2);
     }
 
     tn(long param0, SceneWidget param1, String[] param2, SceneWidget param3, SceneWidget[] param4, int param5) {
@@ -97,7 +97,7 @@ final class tn extends SceneWidget {
         }
     }
 
-    final static boolean a(int param0, byte param1, int param2, int param3) {
+    final static boolean isValidDate(int param0, byte param1, int param2, int param3) {
         boolean stackIn_10_0 = false;
         if (param1 < 44) {
           field_Hb = 69L;
@@ -112,14 +112,14 @@ final class tn extends SceneWidget {
         return stackIn_10_0;
     }
 
-    final void h(byte param0) {
+    final void updateTabs(byte param0) {
         int var2 = 0;
         SceneWidget dupTemp$0 = null;
         SceneWidget dupTemp$1 = null;
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 < 73) {
-          this.a(-65, -24, 38);
+          this.layoutTabs(-65, -24, 38);
         }
         for (var2 = 0; var2 < this.field_Bb.length; var2++) {
           if (this.field_Mb != var2 &&
@@ -145,7 +145,7 @@ final class tn extends SceneWidget {
         field_Kb = null;
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void layoutTabs(int param0, int param1, int param2) {
         SceneWidget dupTemp$0 = null;
         int var4;
         int var5;
@@ -183,32 +183,32 @@ final class tn extends SceneWidget {
         return !AlternateUsernameCredentials.field_p ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void drawMeshQuad(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
         var17 = ArcanistsMulti.field_G ? 1 : 0;
         if (param3 >= param11) {
           if (param6 > param3) {
-            dh.drawMeshTriangle(param10, param5, 127, param6, param9, param13, param11, SoftwareRasterizer.field_l, param3, param2, param12, param7, param8, param0, param14, param15, param1);
+            SceneTextInput.drawMeshTriangle(param10, param5, 127, param6, param9, param13, param11, SoftwareRasterizer.field_l, param3, param2, param12, param7, param8, param0, param14, param15, param1);
           } else {
             if (param6 <= param11) {
-              dh.drawMeshTriangle(param5, param7, 109, param3, param1, param0, param6, SoftwareRasterizer.field_l, param11, param13, param9, param10, param15, param2, param8, param14, param12);
+              SceneTextInput.drawMeshTriangle(param5, param7, 109, param3, param1, param0, param6, SoftwareRasterizer.field_l, param11, param13, param9, param10, param15, param2, param8, param14, param12);
             } else {
-              dh.drawMeshTriangle(param5, param10, 97, param3, param12, param0, param11, SoftwareRasterizer.field_l, param6, param2, param9, param7, param14, param13, param8, param15, param1);
+              SceneTextInput.drawMeshTriangle(param5, param10, 97, param3, param12, param0, param11, SoftwareRasterizer.field_l, param6, param2, param9, param7, param14, param13, param8, param15, param1);
             }
           }
         } else {
           if (param6 <= param11) {
             if (param3 >= param6) {
-              dh.drawMeshTriangle(param7, param5, 89, param11, param9, param2, param6, SoftwareRasterizer.field_l, param3, param13, param1, param10, param8, param0, param15, param14, param12);
+              SceneTextInput.drawMeshTriangle(param7, param5, 89, param11, param9, param2, param6, SoftwareRasterizer.field_l, param3, param13, param1, param10, param8, param0, param15, param14, param12);
             } else {
-              dh.drawMeshTriangle(param7, param10, 95, param11, param12, param2, param3, SoftwareRasterizer.field_l, param6, param0, param1, param5, param14, param13, param15, param8, param9);
+              SceneTextInput.drawMeshTriangle(param7, param10, 95, param11, param12, param2, param3, SoftwareRasterizer.field_l, param6, param0, param1, param5, param14, param13, param15, param8, param9);
             }
           } else {
-            dh.drawMeshTriangle(param10, param7, 127, param6, param1, param13, param3, SoftwareRasterizer.field_l, param11, param0, param12, param5, param15, param2, param14, param8, param9);
+            SceneTextInput.drawMeshTriangle(param10, param7, 127, param6, param1, param13, param3, SoftwareRasterizer.field_l, param11, param0, param12, param5, param15, param2, param14, param8, param9);
           }
         }
         if (param4 >= -104) {
-          tn.a(78, 61, 0, 49, 79, 33, -47, -19, -85, 33, 87, 86, -90, -40, 8, -120);
+          tn.drawMeshQuad(78, 61, 0, 49, 79, 33, -47, -19, -85, 33, 87, 86, -90, -40, 8, -120);
         }
     }
 

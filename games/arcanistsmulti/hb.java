@@ -7,18 +7,18 @@ final class hb extends SceneWidget {
     SceneWidget field_Eb;
     static String field_Ib;
     static String field_Hb;
-    dn field_Db;
+    SceneScrollPane field_Db;
     SceneWidget field_Jb;
     SceneWidget field_Lb;
     static ResourceArchive field_Fb;
     static double field_Cb;
     static int field_Kb;
 
-    hb(long param0, SceneWidget param1, SceneWidget param2, in param3, SceneWidget param4, String param5, String param6) {
+    hb(long param0, SceneWidget param1, SceneWidget param2, SceneScrollbar param3, SceneWidget param4, String param5, String param6) {
         super(param0, param1);
         try {
           this.field_Eb = new SceneWidget(0L, (SceneWidget) null);
-          this.field_Db = new dn(0L, this.field_Eb, param2, param3);
+          this.field_Db = new SceneScrollPane(0L, this.field_Eb, param2, param3);
           this.field_Jb = new SceneWidget(0L, param4);
           this.field_Lb = new SceneWidget(0L, param4);
           this.field_Jb.field_rb = param5;
@@ -101,10 +101,10 @@ final class hb extends SceneWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, boolean param3) {
+    final void layoutColumns(int param0, int param1, int param2, boolean param3) {
         int var5 = (param0 + this.field_x) / 2;
         int var6 = this.field_I - param1;
-        this.field_Db.a(0, param2, this.field_x, param3, 0, -param0 + var6, param0);
+        this.field_Db.setBoundsAndLayout(0, param2, this.field_x, param3, 0, -param0 + var6, param0);
         this.field_Jb.field_T = 0;
         this.field_Jb.field_db = var6;
         this.field_Jb.field_x = -param0 + var5;
@@ -147,18 +147,18 @@ final class hb extends SceneWidget {
         ProxySocketConnector.field_p = -1;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.field_T = param5;
         this.field_db = param4;
         this.field_I = param2;
         this.field_x = param3;
         if (param6 == -16624) {
-          this.a(param1, param0, param7, false);
+          this.layoutColumns(param1, param0, param7, false);
           return;
         }
         cm var10 = (cm) null;
         hb.a((cm) null, -57, (byte) -106);
-        this.a(param1, param0, param7, false);
+        this.layoutColumns(param1, param0, param7, false);
     }
 
     hb(long param0, hb param1, String param2, String param3) {

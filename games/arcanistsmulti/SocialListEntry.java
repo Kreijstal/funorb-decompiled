@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends SceneWidget {
+final class SocialListEntry extends SceneWidget {
     SceneWidget field_Cb;
     SceneWidget field_Gb;
     int field_Vb;
@@ -25,7 +25,7 @@ final class cg extends SceneWidget {
     boolean field_Db;
     String field_Qb;
 
-    final void a(String param0, String param1, int param2) {
+    final void setNames(String param0, String param1, int param2) {
         CharSequence var5 = null;
         try {
           int var4_int = 41 / ((param2 + 52) / 53);
@@ -38,7 +38,7 @@ final class cg extends SceneWidget {
         }
     }
 
-    final static boolean a(byte param0, ScreenDisplayMode param1, ScreenDisplayMode param2) {
+    final static boolean compareDisplayModes(byte param0, ScreenDisplayMode param1, ScreenDisplayMode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -51,7 +51,7 @@ final class cg extends SceneWidget {
             return true;
           }
           if (param0 != -111) {
-            cg.f(-126);
+            SocialListEntry.f(-126);
           }
           if (param1.field_g != param2.field_g) {
             return false;
@@ -159,7 +159,7 @@ final class cg extends SceneWidget {
           var13Lifetime1 = -var4 + var8Lifetime1;
           var14 = -var5Lifetime1 + var9Lifetime1;
           if (param0 != 252566882) {
-            cg.releaseStatics(false);
+            SocialListEntry.releaseStatics(false);
           }
           var10Lifetime1 = 256.0 / Math.sqrt((double)(var14 * var14 + var12Lifetime1 * var12Lifetime1 + var13Lifetime1 * var13Lifetime1));
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
@@ -198,7 +198,7 @@ final class cg extends SceneWidget {
         field_Ib = null;
     }
 
-    cg(String param0, String param1, long param2) {
+    SocialListEntry(String param0, String param1, long param2) {
         super(0L, (SceneWidget) null);
         CharSequence var6 = null;
         try {
@@ -212,7 +212,7 @@ final class cg extends SceneWidget {
         }
     }
 
-    final boolean a(byte param0, cg param1) {
+    final boolean sortsBefore(byte param0, SocialListEntry param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         boolean stackIn_5_0 = false;
@@ -276,8 +276,8 @@ final class cg extends SceneWidget {
           if (param1 < 102) {
             field_Lb = 88;
           }
-          var4_int = param2.c(param3, -79);
-          var5 = param2.a(param0, (byte) 54, var4_int);
+          var4_int = param2.getGroupProgressByName(param3, -79);
+          var5 = param2.getFileId(param0, (byte) 54, var4_int);
           stackIn_3_0 = hj.a(var4_int, param2, var5, (byte) -10);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -306,10 +306,10 @@ final class cg extends SceneWidget {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean isUnlisted(int param0) {
         if (param0 != 183874081) {
           String var3 = (String) null;
-          this.a((String) null, (String) null, 2);
+          this.setNames((String) null, (String) null, 2);
         }
         return !this.isSecondaryLinked((byte) -17) ? true : false;
     }

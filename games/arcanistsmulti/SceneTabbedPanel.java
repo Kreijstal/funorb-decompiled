@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends SceneWidget {
+final class SceneTabbedPanel extends SceneWidget {
     private int field_Db;
     private char[] field_Lb;
     private int field_Kb;
@@ -10,7 +10,7 @@ final class ij extends SceneWidget {
     static String field_Gb;
     static String field_Cb;
     private int field_Mb;
-    private nl[] field_Bb;
+    private IconTextSceneWidget[] field_Bb;
     private int field_Qb;
     private int field_Jb;
     static String field_Ob;
@@ -18,9 +18,9 @@ final class ij extends SceneWidget {
     private int field_Nb;
     private int field_Hb;
     private int field_Eb;
-    private ij[] field_Fb;
+    private SceneTabbedPanel[] field_Fb;
     static Sprite[] field_Pb;
-    private ij field_Sb;
+    private SceneTabbedPanel field_Sb;
     private int[] field_Ib;
 
     private final static void a(int param0, int param1, int param2, long param3, String param4) {
@@ -38,14 +38,14 @@ final class ij extends SceneWidget {
         }
     }
 
-    final static boolean b(int param0, int param1) {
+    final static boolean isNonNegative(int param0, int param1) {
         if (param1 != 10) {
           return false;
         }
         return param0 >= 0 ? true : false;
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void selectTab(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -53,12 +53,12 @@ final class ij extends SceneWidget {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         if (this.field_Hb != param3) {
           if (null != this.field_Fb[param3]) {
-            this.e(46);
-            this.c(-99, 0);
+            this.clearTabStates(46);
+            this.setTabSpacing(-99, 0);
             this.field_Hb = param3;
             this.field_Sb = this.field_Fb[this.field_Hb];
             vl.a((byte) 121, this.field_Sb);
-            this.field_Sb.c(-111, 12);
+            this.field_Sb.setTabSpacing(-111, 12);
           } else {
             if (this.field_Ib[param3] == -1) {
               GridContainer.g(-19741);
@@ -75,33 +75,33 @@ final class ij extends SceneWidget {
               }
               var8 = (String) null;
               BufferedRandomAccessFile.a(var5, (String) null, 70, param1, nj.field_c, so.field_p);
-              ij.a(param0 ^ -13, nj.field_c, var5, gg.field_e, so.field_p);
+              SceneTabbedPanel.a(param0 ^ -13, nj.field_c, var5, gg.field_e, so.field_p);
               SecondaryNodeDeque.a(14);
               cf.a(-113);
             }
           }
         } else {
-          this.e(-100);
-          this.c(-56, 0);
+          this.clearTabStates(-100);
+          this.setTabSpacing(-56, 0);
         }
         if (param0 != 12) {
           this.field_Kb = 86;
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void updateTabs(int param0, int param1, int param2) {
         int var4_int = 0;
-        nl var5;
+        IconTextSceneWidget var5;
         int var6;
-        nl stackIn_7_0 = null;
+        IconTextSceneWidget stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        ij var4;
-        ij var7;
+        SceneTabbedPanel var4;
+        SceneTabbedPanel var7;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         for (var4_int = 0; this.field_Bb.length > var4_int; var4_int++) {
           var5 = this.field_Bb[var4_int];
           if (var5.field_U == 1) {
-            this.a(param1 ^ -10280, param2, param0, var4_int);
+            this.selectTab(param1 ^ -10280, param2, param0, var4_int);
             stackIn_7_0 = var5;
             stackIn_8_1 = (var4_int == this.field_Hb);
             stackIn_7_0.field_ab = stackIn_8_1;
@@ -114,36 +114,36 @@ final class ij extends SceneWidget {
           var7 = this.field_Fb[this.field_Hb];
           var4 = var7;
           if (var4 != null) {
-            var7.a(param0, -10284, param2);
+            var7.updateTabs(param0, -10284, param2);
           }
         }
         if (this.field_Qb > 0) {
-          this.c(param1 ^ 10345, this.field_Qb - 1);
+          this.setTabSpacing(param1 ^ 10345, this.field_Qb - 1);
         }
     }
 
-    final void e(int param0) {
+    final void clearTabStates(int param0) {
         int var3 = 0;
-        nl var4 = null;
+        IconTextSceneWidget var4 = null;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
-        nl[] var6 = this.field_Bb;
-        nl[] var2_ref_nl__ = var6;
+        IconTextSceneWidget[] var6 = this.field_Bb;
+        IconTextSceneWidget[] var2_ref_nl__ = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           var4.field_U = 0;
           var4.field_ab = false;
         }
         if (this.field_Sb != null) {
-          this.field_Sb.e(78);
+          this.field_Sb.clearTabStates(78);
           this.field_Sb.unlink(true);
         }
         this.field_Sb = null;
         int var2 = -112 % ((-38 - param0) / 54);
         this.field_Hb = -1;
-        this.c(-99, 12);
+        this.setTabSpacing(-99, 12);
     }
 
-    private final void c(int param0, int param1) {
+    private final void setTabSpacing(int param0, int param1) {
         int var5 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -159,7 +159,7 @@ final class ij extends SceneWidget {
         }
     }
 
-    ij(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, ij[] param4, int[] param5, String[] param6, char[] param7) {
+    SceneTabbedPanel(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneTabbedPanel[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -196,7 +196,7 @@ final class ij extends SceneWidget {
           this.field_Db = var18.field_m + 2 + var18.field_C;
           this.field_Eb = this.field_Db * this.field_Jb;
           this.field_Kb = 0;
-          this.field_Bb = new nl[this.field_Jb];
+          this.field_Bb = new IconTextSceneWidget[this.field_Jb];
           var11 = "<col=999999>";
           var12 = "</col>";
           for (var13 = 0; this.field_Jb > var13; var13++) {
@@ -208,7 +208,7 @@ final class ij extends SceneWidget {
               -1 == this.field_Ib[var13]) {
               var14 = LoginMethod.field_c;
             }
-            this.field_Bb[var13] = new nl(0L, param2, (SceneWidget) null, param3, (Sprite) (var14), param6[var13]);
+            this.field_Bb[var13] = new IconTextSceneWidget(0L, param2, (SceneWidget) null, param3, (Sprite) (var14), param6[var13]);
             this.addChild(this.field_Bb[var13], 90);
             var15 = var17.textWidth(param6[var13]);
             if (var15 > this.field_Kb) {
@@ -216,7 +216,7 @@ final class ij extends SceneWidget {
             }
           }
           this.field_Kb = this.field_Kb + (LoginMethod.field_c.field_n + 10);
-          this.c(-70, 12);
+          this.setTabSpacing(-70, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -268,12 +268,12 @@ final class ij extends SceneWidget {
         }
     }
 
-    final boolean f(byte param0) {
+    final boolean isAnyTabActive(byte param0) {
         int var4 = 0;
-        nl var5 = null;
+        IconTextSceneWidget var5 = null;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
         int var2 = 0;
-        nl[] var3 = this.field_Bb;
+        IconTextSceneWidget[] var3 = this.field_Bb;
         for (var4 = 0; var4 < var3.length; var4++) {
           var5 = var3[var4];
           var2 = var2 | (0 != var5.field_U ? 1 : 0);
@@ -283,12 +283,12 @@ final class ij extends SceneWidget {
         }
         if (var2 == 0 &&
           (this.field_Hb != -1 && this.field_Fb[this.field_Hb] != null)) {
-          var2 = this.field_Fb[this.field_Hb].f((byte) 93) ? 1 : 0;
+          var2 = this.field_Fb[this.field_Hb].isAnyTabActive((byte) 93) ? 1 : 0;
         }
         return var2 != 0;
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final void layout(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7;
         int var8;
         int var9;
@@ -298,10 +298,10 @@ final class ij extends SceneWidget {
         this.setBounds(this.field_Nb, param1, param2 - this.field_Eb, this.field_Eb, (byte) -120);
         if (this.field_Mb != param4) {
           this.field_Mb = param4;
-          this.c(-95, this.field_Qb);
+          this.setTabSpacing(-95, this.field_Qb);
         }
         for (var7 = 0; var7 < this.field_Jb; var7++) {
-          this.field_Bb[var7].a(param0, 0, this.field_Db, this.field_Nb, 0, this.field_Bb[var7].field_db, param5);
+          this.field_Bb[var7].setBoundsAndLayout(param0, 0, this.field_Db, this.field_Nb, 0, this.field_Bb[var7].field_db, param5);
         }
         if (!param3) {
           field_Tb = (Sprite) null;
@@ -311,18 +311,18 @@ final class ij extends SceneWidget {
           var7Lifetime1 = this.field_Fb[this.field_Hb].field_Jb;
           for (var8 = this.field_db + (this.field_Hb + var7Lifetime1) * this.field_Db; var8 > param2; var8 = var8 - this.field_Db) {
           }
-          this.field_Fb[this.field_Hb].a(param0, param1 + this.field_Nb, var8, param3, this.field_Bb[this.field_Hb].field_nb, param5);
+          this.field_Fb[this.field_Hb].layout(param0, param1 + this.field_Nb, var8, param3, this.field_Bb[this.field_Hb].field_nb, param5);
         }
     }
 
-    final int f(int param0) {
+    final int totalHeight(int param0) {
         if (param0 != 0) {
-          this.b(39, 104, -123);
+          this.handleBackKey(39, 104, -123);
         }
-        return this.field_Nb + (null == this.field_Sb ? 0 : this.field_Sb.f(param0 + 0));
+        return this.field_Nb + (null == this.field_Sb ? 0 : this.field_Sb.totalHeight(param0 + 0));
     }
 
-    final boolean b(int param0, int param1, int param2) {
+    final boolean handleBackKey(int param0, int param1, int param2) {
         int var6 = 0;
         int var4;
         int var5;
@@ -334,11 +334,11 @@ final class ij extends SceneWidget {
         if (this.field_Sb != null) {
           if (var4 != 0 &&
             this.field_Sb.field_Hb == -1) {
-            this.e(42);
-            this.c(-103, 0);
+            this.clearTabStates(42);
+            this.setTabSpacing(-103, 0);
             return true;
           }
-          return this.field_Sb.b(100, param1, param2);
+          return this.field_Sb.handleBackKey(100, param1, param2);
         }
         if (null == this.field_Sb &&
           this == CacheEntry.field_q &&
@@ -348,7 +348,7 @@ final class ij extends SceneWidget {
         }
         var5 = ed.field_Bb;
         if (param0 < 76) {
-          this.c(22, -124);
+          this.setTabSpacing(22, -124);
         }
         if (0 < var5) {
           if (DraggableWidget.field_E == var5) {
@@ -356,7 +356,7 @@ final class ij extends SceneWidget {
           }
           for (var6 = 0; this.field_Lb.length > var6; var6++) {
             if (this.field_Lb[var6] == var5) {
-              this.a(12, param1, param2, var6);
+              this.selectTab(12, param1, param2, var6);
               return true;
             }
           }

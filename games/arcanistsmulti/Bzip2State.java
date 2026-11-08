@@ -78,7 +78,7 @@ final class Bzip2State {
         }
     }
 
-    final static void a(SceneWidget param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4, boolean param5, SceneWidget param6, BitmapFont param7, int param8, SceneWidget param9, SceneWidget param10, in param11) {
+    final static void a(SceneWidget param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4, boolean param5, SceneWidget param6, BitmapFont param7, int param8, SceneWidget param9, SceneWidget param10, SceneScrollbar param11) {
         String stackIn_13_0 = null;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;
@@ -145,7 +145,7 @@ final class Bzip2State {
           IntKeyLookup.field_g.addChild(NanoFrameClock.field_t, param8 ^ 27890);
           var17 = new SceneWidget(0L, (SceneWidget) null);
           var17.field_G = new IntrusiveDeque();
-          qo.field_f = new dn(0L, var17, param1, param11);
+          qo.field_f = new SceneScrollPane(0L, var17, param1, param11);
           NanoFrameClock.field_t.addChild(qo.field_f, 96);
           CredentialKind.field_d = new SceneWidget(0L, param6);
           NanoFrameClock.field_t.addChild(CredentialKind.field_d, 61);
@@ -294,7 +294,7 @@ final class Bzip2State {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 96 / ((-36 - param1) / 58);
-          w.field_Cb = false;
+          ChatInputWidget.field_Cb = false;
           ii.field_a = ie.field_Vb;
           cj.field_b = param2;
           return;

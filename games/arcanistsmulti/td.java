@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class td extends UiContainer implements ButtonListener {
-    static k field_E;
+    static BufferedSocket field_E;
     private TextButton field_H;
     private TextButton field_C;
     static aj field_G;
@@ -13,7 +13,7 @@ final class td extends UiContainer implements ButtonListener {
         TextLine.field_l = param2;
         SceneWidgetNode.field_p = param1;
         if (!param0) {
-          field_E = (k) null;
+          field_E = (BufferedSocket) null;
         }
     }
 
@@ -46,7 +46,7 @@ final class td extends UiContainer implements ButtonListener {
         this.field_C.setBounds(30, this.field_k - 78 - var2 * 2, var3, -var3 + this.field_v >> 1, -103);
         this.field_F.field_o = (UiListener) (this);
         this.field_C.field_o = (UiListener) (this);
-        this.field_C.field_q = dh.field_Bb;
+        this.field_C.field_q = SceneTextInput.field_Bb;
         this.field_H.field_o = (UiListener) (this);
         this.field_H.field_q = hj.field_c;
         this.addChild(-102, this.field_F);

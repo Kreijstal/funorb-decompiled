@@ -9,7 +9,7 @@ final class lf {
     static String field_i;
     static String field_d;
     static AudioOutput field_a;
-    static dn field_b;
+    static SceneScrollPane field_b;
     static int field_g;
 
     final static void switchToRequestedScreen(byte param0) {
@@ -23,7 +23,7 @@ final class lf {
           if (~mn.field_r == ~CheckboxPainter.field_g) {
             return;
           }
-          if (ij.b(CheckboxPainter.field_g, 10)) {
+          if (SceneTabbedPanel.isNonNegative(CheckboxPainter.field_g, 10)) {
             ArchiveProvider.field_f[CheckboxPainter.field_g].d((byte) 103);
           }
           var1_int = CheckboxPainter.field_g;

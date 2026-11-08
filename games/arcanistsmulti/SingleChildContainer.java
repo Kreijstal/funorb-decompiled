@@ -113,10 +113,10 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               he.field_e.writeByte(14, (byte) -105);
               he.field_e.writeByte(fd.field_e.getCredentialKind(0).field_g, (byte) -106);
               we.a(-1, (byte) 86);
-              ResizableModalPanel.field_eb = pe.field_Db;
+              ResizableModalPanel.field_eb = ContextActionMenu.field_Db;
             }
-            if (ResizableModalPanel.field_eb == pe.field_Db &&
-              pe.a((byte) -86, 1)) {
+            if (ResizableModalPanel.field_eb == ContextActionMenu.field_Db &&
+              ContextActionMenu.hasIncomingBytes((byte) -86, 1)) {
               var6_int = UiContainer.field_z.readUnsignedByte((byte) -123);
               UiContainer.field_z.position = 0;
               if (0 == var6_int) {
@@ -128,15 +128,15 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               }
             }
             if (ResizableModalPanel.field_eb == SocketConnector.field_c &&
-              pe.a((byte) -86, 8)) {
+              ContextActionMenu.hasIncomingBytes((byte) -86, 8)) {
               of.field_j = UiContainer.field_z.readLong(-943038560);
               UiContainer.field_z.position = 0;
-              dn.writeLoginBlock(param4, fd.field_e, (byte) 116, param2, param0);
+              SceneScrollPane.writeLoginBlock(param4, fd.field_e, (byte) 116, param2, param0);
               ResizableModalPanel.field_eb = co.field_h;
             }
             boolean decompiledFrameRemainder0 = true;
             if (ResizableModalPanel.field_eb == co.field_h &&
-              pe.a((byte) -86, 1)) {
+              ContextActionMenu.hasIncomingBytes((byte) -86, 1)) {
               var6_intLifetime1 = UiContainer.field_z.readUnsignedByte((byte) -122);
               UiContainer.field_z.position = 0;
               AudioService.field_i = null;
@@ -200,7 +200,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               nm.field_b = Js5ArchiveManager.a(var11, -13);
               dd.field_j = UiContainer.field_z.readUnsignedByte((byte) 65);
               ResizableModalPanel.field_eb = qc.field_c;
-              if (fd.field_e.getCredentialKind(0) == k.field_q) {
+              if (fd.field_e.getCredentialKind(0) == BufferedSocket.field_q) {
                 DiskCacheRequest.field_y.saveAsLastLoginMethod(IconButtonPainter.getApplet(118), (byte) -93);
               } else {
                 if (fd.field_e.getCredentialKind(0) == MusicPatchPcmStream.field_m) {
@@ -209,7 +209,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               }
               bb.field_h = false;
               if (var6 != null) {
-                jf.a(var6, IconButtonPainter.getApplet(108), 0);
+                NodeHashTableIterator.setSettingsCookie(var6, IconButtonPainter.getApplet(108), 0);
               }
               if (0 >= ah.field_c &&
                 !fd.field_a) {
@@ -260,16 +260,16 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
                 if (rk.a(-68) <= 30000L) {
                   MenuButtonPanel.field_E = NumericDateInputWidget.field_R;
                 } else {
-                  MenuButtonPanel.field_E = tg.field_a;
+                  MenuButtonPanel.field_E = DualLinkDeque.field_a;
                 }
                 bb.field_h = false;
                 stackIn_105_0 = 3;
                 return stackIn_105_0;
               }
               var6_intLifetime2 = ng.field_G;
-              ng.field_G = dh.field_Lb;
+              ng.field_G = SceneTextInput.field_Lb;
               bb.field_h = true;
-              dh.field_Lb = var6_intLifetime2;
+              SceneTextInput.field_Lb = var6_intLifetime2;
             }
             stackIn_107_0 = -1;
             return stackIn_107_0;

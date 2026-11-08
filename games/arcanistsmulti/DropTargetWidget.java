@@ -113,7 +113,7 @@ final class DropTargetWidget extends SingleChildContainer {
           SingleChildContainer.field_D.field_zb = ((nf.field_A.field_zb & 16711422) >> 1) + (-(8355711 & ArchiveIndex.field_u >> 1) + ArchiveIndex.field_u);
           tm.field_d = new SceneWidget(0L, param3);
           ValidatedTextWidget.field_U = new SceneWidget(0L, param2);
-          in.field_Jb = new SceneWidget(0L, (SceneWidget) null);
+          SceneScrollbar.field_Jb = new SceneWidget(0L, (SceneWidget) null);
           ck.field_d = new SceneWidget(0L, param4);
           SingleChildContainer.field_D = new SceneWidget(0L, param0);
           SingleChildContainer.field_D.field_Z = oo.field_x;
@@ -123,10 +123,10 @@ final class DropTargetWidget extends SingleChildContainer {
           MembershipOfferScreen.field_f = new SceneWidget(0L, nf.field_A, fe.field_k);
           ih.field_d = new SceneWidget(0L, nf.field_A);
           tm.field_d.addChild(ValidatedTextWidget.field_U, 65);
-          tm.field_d.addChild(in.field_Jb, 126);
-          in.field_Jb.addChild(ck.field_d, 115);
-          in.field_Jb.addChild(MembershipOfferScreen.field_f, 81);
-          in.field_Jb.addChild(ih.field_d, 69);
+          tm.field_d.addChild(SceneScrollbar.field_Jb, 126);
+          SceneScrollbar.field_Jb.addChild(ck.field_d, 115);
+          SceneScrollbar.field_Jb.addChild(MembershipOfferScreen.field_f, 81);
+          SceneScrollbar.field_Jb.addChild(ih.field_d, 69);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

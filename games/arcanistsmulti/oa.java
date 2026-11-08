@@ -46,7 +46,7 @@ final class oa {
             }
             if (var3_int != 0) {
               if (Bzip2State.field_h) {
-                param2 = tj.a(114, new String[]{param2}, wa.field_Eb);
+                param2 = CachedArchiveProvider.formatTemplate(114, new String[]{param2}, wa.field_Eb);
               }
               if (NodeHashTable.field_h) {
                 param2 = CheckboxPainter.field_n;

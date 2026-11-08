@@ -402,9 +402,9 @@ final class MusicCrossfadeStream extends PcmStream {
         int var8 = 0;
         int var9 = 0;
         SceneWidget var9_ref_kc = null;
-        nl var10 = null;
+        IconTextSceneWidget var10 = null;
         int var10_int = 0;
-        nl var11 = null;
+        IconTextSceneWidget var11 = null;
         int var11_int = 0;
         int var13 = 0;
         int var14 = 0;
@@ -413,7 +413,7 @@ final class MusicCrossfadeStream extends PcmStream {
         int var17 = 0;
         var14 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          fh.field_g = SoftwareRasterizer.field_e;
+          SecondaryNodeDequeIterator.field_g = SoftwareRasterizer.field_e;
           ri.field_a = SoftwareRasterizer.field_j;
           stackIn_3_0 = 16;
           if (!param1) {
@@ -433,10 +433,10 @@ final class MusicCrossfadeStream extends PcmStream {
           }
           ((SceneWidget) (Object) stackIn_6_0).setBounds(stackIn_6_1 - stackIn_7_2, 0, ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
           MembershipOfferScreen.field_q.setBounds(CacheEntry.field_p + 42, -40 + (Checkbox.field_M.field_x - CacheEntry.field_p - 2), ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
-          lf.field_b.a(ImageProducerRasterBuffer.field_r + 22, CacheEntry.field_p, Checkbox.field_M.field_x, false, 0, Checkbox.field_M.field_I - (ImageProducerRasterBuffer.field_r + 2) - 20, 2);
+          lf.field_b.setBoundsAndLayout(ImageProducerRasterBuffer.field_r + 22, CacheEntry.field_p, Checkbox.field_M.field_x, false, 0, Checkbox.field_M.field_I - (ImageProducerRasterBuffer.field_r + 2) - 20, 2);
           var2_int = -29 / ((84 - param0) / 36);
           IntrusiveNodeHashTable.field_o.setBounds(hl.field_m.field_x, 0, -40 + hl.field_m.field_I, 40, (byte) -120);
-          nl.field_Db.setBounds(ReflectionCheckRequest.field_h.field_x, 0, 0, 30, (byte) -120);
+          IconTextSceneWidget.field_Db.setBounds(ReflectionCheckRequest.field_h.field_x, 0, 0, 30, (byte) -120);
           mi.field_m.setBounds(ReflectionCheckRequest.field_h.field_x, 0, 30, -42 + ReflectionCheckRequest.field_h.field_I - 30, (byte) -120);
           var3 = 3 + vf.field_l;
           if (ao.field_h.length < 2) {
@@ -486,8 +486,8 @@ final class MusicCrossfadeStream extends PcmStream {
               } else {
                 if (param1) {
                   if (var7 >= 4) {
-                    if (dh.field_Fb != null) {
-                      stackIn_41_0 = (dh.field_Fb[-4 + var7]) ? 1 : 0;
+                    if (SceneTextInput.field_Fb != null) {
+                      stackIn_41_0 = (SceneTextInput.field_Fb[-4 + var7]) ? 1 : 0;
                     } else {
                       stackIn_41_0 = 0;
                     }
@@ -516,7 +516,7 @@ final class MusicCrossfadeStream extends PcmStream {
                   ResizableViewResizeListener.field_g[var7].setBounds(103, 5, var6, var4, (byte) -120);
                   var9 = 110;
                   if (param1) {
-                    IndexedSpriteState.field_e[var7][0].a(2, 0, var4, 38, var9, var6, MenuButtonPainter.field_p);
+                    IndexedSpriteState.field_e[var7][0].setBoundsAndLayout(2, 0, var4, 38, var9, var6, MenuButtonPainter.field_p);
                     var9 += 40;
                   } else {
                     if (IndexedSpriteState.field_e[var7][0] != null) {
@@ -529,16 +529,16 @@ final class MusicCrossfadeStream extends PcmStream {
                   var11_int = -1 + IndexedSpriteState.field_e[var7].length;
                   for (var12 = 0; var12 < var11_int; var12++) {
                     var13 = var10_int * var12 / var11_int;
-                    IndexedSpriteState.field_e[var7][1 + var12].a(2, 0, var4, -var13 + (var12 + 1) * var10_int / var11_int - 2, var9 + var13, var6, MenuButtonPainter.field_p);
+                    IndexedSpriteState.field_e[var7][1 + var12].setBoundsAndLayout(2, 0, var4, -var13 + (var12 + 1) * var10_int / var11_int - 2, var9 + var13, var6, MenuButtonPainter.field_p);
                   }
                   var6 = var6 + (2 + var4);
                 }
               }
             }
           }
-          nl.field_Fb.setBounds(360, -360 + SoftwareRasterizer.field_e >> 1, 10, -14 + (-120 + (SoftwareRasterizer.field_j - 10)), (byte) -120);
-          MembershipOfferScreen.field_t.setBounds(nl.field_Fb.field_x, 0, 0, 24, (byte) -120);
-          Js5ArchiveManager.field_g.setBounds(nl.field_Fb.field_x, 0, 24, -24 + nl.field_Fb.field_I, (byte) -120);
+          IconTextSceneWidget.field_Fb.setBounds(360, -360 + SoftwareRasterizer.field_e >> 1, 10, -14 + (-120 + (SoftwareRasterizer.field_j - 10)), (byte) -120);
+          MembershipOfferScreen.field_t.setBounds(IconTextSceneWidget.field_Fb.field_x, 0, 0, 24, (byte) -120);
+          Js5ArchiveManager.field_g.setBounds(IconTextSceneWidget.field_Fb.field_x, 0, 24, -24 + IconTextSceneWidget.field_Fb.field_I, (byte) -120);
           Js5ArchiveManager.field_g.field_v = of.a(3, Js5ArchiveManager.field_g.field_I, 1, 1, 11579568, 8421504);
           StatefulTextPainter.field_s.setBounds(-10 + Js5ArchiveManager.field_g.field_x, 5, 5, -2 + (-34 + Js5ArchiveManager.field_g.field_I), (byte) -120);
           gj.field_d.setBounds(80, (-80 + Js5ArchiveManager.field_g.field_x) / 2, Js5ArchiveManager.field_g.field_I - 5 - 24, 24, (byte) -120);

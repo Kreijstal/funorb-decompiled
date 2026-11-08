@@ -71,7 +71,7 @@ final class f extends IntrusiveNode {
               if (var8_ref_jg.field_a == null) {
                 UiTheme.field_t = UiTheme.field_t + 1;
               }
-              var10 = ArchiveIndex.a(3, var8_ref_jg);
+              var10 = ArchiveIndex.formatChatLine(3, var8_ref_jg);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_jg.field_e);
               var12 = WhirlpoolHasher.a(var8_ref_jg, (byte) 106);
               var8_ref_jg.field_a = new SceneWidget(0L, nf.field_A, var11);
@@ -119,7 +119,7 @@ final class f extends IntrusiveNode {
           if (NodeHashTable.field_j) {
             qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime1;
           }
-          qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+          qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
           stackIn_46_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime1);
           NodeHashTable.field_j = stackIn_46_0;
           return (jg) (var4);
@@ -137,7 +137,7 @@ final class f extends IntrusiveNode {
             if (NodeHashTable.field_j) {
               qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime2;
             }
-            qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+            qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
             stackIn_57_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime2);
             NodeHashTable.field_j = stackIn_57_0;
           } else {
@@ -150,7 +150,7 @@ final class f extends IntrusiveNode {
               if (NodeHashTable.field_j) {
                 qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime2;
               }
-              qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+              qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
               stackIn_64_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime2);
               NodeHashTable.field_j = stackIn_64_0;
             } else {
@@ -160,18 +160,18 @@ final class f extends IntrusiveNode {
                 if (NodeHashTable.field_j) {
                   qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime2;
                 }
-                qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+                qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
                 stackIn_71_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime2);
                 NodeHashTable.field_j = stackIn_71_0;
               } else {
                 var9Lifetime2 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
                 if (!NodeHashTable.field_j) {
-                  qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+                  qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
                   stackIn_76_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime2);
                   NodeHashTable.field_j = stackIn_76_0;
                 } else {
                   qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime2;
-                  qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+                  qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
                   stackIn_80_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime2);
                   NodeHashTable.field_j = stackIn_80_0;
                 }
@@ -187,12 +187,12 @@ final class f extends IntrusiveNode {
             NodeHashTable.field_j = true;
             var9Lifetime3 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
             if (!NodeHashTable.field_j) {
-              qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+              qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
               stackIn_121_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime3);
               NodeHashTable.field_j = stackIn_121_0;
             } else {
               qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime3;
-              qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+              qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
               stackIn_125_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime3);
               NodeHashTable.field_j = stackIn_125_0;
             }
@@ -200,12 +200,12 @@ final class f extends IntrusiveNode {
           }
           var9Lifetime3Lifetime1 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
           if (!NodeHashTable.field_j) {
-            qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+            qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
             stackIn_131_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime3Lifetime1);
             NodeHashTable.field_j = stackIn_131_0;
           } else {
             qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime3Lifetime1;
-            qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+            qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
             stackIn_135_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime3Lifetime1);
             NodeHashTable.field_j = stackIn_135_0;
           }
@@ -218,12 +218,12 @@ final class f extends IntrusiveNode {
         if (!SocketJs5Transport.field_r) {
           var9Lifetime4 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
           if (!NodeHashTable.field_j) {
-            qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+            qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
             stackIn_88_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime4);
             NodeHashTable.field_j = stackIn_88_0;
           } else {
             qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime4;
-            qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+            qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
             stackIn_92_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime4);
             NodeHashTable.field_j = stackIn_92_0;
           }
@@ -231,12 +231,12 @@ final class f extends IntrusiveNode {
           if (tm.field_d == null) {
             var9Lifetime4 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
             if (!NodeHashTable.field_j) {
-              qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+              qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
               stackIn_99_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime4);
               NodeHashTable.field_j = stackIn_99_0;
             } else {
               qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime4;
-              qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+              qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
               stackIn_103_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime4);
               NodeHashTable.field_j = stackIn_103_0;
             }
@@ -244,12 +244,12 @@ final class f extends IntrusiveNode {
             NodeHashTable.field_j = true;
             var9Lifetime4 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
             if (!NodeHashTable.field_j) {
-              qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+              qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
               stackIn_109_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime4);
               NodeHashTable.field_j = stackIn_109_0;
             } else {
               qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime4;
-              qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
+              qo.field_f.layoutWithHeight(param2, param1 * 2 * param2, 9860, true);
               stackIn_113_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime4);
               NodeHashTable.field_j = stackIn_113_0;
             }
@@ -277,7 +277,7 @@ final class f extends IntrusiveNode {
     final static void a(boolean param0, int param1, int param2, boolean param3, byte param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, int param11, int param12, int param13) {
         TextLayout.field_c = null;
         TextHotspotWidget.a(101);
-        param3 = w.a(0, param8, param1, param11, param3, param2, param13);
+        param3 = ChatInputWidget.a(0, param8, param1, param11, param3, param2, param13);
         fn.a(param9, param3, param7, param0, param5, param12, param10, param13, param6, 83);
         IntrusiveNodeHashTable.a(1, param10, param7);
         if (param4 >= -28) {

@@ -65,7 +65,7 @@ final class ui extends TextFieldValidator {
             stackIn_26_0 = cj.field_e;
             return stackIn_26_0;
           }
-          if (!w.a(var6, var5, 0)) {
+          if (!ChatInputWidget.a(var6, var5, 0)) {
             return KeyboardInputHandler.field_i;
           }
           stackIn_30_0 = TextTableInitializer.field_f;

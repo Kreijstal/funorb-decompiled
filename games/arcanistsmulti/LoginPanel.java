@@ -249,7 +249,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           ho.field_i = new int[ModalPanelStack.field_J];
           AccountRegistrationPanel.field_I = new byte[ModalPanelStack.field_J][];
           hl.field_l = new int[ModalPanelStack.field_J];
-          dn.field_Ib = new boolean[ModalPanelStack.field_J];
+          SceneScrollPane.field_Ib = new boolean[ModalPanelStack.field_J];
           var2.position = param0.length - (7 + ModalPanelStack.field_J * 8);
           pb.field_g = var2.readUnsignedShort(-98);
           gn.field_a = var2.readUnsignedShort(-98);
@@ -396,7 +396,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
                   }
                 }
               }
-              dn.field_Ib[var4] = var10 != 0;
+              SceneScrollPane.field_Ib[var4] = var10 != 0;
               var4++;
               continue;
             }
@@ -493,7 +493,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             decompiledFrameRemainder0 = (var11 != 0);
           }
           if (decompiledFrameRemainder0) {
-            this.field_P = new TextButton(w.field_Qb, (UiListener) null);
+            this.field_P = new TextButton(ChatInputWidget.field_Qb, (UiListener) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (this.field_N) {
@@ -522,7 +522,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           }
           this.field_O.field_q = AccountRegistrationPanel.field_L;
           if (this.field_J != null) {
-            this.field_J.field_q = dh.field_Bb;
+            this.field_J.field_q = SceneTextInput.field_Bb;
           }
           if (this.field_F) {
             this.field_L.field_q = fo.field_e;

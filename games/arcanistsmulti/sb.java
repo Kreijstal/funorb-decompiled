@@ -34,20 +34,20 @@ final class sb {
           var2 = EmailLoginCredentials.field_f / 2;
           var3 = EmailLoginCredentials.field_j - 10;
           if (var4.field_h < 25) {
-            var3 = var3 + (12 + tj.field_t.field_C) * (-var4.field_h + 25) / 25;
+            var3 = var3 + (12 + CachedArchiveProvider.field_t.field_C) * (-var4.field_h + 25) / 25;
           }
           if (!(125 >= var4.field_h)) {
-            var3 = var3 + (-125 + var4.field_h) * (12 + tj.field_t.field_C) / 25;
+            var3 = var3 + (-125 + var4.field_h) * (12 + CachedArchiveProvider.field_t.field_C) / 25;
           }
-          tj.field_t.drawCentered(var4.field_j, var2, var3 - 2, 1052688, 1052688);
-          tj.field_t.drawCentered(var4.field_j, var2 - 2, var3, 1052688, 1052688);
-          tj.field_t.drawCentered(var4.field_j, -1 + var2, -1 + var3, 1052688, -1);
-          tj.field_t.drawCentered(var4.field_j, 1 + var2, 1 + var3, 1052688, -1);
-          tj.field_t.drawCentered(var4.field_j, var2, var3 + 2, 1052688, -1);
-          tj.field_t.drawCentered(var4.field_j, var2 + 2, var3, 1052688, -1);
-          tj.field_t.drawCentered(var4.field_j, var2, var3 - 1, 16777215, 12303291);
-          tj.field_t.drawCentered(var4.field_j, -1 + var2, var3, 14540253, 10066329);
-          tj.field_t.drawCentered(var4.field_j, var2, var3, var4.field_g, -1);
+          CachedArchiveProvider.field_t.drawCentered(var4.field_j, var2, var3 - 2, 1052688, 1052688);
+          CachedArchiveProvider.field_t.drawCentered(var4.field_j, var2 - 2, var3, 1052688, 1052688);
+          CachedArchiveProvider.field_t.drawCentered(var4.field_j, -1 + var2, -1 + var3, 1052688, -1);
+          CachedArchiveProvider.field_t.drawCentered(var4.field_j, 1 + var2, 1 + var3, 1052688, -1);
+          CachedArchiveProvider.field_t.drawCentered(var4.field_j, var2, var3 + 2, 1052688, -1);
+          CachedArchiveProvider.field_t.drawCentered(var4.field_j, var2 + 2, var3, 1052688, -1);
+          CachedArchiveProvider.field_t.drawCentered(var4.field_j, var2, var3 - 1, 16777215, 12303291);
+          CachedArchiveProvider.field_t.drawCentered(var4.field_j, -1 + var2, var3, 14540253, 10066329);
+          CachedArchiveProvider.field_t.drawCentered(var4.field_j, var2, var3, var4.field_g, -1);
         }
     }
 

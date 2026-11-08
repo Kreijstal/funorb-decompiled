@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class fh implements Iterator {
+final class SecondaryNodeDequeIterator implements Iterator {
     static String field_d;
     private DualLinkNode field_b;
     static String field_a;
@@ -44,7 +44,7 @@ final class fh implements Iterator {
         return var1;
     }
 
-    final static void a(int param0, PlatformTaskDispatcher param1, java.awt.Frame param2) {
+    final static void closeFullscreenFrame(int param0, PlatformTaskDispatcher param1, java.awt.Frame param2) {
         PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -60,7 +60,7 @@ final class fh implements Iterator {
             return;
           }
           while (true) {
-            var3 = param1.a(param2, 6);
+            var3 = param1.queueFrameClose(param2, 6);
             while (var3.field_e == 0) {
               ao.a(10L, 1);
             }
@@ -97,7 +97,7 @@ final class fh implements Iterator {
         return this.field_c != this.field_h.field_g;
     }
 
-    fh(SecondaryNodeDeque param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.field_b = null;
         try {
           this.field_h = param0;

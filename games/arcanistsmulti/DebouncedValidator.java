@@ -5,7 +5,7 @@ abstract class DebouncedValidator implements ValidationProvider {
     static String field_c;
     static String field_a;
     static IndexedSprite[] field_b;
-    static dn field_g;
+    static SceneScrollPane field_g;
     private long field_e;
     static int[] field_d;
     static String field_f;
@@ -231,7 +231,7 @@ abstract class DebouncedValidator implements ValidationProvider {
 
     public final ValidationState getValidationState(int param0) {
         if (this.isEmpty((byte) -82)) {
-          return cg.field_Wb;
+          return SocialListEntry.field_Wb;
         }
         if (param0 > -65) {
           this.restartDebounce(-88);

@@ -34,11 +34,11 @@ final class qe extends IntrusiveNode {
             var5 = (String) null;
             qe.formatLoadingProgress((String) null, -87, (ResourceArchive) null, (String) null);
           }
-          if (!param2.c(-10923)) {
+          if (!param2.ensureIndex(-10923)) {
             stackIn_5_0 = (String) (param3);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param0 + " - " + param2.a((byte) 96) + "%";
+          stackIn_7_0 = param0 + " - " + param2.getOverallProgress((byte) 96) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,7 +146,7 @@ final class qe extends IntrusiveNode {
                       var12[var17] = GrowableIntList.classForDescriptor(var10[var17], 33);
                       var17++;
                     }
-                    var18.field_g[var5] = param0.a(-30176, var8, var12, GrowableIntList.classForDescriptor(var20, -110));
+                    var18.field_g[var5] = param0.queueMethodLookup(-30176, var8, var12, GrowableIntList.classForDescriptor(var20, -110));
                     var18.field_l[var5] = var21;
                   }
                 } else {
@@ -160,7 +160,7 @@ final class qe extends IntrusiveNode {
                   }
                   var18.field_o[var5] = var6_int;
                   var18.field_p[var5] = var9;
-                  var18.field_n[var5] = param0.a((byte) -95, var15, GrowableIntList.classForDescriptor(var16, -100));
+                  var18.field_n[var5] = param0.queueFieldLookup((byte) -95, var15, GrowableIntList.classForDescriptor(var16, -100));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -236,8 +236,8 @@ final class qe extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.c(param2, 109);
-          var5 = param0.a(param1, (byte) 39, var4_int);
+          var4_int = param0.getGroupProgressByName(param2, 109);
+          var5 = param0.getFileId(param1, (byte) 39, var4_int);
           if (param3 < 40) {
             field_p = true;
           }

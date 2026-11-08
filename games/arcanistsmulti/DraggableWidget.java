@@ -198,9 +198,9 @@ final class DraggableWidget extends SingleChildContainer {
             !(param1 <= ConditionalTextValue.field_e.length)) {
             ConditionalTextValue.field_e = new int[2 * param1];
           }
-          if (tj.field_u == null ||
-            !(param1 <= tj.field_u.length)) {
-            tj.field_u = new int[param1 * 2];
+          if (CachedArchiveProvider.field_u == null ||
+            !(param1 <= CachedArchiveProvider.field_u.length)) {
+            CachedArchiveProvider.field_u = new int[param1 * 2];
           }
           if (PatchEnvelopeSet.field_o == null ||
             !(param1 <= PatchEnvelopeSet.field_o.length)) {
@@ -226,9 +226,9 @@ final class DraggableWidget extends SingleChildContainer {
             nf.field_z = new int[param1 * 2];
             if (null == ConditionalTextValue.field_e) {
               ConditionalTextValue.field_e = new int[2 * param1];
-              if (tj.field_u == null ||
-                !(param1 <= tj.field_u.length)) {
-                tj.field_u = new int[param1 * 2];
+              if (CachedArchiveProvider.field_u == null ||
+                !(param1 <= CachedArchiveProvider.field_u.length)) {
+                CachedArchiveProvider.field_u = new int[param1 * 2];
               }
               if (PatchEnvelopeSet.field_o == null ||
                 !(param1 <= PatchEnvelopeSet.field_o.length)) {
@@ -253,9 +253,9 @@ final class DraggableWidget extends SingleChildContainer {
               if (param1 > ConditionalTextValue.field_e.length) {
                 ConditionalTextValue.field_e = new int[2 * param1];
               }
-              if (tj.field_u == null ||
-                !(param1 <= tj.field_u.length)) {
-                tj.field_u = new int[param1 * 2];
+              if (CachedArchiveProvider.field_u == null ||
+                !(param1 <= CachedArchiveProvider.field_u.length)) {
+                CachedArchiveProvider.field_u = new int[param1 * 2];
               }
               if (PatchEnvelopeSet.field_o == null ||
                 !(param1 <= PatchEnvelopeSet.field_o.length)) {
@@ -282,9 +282,9 @@ final class DraggableWidget extends SingleChildContainer {
               !(param1 <= ConditionalTextValue.field_e.length)) {
               ConditionalTextValue.field_e = new int[2 * param1];
             }
-            if (tj.field_u == null ||
-              !(param1 <= tj.field_u.length)) {
-              tj.field_u = new int[param1 * 2];
+            if (CachedArchiveProvider.field_u == null ||
+              !(param1 <= CachedArchiveProvider.field_u.length)) {
+              CachedArchiveProvider.field_u = new int[param1 * 2];
             }
             if (PatchEnvelopeSet.field_o == null) {
               PatchEnvelopeSet.field_o = new int[2 * param1];

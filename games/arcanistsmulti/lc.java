@@ -50,11 +50,11 @@ final class lc {
               stackIn_28_0 = param1;
               stackIn_28_1 = 5 + var5_int;
               if (stackIn_28_0 <= stackIn_28_1) {
-                tg.field_b[7].draw(param2, param0);
+                DualLinkDeque.field_b[7].draw(param2, param0);
                 param2 += 9;
               } else {
                 param2 -= 4;
-                tg.field_b[8].draw(param2, param0);
+                DualLinkDeque.field_b[8].draw(param2, param0);
                 param2 += 15;
                 var5_int += 4;
                 if (~var5_int == ~((-(param1 % 10) + param1) / 2 - 1) &&
@@ -296,12 +296,12 @@ final class lc {
           var4 = 64 + ValidatedTextWidget.field_I;
           var5 = var4;
           var6 = 512;
-          var12_int = fh.field_e;
+          var12_int = SecondaryNodeDequeIterator.field_e;
           if (var12_int != 0) {
             if (var12_int != 1) {
               if (var12_int == 2) {
                 var2 = lf.field_d;
-                var3 = var3 + (8 + tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C));
+                var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                 var7 = var4;
                 var9 = 45 + ValidatedTextWidget.field_I;
                 var8 = 550;
@@ -427,10 +427,10 @@ final class lc {
                 if (3 == var12_int) {
                   var9 = 45 + ValidatedTextWidget.field_I;
                   var10 = ValidatedTextWidget.field_I + 290;
-                  var2 = jf.field_i;
+                  var2 = NodeHashTableIterator.field_i;
                   var8 = 550;
                   var7 = var4;
-                  var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+                  var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                   var7 = var4;
                   SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                   var2 = qj.field_b;
@@ -613,7 +613,7 @@ final class lc {
                 } else {
                   if (var12_int == 4) {
                     var2 = IntKeyLookup.field_e;
-                    var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+                    var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                     var4 = 320 + (ValidatedTextWidget.field_I - 80);
                     var3 = -70 + uc.field_a + 240;
                     SoftwareRasterizer.drawRectangle(-1 + var4, var3 - 1, 162, 122, 0);
@@ -679,7 +679,7 @@ final class lc {
                       pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -90, kg.field_d[1], bo.field_a[0], var4);
                     }
                     var3 -= 16;
-                    pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -80, kg.field_d[1], tj.field_A[so.field_c[4]], var4);
+                    pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -80, kg.field_d[1], CachedArchiveProvider.field_A[so.field_c[4]], var4);
                     var3 += 8;
                     var3 += 16;
                     if (46 != so.field_c[0]) {
@@ -698,7 +698,7 @@ final class lc {
                     if (var12_int != 5) {
                       if (var12_int == 6) {
                         var2 = gl.field_a;
-                        var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+                        var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                         var2 = hl.field_i;
                         var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m) + 8);
                         var2 = GrowableIntList.field_f;
@@ -711,11 +711,11 @@ final class lc {
                         if (var12_int == 7) {
                           var2 = db.field_d;
                           if (ArcanistsMulti.i((byte) -99)) {
-                            var12_int = 74 + ValidatedTextWidget.field_I + tj.field_t.textWidth(var2);
+                            var12_int = 74 + ValidatedTextWidget.field_I + CachedArchiveProvider.field_t.textWidth(var2);
                             ii.field_d.drawScaled(var12_int, -2 + var3, 32, 32);
-                            mi.field_B.drawText(SceneWidget.field_M, var12_int + 40, (mi.field_B.field_C + tj.field_t.field_C) / 2 + var3, 16711680, -1);
+                            mi.field_B.drawText(SceneWidget.field_M, var12_int + 40, (mi.field_B.field_C + CachedArchiveProvider.field_t.field_C) / 2 + var3, 16711680, -1);
                           }
-                          var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+                          var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                           var2 = GzipDecoder.field_c;
                           var3 = var3 + (8 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m));
                           var2 = ArrayWidgetContainer.field_F;
@@ -723,52 +723,52 @@ final class lc {
                           var11 = new int[]{16711935, 16711680, 16746632, 16776960, 65535, 34816, 16777215, 4521762, 1364125, 16755302};
                           var2 = ClipState.field_q;
                           mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
-                          var2 = tj.a(-115, new String[]{Integer.toString(var11[1], 16)}, ArchiveRequest.field_s);
+                          var2 = CachedArchiveProvider.formatTemplate(-115, new String[]{Integer.toString(var11[1], 16)}, ArchiveRequest.field_s);
                           var3 = var3 + (2 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
                           var2 = ik.field_a;
                           mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_m + mi.field_B.field_C);
-                          var2 = tj.a(-51, new String[]{Integer.toString(var11[2], 16)}, ra.field_b);
+                          var2 = CachedArchiveProvider.formatTemplate(-51, new String[]{Integer.toString(var11[2], 16)}, ra.field_b);
                           var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 2);
                           var2 = field_p;
                           mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
-                          var2 = tj.a(-116, new String[]{Integer.toString(var11[3], 16)}, hm.field_a);
+                          var2 = CachedArchiveProvider.formatTemplate(-116, new String[]{Integer.toString(var11[3], 16)}, hm.field_a);
                           var3 = var3 + (2 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
-                          var2 = pk.field_b;
+                          var2 = IterableNodeHashTable.field_b;
                           mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
-                          var2 = tj.a(-47, new String[]{Integer.toString(var11[4], 16)}, pc.field_a);
+                          var2 = CachedArchiveProvider.formatTemplate(-47, new String[]{Integer.toString(var11[4], 16)}, pc.field_a);
                           var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m) + 2);
                           var2 = ScrollContainer.field_M;
                           mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
-                          var2 = tj.a(-120, new String[]{Integer.toString(var11[5], 16)}, NodeHashTable.field_b);
+                          var2 = CachedArchiveProvider.formatTemplate(-120, new String[]{Integer.toString(var11[5], 16)}, NodeHashTable.field_b);
                           var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 2);
                           var2 = pb.field_l;
                           mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_m + mi.field_B.field_C);
-                          var2 = tj.a(122, new String[]{Integer.toString(var11[6], 16)}, SocketConnector.field_f);
+                          var2 = CachedArchiveProvider.formatTemplate(122, new String[]{Integer.toString(var11[6], 16)}, SocketConnector.field_f);
                           var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 2);
                           var2 = CanvasRasterBuffer.field_f;
                           mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_m + mi.field_B.field_C);
-                          var2 = tj.a(-71, new String[]{Integer.toString(var11[7], 16)}, ra.field_e);
+                          var2 = CachedArchiveProvider.formatTemplate(-71, new String[]{Integer.toString(var11[7], 16)}, ra.field_e);
                           var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m) + 2);
                           var2 = MusicPatch.field_i;
                           mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
-                          var2 = tj.a(113, new String[]{Integer.toString(var11[8], 16)}, fo.field_i);
+                          var2 = CachedArchiveProvider.formatTemplate(113, new String[]{Integer.toString(var11[8], 16)}, fo.field_i);
                           var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 2);
                           var2 = mf.field_e;
                           mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
-                          var2 = tj.a(-33, new String[]{Integer.toString(var11[9], 16)}, ie.field_Rb);
+                          var2 = CachedArchiveProvider.formatTemplate(-33, new String[]{Integer.toString(var11[9], 16)}, ie.field_Rb);
                           var3 = var3 + (6 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
                           var2 = IntrusiveDeque.field_a;
                           var3 = var3 + (8 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
                         } else {
                           if (var12_int == 8) {
                             var2 = EmailLoginCredentials.field_m;
-                            var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+                            var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                             this.a(var3, var4, (byte) -102, 3);
                             var2 = ne.field_j;
                             mi.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
-                            var2 = na.field_Tb;
+                            var2 = LobbyGameEntry.field_Tb;
                             var3 += 128;
-                            var3 = var3 + (8 + tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C));
+                            var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                             this.a(var3, var4, (byte) -77, 0);
                             var2 = OptionsDialog.field_pb;
                             mi.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_m + mi.field_B.field_C);
@@ -777,14 +777,14 @@ final class lc {
                             if (var12_int != 9) {
                               if (var12_int == 10) {
                                 var2 = oo.field_q;
-                                var3 = var3 + (8 + tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C));
+                                var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                                 this.a(var3, var4, (byte) -47, 4);
                                 var2 = ValidationHelpWidget.field_S;
                                 mi.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
                                 bb.field_g[29].drawTransparent(var4, 120 + (-40 + var3));
                                 var2 = SingleChildContainer.field_A;
                                 var3 += 128;
-                                var3 = var3 + (8 + tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C));
+                                var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                                 this.a(var3, var4, (byte) -86, 5);
                                 var2 = lm.field_d;
                                 mi.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
@@ -792,14 +792,14 @@ final class lc {
                               } else {
                                 if (var12_int == 11) {
                                   var2 = ck.field_c;
-                                  var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+                                  var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                                   this.a(var3, var4, (byte) -36, 6);
                                   var2 = qj.field_f;
                                   mi.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_m + mi.field_B.field_C);
                                   bb.field_g[67].drawTransparent(var4, var3 + 80);
                                   var3 += 128;
                                   var2 = b.field_c;
-                                  var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+                                  var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                                   this.a(var3, var4, (byte) -42, 7);
                                   var2 = ClipState.field_l;
                                   mi.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
@@ -807,7 +807,7 @@ final class lc {
                                 } else {
                                   if (12 == var12_int) {
                                     var2 = lo.field_t;
-                                    var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+                                    var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                                     var2 = ao.field_b;
                                     var12 = new String[50];
                                     var13 = new int[]{480};
@@ -831,16 +831,16 @@ final class lc {
                               }
                             } else {
                               var2 = rk.field_J;
-                              var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+                              var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                               this.a(var3, var4, (byte) -49, 1);
                               var2 = ah.field_e;
                               mi.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
                               bb.field_g[17].drawTransparent(var4, var3 + 80);
                               var2 = hn.field_o;
                               var3 += 128;
-                              var3 = var3 + (8 + tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C));
+                              var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                               this.a(var3, var4, (byte) -71, 2);
-                              var2 = dn.field_Bb;
+                              var2 = SceneScrollPane.field_Bb;
                               mi.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
                               bb.field_g[42].drawTransparent(var4, 80 + var3);
                             }
@@ -850,11 +850,11 @@ final class lc {
                     } else {
                       var2 = i.field_h;
                       if (ArcanistsMulti.i((byte) -92)) {
-                        var12_int = ValidatedTextWidget.field_I + (74 + tj.field_t.textWidth(var2));
+                        var12_int = ValidatedTextWidget.field_I + (74 + CachedArchiveProvider.field_t.textWidth(var2));
                         ii.field_d.drawScaled(var12_int, -2 + var3, 32, 32);
-                        mi.field_B.drawText(tk.field_o, 40 + var12_int, var3 + (tj.field_t.field_C + mi.field_B.field_C) / 2, 16711680, -1);
+                        mi.field_B.drawText(tk.field_o, 40 + var12_int, var3 + (CachedArchiveProvider.field_t.field_C + mi.field_B.field_C) / 2, 16711680, -1);
                       }
-                      var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+                      var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                       var2 = km.field_b;
                       var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 8);
                       var2 = MouseWheelHandler.field_a;
@@ -866,13 +866,13 @@ final class lc {
                       fe.field_g.drawTransparent(ValidatedTextWidget.field_I + 43, var3 - 32);
                       fe.field_g.drawTransparent(106 + ValidatedTextWidget.field_I, -32 + var3);
                       SoftwareRasterizer.resetClip();
-                      tg.field_b[7].draw(var4, -2 + var3);
+                      DualLinkDeque.field_b[7].draw(var4, -2 + var3);
                       mi.field_B.drawText("= 1" + SingleChildContainer.field_x, 20 + var4, 20 + var3, 16776960, 0);
-                      tg.field_b[8].draw(var4 + 100, -2 + var3);
+                      DualLinkDeque.field_b[8].draw(var4 + 100, -2 + var3);
                       mi.field_B.drawText("= 5" + CanvasRasterBuffer.field_g, 20 + var4 + 100, var3 + 20, 16776960, 0);
                       var2 = EmailLoginCredentials.field_n;
                       var4 -= 320;
-                      var2 = tj.a(127, new String[]{KeyboardInputHandler.field_l}, var2);
+                      var2 = CachedArchiveProvider.formatTemplate(127, new String[]{KeyboardInputHandler.field_l}, var2);
                       var3 -= 48;
                       var3 = var3 + (16 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 312, 480, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
                       var3 += 48;
@@ -890,34 +890,34 @@ final class lc {
               }
             } else {
               var2 = fj.field_g;
-              var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+              var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
               var2 = md.field_e;
               var3 = var3 + (16 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
               var2 = UiComponent.field_l;
-              var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+              var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
               var2 = cc.field_b;
-              var2 = tj.a(118, new String[]{fn.field_g[84], fn.field_g[85], fn.field_g[82], fn.field_g[81]}, var2);
+              var2 = CachedArchiveProvider.formatTemplate(118, new String[]{fn.field_g[84], fn.field_g[85], fn.field_g[82], fn.field_g[81]}, var2);
               var3 = var3 + (16 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
               var2 = CredentialKind.field_e;
-              var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
+              var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
               var2 = vf.field_p;
-              var2 = tj.a(124, new String[]{fn.field_g[69], fn.field_g[ao.field_f]}, var2);
+              var2 = CachedArchiveProvider.formatTemplate(124, new String[]{fn.field_g[69], fn.field_g[ao.field_f]}, var2);
               var3 = var3 + (32 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m));
             }
           } else {
             var2 = wm.field_J;
-            var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 16);
+            var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 16);
             var2 = nj.field_j;
             var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 16);
             var2 = ud.field_u;
-            var3 = var3 + (16 + tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C));
+            var3 = var3 + (16 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
             if (ArcanistsMulti.i((byte) -121)) {
               stackIn_48_0 = cb.field_d;
             } else {
               stackIn_48_0 = BirthDateEntryPanel.field_J;
             }
             var2 = stackIn_48_0;
-            var2 = tj.a(119, new String[]{ie.field_Lb, KeyboardInputHandler.field_l}, var2);
+            var2 = CachedArchiveProvider.formatTemplate(119, new String[]{ie.field_Lb, KeyboardInputHandler.field_l}, var2);
             var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 16);
             var2 = fd.field_c;
             var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 32);
@@ -927,7 +927,7 @@ final class lc {
           if (stackIn_94_0Lifetime1 < stackIn_94_1Lifetime1) {
             discarded$0 = this.g(-45, -88);
           }
-          tj.field_t.drawRightAlignedText(Bzip2State.a(fh.field_e, (byte) 69), 590 + ValidatedTextWidget.field_I, uc.field_a + 112, 0, -1);
+          CachedArchiveProvider.field_t.drawRightAlignedText(Bzip2State.a(SecondaryNodeDequeIterator.field_e, (byte) 69), 590 + ValidatedTextWidget.field_I, uc.field_a + 112, 0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1325,7 +1325,7 @@ final class lc {
                         } else {
                             /* Inlined CFG state: 31. */
                             {
-                                var4 = tj.field_A;
+                                var4 = CachedArchiveProvider.field_A;
                                 statePc = 32;
                                 continue scanLoop1;
                             }
@@ -1574,7 +1574,7 @@ final class lc {
                         } else {
                             /* Inlined CFG state: 61. */
                             {
-                                var16_ref = ij.field_Pb;
+                                var16_ref = SceneTabbedPanel.field_Pb;
                                 var15 = 1;
                                 var14 = 1;
                                 statePc = 62;
@@ -2360,7 +2360,7 @@ final class lc {
                 case 150: {
                     try {
                         var3 -= 16;
-                        pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -109, kg.field_d[1], tj.field_A[so.field_c[4]], var2_int);
+                        pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -109, kg.field_d[1], CachedArchiveProvider.field_A[so.field_c[4]], var2_int);
                         var3 += 8;
                         var3 += 16;
                         if (46 == so.field_c[0]) {
@@ -6158,7 +6158,7 @@ final class lc {
                                 if (var29 == -1) {
                                     /* Inlined CFG state: 670. */
                                     {
-                                        var18 = tj.a(123, new String[]{rb.field_n[var27]}, ArrayWidgetContainer.field_y);
+                                        var18 = CachedArchiveProvider.formatTemplate(123, new String[]{rb.field_n[var27]}, ArrayWidgetContainer.field_y);
                                         statePc = 671;
                                         continue scanLoop1;
                                     }
@@ -6220,9 +6220,9 @@ final class lc {
                     try {
                         discarded$3 = this.a(false, 180, (byte) 111, false, ValidatedTextWidget.field_I + 32, 98, 309 + uc.field_a);
                         discarded$4 = this.a(false, 166, (byte) 79, false, 39 + ValidatedTextWidget.field_I, 29, 390 + uc.field_a);
-                        tj.field_t.drawParagraph(gg.field_f, -1 + (32 + ValidatedTextWidget.field_I + 7), 389 + uc.field_a, 166, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                        tj.field_t.drawParagraph(gg.field_f, ValidatedTextWidget.field_I + 39, uc.field_a + 390 - 2, 166, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                        tj.field_t.drawParagraph(gg.field_f, ValidatedTextWidget.field_I + 39, uc.field_a + 390 - 1, 166, 29, 12569299, -1, 1, 1, tj.field_t.field_C);
+                        CachedArchiveProvider.field_t.drawParagraph(gg.field_f, -1 + (32 + ValidatedTextWidget.field_I + 7), 389 + uc.field_a, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                        CachedArchiveProvider.field_t.drawParagraph(gg.field_f, ValidatedTextWidget.field_I + 39, uc.field_a + 390 - 2, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                        CachedArchiveProvider.field_t.drawParagraph(gg.field_f, ValidatedTextWidget.field_I + 39, uc.field_a + 390 - 1, 166, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
                         if (kg.field_d[3] != hi.field_b[0]) {
                             statePc = 684;
                         } else {
@@ -6538,9 +6538,9 @@ final class lc {
                             {
                                 discarded$5 = this.a(false, 180, (byte) 106, false, ValidatedTextWidget.field_I + 225, 98, 309 + uc.field_a);
                                 discarded$6 = this.a(false, 166, (byte) -98, false, 232 + ValidatedTextWidget.field_I, 29, uc.field_a + 390);
-                                tj.field_t.drawParagraph(ce.field_j, 6 + (ValidatedTextWidget.field_I + 225), -1 + (uc.field_a + 390), 166, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                                tj.field_t.drawParagraph(ce.field_j, 7 + (225 + ValidatedTextWidget.field_I), -2 + uc.field_a + 390, 166, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                                tj.field_t.drawParagraph(ce.field_j, ValidatedTextWidget.field_I + 225 + 7, -1 + (uc.field_a + 390), 166, 29, 12569299, -1, 1, 1, tj.field_t.field_C);
+                                CachedArchiveProvider.field_t.drawParagraph(ce.field_j, 6 + (ValidatedTextWidget.field_I + 225), -1 + (uc.field_a + 390), 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                                CachedArchiveProvider.field_t.drawParagraph(ce.field_j, 7 + (225 + ValidatedTextWidget.field_I), -2 + uc.field_a + 390, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                                CachedArchiveProvider.field_t.drawParagraph(ce.field_j, ValidatedTextWidget.field_I + 225 + 7, -1 + (uc.field_a + 390), 166, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
                                 SoftwareRasterizer.drawRectangle(248 + ValidatedTextWidget.field_I, 317 + uc.field_a, 131, 67, 16777215);
                                 SoftwareRasterizer.fillRectangle(249 + ValidatedTextWidget.field_I, 318 + uc.field_a, 129, 65, 0);
                                 var23 = 0;
@@ -7262,9 +7262,9 @@ final class lc {
                     try {
                         discarded$7 = this.a(false, 93, (byte) -106, false, ValidatedTextWidget.field_I + 417, 98, uc.field_a + 309);
                         discarded$8 = this.a(false, var23, (byte) -96, false, var24 + ValidatedTextWidget.field_I, 29, uc.field_a + 390);
-                        tj.field_t.drawParagraph(th.field_j, -1 + ValidatedTextWidget.field_I + var24, uc.field_a + 390 - 1, var23, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                        tj.field_t.drawParagraph(th.field_j, var24 + ValidatedTextWidget.field_I, 390 + (uc.field_a - 2), var23, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                        tj.field_t.drawParagraph(th.field_j, var24 + ValidatedTextWidget.field_I, -1 + (uc.field_a + 390), var23, 29, 12569299, -1, 1, 1, tj.field_t.field_C);
+                        CachedArchiveProvider.field_t.drawParagraph(th.field_j, -1 + ValidatedTextWidget.field_I + var24, uc.field_a + 390 - 1, var23, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                        CachedArchiveProvider.field_t.drawParagraph(th.field_j, var24 + ValidatedTextWidget.field_I, 390 + (uc.field_a - 2), var23, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                        CachedArchiveProvider.field_t.drawParagraph(th.field_j, var24 + ValidatedTextWidget.field_I, -1 + (uc.field_a + 390), var23, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
                         SoftwareRasterizer.drawRectangle(431 + ValidatedTextWidget.field_I, uc.field_a + 317, 67, 67, 16777215);
                         SoftwareRasterizer.fillRectangle(ValidatedTextWidget.field_I + 432, uc.field_a + 318, 65, 65, 0);
                         var25 = 0;
@@ -7301,9 +7301,9 @@ final class lc {
                             {
                                 discarded$9 = this.a(false, 93, (byte) 93, false, 520 + ValidatedTextWidget.field_I, 98, 309 + uc.field_a);
                                 discarded$10 = this.a(false, 79, (byte) 121, false, 7 + ValidatedTextWidget.field_I + 520, 29, 390 + uc.field_a);
-                                tj.field_t.drawParagraph(ProxySocketConnector.field_l, 7 + ValidatedTextWidget.field_I + 520 - 1, 389 + uc.field_a, 79, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                                tj.field_t.drawParagraph(ProxySocketConnector.field_l, ValidatedTextWidget.field_I + 527, 390 + uc.field_a - 2, 79, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                                tj.field_t.drawParagraph(ProxySocketConnector.field_l, ValidatedTextWidget.field_I + 520 + 7, -1 + uc.field_a + 390, 79, 29, 12569299, -1, 1, 1, tj.field_t.field_C);
+                                CachedArchiveProvider.field_t.drawParagraph(ProxySocketConnector.field_l, 7 + ValidatedTextWidget.field_I + 520 - 1, 389 + uc.field_a, 79, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                                CachedArchiveProvider.field_t.drawParagraph(ProxySocketConnector.field_l, ValidatedTextWidget.field_I + 527, 390 + uc.field_a - 2, 79, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                                CachedArchiveProvider.field_t.drawParagraph(ProxySocketConnector.field_l, ValidatedTextWidget.field_I + 520 + 7, -1 + uc.field_a + 390, 79, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
                                 SoftwareRasterizer.drawRectangle(535 + ValidatedTextWidget.field_I, uc.field_a + 333, 67, 35, 16777215);
                                 SoftwareRasterizer.fillRectangle(ValidatedTextWidget.field_I + 536, uc.field_a + 318 + 16, 65, 33, 0);
                                 var25 = 0;
@@ -7734,7 +7734,7 @@ final class lc {
                       if (!this.field_g.b(true)) {
                         return;
                       }
-                      fh.field_e = 0;
+                      SecondaryNodeDequeIterator.field_e = 0;
                       var6 = param0 ? 1 : 0;
                       gj.a(var6 != 0, true, 7, mn.field_r);
                       return;
@@ -7898,7 +7898,7 @@ final class lc {
                                             }
                                           }
                                           if (CheckboxPainter.field_g == 7) {
-                                            fh.field_e = fh.field_e - 1;
+                                            SecondaryNodeDequeIterator.field_e = SecondaryNodeDequeIterator.field_e - 1;
                                           }
                                           if (14 == CheckboxPainter.field_g) {
                                             var6 = -1 + StatefulTextPainter.field_p;
@@ -7923,7 +7923,7 @@ final class lc {
                                               }
                                             }
                                             if (CheckboxPainter.field_g == 7) {
-                                              fh.field_e = fh.field_e + 1;
+                                              SecondaryNodeDequeIterator.field_e = SecondaryNodeDequeIterator.field_e + 1;
                                             }
                                             if (14 == CheckboxPainter.field_g) {
                                               var6 = 1 + StatefulTextPainter.field_p;
@@ -8126,7 +8126,7 @@ final class lc {
           if (StatefulTextPainter.field_p == 6) {
             var2 = gn.field_j;
             SpriteState.field_z.field_z = 6050;
-            var3 = na.field_lc;
+            var3 = LobbyGameEntry.field_lc;
             bb.field_g[0].drawTransparent(var5 - 48, var4);
             bb.field_g[1].drawTransparent(-8 + var5, var4);
             SecondaryNodeDeque.field_c[5].draw(var5 - SecondaryNodeDeque.field_c[0].field_g / 2 - 4, -80 + var4);
@@ -8160,9 +8160,9 @@ final class lc {
           }
           var6Lifetime1 = var4 - 144;
           if (var2 != null) {
-            tj.field_t.drawParagraph((String) (var2), (EmailLoginCredentials.field_f >> 1) - 233, var6Lifetime1, 208, 288, 13158, 13158, 1, 0, tj.field_t.field_C + tj.field_t.field_m);
-            tj.field_t.drawParagraph((String) (var2), -232 + (EmailLoginCredentials.field_f >> 1), var6Lifetime1 - 1, 208, 288, 13158, 13158, 1, 0, tj.field_t.field_m + tj.field_t.field_C);
-            tj.field_t.drawParagraph((String) (var2), (EmailLoginCredentials.field_f >> 1) - 232, var6Lifetime1, 208, 288, 12569299, -1, 1, 0, tj.field_t.field_m + tj.field_t.field_C);
+            CachedArchiveProvider.field_t.drawParagraph((String) (var2), (EmailLoginCredentials.field_f >> 1) - 233, var6Lifetime1, 208, 288, 13158, 13158, 1, 0, CachedArchiveProvider.field_t.field_C + CachedArchiveProvider.field_t.field_m);
+            CachedArchiveProvider.field_t.drawParagraph((String) (var2), -232 + (EmailLoginCredentials.field_f >> 1), var6Lifetime1 - 1, 208, 288, 13158, 13158, 1, 0, CachedArchiveProvider.field_t.field_m + CachedArchiveProvider.field_t.field_C);
+            CachedArchiveProvider.field_t.drawParagraph((String) (var2), (EmailLoginCredentials.field_f >> 1) - 232, var6Lifetime1, 208, 288, 12569299, -1, 1, 0, CachedArchiveProvider.field_t.field_m + CachedArchiveProvider.field_t.field_C);
           }
           if (var3 != null) {
             mi.field_B.drawParagraph((String) (var3), 16 + (EmailLoginCredentials.field_f >> 1) + 8, var6Lifetime1, 224, 288, 0, -1, 1, 0, mi.field_B.field_m + mi.field_B.field_C);
@@ -8221,7 +8221,7 @@ final class lc {
         var24 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var26 = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true, false, true, false, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, true, true, true, true, false, true, false, true, false, false, false, true, true, true, param0, true, true, true, false, false, false};
-          if (Js5Transport.a(0, (byte) -116)) {
+          if (Js5Transport.isFeatureEnabled(0, (byte) -116)) {
             var26[55] = false;
           }
           var3 = new int[][][]{new int[][]{new int[]{13, 14}, new int[]{0, 2, 4}, new int[]{1, 3, 5}, new int[]{31, 47}, new int[]{49, 51, 53}, new int[]{50, 52}}, new int[][]{new int[]{46, 56, 87}, new int[]{43, 36, 37, 38, 35}, new int[]{57, 58, 59, 60, 61, 45}, new int[]{41, 44, 12, 72, 73}, new int[]{26, 27, 28, 29}, new int[]{48, 55}}, new int[][]{new int[]{54, 80}, new int[]{6, 7, 8, 9, 10, 11}, new int[]{16, 17, 32}, new int[]{18, 19, 20, 21, 23, 22}, new int[]{24, 25, 33}, new int[]{30}}, new int[][]{new int[]{42, 34, 40, 39, 15}, new int[]{62, 71, 79, 82, 86, 88}, new int[]{65, 66, 67, 69, 85, 92}, new int[]{63, 64, 68, 70, 94, 84}, new int[]{74, 78, 83, 81, 93, 89}, new int[]{91}}};
@@ -8236,7 +8236,7 @@ final class lc {
             var25[0] = ad.field_f[0];
             var32[1] = 0;
           }
-          var5 = Js5Transport.a(0, (byte) -33) ? 1 : 0;
+          var5 = Js5Transport.isFeatureEnabled(0, (byte) -33) ? 1 : 0;
           if ((65536 & var4[1]) != 0) {
             if (var5 == 0 &&
               (8388608 & var4[1]) == 0) {
@@ -8318,7 +8318,7 @@ final class lc {
           }
           var15Lifetime1 = stackIn_75_0;
           if (-1 != var15Lifetime1) {
-            var16Lifetime1 = tj.field_t.field_o + tj.field_t.field_m;
+            var16Lifetime1 = CachedArchiveProvider.field_t.field_o + CachedArchiveProvider.field_t.field_m;
             mi.field_B.drawCentered(rb.field_n[var15Lifetime1], 447 + ValidatedTextWidget.field_I, uc.field_a + 126, 0, -1);
             stackIn_85_0 = ((var4[var15Lifetime1 >> 5] & 1 << (31 & var15Lifetime1)) == 0) ? 0 : 1;
             var17Lifetime1 = stackIn_85_0;
@@ -8333,8 +8333,8 @@ final class lc {
             } else {
               TextLine.field_b.drawTransparent(340 + ValidatedTextWidget.field_I, var18 + uc.field_a);
             }
-            var18 = var18 + tj.field_t.field_C;
-            var18 = var18 + tj.field_t.field_C;
+            var18 = var18 + CachedArchiveProvider.field_t.field_C;
+            var18 = var18 + CachedArchiveProvider.field_t.field_C;
             if (var17Lifetime1 == 0 &&
               var26[var15Lifetime1]) {
               var30 = new String[16];
@@ -8405,7 +8405,7 @@ final class lc {
           SoftwareRasterizer.fillVerticalGradient(param1, param0, 240, 119, wm.statusColour(param3, (byte) -122), ng.rankColour((byte) -37, param3));
           if (LoginPanel.field_M[param3] == null) {
             ue.field_d.field_f = 0;
-            LoginPanel.field_M[param3] = af.a(tj.a(-46, new String[]{Integer.toString(param3)}, "background<%0>"), "", 19412, ue.field_d);
+            LoginPanel.field_M[param3] = af.loadIndexedSpriteByName(CachedArchiveProvider.formatTemplate(-46, new String[]{Integer.toString(param3)}, "background<%0>"), "", 19412, ue.field_d);
             LoginPanel.field_M[param3].drawHalfSize(param1, param0);
             LoginPanel.field_M[param3] = null;
           } else {
@@ -8442,24 +8442,24 @@ final class lc {
           SoftwareRasterizer.drawRectangle(-1 + var3, 1, var2_int, 48, 8547138);
           SoftwareRasterizer.drawRectangle(var3, 0, var2_int, 48, 11768360);
           SoftwareRasterizer.fillRectangle(1 + var3, -1, var2_int, 48, 0);
-          var4 = jf.field_j - GridContainer.field_P;
+          var4 = NodeHashTableIterator.field_j - GridContainer.field_P;
           if (param0 != -26733) {
             return;
           }
           if (var4 < 5) {
             if (0 < var4) {
               if (4 == (4 & var4)) {
-                tg.field_b[7].draw(10 + (var3 - 5), 6);
-                tg.field_b[7].draw(15 + var3, 6);
-                tg.field_b[7].draw(-3 + (10 + var3), 10);
-                tg.field_b[7].draw(3 + (var3 + 10), 10);
+                DualLinkDeque.field_b[7].draw(10 + (var3 - 5), 6);
+                DualLinkDeque.field_b[7].draw(15 + var3, 6);
+                DualLinkDeque.field_b[7].draw(-3 + (10 + var3), 10);
+                DualLinkDeque.field_b[7].draw(3 + (var3 + 10), 10);
               }
               if ((var4 & 2) == 2) {
-                tg.field_b[7].draw(10 + (var3 - 5), 8);
-                tg.field_b[7].draw(var3 + 15, 8);
+                DualLinkDeque.field_b[7].draw(10 + (var3 - 5), 8);
+                DualLinkDeque.field_b[7].draw(var3 + 15, 8);
               }
               if ((var4 & 1) == 1) {
-                tg.field_b[7].draw(var3 + 10, 8);
+                DualLinkDeque.field_b[7].draw(var3 + 10, 8);
               }
               if (ad.field_d <= 0) {
                 if (ad.field_d <= 0) {
@@ -8485,7 +8485,7 @@ final class lc {
               }
             }
           } else {
-            tg.field_b[8].draw(10 + (var3 - 4), 8);
+            DualLinkDeque.field_b[8].draw(10 + (var3 - 4), 8);
             if (var4 > 5) {
               mi.field_B.drawCharacter('+', 17 + var3, 30, 16711935);
             }
@@ -8625,7 +8625,7 @@ final class lc {
           var9 = new int[]{0, 255, 0};
           var10 = new int[]{0, 0, 255};
           var11 = new int[]{255, 255, 255};
-          var12 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
+          var12 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
           var13 = new double[]{-0.75, 0.75, -0.5, 0.5, -0.25, 0.25};
           var14 = 0;
           while (true) {
@@ -8654,9 +8654,9 @@ final class lc {
             if (var2.field_I == var2.field_V.d(false)) {
               if (250 > MusicPatchNode.field_s) {
                 var20_ref_String = Integer.toString(5 - (MusicPatchNode.field_s - 1) / 50);
-                tj.field_t.drawCentered(var20_ref_String, var6 - 1, var18Lifetime2 + 64, 0, 0);
-                tj.field_t.drawCentered(var20_ref_String, var6, var18Lifetime2 + 64 - 1, 0, 0);
-                tj.field_t.drawCentered(var20_ref_String, var6, var18Lifetime2 + 64, 16777215, -1);
+                CachedArchiveProvider.field_t.drawCentered(var20_ref_String, var6 - 1, var18Lifetime2 + 64, 0, 0);
+                CachedArchiveProvider.field_t.drawCentered(var20_ref_String, var6, var18Lifetime2 + 64 - 1, 0, 0);
+                CachedArchiveProvider.field_t.drawCentered(var20_ref_String, var6, var18Lifetime2 + 64, 16777215, -1);
               }
             } else {
               var19 = qe.field_s;
@@ -8896,7 +8896,7 @@ final class lc {
           var10 = new int[]{0, 255, 0};
           var11 = new int[]{0, 0, 255};
           var12 = new int[]{255, 255, 255};
-          var13 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
+          var13 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
           var14 = new StringBuilder(20);
           if (null != var2.field_w) {
             var2.field_V = var2.field_w;
@@ -8970,7 +8970,7 @@ final class lc {
             incrementValue$20 = var16;
             var16++;
             var15 = Js5Transport.a(var15, 10, incrementValue$20, Js5ArchiveManager.field_a);
-            if (Js5Transport.a(0, (byte) -36)) {
+            if (Js5Transport.isFeatureEnabled(0, (byte) -36)) {
               incrementValue$21 = var16;
               var16++;
               var15 = Js5Transport.a(var15, 10, incrementValue$21, NanoFrameClock.field_q);
@@ -9163,7 +9163,7 @@ final class lc {
               var31 = new Sprite(32 + (24 + var30 * 8), 80);
               var31.makeRasterTarget();
               for (var32 = 0; var32 < var30; var32++) {
-                tg.field_b[7].drawFadedToColour(16 + 8 * var32 + 8, 24, 0, 16744703);
+                DualLinkDeque.field_b[7].drawFadedToColour(16 + 8 * var32 + 8, 24, 0, 16744703);
               }
               SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 8 * var30 + 24 + 32, 80);
               ce.field_m.a(true);
@@ -9172,7 +9172,7 @@ final class lc {
               var31.drawAdditive(var22 - (8 * var30 + 30), -24 + var23 - 22, 256);
               var31.drawAdditive(-16 - var30 * 8 + var22 - 14, -34 + var23, 256);
               for (var32Lifetime1 = 0; var32Lifetime1 < var30; var32Lifetime1++) {
-                tg.field_b[7].draw(-14 - var32Lifetime1 * 8 + var22, var23 - 16);
+                DualLinkDeque.field_b[7].draw(-14 - var32Lifetime1 * 8 + var22, var23 - 16);
               }
             }
             var20++;
@@ -9316,7 +9316,7 @@ final class lc {
             this.f(-123);
           }
           boolean decompiledFrameRemainder0 = true;
-          var2_int = var2_int + (8 + tj.field_t.field_C);
+          var2_int = var2_int + (8 + CachedArchiveProvider.field_t.field_C);
           if (!nj.field_e.field_g) {
             var4 = PatchEnvelopeSet.field_f;
           } else {
@@ -9364,7 +9364,7 @@ final class lc {
           }
           if (ie.field_Sb != 0) {
             var2_intLifetime3 = uc.field_a + 125;
-            mi.field_B.drawCentered(ij.field_Cb, 320 + ValidatedTextWidget.field_I, var2_intLifetime3 - 16, 0, -1);
+            mi.field_B.drawCentered(SceneTabbedPanel.field_Cb, 320 + ValidatedTextWidget.field_I, var2_intLifetime3 - 16, 0, -1);
           } else {
             var2_intLifetime3 = uc.field_a + 125;
             mi.field_B.drawCentered(MenuButtonPanel.field_N, ValidatedTextWidget.field_I + 320, var2_intLifetime3 - 16, 0, -1);
@@ -9457,7 +9457,7 @@ final class lc {
               var5 = ce.field_g[7];
             }
           }
-          var6 = tj.field_t.textWidth(var5);
+          var6 = CachedArchiveProvider.field_t.textWidth(var5);
           var7 = this.d(41, param2);
           var8 = this.a(param2, (byte) 103);
           var9 = this.f(param2, -7661);
@@ -9524,7 +9524,7 @@ final class lc {
               var17 = km.blendColourStep(param2, NumericDateInputWidget.field_L[this.field_l].length, -1422079448, var16, var15Lifetime1);
             }
           }
-          Js5Transport.a(var9, var10, var5, var18, var17, param0 ^ -15);
+          Js5Transport.drawShadowedText(var9, var10, var5, var18, var17, param0 ^ -15);
           if (var4_int != 20 &&
             var4_int != 21) {
             return;
@@ -9718,8 +9718,8 @@ final class lc {
         int var24Lifetime1Lifetime1;
         var29 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var32 = tg.field_b[7].toRgbSprite();
-          var3 = -GridContainer.field_P + jf.field_j;
+          var32 = DualLinkDeque.field_b[7].toRgbSprite();
+          var3 = -GridContainer.field_P + NodeHashTableIterator.field_j;
           this.c(-26733);
           this.field_m = -1;
           discarded$0 = this.a(false, 245, (byte) -43, false, ValidatedTextWidget.field_I + 26, 245, uc.field_a + 178);
@@ -9912,9 +9912,9 @@ final class lc {
           }
           discarded$1 = this.a(false, 332, (byte) -71, false, 287 + ValidatedTextWidget.field_I, 245, 178 + uc.field_a);
           discarded$2 = this.a(true, 284, (byte) 108, false, 21 + ValidatedTextWidget.field_I + 287, 29, -4 + (178 + uc.field_a));
-          tj.field_t.drawParagraph(PasswordFieldPainter.field_F, 21 + (290 + ValidatedTextWidget.field_I) - 1, -4 + (uc.field_a + 178 - 1), 281, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-          tj.field_t.drawParagraph(PasswordFieldPainter.field_F, 311 + ValidatedTextWidget.field_I, -2 + (178 + uc.field_a) - 4, 281, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-          tj.field_t.drawParagraph(PasswordFieldPainter.field_F, 290 + (ValidatedTextWidget.field_I + 21), -5 + uc.field_a + 178, 281, 29, 12569299, -1, param0, 1, tj.field_t.field_C);
+          CachedArchiveProvider.field_t.drawParagraph(PasswordFieldPainter.field_F, 21 + (290 + ValidatedTextWidget.field_I) - 1, -4 + (uc.field_a + 178 - 1), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+          CachedArchiveProvider.field_t.drawParagraph(PasswordFieldPainter.field_F, 311 + ValidatedTextWidget.field_I, -2 + (178 + uc.field_a) - 4, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+          CachedArchiveProvider.field_t.drawParagraph(PasswordFieldPainter.field_F, 290 + (ValidatedTextWidget.field_I + 21), -5 + uc.field_a + 178, 281, 29, 12569299, -1, param0, 1, CachedArchiveProvider.field_t.field_C);
           var9Lifetime1 = -1;
           var10Lifetime1 = -1;
           var11Lifetime1 = 0;
@@ -10385,9 +10385,9 @@ final class lc {
                 decompiledFrameRemainder1 = false;
               }
               else {
-                tj.field_t.drawParagraph(var36, 10 + (var16Lifetime4 - 1), var17_intLifetime4, 281, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                tj.field_t.drawParagraph(var36, 10 + var16Lifetime4, var17_intLifetime4 - 1, 281, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                tj.field_t.drawParagraph(var36, var16Lifetime4 + 10, var17_intLifetime4, 281, 29, 12569299, -1, 1, 1, tj.field_t.field_C);
+                CachedArchiveProvider.field_t.drawParagraph(var36, 10 + (var16Lifetime4 - 1), var17_intLifetime4, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                CachedArchiveProvider.field_t.drawParagraph(var36, 10 + var16Lifetime4, var17_intLifetime4 - 1, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                CachedArchiveProvider.field_t.drawParagraph(var36, var16Lifetime4 + 10, var17_intLifetime4, 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
               }
               mi.field_B.drawParagraph(var37, 8 + (290 + ValidatedTextWidget.field_I), uc.field_a + 340 - 8, 307, 128, 0, -1, 1, 0, mi.field_B.field_C);
               return;
@@ -10426,10 +10426,10 @@ final class lc {
                 }
                 if (Math.abs(this.field_i) == 4) {
                   var13 = tk.field_r;
-                  var14_ref_String = fh.field_d;
+                  var14_ref_String = SecondaryNodeDequeIterator.field_d;
                 }
                 if (Math.abs(this.field_i) == 5) {
-                  var13 = pk.field_g;
+                  var13 = IterableNodeHashTable.field_g;
                   var14_ref_String = ad.field_g;
                 }
                 if (6 == Math.abs(this.field_i)) {
@@ -10448,24 +10448,24 @@ final class lc {
                   var13 = FullscreenFocusCanvas.field_f;
                   var14_ref_String = BevelBoxPainter.field_c;
                 }
-                tj.field_t.drawParagraph(var14_ref_String, -1 + (311 + ValidatedTextWidget.field_I), -1 + (303 + uc.field_a), 281, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                tj.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21), 303 + uc.field_a - 2, 281, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                tj.field_t.drawParagraph(var14_ref_String, 21 + (ValidatedTextWidget.field_I + 290), 303 + (uc.field_a - 1), 281, 29, 12569299, -1, 1, 1, tj.field_t.field_C);
+                CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, -1 + (311 + ValidatedTextWidget.field_I), -1 + (303 + uc.field_a), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21), 303 + uc.field_a - 2, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 21 + (ValidatedTextWidget.field_I + 290), 303 + (uc.field_a - 1), 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
               } else {
                 if (3 == this.field_m) {
                   var34 = PasswordFieldPainter.field_w[this.field_i];
                   var14_ref_String = var34;
-                  tj.field_t.drawParagraph(var34, ValidatedTextWidget.field_I + 310, -1 + (uc.field_a + 303), 281, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                  tj.field_t.drawParagraph(var34, 21 + ValidatedTextWidget.field_I + 290, 303 + (uc.field_a - 2), 281, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                  tj.field_t.drawParagraph(var14_ref_String, 21 + ValidatedTextWidget.field_I + 290, -1 + (303 + uc.field_a), 281, 29, 12569299, -1, 1, 1, tj.field_t.field_C);
-                  var13 = tj.a(param0 + 126, new String[]{PasswordFieldPainter.field_w[-1 + this.field_i]}, jf.field_f);
+                  CachedArchiveProvider.field_t.drawParagraph(var34, ValidatedTextWidget.field_I + 310, -1 + (uc.field_a + 303), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                  CachedArchiveProvider.field_t.drawParagraph(var34, 21 + ValidatedTextWidget.field_I + 290, 303 + (uc.field_a - 2), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                  CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 21 + ValidatedTextWidget.field_I + 290, -1 + (303 + uc.field_a), 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
+                  var13 = CachedArchiveProvider.formatTemplate(param0 + 126, new String[]{PasswordFieldPainter.field_w[-1 + this.field_i]}, NodeHashTableIterator.field_f);
                 } else {
                   if (this.field_m == 4) {
                     var33 = PasswordFieldPainter.field_w[this.field_i];
                     var14_ref_String = var33;
-                    tj.field_t.drawParagraph(var33, 290 + ValidatedTextWidget.field_I + 21 - 1, -1 + uc.field_a + 303, 281, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                    tj.field_t.drawParagraph(var33, 21 + (ValidatedTextWidget.field_I + 290), 303 + (uc.field_a - 2), 281, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                    tj.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21), 303 + uc.field_a - 1, 281, 29, 12569299, -1, 1, 1, tj.field_t.field_C);
+                    CachedArchiveProvider.field_t.drawParagraph(var33, 290 + ValidatedTextWidget.field_I + 21 - 1, -1 + uc.field_a + 303, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                    CachedArchiveProvider.field_t.drawParagraph(var33, 21 + (ValidatedTextWidget.field_I + 290), 303 + (uc.field_a - 2), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                    CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21), 303 + uc.field_a - 1, 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
                     var15_ref_String = LoadingProgressDialog.field_qb;
                     if (this.field_h == 2) {
                       var15_ref_String = MusicCrossfadeStream.field_z;
@@ -10474,7 +10474,7 @@ final class lc {
                       var15_ref_String = UiContainer.field_x;
                     }
                     if (this.field_h == 4) {
-                      var15_ref_String = fh.field_d;
+                      var15_ref_String = SecondaryNodeDequeIterator.field_d;
                     }
                     if (5 == this.field_h) {
                       var15_ref_String = ad.field_g;
@@ -10507,7 +10507,7 @@ final class lc {
                     array$4 = new String[stackIn_770_1Lifetime1];
                     array$4[0] = var15_ref_String;
                     array$4[1] = Integer.toString(var16Lifetime4Lifetime1);
-                    var13 = tj.a(stackIn_770_0Lifetime1, array$4, vl.field_k);
+                    var13 = CachedArchiveProvider.formatTemplate(stackIn_770_0Lifetime1, array$4, vl.field_k);
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -10523,7 +10523,7 @@ final class lc {
                         var14_ref_String = UiContainer.field_x;
                       }
                       if (Math.abs(this.field_h) == 4) {
-                        var14_ref_String = fh.field_d;
+                        var14_ref_String = SecondaryNodeDequeIterator.field_d;
                         var13 = ie.field_Jb + var3;
                       }
                       if (Math.abs(this.field_h) == 5) {
@@ -10542,9 +10542,9 @@ final class lc {
                         var14_ref_String = oo.field_r;
                         var13 = DropTargetWidget.field_H + var3;
                       }
-                      tj.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21 - 1), 302 + uc.field_a, 281, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                      tj.field_t.drawParagraph(var14_ref_String, 290 + ValidatedTextWidget.field_I + 21, -2 + (303 + uc.field_a), 281, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-                      tj.field_t.drawParagraph(var14_ref_String, ValidatedTextWidget.field_I + 311, uc.field_a + 302, 281, 29, 12569299, -1, 1, 1, tj.field_t.field_C);
+                      CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21 - 1), 302 + uc.field_a, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                      CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + ValidatedTextWidget.field_I + 21, -2 + (303 + uc.field_a), 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+                      CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, ValidatedTextWidget.field_I + 311, uc.field_a + 302, 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
                       var13 = "";
                       var15Lifetime3 = 300 + ValidatedTextWidget.field_I;
                       var16Lifetime4Lifetime1 = uc.field_a + 336;
@@ -10556,9 +10556,9 @@ final class lc {
                           stackIn_731_0 = ~var17_intLifetime4Lifetime1;
                           stackIn_731_1 = ~var3;
                           if (stackIn_731_0 > stackIn_731_1) {
-                            tg.field_b[7].draw(var15Lifetime3, var16Lifetime4Lifetime1);
+                            DualLinkDeque.field_b[7].draw(var15Lifetime3, var16Lifetime4Lifetime1);
                           } else {
-                            tg.field_b[7].drawFadedToColour(var15Lifetime3, var16Lifetime4Lifetime1, 64, 0);
+                            DualLinkDeque.field_b[7].drawFadedToColour(var15Lifetime3, var16Lifetime4Lifetime1, 64, 0);
                           }
                           var15Lifetime3 += 9;
                           var17_intLifetime4Lifetime1++;
@@ -10574,7 +10574,7 @@ final class lc {
                         if (stackIn_731_0Lifetime1 < stackIn_731_1Lifetime1) {
                           var13 = mb.field_R;
                         } else {
-                          var13 = ij.field_Ob;
+                          var13 = SceneTabbedPanel.field_Ob;
                         }
                       }
                       mi.field_B.drawParagraph(var13, 440 + ValidatedTextWidget.field_I, var16Lifetime4Lifetime1, 170, 32, 0, -1, 1, 1, mi.field_B.field_C);
@@ -10584,7 +10584,7 @@ final class lc {
                 }
               }
             }
-            if (153 <= jf.field_j &&
+            if (153 <= NodeHashTableIterator.field_j &&
               ad.field_d < 10) {
               var14 = 308 + (ValidatedTextWidget.field_I + ad.field_d * 32);
               var15Lifetime3Lifetime1 = 400 + uc.field_a;
@@ -10597,13 +10597,13 @@ final class lc {
             }
             if ((tn.field_Ib == var13 ||
               var13 == vl.field_l) &&
-              (153 <= jf.field_j &&
+              (153 <= NodeHashTableIterator.field_j &&
               10 > ad.field_d)) {
               var13 = DropdownList.field_F;
               if (this.field_m == 9) {
                 var35 = UiTheme.field_h;
                 var14 = 250 + ad.field_d * 250;
-                var13 = var35 + tj.a(param0 ^ -50, new String[]{Integer.toString(var14)}, ck.field_e);
+                var13 = var35 + CachedArchiveProvider.formatTemplate(param0 ^ -50, new String[]{Integer.toString(var14)}, ck.field_e);
               }
               mi.field_B.drawParagraph(var13, ValidatedTextWidget.field_I + 302, 116 + (178 + uc.field_a), 299, 129, 0, -1, 1, 0, mi.field_B.field_C);
               for (var14 = 0; var14 < 10; var14++) {
@@ -10693,9 +10693,9 @@ final class lc {
               }
               mi.field_B.drawParagraph((String) (var17), 163 + var15Lifetime4 - 22, var16Lifetime5, 141, 29, var18Lifetime3, 0, 1, 1, mi.field_B.field_C);
             } else {
-              tj.field_t.drawParagraph(var38, var15Lifetime4 - 1, var16Lifetime5, 301, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-              tj.field_t.drawParagraph(var38, var15Lifetime4, -1 + var16Lifetime5, 301, 29, 13158, 13158, 1, 1, tj.field_t.field_C);
-              tj.field_t.drawParagraph(var13Lifetime1, var15Lifetime4, var16Lifetime5, 301, 29, 12569299, -1, 1, 1, tj.field_t.field_C);
+              CachedArchiveProvider.field_t.drawParagraph(var38, var15Lifetime4 - 1, var16Lifetime5, 301, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+              CachedArchiveProvider.field_t.drawParagraph(var38, var15Lifetime4, -1 + var16Lifetime5, 301, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
+              CachedArchiveProvider.field_t.drawParagraph(var13Lifetime1, var15Lifetime4, var16Lifetime5, 301, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
             }
             mi.field_B.drawParagraph(var39, -3 + var15Lifetime4, 340 + (uc.field_a - 8), 307, 128, 0, -1, 1, 0, mi.field_B.field_C);
           }
@@ -10714,11 +10714,11 @@ final class lc {
         try {
           if (7 == this.field_l) {
             if (param1 == 0 &&
-              fh.field_e == 0) {
+              SecondaryNodeDequeIterator.field_e == 0) {
               return false;
             }
             if (param1 == 2 &&
-              ~fh.field_e == ~(LoadingProgressDialog.field_kb.length - 1)) {
+              ~SecondaryNodeDequeIterator.field_e == ~(LoadingProgressDialog.field_kb.length - 1)) {
               return false;
             }
           }
@@ -10765,12 +10765,12 @@ final class lc {
             }
             if (CheckboxPainter.field_g == 12) {
               if (IntrusiveDeque.field_d == 26 &&
-                GridContainer.field_P < jf.field_j) {
-                jf.field_j = jf.field_j - 1;
+                GridContainer.field_P < NodeHashTableIterator.field_j) {
+                NodeHashTableIterator.field_j = NodeHashTableIterator.field_j - 1;
               }
               if (IntrusiveDeque.field_d == 27 &&
-                jf.field_j < 153) {
-                jf.field_j = jf.field_j + 1;
+                NodeHashTableIterator.field_j < 153) {
+                NodeHashTableIterator.field_j = NodeHashTableIterator.field_j + 1;
               }
             }
           }
@@ -11365,7 +11365,7 @@ final class lc {
               pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], -125, kg.field_d[1], bo.field_a[var14], var15);
             }
             var16 -= 16;
-            pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 2, kg.field_d[1], tj.field_A[so.field_c[4]], var15);
+            pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 2, kg.field_d[1], CachedArchiveProvider.field_A[so.field_c[4]], var15);
             var16 += 8;
             var16 += 16;
             if (so.field_c[0] != 46) {
@@ -11391,7 +11391,7 @@ final class lc {
             } else {
               var20_ref = Integer.toString(var12);
             }
-            var20_ref = tj.a(param0 + 1, new String[]{var20_ref}, UsernameCredentials.field_i);
+            var20_ref = CachedArchiveProvider.formatTemplate(param0 + 1, new String[]{var20_ref}, UsernameCredentials.field_i);
             var17.drawHorizontalFlip(152 + var18, var19 - 104);
             mi.field_B.drawParagraph(var20_ref, 8 + var18, 8 + var19, 176, 112, 16777215, 0, 0, 0, mi.field_B.field_C + mi.field_B.field_m);
           }
@@ -11627,7 +11627,7 @@ final class lc {
         RuntimeException var3 = null;
         try {
           if (this.field_l == 15) {
-            stackIn_4_0 = 75 + (param0 * ValidationHelpWidget.field_U[this.field_l] + tg.field_f[this.field_l]);
+            stackIn_4_0 = 75 + (param0 * ValidationHelpWidget.field_U[this.field_l] + DualLinkDeque.field_f[this.field_l]);
             return stackIn_4_0;
           }
           if (2 != this.field_l &&
@@ -11635,22 +11635,22 @@ final class lc {
             this.field_l != 1) {
             if (this.field_l == 6) {
               if (lc.a((byte) 112)) {
-                stackIn_21_0 = ValidationHelpWidget.field_U[this.field_l] * param0 + tg.field_f[this.field_l];
+                stackIn_21_0 = ValidationHelpWidget.field_U[this.field_l] * param0 + DualLinkDeque.field_f[this.field_l];
                 return stackIn_21_0;
               }
-              stackIn_19_0 = ValidationHelpWidget.field_U[this.field_l] + tg.field_f[this.field_l];
+              stackIn_19_0 = ValidationHelpWidget.field_U[this.field_l] + DualLinkDeque.field_f[this.field_l];
               return stackIn_19_0;
             }
             if (this.field_l == 7) {
-              stackIn_24_0 = tg.field_f[this.field_l];
+              stackIn_24_0 = DualLinkDeque.field_f[this.field_l];
               return stackIn_24_0;
             }
             if (this.field_l == 11) {
-              stackIn_27_0 = tg.field_f[this.field_l];
+              stackIn_27_0 = DualLinkDeque.field_f[this.field_l];
               return stackIn_27_0;
             }
             if (12 == this.field_l) {
-              stackIn_30_0 = tg.field_f[this.field_l];
+              stackIn_30_0 = DualLinkDeque.field_f[this.field_l];
               return stackIn_30_0;
             }
             if (param1 != 75) {
@@ -11688,14 +11688,14 @@ final class lc {
               return stackIn_67_0;
             }
             if (this.field_l != 8) {
-              stackIn_78_0 = tg.field_f[this.field_l] + param0 * ValidationHelpWidget.field_U[this.field_l];
+              stackIn_78_0 = DualLinkDeque.field_f[this.field_l] + param0 * ValidationHelpWidget.field_U[this.field_l];
               return stackIn_78_0;
             }
             if (param0 == 3) {
-              stackIn_74_0 = tg.field_f[this.field_l];
+              stackIn_74_0 = DualLinkDeque.field_f[this.field_l];
               return stackIn_74_0;
             }
-            stackIn_76_0 = tg.field_f[this.field_l] + 1 * ValidationHelpWidget.field_U[this.field_l];
+            stackIn_76_0 = DualLinkDeque.field_f[this.field_l] + 1 * ValidationHelpWidget.field_U[this.field_l];
             return stackIn_76_0;
           }
           stackIn_13_0 = -32 + (param0 - NumericDateInputWidget.field_L[this.field_l].length) * ValidationHelpWidget.field_U[this.field_l] + 480;
@@ -11899,15 +11899,15 @@ final class lc {
                 this.field_h = this.field_i;
               }
               if (this.field_m == 5 &&
-                jf.field_j >= (5 + GridContainer.field_P)) {
+                NodeHashTableIterator.field_j >= (5 + GridContainer.field_P)) {
                 ByteStorage.a(2, this.field_h * 8 - 14);
               }
               if (this.field_m == 7 &&
-                2 + GridContainer.field_P <= jf.field_j) {
+                2 + GridContainer.field_P <= NodeHashTableIterator.field_j) {
                 ByteStorage.a(2, -13 + this.field_h * 8 + (-1 + this.field_i % 12) / 2);
               }
               if (this.field_m == 8 &&
-                (3 + GridContainer.field_P) <= jf.field_j) {
+                (3 + GridContainer.field_P) <= NodeHashTableIterator.field_j) {
                 ByteStorage.a(2, this.field_i % 12 + this.field_h * 8 - 18);
               }
               if (this.field_m == 9 &&

@@ -122,7 +122,7 @@ final class cj {
           var44 = 0;
           var13Lifetime1 = var44;
           while (CameraFollowTarget.field_i > var44) {
-            var14Lifetime1 = w.field_Lb[var44];
+            var14Lifetime1 = ChatInputWidget.field_Lb[var44];
             var15Lifetime1 = param4.field_U[var14Lifetime1];
             var16 = param4.field_T[var14Lifetime1];
             var17 = param4.field_O[var14Lifetime1];
@@ -196,7 +196,7 @@ final class cj {
               var39 = -989921025 & var35 * var30 >>> 8 | (var36 * var30 & 16711858) >>> 8;
               var37 = var37 + 65793 * var31;
               var39 = var39 + var33 * 65793;
-              tn.a(255 & var37 >> 8, var24, 255 & var38 >> 8, var23, -109, var37 >> 16, var27, var38 >> 16, 255 & var37, var22, var39 >> 16, var25, var26, (var39 & 65321) >> 8, 255 & var39, 255 & var38);
+              tn.drawMeshQuad(255 & var37 >> 8, var24, 255 & var38 >> 8, var23, -109, var37 >> 16, var27, var38 >> 16, 255 & var37, var22, var39 >> 16, var25, var26, (var39 & 65321) >> 8, 255 & var39, 255 & var38);
             }
             var44++;
           }
@@ -301,17 +301,17 @@ final class cj {
             kj.field_e = null;
             he.field_e.position = 0;
             if (param6 == null) {
-              jf.field_a.position = 0;
-              jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
-              jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
-              stackIn_18_0 = jf.field_a;
+              NodeHashTableIterator.field_a.position = 0;
+              NodeHashTableIterator.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
+              NodeHashTableIterator.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
+              stackIn_18_0 = NodeHashTableIterator.field_a;
               if (param5.isEnabled(true)) {
                 stackIn_19_1 = var15;
               } else {
                 stackIn_19_1 = "";
               }
               ((PacketBuffer) (Object) stackIn_18_0).writeVersionedString(stackIn_19_1, (byte) -115);
-              stackIn_21_0 = jf.field_a;
+              stackIn_21_0 = NodeHashTableIterator.field_a;
               if (param3.isEnabled(true)) {
                 stackIn_22_1 = var8;
               } else {
@@ -321,23 +321,23 @@ final class cj {
               he.field_e.writeByte(16, (byte) -75);
               he.field_e.position = he.field_e.position + 1;
               var9 = he.field_e.position;
-              TextLine.a(false, he.field_e, nl.field_Jb, jf.field_a, DropTargetWidget.field_K);
+              TextLine.a(false, he.field_e, IconTextSceneWidget.field_Jb, NodeHashTableIterator.field_a, DropTargetWidget.field_K);
               he.field_e.writeByteLengthAtMark(he.field_e.position - var9, (byte) 43);
             } else {
               var9 = 0;
-              jf.field_a.position = 0;
+              NodeHashTableIterator.field_a.position = 0;
               if (param0) {
                 var9 = var9 | 1;
               }
-              jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
-              jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
-              jf.field_a.writeVersionedString(var15, (byte) -100);
-              jf.field_a.writeVersionedString(var8, (byte) -96);
+              NodeHashTableIterator.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
+              NodeHashTableIterator.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
+              NodeHashTableIterator.field_a.writeVersionedString(var15, (byte) -100);
+              NodeHashTableIterator.field_a.writeVersionedString(var8, (byte) -96);
               var17 = (CharSequence) ((Object) param6);
-              jf.field_a.writeVersionedString(vl.a((byte) 106, var17), (byte) -92);
-              jf.field_a.writeShort(param4, (byte) -73);
-              jf.field_a.writeByte(param2, (byte) -118);
-              jf.field_a.writeByte(var9, (byte) -62);
+              NodeHashTableIterator.field_a.writeVersionedString(vl.a((byte) 106, var17), (byte) -92);
+              NodeHashTableIterator.field_a.writeShort(param4, (byte) -73);
+              NodeHashTableIterator.field_a.writeByte(param2, (byte) -118);
+              NodeHashTableIterator.field_a.writeByte(var9, (byte) -62);
               he.field_e.writeByte(18, (byte) -114);
               he.field_e.position = he.field_e.position + 2;
               var10 = he.field_e.position;
@@ -346,14 +346,14 @@ final class cj {
                 var11_ref_StringLifetime4 = "";
               }
               he.field_e.writeString(var11_ref_StringLifetime4, 23333);
-              TextLine.a(false, he.field_e, nl.field_Jb, jf.field_a, DropTargetWidget.field_K);
+              TextLine.a(false, he.field_e, IconTextSceneWidget.field_Jb, NodeHashTableIterator.field_a, DropTargetWidget.field_K);
               he.field_e.writeShortLengthAtMark(he.field_e.position - var10, -19571);
             }
             we.a(-1, (byte) 113);
             ResizableModalPanel.field_eb = sb.field_f;
           }
           if (ResizableModalPanel.field_eb == sb.field_f &&
-            pe.a((byte) -86, 1)) {
+            ContextActionMenu.hasIncomingBytes((byte) -86, 1)) {
             var9Lifetime1 = UiContainer.field_z.readUnsignedByte((byte) 56);
             UiContainer.field_z.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -374,7 +374,7 @@ final class cj {
                 fj.field_h = -1;
                 on.field_g = var9Lifetime1;
               } else {
-                pe.a((byte) -86, oi.b(88));
+                ContextActionMenu.hasIncomingBytes((byte) -86, oi.b(88));
                 kj.field_e = new Boolean(jo.readByteMatches(UiContainer.field_z, param1 + 89));
                 UiContainer.field_z.position = 0;
               }
@@ -382,10 +382,10 @@ final class cj {
           }
           if (ResizableModalPanel.field_eb == TextHotspotWidget.field_R) {
             var9Lifetime2 = 2;
-            if (pe.a((byte) -86, var9Lifetime2)) {
+            if (ContextActionMenu.hasIncomingBytes((byte) -86, var9Lifetime2)) {
               var10Lifetime1 = UiContainer.field_z.readUnsignedShort(-98);
               UiContainer.field_z.position = 0;
-              if (pe.a((byte) -86, var10Lifetime1)) {
+              if (ContextActionMenu.hasIncomingBytes((byte) -86, var10Lifetime1)) {
                 var11 = Bzip2State.field_M.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   Bzip2State.field_M[var12] = UiContainer.field_z.readVersionedString(-32461);
@@ -404,7 +404,7 @@ final class cj {
             } else {
               var9_ref_String = UiContainer.field_z.readOptionalString(-112);
               if (var9_ref_String != null) {
-                jf.a(var9_ref_String, IconButtonPainter.getApplet(110), 0);
+                NodeHashTableIterator.setSettingsCookie(var9_ref_String, IconButtonPainter.getApplet(110), 0);
               }
             }
             ProxySocketConnector.closeActiveConnection(false);
@@ -417,15 +417,15 @@ final class cj {
               if (rk.a(-78) <= 30000L) {
                 MenuButtonPanel.field_E = NumericDateInputWidget.field_R;
               } else {
-                MenuButtonPanel.field_E = tg.field_a;
+                MenuButtonPanel.field_E = DualLinkDeque.field_a;
               }
               bb.field_h = false;
               stackIn_61_0 = 249;
               return stackIn_61_0;
             }
             var9Lifetime3 = ng.field_G;
-            ng.field_G = dh.field_Lb;
-            dh.field_Lb = var9Lifetime3;
+            ng.field_G = SceneTextInput.field_Lb;
+            SceneTextInput.field_Lb = var9Lifetime3;
             bb.field_h = true;
           }
           stackIn_64_0 = -1;

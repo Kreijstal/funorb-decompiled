@@ -106,7 +106,7 @@ final class c {
         IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
-        cg var18_ref = null;
+        SocialListEntry var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
         SceneWidget var22 = null;
@@ -134,11 +134,11 @@ final class c {
             CanvasRasterBuffer.field_k.field_I = 0;
             var6 = CanvasRasterBuffer.field_k;
             var6.field_x = 0;
-            var7 = jf.field_d;
-            jf.field_d.field_I = 0;
+            var7 = NodeHashTableIterator.field_d;
+            NodeHashTableIterator.field_d.field_I = 0;
             var7.field_x = 0;
             if (ContentTransitionDialog.k((byte) 105)) {
-              nl.field_Db.field_rb = fb.field_c.toUpperCase();
+              IconTextSceneWidget.field_Db.field_rb = fb.field_c.toUpperCase();
               var9 = (2 + ReflectionCheckRequest.field_h.field_x) / 2;
               SocketConnector.field_d.setBounds(-2 + var9, 0, -40 + ReflectionCheckRequest.field_h.field_I, 40, (byte) -120);
               if (DirectByteStorage.field_f.field_Rb < DirectByteStorage.field_f.field_dc) {
@@ -155,7 +155,7 @@ final class c {
               SocketConnector.field_d.field_v = ko.field_h.field_v;
               if (0 < oe.field_b) {
                 if (oe.field_b != 1) {
-                  var10_ref_String = tj.a(-36, new String[]{Integer.toString(oe.field_b)}, MenuButtonPainter.field_y);
+                  var10_ref_String = CachedArchiveProvider.formatTemplate(-36, new String[]{Integer.toString(oe.field_b)}, MenuButtonPainter.field_y);
                   if (var19 != 0) {
                     var10_ref_String = ContentTransitionDialog.field_pb;
                   }
@@ -275,8 +275,8 @@ final class c {
               boolean decompiledFrameCompleted0 = true;
               boolean decompiledFrameRemainder3 = true;
               if ((var10 >= 2) &&
-                (decompiledFrameRemainder0 = (null != dh.field_Hb ||
-                null != pe.field_Fb ||
+                (decompiledFrameRemainder0 = (null != SceneTextInput.field_Hb ||
+                null != ContextActionMenu.field_Fb ||
                 null != CanvasRasterBuffer.field_a ||
                 ue.field_b != null))) {
                 var11_int = 0;
@@ -289,14 +289,14 @@ final class c {
                 while (!(decompiledNaturalLoopExit0 = (!(vf.field_l > var16)))) {
                   var17_int = DirectByteStorage.field_f.field_Wb[var16] & 255;
                   if (var19 == 0) {
-                    if (dh.field_Hb != null &&
-                      null != dh.field_Hb[var16] &&
-                      dh.field_Hb[var16][var17_int]) {
+                    if (SceneTextInput.field_Hb != null &&
+                      null != SceneTextInput.field_Hb[var16] &&
+                      SceneTextInput.field_Hb[var16][var17_int]) {
                       var11_int = 1;
                     }
-                    if (pe.field_Fb != null &&
-                      pe.field_Fb[var16] != null) {
-                      var18_int = pe.field_Fb[var16][var17_int];
+                    if (ContextActionMenu.field_Fb != null &&
+                      ContextActionMenu.field_Fb[var16] != null) {
+                      var18_int = ContextActionMenu.field_Fb[var16][var17_int];
                       if (0 != var18_int &&
                         !LinkButtonPainter.field_c) {
                         var11_int = 1;
@@ -329,11 +329,11 @@ final class c {
                   var16 = 0;
                 }
                 var17 = lf.field_b.field_Cb.field_G;
-                var18_ref = (cg) (var17.first(12623));
+                var18_ref = (SocialListEntry) (var17.first(12623));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
-                    stackOut_107_0 = var18_ref.e(183874081);
+                    stackOut_107_0 = var18_ref.isUnlisted(183874081);
                     stackIn_125_0 = stackOut_107_0 ? 1 : 0;
                     stackIn_108_0 = stackOut_107_0;
                     if (var19 != 0) {
@@ -372,7 +372,7 @@ final class c {
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      var18_ref = (cg) (var17.next(0));
+                      var18_ref = (SocialListEntry) (var17.next(0));
                       continue;
                     }
                   }
@@ -406,7 +406,7 @@ final class c {
                   CanvasRasterBuffer.field_k.field_ub = false;
                   if (CanvasRasterBuffer.field_k.field_A) {
                     if (tn.field_Ob.field_c.field_Mb != 0) {
-                      TextLayout.field_c = tj.a(param3 ^ 119, new String[]{ec.field_b}, DropTargetWidget.field_O);
+                      TextLayout.field_c = CachedArchiveProvider.formatTemplate(param3 ^ 119, new String[]{ec.field_b}, DropTargetWidget.field_O);
                       if (var19 != 0) {
                         TextLayout.field_c = DiskCacheRequest.field_G;
                       }
@@ -456,7 +456,7 @@ final class c {
                 if (stackIn_161_0 != ~var10) {
                   var13_ref = on.field_i;
                   if (var12 == 0) {
-                    var14 = tj.a(-11, new String[]{(String) (var11)}, hb.field_Hb);
+                    var14 = CachedArchiveProvider.formatTemplate(-11, new String[]{(String) (var11)}, hb.field_Hb);
                     if (var19 != 0) {
                       var14 = oj.field_d + (String) (var11);
                     }
@@ -466,7 +466,7 @@ final class c {
                 } else {
                   var13_ref = hd.field_c;
                   if (var12 == 0) {
-                    var14 = tj.a(-42, new String[]{(String) (var11)}, fo.field_b);
+                    var14 = CachedArchiveProvider.formatTemplate(-42, new String[]{(String) (var11)}, fo.field_b);
                     if (var19 != 0) {
                       var14 = rf.field_g + (String) (var11);
                     }
@@ -478,17 +478,17 @@ final class c {
               }
               if (var19 != 0) {
                 var9_ref_String = DirectByteStorage.field_f.field_ic;
-                nl.field_Db.field_rb = tj.a(param3 ^ 118, new String[]{var9_ref_String}, Bzip2State.field_j).toUpperCase();
-                jf.field_d.setBounds(ReflectionCheckRequest.field_h.field_x, 0, ReflectionCheckRequest.field_h.field_I - 40, 40, (byte) -120);
-                jf.field_d.field_rb = tj.a(param3 + 112, new String[]{var9_ref_String}, uf.field_b);
-                var8 = jf.field_d;
+                IconTextSceneWidget.field_Db.field_rb = CachedArchiveProvider.formatTemplate(param3 ^ 118, new String[]{var9_ref_String}, Bzip2State.field_j).toUpperCase();
+                NodeHashTableIterator.field_d.setBounds(ReflectionCheckRequest.field_h.field_x, 0, ReflectionCheckRequest.field_h.field_I - 40, 40, (byte) -120);
+                NodeHashTableIterator.field_d.field_rb = CachedArchiveProvider.formatTemplate(param3 + 112, new String[]{var9_ref_String}, uf.field_b);
+                var8 = NodeHashTableIterator.field_d;
               }
             } else {
               var9_ref_String = DirectByteStorage.field_f.field_ic;
-              nl.field_Db.field_rb = tj.a(param3 ^ 118, new String[]{var9_ref_String}, Bzip2State.field_j).toUpperCase();
-              jf.field_d.setBounds(ReflectionCheckRequest.field_h.field_x, 0, ReflectionCheckRequest.field_h.field_I - 40, 40, (byte) -120);
-              jf.field_d.field_rb = tj.a(param3 + 112, new String[]{var9_ref_String}, uf.field_b);
-              var8 = jf.field_d;
+              IconTextSceneWidget.field_Db.field_rb = CachedArchiveProvider.formatTemplate(param3 ^ 118, new String[]{var9_ref_String}, Bzip2State.field_j).toUpperCase();
+              NodeHashTableIterator.field_d.setBounds(ReflectionCheckRequest.field_h.field_x, 0, ReflectionCheckRequest.field_h.field_I - 40, 40, (byte) -120);
+              NodeHashTableIterator.field_d.field_rb = CachedArchiveProvider.formatTemplate(param3 + 112, new String[]{var9_ref_String}, uf.field_b);
+              var8 = NodeHashTableIterator.field_d;
             }
             if (PatchEnvelopeSet.field_a != 0L) {
               var9 = (int)(PatchEnvelopeSet.field_a - qj.monotonicTimeMillis(param3 ^ -26570));
@@ -496,9 +496,9 @@ final class c {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_rb = tj.a(113, new String[]{Integer.toString(var9)}, SocketJs5Transport.field_v);
+              var8.field_rb = CachedArchiveProvider.formatTemplate(113, new String[]{Integer.toString(var9)}, SocketJs5Transport.field_v);
             }
-            aj.field_d.field_rb = tj.a(116, new String[]{Integer.toString(DirectByteStorage.field_f.field_Rb), Integer.toString(DirectByteStorage.field_f.field_dc)}, IsaacCipher.field_h);
+            aj.field_d.field_rb = CachedArchiveProvider.formatTemplate(116, new String[]{Integer.toString(DirectByteStorage.field_f.field_Rb), Integer.toString(DirectByteStorage.field_f.field_dc)}, IsaacCipher.field_h);
           }
           stackIn_182_0 = hl.field_m;
           stackIn_183_1 = (param4) && (!param1) && (!so.field_j);
@@ -506,16 +506,16 @@ final class c {
           stackIn_187_0 = ReflectionCheckRequest.field_h;
           stackIn_188_1 = (param4) && (!param1) && (!so.field_j);
           ((SceneWidget) (Object) stackIn_187_0).updateInputFullScreen(stackIn_188_1, (byte) 69);
-          stackIn_192_0 = nl.field_Fb;
+          stackIn_192_0 = IconTextSceneWidget.field_Fb;
           stackIn_193_1 = (param4) && (!param1) && (so.field_j);
           ((SceneWidget) (Object) stackIn_192_0).updateInputFullScreen(stackIn_193_1, (byte) 115);
-          tn.field_Ob.field_c.h((byte) 118);
+          tn.field_Ob.field_c.updateTabs((byte) 118);
           if (param3 != 2) {
             return;
           }
           if (DirectByteStorage.field_f != null) {
             if (IntrusiveNodeHashTable.field_o.field_U != 0) {
-              qc.a(false, DirectByteStorage.field_f.h((byte) 94), param0);
+              qc.a(false, DirectByteStorage.field_f.getSortKey((byte) 94), param0);
             }
             if (0 != SocketConnector.field_d.field_U) {
               so.field_j = true;

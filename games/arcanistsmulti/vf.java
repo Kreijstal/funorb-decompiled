@@ -68,7 +68,7 @@ final class vf extends IntrusiveNode {
           if (param2 != 14) {
             return null;
           }
-          stackIn_31_0 = tj.a(-17, new String[]{param1}, KeyboardInputHandler.field_k);
+          stackIn_31_0 = CachedArchiveProvider.formatTemplate(-17, new String[]{param1}, KeyboardInputHandler.field_k);
           return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,12 +84,12 @@ final class vf extends IntrusiveNode {
         }
     }
 
-    final static cg a(long param0, int param1) {
+    final static SocialListEntry a(long param0, int param1) {
         if (param1 != 8192) {
           field_h = (String) null;
-          return (cg) (OptionsDialog.field_qb.get(param0, (byte) -121));
+          return (SocialListEntry) (OptionsDialog.field_qb.get(param0, (byte) -121));
         }
-        return (cg) (OptionsDialog.field_qb.get(param0, (byte) -121));
+        return (SocialListEntry) (OptionsDialog.field_qb.get(param0, (byte) -121));
     }
 
     public static void releaseStatics(int param0) {

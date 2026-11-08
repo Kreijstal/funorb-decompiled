@@ -80,8 +80,8 @@ final class LoadingTracker {
           if (param1 != -24755) {
             field_n = (String) null;
           }
-          var5_int = param4.c(param2, 105);
-          var6 = param4.a(param3, (byte) 73, var5_int);
+          var5_int = param4.getGroupProgressByName(param2, 105);
+          var6 = param4.getFileId(param3, (byte) 73, var5_int);
           stackIn_3_0 = OptionsDialog.loadBinaryFont(param4, var5_int, true, var6, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -160,7 +160,7 @@ final class LoadingTracker {
             param0 = param0 + var3 * (TextLine.field_k - param0) / var2;
           }
           IntKeyLookup.field_g.setBounds(640, sa.field_Hb, param0, 120, (byte) -120);
-          IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, dh.field_Gb);
+          IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, SceneTextInput.field_Gb);
           return;
         }
         CharSequence var4 = (CharSequence) null;
@@ -172,7 +172,7 @@ final class LoadingTracker {
           param0 = param0 + var3Lifetime1 * (TextLine.field_k - param0) / var2Lifetime1;
         }
         IntKeyLookup.field_g.setBounds(640, sa.field_Hb, param0, 120, (byte) -120);
-        IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, dh.field_Gb);
+        IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, SceneTextInput.field_Gb);
     }
 
     final static boolean b(int param0) {
@@ -223,25 +223,25 @@ final class LoadingTracker {
         while (this.field_q < this.field_e) {
           var5 = this.field_c[this.field_q];
           var2 = var5;
-          if (!var5.field_c.c(-10923)) {
+          if (!var5.field_c.ensureIndex(-10923)) {
             this.updateTaskProgress(var5, 0, -123);
             return false;
           }
           if (var5.field_h >= 0 &&
-            !var5.field_c.a(true, var5.field_h)) {
-            this.updateTaskProgress(var2, var5.field_c.a(var5.field_h, -23760), -112);
+            !var5.field_c.ensureGroupLoaded(true, var5.field_h)) {
+            this.updateTaskProgress(var2, var5.field_c.getGroupProgress(var5.field_h, -23760), -112);
             return false;
           }
           if (var5.field_g != null &&
-            !var5.field_c.a(var5.field_g, -24417)) {
-            this.updateTaskProgress(var2, var5.field_c.b(var5.field_g, 108), -126);
+            !var5.field_c.isGroupAvailableByName(var5.field_g, -24417)) {
+            this.updateTaskProgress(var2, var5.field_c.getGroupIdByName(var5.field_g, 108), -126);
             return false;
           }
           if (var5.field_h < 0 &&
             var5.field_g == null &&
             var5.field_f != null &&
-            !var5.field_c.a(-105)) {
-            this.updateTaskProgress(var2, var5.field_c.a((byte) -116), -118);
+            !var5.field_c.areAllGroupsAvailable(-105)) {
+            this.updateTaskProgress(var2, var5.field_c.getOverallProgress((byte) -116), -118);
             return false;
           }
           this.field_q = this.field_q + 1;

@@ -6,7 +6,7 @@ final class db {
     static String field_c;
     static String field_d;
     static int field_e;
-    static w field_a;
+    static ChatInputWidget field_a;
 
     public final String toString() {
         throw new IllegalStateException();

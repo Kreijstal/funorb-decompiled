@@ -31,9 +31,9 @@ final class kg {
           return var3;
         }
         if (32768 <= param1) {
-          var4 = this.field_i.b(32767 & param1, 26219, 0);
+          var4 = this.field_i.getFile(32767 & param1, 26219, 0);
         } else {
-          var4 = this.field_e.b(param1, param0 + 26216, 0);
+          var4 = this.field_e.getFile(param1, param0 + 26216, 0);
         }
         oo var5 = new oo();
         if (var4 != null) {
@@ -68,12 +68,12 @@ final class kg {
           this.field_i = param2;
           this.field_e = param1;
           if (null != this.field_e) {
-            this.field_e.a(0, (byte) -60);
+            this.field_e.getFileCount(0, (byte) -60);
           }
           if (this.field_i == null) {
             return;
           }
-          this.field_i.a(0, (byte) -60);
+          this.field_i.getFileCount(0, (byte) -60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

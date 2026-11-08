@@ -27,7 +27,7 @@ abstract class FrameClock {
     }
 
     final static void a(int param0, boolean param1, boolean param2) {
-        dn stackIn_5_0 = null;
+        SceneScrollPane stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
         SceneWidget stackIn_21_0 = null;
         String stackIn_22_1 = null;
@@ -56,7 +56,7 @@ abstract class FrameClock {
           }
           stackIn_5_0 = dd.field_c.field_Db;
           stackIn_6_1 = (dd.field_h == dd.field_c.field_Db);
-          var3_int = ((dn) (Object) stackIn_5_0).a(stackIn_6_1, (byte) 98, ImageProducerRasterBuffer.field_r + 2, 2, param0 * (ImageProducerRasterBuffer.field_r * 3 + 6), param1) ? 1 : 0;
+          var3_int = ((SceneScrollPane) (Object) stackIn_5_0).relayout(stackIn_6_1, (byte) 98, ImageProducerRasterBuffer.field_r + 2, 2, param0 * (ImageProducerRasterBuffer.field_r * 3 + 6), param1) ? 1 : 0;
           var4 = dd.field_c.field_Eb.field_G;
           if (SpriteState.field_t != 2 &&
             SpriteState.field_t != 1) {
@@ -125,22 +125,22 @@ abstract class FrameClock {
               ArcanistsMulti.a(-26335, (int[]) null, dd.field_c.field_Db, var6.field_Ib, 0L, -1, -1, var6.field_Cb, var6);
               var16 = eo.field_c;
               var13_ref_String = NumericDateInputWidget.field_M;
-              var16.field_l.a(7, var13_ref_String, (byte) -26);
+              var16.field_l.addAction(7, var13_ref_String, (byte) -26);
               var17 = eo.field_c;
               var13 = pb.field_h;
               var14 = ja.field_s;
-              var17.field_l.a(0, 0, -29466, var14, var13);
+              var17.field_l.openAt(0, 0, -29466, var14, var13);
             }
             var6 = (wa) (var4.next(0));
           }
           if (dd.field_c.field_Jb.field_U != 0) {
-            PasswordFieldPainter.field_A = new dh(dd.field_c.field_Jb.field_V, dd.field_c.field_Jb.field_nb, dd.field_c.field_Jb.field_x, dd.field_c.field_Jb.field_I, fh.field_a, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
+            PasswordFieldPainter.field_A = new SceneTextInput(dd.field_c.field_Jb.field_V, dd.field_c.field_Jb.field_nb, dd.field_c.field_Jb.field_x, dd.field_c.field_Jb.field_I, SecondaryNodeDequeIterator.field_a, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
             TextLine.field_h = 2;
           }
           if (dd.field_c.field_Lb.field_U == 0) {
             return;
           }
-          PasswordFieldPainter.field_A = new dh(dd.field_c.field_Lb.field_V, dd.field_c.field_Lb.field_nb, dd.field_c.field_Lb.field_x, dd.field_c.field_Lb.field_I, ResizableViewResizeListener.field_i, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
+          PasswordFieldPainter.field_A = new SceneTextInput(dd.field_c.field_Lb.field_V, dd.field_c.field_Lb.field_nb, dd.field_c.field_Lb.field_x, dd.field_c.field_Lb.field_I, ResizableViewResizeListener.field_i, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
           TextLine.field_h = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

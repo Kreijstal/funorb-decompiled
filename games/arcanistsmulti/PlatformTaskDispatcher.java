@@ -29,14 +29,14 @@ final class PlatformTaskDispatcher implements Runnable {
     static java.lang.reflect.Method field_f;
     private Thread field_o;
 
-    final PlatformTask a(boolean param0, java.net.URL param1) {
+    final PlatformTask queueUrlOpen(boolean param0, java.net.URL param1) {
         if (!param0) {
           this.field_v = true;
         }
-        return this.a(false, 4, 0, 0, param1);
+        return this.queueTask(false, 4, 0, 0, param1);
     }
 
-    private final static BoundedRandomAccessFile a(String param0, int param1, String param2, int param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(String param0, int param1, String param2, int param3) {
         try {
           int var6 = 0;
           BoundedRandomAccessFile stackIn_15_0 = null;
@@ -81,19 +81,19 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask b(int param0) {
+    final PlatformTask queueDisplayModeQuery(int param0) {
         if (param0 != -27886) {
           String var3 = (String) null;
-          this.a(-93, true, (String) null);
+          this.queueDirectSocketOpen(-93, true, (String) null);
         }
-        return this.a(false, 5, 0, 0, (Object) null);
+        return this.queueTask(false, 5, 0, 0, (Object) null);
     }
 
-    final PlatformTask a(int param0, boolean param1, String param2) {
+    final PlatformTask queueDirectSocketOpen(int param0, boolean param1, String param2) {
         if (!param1) {
           field_i = (String) null;
         }
-        return this.a(false, param2, (byte) 46, param0);
+        return this.queueSocketOpen(false, param2, (byte) 46, param0);
     }
 
     public final void run() {
@@ -227,11 +227,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref2 = PlatformTaskDispatcher.a((String) (var8.field_b), field_r, field_i, 10000);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile((String) (var8.field_b), field_r, field_i, 10000);
                         var8.field_g = var3_ref2;
                         break;
                       case 13:
-                        var3_ref2 = PlatformTaskDispatcher.a((String) (var8.field_b), field_r, "", 10000);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile((String) (var8.field_b), field_r, "", 10000);
                         var8.field_g = var3_ref2;
                         break;
                       case 16:
@@ -346,15 +346,15 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask a(java.awt.Frame param0, int param1) {
+    final PlatformTask queueFrameClose(java.awt.Frame param0, int param1) {
         if (param1 != 6) {
           Class var4 = (Class) null;
-          this.a(-82, (String) null, (Class[]) null, (Class) null);
+          this.queueMethodLookup(-82, (String) null, (Class[]) null, (Class) null);
         }
-        return this.a(false, 7, 0, 0, param0);
+        return this.queueTask(false, 7, 0, 0, param0);
     }
 
-    final void a(int param0) {
+    final void shutdown(int param0) {
         try {
           int var3_int = 0;
           Throwable decompiledCaughtException = null;
@@ -377,7 +377,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (null != this.field_q) {
             try {
-              this.field_q.c(-103);
+              this.field_q.close(-103);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref_IOException = (IOException) (Object) decompiledCaughtException;
@@ -385,7 +385,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_e != null) {
             try {
-              this.field_e.c(101);
+              this.field_e.close(101);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref_IOException = (IOException) (Object) decompiledCaughtException;
@@ -396,7 +396,7 @@ final class PlatformTaskDispatcher implements Runnable {
             for (var3_int = 0; var3_int < this.field_d.length; var3_int++) {
               if (null != this.field_d[var3_int]) {
                 try {
-                  this.field_d[var3_int].c(101);
+                  this.field_d[var3_int].close(101);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var4 = (IOException) (Object) decompiledCaughtException;
@@ -406,7 +406,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (null != this.field_n) {
             try {
-              this.field_n.c(-20);
+              this.field_n.close(-20);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var3 = (IOException) (Object) decompiledCaughtException;
@@ -419,14 +419,14 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    private final PlatformTask a(boolean param0, String param1, byte param2, int param3) {
+    private final PlatformTask queueSocketOpen(boolean param0, String param1, byte param2, int param3) {
         if (param2 <= 8) {
-          this.a((byte) -97);
+          this.isFullscreenSupported((byte) -97);
         }
-        return this.a(false, param0 ? 22 : 1, 0, param3, param1);
+        return this.queueTask(false, param0 ? 22 : 1, 0, param3, param1);
     }
 
-    private final PlatformTask a(boolean param0, int param1, int param2, int param3, Object param4) {
+    private final PlatformTask queueTask(boolean param0, int param1, int param2, int param3, Object param4) {
         PlatformTask var6 = null;
         Object var7 = null;
         Object var7_ref = null;
@@ -455,26 +455,26 @@ final class PlatformTaskDispatcher implements Runnable {
         return var6;
     }
 
-    final PlatformTask a(byte param0, String param1, Class param2) {
+    final PlatformTask queueFieldLookup(byte param0, String param1, Class param2) {
         if (param0 != -95) {
           this.field_d = (BoundedRandomAccessFile[]) null;
         }
-        return this.a(false, 9, 0, 0, new Object[]{param2, param1});
+        return this.queueTask(false, 9, 0, 0, new Object[]{param2, param1});
     }
 
-    final PlatformTask a(int param0, int param1, int param2, int param3, int param4) {
+    final PlatformTask queueDisplayModeChange(int param0, int param1, int param2, int param3, int param4) {
         if (param2 <= 94) {
           this.field_j = true;
         }
-        return this.a(false, 6, (param1 << 16) + param4, (param0 << 16) + param3, (Object) null);
+        return this.queueTask(false, 6, (param1 << 16) + param4, (param0 << 16) + param3, (Object) null);
     }
 
-    final boolean a(byte param0) {
+    final boolean isFullscreenSupported(byte param0) {
         if (!this.field_p) {
           return false;
         }
         if (param0 != 46) {
-          this.b(53);
+          this.queueDisplayModeQuery(53);
         }
         if (this.field_j) {
           return null != this.field_u ? true : false;
@@ -482,18 +482,18 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.field_g != null ? true : false;
     }
 
-    final PlatformTask a(int param0, String param1, Class[] param2, Class param3) {
+    final PlatformTask queueMethodLookup(int param0, String param1, Class[] param2, Class param3) {
         if (param0 != -30176) {
           field_l = (String) null;
         }
-        return this.a(false, 8, 0, 0, new Object[]{param3, param1, param2});
+        return this.queueTask(false, 8, 0, 0, new Object[]{param3, param1, param2});
     }
 
-    final PlatformTask a(int param0, int param1, Runnable param2) {
+    final PlatformTask queueThreadStart(int param0, int param1, Runnable param2) {
         if (param0 < 121) {
           field_t = (String) null;
         }
-        return this.a(false, 2, 0, param1, param2);
+        return this.queueTask(false, 2, 0, param1, param2);
     }
 
     PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {

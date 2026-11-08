@@ -19,9 +19,9 @@ final class gn {
         tk var3 = (tk) (this.field_i.get((long)param0, false));
         if (var3 == null) {
           if (param0 >= 32768) {
-            var4 = this.field_d.b(32767 & param0, 26219, 1);
+            var4 = this.field_d.getFile(32767 & param0, 26219, 1);
           } else {
-            var4 = this.field_h.b(param0, 26219, 1);
+            var4 = this.field_h.getFile(param0, 26219, 1);
           }
           var3 = new tk();
           if (var4 != null) {
@@ -175,12 +175,12 @@ final class gn {
           this.field_d = param2;
           this.field_h = param1;
           if (this.field_h != null) {
-            this.field_h.a(1, (byte) -60);
+            this.field_h.getFileCount(1, (byte) -60);
           }
           if (null == this.field_d) {
             return;
           }
-          this.field_d.a(1, (byte) -60);
+          this.field_d.getFileCount(1, (byte) -60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

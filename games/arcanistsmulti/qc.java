@@ -14,12 +14,12 @@ final class qc {
         hi.installViewController(-123, param0);
         ResizableModalPanel.field_Y.setMinimumSize(480, 8110, 640);
         ResizableModalPanel.field_Y.setMaximumSize((byte) -119, 1024, 1280);
-        dh.defineScreen(TextFieldValidator.field_h, 9, 6);
-        dh.defineScreen(MenuButtonPanel.field_H, 9, 8);
+        SceneTextInput.defineScreen(TextFieldValidator.field_h, 9, 6);
+        SceneTextInput.defineScreen(MenuButtonPanel.field_H, 9, 8);
         if (!ArcanistsMulti.i((byte) -77)) {
-          dh.defineScreen(MidiPcmStream.field_l, 9, 1);
-          dh.defineScreen(LoginMethod.field_b, 9, 2);
-          dh.defineScreen(ResourceArchive.field_g, 9, 4);
+          SceneTextInput.defineScreen(MidiPcmStream.field_l, 9, 1);
+          SceneTextInput.defineScreen(LoginMethod.field_b, 9, 2);
+          SceneTextInput.defineScreen(ResourceArchive.field_g, 9, 4);
         }
     }
 

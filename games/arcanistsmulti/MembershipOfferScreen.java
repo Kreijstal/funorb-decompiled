@@ -46,7 +46,7 @@ final class MembershipOfferScreen {
             BitmapFont var8 = (BitmapFont) null;
             MembershipOfferScreen.splitIntoTwoLines((String[]) null, (String) null, -76, (BitmapFont) null, 57);
           }
-          tg.field_f[param3] = param4;
+          DualLinkDeque.field_f[param3] = param4;
           ValidationHelpWidget.field_U[param3] = param0;
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "hf.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
@@ -205,21 +205,21 @@ final class MembershipOfferScreen {
         }
         this.drawPage((byte) -101);
         if (null != EmailLoginCredentials.field_o &&
-          EmailLoginCredentials.field_o.c(-10923) &&
-          EmailLoginCredentials.field_o.a("members_expansion_screen", -24417) &&
-          EmailLoginCredentials.field_o.a("arialish12", -24417) &&
-          EmailLoginCredentials.field_o.a("pump32", -24417) &&
+          EmailLoginCredentials.field_o.ensureIndex(-10923) &&
+          EmailLoginCredentials.field_o.isGroupAvailableByName("members_expansion_screen", -24417) &&
+          EmailLoginCredentials.field_o.isGroupAvailableByName("arialish12", -24417) &&
+          EmailLoginCredentials.field_o.isGroupAvailableByName("pump32", -24417) &&
           bb.field_a != null &&
-          bb.field_a.c(-10923) &&
-          bb.field_a.a("arialish12", -24417) &&
-          bb.field_a.a("pump32", -24417)) {
-          SectorCacheStore.field_j = af.a("frame", "members_expansion_screen", 19412, EmailLoginCredentials.field_o);
-          cg.field_Ib = fj.loadSprite("members_expansion_screen", -22612, EmailLoginCredentials.field_o, "arrow");
+          bb.field_a.ensureIndex(-10923) &&
+          bb.field_a.isGroupAvailableByName("arialish12", -24417) &&
+          bb.field_a.isGroupAvailableByName("pump32", -24417)) {
+          SectorCacheStore.field_j = af.loadIndexedSpriteByName("frame", "members_expansion_screen", 19412, EmailLoginCredentials.field_o);
+          SocialListEntry.field_Ib = fj.loadSprite("members_expansion_screen", -22612, EmailLoginCredentials.field_o, "arrow");
           NameSuggestionsPanel.field_F = LoadingTracker.loadBinaryFont(bb.field_a, -24755, "arialish12", "", EmailLoginCredentials.field_o);
           fd.field_b = WhirlpoolHasher.loadCoverageFont("", bb.field_a, "pump32", -119, EmailLoginCredentials.field_o);
-          fd.field_f = cg.a("benefit_orbs", (byte) 113, EmailLoginCredentials.field_o, "members_expansion_screen");
-          qf.field_b = cg.a("button_text", (byte) 116, EmailLoginCredentials.field_o, "members_expansion_screen");
-          KeyboardInputHandler.field_c = nl.a((byte) 31, EmailLoginCredentials.field_o, "button_highlights", "members_expansion_screen");
+          fd.field_f = SocialListEntry.a("benefit_orbs", (byte) 113, EmailLoginCredentials.field_o, "members_expansion_screen");
+          qf.field_b = SocialListEntry.a("button_text", (byte) 116, EmailLoginCredentials.field_o, "members_expansion_screen");
+          KeyboardInputHandler.field_c = IconTextSceneWidget.loadSpritesByName((byte) 31, EmailLoginCredentials.field_o, "button_highlights", "members_expansion_screen");
           EmailLoginCredentials.field_o = null;
           bb.field_a = null;
         }
@@ -230,28 +230,28 @@ final class MembershipOfferScreen {
         this.field_e.drawTransparent(376, 339);
         this.field_k.drawTransparent(9, 9);
         SectorCacheStore.field_j.draw(0, 0);
-        if (cg.field_Ib != null) {
-          cg.field_Ib.drawTransparent(9, 257);
-          cg.field_Ib.drawHorizontalFlip(558, 257);
+        if (SocialListEntry.field_Ib != null) {
+          SocialListEntry.field_Ib.drawTransparent(9, 257);
+          SocialListEntry.field_Ib.drawHorizontalFlip(558, 257);
           if (MenuButtonPanel.field_I > 257 &&
             290 > MenuButtonPanel.field_I) {
             var2Lifetime2 = 40 + (40 * FrameClock.sinTable(this.field_p << 4, -52) >> 16);
             if (var2Lifetime2 > 0) {
               if (EmailLoginCredentials.field_g > 9 &&
                 EmailLoginCredentials.field_g < 82) {
-                cg.field_Ib.drawAdditive(8, 256, var2Lifetime2);
-                cg.field_Ib.drawAdditive(10, 256, var2Lifetime2);
-                cg.field_Ib.drawAdditive(8, 258, var2Lifetime2);
-                cg.field_Ib.drawAdditive(10, 258, var2Lifetime2);
+                SocialListEntry.field_Ib.drawAdditive(8, 256, var2Lifetime2);
+                SocialListEntry.field_Ib.drawAdditive(10, 256, var2Lifetime2);
+                SocialListEntry.field_Ib.drawAdditive(8, 258, var2Lifetime2);
+                SocialListEntry.field_Ib.drawAdditive(10, 258, var2Lifetime2);
               } else {
                 if (EmailLoginCredentials.field_g > 558 &&
                   631 > EmailLoginCredentials.field_g) {
-                  cg.field_Ib.flipHorizontally();
-                  cg.field_Ib.drawAdditive(557, 256, var2Lifetime2);
-                  cg.field_Ib.drawAdditive(559, 256, var2Lifetime2);
-                  cg.field_Ib.drawAdditive(557, 258, var2Lifetime2);
-                  cg.field_Ib.drawAdditive(559, 258, var2Lifetime2);
-                  cg.field_Ib.flipHorizontally();
+                  SocialListEntry.field_Ib.flipHorizontally();
+                  SocialListEntry.field_Ib.drawAdditive(557, 256, var2Lifetime2);
+                  SocialListEntry.field_Ib.drawAdditive(559, 256, var2Lifetime2);
+                  SocialListEntry.field_Ib.drawAdditive(557, 258, var2Lifetime2);
+                  SocialListEntry.field_Ib.drawAdditive(559, 258, var2Lifetime2);
+                  SocialListEntry.field_Ib.flipHorizontally();
                 }
               }
             }
@@ -292,7 +292,7 @@ final class MembershipOfferScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = (CharSequence) ((Object) param0);
-          if (!IntrusiveDeque.a(var8, 0)) {
+          if (!IntrusiveDeque.isValidDisplayNameText(var8, 0)) {
             stackIn_2_0 = fn.field_h;
             return stackIn_2_0;
           }
@@ -302,7 +302,7 @@ final class MembershipOfferScreen {
           }
           var7 = mf.a(-1, param1);
           if (var7 == null) {
-            stackIn_9_0 = tj.a(param3 ^ 10068676, new String[]{param1}, k.field_f);
+            stackIn_9_0 = CachedArchiveProvider.formatTemplate(param3 ^ 10068676, new String[]{param1}, BufferedSocket.field_f);
             return stackIn_9_0;
           }
           var7.unlink(true);
@@ -436,12 +436,12 @@ final class MembershipOfferScreen {
           SoftwareRasterizer.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           var2 = 16448250;
           var3 = 10068666;
-          var15 = BoundedRandomAccessFile.a(var3, var2, param0 ^ 16128330);
+          var15 = BoundedRandomAccessFile.buildPaletteRamp(var3, var2, param0 ^ 16128330);
           this.drawGradientParagraph(47, 622, 0, fd.field_b, this.field_j, 23146, var15, 0);
           oo.popClipState(-15405);
           this.field_g = new Sprite(475, 24);
           this.drawScaledCaption(this.field_g, 0.75f, 0, 127, 24, var15, -4, fd.field_b, MenuButtonPainter.field_r, 475);
-          var13 = BoundedRandomAccessFile.a(526344, 526344, 65535);
+          var13 = BoundedRandomAccessFile.buildPaletteRamp(526344, 526344, 65535);
           var11 = var13;
           var9 = var11;
           var5 = new Sprite(121, 122);
@@ -628,7 +628,7 @@ final class MembershipOfferScreen {
             this.field_h = true;
           }
         }
-        if (cg.field_Ib != null) {
+        if (SocialListEntry.field_Ib != null) {
           var4 = 0;
           if (re.field_r != 0 &&
             ja.field_s > 257 &&

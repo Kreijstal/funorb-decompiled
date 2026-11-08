@@ -39,7 +39,7 @@ abstract class ArchiveProvider {
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param0 >= -52) {
-            ArchiveProvider.c((byte) -27);
+            ArchiveProvider.computeLoadingPercent((byte) -27);
           }
           var5 = ArrayWidgetContainer.field_B;
           var1 = var5;
@@ -63,7 +63,7 @@ abstract class ArchiveProvider {
         }
     }
 
-    final static int c(byte param0) {
+    final static int computeLoadingPercent(byte param0) {
         if (ih.field_f < 2) {
           return 0;
         }
@@ -71,53 +71,53 @@ abstract class ArchiveProvider {
           ArchiveProvider.e((byte) -108);
         }
         if (LinkButtonPainter.field_f == 0) {
-          if (!da.field_b.c(-10923)) {
+          if (!da.field_b.ensureIndex(-10923)) {
             return 20;
           }
-          if (!da.field_b.a("commonui", -24417)) {
+          if (!da.field_b.isGroupAvailableByName("commonui", -24417)) {
             return 40;
           }
-          if (!DiskCacheRequest.field_C.c(-10923)) {
+          if (!DiskCacheRequest.field_C.ensureIndex(-10923)) {
             return 50;
           }
-          if (!DiskCacheRequest.field_C.a("commonui", -24417)) {
+          if (!DiskCacheRequest.field_C.isGroupAvailableByName("commonui", -24417)) {
             return 60;
           }
-          if (!ho.field_g.c(-10923)) {
+          if (!ho.field_g.ensureIndex(-10923)) {
             return 70;
           }
-          if (ho.field_g.a(-86)) {
+          if (ho.field_g.areAllGroupsAvailable(-86)) {
             return 100;
           }
           return 80;
         }
         if (null != lh.field_g) {
-          if (!lh.field_g.c(-10923)) {
+          if (!lh.field_g.ensureIndex(-10923)) {
             return 14;
           }
-          if (!lh.field_g.a(true, "")) {
+          if (!lh.field_g.hasGroupName(true, "")) {
             return 29;
           }
-          if (!lh.field_g.a("", -24417)) {
+          if (!lh.field_g.isGroupAvailableByName("", -24417)) {
             return 29;
           }
         }
-        if (!da.field_b.c(param0 ^ 10982)) {
+        if (!da.field_b.ensureIndex(param0 ^ 10982)) {
           return 43;
         }
-        if (!da.field_b.a("commonui", -24417)) {
+        if (!da.field_b.isGroupAvailableByName("commonui", -24417)) {
           return 57;
         }
-        if (!DiskCacheRequest.field_C.c(-10923)) {
+        if (!DiskCacheRequest.field_C.ensureIndex(-10923)) {
           return 71;
         }
-        if (!DiskCacheRequest.field_C.a("commonui", param0 ^ 24364)) {
+        if (!DiskCacheRequest.field_C.isGroupAvailableByName("commonui", param0 ^ 24364)) {
           return 80;
         }
-        if (!ho.field_g.c(-10923)) {
+        if (!ho.field_g.ensureIndex(-10923)) {
           return 82;
         }
-        if (!ho.field_g.a(param0 ^ 35)) {
+        if (!ho.field_g.areAllGroupsAvailable(param0 ^ 35)) {
           return 86;
         }
         return 100;
@@ -131,11 +131,11 @@ abstract class ArchiveProvider {
         return FadingModalPanel.field_F;
     }
 
-    abstract int a(int param0, byte param1);
+    abstract int getGroupProgress(int param0, byte param1);
 
-    abstract ArchiveIndex d(byte param0);
+    abstract ArchiveIndex getIndex(byte param0);
 
-    abstract byte[] a(int param0, boolean param1);
+    abstract byte[] getGroupData(int param0, boolean param1);
 
     final static void a(int param0) {
         if (ResizableModalPanel.field_Y != null) {

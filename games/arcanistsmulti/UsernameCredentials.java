@@ -49,12 +49,12 @@ class UsernameCredentials extends LoginCredentials {
         }
     }
 
-    final static na a(int param0, byte param1) {
+    final static LobbyGameEntry a(int param0, byte param1) {
         if (param1 < -28) {
-          return null == nk.field_q ? null : (na) (nk.field_q.get((long)param0, (byte) -102));
+          return null == nk.field_q ? null : (LobbyGameEntry) (nk.field_q.get((long)param0, (byte) -102));
         }
         field_i = (String) null;
-        return null == nk.field_q ? null : (na) (nk.field_q.get((long)param0, (byte) -102));
+        return null == nk.field_q ? null : (LobbyGameEntry) (nk.field_q.get((long)param0, (byte) -102));
     }
 
     final static void d(int param0) {
@@ -243,7 +243,7 @@ class UsernameCredentials extends LoginCredentials {
           if (param3 < 44) {
             field_i = (String) null;
           }
-          stackIn_6_0 = mi.a(param2.b(param1, 26219, param4), 45);
+          stackIn_6_0 = mi.a(param2.getFile(param1, 26219, param4), 45);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -35,20 +35,20 @@ class EditableTextWidget extends TextButton {
 
     final static void m(int param0) {
         int var1;
-        if (!pe.field_Jb) {
+        if (!ContextActionMenu.field_Jb) {
           if (ce.field_i == null) {
-            ce.field_i = tj.a(4, -21402);
+            ce.field_i = CachedArchiveProvider.a(4, -21402);
           }
           if (ce.field_i.field_l) {
             ad.field_f = ko.orArrays(ad.field_f, ce.field_i.field_i, true);
             ce.field_i = null;
-            pe.field_Jb = true;
+            ContextActionMenu.field_Jb = true;
           }
         }
         if (param0 != 0) {
           return;
         }
-        if (!jf.field_e) {
+        if (!NodeHashTableIterator.field_e) {
           if (0 == (1 & ne.field_g)) {
             var1 = ResizableViewResizeListener.field_d;
             if (0 >= var1 &&
@@ -60,7 +60,7 @@ class EditableTextWidget extends TextButton {
               System.out.println("Orb coins not availiable");
             }
           }
-          jf.field_e = true;
+          NodeHashTableIterator.field_e = true;
         }
         if (!SectorCacheStore.field_g) {
           if (null == ci.field_d) {
@@ -80,10 +80,10 @@ class EditableTextWidget extends TextButton {
         if (la.field_a) {
           kg.field_a = true;
         }
-        if (pe.field_Jb &&
+        if (ContextActionMenu.field_Jb &&
           SectorCacheStore.field_g &&
           kg.field_a &&
-          jf.field_e) {
+          NodeHashTableIterator.field_e) {
           wm.g(0);
           qc.a(false);
         }
@@ -198,12 +198,12 @@ class EditableTextWidget extends TextButton {
     final static void i(byte param0) {
         int var2 = 0;
         CipherPacketBuffer var3 = null;
-        cg var4 = null;
+        SocialListEntry var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          dn.field_Db = false;
+          SceneScrollPane.field_Db = false;
           om.field_x = null;
           DirectByteStorage.field_f = null;
           if (param0 >= -97) {
@@ -226,10 +226,10 @@ class EditableTextWidget extends TextButton {
           }
           OptionsDialog.field_qb = null;
           if (null != bc.field_c) {
-            var4 = (cg) (bc.field_c.f(102));
+            var4 = (SocialListEntry) (bc.field_c.firstInTraversal(102));
             while (var4 != null) {
               var4.unlinkSecondary((byte) 88);
-              var4 = (cg) (bc.field_c.a(-1));
+              var4 = (SocialListEntry) (bc.field_c.nextInTraversal(-1));
             }
             bc.field_c = null;
             return;

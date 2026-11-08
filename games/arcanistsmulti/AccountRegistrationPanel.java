@@ -45,7 +45,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           if (var4 == da.field_f) {
             return false;
           }
-          if (cg.field_Wb != var4) {
+          if (SocialListEntry.field_Wb != var4) {
             return true;
           }
           return false;
@@ -196,7 +196,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_O = new TextButton(OptionsDialog.field_rb, (UiListener) null);
         this.field_K.field_q = ValidationState.field_b;
         this.field_N.field_q = ArchiveIndex.field_s;
-        this.field_D.field_q = dn.field_Fb;
+        this.field_D.field_q = SceneScrollPane.field_Fb;
         this.field_P.field_q = ao.field_c;
         this.field_E.field_q = nk.field_j;
         this.field_H.field_q = lc.field_k;
@@ -219,10 +219,10 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         PasswordFieldPainter dupTemp$1 = new PasswordFieldPainter(10000536);
         this.field_E.field_r = (WidgetPainter) ((Object) dupTemp$1);
         this.field_P.field_r = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = tj.a(-23, new String[]{this.getLinkOpenMarkup((byte) 34), this.getLinkCloseMarkup(false)}, fn.field_d);
+        String var2 = CachedArchiveProvider.formatTemplate(-23, new String[]{this.getLinkOpenMarkup((byte) 34), this.getLinkCloseMarkup(false)}, fn.field_d);
         int var3 = 20;
         var3 = var3 + this.addLabeledField(this.field_N, Checkbox.field_K, var3, 170, 109);
-        var3 = var3 + (5 + this.addFieldWithHelp("", this.field_D, 25, 20, 170, dn.field_Gb, var3));
+        var3 = var3 + (5 + this.addFieldWithHelp("", this.field_D, 25, 20, 170, SceneScrollPane.field_Gb, var3));
         var3 = var3 + this.addLabeledField(this.field_P, ValidationState.field_a, var3, 170, 126);
         var3 = var3 + (5 + this.addHelpFieldDefaultHeight(var3, this.field_E, WhirlpoolHasher.field_p, 99, 170, le.field_A));
         var3 = var3 + (5 + this.addHelpFieldDefaultHeight(var3, this.field_K, bj.field_kb, -67, 170, CredentialKind.field_h));

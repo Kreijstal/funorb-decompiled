@@ -39,7 +39,7 @@ final class ScreenDisplayMode {
           do {
             var4 = param0.nextInt((byte) -46);
           } while (var4 >= var3_int);
-          stackIn_12_0 = dh.floorMod(var4, true, param1);
+          stackIn_12_0 = SceneTextInput.floorMod(var4, true, param1);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

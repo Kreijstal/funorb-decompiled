@@ -58,8 +58,8 @@ final class da {
     }
 
     final static void measureCaptionWidths(byte param0) {
-        ff.field_c = tj.field_t.textWidth(ce.field_g[20]);
-        int var1 = tj.field_t.textWidth(ce.field_g[21]);
+        ff.field_c = CachedArchiveProvider.field_t.textWidth(ce.field_g[20]);
+        int var1 = CachedArchiveProvider.field_t.textWidth(ce.field_g[21]);
         if (param0 != -101) {
           da.releaseStatics(6);
           if (ff.field_c < var1) {

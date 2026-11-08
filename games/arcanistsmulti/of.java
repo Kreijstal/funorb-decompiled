@@ -28,10 +28,10 @@ final class of implements WidgetPainter {
           if (param1 != 16) {
             return;
           }
-          var4 = (nk) (pe.field_Lb.first(12623));
+          var4 = (nk) (ContextActionMenu.field_Lb.first(12623));
           while (var4 != null) {
             fj.a(-26971, var4, param0);
-            var4 = (nk) (pe.field_Lb.next(param1 - 16));
+            var4 = (nk) (ContextActionMenu.field_Lb.next(param1 - 16));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -109,7 +109,7 @@ final class of implements WidgetPainter {
         try {
           var4_int = -94 % ((param1 + 80) / 35);
           if (fc.a(-125, param2, param0, param3)) {
-            stackIn_4_0 = pk.a((byte) -116);
+            stackIn_4_0 = IterableNodeHashTable.createDecodedSprites((byte) -116);
             return stackIn_4_0;
           }
           stackIn_2_0 = null;

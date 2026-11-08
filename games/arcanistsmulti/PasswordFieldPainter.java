@@ -7,7 +7,7 @@ final class PasswordFieldPainter extends BevelTextPainter {
     static String field_z;
     static String field_y;
     static String field_C;
-    static dh field_A;
+    static SceneTextInput field_A;
     static String field_F;
     static int[] field_B;
     static String field_E;
@@ -76,7 +76,7 @@ final class PasswordFieldPainter extends BevelTextPainter {
           field_z = null;
           return;
         }
-        field_A = (dh) null;
+        field_A = (SceneTextInput) null;
         field_z = null;
     }
 

@@ -10,7 +10,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     private IsaacCipher opcodeCipher;
     static String field_s;
 
-    final static ho a(int param0, int param1, String param2) {
+    final static ho createMessage(int param0, int param1, String param2) {
         ho var3 = null;
         RuntimeException var3_ref = null;
         ho stackIn_3_0 = null;
@@ -41,7 +41,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void a(byte[] param0, byte param1, int param2, int param3) {
+    final void readEncryptedBytes(byte[] param0, byte param1, int param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -146,7 +146,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           return var5;
         }
         String var7 = (String) null;
-        CipherPacketBuffer.a(6, -10, (String) null);
+        CipherPacketBuffer.createMessage(6, -10, (String) null);
         return var5;
     }
 

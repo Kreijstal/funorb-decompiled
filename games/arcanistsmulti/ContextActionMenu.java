@@ -3,14 +3,14 @@
  */
 import java.io.*;
 
-final class pe extends SceneWidget {
+final class ContextActionMenu extends SceneWidget {
     private SceneWidget field_Hb;
     private int field_Bb;
     private int field_Gb;
     private int field_Eb;
     private Sprite[] field_Rb;
     private SceneWidget field_Qb;
-    private nl[] field_Ob;
+    private IconTextSceneWidget[] field_Ob;
     private int[] field_Pb;
     private int field_Mb;
     private int field_Sb;
@@ -23,10 +23,10 @@ final class pe extends SceneWidget {
     static String field_Nb;
     static boolean field_Jb;
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean hasIncomingBytes(byte param0, int param1) {
         try {
           if (param0 != -86) {
-            pe.a(-103, 27, (byte) -56, 44);
+            ContextActionMenu.a(-103, 27, (byte) -56, 44);
           }
           if (param1 <= UiContainer.field_z.position) {
             return true;
@@ -34,12 +34,12 @@ final class pe extends SceneWidget {
           if (null == CredentialKind.field_c) {
             return false;
           }
-          int var2_int = CredentialKind.field_c.b(0);
+          int var2_int = CredentialKind.field_c.available(0);
           if (var2_int > 0) {
             if (!(param1 - UiContainer.field_z.position >= var2_int)) {
               var2_int = param1 - UiContainer.field_z.position;
             }
-            CredentialKind.field_c.a(UiContainer.field_z.payload, (byte) -127, UiContainer.field_z.position, var2_int);
+            CredentialKind.field_c.readFully(UiContainer.field_z.payload, (byte) -127, UiContainer.field_z.position, var2_int);
             hi.field_d = qj.monotonicTimeMillis(-26572);
             UiContainer.field_z.position = UiContainer.field_z.position + var2_int;
             if (param1 > UiContainer.field_z.position) {
@@ -74,16 +74,16 @@ final class pe extends SceneWidget {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        dn stackIn_5_0 = null;
+        SceneScrollPane stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
-        na stackIn_12_0;
+        LobbyGameEntry stackIn_12_0;
         SceneWidget stackIn_12_1;
         SceneWidget stackIn_12_2;
         long stackIn_12_3;
         SceneWidget stackIn_13_1 = null;
         SceneWidget stackIn_13_2 = null;
         SceneWidget stackIn_13_4 = null;
-        na stackIn_30_0;
+        LobbyGameEntry stackIn_30_0;
         SceneWidget stackIn_30_1;
         SceneWidget stackIn_30_2;
         long stackIn_30_3;
@@ -106,7 +106,7 @@ final class pe extends SceneWidget {
         IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
-        na var12 = null;
+        LobbyGameEntry var12 = null;
         int var13 = 0;
         int var14 = 0;
         SceneWidget var18 = null;
@@ -174,11 +174,11 @@ final class pe extends SceneWidget {
           }
           stackIn_5_0 = DebouncedValidator.field_g;
           stackIn_6_1 = (dd.field_h == DebouncedValidator.field_g);
-          var7_int = ((dn) (Object) stackIn_5_0).a(stackIn_6_1, (byte) 98, (2 + ImageProducerRasterBuffer.field_r) * 2, 2, param1 * (8 + ImageProducerRasterBuffer.field_r * 4), param6) ? 1 : 0;
+          var7_int = ((SceneScrollPane) (Object) stackIn_5_0).relayout(stackIn_6_1, (byte) 98, (2 + ImageProducerRasterBuffer.field_r) * 2, 2, param1 * (8 + ImageProducerRasterBuffer.field_r * 4), param6) ? 1 : 0;
           var8 = DebouncedValidator.field_g.field_Cb.field_G;
           var9 = qj.monotonicTimeMillis(-26572);
           var11 = null;
-          var12 = (na) (var8.first(param3 + 12623));
+          var12 = (LobbyGameEntry) (var8.first(param3 + 12623));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_G == null) {
@@ -347,7 +347,7 @@ final class pe extends SceneWidget {
             var12.field_x = DebouncedValidator.field_g.field_Cb.field_x;
             var31 = 0;
             var32 = var12.field_ic;
-            if (!var12.e(-55)) {
+            if (!var12.isUnlisted(-55)) {
               boolean decompiledFrameRemainder1 = true;
               if (var12.field_Lb) {
                 if (var12.field_nc >= 0) {
@@ -507,22 +507,22 @@ final class pe extends SceneWidget {
                 var31 = var31 + ImageProducerRasterBuffer.field_r * var39Lifetime1;
               }
               if (var12.field_Hb) {
-                var12.field_Ib.field_rb = tj.a(127, new String[]{var32}, CanvasRasterBuffer.field_i);
-                var12.field_Ib.setBounds(var12.field_x - dh.field_Gb * 2, dh.field_Gb, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
+                var12.field_Ib.field_rb = CachedArchiveProvider.formatTemplate(127, new String[]{var32}, CanvasRasterBuffer.field_i);
+                var12.field_Ib.setBounds(var12.field_x - SceneTextInput.field_Gb * 2, SceneTextInput.field_Gb, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
                 var31 = var31 + ImageProducerRasterBuffer.field_r;
               }
               if (var12.field_Nb) {
-                var12.field_fc.field_rb = tj.a(param3 + 121, new String[]{var32}, fh.field_f);
-                var12.field_fc.setBounds(-(2 * dh.field_Gb) + var12.field_x, dh.field_Gb, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
+                var12.field_fc.field_rb = CachedArchiveProvider.formatTemplate(param3 + 121, new String[]{var32}, SecondaryNodeDequeIterator.field_f);
+                var12.field_fc.setBounds(-(2 * SceneTextInput.field_Gb) + var12.field_x, SceneTextInput.field_Gb, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
                 var31 = var31 + ImageProducerRasterBuffer.field_r;
               }
             }
             var33 = vf.a(-111, var32, var12.field_ac);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Kb.field_Z.wrappedLineCount(var33, -dh.field_Gb - dh.field_Gb + var12.field_x);
+              var34_intLifetime1 = var12.field_Kb.field_Z.wrappedLineCount(var33, -SceneTextInput.field_Gb - SceneTextInput.field_Gb + var12.field_x);
               var12.field_Kb.field_u = 256 * var12.field_bc / TextLine.field_i;
               var12.field_Kb.field_rb = var33;
-              var12.field_Kb.setBounds(var12.field_x - 2 * dh.field_Gb, dh.field_Gb, var31, var34_intLifetime1 * ImageProducerRasterBuffer.field_r, (byte) -120);
+              var12.field_Kb.setBounds(var12.field_x - 2 * SceneTextInput.field_Gb, SceneTextInput.field_Gb, var31, var34_intLifetime1 * ImageProducerRasterBuffer.field_r, (byte) -120);
               var31 = var31 + var34_intLifetime1 * ImageProducerRasterBuffer.field_r;
             }
             if (var7_int == 0) {
@@ -588,8 +588,8 @@ final class pe extends SceneWidget {
             }
             boolean decompiledFrameRemainder0 = true;
             if (0 != var12.field_U) {
-              if (var12.e(-125)) {
-                var12 = (na) (var8.next(0));
+              if (var12.isUnlisted(-125)) {
+                var12 = (LobbyGameEntry) (var8.next(0));
                 continue;
               }
               if (0 == var12.field_Zb.field_U) {
@@ -598,15 +598,15 @@ final class pe extends SceneWidget {
                 if (var12.field_Lb && (!var12.field_kc ||
                   !var12.field_Ob &&
                   !var12.field_Hb)) {
-                  qe.a(var12.h((byte) 78), (byte) -35, param0);
+                  qe.a(var12.getSortKey((byte) 78), (byte) -35, param0);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ScreenDisplayMode.a(var12.h((byte) 76), (byte) -122, param0);
+                  ScreenDisplayMode.a(var12.getSortKey((byte) 76), (byte) -122, param0);
                 }
               }
             }
-            var12 = (na) (var8.next(0));
+            var12 = (LobbyGameEntry) (var8.next(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -616,7 +616,7 @@ final class pe extends SceneWidget {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean handleEscape(int param0) {
         if (this.field_Cb != -2) {
           return false;
         }
@@ -637,7 +637,7 @@ final class pe extends SceneWidget {
           return true;
         }
         if (db.field_a != null &&
-          db.field_a.i((byte) 2)) {
+          db.field_a.handleEscape((byte) 2)) {
           db.field_a = null;
           IntrusiveDequeCursor.a(false);
           return true;
@@ -650,27 +650,27 @@ final class pe extends SceneWidget {
         }
         if (param2 <= 25) {
           IndexedSprite var5 = (IndexedSprite) null;
-          pe.a(6, (nf) null, (byte) -73, -25, -95, (Sprite) null, (IndexedSprite) null);
+          ContextActionMenu.a(6, (nf) null, (byte) -73, -25, -95, (Sprite) null, (IndexedSprite) null);
         }
         return false;
     }
 
     final static ho e(boolean param0) {
-        if (in.field_Gb == ScreenDisplayMode.field_h) {
+        if (SceneScrollbar.field_Gb == ScreenDisplayMode.field_h) {
           throw new IllegalStateException();
         }
-        if (DiskCacheWorker.field_g == in.field_Gb) {
-          in.field_Gb = ScreenDisplayMode.field_h;
+        if (DiskCacheWorker.field_g == SceneScrollbar.field_Gb) {
+          SceneScrollbar.field_Gb = ScreenDisplayMode.field_h;
           return i.field_i;
         }
         if (!param0) {
           return null;
         }
-        pe.releaseStatics(-113);
+        ContextActionMenu.releaseStatics(-113);
         return null;
     }
 
-    final int a(int param0, boolean param1) {
+    final int processInput(int param0, boolean param1) {
         int var3 = 0;
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
         this.updateInputFullScreen(param1, (byte) 73);
@@ -679,7 +679,7 @@ final class pe extends SceneWidget {
         }
         if (param0 != -1) {
           String var5 = (String) null;
-          this.a((byte) -81, 76, (Sprite) null, (String) null);
+          this.addIconAction((byte) -81, 76, (Sprite) null, (String) null);
         }
         for (var3 = 0; this.field_Kb > var3; var3++) {
           if (0 != this.field_Ob[var3].field_U) {
@@ -825,12 +825,12 @@ final class pe extends SceneWidget {
         return dd.field_c.field_Eb;
     }
 
-    final void a(int param0, String param1, byte param2) {
+    final void addAction(int param0, String param1, byte param2) {
         try {
-          this.field_Ob[this.field_Kb] = new nl(0L, (SceneWidget) null, (SceneWidget) null, this.field_Hb, (Sprite) null, param1);
+          this.field_Ob[this.field_Kb] = new IconTextSceneWidget(0L, (SceneWidget) null, (SceneWidget) null, this.field_Hb, (Sprite) null, param1);
           this.field_Ob[this.field_Kb].field_Ab = this.field_Rb;
           if (param2 != -26) {
-            pe.a((byte) 5, 119);
+            ContextActionMenu.hasIncomingBytes((byte) 5, 119);
           }
           this.field_Ob[this.field_Kb].field_yb = true;
           this.field_Ob[this.field_Kb].field_gb = 1;
@@ -844,7 +844,7 @@ final class pe extends SceneWidget {
 
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          pe.h(-36);
+          ContextActionMenu.h(-36);
         }
         field_Nb = null;
         field_Fb = (int[][]) null;
@@ -853,7 +853,7 @@ final class pe extends SceneWidget {
         field_Ib = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void openAt(int param0, int param1, int param2, int param3, int param4) {
         int var10 = 0;
         int var6;
         int var7;
@@ -864,7 +864,7 @@ final class pe extends SceneWidget {
         int var8Lifetime1;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         if (this.field_Kb == 0) {
-          this.field_Ob[this.field_Kb] = new nl(0L, (SceneWidget) null, (SceneWidget) null, this.field_Qb, (Sprite) null, db.field_c);
+          this.field_Ob[this.field_Kb] = new IconTextSceneWidget(0L, (SceneWidget) null, (SceneWidget) null, this.field_Qb, (Sprite) null, db.field_c);
           this.field_Ob[this.field_Kb].field_gb = 1;
           this.addChild(this.field_Ob[this.field_Kb], 97);
           this.field_Pb[this.field_Kb] = -1;
@@ -872,7 +872,7 @@ final class pe extends SceneWidget {
         }
         var6 = 0;
         for (var7 = 0; this.field_Kb > var7; var7++) {
-          var8 = this.field_Ob[var7].a(this.field_Eb, this.field_Gb, -74);
+          var8 = this.field_Ob[var7].contentWidth(this.field_Eb, this.field_Gb, -74);
           if (var6 < var8) {
             var6 = var8;
           }
@@ -886,14 +886,14 @@ final class pe extends SceneWidget {
         var9 = LoginMethod.clampToScreenY(10, param1, var7Lifetime1, param3);
         this.setBounds(var6, var8Lifetime1, var9, var7Lifetime1, (byte) -120);
         for (var10 = 0; var10 < this.field_Kb; var10++) {
-          this.field_Ob[var10].a(this.field_Gb, 0, this.field_Mb, -(2 * this.field_Bb) + var6, this.field_Bb, this.field_Mb * var10 + this.field_Sb, this.field_Eb);
+          this.field_Ob[var10].setBoundsAndLayout(this.field_Gb, 0, this.field_Mb, -(2 * this.field_Bb) + var6, this.field_Bb, this.field_Mb * var10 + this.field_Sb, this.field_Eb);
         }
         return;
     }
 
-    pe(SceneWidget param0, Sprite[] param1, SceneWidget param2, SceneWidget param3, int param4, int param5, int param6, int param7, int param8) {
+    ContextActionMenu(SceneWidget param0, Sprite[] param1, SceneWidget param2, SceneWidget param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
-        this.field_Ob = new nl[256];
+        this.field_Ob = new IconTextSceneWidget[256];
         this.field_Pb = new int[256];
         this.field_Cb = -2;
         try {
@@ -910,9 +910,9 @@ final class pe extends SceneWidget {
         }
     }
 
-    final void a(byte param0, int param1, Sprite param2, String param3) {
+    final void addIconAction(byte param0, int param1, Sprite param2, String param3) {
         try {
-          this.field_Ob[this.field_Kb] = new nl(0L, (SceneWidget) null, (SceneWidget) null, this.field_Hb, param2, param3);
+          this.field_Ob[this.field_Kb] = new IconTextSceneWidget(0L, (SceneWidget) null, (SceneWidget) null, this.field_Hb, param2, param3);
           this.field_Ob[this.field_Kb].field_Ab = this.field_Rb;
           this.field_Ob[this.field_Kb].field_yb = true;
           this.field_Ob[this.field_Kb].field_gb = 1;
@@ -927,7 +927,7 @@ final class pe extends SceneWidget {
         }
     }
 
-    pe(pe param0) {
+    ContextActionMenu(ContextActionMenu param0) {
         this(param0, param0.field_Rb, param0.field_Qb, param0.field_Hb, param0.field_Bb, param0.field_Gb, param0.field_Eb, param0.field_Sb, param0.field_Mb);
     }
 

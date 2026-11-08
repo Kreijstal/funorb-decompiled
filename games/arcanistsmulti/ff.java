@@ -41,19 +41,19 @@ final class ff {
         field_e = null;
     }
 
-    final static ij a(int[] param0, int param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
+    final static SceneTabbedPanel a(int[] param0, int param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
         char[] var7 = null;
-        ij[] var8 = null;
+        SceneTabbedPanel[] var8 = null;
         int var9 = 0;
         tk var11 = null;
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;
         Object stackIn_7_0 = null;
-        ij stackIn_9_0 = null;
+        SceneTabbedPanel stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -73,7 +73,7 @@ final class ff {
           var14 = new char[var5_int];
           var13 = var14;
           var7 = var13;
-          var8 = new ij[var5_int];
+          var8 = new SceneTabbedPanel[var5_int];
           var9 = (char)param1;
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
@@ -87,9 +87,9 @@ final class ff {
             decompiledCaughtException = decompiledCaughtParameter0;
             var10 = (Exception) (Object) decompiledCaughtException;
             stackIn_7_0 = null;
-            return (ij) (stackIn_7_0);
+            return (SceneTabbedPanel) (stackIn_7_0);
           }
-          stackIn_9_0 = new ij(0L, param4, param3, param2, var8, param0, var6, var14);
+          stackIn_9_0 = new SceneTabbedPanel(0L, param4, param3, param2, var8, param0, var6, var14);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

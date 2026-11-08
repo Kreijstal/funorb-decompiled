@@ -189,7 +189,7 @@ final class qa extends IntrusiveNode {
               hn.field_k[1] = 5;
             }
           } else {
-            var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, tj.a(-112, new String[]{"<br><%0><br>"}, dm.field_F), EmptyPainter.field_a, DateInputWidget.field_C, param1 + 25923);
+            var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, CachedArchiveProvider.formatTemplate(-112, new String[]{"<br><%0><br>"}, dm.field_F), EmptyPainter.field_a, DateInputWidget.field_C, param1 + 25923);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(qg.field_a[var5])) {
@@ -206,7 +206,7 @@ final class qa extends IntrusiveNode {
             ik.field_c = new String[-1 + (-var4 + var3_int)];
             ArraySupport.copyObjects(qg.field_a, var4 + 1, ik.field_c, 0, var3_int - var4 - 1);
             var4 = -1;
-            var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, tj.a(param1 ^ -4656, new String[]{"<br><%0><br>"}, bo.field_b), EmptyPainter.field_a, DateInputWidget.field_C, 21230);
+            var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, CachedArchiveProvider.formatTemplate(param1 ^ -4656, new String[]{"<br><%0><br>"}, bo.field_b), EmptyPainter.field_a, DateInputWidget.field_C, 21230);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(qg.field_a[var5])) {
                 continue;

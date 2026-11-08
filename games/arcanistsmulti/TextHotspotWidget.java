@@ -230,9 +230,9 @@ class TextHotspotWidget extends TextButton {
         da.clipToRectangle(640 + SoftwareRasterizer.field_e >> 1, SoftwareRasterizer.field_j, param0 ^ -11846, -640 + SoftwareRasterizer.field_e >> 1, 0);
         if (ce.field_h > 0) {
           if (null != oo.field_t) {
-            oo.field_t.drawOpaque(k.field_d.field_T, 0);
+            oo.field_t.drawOpaque(BufferedSocket.field_d.field_T, 0);
           }
-          stackIn_7_0 = k.field_d;
+          stackIn_7_0 = BufferedSocket.field_d;
           stackIn_8_1 = (param1) && (!IntrusiveNode.field_d);
           ((SceneWidget) (Object) stackIn_7_0).drawFullScreen(stackIn_8_1, true);
           stackIn_11_0 = fn.field_e;
@@ -262,7 +262,7 @@ class TextHotspotWidget extends TextButton {
         if (null != va.field_e) {
           var2 = va.field_e;
           String var1 = var2;
-          GrowableIntList.a(99, tj.a(-118, new String[]{var2}, i.field_b));
+          GrowableIntList.a(99, CachedArchiveProvider.formatTemplate(-118, new String[]{var2}, i.field_b));
           va.field_e = null;
         }
         if (param0 < 94) {
@@ -279,7 +279,7 @@ class TextHotspotWidget extends TextButton {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = (-640 + fh.field_g) / 2;
+        int var2 = (-640 + SecondaryNodeDequeIterator.field_g) / 2;
         int var3 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
         if (param0 != 16) {
           return;
@@ -563,7 +563,7 @@ class TextHotspotWidget extends TextButton {
             bb.field_g[dd.field_f[DropdownList.field_N]].drawTransparent(var3Lifetime1, var4Lifetime1);
             var3Lifetime1Lifetime1 = 75;
             var4Lifetime1Lifetime1 = var2_int - 480 + 430;
-            tj.field_t.drawText(PasswordFieldPainter.field_w[DropdownList.field_N], var3Lifetime1Lifetime1, var4Lifetime1Lifetime1, 16777215, 0);
+            CachedArchiveProvider.field_t.drawText(PasswordFieldPainter.field_w[DropdownList.field_N], var3Lifetime1Lifetime1, var4Lifetime1Lifetime1, 16777215, 0);
           }
           regionExit1: {
             if (mf.field_g > -1) {
@@ -651,7 +651,7 @@ class TextHotspotWidget extends TextButton {
                             if (var14_intLifetime1 > 1) {
                               stackIn_167_1 = ki.field_x;
                             } else {
-                              stackIn_167_1 = tg.field_g;
+                              stackIn_167_1 = DualLinkDeque.field_g;
                             }
                             var29 = ((StringBuilder) (Object) stackIn_166_0).append(stackIn_167_1).toString();
                             if (640 < mi.field_B.textWidth(var29) + (var5Lifetime1 + var3Lifetime2Lifetime1 + 8)) {
@@ -709,7 +709,7 @@ class TextHotspotWidget extends TextButton {
                             if (var14_intLifetime1Lifetime1 > 1) {
                               stackIn_133_1 = ki.field_x;
                             } else {
-                              stackIn_133_1 = tg.field_g;
+                              stackIn_133_1 = DualLinkDeque.field_g;
                             }
                             var27 = ((StringBuilder) (Object) stackIn_132_0).append(stackIn_133_1).toString();
                             if (var5Lifetime1 + (var3Lifetime2Lifetime1 + mi.field_B.textWidth(var27)) + 8 > 640) {
@@ -744,7 +744,7 @@ class TextHotspotWidget extends TextButton {
                             if (var14_intLifetime1Lifetime2 > 1) {
                               stackIn_112_1 = ki.field_x;
                             } else {
-                              stackIn_112_1 = tg.field_g;
+                              stackIn_112_1 = DualLinkDeque.field_g;
                             }
                             var15Lifetime1 = ((StringBuilder) (Object) stackIn_111_0).append(stackIn_112_1).toString();
                             if (0 > var14_intLifetime1Lifetime2) {

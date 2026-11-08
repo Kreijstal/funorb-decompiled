@@ -233,7 +233,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         var1.reset(-17238);
     }
 
-    final static void a(int param0, cg param1, int param2, int param3, dn param4, int param5, int param6) {
+    final static void a(int param0, SocialListEntry param1, int param2, int param3, SceneScrollPane param4, int param5, int param6) {
         RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -256,7 +256,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           var9 = param6;
           var10 = param0;
           var11 = param5;
-          var12.field_l.a(var10, var11, -29466, var9, var8);
+          var12.field_l.openAt(var10, var11, -29466, var9, var8);
           if (param2 == 3) {
             return;
           }

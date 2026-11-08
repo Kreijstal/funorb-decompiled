@@ -160,7 +160,7 @@ final class on {
                 AlternateUsernameCredentials.field_q = param1;
                 var2 = MusicPatch.a("loginm3", (byte) -45);
                 if (null != var2) {
-                  tg.field_a = ValidationHelpWidget.a((byte) 101, var2);
+                  DualLinkDeque.field_a = ValidationHelpWidget.a((byte) 101, var2);
                 }
                 var2 = MusicPatch.a("loginm2", (byte) -45);
                 if (var2 != null) {
@@ -232,7 +232,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("ticketing_gotowebsite", (byte) -45);
                 if (var2 != null) {
-                  nl.field_Hb = ValidationHelpWidget.a((byte) 127, var2);
+                  IconTextSceneWidget.field_Hb = ValidationHelpWidget.a((byte) 127, var2);
                 }
                 var2 = MusicPatch.a("ticketing_waitingformessages", (byte) -45);
                 if (var2 != null) {
@@ -284,7 +284,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_x_entered_other_game", (byte) -45);
                 if (var2 != null) {
-                  ij.field_Gb = ValidationHelpWidget.a((byte) 114, var2);
+                  SceneTabbedPanel.field_Gb = ValidationHelpWidget.a((byte) 114, var2);
                 }
                 var2 = MusicPatch.a("mu_x_left_lobby", (byte) -45);
                 if (var2 != null) {
@@ -424,11 +424,11 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_options_players", (byte) -45);
                 if (var2 != null) {
-                  w.field_Bb = ValidationHelpWidget.a((byte) 111, var2);
+                  ChatInputWidget.field_Bb = ValidationHelpWidget.a((byte) 111, var2);
                 }
                 var2 = MusicPatch.a("mu_options_dontmind", (byte) -45);
                 if (null != var2) {
-                  ij.field_Rb = ValidationHelpWidget.a((byte) 116, var2);
+                  SceneTabbedPanel.field_Rb = ValidationHelpWidget.a((byte) 116, var2);
                 }
                 var2 = MusicPatch.a("mu_options_allow_spectate", (byte) -45);
                 if (null != var2) {
@@ -484,7 +484,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("invite_accept_xs_game", (byte) -45);
                 if (null != var2) {
-                  na.field_Sb = ValidationHelpWidget.a((byte) 125, var2);
+                  LobbyGameEntry.field_Sb = ValidationHelpWidget.a((byte) 125, var2);
                 }
                 var2 = MusicPatch.a("invite_decline_xs_game", (byte) -45);
                 if (null != var2) {
@@ -508,7 +508,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_gameopt_withdraw_invite_to_x", (byte) -45);
                 if (null != var2) {
-                  na.field_gc = ValidationHelpWidget.a((byte) 87, var2);
+                  LobbyGameEntry.field_gc = ValidationHelpWidget.a((byte) 87, var2);
                 }
                 var2 = MusicPatch.a("mu_gameopt_accept_x_into_game", (byte) -45);
                 if (null != var2) {
@@ -568,7 +568,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_chat_pm_show_all", (byte) -45);
                 if (var2 != null) {
-                  w.field_Jb = ValidationHelpWidget.a((byte) 119, var2);
+                  ChatInputWidget.field_Jb = ValidationHelpWidget.a((byte) 119, var2);
                 }
                 var2 = MusicPatch.a("mu_chat_pm_friends_only", (byte) -45);
                 if (null != var2) {
@@ -700,7 +700,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("accept", (byte) -45);
                 if (null != var2) {
-                  dh.field_Nb = ValidationHelpWidget.a((byte) 108, var2);
+                  SceneTextInput.field_Nb = ValidationHelpWidget.a((byte) 108, var2);
                 }
                 var2 = MusicPatch.a("reject", (byte) -45);
                 if (var2 != null) {
@@ -744,7 +744,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("asking_to_join_xs_game", (byte) -45);
                 if (null != var2) {
-                  fh.field_f = ValidationHelpWidget.a((byte) 117, var2);
+                  SecondaryNodeDequeIterator.field_f = ValidationHelpWidget.a((byte) 117, var2);
                 }
                 var2 = MusicPatch.a("who_can_join", (byte) -45);
                 if (null != var2) {
@@ -852,7 +852,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("privatequickchat_from_x", (byte) -45);
                 if (null != var2) {
-                  pk.field_f = ValidationHelpWidget.a((byte) 110, var2);
+                  IterableNodeHashTable.field_f = ValidationHelpWidget.a((byte) 110, var2);
                 }
                 var2 = MusicPatch.a("privatequickchat_to_x", (byte) -45);
                 if (var2 != null) {
@@ -964,7 +964,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("gameopt_youhaventunlocked", (byte) -45);
                 if (null != var2) {
-                  cg.field_Rb = ValidationHelpWidget.a((byte) 99, var2);
+                  SocialListEntry.field_Rb = ValidationHelpWidget.a((byte) 99, var2);
                 }
                 var2 = MusicPatch.a("gameopt_trychanging1", (byte) -45);
                 if (null != var2) {
@@ -1186,7 +1186,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("login", (byte) -45);
                 if (var2 != null) {
-                  w.field_Qb = ValidationHelpWidget.a((byte) 105, var2);
+                  ChatInputWidget.field_Qb = ValidationHelpWidget.a((byte) 105, var2);
                 }
                 var2 = MusicPatch.a("goback", (byte) -45);
                 if (null != var2) {
@@ -1534,7 +1534,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("create_email_confirm", (byte) -45);
                 if (null != var2) {
-                  dn.field_Gb = ValidationHelpWidget.a((byte) 89, var2);
+                  SceneScrollPane.field_Gb = ValidationHelpWidget.a((byte) 89, var2);
                 }
                 var2 = MusicPatch.a("create_age", (byte) -45);
                 if (null != var2) {
@@ -1614,7 +1614,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("login_create_tooltip", (byte) -45);
                 if (var2 != null) {
-                  dh.field_Bb = ValidationHelpWidget.a((byte) 93, var2);
+                  SceneTextInput.field_Bb = ValidationHelpWidget.a((byte) 93, var2);
                 }
                 var2 = MusicPatch.a("login_justplay_tooltip", (byte) -45);
                 if (var2 != null) {
@@ -1662,7 +1662,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("create_email_confirm_tooltip", (byte) -45);
                 if (var2 != null) {
-                  dn.field_Fb = ValidationHelpWidget.a((byte) 112, var2);
+                  SceneScrollPane.field_Fb = ValidationHelpWidget.a((byte) 112, var2);
                 }
                 var2 = MusicPatch.a("create_age_tooltip", (byte) -45);
                 if (null != var2) {
@@ -1830,7 +1830,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("ignorenotfound", (byte) -45);
                 if (null != var2) {
-                  k.field_f = ValidationHelpWidget.a((byte) 106, var2);
+                  BufferedSocket.field_f = ValidationHelpWidget.a((byte) 106, var2);
                 }
                 var2 = MusicPatch.a("removeignorefirst", (byte) -45);
                 if (var2 != null) {
@@ -1852,7 +1852,7 @@ final class on {
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  fh.field_a = ValidationHelpWidget.a((byte) 124, var2);
+                  SecondaryNodeDequeIterator.field_a = ValidationHelpWidget.a((byte) 124, var2);
                 }
                 var2 = MusicPatch.a("enterignore_del", (byte) -45);
                 if (null != var2) {
@@ -2200,7 +2200,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("acceptdraw", (byte) -45);
                 if (null != var2) {
-                  pe.field_Nb = ValidationHelpWidget.a((byte) 116, var2);
+                  ContextActionMenu.field_Nb = ValidationHelpWidget.a((byte) 116, var2);
                 }
                 var2 = MusicPatch.a("resign", (byte) -45);
                 if (null != var2) {
@@ -2456,7 +2456,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mp_offerrematch_unrated", (byte) -45);
                 if (null != var2) {
-                  nl.field_Bb = ValidationHelpWidget.a((byte) 113, var2);
+                  IconTextSceneWidget.field_Bb = ValidationHelpWidget.a((byte) 113, var2);
                 }
                 var2 = MusicPatch.a("mp_acceptrematch", (byte) -45);
                 if (null != var2) {
@@ -2488,7 +2488,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mp_x_offersrematch", (byte) -45);
                 if (null != var2) {
-                  tj.field_y = ValidationHelpWidget.a((byte) 113, var2);
+                  CachedArchiveProvider.field_y = ValidationHelpWidget.a((byte) 113, var2);
                 }
                 var2 = MusicPatch.a("mp_x_offersrematch_unrated", (byte) -45);
                 if (var2 != null) {

@@ -148,7 +148,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.a(-11232);
                 ce.field_m = DraggableWidget.createRasterBuffer(MusicPatchNode.field_r, (java.awt.Component) ((Object) on.field_c), co.field_c, (byte) -123);
                 this.initializeClient((byte) -116);
-                tg.field_e = ki.createFrameClock((byte) -126);
+                DualLinkDeque.field_e = ki.createFrameClock((byte) -126);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (ResizableViewResizeListener.field_b != 0L) {
@@ -160,7 +160,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    LoginPanel.field_Q = tg.field_e.sleepAndCountTicks(fd.field_d, -1);
+                    LoginPanel.field_Q = DualLinkDeque.field_e.sleepAndCountTicks(fd.field_d, -1);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;
@@ -399,7 +399,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          k.field_c = false;
+          BufferedSocket.field_c = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -428,7 +428,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             on.field_c.getParent().remove((java.awt.Component) ((Object) on.field_c));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (in.field_Eb == null) {
+          if (SceneScrollbar.field_Eb == null) {
             if (Js5ArchiveManager.field_c != null) {
               var2 = Js5ArchiveManager.field_c;
               decompiledFrameRemainder0 = (var4 != 0);
@@ -438,17 +438,17 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 var2 = LoginCredentials.field_c;
                 if (var4 != 0) {
                   var2 = IsaacCipher.field_k;
-                  var2 = in.field_Eb;
+                  var2 = SceneScrollbar.field_Eb;
                 }
               } else {
                 var2 = IsaacCipher.field_k;
                 if (var4 != 0) {
-                  var2 = in.field_Eb;
+                  var2 = SceneScrollbar.field_Eb;
                 }
               }
             }
           } else {
-            var2 = in.field_Eb;
+            var2 = SceneScrollbar.field_Eb;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           on.field_c = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
@@ -466,7 +466,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           on.field_c.addFocusListener((java.awt.event.FocusListener) (this));
           on.field_c.requestFocus();
-          k.field_c = true;
+          BufferedSocket.field_c = true;
           ie.field_Pb = true;
           hj.field_d = true;
           if (param0 != -11232) {
@@ -505,7 +505,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             on.field_c.setSize(MusicPatchNode.field_r, co.field_c);
             on.field_c.setVisible(true);
             if (null != Js5ArchiveManager.field_c &&
-              in.field_Eb == null) {
+              SceneScrollbar.field_Eb == null) {
               var6 = Js5ArchiveManager.field_c.getInsets();
               on.field_c.setLocation(var6.left + ta.field_e, var6.top + ge.field_i);
               if (ArcanistsMulti.field_G) {
@@ -534,7 +534,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          k.field_c = true;
+          BufferedSocket.field_c = true;
           hj.field_d = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -641,7 +641,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           if (null != fi.field_d) {
             try {
-              fi.field_d.a(-124);
+              fi.field_d.shutdown(-124);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -725,7 +725,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           var6 = this;
           synchronized (var6) {
-            ie.field_Pb = k.field_c;
+            ie.field_Pb = BufferedSocket.field_c;
           }
           this.releaseClientStatics((byte) 49);
           return;
@@ -776,7 +776,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               dupTemp$0 = new PlatformTaskDispatcher(param0, param2, param6, true);
               fi.field_d = dupTemp$0;
               rb.field_k = dupTemp$0;
-              var8 = fi.field_d.a(127, 1, (Runnable) (this));
+              var8 = fi.field_d.queueThreadStart(127, 1, (Runnable) (this));
               while (true) {
                 if (var8.field_e == 0) {
                   ao.a(10L, 1);

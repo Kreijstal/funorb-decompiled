@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dn extends SceneWidget {
+final class SceneScrollPane extends SceneWidget {
     static String field_Bb;
     SceneWidget field_Hb;
     static String field_Gb;
-    in field_Eb;
+    SceneScrollbar field_Eb;
     SceneWidget field_Cb;
     static int field_Jb;
     static boolean field_Db;
     static String field_Fb;
     static boolean[] field_Ib;
 
-    final static void a(PacketBuffer param0, na param1, boolean param2, int param3) {
+    final static void readGameEntry(PacketBuffer param0, LobbyGameEntry param1, boolean param2, int param3) {
         int var8 = 0;
-        na stackIn_5_0 = null;
+        LobbyGameEntry stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
-        na stackIn_9_0 = null;
+        LobbyGameEntry stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        na stackIn_12_0 = null;
+        LobbyGameEntry stackIn_12_0 = null;
         boolean stackIn_13_1 = false;
-        na stackIn_15_0 = null;
+        LobbyGameEntry stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
-        na stackIn_18_0 = null;
+        LobbyGameEntry stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
-        na stackIn_21_0 = null;
+        LobbyGameEntry stackIn_21_0 = null;
         int stackIn_22_1 = 0;
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
@@ -48,22 +48,22 @@ final class dn extends SceneWidget {
           param1.field_dc = param0.readUnsignedByte((byte) 78);
           param1.field_Pb = param0.readUnsignedByte((byte) -121);
           var4_int = param0.readUnsignedByte((byte) 127);
-          stackIn_5_0 = (na) (param1);
+          stackIn_5_0 = (LobbyGameEntry) (param1);
           stackIn_6_1 = ((var4_int & 128) != 0);
           stackIn_5_0.field_mc = stackIn_6_1;
-          stackIn_9_0 = (na) (param1);
+          stackIn_9_0 = (LobbyGameEntry) (param1);
           stackIn_10_1 = (param1.field_mc) && (param1.field_Rb < param1.field_dc);
           stackIn_9_0.field_Ob = stackIn_10_1;
-          stackIn_12_0 = (na) (param1);
+          stackIn_12_0 = (LobbyGameEntry) (param1);
           stackIn_13_1 = ((var4_int & 8) != 0);
           stackIn_12_0.field_kc = stackIn_13_1;
-          stackIn_15_0 = (na) (param1);
+          stackIn_15_0 = (LobbyGameEntry) (param1);
           stackIn_16_1 = ((64 & var4_int) != 0);
           stackIn_15_0.field_Lb = stackIn_16_1;
-          stackIn_18_0 = (na) (param1);
+          stackIn_18_0 = (LobbyGameEntry) (param1);
           stackIn_19_1 = (0 != (var4_int & 32));
           stackIn_18_0.field_oc = stackIn_19_1;
-          stackIn_21_0 = (na) (param1);
+          stackIn_21_0 = (LobbyGameEntry) (param1);
           if ((var4_int & 16) != 0) {
             stackIn_22_1 = 2;
           } else {
@@ -115,21 +115,21 @@ final class dn extends SceneWidget {
         }
     }
 
-    private final void a(int param0, int param1, boolean param2, byte param3, int param4) {
-        na var7;
-        na var7Lifetime1;
-        na var7Lifetime2;
-        na var7Lifetime3;
-        if (this.field_Eb.f((byte) 59)) {
+    private final void updateScrollInput(int param0, int param1, boolean param2, byte param3, int param4) {
+        LobbyGameEntry var7;
+        LobbyGameEntry var7Lifetime1;
+        LobbyGameEntry var7Lifetime2;
+        LobbyGameEntry var7Lifetime3;
+        if (this.field_Eb.consumeTrackUpPress((byte) 59)) {
           this.field_Cb.field_bb = this.field_Cb.field_bb + param0;
         }
-        if (this.field_Eb.e(true)) {
+        if (this.field_Eb.consumeDownArrowPress(true)) {
           this.field_Cb.field_bb = this.field_Cb.field_bb - param0;
         }
-        if (this.field_Eb.e(40)) {
+        if (this.field_Eb.consumeUpArrowPress(40)) {
           this.field_Cb.field_bb = this.field_Cb.field_bb + param1;
         }
-        if (this.field_Eb.f(true)) {
+        if (this.field_Eb.consumeTrackDownPress(true)) {
           this.field_Cb.field_bb = this.field_Cb.field_bb - param1;
         }
         if (this.field_C) {
@@ -149,8 +149,8 @@ final class dn extends SceneWidget {
               this.field_Cb.field_bb = -this.field_Cb.field_db;
             }
           }
-          if (this.field_Eb.f(123)) {
-            this.field_Cb.field_db = -this.field_Eb.a(this.field_Hb.field_I, this.field_Cb.field_I, param2, (byte) -55);
+          if (this.field_Eb.isThumbHeld(123)) {
+            this.field_Cb.field_db = -this.field_Eb.scrollOffset(this.field_Hb.field_I, this.field_Cb.field_I, param2, (byte) -55);
             this.field_Cb.field_bb = 0;
           }
         } else {
@@ -161,73 +161,73 @@ final class dn extends SceneWidget {
             if (-(this.field_Cb.field_bb + this.field_Cb.field_db) > this.field_Cb.field_I + (this.field_Cb.field_B - this.field_Hb.field_I)) {
               this.field_Cb.field_bb = -this.field_Cb.field_db - (this.field_Cb.field_I - (-this.field_Cb.field_B + this.field_Hb.field_I));
             }
-            if (this.field_Eb.f(123)) {
-              this.field_Cb.field_db = -this.field_Eb.a(this.field_Hb.field_I, this.field_Cb.field_I, param2, (byte) -55);
+            if (this.field_Eb.isThumbHeld(123)) {
+              this.field_Cb.field_db = -this.field_Eb.scrollOffset(this.field_Hb.field_I, this.field_Cb.field_I, param2, (byte) -55);
               this.field_Cb.field_bb = 0;
             }
-            this.field_Eb.a(109, this.field_Hb.field_I, -this.field_Cb.field_db, this.field_Cb.field_I);
+            this.field_Eb.layoutParts(109, this.field_Hb.field_I, -this.field_Cb.field_db, this.field_Cb.field_I);
             if (param3 == 63) {
               return;
             }
-            var7 = (na) null;
-            dn.a((PacketBuffer) null, (na) null, false, -49);
+            var7 = (LobbyGameEntry) null;
+            SceneScrollPane.readGameEntry((PacketBuffer) null, (LobbyGameEntry) null, false, -49);
             return;
           }
           if (-this.field_Hb.field_I + (this.field_Cb.field_I + this.field_Cb.field_B) >= -(this.field_Cb.field_db + this.field_Cb.field_bb)) {
             if (-(this.field_Cb.field_bb + this.field_Cb.field_db) < 0) {
               this.field_Cb.field_bb = -this.field_Cb.field_db;
             }
-            if (this.field_Eb.f(123)) {
-              this.field_Cb.field_db = -this.field_Eb.a(this.field_Hb.field_I, this.field_Cb.field_I, param2, (byte) -55);
+            if (this.field_Eb.isThumbHeld(123)) {
+              this.field_Cb.field_db = -this.field_Eb.scrollOffset(this.field_Hb.field_I, this.field_Cb.field_I, param2, (byte) -55);
               this.field_Cb.field_bb = 0;
             }
-            this.field_Eb.a(109, this.field_Hb.field_I, -this.field_Cb.field_db, this.field_Cb.field_I);
+            this.field_Eb.layoutParts(109, this.field_Hb.field_I, -this.field_Cb.field_db, this.field_Cb.field_I);
             if (param3 == 63) {
               return;
             }
-            var7Lifetime2 = (na) null;
-            dn.a((PacketBuffer) null, (na) null, false, -49);
+            var7Lifetime2 = (LobbyGameEntry) null;
+            SceneScrollPane.readGameEntry((PacketBuffer) null, (LobbyGameEntry) null, false, -49);
             return;
           }
           this.field_Cb.field_bb = -(-this.field_Hb.field_I + (this.field_Cb.field_B + this.field_Cb.field_I)) - this.field_Cb.field_db;
           if (-(this.field_Cb.field_bb + this.field_Cb.field_db) < 0) {
             this.field_Cb.field_bb = -this.field_Cb.field_db;
           }
-          if (!this.field_Eb.f(123)) {
-            this.field_Eb.a(109, this.field_Hb.field_I, -this.field_Cb.field_db, this.field_Cb.field_I);
+          if (!this.field_Eb.isThumbHeld(123)) {
+            this.field_Eb.layoutParts(109, this.field_Hb.field_I, -this.field_Cb.field_db, this.field_Cb.field_I);
             if (param3 == 63) {
               return;
             }
-            var7Lifetime3 = (na) null;
-            dn.a((PacketBuffer) null, (na) null, false, -49);
+            var7Lifetime3 = (LobbyGameEntry) null;
+            SceneScrollPane.readGameEntry((PacketBuffer) null, (LobbyGameEntry) null, false, -49);
             return;
           }
-          this.field_Cb.field_db = -this.field_Eb.a(this.field_Hb.field_I, this.field_Cb.field_I, param2, (byte) -55);
+          this.field_Cb.field_db = -this.field_Eb.scrollOffset(this.field_Hb.field_I, this.field_Cb.field_I, param2, (byte) -55);
           this.field_Cb.field_bb = 0;
         }
-        this.field_Eb.a(109, this.field_Hb.field_I, -this.field_Cb.field_db, this.field_Cb.field_I);
+        this.field_Eb.layoutParts(109, this.field_Hb.field_I, -this.field_Cb.field_db, this.field_Cb.field_I);
         if (param3 != 63) {
-          var7Lifetime1 = (na) null;
-          dn.a((PacketBuffer) null, (na) null, false, -49);
+          var7Lifetime1 = (LobbyGameEntry) null;
+          SceneScrollPane.readGameEntry((PacketBuffer) null, (LobbyGameEntry) null, false, -49);
         }
     }
 
-    final void a(int param0, int param1, int param2, boolean param3) {
+    final void layoutWithHeight(int param0, int param1, int param2, boolean param3) {
         if (param2 == 9860) {
-          this.a(param0, this.field_Hb.field_I, param3, (byte) 63, param1);
+          this.updateScrollInput(param0, this.field_Hb.field_I, param3, (byte) 63, param1);
           return;
         }
         field_Fb = (String) null;
-        this.a(param0, this.field_Hb.field_I, param3, (byte) 63, param1);
+        this.updateScrollInput(param0, this.field_Hb.field_I, param3, (byte) 63, param1);
     }
 
-    final boolean a(boolean param0, byte param1, int param2, int param3, int param4, boolean param5) {
+    final boolean relayout(boolean param0, byte param1, int param2, int param3, int param4, boolean param5) {
         if (param1 == 98) {
-          return this.a(this.field_Hb.field_I, param0, param3, param4, -5368, param5, param2);
+          return this.layoutAndScroll(this.field_Hb.field_I, param0, param3, param4, -5368, param5, param2);
         }
         LoginCredentials var8 = (LoginCredentials) null;
-        dn.writeLoginBlock(true, (LoginCredentials) null, (byte) -112, false, 112);
-        return this.a(this.field_Hb.field_I, param0, param3, param4, -5368, param5, param2);
+        SceneScrollPane.writeLoginBlock(true, (LoginCredentials) null, (byte) -112, false, 112);
+        return this.layoutAndScroll(this.field_Hb.field_I, param0, param3, param4, -5368, param5, param2);
     }
 
     public static void releaseStatics(int param0) {
@@ -240,7 +240,7 @@ final class dn extends SceneWidget {
         }
     }
 
-    private final boolean a(int param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6) {
+    private final boolean layoutAndScroll(int param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6) {
         int var8 = 0;
         int var8Lifetime1;
         int var8Lifetime2;
@@ -249,7 +249,7 @@ final class dn extends SceneWidget {
           if (!this.field_C) {
             var8 = 0;
             this.field_Cb.layoutVerticalContent(true, param2, var8 != 0, this.field_Hb.field_I);
-            this.a(param6, param0, false, (byte) 63, param3);
+            this.updateScrollInput(param6, param0, false, (byte) 63, param3);
             if (param4 == -5368) {
               return var8 != 0;
             }
@@ -259,7 +259,7 @@ final class dn extends SceneWidget {
           if (param5) {
             var8Lifetime2 = 0;
             this.field_Cb.layoutVerticalContent(true, param2, var8Lifetime2 != 0, this.field_Hb.field_I);
-            this.a(param6, param0, false, (byte) 63, param3);
+            this.updateScrollInput(param6, param0, false, (byte) 63, param3);
             if (param4 == -5368) {
               return var8Lifetime2 != 0;
             }
@@ -268,7 +268,7 @@ final class dn extends SceneWidget {
           }
           var8Lifetime3 = 1;
           this.field_Cb.layoutVerticalContent(true, param2, var8Lifetime3 != 0, this.field_Hb.field_I);
-          this.a(param6, param0, false, (byte) 63, param3);
+          this.updateScrollInput(param6, param0, false, (byte) 63, param3);
           if (param4 == -5368) {
             return var8Lifetime3 != 0;
           }
@@ -277,7 +277,7 @@ final class dn extends SceneWidget {
         }
         var8Lifetime1 = 1;
         this.field_Cb.layoutVerticalContent(true, param2, var8Lifetime1 != 0, this.field_Hb.field_I);
-        this.a(param6, param0, false, (byte) 63, param3);
+        this.updateScrollInput(param6, param0, false, (byte) 63, param3);
         if (param4 == -5368) {
           return var8Lifetime1 != 0;
         }
@@ -285,11 +285,11 @@ final class dn extends SceneWidget {
         return var8Lifetime1 != 0;
     }
 
-    dn(long param0, SceneWidget param1, SceneWidget param2, in param3) {
+    SceneScrollPane(long param0, SceneWidget param1, SceneWidget param2, SceneScrollbar param3) {
         super(param0, (SceneWidget) null);
         try {
           this.field_Hb = new SceneWidget(0L, param2);
-          this.field_Eb = new in(0L, param3);
+          this.field_Eb = new SceneScrollbar(0L, param3);
           this.addChild(this.field_Hb, 49);
           this.addChild(this.field_Eb, 79);
           this.field_Cb = param1;
@@ -299,13 +299,13 @@ final class dn extends SceneWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         this.field_I = param5;
         if (!param3) {
           this.field_T = param4;
           this.field_db = param0;
           this.field_x = param2;
-          this.a(param1, param6, (byte) 106);
+          this.layoutParts(param1, param6, (byte) 106);
           return;
         }
     }
@@ -324,14 +324,14 @@ final class dn extends SceneWidget {
           hj.field_a[1] = TextButton.field_D.nextInt();
           hj.field_a[2] = (int)(of.field_j >> 32);
           hj.field_a[3] = (int)of.field_j;
-          jf.field_a.position = 0;
-          jf.field_a.writeInt(hj.field_a[0], (byte) -101);
-          jf.field_a.writeInt(hj.field_a[1], (byte) -101);
-          jf.field_a.writeInt(hj.field_a[2], (byte) -101);
-          jf.field_a.writeInt(hj.field_a[3], (byte) -101);
-          i.writeRandomData(jf.field_a, 24);
-          jf.field_a.writeShort(param4, (byte) -62);
-          param1.writeTo(jf.field_a, param2 - 55);
+          NodeHashTableIterator.field_a.position = 0;
+          NodeHashTableIterator.field_a.writeInt(hj.field_a[0], (byte) -101);
+          NodeHashTableIterator.field_a.writeInt(hj.field_a[1], (byte) -101);
+          NodeHashTableIterator.field_a.writeInt(hj.field_a[2], (byte) -101);
+          NodeHashTableIterator.field_a.writeInt(hj.field_a[3], (byte) -101);
+          i.writeRandomData(NodeHashTableIterator.field_a, 24);
+          NodeHashTableIterator.field_a.writeShort(param4, (byte) -62);
+          param1.writeTo(NodeHashTableIterator.field_a, param2 - 55);
           he.field_e.position = 0;
           if (!param0) {
             he.field_e.writeByte(16, (byte) -8);
@@ -364,9 +364,9 @@ final class dn extends SceneWidget {
           if (AudioService.field_i != null) {
             he.field_e.writeVersionedString(AudioService.field_i, (byte) -110);
           }
-          TextLine.a(false, he.field_e, nl.field_Jb, jf.field_a, DropTargetWidget.field_K);
+          TextLine.a(false, he.field_e, IconTextSceneWidget.field_Jb, NodeHashTableIterator.field_a, DropTargetWidget.field_K);
           if (param2 != 116) {
-            dn.releaseStatics(-40);
+            SceneScrollPane.releaseStatics(-40);
           }
           he.field_e.writeShortLengthAtMark(he.field_e.position - var5_int, -19571);
           we.a(-1, (byte) 104);
@@ -385,13 +385,13 @@ final class dn extends SceneWidget {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void layoutParts(int param0, int param1, byte param2) {
         if (param2 == 106) {
           this.field_Cb.field_T = 0;
           this.field_Hb.field_I = this.field_I;
           this.field_Hb.field_x = this.field_x + (-param0 - param1);
           this.field_Cb.field_x = -param1 - param0 + this.field_x;
-          this.field_Eb.a(0, false, this.field_I, this.field_Cb.field_I, -this.field_Cb.field_db, param0, this.field_Hb.field_I, this.field_x - param0);
+          this.field_Eb.setBoundsAndLayout(0, false, this.field_I, this.field_Cb.field_I, -this.field_Cb.field_db, param0, this.field_Hb.field_I, this.field_x - param0);
           return;
         }
         field_Ib = (boolean[]) null;
@@ -399,7 +399,7 @@ final class dn extends SceneWidget {
         this.field_Hb.field_I = this.field_I;
         this.field_Hb.field_x = this.field_x + (-param0 - param1);
         this.field_Cb.field_x = -param1 - param0 + this.field_x;
-        this.field_Eb.a(0, false, this.field_I, this.field_Cb.field_I, -this.field_Cb.field_db, param0, this.field_Hb.field_I, this.field_x - param0);
+        this.field_Eb.setBoundsAndLayout(0, false, this.field_I, this.field_Cb.field_I, -this.field_Cb.field_db, param0, this.field_Hb.field_I, this.field_x - param0);
     }
 
     final static void sendBytesPacket(int param0, int param1, byte[] param2, int param3, int param4, boolean param5) {
@@ -430,10 +430,10 @@ final class dn extends SceneWidget {
 
     final static SceneWidget f(byte param0) {
         if (param0 >= -45) {
-          dn.f((byte) 61);
-          return na.f((byte) 111);
+          SceneScrollPane.f((byte) 61);
+          return LobbyGameEntry.f((byte) 111);
         }
-        return na.f((byte) 111);
+        return LobbyGameEntry.f((byte) 111);
     }
 
     static {

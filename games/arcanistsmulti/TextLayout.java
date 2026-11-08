@@ -133,7 +133,7 @@ abstract class TextLayout {
               OptionsDialog.paintCanvasNow(param1, (byte) -101, 0, 0);
             } else {
               if (fj.field_j != 0) {
-                ResourceArchive.a(param1, (byte) -39);
+                ResourceArchive.presentFrame(param1, (byte) -39);
               } else {
                 la.clearOrDimScreen(param2, false, (byte) -72);
                 OptionsDialog.paintCanvasNow(param1, (byte) -97, 0, 0);
@@ -145,7 +145,7 @@ abstract class TextLayout {
               var3_int = 1;
               hj.field_d = false;
             }
-            MusicCrossfadeStream.a(qj.field_h, bb.getLoadingStatusText((byte) -126), var3_int != 0, ArchiveProvider.c((byte) -77), -6885);
+            MusicCrossfadeStream.a(qj.field_h, bb.getLoadingStatusText((byte) -126), var3_int != 0, ArchiveProvider.computeLoadingPercent((byte) -77), -6885);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

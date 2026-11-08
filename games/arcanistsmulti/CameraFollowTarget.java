@@ -24,7 +24,7 @@ final class CameraFollowTarget {
           var1_int = ArrayWidgetContainer.field_B[0];
           for (var2 = 1; var2 < ArrayWidgetContainer.field_B.length; var2++) {
             var3 = ArrayWidgetContainer.field_B[var2];
-            ArraySupport.copyInts(w.field_Lb, var2 << 4, w.field_Lb, var1_int, var3);
+            ArraySupport.copyInts(ChatInputWidget.field_Lb, var2 << 4, ChatInputWidget.field_Lb, var1_int, var3);
             var1_int = var1_int + var3;
           }
           if (param0 != 91) {

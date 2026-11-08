@@ -30,13 +30,13 @@ final class aa extends IntrusiveNode {
           FadingModalPanel.field_E = qe.loadSpriteSheet(param3, "frame_bottom", "commonui", 118);
           ci.field_e = fj.loadSprite("commonui", -22612, param3, "jagex_logo_grey");
           af.field_Jb = qe.loadSpriteSheet(param3, "button", "commonui", 86);
-          ContentTransitionDialog.field_lb = nl.a((byte) 31, param3, "validation", "commonui");
+          ContentTransitionDialog.field_lb = IconTextSceneWidget.loadSpritesByName((byte) 31, param3, "validation", "commonui");
           WidgetStyleLayer.field_e = (BitmapFont) ((Object) WhirlpoolHasher.loadCoverageFont("arezzo12", param1, "commonui", -119, param3));
           ia.field_c = (BitmapFont) ((Object) WhirlpoolHasher.loadCoverageFont("arezzo14", param1, "commonui", -120, param3));
           SocketConnector.field_k = (BitmapFont) ((Object) WhirlpoolHasher.loadCoverageFont("arezzo14bold", param1, "commonui", -123, param3));
-          var17 = new Sprite(param2.a("", "button.gif", -1), (java.awt.Component) ((Object) on.field_c));
-          af.a("dropdown", "commonui", 19412, param3);
-          var5 = pk.a("commonui", 0, "screen_options", param3);
+          var17 = new Sprite(param2.getNamedFile("", "button.gif", -1), (java.awt.Component) ((Object) on.field_c));
+          af.loadIndexedSpriteByName("dropdown", "commonui", 19412, param3);
+          var5 = IterableNodeHashTable.loadIndexedSpritesByName("commonui", 0, "screen_options", param3);
           MusicPatch.field_k = new IndexedSprite[4];
           oa.field_d = new IndexedSprite[4];
           qj.field_j = new IndexedSprite[4];
@@ -123,11 +123,11 @@ final class aa extends IntrusiveNode {
         int[] var10 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (!param0.a((byte) 46)) {
+          if (!param0.isFullscreenSupported((byte) 46)) {
             stackIn_4_0 = new ScreenDisplayMode[]{};
             return stackIn_4_0;
           }
-          var8 = param0.b(-27886);
+          var8 = param0.queueDisplayModeQuery(-27886);
           while (var8.field_e == 0) {
             ao.a(10L, 1);
           }

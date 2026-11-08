@@ -20,7 +20,7 @@ final class lo extends TextFieldValidator {
         if (null == PasswordFieldPainter.field_A) {
           return false;
         }
-        if (!PasswordFieldPainter.field_A.e(81)) {
+        if (!PasswordFieldPainter.field_A.handleTypedKey(81)) {
           return false;
         }
         return true;

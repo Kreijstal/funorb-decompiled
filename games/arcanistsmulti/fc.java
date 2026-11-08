@@ -143,7 +143,7 @@ final class fc {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param1.b(param3, 26219, param2);
+          var6 = param1.getFile(param3, 26219, param2);
           var4 = var6;
           if (var6 == null) {
             return false;

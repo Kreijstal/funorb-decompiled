@@ -5,7 +5,7 @@ abstract class IndexedSpriteState {
     static String field_a;
     static int[] field_i;
     int field_f;
-    static nl[][] field_e;
+    static IconTextSceneWidget[][] field_e;
     int field_h;
     static String field_d;
     static String field_b;
@@ -43,7 +43,7 @@ abstract class IndexedSpriteState {
         field_d = null;
         int var1 = -45 % ((param0 + 49) / 37);
         field_i = null;
-        field_e = (nl[][]) null;
+        field_e = (IconTextSceneWidget[][]) null;
     }
 
     abstract void draw(int param0, int param1);

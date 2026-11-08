@@ -96,7 +96,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
             OptionsDialog.releaseStatics(-104);
           }
           if (fc.a(-123, param0, param1, param3)) {
-            stackIn_6_0 = ge.createBinaryFont(param4.b(param3, 26219, param1), 3417);
+            stackIn_6_0 = ge.createBinaryFont(param4.getFile(param3, 26219, param1), 3417);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -468,9 +468,9 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
             }
           }
           if (g.field_g.field_U != 0) {
-            db.field_a = new w(g.field_g.field_V, g.field_g.field_nb, g.field_g.field_x, g.field_g.field_I, param0, mf.field_d, SectorCacheStore.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, (String) null, 0L);
+            db.field_a = new ChatInputWidget(g.field_g.field_V, g.field_g.field_nb, g.field_g.field_x, g.field_g.field_I, param0, mf.field_d, SectorCacheStore.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, (String) null, 0L);
           }
-          var9 = f.a(16711422, param1, ImageProducerRasterBuffer.field_r, dh.field_Gb);
+          var9 = f.a(16711422, param1, ImageProducerRasterBuffer.field_r, SceneTextInput.field_Gb);
           if (var9 != null) {
             EmptyPainter.a(0, var9);
           }
@@ -530,7 +530,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           ResourceArchive var2 = (ResourceArchive) null;
           OptionsDialog.loadBinaryFont((ResourceArchive) null, -48, false, -99, (ResourceArchive) null);
         }
-        k.field_o = 0;
+        BufferedSocket.field_o = 0;
     }
 
     public final void onButtonActivated(boolean param0, int param1, int param2, int param3, TextButton param4) {

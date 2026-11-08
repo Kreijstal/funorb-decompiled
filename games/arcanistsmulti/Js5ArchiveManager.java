@@ -8,7 +8,7 @@ final class Js5ArchiveManager {
     private java.math.BigInteger field_j;
     static java.awt.Frame field_c;
     private Js5NetworkRequest field_h;
-    private tj[] field_b;
+    private CachedArchiveProvider[] field_b;
     static String[] field_f;
     private DiskCacheWorker field_e;
     static SceneWidget field_g;
@@ -32,10 +32,10 @@ final class Js5ArchiveManager {
           return true;
         }
         if (this.field_h == null) {
-          if (this.field_l.c((byte) 96)) {
+          if (this.field_l.isUrgentQueueFull((byte) 96)) {
             return false;
           }
-          this.field_h = this.field_l.a(255, true, 255, (byte) -80, (byte) 0);
+          this.field_h = this.field_l.requestGroup(255, true, 255, (byte) -80, (byte) 0);
         }
         if (this.field_h.field_p) {
           return false;
@@ -68,7 +68,7 @@ final class Js5ArchiveManager {
             throw new RuntimeException();
           }
         }
-        this.field_b = new tj[var3];
+        this.field_b = new CachedArchiveProvider[var3];
         this.field_d = var10;
         return true;
     }
@@ -77,14 +77,14 @@ final class Js5ArchiveManager {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final tj a(SectorCacheStore param0, boolean param1, int param2, SectorCacheStore param3, int param4) {
+    final CachedArchiveProvider a(SectorCacheStore param0, boolean param1, int param2, SectorCacheStore param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        tj var9 = null;
+        CachedArchiveProvider var9 = null;
         byte[] var13 = null;
-        tj stackIn_10_0 = null;
-        tj stackIn_14_0 = null;
+        CachedArchiveProvider stackIn_10_0 = null;
+        CachedArchiveProvider stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -109,7 +109,7 @@ final class Js5ArchiveManager {
             var7 = this.field_d.readInt(-10674);
             var13 = new byte[64];
             this.field_d.readBytes((byte) 92, 0, var13, 64);
-            var9 = new tj(param4, param3, param0, this.field_l, this.field_e, var6_int, var13, var7, param1);
+            var9 = new CachedArchiveProvider(param4, param3, param0, this.field_l, this.field_e, var6_int, var13, var7, param1);
             this.field_b[param4] = var9;
             stackIn_14_0 = var9;
             return stackIn_14_0;
@@ -163,8 +163,8 @@ final class Js5ArchiveManager {
           this.field_i = param3;
           this.field_j = param2;
           this.field_l = param0;
-          if (!this.field_l.c((byte) -91)) {
-            this.field_h = this.field_l.a(255, true, 255, (byte) -80, (byte) 0);
+          if (!this.field_l.isUrgentQueueFull((byte) -91)) {
+            this.field_h = this.field_l.requestGroup(255, true, 255, (byte) -80, (byte) 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,7 +202,7 @@ final class Js5ArchiveManager {
     final void a(int param0) {
         int var2;
         int var3;
-        tj stackIn_15_0 = null;
+        CachedArchiveProvider stackIn_15_0 = null;
         CharSequence var4;
         int var2Lifetime1;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
@@ -211,7 +211,7 @@ final class Js5ArchiveManager {
         }
         for (var2 = 0; this.field_b.length > var2; var2++) {
           if (this.field_b[var2] != null) {
-            this.field_b[var2].a(false);
+            this.field_b[var2].processIndexRequests(false);
           }
         }
         if (param0 != -8456) {
@@ -221,7 +221,7 @@ final class Js5ArchiveManager {
         for (var2Lifetime1 = 0; this.field_b.length > var2Lifetime1; var2Lifetime1++) {
           stackIn_15_0 = this.field_b[var2Lifetime1];
           if (stackIn_15_0 != null) {
-            this.field_b[var2Lifetime1].f((byte) 59);
+            this.field_b[var2Lifetime1].processPrefetch((byte) 59);
           }
         }
     }
@@ -278,7 +278,7 @@ final class Js5ArchiveManager {
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param0.charAt(var6);
             if (qo.isAllowedNameCharacter((char) var7, param1 ^ -13)) {
-              var8 = af.a((char) var7, (byte) 22);
+              var8 = af.normalizeNameCharacter((char) var7, (byte) 22);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

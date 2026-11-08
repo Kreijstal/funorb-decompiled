@@ -77,7 +77,7 @@ final class IntKeyLookup {
         fk.setSpriteRasterTarget(LoadingTracker.field_h, -23095);
         MeshRasterState.useRasterClip();
         SoftwareRasterizer.clear();
-        cg.f(252566882);
+        SocialListEntry.f(252566882);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, -var5 + 256);
         }

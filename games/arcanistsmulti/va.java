@@ -63,7 +63,7 @@ final class va implements WidgetPainter {
     }
 
     final static boolean a(long param0, int param1, int[] param2, String param3, int param4) {
-        ij var6 = null;
+        SceneTabbedPanel var6 = null;
         RuntimeException var6_ref = null;
         CharSequence var7 = null;
         RuntimeException stackIn_9_0 = null;

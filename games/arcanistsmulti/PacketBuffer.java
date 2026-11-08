@@ -716,7 +716,7 @@ class PacketBuffer extends IntrusiveNode {
           qn.setTargetFrameRate(16, 50);
           sm.a(-107, 50);
           if (!lc.a((byte) 112)) {
-            ce.field_i = tj.a(4, -21402);
+            ce.field_i = CachedArchiveProvider.a(4, -21402);
             ci.field_d = AlternateUsernameCredentials.a(6, false);
           }
           Checkbox.a(2);
@@ -832,7 +832,7 @@ class PacketBuffer extends IntrusiveNode {
           qa.field_m = param4;
         }
         ConditionalTextValue.field_e[MouseInputHandler.field_b] = param1;
-        tj.field_u[MouseInputHandler.field_b] = param5;
+        CachedArchiveProvider.field_u[MouseInputHandler.field_b] = param5;
         PatchEnvelopeSet.field_o[MouseInputHandler.field_b] = param3;
         int var6 = param3 + param5 + param1;
         int var7 = ~var6 != param0 ? param1 * 1000 / var6 : 0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dh extends SceneWidget {
+final class SceneTextInput extends SceneWidget {
     static int field_Lb;
     private SceneWidget field_Cb;
     static String field_Nb;
@@ -30,7 +30,7 @@ final class dh extends SceneWidget {
         field_Hb = (boolean[][]) null;
     }
 
-    dh(int param0, int param1, int param2, int param3, String param4, SceneWidget param5, SceneWidget param6, SceneWidget param7) {
+    SceneTextInput(int param0, int param1, int param2, int param3, String param4, SceneWidget param5, SceneWidget param6, SceneWidget param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -103,7 +103,7 @@ final class dh extends SceneWidget {
           NumericDateInputWidget.field_L[param2] = param0;
           ArchiveProvider.field_f[param2] = new lc(param2);
           if (param1 != 9) {
-            dh.releaseStatics((byte) 121);
+            SceneTextInput.releaseStatics((byte) 121);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "dh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -136,31 +136,31 @@ final class dh extends SceneWidget {
           var3_int = 0;
           for (var4 = 0; var4 < 9; var4++) {
             if (var4 == 0) {
-              var2 = pk.a("", 0, "scn0", param0);
+              var2 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "scn0", param0);
             }
             if (var4 == 1) {
-              var2 = pk.a("", 0, "scn1", param0);
+              var2 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "scn1", param0);
             }
             if (var4 == 2) {
-              var2 = pk.a("", 0, "scn2", param0);
+              var2 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "scn2", param0);
             }
             if (3 == var4) {
-              var2 = pk.a("", 0, "scn3", param0);
+              var2 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "scn3", param0);
             }
             if (4 == var4) {
-              var2 = pk.a("", 0, "scn4", param0);
+              var2 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "scn4", param0);
             }
             if (var4 == 5) {
-              var2 = pk.a("", 0, "scn5", param0);
+              var2 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "scn5", param0);
             }
             if (var4 == 6) {
-              var2 = pk.a("", 0, "scn6", param0);
+              var2 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "scn6", param0);
             }
             if (var4 == 7) {
-              var2 = pk.a("", 0, "scn7", param0);
+              var2 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "scn7", param0);
             }
             if (var4 == 8) {
-              var2 = pk.a("", 0, "scn8", param0);
+              var2 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "scn8", param0);
             }
             DropdownList.field_I[var4] = (IndexedSprite) (((Object[]) (var2))[0]);
             for (var5 = 1; 9 > var5; var5++) {
@@ -204,11 +204,11 @@ final class dh extends SceneWidget {
           SoftwareRasterizer.drawCircleOutline(40, 16, 16, 1);
           var3.drawTransparent(0, 16);
           ScreenDisplayMode.field_i[6] = fj.loadSprite("", MouseWheelHandler.a((int) param1, 22546), param0, "clocktower");
-          gj.field_f = pk.a("", 0, "16", param0);
-          tg.field_b = pk.a("", 0, "32", param0);
+          gj.field_f = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "16", param0);
+          DualLinkDeque.field_b = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "32", param0);
           tk.field_x = qe.loadSpriteSheet(param0, "64", "", 122);
           md.field_f = qe.loadSpriteSheet(param0, "128", "", 46);
-          vg.field_M = af.a("volcano", "", 19412, param0);
+          vg.field_M = af.loadIndexedSpriteByName("volcano", "", 19412, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -224,7 +224,7 @@ final class dh extends SceneWidget {
         }
     }
 
-    final int b(boolean param0, boolean param1) {
+    final int processTextInput(boolean param0, boolean param1) {
         StringBuilder discarded$0 = null;
         int stackIn_26_0 = 0;
         int stackIn_26_1 = 0;
@@ -260,7 +260,7 @@ final class dh extends SceneWidget {
         }
         this.field_Ob.field_rb = this.field_Ib.toString();
         if (param0) {
-          dh.drawMeshTriangle(120, -69, 53, 92, -36, 113, 49, (int[]) null, 83, -103, -7, -17, -113, 48, -117, -23, 64);
+          SceneTextInput.drawMeshTriangle(120, -69, 53, 92, -36, 113, 49, (int[]) null, 83, -103, -7, -17, -113, 48, -117, -23, 64);
         }
         if (param1) {
           stackIn_26_0 = ~re.field_r;
@@ -607,7 +607,7 @@ final class dh extends SceneWidget {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean handleTypedKey(int param0) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         int var2;
@@ -635,7 +635,7 @@ final class dh extends SceneWidget {
         }
         if (param0 <= 61) {
           var3 = (int[]) null;
-          dh.defineScreen((int[]) null, 117, 95);
+          SceneTextInput.defineScreen((int[]) null, 117, 95);
         }
         if (IntrusiveDeque.field_d == 84) {
           if (this.field_Ib.length() <= 0) {
@@ -655,7 +655,7 @@ final class dh extends SceneWidget {
     final static int floorMod(int param0, boolean param1, int param2) {
         if (!param1) {
           int[] var4 = (int[]) null;
-          dh.defineScreen((int[]) null, 52, -9);
+          SceneTextInput.defineScreen((int[]) null, 52, -9);
         }
         int var3 = -1 + param2 & param0 >> 31;
         return var3 + (param0 + (param0 >>> 31)) % param2;

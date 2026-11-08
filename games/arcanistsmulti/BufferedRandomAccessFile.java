@@ -18,14 +18,14 @@ final class BufferedRandomAccessFile {
     private long field_m;
     private long field_c;
 
-    private final void a(byte param0) throws IOException {
+    private final void flushWriteBuffer(byte param0) throws IOException {
         int var2;
         int var3;
         int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         this.field_a = 0;
         if (~this.field_i != ~this.field_d) {
-          this.field_b.a((byte) -123, this.field_d);
+          this.field_b.seek((byte) -123, this.field_d);
           this.field_i = this.field_d;
         }
         if (param0 != 0) {
@@ -37,7 +37,7 @@ final class BufferedRandomAccessFile {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_b.a(this.field_e, false, var2, this.field_a);
+          var3 = this.field_b.read(this.field_e, false, var2, this.field_a);
           if (-1 != var3) {
             this.field_i = this.field_i + (long)var3;
             this.field_a = this.field_a + var3;
@@ -47,29 +47,29 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final static ResourceArchive a(int param0, byte param1) {
+    final static ResourceArchive openArchive(int param0, byte param1) {
         if (param1 < 5) {
           return (ResourceArchive) null;
         }
         return MenuButtonPanel.createResourceArchive(param0, true, 2097152, false, 1, false);
     }
 
-    final void c(byte param0) throws IOException {
+    final void close(byte param0) throws IOException {
         if (param0 >= -30) {
           this.field_f = -28;
         }
-        this.a(-1);
-        this.field_b.c(105);
+        this.fillReadBuffer(-1);
+        this.field_b.close(105);
     }
 
-    final long b(byte param0) {
+    final long length(byte param0) {
         if (param0 != -30) {
-          BufferedRandomAccessFile.a(87, (byte) 121);
+          BufferedRandomAccessFile.openArchive(87, (byte) 121);
         }
         return this.field_h;
     }
 
-    final void a(byte param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(byte param0, int param1, byte[] param2, int param3) throws IOException {
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         String stackIn_54_2 = null;
@@ -89,7 +89,7 @@ final class BufferedRandomAccessFile {
             }
             if (this.field_c != -1L && (this.field_c > this.field_d ||
               this.field_d > (this.field_c + (long)this.field_f))) {
-              this.a(param0 + 52);
+              this.fillReadBuffer(param0 + 52);
             }
             if (param0 != -53) {
               this.field_f = -91;
@@ -102,7 +102,7 @@ final class BufferedRandomAccessFile {
               param1 = param1 + var5_int;
               this.field_d = this.field_d + (long)var5_int;
               this.field_f = this.field_j.length;
-              this.a(-1);
+              this.fillReadBuffer(-1);
             }
             if (this.field_j.length >= param3) {
               if (param3 <= 0) {
@@ -119,10 +119,10 @@ final class BufferedRandomAccessFile {
               return;
             }
             if (this.field_d != this.field_i) {
-              this.field_b.a((byte) -123, this.field_d);
+              this.field_b.seek((byte) -123, this.field_d);
               this.field_i = this.field_d;
             }
-            this.field_b.a(param0 + 54, param1, param3, param2);
+            this.field_b.write(param0 + 54, param1, param3, param2);
             this.field_i = this.field_i + (long)param3;
             if (this.field_i > this.field_m) {
               this.field_m = this.field_i;
@@ -174,7 +174,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    private final void a(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -182,10 +182,10 @@ final class BufferedRandomAccessFile {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         if ((long)param0 != this.field_c) {
           if (this.field_i != this.field_c) {
-            this.field_b.a((byte) -123, this.field_c);
+            this.field_b.seek((byte) -123, this.field_c);
             this.field_i = this.field_c;
           }
-          this.field_b.a(1, 0, this.field_f, this.field_j);
+          this.field_b.write(1, 0, this.field_f, this.field_j);
           this.field_i = this.field_i + (long)this.field_f;
           if (this.field_m < this.field_i) {
             this.field_m = this.field_i;
@@ -220,14 +220,14 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.a(param1.length, param1, (byte) -39, 0);
+          this.read(param1.length, param1, (byte) -39, 0);
           if (param0 != -13848) {
             this.field_c = 25L;
           }
@@ -246,7 +246,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final void a(int param0, byte[] param1, byte param2, int param3) throws IOException {
+    final void read(int param0, byte[] param1, byte param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
@@ -300,10 +300,10 @@ final class BufferedRandomAccessFile {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param0 > this.field_e.length) {
-              this.field_b.a((byte) -123, this.field_d);
+              this.field_b.seek((byte) -123, this.field_d);
               this.field_i = this.field_d;
               while (param0 > 0) {
-                var9_intLifetime1 = this.field_b.a(param1, false, param0, param3);
+                var9_intLifetime1 = this.field_b.read(param1, false, param0, param3);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -318,7 +318,7 @@ final class BufferedRandomAccessFile {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param0 > 0)) {
-              this.a((byte) 0);
+              this.flushWriteBuffer((byte) 0);
               var9_intLifetime1Lifetime1 = param0;
               if (this.field_a < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_a;
@@ -397,7 +397,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         if (param1 >= -85) {
           String var5 = (String) null;
           BufferedRandomAccessFile.a(-98, (String) null, 53, 5, -83, (String) null);
@@ -451,7 +451,7 @@ final class BufferedRandomAccessFile {
         this.field_f = 0;
         try {
           this.field_b = param0;
-          dupTemp$0 = param0.a(-2775);
+          dupTemp$0 = param0.length(-2775);
           this.field_m = dupTemp$0;
           this.field_h = dupTemp$0;
           this.field_e = new byte[param1];

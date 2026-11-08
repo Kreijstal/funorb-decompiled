@@ -72,10 +72,10 @@ class IntrusiveNode {
             IntrusiveNode.releaseStatics((byte) -12);
           }
           var2 = var15.readUnsignedByte((byte) -118);
-          var3 = (nk) (pe.field_Lb.first(12623));
+          var3 = (nk) (ContextActionMenu.field_Lb.first(12623));
           while (var3 != null) {
             if (var2 != var3.field_p) {
-              var3 = (nk) (pe.field_Lb.next(0));
+              var3 = (nk) (ContextActionMenu.field_Lb.next(0));
               continue;
             }
             break;
@@ -119,10 +119,10 @@ class IntrusiveNode {
               var6[0][var10] = bb.field_i[var11];
               var7[0][4 * var10] = nf.field_z[var11];
               var7[0][var10 * 4 + 1] = ConditionalTextValue.field_e[var11];
-              var7[0][4 * var10 + 2] = tj.field_u[var11];
+              var7[0][4 * var10 + 2] = CachedArchiveProvider.field_u[var11];
               var7[0][3 + var10 * 4] = PatchEnvelopeSet.field_o[var11];
               if (MouseInputHandler.a(16, bb.field_i[var11]) &&
-                tj.field_u[var11] + ConditionalTextValue.field_e[var11] + PatchEnvelopeSet.field_o[var11] == 0) {
+                CachedArchiveProvider.field_u[var11] + ConditionalTextValue.field_e[var11] + PatchEnvelopeSet.field_o[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -137,10 +137,10 @@ class IntrusiveNode {
               var6[1][var14] = bb.field_i[var11Lifetime1];
               var7[1][4 * var14] = nf.field_z[var11Lifetime1];
               var7[1][1 + var14 * 4] = ConditionalTextValue.field_e[var11Lifetime1];
-              var7[1][var14 * 4 + 2] = tj.field_u[var11Lifetime1];
+              var7[1][var14 * 4 + 2] = CachedArchiveProvider.field_u[var11Lifetime1];
               var7[1][4 * var14 + 3] = PatchEnvelopeSet.field_o[var11Lifetime1];
               if (MouseInputHandler.a(16, bb.field_i[var11Lifetime1]) &&
-                ConditionalTextValue.field_e[var11Lifetime1] + tj.field_u[var11Lifetime1] + PatchEnvelopeSet.field_o[var11Lifetime1] == 0) {
+                ConditionalTextValue.field_e[var11Lifetime1] + CachedArchiveProvider.field_u[var11Lifetime1] + PatchEnvelopeSet.field_o[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
               }

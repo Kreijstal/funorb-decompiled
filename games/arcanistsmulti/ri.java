@@ -26,7 +26,7 @@ final class ri {
         ce.field_m = DraggableWidget.createRasterBuffer(param0, (java.awt.Component) ((Object) on.field_c), param2, (byte) -123);
         ce.field_m.a(true);
         ho.a((byte) 51, param2 / param1, param0 / 2);
-        nl.b(param0, param1 ^ 19131, param2);
+        IconTextSceneWidget.setViewSize(param0, param1 ^ 19131, param2);
         lc.a(param2, param0, false);
         td.a(true, param2 / 2, param0 / 2);
     }

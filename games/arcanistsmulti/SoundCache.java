@@ -174,11 +174,11 @@ final class SoundCache {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_g.b((byte) -79) == 1) {
+          if (this.field_g.getGroupCount((byte) -79) == 1) {
             stackIn_3_0 = this.a(-126, 0, param0, param1);
             return stackIn_3_0;
           }
-          if (param2 != ~this.field_g.a(param1, (byte) -60)) {
+          if (param2 != ~this.field_g.getFileCount(param1, (byte) -60)) {
             throw new RuntimeException();
           }
           stackIn_6_0 = this.a(-127, param1, param0, 0);
@@ -206,11 +206,11 @@ final class SoundCache {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_e.b((byte) -99) == 1) {
+          if (this.field_e.getGroupCount((byte) -99) == 1) {
             stackIn_3_0 = this.a(0, param0, param1, true);
             return stackIn_3_0;
           }
-          if (param2 != ~this.field_e.a(param0, (byte) -60)) {
+          if (param2 != ~this.field_e.getFileCount(param0, (byte) -60)) {
             throw new RuntimeException();
           }
           stackIn_6_0 = this.a(param0, 0, param1, true);

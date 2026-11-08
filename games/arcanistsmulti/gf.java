@@ -392,7 +392,7 @@ final class gf extends ResizableModalPanel implements ButtonListener {
         SceneWidget var3 = null;
         try {
           EmptyPainter.field_d = fj.loadSprite("basic", param0 ^ -22556, param1, "display_name_changed");
-          nl.field_Gb = new hb(0L, ReflectionCheckRequest.field_r, AccountRegistrationPanel.field_T, Js5NetworkRequest.field_z);
+          IconTextSceneWidget.field_Gb = new hb(0L, ReflectionCheckRequest.field_r, AccountRegistrationPanel.field_T, Js5NetworkRequest.field_z);
           dd.field_c = new hb(0L, ReflectionCheckRequest.field_r, dm.field_I, NumericDateInputWidget.field_M);
           ec.field_d = new SceneWidget(0L, (SceneWidget) null);
           NanoFrameClock.field_j = new SceneWidget(0L, IntrusiveNode.field_c);
@@ -403,15 +403,15 @@ final class gf extends ResizableModalPanel implements ButtonListener {
           ec.field_d.addChild(NanoFrameClock.field_j, 106);
           ec.field_d.addChild(ClientException.field_d, param0 + 14);
           ec.field_d.addChild(nk.field_n, 8);
-          ec.field_d.addChild(nl.field_Gb, param0 - 61);
+          ec.field_d.addChild(IconTextSceneWidget.field_Gb, param0 - 61);
           ec.field_d.addChild(cc.field_a, 85);
           if (param0 != 72) {
             ResourceArchive var4 = (ResourceArchive) null;
             gf.loadDisplayNameSprites((byte) 119, (ResourceArchive) null);
           }
-          nl.field_Gb.field_Db.field_Hb.applyStyle(IntrusiveNode.field_c, (byte) 127);
-          nl.field_Gb.field_Db.field_Hb.field_gb = 1;
-          var6 = nl.field_Gb.field_Db.field_Hb;
+          IconTextSceneWidget.field_Gb.field_Db.field_Hb.applyStyle(IntrusiveNode.field_c, (byte) 127);
+          IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_gb = 1;
+          var6 = IconTextSceneWidget.field_Gb.field_Db.field_Hb;
           var7 = var6;
           var7.field_X = 1;
           dd.field_c.field_Db.field_Hb.applyStyle(IntrusiveNode.field_c, (byte) 114);
