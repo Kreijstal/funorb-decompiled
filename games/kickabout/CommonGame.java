@@ -134,7 +134,7 @@ final class CommonGame {
               this.aiTick = param0.readBits(8, 59);
               break;
             }
-            this.bigHeadMode = ContentTransitionDialog.a(param0, (byte) -39);
+            this.bigHeadMode = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
           }
           param0.finishBitRead((byte) 115);
           return;
@@ -643,7 +643,7 @@ final class CommonGame {
                       if (var4_ref_nlLifetime1.field_z < 0) {
                         this.passToTeammate(-var4_ref_nlLifetime1.field_z, (byte) -72);
                       } else {
-                        var5_intLifetime1 = var4_ref_nlLifetime1.a(var4_ref_nlLifetime1.field_z, (byte) -68);
+                        var5_intLifetime1 = var4_ref_nlLifetime1.getChargeKickPower(var4_ref_nlLifetime1.field_z, (byte) -68);
                         this.kickBall(var5_intLifetime1, var4_ref_nlLifetime1.field_O, var4_ref_nlLifetime1.stats.usesHotshotAbilities(var4_ref_nlLifetime1.member, (byte) -62), var4_ref_nlLifetime1.field_x, (byte) -66, var4_ref_nlLifetime1.field_P);
                         this.field_V.inheritControlSource((MatchAgent) (var4_ref_nlLifetime1), (byte) 84);
                         var6_ref_nl = this.field_P[-var2_int + 1][0];
@@ -1883,7 +1883,7 @@ final class CommonGame {
             if (var4 != 0) {
               return;
             }
-            if (!var5.d((byte) 108)) {
+            if (!var5.canStartAction((byte) 108)) {
               return;
             }
             if (this.field_l) {
@@ -1906,14 +1906,14 @@ final class CommonGame {
           var5.field_z = param1.value;
           var8Lifetime1 = var5.directionMask(5339);
           var9 = PlayerContextMenu.directionMaskFromVector(true, var7, var6);
-          stackIn_41_0 = (SquadPickerDialog.b(170, var8Lifetime1 ^ var9) <= 1) ? 0 : 1;
+          stackIn_41_0 = (SquadPickerDialog.bitCount(170, var8Lifetime1 ^ var9) <= 1) ? 0 : 1;
           var10 = stackIn_41_0;
           var5.field_h = var9;
           var5.setAction((byte) -31, 2);
           if (var10 != 0) {
             var5.actionTime = var5.actionTime + 16;
           }
-          var11 = var5.a(var5.field_z, (byte) -68) - 128;
+          var11 = var5.getChargeKickPower(var5.field_z, (byte) -68) - 128;
           if (var11 > 0) {
             var5.actionTime = var5.actionTime + (16 * var11 >> 7);
           }
@@ -3125,8 +3125,8 @@ final class CommonGame {
             this.winner = param0.readBits(3, 59) - 3;
             var4_int = 0;
             while (this.playerCount > var4_int) {
-              this.field_g[var4_int].field_l = ContentTransitionDialog.a(param0, (byte) -39);
-              this.field_g[var4_int].field_i = ContentTransitionDialog.a(param0, (byte) -39);
+              this.field_g[var4_int].field_l = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
+              this.field_g[var4_int].field_i = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
               stackIn_85_0 = var4_int;
               stackIn_85_1 = param1;
               if (var7 != 0) {
@@ -3228,7 +3228,7 @@ final class CommonGame {
               this.aiTick = param0.readBits(8, 59);
               break;
             }
-            this.bigHeadMode = ContentTransitionDialog.a(param0, (byte) -39);
+            this.bigHeadMode = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
           }
           param0.finishBitRead((byte) 95);
           return;

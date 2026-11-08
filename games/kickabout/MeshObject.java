@@ -63,10 +63,10 @@ abstract class MeshObject {
               IntValueNode.field_e = new WorldSpriteDecoration[26];
               var1_int = 0;
               for (var2 = 0; var2 < 14; var2++) {
-                var3_ref_ut = PlatformTaskState.field_b[LoggedPossession.a((byte) -24, 3)];
+                var3_ref_ut = PlatformTaskState.field_b[LoggedPossession.nextRandomInt((byte) -24, 3)];
                 var4 = -280;
                 var5 = -200 + var2 * 130;
-                if (LoggedPossession.a((byte) -24, 2) == 0) {
+                if (LoggedPossession.nextRandomInt((byte) -24, 2) == 0) {
                   var4 = -110 + (-var4 + 896);
                 }
                 incrementValue$45 = var1_int;
@@ -77,7 +77,7 @@ abstract class MeshObject {
               for (var3 = 0; var3 < 6; var3++) {
                 incrementValue$44 = var1_int;
                 var1_int++;
-                IntValueNode.field_e[incrementValue$44] = new WorldSpriteDecoration(MouseInputHandler.field_g[LoggedPossession.a((byte) -24, 2)], var2Lifetime1, 1394);
+                IntValueNode.field_e[incrementValue$44] = new WorldSpriteDecoration(MouseInputHandler.field_g[LoggedPossession.nextRandomInt((byte) -24, 2)], var2Lifetime1, 1394);
                 stackIn_17_0 = var2Lifetime1;
                 if (0 == (var3 & 1)) {
                   stackIn_18_1 = 95;
@@ -90,7 +90,7 @@ abstract class MeshObject {
               for (var3Lifetime1 = 0; var3Lifetime1 < 6; var3Lifetime1++) {
                 incrementValue$43 = var1_int;
                 var1_int++;
-                IntValueNode.field_e[incrementValue$43] = new WorldSpriteDecoration(MouseInputHandler.field_g[LoggedPossession.a((byte) -24, 2)], var2Lifetime2, -90);
+                IntValueNode.field_e[incrementValue$43] = new WorldSpriteDecoration(MouseInputHandler.field_g[LoggedPossession.nextRandomInt((byte) -24, 2)], var2Lifetime2, -90);
                 stackIn_22_0 = var2Lifetime2;
                 stackIn_22_1 = ~(1 & var3Lifetime1);
                 stackIn_22_2 = -1;
@@ -262,7 +262,7 @@ abstract class MeshObject {
           if (StreetSceneryLoader.field_k) {
             ReceivedAuctionItem.closeSharedPopups((byte) 119);
             PitchSurfaceLoader.a(-2);
-            RasterStateSnapshot.a(0);
+            RasterStateSnapshot.resetSocialListState(0);
             StreetSceneryLoader.field_k = false;
           }
           if (param0 < 42) {

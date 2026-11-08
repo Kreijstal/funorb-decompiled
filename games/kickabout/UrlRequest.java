@@ -23,7 +23,7 @@ final class UrlRequest {
         if (!this.field_h.a((byte) 70)) {
           return false;
         }
-        this.field_d = this.field_h.b(0);
+        this.field_d = this.field_h.getCompletedResponse(0);
         if (param0 < -78) {
           this.field_h = null;
           return true;

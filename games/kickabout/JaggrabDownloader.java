@@ -17,7 +17,7 @@ final class JaggrabDownloader implements Runnable {
     private PlatformTask field_i;
     static boolean field_c;
 
-    final PacketBuffer b(int param0) {
+    final PacketBuffer getCompletedResponse(int param0) {
         if (param0 != 0) {
           return (PacketBuffer) null;
         }

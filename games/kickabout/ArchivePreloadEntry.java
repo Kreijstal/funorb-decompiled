@@ -41,7 +41,7 @@ final class ArchivePreloadEntry {
             }
             var3 = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], LoginResponseUiSupport.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], var9);
           }
-          ScrollContainer.h((byte) -111);
+          ScrollContainer.releaseDecodedSpriteBuffers((byte) -111);
           return (Sprite) (var3);
         }
         return (Sprite) null;

@@ -33,7 +33,7 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
         }
     }
 
-    final static byte[] a(String param0, int param1) {
+    final static byte[] loadNamedResource(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -60,7 +60,7 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
         }
     }
 
-    final void a(byte param0) {
+    final void layoutChildWidgets(byte param0) {
         int var2 = 250;
         this.field_G.setBounds(25, param0 + 119, -var2 + this.field_n >> 1, 140, 20 + this.field_i - 25 >> 1);
         this.field_D.setBounds(30, 1, 140 + (this.field_n - var2 >> 1) + 10, 100, (20 + (this.field_i - 30) >> 1) + 2);

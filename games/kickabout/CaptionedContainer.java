@@ -14,7 +14,7 @@ final class CaptionedContainer extends SingleChildContainer {
     static String field_L;
     private int field_M;
 
-    final static void a(String param0, byte param1) {
+    final static void updateTooltipTracking(String param0, byte param1) {
         int stackIn_19_0 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
@@ -111,7 +111,7 @@ final class CaptionedContainer extends SingleChildContainer {
         field_K = null;
         if (param0 < 89) {
           String var2 = (String) null;
-          CaptionedContainer.a((String) null, (byte) 122);
+          CaptionedContainer.updateTooltipTracking((String) null, (byte) 122);
         }
     }
 

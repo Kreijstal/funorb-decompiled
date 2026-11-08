@@ -359,7 +359,7 @@ final class PlayerStats implements PopupCard {
           PlayerStats.releaseStatics(3);
         }
         if (null != AnimationClip.field_d) {
-          AnimationClip.field_d.p(param0 ^ 1496);
+          AnimationClip.field_d.stopProgressAnimation(param0 ^ 1496);
         }
         FixedVelocitySupport.resetTooltipTracking((byte) 127);
     }
@@ -431,7 +431,7 @@ final class PlayerStats implements PopupCard {
           PlayerStats.sendLobbyGamePreferences(-79, -94);
         }
         GrayscalePaletteSupport.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, param0, 120);
-        RankingRowNode.a(119, PitchAppearanceSupport.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, 0);
+        RankingRowNode.layoutChatPanelOverlay(119, PitchAppearanceSupport.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, 0);
     }
 
     final int trinketSpeedBonus(int param0, boolean param1) {
@@ -981,7 +981,7 @@ final class PlayerStats implements PopupCard {
         }
         var16 = LoginKind.getPlayerPortrait(stackIn_31_0, stackIn_31_1, this, stackIn_31_3, stackIn_31_4, stackIn_36_5);
         if (var16 == null) {
-          ReceivedAuctionItemRow.a(param1 + 24, -103, -19 + (param6 + 50));
+          ReceivedAuctionItemRow.drawLoadingSpinner(param1 + 24, -103, -19 + (param6 + 50));
         } else {
           var16.draw(7 + param1, 50 + param6 - (var16.field_v + 1));
         }

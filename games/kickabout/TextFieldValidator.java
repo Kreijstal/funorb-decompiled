@@ -144,7 +144,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
 
     final static void a(int param0, boolean param1, int param2, int param3) {
         SocialRowOrderSupport.updateQuickChatKeysHelp(-27, param1);
-        DraggableWidget.a(param0, (byte) -26, param1, param3);
+        DraggableWidget.updateQuickChatMenu(param0, (byte) -26, param1, param3);
         if (param2 != 14686) {
           field_g = (int[]) null;
         }

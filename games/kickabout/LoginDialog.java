@@ -135,12 +135,12 @@ final class LoginDialog extends ContentTransitionDialog {
         }
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_cb = null;
         field_db = null;
         field_eb = (int[][]) null;
         if (param0 <= 29) {
-          LoginDialog.j((byte) -47);
+          LoginDialog.releaseStatics((byte) -47);
         }
     }
 

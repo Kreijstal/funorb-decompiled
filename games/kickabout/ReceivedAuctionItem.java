@@ -92,7 +92,7 @@ final class ReceivedAuctionItem extends AuctionItem {
 
     final static void closeSharedPopups(byte param0) {
         MusicPatchNode.closePlayerContextMenu(67);
-        GameModesHelpScreen.closeHoverTooltip((byte) -90);
+        GameModesHelpScreen.closeSocialNamePrompt((byte) -90);
         TextPromptState.field_b = null;
         PendingRequestAcknowledgement.closeQuickChat(47);
         if (param0 != 119) {
@@ -119,7 +119,7 @@ final class ReceivedAuctionItem extends AuctionItem {
             var8 = (String) null;
             ReceivedAuctionItem.setChatChannelLabel((String) null, 94);
           }
-          if (HoverTooltip.field_Eb) {
+          if (SocialNamePrompt.field_Eb) {
             return;
           }
           var9 = ThumbnailStateFactory.field_d.field_V;
@@ -138,7 +138,7 @@ final class ReceivedAuctionItem extends AuctionItem {
               return;
             }
             var3 = ThumbnailStateFactory.field_d.field_P[0][var2];
-            if (!RasterStateSnapshot.a(2235, var3.positionY, 20, var3.positionX)) {
+            if (!RasterStateSnapshot.moveTutorialBallToward(2235, var3.positionY, 20, var3.positionX)) {
               var9.uncatchable = 3;
             } else {
               var9.uncatchable = 0;

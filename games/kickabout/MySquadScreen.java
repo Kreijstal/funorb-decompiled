@@ -113,15 +113,15 @@ final class MySquadScreen extends TeamManagementScreen {
           var5_ref_pu__ = this.field_T;
           for (var6_int = 0; var6_int < var5_ref_pu__.length; var6_int++) {
             var7 = var5_ref_pu__[var6_int];
-            var7.h((byte) 30);
+            var7.showHoverTooltip((byte) 30);
           }
           if (this.field_Q.field_sb == 1) {
-            NineSlicePanelPainter.a((byte) -120, -1, RegistrationRequestState.field_h.field_q[this.field_L.field_Fb], var4_ref_up);
+            NineSlicePanelPainter.enqueueStatChoiceDialog((byte) -120, -1, RegistrationRequestState.field_h.field_q[this.field_L.field_Fb], var4_ref_up);
           }
           for (var5 = 0; this.field_K.length > var5; var5++) {
             if (1 == this.field_K[var5].field_sb) {
               var6 = GeneratedPanelPainter.field_g[var4_ref_up.trinketIds[var5]];
-              RotaryDialWidget.c(-1, RegistrationRequestState.field_h.field_q[this.field_L.field_Fb], var5, var6.field_k);
+              RotaryDialWidget.enqueueTrinketShopDialog(-1, RegistrationRequestState.field_h.field_q[this.field_L.field_Fb], var5, var6.field_k);
             }
           }
         }
@@ -208,7 +208,7 @@ final class MySquadScreen extends TeamManagementScreen {
           if (var7 != null) {
             ((Sprite) ((Object) var7)).draw(var8 - (((Sprite) ((Object) var7)).field_o >> 1), -(((Sprite) ((Object) var7)).field_v >> 1) + var9);
           } else {
-            ReceivedAuctionItemRow.a(var8, param0 - 94, var9);
+            ReceivedAuctionItemRow.drawLoadingSpinner(var8, param0 - 94, var9);
           }
           var10 = 60 + this.field_I.field_F;
           var11 = 44 + this.field_I.field_T;
@@ -263,7 +263,7 @@ final class MySquadScreen extends TeamManagementScreen {
             if (var15_ref != null &&
               !PlayArea.isGuestSession(param0 + 105)) {
               if (!ValidationIndicator.field_F) {
-                ReceivedAuctionItemRow.a(this.field_G.field_F + (this.field_G.field_q >> 1), -32, (this.field_G.field_mb >> 1) + this.field_G.field_T);
+                ReceivedAuctionItemRow.drawLoadingSpinner(this.field_G.field_F + (this.field_G.field_q >> 1), -32, (this.field_G.field_mb >> 1) + this.field_G.field_T);
               } else {
                 var16Lifetime2 = var28.field_v;
                 for (var17_int = 0; 3 > var17_int; var17_int++) {

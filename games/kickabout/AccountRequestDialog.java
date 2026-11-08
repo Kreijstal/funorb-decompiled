@@ -55,7 +55,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_bb = null;
         field_fb = null;
         int var1 = -48 % ((-50 - param0) / 51);
@@ -70,7 +70,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           SetLagCommand.showLoginForm(true);
         } else {
           if (this.field_db) {
-            PitchSurfaceLoader.c(-3);
+            PitchSurfaceLoader.showCurrentLoginForm(-3);
           }
         }
         if (param0 >= -75) {
@@ -127,7 +127,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -60) {
-            AccountRequestDialog.j((byte) 84);
+            AccountRequestDialog.releaseStatics((byte) 84);
           }
           if (param3 != 13) {
             stackIn_7_0 = super.handleKeyInput(param0, (byte) -94, param2, param3);

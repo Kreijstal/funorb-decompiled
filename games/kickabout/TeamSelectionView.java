@@ -218,7 +218,7 @@ final class TeamSelectionView extends MatchPhaseView {
             this.field_t.addChild((byte) -126, this.field_k[var4_int]);
           }
           if (this.isLocalParticipantActive((byte) 13)) {
-            this.field_l = new CheckboxLabelWidget(HoverTooltip.field_Ab, ByteArrayPool.field_d, 120);
+            this.field_l = new CheckboxLabelWidget(SocialNamePrompt.field_Ab, ByteArrayPool.field_d, 120);
             this.field_l.field_s = 442;
             this.field_l.field_J = 322;
             this.field_t.addChild((byte) -121, (UiLayoutNode) (this.field_l));

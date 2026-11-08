@@ -48,9 +48,9 @@ final class SellPlayerDialog extends MessageDialog {
           if (null == ThumbnailStateFactory.field_d) {
             return;
           }
-          if (HoverTooltip.field_Eb) {
+          if (SocialNamePrompt.field_Eb) {
             if (QuickChatCategoryCache.advanceScriptedTutorialPlayers(105)) {
-              HoverTooltip.field_Eb = false;
+              SocialNamePrompt.field_Eb = false;
               ThumbnailStateFactory.field_d.participantStatus[0].controlledSlot = PitchDecorationSupport.field_d;
               LoggedPossession.a(false);
               TutorialScenerySupport.buildTutorialScenery(-1622);
@@ -85,7 +85,7 @@ final class SellPlayerDialog extends MessageDialog {
           }
           var3Lifetime1 = 640;
           if (HuffmanCodec.field_e == 1 &&
-            !HoverTooltip.field_Eb &&
+            !SocialNamePrompt.field_Eb &&
             (1050 > EmailAvailabilityValidator.field_k.pixelY(true) ||
             640 != AuctionLogEntry.field_g) ||
             (2 == HuffmanCodec.field_e ||
@@ -126,7 +126,7 @@ final class SellPlayerDialog extends MessageDialog {
               if (1 == ThumbnailStateFactory.field_d.field_V.possessorTeam &&
                 var4_ref_nl.action == 0) {
                 QuickChatCategory.advanceToPoint(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
-                if (HoverTooltip.field_Eb &&
+                if (SocialNamePrompt.field_Eb &&
                   AccountInputValidationResult.field_f.action == 0) {
                   AccountInputValidationResult.field_f.directionMask = 0;
                   AccountInputValidationResult.field_f.setDirectionFromMask(1, 26214);
@@ -135,7 +135,7 @@ final class SellPlayerDialog extends MessageDialog {
             }
           }
           if (HuffmanCodec.field_e == 8) {
-            if (!HoverTooltip.field_Eb) {
+            if (!SocialNamePrompt.field_Eb) {
               ThumbnailStateFactory.field_d.participantStatus[1].controlledSlot = 0;
               var4Lifetime2 = ThumbnailStateFactory.field_d.field_V.pixelX(true);
               var5_intLifetime1 = ThumbnailStateFactory.field_d.field_V.pixelY(879306160);
@@ -152,7 +152,7 @@ final class SellPlayerDialog extends MessageDialog {
               MatchHudSupport.moveTutorialPlayerToLineup(true, (byte) 83, var4Lifetime3, 1);
             }
             for (var4Lifetime3Lifetime1 = 3; var4Lifetime3Lifetime1 < 5; var4Lifetime3Lifetime1++) {
-              if (!HoverTooltip.field_Eb &&
+              if (!SocialNamePrompt.field_Eb &&
                 ThumbnailStateFactory.field_d.field_P[1][var4Lifetime3Lifetime1].action == 0) {
                 ThumbnailStateFactory.field_d.field_P[1][var4Lifetime3Lifetime1].setDirectionFromMask(1, 26214);
               }
@@ -176,7 +176,7 @@ final class SellPlayerDialog extends MessageDialog {
             }
           }
           if (HuffmanCodec.field_e == 13) {
-            if (!HoverTooltip.field_Eb) {
+            if (!SocialNamePrompt.field_Eb) {
               if (ThumbnailStateFactory.field_d.field_X.goalCount > 25) {
                 ThumbnailStateFactory.field_d.field_X.goalCount = 0;
                 if (ThumbnailStateFactory.field_d.field_V.horizontalSpeedSquared(44) == 0) {
@@ -186,7 +186,7 @@ final class SellPlayerDialog extends MessageDialog {
             } else {
               ThumbnailStateFactory.field_d.field_X.goalCount = 0;
               if (ThumbnailStateFactory.field_d.field_P[1][0].positionY < 0) {
-                RasterStateSnapshot.a(2235, 2949120, 4, 29360128);
+                RasterStateSnapshot.moveTutorialBallToward(2235, 2949120, 4, 29360128);
               }
               if (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0) {
                 ThumbnailStateFactory.field_d.field_V.possessorTeam = -1;

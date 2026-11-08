@@ -169,7 +169,7 @@ final class MatchUiLayoutSupport {
           RasterGlowSupport.field_g.field_R = PanelSpriteFactory.createPanelSprites(RasterGlowSupport.field_g.field_mb, 3, 1, 11579568, 8421504, (byte) 97);
           TickClock.field_d.setBounds(true, RasterGlowSupport.field_g.field_q - 10, 5, 5, -10 + (RasterGlowSupport.field_g.field_mb - 24) - 2);
           BlackFadeScreen.field_i.setBounds(true, 80, (-80 + RasterGlowSupport.field_g.field_q) / 2, -24 + (-5 + RasterGlowSupport.field_g.field_mb), 24);
-          ClientException.a(0);
+          ClientException.layoutPlayerListPanel(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

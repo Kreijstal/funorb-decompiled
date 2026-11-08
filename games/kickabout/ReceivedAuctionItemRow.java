@@ -40,7 +40,7 @@ final class ReceivedAuctionItemRow extends ListRow {
           stackIn_29_0.field_lb = stackIn_30_1;
           if (param1) {
             for (var4 = 0; var4 < this.field_Eb.length; var4++) {
-              this.field_Eb[var4].h((byte) 30);
+              this.field_Eb[var4].showHoverTooltip((byte) 30);
             }
           }
           if (this.field_Jb.field_sb == 1) {
@@ -61,7 +61,7 @@ final class ReceivedAuctionItemRow extends ListRow {
                       SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 4);
                       ShopPlayerSlot.playDefaultFadingSound(53, 9);
                     } else {
-                      LoadingProgressDialog.a(-45, this.field_Hb);
+                      LoadingProgressDialog.enqueueReceivedItemDialog(-45, this.field_Hb);
                     }
                   }
                 } else {
@@ -173,7 +173,7 @@ final class ReceivedAuctionItemRow extends ListRow {
             if (var5 != null) {
               var5.draw(1 + var4, this.field_T + 4);
             } else {
-              ReceivedAuctionItemRow.a(1 + var4 + 19, -97, this.field_T + 4 + 23);
+              ReceivedAuctionItemRow.drawLoadingSpinner(1 + var4 + 19, -97, this.field_T + 4 + 23);
             }
             this.field_X.drawText(var12.getDisplayName(100), 45 + var4, (this.field_mb >> 1) + this.field_T + 4, this.field_y, -1);
             var4 = var4 + this.field_Db[0];
@@ -255,13 +255,13 @@ final class ReceivedAuctionItemRow extends ListRow {
               IsSixCommand.field_C.drawCentered(this.field_Ib, this.field_F + (this.field_q >> 1), this.field_T + 42, 16777215, -1);
             }
           } else {
-            ReceivedAuctionItemRow.a(this.field_Db[1] + (this.field_Db[0] + this.field_F + (this.field_Db[2] - 30)), -96, this.field_T + 23);
+            ReceivedAuctionItemRow.drawLoadingSpinner(this.field_Db[1] + (this.field_Db[0] + this.field_F + (this.field_Db[2] - 30)), -96, this.field_T + 23);
           }
           return;
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void drawLoadingSpinner(int param0, int param1, int param2) {
         if (param1 > -16) {
           field_Mb = -60;
         }

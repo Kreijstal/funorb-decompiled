@@ -61,7 +61,7 @@ final class TextPromptDialog extends UiLayoutNode {
               }
               var10 = RenderedBall.formatChatMessagePrefix((byte) -92, var8_ref_tv);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_tv.field_g);
-              var12 = LeaguesHelpScreen.a(var8_ref_tv, 31100);
+              var12 = LeaguesHelpScreen.getChatMessageColor(var8_ref_tv, 31100);
               var8_ref_tv.field_s = new UiLayoutNode(0L, ArchiveRequest.field_o, var11);
               var6 = var6 + param1;
               var8_ref_tv.field_s.field_X = FootballerAgent.field_i;
@@ -481,7 +481,7 @@ final class TextPromptDialog extends UiLayoutNode {
             this.setBounds(true, var23, var25, var26, var24);
             return;
           }
-          this.field_Cb = new UiLayoutNode(0L, param8, HoverTooltip.field_Bb);
+          this.field_Cb = new UiLayoutNode(0L, param8, SocialNamePrompt.field_Bb);
           this.field_Cb.field_y = 11184810;
           this.field_Cb.field_A = 1;
           this.field_Nb.addChild((byte) -110, this.field_Cb);

@@ -44,7 +44,7 @@ final class ClientUiOverlay implements OverlayLayer {
         }
         var2 = stackIn_6_0;
         var4 = 125 / ((param0 - 50) / 45);
-        SortCriterion.a(var2 != 0, (byte) -89);
+        SortCriterion.drawChatAndPopups(var2 != 0, (byte) -89);
         var3 = GrayscalePaletteSupport.field_a.field_T;
         if (!this.capturesInput((byte) 103) &&
           480 > var3) {
@@ -318,7 +318,7 @@ final class ClientUiOverlay implements OverlayLayer {
           stackIn_24_9 = true;
           stackIn_24_10 = 13;
           stackIn_25_11 = (this.capturesInput((byte) 121)) ? false : true;
-          QuickChatMenuFactory.$cfr$intArgs$a$20586b1b86c8(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_22_3, stackIn_24_4, stackIn_24_5 != 0, stackIn_24_6, stackIn_24_7, stackIn_24_8, stackIn_24_9, stackIn_24_10, stackIn_25_11);
+          QuickChatMenuFactory.updateSharedInterface(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_22_3, stackIn_24_4, stackIn_24_5 != 0, stackIn_24_6, stackIn_24_7, stackIn_24_8, stackIn_24_9, stackIn_24_10, stackIn_25_11);
           if (SelectionMarkerSupport.field_e) {
             FootballerAiOverlaySupport.field_d.writeIsaacByte(50, (byte) 105);
             SelectionMarkerSupport.field_e = false;

@@ -156,13 +156,13 @@ final class SocialListLayoutSupport {
             var6 = (SocialPlayerRow) (var4.next(33));
           }
           if (TournamentChampionDialog.field_F.field_Eb.field_sb != 0) {
-            StreetSceneryLoader.field_m = new HoverTooltip(TournamentChampionDialog.field_F.field_Eb.field_F, TournamentChampionDialog.field_F.field_Eb.field_T, TournamentChampionDialog.field_F.field_Eb.field_q, TournamentChampionDialog.field_F.field_Eb.field_mb, ParticipantStatus.field_j, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+            StreetSceneryLoader.field_m = new SocialNamePrompt(TournamentChampionDialog.field_F.field_Eb.field_F, TournamentChampionDialog.field_F.field_Eb.field_T, TournamentChampionDialog.field_F.field_Eb.field_q, TournamentChampionDialog.field_F.field_Eb.field_mb, ParticipantStatus.field_j, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
             PanelSpriteFactory.field_b = 2;
           }
           if (0 == TournamentChampionDialog.field_F.field_zb.field_sb) {
             return;
           }
-          StreetSceneryLoader.field_m = new HoverTooltip(TournamentChampionDialog.field_F.field_zb.field_F, TournamentChampionDialog.field_F.field_zb.field_T, TournamentChampionDialog.field_F.field_zb.field_q, TournamentChampionDialog.field_F.field_zb.field_mb, PlatformTaskState.field_d, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+          StreetSceneryLoader.field_m = new SocialNamePrompt(TournamentChampionDialog.field_F.field_zb.field_F, TournamentChampionDialog.field_F.field_zb.field_T, TournamentChampionDialog.field_F.field_zb.field_q, TournamentChampionDialog.field_F.field_zb.field_mb, PlatformTaskState.field_d, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
           PanelSpriteFactory.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

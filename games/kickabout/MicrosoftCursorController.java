@@ -53,7 +53,7 @@ final class MicrosoftCursorController extends com.ms.dll.Callback {
         com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void setCursorPosition(int param0, byte param1, int param2) {
         com.ms.win32.User32.SetCursorPos(param2, param0);
         if (param1 != -40) {
           this.callback(-26, -63, -123, 69);

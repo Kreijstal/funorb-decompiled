@@ -11,15 +11,15 @@ final class IsSixCommand extends ConsoleCommand {
     static int field_A;
     static LoginForm field_E;
 
-    final static LoginMethod[] a(boolean param0) {
+    final static LoginMethod[] getLoginMethods(boolean param0) {
         if (param0) {
           return new LoginMethod[]{field_F, AccountRegistrationPanel.field_I, KitStyleDefinition.field_h};
         }
-        IsSixCommand.g(56);
+        IsSixCommand.releaseStatics(56);
         return new LoginMethod[]{field_F, AccountRegistrationPanel.field_I, KitStyleDefinition.field_h};
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 50) {
           field_E = null;
           field_C = null;
@@ -28,7 +28,7 @@ final class IsSixCommand extends ConsoleCommand {
           field_F = null;
           return;
         }
-        IsSixCommand.a(true);
+        IsSixCommand.getLoginMethods(true);
         field_E = null;
         field_C = null;
         field_G = null;

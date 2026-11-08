@@ -68,7 +68,7 @@ final class SquadGridWidget extends UiLayoutNode {
           var3_ref_kq = this.field_Eb[var2];
           var4_int = this.field_Hb.field_q[var2];
           var3_ref_kq.a(this.field_Hb.field_R, this.field_Hb.field_w, (byte) 127, this.field_Hb.field_k, this.field_Hb.squad[var4_int]);
-          var3_ref_kq.a((byte) 25, this.field_Hb, var4_int);
+          var3_ref_kq.updateAuctionStatusIcon((byte) 25, this.field_Hb, var4_int);
           if (!var3_ref_kq.field_Eb.isEmpty(-2) &&
             var3_ref_kq.field_qb != 0) {
             var3_ref_kq.field_s = -var3_ref_kq.field_bb + (-this.field_F + ArrayWidgetContainer.field_x);
@@ -628,7 +628,7 @@ final class SquadGridWidget extends UiLayoutNode {
         AccountChoicePanel.field_I = new String[]{RenderedBall.field_H, UiInputRoutingSupport.field_a, MouseInputHandler.field_a};
         MatchingTextValidator.field_o[10] = MonotonicClock.field_b;
         MatchingTextValidator.field_o[12] = NotificationPanelPositionSupport.field_b;
-        MatchingTextValidator.field_o[3] = HoverTooltip.field_zb;
+        MatchingTextValidator.field_o[3] = SocialNamePrompt.field_zb;
         MatchingTextValidator.field_o[4] = MeshPreviewSupport.field_b;
         MatchingTextValidator.field_o[2] = TeamManagementScreen.field_E;
         MatchingTextValidator.field_o[25] = ScrollContainer.field_Bb;
@@ -653,7 +653,7 @@ final class SquadGridWidget extends UiLayoutNode {
         MatchingTextValidator.field_o[39] = DiagnosticsOverlaySupport.field_f;
         MatchingTextValidator.field_o[41] = ConsoleExpression.field_i;
         MatchingTextValidator.field_o[19] = MenuButton.field_c;
-        MatchingTextValidator.field_o[38] = HoverTooltip.field_Ab;
+        MatchingTextValidator.field_o[38] = SocialNamePrompt.field_Ab;
         MatchingTextValidator.field_o[47] = HighScoreQuery.field_e;
         MatchingTextValidator.field_o[36] = SquadOrderSupport.field_a;
         MatchingTextValidator.field_o[11] = MonotonicClock.field_c;

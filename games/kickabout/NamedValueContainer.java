@@ -461,7 +461,7 @@ final class NamedValueContainer {
           this.field_e = new IntrusiveDeque();
           this.field_a = 2;
           while (var3_int - this.field_a > param0.field_n) {
-            var4 = (int)param0.h(119, this.field_a);
+            var4 = (int)param0.readUnsignedLongBytes(119, this.field_a);
             var5 = param0.field_n + var4;
             try {
               try {

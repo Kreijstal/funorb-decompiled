@@ -44,9 +44,9 @@ final class RankingsRequest extends IntrusiveNode {
           var3 = var9;
           if (RankingsScreen.field_C == 0) {
             for (var4 = 0; var4 < 30; var4++) {
-              var10 = var9[LoggedPossession.a((byte) -24, var9.length)];
-              var6 = LoggedPossession.a((byte) -24, 896 - (var10.field_o >> 1));
-              var7 = LoggedPossession.a((byte) -24, 1344 - (var10.field_v >> 1));
+              var10 = var9[LoggedPossession.nextRandomInt((byte) -24, var9.length)];
+              var6 = LoggedPossession.nextRandomInt((byte) -24, 896 - (var10.field_o >> 1));
+              var7 = LoggedPossession.nextRandomInt((byte) -24, 1344 - (var10.field_v >> 1));
               var10.draw(var6 + param1, param0 + var7);
             }
           } else {
@@ -54,9 +54,9 @@ final class RankingsRequest extends IntrusiveNode {
               return;
             }
             for (var4 = 0; var4 < 15; var4++) {
-              var11 = var9[LoggedPossession.a((byte) -24, var9.length)];
-              var6 = LoggedPossession.a((byte) -24, 896 - (var11.field_o >> 1));
-              var7 = LoggedPossession.a((byte) -24, 1344 - (var11.field_v >> 1));
+              var11 = var9[LoggedPossession.nextRandomInt((byte) -24, var9.length)];
+              var6 = LoggedPossession.nextRandomInt((byte) -24, 896 - (var11.field_o >> 1));
+              var7 = LoggedPossession.nextRandomInt((byte) -24, 1344 - (var11.field_v >> 1));
               var11.draw(var6 + param1, var7 + param0);
             }
           }

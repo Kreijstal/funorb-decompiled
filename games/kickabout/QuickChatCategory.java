@@ -41,7 +41,7 @@ final class QuickChatCategory extends DualLinkNode {
                 stackIn_16_0 = this.subcategoryShortcuts;
                 stackIn_16_1 = var5;
                 if (var6 != 0) {
-                  stackIn_17_2 = FootballerAgent.a(false, (byte) var6);
+                  stackIn_17_2 = FootballerAgent.decodeCp1252Byte(false, (byte) var6);
                 } else {
                   stackIn_17_2 = 0;
                 }
@@ -58,7 +58,7 @@ final class QuickChatCategory extends DualLinkNode {
                   stackIn_10_0 = this.phraseShortcuts;
                   stackIn_10_1 = var5;
                   if (0 != var6) {
-                    stackIn_11_2 = FootballerAgent.a(false, (byte) var6);
+                    stackIn_11_2 = FootballerAgent.decodeCp1252Byte(false, (byte) var6);
                   } else {
                     stackIn_11_2 = 0;
                   }

@@ -117,7 +117,7 @@ final class DelayedServerPacket extends IntrusiveNode {
               FootballerAiOverlaySupport.field_d.backpatchShortLength(-var4 + FootballerAiOverlaySupport.field_d.field_n, 62);
             }
           }
-          GameModesHelpScreen.field_G = DebouncedValidationProvider.a(param0, 24939);
+          GameModesHelpScreen.field_G = DebouncedValidationProvider.resolveScreen(param0, 24939);
           if (26 == AuctionLogEntry.field_h.screenId &&
             !(GameModesHelpScreen.field_G instanceof MatchScreen) &&
             !PlayArea.isGuestSession(param2 ^ -102)) {
@@ -219,7 +219,7 @@ final class DelayedServerPacket extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void updateLoadingProgress(int param0, int param1, int param2) {
         int var8 = 0;
         long var3 = MonotonicClock.monotonicMillis(-127);
         int var8Lifetime1;
@@ -228,8 +228,8 @@ final class DelayedServerPacket extends IntrusiveNode {
         }
         PlayerStats.field_b = var3 + 25L;
         float var5 = (float)param2 / (float)param0;
-        int var6 = PitchSurfaceLoader.a(-2, PlayerArchetypeSortCriterion.field_r);
-        int var7 = PitchSurfaceLoader.a(-2, 1 + PlayerArchetypeSortCriterion.field_r);
+        int var6 = PitchSurfaceLoader.getLoadingStagePercent(-2, PlayerArchetypeSortCriterion.field_r);
+        int var7 = PitchSurfaceLoader.getLoadingStagePercent(-2, 1 + PlayerArchetypeSortCriterion.field_r);
         if (param1 == 9863) {
           var8 = var7 - var6;
           TextInputWidget.field_R = (float)var6 + (float)var8 * var5;

@@ -44,7 +44,7 @@ final class GameSoundEffect {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }
@@ -74,7 +74,7 @@ final class GameSoundEffect {
         return MusicPatchNode.field_h.size(false) > 0 ? true : false;
     }
 
-    final static void a(byte param0) {
+    final static void initializePlayerPortraitCache(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;

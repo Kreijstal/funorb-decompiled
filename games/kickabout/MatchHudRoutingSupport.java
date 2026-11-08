@@ -93,7 +93,7 @@ final class MatchHudRoutingSupport {
         try {
           TutorialMessages.field_b = param2;
           NetworkGameClient.field_y = param1;
-          MouseInputHandler.a(ImageProducerRasterBuffer.field_g, 4, param0);
+          MouseInputHandler.showAccountRequestDialog(ImageProducerRasterBuffer.field_g, 4, param0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ql.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

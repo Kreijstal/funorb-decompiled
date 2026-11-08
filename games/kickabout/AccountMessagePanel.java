@@ -61,7 +61,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_L = null;
         field_G = null;
         if (param0 == 14) {

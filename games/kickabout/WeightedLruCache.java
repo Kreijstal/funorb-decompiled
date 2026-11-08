@@ -33,7 +33,7 @@ final class WeightedLruCache {
         int var2 = -(SharedPanelFactory.field_b * SharedPanelFactory.field_b) + var1;
         int var3 = ClientPacketFlushSupport.field_c + var2 * (-ClientPacketFlushSupport.field_c + VerticalScrollbar.field_Ab) / var1;
         GrayscalePaletteSupport.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, var3, 120);
-        RankingRowNode.a(124, PitchAppearanceSupport.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, param0);
+        RankingRowNode.layoutChatPanelOverlay(124, PitchAppearanceSupport.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, param0);
     }
 
     final static boolean hasBlockingInputPopup(boolean param0) {
@@ -42,7 +42,7 @@ final class WeightedLruCache {
           if (null != TextButton.field_v) {
             return true;
           }
-          if (GameplayHelpScreen.k((byte) -55)) {
+          if (GameplayHelpScreen.hasActiveSocialNamePrompt((byte) -55)) {
             return true;
           }
           if (TextPromptState.field_b != null) {
@@ -56,7 +56,7 @@ final class WeightedLruCache {
         if (null != TextButton.field_v) {
           return true;
         }
-        if (GameplayHelpScreen.k((byte) -55)) {
+        if (GameplayHelpScreen.hasActiveSocialNamePrompt((byte) -55)) {
           return true;
         }
         if (TextPromptState.field_b != null) {

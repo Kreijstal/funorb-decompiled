@@ -114,7 +114,7 @@ final class LoggedPossession {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int nextRandomInt(byte param0, int param1) {
         if (param0 != -24) {
           return 63;
         }

@@ -311,7 +311,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
             if (!PlayerContextMenu.field_f) {
               ByteArrayPool.field_d.drawCentered(PasswordValidator.field_k.toLowerCase(), 194 + this.slideOffsetX, 290, 16777215, -1);
             } else {
-              ReceivedAuctionItemRow.a(this.slideOffsetX + 194, -65, 290);
+              ReceivedAuctionItemRow.drawLoadingSpinner(this.slideOffsetX + 194, -65, 290);
             }
           } else {
             IsSixCommand.field_C.drawCentered(LineupPositionSupport.field_b, this.slideOffsetX + 194, 290, 16777215, -1);

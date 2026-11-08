@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class HoverTooltip extends UiLayoutNode {
+final class SocialNamePrompt extends UiLayoutNode {
     private UiLayoutNode field_Cb;
     private UiLayoutNode field_Db;
     private int field_Fb;
@@ -11,7 +11,7 @@ final class HoverTooltip extends UiLayoutNode {
     static String field_Ab;
     static String field_Bb;
 
-    HoverTooltip(int param0, int param1, int param2, int param3, String param4, UiLayoutNode param5, UiLayoutNode param6, UiLayoutNode param7) {
+    SocialNamePrompt(int param0, int param1, int param2, int param3, String param4, UiLayoutNode param5, UiLayoutNode param6, UiLayoutNode param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -79,7 +79,7 @@ final class HoverTooltip extends UiLayoutNode {
         }
     }
 
-    final int a(byte param0, boolean param1) {
+    final int updateAndGetResult(byte param0, boolean param1) {
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -102,7 +102,7 @@ final class HoverTooltip extends UiLayoutNode {
           return this.field_Fb;
         }
         while (true) {
-          if (!TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
+          if (!TexturedPanelPainter.pollKeyEvent(-59)) {
             if (param0 == 84) {
               this.field_Db.field_E = this.field_yb.toString();
               if (!param1) {
@@ -174,10 +174,10 @@ final class HoverTooltip extends UiLayoutNode {
         if (param0 == 39) {
           return;
         }
-        HoverTooltip.releaseStatics((byte) 36);
+        SocialNamePrompt.releaseStatics((byte) 36);
     }
 
-    final boolean h(byte param0) {
+    final boolean handleNameInputKey(byte param0) {
         StringBuilder discarded$8 = null;
         StringBuilder discarded$9 = null;
         StringBuilder discarded$10 = null;

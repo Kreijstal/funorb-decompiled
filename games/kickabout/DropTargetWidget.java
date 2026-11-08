@@ -36,7 +36,7 @@ final class DropTargetWidget extends SingleChildContainer {
         }
     }
 
-    final static void a(int param0, UiLayoutNode param1, UiLayoutNode param2) {
+    final static void initializeSocialLists(int param0, UiLayoutNode param1, UiLayoutNode param2) {
         if (null == param1.field_jb) {
           param1.field_jb = new IntrusiveDeque();
         }
@@ -55,7 +55,7 @@ final class DropTargetWidget extends SingleChildContainer {
           }
           GameplayHelpScreen.field_I = param1.field_jb;
           SharedChatLayoutSupport.field_b = param2.field_jb;
-          RasterStateSnapshot.a(0);
+          RasterStateSnapshot.resetSocialListState(0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ln.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -76,7 +76,7 @@ final class SelectionMarkerSupport {
     }
 
     final static void a(int param0) {
-        ContextMenu.b(0, (byte) 60, ReceivedAuctionItem.field_E[1]);
+        ContextMenu.setMusicFadeOutStep(0, (byte) 60, ReceivedAuctionItem.field_E[1]);
         ScrollBar.clearFadingSounds(param0);
         QuickChatCategory.a(NanoTickClock.field_n, param0 ^ 8710, KitPatternMaskSupport.field_c, RankingsScreen.field_C);
         NetworkArchiveRequest.a(1, TrinketPickerDialog.a(KitPatternMaskSupport.field_c, param0 ^ 77, NanoTickClock.field_n, RankingsScreen.field_C), ReceivedAuctionItem.field_E[2], 2147483647);

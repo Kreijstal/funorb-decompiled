@@ -40,7 +40,7 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           param1 = param1.toLowerCase();
           var7 = (CharSequence) ((Object) param0);
-          var4_int = this.field_d.field_q.a(IntrusiveDeque.hashCp1252(true, var7), param2 - 33);
+          var4_int = this.field_d.field_q.get(IntrusiveDeque.hashCp1252(true, var7), param2 - 33);
           if (param2 != -10) {
             var6 = (String) null;
             this.getFileId(((byte[]) (this.field_e[3]))[2], (String) null, -100);
@@ -49,7 +49,7 @@ final class ResourceArchive {
             return false;
           }
           var8 = (CharSequence) ((Object) param1);
-          var5 = this.field_d.field_s[var4_int].a(IntrusiveDeque.hashCp1252(true, var8), -67);
+          var5 = this.field_d.field_s[var4_int].get(IntrusiveDeque.hashCp1252(true, var8), -67);
           stackIn_9_0 = this.ensureFileAvailable(var5, 125, var4_int);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -222,12 +222,12 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           param0 = param0.toLowerCase();
           var6 = (CharSequence) ((Object) param1);
-          var4_int = this.field_d.field_q.a(IntrusiveDeque.hashCp1252(true, var6), -73);
+          var4_int = this.field_d.field_q.get(IntrusiveDeque.hashCp1252(true, var6), -73);
           if (!this.isValidGroup((byte) -70, var4_int)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.field_d.field_s[var4_int].a(IntrusiveDeque.hashCp1252(true, var7), -128);
+          var5 = this.field_d.field_s[var4_int].get(IntrusiveDeque.hashCp1252(true, var7), -128);
           stackIn_9_0 = this.takeFile(var4_int, -32669, var5);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -286,7 +286,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_d.field_q.a(IntrusiveDeque.hashCp1252(true, var4), -108);
+          var3_int = this.field_d.field_q.get(IntrusiveDeque.hashCp1252(true, var4), -108);
           if (var3_int >= 0) {
             return true;
           }
@@ -444,7 +444,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var4_int = this.field_d.field_s[param2].a(IntrusiveDeque.hashCp1252(true, var5), -78);
+          var4_int = this.field_d.field_s[param2].get(IntrusiveDeque.hashCp1252(true, var5), -78);
           if (!this.isFileIdInRange(param2, var4_int, true)) {
             stackIn_7_0 = -1;
             return stackIn_7_0;
@@ -486,7 +486,7 @@ final class ResourceArchive {
             return true;
           }
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_d.field_q.a(IntrusiveDeque.hashCp1252(true, var4), -123);
+          var3_int = this.field_d.field_q.get(IntrusiveDeque.hashCp1252(true, var4), -123);
           stackIn_7_0 = this.ensurePackedGroup((byte) 20, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -522,7 +522,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_d.field_q.a(IntrusiveDeque.hashCp1252(true, var4), -66);
+          var3_int = this.field_d.field_q.get(IntrusiveDeque.hashCp1252(true, var4), -66);
           if (!this.isValidGroup((byte) 115, var3_int)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
@@ -941,7 +941,7 @@ final class ResourceArchive {
             this.field_b = true;
           }
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_d.field_q.a(IntrusiveDeque.hashCp1252(true, var4), -105);
+          var3_int = this.field_d.field_q.get(IntrusiveDeque.hashCp1252(true, var4), -105);
           stackIn_7_0 = this.getGroupProgress(var3_int, (byte) 56);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -250,7 +250,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
             SplashScreen.field_j = 18;
             var7 = (FadingChatMessage) (AppScreen.field_d.removeFirst((byte) 126));
             if (var7 != null) {
-              MatchingTextValidator.a(var7, false);
+              MatchingTextValidator.prependFadingChatMessage(var7, false);
             }
           }
           var6 = 0;

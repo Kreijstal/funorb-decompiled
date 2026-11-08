@@ -7,7 +7,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
     static String field_F;
     static String field_G;
 
-    final static int a(ChatMessage param0, int param1) {
+    final static int getChatMessageColor(ChatMessage param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_17_0 = 0;
@@ -69,12 +69,12 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         field_F = null;
         field_H = null;
         if (param0 != 60) {
-          LeaguesHelpScreen.h(-115);
+          LeaguesHelpScreen.getDefaultWidgetTheme(-115);
         }
         field_G = null;
     }
 
-    final static WidgetTheme h(int param0) {
+    final static WidgetTheme getDefaultWidgetTheme(int param0) {
         if (param0 >= -58) {
           field_E = (UiLayoutNode) null;
         }
@@ -159,7 +159,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         }
     }
 
-    final static void i(int param0) {
+    final static void drawFootballerAbilityIndicators(int param0) {
         int var1_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;

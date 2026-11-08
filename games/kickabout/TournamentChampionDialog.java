@@ -32,7 +32,7 @@ final class TournamentChampionDialog extends MessageDialog {
             var4.field_zb != null) {
             return true;
           }
-          stackIn_11_0 = (null != PlayerContextMenu.field_i) && (TexturedPanelPainter.a(31253, param2) != null);
+          stackIn_11_0 = (null != PlayerContextMenu.field_i) && (TexturedPanelPainter.findLobbyPlayerById(31253, param2) != null);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

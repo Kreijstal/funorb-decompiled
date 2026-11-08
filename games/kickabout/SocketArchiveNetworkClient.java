@@ -76,7 +76,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             while (var2 != null) {
               this.field_d.field_n = 0;
               this.field_d.writeByte(107, 1);
-              this.field_d.b((byte) 83, var2.field_l);
+              this.field_d.writeLong40((byte) 83, var2.field_l);
               this.field_x.write(this.field_d.field_f.length, (byte) -127, 0, this.field_d.field_f);
               this.field_b.addLast(127, var2);
               var2 = (NetworkArchiveRequest) (this.field_h.next(0));
@@ -85,7 +85,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             while (var2Lifetime1 != null) {
               this.field_d.field_n = 0;
               this.field_d.writeByte(116, 0);
-              this.field_d.b((byte) 18, var2Lifetime1.field_l);
+              this.field_d.writeLong40((byte) 18, var2Lifetime1.field_l);
               this.field_x.write(this.field_d.field_f.length, (byte) -127, 0, this.field_d.field_f);
               this.field_j.addLast(127, var2Lifetime1);
               var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.next(0));
@@ -454,7 +454,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               stackIn_6_2 = 3;
             }
             ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_5_1, stackIn_6_2);
-            this.field_d.b((byte) 89, 0L);
+            this.field_d.writeLong40((byte) 89, 0L);
             this.field_x.write(this.field_d.field_f.length, (byte) -127, 0, this.field_d.field_f);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

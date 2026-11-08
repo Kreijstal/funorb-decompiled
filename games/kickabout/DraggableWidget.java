@@ -21,7 +21,7 @@ final class DraggableWidget extends SingleChildContainer {
           AlternateKeyedLoginCredentials.field_m = 150;
           DirectByteStorage.field_o = param1;
           if (param2 != -46) {
-            DraggableWidget.a(-114, (byte) -103, false, 80);
+            DraggableWidget.updateQuickChatMenu(-114, (byte) -103, false, 80);
           }
           TutorialChoiceDialog.field_J = AlternateKeyedLoginCredentials.field_m + 20 + param0 >> 1;
         } catch (RuntimeException runtimeException) {
@@ -301,7 +301,7 @@ final class DraggableWidget extends SingleChildContainer {
         this.field_C = this.field_g;
     }
 
-    final static void a(int param0, byte param1, boolean param2, int param3) {
+    final static void updateQuickChatMenu(int param0, byte param1, boolean param2, int param3) {
         if (!DebugConsole.field_s) {
           return;
         }

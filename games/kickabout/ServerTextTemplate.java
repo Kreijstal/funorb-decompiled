@@ -51,9 +51,9 @@ final class ServerTextTemplate {
         var8 = new IntrusiveDeque();
         for (var9 = 0; var9 < 4; var9++) {
           for (var10_int = 0; 2 + param3 > var10_int; var10_int++) {
-            if (LoggedPossession.a((byte) -24, 256) <= param1) {
-              var11 = LoggedPossession.a((byte) -24, 5);
-              var12 = LoggedPossession.a((byte) -24, 5);
+            if (LoggedPossession.nextRandomInt((byte) -24, 256) <= param1) {
+              var11 = LoggedPossession.nextRandomInt((byte) -24, 5);
+              var12 = LoggedPossession.nextRandomInt((byte) -24, 5);
               var13 = var12 + (var9 * 36 + 20);
               if (!param4) {
                 var13 = AudioOutputSupport.field_e[0][0].field_i - var13;
@@ -63,7 +63,7 @@ final class ServerTextTemplate {
           }
         }
         for (var9Lifetime1 = 0; var9Lifetime1 < 6; var9Lifetime1++) {
-          DelayedServerPacket.a(100, 9863, (param5 - param0) * var9Lifetime1 / 6 + param0);
+          DelayedServerPacket.updateLoadingProgress(100, 9863, (param5 - param0) * var9Lifetime1 / 6 + param0);
           var10 = QuickChatCategoryCache.buildStadiumSeatColumn(-127, param4, param3);
           PacketBuffer.pushSpriteRaster(87, var10);
           var17 = (PlayerModelPreview) (var8.first(24009));

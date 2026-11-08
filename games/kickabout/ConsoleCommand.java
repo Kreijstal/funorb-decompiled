@@ -70,8 +70,8 @@ abstract class ConsoleCommand extends DualLinkNode {
                 this.field_p[var4_int] != Character.TYPE) {
                 return false;
               }
-              if (AuctionItem.a(89, var5) &&
-                !AuctionItem.a(98, this.field_p[var4_int])) {
+              if (AuctionItem.isNumericPrimitive(89, var5) &&
+                !AuctionItem.isNumericPrimitive(98, this.field_p[var4_int])) {
                 return false;
               }
             } else {

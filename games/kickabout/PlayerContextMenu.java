@@ -124,7 +124,7 @@ final class PlayerContextMenu {
           return;
         }
         var7 = PasswordValidator.findLobbyPlayerById(this.field_b, false);
-        var4 = TexturedPanelPainter.a(param1 ^ 31253, this.field_b);
+        var4 = TexturedPanelPainter.findLobbyPlayerById(param1 ^ 31253, this.field_b);
         var5 = this.getDisplayName(-26719);
         if (var4 != null) {
           if (!field_i.field_Cb) {
@@ -382,7 +382,7 @@ final class PlayerContextMenu {
               AuctionsScreen.sendAuctionAction(this.field_c, param1, (byte) -83);
             } else {
               if (param0 == 3) {
-                ContextMenu.a(this.field_c, (byte) -90, param1);
+                ContextMenu.sendGameWithdrawalRequest(this.field_c, (byte) -90, param1);
               } else {
                 if (10 != param0) {
                   if (15 == param0) {

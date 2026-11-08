@@ -678,9 +678,9 @@ final class DebugConsole extends ConsolePanel {
           var9 = new IntrusiveDeque();
           for (var10 = 0; var10 < 3; var10++) {
             for (var11 = 0; var11 < 9; var11++) {
-              if (param5 >= LoggedPossession.a((byte) -24, 256)) {
-                var12 = LoggedPossession.a((byte) -24, 5);
-                var13 = LoggedPossession.a((byte) -24, 5);
+              if (param5 >= LoggedPossession.nextRandomInt((byte) -24, 256)) {
+                var12 = LoggedPossession.nextRandomInt((byte) -24, 5);
+                var13 = LoggedPossession.nextRandomInt((byte) -24, 5);
                 var14 = 50 * var10 + 32 + var13;
                 if (!param2) {
                   var14 = var7 - (var14 + 12);
@@ -690,7 +690,7 @@ final class DebugConsole extends ConsolePanel {
             }
           }
           for (var10Lifetime1 = 0; var10Lifetime1 < 6; var10Lifetime1++) {
-            DelayedServerPacket.a(100, 9863, var10Lifetime1 * (-param1 + param0) / 6 + param1);
+            DelayedServerPacket.updateLoadingProgress(100, 9863, var10Lifetime1 * (-param1 + param0) / 6 + param1);
             var16[var10Lifetime1] = AlphaContainer.renderCrowdFrame(param2, -76, var9, var10Lifetime1);
           }
           stackIn_33_0 = var6;

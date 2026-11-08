@@ -22,7 +22,7 @@ final class DualLinkDequeIterator implements Iterator {
         return var1;
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void updateSocialNamePrompt(int param0, int param1, boolean param2) {
         int var3;
         String var4;
         Object var5;
@@ -39,7 +39,7 @@ final class DualLinkDequeIterator implements Iterator {
           var3 = 91 % ((-21 - param0) / 44);
           return;
         }
-        var3Lifetime1 = StreetSceneryLoader.field_m.a((byte) 84, param2);
+        var3Lifetime1 = StreetSceneryLoader.field_m.updateAndGetResult((byte) 84, param2);
         if (var3Lifetime1 == 0) {
           var3Lifetime1 = 91 % ((-21 - param0) / 44);
           return;

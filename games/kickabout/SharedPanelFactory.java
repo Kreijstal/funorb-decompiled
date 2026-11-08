@@ -49,7 +49,7 @@ final class SharedPanelFactory {
         try {
           var1_int = 0;
           var2 = 0;
-          while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
+          while (TexturedPanelPainter.pollKeyEvent(-59)) {
             DirectByteStorage.field_k.handleVerticalArrowKeys(param0 + 101);
             if (DirectByteStorage.field_k.isActivated(param0 + 2)) {
               var1_int = 1;

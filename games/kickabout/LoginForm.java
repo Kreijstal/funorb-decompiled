@@ -30,7 +30,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         if (GuestLoginSupport.isGuestLoginEnabled(3) ||
           !(this.field_N.field_q.length() <= 0) &&
           !(this.field_J.field_q.length() <= 0)) {
-          UiKeyRoutingSupport.a(this.field_J.field_q, (byte) -118, this.field_N.field_q);
+          UiKeyRoutingSupport.setAccountStatusText(this.field_J.field_q, (byte) -118, this.field_N.field_q);
         }
         if (param0 != 60) {
           field_E = (Random) null;

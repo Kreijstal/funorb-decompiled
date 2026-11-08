@@ -42,7 +42,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           super.setTransitionProgress(param0, param1, -126, param3);
-          this.a(false);
+          this.layoutOpponentWidget(false);
           if (param1) {
             this.field_C = param0;
           } else {
@@ -74,7 +74,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
         }
     }
 
-    final static void g(byte param0) {
+    final static void drawDebugPitchCrosshair(byte param0) {
         if (param0 < -112) {
           SoftwareDrawingSupport.drawCircleCrosshair(SocialListLayoutSupport.worldToScreenX(0, (int)CachedArchiveSource.field_C), IntKeyLookup.projectPitchY((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
           return;
@@ -83,7 +83,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
         SoftwareDrawingSupport.drawCircleCrosshair(SocialListLayoutSupport.worldToScreenX(0, (int)CachedArchiveSource.field_C), IntKeyLookup.projectPitchY((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
     }
 
-    private final void a(boolean param0) {
+    private final void layoutOpponentWidget(boolean param0) {
         if (!param0) {
           this.field_A.setBounds(true, this.field_A.field_q, (SpriteNumberPainter.field_d >> 1) - (this.field_A.field_q >> 1), 100 + (ReceivedAuctionItem.field_B >> 1), this.field_A.field_mb);
           return;

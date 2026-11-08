@@ -123,7 +123,7 @@ final class ClassDescriptorSupport {
             stackIn_17_0 = QuickChatPhraseCache.field_f;
             return stackIn_17_0;
           }
-          if (IntKeyLookup.a(param0, 108)) {
+          if (IntKeyLookup.isFriend(param0, 108)) {
             stackIn_20_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionListing.field_i, new String[]{param0});
             return stackIn_20_0;
           }

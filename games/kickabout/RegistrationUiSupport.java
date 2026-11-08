@@ -51,7 +51,7 @@ final class RegistrationUiSupport {
           if (param7 != 16971) {
             RegistrationUiSupport.buildLoadingSpinnerSprites((byte) -8);
           }
-          VerticalScrollbar.h(0);
+          VerticalScrollbar.initializeSocialTabs(0);
           NotCommand.g((byte) -47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

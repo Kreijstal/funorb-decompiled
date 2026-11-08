@@ -22,7 +22,7 @@ class AuctionItem extends IntrusiveNode {
     static int field_e;
     boolean field_j;
 
-    final static boolean a(int param0, Class param1) {
+    final static boolean isNumericPrimitive(int param0, Class param1) {
         boolean stackIn_11_0 = false;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -52,7 +52,7 @@ class AuctionItem extends IntrusiveNode {
     final static MeshData a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, boolean param8, boolean param9) {
         if (param7) {
           Class var13 = (Class) null;
-          AuctionItem.a(100, (Class) null);
+          AuctionItem.isNumericPrimitive(100, (Class) null);
         }
         int var10 = LongPlusOneCommand.field_B[param1];
         int var11 = LongPlusOneCommand.field_B[param6];

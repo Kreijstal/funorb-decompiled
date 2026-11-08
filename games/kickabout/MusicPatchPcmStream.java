@@ -306,7 +306,7 @@ final class MusicPatchPcmStream extends PcmStream {
             var1_int++;
             IntValueNode.field_e[incrementValue$10] = new WorldSpriteDecoration(ServerTextTemplate.field_j[1], 800, -240);
             for (var2_int = 0; var2_int < 8; var2_int++) {
-              if (LoggedPossession.a((byte) -24, 2) == 1) {
+              if (LoggedPossession.nextRandomInt((byte) -24, 2) == 1) {
                 stackIn_9_0 = ServerTextTemplate.field_j[0];
               } else {
                 stackIn_9_0 = ServerTextTemplate.field_j[1];
@@ -323,7 +323,7 @@ final class MusicPatchPcmStream extends PcmStream {
               IntValueNode.field_e[incrementValue$14] = new WorldSpriteDecoration(var11, var4_int, var5);
             }
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
-              if (LoggedPossession.a((byte) -24, 2) != 1) {
+              if (LoggedPossession.nextRandomInt((byte) -24, 2) != 1) {
                 stackIn_15_0 = ServerTextTemplate.field_j[1];
               } else {
                 stackIn_15_0 = ServerTextTemplate.field_j[0];
@@ -401,7 +401,7 @@ final class MusicPatchPcmStream extends PcmStream {
               stackIn_28_0[stackIn_28_1] = new WorldSpriteDecoration(stackIn_29_4, 896 - var7_int - 20, var8);
             }
             for (var6Lifetime1 = 0; var6Lifetime1 < 12; var6Lifetime1++) {
-              if (LoggedPossession.a((byte) -24, 2) == 0) {
+              if (LoggedPossession.nextRandomInt((byte) -24, 2) == 0) {
                 stackIn_35_0 = ServerTextTemplate.field_j[0];
               } else {
                 stackIn_35_0 = ServerTextTemplate.field_j[1];

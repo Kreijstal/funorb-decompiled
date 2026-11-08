@@ -21,7 +21,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         return null;
     }
 
-    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4) {
+    final static void drawHorizontalSpriteStrip(int param0, int param1, int param2, Sprite[] param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -101,7 +101,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         try {
           if (param1 != 0) {
             var4 = (Sprite[]) null;
-            ValidationHelpWidget.a(-120, -71, -85, (Sprite[]) null, -72);
+            ValidationHelpWidget.drawHorizontalSpriteStrip(-120, -71, -85, (Sprite[]) null, -72);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

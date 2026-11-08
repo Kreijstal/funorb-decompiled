@@ -65,7 +65,7 @@ final class NamedValueEntry extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_k = null;
         field_g = null;
@@ -249,7 +249,7 @@ final class NamedValueEntry extends IntrusiveNode {
         }
     }
 
-    final static String f(byte param0) {
+    final static String getLocalPlayerName(byte param0) {
         if (param0 < 78) {
           return (String) null;
         }

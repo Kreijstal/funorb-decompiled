@@ -45,7 +45,7 @@ final class CoverageBitmapFont extends BitmapFont {
           param4 > 0) {
           var11 = var11 - var10 * param3;
           if (!param6) {
-            CoverageBitmapFont.b(SoftwareRasterizer.field_a, this.field_B[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+            CoverageBitmapFont.blitGlyphCoverage(SoftwareRasterizer.field_a, this.field_B[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           } else {
             BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.field_a, this.field_B[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           }
@@ -246,7 +246,7 @@ final class CoverageBitmapFont extends BitmapFont {
           param4 > 0) {
           var12 = var12 - var11 * param3;
           if (!param7) {
-            CoverageBitmapFont.a(SoftwareRasterizer.field_a, this.field_B[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+            CoverageBitmapFont.blitGlyphCoverageAlpha(SoftwareRasterizer.field_a, this.field_B[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           } else {
             BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.field_a, this.field_B[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           }
@@ -289,7 +289,7 @@ final class CoverageBitmapFont extends BitmapFont {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    private final static void blitGlyphCoverageAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -316,7 +316,7 @@ final class CoverageBitmapFont extends BitmapFont {
         }
     }
 
-    private final static void b(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitGlyphCoverage(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;

@@ -26,7 +26,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean moveTutorialBallToward(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -52,7 +52,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
           var9 = (param3 >> 16) - var12_ref.pixelX(true);
           var10 = (param1 >> 16) - var12_ref.pixelY(879306160);
           if (param0 != 2235) {
-            RasterStateSnapshot.a(-120, 112, -101, 49);
+            RasterStateSnapshot.moveTutorialBallToward(-120, 112, -101, 49);
           }
           var11 = GameKeyHandler.approximateSquareRoot(var10 * var10 + var9 * var9, (byte) 80);
           if (0 == var11) {
@@ -90,7 +90,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
           var9 = (param3 >> 16) - var12_ref.pixelX(true);
           var10 = (param1 >> 16) - var12_ref.pixelY(879306160);
           if (param0 != 2235) {
-            RasterStateSnapshot.a(-120, 112, -101, 49);
+            RasterStateSnapshot.moveTutorialBallToward(-120, 112, -101, 49);
           }
           var11 = GameKeyHandler.approximateSquareRoot(var10 * var10 + var9 * var9, (byte) 80);
           if (0 == var11) {
@@ -124,7 +124,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
     RasterStateSnapshot() {
     }
 
-    final static void a(int param0) {
+    final static void resetSocialListState(int param0) {
         DualLinkNode var1 = null;
         int var2 = Kickabout.field_G;
         DualLinkNode var1Lifetime1;

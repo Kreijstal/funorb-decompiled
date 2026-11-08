@@ -28,7 +28,7 @@ abstract class ListRow extends UiLayoutNode {
 
     abstract void updateRow(int param0, boolean param1);
 
-    final static void h(int param0) {
+    final static void releaseMouseCapture(int param0) {
         java.awt.Canvas var1 = null;
         if (ClassNameSupport.field_a) {
           ClassNameSupport.field_a = false;
@@ -42,10 +42,10 @@ abstract class ListRow extends UiLayoutNode {
           return;
         }
         CharSequence var2 = (CharSequence) null;
-        ListRow.a((byte) 6, (CharSequence) null, -12);
+        ListRow.parseIntegerInRadix((byte) 6, (CharSequence) null, -12);
     }
 
-    final static int a(byte param0, CharSequence param1, int param2) {
+    final static int parseIntegerInRadix(byte param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;

@@ -121,7 +121,7 @@ final class RotaryDialWidget extends TextButton {
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
+    final static void enqueueTrinketShopDialog(int param0, int param1, int param2, int param3) {
         if (param0 != -1) {
           return;
         }

@@ -21,7 +21,7 @@ final class AppletContextSupport {
               return;
             }
             if (!param3) {
-              ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+              ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
               NetworkArchiveRequest.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             }
@@ -35,7 +35,7 @@ final class AppletContextSupport {
             NetworkArchiveRequest.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             return;
           }
-          ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+          ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         } else {
           AppletContextSupport.a(44, true, true, false);
           if (!param1) {
@@ -43,7 +43,7 @@ final class AppletContextSupport {
           }
           if (2 == param0) {
             if (!param3) {
-              ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+              ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
               NetworkArchiveRequest.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
             }
@@ -55,7 +55,7 @@ final class AppletContextSupport {
         if (param3) {
           NetworkArchiveRequest.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
         } else {
-          ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+          ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         }
     }
 

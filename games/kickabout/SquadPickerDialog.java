@@ -55,7 +55,7 @@ final class SquadPickerDialog extends MessageDialog {
             this.field_H.sendSquadOrder(true);
             return;
           }
-          LoadingProgressDialog.b(-121, GameLoopApplet.field_E.field_q[this.field_H.field_Fb]);
+          LoadingProgressDialog.enqueueAuctionSettingsDialog(-121, GameLoopApplet.field_E.field_q[this.field_H.field_Fb]);
           this.field_H.sendSquadOrder(true);
           return;
         }
@@ -71,19 +71,19 @@ final class SquadPickerDialog extends MessageDialog {
           this.field_H.sendSquadOrder(true);
           return;
         }
-        LoadingProgressDialog.b(-121, GameLoopApplet.field_E.field_q[this.field_H.field_Fb]);
+        LoadingProgressDialog.enqueueAuctionSettingsDialog(-121, GameLoopApplet.field_E.field_q[this.field_H.field_Fb]);
         this.field_H.sendSquadOrder(true);
     }
 
     final int dialogHeight(byte param0) {
         if (param0 < 75) {
-          SquadPickerDialog.g(1);
+          SquadPickerDialog.releaseStatics(1);
           return 346;
         }
         return 346;
     }
 
-    final static int b(int param0, int param1) {
+    final static int bitCount(int param0, int param1) {
         param1 = (1431655765 & param1) + ((-1431655765 & param1) >>> 1);
         param1 = (858993459 & param1) + (1932735283 & param1 >>> 2);
         param1 = 252645135 & (param1 >>> 4) + param1;
@@ -228,7 +228,7 @@ final class SquadPickerDialog extends MessageDialog {
         field_N = (DualLinkHashTable) null;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_N = null;
         field_L = null;
         field_O = (byte[][]) null;
@@ -239,7 +239,7 @@ final class SquadPickerDialog extends MessageDialog {
           field_Q = null;
           return;
         }
-        SquadPickerDialog.b(19, 71);
+        SquadPickerDialog.bitCount(19, 71);
         field_P = null;
         field_M = null;
         field_G = null;

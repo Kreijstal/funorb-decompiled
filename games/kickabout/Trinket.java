@@ -474,8 +474,8 @@ final class Trinket {
             break;
           }
           if (null != LoadingProgressSupport.field_d) {
-            LoadingProgressSupport.field_d.a(1, param0, (byte) -85);
-            LoadingProgressSupport.field_d.a(2, param0, (byte) -85);
+            LoadingProgressSupport.field_d.setPlayerVolume(1, param0, (byte) -85);
+            LoadingProgressSupport.field_d.setPlayerVolume(2, param0, (byte) -85);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -493,7 +493,7 @@ final class Trinket {
         RuntimeException decompiledCaughtException = null;
         try {
           QuickChatMenuFactory.setLoginExtraText(true, param1);
-          MouseInputHandler.a(ImageProducerRasterBuffer.field_g, 4, false);
+          MouseInputHandler.showAccountRequestDialog(ImageProducerRasterBuffer.field_g, 4, false);
           if (param0 < 14) {
             field_c = -13;
           }
@@ -554,7 +554,7 @@ final class Trinket {
           }
           if (~NodeHashTableIterator.field_b == param0 &&
             !LoggedPlayer.canSendPrivateChatToSelectedPlayer(param0 - 3194)) {
-            boolean decompiledSharedTail1 = !(IntKeyLookup.a(PlayerStatSortCriterion.field_o, -39));
+            boolean decompiledSharedTail1 = !(IntKeyLookup.isFriend(PlayerStatSortCriterion.field_o, -39));
             if (!decompiledSharedTail1) {
               var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ChatComposeSupport.field_c, new String[]{TrinketTile.field_Kb});
               decompiledSharedTail1 = (var10 != 0);

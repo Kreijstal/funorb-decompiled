@@ -172,7 +172,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         if (param0 <= 78) {
           NumericDateInputWidget.releaseStatics(-91);
         }
-        ScrollContainer.h((byte) -118);
+        ScrollContainer.releaseDecodedSpriteBuffers((byte) -118);
         return var1;
     }
 

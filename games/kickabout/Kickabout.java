@@ -179,7 +179,7 @@ public final class Kickabout extends GameLoopApplet {
               }
             }
             PlayerValueSortCriterion.field_n = false;
-            PitchSurfaceLoader.b(1);
+            PitchSurfaceLoader.resetChatComposerLayout(1);
           }
           LoginText.field_e = false;
           QuickChatPhraseCache.field_d = false;
@@ -994,7 +994,7 @@ public final class Kickabout extends GameLoopApplet {
             if (param0 == 14) {
               MeshObject.a((byte) 81);
               ConsoleTokenCursor.a(NetworkGameClient.getLobbyPlayerListContent(param2 ^ 1), 120, MatchHudSupport.ceilPowerOfTwo((byte) 6, 1250), MatchHudSupport.ceilPowerOfTwo((byte) 6, 16), AnimationPlayer.b(-116), UrlRequest.field_c, ClassNameSupport.getActiveLayoutChild(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
-              DropTargetWidget.a(64, LoginRequiredDialog.h((byte) -64), ButtonMenuScreen.f((byte) -63));
+              DropTargetWidget.initializeSocialLists(64, LoginRequiredDialog.h((byte) -64), ButtonMenuScreen.f((byte) -63));
               LoginText.field_e = false;
               PlayerValueSortCriterion.field_n = true;
               if (!QuickChatPhraseCache.field_d) {
@@ -1011,7 +1011,7 @@ public final class Kickabout extends GameLoopApplet {
                 StreetSceneryLoader.field_k = true;
                 PlayerValueSortCriterion.field_n = false;
                 FriendsListPanel.field_Db = true;
-                PitchSurfaceLoader.b(1);
+                PitchSurfaceLoader.resetChatComposerLayout(1);
               }
               QuickChatPhraseCache.field_d = false;
               LoginText.field_e = false;
@@ -1088,7 +1088,7 @@ public final class Kickabout extends GameLoopApplet {
                 if (null != SortCriterion.field_l) {
                   TextButton.field_B = true;
                   DelayedServerPacket.a(-3, false, -2);
-                  PitchSurfaceLoader.b(1);
+                  PitchSurfaceLoader.resetChatComposerLayout(1);
                 }
                 if (null != MachineTokenStorageSupport.field_e &&
                   MachineTokenStorageSupport.field_e.isOnlineMatch) {
@@ -1096,7 +1096,7 @@ public final class Kickabout extends GameLoopApplet {
                   FriendsListPanel.field_Db = true;
                   TextButton.field_B = true;
                   DelayedServerPacket.a(-3, false, -2);
-                  PitchSurfaceLoader.b(param2 ^ 0);
+                  PitchSurfaceLoader.resetChatComposerLayout(param2 ^ 0);
                 }
                 QuickChatPhraseCache.field_d = false;
                 return true;
@@ -1137,11 +1137,11 @@ public final class Kickabout extends GameLoopApplet {
                 param1.beginBitRead(-114);
                 var5Lifetime4Lifetime1 = 0;
                 var4_intLifetime6Lifetime1 = 0;
-                stackIn_242_0 = (!ContentTransitionDialog.a(param1, (byte) -39)) ? 0 : 1;
+                stackIn_242_0 = (!ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) ? 0 : 1;
                 var4_intLifetime6Lifetime1 = stackIn_242_0;
-                stackIn_245_0 = (!ContentTransitionDialog.a(param1, (byte) -39)) ? 0 : 1;
+                stackIn_245_0 = (!ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) ? 0 : 1;
                 var5Lifetime4Lifetime1 = stackIn_245_0;
-                stackIn_248_0 = (!ContentTransitionDialog.a(param1, (byte) -39)) ? 0 : 1;
+                stackIn_248_0 = (!ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) ? 0 : 1;
                 var6Lifetime3Lifetime1 = stackIn_248_0;
                 param1.finishBitRead((byte) -50);
                 stackIn_251_0 = (var6Lifetime3Lifetime1 != 0) ? 0 : 1;
@@ -1175,11 +1175,11 @@ public final class Kickabout extends GameLoopApplet {
                 var6Lifetime3Lifetime2 = 0;
                 var4_intLifetime6Lifetime2 = 0;
                 var5Lifetime4Lifetime2 = 0;
-                stackIn_272_0 = (!ContentTransitionDialog.a(param1, (byte) -39)) ? 0 : 1;
+                stackIn_272_0 = (!ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) ? 0 : 1;
                 var4_intLifetime6Lifetime2 = stackIn_272_0;
-                stackIn_275_0 = (!ContentTransitionDialog.a(param1, (byte) -39)) ? 0 : 1;
+                stackIn_275_0 = (!ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) ? 0 : 1;
                 var5Lifetime4Lifetime2 = stackIn_275_0;
-                stackIn_278_0 = (!ContentTransitionDialog.a(param1, (byte) -39)) ? 0 : 1;
+                stackIn_278_0 = (!ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) ? 0 : 1;
                 var6Lifetime3Lifetime2 = stackIn_278_0;
                 param1.finishBitRead((byte) 103);
                 if (var4_intLifetime6Lifetime2 != 0) {
@@ -1440,7 +1440,7 @@ public final class Kickabout extends GameLoopApplet {
         }
         this.drawLogoBanner(102);
         if (IsSixCommand.field_B) {
-          FindingOpponentScreen.g((byte) -119);
+          FindingOpponentScreen.drawDebugPitchCrosshair((byte) -119);
         }
         if (GameQuickChatResolver.field_b) {
           var5Lifetime2 = -BuyPlayerDialog.field_I + 24 << 4;
@@ -1486,7 +1486,7 @@ public final class Kickabout extends GameLoopApplet {
         ConsoleArgumentSupport.releaseStatics(param0 - 6);
         LoginPacketSupport.releaseStatics((byte) 72);
         UiKeyRoutingSupport.releaseStatics((byte) -90);
-        GameLoopApplet.q(30907);
+        GameLoopApplet.releaseAppletStatics(30907);
         GameKeyHandler.releaseStatics(param0 + 3896);
         HuffmanTextSupport.releaseStatics(param0 + 92);
         SessionUrlSupport.releaseStatics(false);
@@ -1590,12 +1590,12 @@ public final class Kickabout extends GameLoopApplet {
         ChatComposeSupport.releaseStatics((byte) -127);
         RankingsScreen.releaseStatics(-71);
         RegistrationUiSupport.releaseStatics(param0 ^ 3547);
-        GameplayHelpScreen.g(29250);
+        GameplayHelpScreen.releaseStatics(29250);
         PitchPurchaseSupport.releaseStatics((byte) -100);
         RenderedBall.releaseStatics(127);
         PlayArea.releaseStatics((byte) -124);
         BallAgent.releaseStatics(0);
-        FootballerAgent.e((byte) -108);
+        FootballerAgent.releaseStatics((byte) -108);
         TextLineLayoutSupport.releaseStatics(116);
         PitchAppearanceSupport.releaseStatics(param0 ^ 6);
         IconLabel.releaseStatics(0);
@@ -1623,7 +1623,7 @@ public final class Kickabout extends GameLoopApplet {
         LoggedPossession.releaseStatics(320);
         ParticipantAgent.releaseStatics(92);
         TeamSelectionAgent.releaseStatics((byte) -90);
-        FormationAgent.a(true);
+        FormationAgent.releaseStatics(true);
         GoalStateAgent.releaseStatics((byte) -30);
         PlayerInputEvent.releaseStatics(0);
         MatchAgent.releaseStatics(-3);
@@ -1647,8 +1647,8 @@ public final class Kickabout extends GameLoopApplet {
         ClassNameSupport.releaseStatics((byte) -127);
         AchievementsScreen.releaseStatics((byte) 81);
         SoftwareDrawingSupport.releaseStatics();
-        ScrollContainer.i((byte) -69);
-        AuctionsScreen.h((byte) -53);
+        ScrollContainer.releaseStatics((byte) -69);
+        AuctionsScreen.releaseStatics((byte) -53);
         CheckboxLabelWidget.releaseStatics(0);
         AuctionTableWidget.releaseStatics((byte) 68);
         ReceivedAuctionItemRow.releaseStatics(-25734);
@@ -1662,7 +1662,7 @@ public final class Kickabout extends GameLoopApplet {
         ContextMenuItem.releaseStatics(-15410);
         SocialTabsPanel.releaseStatics(-97);
         TabStrip.releaseStatics(true);
-        HoverTooltip.releaseStatics((byte) 39);
+        SocialNamePrompt.releaseStatics((byte) 39);
         TrinketUnlockNotice.releaseStatics((byte) 16);
         SpriteResourceSupport.releaseStatics((byte) 116);
         TextEntrySupport.releaseStatics(param0 - 121);
@@ -1674,15 +1674,15 @@ public final class Kickabout extends GameLoopApplet {
         AudioService.releaseStatics((byte) 60);
         MyPitchScreen.releaseStatics(-107);
         MessageDialog.releaseStatics((byte) 90);
-        HelpTipDialog.g((byte) -111);
+        HelpTipDialog.releaseStatics((byte) -111);
         SaveChangesDialog.releaseStatics(13);
-        LoginRequiredDialog.g(param0 + 2350);
+        LoginRequiredDialog.releaseStatics(param0 + 2350);
         TutorialChoiceDialog.releaseStatics((byte) -117);
         WelcomeDialog.releaseStatics(100);
         PromotionDialog.releaseStatics(22100);
         TournamentChampionDialog.releaseStatics(0);
         LeagueWinnerDialog.releaseStatics((byte) -93);
-        SquadPickerDialog.g(-14948);
+        SquadPickerDialog.releaseStatics(-14948);
         AuctionSettingsDialog.releaseStatics(-8332);
         ColourSwatchTile.releaseStatics(-31922);
         AuctionBidDialog.releaseStatics(0);
@@ -1690,7 +1690,7 @@ public final class Kickabout extends GameLoopApplet {
         SellPlayerDialog.releaseStatics(24342);
         TrinketShopDialog.releaseStatics(false);
         TrinketPickerDialog.releaseStatics(2);
-        BuyPitchDialog.g((byte) -45);
+        BuyPitchDialog.releaseStatics((byte) -45);
         BuyPlayerDialog.releaseStatics(30);
         AuctionListingDialog.releaseStatics(false);
         PlayAreaMovementSupport.releaseStatics(-122);
@@ -1700,8 +1700,8 @@ public final class Kickabout extends GameLoopApplet {
         ModalStack.releaseStatics(-1);
         RegistrationRequestDialog.releaseStatics(248);
         LoadingProgressDialog.releaseStatics((byte) 110);
-        LoginDialog.j((byte) 53);
-        AccountRequestDialog.j((byte) -108);
+        LoginDialog.releaseStatics((byte) 53);
+        AccountRequestDialog.releaseStatics((byte) -108);
         AccountRegistrationPanel.releaseStatics((byte) -94);
         AccountChoicePanel.releaseStatics(2);
         LoginForm.releaseStatics(param0 ^ -11205);
@@ -1713,7 +1713,7 @@ public final class Kickabout extends GameLoopApplet {
         GuestLoginSupport.releaseStatics((byte) -98);
         ResizableModalPanel.releaseStatics(1);
         TextWidgetPainter.releaseStatics(true);
-        TextButton.a(79);
+        TextButton.releaseStatics(79);
         UiWidget.releaseStatics((byte) 88);
         ModalPanel.releaseStatics((byte) -103);
         WidgetContainer.releaseStatics(param0 ^ -336184830);
@@ -1843,7 +1843,7 @@ public final class Kickabout extends GameLoopApplet {
         KitStyleTile.releaseStatics(4476);
         NodeHashTableIterator.releaseStatics(1);
         DualLinkDequeIterator.releaseStatics(-119);
-        GameSoundEffect.a(true);
+        GameSoundEffect.releaseStatics(true);
         SoundStreamHandle.releaseStatics((byte) 100);
         ReceivedAuctionItem.releaseStatics((byte) -126);
         RankingsRequest.releaseStatics((byte) 122);
@@ -1873,7 +1873,7 @@ public final class Kickabout extends GameLoopApplet {
         PlayerValueSortCriterion.releaseStatics(param0 - 6);
         PlayerStatSortCriterion.releaseStatics((byte) 85);
         SortCriterion.releaseStatics((byte) 121);
-        TexturedPanelPainter.a(-15207);
+        TexturedPanelPainter.releaseStatics(-15207);
         GeneratedPanelPainter.releaseStatics((byte) 125);
         CheatCodeListener.releaseStatics(param0 ^ 32312);
         PendingRequestAcknowledgement.releaseStatics(param0 - 121);
@@ -1882,7 +1882,7 @@ public final class Kickabout extends GameLoopApplet {
         DelayedServerPacket.releaseStatics(104);
         AccountNameCheckState.releaseStatics(-5);
         AccountRegistrationResponse.releaseStatics(param0 ^ param0);
-        NamedValueEntry.a(92);
+        NamedValueEntry.releaseStatics(92);
         FootballerPreview.releaseStatics(true);
         LoginMethod.releaseStatics(120);
         KeyedLoginCredentials.releaseStatics((byte) -104);
@@ -1898,8 +1898,8 @@ public final class Kickabout extends GameLoopApplet {
         DemoIntegersCommand.releaseStatics(param0 - 6);
         DoSomethingCommand.releaseStatics(param0 + 121);
         ThreeCommand.releaseStatics(false);
-        IsSixCommand.g(50);
-        NotCommand.g(115);
+        IsSixCommand.releaseStatics(50);
+        NotCommand.releaseStatics(115);
         IntDoubleCommand.releaseStatics(param0 ^ -107);
         IntTripleCommand.releaseStatics(220);
         LongPlusOneCommand.releaseStatics(1);
@@ -1910,7 +1910,7 @@ public final class Kickabout extends GameLoopApplet {
         ListRow.releaseStatics(-18523);
         TrinketTile.releaseStatics((byte) -117);
         TrinketIcon.releaseStatics(true);
-        AccountMessagePanel.a(14);
+        AccountMessagePanel.releaseStatics(14);
         FullscreenFailureReason.releaseStatics((byte) 121);
         TextLayoutLine.releaseStatics((byte) -125);
         LookupQuery.releaseStatics((byte) -61);
@@ -1928,7 +1928,7 @@ public final class Kickabout extends GameLoopApplet {
         RegistrationRequestState.releaseStatics((byte) 68);
         TextHotspotRegion.releaseStatics((byte) -94);
         ValidationState.releaseStatics(-89);
-        DebouncedValidationProvider.d(param0 ^ 344);
+        DebouncedValidationProvider.releaseStatics(param0 ^ 344);
         ColorQuantizationBox.releaseStatics(param0 ^ -110);
         AccountInputValidationResult.releaseStatics((byte) 112);
         this.field_z = null;

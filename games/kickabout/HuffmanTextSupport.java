@@ -9,7 +9,7 @@ final class HuffmanTextSupport {
     static int field_c;
     static String field_b;
 
-    final static void b(int param0) {
+    final static void sendReadyReflectionCheckReplies(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         CipherPacketBuffer var1 = null;
@@ -96,7 +96,7 @@ final class HuffmanTextSupport {
 
     final static void enqueueLeagueWinnerDialog(int param0) {
         if (param0 != 0) {
-          HuffmanTextSupport.b(-31);
+          HuffmanTextSupport.sendReadyReflectionCheckReplies(-31);
           ScrollPane.field_Jb.addLast(new LeagueWinnerDialog(), 3);
           return;
         }

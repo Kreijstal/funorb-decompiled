@@ -122,7 +122,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         if (param0 > -25) {
           this.paint(120);
         }
-        HuffmanTextSupport.b(5);
+        HuffmanTextSupport.sendReadyReflectionCheckReplies(5);
         TextFieldNode.flushWithSimulatedLag(0, 0);
         if (ClientInteractionSupport.a((byte) 10)) {
           var2 = this.pollLoginResult((byte) -65);
@@ -217,7 +217,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                 if (!MarkerSliderWidget.i(0)) {
                   var2 = 1;
                   var3 = -1;
-                  while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
+                  while (TexturedPanelPainter.pollKeyEvent(-59)) {
                     if (-1 == FixedQuaternion.field_e) {
                       if (FixedQuaternion.field_e == -1 &&
                         -1 != var3) {
@@ -340,7 +340,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         return DisplayNameUiSupport.approximateSquareRootFixed8(param1 * param1 + param0 * param0, -524289);
     }
 
-    public static void q(int param0) {
+    public static void releaseAppletStatics(int param0) {
         field_D = null;
         field_C = null;
         if (param0 != 30907) {

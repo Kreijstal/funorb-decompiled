@@ -22,7 +22,7 @@ final class DiagnosticsOverlaySupport {
         return BufferedSocket.field_l - GameQuickChatResolver.field_a;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, String param4, int param5) {
+    final static void drawWrappedTextPanel(int param0, int param1, int param2, byte param3, String param4, int param5) {
         if (param3 != 32) {
           return;
         }

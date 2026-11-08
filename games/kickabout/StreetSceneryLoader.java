@@ -3,7 +3,7 @@
  */
 final class StreetSceneryLoader extends IntrusiveNode {
     static boolean field_k;
-    static HoverTooltip field_m;
+    static SocialNamePrompt field_m;
     static Sprite field_j;
     static UiLayoutNode field_f;
     static QuickChatCommandType field_l;

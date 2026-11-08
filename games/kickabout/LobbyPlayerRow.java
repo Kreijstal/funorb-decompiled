@@ -128,7 +128,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         }
         if (param0 != 320) {
           PcmSampleStream var2 = (PcmSampleStream) null;
-          LobbyPlayerRow.a((PcmSampleStream) null, false);
+          LobbyPlayerRow.removeSoundSubstream((PcmSampleStream) null, false);
         }
         if (!DualLinkDequeIterator.field_e.isComplete((byte) -80)) {
           return DualLinkDequeIterator.field_e.getQuery(3);
@@ -205,14 +205,14 @@ final class LobbyPlayerRow extends UiLayoutNode {
         return !this.isSecondaryLinked((byte) -60) ? true : false;
     }
 
-    final static FadingSoundPlayer a(int param0, boolean param1, int param2, int param3, int param4) {
+    final static FadingSoundPlayer createFadingSoundPlayer(int param0, boolean param1, int param2, int param3, int param4) {
         if (param2 != 240) {
           field_Ub = (String) null;
         }
         return ArrayWidgetContainer.createFadingSoundPlayer(param3, TextInputWidget.field_O[param4], DualLinkHashTable.field_e ? !param1 ? true : false : param1, param4, param0, -121);
     }
 
-    final static void a(PcmSampleStream param0, boolean param1) {
+    final static void removeSoundSubstream(PcmSampleStream param0, boolean param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

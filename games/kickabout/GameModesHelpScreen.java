@@ -153,7 +153,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
         return var5;
     }
 
-    final static void closeHoverTooltip(byte param0) {
+    final static void closeSocialNamePrompt(byte param0) {
         if (param0 >= -16) {
           GameModesHelpScreen.clampTooltipPosition(-54, 93, 33, 14, -70);
         }

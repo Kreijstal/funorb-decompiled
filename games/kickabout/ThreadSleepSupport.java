@@ -21,15 +21,15 @@ final class ThreadSleepSupport {
           return;
         }
         if (param0 % 10L != 0L) {
-          ServerMessageScreen.a((byte) -93, param0);
+          ServerMessageScreen.sleepIgnoringInterrupt((byte) -93, param0);
           if (param1 != 1) {
             field_b = (String) null;
             return;
           }
           return;
         }
-        ServerMessageScreen.a((byte) -93, param0 - 1L);
-        ServerMessageScreen.a((byte) -93, 1L);
+        ServerMessageScreen.sleepIgnoringInterrupt((byte) -93, param0 - 1L);
+        ServerMessageScreen.sleepIgnoringInterrupt((byte) -93, 1L);
         if (param1 != 1) {
           field_b = (String) null;
           return;

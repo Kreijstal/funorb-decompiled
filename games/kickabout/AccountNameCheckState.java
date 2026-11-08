@@ -12,7 +12,7 @@ final class AccountNameCheckState {
         if (param1 > PlayerArchetypeSortCriterion.field_r) {
           PlayerArchetypeSortCriterion.field_r = param1;
           NineSlicePanelPainter.field_c = MarkerSliderWidget.field_I[ProxySocketConnector.nextBoundedInt(115, MarkerSliderWidget.field_I.length, MidiPcmStream.field_l)];
-          DelayedServerPacket.a(1, param0 + 9863, param0);
+          DelayedServerPacket.updateLoadingProgress(1, param0 + 9863, param0);
           return;
         }
     }

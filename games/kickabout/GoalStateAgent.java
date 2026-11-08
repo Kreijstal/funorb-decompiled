@@ -13,7 +13,7 @@ final class GoalStateAgent extends MatchAgent {
     static int field_l;
 
     final void readState(CipherPacketBuffer param0, byte param1) {
-        if (!ContentTransitionDialog.a(param0, (byte) -39)) {
+        if (!ContentTransitionDialog.readBooleanBit(param0, (byte) -39)) {
           return;
         }
         try {

@@ -9,7 +9,7 @@ final class PitchPurchaseSupport {
     static String field_f;
     static String field_e;
 
-    final static boolean a(int param0, String param1, byte param2, int[] param3, long param4) {
+    final static boolean canSendQuickChat(int param0, String param1, byte param2, int[] param3, long param4) {
         RuntimeException var6 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;

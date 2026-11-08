@@ -13,7 +13,7 @@ abstract class ModalPanel extends WidgetContainer {
     final static IndexedSprite takeDecodedIndexedSprite(byte param0) {
         IndexedSprite var1 = new IndexedSprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], LoginResponseUiSupport.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], SquadPickerDialog.field_O[0], PlayAreaMovementSupport.field_a);
         int var2 = 103 / ((param0 + 65) / 46);
-        ScrollContainer.h((byte) -98);
+        ScrollContainer.releaseDecodedSpriteBuffers((byte) -98);
         return var1;
     }
 
@@ -25,7 +25,7 @@ abstract class ModalPanel extends WidgetContainer {
           if (param0 != 0) {
             return;
           }
-          this.a(this.field_t + param2, (byte) 64, param3 + this.field_g);
+          this.drawPanelContents(this.field_t + param2, (byte) 64, param3 + this.field_g);
           super.drawLayer(param0, 65, param2, param3);
           return;
         }
@@ -33,7 +33,7 @@ abstract class ModalPanel extends WidgetContainer {
           FixedVelocitySupport.field_a = new Sprite(this.field_n, this.field_i);
           PacketBuffer.pushSpriteRaster(param1 - 190, FixedVelocitySupport.field_a);
           SoftwareRasterizer.clearFramebuffer();
-          this.a(0, (byte) 125, 0);
+          this.drawPanelContents(0, (byte) 125, 0);
           super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
           TeamManagementScreen.e(127);
           FixedVelocitySupport.field_a.drawAlpha(this.field_t + param2, this.field_g + param3, this.field_F);
@@ -43,7 +43,7 @@ abstract class ModalPanel extends WidgetContainer {
           FixedVelocitySupport.field_a = new Sprite(this.field_n, this.field_i);
           PacketBuffer.pushSpriteRaster(param1 - 190, FixedVelocitySupport.field_a);
           SoftwareRasterizer.clearFramebuffer();
-          this.a(0, (byte) 125, 0);
+          this.drawPanelContents(0, (byte) 125, 0);
           super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
           TeamManagementScreen.e(127);
           FixedVelocitySupport.field_a.drawAlpha(this.field_t + param2, this.field_g + param3, this.field_F);
@@ -53,7 +53,7 @@ abstract class ModalPanel extends WidgetContainer {
           FixedVelocitySupport.field_a = new Sprite(this.field_n, this.field_i);
           PacketBuffer.pushSpriteRaster(param1 - 190, FixedVelocitySupport.field_a);
           SoftwareRasterizer.clearFramebuffer();
-          this.a(0, (byte) 125, 0);
+          this.drawPanelContents(0, (byte) 125, 0);
           super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
           TeamManagementScreen.e(127);
           FixedVelocitySupport.field_a.drawAlpha(this.field_t + param2, this.field_g + param3, this.field_F);
@@ -61,7 +61,7 @@ abstract class ModalPanel extends WidgetContainer {
         }
         PacketBuffer.pushSpriteRaster(param1 - 190, FixedVelocitySupport.field_a);
         SoftwareRasterizer.clearFramebuffer();
-        this.a(0, (byte) 125, 0);
+        this.drawPanelContents(0, (byte) 125, 0);
         super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
         TeamManagementScreen.e(127);
         FixedVelocitySupport.field_a.drawAlpha(this.field_t + param2, this.field_g + param3, this.field_F);
@@ -85,7 +85,7 @@ abstract class ModalPanel extends WidgetContainer {
             }
             var1[var2] = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], LoginResponseUiSupport.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var5);
           }
-          ScrollContainer.h((byte) -70);
+          ScrollContainer.releaseDecodedSpriteBuffers((byte) -70);
           return var1;
         }
         return (Sprite[]) null;
@@ -187,7 +187,7 @@ abstract class ModalPanel extends WidgetContainer {
         }
     }
 
-    abstract void a(int param0, byte param1, int param2);
+    abstract void drawPanelContents(int param0, byte param1, int param2);
 
     boolean finishAnimationAndCheckClosed(int param0) {
         this.field_F = this.targetOpacity(true);

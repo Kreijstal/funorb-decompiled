@@ -327,7 +327,7 @@ final class AvailabilityCheckRequest {
             }
           } else {
             if (ClassNameSupport.field_a) {
-              ListRow.h(634588072);
+              ListRow.releaseMouseCapture(634588072);
               if (!ClassNameSupport.field_a) {
                 ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
                 TutorialCaptionSupport.field_j = ArchiveManager.field_m;

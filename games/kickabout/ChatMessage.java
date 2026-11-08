@@ -52,7 +52,7 @@ final class ChatMessage {
             if (PitchCoordinateSupport.field_d != 2) {
               return 0;
             }
-            if (IntKeyLookup.a(this.field_q, param0 + 18)) {
+            if (IntKeyLookup.isFriend(this.field_q, param0 + 18)) {
               return 1;
             }
             return 0;
@@ -65,7 +65,7 @@ final class ChatMessage {
         if (PitchCoordinateSupport.field_d != 2) {
           return 0;
         }
-        if (!IntKeyLookup.a(this.field_q, param0 + 18)) {
+        if (!IntKeyLookup.isFriend(this.field_q, param0 + 18)) {
           return 0;
         }
         return 1;

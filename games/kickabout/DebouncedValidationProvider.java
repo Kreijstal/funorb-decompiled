@@ -88,7 +88,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
         return this.evaluateValidationState(false);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != 350) {
           return;
@@ -133,7 +133,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
         int var2 = 76 % ((42 - param0) / 58);
     }
 
-    final static AppScreen a(int param0, int param1) {
+    final static AppScreen resolveScreen(int param0, int param1) {
         if (param0 == -1) {
           return (AppScreen) ((Object) MachineTokenStorageSupport.field_e);
         }

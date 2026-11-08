@@ -205,7 +205,7 @@ final class SocialListProtocolSupport {
             return (BinaryBitmapFont) (stackIn_5_0);
           }
           var2 = new BinaryBitmapFont(param1, IsaacRandom.field_f, LoginResponseUiSupport.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, SquadPickerDialog.field_O);
-          ScrollContainer.h((byte) -82);
+          ScrollContainer.releaseDecodedSpriteBuffers((byte) -82);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

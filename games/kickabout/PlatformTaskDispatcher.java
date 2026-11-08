@@ -180,7 +180,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.field_f) {
                             Class.forName("AwtCursorBridge").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_g, new Object[]{new Integer(var3_int), new Integer(var4_int)});
                           } else {
-                            this.field_n.a(var4_int, (byte) -40, var3_int);
+                            this.field_n.setCursorPosition(var4_int, (byte) -40, var3_int);
                           }
                           break;
                         }

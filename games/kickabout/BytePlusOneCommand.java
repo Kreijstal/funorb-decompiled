@@ -327,7 +327,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 29430) {
-            stackIn_4_0 = param2 - (param1 - LoggedPossession.a((byte) -24, param1 << 1));
+            stackIn_4_0 = param2 - (param1 - LoggedPossession.nextRandomInt((byte) -24, param1 << 1));
             return stackIn_4_0;
           }
           stackIn_2_0 = 12;

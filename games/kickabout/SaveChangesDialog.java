@@ -9,7 +9,7 @@ final class SaveChangesDialog extends MessageDialog {
     final static boolean b(int param0, int param1, int param2) {
         int var3 = null != ArchiveSource.field_b ? 1 : 0;
         if (FixedQuaternion.field_e == 9 &&
-          PitchPurchaseSupport.a(GameOverView.field_z, DefaultPlayerFactory.field_a, (byte) -64, PlayerShopScreen.field_S, PlayerModelPreview.field_r)) {
+          PitchPurchaseSupport.canSendQuickChat(GameOverView.field_z, DefaultPlayerFactory.field_a, (byte) -64, PlayerShopScreen.field_S, PlayerModelPreview.field_r)) {
           if (GameOverView.field_z != 2 &&
             var3 != 0) {
             return false;

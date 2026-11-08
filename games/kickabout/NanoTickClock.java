@@ -42,8 +42,8 @@ final class NanoTickClock extends TickClock {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = ContentTransitionDialog.a(param1, (byte) -39) ? 1 : 0;
-          var4 = ContentTransitionDialog.a(param1, (byte) -39) ? 1 : 0;
+          var3 = ContentTransitionDialog.readBooleanBit(param1, (byte) -39) ? 1 : 0;
+          var4 = ContentTransitionDialog.readBooleanBit(param1, (byte) -39) ? 1 : 0;
           var5 = new TriangleMesh();
           var5.field_b = (short)param1.readBits(16, 59);
           var5.field_f = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_f, param1, 16, -72);
@@ -70,10 +70,10 @@ final class NanoTickClock extends TickClock {
             var5.field_i = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_i, param1, 16, -65);
             var5.field_K = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_K, param1, 16, -87);
           }
-          if (ContentTransitionDialog.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
             var5.field_o = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_o, param1, 16, 106);
           }
-          if (ContentTransitionDialog.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
             var5.field_G = ColumnTableWidget.readPackedByteArray(2280703, param1, var5.field_G, 16);
             var6 = 0;
             for (var7 = 0; var5.field_G.length > var7; var7++) {

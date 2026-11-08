@@ -191,7 +191,7 @@ final class LineupView extends MatchPhaseView {
             var6 = stackIn_9_0;
             var11.a(this.field_r, this.field_w, (byte) 125, this.field_B, var6);
             if (!this.field_a.field_e) {
-              var11.a((byte) -128, GameLoopApplet.field_E, var5);
+              var11.updateAuctionStatusIcon((byte) -128, GameLoopApplet.field_E, var5);
             }
             if (!var11.field_Eb.isEmpty(-2) &&
               var11.field_qb != 0 &&
@@ -658,7 +658,7 @@ final class LineupView extends MatchPhaseView {
             this.field_A.setBounds(true, 156, 45, 112, 225);
             this.field_q.addChild((byte) -104, this.field_A);
             this.field_q.updateInput(0, true);
-            this.field_o = new CheckboxLabelWidget(HoverTooltip.field_Ab, ByteArrayPool.field_d, var12.field_q);
+            this.field_o = new CheckboxLabelWidget(SocialNamePrompt.field_Ab, ByteArrayPool.field_d, var12.field_q);
             this.field_o.field_lb = false;
             this.field_o.field_J = 7 + var12.field_mb + var12.field_T;
             this.field_o.field_s = var12.field_F;

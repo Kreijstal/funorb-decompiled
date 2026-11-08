@@ -15,16 +15,16 @@ class NineSlicePanelPainter {
         ColorQuantizationBox.drawNineSlicePanel(param2, param1, param0, (byte) 22, this.field_d, param3);
         if (param4 != 3) {
           PlayerStats var7 = (PlayerStats) null;
-          NineSlicePanelPainter.a((byte) -66, -25, -85, (PlayerStats) null);
+          NineSlicePanelPainter.enqueueStatChoiceDialog((byte) -66, -25, -85, (PlayerStats) null);
         }
     }
 
-    final static void a(byte param0, int param1, int param2, PlayerStats param3) {
+    final static void enqueueStatChoiceDialog(byte param0, int param1, int param2, PlayerStats param3) {
         try {
           ScrollPane.field_Jb.addLast(new StatChoiceDialog(param2, param1, param3), 3);
           if (param0 != -120) {
             PlayerStats var5 = (PlayerStats) null;
-            NineSlicePanelPainter.a((byte) 119, -53, 107, (PlayerStats) null);
+            NineSlicePanelPainter.enqueueStatChoiceDialog((byte) 119, -53, 107, (PlayerStats) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "dg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

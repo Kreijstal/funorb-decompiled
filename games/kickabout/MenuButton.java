@@ -118,7 +118,7 @@ final class MenuButton {
                                                                     if (10 != this.kind) {
                                                                       if (this.kind != 11) {
                                                                         if (this.kind == 12) {
-                                                                          QuickChatCategoryCache.a(param0 + 1);
+                                                                          QuickChatCategoryCache.returnToLobby(param0 + 1);
                                                                         } else {
                                                                           if (this.kind == 55) {
                                                                             NanoTickClock.c((byte) -59);

@@ -104,7 +104,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var5 = 0;
           var3_intLifetime1 = var5;
           while (3 > var5) {
-            LoadingProgressSupport.field_d.a(var5, RankingsRequest.field_n[var5], (byte) -85);
+            LoadingProgressSupport.field_d.setPlayerVolume(var5, RankingsRequest.field_n[var5], (byte) -85);
             var5++;
           }
           PitchPurchaseSupport.field_d.setRootStream(LoadingProgressSupport.field_d);

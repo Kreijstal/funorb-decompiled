@@ -32,7 +32,7 @@ abstract class PopupDialog extends IntrusiveNode {
           return;
         }
         this.onUpdate(3, param1);
-        this.field_j.updatePointerSelection(param0 ^ 4642, this.a(true, TutorialCaptionSupport.field_j, ArrayWidgetContainer.field_x), this.a(true, TabStrip.field_Eb, TrinketIcon.field_yb));
+        this.field_j.updatePointerSelection(param0 ^ 4642, this.findItemAt(true, TutorialCaptionSupport.field_j, ArrayWidgetContainer.field_x), this.findItemAt(true, TabStrip.field_Eb, TrinketIcon.field_yb));
         if (this.field_n == 0 &&
           0 == this.field_m) {
           ShopPlayerSlot.playDefaultFadingSound(this.getOpenSoundId(false), -104);
@@ -111,7 +111,7 @@ abstract class PopupDialog extends IntrusiveNode {
         }
         SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var2);
         if (this.field_q == 4096) {
-          this.a(32, this.field_p, this.field_k);
+          this.drawPopup(32, this.field_p, this.field_k);
           var12 = 0;
           var3 = var12;
           while (this.field_i.length > var12) {
@@ -125,7 +125,7 @@ abstract class PopupDialog extends IntrusiveNode {
           var5 = -var3 + 640 >> 1;
           PacketBuffer.pushSpriteRaster(73, this.field_l);
           var6 = -var4_int + 480 >> 1;
-          this.a(32, 0, 0);
+          this.drawPopup(32, 0, 0);
           for (var7 = 0; var7 < this.field_i.length; var7++) {
             var8 = this.field_i[var7];
             var9 = var8.field_s;
@@ -190,7 +190,7 @@ abstract class PopupDialog extends IntrusiveNode {
 
     abstract int getOpenSoundId(boolean param0);
 
-    private final int a(boolean param0, int param1, int param2) {
+    private final int findItemAt(boolean param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -270,7 +270,7 @@ abstract class PopupDialog extends IntrusiveNode {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void drawPopup(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
         AuctionListing.pushRasterClip(param1 + this.field_e, param0 - 22946, param1, param2 + this.field_r, param2);

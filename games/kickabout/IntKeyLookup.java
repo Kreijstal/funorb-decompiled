@@ -16,7 +16,7 @@ final class IntKeyLookup {
         return PitchProjectionSupport.worldToScreenY(param1, (byte) -56);
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isFriend(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
@@ -52,14 +52,14 @@ final class IntKeyLookup {
         field_c = null;
     }
 
-    final static void a(int param0) {
-        GameSoundEffect.field_i = LeaguesHelpScreen.h(-117);
+    final static void initializeAccountModals(int param0) {
+        GameSoundEffect.field_i = LeaguesHelpScreen.getDefaultWidgetTheme(-117);
         RankingsRequest.field_l = new ModalStack();
         if (param0 < -59) {
           LobbyMatchPreview.showLoginDialog(true, true, (byte) -72);
           return;
         }
-        IntKeyLookup.a(-98);
+        IntKeyLookup.initializeAccountModals(-98);
         LobbyMatchPreview.showLoginDialog(true, true, (byte) -72);
     }
 
@@ -105,7 +105,7 @@ final class IntKeyLookup {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int get(int param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -127,7 +127,7 @@ final class IntKeyLookup {
             var4 = var4 + 1 & var3;
           }
         }
-        IntKeyLookup.a(-22);
+        IntKeyLookup.initializeAccountModals(-22);
         var4Lifetime1 = param0 & var3;
         while (true) {
           var5Lifetime1 = this.field_a[var4Lifetime1 + (var4Lifetime1 + 1)];

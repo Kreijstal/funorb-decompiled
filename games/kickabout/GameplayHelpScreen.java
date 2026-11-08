@@ -13,7 +13,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
     private PlayerStats[] field_F;
     private SquadSlotWidget[] field_K;
 
-    final static UiLayoutNode j(byte param0) {
+    final static UiLayoutNode createTrinketPickerGrid(byte param0) {
         int var4 = 0;
         int var8 = 0;
         SelectableTrinketIcon stackIn_30_0;
@@ -34,7 +34,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var11 = Kickabout.field_G;
         var12 = new UiLayoutNode();
         if (param0 != 15) {
-          GameplayHelpScreen.j((byte) 80);
+          GameplayHelpScreen.createTrinketPickerGrid((byte) 80);
         }
         var2 = 0;
         var3 = GradientRasterSupport.field_f.length;
@@ -353,7 +353,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           WorldDrawEntry.field_f.draw(120 + this.slideOffsetX, 363);
         }
         if (param0 != -128) {
-          GameplayHelpScreen.j((byte) 0);
+          GameplayHelpScreen.createTrinketPickerGrid((byte) 0);
         }
         IsSixCommand.field_C.drawParagraph(ModelMaterial.field_d, 150 + this.slideOffsetX, 360, 300, 43, 16777215, -1, 0, 1, 16);
         if (var2 != 0) {
@@ -451,7 +451,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         this.field_E.setLayout(15, 220 + this.slideOffsetX, 0, (byte) 6, 220, this.field_E.field_Db.field_q + 15, 180);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_J = null;
         field_G = null;
         if (param0 != 29250) {
@@ -589,7 +589,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
 
     final boolean handleKey(int param0, int param1, char param2) {
         if (param1 >= -5) {
-          GameplayHelpScreen.k((byte) 83);
+          GameplayHelpScreen.hasActiveSocialNamePrompt((byte) 83);
         }
         boolean decompiledFrameRemainder0 = true;
         if (0 == this.pageIndex) {
@@ -644,9 +644,9 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         }
     }
 
-    final static boolean k(byte param0) {
+    final static boolean hasActiveSocialNamePrompt(byte param0) {
         if (param0 > -22) {
-          GameplayHelpScreen.g(124);
+          GameplayHelpScreen.releaseStatics(124);
         }
         return StreetSceneryLoader.field_m != null ? true : false;
     }

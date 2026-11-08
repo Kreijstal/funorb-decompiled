@@ -42,7 +42,7 @@ abstract class RasterBuffer {
             var15 = new int[]{-100, 100, 0, 50, -50};
             var17 = new int[]{100, 100, 90, 40, 40};
             for (var6 = 0; 5 > var6; var6++) {
-              var16 = param1[LoggedPossession.a((byte) -24, 3)];
+              var16 = param1[LoggedPossession.nextRandomInt((byte) -24, 3)];
               var8 = 448 + var15[var6] - (var16.field_o >> 1);
               var9 = var17[var6] - (var16.field_v >> 1) + 10;
               var16.draw(var8 + param2, var9 + param3);
@@ -51,7 +51,7 @@ abstract class RasterBuffer {
             var20 = new int[]{30, -20, 0};
             var18 = new int[]{-50, -10, 40};
             for (var6 = 0; var6 < 3; var6++) {
-              var19 = param1[LoggedPossession.a((byte) -24, 3)];
+              var19 = param1[LoggedPossession.nextRandomInt((byte) -24, 3)];
               var8 = var18[var6] + (896 - var19.field_o >> 1);
               var9 = var20[var6] + (1344 - var19.field_v >> 1);
               var19.draw(param2 + var8, var9 + param3);
@@ -59,7 +59,7 @@ abstract class RasterBuffer {
           } else if (RankingsScreen.field_C != 1 &&
             RankingsScreen.field_C != 2) {
             if (3 == RankingsScreen.field_C) {
-              var11 = param1[LoggedPossession.a((byte) -24, 3)];
+              var11 = param1[LoggedPossession.nextRandomInt((byte) -24, 3)];
               var4 = var11;
               var5 = BytePlusOneCommand.a(29430, 10, 896 - var11.field_o >> 1);
               var6 = BytePlusOneCommand.a(29430, 10, 50 - (var11.field_v >> 1));
@@ -67,7 +67,7 @@ abstract class RasterBuffer {
               var4.draw(param2 + var5, -var11.field_v - var6 + (1344 + param3));
               var5Lifetime1 = BytePlusOneCommand.a(29430, 10, -var11.field_o + 896 >> 1);
               var6 = BytePlusOneCommand.a(29430, 10, 1344 - var11.field_v >> 1);
-              param1[LoggedPossession.a((byte) -24, 3)].draw(var5Lifetime1 + param2, param3 + var6);
+              param1[LoggedPossession.nextRandomInt((byte) -24, 3)].draw(var5Lifetime1 + param2, param3 + var6);
             }
           } else {
             var12 = new int[]{-40, 40, 0};
@@ -80,7 +80,7 @@ abstract class RasterBuffer {
               var13.draw(var8 + param2, var9 + param3);
               var7_ref_ut.draw(var8 + param2, -var13.field_v - var9 + (1344 + param3));
             }
-            var6_ref_ut = param1[LoggedPossession.a((byte) -24, 3)];
+            var6_ref_ut = param1[LoggedPossession.nextRandomInt((byte) -24, 3)];
             var7 = BytePlusOneCommand.a(29430, 10, -var6_ref_ut.field_o + 896 >> 1);
             var8 = BytePlusOneCommand.a(29430, 10, 1344 - var6_ref_ut.field_v >> 1);
             var6_ref_ut.draw(var7 + param2, var8 + param3);
@@ -111,7 +111,7 @@ abstract class RasterBuffer {
     }
 
     final static void a(int param0) {
-        ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.j((byte) 15), ConsolePanel.field_q, ParticipantAgent.field_m);
+        ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.createTrinketPickerGrid((byte) 15), ConsolePanel.field_q, ParticipantAgent.field_m);
         ContextMenuItem.field_Ib.setLayout(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 != 20164) {
           field_c = 125;

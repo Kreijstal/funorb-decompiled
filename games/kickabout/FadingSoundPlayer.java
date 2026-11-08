@@ -58,7 +58,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
 
     final void detachPlayback(int param0) {
         if (this.field_r) {
-          LobbyPlayerRow.a(this.stream, true);
+          LobbyPlayerRow.removeSoundSubstream(this.stream, true);
         } else {
           PitchAppearanceSupport.detachSampleStream(true, this.stream);
         }

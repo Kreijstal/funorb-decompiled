@@ -29,7 +29,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         boolean decompiledFrameRemainder0 = true;
         var5 = ThumbnailStateFactory.field_d.field_V;
         if (HuffmanCodec.field_e == 1) {
-          if (HoverTooltip.field_Eb) {
+          if (SocialNamePrompt.field_Eb) {
             var2 = EmailAvailabilityValidator.field_k.pixelY(true);
             var3 = (var2 * -200 + 326800) / -490;
             PitchAppearanceSupport.setProjectionTarget(256.0, 60, 448.0, (double)(var3 + 1344));
@@ -40,7 +40,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           if (HuffmanCodec.field_e != 2) {
             if (HuffmanCodec.field_e != 3) {
               if (HuffmanCodec.field_e == 4) {
-                if (!HoverTooltip.field_Eb) {
+                if (!SocialNamePrompt.field_Eb) {
                   PitchAppearanceSupport.setProjectionTarget(200.0, 60, (double)EmailAvailabilityValidator.field_k.pixelX(param0 - 13564), (double)(EmailAvailabilityValidator.field_k.pixelY(true) - 55));
                 } else {
                   PitchAppearanceSupport.setProjectionTarget(160.0, 60, (double)(AccountInputValidationResult.field_f.pixelX(-119) + EmailAvailabilityValidator.field_k.pixelX(-118) >> 1), (double)(AccountInputValidationResult.field_f.pixelY(true) + EmailAvailabilityValidator.field_k.pixelY(true) >> 1));
@@ -62,7 +62,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
                             if (HuffmanCodec.field_e != 11) {
                               if (HuffmanCodec.field_e != 12) {
                                 if (HuffmanCodec.field_e == 13) {
-                                  if (!HoverTooltip.field_Eb &&
+                                  if (!SocialNamePrompt.field_Eb &&
                                     var5.positionY >= 0) {
                                     if (var5.possessorTeam != 0 &&
                                       var5.horizontalSpeedSquared(-125) < 1638400) {
@@ -96,7 +96,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
                         } else {
                           var3 = 2;
                         }
-                        if (!HoverTooltip.field_Eb) {
+                        if (!SocialNamePrompt.field_Eb) {
                           PitchAppearanceSupport.setProjectionTarget(190.0, 60, (double)AccountInputValidationResult.field_f.pixelX(-92), (double)QuickChatMenuFactory.field_a[var3]);
                         } else {
                           PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)AccountInputValidationResult.field_f.pixelX(param0 ^ -13551), (double)AccountInputValidationResult.field_f.pixelY(true));
@@ -105,7 +105,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
                     }
                   }
                 } else {
-                  if (HoverTooltip.field_Eb) {
+                  if (SocialNamePrompt.field_Eb) {
                     PitchAppearanceSupport.setProjectionTarget(160.0, 60, (double)AccountInputValidationResult.field_f.pixelX(-124), (double)AccountInputValidationResult.field_f.pixelY(true));
                   } else {
                     PitchAppearanceSupport.setProjectionTarget(200.0, 60, (double)AccountInputValidationResult.field_f.pixelX(-118), (double)(AccountInputValidationResult.field_f.pixelY(true) - 55));

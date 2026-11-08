@@ -210,7 +210,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var3.field_t.rotateClockwise();
         }
         MatchUiLayoutSupport.field_d.field_lb = false;
-        ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.j((byte) 15), ConsolePanel.field_q, ParticipantAgent.field_m);
+        ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.createTrinketPickerGrid((byte) 15), ConsolePanel.field_q, ParticipantAgent.field_m);
         ContextMenuItem.field_Ib.setLayout(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 == -38) {
           ResourceArchive.field_g = true;
@@ -246,7 +246,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.first(24009));
           while (var5 != null) {
             if (var5 instanceof SelectableTrinketIcon) {
-              ((SelectableTrinketIcon) (var5)).a(param1, -60);
+              ((SelectableTrinketIcon) (var5)).updateTrinketSelection(param1, -60);
             }
             var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.next(33));
           }
@@ -291,7 +291,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.first(24009));
         while (var5 != null) {
           if (var5 instanceof SelectableTrinketIcon) {
-            ((SelectableTrinketIcon) (var5)).a(param1, -60);
+            ((SelectableTrinketIcon) (var5)).updateTrinketSelection(param1, -60);
           }
           var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.next(33));
         }

@@ -102,7 +102,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_M = null;
         if (param0 >= -50) {
           field_M = (String) null;
@@ -502,7 +502,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             var17.addLast(var9_ref_jr, 3);
           }
           if (!param0) {
-            AuctionsScreen.h((byte) 106);
+            AuctionsScreen.releaseStatics((byte) 106);
           }
           for (var9 = 0; var9 < NetworkArchiveRequest.field_w.length; var9++) {
             if (this.containsAuction(NetworkArchiveRequest.field_w[var9], (byte) 117)) {

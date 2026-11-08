@@ -17,7 +17,7 @@ final class SquadSlotWidget extends UiLayoutNode {
     boolean field_Lb;
     boolean field_zb;
 
-    final void a(byte param0, ClubState param1, int param2) {
+    final void updateAuctionStatusIcon(byte param0, ClubState param1, int param2) {
         AuctionLogEntry var4 = null;
         try {
           var4 = param1.findLogEntryBySlot((byte) 43, param2);
@@ -50,7 +50,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           return;
         }
         if (null == this.field_Db) {
-          ReceivedAuctionItemRow.a(this.field_F + (this.field_q >> 1), -36, (this.field_mb >> 1) + this.field_T);
+          ReceivedAuctionItemRow.drawLoadingSpinner(this.field_F + (this.field_q >> 1), -36, (this.field_mb >> 1) + this.field_T);
           if (!this.field_Hb) {
             if (param0 >= -114) {
               this.h((byte) -68);

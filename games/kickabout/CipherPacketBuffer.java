@@ -186,7 +186,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           stackIn_11_6 = var1;
         }
         ((UiLayoutNode) (Object) stackIn_4_0).setBounds(stackIn_5_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, stackIn_10_5 - stackIn_11_6);
-        ClientException.a(0);
+        ClientException.layoutPlayerListPanel(0);
         MouseWheelInput.field_a.setBounds(true, UiKeyRoutingSupport.field_c.field_q, 0, UiKeyRoutingSupport.field_c.field_mb - 40, 40);
         AuctionItem.field_o.setBounds(true, AuctionPriceLimits.field_d.field_q, 0, 0, 30);
         stackIn_13_0 = QuickChatCategoryCache.field_b;

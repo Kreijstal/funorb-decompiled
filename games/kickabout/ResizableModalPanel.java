@@ -133,7 +133,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         }
     }
 
-    void a(int param0, byte param1, int param2) {
+    void drawPanelContents(int param0, byte param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -230,8 +230,8 @@ abstract class ResizableModalPanel extends ModalPanel {
           var8Lifetime1++;
         }
         KeyedLoginCredentials.field_f.draw(-90 + this.field_n + param0, param2 + 10);
-        ValidationHelpWidget.a(5 + param0, -127, 35 + param2, LoadingProgressSupport.field_a, -10 + this.field_n);
-        ValidationHelpWidget.a(param0, -125, -22 + (this.field_i + param2), PitchDecorationSupport.field_a, this.field_n);
+        ValidationHelpWidget.drawHorizontalSpriteStrip(5 + param0, -127, 35 + param2, LoadingProgressSupport.field_a, -10 + this.field_n);
+        ValidationHelpWidget.drawHorizontalSpriteStrip(param0, -125, -22 + (this.field_i + param2), PitchDecorationSupport.field_a, this.field_n);
         var4Lifetime2 = this.field_i - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;

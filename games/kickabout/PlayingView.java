@@ -617,7 +617,7 @@ final class PlayingView extends MatchPhaseView {
                 TutorialCaptionSupport.field_j != -1) {
                 if (!this.field_a.participantHasBall(this.field_g, -115)) {
                   if (var2 != 0 &&
-                    var4.d((byte) 102)) {
+                    var4.canStartAction((byte) 102)) {
                     this.queueMouseMove(this.field_z, this.field_G, -1);
                     this.field_k = false;
                   }
@@ -690,7 +690,7 @@ final class PlayingView extends MatchPhaseView {
               this.field_r.addLast(TextHotspotWidget.createFootballerDrawEntry((RenderedFootballer) (this.field_a.field_P[var3_int][var4_int]), 1), 3);
             }
           }
-          this.field_r.addLast(ValidatedTextWidget.a((RenderedBall) (this.field_a.field_V), false), 3);
+          this.field_r.addLast(ValidatedTextWidget.createBallDrawEntry((RenderedBall) (this.field_a.field_V), false), 3);
           this.field_r.addLast(CheckboxPainter.a(true, 115), 3);
           var3_intLifetime1 = -88 / ((4 - param1) / 50);
           this.field_r.addLast(CheckboxPainter.a(false, 92), 3);
@@ -962,7 +962,7 @@ final class PlayingView extends MatchPhaseView {
             PasswordValidator.updateDirectionalIndicatorSprites(706856675, 128, 256, var2, var3, true);
             GameMediaSupport.drawViewportScaledSprite(653278209, var5, var6);
           } else {
-            var7 = var4.a(var4.actionTime, (byte) -68);
+            var7 = var4.getChargeKickPower(var4.actionTime, (byte) -68);
             PasswordValidator.updateDirectionalIndicatorSprites(706856675, 256, var7, var2, var3, true);
             GameMediaSupport.drawViewportScaledSprite(653278209, var5, var6);
           }
@@ -1163,7 +1163,7 @@ final class PlayingView extends MatchPhaseView {
           this.field_q = 172;
           stackIn_10_0 = (param0.field_g[var6_int].team == 1);
           FaceNormal.field_c = stackIn_10_0;
-          ContextMenu.b(0, (byte) 60, ReceivedAuctionItem.field_E[1]);
+          ContextMenu.setMusicFadeOutStep(0, (byte) 60, ReceivedAuctionItem.field_E[1]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1253,7 +1253,7 @@ final class PlayingView extends MatchPhaseView {
         int var3Lifetime2;
         int var3Lifetime3;
         var5 = Kickabout.field_G;
-        LeaguesHelpScreen.i(-126);
+        LeaguesHelpScreen.drawFootballerAbilityIndicators(-126);
         if (this.field_u &&
           this.isLocalParticipantActive((byte) 13)) {
           this.updateAimIndicator((byte) 107);

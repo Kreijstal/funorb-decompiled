@@ -20,7 +20,7 @@ final class ContextMenu extends UiLayoutNode {
     private ContextMenuItem[] field_Bb;
     private int field_Mb;
 
-    final static void b(int param0, byte param1, int param2) {
+    final static void setMusicFadeOutStep(int param0, byte param1, int param2) {
         if (param1 != 60) {
           return;
         }
@@ -159,7 +159,7 @@ final class ContextMenu extends UiLayoutNode {
           }
           ScrollPane.field_Jb.addLast(new AuctionListingDialog(param1, param2), 3);
           if (param0 != -25) {
-            ContextMenu.b(-42, (byte) 4, 39);
+            ContextMenu.setMusicFadeOutStep(-42, (byte) 4, 39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -187,7 +187,7 @@ final class ContextMenu extends UiLayoutNode {
         field_Db = null;
     }
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void sendGameWithdrawalRequest(int param0, byte param1, int param2) {
         if (param1 > -75) {
           field_yb = (char[]) null;
         }

@@ -33,7 +33,7 @@ final class PlayArea {
         field_k = (int[][]) null;
     }
 
-    final void a(int param0, int param1) {
+    final void drawBounds(int param0, int param1) {
         int var3 = SocialListLayoutSupport.worldToScreenX(param0 ^ -2943, this.field_g >> 16);
         int var4 = IntKeyLookup.projectPitchY((byte) -123, this.field_b >> 16);
         int var5 = -var3 + SocialListLayoutSupport.worldToScreenX(param0 ^ param0, this.field_i >> 16);
@@ -92,7 +92,7 @@ final class PlayArea {
           stackIn_41_0 = (this.field_l <= param3) && (param3 <= this.field_j);
           return stackIn_41_0;
         }
-        this.a(-14, 82);
+        this.drawBounds(-14, 82);
         if (param0 < this.field_g) {
           return false;
         }

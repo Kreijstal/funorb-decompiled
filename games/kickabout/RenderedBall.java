@@ -99,7 +99,7 @@ final class RenderedBall extends BallAgent {
               var5Lifetime1 = 41;
               var6 = GameLoopApplet.fixedPointDistance(var3_intLifetime1, var4, -23146);
               var7 = var6 >> 10;
-              LobbyPlayerRow.a(128, false, 240, ClientUiUpdateSupport.field_f + var7, var5Lifetime1);
+              LobbyPlayerRow.createFadingSoundPlayer(128, false, 240, ClientUiUpdateSupport.field_f + var7, var5Lifetime1);
             }
           } else {
             if (KitPatternMaskSupport.field_c != 0) {
@@ -122,7 +122,7 @@ final class RenderedBall extends BallAgent {
             if (KitPatternMaskSupport.field_c == 2) {
               var6 -= 40;
             }
-            LobbyPlayerRow.a(128, false, 240, var6 + DemoIntegersCommand.field_E, var5Lifetime1);
+            LobbyPlayerRow.createFadingSoundPlayer(128, false, 240, var6 + DemoIntegersCommand.field_E, var5Lifetime1);
           }
           if (this.highFriction > 0) {
             var5Lifetime2 = this.horizontalSpeedSquared(92) >> 16;

@@ -12,12 +12,12 @@ final class QuickChatCategoryCache {
     static boolean field_e;
     static int[] field_a;
 
-    final static void a(int param0) {
+    final static void returnToLobby(int param0) {
         int var2;
         var2 = Kickabout.field_G;
         if (SortCriterion.field_l != null) {
           if (SortCriterion.field_l.c(0)) {
-            ContextMenu.a(PlayerContextMenu.field_i.getGameId((byte) -77), (byte) -88, 11);
+            ContextMenu.sendGameWithdrawalRequest(PlayerContextMenu.field_i.getGameId((byte) -77), (byte) -88, 11);
           } else {
             GameLoopApplet.b(15848, 11, 0);
           }
@@ -26,7 +26,7 @@ final class QuickChatCategoryCache {
             !MachineTokenStorageSupport.field_e.usesTournamentSpectatorControls(-21660)) {
             GameLoopApplet.b(param0 + 15848, 11, 0);
           } else {
-            ContextMenu.a(PlayerContextMenu.field_i.getGameId((byte) 74), (byte) -114, 11);
+            ContextMenu.sendGameWithdrawalRequest(PlayerContextMenu.field_i.getGameId((byte) 74), (byte) -114, 11);
             QuickChatPhraseCache.field_d = true;
           }
         }

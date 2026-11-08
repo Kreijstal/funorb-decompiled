@@ -99,7 +99,7 @@ final class ShopPlayerSlot extends ListRow {
           if (var4 != null) {
             var4.draw(1 + var3Lifetime1, 4 + this.field_T);
           } else {
-            ReceivedAuctionItemRow.a(19 + (1 + var3Lifetime1), -92, 23 + (this.field_T + 4));
+            ReceivedAuctionItemRow.drawLoadingSpinner(19 + (1 + var3Lifetime1), -92, 23 + (this.field_T + 4));
           }
           this.field_X.drawText(this.field_Sb.getDisplayName(100), var3Lifetime1 + 40, 4 + (this.field_mb >> 1) + this.field_T, this.field_y, -1);
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[param0];
@@ -165,7 +165,7 @@ final class ShopPlayerSlot extends ListRow {
         int var4 = Kickabout.field_G;
         if (param1) {
           for (var3 = 0; this.field_Ib.length > var3; var3++) {
-            this.field_Ib[var3].h((byte) 30);
+            this.field_Ib[var3].showHoverTooltip((byte) 30);
           }
         }
         if (param0 != 0) {

@@ -20,7 +20,7 @@ final class MusicVolumeSupport {
     final static void setMusicVolume(int param0, int param1) {
         RankingsRequest.field_n[param0] = param1;
         if (LoadingProgressSupport.field_d != null) {
-          LoadingProgressSupport.field_d.a(0, param1, (byte) -85);
+          LoadingProgressSupport.field_d.setPlayerVolume(0, param1, (byte) -85);
         }
     }
 

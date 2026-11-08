@@ -149,7 +149,7 @@ final class IntTripleCommand extends ConsoleCommand {
         }
         SocialRowOrderSupport.field_f = true;
         RankingsRequest.field_l.deactivateAllModals(103);
-        MouseInputHandler.a(TextInputUiSupport.field_a, 4, false);
+        MouseInputHandler.showAccountRequestDialog(TextInputUiSupport.field_a, 4, false);
     }
 
     static {

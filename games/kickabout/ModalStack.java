@@ -255,11 +255,11 @@ final class ModalStack extends SingleChildContainer {
               stackIn_86_0 = RotaryDialPainter.field_d.field_Eb;
             }
             if (((UiLayoutNode) (stackIn_86_0)).field_sb != 0) {
-              StreetSceneryLoader.field_m = new HoverTooltip(RotaryDialPainter.field_d.field_Eb.field_F, RotaryDialPainter.field_d.field_Eb.field_T, RotaryDialPainter.field_d.field_Eb.field_q, RotaryDialPainter.field_d.field_Eb.field_mb, MainMenuScreen.field_G, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+              StreetSceneryLoader.field_m = new SocialNamePrompt(RotaryDialPainter.field_d.field_Eb.field_F, RotaryDialPainter.field_d.field_Eb.field_T, RotaryDialPainter.field_d.field_Eb.field_q, RotaryDialPainter.field_d.field_Eb.field_mb, MainMenuScreen.field_G, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
               PanelSpriteFactory.field_b = 0;
             }
             if (RotaryDialPainter.field_d.field_zb.field_sb != 0) {
-              StreetSceneryLoader.field_m = new HoverTooltip(RotaryDialPainter.field_d.field_zb.field_F, RotaryDialPainter.field_d.field_zb.field_T, RotaryDialPainter.field_d.field_zb.field_q, RotaryDialPainter.field_d.field_zb.field_mb, TabStrip.field_yb, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+              StreetSceneryLoader.field_m = new SocialNamePrompt(RotaryDialPainter.field_d.field_zb.field_F, RotaryDialPainter.field_d.field_zb.field_T, RotaryDialPainter.field_d.field_zb.field_q, RotaryDialPainter.field_d.field_zb.field_mb, TabStrip.field_yb, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
               PanelSpriteFactory.field_b = 1;
             }
             decompiledFrameRemainder0 = false;

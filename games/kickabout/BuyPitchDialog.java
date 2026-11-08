@@ -11,7 +11,7 @@ final class BuyPitchDialog extends MessageDialog {
     static int[] field_M;
     static volatile int field_G;
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_M = null;
         if (param0 != -45) {
           return;

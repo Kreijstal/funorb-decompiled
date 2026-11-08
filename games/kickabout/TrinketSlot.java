@@ -13,12 +13,12 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
     static String field_Fb;
     static int[] field_Db;
 
-    final void h(byte param0) {
+    final void showHoverTooltip(byte param0) {
         if (this.field_gb) {
           AnimationSkeleton.showTrinketTooltip((byte) 100, this);
         }
         if (param0 != 30) {
-          this.h((byte) 44);
+          this.showHoverTooltip((byte) 44);
         }
     }
 

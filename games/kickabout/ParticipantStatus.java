@@ -98,18 +98,18 @@ final class ParticipantStatus extends MatchAgent {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ContentTransitionDialog.a(param0, (byte) -39)) {
+          if (!ContentTransitionDialog.readBooleanBit(param0, (byte) -39)) {
             return;
           }
           this.controlledSlot = -1 + param0.readBits(3, 59);
           this.field_p = param0.readBits(3, param1 ^ 58) - param1;
-          this.field_k = ContentTransitionDialog.a(param0, (byte) -39);
-          this.offerDraw = ContentTransitionDialog.a(param0, (byte) -39);
-          this.resigned = ContentTransitionDialog.a(param0, (byte) -39);
-          this.departed = ContentTransitionDialog.a(param0, (byte) -39);
-          this.loadedPitch = ContentTransitionDialog.a(param0, (byte) -39);
-          this.rewardEligible = ContentTransitionDialog.a(param0, (byte) -39);
-          this.megamode = ContentTransitionDialog.a(param0, (byte) -39);
+          this.field_k = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
+          this.offerDraw = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
+          this.resigned = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
+          this.departed = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
+          this.loadedPitch = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
+          this.rewardEligible = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
+          this.megamode = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
           this.field_l = param0.readBits(8, 59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -269,7 +269,7 @@ final class ParticipantStatus extends MatchAgent {
                   return;
                 }
                 if (NotificationPanelPositionSupport.field_a == 0) {
-                  VerticalScrollbar.h(param1 - 1);
+                  VerticalScrollbar.initializeSocialTabs(param1 - 1);
                 }
                 NotificationPanelPositionSupport.field_a = NotificationPanelPositionSupport.field_a + 1;
                 return;

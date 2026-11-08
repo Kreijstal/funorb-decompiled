@@ -44,7 +44,7 @@ final class KitUnlockNoticeSupport {
           if (null == StreetSceneryLoader.field_m) {
             return false;
           }
-          if (StreetSceneryLoader.field_m.h((byte) 16)) {
+          if (StreetSceneryLoader.field_m.handleNameInputKey((byte) 16)) {
             return true;
           }
           return false;
@@ -52,7 +52,7 @@ final class KitUnlockNoticeSupport {
         if (null == StreetSceneryLoader.field_m) {
           return false;
         }
-        if (StreetSceneryLoader.field_m.h((byte) 16)) {
+        if (StreetSceneryLoader.field_m.handleNameInputKey((byte) 16)) {
           return true;
         }
         return false;

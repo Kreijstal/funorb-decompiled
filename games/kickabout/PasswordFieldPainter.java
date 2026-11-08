@@ -154,7 +154,7 @@ final class PasswordFieldPainter extends BeveledTextPainter {
           }
           stackIn_64_0 = -59;
           while (true) {
-            if (!TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(stackIn_64_0)) {
+            if (!TexturedPanelPainter.pollKeyEvent(stackIn_64_0)) {
               stackIn_77_0 = 0;
               return stackIn_77_0;
             }

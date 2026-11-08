@@ -12,7 +12,7 @@ final class LoginRequiredDialog extends MessageDialog {
 
     final static UiLayoutNode h(byte param0) {
         if (param0 >= -39) {
-          LoginRequiredDialog.g(-104);
+          LoginRequiredDialog.releaseStatics(-104);
           return RotaryDialPainter.field_d.field_yb;
         }
         return RotaryDialPainter.field_d.field_yb;
@@ -36,7 +36,7 @@ final class LoginRequiredDialog extends MessageDialog {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 2356) {
           return;
         }

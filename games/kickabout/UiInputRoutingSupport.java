@@ -22,8 +22,8 @@ final class UiInputRoutingSupport {
             param3 = false;
             MusicPatchNode.closePlayerContextMenu(98);
           }
-          DualLinkDequeIterator.a(param1 - 6, param5, param3);
-          TrinketIcon.a(param3, param6, true);
+          DualLinkDequeIterator.updateSocialNamePrompt(param1 - 6, param5, param3);
+          TrinketIcon.updateTextPrompt(param3, param6, true);
           param3 = false;
         }
         if (param1 == 50) {

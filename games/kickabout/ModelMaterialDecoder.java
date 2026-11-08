@@ -39,7 +39,7 @@ final class ModelMaterialDecoder {
             return stackIn_6_0;
           }
           for (var5 = 0; var3 > var5; var5++) {
-            if (ContentTransitionDialog.a(param0, (byte) -39)) {
+            if (ContentTransitionDialog.readBooleanBit(param0, (byte) -39)) {
               var6 = new ModelMaterial();
               param0.readBits(24, param1 ^ -57);
               param0.readBits(24, 59);

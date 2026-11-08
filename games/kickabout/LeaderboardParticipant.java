@@ -403,7 +403,7 @@ final class LeaderboardParticipant {
         if (param0 >= -123) {
           return (Sprite[]) null;
         }
-        ScrollContainer.h((byte) -79);
+        ScrollContainer.releaseDecodedSpriteBuffers((byte) -79);
         return var1;
     }
 

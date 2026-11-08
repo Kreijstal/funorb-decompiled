@@ -116,7 +116,7 @@ final class GameResourceLoader implements LoadingSequence {
           IsSixCommand.field_C.setInlineImages(new IndexedSprite[]{var5}, new int[]{10});
           LoadingProgressSupport.reportStageProgress(83, 100, 10);
           var6 = SpriteResourceSupport.loadNamedSprite((byte) 100, "basic", var16, "orbcoin");
-          LoggedGoal.a(var6, (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "locked")), (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "unachieved")), -123);
+          LoggedGoal.initializeAchievementSprites(var6, (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "locked")), (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "unachieved")), -123);
           LineupPositionSupport.field_g = SpritePixelSupport.downscaleArgbByHalf(SpritePixelSupport.downsampleSpriteHalfToArgb(var6));
           AccountChoicePanel.field_B = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 69, "divider"));
           SocialListProtocolSupport.field_e = SpriteResourceSupport.loadNamedSprite((byte) 122, "menu", QuickChatKeysHelpPanel.field_Cb, "button_left_shine");
@@ -187,7 +187,7 @@ final class GameResourceLoader implements LoadingSequence {
           IndexedSpriteState.field_e = FormationView.field_n;
           TextButton.field_z = MyKitScreen.field_Z;
           StrongCacheEntry.field_t = 0;
-          ValidatedTextWidget.a(false, 200);
+          ValidatedTextWidget.initializeChatHistory(false, 200);
           LoadingProgressSupport.reportStageProgress(-61, 100, 95);
           WhirlpoolHasher.a(var17, var16, 5198);
           LineupView.initializePromotionResources(-70, RankingsScreen.field_A, 0, AnimationClip.field_g, 0, 16777215);
@@ -333,7 +333,7 @@ final class GameResourceLoader implements LoadingSequence {
         try {
           if (param0 >= -42) {
             var9 = (StringBuilder) null;
-            GameResourceLoader.a(-123, -22, (StringBuilder) null);
+            GameResourceLoader.appendFixed16Decimal(-123, -22, (StringBuilder) null);
           }
           var10 = ChatMessage.field_b[2];
           var11 = var10;
@@ -343,8 +343,8 @@ final class GameResourceLoader implements LoadingSequence {
             IntValueNode.field_e = new WorldSpriteDecoration[30];
             var4 = 0;
             for (var5 = 0; 4 > var5; var5++) {
-              var6 = LoggedPossession.a((byte) -24, 896 - var11.field_o);
-              var7 = LoggedPossession.a((byte) -24, 1344 - var11.field_v);
+              var6 = LoggedPossession.nextRandomInt((byte) -24, 896 - var11.field_o);
+              var7 = LoggedPossession.nextRandomInt((byte) -24, 1344 - var11.field_v);
               incrementValue$69 = var4;
               var4++;
               IntValueNode.field_e[incrementValue$69] = new WorldSpriteDecoration(var10, var6, var7);
@@ -424,7 +424,7 @@ final class GameResourceLoader implements LoadingSequence {
             for (var5Lifetime1 = 0; 12 > var5Lifetime1; var5Lifetime1++) {
               var6Lifetime1 = BytePlusOneCommand.a(29430, 30, -300 + 100 * var5Lifetime1);
               var7Lifetime1 = BytePlusOneCommand.a(29430, 60, -290);
-              if (LoggedPossession.a((byte) -24, 2) == 0) {
+              if (LoggedPossession.nextRandomInt((byte) -24, 2) == 0) {
                 var6Lifetime1 = -var6Lifetime1 + 896;
                 var7Lifetime1 += 1724;
               }
@@ -455,10 +455,10 @@ final class GameResourceLoader implements LoadingSequence {
               }
               incrementValue$46 = var4Lifetime1;
               var4Lifetime1++;
-              IntValueNode.field_e[incrementValue$46] = new WorldSpriteDecoration(AccountRegistrationResponse.field_a[LoggedPossession.a((byte) -24, AccountRegistrationResponse.field_a.length)], var6Lifetime1Lifetime1, var7Lifetime1Lifetime1);
+              IntValueNode.field_e[incrementValue$46] = new WorldSpriteDecoration(AccountRegistrationResponse.field_a[LoggedPossession.nextRandomInt((byte) -24, AccountRegistrationResponse.field_a.length)], var6Lifetime1Lifetime1, var7Lifetime1Lifetime1);
               incrementValue$47 = var4Lifetime1;
               var4Lifetime1++;
-              IntValueNode.field_e[incrementValue$47] = new WorldSpriteDecoration(AccountRegistrationResponse.field_a[LoggedPossession.a((byte) -24, AccountRegistrationResponse.field_a.length)], -var6Lifetime1Lifetime1 + 876, var7Lifetime1Lifetime1);
+              IntValueNode.field_e[incrementValue$47] = new WorldSpriteDecoration(AccountRegistrationResponse.field_a[LoggedPossession.nextRandomInt((byte) -24, AccountRegistrationResponse.field_a.length)], -var6Lifetime1Lifetime1 + 876, var7Lifetime1Lifetime1);
             }
             return;
           }
@@ -491,7 +491,7 @@ final class GameResourceLoader implements LoadingSequence {
         field_b = null;
         if (param0 != 1) {
           StringBuilder var2 = (StringBuilder) null;
-          GameResourceLoader.a(58, 40, (StringBuilder) null);
+          GameResourceLoader.appendFixed16Decimal(58, 40, (StringBuilder) null);
         }
     }
 
@@ -555,7 +555,7 @@ final class GameResourceLoader implements LoadingSequence {
         LoadingProgressSupport.reportStageProgress(-71, 4, 1);
         PlayerModelPreview.configureSharedMenuTheme(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, IsSixCommand.field_C, ByteArrayPool.field_d, new TexturedPanelPainter(), 20, 16777215, 30, new GeneratedPanelPainter(true), 16777215, 9, new GeneratedPanelPainter(false), 16777215);
         LoadingProgressSupport.reportStageProgress(-57, 4, 2);
-        GameSoundEffect.a((byte) -94);
+        GameSoundEffect.initializePlayerPortraitCache((byte) -94);
         LoadingProgressSupport.reportStageProgress(75, 4, 3);
         ResizableModalPanel.setTargetFrameRate(param0 ^ 922092267, 50);
         Kickabout.prepareAccountChoiceSprites(param0 - 826888154);
@@ -786,7 +786,7 @@ final class GameResourceLoader implements LoadingSequence {
         }
     }
 
-    final static void a(int param0, int param1, StringBuilder param2) {
+    final static void appendFixed16Decimal(int param0, int param1, StringBuilder param2) {
         StringBuilder discarded$11 = null;
         int var3_int = param0 >> 16;
         StringBuilder discarded$0 = param2.append(var3_int);

@@ -251,7 +251,7 @@ final class IntDoubleCommand extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(float param0, String param1, boolean param2, byte param3) {
+    final static void showLoadingProgress(float param0, String param1, boolean param2, byte param3) {
         try {
           if (AnimationClip.field_d == null) {
             AnimationClip.field_d = new LoadingProgressDialog(RankingsRequest.field_l, CachedTextLayout.field_m);

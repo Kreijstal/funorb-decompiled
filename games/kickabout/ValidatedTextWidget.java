@@ -14,7 +14,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
     final void notifyTextChanged(byte param0) {
         super.notifyTextChanged((byte) -97);
         if (param0 >= -57) {
-          ValidatedTextWidget.a(true, 93);
+          ValidatedTextWidget.initializeChatHistory(true, 93);
         }
         if (this.field_V != null) {
           this.field_V.validationChanged(113);
@@ -25,12 +25,12 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         super(param0, param1, param2);
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void initializeChatHistory(boolean param0, int param1) {
         PitchDecorationSupport.field_j = 0;
         AlphaContainer.field_C = new int[3];
         if (param0) {
           RenderedBall var3 = (RenderedBall) null;
-          ValidatedTextWidget.a((RenderedBall) null, true);
+          ValidatedTextWidget.createBallDrawEntry((RenderedBall) null, true);
         }
         TrinketTile.field_Hb = param1;
         GrowableIntList.field_b = new ChatMessage[param1 * 15];
@@ -55,7 +55,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         return this.field_V;
     }
 
-    final static WorldDrawEntry a(RenderedBall param0, boolean param1) {
+    final static WorldDrawEntry createBallDrawEntry(RenderedBall param0, boolean param1) {
         WorldDrawEntry var2 = null;
         RuntimeException var2_ref = null;
         WorldDrawEntry stackIn_3_0 = null;
@@ -116,7 +116,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         }
     }
 
-    final void a(int param0, ValidationSource param1) {
+    final void setValidationSource(int param0, ValidationSource param1) {
         try {
           this.field_V = param1;
           if (param0 != 6) {

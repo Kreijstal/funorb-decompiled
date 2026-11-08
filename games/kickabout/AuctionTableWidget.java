@@ -7,7 +7,7 @@ final class AuctionTableWidget extends ColumnTableWidget {
     static ScrollContainer field_Hb;
     static int[] field_Ib;
 
-    private final void a(int param0, int param1, int param2) {
+    private final void selectSortColumn(int param0, int param1, int param2) {
         SortCriterion var4 = this.field_zb[param2];
         if (param1 == -23061) {
           if (var4 != null) {
@@ -28,9 +28,9 @@ final class AuctionTableWidget extends ColumnTableWidget {
     }
 
     final void cycleColumnSort(int param0, int param1) {
-        this.a(0, -23061, param0);
+        this.selectSortColumn(0, -23061, param0);
         if (param1 < 97) {
-          this.a(117, -16, -93);
+          this.selectSortColumn(117, -16, -93);
         }
     }
 

@@ -81,7 +81,7 @@ final class ScrollContainer extends UiLayoutNode {
         }
     }
 
-    final static void h(byte param0) {
+    final static void releaseDecodedSpriteBuffers(byte param0) {
         MouseInputHandler.field_c = null;
         PlayAreaMovementSupport.field_a = null;
         SquadPickerDialog.field_O = (byte[][]) null;
@@ -89,7 +89,7 @@ final class ScrollContainer extends UiLayoutNode {
         LoginResponseUiSupport.field_g = null;
         PasswordValidator.field_j = null;
         if (param0 >= -69) {
-          ScrollContainer.i((byte) 118);
+          ScrollContainer.releaseStatics((byte) 118);
         }
     }
 
@@ -201,7 +201,7 @@ final class ScrollContainer extends UiLayoutNode {
         }
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Jb = null;
         field_Bb = null;
         field_Hb = null;

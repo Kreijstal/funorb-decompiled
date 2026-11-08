@@ -14,7 +14,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
     private int field_Z;
     private int field_R;
 
-    private final void b(UiWidget param0, int param1) {
+    private final void replaceContentWidget(UiWidget param0, int param1) {
         try {
           if (null != this.field_ab) {
             this.field_ab.unlink((byte) -109);
@@ -42,7 +42,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         }
         if (AccountRegistrationResponse.field_b != this.field_X) {
           this.setCenteredSize((byte) 127, this.field_V.field_i + (this.field_R + 12), 12 + this.field_V.field_n);
-          this.b(this.field_V, 54);
+          this.replaceContentWidget(this.field_V, 54);
         } else {
           this.field_ab.field_F = 256;
           this.field_X = null;
@@ -161,7 +161,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           this.field_Z = param3;
           this.field_W = param3;
           this.field_R = param2;
-          this.b(param1, 94);
+          this.replaceContentWidget(param1, 94);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -183,7 +183,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         }
         this.field_T = 0;
         this.field_X = AccountRegistrationResponse.field_b;
-        this.b(this.field_V, 99);
+        this.replaceContentWidget(this.field_V, 99);
         if (param0 == 4096) {
           this.field_ab.field_F = 0;
           this.field_V = null;
@@ -257,7 +257,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         return super.advanceDialogAnimation(param0 + 0);
     }
 
-    final static boolean a(CipherPacketBuffer param0, byte param1) {
+    final static boolean readBooleanBit(CipherPacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;

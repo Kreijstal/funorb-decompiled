@@ -54,7 +54,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         }
     }
 
-    final void p(int param0) {
+    final void stopProgressAnimation(int param0) {
         this.field_Y.field_w = false;
         if (param0 != -120) {
           return;
@@ -71,8 +71,8 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         field_Z = null;
     }
 
-    final void a(int param0, byte param1, int param2) {
-        super.a(param0, (byte) -128, param2);
+    final void drawPanelContents(int param0, byte param1, int param2) {
+        super.drawPanelContents(param0, (byte) -128, param2);
         ConsoleLexer.field_b.drawCentered(this.field_U, (this.field_n >> 1) + param0, param2 + 103, 16777215, -1);
         int var4 = 80 / ((-55 - param1) / 45);
         if (this.field_S == null) {
@@ -82,7 +82,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         ConsoleLexer.field_b.drawParagraph(this.field_S, param0 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, ConsoleLexer.field_b.field_G);
     }
 
-    final static void a(int param0, ReceivedAuctionItem param1) {
+    final static void enqueueReceivedItemDialog(int param0, ReceivedAuctionItem param1) {
         try {
           ScrollPane.field_Jb.addLast(new AuctionBidDialog(param1, 19), 3);
           int var2_int = -76 / ((49 - param0) / 61);
@@ -110,7 +110,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void enqueueAuctionSettingsDialog(int param0, int param1) {
         int var2 = 51 / ((param0 + 28) / 58);
         ScrollPane.field_Jb.addLast(new AuctionSettingsDialog(param1), 3);
     }

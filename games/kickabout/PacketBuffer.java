@@ -338,7 +338,7 @@ class PacketBuffer extends IntrusiveNode {
         this.field_f[fieldTemp$6] = (byte)(int)param1;
     }
 
-    final void b(byte param0, long param1) {
+    final void writeLong40(byte param0, long param1) {
         if (param0 < 2) {
           this.readCircumfixedString(-37);
         }
@@ -633,7 +633,7 @@ class PacketBuffer extends IntrusiveNode {
         return var3;
     }
 
-    final long h(int param0, int param1) {
+    final long readUnsignedLongBytes(int param0, int param1) {
         int fieldTemp$0 = 0;
         int var3;
         long var4;

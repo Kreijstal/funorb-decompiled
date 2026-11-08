@@ -94,7 +94,7 @@ final class RankingRowNode extends UiLayoutNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void layoutChatPanelOverlay(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 0;
         int var7Lifetime1;
         LeaguesHelpScreen.field_E.setBounds(true, param2, param3, param6, param5);

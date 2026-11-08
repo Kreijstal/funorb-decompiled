@@ -85,7 +85,7 @@ final class MeshPreviewSupport {
             MeshPreviewSupport.b(104);
           }
           ValidatedTextWidget.field_Z.advanceModalAnimations(2);
-          while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
+          while (TexturedPanelPainter.pollKeyEvent(-59)) {
             ValidatedTextWidget.field_Z.dispatchKeyInput(ClassDescriptorSupport.field_c, (byte) -91, FixedQuaternion.field_e);
           }
           return;

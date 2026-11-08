@@ -147,7 +147,7 @@ final class WorldDrawEntry extends IntrusiveNode {
               var4Lifetime1 = var8 * var4Lifetime1 >> 8;
             }
             var8Lifetime1 = (int)((var5 << 16) / 2600L);
-            this.field_e.a(var3Lifetime1, 24407, -var8Lifetime1, var2Lifetime1, var4Lifetime1);
+            this.field_e.drawRotatedCentered(var3Lifetime1, 24407, -var8Lifetime1, var2Lifetime1, var4Lifetime1);
             if (param0 == 192) {
               return;
             }

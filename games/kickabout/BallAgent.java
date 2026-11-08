@@ -66,17 +66,17 @@ class BallAgent extends MatchAgent {
 
     public final String toString() {
         StringBuilder var2 = new StringBuilder("AgentBall p=[");
-        GameResourceLoader.a(this.positionX, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.positionX, 100, var2);
         StringBuilder discarded$0 = var2.append(",");
-        GameResourceLoader.a(this.positionY, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.positionY, 100, var2);
         StringBuilder discarded$1 = var2.append(",");
-        GameResourceLoader.a(this.height, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.height, 100, var2);
         StringBuilder discarded$2 = var2.append("]\tv=[");
-        GameResourceLoader.a(this.velocityX, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.velocityX, 100, var2);
         StringBuilder discarded$3 = var2.append(",");
-        GameResourceLoader.a(this.velocityY, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.velocityY, 100, var2);
         StringBuilder discarded$4 = var2.append(",");
-        GameResourceLoader.a(this.verticalVelocity, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.verticalVelocity, 100, var2);
         StringBuilder discarded$5 = var2.append("]\tposessor=" + this.possessorTeam + "/" + this.possessorSlot);
         StringBuilder discarded$6 = var2.append("\tuncatchable=" + this.uncatchable);
         StringBuilder discarded$7 = var2.append("\thigh_friction=" + this.highFriction);
@@ -193,14 +193,14 @@ class BallAgent extends MatchAgent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (ContentTransitionDialog.a(param0, (byte) -39)) {
+          if (ContentTransitionDialog.readBooleanBit(param0, (byte) -39)) {
             this.possessorTeam = -1 + param0.readBits(2, param1 ^ 42);
             this.possessorSlot = param0.readBits(3, 59);
           }
           if (param1 != 17) {
             return;
           }
-          if (ContentTransitionDialog.a(param0, (byte) -39)) {
+          if (ContentTransitionDialog.readBooleanBit(param0, (byte) -39)) {
             this.positionX = this.positionX + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 17, param0, 0, 22, 30);
             this.positionY = this.positionY + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 17, param0, 0, 22, 30);
             this.height = this.height + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 20, param0, 0, 24, 30);
@@ -208,7 +208,7 @@ class BallAgent extends MatchAgent {
             this.velocityY = this.velocityY + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 11, param0, 0, 16, 30);
             this.verticalVelocity = this.verticalVelocity + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 18, param0, 0, 24, 30);
           }
-          if (!ContentTransitionDialog.a(param0, (byte) -39)) {
+          if (!ContentTransitionDialog.readBooleanBit(param0, (byte) -39)) {
             return;
           }
           this.uncatchable = ClientInteractionSupport.a(22531, 9, param0, 0);

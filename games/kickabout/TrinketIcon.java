@@ -79,7 +79,7 @@ final class TrinketIcon extends UiLayoutNode {
         MyPitchScreen.field_G = (double)param1;
     }
 
-    final static void a(boolean param0, int param1, boolean param2) {
+    final static void updateTextPrompt(boolean param0, int param1, boolean param2) {
         int var3 = 0;
         int var4 = 0;
         if (!param2) {

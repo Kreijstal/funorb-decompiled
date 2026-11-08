@@ -47,7 +47,7 @@ final class AnimationSkeleton extends IntrusiveNode {
 
     final static int a(boolean param0) {
         if (HuffmanCodec.field_e == 1 &&
-          !HoverTooltip.field_Eb) {
+          !SocialNamePrompt.field_Eb) {
           return 0;
         }
         if (HuffmanCodec.field_e == 2) {
@@ -66,30 +66,30 @@ final class AnimationSkeleton extends IntrusiveNode {
           AnimationSkeleton.a(false);
         }
         if (HuffmanCodec.field_e == 4 &&
-          !HoverTooltip.field_Eb) {
+          !SocialNamePrompt.field_Eb) {
           return 5;
         }
         if (HuffmanCodec.field_e == 5 &&
-          !HoverTooltip.field_Eb) {
+          !SocialNamePrompt.field_Eb) {
           return 6;
         }
         if (HuffmanCodec.field_e == 6 &&
-          !HoverTooltip.field_Eb) {
+          !SocialNamePrompt.field_Eb) {
           return 7;
         }
         if (HuffmanCodec.field_e != 7) {
           if (HuffmanCodec.field_e == 8) {
-            if (HoverTooltip.field_Eb) {
+            if (SocialNamePrompt.field_Eb) {
               return 10;
             }
-            if (!HoverTooltip.field_Eb &&
+            if (!SocialNamePrompt.field_Eb &&
               AccountInputValidationResult.field_f.pixelX(-120) < 248 &&
               400 > AccountInputValidationResult.field_f.pixelY(true)) {
               return 11;
             }
           } else {
             if (HuffmanCodec.field_e == 9) {
-              if (HoverTooltip.field_Eb) {
+              if (SocialNamePrompt.field_Eb) {
                 return 12;
               }
               return 13;
@@ -104,7 +104,7 @@ final class AnimationSkeleton extends IntrusiveNode {
                 }
               } else {
                 if (HuffmanCodec.field_e == 13) {
-                  if (!HoverTooltip.field_Eb) {
+                  if (!SocialNamePrompt.field_Eb) {
                     return 17;
                   }
                 } else {
@@ -123,16 +123,16 @@ final class AnimationSkeleton extends IntrusiveNode {
                 }
               }
             } else {
-              if (!HoverTooltip.field_Eb) {
+              if (!SocialNamePrompt.field_Eb) {
                 return 14;
               }
             }
           }
         } else {
-          if (!HoverTooltip.field_Eb) {
+          if (!SocialNamePrompt.field_Eb) {
             return 9;
           }
-          if (HoverTooltip.field_Eb &&
+          if (SocialNamePrompt.field_Eb &&
             1 == ThumbnailStateFactory.field_d.field_V.possessorTeam &&
             ThumbnailStateFactory.field_d.getBallCarrier((byte) -96).action == 0) {
             return 8;

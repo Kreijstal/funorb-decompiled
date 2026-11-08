@@ -597,7 +597,7 @@ final class MatchScreen extends AppScreen {
           var3_ref_la__ = var7;
           for (var4Lifetime1 = 0; var7.length > var4Lifetime1; var4Lifetime1++) {
             var5 = var7[var4Lifetime1];
-            var5.a(-2943, 16777215);
+            var5.drawBounds(-2943, 16777215);
           }
         }
         if ((PendingRequestAcknowledgement.field_j & 2) != 0) {
@@ -605,7 +605,7 @@ final class MatchScreen extends AppScreen {
           var3_ref_la__Lifetime1 = var8;
           for (var4Lifetime2 = 0; var4Lifetime2 < var8.length; var4Lifetime2++) {
             var5Lifetime1 = var8[var4Lifetime2];
-            var5Lifetime1.a(-2943, 16711680);
+            var5Lifetime1.drawBounds(-2943, 16711680);
           }
         }
         TutorialCaptionSupport.drawTutorialCaption((byte) -121);

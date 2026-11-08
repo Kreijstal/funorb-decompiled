@@ -19,7 +19,7 @@ final class LoggedGoal extends IntrusiveNode {
     int field_f;
     private int scorerSlot;
 
-    final static void a(Sprite param0, ArgbSprite param1, ArgbSprite param2, int param3) {
+    final static void initializeAchievementSprites(Sprite param0, ArgbSprite param1, ArgbSprite param2, int param3) {
         int var4_int = 0;
         int var5 = Kickabout.field_G;
         int var4_intLifetime1;

@@ -30,7 +30,7 @@ final class FormationAgent extends MatchAgent {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_h = null;
         if (!param0) {
           return;
@@ -84,8 +84,8 @@ final class FormationAgent extends MatchAgent {
             FormationAgent.a((java.awt.Canvas) null, 103);
           }
           this.formationChoice[1] = param0.readBits(3, 59);
-          this.formationConfirmed[0] = ContentTransitionDialog.a(param0, (byte) -39);
-          this.formationConfirmed[1] = ContentTransitionDialog.a(param0, (byte) -39);
+          this.formationConfirmed[0] = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
+          this.formationConfirmed[1] = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wr.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -163,7 +163,7 @@ final class FormationAgent extends MatchAgent {
           if (RasterGlowSupport.field_c == 11) {
             TrinketIcon.validateLoadingGuard(-127);
           }
-          IntDoubleCommand.a(InstrumentNoteMask.field_j, PitchCoordinateSupport.field_b, WhirlpoolHasher.field_h, (byte) 84);
+          IntDoubleCommand.showLoadingProgress(InstrumentNoteMask.field_j, PitchCoordinateSupport.field_b, WhirlpoolHasher.field_h, (byte) 84);
           WidgetStyleFactory.drawRasterToCanvas(param1 ^ -23390, 0, 0, param0);
           if (param1 != -14142) {
             var3 = (String) null;
@@ -203,7 +203,7 @@ final class FormationAgent extends MatchAgent {
             this.formationConfirmed[var4] = var6.formationConfirmed[var4];
           }
           if (param0 > -52) {
-            FormationAgent.a(false);
+            FormationAgent.releaseStatics(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

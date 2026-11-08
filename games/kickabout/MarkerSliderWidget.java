@@ -36,7 +36,7 @@ final class MarkerSliderWidget extends TextButton {
             return null;
           }
           var3 = new CoverageBitmapFont(param1, IsaacRandom.field_f, LoginResponseUiSupport.field_g, MouseInputHandler.field_c, PasswordValidator.field_j, PlayAreaMovementSupport.field_a, SquadPickerDialog.field_O);
-          ScrollContainer.h((byte) -92);
+          ScrollContainer.releaseDecodedSpriteBuffers((byte) -92);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

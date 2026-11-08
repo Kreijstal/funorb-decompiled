@@ -74,7 +74,7 @@ final class MatchTextInputOverlay implements OverlayLayer {
                   BuyPitchDialog.field_K[var5][var9][var10] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);
                 }
                 var4Lifetime1++;
-                DelayedServerPacket.a(var3, param0 + 13984, var4Lifetime1);
+                DelayedServerPacket.updateLoadingProgress(var3, param0 + 13984, var4Lifetime1);
               }
             }
             ClientInteractionSupport.field_a = true;

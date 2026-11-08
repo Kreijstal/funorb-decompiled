@@ -239,12 +239,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_N.field_u = UiLayoutNode.field_Z;
         this.field_J.field_u = SpriteState.field_r;
         this.field_O.field_u = ExceptionTextSupport.field_b;
-        this.field_E.a(6, new AccountNameAvailabilityValidator(this.field_E));
-        this.field_S.a(6, new EmailSyntaxValidator(this.field_S));
-        this.field_K.a(6, new EmailAvailabilityValidator(this.field_K, this.field_S));
-        this.field_T.a(6, new PasswordValidator(this.field_T, this.field_E, this.field_S));
-        this.field_N.a(6, new MatchingTextValidator(this.field_N, this.field_T));
-        this.field_J.a(6, new AgeValidator(this.field_J));
+        this.field_E.setValidationSource(6, new AccountNameAvailabilityValidator(this.field_E));
+        this.field_S.setValidationSource(6, new EmailSyntaxValidator(this.field_S));
+        this.field_K.setValidationSource(6, new EmailAvailabilityValidator(this.field_K, this.field_S));
+        this.field_T.setValidationSource(6, new PasswordValidator(this.field_T, this.field_E, this.field_S));
+        this.field_N.setValidationSource(6, new MatchingTextValidator(this.field_N, this.field_T));
+        this.field_J.setValidationSource(6, new AgeValidator(this.field_J));
         this.field_Q.field_y = false;
         this.field_Q.field_r = (WidgetPainter) ((Object) new SpriteButtonPainter());
         this.field_F.field_r = (WidgetPainter) ((Object) new LinkTextPainter());

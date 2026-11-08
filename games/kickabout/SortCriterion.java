@@ -16,7 +16,7 @@ abstract class SortCriterion {
     static String[] field_g;
     static String field_e;
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawChatAndPopups(boolean param0, byte param1) {
         AuctionLogEntry.drawSharedChatInterface(param0, 0);
         if (param1 >= -20) {
           field_a = (ConsoleExpression[]) null;
@@ -126,12 +126,12 @@ abstract class SortCriterion {
         for (var15Lifetime1 = 0; var22.length > var15Lifetime1; var15Lifetime1++) {
           for (var16_intLifetime1 = 0; var16_intLifetime1 < var22[0].length; var16_intLifetime1++) {
             regionExit1: {
-              if (LoggedPossession.a((byte) -24, 256) <= param1) {
+              if (LoggedPossession.nextRandomInt((byte) -24, 256) <= param1) {
                 var17Lifetime1 = 39 + var16_intLifetime1 * var10Lifetime1 + var15Lifetime1;
                 var18 = var9Lifetime1 + var15Lifetime1 * var11;
-                var19 = LoggedPossession.a((byte) -24, 5);
+                var19 = LoggedPossession.nextRandomInt((byte) -24, 5);
                 if (param2) {
-                  var18 = var18 + LoggedPossession.a((byte) -24, 5);
+                  var18 = var18 + LoggedPossession.nextRandomInt((byte) -24, 5);
                 } else {
                   if (var15Lifetime1 == 0) {
                     if (0 != var19 &&
@@ -148,7 +148,7 @@ abstract class SortCriterion {
           }
         }
         for (var15Lifetime2 = 0; 6 > var15Lifetime2; var15Lifetime2++) {
-          DelayedServerPacket.a(100, 9863, (-param0 + param4) * var15Lifetime2 / 6 + param0);
+          DelayedServerPacket.updateLoadingProgress(100, 9863, (-param0 + param4) * var15Lifetime2 / 6 + param0);
           var16 = OverlayLayerSupport.a(param2, param5, (byte) 95);
           PacketBuffer.pushSpriteRaster(-101, var16);
           for (var17Lifetime2 = 0; var13 > var17Lifetime2; var17Lifetime2++) {

@@ -412,7 +412,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         TextFieldNode.field_Ob = FootballerAgent.field_p;
-        CaptionedContainer.a(this.getTooltip(-1), (byte) -98);
+        CaptionedContainer.updateTooltipTracking(this.getTooltip(-1), (byte) -98);
         if (param1 == 31947) {
           return param3;
         }

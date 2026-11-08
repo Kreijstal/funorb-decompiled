@@ -7,7 +7,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
     static String field_Ab;
     static String field_yb;
 
-    final void a(boolean param0, int param1) {
+    final void updateTrinketSelection(boolean param0, int param1) {
         java.awt.Component var4;
         java.awt.Component var4Lifetime1;
         if (this.field_sb != 1) {
@@ -48,7 +48,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
         var4.field_z = param3;
         int var5 = var4.directionMask(5339);
         int var6 = PlayerContextMenu.directionMaskFromVector(true, param2, param0);
-        int var7 = param1 > ~SquadPickerDialog.b(param1 ^ -172, var6 ^ var5) ? 1 : 0;
+        int var7 = param1 > ~SquadPickerDialog.bitCount(param1 ^ -172, var6 ^ var5) ? 1 : 0;
         var4.field_h = var6;
         var4.setAction((byte) -31, 2);
         var4.setDirectionFromMask(var4.field_h, 26214);

@@ -166,7 +166,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         this.layoutThumb(param4, param5, (byte) 64, param7);
     }
 
-    final static void h(int param0) {
+    final static void initializeSocialTabs(int param0) {
         WhirlpoolHasher.field_m = new UiLayoutNode(0L, (UiLayoutNode) null);
         if (NetworkArchiveRequest.field_t) {
           WhirlpoolHasher.field_m.addChild((byte) -127, ConsoleValue.field_a);
@@ -661,7 +661,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                     var3Lifetime2 = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);
                     var20 = ((PacketBuffer) ((Object) var1)).readString(-128);
                     var21 = ((PacketBuffer) ((Object) var1)).readString(-114);
-                    var7 = TexturedPanelPainter.a(31253, var3Lifetime2);
+                    var7 = TexturedPanelPainter.findLobbyPlayerById(31253, var3Lifetime2);
                     if (var7 == null) {
                       var7 = new LobbyPlayerRow(var20, var21, var3Lifetime2);
                       TrinketSlot.field_Eb.put(var7, (byte) -4, var3Lifetime2);
@@ -681,7 +681,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                   if (var2 == 19) {
                     var3Lifetime2 = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);
                     var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -126);
-                    var22 = TexturedPanelPainter.a(31253, var3Lifetime2);
+                    var22 = TexturedPanelPainter.findLobbyPlayerById(31253, var3Lifetime2);
                     if (var22 == null) {
                       return;
                     }

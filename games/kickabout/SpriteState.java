@@ -371,7 +371,7 @@ abstract class SpriteState extends DualLinkNode {
           HighScoreQuery.field_l.tabs.processTabClicks((byte) 71);
           if (null != PlayerContextMenu.field_i) {
             if (TrinketUnlockNotice.field_b.field_sb != 0) {
-              ContextMenu.a(PlayerContextMenu.field_i.getGameId((byte) 73), (byte) -108, param1);
+              ContextMenu.sendGameWithdrawalRequest(PlayerContextMenu.field_i.getGameId((byte) 73), (byte) -108, param1);
             }
             if (GoalStateAgent.field_k.field_sb != 0) {
               SelectionMarkerSupport.field_e = true;
@@ -392,7 +392,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawRotatedCentered(int param0, int param1, int param2, int param3, int param4) {
         int var6 = this.field_o << 3;
         param3 = (15 & var6) + (param3 << 4);
         int var7 = this.field_v << 3;

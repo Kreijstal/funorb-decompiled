@@ -128,7 +128,7 @@ final class NotCommand extends ConsoleCommand {
         return (int)UiLayoutNode.field_K;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > 12) {
           field_B = null;
           field_D = null;
@@ -148,7 +148,7 @@ final class NotCommand extends ConsoleCommand {
     final static void a(byte param0, boolean param1) {
         FullscreenDisplayMode.field_d = param1 ? true : false;
         if (param0 != 50) {
-          NotCommand.g(-123);
+          NotCommand.releaseStatics(-123);
         }
     }
 
@@ -163,7 +163,7 @@ final class NotCommand extends ConsoleCommand {
     final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
         FullscreenDisplayMode.field_d = param1 ? true : false;
         if (param0 != 50) {
-          NotCommand.g(-123);
+          NotCommand.releaseStatics(-123);
         }
     }
 }

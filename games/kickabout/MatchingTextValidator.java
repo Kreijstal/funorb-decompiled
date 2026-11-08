@@ -99,7 +99,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(FadingChatMessage param0, boolean param1) {
+    final static void prependFadingChatMessage(FadingChatMessage param0, boolean param1) {
         int var2_int = 0;
         int var3 = Kickabout.field_G;
         for (var2_int = CalendarSupport.field_c.length - 1; 1 <= var2_int; var2_int--) {

@@ -83,7 +83,7 @@ final class ConsoleArgumentSupport {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!PitchPurchaseSupport.a(param3, param1, (byte) -75, param4, param0)) {
+          if (!PitchPurchaseSupport.canSendQuickChat(param3, param1, (byte) -75, param4, param0)) {
             return false;
           }
           if (1 == param3) {

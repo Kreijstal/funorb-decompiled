@@ -577,7 +577,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_u = ListRow.a((byte) 120, var7, 16);
+                                field_u = ListRow.parseIntegerInRadix((byte) 120, var7, 16);
                               }
                             } else {
                               field_w = -1;
@@ -587,7 +587,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_w = ListRow.a((byte) 116, var6, 16);
+                          field_w = ListRow.parseIntegerInRadix((byte) 116, var6, 16);
                         }
                       } else {
                         field_z = -1;
@@ -597,7 +597,7 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_z = ListRow.a((byte) 123, var5, 16);
+                    field_z = ListRow.parseIntegerInRadix((byte) 123, var5, 16);
                   }
                 } else {
                   field_t = field_r;
@@ -611,7 +611,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_v = ListRow.a((byte) 121, var3, 16);
+            field_v = ListRow.parseIntegerInRadix((byte) 121, var3, 16);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

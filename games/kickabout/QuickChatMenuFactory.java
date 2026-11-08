@@ -158,7 +158,7 @@ final class QuickChatMenuFactory {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, boolean param3, int param4, boolean param5, int param6, boolean param7, int param8, boolean param9, int param10, boolean param11) {
+    final static void updateSharedInterface(int param0, byte param1, int param2, boolean param3, int param4, boolean param5, int param6, boolean param7, int param8, boolean param9, int param10, boolean param11) {
         if (param1 > -64) {
           AchievementSubmission var13 = (AchievementSubmission) null;
           QuickChatMenuFactory.writeAchievementSubmission(80, (AchievementSubmission) null, (byte) -28);
@@ -172,7 +172,7 @@ final class QuickChatMenuFactory {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$20586b1b86c8(int param0, int param1, int param2, boolean param3, int param4, boolean param5, int param6, boolean param7, int param8, boolean param9, int param10, boolean param11) {
+    final static void updateSharedInterface(int param0, int param1, int param2, boolean param3, int param4, boolean param5, int param6, boolean param7, int param8, boolean param9, int param10, boolean param11) {
         if (param1 > -64) {
           AchievementSubmission var13 = (AchievementSubmission) null;
           QuickChatMenuFactory.writeAchievementSubmission(80, (AchievementSubmission) null, (byte) -28);

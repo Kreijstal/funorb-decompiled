@@ -707,7 +707,7 @@ final class GameOverView extends MatchPhaseView {
                 if (var7.power >= 100 &&
                   100 <= var7.speed &&
                   100 <= var7.tackle) {
-                  DiagnosticsOverlaySupport.a(-23 + this.field_o[var6_int].field_F, param1, 150, (byte) 32, GoalkeeperAiSupport.field_b, 100);
+                  DiagnosticsOverlaySupport.drawWrappedTextPanel(-23 + this.field_o[var6_int].field_F, param1, 150, (byte) 32, GoalkeeperAiSupport.field_b, 100);
                 } else {
                   var8 = Math.abs(this.field_j);
                   var8 = var8 | Math.abs(this.field_j) << 8;
@@ -722,7 +722,7 @@ final class GameOverView extends MatchPhaseView {
                   } else {
                     var9 = var9 + "<br>" + UiKeyRoutingSupport.field_e + var7.experience;
                   }
-                  DiagnosticsOverlaySupport.a(-30 + this.field_o[var6_int].field_F, param1, 164, (byte) 32, var9, 110);
+                  DiagnosticsOverlaySupport.drawWrappedTextPanel(-30 + this.field_o[var6_int].field_F, param1, 164, (byte) 32, var9, 110);
                 }
               }
               var6_int++;
@@ -747,10 +747,10 @@ final class GameOverView extends MatchPhaseView {
           if (stackIn_25_0 != stackIn_25_1) {
             return;
           }
-          DiagnosticsOverlaySupport.a(param2, param1, param4, (byte) 32, IntrusiveNode.field_c, param0);
+          DiagnosticsOverlaySupport.drawWrappedTextPanel(param2, param1, param4, (byte) 32, IntrusiveNode.field_c, param0);
           var6 = AlphaContainer.field_D + "+" + LocalizedTextLoader.formatCurrencyAmount(this.field_G, 26300);
           var6 = var6 + "<br>" + UiKeyRoutingSupport.field_e + LocalizedTextLoader.formatCurrencyAmount(GameLoopApplet.field_E.field_x, 26300);
-          DiagnosticsOverlaySupport.a(25, param1, param4, (byte) 32, var6, 140);
+          DiagnosticsOverlaySupport.drawWrappedTextPanel(25, param1, param4, (byte) 32, var6, 140);
           stackIn_30_0 = new StringBuilder().append(QuickChatCategoryCache.field_c);
           if (this.field_Y > 0) {
             stackIn_31_1 = "+";
@@ -765,7 +765,7 @@ final class GameOverView extends MatchPhaseView {
             stackIn_35_1 = Integer.toString(GameLoopApplet.field_E.field_E);
           }
           var7_refLifetime1 = ((StringBuilder) (Object) stackIn_34_0).append(stackIn_35_1).toString();
-          DiagnosticsOverlaySupport.a(475, param1, param4, (byte) 32, var7_refLifetime1, 135);
+          DiagnosticsOverlaySupport.drawWrappedTextPanel(475, param1, param4, (byte) 32, var7_refLifetime1, 135);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2060,7 +2060,7 @@ final class GameOverView extends MatchPhaseView {
                       LoadingProgressSupport.enqueueMessageDialog(7, 16586, var14);
                       ShopPlayerSlot.playDefaultFadingSound(49, -122);
                     } else {
-                      NineSlicePanelPainter.a((byte) -120, var13, this.field_hb[var13], var14);
+                      NineSlicePanelPainter.enqueueStatChoiceDialog((byte) -120, var13, this.field_hb[var13], var14);
                       ShopPlayerSlot.playDefaultFadingSound(49, -121);
                     }
                   } else {

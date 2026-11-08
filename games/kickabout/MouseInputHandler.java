@@ -260,7 +260,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static void a(String param0, int param1, boolean param2) {
+    final static void showAccountRequestDialog(String param0, int param1, boolean param2) {
         try {
           DiagnosticsOverlaySupport.field_g = true;
           if (param1 != 4) {

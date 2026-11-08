@@ -130,7 +130,7 @@ final class RenderedFootballer extends FootballerAgent {
             var5 = param2.field_q + param2.field_F - 38;
             var6 = param2.field_T + 58;
             if (var4 == null) {
-              ReceivedAuctionItemRow.a(var5, -128, var6);
+              ReceivedAuctionItemRow.drawLoadingSpinner(var5, -128, var6);
             } else {
               ((Sprite) ((Object) var4)).draw(var5 - (((Sprite) ((Object) var4)).field_o >> 1), var6 - (((Sprite) ((Object) var4)).field_v >> 1));
             }
@@ -267,7 +267,7 @@ final class RenderedFootballer extends FootballerAgent {
           if (KitPatternMaskSupport.field_c == 2) {
             var6 += 10;
           }
-          LobbyPlayerRow.a(var7, false, 240, ConsoleCommand.field_t + var6, var2);
+          LobbyPlayerRow.createFadingSoundPlayer(var7, false, 240, ConsoleCommand.field_t + var6, var2);
         }
         this.field_ib = 20;
         return;
@@ -319,18 +319,18 @@ final class RenderedFootballer extends FootballerAgent {
           var8_ref_String__ = new String[]{"action:", "action_time:", "dash_delay"};
           var9_ref_String__ = new String[]{Integer.toString(this.action), Integer.toString(this.actionTime), Integer.toString(this.dashCooldown)};
           var10 = new StringBuilder("(");
-          GameResourceLoader.a(this.positionX, 100, var10);
+          GameResourceLoader.appendFixed16Decimal(this.positionX, 100, var10);
           discarded$6 = var10.append(", ");
-          GameResourceLoader.a(this.positionY, 100, var10);
+          GameResourceLoader.appendFixed16Decimal(this.positionY, 100, var10);
           discarded$7 = var10.append(", ");
-          GameResourceLoader.a(this.height, 100, var10);
+          GameResourceLoader.appendFixed16Decimal(this.height, 100, var10);
           discarded$8 = var10.append(')');
           var11_ref_StringBuilder = new StringBuilder("(");
-          GameResourceLoader.a(this.field_kb, 100, var11_ref_StringBuilder);
+          GameResourceLoader.appendFixed16Decimal(this.field_kb, 100, var11_ref_StringBuilder);
           discarded$9 = var11_ref_StringBuilder.append(", ");
-          GameResourceLoader.a(this.field_bb, 100, var11_ref_StringBuilder);
+          GameResourceLoader.appendFixed16Decimal(this.field_bb, 100, var11_ref_StringBuilder);
           discarded$10 = var11_ref_StringBuilder.append(", ");
-          GameResourceLoader.a(this.field_X, 100, var11_ref_StringBuilder);
+          GameResourceLoader.appendFixed16Decimal(this.field_X, 100, var11_ref_StringBuilder);
           discarded$11 = var11_ref_StringBuilder.append(')');
           var12 = this.stats.getWidth(0);
           var13 = this.stats.getHeight(15);
@@ -449,7 +449,7 @@ final class RenderedFootballer extends FootballerAgent {
           if (SplashScreen.field_j < 18) {
             AppScreen.field_d.addLast(var3, 3);
           } else {
-            MatchingTextValidator.a(var3, false);
+            MatchingTextValidator.prependFadingChatMessage(var3, false);
           }
           if (param2 > -103) {
             field_Q = (String) null;

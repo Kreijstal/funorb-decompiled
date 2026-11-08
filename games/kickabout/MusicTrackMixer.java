@@ -15,7 +15,7 @@ final class MusicTrackMixer extends PcmStream {
         return 2;
     }
 
-    final synchronized void a(int param0, int param1, byte param2) {
+    final synchronized void setPlayerVolume(int param0, int param1, byte param2) {
         if (param2 != -85) {
           this.field_l = (int[]) null;
         }

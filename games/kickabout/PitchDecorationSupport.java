@@ -97,7 +97,7 @@ final class PitchDecorationSupport {
                   var2 = BytePlusOneCommand.a(29430, 15, var2);
                   var3 = 20 + var1_int * 45;
                   var4 = 6;
-                  if (0 == LoggedPossession.a((byte) -24, 2)) {
+                  if (0 == LoggedPossession.nextRandomInt((byte) -24, 2)) {
                     var4 = 2;
                     var2 = 896 - var2;
                   }
@@ -108,22 +108,22 @@ final class PitchDecorationSupport {
                   AccountNameAvailabilityValidator.field_l = new WorldSpriteSequence[34];
                   var1_int = 0;
                   for (var2 = 0; var2 < 17; var2++) {
-                    stackIn_21_0 = ~LoggedPossession.a((byte) -24, 3);
+                    stackIn_21_0 = ~LoggedPossession.nextRandomInt((byte) -24, 3);
                     stackIn_21_1 = -1;
                     if (stackIn_21_0 != stackIn_21_1) {
                       var3 = -170;
-                      var4 = LoggedPossession.a((byte) -24, 5);
-                      var5 = LoggedPossession.a((byte) -24, 100);
+                      var4 = LoggedPossession.nextRandomInt((byte) -24, 5);
+                      var5 = LoggedPossession.nextRandomInt((byte) -24, 100);
                       AccountNameAvailabilityValidator.field_l[var2] = new WorldSpriteSequence(var4 + var1_int, var5 + var3, 0);
                     }
                     var1_int += 54;
                   }
                   var1_int = 0;
                   for (var2 = 17; var2 < 34; var2++) {
-                    if (LoggedPossession.a((byte) -24, 3) != 0) {
+                    if (LoggedPossession.nextRandomInt((byte) -24, 3) != 0) {
                       var3 = 1424;
-                      var4 = LoggedPossession.a((byte) -24, 5);
-                      var5Lifetime1 = LoggedPossession.a((byte) -24, 100);
+                      var4 = LoggedPossession.nextRandomInt((byte) -24, 5);
+                      var5Lifetime1 = LoggedPossession.nextRandomInt((byte) -24, 100);
                       AccountNameAvailabilityValidator.field_l[var2] = new WorldSpriteSequence(var1_int + var4, var3 + var5Lifetime1, 4);
                     }
                     var1_int += 54;

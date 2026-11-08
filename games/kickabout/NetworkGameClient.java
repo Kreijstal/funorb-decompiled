@@ -565,7 +565,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           CanvasInputBindings.attachInputHandlers(RegistrationRequestState.field_d, (byte) -64);
         }
         if (LookupRecordUpdate.field_h[8]) {
-          HuffmanTextSupport.b(5);
+          HuffmanTextSupport.sendReadyReflectionCheckReplies(5);
         }
     }
 
@@ -1292,7 +1292,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 WorldSpriteSequence.field_d = new JaggrabDownloader(PlatformTaskState.field_c, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (WorldSpriteSequence.field_d.a((byte) 58)) {
-                var12 = WorldSpriteSequence.field_d.b(0);
+                var12 = WorldSpriteSequence.field_d.getCompletedResponse(0);
                 if (var12 == null) {
                   var9 = (String) null;
                   NamedValueEntry.a((String) null, (byte) -118);

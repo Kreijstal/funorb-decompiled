@@ -6,7 +6,7 @@ final class WaitForPlayersView extends MatchPhaseView {
     static String[] field_j;
     static int[] field_k;
 
-    final static int b(int param0, int param1, int param2) {
+    final static int integerPower(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -65,7 +65,7 @@ final class WaitForPlayersView extends MatchPhaseView {
     public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != 1) {
-          WaitForPlayersView.b(76, -73, -121);
+          WaitForPlayersView.integerPower(76, -73, -121);
           field_j = null;
           return;
         }

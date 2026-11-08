@@ -35,7 +35,7 @@ final class UiKeyRoutingSupport {
         field_c = null;
     }
 
-    final static void a(String param0, byte param1, String param2) {
+    final static void setAccountStatusText(String param0, byte param1, String param2) {
         try {
           MatchHudRoutingSupport.setAccountStatusText(false, param0, param2, 3960);
           if (param1 >= -114) {

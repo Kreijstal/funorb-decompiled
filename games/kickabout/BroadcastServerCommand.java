@@ -59,7 +59,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             stackIn_10_0 = LoginText.field_g;
             return stackIn_10_0;
           }
-          if (IntKeyLookup.a(param2, -64)) {
+          if (IntKeyLookup.isFriend(param2, -64)) {
             stackIn_13_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameAppletShell.field_m, new String[]{param2});
             return stackIn_13_0;
           }

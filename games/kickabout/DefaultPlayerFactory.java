@@ -30,14 +30,14 @@ final class DefaultPlayerFactory {
 
     final static void buildSharedContextActions(byte param0) {
         if (param0 > 104) {
-          ContextMenu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
-          ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+          ContextMenu.setMusicFadeOutStep(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
+          ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
           NetworkArchiveRequest.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
           return;
         }
         field_b = 48;
-        ContextMenu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
-        ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+        ContextMenu.setMusicFadeOutStep(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
+        ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         NetworkArchiveRequest.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
     }
 
@@ -48,14 +48,14 @@ final class DefaultPlayerFactory {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void buildSharedContextActions(int param0) {
         if (param0 > 104) {
-          ContextMenu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
-          ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+          ContextMenu.setMusicFadeOutStep(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
+          ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
           NetworkArchiveRequest.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
           return;
         }
         field_b = 48;
-        ContextMenu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
-        ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
+        ContextMenu.setMusicFadeOutStep(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
+        ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         NetworkArchiveRequest.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
     }
 }

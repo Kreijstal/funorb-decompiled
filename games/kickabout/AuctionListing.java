@@ -1165,7 +1165,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -90, "ra_intro_no_name");
                 if (null != var2) {
-                  HoverTooltip.field_Bb = BlackFadeScreen.decodeCp1252Bytes(var2, true);
+                  SocialNamePrompt.field_Bb = BlackFadeScreen.decodeCp1252Bytes(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -65, "ra_explanation");
                 if (var2 != null) {
@@ -2154,7 +2154,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -52, "rankings");
                 if (null != var2) {
-                  HoverTooltip.field_zb = BlackFadeScreen.decodeCp1252Bytes(var2, param0);
+                  SocialNamePrompt.field_zb = BlackFadeScreen.decodeCp1252Bytes(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -50, "achievements");
                 if (null != var2) {
@@ -2762,7 +2762,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -106, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  CipherPacketBuffer.field_v = FootballerAgent.a(false, var2[0]);
+                  CipherPacketBuffer.field_v = FootballerAgent.decodeCp1252Byte(false, var2[0]);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -113, "rating_noratings");
                 if (null != var2) {

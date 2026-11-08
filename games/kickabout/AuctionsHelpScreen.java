@@ -187,7 +187,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         var3 = Kickabout.field_G;
         try {
           var1_int = 0;
-          while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
+          while (TexturedPanelPainter.pollKeyEvent(-59)) {
             CheckboxPainter.field_c.handleVerticalArrowKeys(105);
             if (!CheckboxPainter.field_c.isActivated(-1)) {
               continue;

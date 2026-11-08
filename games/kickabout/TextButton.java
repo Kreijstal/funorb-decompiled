@@ -71,7 +71,7 @@ class TextButton extends UiWidget {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 40) {
           field_z = (boolean[]) null;
         }

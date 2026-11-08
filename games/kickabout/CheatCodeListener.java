@@ -102,7 +102,7 @@ final class CheatCodeListener implements OverlayLayer {
         }
         if (-1 != var4Lifetime1) {
           if (!this.field_a) {
-            this.b(-98);
+            this.initializeFootballerPreviewBuffers(-98);
           }
           if (var4Lifetime1 != this.field_c) {
             this.a(-18, var4Lifetime1);
@@ -204,7 +204,7 @@ final class CheatCodeListener implements OverlayLayer {
         }
     }
 
-    private final void b(int param0) {
+    private final void initializeFootballerPreviewBuffers(int param0) {
         this.field_i = new RenderedFootballer[4];
         this.field_b = new Sprite(100, 200);
         int var2 = 26 / ((43 - param0) / 54);

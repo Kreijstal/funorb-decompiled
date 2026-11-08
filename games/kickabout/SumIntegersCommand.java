@@ -132,7 +132,7 @@ final class SumIntegersCommand extends ConsoleCommand {
           var3 = -93 % ((param0 - 72) / 43);
           var6 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.first(24009));
           while (var6 != null) {
-            FadingChatMessage.a(param1, 112, var6);
+            FadingChatMessage.writeHighScoreQuery(param1, 112, var6);
             var6 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.next(33));
           }
           return;

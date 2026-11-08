@@ -5,7 +5,7 @@ final class PitchSurfaceLoader {
     static String field_b;
     static String field_a;
 
-    final static void c(int param0) {
+    final static void showCurrentLoginForm(int param0) {
         if (param0 != -3) {
           return;
         }
@@ -13,7 +13,7 @@ final class PitchSurfaceLoader {
         NetworkArchiveRequest.showLoginForm(AccountInputValidationResult.field_a, (byte) 111, (String) null);
     }
 
-    final static int a(int param0, int param1) {
+    final static int getLoadingStagePercent(int param0, int param1) {
         int[] var3 = null;
         int[] var2 = null;
         int[] var3Lifetime1;
@@ -179,7 +179,7 @@ final class PitchSurfaceLoader {
         return -1;
     }
 
-    final static void b(int param0) {
+    final static void resetChatComposerLayout(int param0) {
         TickClock.resetChatComposerLayout(-106);
         if (param0 != 1) {
           field_b = (String) null;

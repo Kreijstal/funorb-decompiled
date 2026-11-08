@@ -45,11 +45,11 @@ class FootballerAgent extends MatchAgent {
         return (3 & (this.directionMask >> 2 ^ this.directionMask)) == 3 ? true : false;
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_f = null;
         if (param0 > -49) {
-          FootballerAgent.a(true, (byte) -47);
+          FootballerAgent.decodeCp1252Byte(true, (byte) -47);
         }
     }
 
@@ -249,12 +249,12 @@ class FootballerAgent extends MatchAgent {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getChargeKickPower(int param0, byte param1) {
         int var9 = 0;
         int var3 = this.stats.effectivePower(this.member, param1 ^ -68);
         int var4 = var3 * 14 / 100;
         if (param1 != -68) {
-          FootballerAgent.e((byte) 48);
+          FootballerAgent.releaseStatics((byte) 48);
         }
         int var5 = -var4 + 14;
         int var6 = this.chargeKickDuration((byte) -99);
@@ -329,8 +329,8 @@ class FootballerAgent extends MatchAgent {
           this.actionTime = ClientInteractionSupport.a(22531, 8, param1, 0);
           this.dashCooldown = ClientInteractionSupport.a(22531, 9, param1, 0);
           this.aiWait = param1.readBits(3, param0 ^ -13927);
-          this.field_O = ContentTransitionDialog.a(param1, (byte) -39);
-          this.field_s = ContentTransitionDialog.a(param1, (byte) -39);
+          this.field_O = ContentTransitionDialog.readBooleanBit(param1, (byte) -39);
+          this.field_s = ContentTransitionDialog.readBooleanBit(param1, (byte) -39);
           this.field_k = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
           this.field_m = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
           this.field_r = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
@@ -401,47 +401,47 @@ class FootballerAgent extends MatchAgent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (ContentTransitionDialog.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
             this.positionX = this.positionX + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 19, param1, 0, 23, 30);
             this.positionY = this.positionY + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 19, param1, 0, 23, 30);
             this.height = this.height + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 19, param1, 0, 23, 30);
           }
           this.verticalVelocity = TutorialScenerySupport.a(param1, 25, (byte) 6, 0);
-          if (ContentTransitionDialog.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
             this.directionMask = param1.readBits(4, 59);
             this.directionY = -1 + param1.readBits(2, param0 ^ 50);
             this.directionX = param1.readBits(2, 59) - 1;
           }
-          if (ContentTransitionDialog.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
             this.action = param1.readBits(WriteIntegersCommand.a(14, false), 59);
             this.actionTime = param1.readBits(8, param0 ^ 50);
           }
           this.dashCooldown = ClientInteractionSupport.a(param0 ^ 22538, param0, param1, 0);
-          if (ContentTransitionDialog.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
             this.aiWait = param1.readBits(3, 59);
           }
-          if (ContentTransitionDialog.a(param1, (byte) -39)) {
-            this.field_O = ContentTransitionDialog.a(param1, (byte) -39);
+          if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
+            this.field_O = ContentTransitionDialog.readBooleanBit(param1, (byte) -39);
             this.field_h = param1.readBits(4, 59);
             this.field_z = -5 + param1.readBits(9, 59);
             this.field_x = IsaacRandom.readSignedBits(11, -30273, param1);
             this.field_P = IsaacRandom.readSignedBits(11, -30273, param1);
           }
-          if (ContentTransitionDialog.a(param1, (byte) -39)) {
-            this.field_s = ContentTransitionDialog.a(param1, (byte) -39);
+          if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
+            this.field_s = ContentTransitionDialog.readBooleanBit(param1, (byte) -39);
             this.field_k = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
             this.field_m = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
             this.field_r = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
             this.field_B = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
           }
-          if (ContentTransitionDialog.a(param1, (byte) -39)) {
+          if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
             this.field_A = param1.readBits(32, param0 ^ 50);
             this.field_g = param1.readBits(32, 59);
             this.field_q = param1.readBits(32, 59);
             this.field_D = param1.readBits(32, 59);
           }
           if (this.archetype == 4 &&
-            ContentTransitionDialog.a(param1, (byte) -39)) {
+            ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
             this.field_o = param1.readBits(4, 59);
             this.field_t = param1.readBits(26, param0 + 50);
           }
@@ -460,7 +460,7 @@ class FootballerAgent extends MatchAgent {
         }
     }
 
-    final boolean d(byte param0) {
+    final boolean canStartAction(byte param0) {
         boolean stackIn_8_0 = false;
         if (param0 <= 94) {
           this.chargeKickDuration((byte) 63);
@@ -479,7 +479,7 @@ class FootballerAgent extends MatchAgent {
 
     final int pixelX(int param0) {
         if (param0 > -88) {
-          this.d((byte) -120);
+          this.canStartAction((byte) -120);
         }
         return this.positionX >> 16;
     }
@@ -499,7 +499,7 @@ class FootballerAgent extends MatchAgent {
         this.directionX = 0;
         this.directionY = 0;
         if (param1 != 26214) {
-          FootballerAgent.a(true, (byte) 88);
+          FootballerAgent.decodeCp1252Byte(true, (byte) 88);
         }
         if ((param0 & 4) > 0) {
           this.directionY = this.directionY - 1;
@@ -620,7 +620,7 @@ class FootballerAgent extends MatchAgent {
         return "Keeper";
     }
 
-    final static char a(boolean param0, byte param1) {
+    final static char decodeCp1252Byte(boolean param0, byte param1) {
         int var3 = 0;
         int var2 = 255 & param1;
         if (var2 == 0) {
@@ -714,22 +714,22 @@ class FootballerAgent extends MatchAgent {
         StringBuilder discarded$130 = null;
         StringBuilder var2 = new StringBuilder("AgentFootballer[" + this.archetypeName(9) + "]");
         StringBuilder discarded$0 = var2.append("\n\t\tloc=\t[");
-        GameResourceLoader.a(this.positionX, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.positionX, 100, var2);
         StringBuilder discarded$1 = var2.append(", ");
-        GameResourceLoader.a(this.positionY, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.positionY, 100, var2);
         StringBuilder discarded$2 = var2.append(", ");
-        GameResourceLoader.a(this.height, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.height, 100, var2);
         StringBuilder discarded$3 = var2.append(", ");
-        GameResourceLoader.a(this.verticalVelocity, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.verticalVelocity, 100, var2);
         StringBuilder discarded$4 = var2.append(", " + this.dashCooldown + "]");
         StringBuilder discarded$5 = var2.append("\n\t\tspd=[");
-        GameResourceLoader.a(this.field_A, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.field_A, 100, var2);
         StringBuilder discarded$6 = var2.append(", ");
-        GameResourceLoader.a(this.field_g, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.field_g, 100, var2);
         StringBuilder discarded$7 = var2.append(", ");
-        GameResourceLoader.a(this.field_q, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.field_q, 100, var2);
         StringBuilder discarded$8 = var2.append(", ");
-        GameResourceLoader.a(this.field_D, 100, var2);
+        GameResourceLoader.appendFixed16Decimal(this.field_D, 100, var2);
         StringBuilder discarded$9 = var2.append("]");
         StringBuilder discarded$10 = var2.append("\n\t\tstathash=" + this.stats.computeChecksum(0));
         StringBuilder discarded$33 = var2.append("\n\t\tact=\t[" + this.actionTime + ", " + this.actionName(true) + ", ai_wait=" + this.aiWait + "]");

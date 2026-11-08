@@ -161,11 +161,11 @@ final class CheckboxPainter implements WidgetPainter {
           AccountNameCheckState.advanceLoadingStep(0, 0);
           var1 = PitchSurfaceLoader.loadPitchSurface(RankingsScreen.field_C, KitPatternMaskSupport.field_c, (byte) -110);
           if (var1 != -1) {
-            DelayedServerPacket.a(100, 9863, var1);
+            DelayedServerPacket.updateLoadingProgress(100, 9863, var1);
             return;
           }
           if (!CachedListingRow.loadGoalScenery(63, KitPatternMaskSupport.field_c, RankingsScreen.field_C)) {
-            DelayedServerPacket.a(2, 9863, 1);
+            DelayedServerPacket.updateLoadingProgress(2, 9863, 1);
             return;
           }
           AccountNameCheckState.advanceLoadingStep(0, 1);
@@ -173,14 +173,14 @@ final class CheckboxPainter implements WidgetPainter {
             if (KitPatternMaskSupport.field_c == 1) {
               var1Lifetime1 = ReceivedAuctionItem.loadBeachSprites(123);
               if (var1Lifetime1 != -1) {
-                DelayedServerPacket.a(100, 9863, var1Lifetime1);
+                DelayedServerPacket.updateLoadingProgress(100, 9863, var1Lifetime1);
                 return;
               }
             } else {
               if (KitPatternMaskSupport.field_c == 2) {
                 var1Lifetime1 = StreetSceneryLoader.loadStreetScenery(-124);
                 if (var1Lifetime1 != -1) {
-                  DelayedServerPacket.a(100, 9863, var1Lifetime1);
+                  DelayedServerPacket.updateLoadingProgress(100, 9863, var1Lifetime1);
                   return;
                 }
               }
@@ -188,7 +188,7 @@ final class CheckboxPainter implements WidgetPainter {
           } else {
             var1Lifetime1 = FullscreenErrorDialog.c(false);
             if (var1Lifetime1 != -1) {
-              DelayedServerPacket.a(100, 9863, var1Lifetime1);
+              DelayedServerPacket.updateLoadingProgress(100, 9863, var1Lifetime1);
               return;
             }
           }
@@ -197,45 +197,45 @@ final class CheckboxPainter implements WidgetPainter {
             if (RankingsScreen.field_C == 3) {
               var1Lifetime2 = AvailabilityCheckRequest.loadStadiumScenery((byte) 28);
               if (var1Lifetime2 != -1) {
-                DelayedServerPacket.a(100, 9863, var1Lifetime2);
+                DelayedServerPacket.updateLoadingProgress(100, 9863, var1Lifetime2);
                 return;
               }
             }
           } else {
             if (!LobbyMatchPreview.ensureBleachersLoaded((byte) -94)) {
-              DelayedServerPacket.a(1, 9863, 0);
+              DelayedServerPacket.updateLoadingProgress(1, 9863, 0);
               return;
             }
           }
           AccountNameCheckState.advanceLoadingStep(0, 3);
           var1Lifetime3 = GrowableIntList.a(5464, KitPatternMaskSupport.field_c, RankingsScreen.field_C);
           if (var1Lifetime3 != -1) {
-            DelayedServerPacket.a(100, 9863, var1Lifetime3);
+            DelayedServerPacket.updateLoadingProgress(100, 9863, var1Lifetime3);
             return;
           }
           AccountNameCheckState.advanceLoadingStep(0, 4);
           if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.a(KitPatternMaskSupport.field_c, 121, NanoTickClock.field_n, RankingsScreen.field_C))) {
-            DelayedServerPacket.a(4, 9863, 0);
+            DelayedServerPacket.updateLoadingProgress(4, 9863, 0);
             return;
           }
           AccountNameCheckState.advanceLoadingStep(0, 5);
           if (RankingsScreen.field_C == 2) {
             if (!MyKitScreen.ensureSoundLoaded(108, 4)) {
-              DelayedServerPacket.a(2, 9863, 0);
+              DelayedServerPacket.updateLoadingProgress(2, 9863, 0);
               return;
             }
             if (!MyKitScreen.ensureSoundLoaded(117, 5)) {
-              DelayedServerPacket.a(2, 9863, 1);
+              DelayedServerPacket.updateLoadingProgress(2, 9863, 1);
               return;
             }
           } else {
             if (RankingsScreen.field_C == 3) {
               if (!MyKitScreen.ensureSoundLoaded(109, 6)) {
-                DelayedServerPacket.a(2, 9863, 0);
+                DelayedServerPacket.updateLoadingProgress(2, 9863, 0);
                 return;
               }
               if (!MyKitScreen.ensureSoundLoaded(120, 7)) {
-                DelayedServerPacket.a(2, 9863, 1);
+                DelayedServerPacket.updateLoadingProgress(2, 9863, 1);
                 return;
               }
             }

@@ -94,7 +94,7 @@ abstract class MatchAgent {
           var3[var4_int] = PlayAreaMovementSupport.field_a[TextLayoutLine.bitwiseAnd(255, (int) var2[var4_int])];
         }
         Sprite var4 = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], LoginResponseUiSupport.field_g[param0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], var3);
-        ScrollContainer.h((byte) -81);
+        ScrollContainer.releaseDecodedSpriteBuffers((byte) -81);
         return var4;
     }
 
@@ -420,7 +420,7 @@ abstract class MatchAgent {
             this.copyStateFrom((byte) 17, (MatchAgent) null);
           }
           this.controlSourceAge = -ClientInteractionSupport.a(22531, 6, param0, 0) + 64;
-          if (ContentTransitionDialog.a(param0, (byte) -39)) {
+          if (ContentTransitionDialog.readBooleanBit(param0, (byte) -39)) {
             this.controlSourceParticipant = param0.readBits(4, param1 + 55) - 1;
           }
           return;

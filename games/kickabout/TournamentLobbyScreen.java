@@ -90,7 +90,7 @@ final class TournamentLobbyScreen extends AppScreen {
             stackIn_5_0 = KitStyleDefinition.field_h;
             return stackIn_5_0;
           }
-          var3 = IsSixCommand.a(true);
+          var3 = IsSixCommand.getLoginMethods(true);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5.matchesName(var2, -97)) {
@@ -884,7 +884,7 @@ final class TournamentLobbyScreen extends AppScreen {
           if (null != this.field_y) {
             for (var6Lifetime2 = 0; var6Lifetime2 < this.field_y.length; var6Lifetime2++) {
               if (null == this.field_y[var6Lifetime2]) {
-                ReceivedAuctionItemRow.a(410, -89, 250);
+                ReceivedAuctionItemRow.drawLoadingSpinner(410, -89, 250);
               } else {
                 this.field_y[var6Lifetime2].draw(98);
               }

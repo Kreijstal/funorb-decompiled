@@ -60,7 +60,7 @@ final class ServerMessageScreen extends ButtonMenuScreen {
           var19 = 0.0;
           ReceivedAuctionItemRow.field_Mb = -1;
           if (param2 != -99) {
-            ServerMessageScreen.a((byte) -36, 37L);
+            ServerMessageScreen.sleepIgnoringInterrupt((byte) -36, 37L);
           }
           for (var21 = param7; param1 > var21; var21++) {
             var9_int = var13 + DirectByteStorage.colorBoxSliceMoment(GameModesHelpScreen.field_F, param2 ^ -4, param0, param4, var21);
@@ -101,7 +101,7 @@ final class ServerMessageScreen extends ButtonMenuScreen {
     ServerMessageScreen() {
     }
 
-    final static void a(byte param0, long param1) {
+    final static void sleepIgnoringInterrupt(byte param0, long param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;

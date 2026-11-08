@@ -215,7 +215,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
 
     final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
-        this.a((byte) -118);
+        this.layoutChildWidgets((byte) -118);
     }
 
     private final boolean focusNextChild(UiWidget param0, int param1) {
@@ -449,7 +449,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    abstract void a(byte param0);
+    abstract void layoutChildWidgets(byte param0);
 
     void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = 0;

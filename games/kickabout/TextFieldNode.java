@@ -522,7 +522,7 @@ final class TextFieldNode extends UiLayoutNode {
           var2 = IsSixCommand.field_E.getUsername(124);
         }
         if (var2.length() == 0) {
-          var2 = NamedValueEntry.f((byte) 99);
+          var2 = NamedValueEntry.getLocalPlayerName((byte) 99);
         }
         if (0 == var2.length()) {
           var2 = DisplayNameUiSupport.field_d;
