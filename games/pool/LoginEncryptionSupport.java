@@ -19,7 +19,7 @@ final class LoginEncryptionSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 2) {
-            LoginEncryptionSupport.a(-30, (byte) -80);
+            LoginEncryptionSupport.setAccountDialogResult(-30, (byte) -80);
           }
           stackIn_3_0 = new double[]{-(param1[1] * param2[2]) + param2[1] * param1[2], -(param1[2] * param2[0]) + param2[2] * param1[0], -(param2[1] * param1[0]) + param1[1] * param2[0]};
           return stackIn_3_0;
@@ -43,9 +43,9 @@ final class LoginEncryptionSupport {
         }
     }
 
-    final static void a(int param0, byte param1) {
-        Atan2Support.field_b = param0;
-        if (param1 <= 74) {
+    final static void setAccountDialogResult(int result, byte obfuscationGuard) {
+        Atan2Support.field_b = result;
+        if (obfuscationGuard <= 74) {
           field_d = (UiComponent) null;
         }
     }

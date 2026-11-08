@@ -114,7 +114,7 @@ final class AimTarget {
             var6 = (long)param1.positionY - (long)var10[1];
             var6 = var6 >> 8;
           }
-          var8 = IterableNodeHashTable.a(-119, var4_long * var4_long + var6 * var6);
+          var8 = IterableNodeHashTable.sqrtScaled256(-119, var4_long * var4_long + var6 * var6);
           if (-2147483648L <= var8 &&
             var8 <= 2147483647L) {
             if (param0 != 1763073386) {
@@ -222,7 +222,7 @@ final class AimTarget {
         if (obfuscationGuard != 1048576) {
           return -61;
         }
-        return ShotEvent.a(ArchiveProvider.divideFixed16(this.distance, (byte) -112, this.targetIsBall ? 1048576L : 524288L), false);
+        return ShotEvent.arcsineFixed16(ArchiveProvider.divideFixed16(this.distance, (byte) -112, this.targetIsBall ? 1048576L : 524288L), false);
     }
 
     static {

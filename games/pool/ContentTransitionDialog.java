@@ -16,7 +16,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     private UiWidget pendingContent;
 
     final static void a(int param0, boolean param1) {
-        ResourceArchive.a(param1, (byte) 108, true);
+        ResourceArchive.drawAccountOverlay(param1, (byte) 108, true);
         int var2 = 40 / ((-28 - param0) / 51);
     }
 
@@ -87,7 +87,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           if (var8 < 0L) {
             throw new IllegalStateException("dnorm2_32 overflow " + var8);
           }
-          var10 = IterableNodeHashTable.a(-128, var8 >> 16);
+          var10 = IterableNodeHashTable.sqrtScaled256(-128, var8 >> 16);
           if (var10 >= -2147483648L &&
             var10 <= 2147483647L) {
             var6 = ArchiveProvider.divideFixed16((int)var10, (byte) -83, (long)var6);

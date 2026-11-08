@@ -69,7 +69,7 @@ final class AudioService implements Runnable {
                 var2.serviceOutput();
               }
             }
-            SoundCache.a(-105, 10L);
+            SoundCache.sleepMillis(-105, 10L);
             AwtEventQueueSupport.pumpAwtEventQueue((Object) null, this.tasks, 120);
           }
         } catch (Exception exception) {

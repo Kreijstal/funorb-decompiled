@@ -229,7 +229,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
               if (stackIn_16_0 > -1) {
                 var4 = var4 + ShotRecord.field_y;
               } else {
-                var6 = WidgetContainer.a(TransformRotationSupport.field_j[var3_int], true, false);
+                var6 = WidgetContainer.measureSharedTextWidth(TransformRotationSupport.field_j[var3_int], true, false);
                 var7 = BrowserCookieWriter.field_c - (var6 >> 1);
                 var4 = var4 + IterableDualLinkDeque.field_e;
                 if (ResizableDialog.a(param0, -23, (NineBallRules.field_h << 1) + WidgetContainer.field_I, param1, (MeshSymmetrySupport.field_b << 1) + var6, var4, var7 - MeshSymmetrySupport.field_b)) {

@@ -216,7 +216,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        TikiTableScene.a(' ', 0, -2790, field_z);
+        TikiTableScene.resizeStringBuilder(' ', 0, -2790, field_z);
         var4 = 0;
         var5 = 0;
         var6 = -1;

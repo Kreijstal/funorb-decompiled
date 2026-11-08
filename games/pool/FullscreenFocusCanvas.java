@@ -57,13 +57,13 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (0L > param0 &&
               param1 < 0L &&
               var5 < 0L) {
-              throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+              throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
             }
             if ((param0 > 0L &&
               param1 < 0L ||
               0L > param0 &&
               0L < param1) && var5 > 0L) {
-              throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+              throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
             }
             if (param2) {
               return 61L;
@@ -75,7 +75,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               return var5;
             }
             if (var5 < 0L) {
-              throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+              throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
             }
             return var5;
           }
@@ -86,31 +86,31 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (0L > param0 &&
               0L < param1 &&
               var5 > 0L) {
-              throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+              throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
             }
           } else {
             if (param1 >= 0L) {
               if (0L > param0 &&
                 0L < param1 &&
                 var5 > 0L) {
-                throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+                throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
               }
             } else {
               if (var5 > 0L) {
-                throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+                throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
               }
             }
           }
         } else {
           if (param1 < 0L) {
             if (var5 < 0L) {
-              throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+              throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
             }
             if ((param0 > 0L &&
               param1 < 0L ||
               0L > param0 &&
               0L < param1) && var5 > 0L) {
-              throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+              throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
             }
             if (param2) {
               return 61L;
@@ -124,13 +124,13 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var5 >= 0L) {
               return var5;
             }
-            throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+            throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
           }
           if (param0 <= 0L) {
             if (0L > param0 &&
               0L < param1) {
               if (var5 > 0L) {
-                throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+                throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
               }
               if (param2) {
                 return 61L;
@@ -142,7 +142,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 return var5;
               }
               if (var5 < 0L) {
-                throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+                throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
               }
               return var5;
             }
@@ -151,7 +151,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               if (0L > param0 &&
                 0L < param1 &&
                 var5 > 0L) {
-                throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+                throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
               }
               if (param2) {
                 return 61L;
@@ -163,12 +163,12 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 return var5;
               }
               if (var5 < 0L) {
-                throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+                throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
               }
               return var5;
             }
             if (var5 > 0L) {
-              throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+              throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
             }
           }
         }
@@ -182,7 +182,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           return var5;
         }
         if (var5 < 0L) {
-          throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.a((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param1 + "[" + PotEvent.fixed16ToDouble((byte) 89, param1) + ", " + Long.toString(param1, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
         }
         return var5;
     }

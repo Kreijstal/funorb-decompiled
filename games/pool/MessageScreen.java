@@ -69,7 +69,7 @@ final class MessageScreen extends MenuScreen {
           FontPaletteSupport.field_b.writeInt(true, Pool.field_L[1]);
           FontPaletteSupport.field_b.writeInt(true, Pool.field_L[2]);
           FontPaletteSupport.field_b.writeInt(true, Pool.field_L[3]);
-          OptionsScreen.a(FontPaletteSupport.field_b, 0);
+          OptionsScreen.writeMachineIdentifier(FontPaletteSupport.field_b, 0);
           FontPaletteSupport.field_b.writeShort((byte) -81, param4);
           param1.writePayload((byte) 121, FontPaletteSupport.field_b);
           JaggrabDownloader.field_j.position = 0;

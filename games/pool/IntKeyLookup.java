@@ -218,7 +218,7 @@ final class IntKeyLookup {
           if (var2 == 0) {
             var4_ref_fl = (IntLookupQuery) (TutorialFactory.field_g.last((byte) -124));
             if (var4_ref_fl == null) {
-              ShotEvent.c(param0 - 79);
+              ShotEvent.closeClientSocket(param0 - 79);
               return;
             }
             var5_int = ScrollPane.field_Pb - var9.position;
@@ -246,14 +246,14 @@ final class IntKeyLookup {
               break;
             }
             if (var5 == null) {
-              ShotEvent.c(118);
+              ShotEvent.closeClientSocket(118);
               return;
             }
             var5.unlink((byte) -117);
             return;
           }
           GrowableIntList.reportClientError((Throwable) null, "LR1: " + PacketDiagnosticsSupport.formatPacketDump(param0 ^ 159), param0 - 8754);
-          ShotEvent.c(125);
+          ShotEvent.closeClientSocket(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

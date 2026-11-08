@@ -151,13 +151,13 @@ final class PasswordInputPainter extends TextInputPainter {
           param3.advanceTo(param0 - 1, 118);
           var4_int = -param1.startY + param1.endY >> 8;
           var5 = param1.startX - param1.endX >> 8;
-          var6 = AccountDisplayNameSupport.inverseSquareRoot(NameEntryPopup.a(var4_int, false, var4_int) + NameEntryPopup.a(var5, false, var5), -123);
+          var6 = AccountDisplayNameSupport.sqrtScaled256(NameEntryPopup.multiplyFixed16(var4_int, false, var4_int) + NameEntryPopup.multiplyFixed16(var5, false, var5), -123);
           var4_int = ArchiveProvider.divideFixed16(var6, (byte) -101, (long)var4_int);
           var5 = ArchiveProvider.divideFixed16(var6, (byte) -61, (long)var5);
           var7 = param3.horizontalSpeedSquared(-14770);
           if (param1.endX != param1.startX) {
             if (param1.endY != param1.startY) {
-              var9 = (long)(NameEntryPopup.a(param3.velocityX, false, var4_int) + NameEntryPopup.a(param3.velocityY, false, var5));
+              var9 = (long)(NameEntryPopup.multiplyFixed16(param3.velocityX, false, var4_int) + NameEntryPopup.multiplyFixed16(param3.velocityY, false, var5));
               param3.velocityX = (int)((long)param3.velocityX - (FullscreenFocusCanvas.multiplyFixedChecked((long)var4_int, var9, false) * (long)(256 + FullscreenDisplayMode.field_g) >> 8));
               param3.velocityY = (int)((long)param3.velocityY - (FullscreenFocusCanvas.multiplyFixedChecked((long)var5, var9, false) * (long)(256 + FullscreenDisplayMode.field_g) >> 8));
               param3.angularVelocityY = 0;

@@ -126,7 +126,7 @@ final class AlignedIconLabel extends UiComponent {
             }
             var11 = (AccountStateQuery) (NodeHashTableIterator.field_j.last((byte) 77));
             if (var11 == null) {
-              ShotEvent.c(-107);
+              ShotEvent.closeClientSocket(-107);
               return;
             }
             var11.field_l = var3;
@@ -137,7 +137,7 @@ final class AlignedIconLabel extends UiComponent {
           if (var2 == 1) {
             var12 = (AchievementSubmission) (StartupInterfaceSupport.field_b.last((byte) -19));
             if (var12 == null) {
-              ShotEvent.c(-69);
+              ShotEvent.closeClientSocket(-69);
               return;
             }
             var12.unlink((byte) -117);
@@ -145,7 +145,7 @@ final class AlignedIconLabel extends UiComponent {
             if (2 == var2) {
               var14 = (AccountStateQuery) (NodeHashTableIterator.field_j.last((byte) -112));
               if (var14 == null) {
-                ShotEvent.c(-81);
+                ShotEvent.closeClientSocket(-81);
                 return;
               }
               var14.field_l = MenuSelectionSupport.createEmptyGameStateWords(117);
@@ -153,7 +153,7 @@ final class AlignedIconLabel extends UiComponent {
               var14.unlink((byte) -117);
             } else {
               GrowableIntList.reportClientError((Throwable) null, "A1: " + PacketDiagnosticsSupport.formatPacketDump(99), -8555);
-              ShotEvent.c(84);
+              ShotEvent.closeClientSocket(84);
             }
           }
           return;

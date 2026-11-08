@@ -39,7 +39,7 @@ final class DebugTuningSlider {
         }
         if (DebouncedValidationProvider.field_f >= this.field_e) {
           if (this.field_q >= DebouncedValidationProvider.field_f) {
-            this.a(-CompressedContainerSupport.field_d, false);
+            this.adjustValue(-CompressedContainerSupport.field_d, false);
             return true;
           }
           if (param0 <= -79) {
@@ -57,10 +57,10 @@ final class DebugTuningSlider {
 
     final void draw(int param0) {
         int var2 = 0;
-        CollisionContact.field_h.drawString(this.b((byte) 36) + ": " + Integer.toString(this.a(-195801560), 16), this.field_r, this.field_g, 15658734, -1);
+        CollisionContact.field_h.drawString(this.settingLabel((byte) 36) + ": " + Integer.toString(this.getValue(-195801560), 16), this.field_r, this.field_g, 15658734, -1);
         if (param0 == 3) {
           SoftwareRasterizer.fillRectangle(this.field_j, this.field_e, 16, 80, 3381555);
-          var2 = this.field_q - (this.a(param0 ^ -195801557) - this.field_b) * 80 / (this.field_o - this.field_b);
+          var2 = this.field_q - (this.getValue(param0 ^ -195801557) - this.field_b) * 80 / (this.field_o - this.field_b);
           SoftwareRasterizer.drawLine(this.field_j, var2, this.field_l, var2, 16764006);
           return;
         }
@@ -97,12 +97,12 @@ final class DebugTuningSlider {
             LogoFinalFrameLoader.field_b = param1;
             stackIn_43_0 = 6429081;
             stackIn_44_1 = (param0) ? false : true;
-            LogoFinalFrameLoader.field_f = NameEntryPopup.a(stackIn_43_0, stackIn_44_1, LogoFinalFrameLoader.field_b);
+            LogoFinalFrameLoader.field_f = NameEntryPopup.multiplyFixed16(stackIn_43_0, stackIn_44_1, LogoFinalFrameLoader.field_b);
             return;
           }
           if (var3 == 5) {
             ClientUiResourceState.field_e = param1;
-            ClientUiResourceState.field_g = NameEntryPopup.a(6429081, false, ClientUiResourceState.field_e);
+            ClientUiResourceState.field_g = NameEntryPopup.multiplyFixed16(6429081, false, ClientUiResourceState.field_e);
             return;
           }
           if (var3 == 6) {
@@ -150,12 +150,12 @@ final class DebugTuningSlider {
           LogoFinalFrameLoader.field_b = param1;
           stackIn_12_0 = 6429081;
           stackIn_13_1 = (param0) ? false : true;
-          LogoFinalFrameLoader.field_f = NameEntryPopup.a(stackIn_12_0, stackIn_13_1, LogoFinalFrameLoader.field_b);
+          LogoFinalFrameLoader.field_f = NameEntryPopup.multiplyFixed16(stackIn_12_0, stackIn_13_1, LogoFinalFrameLoader.field_b);
           return;
         }
         if (var3Lifetime1 == 5) {
           ClientUiResourceState.field_e = param1;
-          ClientUiResourceState.field_g = NameEntryPopup.a(6429081, false, ClientUiResourceState.field_e);
+          ClientUiResourceState.field_g = NameEntryPopup.multiplyFixed16(6429081, false, ClientUiResourceState.field_e);
           return;
         }
         if (var3Lifetime1 == 6) {
@@ -181,35 +181,35 @@ final class DebugTuningSlider {
         MusicVoice.field_l = param1;
     }
 
-    final static void d(byte param0) {
+    final static void showAccountProgressDialog(byte obfuscationGuard) {
         TabbedPane.field_Ub.hideAllDialogs(-22216);
         if (ScrollPane.field_Nb == null) {
           ScrollPane.field_Nb = new ProgressDialog(TabbedPane.field_Ub, ClientException.field_d);
         }
-        if (param0 <= -108) {
+        if (obfuscationGuard <= -108) {
           TabbedPane.field_Ub.showDialog(ScrollPane.field_Nb, 30000);
           return;
         }
         String var2 = (String) null;
-        DebugTuningSlider.a((String) null, -115);
+        DebugTuningSlider.setAccountStatusMessage((String) null, -115);
         TabbedPane.field_Ub.showDialog(ScrollPane.field_Nb, 30000);
     }
 
-    final static void a(String param0, int param1) {
-        ChatInputSupport.field_g = param0;
-        if (param1 >= -126) {
+    final static void setAccountStatusMessage(String message, int obfuscationGuard) {
+        ChatInputSupport.field_g = message;
+        if (obfuscationGuard >= -126) {
           return;
         }
         try {
-          LoginEncryptionSupport.a(12, (byte) 102);
+          LoginEncryptionSupport.setAccountDialogResult(12, (byte) 102);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ci.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ci.G(" + (message != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    final boolean b(int param0) {
+    final boolean handleSliderPointer(int obfuscationGuard) {
         String discarded$0 = null;
-        if (param0 == 59) {
+        if (obfuscationGuard == 59) {
           if (ClientInputResetSupport.field_b == 0) {
             return false;
           }
@@ -228,7 +228,7 @@ final class DebugTuningSlider {
           this.applyValue(true, this.field_b + (-this.field_b + this.field_o) * (-DebouncedValidationProvider.field_f + this.field_q) / 80);
           return true;
         }
-        discarded$0 = this.b((byte) 118);
+        discarded$0 = this.settingLabel((byte) 118);
         if (ClientInputResetSupport.field_b == 0) {
           return false;
         }
@@ -248,7 +248,7 @@ final class DebugTuningSlider {
         return true;
     }
 
-    final static void a(int param0, int param1, NineSliceFrame param2, int param3, int param4, NineSliceFrame param5) {
+    final static void configureTextFrameStyle(int param0, int param1, NineSliceFrame param2, int param3, int param4, NineSliceFrame param5) {
         try {
           TriangleMesh.field_B = param4;
           IntrusiveNodeHashTable.field_d = param2;
@@ -257,19 +257,19 @@ final class DebugTuningSlider {
           IterableDualLinkDeque.field_g = param3;
           if (param1 != 26790) {
             String var7 = (String) null;
-            DebugTuningSlider.a((String) null, 118);
+            DebugTuningSlider.setAccountStatusMessage((String) null, 118);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ci.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
-        this.field_o = param0;
-        this.field_b = param1;
-        this.field_n = param2;
+    private final void configureSlider(int minimum, int maximum, int settingIndex, int obfuscationGuard) {
+        this.field_o = minimum;
+        this.field_b = maximum;
+        this.field_n = settingIndex;
         int var5 = CollisionContact.field_h.maxAscent + (18 + CollisionContact.field_h.maxDescent);
-        if (param3 == -6) {
+        if (obfuscationGuard == -6) {
           this.field_g = 472;
           this.field_r = var5 * this.field_n + CollisionContact.field_h.maxAscent;
           this.field_j = CollisionContact.field_h.maxDescent + (this.field_r + 2);
@@ -280,9 +280,9 @@ final class DebugTuningSlider {
         }
     }
 
-    private final int a(int param0) {
+    private final int getValue(int obfuscationGuard) {
         int var2;
-        if (param0 != -195801560) {
+        if (obfuscationGuard != -195801560) {
           return 37;
         }
         var2 = this.field_n;
@@ -333,7 +333,7 @@ final class DebugTuningSlider {
           field_d = (int[][]) null;
           return;
         }
-        DebugTuningSlider.d((byte) -32);
+        DebugTuningSlider.showAccountProgressDialog((byte) -32);
         field_s = null;
         field_p = null;
         field_h = null;
@@ -343,10 +343,10 @@ final class DebugTuningSlider {
     }
 
     DebugTuningSlider(float param0, float param1, int param2) {
-        this.a(HighscoresScreen.a(param1, -4), HighscoresScreen.a(param0, -4), param2, -6);
+        this.configureSlider(HighscoresScreen.a(param1, -4), HighscoresScreen.a(param0, -4), param2, -6);
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void adjustValue(int delta, boolean obfuscationGuard) {
         boolean stackIn_4_1 = false;
         boolean stackIn_12_1 = false;
         boolean stackIn_20_1 = false;
@@ -356,43 +356,43 @@ final class DebugTuningSlider {
         NineSliceFrame var4Lifetime1;
         var3 = this.field_n;
         if (var3 == 0) {
-          stackIn_4_1 = !(param1);
-          this.applyValue(stackIn_4_1, param0 * 256 + this.a(-195801560));
+          stackIn_4_1 = !(obfuscationGuard);
+          this.applyValue(stackIn_4_1, delta * 256 + this.getValue(-195801560));
         } else {
           if (var3 == 1) {
-            stackIn_12_1 = !(param1);
-            this.applyValue(stackIn_12_1, param0 * 256 + this.a(-195801560));
+            stackIn_12_1 = !(obfuscationGuard);
+            this.applyValue(stackIn_12_1, delta * 256 + this.getValue(-195801560));
           } else {
             if (var3 == 2) {
-              stackIn_20_1 = !(param1);
-              this.applyValue(stackIn_20_1, param0 * 256 + this.a(-195801560));
+              stackIn_20_1 = !(obfuscationGuard);
+              this.applyValue(stackIn_20_1, delta * 256 + this.getValue(-195801560));
             } else {
               if (3 != var3) {
-                this.applyValue(true, param0 + this.a(-195801560));
-                if (!param1) {
+                this.applyValue(true, delta + this.getValue(-195801560));
+                if (!obfuscationGuard) {
                   return;
                 }
                 var4 = (NineSliceFrame) null;
-                DebugTuningSlider.a(-37, 7, (NineSliceFrame) null, 78, 67, (NineSliceFrame) null);
+                DebugTuningSlider.configureTextFrameStyle(-37, 7, (NineSliceFrame) null, 78, 67, (NineSliceFrame) null);
                 return;
               }
-              stackIn_28_1 = !(param1);
-              this.applyValue(stackIn_28_1, param0 * 256 + this.a(-195801560));
+              stackIn_28_1 = !(obfuscationGuard);
+              this.applyValue(stackIn_28_1, delta * 256 + this.getValue(-195801560));
             }
           }
         }
-        if (!param1) {
+        if (!obfuscationGuard) {
           return;
         }
         var4Lifetime1 = (NineSliceFrame) null;
-        DebugTuningSlider.a(-37, 7, (NineSliceFrame) null, 78, 67, (NineSliceFrame) null);
+        DebugTuningSlider.configureTextFrameStyle(-37, 7, (NineSliceFrame) null, 78, 67, (NineSliceFrame) null);
     }
 
-    private final String b(byte param0) {
+    private final String settingLabel(byte obfuscationGuard) {
         int discarded$0 = 0;
         int var2;
-        if (param0 != 36) {
-          discarded$0 = this.a(11);
+        if (obfuscationGuard != 36) {
+          discarded$0 = this.getValue(11);
         }
         var2 = this.field_n;
         if (var2 == 0) {

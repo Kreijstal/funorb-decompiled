@@ -95,7 +95,7 @@ final class BallDebugOverlay implements SceneDrawable {
           stackIn_3_5 = (this.field_e == this.field_h.currentShot(param1 ^ -32240).field_I);
           ((BallSkin) (Object) stackIn_2_0).drawBallAndShadow(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, stackIn_3_5);
           if ((LinkButtonPainter.field_i & 4L) != 0L) {
-            this.field_a.f(param1 ^ 32245);
+            this.field_a.updateSlipDirection(param1 ^ 32245);
             if (this.field_a.velocityX != 0 ||
               this.field_a.velocityY != 0 ||
               this.field_a.velocityZ != 0) {

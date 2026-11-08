@@ -223,18 +223,18 @@ final class KillerRules extends GameRules {
         if (param0 < 0L &&
           param2 < 0L &&
           var5 < 0L) {
-          throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + PotEvent.a((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + PotEvent.fixed16ToDouble((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
         }
         if ((0L < param0 &&
           0L > param2 ||
           param0 < 0L &&
           param2 > 0L) && var5 > 0L) {
-          throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + PotEvent.a((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + PotEvent.fixed16ToDouble((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a positive number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
         }
         if (param0 > 0L &&
           param2 > 0L &&
           0L > var5) {
-          throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.a((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + PotEvent.a((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.a((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param0 + "[" + PotEvent.fixed16ToDouble((byte) 89, param0) + ", " + Long.toString(param0, 16) + "], " + param2 + "[" + PotEvent.fixed16ToDouble((byte) 89, param2) + ", " + Long.toString(param2, 16) + "]) and got a negative number: " + var5 + "[" + PotEvent.fixed16ToDouble((byte) 89, var5) + ", " + Long.toString(var5, 16) + "]");
         }
         return var5;
     }
@@ -435,7 +435,7 @@ final class KillerRules extends GameRules {
 
     final static void updateKillerPlayerCountControls(byte obfuscationGuard) {
         PoolUiText.field_f.sprite = TransformRotationSupport.createTextLabelSprite(1, obfuscationGuard ^ -45, Integer.toString(DelayedServerPacket.field_n));
-        GlowParticle.a(PoolUiText.field_f, (byte) 93);
+        GlowParticle.centerWidgetSpritesVertically(PoolUiText.field_f, (byte) 93);
         RasterSnapshot.field_w.enabled = 2 < DelayedServerPacket.field_n ? true : false;
         LoginRequestSupport.field_e.enabled = DelayedServerPacket.field_n < 8 ? true : false;
         if (obfuscationGuard != -45) {

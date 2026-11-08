@@ -10,7 +10,7 @@ final class OptionsScreen extends MenuScreen {
     private static int field_H;
     static UiComponent field_L;
 
-    final static void a(PacketBuffer param0, int param1) {
+    final static void writeMachineIdentifier(PacketBuffer destination, int offset) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -31,7 +31,7 @@ final class OptionsScreen extends MenuScreen {
             if (ServerListLauncher.field_c != null) {
               try {
                 ServerListLauncher.field_c.seek(0, 0L);
-                ServerListLauncher.field_c.readFully(param1 + 114, var6);
+                ServerListLauncher.field_c.readFully(offset + 114, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;
@@ -41,7 +41,7 @@ final class OptionsScreen extends MenuScreen {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                param0.a(var2, (byte) 0, param1, 24);
+                destination.a(var2, (byte) 0, offset, 24);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -55,19 +55,19 @@ final class OptionsScreen extends MenuScreen {
                 return;
               }
             }
-            param0.a(var2, (byte) 0, param1, 24);
+            destination.a(var2, (byte) 0, offset, 24);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_19_0 = var2_ref;
             stackIn_19_1 = new StringBuilder().append("be.FB(");
-            if (param0 == null) {
+            if (destination == null) {
               stackIn_20_2 = "null";
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(offset).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -85,10 +85,10 @@ final class OptionsScreen extends MenuScreen {
         cancel = null;
     }
 
-    final static void f(int param0) {
+    final static void resetAccountFormState(int result) {
         NetworkGameClient.field_z = false;
         ProjectedVertex.field_e = false;
-        LoginEncryptionSupport.a(param0, (byte) 111);
+        LoginEncryptionSupport.setAccountDialogResult(result, (byte) 111);
         TimeTrialSelectScreen.field_I = IntrusiveDequeCursor.field_c;
         TabbedPane.field_Lb = IntrusiveDequeCursor.field_c;
     }
@@ -107,7 +107,7 @@ final class OptionsScreen extends MenuScreen {
         return this.buttonSpacing * param1 + (this.buttonTop + (param1 != -1 + this.itemIds.length ? 0 : 20));
     }
 
-    final static void a(int param0, int param1, int param2, int param3, SceneNode[] param4, int param5, MeshBuilder param6) {
+    final static void createOppositeSceneNodes(int param0, int param1, int param2, int param3, SceneNode[] param4, int param5, MeshBuilder param6) {
         int[] var8 = null;
         int[] var7 = null;
         int[] var9 = null;

@@ -145,7 +145,7 @@ final class CueStick {
         int var17 = 0;
         int var18 = 0;
         int var19 = Pool.field_O;
-        int var2 = (int)Math.ceil((double)((float)PotEvent.a(4885, 688.5) / (float)ModelMesh.field_Y.length));
+        int var2 = (int)Math.ceil((double)((float)PotEvent.doubleToFixed3(4885, 688.5) / (float)ModelMesh.field_Y.length));
         this.segments = new MeshBuilder[var2];
         if (param0 != 2) {
           return;
@@ -162,10 +162,10 @@ final class CueStick {
           var12 = (float)var4 * 3.0f / (float)var2 + ((float)var2 - (float)var4) * 1.0f / (float)var2;
           for (var13 = 0; var13 < 8; var13++) {
             var14 = 1 + var13;
-            var15 = this.segments[var3].addVertex(PotEvent.a(param0 ^ 4887, Math.cos((double)var13 * 3.141592653589793 * 2.0 / 8.0) * (double)var11), PotEvent.a(4885, (double)var11 * Math.sin(3.141592653589793 * (double)var13 * 2.0 / 8.0)), PotEvent.a(4885, var5 - var9));
-            var16 = this.segments[var3].addVertex(PotEvent.a(param0 ^ 4887, Math.cos((double)var14 * 3.141592653589793 * 2.0 / 8.0) * (double)var11), PotEvent.a(4885, Math.sin(3.141592653589793 * (double)var14 * 2.0 / 8.0) * (double)var11), PotEvent.a(4885, var5 - var9));
-            var17 = this.segments[var3].addVertex(PotEvent.a(4885, Math.cos((double)var13 * 3.141592653589793 * 2.0 / 8.0) * (double)var12 * 1.03125), PotEvent.a(param0 ^ 4887, Math.sin(2.0 * ((double)var13 * 3.141592653589793) / 8.0) * (double)var12 * 1.03125), PotEvent.a(4885, var7 - var9));
-            var18 = this.segments[var3].addVertex(PotEvent.a(4885, Math.cos((double)var14 * 3.141592653589793 * 2.0 / 8.0) * (double)var12 * 1.03125), PotEvent.a(4885, Math.sin(2.0 * (3.141592653589793 * (double)var14) / 8.0) * (double)var12 * 1.03125), PotEvent.a(4885, var7 - var9));
+            var15 = this.segments[var3].addVertex(PotEvent.doubleToFixed3(param0 ^ 4887, Math.cos((double)var13 * 3.141592653589793 * 2.0 / 8.0) * (double)var11), PotEvent.doubleToFixed3(4885, (double)var11 * Math.sin(3.141592653589793 * (double)var13 * 2.0 / 8.0)), PotEvent.doubleToFixed3(4885, var5 - var9));
+            var16 = this.segments[var3].addVertex(PotEvent.doubleToFixed3(param0 ^ 4887, Math.cos((double)var14 * 3.141592653589793 * 2.0 / 8.0) * (double)var11), PotEvent.doubleToFixed3(4885, Math.sin(3.141592653589793 * (double)var14 * 2.0 / 8.0) * (double)var11), PotEvent.doubleToFixed3(4885, var5 - var9));
+            var17 = this.segments[var3].addVertex(PotEvent.doubleToFixed3(4885, Math.cos((double)var13 * 3.141592653589793 * 2.0 / 8.0) * (double)var12 * 1.03125), PotEvent.doubleToFixed3(param0 ^ 4887, Math.sin(2.0 * ((double)var13 * 3.141592653589793) / 8.0) * (double)var12 * 1.03125), PotEvent.doubleToFixed3(4885, var7 - var9));
+            var18 = this.segments[var3].addVertex(PotEvent.doubleToFixed3(4885, Math.cos((double)var14 * 3.141592653589793 * 2.0 / 8.0) * (double)var12 * 1.03125), PotEvent.doubleToFixed3(4885, Math.sin(2.0 * (3.141592653589793 * (double)var14) / 8.0) * (double)var12 * 1.03125), PotEvent.doubleToFixed3(4885, var7 - var9));
             this.segments[var3].addFace(var15, var16, var17, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) 95, 10053171), (byte) 0);
             this.segments[var3].addFace(var18, var17, var16, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) -1, 10053171), (byte) 0);
           }
@@ -322,9 +322,9 @@ final class CueStick {
           param0.gameModel.fillCueTransform(this.field_l, param0.cueAim.polarAngle, (byte) 49, param0.cueAim.azimuth, param0.cueAim.field_e, param0.cueAim.field_d);
           for (var11 = 0; var11 < this.segmentOffsets.length; var11++) {
             var12 = this.segmentOffsets[var11] + (double)param0.cuePullbackDistance;
-            this.field_d[var11][0] = (this.field_l[0] >> 13) + PotEvent.a(4885, var9 * (var3_double * var12));
-            this.field_d[var11][1] = (this.field_l[1] >> 13) + PotEvent.a(4885, var12 * var3_double * var7);
-            this.field_d[var11][2] = (this.field_l[2] >> 13) + PotEvent.a(4885, var12 * var5);
+            this.field_d[var11][0] = (this.field_l[0] >> 13) + PotEvent.doubleToFixed3(4885, var9 * (var3_double * var12));
+            this.field_d[var11][1] = (this.field_l[1] >> 13) + PotEvent.doubleToFixed3(4885, var12 * var3_double * var7);
+            this.field_d[var11][2] = (this.field_l[2] >> 13) + PotEvent.doubleToFixed3(4885, var12 * var5);
           }
           if (param1 < 11) {
             this.bakeSegments((byte) 65);

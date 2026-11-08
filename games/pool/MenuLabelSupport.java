@@ -55,7 +55,7 @@ final class MenuLabelSupport {
             break;
           }
           if (var3 == null) {
-            ShotEvent.c(-82);
+            ShotEvent.closeClientSocket(-82);
             return;
           }
           var4 = var15.readUnsignedByte(-79);

@@ -42,7 +42,7 @@ final class HighScoreRequest extends IntrusiveNode {
         try {
           var4 = (HighScoreSubmission) (GradientPaletteSupport.field_i.last((byte) 81));
           while (var4 != null) {
-            WidgetContainer.a(!param1, var4, param0);
+            WidgetContainer.sendHighScoreSubmission(!param1, var4, param0);
             var4 = (HighScoreSubmission) (GradientPaletteSupport.field_i.previous((byte) -5));
           }
           if (!param1) {

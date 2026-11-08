@@ -51,13 +51,13 @@ final class DropTargetWidget extends SingleChildWidget {
     final static void g(byte param0) {
         if (param0 != 96) {
           field_O = (BallDebugOverlay[]) null;
-          if (!LookupQuery.c(1)) {
+          if (!LookupQuery.isClientNoticeOpen(1)) {
             return;
           }
           CacheEntry.a(false, 4, 4);
           return;
         }
-        if (!LookupQuery.c(1)) {
+        if (!LookupQuery.isClientNoticeOpen(1)) {
           return;
         }
         CacheEntry.a(false, 4, 4);
@@ -65,10 +65,10 @@ final class DropTargetWidget extends SingleChildWidget {
 
     final static String a(long param0, int param1, boolean param2, int param3) {
         if (param2) {
-          return ResourceArchive.a(param0, param3, false, -109, param1, 10);
+          return ResourceArchive.formatFixedPoint(param0, param3, false, -109, param1, 10);
         }
         DropTargetWidget.releaseStatics(83);
-        return ResourceArchive.a(param0, param3, false, -109, param1, 10);
+        return ResourceArchive.formatFixedPoint(param0, param3, false, -109, param1, 10);
     }
 
     private DropTargetWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6) {

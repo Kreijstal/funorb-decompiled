@@ -303,7 +303,7 @@ final class LogoMaterial {
           }
           var12 = param1.enterFullscreen(param0, param2, param4, param5, (byte) 85);
           while (var12.field_f == 0) {
-            SoundCache.a(-89, 10L);
+            SoundCache.sleepMillis(-89, 10L);
           }
           var7 = (java.awt.Frame) (var12.field_e);
           if (var7 == null) {

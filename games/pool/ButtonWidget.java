@@ -129,7 +129,7 @@ class ButtonWidget extends UiWidget {
             TextHotspotRegion.field_o.height = 0;
             var7 = TextHotspotRegion.field_o;
             var7.width = 0;
-            if (TikiTableScene.e((byte) 85)) {
+            if (TikiTableScene.isLocalGameOwner((byte) 85)) {
               ProxyConnectorSupport.field_e.text = AccountDisplayNameSupport.yourGame.toUpperCase();
               var9 = (2 + Bzip2DecoderState.field_f.width) / 2;
               CanvasInputAttachmentSupport.field_b.setBounds(Bzip2DecoderState.field_f.height - 40, 2147483647, 0, var9 - 2, 40);

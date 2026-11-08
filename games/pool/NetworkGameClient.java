@@ -154,7 +154,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
             var11 = SpriteResourceSupport.pollLoginBooleanResponse(118);
             if (var11 != null) {
-              TutorialFactory.a(var11.booleanValue(), 68);
+              TutorialFactory.completeTextValidation(var11.booleanValue(), 68);
             }
           }
           if (var4 == 2) {
@@ -303,7 +303,7 @@ abstract class NetworkGameClient extends GameApplet {
           regionExit1: {
             switch (var2) {
               case 1:
-                LocalGameSetupScreen.f(80);
+                LocalGameSetupScreen.readLookupAcknowledgement(80);
                 break;
               case 2:
                 MouseWheelInput.c(param0 - 14873);
@@ -332,7 +332,7 @@ abstract class NetworkGameClient extends GameApplet {
                       break regionExit1;
                     default:
                       GrowableIntList.reportClientError((Throwable) null, "MGS1: " + PacketDiagnosticsSupport.formatPacketDump(127), param0 - 23555);
-                      ShotEvent.c(-75);
+                      ShotEvent.closeClientSocket(-75);
                       break regionExit1;
                   }
                 }
@@ -342,7 +342,7 @@ abstract class NetworkGameClient extends GameApplet {
                 QuickChatCategoryCache.displayChatMessageIfNew(var3, 101);
                 break;
               case 16:
-                RankingsRequest.c((byte) -56);
+                RankingsRequest.readAccountDisplayName((byte) -56);
                 break;
               case 7:
                 this.readSessionCookieResponse(6);
@@ -361,7 +361,7 @@ abstract class NetworkGameClient extends GameApplet {
           return;
         }
         GrowableIntList.reportClientError((Throwable) null, "MGS2: " + PacketDiagnosticsSupport.formatPacketDump(param0 - 14914), -8555);
-        ShotEvent.c(-108);
+        ShotEvent.closeClientSocket(-108);
     }
 
     private final void enableScoreResponses(int param0) {
@@ -655,7 +655,7 @@ abstract class NetworkGameClient extends GameApplet {
           PlasmaTableScene.field_gb.a(true);
         }
         MouseWheelInput.a(127);
-        FixedAngleSupport.a((byte) 123);
+        FixedAngleSupport.snapshotPointerInput((byte) 123);
         if (!StartupInterfaceSupport.a((byte) -124) &&
           PlasmaTableScene.field_ab != 11) {
           PacketDiagnosticsSupport.b(-11);
@@ -669,7 +669,7 @@ abstract class NetworkGameClient extends GameApplet {
             !(var3 >= LogoMaterial.a(-21055)) &&
             !(PaletteFontLoader.a((byte) 119) <= var3)) {
             this.field_C = false;
-            ShotEvent.c(-80);
+            ShotEvent.closeClientSocket(-80);
             DebugTuningSupport.requestAccountInterface(param0 + 15);
             LoginPayload.a(true, IterableNodeHashTable.idlemessage20min, 2);
             AvailabilityQueryResult.validateQueryGuard(640);
@@ -684,7 +684,7 @@ abstract class NetworkGameClient extends GameApplet {
           PaletteFontLoader.field_a == 0) {
           stackIn_26_0 = (PaletteFontLoader.field_a != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_26_0;
-          PaletteFontLoader.field_a = TextureCache.b(-69);
+          PaletteFontLoader.field_a = TextureCache.pollArchiveLoading(-69);
           if (var3Lifetime1 != 0 &&
             PaletteFontLoader.field_a == 0 &&
             11 == PlasmaTableScene.field_ab &&
@@ -790,7 +790,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (QuickChatCategoryDefinition.field_y == 3 &&
           DropTargetWidget.a(WorldPointProjectionSupport.field_d, PolarTableScene.field_nb, DualLinkNode.field_r, true) &&
           ArchiveAvailabilitySupport.isArchiveFullyAvailable(DualLinkNode.field_r, true)) {
-          ShotEvent.d(8192);
+          ShotEvent.releaseAwtLoadingResources(8192);
           MenuSelection.validateSelectionGuard((byte) 98);
           TextWidgetPainter.field_n = UiComponentNode.loading;
           ClassicBallSkin.field_o = false;
@@ -803,7 +803,7 @@ abstract class NetworkGameClient extends GameApplet {
             ScoreboardNameRecord.a(stackIn_102_0, stackIn_103_1, stackIn_106_2, InstructionsScreen.field_J);
           }
           if (Under13NoticePanel.field_T) {
-            PoolGameModel.m(4);
+            PoolGameModel.showAccountProgressForResult(4);
           }
           if (null == GzipDecoder.field_c) {
             GzipDecoder.field_c = BufferedSocket.getSoundEffectMixer(105);
@@ -959,7 +959,7 @@ abstract class NetworkGameClient extends GameApplet {
             HighScoreRequest.a(3, true);
           }
           if (ButtonWidget.field_H[3]) {
-            VerticalScrollbar.a((byte) 58, 4);
+            VerticalScrollbar.resendAchievementAndAccountQueries((byte) 58, 4);
           }
           if (ButtonWidget.field_H[4]) {
             EightBallRules.resendIntegerRecordOperations(5, true);

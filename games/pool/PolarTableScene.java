@@ -436,7 +436,7 @@ final class PolarTableScene extends ModelTableScene {
           var16Lifetime1 = var2Lifetime6;
           var39 = var13.field_b;
           var18Lifetime1 = var15Lifetime1;
-          OptionsScreen.a(var18Lifetime1, this.field_M[var16Lifetime1][1], this.field_M[var16Lifetime1][2], 1, var39, this.field_M[var16Lifetime1][0], this.field_O[var16Lifetime1]);
+          OptionsScreen.createOppositeSceneNodes(var18Lifetime1, this.field_M[var16Lifetime1][1], this.field_M[var16Lifetime1][2], 1, var39, this.field_M[var16Lifetime1][0], this.field_O[var16Lifetime1]);
           var15Lifetime1 += 2;
         }
         var15Lifetime2 = 0;
@@ -507,7 +507,7 @@ final class PolarTableScene extends ModelTableScene {
           var14 = param0[11] + (param0[5] * (SoftwareRasterizer.clipLeft - 320) + param0[8] * var5 >> 9) >> 1;
           var15 = var12 * var12 + var13 * var13 + var14 * var14 >> 16;
           if (var15 > 0) {
-            var15 = AccountDisplayNameSupport.inverseSquareRoot(var15, -128);
+            var15 = AccountDisplayNameSupport.sqrtScaled256(var15, -128);
             var12 = ArchiveProvider.divideFixed16(var15, (byte) -80, (long)var12);
             var13 = ArchiveProvider.divideFixed16(var15, (byte) -100, (long)var13);
             var14 = ArchiveProvider.divideFixed16(var15, (byte) -92, (long)var14);
@@ -520,7 +520,7 @@ final class PolarTableScene extends ModelTableScene {
               var14 = param0[11] + (param0[5] * (SoftwareRasterizer.clipRight - 320) + param0[8] * var5 >> 9) >> 1;
               var15 = var12 * var12 + var13 * var13 + var14 * var14 >> 16;
               if (var15 > 0) {
-                var15 = AccountDisplayNameSupport.inverseSquareRoot(var15, -121);
+                var15 = AccountDisplayNameSupport.sqrtScaled256(var15, -121);
                 var12 = ArchiveProvider.divideFixed16(var15, (byte) -67, (long)var12);
                 var13 = ArchiveProvider.divideFixed16(var15, (byte) -120, (long)var13);
                 var14 = ArchiveProvider.divideFixed16(var15, (byte) -119, (long)var14);
@@ -846,7 +846,7 @@ final class PolarTableScene extends ModelTableScene {
           this.field_A = new CueStick();
           this.field_A.a(MeshBuilder.loadFromArchive(param0, "", "cues/ice_cue"), (byte) -105);
           for (var4 = 0; this.field_O.length > var4; var4++) {
-            VerticalScrollbar.a(0, this.field_O[var4]);
+            VerticalScrollbar.swapMeshYAndZ(0, this.field_O[var4]);
           }
           var5 = 2147483647;
           var6 = -2147483648;

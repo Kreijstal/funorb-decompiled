@@ -104,7 +104,7 @@ final class MeshBoundsSupport {
         }
     }
 
-    final static void a(int param0, byte param1, boolean param2) {
+    final static void updateIgnoreListPanel(int param0, byte param1, boolean param2) {
         ScrollPane stackIn_2_0 = null;
         boolean stackIn_2_1 = false;
         boolean stackIn_3_2 = false;
@@ -226,7 +226,7 @@ final class MeshBoundsSupport {
         }
     }
 
-    final static void a(LobbyGame param0, int param1, PacketBuffer param2, boolean param3) {
+    final static void readLobbyGameDetails(LobbyGame game, int obfuscationGuard, PacketBuffer buffer, boolean includePlayerCount) {
         int var9 = 0;
         LobbyGame stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
@@ -257,29 +257,29 @@ final class MeshBoundsSupport {
         int var10 = 0;
         var10 = Pool.field_O;
         try {
-          if (param3) {
-            param0.field_mc = param2.readUnsignedByte(-67);
+          if (includePlayerCount) {
+            game.field_mc = buffer.readUnsignedByte(-67);
           }
-          param0.field_Nb = param2.readUnsignedByte(-70);
-          param0.field_ac = param2.readUnsignedByte(-124);
-          var4_int = param2.readUnsignedByte(-124);
-          var5 = 36 / ((63 - param1) / 46);
-          stackIn_6_0 = (LobbyGame) (param0);
+          game.field_Nb = buffer.readUnsignedByte(-70);
+          game.field_ac = buffer.readUnsignedByte(-124);
+          var4_int = buffer.readUnsignedByte(-124);
+          var5 = 36 / ((63 - obfuscationGuard) / 46);
+          stackIn_6_0 = (LobbyGame) (game);
           stackIn_7_1 = ((128 & var4_int) != 0);
           stackIn_6_0.field_Qb = stackIn_7_1;
-          stackIn_10_0 = (LobbyGame) (param0);
-          stackIn_11_1 = (param0.field_Qb) && (param0.field_mc < param0.field_Nb);
+          stackIn_10_0 = (LobbyGame) (game);
+          stackIn_11_1 = (game.field_Qb) && (game.field_mc < game.field_Nb);
           stackIn_10_0.field_ic = stackIn_11_1;
-          stackIn_13_0 = (LobbyGame) (param0);
+          stackIn_13_0 = (LobbyGame) (game);
           stackIn_14_1 = ((32 & var4_int) != 0);
           stackIn_13_0.field_wc = stackIn_14_1;
-          stackIn_16_0 = (LobbyGame) (param0);
+          stackIn_16_0 = (LobbyGame) (game);
           stackIn_17_1 = ((8 & var4_int) != 0);
           stackIn_16_0.field_Dc = stackIn_17_1;
-          stackIn_19_0 = (LobbyGame) (param0);
+          stackIn_19_0 = (LobbyGame) (game);
           stackIn_20_1 = ((var4_int & 64) != 0);
           stackIn_19_0.field_ec = stackIn_20_1;
-          stackIn_22_0 = (LobbyGame) (param0);
+          stackIn_22_0 = (LobbyGame) (game);
           if ((var4_int & 16) == 0) {
             stackIn_23_1 = 1;
           } else {
@@ -288,46 +288,46 @@ final class MeshBoundsSupport {
           stackIn_22_0.field_Yb = stackIn_23_1;
           stackIn_26_0 = (0 == (4 & var4_int)) ? 0 : 1;
           var6 = stackIn_26_0;
-          param2.a(0, (byte) -127, param0.settings, param0.settings.length);
+          buffer.a(0, (byte) -127, game.settings, game.settings.length);
           stackIn_29_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var7 = stackIn_29_0;
-          param0.field_pc = param2.readUnsignedShort(-1034);
-          param0.field_sc = MonotonicClock.monotonicTimeMillis((byte) -95) - (long)param2.readInt(true);
+          game.field_pc = buffer.readUnsignedShort(-1034);
+          game.field_sc = MonotonicClock.monotonicTimeMillis((byte) -95) - (long)buffer.readInt(true);
           if (var6 != 0) {
-            param0.field_qc = param2.readInt(true);
+            game.field_qc = buffer.readInt(true);
           } else {
-            param0.field_qc = -1;
+            game.field_qc = -1;
           }
-          param0.field_Zb = param2.readLong(-412303328);
-          var8 = param2.position;
-          param0.field_Ob = param2.j(-57);
+          game.field_Zb = buffer.readLong(-412303328);
+          var8 = buffer.position;
+          game.field_Ob = buffer.j(-57);
           if (var7 != 0) {
-            param2.position = var8;
-            param0.playerNames = new String[param0.field_mc];
-            for (var9 = 0; param0.field_mc > var9; var9++) {
-              param0.playerNames[var9] = param2.j(-72);
+            buffer.position = var8;
+            game.playerNames = new String[game.field_mc];
+            for (var9 = 0; game.field_mc > var9; var9++) {
+              game.playerNames[var9] = buffer.j(-72);
             }
             return;
           }
-          param0.playerNames = null;
+          game.playerNames = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_40_0 = var4;
           stackIn_40_1 = new StringBuilder().append("d.D(");
-          if (param0 == null) {
+          if (game == null) {
             stackIn_41_2 = "null";
           } else {
             stackIn_41_2 = "{...}";
           }
-          stackIn_43_1 = ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_43_1 = ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(obfuscationGuard).append(',');
+          if (buffer == null) {
             stackIn_44_2 = "null";
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(includePlayerCount).append(')').toString());
         }
     }
 

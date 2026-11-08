@@ -28,7 +28,7 @@ abstract class ByteStorage {
 
     final static void b(int param0) {
         String var2 = (String) null;
-        AccountDisplayNameSupport.a((String) null, -125, "");
+        AccountDisplayNameSupport.showLoginForm((String) null, -125, "");
         if (param0 != 3) {
           field_f = (UiComponent) null;
         }

@@ -77,7 +77,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         if (!this.field_tb) {
           return;
         }
-        MirroredSceneSupport.b(false);
+        MirroredSceneSupport.showDefaultLoginForm(false);
     }
 
     final void m(byte param0) {
@@ -185,7 +185,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_ub) {
-            LoginEncryptionSupport.a(3, (byte) 121);
+            LoginEncryptionSupport.setAccountDialogResult(3, (byte) 121);
             this.dismissDialog(17);
           } else {
             LoginForm.a("tochangedisplayname.ws", NanoTickClock.getApplet(97), false);

@@ -29,12 +29,12 @@ final class ButtonPainter implements WidgetPainter {
         if (FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)param2, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)param3, false) >= 0L) {
           return -1;
         }
-        var12 = IterableNodeHashTable.a(-112, FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)var10, false));
-        var14 = IterableNodeHashTable.a(-99, FullscreenFocusCanvas.multiplyFixedChecked((long)param2, (long)param2, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)param3, (long)param3, false));
+        var12 = IterableNodeHashTable.sqrtScaled256(-112, FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)var10, false));
+        var14 = IterableNodeHashTable.sqrtScaled256(-99, FullscreenFocusCanvas.multiplyFixedChecked((long)param2, (long)param2, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)param3, (long)param3, false));
         if (0L < -(long)(param5 << 16) + (var12 - var14)) {
           return -1;
         }
-        var16 = NameEntryPopup.a(param2, false, param2) + NameEntryPopup.a(param3, false, param3);
+        var16 = NameEntryPopup.multiplyFixed16(param2, false, param2) + NameEntryPopup.multiplyFixed16(param3, false, param3);
         if (var16 == 0) {
           return -1;
         }
@@ -44,7 +44,7 @@ final class ButtonPainter implements WidgetPainter {
         if (var21 < 0L) {
           return -1;
         }
-        var23 = IterableNodeHashTable.a(-113, var21);
+        var23 = IterableNodeHashTable.sqrtScaled256(-113, var21);
         if (var23 > 2147483647L) {
           throw new IllegalStateException("Out of range: 0x" + Long.toString(var23, 16));
         }

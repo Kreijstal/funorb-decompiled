@@ -15,16 +15,16 @@ final class Texture extends IntrusiveNode {
         this.pixels = null;
     }
 
-    private final static int a(int param0, double param1) {
-        if (param1 == 1.0) {
-          return param0;
+    private final static int applyGamma(int color, double gamma) {
+        if (gamma == 1.0) {
+          return color;
         }
-        int var3 = param0 >> 16;
-        int var4 = param0 >> 8 & 255;
-        int var5 = param0 & 255;
-        var3 = (int)(Math.pow((double)var3 / 256.0, param1) * 256.0);
-        var4 = (int)(Math.pow((double)var4 / 256.0, param1) * 256.0);
-        var5 = (int)(Math.pow((double)var5 / 256.0, param1) * 256.0);
+        int var3 = color >> 16;
+        int var4 = color >> 8 & 255;
+        int var5 = color & 255;
+        var3 = (int)(Math.pow((double)var3 / 256.0, gamma) * 256.0);
+        var4 = (int)(Math.pow((double)var4 / 256.0, gamma) * 256.0);
+        var5 = (int)(Math.pow((double)var5 / 256.0, gamma) * 256.0);
         return (var3 << 16) + (var4 << 8) + var5;
     }
 
@@ -80,7 +80,7 @@ final class Texture extends IntrusiveNode {
             }
           }
           for (var10Lifetime1 = 0; var10Lifetime1 < var16.length; var10Lifetime1++) {
-            var8[var10Lifetime1] = Texture.a(var16[var10Lifetime1], (double)param0);
+            var8[var10Lifetime1] = Texture.applyGamma(var16[var10Lifetime1], (double)param0);
           }
           if (var5 != 0) {
             var10Lifetime2 = this.field_q[var5 - 1];

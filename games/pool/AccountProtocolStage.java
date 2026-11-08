@@ -35,7 +35,7 @@ final class AccountProtocolStage {
           }
           if (Atan2Support.field_b != -1) {
             var2 = Atan2Support.field_b;
-            LoginEncryptionSupport.a(-1, (byte) 92);
+            LoginEncryptionSupport.setAccountDialogResult(-1, (byte) 92);
             stackIn_6_0 = var2;
             return stackIn_6_0;
           }

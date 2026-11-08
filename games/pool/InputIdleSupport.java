@@ -7,8 +7,8 @@ final class InputIdleSupport {
     static ScrollPaneWithFooter field_c;
     static String mbExclusive2;
 
-    final static boolean a(byte param0) {
-        if (param0 <= 72) {
+    final static boolean isCaretBlinkOn(byte obfuscationGuard) {
+        if (obfuscationGuard <= 72) {
           mbExclusive2 = (String) null;
           if (!AccountCreationDialog.m(0)) {
             return false;

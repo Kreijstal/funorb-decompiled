@@ -13,7 +13,7 @@ final class QuickChatPhraseRegistry {
     static int field_g;
     private ResourceArchive standardArchive;
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static int sweepCircleAgainstVerticalSegment(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10;
         int var11;
         int var12;
@@ -30,7 +30,7 @@ final class QuickChatPhraseRegistry {
         var11 = ArchiveProvider.divideFixed16(param6, (byte) -86, (long)((param4 << 16) + param1 - param3));
         var12 = ArchiveProvider.divideFixed16(param6, (byte) -121, (long)(-(param4 << 16) + param1 - param3));
         if (param9 < 14) {
-          QuickChatPhraseRegistry.a(112, 24, -32, -89, -126, -39, -3, 91, -69, 50);
+          QuickChatPhraseRegistry.sweepCircleAgainstVerticalSegment(112, 24, -32, -89, -126, -39, -3, 91, -69, 50);
           if (var11 > 0) {
             if (65536 - param2 < var11) {
               if (var12 <= 0) {
@@ -39,7 +39,7 @@ final class QuickChatPhraseRegistry {
               if (-param2 + 65536 < var12) {
                 return -1;
               }
-              var10 = NameEntryPopup.a(var12, false, param8) + param7;
+              var10 = NameEntryPopup.multiplyFixed16(var12, false, param8) + param7;
               if (param5 < param0) {
                 if (param5 > var10) {
                   return -1;
@@ -59,7 +59,7 @@ final class QuickChatPhraseRegistry {
             }
             boolean decompiledFrameRemainder0 = true;
             if (var12 > var11) {
-              var10Lifetime7 = param7 + NameEntryPopup.a(var11, false, param8);
+              var10Lifetime7 = param7 + NameEntryPopup.multiplyFixed16(var11, false, param8);
               if (param0 <= param5) {
                 decompiledFrameRemainder0 = !(param0 > var10Lifetime7);
                 if (decompiledFrameRemainder0) {
@@ -82,7 +82,7 @@ final class QuickChatPhraseRegistry {
           if (-param2 + 65536 < var12) {
             return -1;
           }
-          var10Lifetime6 = NameEntryPopup.a(var12, false, param8) + param7;
+          var10Lifetime6 = NameEntryPopup.multiplyFixed16(var12, false, param8) + param7;
           if (param5 < param0) {
             if (param5 > var10Lifetime6) {
               return -1;
@@ -103,7 +103,7 @@ final class QuickChatPhraseRegistry {
         if (var11 <= 0) {
           if (var12 > 0 &&
             -param2 + 65536 >= var12) {
-            var10Lifetime1 = NameEntryPopup.a(var12, false, param8) + param7;
+            var10Lifetime1 = NameEntryPopup.multiplyFixed16(var12, false, param8) + param7;
             if (param5 < param0) {
               if (param5 <= var10Lifetime1 &&
                 param0 >= var10Lifetime1) {
@@ -121,7 +121,7 @@ final class QuickChatPhraseRegistry {
         if (65536 - param2 < var11) {
           if (var12 > 0 &&
             -param2 + 65536 >= var12) {
-            var10Lifetime2 = NameEntryPopup.a(var12, false, param8) + param7;
+            var10Lifetime2 = NameEntryPopup.multiplyFixed16(var12, false, param8) + param7;
             if (param5 < param0) {
               if (param5 <= var10Lifetime2 &&
                 param0 >= var10Lifetime2) {
@@ -143,7 +143,7 @@ final class QuickChatPhraseRegistry {
           if (-param2 + 65536 < var12) {
             return -1;
           }
-          var10Lifetime3 = NameEntryPopup.a(var12, false, param8) + param7;
+          var10Lifetime3 = NameEntryPopup.multiplyFixed16(var12, false, param8) + param7;
           if (param5 < param0) {
             if (param5 <= var10Lifetime3 &&
               param0 >= var10Lifetime3) {
@@ -157,7 +157,7 @@ final class QuickChatPhraseRegistry {
           }
           return -1;
         }
-        var10Lifetime4 = param7 + NameEntryPopup.a(var11, false, param8);
+        var10Lifetime4 = param7 + NameEntryPopup.multiplyFixed16(var11, false, param8);
         if (param0 <= param5) {
           if (param0 <= var10Lifetime4 &&
             param5 >= var10Lifetime4) {
@@ -171,7 +171,7 @@ final class QuickChatPhraseRegistry {
         }
         if (var12 > 0 &&
           -param2 + 65536 >= var12) {
-          var10Lifetime5 = NameEntryPopup.a(var12, false, param8) + param7;
+          var10Lifetime5 = NameEntryPopup.multiplyFixed16(var12, false, param8) + param7;
           if (param5 < param0) {
             if (param5 <= var10Lifetime5 &&
               param0 >= var10Lifetime5) {
@@ -194,7 +194,7 @@ final class QuickChatPhraseRegistry {
         byte[] var4Lifetime1;
         QuickChatPhraseDefinition var3Lifetime1;
         if (param0 <= 125) {
-          QuickChatPhraseRegistry.a(54, 63, 5, -67, 84, -31, 70, -27, -99, 108);
+          QuickChatPhraseRegistry.sweepCircleAgainstVerticalSegment(54, 63, 5, -67, 84, -31, 70, -27, -99, 108);
           var3 = (QuickChatPhraseDefinition) (this.definitions.get((long)param1, true));
           if (var3 != null) {
             return var3;

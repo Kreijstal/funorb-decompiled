@@ -281,7 +281,7 @@ final class PlasmaTableScene extends TableScene {
           var12 = var16[11] + (var16[5] * (SoftwareRasterizer.clipLeft - 320) + var16[8] * var5Lifetime1 >> 9) >> 1;
           var13 = var10 * var10 + var11 * var11 + var12 * var12 >> 16;
           if (var13 > 0) {
-            var13 = AccountDisplayNameSupport.inverseSquareRoot(var13, -126);
+            var13 = AccountDisplayNameSupport.sqrtScaled256(var13, -126);
             var10 = ArchiveProvider.divideFixed16(var13, (byte) -82, (long)var10);
             var11 = ArchiveProvider.divideFixed16(var13, (byte) -125, (long)var11);
             var12 = ArchiveProvider.divideFixed16(var13, (byte) -109, (long)var12);
@@ -294,7 +294,7 @@ final class PlasmaTableScene extends TableScene {
               var12 = var16[11] + (var16[5] * (SoftwareRasterizer.clipRight - 320) + var16[8] * var5Lifetime1 >> 9) >> 1;
               var13 = var10 * var10 + var11 * var11 + var12 * var12 >> 16;
               if (var13 > 0) {
-                var13 = AccountDisplayNameSupport.inverseSquareRoot(var13, -126);
+                var13 = AccountDisplayNameSupport.sqrtScaled256(var13, -126);
                 var10 = ArchiveProvider.divideFixed16(var13, (byte) -115, (long)var10);
                 var11 = ArchiveProvider.divideFixed16(var13, (byte) -115, (long)var11);
                 var12 = ArchiveProvider.divideFixed16(var13, (byte) -97, (long)var12);

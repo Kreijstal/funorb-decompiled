@@ -203,7 +203,7 @@ final class LoginMethod {
           return;
         }
         try {
-          WidgetContainer.a(false, param1, param2);
+          WidgetContainer.sendHighScoreSubmission(false, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

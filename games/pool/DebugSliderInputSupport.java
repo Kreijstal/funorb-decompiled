@@ -39,7 +39,7 @@ final class DebugSliderInputSupport {
             if (DebugOverlayLayoutSupport.field_a.length <= var1_int) {
               return false;
             }
-            if (!DebugOverlayLayoutSupport.field_a[var1_int].b(59)) {
+            if (!DebugOverlayLayoutSupport.field_a[var1_int].handleSliderPointer(59)) {
               var1_int++;
               continue;
             }

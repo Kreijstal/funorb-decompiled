@@ -283,7 +283,7 @@ abstract class TextLayout {
               } else {
                 var11_intLifetime2 = 2;
               }
-              FixedAngleSupport.$cfr$intArgs$a$29f688675a86(var14.field_j[0], param6, 19, var14.field_h[1], var14.field_q[1], var14.field_q[0], var14.field_h[0], var11_intLifetime2, var14.field_j[1], param7, var12Lifetime1);
+              FixedAngleSupport.drawTaperedGradientStrokeIntArgs(var14.field_j[0], param6, 19, var14.field_h[1], var14.field_q[1], var14.field_q[0], var14.field_h[0], var11_intLifetime2, var14.field_j[1], param7, var12Lifetime1);
             }
             var13 = var14;
             var14 = var15Lifetime4;

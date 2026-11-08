@@ -131,9 +131,9 @@ final class LoginRequestSupport {
               RankingsScreen.field_J = TutorialSelectScreen.field_L;
             } else {
               if (var9Lifetime1 == 248) {
-                PotEvent.a(16, NanoTickClock.getApplet(71));
+                PotEvent.setTuhstatbutCookie(16, NanoTickClock.getApplet(71));
                 LoginTextValue.field_g = FadingDialog.createUnable;
-                ShotEvent.c(-70);
+                ShotEvent.closeClientSocket(-70);
                 ArchiveLoadStep.field_e = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
@@ -159,7 +159,7 @@ final class LoginRequestSupport {
                 for (var12 = 0; var11 > var12; var12++) {
                   LoginPayloadFactory.field_b[var12] = PlayerContextMenu.field_e.readString(10762);
                 }
-                ShotEvent.c(53);
+                ShotEvent.closeClientSocket(53);
                 ArchiveLoadStep.field_e = false;
                 stackIn_43_0 = var11 + 100;
                 return stackIn_43_0;
@@ -176,7 +176,7 @@ final class LoginRequestSupport {
                 WeightedLruCache.writeSettingsCookie(NanoTickClock.getApplet(86), -128, var9_ref_String);
               }
             }
-            ShotEvent.c(55);
+            ShotEvent.closeClientSocket(55);
             ArchiveLoadStep.field_e = false;
             stackIn_53_0 = Bzip2DecoderState.field_c;
             return stackIn_53_0;
@@ -186,7 +186,7 @@ final class LoginRequestSupport {
           }
           if (null == Atan2Support.field_c) {
             if (ArchiveLoadStep.field_e) {
-              if (CushionSegment.d((byte) 123) <= 30000L) {
+              if (CushionSegment.millisSinceNetworkActivity((byte) 123) <= 30000L) {
                 LoginTextValue.field_g = DialWidget.loginm2;
               } else {
                 LoginTextValue.field_g = TabbedPane.loginm3;

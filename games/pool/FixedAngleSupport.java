@@ -7,7 +7,7 @@ final class FixedAngleSupport {
 
     final static int arcTangent(int param0, int param1) {
         if (param0 != -65536) {
-          FixedAngleSupport.a((byte) -16);
+          FixedAngleSupport.snapshotPointerInput((byte) -16);
           if (param1 < 0) {
             if (param1 >= -65536) {
               return -LookupProtocolSupport.field_a[-param1 >> 5];
@@ -39,18 +39,18 @@ final class FixedAngleSupport {
         tooltipBreak = null;
     }
 
-    final static AccountStateQuery a(int param0, int param1) {
+    final static AccountStateQuery requestAccountState(int opcode, int obfuscationGuard) {
         AccountStateQuery var2 = null;
-        if (param1 >= 9) {
+        if (obfuscationGuard >= 9) {
           var2 = new AccountStateQuery();
           NodeHashTableIterator.field_j.addFirst((byte) 127, var2);
-          MusicPatchEnvelope.a(1, param0);
+          MusicPatchEnvelope.a(1, opcode);
           return var2;
         }
         return (AccountStateQuery) null;
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, byte param7, int param8, int[] param9, byte param10) {
+    final static void drawTaperedGradientStroke(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, byte param7, int param8, int[] param9, byte param10) {
         int var16 = 0;
         int var21 = 0;
         RuntimeException stackIn_32_0 = null;
@@ -140,7 +140,7 @@ final class FixedAngleSupport {
         }
     }
 
-    final static void a(byte param0) {
+    final static void snapshotPointerInput(byte obfuscationGuard) {
         int[] var3 = null;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
@@ -157,11 +157,11 @@ final class FixedAngleSupport {
           UsernameAvailabilityValidator.field_o = MatchingTextValidator.field_o;
           CueAim.field_c = 0;
         }
-        if (param0 >= 86) {
+        if (obfuscationGuard >= 86) {
           return;
         }
         var3 = (int[]) null;
-        FixedAngleSupport.$cfr$intArgs$a$29f688675a86(94, 67, 67, -120, -99, 36, -121, 15, 19, (int[]) null, 9);
+        FixedAngleSupport.drawTaperedGradientStrokeIntArgs(94, 67, 67, -120, -99, 36, -121, 15, 19, (int[]) null, 9);
     }
 
     final static boolean isLeapYear(int param0, byte param1) {
@@ -209,7 +209,7 @@ final class FixedAngleSupport {
         return false;
     }
 
-    final static void a(int param0) {
+    final static void compactFaceBuckets(int obfuscationGuard) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;
@@ -217,7 +217,7 @@ final class FixedAngleSupport {
         RuntimeException var1 = null;
         try {
           var1_int = DialogLayer.field_T[0];
-          if (param0 >= -85) {
+          if (obfuscationGuard >= -85) {
             FixedAngleSupport.isLeapYear(53, (byte) 68);
           }
           for (var2 = 1; DialogLayer.field_T.length > var2; var2++) {
@@ -229,7 +229,7 @@ final class FixedAngleSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "bo.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "bo.B(" + obfuscationGuard + ')');
         }
     }
 
@@ -238,7 +238,7 @@ final class FixedAngleSupport {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$29f688675a86(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9, int param10) {
+    final static void drawTaperedGradientStrokeIntArgs(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9, int param10) {
         int var16 = 0;
         int var21 = 0;
         RuntimeException stackIn_32_0 = null;

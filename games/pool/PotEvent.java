@@ -12,15 +12,15 @@ final class PotEvent extends IntrusiveNode {
     static PcmSample field_o;
     static String mbAchievementCount2;
 
-    final static int a(int param0, double param1) {
-        if (param0 != 4885) {
-          PotEvent.a((byte) -24, 59L);
-          return SingleChildWidget.a(param1, 3, 1);
+    final static int doubleToFixed3(int obfuscationGuard, double value) {
+        if (obfuscationGuard != 4885) {
+          PotEvent.fixed16ToDouble((byte) -24, 59L);
+          return SingleChildWidget.a(value, 3, 1);
         }
-        return SingleChildWidget.a(param1, 3, 1);
+        return SingleChildWidget.a(value, 3, 1);
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void setTuhstatbutCookie(int obfuscationGuard, java.applet.Applet applet) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
@@ -28,13 +28,13 @@ final class PotEvent extends IntrusiveNode {
           RasterBuffer.field_j = true;
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
-          if (param0 != 16) {
+          if (obfuscationGuard != 16) {
             field_p = (int[]) null;
           }
           var4 = -1L;
-          BrowserCookieWriter.setBrowserCookie(var4, (byte) -120, param1, var3, var2);
+          BrowserCookieWriter.setBrowserCookie(var4, (byte) -120, applet, var3, var2);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cr.D(" + obfuscationGuard + ',' + (applet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -55,12 +55,12 @@ final class PotEvent extends IntrusiveNode {
         gameoptMoreratedgames = null;
     }
 
-    final static double a(byte param0, long param1) {
-        if (param0 != 89) {
-          PotEvent.a(-26, 0.6233354276237926);
-          return IndexedSpriteState.fixedToDouble((byte) -107, 16, param1);
+    final static double fixed16ToDouble(byte obfuscationGuard, long value) {
+        if (obfuscationGuard != 89) {
+          PotEvent.doubleToFixed3(-26, 0.6233354276237926);
+          return IndexedSpriteState.fixedToDouble((byte) -107, 16, value);
         }
-        return IndexedSpriteState.fixedToDouble((byte) -107, 16, param1);
+        return IndexedSpriteState.fixedToDouble((byte) -107, 16, value);
     }
 
     PotEvent(int param0, int param1) {

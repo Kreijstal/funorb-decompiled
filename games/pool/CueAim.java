@@ -146,7 +146,7 @@ final class CueAim {
             var60 = var44.field_K;
             IntrusiveDeque.a(ProgressDialog.field_ib, 0, var60, 0, -147296924);
           } else {
-            FixedAngleSupport.a(-94);
+            FixedAngleSupport.compactFaceBuckets(-94);
           }
           var54 = new int[param2.field_o];
           var49 = var54;
@@ -241,7 +241,7 @@ final class CueAim {
               var32 = var30 & 65280;
               var33 = (-16711742 & var31 * var28) >>> 8 | 922812160 & var32 * var28 >>> 8;
               var33 = var33 + 65793 * var29;
-              TextureCache.a(var24, var27, var23, var25, var26, var33 >> 1 & 8355711, 108, var22);
+              TextureCache.drawFlatTriangle(var24, var27, var23, var25, var26, var33 >> 1 & 8355711, 108, var22);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];

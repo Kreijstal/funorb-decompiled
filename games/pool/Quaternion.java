@@ -61,12 +61,12 @@ final class Quaternion {
     }
 
     final void normalise(boolean param0) {
-        int var2 = NameEntryPopup.a(this.w, false, this.w) - (-NameEntryPopup.a(this.x, false, this.x) - (NameEntryPopup.a(this.y, false, this.y) + NameEntryPopup.a(this.z, false, this.z)));
+        int var2 = NameEntryPopup.multiplyFixed16(this.w, false, this.w) - (-NameEntryPopup.multiplyFixed16(this.x, false, this.x) - (NameEntryPopup.multiplyFixed16(this.y, false, this.y) + NameEntryPopup.multiplyFixed16(this.z, false, this.z)));
         if (!param0) {
           createAlertEmailUnavailable = (String) null;
           if (var2 >= 65535) {
             if (65537 < var2) {
-              var2 = AccountDisplayNameSupport.inverseSquareRoot(var2, -127);
+              var2 = AccountDisplayNameSupport.sqrtScaled256(var2, -127);
               this.w = ArchiveProvider.divideFixed16(var2, (byte) -76, (long)this.w);
               this.x = ArchiveProvider.divideFixed16(var2, (byte) -62, (long)this.x);
               this.y = ArchiveProvider.divideFixed16(var2, (byte) -71, (long)this.y);
@@ -74,7 +74,7 @@ final class Quaternion {
             }
             return;
           }
-          var2 = AccountDisplayNameSupport.inverseSquareRoot(var2, -127);
+          var2 = AccountDisplayNameSupport.sqrtScaled256(var2, -127);
           this.w = ArchiveProvider.divideFixed16(var2, (byte) -76, (long)this.w);
           this.x = ArchiveProvider.divideFixed16(var2, (byte) -62, (long)this.x);
           this.y = ArchiveProvider.divideFixed16(var2, (byte) -71, (long)this.y);
@@ -82,7 +82,7 @@ final class Quaternion {
           return;
         }
         if (var2 < 65535) {
-          var2 = AccountDisplayNameSupport.inverseSquareRoot(var2, -127);
+          var2 = AccountDisplayNameSupport.sqrtScaled256(var2, -127);
           this.w = ArchiveProvider.divideFixed16(var2, (byte) -76, (long)this.w);
           this.x = ArchiveProvider.divideFixed16(var2, (byte) -62, (long)this.x);
           this.y = ArchiveProvider.divideFixed16(var2, (byte) -71, (long)this.y);
@@ -92,7 +92,7 @@ final class Quaternion {
         if (65537 >= var2) {
           return;
         }
-        var2 = AccountDisplayNameSupport.inverseSquareRoot(var2, -127);
+        var2 = AccountDisplayNameSupport.sqrtScaled256(var2, -127);
         this.w = ArchiveProvider.divideFixed16(var2, (byte) -76, (long)this.w);
         this.x = ArchiveProvider.divideFixed16(var2, (byte) -62, (long)this.x);
         this.y = ArchiveProvider.divideFixed16(var2, (byte) -71, (long)this.y);
@@ -104,13 +104,13 @@ final class Quaternion {
         int var4 = 0;
         int var5 = 0;
         try {
-          var3_int = NameEntryPopup.a(this.w, false, param1.w) + (-NameEntryPopup.a(this.x, false, param1.x) - NameEntryPopup.a(this.y, false, param1.y) - NameEntryPopup.a(this.z, false, param1.z));
+          var3_int = NameEntryPopup.multiplyFixed16(this.w, false, param1.w) + (-NameEntryPopup.multiplyFixed16(this.x, false, param1.x) - NameEntryPopup.multiplyFixed16(this.y, false, param1.y) - NameEntryPopup.multiplyFixed16(this.z, false, param1.z));
           if (param0 != 3) {
             field_k = (ServerListLauncher) null;
           }
-          var4 = NameEntryPopup.a(this.x, false, param1.w) + (NameEntryPopup.a(this.w, false, param1.x) + NameEntryPopup.a(this.z, false, param1.y)) - NameEntryPopup.a(this.y, false, param1.z);
-          var5 = NameEntryPopup.a(this.y, false, param1.w) - NameEntryPopup.a(this.z, false, param1.x) + NameEntryPopup.a(this.w, false, param1.y) + NameEntryPopup.a(this.x, false, param1.z);
-          this.z = NameEntryPopup.a(this.z, false, param1.w) + (NameEntryPopup.a(this.y, false, param1.x) - (NameEntryPopup.a(this.x, false, param1.y) - NameEntryPopup.a(this.w, false, param1.z)));
+          var4 = NameEntryPopup.multiplyFixed16(this.x, false, param1.w) + (NameEntryPopup.multiplyFixed16(this.w, false, param1.x) + NameEntryPopup.multiplyFixed16(this.z, false, param1.y)) - NameEntryPopup.multiplyFixed16(this.y, false, param1.z);
+          var5 = NameEntryPopup.multiplyFixed16(this.y, false, param1.w) - NameEntryPopup.multiplyFixed16(this.z, false, param1.x) + NameEntryPopup.multiplyFixed16(this.w, false, param1.y) + NameEntryPopup.multiplyFixed16(this.x, false, param1.z);
+          this.z = NameEntryPopup.multiplyFixed16(this.z, false, param1.w) + (NameEntryPopup.multiplyFixed16(this.y, false, param1.x) - (NameEntryPopup.multiplyFixed16(this.x, false, param1.y) - NameEntryPopup.multiplyFixed16(this.w, false, param1.z)));
           this.w = var3_int;
           this.x = var4;
           this.y = var5;
@@ -124,20 +124,20 @@ final class Quaternion {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var3_int = NameEntryPopup.a(this.w, false, this.w);
-        int var4 = NameEntryPopup.a(this.x, false, this.w);
-        int var5 = NameEntryPopup.a(this.y, false, this.w);
-        int var6 = NameEntryPopup.a(this.z, false, this.w);
-        int var7 = NameEntryPopup.a(this.x, false, this.x);
-        int var8 = NameEntryPopup.a(this.y, false, this.x);
-        int var9 = NameEntryPopup.a(this.z, false, this.x);
+        int var3_int = NameEntryPopup.multiplyFixed16(this.w, false, this.w);
+        int var4 = NameEntryPopup.multiplyFixed16(this.x, false, this.w);
+        int var5 = NameEntryPopup.multiplyFixed16(this.y, false, this.w);
+        int var6 = NameEntryPopup.multiplyFixed16(this.z, false, this.w);
+        int var7 = NameEntryPopup.multiplyFixed16(this.x, false, this.x);
+        int var8 = NameEntryPopup.multiplyFixed16(this.y, false, this.x);
+        int var9 = NameEntryPopup.multiplyFixed16(this.z, false, this.x);
         if (param1 > -36) {
           return;
         }
         try {
-          var10 = NameEntryPopup.a(this.y, false, this.y);
-          var11 = NameEntryPopup.a(this.z, false, this.y);
-          var12 = NameEntryPopup.a(this.z, false, this.z);
+          var10 = NameEntryPopup.multiplyFixed16(this.y, false, this.y);
+          var11 = NameEntryPopup.multiplyFixed16(this.z, false, this.y);
+          var12 = NameEntryPopup.multiplyFixed16(this.z, false, this.z);
           param0[3] = -var10 + (var3_int + var7 - var12);
           param0[5] = var9 + (-var5 + var9 - var5);
           param0[4] = var6 + (var8 + (var8 + var6));
@@ -225,14 +225,14 @@ final class Quaternion {
         int var6 = ScrollPaneWithFooter.sine(param4, true);
         int var7 = SceneNodeFactory.cosine(2047, param4);
         this.w = var7;
-        this.x = NameEntryPopup.a(var6, false, param1);
-        this.y = NameEntryPopup.a(var6, false, param2);
+        this.x = NameEntryPopup.multiplyFixed16(var6, false, param1);
+        this.y = NameEntryPopup.multiplyFixed16(var6, false, param2);
         if (param0 > 46) {
-          this.z = NameEntryPopup.a(var6, false, param3);
+          this.z = NameEntryPopup.multiplyFixed16(var6, false, param3);
           return;
         }
         this.setFromAxisAngle(32, -115, -18, -75, 3);
-        this.z = NameEntryPopup.a(var6, false, param3);
+        this.z = NameEntryPopup.multiplyFixed16(var6, false, param3);
     }
 
     final static void a(boolean param0, int param1) {

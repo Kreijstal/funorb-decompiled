@@ -226,17 +226,17 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
             field_V = (Sprite[]) null;
           }
           if (param3 == 0) {
-            DebugTuningSlider.a("terms.ws", -127);
+            DebugTuningSlider.setAccountStatusMessage("terms.ws", -127);
             return;
           }
           if (param3 == 1) {
-            DebugTuningSlider.a("privacy.ws", param2 + 12020);
+            DebugTuningSlider.setAccountStatusMessage("privacy.ws", param2 + 12020);
             return;
           }
           if (param3 != 2) {
             return;
           }
-          DebugTuningSlider.a("conduct.ws", param2 ^ 12044);
+          DebugTuningSlider.setAccountStatusMessage("conduct.ws", param2 ^ 12044);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

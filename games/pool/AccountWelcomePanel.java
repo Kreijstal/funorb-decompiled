@@ -152,10 +152,10 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
         try {
           if (param3 != this.goBackButton) {
             if (param3 == this.createAccountButton) {
-              LoginRequiredScreen.f(35);
+              LoginRequiredScreen.showAccountCreationForm(35);
             } else {
               if (this.justPlayButton == param3) {
-                PoolGameModel.m(4);
+                PoolGameModel.showAccountProgressForResult(4);
               }
             }
           } else {

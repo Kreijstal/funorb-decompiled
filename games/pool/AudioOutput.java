@@ -387,7 +387,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_u.stopRequested = true;
             while (field_u.running) {
-              SoundCache.a(-127, 50L);
+              SoundCache.sleepMillis(-127, 50L);
             }
             field_u = null;
           }

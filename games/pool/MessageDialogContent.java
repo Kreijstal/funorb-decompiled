@@ -35,7 +35,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
             }
             var7 = this.actionIds[var6_int];
             if (var7 != -1) {
-              LoginEncryptionSupport.a(this.actionIds[var6_int], (byte) 78);
+              LoginEncryptionSupport.setAccountDialogResult(this.actionIds[var6_int], (byte) 78);
             } else {
               this.dialog.dismissDialog(17);
             }
@@ -444,7 +444,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          ScrollPaneWithFooter.a((byte) -83, param0, param2, param4);
+          ScrollPaneWithFooter.configureSharedTextStyle((byte) -83, param0, param2, param4);
           ByteRecordSubmission.a(param12, true, param13, param5, param19);
           LogoMaterial.a(param8, param9, -128);
           if (param16 != 255) {

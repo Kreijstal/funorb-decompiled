@@ -325,7 +325,7 @@ final class ReflectionReplySupport {
             } else {
               stackIn_22_10 = param1;
             }
-            FixedAngleSupport.$cfr$intArgs$a$29f688675a86(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
+            FixedAngleSupport.drawTaperedGradientStrokeIntArgs(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
             ThreeSliceButtonPainter.field_w = MatchingTextValidator.field_q;
             var9 = var11;
             DelayedServerPacket.field_u = ResourceArchive.field_h;
@@ -459,7 +459,7 @@ final class ReflectionReplySupport {
             } else {
               stackIn_22_10 = param1;
             }
-            FixedAngleSupport.$cfr$intArgs$a$29f688675a86(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
+            FixedAngleSupport.drawTaperedGradientStrokeIntArgs(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
             ThreeSliceButtonPainter.field_w = MatchingTextValidator.field_q;
             var9 = var11;
             DelayedServerPacket.field_u = ResourceArchive.field_h;

@@ -26,10 +26,10 @@ final class LoginRequiredScreen extends MenuScreen {
         TranslatedUiText.a((String) null, FadingDialog.a(false, SupportPageLauncher.field_c) ? 18 : 16, (byte) 121);
     }
 
-    final static void f(int param0) {
+    final static void showAccountCreationForm(int obfuscationGuard) {
         ArchiveProvider.field_c = new AccountCreationForm();
         RasterSnapshot.field_n.replaceContent(ArchiveProvider.field_c, 30);
-        if (param0 != 35) {
+        if (obfuscationGuard != 35) {
           field_J = (UiComponent) null;
         }
     }

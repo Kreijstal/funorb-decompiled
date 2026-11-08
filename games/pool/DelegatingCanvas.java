@@ -7,7 +7,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     static String openinpopupwindow;
     private java.awt.Component field_c;
 
-    final static AlphaFont a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
+    final static AlphaFont loadAlphaFont(ResourceArchive spriteArchive, int fileId, int groupId, ResourceArchive metricsArchive, int obfuscationGuard) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
         AlphaFont stackIn_6_0 = null;
@@ -18,11 +18,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param4 != 24888) {
+          if (obfuscationGuard != 24888) {
             openinpopupwindow = (String) null;
           }
-          if (TextLineLayout.a(param2, param0, param1, (byte) 121)) {
-            stackIn_6_0 = ProjectedLineSupport.createAlphaFont(param3.getFileBytesUnkeyed(param4 - 24766, param1, param2), true);
+          if (TextLineLayout.a(groupId, spriteArchive, fileId, (byte) 121)) {
+            stackIn_6_0 = ProjectedLineSupport.createAlphaFont(metricsArchive.getFileBytesUnkeyed(obfuscationGuard - 24766, fileId, groupId), true);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -32,22 +32,22 @@ final class DelegatingCanvas extends java.awt.Canvas {
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
           stackIn_9_1 = new StringBuilder().append("cn.D(");
-          if (param0 == null) {
+          if (spriteArchive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(fileId).append(',').append(groupId).append(',');
+          if (metricsArchive == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeLobbyChatPanels(int obfuscationGuard) {
         BirthDateValidator.field_m = new UiComponent(0L, (UiComponent) null);
         if (AccountStateQuery.field_p) {
           BirthDateValidator.field_m.addChild(21, SceneNodeEntry.field_m);
@@ -58,7 +58,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         BufferedFile.field_a.addChild(-117, ByteRecordSubmission.field_l.field_i);
         BufferedFile.field_a.addChild(-120, ProgressBarWidget.field_K);
         LobbyPanelLayoutSupport.layoutLobbyPanels(48);
-        int var1 = 106 / ((-83 - param0) / 35);
+        int var1 = 106 / ((-83 - obfuscationGuard) / 35);
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -72,7 +72,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     final static boolean a(byte param0) {
         if (param0 < 33) {
           ResourceArchive var2 = (ResourceArchive) null;
-          DelegatingCanvas.a((ResourceArchive) null, 9, -34, (ResourceArchive) null, -113);
+          DelegatingCanvas.loadAlphaFont((ResourceArchive) null, 9, -34, (ResourceArchive) null, -113);
         }
         return IterableDualLinkDeque.field_c;
     }

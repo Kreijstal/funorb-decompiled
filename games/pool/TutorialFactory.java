@@ -21,9 +21,9 @@ final class TutorialFactory {
         unpackingSoundeffects = null;
     }
 
-    final static void a(boolean param0, int param1) {
-        TextInputValidator.field_j.complete(param0, (byte) 118);
-        if (param1 < 27) {
+    final static void completeTextValidation(boolean accepted, int obfuscationGuard) {
+        TextInputValidator.field_j.complete(accepted, (byte) 118);
+        if (obfuscationGuard < 27) {
           field_a = -63;
         }
     }
@@ -39,7 +39,7 @@ final class TutorialFactory {
         var7[0] = ArchiveIndex.createSolidSquareSprite(param2, param0, 7);
         int var5 = 1;
         if (param1 != 4578) {
-          TutorialFactory.a(true, -89);
+          TutorialFactory.completeTextValidation(true, -89);
         }
         while (var5 < 9) {
           var4[var5] = var4[0];
@@ -49,7 +49,7 @@ final class TutorialFactory {
         return var4;
     }
 
-    final static int a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static int sweepCircleAgainstHorizontalSegment(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10;
         int var11;
         int var12;
@@ -63,7 +63,7 @@ final class TutorialFactory {
         if (0 < var11 &&
           -param6 + 65536 >= var11 &&
           var12 > var11) {
-          var10 = param5 + NameEntryPopup.a(var11, false, param4);
+          var10 = param5 + NameEntryPopup.multiplyFixed16(var11, false, param4);
           if (param7 < param9) {
             decompiledFrameRemainder0 = !(param7 > var10);
             if (decompiledFrameRemainder0) {
@@ -82,7 +82,7 @@ final class TutorialFactory {
         regionExit1: {
           if (var12 > 0 &&
             65536 - param6 >= var12) {
-            var10Lifetime1 = param5 + NameEntryPopup.a(var12, false, param4);
+            var10Lifetime1 = param5 + NameEntryPopup.multiplyFixed16(var12, false, param4);
             if (param7 >= param9) {
               if (var10Lifetime1 < param9) {
                 break regionExit1;

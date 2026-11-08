@@ -192,10 +192,10 @@ abstract class BallSkin {
             var18 = Math.sin(3.141592653589793 * (double)(var15 * 2) / (double)MatchingTextValidator.field_v);
             var20 = Math.cos(3.141592653589793 * (double)(2 + var15 * 2) / (double)MatchingTextValidator.field_v);
             var22 = Math.sin((double)(2 * (var15 + 1)) * 3.141592653589793 / (double)MatchingTextValidator.field_v);
-            var24 = var29.addVertex(PotEvent.a(4885, var16 * var9), PotEvent.a(4885, var9 * var18), PotEvent.a(4885, var7));
-            var25 = var29.addVertex(PotEvent.a(4885, var20 * var9), PotEvent.a(param0 + 930310737, var9 * var22), PotEvent.a(param0 ^ -930300975, var7));
-            var26 = var29.addVertex(PotEvent.a(4885, var13 * var16), PotEvent.a(4885, var13 * var18), PotEvent.a(4885, var11));
-            var27 = var29.addVertex(PotEvent.a(4885, var20 * var13), PotEvent.a(4885, var13 * var22), PotEvent.a(4885, var11));
+            var24 = var29.addVertex(PotEvent.doubleToFixed3(4885, var16 * var9), PotEvent.doubleToFixed3(4885, var9 * var18), PotEvent.doubleToFixed3(4885, var7));
+            var25 = var29.addVertex(PotEvent.doubleToFixed3(4885, var20 * var9), PotEvent.doubleToFixed3(param0 + 930310737, var9 * var22), PotEvent.doubleToFixed3(param0 ^ -930300975, var7));
+            var26 = var29.addVertex(PotEvent.doubleToFixed3(4885, var13 * var16), PotEvent.doubleToFixed3(4885, var13 * var18), PotEvent.doubleToFixed3(4885, var11));
+            var27 = var29.addVertex(PotEvent.doubleToFixed3(4885, var20 * var13), PotEvent.doubleToFixed3(4885, var13 * var22), PotEvent.doubleToFixed3(4885, var11));
             if (var24 != var25) {
               var29.addFace(var24, var26, var25, (byte) 0, (short) 96, this.sphereFaceAlpha(true));
             }

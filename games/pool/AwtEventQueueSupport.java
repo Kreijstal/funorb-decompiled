@@ -31,7 +31,7 @@ final class AwtEventQueueSupport {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param1.field_a.peekEvent()) {
-              SoundCache.a(-121, 1L);
+              SoundCache.sleepMillis(-121, 1L);
               continue;
             }
             break;

@@ -404,7 +404,7 @@ final class ShotRecord extends IntrusiveNode {
                 var4 = 1;
                 var5 = 1;
               }
-              IsaacCipher.field_b = SoundCache.a(var2 * var5, false, var2 * var4);
+              IsaacCipher.field_b = SoundCache.createRotationTransform(var2 * var5, false, var2 * var4);
               return;
             }
             var3 = -var3 + 120;
@@ -455,7 +455,7 @@ final class ShotRecord extends IntrusiveNode {
           var4 = 1;
           var5 = 1;
         }
-        IsaacCipher.field_b = SoundCache.a(var2 * var5, false, var2 * var4);
+        IsaacCipher.field_b = SoundCache.createRotationTransform(var2 * var5, false, var2 * var4);
     }
 
     final byte readMove(byte param0, PacketBuffer param1) {

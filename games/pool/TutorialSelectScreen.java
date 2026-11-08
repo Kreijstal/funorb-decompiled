@@ -45,10 +45,10 @@ final class TutorialSelectScreen extends MenuScreen {
           while (true) {
             var3 = param1.exitFullscreen(param0, false);
             while (var3.field_f == 0) {
-              SoundCache.a(-108, 10L);
+              SoundCache.sleepMillis(-108, 10L);
             }
             if (var3.field_f != 1) {
-              SoundCache.a(-96, 100L);
+              SoundCache.sleepMillis(-96, 100L);
               continue;
             }
             break;

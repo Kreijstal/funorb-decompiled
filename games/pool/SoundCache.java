@@ -83,7 +83,7 @@ final class SoundCache {
         field_a = null;
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadGameSprites(int obfuscationGuard, ResourceArchive archive) {
         TableScene var10 = null;
         IndexedSprite var11 = null;
         int[] var25 = null;
@@ -134,49 +134,49 @@ final class SoundCache {
         try {
           for (var2_int = 0; var2_int < BrowserCookieWriter.field_b.length; var2_int++) {
             var10 = BrowserCookieWriter.field_b[var2_int];
-            var10.loadSceneSprites(-23569, param1);
+            var10.loadSceneSprites(-23569, archive);
           }
           for (var2_intLifetime1 = 0; PoolGameModel.field_B.length > var2_intLifetime1; var2_intLifetime1++) {
-            PoolGameModel.field_B[var2_intLifetime1].loadTopBarSprites(198123656, param1);
+            PoolGameModel.field_B[var2_intLifetime1].loadTopBarSprites(198123656, archive);
           }
-          IntrusiveNodeHashTable.field_b = new Sprite[]{WidgetStyleLayer.loadSprite("", (byte) 46, "menu_background_modern", param1), WidgetStyleLayer.loadSprite("", (byte) 42, "menu_background_plasma", param1), WidgetStyleLayer.loadSprite("", (byte) 62, "menu_background_jungle", param1), WidgetStyleLayer.loadSprite("", (byte) 40, "menu_background_polar", param1), WidgetStyleLayer.loadSprite("", (byte) 76, "menu_background_shuttle", param1)};
-          WorldPointProjectionSupport.field_c = WidgetStyleLayer.loadSprite("", (byte) 124, "select_table_thumbnail_modern", param1);
-          NineSliceFrame.field_d = WidgetStyleLayer.loadSprite("", (byte) 120, "select_table_thumbnail_plasma", param1);
-          PaletteFontLoader.field_b = WidgetStyleLayer.loadSprite("", (byte) 121, "select_table_thumbnail_jungle", param1);
-          LobbyPlayer.field_Vb = WidgetStyleLayer.loadSprite("", (byte) 44, "select_table_thumbnail_polar", param1);
-          ReflectionReplySupport.field_e = WidgetStyleLayer.loadSprite("", (byte) 91, "select_table_thumbnail_shuttle", param1);
-          NameNormalizationSupport.field_b = WidgetStyleLayer.loadSprite("", (byte) 50, "select_table_thumbnail_jungle_locked", param1);
-          AccountStateQuery.field_n = WidgetStyleLayer.loadSprite("", (byte) 87, "select_table_thumbnail_polar_locked", param1);
-          IntrusiveNodeHashTable.field_g = WidgetStyleLayer.loadSprite("", (byte) 62, "select_table_thumbnail_shuttle_locked", param1);
+          IntrusiveNodeHashTable.field_b = new Sprite[]{WidgetStyleLayer.loadSprite("", (byte) 46, "menu_background_modern", archive), WidgetStyleLayer.loadSprite("", (byte) 42, "menu_background_plasma", archive), WidgetStyleLayer.loadSprite("", (byte) 62, "menu_background_jungle", archive), WidgetStyleLayer.loadSprite("", (byte) 40, "menu_background_polar", archive), WidgetStyleLayer.loadSprite("", (byte) 76, "menu_background_shuttle", archive)};
+          WorldPointProjectionSupport.field_c = WidgetStyleLayer.loadSprite("", (byte) 124, "select_table_thumbnail_modern", archive);
+          NineSliceFrame.field_d = WidgetStyleLayer.loadSprite("", (byte) 120, "select_table_thumbnail_plasma", archive);
+          PaletteFontLoader.field_b = WidgetStyleLayer.loadSprite("", (byte) 121, "select_table_thumbnail_jungle", archive);
+          LobbyPlayer.field_Vb = WidgetStyleLayer.loadSprite("", (byte) 44, "select_table_thumbnail_polar", archive);
+          ReflectionReplySupport.field_e = WidgetStyleLayer.loadSprite("", (byte) 91, "select_table_thumbnail_shuttle", archive);
+          NameNormalizationSupport.field_b = WidgetStyleLayer.loadSprite("", (byte) 50, "select_table_thumbnail_jungle_locked", archive);
+          AccountStateQuery.field_n = WidgetStyleLayer.loadSprite("", (byte) 87, "select_table_thumbnail_polar_locked", archive);
+          IntrusiveNodeHashTable.field_g = WidgetStyleLayer.loadSprite("", (byte) 62, "select_table_thumbnail_shuttle_locked", archive);
           MatchingTextValidator.field_t = new Sprite[]{null, null, NameNormalizationSupport.field_b, AccountStateQuery.field_n, IntrusiveNodeHashTable.field_g};
           TutorialSelectScreen.field_K = new Sprite[]{WorldPointProjectionSupport.field_c, NineSliceFrame.field_d, PaletteFontLoader.field_b, LobbyPlayer.field_Vb, ReflectionReplySupport.field_e};
-          BrowserCookieWriter.field_a[0] = NameEntryPopup.loadSpritesByName(TutorialFactory.bitwiseXor(param0, 0), "", param1, "gameopt_listicons_turntime");
-          BrowserCookieWriter.field_a[2] = NameEntryPopup.loadSpritesByName(param0 + 0, "", param1, "gameopt_listicons_theme");
-          BrowserCookieWriter.field_a[1] = NameEntryPopup.loadSpritesByName(TutorialFactory.bitwiseXor(param0, 0), "", param1, "gameopt_listicons_ruleset");
-          BrowserCookieWriter.field_a[3] = NameEntryPopup.loadSpritesByName(0, "", param1, "gameopt_listicons_guides");
+          BrowserCookieWriter.field_a[0] = NameEntryPopup.loadSpritesByName(TutorialFactory.bitwiseXor(obfuscationGuard, 0), "", archive, "gameopt_listicons_turntime");
+          BrowserCookieWriter.field_a[2] = NameEntryPopup.loadSpritesByName(obfuscationGuard + 0, "", archive, "gameopt_listicons_theme");
+          BrowserCookieWriter.field_a[1] = NameEntryPopup.loadSpritesByName(TutorialFactory.bitwiseXor(obfuscationGuard, 0), "", archive, "gameopt_listicons_ruleset");
+          BrowserCookieWriter.field_a[3] = NameEntryPopup.loadSpritesByName(0, "", archive, "gameopt_listicons_guides");
           SlidingPanelSupport.field_f[0] = BrowserCookieWriter.field_a[0];
-          SlidingPanelSupport.field_f[2] = NameEntryPopup.loadSpritesByName(TutorialFactory.bitwiseXor(param0, 0), "", param1, "gameopt_buttonicons_theme");
+          SlidingPanelSupport.field_f[2] = NameEntryPopup.loadSpritesByName(TutorialFactory.bitwiseXor(obfuscationGuard, 0), "", archive, "gameopt_buttonicons_theme");
           SlidingPanelSupport.field_f[3] = BrowserCookieWriter.field_a[3];
           SlidingPanelSupport.field_f[1] = BrowserCookieWriter.field_a[1];
-          MeshSymmetrySupport.field_g = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(0, "", param1, "frame"), (byte) -29);
-          MidiPcmStream.field_y = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(0, "", param1, "frame_dark"), (byte) -29);
-          UsernameSuggestionsPanel.field_N = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(param0 + 0, "", param1, "frame_black"), (byte) -29);
-          ModelOriginSupport.field_s = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(0, "", param1, "frame_selected"), (byte) -29);
-          TutorialFactory.field_b = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(0, "", param1, "menu_main_frame"), (byte) -29);
-          DisplayNamePanel.field_T = WidgetStyleLayer.loadSprite("", (byte) 109, "menu_main_frame_pocket_bottom", param1);
-          TransformSupport.field_b = WidgetStyleLayer.loadSprite("", (byte) 104, "menu_main_frame_pocket_top", param1);
-          LoginPayloadFactory.field_a = WidgetStyleLayer.loadSprite("", (byte) 47, "menu_main_frame_pocket_left", param1);
-          MessageDialogContent.field_T = WidgetStyleLayer.loadSprite("", (byte) 123, "menu_main_frame_pocket_right", param1);
-          FullscreenFocusCanvas.field_a = DimmedPauseMenu.loadSprite(param1, -45, "", "title_corner_ball8");
-          ProjectedLineSupport.field_k = DimmedPauseMenu.loadSprite(param1, param0 ^ 101, "", "title_corner_ball9");
-          IsaacCipher.field_f = NameEntryPopup.loadSpritesByName(0, "", param1, "achievements");
+          MeshSymmetrySupport.field_g = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(0, "", archive, "frame"), (byte) -29);
+          MidiPcmStream.field_y = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(0, "", archive, "frame_dark"), (byte) -29);
+          UsernameSuggestionsPanel.field_N = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(obfuscationGuard + 0, "", archive, "frame_black"), (byte) -29);
+          ModelOriginSupport.field_s = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(0, "", archive, "frame_selected"), (byte) -29);
+          TutorialFactory.field_b = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(0, "", archive, "menu_main_frame"), (byte) -29);
+          DisplayNamePanel.field_T = WidgetStyleLayer.loadSprite("", (byte) 109, "menu_main_frame_pocket_bottom", archive);
+          TransformSupport.field_b = WidgetStyleLayer.loadSprite("", (byte) 104, "menu_main_frame_pocket_top", archive);
+          LoginPayloadFactory.field_a = WidgetStyleLayer.loadSprite("", (byte) 47, "menu_main_frame_pocket_left", archive);
+          MessageDialogContent.field_T = WidgetStyleLayer.loadSprite("", (byte) 123, "menu_main_frame_pocket_right", archive);
+          FullscreenFocusCanvas.field_a = DimmedPauseMenu.loadSprite(archive, -45, "", "title_corner_ball8");
+          ProjectedLineSupport.field_k = DimmedPauseMenu.loadSprite(archive, obfuscationGuard ^ 101, "", "title_corner_ball9");
+          IsaacCipher.field_f = NameEntryPopup.loadSpritesByName(0, "", archive, "achievements");
           for (var2_intLifetime2 = 0; IsaacCipher.field_f.length > var2_intLifetime2; var2_intLifetime2++) {
             TextInputValidator.a(IsaacCipher.field_f[var2_intLifetime2], (byte) -12);
           }
-          ByteArrayNode.field_n = DimmedPauseMenu.loadSprite(param1, 99, "", "achievement_highlight_hover");
-          Base37Support.field_g = DimmedPauseMenu.loadSprite(param1, 109, "", "achievement_highlight_selected");
-          ProjectedLineSupport.field_m = DimmedPauseMenu.loadSprite(param1, -10, "", "title_pool_logo_withalpha");
-          var11 = RankingsScreen.a(param1, 3812, "gradient_arrow_left", "");
+          ByteArrayNode.field_n = DimmedPauseMenu.loadSprite(archive, 99, "", "achievement_highlight_hover");
+          Base37Support.field_g = DimmedPauseMenu.loadSprite(archive, 109, "", "achievement_highlight_selected");
+          ProjectedLineSupport.field_m = DimmedPauseMenu.loadSprite(archive, -10, "", "title_pool_logo_withalpha");
+          var11 = RankingsScreen.a(archive, 3812, "gradient_arrow_left", "");
           var25 = var11.field_i;
           var23 = new int[var25.length];
           var13 = var23;
@@ -185,9 +185,9 @@ final class SoundCache {
             var23[var5_int] = var5_int;
           }
           StrongCacheEntry.a(var25, var23, (byte) -54);
-          var5 = ShotEvent.a(var4_ref_int__, (byte) 117, GradientPaletteSupport.buildGradientPalette(new int[]{0, 16744192, var25.length, 16777087}, param0 ^ -126));
-          var6 = ShotEvent.a(var4_ref_int__, (byte) 10, GradientPaletteSupport.buildGradientPalette(new int[]{0, 16776960, var25.length, 16777023}, 18));
-          var7 = ShotEvent.a(var4_ref_int__, (byte) 7, GradientPaletteSupport.buildGradientPalette(new int[]{0, 8355711, var25.length, 16777215}, param0 ^ 70));
+          var5 = ShotEvent.scatterByIndex(var4_ref_int__, (byte) 117, GradientPaletteSupport.buildGradientPalette(new int[]{0, 16744192, var25.length, 16777087}, obfuscationGuard ^ -126));
+          var6 = ShotEvent.scatterByIndex(var4_ref_int__, (byte) 10, GradientPaletteSupport.buildGradientPalette(new int[]{0, 16776960, var25.length, 16777023}, 18));
+          var7 = ShotEvent.scatterByIndex(var4_ref_int__, (byte) 7, GradientPaletteSupport.buildGradientPalette(new int[]{0, 8355711, var25.length, 16777215}, obfuscationGuard ^ 70));
           var11.field_i = var5;
           dupTemp$0 = ProxyConnectorSupport.a(2, var11);
           SupportPageLauncher.field_b = dupTemp$0;
@@ -207,7 +207,7 @@ final class SoundCache {
           var8Lifetime1.field_G = 0;
           var8Lifetime1.field_B = 0;
           var11.field_i = var7;
-          dupTemp$2 = ProxyConnectorSupport.a(param0 + 2, var11);
+          dupTemp$2 = ProxyConnectorSupport.a(obfuscationGuard + 2, var11);
           ProgressBarWidget.field_T = dupTemp$2;
           var16 = dupTemp$2;
           var8Lifetime2 = var16;
@@ -231,7 +231,7 @@ final class SoundCache {
           var18 = dupTemp$4;
           var8Lifetime4 = var18;
           var8Lifetime4.field_w = var18.field_z;
-          var8Lifetime4.field_G = param0;
+          var8Lifetime4.field_G = obfuscationGuard;
           var8Lifetime4.field_y = var18.field_A;
           var8Lifetime4.field_B = 0;
           var11.field_i = var7;
@@ -244,7 +244,7 @@ final class SoundCache {
           var8Lifetime5.field_G = 0;
           var8Lifetime5.field_w = var19.field_z;
           var2_intLifetime3 = 0;
-          var3 = NetworkGameClient.a(106, param1, "titles", "");
+          var3 = NetworkGameClient.a(106, archive, "titles", "");
           incrementValue$6 = var2_intLifetime3;
           var2_intLifetime3++;
           AudioService.field_a = var3[incrementValue$6];
@@ -272,14 +272,14 @@ final class SoundCache {
           incrementValue$14 = var2_intLifetime3;
           var2_intLifetime3++;
           DialogLayer.field_Q = var3[incrementValue$14];
-          BeveledFrameSpriteFactory.field_f = WidgetStyleLayer.loadSprite("", (byte) 84, "side_power_bar", param1);
-          LimitedRandomAccessFile.field_c = WidgetStyleLayer.loadSprite("", (byte) 94, "side_power_bar_fill", param1);
-          AchievementNotice.field_n = WidgetStyleLayer.loadSprite("", (byte) 102, "top_bar_inner", param1);
-          Js5Transport.field_q = WidgetStyleLayer.loadSprite("", (byte) 115, "top_bar", param1);
-          ClassicBallSkin.field_n = WidgetStyleLayer.loadSprite("", (byte) 80, "top_bar_ball_open", param1);
-          Quaternion.field_l = NameEntryPopup.loadSpritesByName(0, "", param1, "hud_chat_tab_frame_empty");
-          DimmedPauseMenu.field_O = NameEntryPopup.loadSpritesByName(0, "", param1, "hud_chat_tab_frame");
-          LogoFinalFrameLoader.field_d = WidgetStyleLayer.loadSprite("", (byte) 95, "hud_chat_star", param1);
+          BeveledFrameSpriteFactory.field_f = WidgetStyleLayer.loadSprite("", (byte) 84, "side_power_bar", archive);
+          LimitedRandomAccessFile.field_c = WidgetStyleLayer.loadSprite("", (byte) 94, "side_power_bar_fill", archive);
+          AchievementNotice.field_n = WidgetStyleLayer.loadSprite("", (byte) 102, "top_bar_inner", archive);
+          Js5Transport.field_q = WidgetStyleLayer.loadSprite("", (byte) 115, "top_bar", archive);
+          ClassicBallSkin.field_n = WidgetStyleLayer.loadSprite("", (byte) 80, "top_bar_ball_open", archive);
+          Quaternion.field_l = NameEntryPopup.loadSpritesByName(0, "", archive, "hud_chat_tab_frame_empty");
+          DimmedPauseMenu.field_O = NameEntryPopup.loadSpritesByName(0, "", archive, "hud_chat_tab_frame");
+          LogoFinalFrameLoader.field_d = WidgetStyleLayer.loadSprite("", (byte) 95, "hud_chat_star", archive);
           var2_intLifetime4 = CollisionContact.field_h.b(UsernameAvailabilityValidator.chatButton);
           GradientPaletteSupport.field_e = new Sprite(var2_intLifetime4, CollisionContact.field_h.maxAscent + CollisionContact.field_h.maxDescent + 1);
           GradientPaletteSupport.field_e.bindAsRenderTarget();
@@ -289,28 +289,28 @@ final class SoundCache {
           CollisionContact.field_h.d(UsernameAvailabilityValidator.chatButton, 0, CollisionContact.field_h.maxAscent, 16777215, 1);
           LogoFinalFrameLoader.field_d.draw(2 + var2_intLifetime4, MenuScreenBase.field_e.field_A - LogoFinalFrameLoader.field_d.field_A >> 1);
           OpacityWidget.field_P.bindAsRenderTarget(15100);
-          CompressedContainerSupport.field_a = WidgetStyleLayer.loadSprite("", (byte) 60, "slider", param1);
-          WidgetStyleLayer.loadSprite("", (byte) 35, "flash_foul", param1);
-          WidgetStyleLayer.loadSprite("", (byte) 91, "hud_hbar_inner", param1);
-          DebouncedValidationProvider.field_b = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(0, "", param1, "hud_hbar_frame"), (byte) -29);
-          MouseWheelInput.field_a = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(0, "", param1, "hud_vbar_frame"), (byte) -29);
-          DateInputWidget.field_Q = NameEntryPopup.loadSpritesByName(0, "", param1, "top_bar_frame");
-          RasterBuffer.field_d = WidgetStyleLayer.loadSprite("", (byte) 73, "icon_break", param1);
-          BeveledFrameSpriteFactory.field_a = WidgetStyleLayer.loadSprite("", (byte) 73, "icon_ball_in_hand", param1);
-          WidgetStyleLayer.loadSprite("", (byte) 98, "icon_extra_shot", param1);
-          LoginTextSupport.field_e = WidgetStyleLayer.loadSprite("", (byte) 101, "icon_extra_visit", param1);
-          TableScene.field_D = WidgetStyleLayer.loadSprite("", (byte) 90, "icon_snookered", param1);
+          CompressedContainerSupport.field_a = WidgetStyleLayer.loadSprite("", (byte) 60, "slider", archive);
+          WidgetStyleLayer.loadSprite("", (byte) 35, "flash_foul", archive);
+          WidgetStyleLayer.loadSprite("", (byte) 91, "hud_hbar_inner", archive);
+          DebouncedValidationProvider.field_b = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(0, "", archive, "hud_hbar_frame"), (byte) -29);
+          MouseWheelInput.field_a = FaceBucketSupport.a(NameEntryPopup.loadSpritesByName(0, "", archive, "hud_vbar_frame"), (byte) -29);
+          DateInputWidget.field_Q = NameEntryPopup.loadSpritesByName(0, "", archive, "top_bar_frame");
+          RasterBuffer.field_d = WidgetStyleLayer.loadSprite("", (byte) 73, "icon_break", archive);
+          BeveledFrameSpriteFactory.field_a = WidgetStyleLayer.loadSprite("", (byte) 73, "icon_ball_in_hand", archive);
+          WidgetStyleLayer.loadSprite("", (byte) 98, "icon_extra_shot", archive);
+          LoginTextSupport.field_e = WidgetStyleLayer.loadSprite("", (byte) 101, "icon_extra_visit", archive);
+          TableScene.field_D = WidgetStyleLayer.loadSprite("", (byte) 90, "icon_snookered", archive);
           SpriteResourceSupport.field_c = new Sprite[4];
-          SpriteResourceSupport.field_c[0] = WidgetStyleLayer.loadSprite("", (byte) 108, "menu_eightball", param1);
-          SpriteResourceSupport.field_c[1] = WidgetStyleLayer.loadSprite("", (byte) 107, "menu_nineball", param1);
-          SpriteResourceSupport.field_c[2] = WidgetStyleLayer.loadSprite("", (byte) 63, "menu_killer", param1);
-          SpriteResourceSupport.field_c[3] = WidgetStyleLayer.loadSprite("", (byte) 112, "menu_freeplay", param1);
-          var20 = NameEntryPopup.loadSpritesByName(0, "", param1, "tutorial_text_box");
+          SpriteResourceSupport.field_c[0] = WidgetStyleLayer.loadSprite("", (byte) 108, "menu_eightball", archive);
+          SpriteResourceSupport.field_c[1] = WidgetStyleLayer.loadSprite("", (byte) 107, "menu_nineball", archive);
+          SpriteResourceSupport.field_c[2] = WidgetStyleLayer.loadSprite("", (byte) 63, "menu_killer", archive);
+          SpriteResourceSupport.field_c[3] = WidgetStyleLayer.loadSprite("", (byte) 112, "menu_freeplay", archive);
+          var20 = NameEntryPopup.loadSpritesByName(0, "", archive, "tutorial_text_box");
           SlidingPanelSupport.field_e = new Sprite[]{new Sprite(0, var20[0].field_y), var20[0], new Sprite(0, var20[0].field_y), new Sprite(0, var20[1].field_y), var20[1], new Sprite(0, var20[1].field_y), new Sprite(0, var20[2].field_y), var20[2], new Sprite(0, var20[2].field_y)};
-          TransformRotationSupport.field_e = NameEntryPopup.loadSpritesByName(0, "", param1, "playerlist_button");
-          PolarObject.field_d = NameEntryPopup.loadSpritesByName(0, "", param1, "tutorial_controls");
-          VertexTransformSupport.field_b = WidgetStyleLayer.loadSprite("", (byte) 52, "tutorial_box_progress", param1);
-          AccountCreationForm.field_Z = ArchiveRequest.a(param1, "", -24155, "controls");
+          TransformRotationSupport.field_e = NameEntryPopup.loadSpritesByName(0, "", archive, "playerlist_button");
+          PolarObject.field_d = NameEntryPopup.loadSpritesByName(0, "", archive, "tutorial_controls");
+          VertexTransformSupport.field_b = WidgetStyleLayer.loadSprite("", (byte) 52, "tutorial_box_progress", archive);
+          AccountCreationForm.field_Z = ArchiveRequest.a(archive, "", -24155, "controls");
           LoginPayloadFactory.field_d = new int[AccountCreationForm.field_Z.length];
           TextLayout.field_f = 0;
           for (var4 = 0; AccountCreationForm.field_Z.length > var4; var4++) {
@@ -326,7 +326,7 @@ final class SoundCache {
           }
           FontPaletteSupport.buildFontColorPalettes((byte) 17);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cf.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cf.L(" + obfuscationGuard + ',' + (archive != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -571,18 +571,18 @@ final class SoundCache {
         }
     }
 
-    final static void a(int param0, long param1) {
-        if (0L >= param1) {
+    final static void sleepMillis(int obfuscationGuard, long milliseconds) {
+        if (0L >= milliseconds) {
           return;
         }
-        if (param0 >= -77) {
+        if (obfuscationGuard >= -77) {
           tutorialNineBallBreak = (String) null;
         }
-        if (0L == param1 % 10L) {
-          Bzip2DecoderState.a(param1 - 1L, (byte) 104);
+        if (0L == milliseconds % 10L) {
+          Bzip2DecoderState.a(milliseconds - 1L, (byte) 104);
           Bzip2DecoderState.a(1L, (byte) 104);
         } else {
-          Bzip2DecoderState.a(param1, (byte) 104);
+          Bzip2DecoderState.a(milliseconds, (byte) 104);
         }
     }
 
@@ -623,7 +623,7 @@ final class SoundCache {
         }
     }
 
-    final static int[] a(int param0, boolean param1, int param2) {
+    final static int[] createRotationTransform(int param0, boolean param1, int param2) {
         int var3 = EightBallRules.sineLookup((byte) -123, param2);
         int var4 = UiComponentNode.sineFixed(param2, (byte) -116);
         int var5 = EightBallRules.sineLookup((byte) -124, param0);

@@ -30,6 +30,6 @@ final class ClientUiResourceState {
         field_z = "l.A(";
         createAlertPasscontainsemail = "This password contains your email address, and would be easy to guess";
         field_e = 204;
-        field_g = NameEntryPopup.a(6429081, false, field_e);
+        field_g = NameEntryPopup.multiplyFixed16(6429081, false, field_e);
     }
 }

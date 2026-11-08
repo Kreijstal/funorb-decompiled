@@ -215,7 +215,7 @@ final class VerticalScrollbar extends UiComponent {
           return;
         }
         MeshBuilder var2 = (MeshBuilder) null;
-        VerticalScrollbar.a(-122, (MeshBuilder) null);
+        VerticalScrollbar.swapMeshYAndZ(-122, (MeshBuilder) null);
         field_Qb = null;
         field_Vb = null;
     }
@@ -280,8 +280,8 @@ final class VerticalScrollbar extends UiComponent {
         return false;
     }
 
-    final static UiComponent f(byte param0) {
-        if (param0 != 13) {
+    final static UiComponent getIgnoreListContent(byte obfuscationGuard) {
+        if (obfuscationGuard != 13) {
           VerticalScrollbar.releaseStatics((byte) -72);
           return InputIdleSupport.field_c.content;
         }
@@ -404,33 +404,33 @@ final class VerticalScrollbar extends UiComponent {
         }
     }
 
-    final static void a(int param0, boolean param1) {
-        if (param0 == 27194) {
-          IntegerSyntaxSupport.field_e = !param1 ? new ReflectionRequestSupport(Camera.muChatGame, ProjectedLineSupport.field_d) : new ReflectionRequestSupport(ArchiveBootstrapSupport.muChatTips, LimitedRandomAccessFile.field_j);
+    final static void initializeGameChatPanels(int obfuscationGuard, boolean tutorial) {
+        if (obfuscationGuard == 27194) {
+          IntegerSyntaxSupport.field_e = !tutorial ? new ReflectionRequestSupport(Camera.muChatGame, ProjectedLineSupport.field_d) : new ReflectionRequestSupport(ArchiveBootstrapSupport.muChatTips, LimitedRandomAccessFile.field_j);
           SceneNode.field_k = new UiComponent(0L, (UiComponent) null);
           SceneNode.field_k.addChild(64, IntegerSyntaxSupport.field_e.field_i);
           SceneNode.field_k.addChild(-96, ContentTransitionDialog.field_ob);
           DebugTuningSupport.field_b = new UiComponent(0L, AccountStateQuery.field_m);
           IntrusiveDequeCursor.field_b = new UiComponent(0L, (UiComponent) null);
-          DebugTuningSupport.field_b.addChild(param0 ^ -27208, Pool.field_P);
+          DebugTuningSupport.field_b.addChild(obfuscationGuard ^ -27208, Pool.field_P);
           DebugTuningSupport.field_b.addChild(68, IntrusiveDequeCursor.field_b);
           IntrusiveDequeCursor.field_b.addChild(-96, QuickChatMenuSupport.field_e);
           IntrusiveDequeCursor.field_b.addChild(90, AccountContentDialog.field_vb);
-          PoolGameModel.layoutLobbyAndChatPanels(param1, 0);
+          PoolGameModel.layoutLobbyAndChatPanels(tutorial, 0);
           return;
         }
-        VerticalScrollbar.f((byte) 19);
-        IntegerSyntaxSupport.field_e = !param1 ? new ReflectionRequestSupport(Camera.muChatGame, ProjectedLineSupport.field_d) : new ReflectionRequestSupport(ArchiveBootstrapSupport.muChatTips, LimitedRandomAccessFile.field_j);
+        VerticalScrollbar.getIgnoreListContent((byte) 19);
+        IntegerSyntaxSupport.field_e = !tutorial ? new ReflectionRequestSupport(Camera.muChatGame, ProjectedLineSupport.field_d) : new ReflectionRequestSupport(ArchiveBootstrapSupport.muChatTips, LimitedRandomAccessFile.field_j);
         SceneNode.field_k = new UiComponent(0L, (UiComponent) null);
         SceneNode.field_k.addChild(64, IntegerSyntaxSupport.field_e.field_i);
         SceneNode.field_k.addChild(-96, ContentTransitionDialog.field_ob);
         DebugTuningSupport.field_b = new UiComponent(0L, AccountStateQuery.field_m);
         IntrusiveDequeCursor.field_b = new UiComponent(0L, (UiComponent) null);
-        DebugTuningSupport.field_b.addChild(param0 ^ -27208, Pool.field_P);
+        DebugTuningSupport.field_b.addChild(obfuscationGuard ^ -27208, Pool.field_P);
         DebugTuningSupport.field_b.addChild(68, IntrusiveDequeCursor.field_b);
         IntrusiveDequeCursor.field_b.addChild(-96, QuickChatMenuSupport.field_e);
         IntrusiveDequeCursor.field_b.addChild(90, AccountContentDialog.field_vb);
-        PoolGameModel.layoutLobbyAndChatPanels(param1, 0);
+        PoolGameModel.layoutLobbyAndChatPanels(tutorial, 0);
     }
 
     final void setScrollbarBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -448,7 +448,7 @@ final class VerticalScrollbar extends UiComponent {
         this.layoutScrollbar(param0, param7, false, param4);
     }
 
-    final static void a(byte param0, int param1) {
+    final static void resendAchievementAndAccountQueries(byte obfuscationGuard, int opcode) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -458,15 +458,15 @@ final class VerticalScrollbar extends UiComponent {
         try {
           var4 = (AchievementSubmission) (StartupInterfaceSupport.field_b.last((byte) 96));
           while (var4 != null) {
-            AchievementProtocolSupport.a(param1, var4, -6725);
+            AchievementProtocolSupport.a(opcode, var4, -6725);
             var4 = (AchievementSubmission) (StartupInterfaceSupport.field_b.previous((byte) -5));
           }
           var2 = NodeHashTableIterator.field_j.last((byte) 87);
           while (var2 != null) {
-            MusicPatchEnvelope.a(param0 ^ 59, param1);
+            MusicPatchEnvelope.a(obfuscationGuard ^ 59, opcode);
             var2 = NodeHashTableIterator.field_j.previous((byte) -5);
           }
-          if (param0 == 58) {
+          if (obfuscationGuard == 58) {
             return;
           }
           field_Qb = (GzipDecoder) null;
@@ -474,7 +474,7 @@ final class VerticalScrollbar extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "db.AA(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "db.AA(" + obfuscationGuard + ',' + opcode + ')');
         }
     }
 
@@ -487,7 +487,7 @@ final class VerticalScrollbar extends UiComponent {
     }
 
     final static void h(int param0) {
-        LoginEncryptionSupport.a(4, (byte) 105);
+        LoginEncryptionSupport.setAccountDialogResult(4, (byte) 105);
         if (param0 == 15158) {
           return;
         }
@@ -518,20 +518,20 @@ final class VerticalScrollbar extends UiComponent {
         return true;
     }
 
-    final static void a(int param0, MeshBuilder param1) {
+    final static void swapMeshYAndZ(int obfuscationGuard, MeshBuilder mesh) {
         int[] var3 = null;
         try {
-          var3 = param1.vertexY;
+          var3 = mesh.vertexY;
           int[] var2 = var3;
-          param1.vertexY = param1.vertexZ;
-          if (param0 != 0) {
+          mesh.vertexY = mesh.vertexZ;
+          if (obfuscationGuard != 0) {
             field_Vb = (NineSliceFrame) null;
           }
-          param1.vertexZ = var3;
-          ImageProducerRasterBuffer.a(param1, (byte) 38);
-          param1.clearCaches();
+          mesh.vertexZ = var3;
+          ImageProducerRasterBuffer.a(mesh, (byte) 38);
+          mesh.clearCaches();
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "db.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "db.DA(" + obfuscationGuard + ',' + (mesh != null ? "{...}" : "null") + ')');
         }
     }
 

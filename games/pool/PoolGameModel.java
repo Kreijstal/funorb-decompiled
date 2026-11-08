@@ -635,7 +635,7 @@ final class PoolGameModel {
               }
               var10 += 2048;
               if (var10 >= 262144) {
-                var11 = var11 + ShotEvent.a(67108864 / (var10 >> 8), false);
+                var11 = var11 + ShotEvent.arcsineFixed16(67108864 / (var10 >> 8), false);
               } else {
                 var11 += 256;
               }
@@ -701,7 +701,7 @@ final class PoolGameModel {
         for (var8 = 0; this.cushionSegments.length > var8; var8++) {
           var9 = this.cushionSegments[var8].startY - this.cushionSegments[var8].endY;
           var10 = this.cushionSegments[var8].endX - this.cushionSegments[var8].startX;
-          var11_long = IterableNodeHashTable.a(param3 ^ -314, FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)var10, false));
+          var11_long = IterableNodeHashTable.sqrtScaled256(param3 ^ -314, FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)var10, false));
           if (-2147483648L > var11_long ||
             var11_long > 2147483647L) {
             System.out.println("Wall normal overflow " + ProxyAuthenticationRequiredException.toHexString(var11_long, 7697781));
@@ -709,7 +709,7 @@ final class PoolGameModel {
           boolean decompiledFrameRemainder0 = true;
           var9 = ArchiveProvider.divideFixed16((int)var11_long, (byte) -128, (long)var9);
           var10 = ArchiveProvider.divideFixed16((int)var11_long, (byte) -119, (long)var10);
-          var11 = -NameEntryPopup.a(this.cushionSegments[var8].startX, false, var9) - NameEntryPopup.a(this.cushionSegments[var8].startY, false, var10);
+          var11 = -NameEntryPopup.multiplyFixed16(this.cushionSegments[var8].startX, false, var9) - NameEntryPopup.multiplyFixed16(this.cushionSegments[var8].startY, false, var10);
           var12_long = (long)var11 + (FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)DisplayModeSupport.field_e[0], false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)DisplayModeSupport.field_e[1], false));
           var14 = FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)DisplayModeSupport.field_e[9], false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)DisplayModeSupport.field_e[10], false);
           if (var14 != 0L) {
@@ -791,7 +791,7 @@ final class PoolGameModel {
               var17 = FullscreenFocusCanvas.multiplyFixedChecked((long)var10Lifetime1, (long)var10Lifetime1, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var11Lifetime1, (long)var11Lifetime1, false) - (-FullscreenFocusCanvas.multiplyFixedChecked((long)var12, (long)var12, false) + (long)var8Lifetime1);
               var19 = FullscreenFocusCanvas.multiplyFixedChecked(var15, var15, false) - 4L * FullscreenFocusCanvas.multiplyFixedChecked(var13, var17, false);
               if (var19 >= 0L) {
-                var21 = IterableNodeHashTable.a(param3 ^ -278, var19);
+                var21 = IterableNodeHashTable.sqrtScaled256(param3 ^ -278, var19);
                 if (var21 <= 2147483647L &&
                   -2147483648L <= var21) {
                   var23 = (-var15 + var21) / var13 / 2L;
@@ -887,7 +887,7 @@ final class PoolGameModel {
             var7 = var5 >> 8;
             var8 = var6 * var6 + var7 * var7;
             if (var8 > 31690296) {
-              var9 = AccountDisplayNameSupport.inverseSquareRoot(var8, -122);
+              var9 = AccountDisplayNameSupport.sqrtScaled256(var8, -122);
               var10.positionY = (var5 / (var9 >> 8) << 8) + 9437184;
               var10.positionX = (var4 / (var9 >> 8) << 8) + 9437184;
             }
@@ -1179,15 +1179,15 @@ final class PoolGameModel {
         if (9216 < var5) {
           throw new IllegalStateException("Strike point out of range! " + var3.field_D + "," + var3.field_H);
         }
-        int var6 = -AccountDisplayNameSupport.inverseSquareRoot(-(var5 << 2) + 65536, -121) >> 9;
+        int var6 = -AccountDisplayNameSupport.sqrtScaled256(-(var5 << 2) + 65536, -121) >> 9;
         int var7 = ScrollPaneWithFooter.sine((int) var3.elevation, true);
         int var8 = SceneNodeFactory.cosine(2047, (int) var3.elevation);
         int var9 = ScrollPaneWithFooter.sine((int) var3.aimAngle, true);
         int var10 = SceneNodeFactory.cosine(2047, (int) var3.aimAngle);
         int var11 = var9;
         int var12 = -var10;
-        int var13 = NameEntryPopup.a(var7, false, -var12);
-        int var14 = NameEntryPopup.a(var7, false, var11);
+        int var13 = NameEntryPopup.multiplyFixed16(var7, false, -var12);
+        int var14 = NameEntryPopup.multiplyFixed16(var7, false, var11);
         int var15 = var8;
         int var16 = 0 * var14 - var15 * var12 >> 16;
         int var17 = var15 * var11 - 0 * var13 >> 16;
@@ -1199,9 +1199,9 @@ final class PoolGameModel {
         var4.velocityY = ArchiveProvider.divideFixed16(PasswordValidator.field_q, (byte) -108, (long)(int)(FullscreenFocusCanvas.multiplyFixedChecked((long)(var3.power * var14), (long)CueAim.field_f, false) / 4096L));
         var4.motionState = 1;
         int var22 = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -116, (long)(int)(FullscreenFocusCanvas.multiplyFixedChecked((long)(var3.power * WireframeQuad.field_g), (long)CueAim.field_f, false) / 4096L));
-        var4.angularVelocityX = NameEntryPopup.a(-NameEntryPopup.a(var14, false, var21), false, var22);
-        var4.angularVelocityY = NameEntryPopup.a(NameEntryPopup.a(var13, false, var21), false, var22);
-        var4.angularVelocityZ = NameEntryPopup.a(NameEntryPopup.a(var14, false, var19) - NameEntryPopup.a(var13, false, var20), false, var22);
+        var4.angularVelocityX = NameEntryPopup.multiplyFixed16(-NameEntryPopup.multiplyFixed16(var14, false, var21), false, var22);
+        var4.angularVelocityY = NameEntryPopup.multiplyFixed16(NameEntryPopup.multiplyFixed16(var13, false, var21), false, var22);
+        var4.angularVelocityZ = NameEntryPopup.multiplyFixed16(NameEntryPopup.multiplyFixed16(var14, false, var19) - NameEntryPopup.multiplyFixed16(var13, false, var20), false, var22);
         Ball.field_i = BufferedSocket.a(-6584, this.balls[0]);
     }
 
@@ -1303,12 +1303,12 @@ final class PoolGameModel {
         int var2 = 1;
         int var3Lifetime1;
         for (var3 = param0; var3 < this.balls.length; var3++) {
-          var2 = var2 + this.balls[var3].d(1);
+          var2 = var2 + this.balls[var3].serializedByteLength(1);
         }
         int var4 = 0;
         var3Lifetime1 = var4;
         while (this.pockets.length > var4) {
-          var2 = var2 + this.pockets[var4].a((byte) -119);
+          var2 = var2 + this.pockets[var4].serializedByteLength((byte) -119);
           var4++;
         }
         return var2;
@@ -1777,9 +1777,9 @@ final class PoolGameModel {
         return;
     }
 
-    final static void m(int param0) {
-        DebugTuningSlider.d((byte) -125);
-        LoginEncryptionSupport.a(param0, (byte) 93);
+    final static void showAccountProgressForResult(int result) {
+        DebugTuningSlider.showAccountProgressDialog((byte) -125);
+        LoginEncryptionSupport.setAccountDialogResult(result, (byte) 93);
     }
 
     final boolean tryPlaceBall(int param0, int param1, int param2, int param3, boolean param4) {
@@ -1898,23 +1898,23 @@ final class PoolGameModel {
         int var8 = SceneNodeFactory.cosine(2047, param1);
         int var9 = ScrollPaneWithFooter.sine(param3, true);
         int var10 = SceneNodeFactory.cosine(2047, param3);
-        param0[9] = NameEntryPopup.a(var10, false, var7_int);
-        param0[10] = NameEntryPopup.a(var9, false, var7_int);
+        param0[9] = NameEntryPopup.multiplyFixed16(var10, false, var7_int);
+        param0[10] = NameEntryPopup.multiplyFixed16(var9, false, var7_int);
         param0[3] = var9;
         param0[5] = 0;
         param0[4] = -var10;
         param0[11] = var8;
-        param0[6] = NameEntryPopup.a(param0[5], false, param0[10]) - NameEntryPopup.a(param0[4], false, param0[11]);
-        param0[7] = NameEntryPopup.a(param0[3], false, param0[11]) - NameEntryPopup.a(param0[5], false, param0[9]);
-        param0[8] = NameEntryPopup.a(param0[4], false, param0[9]) - NameEntryPopup.a(param0[3], false, param0[10]);
+        param0[6] = NameEntryPopup.multiplyFixed16(param0[5], false, param0[10]) - NameEntryPopup.multiplyFixed16(param0[4], false, param0[11]);
+        param0[7] = NameEntryPopup.multiplyFixed16(param0[3], false, param0[11]) - NameEntryPopup.multiplyFixed16(param0[5], false, param0[9]);
+        param0[8] = NameEntryPopup.multiplyFixed16(param0[4], false, param0[9]) - NameEntryPopup.multiplyFixed16(param0[3], false, param0[10]);
         int var11 = param5 * 65536 / 128;
         int var12 = 53 / ((param2 + 17) / 58);
         int var13 = param4 * 65536 / 128;
         try {
-          var14_int = AccountDisplayNameSupport.inverseSquareRoot(-NameEntryPopup.a(var11, false, var11) + (65536 - NameEntryPopup.a(var13, false, var13)), -122);
-          param0[0] = this.balls[0].positionX + (NameEntryPopup.a(param0[3], false, var11) + (NameEntryPopup.a(param0[6], false, var13) + NameEntryPopup.a(param0[9], false, var14_int))) * 8;
-          param0[1] = this.balls[0].positionY + 8 * (NameEntryPopup.a(param0[4], false, var11) + NameEntryPopup.a(param0[7], false, var13) + NameEntryPopup.a(param0[10], false, var14_int));
-          param0[2] = this.balls[0].positionZ + (NameEntryPopup.a(param0[5], false, var11) + NameEntryPopup.a(param0[8], false, var13) + NameEntryPopup.a(param0[11], false, var14_int)) * 8;
+          var14_int = AccountDisplayNameSupport.sqrtScaled256(-NameEntryPopup.multiplyFixed16(var11, false, var11) + (65536 - NameEntryPopup.multiplyFixed16(var13, false, var13)), -122);
+          param0[0] = this.balls[0].positionX + (NameEntryPopup.multiplyFixed16(param0[3], false, var11) + (NameEntryPopup.multiplyFixed16(param0[6], false, var13) + NameEntryPopup.multiplyFixed16(param0[9], false, var14_int))) * 8;
+          param0[1] = this.balls[0].positionY + 8 * (NameEntryPopup.multiplyFixed16(param0[4], false, var11) + NameEntryPopup.multiplyFixed16(param0[7], false, var13) + NameEntryPopup.multiplyFixed16(param0[10], false, var14_int));
+          param0[2] = this.balls[0].positionZ + (NameEntryPopup.multiplyFixed16(param0[5], false, var11) + NameEntryPopup.multiplyFixed16(param0[8], false, var13) + NameEntryPopup.multiplyFixed16(param0[11], false, var14_int)) * 8;
         } catch (IllegalArgumentException illegalArgumentException) {
           System.out.println("Oh dear. Strike point is way wrong: " + param5 + "," + param4 + ":\n" + illegalArgumentException.getMessage());
           throw illegalArgumentException;

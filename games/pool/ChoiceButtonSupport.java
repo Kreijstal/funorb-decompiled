@@ -113,7 +113,7 @@ final class ChoiceButtonSupport {
             }
             stackIn_38_0 = var6;
             stackIn_39_1 = !(var4 < 0);
-            var7Lifetime1 = WidgetContainer.a(stackIn_38_0, stackIn_39_1, false);
+            var7Lifetime1 = WidgetContainer.measureSharedTextWidth(stackIn_38_0, stackIn_39_1, false);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + BrowserCookieWriter.field_c;
             if (var4 >= 0) {
               var1_int = var1_int + IterableDualLinkDeque.field_e;

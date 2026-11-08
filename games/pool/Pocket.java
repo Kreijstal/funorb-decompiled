@@ -29,14 +29,14 @@ final class Pocket {
         return false;
     }
 
-    final static boolean a(int param0) {
+    final static boolean areSelectedSettingsAllowed(int firstConstraint) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Pool.field_O;
         try {
-          for (var1_int = param0; var1_int < LoginMethod.field_h.length; var1_int++) {
+          for (var1_int = firstConstraint; var1_int < LoginMethod.field_h.length; var1_int++) {
             if (LoginMethod.field_h[var1_int][0] != 2 &&
               LoginMethod.field_h[var1_int][2] != 2 &&
               QuaternionRotationSupport.a(LoginMethod.field_h[var1_int][1], LoginMethod.field_h[var1_int][0], 115) &&
@@ -48,7 +48,7 @@ final class Pocket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "dl.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "dl.C(" + firstConstraint + ')');
         }
     }
 
@@ -64,8 +64,8 @@ final class Pocket {
         statusFull = null;
     }
 
-    final int a(byte param0) {
-        int var2 = 67 / ((-51 - param0) / 62);
+    final int serializedByteLength(byte obfuscationGuard) {
+        int var2 = 67 / ((-51 - obfuscationGuard) / 62);
         return (this.pottedBalls == null ? 0 : this.pottedBalls.size((byte) 99)) + 1;
     }
 
@@ -74,7 +74,7 @@ final class Pocket {
         String var3;
         if (!param0) {
           var3 = (String) null;
-          Pocket.a(29, (String) null);
+          Pocket.validateEmailDomainLabel(29, (String) null);
         }
         if (this.pottedBalls != null &&
           this.pottedBalls.size((byte) 123) != 0) {
@@ -107,7 +107,7 @@ final class Pocket {
           }
           var3_int = param1.readUnsignedByte(-101);
           if (var3_int > 0) {
-            this.pottedBalls = TikiTableScene.a(var3_int, 1, 0);
+            this.pottedBalls = TikiTableScene.createSizedIntList(var3_int, 1, 0);
             for (var4 = 0; var4 < var3_int; var4++) {
               this.pottedBalls.set(10499, param1.readUnsignedByte(param0 - 222), var4);
             }
@@ -171,7 +171,7 @@ final class Pocket {
         }
     }
 
-    final static BrowserCookieSupport a(int param0, String param1) {
+    final static BrowserCookieSupport validateEmailDomainLabel(int obfuscationGuard, String label) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
@@ -186,7 +186,7 @@ final class Pocket {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          var2_int = param1.length();
+          var2_int = label.length();
           if (0 == var2_int) {
             stackIn_2_0 = WorldPointProjectionSupport.field_e;
             return stackIn_2_0;
@@ -195,12 +195,12 @@ final class Pocket {
             stackIn_6_0 = ChatPanelSupport.field_h;
             return stackIn_6_0;
           }
-          if (param0 <= 36) {
+          if (obfuscationGuard <= 36) {
             stackIn_9_0 = (BrowserCookieSupport) null;
             return stackIn_9_0;
           }
           for (var3 = 0; var3 < var2_int; var3++) {
-            var4 = param1.charAt(var3);
+            var4 = label.charAt(var3);
             if (var4 == 45) {
               if (0 == var3 ||
                 var2_int - 1 == var3) {
@@ -219,8 +219,8 @@ final class Pocket {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_28_0 = var2;
-          stackIn_28_1 = new StringBuilder().append("dl.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_28_1 = new StringBuilder().append("dl.B(").append(obfuscationGuard).append(',');
+          if (label == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
@@ -248,7 +248,7 @@ final class Pocket {
             }
           }
           if (param1 >= -36) {
-            this.a((byte) -111);
+            this.serializedByteLength((byte) -111);
           }
           this.pottedBalls = var3.size((byte) 98) == 0 ? null : var3;
         } catch (RuntimeException runtimeException) {

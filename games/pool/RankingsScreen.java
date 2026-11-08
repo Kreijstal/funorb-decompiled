@@ -600,7 +600,7 @@ final class RankingsScreen extends MenuScreen {
             stackIn_12_0 = (LobbyGame.field_Ac) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (TikiTableScene.e((byte) 85)) {
+            if (TikiTableScene.isLocalGameOwner((byte) 85)) {
               stackIn_8_0 = (!param1.field_ec) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -628,7 +628,7 @@ final class RankingsScreen extends MenuScreen {
               stackIn_29_0.selected = stackIn_30_1;
             }
             if (FreePlayRules.field_f[0][2].hovered) {
-              if (TikiTableScene.e((byte) 85)) {
+              if (TikiTableScene.isLocalGameOwner((byte) 85)) {
                 CacheEntry.field_B = MusicCrossfadeStream.thisisrunescapeclan;
               } else {
                 CacheEntry.field_B = AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, NetworkGameClient.thisisrunescapeclanNotowner);

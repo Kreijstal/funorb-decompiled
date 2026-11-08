@@ -53,7 +53,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
             var3_int = param1.length;
             this.suggestions = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.suggestions[var4_int] = WidgetContainer.a(false, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
+              this.suggestions[var4_int] = WidgetContainer.normalizeBase37Name(false, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new LinkButtonPainter(ValidationIconWidget.field_O, 0, 1);
             this.suggestionButtons = new ButtonWidget[1 + var3_int];

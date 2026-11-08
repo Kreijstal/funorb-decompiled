@@ -93,7 +93,7 @@ final class MusicVoice extends IntrusiveNode {
             var3 = 65536;
             var2_int = 0;
           } else {
-            var5 = AccountDisplayNameSupport.inverseSquareRoot(var4, -127);
+            var5 = AccountDisplayNameSupport.sqrtScaled256(var4, -127);
             var2_int = ArchiveProvider.divideFixed16(var5, (byte) -81, (long)var2_int);
             var3 = ArchiveProvider.divideFixed16(var5, (byte) -121, (long)var3);
           }

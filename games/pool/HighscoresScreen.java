@@ -437,9 +437,9 @@ final class HighscoresScreen extends MenuScreen {
           DualLinkDeque.initializeSocialListPanels(1, param9);
           DiskCacheWorker.a(param10, param14, args, param2, (byte) 60, param12, param18, param15, param1, param5, param11, param19, param16, param7, param9);
           CueStick.a(param3, false, param9, param6);
-          FaceNormal.a(-74);
+          FaceNormal.initializeRuleDescriptions(-74);
           var20_int = -118 % ((26 - param17) / 52);
-          DelegatingCanvas.a(-119);
+          DelegatingCanvas.initializeLobbyChatPanels(-119);
           ReflectionCheck.c((byte) -22);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

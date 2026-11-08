@@ -12,7 +12,7 @@ final class ScoreboardNameRecord {
 
     final static void a(int param0, boolean param1, boolean param2, String param3) {
         try {
-          OptionsScreen.f(-1);
+          OptionsScreen.resetAccountFormState(-1);
           TabbedPane.field_Ub.hideAllDialogs(-22216);
           TextLineLayout.field_j = new LoginForm(SpriteState.field_x, (String) null, ProjectedVertex.field_e, param1, param2);
           int var4_int = 113 % ((param0 + 67) / 53);

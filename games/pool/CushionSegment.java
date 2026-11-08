@@ -15,15 +15,15 @@ final class CushionSegment {
     int endY;
     static UiComponent field_c;
 
-    final static long d(byte param0) {
-        if (param0 < 117) {
+    final static long millisSinceNetworkActivity(byte obfuscationGuard) {
+        if (obfuscationGuard < 117) {
           CushionSegment.releaseStatics((byte) 7);
           return MonotonicClock.monotonicTimeMillis((byte) -104) - MenuScreen.field_v;
         }
         return MonotonicClock.monotonicTimeMillis((byte) -104) - MenuScreen.field_v;
     }
 
-    final static void b(byte param0) {
+    final static void updateProjectedAxisAngle(byte obfuscationGuard) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -46,7 +46,7 @@ final class CushionSegment {
         if (PasswordValidator.field_t[2] == 0) {
           PasswordValidator.field_t[2] = -1;
           PasswordValidator.field_t[1] = var3 / PasswordValidator.field_t[2] + 240;
-          if (param0 < 75) {
+          if (obfuscationGuard < 75) {
             field_c = (UiComponent) null;
           }
           PasswordValidator.field_t[0] = var2 / PasswordValidator.field_t[2] + 320;
@@ -80,7 +80,7 @@ final class CushionSegment {
           return;
         }
         PasswordValidator.field_t[1] = var3 / PasswordValidator.field_t[2] + 240;
-        if (param0 < 75) {
+        if (obfuscationGuard < 75) {
           field_c = (UiComponent) null;
           PasswordValidator.field_t[0] = var2 / PasswordValidator.field_t[2] + 320;
           if (!(0 < PasswordValidator.field_t[2])) {

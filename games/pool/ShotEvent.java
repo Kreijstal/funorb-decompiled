@@ -11,7 +11,7 @@ final class ShotEvent extends IntrusiveNode {
 
     public static void releaseStatics(int param0) {
         if (param0 != -2048) {
-          ShotEvent.c(111);
+          ShotEvent.closeClientSocket(111);
         }
         field_o = null;
         field_m = (int[][]) null;
@@ -19,7 +19,7 @@ final class ShotEvent extends IntrusiveNode {
         field_n = null;
     }
 
-    final static int[] a(int[] param0, byte param1, int[] param2) {
+    final static int[] scatterByIndex(int[] indices, byte obfuscationGuard, int[] values) {
         int var4 = 0;
         int[] var3 = null;
         RuntimeException var3_ref = null;
@@ -35,12 +35,12 @@ final class ShotEvent extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var5 = Pool.field_O;
         try {
-          var6 = new int[param2.length];
+          var6 = new int[values.length];
           var3 = var6;
-          for (var4 = 0; var4 < param2.length; var4++) {
-            var6[param0[var4]] = param2[var4];
+          for (var4 = 0; var4 < values.length; var4++) {
+            var6[indices[var4]] = values[var4];
           }
-          if (param1 >= 2) {
+          if (obfuscationGuard >= 2) {
             stackIn_8_0 = var3;
             return stackIn_8_0;
           }
@@ -51,13 +51,13 @@ final class ShotEvent extends IntrusiveNode {
           var3_ref = decompiledCaughtException;
           stackIn_11_0 = var3_ref;
           stackIn_11_1 = new StringBuilder().append("dn.A(");
-          if (param0 == null) {
+          if (indices == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(',');
+          if (values == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -66,8 +66,8 @@ final class ShotEvent extends IntrusiveNode {
         }
     }
 
-    final static void d(int param0) {
-        if (param0 != 8192) {
+    final static void releaseAwtLoadingResources(int obfuscationGuard) {
+        if (obfuscationGuard != 8192) {
           field_m = (int[][]) null;
         }
         PacketAvailabilitySupport.field_c = null;
@@ -116,27 +116,27 @@ final class ShotEvent extends IntrusiveNode {
         }
     }
 
-    final static void c(int param0) {
-        int var1 = 24 / ((-10 - param0) / 49);
+    final static void closeClientSocket(int obfuscationGuard) {
+        int var1 = 24 / ((-10 - obfuscationGuard) / 49);
         if (null != Atan2Support.field_c) {
           Atan2Support.field_c.c(-96);
           Atan2Support.field_c = null;
         }
     }
 
-    final static int a(int param0, boolean param1) {
-        if (param1) {
+    final static int arcsineFixed16(int value, boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return 77;
         }
-        param0 = param0 >> 5;
-        if (param0 < 0) {
-          if (-2048 <= param0) {
-            return -ByteArrayNode.field_m[-param0];
+        value = value >> 5;
+        if (value < 0) {
+          if (-2048 <= value) {
+            return -ByteArrayNode.field_m[-value];
           }
           return 0;
         }
-        if (param0 <= 2048) {
-          return ByteArrayNode.field_m[param0];
+        if (value <= 2048) {
+          return ByteArrayNode.field_m[value];
         }
         return 0;
     }

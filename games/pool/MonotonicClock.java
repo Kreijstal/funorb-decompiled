@@ -154,8 +154,8 @@ final class MonotonicClock {
                 var5 = new LobbyGame(LogoFinalFrameLoader.field_c);
                 LoginEncryptionSupport.field_a.put(-6946, (long)var4, var5);
               }
-              MeshBoundsSupport.a(var5, -13, var1, true);
-              TextureCache.a(-115, var5);
+              MeshBoundsSupport.readLobbyGameDetails(var5, -13, var1, true);
+              TextureCache.insertLobbyGameSorted(-115, var5);
               return;
             }
             if (9 == var2) {
@@ -199,7 +199,7 @@ final class MonotonicClock {
                     var18_ref.field_Fc = var5_intLifetime1;
                   }
                   var13.field_Xb = false;
-                  TextureCache.a(-75, var18_ref);
+                  TextureCache.insertLobbyGameSorted(-75, var18_ref);
                 }
                 return;
               }
@@ -247,7 +247,7 @@ final class MonotonicClock {
                     return;
                   }
                   if (20 == var2) {
-                    MeshBoundsSupport.a(HighscoresScreen.field_L, -116, var1, false);
+                    MeshBoundsSupport.readLobbyGameDetails(HighscoresScreen.field_L, -116, var1, false);
                     return;
                   }
                   if (var2 == 21) {
@@ -269,7 +269,7 @@ final class MonotonicClock {
                     return;
                   }
                   GrowableIntList.reportClientError((Throwable) null, "L1: " + PacketDiagnosticsSupport.formatPacketDump(120), -8555);
-                  ShotEvent.c(-119);
+                  ShotEvent.closeClientSocket(-119);
                   return;
                 }
                 var4_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-412303328);
@@ -318,7 +318,7 @@ final class MonotonicClock {
               } else {
                 var32.field_Xb = true;
               }
-              TextureCache.a(-94, var32);
+              TextureCache.insertLobbyGameSorted(-94, var32);
             }
             return;
           }
@@ -351,7 +351,7 @@ final class MonotonicClock {
             var4Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-1034);
             HighscoresScreen.field_L = new LobbyGame(LogoFinalFrameLoader.field_c);
             HighscoresScreen.field_L.a((long)var4Lifetime1, 45);
-            MeshBoundsSupport.a(HighscoresScreen.field_L, 119, var1, false);
+            MeshBoundsSupport.readLobbyGameDetails(HighscoresScreen.field_L, 119, var1, false);
             StrongCacheEntry.field_K = 0L;
           }
           if (var2 != 2 &&

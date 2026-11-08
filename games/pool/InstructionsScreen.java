@@ -27,7 +27,7 @@ final class InstructionsScreen extends MenuScreen {
             if (AchievementNotice.field_p != this.pageIndex ||
               null == LocalGameSetupScreen.field_K) {
               ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-              LocalGameSetupScreen.field_K = FaceNormal.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
+              LocalGameSetupScreen.field_K = FaceNormal.highlightGlossaryTerms("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
               AchievementNotice.field_p = this.pageIndex;
             }
           } else {
@@ -39,7 +39,7 @@ final class InstructionsScreen extends MenuScreen {
             if (AchievementNotice.field_p != this.pageIndex ||
               null == LocalGameSetupScreen.field_K) {
               ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-              LocalGameSetupScreen.field_K = FaceNormal.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
+              LocalGameSetupScreen.field_K = FaceNormal.highlightGlossaryTerms("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
               AchievementNotice.field_p = this.pageIndex;
             }
           }
@@ -52,7 +52,7 @@ final class InstructionsScreen extends MenuScreen {
             GameApplet.field_h = TransformRotationSupport.createTextLabelSprite(2, 0, DebugOverlayLayoutSupport.formatPageIndicator(this.pageIndex, 121));
           }
           GameApplet.field_h.draw(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
-          var4 = TextureCache.a(104);
+          var4 = TextureCache.getVisibleTooltipIndex(104);
           if (var4 == -1) {
             return;
           }
@@ -71,7 +71,7 @@ final class InstructionsScreen extends MenuScreen {
           if (AchievementNotice.field_p != this.pageIndex ||
             null == LocalGameSetupScreen.field_K) {
             ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3Lifetime1 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-            LocalGameSetupScreen.field_K = FaceNormal.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
+            LocalGameSetupScreen.field_K = FaceNormal.highlightGlossaryTerms("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
             AchievementNotice.field_p = this.pageIndex;
           }
           CollisionContact.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
@@ -83,7 +83,7 @@ final class InstructionsScreen extends MenuScreen {
             GameApplet.field_h = TransformRotationSupport.createTextLabelSprite(2, 0, DebugOverlayLayoutSupport.formatPageIndicator(this.pageIndex, 121));
           }
           GameApplet.field_h.draw(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
-          var4Lifetime1 = TextureCache.a(104);
+          var4Lifetime1 = TextureCache.getVisibleTooltipIndex(104);
           if (var4Lifetime1 != -1) {
             HotspotRectangle.a((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var4Lifetime1], 15658734, 4144959);
             if (null != this.field_G) {
@@ -99,7 +99,7 @@ final class InstructionsScreen extends MenuScreen {
         var3Lifetime1 += 5;
         if (AchievementNotice.field_p != this.pageIndex) {
           ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3Lifetime1 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-          LocalGameSetupScreen.field_K = FaceNormal.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
+          LocalGameSetupScreen.field_K = FaceNormal.highlightGlossaryTerms("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
           AchievementNotice.field_p = this.pageIndex;
           CollisionContact.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
           this.renderParagraphSprite(CollisionContact.field_h, NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], 10 + var3Lifetime1, -16097, LocalGameSetupScreen.field_K, var2, 13421772);
@@ -110,7 +110,7 @@ final class InstructionsScreen extends MenuScreen {
             GameApplet.field_h = TransformRotationSupport.createTextLabelSprite(2, 0, DebugOverlayLayoutSupport.formatPageIndicator(this.pageIndex, 121));
           }
           GameApplet.field_h.draw(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
-          var4Lifetime2 = TextureCache.a(104);
+          var4Lifetime2 = TextureCache.getVisibleTooltipIndex(104);
           if (var4Lifetime2 != -1) {
             HotspotRectangle.a((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var4Lifetime2], 15658734, 4144959);
             if (null != this.field_G) {
@@ -121,7 +121,7 @@ final class InstructionsScreen extends MenuScreen {
         }
         if (null == LocalGameSetupScreen.field_K) {
           ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3Lifetime1 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
-          LocalGameSetupScreen.field_K = FaceNormal.a("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
+          LocalGameSetupScreen.field_K = FaceNormal.highlightGlossaryTerms("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
           AchievementNotice.field_p = this.pageIndex;
         }
         CollisionContact.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
@@ -133,7 +133,7 @@ final class InstructionsScreen extends MenuScreen {
           GameApplet.field_h = TransformRotationSupport.createTextLabelSprite(2, 0, DebugOverlayLayoutSupport.formatPageIndicator(this.pageIndex, 121));
         }
         GameApplet.field_h.draw(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
-        var4Lifetime3 = TextureCache.a(104);
+        var4Lifetime3 = TextureCache.getVisibleTooltipIndex(104);
         if (var4Lifetime3 == -1) {
           return;
         }

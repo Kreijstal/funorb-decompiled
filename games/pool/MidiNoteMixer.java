@@ -27,10 +27,10 @@ final class MidiNoteMixer extends PcmStream {
     final static void c(int param0) {
         if (param0 > -21) {
           field_s = (AudioOutput) null;
-          LoginEncryptionSupport.a(17, (byte) 77);
+          LoginEncryptionSupport.setAccountDialogResult(17, (byte) 77);
           return;
         }
-        LoginEncryptionSupport.a(17, (byte) 77);
+        LoginEncryptionSupport.setAccountDialogResult(17, (byte) 77);
     }
 
     private final void a(int param0, MusicVoice param1, int param2) {

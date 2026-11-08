@@ -477,7 +477,7 @@ final class PlasmaBallSkin extends BallSkin {
           }
           for (var5Lifetime1 = 1; (var4 - 1) > var5Lifetime1; var5Lifetime1++) {
             var2_int = var5Lifetime1 - var4 / 2;
-            var6Lifetime1 = AccountDisplayNameSupport.inverseSquareRoot(65536 - (var2_int * var2_int << 16) / (var4 * var4 / 4), -120) * 8 >> 13 >> 1;
+            var6Lifetime1 = AccountDisplayNameSupport.sqrtScaled256(65536 - (var2_int * var2_int << 16) / (var4 * var4 / 4), -120) * 8 >> 13 >> 1;
             for (var7 = 0; var7 < QuickChatDynamicCommand.field_d.length; var7++) {
               if (var6Lifetime1 > 0) {
                 QuickChatDynamicCommand.field_d[var7][var5Lifetime1] = QuickChatDynamicCommand.field_d[var7][var5Lifetime1] + QuickChatDynamicCommand.field_d[var7][-1 + var5Lifetime1] >> 1;
@@ -639,7 +639,7 @@ final class PlasmaBallSkin extends BallSkin {
           var17 = (var17 << 13) / var13 + (long)(SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 4);
           SoftwareRasterizer.fillCircleBlended((int)(var15 >> 4), (int)(var17 >> 4), -2 + ((int)(2147483648L / var13) * (256 - fade) >> 8), 0, 224);
           if (2147483647L > 127L * (34359738368L / var13) * (34359738368L / var13)) {
-            SoftwareRasterizer.fillRadialGlow((int)var15, (int)var17, (int)(34359738368L / var13) * (256 - fade) >> 8, 127, DiskArchiveRequest.a(-9, ballIndex));
+            SoftwareRasterizer.fillRadialGlow((int)var15, (int)var17, (int)(34359738368L / var13) * (256 - fade) >> 8, 127, DiskArchiveRequest.getBallGlowPalette(-9, ballIndex));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

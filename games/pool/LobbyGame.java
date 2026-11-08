@@ -130,7 +130,7 @@ final class LobbyGame extends UiComponent {
             ClientException.field_d = DebugOverlayLayoutSupport.joinCharSequences(-54, new CharSequence[]{(CharSequence) ((Object) ClientException.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) CacheEntry.ticketingGotowebsite)});
           }
           MeshBoundsSupport.field_d.dismissDialog(17);
-          DebugTuningSlider.d((byte) -126);
+          DebugTuningSlider.showAccountProgressDialog((byte) -126);
         } else {
           MeshBoundsSupport.field_d.m((byte) -33);
         }

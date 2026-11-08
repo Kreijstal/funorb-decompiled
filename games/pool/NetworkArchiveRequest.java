@@ -20,11 +20,11 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         RuntimeException var2 = null;
         var3 = Pool.field_O;
         try {
-          IndexedSpriteState.a(ArchiveRequest.field_z, MenuScreenBase.field_c, 0, LogoJingleLoader.field_a, param1, (byte) -63, param0);
+          IndexedSpriteState.sortVisibleFaces(ArchiveRequest.field_z, MenuScreenBase.field_c, 0, LogoJingleLoader.field_a, param1, (byte) -63, param0);
           for (var2_int = 0; var2_int < MenuScreenBase.field_c; var2_int++) {
             NetworkGameClient.field_H[var2_int + param1] = var2_int;
           }
-          IndexedSpriteState.a(DiskCacheWorker.field_d, MenuScreenBase.field_c + param1, param1, SpriteSheetLoadSupport.field_c, param1 + param1, (byte) -74, false);
+          IndexedSpriteState.sortVisibleFaces(DiskCacheWorker.field_d, MenuScreenBase.field_c + param1, param1, SpriteSheetLoadSupport.field_c, param1 + param1, (byte) -74, false);
           if (MenuScreenBase.field_c > param1) {
             MenuScreenBase.field_c = param1;
           }

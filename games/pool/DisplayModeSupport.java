@@ -138,7 +138,7 @@ final class DisplayModeSupport {
           }
           var8 = param1.listDisplayModes(84);
           while (var8.field_f == 0) {
-            SoundCache.a(-123, 10L);
+            SoundCache.sleepMillis(-123, 10L);
           }
           if (2 == var8.field_f) {
             stackIn_10_0 = new FullscreenDisplayMode[]{};

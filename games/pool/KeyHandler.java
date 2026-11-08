@@ -89,7 +89,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
           } else {
             if (MeshRenderSupport.a(108)) {
               if (PlasmaTableScene.field_ab == 0) {
-                ResourceArchive.a(param1, (byte) 109, false);
+                ResourceArchive.drawAccountOverlay(param1, (byte) 109, false);
                 ButtonWidget.a(0, 0, (byte) -65, param2);
               } else {
                 ModelTableScene.a(true, param2);

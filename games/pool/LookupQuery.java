@@ -120,8 +120,8 @@ final class LookupQuery extends IntrusiveNode {
         }
     }
 
-    final static boolean c(int param0) {
-        if (param0 != 1) {
+    final static boolean isClientNoticeOpen(int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           return false;
         }
         return ChatMessageLine.field_o;
@@ -130,7 +130,7 @@ final class LookupQuery extends IntrusiveNode {
     public static void releaseStatics(int param0) {
         quickchatShortcutHelp = null;
         if (param0 != -4303) {
-          LookupQuery.c(-44);
+          LookupQuery.isClientNoticeOpen(-44);
         }
     }
 

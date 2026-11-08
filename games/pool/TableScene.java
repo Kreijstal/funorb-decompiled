@@ -139,14 +139,14 @@ abstract class TableScene {
           var13 = param2.gameModel.balls[param3];
           var6 = (long)(-param0.centerX + var13.positionX);
           var8 = (long)(var13.positionY - param0.centerY);
-          var10 = IterableNodeHashTable.a(param1 ^ -24621, FullscreenFocusCanvas.multiplyFixedChecked(var6, var6, false) + FullscreenFocusCanvas.multiplyFixedChecked(var8, var8, false));
-          var13.b(true);
+          var10 = IterableNodeHashTable.sqrtScaled256(param1 ^ -24621, FullscreenFocusCanvas.multiplyFixedChecked(var6, var6, false) + FullscreenFocusCanvas.multiplyFixedChecked(var8, var8, false));
+          var13.integrateFullStep(true);
           if (var13.positionZ > 4194304) {
             param2.addBallToRack(0, param3);
             return;
           }
           if (var13.positionZ < 0) {
-            var12 = 1179648 - AccountDisplayNameSupport.inverseSquareRoot(4194304 - (var13.positionZ * var13.positionZ >> 16), param1 ^ -24622);
+            var12 = 1179648 - AccountDisplayNameSupport.sqrtScaled256(4194304 - (var13.positionZ * var13.positionZ >> 16), param1 ^ -24622);
           } else {
             var12 = 655360;
           }
@@ -374,7 +374,7 @@ abstract class TableScene {
         var10 = -var6;
         var11 = var9 * var9 + var10 * var10;
         if (var11 > 0) {
-          var11 = AccountDisplayNameSupport.inverseSquareRoot(var11, -121) >> 8;
+          var11 = AccountDisplayNameSupport.sqrtScaled256(var11, -121) >> 8;
           var9 = (var9 << 8) / var11;
           var10 = (var10 << 8) / var11;
         }
@@ -383,7 +383,7 @@ abstract class TableScene {
         var13 = var6 * var10 - var7 * var9 >> 8;
         var14 = var11Lifetime1 * var11Lifetime1 + var12 * var12 + var13 * var13;
         if (var14 > 0) {
-          var14 = AccountDisplayNameSupport.inverseSquareRoot(var14, -125) >> 8;
+          var14 = AccountDisplayNameSupport.sqrtScaled256(var14, -125) >> 8;
           var11Lifetime1 = (var11Lifetime1 << 8) / var14;
           var12 = (var12 << 8) / var14;
           var13 = (var13 << 8) / var14;
@@ -852,7 +852,7 @@ abstract class TableScene {
             var6 = Math.cos(3.141592653589793 * (double)var3_int * 2.0 / 16.0);
             var8 = Math.sin(2.0 * (3.141592653589793 * (double)(var3_int + 1)) / 16.0);
             var10 = Math.cos(3.141592653589793 * (double)(var3_int + 1) * 2.0 / 16.0);
-            MeshBoundsSupport.field_b.addFace(MeshBoundsSupport.field_b.addVertex(0, 0, 0), MeshBoundsSupport.field_b.addVertex(PotEvent.a(4885, 18.0 * var10), PotEvent.a(4885, var8 * 18.0), 0), MeshBoundsSupport.field_b.addVertex(PotEvent.a(4885, 18.0 * var6), PotEvent.a(4885, 18.0 * var4_double), 0), (byte) 1, (short) 127, (byte) 127);
+            MeshBoundsSupport.field_b.addFace(MeshBoundsSupport.field_b.addVertex(0, 0, 0), MeshBoundsSupport.field_b.addVertex(PotEvent.doubleToFixed3(4885, 18.0 * var10), PotEvent.doubleToFixed3(4885, var8 * 18.0), 0), MeshBoundsSupport.field_b.addVertex(PotEvent.doubleToFixed3(4885, 18.0 * var6), PotEvent.doubleToFixed3(4885, 18.0 * var4_double), 0), (byte) 1, (short) 127, (byte) 127);
           }
           var12 = (ModelMesh) (this.createModelMeshUntransformed(-113, MeshBoundsSupport.field_b));
           var3 = var12;
@@ -1411,7 +1411,7 @@ abstract class TableScene {
             var9 = param0[var17[var15][1]].centerY((byte) -127) - param0[var17[var15][0]].centerY((byte) -127);
             this.field_a[var15][0] = -var9 >> 13;
             this.field_a[var15][1] = var8 >> 13;
-            var10 = IterableNodeHashTable.a(-111, FullscreenFocusCanvas.multiplyFixedChecked((long)var8, (long)var8, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false));
+            var10 = IterableNodeHashTable.sqrtScaled256(-111, FullscreenFocusCanvas.multiplyFixedChecked((long)var8, (long)var8, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false));
             if (var10 <= 2147483647L &&
               var10 >= -2147483648L) {
               this.field_a[var15][0] = ArchiveProvider.divideFixed16((int)var10, (byte) -74, (long)this.field_a[var15][0]);
@@ -1491,14 +1491,14 @@ abstract class TableScene {
         double var17 = 0.0;
         int var19 = 0;
         double var20 = 0.0;
-        float var2 = (float)PotEvent.a(4885, Math.sqrt(414720.0));
+        float var2 = (float)PotEvent.doubleToFixed3(4885, Math.sqrt(414720.0));
         int var3 = (int)Math.ceil((double)(var2 / (float)ModelMesh.field_Y.length));
         int var4 = (int)Math.ceil((double)(var2 / (float)ModelMesh.field_Y.length));
         this.field_y = new ModelInstance[var3 * var4];
         double var5 = 576.0 / (double)var3;
         double var7 = 288.0 / (double)var4;
-        int var9 = (PotEvent.a(4885, var5) >> 1) * 16 / 16;
-        int var10 = (PotEvent.a(param0 + 4883, var7) >> 1) * 16 / 16;
+        int var9 = (PotEvent.doubleToFixed3(4885, var5) >> 1) * 16 / 16;
+        int var10 = (PotEvent.doubleToFixed3(param0 + 4883, var7) >> 1) * 16 / 16;
         this.field_s = new MeshBuilder(4, param0, 1);
         int var11 = this.field_s.addVertex(-var9, -var10, 0);
         int var12 = this.field_s.addVertex(var9, -var10, 0);

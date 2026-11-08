@@ -439,7 +439,7 @@ final class Cp1252CharacterSupport {
         if (param0 <= 45) {
           return (String) null;
         }
-        return ResourceArchive.a(param3, 16, false, -118, param2, param1);
+        return ResourceArchive.formatFixedPoint(param3, 16, false, -118, param2, param1);
     }
 
     static {

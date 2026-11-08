@@ -191,7 +191,7 @@ final class WidgetStyleLayer {
             }
             if (BufferedFile.field_h > LogoMaterial.field_b) {
               if (LogoMaterial.field_b == 0) {
-                VerticalScrollbar.a(27194, false);
+                VerticalScrollbar.initializeGameChatPanels(27194, false);
               }
               LogoMaterial.field_b = LogoMaterial.field_b + 1;
               return;
@@ -211,7 +211,7 @@ final class WidgetStyleLayer {
                 return;
               }
               if (NodeHashTableIterator.field_a == 0) {
-                DelegatingCanvas.a(-128);
+                DelegatingCanvas.initializeLobbyChatPanels(-128);
               }
               NodeHashTableIterator.field_a = NodeHashTableIterator.field_a + 1;
               return;
@@ -226,7 +226,7 @@ final class WidgetStyleLayer {
             }
             if (PoolMatchController.field_z < BufferedFile.field_h) {
               if (PoolMatchController.field_z == 0) {
-                VerticalScrollbar.a(27194, true);
+                VerticalScrollbar.initializeGameChatPanels(27194, true);
               }
               PoolMatchController.field_z = PoolMatchController.field_z + 1;
               return;

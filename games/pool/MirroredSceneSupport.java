@@ -50,10 +50,10 @@ final class MirroredSceneSupport {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void showDefaultLoginForm(boolean obfuscationGuard) {
         String var2 = (String) null;
-        AccountDisplayNameSupport.a((String) null, -128, LoginPayload.field_d);
-        if (param0) {
+        AccountDisplayNameSupport.showLoginForm((String) null, -128, LoginPayload.field_d);
+        if (obfuscationGuard) {
           field_a = (PcmSample) null;
         }
     }

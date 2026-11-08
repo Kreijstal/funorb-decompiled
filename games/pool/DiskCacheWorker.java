@@ -632,7 +632,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.startThread(90, 5, (Runnable) (this));
           while (0 == var2.field_f) {
-            SoundCache.a(-78, 10L);
+            SoundCache.sleepMillis(-78, 10L);
           }
           if (var2.field_f == 2) {
             throw new RuntimeException();

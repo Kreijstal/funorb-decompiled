@@ -19,7 +19,7 @@ final class LocalGameSetupScreen extends MenuScreen {
         return this.buttonTop;
     }
 
-    final static MeshBuilder[] a(MeshBuilder param0, int[] param1, boolean param2) {
+    final static MeshBuilder[] splitMeshIntoGrid(MeshBuilder mesh, int[] divisions, boolean obfuscationGuard) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -51,44 +51,44 @@ final class LocalGameSetupScreen extends MenuScreen {
         MeshBuilder[] var16 = null;
         var14 = Pool.field_O;
         try {
-          if (!param2) {
+          if (!obfuscationGuard) {
             stackIn_3_0 = (MeshBuilder[]) null;
             return stackIn_3_0;
           }
-          var16 = new MeshBuilder[param1[0] * param1[1] * param1[2]];
+          var16 = new MeshBuilder[divisions[0] * divisions[1] * divisions[2]];
           var3 = var16;
           var9 = 0;
-          var5 = new MeshBuilder(param0, false, false, false, false);
-          for (var10 = 0; var10 < param1[0]; var10++) {
-            if (-1 + param1[0] <= var10) {
+          var5 = new MeshBuilder(mesh, false, false, false, false);
+          for (var10 = 0; var10 < divisions[0]; var10++) {
+            if (-1 + divisions[0] <= var10) {
               var4 = var5;
             } else {
               var4 = TutorialController.b((byte) 122);
               var11_ref_eg = TutorialController.b((byte) 124);
-              JaggrabDownloader.a(0, var4, param0.field_D + (1 + var10) * (param0.field_w - param0.field_D) / param1[0], false, 0, 0, 1, 0, var11_ref_eg, var5);
+              JaggrabDownloader.a(0, var4, mesh.field_D + (1 + var10) * (mesh.field_w - mesh.field_D) / divisions[0], false, 0, 0, 1, 0, var11_ref_eg, var5);
               var5 = var11_ref_eg;
             }
             var7 = var4;
-            for (var11 = 0; param1[1] > var11; var11++) {
-              if (var11 < param1[1] - 1) {
+            for (var11 = 0; divisions[1] > var11; var11++) {
+              if (var11 < divisions[1] - 1) {
                 var15 = TutorialController.b((byte) 123);
                 var6 = var15;
                 var12_ref_eg = TutorialController.b((byte) 125);
-                JaggrabDownloader.a((1 + var11) * (-param0.field_y + param0.field_S) / param1[1] + param0.field_y, var15, 0, false, 0, 1, 0, 0, var12_ref_eg, var7);
+                JaggrabDownloader.a((1 + var11) * (-mesh.field_y + mesh.field_S) / divisions[1] + mesh.field_y, var15, 0, false, 0, 1, 0, 0, var12_ref_eg, var7);
                 var7 = var12_ref_eg;
               } else {
                 var6 = var7;
               }
               var8 = var6;
-              for (var12 = 0; var12 < param1[2]; var12++) {
-                if (var12 < (param1[2] - 1)) {
+              for (var12 = 0; var12 < divisions[2]; var12++) {
+                if (var12 < (divisions[2] - 1)) {
                   var3[var9] = TutorialController.b((byte) 124);
                   var13 = TutorialController.b((byte) 126);
                   stackIn_20_0 = 0;
                   stackIn_20_1 = var16[var9];
                   stackIn_20_2 = 0;
-                  stackIn_21_3 = !(param2);
-                  JaggrabDownloader.a(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_21_3, param0.field_V + (var12 + 1) * (-param0.field_V + param0.field_x) / param1[2], 0, 0, 1, var13, var8);
+                  stackIn_21_3 = !(obfuscationGuard);
+                  JaggrabDownloader.a(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_21_3, mesh.field_V + (var12 + 1) * (-mesh.field_V + mesh.field_x) / divisions[2], 0, 0, 1, var13, var8);
                   var8 = var13;
                 } else {
                   var3[var9] = var8;
@@ -104,22 +104,22 @@ final class LocalGameSetupScreen extends MenuScreen {
           var3_ref = decompiledCaughtException;
           stackIn_29_0 = var3_ref;
           stackIn_29_1 = new StringBuilder().append("cm.S(");
-          if (param0 == null) {
+          if (mesh == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
           stackIn_32_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',');
-          if (param1 == null) {
+          if (divisions == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static boolean f(byte param0) {
+    final static boolean loadMembershipBenefitsAssets(byte obfuscationGuard) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -138,7 +138,7 @@ final class LocalGameSetupScreen extends MenuScreen {
           if (!MonotonicClock.field_h.ensureGroupAvailableByName("benefits/", 0)) {
             return false;
           }
-          PotEvent.field_m = DimmedPauseMenu.loadSprite(ViewportController.field_q, param0 - 29, "benefits", "members_benefits_borders");
+          PotEvent.field_m = DimmedPauseMenu.loadSprite(ViewportController.field_q, obfuscationGuard - 29, "benefits", "members_benefits_borders");
           for (var1_int = 0; var1_int < PotEvent.field_m.field_D.length; var1_int++) {
             if (0 == (-16777216 & PotEvent.field_m.field_D[var1_int])) {
               PotEvent.field_m.field_D[var1_int] = 0;
@@ -154,19 +154,19 @@ final class LocalGameSetupScreen extends MenuScreen {
             var5.a(0, -var2 * var5.field_y / ShotEvent.field_o.length);
             ShotEvent.field_o[var2] = var3;
           }
-          if (param0 != 109) {
+          if (obfuscationGuard != 109) {
             return true;
           }
           OpacityWidget.field_P.bindAsRenderTarget(15100);
-          FaceNormal.a(-2107, PotEvent.field_m, ReportAbuseDialog.textGameName);
-          AchievementNotice.a(40, QuickChatMenu.field_Rb, 80, 80, 15, -2400, 2, -1, 40);
+          FaceNormal.configureMembershipBenefitsBackground(-2107, PotEvent.field_m, ReportAbuseDialog.textGameName);
+          AchievementNotice.configureMembershipBenefitsHeader(40, QuickChatMenu.field_Rb, 80, 80, 15, -2400, 2, -1, 40);
           GameApplet.a(ShotEvent.field_o, -58);
           CheckboxPainter.a(AccountDisplayNameSupport.field_g, 106);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "cm.W(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "cm.W(" + obfuscationGuard + ')');
         }
     }
 
@@ -224,13 +224,13 @@ final class LocalGameSetupScreen extends MenuScreen {
                 } else {
                   if (this.selection.isPressActivated((byte) 115)) {
                     DialWidget.field_W = (DialWidget.field_W + 2) % 3;
-                    this.g(param0 + 16474);
+                    this.updateRulesetSelection(param0 + 16474);
                   }
                 }
               } else {
                 if (this.selection.isPressActivated((byte) 76)) {
                   DialWidget.field_W = (DialWidget.field_W + 1) % 3;
-                  this.g(4);
+                  this.updateRulesetSelection(4);
                 }
               }
             }
@@ -243,7 +243,7 @@ final class LocalGameSetupScreen extends MenuScreen {
           }
         } else {
           if (this.selection.isPressActivated((byte) 64) &&
-            Pocket.a(0)) {
+            Pocket.areSelectedSettingsAllowed(0)) {
             this.c(param0 ^ -16474, param1);
           }
         }
@@ -252,13 +252,13 @@ final class LocalGameSetupScreen extends MenuScreen {
         }
     }
 
-    private final void h(int param0) {
+    private final void initializeSetupWidgets(int obfuscationGuard) {
         this.framedPanel = false;
         int var2 = 20;
         int var3 = 100;
         this.enableFramedPanel(var2, var3, -10);
         int var4 = this.headerSprite != null ? this.headerSprite.field_y : 0;
-        if (param0 >= -62) {
+        if (obfuscationGuard >= -62) {
           this.getButtonLeft(4, 111);
         }
         NineSliceFrame.field_a = new UiComponent(-1L, (UiComponent) null, var2, var3, SoftwareRasterizer.width - 2 * var2, -var3 + var4 + (SoftwareRasterizer.height - var3), (String) null);
@@ -280,12 +280,12 @@ final class LocalGameSetupScreen extends MenuScreen {
         QuickChatNavigationSupport.field_f.verticalAlignment = 1;
         QuickChatNavigationSupport.field_f.frameSprites = UsernameSuggestionsPanel.field_N;
         IterableNodeHashTable.field_e.addChild(-116, QuickChatNavigationSupport.field_f);
-        this.g(4);
+        this.updateRulesetSelection(4);
         PoolGameModel.field_v = new UiComponent(-1L, (UiComponent) null, 290, IterableNodeHashTable.field_e.localY, 270, 60, (String) null);
         PoolGameModel.field_v.sprite = TransformRotationSupport.createTextLabelSprite(4, 0, ArchiveAvailabilitySupport.muOptionsPlayers);
         PoolGameModel.field_v.sprite.field_G = 10;
         PoolGameModel.field_v.frameSprites = MeshSymmetrySupport.field_g;
-        GlowParticle.a(PoolGameModel.field_v, (byte) 93);
+        GlowParticle.centerWidgetSpritesVertically(PoolGameModel.field_v, (byte) 93);
         PoolUiText.field_f = new UiComponent(-1L, (UiComponent) null, 130, 10, 100, 40, (String) null);
         PoolUiText.field_f.verticalAlignment = 1;
         PoolUiText.field_f.horizontalAlignment = 1;
@@ -307,7 +307,7 @@ final class LocalGameSetupScreen extends MenuScreen {
         AppletContainerSupport.field_c.frameSprites = MeshSymmetrySupport.field_g;
         AppletContainerSupport.field_c.sprite = TransformRotationSupport.createTextLabelSprite(4, 0, CushionSegment.timer);
         AppletContainerSupport.field_c.sprite.field_G = PoolGameModel.field_v.sprite.field_G;
-        GlowParticle.a(AppletContainerSupport.field_c, (byte) 93);
+        GlowParticle.centerWidgetSpritesVertically(AppletContainerSupport.field_c, (byte) 93);
         NineSliceFrame.field_a.addChild(-99, AppletContainerSupport.field_c);
         VerticalScrollbar.field_Nb = new UiComponent(-1L, (UiComponent) null, PoolUiText.field_f.localX, PoolUiText.field_f.localY, PoolUiText.field_f.width, PoolUiText.field_f.height, (String) null);
         VerticalScrollbar.field_Nb.horizontalAlignment = 1;
@@ -331,7 +331,7 @@ final class LocalGameSetupScreen extends MenuScreen {
         CacheEntry.field_x.selectedSprite = TransformRotationSupport.createTextLabelSprite(3, 0, DisplayModeSupport.gameoptlabels[3]);
         CacheEntry.field_x.sprite.field_G = PoolGameModel.field_v.sprite.field_G;
         CacheEntry.field_x.selectedSprite.field_G = PoolGameModel.field_v.sprite.field_G;
-        GlowParticle.a(CacheEntry.field_x, (byte) 93);
+        GlowParticle.centerWidgetSpritesVertically(CacheEntry.field_x, (byte) 93);
         TextureCache.field_c = new UiComponent(-1L, (UiComponent) null, PoolUiText.field_f.localX, PoolUiText.field_f.localY, PoolUiText.field_f.width, PoolUiText.field_f.height, (String) null);
         TextureCache.field_c.horizontalAlignment = 1;
         TextureCache.field_c.frameSprites = UsernameSuggestionsPanel.field_N;
@@ -352,13 +352,13 @@ final class LocalGameSetupScreen extends MenuScreen {
         if (65 != this.itemIds[param0]) {
           return true;
         }
-        return Pocket.a(0);
+        return Pocket.areSelectedSettingsAllowed(0);
     }
 
-    private final void g(int param0) {
-        IterableNodeHashTable.field_e.sprite = TransformRotationSupport.createTextLabelSprite(param0, 0, LobbyPlayer.rulesetNames[DialWidget.field_W]);
+    private final void updateRulesetSelection(int obfuscationGuard) {
+        IterableNodeHashTable.field_e.sprite = TransformRotationSupport.createTextLabelSprite(obfuscationGuard, 0, LobbyPlayer.rulesetNames[DialWidget.field_W]);
         QuickChatNavigationSupport.field_f.sprite = SpriteResourceSupport.field_c[DialWidget.field_W];
-        TextureCache.a(IterableNodeHashTable.field_e, QuickChatNavigationSupport.field_f, -89);
+        TextureCache.placeWidgetAtBottomCenter(IterableNodeHashTable.field_e, QuickChatNavigationSupport.field_f, -89);
     }
 
     final void drawScreen(int param0) {
@@ -398,7 +398,7 @@ final class LocalGameSetupScreen extends MenuScreen {
     LocalGameSetupScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(VerticalScrollbar.field_Wb, param0, param1, param2, param3, param4, param5);
         try {
-          this.h(-108);
+          this.initializeSetupWidgets(-108);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -415,7 +415,7 @@ final class LocalGameSetupScreen extends MenuScreen {
         return this.buttonLeft + (-7 + param1) * 250;
     }
 
-    final static byte[] a(String param0, byte param1) {
+    final static byte[] loadMenuResource(String name, byte obfuscationGuard) {
         RuntimeException var2 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_4_0 = null;
@@ -424,8 +424,8 @@ final class LocalGameSetupScreen extends MenuScreen {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 >= 16) {
-            stackIn_4_0 = MidiNoteMixer.field_u.getFileByName(false, param0, "");
+          if (obfuscationGuard >= 16) {
+            stackIn_4_0 = MidiNoteMixer.field_u.getFileByName(false, name, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;
@@ -435,12 +435,12 @@ final class LocalGameSetupScreen extends MenuScreen {
           var2 = decompiledCaughtException;
           stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("cm.P(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -448,7 +448,7 @@ final class LocalGameSetupScreen extends MenuScreen {
         super.onEnter(param0, param1, param2);
         ByteStorage.d(param0 ^ -107);
         KillerRules.updateKillerPlayerCountControls((byte) -45);
-        this.g(4);
+        this.updateRulesetSelection(4);
         PlayerContextMenu.updatePageControls(13);
     }
 
@@ -463,11 +463,11 @@ final class LocalGameSetupScreen extends MenuScreen {
         return this.buttonRight + (param1 - 7) * 280;
     }
 
-    final static void f(int param0) {
+    final static void readLookupAcknowledgement(int obfuscationGuard) {
         LookupQuery var1 = (LookupQuery) (BallSkin.field_i.last((byte) -105));
-        int var2 = -46 / ((-18 - param0) / 38);
+        int var2 = -46 / ((-18 - obfuscationGuard) / 38);
         if (var1 == null) {
-          ShotEvent.c(-127);
+          ShotEvent.closeClientSocket(-127);
           return;
         }
         CipherPacketBuffer var3 = PlayerContextMenu.field_e;

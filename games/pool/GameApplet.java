@@ -731,7 +731,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
         try {
           MeshSymmetrySupport.field_c = MonotonicClock.monotonicTimeMillis((byte) -119);
-          SoundCache.a(-79, 5000L);
+          SoundCache.sleepMillis(-79, 5000L);
           QuickChatPhraseRegistry.field_c = null;
           this.shutdown(20171, false);
         } catch (RuntimeException runtimeException) {
@@ -782,7 +782,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               while (true) {
                 if (var8.field_f == 0) {
-                  SoundCache.a(param3 - 228, 10L);
+                  SoundCache.sleepMillis(param3 - 228, 10L);
                   if (var9 == 0) {
                     continue;
                   }

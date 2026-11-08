@@ -109,7 +109,7 @@ final class QuickChatMenuSupport {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8, int param9, int param10) {
+    final static int sweepCircleAgainstSegment(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8, int param9, int param10) {
         int var11;
         int var12;
         int var13;
@@ -123,10 +123,10 @@ final class QuickChatMenuSupport {
           return -1;
         }
         if (param9 == param1) {
-          return QuickChatPhraseRegistry.a(param7, param9, param0, param5, param6, param3, param10, param2, param4, 98);
+          return QuickChatPhraseRegistry.sweepCircleAgainstVerticalSegment(param7, param9, param0, param5, param6, param3, param10, param2, param4, 98);
         }
         if (param7 == param3) {
-          return TutorialFactory.a(param3, param6, (byte) -112, param2, param10, param5, param0, param9, param4, param1);
+          return TutorialFactory.sweepCircleAgainstHorizontalSegment(param3, param6, (byte) -112, param2, param10, param5, param0, param9, param4, param1);
         }
         if (param8 != 98) {
           return -7;
@@ -135,7 +135,7 @@ final class QuickChatMenuSupport {
         var12 = -param3 + param7;
         var13 = var12;
         var14 = -var11;
-        var15 = AccountDisplayNameSupport.inverseSquareRoot(NameEntryPopup.a(var13, false, var13) + NameEntryPopup.a(var14, false, var14), -128);
+        var15 = AccountDisplayNameSupport.sqrtScaled256(NameEntryPopup.multiplyFixed16(var13, false, var13) + NameEntryPopup.multiplyFixed16(var14, false, var14), -128);
         if (0L < FullscreenFocusCanvas.multiplyFixedChecked((long)var13, (long)param10, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var14, (long)param4, false)) {
           param9 = param9 - ArchiveProvider.divideFixed16(var15, (byte) -73, (long)(var13 * param6));
           param3 = param3 - ArchiveProvider.divideFixed16(var15, (byte) -90, (long)(var14 * param6));
@@ -143,14 +143,14 @@ final class QuickChatMenuSupport {
           param9 = param9 + ArchiveProvider.divideFixed16(var15, (byte) -95, (long)(var13 * param6));
           param3 = param3 + ArchiveProvider.divideFixed16(var15, (byte) -111, (long)(param6 * var14));
         }
-        var16 = NameEntryPopup.a(var11, false, param4) - NameEntryPopup.a(var12, false, param10);
+        var16 = NameEntryPopup.multiplyFixed16(var11, false, param4) - NameEntryPopup.multiplyFixed16(var12, false, param10);
         if (var16 == 0) {
           return -1;
         }
-        var17 = ArchiveProvider.divideFixed16(var16, (byte) -82, (long)(NameEntryPopup.a(var12, false, param5 - param9) - NameEntryPopup.a(var11, false, -param3 + param2)));
+        var17 = ArchiveProvider.divideFixed16(var16, (byte) -82, (long)(NameEntryPopup.multiplyFixed16(var12, false, param5 - param9) - NameEntryPopup.multiplyFixed16(var11, false, -param3 + param2)));
         if (var17 > 0 &&
           var17 <= -param0 + 65536) {
-          var18 = ArchiveProvider.divideFixed16(var11, (byte) -110, (long)(-param9 + param5 + NameEntryPopup.a(var17, false, param10)));
+          var18 = ArchiveProvider.divideFixed16(var11, (byte) -110, (long)(-param9 + param5 + NameEntryPopup.multiplyFixed16(var17, false, param10)));
           if (var18 >= 0 &&
             var18 <= 65536) {
             return var17 + param0;

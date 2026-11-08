@@ -18,12 +18,12 @@ final class ClientInputResetSupport {
         DebugOverlayLayoutSupport.detachMouseHandler(0);
         TextWidgetPainter.closeNetworkAndCacheResources((byte) 70);
         if (!TriangleMesh.b((byte) 84)) {
-          ShotEvent.c(-111);
+          ShotEvent.closeClientSocket(-111);
           return;
         }
         JaggrabDownloader.field_j.writeCipheredOpcode(false, 1);
         DebugTuningSupport.flushClientPackets(0, 0);
-        ShotEvent.c(-111);
+        ShotEvent.closeClientSocket(-111);
     }
 
     final static void drawProjectedCross(int param0, int param1, int[] param2, int param3, int param4, int param5) {

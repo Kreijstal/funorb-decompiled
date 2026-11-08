@@ -8,7 +8,7 @@ final class FaceNormal {
     int field_b;
     static UiComponent field_c;
 
-    final static String a(String param0, String param1, byte param2, String param3) {
+    final static String highlightGlossaryTerms(String suffix, String text, byte obfuscationGuard, String prefix) {
         int var6 = 0;
         int var8 = 0;
         StringBuilder discarded$8 = null;
@@ -39,7 +39,7 @@ final class FaceNormal {
         int var12 = 0;
         StringBuilder var13 = null;
         try {
-          var4 = param1.toLowerCase();
+          var4 = text.toLowerCase();
           var5 = null;
           for (var6 = 0; var6 < DimmedPauseMenu.field_P.length; var6++) {
             var7 = DimmedPauseMenu.field_P[var6];
@@ -48,58 +48,58 @@ final class FaceNormal {
               if (var9 != null) {
                 var10 = var9.length();
                 if (var10 != 0) {
-                  var13 = new StringBuilder(param1.length());
+                  var13 = new StringBuilder(text.length());
                   var5 = var13;
                   var11 = 0;
                   while (true) {
                     var12 = var4.indexOf(var9, var11);
                     if (var12 == -1) {
                       if (var11 != 0) {
-                        discarded$8 = ((StringBuilder) (var5)).append(param1.substring(var11, param1.length()));
+                        discarded$8 = ((StringBuilder) (var5)).append(text.substring(var11, text.length()));
                       } else {
-                        var5 = new StringBuilder(param1);
+                        var5 = new StringBuilder(text);
                       }
-                      param1 = ((StringBuilder) (var5)).toString();
-                      var4 = param1.toLowerCase();
+                      text = ((StringBuilder) (var5)).toString();
+                      var4 = text.toLowerCase();
                       break;
                     }
-                    if (var12 > 0 && (ContextMenu.a(var4.charAt(var12 - 1), param2 ^ 22991) ||
+                    if (var12 > 0 && (ContextMenu.a(var4.charAt(var12 - 1), obfuscationGuard ^ 22991) ||
                       var4.charAt(var12 - 1) == 35)) {
                       if (var4.charAt(var12 - 1) != 35) {
-                        discarded$0 = ((StringBuilder) (var5)).append(param1.substring(var11, 1 + var12));
+                        discarded$0 = ((StringBuilder) (var5)).append(text.substring(var11, 1 + var12));
                       } else {
-                        discarded$1 = ((StringBuilder) (var5)).append(param1.substring(var11, -1 + var12));
-                        discarded$2 = ((StringBuilder) (var5)).append(param1.charAt(var12));
+                        discarded$1 = ((StringBuilder) (var5)).append(text.substring(var11, -1 + var12));
+                        discarded$2 = ((StringBuilder) (var5)).append(text.charAt(var12));
                       }
                       var11 = 1 + var12;
                       continue;
                     }
                     if (var4.length() > var12 + var10 &&
                       ContextMenu.a(var4.charAt(var12 + var10), 22987)) {
-                      discarded$3 = ((StringBuilder) (var5)).append(param1.substring(var11, var12 + 1));
+                      discarded$3 = ((StringBuilder) (var5)).append(text.substring(var11, var12 + 1));
                       var11 = 1 + var12;
                       continue;
                     }
-                    discarded$4 = ((StringBuilder) (var5)).append(param1.substring(var11, var12));
-                    if (param3 != null) {
-                      discarded$5 = var13.append(param3);
+                    discarded$4 = ((StringBuilder) (var5)).append(text.substring(var11, var12));
+                    if (prefix != null) {
+                      discarded$5 = var13.append(prefix);
                     }
-                    discarded$6 = ((StringBuilder) (var5)).append(param1.substring(var12, var12 + var10));
+                    discarded$6 = ((StringBuilder) (var5)).append(text.substring(var12, var12 + var10));
                     var11 = var10 + var12;
-                    if (param0 == null) {
+                    if (suffix == null) {
                       continue;
                     }
-                    discarded$7 = var13.append(param0);
+                    discarded$7 = var13.append(suffix);
                   }
                 }
               }
             }
           }
-          if (param2 != 4) {
+          if (obfuscationGuard != 4) {
             field_c = (UiComponent) null;
           }
           if (var5 == null) {
-            stackIn_38_0 = (String) (param1);
+            stackIn_38_0 = (String) (text);
           } else {
             stackIn_38_0 = ((StringBuilder) (var5)).toString();
           }
@@ -109,19 +109,19 @@ final class FaceNormal {
           var4_ref = decompiledCaughtException;
           stackIn_41_0 = var4_ref;
           stackIn_41_1 = new StringBuilder().append("ef.D(");
-          if (param0 == null) {
+          if (suffix == null) {
             stackIn_42_2 = "null";
           } else {
             stackIn_42_2 = "{...}";
           }
           stackIn_44_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',');
-          if (param1 == null) {
+          if (text == null) {
             stackIn_45_2 = "null";
           } else {
             stackIn_45_2 = "{...}";
           }
-          stackIn_47_1 = ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_47_1 = ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(obfuscationGuard).append(',');
+          if (prefix == null) {
             stackIn_48_2 = "null";
           } else {
             stackIn_48_2 = "{...}";
@@ -130,7 +130,7 @@ final class FaceNormal {
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeRuleDescriptions(int obfuscationGuard) {
         LocalGameSetupScreen.field_L = new String[ClientInputResetSupport.field_a];
         LocalGameSetupScreen.field_L[11] = LoginResponse.rule22;
         LocalGameSetupScreen.field_L[18] = ContextMenu.rule12;
@@ -138,9 +138,9 @@ final class FaceNormal {
         LocalGameSetupScreen.field_L[9] = ArchiveAvailabilitySupport.rule01;
         LocalGameSetupScreen.field_L[20] = ModelInstance.rule14;
         LocalGameSetupScreen.field_L[4] = PlayingSound.rule05;
-        if (param0 >= -12) {
+        if (obfuscationGuard >= -12) {
           String var2 = (String) null;
-          FaceNormal.a(20, (Sprite) null, (String) null);
+          FaceNormal.configureMembershipBenefitsBackground(20, (Sprite) null, (String) null);
         }
         LocalGameSetupScreen.field_L[6] = DateInputWidget.rule00;
         LocalGameSetupScreen.field_L[21] = BeveledFrameSpriteFactory.rule21;
@@ -152,15 +152,15 @@ final class FaceNormal {
         LocalGameSetupScreen.field_L[17] = NanoTickClock.rule11;
     }
 
-    final static void a(int param0, Sprite param1, String param2) {
+    final static void configureMembershipBenefitsBackground(int obfuscationGuard, Sprite background, String title) {
         try {
-          AccountWelcomePanel.field_N = param2;
-          if (param0 != -2107) {
+          AccountWelcomePanel.field_N = title;
+          if (obfuscationGuard != -2107) {
             FaceNormal.a(3, 47, -112);
           }
-          ProgressDialog.field_gb = param1;
+          ProgressDialog.field_gb = background;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ef.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ef.B(" + obfuscationGuard + ',' + (background != null ? "{...}" : "null") + ',' + (title != null ? "{...}" : "null") + ')');
         }
     }
 

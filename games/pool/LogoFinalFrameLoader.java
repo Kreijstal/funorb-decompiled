@@ -62,7 +62,7 @@ final class LogoFinalFrameLoader {
         }
     }
 
-    final static void a(String param0, int param1, int param2, int param3, String param4) {
+    final static void setChatHeaderText(String param0, int param1, int param2, int param3, String param4) {
         TimeTrialSelectScreen.field_J.width = TimeTrialSelectScreen.field_J.width + NineBallRules.field_j.width;
         if (param1 != 11468) {
           return;
@@ -91,7 +91,7 @@ final class LogoFinalFrameLoader {
 
     static {
         field_b = 11468;
-        field_f = NameEntryPopup.a(6429081, false, field_b);
+        field_f = NameEntryPopup.multiplyFixed16(6429081, false, field_b);
         field_a = new ServerListLauncher();
         tutorialEightBallBreak = "Now let's \"break\": Shoot the cue ball at the rack (the triangle of balls) now.";
     }

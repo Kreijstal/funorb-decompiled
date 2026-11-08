@@ -130,7 +130,7 @@ final class DebugTuningSupport {
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  ShotEvent.c(-74);
+                  ShotEvent.closeClientSocket(-74);
                 }
                 JaggrabDownloader.field_j.position = 0;
               }

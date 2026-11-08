@@ -31,9 +31,9 @@ final class Camera {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0[0] = PotEvent.a(4885, this.eyeX);
-          param0[1] = PotEvent.a(4885, this.eyeY);
-          param0[2] = PotEvent.a(4885, this.eyeZ);
+          param0[0] = PotEvent.doubleToFixed3(4885, this.eyeX);
+          param0[1] = PotEvent.doubleToFixed3(4885, this.eyeY);
+          param0[2] = PotEvent.doubleToFixed3(4885, this.eyeZ);
           var8 = new double[]{-this.eyeX + this.targetX, this.targetY - this.eyeY, -this.eyeZ + this.targetZ};
           var4 = Math.atan2(Math.sqrt(var8[1] * var8[1] + var8[0] * var8[0]), var8[2]);
           if (!param1) {
@@ -509,7 +509,7 @@ final class Camera {
           if (param16 != 2) {
             return;
           }
-          DebugTuningSlider.a(param17, 26790, param10, param3, param5, param19);
+          DebugTuningSlider.configureTextFrameStyle(param17, 26790, param10, param3, param5, param19);
           GrowableIntListFactory.a(param9, -17, param2);
           SpriteState.a((byte) -82, param11, param8, param15);
           return;

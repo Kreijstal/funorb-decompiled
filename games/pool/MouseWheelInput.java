@@ -162,7 +162,7 @@ abstract class MouseWheelInput {
               break;
             }
             if (var4 == null) {
-              ShotEvent.c(118);
+              ShotEvent.closeClientSocket(118);
               return;
             }
             var5 = var27.readUnsignedByte(-79);
@@ -261,7 +261,7 @@ abstract class MouseWheelInput {
               break;
             }
             if (var6_ref_oj == null) {
-              ShotEvent.c(-101);
+              ShotEvent.closeClientSocket(-101);
               return;
             }
             var6_ref_oj.field_w = var4_long;
@@ -269,7 +269,7 @@ abstract class MouseWheelInput {
             return;
           }
           GrowableIntList.reportClientError((Throwable) null, "HS1: " + PacketDiagnosticsSupport.formatPacketDump(112), -8555);
-          ShotEvent.c(-101);
+          ShotEvent.closeClientSocket(-101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

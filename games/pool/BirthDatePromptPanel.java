@@ -54,7 +54,7 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
               return stackIn_20_0;
             }
             var7 = var5[var6];
-            var8 = Pocket.a(105, var7);
+            var8 = Pocket.validateEmailDomainLabel(105, var7);
             if (var8 == null) {
               var6++;
               continue;

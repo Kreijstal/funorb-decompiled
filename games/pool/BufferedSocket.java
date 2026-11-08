@@ -297,7 +297,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_d) {
             while (0 == this.field_d.field_f) {
-              SoundCache.a(-126, 1L);
+              SoundCache.sleepMillis(-126, 1L);
             }
             if (this.field_d.field_f == 1) {
               try {

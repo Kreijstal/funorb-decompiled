@@ -84,17 +84,17 @@ abstract class Js5Transport {
         }
         var14 = -param9 + param7;
         var15 = -param10 + param5;
-        if (NameEntryPopup.a(var14, false, var12) + NameEntryPopup.a(var15, false, var13) > 0) {
+        if (NameEntryPopup.multiplyFixed16(var14, false, var12) + NameEntryPopup.multiplyFixed16(var15, false, var13) > 0) {
           return -1;
         }
         if (param3 > param1) {
-          param9 = param9 + NameEntryPopup.a(-param1 + param3, false, param4);
-          param10 = param10 + NameEntryPopup.a(param3 - param1, false, param6);
+          param9 = param9 + NameEntryPopup.multiplyFixed16(-param1 + param3, false, param4);
+          param10 = param10 + NameEntryPopup.multiplyFixed16(param3 - param1, false, param6);
           param1 = param3;
           var15 = param5 - param10;
           var14 = param7 - param9;
           var16 = param8 * param8 * 4;
-          var17 = NameEntryPopup.a(var12, false, var12) + NameEntryPopup.a(var13, false, var13);
+          var17 = NameEntryPopup.multiplyFixed16(var12, false, var12) + NameEntryPopup.multiplyFixed16(var13, false, var13);
           if (var17 == 0) {
             return -1;
           }
@@ -108,7 +108,7 @@ abstract class Js5Transport {
               if (0L > var22) {
                 return -1;
               }
-              var24 = IterableNodeHashTable.a(param11 ^ 106, var22);
+              var24 = IterableNodeHashTable.sqrtScaled256(param11 ^ 106, var22);
               if (var24 > 2147483647L) {
                 throw new IllegalStateException("Out of range: 0x" + Long.toString(var24, 16));
               }
@@ -142,7 +142,7 @@ abstract class Js5Transport {
         }
         if (param1 <= param3) {
           var16Lifetime1 = param8 * param8 * 4;
-          var17Lifetime1 = NameEntryPopup.a(var12, false, var12) + NameEntryPopup.a(var13, false, var13);
+          var17Lifetime1 = NameEntryPopup.multiplyFixed16(var12, false, var12) + NameEntryPopup.multiplyFixed16(var13, false, var13);
           if (var17Lifetime1 == 0) {
             return -1;
           }
@@ -156,7 +156,7 @@ abstract class Js5Transport {
               if (0L > var22Lifetime1) {
                 return -1;
               }
-              var24Lifetime1 = IterableNodeHashTable.a(param11 ^ 106, var22Lifetime1);
+              var24Lifetime1 = IterableNodeHashTable.sqrtScaled256(param11 ^ 106, var22Lifetime1);
               if (var24Lifetime1 <= 2147483647L &&
                 var24Lifetime1 >= -2147483648L) {
                 var26Lifetime1 = (int)((-var18Lifetime1 + var24Lifetime1 << 15) / (long)var17Lifetime1);
@@ -188,13 +188,13 @@ abstract class Js5Transport {
           }
           return -1;
         }
-        param7 = param7 + NameEntryPopup.a(-param3 + param1, false, param2);
-        param5 = param5 + NameEntryPopup.a(-param3 + param1, false, param0);
+        param7 = param7 + NameEntryPopup.multiplyFixed16(-param3 + param1, false, param2);
+        param5 = param5 + NameEntryPopup.multiplyFixed16(-param3 + param1, false, param0);
         param3 = param1;
         var14Lifetime1 = param7 - param9;
         var15Lifetime1 = param5 - param10;
         var16Lifetime2 = param8 * param8 * 4;
-        var17Lifetime2 = NameEntryPopup.a(var12, false, var12) + NameEntryPopup.a(var13, false, var13);
+        var17Lifetime2 = NameEntryPopup.multiplyFixed16(var12, false, var12) + NameEntryPopup.multiplyFixed16(var13, false, var13);
         if (var17Lifetime2 == 0) {
           return -1;
         }
@@ -208,7 +208,7 @@ abstract class Js5Transport {
             if (0L > var22Lifetime2) {
               return -1;
             }
-            var24Lifetime2 = IterableNodeHashTable.a(param11 ^ 106, var22Lifetime2);
+            var24Lifetime2 = IterableNodeHashTable.sqrtScaled256(param11 ^ 106, var22Lifetime2);
             if (var24Lifetime2 > 2147483647L) {
               throw new IllegalStateException("Out of range: 0x" + Long.toString(var24Lifetime2, 16));
             }

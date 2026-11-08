@@ -137,7 +137,7 @@ final class AchievementsScreen extends MenuScreen {
           } else {
             if (null == PolarObject.field_g ||
               var6Lifetime1 != AlignedIconLabel.field_Qb) {
-              PolarObject.field_g = FaceNormal.a("</col>", CanvasInputAttachmentSupport.achievementCriteria[var6Lifetime1], (byte) 4, "<col=aaaaff>");
+              PolarObject.field_g = FaceNormal.highlightGlossaryTerms("</col>", CanvasInputAttachmentSupport.achievementCriteria[var6Lifetime1], (byte) 4, "<col=aaaaff>");
               ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(new int[]{var8}, 260, CanvasInputAttachmentSupport.achievementCriteria[var6Lifetime1], 260, CollisionContact.field_h, true, 225);
               AlignedIconLabel.field_Qb = var6Lifetime1;
               IterableDualLinkDeque.field_b = CollisionContact.field_h.measureWrappedHeight(PolarObject.field_g, 260, var8);
@@ -168,7 +168,7 @@ final class AchievementsScreen extends MenuScreen {
         if (this.selection.itemCount == 1) {
           CollisionContact.field_h.drawParagraph(ArchiveAvailabilitySupport.achievementsOnlyInRated, 220, 390, 360, 36, 15658734, -1, 1, 1, 0);
         }
-        var7Lifetime2 = TextureCache.a(104);
+        var7Lifetime2 = TextureCache.getVisibleTooltipIndex(104);
         if (-1 != var7Lifetime2) {
           HotspotRectangle.a((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var7Lifetime2], 15658734, 4144959);
           if (this.field_G != null) {

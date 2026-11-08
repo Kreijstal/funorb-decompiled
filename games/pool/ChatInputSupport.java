@@ -120,7 +120,7 @@ final class ChatInputSupport {
         if (IterableDualLinkDeque.field_a == 85) {
           if (var4 != 0 &&
             Base37Support.field_c.length() > 0) {
-            TikiTableScene.a(' ', -1 + Base37Support.field_c.length(), -2790, Base37Support.field_c);
+            TikiTableScene.resizeStringBuilder(' ', -1 + Base37Support.field_c.length(), -2790, Base37Support.field_c);
             return true;
           }
           return true;
@@ -136,7 +136,7 @@ final class ChatInputSupport {
           discarded$1 = Base37Support.field_c.append((char) var5);
           var6Lifetime1 = 485;
           var65 = ResourceArchive.field_j;
-          var16 = IterableNodeHashTable.a(524288, var65);
+          var16 = IterableNodeHashTable.prependAccountBadge(524288, var65);
           var66 = var16;
           if (CookieDateSupport.field_b != 2) {
             var8Lifetime1 = "";
@@ -204,19 +204,19 @@ final class ChatInputSupport {
               }
             }
             if (RatingTextState.field_c.b(Base37Support.field_c.toString()) > var6Lifetime1) {
-              TikiTableScene.a(' ', -1 + Base37Support.field_c.length(), -2790, Base37Support.field_c);
+              TikiTableScene.resizeStringBuilder(' ', -1 + Base37Support.field_c.length(), -2790, Base37Support.field_c);
             }
             return true;
           }
           var89 = (CharSequence) ((Object) ArrayWidgetGroup.field_I);
-          var78 = AccountWelcomePanel.substituteTemplateArguments(new String[]{WidgetContainer.a(false, var89)}, -1, SpriteSheetLoadSupport.privatequickchatToX);
+          var78 = AccountWelcomePanel.substituteTemplateArguments(new String[]{WidgetContainer.normalizeBase37Name(false, var89)}, -1, SpriteSheetLoadSupport.privatequickchatToX);
           var79 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var16}, -1, UiComponent.privatequickchatFromX);
           var10 = RatingTextState.field_c.b(var78);
           var11 = RatingTextState.field_c.b(var79);
           if (var10 <= var11) {
             var6Lifetime1 = var6Lifetime1 - var11;
             if (RatingTextState.field_c.b(Base37Support.field_c.toString()) > var6Lifetime1) {
-              TikiTableScene.a(' ', -1 + Base37Support.field_c.length(), -2790, Base37Support.field_c);
+              TikiTableScene.resizeStringBuilder(' ', -1 + Base37Support.field_c.length(), -2790, Base37Support.field_c);
             }
             return true;
           }
@@ -224,7 +224,7 @@ final class ChatInputSupport {
           if (RatingTextState.field_c.b(Base37Support.field_c.toString()) <= var6Lifetime1) {
             return true;
           }
-          TikiTableScene.a(' ', -1 + Base37Support.field_c.length(), -2790, Base37Support.field_c);
+          TikiTableScene.resizeStringBuilder(' ', -1 + Base37Support.field_c.length(), -2790, Base37Support.field_c);
         }
         return true;
     }

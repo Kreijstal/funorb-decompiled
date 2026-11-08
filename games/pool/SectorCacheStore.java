@@ -513,7 +513,7 @@ final class SectorCacheStore {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ShotEvent.c(-115);
+                  ShotEvent.closeClientSocket(-115);
                   ArchiveLoadStep.field_e = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
@@ -611,7 +611,7 @@ final class SectorCacheStore {
             }
             if (RankingsScreen.field_J == Quaternion.field_k &&
               PacketAvailabilitySupport.hasCompletePacket((byte) 39)) {
-              ShotEvent.c(-64);
+              ShotEvent.closeClientSocket(-64);
               if (Bzip2DecoderState.field_c == 7 &&
                 !ArchiveLoadStep.field_e) {
                 ArchiveLoadStep.field_e = true;
@@ -628,7 +628,7 @@ final class SectorCacheStore {
             }
             if (null == Atan2Support.field_c) {
               if (ArchiveLoadStep.field_e) {
-                if (30000L >= CushionSegment.d((byte) 118)) {
+                if (30000L >= CushionSegment.millisSinceNetworkActivity((byte) 118)) {
                   LoginTextValue.field_g = DialWidget.loginm2;
                 } else {
                   LoginTextValue.field_g = TabbedPane.loginm3;

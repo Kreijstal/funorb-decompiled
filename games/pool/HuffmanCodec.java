@@ -426,7 +426,7 @@ final class HuffmanCodec {
               }
               var25_int = 0;
               if (null != HighscoresScreen.field_L &&
-                TikiTableScene.e((byte) 85) &&
+                TikiTableScene.isLocalGameOwner((byte) 85) &&
                 var12.playerId != BitmapTextLayout.field_m) {
                 if (null != var12.field_lc.text) {
                   var26 = var12.field_lc.getContentWidth(true) + CueAim.field_j * 2;
@@ -633,7 +633,7 @@ final class HuffmanCodec {
                   }
                 }
                 if (param2 == DualLinkDeque.field_f &&
-                  TikiTableScene.e((byte) 85)) {
+                  TikiTableScene.isLocalGameOwner((byte) 85)) {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var35 + "<br>" + AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var25)}, -1, ProxyConnectorSupport.gameoptTrychanging1);
                   } else {
@@ -647,7 +647,7 @@ final class HuffmanCodec {
                   }
                 }
                 if (param2 == DualLinkDeque.field_f &&
-                  !TikiTableScene.e((byte) 85)) {
+                  !TikiTableScene.isLocalGameOwner((byte) 85)) {
                   var27 = HighscoresScreen.field_L.field_Ob;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + AccountWelcomePanel.substituteTemplateArguments(new String[]{var27}, param4 ^ 82, LoginTextValue.gameoptMightchange);
                 }

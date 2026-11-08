@@ -34,7 +34,7 @@ final class AccountDisplayNameSupport {
         reconnectLostSeq = null;
     }
 
-    final static int inverseSquareRoot(int param0, int param1) {
+    final static int sqrtScaled256(int param0, int param1) {
         int var2;
         int var2Lifetime1;
         if (param0 == 0) {
@@ -87,7 +87,7 @@ final class AccountDisplayNameSupport {
         return KillerBallSkin.field_o[param0 - 32768] << var2Lifetime1;
     }
 
-    final static void a(String param0, int param1, String param2) {
+    final static void showLoginForm(String param0, int param1, String param2) {
         try {
           if (param1 > -116) {
             field_g = (Sprite) null;

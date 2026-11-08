@@ -146,17 +146,17 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
             Under13NoticePanel.a(true, -93);
           }
           if (0 == param3) {
-            DebugTuningSlider.a("terms.ws", -128);
+            DebugTuningSlider.setAccountStatusMessage("terms.ws", -128);
             return;
           }
           if (1 == param3) {
-            DebugTuningSlider.a("privacy.ws", -127);
+            DebugTuningSlider.setAccountStatusMessage("privacy.ws", -127);
             return;
           }
           if (param3 != 2) {
             return;
           }
-          DebugTuningSlider.a("conduct.ws", -127);
+          DebugTuningSlider.setAccountStatusMessage("conduct.ws", -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

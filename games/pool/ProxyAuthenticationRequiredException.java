@@ -47,10 +47,10 @@ final class ProxyAuthenticationRequiredException extends IOException {
 
     final static String toHexString(long param0, int param1) {
         if (param1 == 7697781) {
-          return ResourceArchive.a(param0, 16, false, -112, 6, 10);
+          return ResourceArchive.formatFixedPoint(param0, 16, false, -112, 6, 10);
         }
         field_c = (String[]) null;
-        return ResourceArchive.a(param0, 16, false, -112, 6, 10);
+        return ResourceArchive.formatFixedPoint(param0, 16, false, -112, 6, 10);
     }
 
     ProxyAuthenticationRequiredException(String param0) {

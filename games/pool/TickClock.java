@@ -57,14 +57,14 @@ abstract class TickClock {
         if (param1 == 39) {
           var4 = this.delayMillis(31);
           if (0L < var4) {
-            SoundCache.a(param1 ^ -124, var4);
+            SoundCache.sleepMillis(param1 ^ -124, var4);
           }
           return this.advanceTicks(param0, (byte) 113);
         }
         this.waitAndAdvance(1L, (byte) 114);
         var4Lifetime1 = this.delayMillis(31);
         if (0L < var4Lifetime1) {
-          SoundCache.a(param1 ^ -124, var4Lifetime1);
+          SoundCache.sleepMillis(param1 ^ -124, var4Lifetime1);
         }
         return this.advanceTicks(param0, (byte) 113);
     }

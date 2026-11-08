@@ -410,7 +410,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                 }
               }
             } else {
-              LoginRequiredScreen.f(35);
+              LoginRequiredScreen.showAccountCreationForm(35);
             }
           } else {
             this.submitLogin(-1);

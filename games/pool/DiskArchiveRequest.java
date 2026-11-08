@@ -37,24 +37,24 @@ final class DiskArchiveRequest extends ArchiveRequest {
         if (!param0) {
           return this.field_Q;
         }
-        DiskArchiveRequest.a((byte) -47, -118, 74);
+        DiskArchiveRequest.floorDividePositiveDivisor((byte) -47, -118, 74);
         return this.field_Q;
     }
 
-    final static int[] a(int param0, int param1) {
-        if (param0 == -9) {
-          return param1 != 0 ? param1 == 8 ? CollisionContact.field_q : 8 <= param1 ? TextInputPainter.field_r : PotEvent.field_p : MembershipBenefitsLoader.field_e;
+    final static int[] getBallGlowPalette(int obfuscationGuard, int ballIndex) {
+        if (obfuscationGuard == -9) {
+          return ballIndex != 0 ? ballIndex == 8 ? CollisionContact.field_q : 8 <= ballIndex ? TextInputPainter.field_r : PotEvent.field_p : MembershipBenefitsLoader.field_e;
         }
         return (int[]) null;
     }
 
-    final static int a(byte param0, int param1, int param2) {
-        int var3 = param2 >>> 31;
-        if (param0 == 44) {
-          return -var3 + (param2 + var3) / param1;
+    final static int floorDividePositiveDivisor(byte obfuscationGuard, int divisor, int value) {
+        int var3 = value >>> 31;
+        if (obfuscationGuard == 44) {
+          return -var3 + (value + var3) / divisor;
         }
         menuRestartGame = (String) null;
-        return -var3 + (param2 + var3) / param1;
+        return -var3 + (value + var3) / divisor;
     }
 
     DiskArchiveRequest() {

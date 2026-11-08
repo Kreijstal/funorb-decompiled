@@ -165,7 +165,7 @@ final class ReflectionRequestSupport {
         if (param1 != 0) {
           return -51;
         }
-        return NameEntryPopup.a(param3, false, NameEntryPopup.a(param2, false, param0));
+        return NameEntryPopup.multiplyFixed16(param3, false, NameEntryPopup.multiplyFixed16(param2, false, param0));
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {

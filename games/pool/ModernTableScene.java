@@ -761,7 +761,7 @@ final class ModernTableScene extends ModelTableScene {
           var16Lifetime1 = var2Lifetime8;
           var37 = this.field_gb.field_b;
           var18Lifetime1 = var15;
-          OptionsScreen.a(var18Lifetime1, this.field_M[var16Lifetime1][1], this.field_M[var16Lifetime1][2], 1, var37, this.field_M[var16Lifetime1][0], this.field_O[var16Lifetime1]);
+          OptionsScreen.createOppositeSceneNodes(var18Lifetime1, this.field_M[var16Lifetime1][1], this.field_M[var16Lifetime1][2], 1, var37, this.field_M[var16Lifetime1][0], this.field_O[var16Lifetime1]);
           var15 += 2;
         }
         var12.normalizeOffsets(0);
@@ -1000,7 +1000,7 @@ final class ModernTableScene extends ModelTableScene {
           this.field_A = new CueStick();
           this.field_A.a(MeshBuilder.loadFromArchive(param0, "", "cues/classic_cue"), (byte) -121);
           for (var4 = 0; var4 < this.field_O.length; var4++) {
-            VerticalScrollbar.a(0, this.field_O[var4]);
+            VerticalScrollbar.swapMeshYAndZ(0, this.field_O[var4]);
           }
           var5 = 2147483647;
           var6 = -2147483648;

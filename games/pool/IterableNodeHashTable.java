@@ -23,7 +23,7 @@ final class IterableNodeHashTable {
             param1.unlink((byte) -117);
           }
           if (param0 >= -112) {
-            IterableNodeHashTable.a(-17, 57L);
+            IterableNodeHashTable.sqrtScaled256(-17, 57L);
           }
           var5 = this.field_g[(int)(param2 & (long)(this.field_b - 1))];
           param1.previous = var5;
@@ -49,7 +49,7 @@ final class IterableNodeHashTable {
         field_e = null;
     }
 
-    final static String a(int param0, String param1) {
+    final static String prependAccountBadge(int obfuscationGuard, String text) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_8_0 = null;
@@ -58,24 +58,24 @@ final class IterableNodeHashTable {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 524288) {
+          if (obfuscationGuard != 524288) {
             field_c = (int[]) null;
           }
           var2_int = LogoMaterial.b(TutorialController.field_i, GradientPaletteSupport.field_f, -21223);
           if (1 == var2_int) {
-            param1 = "<img=0>" + param1;
+            text = "<img=0>" + text;
           }
           if (var2_int == 2) {
-            param1 = "<img=1>" + param1;
+            text = "<img=1>" + text;
           }
-          stackIn_8_0 = (String) (param1);
+          stackIn_8_0 = (String) (text);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_11_0 = var2;
-          stackIn_11_1 = new StringBuilder().append("bm.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("bm.D(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
@@ -84,10 +84,10 @@ final class IterableNodeHashTable {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void updateDrawOfferLabel(boolean obfuscationGuard) {
         int var2;
         var2 = Pool.field_O;
-        if (param0) {
+        if (obfuscationGuard) {
           return;
         }
         if ((1 << AccountContentDialog.field_ub.localPlayerIndex & AccountContentDialog.field_ub.gameModel.field_x) != 0) {
@@ -152,7 +152,7 @@ final class IterableNodeHashTable {
         return var2;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean hasUniformCharacters(String text, int obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -163,16 +163,16 @@ final class IterableNodeHashTable {
         RuntimeException decompiledCaughtException = null;
         var4 = Pool.field_O;
         try {
-          var2_int = param0.charAt(0);
+          var2_int = text.charAt(0);
           var3 = 1;
-          if (param1 > -103) {
+          if (obfuscationGuard > -103) {
             endgame = (String) null;
           }
           while (true) {
-            if (var3 >= param0.length()) {
+            if (var3 >= text.length()) {
               return true;
             }
-            if (var2_int == param0.charAt(var3)) {
+            if (var2_int == text.charAt(var3)) {
               var3++;
               continue;
             }
@@ -184,115 +184,115 @@ final class IterableNodeHashTable {
           var2 = decompiledCaughtException;
           stackIn_12_0 = var2;
           stackIn_12_1 = new StringBuilder().append("bm.E(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static long a(int param0, long param1) {
+    final static long sqrtScaled256(int obfuscationGuard, long value) {
         int var3;
         String var4;
         int var3Lifetime1;
-        if (0L == param1) {
+        if (0L == value) {
           return 0L;
         }
-        if (param0 > -94) {
+        if (obfuscationGuard > -94) {
           var4 = (String) null;
-          IterableNodeHashTable.a(47, (String) null);
+          IterableNodeHashTable.prependAccountBadge(47, (String) null);
         }
-        if (0L > param1) {
+        if (0L > value) {
           throw new IllegalArgumentException("");
         }
-        if (param1 < 32768L) {
-          if (128L > param1) {
-            if (param1 >= 8L) {
-              if (param1 < 32L) {
+        if (value < 32768L) {
+          if (128L > value) {
+            if (value >= 8L) {
+              if (value < 32L) {
                 var3 = 6;
               } else {
                 var3 = 5;
               }
             } else {
-              if (param1 < 2L) {
+              if (value < 2L) {
                 return 256L;
               }
               var3 = 7;
             }
           } else {
-            if (param1 < 2048L) {
-              var3 = (512L <= param1) ? 3 : 4;
+            if (value < 2048L) {
+              var3 = (512L <= value) ? 3 : 4;
             } else {
-              var3 = (param1 >= 8192L) ? 1 : 2;
+              var3 = (value >= 8192L) ? 1 : 2;
             }
           }
-          param1 = param1 << (var3 << 1);
-          return (long)(KillerBallSkin.field_o[(int)(param1 - 32768L)] >> var3);
+          value = value << (var3 << 1);
+          return (long)(KillerBallSkin.field_o[(int)(value - 32768L)] >> var3);
         }
-        if (131072L > param1) {
-          return (long)KillerBallSkin.field_o[(int)(-32768L + param1)];
+        if (131072L > value) {
+          return (long)KillerBallSkin.field_o[(int)(-32768L + value)];
         }
-        if (param1 < 549755813888L) {
-          if (param1 < 134217728L) {
-            if (param1 >= 2097152L) {
-              if (param1 >= 33554432L) {
+        if (value < 549755813888L) {
+          if (value < 134217728L) {
+            if (value >= 2097152L) {
+              if (value >= 33554432L) {
                 var3Lifetime1 = 5;
               } else {
-                var3Lifetime1 = (param1 < 8388608L) ? 3 : 4;
+                var3Lifetime1 = (value < 8388608L) ? 3 : 4;
               }
             } else {
-              var3Lifetime1 = (param1 < 524288L) ? 1 : 2;
+              var3Lifetime1 = (value < 524288L) ? 1 : 2;
             }
           } else {
-            if (8589934592L > param1) {
-              if (param1 < 2147483648L) {
-                var3Lifetime1 = (param1 < 536870912L) ? 6 : 7;
+            if (8589934592L > value) {
+              if (value < 2147483648L) {
+                var3Lifetime1 = (value < 536870912L) ? 6 : 7;
               } else {
                 var3Lifetime1 = 8;
               }
             } else {
-              if (param1 < 137438953472L) {
-                var3Lifetime1 = (param1 >= 34359738368L) ? 10 : 9;
+              if (value < 137438953472L) {
+                var3Lifetime1 = (value >= 34359738368L) ? 10 : 9;
               } else {
                 var3Lifetime1 = 11;
               }
             }
           }
         } else {
-          if (param1 < 2251799813685248L) {
-            if (param1 < 35184372088832L) {
-              if (param1 < 8796093022208L) {
-                var3Lifetime1 = (param1 >= 2199023255552L) ? 13 : 12;
+          if (value < 2251799813685248L) {
+            if (value < 35184372088832L) {
+              if (value < 8796093022208L) {
+                var3Lifetime1 = (value >= 2199023255552L) ? 13 : 12;
               } else {
                 var3Lifetime1 = 14;
               }
             } else {
-              if (param1 < 562949953421312L) {
-                var3Lifetime1 = (param1 < 140737488355328L) ? 15 : 16;
+              if (value < 562949953421312L) {
+                var3Lifetime1 = (value < 140737488355328L) ? 15 : 16;
               } else {
                 var3Lifetime1 = 17;
               }
             }
           } else {
-            if (param1 >= 144115188075855872L) {
-              if (param1 < 2305843009213693952L) {
-                var3Lifetime1 = (param1 < 576460752303423488L) ? 21 : 22;
+            if (value >= 144115188075855872L) {
+              if (value < 2305843009213693952L) {
+                var3Lifetime1 = (value < 576460752303423488L) ? 21 : 22;
               } else {
                 var3Lifetime1 = 23;
               }
             } else {
-              if (param1 >= 36028797018963968L) {
+              if (value >= 36028797018963968L) {
                 var3Lifetime1 = 20;
               } else {
-                var3Lifetime1 = (9007199254740992L <= param1) ? 19 : 18;
+                var3Lifetime1 = (9007199254740992L <= value) ? 19 : 18;
               }
             }
           }
         }
-        param1 = param1 >> (var3Lifetime1 << 1);
-        return (long)KillerBallSkin.field_o[(int)(-32768L + param1)] << var3Lifetime1;
+        value = value >> (var3Lifetime1 << 1);
+        return (long)KillerBallSkin.field_o[(int)(-32768L + value)] << var3Lifetime1;
     }
 
     IterableNodeHashTable(int param0) {

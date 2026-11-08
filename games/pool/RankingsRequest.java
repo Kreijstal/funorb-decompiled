@@ -20,8 +20,8 @@ final class RankingsRequest extends IntrusiveNode {
     int field_y;
     static String tutorialEightBallAfterbreak;
 
-    final static void c(byte param0) {
-        int var1 = 27 / ((param0 - 59) / 62);
+    final static void readAccountDisplayName(byte obfuscationGuard) {
+        int var1 = 27 / ((obfuscationGuard - 59) / 62);
         ResourceArchive.field_j = PlayerContextMenu.field_e.j(-100);
         CharSequence var2 = (CharSequence) ((Object) ResourceArchive.field_j);
         HighScoreSubmission.field_y = TutorialController.normalizeDisplayName(110, var2);

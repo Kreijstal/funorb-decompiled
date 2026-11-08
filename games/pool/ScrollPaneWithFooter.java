@@ -116,7 +116,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         return TriangleRasterizer.sineTable[param0 & 2047];
     }
 
-    final static void a(byte param0, int param1, BitmapFont param2, BitmapFont param3) {
+    final static void configureSharedTextStyle(byte param0, int param1, BitmapFont param2, BitmapFont param3) {
         try {
           DraggableWidget.field_T = param1;
           ProgressBarWidget.field_R = param3;

@@ -3185,7 +3185,7 @@ final class TranslatedUiText {
           if (var2 != 0) {
             if (var2 != 1) {
               GrowableIntList.reportClientError((Throwable) null, "A1: " + PacketDiagnosticsSupport.formatPacketDump(93), -8555);
-              ShotEvent.c(120);
+              ShotEvent.closeClientSocket(120);
               if (var6 == 0) {
                 return;
               }
@@ -3213,13 +3213,13 @@ final class TranslatedUiText {
                 }
                 stackIn_21_0 = 77;
               }
-              ShotEvent.c(stackIn_21_0);
+              ShotEvent.closeClientSocket(stackIn_21_0);
               return;
             }
           }
           var3 = (ModelOriginSupport) (LoginTextValue.field_f.last((byte) -101));
           if (var3 == null) {
-            ShotEvent.c(116);
+            ShotEvent.closeClientSocket(116);
             return;
           }
           var4 = var1.readUnsignedByte(-70);
@@ -3233,7 +3233,7 @@ final class TranslatedUiText {
           }
           var1.position = var1.position + 4;
           if (!var1.verifyChecksum(false)) {
-            ShotEvent.c(112);
+            ShotEvent.closeClientSocket(112);
             return;
           }
           var3.unlink((byte) -117);

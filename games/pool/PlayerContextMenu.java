@@ -296,7 +296,7 @@ final class PlayerContextMenu {
         if (null != this.field_m &&
           this.field_l != BitmapTextLayout.field_m &&
           null != HighscoresScreen.field_L &&
-          TikiTableScene.e((byte) 85)) {
+          TikiTableScene.isLocalGameOwner((byte) 85)) {
           var6 = LobbyPlayerLookupSupport.findLobbyPlayer(param0 ^ 124, this.field_l);
           var4 = QuickChatHelpDialog.b(this.field_l, 0);
           var5 = this.getTargetName(3);

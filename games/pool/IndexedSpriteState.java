@@ -48,7 +48,7 @@ abstract class IndexedSpriteState {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, boolean param6) {
+    final static void sortVisibleFaces(int param0, int param1, int param2, int param3, int param4, byte param5, boolean param6) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_27_0 = 0;
@@ -104,8 +104,8 @@ abstract class IndexedSpriteState {
                 }
               }
             }
-            IndexedSpriteState.a(var9, var8, param2, param3, param4, (byte) -95, param6);
-            IndexedSpriteState.a(param0, param1, var8, var10, param4, (byte) -99, param6);
+            IndexedSpriteState.sortVisibleFaces(var9, var8, param2, param3, param4, (byte) -95, param6);
+            IndexedSpriteState.sortVisibleFaces(param0, param1, var8, var10, param4, (byte) -99, param6);
             return;
           }
           for (var7_intLifetime1 = param1 - 1; var7_intLifetime1 > param2; var7_intLifetime1--) {
@@ -143,11 +143,11 @@ abstract class IndexedSpriteState {
         field_c = null;
     }
 
-    final static int a(int param0, int param1, byte param2) {
-        if (param2 != 99) {
+    final static int projectX(int depth, int x, byte obfuscationGuard) {
+        if (obfuscationGuard != 99) {
           IndexedSpriteState.fixedToDouble((byte) 28, -74, 125L);
         }
-        return (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 2) + (param1 << 11) / param0;
+        return (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 2) + (x << 11) / depth;
     }
 
     static {

@@ -11,7 +11,7 @@ final class AchievementNotice extends IntrusiveNode {
     static String foulExclamation;
     static boolean field_o;
 
-    final static void a(int param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void configureMembershipBenefitsHeader(int param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           Ball.field_m = param4;
           AppletUrlSupport.field_h = param3;
@@ -29,7 +29,7 @@ final class AchievementNotice extends IntrusiveNode {
         }
     }
 
-    final static int a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static int addEarliestContact(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_25_0 = 0;
         int stackIn_30_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -166,7 +166,7 @@ final class AchievementNotice extends IntrusiveNode {
         field_q = null;
         field_r = null;
         if (param0 > -16) {
-          AchievementNotice.a((byte) -80, 69, -63, -22, -2, -27, -72);
+          AchievementNotice.addEarliestContact((byte) -80, 69, -63, -22, -2, -27, -72);
         }
     }
 

@@ -73,7 +73,7 @@ final class SpaceTableScene extends ModelTableScene {
             }
             break;
           }
-          CushionSegment.b((byte) 98);
+          CushionSegment.updateProjectedAxisAngle((byte) 98);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -801,7 +801,7 @@ final class SpaceTableScene extends ModelTableScene {
           this.field_A = new CueStick();
           this.field_A.a(MeshBuilder.loadFromArchive(param0, "", "cues/space_cue"), (byte) -115);
           for (var4 = 0; this.field_O.length > var4; var4++) {
-            VerticalScrollbar.a(0, this.field_O[var4]);
+            VerticalScrollbar.swapMeshYAndZ(0, this.field_O[var4]);
           }
           var5 = 2147483647;
           var6 = -2147483648;
@@ -919,7 +919,7 @@ final class SpaceTableScene extends ModelTableScene {
           var4 = var2Lifetime1;
           var14 = RankingsProtocolSupport.field_c.field_b;
           var6 = var3;
-          OptionsScreen.a(var6, this.field_M[var4][1], this.field_M[var4][2], 1, var14, this.field_M[var4][0], this.field_O[var4]);
+          OptionsScreen.createOppositeSceneNodes(var6, this.field_M[var4][1], this.field_M[var4][2], 1, var14, this.field_M[var4][0], this.field_O[var4]);
           var3 += 2;
         }
         if (!param0) {
@@ -965,7 +965,7 @@ final class SpaceTableScene extends ModelTableScene {
             var6 = MaxLengthTextInputWidget.nextRandomInt(255, param0, RankingsRequest.field_r) - 127;
             var7 = 256;
             var10 = var4 * var4 + (var5 * var5 + var6 * var6);
-            var8 = AccountDisplayNameSupport.inverseSquareRoot(var10, -121);
+            var8 = AccountDisplayNameSupport.sqrtScaled256(var10, -121);
           } while (var8 == 0);
           CacheEntry.field_C[0][var9] = (var7 * var4 << 8) / var8;
           CacheEntry.field_C[1][var9] = (var5 * var7 << 8) / var8;

@@ -212,7 +212,7 @@ final class NameEntryPopup extends UiComponent {
         }
         if (85 == IterableDualLinkDeque.field_a &&
           !(this.nameBuffer.length() <= 0)) {
-          TikiTableScene.a(' ', this.nameBuffer.length() - 1, -2790, this.nameBuffer);
+          TikiTableScene.resizeStringBuilder(' ', this.nameBuffer.length() - 1, -2790, this.nameBuffer);
         }
         if (this.nameBuffer.length() < 12) {
           var2 = Character.toLowerCase(LoginMethod.field_b);
@@ -259,7 +259,7 @@ final class NameEntryPopup extends UiComponent {
         try {
           var2 = LoginPayload.readCookie(-21721, "jagex-last-login-method", applet);
           if (obfuscationGuard != 5137) {
-            NameEntryPopup.a(-103, false, 80);
+            NameEntryPopup.multiplyFixed16(-103, false, 80);
           }
           if (var2 == null) {
             stackIn_4_0 = BitmapTextLayout.field_l;
@@ -295,35 +295,35 @@ final class NameEntryPopup extends UiComponent {
         }
     }
 
-    final static int a(int param0, boolean param1, int param2) {
+    final static int multiplyFixed16(int left, boolean obfuscationGuard, int right) {
         long var3;
         String var5;
-        var3 = (long)param2 * (long)param0;
+        var3 = (long)right * (long)left;
         if ((255L & var3 >> 47) != 0L &&
           255L != (255L & var3 >> 47)) {
-          var3 = ((long)param2 >> 8) * ((long)param0 >> 8);
+          var3 = ((long)right >> 8) * ((long)left >> 8);
         } else {
           var3 = var3 >> 16;
         }
-        if (param1) {
+        if (obfuscationGuard) {
           var5 = (String) null;
           NameEntryPopup.loadSpritesByName(23, (String) null, (ResourceArchive) null, (String) null);
         }
-        if (0 > param2 &&
-          0 > param0 &&
+        if (0 > right &&
+          0 > left &&
           var3 < 0L) {
-          throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + param2 + "[" + WidgetStyleLayer.b(126, param2) + ", " + Integer.toString(param2, 16) + "], " + param0 + "[" + WidgetStyleLayer.b(126, param0) + ", " + Integer.toString(param0, 16) + "]) and got a negative number: " + var3 + "[" + PotEvent.a((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + right + "[" + WidgetStyleLayer.b(126, right) + ", " + Integer.toString(right, 16) + "], " + left + "[" + WidgetStyleLayer.b(126, left) + ", " + Integer.toString(left, 16) + "]) and got a negative number: " + var3 + "[" + PotEvent.fixed16ToDouble((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
         }
-        if ((0 < param2 &&
-          0 > param0 ||
-          param2 < 0 &&
-          param0 > 0) && var3 > 0L) {
-          throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + param2 + "[" + WidgetStyleLayer.b(127, param2) + ", " + Integer.toString(param2, 16) + "], " + param0 + "[" + WidgetStyleLayer.b(126, param0) + ", " + Integer.toString(param0, 16) + "]) and got a positive number: " + var3 + "[" + PotEvent.a((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
+        if ((0 < right &&
+          0 > left ||
+          right < 0 &&
+          left > 0) && var3 > 0L) {
+          throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + right + "[" + WidgetStyleLayer.b(127, right) + ", " + Integer.toString(right, 16) + "], " + left + "[" + WidgetStyleLayer.b(126, left) + ", " + Integer.toString(left, 16) + "]) and got a positive number: " + var3 + "[" + PotEvent.fixed16ToDouble((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
         }
-        if (param2 > 0 &&
-          0 < param0 &&
+        if (right > 0 &&
+          0 < left &&
           var3 < 0L) {
-          throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + param2 + "[" + WidgetStyleLayer.b(126, param2) + ", " + Integer.toString(param2, 16) + "], " + param0 + "[" + WidgetStyleLayer.b(127, param0) + ", " + Integer.toString(param0, 16) + "]) and got a negative number: " + var3 + "[" + PotEvent.a((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + right + "[" + WidgetStyleLayer.b(126, right) + ", " + Integer.toString(right, 16) + "], " + left + "[" + WidgetStyleLayer.b(127, left) + ", " + Integer.toString(left, 16) + "]) and got a negative number: " + var3 + "[" + PotEvent.fixed16ToDouble((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
         }
         return (int)var3;
     }
@@ -340,7 +340,7 @@ final class NameEntryPopup extends UiComponent {
           while (LabeledChildWidget.h(127)) {
             if (85 == IterableDualLinkDeque.field_a &&
               this.nameBuffer.length() > 0) {
-              TikiTableScene.a(' ', -1 + this.nameBuffer.length(), -2790, this.nameBuffer);
+              TikiTableScene.resizeStringBuilder(' ', -1 + this.nameBuffer.length(), -2790, this.nameBuffer);
             }
             if (CanvasInputSupport.canAppendNameCharacter(LoginMethod.field_b, (CharSequence) ((Object) this.nameBuffer), 15692) ||
               (this.nameBuffer.length() == 0 &&

@@ -52,7 +52,7 @@ final class ArchiveIndex {
         field_l = null;
     }
 
-    private final void a(byte[] param0, int param1) {
+    private final void decodeIndex(byte[] container, int obfuscationGuard) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int[] array$2 = null;
@@ -99,8 +99,8 @@ final class ArchiveIndex {
         int var13Lifetime1Lifetime1;
         var16 = Pool.field_O;
         try {
-          var17 = new PacketBuffer(CompressedContainerSupport.decompressContainer(0, param0));
-          var4 = var17.readUnsignedByte(param1 ^ 105);
+          var17 = new PacketBuffer(CompressedContainerSupport.decompressContainer(0, container));
+          var4 = var17.readUnsignedByte(obfuscationGuard ^ 105);
           if (var4 >= 5 &&
             var4 <= 7) {
             if (var4 >= 6) {
@@ -120,10 +120,10 @@ final class ArchiveIndex {
             var7 = stackIn_17_0;
             var8 = 0;
             this.groupIds = new int[this.groupCount];
-            var9 = param1;
+            var9 = obfuscationGuard;
             if (7 <= var4) {
               for (var10 = 0; var10 < this.groupCount; var10++) {
-                dupTemp$0 = var8 + var17.readSmartInt(TutorialFactory.bitwiseXor(param1, 82));
+                dupTemp$0 = var8 + var17.readSmartInt(TutorialFactory.bitwiseXor(obfuscationGuard, 82));
                 var8 = dupTemp$0;
                 this.groupIds[var10] = dupTemp$0;
                 if (this.groupIds[var10] > var9) {
@@ -132,7 +132,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10 = 0; this.groupCount > var10; var10++) {
-                dupTemp$1 = var8 + var17.readUnsignedShort(TutorialFactory.bitwiseXor(param1, 1033));
+                dupTemp$1 = var8 + var17.readUnsignedShort(TutorialFactory.bitwiseXor(obfuscationGuard, 1033));
                 var8 = dupTemp$1;
                 this.groupIds[var10] = dupTemp$1;
                 if (this.groupIds[var10] > var9) {
@@ -174,7 +174,7 @@ final class ArchiveIndex {
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; this.groupCount > var10Lifetime5; var10Lifetime5++) {
-                this.groupFileCounts[this.groupIds[var10Lifetime5]] = var17.readSmartInt(TutorialFactory.bitwiseXor(param1, -103));
+                this.groupFileCounts[this.groupIds[var10Lifetime5]] = var17.readSmartInt(TutorialFactory.bitwiseXor(obfuscationGuard, -103));
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.groupCount; var10Lifetime5++) {
                 var11 = this.groupIds[var10Lifetime5];
@@ -200,7 +200,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.groupCount; var10Lifetime5++) {
-                this.groupFileCounts[this.groupIds[var10Lifetime5]] = var17.readUnsignedShort(param1 - 1033);
+                this.groupFileCounts[this.groupIds[var10Lifetime5]] = var17.readUnsignedShort(obfuscationGuard - 1033);
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.groupCount; var10Lifetime5++) {
                 var11 = this.groupIds[var10Lifetime5];
@@ -256,12 +256,12 @@ final class ArchiveIndex {
           var3 = decompiledCaughtException;
           stackIn_98_0 = var3;
           stackIn_98_1 = new StringBuilder().append("ad.D(");
-          if (param0 == null) {
+          if (container == null) {
             stackIn_99_2 = "null";
           } else {
             stackIn_99_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class ArchiveIndex {
               }
             }
           }
-          this.a(param0, -1);
+          this.decodeIndex(param0, -1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

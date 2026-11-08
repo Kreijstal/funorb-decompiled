@@ -77,7 +77,7 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
 
     final static void b(boolean param0) {
         try {
-          OptionsScreen.f(-1);
+          OptionsScreen.resetAccountFormState(-1);
           DualLinkDeque.field_c = true;
           ProjectedVertex.field_e = true;
           TabbedPane.field_Ub.hideAllDialogs(-22216);
@@ -167,7 +167,7 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
             }
             if (var2 != 4) {
               GrowableIntList.reportClientError((Throwable) null, "F1: " + PacketDiagnosticsSupport.formatPacketDump(93), param0 ^ -21796);
-              ShotEvent.c(99);
+              ShotEvent.closeClientSocket(99);
               return;
             }
             ChatInputSupport.field_a = 1;

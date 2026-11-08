@@ -15,43 +15,43 @@ final class GlowParticle {
     short field_k;
     boolean field_c;
 
-    private final void a(int[] param0, int param1, int param2, int param3, int param4) {
+    private final void drawProjectedGlow(int[] cameraTransform, int x, int y, int z, int radiusScale) {
         int var6;
         int var7;
         int var8;
         int var9;
         int var10;
         int var11;
-        var6 = param1 - param0[0];
-        var7 = param2 - param0[1];
-        var8 = param3 - 64 - param0[2];
-        var9 = param0[9] * var6 + param0[10] * var7 + param0[11] * var8 >> 16;
+        var6 = x - cameraTransform[0];
+        var7 = y - cameraTransform[1];
+        var8 = z - 64 - cameraTransform[2];
+        var9 = cameraTransform[9] * var6 + cameraTransform[10] * var7 + cameraTransform[11] * var8 >> 16;
         if (var9 > 0) {
-          var10 = (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 4) + (param0[3] * var6 + param0[4] * var7 + param0[5] * var8 >> 3) / var9;
-          var11 = (SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 4) + (param0[6] * var6 + param0[7] * var7 + param0[8] * var8 >> 3) / var9;
-          param4 = param4 / var9;
-          if (param4 > -23170 &&
-            param4 < 23170) {
-            SoftwareRasterizer.fillRadialGlow(var10, var11, param4, 4, FontPaletteSupport.field_c);
+          var10 = (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 4) + (cameraTransform[3] * var6 + cameraTransform[4] * var7 + cameraTransform[5] * var8 >> 3) / var9;
+          var11 = (SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 4) + (cameraTransform[6] * var6 + cameraTransform[7] * var7 + cameraTransform[8] * var8 >> 3) / var9;
+          radiusScale = radiusScale / var9;
+          if (radiusScale > -23170 &&
+            radiusScale < 23170) {
+            SoftwareRasterizer.fillRadialGlow(var10, var11, radiusScale, 4, FontPaletteSupport.field_c);
           }
         }
     }
 
-    final void a(int param0, int[] param1) {
+    final void draw(int radiusScale, int[] cameraTransform) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param1, this.field_e, this.field_i, this.field_d, param0);
+          this.drawProjectedGlow(cameraTransform, this.field_e, this.field_i, this.field_d, radiusScale);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_5_0 = runtimeException;
-          stackIn_5_1 = new StringBuilder().append("dk.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_5_1 = new StringBuilder().append("dk.C(").append(radiusScale).append(',');
+          if (cameraTransform == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
@@ -78,14 +78,14 @@ final class GlowParticle {
           var5_long = param3.horizontalSpeedSquared(-14770);
           var7 = param0 - param3.positionX;
           var8 = -param3.positionY + param4;
-          var9 = IterableNodeHashTable.a(-107, FullscreenFocusCanvas.multiplyFixedChecked((long)var7, (long)var7, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var8, (long)var8, false));
+          var9 = IterableNodeHashTable.sqrtScaled256(-107, FullscreenFocusCanvas.multiplyFixedChecked((long)var7, (long)var7, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var8, (long)var8, false));
           if (var9 <= 2147483647L &&
             var9 >= -2147483648L) {
             var7 = ArchiveProvider.divideFixed16((int)var9, (byte) -96, (long)var7);
             var8 = ArchiveProvider.divideFixed16((int)var9, (byte) -85, (long)var8);
-            var11 = NameEntryPopup.a(var7, false, param3.velocityX) + NameEntryPopup.a(var8, false, param3.velocityY);
-            param3.velocityX = param3.velocityX - 2 * NameEntryPopup.a(var11, false, var7);
-            param3.velocityY = param3.velocityY - NameEntryPopup.a(var11, false, var8) * 2;
+            var11 = NameEntryPopup.multiplyFixed16(var7, false, param3.velocityX) + NameEntryPopup.multiplyFixed16(var8, false, param3.velocityY);
+            param3.velocityX = param3.velocityX - 2 * NameEntryPopup.multiplyFixed16(var11, false, var7);
+            param3.velocityY = param3.velocityY - NameEntryPopup.multiplyFixed16(var11, false, var8) * 2;
             param3.angularVelocityX = param3.angularVelocityX * MusicPatchEnvelope.field_m >> 8;
             param3.motionState = 1;
             param3.angularVelocityY = param3.angularVelocityY * MusicPatchEnvelope.field_m >> 8;
@@ -121,21 +121,21 @@ final class GlowParticle {
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void moveTo(int x, byte obfuscationGuard, int y) {
         try {
-          this.field_k = (short)(param2 - this.field_i);
-          this.field_b = (short)(param0 - this.field_e);
-          this.field_i = param2;
-          this.field_e = param0;
-          if (param1 != 78) {
+          this.field_k = (short)(y - this.field_i);
+          this.field_b = (short)(x - this.field_e);
+          this.field_i = y;
+          this.field_e = x;
+          if (obfuscationGuard != 78) {
             GlowParticle.formatProgressLabel((byte) -28, (String) null, (ResourceArchive) null, (String) null, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dk.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dk.G(" + x + ',' + obfuscationGuard + ',' + y + ')');
         }
     }
 
-    final static String a(int param0) {
+    final static String updateChatHeader(int obfuscationGuard) {
         String stackIn_59_0 = null;
         Object stackIn_97_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -151,7 +151,7 @@ final class GlowParticle {
         int var10 = 0;
         var10 = Pool.field_O;
         try {
-          if (param0 != 1) {
+          if (obfuscationGuard != 1) {
             GlowParticle.formatProgressLabel((byte) -62, (String) null, (ResourceArchive) null, (String) null, (String) null);
           }
           var1 = null;
@@ -164,7 +164,7 @@ final class GlowParticle {
             !SupportPageLauncher.a(false)) {
             boolean decompiledSharedTail2 = !(!DialogLayer.a(ResourceArchive.field_a, -1));
             if (!decompiledSharedTail2) {
-              var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ArrayWidgetGroup.field_I}, param0 ^ -2, LookupRetrySupport.privatechatFriendNotlisted);
+              var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ArrayWidgetGroup.field_I}, obfuscationGuard ^ -2, LookupRetrySupport.privatechatFriendNotlisted);
               decompiledSharedTail2 = (var10 != 0);
             }
             if (decompiledSharedTail2) {
@@ -181,10 +181,10 @@ final class GlowParticle {
             var2 = NineBallRules.chatviewscrolledup;
           }
           if (var2 != null) {
-            LogoFinalFrameLoader.a((String) null, param0 + 11467, FreePlayRules.field_g, 0, (String) (var2));
+            LogoFinalFrameLoader.setChatHeaderText((String) null, obfuscationGuard + 11467, FreePlayRules.field_g, 0, (String) (var2));
           } else {
             var3 = ResourceArchive.field_j;
-            var3 = IterableNodeHashTable.a(524288, var3);
+            var3 = IterableNodeHashTable.prependAccountBadge(524288, var3);
             var4 = "";
             var5 = "|";
             var6 = CookieDateSupport.field_b;
@@ -234,7 +234,7 @@ final class GlowParticle {
                 var4 = "<col=999999>" + var4 + ArchiveBootstrapSupport.clickToQuickchat + "</col>";
               }
               var9 = RatingTextState.field_c.b(var4);
-              if (!MenuSelection.b(param0 ^ -2)) {
+              if (!MenuSelection.b(obfuscationGuard ^ -2)) {
                 if (TimeTrialSelectScreen.field_J.activeInside &&
                   -TimeTrialSelectScreen.field_J.screenX + ReflectionReplySupport.field_i < var9) {
                   if (RankingsRequest.field_z) {
@@ -250,7 +250,7 @@ final class GlowParticle {
                 }
               }
             }
-            LogoFinalFrameLoader.a(var5, 11468, Ball.field_F[var6], var7, var4 + BitmapFont.escapeMarkup(Base37Support.field_c.toString()));
+            LogoFinalFrameLoader.setChatHeaderText(var5, 11468, Ball.field_F[var6], var7, var4 + BitmapFont.escapeMarkup(Base37Support.field_c.toString()));
             if (!DualLinkNode.field_p) {
               NineBallRules.field_j.activeInside = false;
             }
@@ -263,19 +263,19 @@ final class GlowParticle {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) (var1), "dk.E(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) (var1), "dk.E(" + obfuscationGuard + ')');
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void setPosition(int y, int x, byte obfuscationGuard) {
         try {
-          this.field_i = param0;
-          this.field_e = param1;
-          if (param2 <= 21) {
-            this.a(-71, 118, (byte) -96);
+          this.field_i = y;
+          this.field_e = x;
+          if (obfuscationGuard <= 21) {
+            this.setPosition(-71, 118, (byte) -96);
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dk.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dk.A(" + y + ',' + x + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -348,7 +348,7 @@ final class GlowParticle {
         }
     }
 
-    final static void a(UiComponent param0, byte param1) {
+    final static void centerWidgetSpritesVertically(UiComponent widget, byte obfuscationGuard) {
         Sprite var2 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -357,15 +357,15 @@ final class GlowParticle {
         RuntimeException var2_ref = null;
         Sprite var2Lifetime1;
         try {
-          if (param1 != 93) {
+          if (obfuscationGuard != 93) {
             GlowParticle.formatProgressLabel((byte) 91, (String) null, (ResourceArchive) null, (String) null, (String) null);
           }
-          var2 = param0.sprite;
-          var2.field_B = -var2.field_A + param0.height >> 1;
+          var2 = widget.sprite;
+          var2.field_B = -var2.field_A + widget.height >> 1;
           var2.field_y = var2.field_B + var2.field_A;
-          var2Lifetime1 = param0.selectedSprite;
+          var2Lifetime1 = widget.selectedSprite;
           if (null != var2Lifetime1) {
-            var2Lifetime1.field_B = -var2Lifetime1.field_A + param0.height >> 1;
+            var2Lifetime1.field_B = -var2Lifetime1.field_A + widget.height >> 1;
             var2Lifetime1.field_y = var2Lifetime1.field_B + var2Lifetime1.field_A;
           }
           return;
@@ -374,19 +374,19 @@ final class GlowParticle {
           var2_ref = decompiledCaughtException;
           stackIn_11_0 = var2_ref;
           stackIn_11_1 = new StringBuilder().append("dk.I(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     GlowParticle(int param0, int param1) {
         this.field_c = false;
         try {
-          this.a(param1, param0, (byte) 34);
+          this.setPosition(param1, param0, (byte) 34);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + param1 + ')');
         }

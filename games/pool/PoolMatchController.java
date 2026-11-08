@@ -774,7 +774,7 @@ final class PoolMatchController {
             this.idleOrbitDistance = 100;
           }
           LoginForm.field_U.addFirst((byte) 115, new AchievementNotice(achievementId));
-          ProgressBarWidget.a(true, 0, RenderingInitializationSupport.achievementNames[achievementId], FaceNormal.a((String) null, CanvasInputAttachmentSupport.achievementCriteria[achievementId], (byte) 4, (String) null));
+          ProgressBarWidget.a(true, 0, RenderingInitializationSupport.achievementNames[achievementId], FaceNormal.highlightGlossaryTerms((String) null, CanvasInputAttachmentSupport.achievementCriteria[achievementId], (byte) 4, (String) null));
           if (!this.cheatMode) {
             ArchiveIndex.field_l.addFirst((byte) 84, new AchievementSubmission(achievementId, param2, PolarObject.field_f, PacketDecodeState.field_c, field_fb, GlowParticle.field_f + this.clockTicks));
           }
@@ -1442,7 +1442,7 @@ final class PoolMatchController {
           PauseMenuScreen.g(0, var7);
           if (LogoJingleLoader.field_b.enabled &&
             LogoJingleLoader.field_b.activeInside &&
-            -1 != TextureCache.a(104)) {
+            -1 != TextureCache.getVisibleTooltipIndex(104)) {
             this.highlightCurrentGroupBalls((byte) -108);
           }
           RankingsRequest.field_p = RankingsRequest.field_p + 1;
@@ -1576,7 +1576,7 @@ final class PoolMatchController {
                 }
               }
               GrowableIntList.reportClientError(new Throwable(), "Wrong shot!", -8555);
-              ShotEvent.c(-115);
+              ShotEvent.closeClientSocket(-115);
               if (var5 == 0) {
                 return;
               }
@@ -2153,7 +2153,7 @@ final class PoolMatchController {
             this.tutorial.draw(param1 + 29451);
           }
           if (param0) {
-            var3_intLifetime1 = TextureCache.a(104);
+            var3_intLifetime1 = TextureCache.getVisibleTooltipIndex(104);
             if (var3_intLifetime1 >= 0) {
               if (0 != (256 & var3_intLifetime1)) {
                 if ((this.modeFlags & PaletteFontLoader.field_d) != 0 &&
@@ -2524,7 +2524,7 @@ final class PoolMatchController {
 
     final static void setTuhstatbutCookie(byte param0) {
         try {
-          PotEvent.a(16, NanoTickClock.getApplet(122));
+          PotEvent.setTuhstatbutCookie(16, NanoTickClock.getApplet(122));
           if (param0 != -80) {
             field_gb = (LoginResponse) null;
           }
@@ -2559,7 +2559,7 @@ final class PoolMatchController {
               for (var12_int = 0; this.gameModel.pockets.length > var12_int; var12_int++) {
                 var13 = -this.gameModel.balls[var8].positionX + this.gameModel.pockets[var12_int].centerX;
                 var14 = this.gameModel.pockets[var12_int].centerY - this.gameModel.balls[var8].positionY;
-                var15 = NameEntryPopup.a(var13, false, var13) + NameEntryPopup.a(var14, false, var14);
+                var15 = NameEntryPopup.multiplyFixed16(var13, false, var13) + NameEntryPopup.multiplyFixed16(var14, false, var14);
                 if (var11 < 0 ||
                   var11 > var15) {
                   var11 = var15;
@@ -3337,7 +3337,7 @@ final class PoolMatchController {
                 this.gameModel.snapshotFinishedShot((byte) 80);
               } else {
                 GrowableIntList.reportClientError(new Throwable(), "Reading end shot packet before we have finished this shot!", -8555);
-                ShotEvent.c(54);
+                ShotEvent.closeClientSocket(54);
                 return;
               }
             }
@@ -4788,7 +4788,7 @@ final class PoolMatchController {
             for (var8Lifetime4 = 0; var8Lifetime4 < 2000; var8Lifetime4++) {
               var4Lifetime5 += 2048;
               if (var4Lifetime5 >= 262144) {
-                var5Lifetime6 = var5Lifetime6 + ShotEvent.a(67108864 / (var4Lifetime5 >> 8), false);
+                var5Lifetime6 = var5Lifetime6 + ShotEvent.arcsineFixed16(67108864 / (var4Lifetime5 >> 8), false);
               } else {
                 var5Lifetime6 += 256;
               }
@@ -4924,8 +4924,8 @@ final class PoolMatchController {
           }
           var7Lifetime1 = 45 % ((-21 - param0) / 58);
           this.idleOrbitStep = -1;
-          this.cameraGoal.targetX = PotEvent.a((byte) 89, var2_long) / (double)var6;
-          this.cameraGoal.targetY = PotEvent.a((byte) 89, var4) / (double)var6;
+          this.cameraGoal.targetX = PotEvent.fixed16ToDouble((byte) 89, var2_long) / (double)var6;
+          this.cameraGoal.targetY = PotEvent.fixed16ToDouble((byte) 89, var4) / (double)var6;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5414,9 +5414,9 @@ final class PoolMatchController {
                   var8.motionState = 1;
                 }
               }
-              var8.a((byte) -124);
+              var8.setRollingAngularVelocity((byte) -124);
               var8.lastAdvanceTime = 0;
-              var8.a(false);
+              var8.updateFrictionAndSpin(false);
             }
             if (var2_int <= var8.positionY) {
               var8.positionY = var2_int;
@@ -8308,15 +8308,15 @@ final class PoolMatchController {
               if (var9 > 9216) {
                 throw new IllegalStateException("Strike point out of range! " + var7_ref_qe.field_D + "," + var7_ref_qe.field_H);
               }
-              var10_int = -AccountDisplayNameSupport.inverseSquareRoot(65536 - (var9 << 2), -125) >> 9;
+              var10_int = -AccountDisplayNameSupport.sqrtScaled256(65536 - (var9 << 2), -125) >> 9;
               var11_int = ScrollPaneWithFooter.sine((int) var7_ref_qe.elevation, true);
               var12 = SceneNodeFactory.cosine(2047, (int) var7_ref_qe.elevation);
               var13 = ScrollPaneWithFooter.sine((int) var7_ref_qe.aimAngle, true);
               var14 = SceneNodeFactory.cosine(2047, (int) var7_ref_qe.aimAngle);
               var15 = var13;
               var16 = -var14;
-              var17 = NameEntryPopup.a(var11_int, false, -var16);
-              var18 = NameEntryPopup.a(var11_int, false, var15);
+              var17 = NameEntryPopup.multiplyFixed16(var11_int, false, -var16);
+              var18 = NameEntryPopup.multiplyFixed16(var11_int, false, var15);
               var19_int = var12;
               var20 = -(var19_int * var16) + var18 * 0 >> 16;
               var21_int = -(var17 * 0) + var19_int * var15 >> 16;
@@ -8328,9 +8328,9 @@ final class PoolMatchController {
               var8.velocityY = ArchiveProvider.divideFixed16(PasswordValidator.field_q, (byte) -116, (long)(int)(FullscreenFocusCanvas.multiplyFixedChecked((long)(var7_ref_qe.power * var18), (long)CueAim.field_f, false) / 4096L));
               var8.motionState = 1;
               var26 = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -93, (long)(int)(FullscreenFocusCanvas.multiplyFixedChecked((long)(var7_ref_qe.power * WireframeQuad.field_g), (long)CueAim.field_f, false) / 4096L));
-              var8.angularVelocityX = NameEntryPopup.a(-NameEntryPopup.a(var18, false, var25), false, var26);
-              var8.angularVelocityY = NameEntryPopup.a(NameEntryPopup.a(var17, false, var25), false, var26);
-              var8.angularVelocityZ = NameEntryPopup.a(NameEntryPopup.a(var18, false, var23) - NameEntryPopup.a(var17, false, var24), false, var26);
+              var8.angularVelocityX = NameEntryPopup.multiplyFixed16(-NameEntryPopup.multiplyFixed16(var18, false, var25), false, var26);
+              var8.angularVelocityY = NameEntryPopup.multiplyFixed16(NameEntryPopup.multiplyFixed16(var17, false, var25), false, var26);
+              var8.angularVelocityZ = NameEntryPopup.multiplyFixed16(NameEntryPopup.multiplyFixed16(var18, false, var23) - NameEntryPopup.multiplyFixed16(var17, false, var24), false, var26);
               QuickChatHelpDialog.f(-13164);
               scanLoop1: do {
                 NodeHashTableIterator.field_s = -1;
@@ -8364,7 +8364,7 @@ final class PoolMatchController {
                   stackIn_52_0 = var6_ref_pq__[var7].inPlay;
                   if (var27 == 0) {
                     if (stackIn_52_0) {
-                      var6_ref_pq__[var7].a(false);
+                      var6_ref_pq__[var7].updateFrictionAndSpin(false);
                     }
                     var7++;
                     continue;
@@ -8448,7 +8448,7 @@ final class PoolMatchController {
                       var17 = -(var8.positionX >> 13) + var14;
                       var18 = -(var8.positionY >> 13) + var15;
                       var19 = (long)(var17 * var17 + var18 * var18);
-                      var21 = IterableNodeHashTable.a(-127, var19 << 10) >> 13;
+                      var21 = IterableNodeHashTable.sqrtScaled256(-127, var19 << 10) >> 13;
                       decompiledFrameRemainder0 = (!(var21 < 48L) ||
                         var27 != 0);
                       if (decompiledFrameRemainder0) {

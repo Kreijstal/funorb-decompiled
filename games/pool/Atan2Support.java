@@ -129,7 +129,7 @@ final class Atan2Support {
           if (HotspotRectangle.a(1, param2)) {
             return false;
           }
-          if (IterableNodeHashTable.a(param2, -106)) {
+          if (IterableNodeHashTable.hasUniformCharacters(param2, -106)) {
             return false;
           }
           if (SpaceTableScene.hasInvalidPasswordLength(param2, 28350)) {
@@ -187,7 +187,7 @@ final class Atan2Support {
             field_b = 76;
           }
           BrowserCookieSupport.a(-2656, var2, param1);
-          stackIn_3_0 = LocalGameSetupScreen.a(param1, var2, true);
+          stackIn_3_0 = LocalGameSetupScreen.splitMeshIntoGrid(param1, var2, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

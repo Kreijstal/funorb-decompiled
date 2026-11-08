@@ -45,7 +45,7 @@ final class PasswordValidator extends TextInputValidator {
             }
           }
           var7 = (String) null;
-          LogoFinalFrameLoader.a((String) null, 11468, FreePlayRules.field_g, 0, var5);
+          LogoFinalFrameLoader.setChatHeaderText((String) null, 11468, FreePlayRules.field_g, 0, var5);
           TimeTrialSelectScreen.field_J.capturedTextColor = (8355711 & TickClock.field_h.capturedTextColor >> 1) + (FreePlayRules.field_g - (8355711 & FreePlayRules.field_g >> 1));
           ArchiveProvider.field_i = NineBallRules.field_j;
           TimeTrialSelectScreen.field_J.activeTextColor = ((TickClock.field_h.activeTextColor & 16711423) >> 1) + (-((16711423 & FreePlayRules.field_g) >> 1) + FreePlayRules.field_g);
@@ -254,7 +254,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_10_0 = IterableNodeHashTable.createAlertPasschars;
             return stackIn_10_0;
           }
-          if (IterableNodeHashTable.a(var5, -113)) {
+          if (IterableNodeHashTable.hasUniformCharacters(var5, -113)) {
             stackIn_14_0 = ArchiveProvider.createAlertPassrepeated;
             return stackIn_14_0;
           }

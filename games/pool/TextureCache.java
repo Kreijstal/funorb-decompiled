@@ -49,7 +49,7 @@ final class TextureCache implements TextureProvider {
         return null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawFlatTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param3 > param2) {
           if (param1 <= param3) {
             if (param1 <= param2) {
@@ -57,19 +57,19 @@ final class TextureCache implements TextureProvider {
               if (param6 == 108) {
                 return;
               }
-              TextureCache.a(-1);
+              TextureCache.getVisibleTooltipIndex(-1);
               return;
             }
             FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param7, param1, param4, param2, param3, param0, 19547);
             if (param6 == 108) {
               return;
             }
-            TextureCache.a(-1);
+            TextureCache.getVisibleTooltipIndex(-1);
             return;
           }
           FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param7, param3, param0, param2, param1, param4, 19547);
           if (param6 != 108) {
-            TextureCache.a(-1);
+            TextureCache.getVisibleTooltipIndex(-1);
             return;
           }
           return;
@@ -77,7 +77,7 @@ final class TextureCache implements TextureProvider {
         if (param1 > param2) {
           FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param0, param2, param7, param3, param1, param4, param6 + 19439);
           if (param6 != 108) {
-            TextureCache.a(-1);
+            TextureCache.getVisibleTooltipIndex(-1);
             return;
           }
           return;
@@ -85,22 +85,22 @@ final class TextureCache implements TextureProvider {
         if (param1 <= param3) {
           FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param4, param3, param0, param1, param2, param7, 19547);
           if (param6 != 108) {
-            TextureCache.a(-1);
+            TextureCache.getVisibleTooltipIndex(-1);
             return;
           }
           return;
         }
         FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param0, param1, param4, param3, param2, param7, param6 + 19439);
         if (param6 != 108) {
-          TextureCache.a(-1);
+          TextureCache.getVisibleTooltipIndex(-1);
           return;
         }
     }
 
-    final static int a(int param0) {
-        if (param0 != 104) {
+    final static int getVisibleTooltipIndex(int obfuscationGuard) {
+        if (obfuscationGuard != 104) {
           LobbyGame var2 = (LobbyGame) null;
-          TextureCache.a(70, (LobbyGame) null);
+          TextureCache.insertLobbyGameSorted(70, (LobbyGame) null);
           if (ClientException.field_j) {
             return -1;
           }
@@ -148,7 +148,7 @@ final class TextureCache implements TextureProvider {
         return this.field_f[param1].averageColor;
     }
 
-    final static void a(int param0, LobbyGame param1) {
+    final static void insertLobbyGameSorted(int obfuscationGuard, LobbyGame game) {
         LobbyGame var2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -156,21 +156,21 @@ final class TextureCache implements TextureProvider {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          param1.unlink((byte) -117);
+          game.unlink((byte) -117);
           var2 = (LobbyGame) (NetworkGameClient.field_A.last((byte) -72));
           while (var2 != null) {
-            if (var2.comesBeforeGame(param1, false)) {
+            if (var2.comesBeforeGame(game, false)) {
               var2 = (LobbyGame) (NetworkGameClient.field_A.previous((byte) -5));
               continue;
             }
             break;
           }
           if (var2 != null) {
-            TextLineLayout.insertAfter(param1, (byte) -119, var2);
+            TextLineLayout.insertAfter(game, (byte) -119, var2);
           } else {
-            NetworkGameClient.field_A.addFirst((byte) -108, param1);
+            NetworkGameClient.field_A.addFirst((byte) -108, game);
           }
-          if (param0 > -73) {
+          if (obfuscationGuard > -73) {
             field_c = (UiComponent) null;
           }
           return;
@@ -178,8 +178,8 @@ final class TextureCache implements TextureProvider {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_12_0 = var2_ref;
-          stackIn_12_1 = new StringBuilder().append("dp.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("dp.D(").append(obfuscationGuard).append(',');
+          if (game == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -188,15 +188,15 @@ final class TextureCache implements TextureProvider {
         }
     }
 
-    final static void a(UiComponent param0, UiComponent param1, int param2) {
-        param1.localX = param0.width - param1.width >> 1;
-        if (param2 > -10) {
+    final static void placeWidgetAtBottomCenter(UiComponent parent, UiComponent child, int obfuscationGuard) {
+        child.localX = parent.width - child.width >> 1;
+        if (obfuscationGuard > -10) {
           return;
         }
         try {
-          param1.localY = param0.height + (-param1.height - 10);
+          child.localY = parent.height + (-child.height - 10);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dp.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dp.F(" + (parent != null ? "{...}" : "null") + ',' + (child != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -209,24 +209,24 @@ final class TextureCache implements TextureProvider {
 
     public final boolean isTextureReady(byte param0, int param1) {
         if (param0 <= 97) {
-          TextureCache.a(72, -96, -108, 104, -44, -64, -2, -66);
+          TextureCache.drawFlatTriangle(72, -96, -108, 104, -44, -64, -2, -66);
           return true;
         }
         return true;
     }
 
-    final static int b(int param0) {
+    final static int pollArchiveLoading(int obfuscationGuard) {
         TranslatedUiText.field_m.serviceProviders((byte) -46);
-        int var1 = 55 / ((25 - param0) / 40);
+        int var1 = 55 / ((25 - obfuscationGuard) / 40);
         if (!GameRules.field_c.processNetwork(-2147483648)) {
           return SocketArchiveNetworkClient.g(-27108);
         }
         return 0;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int projectTablePointX(int param0, int param1, int param2) {
         if (param2 < 12) {
-          TextureCache.b(26);
+          TextureCache.pollArchiveLoading(26);
           ScrollPane.a(param1, (byte) 0, param0);
           return (LookupRetrySupport.field_h[0] << 9) / LookupRetrySupport.field_h[2] + 320;
         }

@@ -145,7 +145,7 @@ final class ViewportController {
           var6 = UsernameAvailabilityValidator.field_o;
           var4Lifetime1.field_n.layoutAtAnchor(0, 0, var5, 0, var6);
         }
-        MeshBoundsSupport.a(param2, (byte) 21, param0);
+        MeshBoundsSupport.updateIgnoreListPanel(param2, (byte) 21, param0);
     }
 
     final static void a(float[] param0, int param1, int param2, int[] param3) {

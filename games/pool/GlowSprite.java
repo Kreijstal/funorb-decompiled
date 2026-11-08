@@ -65,7 +65,7 @@ final class GlowSprite implements SceneDrawable {
           param1.capturedFrameSprites = ModelOriginSupport.field_s;
           param1.textColor = 16777215;
           if (param0 != 29022) {
-            GlowSprite.a((byte) 26);
+            GlowSprite.clearFaceBucketCounts((byte) 26);
           }
           param1.activeFrameSprites = ModelOriginSupport.field_s;
           param1.horizontalAlignment = 1;
@@ -77,7 +77,7 @@ final class GlowSprite implements SceneDrawable {
         }
     }
 
-    final static void a(byte param0) {
+    final static void clearFaceBucketCounts(byte obfuscationGuard) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -89,7 +89,7 @@ final class GlowSprite implements SceneDrawable {
           var1 = var4;
           var2 = 0;
           var3 = var4.length;
-          if (param0 != 48) {
+          if (obfuscationGuard != 48) {
             field_g = (String) null;
           }
           while (var3 > var2) {
@@ -106,7 +106,7 @@ final class GlowSprite implements SceneDrawable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ar.E(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ar.E(" + obfuscationGuard + ')');
         }
     }
 

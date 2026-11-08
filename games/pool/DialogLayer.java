@@ -45,17 +45,17 @@ final class DialogLayer extends SingleChildWidget {
               return true;
             }
             if (var2_int < 0) {
-              ShotEvent.c(64);
+              ShotEvent.closeClientSocket(64);
             } else {
-              if (CushionSegment.d((byte) 127) <= 30000L) {
+              if (CushionSegment.millisSinceNetworkActivity((byte) 127) <= 30000L) {
                 return false;
               }
-              ShotEvent.c(64);
+              ShotEvent.closeClientSocket(64);
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
-            ShotEvent.c(43);
+            ShotEvent.closeClientSocket(43);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -132,7 +132,7 @@ final class DialogLayer extends SingleChildWidget {
           if (var9 != null) {
             IntegerSyntaxSupport.a(var9, 122);
           }
-          var8 = GlowParticle.a(1);
+          var8 = GlowParticle.updateChatHeader(1);
           if (var8 != null) {
             CacheEntry.field_B = var8;
           }

@@ -69,7 +69,7 @@ final class ResourceArchive {
     public static void releaseStatics(int param0) {
         field_j = null;
         if (param0 != 0) {
-          ResourceArchive.a(true, (byte) -103, true);
+          ResourceArchive.drawAccountOverlay(true, (byte) -103, true);
         }
         field_a = null;
     }
@@ -239,7 +239,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void a(int param0) {
+    final static void prepareBallAndTableRendering(int firstSkinIndex) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -251,7 +251,7 @@ final class ResourceArchive {
           for (var1_int = 0; var1_int < BrowserCookieWriter.field_b.length; var1_int++) {
             BrowserCookieWriter.field_b[var1_int].buildPalettes(25879);
           }
-          var3 = param0;
+          var3 = firstSkinIndex;
           var1_intLifetime1 = var3;
           while (PoolGameModel.field_B.length > var3) {
             PoolGameModel.field_B[var3].allocateMeshes(7096);
@@ -261,11 +261,11 @@ final class ResourceArchive {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "di.V(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "di.V(" + firstSkinIndex + ')');
         }
     }
 
-    final static String a(long param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final static String formatFixedPoint(long value, int fractionalBits, boolean showPlus, int obfuscationGuard, int maxFractionDigits, int radix) {
         int incrementValue$0 = 0;
         int stackIn_16_0 = 0;
         long var7;
@@ -281,34 +281,34 @@ final class ResourceArchive {
         long var7Lifetime1;
         long var9Lifetime1;
         int var18Lifetime1;
-        if (param3 >= -90) {
-          ResourceArchive.a(false, (byte) 98, true);
+        if (obfuscationGuard >= -90) {
+          ResourceArchive.drawAccountOverlay(false, (byte) 98, true);
         }
-        if (param1 >= 0 &&
-          param1 <= 62) {
-          if (param5 >= 2 &&
-            36 >= param5) {
-            if (param0 >= 0L) {
-              stackIn_16_0 = (!param2) ? 0 : 1;
+        if (fractionalBits >= 0 &&
+          fractionalBits <= 62) {
+          if (radix >= 2 &&
+            36 >= radix) {
+            if (value >= 0L) {
+              stackIn_16_0 = (!showPlus) ? 0 : 1;
             } else {
               stackIn_16_0 = 1;
             }
             var12 = stackIn_16_0;
-            var13 = (long)(1 << param1);
+            var13 = (long)(1 << fractionalBits);
             var15 = -1L + var13;
-            if (param0 >= 0L) {
-              var7 = param0 >> param1;
-              var9 = param0 & var15;
+            if (value >= 0L) {
+              var7 = value >> fractionalBits;
+              var9 = value & var15;
             } else {
-              var9 = -(param0 & var15) + var13;
-              var7 = -param0 >> param1;
+              var9 = -(value & var15) + var13;
+              var7 = -value >> fractionalBits;
             }
             if (0L != var7) {
               var11 = var12;
               while (0L != var7) {
                 var12++;
                 var11++;
-                var7 = var7 / (long)param5;
+                var7 = var7 / (long)radix;
               }
             } else {
               var12++;
@@ -317,31 +317,31 @@ final class ResourceArchive {
             if (var9 != 0L) {
               var11++;
               while (var9 != 0L) {
-                incrementValue$0 = param4;
-                param4--;
+                incrementValue$0 = maxFractionDigits;
+                maxFractionDigits--;
                 if (0 == incrementValue$0) {
                   break;
                 }
-                var9 = var9 * (long)param5;
+                var9 = var9 * (long)radix;
                 var11++;
                 var9 = var9 & var15;
               }
             }
-            if (param0 >= 0L) {
-              var9Lifetime1 = param0 & var15;
-              var7Lifetime1 = param0 >> param1;
+            if (value >= 0L) {
+              var9Lifetime1 = value & var15;
+              var7Lifetime1 = value >> fractionalBits;
             } else {
-              var7Lifetime1 = -param0 >> param1;
-              var9Lifetime1 = param0 & var15;
+              var7Lifetime1 = -value >> fractionalBits;
+              var9Lifetime1 = value & var15;
               if (var9Lifetime1 != 0L) {
-                var9Lifetime1 = var13 - (var15 & param0);
+                var9Lifetime1 = var13 - (var15 & value);
               }
             }
             var20 = new char[var11];
             var19 = var20;
             var17 = var19;
-            if (0L <= param0) {
-              if (param2) {
+            if (0L <= value) {
+              if (showPlus) {
                 var17[0] = (char)43;
               }
             } else {
@@ -350,8 +350,8 @@ final class ResourceArchive {
             if (var7Lifetime1 != 0L) {
               var18 = -1 + var12;
               while (var7Lifetime1 != 0L) {
-                var17[var18] = ReportAbuseDialog.field_Wb[(int)(var7Lifetime1 % (long)param5)];
-                var7Lifetime1 = var7Lifetime1 / (long)param5;
+                var17[var18] = ReportAbuseDialog.field_Wb[(int)(var7Lifetime1 % (long)radix)];
+                var7Lifetime1 = var7Lifetime1 / (long)radix;
                 var18--;
               }
             } else {
@@ -360,16 +360,16 @@ final class ResourceArchive {
             if (var9Lifetime1 != 0L) {
               var17[var12] = (char)46;
               for (var18Lifetime1 = 1 + var12; var20.length > var18Lifetime1; var18Lifetime1++) {
-                var9Lifetime1 = var9Lifetime1 * (long)param5;
-                var17[var18Lifetime1] = ReportAbuseDialog.field_Wb[(int)(var9Lifetime1 >> param1)];
+                var9Lifetime1 = var9Lifetime1 * (long)radix;
+                var17[var18Lifetime1] = ReportAbuseDialog.field_Wb[(int)(var9Lifetime1 >> fractionalBits)];
                 var9Lifetime1 = var9Lifetime1 & var15;
               }
             }
             return new String(var20);
           }
-          throw new IllegalArgumentException("Invalid radix: " + param5);
+          throw new IllegalArgumentException("Invalid radix: " + radix);
         }
-        throw new IllegalArgumentException("Invalid fp: " + param1);
+        throw new IllegalArgumentException("Invalid fp: " + fractionalBits);
     }
 
     final int getGroupId(String param0, int param1) {
@@ -419,7 +419,7 @@ final class ResourceArchive {
 
     final int getGroupCount(int param0) {
         if (param0 != -1) {
-          ResourceArchive.a(((long[]) (((Object[]) (this.field_l[2]))[6]))[12], -60, true, 112, -107, -102);
+          ResourceArchive.formatFixedPoint(((long[]) (((Object[]) (this.field_l[2]))[6]))[12], -60, true, 112, -107, -102);
         }
         if (!this.isIndexReady(-82)) {
           return -1;
@@ -472,7 +472,7 @@ final class ResourceArchive {
         return false;
     }
 
-    final static void a(boolean param0, byte param1, boolean param2) {
+    final static void drawAccountOverlay(boolean param0, byte param1, boolean param2) {
         if (param2) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
         } else {

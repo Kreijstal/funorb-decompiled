@@ -54,7 +54,7 @@ final class HotspotRectangle extends IntrusiveNode {
           var5Lifetime1 = var8;
           while (var8 < var7.length) {
             if (var7[var8].inPlay) {
-              var7[var8].a(false);
+              var7[var8].updateFrictionAndSpin(false);
             }
             var8++;
           }

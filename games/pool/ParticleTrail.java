@@ -44,7 +44,7 @@ final class ParticleTrail {
                 return;
               }
             }
-            this.field_l[var4_int].a(262144, param2);
+            this.field_l[var4_int].draw(262144, param2);
             var4_int++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -164,7 +164,7 @@ final class ParticleTrail {
             if (this.field_k.length - 1 > this.field_m[var2]) {
               var3Lifetime1 = this.field_n[var2] * this.field_n[var2] / 4096;
               var4 = -var3Lifetime1 + 4096;
-              this.field_l[var2].a(var4 * this.field_k[this.field_m[var2]] + this.field_k[this.field_m[var2] + 1] * var3Lifetime1 >> 12, (byte) 78, var4 * this.field_i[this.field_m[var2]] + this.field_i[1 + this.field_m[var2]] * var3Lifetime1 >> 12);
+              this.field_l[var2].moveTo(var4 * this.field_k[this.field_m[var2]] + this.field_k[this.field_m[var2] + 1] * var3Lifetime1 >> 12, (byte) 78, var4 * this.field_i[this.field_m[var2]] + this.field_i[1 + this.field_m[var2]] * var3Lifetime1 >> 12);
             } else {
               this.field_l[var2].field_c = true;
               dupTemp$1 = this.field_l[var2];

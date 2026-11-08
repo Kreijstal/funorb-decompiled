@@ -105,7 +105,7 @@ final class ProjectedVertex {
             return;
           }
           if (null == GradientPaletteSupport.field_g) {
-            GradientPaletteSupport.field_g = FixedAngleSupport.a(4, 47);
+            GradientPaletteSupport.field_g = FixedAngleSupport.requestAccountState(4, 47);
           }
           if (GradientPaletteSupport.field_g.field_s) {
             var12 = ClientException.field_g;
@@ -166,7 +166,7 @@ final class ProjectedVertex {
           this.field_l = param2;
           if (this.field_a != 0 &&
             this.field_a != 1) {
-            this.field_b = IndexedSpriteState.a(this.field_a, this.field_n, (byte) 99);
+            this.field_b = IndexedSpriteState.projectX(this.field_a, this.field_n, (byte) 99);
             this.field_o = DialRenderer.a(this.field_a, (byte) 103, this.field_u);
             this.field_t = ProxyAuthenticationRequiredException.divideFixed12(this.field_l, this.field_a, (byte) 123);
           }
@@ -276,7 +276,7 @@ final class ProjectedVertex {
             this.field_j[0] = this.field_o;
             this.field_h[0] = this.field_t;
           } else {
-            this.field_q[0] = IndexedSpriteState.a(this.field_c[0], this.field_q[0], (byte) 99);
+            this.field_q[0] = IndexedSpriteState.projectX(this.field_c[0], this.field_q[0], (byte) 99);
             this.field_j[0] = DialRenderer.a(this.field_c[0], (byte) 69, this.field_j[0]);
             this.field_h[0] = ProxyAuthenticationRequiredException.divideFixed12(this.field_h[0], this.field_c[0], (byte) 84);
           }
@@ -285,7 +285,7 @@ final class ProjectedVertex {
             this.field_j[1] = param1.field_o;
             this.field_h[1] = param1.field_t;
           } else {
-            this.field_q[1] = IndexedSpriteState.a(this.field_c[1], this.field_q[1], (byte) 99);
+            this.field_q[1] = IndexedSpriteState.projectX(this.field_c[1], this.field_q[1], (byte) 99);
             this.field_j[1] = DialRenderer.a(this.field_c[1], (byte) 68, this.field_j[1]);
             this.field_h[1] = ProxyAuthenticationRequiredException.divideFixed12(this.field_h[1], this.field_c[1], (byte) 83);
           }

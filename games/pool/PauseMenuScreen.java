@@ -151,11 +151,11 @@ class PauseMenuScreen extends MenuScreen {
 
     final static void a(float param0, float param1, float param2, float param3, int param4) {
         if (param4 == -31792) {
-          Ball.a(param3, param0, 1.0f, 1.0f, param2, param1, -1);
+          Ball.configureSoundEffectReverb(param3, param0, 1.0f, 1.0f, param2, param1, -1);
           return;
         }
         PauseMenuScreen.a(0.2009153664112091f, 0.45015275478363037f, 2.6406524181365967f, -0.13969022035598755f, 60);
-        Ball.a(param3, param0, 1.0f, 1.0f, param2, param1, -1);
+        Ball.configureSoundEffectReverb(param3, param0, 1.0f, 1.0f, param2, param1, -1);
     }
 
     final static int c(int param0, int param1, int param2) {

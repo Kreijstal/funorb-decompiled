@@ -249,7 +249,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final static void a(boolean param0, HighScoreSubmission param1, int param2) {
+    final static void sendHighScoreSubmission(boolean obfuscationGuard, HighScoreSubmission submission, int opcode) {
         int var5 = 0;
         CipherPacketBuffer stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
@@ -266,24 +266,24 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         try {
           var6 = JaggrabDownloader.field_j;
           var7 = var6;
-          var7.writeCipheredOpcode(false, param2);
+          var7.writeCipheredOpcode(false, opcode);
           var7.position = var7.position + 1;
           var4 = var7.position;
           var7.writeByte(1, false);
-          var7.writeShort((byte) -81, param1.field_B);
-          var7.writeShort((byte) -81, param1.field_l);
-          var7.writeShort((byte) -81, param1.field_p);
-          var7.writeInt(true, param1.field_n);
+          var7.writeShort((byte) -81, submission.field_B);
+          var7.writeShort((byte) -81, submission.field_l);
+          var7.writeShort((byte) -81, submission.field_p);
+          var7.writeInt(true, submission.field_n);
           stackIn_2_0 = var7;
-          stackIn_3_1 = !(param0);
-          ((CipherPacketBuffer) (Object) stackIn_2_0).writeInt(stackIn_3_1, param1.field_x);
+          stackIn_3_1 = !(obfuscationGuard);
+          ((CipherPacketBuffer) (Object) stackIn_2_0).writeInt(stackIn_3_1, submission.field_x);
           stackIn_5_0 = var7;
-          stackIn_6_1 = !(param0);
-          ((CipherPacketBuffer) (Object) stackIn_5_0).writeInt(stackIn_6_1, param1.field_A);
-          var7.writeInt(true, param1.field_v);
-          var7.writeByte(param1.field_z.length, param0);
-          for (var5 = 0; param1.field_z.length > var5; var5++) {
-            var6.writeInt(true, param1.field_z[var5]);
+          stackIn_6_1 = !(obfuscationGuard);
+          ((CipherPacketBuffer) (Object) stackIn_5_0).writeInt(stackIn_6_1, submission.field_A);
+          var7.writeInt(true, submission.field_v);
+          var7.writeByte(submission.field_z.length, obfuscationGuard);
+          for (var5 = 0; submission.field_z.length > var5; var5++) {
+            var6.writeInt(true, submission.field_z[var5]);
           }
           var7.appendChecksum(-1, var4);
           var7.writeByteLengthPrefix(-var4 + var7.position, true);
@@ -292,13 +292,13 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_13_0 = var3;
-          stackIn_13_1 = new StringBuilder().append("ch.LA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("ch.LA(").append(obfuscationGuard).append(',');
+          if (submission == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(opcode).append(')').toString());
         }
     }
 
@@ -413,7 +413,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.children);
         if (param0 <= 33) {
           CharSequence var7 = (CharSequence) null;
-          WidgetContainer.a(false, (CharSequence) null);
+          WidgetContainer.normalizeBase37Name(false, (CharSequence) null);
         }
         UiWidget var4 = (UiWidget) (var3.last((byte) -92));
         while (var4 != null) {
@@ -523,7 +523,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         this.children = new IntrusiveDeque();
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String normalizeBase37Name(boolean obfuscationGuard, CharSequence name) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_5_0 = null;
@@ -532,8 +532,8 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = TextInputWidget.decodeBase37Name(param0, Base37Support.encodeBase37((byte) 52, param1));
-          if (param0) {
+          var2 = TextInputWidget.decodeBase37Name(obfuscationGuard, Base37Support.encodeBase37((byte) 52, name));
+          if (obfuscationGuard) {
             field_J = (int[]) null;
           }
           if (var2 == null) {
@@ -545,8 +545,8 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_8_0 = var2_ref;
-          stackIn_8_1 = new StringBuilder().append("ch.QA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("ch.QA(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -607,7 +607,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final static int a(String param0, boolean param1, boolean param2) {
+    final static int measureSharedTextWidth(String text, boolean useAlternateFont, boolean obfuscationGuard) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -616,26 +616,26 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2) {
+          if (obfuscationGuard) {
             field_H = 62;
           }
-          if (!param1) {
-            stackIn_6_0 = TransformRotationSupport.field_f.b(param0);
+          if (!useAlternateFont) {
+            stackIn_6_0 = TransformRotationSupport.field_f.b(text);
             return stackIn_6_0;
           }
-          stackIn_4_0 = ProgressBarWidget.field_R.b(param0);
+          stackIn_4_0 = ProgressBarWidget.field_R.b(text);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("ch.IA(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(useAlternateFont).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

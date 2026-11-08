@@ -26,7 +26,7 @@ final class RenderingInitializationSupport {
         TriangleRasterizer.setProjectionCenter(320, 240);
         ViewportController.field_q.field_k = 0;
         TriangleRasterizer.setTextureProvider(new TextureCache(NetworkGameClient.field_F, ViewportController.field_q, param0, 128));
-        ResourceArchive.a(0);
+        ResourceArchive.prepareBallAndTableRendering(0);
     }
 
     public static void releaseStatics(boolean param0) {
