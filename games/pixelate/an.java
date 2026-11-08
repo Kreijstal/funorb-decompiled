@@ -41,7 +41,7 @@ final class an {
               if (var8 == 32) {
                 var5_int = var5_int + param1;
               }
-              param3.field_g[var7] = param3.field_g[0] + ((var5_int >> 8) + param0.textWidth(param4.substring(0, var7 + 1)) - param0.a((char) var8));
+              param3.field_g[var7] = param3.field_g[0] + ((var5_int >> 8) + param0.textWidth(param4.substring(0, var7 + 1)) - param0.charWidth((char) var8));
             }
             if (62 == var8) {
               var6 = -1;

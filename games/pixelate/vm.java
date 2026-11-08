@@ -14,7 +14,7 @@ final class vm {
         if (param1 <= -102) {
           return null == dg.field_f ? null : (LobbyGame) (dg.field_f.get(-11434, (long)param0));
         }
-        vm.b(-99, (byte) 98);
+        vm.unpackChatFilterSettings(-99, (byte) 98);
         return null == dg.field_f ? null : (LobbyGame) (dg.field_f.get(-11434, (long)param0));
     }
 
@@ -26,7 +26,7 @@ final class vm {
         return el.createResourceArchive(-107, param0, false, param3, param4, param2);
     }
 
-    final static void b(int param0, byte param1) {
+    final static void unpackChatFilterSettings(int param0, byte param1) {
         if (param1 > -62) {
           return;
         }

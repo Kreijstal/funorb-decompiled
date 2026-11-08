@@ -27,12 +27,12 @@ final class ib {
             try {
               var4 = param0.getCodeBase();
               var3 = lg.withSessionParameters(param1, param0, var4).getFile();
-              JavaScriptBridge.a(param0, (byte) -62, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
-              JavaScriptBridge.a(param0, (byte) -115, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
-              JavaScriptBridge.a(param0, (byte) 108, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
-              JavaScriptBridge.a(param0, (byte) -44, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
-              JavaScriptBridge.a(param0, (byte) 78, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
-              JavaScriptBridge.a(param0, (byte) 66, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
+              JavaScriptBridge.callFunction(param0, (byte) -62, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
+              JavaScriptBridge.callFunction(param0, (byte) -115, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
+              JavaScriptBridge.callFunction(param0, (byte) 108, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
+              JavaScriptBridge.callFunction(param0, (byte) -44, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
+              JavaScriptBridge.callFunction(param0, (byte) 78, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
+              JavaScriptBridge.callFunction(param0, (byte) 66, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ final class ib {
         }
     }
 
-    final static void b(int param0) {
+    final static void openRootQuickChatMenu(int param0) {
         mh.openQuickChatMenu(ContextActionMenu.field_Rb, (byte) 95);
         if (param0 != 20558) {
           ib.releaseStatics(-8);

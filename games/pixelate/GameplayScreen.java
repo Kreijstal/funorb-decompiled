@@ -136,7 +136,7 @@ final class GameplayScreen extends MenuScreen {
         field_o = null;
     }
 
-    final static void a(String param0, int param1) {
+    final static void drawTooltip(String param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;

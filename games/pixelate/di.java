@@ -60,7 +60,7 @@ final class di {
         return var5.toString();
     }
 
-    final static void a(int param0, long param1, String param2, byte param3, int param4) {
+    final static void setLastQuickChatTarget(int param0, long param1, String param2, byte param3, int param4) {
         try {
           ih.field_f = param0;
           ej.field_a = param1;

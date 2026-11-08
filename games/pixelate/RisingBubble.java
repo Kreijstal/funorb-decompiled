@@ -106,7 +106,7 @@ final class RisingBubble {
     }
 
     private final void respawn(boolean param0) {
-        this.field_f = 90 + JavaRandomHelpers.a(ea.field_b, -112, 340);
+        this.field_f = 90 + JavaRandomHelpers.randomBelow(ea.field_b, -112, 340);
         this.field_a = 480.0f;
         if (param0) {
           field_e = (boolean[][]) null;

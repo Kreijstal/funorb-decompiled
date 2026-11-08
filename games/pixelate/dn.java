@@ -13,7 +13,7 @@ final class dn implements hj {
         int var1 = 66 % ((44 - param0) / 53);
     }
 
-    final static int a(String param0, byte param1, int param2, String param3, int param4, boolean param5, String param6) {
+    final static int submitAccountServerRequest(String param0, byte param1, int param2, String param3, int param4, boolean param5, String param6) {
         ConditionalTextValue var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;

@@ -184,7 +184,7 @@ final class LoginMethod {
           if (256 > var5) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           }
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           if (GameModeCard.field_f >= 150) {
             th.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
           } else {
@@ -234,7 +234,7 @@ final class LoginMethod {
         ScoreMarkerBar.renderLogoMeshes((byte) 106);
         if (256 > var5) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           if (GameModeCard.field_f >= 150) {
             th.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
           } else {
@@ -256,7 +256,7 @@ final class LoginMethod {
             }
           }
         } else {
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           if (GameModeCard.field_f >= 150) {
             th.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
             var6Lifetime1 = GameModeCard.field_f - 125;

@@ -161,7 +161,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
           }
           var27.drawRotatedAboutPivot(112, 144, var27.field_A << 4, var27.field_B << 4, -this.field_X << 10, 4096);
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           this.field_Z.drawAdditive(-(var27.field_A >> 1) + var9, var10 - var27.field_B, 256);
           return;
         }
@@ -187,7 +187,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             Checkbox.renderToSprite(-119, this.field_Z);
           }
           var19.drawRotatedAboutPivot(112, 144, var19.field_A << 4, var19.field_B << 4, -this.field_X << 10, 4096);
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           this.field_Z.drawAdditive(-(var19.field_A >> 1) + var9Lifetime1, var10Lifetime1 - var19.field_B, 256);
           return;
         }
@@ -218,7 +218,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           Checkbox.renderToSprite(-119, this.field_Z);
         }
         var20.drawRotatedAboutPivot(112, 144, var20.field_A << 4, var20.field_B << 4, -this.field_X << 10, 4096);
-        LinkButtonPainter.a((byte) 92);
+        LinkButtonPainter.popRasterState((byte) 92);
         this.field_Z.drawAdditive(-(var20.field_A >> 1) + var9Lifetime1, var10Lifetime1 - var20.field_B, 256);
         return;
     }

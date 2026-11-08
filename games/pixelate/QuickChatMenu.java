@@ -373,11 +373,11 @@ final class QuickChatMenu extends SceneWidget {
               }
               var8 = (String) null;
               dg.sendQuickChatMessage(true, ce.field_d, var5, (String) null, CheckboxPainter.field_k, param3);
-              di.a(var5, fp.field_e, CheckboxPainter.field_k, (byte) 9, ce.field_d);
+              di.setLastQuickChatTarget(var5, fp.field_e, CheckboxPainter.field_k, (byte) 9, ce.field_d);
               ScoreMarkerDemo.closeQuickChatMenu(false);
               SocketJs5Transport.resetRetryTimer(-93);
             } else {
-              ScrollPaneWithFooter.j(-127);
+              ScrollPaneWithFooter.openQuickChatHelp(-127);
               ScoreMarkerDemo.closeQuickChatMenu(false);
             }
           }

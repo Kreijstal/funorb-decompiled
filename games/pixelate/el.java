@@ -183,19 +183,19 @@ final class el {
         int var2;
         var2 = 0;
         var2 = var2 | 1;
-        if (0 == JavaRandomHelpers.a(UiTheme.field_f, -105, 2)) {
+        if (0 == JavaRandomHelpers.randomBelow(UiTheme.field_f, -105, 2)) {
           var2 = var2 | 2;
         }
-        if (JavaRandomHelpers.a(UiTheme.field_f, -124, 2) == 0) {
+        if (JavaRandomHelpers.randomBelow(UiTheme.field_f, -124, 2) == 0) {
           var2 = var2 | 8;
         }
         if (param1 != -24) {
           el.releaseStatics(-13);
         }
-        if (JavaRandomHelpers.a(UiTheme.field_f, param1 ^ 110, 2) == 0) {
+        if (JavaRandomHelpers.randomBelow(UiTheme.field_f, param1 ^ 110, 2) == 0) {
           var2 = var2 | 4;
         }
-        if (JavaRandomHelpers.a(UiTheme.field_f, -116, 2) == 0) {
+        if (JavaRandomHelpers.randomBelow(UiTheme.field_f, -116, 2) == 0) {
           var2 = var2 | 16;
         }
         return var2;

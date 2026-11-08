@@ -39,7 +39,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         field_a = null;
     }
 
-    final static int a(byte param0) {
+    final static int packChatFilterSettings(byte param0) {
         if (param0 < -61) {
           return ib.field_e + ((GradientOutlineTextPainter.field_v << 2) + (LoginMethod.field_e << 4));
         }

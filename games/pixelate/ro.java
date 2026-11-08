@@ -15,11 +15,11 @@ final class ro {
         var2.writeByte(160, 2);
         var2.writeByte(160, 4);
         if (param1) {
-          var2.writeByte(160, DelegatingCanvas.a((byte) -102));
+          var2.writeByte(160, DelegatingCanvas.packChatFilterSettings((byte) -102));
           return;
         }
         ro.advanceSlideshow(16, true);
-        var2.writeByte(160, DelegatingCanvas.a((byte) -102));
+        var2.writeByte(160, DelegatingCanvas.packChatFilterSettings((byte) -102));
     }
 
     public static void releaseStatics(boolean param0) {
@@ -218,7 +218,7 @@ final class ro {
         var5 = Pixelate.field_H ? 1 : 0;
         try {
           ReportAbuseDialog.field_Sb = ReportAbuseDialog.field_Sb + 65536;
-          while (fp.a(true, ui.field_j, ReportAbuseDialog.field_Sb) >= 65536) {
+          while (fp.multiplyQ16(true, ui.field_j, ReportAbuseDialog.field_Sb) >= 65536) {
             ReportAbuseDialog.field_Sb = ReportAbuseDialog.field_Sb - ui.field_j;
             RetroBlock.field_e = RetroBlock.field_e + 1;
           }

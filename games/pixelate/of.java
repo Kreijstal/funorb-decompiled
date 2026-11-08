@@ -29,7 +29,7 @@ final class of {
         field_i = null;
     }
 
-    final static String a(byte[] param0, int param1) {
+    final static String decodeCp1252Text(byte[] param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

@@ -536,7 +536,7 @@ final class MatchController {
             MusicCrossfadeStream.drawScorePopups(91);
             this.field_j.draw(param1 + 2);
             if (param0) {
-              rm.a(0);
+              rm.drawTutorialPage(0);
             }
             LoginCredentials.field_e.drawTitleBanner((byte) -119);
             if (null != fq.field_o) {
@@ -901,7 +901,7 @@ final class MatchController {
         try {
           TimerBarDemo.field_q = param2;
           int var5_int = 55 / ((2 - param3) / 55);
-          UiContainer.openStyledMessageMenu(param0, param4, 5, param1, ab.field_c, 320, PieceTiming.field_e.maxAscent, 10, bi.field_g, true, PieceTiming.field_e, PieceTiming.field_e.maxDescent + PieceTiming.field_e.maxAscent, (byte) 27, 15, 240);
+          UiContainer.openStyledMessageMenu(param0, param4, 5, param1, ab.field_c, 320, PieceTiming.field_e.maxAscent, 10, TutorialPage.field_g, true, PieceTiming.field_e, PieceTiming.field_e.maxDescent + PieceTiming.field_e.maxAscent, (byte) 27, 15, 240);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ii.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -911,11 +911,11 @@ final class MatchController {
         if (param1 != -120) {
           field_b = (String) null;
         }
-        return JavaRandomHelpers.a(SceneWidgetNode.field_v, -100, param0);
+        return JavaRandomHelpers.randomBelow(SceneWidgetNode.field_v, -100, param0);
     }
 
     MatchController() {
-        this((String[]) null, 0, false, JavaRandomHelpers.a(ea.field_b, -115, 2147483647), 0, 0, 0);
+        this((String[]) null, 0, false, JavaRandomHelpers.randomBelow(ea.field_b, -115, 2147483647), 0, 0, 0);
     }
 
     final void startNextRound(int param0) {

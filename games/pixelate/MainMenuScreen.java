@@ -9,7 +9,7 @@ final class MainMenuScreen extends MenuScreen {
     static String field_p;
     static String field_o;
 
-    final static void g(byte param0) {
+    final static void advanceToLoginRequest(byte param0) {
         if (el.field_b == 10) {
           StrongCacheReference.beginLoginRequest(20);
           el.field_b = 11;
@@ -23,7 +23,7 @@ final class MainMenuScreen extends MenuScreen {
         if (param0 > 36) {
           return;
         }
-        MainMenuScreen.g((byte) 72);
+        MainMenuScreen.advanceToLoginRequest((byte) 72);
     }
 
     final void draw(int param0) {

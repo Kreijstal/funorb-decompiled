@@ -78,7 +78,7 @@ final class mi extends MenuScreen {
         var6 = new boolean[var5];
         var7 = new IndexedSprite[param1];
         for (var8 = 0; var7.length > var8; var8++) {
-          var9 = JavaRandomHelpers.a(UiTheme.field_f, param3 ^ -118, var5);
+          var9 = JavaRandomHelpers.randomBelow(UiTheme.field_f, param3 ^ -118, var5);
           while (var6[var9]) {
             var9++;
             if (var5 > var9) {
@@ -267,7 +267,7 @@ final class mi extends MenuScreen {
                 }
               } else {
                 try {
-                  JavaScriptBridge.a(AudioService.getApplet(13867), (byte) -37, new Object[]{PacketBuffer.decodeBase37Name(RisingBubble.field_b, -7067)}, "zap");
+                  JavaScriptBridge.callFunction(AudioService.getApplet(13867), (byte) -37, new Object[]{PacketBuffer.decodeBase37Name(RisingBubble.field_b, -7067)}, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

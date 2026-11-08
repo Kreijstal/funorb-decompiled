@@ -79,9 +79,9 @@ final class RetroBlock {
     private final void respawn(int param0) {
         this.field_f = 0;
         if (param0 == -16289) {
-          this.field_h = JavaRandomHelpers.a(ea.field_b, -104, 6);
+          this.field_h = JavaRandomHelpers.randomBelow(ea.field_b, -104, 6);
           this.field_a = 0;
-          this.field_b = JavaRandomHelpers.a(ea.field_b, -120, 6);
+          this.field_b = JavaRandomHelpers.randomBelow(ea.field_b, -120, 6);
           return;
         }
     }

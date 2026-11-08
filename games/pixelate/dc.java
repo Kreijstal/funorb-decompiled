@@ -5,7 +5,7 @@ final class dc {
     static byte[] field_b;
     static SceneWidget field_a;
 
-    final static void a(byte param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
+    final static void exitFullscreenFrame(byte param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
         PlatformTask var3 = null;
         int var4 = 0;
         PlatformTaskDispatcher var5 = null;
@@ -20,7 +20,7 @@ final class dc {
         try {
           if (param0 != -124) {
             var5 = (PlatformTaskDispatcher) null;
-            dc.a((byte) 3, (java.awt.Frame) null, (PlatformTaskDispatcher) null);
+            dc.exitFullscreenFrame((byte) 3, (java.awt.Frame) null, (PlatformTaskDispatcher) null);
           }
           while (true) {
             var3 = param2.requestExitFullscreen(param1, -84);

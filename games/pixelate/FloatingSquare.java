@@ -104,14 +104,14 @@ final class FloatingSquare {
         int var4;
         int var5;
         float var6;
-        this.field_f = JavaRandomHelpers.a(ea.field_b, -101, 50) + 20;
-        this.field_d = 1.5f + (float)JavaRandomHelpers.a(ea.field_b, -125, 100) / 100.0f;
-        stackIn_3_0 = (JavaRandomHelpers.a(ea.field_b, param0 ^ 22979, 2) != 1) ? 0 : 1;
+        this.field_f = JavaRandomHelpers.randomBelow(ea.field_b, -101, 50) + 20;
+        this.field_d = 1.5f + (float)JavaRandomHelpers.randomBelow(ea.field_b, -125, 100) / 100.0f;
+        stackIn_3_0 = (JavaRandomHelpers.randomBelow(ea.field_b, param0 ^ 22979, 2) != 1) ? 0 : 1;
         var2 = stackIn_3_0;
-        stackIn_6_0 = (JavaRandomHelpers.a(ea.field_b, -115, 2) != 1) ? 0 : 1;
+        stackIn_6_0 = (JavaRandomHelpers.randomBelow(ea.field_b, -115, 2) != 1) ? 0 : 1;
         var3 = stackIn_6_0;
         if (var2 == 0) {
-          this.field_h = (float)(-100 + JavaRandomHelpers.a(ea.field_b, param0 ^ 22992, 740));
+          this.field_h = (float)(-100 + JavaRandomHelpers.randomBelow(ea.field_b, param0 ^ 22992, 740));
           if (var3 != 0) {
             stackIn_14_1 = 480.0f;
           } else {
@@ -125,7 +125,7 @@ final class FloatingSquare {
             stackIn_10_1 = 640.0f;
           }
           this.field_h = stackIn_10_1;
-          this.field_a = (float)(JavaRandomHelpers.a(ea.field_b, -109, 580) - 100);
+          this.field_a = (float)(JavaRandomHelpers.randomBelow(ea.field_b, -109, 580) - 100);
         }
         var4 = 320 - (int)this.field_h;
         var5 = 240 - (int)this.field_a;
@@ -312,9 +312,9 @@ final class FloatingSquare {
     FloatingSquare() {
         int var1;
         this.respawn(-22970);
-        var1 = JavaRandomHelpers.a(ea.field_b, -128, 250);
+        var1 = JavaRandomHelpers.randomBelow(ea.field_b, -128, 250);
         if (var1 >= 180) {
-          this.field_f = this.field_f + JavaRandomHelpers.a(ea.field_b, -116, 50);
+          this.field_f = this.field_f + JavaRandomHelpers.randomBelow(ea.field_b, -116, 50);
         } else {
           this.field_f = 0;
           this.field_a = this.field_a + this.field_e * (float)var1;

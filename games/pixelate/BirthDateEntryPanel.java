@@ -9,7 +9,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
     static int[] field_N;
     static String field_R;
 
-    final void a(int param0) {
+    final void layoutChildren(int param0) {
         int var2 = 250;
         if (param0 == 14210) {
           this.field_Q.setBounds(140, (byte) 73, 20 + (this.field_C - 25) >> 1, this.field_E - var2 >> 1, 25);

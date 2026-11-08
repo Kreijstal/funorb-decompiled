@@ -94,7 +94,7 @@ final class aq {
           var6 = 1;
           var2Lifetime1 = var6;
           while (var1_int > var6) {
-            var3 = var6 + JavaRandomHelpers.a(ea.field_b, -109, var1_int - var6);
+            var3 = var6 + JavaRandomHelpers.randomBelow(ea.field_b, -109, var1_int - var6);
             var4 = Cloud.field_g[var6];
             Cloud.field_g[var6] = Cloud.field_g[var3];
             Cloud.field_g[var3] = var4;

@@ -761,7 +761,7 @@ abstract class MenuScreen {
                                   var6 = param2 ? 1 : 0;
                                   FireworkSpark.field_b = false;
                                   var7 = qj.field_e;
-                                  QuickChatPhraseCache.configureQuickChatStyle(((BitmapFont) ((Object) var7)).maxAscent + ((BitmapFont) ((Object) var7)).maxDescent, -879, ((BitmapFont) ((Object) var7)).maxAscent, 2, 320, 8, ab.field_c, var7, 240, bi.field_g, 8, var6 != 0);
+                                  QuickChatPhraseCache.configureQuickChatStyle(((BitmapFont) ((Object) var7)).maxAscent + ((BitmapFont) ((Object) var7)).maxDescent, -879, ((BitmapFont) ((Object) var7)).maxAscent, 2, 320, 8, ab.field_c, var7, 240, TutorialPage.field_g, 8, var6 != 0);
                                 }
                               }
                             } else {
@@ -782,7 +782,7 @@ abstract class MenuScreen {
                                       la.changeScreen(MidiPcmStream.field_t, -5, var6 != 0, -25528);
                                     }
                                     if (!(!DateOfBirthValidator.field_i)) {
-                                      qj.sendGameJoinRequest(false, 0, 11);
+                                      qj.sendLeaveGameRequest(false, 0, 11);
                                     }
                                   }
                                   break regionExit1;

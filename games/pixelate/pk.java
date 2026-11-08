@@ -358,7 +358,7 @@ final class pk {
                 if (nf.field_d.field_P != 0 &&
                   nf.field_d.field_ub < var9 &&
                   !SoundVoice.field_q) {
-                  SceneWidget.c(true);
+                  SceneWidget.openLobbyQuickChat(true);
                 }
               }
             }

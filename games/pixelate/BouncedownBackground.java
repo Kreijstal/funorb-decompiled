@@ -22,7 +22,7 @@ final class BouncedownBackground extends BackgroundScene {
         int var21_int = 0;
         RuntimeException var21 = null;
         try {
-          ValidationIndicator.a(param17, param12, param9, new sb(param2), param14, new sb(param16), param8, param11, param13, param7, param5, param18, param3, new sb(param0), param19, param4, (byte) 119, param15, param20, param6, param1);
+          ValidationIndicator.configureLegacyMenuStyle(param17, param12, param9, new sb(param2), param14, new sb(param16), param8, param11, param13, param7, param5, param18, param3, new sb(param0), param19, param4, (byte) 119, param15, param20, param6, param1);
           var21_int = -40 / ((-41 - param10) / 48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

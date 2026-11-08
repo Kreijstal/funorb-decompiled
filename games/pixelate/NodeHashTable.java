@@ -142,10 +142,10 @@ final class NodeHashTable {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void reopenLoginDialog(int param0, boolean param1) {
         QueuedInput.a(param1, -17130, false);
         if (param0 != 0) {
-          NodeHashTable.a(-72, false);
+          NodeHashTable.reopenLoginDialog(-72, false);
         }
     }
 

@@ -5,7 +5,7 @@ final class pa {
     static int[][] field_a;
     static int field_b;
 
-    final static id a(int param0, String param1, byte param2) {
+    final static id createRequestResult(int param0, String param1, byte param2) {
         id var3 = null;
         RuntimeException var3_ref = null;
         id stackIn_3_0 = null;
@@ -40,7 +40,7 @@ final class pa {
         field_a = (int[][]) null;
         if (param0 < 8) {
           String var2 = (String) null;
-          pa.a(-122, (String) null, (byte) -98);
+          pa.createRequestResult(-122, (String) null, (byte) -98);
         }
     }
 

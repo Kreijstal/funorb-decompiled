@@ -5,7 +5,7 @@ final class fe {
     static boolean field_a;
     static Sprite field_b;
 
-    final static void a(boolean param0) {
+    final static void raiseFlag(boolean param0) {
         if (param0) {
           field_a = true;
         }

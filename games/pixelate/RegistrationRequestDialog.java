@@ -178,7 +178,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           QueuedInput.a(false, -17130, true);
           return;
         }
-        th.a(param2 ^ 8180);
+        th.loginWithRegisteredAccount(param2 ^ 8180);
         if (param2 != 11) {
           return;
         }
@@ -191,11 +191,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
 
     final void completeWithoutServer(byte param0) {
         if (param0 <= -96) {
-          this.handleRegistrationResult(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
+          this.handleRegistrationResult(pa.createRequestResult(248, AudioService.field_b, (byte) -121), -127, true);
           return;
         }
         RegistrationRequestDialog.drawDimmedAccountLayers(true, false, -97);
-        this.handleRegistrationResult(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
+        this.handleRegistrationResult(pa.createRequestResult(248, AudioService.field_b, (byte) -121), -127, true);
     }
 
     static {

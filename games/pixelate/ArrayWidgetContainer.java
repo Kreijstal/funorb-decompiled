@@ -126,7 +126,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
 
     final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         super.setBounds(param0, (byte) 75, param2, param3, param4);
-        this.a(14210);
+        this.layoutChildren(14210);
         if (param1 < 19) {
           field_H = (Sprite) null;
         }
@@ -574,7 +574,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         super(param0, param1, param2, param3, param4, (UiListener) null);
     }
 
-    abstract void a(int param0);
+    abstract void layoutChildren(int param0);
 
     private final boolean focusPreviousChild(UiComponent param0, int param1) {
         RuntimeException var3 = null;

@@ -83,7 +83,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           TextButton var3 = (TextButton) null;
           this.onAction((TextButton) null, -114, -9, 49, 73);
           if (this.field_pb) {
-            ListRequest.a((byte) -102);
+            ListRequest.reopenLoginFormAfterClose((byte) -102);
             return;
           }
           if (this.field_ob) {
@@ -93,7 +93,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           return;
         }
         if (this.field_pb) {
-          ListRequest.a((byte) -102);
+          ListRequest.reopenLoginFormAfterClose((byte) -102);
           return;
         }
         if (this.field_ob) {
@@ -117,7 +117,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           }
         }
         if (oo.field_b > 0) {
-          EditableTextWidget.m(124);
+          EditableTextWidget.layoutAccountPanelSlide(124);
         }
         if (param0 <= 76) {
           field_ub = (int[]) null;

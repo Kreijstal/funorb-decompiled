@@ -74,7 +74,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               BirthDateEntryPanel.field_G = stackIn_11_0;
               gb.field_d = stackIn_11_0;
               MarkerSlider.field_U = stackIn_11_0;
-              FallingPieceView.a(CipherPacketBuffer.field_q, (byte) 66, bj.field_a, ChatMessage.field_f, hf.field_n);
+              FallingPieceView.writeConnectionHandshake(CipherPacketBuffer.field_q, (byte) 66, bj.field_a, ChatMessage.field_f, hf.field_n);
               SecondaryNodeHashTable.flushOutgoingPackets(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -325,10 +325,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         int stackIn_81_0 = 0;
         int stackIn_88_0 = 0;
         int stackIn_107_0 = 0;
-        bi var1;
+        TutorialPage var1;
         int var2;
-        bi var1Lifetime1;
-        bi var1Lifetime2;
+        TutorialPage var1Lifetime1;
+        TutorialPage var1Lifetime2;
         var2 = Pixelate.field_H ? 1 : 0;
         if (WeightedLruCache.field_j > 0) {
           WeightedLruCache.field_j = WeightedLruCache.field_j - 1;

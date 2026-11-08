@@ -6,9 +6,9 @@ final class rm {
     static ScrollPaneWithFooter field_a;
     static String[] field_b;
 
-    final static void a(int param0) {
+    final static void drawTutorialPage(int param0) {
         if (param0 != ~of.field_d) {
-          jb.field_b[of.field_d].a(false);
+          jb.field_b[of.field_d].draw(false);
         }
     }
 

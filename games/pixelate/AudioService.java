@@ -268,7 +268,7 @@ final class AudioService implements Runnable {
             }
             SecondaryNodeHashTable.sleepMillis(10L, (byte) 23);
             Object var5 = (Object) null;
-            ResourceArchive.a(this.field_g, (Object) null, (byte) -52);
+            ResourceArchive.pumpPlatformEvents(this.field_g, (Object) null, (byte) -52);
           }
         } catch (Exception exception) {
           String var6 = (String) null;

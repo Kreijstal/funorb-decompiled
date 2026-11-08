@@ -125,13 +125,13 @@ final class mc extends IntrusiveNode {
             TimerBarDemo.field_p != null &&
             TimerBarDemo.field_p.ensureIndex(param0 - 15) &&
             TimerBarDemo.field_p.ensureGroupAvailableByName("benefits", -1)) {
-            EmailCredentials.field_i = bi.loadSprite("benefits", "headline", PictureStrip.field_n, (byte) -79);
-            SpriteCheckboxPainter.field_a = bi.loadSprite("benefits", "blurbpane", PictureStrip.field_n, (byte) -97);
-            wo.field_c = bi.loadSprite("benefits", "button", PictureStrip.field_n, (byte) -57);
-            ro.field_b = bi.loadSprite("benefits", "signup_text", PictureStrip.field_n, (byte) -119);
-            ResizableModalPanel.field_P = bi.loadSprite("benefits", "menu_text", PictureStrip.field_n, (byte) -20);
-            AccountChoicePanel.field_O = bi.loadSprite("benefits", "button_frame", PictureStrip.field_n, (byte) -63);
-            ScrollContainer.field_Kb = bi.loadSprite("benefits", "arrow", PictureStrip.field_n, (byte) -125);
+            EmailCredentials.field_i = TutorialPage.loadSprite("benefits", "headline", PictureStrip.field_n, (byte) -79);
+            SpriteCheckboxPainter.field_a = TutorialPage.loadSprite("benefits", "blurbpane", PictureStrip.field_n, (byte) -97);
+            wo.field_c = TutorialPage.loadSprite("benefits", "button", PictureStrip.field_n, (byte) -57);
+            ro.field_b = TutorialPage.loadSprite("benefits", "signup_text", PictureStrip.field_n, (byte) -119);
+            ResizableModalPanel.field_P = TutorialPage.loadSprite("benefits", "menu_text", PictureStrip.field_n, (byte) -20);
+            AccountChoicePanel.field_O = TutorialPage.loadSprite("benefits", "button_frame", PictureStrip.field_n, (byte) -63);
+            ScrollContainer.field_Kb = TutorialPage.loadSprite("benefits", "arrow", PictureStrip.field_n, (byte) -125);
             EmailConfirmationValidator.field_r = (BitmapFont) ((Object) PicturePreview.loadBinaryBitmapFontByName(0, TimerBarDemo.field_p, "large_font", PictureStrip.field_n, "benefits"));
             QuickChatCategory.field_A = (BitmapFont) ((Object) PicturePreview.loadBinaryBitmapFontByName(0, TimerBarDemo.field_p, "small_font", PictureStrip.field_n, "benefits"));
             var28 = SoftwareRasterizer.field_k;
@@ -310,7 +310,7 @@ final class mc extends IntrusiveNode {
             } else {
               stackIn_52_2 = 3;
             }
-            var2Lifetime4 = stackIn_51_0 + (GrowableIntList.b(stackIn_51_1 << stackIn_52_2, 0) * 40 >> 16);
+            var2Lifetime4 = stackIn_51_0 + (GrowableIntList.sine(stackIn_51_1 << stackIn_52_2, 0) * 40 >> 16);
             if (var2Lifetime4 > 0) {
               wo.field_c.drawAdditive(230, 389, var2Lifetime4);
               wo.field_c.drawAdditive(232, 389, var2Lifetime4);
@@ -344,7 +344,7 @@ final class mc extends IntrusiveNode {
             hf.field_m.drawTransparent(586, var1_int);
             if (StatusBar.field_k > var1_int &&
               ScrollContainer.field_Kb.field_E + var1_int > StatusBar.field_k) {
-              var2Lifetime5 = (40 * GrowableIntList.b(RetroBlock.field_e << 4, 0) >> 16) + 40;
+              var2Lifetime5 = (40 * GrowableIntList.sine(RetroBlock.field_e << 4, 0) >> 16) + 40;
               if (var2Lifetime5 > 0) {
                 if (ProxyAuthenticationException.field_d > -ScrollContainer.field_Kb.field_F + 269 &&
                   ProxyAuthenticationException.field_d < 269) {

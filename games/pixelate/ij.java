@@ -13,7 +13,7 @@ final class ij extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final static void a(int param0, String param1) {
+    final static void updateTooltip(int param0, String param1) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;

@@ -63,21 +63,21 @@ final class SecondaryNodeDeque implements Iterable {
           ed.field_b.writeBytes(param3, param2, -3493, param6);
           ed.field_b.padToPosition(var7_int, param1);
           ed.field_b.xteaEncrypt(true, var13);
-          if (null == bi.field_d ||
-            !(100 <= bi.field_d.payload.length)) {
-            bi.field_d = new PacketBuffer(100);
+          if (null == TutorialPage.field_d ||
+            !(100 <= TutorialPage.field_d.payload.length)) {
+            TutorialPage.field_d = new PacketBuffer(100);
           }
-          bi.field_d.position = 0;
-          bi.field_d.writeByte(160, 10);
+          TutorialPage.field_d.position = 0;
+          TutorialPage.field_d.writeByte(160, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            bi.field_d.writeInt(var13[var11], -127);
+            TutorialPage.field_d.writeInt(var13[var11], -127);
             var11++;
           }
-          bi.field_d.writeShort(1276387944, param3);
-          bi.field_d.rsaEncrypt(param4, param0, 0);
-          param5.writeBytes(bi.field_d.position, 0, -3493, bi.field_d.payload);
+          TutorialPage.field_d.writeShort(1276387944, param3);
+          TutorialPage.field_d.rsaEncrypt(param4, param0, 0);
+          param5.writeBytes(TutorialPage.field_d.position, 0, -3493, TutorialPage.field_d.payload);
           param5.writeBytes(ed.field_b.position, 0, -3493, ed.field_b.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

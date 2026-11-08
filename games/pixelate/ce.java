@@ -10,7 +10,7 @@ final class ce {
     static int field_c;
     static int field_g;
 
-    final static int a(byte param0, int param1) {
+    final static int handleConnectionFailure(byte param0, int param1) {
         int var2;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;

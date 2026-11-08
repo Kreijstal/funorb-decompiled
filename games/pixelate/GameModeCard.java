@@ -122,8 +122,8 @@ final class GameModeCard {
 
     final static PieceTiming createRandomPieceTiming(int param0, int param1) {
         double var2 = 1.0;
-        var2 = var2 + (((double)param0 - (double)param1) / 16.0 + ((double)JavaRandomHelpers.a(UiTheme.field_f, -99, 7) - 3.0) / 10.0);
-        return new PieceTiming(1 + JavaRandomHelpers.a(UiTheme.field_f, param1 ^ -102, 14), 10, of.toFixedPoint(var2, 65536));
+        var2 = var2 + (((double)param0 - (double)param1) / 16.0 + ((double)JavaRandomHelpers.randomBelow(UiTheme.field_f, -99, 7) - 3.0) / 10.0);
+        return new PieceTiming(1 + JavaRandomHelpers.randomBelow(UiTheme.field_f, param1 ^ -102, 14), 10, of.toFixedPoint(var2, 65536));
     }
 
     final static void initializeLobby(int param0, int param1, int param2, int param3, SceneWidget param4, SceneWidget param5, byte[] param6, int param7, int param8, SceneWidget param9) {

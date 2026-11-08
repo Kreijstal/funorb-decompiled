@@ -138,7 +138,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           MusicPatchNode.field_s.makeRasterTarget();
           var2.drawOpaque(0, -th.field_b.field_E);
           MusicPatchNode.field_s.field_y = th.field_b.field_E;
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ec.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

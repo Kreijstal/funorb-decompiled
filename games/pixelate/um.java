@@ -11,7 +11,7 @@ final class um extends IntrusiveNode {
     static String[] field_l;
     boolean field_p;
 
-    final static void a(int param0, int param1, Matrix3 param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void drawCubeFaces(int param0, int param1, Matrix3 param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9, int param10) {
         int var12 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
@@ -90,8 +90,8 @@ final class um extends IntrusiveNode {
           if (param3 < 54) {
             field_o = (String) null;
           }
-          if (PieceTiming.a(param4, false, param0, param2)) {
-            stackIn_6_0 = TimerBarDemo.a(param1.getFile(param2, param4, true), -17);
+          if (PieceTiming.decodeSpriteSheetFromArchive(param4, false, param0, param2)) {
+            stackIn_6_0 = TimerBarDemo.decodeBinaryFont(param1.getFile(param2, param4, true), -17);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

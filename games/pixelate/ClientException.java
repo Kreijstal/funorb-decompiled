@@ -17,15 +17,15 @@ final class ClientException extends RuntimeException {
         field_b = null;
         field_g = null;
         if (!param0) {
-          ClientException.a(62, -2, 14, -125);
+          ClientException.createBorderFrame(62, -2, 14, -125);
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] createBorderFrame(int param0, int param1, int param2, int param3) {
         if (param3 == 3) {
           return IntKeyLookup.createSolidBorderFrame(param1, param0, 5, param2, 1);
         }
-        ClientException.a(-72, -103, -103, -51);
+        ClientException.createBorderFrame(-72, -103, -103, -51);
         return IntKeyLookup.createSolidBorderFrame(param1, param0, 5, param2, 1);
     }
 

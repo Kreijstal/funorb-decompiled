@@ -202,7 +202,7 @@ final class cl {
     final static void drawOverlayLayers(byte param0, boolean param1) {
         int var2 = -93 / ((-55 - param0) / 55);
         if (null != PuzzleThumbnail.field_o) {
-          GameplayScreen.a(PuzzleThumbnail.field_o, -2);
+          GameplayScreen.drawTooltip(PuzzleThumbnail.field_o, -2);
         }
         if (null != ProxySocketConnector.field_n) {
           ProxySocketConnector.field_n.setMenuFlag(param1, (byte) 20);

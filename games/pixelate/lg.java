@@ -279,7 +279,7 @@ final class lg {
             !DirectByteStorage.field_n.equals(param1.getParameter("session"))) {
             var4 = DirectByteStorage.field_n;
           }
-          stackIn_10_0 = ub.a(-102, param2, (String) (var3), (String) (var4), -1);
+          stackIn_10_0 = ub.rewriteUrlPathParameters(-102, param2, (String) (var3), (String) (var4), -1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

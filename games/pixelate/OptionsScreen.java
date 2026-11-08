@@ -175,7 +175,7 @@ final class OptionsScreen extends MenuScreen {
         field_p = null;
     }
 
-    final static void g(byte param0) {
+    final static void resetConnectionRetries(byte param0) {
         Match.field_h.field_h = 0;
         if (param0 != 68) {
           return;

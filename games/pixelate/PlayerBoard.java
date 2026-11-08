@@ -64,7 +64,7 @@ final class PlayerBoard {
             this.cells[var3_intLifetime1] = param1.readByte(0);
           }
           for (var3_intLifetime2 = 0; this.field_u > var3_intLifetime2; var3_intLifetime2++) {
-            JavaRandomHelpers.a(this.field_t, -104, 1);
+            JavaRandomHelpers.randomBelow(this.field_t, -104, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -146,7 +146,7 @@ final class PlayerBoard {
               }
               if (decompiledFrameRemainder0) {
                 if (4 == param0) {
-                  wm.a(-11825, this.pieceTones);
+                  wm.rotatePieceTones(-11825, this.pieceTones);
                   this.field_x = true;
                   return true;
                 }
@@ -248,7 +248,7 @@ final class PlayerBoard {
           var2 = 0;
           if (DateOfBirthValidator.field_j != 1) {
             this.field_u = this.field_u + 1;
-            var3 = JavaRandomHelpers.a(this.field_t, -119, 100);
+            var3 = JavaRandomHelpers.randomBelow(this.field_t, -119, 100);
             var4 = 0;
             for (var5 = 0; var5 < 6; var5++) {
               var4 = var4 + SceneWidget.field_db[var5];
@@ -272,9 +272,9 @@ final class PlayerBoard {
         }
         if (DateOfBirthValidator.field_j != 1) {
           this.field_u = this.field_u + 1;
-          var3Lifetime2 = JavaRandomHelpers.a(this.field_t, -116, 4);
+          var3Lifetime2 = JavaRandomHelpers.randomBelow(this.field_t, -116, 4);
           for (var4Lifetime1 = 0; var3Lifetime2 > var4Lifetime1; var4Lifetime1++) {
-            wm.a(-11825, this.pieceTones);
+            wm.rotatePieceTones(-11825, this.pieceTones);
           }
         }
     }

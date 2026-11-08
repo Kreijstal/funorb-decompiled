@@ -25,7 +25,7 @@ final class ug extends IntrusiveNode {
         if (null != wo.field_b) {
           var2 = wo.field_b;
           String var1 = var2;
-          LoginCredentials.a(AlphaContainer.formatTemplate(ek.field_d, 113, new String[]{var2}), false);
+          LoginCredentials.showMessageDialogText(AlphaContainer.formatTemplate(ek.field_d, 113, new String[]{var2}), false);
           wo.field_b = null;
         }
         if (param0 == 2586) {

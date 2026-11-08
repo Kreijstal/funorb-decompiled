@@ -49,7 +49,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
         super(param0, param1);
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void openServerList(byte param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;

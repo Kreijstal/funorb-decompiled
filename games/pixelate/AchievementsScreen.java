@@ -295,7 +295,7 @@ final class AchievementsScreen extends MenuScreen {
         if (param1 < 26) {
           field_o = 88;
         }
-        int var3 = 3 + JavaRandomHelpers.a(UiTheme.field_f, -124, 17);
+        int var3 = 3 + JavaRandomHelpers.randomBelow(UiTheme.field_f, -124, 17);
         double var4 = (double)(param0 - 10) / 10.0 + 7.0;
         return new PieceTiming(var2, var3, of.toFixedPoint(var4, 65536));
     }

@@ -3,7 +3,7 @@
  */
 final class jb {
     static int field_a;
-    static bi[] field_b;
+    static TutorialPage[] field_b;
     static String field_c;
     private static String field_z;
 

@@ -146,7 +146,7 @@ final class IntrusiveDeque {
         return (IntrusiveNode) null;
     }
 
-    final static void h(int param0) {
+    final static void drawLegacyMenuWithFrame(int param0) {
         int var1 = 0;
         int var2 = 0;
         if (param0 < -13) {

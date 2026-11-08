@@ -284,7 +284,7 @@ final class BufferedRandomAccessFile {
     final void close(boolean param0) throws IOException {
         if (!param0) {
           String var3 = (String) null;
-          BufferedRandomAccessFile.a(-117, (String) null);
+          BufferedRandomAccessFile.classifyNumericLabel(-117, (String) null);
         }
         this.flush((byte) 28);
         this.file.close(-5317);
@@ -304,7 +304,7 @@ final class BufferedRandomAccessFile {
         field_b = null;
     }
 
-    final static el a(int param0, String param1) {
+    final static el classifyNumericLabel(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

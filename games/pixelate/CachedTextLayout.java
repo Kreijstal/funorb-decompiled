@@ -507,7 +507,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, boolean param4) {
+    final static void updateGameRoomPanel(boolean param0, int param1, int param2, boolean param3, boolean param4) {
         SceneWidget stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
         int stackIn_36_0 = 0;
@@ -957,7 +957,7 @@ final class CachedTextLayout extends TextLayout {
           nd.field_b.field_g.processTabPresses((byte) -122);
           if (null != LoginMethod.field_c) {
             if (0 != ValidatedTextWidget.field_kb.field_P) {
-              qg.a(LoginMethod.field_c.getGameId((byte) 8), param2, false);
+              qg.sendDeclineGameRequest(LoginMethod.field_c.getGameId((byte) 8), param2, false);
             }
             if (0 != wm.field_d.field_P) {
               EmergentBehaviourBackground.field_o = true;

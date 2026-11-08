@@ -9,7 +9,7 @@ final class bj {
     static int[] field_b;
     static MusicTrack[] field_c;
 
-    final static void a(byte param0) {
+    final static void drawQuickChatOverlay(byte param0) {
         if (un.field_l) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
           DraggableWidget.field_I.drawFullScreen(false, 0);
@@ -30,7 +30,7 @@ final class bj {
             param0 = 50;
           }
           int var3 = 85 / ((0 - param1) / 35);
-          var2 = 0 == JavaRandomHelpers.a(ea.field_b, -111, 4) ? 1 : 0;
+          var2 = 0 == JavaRandomHelpers.randomBelow(ea.field_b, -111, 4) ? 1 : 0;
           return mc.generatePuzzle(ea.field_b, 5, var2 != 0, param0, -52);
         }
         return PuzzleThumbnail.field_d[param0];

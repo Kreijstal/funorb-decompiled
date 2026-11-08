@@ -26,7 +26,7 @@ final class fp {
         throw new IllegalStateException();
     }
 
-    final static int a(boolean param0, int param1, int param2) {
+    final static int multiplyQ16(boolean param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -40,7 +40,7 @@ final class fp {
           var6 = 65535 & param1;
           return (var4 * var6 >> 16) + var3 * param1 + var5 * var4;
         }
-        fp.a(false, 87, -10);
+        fp.multiplyQ16(false, 87, -10);
         var4Lifetime1 = param2 & 65535;
         var5Lifetime1 = param1 >> 16;
         var6Lifetime1 = 65535 & param1;

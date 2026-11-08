@@ -84,7 +84,7 @@ final class GrowableIntList {
         return this.field_j[param0];
     }
 
-    final static int b(int param0, int param1) {
+    final static int sine(int param0, int param1) {
         if (param1 != 0) {
           return -64;
         }

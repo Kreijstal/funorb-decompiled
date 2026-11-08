@@ -11,7 +11,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
     static Sprite field_O;
     private TextButton field_J;
 
-    final static void a(int param0, int param1, boolean param2, boolean param3) {
+    final static void updateCreateGameControls(int param0, int param1, boolean param2, boolean param3) {
         SceneWidget stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         boolean stackIn_9_2 = false;
@@ -32,7 +32,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         boolean stackIn_69_2 = false;
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
-        EditableTextWidget.m(67);
+        EditableTextWidget.layoutAccountPanelSlide(67);
         if (gi.field_a < 0) {
           ValidatedTextWidget.field_lb.field_cb = null;
           if (param0 != 2) {
@@ -163,7 +163,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           if (this.field_N != param0) {
             if (this.field_J != param0) {
               if (param0 == this.field_L) {
-                CheckboxPainter.a(-22218);
+                CheckboxPainter.submitRegistrationRequest(-22218);
               }
             } else {
               id.showRegistrationPanel(param2 + 87);

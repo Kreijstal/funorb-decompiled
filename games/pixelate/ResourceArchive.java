@@ -157,7 +157,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void a(PlatformTaskDispatcher param0, Object param1, byte param2) {
+    final static void pumpPlatformEvents(PlatformTaskDispatcher param0, Object param1, byte param2) {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -267,7 +267,7 @@ final class ResourceArchive {
 
     final byte[] getFile(int param0, int param1, boolean param2) {
         if (!param2) {
-          ResourceArchive.a((PlatformTaskDispatcher) null, this.packedGroups[0], ((byte[]) (((Object[]) (this.packedGroups[0]))[1]))[2]);
+          ResourceArchive.pumpPlatformEvents((PlatformTaskDispatcher) null, this.packedGroups[0], ((byte[]) (((Object[]) (this.packedGroups[0]))[1]))[2]);
         }
         return this.getFileWithKey(-1, (int[]) null, param1, param0);
     }
@@ -646,7 +646,7 @@ final class ResourceArchive {
         try {
           if (param0 != 63) {
             var3 = (Object) null;
-            ResourceArchive.a((PlatformTaskDispatcher) null, (Object) null, (byte) 25);
+            ResourceArchive.pumpPlatformEvents((PlatformTaskDispatcher) null, (Object) null, (byte) 25);
           }
           stackIn_3_0 = DialWidgetPainter.isValidSocialName(param1, (byte) -70, false);
           return stackIn_3_0;

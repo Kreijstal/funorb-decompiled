@@ -11,7 +11,7 @@ final class TimerBarDemo extends StatusBar {
     static ResourceArchive field_p;
     private int field_s;
 
-    final static BinaryBitmapFont a(byte[] param0, int param1) {
+    final static BinaryBitmapFont decodeBinaryFont(byte[] param0, int param1) {
         BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

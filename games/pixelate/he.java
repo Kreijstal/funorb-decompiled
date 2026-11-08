@@ -9,7 +9,7 @@ final class he {
     static sb field_a;
     static BitmapFont field_d;
 
-    final static void a(byte param0, int param1, sm param2) {
+    final static void sendQueuedRequest(byte param0, int param1, sm param2) {
         CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;

@@ -7,7 +7,7 @@ final class PcmStreamMixer extends PcmStream {
     private int processedSamples;
     private int field_q;
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void addSubStream(PcmStream param0) {
         this.field_r.addFirst(1392503105, param0);
     }
 

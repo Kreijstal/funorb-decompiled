@@ -296,9 +296,9 @@ final class UiTheme {
           this.field_n = 3;
           this.field_m = param1;
           this.field_g = 3;
-          var4.createStateLayer(0, 7177).setTextColour(15658734, 15115).setFrameSprites(ClientException.a(8947848, 7829367, 10066329, 3), (byte) -65);
-          var4.createStateLayer(1, 7177).setFrameSprites(ClientException.a(11184810, 13421772, 10066329, param0 ^ 7), (byte) -65);
-          var4.createStateLayer(3, 7177).setFrameSprites(ClientException.a(8947848, 10066329, 7829367, 3), (byte) -65).setOffsetX((byte) 124, 1).setOffsetY(1, false);
+          var4.createStateLayer(0, 7177).setTextColour(15658734, 15115).setFrameSprites(ClientException.createBorderFrame(8947848, 7829367, 10066329, 3), (byte) -65);
+          var4.createStateLayer(1, 7177).setFrameSprites(ClientException.createBorderFrame(11184810, 13421772, 10066329, param0 ^ 7), (byte) -65);
+          var4.createStateLayer(3, 7177).setFrameSprites(ClientException.createBorderFrame(8947848, 10066329, 7829367, 3), (byte) -65).setOffsetX((byte) 124, 1).setOffsetY(1, false);
           var5 = new Sprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -320,7 +320,7 @@ final class UiTheme {
           discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulTextPainter();
           var17.copyStyleTo(var8, (byte) 126);
-          var8.createStateLayer(0, 7177).setFrameSprites(ClientException.a(15658734, 10066329, 7829367, 3), (byte) -65).setTextColour(1118481, 15115).setShadowColour(-1, (byte) -68);
+          var8.createStateLayer(0, 7177).setFrameSprites(ClientException.createBorderFrame(15658734, 10066329, 7829367, 3), (byte) -65).setTextColour(1118481, 15115).setShadowColour(-1, (byte) -68);
           var8.createStateLayer(4, 7177).setPaintsBaseLayer(true, true).setFrameSprites(var5, (byte) -65);
           this.field_i = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];

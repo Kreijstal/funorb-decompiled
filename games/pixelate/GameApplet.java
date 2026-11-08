@@ -157,7 +157,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(var3 < id.field_b)) {
                       this.runRenderFrame(-1);
-                      ResourceArchive.a(mc.field_k, NameAvailabilityValidator.field_u, (byte) -52);
+                      ResourceArchive.pumpPlatformEvents(mc.field_k, NameAvailabilityValidator.field_u, (byte) -52);
                       break;
                     }
                     this.runClientTick(5176);

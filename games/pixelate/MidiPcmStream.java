@@ -174,7 +174,7 @@ final class MidiPcmStream extends PcmStream {
             if (var3.field_G != null) {
               var3.field_G.fadeOut(AudioOutput.field_h / 100);
               if (var3.field_G.hasRemainingRampFrames()) {
-                this.field_N.field_o.a(var3.field_G);
+                this.field_N.field_o.addSubStream(var3.field_G);
               }
               var3.releaseVoiceBuffers(false);
             }
@@ -641,7 +641,7 @@ final class MidiPcmStream extends PcmStream {
             param1.field_G.mixInto(param4, param2, param0);
           }
           if (param1.field_G.hasRemainingRampFrames()) {
-            this.field_N.field_o.a(param1.field_G);
+            this.field_N.field_o.addSubStream(param1.field_G);
           }
           param1.releaseVoiceBuffers(param3);
           if (param1.field_v >= 0) {
@@ -1006,7 +1006,7 @@ final class MidiPcmStream extends PcmStream {
           this.midiReader.parse(param1.field_k);
           this.playbackTime = (long)param3;
           this.field_z = param0 ? true : false;
-          var5_int = this.midiReader.d();
+          var5_int = this.midiReader.trackCount();
           for (var6 = 0; var6 < var5_int; var6++) {
             this.midiReader.seekTrack(var6);
             this.midiReader.readDelta(var6);

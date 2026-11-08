@@ -37,7 +37,7 @@ final class MarkerSlider extends TextButton {
         if (param0 != -20822) {
           MarkerSlider.returnToLoginStage(-68);
         }
-        NodeHashTable.a(0, true);
+        NodeHashTable.reopenLoginDialog(0, true);
         el.field_b = 0;
     }
 

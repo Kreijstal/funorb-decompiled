@@ -93,7 +93,7 @@ abstract class ModalPanel extends UiContainer {
           this.drawDialogBackground(0, 0, true);
           super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5 = -94 / ((param3 - 70) / 49);
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           fd.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
           return;
         }
@@ -104,7 +104,7 @@ abstract class ModalPanel extends UiContainer {
           this.drawDialogBackground(0, 0, true);
           super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5Lifetime1 = -94 / ((param3 - 70) / 49);
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           fd.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
           return;
         }
@@ -115,7 +115,7 @@ abstract class ModalPanel extends UiContainer {
           this.drawDialogBackground(0, 0, true);
           super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5Lifetime2 = -94 / ((param3 - 70) / 49);
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           fd.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
           return;
         }
@@ -124,7 +124,7 @@ abstract class ModalPanel extends UiContainer {
         this.drawDialogBackground(0, 0, true);
         super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
         var5Lifetime3 = -94 / ((param3 - 70) / 49);
-        LinkButtonPainter.a((byte) 92);
+        LinkButtonPainter.popRasterState((byte) 92);
         fd.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
     }
 

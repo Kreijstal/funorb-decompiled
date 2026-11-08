@@ -9,7 +9,7 @@ final class qh {
     static String[] field_d;
     static int field_b;
 
-    final static void a(byte param0, int param1, MusicTrack param2, boolean param3) {
+    final static void playMusicTrack(byte param0, int param1, MusicTrack param2, boolean param3) {
         if (param0 > -50) {
           return;
         }

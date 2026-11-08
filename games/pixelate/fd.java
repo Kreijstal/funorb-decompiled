@@ -14,7 +14,7 @@ final class fd {
         return Cloud.field_b.content;
     }
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] acquireByteArray(int param0, int param1) {
         int fieldTemp$9 = 0;
         int dupTemp$10 = 0;
         byte[][] arrayValue$11 = null;

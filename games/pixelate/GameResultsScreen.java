@@ -453,7 +453,7 @@ final class GameResultsScreen extends MenuScreen {
             la.changeScreen(MidiPcmStream.field_t, -5, var3 != 0, -25528);
           }
           if (DateOfBirthValidator.field_i) {
-            qj.sendGameJoinRequest(false, 0, 11);
+            qj.sendLeaveGameRequest(false, 0, 11);
           }
         }
         if (param0 != 12) {

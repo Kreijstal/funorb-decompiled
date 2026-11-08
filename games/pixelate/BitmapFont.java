@@ -123,7 +123,7 @@ abstract class BitmapFont extends DualLinkNode {
         var4 = param2 - var3;
         var5 = 0;
         for (var6 = 0; var6 < param1.length(); var6++) {
-          var7 = param0.a(param1.charAt(var6));
+          var7 = param0.charWidth(param1.charAt(var6));
           if (var5 + var7 > var4) {
             return param1.substring(0, var6 - 1) + "...";
           }
@@ -243,7 +243,7 @@ abstract class BitmapFont extends DualLinkNode {
         return this.wrapText(param0, new int[]{param1}, field_J);
     }
 
-    final int a(char param0) {
+    final int charWidth(char param0) {
         return this.glyphAdvances[MenuInputState.charToCp1252Byte((byte) -118, param0) & 255];
     }
 
@@ -696,7 +696,7 @@ abstract class BitmapFont extends DualLinkNode {
                                   }
                                 }
                               } else {
-                                var4 = var4 + this.a('®');
+                                var4 = var4 + this.charWidth('®');
                                 if (this.pairKerning != null &&
                                   var10 != 0) {
                                   var4 = var4 + this.pairKerning[(var10 << 8) + 174];
@@ -704,7 +704,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 var10 = 174;
                               }
                             } else {
-                              var4 = var4 + this.a('©');
+                              var4 = var4 + this.charWidth('©');
                               if (this.pairKerning != null &&
                                 var10 != 0) {
                                 var4 = var4 + this.pairKerning[(var10 << 8) + 169];
@@ -712,7 +712,7 @@ abstract class BitmapFont extends DualLinkNode {
                               var10 = 169;
                             }
                           } else {
-                            var4 = var4 + this.a('€');
+                            var4 = var4 + this.charWidth('€');
                             if (this.pairKerning != null &&
                               var10 != 0) {
                               var4 = var4 + this.pairKerning[(var10 << 8) + 128];
@@ -720,7 +720,7 @@ abstract class BitmapFont extends DualLinkNode {
                             var10 = 8364;
                           }
                         } else {
-                          var4 = var4 + this.a('×');
+                          var4 = var4 + this.charWidth('×');
                           if (this.pairKerning != null &&
                             var10 != 0) {
                             var4 = var4 + this.pairKerning[(var10 << 8) + 215];
@@ -728,7 +728,7 @@ abstract class BitmapFont extends DualLinkNode {
                           var10 = 215;
                         }
                       } else {
-                        var4 = var4 + this.a('­');
+                        var4 = var4 + this.charWidth('­');
                         if (this.pairKerning != null &&
                           var10 != 0) {
                           var4 = var4 + this.pairKerning[(var10 << 8) + 173];
@@ -736,7 +736,7 @@ abstract class BitmapFont extends DualLinkNode {
                         var10 = 173;
                       }
                     } else {
-                      var4 = var4 + this.a(' ');
+                      var4 = var4 + this.charWidth(' ');
                       if (this.pairKerning != null &&
                         var10 != 0) {
                         var4 = var4 + this.pairKerning[(var10 << 8) + 160];
@@ -744,7 +744,7 @@ abstract class BitmapFont extends DualLinkNode {
                       var10 = 160;
                     }
                   } else {
-                    var4 = var4 + this.a('>');
+                    var4 = var4 + this.charWidth('>');
                     if (this.pairKerning != null &&
                       var10 != 0) {
                       var4 = var4 + this.pairKerning[(var10 << 8) + 62];
@@ -752,7 +752,7 @@ abstract class BitmapFont extends DualLinkNode {
                     var10 = 62;
                   }
                 } else {
-                  var4 = var4 + this.a('<');
+                  var4 = var4 + this.charWidth('<');
                   if (this.pairKerning != null &&
                     var10 != 0) {
                     var4 = var4 + this.pairKerning[(var10 << 8) + 60];

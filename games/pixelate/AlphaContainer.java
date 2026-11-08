@@ -49,7 +49,7 @@ final class AlphaContainer extends SingleChildContainer {
         Checkbox.renderToSprite(-111, var7);
         int var6 = -5 % ((70 - param3) / 49);
         this.child.drawLayer(0, param1, 0, (byte) -79);
-        LinkButtonPainter.a((byte) 92);
+        LinkButtonPainter.popRasterState((byte) 92);
         var7.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_O);
     }
 

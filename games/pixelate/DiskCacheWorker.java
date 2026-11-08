@@ -98,7 +98,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    private final void a(byte param0, DiskCacheRequest param1) {
+    private final void enqueueRequest(byte param0, DiskCacheRequest param1) {
         synchronized (this.requests) {
           if (param0 < 63) {
             this.run();
@@ -186,7 +186,7 @@ final class DiskCacheWorker implements Runnable {
           var4.field_G = param2;
           var4.field_t = false;
           var4.field_C = param1;
-          this.a((byte) 72, var4);
+          this.enqueueRequest((byte) 72, var4);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -223,7 +223,7 @@ final class DiskCacheWorker implements Runnable {
           var5.field_D = param3;
           var5.field_t = false;
           var5.field_q = (long)param0;
-          this.a((byte) 90, var5);
+          this.enqueueRequest((byte) 90, var5);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

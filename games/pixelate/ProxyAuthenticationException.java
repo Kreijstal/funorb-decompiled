@@ -29,7 +29,7 @@ final class ProxyAuthenticationException extends IOException {
         field_f = null;
     }
 
-    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7, byte param8) {
+    final static void drawGlowOutline(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7, byte param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;

@@ -84,7 +84,7 @@ final class dq {
           }
           var4_int = param3.getGroupId(117, param2);
           var5 = param3.getFileId((byte) -125, param1, var4_int);
-          stackIn_4_0 = IsaacRandom.a(var4_int, param3, var5, 119);
+          stackIn_4_0 = IsaacRandom.loadIndexedSprite(var4_int, param3, var5, 119);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

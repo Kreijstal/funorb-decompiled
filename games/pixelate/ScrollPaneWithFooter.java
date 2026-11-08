@@ -24,7 +24,7 @@ final class ScrollPaneWithFooter extends SceneWidget {
         this.field_K = param1;
         this.layoutFooter(param2, true, param6, param5);
         if (param4) {
-          ScrollPaneWithFooter.j(74);
+          ScrollPaneWithFooter.openQuickChatHelp(74);
         }
     }
 
@@ -45,7 +45,7 @@ final class ScrollPaneWithFooter extends SceneWidget {
         }
     }
 
-    final static void j(int param0) {
+    final static void openQuickChatHelp(int param0) {
         ri.field_f = new hp(cm.field_o, ScorePopup.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c);
         int var1 = 40 / ((param0 + 90) / 35);
     }

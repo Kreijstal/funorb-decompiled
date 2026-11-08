@@ -69,7 +69,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         RuntimeException var6 = null;
         try {
           if (param0 == this.field_K) {
-            th.a(8191);
+            th.loginWithRegisteredAccount(8191);
             this.field_O.close(-128);
           }
           if (param2 != 11) {

@@ -43,7 +43,7 @@ final class rh extends IntrusiveNode {
               MouseWheelHandler.field_b = HowToPlayScreen.createSuggestionsResult((byte) 117, param2);
               return;
             }
-            MouseWheelHandler.field_b = pa.a(param3, param1, (byte) -120);
+            MouseWheelHandler.field_b = pa.createRequestResult(param3, param1, (byte) -120);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

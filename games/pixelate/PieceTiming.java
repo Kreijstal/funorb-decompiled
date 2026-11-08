@@ -11,14 +11,14 @@ final class PieceTiming {
     public static void releaseStatics(int param0) {
         if (param0 != 10934) {
           ResourceArchive var2 = (ResourceArchive) null;
-          PieceTiming.a(-99, true, (ResourceArchive) null, 69);
+          PieceTiming.decodeSpriteSheetFromArchive(-99, true, (ResourceArchive) null, 69);
           field_e = null;
           return;
         }
         field_e = null;
     }
 
-    final static boolean a(int param0, boolean param1, ResourceArchive param2, int param3) {
+    final static boolean decodeSpriteSheetFromArchive(int param0, boolean param1, ResourceArchive param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;

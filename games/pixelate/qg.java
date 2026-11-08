@@ -17,7 +17,7 @@ final class qg {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void sendDeclineGameRequest(int param0, int param1, boolean param2) {
         CipherPacketBuffer var3 = null;
         CipherPacketBuffer var3Lifetime1;
         if (!param2) {

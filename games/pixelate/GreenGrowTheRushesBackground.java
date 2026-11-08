@@ -15,7 +15,7 @@ final class GreenGrowTheRushesBackground extends BackgroundScene {
     }
 
     final static void createAccountUiLayer(boolean param0) {
-        Checkbox.field_X = bi.getUiTheme(4);
+        Checkbox.field_X = TutorialPage.getUiTheme(4);
         wa.field_c = new ModalStack();
         QueuedInput.a(true, -17130, true);
         if (param0) {

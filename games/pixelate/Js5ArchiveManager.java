@@ -82,7 +82,7 @@ final class Js5ArchiveManager {
           ((SceneWidget) (Object) stackIn_27_0).drawFullScreen(stackIn_28_1, 0);
         }
         var2 = 127 / ((param0 + 31) / 55);
-        LinkButtonPainter.a((byte) 92);
+        LinkButtonPainter.popRasterState((byte) 92);
     }
 
     final static void suppressReconnectRedirect(int param0) {

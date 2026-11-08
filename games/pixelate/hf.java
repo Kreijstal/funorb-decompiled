@@ -21,7 +21,7 @@ final class hf extends IntrusiveNode {
         int var1 = -120 % ((-78 - param0) / 48);
     }
 
-    final static boolean b(byte param0) {
+    final static boolean isLegacyMenuOpen(byte param0) {
         if (param0 != 100) {
           field_q = -107;
           return sm.field_l;

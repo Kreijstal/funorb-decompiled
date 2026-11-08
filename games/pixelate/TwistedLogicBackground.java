@@ -7,7 +7,7 @@ final class TwistedLogicBackground extends BackgroundScene {
     static String field_o;
     static boolean[] field_p;
 
-    final static int a(int param0, int param1, int param2, boolean param3) {
+    final static int pollAccountUi(int param0, int param1, int param2, boolean param3) {
         if (param0 != 6388) {
           return -3;
         }

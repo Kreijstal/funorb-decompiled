@@ -90,7 +90,7 @@ final class ScorePopup {
             return;
           }
           if (oo.field_b == 0) {
-            gd.a((byte) -7);
+            gd.buildMainScreenRoots((byte) -7);
           }
           oo.field_b = oo.field_b + 1;
           return;

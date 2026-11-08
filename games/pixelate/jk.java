@@ -11,7 +11,7 @@ final class jk {
     public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != 20) {
-          jk.a(false, (byte) 23);
+          jk.drawAccountAndQuickChatOverlays(false, (byte) 23);
           field_d = null;
           field_a = null;
           return;
@@ -20,7 +20,7 @@ final class jk {
         field_a = null;
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawAccountAndQuickChatOverlays(boolean param0, byte param1) {
         if (MarkerSlider.isOverlayOpen((byte) 120)) {
           param0 = false;
         }
@@ -28,7 +28,7 @@ final class jk {
         if (param1 != 83) {
           return;
         }
-        bj.a((byte) 1);
+        bj.drawQuickChatOverlay((byte) 1);
     }
 
     static {

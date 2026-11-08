@@ -275,7 +275,7 @@ final class TabbedPanel extends SceneWidget {
         if (param0 != 41) {
           return 42;
         }
-        return param2 + JavaRandomHelpers.a(SceneWidgetNode.field_v, -120, -param2 + 1 + param1);
+        return param2 + JavaRandomHelpers.randomBelow(SceneWidgetNode.field_v, -120, -param2 + 1 + param1);
     }
 
     final void processTabPresses(byte param0) {

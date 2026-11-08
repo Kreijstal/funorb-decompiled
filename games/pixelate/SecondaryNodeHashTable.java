@@ -107,14 +107,14 @@ final class SecondaryNodeHashTable {
         }
         var2 = stackIn_5_0;
         if (var2 == 0) {
-          if (JavaRandomHelpers.a(UiTheme.field_f, -128, 2) != 1) {
+          if (JavaRandomHelpers.randomBelow(UiTheme.field_f, -128, 2) != 1) {
             return new ib(4, 3);
           }
           return new ib(3, 4);
         }
         if (var2 != 1) {
           if (2 == var2) {
-            if (JavaRandomHelpers.a(UiTheme.field_f, -103, 2) == 1) {
+            if (JavaRandomHelpers.randomBelow(UiTheme.field_f, -103, 2) == 1) {
               return new ib(4, 5);
             }
             return new ib(5, 4);
@@ -124,7 +124,7 @@ final class SecondaryNodeHashTable {
           }
           return new ib(5, 5);
         }
-        var3 = JavaRandomHelpers.a(UiTheme.field_f, -121, 3);
+        var3 = JavaRandomHelpers.randomBelow(UiTheme.field_f, -121, 3);
         if (var3 == 0) {
           return new ib(3, 5);
         }

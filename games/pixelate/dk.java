@@ -19,7 +19,7 @@ final class dk {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!PieceTiming.a(param0, false, param1, param2)) {
+          if (!PieceTiming.decodeSpriteSheetFromArchive(param0, false, param1, param2)) {
             stackIn_2_0 = null;
             return (Sprite) (stackIn_2_0);
           }

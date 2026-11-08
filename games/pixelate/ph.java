@@ -37,7 +37,7 @@ final class ph extends IntrusiveNode {
             }
             if (1 == AchievementsScreen.field_q) {
               if (KiteBackground.field_o.field_b == 2) {
-                stackIn_14_0 = ce.a((byte) -124, -1);
+                stackIn_14_0 = ce.handleConnectionFailure((byte) -124, -1);
                 return stackIn_14_0;
               }
               if (KiteBackground.field_o.field_b == 1) {
@@ -47,7 +47,7 @@ final class ph extends IntrusiveNode {
             if (AchievementsScreen.field_q == 2) {
               ConditionalTextValue.field_d = new BufferedSocket((java.net.Socket) (KiteBackground.field_o.field_e), ef.field_e);
               var2 = new PacketBuffer(13);
-              FallingPieceView.a(GreenGrowTheRushesBackground.field_o, (byte) 66, SceneWidget.field_ib, var2, AcidSunsetBackground.field_n);
+              FallingPieceView.writeConnectionHandshake(GreenGrowTheRushesBackground.field_o, (byte) 66, SceneWidget.field_ib, var2, AcidSunsetBackground.field_n);
               var2.writeByte(160, 15);
               var2.writeInt(fj.field_a, -76);
               ConditionalTextValue.field_d.write(13, -103, 0, var2.payload);
@@ -57,13 +57,13 @@ final class ph extends IntrusiveNode {
             if (AchievementsScreen.field_q == 3) {
               if (ConditionalTextValue.field_d.available(-120) <= 0) {
                 if (ViewportController.field_a < hm.monotonicMillis(64)) {
-                  stackIn_30_0 = ce.a((byte) -124, -2);
+                  stackIn_30_0 = ce.handleConnectionFailure((byte) -124, -2);
                   return stackIn_30_0;
                 }
               } else {
                 var1_int = ConditionalTextValue.field_d.readUnsignedByte((byte) -81);
                 if (0 != var1_int) {
-                  stackIn_26_0 = ce.a((byte) -124, var1_int);
+                  stackIn_26_0 = ce.handleConnectionFailure((byte) -124, var1_int);
                   return stackIn_26_0;
                 }
                 AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
@@ -85,7 +85,7 @@ final class ph extends IntrusiveNode {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return ce.a((byte) -124, -3);
+            return ce.handleConnectionFailure((byte) -124, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -113,7 +113,7 @@ final class ph extends IntrusiveNode {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          dk.field_e = bi.loadSprite("basic", "display_name_changed", param0, (byte) -25);
+          dk.field_e = TutorialPage.loadSprite("basic", "display_name_changed", param0, (byte) -25);
           ScoreMarkerBar.field_z = new ScrollPaneWithFooter(0L, rm.field_a, SceneWidgetNode.field_u, OptionsScreen.field_q);
           MouseWheelHandler.field_e = new ScrollPaneWithFooter(0L, rm.field_a, qh.field_e, NanoTickClock.field_n);
           wa.field_f = new SceneWidget(0L, (SceneWidget) null);

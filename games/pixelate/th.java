@@ -55,13 +55,13 @@ final class th {
         return param0 < 2048 ? NanoTickClock.field_i[2048 - param0] : -NanoTickClock.field_i[-2048 + param0];
     }
 
-    final static void a(int param0) {
+    final static void loginWithRegisteredAccount(int param0) {
         if (param0 == 8191) {
           ByteStorage.startLoginWithCredentials(Match.field_s, true, 32, nk.field_b);
           ke.field_d = true;
           return;
         }
-        th.a(17);
+        th.loginWithRegisteredAccount(17);
         ByteStorage.startLoginWithCredentials(Match.field_s, true, 32, nk.field_b);
         ke.field_d = true;
     }

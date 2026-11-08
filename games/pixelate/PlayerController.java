@@ -376,7 +376,7 @@ final class PlayerController {
               stackIn_13_0 = (!this.field_k.applyAction(param1, this.field_j, 117, this.field_e)) ? 0 : 1;
               var3 = stackIn_13_0;
               if (var3 != 0) {
-                EmailValidator.playPieceSound((byte) 96, JavaRandomHelpers.a(ea.field_b, -101, 4) + 0);
+                EmailValidator.playPieceSound((byte) 96, JavaRandomHelpers.randomBelow(ea.field_b, -101, 4) + 0);
               }
             }
           }

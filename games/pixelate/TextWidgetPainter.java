@@ -154,7 +154,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (var11.field_b != 2) {
             return var7;
           }
-          dc.a((byte) -124, var7, param0);
+          dc.exitFullscreenFrame((byte) -124, var7, param0);
           stackIn_39_0 = null;
           return (java.awt.Frame) (stackIn_39_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -435,7 +435,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               var15 = stackIn_20_0;
               Checkbox.field_X.fillSelectionRect(this.field_o >>> 24, this.field_o, this.computeTextX(param5, param1, 2, var14), var13.field_d, var15 - var14, -90, param1.field_x + (param4 + param1.field_p + (this.field_k + var13.field_b)));
             }
-            LinkButtonPainter.a((byte) 92);
+            LinkButtonPainter.popRasterState((byte) 92);
             return;
           }
           return;
@@ -604,7 +604,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var13 = this.getTextOriginY(param1, param3, (byte) -57) + Math.min(this.getAvailableTextHeight(101, param3), Math.min(var9.field_d, var7.lines.length <= 1 + var8 ? var9.field_d : var7.lines[1 + var8].field_b));
             hp.pushClipRegion(param0 + param3.field_z, param3.field_p + param1 + param3.field_C, param3.field_E + param0 + param3.field_z, (byte) -91, param1 + param3.field_p);
             Checkbox.field_X.drawCaretLine(var12, var13, var11, var11, this.field_e, false);
-            LinkButtonPainter.a((byte) 92);
+            LinkButtonPainter.popRasterState((byte) 92);
           }
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "uc.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -781,7 +781,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             this.font.drawParagraph(this.getDisplayText(param2, -472248767), this.computeTextX(param5, param2, 2, param7), this.computeTextX(95, param0, param3, param2), var9_int, var10, param4, param1, this.field_l, this.field_d, this.field_j);
           }
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

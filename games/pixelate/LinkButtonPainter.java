@@ -64,7 +64,7 @@ final class LinkButtonPainter implements WidgetPainter {
         }
     }
 
-    final static void a(byte param0) {
+    final static void popRasterState(byte param0) {
         RasterState var1 = (RasterState) (BirthDateEntryPanel.field_P.removeLast(param0 - 174));
         if (param0 != 92) {
           field_i = -106;

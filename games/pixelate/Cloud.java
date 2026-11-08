@@ -26,15 +26,15 @@ final class Cloud {
     static boolean[][] field_r;
 
     final void respawn(byte param0) {
-        this.field_c = -60 + JavaRandomHelpers.a(ea.field_b, -126, 480);
-        this.field_l = JavaRandomHelpers.a(ea.field_b, -126, 50);
+        this.field_c = -60 + JavaRandomHelpers.randomBelow(ea.field_b, -126, 480);
+        this.field_l = JavaRandomHelpers.randomBelow(ea.field_b, -126, 50);
         this.field_e = (double)this.field_l / 100.0 + 0.3;
         int var2 = -112 / ((-40 - param0) / 47);
         this.field_t = (int)(this.field_e * 256.0);
         this.field_a = (int)(200.0 * (0.2 + this.field_e));
         this.field_f = (int)((this.field_e + 0.2) * 120.0);
-        this.field_n = JavaRandomHelpers.a(ea.field_b, -108, 2);
-        if (JavaRandomHelpers.a(ea.field_b, -126, 2) != 1) {
+        this.field_n = JavaRandomHelpers.randomBelow(ea.field_b, -108, 2);
+        if (JavaRandomHelpers.randomBelow(ea.field_b, -126, 2) != 1) {
           this.field_m = (double)(-this.field_a);
         } else {
           this.field_e = -this.field_e;
@@ -100,7 +100,7 @@ final class Cloud {
 
     Cloud() {
         this.respawn((byte) -107);
-        this.field_m = (double)(JavaRandomHelpers.a(ea.field_b, -114, 640) - 100);
+        this.field_m = (double)(JavaRandomHelpers.randomBelow(ea.field_b, -114, 640) - 100);
     }
 
     static {

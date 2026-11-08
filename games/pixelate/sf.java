@@ -9,7 +9,7 @@ final class sf {
         int var1 = 110 / ((-2 - param0) / 55);
     }
 
-    final static void a(int param0) {
+    final static void resetFrameTimingHistory(int param0) {
         int var1_int = 0;
         int var2 = Pixelate.field_H ? 1 : 0;
         int var1_intLifetime1;

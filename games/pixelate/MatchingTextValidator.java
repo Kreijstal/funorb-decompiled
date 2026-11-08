@@ -18,7 +18,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     static String field_x;
     static java.security.SecureRandom field_y;
 
-    final static String e(int param0) {
+    final static String readPacketString(int param0) {
         if (param0 != 480) {
           MatchingTextValidator.releaseStatics(false);
           return MusicCrossfadeStream.field_o.readString(5);

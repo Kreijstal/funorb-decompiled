@@ -161,7 +161,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             }
           }
           this.field_x.paint(param2, param3, param0, (byte) 122, this);
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

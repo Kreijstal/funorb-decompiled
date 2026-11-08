@@ -15,7 +15,7 @@ final class gd {
     static int field_g;
     static Sprite[] field_f;
 
-    final static void a(byte param0) {
+    final static void buildMainScreenRoots(byte param0) {
         vd.field_c = new SceneWidget(0L, (SceneWidget) null);
         if (DialWidgetPainter.field_n) {
           vd.field_c.addChild(ValidatedTextWidget.field_lb, (byte) 26);

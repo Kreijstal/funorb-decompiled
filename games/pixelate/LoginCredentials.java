@@ -23,7 +23,7 @@ abstract class LoginCredentials {
         field_d = null;
     }
 
-    final static void a(String param0, boolean param1) {
+    final static void showMessageDialogText(String param0, boolean param1) {
         int var5 = 0;
         LobbyPlayer.field_Wb = true;
         Cloud.field_h.field_cb = param0;

@@ -6,11 +6,11 @@ final class wp {
     static int field_c;
     static String[] field_b;
 
-    final static boolean a(int param0) {
+    final static boolean isFocusIndicatorEnabled(int param0) {
         if (param0 == -8798) {
           return null == ib.field_f ? ro.field_d : true;
         }
-        wp.a(108);
+        wp.isFocusIndicatorEnabled(108);
         return null == ib.field_f ? ro.field_d : true;
     }
 

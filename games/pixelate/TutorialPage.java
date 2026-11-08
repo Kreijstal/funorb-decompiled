@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bi {
+final class TutorialPage {
     private String[] field_b;
     static Sprite[] field_g;
     static PacketBuffer field_d;
@@ -10,7 +10,7 @@ final class bi {
     private String field_a;
     private int field_e;
 
-    final void a(boolean param0) {
+    final void draw(boolean param0) {
         int var2;
         int var3;
         int var4;
@@ -30,7 +30,7 @@ final class bi {
           }
           return;
         }
-        bi.releaseStatics(1);
+        TutorialPage.releaseStatics(1);
         if (null != this.field_a) {
           DelegatingCanvas.field_d.drawCentered(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
           var2 = var2 + (8 + pe.field_c);
@@ -57,7 +57,7 @@ final class bi {
         try {
           var4_int = param2.getGroupId(127, param0);
           if (param3 >= -19) {
-            bi.getUiTheme(25);
+            TutorialPage.getUiTheme(25);
           }
           var5 = param2.getFileId((byte) -105, param1, var4_int);
           stackIn_3_0 = dk.loadSprite(var5, param2, var4_int, -1);
@@ -100,7 +100,7 @@ final class bi {
 
     final static UiTheme getUiTheme(int param0) {
         if (param0 != 4) {
-          bi.releaseStatics(-128);
+          TutorialPage.releaseStatics(-128);
           if (null == JaggrabDownloader.field_c) {
             JaggrabDownloader.field_c = new UiTheme();
             JaggrabDownloader.field_c.initializePainters(4, he.field_d);
@@ -130,7 +130,7 @@ final class bi {
         return JaggrabDownloader.field_c;
     }
 
-    bi(String param0, String[] param1, boolean param2) {
+    TutorialPage(String param0, String[] param1, boolean param2) {
         int var4_int = 0;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_11_0 = null;

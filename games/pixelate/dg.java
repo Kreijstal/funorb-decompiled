@@ -52,11 +52,11 @@ final class dg {
 
     final static void playMenuMusic(int param0, byte param1) {
         if (param1 < -82) {
-          qh.a((byte) -93, 1048576, bj.field_c[param0], true);
+          qh.playMusicTrack((byte) -93, 1048576, bj.field_c[param0], true);
           return;
         }
         field_e = (String) null;
-        qh.a((byte) -93, 1048576, bj.field_c[param0], true);
+        qh.playMusicTrack((byte) -93, 1048576, bj.field_c[param0], true);
     }
 
     static {

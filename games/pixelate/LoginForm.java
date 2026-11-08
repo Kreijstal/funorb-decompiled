@@ -1069,576 +1069,576 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           ig.field_b = param1;
           var2 = ContentTransitionDialog.getNamedTextFile("text_game_name", (byte) 119);
           if (null != var2) {
-            SoundCache.field_e = of.a(var2, 1);
+            SoundCache.field_e = of.decodeCp1252Text(var2, 1);
           }
           var2Lifetime1 = ContentTransitionDialog.getNamedTextFile("text_benefits,0", (byte) -12);
           if (null != var2Lifetime1) {
-            AccountNoticeDialog.field_bb[0] = of.a(var2Lifetime1, 1);
+            AccountNoticeDialog.field_bb[0] = of.decodeCp1252Text(var2Lifetime1, 1);
           }
           var2Lifetime2 = ContentTransitionDialog.getNamedTextFile("text_benefits,1", (byte) -40);
           if (null != var2Lifetime2) {
-            AccountNoticeDialog.field_bb[1] = of.a(var2Lifetime2, 1);
+            AccountNoticeDialog.field_bb[1] = of.decodeCp1252Text(var2Lifetime2, 1);
           }
           var2Lifetime3 = ContentTransitionDialog.getNamedTextFile("text_benefits,2", (byte) 115);
           if (var2Lifetime3 != null) {
-            AccountNoticeDialog.field_bb[2] = of.a(var2Lifetime3, 1);
+            AccountNoticeDialog.field_bb[2] = of.decodeCp1252Text(var2Lifetime3, 1);
           }
           var2Lifetime4 = ContentTransitionDialog.getNamedTextFile("text_benefits,3", (byte) 124);
           if (var2Lifetime4 != null) {
-            AccountNoticeDialog.field_bb[3] = of.a(var2Lifetime4, 1);
+            AccountNoticeDialog.field_bb[3] = of.decodeCp1252Text(var2Lifetime4, 1);
           }
           var2Lifetime5 = ContentTransitionDialog.getNamedTextFile("achievement_names,0", (byte) -110);
           if (var2Lifetime5 != null) {
-            GameApplet.field_n[0] = of.a(var2Lifetime5, 1);
+            GameApplet.field_n[0] = of.decodeCp1252Text(var2Lifetime5, 1);
           }
           var2Lifetime6 = ContentTransitionDialog.getNamedTextFile("achievement_names,1", (byte) -11);
           if (var2Lifetime6 != null) {
-            GameApplet.field_n[1] = of.a(var2Lifetime6, 1);
+            GameApplet.field_n[1] = of.decodeCp1252Text(var2Lifetime6, 1);
           }
           var2Lifetime7 = ContentTransitionDialog.getNamedTextFile("achievement_names,2", (byte) 109);
           if (null != var2Lifetime7) {
-            GameApplet.field_n[2] = of.a(var2Lifetime7, 1);
+            GameApplet.field_n[2] = of.decodeCp1252Text(var2Lifetime7, 1);
           }
           var2Lifetime8 = ContentTransitionDialog.getNamedTextFile("achievement_names,3", (byte) -9);
           if (null != var2Lifetime8) {
-            GameApplet.field_n[3] = of.a(var2Lifetime8, 1);
+            GameApplet.field_n[3] = of.decodeCp1252Text(var2Lifetime8, 1);
           }
           var2Lifetime9 = ContentTransitionDialog.getNamedTextFile("achievement_names,4", (byte) -61);
           if (var2Lifetime9 != null) {
-            GameApplet.field_n[4] = of.a(var2Lifetime9, 1);
+            GameApplet.field_n[4] = of.decodeCp1252Text(var2Lifetime9, 1);
           }
           var2Lifetime10 = ContentTransitionDialog.getNamedTextFile("achievement_names,5", (byte) -86);
           if (null != var2Lifetime10) {
-            GameApplet.field_n[5] = of.a(var2Lifetime10, 1);
+            GameApplet.field_n[5] = of.decodeCp1252Text(var2Lifetime10, 1);
           }
           var2Lifetime11 = ContentTransitionDialog.getNamedTextFile("achievement_names,6", (byte) 117);
           if (var2Lifetime11 != null) {
-            GameApplet.field_n[6] = of.a(var2Lifetime11, 1);
+            GameApplet.field_n[6] = of.decodeCp1252Text(var2Lifetime11, 1);
           }
           var2Lifetime12 = ContentTransitionDialog.getNamedTextFile("achievement_names,7", (byte) -100);
           if (null != var2Lifetime12) {
-            GameApplet.field_n[7] = of.a(var2Lifetime12, 1);
+            GameApplet.field_n[7] = of.decodeCp1252Text(var2Lifetime12, 1);
           }
           var2Lifetime13 = ContentTransitionDialog.getNamedTextFile("achievement_names,8", (byte) 112);
           if (null != var2Lifetime13) {
-            GameApplet.field_n[8] = of.a(var2Lifetime13, 1);
+            GameApplet.field_n[8] = of.decodeCp1252Text(var2Lifetime13, 1);
           }
           var2Lifetime14 = ContentTransitionDialog.getNamedTextFile("achievement_names,9", (byte) -32);
           if (null != var2Lifetime14) {
-            GameApplet.field_n[9] = of.a(var2Lifetime14, 1);
+            GameApplet.field_n[9] = of.decodeCp1252Text(var2Lifetime14, 1);
           }
           var2Lifetime15 = ContentTransitionDialog.getNamedTextFile("achievement_names,10", (byte) -67);
           var3 = 98 / ((param0 - 33) / 43);
           if (var2Lifetime15 != null) {
-            GameApplet.field_n[10] = of.a(var2Lifetime15, 1);
+            GameApplet.field_n[10] = of.decodeCp1252Text(var2Lifetime15, 1);
           }
           var2Lifetime16 = ContentTransitionDialog.getNamedTextFile("achievement_names,11", (byte) -118);
           if (var2Lifetime16 != null) {
-            GameApplet.field_n[11] = of.a(var2Lifetime16, 1);
+            GameApplet.field_n[11] = of.decodeCp1252Text(var2Lifetime16, 1);
           }
           var2Lifetime17 = ContentTransitionDialog.getNamedTextFile("achievement_names,12", (byte) 117);
           if (var2Lifetime17 != null) {
-            GameApplet.field_n[12] = of.a(var2Lifetime17, 1);
+            GameApplet.field_n[12] = of.decodeCp1252Text(var2Lifetime17, 1);
           }
           var2Lifetime18 = ContentTransitionDialog.getNamedTextFile("achievement_names,13", (byte) 127);
           if (null != var2Lifetime18) {
-            GameApplet.field_n[13] = of.a(var2Lifetime18, 1);
+            GameApplet.field_n[13] = of.decodeCp1252Text(var2Lifetime18, 1);
           }
           var2Lifetime19 = ContentTransitionDialog.getNamedTextFile("achievement_names,14", (byte) 123);
           if (null != var2Lifetime19) {
-            GameApplet.field_n[14] = of.a(var2Lifetime19, 1);
+            GameApplet.field_n[14] = of.decodeCp1252Text(var2Lifetime19, 1);
           }
           var2Lifetime20 = ContentTransitionDialog.getNamedTextFile("achievement_names,15", (byte) -79);
           if (var2Lifetime20 != null) {
-            GameApplet.field_n[15] = of.a(var2Lifetime20, 1);
+            GameApplet.field_n[15] = of.decodeCp1252Text(var2Lifetime20, 1);
           }
           var2Lifetime21 = ContentTransitionDialog.getNamedTextFile("achievement_names,16", (byte) 112);
           if (null != var2Lifetime21) {
-            GameApplet.field_n[16] = of.a(var2Lifetime21, 1);
+            GameApplet.field_n[16] = of.decodeCp1252Text(var2Lifetime21, 1);
           }
           var2Lifetime22 = ContentTransitionDialog.getNamedTextFile("achievement_names,17", (byte) -113);
           if (null != var2Lifetime22) {
-            GameApplet.field_n[17] = of.a(var2Lifetime22, 1);
+            GameApplet.field_n[17] = of.decodeCp1252Text(var2Lifetime22, 1);
           }
           var2Lifetime23 = ContentTransitionDialog.getNamedTextFile("achievement_names,18", (byte) -45);
           if (null != var2Lifetime23) {
-            GameApplet.field_n[18] = of.a(var2Lifetime23, 1);
+            GameApplet.field_n[18] = of.decodeCp1252Text(var2Lifetime23, 1);
           }
           var2Lifetime24 = ContentTransitionDialog.getNamedTextFile("achievement_names,19", (byte) -103);
           if (var2Lifetime24 != null) {
-            GameApplet.field_n[19] = of.a(var2Lifetime24, 1);
+            GameApplet.field_n[19] = of.decodeCp1252Text(var2Lifetime24, 1);
           }
           var2Lifetime25 = ContentTransitionDialog.getNamedTextFile("achievement_names,20", (byte) 124);
           if (var2Lifetime25 != null) {
-            GameApplet.field_n[20] = of.a(var2Lifetime25, 1);
+            GameApplet.field_n[20] = of.decodeCp1252Text(var2Lifetime25, 1);
           }
           var2Lifetime26 = ContentTransitionDialog.getNamedTextFile("achievement_names,21", (byte) 114);
           if (var2Lifetime26 != null) {
-            GameApplet.field_n[21] = of.a(var2Lifetime26, 1);
+            GameApplet.field_n[21] = of.decodeCp1252Text(var2Lifetime26, 1);
           }
           var2Lifetime27 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,0", (byte) 122);
           if (var2Lifetime27 != null) {
-            ClientException.field_a[0] = of.a(var2Lifetime27, 1);
+            ClientException.field_a[0] = of.decodeCp1252Text(var2Lifetime27, 1);
           }
           var2Lifetime28 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,1", (byte) -12);
           if (var2Lifetime28 != null) {
-            ClientException.field_a[1] = of.a(var2Lifetime28, 1);
+            ClientException.field_a[1] = of.decodeCp1252Text(var2Lifetime28, 1);
           }
           var2Lifetime29 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,2", (byte) 122);
           if (null != var2Lifetime29) {
-            ClientException.field_a[2] = of.a(var2Lifetime29, 1);
+            ClientException.field_a[2] = of.decodeCp1252Text(var2Lifetime29, 1);
           }
           var2Lifetime30 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,3", (byte) 123);
           if (var2Lifetime30 != null) {
-            ClientException.field_a[3] = of.a(var2Lifetime30, 1);
+            ClientException.field_a[3] = of.decodeCp1252Text(var2Lifetime30, 1);
           }
           var2Lifetime31 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,4", (byte) 113);
           if (var2Lifetime31 != null) {
-            ClientException.field_a[4] = of.a(var2Lifetime31, 1);
+            ClientException.field_a[4] = of.decodeCp1252Text(var2Lifetime31, 1);
           }
           var2Lifetime32 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,5", (byte) 118);
           if (null != var2Lifetime32) {
-            ClientException.field_a[5] = of.a(var2Lifetime32, 1);
+            ClientException.field_a[5] = of.decodeCp1252Text(var2Lifetime32, 1);
           }
           var2Lifetime33 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,6", (byte) 118);
           if (null != var2Lifetime33) {
-            ClientException.field_a[6] = of.a(var2Lifetime33, 1);
+            ClientException.field_a[6] = of.decodeCp1252Text(var2Lifetime33, 1);
           }
           var2Lifetime34 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,7", (byte) 116);
           if (null != var2Lifetime34) {
-            ClientException.field_a[7] = of.a(var2Lifetime34, 1);
+            ClientException.field_a[7] = of.decodeCp1252Text(var2Lifetime34, 1);
           }
           var2Lifetime35 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,8", (byte) 108);
           if (null != var2Lifetime35) {
-            ClientException.field_a[8] = of.a(var2Lifetime35, 1);
+            ClientException.field_a[8] = of.decodeCp1252Text(var2Lifetime35, 1);
           }
           var2Lifetime36 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,9", (byte) 118);
           if (var2Lifetime36 != null) {
-            ClientException.field_a[9] = of.a(var2Lifetime36, 1);
+            ClientException.field_a[9] = of.decodeCp1252Text(var2Lifetime36, 1);
           }
           var2Lifetime37 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,10", (byte) 124);
           if (null != var2Lifetime37) {
-            ClientException.field_a[10] = of.a(var2Lifetime37, 1);
+            ClientException.field_a[10] = of.decodeCp1252Text(var2Lifetime37, 1);
           }
           var2Lifetime38 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,11", (byte) -5);
           if (null != var2Lifetime38) {
-            ClientException.field_a[11] = of.a(var2Lifetime38, 1);
+            ClientException.field_a[11] = of.decodeCp1252Text(var2Lifetime38, 1);
           }
           var2Lifetime39 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,12", (byte) 107);
           if (var2Lifetime39 != null) {
-            ClientException.field_a[12] = of.a(var2Lifetime39, 1);
+            ClientException.field_a[12] = of.decodeCp1252Text(var2Lifetime39, 1);
           }
           var2Lifetime40 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,13", (byte) -90);
           if (null != var2Lifetime40) {
-            ClientException.field_a[13] = of.a(var2Lifetime40, 1);
+            ClientException.field_a[13] = of.decodeCp1252Text(var2Lifetime40, 1);
           }
           var2Lifetime41 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,14", (byte) 109);
           if (var2Lifetime41 != null) {
-            ClientException.field_a[14] = of.a(var2Lifetime41, 1);
+            ClientException.field_a[14] = of.decodeCp1252Text(var2Lifetime41, 1);
           }
           var2Lifetime42 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,15", (byte) 118);
           if (var2Lifetime42 != null) {
-            ClientException.field_a[15] = of.a(var2Lifetime42, 1);
+            ClientException.field_a[15] = of.decodeCp1252Text(var2Lifetime42, 1);
           }
           var2Lifetime43 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,16", (byte) -10);
           if (var2Lifetime43 != null) {
-            ClientException.field_a[16] = of.a(var2Lifetime43, 1);
+            ClientException.field_a[16] = of.decodeCp1252Text(var2Lifetime43, 1);
           }
           var2Lifetime44 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,17", (byte) -12);
           if (var2Lifetime44 != null) {
-            ClientException.field_a[17] = of.a(var2Lifetime44, 1);
+            ClientException.field_a[17] = of.decodeCp1252Text(var2Lifetime44, 1);
           }
           var2Lifetime45 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,18", (byte) 123);
           if (var2Lifetime45 != null) {
-            ClientException.field_a[18] = of.a(var2Lifetime45, 1);
+            ClientException.field_a[18] = of.decodeCp1252Text(var2Lifetime45, 1);
           }
           var2Lifetime46 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,19", (byte) -17);
           if (var2Lifetime46 != null) {
-            ClientException.field_a[19] = of.a(var2Lifetime46, 1);
+            ClientException.field_a[19] = of.decodeCp1252Text(var2Lifetime46, 1);
           }
           var2Lifetime47 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,20", (byte) 118);
           if (null != var2Lifetime47) {
-            ClientException.field_a[20] = of.a(var2Lifetime47, 1);
+            ClientException.field_a[20] = of.decodeCp1252Text(var2Lifetime47, 1);
           }
           var2Lifetime48 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,21", (byte) 116);
           if (var2Lifetime48 != null) {
-            ClientException.field_a[21] = of.a(var2Lifetime48, 1);
+            ClientException.field_a[21] = of.decodeCp1252Text(var2Lifetime48, 1);
           }
           var2Lifetime49 = ContentTransitionDialog.getNamedTextFile("tutorial_title,0", (byte) 114);
           if (var2Lifetime49 != null) {
-            GradientOutlineTextPainter.field_w[0] = of.a(var2Lifetime49, 1);
+            GradientOutlineTextPainter.field_w[0] = of.decodeCp1252Text(var2Lifetime49, 1);
           }
           var2Lifetime50 = ContentTransitionDialog.getNamedTextFile("tutorial_title,2", (byte) 108);
           if (null != var2Lifetime50) {
-            GradientOutlineTextPainter.field_w[2] = of.a(var2Lifetime50, 1);
+            GradientOutlineTextPainter.field_w[2] = of.decodeCp1252Text(var2Lifetime50, 1);
           }
           var2Lifetime51 = ContentTransitionDialog.getNamedTextFile("tutorial1,0", (byte) -26);
           if (var2Lifetime51 != null) {
-            hm.field_f[0] = of.a(var2Lifetime51, 1);
+            hm.field_f[0] = of.decodeCp1252Text(var2Lifetime51, 1);
           }
           var2Lifetime52 = ContentTransitionDialog.getNamedTextFile("tutorial1,1", (byte) -61);
           if (null != var2Lifetime52) {
-            hm.field_f[1] = of.a(var2Lifetime52, 1);
+            hm.field_f[1] = of.decodeCp1252Text(var2Lifetime52, 1);
           }
           var2Lifetime53 = ContentTransitionDialog.getNamedTextFile("tutorial1,2", (byte) -90);
           if (var2Lifetime53 != null) {
-            hm.field_f[2] = of.a(var2Lifetime53, 1);
+            hm.field_f[2] = of.decodeCp1252Text(var2Lifetime53, 1);
           }
           var2Lifetime54 = ContentTransitionDialog.getNamedTextFile("tutorial2,0", (byte) 106);
           if (null != var2Lifetime54) {
-            MatchingTextValidator.field_t[0] = of.a(var2Lifetime54, 1);
+            MatchingTextValidator.field_t[0] = of.decodeCp1252Text(var2Lifetime54, 1);
           }
           var2Lifetime55 = ContentTransitionDialog.getNamedTextFile("tutorial2,1", (byte) 113);
           if (null != var2Lifetime55) {
-            MatchingTextValidator.field_t[1] = of.a(var2Lifetime55, 1);
+            MatchingTextValidator.field_t[1] = of.decodeCp1252Text(var2Lifetime55, 1);
           }
           var2Lifetime56 = ContentTransitionDialog.getNamedTextFile("tutorial3,0", (byte) -47);
           if (null != var2Lifetime56) {
-            um.field_l[0] = of.a(var2Lifetime56, 1);
+            um.field_l[0] = of.decodeCp1252Text(var2Lifetime56, 1);
           }
           var2Lifetime57 = ContentTransitionDialog.getNamedTextFile("tutorial4,0", (byte) 122);
           if (var2Lifetime57 != null) {
-            PauseMenuScreen.field_p[0] = of.a(var2Lifetime57, 1);
+            PauseMenuScreen.field_p[0] = of.decodeCp1252Text(var2Lifetime57, 1);
           }
           var2Lifetime58 = ContentTransitionDialog.getNamedTextFile("tutorial5,0", (byte) -95);
           if (var2Lifetime58 != null) {
-            ui.field_h[0] = of.a(var2Lifetime58, 1);
+            ui.field_h[0] = of.decodeCp1252Text(var2Lifetime58, 1);
           }
           var2Lifetime59 = ContentTransitionDialog.getNamedTextFile("tutorial5,1", (byte) 125);
           if (null != var2Lifetime59) {
-            ui.field_h[1] = of.a(var2Lifetime59, 1);
+            ui.field_h[1] = of.decodeCp1252Text(var2Lifetime59, 1);
           }
           var2Lifetime60 = ContentTransitionDialog.getNamedTextFile("tutorial6,0", (byte) 104);
           if (var2Lifetime60 != null) {
-            qg.field_d[0] = of.a(var2Lifetime60, 1);
+            qg.field_d[0] = of.decodeCp1252Text(var2Lifetime60, 1);
           }
           var2Lifetime61 = ContentTransitionDialog.getNamedTextFile("tutorial6,1", (byte) 115);
           if (var2Lifetime61 != null) {
-            qg.field_d[1] = of.a(var2Lifetime61, 1);
+            qg.field_d[1] = of.decodeCp1252Text(var2Lifetime61, 1);
           }
           var2Lifetime62 = ContentTransitionDialog.getNamedTextFile("instructions1,0", (byte) 107);
           if (null != var2Lifetime62) {
-            PuzzleThumbnail.field_a[0] = of.a(var2Lifetime62, 1);
+            PuzzleThumbnail.field_a[0] = of.decodeCp1252Text(var2Lifetime62, 1);
           }
           var2Lifetime63 = ContentTransitionDialog.getNamedTextFile("instructions1,1", (byte) -78);
           if (var2Lifetime63 != null) {
-            PuzzleThumbnail.field_a[1] = of.a(var2Lifetime63, 1);
+            PuzzleThumbnail.field_a[1] = of.decodeCp1252Text(var2Lifetime63, 1);
           }
           var2Lifetime64 = ContentTransitionDialog.getNamedTextFile("instructions2,0", (byte) -10);
           if (var2Lifetime64 != null) {
-            ScrollContainer.field_Hb[0] = of.a(var2Lifetime64, 1);
+            ScrollContainer.field_Hb[0] = of.decodeCp1252Text(var2Lifetime64, 1);
           }
           var2Lifetime65 = ContentTransitionDialog.getNamedTextFile("instructions3,0", (byte) -104);
           if (null != var2Lifetime65) {
-            qh.field_d[0] = of.a(var2Lifetime65, 1);
+            qh.field_d[0] = of.decodeCp1252Text(var2Lifetime65, 1);
           }
           var2Lifetime66 = ContentTransitionDialog.getNamedTextFile("instructions3,1", (byte) 114);
           if (null != var2Lifetime66) {
-            qh.field_d[1] = of.a(var2Lifetime66, 1);
+            qh.field_d[1] = of.decodeCp1252Text(var2Lifetime66, 1);
           }
           var2Lifetime67 = ContentTransitionDialog.getNamedTextFile("instructions3,2", (byte) 111);
           if (null != var2Lifetime67) {
-            qh.field_d[2] = of.a(var2Lifetime67, 1);
+            qh.field_d[2] = of.decodeCp1252Text(var2Lifetime67, 1);
           }
           var2Lifetime68 = ContentTransitionDialog.getNamedTextFile("instructions3,3", (byte) 117);
           if (var2Lifetime68 != null) {
-            qh.field_d[3] = of.a(var2Lifetime68, 1);
+            qh.field_d[3] = of.decodeCp1252Text(var2Lifetime68, 1);
           }
           var2Lifetime69 = ContentTransitionDialog.getNamedTextFile("instructions3,4", (byte) 116);
           if (var2Lifetime69 != null) {
-            qh.field_d[4] = of.a(var2Lifetime69, 1);
+            qh.field_d[4] = of.decodeCp1252Text(var2Lifetime69, 1);
           }
           var2Lifetime70 = ContentTransitionDialog.getNamedTextFile("instructions4,0", (byte) 121);
           if (null != var2Lifetime70) {
-            wk.field_i[0] = of.a(var2Lifetime70, 1);
+            wk.field_i[0] = of.decodeCp1252Text(var2Lifetime70, 1);
           }
           var2Lifetime71 = ContentTransitionDialog.getNamedTextFile("instructions4,1", (byte) 109);
           if (null != var2Lifetime71) {
-            wk.field_i[1] = of.a(var2Lifetime71, 1);
+            wk.field_i[1] = of.decodeCp1252Text(var2Lifetime71, 1);
           }
           var2Lifetime72 = ContentTransitionDialog.getNamedTextFile("instructions5,0", (byte) -123);
           if (var2Lifetime72 != null) {
-            GameApplet.field_k[0] = of.a(var2Lifetime72, 1);
+            GameApplet.field_k[0] = of.decodeCp1252Text(var2Lifetime72, 1);
           }
           var2Lifetime73 = ContentTransitionDialog.getNamedTextFile("instructions5,1", (byte) 111);
           if (null != var2Lifetime73) {
-            GameApplet.field_k[1] = of.a(var2Lifetime73, 1);
+            GameApplet.field_k[1] = of.decodeCp1252Text(var2Lifetime73, 1);
           }
           var2Lifetime74 = ContentTransitionDialog.getNamedTextFile("instructions6,0", (byte) -89);
           if (var2Lifetime74 != null) {
-            NumericDateInputWidget.field_R[0] = of.a(var2Lifetime74, 1);
+            NumericDateInputWidget.field_R[0] = of.decodeCp1252Text(var2Lifetime74, 1);
           }
           var2Lifetime75 = ContentTransitionDialog.getNamedTextFile("instructions7,0", (byte) -63);
           if (var2Lifetime75 != null) {
-            GameModeSelectScreen.field_q[0] = of.a(var2Lifetime75, 1);
+            GameModeSelectScreen.field_q[0] = of.decodeCp1252Text(var2Lifetime75, 1);
           }
           var2Lifetime76 = ContentTransitionDialog.getNamedTextFile("instructions8,0", (byte) -100);
           if (var2Lifetime76 != null) {
-            vd.field_d[0] = of.a(var2Lifetime76, 1);
+            vd.field_d[0] = of.decodeCp1252Text(var2Lifetime76, 1);
           }
           var2Lifetime77 = ContentTransitionDialog.getNamedTextFile("instructions8,1", (byte) 123);
           if (null != var2Lifetime77) {
-            vd.field_d[1] = of.a(var2Lifetime77, 1);
+            vd.field_d[1] = of.decodeCp1252Text(var2Lifetime77, 1);
           }
           var2Lifetime78 = ContentTransitionDialog.getNamedTextFile("instructions8,2", (byte) 115);
           if (var2Lifetime78 != null) {
-            vd.field_d[2] = of.a(var2Lifetime78, 1);
+            vd.field_d[2] = of.decodeCp1252Text(var2Lifetime78, 1);
           }
           var2Lifetime79 = ContentTransitionDialog.getNamedTextFile("instructions_title,0", (byte) 116);
           if (null != var2Lifetime79) {
-            pk.field_d[0] = of.a(var2Lifetime79, 1);
+            pk.field_d[0] = of.decodeCp1252Text(var2Lifetime79, 1);
           }
           var2Lifetime80 = ContentTransitionDialog.getNamedTextFile("instructions_title,1", (byte) 123);
           if (null != var2Lifetime80) {
-            pk.field_d[1] = of.a(var2Lifetime80, 1);
+            pk.field_d[1] = of.decodeCp1252Text(var2Lifetime80, 1);
           }
           var2Lifetime81 = ContentTransitionDialog.getNamedTextFile("instructions_title,2", (byte) 112);
           if (var2Lifetime81 != null) {
-            pk.field_d[2] = of.a(var2Lifetime81, 1);
+            pk.field_d[2] = of.decodeCp1252Text(var2Lifetime81, 1);
           }
           var2Lifetime82 = ContentTransitionDialog.getNamedTextFile("instructions_title,3", (byte) -85);
           if (var2Lifetime82 != null) {
-            pk.field_d[3] = of.a(var2Lifetime82, 1);
+            pk.field_d[3] = of.decodeCp1252Text(var2Lifetime82, 1);
           }
           var2Lifetime83 = ContentTransitionDialog.getNamedTextFile("instructions_title,4", (byte) 105);
           if (var2Lifetime83 != null) {
-            pk.field_d[4] = of.a(var2Lifetime83, 1);
+            pk.field_d[4] = of.decodeCp1252Text(var2Lifetime83, 1);
           }
           var2Lifetime84 = ContentTransitionDialog.getNamedTextFile("instructions_title,5", (byte) 108);
           if (var2Lifetime84 != null) {
-            pk.field_d[5] = of.a(var2Lifetime84, 1);
+            pk.field_d[5] = of.decodeCp1252Text(var2Lifetime84, 1);
           }
           var2Lifetime85 = ContentTransitionDialog.getNamedTextFile("instructions_title,6", (byte) 112);
           if (var2Lifetime85 != null) {
-            pk.field_d[6] = of.a(var2Lifetime85, 1);
+            pk.field_d[6] = of.decodeCp1252Text(var2Lifetime85, 1);
           }
           var2Lifetime86 = ContentTransitionDialog.getNamedTextFile("instructions_title,7", (byte) -94);
           if (var2Lifetime86 != null) {
-            pk.field_d[7] = of.a(var2Lifetime86, 1);
+            pk.field_d[7] = of.decodeCp1252Text(var2Lifetime86, 1);
           }
           var2Lifetime87 = ContentTransitionDialog.getNamedTextFile("you", (byte) 127);
           if (var2Lifetime87 != null) {
-            UiComponent.field_t = of.a(var2Lifetime87, 1);
+            UiComponent.field_t = of.decodeCp1252Text(var2Lifetime87, 1);
           }
           var2Lifetime88 = ContentTransitionDialog.getNamedTextFile("end_of_free_game", (byte) 116);
           if (null != var2Lifetime88) {
-            ByteStorage.field_c = of.a(var2Lifetime88, 1);
+            ByteStorage.field_c = of.decodeCp1252Text(var2Lifetime88, 1);
           }
           var2Lifetime89 = ContentTransitionDialog.getNamedTextFile("achievement_hidden", (byte) 108);
           if (var2Lifetime89 != null) {
-            dq.field_a = of.a(var2Lifetime89, 1);
+            dq.field_a = of.decodeCp1252Text(var2Lifetime89, 1);
           }
           var2Lifetime90 = ContentTransitionDialog.getNamedTextFile("skin_fireworks", (byte) -42);
           if (var2Lifetime90 != null) {
-            bo.field_a = of.a(var2Lifetime90, 1);
+            bo.field_a = of.decodeCp1252Text(var2Lifetime90, 1);
           }
           var2Lifetime91 = ContentTransitionDialog.getNamedTextFile("skin_rushes", (byte) -42);
           if (var2Lifetime91 != null) {
-            DraggableWidget.field_L = of.a(var2Lifetime91, 1);
+            DraggableWidget.field_L = of.decodeCp1252Text(var2Lifetime91, 1);
           }
           var2Lifetime92 = ContentTransitionDialog.getNamedTextFile("skin_clouds", (byte) 125);
           if (null != var2Lifetime92) {
-            ce.field_e = of.a(var2Lifetime92, 1);
+            ce.field_e = of.decodeCp1252Text(var2Lifetime92, 1);
           }
           var2Lifetime93 = ContentTransitionDialog.getNamedTextFile("skin_emergent", (byte) 109);
           if (var2Lifetime93 != null) {
-            ReportAbuseDialog.field_Vb = of.a(var2Lifetime93, 1);
+            ReportAbuseDialog.field_Vb = of.decodeCp1252Text(var2Lifetime93, 1);
           }
           var2Lifetime94 = ContentTransitionDialog.getNamedTextFile("skin_retro", (byte) 119);
           if (null != var2Lifetime94) {
-            qf.field_d = of.a(var2Lifetime94, 1);
+            qf.field_d = of.decodeCp1252Text(var2Lifetime94, 1);
           }
           var2Lifetime95 = ContentTransitionDialog.getNamedTextFile("skin_rubiks", (byte) -105);
           if (var2Lifetime95 != null) {
-            ro.field_f = of.a(var2Lifetime95, 1);
+            ro.field_f = of.decodeCp1252Text(var2Lifetime95, 1);
           }
           var2Lifetime96 = ContentTransitionDialog.getNamedTextFile("skin_twotone", (byte) -18);
           if (null != var2Lifetime96) {
-            GzipDecoder.field_b = of.a(var2Lifetime96, 1);
+            GzipDecoder.field_b = of.decodeCp1252Text(var2Lifetime96, 1);
           }
           var2Lifetime97 = ContentTransitionDialog.getNamedTextFile("skin_bouncedown", (byte) -110);
           if (var2Lifetime97 != null) {
-            wa.field_e = of.a(var2Lifetime97, 1);
+            wa.field_e = of.decodeCp1252Text(var2Lifetime97, 1);
           }
           var2Lifetime98 = ContentTransitionDialog.getNamedTextFile("skin_empty", (byte) -89);
           if (null != var2Lifetime98) {
-            bl.field_f = of.a(var2Lifetime98, 1);
+            bl.field_f = of.decodeCp1252Text(var2Lifetime98, 1);
           }
           var2Lifetime99 = ContentTransitionDialog.getNamedTextFile("levelcolonspace", (byte) -11);
           if (var2Lifetime99 != null) {
-            SoundCache.field_j = of.a(var2Lifetime99, 1);
+            SoundCache.field_j = of.decodeCp1252Text(var2Lifetime99, 1);
           }
           var2Lifetime100 = ContentTransitionDialog.getNamedTextFile("scorecolonspace", (byte) -91);
           if (var2Lifetime100 != null) {
-            fg.field_e = of.a(var2Lifetime100, 1);
+            fg.field_e = of.decodeCp1252Text(var2Lifetime100, 1);
           }
           var2Lifetime101 = ContentTransitionDialog.getNamedTextFile("bestcolonspace", (byte) -18);
           if (null != var2Lifetime101) {
-            IntrusiveDeque.field_e = of.a(var2Lifetime101, 1);
+            IntrusiveDeque.field_e = of.decodeCp1252Text(var2Lifetime101, 1);
           }
           var2Lifetime102 = ContentTransitionDialog.getNamedTextFile("name_wins", (byte) 103);
           if (var2Lifetime102 != null) {
-            TextButton.field_G = of.a(var2Lifetime102, 1);
+            TextButton.field_G = of.decodeCp1252Text(var2Lifetime102, 1);
           }
           var2Lifetime103 = ContentTransitionDialog.getNamedTextFile("its_a_draw", (byte) 104);
           if (null != var2Lifetime103) {
-            td.field_c = of.a(var2Lifetime103, 1);
+            td.field_c = of.decodeCp1252Text(var2Lifetime103, 1);
           }
           var2Lifetime104 = ContentTransitionDialog.getNamedTextFile("lobby", (byte) 110);
           if (null != var2Lifetime104) {
-            LoadingProgressDialog.field_jb = of.a(var2Lifetime104, 1);
+            LoadingProgressDialog.field_jb = of.decodeCp1252Text(var2Lifetime104, 1);
           }
           var2Lifetime105 = ContentTransitionDialog.getNamedTextFile("puzzle", (byte) 127);
           if (null != var2Lifetime105) {
-            KiteTailSegment.field_m = of.a(var2Lifetime105, 1);
+            KiteTailSegment.field_m = of.decodeCp1252Text(var2Lifetime105, 1);
           }
           var2Lifetime106 = ContentTransitionDialog.getNamedTextFile("slash", (byte) 107);
           if (null != var2Lifetime106) {
-            MatchHud.field_b = of.a(var2Lifetime106, 1);
+            MatchHud.field_b = of.decodeCp1252Text(var2Lifetime106, 1);
           }
           var2Lifetime107 = ContentTransitionDialog.getNamedTextFile("comma_seperated_values", (byte) 119);
           if (null != var2Lifetime107) {
-            FireworkSpark.field_f = of.a(var2Lifetime107, 1);
+            FireworkSpark.field_f = of.decodeCp1252Text(var2Lifetime107, 1);
           }
           var2Lifetime108 = ContentTransitionDialog.getNamedTextFile("name_resigned", (byte) -104);
           if (null != var2Lifetime108) {
-            e.field_e = of.a(var2Lifetime108, 1);
+            e.field_e = of.decodeCp1252Text(var2Lifetime108, 1);
           }
           var2Lifetime109 = ContentTransitionDialog.getNamedTextFile("name_disconnected", (byte) 106);
           if (null != var2Lifetime109) {
-            ArrayWidgetContainer.field_M = of.a(var2Lifetime109, 1);
+            ArrayWidgetContainer.field_M = of.decodeCp1252Text(var2Lifetime109, 1);
           }
           var2Lifetime110 = ContentTransitionDialog.getNamedTextFile("gameoptlabels,0", (byte) 111);
           if (var2Lifetime110 != null) {
-            hp.field_Hb[0] = of.a(var2Lifetime110, 1);
+            hp.field_Hb[0] = of.decodeCp1252Text(var2Lifetime110, 1);
           }
           var2Lifetime111 = ContentTransitionDialog.getNamedTextFile("gameoptlabels,1", (byte) -85);
           if (var2Lifetime111 != null) {
-            hp.field_Hb[1] = of.a(var2Lifetime111, 1);
+            hp.field_Hb[1] = of.decodeCp1252Text(var2Lifetime111, 1);
           }
           var2Lifetime112 = ContentTransitionDialog.getNamedTextFile("gameoptnames,0,0", (byte) 108);
           if (null != var2Lifetime112) {
-            DriftingParticle.field_c[0][0] = of.a(var2Lifetime112, 1);
+            DriftingParticle.field_c[0][0] = of.decodeCp1252Text(var2Lifetime112, 1);
           }
           var2Lifetime113 = ContentTransitionDialog.getNamedTextFile("gameoptnames,0,1", (byte) -10);
           if (null != var2Lifetime113) {
-            DriftingParticle.field_c[0][1] = of.a(var2Lifetime113, 1);
+            DriftingParticle.field_c[0][1] = of.decodeCp1252Text(var2Lifetime113, 1);
           }
           var2Lifetime114 = ContentTransitionDialog.getNamedTextFile("gameoptnames,0,2", (byte) 118);
           if (null != var2Lifetime114) {
-            DriftingParticle.field_c[0][2] = of.a(var2Lifetime114, 1);
+            DriftingParticle.field_c[0][2] = of.decodeCp1252Text(var2Lifetime114, 1);
           }
           var2Lifetime115 = ContentTransitionDialog.getNamedTextFile("gameoptnames,1,0", (byte) -18);
           if (null != var2Lifetime115) {
-            DriftingParticle.field_c[1][0] = of.a(var2Lifetime115, 1);
+            DriftingParticle.field_c[1][0] = of.decodeCp1252Text(var2Lifetime115, 1);
           }
           var2Lifetime116 = ContentTransitionDialog.getNamedTextFile("gameoptnames,1,1", (byte) -30);
           if (null != var2Lifetime116) {
-            DriftingParticle.field_c[1][1] = of.a(var2Lifetime116, 1);
+            DriftingParticle.field_c[1][1] = of.decodeCp1252Text(var2Lifetime116, 1);
           }
           var2Lifetime117 = ContentTransitionDialog.getNamedTextFile("gameoptnames,1,2", (byte) 109);
           if (var2Lifetime117 != null) {
-            DriftingParticle.field_c[1][2] = of.a(var2Lifetime117, 1);
+            DriftingParticle.field_c[1][2] = of.decodeCp1252Text(var2Lifetime117, 1);
           }
           var2Lifetime118 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,0,0", (byte) -114);
           if (null != var2Lifetime118) {
-            IntKeyLookup.field_d[0][0] = of.a(var2Lifetime118, 1);
+            IntKeyLookup.field_d[0][0] = of.decodeCp1252Text(var2Lifetime118, 1);
           }
           var2Lifetime119 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,0,1", (byte) -48);
           if (var2Lifetime119 != null) {
-            IntKeyLookup.field_d[0][1] = of.a(var2Lifetime119, 1);
+            IntKeyLookup.field_d[0][1] = of.decodeCp1252Text(var2Lifetime119, 1);
           }
           var2Lifetime120 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,0,2", (byte) -93);
           if (null != var2Lifetime120) {
-            IntKeyLookup.field_d[0][2] = of.a(var2Lifetime120, 1);
+            IntKeyLookup.field_d[0][2] = of.decodeCp1252Text(var2Lifetime120, 1);
           }
           var2Lifetime121 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,1,0", (byte) -6);
           if (null != var2Lifetime121) {
-            IntKeyLookup.field_d[1][0] = of.a(var2Lifetime121, 1);
+            IntKeyLookup.field_d[1][0] = of.decodeCp1252Text(var2Lifetime121, 1);
           }
           var2Lifetime122 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,1,1", (byte) -122);
           if (null != var2Lifetime122) {
-            IntKeyLookup.field_d[1][1] = of.a(var2Lifetime122, 1);
+            IntKeyLookup.field_d[1][1] = of.decodeCp1252Text(var2Lifetime122, 1);
           }
           var2Lifetime123 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,1,2", (byte) -41);
           if (null != var2Lifetime123) {
-            IntKeyLookup.field_d[1][2] = of.a(var2Lifetime123, 1);
+            IntKeyLookup.field_d[1][2] = of.decodeCp1252Text(var2Lifetime123, 1);
           }
           var2Lifetime124 = ContentTransitionDialog.getNamedTextFile("high_detail", (byte) -93);
           if (var2Lifetime124 != null) {
-            IterableNodeHashTable.field_d = of.a(var2Lifetime124, 1);
+            IterableNodeHashTable.field_d = of.decodeCp1252Text(var2Lifetime124, 1);
           }
           var2Lifetime125 = ContentTransitionDialog.getNamedTextFile("low_detail", (byte) 119);
           if (var2Lifetime125 != null) {
-            ef.field_c = of.a(var2Lifetime125, 1);
+            ef.field_c = of.decodeCp1252Text(var2Lifetime125, 1);
           }
           var2Lifetime126 = ContentTransitionDialog.getNamedTextFile("puzzlecomplete", (byte) 103);
           if (null != var2Lifetime126) {
-            MouseInputHandler.field_a = of.a(var2Lifetime126, 1);
+            MouseInputHandler.field_a = of.decodeCp1252Text(var2Lifetime126, 1);
           }
           var2Lifetime127 = ContentTransitionDialog.getNamedTextFile("puzzlefailed", (byte) -63);
           if (var2Lifetime127 != null) {
-            qj.field_c = of.a(var2Lifetime127, 1);
+            qj.field_c = of.decodeCp1252Text(var2Lifetime127, 1);
           }
           var2Lifetime128 = ContentTransitionDialog.getNamedTextFile("puzzles", (byte) 110);
           if (null != var2Lifetime128) {
-            GameApplet.field_f = of.a(var2Lifetime128, 1);
+            GameApplet.field_f = of.decodeCp1252Text(var2Lifetime128, 1);
           }
           var2Lifetime129 = ContentTransitionDialog.getNamedTextFile("a_of_b", (byte) -22);
           if (null != var2Lifetime129) {
-            BoundedRandomAccessFile.field_b = of.a(var2Lifetime129, 1);
+            BoundedRandomAccessFile.field_b = of.decodeCp1252Text(var2Lifetime129, 1);
           }
           var2Lifetime130 = ContentTransitionDialog.getNamedTextFile("totaltime", (byte) -18);
           if (null != var2Lifetime130) {
-            UiTheme.field_b = of.a(var2Lifetime130, 1);
+            UiTheme.field_b = of.decodeCp1252Text(var2Lifetime130, 1);
           }
           var2Lifetime131 = ContentTransitionDialog.getNamedTextFile("tilesdropped", (byte) 109);
           if (null != var2Lifetime131) {
-            ep.field_d = of.a(var2Lifetime131, 1);
+            ep.field_d = of.decodeCp1252Text(var2Lifetime131, 1);
           }
           var2Lifetime132 = ContentTransitionDialog.getNamedTextFile("perfectlandings", (byte) 117);
           if (var2Lifetime132 != null) {
-            MusicCrossfadeStream.field_E = of.a(var2Lifetime132, 1);
+            MusicCrossfadeStream.field_E = of.decodeCp1252Text(var2Lifetime132, 1);
           }
           var2Lifetime133 = ContentTransitionDialog.getNamedTextFile("picturescompleted", (byte) 116);
           if (var2Lifetime133 != null) {
-            IconTextComponent.field_Lb = of.a(var2Lifetime133, 1);
+            IconTextComponent.field_Lb = of.decodeCp1252Text(var2Lifetime133, 1);
           }
           var2Lifetime134 = ContentTransitionDialog.getNamedTextFile("finalscore", (byte) 124);
           if (var2Lifetime134 != null) {
-            he.field_c = of.a(var2Lifetime134, 1);
+            he.field_c = of.decodeCp1252Text(var2Lifetime134, 1);
           }
           var2Lifetime135 = ContentTransitionDialog.getNamedTextFile("next_puzzle", (byte) 114);
           if (null != var2Lifetime135) {
-            ModalStack.field_P = of.a(var2Lifetime135, 1);
+            ModalStack.field_P = of.decodeCp1252Text(var2Lifetime135, 1);
           }
           var2Lifetime136 = ContentTransitionDialog.getNamedTextFile("try_again", (byte) 118);
           if (null != var2Lifetime136) {
-            vm.field_f = of.a(var2Lifetime136, 1);
+            vm.field_f = of.decodeCp1252Text(var2Lifetime136, 1);
           }
           var2Lifetime137 = ContentTransitionDialog.getNamedTextFile("rank", (byte) -54);
           if (null != var2Lifetime137) {
-            DisplayNameRequestGlobals.field_b = of.a(var2Lifetime137, 1);
+            DisplayNameRequestGlobals.field_b = of.decodeCp1252Text(var2Lifetime137, 1);
           }
           var2Lifetime138 = ContentTransitionDialog.getNamedTextFile("name", (byte) 110);
           if (null != var2Lifetime138) {
-            ij.field_q = of.a(var2Lifetime138, 1);
+            ij.field_q = of.decodeCp1252Text(var2Lifetime138, 1);
           }
           var2Lifetime139 = ContentTransitionDialog.getNamedTextFile("score", (byte) -12);
           if (null != var2Lifetime139) {
-            IconTextComponent.field_Kb = of.a(var2Lifetime139, 1);
+            IconTextComponent.field_Kb = of.decodeCp1252Text(var2Lifetime139, 1);
           }
           var2Lifetime140 = ContentTransitionDialog.getNamedTextFile("challengemode", (byte) 111);
           if (var2Lifetime140 != null) {
-            Cloud.field_s = of.a(var2Lifetime140, 1);
+            Cloud.field_s = of.decodeCp1252Text(var2Lifetime140, 1);
           }
           var2Lifetime141 = ContentTransitionDialog.getNamedTextFile("puzzlemode", (byte) 111);
           if (null != var2Lifetime141) {
-            ge.field_a = of.a(var2Lifetime141, 1);
+            ge.field_a = of.decodeCp1252Text(var2Lifetime141, 1);
           }
           var2Lifetime142 = ContentTransitionDialog.getNamedTextFile("singleplayer", (byte) 117);
           if (var2Lifetime142 != null) {
-            Checkbox.field_O = of.a(var2Lifetime142, 1);
+            Checkbox.field_O = of.decodeCp1252Text(var2Lifetime142, 1);
           }
           var2Lifetime143 = ContentTransitionDialog.getNamedTextFile("keycode_w", (byte) -6);
           if (null != var2Lifetime143) {

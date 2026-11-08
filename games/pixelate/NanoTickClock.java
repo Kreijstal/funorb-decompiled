@@ -127,7 +127,7 @@ final class NanoTickClock extends TickClock {
         this.field_m = 81L;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void setButtonTextColours(int param0, int param1, int param2, int param3) {
         if (param2 != -14129) {
           return;
         }
@@ -184,7 +184,7 @@ final class NanoTickClock extends TickClock {
             var6 = param3;
           }
           if (param2 >= -54) {
-            NanoTickClock.a(-82, 96, 5, -81);
+            NanoTickClock.setButtonTextColours(-82, 96, 5, -81);
           }
           stackIn_6_0 = FloatingSquare.createLoginCredentials(param0, (String) (var6), param1, var4_long, 96);
           return stackIn_6_0;

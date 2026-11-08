@@ -13,7 +13,7 @@ final class IsaacRandom {
     private int remainingResults;
     static String field_a;
 
-    final static IndexedSprite a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static IndexedSprite loadIndexedSprite(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -23,7 +23,7 @@ final class IsaacRandom {
           if (param3 <= 114) {
             field_a = (String) null;
           }
-          if (PieceTiming.a(param2, false, param1, param0)) {
+          if (PieceTiming.decodeSpriteSheetFromArchive(param2, false, param1, param0)) {
             return StrongCacheReference.createIndexedSpriteFromDecodeBuffers((byte) -103);
           }
           return null;
@@ -242,7 +242,7 @@ final class IsaacRandom {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!PieceTiming.a(param4, false, param0, param1)) {
+          if (!PieceTiming.decodeSpriteSheetFromArchive(param4, false, param0, param1)) {
             return null;
           }
           if (param2 != 48077700) {

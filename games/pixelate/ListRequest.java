@@ -58,7 +58,7 @@ final class ListRequest extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0) {
+    final static void reopenLoginFormAfterClose(byte param0) {
         if (!MainMenuScreen.field_s) {
           throw new IllegalStateException();
         }

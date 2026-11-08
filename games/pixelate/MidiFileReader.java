@@ -66,7 +66,7 @@ final class MidiFileReader {
         }
     }
 
-    final int d() {
+    final int trackCount() {
         return this.trackPositions.length;
     }
 

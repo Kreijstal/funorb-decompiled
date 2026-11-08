@@ -226,7 +226,7 @@ final class jf {
               return stackIn_19_0;
             }
           }
-          stackIn_22_0 = BufferedRandomAccessFile.a(-58, var3[var3.length - 1]);
+          stackIn_22_0 = BufferedRandomAccessFile.classifyNumericLabel(-58, var3[var3.length - 1]);
           return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -258,7 +258,7 @@ final class jf {
             var6 = (String) null;
             jf.requestAddFriend((String) null, -39, (byte) 9);
           }
-          if (PieceTiming.a(param3, false, param2, param1)) {
+          if (PieceTiming.decodeSpriteSheetFromArchive(param3, false, param2, param1)) {
             stackIn_6_0 = ed.createPaletteBitmapFont(param0.getFile(param1, param3, true), -28628);
             return stackIn_6_0;
           }

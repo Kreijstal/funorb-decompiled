@@ -25,7 +25,7 @@ final class ff {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          if (PieceTiming.a(param2, false, param0, param1)) {
+          if (PieceTiming.decodeSpriteSheetFromArchive(param2, false, param0, param1)) {
             return ff.buildSprites(0);
           }
           return null;
@@ -155,7 +155,7 @@ final class ff {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!PieceTiming.a(param1, false, param0, param2)) {
+          if (!PieceTiming.decodeSpriteSheetFromArchive(param1, false, param0, param2)) {
             return null;
           }
           var4_int = 101 % ((-49 - param3) / 52);

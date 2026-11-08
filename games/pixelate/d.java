@@ -20,7 +20,7 @@ final class d {
           field_b = -91;
           if (IconTextComponent.field_Nb) {
             AlphaContainer.field_I = true;
-            NodeHashTable.a(0, false);
+            NodeHashTable.reopenLoginDialog(0, false);
             el.field_b = 0;
             return;
           }
@@ -28,7 +28,7 @@ final class d {
         }
         if (IconTextComponent.field_Nb) {
           AlphaContainer.field_I = true;
-          NodeHashTable.a(0, false);
+          NodeHashTable.reopenLoginDialog(0, false);
           el.field_b = 0;
           return;
         }

@@ -36,13 +36,13 @@ final class BoardView {
         int var3 = Pixelate.field_H ? 1 : 0;
         StatefulTextPainter.field_v = param1;
         LoginMethod.setSmallFont(qj.field_e, (byte) -108);
-        jb.field_b = new bi[dn.field_a.length];
+        jb.field_b = new TutorialPage[dn.field_a.length];
         if (param0 != 1) {
           return;
         }
         try {
           for (var2_int = 0; var2_int < dn.field_a.length; var2_int++) {
-            jb.field_b[var2_int] = new bi(GradientOutlineTextPainter.field_w[var2_int], dn.field_a[var2_int], var2_int == 5 ? true : false);
+            jb.field_b[var2_int] = new TutorialPage(GradientOutlineTextPainter.field_w[var2_int], dn.field_a[var2_int], var2_int == 5 ? true : false);
           }
           GreenGrowTheRushesBackground.field_m = -1;
           NetworkGameClient.field_D = 15;
@@ -477,7 +477,7 @@ final class BoardView {
           field_y = -99;
         }
         l.drawLobbyOverlays(19854, param1);
-        jk.a(param1, (byte) 83);
+        jk.drawAccountAndQuickChatOverlays(param1, (byte) 83);
     }
 
     final void startFadeIn(byte param0) {

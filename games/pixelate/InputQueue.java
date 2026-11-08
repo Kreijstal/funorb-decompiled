@@ -127,7 +127,7 @@ final class InputQueue {
             var3 = var1.readString(5);
             LabeledField.field_L = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);
-            vm.b(var4, (byte) -113);
+            vm.unpackChatFilterSettings(var4, (byte) -113);
             return;
           }
           if (null == vm.field_b) {

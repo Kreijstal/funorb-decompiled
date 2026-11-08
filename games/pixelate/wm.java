@@ -8,7 +8,7 @@ final class wm {
     static ge field_a;
     static int field_c;
 
-    final static void a(int param0, boolean[] param1) {
+    final static void rotatePieceTones(int param0, boolean[] param1) {
         int var2_int = 0;
         try {
           var2_int = param1[0] ? 1 : 0;

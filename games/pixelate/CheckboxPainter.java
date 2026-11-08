@@ -60,7 +60,7 @@ final class CheckboxPainter implements WidgetPainter {
             var7 = RetroBlock.replaceAll(var3, ":", "%3a", -123);
             var8 = RetroBlock.replaceAll(var7, "@", "%40", -128);
             if (param0 != 1) {
-              CheckboxPainter.a(-53);
+              CheckboxPainter.submitRegistrationRequest(-53);
             }
             var9 = RetroBlock.replaceAll(var8, "&", "%26", -126);
             var10 = RetroBlock.replaceAll(var9, "#", "%23", -127);
@@ -178,11 +178,11 @@ final class CheckboxPainter implements WidgetPainter {
         field_k = null;
     }
 
-    final static void a(int param0) {
+    final static void submitRegistrationRequest(int param0) {
         AsyncValidationResult.showLoadingProgressDialog((byte) -125);
         QuickChatMenu.setPendingUiResult(4, -2671);
         if (param0 != -22218) {
-          CheckboxPainter.a(-34);
+          CheckboxPainter.submitRegistrationRequest(-34);
         }
     }
 

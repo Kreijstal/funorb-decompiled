@@ -8,7 +8,7 @@ final class ek {
     static String field_e;
     static boolean field_c;
 
-    final static void a(boolean param0) {
+    final static void clearChatHistory(boolean param0) {
         int var1_int = 0;
         int var2 = Pixelate.field_H ? 1 : 0;
         try {
@@ -16,7 +16,7 @@ final class ek {
             MenuScreen.field_e[var1_int] = null;
           }
           if (!param0) {
-            ek.a(false);
+            ek.clearChatHistory(false);
           }
           AlphaContainer.field_L = 0;
         } catch (RuntimeException runtimeException) {

@@ -121,7 +121,7 @@ final class QuickChatPhraseCache {
     }
 
     final static void playSkinMusic(boolean param0, int param1) {
-        qh.a((byte) -110, 10, bj.field_c[param1], true);
+        qh.playMusicTrack((byte) -110, 10, bj.field_c[param1], true);
         if (param0) {
           QuickChatPhraseCache.releaseStatics(-24);
         }

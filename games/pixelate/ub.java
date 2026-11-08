@@ -75,7 +75,7 @@ final class ub {
         }
     }
 
-    final static java.net.URL a(int param0, java.net.URL param1, String param2, String param3, int param4) {
+    final static java.net.URL rewriteUrlPathParameters(int param0, java.net.URL param1, String param2, String param3, int param4) {
         try {
           StringBuilder discarded$0 = null;
           StringBuilder discarded$1 = null;

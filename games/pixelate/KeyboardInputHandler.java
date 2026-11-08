@@ -69,7 +69,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         }
     }
 
-    final static void a(byte param0, Sprite param1) {
+    final static void padToFourPixelAlignment(byte param0, Sprite param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;

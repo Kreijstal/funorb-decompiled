@@ -418,7 +418,7 @@ final class ep {
         if (param0 != 30022) {
           field_a = (SceneWidget) null;
         }
-        stackIn_6_0 = (wp.a(-8798)) && ((8 & pa.field_b) == 0);
+        stackIn_6_0 = (wp.isFocusIndicatorEnabled(-8798)) && ((8 & pa.field_b) == 0);
         return stackIn_6_0;
     }
 

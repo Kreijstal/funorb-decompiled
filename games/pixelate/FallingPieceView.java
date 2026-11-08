@@ -126,7 +126,7 @@ final class FallingPieceView {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, PacketBuffer param3, int param4) {
+    final static void writeConnectionHandshake(int param0, byte param1, int param2, PacketBuffer param3, int param4) {
         try {
           param3.writeByte(160, 12);
           if (param1 != 66) {
@@ -356,7 +356,7 @@ final class FallingPieceView {
           var2_int = 0;
           if (param0) {
             var5 = (PacketBuffer) null;
-            FallingPieceView.a(99, (byte) 118, 123, (PacketBuffer) null, -60);
+            FallingPieceView.writeConnectionHandshake(99, (byte) 118, 123, (PacketBuffer) null, -60);
           }
           while (var2_int < param1.length) {
             var3 = param1[var2_int];

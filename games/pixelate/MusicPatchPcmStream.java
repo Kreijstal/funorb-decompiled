@@ -199,7 +199,7 @@ final class MusicPatchPcmStream extends PcmStream {
               if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
-              this.field_o.a(var11);
+              this.field_o.addSubStream(var11);
             }
           }
           param0.field_G.mixInto(param3, param2, param5);

@@ -162,7 +162,7 @@ class BackgroundScene {
         }
     }
 
-    final static void a(int param0) {
+    final static void layoutLobbyChat(int param0) {
         r.layoutSlidingLobbyPanel(-93);
         SocketConnector.layoutChatPanel(3, MouseWheelHandler.field_c, fq.field_q, r.field_c, Checkbox.field_V[param0].field_A, DelegatingCanvas.field_b);
     }

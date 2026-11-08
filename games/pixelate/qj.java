@@ -19,13 +19,13 @@ final class qj {
           var5 = (CharSequence) ((Object) param0);
           fp.field_d = dh.normalizeDisplayName(var5, (byte) 74);
           fp.field_e = param1;
-          ib.b(param2 ^ 20550);
+          ib.openRootQuickChatMenu(param2 ^ 20550);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "qj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void sendGameJoinRequest(boolean param0, int param1, int param2) {
+    final static void sendLeaveGameRequest(boolean param0, int param1, int param2) {
         CipherPacketBuffer var3 = null;
         CipherPacketBuffer var3Lifetime1;
         if (!param0) {

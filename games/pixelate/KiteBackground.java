@@ -6,7 +6,7 @@ final class KiteBackground extends BackgroundScene {
     static PlatformTask field_o;
     private Cloud[] field_n;
 
-    final static boolean b(boolean param0) {
+    final static boolean isServerConnectionActive(boolean param0) {
         boolean stackIn_6_0 = false;
         if (!param0) {
           return false;
@@ -72,7 +72,7 @@ final class KiteBackground extends BackgroundScene {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!PieceTiming.a(param0, false, param3, param1)) {
+          if (!PieceTiming.decodeSpriteSheetFromArchive(param0, false, param3, param1)) {
             return null;
           }
           if (param2 == 1000) {
@@ -114,7 +114,7 @@ final class KiteBackground extends BackgroundScene {
             var5 = (RankingTableRequest) (DialWidgetPainter.field_c.next(1504642273));
           }
           if (param0 <= 3) {
-            KiteBackground.b(true);
+            KiteBackground.isServerConnectionActive(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,14 +161,14 @@ final class KiteBackground extends BackgroundScene {
           return true;
         }
         if (param0 != 3782) {
-          KiteBackground.b(true);
+          KiteBackground.isServerConnectionActive(true);
         }
         if (!MenuInputState.field_d.ensureGroupAvailableByName("benefits", -1)) {
           return false;
         }
-        PasswordFieldPainter.field_y = bi.loadSprite("benefits", "members_benefits_borders", MenuInputState.field_d, (byte) -89);
-        MusicPatchPcmStream.field_p = bi.loadSprite("benefits", "members_benefits_price", MenuInputState.field_d, (byte) -70);
-        SpriteState.field_t = bi.loadSprite("benefits", "members_benefits_logo", MenuInputState.field_d, (byte) -118);
+        PasswordFieldPainter.field_y = TutorialPage.loadSprite("benefits", "members_benefits_borders", MenuInputState.field_d, (byte) -89);
+        MusicPatchPcmStream.field_p = TutorialPage.loadSprite("benefits", "members_benefits_price", MenuInputState.field_d, (byte) -70);
+        SpriteState.field_t = TutorialPage.loadSprite("benefits", "members_benefits_logo", MenuInputState.field_d, (byte) -118);
         FireworkDisplay.field_h = SocketConnector.loadRgbSpritesByName("members_benefits_screenshots", "benefits", (byte) 47, MenuInputState.field_d);
         bl.setBenefitsBorderAndCaption(11833, PasswordFieldPainter.field_y, SoundCache.field_e);
         ni.configurePopupStyle(MusicPatchPcmStream.field_p, 2, 40, 40, 80, false, -2400, 15, PieceTiming.field_e, 80, 0);

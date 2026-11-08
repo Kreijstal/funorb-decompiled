@@ -79,7 +79,7 @@ final class QuickChatCategory extends DualLinkNode {
         }
     }
 
-    final static SocketConnector a(String param0, int param1, byte param2) {
+    final static SocketConnector createProxyConnector(String param0, int param1, byte param2) {
         ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         ProxySocketConnector stackIn_3_0 = null;

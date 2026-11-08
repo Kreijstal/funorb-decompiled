@@ -110,7 +110,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
             } else {
               this.field_C = this.field_C + 10;
               var3 = l.field_o;
-              if (ke.a(false)) {
+              if (ke.isCanvasResizeAllowed(false)) {
                 this.field_C = this.field_C + 20;
                 var3 = ViewportController.field_e;
               }
@@ -304,7 +304,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = nk.field_e.font.textWidth(var16) + nk.field_e.font.a('.') * 3;
+              var10Lifetime1 = nk.field_e.font.textWidth(var16) + nk.field_e.font.charWidth('.') * 3;
               if (16 == (48 & AchievementsScreen.field_o)) {
                 var9 = var16 + ".";
               }

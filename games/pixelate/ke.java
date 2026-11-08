@@ -17,7 +17,7 @@ final class ke {
         field_e = null;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isCanvasResizeAllowed(boolean param0) {
         if (param0) {
           field_e = (String) null;
           if (GzipDecoder.field_c == null) {

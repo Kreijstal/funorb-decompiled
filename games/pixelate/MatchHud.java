@@ -239,7 +239,7 @@ final class MatchHud {
         try {
           HowToPlayScreen.field_s = SocketConnector.loadRgbSpritesByName("frame_top", "commonui", (byte) 47, param2);
           PlayerBoard.field_v = SocketConnector.loadRgbSpritesByName("frame_bottom", "commonui", (byte) 47, param2);
-          ge.field_g = bi.loadSprite("commonui", "jagex_logo_grey", param2, (byte) -74);
+          ge.field_g = TutorialPage.loadSprite("commonui", "jagex_logo_grey", param2, (byte) -74);
           fc.field_d = SocketConnector.loadRgbSpritesByName("button", "commonui", (byte) 47, param2);
           CanvasRasterBuffer.field_g = MusicCrossfadeStream.loadSpriteSheetByName(param2, 20049, "validation", "commonui");
           ep.field_b = (BitmapFont) ((Object) BoardView.loadCoverageFontByName(param2, "commonui", 0, "arezzo12", param3));
@@ -284,7 +284,7 @@ final class MatchHud {
           var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_F, var9Lifetime1);
           var12.makeRasterTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           fc.field_d = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "nn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

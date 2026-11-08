@@ -111,7 +111,7 @@ final class vd {
         field_a = null;
     }
 
-    final static void a(boolean param0, int param1, int param2, byte param3) {
+    final static void updatePopupAndQuickChat(boolean param0, int param1, int param2, byte param3) {
         NameSuggestionsPanel.updateActivePopup(param0, 99);
         if (param3 != -86) {
           field_d = (String[]) null;

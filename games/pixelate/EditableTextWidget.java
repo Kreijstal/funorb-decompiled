@@ -136,7 +136,7 @@ class EditableTextWidget extends TextButton {
         field_R = null;
     }
 
-    final static void m(int param0) {
+    final static void layoutAccountPanelSlide(int param0) {
         int var1 = (ni.field_q - 640) / 2;
         if (param0 < 18) {
           field_Y = (BinaryBitmapFont) null;

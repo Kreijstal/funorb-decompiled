@@ -51,7 +51,7 @@ abstract class NetworkGameClient extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Pixelate.field_H ? 1 : 0;
-          var4 = TwistedLogicBackground.a(param0 + 6388, DriftingParticle.field_i, wo.field_d, param1);
+          var4 = TwistedLogicBackground.pollAccountUi(param0 + 6388, DriftingParticle.field_i, wo.field_d, param1);
           if (param0 == var4) {
             throw new IllegalStateException();
           }
@@ -68,7 +68,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = dn.a(BlastFromThePastBackground.getAccountStatusText(param0 + 0), (byte) 5, this.field_t, Js5ArchiveManager.getLoginStatusText(-13565), MusicCrossfadeStream.getRegistrationAge((byte) 127), ScrollPaneWithFooter.getRegistrationNewsletterOptIn(0), ProxySocketConnector.getAccountRequestStatusText(8192));
+            var5_intLifetime1 = dn.submitAccountServerRequest(BlastFromThePastBackground.getAccountStatusText(param0 + 0), (byte) 5, this.field_t, Js5ArchiveManager.getLoginStatusText(-13565), MusicCrossfadeStream.getRegistrationAge((byte) 127), ScrollPaneWithFooter.getRegistrationNewsletterOptIn(0), ProxySocketConnector.getAccountRequestStatusText(8192));
             if (-1 != var5_intLifetime1) {
               rh.handleRegistrationResult(true, gi.field_b, MatchController.field_y, var5_intLifetime1);
               gi.field_b = null;
@@ -79,7 +79,7 @@ abstract class NetworkGameClient extends GameApplet {
             if (ScoreMarkerDemo.field_b != -1 &&
               ScoreMarkerDemo.field_b != 0) {
               ScoreMarkerDemo.field_b = -1;
-              OptionsScreen.g((byte) 68);
+              OptionsScreen.resetConnectionRetries((byte) 68);
             }
             if (param2) {
               PauseMenuScreen.field_o = false;
@@ -114,7 +114,7 @@ abstract class NetworkGameClient extends GameApplet {
             el.field_b = 10;
           }
           if (var4 == 7) {
-            PasswordFieldPainter.a((byte) 93, AudioService.getApplet(param0 + 13867));
+            PasswordFieldPainter.openServerList((byte) 93, AudioService.getApplet(param0 + 13867));
           }
           if (var4 == 8) {
             MusicCrossfadeStream.clearSessionAndReload(AudioService.getApplet(13867), 22770);
@@ -210,9 +210,9 @@ abstract class NetworkGameClient extends GameApplet {
             !(var3 >= GreenGrowTheRushesBackground.getIdleTimeoutLimit(13428))) {
             this.field_F = false;
             na.closeGameSocket(true);
-            MainMenuScreen.g((byte) 81);
+            MainMenuScreen.advanceToLoginRequest((byte) 81);
             ScrollContainer.showLoginResultMessage(true, hm.field_c, 2);
-            fe.a(false);
+            fe.raiseFlag(false);
             PauseMenuScreen.field_o = true;
             mc.field_q = 15000L + hm.monotonicMillis(64);
           }
@@ -255,7 +255,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           } else {
             if (el.field_b >= 10) {
-              MainMenuScreen.g((byte) 106);
+              MainMenuScreen.advanceToLoginRequest((byte) 106);
               if (ScoreMarkerDemo.field_b == 3) {
                 ScrollContainer.showLoginResultMessage(true, wo.field_e, 256);
               } else {
@@ -285,7 +285,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (ScoreMarkerDemo.field_b != -1 &&
             ScoreMarkerDemo.field_b != 0) {
             ScoreMarkerDemo.field_b = -1;
-            OptionsScreen.g((byte) 68);
+            OptionsScreen.resetConnectionRetries((byte) 68);
           }
         }
         if (0 == ScoreMarkerDemo.field_b &&
@@ -316,7 +316,7 @@ abstract class NetworkGameClient extends GameApplet {
               if (DebouncedValidator.field_e.ensureGroupAvailableByName("", ~param0)) {
                 GameModeSelectScreen.loadTextTable(param0 + 31873, DebouncedValidator.field_e);
                 DebouncedValidator.field_e = null;
-                sf.a(param0 + 0);
+                sf.resetFrameTimingHistory(param0 + 0);
               }
             }
           }
@@ -340,7 +340,7 @@ abstract class NetworkGameClient extends GameApplet {
             RisingBubble.showLoginDialog(stackIn_100_0, stackIn_101_1, stackIn_104_2, LobbyGame.field_fc);
           }
           if (NightToRememberBackground.field_n) {
-            CheckboxPainter.a(-22218);
+            CheckboxPainter.submitRegistrationRequest(-22218);
           }
           if (null == QuickChatPhraseDefinition.field_t) {
             QuickChatPhraseDefinition.field_t = VerticalScrollbar.getEffectsMixer((byte) -58);
@@ -351,7 +351,7 @@ abstract class NetworkGameClient extends GameApplet {
           MatchingTextValidator.field_u = null;
           wk.field_j = null;
           StatusBar.readUsernameParameter(param0 + 125, (java.applet.Applet) (this));
-          sf.a(0);
+          sf.resetFrameTimingHistory(0);
           hf.field_q = 10;
         }
         if (hf.field_q == 10) {
@@ -631,7 +631,7 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     private final void handlePacketSevenMessage(int param0) {
-        String var2 = MatchingTextValidator.e(480);
+        String var2 = MatchingTextValidator.readPacketString(480);
         if (param0 != 21037) {
           this.enablePacketHandlerGroups(false, false, true, true, true, false, -110);
         }
@@ -723,7 +723,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (!Js5ArchiveManager.field_e) {
             this.redirectToErrorPage(-18310, "reconnect");
           }
-          MainMenuScreen.g((byte) 47);
+          MainMenuScreen.advanceToLoginRequest((byte) 47);
           ScrollContainer.showLoginResultMessage(true, gi.field_b, var2);
           PauseMenuScreen.field_o = true;
           mc.field_q = 15000L + hm.monotonicMillis(64);
@@ -761,7 +761,7 @@ abstract class NetworkGameClient extends GameApplet {
         int var4 = BackgroundScene.field_b - 1;
         byte[] var5 = new byte[var4];
         MusicCrossfadeStream.field_o.readCipheredBytes(var5, 0, 88, var4);
-        LinkButtonPainter.openUrlInNewWindow(var3 != 0, of.a(var5, 1), -33, AudioService.getApplet(param0 ^ 13840));
+        LinkButtonPainter.openUrlInNewWindow(var3 != 0, of.decodeCp1252Text(var5, 1), -33, AudioService.getApplet(param0 ^ 13840));
     }
 
     final static IndexedSprite[] loadIndexedSpritesByName(ResourceArchive param0, int param1, String param2, String param3) {

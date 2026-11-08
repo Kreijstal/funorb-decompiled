@@ -105,8 +105,8 @@ final class Kite {
         this.field_f = param2;
         this.field_q = param4;
         this.field_d = param3;
-        this.field_e = JavaRandomHelpers.a(ea.field_b, -128, 400);
-        this.field_n = JavaRandomHelpers.a(ea.field_b, -120, 172);
+        this.field_e = JavaRandomHelpers.randomBelow(ea.field_b, -128, 400);
+        this.field_n = JavaRandomHelpers.randomBelow(ea.field_b, -120, 172);
         this.field_c = new int[400];
         this.field_h = new int[400];
         int var6 = 200 * this.field_l >> 12;

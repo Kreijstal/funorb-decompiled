@@ -116,7 +116,7 @@ final class ClientContextMenu {
     }
 
     final static void refreshOpenLegacyMenu(byte param0) {
-        if (!hf.b((byte) 100)) {
+        if (!hf.isLegacyMenuOpen((byte) 100)) {
           return;
         }
         bq.buildLegacyMenu(false, (byte) -110, 4);
@@ -160,7 +160,7 @@ final class ClientContextMenu {
           return true;
         }
         if (param0 == 3) {
-          qg.a(this.field_m, param1, false);
+          qg.sendDeclineGameRequest(this.field_m, param1, false);
           if (param2 == 7490) {
             return true;
           }
@@ -168,7 +168,7 @@ final class ClientContextMenu {
           return true;
         }
         if (param0 == 10) {
-          qj.sendGameJoinRequest(false, this.field_m, param1);
+          qj.sendLeaveGameRequest(false, this.field_m, param1);
           if (param2 == 7490) {
             return true;
           }
@@ -176,7 +176,7 @@ final class ClientContextMenu {
           return true;
         }
         if (param0 == 15) {
-          StatsRequest.a(param2 ^ 7489, this.field_m, param1);
+          StatsRequest.updateSelectedLobbyGame(param2 ^ 7489, this.field_m, param1);
           if (param2 == 7490) {
             return true;
           }
@@ -186,7 +186,7 @@ final class ClientContextMenu {
         if (param0 != 16) {
           return false;
         }
-        StatsRequest.a(3, 0, param1);
+        StatsRequest.updateSelectedLobbyGame(3, 0, param1);
         if (param2 == 7490) {
           return true;
         }
@@ -481,7 +481,7 @@ final class ClientContextMenu {
                     IterableNodeHashTable.closePrivateChatInput(7500);
                   } else {
                     if (20 == param0) {
-                      SceneWidget.c(true);
+                      SceneWidget.openLobbyQuickChat(true);
                     } else {
                       if (param0 != 19) {
                         return false;

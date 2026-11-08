@@ -49,7 +49,7 @@ final class MusicTrack extends IntrusiveNode {
         var19[9] = 128;
         var23[9] = 128;
         var4 = new MidiFileReader(this.field_k);
-        var5 = var4.d();
+        var5 = var4.trackCount();
         for (var6 = 0; var6 < var5; var6++) {
           var4.seekTrack(var6);
           var4.readDelta(var6);

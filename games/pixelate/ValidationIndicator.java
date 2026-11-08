@@ -56,7 +56,7 @@ final class ValidationIndicator extends TextButton {
         }
     }
 
-    final static void a(int param0, int param1, int param2, sb param3, int param4, sb param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12, sb param13, int param14, BitmapFont param15, byte param16, int param17, int param18, int param19, int param20) {
+    final static void configureLegacyMenuStyle(int param0, int param1, int param2, sb param3, int param4, sb param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12, sb param13, int param14, BitmapFont param15, byte param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -163,7 +163,7 @@ final class ValidationIndicator extends TextButton {
             }
           }
           var17.drawRotatedAboutPivot(112, 144, var17.field_A << 4, var17.field_B << 4, -this.field_Q << 10, 4096);
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           QuickChatPhraseCache.field_k.drawAdditive(var5 - var17.field_A, var7 - var17.field_B, 256);
           return;
         }
@@ -201,7 +201,7 @@ final class ValidationIndicator extends TextButton {
           }
         }
         var16.drawRotatedAboutPivot(112, 144, var16.field_A << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
-        LinkButtonPainter.a((byte) 92);
+        LinkButtonPainter.popRasterState((byte) 92);
         QuickChatPhraseCache.field_k.drawAdditive(var5 - var16.field_A, var7 - var16.field_B, 256);
     }
 
@@ -212,7 +212,7 @@ final class ValidationIndicator extends TextButton {
           return;
         }
         BitmapFont var2 = (BitmapFont) null;
-        ValidationIndicator.a(16, 19, 82, (sb) null, 15, (sb) null, -91, -16, 3, (BitmapFont) null, 119, -31, -67, (sb) null, -69, (BitmapFont) null, (byte) 15, -5, 94, -75, -69);
+        ValidationIndicator.configureLegacyMenuStyle(16, 19, 82, (sb) null, 15, (sb) null, -91, -16, 3, (BitmapFont) null, 119, -31, -67, (sb) null, -69, (BitmapFont) null, (byte) 15, -5, 94, -75, -69);
         field_N = null;
         field_O = null;
     }

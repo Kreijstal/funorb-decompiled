@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class JavaScriptBridge {
-    final static Object a(java.applet.Applet param0, byte param1, Object[] param2, String param3) throws Throwable {
+    final static Object callFunction(java.applet.Applet param0, byte param1, Object[] param2, String param3) throws Throwable {
         int var4 = -44 / ((13 - param1) / 49);
         return netscape.javascript.JSObject.getWindow(param0).call(param3, param2);
     }

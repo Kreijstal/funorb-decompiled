@@ -11,7 +11,7 @@ final class StatsRequest extends IntrusiveNode {
     static String field_m;
     int field_n;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void updateSelectedLobbyGame(int param0, int param1, int param2) {
         LobbyGame var12 = null;
         LobbyGame var9 = null;
         LobbyGame var7 = null;

@@ -599,7 +599,7 @@ class PacketBuffer extends IntrusiveNode {
     final static void layoutLobbyPanels(boolean param0) {
         Matrix3.field_b = SoftwareRasterizer.field_d;
         ni.field_q = SoftwareRasterizer.field_j;
-        EditableTextWidget.m(21);
+        EditableTextWidget.layoutAccountPanelSlide(21);
         cl.field_g.layoutSocialPanel(GreenGrowTheRushesBackground.field_n.field_K, -2 + (-40 + GreenGrowTheRushesBackground.field_n.height), 0, 0, 5);
         ValidatedTextWidget.field_lb.setBounds(0, fq.field_q, 0, 256, vd.field_c.field_K);
         int var1 = 2 + fq.field_q;
@@ -885,7 +885,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int param0) {
-        this.payload = fd.a(-5001, param0);
+        this.payload = fd.acquireByteArray(-5001, param0);
         this.position = 0;
     }
 

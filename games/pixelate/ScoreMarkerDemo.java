@@ -36,7 +36,7 @@ final class ScoreMarkerDemo {
             return;
           }
           this.field_a[0] = 0;
-          this.field_a[1] = 300 + JavaRandomHelpers.a(ea.field_b, DraggableWidget.intXor(param0, -327), 300);
+          this.field_a[1] = 300 + JavaRandomHelpers.randomBelow(ea.field_b, DraggableWidget.intXor(param0, -327), 300);
           this.field_d = 0;
           if (param0 != 300) {
             ScoreMarkerDemo.showAccountChoicePanel(43);
@@ -44,7 +44,7 @@ final class ScoreMarkerDemo {
           }
           return;
         }
-        this.field_a[0] = JavaRandomHelpers.a(ea.field_b, -100, 300) + 300;
+        this.field_a[0] = JavaRandomHelpers.randomBelow(ea.field_b, -100, 300) + 300;
         this.field_a[1] = 0;
         if (param0 == 300) {
           return;
@@ -65,7 +65,7 @@ final class ScoreMarkerDemo {
         field_i = null;
     }
 
-    final static void a(int param0, sb param1, int param2, int param3, int param4, sb param5) {
+    final static void setButtonFrames(int param0, sb param1, int param2, int param3, int param4, sb param5) {
         try {
           BufferedRandomAccessFile.field_m = param1;
           ProxyAuthenticationException.field_a = param2;
@@ -73,7 +73,7 @@ final class ScoreMarkerDemo {
           Matrix3.field_d = param5;
           if (param3 != 300) {
             sb var7 = (sb) null;
-            ScoreMarkerDemo.a(-68, (sb) null, -42, 67, -94, (sb) null);
+            ScoreMarkerDemo.setButtonFrames(-68, (sb) null, -42, 67, -94, (sb) null);
           }
           KiteTailSegment.field_e = param0;
         } catch (RuntimeException runtimeException) {
@@ -86,7 +86,7 @@ final class ScoreMarkerDemo {
           return param1 + 1 + "/" + SoundVoice.field_m.length;
         }
         sb var3 = (sb) null;
-        ScoreMarkerDemo.a(112, (sb) null, -11, -57, 97, (sb) null);
+        ScoreMarkerDemo.setButtonFrames(112, (sb) null, -11, -57, 97, (sb) null);
         return param1 + 1 + "/" + SoundVoice.field_m.length;
     }
 

@@ -78,7 +78,7 @@ final class StripedProgressBar extends UiComponent {
               SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
             }
           }
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           return var11;
         }
         this.drawLayer(-24, 16, 122, (byte) -10);
@@ -95,7 +95,7 @@ final class StripedProgressBar extends UiComponent {
             SoftwareRasterizer.setPixel(var5Lifetime1, var4Lifetime1, var8Lifetime1 << 8 | var8Lifetime1 | var8Lifetime1 << 16);
           }
         }
-        LinkButtonPainter.a((byte) 92);
+        LinkButtonPainter.popRasterState((byte) 92);
         return var10;
     }
 
@@ -127,7 +127,7 @@ final class StripedProgressBar extends UiComponent {
         }
         hp.pushClipRegion(var6 + (this.field_E * this.field_Q >> 16), this.field_C + var7, var6 + this.field_E, (byte) -126, var7);
         this.drawStripedBar(this.field_P[1], 1177347297, var6, var7);
-        LinkButtonPainter.a((byte) 92);
+        LinkButtonPainter.popRasterState((byte) 92);
     }
 
     final void setColours(byte param0, int param1, int param2) {
@@ -229,7 +229,7 @@ final class StripedProgressBar extends UiComponent {
             SoftwareRasterizer.drawHorizontalLine(this.field_M + var7, var6, this.field_M, var12Lifetime2);
             SoftwareRasterizer.drawHorizontalLine(-this.field_M + var7, var6, this.field_M, var12Lifetime2);
           }
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           return var16;
         }
         field_U = (SceneWidget) null;
@@ -251,7 +251,7 @@ final class StripedProgressBar extends UiComponent {
           SoftwareRasterizer.drawHorizontalLine(this.field_M + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(-this.field_M + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1Lifetime1);
         }
-        LinkButtonPainter.a((byte) 92);
+        LinkButtonPainter.popRasterState((byte) 92);
         return var15;
     }
 
@@ -275,13 +275,13 @@ final class StripedProgressBar extends UiComponent {
           for (var6 = param2 - this.stripeOffset; var5_int > var6; var6 = var6 + param0.field_F) {
             param0.drawTransparent(var6, param3);
           }
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           if (this.rightCapMask.field_F + param2 >= SoftwareRasterizer.field_e) {
             Checkbox.renderToSprite(-122, this.capWorkSurface);
             param0.drawTransparent(-this.stripeOffset, 0);
             param0.drawTransparent(-this.stripeOffset + this.field_M * 2, 0);
             this.field_K.drawMultiply(0, 0);
-            LinkButtonPainter.a((byte) 92);
+            LinkButtonPainter.popRasterState((byte) 92);
             this.capWorkSurface.drawTransparent(param2, param3);
           }
           if (-this.rightCapMask.field_F + var5_int > SoftwareRasterizer.field_h) {
@@ -293,7 +293,7 @@ final class StripedProgressBar extends UiComponent {
           param0.drawTransparent(-var7, 0);
           param0.drawTransparent(-var7 + this.field_M * 2, 0);
           this.rightCapMask.drawMultiply(0, 0);
-          LinkButtonPainter.a((byte) 92);
+          LinkButtonPainter.popRasterState((byte) 92);
           this.capWorkSurface.drawTransparent(-this.rightCapMask.field_F + var5_int, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

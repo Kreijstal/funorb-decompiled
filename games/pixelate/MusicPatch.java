@@ -150,11 +150,11 @@ final class MusicPatch extends IntrusiveNode {
             }
           }
           if (var6 == 0) {
-            um.a(var9, var17, var24, var18, var14, (byte) -101, param0.field_u >> 8, var13, var10, param0.field_r >> 8, param0.field_t);
-            um.a(var11, var19, var22, var20, var16, (byte) -110, param0.field_u >> 8, var15, var12, param0.field_r >> 8, param0.field_t);
+            um.drawCubeFaces(var9, var17, var24, var18, var14, (byte) -101, param0.field_u >> 8, var13, var10, param0.field_r >> 8, param0.field_t);
+            um.drawCubeFaces(var11, var19, var22, var20, var16, (byte) -110, param0.field_u >> 8, var15, var12, param0.field_r >> 8, param0.field_t);
           } else {
-            um.a(var11, var19, var22, var20, var16, (byte) -114, param0.field_u >> 8, var15, var12, param0.field_r >> 8, param0.field_t);
-            um.a(var9, var17, var24, var18, var14, (byte) -100, param0.field_u >> 8, var13, var10, param0.field_r >> 8, param0.field_t);
+            um.drawCubeFaces(var11, var19, var22, var20, var16, (byte) -114, param0.field_u >> 8, var15, var12, param0.field_r >> 8, param0.field_t);
+            um.drawCubeFaces(var9, var17, var24, var18, var14, (byte) -100, param0.field_u >> 8, var13, var10, param0.field_r >> 8, param0.field_t);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -225,7 +225,7 @@ final class MusicPatch extends IntrusiveNode {
         MusicCrossfadeStream.clearKeyboardHandler((byte) -109);
         TextHotspotWidget.clearMouseHandler((byte) -94);
         ep.closeArchiveConnections(-26721);
-        if (KiteBackground.b(true)) {
+        if (KiteBackground.isServerConnectionActive(true)) {
           ChatMessage.field_f.writeOpcode(1, 15514);
           SecondaryNodeHashTable.flushOutgoingPackets(0, param0 + 10091);
         }

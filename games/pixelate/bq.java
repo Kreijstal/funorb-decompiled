@@ -327,7 +327,7 @@ final class bq {
           bq.releaseStatics((byte) -16);
         }
         if (MarkerSlider.isOverlayOpen((byte) 117)) {
-          vd.a(param3, param1, param4, (byte) -86);
+          vd.updatePopupAndQuickChat(param3, param1, param4, (byte) -86);
           if (null != ProxySocketConnector.field_n &&
             ProxySocketConnector.field_n.updateAndRunSelectedAction(param4, param6, false, param5, param3)) {
             ArchiveProvider.closeContextMenu(71);

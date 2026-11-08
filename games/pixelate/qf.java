@@ -16,7 +16,7 @@ final class qf {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void setLobbyPanelPosition(int param0, int param1) {
         if (param0 != 21983) {
           return;
         }

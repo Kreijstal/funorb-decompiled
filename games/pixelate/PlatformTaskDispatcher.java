@@ -242,7 +242,7 @@ final class PlatformTaskDispatcher implements Runnable {
                   case 16:
                   default:
                     if (!this.field_x) {
-                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
                     }
                     switch (var2_int) {
                       case 6:
@@ -271,7 +271,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.field_v) {
                             Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_n, new Object[]{new Integer(var3), new Integer(var4)});
                           } else {
-                            this.field_d.a(var3, var4, (byte) 112);
+                            this.field_d.setCursorPosition(var3, var4, (byte) 112);
                           }
                           break;
                         }
@@ -293,21 +293,21 @@ final class PlatformTaskDispatcher implements Runnable {
                           Class.forName("CursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_n, new Object[]{var14[0], var14[1], new Integer(var8.field_a), new Integer(var8.field_c), var14[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
                           }
                           try {
                             if (!field_p.startsWith("win")) {
-                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var15 = (String) (var8.field_g);
                             if (!var15.startsWith("http://") &&
                               !var15.startsWith("https://")) {
-                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var15.length() > var5; var5++) {
                               if (var4_ref_String.indexOf((int) var15.charAt(var5)) == -1) {
-                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var15 + "\"");
@@ -316,7 +316,7 @@ final class PlatformTaskDispatcher implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref_Exception = (Exception) (Object) decompiledCaughtException;
                             var8.field_e = var3_ref_Exception;
-                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref_Exception);
+                            throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(var3_ref_Exception);
                           }
                         }
                         break;
@@ -332,7 +332,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.field_v) {
                           var8.field_e = Class.forName("FullscreenDisplayController").getMethod("listmodes", new Class[]{}).invoke(this.field_g, new Object[]{});
                         } else {
-                          var8.field_e = this.field_s.a(5003);
+                          var8.field_e = this.field_s.enumerateDisplayModes(5003);
                         }
                         break;
                       case 21:
@@ -385,7 +385,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationException) null;
-                      var8.field_e = QuickChatCategory.a((String) (var8.field_g), var8.field_a, (byte) 126).connect(116);
+                      var8.field_e = QuickChatCategory.createProxyConnector((String) (var8.field_g), var8.field_a, (byte) 126).connect(116);
                     } catch (ProxyAuthenticationException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref_uf = (ProxyAuthenticationException) (Object) decompiledCaughtException;
@@ -624,7 +624,7 @@ final class PlatformTaskDispatcher implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -154,7 +154,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           he.field_a = new sb(param0);
           GradientOutlineTextPainter.field_t = param3;
           PacketBuffer.field_n = param1;
-          IntrusiveDeque.h(-126);
+          IntrusiveDeque.drawLegacyMenuWithFrame(-126);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ad.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

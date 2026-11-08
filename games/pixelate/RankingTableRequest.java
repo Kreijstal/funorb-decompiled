@@ -44,7 +44,7 @@ final class RankingTableRequest extends IntrusiveNode {
             }
             var2_int = var2_int + var8[var4];
           }
-          var4Lifetime1 = JavaRandomHelpers.a(UiTheme.field_f, param1 ^ -3, var2_int);
+          var4Lifetime1 = JavaRandomHelpers.randomBelow(UiTheme.field_f, param1 ^ -3, var2_int);
           for (var5 = 0; var5 < var8.length; var5++) {
             var4Lifetime1 = var4Lifetime1 - var8[var5];
             if (var4Lifetime1 <= 0) {
@@ -52,7 +52,7 @@ final class RankingTableRequest extends IntrusiveNode {
               return stackIn_13_0;
             }
           }
-          stackIn_16_0 = JavaRandomHelpers.a(UiTheme.field_f, -125, la.field_a.length);
+          stackIn_16_0 = JavaRandomHelpers.randomBelow(UiTheme.field_f, -125, la.field_a.length);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -222,7 +222,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               field_m = (String) null;
             }
             if (0 < oo.field_b) {
-              AccountChoicePanel.a(2, param0, param7, param4);
+              AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
             }
             nk.field_e.horizontalAlignment = 1;
             nk.field_e.field_C = ArchiveIndex.field_l.field_C;
@@ -230,7 +230,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
             }
             if (Checkbox.field_W > 0) {
-              CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+              CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
             }
             if (EmergentBehaviourBackground.field_o &&
               LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
@@ -248,7 +248,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             if (param6 != -28362) {
               field_m = (String) null;
               if (0 < oo.field_b) {
-                AccountChoicePanel.a(2, param0, param7, param4);
+                AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
               }
               nk.field_e.horizontalAlignment = 1;
               nk.field_e.field_C = ArchiveIndex.field_l.field_C;
@@ -256,7 +256,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
               }
               if (Checkbox.field_W > 0) {
-                CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
               }
               if (EmergentBehaviourBackground.field_o &&
                 LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
@@ -270,14 +270,14 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               }
             } else {
               if (0 < oo.field_b) {
-                AccountChoicePanel.a(2, param0, param7, param4);
+                AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                 }
                 if (Checkbox.field_W > 0) {
-                  CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                  CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
                 }
                 if (EmergentBehaviourBackground.field_o &&
                   LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
@@ -295,7 +295,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                   if (Checkbox.field_W > 0) {
-                    CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                    CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (EmergentBehaviourBackground.field_o &&
                     LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
@@ -309,7 +309,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   }
                 } else {
                   if (Checkbox.field_W > 0) {
-                    CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                    CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (!EmergentBehaviourBackground.field_o) {
                     StripedProgressBar.field_O.field_rb = true;
@@ -352,7 +352,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 field_m = (String) null;
               }
               if (0 < oo.field_b) {
-                AccountChoicePanel.a(2, param0, param7, param4);
+                AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
               }
               nk.field_e.horizontalAlignment = 1;
               nk.field_e.field_C = ArchiveIndex.field_l.field_C;
@@ -360,7 +360,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
               }
               if (Checkbox.field_W > 0) {
-                CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
               }
               if (EmergentBehaviourBackground.field_o &&
                 LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
@@ -378,7 +378,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               if (param6 != -28362) {
                 field_m = (String) null;
                 if (0 < oo.field_b) {
-                  AccountChoicePanel.a(2, param0, param7, param4);
+                  AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
                 }
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
@@ -386,7 +386,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                 }
                 if (Checkbox.field_W > 0) {
-                  CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                  CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
                 }
                 if (EmergentBehaviourBackground.field_o &&
                   LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
@@ -400,14 +400,14 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 }
               } else {
                 if (0 < oo.field_b) {
-                  AccountChoicePanel.a(2, param0, param7, param4);
+                  AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
                 }
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                   if (Checkbox.field_W > 0) {
-                    CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                    CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (EmergentBehaviourBackground.field_o &&
                     LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
@@ -421,7 +421,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   }
                 } else {
                   if (Checkbox.field_W > 0) {
-                    CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                    CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (!EmergentBehaviourBackground.field_o) {
                     StripedProgressBar.field_O.field_rb = true;
@@ -461,7 +461,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 field_m = (String) null;
               }
               if (0 < oo.field_b) {
-                AccountChoicePanel.a(2, param0, param7, param4);
+                AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
               }
               nk.field_e.horizontalAlignment = 1;
               nk.field_e.field_C = ArchiveIndex.field_l.field_C;
@@ -469,7 +469,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
               }
               if (Checkbox.field_W > 0) {
-                CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
               }
               if (EmergentBehaviourBackground.field_o &&
                 LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
@@ -487,7 +487,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               if (param6 != -28362) {
                 field_m = (String) null;
                 if (0 < oo.field_b) {
-                  AccountChoicePanel.a(2, param0, param7, param4);
+                  AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
                 }
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
@@ -495,7 +495,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                 }
                 if (Checkbox.field_W > 0) {
-                  CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                  CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
                 }
                 if (EmergentBehaviourBackground.field_o &&
                   LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
@@ -509,14 +509,14 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 }
               } else {
                 if (0 < oo.field_b) {
-                  AccountChoicePanel.a(2, param0, param7, param4);
+                  AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
                   nk.field_e.horizontalAlignment = 1;
                   nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                   if (RisingBubble.field_g > 0) {
                     AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                   }
                   if (Checkbox.field_W > 0) {
-                    CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                    CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (EmergentBehaviourBackground.field_o &&
                     LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
@@ -534,7 +534,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   if (RisingBubble.field_g > 0) {
                     AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                     if (Checkbox.field_W > 0) {
-                      CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                      CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
                     }
                     if (EmergentBehaviourBackground.field_o &&
                       LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
@@ -548,7 +548,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     }
                   } else {
                     if (Checkbox.field_W > 0) {
-                      CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
+                      CachedTextLayout.updateGameRoomPanel(param1, param6 + 28363, param0, param4, param7);
                     }
                     if (!EmergentBehaviourBackground.field_o) {
                       StripedProgressBar.field_O.field_rb = true;

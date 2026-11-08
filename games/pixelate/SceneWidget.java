@@ -557,12 +557,12 @@ class SceneWidget extends SceneWidgetNode {
         }
     }
 
-    final static void c(boolean param0) {
+    final static void openLobbyQuickChat(boolean param0) {
         ce.field_d = 0;
         if (!param0) {
           return;
         }
-        ib.b(20558);
+        ib.openRootQuickChatMenu(20558);
     }
 
     final void applyStyle(int param0, SceneWidget param1) {
@@ -689,7 +689,7 @@ class SceneWidget extends SceneWidgetNode {
             this.field_X = stackIn_98_1;
           }
           if (param0 != -27813) {
-            SceneWidget.c(true);
+            SceneWidget.openLobbyQuickChat(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

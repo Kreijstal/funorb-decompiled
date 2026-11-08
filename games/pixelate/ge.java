@@ -55,8 +55,8 @@ final class ge {
             field_g = (Sprite) null;
           }
           AccountNamePrompt.initializeOptionLabels(1565);
-          gd.a((byte) -7);
-          BackgroundScene.a(0);
+          gd.buildMainScreenRoots((byte) -7);
+          BackgroundScene.layoutLobbyChat(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

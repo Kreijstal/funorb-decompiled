@@ -116,7 +116,7 @@ final class NativeWindowCallback extends com.ms.dll.Callback {
         this.field_a = true;
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void setCursorPosition(int param0, int param1, byte param2) {
         com.ms.win32.User32.SetCursorPos(param0, param1);
         if (param2 <= 98) {
           this.callback(-91, 12, 96, -5);

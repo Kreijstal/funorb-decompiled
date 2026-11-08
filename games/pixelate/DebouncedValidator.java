@@ -87,7 +87,7 @@ abstract class DebouncedValidator implements ValidationSource {
               ro.setNameSuggestions(var7, 2);
               SpriteCheckboxPainter.field_f = HowToPlayScreen.createSuggestionsResult((byte) -65, param1);
             } else {
-              SpriteCheckboxPainter.field_f = pa.a(param2, param3, (byte) -97);
+              SpriteCheckboxPainter.field_f = pa.createRequestResult(param2, param3, (byte) -97);
             }
           } else {
             stackIn_5_0 = !(um.field_r >= 13);
@@ -409,7 +409,7 @@ abstract class DebouncedValidator implements ValidationSource {
           if (var3 != 0) {
             return false;
           }
-          SceneWidget.c(true);
+          SceneWidget.openLobbyQuickChat(true);
           return true;
         }
         if (11 == ke.field_a &&
