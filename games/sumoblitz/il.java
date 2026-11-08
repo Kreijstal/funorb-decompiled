@@ -3,7 +3,7 @@
  */
 final class il {
     static int field_a;
-    static hr field_b;
+    static ToolkitSprite field_b;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -34,7 +34,7 @@ final class il {
             var3 = param0.substring(0, var2_int);
             var4 = param0.substring(1 + var2_int);
             if (param1 < 0) {
-              field_b = (hr) null;
+              field_b = (ToolkitSprite) null;
             }
             var5 = SocketConnector.a((byte) -126, var3);
             if (var5 == null) {
@@ -73,8 +73,8 @@ final class il {
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 9; var2_int++) {
-            if (null != nt.field_m[var2_int] &&
-              !qr.field_b.field_x.a(eb.field_b, nt.field_m[var2_int], -1, param1, 176400)) {
+            if (null != TimedSceneEffect.field_m[var2_int] &&
+              !qr.field_b.field_x.a(eb.field_b, TimedSceneEffect.field_m[var2_int], -1, param1, 176400)) {
               return false;
             }
           }
@@ -84,8 +84,8 @@ final class il {
           var4 = 0;
           var2_intLifetime1 = var4;
           while (var4 < 9) {
-            if (nt.field_m[var4] != null &&
-              !qr.field_b.field_r.a(eb.field_b, nt.field_m[var4], -1, param1, 176400)) {
+            if (TimedSceneEffect.field_m[var4] != null &&
+              !qr.field_b.field_r.a(eb.field_b, TimedSceneEffect.field_m[var4], -1, param1, 176400)) {
               return false;
             }
             var4++;
@@ -107,7 +107,7 @@ final class il {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 26238) {
           field_a = 82;
@@ -117,7 +117,7 @@ final class il {
     final static void a(byte param0, String param1) {
         System.out.println("Error: " + HardwareGraphicsToolkit.a("%0a", param1, "\n", true));
         if (param0 < 4) {
-          il.a(81);
+          il.releaseStatics(81);
         }
     }
 

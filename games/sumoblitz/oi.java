@@ -5,7 +5,7 @@ final class oi {
     static qr field_a;
     static IntrusiveDeque field_b;
     static String field_c;
-    static ri field_d;
+    static SpriteData field_d;
 
     final static boolean a(byte param0) {
         if (param0 != -64) {
@@ -14,7 +14,7 @@ final class oi {
         return pg.field_a;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_c = null;
           field_b = null;
@@ -33,31 +33,31 @@ final class oi {
         if (wd.field_f != null) {
           wd.field_f.e();
           if (param0 == -27864) {
-            if (null == iv.field_a) {
+            if (null == LegacyOpenGlEffectManager.field_a) {
               return;
             }
-            iv.field_a.e();
+            LegacyOpenGlEffectManager.field_a.e();
             return;
           }
-          field_d = (ri) null;
-          if (null != iv.field_a) {
-            iv.field_a.e();
+          field_d = (SpriteData) null;
+          if (null != LegacyOpenGlEffectManager.field_a) {
+            LegacyOpenGlEffectManager.field_a.e();
             return;
           }
           return;
         }
         if (param0 != -27864) {
-          field_d = (ri) null;
-          if (null == iv.field_a) {
+          field_d = (SpriteData) null;
+          if (null == LegacyOpenGlEffectManager.field_a) {
             return;
           }
-          iv.field_a.e();
+          LegacyOpenGlEffectManager.field_a.e();
           return;
         }
-        if (null == iv.field_a) {
+        if (null == LegacyOpenGlEffectManager.field_a) {
           return;
         }
-        iv.field_a.e();
+        LegacyOpenGlEffectManager.field_a.e();
     }
 
     static {

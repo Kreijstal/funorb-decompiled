@@ -4,7 +4,7 @@
 final class rl extends IntrusiveNode {
     int field_u;
     static int field_k;
-    static ri[] field_l;
+    static SpriteData[] field_l;
     static int field_n;
     int field_t;
     int field_p;
@@ -12,13 +12,13 @@ final class rl extends IntrusiveNode {
     int field_r;
     int field_s;
     static int field_q;
-    static ri field_o;
+    static SpriteData field_o;
     int field_m;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 != 480) {
-          rl.a(99);
+          rl.releaseStatics(99);
           field_l = null;
           return;
         }

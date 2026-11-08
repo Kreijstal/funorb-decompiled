@@ -4,32 +4,32 @@
 abstract class PcmStream extends IntrusiveNode {
     int field_k;
     PcmStream field_m;
-    rr field_l;
-    volatile boolean field_n;
+    AbstractAudioSample sample;
+    volatile boolean active;
 
-    abstract PcmStream c();
+    abstract PcmStream nextSubstream();
 
-    abstract int d();
+    abstract int activityWeight();
 
-    abstract PcmStream a();
+    abstract PcmStream firstSubstream();
 
-    abstract void b(int[] param0, int param1, int param2);
+    abstract void mixInto(int[] param0, int param1, int param2);
 
-    final void a(int[] param0, int param1, int param2) {
-        if (this.field_n) {
-          this.b(param0, param1, param2);
+    final void mixOrSkip(int[] param0, int param1, int param2) {
+        if (this.active) {
+          this.mixInto(param0, param1, param2);
         } else {
-          this.a(param2);
+          this.skip(param2);
         }
     }
 
-    int b() {
+    int priority() {
         return 255;
     }
 
-    abstract void a(int param0);
+    abstract void skip(int param0);
 
     protected PcmStream() {
-        this.field_n = true;
+        this.active = true;
     }
 }

@@ -52,7 +52,7 @@ final class k {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 28322) {
           startGameText = (String) null;
           startGameText = null;

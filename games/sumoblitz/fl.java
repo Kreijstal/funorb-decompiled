@@ -8,9 +8,9 @@ final class fl extends gm {
     static int field_n;
     static byte[][] field_o;
     private sm[] field_q;
-    static ri[] field_r;
+    static SpriteData[] field_r;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         if (param0 != 0) {
           waitingForExtraDataText = (String) null;

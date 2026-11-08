@@ -120,7 +120,7 @@ final class is {
         throw new Error();
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         if (param0) {
           String var2 = (String) null;

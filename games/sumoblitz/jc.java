@@ -53,7 +53,7 @@ final class jc extends na {
         super(param0);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         goBackText = null;
         int var1 = 5 % ((param0 + 18) / 53);
     }

@@ -5,7 +5,7 @@ final class df {
     boolean field_b;
     String field_c;
     String field_a;
-    static ri field_d;
+    static SpriteData field_d;
 
     final static int a(byte param0) {
         if (param0 <= 97) {
@@ -15,10 +15,10 @@ final class df {
         return kj.field_e;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         if (param0) {
-          field_d = (ri) null;
+          field_d = (SpriteData) null;
         }
     }
 

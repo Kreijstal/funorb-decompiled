@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm extends hr {
+final class cm extends ToolkitSprite {
     private int field_c;
     private int field_h;
     private int field_a;
     private f field_d;
-    private fr field_j;
+    private LegacyOpenGlGraphicsToolkit field_j;
     f field_g;
     private boolean field_e;
     private int field_f;
     private int field_i;
     static String levelCompleteText;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         levelCompleteText = null;
         if (param0 != 0) {
-          cm.b(-59);
+          cm.releaseStatics(-59);
         }
     }
 
@@ -279,7 +279,7 @@ final class cm extends hr {
         jaggl.OpenGL.glEnd();
     }
 
-    cm(fr param0, int param1, int param2, int[] param3, int param4, int param5) {
+    cm(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
         this.field_e = false;
         this.field_h = 0;
         this.field_a = 0;

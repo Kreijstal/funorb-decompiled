@@ -80,7 +80,7 @@ final class ws {
         return is.field_b;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -71) {
           field_b = -48;
           toKeepFullscreenOrText = null;

@@ -4,7 +4,7 @@
 abstract class ShaderEffect {
     static String enterTheNameYouText;
     static boolean field_d;
-    static ri field_c;
+    static SpriteData field_c;
     HardwareGraphicsToolkit field_b;
 
     void b(int param0) {
@@ -19,7 +19,7 @@ abstract class ShaderEffect {
           if (!param0) {
             return;
           }
-          ShaderEffect.c(106);
+          ShaderEffect.releaseStatics(106);
           return;
         }
         var1 = wd.field_e;
@@ -27,17 +27,17 @@ abstract class ShaderEffect {
           wd.field_e = null;
         }
         if (param0) {
-          ShaderEffect.c(106);
+          ShaderEffect.releaseStatics(106);
         }
     }
 
     abstract void a(int param0, int param1, int param2);
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         enterTheNameYouText = null;
         if (param0 >= -99) {
-          field_c = (ri) null;
+          field_c = (SpriteData) null;
         }
     }
 
@@ -86,7 +86,7 @@ abstract class ShaderEffect {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -9267) {
-            ShaderEffect.c(38);
+            ShaderEffect.releaseStatics(38);
           }
           if (param1 == lf.field_e) {
             stackIn_4_0 = 7681;
@@ -172,7 +172,7 @@ abstract class ShaderEffect {
 
     void b(boolean param0) {
         if (param0) {
-          field_c = (ri) null;
+          field_c = (SpriteData) null;
         }
     }
 

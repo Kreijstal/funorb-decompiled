@@ -3,21 +3,21 @@
  */
 final class rc extends bp implements ef {
     static int field_j;
-    static qp[] field_l;
-    static ri field_i;
+    static PcmSample[] field_l;
+    static SpriteData field_i;
     static IntrusiveDeque field_m;
     static int field_k;
 
     public final void a(int param0) {
         if (param0 != 8905) {
-          field_i = (ri) null;
+          field_i = (SpriteData) null;
           super.a(param0 ^ 0);
           return;
         }
         super.a(param0 ^ 0);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 115) {
           return;
         }
@@ -57,7 +57,7 @@ final class rc extends bp implements ef {
           var7 = 0;
           var5_intLifetime1 = var7;
           while (var7 < 6) {
-            jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, this.e(19), param1, param1, 0, te.a(-21339, this.field_c), this.field_e.field_Ec, param3[var7], 0);
+            jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, this.e(19), param1, param1, 0, IntrusiveNodeHashTable.a(-21339, this.field_c), this.field_e.field_Ec, param3[var7], 0);
             var7++;
           }
           return;
@@ -111,6 +111,6 @@ final class rc extends bp implements ef {
     }
 
     static {
-        field_l = new qp[38];
+        field_l = new PcmSample[38];
     }
 }

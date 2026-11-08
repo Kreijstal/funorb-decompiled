@@ -7,7 +7,7 @@ final class un {
     static String playerNameText;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         playerNameText = null;
         field_a = null;
         field_b = null;

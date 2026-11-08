@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb extends ak {
+final class bb extends MenuScreen {
     static int field_l;
     static long field_j;
     private int field_k;
     static int[] field_i;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 31) {
           return;
         }
@@ -21,9 +21,9 @@ final class bb extends ak {
         GraphicsToolkit var6_ref_ha = null;
         int var6 = 0;
         int var7 = 0;
-        hr[] var8 = null;
+        ToolkitSprite[] var8 = null;
         int var9 = 0;
-        hr[] stackIn_6_0 = null;
+        ToolkitSprite[] stackIn_6_0 = null;
         int stackIn_12_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -34,8 +34,8 @@ final class bb extends ak {
           wo.a(up.field_c, 490, -20 - MouseWheelInput.field_b.c() / 2 + 290, param0 << 24, 3, param1, MouseWheelInput.field_b.c() + 100, -5, 1, true);
           be.field_t.a(bw.reassignPowerupsText, 5023231 | param0 << 24, -1, 60, 320, 0);
           hc.field_e.a(bw.reassignPowerupsText, -1, -1, 60, 320, 0);
-          gt.field_db.a(200, 5023231 | param0 << 24, 0, 300, 170, (int[]) null, (hr[]) null, 75, -1, 0, 0, param2 - 6432, wh.clickToAssignPointsText, (aa) null, 1, 0);
-          bq.field_c.a(200, -1, 0, 300, 170, (int[]) null, (hr[]) null, 75, -1, 0, 0, param2 ^ 11104, wh.clickToAssignPointsText, (aa) null, 1, 0);
+          gt.field_db.a(200, 5023231 | param0 << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, param2 - 6432, wh.clickToAssignPointsText, (aa) null, 1, 0);
+          LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, param2 ^ 11104, wh.clickToAssignPointsText, (aa) null, 1, 0);
           qv.field_k.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(oc.d(param2 ^ -19334) - ok.field_k)}, (byte) -128).toUpperCase(), 5023231 | param0 << 24, -1, 180, 320, 0);
           uq.field_a.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(oc.d(param2 + 19434) - ok.field_k)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
           var4_int = 140;
@@ -59,9 +59,9 @@ final class bb extends ak {
             qv.field_k.a(UpgradeStatNames.names[var5].toUpperCase(), param0 << 24 | 5023231, -1, 225, var4_int + 51, 0);
             uq.field_a.a(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, 55 + (var4_int - 4), param2 ^ -2355);
             if (var6 == 0) {
-              ud.field_q[var5].a(55 + var4_int - (ud.field_q[var5].b() >> 1), 200 + (ud.field_q[var5].d() >> 1), 1, 0, 2);
+              MusicCrossfadeStream.field_q[var5].a(55 + var4_int - (MusicCrossfadeStream.field_q[var5].b() >> 1), 200 + (MusicCrossfadeStream.field_q[var5].d() >> 1), 1, 0, 2);
             } else {
-              ud.field_q[15 + var5].a(55 + var4_int - (ud.field_q[var5].b() >> 1), (ud.field_q[var5].d() >> 1) + 200, 1, 0, 2);
+              MusicCrossfadeStream.field_q[15 + var5].a(55 + var4_int - (MusicCrossfadeStream.field_q[var5].b() >> 1), (MusicCrossfadeStream.field_q[var5].d() >> 1) + 200, 1, 0, 2);
             }
             qv.field_k.a(Integer.toString(c.field_u[var5]), 5023231 | param0 << 24, -16777216, 320, 55 + var4_int, 0);
             uq.field_a.a(Integer.toString(c.field_u[var5]), -1, -16777216, 320, 55 + var4_int, param2 ^ -2355);

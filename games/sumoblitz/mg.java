@@ -8,33 +8,33 @@ final class mg extends Sprite {
         int var10Lifetime2;
         param0 = param0 + this.field_v;
         param1 = param1 + this.field_A;
-        int var4 = param0 + param1 * lk.field_b;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_b;
         int var5 = 0;
         int var6 = this.field_u;
         int var7 = this.field_x;
-        int var8 = lk.field_b - var7;
+        int var8 = SoftwareRasterizer.field_b - var7;
         int var9 = 0;
-        if (param1 < lk.field_i) {
-          var10 = lk.field_i - param1;
+        if (param1 < SoftwareRasterizer.field_i) {
+          var10 = SoftwareRasterizer.field_i - param1;
           var6 = var6 - var10;
-          param1 = lk.field_i;
+          param1 = SoftwareRasterizer.field_i;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * lk.field_b;
+          var4 = var4 + var10 * SoftwareRasterizer.field_b;
         }
-        if (param1 + var6 > lk.field_e) {
-          var6 = var6 - (param1 + var6 - lk.field_e);
+        if (param1 + var6 > SoftwareRasterizer.field_e) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_e);
         }
-        if (param0 < lk.field_k) {
-          var10Lifetime1 = lk.field_k - param0;
+        if (param0 < SoftwareRasterizer.field_k) {
+          var10Lifetime1 = SoftwareRasterizer.field_k - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = lk.field_k;
+          param0 = SoftwareRasterizer.field_k;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > lk.field_j) {
-          var10Lifetime2 = param0 + var7 - lk.field_j;
+        if (param0 + var7 > SoftwareRasterizer.field_j) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_j;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -43,7 +43,7 @@ final class mg extends Sprite {
           var6 <= 0) {
           return;
         }
-        mg.b(0, 0, 0, lk.field_a, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        mg.b(0, 0, 0, SoftwareRasterizer.field_a, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -134,33 +134,33 @@ final class mg extends Sprite {
         var4 = this.field_u >> 1;
         param0 = param0 + this.field_v / 2;
         param1 = param1 + this.field_A / 2;
-        if (param0 >= lk.field_k) {
+        if (param0 >= SoftwareRasterizer.field_k) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = lk.field_k - param0 << 1;
+          stackIn_3_0 = SoftwareRasterizer.field_k - param0 << 1;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= lk.field_j) {
+        if (param0 + var3 <= SoftwareRasterizer.field_j) {
           stackIn_6_0 = this.field_x - 2;
         } else {
-          stackIn_6_0 = (lk.field_j - param0 << 1) - 2;
+          stackIn_6_0 = (SoftwareRasterizer.field_j - param0 << 1) - 2;
         }
         var6 = stackIn_6_0;
-        if (param1 >= lk.field_i) {
+        if (param1 >= SoftwareRasterizer.field_i) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = lk.field_i - param1 << 1;
+          stackIn_9_0 = SoftwareRasterizer.field_i - param1 << 1;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= lk.field_e) {
+        if (param1 + var4 <= SoftwareRasterizer.field_e) {
           stackIn_12_0 = this.field_u - 2;
         } else {
-          stackIn_12_0 = (lk.field_e - param1 << 1) - 2;
+          stackIn_12_0 = (SoftwareRasterizer.field_e - param1 << 1) - 2;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 2) {
           var10 = var9 * this.field_x + var5;
-          var11 = (param1 + (var9 >> 1)) * lk.field_b + (param0 + (var5 >> 1));
+          var11 = (param1 + (var9 >> 1)) * SoftwareRasterizer.field_b + (param0 + (var5 >> 1));
           var12 = var5;
           while (var12 <= var6) {
             var13 = 0;
@@ -189,8 +189,8 @@ final class mg extends Sprite {
               var16 = var16 / var18 << 8;
               var19Lifetime1 = var18 >> 2;
               var20 = 256 - var19Lifetime1;
-              var21 = lk.field_a[var11];
-              lk.field_a[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
+              var21 = SoftwareRasterizer.field_a[var11];
+              SoftwareRasterizer.field_a[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
             }
             var12 += 2;
             var11++;
@@ -205,33 +205,33 @@ final class mg extends Sprite {
         int var9Lifetime2;
         param0 = param0 + this.field_v;
         param1 = param1 + this.field_A;
-        int var3 = param0 + param1 * lk.field_b;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_b;
         int var4 = 0;
         int var5 = this.field_u;
         int var6 = this.field_x;
-        int var7 = lk.field_b - var6;
+        int var7 = SoftwareRasterizer.field_b - var6;
         int var8 = 0;
-        if (param1 < lk.field_i) {
-          var9 = lk.field_i - param1;
+        if (param1 < SoftwareRasterizer.field_i) {
+          var9 = SoftwareRasterizer.field_i - param1;
           var5 = var5 - var9;
-          param1 = lk.field_i;
+          param1 = SoftwareRasterizer.field_i;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * lk.field_b;
+          var3 = var3 + var9 * SoftwareRasterizer.field_b;
         }
-        if (param1 + var5 > lk.field_e) {
-          var5 = var5 - (param1 + var5 - lk.field_e);
+        if (param1 + var5 > SoftwareRasterizer.field_e) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_e);
         }
-        if (param0 < lk.field_k) {
-          var9Lifetime1 = lk.field_k - param0;
+        if (param0 < SoftwareRasterizer.field_k) {
+          var9Lifetime1 = SoftwareRasterizer.field_k - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = lk.field_k;
+          param0 = SoftwareRasterizer.field_k;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > lk.field_j) {
-          var9Lifetime2 = param0 + var6 - lk.field_j;
+        if (param0 + var6 > SoftwareRasterizer.field_j) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_j;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -240,7 +240,7 @@ final class mg extends Sprite {
           var5 <= 0) {
           return;
         }
-        mg.c(lk.field_a, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        mg.c(SoftwareRasterizer.field_a, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void c(int param0, int param1) {
@@ -249,33 +249,33 @@ final class mg extends Sprite {
         int var9Lifetime2;
         param0 = param0 + this.field_v;
         param1 = param1 + this.field_A;
-        int var3 = param0 + param1 * lk.field_b;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_b;
         int var4 = 0;
         int var5 = this.field_u;
         int var6 = this.field_x;
-        int var7 = lk.field_b - var6;
+        int var7 = SoftwareRasterizer.field_b - var6;
         int var8 = 0;
-        if (param1 < lk.field_i) {
-          var9 = lk.field_i - param1;
+        if (param1 < SoftwareRasterizer.field_i) {
+          var9 = SoftwareRasterizer.field_i - param1;
           var5 = var5 - var9;
-          param1 = lk.field_i;
+          param1 = SoftwareRasterizer.field_i;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * lk.field_b;
+          var3 = var3 + var9 * SoftwareRasterizer.field_b;
         }
-        if (param1 + var5 > lk.field_e) {
-          var5 = var5 - (param1 + var5 - lk.field_e);
+        if (param1 + var5 > SoftwareRasterizer.field_e) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_e);
         }
-        if (param0 < lk.field_k) {
-          var9Lifetime1 = lk.field_k - param0;
+        if (param0 < SoftwareRasterizer.field_k) {
+          var9Lifetime1 = SoftwareRasterizer.field_k - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = lk.field_k;
+          param0 = SoftwareRasterizer.field_k;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > lk.field_j) {
-          var9Lifetime2 = param0 + var6 - lk.field_j;
+        if (param0 + var6 > SoftwareRasterizer.field_j) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_j;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -284,7 +284,7 @@ final class mg extends Sprite {
           var5 <= 0) {
           return;
         }
-        mg.c(lk.field_a, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        mg.c(SoftwareRasterizer.field_a, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void b(int param0, int param1, int param2) {
@@ -293,33 +293,33 @@ final class mg extends Sprite {
         int var10Lifetime2;
         param0 = param0 + this.field_v;
         param1 = param1 + this.field_A;
-        int var4 = param0 + param1 * lk.field_b;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_b;
         int var5 = 0;
         int var6 = this.field_u;
         int var7 = this.field_x;
-        int var8 = lk.field_b - var7;
+        int var8 = SoftwareRasterizer.field_b - var7;
         int var9 = 0;
-        if (param1 < lk.field_i) {
-          var10 = lk.field_i - param1;
+        if (param1 < SoftwareRasterizer.field_i) {
+          var10 = SoftwareRasterizer.field_i - param1;
           var6 = var6 - var10;
-          param1 = lk.field_i;
+          param1 = SoftwareRasterizer.field_i;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * lk.field_b;
+          var4 = var4 + var10 * SoftwareRasterizer.field_b;
         }
-        if (param1 + var6 > lk.field_e) {
-          var6 = var6 - (param1 + var6 - lk.field_e);
+        if (param1 + var6 > SoftwareRasterizer.field_e) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_e);
         }
-        if (param0 < lk.field_k) {
-          var10Lifetime1 = lk.field_k - param0;
+        if (param0 < SoftwareRasterizer.field_k) {
+          var10Lifetime1 = SoftwareRasterizer.field_k - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = lk.field_k;
+          param0 = SoftwareRasterizer.field_k;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > lk.field_j) {
-          var10Lifetime2 = param0 + var7 - lk.field_j;
+        if (param0 + var7 > SoftwareRasterizer.field_j) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_j;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -328,7 +328,7 @@ final class mg extends Sprite {
           var6 <= 0) {
           return;
         }
-        mg.d(lk.field_a, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        mg.d(SoftwareRasterizer.field_a, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -422,33 +422,33 @@ final class mg extends Sprite {
         int var10Lifetime2;
         param0 = param0 + this.field_v;
         param1 = param1 + this.field_A;
-        int var4 = param0 + param1 * lk.field_b;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_b;
         int var5 = 0;
         int var6 = this.field_u;
         int var7 = this.field_x;
-        int var8 = lk.field_b - var7;
+        int var8 = SoftwareRasterizer.field_b - var7;
         int var9 = 0;
-        if (param1 < lk.field_i) {
-          var10 = lk.field_i - param1;
+        if (param1 < SoftwareRasterizer.field_i) {
+          var10 = SoftwareRasterizer.field_i - param1;
           var6 = var6 - var10;
-          param1 = lk.field_i;
+          param1 = SoftwareRasterizer.field_i;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * lk.field_b;
+          var4 = var4 + var10 * SoftwareRasterizer.field_b;
         }
-        if (param1 + var6 > lk.field_e) {
-          var6 = var6 - (param1 + var6 - lk.field_e);
+        if (param1 + var6 > SoftwareRasterizer.field_e) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_e);
         }
-        if (param0 < lk.field_k) {
-          var10Lifetime1 = lk.field_k - param0;
+        if (param0 < SoftwareRasterizer.field_k) {
+          var10Lifetime1 = SoftwareRasterizer.field_k - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = lk.field_k;
+          param0 = SoftwareRasterizer.field_k;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > lk.field_j) {
-          var10Lifetime2 = param0 + var7 - lk.field_j;
+        if (param0 + var7 > SoftwareRasterizer.field_j) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_j;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -457,6 +457,6 @@ final class mg extends Sprite {
           var6 <= 0) {
           return;
         }
-        mg.c(lk.field_a, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        mg.c(SoftwareRasterizer.field_a, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 }

@@ -3,18 +3,18 @@
  */
 final class bk {
     long field_f;
-    static ri[] field_b;
+    static SpriteData[] field_b;
     GraphicsToolkit field_g;
     static int[] field_e;
     nj field_d;
     private cj field_a;
     java.awt.Canvas field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_b = null;
         if (param0 != 4) {
-          bk.a(-95);
+          bk.releaseStatics(-95);
         }
     }
 

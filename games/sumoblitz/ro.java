@@ -156,7 +156,7 @@ final class ro {
                 var5.field_k[var6] = -5;
               }
             }
-            qr.field_c.a((IntrusiveNode) (var5), (byte) 39);
+            qr.field_c.addLast((IntrusiveNode) (var5), (byte) 39);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -192,7 +192,7 @@ final class ro {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 0) {
           field_c = -79;
@@ -298,7 +298,7 @@ final class ro {
           param0.secondaryPrevious = this.field_e;
           param0.secondaryNext = this.field_e.secondaryNext;
           if (param1 != -4) {
-            ro.c(-24);
+            ro.releaseStatics(-24);
           }
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;

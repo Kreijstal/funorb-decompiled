@@ -5,7 +5,7 @@ final class wn {
     static int field_a;
     static mp field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 0) {
           wn.a(71, -52, 50);

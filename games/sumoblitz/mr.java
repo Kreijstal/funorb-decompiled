@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mr {
-    static gk[] field_b;
-    static hr[] field_e;
+    static CompactMeshGeometry[] field_b;
+    static ToolkitSprite[] field_e;
     static of field_f;
     private d field_c;
     private sd field_d;
     private HardwareGraphicsToolkit field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_f = null;
         field_e = null;
@@ -117,7 +117,7 @@ final class mr {
           return (ru) (var3);
         }
         if (param0 <= 81) {
-          mr.a((byte) -13);
+          mr.releaseStatics((byte) -13);
           if (!this.field_c.b(-29912, param1)) {
             return null;
           }
@@ -325,7 +325,7 @@ final class mr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -30865) {
-            field_b = (gk[]) null;
+            field_b = (CompactMeshGeometry[]) null;
           }
           var12 = new byte[param10 * (param2 * param8)];
           var11 = var12;

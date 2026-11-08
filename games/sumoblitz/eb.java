@@ -6,7 +6,7 @@ final class eb {
     static ResourceArchive field_f;
     static og field_b;
     private IntrusiveDeque field_e;
-    private fr field_c;
+    private LegacyOpenGlGraphicsToolkit field_c;
     static int[] field_a;
 
     final boolean a(int param0) {
@@ -29,7 +29,7 @@ final class eb {
         return param0 & param1;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         int var1 = -15 / ((param0 + 74) / 44);
         field_a = null;
@@ -43,17 +43,17 @@ final class eb {
         var4 = Sumoblitz.field_L ? 1 : 0;
         var2 = -61 / ((param0 - 13) / 45);
         this.field_d = null;
-        if (this.field_e.a((byte) -78)) {
+        if (this.field_e.isEmpty((byte) -78)) {
           return;
         }
-        var3 = this.field_e.b(86);
-        while (this.field_e.field_e != var3) {
+        var3 = this.field_e.first(86);
+        while (this.field_e.sentinel != var3) {
           ((ve) (var3)).c(50);
           var3 = var3.next;
         }
     }
 
-    eb(fr param0) {
+    eb(LegacyOpenGlGraphicsToolkit param0) {
         this.field_e = new IntrusiveDeque();
         try {
           this.field_c = param0;

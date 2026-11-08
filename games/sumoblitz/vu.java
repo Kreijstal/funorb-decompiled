@@ -136,10 +136,10 @@ final class vu extends ab {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         if (param0 != -69) {
-          vu.a((byte) 1);
+          vu.releaseStatics((byte) 1);
         }
         field_h = null;
         powerupEffectNames = null;

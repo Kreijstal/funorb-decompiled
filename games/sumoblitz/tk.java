@@ -3,7 +3,7 @@
  */
 final class tk {
     int field_d;
-    static ri[] field_c;
+    static SpriteData[] field_c;
     int field_a;
     int[] field_b;
 
@@ -24,10 +24,10 @@ final class tk {
         return 0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 < 68) {
-          field_c = (ri[]) null;
+          field_c = (SpriteData[]) null;
         }
     }
 

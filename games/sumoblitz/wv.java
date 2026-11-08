@@ -6,7 +6,7 @@ final class wv {
 
     final static boolean a(byte param0, char param1) {
         if (param0 > -71) {
-          wv.a(false);
+          wv.releaseStatics(false);
           if (param1 == 160) {
             return true;
           }
@@ -85,7 +85,7 @@ final class wv {
         lf.a(0, 0);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         if (!param0) {
           wv.a((byte) 57, 'U');

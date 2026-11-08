@@ -12,7 +12,7 @@ abstract class SpriteState extends DualLinkNode {
     int field_x;
     int field_w;
     static int field_s;
-    static hr[] field_B;
+    static ToolkitSprite[] field_B;
 
     final static void e(int param0) {
         String var2 = (String) null;
@@ -22,7 +22,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         myHiscoresText = null;
         int var1 = -35 % ((param0 + 7) / 32);

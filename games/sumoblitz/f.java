@@ -3,7 +3,7 @@
  */
 final class f extends us {
     int field_u;
-    static hr[] field_r;
+    static ToolkitSprite[] field_r;
     float field_v;
     static ts field_t;
     static java.awt.Font field_s;
@@ -11,7 +11,7 @@ final class f extends us {
     int field_p;
     static boolean field_w;
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_s = null;
         field_r = null;
         if (param0) {
@@ -22,7 +22,7 @@ final class f extends us {
         field_t = null;
     }
 
-    f(fr param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
+    f(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
         super(param0, param1, 6408, param2, param3, param4, param5, param6, param7, true);
         RuntimeException var9 = null;
         RuntimeException stackIn_7_0 = null;
@@ -62,7 +62,7 @@ final class f extends us {
         }
     }
 
-    f(fr param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
+    f(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
         super(param0, 3553, param1, param4, param5);
         try {
           this.field_u = param2;
@@ -84,7 +84,7 @@ final class f extends us {
         return wt.field_i.b((byte) 126);
     }
 
-    f(fr param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
+    f(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
         super(param0, param1, param2, param3, param4, param5, param6, param7, true);
         RuntimeException var9 = null;
         RuntimeException stackIn_7_0 = null;
@@ -132,7 +132,7 @@ final class f extends us {
         return rb.field_c;
     }
 
-    f(fr param0, int param1, int param2, int param3, int param4, int[] param5) {
+    f(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, 3553, 6408, param3, param4);
         try {
           this.field_p = param2;

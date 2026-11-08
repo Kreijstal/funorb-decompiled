@@ -147,7 +147,7 @@ final class jh extends ie {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_B = null;
         if (param0 == -1) {
           field_z = null;

@@ -26,7 +26,7 @@ final class tl extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        nt var5 = null;
+        TimedSceneEffect var5 = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           if ((this.field_u % 10 <= 5 ||
@@ -34,51 +34,51 @@ final class tl extends IntrusiveNode {
             !this.g(0)) {
             if (0 == this.field_m) {
               if (2 == this.field_n) {
-                ud.field_q[1].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+                MusicCrossfadeStream.field_q[1].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
               } else if (this.field_n == 1) {
-                ud.field_q[0].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+                MusicCrossfadeStream.field_q[0].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
               } else if (this.field_n == 0) {
-                ud.field_q[2].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+                MusicCrossfadeStream.field_q[2].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
               }
             } else if (this.field_n == 2) {
-              ud.field_q[7].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[7].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
             } else if (this.field_n == 1) {
-              ud.field_q[6].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[6].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
             } else if (this.field_n == 0) {
-              ud.field_q[5].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[5].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
             } else if (this.field_n == 3) {
-              ud.field_q[8].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[8].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
             } else if (this.field_n == 4) {
-              ud.field_q[9].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[9].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
             }
           } else {
             if (2 == this.field_n) {
-              ud.field_q[12].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+              MusicCrossfadeStream.field_q[12].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
             } else {
               if (this.field_n != 1) {
                 if (0 == this.field_n) {
-                  ud.field_q[10].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+                  MusicCrossfadeStream.field_q[10].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
                 } else {
                   if (3 != this.field_n) {
                     if (this.field_n == 4) {
-                      ud.field_q[14].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+                      MusicCrossfadeStream.field_q[14].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
                     }
                   } else {
-                    ud.field_q[13].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+                    MusicCrossfadeStream.field_q[13].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
                   }
                 }
               } else {
-                ud.field_q[11].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
+                MusicCrossfadeStream.field_q[11].a((float)(this.field_x >> 8), (float)(this.field_o >> 8), 2048, 0, 1, 0, 2);
               }
             }
           }
-          var5 = (nt) (this.field_r.b(126));
+          var5 = (TimedSceneEffect) (this.field_r.first(126));
           if (param0 > -53) {
             this.g(-26);
           }
           while (var5 != null) {
             var5.a(param1, -127);
-            var5 = (nt) (this.field_r.d((byte) 18));
+            var5 = (TimedSceneEffect) (this.field_r.next((byte) 18));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,7 +147,7 @@ final class tl extends IntrusiveNode {
 
     final void c(int param0) {
         int var3;
-        nt var4;
+        TimedSceneEffect var4;
         var3 = Sumoblitz.field_L ? 1 : 0;
         this.field_o = this.field_o + this.field_p;
         this.field_x = this.field_x + this.field_w;
@@ -195,20 +195,20 @@ final class tl extends IntrusiveNode {
         if (1 == this.field_m && (this.field_w != 0 ||
           this.field_p != 0)) {
           if (0 == this.field_u % 2) {
-            this.field_r.a((IntrusiveNode) (new eq(50, -1024 + (this.field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1024 + (this.field_o + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.d((byte) 105), 1 + this.field_n, true)), (byte) 39);
+            this.field_r.addLast((IntrusiveNode) (new eq(50, -1024 + (this.field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1024 + (this.field_o + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.d((byte) 105), 1 + this.field_n, true)), (byte) 39);
           } else {
-            this.field_r.a((IntrusiveNode) (new eq(50, -1024 + (this.field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.field_o - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, this.d((byte) 65), 1 + this.field_n, false)), (byte) 39);
+            this.field_r.addLast((IntrusiveNode) (new eq(50, -1024 + (this.field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.field_o - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, this.d((byte) 65), 1 + this.field_n, false)), (byte) 39);
           }
         }
         if (param0 != -31255) {
           return;
         }
-        var4 = (nt) (this.field_r.b(param0 ^ -31326));
+        var4 = (TimedSceneEffect) (this.field_r.first(param0 ^ -31326));
         while (var4 != null) {
           if (var4.a(-2567)) {
             var4.unlink(false);
           }
-          var4 = (nt) (this.field_r.d((byte) 18));
+          var4 = (TimedSceneEffect) (this.field_r.next((byte) 18));
         }
         this.field_q = this.field_q - 1;
         this.field_u = this.field_u + 1;
@@ -225,19 +225,19 @@ final class tl extends IntrusiveNode {
         if (param0 > -106) {
           field_v = -85;
         }
-        var3 = (nm) (var2.b((byte) -80));
+        var3 = (nm) (var2.first((byte) -80));
         while (var3 != null) {
           var4 = (var3.field_m << 8) + this.field_l;
           if (wn.a(this.field_o, var4, -117, var3.field_q, this.field_x, var3.field_l) && (3 == var3.field_y ||
             var3.field_y == 6)) {
             return true;
           }
-          var3 = (nm) (var2.b(0));
+          var3 = (nm) (var2.next(0));
         }
         return false;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 42) {
           return;
         }
@@ -252,7 +252,7 @@ final class tl extends IntrusiveNode {
         av.field_C = null;
         er.field_h = null;
         ag.field_d = (byte[][]) null;
-        iv.field_l = null;
+        LegacyOpenGlEffectManager.field_l = null;
         vg.field_k = null;
         we.field_B = null;
     }

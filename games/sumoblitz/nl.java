@@ -6,7 +6,7 @@ class nl extends gm {
     static mp field_n;
     static boolean field_o;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 != 2147483647) {
           field_n = (mp) null;

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends eu implements e {
+final class ja extends eu implements NativeResource {
     long field_nativeid;
 
     private final native void la();
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          pa.a((e) (this), (byte) -37);
+          NativeResourceReaper.a((NativeResource) (this), (byte) -37);
         }
     }
 
@@ -16,7 +16,7 @@ final class ja extends eu implements e {
         this.la();
     }
 
-    public final void w(boolean param0) {
+    public final void disposeNativeResource(boolean param0) {
         this.AA(this.field_nativeid, param0);
     }
 

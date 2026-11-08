@@ -6,20 +6,20 @@ final class tq {
     static vn field_a;
 
     final static void a(int param0, int param1, boolean param2) {
-        if (param1 == mb.field_b) {
+        if (param1 == GameInstructions.field_b) {
           return;
         }
-        mb.field_b = param1;
+        GameInstructions.field_b = param1;
         if (param2) {
-          mp.a(mb.field_b, 124);
-          qv.a(mb.field_b, 4);
+          mp.a(GameInstructions.field_b, 124);
+          qv.a(GameInstructions.field_b, 4);
           if (param0 > -87) {
             field_a = (vn) null;
             return;
           }
           return;
         }
-        gn.a(mb.field_b, true);
+        gn.a(GameInstructions.field_b, true);
         if (param0 > -87) {
           field_a = (vn) null;
           return;
@@ -36,7 +36,7 @@ final class tq {
         jaggl.OpenGL.glEndList();
     }
 
-    tq(fr param0, int param1) {
+    tq(LegacyOpenGlGraphicsToolkit param0, int param1) {
         try {
           this.field_b = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {
@@ -55,7 +55,7 @@ final class tq {
         jaggl.OpenGL.glNewList(this.field_b + param0, param1);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -6) {
           field_a = (vn) null;
           field_a = null;
@@ -86,7 +86,7 @@ final class tq {
           if (param0 == -106) {
             return;
           }
-          tq.a((byte) -12);
+          tq.releaseStatics((byte) -12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

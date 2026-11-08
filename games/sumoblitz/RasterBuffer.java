@@ -12,7 +12,7 @@ abstract class RasterBuffer {
     static String quitText;
     int field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_e = null;
         quitText = null;
@@ -104,7 +104,7 @@ abstract class RasterBuffer {
     }
 
     final void a(int param0) {
-        lk.a(this.field_c, this.field_h, this.field_b);
+        SoftwareRasterizer.a(this.field_c, this.field_h, this.field_b);
         if (param0 != -1) {
           String var3 = (String) null;
           RasterBuffer.a(111, (String) null);

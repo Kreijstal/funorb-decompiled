@@ -13,7 +13,7 @@ final class kl extends jt {
     final static GraphicsToolkit a(int param0, java.awt.Canvas param1, d param2, int param3, int param4) {
         RuntimeException var5 = null;
         GraphicsToolkit stackIn_2_0 = null;
-        qa stackIn_4_0 = null;
+        SoftwareGraphicsToolkit stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -22,7 +22,7 @@ final class kl extends jt {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 == -1) {
-            stackIn_4_0 = new qa(param1, param2, param3, param0);
+            stackIn_4_0 = new SoftwareGraphicsToolkit(param1, param2, param3, param0);
             return (GraphicsToolkit) ((Object) stackIn_4_0);
           }
           stackIn_2_0 = (GraphicsToolkit) null;

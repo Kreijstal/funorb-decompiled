@@ -16,13 +16,13 @@ final class pq extends UiWidget {
     private int field_B;
     private int field_D;
     private Sprite field_E;
-    static ri[] field_F;
+    static SpriteData[] field_F;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_y = null;
         confirmEmailText = null;
         if (param0 != -1346554936) {
-          pq.a(-63);
+          pq.releaseStatics(-63);
         }
         field_F = null;
     }
@@ -99,7 +99,7 @@ final class pq extends UiWidget {
               var6 = Math.sqrt(1.0 - var6);
               var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
             }
-            lk.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            SoftwareRasterizer.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         ClientException.a((byte) -94);
@@ -129,13 +129,13 @@ final class pq extends UiWidget {
           var10 = var6 - var5;
           var11 = 128 + (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0);
           var12 = var11 < 256 ? (var9 * var11 & 16711680 | -16711936 & var11 * var8) >>> 8 : var9 | var8;
-          lk.f(var7, var6, this.field_H, var12);
+          SoftwareRasterizer.f(var7, var6, this.field_H, var12);
           var9Lifetime1 = param0 & 65280;
           var8Lifetime1 = 16711935 & param0;
-          lk.f(-(2 * this.field_H) + var7, var6, this.field_H, var12);
+          SoftwareRasterizer.f(-(2 * this.field_H) + var7, var6, this.field_H, var12);
           var12Lifetime1 = 256 > var11 ? (16711680 & var11 * var9Lifetime1 | var8Lifetime1 * var11 & -16711936) >>> 8 : var8Lifetime1 | var9Lifetime1;
-          lk.f(this.field_H + var7, var6, this.field_H, var12Lifetime1);
-          lk.f(-this.field_H + var7, var6, this.field_H, var12Lifetime1);
+          SoftwareRasterizer.f(this.field_H + var7, var6, this.field_H, var12Lifetime1);
+          SoftwareRasterizer.f(-this.field_H + var7, var6, this.field_H, var12Lifetime1);
         }
         var6Lifetime1 = 21 % ((param1 + 50) / 32);
         ClientException.a((byte) 44);
@@ -163,7 +163,7 @@ final class pq extends UiWidget {
             this.field_J = true;
           }
           ClientException.a((byte) -51);
-          if (param3 + this.field_M.field_x >= lk.field_k) {
+          if (param3 + this.field_M.field_x >= SoftwareRasterizer.field_k) {
             jq.a(param2 + 6905, this.field_E);
             param0.a(-this.field_A, 0);
             param0.a(this.field_H * 2 - this.field_A, 0);
@@ -171,7 +171,7 @@ final class pq extends UiWidget {
             ClientException.a((byte) -105);
             this.field_E.a(param3, param1);
           }
-          if (lk.field_j >= -this.field_M.field_x + var5_int) {
+          if (SoftwareRasterizer.field_j >= -this.field_M.field_x + var5_int) {
             jq.a(7161, this.field_E);
             for (var7 = this.field_A + this.field_q - this.field_M.field_x; this.field_H * 2 < var7; var7 = var7 - this.field_H * 2) {
             }

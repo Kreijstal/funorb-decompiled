@@ -31,14 +31,14 @@ final class hn extends kb implements fk {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_k = null;
         if (!param0) {
           field_j = -101;
         }
     }
 
-    hn(fr param0, int param1, byte[] param2, int param3, boolean param4) {
+    hn(LegacyOpenGlGraphicsToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
         super(param0, 34962, param2, param3, param4);
     }
 

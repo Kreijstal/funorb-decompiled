@@ -6,7 +6,7 @@ final class je extends da {
     private int[] field_i;
     private int[] field_f;
     private int[] field_c;
-    private qa field_g;
+    private SoftwareGraphicsToolkit field_g;
     private int[] field_h;
     private int[] field_d;
 
@@ -430,7 +430,7 @@ final class je extends da {
         }
     }
 
-    je(qa param0, ta param1, ri[] param2, int[] param3, int[] param4) {
+    je(SoftwareGraphicsToolkit param0, ta param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_g = param0;

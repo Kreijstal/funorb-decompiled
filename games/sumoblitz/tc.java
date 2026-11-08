@@ -3,8 +3,8 @@
  */
 final class tc extends na {
     private dh field_e;
-    static hr[] field_j;
-    static ri field_i;
+    static ToolkitSprite[] field_j;
+    static SpriteData field_i;
     static ck field_g;
     private dh field_h;
     static String field_f;
@@ -110,7 +110,7 @@ final class tc extends na {
             return stackIn_9_0;
           }
           if (param0 != 26) {
-            field_j = (hr[]) null;
+            field_j = (ToolkitSprite[]) null;
           }
           stackIn_13_0 = qe.field_a;
           return stackIn_13_0;
@@ -192,7 +192,7 @@ final class tc extends na {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_j = null;
         if (param0 != -1) {

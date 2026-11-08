@@ -34,11 +34,11 @@ final class sj {
         try {
           var1_int = hh.field_f;
           if (param0 < 118) {
-            sj.a(false);
+            sj.releaseStatics(false);
           }
           var2 = 0;
           if (cl.field_s == 2) {
-            var3_long = wq.a(-124) - iv.field_f;
+            var3_long = wq.a(-124) - LegacyOpenGlEffectManager.field_f;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -126,7 +126,7 @@ final class sj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         if (!param0) {
           sj.a(-105, -2, -5);

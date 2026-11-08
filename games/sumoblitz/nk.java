@@ -12,7 +12,7 @@ final class nk {
     static int field_b;
     static int[] field_d;
 
-    public static void c() {
+    public static void releaseStatics() {
         field_d = null;
         field_f = null;
         field_g = null;
@@ -28,10 +28,10 @@ final class nk {
         if (field_d.length < field_c) {
           field_d = new int[hn.a(false, field_c)];
         }
-        int var4 = param1 * lk.field_b + param0;
+        int var4 = param1 * SoftwareRasterizer.field_b + param0;
         for (var5 = 0; var5 < field_c; var5++) {
           field_d[var5] = var4;
-          var4 = var4 + lk.field_b;
+          var4 = var4 + SoftwareRasterizer.field_b;
         }
     }
 
@@ -41,7 +41,7 @@ final class nk {
     }
 
     final static void b() {
-        nk.a(lk.field_k, lk.field_i, lk.field_j, lk.field_e);
+        nk.a(SoftwareRasterizer.field_k, SoftwareRasterizer.field_i, SoftwareRasterizer.field_j, SoftwareRasterizer.field_e);
     }
 
     static {

@@ -6,7 +6,7 @@ import java.util.*;
 final class qw {
     static int field_b;
     static String passwordsMustBeBetweenText;
-    static hr[] field_a;
+    static ToolkitSprite[] field_a;
 
     final static boolean a(int param0, char param1) {
         boolean stackIn_28_0 = false;
@@ -80,7 +80,7 @@ final class qw {
         return stackIn_50_0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 > -116) {
           return;

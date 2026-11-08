@@ -207,11 +207,11 @@ class jb extends se {
                 }
               }
               if (decompiledFrameRemainder0) {
-                kw.field_c = uu.field_l;
+                kw.field_c = MusicVoice.field_l;
                 gu.field_d = -1;
               }
             }
-            if (kw.field_c == uu.field_l &&
+            if (kw.field_c == MusicVoice.field_l &&
               lt.a((byte) 119)) {
               lb.field_a = ig.field_a.a((byte) 114);
               ku.field_j = ig.field_a.e(-31302);
@@ -266,7 +266,7 @@ class jb extends se {
                 }
               } else {
                 try {
-                  tw.a(-111, ra.c(2), "zap", new Object[]{td.a(-29275, lb.field_a)});
+                  tw.a(-111, ra.c(2), "zap", new Object[]{MusicPatch.a(-29275, lb.field_a)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

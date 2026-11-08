@@ -7,7 +7,7 @@ final class jl {
     static uw field_a;
     private pv field_c;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 786336) {
           field_a = (uw) null;
         }
@@ -67,13 +67,13 @@ final class jl {
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = (km) (dk.field_a.b(111));
+          var4 = (km) (dk.field_a.first(111));
           if (!param1) {
             field_a = (uw) null;
           }
           while (var4 != null) {
             iu.a(-1, var4, param0);
-            var4 = (km) (dk.field_a.d((byte) 18));
+            var4 = (km) (dk.field_a.next((byte) 18));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class jl {
               if (param1) {
                 return;
               }
-              param0.getAppletContext().showDocument(td.a((byte) 125, param0, var2), "_top");
+              param0.getAppletContext().showDocument(MusicPatch.a((byte) 125, param0, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

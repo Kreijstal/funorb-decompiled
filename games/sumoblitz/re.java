@@ -75,7 +75,7 @@ final class re {
         return re.a(var4);
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_h = (float[][]) null;
         field_f = (int[][]) null;
     }

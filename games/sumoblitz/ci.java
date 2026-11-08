@@ -4,17 +4,17 @@
 final class ci {
     private DualLinkNode[] field_a;
     static int[] field_e;
-    static ri[] field_g;
+    static SpriteData[] field_g;
     private DualLinkNode field_c;
     private int field_f;
     private long field_d;
     static int[] field_b;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_g = null;
         if (param0 != 8192) {
-          ci.b(-5);
+          ci.releaseStatics(-5);
           field_e = null;
           return;
         }

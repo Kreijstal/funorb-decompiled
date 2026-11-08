@@ -67,7 +67,7 @@ final class gn {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         pleaseEnterYourAgeText = null;
         if (!param0) {
           byte[] var2 = (byte[]) null;

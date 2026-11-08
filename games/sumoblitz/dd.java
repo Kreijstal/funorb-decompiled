@@ -17,7 +17,7 @@ final class dd extends hf implements ai {
     private wp field_P;
 
     private final wp g(byte param0) {
-        if (null != gk.field_o) {
+        if (null != CompactMeshGeometry.field_o) {
           return this.field_T;
         }
         if (SecondaryNodeDequeIterator.field_b != null && SecondaryNodeDequeIterator.field_b.field_g &&
@@ -185,7 +185,7 @@ final class dd extends hf implements ai {
             var6_int = var5_ref_String__.length - 1;
             for (var7_int = 0; var7_int < this.field_Z.length; var7_int++) {
               var8 = this.field_Z[var7_int];
-              if (null != gk.field_o &&
+              if (null != CompactMeshGeometry.field_o &&
                 var8.field_a == SecondaryNodeDequeIterator.field_b.field_s &&
                 var8.field_g == SecondaryNodeDequeIterator.field_b.field_c) {
                 var6_int = var7_int;
@@ -194,7 +194,7 @@ final class dd extends hf implements ai {
             }
             this.field_ab = new ld(var5_ref_String__, var6_int, 150);
             this.field_ab.a(-103, this.field_T.field_r + this.field_U.field_r, -19 + (this.field_T.field_p + this.field_U.field_v + this.field_T.field_v), 18, 126);
-            this.field_y.a(this.field_ab, -10295);
+            this.field_y.addFirst(this.field_ab, -10295);
           }
           this.field_P = this.a(-73, (qm) (this), jh.backText);
           var5Lifetime1 = this.field_P.field_r + this.field_P.field_q / 2;
@@ -313,15 +313,15 @@ final class dd extends hf implements ai {
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = (lt) (em.field_d.b(-75));
+          var4 = (lt) (em.field_d.first(-75));
           while (var4 != null) {
             cl.a((byte) -97, var4, param1);
-            var4 = (lt) (em.field_d.d((byte) 18));
+            var4 = (lt) (em.field_d.next((byte) 18));
           }
-          var5 = (qv) (ak.field_b.b(109));
+          var5 = (qv) (MenuScreen.field_b.first(109));
           while (var5 != null) {
             ss.a(param1, 1000, var5);
-            var5 = (qv) (ak.field_b.d((byte) 18));
+            var5 = (qv) (MenuScreen.field_b.next((byte) 18));
           }
           if (param0 != 28778) {
             dd.a(-77, -57);

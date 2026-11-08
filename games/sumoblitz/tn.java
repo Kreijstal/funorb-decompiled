@@ -250,7 +250,7 @@ final class tn extends jb {
         GameApplet.field_l = param1;
         ab.field_c = 2147483647;
         oc.field_f = -2147483648;
-        qu.field_k = 2147483647;
+        GameplaySession.field_k = 2147483647;
         se.field_d = 0;
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gi extends bq {
+final class gi extends LegacyOpenGlEffect {
     private ch field_e;
     private pr field_l;
     static qr field_g;
@@ -41,7 +41,7 @@ final class gi extends bq {
         return true;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 8192) {
           field_g = null;
           field_k = null;
@@ -153,7 +153,7 @@ final class gi extends bq {
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
-    gi(fr param0, ch param1) {
+    gi(LegacyOpenGlGraphicsToolkit param0, ch param1) {
         super(param0);
         try {
           this.field_e = param1;
@@ -232,7 +232,7 @@ final class gi extends bq {
         dm.field_e = param0;
         tm.field_d = param1;
         if (param2 > -75) {
-          gi.c(48);
+          gi.releaseStatics(48);
         }
     }
 

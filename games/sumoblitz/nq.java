@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nq extends na {
-    static ik field_h;
+    static GraphicsToolkitManager field_h;
     private dh field_e;
     static int field_i;
     static eg field_g;

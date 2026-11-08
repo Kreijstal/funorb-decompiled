@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lg extends qt {
-    static qp[][][] field_d;
+    static PcmSample[][][] field_d;
     static int field_c;
 
     final static boolean a(int param0, int param1, int param2) {
@@ -21,7 +21,7 @@ final class lg extends qt {
         int var4 = 0;
         GraphicsToolkit var5 = null;
         int var6 = 0;
-        hr[] var7 = null;
+        ToolkitSprite[] var7 = null;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -65,13 +65,13 @@ final class lg extends qt {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 544) {
           field_c = 80;
-          field_d = (qp[][][]) null;
+          field_d = (PcmSample[][][]) null;
           return;
         }
-        field_d = (qp[][][]) null;
+        field_d = (PcmSample[][][]) null;
     }
 
     final void c(int param0) {
@@ -79,7 +79,7 @@ final class lg extends qt {
         int var2 = (-70 + ko.field_p) / 300;
         int var3Lifetime1;
         if (param0 <= 0) {
-          field_d = (qp[][][]) null;
+          field_d = (PcmSample[][][]) null;
           var3 = (pi.field_e - 200) / 100;
           this.field_a = var2 + var3 * 2;
           if ((-70 + ko.field_p) % 300 <= 200) {
@@ -216,7 +216,7 @@ final class lg extends qt {
     }
 
     static {
-        field_d = new qp[6][3][];
+        field_d = new PcmSample[6][3][];
         field_c = 0;
     }
 }

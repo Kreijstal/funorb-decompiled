@@ -5,8 +5,8 @@ final class uc {
     static ts field_d;
     static int field_f;
     static int[] field_b;
-    static hr[] field_e;
-    static hr field_a;
+    static ToolkitSprite[] field_e;
+    static ToolkitSprite field_a;
     static int[] field_c;
 
     final static long b(int param0) {
@@ -43,7 +43,7 @@ final class uc {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         int var1 = 98 % ((param0 + 76) / 49);

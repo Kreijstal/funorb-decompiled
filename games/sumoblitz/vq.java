@@ -163,7 +163,7 @@ final class vq extends WidgetContainer implements oe, ai {
         gm var1 = new gm(jm.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.field_s, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(gs.youNeedToChooseText, var1, (qm) null);
         this.field_C = new wp(tf.field_a, (qm) null);
-        this.field_A = new wp(te.field_h, (qm) null);
+        this.field_A = new wp(IntrusiveNodeHashTable.field_h, (qm) null);
         this.field_B.field_t = ShaderEffect.enterTheNameYouText;
         this.field_B.a((byte) 127, new ou(this.field_B));
         this.field_C.field_x = false;

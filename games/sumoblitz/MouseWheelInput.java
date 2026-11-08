@@ -4,12 +4,12 @@
 abstract class MouseWheelInput {
     static vn field_a;
     static String field_c;
-    static hr field_b;
+    static ToolkitSprite field_b;
     private static String field_z;
 
     abstract void a(java.awt.Component param0, byte param1);
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;

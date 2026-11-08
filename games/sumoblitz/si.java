@@ -6,8 +6,8 @@ import java.io.*;
 final class si extends nn {
     private java.nio.ByteBuffer field_b;
     static int field_c;
-    static hr field_e;
-    static hr field_d;
+    static ToolkitSprite field_e;
+    static ToolkitSprite field_d;
 
     final static int c(int param0, int param1) {
         int var2;
@@ -146,7 +146,7 @@ final class si extends nn {
         return var6Lifetime1;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -2 / ((param0 - 65) / 43);
         field_d = null;
         field_e = null;
@@ -161,7 +161,7 @@ final class si extends nn {
           za.field_l[param5] = param2;
           nj.field_d[param5] = param6;
           DualLinkNode.field_k[param5] = param0;
-          rh.field_s[param5] = param1;
+          MidiNoteMixer.field_s[param5] = param1;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "si.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }

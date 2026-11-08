@@ -105,7 +105,7 @@ class wp extends UiWidget {
         this.field_x = true;
     }
 
-    final static f a(fr param0, int param1, int param2, byte[] param3, boolean param4, int param5, int param6, int param7) {
+    final static f a(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, byte[] param3, boolean param4, int param5, int param6, int param7) {
         RuntimeException var8 = null;
         f stackIn_7_0 = null;
         f stackIn_10_0 = null;
@@ -118,7 +118,7 @@ class wp extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param6 <= 105) {
-            wp.a((byte) 46);
+            wp.releaseStatics((byte) 46);
           }
           if (!param0.field_Cc && (!rm.a(param2, -105) ||
             !rm.a(param1, -103))) {
@@ -275,7 +275,7 @@ class wp extends UiWidget {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_z = null;
         returnToMainMenuText = null;
         int var1 = 124 % ((param0 + 16) / 53);

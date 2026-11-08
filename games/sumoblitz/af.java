@@ -4,7 +4,7 @@
 final class af extends ka {
     static int field_c;
 
-    af(qa param0) {
+    af(SoftwareGraphicsToolkit param0) {
     }
 
     static {

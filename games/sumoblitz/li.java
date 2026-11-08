@@ -60,7 +60,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 118) {
           return;
         }

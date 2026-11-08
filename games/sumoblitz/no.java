@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class no {
-    static ri field_c;
+    static SpriteData field_c;
     static IntrusiveDeque field_d;
     static cv field_a;
     static String[] field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 10) {
           return;
         }
@@ -26,7 +26,7 @@ final class no {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -126) {
-            no.a(-92);
+            no.releaseStatics(-92);
           }
           stackIn_3_0 = uv.a(10, param1, true, (byte) -84);
           return stackIn_3_0;

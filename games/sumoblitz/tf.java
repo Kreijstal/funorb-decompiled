@@ -8,7 +8,7 @@ final class tf {
         if (param1 == -2626) {
           return 0 != (2048 & param2) ? true : false;
         }
-        tf.a((byte) -118);
+        tf.releaseStatics((byte) -118);
         return 0 != (2048 & param2) ? true : false;
     }
 
@@ -56,7 +56,7 @@ final class tf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 17) {
           tf.a(-5, -49, 114);

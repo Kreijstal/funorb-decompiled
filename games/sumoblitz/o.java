@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class o {
-    static hr[] field_b;
+    static ToolkitSprite[] field_b;
     static String field_a;
 
     final static void a(int param0) {
@@ -149,7 +149,7 @@ final class o {
             bb.field_i[var3] = var19;
           }
           if (param0 != -56) {
-            field_b = (hr[]) null;
+            field_b = (ToolkitSprite[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

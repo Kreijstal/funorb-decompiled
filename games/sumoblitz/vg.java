@@ -42,14 +42,14 @@ final class vg implements mh {
           if (param3) {
             var7 = 16777215;
           }
-          lk.d(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_e);
+          SoftwareRasterizer.d(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_e);
           var8 = this.field_h + param4 + param0.field_r;
           var9 = this.field_g + param0.field_v + param1;
-          lk.f(var8, var9, this.field_c, this.field_j, param2);
-          lk.d(var8, var9, this.field_c, this.field_j, var7);
+          SoftwareRasterizer.f(var8, var9, this.field_c, this.field_j, param2);
+          SoftwareRasterizer.d(var8, var9, this.field_c, this.field_j, var7);
           if (var11.field_C) {
-            lk.e(var8, var9, var8 + this.field_c, var9 + this.field_j, 1);
-            lk.e(this.field_c + var8, var9, var8, this.field_j + var9, 1);
+            SoftwareRasterizer.e(var8, var9, var8 + this.field_c, var9 + this.field_j, 1);
+            SoftwareRasterizer.e(this.field_c + var8, var9, var8, this.field_j + var9, 1);
           }
           if (null != this.field_m) {
             var10 = this.field_c - (-this.field_h - this.field_l);
@@ -70,10 +70,10 @@ final class vg implements mh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_k = null;
         if (param0) {
-          vg.a(false);
+          vg.releaseStatics(false);
         }
     }
 

@@ -7,7 +7,7 @@ abstract class hq {
     static String loadingSoundEffectsText;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         loadingSoundEffectsText = null;
         resizableText = null;
         int var1 = -20 / ((param0 + 13) / 39);

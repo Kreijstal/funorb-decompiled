@@ -34,7 +34,7 @@ final class ql extends rw {
         return 100;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 32) {
           field_B = 49;
           field_z = null;

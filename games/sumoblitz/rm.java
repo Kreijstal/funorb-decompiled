@@ -3,22 +3,22 @@
  */
 final class rm {
     final static void a(byte param0) {
-        if (0 - gi.field_i == td.field_u) {
+        if (0 - gi.field_i == MusicPatch.field_u) {
           if (param0 > 42) {
-            td.field_u = td.field_u + 1;
+            MusicPatch.field_u = MusicPatch.field_u + 1;
             return;
           }
           return;
         }
-        if (250 - gi.field_i != td.field_u) {
+        if (250 - gi.field_i != MusicPatch.field_u) {
           if (param0 > 42) {
-            td.field_u = td.field_u + 1;
+            MusicPatch.field_u = MusicPatch.field_u + 1;
             return;
           }
           return;
         }
         if (param0 > 42) {
-          td.field_u = td.field_u + 1;
+          MusicPatch.field_u = MusicPatch.field_u + 1;
           return;
         }
     }

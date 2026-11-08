@@ -4,12 +4,12 @@
 abstract class ve extends IntrusiveNode {
     private boolean field_n;
     static String waitingForMusicText;
-    fr field_m;
-    static ri field_k;
+    LegacyOpenGlGraphicsToolkit field_m;
+    static SpriteData field_k;
 
     final boolean a(int param0) {
         if (param0 < 106) {
-          this.field_m = (fr) null;
+          this.field_m = (LegacyOpenGlGraphicsToolkit) null;
           return this.field_n;
         }
         return this.field_n;
@@ -66,7 +66,7 @@ abstract class ve extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         int var1 = 106 / ((param0 - 71) / 40);
         waitingForMusicText = null;
@@ -82,7 +82,7 @@ abstract class ve extends IntrusiveNode {
         return ng.a(param3, param0 ^ -11778, param1, param2, param4, false);
     }
 
-    ve(fr param0) {
+    ve(LegacyOpenGlGraphicsToolkit param0) {
         try {
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {

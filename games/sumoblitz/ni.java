@@ -3,7 +3,7 @@
  */
 final class ni extends ShaderEffect {
     static String field_g;
-    static ri[] field_h;
+    static SpriteData[] field_h;
     static String field_f;
     static IntrusiveDeque field_e;
 
@@ -87,2486 +87,2486 @@ final class ni extends ShaderEffect {
                 ce.field_q = param1;
                 var2 = rc.a("loginm3", (byte) -23);
                 if (var2 != null) {
-                  ar.connectionTimedOutPleaseText = uu.a(0, var2);
+                  ar.connectionTimedOutPleaseText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("loginm2", (byte) -23);
                 if (var2 != null) {
-                  nd.errorConnectingToServerText = uu.a(0, var2);
+                  nd.errorConnectingToServerText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("loginm1", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("idlemessage20min", (byte) -23);
                 if (var2 != null) {
-                  ab.weClosedTheConnectionText = uu.a(param0 - 7, var2);
+                  ab.weClosedTheConnectionText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("error_js5crc", (byte) -23);
                 if (null != var2) {
-                  o.field_a = uu.a(param0 ^ 7, var2);
+                  o.field_a = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("error_js5io", (byte) -23);
                 if (null != var2) {
-                  eg.field_n = uu.a(0, var2);
+                  eg.field_n = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("error_js5connect_full", (byte) -23);
                 if (var2 != null) {
-                  bn.dataServerFullOrText = uu.a(param0 - 7, var2);
+                  bn.dataServerFullOrText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("error_js5connect", (byte) -23);
                 if (null != var2) {
-                  ao.unableToConnectToText = uu.a(0, var2);
+                  ao.unableToConnectToText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_gameupdated", (byte) -23);
                 if (var2 != null) {
-                  s.thisGameHasBeenText = uu.a(0, var2);
+                  s.thisGameHasBeenText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_unable", (byte) -23);
                 if (null != var2) {
-                  qk.unfortunatelyWeAreUnableText = uu.a(0, var2);
+                  qk.unfortunatelyWeAreUnableText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_ineligible", (byte) -23);
                 if (null != var2) {
-                  rn.unfortunatelyYouAreNotText = uu.a(param0 ^ 7, var2);
+                  rn.unfortunatelyYouAreNotText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("usernameprompt", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("passwordprompt", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("andagainprompt", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ticketing_read", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ticketing_ignore", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ticketing_oneunread", (byte) -23);
                 if (var2 != null) {
-                  kq.youHave1UnreadText = uu.a(0, var2);
+                  kq.youHave1UnreadText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ticketing_xunread", (byte) -23);
                 if (var2 != null) {
-                  ph.youHaveUnreadMessagesText = uu.a(0, var2);
+                  ph.youHaveUnreadMessagesText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ticketing_gotowebsite", (byte) -23);
                 if (null != var2) {
-                  lv.visitTheAccountManagementText = uu.a(0, var2);
+                  lv.visitTheAccountManagementText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ticketing_waitingformessages", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_on", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mu_chat_friends", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mu_chat_off", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_lobby", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_public", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_ignore", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_tips", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mu_chat_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mu_chat_private", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_x_entered_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_x_joined_your_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_x_entered_other_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_x_left_lobby", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mu_x_lost_con", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_x_cannot_join_full", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mu_x_cannot_join_inprogress", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_x_declined_invite", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_x_withdrew_request", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_x_removed", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mu_x_dropped_out", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_entered_other_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mu_game_is_full", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mu_game_has_started", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mu_you_declined_invite", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_invite_withdrawn", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_request_declined", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_request_withdrawn", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_all_players_have_left", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_lobby_name", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_lobby_rating", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_lobby_friend_add", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mu_lobby_friend_rm", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_lobby_name_add", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_lobby_name_rm", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_lobby_location", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_gamelist_all_games", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_gamelist_status", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_gamelist_owner", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mu_gamelist_players", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_gamelist_avg_rating", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_gamelist_options", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_gamelist_elapsed_time", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_play_rated", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mu_create_unrated", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_options", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_options_whocanjoin", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_options_players", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_options_dontmind", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mu_options_allow_spectate", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_options_ratedgametype", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("yes", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("no", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_invite_players", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("close", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("add_x_to_friends", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("add_x_to_ignore", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("rm_x_from_friends", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rm_x_from_ignore", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("send_pm_to_x", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("send_qc_to_x", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("send_pm", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("invite_accept_xs_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("invite_decline_xs_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("join_xs_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("join_request_xs_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("join_withdraw_request_xs_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_gameopt_kick_x_from_this_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mu_gameopt_withdraw_invite_to_x", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_gameopt_accept_x_into_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_gameopt_reject_x_from_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mu_gameopt_invite_x_to_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("report_x_for_abuse", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("unable_to_send_message_password_a", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unable_to_send_message_password_b", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_lobby_show_all", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_lobby_friends_only", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_lobby_friends", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_lobby_hide", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_game_show_all", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_game_friends_only", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_game_friends", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_game_hide", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_pm_show_all", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mu_chat_pm_friends_only", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mu_chat_pm_friends", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mu_chat_invisible_and_silent_mode", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("you_have_been_removed_from_xs_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("your_rating_is_x", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("you_are_on_x_server", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("rated_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unrated_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("rated_game_tips", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("searching_for_opponent_singular", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("searching_for_opponents_plural", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("find_opponent_singular", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("find_opponents_plural", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rated_game_tips_setup_singular", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("rated_game_tips_setup_plural", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waiting_to_start_hint", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("your_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("game_full", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("join_requests_one", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("join_requests_many", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("xs_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waiting_for_x_to_start_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("game_options_changed", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("players_x_of_y", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("message_lobby", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_lobby", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("message_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("message_team", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("quickchat_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("kick", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("inviting_x", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("x_wants_to_join", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("accept", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reject", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("invite", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("status_concluded", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("status_spectate", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("status_playing", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("status_join", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("status_private", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("status_full", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("players_in_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("you_are_invited_to_xs_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("asking_to_join_xs_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("who_can_join", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("you_can_join", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("you_can_ask_to_join", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("you_cannot_join_in_progress", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("you_can_spectate", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("you_can_not_spectate", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("spectate_xs_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("hide_players_in_xs_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("show_players_in_xs_game", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("connecting_to_friend_server_twoline", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("loading", (byte) -23);
                 if (null != var2) {
-                  li.loadingText = uu.a(0, var2);
+                  li.loadingText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("offline", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("multiconst_invite_only", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("multiconst_clan", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("multiconst_friends", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("multiconst_similar_rating", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("multiconst_open", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("no_options_available", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reportabuse", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("presstabtochat", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("pressf10toquickchat", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("dob_chatdisabled", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("dob_enterforchat", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("tab_hidechattemporarily", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("esc_cancelprivatemessage", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("esc_cancelthisline", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("privatequickchat_from_x", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("privatequickchat_to_x", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("privatechat_blankarea_explanation", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("publicchat_unavailable_ratedgame", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("privatechat_friend_offline", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("privatechat_friend_notlisted", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("chatviewscrolledup", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("thisisrunescapeclan", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("thisisrunescapeclan_notowner", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("runescapeclan", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rated_membersonly", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("gameopt_membersonly", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_1moreratedgame", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("gameopt_moreratedgames", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_needrating", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_unratedonly", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_notunlocked", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("gameopt_cannotbecombined1", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_cannotbecombined2", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_playernotmember", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_younotmember", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_playerneedsrating", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_youneedrating", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_playerneedsratedgames", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_youneedratedgames", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("gameopt_playerneeds1ratedgame", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("gameopt_youneed1ratedgame", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_playerhasntunlocked", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_youhaventunlocked", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_trychanging1", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_trychanging2", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_needchanging1", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_needchanging2", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_mightchange", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_playersdontqualify", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("gameopt_playersdontqualify_selectgametab", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_unselectedoptions", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_pleaseselectoption1", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_pleaseselectoption2", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_badnumplayers", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_inviteplayers_or_trychanging1", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_inviteplayers_or_trychanging2", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("gameopt_novalidcombos", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameopt_pleasetrychanging", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ra_title", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("ra_mutethisplayer", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ra_suggestmute", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ra_intro", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ra_intro_no_name", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ra_explanation", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_pillar_0", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_0_0", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_0_1", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_0_2", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_0_3", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_0_4", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("rule_0_5", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_pillar_1", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_1_0", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_1_1", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_1_2", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_1_3", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_1_4", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_pillar_2", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_2_0", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rule_2_1", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("rule_2_2", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("createafreeaccount", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("cancel", (byte) -23);
                 if (var2 != null) {
-                  te.field_h = uu.a(0, var2);
+                  IntrusiveNodeHashTable.field_h = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("pleaselogintoplay", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("pleaselogin", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("pleaselogin_member", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("invaliduserorpass", (byte) -23);
                 if (null != var2) {
-                  ih.field_b = uu.a(param0 - 7, var2);
+                  ih.field_b = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("pleasetryagain", (byte) -23);
                 if (null != var2) {
-                  se.pleaseTryAgainInText = uu.a(param0 - 7, var2);
+                  se.pleaseTryAgainInText = MusicVoice.a(param0 - 7, var2);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
                 var2 = rc.a("pleasereenterpass", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("playfreeversion", (byte) -23);
                 if (var2 != null) {
-                  ch.playFreeVersionText = uu.a(0, var2);
+                  ch.playFreeVersionText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reloadgame", (byte) -23);
                 if (var2 != null) {
-                  vf.reloadGameText = uu.a(param0 - 7, var2);
+                  vf.reloadGameText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("toserverlist", (byte) -23);
                 if (null != var2) {
-                  lq.toServerListText = uu.a(0, var2);
+                  lq.toServerListText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("tocustomersupport", (byte) -23);
                 if (null != var2) {
-                  eq.toCustomerSupportText = uu.a(param0 - 7, var2);
+                  eq.toCustomerSupportText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("changedisplayname", (byte) -23);
                 if (null != var2) {
-                  pl.changeDisplayNameText = uu.a(param0 ^ 7, var2);
+                  pl.changeDisplayNameText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("returntohomepage", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("justplay", (byte) -23);
                 if (null != var2) {
-                  tm.field_b = uu.a(0, var2);
+                  tm.field_b = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("justplay_excl", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("login", (byte) -23);
                 if (var2 != null) {
-                  ma.logInText = uu.a(0, var2);
+                  ma.logInText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("goback", (byte) -23);
                 if (var2 != null) {
-                  jc.goBackText = uu.a(0, var2);
+                  jc.goBackText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("otheroptions", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("proceed", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("connectingtoserver", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("pleasewait", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("logging_in", (byte) -23);
                 if (null != var2) {
-                  us.loggingInText = uu.a(0, var2);
+                  us.loggingInText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("backtoerror", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("pleasecheckinternet", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("attemptingtoreconnect", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("connectionlost_reconnecting", (byte) -23);
                 if (null != var2) {
-                  qe.connectionLostAttemptingToText = uu.a(0, var2);
+                  qe.connectionLostAttemptingToText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("connectionlost_withreason", (byte) -23);
                 if (null != var2) {
-                  hh.connectionLostText = uu.a(0, var2);
+                  hh.connectionLostText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("passwordverificationrequired", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("invalidpass", (byte) -23);
                 if (null != var2) {
-                  RasterBuffer.invalidPasswordText = uu.a(param0 - 7, var2);
+                  RasterBuffer.invalidPasswordText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("retry", (byte) -23);
                 if (var2 != null) {
-                  ii.retryText = uu.a(0, var2);
+                  ii.retryText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("back", (byte) -23);
                 if (var2 != null) {
-                  cq.backText = uu.a(0, var2);
+                  FullscreenCanvas.backText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("exitfullscreenmode", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quittowebsite", (byte) -23);
                 if (null != var2) {
-                  of.quitToWebsiteText = uu.a(0, var2);
+                  of.quitToWebsiteText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("connectionrestored", (byte) -23);
                 if (var2 != null) {
-                  ImageProducerRasterBuffer.connectionRestoredText = uu.a(0, var2);
+                  ImageProducerRasterBuffer.connectionRestoredText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("warning_ifyouquit", (byte) -23);
                 if (null != var2) {
-                  rv.warningIfYouQuitText = uu.a(0, var2);
+                  rv.warningIfYouQuitText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("warning_ifyouquitorleavepage", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("resubscribe_withoutlosing_fs", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("resubscribe_withoutlosing", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("customersupport_withoutlosing_fs", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("customersupport_withoutlosing", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("js5help_withoutlosing_fs", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("js5help_withoutlosing", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("checkinternet_withoutlosing_fs", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("checkinternet_withoutlosing", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_intro", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_sameaccounttip_unnamed", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("dateofbirthprompt", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fetchingcountrylist", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("countryprompt", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("countrylisterror", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("theonlypersonalquestions", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_submittingdata", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("check", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_pleasechooseausername", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_usernameblurb", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("checkingavailability", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("checking", (byte) -23);
                 if (null != var2) {
-                  hi.checkingText = uu.a(0, var2);
+                  hi.checkingText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_namealreadytaken", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_sameaccounttip_named", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_nosuggestions", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alternativelygoback", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_available", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_willnowshowtermsandconditions", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fetchingterms", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("termserror", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_iagree", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_idisagree", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_pleasescrolldowntoaccept", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_linkaddress", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("openinpopupwindow", (byte) -23);
                 if (var2 != null) {
-                  sb.openInPopupWindowText = uu.a(0, var2);
+                  sb.openInPopupWindowText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create", (byte) -23);
                 if (null != var2) {
-                  ff.createText = uu.a(0, var2);
+                  ff.createText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_pleasechooseapassword", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_passwordblurb", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_nevergivepassword", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("creatingyouraccount", (byte) -23);
                 if (var2 != null) {
-                  ClientException.creatingYourAccountText = uu.a(0, var2);
+                  ClientException.creatingYourAccountText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_youmustaccept", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_passwordsdifferent", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_success", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("day", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("month", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("year", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("monthnames,0", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[0] = uu.a(0, var2);
+                  lf.monthNames[0] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("monthnames,1", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[1] = uu.a(0, var2);
+                  lf.monthNames[1] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("monthnames,2", (byte) -23);
                 if (var2 != null) {
-                  lf.monthNames[2] = uu.a(0, var2);
+                  lf.monthNames[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("monthnames,3", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[3] = uu.a(jg.a(param0, 7), var2);
+                  lf.monthNames[3] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("monthnames,4", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[4] = uu.a(param0 - 7, var2);
+                  lf.monthNames[4] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("monthnames,5", (byte) -23);
                 if (var2 != null) {
-                  lf.monthNames[5] = uu.a(0, var2);
+                  lf.monthNames[5] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("monthnames,6", (byte) -23);
                 if (var2 != null) {
-                  lf.monthNames[6] = uu.a(0, var2);
+                  lf.monthNames[6] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("monthnames,7", (byte) -23);
                 if (var2 != null) {
-                  lf.monthNames[7] = uu.a(0, var2);
+                  lf.monthNames[7] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("monthnames,8", (byte) -23);
                 if (param0 != 7) {
                   finished = true; return;
                 }
                 if (var2 != null) {
-                  lf.monthNames[8] = uu.a(0, var2);
+                  lf.monthNames[8] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("monthnames,9", (byte) -23);
                 if (var2 != null) {
-                  lf.monthNames[9] = uu.a(jg.a(param0, 7), var2);
+                  lf.monthNames[9] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("monthnames,10", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[10] = uu.a(0, var2);
+                  lf.monthNames[10] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("monthnames,11", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[11] = uu.a(0, var2);
+                  lf.monthNames[11] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_welcome", (byte) -23);
                 if (null != var2) {
-                  qn.creatingAJagexAccountText = uu.a(0, var2);
+                  qn.creatingAJagexAccountText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_u13_welcome", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_createanaccount", (byte) -23);
                 if (null != var2) {
-                  IntrusiveNode.createAFreeAccountText = uu.a(param0 ^ 7, var2);
+                  IntrusiveNode.createAFreeAccountText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_username", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_displayname", (byte) -23);
                 if (var2 != null) {
-                  un.playerNameText = uu.a(0, var2);
+                  un.playerNameText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_password", (byte) -23);
                 if (var2 != null) {
-                  pi.passwordText = uu.a(param0 - 7, var2);
+                  pi.passwordText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_password_confirm", (byte) -23);
                 if (var2 != null) {
-                  ht.confirmPasswordText = uu.a(0, var2);
+                  ht.confirmPasswordText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_email", (byte) -23);
                 if (null != var2) {
-                  ks.emailLoginText = uu.a(0, var2);
+                  ks.emailLoginText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_email_confirm", (byte) -23);
                 if (null != var2) {
-                  pq.confirmEmailText = uu.a(0, var2);
+                  pq.confirmEmailText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_age", (byte) -23);
                 if (var2 != null) {
-                  fm.ageText = uu.a(0, var2);
+                  fm.ageText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_u13_email", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_u13_email_confirm", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_dob", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_country", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alternatives_header", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alternatives_select", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_suggestions", (byte) -23);
                 if (null != var2) {
-                  NodeHashTableIterator.suggestedNamesText = uu.a(0, var2);
+                  NodeHashTableIterator.suggestedNamesText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_more_suggestions", (byte) -23);
                 if (var2 != null) {
-                  BufferedSocket.moreSuggestionsText = uu.a(0, var2);
+                  BufferedSocket.moreSuggestionsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_select_alternative", (byte) -23);
                 if (null != var2) {
-                  ji.useThisAlternativeAsText = uu.a(0, var2);
+                  ji.useThisAlternativeAsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_optin_news", (byte) -23);
                 if (null != var2) {
-                  lv.pleaseSendMeNewsText = uu.a(0, var2);
+                  lv.pleaseSendMeNewsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_agreeterms", (byte) -23);
                 if (var2 != null) {
-                  cn.byClickingCreateYouText = uu.a(0, var2);
+                  cn.byClickingCreateYouText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_u13terms", (byte) -23);
                 if (null != var2) {
-                  qv.asYouAreUnderText = uu.a(param0 - 7, var2);
+                  qv.asYouAreUnderText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("login_username_email", (byte) -23);
                 if (null != var2) {
-                  OpenGlEnvironmentWaterEffect.loginText = uu.a(0, var2);
+                  OpenGlEnvironmentWaterEffect.loginText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_username", (byte) -23);
                 if (null != var2) {
-                  ph.usernameText = uu.a(0, var2);
+                  ph.usernameText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_email", (byte) -23);
                 if (null != var2) {
-                  ow.emailText = uu.a(0, var2);
+                  ow.emailText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_username_tooltip", (byte) -23);
                 if (var2 != null) {
-                  cn.theAccountNameYouText = uu.a(0, var2);
+                  cn.theAccountNameYouText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_password_tooltip", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_login_tooltip", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_create_tooltip", (byte) -23);
                 if (var2 != null) {
-                  aj.createYourOwnFreeText = uu.a(0, var2);
+                  aj.createYourOwnFreeText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_justplay_tooltip", (byte) -23);
                 if (null != var2) {
-                  hg.playTheGameWithoutText = uu.a(0, var2);
+                  hg.playTheGameWithoutText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_back_tooltip", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_no_displayname", (byte) -23);
                 if (null != var2) {
-                  gs.youNeedToChooseText = uu.a(0, var2);
+                  gs.youNeedToChooseText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_username_tooltip", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_username_hint", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_displayname_tooltip", (byte) -23);
                 if (var2 != null) {
-                  ShaderEffect.enterTheNameYouText = uu.a(0, var2);
+                  ShaderEffect.enterTheNameYouText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_displayname_hint", (byte) -23);
                 if (null != var2) {
-                  oq.playerNamesCanBeText = uu.a(0, var2);
+                  oq.playerNamesCanBeText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_password_tooltip", (byte) -23);
                 if (null != var2) {
-                  pl.enterAPasswordForText = uu.a(0, var2);
+                  pl.enterAPasswordForText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_password_hint", (byte) -23);
                 if (null != var2) {
-                  qw.passwordsMustBeBetweenText = uu.a(0, var2);
+                  qw.passwordsMustBeBetweenText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_password_confirm_tooltip", (byte) -23);
                 if (null != var2) {
-                  tj.typeYourPasswordAgainText = uu.a(0, var2);
+                  InstrumentNoteMask.typeYourPasswordAgainText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_email_tooltip", (byte) -23);
                 if (null != var2) {
-                  pi.yourEmailAddressIsText = uu.a(0, var2);
+                  pi.yourEmailAddressIsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_email_confirm_tooltip", (byte) -23);
                 if (var2 != null) {
-                  kn.typeYourEmailAddressText = uu.a(param0 - 7, var2);
+                  kn.typeYourEmailAddressText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_age_tooltip", (byte) -23);
                 if (null != var2) {
-                  dc.typeYourAgeInText = uu.a(0, var2);
+                  dc.typeYourAgeInText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_optin_news_tooltip", (byte) -23);
                 if (var2 != null) {
-                  gr.updatesWillSentToText = uu.a(0, var2);
+                  gr.updatesWillSentToText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_u13_email_tooltip", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_u13_email_confirm_tooltip", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_dob_tooltip", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_country_tooltip", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_optin_tooltip", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_continue", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_username_unavailable", (byte) -23);
                 if (null != var2) {
-                  au.field_e = uu.a(param0 - 7, var2);
+                  au.field_e = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_username_available", (byte) -23);
                 if (null != var2) {
-                  ck.nameIsAvailableText = uu.a(param0 ^ 7, var2);
+                  ck.nameIsAvailableText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_alert_namelength", (byte) -23);
                 if (null != var2) {
-                  qq.namesShouldContainAText = uu.a(param0 ^ 7, var2);
+                  qq.namesShouldContainAText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_alert_namechars", (byte) -23);
                 if (null != var2) {
-                  fu.namesCanOnlyContainText = uu.a(param0 - 7, var2);
+                  fu.namesCanOnlyContainText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_alert_nameleadingspace", (byte) -23);
                 if (null != var2) {
-                  m.namesCannotStartOrText = uu.a(param0 ^ 7, var2);
+                  m.namesCannotStartOrText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_alert_doublespace", (byte) -23);
                 if (var2 != null) {
-                  ma.namesCannotContainConsecutiveText = uu.a(0, var2);
+                  ma.namesCannotContainConsecutiveText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passchars", (byte) -23);
                 if (var2 != null) {
-                  ur.passwordsCanOnlyContainText = uu.a(0, var2);
+                  ur.passwordsCanOnlyContainText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passrepeated", (byte) -23);
                 if (var2 != null) {
-                  mc.thisPasswordContainsRepeatedText = uu.a(0, var2);
+                  mc.thisPasswordContainsRepeatedText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passlength", (byte) -23);
                 if (null != var2) {
-                  sg.passwordsMustBeBetweenText = uu.a(0, var2);
+                  sg.passwordsMustBeBetweenText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passcontainsname", (byte) -23);
                 if (var2 != null) {
-                  vr.thisPasswordContainsYourText = uu.a(param0 ^ 7, var2);
+                  vr.thisPasswordContainsYourText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_alert_passcontainsemail", (byte) -23);
                 if (var2 != null) {
-                  pc.thisPasswordContainsYourText = uu.a(0, var2);
+                  pc.thisPasswordContainsYourText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passcontainsname_partial", (byte) -23);
                 if (var2 != null) {
-                  mm.thisPasswordIsPartText = uu.a(param0 - 7, var2);
+                  mm.thisPasswordIsPartText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("create_alert_checkname", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_invalidemail", (byte) -23);
                 if (null != var2) {
-                  aj.pleaseCheckIfAddressText = uu.a(0, var2);
+                  aj.pleaseCheckIfAddressText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_email_unavailable", (byte) -23);
                 if (var2 != null) {
-                  oj.emailAddressIsUnavailableText = uu.a(param0 ^ 7, var2);
+                  oj.emailAddressIsUnavailableText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_alert_invaliddate", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_invalidage", (byte) -23);
                 if (null != var2) {
-                  gn.pleaseEnterYourAgeText = uu.a(0, var2);
+                  gn.pleaseEnterYourAgeText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_yearrange", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_mismatch", (byte) -23);
                 if (var2 != null) {
-                  gq.thisEntryDoesnTText = uu.a(0, var2);
+                  gq.thisEntryDoesnTText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_passwordvalid", (byte) -23);
                 if (var2 != null) {
-                  ka.passwordIsValidText = uu.a(param0 ^ 7, var2);
+                  ka.passwordIsValidText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_emailvalid", (byte) -23);
                 if (var2 != null) {
-                  ProxySocketConnector.emailIsValidText = uu.a(0, var2);
+                  ProxySocketConnector.emailIsValidText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_account_success", (byte) -23);
                 if (null != var2) {
-                  vl.accountCreatedSuccessfullyText = uu.a(0, var2);
+                  vl.accountCreatedSuccessfullyText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("invalid_name", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("cannot_add_yourself", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unable_to_add_friend", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("unable_to_add_ignore", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unable_to_delete_friend", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unable_to_delete_ignore", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("friendlistfull", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("friendlistdupe", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("friendnotfound", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ignorelistfull", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ignorelistdupe", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ignorenotfound", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("removeignorefirst", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("removefriendfirst", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("enterfriend_add", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("enterfriend_del", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("enterignore_add", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("enterignore_del", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("text_removed_from_game", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("text_lobby_pleaselogin_free", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("opengl", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("sse", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("purejava", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_graphics", (byte) -23);
                 if (var2 != null) {
-                  m.waitingForGraphicsText = uu.a(0, var2);
+                  m.waitingForGraphicsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_models", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_fonts", (byte) -23);
                 if (var2 != null) {
-                  ce.waitingForFontsText = uu.a(0, var2);
+                  ce.waitingForFontsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_soundeffects", (byte) -23);
                 if (var2 != null) {
-                  GameClientShell.waitingForSoundEffectsText = uu.a(0, var2);
+                  GameClientShell.waitingForSoundEffectsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_music", (byte) -23);
                 if (null != var2) {
-                  ve.waitingForMusicText = uu.a(0, var2);
+                  ve.waitingForMusicText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_instruments", (byte) -23);
                 if (var2 != null) {
-                  jf.waitingForInstrumentsText = uu.a(0, var2);
+                  jf.waitingForInstrumentsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_levels", (byte) -23);
                 if (var2 != null) {
-                  nm.waitingForLevelsText = uu.a(0, var2);
+                  nm.waitingForLevelsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_extradata", (byte) -23);
                 if (var2 != null) {
-                  fl.waitingForExtraDataText = uu.a(param0 - 7, var2);
+                  fl.waitingForExtraDataText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("waitingfor_languages", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_textures", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_animations", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("loading_graphics", (byte) -23);
                 if (null != var2) {
-                  es.loadingGraphicsText = uu.a(0, var2);
+                  es.loadingGraphicsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("loading_models", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("loading_fonts", (byte) -23);
                 if (null != var2) {
-                  ow.loadingFontsText = uu.a(0, var2);
+                  ow.loadingFontsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("loading_soundeffects", (byte) -23);
                 if (var2 != null) {
-                  hq.loadingSoundEffectsText = uu.a(0, var2);
+                  hq.loadingSoundEffectsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("loading_music", (byte) -23);
                 if (var2 != null) {
-                  gt.loadingMusicText = uu.a(param0 ^ 7, var2);
+                  gt.loadingMusicText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("loading_instruments", (byte) -23);
                 if (var2 != null) {
-                  sg.loadingInstrumentsText = uu.a(0, var2);
+                  sg.loadingInstrumentsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("loading_levels", (byte) -23);
                 if (null != var2) {
-                  b.loadingLevelsText = uu.a(0, var2);
+                  b.loadingLevelsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("loading_extradata", (byte) -23);
                 if (null != var2) {
-                  rd.loadingExtraDataText = uu.a(param0 - 7, var2);
+                  rd.loadingExtraDataText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("loading_languages", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("loading_textures", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("loading_animations", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unpacking_graphics", (byte) -23);
                 if (null != var2) {
-                  kn.unpackingGraphicsText = uu.a(0, var2);
+                  kn.unpackingGraphicsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unpacking_models", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unpacking_soundeffects", (byte) -23);
                 if (var2 != null) {
-                  hv.unpackingSoundEffectsText = uu.a(0, var2);
+                  hv.unpackingSoundEffectsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unpacking_music", (byte) -23);
                 if (null != var2) {
-                  ClientException.unpackingMusicText = uu.a(param0 - 7, var2);
+                  ClientException.unpackingMusicText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("unpacking_levels", (byte) -23);
                 if (null != var2) {
-                  om.unpackingLevelsText = uu.a(0, var2);
+                  om.unpackingLevelsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unpacking_languages", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unpacking_animations", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unpacking_toolkit", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("instructions", (byte) -23);
                 if (null != var2) {
-                  cp.instructionsText = uu.a(0, var2);
+                  cp.instructionsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("tutorial", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("playtutorial", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("sound_colon", (byte) -23);
                 if (null != var2) {
-                  ff.soundText = uu.a(0, var2);
+                  ff.soundText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("music_colon", (byte) -23);
                 if (var2 != null) {
-                  gu.musicText = uu.a(param0 - 7, var2);
+                  gu.musicText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("fullscreen", (byte) -23);
                 if (null != var2) {
-                  ResourceArchive.field_j = uu.a(param0 - 7, var2);
+                  ResourceArchive.field_j = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("screensize", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("highscores", (byte) -23);
                 if (var2 != null) {
-                  MouseInputHandler.field_a = uu.a(0, var2);
+                  MouseInputHandler.field_a = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rankings", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("achievements", (byte) -23);
                 if (null != var2) {
-                  kf.achievementsText = uu.a(param0 ^ 7, var2);
+                  kf.achievementsText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("achievementsthisgame", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("achievementsthissession", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("watchintroduction", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quit", (byte) -23);
                 if (var2 != null) {
-                  RasterBuffer.quitText = uu.a(0, var2);
+                  RasterBuffer.quitText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_createaccount", (byte) -23);
                 if (var2 != null) {
-                  go.logInCreateAccountText = uu.a(0, var2);
+                  go.logInCreateAccountText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("tohighscores", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("returntomainmenu", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("returntopausemenu", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("returntooptionsmenu_notpaused", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mainmenu", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("pausemenu", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("optionsmenu_notpaused", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("menu", (byte) -23);
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  rf.menuText = uu.a(param0 ^ 7, var2);
+                  rf.menuText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("selectlevel", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("nextlevel", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("startgame", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("newgame", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("resumegame", (byte) -23);
                 if (null != var2) {
-                  ll.resumeGameText = uu.a(0, var2);
+                  ll.resumeGameText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("resumetutorial", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("skip", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("skiptutorial", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("skipending", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("restartlevel", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("endtest", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("endgame", (byte) -23);
                 if (null != var2) {
-                  nj.endGameText = uu.a(0, var2);
+                  nj.endGameText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("endtutorial", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ok", (byte) -23);
                 if (null != var2) {
-                  tf.field_a = uu.a(0, var2);
+                  tf.field_a = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("on", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("off", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("previous", (byte) -23);
                 if (null != var2) {
-                  gk.previousText = uu.a(0, var2);
+                  CompactMeshGeometry.previousText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("prev", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("next", (byte) -23);
                 if (null != var2) {
-                  in.nextText = uu.a(0, var2);
+                  in.nextText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_colon", (byte) -23);
                 if (var2 != null) {
-                  field_g = uu.a(0, var2);
+                  field_g = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("hotseatmultiplayer", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("entermultiplayerlobby", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("singleplayergame", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("returntogame", (byte) -23);
                 if (var2 != null) {
-                  id.returnToGameText = uu.a(0, var2);
+                  id.returnToGameText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("endgameresign", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("offerdraw", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("canceldraw", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("acceptdraw", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("resign", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("returntolobby", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("cont", (byte) -23);
                 if (null != var2) {
-                  wd.continueText = uu.a(0, var2);
+                  wd.continueText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("continue_spectating", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("messages", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_fastest", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("graphics_medium", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("graphics_best", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_directx", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("graphics_opengl", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_java", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_quality_high", (byte) -23);
                 if (null != var2) {
-                  mn.highText = uu.a(0, var2);
+                  mn.highText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_quality_low", (byte) -23);
                 if (null != var2) {
-                  bc.lowText = uu.a(0, var2);
+                  bc.lowText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_mode", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("graphics_quality", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mode", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quality", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("keys", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("objective", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("currentobjective", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("pressescforpausemenu", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("pressescforpausemenuortoskiptutorial", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("pressescforoptionsmenu_doesntpause", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("pressescforoptionsmenu_doesntpause_short", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("powerups", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("latestlevel_suffix", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("unreachedlevel_name", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unreachedlevel_cannotplayreason", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unreachedlevel_cannotplayreason_shorter", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unreachedworld_cannotplayreason", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("memberslevel_name", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("memberslevel_cannotplayreason", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("membersworld_cannotplayreason", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unreachedlevel_createtip", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("unreachedlevel_createtip_line1", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unreachedlevel_createtip_line2", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("unreachedlevel_logintip", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("memberslevel_logintip", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("displayname_none", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("levelxofy1", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("levelxofy2", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("levelxofy", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("ingame_level", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mouseoveranicon", (byte) -23);
                 if (null != var2) {
-                  hk.mouseOverAnIconText = uu.a(param0 - 7, var2);
+                  hk.mouseOverAnIconText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("notyetachieved", (byte) -23);
                 if (var2 != null) {
-                  gi.notYetAchievedText = uu.a(0, var2);
+                  gi.notYetAchievedText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("achieved", (byte) -23);
                 if (null != var2) {
-                  ab.achievedText = uu.a(0, var2);
+                  ab.achievedText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("orbpoints", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("orbcoins", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("orbpoints_colon", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("orbcoins_colon", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("achieved_colon_description", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("secretachievement", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("no_highscores", (byte) -23);
                 if (null != var2) {
-                  ng.noHighscoresText = uu.a(param0 ^ 7, var2);
+                  ng.noHighscoresText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("hs_name", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("hs_level", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("hs_fromlevel", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("hs_tolevel", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("hs_score", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("hs_end", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("ingame_score", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("score_colon", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_leavegame", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mp_offerrematch", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_offerrematch_unrated", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_acceptrematch", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_acceptrematch_unrated", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_cancelrematch", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_cancelrematch_unrated", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mp_rematchnewgame", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_rematchnewgame_unrated", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_x_wantstodraw", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_x_offersrematch", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_x_offersrematch_unrated", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_youofferrematch", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_youofferrematch_unrated", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_youofferdraw", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_youresigned", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mp_youresigned_rematch", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_x_hasresignedandleft", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_x_hasresigned_rematch", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_x_hasresigned", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_x_hasleft", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_x_haswon", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mp_youhavewon", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_gamedrawn", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_timeremaining", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_x_turn", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_yourturn", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("gameover", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_hidechat", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_showchat_nounread", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_showchat_unread1", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mp_showchat_unread2", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("click_to_quickchat", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("autorespond", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("quickchat_help", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_help_title", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,0", (byte) -23);
                 if (null != var2) {
-                  IntrusiveNode.field_j[0] = uu.a(0, var2);
+                  IntrusiveNode.field_j[0] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,1", (byte) -23);
                 if (null != var2) {
-                  IntrusiveNode.field_j[1] = uu.a(0, var2);
+                  IntrusiveNode.field_j[1] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,2", (byte) -23);
                 if (var2 != null) {
-                  IntrusiveNode.field_j[2] = uu.a(0, var2);
+                  IntrusiveNode.field_j[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,3", (byte) -23);
                 if (null != var2) {
-                  IntrusiveNode.field_j[3] = uu.a(jg.a(param0, 7), var2);
+                  IntrusiveNode.field_j[3] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,4", (byte) -23);
                 if (null != var2) {
-                  IntrusiveNode.field_j[4] = uu.a(0, var2);
+                  IntrusiveNode.field_j[4] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,5", (byte) -23);
                 if (null != var2) {
-                  IntrusiveNode.field_j[5] = uu.a(0, var2);
+                  IntrusiveNode.field_j[5] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,0", (byte) -23);
                 if (var2 != null) {
-                  dl.field_h[0] = uu.a(0, var2);
+                  dl.field_h[0] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,1", (byte) -23);
                 if (var2 != null) {
-                  dl.field_h[1] = uu.a(param0 - 7, var2);
+                  dl.field_h[1] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,2", (byte) -23);
                 if (null != var2) {
-                  dl.field_h[2] = uu.a(param0 - 7, var2);
+                  dl.field_h[2] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,3", (byte) -23);
                 if (null != var2) {
-                  dl.field_h[3] = uu.a(0, var2);
+                  dl.field_h[3] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,4", (byte) -23);
                 if (var2 != null) {
-                  dl.field_h[4] = uu.a(0, var2);
+                  dl.field_h[4] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,5", (byte) -23);
                 if (null != var2) {
-                  dl.field_h[5] = uu.a(jg.a(param0, 7), var2);
+                  dl.field_h[5] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("keychar_the_character_under_questionmark", (byte) -23);
                 if (var2 != null) {
@@ -2574,501 +2574,501 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("rating_noratings", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rating_rating", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("rating_played", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("rating_won", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("rating_lost", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("rating_drawn", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("benefits_fullscreen", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("benefits_noadverts", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("benefits_price", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("members_expansion_benefits,0", (byte) -23);
                 if (null != var2) {
-                  mo.membershipBenefitLines[0] = uu.a(0, var2);
+                  mo.membershipBenefitLines[0] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("members_expansion_benefits,1", (byte) -23);
                 if (var2 != null) {
-                  mo.membershipBenefitLines[1] = uu.a(jg.a(param0, 7), var2);
+                  mo.membershipBenefitLines[1] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("members_expansion_benefits,2", (byte) -23);
                 if (null != var2) {
-                  mo.membershipBenefitLines[2] = uu.a(0, var2);
+                  mo.membershipBenefitLines[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("members_expansion_price_top", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("members_expansion_price_bottom", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_lost_seq,0", (byte) -23);
                 if (null != var2) {
-                  fe.field_S[0] = uu.a(0, var2);
+                  fe.field_S[0] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_lost_seq,1", (byte) -23);
                 if (var2 != null) {
-                  fe.field_S[1] = uu.a(0, var2);
+                  fe.field_S[1] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_lost_seq,2", (byte) -23);
                 if (var2 != null) {
-                  fe.field_S[2] = uu.a(0, var2);
+                  fe.field_S[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_lost_seq,3", (byte) -23);
                 if (null != var2) {
-                  fe.field_S[3] = uu.a(0, var2);
+                  fe.field_S[3] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_lost", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_restored", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_please_check", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_wait", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_retry", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("reconnect_resume", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_or", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_exitfs", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_exitfs_quit", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_quit", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_check_fs", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("reconnect_check_nonfs", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("fs_accept_beforeaccept", (byte) -23);
                 if (var2 != null) {
-                  fd.clickText = uu.a(param0 ^ 7, var2);
+                  fd.clickText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("fs_button_accept", (byte) -23);
                 if (var2 != null) {
-                  km.acceptText = uu.a(0, var2);
+                  km.acceptText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_accept_afteraccept", (byte) -23);
                 if (null != var2) {
-                  ws.toKeepFullscreenOrText = uu.a(0, var2);
+                  ws.toKeepFullscreenOrText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_button_cancel", (byte) -23);
                 if (var2 != null) {
-                  up.cancelText = uu.a(0, var2);
+                  up.cancelText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_accept_aftercancel", (byte) -23);
                 if (var2 != null) {
-                  oh.toReturnToTheText = uu.a(param0 ^ 7, var2);
+                  oh.toReturnToTheText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("fs_accept_countdown_sing", (byte) -23);
                 if (null != var2) {
-                  ClientExceptionSupport.ifYouDoNothingText = uu.a(0, var2);
+                  ClientExceptionSupport.ifYouDoNothingText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_accept_countdown_pl", (byte) -23);
                 if (null != var2) {
-                  lq.field_a = uu.a(param0 ^ 7, var2);
+                  lq.field_a = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("fs_nonmember", (byte) -23);
                 if (var2 != null) {
-                  IntrusiveNode.fullscreenPlayIsAnText = uu.a(0, var2);
+                  IntrusiveNode.fullscreenPlayIsAnText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_button_close", (byte) -23);
                 if (null != var2) {
-                  jh.closeText = uu.a(0, var2);
+                  jh.closeText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_button_members", (byte) -23);
                 if (null != var2) {
-                  pp.membersText = uu.a(0, var2);
+                  pp.membersText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_unavailable", (byte) -23);
                 if (var2 != null) {
-                  field_f = uu.a(0, var2);
+                  field_f = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_unavailable_try_signed_applet", (byte) -23);
                 if (var2 != null) {
-                  fr.unfortunatelyYourConfigurationDoesnText = uu.a(0, var2);
+                  LegacyOpenGlGraphicsToolkit.unfortunatelyYourConfigurationDoesnText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_focus", (byte) -23);
                 if (null != var2) {
-                  LimitedRandomAccessFile.field_c = uu.a(0, var2);
+                  LimitedRandomAccessFile.field_c = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_focus_or_resolution", (byte) -23);
                 if (null != var2) {
-                  c.unfortunatelyThereWasAText = uu.a(0, var2);
+                  c.unfortunatelyThereWasAText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_timeout", (byte) -23);
                 if (null != var2) {
-                  ua.fullscreenModeWasCancelledText = uu.a(0, var2);
+                  ua.fullscreenModeWasCancelledText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_button_tryagain", (byte) -23);
                 if (null != var2) {
-                  kq.tryAgainText = uu.a(0, var2);
+                  kq.tryAgainText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_ui_fs_countdown", (byte) -23);
                 if (var2 != null) {
-                  c.ifYouDoNothingText = uu.a(0, var2);
+                  c.ifYouDoNothingText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mb_caption_title", (byte) -23);
                 if (var2 != null) {
-                  uu.a(param0 - 7, var2);
+                  MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mb_including_gamename", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mb_full_access_1", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mb_full_access_2", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mb_achievement_count_1", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mb_achievement_count_2", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mb_exclusive_1", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mb_exclusive_2", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("me_extra_benefits", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("hs_friend_tip", (byte) -23);
                 if (null != var2) {
-                  bv.friendsCanBeAddedText = uu.a(param0 - 7, var2);
+                  bv.friendsCanBeAddedText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("hs_friend_tip_multi", (byte) -23);
                 if (null != var2) {
-                  uu.a(param0 ^ 7, var2);
+                  MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("hs_mode_name,0", (byte) -23);
                 if (null != var2) {
-                  dj.scoreFilterLabels[0] = uu.a(param0 - 7, var2);
+                  dj.scoreFilterLabels[0] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("hs_mode_name,1", (byte) -23);
                 if (null != var2) {
-                  dj.scoreFilterLabels[1] = uu.a(0, var2);
+                  dj.scoreFilterLabels[1] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("hs_mode_name,2", (byte) -23);
                 if (null != var2) {
-                  dj.scoreFilterLabels[2] = uu.a(0, var2);
+                  dj.scoreFilterLabels[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rating_mode_name,0", (byte) -23);
                 if (null != var2) {
-                  cj.leaderboardSortLabels[0] = uu.a(param0 - 7, var2);
+                  cj.leaderboardSortLabels[0] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("rating_mode_name,1", (byte) -23);
                 if (null != var2) {
-                  cj.leaderboardSortLabels[1] = uu.a(0, var2);
+                  cj.leaderboardSortLabels[1] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rating_mode_long_name,0", (byte) -23);
                 if (null != var2) {
-                  NodeHashTableIterator.leaderboardSortStatusLabels[0] = uu.a(jg.a(param0, 7), var2);
+                  NodeHashTableIterator.leaderboardSortStatusLabels[0] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("rating_mode_long_name,1", (byte) -23);
                 if (var2 != null) {
-                  NodeHashTableIterator.leaderboardSortStatusLabels[1] = uu.a(param0 - 7, var2);
+                  NodeHashTableIterator.leaderboardSortStatusLabels[1] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("graphics_config_fixed_size", (byte) -23);
                 if (var2 != null) {
-                  kp.classicText = uu.a(param0 - 7, var2);
+                  kp.classicText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("graphics_config_resizable", (byte) -23);
                 if (var2 != null) {
-                  hq.resizableText = uu.a(param0 - 7, var2);
+                  hq.resizableText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("graphics_config_fullscreen", (byte) -23);
                 if (var2 != null) {
-                  dj.fullScreenText = uu.a(0, var2);
+                  dj.fullScreenText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_config_done", (byte) -23);
                 if (var2 != null) {
-                  jh.backText = uu.a(param0 - 7, var2);
+                  jh.backText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("graphics_config_apply", (byte) -23);
                 if (var2 != null) {
-                  dn.applyText = uu.a(0, var2);
+                  dn.applyText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_config_title", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_config_instruction", (byte) -23);
                 if (var2 != null) {
-                  sl.largeScreenSizesAndText = uu.a(param0 ^ 7, var2);
+                  sl.largeScreenSizesAndText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("graphics_config_need_memory", (byte) -23);
                 if (var2 != null) {
-                  lw.moreMemoryIsRequiredText = uu.a(0, var2);
+                  lw.moreMemoryIsRequiredText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("pleasewait_dotdotdot", (byte) -23);
                 if (null != var2) {
-                  mm.pleaseWaitText = uu.a(0, var2);
+                  mm.pleaseWaitText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("serviceunavailable", (byte) -23);
                 if (null != var2) {
-                  wl.serviceUnavailableText = uu.a(0, var2);
+                  wl.serviceUnavailableText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("createtouse", (byte) -23);
                 if (null != var2) {
-                  tj.createAFreeAccountText = uu.a(0, var2);
+                  InstrumentNoteMask.createAFreeAccountText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("achievementsoffline", (byte) -23);
                 if (null != var2) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("warning", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("DEFAULT_PLAYER_NAME", (byte) -23);
                 if (var2 != null) {
-                  kq.playerText = uu.a(0, var2);
+                  kq.playerText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin1", (byte) -23);
                 if (var2 != null) {
-                  b.youAreNotCurrentlyText = uu.a(param0 ^ 7, var2);
+                  b.youAreNotCurrentlyText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mustlogin2,1", (byte) -23);
                 if (var2 != null) {
-                  pl.field_r[1] = uu.a(0, var2);
+                  pl.field_r[1] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin2,2", (byte) -23);
                 if (null != var2) {
-                  pl.field_r[2] = uu.a(0, var2);
+                  pl.field_r[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin2,3", (byte) -23);
                 if (var2 != null) {
-                  pl.field_r[3] = uu.a(jg.a(param0, 7), var2);
+                  pl.field_r[3] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("mustlogin2,4", (byte) -23);
                 if (var2 != null) {
-                  pl.field_r[4] = uu.a(0, var2);
+                  pl.field_r[4] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin2,5", (byte) -23);
                 if (null != var2) {
-                  pl.field_r[5] = uu.a(0, var2);
+                  pl.field_r[5] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin2,6", (byte) -23);
                 if (null != var2) {
-                  pl.field_r[6] = uu.a(jg.a(param0, 7), var2);
+                  pl.field_r[6] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("mustlogin2,7", (byte) -23);
                 if (var2 != null) {
-                  pl.field_r[7] = uu.a(0, var2);
+                  pl.field_r[7] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin3,1", (byte) -23);
                 if (var2 != null) {
-                  rt.field_G[1] = uu.a(0, var2);
+                  rt.field_G[1] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin3,2", (byte) -23);
                 if (var2 != null) {
-                  rt.field_G[2] = uu.a(0, var2);
+                  rt.field_G[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin3,3", (byte) -23);
                 if (null != var2) {
-                  rt.field_G[3] = uu.a(0, var2);
+                  rt.field_G[3] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin3,4", (byte) -23);
                 if (null != var2) {
-                  rt.field_G[4] = uu.a(0, var2);
+                  rt.field_G[4] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin3,5", (byte) -23);
                 if (null != var2) {
-                  rt.field_G[5] = uu.a(0, var2);
+                  rt.field_G[5] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin3,6", (byte) -23);
                 if (var2 != null) {
-                  rt.field_G[6] = uu.a(param0 - 7, var2);
+                  rt.field_G[6] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mustlogin3,7", (byte) -23);
                 if (var2 != null) {
-                  rt.field_G[7] = uu.a(jg.a(param0, 7), var2);
+                  rt.field_G[7] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("discard", (byte) -23);
                 if (null != var2) {
-                  vp.discardText = uu.a(param0 ^ 7, var2);
+                  vp.discardText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("mustlogin4,1", (byte) -23);
                 if (null != var2) {
-                  kr.field_f[1] = uu.a(jg.a(param0, 7), var2);
+                  kr.field_f[1] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("mustlogin4,2", (byte) -23);
                 if (null != var2) {
-                  kr.field_f[2] = uu.a(0, var2);
+                  kr.field_f[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin4,3", (byte) -23);
                 if (var2 != null) {
-                  kr.field_f[3] = uu.a(0, var2);
+                  kr.field_f[3] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin4,4", (byte) -23);
                 if (var2 != null) {
-                  kr.field_f[4] = uu.a(0, var2);
+                  kr.field_f[4] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin4,5", (byte) -23);
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  kr.field_f[5] = uu.a(0, var2);
+                  kr.field_f[5] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin4,6", (byte) -23);
                 if (var2 != null) {
-                  kr.field_f[6] = uu.a(0, var2);
+                  kr.field_f[6] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin4,7", (byte) -23);
                 if (var2 != null) {
-                  kr.field_f[7] = uu.a(0, var2);
+                  kr.field_f[7] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin_notloggedin", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin_alternate,1", (byte) -23);
                 if (var2 != null) {
-                  ds.field_b[1] = uu.a(0, var2);
+                  ds.field_b[1] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin_alternate,2", (byte) -23);
                 if (var2 != null) {
-                  ds.field_b[2] = uu.a(0, var2);
+                  ds.field_b[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin_alternate,3", (byte) -23);
                 if (null != var2) {
-                  ds.field_b[3] = uu.a(0, var2);
+                  ds.field_b[3] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin_alternate,4", (byte) -23);
                 if (var2 != null) {
-                  ds.field_b[4] = uu.a(0, var2);
+                  ds.field_b[4] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin_alternate,5", (byte) -23);
                 if (null != var2) {
-                  ds.field_b[5] = uu.a(jg.a(param0, 7), var2);
+                  ds.field_b[5] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("mustlogin_alternate,6", (byte) -23);
                 if (null != var2) {
-                  ds.field_b[6] = uu.a(0, var2);
+                  ds.field_b[6] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin_alternate,7", (byte) -23);
                 if (null != var2) {
-                  ds.field_b[7] = uu.a(0, var2);
+                  ds.field_b[7] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,0", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[0] = uu.a(param0 - 7, var2);
+                  fa.field_c[0] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,1", (byte) -23);
                 if (var2 != null) {
-                  fa.field_c[1] = uu.a(param0 - 7, var2);
+                  fa.field_c[1] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,2", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[2] = uu.a(0, var2);
+                  fa.field_c[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,3", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[3] = uu.a(0, var2);
+                  fa.field_c[3] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,4", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[4] = uu.a(0, var2);
+                  fa.field_c[4] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,5", (byte) -23);
                 if (var2 != null) {
-                  fa.field_c[5] = uu.a(0, var2);
+                  fa.field_c[5] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,6", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[6] = uu.a(0, var2);
+                  fa.field_c[6] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,7", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[7] = uu.a(param0 - 7, var2);
+                  fa.field_c[7] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,8", (byte) -23);
                 if (var2 != null) {
-                  fa.field_c[8] = uu.a(0, var2);
+                  fa.field_c[8] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,9", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[9] = uu.a(0, var2);
+                  fa.field_c[9] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,10", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[10] = uu.a(param0 - 7, var2);
+                  fa.field_c[10] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,11", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[11] = uu.a(jg.a(param0, 7), var2);
+                  fa.field_c[11] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,12", (byte) -23);
                 if (var2 != null) {
-                  fa.field_c[12] = uu.a(0, var2);
+                  fa.field_c[12] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("sentence_separator", (byte) -23);
                 if (var2 != null) {
-                  uu.a(0, var2);
+                  MusicVoice.a(0, var2);
                 }
                 ce.field_q = null;
             }

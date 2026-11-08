@@ -6,8 +6,8 @@ import java.io.*;
 final class hh extends IOException {
     static int field_f;
     static nb field_c;
-    static ri[] field_a;
-    static hr[] field_e;
+    static SpriteData[] field_a;
+    static ToolkitSprite[] field_e;
     static String connectionLostText;
     static PcmStreamMixer field_d;
 
@@ -110,7 +110,7 @@ final class hh extends IOException {
         super(param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         connectionLostText = null;
         field_a = null;
         field_d = null;

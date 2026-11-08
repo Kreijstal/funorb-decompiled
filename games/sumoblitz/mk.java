@@ -5,11 +5,11 @@ final class mk {
     static int field_a;
     long field_b;
     static Object field_d;
-    private fr field_c;
+    private LegacyOpenGlGraphicsToolkit field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -25140) {
-          mk.a(-127);
+          mk.releaseStatics(-127);
           field_d = null;
           return;
         }
@@ -21,7 +21,7 @@ final class mk {
         super.finalize();
     }
 
-    mk(fr param0, long param1, int param2) {
+    mk(LegacyOpenGlGraphicsToolkit param0, long param1, int param2) {
         try {
           this.field_c = param0;
           this.field_b = param1;

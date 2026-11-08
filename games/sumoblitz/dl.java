@@ -270,9 +270,9 @@ final class dl extends eu {
         return mo.field_n;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          dl.b(95);
+          dl.releaseStatics(95);
         }
         field_h = null;
     }

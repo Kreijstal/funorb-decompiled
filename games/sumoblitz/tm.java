@@ -42,7 +42,7 @@ final class tm implements mh {
               return;
             }
             s.field_o = param12;
-            rh.field_p = param6;
+            MidiNoteMixer.field_p = param6;
             gn.field_d = param0;
             nb.field_b = param4;
             jt.field_r = param11;
@@ -85,7 +85,7 @@ final class tm implements mh {
     final static int a(int param0, int param1) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
         BufferedSocket.field_p = null;
-        tj.field_n = null;
+        InstrumentNoteMask.field_n = null;
         cd.field_d = 0;
         int var2 = ie.field_x;
         ie.field_x = rl.field_q;
@@ -191,7 +191,7 @@ final class tm implements mh {
         return -1;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_b = null;
         if (param0) {

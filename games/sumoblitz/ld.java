@@ -10,7 +10,7 @@ final class ld extends WidgetContainer implements ai {
     private boolean field_K;
     hd field_B;
     private wp field_O;
-    static ri[] field_F;
+    static SpriteData[] field_F;
     static int field_D;
     String field_L;
     vn field_G;
@@ -138,7 +138,7 @@ final class ld extends WidgetContainer implements ai {
         return stackIn_7_0;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_F = null;
         int var1 = -53 / ((-1 - param0) / 59);
         field_N = null;

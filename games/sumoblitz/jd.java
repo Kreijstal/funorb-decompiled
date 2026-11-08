@@ -4,7 +4,7 @@
 final class jd extends ag {
     private int field_e;
     private boolean field_i;
-    static ri[] field_h;
+    static SpriteData[] field_h;
     private int field_j;
     private int field_k;
     private vn field_l;
@@ -238,10 +238,10 @@ final class jd extends ag {
         return null;
     }
 
-    final static void a(tv param0, byte param1, boolean param2) {
+    final static void a(MusicTrack param0, byte param1, boolean param2) {
         try {
           if (param1 < 54) {
-            field_h = (ri[]) null;
+            field_h = (SpriteData[]) null;
           }
           uj.a((byte) -124, 256, param2, param0);
         } catch (RuntimeException runtimeException) {
@@ -317,7 +317,7 @@ final class jd extends ag {
         String var11_ref_String = null;
         int var11 = 0;
         int var13 = 0;
-        tv var14 = null;
+        MusicTrack var14 = null;
         String var15 = null;
         Object var16 = null;
         CharSequence var17 = null;
@@ -329,8 +329,8 @@ final class jd extends ag {
         var13 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param5 <= 20) {
-            var14 = (tv) null;
-            jd.a((tv) null, (byte) 63, false);
+            var14 = (MusicTrack) null;
+            jd.a((MusicTrack) null, (byte) 63, false);
           }
           var15 = param0.a(true);
           var8 = param2.a(true);

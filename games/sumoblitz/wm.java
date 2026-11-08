@@ -21,7 +21,7 @@ final class wm {
     boolean field_m;
     byte field_d;
     boolean field_r;
-    static hr field_a;
+    static ToolkitSprite field_a;
     int field_q;
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4) {
@@ -38,7 +38,7 @@ final class wm {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 != -1) {
-            field_a = (hr) null;
+            field_a = (ToolkitSprite) null;
           }
           param3--;
           while (param3 >= 0) {
@@ -74,15 +74,15 @@ final class wm {
         RuntimeException decompiledCaughtException = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5 = (db) (jj.field_a.b(72));
+          var5 = (db) (jj.field_a.first(72));
           while (var5 != null) {
             mn.a(var5, -112, param1);
-            var5 = (db) (jj.field_a.d((byte) 18));
+            var5 = (db) (jj.field_a.next((byte) 18));
           }
-          var2 = no.field_d.b(-87);
+          var2 = no.field_d.first(-87);
           while (var2 != null) {
             jg.b(11044, param1);
-            var2 = no.field_d.d((byte) 18);
+            var2 = no.field_d.next((byte) 18);
           }
           if (!param0) {
             return;
@@ -97,7 +97,7 @@ final class wm {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         field_a = null;
         if (param0) {

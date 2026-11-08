@@ -5,7 +5,7 @@ final class pm {
     private int[] field_b;
     private bl field_a;
     private bl field_e;
-    private hr field_d;
+    private ToolkitSprite field_d;
     private GraphicsToolkit field_c;
 
     final static void a(int param0, int param1, hg param2) {

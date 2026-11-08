@@ -145,7 +145,7 @@ abstract class uw {
                   }
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + lk.field_b;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_b;
                 }
               }
               var16Lifetime3 = -param8 + param3;
@@ -195,7 +195,7 @@ abstract class uw {
                 return;
               }
               var10 = var10 + var12;
-              var15Lifetime1 = var15Lifetime1 + lk.field_b;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_b;
               var9_int = var9_int + var11;
             }
             return;
@@ -217,7 +217,7 @@ abstract class uw {
 
     abstract int a(int param0, long param1);
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 96) {
           field_b = (String[]) null;
         }

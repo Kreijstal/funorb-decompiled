@@ -11,7 +11,7 @@ final class pd extends IntrusiveNode {
     static String nameText;
     static int[] field_q;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= -117) {
           field_q = null;
           nameText = null;
@@ -19,7 +19,7 @@ final class pd extends IntrusiveNode {
           field_m = null;
           return;
         }
-        pd.a((byte) 113);
+        pd.releaseStatics((byte) 113);
         field_q = null;
         nameText = null;
         field_n = null;
@@ -59,7 +59,7 @@ final class pd extends IntrusiveNode {
             pd.a((byte[]) null, 48, 96);
           }
           var3 = new db(param0);
-          jj.field_a.a((IntrusiveNode) (var3), (byte) 39);
+          jj.field_a.addLast((IntrusiveNode) (var3), (byte) 39);
           mn.a(var3, param2 - 5530, param1);
           stackIn_3_0 = var3;
           return stackIn_3_0;

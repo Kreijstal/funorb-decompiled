@@ -18,7 +18,7 @@ final class ic {
         jk.field_b.field_j = 0;
     }
 
-    final void a(fr param0, boolean param1) {
+    final void a(LegacyOpenGlGraphicsToolkit param0, boolean param1) {
         jq discarded$0 = null;
         jq discarded$1 = null;
         jq discarded$2 = null;
@@ -35,7 +35,7 @@ final class ic {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -37 % ((param0 - 64) / 32);
         field_c = null;
         field_a = null;
@@ -210,7 +210,7 @@ final class ic {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-              param1.getAppletContext().showDocument(td.a((byte) 126, param1, var2), "_top");
+              param1.getAppletContext().showDocument(MusicPatch.a((byte) 126, param1, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = (Exception) (Object) decompiledCaughtException;

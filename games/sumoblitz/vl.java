@@ -4,7 +4,7 @@
 final class vl {
     static String accountCreatedSuccessfullyText;
     IntrusiveDeque field_d;
-    static hr field_c;
+    static ToolkitSprite field_c;
     static int field_a;
     int field_e;
 
@@ -12,11 +12,11 @@ final class vl {
         if (param1) {
           return param0 + "/" + param2;
         }
-        vl.a((byte) -39);
+        vl.releaseStatics((byte) -39);
         return param0 + "/" + param2;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 != 113) {
           return;

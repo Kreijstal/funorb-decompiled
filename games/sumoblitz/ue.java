@@ -5,7 +5,7 @@ final class ue extends gm {
     private int field_n;
     private int field_s;
     private int field_q;
-    static ri field_p;
+    static SpriteData field_p;
     static volatile boolean field_o;
     private Sprite[] field_r;
 
@@ -13,7 +13,7 @@ final class ue extends gm {
         this(2188450, 2591221, 9543);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 100) {
           field_o = true;
         }
@@ -117,16 +117,16 @@ final class ue extends gm {
         var26 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 != -70) {
-            ue.b(-111);
+            ue.releaseStatics(-111);
           }
           var28 = ig.field_a;
           var2 = var28.e(-31302);
           if (0 == var2) {
             var3 = var28.a(255);
-            var4_ref_of = (of) (oi.field_b.b(74));
+            var4_ref_of = (of) (oi.field_b.first(74));
             while (var4_ref_of != null) {
               if (var3 != var4_ref_of.field_p) {
-                var4_ref_of = (of) (oi.field_b.d((byte) 18));
+                var4_ref_of = (of) (oi.field_b.next((byte) 18));
                 continue;
               }
               break;
@@ -222,10 +222,10 @@ final class ue extends gm {
           if (var2 == 1) {
             var3Lifetime1 = var28.a(255);
             var4 = var28.a((byte) 111);
-            var6 = (id) (ow.field_f.b(127));
+            var6 = (id) (ow.field_f.first(127));
             while (var6 != null) {
               if (var6.field_r != var3Lifetime1) {
-                var6 = (id) (ow.field_f.d((byte) 18));
+                var6 = (id) (ow.field_f.next((byte) 18));
                 continue;
               }
               break;

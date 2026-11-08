@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pc {
-    static ri field_c;
+    static SpriteData field_c;
     static String thisPasswordContainsYourText;
     static IntrusiveDeque field_d;
-    static ri[] field_b;
+    static SpriteData[] field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         thisPasswordContainsYourText = null;
         if (param0 > 1) {
           field_b = null;
@@ -15,7 +15,7 @@ final class pc {
           field_c = null;
           return;
         }
-        field_c = (ri) null;
+        field_c = (SpriteData) null;
         field_b = null;
         field_d = null;
         field_c = null;

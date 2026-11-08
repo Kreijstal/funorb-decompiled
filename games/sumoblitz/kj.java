@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends bq {
+final class kj extends LegacyOpenGlEffect {
     static volatile int field_e;
     private tq field_f;
     private ch field_g;
 
-    kj(fr param0, ch param1) {
+    kj(LegacyOpenGlGraphicsToolkit param0, ch param1) {
         super(param0);
         try {
           this.field_g = param1;

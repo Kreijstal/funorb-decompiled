@@ -5,7 +5,7 @@ final class dj extends IntrusiveNode {
     PcmSampleStream field_q;
     static String fullScreenText;
     static String[] scoreFilterLabels;
-    static hr field_l;
+    static ToolkitSprite field_l;
     static int field_n;
     IntrusiveNode field_k;
     int field_p;
@@ -22,7 +22,7 @@ final class dj extends IntrusiveNode {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 == 1022768328) {
           fullScreenText = null;

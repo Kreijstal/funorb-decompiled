@@ -147,10 +147,10 @@ abstract class se {
         if (((param1 & 36864) != 0 ? true : false) | dk.a(param1, (byte) -107, param2) | tq.a(param2, true, param1)) {
           return true;
         }
-        return (lg.a(param1, -22, param2) | ((8192 & param1) != 0 ? true : false) | mb.a(true, param2, param1)) & ((param2 & 55) == 0 ? true : false);
+        return (lg.a(param1, -22, param2) | ((8192 & param1) != 0 ? true : false) | GameInstructions.a(true, param2, param1)) & ((param2 & 55) == 0 ? true : false);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 8192) {
           field_d = 19;
         }

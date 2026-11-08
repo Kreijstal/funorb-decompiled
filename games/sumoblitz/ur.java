@@ -200,9 +200,9 @@ abstract class ur extends hf {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          ur.k(65);
+          ur.releaseStatics(65);
           passwordsCanOnlyContainText = null;
           return;
         }

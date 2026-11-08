@@ -18,7 +18,7 @@ abstract class ce extends IntrusiveNode {
     ce() {
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         waitingForFontsText = null;
         field_p = null;
         field_q = null;

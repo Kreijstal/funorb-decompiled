@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class th extends WidgetContainer implements ca, ai {
-    static ri field_C;
+    static SpriteData field_C;
     static int field_H;
     private uk field_G;
     private wp field_D;
-    static hr field_B;
+    static ToolkitSprite field_B;
     private ar field_F;
 
     final boolean a(UiWidget param0, char param1, byte param2, int param3) {
@@ -109,16 +109,16 @@ final class th extends WidgetContainer implements ca, ai {
           }
           kh.field_e = kh.field_e | var3_int;
           OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e | var3_int;
-          pl.field_v.a((IntrusiveNode) (new ge(param2)), (byte) 39);
+          pl.field_v.addLast((IntrusiveNode) (new ge(param2)), (byte) 39);
           if (gj.a((byte) -84, 10) >= 5) {
             fb.field_a = fb.field_a + iw.field_b;
           } else {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + iw.field_b;
           }
           if (gj.a((byte) -84, 10) < 5) {
-            ts.field_a = ts.field_a - te.field_c;
+            ts.field_a = ts.field_a - IntrusiveNodeHashTable.field_c;
           } else {
-            kn.field_b = kn.field_b - te.field_c;
+            kn.field_b = kn.field_b - IntrusiveNodeHashTable.field_c;
           }
           NodeHashTableIterator.a(param2, (byte) -82);
           if (param0 != 24753) {
@@ -150,7 +150,7 @@ final class th extends WidgetContainer implements ca, ai {
             }
           }
           if (!f.field_w) {
-            OpenGlUnderwaterEffect.field_q.a((IntrusiveNode) (new hg(param2, param1, GraphicsToolkit.field_f, fb.field_a, ts.field_a, kn.field_b)), (byte) 39);
+            OpenGlUnderwaterEffect.field_q.addLast((IntrusiveNode) (new hg(param2, param1, GraphicsToolkit.field_f, fb.field_a, ts.field_a, kn.field_b)), (byte) 39);
           }
           boolean decompiledFrameRemainder0 = true;
           if (3 != param2) {
@@ -183,10 +183,10 @@ final class th extends WidgetContainer implements ca, ai {
             fb.field_a = fb.field_a - iw.field_b;
           }
           if (gj.a((byte) -84, 10) >= 5) {
-            kn.field_b = kn.field_b + te.field_c;
+            kn.field_b = kn.field_b + IntrusiveNodeHashTable.field_c;
             return;
           }
-          ts.field_a = ts.field_a + te.field_c;
+          ts.field_a = ts.field_a + IntrusiveNodeHashTable.field_c;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -5,7 +5,7 @@ final class kd {
     static iw field_b;
     static int[][] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = (int[][]) null;
         if (param0 != 95) {
           field_b = (iw) null;
@@ -45,146 +45,146 @@ final class kd {
         int var7Lifetime10;
         int var7Lifetime11;
         int var7Lifetime3Lifetime1;
-        if (!(0 <= td.field_u)) {
+        if (!(0 <= MusicPatch.field_u)) {
           return;
         }
         int var3 = -135 + param1;
         int var4 = -35 + param0;
         int var5 = param2;
-        if (!(75 <= td.field_u)) {
-          var5 = (td.field_u << 8) / 75;
+        if (!(75 <= MusicPatch.field_u)) {
+          var5 = (MusicPatch.field_u << 8) / 75;
         }
-        if (td.field_u > 200) {
-          var5 = (250 - td.field_u << 8) / 50;
+        if (MusicPatch.field_u > 200) {
+          var5 = (250 - MusicPatch.field_u << 8) / 50;
         }
         jq.a(7161, sn.field_a);
         nk.b();
-        lk.b();
+        SoftwareRasterizer.b();
         ok.b(param2 + 0);
         if (256 > var5) {
-          lk.b(0, 0, lk.field_b, lk.field_c, 0, 256 - var5);
+          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, 0, 256 - var5);
         }
         ClientException.a((byte) -69);
-        if (td.field_u >= 150) {
+        if (MusicPatch.field_u >= 150) {
           kh.field_a.a(var3 + 15, 10 + var4, var5);
-          var6 = td.field_u - 125;
+          var6 = MusicPatch.field_u - 125;
           if (var6 <= 0) {
-            var6 = td.field_u - 140;
+            var6 = MusicPatch.field_u - 140;
             if (0 < var6) {
               var7 = 256;
               if (20 > var6) {
                 var7 = var6 * 256 / 20;
               }
-              mq.field_a.a(var3 + 15, 10 + var4, var5 * var7 >> 8);
+              MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7 >> 8);
             }
             return;
           }
           if (var6 >= 50) {
-            var6 = td.field_u - 140;
+            var6 = MusicPatch.field_u - 140;
             if (0 < var6) {
               var7Lifetime7 = 256;
               if (20 > var6) {
                 var7Lifetime7 = var6 * 256 / 20;
               }
-              mq.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime7 >> 8);
+              MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime7 >> 8);
             }
             return;
           }
           if (20 > var6) {
             var7Lifetime8 = var6 * 256 / 20;
             eh.field_b.d(var3, var4, var7Lifetime8);
-            var6 = td.field_u - 140;
+            var6 = MusicPatch.field_u - 140;
             if (0 < var6) {
               var7Lifetime8 = 256;
               if (20 > var6) {
                 var7Lifetime8 = var6 * 256 / 20;
               }
-              mq.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime8 >> 8);
+              MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime8 >> 8);
             }
             return;
           }
           if (var6 < 30) {
             eh.field_b.d(var3, var4, 256);
-            var6 = td.field_u - 140;
+            var6 = MusicPatch.field_u - 140;
             if (0 < var6) {
               var7Lifetime9 = 256;
               if (20 > var6) {
                 var7Lifetime9 = var6 * 256 / 20;
               }
-              mq.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime9 >> 8);
+              MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime9 >> 8);
             }
             return;
           }
           var7Lifetime10 = (12800 - 256 * var6) / 20;
           eh.field_b.d(var3, var4, var7Lifetime10);
-          var6Lifetime3 = td.field_u - 140;
+          var6Lifetime3 = MusicPatch.field_u - 140;
           if (0 < var6Lifetime3) {
             var7Lifetime11 = 256;
             if (20 > var6Lifetime3) {
               var7Lifetime11 = var6Lifetime3 * 256 / 20;
             }
-            mq.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime11 >> 8);
+            MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime11 >> 8);
           }
           return;
         }
         sn.field_a.b(var3, var4);
-        var6Lifetime1 = td.field_u - 125;
+        var6Lifetime1 = MusicPatch.field_u - 125;
         if (var6Lifetime1 <= 0) {
-          var6Lifetime1 = td.field_u - 140;
+          var6Lifetime1 = MusicPatch.field_u - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime1 = 256;
             if (20 > var6Lifetime1) {
               var7Lifetime1 = var6Lifetime1 * 256 / 20;
             }
-            mq.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime1 >> 8);
+            MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime1 >> 8);
           }
           return;
         }
         if (var6Lifetime1 >= 50) {
-          var6Lifetime1 = td.field_u - 140;
+          var6Lifetime1 = MusicPatch.field_u - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime2 = 256;
             if (20 > var6Lifetime1) {
               var7Lifetime2 = var6Lifetime1 * 256 / 20;
             }
-            mq.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime2 >> 8);
+            MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime2 >> 8);
           }
           return;
         }
         if (20 > var6Lifetime1) {
           var7Lifetime3 = var6Lifetime1 * 256 / 20;
           eh.field_b.d(var3, var4, var7Lifetime3);
-          var6Lifetime1 = td.field_u - 140;
+          var6Lifetime1 = MusicPatch.field_u - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime3Lifetime1 = 256;
             if (20 > var6Lifetime1) {
               var7Lifetime3Lifetime1 = var6Lifetime1 * 256 / 20;
             }
-            mq.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime3Lifetime1 >> 8);
+            MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime3Lifetime1 >> 8);
           }
           return;
         }
         if (var6Lifetime1 < 30) {
           eh.field_b.d(var3, var4, 256);
-          var6Lifetime1 = td.field_u - 140;
+          var6Lifetime1 = MusicPatch.field_u - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime4 = 256;
             if (20 > var6Lifetime1) {
               var7Lifetime4 = var6Lifetime1 * 256 / 20;
             }
-            mq.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime4 >> 8);
+            MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime4 >> 8);
           }
           return;
         }
         var7Lifetime5 = (12800 - 256 * var6Lifetime1) / 20;
         eh.field_b.d(var3, var4, var7Lifetime5);
-        var6Lifetime2 = td.field_u - 140;
+        var6Lifetime2 = MusicPatch.field_u - 140;
         if (0 < var6Lifetime2) {
           var7Lifetime6 = 256;
           if (20 > var6Lifetime2) {
             var7Lifetime6 = var6Lifetime2 * 256 / 20;
           }
-          mq.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime6 >> 8);
+          MusicPatchEnvelope.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime6 >> 8);
         }
     }
 

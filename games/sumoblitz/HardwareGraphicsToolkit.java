@@ -285,9 +285,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param0) {
           this.n((byte) 96);
         }
-        if (mb.field_k != this.field_s) {
+        if (GameInstructions.field_k != this.field_s) {
           var2 = this.field_s;
-          this.field_s = mb.field_k;
+          this.field_s = GameInstructions.field_k;
           if (var2.a(-20011)) {
             this.W(16);
           }
@@ -389,7 +389,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void F(int param0);
 
-    public static void G(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         if (param0 != 8) {
           field_t = (tf) null;
@@ -403,19 +403,19 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void ab(int param0);
 
-    final hr a(ri param0, boolean param1) {
+    final ToolkitSprite a(SpriteData param0, boolean param1) {
         int incrementValue$2 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int[] stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         int stackIn_19_2 = 0;
-        hr stackIn_23_0 = null;
+        ToolkitSprite stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hr var3 = null;
+        ToolkitSprite var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
         int var5 = 0;
@@ -760,10 +760,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         java.awt.Canvas var2 = null;
         int var3 = Sumoblitz.field_L ? 1 : 0;
         if (!this.field_H) {
-          var1 = this.field_lb.b(-66);
+          var1 = this.field_lb.first(-66);
           while (var1 != null) {
             ((he) (var1)).c(-14365);
-            var1 = this.field_lb.d((byte) 18);
+            var1 = this.field_lb.next((byte) 18);
           }
           var1_ref = this.field_Q.keys();
           while (var1_ref.hasMoreElements()) {
@@ -828,7 +828,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final za c(int param0) {
         he var2 = new he(param0);
-        this.field_lb.a((IntrusiveNode) (var2), (byte) 39);
+        this.field_lb.addLast((IntrusiveNode) (var2), (byte) 39);
         return (za) ((Object) var2);
     }
 
@@ -1154,7 +1154,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final static GraphicsToolkit a(d param0, java.awt.Canvas param1, int param2, int param3) {
         RuntimeException var4 = null;
         String var5 = null;
-        fr stackIn_3_0 = null;
+        LegacyOpenGlGraphicsToolkit stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -1166,7 +1166,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             var5 = (String) null;
             HardwareGraphicsToolkit.a((String) null, (String) null, (String) null, false);
           }
-          stackIn_3_0 = new fr(param1, param0, param2);
+          stackIn_3_0 = new LegacyOpenGlGraphicsToolkit(param1, param0, param2);
           return (GraphicsToolkit) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1316,7 +1316,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_oc;
     }
 
-    final da a(ta param0, ri[] param1, boolean param2) {
+    final da a(ta param0, SpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
         mv stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1539,7 +1539,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_v = 0;
         this.field_ob = true;
         this.field_r = 0;
-        this.field_s = mb.field_k;
+        this.field_s = GameInstructions.field_k;
         this.field_H = false;
         this.field_k = -1;
         this.field_Nb = 0;
@@ -1621,7 +1621,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void A(int param0);
 
-    final hr a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
         pu stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1630,7 +1630,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = new pu(this, param3, param4, param0, param1, param2);
-          return (hr) ((Object) stackIn_1_0);
+          return (ToolkitSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;

@@ -4,7 +4,7 @@
 final class sk {
     nh field_e;
     nh field_f;
-    static ri[] field_c;
+    static SpriteData[] field_c;
     boolean field_g;
     private HardwareGraphicsToolkit field_a;
     ru[] field_d;
@@ -93,14 +93,14 @@ final class sk {
         return !this.field_g ? this.field_d != null ? true : false : null != this.field_f ? true : false;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 128) {
-          sk.b(-102);
+          sk.releaseStatics(-102);
         }
         field_c = null;
     }
 
-    final static mk a(fr param0, boolean param1, int param2, String param3) {
+    final static mk a(LegacyOpenGlGraphicsToolkit param0, boolean param1, int param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         byte[] var10 = null;

@@ -5,13 +5,13 @@ import java.util.*;
 
 final class ts {
     static int field_a;
-    static hr[] field_e;
+    static ToolkitSprite[] field_e;
     static int field_c;
     static boolean field_d;
     int field_b;
     int field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -13252) {
           return;
         }
@@ -57,7 +57,7 @@ final class ts {
               var12 = var13;
               var10 = var12;
               var8Lifetime2 = var10;
-              param1.a((IntrusiveNode) (new vt(64, param0, param5, param4, (int)var13[0] << 8, (int)var13[1] << 8, 0)), (byte) 39);
+              param1.addLast((IntrusiveNode) (new vt(64, param0, param5, param4, (int)var13[0] << 8, (int)var13[1] << 8, 0)), (byte) 39);
               var7++;
               continue;
             }
@@ -78,7 +78,7 @@ final class ts {
             dupTemp$0 = kt.a((byte) -10, var8Lifetime1, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var7Lifetime1)));
             var11 = dupTemp$0;
             var8Lifetime1Lifetime1 = dupTemp$0;
-            param1.a((IntrusiveNode) (new vt(64, param0, param5, param4, (int)var11[0] << 8, (int)var11[1] << 8, 1)), (byte) 39);
+            param1.addLast((IntrusiveNode) (new vt(64, param0, param5, param4, (int)var11[0] << 8, (int)var11[1] << 8, 1)), (byte) 39);
             var7Lifetime1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -6,7 +6,7 @@ final class ge extends IntrusiveNode {
     int field_m;
     static String clickToContinueText;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         clickToContinueText = null;
         difficultyNames = null;
         if (param0 != 6334) {

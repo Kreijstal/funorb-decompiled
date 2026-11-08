@@ -6,11 +6,11 @@ final class sq {
     static int[] field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         if (param0 >= -79) {
-          sq.a(62);
+          sq.releaseStatics(62);
         }
     }
 

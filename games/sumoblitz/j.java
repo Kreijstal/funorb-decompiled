@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class j extends hr implements e {
+final class j extends ToolkitSprite implements NativeResource {
     long field_nativeid;
 
-    private final native void ma(oa param0, int[] param1, byte[] param2, byte[] param3, int param4, int param5, int param6, int param7);
+    private final native void ma(NativeSoftwareGraphicsToolkit param0, int[] param1, byte[] param2, byte[] param3, int param4, int param5, int param6, int param7);
 
     private final native int JA(long param0);
 
@@ -48,19 +48,19 @@ final class j extends hr implements e {
         return this.I(this.field_nativeid);
     }
 
-    private final native void ua(oa param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6);
+    private final native void ua(NativeSoftwareGraphicsToolkit param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6);
 
     final void a(int param0, int param1, int param2, int param3) {
         this.A(this.field_nativeid, param0, param1, param2, param3);
     }
 
-    public final void w(boolean param0) {
+    public final void disposeNativeResource(boolean param0) {
         this.R(this.field_nativeid, param0);
     }
 
     private final native int M(long param0);
 
-    j(oa param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
+    j(NativeSoftwareGraphicsToolkit param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
         this.ua(param0, param1, param2, param3, param4, param5, param6);
     }
 
@@ -68,11 +68,11 @@ final class j extends hr implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          pa.a((e) (this), (byte) -37);
+          NativeResourceReaper.a((NativeResource) (this), (byte) -37);
         }
     }
 
-    j(oa param0, int[] param1, byte[] param2, byte[] param3, int param4, int param5, int param6, int param7) {
+    j(NativeSoftwareGraphicsToolkit param0, int[] param1, byte[] param2, byte[] param3, int param4, int param5, int param6, int param7) {
         this.ma(param0, param1, param2, param3, param4, param5, param6, param7);
     }
 }

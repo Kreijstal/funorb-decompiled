@@ -93,7 +93,7 @@ final class kt {
           }
           if (var3 == 0 &&
             2 == cl.field_s) {
-            var5 = -iv.field_f + wq.a(-84);
+            var5 = -LegacyOpenGlEffectManager.field_f + wq.a(-84);
             var7 = (int)((10999L - var5) / 1000L);
             if (var7 <= 0) {
               var3 = 2;
@@ -109,7 +109,7 @@ final class kt {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != -14) {
           field_a = (gf) null;

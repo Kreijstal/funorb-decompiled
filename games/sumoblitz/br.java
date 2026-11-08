@@ -36,7 +36,7 @@ final class br {
 
     final static int b(int param0) {
         if (param0 > -3) {
-          br.a(101);
+          br.releaseStatics(101);
           return 1;
         }
         return 1;
@@ -79,7 +79,7 @@ final class br {
         return 0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 23050) {
           return;
         }

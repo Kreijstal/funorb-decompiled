@@ -3,7 +3,7 @@
  */
 final class gq extends ve {
     static String thisEntryDoesnTText;
-    static ri[] field_o;
+    static SpriteData[] field_o;
     static int[] field_q;
 
     final boolean d(int param0) {
@@ -32,16 +32,16 @@ final class gq extends ve {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_q = null;
         thisEntryDoesnTText = null;
         field_o = null;
         if (param0) {
-          gq.c(true);
+          gq.releaseStatics(true);
         }
     }
 
-    gq(fr param0) {
+    gq(LegacyOpenGlGraphicsToolkit param0) {
         super(param0);
     }
 

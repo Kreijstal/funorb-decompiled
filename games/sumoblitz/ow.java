@@ -232,7 +232,7 @@ final class ow {
           GraphicsToolkit.field_e = param1;
           OpenGlUnderwaterEffect.field_n = "";
           if (param0 != -18527) {
-            ow.a((byte) 19);
+            ow.releaseStatics((byte) 19);
           }
           qn.field_e = param2;
           if (!en.field_h.startsWith("win")) {
@@ -288,7 +288,7 @@ final class ow {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 123) {
           loadingFontsText = null;
           field_d = (byte[][]) null;

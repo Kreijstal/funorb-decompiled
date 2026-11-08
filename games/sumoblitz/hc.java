@@ -5,15 +5,15 @@ final class hc {
     static gt field_c;
     static da field_e;
     static int field_f;
-    static ri[] field_a;
-    static ri field_b;
+    static SpriteData[] field_a;
+    static SpriteData field_b;
     static String continueToNextLevelText;
 
     private hc() throws Throwable {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_b = null;
         continueToNextLevelText = null;
@@ -22,7 +22,7 @@ final class hc {
         field_c = null;
     }
 
-    final static sn a(int param0, mk[] param1, fr param2) {
+    final static sn a(int param0, mk[] param1, LegacyOpenGlGraphicsToolkit param2) {
         Object stackIn_7_0 = null;
         sn stackIn_14_0 = null;
         Object stackIn_27_0 = null;

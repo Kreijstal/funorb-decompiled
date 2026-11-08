@@ -129,15 +129,15 @@ final class cp {
           var5_int = this.field_v.a(param1);
           var6 = this.field_v.field_y + this.field_v.field_I;
           var7 = param2;
-          if (var7 + var5_int + 6 > lk.field_b) {
-            var7 = lk.field_b - (var5_int + 6);
+          if (var7 + var5_int + 6 > SoftwareRasterizer.field_b) {
+            var7 = SoftwareRasterizer.field_b - (var5_int + 6);
           }
           var8 = 32 - this.field_v.field_y + param0;
-          if (lk.field_c < 6 + (var8 + var6)) {
-            var8 = -6 + lk.field_c - var6;
+          if (SoftwareRasterizer.field_c < 6 + (var8 + var6)) {
+            var8 = -6 + SoftwareRasterizer.field_c - var6;
           }
-          lk.b(var7, var8, var5_int + 6, 6 + var6, this.field_t);
-          lk.d(var7 + 1, var8 + 1, var5_int + 4, 4 + var6, this.field_d);
+          SoftwareRasterizer.b(var7, var8, var5_int + 6, 6 + var6, this.field_t);
+          SoftwareRasterizer.d(var7 + 1, var8 + 1, var5_int + 4, 4 + var6, this.field_d);
           this.field_v.b(param1, var7 + 3, var8 + 3 + this.field_v.field_y, this.field_t, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -155,7 +155,7 @@ final class cp {
     }
 
     final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        lk.e(param3, param5, param1, param4, param0);
+        SoftwareRasterizer.e(param3, param5, param1, param4, param0);
         if (param2) {
           this.field_f = (mh) null;
         }
@@ -219,7 +219,7 @@ final class cp {
           if (var7 == -1) {
             var7 = this.field_v.field_I + this.field_v.field_s;
           }
-          var8 = lk.field_b >> 2;
+          var8 = SoftwareRasterizer.field_b >> 2;
           var9 = this.field_v.a(param1);
           var10 = this.field_v.field_s + this.field_v.field_I;
           var11 = 1;
@@ -246,15 +246,15 @@ final class cp {
           }
           var12 = param0;
           var13Lifetime1 = 70 / ((74 - param2) / 40);
-          if (lk.field_b < var5_int + var12 + var9) {
-            var12 = -var5_int + lk.field_b - var9;
+          if (SoftwareRasterizer.field_b < var5_int + var12 + var9) {
+            var12 = -var5_int + SoftwareRasterizer.field_b - var9;
           }
           var14Lifetime1 = 32 + (-this.field_v.field_y + param3);
-          if (lk.field_c < var6 + var14Lifetime1 + var10) {
+          if (SoftwareRasterizer.field_c < var6 + var14Lifetime1 + var10) {
             var14Lifetime1 = -var10 + param3 - var6;
           }
-          lk.b(var12, var14Lifetime1, var9 + var5_int, var10 + var6, this.field_r);
-          lk.d(var12 + 1, 1 + var14Lifetime1, var5_int + var9 - 2, var6 + var10 - 2, this.field_d);
+          SoftwareRasterizer.b(var12, var14Lifetime1, var9 + var5_int, var10 + var6, this.field_r);
+          SoftwareRasterizer.d(var12 + 1, 1 + var14Lifetime1, var5_int + var9 - 2, var6 + var10 - 2, this.field_d);
           this.field_v.a(param1, var12 + this.field_l, var14Lifetime1 + this.field_s, var9, var10, this.field_t, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -373,7 +373,7 @@ final class cp {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 111) {
           return;
         }
@@ -382,7 +382,7 @@ final class cp {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        lk.b(param4, param6, param5, param2, param3, param0);
+        SoftwareRasterizer.b(param4, param6, param5, param2, param3, param0);
         if (param1 != 3) {
           byte[] var9 = (byte[]) null;
           cp.a((byte[]) null, -45);

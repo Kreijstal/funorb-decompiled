@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vt extends nt {
+final class vt extends TimedSceneEffect {
     private int field_u;
     static int field_t;
     private int field_s;

@@ -6,7 +6,7 @@ final class gs {
     static String youNeedToChooseText;
     static int[] field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 != 14) {
           return;

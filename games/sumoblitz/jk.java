@@ -18,7 +18,7 @@ final class jk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= -53) {
-            jk.a((byte) 43);
+            jk.releaseStatics((byte) 43);
           }
           var3 = new ne(0, 0, 0);
           var3.field_g = param1.field_g;
@@ -51,7 +51,7 @@ final class jk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -104) {
           ne var2 = (ne) null;
           jk.a((int[]) null, (ne) null, -102);

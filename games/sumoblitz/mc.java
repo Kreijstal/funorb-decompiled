@@ -5,7 +5,7 @@ final class mc extends ao {
     private vo field_G;
     vo field_B;
     static String field_C;
-    static ri[] field_F;
+    static SpriteData[] field_F;
     we field_D;
     private boolean field_H;
     static boolean field_E;
@@ -239,10 +239,10 @@ final class mc extends ao {
         }
     }
 
-    public static void f(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         thisPasswordContainsRepeatedText = null;
         if (!param0) {
-          field_F = (ri[]) null;
+          field_F = (SpriteData[]) null;
           field_C = null;
           field_F = null;
           return;

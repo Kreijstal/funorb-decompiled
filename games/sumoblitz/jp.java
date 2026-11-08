@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jp extends ak {
+final class jp extends MenuScreen {
     private int field_i;
     static int[] field_k;
     static Sprite[] field_j;
@@ -283,7 +283,7 @@ final class jp extends ak {
         return;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_k = null;
         if (param0 != 32) {
@@ -298,9 +298,9 @@ final class jp extends ak {
         GraphicsToolkit var6_ref_ha = null;
         int var6 = 0;
         int var7 = 0;
-        hr[] var8 = null;
+        ToolkitSprite[] var8 = null;
         int var9 = 0;
-        hr[] stackIn_8_0 = null;
+        ToolkitSprite[] stackIn_8_0 = null;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -314,10 +314,10 @@ final class jp extends ak {
           if (param2 != -2355) {
             this.field_i = 108;
           }
-          qv.field_k.a(100, param0 << 24 | 5023231, 0, 200, 220, (int[]) null, (hr[]) null, 40, -1, 0, 0, param2 - 6432, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + tj.timeText.toUpperCase() + " " + dp.b(jk.field_a, param2 - 21265), (aa) null, 1, 1);
-          uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (hr[]) null, 40, -1, 0, 0, -8787, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + tj.timeText.toUpperCase() + " " + dp.b(jk.field_a, -23620), (aa) null, 1, 1);
-          gt.field_db.a(200, 5023231 | param0 << 24, 0, 300, 170, (int[]) null, (hr[]) null, 118, -1, 0, 0, -8787, wh.clickToAssignPointsText, (aa) null, 1, 0);
-          bq.field_c.a(200, -1, 0, 300, 170, (int[]) null, (hr[]) null, 118, -1, 0, 0, param2 ^ 11104, wh.clickToAssignPointsText, (aa) null, 1, 0);
+          qv.field_k.a(100, param0 << 24 | 5023231, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, param2 - 6432, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + dp.b(jk.field_a, param2 - 21265), (aa) null, 1, 1);
+          uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, -8787, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + dp.b(jk.field_a, -23620), (aa) null, 1, 1);
+          gt.field_db.a(200, 5023231 | param0 << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, -8787, wh.clickToAssignPointsText, (aa) null, 1, 0);
+          LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, param2 ^ 11104, wh.clickToAssignPointsText, (aa) null, 1, 0);
           qv.field_k.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(oc.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), param0 << 24 | 5023231, -1, 180, 320, 0);
           uq.field_a.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(oc.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
           var4_int = 140;
@@ -341,9 +341,9 @@ final class jp extends ak {
             qv.field_k.a(UpgradeStatNames.names[var5].toUpperCase(), param0 << 24 | 5023231, -1, 225, -4 + (var4_int + 55), param2 + 2355);
             uq.field_a.a(UpgradeStatNames.names[var5].toUpperCase(), -1, -1, 225, -4 + (var4_int + 55), param2 ^ -2355);
             if (var6 != 0) {
-              ud.field_q[15 + var5].a(55 + (var4_int - (ud.field_q[var5].b() >> 1)), 200 + (ud.field_q[var5].d() >> 1), 1, 0, 2);
+              MusicCrossfadeStream.field_q[15 + var5].a(55 + (var4_int - (MusicCrossfadeStream.field_q[var5].b() >> 1)), 200 + (MusicCrossfadeStream.field_q[var5].d() >> 1), 1, 0, 2);
             } else {
-              ud.field_q[var5].a(-(ud.field_q[var5].b() >> 1) + 55 + var4_int, 200 + (ud.field_q[var5].d() >> 1), 1, 0, 2);
+              MusicCrossfadeStream.field_q[var5].a(-(MusicCrossfadeStream.field_q[var5].b() >> 1) + 55 + var4_int, 200 + (MusicCrossfadeStream.field_q[var5].d() >> 1), 1, 0, 2);
             }
             qv.field_k.a(Integer.toString(wt.field_h[var5]), 5023231 | param0 << 24, -16777216, 320, 55 + var4_int, 0);
             uq.field_a.a(Integer.toString(wt.field_h[var5]), -1, -16777216, 320, var4_int + 55, 0);

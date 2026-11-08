@@ -6,7 +6,7 @@ final class l {
     int field_b;
     static String[] enemyVariantNames;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -54) {
           enemyVariantNames = (String[]) null;
           field_c = null;

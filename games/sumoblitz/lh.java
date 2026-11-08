@@ -4,12 +4,12 @@
 final class lh extends IntrusiveNode {
     static il field_n;
     byte[] field_m;
-    static ri field_k;
+    static SpriteData field_k;
     boolean field_o;
     static ji field_l;
     static String resetStatsText;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_l = null;
         field_n = null;

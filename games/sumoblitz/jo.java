@@ -57,15 +57,15 @@ final class jo {
           ke.field_b[ImageProducerRasterBuffer.field_k] = null;
           return var2_ref_byte__Lifetime2;
         }
-        if (null != gk.field_w) {
+        if (null != CompactMeshGeometry.field_w) {
           for (var2 = 0; var2 < kr.field_d.length; var2++) {
             if (param1 == kr.field_d[var2] &&
               l.field_c[var2] > 0) {
               dupTemp$6 = l.field_c[var2] - 1;
-              arrayValue$7 = gk.field_w[var2];
+              arrayValue$7 = CompactMeshGeometry.field_w[var2];
               l.field_c[var2] = dupTemp$6;
               var3 = arrayValue$7[dupTemp$6];
-              gk.field_w[var2][l.field_c[var2]] = null;
+              CompactMeshGeometry.field_w[var2][l.field_c[var2]] = null;
               return var3;
             }
           }
@@ -74,7 +74,7 @@ final class jo {
         return new byte[param1];
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         int var1 = -11 % ((-56 - param0) / 45);
         field_b = null;

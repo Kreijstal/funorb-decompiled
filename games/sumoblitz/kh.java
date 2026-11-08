@@ -102,7 +102,7 @@ final class kh {
         ih.field_c = true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 2) {
           pl var2 = (pl) null;

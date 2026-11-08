@@ -19,7 +19,7 @@ final class rf extends Exception {
         return mi.field_a == 1 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 1) {
           field_a = null;
           field_e = null;

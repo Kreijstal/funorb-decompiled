@@ -6,7 +6,7 @@ final class sl extends ln implements fk {
     static int[] field_c;
     static String largeScreenSizesAndText;
 
-    sl(fr param0, int param1, byte[] param2, int param3) {
+    sl(LegacyOpenGlGraphicsToolkit param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
     }
 
@@ -17,7 +17,7 @@ final class sl extends ln implements fk {
         return 0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         largeScreenSizesAndText = null;
         field_c = null;
         if (param0 >= -83) {

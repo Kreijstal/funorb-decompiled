@@ -10,7 +10,7 @@ final class qk extends hf implements ai {
     static BufferedSocket field_O;
     static String unfortunatelyWeAreUnableText;
     static int field_U;
-    static ri[] field_V;
+    static SpriteData[] field_V;
 
     final void a(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_16_0 = null;
@@ -37,12 +37,12 @@ final class qk extends hf implements ai {
             this.field_E.a((byte) 121, new u(this.field_E, ta.field_f));
           }
           if (this.field_D &&
-            null == gk.field_o) {
+            null == CompactMeshGeometry.field_o) {
             this.e(true);
             this.field_E.a((byte) 97, new u(this.field_E, am.field_e));
           }
-          if (null != gk.field_o) {
-            if (!gk.field_o.field_a) {
+          if (null != CompactMeshGeometry.field_o) {
+            if (!CompactMeshGeometry.field_o.field_a) {
               return;
             }
             this.e(true);
@@ -187,10 +187,10 @@ final class qk extends hf implements ai {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         unfortunatelyWeAreUnableText = null;
         if (param0 != -43) {
-          qk.g((byte) -2);
+          qk.releaseStatics((byte) -2);
           field_V = null;
           field_O = null;
           return;

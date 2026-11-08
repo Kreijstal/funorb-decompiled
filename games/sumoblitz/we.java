@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class we extends ie {
-    static ri[] field_C;
+    static SpriteData[] field_C;
     static int[] field_z;
     static int[] field_B;
 
@@ -88,7 +88,7 @@ final class we extends ie {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -42) {
-            field_C = (ri[]) null;
+            field_C = (SpriteData[]) null;
           }
           stackIn_6_0 = (this.b(param5, -1, param4, param2, param6)) && (super.a(param0, -55, param2, param3, param4, param5, param6));
           return stackIn_6_0;
@@ -119,12 +119,12 @@ final class we extends ie {
         return false;
     }
 
-    public static void e(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_C = null;
         field_B = null;
         field_z = null;
         if (param0) {
-          field_C = (ri[]) null;
+          field_C = (SpriteData[]) null;
         }
     }
 

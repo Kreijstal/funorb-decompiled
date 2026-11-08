@@ -12,7 +12,7 @@ final class ch {
     ek field_f;
     us[] field_i;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         playFreeVersionText = null;
         if (param0 < 54) {
           ch.a(-75);
@@ -30,7 +30,7 @@ final class ch {
         oc.a(qe.connectionLostAttemptingToText, false, (byte) 49);
     }
 
-    ch(fr param0) {
+    ch(LegacyOpenGlGraphicsToolkit param0) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -52,7 +52,7 @@ final class ch {
         this.field_i = null;
         try {
           this.field_g = param0.field_Ic;
-          mq.a(param0, (byte) 123);
+          MusicPatchEnvelope.a(param0, (byte) 123);
           if (!this.field_g) {
             this.field_i = new us[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
@@ -61,14 +61,14 @@ final class ch {
             }
             this.field_a = new us[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
-              var24 = iq.a(qu.field_j, 14381, 32768, var2_intLifetime1 * 32768);
+              var24 = iq.a(GameplaySession.field_j, 14381, 32768, var2_intLifetime1 * 32768);
               this.field_a[var2_intLifetime1] = new us(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
             }
             return;
           }
           var20 = ab.a(false, ic.field_b, 0);
           this.field_b = new ek(param0, 6410, 128, 128, 16, var20, 6410);
-          var21 = ab.a(false, qu.field_j, 0);
+          var21 = ab.a(false, GameplaySession.field_j, 0);
           this.field_f = new ek(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_Sb;
           if (var10.b((byte) -101)) {

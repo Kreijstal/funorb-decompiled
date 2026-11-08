@@ -64,7 +64,7 @@ final class NodeHashTableIterator implements Iterator {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         leaderboardSortStatusLabels = null;
         suggestedNamesText = null;
         if (param0 == 1) {
@@ -73,14 +73,14 @@ final class NodeHashTableIterator implements Iterator {
         field_d = -74;
     }
 
-    private final void b(int param0) {
+    private final void reset(int param0) {
         this.field_f = 1;
         this.field_b = this.field_e.field_c[0].next;
         if (param0 > 4) {
           this.field_g = null;
           return;
         }
-        this.b(34);
+        this.reset(34);
         this.field_g = null;
     }
 
@@ -88,7 +88,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_g = null;
         try {
           this.field_e = param0;
-          this.b(8);
+          this.reset(8);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

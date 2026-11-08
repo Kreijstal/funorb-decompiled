@@ -5,7 +5,7 @@ import java.util.*;
 
 public final class Sumoblitz extends GameClientShell {
     static int[] field_G;
-    static hr[] field_J;
+    static ToolkitSprite[] field_J;
     private boolean field_F;
     static int field_H;
     static int field_I;
@@ -32,18 +32,18 @@ public final class Sumoblitz extends GameClientShell {
               if (var5 != 0) {
                 eg.field_l = au.a(40, param3, param2);
                 stackIn_20_0 = !(13 <= lq.field_d);
-                eg.field_l = bq.a(stackIn_20_0, 8192);
+                eg.field_l = LegacyOpenGlEffect.a(stackIn_20_0, 8192);
               }
             } else {
               eg.field_l = au.a(40, param3, param2);
               if (var5 != 0) {
                 stackIn_20_0 = !(13 <= lq.field_d);
-                eg.field_l = bq.a(stackIn_20_0, 8192);
+                eg.field_l = LegacyOpenGlEffect.a(stackIn_20_0, 8192);
               }
             }
           } else {
             stackIn_20_0 = !(13 <= lq.field_d);
-            eg.field_l = bq.a(stackIn_20_0, 8192);
+            eg.field_l = LegacyOpenGlEffect.a(stackIn_20_0, 8192);
           }
           if (param1 != 13) {
             field_H = -63;
@@ -74,10 +74,10 @@ public final class Sumoblitz extends GameClientShell {
         RuntimeException var2 = null;
         try {
           if (param0 != -15254) {
-            this.r(36);
+            this.initializeGameArchives(36);
           }
           oi.a(-27864);
-          if (gk.field_o != null) {
+          if (CompactMeshGeometry.field_o != null) {
             b.c((byte) 81);
           }
           gt.m(0);
@@ -89,9 +89,9 @@ public final class Sumoblitz extends GameClientShell {
         }
     }
 
-    private final void g(byte param0) {
+    private final void advanceScreenTransition(byte param0) {
         int fieldTemp$0 = 0;
-        qu stackIn_58_0 = null;
+        GameplaySession stackIn_58_0 = null;
         boolean stackIn_59_1 = false;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -105,12 +105,12 @@ public final class Sumoblitz extends GameClientShell {
             kh.field_e = 16777215;
           }
           var2_int = -73 / ((8 - param0) / 40);
-          if (null != pl.field_v.b(-98)) {
+          if (null != pl.field_v.first(-98)) {
             fieldTemp$0 = qn.field_g + 1;
             qn.field_g = qn.field_g + 1;
             if (fieldTemp$0 == 256) {
               qn.field_g = 0;
-              pl.field_v.c(9);
+              pl.field_v.removeFirst(9);
             }
           }
           if (0 != ra.field_e) {
@@ -167,7 +167,7 @@ public final class Sumoblitz extends GameClientShell {
           }
           stackIn_58_0 = ph.field_b;
           stackIn_59_1 = (-1 == nj.field_b);
-          ((qu) (Object) stackIn_58_0).a(stackIn_59_1, (byte) -88);
+          ((GameplaySession) (Object) stackIn_58_0).a(stackIn_59_1, (byte) -88);
           if (~rc.field_k != ~nj.field_b) {
             eh.field_a = eh.field_a + 1;
             if (eh.field_a != 30) {
@@ -183,7 +183,7 @@ public final class Sumoblitz extends GameClientShell {
             }
           }
           if (nj.field_b != -1) {
-            iv.field_g[nj.field_b].b(-18556);
+            LegacyOpenGlEffectManager.field_g[nj.field_b].b(-18556);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -193,19 +193,19 @@ public final class Sumoblitz extends GameClientShell {
         }
     }
 
-    final void f(int param0) {
+    final void initializeGame(int param0) {
         MidiPcmStream var2 = null;
-        ud var3 = null;
+        MusicCrossfadeStream var3 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
           if (param0 != 28196) {
-            Sumoblitz.a(59, -122, (byte) 42);
+            Sumoblitz.playEntityCollisionSound(59, -122, (byte) 42);
           }
           this.a(100, 3, 1, 10, 2, 0, true);
           var2 = new MidiPcmStream();
           var2.a(177, 128, 9);
-          var3 = new ud(var2, new MidiPcmStream());
+          var3 = new MusicCrossfadeStream(var2, new MidiPcmStream());
           aa.a(lt.field_m, true, var3, (byte) -125, 48000, (java.awt.Component) ((Object) qn.field_f));
           BufferedSocket.field_f = false;
           qc.field_e = var2;
@@ -218,7 +218,7 @@ public final class Sumoblitz extends GameClientShell {
         }
     }
 
-    final void d(int param0) {
+    final void renderFrame(int param0) {
         try {
           boolean stackIn_50_0 = false;
           Throwable decompiledCaughtException = null;
@@ -248,7 +248,7 @@ public final class Sumoblitz extends GameClientShell {
           var10 = field_L ? 1 : 0;
           try {
             var2 = hk.b(-97);
-            lk.b();
+            SoftwareRasterizer.b();
             if (in.g(param0 ^ -99)) {
               ad.a((byte) 122, var2, np.a(param0 ^ 7));
               return;
@@ -271,39 +271,39 @@ public final class Sumoblitz extends GameClientShell {
             ph.field_b.a(param0 ^ 120, var3, false);
             if (rc.field_k == nj.field_b) {
               if (-1 != nj.field_b) {
-                iv.field_g[nj.field_b].a(255, var3, -2355);
+                LegacyOpenGlEffectManager.field_g[nj.field_b].a(255, var3, -2355);
                 if (var10 != 0) {
                   var4_int = 255 * eh.field_a / 30;
                   if (-1 != nj.field_b) {
-                    iv.field_g[nj.field_b].a(-var4_int + 255, var3, -2355);
+                    LegacyOpenGlEffectManager.field_g[nj.field_b].a(-var4_int + 255, var3, -2355);
                   }
                   if (-1 != rc.field_k) {
-                    iv.field_g[rc.field_k].a(var4_int, var3, -2355);
+                    LegacyOpenGlEffectManager.field_g[rc.field_k].a(var4_int, var3, -2355);
                   }
                 }
               }
             } else {
               var4_int = 255 * eh.field_a / 30;
               if (-1 != nj.field_b) {
-                iv.field_g[nj.field_b].a(-var4_int + 255, var3, -2355);
+                LegacyOpenGlEffectManager.field_g[nj.field_b].a(-var4_int + 255, var3, -2355);
               }
               if (-1 != rc.field_k) {
-                iv.field_g[rc.field_k].a(var4_int, var3, -2355);
+                LegacyOpenGlEffectManager.field_g[rc.field_k].a(var4_int, var3, -2355);
               }
             }
             if (so.a((byte) 103)) {
-              lk.a(0, 0, lk.field_b, lk.field_c);
+              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c);
               OpenGlUnderwaterEffect.d((byte) -7);
             }
             if (param0 != ra.field_e) {
               var4_intLifetime1 = 256 * eh.field_a / 30;
               if (var4_intLifetime1 > 0) {
-                lk.b(0, 0, lk.field_b, lk.field_c, 0, var4_intLifetime1);
+                SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, 0, var4_intLifetime1);
               }
             }
             if (sj.a(param0 - 85) &&
               !so.a((byte) -75)) {
-              if (gk.field_o != null) {
+              if (CompactMeshGeometry.field_o != null) {
                 stackIn_50_0 = true;
               } else {
                 stackIn_50_0 = ii.field_a;
@@ -311,10 +311,10 @@ public final class Sumoblitz extends GameClientShell {
               kn.a(stackIn_50_0, 25);
             }
             if (ku.field_j >= 2 &&
-              gw.field_v) {
-              bq.field_c.a(20, 20, 16777215, Integer.toString(aj.field_B), (byte) -81, 1);
+              SceneryParticle.field_v) {
+              LegacyOpenGlEffect.field_c.a(20, 20, 16777215, Integer.toString(aj.field_B), (byte) -81, 1);
             }
-            var4 = (ge) (pl.field_v.b(param0 - 121));
+            var4 = (ge) (pl.field_v.first(param0 - 121));
             if (null != var4) {
               var6 = qn.field_g;
               if (var6 >= 64) {
@@ -346,14 +346,14 @@ public final class Sumoblitz extends GameClientShell {
                   qw.field_a[var4.field_m].a(-32 + ArchiveCatalog.field_c - 180 + 85, 45, 64, 64, 0, 16777215 | var5_int << 24, 1);
                 }
               }
-              bq.field_c.a(150, var5_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, -1 + var7, var5_int << 24, 0, 18, -8787, var8_ref_String, (aa) null, 1, 0);
-              bq.field_c.a(150, var5_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, 1 + var7, var5_int << 24, 0, 18, -8787, var8_ref_String, (aa) null, 1, 0);
-              bq.field_c.a(150, var5_int << 24 | 16777215, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, var7, -1, 0, 18, -8787, var8_ref_String, (aa) null, 1, 0);
+              LegacyOpenGlEffect.field_c.a(150, var5_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, -1 + var7, var5_int << 24, 0, 18, -8787, var8_ref_String, (aa) null, 1, 0);
+              LegacyOpenGlEffect.field_c.a(150, var5_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, 1 + var7, var5_int << 24, 0, 18, -8787, var8_ref_String, (aa) null, 1, 0);
+              LegacyOpenGlEffect.field_c.a(150, var5_int << 24 | 16777215, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, var7, -1, 0, 18, -8787, var8_ref_String, (aa) null, 1, 0);
             }
             boolean decompiledFrameRemainder0 = true;
             if (oj.a(false)) {
-              var5_intLifetime1 = (-lk.field_b + gi.field_h) * 0 / 2;
-              var6Lifetime1 = 0 * (wq.field_b - lk.field_c) / 2;
+              var5_intLifetime1 = (-SoftwareRasterizer.field_b + gi.field_h) * 0 / 2;
+              var6Lifetime1 = 0 * (wq.field_b - SoftwareRasterizer.field_c) / 2;
               cf.a(var5_intLifetime1, var6Lifetime1, 59);
               kn.a(false, (byte) -122);
               this.field_F = true;
@@ -364,24 +364,24 @@ public final class Sumoblitz extends GameClientShell {
                 if (!ws.b((byte) 52)) {
                   this.field_F = false;
                   if (var10 != 0) {
-                    var5_intLifetime1Lifetime1 = 0 * (-lk.field_b + gi.field_h) / 2;
-                    var6Lifetime1Lifetime1 = (wq.field_b - lk.field_c) * 0 / 2;
+                    var5_intLifetime1Lifetime1 = 0 * (-SoftwareRasterizer.field_b + gi.field_h) / 2;
+                    var6Lifetime1Lifetime1 = (wq.field_b - SoftwareRasterizer.field_c) * 0 / 2;
                     ls.a(var5_intLifetime1Lifetime1, -80, var6Lifetime1Lifetime1);
                     kn.a(false, param0 ^ 121);
                     this.field_F = true;
                   }
                 }
               } else {
-                var5_intLifetime1Lifetime1 = 0 * (-lk.field_b + gi.field_h) / 2;
-                var6Lifetime1Lifetime1 = (wq.field_b - lk.field_c) * 0 / 2;
+                var5_intLifetime1Lifetime1 = 0 * (-SoftwareRasterizer.field_b + gi.field_h) / 2;
+                var6Lifetime1Lifetime1 = (wq.field_b - SoftwareRasterizer.field_c) * 0 / 2;
                 ls.a(var5_intLifetime1Lifetime1, -80, var6Lifetime1Lifetime1);
                 kn.a(false, param0 ^ 121);
                 this.field_F = true;
               }
             }
             if (this.field_F) {
-              var5_intLifetime2 = lk.field_b;
-              var6Lifetime2 = lk.field_c;
+              var5_intLifetime2 = SoftwareRasterizer.field_b;
+              var6Lifetime2 = SoftwareRasterizer.field_c;
               if (this.field_K != null) {
                 var6Lifetime2 = this.field_K.field_u;
                 var5_intLifetime2 = this.field_K.field_x;
@@ -390,14 +390,14 @@ public final class Sumoblitz extends GameClientShell {
               var8 = (wq.field_b - var6Lifetime2) / 2;
               if (oj.a(false) &&
                 this.field_K != null) {
-                var7Lifetime1 = ik.c(param0 ^ -10517);
+                var7Lifetime1 = GraphicsToolkitManager.c(param0 ^ -10517);
                 var8 = fd.b(3878);
               }
               var9 = wq.a(var3, (byte) 18);
               var9.a((byte) 111, var8, var8 + var6Lifetime2, var7Lifetime1, var7Lifetime1 + var5_intLifetime2);
-              var7Lifetime1Lifetime1 = (-lk.field_b + gi.field_h) / 2;
-              var8Lifetime1 = (wq.field_b - lk.field_c) / 2;
-              var3.SA(var7Lifetime1Lifetime1, var8Lifetime1, lk.field_b, lk.field_c, lk.field_a, 0, lk.field_b);
+              var7Lifetime1Lifetime1 = (-SoftwareRasterizer.field_b + gi.field_h) / 2;
+              var8Lifetime1 = (wq.field_b - SoftwareRasterizer.field_c) / 2;
+              var3.SA(var7Lifetime1Lifetime1, var8Lifetime1, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, 0, SoftwareRasterizer.field_b);
               var9.a(param0 + 29709);
             }
             try {
@@ -420,7 +420,7 @@ public final class Sumoblitz extends GameClientShell {
         }
     }
 
-    private final void r(int param0) {
+    private final void initializeGameArchives(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -430,7 +430,7 @@ public final class Sumoblitz extends GameClientShell {
             ls.b(param0 - 21961);
           }
           if (param0 != 21961) {
-            this.g((byte) -69);
+            this.advanceScreenTransition((byte) -69);
           }
           jg.field_a = true;
           kf.field_v = wd.a(4, (byte) 125);
@@ -439,10 +439,10 @@ public final class Sumoblitz extends GameClientShell {
           er.field_c = wd.a(7, (byte) 125);
           gg.field_r = wd.a(8, (byte) 125);
           be.field_s = wd.a(9, (byte) 125);
-          ik.field_d = wd.a(12, (byte) 125);
-          iv.field_b = new Random(wq.a(-52));
+          GraphicsToolkitManager.field_d = wd.a(12, (byte) 125);
+          LegacyOpenGlEffectManager.field_b = new Random(wq.a(-52));
           if (null == nq.field_h) {
-            nq.field_h = new ik(11, -1, (d) null);
+            nq.field_h = new GraphicsToolkitManager(11, -1, (d) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -452,7 +452,7 @@ public final class Sumoblitz extends GameClientShell {
         }
     }
 
-    public static void s(int param0) {
+    public static void releaseStatics(int param0) {
         field_J = null;
         if (param0 != 0) {
           return;
@@ -464,7 +464,7 @@ public final class Sumoblitz extends GameClientShell {
         }
     }
 
-    final void b(int param0) {
+    final void updateGame(int param0) {
         boolean discarded$0 = false;
         boolean stackIn_11_1 = false;
         int stackIn_85_1 = 0;
@@ -478,15 +478,15 @@ public final class Sumoblitz extends GameClientShell {
         var4 = field_L ? 1 : 0;
         try {
           fv.e((byte) 76);
-          if (gk.field_o != null &&
-            gk.field_o.field_a) {
+          if (CompactMeshGeometry.field_o != null &&
+            CompactMeshGeometry.field_o.field_a) {
             b.c((byte) 49);
             qw.a((byte) 35);
           }
-          stackIn_11_1 = (null != gk.field_o);
+          stackIn_11_1 = (null != CompactMeshGeometry.field_o);
           this.b(stackIn_11_1, -103);
           if (ml.field_u) {
-            this.r(21961);
+            this.initializeGameArchives(21961);
             ml.field_u = false;
           }
           if (in.g(-42)) {
@@ -537,27 +537,27 @@ public final class Sumoblitz extends GameClientShell {
                       break;
                   }
                   if (!so.a((byte) 109)) {
-                    iv.field_g[nj.field_b].b(-8628, true);
+                    LegacyOpenGlEffectManager.field_g[nj.field_b].b(-8628, true);
                   }
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  this.g((byte) 96);
+                  this.advanceScreenTransition((byte) 96);
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
                 if (!sj.a(-123)) {
-                  this.g((byte) -94);
+                  this.advanceScreenTransition((byte) -94);
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
                 if (decompiledFrameRemainder0) {
                   stackIn_85_1 = -1;
-                  stackIn_86_2 = (gk.field_o != null);
+                  stackIn_86_2 = (CompactMeshGeometry.field_o != null);
                   var2_int = this.a(stackIn_85_1, stackIn_86_2);
                   if (1 == var2_int ||
                     var2_int == 2) {
-                    if (null != gk.field_o) {
+                    if (null != CompactMeshGeometry.field_o) {
                       b.c((byte) 49);
                     }
                     if (2 == var2_int) {
@@ -579,7 +579,7 @@ public final class Sumoblitz extends GameClientShell {
           var2_int = 35 % ((37 - param0) / 61);
           if (!vs.b((byte) 9)) {
             do {
-              var3_ref_hg = (hg) (OpenGlUnderwaterEffect.field_q.c(9));
+              var3_ref_hg = (hg) (OpenGlUnderwaterEffect.field_q.removeFirst(9));
               if (var3_ref_hg == null) {
                 if (var4 == 0) {
                   break;
@@ -645,13 +645,13 @@ public final class Sumoblitz extends GameClientShell {
     private final boolean a(boolean param0, boolean param1) {
         try {
           boolean discarded$0 = false;
-          ik stackIn_95_0 = null;
+          GraphicsToolkitManager stackIn_95_0 = null;
           boolean stackIn_96_1 = false;
           boolean stackIn_134_0 = false;
           boolean stackIn_249_0 = false;
           boolean stackIn_276_0 = false;
           boolean stackIn_363_0 = false;
-          ik stackIn_450_0 = null;
+          GraphicsToolkitManager stackIn_450_0 = null;
           boolean stackIn_451_1 = false;
           boolean stackIn_492_0 = false;
           boolean stackIn_606_0 = false;
@@ -700,12 +700,12 @@ public final class Sumoblitz extends GameClientShell {
                               kf.field_v.a(true)) {
                               if (dq.field_Z.b((byte) 127) &&
                                 dq.field_Z.a(true)) {
-                                if (ik.field_d.b((byte) 127) &&
-                                  ik.field_d.a(true)) {
+                                if (GraphicsToolkitManager.field_d.b((byte) 127) &&
+                                  GraphicsToolkitManager.field_d.a(true)) {
                                   boolean decompiledFrameRemainder6 = true;
                                   pe.a(20, 65.0f, hv.unpackingSoundEffectsText);
                                   var3 = hk.b(-22);
-                                  lk.b();
+                                  SoftwareRasterizer.b();
                                   if (in.g(-61)) {
                                     ad.a((byte) 85, var3, np.a(7));
                                     decompiledFrameRemainder6 = (var11 != 0);
@@ -724,46 +724,46 @@ public final class Sumoblitz extends GameClientShell {
                                       if (decompiledFrameRemainder6) {
                                         stackIn_95_0 = nq.field_h;
                                         stackIn_96_1 = !(param1);
-                                        if (!((ik) (Object) stackIn_95_0).a(stackIn_96_1) ||
+                                        if (!((GraphicsToolkitManager) (Object) stackIn_95_0).a(stackIn_96_1) ||
                                           this.h((byte) -105)) {
                                           var4 = nq.field_h.a(-97);
                                           var4.GA(0);
                                           ph.field_b.a(124, var4, false);
                                           if (~rc.field_k == ~nj.field_b) {
                                             if (-1 != nj.field_b) {
-                                              iv.field_g[nj.field_b].a(255, var4, -2355);
+                                              LegacyOpenGlEffectManager.field_g[nj.field_b].a(255, var4, -2355);
                                               if (var11 != 0) {
                                                 var5_int = 255 * eh.field_a / 30;
                                                 if (-1 != nj.field_b) {
-                                                  iv.field_g[nj.field_b].a(255 - var5_int, var4, -2355);
+                                                  LegacyOpenGlEffectManager.field_g[nj.field_b].a(255 - var5_int, var4, -2355);
                                                 }
                                                 if (rc.field_k != -1) {
-                                                  iv.field_g[rc.field_k].a(var5_int, var4, -2355);
+                                                  LegacyOpenGlEffectManager.field_g[rc.field_k].a(var5_int, var4, -2355);
                                                 }
                                               }
                                             }
                                           } else {
                                             var5_int = 255 * eh.field_a / 30;
                                             if (-1 != nj.field_b) {
-                                              iv.field_g[nj.field_b].a(255 - var5_int, var4, -2355);
+                                              LegacyOpenGlEffectManager.field_g[nj.field_b].a(255 - var5_int, var4, -2355);
                                             }
                                             if (rc.field_k != -1) {
-                                              iv.field_g[rc.field_k].a(var5_int, var4, -2355);
+                                              LegacyOpenGlEffectManager.field_g[rc.field_k].a(var5_int, var4, -2355);
                                             }
                                           }
                                           if (so.a((byte) 124)) {
-                                            lk.a(0, 0, lk.field_b, lk.field_c);
+                                            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c);
                                             OpenGlUnderwaterEffect.d((byte) -7);
                                           }
                                           if (0 != ra.field_e) {
                                             var5_int = eh.field_a * 256 / 30;
                                             if (var5_int > 0) {
-                                              lk.b(0, 0, lk.field_b, lk.field_c, 0, var5_int);
+                                              SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, 0, var5_int);
                                             }
                                           }
                                           if (sj.a(-67) &&
                                             !so.a((byte) 115)) {
-                                            if (null != gk.field_o) {
+                                            if (null != CompactMeshGeometry.field_o) {
                                               stackIn_134_0 = true;
                                             } else {
                                               stackIn_134_0 = ii.field_a;
@@ -771,10 +771,10 @@ public final class Sumoblitz extends GameClientShell {
                                             kn.a(stackIn_134_0, 25);
                                           }
                                           if (ku.field_j >= 2 &&
-                                            gw.field_v) {
-                                            bq.field_c.a(20, 20, 16777215, Integer.toString(aj.field_B), (byte) -103, 1);
+                                            SceneryParticle.field_v) {
+                                            LegacyOpenGlEffect.field_c.a(20, 20, 16777215, Integer.toString(aj.field_B), (byte) -103, 1);
                                           }
-                                          var5 = (ge) (pl.field_v.b(82));
+                                          var5 = (ge) (pl.field_v.first(82));
                                           if (null != var5) {
                                             var7 = qn.field_g;
                                             if (var7 < 64) {
@@ -810,14 +810,14 @@ public final class Sumoblitz extends GameClientShell {
                                             } else {
                                               var9_ref_String = aa.arcadeModeUnlockedText;
                                             }
-                                            bq.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                                            bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                                            bq.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                                            LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                                            LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                                            LegacyOpenGlEffect.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
                                           }
                                           boolean decompiledSharedTail8 = !(oj.a(false));
                                           if (!decompiledSharedTail8) {
-                                            var6_int = (-lk.field_b + gi.field_h) * 0 / 2;
-                                            var7 = (-lk.field_c + wq.field_b) * 0 / 2;
+                                            var6_int = (-SoftwareRasterizer.field_b + gi.field_h) * 0 / 2;
+                                            var7 = (-SoftwareRasterizer.field_c + wq.field_b) * 0 / 2;
                                             cf.a(var6_int, var7, 76);
                                             kn.a(false, (byte) -122);
                                             this.field_F = true;
@@ -825,8 +825,8 @@ public final class Sumoblitz extends GameClientShell {
                                           }
                                           if (decompiledSharedTail8) {
                                             if (sj.a(-126)) {
-                                              var6_int = (-lk.field_b + gi.field_h) * 0 / 2;
-                                              var7 = (wq.field_b - lk.field_c) * 0 / 2;
+                                              var6_int = (-SoftwareRasterizer.field_b + gi.field_h) * 0 / 2;
+                                              var7 = (wq.field_b - SoftwareRasterizer.field_c) * 0 / 2;
                                               ls.a(var6_int, -45, var7);
                                               kn.a(false, -66);
                                               this.field_F = true;
@@ -841,8 +841,8 @@ public final class Sumoblitz extends GameClientShell {
                                             }
                                           }
                                           if (this.field_F) {
-                                            var6_int = lk.field_b;
-                                            var7 = lk.field_c;
+                                            var6_int = SoftwareRasterizer.field_b;
+                                            var7 = SoftwareRasterizer.field_c;
                                             if (this.field_K != null) {
                                               var6_int = this.field_K.field_x;
                                               var7 = this.field_K.field_u;
@@ -851,14 +851,14 @@ public final class Sumoblitz extends GameClientShell {
                                             var9 = (-var7 + wq.field_b) / 2;
                                             if (oj.a(false) &&
                                               this.field_K != null) {
-                                              var8 = ik.c(-10517);
+                                              var8 = GraphicsToolkitManager.c(-10517);
                                               var9 = fd.b(3878);
                                             }
                                             var10 = wq.a(var4, (byte) 126);
                                             var10.a((byte) 91, var9, var7 + var9, var8, var6_int + var8);
-                                            var9 = (-lk.field_c + wq.field_b) / 2;
-                                            var8 = (-lk.field_b + gi.field_h) / 2;
-                                            var4.SA(var8, var9, lk.field_b, lk.field_c, lk.field_a, 0, lk.field_b);
+                                            var9 = (-SoftwareRasterizer.field_c + wq.field_b) / 2;
+                                            var8 = (-SoftwareRasterizer.field_b + gi.field_h) / 2;
+                                            var4.SA(var8, var9, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, 0, SoftwareRasterizer.field_b);
                                             var10.a(29709);
                                           }
                                           try {
@@ -882,7 +882,7 @@ public final class Sumoblitz extends GameClientShell {
                                   ls.b(0);
                                   return false;
                                 }
-                                pe.a(20, 60.0f, ProxySocketConnector.a(nm.waitingForLevelsText, (byte) 85, 0, ik.field_d, b.loadingLevelsText));
+                                pe.a(20, 60.0f, ProxySocketConnector.a(nm.waitingForLevelsText, (byte) 85, 0, GraphicsToolkitManager.field_d, b.loadingLevelsText));
                                 return false;
                               }
                               pe.a(20, 55.0f, pt.a("", dq.field_Z, ce.waitingForFontsText, true, ow.loadingFontsText));
@@ -916,7 +916,7 @@ public final class Sumoblitz extends GameClientShell {
               boolean decompiledFrameRemainder5 = true;
               pe.a(20, 70.0f, hv.unpackingSoundEffectsText);
               var3 = hk.b(-103);
-              lk.b();
+              SoftwareRasterizer.b();
               if (in.g(-96)) {
                 ad.a((byte) -45, var3, np.a(7));
                 decompiledFrameRemainder5 = (var11 != 0);
@@ -941,30 +941,30 @@ public final class Sumoblitz extends GameClientShell {
                     if (!decompiledSharedTail7) {
                       var5_int = eh.field_a * 255 / 30;
                       if (nj.field_b != -1) {
-                        iv.field_g[nj.field_b].a(-var5_int + 255, var4, -2355);
+                        LegacyOpenGlEffectManager.field_g[nj.field_b].a(-var5_int + 255, var4, -2355);
                       }
                       if (rc.field_k != -1) {
-                        iv.field_g[rc.field_k].a(var5_int, var4, -2355);
+                        LegacyOpenGlEffectManager.field_g[rc.field_k].a(var5_int, var4, -2355);
                       }
                       decompiledSharedTail7 = (var11 != 0);
                     }
                     if ((decompiledSharedTail7) &&
                       (nj.field_b != -1)) {
-                      iv.field_g[nj.field_b].a(255, var4, -2355);
+                      LegacyOpenGlEffectManager.field_g[nj.field_b].a(255, var4, -2355);
                     }
                     if (so.a((byte) 118)) {
-                      lk.a(0, 0, lk.field_b, lk.field_c);
+                      SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c);
                       OpenGlUnderwaterEffect.d((byte) -7);
                     }
                     if (ra.field_e != 0) {
                       var5_int = eh.field_a * 256 / 30;
                       if (var5_int > 0) {
-                        lk.b(0, 0, lk.field_b, lk.field_c, 0, var5_int);
+                        SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, 0, var5_int);
                       }
                     }
                     if (sj.a(-126) &&
                       !so.a((byte) 110)) {
-                      if (gk.field_o != null) {
+                      if (CompactMeshGeometry.field_o != null) {
                         stackIn_249_0 = true;
                       } else {
                         stackIn_249_0 = ii.field_a;
@@ -972,10 +972,10 @@ public final class Sumoblitz extends GameClientShell {
                       kn.a(stackIn_249_0, 64);
                     }
                     if (2 <= ku.field_j &&
-                      gw.field_v) {
-                      bq.field_c.a(20, 20, 16777215, Integer.toString(aj.field_B), (byte) -98, 1);
+                      SceneryParticle.field_v) {
+                      LegacyOpenGlEffect.field_c.a(20, 20, 16777215, Integer.toString(aj.field_B), (byte) -98, 1);
                     }
-                    var5 = (ge) (pl.field_v.b(-100));
+                    var5 = (ge) (pl.field_v.first(-100));
                     if (var5 != null) {
                       var7 = qn.field_g;
                       if (64 <= var7) {
@@ -1007,15 +1007,15 @@ public final class Sumoblitz extends GameClientShell {
                       } else {
                         var9_ref_String = aa.arcadeModeUnlockedText;
                       }
-                      bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                      bq.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                      bq.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                      LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                      LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                      LegacyOpenGlEffect.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
                     }
                     stackIn_276_0 = !param1;
                     boolean decompiledFrameRemainder4 = true;
                     if (oj.a(stackIn_276_0)) {
-                      var6_int = 0 * (-lk.field_b + gi.field_h) / 2;
-                      var7 = 0 * (-lk.field_c + wq.field_b) / 2;
+                      var6_int = 0 * (-SoftwareRasterizer.field_b + gi.field_h) / 2;
+                      var7 = 0 * (-SoftwareRasterizer.field_c + wq.field_b) / 2;
                       cf.a(var6_int, var7, 126);
                       kn.a(false, (byte) -122);
                       this.field_F = true;
@@ -1026,24 +1026,24 @@ public final class Sumoblitz extends GameClientShell {
                         if (!ws.b((byte) 52)) {
                           this.field_F = false;
                           if (var11 != 0) {
-                            var6_int = (-lk.field_b + gi.field_h) * 0 / 2;
-                            var7 = (-lk.field_c + wq.field_b) * 0 / 2;
+                            var6_int = (-SoftwareRasterizer.field_b + gi.field_h) * 0 / 2;
+                            var7 = (-SoftwareRasterizer.field_c + wq.field_b) * 0 / 2;
                             ls.a(var6_int, -66, var7);
                             kn.a(false, -124);
                             this.field_F = true;
                           }
                         }
                       } else {
-                        var6_int = (-lk.field_b + gi.field_h) * 0 / 2;
-                        var7 = (-lk.field_c + wq.field_b) * 0 / 2;
+                        var6_int = (-SoftwareRasterizer.field_b + gi.field_h) * 0 / 2;
+                        var7 = (-SoftwareRasterizer.field_c + wq.field_b) * 0 / 2;
                         ls.a(var6_int, -66, var7);
                         kn.a(false, -124);
                         this.field_F = true;
                       }
                     }
                     if (this.field_F) {
-                      var6_int = lk.field_b;
-                      var7 = lk.field_c;
+                      var6_int = SoftwareRasterizer.field_b;
+                      var7 = SoftwareRasterizer.field_c;
                       if (null != this.field_K) {
                         var6_int = this.field_K.field_x;
                         var7 = this.field_K.field_u;
@@ -1052,14 +1052,14 @@ public final class Sumoblitz extends GameClientShell {
                       var9 = (-var7 + wq.field_b) / 2;
                       if (oj.a(false) &&
                         null != this.field_K) {
-                        var8 = ik.c(-10517);
+                        var8 = GraphicsToolkitManager.c(-10517);
                         var9 = fd.b(3878);
                       }
                       var10 = wq.a(var4, (byte) 70);
                       var10.a((byte) -88, var9, var7 + var9, var8, var6_int + var8);
-                      var9 = (-lk.field_c + wq.field_b) / 2;
-                      var8 = (-lk.field_b + gi.field_h) / 2;
-                      var4.SA(var8, var9, lk.field_b, lk.field_c, lk.field_a, 0, lk.field_b);
+                      var9 = (-SoftwareRasterizer.field_c + wq.field_b) / 2;
+                      var8 = (-SoftwareRasterizer.field_b + gi.field_h) / 2;
+                      var4.SA(var8, var9, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, 0, SoftwareRasterizer.field_b);
                       var10.a(29709);
                     }
                     try {
@@ -1081,7 +1081,7 @@ public final class Sumoblitz extends GameClientShell {
               boolean decompiledFrameRemainder3 = true;
               pe.a(20, 75.0f, ClientException.unpackingMusicText);
               var3 = hk.b(-103);
-              lk.b();
+              SoftwareRasterizer.b();
               if (in.g(-98)) {
                 ad.a((byte) 95, var3, np.a(7));
                 decompiledFrameRemainder3 = (var11 != 0);
@@ -1107,30 +1107,30 @@ public final class Sumoblitz extends GameClientShell {
                     if (!decompiledSharedTail6) {
                       var5_int = 255 * eh.field_a / 30;
                       if (nj.field_b != -1) {
-                        iv.field_g[nj.field_b].a(-var5_int + 255, var4, -2355);
+                        LegacyOpenGlEffectManager.field_g[nj.field_b].a(-var5_int + 255, var4, -2355);
                       }
                       if (rc.field_k != -1) {
-                        iv.field_g[rc.field_k].a(var5_int, var4, -2355);
+                        LegacyOpenGlEffectManager.field_g[rc.field_k].a(var5_int, var4, -2355);
                       }
                       decompiledSharedTail6 = (var11 != 0);
                     }
                     if ((decompiledSharedTail6) &&
                       (-1 != nj.field_b)) {
-                      iv.field_g[nj.field_b].a(255, var4, -2355);
+                      LegacyOpenGlEffectManager.field_g[nj.field_b].a(255, var4, -2355);
                     }
                     if (so.a((byte) 109)) {
-                      lk.a(0, 0, lk.field_b, lk.field_c);
+                      SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c);
                       OpenGlUnderwaterEffect.d((byte) -7);
                     }
                     if (ra.field_e != 0) {
                       var5_int = eh.field_a * 256 / 30;
                       if (0 < var5_int) {
-                        lk.b(0, 0, lk.field_b, lk.field_c, 0, var5_int);
+                        SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, 0, var5_int);
                       }
                     }
                     if (sj.a(-28) &&
                       !so.a((byte) -55)) {
-                      if (gk.field_o == null) {
+                      if (CompactMeshGeometry.field_o == null) {
                         stackIn_363_0 = ii.field_a;
                       } else {
                         stackIn_363_0 = true;
@@ -1138,10 +1138,10 @@ public final class Sumoblitz extends GameClientShell {
                       kn.a(stackIn_363_0, -122);
                     }
                     if (ku.field_j >= 2 &&
-                      gw.field_v) {
-                      bq.field_c.a(20, 20, 16777215, Integer.toString(aj.field_B), (byte) -122, 1);
+                      SceneryParticle.field_v) {
+                      LegacyOpenGlEffect.field_c.a(20, 20, 16777215, Integer.toString(aj.field_B), (byte) -122, 1);
                     }
-                    var5 = (ge) (pl.field_v.b(-85));
+                    var5 = (ge) (pl.field_v.first(-85));
                     if (null != var5) {
                       var7 = qn.field_g;
                       if (64 <= var7) {
@@ -1173,14 +1173,14 @@ public final class Sumoblitz extends GameClientShell {
                           qw.field_a[var5.field_m].a(ArchiveCatalog.field_c - 180 + 53, 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                         }
                       }
-                      bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, var8 - 1, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                      bq.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                      bq.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                      LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, var8 - 1, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                      LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                      LegacyOpenGlEffect.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
                     }
                     boolean decompiledFrameRemainder2 = true;
                     if (oj.a(false)) {
-                      var6_int = 0 * (gi.field_h - lk.field_b) / 2;
-                      var7 = (wq.field_b - lk.field_c) * 0 / 2;
+                      var6_int = 0 * (gi.field_h - SoftwareRasterizer.field_b) / 2;
+                      var7 = (wq.field_b - SoftwareRasterizer.field_c) * 0 / 2;
                       cf.a(var6_int, var7, 86);
                       kn.a(false, (byte) -122);
                       this.field_F = true;
@@ -1191,24 +1191,24 @@ public final class Sumoblitz extends GameClientShell {
                         if (!ws.b((byte) 52)) {
                           this.field_F = false;
                           if (var11 != 0) {
-                            var6_int = 0 * (gi.field_h - lk.field_b) / 2;
-                            var7 = (wq.field_b - lk.field_c) * 0 / 2;
+                            var6_int = 0 * (gi.field_h - SoftwareRasterizer.field_b) / 2;
+                            var7 = (wq.field_b - SoftwareRasterizer.field_c) * 0 / 2;
                             ls.a(var6_int, -82, var7);
                             kn.a(false, -100);
                             this.field_F = true;
                           }
                         }
                       } else {
-                        var6_int = 0 * (gi.field_h - lk.field_b) / 2;
-                        var7 = (wq.field_b - lk.field_c) * 0 / 2;
+                        var6_int = 0 * (gi.field_h - SoftwareRasterizer.field_b) / 2;
+                        var7 = (wq.field_b - SoftwareRasterizer.field_c) * 0 / 2;
                         ls.a(var6_int, -82, var7);
                         kn.a(false, -100);
                         this.field_F = true;
                       }
                     }
                     if (this.field_F) {
-                      var6_int = lk.field_b;
-                      var7 = lk.field_c;
+                      var6_int = SoftwareRasterizer.field_b;
+                      var7 = SoftwareRasterizer.field_c;
                       if (this.field_K != null) {
                         var6_int = this.field_K.field_x;
                         var7 = this.field_K.field_u;
@@ -1217,14 +1217,14 @@ public final class Sumoblitz extends GameClientShell {
                       var9 = (-var7 + wq.field_b) / 2;
                       if (oj.a(false) &&
                         this.field_K != null) {
-                        var8 = ik.c(-10517);
+                        var8 = GraphicsToolkitManager.c(-10517);
                         var9 = fd.b(3878);
                       }
                       var10 = wq.a(var4, (byte) 28);
                       var10.a((byte) 127, var9, var7 + var9, var8, var8 + var6_int);
-                      var9 = (wq.field_b - lk.field_c) / 2;
-                      var8 = (-lk.field_b + gi.field_h) / 2;
-                      var4.SA(var8, var9, lk.field_b, lk.field_c, lk.field_a, 0, lk.field_b);
+                      var9 = (wq.field_b - SoftwareRasterizer.field_c) / 2;
+                      var8 = (-SoftwareRasterizer.field_b + gi.field_h) / 2;
+                      var4.SA(var8, var9, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, 0, SoftwareRasterizer.field_b);
                       var10.a(29709);
                     }
                     try {
@@ -1251,11 +1251,11 @@ public final class Sumoblitz extends GameClientShell {
               ls.b(0);
               return false;
             }
-            if (ik.field_d != null) {
+            if (GraphicsToolkitManager.field_d != null) {
               boolean decompiledFrameRemainder1 = true;
               pe.a(20, 80.0f, om.unpackingLevelsText);
               var3 = hk.b(125);
-              lk.b();
+              SoftwareRasterizer.b();
               if (in.g(-128)) {
                 ad.a((byte) -75, var3, np.a(7));
                 decompiledFrameRemainder1 = (var11 != 0);
@@ -1274,7 +1274,7 @@ public final class Sumoblitz extends GameClientShell {
                   if (decompiledFrameRemainder1) {
                     stackIn_450_0 = nq.field_h;
                     stackIn_451_1 = !(param1);
-                    if (!((ik) (Object) stackIn_450_0).a(stackIn_451_1) ||
+                    if (!((GraphicsToolkitManager) (Object) stackIn_450_0).a(stackIn_451_1) ||
                       this.h((byte) -11) ||
                       var11 != 0) {
                       var4 = nq.field_h.a(-120);
@@ -1284,30 +1284,30 @@ public final class Sumoblitz extends GameClientShell {
                       if (!decompiledSharedTail4) {
                         var5_int = eh.field_a * 255 / 30;
                         if (-1 != nj.field_b) {
-                          iv.field_g[nj.field_b].a(-var5_int + 255, var4, -2355);
+                          LegacyOpenGlEffectManager.field_g[nj.field_b].a(-var5_int + 255, var4, -2355);
                         }
                         if (rc.field_k != -1) {
-                          iv.field_g[rc.field_k].a(var5_int, var4, -2355);
+                          LegacyOpenGlEffectManager.field_g[rc.field_k].a(var5_int, var4, -2355);
                         }
                         decompiledSharedTail4 = (var11 != 0);
                       }
                       if ((decompiledSharedTail4) &&
                         (nj.field_b != -1)) {
-                        iv.field_g[nj.field_b].a(255, var4, -2355);
+                        LegacyOpenGlEffectManager.field_g[nj.field_b].a(255, var4, -2355);
                       }
                       if (so.a((byte) -36)) {
-                        lk.a(0, 0, lk.field_b, lk.field_c);
+                        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c);
                         OpenGlUnderwaterEffect.d((byte) -7);
                       }
                       if (ra.field_e != 0) {
                         var5_int = 256 * eh.field_a / 30;
                         if (var5_int > 0) {
-                          lk.b(0, 0, lk.field_b, lk.field_c, 0, var5_int);
+                          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, 0, var5_int);
                         }
                       }
                       if (sj.a(-103) &&
                         !so.a((byte) 127)) {
-                        if (null != gk.field_o) {
+                        if (null != CompactMeshGeometry.field_o) {
                           stackIn_492_0 = true;
                         } else {
                           stackIn_492_0 = ii.field_a;
@@ -1315,10 +1315,10 @@ public final class Sumoblitz extends GameClientShell {
                         kn.a(stackIn_492_0, 115);
                       }
                       if (ku.field_j >= 2 &&
-                        gw.field_v) {
-                        bq.field_c.a(20, 20, 16777215, Integer.toString(aj.field_B), (byte) -61, 1);
+                        SceneryParticle.field_v) {
+                        LegacyOpenGlEffect.field_c.a(20, 20, 16777215, Integer.toString(aj.field_B), (byte) -61, 1);
                       }
-                      var5 = (ge) (pl.field_v.b(110));
+                      var5 = (ge) (pl.field_v.first(110));
                       if (null != var5) {
                         var7 = qn.field_g;
                         if (var7 < 64) {
@@ -1354,14 +1354,14 @@ public final class Sumoblitz extends GameClientShell {
                             qw.field_a[var5.field_m].a(-127 + ArchiveCatalog.field_c, 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                           }
                         }
-                        bq.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                        bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                        bq.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                        LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                        LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, 1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                        LegacyOpenGlEffect.field_c.a(150, var6_int << 24 | 16777215, 0, 170, ArchiveCatalog.field_c - 180, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
                       }
                       boolean decompiledSharedTail2 = !(oj.a(false));
                       if (!decompiledSharedTail2) {
-                        var6_int = (gi.field_h - lk.field_b) * 0 / 2;
-                        var7 = (-lk.field_c + wq.field_b) * 0 / 2;
+                        var6_int = (gi.field_h - SoftwareRasterizer.field_b) * 0 / 2;
+                        var7 = (-SoftwareRasterizer.field_c + wq.field_b) * 0 / 2;
                         cf.a(var6_int, var7, -44);
                         kn.a(false, (byte) -122);
                         this.field_F = true;
@@ -1369,8 +1369,8 @@ public final class Sumoblitz extends GameClientShell {
                       }
                       if (decompiledSharedTail2) {
                         if (sj.a(-61)) {
-                          var6_int = (-lk.field_b + gi.field_h) * 0 / 2;
-                          var7 = (wq.field_b - lk.field_c) * 0 / 2;
+                          var6_int = (-SoftwareRasterizer.field_b + gi.field_h) * 0 / 2;
+                          var7 = (wq.field_b - SoftwareRasterizer.field_c) * 0 / 2;
                           ls.a(var6_int, -95, var7);
                           kn.a(false, -109);
                           this.field_F = true;
@@ -1385,8 +1385,8 @@ public final class Sumoblitz extends GameClientShell {
                         }
                       }
                       if (this.field_F) {
-                        var6_int = lk.field_b;
-                        var7 = lk.field_c;
+                        var6_int = SoftwareRasterizer.field_b;
+                        var7 = SoftwareRasterizer.field_c;
                         if (this.field_K != null) {
                           var7 = this.field_K.field_u;
                           var6_int = this.field_K.field_x;
@@ -1395,14 +1395,14 @@ public final class Sumoblitz extends GameClientShell {
                         var9 = (-var7 + wq.field_b) / 2;
                         if (oj.a(false) &&
                           this.field_K != null) {
-                          var8 = ik.c(-10517);
+                          var8 = GraphicsToolkitManager.c(-10517);
                           var9 = fd.b(3878);
                         }
                         var10 = wq.a(var4, (byte) 83);
                         var10.a((byte) 71, var9, var9 + var7, var8, var8 + var6_int);
-                        var9 = (wq.field_b - lk.field_c) / 2;
-                        var8 = (gi.field_h - lk.field_b) / 2;
-                        var4.SA(var8, var9, lk.field_b, lk.field_c, lk.field_a, 0, lk.field_b);
+                        var9 = (wq.field_b - SoftwareRasterizer.field_c) / 2;
+                        var8 = (gi.field_h - SoftwareRasterizer.field_b) / 2;
+                        var4.SA(var8, var9, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, 0, SoftwareRasterizer.field_b);
                         var10.a(29709);
                       }
                       try {
@@ -1416,8 +1416,8 @@ public final class Sumoblitz extends GameClientShell {
                   }
                 }
               }
-              sb.a(-9937, ik.field_d);
-              ik.field_d = null;
+              sb.a(-9937, GraphicsToolkitManager.field_d);
+              GraphicsToolkitManager.field_d = null;
               ls.b(0);
               return false;
             }
@@ -1429,7 +1429,7 @@ public final class Sumoblitz extends GameClientShell {
                 var3_int = 0;
                 while (true) {
                   if (13 > var3_int) {
-                    iv.field_g[var3_int] = ga.a(var3_int, (byte) -100);
+                    LegacyOpenGlEffectManager.field_g[var3_int] = ga.a(var3_int, (byte) -100);
                     var3_int++;
                     if (var11 == 0) {
                       continue;
@@ -1451,13 +1451,13 @@ public final class Sumoblitz extends GameClientShell {
                   return false;
                 }
               }
-              ph.field_b = new qu();
+              ph.field_b = new GameplaySession();
               return true;
             }
             boolean decompiledFrameRemainder0 = true;
             pe.a(20, 90.0f, kn.unpackingGraphicsText);
             var3 = hk.b(78);
-            lk.b();
+            SoftwareRasterizer.b();
             if (in.g(-70)) {
               ad.a((byte) -86, var3, np.a(7));
               decompiledFrameRemainder0 = (var11 != 0);
@@ -1483,30 +1483,30 @@ public final class Sumoblitz extends GameClientShell {
                   if (!decompiledSharedTail1) {
                     var5_int = eh.field_a * 255 / 30;
                     if (nj.field_b != -1) {
-                      iv.field_g[nj.field_b].a(-var5_int + 255, var4, -2355);
+                      LegacyOpenGlEffectManager.field_g[nj.field_b].a(-var5_int + 255, var4, -2355);
                     }
                     if (-1 != rc.field_k) {
-                      iv.field_g[rc.field_k].a(var5_int, var4, -2355);
+                      LegacyOpenGlEffectManager.field_g[rc.field_k].a(var5_int, var4, -2355);
                     }
                     decompiledSharedTail1 = (var11 != 0);
                   }
                   if ((decompiledSharedTail1) &&
                     (nj.field_b != -1)) {
-                    iv.field_g[nj.field_b].a(255, var4, -2355);
+                    LegacyOpenGlEffectManager.field_g[nj.field_b].a(255, var4, -2355);
                   }
                   if (so.a((byte) -50)) {
-                    lk.a(0, 0, lk.field_b, lk.field_c);
+                    SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c);
                     OpenGlUnderwaterEffect.d((byte) -7);
                   }
                   if (ra.field_e != 0) {
                     var5_int = eh.field_a * 256 / 30;
                     if (var5_int > 0) {
-                      lk.b(0, 0, lk.field_b, lk.field_c, 0, var5_int);
+                      SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, 0, var5_int);
                     }
                   }
                   if (sj.a(-38) &&
                     !so.a((byte) 110)) {
-                    if (null == gk.field_o) {
+                    if (null == CompactMeshGeometry.field_o) {
                       stackIn_606_0 = ii.field_a;
                     } else {
                       stackIn_606_0 = true;
@@ -1514,10 +1514,10 @@ public final class Sumoblitz extends GameClientShell {
                     kn.a(stackIn_606_0, -75);
                   }
                   if (ku.field_j >= 2 &&
-                    gw.field_v) {
-                    bq.field_c.a(20, 20, 16777215, Integer.toString(aj.field_B), (byte) -93, 1);
+                    SceneryParticle.field_v) {
+                    LegacyOpenGlEffect.field_c.a(20, 20, 16777215, Integer.toString(aj.field_B), (byte) -93, 1);
                   }
-                  var5 = (ge) (pl.field_v.b(66));
+                  var5 = (ge) (pl.field_v.first(66));
                   if (null != var5) {
                     var7 = qn.field_g;
                     if (var7 >= 64) {
@@ -1549,14 +1549,14 @@ public final class Sumoblitz extends GameClientShell {
                     } else {
                       var9_ref_String = aa.arcadeModeUnlockedText;
                     }
-                    bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                    bq.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, var8 + 1, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
-                    bq.field_c.a(150, 16777215 | var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (hr[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                    LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, -1 + var8, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                    LegacyOpenGlEffect.field_c.a(150, var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, var8 + 1, var6_int << 24, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
+                    LegacyOpenGlEffect.field_c.a(150, 16777215 | var6_int << 24, 0, 170, -180 + ArchiveCatalog.field_c, (int[]) null, (ToolkitSprite[]) null, var8, -1, 0, 18, -8787, var9_ref_String, (aa) null, 1, 0);
                   }
                   boolean decompiledSharedTail0 = !(oj.a(false));
                   if (!decompiledSharedTail0) {
-                    var6_int = 0 * (gi.field_h - lk.field_b) / 2;
-                    var7 = (wq.field_b - lk.field_c) * 0 / 2;
+                    var6_int = 0 * (gi.field_h - SoftwareRasterizer.field_b) / 2;
+                    var7 = (wq.field_b - SoftwareRasterizer.field_c) * 0 / 2;
                     cf.a(var6_int, var7, -105);
                     kn.a(false, (byte) -122);
                     this.field_F = true;
@@ -1564,8 +1564,8 @@ public final class Sumoblitz extends GameClientShell {
                   }
                   if (decompiledSharedTail0) {
                     if (sj.a(-67)) {
-                      var6_int = 0 * (gi.field_h - lk.field_b) / 2;
-                      var7 = (-lk.field_c + wq.field_b) * 0 / 2;
+                      var6_int = 0 * (gi.field_h - SoftwareRasterizer.field_b) / 2;
+                      var7 = (-SoftwareRasterizer.field_c + wq.field_b) * 0 / 2;
                       ls.a(var6_int, -53, var7);
                       kn.a(false, -101);
                       this.field_F = true;
@@ -1580,8 +1580,8 @@ public final class Sumoblitz extends GameClientShell {
                     }
                   }
                   if (this.field_F) {
-                    var6_int = lk.field_b;
-                    var7 = lk.field_c;
+                    var6_int = SoftwareRasterizer.field_b;
+                    var7 = SoftwareRasterizer.field_c;
                     if (this.field_K != null) {
                       var6_int = this.field_K.field_x;
                       var7 = this.field_K.field_u;
@@ -1590,14 +1590,14 @@ public final class Sumoblitz extends GameClientShell {
                     var9 = (wq.field_b - var7) / 2;
                     if (oj.a(false) &&
                       null != this.field_K) {
-                      var8 = ik.c(-10517);
+                      var8 = GraphicsToolkitManager.c(-10517);
                       var9 = fd.b(3878);
                     }
                     var10 = wq.a(var4, (byte) 29);
                     var10.a((byte) 61, var9, var9 + var7, var8, var6_int + var8);
-                    var9 = (wq.field_b - lk.field_c) / 2;
-                    var8 = (-lk.field_b + gi.field_h) / 2;
-                    var4.SA(var8, var9, lk.field_b, lk.field_c, lk.field_a, 0, lk.field_b);
+                    var9 = (wq.field_b - SoftwareRasterizer.field_c) / 2;
+                    var8 = (-SoftwareRasterizer.field_b + gi.field_h) / 2;
+                    var4.SA(var8, var9, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, 0, SoftwareRasterizer.field_b);
                     var10.a(29709);
                   }
                   try {
@@ -1629,390 +1629,390 @@ public final class Sumoblitz extends GameClientShell {
         }
     }
 
-    final void a(boolean param0) {
+    final void releaseAllStatics(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          Sumoblitz.s(0);
+          Sumoblitz.releaseStatics(0);
           GameApplet.b((byte) -19);
-          ge.a(6334);
-          IntrusiveDeque.c((byte) 117);
-          GraphicsToolkit.e(0);
-          PacketBuffer.c(-22);
-          wq.a(false);
-          oi.a(param0);
-          ik.b(-1);
-          hw.a(5460);
-          ud.c(-127);
-          rn.a(13921);
-          ma.a(20283);
-          bi.a((byte) 84);
-          GameKeyHandler.a(-2851);
-          wv.a(true);
-          GameClientShell.k(119);
-          ClientException.b((byte) -18);
-          JaggrabDownloader.a(126);
-          MouseInputHandler.a(8);
-          MouseWheelInput.a((byte) -75);
-          lk.a();
+          ge.releaseStatics(6334);
+          IntrusiveDeque.releaseStatics((byte) 117);
+          GraphicsToolkit.releaseStatics(0);
+          PacketBuffer.releaseStatics(-22);
+          wq.releaseStatics(false);
+          oi.releaseStatics(param0);
+          GraphicsToolkitManager.releaseStatics(-1);
+          hw.releaseStatics(5460);
+          MusicCrossfadeStream.releaseStatics(-127);
+          rn.releaseStatics(13921);
+          ma.releaseStatics(20283);
+          bi.releaseStatics((byte) 84);
+          GameKeyHandler.releaseStatics(-2851);
+          wv.releaseStatics(true);
+          GameClientShell.releaseStatics(119);
+          ClientException.releaseStatics((byte) -18);
+          JaggrabDownloader.releaseStatics(126);
+          MouseInputHandler.releaseStatics(8);
+          MouseWheelInput.releaseStatics((byte) -75);
+          SoftwareRasterizer.releaseStatics();
           ResourceArchive.a((byte) 35);
-          wf.a(116);
-          ws.a((byte) -71);
-          hk.a(0);
-          gs.a((byte) 14);
-          kt.a((byte) -14);
-          kd.a((byte) 95);
-          uq.a((byte) -106);
-          br.a(23050);
-          lb.a(0);
-          uc.a(-1);
-          vs.a((byte) -68);
-          uw.c((byte) 96);
-          RasterBuffer.a((byte) 41);
-          mn.a((byte) 17);
-          cq.a(true);
-          og.a(false);
-          ak.a(-6);
-          qu.a((byte) 42);
-          kv.a((byte) 30);
-          vm.a((byte) 118);
-          gd.a(!param0);
-          ti.a(87);
+          wf.releaseStatics(116);
+          ws.releaseStatics((byte) -71);
+          hk.releaseStatics(0);
+          gs.releaseStatics((byte) 14);
+          kt.releaseStatics((byte) -14);
+          kd.releaseStatics((byte) 95);
+          uq.releaseStatics((byte) -106);
+          br.releaseStatics(23050);
+          lb.releaseStatics(0);
+          uc.releaseStatics(-1);
+          vs.releaseStatics((byte) -68);
+          uw.releaseStatics((byte) 96);
+          RasterBuffer.releaseStatics((byte) 41);
+          mn.releaseStatics((byte) 17);
+          FullscreenCanvas.releaseStatics(true);
+          og.releaseStatics(false);
+          MenuScreen.releaseStatics(-6);
+          GameplaySession.a((byte) 42);
+          kv.releaseStatics((byte) 30);
+          vm.releaseStatics((byte) 118);
+          gd.releaseStatics(!param0);
+          ti.releaseStatics(87);
           ArchiveCatalog.a(2);
-          BufferedSocket.d(68);
-          IntrusiveNode.b((byte) 80);
+          BufferedSocket.releaseStatics(68);
+          IntrusiveNode.releaseStatics((byte) 80);
           ta.a(false);
-          MidiPcmStream.f(-95);
-          te.b(6406);
-          uu.a((byte) 115);
-          sh.g();
-          rh.a((byte) 81);
-          AudioOutput.h();
-          dn.a(-3);
-          kp.a(-1);
-          sg.a(-95);
-          jg.a((byte) 98);
-          rb.a((byte) -45);
-          hc.a((byte) 127);
-          bk.a(4);
-          nj.a((byte) 115);
-          ig.a(!param0);
-          vp.a((byte) -111);
-          vd.a((byte) -89);
-          dg.g(128);
-          uk.g(false);
-          m.e(true);
-          dc.m(105);
-          gt.l(124);
+          MidiPcmStream.releaseStatics(-95);
+          IntrusiveNodeHashTable.releaseStatics(6406);
+          MusicVoice.releaseStatics((byte) 115);
+          MidiFileReader.releaseStatics();
+          MidiNoteMixer.releaseStatics((byte) 81);
+          AudioOutput.releaseStatics();
+          dn.releaseStatics(-3);
+          kp.releaseStatics(-1);
+          sg.releaseStatics(-95);
+          jg.releaseStatics((byte) 98);
+          rb.releaseStatics((byte) -45);
+          hc.releaseStatics((byte) 127);
+          bk.releaseStatics(4);
+          nj.releaseStatics((byte) 115);
+          ig.releaseStatics(!param0);
+          vp.releaseStatics((byte) -111);
+          vd.releaseStatics((byte) -89);
+          dg.releaseStatics(128);
+          uk.releaseStatics(false);
+          m.releaseStatics(true);
+          dc.releaseStatics(105);
+          gt.releaseStatics(124);
           js.g(0);
-          cv.g(-118);
+          cv.releaseStatics(-118);
           vq.g(121);
-          lj.a((byte) 108);
-          cp.a((byte) 117);
-          pc.a(100);
-          bc.a(113);
-          ah.c(0);
-          vl.a((byte) 113);
+          lj.releaseStatics((byte) 108);
+          cp.releaseStatics((byte) 117);
+          pc.releaseStatics(100);
+          bc.releaseStatics(113);
+          ah.releaseStatics(0);
+          vl.releaseStatics((byte) 113);
           nm.c(1432625512);
-          lg.b(544);
-          tr.c(1);
-          jp.c(32);
-          bb.b((byte) 41);
-          ii.a((byte) -55);
-          ps.a(28);
-          er.b(true);
-          nt.d(31295);
+          lg.releaseStatics(544);
+          tr.releaseStatics(1);
+          jp.releaseStatics(32);
+          bb.releaseStatics((byte) 41);
+          ii.releaseStatics((byte) -55);
+          ps.releaseStatics(28);
+          er.releaseStatics(true);
+          TimedSceneEffect.releaseStatics(31295);
           ClientExceptionSupport.a(false);
-          kh.a(2);
-          dr.c(false);
+          kh.releaseStatics(2);
+          dr.releaseStatics(false);
           fe.n((byte) -68);
-          tl.f(91);
-          bw.c((byte) 122);
+          tl.releaseStatics(91);
+          bw.releaseStatics((byte) 122);
           IntrusiveDequeCursor.a(-1384583532);
-          lq.a(param0);
-          rf.a(1);
-          za.a((byte) -103);
-          pl.j(24599);
-          pi.a(20437);
-          ds.a((byte) -1);
-          qn.a(0);
-          ss.a((byte) 102);
-          vn.a();
-          hm.a(-11418);
-          rv.a(true);
-          qi.a((byte) 16);
-          se.b(8192);
-          aa.a(!param0);
-          sb.a(true);
-          SpriteState.a(-109);
-          DualLinkNode.d(37);
-          UpgradeStatNames.a(1600);
-          LimitedRandomAccessFile.c(100);
+          lq.releaseStatics(param0);
+          rf.releaseStatics(1);
+          za.releaseStatics((byte) -103);
+          pl.releaseStatics(24599);
+          pi.releaseStatics(20437);
+          ds.releaseStatics((byte) -1);
+          qn.releaseStatics(0);
+          ss.releaseStatics((byte) 102);
+          vn.releaseStatics();
+          hm.releaseStatics(-11418);
+          rv.releaseStatics(true);
+          qi.releaseStatics((byte) 16);
+          se.releaseStatics(8192);
+          aa.releaseStatics(!param0);
+          sb.releaseStatics(true);
+          SpriteState.releaseStatics(-109);
+          DualLinkNode.releaseStatics(37);
+          UpgradeStatNames.releaseStatics(1600);
+          LimitedRandomAccessFile.releaseStatics(100);
           wo.a(92);
-          wn.a(0);
-          kw.a((byte) -88);
-          ea.b(-123);
-          sj.a(true);
-          jo.a((byte) -115);
-          lw.a(-1685);
-          no.a(10);
-          vg.a(false);
-          fl.b(0);
-          rg.e((byte) 95);
-          ag.c(82);
-          cd.a((byte) -126);
-          hf.j(101);
-          ld.a((byte) 58);
-          wp.a((byte) 54);
-          nd.f(-16099);
-          WidgetContainer.d(true);
-          ao.a(0);
-          ok.b((byte) -122);
-          pp.a(2);
-          t.f(1);
-          ro.c(0);
+          wn.releaseStatics(0);
+          kw.releaseStatics((byte) -88);
+          ea.releaseStatics(-123);
+          sj.releaseStatics(true);
+          jo.releaseStatics((byte) -115);
+          lw.releaseStatics(-1685);
+          no.releaseStatics(10);
+          vg.releaseStatics(false);
+          fl.releaseStatics(0);
+          rg.releaseStatics((byte) 95);
+          ag.releaseStatics(82);
+          cd.releaseStatics((byte) -126);
+          hf.releaseStatics(101);
+          ld.releaseStatics((byte) 58);
+          wp.releaseStatics((byte) 54);
+          nd.releaseStatics(-16099);
+          WidgetContainer.releaseStatics(true);
+          ao.releaseStatics(0);
+          ok.releaseStatics((byte) -122);
+          pp.releaseStatics(2);
+          t.releaseStatics(1);
+          ro.releaseStatics(0);
           fv.d((byte) 62);
-          wl.a((byte) -90);
-          ql.d((byte) 64);
-          am.d((byte) -96);
-          rw.c(true);
-          fa.a(false);
-          nk.c();
-          q.a();
-          eh.a(-66);
-          l.a(-104);
-          gk.a(0);
-          im.a(true);
-          gh.a(-126);
-          kr.a(-119);
-          up.a(-127);
-          jk.a((byte) -104);
-          dq.a(-1);
-          ci.b(8192);
-          bf.b(18260);
-          nn.a(-100);
-          w.a();
-          ku.a(true);
-          rd.c(false);
-          pb.b(3);
+          wl.releaseStatics((byte) -90);
+          ql.releaseStatics((byte) 64);
+          am.releaseStatics((byte) -96);
+          rw.releaseStatics(true);
+          fa.releaseStatics(false);
+          nk.releaseStatics();
+          q.releaseStatics();
+          eh.releaseStatics(-66);
+          l.releaseStatics(-104);
+          CompactMeshGeometry.releaseStatics(0);
+          im.releaseStatics(true);
+          gh.releaseStatics(-126);
+          kr.releaseStatics(-119);
+          up.releaseStatics(-127);
+          jk.releaseStatics((byte) -104);
+          dq.releaseStatics(-1);
+          ci.releaseStatics(8192);
+          bf.releaseStatics(18260);
+          nn.releaseStatics(-100);
+          w.releaseStatics();
+          ku.releaseStatics(true);
+          rd.releaseStatics(false);
+          pb.releaseStatics(3);
           ih.a((byte) 122);
-          lo.a();
+          lo.releaseStatics();
           oq.g(-6811);
-          qw.a(-122);
-          is.a(false);
-          sd.a(1);
-          un.a(true);
-          ow.a((byte) 123);
-          sv.a(1284);
-          SocketConnector.a(85);
-          hh.a(127);
-          fd.c(121);
-          ImageProducerRasterBuffer.d(-48);
-          qg.a();
-          qe.a(0);
-          np.a((byte) -58);
-          tj.a((byte) 125);
-          td.a((byte) 111);
-          mq.a((byte) 110);
+          qw.releaseStatics(-122);
+          is.releaseStatics(false);
+          sd.releaseStatics(1);
+          un.releaseStatics(true);
+          ow.releaseStatics((byte) 123);
+          sv.releaseStatics(1284);
+          SocketConnector.releaseStatics(85);
+          hh.releaseStatics(127);
+          fd.releaseStatics(121);
+          ImageProducerRasterBuffer.releaseStatics(-48);
+          qg.releaseStatics();
+          qe.releaseStatics(0);
+          np.releaseStatics((byte) -58);
+          InstrumentNoteMask.releaseStatics((byte) 125);
+          MusicPatch.releaseStatics((byte) 111);
+          MusicPatchEnvelope.releaseStatics((byte) 110);
           o.b(6);
-          wm.a(param0);
-          rt.g(-107);
-          qq.l(-15648);
-          dh.j(82);
-          ur.k(0);
-          pq.a(-1346554936);
-          pe.g(-18490);
-          ar.f((byte) -118);
-          vr.a(-21433);
-          bn.g((byte) -79);
-          wr.a(454);
-          na.a(false);
-          ll.b(-109);
+          wm.releaseStatics(param0);
+          rt.releaseStatics(-107);
+          qq.releaseStatics(-15648);
+          dh.releaseStatics(82);
+          ur.releaseStatics(0);
+          pq.releaseStatics(-1346554936);
+          pe.releaseStatics(-18490);
+          ar.releaseStatics((byte) -118);
+          vr.releaseStatics(-21433);
+          bn.releaseStatics((byte) -79);
+          wr.releaseStatics(454);
+          na.releaseStatics(false);
+          ll.releaseStatics(-109);
           th.f(false);
-          vb.a(0);
+          vb.releaseStatics(0);
           fu.d(!param0);
-          mb.a(!param0);
-          ce.a(-73);
-          hi.a(5423);
+          GameInstructions.releaseStatics(!param0);
+          ce.releaseStatics(-73);
+          hi.releaseStatics(5423);
           rp.b(param0);
-          eu.a(false);
-          fr.d((byte) 66);
-          kk.b((byte) -24);
-          iv.a(255);
-          eb.b((byte) 0);
-          gq.c(false);
-          ic.b(106);
-          b.a((byte) -69);
-          cm.b(0);
-          dl.b(0);
-          ht.a((byte) -81);
-          us.c((byte) 28);
-          bt.c((byte) -21);
-          hp.d(1);
-          HardwareGraphicsToolkit.G(8);
-          ls.a(2);
-          io.a(0);
-          sk.b(128);
-          ut.b((byte) 49);
-          hv.b(-7520);
+          eu.releaseStatics(false);
+          LegacyOpenGlGraphicsToolkit.releaseStatics((byte) 66);
+          kk.releaseStatics((byte) -24);
+          LegacyOpenGlEffectManager.releaseStatics(255);
+          eb.releaseStatics((byte) 0);
+          gq.releaseStatics(false);
+          ic.releaseStatics(106);
+          b.releaseStatics((byte) -69);
+          cm.releaseStatics(0);
+          dl.releaseStatics(0);
+          ht.releaseStatics((byte) -81);
+          us.releaseStatics((byte) 28);
+          bt.releaseStatics((byte) -21);
+          hp.releaseStatics(1);
+          HardwareGraphicsToolkit.releaseStatics(8);
+          ls.releaseStatics(2);
+          io.releaseStatics(0);
+          sk.releaseStatics(128);
+          ut.releaseStatics((byte) 49);
+          hv.releaseStatics(-7520);
           ko.d(0);
-          tf.a((byte) 17);
-          mr.a((byte) -109);
-          ShaderEffect.c(-119);
-          em.a(true);
-          il.a(26238);
-          jl.c(786336);
-          hq.a((byte) 101);
-          gu.a(true);
-          mi.a(false);
-          mp.a((byte) -100);
-          hu.b(61303);
-          ck.a(-99);
-          sc.a(false);
-          rs.a(-26791);
+          tf.releaseStatics((byte) 17);
+          mr.releaseStatics((byte) -109);
+          ShaderEffect.releaseStatics(-119);
+          em.releaseStatics(true);
+          il.releaseStatics(26238);
+          jl.releaseStatics(786336);
+          hq.releaseStatics((byte) 101);
+          gu.releaseStatics(true);
+          mi.releaseStatics(false);
+          mp.releaseStatics((byte) -100);
+          hu.releaseStatics(61303);
+          ck.releaseStatics(-99);
+          sc.releaseStatics(false);
+          rs.releaseStatics(-26791);
           jd.d(0);
-          jh.g(-1);
-          st.a((byte) 118);
-          mc.f(param0);
-          qk.g((byte) -43);
+          jh.releaseStatics(-1);
+          st.releaseStatics((byte) 118);
+          mc.releaseStatics(param0);
+          qk.releaseStatics((byte) -43);
           kq.k(50);
-          we.e(!param0);
-          si.b(17);
-          ts.a(-13252);
-          SecondaryNodeDeque.a(-103);
+          we.releaseStatics(!param0);
+          si.releaseStatics(17);
+          ts.releaseStatics(-13252);
+          SecondaryNodeDeque.releaseStatics(-103);
           jt.d((byte) 54);
-          av.f(24);
+          av.releaseStatics(24);
           ProxySocketConnector.b(1183);
-          re.a();
-          k.a(28322);
-          kn.b(-1);
-          le.a();
-          li.d(119);
-          ka.a((byte) -59);
-          r.a(33);
-          sn.a((byte) -62);
-          ek.d(-21551);
-          ve.a((byte) -58);
-          bq.a((byte) -76);
-          ch.a((byte) 60);
+          re.releaseStatics();
+          k.releaseStatics(28322);
+          kn.releaseStatics(-1);
+          le.releaseStatics();
+          li.releaseStatics(119);
+          ka.releaseStatics((byte) -59);
+          r.releaseStatics(33);
+          sn.releaseStatics((byte) -62);
+          ek.releaseStatics(-21551);
+          ve.releaseStatics((byte) -58);
+          LegacyOpenGlEffect.releaseStatics((byte) -76);
+          ch.releaseStatics((byte) 60);
           lf.a(1821625704);
-          kf.e(-21057);
-          ad.d(-20388);
-          f.d(!param0);
-          wh.a(-1);
-          uj.a(true);
-          jq.a(107);
-          tq.a((byte) -51);
-          pt.a((byte) 43);
-          hn.b(true);
-          kb.a(true);
-          sl.b(-124);
-          wt.c((byte) -38);
-          es.c(4);
-          tt.c(true);
-          mo.e(2);
+          kf.releaseStatics(-21057);
+          ad.releaseStatics(-20388);
+          f.releaseStatics(!param0);
+          wh.releaseStatics(-1);
+          uj.releaseStatics(true);
+          jq.releaseStatics(107);
+          tq.releaseStatics((byte) -51);
+          pt.releaseStatics((byte) 43);
+          hn.releaseStatics(true);
+          kb.releaseStatics(true);
+          sl.releaseStatics(-124);
+          wt.releaseStatics((byte) -38);
+          es.releaseStatics(4);
+          tt.releaseStatics(true);
+          mo.releaseStatics(2);
           vk.b(429166529);
-          gi.c(8192);
-          pr.d(7064);
-          au.c((byte) -127);
-          ga.a(true);
-          lv.c(3);
-          gr.c((byte) -19);
-          mk.a(-25140);
-          ei.a(-124);
-          ji.a(0);
-          he.a(124);
+          gi.releaseStatics(8192);
+          pr.releaseStatics(7064);
+          au.releaseStatics((byte) -127);
+          ga.releaseStatics(true);
+          lv.releaseStatics(3);
+          gr.releaseStatics((byte) -19);
+          mk.releaseStatics(-25140);
+          ei.releaseStatics(-124);
+          ji.releaseStatics(0);
+          he.releaseStatics(124);
           jm.a(-23787);
-          vu.a((byte) -69);
-          pu.a(1);
-          ng.d(0);
+          vu.releaseStatics((byte) -69);
+          pu.releaseStatics(1);
+          ng.releaseStatics(0);
           ib.e(1);
-          uo.d((byte) 79);
+          uo.releaseStatics((byte) 79);
           ni.d(false);
-          ml.c((byte) 30);
-          en.b((byte) 101);
-          ff.b(param0);
-          ab.a(64);
-          sq.a(-127);
-          rc.b(124);
-          go.a((byte) -17);
-          OpenGlUnderwaterEffect.d(12);
+          ml.releaseStatics((byte) 30);
+          en.releaseStatics((byte) 101);
+          ff.releaseStatics(param0);
+          ab.releaseStatics(64);
+          sq.releaseStatics(-127);
+          rc.releaseStatics(124);
+          go.releaseStatics((byte) -17);
+          OpenGlUnderwaterEffect.releaseStatics(12);
           OpenGlTransparentWaterEffect.d((byte) 79);
-          OpenGlEnvironmentWaterEffect.d(!param0);
-          oh.a((byte) -60);
-          ua.a((byte) 13);
-          ju.a(param0);
-          fq.a(123);
-          NodeHashTableIterator.a(1);
-          SecondaryNodeDequeIterator.a(-95);
-          lu.b(!param0);
-          ph.a(1882049616);
-          qj.a((byte) -70);
-          fw.c(-114);
-          bl.a(false);
+          OpenGlEnvironmentWaterEffect.releaseStatics(!param0);
+          oh.releaseStatics((byte) -60);
+          ua.releaseStatics((byte) 13);
+          ju.releaseStatics(param0);
+          fq.releaseStatics(123);
+          NodeHashTableIterator.releaseStatics(1);
+          SecondaryNodeDequeIterator.releaseStatics(-95);
+          lu.releaseStatics(!param0);
+          ph.releaseStatics(1882049616);
+          qj.releaseStatics((byte) -70);
+          fw.releaseStatics(-114);
+          bl.releaseStatics(false);
           of.a(-26437);
-          id.c(!param0);
-          df.a(false);
-          dj.a(1022768328);
-          pd.a((byte) -127);
-          ue.b(126);
+          id.releaseStatics(!param0);
+          df.releaseStatics(false);
+          dj.releaseStatics(1022768328);
+          pd.releaseStatics((byte) -127);
+          ue.releaseStatics(126);
           bv.b(118);
-          nl.b(2147483647);
-          c.c(22760);
-          oj.a(-4);
-          in.a((byte) -84);
-          uv.a((byte) -31);
-          cn.e(0);
+          nl.releaseStatics(2147483647);
+          c.releaseStatics(22760);
+          oj.releaseStatics(-4);
+          in.releaseStatics((byte) -84);
+          uv.releaseStatics((byte) -31);
+          cn.releaseStatics(0);
           km.a(-11807);
-          gn.a(true);
-          to.c(false);
-          eg.c(!param0);
-          hg.a((byte) 12);
-          lh.a(12);
-          cj.a(0);
-          mm.a(90);
-          an.a((byte) 89);
-          bj.a(-121);
-          qr.a((byte) 119);
-          om.a((byte) 99);
+          gn.releaseStatics(true);
+          to.releaseStatics(false);
+          eg.releaseStatics(!param0);
+          hg.releaseStatics((byte) 12);
+          lh.releaseStatics(12);
+          cj.releaseStatics(0);
+          mm.releaseStatics(90);
+          an.releaseStatics((byte) 89);
+          bj.releaseStatics(-121);
+          qr.releaseStatics((byte) 119);
+          om.releaseStatics((byte) 99);
           aj.e(2);
-          gw.c(false);
-          eq.e(3190);
-          be.e(6408);
-          gb.e(0);
-          vi.c(true);
-          as.e(83);
-          cl.f(4);
-          qc.b((byte) 105);
-          jj.a(0);
-          wd.b((byte) 88);
+          SceneryParticle.releaseStatics(false);
+          eq.releaseStatics(3190);
+          be.releaseStatics(6408);
+          gb.releaseStatics(0);
+          vi.releaseStatics(true);
+          as.releaseStatics(83);
+          cl.releaseStatics(4);
+          qc.releaseStatics((byte) 105);
+          jj.releaseStatics(0);
+          wd.releaseStatics((byte) 88);
           vf.b(1);
-          rl.a(480);
-          sm.a((byte) -30);
-          tk.b(122);
-          fm.a((byte) -115);
-          tm.a(false);
-          dv.a(59);
-          ac.d(false);
-          hd.f(67);
-          qv.c(18);
-          lt.a(1);
-          ou.c((byte) -119);
-          tc.f(-1);
-          wk.b(false);
-          jc.c((byte) -91);
+          rl.releaseStatics(480);
+          sm.releaseStatics((byte) -30);
+          tk.releaseStatics(122);
+          fm.releaseStatics((byte) -115);
+          tm.releaseStatics(false);
+          dv.releaseStatics(59);
+          ac.releaseStatics(false);
+          hd.releaseStatics(67);
+          qv.releaseStatics(18);
+          lt.releaseStatics(1);
+          ou.releaseStatics((byte) -119);
+          tc.releaseStatics(-1);
+          wk.releaseStatics(false);
+          jc.releaseStatics((byte) -91);
           nq.c((byte) -31);
-          jf.a((byte) 91);
-          s.a(18232);
-          gf.a(1431655765);
-          ct.d((byte) -75);
+          jf.releaseStatics((byte) 91);
+          s.releaseStatics(18232);
+          gf.releaseStatics(1431655765);
+          ct.releaseStatics((byte) -75);
           ks.d(-11701);
-          lr.c(16766976);
-          lm.b(6);
-          dk.a(-102);
-          ip.d((byte) 110);
-          ke.b(true);
-          gg.a(0);
+          lr.releaseStatics(16766976);
+          lm.releaseStatics(6);
+          dk.releaseStatics(-102);
+          ip.releaseStatics((byte) 110);
+          ke.releaseStatics(true);
+          gg.releaseStatics(0);
           this.field_D = null;
           this.field_K = null;
           return;
@@ -2036,7 +2036,7 @@ public final class Sumoblitz extends GameClientShell {
         }
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void playEntityCollisionSound(int param0, int param1, byte param2) {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;

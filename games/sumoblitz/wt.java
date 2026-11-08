@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wt extends bq {
+final class wt extends LegacyOpenGlEffect {
     private boolean field_j;
     private hp[] field_e;
     static ArchiveCatalog field_i;
@@ -99,7 +99,7 @@ final class wt extends bq {
         this.field_f.a(true);
     }
 
-    wt(fr param0) {
+    wt(LegacyOpenGlGraphicsToolkit param0) {
         super(param0);
         int var14 = 0;
         int var15 = 0;
@@ -201,7 +201,7 @@ final class wt extends bq {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -17) {
           return;
         }
@@ -248,7 +248,7 @@ final class wt extends bq {
     }
 
     final static void a(int param0, byte param1) {
-        ut.a(8, (byte) -55, nt.field_m[param0], true);
+        ut.a(8, (byte) -55, TimedSceneEffect.field_m[param0], true);
         if (param1 < 27) {
           field_i = (ArchiveCatalog) null;
         }

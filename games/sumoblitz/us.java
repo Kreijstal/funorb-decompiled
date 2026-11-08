@@ -86,7 +86,7 @@ class us extends ht {
         }
     }
 
-    us(fr param0, int param1, int param2, int param3, int param4) {
+    us(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4) {
         super(param0, param1, param2, param4 * param3, false);
         this.field_k = -1;
         this.field_n = -1;
@@ -155,7 +155,7 @@ class us extends ht {
         }
     }
 
-    us(fr param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
+    us(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
         super(param0, param1, param2, param3 * param4, param5);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_9_0 = null;
@@ -203,7 +203,7 @@ class us extends ht {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         loggingInText = null;
         if (param0 != 28) {
           loggingInText = (String) null;
@@ -292,7 +292,7 @@ class us extends ht {
         }
     }
 
-    us(fr param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
+    us(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
         super(param0, param1, param2, param3 * param4, param5);
         int stackIn_13_0 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -378,7 +378,7 @@ class us extends ht {
         }
     }
 
-    us(fr param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
+    us(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
         super(param0, param1, param2, param4 * param3, param5);
         int stackIn_13_0 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -487,7 +487,7 @@ class us extends ht {
           try {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-              param0.getAppletContext().showDocument(td.a((byte) 127, param0, var2), "_top");
+              param0.getAppletContext().showDocument(MusicPatch.a((byte) 127, param0, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

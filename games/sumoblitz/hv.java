@@ -3,10 +3,10 @@
  */
 final class hv {
     static String reassignText;
-    static hr field_b;
+    static ToolkitSprite field_b;
     static String unpackingSoundEffectsText;
     static boolean field_c;
-    static hr[] field_d;
+    static ToolkitSprite[] field_d;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -19,13 +19,13 @@ final class hv {
         return false;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         reassignText = null;
         field_b = null;
         unpackingSoundEffectsText = null;
         if (param0 != -7520) {
-          hv.b(-61);
+          hv.releaseStatics(-61);
         }
     }
 

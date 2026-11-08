@@ -14,13 +14,13 @@ abstract class da {
         }
         try {
           this.a(param2, param5, 60);
-          this.a(-274, param0, (hr[]) null, param1, 0, 0, param3, (int[]) null, (aa) null);
+          this.a(-274, param0, (ToolkitSprite[]) null, param1, 0, 0, param3, (int[]) null, (aa) null);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3, int param4, int[] param5, hr[] param6, int param7, int param8, int param9, int param10, int param11, String param12, aa param13, int param14, int param15) {
+    final int a(int param0, int param1, int param2, int param3, int param4, int[] param5, ToolkitSprite[] param6, int param7, int param8, int param9, int param10, int param11, String param12, aa param13, int param14, int param15) {
         RuntimeException var17 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -80,7 +80,7 @@ abstract class da {
             this.field_a = (GraphicsToolkit) null;
           }
           this.a(param4, param0, 60);
-          this.a(-274, param3, (hr[]) null, -this.field_b.a(param2, 0) + param1, 0, 0, param2, (int[]) null, (aa) null);
+          this.a(-274, param3, (ToolkitSprite[]) null, -this.field_b.a(param2, 0) + param1, 0, 0, param2, (int[]) null, (aa) null);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -186,7 +186,7 @@ abstract class da {
         }
     }
 
-    private final int a(aa param0, hr[] param1, int param2, int[] param3, String param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    private final int a(aa param0, ToolkitSprite[] param1, int param2, int[] param3, String param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int stackIn_4_0 = 0;
         int stackIn_47_0 = 0;
         Object stackIn_50_0 = null;
@@ -240,7 +240,7 @@ abstract class da {
           }
           if (param14 < 38) {
             var23 = (aa) null;
-            this.a(98, 62, (hr[]) null, 36, 116, -67, (String) null, (int[]) null, (aa) null);
+            this.a(98, 62, (ToolkitSprite[]) null, 36, 116, -67, (String) null, (int[]) null, (aa) null);
           }
           if (0 == param15) {
             var20 = param16 + this.field_b.field_i;
@@ -316,7 +316,7 @@ abstract class da {
         }
     }
 
-    private final void a(int param0, int param1, hr[] param2, int param3, int param4, int param5, String param6, int[] param7, aa param8) {
+    private final void a(int param0, int param1, ToolkitSprite[] param2, int param3, int param4, int param5, String param6, int[] param7, aa param8) {
         int var13 = 0;
         int stackIn_25_0 = 0;
         RuntimeException stackIn_62_0 = null;
@@ -338,7 +338,7 @@ abstract class da {
         int var15 = 0;
         int var16_int = 0;
         Exception var16 = null;
-        hr var17 = null;
+        ToolkitSprite var17 = null;
         int var18 = 0;
         int var19 = 0;
         Object var20 = null;
@@ -543,7 +543,7 @@ abstract class da {
         try {
           GameApplet.j(70);
           var17.d();
-          lk.g(0, 0, lk.field_b, lk.field_c);
+          SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c);
           var15 = new Sprite(var9, var9);
           var18 = var15;
           var18.d();
@@ -569,7 +569,7 @@ abstract class da {
         }
         try {
           this.a(param1, param2, 60);
-          this.a(-274, param3, (hr[]) null, -(this.field_b.a(param0, param5) / 2) + param4, 0, 0, param0, (int[]) null, (aa) null);
+          this.a(-274, param3, (ToolkitSprite[]) null, -(this.field_b.a(param0, param5) / 2) + param4, 0, 0, param0, (int[]) null, (aa) null);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

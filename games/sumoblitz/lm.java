@@ -20,7 +20,7 @@ final class lm {
         field_a = (ts) null;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 6) {
           field_a = (ts) null;

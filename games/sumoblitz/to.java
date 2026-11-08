@@ -8,11 +8,11 @@ final class to extends IntrusiveNode {
     private int field_p;
     private boolean field_v;
     private int field_n;
-    static hr[] field_s;
+    static ToolkitSprite[] field_s;
     private int field_u;
     private int field_q;
     private String field_o;
-    static hr field_m;
+    static ToolkitSprite field_m;
     static byte[] field_t;
 
     final boolean a(int param0) {
@@ -22,7 +22,7 @@ final class to extends IntrusiveNode {
           this.field_u = this.field_u + 1;
           return this.field_l + this.field_n + this.field_r < fieldTemp$0 ? true : false;
         }
-        field_m = (hr) null;
+        field_m = (ToolkitSprite) null;
         int fieldTemp$1 = this.field_u + 1;
         this.field_u = this.field_u + 1;
         return this.field_l + this.field_n + this.field_r < fieldTemp$1 ? true : false;
@@ -38,7 +38,7 @@ final class to extends IntrusiveNode {
         int var3Lifetime1;
         var5 = Sumoblitz.field_L ? 1 : 0;
         if (param0 != -70) {
-          to.c(false);
+          to.releaseStatics(false);
         }
         if (this.field_r > this.field_u) {
           var2 = (this.field_u << 8) / this.field_r;
@@ -47,8 +47,8 @@ final class to extends IntrusiveNode {
           }
           var3 = 80 * (this.field_r - this.field_u) / this.field_r;
           if (this.field_v) {
-            qv.field_k.a(100, 5023231 | var2 << 24, 0, 320, 160, (int[]) null, (hr[]) null, this.field_p + var3, -1, 0, 0, -8787, this.field_o, (aa) null, 1, 1);
-            uq.field_a.a(100, var2 << 24 | 16777215, 0, 320, 160, (int[]) null, (hr[]) null, this.field_p + var3, -1, 0, 0, -8787, this.field_o, (aa) null, 1, 1);
+            qv.field_k.a(100, 5023231 | var2 << 24, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, this.field_p + var3, -1, 0, 0, -8787, this.field_o, (aa) null, 1, 1);
+            uq.field_a.a(100, var2 << 24 | 16777215, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, this.field_p + var3, -1, 0, 0, -8787, this.field_o, (aa) null, 1, 1);
           } else {
             qv.field_k.a(this.field_o, var2 << 24 | 5023231, -1, this.field_p + var3, this.field_k, 0);
             uq.field_a.a(this.field_o, var2 << 24 | this.field_q, -1, var3 + this.field_p, this.field_k, 0);
@@ -64,8 +64,8 @@ final class to extends IntrusiveNode {
             qv.field_k.a(this.field_o, 5023231 | var2Lifetime1 << 24, -1, this.field_p, this.field_k, param0 + 70);
             uq.field_a.a(this.field_o, this.field_q | var2Lifetime1 << 24, -1, this.field_p, this.field_k, 0);
           } else {
-            qv.field_k.a(100, var2Lifetime1 << 24 | 5023231, 0, 320, 160, (int[]) null, (hr[]) null, this.field_p, -1, 0, 0, -8787, this.field_o, (aa) null, 1, 1);
-            uq.field_a.a(100, 16777215 | var2Lifetime1 << 24, 0, 320, 160, (int[]) null, (hr[]) null, this.field_p, -1, 0, 0, -8787, this.field_o, (aa) null, 1, 1);
+            qv.field_k.a(100, var2Lifetime1 << 24 | 5023231, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, this.field_p, -1, 0, 0, -8787, this.field_o, (aa) null, 1, 1);
+            uq.field_a.a(100, 16777215 | var2Lifetime1 << 24, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, this.field_p, -1, 0, 0, -8787, this.field_o, (aa) null, 1, 1);
           }
           return;
         }
@@ -82,17 +82,17 @@ final class to extends IntrusiveNode {
           qv.field_k.a(this.field_o, 5023231 | var3Lifetime1 << 24, -1, -var4 + this.field_p, this.field_k, 0);
           uq.field_a.a(this.field_o, var3Lifetime1 << 24 | this.field_q, -1, this.field_p - var4, this.field_k, param0 ^ -70);
         } else {
-          qv.field_k.a(100, 5023231 | var3Lifetime1 << 24, 0, 320, 160, (int[]) null, (hr[]) null, -var4 + this.field_p, -1, 0, 0, param0 - 8717, this.field_o, (aa) null, 1, 1);
-          uq.field_a.a(100, var3Lifetime1 << 24 | 16777215, 0, 320, 160, (int[]) null, (hr[]) null, -var4 + this.field_p, -1, 0, 0, -8787, this.field_o, (aa) null, 1, 1);
+          qv.field_k.a(100, 5023231 | var3Lifetime1 << 24, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, -var4 + this.field_p, -1, 0, 0, param0 - 8717, this.field_o, (aa) null, 1, 1);
+          uq.field_a.a(100, var3Lifetime1 << 24 | 16777215, 0, 320, 160, (int[]) null, (ToolkitSprite[]) null, -var4 + this.field_p, -1, 0, 0, -8787, this.field_o, (aa) null, 1, 1);
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_t = null;
         field_m = null;
         field_s = null;
         if (param0) {
-          field_m = (hr) null;
+          field_m = (ToolkitSprite) null;
         }
     }
 

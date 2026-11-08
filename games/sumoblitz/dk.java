@@ -40,11 +40,11 @@ final class dk {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         weekdayShortNames = null;
         field_a = null;
         if (param0 > -31) {
-          dk.a(-122);
+          dk.releaseStatics(-122);
         }
     }
 

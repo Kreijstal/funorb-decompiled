@@ -117,7 +117,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           var6 = 1;
           var7 = fi.a(5, he.field_o, (byte) -96);
-          bj.field_b.a((IntrusiveNode) (new tl(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
+          bj.field_b.addLast((IntrusiveNode) (new tl(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -168,10 +168,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -2851) {
-          GameKeyHandler.a(-38);
+          GameKeyHandler.releaseStatics(-38);
         }
     }
 

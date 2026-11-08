@@ -26,7 +26,7 @@ final class cn extends dq {
                 return;
               }
               var3 = new java.net.URL(param1.getCodeBase(), param0);
-              var3 = td.a((byte) 125, param1, var3);
+              var3 = MusicPatch.a((byte) 125, param1, var3);
               kj.a(param2 ^ 23067, param1, true, var3.toString());
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -59,7 +59,7 @@ final class cn extends dq {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           byClickingCreateYouText = (String) null;
           field_ib = null;

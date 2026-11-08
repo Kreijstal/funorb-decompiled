@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class p extends IntrusiveNode implements e {
+final class p extends IntrusiveNode implements NativeResource {
     private static long field_n;
     int field_m;
     private static boolean field_k;
@@ -32,7 +32,7 @@ final class p extends IntrusiveNode implements e {
 
     private final native void oa(java.awt.Canvas param0, int param1, int param2);
 
-    private final native void sa(oa param0, java.awt.Canvas param1, int param2, int param3);
+    private final native void sa(NativeSoftwareGraphicsToolkit param0, java.awt.Canvas param1, int param2, int param3);
 
     final void a(java.awt.Canvas param0, int param1, int param2) {
         this.field_m = param1;
@@ -42,16 +42,16 @@ final class p extends IntrusiveNode implements e {
 
     private final native void H(int param0, int param1, int param2, int param3);
 
-    public final native void w(boolean param0);
+    public final native void disposeNativeResource(boolean param0);
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          pa.a((e) (this), (byte) -37);
+          NativeResourceReaper.a((NativeResource) (this), (byte) -37);
           return;
         }
     }
 
-    p(oa param0, java.awt.Canvas param1, int param2, int param3) {
+    p(NativeSoftwareGraphicsToolkit param0, java.awt.Canvas param1, int param2, int param3) {
         this.field_o = param1;
         this.field_m = param2;
         this.field_l = param3;

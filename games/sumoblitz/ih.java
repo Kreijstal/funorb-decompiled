@@ -18,7 +18,7 @@ final class ih {
         }
     }
 
-    final static void a(boolean param0, gk param1, int param2, int param3, int param4) {
+    final static void a(boolean param0, CompactMeshGeometry param1, int param2, int param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_32_0 = 0;
@@ -174,7 +174,7 @@ final class ih {
     final static void a(int param0) {
         try {
           hc.field_f = wt.field_h[2];
-          iv.field_i = wt.field_h[1];
+          LegacyOpenGlEffectManager.field_i = wt.field_h[1];
           ResourceArchive.field_f = wt.field_h[0];
           int var1_int = -21 / ((param0 + 59) / 40);
         } catch (RuntimeException runtimeException) {

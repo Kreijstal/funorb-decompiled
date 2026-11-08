@@ -39,7 +39,7 @@ final class fb {
           }
           as.field_v.position = as.field_v.position + 2;
           var5_int = as.field_v.position;
-          as.field_v.e(48, rh.field_p);
+          as.field_v.e(48, MidiNoteMixer.field_p);
           as.field_v.a(false, jm.field_b);
           var6 = 0;
           if (qn.field_a) {

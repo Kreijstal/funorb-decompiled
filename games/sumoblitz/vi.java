@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vi extends nt {
+final class vi extends TimedSceneEffect {
     private int field_w;
     static tg field_v;
     private int field_t;
@@ -67,7 +67,7 @@ final class vi extends nt {
         return true;
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_y = null;
         field_z = null;
         field_v = null;
@@ -144,10 +144,10 @@ final class vi extends nt {
           var13 = ig.field_a;
           var15 = var13;
           var2 = var15.e(-31302);
-          var3 = (km) (dk.field_a.b(122));
+          var3 = (km) (dk.field_a.first(122));
           while (var3 != null) {
             if (var2 != var3.field_n) {
-              var3 = (km) (dk.field_a.d((byte) 18));
+              var3 = (km) (dk.field_a.next((byte) 18));
               continue;
             }
             break;
@@ -231,15 +231,15 @@ final class vi extends nt {
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = (id) (ow.field_f.b(85));
+          var4 = (id) (ow.field_f.first(85));
           while (var4 != null) {
             km.a((byte) -120, param0, var4);
-            var4 = (id) (ow.field_f.d((byte) 18));
+            var4 = (id) (ow.field_f.next((byte) 18));
           }
-          var5 = (of) (oi.field_b.b(109));
+          var5 = (of) (oi.field_b.first(109));
           while (var5 != null) {
             pd.a((byte) -65, param0, var5);
-            var5 = (of) (oi.field_b.d((byte) 18));
+            var5 = (of) (oi.field_b.next((byte) 18));
           }
           if (param1 > -63) {
             field_z = (int[]) null;

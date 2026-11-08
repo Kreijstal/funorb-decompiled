@@ -3,13 +3,13 @@
  */
 final class ei {
     static int field_a;
-    static ri[] field_b;
+    static SpriteData[] field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 > -74) {
-          field_b = (ri[]) null;
+          field_b = (SpriteData[]) null;
         }
     }
 

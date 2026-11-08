@@ -6,13 +6,13 @@ import java.util.*;
 final class SecondaryNodeDequeIterator implements Iterator {
     private DualLinkNode field_e;
     private DualLinkNode field_c;
-    static hr[] field_a;
+    static ToolkitSprite[] field_a;
     private SecondaryNodeDeque field_d;
     static ul field_b;
 
     public final Object next() {
         Object var1 = this.field_c;
-        if (this.field_d.field_c == var1) {
+        if (this.field_d.sentinel == var1) {
           var1 = null;
           this.field_c = null;
         } else {
@@ -23,7 +23,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.field_c != this.field_d.field_c;
+        return this.field_c != this.field_d.sentinel;
     }
 
     public final void remove() {
@@ -51,7 +51,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             ws.field_b = param1;
           }
           if (param0 != -1203350004) {
-            SecondaryNodeDequeIterator.a(86);
+            SecondaryNodeDequeIterator.releaseStatics(86);
           }
           if (ts.field_c != param2) {
             if (ws.field_b != param2) {
@@ -80,17 +80,17 @@ final class SecondaryNodeDequeIterator implements Iterator {
         try {
           this.field_d = param0;
           this.field_e = null;
-          this.field_c = this.field_d.field_c.secondaryNext;
+          this.field_c = this.field_d.sentinel.secondaryNext;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vv.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         if (param0 > -91) {
-          field_a = (hr[]) null;
+          field_a = (ToolkitSprite[]) null;
         }
     }
 

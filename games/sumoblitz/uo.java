@@ -176,7 +176,7 @@ final class uo extends ShaderEffect {
           }
           return (byte) var2;
         }
-        uo.d((byte) 83);
+        uo.releaseStatics((byte) 83);
         if (param1 <= 0) {
           if (param1 < 160) {
             if (8364 != param1) {
@@ -718,7 +718,7 @@ final class uo extends ShaderEffect {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 25) {
           field_e = (nj[]) null;
           field_e = null;

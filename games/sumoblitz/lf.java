@@ -19,25 +19,25 @@ final class lf extends ka {
           if (param1 != -58) {
             return;
           }
-          var2 = (dj) (jf.field_c.b(81));
+          var2 = (dj) (jf.field_c.first(81));
           while (var2 != null) {
-            if (!var2.field_k.a(false)) {
+            if (!var2.field_k.isLinked(false)) {
               var2.unlink(false);
             } else {
               var2.field_q.f(128 + var2.field_p * kr.field_c >> 8);
             }
-            var2 = (dj) (jf.field_c.d((byte) 18));
+            var2 = (dj) (jf.field_c.next((byte) 18));
           }
           if (null != s.field_u) {
-            var2Lifetime1 = (dj) (s.field_u.b(param1 ^ -123));
+            var2Lifetime1 = (dj) (s.field_u.first(param1 ^ -123));
             while (var2Lifetime1 != null) {
-              stackIn_14_0 = var2Lifetime1.field_k.a(false);
+              stackIn_14_0 = var2Lifetime1.field_k.isLinked(false);
               if (stackIn_14_0) {
                 var2Lifetime1.field_q.f(128 + kr.field_c * var2Lifetime1.field_p >> 8);
               } else {
                 var2Lifetime1.unlink(false);
               }
-              var2Lifetime1 = (dj) (s.field_u.d((byte) 18));
+              var2Lifetime1 = (dj) (s.field_u.next((byte) 18));
             }
             return;
           }
@@ -85,7 +85,7 @@ final class lf extends ka {
         monthNames = null;
     }
 
-    lf(fr param0) {
+    lf(LegacyOpenGlGraphicsToolkit param0) {
         jq discarded$0 = null;
         jq discarded$1 = null;
         jq discarded$2 = null;
@@ -119,7 +119,7 @@ final class lf extends ka {
         if (param0 != -251) {
           lf.a(98, (byte) -77);
         }
-        return td.field_u > 250 ? true : false;
+        return MusicPatch.field_u > 250 ? true : false;
     }
 
     static {

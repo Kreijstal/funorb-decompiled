@@ -8,7 +8,7 @@ final class cs implements mw {
     private int field_g;
     private int field_h;
     private int field_f;
-    private fr field_c;
+    private LegacyOpenGlGraphicsToolkit field_c;
     private ft[] field_d;
 
     final static int g(int param0) {
@@ -215,7 +215,7 @@ final class cs implements mw {
         }
     }
 
-    cs(fr param0) {
+    cs(LegacyOpenGlGraphicsToolkit param0) {
         this.field_h = 0;
         this.field_f = -1;
         this.field_d = new ft[9];

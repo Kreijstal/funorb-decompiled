@@ -79,7 +79,7 @@ abstract class r extends DualLinkNode {
         return new br(param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -113 % ((param0 + 31) / 47);
         field_r = null;
     }

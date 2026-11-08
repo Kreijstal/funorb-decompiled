@@ -106,7 +106,7 @@ final class qv extends IntrusiveNode {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         asYouAreUnderText = null;
         field_k = null;
         if (param0 != 18) {

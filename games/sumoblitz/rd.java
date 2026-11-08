@@ -109,7 +109,7 @@ final class rd extends IntrusiveNode {
 
     final static void a(int param0, int param1) {
         if (param1 > -10) {
-          rd.c(true);
+          rd.releaseStatics(true);
         }
         iu.field_e = param0;
     }
@@ -174,7 +174,7 @@ final class rd extends IntrusiveNode {
     rd() {
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

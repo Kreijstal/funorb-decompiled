@@ -4,11 +4,11 @@
 final class hp extends ht {
     static String field_l;
     private int field_m;
-    static ri[] field_n;
+    static SpriteData[] field_n;
     private int field_k;
     static int[] field_o;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_n = null;
         if (param0 != 1) {
@@ -24,7 +24,7 @@ final class hp extends ht {
         this.field_m = -1;
     }
 
-    hp(fr param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
+    hp(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
         super(param0, 34067, param1, param2 * param2 * 6, param3);
         int var7_int = 0;
         this.field_k = -1;

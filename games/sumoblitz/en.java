@@ -192,7 +192,7 @@ abstract class en {
           c.field_s = 2;
         }
         if (param0 < 24) {
-          en.b((byte) 45);
+          en.releaseStatics((byte) 45);
         }
         ew.field_f = (param1 & 15) >> 2;
         if (!(ew.field_f <= 2)) {
@@ -211,11 +211,11 @@ abstract class en {
         if (param0 != -23517) {
           field_h = (String) null;
         }
-        stackIn_7_0 = (10 <= jv.field_a) && (!IntrusiveNode.field_a) && (!nt.a((byte) 116));
+        stackIn_7_0 = (10 <= jv.field_a) && (!IntrusiveNode.field_a) && (!TimedSceneEffect.a((byte) 116));
         return stackIn_7_0;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_j = null;
         if (param0 < 30) {

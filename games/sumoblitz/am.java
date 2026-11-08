@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class am extends rb {
-    private te field_k;
+    private IntrusiveNodeHashTable field_k;
     private sg field_x;
-    static hr[] field_j;
+    static ToolkitSprite[] field_j;
     private ti field_q;
     static int[] field_z;
     static vf field_e;
@@ -25,7 +25,7 @@ final class am extends rb {
     private long field_t;
     private boolean field_m;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         field_z = null;
         if (param0 > -78) {
@@ -127,7 +127,7 @@ final class am extends rb {
         if (this.b((byte) -120) == null) {
           return;
         }
-        var2 = this.field_s.b(-72);
+        var2 = this.field_s.first(-72);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 >= 0) {
@@ -151,7 +151,7 @@ final class am extends rb {
           } else {
             var2.unlink(false);
           }
-          var2 = this.field_s.d((byte) 18);
+          var2 = this.field_s.next((byte) 18);
         }
     }
 
@@ -388,7 +388,7 @@ final class am extends rb {
           }
           if (this.field_l) {
             var2_int = 1;
-            var3 = this.field_n.b(122);
+            var3 = this.field_n.first(122);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (this.field_p[var4] == 0) {
@@ -399,7 +399,7 @@ final class am extends rb {
               } else {
                 var2_int = 0;
               }
-              var3 = this.field_n.d((byte) 18);
+              var3 = this.field_n.next((byte) 18);
             }
             scanLoop1: while (true) {
               if (this.field_g < this.field_x.field_m.length) {
@@ -414,7 +414,7 @@ final class am extends rb {
                   if (0 == this.field_p[this.field_g]) {
                     var7 = new IntrusiveNode();
                     var7.key = (long)this.field_g;
-                    this.field_n.a(var7, (byte) 39);
+                    this.field_n.addLast(var7, (byte) 39);
                     var2_int = 0;
                   }
                 }
@@ -432,7 +432,7 @@ final class am extends rb {
           else {
             if (this.field_o) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_n.b(89);
+              var3Lifetime1 = this.field_n.first(89);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_p[var4Lifetime1] != 1) {
@@ -443,7 +443,7 @@ final class am extends rb {
                 } else {
                   var3Lifetime1.unlink(false);
                 }
-                var3Lifetime1 = this.field_n.d((byte) 18);
+                var3Lifetime1 = this.field_n.next((byte) 18);
               }
               scanLoop2: while (true) {
                 if (this.field_x.field_m.length > this.field_g) {
@@ -459,7 +459,7 @@ final class am extends rb {
                       var6 = new IntrusiveNode();
                       var6.key = (long)this.field_g;
                       var2_intLifetime1 = 0;
-                      this.field_n.a(var6, (byte) 39);
+                      this.field_n.addLast(var6, (byte) 39);
                     }
                   }
                   this.field_g = this.field_g + 1;
@@ -542,7 +542,7 @@ final class am extends rb {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        this.field_k = new te(16);
+        this.field_k = new IntrusiveNodeHashTable(16);
         this.field_g = 0;
         this.field_s = new IntrusiveDeque();
         this.field_t = 0L;

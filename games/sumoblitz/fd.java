@@ -41,7 +41,7 @@ final class fd extends uw {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param6 != 0) {
-            fd.c(127);
+            fd.releaseStatics(127);
           }
           if (hm.field_a != ProxySocketConnector.field_e) {
             return false;
@@ -93,7 +93,7 @@ final class fd extends uw {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         clickText = null;
         int var1 = 121 % ((75 - param0) / 32);
         field_d = null;

@@ -7,7 +7,7 @@ class IntrusiveNode {
     static String fullscreenPlayIsAnText;
     static JaggrabDownloader field_e;
     IntrusiveNode next;
-    static ri field_d;
+    static SpriteData field_d;
     IntrusiveNode previous;
     static String createAFreeAccountText;
     static String[] field_j;
@@ -15,7 +15,7 @@ class IntrusiveNode {
     static String[] exclamationPhrases;
     long key;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         createAFreeAccountText = null;
         fullscreenPlayIsAnText = null;
         field_d = null;
@@ -87,7 +87,7 @@ class IntrusiveNode {
             if (param2 != 0) {
               field_e = (JaggrabDownloader) null;
             }
-            stackIn_14_0 = gk.field_O;
+            stackIn_14_0 = CompactMeshGeometry.field_O;
             stackIn_14_1 = 116;
             stackIn_14_2 = null;
             stackIn_14_3 = null;
@@ -122,7 +122,7 @@ class IntrusiveNode {
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean isLinked(boolean param0) {
         if (param0) {
           createAFreeAccountText = (String) null;
           if (null != this.previous) {

@@ -5,7 +5,7 @@ final class oj implements mh {
     static int field_a;
     static String emailAddressIsUnavailableText;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -4) {
           field_a = 101;
           emailAddressIsUnavailableText = null;
@@ -66,7 +66,7 @@ final class oj implements mh {
         if (param1 == 13836) {
           return 0 != (2048 & param0) ? true : false;
         }
-        oj.a(-32);
+        oj.releaseStatics(-32);
         return 0 != (2048 & param0) ? true : false;
     }
 

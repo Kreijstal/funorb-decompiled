@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class aj extends nt {
+final class aj extends TimedSceneEffect {
     static String pleaseCheckIfAddressText;
     static int field_B;
     private int field_E;
@@ -51,7 +51,7 @@ final class aj extends nt {
               if (this.field_s != 2) {
                 if (this.field_s != 3) {
                   if (this.field_s == 4) {
-                    ak.field_a[2 + this.field_E].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), (int)((double)this.field_w / 14.0 * 3072.0), (int)(this.field_F * 65535.0), 1, 0, 2);
+                    MenuScreen.field_a[2 + this.field_E].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), (int)((double)this.field_w / 14.0 * 3072.0), (int)(this.field_F * 65535.0), 1, 0, 2);
                   } else {
                     if (this.field_s == 5) {
                       mr.field_e[2 + this.field_E].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), (int)(3072.0 * ((double)this.field_w / 14.0)), (int)(this.field_F * 65535.0), 1, 0, 2);
@@ -177,13 +177,13 @@ final class aj extends nt {
         return super.a(-2567);
     }
 
-    final static hr[] a(ri[] param0, GraphicsToolkit param1, int param2) {
+    final static ToolkitSprite[] a(SpriteData[] param0, GraphicsToolkit param1, int param2) {
         int var4 = 0;
-        hr[] var3 = null;
+        ToolkitSprite[] var3 = null;
         RuntimeException var3_ref = null;
         int var5 = 0;
-        hr[] var6 = null;
-        hr[] stackIn_7_0 = null;
+        ToolkitSprite[] var6 = null;
+        ToolkitSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -192,7 +192,7 @@ final class aj extends nt {
         RuntimeException decompiledCaughtException = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var6 = new hr[param0.length];
+          var6 = new ToolkitSprite[param0.length];
           var3 = var6;
           for (var4 = 0; param0.length > var4; var4++) {
             var6[var4] = param1.a(param0[var4], false);
@@ -231,7 +231,7 @@ final class aj extends nt {
           return;
         }
         GraphicsToolkit var2 = (GraphicsToolkit) null;
-        aj.a((ri[]) null, (GraphicsToolkit) null, -61);
+        aj.a((SpriteData[]) null, (GraphicsToolkit) null, -61);
         createYourOwnFreeText = null;
         pleaseCheckIfAddressText = null;
         field_D = null;

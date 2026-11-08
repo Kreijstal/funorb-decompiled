@@ -11,11 +11,11 @@ final class bi {
         return param0 ^ param1;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_a = (int[][]) null;
         if (param0 != 84) {
-          bi.a((byte) 127);
+          bi.releaseStatics((byte) 127);
           notCompletedText = null;
           return;
         }

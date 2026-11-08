@@ -9,12 +9,12 @@ final class he extends za {
     static Random field_o;
     static m field_n;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_m = null;
         field_n = null;
         if (param0 <= 119) {
-          he.a(23);
+          he.releaseStatics(23);
         }
     }
 

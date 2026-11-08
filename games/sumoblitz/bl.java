@@ -6,12 +6,12 @@ final class bl {
     bl field_f;
     int field_b;
     int field_d;
-    static ri field_a;
+    static SpriteData field_a;
     int field_g;
     int field_c;
-    hr field_h;
+    ToolkitSprite field_h;
 
-    final void a(bl param0, int param1, int param2, hr param3, int param4, int param5, int param6) {
+    final void a(bl param0, int param1, int param2, ToolkitSprite param3, int param4, int param5, int param6) {
         try {
           this.field_f = param0;
           this.field_h = param3;
@@ -27,10 +27,10 @@ final class bl {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         if (param0) {
-          bl.a(true);
+          bl.releaseStatics(true);
         }
     }
 

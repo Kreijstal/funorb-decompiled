@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class nn {
-    static ri[] field_a;
+    static SpriteData[] field_a;
 
     final static void a(br param0, byte param1) {
         int var2_int = 0;
@@ -19,7 +19,7 @@ abstract class nn {
             return;
           }
           if (param1 < 43) {
-            field_a = (ri[]) null;
+            field_a = (SpriteData[]) null;
           }
           if (param0.field_h != 0 ||
             0 != param0.field_c) {
@@ -59,24 +59,24 @@ abstract class nn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          lk.f(param1, param4, 1 + param2, 10000536);
-          lk.f(param1, param4 + param0, 1 + param2, 12105912);
+          SoftwareRasterizer.f(param1, param4, 1 + param2, 10000536);
+          SoftwareRasterizer.f(param1, param4 + param0, 1 + param2, 12105912);
           var5_int = 1;
           if (param3 != -84) {
             return;
           }
           var6 = param0;
-          if (lk.field_i > var5_int + param4) {
-            var5_int = -param4 + lk.field_i;
+          if (SoftwareRasterizer.field_i > var5_int + param4) {
+            var5_int = -param4 + SoftwareRasterizer.field_i;
           }
-          if (param4 + var6 > lk.field_e) {
-            var6 = lk.field_e - param4;
+          if (param4 + var6 > SoftwareRasterizer.field_e) {
+            var6 = SoftwareRasterizer.field_e - param4;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 152 + 48 * var7 / param0;
             var9 = var8 << 16 | var8 << 8 | var8;
-            lk.field_a[param1 + lk.field_b * (var7 + param4)] = var9;
-            lk.field_a[(param4 + var7) * lk.field_b + (param1 + param2)] = var9;
+            SoftwareRasterizer.field_a[param1 + SoftwareRasterizer.field_b * (var7 + param4)] = var9;
+            SoftwareRasterizer.field_a[(param4 + var7) * SoftwareRasterizer.field_b + (param1 + param2)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -138,20 +138,20 @@ abstract class nn {
           param4[0].b(param5, param2, param0);
           int var9 = -64 % ((param3 + 25) / 61);
           param4[2].b(-var7 + param1 + param5, param2, param0);
-          lk.b(mo.field_t);
-          lk.e(param5 + var6_int, param2, -var7 + (param1 + param5), param2 + param4[1].field_w);
+          SoftwareRasterizer.b(mo.field_t);
+          SoftwareRasterizer.e(param5 + var6_int, param2, -var7 + (param1 + param5), param2 + param4[1].field_w);
           var10 = param5 + var6_int;
           var11 = -var7 + param1 + param5;
           for (param5 = var10; param5 < var11; param5 = param5 + var8) {
             param4[1].b(param5, param2, param0);
           }
-          lk.a(mo.field_t);
+          SoftwareRasterizer.a(mo.field_t);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nn.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 65 / ((-2 - param0) / 57);
         field_a = null;
     }

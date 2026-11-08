@@ -5,9 +5,9 @@ final class UpgradeStatNames {
     static String[] names;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1600) {
-          UpgradeStatNames.a(88);
+          UpgradeStatNames.releaseStatics(88);
           names = null;
           return;
         }

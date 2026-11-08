@@ -3,7 +3,7 @@
  */
 final class at extends da {
     private int[] field_c;
-    private qa field_e;
+    private SoftwareGraphicsToolkit field_e;
     private int[] field_h;
     private int[] field_f;
     private int[] field_g;
@@ -140,7 +140,7 @@ final class at extends da {
         }
     }
 
-    at(qa param0, ta param1, ri[] param2, int[] param3, int[] param4) {
+    at(SoftwareGraphicsToolkit param0, ta param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_e = param0;

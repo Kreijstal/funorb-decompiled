@@ -8,12 +8,12 @@ final class kf extends DualLinkNode implements ft {
     int field_s;
     private int field_y;
     private int field_D;
-    private fr field_C;
+    private LegacyOpenGlGraphicsToolkit field_C;
     private int field_z;
     static int field_B;
     int field_A;
     private int field_r;
-    static ri[] field_w;
+    static SpriteData[] field_w;
     static String achievementsText;
 
     final void a(boolean param0, int param1, int param2) {
@@ -80,7 +80,7 @@ final class kf extends DualLinkNode implements ft {
           }
           bl.field_e = var6.e(-31302);
           ResourceArchive.field_f = var6.e(-31302);
-          iv.field_i = var6.e(-31302);
+          LegacyOpenGlEffectManager.field_i = var6.e(-31302);
           hc.field_f = var6.e(-31302);
           if (param0 <= 92) {
             return;
@@ -129,7 +129,7 @@ final class kf extends DualLinkNode implements ft {
         super.finalize();
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -21057) {
           field_w = null;
           field_v = null;
@@ -137,7 +137,7 @@ final class kf extends DualLinkNode implements ft {
           achievementsText = null;
           return;
         }
-        field_w = (ri[]) null;
+        field_w = (SpriteData[]) null;
         field_w = null;
         field_v = null;
         field_u = null;
@@ -158,7 +158,7 @@ final class kf extends DualLinkNode implements ft {
             var3 = (CharSequence) null;
             kf.a((CharSequence) null, (byte) -40);
           }
-          var2 = td.a(-29275, vo.a(param0, 7441));
+          var2 = MusicPatch.a(-29275, vo.a(param0, 7441));
           if (var2 == null) {
             var2 = "";
           }
@@ -178,7 +178,7 @@ final class kf extends DualLinkNode implements ft {
         }
     }
 
-    kf(fr param0, int param1, int param2, int param3) {
+    kf(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3) {
         this.field_r = -1;
         this.field_z = -1;
         try {

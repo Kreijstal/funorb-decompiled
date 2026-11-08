@@ -4,7 +4,7 @@
 final class vk {
     static String[] levelLoadStepLabels;
     int field_a;
-    private fr field_c;
+    private LegacyOpenGlGraphicsToolkit field_c;
     static String field_d;
     static boolean field_e;
 
@@ -103,7 +103,7 @@ final class vk {
         field_d = null;
     }
 
-    vk(fr param0, int param1, int param2) {
+    vk(LegacyOpenGlGraphicsToolkit param0, int param1, int param2) {
         try {
           this.field_a = param2;
           this.field_c = param0;

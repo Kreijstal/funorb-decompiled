@@ -9,7 +9,7 @@ final class gf {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 1431655765) {
           field_a = (java.awt.Image) null;
@@ -39,7 +39,7 @@ final class gf {
           param0 = param0 + (param0 >>> 16);
           return 255 & param0;
         }
-        gf.a(-54);
+        gf.releaseStatics(-54);
         param0 = param0 + (param0 >>> 4) & 252645135;
         param0 = param0 + (param0 >>> 8);
         param0 = param0 + (param0 >>> 16);

@@ -27,7 +27,7 @@ final class dv implements mh {
           if (param0.d(-1)) {
             pp.a(var7 + 2, param0.field_q - 4, -13181, var6_int + 2, -4 + param0.field_p);
           }
-          lk.d(var6_int, var7, -2 + param0.field_q + var6_int, param0.field_p + var7);
+          SoftwareRasterizer.d(var6_int, var7, -2 + param0.field_q + var6_int, param0.field_p + var7);
           var8 = this.field_a.field_B.a(-72);
           if (var8 != null) {
             var9 = var8.toString();
@@ -35,10 +35,10 @@ final class dv implements mh {
             if (this.field_a.d(-1) &&
               var9.startsWith(this.field_a.field_L)) {
               var10 = this.field_a.field_G.a(this.field_a.field_L);
-              lk.b(var6_int + 2, var7 + 2, var10, param0.field_p - 4, 2188450, 100);
+              SoftwareRasterizer.b(var6_int + 2, var7 + 2, var10, param0.field_p - 4, 2188450, 100);
             }
           }
-          lk.d();
+          SoftwareRasterizer.d();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,7 +62,7 @@ final class dv implements mh {
         }
         ne[] var1 = new ne[rl.field_n];
         for (var2 = 0; var2 < rl.field_n; var2++) {
-          var1[var2] = new ne(vf.field_d, li.field_u, er.field_h[var2], av.field_C[var2], vg.field_k[var2], we.field_B[var2], ag.field_d[var2], iv.field_l);
+          var1[var2] = new ne(vf.field_d, li.field_u, er.field_h[var2], av.field_C[var2], vg.field_k[var2], we.field_B[var2], ag.field_d[var2], LegacyOpenGlEffectManager.field_l);
         }
         tl.a((byte) -68);
         return var1;
@@ -76,7 +76,7 @@ final class dv implements mh {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != 59) {
           java.applet.Applet var2 = (java.applet.Applet) null;

@@ -116,7 +116,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void b(int param0);
+    abstract void updateGame(int param0);
 
     public final void windowClosed(java.awt.event.WindowEvent param0) {
     }
@@ -163,7 +163,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.a(true);
+          this.releaseAllStatics(true);
           if (ck.field_c != null) {
             try {
               System.exit(0);
@@ -182,7 +182,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void f(int param0);
+    abstract void initializeGame(int param0);
 
     final static void j(int param0) {
         rl var1 = null;
@@ -192,12 +192,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 < 40) {
             GameApplet.provideLoaderApplet((java.applet.Applet) null);
           }
-          var1 = (rl) (ko.field_m.b((byte) -127));
+          var1 = (rl) (ko.field_m.removeLast((byte) -127));
           if (var1 == null) {
             var1 = new rl();
           }
-          var1.a(lk.field_b, lk.field_c, lk.field_a, lk.field_j, (byte) -94, lk.field_i, lk.field_k, lk.field_e);
-          te.field_g.a((IntrusiveNode) (var1), (byte) 39);
+          var1.a(SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, SoftwareRasterizer.field_j, (byte) -94, SoftwareRasterizer.field_i, SoftwareRasterizer.field_k, SoftwareRasterizer.field_e);
+          IntrusiveNodeHashTable.field_g.addLast((IntrusiveNode) (var1), (byte) 39);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -353,7 +353,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               ct.field_z = ra.c(2);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
               lt.field_m = dupTemp$0;
-              gk.field_O = dupTemp$0;
+              CompactMeshGeometry.field_O = dupTemp$0;
               var8 = lt.field_m.a(true, (Runnable) (this), 1);
               while (true) {
                 if (var8.field_c == 0) {
@@ -468,7 +468,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               qn.field_f.setLocation(th.field_H, si.field_c);
             }
           }
-          this.d(0);
+          this.renderFrame(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -477,7 +477,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void d(int param0);
+    abstract void renderFrame(int param0);
 
     private final void a(byte param0) {
         RuntimeException runtimeException = null;
@@ -500,7 +500,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             ii.field_a = ue.field_o;
           }
-          this.b(-64);
+          this.updateGame(-64);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -519,7 +519,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !gr.field_e) {
             fd.field_k = wq.a(-125);
             tg.a(5000L, (byte) 119);
-            gk.field_O = null;
+            CompactMeshGeometry.field_O = null;
             this.a(false, -32);
             return;
           }
@@ -682,7 +682,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var1.b((byte) 117, 3);
           var1.b((byte) 90, bl.field_e);
           var1.b((byte) 46, ResourceArchive.field_f);
-          var1.b((byte) 39, iv.field_i);
+          var1.b((byte) 39, LegacyOpenGlEffectManager.field_i);
           var1.b((byte) 52, hc.field_f);
           var2 = 0;
           while (36 > var2) {
@@ -890,10 +890,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                gk.b(true);
+                CompactMeshGeometry.b(true);
                 this.e(1000);
                 m.field_R = sd.a(wq.field_b, gi.field_h, 0, (java.awt.Component) ((Object) qn.field_f));
-                this.f(28196);
+                this.initializeGame(28196);
                 jl.field_a = bt.a(false);
                 do {
                   boolean decompiledFrameRemainder0 = true;
@@ -957,7 +957,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void a(boolean param0);
+    abstract void releaseAllStatics(boolean param0);
 
     static {
         field_e = new float[4];

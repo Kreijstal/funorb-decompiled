@@ -4,7 +4,7 @@
 final class qh extends da {
     private tq field_e;
     private f field_c;
-    private fr field_f;
+    private LegacyOpenGlGraphicsToolkit field_f;
     private boolean field_d;
 
     final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
@@ -51,7 +51,7 @@ final class qh extends da {
         }
     }
 
-    qh(fr param0, ta param1, ri[] param2, boolean param3) {
+    qh(LegacyOpenGlGraphicsToolkit param0, ta param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -92,14 +92,14 @@ final class qh extends da {
         int var20_int;
         float var20;
         int var21;
-        ri var22;
-        ri var23;
+        SpriteData var22;
+        SpriteData var23;
         byte[] var24;
-        ri var25;
+        SpriteData var25;
         byte[] var26;
         byte[] var27;
         int[] var28;
-        ri var29;
+        SpriteData var29;
         byte[] var30;
         byte[] var31;
         byte[] var32;

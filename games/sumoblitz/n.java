@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class n extends da implements e {
+final class n extends da implements NativeResource {
     long field_nativeid;
 
     final native void fa(char param0, int param1, int param2, int param3, boolean param4);
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          pa.a((e) (this), (byte) -37);
+          NativeResourceReaper.a((NativeResource) (this), (byte) -37);
         }
     }
 
-    public final native void w(boolean param0);
+    public final native void disposeNativeResource(boolean param0);
 
-    private final native void S(oa param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6, int[] param7);
+    private final native void S(NativeSoftwareGraphicsToolkit param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6, int[] param7);
 
-    n(oa param0, ya param1, ta param2, ri[] param3, hr[] param4) {
+    n(NativeSoftwareGraphicsToolkit param0, ya param1, ta param2, SpriteData[] param3, ToolkitSprite[] param4) {
         super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];

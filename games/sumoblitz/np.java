@@ -32,7 +32,7 @@ final class np {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         if (param0 != -58) {
           field_c = '￲';
@@ -178,7 +178,7 @@ final class np {
         if (param0 != 7) {
           field_c = 'ￃ';
         }
-        return null == gk.field_o ? ii.field_a : true;
+        return null == CompactMeshGeometry.field_o ? ii.field_a : true;
     }
 
     final void a(byte[] param0, int param1, long param2) {

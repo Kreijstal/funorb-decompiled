@@ -6,14 +6,14 @@ final class mn {
     float field_d;
     static String[] field_g;
     private int field_a;
-    static hr field_j;
+    static ToolkitSprite field_j;
     private int field_e;
-    static ri field_c;
+    static SpriteData field_c;
     private int field_h;
     private gn[] field_l;
     static String highText;
     static int field_i;
-    static ri[] field_b;
+    static SpriteData[] field_b;
 
     final static void b(byte param0) {
         if (null != rf.field_a) {
@@ -55,7 +55,7 @@ final class mn {
         var16 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (!param8) {
-            mn.a((byte) 51);
+            mn.releaseStatics((byte) 51);
           }
           while (true) {
             param3--;
@@ -184,7 +184,7 @@ final class mn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_b = null;
         field_j = null;
@@ -193,7 +193,7 @@ final class mn {
         if (param0 == 17) {
           return;
         }
-        field_b = (ri[]) null;
+        field_b = (SpriteData[]) null;
     }
 
     private mn() throws Throwable {

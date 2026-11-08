@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kk {
-    static ri[] field_e;
+    static SpriteData[] field_e;
     private d field_c;
-    static hr field_f;
-    private fr field_a;
+    static ToolkitSprite field_f;
+    private LegacyOpenGlGraphicsToolkit field_a;
     static boolean[] field_b;
     private sd field_d;
 
@@ -14,7 +14,7 @@ final class kk {
         int var2 = 36 / ((param0 - 41) / 59);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 != -24) {
           return;
@@ -86,7 +86,7 @@ final class kk {
         int stackIn_7_0 = 0;
         us stackIn_12_0;
         us stackIn_12_1;
-        fr stackIn_12_2;
+        LegacyOpenGlGraphicsToolkit stackIn_12_2;
         int stackIn_12_3;
         int stackIn_12_4;
         int stackIn_12_5;
@@ -96,7 +96,7 @@ final class kk {
         boolean stackIn_13_7 = false;
         us stackIn_21_0;
         us stackIn_21_1;
-        fr stackIn_21_2;
+        LegacyOpenGlGraphicsToolkit stackIn_21_2;
         int stackIn_21_3;
         int stackIn_21_4;
         int stackIn_21_5;
@@ -106,7 +106,7 @@ final class kk {
         boolean stackIn_22_7 = false;
         us stackIn_31_0;
         us stackIn_31_1;
-        fr stackIn_31_2;
+        LegacyOpenGlGraphicsToolkit stackIn_31_2;
         int stackIn_31_3;
         int stackIn_31_4;
         int stackIn_31_5;
@@ -116,7 +116,7 @@ final class kk {
         boolean stackIn_32_7 = false;
         us stackIn_40_0;
         us stackIn_40_1;
-        fr stackIn_40_2;
+        LegacyOpenGlGraphicsToolkit stackIn_40_2;
         int stackIn_40_3;
         int stackIn_40_4;
         int stackIn_40_5;
@@ -126,7 +126,7 @@ final class kk {
         boolean stackIn_41_7 = false;
         us stackIn_47_0;
         us stackIn_47_1;
-        fr stackIn_47_2;
+        LegacyOpenGlGraphicsToolkit stackIn_47_2;
         int stackIn_47_3;
         int stackIn_47_4;
         int stackIn_47_5;
@@ -300,7 +300,7 @@ final class kk {
         return var22;
     }
 
-    kk(fr param0, d param1) {
+    kk(LegacyOpenGlGraphicsToolkit param0, d param1) {
         this.field_d = new sd(256);
         try {
           this.field_c = param1;

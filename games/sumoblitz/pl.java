@@ -118,7 +118,7 @@ final class pl extends PacketBuffer {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         changeDisplayNameText = null;
         if (param0 == 24599) {
           enterAPasswordForText = null;

@@ -486,7 +486,7 @@ final class gj {
         if (param0 != -84) {
           gj.a((byte) 37, 116);
         }
-        return fi.a(param1, iv.field_b, (byte) -96);
+        return fi.a(param1, LegacyOpenGlEffectManager.field_b, (byte) -96);
     }
 
     static {

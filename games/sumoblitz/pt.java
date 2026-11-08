@@ -26,7 +26,7 @@ abstract class pt {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 12) {
           return;
         }
@@ -75,7 +75,7 @@ abstract class pt {
           var2 = var10.e(param0 - 8619);
           var3 = var10.e(-31302);
           if (var2 == 0) {
-            var4_ref_qv = (qv) (ak.field_b.b(-95));
+            var4_ref_qv = (qv) (MenuScreen.field_b.first(-95));
             if (var4_ref_qv == null) {
               kk.a((byte) -127);
               return;
@@ -95,11 +95,11 @@ abstract class pt {
           }
           if (1 == var2) {
             var4 = var10.h(-2858);
-            var5 = (lt) (em.field_d.b(-73));
+            var5 = (lt) (em.field_d.first(-73));
             while (var5 != null) {
               if (var3 != var5.field_k ||
                 var4 != var5.field_o) {
-                var5 = (lt) (em.field_d.d((byte) 18));
+                var5 = (lt) (em.field_d.next((byte) 18));
                 continue;
               }
               break;

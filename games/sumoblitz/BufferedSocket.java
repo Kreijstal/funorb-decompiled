@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class BufferedSocket implements Runnable {
-    static ri field_n;
+    static SpriteData field_n;
     private byte[] field_e;
     static jr field_p;
     private int field_c;
@@ -259,9 +259,9 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 19) {
-          BufferedSocket.d(-53);
+          BufferedSocket.releaseStatics(-53);
         }
         field_i = null;
         moreSuggestionsText = null;

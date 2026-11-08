@@ -7,7 +7,7 @@ final class mv extends da {
     private boolean field_c;
     private HardwareGraphicsToolkit field_f;
 
-    mv(HardwareGraphicsToolkit param0, ta param1, ri[] param2, boolean param3) {
+    mv(HardwareGraphicsToolkit param0, ta param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -35,7 +35,7 @@ final class mv extends da {
         byte[] var12_ref_byte__;
         int var12;
         int var13_int;
-        ri var13;
+        SpriteData var13;
         int var14;
         int var15;
         int var16;
@@ -52,11 +52,11 @@ final class mv extends da {
         float var22;
         float var23;
         int var24;
-        ri var25;
-        ri var26;
+        SpriteData var25;
+        SpriteData var26;
         byte[] var27;
         int[] var28;
-        ri var29;
+        SpriteData var29;
         byte[] var30;
         byte[] var31;
         int[] var32;
@@ -176,7 +176,7 @@ final class mv extends da {
               }
             }
           }
-          if (!param0.a(io.field_g, te.field_f, 6)) {
+          if (!param0.a(io.field_g, IntrusiveNodeHashTable.field_f, 6)) {
             var36 = new int[var35.length];
             var28 = var36;
             var8_ref_int__ = var28;
@@ -185,7 +185,7 @@ final class mv extends da {
             }
             this.field_e = param0.a(var36, var6Lifetime1, false, -127, var6Lifetime1);
           } else {
-            this.field_e = param0.a(var35, var6Lifetime1, var6Lifetime1, te.field_f, 0, false);
+            this.field_e = param0.a(var35, var6Lifetime1, var6Lifetime1, IntrusiveNodeHashTable.field_f, 0, false);
           }
           this.field_c = true;
         }

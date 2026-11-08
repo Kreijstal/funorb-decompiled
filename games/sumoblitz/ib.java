@@ -97,15 +97,15 @@ final class ib extends ShaderEffect {
     }
 
     final static void d(int param0) {
-        if (gk.field_o == null) {
+        if (CompactMeshGeometry.field_o == null) {
           return;
         }
-        wr.a(true, gk.field_o);
+        wr.a(true, CompactMeshGeometry.field_o);
         if (param0 != 1) {
           return;
         }
-        gk.field_o.a(false, lt.field_m);
-        gk.field_o = null;
+        CompactMeshGeometry.field_o.a(false, lt.field_m);
+        CompactMeshGeometry.field_o = null;
         if (SecondaryNodeDequeIterator.field_b == null) {
           qn.field_f.requestFocus();
           return;

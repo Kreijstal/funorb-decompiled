@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra extends bq {
+final class ra extends LegacyOpenGlEffect {
     static int field_f;
     static int field_e;
 
@@ -11,7 +11,7 @@ final class ra extends bq {
         }
     }
 
-    ra(fr param0) {
+    ra(LegacyOpenGlGraphicsToolkit param0) {
         super(param0);
     }
 

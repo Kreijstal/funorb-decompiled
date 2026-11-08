@@ -28,7 +28,7 @@ final class ji {
           }
           try {
             if (cd.field_d == 0) {
-              BufferedSocket.field_p = gk.field_u.a((byte) 51, gd.field_a, ie.field_x);
+              BufferedSocket.field_p = CompactMeshGeometry.field_u.a((byte) 51, gd.field_a, ie.field_x);
               cd.field_d = cd.field_d + 1;
             }
             if (!param0) {
@@ -44,18 +44,18 @@ final class ji {
               }
             }
             if (cd.field_d == 2) {
-              tj.field_n = new BufferedSocket((java.net.Socket) (BufferedSocket.field_p.field_d), gk.field_u);
+              InstrumentNoteMask.field_n = new BufferedSocket((java.net.Socket) (BufferedSocket.field_p.field_d), CompactMeshGeometry.field_u);
               var2 = new PacketBuffer(13);
               sb.a(ow.field_e, 127, bt.field_d, rd.field_l, var2);
               var2.b((byte) 127, 15);
               var2.e(48, qq.field_P);
-              tj.field_n.a(0, -2, var2.payload, 13);
+              InstrumentNoteMask.field_n.a(0, -2, var2.payload, 13);
               cd.field_d = cd.field_d + 1;
               gb.field_s = wq.a(-109) + 30000L;
             }
             if (cd.field_d == 3) {
-              if (tj.field_n.c(-91) > 0) {
-                var1_int = tj.field_n.a(-106);
+              if (InstrumentNoteMask.field_n.c(-91) > 0) {
+                var1_int = InstrumentNoteMask.field_n.a(-106);
                 if (var1_int != 0) {
                   stackIn_30_0 = tm.a(var1_int, -93);
                   return stackIn_30_0;
@@ -71,9 +71,9 @@ final class ji {
             if (cd.field_d != 4) {
               return -1;
             }
-            jk.field_b.a(vk.field_e, (byte) 114, tj.field_n);
+            jk.field_b.a(vk.field_e, (byte) 114, InstrumentNoteMask.field_n);
             BufferedSocket.field_p = null;
-            tj.field_n = null;
+            InstrumentNoteMask.field_n = null;
             cd.field_d = 0;
             stackIn_35_0 = 0;
             return stackIn_35_0;
@@ -116,7 +116,7 @@ final class ji {
               var3 = (String) (tw.a(param0, -32, "getcookies"));
               var4 = cn.a(';', var3, -27224);
               if (param1 != -57) {
-                ji.a(-92);
+                ji.releaseStatics(-92);
               }
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -194,7 +194,7 @@ final class ji {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         abcdefghijklmnopqrstuvwxyzabcdefghijText = null;
         if (param0 != 0) {
           return;

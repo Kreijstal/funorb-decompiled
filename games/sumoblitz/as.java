@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class as extends nt {
+final class as extends TimedSceneEffect {
     private int field_z;
     private int field_s;
     static String livesText;
@@ -31,7 +31,7 @@ final class as extends nt {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         livesText = null;
         field_y = null;
         field_w = null;
@@ -127,7 +127,7 @@ final class as extends nt {
           }
         }
         if (param0 != -2567) {
-          as.e(-88);
+          as.releaseStatics(-88);
         }
         return super.a(param0 + 0);
     }

@@ -105,7 +105,7 @@ final class JaggrabDownloader implements Runnable {
             var4 = var5.getOutputStream();
             var4.write(17);
             var6 = (CharSequence) ((Object) ("JAGGRAB " + this.field_a.getFile() + "\n\n"));
-            var4.write(mb.a(var6, (byte) 32));
+            var4.write(GameInstructions.a(var6, (byte) 32));
             this.field_h = new DataInputStream(var5.getInputStream());
           }
           this.field_d.position = 0;
@@ -205,9 +205,9 @@ final class JaggrabDownloader implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 121) {
-          JaggrabDownloader.a(82);
+          JaggrabDownloader.releaseStatics(82);
           field_i = null;
           return;
         }

@@ -8,7 +8,7 @@ final class ProxySocketConnector extends SocketConnector {
     static String emailIsValidText;
     static mm field_e;
     private java.net.ProxySelector field_g;
-    static ri[] field_f;
+    static SpriteData[] field_f;
 
     final static float a(int param0, float param1, float param2, float param3) {
         if (param0 != 1050) {

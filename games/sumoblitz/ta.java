@@ -24,7 +24,7 @@ final class ta {
           if (param1 != 0) {
             field_f = (vf) null;
           }
-          stackIn_4_0 = this.a(0, (hr[]) null, param0);
+          stackIn_4_0 = this.a(0, (ToolkitSprite[]) null, param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,7 +40,7 @@ final class ta {
         }
     }
 
-    final int a(String param0, boolean param1, String[] param2, int[] param3, hr[] param4) {
+    final int a(String param0, boolean param1, String[] param2, int[] param3, ToolkitSprite[] param4) {
         int discarded$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_26_0 = 0;
@@ -94,7 +94,7 @@ final class ta {
           var10 = 0;
           var11 = -1;
           if (param1) {
-            discarded$0 = this.a(-94, (hr[]) null, (String) null);
+            discarded$0 = this.a(-94, (ToolkitSprite[]) null, (String) null);
           }
           var12 = -1;
           var13 = 0;
@@ -331,7 +331,7 @@ final class ta {
         }
     }
 
-    private final int a(int param0, hr[] param1, String param2) {
+    private final int a(int param0, ToolkitSprite[] param1, String param2) {
         int stackIn_3_0 = 0;
         int stackIn_65_0 = 0;
         RuntimeException stackIn_69_0 = null;
@@ -479,7 +479,7 @@ final class ta {
         }
     }
 
-    final String a(int param0, String param1, hr[] param2, int param3) {
+    final String a(int param0, String param1, ToolkitSprite[] param2, int param3) {
         String stackIn_5_0 = null;
         String stackIn_54_0 = null;
         String stackIn_73_0 = null;
@@ -510,7 +510,7 @@ final class ta {
             stackIn_5_0 = (String) (param1);
             return stackIn_5_0;
           }
-          param0 = param0 - this.a(param3 ^ param3, (hr[]) null, "...");
+          param0 = param0 - this.a(param3 ^ param3, (ToolkitSprite[]) null, "...");
           var5_int = -1;
           var6 = -1;
           var7 = 0;

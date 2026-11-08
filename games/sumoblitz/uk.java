@@ -17,12 +17,12 @@ final class uk extends gt implements ai {
         }
     }
 
-    public static void g(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_lb = null;
         if (!param0) {
           return;
         }
-        uk.g(false);
+        uk.releaseStatics(false);
     }
 
     private final void a(boolean param0, byte param1, an param2) {
@@ -64,7 +64,7 @@ final class uk extends gt implements ai {
               var6.a(wd.continueText, (byte) -123, (qm) (this));
             } else {
               if (param2.field_e != 5) {
-                var6.a(cq.backText, -1, true);
+                var6.a(FullscreenCanvas.backText, -1, true);
               } else {
                 var6.a(vf.reloadGameText, 11, true);
                 var6.a(of.quitToWebsiteText, 17, true);
@@ -171,7 +171,7 @@ final class uk extends gt implements ai {
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param1.charAt(var6);
             if (or.a((byte) 61, (char) var7)) {
-              var8 = iv.a(241, (char) var7);
+              var8 = LegacyOpenGlEffectManager.a(241, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

@@ -4,13 +4,13 @@
 final class up {
     static boolean field_d;
     static int field_a;
-    static hr[] field_e;
+    static ToolkitSprite[] field_e;
     static boolean[] field_g;
-    static hr[] field_c;
+    static ToolkitSprite[] field_c;
     private static int[] field_f;
     static String cancelText;
 
-    final static void a(int[] param0, int[] param1, boolean param2, boolean param3, gk param4, boolean param5, int param6) {
+    final static void a(int[] param0, int[] param1, boolean param2, boolean param3, CompactMeshGeometry param4, boolean param5, int param6) {
         int stackIn_62_0 = 0;
         int stackIn_62_1 = 0;
         int stackIn_71_0 = 0;
@@ -156,7 +156,7 @@ final class up {
                   var26Lifetime1Lifetime1 = param4.field_M[var23Lifetime2];
                   ci.field_b[var23Lifetime2] = var9 + (var26Lifetime1Lifetime1 * var18 + var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime1Lifetime1 >> 16);
                   au.field_h[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var24Lifetime1Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16) >> 16) + var10;
-                  bq.field_d[var23Lifetime2] = var11 + (var25Lifetime1Lifetime1 * var17 + var24Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20 >> 16);
+                  LegacyOpenGlEffect.field_d[var23Lifetime2] = var11 + (var25Lifetime1Lifetime1 * var17 + var24Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20 >> 16);
                   var24Lifetime1Lifetime1 = param4.field_F[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_i[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_J[var23Lifetime2];
@@ -240,7 +240,7 @@ final class up {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -249,7 +249,7 @@ final class up {
           field_f = null;
           field_g = null;
           if (param0 > -9) {
-            up.a((int[]) null, (int[]) null, true, true, (gk) null, false, 41);
+            up.a((int[]) null, (int[]) null, true, true, (CompactMeshGeometry) null, false, 41);
           }
           cancelText = null;
           return;

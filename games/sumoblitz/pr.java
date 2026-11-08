@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pr extends ht {
-    static hr[] field_k;
+    static ToolkitSprite[] field_k;
     private int field_l;
 
-    pr(fr param0, int param1, int param2, byte[] param3, int param4) {
+    pr(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, byte[] param3, int param4) {
         super(param0, 3552, param1, param2, false);
         try {
           this.field_l = param2;
@@ -19,10 +19,10 @@ final class pr extends ht {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != 7064) {
-          pr.d(44);
+          pr.releaseStatics(44);
         }
     }
 
@@ -32,7 +32,7 @@ final class pr extends ht {
           jaggl.OpenGL.glTexParameteri(this.field_c, 10242, param0 ? 10497 : 33071);
           return;
         }
-        field_k = (hr[]) null;
+        field_k = (ToolkitSprite[]) null;
         this.field_d.a(69, (ht) (this));
         jaggl.OpenGL.glTexParameteri(this.field_c, 10242, param0 ? 10497 : 33071);
     }

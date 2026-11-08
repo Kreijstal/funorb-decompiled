@@ -13,7 +13,7 @@ final class mp {
         io.a(125, var2);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 >= -37) {
           field_a = 52;

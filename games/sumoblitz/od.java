@@ -29,78 +29,78 @@ final class od implements nr {
           var3 = param0;
           if (var3 == 1) {
             var2 = fi.a(8, he.field_o, (byte) -96);
-            fe.a(91, nt.field_n[1][var2]);
+            fe.a(91, TimedSceneEffect.field_n[1][var2]);
             return;
           }
           if (var3 == 2) {
             var2Lifetime8 = fi.a(8, he.field_o, (byte) -96);
-            fe.a(91, nt.field_n[1][var2Lifetime8]);
+            fe.a(91, TimedSceneEffect.field_n[1][var2Lifetime8]);
             return;
           }
           if (var3 == 3) {
             var2Lifetime9 = fi.a(8, he.field_o, (byte) -96);
-            fe.a(91, nt.field_n[1][var2Lifetime9]);
+            fe.a(91, TimedSceneEffect.field_n[1][var2Lifetime9]);
             return;
           }
           if (var3 == 0) {
             var2Lifetime10 = fi.a(8, he.field_o, (byte) -96);
-            fe.a(91, nt.field_n[1][var2Lifetime10]);
+            fe.a(91, TimedSceneEffect.field_n[1][var2Lifetime10]);
             return;
           }
           if (4 == var3) {
             var2Lifetime11 = fi.a(5, he.field_o, (byte) -96);
-            fe.a(80, nt.field_n[2][var2Lifetime11]);
+            fe.a(80, TimedSceneEffect.field_n[2][var2Lifetime11]);
             return;
           }
           if (var3 != 6) {
             if (var3 == 5) {
               var2Lifetime12 = fi.a(8, he.field_o, (byte) -96);
-              fe.a(78, nt.field_n[0][var2Lifetime12]);
+              fe.a(78, TimedSceneEffect.field_n[0][var2Lifetime12]);
               return;
             }
             return;
           }
           var2Lifetime13 = fi.a(8, he.field_o, (byte) -96);
-          fe.a(78, nt.field_n[0][var2Lifetime13]);
+          fe.a(78, TimedSceneEffect.field_n[0][var2Lifetime13]);
           return;
         }
         od.a(71);
         var3Lifetime1 = param0;
         if (var3Lifetime1 == 1) {
           var2Lifetime1 = fi.a(8, he.field_o, (byte) -96);
-          fe.a(91, nt.field_n[1][var2Lifetime1]);
+          fe.a(91, TimedSceneEffect.field_n[1][var2Lifetime1]);
           return;
         }
         if (var3Lifetime1 == 2) {
           var2Lifetime2 = fi.a(8, he.field_o, (byte) -96);
-          fe.a(91, nt.field_n[1][var2Lifetime2]);
+          fe.a(91, TimedSceneEffect.field_n[1][var2Lifetime2]);
           return;
         }
         if (var3Lifetime1 == 3) {
           var2Lifetime3 = fi.a(8, he.field_o, (byte) -96);
-          fe.a(91, nt.field_n[1][var2Lifetime3]);
+          fe.a(91, TimedSceneEffect.field_n[1][var2Lifetime3]);
           return;
         }
         if (var3Lifetime1 == 0) {
           var2Lifetime4 = fi.a(8, he.field_o, (byte) -96);
-          fe.a(91, nt.field_n[1][var2Lifetime4]);
+          fe.a(91, TimedSceneEffect.field_n[1][var2Lifetime4]);
           return;
         }
         if (4 == var3Lifetime1) {
           var2Lifetime5 = fi.a(5, he.field_o, (byte) -96);
-          fe.a(80, nt.field_n[2][var2Lifetime5]);
+          fe.a(80, TimedSceneEffect.field_n[2][var2Lifetime5]);
           return;
         }
         if (var3Lifetime1 != 6) {
           if (var3Lifetime1 == 5) {
             var2Lifetime6 = fi.a(8, he.field_o, (byte) -96);
-            fe.a(78, nt.field_n[0][var2Lifetime6]);
+            fe.a(78, TimedSceneEffect.field_n[0][var2Lifetime6]);
             return;
           }
           return;
         }
         var2Lifetime7 = fi.a(8, he.field_o, (byte) -96);
-        fe.a(78, nt.field_n[0][var2Lifetime7]);
+        fe.a(78, TimedSceneEffect.field_n[0][var2Lifetime7]);
     }
 
     final static void a(int param0) {

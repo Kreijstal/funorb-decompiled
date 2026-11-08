@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class eu {
-    static ri[] field_a;
+    static SpriteData[] field_a;
 
     final static int a(byte param0) {
         if (param0 != -97) {
@@ -11,10 +11,10 @@ abstract class eu {
         return lq.field_d;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         if (param0) {
-          field_a = (ri[]) null;
+          field_a = (SpriteData[]) null;
         }
     }
 

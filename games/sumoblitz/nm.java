@@ -260,7 +260,7 @@ final class nm extends IntrusiveNode {
             var5 = is.field_c;
             var7 = 0;
             var6 = new IntrusiveDequeCursor(var5);
-            var8 = (nm) (var6.b((byte) -80));
+            var8 = (nm) (var6.first((byte) -80));
             while (true) {
               if (null != var8) {
                 stackIn_145_0 = var8.field_y;
@@ -275,7 +275,7 @@ final class nm extends IntrusiveNode {
                     var8.field_v = 60;
                     var7 = 1;
                   }
-                  var8 = (nm) (var6.b(param1 ^ 16776960));
+                  var8 = (nm) (var6.next(param1 ^ 16776960));
                   continue;
                 }
               } else {
@@ -383,7 +383,7 @@ final class nm extends IntrusiveNode {
         String stackIn_98_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
-        nt var3 = null;
+        TimedSceneEffect var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         var4 = Sumoblitz.field_L ? 1 : 0;
@@ -499,10 +499,10 @@ final class nm extends IntrusiveNode {
           if (param1 != -15687169) {
             this.c((ah) null, -20);
           }
-          var3 = (nt) (this.field_w.b(67));
+          var3 = (TimedSceneEffect) (this.field_w.first(67));
           while (var3 != null) {
             var3.a(param0, -128);
-            var3 = (nt) (this.field_w.d((byte) 18));
+            var3 = (TimedSceneEffect) (this.field_w.next((byte) 18));
             if (var4 != 0) {
               return;
             }
@@ -527,7 +527,7 @@ final class nm extends IntrusiveNode {
         int stackIn_40_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_32_0;
-        nt var2 = null;
+        TimedSceneEffect var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
@@ -562,7 +562,7 @@ final class nm extends IntrusiveNode {
           if (this.field_t > 0) {
             this.field_t = this.field_t - 1;
           }
-          var2 = (nt) (this.field_w.b(74));
+          var2 = (TimedSceneEffect) (this.field_w.first(74));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var2))) {
             stackOut_32_0 = var2.a(-2567);
@@ -572,7 +572,7 @@ final class nm extends IntrusiveNode {
               if (stackIn_33_0) {
                 var2.unlink(false);
               }
-              var2 = (nt) (this.field_w.d((byte) 18));
+              var2 = (TimedSceneEffect) (this.field_w.next((byte) 18));
               continue;
             }
             break;
@@ -585,12 +585,12 @@ final class nm extends IntrusiveNode {
           if (stackIn_40_0 == -6 &&
             this.field_p % 50 == 0 &&
             ul.field_f == 0) {
-            this.field_w.a((IntrusiveNode) (new be(this.field_q >> 8, this.field_l >> 8, 16745472, true)), (byte) 39);
+            this.field_w.addLast((IntrusiveNode) (new be(this.field_q >> 8, this.field_l >> 8, 16745472, true)), (byte) 39);
           }
           if (this.field_y == 4 &&
             0 == this.field_p % 50 &&
             ul.field_f == 0) {
-            this.field_w.a((IntrusiveNode) (new be(this.field_q >> 8, this.field_l >> 8, 1090047, false)), (byte) 39);
+            this.field_w.addLast((IntrusiveNode) (new be(this.field_q >> 8, this.field_l >> 8, 1090047, false)), (byte) 39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

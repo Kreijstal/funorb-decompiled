@@ -11,7 +11,7 @@ final class sa extends bp implements ru {
           this.field_e.a((ed) (this), param2 ^ 43);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, param8);
-          jaggl.OpenGL.glTexSubImage2Dub(this.field_h, 0, param1, param7, param6, param5, te.a(param2 - 21416, param0), 5121, param4, param3);
+          jaggl.OpenGL.glTexSubImage2Dub(this.field_h, 0, param1, param7, param6, param5, IntrusiveNodeHashTable.a(param2 - 21416, param0), 5121, param4, param3);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           if (param2 != 77) {
             field_j = true;
@@ -40,7 +40,7 @@ final class sa extends bp implements ru {
           this.field_i = param3;
           this.field_k = param4;
           this.field_e.a((ed) (this), 108);
-          jaggl.OpenGL.glTexImage2Dub(this.field_h, 0, this.e(-67), param3, param4, 0, te.a(-21339, this.field_c), ws.a(this.field_g, (byte) 117), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_h, 0, this.e(-67), param3, param4, 0, IntrusiveNodeHashTable.a(-21339, this.field_c), ws.a(this.field_g, (byte) 117), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -113,7 +113,7 @@ final class sa extends bp implements ru {
             return;
           }
           jaggl.OpenGL.glPixelStorei(3314, param7);
-          jaggl.OpenGL.glTexImage2Df(this.field_h, 0, this.e(-8), param2, param3, 0, te.a(-21339, this.field_c), 5126, param5, 4 * param6);
+          jaggl.OpenGL.glTexImage2Df(this.field_h, 0, this.e(-8), param2, param3, 0, IntrusiveNodeHashTable.a(-21339, this.field_c), 5126, param5, 4 * param6);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -245,7 +245,7 @@ final class sa extends bp implements ru {
             this.a(param5, param2, this.field_h, param3, 81);
           } else {
             jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Dub(this.field_h, 0, this.e(104), param2, param3, 0, te.a(-21339, this.field_c), 5121, param5, param6);
+            jaggl.OpenGL.glTexImage2Dub(this.field_h, 0, this.e(104), param2, param3, 0, IntrusiveNodeHashTable.a(-21339, this.field_c), 5121, param5, param6);
             jaggl.OpenGL.glPixelStorei(3314, 0);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);
@@ -287,7 +287,7 @@ final class sa extends bp implements ru {
         try {
           this.field_e.a((ed) (this), param4 - 14032);
           jaggl.OpenGL.glPixelStorei(3314, param8);
-          jaggl.OpenGL.glTexSubImage2Df(this.field_h, 0, param0, param3, param6, param2, te.a(-21339, param1), 5121, param7, param5);
+          jaggl.OpenGL.glTexSubImage2Df(this.field_h, 0, param0, param3, param6, param2, IntrusiveNodeHashTable.a(-21339, param1), 5121, param7, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           if (param4 != 14137) {
             field_j = false;

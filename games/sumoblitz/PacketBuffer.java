@@ -125,7 +125,7 @@ class PacketBuffer extends IntrusiveNode {
           gd.field_a = param3;
           rd.field_l = param7;
           ie.field_x = param1;
-          gk.field_u = param0;
+          CompactMeshGeometry.field_u = param0;
           qq.field_P = param5;
           ow.field_e = param8;
           bt.field_d = param6;
@@ -147,7 +147,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var5 = (CharSequence) ((Object) param0);
-          this.position = this.position + mq.a(0, this.payload, (byte) -110, var5, param0.length(), this.position);
+          this.position = this.position + MusicPatchEnvelope.a(0, this.payload, (byte) -110, var5, param0.length(), this.position);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -455,7 +455,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var5 = (CharSequence) ((Object) param0);
-          this.position = this.position + mq.a(0, this.payload, (byte) -124, var5, param0.length(), this.position);
+          this.position = this.position + MusicPatchEnvelope.a(0, this.payload, (byte) -124, var5, param0.length(), this.position);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -512,7 +512,7 @@ class PacketBuffer extends IntrusiveNode {
         int var3 = -45 / ((param0 - 57) / 59);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_m = null;
         if (param0 > -10) {

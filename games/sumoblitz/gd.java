@@ -135,7 +135,7 @@ abstract class gd {
               var12 = var13;
               var10 = var12;
               var8Lifetime2 = var10;
-              param2.a((IntrusiveNode) (new as(64, ((int)var13[0] << 11) + param4, ((int)var13[1] << 11) + param1, param5, -(int)var13[0] << 8, -(int)var13[1] << 8, 0)), (byte) 39);
+              param2.addLast((IntrusiveNode) (new as(64, ((int)var13[0] << 11) + param4, ((int)var13[1] << 11) + param1, param5, -(int)var13[0] << 8, -(int)var13[1] << 8, 0)), (byte) 39);
               var7++;
               continue;
             }
@@ -151,7 +151,7 @@ abstract class gd {
             dupTemp$0 = kt.a((byte) -20, var8Lifetime1, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7Lifetime1) + 0.0));
             var11 = dupTemp$0;
             var8Lifetime1Lifetime1 = dupTemp$0;
-            param2.a((IntrusiveNode) (new as(64, param4 + ((int)var11[0] << 11), ((int)var11[1] << 11) + param1, param5, -(int)var11[0] << 8, -(int)var11[1] << 8, 1)), (byte) 39);
+            param2.addLast((IntrusiveNode) (new as(64, param4 + ((int)var11[0] << 11), ((int)var11[1] << 11) + param1, param5, -(int)var11[0] << 8, -(int)var11[1] << 8, 1)), (byte) 39);
             var7Lifetime1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -187,7 +187,7 @@ abstract class gd {
           if (param0 <= 118) {
             field_k = (long[]) null;
           }
-          var4 = (rd) (qr.field_c.b(100));
+          var4 = (rd) (qr.field_c.first(100));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -223,13 +223,13 @@ abstract class gd {
         lh var2Lifetime1;
         if (param0 == -82) {
           var2 = new lh();
-          no.field_d.a((IntrusiveNode) (var2), (byte) 39);
+          no.field_d.addLast((IntrusiveNode) (var2), (byte) 39);
           jg.b(param0 + 11126, param1);
           return var2;
         }
         field_k = (long[]) null;
         var2Lifetime1 = new lh();
-        no.field_d.a((IntrusiveNode) (var2Lifetime1), (byte) 39);
+        no.field_d.addLast((IntrusiveNode) (var2Lifetime1), (byte) 39);
         jg.b(param0 + 11126, param1);
         return var2Lifetime1;
     }
@@ -251,7 +251,7 @@ abstract class gd {
         return this.field_f.a((byte) 2) + this.field_g.a((byte) 2);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         achievementsText = null;
         if (param0) {
           gd.a((byte) -88, 27);

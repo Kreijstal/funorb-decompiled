@@ -17,44 +17,44 @@ abstract class dw implements v {
     abstract gf b(byte param0);
 
     final static void a(ResourceArchive param0, int param1) {
-        qp[] var3 = null;
-        qp[] var2 = null;
-        qp[] var4 = null;
-        qp[] var5 = null;
-        qp[] var6 = null;
-        qp[] var7 = null;
-        qp[] var8 = null;
-        qp[] var9 = null;
-        qp[] var10 = null;
-        qp[] var11 = null;
-        qp[] var12 = null;
-        qp[] var13 = null;
-        qp[] var14 = null;
-        qp[] var15 = null;
-        qp[] var16 = null;
-        qp[] var17 = null;
-        qp[] var18 = null;
-        qp[] var19 = null;
-        qp[] var20 = null;
-        qp[] var2Lifetime1;
-        qp[] var2Lifetime2;
-        qp[] var2Lifetime3;
-        qp[] var2Lifetime4;
-        qp[] var2Lifetime5;
-        qp[] var2Lifetime6;
-        qp[] var2Lifetime7;
-        qp[] var2Lifetime8;
-        qp[] var2Lifetime9;
-        qp[] var2Lifetime10;
-        qp[] var2Lifetime11;
-        qp[] var2Lifetime12;
-        qp[] var2Lifetime13;
-        qp[] var2Lifetime14;
-        qp[] var2Lifetime15;
-        qp[] var2Lifetime16;
-        qp[] var2Lifetime17;
+        PcmSample[] var3 = null;
+        PcmSample[] var2 = null;
+        PcmSample[] var4 = null;
+        PcmSample[] var5 = null;
+        PcmSample[] var6 = null;
+        PcmSample[] var7 = null;
+        PcmSample[] var8 = null;
+        PcmSample[] var9 = null;
+        PcmSample[] var10 = null;
+        PcmSample[] var11 = null;
+        PcmSample[] var12 = null;
+        PcmSample[] var13 = null;
+        PcmSample[] var14 = null;
+        PcmSample[] var15 = null;
+        PcmSample[] var16 = null;
+        PcmSample[] var17 = null;
+        PcmSample[] var18 = null;
+        PcmSample[] var19 = null;
+        PcmSample[] var20 = null;
+        PcmSample[] var2Lifetime1;
+        PcmSample[] var2Lifetime2;
+        PcmSample[] var2Lifetime3;
+        PcmSample[] var2Lifetime4;
+        PcmSample[] var2Lifetime5;
+        PcmSample[] var2Lifetime6;
+        PcmSample[] var2Lifetime7;
+        PcmSample[] var2Lifetime8;
+        PcmSample[] var2Lifetime9;
+        PcmSample[] var2Lifetime10;
+        PcmSample[] var2Lifetime11;
+        PcmSample[] var2Lifetime12;
+        PcmSample[] var2Lifetime13;
+        PcmSample[] var2Lifetime14;
+        PcmSample[] var2Lifetime15;
+        PcmSample[] var2Lifetime16;
+        PcmSample[] var2Lifetime17;
         try {
-          var3 = new qp[6];
+          var3 = new PcmSample[6];
           var2 = var3;
           var2[0] = eb.field_b.a(-89, "large red ball hit1");
           var2[1] = eb.field_b.a(29, "large red ball hit2");
@@ -63,7 +63,7 @@ abstract class dw implements v {
           var2[4] = eb.field_b.a(-117, "large red ball hit5");
           var2[5] = eb.field_b.a(-119, "large red ball hit6");
           lg.field_d[1][0] = var3;
-          var4 = new qp[5];
+          var4 = new PcmSample[5];
           var2Lifetime1 = var4;
           var2Lifetime1[0] = eb.field_b.a(66, "medium red hit1");
           var2Lifetime1[1] = eb.field_b.a(89, "medium red hit2");
@@ -71,7 +71,7 @@ abstract class dw implements v {
           var2Lifetime1[3] = eb.field_b.a(73, "medium red hit4");
           var2Lifetime1[4] = eb.field_b.a(-102, "medium red hit5");
           lg.field_d[1][1] = var4;
-          var5 = new qp[7];
+          var5 = new PcmSample[7];
           var2Lifetime2 = var5;
           var2Lifetime2[0] = eb.field_b.a(29, "small red ball hit1");
           var2Lifetime2[1] = eb.field_b.a(-89, "small red ball hit2");
@@ -81,7 +81,7 @@ abstract class dw implements v {
           var2Lifetime2[5] = eb.field_b.a(118, "small red ball hit6");
           var2Lifetime2[6] = eb.field_b.a(-101, "small red ball hit7");
           lg.field_d[1][2] = var5;
-          var6 = new qp[6];
+          var6 = new PcmSample[6];
           var2Lifetime3 = var6;
           var2Lifetime3[0] = eb.field_b.a(36, "large orange ball hit1");
           var2Lifetime3[1] = eb.field_b.a(127, "large orange ball hit2");
@@ -90,7 +90,7 @@ abstract class dw implements v {
           var2Lifetime3[4] = eb.field_b.a(-123, "large orange ball hit5");
           var2Lifetime3[5] = eb.field_b.a(-126, "large orange ball hit6");
           lg.field_d[2][0] = var6;
-          var7 = new qp[6];
+          var7 = new PcmSample[6];
           var2Lifetime4 = var7;
           var2Lifetime4[0] = eb.field_b.a(51, "medium orange ball hit1");
           var2Lifetime4[1] = eb.field_b.a(-120, "medium orange ball hit2");
@@ -99,7 +99,7 @@ abstract class dw implements v {
           var2Lifetime4[4] = eb.field_b.a(69, "medium orange ball hit5");
           var2Lifetime4[5] = eb.field_b.a(41, "medium orange ball hit6");
           lg.field_d[2][1] = var7;
-          var8 = new qp[7];
+          var8 = new PcmSample[7];
           var2Lifetime5 = var8;
           var2Lifetime5[0] = eb.field_b.a(111, "small orange ball hit1");
           var2Lifetime5[1] = eb.field_b.a(31, "small orange ball hit2");
@@ -109,7 +109,7 @@ abstract class dw implements v {
           var2Lifetime5[5] = eb.field_b.a(-124, "small orange ball hit6");
           var2Lifetime5[6] = eb.field_b.a(-103, "small orange ball hit7");
           lg.field_d[2][2] = var8;
-          var9 = new qp[7];
+          var9 = new PcmSample[7];
           var2Lifetime6 = var9;
           var2Lifetime6[0] = eb.field_b.a(-122, "large blue ball hit1");
           var2Lifetime6[1] = eb.field_b.a(109, "large blue ball hit2");
@@ -119,7 +119,7 @@ abstract class dw implements v {
           var2Lifetime6[5] = eb.field_b.a(73, "large blue ball hit6");
           var2Lifetime6[6] = eb.field_b.a(124, "large blue ball hit7");
           lg.field_d[5][0] = var9;
-          var10 = new qp[6];
+          var10 = new PcmSample[6];
           var2Lifetime7 = var10;
           var2Lifetime7[0] = eb.field_b.a(95, "medium blue ball hit1");
           var2Lifetime7[1] = eb.field_b.a(-109, "medium blue ball hit2");
@@ -128,7 +128,7 @@ abstract class dw implements v {
           var2Lifetime7[4] = eb.field_b.a(69, "medium blue ball hit5");
           var2Lifetime7[5] = eb.field_b.a(-111, "medium blue ball hit6");
           lg.field_d[5][1] = var10;
-          var11 = new qp[7];
+          var11 = new PcmSample[7];
           var2Lifetime8 = var11;
           var2Lifetime8[0] = eb.field_b.a(90, "small blue ball hit1");
           var2Lifetime8[1] = eb.field_b.a(-122, "small blue ball hit2");
@@ -138,7 +138,7 @@ abstract class dw implements v {
           var2Lifetime8[5] = eb.field_b.a(-98, "small blue ball hit6");
           var2Lifetime8[6] = eb.field_b.a(-97, "small blue ball hit7");
           lg.field_d[5][2] = var11;
-          var12 = new qp[7];
+          var12 = new PcmSample[7];
           var2Lifetime9 = var12;
           var2Lifetime9[0] = eb.field_b.a(-106, "large yellow ball hit1");
           var2Lifetime9[1] = eb.field_b.a(-126, "large yellow ball hit2");
@@ -148,7 +148,7 @@ abstract class dw implements v {
           var2Lifetime9[5] = eb.field_b.a(80, "large yellow ball hit6");
           var2Lifetime9[6] = eb.field_b.a(-95, "large yellow ball hit7");
           lg.field_d[3][0] = var12;
-          var13 = new qp[6];
+          var13 = new PcmSample[6];
           var2Lifetime10 = var13;
           var2Lifetime10[0] = eb.field_b.a(86, "medium yellow ball hit1");
           var2Lifetime10[1] = eb.field_b.a(-118, "medium yellow ball hit2");
@@ -157,7 +157,7 @@ abstract class dw implements v {
           var2Lifetime10[4] = eb.field_b.a(-121, "medium yellow ball hit5");
           var2Lifetime10[5] = eb.field_b.a(91, "medium yellow ball hit6");
           lg.field_d[3][1] = var13;
-          var14 = new qp[6];
+          var14 = new PcmSample[6];
           var2Lifetime11 = var14;
           var2Lifetime11[0] = eb.field_b.a(44, "small yellow ball hit1");
           var2Lifetime11[1] = eb.field_b.a(55, "small yellow ball hit2");
@@ -166,7 +166,7 @@ abstract class dw implements v {
           var2Lifetime11[4] = eb.field_b.a(-127, "small yellow ball hit5");
           var2Lifetime11[5] = eb.field_b.a(56, "small yellow ball hit6");
           lg.field_d[3][2] = var14;
-          var15 = new qp[7];
+          var15 = new PcmSample[7];
           var2Lifetime12 = var15;
           var2Lifetime12[0] = eb.field_b.a(63, "large purple ball hit1");
           var2Lifetime12[1] = eb.field_b.a(-115, "large purple ball hit2");
@@ -176,7 +176,7 @@ abstract class dw implements v {
           var2Lifetime12[5] = eb.field_b.a(-91, "large purple ball hit6");
           var2Lifetime12[6] = eb.field_b.a(-111, "large purple ball hit7");
           lg.field_d[4][0] = var15;
-          var16 = new qp[6];
+          var16 = new PcmSample[6];
           var2Lifetime13 = var16;
           var2Lifetime13[0] = eb.field_b.a(-94, "medium purple ball hit1");
           var2Lifetime13[1] = eb.field_b.a(102, "medium purple ball hit2");
@@ -185,7 +185,7 @@ abstract class dw implements v {
           var2Lifetime13[4] = eb.field_b.a(-91, "medium purple ball hit5");
           var2Lifetime13[5] = eb.field_b.a(-111, "medium purple ball hit6");
           lg.field_d[4][1] = var16;
-          var17 = new qp[7];
+          var17 = new PcmSample[7];
           var2Lifetime14 = var17;
           var2Lifetime14[0] = eb.field_b.a(-126, "small purple ball hit1");
           var2Lifetime14[1] = eb.field_b.a(-98, "small purple ball hit2");
@@ -195,7 +195,7 @@ abstract class dw implements v {
           var2Lifetime14[5] = eb.field_b.a(98, "small purple ball hit6");
           var2Lifetime14[6] = eb.field_b.a(-127, "small purple ball hit7");
           lg.field_d[4][2] = var17;
-          var18 = new qp[8];
+          var18 = new PcmSample[8];
           var2Lifetime15 = var18;
           var2Lifetime15[0] = eb.field_b.a(37, "large explosion1");
           var2Lifetime15[1] = eb.field_b.a(113, "large explosion 1_1");
@@ -205,8 +205,8 @@ abstract class dw implements v {
           var2Lifetime15[5] = eb.field_b.a(121, "large explosion3_1");
           var2Lifetime15[6] = eb.field_b.a(-95, "large explosion4");
           var2Lifetime15[7] = eb.field_b.a(92, "large explosion4_1");
-          nt.field_n[0] = var18;
-          var19 = new qp[8];
+          TimedSceneEffect.field_n[0] = var18;
+          var19 = new PcmSample[8];
           var2Lifetime16 = var19;
           var2Lifetime16[0] = eb.field_b.a(121, "medium explosion1");
           var2Lifetime16[1] = eb.field_b.a(83, "medium explosion1_shorter");
@@ -216,15 +216,15 @@ abstract class dw implements v {
           var2Lifetime16[5] = eb.field_b.a(111, "medium explosion3_shorter");
           var2Lifetime16[6] = eb.field_b.a(-104, "medium explosion4");
           var2Lifetime16[7] = eb.field_b.a(118, "medium explosion4_shorter");
-          nt.field_n[1] = var19;
-          var20 = new qp[5];
+          TimedSceneEffect.field_n[1] = var19;
+          var20 = new PcmSample[5];
           var2Lifetime17 = var20;
           var2Lifetime17[0] = eb.field_b.a(-89, "small explosion1");
           var2Lifetime17[1] = eb.field_b.a(33, "small explosion2");
           var2Lifetime17[2] = eb.field_b.a(-93, "small explosion3");
           var2Lifetime17[3] = eb.field_b.a(103, "small explosion4");
           var2Lifetime17[4] = eb.field_b.a(-96, "small explosion 5");
-          nt.field_n[2] = var20;
+          TimedSceneEffect.field_n[2] = var20;
           rc.field_l[31] = eb.field_b.a(53, "sleepy open1");
           rc.field_l[13] = eb.field_b.a(106, "pinball bumper v4");
           rc.field_l[1] = eb.field_b.a(89, "ice slide fin2");
@@ -253,7 +253,7 @@ abstract class dw implements v {
           int var2 = -1 % ((param0 + 19) / 46);
           return this.b((byte) 114);
         }
-        return mb.field_f;
+        return GameInstructions.field_f;
     }
 
     public final String a(int param0) {

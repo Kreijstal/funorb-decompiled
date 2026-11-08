@@ -8,7 +8,7 @@ final class eg extends IntrusiveNode {
     static String field_n;
     int[] field_m;
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_n = null;
         field_l = null;
         if (param0) {
@@ -93,11 +93,11 @@ final class eg extends IntrusiveNode {
             we.field_B[var4Lifetime3] = var17.a(jg.a(param0, 0));
           }
           var17.position = -(8 * rl.field_n) + (-7 + param1.length - (-1 + var3) * 3);
-          iv.field_l = new int[var3];
+          LegacyOpenGlEffectManager.field_l = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            iv.field_l[var4Lifetime4] = var17.c((byte) 121);
-            if (iv.field_l[var4Lifetime4] == 0) {
-              iv.field_l[var4Lifetime4] = 1;
+            LegacyOpenGlEffectManager.field_l[var4Lifetime4] = var17.c((byte) 121);
+            if (LegacyOpenGlEffectManager.field_l[var4Lifetime4] == 0) {
+              LegacyOpenGlEffectManager.field_l[var4Lifetime4] = 1;
             }
           }
           var17.position = 0;

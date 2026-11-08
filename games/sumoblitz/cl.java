@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends nt {
+final class cl extends TimedSceneEffect {
     private int field_y;
     static int field_s;
     private int field_u;
     private ah field_x;
     static boolean field_w;
     private int field_t;
-    static ri[] field_v;
+    static SpriteData[] field_v;
     static int[] field_z;
 
     final void a(GraphicsToolkit param0, int param1) {
@@ -44,7 +44,7 @@ final class cl extends nt {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 4) {
           return;
         }
@@ -74,7 +74,7 @@ final class cl extends nt {
         GameClientShell.field_u[13] = gu.musicText;
         GameClientShell.field_u[21] = hd.regularText;
         GameClientShell.field_u[25] = ea.difficultyText;
-        GameClientShell.field_u[18] = gk.previousText;
+        GameClientShell.field_u[18] = CompactMeshGeometry.previousText;
         GameClientShell.field_u[10] = dj.scoreFilterLabels[2];
         GameClientShell.field_u[27] = ni.field_g;
         GameClientShell.field_u[23] = pt.challengeText;
@@ -82,12 +82,12 @@ final class cl extends nt {
         GameClientShell.field_u[17] = in.nextText;
         GameClientShell.field_u[28] = ss.restartLevelText;
         GameClientShell.field_u[19] = dn.arcadeGameText;
-        GameClientShell.field_u[22] = td.editorText;
+        GameClientShell.field_u[22] = MusicPatch.editorText;
         BufferedSocket.field_i = new String[]{mn.highText, bc.lowText};
         GameClientShell.field_u[33] = mm.levelSelectText;
         GameClientShell.field_u[26] = lh.resetStatsText;
         GameClientShell.field_u[9] = dj.scoreFilterLabels[1];
-        GameClientShell.field_u[20] = nt.challengeText;
+        GameClientShell.field_u[20] = TimedSceneEffect.challengeText;
         GameClientShell.field_u[32] = mm.levelSelectText;
         GameClientShell.field_u[8] = dj.scoreFilterLabels[0];
         GameClientShell.field_u[29] = hv.reassignText;

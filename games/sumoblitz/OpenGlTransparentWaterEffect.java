@@ -8,7 +8,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     private wg field_g;
     static int field_e;
     static boolean field_k;
-    static ri[] field_i;
+    static SpriteData[] field_i;
 
     final void a(boolean param0, int param1) {
         jaggl.OpenGL.glBindProgramARB(34336, this.field_g.field_b);
@@ -285,10 +285,10 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
                         var4.field_E = var4.field_E << 1;
                       }
                       if (var4.field_Q == 0) {
-                        Sumoblitz.a(var2.field_Q, var2.field_N, (byte) -111);
+                        Sumoblitz.playEntityCollisionSound(var2.field_Q, var2.field_N, (byte) -111);
                       }
                       if (0 == var2.field_Q) {
-                        Sumoblitz.a(var4.field_Q, var4.field_N, (byte) -93);
+                        Sumoblitz.playEntityCollisionSound(var4.field_Q, var4.field_N, (byte) -93);
                       }
                     }
                   }
@@ -297,7 +297,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
             }
           }
           if (param0 != 22403) {
-            field_i = (ri[]) null;
+            field_i = (SpriteData[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

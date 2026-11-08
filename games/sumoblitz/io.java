@@ -16,9 +16,9 @@ final class io {
 
     final static void a(int param0, PcmSampleStream param1) {
         try {
-          sj.field_c.a(param1);
+          sj.field_c.removeSubstream(param1);
           if (param0 < 93) {
-            io.a(-28);
+            io.releaseStatics(-28);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "io.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -33,7 +33,7 @@ final class io {
         this.field_j = param0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_g = null;
         field_b = null;
@@ -47,7 +47,7 @@ final class io {
           field_k = null;
           return;
         }
-        io.a(41);
+        io.releaseStatics(41);
         field_h = null;
         field_f = null;
         field_e = null;

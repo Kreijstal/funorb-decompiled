@@ -9,7 +9,7 @@ final class le extends IntrusiveNode {
     int field_m;
     private int[] field_l;
 
-    public static void a() {
+    public static void releaseStatics() {
         field_k = null;
     }
 

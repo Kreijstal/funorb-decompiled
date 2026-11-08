@@ -24,7 +24,7 @@ final class ul {
 
     final void d(int param0) {
         int fieldTemp$1 = 0;
-        if (null != gk.field_o) {
+        if (null != CompactMeshGeometry.field_o) {
           return;
         }
         if (ct.field_x <= 0) {
@@ -151,13 +151,13 @@ final class ul {
         return stackIn_6_0;
     }
 
-    final cq g(int param0) {
+    final FullscreenCanvas g(int param0) {
         this.field_d = wq.field_b;
         this.field_r = gi.field_h;
         this.field_a.a(8310, this.field_s, this.field_c);
         int var2 = -25 % ((50 - param0) / 48);
         aj.field_A = false;
-        cq var3 = pb.a(this.field_s, 8089, 0, this.field_c, lt.field_m, 0);
+        FullscreenCanvas var3 = pb.a(this.field_s, 8089, 0, this.field_c, lt.field_m, 0);
         if (var3 == null) {
           this.e(2);
         }
@@ -200,7 +200,7 @@ final class ul {
           var9 = var11;
           var5 = var9;
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = iv.field_l[eb.a(255, (int) var10[var6])];
+            var5[var6] = LegacyOpenGlEffectManager.field_l[eb.a(255, (int) var10[var6])];
           }
           var1[var2] = new Sprite(vf.field_d, li.field_u, er.field_h[var2], av.field_C[var2], vg.field_k[var2], we.field_B[var2], var11);
         }

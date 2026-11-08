@@ -49,24 +49,24 @@ final class fv extends rw {
         try {
           wd.field_f.b();
           var1_int = -111 % ((param0 + 34) / 35);
-          iv.field_a.b();
+          LegacyOpenGlEffectManager.field_a.b();
           vf.field_b = vf.field_b - 1;
           if (vf.field_b == 0) {
             vf.field_b = 200;
-            var2 = (dj) (jf.field_c.b(107));
+            var2 = (dj) (jf.field_c.first(107));
             while (var2 != null) {
-              if (!var2.field_k.a(false)) {
+              if (!var2.field_k.isLinked(false)) {
                 var2.unlink(false);
               }
-              var2 = (dj) (jf.field_c.d((byte) 18));
+              var2 = (dj) (jf.field_c.next((byte) 18));
             }
             if (s.field_u != null) {
-              var2Lifetime1 = (dj) (s.field_u.b(-105));
+              var2Lifetime1 = (dj) (s.field_u.first(-105));
               while (var2Lifetime1 != null) {
-                if (!var2Lifetime1.field_k.a(false)) {
+                if (!var2Lifetime1.field_k.isLinked(false)) {
                   var2Lifetime1.unlink(false);
                 }
-                var2Lifetime1 = (dj) (s.field_u.d((byte) 18));
+                var2Lifetime1 = (dj) (s.field_u.next((byte) 18));
               }
             }
           }

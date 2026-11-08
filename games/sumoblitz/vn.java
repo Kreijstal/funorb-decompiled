@@ -44,7 +44,7 @@ abstract class vn extends DualLinkNode {
         field_B = 0;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_w = null;
         field_N = null;
     }
@@ -461,10 +461,10 @@ abstract class vn extends DualLinkNode {
               }
               param1 = param1 + this.field_L[var8];
               if (field_x != -1) {
-                lk.f(var11, param2 + (int)((double)this.field_F * 0.7), param1 - var11, field_x);
+                SoftwareRasterizer.f(var11, param2 + (int)((double)this.field_F * 0.7), param1 - var11, field_x);
               }
               if (field_v != -1) {
-                lk.f(var11, param2 + this.field_F + 1, param1 - var11, field_v);
+                SoftwareRasterizer.f(var11, param2 + this.field_F + 1, param1 - var11, field_v);
               }
               var5 = var8;
             }

@@ -5,7 +5,7 @@ final class it extends da {
     private byte[][] field_d;
     private int[] field_e;
     private int[] field_g;
-    private qa field_c;
+    private SoftwareGraphicsToolkit field_c;
     private int[] field_h;
     private int[] field_f;
 
@@ -230,7 +230,7 @@ final class it extends da {
         }
     }
 
-    it(qa param0, ta param1, ri[] param2, int[] param3, int[] param4) {
+    it(SoftwareGraphicsToolkit param0, ta param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         byte[] array$0 = null;
@@ -238,7 +238,7 @@ final class it extends da {
         byte[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
-        ri var7;
+        SpriteData var7;
         byte[] var9;
         byte[] var14;
         this.field_c = param0;

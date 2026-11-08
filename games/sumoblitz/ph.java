@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ph {
-    static ri[] field_a;
-    static qu field_b;
+    static SpriteData[] field_a;
+    static GameplaySession field_b;
     static String youHaveUnreadMessagesText;
     private DualLinkNode field_e;
     private ro field_g;
     private int field_f;
     static String usernameText;
-    private te field_c;
+    private IntrusiveNodeHashTable field_c;
 
     final DualLinkNode a(byte param0, long param1) {
         DualLinkNode var4 = (DualLinkNode) (this.field_c.a(param0 ^ -60, param1));
@@ -62,7 +62,7 @@ final class ph {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1882049616) {
           return;
         }
@@ -303,7 +303,7 @@ final class ph {
                   var29 = var29 + var31;
                   var18 = var18 + var20;
                   var26 = var26 + var28;
-                  var36Lifetime2 = var36Lifetime2 + lk.field_b;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_b;
                   var30 = var30 + var32;
                   var17_int = var17_int + var19;
                   var25 = var25 + var27;
@@ -392,7 +392,7 @@ final class ph {
               var25 = var25 + var27;
               var30 = var30 + var32;
               var21 = var21 + var23;
-              var35Lifetime1 = var35Lifetime1 + lk.field_b;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_b;
               var22 = var22 + var24;
               var18 = var18 + var20;
               var17_int = var17_int + var19;
@@ -421,7 +421,7 @@ final class ph {
         this.field_f = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {
         }
-        this.field_c = new te(var2);
+        this.field_c = new IntrusiveNodeHashTable(var2);
     }
 
     static {

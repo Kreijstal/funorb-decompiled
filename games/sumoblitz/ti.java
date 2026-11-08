@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ti implements Runnable {
-    static hr field_b;
+    static ToolkitSprite field_b;
     private ro field_d;
     private Thread field_a;
     int field_e;
@@ -88,7 +88,7 @@ final class ti implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            ti.a(27);
+            ti.releaseStatics(27);
           }
           stackIn_3_0 = qc.a(param1, 38, false);
           return stackIn_3_0;
@@ -106,7 +106,7 @@ final class ti implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 40 % ((-17 - param0) / 45);
         field_b = null;
     }

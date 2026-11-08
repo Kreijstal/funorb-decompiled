@@ -227,7 +227,7 @@ abstract class bp implements ed {
           var11 = param4;
           var12 = new float[var6_int * (var9 * var10)];
           while (true) {
-            jaggl.OpenGL.glTexImage2Df(param0, var7, this.e(-107), param3, param1, 0, te.a(-21339, this.field_c), 5126, var11, 0);
+            jaggl.OpenGL.glTexImage2Df(param0, var7, this.e(-107), param3, param1, 0, IntrusiveNodeHashTable.a(-21339, this.field_c), 5126, var11, 0);
             if (var8 <= 1) {
               return;
             }
@@ -325,7 +325,7 @@ abstract class bp implements ed {
           var11 = param0;
           var12 = new byte[var6_int * (var10 * var9)];
           while (true) {
-            jaggl.OpenGL.glTexImage2Dub(param2, var7, this.e(-89), param1, param3, 0, te.a(-21339, this.field_c), 5121, var11, 0);
+            jaggl.OpenGL.glTexImage2Dub(param2, var7, this.e(-89), param1, param3, 0, IntrusiveNodeHashTable.a(-21339, this.field_c), 5121, var11, 0);
             if (1 >= var8) {
               return;
             }
@@ -441,7 +441,7 @@ abstract class bp implements ed {
           if (this.field_c == nl.field_p) {
             return 6408;
           }
-          if (te.field_f == this.field_c) {
+          if (IntrusiveNodeHashTable.field_f == this.field_c) {
             return 6406;
           }
           if (kd.field_b == this.field_c) {
@@ -461,7 +461,7 @@ abstract class bp implements ed {
             if (nl.field_p == this.field_c) {
               return 34842;
             }
-            if (this.field_c == te.field_f) {
+            if (this.field_c == IntrusiveNodeHashTable.field_f) {
               return 34844;
             }
             if (kd.field_b == this.field_c) {
@@ -481,7 +481,7 @@ abstract class bp implements ed {
               if (nl.field_p == this.field_c) {
                 return 34836;
               }
-              if (this.field_c == te.field_f) {
+              if (this.field_c == IntrusiveNodeHashTable.field_f) {
                 return 34838;
               }
               if (kd.field_b == this.field_c) {

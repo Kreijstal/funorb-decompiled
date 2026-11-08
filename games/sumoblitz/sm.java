@@ -86,7 +86,7 @@ final class sm {
         aa.field_a[0].field_y = !rf.a(false) ? 5 : 10;
         aa.field_a[0].field_t = rf.a(false) ? 10 : 5;
         if (param0 <= 68) {
-          sm.a((byte) 108);
+          sm.releaseStatics((byte) 108);
         }
         aa.field_a[0].c((byte) 35);
         fa.field_b = 250;
@@ -137,7 +137,7 @@ final class sm {
             return null;
           }
           if (param2 >= -111) {
-            sm.a((byte) -110);
+            sm.releaseStatics((byte) -110);
           }
           if (param0 == null ||
             param0.length != var4_int) {
@@ -184,7 +184,7 @@ final class sm {
         return this;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_b = null;
         if (param0 != -30) {

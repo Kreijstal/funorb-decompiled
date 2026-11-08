@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ng extends ShaderEffect {
     private ef[] field_i;
-    static hr[] field_f;
+    static ToolkitSprite[] field_f;
     private boolean field_h;
     private boolean field_g;
     static String noHighscoresText;
@@ -17,7 +17,7 @@ final class ng extends ShaderEffect {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != 0) {
           return;
@@ -95,19 +95,19 @@ final class ng extends ShaderEffect {
           try {
             var6_int = 100 % ((param1 + 29) / 42);
             var7 = null;
-            if (gk.field_u.field_l != null) {
-              bc.field_a = new gj(gk.field_u.field_l, 5200, 0);
-              gk.field_u.field_l = null;
-              var7 = new wl(255, bc.field_a, new gj(gk.field_u.field_d, 12000, 0), 2097152);
+            if (CompactMeshGeometry.field_u.field_l != null) {
+              bc.field_a = new gj(CompactMeshGeometry.field_u.field_l, 5200, 0);
+              CompactMeshGeometry.field_u.field_l = null;
+              var7 = new wl(255, bc.field_a, new gj(CompactMeshGeometry.field_u.field_d, 12000, 0), 2097152);
             }
             var8 = null;
             if (null != bc.field_a) {
               if (null == m.field_O) {
-                m.field_O = new gj[gk.field_u.field_i.length];
+                m.field_O = new gj[CompactMeshGeometry.field_u.field_i.length];
               }
               if (m.field_O[param3] == null) {
-                m.field_O[param3] = new gj(gk.field_u.field_i[param3], 12000, 0);
-                gk.field_u.field_i[param3] = null;
+                m.field_O[param3] = new gj(CompactMeshGeometry.field_u.field_i[param3], 12000, 0);
+                CompactMeshGeometry.field_u.field_i[param3] = null;
               }
               var8 = new wl(param3, bc.field_a, m.field_O[param3], 2097152);
             }

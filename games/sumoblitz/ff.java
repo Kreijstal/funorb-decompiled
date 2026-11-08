@@ -8,12 +8,12 @@ class ff extends en {
     private int field_p;
     static String soundText;
     private byte[] field_r;
-    static hr[] field_k;
+    static ToolkitSprite[] field_k;
     private int[] field_l;
     static String warningText;
     static String createText;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         warningText = null;
         createText = null;
         field_k = null;
@@ -82,7 +82,7 @@ class ff extends en {
               var13 = var14;
               var11 = var13;
               var8Lifetime2 = var11;
-              param3.a((IntrusiveNode) (new vi(128, param0, param2, param4, (int)var14[0] << 8, (int)var14[1] << 8, 0)), (byte) 39);
+              param3.addLast((IntrusiveNode) (new vi(128, param0, param2, param4, (int)var14[0] << 8, (int)var14[1] << 8, 0)), (byte) 39);
               var7++;
               continue;
             }
@@ -98,7 +98,7 @@ class ff extends en {
             dupTemp$0 = kt.a((byte) -126, var8Lifetime1, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7Lifetime1) + 0.0));
             var12 = dupTemp$0;
             var8Lifetime1Lifetime1 = dupTemp$0;
-            param3.a((IntrusiveNode) (new vi(128, param0, param2, param4, (int)var12[0] << 8, (int)var12[1] << 8, 1)), (byte) 39);
+            param3.addLast((IntrusiveNode) (new vi(128, param0, param2, param4, (int)var12[0] << 8, (int)var12[1] << 8, 1)), (byte) 39);
             var7Lifetime1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -136,7 +136,7 @@ class ff extends en {
         int fieldTemp$2 = 0;
         this.field_p = Math.abs(this.field_p);
         if (param0) {
-          ff.b(false);
+          ff.releaseStatics(false);
           if (this.field_p < 4096) {
             fieldTemp$0 = this.field_q;
             this.field_q = this.field_q + 1;

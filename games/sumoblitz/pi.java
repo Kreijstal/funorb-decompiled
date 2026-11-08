@@ -3,14 +3,14 @@
  */
 final class pi {
     static ph field_a;
-    static hr field_d;
+    static ToolkitSprite field_d;
     static String passwordText;
     static int field_e;
     static ResourceArchive field_c;
     static String field_b;
     static String yourEmailAddressIsText;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         passwordText = null;
         field_b = null;
         field_c = null;
@@ -20,7 +20,7 @@ final class pi {
           field_d = null;
           return;
         }
-        pi.a(-26);
+        pi.releaseStatics(-26);
         field_d = null;
     }
 
@@ -62,7 +62,7 @@ final class pi {
           }
           var5 = new IntrusiveDeque();
           if (param2 <= 50) {
-            pi.a(116);
+            pi.releaseStatics(116);
           }
           var6 = param0.e(-31302);
           var7 = 1;
@@ -76,12 +76,12 @@ final class pi {
             if (var3_int > 2) {
               var12 = param0.c(true);
             }
-            var13 = cq.a(var12, var10 >> 8, var11 >> 8, var9, (byte) -113);
+            var13 = FullscreenCanvas.a(var12, var10 >> 8, var11 >> 8, var9, (byte) -113);
             if (var9 == 2) {
               var13.field_s = var7;
               var7++;
             }
-            var5.a((IntrusiveNode) (var13), (byte) 39);
+            var5.addLast((IntrusiveNode) (var13), (byte) 39);
           }
           stackIn_17_0 = new vl(var5, var4);
           return stackIn_17_0;

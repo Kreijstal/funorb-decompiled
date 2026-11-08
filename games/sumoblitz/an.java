@@ -3,7 +3,7 @@
  */
 final class an {
     boolean field_c;
-    static hr field_f;
+    static ToolkitSprite field_f;
     int field_e;
     boolean field_b;
     String[] field_h;
@@ -14,14 +14,14 @@ final class an {
     final static float a(float param0, float param1, int param2, float param3, int param4) {
         float[] var6 = null;
         if (param4 == 2) {
-          var6 = qu.field_i[param2];
+          var6 = GameplaySession.field_i[param2];
           float[] var5 = var6;
           return var6[1] * param0 + param3 * var6[0] + var6[2] * param1;
         }
         return 1.2348530292510986f;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         if (param0 < 4) {
           field_a = 11;
@@ -33,10 +33,10 @@ final class an {
 
     final static void a(int param0, byte param1, hg param2) {
         try {
-          hi.field_f.a((IntrusiveNode) (param2), (byte) 39);
+          hi.field_f.addLast((IntrusiveNode) (param2), (byte) 39);
           pm.a(param0, 1, param2);
           if (param1 <= 5) {
-            field_f = (hr) null;
+            field_f = (ToolkitSprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "an.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

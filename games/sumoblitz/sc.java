@@ -26,7 +26,7 @@ final class sc extends ua implements pv {
         return super.a(param1, 2, this.field_f.field_Bc);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

@@ -54,7 +54,7 @@ final class vr extends wp {
         int var5 = (this.field_q >> 1) + (this.field_r + param0);
         int var6 = (this.field_p >> 1) + param1 + this.field_v;
         gf var8 = this.field_H.c(-103);
-        if (mb.field_f == var8) {
+        if (GameInstructions.field_f == var8) {
           var16 = fw.field_m[0];
           var9 = var16.field_z << 1;
           var10 = var16.field_w << 1;
@@ -84,7 +84,7 @@ final class vr extends wp {
           }
           if (var10 <= kv.field_a.field_u) {
             jq.a(7161, kv.field_a);
-            lk.b();
+            SoftwareRasterizer.b();
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
@@ -147,7 +147,7 @@ final class vr extends wp {
             return;
           }
           jq.a(7161, kv.field_a);
-          lk.b();
+          SoftwareRasterizer.b();
           var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
           ClientException.a((byte) 126);
           kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
@@ -216,7 +216,7 @@ final class vr extends wp {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         thisPasswordContainsYourText = null;
         if (param0 != -21433) {

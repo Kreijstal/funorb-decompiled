@@ -47,7 +47,7 @@ final class ClientException extends RuntimeException {
             }
           }
           if (param3 > -113) {
-            ClientException.b((byte) -11);
+            ClientException.releaseStatics((byte) -11);
           }
           stackIn_19_0 = new qj(param1, var4_long, param0);
           return stackIn_19_0;
@@ -75,12 +75,12 @@ final class ClientException extends RuntimeException {
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
           ClientException.a(6, (OpenGlGraphicsToolkit) null, (byte[]) null, -63);
-          if (!nt.field_r) {
+          if (!TimedSceneEffect.field_r) {
             return vs.b((byte) 9) ? true : false;
           }
           return true;
         }
-        if (nt.field_r) {
+        if (TimedSceneEffect.field_r) {
           return true;
         }
         if (!vs.b((byte) 9)) {
@@ -90,18 +90,18 @@ final class ClientException extends RuntimeException {
     }
 
     final static void a(byte param0) {
-        rl var1 = (rl) (te.field_g.b((byte) -124));
+        rl var1 = (rl) (IntrusiveNodeHashTable.field_g.removeLast((byte) -124));
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        lk.a(var1.field_v, var1.field_t, var1.field_m);
-        lk.d(var1.field_s, var1.field_r, var1.field_u, var1.field_p);
+        SoftwareRasterizer.a(var1.field_v, var1.field_t, var1.field_m);
+        SoftwareRasterizer.d(var1.field_s, var1.field_r, var1.field_u, var1.field_p);
         var1.field_v = null;
-        ko.field_m.a((IntrusiveNode) (var1), (byte) 39);
+        ko.field_m.addLast((IntrusiveNode) (var1), (byte) 39);
         int var2 = -37 / ((param0 - 1) / 38);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -18) {
           return;
         }

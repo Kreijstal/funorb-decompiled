@@ -5,11 +5,11 @@ final class b {
     static volatile int field_a;
     static String youAreNotCurrentlyText;
     static boolean field_c;
-    private fr field_e;
+    private LegacyOpenGlGraphicsToolkit field_e;
     static String loadingLevelsText;
     private sn field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         loadingLevelsText = null;
         youAreNotCurrentlyText = null;
         if (param0 != -69) {
@@ -17,7 +17,7 @@ final class b {
         }
     }
 
-    b(fr param0) {
+    b(LegacyOpenGlGraphicsToolkit param0) {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
@@ -32,7 +32,7 @@ final class b {
         if (null == lt.field_m) {
           return;
         }
-        if (null != gk.field_o) {
+        if (null != CompactMeshGeometry.field_o) {
           ib.d(1);
         }
     }
@@ -178,7 +178,7 @@ final class b {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).c(true);
             }
-            var16_ref = (eg) (wr.field_E.b(-120));
+            var16_ref = (eg) (wr.field_E.first(-120));
             if (var16_ref == null) {
               kk.a((byte) -111);
               return;
@@ -191,7 +191,7 @@ final class b {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              var14 = (eg) (wr.field_E.b(123));
+              var14 = (eg) (wr.field_E.first(123));
               if (var14 == null) {
                 kk.a((byte) -122);
                 return;
@@ -205,7 +205,7 @@ final class b {
               kk.a((byte) -120);
             }
           } else {
-            var12 = (hg) (hi.field_f.b(param0 + 29968));
+            var12 = (hg) (hi.field_f.first(param0 + 29968));
             if (var12 == null) {
               kk.a((byte) -113);
               return;

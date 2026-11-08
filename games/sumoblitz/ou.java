@@ -23,14 +23,14 @@ final class ou extends na {
           field_g = (String) null;
         }
         if (!vs.b((byte) 9) &&
-          !nt.field_r) {
+          !TimedSceneEffect.field_r) {
           if (nq.field_g == null) {
             nq.field_g = ew.a((byte) -92, 4);
           }
           if (nq.field_g.field_o) {
             kh.field_e = kh.field_e | nq.field_g.field_k;
             OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e & ~nq.field_g.field_k;
-            nt.field_r = true;
+            TimedSceneEffect.field_r = true;
             nq.field_g = null;
           }
         }
@@ -65,7 +65,7 @@ final class ou extends na {
           var5 = (CharSequence) ((Object) param1);
           var3 = ti.a(false, var5);
           if (param0 != 0) {
-            ou.c((byte) 14);
+            ou.releaseStatics((byte) 14);
           }
           if (var3 != null) {
             stackIn_4_0 = var3;
@@ -153,7 +153,7 @@ final class ou extends na {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 119 % ((-43 - param0) / 63);
         field_g = null;
     }
@@ -209,7 +209,7 @@ final class ou extends na {
           LimitedRandomAccessFile.field_d = true;
           cl.field_s = param1;
           if (0 == cl.field_s) {
-            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
+            var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = 3 + var3_int;
             bf.field_c = new String[var4];
             eb.field_a = new int[var4];
@@ -218,7 +218,7 @@ final class ou extends na {
             }
             jo.field_b = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              bf.field_c[var5] = mb.field_c[var5];
+              bf.field_c[var5] = GameInstructions.field_c[var5];
             }
             bf.field_c[-3 + var4] = "";
             bf.field_c[-2 + var4] = pp.membersText;
@@ -228,7 +228,7 @@ final class ou extends na {
             eb.field_a[-1 + var4] = 1;
             jo.field_b[1] = 5;
           } else if (cl.field_s == 1) {
-            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
+            var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = var3_int + 2;
             eb.field_a = new int[var4];
             bf.field_c = new String[var4];
@@ -237,7 +237,7 @@ final class ou extends na {
             }
             jo.field_b = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              bf.field_c[var5] = mb.field_c[var5];
+              bf.field_c[var5] = GameInstructions.field_c[var5];
             }
             bf.field_c[-2 + var4] = "";
             bf.field_c[-1 + var4] = jh.closeText;
@@ -246,9 +246,9 @@ final class ou extends na {
           } else if (cl.field_s != 2) {
             if (cl.field_s == 3) {
               if (!lt.field_m.field_f) {
-                var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, fr.unfortunatelyYourConfigurationDoesnText);
+                var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, LegacyOpenGlGraphicsToolkit.unfortunatelyYourConfigurationDoesnText);
               } else {
-                var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ni.field_f);
+                var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, ni.field_f);
               }
               var4 = var3_int + 2;
               eb.field_a = new int[var4];
@@ -258,14 +258,14 @@ final class ou extends na {
               }
               jo.field_b = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                bf.field_c[var5] = mb.field_c[var5];
+                bf.field_c[var5] = GameInstructions.field_c[var5];
               }
               bf.field_c[-2 + var4] = "";
               bf.field_c[-1 + var4] = jh.closeText;
               eb.field_a[-1 + var4] = 0;
               jo.field_b[0] = 5;
             } else if (4 == cl.field_s) {
-              var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, LimitedRandomAccessFile.field_c);
+              var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, LimitedRandomAccessFile.field_c);
               var4 = var3_int + 2;
               bf.field_c = new String[var4];
               eb.field_a = new int[var4];
@@ -274,7 +274,7 @@ final class ou extends na {
               }
               jo.field_b = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                bf.field_c[var5] = mb.field_c[var5];
+                bf.field_c[var5] = GameInstructions.field_c[var5];
               }
               bf.field_c[-2 + var4] = "";
               bf.field_c[var4 - 1] = jh.closeText;
@@ -284,7 +284,7 @@ final class ou extends na {
               if (cl.field_s != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ua.fullscreenModeWasCancelledText);
+              var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, ua.fullscreenModeWasCancelledText);
               var4 = 3 + var3_int;
               eb.field_a = new int[var4];
               bf.field_c = new String[var4];
@@ -293,7 +293,7 @@ final class ou extends na {
               }
               jo.field_b = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                bf.field_c[var5] = mb.field_c[var5];
+                bf.field_c[var5] = GameInstructions.field_c[var5];
               }
               bf.field_c[-3 + var4] = "";
               bf.field_c[var4 - 2] = kq.tryAgainText;
@@ -304,10 +304,10 @@ final class ou extends na {
               jo.field_b[1] = 5;
             }
           } else {
-            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ic.a(ClientExceptionSupport.ifYouDoNothingText, new String[]{"<br><%0><br>"}, (byte) -128));
+            var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, ic.a(ClientExceptionSupport.ifYouDoNothingText, new String[]{"<br><%0><br>"}, (byte) -128));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(mb.field_c[var5])) {
+              if (!"<%0>".equals(GameInstructions.field_c[var5])) {
                 continue;
               }
               var4 = var5;
@@ -317,13 +317,13 @@ final class ou extends na {
               throw new IllegalStateException();
             }
             no.field_b = new String[var4];
-            la.a(mb.field_c, 0, no.field_b, 0, var4);
+            la.a(GameInstructions.field_c, 0, no.field_b, 0, var4);
             uw.field_c = new String[-1 - var4 + var3_int];
-            la.a(mb.field_c, var4 + 1, uw.field_c, 0, -var4 + (var3_int - 1));
+            la.a(GameInstructions.field_c, var4 + 1, uw.field_c, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ic.a(lq.field_a, new String[]{"<br><%0><br>"}, (byte) -128));
+            var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, ic.a(lq.field_a, new String[]{"<br><%0><br>"}, (byte) -128));
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(mb.field_c[var5])) {
+              if (!"<%0>".equals(GameInstructions.field_c[var5])) {
                 continue;
               }
               var4 = var5;
@@ -333,9 +333,9 @@ final class ou extends na {
               throw new IllegalStateException();
             }
             hf.field_F = new String[var4];
-            la.a(mb.field_c, 0, hf.field_F, 0, var4);
+            la.a(GameInstructions.field_c, 0, hf.field_F, 0, var4);
             uw.field_b = new String[-1 + (-var4 + var3_int)];
-            la.a(mb.field_c, var4 + 1, uw.field_b, 0, -1 - var4 + var3_int);
+            la.a(GameInstructions.field_c, var4 + 1, uw.field_b, 0, -1 - var4 + var3_int);
             if (no.field_b.length >= hf.field_F.length) {
               stackIn_31_0 = no.field_b.length;
             } else {
@@ -389,7 +389,7 @@ final class ou extends na {
               }
               stackIn_46_0[stackIn_46_1] = stackIn_49_2;
             }
-            iv.field_f = wq.a(-17);
+            LegacyOpenGlEffectManager.field_f = wq.a(-17);
           }
           nj.field_a.field_e = jo.field_b.length;
           var3_intLifetime1 = 0;

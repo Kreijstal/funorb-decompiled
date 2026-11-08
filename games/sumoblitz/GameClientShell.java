@@ -59,7 +59,7 @@ abstract class GameClientShell extends GameApplet {
         int var3Lifetime2;
         var5 = Sumoblitz.field_L ? 1 : 0;
         if (SecondaryNodeDequeIterator.field_b != null) {
-          if (null == gk.field_o) {
+          if (null == CompactMeshGeometry.field_o) {
             var6 = km.c(false);
             var4 = var6.getSize();
             SecondaryNodeDequeIterator.field_b.a(var4.height, var4.width, (byte) -123);
@@ -78,7 +78,7 @@ abstract class GameClientShell extends GameApplet {
         if (param1 >= -97) {
           this.field_D = (String) null;
         }
-        if (nt.a((byte) 90)) {
+        if (TimedSceneEffect.a((byte) 90)) {
           var3 = 1200 * vm.a(-79);
           if (this.field_B ||
             !(var3 >= df.a((byte) 114)) &&
@@ -232,7 +232,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if (mp.field_a == 10) {
           if (0 != dk.field_c) {
-            vf.field_a = wd.a(ak.field_f, (byte) 125);
+            vf.field_a = wd.a(MenuScreen.field_f, (byte) 125);
           }
           mp.field_a = 11;
         }
@@ -326,7 +326,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if (we.g(-1)) {
           stackIn_11_1 = 16981;
-          stackIn_12_2 = (gk.field_o != null);
+          stackIn_12_2 = (CompactMeshGeometry.field_o != null);
           discarded$33 = this.a(stackIn_11_1, stackIn_12_2, false);
         } else {
           if (mp.field_a >= 10) {
@@ -384,7 +384,7 @@ abstract class GameClientShell extends GameApplet {
                                 return;
                               }
                               if (var2 == 18) {
-                                bq.a(8192);
+                                LegacyOpenGlEffect.a(8192);
                                 return;
                               }
                               IntrusiveNode.reportClientError("MGS1: " + di.b((byte) -22), (Throwable) null, 0);
@@ -413,7 +413,7 @@ abstract class GameClientShell extends GameApplet {
               }
             }
           } else {
-            uu.c(false);
+            MusicVoice.c(false);
           }
           return;
         }
@@ -493,7 +493,7 @@ abstract class GameClientShell extends GameApplet {
         if (param0 > -55) {
           this.field_w = -30;
         }
-        kj.a(-23166, ra.c(2), var3 != 0, uu.a(0, var5));
+        kj.a(-23166, ra.c(2), var3 != 0, MusicVoice.a(0, var5));
     }
 
     final void a(boolean param0, boolean param1, byte param2, boolean param3, boolean param4) {
@@ -515,7 +515,7 @@ abstract class GameClientShell extends GameApplet {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 79) {
           field_t = -119;
         }
@@ -772,7 +772,7 @@ abstract class GameClientShell extends GameApplet {
         as.field_w = dk.a((byte) -126);
         int var10 = -116 / ((2 - param2) / 36);
         db.a(false, qn.field_f);
-        ak.field_f = param7;
+        MenuScreen.field_f = param7;
         u.field_P = param4;
         OpenGlUnderwaterEffect.field_i = param5;
         ra.field_f = param3;

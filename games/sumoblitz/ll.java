@@ -6,7 +6,7 @@ final class ll {
     static long[][] field_a;
     static String resumeGameText;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = (long[][]) null;
         field_b = null;
         if (param0 >= -107) {
@@ -18,7 +18,7 @@ final class ll {
     }
 
     final static void c(int param0) {
-        iv.field_i = 1;
+        LegacyOpenGlEffectManager.field_i = 1;
         hc.field_f = 1;
         if (param0 >= 40) {
           ResourceArchive.field_f = 1;
@@ -40,7 +40,7 @@ final class ll {
           wm.field_f = new boolean[25];
           ResourceArchive.field_f = 1;
           up.field_g = new boolean[25];
-          iv.field_i = 1;
+          LegacyOpenGlEffectManager.field_i = 1;
           qn.field_d = new boolean[25];
           la.a(ql.field_z, 0, 25, 2147483647);
           la.a(ql.field_A, 0, 25, -1);
@@ -54,7 +54,7 @@ final class ll {
         wm.field_f = new boolean[25];
         ResourceArchive.field_f = 1;
         up.field_g = new boolean[25];
-        iv.field_i = 1;
+        LegacyOpenGlEffectManager.field_i = 1;
         qn.field_d = new boolean[25];
         la.a(ql.field_z, 0, 25, 2147483647);
         la.a(ql.field_A, 0, 25, -1);

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wf {
-    static ri field_a;
+    static SpriteData field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 <= 70) {
-          wf.a(34);
+          wf.releaseStatics(34);
         }
     }
 

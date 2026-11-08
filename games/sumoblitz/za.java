@@ -65,7 +65,7 @@ abstract class za extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -93) {
           field_l = (int[]) null;
           field_l = null;

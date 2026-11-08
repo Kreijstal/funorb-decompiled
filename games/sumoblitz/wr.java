@@ -162,7 +162,7 @@ final class wr extends wp {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         if (param0 != 454) {
           field_E = (IntrusiveDeque) null;
@@ -302,7 +302,7 @@ final class wr extends wp {
         }
     }
 
-    final static vk a(fr param0, int param1, String param2, int param3) {
+    final static vk a(LegacyOpenGlGraphicsToolkit param0, int param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         vk stackIn_2_0 = null;
@@ -322,8 +322,8 @@ final class wr extends wp {
           var4_int = jaggl.OpenGL.glGenProgramARB();
           jaggl.OpenGL.glBindProgramARB(param1, var4_int);
           jaggl.OpenGL.glProgramStringARB(param1, 34933, param2);
-          jaggl.OpenGL.glGetIntegerv(34379, mb.field_h, 0);
-          if (mb.field_h[0] == -1) {
+          jaggl.OpenGL.glGetIntegerv(34379, GameInstructions.field_h, 0);
+          if (GameInstructions.field_h[0] == -1) {
             jaggl.OpenGL.glBindProgramARB(param1, 0);
             stackIn_7_0 = new vk(param0, param1, var4_int);
             return stackIn_7_0;

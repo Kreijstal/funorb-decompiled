@@ -60,7 +60,7 @@ class gt extends ur implements ai {
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         loadingMusicText = null;
         field_db = null;
         int var1 = 57 / ((param0 - 70) / 48);
@@ -298,7 +298,7 @@ class gt extends ur implements ai {
               if (this.field_cb) {
                 stackIn_16_1 = ii.retryText;
               } else {
-                stackIn_16_1 = cq.backText;
+                stackIn_16_1 = FullscreenCanvas.backText;
               }
               ((lc) (Object) stackIn_15_0).a(stackIn_16_1, -1, true);
             } else {

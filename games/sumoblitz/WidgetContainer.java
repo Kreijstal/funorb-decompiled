@@ -26,7 +26,7 @@ class WidgetContainer extends UiWidget implements ug {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           var5 = new IntrusiveDequeCursor(this.field_y);
-          var6 = (UiWidget) (var5.b((byte) -80));
+          var6 = (UiWidget) (var5.first((byte) -80));
           if (param1 >= -30) {
             var9 = (UiWidget) null;
             this.a((UiWidget) null, (byte) -17);
@@ -37,7 +37,7 @@ class WidgetContainer extends UiWidget implements ug {
               discarded$4 = param0.append(' ');
             }
             var6.a(param3 + 1, param2, param0, 0);
-            var6 = (UiWidget) (var5.b(0));
+            var6 = (UiWidget) (var5.next(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -80,14 +80,14 @@ class WidgetContainer extends UiWidget implements ug {
           if (param2 != -1) {
             return true;
           }
-          var9 = (UiWidget) (var8.b((byte) -80));
+          var9 = (UiWidget) (var8.first((byte) -80));
           while (var9 != null) {
-            if (var9.a(false)) {
+            if (var9.isLinked(false)) {
               if (var9.d(-1) &&
                 var9.a(param0, param1, -1, param3, param4, param5, param6)) {
                 return true;
               }
-              var9 = (UiWidget) (var8.b(~param2));
+              var9 = (UiWidget) (var8.next(~param2));
               continue;
             }
             break;
@@ -121,24 +121,24 @@ class WidgetContainer extends UiWidget implements ug {
         RuntimeException decompiledCaughtException = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (this.field_y.a((byte) -86)) {
+          if (this.field_y.isEmpty((byte) -86)) {
             return false;
           }
           var8 = new IntrusiveDequeCursor(this.field_y);
-          var4_ref_pk = (UiWidget) (var8.a((byte) -58));
+          var4_ref_pk = (UiWidget) (var8.last((byte) -58));
           while (var4_ref_pk != null) {
             if (var4_ref_pk.d(-1)) {
               var5 = new IntrusiveDequeCursor(this.field_y);
-              var5.a((byte) -70, (IntrusiveNode) (var4_ref_pk));
-              var6 = (UiWidget) (var5.c((byte) 87));
+              var5.startBackwardAt((byte) -70, (IntrusiveNode) (var4_ref_pk));
+              var6 = (UiWidget) (var5.previous((byte) 87));
               while (var6 != null) {
                 if (var6.a(param1, (byte) 61)) {
                   return true;
                 }
-                var6 = (UiWidget) (var5.c((byte) 87));
+                var6 = (UiWidget) (var5.previous((byte) 87));
               }
             }
-            var4_ref_pk = (UiWidget) (var8.c((byte) 87));
+            var4_ref_pk = (UiWidget) (var8.previous((byte) 87));
           }
           var4 = 39 % ((param0 - 84) / 34);
           return false;
@@ -169,24 +169,24 @@ class WidgetContainer extends UiWidget implements ug {
         RuntimeException decompiledCaughtException = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (this.field_y.a((byte) -87)) {
+          if (this.field_y.isEmpty((byte) -87)) {
             return false;
           }
           var3 = new IntrusiveDequeCursor(this.field_y);
-          var4 = (UiWidget) (var3.b((byte) -80));
+          var4 = (UiWidget) (var3.first((byte) -80));
           while (var4 != null) {
             if (var4.d(-1)) {
               var5 = new IntrusiveDequeCursor(this.field_y);
-              var5.a(14, var4);
-              var6 = (UiWidget) (var5.b(0));
+              var5.startForwardAt(14, var4);
+              var6 = (UiWidget) (var5.next(0));
               while (var6 != null) {
                 if (var6.a(param0, (byte) 61)) {
                   return true;
                 }
-                var6 = (UiWidget) (var5.b(0));
+                var6 = (UiWidget) (var5.next(0));
               }
             }
-            var4 = (UiWidget) (var3.b(0));
+            var4 = (UiWidget) (var3.next(0));
           }
           if (!param1) {
             return false;
@@ -257,13 +257,13 @@ class WidgetContainer extends UiWidget implements ug {
           this.a((UiWidget) null, (byte) 2);
         }
         var2 = new IntrusiveDequeCursor(this.field_y);
-        var3 = (UiWidget) (var2.b((byte) -80));
+        var3 = (UiWidget) (var2.first((byte) -80));
         while (var3 != null) {
           var4 = var3.c(-6696);
           if (var4 != null) {
             return var4;
           }
-          var3 = (UiWidget) (var2.b(0));
+          var3 = (UiWidget) (var2.next(0));
         }
         return null;
     }
@@ -278,10 +278,10 @@ class WidgetContainer extends UiWidget implements ug {
         if (param2 >= -35) {
           field_x = (int[]) null;
         }
-        UiWidget var6 = (UiWidget) (var5.a((byte) -83));
+        UiWidget var6 = (UiWidget) (var5.last((byte) -83));
         while (var6 != null) {
           var6.a(this.field_r + param0, this.field_v + param1, (byte) -62, param3);
-          var6 = (UiWidget) (var5.c((byte) 87));
+          var6 = (UiWidget) (var5.previous((byte) 87));
         }
     }
 
@@ -291,13 +291,13 @@ class WidgetContainer extends UiWidget implements ug {
         int var2 = 0;
         IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_y);
         int var4 = 51 % ((param0 + 10) / 46);
-        UiWidget var5 = (UiWidget) (var3.b((byte) -80));
+        UiWidget var5 = (UiWidget) (var3.first((byte) -80));
         while (var5 != null) {
           var6 = var5.e(-99);
           if (var6 > var2) {
             var2 = var6;
           }
-          var5 = (UiWidget) (var3.b(0));
+          var5 = (UiWidget) (var3.next(0));
         }
         return var2;
     }
@@ -314,11 +314,11 @@ class WidgetContainer extends UiWidget implements ug {
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
           var8 = new IntrusiveDequeCursor(this.field_y);
-          var9 = (UiWidget) (var8.b((byte) -80));
+          var9 = (UiWidget) (var8.first((byte) -80));
           while (var9 != null) {
-            if (var9.a(false)) {
+            if (var9.isLinked(false)) {
               if (!var9.a(param0, -79, param2, param3, param4 + this.field_r, param5, param6 + this.field_v)) {
-                var9 = (UiWidget) (var8.b(0));
+                var9 = (UiWidget) (var8.next(0));
                 continue;
               }
               return true;
@@ -344,7 +344,7 @@ class WidgetContainer extends UiWidget implements ug {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_x = (int[]) null;
         }
@@ -358,22 +358,22 @@ class WidgetContainer extends UiWidget implements ug {
           field_x = (int[]) null;
         }
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_y);
-        UiWidget var3 = (UiWidget) (var2.b((byte) -80));
+        UiWidget var3 = (UiWidget) (var2.first((byte) -80));
         while (var3 != null) {
           var3.c(false);
-          var3 = (UiWidget) (var2.b(param0 + 29587));
+          var3 = (UiWidget) (var2.next(param0 + 29587));
         }
     }
 
     UiWidget f(int param0) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_y);
-        UiWidget var3_ref_pk = (UiWidget) (var2.b((byte) -80));
+        UiWidget var3_ref_pk = (UiWidget) (var2.first((byte) -80));
         while (var3_ref_pk != null) {
           if (var3_ref_pk.d(-1)) {
             return var3_ref_pk;
           }
-          var3_ref_pk = (UiWidget) (var2.b(0));
+          var3_ref_pk = (UiWidget) (var2.next(0));
         }
         int var3 = -6 / ((param0 + 25) / 58);
         return null;
@@ -381,7 +381,7 @@ class WidgetContainer extends UiWidget implements ug {
 
     final void a(UiWidget param0, int param1) {
         try {
-          this.field_y.a((IntrusiveNode) (param0), (byte) 39);
+          this.field_y.addLast((IntrusiveNode) (param0), (byte) 39);
           if (param1 <= 59) {
             field_x = (int[]) null;
           }
@@ -393,10 +393,10 @@ class WidgetContainer extends UiWidget implements ug {
     void c(byte param0) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_y);
-        UiWidget var5 = (UiWidget) (var2.b((byte) -80));
+        UiWidget var5 = (UiWidget) (var2.first((byte) -80));
         while (var5 != null) {
           var5.c((byte) 127);
-          var5 = (UiWidget) (var2.b(0));
+          var5 = (UiWidget) (var2.next(0));
         }
         int var3 = -115 % ((param0 - 64) / 51);
     }
@@ -414,7 +414,7 @@ class WidgetContainer extends UiWidget implements ug {
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
           var3 = new IntrusiveDequeCursor(this.field_y);
-          var4 = (UiWidget) (var3.b((byte) -80));
+          var4 = (UiWidget) (var3.first((byte) -80));
           if (param1 != 61) {
             var6 = (UiWidget) null;
             this.a(27, -11, (UiWidget) null, -73);
@@ -423,7 +423,7 @@ class WidgetContainer extends UiWidget implements ug {
             if (var4.a(param0, (byte) 61)) {
               return true;
             }
-            var4 = (UiWidget) (var3.b(0));
+            var4 = (UiWidget) (var3.next(0));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -455,11 +455,11 @@ class WidgetContainer extends UiWidget implements ug {
           var5_int = -16 % ((-25 - param1) / 45);
           super.a(param0, 105, param2, param3);
           var6 = new IntrusiveDequeCursor(this.field_y);
-          var7 = (UiWidget) (var6.b((byte) -80));
+          var7 = (UiWidget) (var6.first((byte) -80));
           while (var7 != null) {
-            if (var7.a(false)) {
+            if (var7.isLinked(false)) {
               var7.a(this.field_r + param0, -88, param2, param3 + this.field_v);
-              var7 = (UiWidget) (var6.b(0));
+              var7 = (UiWidget) (var6.next(0));
               continue;
             }
             break;
@@ -507,11 +507,11 @@ class WidgetContainer extends UiWidget implements ug {
             return;
           }
           var7 = new IntrusiveDequeCursor(this.field_y);
-          var8 = (UiWidget) (var7.b((byte) -80));
+          var8 = (UiWidget) (var7.first((byte) -80));
           while (var8 != null) {
-            if (var8.a(param1)) {
+            if (var8.isLinked(param1)) {
               var8.a(param0, false, param2 + this.field_r, param3, param4, this.field_v + param5);
-              var8 = (UiWidget) (var7.b(0));
+              var8 = (UiWidget) (var7.next(0));
               continue;
             }
             break;
@@ -545,17 +545,17 @@ class WidgetContainer extends UiWidget implements ug {
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           var8 = new IntrusiveDequeCursor(this.field_y);
-          var9 = (UiWidget) (var8.b((byte) -80));
+          var9 = (UiWidget) (var8.first((byte) -80));
           if (param2 <= 9) {
             field_x = (int[]) null;
           }
           while (var9 != null) {
-            if (var9.a(false)) {
+            if (var9.isLinked(false)) {
               if (var9.d(-1) &&
                 var9.a(param0, param1, (byte) 67, param3)) {
                 return true;
               }
-              var9 = (UiWidget) (var8.b(0));
+              var9 = (UiWidget) (var8.next(0));
               continue;
             }
             break;

@@ -19,7 +19,7 @@ final class hu {
             rf.field_a.a((byte) 100, he.field_n);
           }
           he.field_n.a(false, param1, param0, param2);
-          lk.b();
+          SoftwareRasterizer.b();
           vt.a(true, true);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hu.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -94,7 +94,7 @@ final class hu {
         return ls.a(this.a((byte) -110, param1), (byte) -98);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_f = null;
         field_c = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lr {
-    static ri field_c;
+    static SpriteData field_c;
     static int[] field_a;
     private pv field_d;
     static qr field_b;
@@ -25,7 +25,7 @@ final class lr {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 16766976) {
@@ -36,7 +36,7 @@ final class lr {
         field_c = null;
     }
 
-    final static void a(tv param0, byte param1) {
+    final static void a(MusicTrack param0, byte param1) {
         try {
           if (param1 < 15) {
             lr.a(-61);

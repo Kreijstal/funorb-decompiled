@@ -89,7 +89,7 @@ class dh extends wp {
         return (var3 + param0) / param1 - var3;
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_H = null;
         field_M = null;
         field_N = null;
@@ -575,7 +575,7 @@ class dh extends wp {
           ((pw) (this.field_o)).a(this, (byte) -128);
         }
         if (param0 <= 78) {
-          dh.j(5);
+          dh.releaseStatics(5);
         }
     }
 

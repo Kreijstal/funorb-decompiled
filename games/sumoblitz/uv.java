@@ -59,7 +59,7 @@ final class uv extends gm {
             var10 = var12;
             var7Lifetime2 = var10;
             var8 = new vt(24, param3, param1, param0, (int)var13[0] << 8, (int)var13[1] << 8, 0);
-            param4.a((IntrusiveNode) (var8), (byte) 39);
+            param4.addLast((IntrusiveNode) (var8), (byte) 39);
             var6_int++;
           }
           for (var6_intLifetime1 = 0; var6_intLifetime1 < 8; var6_intLifetime1++) {
@@ -68,7 +68,7 @@ final class uv extends gm {
             var11 = dupTemp$2;
             var7Lifetime1Lifetime1 = dupTemp$2;
             var8Lifetime1 = new vt(24, param3, param1, param0, (int)var11[0] << 8, (int)var11[1] << 8, 1);
-            param4.a((IntrusiveNode) (var8Lifetime1), (byte) 39);
+            param4.addLast((IntrusiveNode) (var8Lifetime1), (byte) 39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -103,7 +103,7 @@ final class uv extends gm {
         int var12 = 0;
         int var13 = 0;
         try {
-          lk.b(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, 10197915);
+          SoftwareRasterizer.b(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, 10197915);
           if (param3) {
             stackIn_6_0 = (((wp) (param0)).field_C) ? 1 : 0;
           } else {
@@ -149,7 +149,7 @@ final class uv extends gm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -31) {
           field_n = -34L;
           field_o = null;

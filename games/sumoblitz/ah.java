@@ -97,11 +97,11 @@ class ah {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_J = null;
         if (param0 != 0) {
-          ah.c(-3);
+          ah.releaseStatics(-3);
         }
     }
 
@@ -284,7 +284,7 @@ class ah {
     void d(int param0) {
         float[] var2;
         int var3;
-        nt var4;
+        TimedSceneEffect var4;
         float[] var5;
         float[] var6;
         float[] var7;
@@ -293,7 +293,7 @@ class ah {
         float[] var13;
         float[] var2Lifetime1;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (td.field_m) {
+        if (MusicPatch.field_m) {
           return;
         }
         if (this.field_x > 0) {
@@ -330,13 +330,13 @@ class ah {
             var9 = kt.a((byte) -99, var5, (float)this.field_s);
             var6 = var9;
             var2 = var6;
-            this.field_q.a((IntrusiveNode) (new aj(100, this.field_C, this.field_z, this.a(0), this.field_s, Math.random() / 100.0, (int)var9[0] << 8, (int)var9[1] << 8, this.field_Q, 0, this.e((byte) -5) >> 8)), (byte) 39);
+            this.field_q.addLast((IntrusiveNode) (new aj(100, this.field_C, this.field_z, this.a(0), this.field_s, Math.random() / 100.0, (int)var9[0] << 8, (int)var9[1] << 8, this.field_Q, 0, this.e((byte) -5) >> 8)), (byte) 39);
             var10 = kt.a((byte) -16, var2, (float)(this.field_s + 2.0943951023931953));
             var7 = var10;
             var2Lifetime1 = var7;
-            this.field_q.a((IntrusiveNode) (new aj(100, this.field_C, this.field_z, this.a(0), this.field_s, Math.random() / 100.0, (int)var10[0] << 8, (int)var10[1] << 8, this.field_Q, 1, this.e((byte) -5) >> 8)), (byte) 39);
+            this.field_q.addLast((IntrusiveNode) (new aj(100, this.field_C, this.field_z, this.a(0), this.field_s, Math.random() / 100.0, (int)var10[0] << 8, (int)var10[1] << 8, this.field_Q, 1, this.e((byte) -5) >> 8)), (byte) 39);
             var13 = kt.a((byte) -43, var2Lifetime1, (float)(4.1887902047863905 + this.field_s));
-            this.field_q.a((IntrusiveNode) (new aj(100, this.field_C, this.field_z, this.a(0), this.field_s, Math.random() / 100.0, (int)var13[0] << 8, (int)var13[1] << 8, this.field_Q, 2, this.e((byte) -5) >> 8)), (byte) 39);
+            this.field_q.addLast((IntrusiveNode) (new aj(100, this.field_C, this.field_z, this.a(0), this.field_s, Math.random() / 100.0, (int)var13[0] << 8, (int)var13[1] << 8, this.field_Q, 2, this.e((byte) -5) >> 8)), (byte) 39);
           }
         }
         if (!this.g(73)) {
@@ -379,17 +379,17 @@ class ah {
             this.b(677397768);
           }
           if (this.field_k % 2 != 0) {
-            this.field_q.a((IntrusiveNode) (new eq(50, this.field_C + (fi.a(2048, he.field_o, (byte) -96) - 1024) >> 8, -1024 + (this.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.a(0), this.field_M + 1, true)), (byte) 39);
+            this.field_q.addLast((IntrusiveNode) (new eq(50, this.field_C + (fi.a(2048, he.field_o, (byte) -96) - 1024) >> 8, -1024 + (this.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.a(0), this.field_M + 1, true)), (byte) 39);
           } else {
-            this.field_q.a((IntrusiveNode) (new eq(50, -1024 + this.field_C + fi.a(2048, he.field_o, (byte) -96) >> 8, -1024 + (this.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.a(0), 1 + this.field_M, false)), (byte) 39);
+            this.field_q.addLast((IntrusiveNode) (new eq(50, -1024 + this.field_C + fi.a(2048, he.field_o, (byte) -96) >> 8, -1024 + (this.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.a(0), 1 + this.field_M, false)), (byte) 39);
           }
         }
-        var4 = (nt) (this.field_q.b(118));
+        var4 = (TimedSceneEffect) (this.field_q.first(118));
         while (var4 != null) {
           if (var4.a(-2567)) {
             var4.unlink(false);
           }
-          var4 = (nt) (this.field_q.d((byte) 18));
+          var4 = (TimedSceneEffect) (this.field_q.next((byte) 18));
         }
         if (this.g(66)) {
           this.field_m = this.field_m + 2048;
@@ -710,19 +710,19 @@ class ah {
     final void a(GraphicsToolkit param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
-        hr stackIn_23_0 = null;
+        ToolkitSprite stackIn_23_0 = null;
         float stackIn_23_1 = 0.0f;
         float stackIn_23_2 = 0.0f;
         int stackIn_24_3;
-        hr stackIn_31_0 = null;
+        ToolkitSprite stackIn_31_0 = null;
         float stackIn_31_1 = 0.0f;
         float stackIn_31_2 = 0.0f;
         int stackIn_32_3;
-        hr stackIn_36_0 = null;
+        ToolkitSprite stackIn_36_0 = null;
         float stackIn_36_1 = 0.0f;
         float stackIn_36_2 = 0.0f;
         int stackIn_37_3;
-        hr stackIn_41_0;
+        ToolkitSprite stackIn_41_0;
         float stackIn_41_1;
         float stackIn_41_2;
         double stackIn_41_3;
@@ -733,44 +733,44 @@ class ah {
         int stackIn_45_3;
         int stackIn_45_4;
         int stackIn_46_5;
-        hr stackIn_49_0 = null;
+        ToolkitSprite stackIn_49_0 = null;
         float stackIn_49_1 = 0.0f;
         float stackIn_49_2 = 0.0f;
         int stackIn_50_3;
-        hr stackIn_53_0 = null;
+        ToolkitSprite stackIn_53_0 = null;
         float stackIn_53_1 = 0.0f;
         float stackIn_53_2 = 0.0f;
         int stackIn_54_3;
-        hr stackIn_66_0;
+        ToolkitSprite stackIn_66_0;
         float stackIn_66_1;
         float stackIn_66_2;
         double stackIn_66_3;
         int stackIn_67_4;
-        hr stackIn_73_0;
+        ToolkitSprite stackIn_73_0;
         float stackIn_73_1;
         float stackIn_73_2;
         double stackIn_73_3;
         int stackIn_74_4;
-        hr stackIn_78_0;
+        ToolkitSprite stackIn_78_0;
         float stackIn_78_1;
         float stackIn_78_2;
         double stackIn_78_3;
         int stackIn_79_4;
-        hr stackIn_83_0;
+        ToolkitSprite stackIn_83_0;
         float stackIn_83_1;
         float stackIn_83_2;
         double stackIn_83_3;
         int stackIn_84_4;
-        hr stackIn_88_0;
+        ToolkitSprite stackIn_88_0;
         float stackIn_88_1;
         float stackIn_88_2;
         double stackIn_88_3;
         int stackIn_89_4;
-        hr stackIn_92_0 = null;
+        ToolkitSprite stackIn_92_0 = null;
         float stackIn_92_1 = 0.0f;
         float stackIn_92_2 = 0.0f;
         int stackIn_93_3;
-        hr stackIn_122_0;
+        ToolkitSprite stackIn_122_0;
         float stackIn_122_1;
         float stackIn_122_2;
         double stackIn_122_3;
@@ -784,7 +784,7 @@ class ah {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        nt var7 = null;
+        TimedSceneEffect var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -811,10 +811,10 @@ class ah {
           var4 = stackIn_9_0;
           var5 = this.field_m - (-var3_int + var4) >> 8;
           var6 = Math.max(0, 255 - this.field_b * this.field_b) << 24;
-          var7 = (nt) (this.field_q.b(-80));
+          var7 = (TimedSceneEffect) (this.field_q.first(-80));
           while (var7 != null) {
             var7.a(param0, -127);
-            var7 = (nt) (this.field_q.d((byte) 18));
+            var7 = (TimedSceneEffect) (this.field_q.next((byte) 18));
           }
           if (0 > this.field_r) {
             ts.field_e[this.field_Q].a((float)(this.field_C >> 8), (float)(this.field_z >> 8), (int)(3072.0 * ((double)(this.field_m >> 8) / 14.0)), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
@@ -830,7 +830,7 @@ class ah {
                 } else {
                   stackIn_54_3 = 20;
                 }
-                ((hr) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_53_2, (int)((double)stackIn_54_3 / 14.0 * 3072.0), (int)(32768.0 * this.field_s / 3.141592653589793), 1, 0, 2);
+                ((ToolkitSprite) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_53_2, (int)((double)stackIn_54_3 / 14.0 * 3072.0), (int)(32768.0 * this.field_s / 3.141592653589793), 1, 0, 2);
               } else {
                 if (this.field_Q == 2) {
                   stackIn_49_0 = hv.field_d[0];
@@ -841,7 +841,7 @@ class ah {
                   } else {
                     stackIn_50_3 = 20;
                   }
-                  ((hr) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_49_2, (int)((double)stackIn_50_3 / 14.0 * 3072.0), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
+                  ((ToolkitSprite) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_49_2, (int)((double)stackIn_50_3 / 14.0 * 3072.0), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
                 } else {
                   if (this.field_Q != 3) {
                     if (this.field_Q != 4) {
@@ -867,10 +867,10 @@ class ah {
                         } else {
                           stackIn_42_4 = var5;
                         }
-                        ((hr) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, (int)(stackIn_41_3 * ((double)stackIn_42_4 / 14.0)), (int)(32768.0 * this.field_s / 3.141592653589793), 1, 0, 2);
+                        ((ToolkitSprite) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, (int)(stackIn_41_3 * ((double)stackIn_42_4 / 14.0)), (int)(32768.0 * this.field_s / 3.141592653589793), 1, 0, 2);
                       }
                     } else {
-                      stackIn_36_0 = ak.field_a[0];
+                      stackIn_36_0 = MenuScreen.field_a[0];
                       stackIn_36_1 = (float)(this.field_C >> 8);
                       stackIn_36_2 = (float)(this.field_z >> 8);
                       if (!this.g(27)) {
@@ -878,7 +878,7 @@ class ah {
                       } else {
                         stackIn_37_3 = 20;
                       }
-                      ((hr) (Object) stackIn_36_0).a(stackIn_36_1, stackIn_36_2, (int)((double)stackIn_37_3 / 14.0 * 3072.0), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
+                      ((ToolkitSprite) (Object) stackIn_36_0).a(stackIn_36_1, stackIn_36_2, (int)((double)stackIn_37_3 / 14.0 * 3072.0), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
                     }
                   } else {
                     stackIn_31_0 = s.field_n[0];
@@ -889,7 +889,7 @@ class ah {
                     } else {
                       stackIn_32_3 = var5;
                     }
-                    ((hr) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_31_2, (int)((double)stackIn_32_3 / 14.0 * 3072.0), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
+                    ((ToolkitSprite) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_31_2, (int)((double)stackIn_32_3 / 14.0 * 3072.0), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
                   }
                 }
               }
@@ -907,7 +907,7 @@ class ah {
                 } else {
                   stackIn_24_3 = 5120;
                 }
-                ((hr) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, (int)((double)stackIn_24_3 / 14.0 * 3072.0), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
+                ((ToolkitSprite) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, (int)((double)stackIn_24_3 / 14.0 * 3072.0), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
               }
             }
             if (this.g(param1 - 19310) &&
@@ -941,7 +941,7 @@ class ah {
                   } else {
                     stackIn_93_3 = var10;
                   }
-                  ((hr) (Object) stackIn_92_0).a(stackIn_92_1, stackIn_92_2, (int)((double)stackIn_93_3 / 14.0 * 4096.0), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
+                  ((ToolkitSprite) (Object) stackIn_92_0).a(stackIn_92_1, stackIn_92_2, (int)((double)stackIn_93_3 / 14.0 * 4096.0), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
                 } else {
                   if (2 == this.field_Q) {
                     stackIn_88_0 = hv.field_d[1];
@@ -953,7 +953,7 @@ class ah {
                     } else {
                       stackIn_89_4 = var10;
                     }
-                    ((hr) (Object) stackIn_88_0).a(stackIn_88_1, stackIn_88_2, (int)(stackIn_88_3 * ((double)stackIn_89_4 / 14.0)), (int)(32768.0 * this.field_s / 3.141592653589793), 1, 0, 2);
+                    ((ToolkitSprite) (Object) stackIn_88_0).a(stackIn_88_1, stackIn_88_2, (int)(stackIn_88_3 * ((double)stackIn_89_4 / 14.0)), (int)(32768.0 * this.field_s / 3.141592653589793), 1, 0, 2);
                   } else {
                     if (this.field_Q != 3) {
                       if (this.field_Q != 4) {
@@ -970,10 +970,10 @@ class ah {
                           } else {
                             stackIn_84_4 = var10;
                           }
-                          ((hr) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_83_2, (int)(stackIn_83_3 * ((double)stackIn_84_4 / 14.0)), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
+                          ((ToolkitSprite) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_83_2, (int)(stackIn_83_3 * ((double)stackIn_84_4 / 14.0)), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
                         }
                       } else {
-                        stackIn_78_0 = ak.field_a[1];
+                        stackIn_78_0 = MenuScreen.field_a[1];
                         stackIn_78_1 = (float)(var8 + this.field_C >> 8);
                         stackIn_78_2 = (float)(this.field_z + var9 >> 8);
                         stackIn_78_3 = 4096.0;
@@ -982,7 +982,7 @@ class ah {
                         } else {
                           stackIn_79_4 = 10;
                         }
-                        ((hr) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_78_2, (int)(stackIn_78_3 * ((double)stackIn_79_4 / 14.0)), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
+                        ((ToolkitSprite) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_78_2, (int)(stackIn_78_3 * ((double)stackIn_79_4 / 14.0)), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
                       }
                     } else {
                       stackIn_73_0 = s.field_n[1];
@@ -994,7 +994,7 @@ class ah {
                       } else {
                         stackIn_74_4 = 10;
                       }
-                      ((hr) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_73_2, (int)(stackIn_73_3 * ((double)stackIn_74_4 / 14.0)), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
+                      ((ToolkitSprite) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_73_2, (int)(stackIn_73_3 * ((double)stackIn_74_4 / 14.0)), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
                     }
                   }
                 }
@@ -1008,7 +1008,7 @@ class ah {
                 } else {
                   stackIn_67_4 = var10;
                 }
-                ((hr) (Object) stackIn_66_0).a(stackIn_66_1, stackIn_66_2, (int)(stackIn_66_3 * ((double)stackIn_67_4 / 14.0)), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
+                ((ToolkitSprite) (Object) stackIn_66_0).a(stackIn_66_1, stackIn_66_2, (int)(stackIn_66_3 * ((double)stackIn_67_4 / 14.0)), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
               }
             }
           }
@@ -1052,7 +1052,7 @@ class ah {
             } else {
               stackIn_123_4 = var10;
             }
-            ((hr) (Object) stackIn_122_0).a(stackIn_122_1, stackIn_122_2, (int)(stackIn_122_3 * ((double)stackIn_123_4 / 7.0)), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
+            ((ToolkitSprite) (Object) stackIn_122_0).a(stackIn_122_1, stackIn_122_2, (int)(stackIn_122_3 * ((double)stackIn_123_4 / 7.0)), (int)(this.field_s * 32768.0 / 3.141592653589793), 1, 0, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

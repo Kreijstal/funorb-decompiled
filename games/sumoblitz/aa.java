@@ -11,17 +11,17 @@ abstract class aa {
         throw new Error();
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         arcadeModeUnlockedText = null;
         field_a = null;
         field_c = null;
         field_d = null;
         if (param0) {
-          aa.a(true);
+          aa.releaseStatics(true);
         }
     }
 
-    final static void a(PlatformTaskDispatcher param0, boolean param1, ud param2, byte param3, int param4, java.awt.Component param5) {
+    final static void a(PlatformTaskDispatcher param0, boolean param1, MusicCrossfadeStream param2, byte param3, int param4, java.awt.Component param5) {
         if (param3 > -104) {
           return;
         }

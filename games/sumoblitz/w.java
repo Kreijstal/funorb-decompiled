@@ -572,7 +572,7 @@ final class w {
         }
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_a = null;
     }
 

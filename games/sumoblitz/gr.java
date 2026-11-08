@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gr extends bq {
+final class gr extends LegacyOpenGlEffect {
     static boolean field_e;
     private ch field_j;
     static int[] field_h;
@@ -70,7 +70,7 @@ final class gr extends bq {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         updatesWillSentToText = null;
         field_h = null;
         if (param0 != -19) {
@@ -133,7 +133,7 @@ final class gr extends bq {
         }
     }
 
-    gr(fr param0, ch param1) {
+    gr(LegacyOpenGlGraphicsToolkit param0, ch param1) {
         super(param0);
         mk var5 = null;
         mk var4 = null;

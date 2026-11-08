@@ -5,7 +5,7 @@ abstract class rw extends DualLinkNode {
     boolean field_s;
     volatile boolean field_u;
     boolean field_t;
-    static ri[] field_r;
+    static SpriteData[] field_r;
 
     final static String c(byte param0) {
         if (param0 > -81) {
@@ -25,10 +25,10 @@ abstract class rw extends DualLinkNode {
 
     abstract byte[] d(boolean param0);
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_r = null;
         if (!param0) {
-          field_r = (ri[]) null;
+          field_r = (SpriteData[]) null;
         }
     }
 
@@ -42,15 +42,15 @@ abstract class rw extends DualLinkNode {
           jq.a(7161, var1);
           nk.b();
           if (param0 != -90) {
-            field_r = (ri[]) null;
+            field_r = (SpriteData[]) null;
           }
-          lk.b();
-          td.field_u = 0;
+          SoftwareRasterizer.b();
+          MusicPatch.field_u = 0;
           ok.b(256);
           var2 = var1.b();
           for (var3 = 0; var3 < 15; var3++) {
             var2.c(-2, -2, 16777215);
-            lk.c(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.c(4, 4, 0, 0, 540, 140);
           }
           eh.field_b.d();
           var1.b(0, 0);

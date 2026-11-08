@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class di extends ak {
+final class di extends MenuScreen {
     private int field_i;
 
     final void b(int param0) {
@@ -23,15 +23,15 @@ final class di extends ak {
           gn.a(34 + fi.a(4, he.field_o, (byte) -96), true);
         }
         if (this.field_i % 2 == 0) {
-          im.field_b.a((IntrusiveNode) (new eq(50, -1024 + (kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96)) >> 8, kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96) - 1024 >> 8, -1, 0, false)), (byte) 39);
-          im.field_b.a((IntrusiveNode) (new eq(50, -1024 + (kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1024 + (kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1, 2, false)), (byte) 39);
-          im.field_b.a((IntrusiveNode) (new eq(50, -1024 + kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96) >> 8, kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96) - 1024 >> 8, -1, 4, false)), (byte) 39);
+          im.field_b.addLast((IntrusiveNode) (new eq(50, -1024 + (kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96)) >> 8, kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96) - 1024 >> 8, -1, 0, false)), (byte) 39);
+          im.field_b.addLast((IntrusiveNode) (new eq(50, -1024 + (kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1024 + (kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1, 2, false)), (byte) 39);
+          im.field_b.addLast((IntrusiveNode) (new eq(50, -1024 + kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96) >> 8, kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96) - 1024 >> 8, -1, 4, false)), (byte) 39);
         } else {
-          im.field_b.a((IntrusiveNode) (new eq(50, kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96) - 1024 >> 8, -1024 + (kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1, 1, true)), (byte) 39);
-          im.field_b.a((IntrusiveNode) (new eq(50, kf.field_u.field_C - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, kf.field_u.field_z - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, -1, 3, true)), (byte) 39);
-          im.field_b.a((IntrusiveNode) (new eq(50, kf.field_u.field_C - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, -1024 + kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96) >> 8, -1, 5, true)), (byte) 39);
+          im.field_b.addLast((IntrusiveNode) (new eq(50, kf.field_u.field_C + fi.a(2048, he.field_o, (byte) -96) - 1024 >> 8, -1024 + (kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1, 1, true)), (byte) 39);
+          im.field_b.addLast((IntrusiveNode) (new eq(50, kf.field_u.field_C - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, kf.field_u.field_z - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, -1, 3, true)), (byte) 39);
+          im.field_b.addLast((IntrusiveNode) (new eq(50, kf.field_u.field_C - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, -1024 + kf.field_u.field_z + fi.a(2048, he.field_o, (byte) -96) >> 8, -1, 5, true)), (byte) 39);
         }
-        nt var2 = (nt) (im.field_b.b(68));
+        TimedSceneEffect var2 = (TimedSceneEffect) (im.field_b.first(68));
         while (var2 != null) {
           if (var2.a(-2567)) {
             var2.unlink(false);
@@ -41,7 +41,7 @@ final class di extends ak {
               uv.a(lr.field_a[fi.a(6, he.field_o, (byte) -96)], var2.field_o, param0 ^ 18547, var2.field_k, im.field_b, 20);
             }
           }
-          var2 = (nt) (im.field_b.d((byte) 18));
+          var2 = (TimedSceneEffect) (im.field_b.next((byte) 18));
         }
         this.field_i = this.field_i + 1;
     }
@@ -88,8 +88,8 @@ final class di extends ak {
 
     final void a(int param0, GraphicsToolkit param1, int param2) {
         GraphicsToolkit var8 = null;
-        hr[] var5 = null;
-        nt var7 = null;
+        ToolkitSprite[] var5 = null;
+        TimedSceneEffect var7 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           var8 = param1;
@@ -97,10 +97,10 @@ final class di extends ak {
           wo.a(var5, 60, 210, 0, 1, var8, 220, 350, 1, true);
           wo.a(hf.field_H, lu.field_e.a() + 20, -10 + (-(lu.field_e.c() >> 1) + 320), -1426063360, 3, param1, lu.field_e.c() + 20, 190 - (lu.field_e.a() >> 1), 1, true);
           lu.field_e.a(-(lu.field_e.c() >> 1) + 320, 200 - (lu.field_e.a() >> 1));
-          var7 = (nt) (im.field_b.b(-102));
+          var7 = (TimedSceneEffect) (im.field_b.first(-102));
           while (var7 != null) {
             var7.a(param1, param2 + 2230);
-            var7 = (nt) (im.field_b.d((byte) 18));
+            var7 = (TimedSceneEffect) (im.field_b.next((byte) 18));
           }
           kf.field_u.a(param1, param2 + 21754);
           super.a(param0, param1, param2);

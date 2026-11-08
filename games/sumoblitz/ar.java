@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ar extends wp {
-    static te field_N;
+    static IntrusiveNodeHashTable field_N;
     private s field_J;
     static String connectionTimedOutPleaseText;
     private String[] field_I;
@@ -20,7 +20,7 @@ class ar extends wp {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_E = null;
         pointsRemainingText = null;
         field_N = null;
@@ -85,7 +85,7 @@ class ar extends wp {
           var2 = var11.e(-31302);
           var3 = 99 / ((-33 - param0) / 36);
           if (var2 == 0) {
-            var10 = (lh) (no.field_d.b(-110));
+            var10 = (lh) (no.field_d.first(-110));
             if (var10 == null) {
               kk.a((byte) -109);
               return;
@@ -111,10 +111,10 @@ class ar extends wp {
           } else {
             if (var2 == 1) {
               var4 = var11.c(true);
-              var5_ref_db = (db) (jj.field_a.b(83));
+              var5_ref_db = (db) (jj.field_a.first(83));
               while (var5_ref_db != null) {
                 if (var4 != var5_ref_db.field_m) {
-                  var5_ref_db = (db) (jj.field_a.d((byte) 18));
+                  var5_ref_db = (db) (jj.field_a.next((byte) 18));
                   continue;
                 }
                 break;
@@ -198,7 +198,7 @@ class ar extends wp {
             if (var10 != null) {
               ((s) (var10)).field_r = var15;
             }
-            this.field_H.a((IntrusiveNode) (var15), (byte) 39);
+            this.field_H.addLast((IntrusiveNode) (var15), (byte) 39);
             var10 = var15;
           }
         }
@@ -230,7 +230,7 @@ class ar extends wp {
           if (param1 == 61) {
             return false;
           }
-          field_N = (te) null;
+          field_N = (IntrusiveNodeHashTable) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -253,7 +253,7 @@ class ar extends wp {
         int var7;
         var7 = Sumoblitz.field_L ? 1 : 0;
         var4 = 22 / ((88 - param0) / 35);
-        var5 = (s) (this.field_H.b(124));
+        var5 = (s) (this.field_H.first(124));
         while (var5 != null) {
           var6 = var5;
           while (var6 != null) {
@@ -265,7 +265,7 @@ class ar extends wp {
             }
             var6 = var6.field_r;
           }
-          var5 = (s) (this.field_H.d((byte) 18));
+          var5 = (s) (this.field_H.next((byte) 18));
         }
         return null;
     }
@@ -367,7 +367,7 @@ class ar extends wp {
         connectionTimedOutPleaseText = "Connection timed out. Please try using a different server.";
         field_G = 0;
         pointsRemainingText = "points remaining: <%0>";
-        field_N = new te(8);
+        field_N = new IntrusiveNodeHashTable(8);
         field_L = new tf();
     }
 }

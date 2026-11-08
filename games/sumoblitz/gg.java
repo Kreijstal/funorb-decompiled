@@ -61,7 +61,7 @@ final class gg extends DualLinkNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_r = (ResourceArchive) null;
         }
@@ -77,7 +77,7 @@ final class gg extends DualLinkNode {
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          ig.field_b.e(122);
+          ig.field_b.clear(122);
           aa.field_a = new ah[100];
           ds.a(85);
           if (param0 <= 81) {
@@ -95,7 +95,7 @@ final class gg extends DualLinkNode {
           ku.field_J = new wc[6];
           var1_int = 0;
           if (-1 != oh.field_e) {
-            if (!rh.field_r[oh.field_e]) {
+            if (!MidiNoteMixer.field_r[oh.field_e]) {
               for (var2 = cj.field_e[oh.field_e]; var2 < 6 + cj.field_e[oh.field_e]; var2++) {
                 ku.field_J[var1_int] = IntrusiveDequeCursor.field_a[var2];
                 var1_int++;
@@ -111,7 +111,7 @@ final class gg extends DualLinkNode {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + iw.field_b;
           }
           iw.field_b = 0;
-          td.field_m = false;
+          MusicPatch.field_m = false;
           ke.a(false);
           oc.field_e = 1000;
           ag.a(0, oh.field_e % 5 + 1);

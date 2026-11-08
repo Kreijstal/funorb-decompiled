@@ -10,7 +10,7 @@ final class rt extends ie {
     static mp field_C;
     static String[] field_G;
     private String field_B;
-    static ri field_E;
+    static SpriteData field_E;
 
     final String c(int param0) {
         int var2 = this.field_y.field_k ? 1 : 0;
@@ -112,7 +112,7 @@ final class rt extends ie {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         field_E = null;
         field_C = null;

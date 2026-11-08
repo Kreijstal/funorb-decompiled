@@ -70,7 +70,7 @@ final class oc extends ShaderEffect {
             }
           }
           var12 = new IntrusiveDequeCursor(is.field_c);
-          var3 = (nm) (var12.b((byte) -80));
+          var3 = (nm) (var12.first((byte) -80));
           if (param1) {
             return;
           }
@@ -93,7 +93,7 @@ final class oc extends ShaderEffect {
                 param0.field_z = param0.field_z + (var9Lifetime1 << 1);
               }
             }
-            var3 = (nm) (var12.b(0));
+            var3 = (nm) (var12.next(0));
           }
           if (-param0.field_m + param0.field_C < 6656) {
             param0.field_C = param0.field_C + (26 << 9 + param0.field_m);
@@ -198,7 +198,7 @@ final class oc extends ShaderEffect {
         OpenGlUnderwaterEffect.field_p[se.field_d] = param3;
         pd.field_q[se.field_d] = se.field_d;
         lj.field_a[se.field_d] = param5;
-        if (!(param5 >= qu.field_k)) {
+        if (!(param5 >= GameplaySession.field_k)) {
           ab.field_c = param5;
         }
         if (!(GameApplet.field_l >= param5)) {

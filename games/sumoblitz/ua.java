@@ -16,7 +16,7 @@ abstract class ua implements ot {
     static int[] field_h;
     static String fullscreenModeWasCancelledText;
     static int field_a;
-    static hr[] field_g;
+    static ToolkitSprite[] field_g;
     static int field_d;
 
     final static Sprite[] a(int param0, int param1) {
@@ -302,7 +302,7 @@ abstract class ua implements ot {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         fullscreenModeWasCancelledText = null;
         int var1 = -96 / ((param0 + 61) / 57);
         field_h = null;

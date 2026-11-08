@@ -13,7 +13,7 @@ class dq extends dp {
     private int field_N;
     private vn field_C;
     private Sprite field_A;
-    static ri[] field_v;
+    static SpriteData[] field_v;
     private boolean field_R;
     private int field_ab;
     private int field_E;
@@ -53,10 +53,10 @@ class dq extends dp {
           if (param0 != 115) {
             dq.a((byte) 19, -85);
           }
-          var4 = (pd) (vu.field_g.b(-87));
+          var4 = (pd) (vu.field_g.first(-87));
           while (var4 != null) {
             k.a(var4, param1, (byte) 117);
-            var4 = (pd) (vu.field_g.d((byte) 18));
+            var4 = (pd) (vu.field_g.next((byte) 18));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -204,12 +204,12 @@ class dq extends dp {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_v = null;
         field_s = null;
         field_Z = null;
         if (param0 != -1) {
-          dq.a(109);
+          dq.releaseStatics(109);
         }
     }
 

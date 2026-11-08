@@ -44,7 +44,7 @@ final class vs {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -68) {
           return;
         }
@@ -53,7 +53,7 @@ final class vs {
 
     final static boolean b(byte param0) {
         if (param0 != 9) {
-          vs.a((byte) 108);
+          vs.releaseStatics((byte) 108);
         }
         return IntrusiveNode.field_a;
     }
@@ -82,7 +82,7 @@ final class vs {
           var2_long = wq.a(-45);
           if (0 != jo.field_c &&
             lq.field_b < 0) {
-            var5_ref_ub = (ub) (un.field_b.b(-99));
+            var5_ref_ub = (ub) (un.field_b.first(-99));
             if (var5_ref_ub != null &&
               var2_long > var5_ref_ub.field_m) {
               var5_ref_ub.unlink(false);
@@ -144,7 +144,7 @@ final class vs {
             for (var7 = 0; gu.field_d > var7; var7++) {
               var6.field_k[var7] = ig.field_a.payload[var7];
             }
-            un.field_b.a((IntrusiveNode) (var6), (byte) 39);
+            un.field_b.addLast((IntrusiveNode) (var6), (byte) 39);
             lq.field_b = -1;
             stackIn_17_0 = lq.field_b;
           }

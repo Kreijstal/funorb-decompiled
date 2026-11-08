@@ -5,7 +5,7 @@ final class wa implements vc {
     xa field_b;
     j field_a;
 
-    wa(oa param0, j param1, xa param2) {
+    wa(NativeSoftwareGraphicsToolkit param0, j param1, xa param2) {
         this.field_a = param1;
         this.field_b = param2;
     }

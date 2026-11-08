@@ -7,7 +7,7 @@ final class nd extends ao {
     private int[] field_A;
     private int[] field_I;
     int field_K;
-    static tv field_B;
+    static MusicTrack field_B;
     private int field_D;
     private int[] field_J;
     static int field_F;
@@ -250,7 +250,7 @@ final class nd extends ao {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_B = null;
         if (param0 != -16099) {
           return;

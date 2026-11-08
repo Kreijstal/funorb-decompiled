@@ -10,12 +10,12 @@ final class ck {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         nameIsAvailableText = null;
         field_c = null;
         field_a = null;
         if (param0 > -28) {
-          ck.a(99);
+          ck.releaseStatics(99);
         }
     }
 

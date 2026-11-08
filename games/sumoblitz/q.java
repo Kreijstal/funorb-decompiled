@@ -180,7 +180,7 @@ final class q extends IntrusiveNode {
         }
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_p = null;
         field_I = null;
         field_L = null;
@@ -279,7 +279,7 @@ final class q extends IntrusiveNode {
         }
     }
 
-    final qp c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -311,10 +311,10 @@ final class q extends IntrusiveNode {
           }
         }
         this.field_P = null;
-        return new qp(this.field_H, var1, this.field_r, this.field_F, this.field_M);
+        return new PcmSample(this.field_H, var1, this.field_r, this.field_F, this.field_M);
     }
 
-    final qp a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -364,7 +364,7 @@ final class q extends IntrusiveNode {
         this.field_P = null;
         var12 = this.field_D;
         this.field_D = null;
-        return new qp(this.field_H, var12, this.field_r, this.field_F, this.field_M);
+        return new PcmSample(this.field_H, var12, this.field_r, this.field_F, this.field_M);
     }
 
     private final float[] c(int param0) {

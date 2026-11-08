@@ -18,7 +18,7 @@ final class ds {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4) {
-            ds.a((byte) 100);
+            ds.releaseStatics((byte) 100);
           }
           if (param0 == 0L &&
             param2 != null) {
@@ -57,7 +57,7 @@ final class ds {
           aa.field_a[0] = (ah) ((Object) new fe(81920, 61440));
           aa.field_a[0].field_I = ResourceArchive.field_f;
           aa.field_a[0].field_t = hc.field_f;
-          aa.field_a[0].field_y = iv.field_i;
+          aa.field_a[0].field_y = LegacyOpenGlEffectManager.field_i;
           aa.field_a[0].c((byte) 35);
           fa.field_b = 250;
           if (bw.field_d) {
@@ -70,7 +70,7 @@ final class ds {
         aa.field_a[0] = (ah) ((Object) new fe(81920, 61440));
         aa.field_a[0].field_I = ResourceArchive.field_f;
         aa.field_a[0].field_t = hc.field_f;
-        aa.field_a[0].field_y = iv.field_i;
+        aa.field_a[0].field_y = LegacyOpenGlEffectManager.field_i;
         aa.field_a[0].c((byte) 35);
         fa.field_b = 250;
         if (!bw.field_d) {
@@ -80,7 +80,7 @@ final class ds {
         fa.field_b = fa.field_b * 2;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -1) {
           return;
         }

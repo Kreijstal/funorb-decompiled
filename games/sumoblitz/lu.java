@@ -3,14 +3,14 @@
  */
 final class lu extends aa {
     f field_f;
-    static hr field_e;
+    static ToolkitSprite field_e;
     static float[] field_g;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_e = null;
         if (param0) {
-          field_e = (hr) null;
+          field_e = (ToolkitSprite) null;
         }
     }
 

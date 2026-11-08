@@ -216,7 +216,7 @@ final class lo {
         return var3;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_f = null;
         field_c = null;
         field_j = null;

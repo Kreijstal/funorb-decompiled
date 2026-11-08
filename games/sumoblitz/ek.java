@@ -10,7 +10,7 @@ final class ek extends ht {
     private int field_m;
     private int field_n;
 
-    ek(fr param0, int param1, int param2, int param3, int param4) {
+    ek(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4) {
         super(param0, 32879, param1, param4 * (param2 * param3), false);
         this.field_n = -1;
         this.field_m = -1;
@@ -26,7 +26,7 @@ final class ek extends ht {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -21551) {
           return;
         }
@@ -138,7 +138,7 @@ final class ek extends ht {
         }
     }
 
-    ek(fr param0, int param1, int param2, int param3, int param4, byte[] param5, int param6) {
+    ek(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, byte[] param5, int param6) {
         super(param0, 32879, param1, param3 * param2 * param4, false);
         this.field_n = -1;
         this.field_m = -1;

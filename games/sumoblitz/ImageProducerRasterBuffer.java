@@ -139,10 +139,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static gk a(pl param0, int param1) {
+    final static CompactMeshGeometry a(pl param0, int param1) {
         int var7 = 0;
-        gk stackIn_3_0 = null;
-        gk stackIn_25_0 = null;
+        CompactMeshGeometry stackIn_3_0 = null;
+        CompactMeshGeometry stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -151,14 +151,14 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        gk var5 = null;
+        CompactMeshGeometry var5 = null;
         int var6 = 0;
         int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           var2_int = param0.b(8, (byte) -92);
           if (param1 != -16736) {
-            stackIn_3_0 = (gk) null;
+            stackIn_3_0 = (CompactMeshGeometry) null;
             return stackIn_3_0;
           }
           if (var2_int > 0) {
@@ -166,7 +166,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           var3 = kh.a(param0, false) ? 1 : 0;
           var4 = kh.a(param0, false) ? 1 : 0;
-          var5 = new gk();
+          var5 = new CompactMeshGeometry();
           var5.field_D = (short)param0.b(16, (byte) -119);
           var5.field_Q = sm.a(var5.field_Q, param0, -119, 16);
           var5.field_B = sm.a(var5.field_B, param0, -120, 16);
@@ -281,7 +281,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -27) {
           return;
         }

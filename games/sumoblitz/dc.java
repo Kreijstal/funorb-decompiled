@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dc extends ur {
-    static hr[] field_ab;
+    static ToolkitSprite[] field_ab;
     static String typeYourAgeInText;
 
     final void b(byte param0, UiWidget param1) {
         try {
           if (param0 >= -87) {
-            field_ab = (hr[]) null;
+            field_ab = (ToolkitSprite[]) null;
           }
           super.b((byte) -96, param1);
         } catch (RuntimeException runtimeException) {
@@ -20,7 +20,7 @@ final class dc extends ur {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 89) {
           typeYourAgeInText = (String) null;
           field_ab = null;

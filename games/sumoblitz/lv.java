@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lv extends bq {
+final class lv extends LegacyOpenGlEffect {
     static int field_i;
     private boolean field_j;
     private sn field_k;
@@ -10,7 +10,7 @@ final class lv extends bq {
     static String pleaseSendMeNewsText;
     private boolean field_g;
 
-    lv(fr param0, ch param1) {
+    lv(LegacyOpenGlGraphicsToolkit param0, ch param1) {
         super(param0);
         mk var5 = null;
         mk var4 = null;
@@ -62,7 +62,7 @@ final class lv extends bq {
         this.field_k = (sn) null;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 3) {
           visitTheAccountManagementText = (String) null;
           visitTheAccountManagementText = null;

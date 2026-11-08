@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static ri[] field_b;
+    static SpriteData[] field_b;
     static String field_a;
 
     public final synchronized void mousePressed(java.awt.event.MouseEvent param0) {
@@ -121,7 +121,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 8) {
           field_a = (String) null;

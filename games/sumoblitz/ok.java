@@ -5,13 +5,13 @@ final class ok {
     private int field_a;
     private int[] field_e;
     static boolean field_b;
-    static hr[] field_j;
+    static ToolkitSprite[] field_j;
     private int[] field_c;
     static int field_k;
-    static hr[] field_f;
+    static ToolkitSprite[] field_f;
     private int field_g;
     private int field_h;
-    static ri[] field_d;
+    static SpriteData[] field_d;
     private int field_i;
 
     private final void c(byte param0) {
@@ -157,7 +157,7 @@ final class ok {
         return this.field_c[fieldTemp$0];
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         field_d = null;
         if (param0 > -110) {
@@ -272,7 +272,7 @@ final class ok {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        gk var4_ref_gk = null;
+        CompactMeshGeometry var4_ref_gk = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -291,7 +291,7 @@ final class ok {
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        gk var17 = null;
+        CompactMeshGeometry var17 = null;
         int var3Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -326,7 +326,7 @@ final class ok {
           var3Lifetime1 = OpenGlUnderwaterEffect.field_k[9] >> 8;
           var4 = OpenGlUnderwaterEffect.field_k[10] >> 8;
           var5Lifetime1 = OpenGlUnderwaterEffect.field_k[11] >> 8;
-          var6Lifetime1 = td.field_u << 4;
+          var6Lifetime1 = MusicPatch.field_u << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = ic.b(var6Lifetime1, -431) >> 8;
           var9Lifetime1 = cn.c(param0 - 256, var6Lifetime1) >> 8;
@@ -361,7 +361,7 @@ final class ok {
               uc.field_b[var18] = uc.field_b[var18] + kh.field_c[var15][var18];
             }
             up.a(OpenGlUnderwaterEffect.field_k, uc.field_b, false, false, var17, true, -1622738130);
-            qu.a(var7Lifetime1, var17, var14, var12Lifetime1, var9Lifetime1, var13Lifetime1, (byte) -9, var8Lifetime1);
+            GameplaySession.a(var7Lifetime1, var17, var14, var12Lifetime1, var9Lifetime1, var13Lifetime1, (byte) -9, var8Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -19,18 +19,18 @@ abstract class ko extends IntrusiveNode {
         RuntimeException var2_ref = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = (hg) (hi.field_f.b(-101));
+          var4 = (hg) (hi.field_f.first(-101));
           while (var4 != null) {
             pm.a(param1, 1, var4);
-            var4 = (hg) (hi.field_f.d((byte) 18));
+            var4 = (hg) (hi.field_f.next((byte) 18));
           }
           if (param0 != 0) {
             field_m = (IntrusiveDeque) null;
           }
-          var2 = wr.field_E.b(-105);
+          var2 = wr.field_E.first(-105);
           while (var2 != null) {
             ou.a(125, param1);
-            var2 = wr.field_E.d((byte) 18);
+            var2 = wr.field_E.next((byte) 18);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

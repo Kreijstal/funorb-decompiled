@@ -33,24 +33,24 @@ final class dr extends ah {
           if (param0 < -55) {
             return;
           }
-          dr.c(true);
+          dr.releaseStatics(true);
           return;
         }
         if ((this.field_r - 100) % 250 != 0) {
           if (param0 < -55) {
             return;
           }
-          dr.c(true);
+          dr.releaseStatics(true);
           return;
         }
         oc.a(uj.a(this.field_T, this.field_C - this.field_E, 0, (byte) 84, this.field_z - this.field_A), false);
         if (param0 < -55) {
           return;
         }
-        dr.c(true);
+        dr.releaseStatics(true);
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

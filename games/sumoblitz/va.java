@@ -27,24 +27,24 @@ final class va implements mh {
           var14 = param0 instanceof vb ? (vb) (param0) : null;
           if (var14 == null) {
           }
-          lk.d(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_i);
+          SoftwareRasterizer.d(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_i);
           var7 = param4 - (-param0.field_r - var14.field_G);
           var8 = var14.field_K + (param1 + param0.field_v);
-          lk.b(var7, var8, var14.field_F, this.field_e);
+          SoftwareRasterizer.b(var7, var8, var14.field_F, this.field_e);
           if (-1 != var14.field_M) {
             var9 = 2.0 * (3.141592653589793 * (double)var14.field_M) / (double)var14.field_L;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_F);
             var12 = (int)(Math.cos(var9) * (double)var14.field_F);
-            lk.b(var7 + var11, var8 + var12, 1, this.field_h);
+            SoftwareRasterizer.b(var7 + var11, var8 + var12, 1, this.field_h);
           }
-          lk.b(var7, var8, 2, 1);
+          SoftwareRasterizer.b(var7, var8, 2, 1);
           if (param2 != 5592405) {
             this.field_d = -11;
           }
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_H) / (double)var14.field_L;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_F);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_F);
-          lk.e(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.e(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_a) {
             var13 = var14.field_F + (var14.field_G + this.field_f);
             this.field_a.a(param0.field_m, param0.field_r + (param4 + var13), param0.field_v + (param1 + this.field_d), -this.field_f - var13 + param0.field_q, -(this.field_f << 1) + param0.field_p, this.field_g, this.field_c, 1, 1, 0);
@@ -72,7 +72,7 @@ final class va implements mh {
                 va.a(true, (java.applet.Applet) null);
               }
               var5 = param1.getCodeBase();
-              var3 = td.a((byte) 121, param1, var5).getFile();
+              var3 = MusicPatch.a((byte) 121, param1, var5).getFile();
               tw.a(-105, param1, "updatelinks", new Object[]{"home", var3 + "home.ws"});
               tw.a(-115, param1, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"});
               tw.a(-111, param1, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"});

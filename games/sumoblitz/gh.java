@@ -5,9 +5,9 @@ final class gh {
     static java.math.BigInteger field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -123) {
-          gh.a(116);
+          gh.releaseStatics(116);
           field_a = null;
           return;
         }

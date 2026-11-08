@@ -17,20 +17,20 @@ final class IterableNodeHashTable implements Iterable {
         jl.a(25, param0);
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode first(int param0) {
         this.field_e = 0;
         if (param0 != -1) {
           this.field_c = (IntrusiveNode[]) null;
-          return this.a(param0 + 0);
+          return this.next(param0 + 0);
         }
-        return this.a(param0 + 0);
+        return this.next(param0 + 0);
     }
 
     public final Iterator iterator() {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final IntrusiveNode a(int param0, long param1) {
+    final IntrusiveNode get(int param0, long param1) {
         IntrusiveNode var5 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
         IntrusiveNode var4 = this.field_c[(int)(param1 & (long)(-1 + this.field_d))];
@@ -51,7 +51,7 @@ final class IterableNodeHashTable implements Iterable {
         return null;
     }
 
-    final void a(int param0, IntrusiveNode param1, long param2) {
+    final void put(int param0, IntrusiveNode param1, long param2) {
         IntrusiveNode var5 = null;
         try {
           if (param1.previous != null) {
@@ -71,7 +71,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode next(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tr extends ak {
+final class tr extends MenuScreen {
     static jj field_j;
     private int field_i;
 
     final void a(int param0, GraphicsToolkit param1, int param2) {
         int stackIn_4_0 = 0;
-        hr stackIn_30_0 = null;
+        ToolkitSprite stackIn_30_0 = null;
         int stackIn_30_1 = 0;
         int stackIn_30_2 = 0;
         int stackIn_31_3;
-        hr stackIn_36_0;
+        ToolkitSprite stackIn_36_0;
         int stackIn_36_1;
         int stackIn_36_2;
         int stackIn_36_3;
@@ -31,7 +31,7 @@ final class tr extends ak {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        hr[] var13 = null;
+        ToolkitSprite[] var13 = null;
         int var14 = 0;
         int var8Lifetime1;
         int var9Lifetime1;
@@ -42,13 +42,13 @@ final class tr extends ak {
           be.field_t.a(mm.field_g.toUpperCase(), var4_int | 5023231, -1, 90, 320, 0);
           hc.field_e.a(mm.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
           wo.a(up.field_c, 60, 44, var4_int, 3, param1, 325, 370, 1, true);
-          ud.field_q[0].a(80.0f, 402.0f, 1600, 0, 1, 0, 2);
+          MusicCrossfadeStream.field_q[0].a(80.0f, 402.0f, 1600, 0, 1, 0, 2);
           qv.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.field_f), (byte) -110, -1);
           uq.field_a.a(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.field_f), (byte) -35, -1);
-          ud.field_q[1].a(130.0f, 402.0f, 1600, 0, 1, 0, 2);
-          qv.field_k.a(407, 142, var4_int | 5023231, Integer.toString(iv.field_i), (byte) -101, -1);
-          uq.field_a.a(407, 142, 16777215 + var4_int, Integer.toString(iv.field_i), (byte) -36, -1);
-          ud.field_q[2].a(180.0f, 402.0f, 1600, 0, 1, 0, 2);
+          MusicCrossfadeStream.field_q[1].a(130.0f, 402.0f, 1600, 0, 1, 0, 2);
+          qv.field_k.a(407, 142, var4_int | 5023231, Integer.toString(LegacyOpenGlEffectManager.field_i), (byte) -101, -1);
+          uq.field_a.a(407, 142, 16777215 + var4_int, Integer.toString(LegacyOpenGlEffectManager.field_i), (byte) -36, -1);
+          MusicCrossfadeStream.field_q[2].a(180.0f, 402.0f, 1600, 0, 1, 0, 2);
           qv.field_k.a(407, 192, var4_int | 5023231, Integer.toString(hc.field_f), (byte) -15, -1);
           uq.field_a.a(407, 192, 16777215 + var4_int, Integer.toString(hc.field_f), (byte) -51, -1);
           var5 = lg.field_c << 2;
@@ -64,7 +64,7 @@ final class tr extends ak {
             for (var9 = 44; ArchiveCatalog.field_c - 96 > var9; var9 += 112) {
               if (var7 == 1 + bl.field_e &&
                 param0 >= 250 &&
-                !mq.a(8230, 25)) {
+                !MusicPatchEnvelope.a(8230, 25)) {
                 param1.aa(var9, var8, 100, 42, var6 << 24 | 5023231, 1);
               }
               wo.a(up.field_c, 42, var9, var4_int, 3, param1, 100, var8, 1, true);
@@ -91,10 +91,10 @@ final class tr extends ak {
             var13 = up.field_c;
             wo.a(var13, 84, var11, 0, 1, var10_ref_ha, 142, var12, 1, true);
             if (wm.field_f[this.field_i]) {
-              gt.field_db.a(tj.timeText.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
-              bq.field_c.a(tj.timeText.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), param2 + 2355);
+              gt.field_db.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
+              LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), param2 + 2355);
               gt.field_db.a(ps.scoreText.toLowerCase() + go.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
-              bq.field_c.a(ps.scoreText.toLowerCase() + go.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, param2 + 2355);
+              LegacyOpenGlEffect.field_c.a(ps.scoreText.toLowerCase() + go.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, param2 + 2355);
               var10 = 0;
               if (up.field_g[this.field_i]) {
                 var10++;
@@ -111,7 +111,7 @@ final class tr extends ak {
                 } else {
                   stackIn_31_3 = 0;
                 }
-                ((hr) (Object) stackIn_30_0).a((float)(stackIn_30_1 + (stackIn_30_2 + stackIn_31_3)), (float)(40 + var9Lifetime1), 4096, 0, 3, -65536, 1);
+                ((ToolkitSprite) (Object) stackIn_30_0).a((float)(stackIn_30_1 + (stackIn_30_2 + stackIn_31_3)), (float)(40 + var9Lifetime1), 4096, 0, 3, -65536, 1);
               }
               if (!qn.field_d[this.field_i]) {
                 return;
@@ -125,11 +125,11 @@ final class tr extends ak {
               } else {
                 stackIn_37_4 = 0;
               }
-              ((hr) (Object) stackIn_36_0).a((float)(stackIn_36_1 + (stackIn_36_2 - (stackIn_36_3 - stackIn_37_4))), (float)(var9Lifetime1 + 40), 4096, 0, 3, -1, 1);
+              ((ToolkitSprite) (Object) stackIn_36_0).a((float)(stackIn_36_1 + (stackIn_36_2 - (stackIn_36_3 - stackIn_37_4))), (float)(var9Lifetime1 + 40), 4096, 0, 3, -1, 1);
               return;
             }
             gt.field_db.a(bi.notCompletedText, var4_int | 5023231, -1, var9Lifetime1 + 20, -8 + (var8Lifetime1 + 50), 0);
-            bq.field_c.a(bi.notCompletedText, var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, param2 ^ -2355);
+            LegacyOpenGlEffect.field_c.a(bi.notCompletedText, var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, param2 ^ -2355);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -200,9 +200,9 @@ final class tr extends ak {
         this.field_i = -1;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
-          tr.c(-101);
+          tr.releaseStatics(-101);
         }
         field_j = null;
     }

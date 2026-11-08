@@ -6,7 +6,7 @@ final class lb {
     static int field_b;
     static long field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         yesNoLabels = null;
         if (param0 != 0) {
           yesNoLabels = (String[]) null;

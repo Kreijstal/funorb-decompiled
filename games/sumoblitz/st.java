@@ -39,7 +39,7 @@ final class st extends ie {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_z = null;
         if (param0 < 111) {
           return;

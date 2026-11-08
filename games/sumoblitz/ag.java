@@ -19,7 +19,7 @@ abstract class ag {
           param0 = param0 - (var4.field_b.length - 1);
         }
         if (param1 != -17500) {
-          ag.c(-10);
+          ag.releaseStatics(-10);
         }
         return this.field_a.length;
     }
@@ -138,7 +138,7 @@ abstract class ag {
     final static void a(int param0, int param1) {
         wt.a(param1, (byte) 105);
         if (param0 != 0) {
-          ag.c(-74);
+          ag.releaseStatics(-74);
         }
     }
 
@@ -192,7 +192,7 @@ abstract class ag {
         return stackIn_6_0;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 104 / ((param0 + 8) / 42);
         field_c = null;
         field_d = (byte[][]) null;

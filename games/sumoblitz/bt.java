@@ -3,10 +3,10 @@
  */
 abstract class bt extends pt {
     static int field_d;
-    static hr field_e;
+    static ToolkitSprite field_e;
     static volatile long field_f;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -21) {
           field_f = 90L;
           field_e = null;
@@ -28,7 +28,7 @@ abstract class bt extends pt {
 
     final static uw a(boolean param0) {
         if (param0) {
-          field_e = (hr) null;
+          field_e = (ToolkitSprite) null;
           return (uw) ((Object) new fd());
         }
         return (uw) ((Object) new fd());

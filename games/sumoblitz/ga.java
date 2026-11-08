@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ga extends bq {
+final class ga extends LegacyOpenGlEffect {
     private boolean field_k;
     static ow field_g;
     private boolean field_p;
@@ -15,27 +15,27 @@ final class ga extends bq {
     private vk field_e;
     static int field_h;
 
-    final static ak a(int param0, byte param1) {
+    final static MenuScreen a(int param0, byte param1) {
         if (param0 == 7) {
-          return (ak) ((Object) new tr());
+          return (MenuScreen) ((Object) new tr());
         }
         if (param0 == 9) {
-          return (ak) ((Object) new bb());
+          return (MenuScreen) ((Object) new bb());
         }
         if (param0 == 10) {
-          return (ak) ((Object) new jp());
+          return (MenuScreen) ((Object) new jp());
         }
         int var2 = -9 % ((-5 - param1) / 35);
         if (11 == param0) {
-          return (ak) ((Object) new lp());
+          return (MenuScreen) ((Object) new lp());
         }
         if (param0 != 12) {
-          return new ak(param0);
+          return new MenuScreen(param0);
         }
-        return (ak) ((Object) new di());
+        return (MenuScreen) ((Object) new di());
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_j = null;
         field_g = null;
         if (!param0) {
@@ -91,7 +91,7 @@ final class ga extends bq {
         }
     }
 
-    ga(fr param0) {
+    ga(LegacyOpenGlGraphicsToolkit param0) {
         super(param0);
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;

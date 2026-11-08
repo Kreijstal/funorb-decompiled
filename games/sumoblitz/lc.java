@@ -10,11 +10,11 @@ final class lc extends WidgetContainer implements ai {
     static boolean field_A;
     private gt field_G;
 
-    final static void a(byte param0, boolean param1, boolean param2, int param3, int param4, tv param5) {
+    final static void a(byte param0, boolean param1, boolean param2, int param3, int param4, MusicTrack param5) {
         Object var6 = null;
         RuntimeException var6_ref = null;
         Throwable var7 = null;
-        tv var8 = null;
+        MusicTrack var8 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -30,8 +30,8 @@ final class lc extends WidgetContainer implements ai {
               qc.field_e.a(param2, param3, 7094, param4, nd.field_B, param1);
             }
             if (param0 < 98) {
-              var8 = (tv) null;
-              lc.a((byte) -110, true, true, 90, -86, (tv) null);
+              var8 = (MusicTrack) null;
+              lc.a((byte) -110, true, true, 90, -86, (MusicTrack) null);
             }
           }
           return;

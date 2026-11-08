@@ -3,11 +3,11 @@
  */
 final class ke {
     static GameApplet field_a;
-    static ri[] field_c;
+    static SpriteData[] field_c;
     static byte[][] field_b;
     static int field_d;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_a = (GameApplet) null;
           field_c = null;

@@ -46,9 +46,9 @@ final class ae {
         return var3;
     }
 
-    final qp b() {
+    final PcmSample b() {
         byte[] var1 = this.a();
-        return new qp(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
     final static ae a(ResourceArchive param0, int param1, int param2) {

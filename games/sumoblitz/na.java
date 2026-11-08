@@ -62,7 +62,7 @@ abstract class na extends dw implements pw {
             return null;
           }
           if (param1 == -11481) {
-            stackIn_7_0 = tj.c((byte) -8);
+            stackIn_7_0 = InstrumentNoteMask.c((byte) -8);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;
@@ -89,7 +89,7 @@ abstract class na extends dw implements pw {
         return this.a((byte) 26, this.field_d.field_m);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

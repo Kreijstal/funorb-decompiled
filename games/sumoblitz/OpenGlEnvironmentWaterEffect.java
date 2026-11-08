@@ -7,7 +7,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     private sk field_f;
     private boolean field_h;
     private oh field_j;
-    static hr field_i;
+    static ToolkitSprite field_i;
 
     final boolean b(byte param0) {
         if (param0 > -8) {
@@ -39,7 +39,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           loginText = (String) null;
         }
@@ -351,7 +351,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           var9 = var8_int + param7[param0];
           var10 = param4[param1];
           if (param5 != -75) {
-            OpenGlEnvironmentWaterEffect.d(false);
+            OpenGlEnvironmentWaterEffect.releaseStatics(false);
           }
           var11 = param7[param1] + var10;
           var12 = var8_int;

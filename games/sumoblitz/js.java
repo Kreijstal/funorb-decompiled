@@ -226,7 +226,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
               fieldTemp$0 = jb.field_e;
               jb.field_e = jb.field_e + 1;
               var5.field_kb = fieldTemp$0;
-              SpriteState.field_t.a((IntrusiveNode) (var5), (byte) 39);
+              SpriteState.field_t.addLast((IntrusiveNode) (var5), (byte) 39);
             }
             var5.field_jb = var4_ref_String;
             return;
@@ -282,7 +282,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
             fieldTemp$1 = hi.field_h;
             hi.field_h = hi.field_h + 1;
             var6_ref.field_kb = fieldTemp$1;
-            pc.field_d.a((IntrusiveNode) (var6_ref), (byte) 39);
+            pc.field_d.addLast((IntrusiveNode) (var6_ref), (byte) 39);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -290,7 +290,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           var6_ref.field_jb = var4_ref_StringLifetime1;
           var6_ref.field_gb = (String) (var3Lifetime1);
           var6_ref.unlink(false);
-          var7_ref = (cn) (pc.field_d.b(-104));
+          var7_ref = (cn) (pc.field_d.first(-104));
           scanLoop1: while (true) {
             if (null != var7_ref) {
               stackOut_52_0 = GameKeyHandler.a(var6_ref, 0, var7_ref);
@@ -300,12 +300,12 @@ final class js extends WidgetContainer implements ca, ai, oe {
                 break scanLoop1;
               }
               if (stackIn_53_0) {
-                var7_ref = (cn) (pc.field_d.d((byte) 18));
+                var7_ref = (cn) (pc.field_d.next((byte) 18));
                 continue;
               }
             }
             if (null == var7_ref) {
-              pc.field_d.a((IntrusiveNode) (var6_ref), (byte) 39);
+              pc.field_d.addLast((IntrusiveNode) (var6_ref), (byte) 39);
               if (var8 == 0) {
                 return;
               }
@@ -506,7 +506,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           if (qr.field_e == var4) {
             return false;
           }
-          if (mb.field_f == var4) {
+          if (GameInstructions.field_f == var4) {
             return false;
           }
           if (param0 != 22955) {
@@ -626,7 +626,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           this.field_I.field_t = pi.yourEmailAddressIsText;
           this.field_E.field_t = kn.typeYourEmailAddressText;
           this.field_N.field_t = pl.enterAPasswordForText;
-          this.field_L.field_t = tj.typeYourPasswordAgainText;
+          this.field_L.field_t = InstrumentNoteMask.typeYourPasswordAgainText;
           this.field_K.field_t = dc.typeYourAgeInText;
           this.field_H.field_t = gr.updatesWillSentToText;
           this.field_A.a((byte) -54, new ou(this.field_A));
@@ -727,7 +727,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
         }
     }
 
-    final static f a(int param0, int param1, int param2, boolean param3, fr param4, byte param5, int param6, int[] param7) {
+    final static f a(int param0, int param1, int param2, boolean param3, LegacyOpenGlGraphicsToolkit param4, byte param5, int param6, int[] param7) {
         RuntimeException var8 = null;
         f stackIn_2_0 = null;
         f stackIn_11_0 = null;

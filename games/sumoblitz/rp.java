@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rp {
-    private qa field_a;
+    private SoftwareGraphicsToolkit field_a;
     static String field_b;
     static int field_d;
     Runnable field_e;
@@ -60,7 +60,7 @@ final class rp {
         }
     }
 
-    rp(qa param0) {
+    rp(SoftwareGraphicsToolkit param0) {
         af discarded$12 = null;
         af discarded$13 = null;
         af discarded$14 = null;

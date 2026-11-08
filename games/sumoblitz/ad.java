@@ -46,44 +46,44 @@ final class ad extends za {
 
     final static void c(int param0) {
         kd.field_a[4] = new int[]{5};
-        iv.field_g[4] = new ak(4);
+        LegacyOpenGlEffectManager.field_g[4] = new MenuScreen(4);
         si.a(400, 38, 10, 2, new int[]{8, 9, 10, 21, 20, 5}, 2, 468);
-        iv.field_g[2] = new ak(2);
+        LegacyOpenGlEffectManager.field_g[2] = new MenuScreen(2);
         if (0 >= ct.field_x) {
           if (!(2 > ku.field_j)) {
             si.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
-            iv.field_g[0] = new ak(0);
+            LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
-          if (mq.a(8230, 25)) {
+          if (MusicPatchEnvelope.a(8230, 25)) {
             si.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
-            iv.field_g[0] = new ak(0);
+            LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
           ut.field_j = param0;
           return;
         }
         if (uc.a((byte) -29, lt.field_m)) {
           si.a(150, 38, 170, 2, new int[]{1, 28, 12, 13, 4, 3, 7}, 1, 470);
-          iv.field_g[1] = new ak(1);
+          LegacyOpenGlEffectManager.field_g[1] = new MenuScreen(1);
           si.a(150, 38, 170, 2, new int[]{12, 13, 27, 4, 5}, 8, 470);
-          iv.field_g[8] = new ak(8);
+          LegacyOpenGlEffectManager.field_g[8] = new MenuScreen(8);
           if (!(2 > ku.field_j)) {
             si.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
-            iv.field_g[0] = new ak(0);
+            LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
-          if (mq.a(8230, 25)) {
+          if (MusicPatchEnvelope.a(8230, 25)) {
             si.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
-            iv.field_g[0] = new ak(0);
+            LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
           ut.field_j = param0;
           return;
         }
         if (!(2 > ku.field_j)) {
           si.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
-          iv.field_g[0] = new ak(0);
+          LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         }
-        if (mq.a(8230, 25)) {
+        if (MusicPatchEnvelope.a(8230, 25)) {
           si.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
-          iv.field_g[0] = new ak(0);
+          LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         }
         ut.field_j = param0;
     }
@@ -120,7 +120,7 @@ final class ad extends za {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -20388) {
           field_q = null;
           field_p = null;
@@ -136,7 +136,7 @@ final class ad extends za {
     final static ne e(int param0) {
         ne var1 = null;
         if (param0 == 12768) {
-          var1 = new ne(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], ag.field_d[0], iv.field_l);
+          var1 = new ne(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], ag.field_d[0], LegacyOpenGlEffectManager.field_l);
           tl.a((byte) -20);
           return var1;
         }
@@ -165,7 +165,7 @@ final class ad extends za {
             return;
           }
           if (!lf.b(-251)) {
-            lk.b();
+            SoftwareRasterizer.b();
             kd.a(240, 320, 256);
             IterableNodeHashTable.a(0, 0, param1, (byte) 125);
             return;

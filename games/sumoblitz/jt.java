@@ -5,7 +5,7 @@ abstract class jt extends DualLinkNode {
     static int field_r;
     static int field_w;
     static int field_s;
-    static hr field_y;
+    static ToolkitSprite field_y;
     static int field_u;
     static cp field_v;
     static PlatformTaskDispatcher field_t;

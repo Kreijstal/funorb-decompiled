@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class xa implements nr, e {
+final class xa implements nr, NativeResource {
     long field_nativeid;
 
     private final native void va(long param0, boolean param1);
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          pa.a((e) (this), (byte) -37);
+          NativeResourceReaper.a((NativeResource) (this), (byte) -37);
         }
     }
 
-    public final void w(boolean param0) {
+    public final void disposeNativeResource(boolean param0) {
         this.va(this.field_nativeid, param0);
     }
 

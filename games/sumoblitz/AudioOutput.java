@@ -105,14 +105,14 @@ class AudioOutput {
     }
 
     private final static void b(PcmStream param0) {
-        param0.field_n = false;
-        if (param0.field_l != null) {
-          param0.field_l.field_k = 0;
+        param0.active = false;
+        if (param0.sample != null) {
+          param0.sample.field_k = 0;
         }
-        PcmStream var1 = param0.a();
+        PcmStream var1 = param0.firstSubstream();
         while (var1 != null) {
           AudioOutput.b(var1);
-          var1 = param0.c();
+          var1 = param0.nextSubstream();
         }
     }
 
@@ -165,7 +165,7 @@ class AudioOutput {
         int var9;
         Object var10;
         PcmStream var11;
-        rr var12;
+        AbstractAudioSample var12;
         int var13;
         PcmStream var14;
         int var15_int;
@@ -185,7 +185,7 @@ class AudioOutput {
           this.field_c <= 0) {
           this.field_c = this.field_c + (field_k >> 4);
           AudioOutput.b(this.field_l);
-          this.a(this.field_l, this.field_l.b());
+          this.a(this.field_l, this.field_l.priority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -207,7 +207,7 @@ class AudioOutput {
                   var14 = var11;
                   var14Lifetime1 = var11;
                   while (var11 != null) {
-                    var12 = var11.field_l;
+                    var12 = var11.sample;
                     if (var12 != null &&
                       var12.field_k > var8_int) {
                       var5 = var5 | 1 << var7_int;
@@ -215,8 +215,8 @@ class AudioOutput {
                       var11 = var11.field_m;
                       continue;
                     }
-                    var11.field_n = true;
-                    var13 = var11.d();
+                    var11.active = true;
+                    var13 = var11.activityWeight();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_k = var12.field_k + var13;
@@ -224,12 +224,12 @@ class AudioOutput {
                     if (var4 >= this.field_g) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.a();
+                    var14Lifetime2 = var11.firstSubstream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_k;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.b() >> 8);
-                        var14Lifetime2 = var11.c();
+                        this.a(var14Lifetime2, var15_int * var14Lifetime2.priority() >> 8);
+                        var14Lifetime2 = var11.nextSubstream();
                       }
                     }
                     var15 = var11.field_m;
@@ -271,7 +271,7 @@ class AudioOutput {
           this.field_c = 0;
         }
         if (this.field_l != null) {
-          this.field_l.b(param0, 0, param1);
+          this.field_l.mixInto(param0, 0, param1);
         }
         this.field_u = wq.a(-54);
     }
@@ -282,7 +282,7 @@ class AudioOutput {
           this.field_c = 0;
         }
         if (this.field_l != null) {
-          this.field_l.a(param0);
+          this.field_l.skip(param0);
           return;
         }
     }
@@ -413,7 +413,7 @@ class AudioOutput {
     void a(int param0) throws Exception {
     }
 
-    public static void h() {
+    public static void releaseStatics() {
         field_i = null;
     }
 

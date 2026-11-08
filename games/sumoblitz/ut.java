@@ -275,7 +275,7 @@ final class ut extends eu {
         this.field_d = param0;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 49) {
           field_j = 12;
           field_o = null;
@@ -329,12 +329,12 @@ final class ut extends eu {
         }
     }
 
-    final static void a(int param0, byte param1, tv param2, boolean param3) {
+    final static void a(int param0, byte param1, MusicTrack param2, boolean param3) {
         RuntimeException var4 = null;
-        ud stackIn_2_0;
+        MusicCrossfadeStream stackIn_2_0;
         int stackIn_2_1;
         int stackIn_2_2;
-        tv stackIn_2_3;
+        MusicTrack stackIn_2_3;
         boolean stackIn_3_4 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -344,13 +344,13 @@ final class ut extends eu {
           stackIn_2_0 = qr.field_b;
           stackIn_2_1 = 1;
           stackIn_2_2 = 1000000;
-          stackIn_2_3 = (tv) (param2);
+          stackIn_2_3 = (MusicTrack) (param2);
           stackIn_3_4 = !(param3);
-          ((ud) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param0, 256);
+          ((MusicCrossfadeStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param0, 256);
           if (param1 == -55) {
             return;
           }
-          ut.b((byte) 32);
+          ut.releaseStatics((byte) 32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

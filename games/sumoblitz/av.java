@@ -82,7 +82,7 @@ final class av extends jt {
           field_C = (int[]) null;
         }
         if (!(0 > rc.field_k)) {
-          iv.field_g[rc.field_k].b(param0 - 875, param1);
+          LegacyOpenGlEffectManager.field_g[rc.field_k].b(param0 - 875, param1);
         }
         if (0 == rc.field_k &&
           7 != nj.field_b) {
@@ -99,11 +99,11 @@ final class av extends jt {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_B = null;
         if (param0 != 24) {
-          av.f(30);
+          av.releaseStatics(30);
         }
     }
 

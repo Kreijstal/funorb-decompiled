@@ -12,7 +12,7 @@ final class vb extends wp {
     int field_L;
     int field_H;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_E = false;
           field_J = null;

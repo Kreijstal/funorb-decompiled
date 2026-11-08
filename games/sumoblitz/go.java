@@ -9,7 +9,7 @@ final class go extends bp implements nh {
     static int[] field_j;
     static jj field_m;
     static String logInCreateAccountText;
-    static hr[] field_p;
+    static ToolkitSprite[] field_p;
 
     public final void a(ji param0, int param1) {
         try {
@@ -22,14 +22,14 @@ final class go extends bp implements nh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_m = null;
         field_j = null;
         logInCreateAccountText = null;
         field_n = null;
         if (param0 != -17) {
-          go.a((byte) 112);
+          go.releaseStatics((byte) 112);
         }
     }
 
@@ -41,7 +41,7 @@ final class go extends bp implements nh {
           this.field_l = param4;
           this.field_e.a((ed) (this), 104);
           jaggl.OpenGL.glPixelStorei(3317, 1);
-          jaggl.OpenGL.glTexImage3Dub(this.field_h, 0, this.e(-11), this.field_i, this.field_k, this.field_l, 0, te.a(-21339, this.field_c), 5121, param5, 0);
+          jaggl.OpenGL.glTexImage3Dub(this.field_h, 0, this.e(-11), this.field_i, this.field_k, this.field_l, 0, IntrusiveNodeHashTable.a(-21339, this.field_c), 5121, param5, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');

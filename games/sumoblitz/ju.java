@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ju extends ua implements cr {
-    static hr[] field_p;
+    static ToolkitSprite[] field_p;
     private io field_o;
 
     public final void b(int param0) {
@@ -20,11 +20,11 @@ final class ju extends ua implements cr {
         if (param0 == -28833) {
           return super.a(this.field_f.field_Qc, (byte) 92);
         }
-        field_p = (hr[]) null;
+        field_p = (ToolkitSprite[]) null;
         return super.a(this.field_f.field_Qc, (byte) 92);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }
@@ -32,7 +32,7 @@ final class ju extends ua implements cr {
     }
 
     final static void g(int param0) {
-        wt.field_h[1] = iv.field_i;
+        wt.field_h[1] = LegacyOpenGlEffectManager.field_i;
         wt.field_h[0] = ResourceArchive.field_f;
         wt.field_h[2] = hc.field_f;
         pl.field_u = wt.field_h[1] + wt.field_h[0] - 2 + (wt.field_h[2] - 1);
@@ -111,7 +111,7 @@ final class ju extends ua implements cr {
         if (param1 == 10081) {
           return super.a(param0, param1 ^ 10083, this.field_f.field_Qc);
         }
-        field_p = (hr[]) null;
+        field_p = (ToolkitSprite[]) null;
         return super.a(param0, param1 ^ 10083, this.field_f.field_Qc);
     }
 

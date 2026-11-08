@@ -5,7 +5,7 @@ final class om extends IntrusiveNode {
     private wc[] field_o;
     static String unpackingLevelsText;
     static boolean field_l;
-    static ri[] field_m;
+    static SpriteData[] field_m;
     static String[] droneNames;
 
     om(wc[] param0) {
@@ -16,7 +16,7 @@ final class om extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         droneNames = null;
         int var1 = -126 / ((param0 - 34) / 59);
         unpackingLevelsText = null;

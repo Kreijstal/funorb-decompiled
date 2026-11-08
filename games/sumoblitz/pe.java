@@ -3,7 +3,7 @@
  */
 final class pe extends WidgetContainer implements ai {
     private oe field_A;
-    static ri[] field_F;
+    static SpriteData[] field_F;
     private wp[] field_C;
     static gj field_E;
     static String orbPointsText;
@@ -14,18 +14,18 @@ final class pe extends WidgetContainer implements ai {
           ur.field_R = param1;
           hn.field_k = param2;
           if (param0 != 20) {
-            field_F = (ri[]) null;
+            field_F = (SpriteData[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         field_F = null;
         if (param0 != -18490) {
-          field_F = (ri[]) null;
+          field_F = (SpriteData[]) null;
         }
         orbPointsText = null;
     }
@@ -44,7 +44,7 @@ final class pe extends WidgetContainer implements ai {
         String[] var7 = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          this.field_y.e(125);
+          this.field_y.clear(125);
           if (param0 != null &&
             0 != param0.length) {
             var3_int = param0.length;
@@ -199,92 +199,92 @@ final class pe extends WidgetContainer implements ai {
     }
 
     final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
-        ci.field_g = ri.b(param3, "", "fontalpha");
+        ci.field_g = SpriteData.b(param3, "", "fontalpha");
         SocketConnector.field_a = gd.a(param1, (byte) -79, "font", "");
-        mn.field_b = ri.b(param3, "", "fontglow");
+        mn.field_b = SpriteData.b(param3, "", "fontglow");
         hu.field_c = SocketConnector.field_a;
-        OpenGlTransparentWaterEffect.field_i = ri.b(param3, "", "smallfontalpha");
+        OpenGlTransparentWaterEffect.field_i = SpriteData.b(param3, "", "smallfontalpha");
         qr.field_a = gd.a(param1, (byte) -39, "smallfont", "");
-        au.field_j = ri.b(param3, "", "glowfontalpha");
+        au.field_j = SpriteData.b(param3, "", "glowfontalpha");
         sv.field_a = qr.field_a;
-        ld.field_F = ri.b(param3, "", "boldfontalpha");
+        ld.field_F = SpriteData.b(param3, "", "boldfontalpha");
         ma.field_b = gd.a(param1, (byte) -36, "boldfont", "");
-        ProxySocketConnector.field_f = ri.b(param3, "", "boldglowfontalpha");
+        ProxySocketConnector.field_f = SpriteData.b(param3, "", "boldglowfontalpha");
         sq.field_b = ma.field_b;
-        field_F = ri.b(param3, "", "menu_frame");
-        rh.field_q = ri.b(param3, "", "tooltip_kit");
-        hi.field_b = ri.b(param3, "", "achievements");
-        gk.field_N = ri.a(param0, "basic", "unachieved");
-        ud.field_p = ri.a(param0, "basic", "locked");
-        IntrusiveNode.field_d = ri.a(param3, "", "titleimage");
-        rc.field_i = ri.a(param3, "", "lock");
-        hc.field_b = ri.a(param3, "", "heart");
-        oi.field_d = ri.a(param3, "", "skull");
-        tk.field_c = ri.b(param3, "", "slider");
+        field_F = SpriteData.b(param3, "", "menu_frame");
+        MidiNoteMixer.field_q = SpriteData.b(param3, "", "tooltip_kit");
+        hi.field_b = SpriteData.b(param3, "", "achievements");
+        CompactMeshGeometry.field_N = SpriteData.a(param0, "basic", "unachieved");
+        MusicCrossfadeStream.field_p = SpriteData.a(param0, "basic", "locked");
+        IntrusiveNode.field_d = SpriteData.a(param3, "", "titleimage");
+        rc.field_i = SpriteData.a(param3, "", "lock");
+        hc.field_b = SpriteData.a(param3, "", "heart");
+        oi.field_d = SpriteData.a(param3, "", "skull");
+        tk.field_c = SpriteData.b(param3, "", "slider");
         if (param2 != 20) {
           return;
         }
         try {
-          jj.field_c = ri.b(param3, "", "statline_tab");
-          rw.field_r = ri.b(param3, "", "statline_tab_flip");
-          ok.field_d = ri.b(param3, "", "button_off");
-          hh.field_a = ri.b(param3, "", "button_over");
-          sk.field_c = ri.b(param3, "", "button_on");
-          gq.field_o = ri.b(param3, "", "chargebar_vertical");
-          IntrusiveDequeCursor.field_e = ri.a(param3, "", "congratulations");
-          ve.field_k = ri.a(param3, "", "mouse");
-          BufferedSocket.field_n = ri.a(param3, "", "keyboard");
-          rl.field_l = ri.b(param3, "", "player");
-          kk.field_e = ri.b(param3, "", "mook");
-          ks.field_w = ri.b(param3, "", "fast");
-          fl.field_r = ri.b(param3, "", "sleeper");
-          kr.field_b = ri.b(param3, "", "splitter");
-          qk.field_V = ri.b(param3, "", "seeker");
-          ph.field_a = ri.b(param3, "", "shadowdudes");
-          jd.field_h = ri.b(param3, "", "mod_armour");
-          bk.field_b = ri.b(param3, "", "mod_bomb");
-          cd.field_c = ri.b(param3, "", "mod_spikes");
-          lh.field_k = ri.a(param3, "", "zap");
-          eu.field_a = ri.b(param3, "", "chargebar");
-          bl.field_a = ri.a(param3, "", "bounceup");
-          uj.field_c = ri.b(param3, "", "powerups");
-          df.field_d = ri.a(param3, "", "particle");
-          cl.field_v = ri.b(param3, "", "particles");
-          kq.field_T = ri.a(param3, "", "particle_alpha");
-          dq.field_v = ri.b(param3, "", "particles_alpha");
-          kf.field_w = ri.b(param3, "", "particle_ring");
-          bj.field_g = ri.a(param3, "", "particle_sprinkle");
-          ks.field_t = ri.a(param3, "", "particle_star");
-          ShaderEffect.field_c = ri.a(param3, "", "particle_pixel");
-          ue.field_p = ri.a(param3, "", "particle_pixel_alpha");
-          pc.field_c = ri.a(param3, "", "ghost");
-          no.field_c = ri.a(param3, "", "ghost_cloud");
-          rt.field_E = ri.a(param3, "", "ghost_splatter");
-          mn.field_c = ri.a(param3, "", "shadow");
-          gw.field_C = ri.a(param3, "", "driftinglight");
-          wf.field_a = ri.a(param3, "", "driftinglight_snow");
-          ml.field_p = ri.a(param3, "", "driftinglight_rough");
-          th.field_C = ri.a(param3, "", "shockwave");
-          MouseInputHandler.field_b = ri.b(param3, "", "lightningrod");
-          sd.field_a = ri.b(param3, "", "lightningrod_lowgraphics");
-          hp.field_n = ri.b(param3, "", "electricity");
-          ni.field_h = ri.b(param3, "", "electricity_flip");
-          ArchiveCatalog.field_f = ri.a(param3, "", "attract");
-          uu.field_o = ri.a(param3, "", "repulse");
-          lr.field_c = ri.a(param3, "", "icepatch");
-          ei.field_b = ri.b(param3, "", "attractor");
-          rs.field_e = ri.a(param3, "", "bouncer");
-          kq.field_S = ri.b(param3, "", "landmine");
-          nn.field_a = ri.b(param3, "", "repeller");
-          we.field_C = ri.b(param3, "", "accelerator");
-          pc.field_b = ri.b(param3, "", "teleporter");
-          mc.field_F = ri.b(param3, "", "ice");
-          om.field_m = ri.b(param3, "", "zaptrap");
-          ke.field_c = ri.a(param3, "reticule");
-          tc.field_i = ri.a(param3, "", "reticule_flat");
-          hc.field_a = ri.b(param3, "", "gravitywell");
-          rl.field_o = ri.a(param3, "", "gravitywell_field");
-          pq.field_F = ri.b(param3, "", "tutorial_images");
+          jj.field_c = SpriteData.b(param3, "", "statline_tab");
+          rw.field_r = SpriteData.b(param3, "", "statline_tab_flip");
+          ok.field_d = SpriteData.b(param3, "", "button_off");
+          hh.field_a = SpriteData.b(param3, "", "button_over");
+          sk.field_c = SpriteData.b(param3, "", "button_on");
+          gq.field_o = SpriteData.b(param3, "", "chargebar_vertical");
+          IntrusiveDequeCursor.field_e = SpriteData.a(param3, "", "congratulations");
+          ve.field_k = SpriteData.a(param3, "", "mouse");
+          BufferedSocket.field_n = SpriteData.a(param3, "", "keyboard");
+          rl.field_l = SpriteData.b(param3, "", "player");
+          kk.field_e = SpriteData.b(param3, "", "mook");
+          ks.field_w = SpriteData.b(param3, "", "fast");
+          fl.field_r = SpriteData.b(param3, "", "sleeper");
+          kr.field_b = SpriteData.b(param3, "", "splitter");
+          qk.field_V = SpriteData.b(param3, "", "seeker");
+          ph.field_a = SpriteData.b(param3, "", "shadowdudes");
+          jd.field_h = SpriteData.b(param3, "", "mod_armour");
+          bk.field_b = SpriteData.b(param3, "", "mod_bomb");
+          cd.field_c = SpriteData.b(param3, "", "mod_spikes");
+          lh.field_k = SpriteData.a(param3, "", "zap");
+          eu.field_a = SpriteData.b(param3, "", "chargebar");
+          bl.field_a = SpriteData.a(param3, "", "bounceup");
+          uj.field_c = SpriteData.b(param3, "", "powerups");
+          df.field_d = SpriteData.a(param3, "", "particle");
+          cl.field_v = SpriteData.b(param3, "", "particles");
+          kq.field_T = SpriteData.a(param3, "", "particle_alpha");
+          dq.field_v = SpriteData.b(param3, "", "particles_alpha");
+          kf.field_w = SpriteData.b(param3, "", "particle_ring");
+          bj.field_g = SpriteData.a(param3, "", "particle_sprinkle");
+          ks.field_t = SpriteData.a(param3, "", "particle_star");
+          ShaderEffect.field_c = SpriteData.a(param3, "", "particle_pixel");
+          ue.field_p = SpriteData.a(param3, "", "particle_pixel_alpha");
+          pc.field_c = SpriteData.a(param3, "", "ghost");
+          no.field_c = SpriteData.a(param3, "", "ghost_cloud");
+          rt.field_E = SpriteData.a(param3, "", "ghost_splatter");
+          mn.field_c = SpriteData.a(param3, "", "shadow");
+          SceneryParticle.field_C = SpriteData.a(param3, "", "driftinglight");
+          wf.field_a = SpriteData.a(param3, "", "driftinglight_snow");
+          ml.field_p = SpriteData.a(param3, "", "driftinglight_rough");
+          th.field_C = SpriteData.a(param3, "", "shockwave");
+          MouseInputHandler.field_b = SpriteData.b(param3, "", "lightningrod");
+          sd.field_a = SpriteData.b(param3, "", "lightningrod_lowgraphics");
+          hp.field_n = SpriteData.b(param3, "", "electricity");
+          ni.field_h = SpriteData.b(param3, "", "electricity_flip");
+          ArchiveCatalog.field_f = SpriteData.a(param3, "", "attract");
+          MusicVoice.field_o = SpriteData.a(param3, "", "repulse");
+          lr.field_c = SpriteData.a(param3, "", "icepatch");
+          ei.field_b = SpriteData.b(param3, "", "attractor");
+          rs.field_e = SpriteData.a(param3, "", "bouncer");
+          kq.field_S = SpriteData.b(param3, "", "landmine");
+          nn.field_a = SpriteData.b(param3, "", "repeller");
+          we.field_C = SpriteData.b(param3, "", "accelerator");
+          pc.field_b = SpriteData.b(param3, "", "teleporter");
+          mc.field_F = SpriteData.b(param3, "", "ice");
+          om.field_m = SpriteData.b(param3, "", "zaptrap");
+          ke.field_c = SpriteData.a(param3, "reticule");
+          tc.field_i = SpriteData.a(param3, "", "reticule_flat");
+          hc.field_a = SpriteData.b(param3, "", "gravitywell");
+          rl.field_o = SpriteData.a(param3, "", "gravitywell_field");
+          pq.field_F = SpriteData.b(param3, "", "tutorial_images");
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

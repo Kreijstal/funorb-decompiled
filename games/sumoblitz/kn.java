@@ -87,75 +87,75 @@ final class kn extends eu {
               field_b = 71;
             }
             var19 = var15;
-            lk.b(cd.field_f);
+            SoftwareRasterizer.b(cd.field_f);
             if (var19 < var18) {
               var19 = param3 + param4 * var8 / (var8 + var9);
               var18 = param3 + param4 * var8 / (var8 + var9);
             }
             if (param1[0] != null) {
-              lk.e(param0, param3, var16, var18);
+              SoftwareRasterizer.e(param0, param3, var16, var18);
               param1[0].a(param0, param3);
-              lk.a(cd.field_f);
+              SoftwareRasterizer.a(cd.field_f);
             }
             if (null != param1[2]) {
-              lk.e(var17, param3, var10, var18);
+              SoftwareRasterizer.e(var17, param3, var10, var18);
               param1[2].a(var13, param3);
-              lk.a(cd.field_f);
+              SoftwareRasterizer.a(cd.field_f);
             }
             if (param1[6] != null) {
-              lk.e(param0, var19, var16, var11);
+              SoftwareRasterizer.e(param0, var19, var16, var11);
               param1[6].a(param0, var15);
-              lk.a(cd.field_f);
+              SoftwareRasterizer.a(cd.field_f);
             }
             if (null != param1[8]) {
-              lk.e(var17, var19, var10, var11);
+              SoftwareRasterizer.e(var17, var19, var10, var11);
               param1[8].a(var13, var15);
-              lk.a(cd.field_f);
+              SoftwareRasterizer.a(cd.field_f);
             }
             if (param1[1] != null &&
               0 != param1[1].field_z) {
-              lk.e(var16, param3, var17, var18);
+              SoftwareRasterizer.e(var16, param3, var17, var18);
               for (var20 = var12; var13 > var20; var20 = var20 + param1[1].field_z) {
                 param1[1].a(var20, param3);
               }
-              lk.a(cd.field_f);
+              SoftwareRasterizer.a(cd.field_f);
             }
             if (param1[7] != null &&
               param1[7].field_z != 0) {
-              lk.e(var16, var19, var17, var11);
+              SoftwareRasterizer.e(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param1[7].field_z) {
                 param1[7].a(var20Lifetime1, var15);
               }
-              lk.a(cd.field_f);
+              SoftwareRasterizer.a(cd.field_f);
             }
             if (null != param1[3] &&
               param1[3].field_w != 0) {
-              lk.e(param0, var18, var16, var19);
+              SoftwareRasterizer.e(param0, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param1[3].field_w) {
                 param1[3].a(param0, var20Lifetime2);
               }
-              lk.a(cd.field_f);
+              SoftwareRasterizer.a(cd.field_f);
             }
             if (param1[5] != null &&
               param1[5].field_w != 0) {
-              lk.e(var17, var18, var10, var19);
+              SoftwareRasterizer.e(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param1[5].field_w) {
                 param1[5].a(var13, var20Lifetime3);
               }
-              lk.a(cd.field_f);
+              SoftwareRasterizer.a(cd.field_f);
             }
             if (param1[4] != null &&
               param1[4].field_z != 0) {
               if (0 == param1[4].field_w) {
                 return;
               }
-              lk.e(var16, var18, var17, var19);
+              SoftwareRasterizer.e(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param1[4].field_w) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param1[4].field_z) {
                   param1[4].a(var21, var20Lifetime4);
                 }
               }
-              lk.a(cd.field_f);
+              SoftwareRasterizer.a(cd.field_f);
             }
             return;
           }
@@ -194,7 +194,7 @@ final class kn extends eu {
         return '^';
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != -1) {
           return;
@@ -215,7 +215,7 @@ final class kn extends eu {
 
     private final void a(int param0) {
         if (param0 != 56) {
-          kn.b(-32);
+          kn.releaseStatics(-32);
         }
     }
 
@@ -225,7 +225,7 @@ final class kn extends eu {
             field_b = 120;
           }
           if (param0) {
-            lk.b(0, 0, lk.field_b, lk.field_c, 0, 192);
+            SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, 0, 192);
           }
           pu.field_e.a(0, 0, false);
           return;

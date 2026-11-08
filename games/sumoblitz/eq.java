@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eq extends nt {
+final class eq extends TimedSceneEffect {
     private int field_t;
     private double field_s;
     static int[] field_v;
     private boolean field_u;
     static String toCustomerSupportText;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 3190) {
           return;
         }
@@ -31,7 +31,7 @@ final class eq extends nt {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -121) {
-            eq.e(-79);
+            eq.releaseStatics(-79);
           }
           if (this.field_u) {
             am.field_j[this.field_t].a((float)this.field_k, (float)this.field_o, -200 + (2048 - (int)(2048.0 * ((this.field_s - (double)this.field_p) / this.field_s))), 0, 3, 3 * this.field_p << 24, 1);

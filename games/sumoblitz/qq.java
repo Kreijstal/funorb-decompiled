@@ -8,7 +8,7 @@ final class qq extends dh implements op {
     static String namesShouldContainAText;
     static vn field_R;
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -15648) {
           field_R = (vn) null;
           field_R = null;
@@ -69,8 +69,8 @@ final class qq extends dh implements op {
             qq.b(-31, 81, 66);
           }
           var2 = new dj(param1, param1);
-          jf.field_c.a((IntrusiveNode) (var2), (byte) 39);
-          sj.field_c.b(param1);
+          jf.field_c.addLast((IntrusiveNode) (var2), (byte) 39);
+          sj.field_c.addSubstream(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

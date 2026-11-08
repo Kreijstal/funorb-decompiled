@@ -6,14 +6,14 @@ class ml extends en {
     static int field_l;
     private int field_q;
     private int field_v;
-    static ri field_p;
+    static SpriteData field_p;
     private int field_r;
     static boolean field_u;
     private int field_k;
     private byte[] field_n;
     private int field_m;
     private int field_o;
-    static hr[] field_w;
+    static ToolkitSprite[] field_w;
     private int field_s;
 
     final void b(int param0) {
@@ -128,11 +128,11 @@ class ml extends en {
         this.a((byte) -52, 1, -122);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_w = null;
         field_p = null;
         if (param0 != 30) {
-          ml.c((byte) 34);
+          ml.releaseStatics((byte) 34);
         }
     }
 

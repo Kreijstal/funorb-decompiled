@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class ab {
-    static te field_a;
+    static IntrusiveNodeHashTable field_a;
     static Object field_b;
     static String weClosedTheConnectionText;
     static String achievedText;
@@ -50,7 +50,7 @@ abstract class ab {
               var14 = var15;
               var12 = var14;
               var9Lifetime2 = var12;
-              param1.a((IntrusiveNode) (new cl(64, (int)var15[0] << 11, (int)var15[1] << 11, param0, -(int)var15[0] << 8, -(int)var15[1] << 8, 0, param2)), (byte) 39);
+              param1.addLast((IntrusiveNode) (new cl(64, (int)var15[0] << 11, (int)var15[1] << 11, param0, -(int)var15[0] << 8, -(int)var15[1] << 8, 0, param2)), (byte) 39);
               var8++;
               continue;
             }
@@ -70,7 +70,7 @@ abstract class ab {
             dupTemp$0 = kt.a((byte) -52, var9Lifetime1, (float)(0.0 + (double)(2048.0f / (float)var8Lifetime1) * 0.017453292519943295));
             var13 = dupTemp$0;
             var9Lifetime1Lifetime1 = dupTemp$0;
-            param1.a((IntrusiveNode) (new cl(64, (int)var13[0] << 11, (int)var13[1] << 11, param0, -(int)var13[0] << 8, -(int)var13[1] << 8, 1, param2)), (byte) 39);
+            param1.addLast((IntrusiveNode) (new cl(64, (int)var13[0] << 11, (int)var13[1] << 11, param0, -(int)var13[0] << 8, -(int)var13[1] << 8, 1, param2)), (byte) 39);
             var8Lifetime1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -120,7 +120,7 @@ abstract class ab {
             return stackIn_6_0;
           }
           if (param2 != 0) {
-            ab.a(-28);
+            ab.releaseStatics(-28);
           }
           if (!(param1 instanceof nn)) {
             throw new IllegalArgumentException();
@@ -142,7 +142,7 @@ abstract class ab {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         weClosedTheConnectionText = null;
         field_a = null;
         if (param0 != 64) {

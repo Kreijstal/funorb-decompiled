@@ -72,8 +72,8 @@ final class qc {
         try {
           var10 = LimitedRandomAccessFile.droneDescriptions[2 * this.field_d + 1];
           var3_int -= 10;
-          gt.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (hr[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, param1 - 4312, var10, (aa) null, 1, 0);
-          bq.field_c.a(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (hr[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, -8787, var10, (aa) null, 1, 0);
+          gt.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, param1 - 4312, var10, (aa) null, 1, 0);
+          LegacyOpenGlEffect.field_c.a(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, -8787, var10, (aa) null, 1, 0);
           if (this.field_b <= 0) {
             var4 += 115;
             var3_int -= 50;
@@ -119,7 +119,7 @@ final class qc {
           ph.field_b.e(-113);
           mr.field_f = null;
         } else {
-          if (0 < te.field_c) {
+          if (0 < IntrusiveNodeHashTable.field_c) {
             av.a(-7753, param0, 6);
           } else {
             av.a(-7753, param0, 0);
@@ -134,7 +134,7 @@ final class qc {
         ut.field_j = 0;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_c = null;
         int var1 = 85 / ((param0 - 13) / 43);
@@ -149,7 +149,7 @@ final class qc {
 
     final static GraphicsToolkit a(int param0, int param1, int param2, java.awt.Canvas param3, d param4) {
         RuntimeException var5 = null;
-        oa stackIn_3_0 = null;
+        NativeSoftwareGraphicsToolkit stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -158,9 +158,9 @@ final class qc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -1) {
-            qc.b((byte) 64);
+            qc.releaseStatics((byte) 64);
           }
-          stackIn_3_0 = new oa(param3, param4, param1, param0);
+          stackIn_3_0 = new NativeSoftwareGraphicsToolkit(param3, param4, param1, param0);
           return (GraphicsToolkit) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,7 +191,7 @@ final class qc {
         this.b(param1, -119);
         this.field_b = 200;
         if (param0 != -3388) {
-          qc.b((byte) 117);
+          qc.releaseStatics((byte) 117);
         }
     }
 

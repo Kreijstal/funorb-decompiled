@@ -6,7 +6,7 @@ final class vd {
     static String[] field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         int var1 = 62 / ((param0 + 37) / 46);
         field_b = null;

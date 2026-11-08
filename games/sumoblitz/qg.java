@@ -239,7 +239,7 @@ final class qg {
         return field_d;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_d = null;
         field_c = null;
         field_s = null;

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends r implements e {
+final class ba extends r implements NativeResource {
     long field_nativeid;
 
-    public final native void w(boolean param0);
+    public final native void disposeNativeResource(boolean param0);
 
-    ba(oa param0) {
+    ba(NativeSoftwareGraphicsToolkit param0) {
     }
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          pa.a((e) (this), (byte) -37);
+          NativeResourceReaper.a((NativeResource) (this), (byte) -37);
         }
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pu extends hr {
+final class pu extends ToolkitSprite {
     private ru field_j;
     private int field_l;
     private int field_f;
@@ -165,24 +165,24 @@ final class pu extends hr {
 
     final static void a(byte param0) {
         if (param0 <= -25) {
-          c.field_u[1] = iv.field_i;
+          c.field_u[1] = LegacyOpenGlEffectManager.field_i;
           c.field_u[0] = ResourceArchive.field_f;
           c.field_u[2] = hc.field_f;
           ok.field_k = -1 + (-1 + c.field_u[1] - 1 + c.field_u[0]) + c.field_u[2];
           return;
         }
         blastReadyText = (String) null;
-        c.field_u[1] = iv.field_i;
+        c.field_u[1] = LegacyOpenGlEffectManager.field_i;
         c.field_u[0] = ResourceArchive.field_f;
         c.field_u[2] = hc.field_f;
         ok.field_k = -1 + (-1 + c.field_u[1] - 1 + c.field_u[0]) + c.field_u[2];
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         blastReadyText = null;
         if (param0 != 1) {
-          pu.a(123);
+          pu.releaseStatics(123);
         }
     }
 

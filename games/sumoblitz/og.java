@@ -3,15 +3,15 @@
  */
 final class og {
     private ResourceArchive field_a;
-    private te field_b;
+    private IntrusiveNodeHashTable field_b;
     static boolean[] field_d;
     private ResourceArchive field_e;
-    private te field_c;
+    private IntrusiveNodeHashTable field_c;
 
-    private final qp a(String param0, int param1, int[] param2) {
+    private final PcmSample a(String param0, int param1, int[] param2) {
         RuntimeException var4 = null;
-        qp stackIn_4_0 = null;
-        qp stackIn_6_0 = null;
+        PcmSample stackIn_4_0 = null;
+        PcmSample stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -20,7 +20,7 @@ final class og {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 16) {
-            this.field_c = (te) null;
+            this.field_c = (IntrusiveNodeHashTable) null;
           }
           if (!this.field_a.b((byte) -125, "")) {
             stackIn_6_0 = this.a(88, param0, param2, "");
@@ -48,16 +48,16 @@ final class og {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         if (param0) {
           field_d = (boolean[]) null;
         }
     }
 
-    final qp b(int param0, String param1) {
+    final PcmSample b(int param0, String param1) {
         RuntimeException var3 = null;
-        qp stackIn_3_0 = null;
+        PcmSample stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -86,14 +86,14 @@ final class og {
         if (param0 < -5) {
           return oh.field_e == 24 ? true : false;
         }
-        og.a(true);
+        og.releaseStatics(true);
         return oh.field_e == 24 ? true : false;
     }
 
-    final qp a(int param0, String param1) {
+    final PcmSample a(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        qp stackIn_1_0 = null;
+        PcmSample stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -116,12 +116,12 @@ final class og {
         }
     }
 
-    private final qp a(String param0, int param1, int[] param2, String param3) {
+    private final PcmSample a(String param0, int param1, int[] param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         Object stackIn_2_0 = null;
-        qp stackIn_7_0 = null;
+        PcmSample stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -134,7 +134,7 @@ final class og {
           var5_int = this.field_e.a(0, param3);
           if (var5_int < param1) {
             stackIn_2_0 = null;
-            return (qp) (stackIn_2_0);
+            return (PcmSample) (stackIn_2_0);
           }
           var6 = this.field_e.a(var5_int, param0, (byte) 127);
           if (var6 < 0) {
@@ -168,23 +168,23 @@ final class og {
         }
     }
 
-    private final qp a(int[] param0, int param1, int param2, int param3) {
-        qp discarded$1 = null;
+    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
+        PcmSample discarded$1 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        qp var8 = null;
+        PcmSample var8 = null;
         ae var9 = null;
         String var10 = null;
-        qp var11 = null;
-        qp stackIn_5_0 = null;
+        PcmSample var11 = null;
+        PcmSample stackIn_5_0 = null;
         Object stackIn_9_0 = null;
-        qp stackIn_17_0 = null;
+        PcmSample stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qp var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = ((-2147479553 & param2) << 4 | param2 >>> 12) ^ param3;
           if (param1 != 1026562700) {
@@ -193,7 +193,7 @@ final class og {
           }
           var5_int = var5_int | param2 << 16;
           var6 = (long)var5_int;
-          var8 = (qp) (this.field_c.a(param1 ^ 1026562803, var6));
+          var8 = (PcmSample) (this.field_c.a(param1 ^ 1026562803, var6));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -201,7 +201,7 @@ final class og {
           if (param0 != null &&
             param0[0] <= 0) {
             stackIn_9_0 = null;
-            return (qp) (stackIn_9_0);
+            return (PcmSample) (stackIn_9_0);
           }
           var9 = ae.a(this.field_e, param2, param3);
           if (var9 == null) {
@@ -211,7 +211,7 @@ final class og {
           var8Lifetime1 = var11;
           this.field_c.a(var8Lifetime1, -1, var6);
           if (param0 != null) {
-            param0[0] = param0[0] - var11.field_p.length;
+            param0[0] = param0[0] - var11.samples.length;
           }
           stackIn_17_0 = var8Lifetime1;
           return stackIn_17_0;
@@ -229,26 +229,26 @@ final class og {
         }
     }
 
-    private final qp a(int param0, int param1, boolean param2, int[] param3) {
+    private final PcmSample a(int param0, int param1, boolean param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        qp var8 = null;
+        PcmSample var8 = null;
         q var9 = null;
-        qp stackIn_3_0 = null;
+        PcmSample stackIn_3_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_16_0 = null;
-        qp stackIn_18_0 = null;
+        PcmSample stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qp var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param0 ^ (param1 >>> 12 | (1342181375 & param1) << 4);
           var5_int = var5_int | param1 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (qp) (this.field_c.a(127, var6));
+          var8 = (PcmSample) (this.field_c.a(127, var6));
           if (var8 != null) {
             stackIn_3_0 = var8;
             return stackIn_3_0;
@@ -256,7 +256,7 @@ final class og {
           if (param3 != null &&
             param3[0] <= 0) {
             stackIn_7_0 = null;
-            return (qp) (stackIn_7_0);
+            return (PcmSample) (stackIn_7_0);
           }
           var9 = (q) (this.field_b.a(118, var6));
           if (var9 == null) {
@@ -269,7 +269,7 @@ final class og {
           var8Lifetime1 = var9.a(param3);
           if (var8Lifetime1 == null) {
             stackIn_16_0 = null;
-            return (qp) (stackIn_16_0);
+            return (PcmSample) (stackIn_16_0);
           }
           var9.unlink(param2);
           this.field_c.a(var8Lifetime1, -1, var6);
@@ -289,11 +289,11 @@ final class og {
         }
     }
 
-    private final qp a(int param0, String param1, int[] param2, String param3) {
+    private final PcmSample a(int param0, String param1, int[] param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        qp stackIn_9_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -342,11 +342,11 @@ final class og {
         }
     }
 
-    final qp a(int param0, int[] param1, int param2) {
+    final PcmSample a(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
-        qp stackIn_3_0 = null;
-        qp stackIn_6_0 = null;
-        qp stackIn_9_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_6_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -363,7 +363,7 @@ final class og {
           if (param2 == 10709) {
             throw new RuntimeException();
           }
-          stackIn_9_0 = (qp) null;
+          stackIn_9_0 = (PcmSample) null;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -379,11 +379,11 @@ final class og {
         }
     }
 
-    private final qp a(int param0, String param1, int[] param2) {
+    private final PcmSample a(int param0, String param1, int[] param2) {
         RuntimeException var4 = null;
-        qp stackIn_2_0 = null;
-        qp stackIn_5_0 = null;
-        qp stackIn_7_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_5_0 = null;
+        PcmSample stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -392,7 +392,7 @@ final class og {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2) {
-            stackIn_2_0 = (qp) null;
+            stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
           if (!this.field_e.b((byte) 116, "")) {
@@ -421,10 +421,10 @@ final class og {
         }
     }
 
-    final qp b(int param0, int[] param1, int param2) {
+    final PcmSample b(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
-        qp stackIn_2_0 = null;
-        qp stackIn_5_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_5_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -457,8 +457,8 @@ final class og {
     }
 
     og(ResourceArchive param0, ResourceArchive param1) {
-        this.field_b = new te(256);
-        this.field_c = new te(256);
+        this.field_b = new IntrusiveNodeHashTable(256);
+        this.field_c = new IntrusiveNodeHashTable(256);
         try {
           this.field_a = param1;
           this.field_e = param0;

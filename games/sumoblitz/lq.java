@@ -7,7 +7,7 @@ final class lq {
     static int field_b;
     static String toServerListText;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }
@@ -45,10 +45,10 @@ final class lq {
           kh.field_a = new Sprite(var3, var4 * 3 / 4);
           kh.field_a.d();
           var6.c(0, 0);
-          mq.field_a = new Sprite(var3, var4 - kh.field_a.field_u);
-          mq.field_a.d();
+          MusicPatchEnvelope.field_a = new Sprite(var3, var4 - kh.field_a.field_u);
+          MusicPatchEnvelope.field_a.d();
           var6.c(0, -kh.field_a.field_u);
-          mq.field_a.field_A = kh.field_a.field_u;
+          MusicPatchEnvelope.field_a.field_A = kh.field_a.field_u;
           ClientException.a((byte) 71);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

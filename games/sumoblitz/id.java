@@ -13,7 +13,7 @@ final class id extends IntrusiveNode {
     int field_t;
     int field_r;
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         returnToGameText = null;
         if (param0) {
           returnToGameText = (String) null;

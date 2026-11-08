@@ -67,7 +67,7 @@ final class cv extends WidgetContainer implements pw, ai {
             } else {
               if (this.field_N == param2) {
                 if (this.field_B) {
-                  nt.c(param1 ^ 710);
+                  TimedSceneEffect.c(param1 ^ 710);
                 } else {
                   if (this.field_J) {
                     nb.a(true);
@@ -101,7 +101,7 @@ final class cv extends WidgetContainer implements pw, ai {
           this.field_H = (dh) null;
         }
         if (null != this.field_D) {
-          lk.f(param0 + 10, param1 + 134, -20 + this.field_q, 4210752);
+          SoftwareRasterizer.f(param0 + 10, param1 + 134, -20 + this.field_q, 4210752);
         }
         super.a(param0, param1, (byte) -59, param3);
     }
@@ -156,7 +156,7 @@ final class cv extends WidgetContainer implements pw, ai {
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = cq.backText;
+              stackIn_19_3 = FullscreenCanvas.backText;
             }
             this.field_N = new wp(stackIn_19_3, (qm) null);
             if (this.field_M) {
@@ -270,7 +270,7 @@ final class cv extends WidgetContainer implements pw, ai {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         if (param0 >= -116) {
           return;

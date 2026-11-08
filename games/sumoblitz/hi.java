@@ -8,10 +8,10 @@ final class hi implements vc {
     int[] field_c;
     int field_d;
     static int field_h;
-    static ri[] field_b;
+    static SpriteData[] field_b;
     static String checkingText;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         checkingText = null;
         field_b = null;
         field_f = null;
@@ -30,37 +30,37 @@ final class hi implements vc {
         int var16Lifetime5;
         if (param12 >= param8) {
           if (param12 < param2) {
-            ph.a(param15, param11, param7, param1, lk.field_a, param4, param13, param9, param14, param5, param0, param10, param2, param8, (byte) -48, param6, param12);
+            ph.a(param15, param11, param7, param1, SoftwareRasterizer.field_a, param4, param13, param9, param14, param5, param0, param10, param2, param8, (byte) -48, param6, param12);
             var16 = 70 % ((68 - param3) / 35);
             return;
           }
           if (param2 > param8) {
-            ph.a(param15, param4, param14, param9, lk.field_a, param11, param13, param1, param7, param0, param5, param10, param12, param8, (byte) -48, param6, param2);
+            ph.a(param15, param4, param14, param9, SoftwareRasterizer.field_a, param11, param13, param1, param7, param0, param5, param10, param12, param8, (byte) -48, param6, param2);
             var16Lifetime4 = 70 % ((68 - param3) / 35);
             return;
           }
-          ph.a(param0, param4, param14, param9, lk.field_a, param13, param11, param6, param10, param15, param5, param7, param12, param2, (byte) -48, param1, param8);
+          ph.a(param0, param4, param14, param9, SoftwareRasterizer.field_a, param13, param11, param6, param10, param15, param5, param7, param12, param2, (byte) -48, param1, param8);
           var16Lifetime5 = 70 % ((68 - param3) / 35);
           return;
         }
         if (param2 > param8) {
-          ph.a(param5, param11, param7, param1, lk.field_a, param13, param4, param6, param10, param15, param0, param14, param2, param12, (byte) -48, param9, param8);
+          ph.a(param5, param11, param7, param1, SoftwareRasterizer.field_a, param13, param4, param6, param10, param15, param0, param14, param2, param12, (byte) -48, param9, param8);
           var16Lifetime1 = 70 % ((68 - param3) / 35);
           return;
         }
         if (param12 >= param2) {
-          ph.a(param0, param13, param10, param6, lk.field_a, param4, param11, param9, param14, param5, param15, param7, param8, param2, (byte) -48, param1, param12);
+          ph.a(param0, param13, param10, param6, SoftwareRasterizer.field_a, param4, param11, param9, param14, param5, param15, param7, param8, param2, (byte) -48, param1, param12);
           var16Lifetime2 = 70 % ((68 - param3) / 35);
           return;
         }
-        ph.a(param5, param13, param10, param6, lk.field_a, param11, param4, param1, param7, param0, param15, param14, param8, param12, (byte) -48, param9, param2);
+        ph.a(param5, param13, param10, param6, SoftwareRasterizer.field_a, param11, param4, param1, param7, param0, param15, param14, param8, param12, (byte) -48, param9, param2);
         var16Lifetime3 = 70 % ((68 - param3) / 35);
     }
 
-    hi(qa param0, hr param1, od param2) {
+    hi(SoftwareGraphicsToolkit param0, ToolkitSprite param1, od param2) {
         RuntimeException var4 = null;
-        gl var5 = null;
-        mj var6 = null;
+        SoftwareArgbSprite var5 = null;
+        SoftwareRgbSprite var6 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -70,16 +70,16 @@ final class hi implements vc {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 instanceof mj) {
-            var6 = (mj) (param1);
+          if (param1 instanceof SoftwareRgbSprite) {
+            var6 = (SoftwareRgbSprite) (param1);
             this.field_d = var6.field_z;
             this.field_a = var6.field_q;
             this.field_c = var6.field_E;
           } else {
-            if (!(param1 instanceof gl)) {
+            if (!(param1 instanceof SoftwareArgbSprite)) {
               throw new RuntimeException();
             }
-            var5 = (gl) (param1);
+            var5 = (SoftwareArgbSprite) (param1);
             this.field_d = var5.field_z;
             this.field_c = var5.field_E;
             this.field_a = var5.field_q;

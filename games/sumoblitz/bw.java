@@ -5,9 +5,9 @@ final class bw extends qt {
     static boolean field_d;
     static String reassignPowerupsText;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 110) {
-          bw.c((byte) 4);
+          bw.releaseStatics((byte) 4);
         }
         reassignPowerupsText = null;
     }
@@ -17,7 +17,7 @@ final class bw extends qt {
         int var4 = 0;
         GraphicsToolkit var5 = null;
         int var6 = 0;
-        hr[] var7 = null;
+        ToolkitSprite[] var7 = null;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -87,7 +87,7 @@ final class bw extends qt {
             var10 = new int[var4];
             var22 = var10;
             for (var7_int = 0; var7_int < var4; var7_int++) {
-              var10[var7_int] = iv.field_l[eb.a((int) var21[var7_int], 255)];
+              var10[var7_int] = LegacyOpenGlEffectManager.field_l[eb.a((int) var21[var7_int], 255)];
             }
             var1[var2] = new Sprite(vf.field_d, li.field_u, er.field_h[var2], av.field_C[var2], vg.field_k[var2], we.field_B[var2], var22);
           } else {
@@ -96,7 +96,7 @@ final class bw extends qt {
             var14 = var17;
             var7 = var14;
             for (var8 = 0; var8 < var4; var8++) {
-              var7[var8] = ic.a(iv.field_l[eb.a((int) var21[var8], 255)], eb.a((int) var23[var8], 255) << 24);
+              var7[var8] = ic.a(LegacyOpenGlEffectManager.field_l[eb.a((int) var21[var8], 255)], eb.a((int) var23[var8], 255) << 24);
             }
             var1[var2] = (Sprite) ((Object) new mg(vf.field_d, li.field_u, er.field_h[var2], av.field_C[var2], vg.field_k[var2], we.field_B[var2], var17));
           }

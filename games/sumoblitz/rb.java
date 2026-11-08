@@ -5,7 +5,7 @@ abstract class rb {
     static String[] achievementNames;
     static String field_c;
     static int field_b;
-    static hr[] field_a;
+    static ToolkitSprite[] field_a;
 
     final static void a(int param0) {
         int var4 = 0;
@@ -116,7 +116,7 @@ abstract class rb {
 
     abstract sg b(byte param0);
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         achievementNames = null;
         field_c = null;

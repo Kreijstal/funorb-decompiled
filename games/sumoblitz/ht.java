@@ -4,18 +4,18 @@
 abstract class ht implements ft {
     int field_j;
     private boolean field_f;
-    fr field_d;
+    LegacyOpenGlGraphicsToolkit field_d;
     int field_a;
     private int field_g;
     int field_c;
     static volatile int field_h;
     static String confirmPasswordText;
     private boolean field_i;
-    static hr[] field_e;
+    static ToolkitSprite[] field_e;
 
     final int c(int param0) {
         if (param0 > -97) {
-          field_e = (hr[]) null;
+          field_e = (ToolkitSprite[]) null;
           return this.field_j;
         }
         return this.field_j;
@@ -57,9 +57,9 @@ abstract class ht implements ft {
         field_h = -53;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -81) {
-          ht.a((byte) 94);
+          ht.releaseStatics((byte) 94);
           field_e = null;
           confirmPasswordText = null;
           return;
@@ -191,7 +191,7 @@ abstract class ht implements ft {
             jaggl.OpenGL.glTexParameteri(this.field_c, 10240, 9728);
           }
         } else {
-          this.field_d = (fr) null;
+          this.field_d = (LegacyOpenGlGraphicsToolkit) null;
           if (this.field_i) {
             stackIn_18_0 = this.field_c;
             stackIn_18_1 = 10241;
@@ -241,7 +241,7 @@ abstract class ht implements ft {
         return new lj(of.c(100), bt.b(77));
     }
 
-    ht(fr param0, int param1, int param2, int param3, boolean param4) {
+    ht(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, boolean param4) {
         this.field_i = false;
         try {
           this.field_g = param3;

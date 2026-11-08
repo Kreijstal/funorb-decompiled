@@ -66,7 +66,7 @@ final class wq {
         return var1 + uv.field_n;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }
@@ -74,7 +74,7 @@ final class wq {
     }
 
     final static void a(boolean param0, ResourceArchive param1) {
-        gk stackIn_10_0;
+        CompactMeshGeometry stackIn_10_0;
         int stackIn_10_1;
         int stackIn_10_2;
         int stackIn_10_3;
@@ -86,7 +86,7 @@ final class wq {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        gk var5 = null;
+        CompactMeshGeometry var5 = null;
         int[] var6 = null;
         int var7 = 0;
         pl var8 = null;
@@ -100,7 +100,7 @@ final class wq {
           var3 = var10.e(-31302);
           var10.i((byte) 54);
           au.field_i = ok.a(-126, var10);
-          mr.field_b = new gk[var3];
+          mr.field_b = new CompactMeshGeometry[var3];
           kh.field_c = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
             mr.field_b[var4] = ImageProducerRasterBuffer.a(var8, -16736);
@@ -118,7 +118,7 @@ final class wq {
             stackIn_10_2 = 1;
             stackIn_10_3 = 6;
             stackIn_11_4 = !(param0);
-            ((gk) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_10_3, stackIn_11_4, 6);
+            ((CompactMeshGeometry) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_10_3, stackIn_11_4, 6);
             var5.a(false);
             var6 = new int[]{var5.field_t + var5.field_T >> 1, var5.field_j + var5.field_f >> 1, var5.field_P + var5.field_S >> 1};
             kh.field_c[var9] = var6;

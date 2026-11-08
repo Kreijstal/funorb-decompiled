@@ -179,7 +179,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           this.SA(-105, -54, 124, -38, (int[]) null, -85, -29);
         }
         var4.key = param1;
-        this.field_Fc.a(var4, (byte) 39);
+        this.field_Fc.addLast(var4, (byte) 39);
     }
 
     final void i(byte param0) {
@@ -215,105 +215,105 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         var4 = Sumoblitz.field_L ? 1 : 0;
         param0 = param0 & 2147483647;
         var2 = 0;
-        while (!this.field_Gc.a((byte) -100)) {
-          var5 = (ge) (this.field_Gc.c(9));
+        while (!this.field_Gc.isEmpty((byte) -100)) {
+          var5 = (ge) (this.field_Gc.removeFirst(9));
           incrementValue$5 = var2;
           var2++;
-          gw.field_A[incrementValue$5] = (int)var5.key;
+          SceneryParticle.field_A[incrementValue$5] = (int)var5.key;
           this.field_o = this.field_o - var5.field_m;
           if (var2 != 1000) {
             continue;
           }
-          jaggl.OpenGL.glDeleteBuffersARB(var2, gw.field_A, 0);
+          jaggl.OpenGL.glDeleteBuffersARB(var2, SceneryParticle.field_A, 0);
           var2 = 0;
         }
         if (var2 > 0) {
-          jaggl.OpenGL.glDeleteBuffersARB(var2, gw.field_A, 0);
+          jaggl.OpenGL.glDeleteBuffersARB(var2, SceneryParticle.field_A, 0);
           var2 = 0;
         }
-        while (!this.field_Zc.a((byte) -105)) {
-          var6 = (ge) (this.field_Zc.c(9));
+        while (!this.field_Zc.isEmpty((byte) -105)) {
+          var6 = (ge) (this.field_Zc.removeFirst(9));
           incrementValue$4 = var2;
           var2++;
-          gw.field_A[incrementValue$4] = (int)var6.key;
+          SceneryParticle.field_A[incrementValue$4] = (int)var6.key;
           this.field_Cb = this.field_Cb - var6.field_m;
           if (var2 != 1000) {
             continue;
           }
-          jaggl.OpenGL.glDeleteTextures(var2, gw.field_A, 0);
+          jaggl.OpenGL.glDeleteTextures(var2, SceneryParticle.field_A, 0);
           var2 = 0;
         }
         if (var2 <= 0) {
-          while (!this.field_Xc.a((byte) -73)) {
-            var7 = (ge) (this.field_Xc.c(9));
+          while (!this.field_Xc.isEmpty((byte) -73)) {
+            var7 = (ge) (this.field_Xc.removeFirst(9));
             incrementValue$1 = var2;
             var2++;
-            gw.field_A[incrementValue$1] = var7.field_m;
+            SceneryParticle.field_A[incrementValue$1] = var7.field_m;
             if (1000 != var2) {
               continue;
             }
-            jaggl.OpenGL.glDeleteFramebuffersEXT(var2, gw.field_A, 0);
+            jaggl.OpenGL.glDeleteFramebuffersEXT(var2, SceneryParticle.field_A, 0);
             var2 = 0;
           }
         } else {
-          jaggl.OpenGL.glDeleteTextures(var2, gw.field_A, 0);
+          jaggl.OpenGL.glDeleteTextures(var2, SceneryParticle.field_A, 0);
           var2 = 0;
-          while (!this.field_Xc.a((byte) -73)) {
-            var7 = (ge) (this.field_Xc.c(9));
+          while (!this.field_Xc.isEmpty((byte) -73)) {
+            var7 = (ge) (this.field_Xc.removeFirst(9));
             incrementValue$0 = var2;
             var2++;
-            gw.field_A[incrementValue$0] = var7.field_m;
+            SceneryParticle.field_A[incrementValue$0] = var7.field_m;
             if (1000 != var2) {
               continue;
             }
-            jaggl.OpenGL.glDeleteFramebuffersEXT(var2, gw.field_A, 0);
+            jaggl.OpenGL.glDeleteFramebuffersEXT(var2, SceneryParticle.field_A, 0);
             var2 = 0;
           }
         }
         if (var2 <= 0) {
-          while (!this.field_Vc.a((byte) -123)) {
-            var8 = (ge) (this.field_Vc.c(9));
+          while (!this.field_Vc.isEmpty((byte) -123)) {
+            var8 = (ge) (this.field_Vc.removeFirst(9));
             incrementValue$3 = var2;
             var2++;
-            gw.field_A[incrementValue$3] = (int)var8.key;
+            SceneryParticle.field_A[incrementValue$3] = (int)var8.key;
             this.field_pc = this.field_pc - var8.field_m;
             if (var2 != 1000) {
               continue;
             }
-            jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, gw.field_A, 0);
+            jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, SceneryParticle.field_A, 0);
             var2 = 0;
           }
         } else {
-          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, gw.field_A, 0);
+          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, SceneryParticle.field_A, 0);
           var2 = 0;
-          while (!this.field_Vc.a((byte) -123)) {
-            var8 = (ge) (this.field_Vc.c(9));
+          while (!this.field_Vc.isEmpty((byte) -123)) {
+            var8 = (ge) (this.field_Vc.removeFirst(9));
             incrementValue$2 = var2;
             var2++;
-            gw.field_A[incrementValue$2] = (int)var8.key;
+            SceneryParticle.field_A[incrementValue$2] = (int)var8.key;
             this.field_pc = this.field_pc - var8.field_m;
             if (var2 != 1000) {
               continue;
             }
-            jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, gw.field_A, 0);
+            jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, SceneryParticle.field_A, 0);
             var2 = 0;
           }
         }
         if (var2 <= 0) {
-          while (!this.field_Kc.a((byte) -88)) {
-            var9 = (ge) (this.field_Kc.c(9));
+          while (!this.field_Kc.isEmpty((byte) -88)) {
+            var9 = (ge) (this.field_Kc.removeFirst(9));
             jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_m);
           }
-          while (!this.field_Pc.a((byte) -68)) {
-            var10 = this.field_Pc.c(9);
+          while (!this.field_Pc.isEmpty((byte) -68)) {
+            var10 = this.field_Pc.removeFirst(9);
             jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
           }
-          while (!this.field_Fc.a((byte) -95)) {
-            var11 = this.field_Fc.c(9);
+          while (!this.field_Fc.isEmpty((byte) -95)) {
+            var11 = this.field_Fc.removeFirst(9);
             jaggl.OpenGL.glDeleteObjectARB(var11.key);
           }
-          while (!this.field_Kc.a((byte) -68)) {
-            var12 = (ge) (this.field_Kc.c(9));
+          while (!this.field_Kc.isEmpty((byte) -68)) {
+            var12 = (ge) (this.field_Kc.removeFirst(9));
             jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_m);
           }
           if (!(this.h(64) <= 100663296) &&
@@ -322,22 +322,22 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             this.field_Cc = wq.a(-39);
           }
         } else {
-          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, gw.field_A, 0);
+          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, SceneryParticle.field_A, 0);
           var2 = 0;
-          while (!this.field_Kc.a((byte) -88)) {
-            var9 = (ge) (this.field_Kc.c(9));
+          while (!this.field_Kc.isEmpty((byte) -88)) {
+            var9 = (ge) (this.field_Kc.removeFirst(9));
             jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_m);
           }
-          while (!this.field_Pc.a((byte) -68)) {
-            var10 = this.field_Pc.c(9);
+          while (!this.field_Pc.isEmpty((byte) -68)) {
+            var10 = this.field_Pc.removeFirst(9);
             jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
           }
-          while (!this.field_Fc.a((byte) -95)) {
-            var11 = this.field_Fc.c(9);
+          while (!this.field_Fc.isEmpty((byte) -95)) {
+            var11 = this.field_Fc.removeFirst(9);
             jaggl.OpenGL.glDeleteObjectARB(var11.key);
           }
-          while (!this.field_Kc.a((byte) -68)) {
-            var12 = (ge) (this.field_Kc.c(9));
+          while (!this.field_Kc.isEmpty((byte) -68)) {
+            var12 = (ge) (this.field_Kc.removeFirst(9));
             jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_m);
           }
           if (!(this.h(64) <= 100663296) &&
@@ -953,7 +953,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void a(hr param0, boolean param1) {
+    final void a(ToolkitSprite param0, boolean param1) {
     }
 
     final void J(int param0) {
@@ -1004,7 +1004,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     final synchronized void a(byte param0, int param1, int param2) {
         ge var4 = new ge(param1);
         var4.key = (long)param2;
-        this.field_Gc.a((IntrusiveNode) (var4), (byte) 39);
+        this.field_Gc.addLast((IntrusiveNode) (var4), (byte) 39);
         if (param0 != -99) {
           this.GA(-33);
         }
@@ -1148,7 +1148,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param1 != -96) {
           this.b((byte) -39);
         }
-        this.field_Pc.a(var3, (byte) 39);
+        this.field_Pc.addLast(var3, (byte) 39);
     }
 
     final void c(int param0, int param1) {
@@ -1254,7 +1254,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
         ge var4 = new ge(param0);
         var4.key = (long)param1;
-        this.field_Zc.a((IntrusiveNode) (var4), (byte) 39);
+        this.field_Zc.addLast((IntrusiveNode) (var4), (byte) 39);
     }
 
     final void x(int param0) {

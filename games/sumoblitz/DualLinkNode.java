@@ -28,7 +28,7 @@ class DualLinkNode extends IntrusiveNode {
         this.secondaryPrevious = null;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_k = null;
         if (param0 <= 27) {

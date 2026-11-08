@@ -176,7 +176,7 @@ final class mo extends tt {
     }
 
     final static void a(int param0, int param1) {
-        lr.a(nt.field_m[param1], (byte) 56);
+        lr.a(TimedSceneEffect.field_m[param1], (byte) 56);
         int var2 = 29 % ((param0 + 73) / 48);
     }
 
@@ -186,7 +186,7 @@ final class mo extends tt {
         int var4;
         int[] var5;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        this.field_x = td.a(this.field_v, -50);
+        this.field_x = MusicPatch.a(this.field_v, -50);
         this.d(param0 + 126);
         for (var2 = this.field_s - 1; var2 >= 1; var2--) {
           var3 = this.field_u[var2];
@@ -218,7 +218,7 @@ final class mo extends tt {
         if (param2 != 30643) {
           return false;
         }
-        return bj.a(param1, (byte) -113, param0) & (((8192 & param1) != 0 ? true : false) | lg.a(param1, param2 ^ -30697, param0) | mb.a(true, param0, param1));
+        return bj.a(param1, (byte) -113, param0) & (((8192 & param1) != 0 ? true : false) | lg.a(param1, param2 ^ -30697, param0) | GameInstructions.a(true, param0, param1));
     }
 
     private final int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -327,7 +327,7 @@ final class mo extends tt {
         return (param1 * (-var16 + var17) >> 12) + var16;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         field_t = null;
         field_n = null;

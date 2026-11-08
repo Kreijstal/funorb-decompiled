@@ -100,11 +100,11 @@ final class t extends gd {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_s = null;
         if (param0 != 1) {
-          t.f(-122);
+          t.releaseStatics(-122);
         }
     }
 

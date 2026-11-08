@@ -11,7 +11,7 @@ final class lj {
         this(param0, false);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 108) {
           field_a = (int[]) null;
@@ -61,7 +61,7 @@ final class lj {
 
     final String a(boolean param0) {
         if (!param0) {
-          lj.a((byte) 48);
+          lj.releaseStatics((byte) 48);
           return this.field_c;
         }
         return this.field_c;

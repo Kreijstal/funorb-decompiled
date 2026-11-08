@@ -15,18 +15,18 @@ final class of extends IntrusiveNode {
 
     final static of a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = Sumoblitz.field_L ? 1 : 0;
-        of var5 = (of) (oi.field_b.b(param1 - 107));
+        of var5 = (of) (oi.field_b.first(param1 - 107));
         while (var5 != null) {
           if (~param2 == ~var5.field_p) {
             return var5;
           }
-          var5 = (of) (oi.field_b.d((byte) 18));
+          var5 = (of) (oi.field_b.next((byte) 18));
         }
         var5 = new of();
         var5.field_s = param0;
         var5.field_l = param4;
         var5.field_p = param2;
-        oi.field_b.a((IntrusiveNode) (var5), (byte) 39);
+        oi.field_b.addLast((IntrusiveNode) (var5), (byte) 39);
         if (param1 == 1) {
           pd.a((byte) -65, param3, var5);
           return var5;
@@ -60,7 +60,7 @@ final class of extends IntrusiveNode {
                 var4 = var4 + var2.substring(var3);
               }
               var5 = new java.net.URL(param1.getCodeBase(), var4);
-              param1.getAppletContext().showDocument(td.a((byte) 122, param1, var5), "_self");
+              param1.getAppletContext().showDocument(MusicPatch.a((byte) 122, param1, var5), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

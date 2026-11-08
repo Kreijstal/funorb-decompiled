@@ -114,7 +114,7 @@ abstract class ao extends UiWidget implements ug {
             return false;
           }
           if (param2 < 9) {
-            ao.a(-24);
+            ao.releaseStatics(-24);
           }
           var9 = this.field_x;
           var5 = var9;
@@ -631,7 +631,7 @@ abstract class ao extends UiWidget implements ug {
         this.e(false);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         unableToConnectToText = null;
         field_y = null;
         if (param0 != 0) {

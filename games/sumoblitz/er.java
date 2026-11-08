@@ -14,17 +14,17 @@ final class er {
 
     final static void a(boolean param0) {
         GraphicsToolkit var2 = nq.field_h.a(-117);
-        bq.field_c = var2.a(SocketConnector.field_a, ci.field_g, true);
+        LegacyOpenGlEffect.field_c = var2.a(SocketConnector.field_a, ci.field_g, true);
         gt.field_db = var2.a(hu.field_c, mn.field_b, true);
         uq.field_a = var2.a(qr.field_a, OpenGlTransparentWaterEffect.field_i, true);
         qv.field_k = var2.a(sv.field_a, au.field_j, true);
         hc.field_e = var2.a(ma.field_b, ld.field_F, true);
         be.field_t = var2.a(sq.field_b, ProxySocketConnector.field_f, true);
         up.field_c = aj.a(pe.field_F, var2, 28513);
-        hf.field_H = aj.a(rh.field_q, var2, 28513);
+        hf.field_H = aj.a(MidiNoteMixer.field_q, var2, 28513);
         qw.field_a = aj.a(hi.field_b, var2, 28513);
-        pi.field_d = hf.a(var2, gk.field_N, (byte) -11);
-        uj.field_a = hf.a(var2, ud.field_p, (byte) -11);
+        pi.field_d = hf.a(var2, CompactMeshGeometry.field_N, (byte) -11);
+        uj.field_a = hf.a(var2, MusicCrossfadeStream.field_p, (byte) -11);
         MouseWheelInput.field_b = hf.a(var2, IntrusiveNode.field_d, (byte) -11);
         jt.field_y = hf.a(var2, rc.field_i, (byte) -11);
         il.field_b = hf.a(var2, hc.field_b, (byte) -11);
@@ -43,7 +43,7 @@ final class er {
         dc.field_ab = aj.a(kk.field_e, var2, 28513);
         hv.field_d = aj.a(ks.field_w, var2, 28513);
         s.field_n = aj.a(fl.field_r, var2, 28513);
-        ak.field_a = aj.a(kr.field_b, var2, 28513);
+        MenuScreen.field_a = aj.a(kr.field_b, var2, 28513);
         mr.field_e = aj.a(qk.field_V, var2, 28513);
         if (param0) {
           field_c = (ResourceArchive) null;
@@ -54,7 +54,7 @@ final class er {
           th.field_B = hf.a(var2, lh.field_k, (byte) -11);
           aj.a(eu.field_a, var2, 28513);
           IntrusiveDeque.field_d = hf.a(var2, bl.field_a, (byte) -11);
-          ud.field_q = aj.a(uj.field_c, var2, 28513);
+          MusicCrossfadeStream.field_q = aj.a(uj.field_c, var2, 28513);
           hf.a(var2, df.field_d, (byte) -11);
           aj.a(cl.field_v, var2, 28513);
           uc.field_a = hf.a(var2, kq.field_T, (byte) -11);
@@ -68,7 +68,7 @@ final class er {
           dj.field_l = hf.a(var2, no.field_c, (byte) -11);
           hv.field_b = hf.a(var2, rt.field_E, (byte) -11);
           OpenGlEnvironmentWaterEffect.field_i = hf.a(var2, mn.field_c, (byte) -11);
-          an.field_f = hf.a(var2, gw.field_C, (byte) -11);
+          an.field_f = hf.a(var2, SceneryParticle.field_C, (byte) -11);
           wm.field_a = hf.a(var2, wf.field_a, (byte) -11);
           si.field_d = hf.a(var2, ml.field_p, (byte) -11);
           kw.field_a = hf.a(var2, th.field_C, (byte) -11);
@@ -77,7 +77,7 @@ final class er {
           ok.field_f = aj.a(hp.field_n, var2, 28513);
           ff.field_k = aj.a(ni.field_h, var2, 28513);
           hf.a(var2, ArchiveCatalog.field_f, (byte) -11);
-          hf.a(var2, uu.field_o, (byte) -11);
+          hf.a(var2, MusicVoice.field_o, (byte) -11);
           si.field_e = hf.a(var2, lr.field_c, (byte) -11);
           aj.a(ei.field_b, var2, 28513);
           kk.field_f = hf.a(var2, rs.field_e, (byte) -11);
@@ -91,8 +91,8 @@ final class er {
           OpenGlUnderwaterEffect.field_t = hf.a(var2, tc.field_i, (byte) -11);
           f.field_r = aj.a(hc.field_a, var2, 28513);
           vl.field_c = hf.a(var2, rl.field_o, (byte) -11);
-          wo.field_b = new hr[]{mn.field_j, dj.field_l, hv.field_b};
-          tc.field_j = new hr[]{an.field_f, wm.field_a, si.field_d};
+          wo.field_b = new ToolkitSprite[]{mn.field_j, dj.field_l, hv.field_b};
+          tc.field_j = new ToolkitSprite[]{an.field_f, wm.field_a, si.field_d};
           Sumoblitz.field_J = aj.a(pq.field_F, var2, 28513);
           return;
         }
@@ -103,7 +103,7 @@ final class er {
         th.field_B = hf.a(var2, lh.field_k, (byte) -11);
         aj.a(eu.field_a, var2, 28513);
         IntrusiveDeque.field_d = hf.a(var2, bl.field_a, (byte) -11);
-        ud.field_q = aj.a(uj.field_c, var2, 28513);
+        MusicCrossfadeStream.field_q = aj.a(uj.field_c, var2, 28513);
         hf.a(var2, df.field_d, (byte) -11);
         aj.a(cl.field_v, var2, 28513);
         uc.field_a = hf.a(var2, kq.field_T, (byte) -11);
@@ -117,7 +117,7 @@ final class er {
         dj.field_l = hf.a(var2, no.field_c, (byte) -11);
         hv.field_b = hf.a(var2, rt.field_E, (byte) -11);
         OpenGlEnvironmentWaterEffect.field_i = hf.a(var2, mn.field_c, (byte) -11);
-        an.field_f = hf.a(var2, gw.field_C, (byte) -11);
+        an.field_f = hf.a(var2, SceneryParticle.field_C, (byte) -11);
         wm.field_a = hf.a(var2, wf.field_a, (byte) -11);
         si.field_d = hf.a(var2, ml.field_p, (byte) -11);
         kw.field_a = hf.a(var2, th.field_C, (byte) -11);
@@ -126,7 +126,7 @@ final class er {
         ok.field_f = aj.a(hp.field_n, var2, 28513);
         ff.field_k = aj.a(ni.field_h, var2, 28513);
         hf.a(var2, ArchiveCatalog.field_f, (byte) -11);
-        hf.a(var2, uu.field_o, (byte) -11);
+        hf.a(var2, MusicVoice.field_o, (byte) -11);
         si.field_e = hf.a(var2, lr.field_c, (byte) -11);
         aj.a(ei.field_b, var2, 28513);
         kk.field_f = hf.a(var2, rs.field_e, (byte) -11);
@@ -140,8 +140,8 @@ final class er {
         OpenGlUnderwaterEffect.field_t = hf.a(var2, tc.field_i, (byte) -11);
         f.field_r = aj.a(hc.field_a, var2, 28513);
         vl.field_c = hf.a(var2, rl.field_o, (byte) -11);
-        wo.field_b = new hr[]{mn.field_j, dj.field_l, hv.field_b};
-        tc.field_j = new hr[]{an.field_f, wm.field_a, si.field_d};
+        wo.field_b = new ToolkitSprite[]{mn.field_j, dj.field_l, hv.field_b};
+        tc.field_j = new ToolkitSprite[]{an.field_f, wm.field_a, si.field_d};
         Sumoblitz.field_J = aj.a(pq.field_F, var2, 28513);
     }
 
@@ -357,7 +357,7 @@ final class er {
         return this.field_b == 102 ? true : false;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_h = (int[]) null;
           field_c = null;

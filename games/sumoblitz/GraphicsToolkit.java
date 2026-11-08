@@ -82,9 +82,9 @@ abstract class GraphicsToolkit {
         int var1 = -102 % ((param0 - 39) / 38);
     }
 
-    final hr a(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    final ToolkitSprite a(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         RuntimeException var7 = null;
-        hr stackIn_3_0 = null;
+        ToolkitSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -109,7 +109,7 @@ abstract class GraphicsToolkit {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != 0) {
           return;
@@ -149,7 +149,7 @@ abstract class GraphicsToolkit {
         this.b(0, 0);
     }
 
-    abstract da a(ta param0, ri[] param1, boolean param2);
+    abstract da a(ta param0, SpriteData[] param1, boolean param2);
 
     abstract void aa(int param0, int param1, int param2, int param3, int param4, int param5);
 
@@ -209,7 +209,7 @@ abstract class GraphicsToolkit {
 
     abstract void K(int[] param0);
 
-    void a(hr param0, boolean param1) {
+    void a(ToolkitSprite param0, boolean param1) {
         try {
           this.a(this.a(param0, param1 ? this.a(param0.c(), param0.a()) : null));
         } catch (RuntimeException runtimeException) {
@@ -242,11 +242,11 @@ abstract class GraphicsToolkit {
         }
     }
 
-    abstract hr a(ri param0, boolean param1);
+    abstract ToolkitSprite a(SpriteData param0, boolean param1);
 
     abstract void GA(int param0);
 
-    abstract hr a(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
+    abstract ToolkitSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
 
     GraphicsToolkit(d param0) {
         int var2_int = 0;

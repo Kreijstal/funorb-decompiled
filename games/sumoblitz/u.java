@@ -32,7 +32,7 @@ final class u extends hf implements ai {
               }
             }
           } else {
-            var3 = fr.unfortunatelyYourConfigurationDoesnText;
+            var3 = LegacyOpenGlGraphicsToolkit.unfortunatelyYourConfigurationDoesnText;
           }
           var4 = new UiWidget((String) (var3), (qm) null);
           var4.field_p = 80;
@@ -63,12 +63,12 @@ final class u extends hf implements ai {
         }
     }
 
-    final static td a(ResourceArchive param0, int param1, int param2) {
+    final static MusicPatch a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         Object stackIn_4_0 = null;
-        td stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -80,11 +80,11 @@ final class u extends hf implements ai {
           var4 = param0.c(-14296, param1);
           var3 = var4;
           if (var4 != null) {
-            stackIn_6_0 = new td(var4);
+            stackIn_6_0 = new MusicPatch(var4);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (td) (stackIn_4_0);
+          return (MusicPatch) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -181,13 +181,13 @@ final class u extends hf implements ai {
         }
     }
 
-    final static void a(tv param0, int param1, byte param2, int param3, boolean param4) {
+    final static void a(MusicTrack param0, int param1, byte param2, int param3, boolean param4) {
         RuntimeException var5 = null;
         ResourceArchive var6 = null;
-        ud stackIn_2_0;
+        MusicCrossfadeStream stackIn_2_0;
         int stackIn_2_1;
         int stackIn_2_2;
-        tv stackIn_2_3;
+        MusicTrack stackIn_2_3;
         boolean stackIn_3_4 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -197,9 +197,9 @@ final class u extends hf implements ai {
           stackIn_2_0 = qr.field_b;
           stackIn_2_1 = param2 + 88;
           stackIn_2_2 = 1000000;
-          stackIn_2_3 = (tv) (param0);
+          stackIn_2_3 = (MusicTrack) (param0);
           stackIn_3_4 = !(param4);
-          ((ud) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param3, param1);
+          ((MusicCrossfadeStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param3, param1);
           if (param2 == -87) {
             return;
           }

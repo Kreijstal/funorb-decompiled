@@ -9,7 +9,7 @@ final class rs {
     static tf field_c;
     static int field_g;
     static int field_h;
-    static ri field_e;
+    static SpriteData field_e;
 
     final static int a(boolean param0, String param1, int param2, String param3, int param4, int param5, String param6) {
         lj var7 = null;
@@ -67,7 +67,7 @@ final class rs {
         if (param1 == -29816) {
           return this.field_a[param0];
         }
-        field_e = (ri) null;
+        field_e = (SpriteData) null;
         return this.field_a[param0];
     }
 
@@ -129,7 +129,7 @@ final class rs {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -26791) {
           return;
         }
@@ -214,7 +214,7 @@ final class rs {
 
     private final void a(int param0, int param1, boolean param2) {
         if (param2) {
-          field_e = (ri) null;
+          field_e = (SpriteData) null;
         }
         if (param1 > this.field_f) {
           this.field_f = param1;

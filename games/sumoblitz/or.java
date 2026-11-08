@@ -94,7 +94,7 @@ final class or extends bp implements ru {
           this.field_i = param3;
           this.field_j = param4;
           this.field_e.a((ed) (this), 92);
-          jaggl.OpenGL.glTexImage2Dub(this.field_h, 0, this.e(-27), param3, param4, 0, te.a(-21339, this.field_c), ws.a(this.field_g, (byte) 119), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_h, 0, this.e(-27), param3, param4, 0, IntrusiveNodeHashTable.a(-21339, this.field_c), ws.a(this.field_g, (byte) 119), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -108,7 +108,7 @@ final class or extends bp implements ru {
           this.field_e.a((ed) (this), 113);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Dub(this.field_h, 0, this.e(-8), param2, param3, 0, te.a(-21339, this.field_c), 5121, param4, param5);
+          jaggl.OpenGL.glTexImage2Dub(this.field_h, 0, this.e(-8), param2, param3, 0, IntrusiveNodeHashTable.a(-21339, this.field_c), 5121, param4, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
@@ -137,7 +137,7 @@ final class or extends bp implements ru {
           this.field_i = param2;
           this.field_e.a((ed) (this), 95);
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Df(this.field_h, 0, this.e(-103), param2, param3, 0, te.a(-21339, this.field_c), 5126, param4, param5 * 4);
+          jaggl.OpenGL.glTexImage2Df(this.field_h, 0, this.e(-103), param2, param3, 0, IntrusiveNodeHashTable.a(-21339, this.field_c), 5126, param4, param5 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');

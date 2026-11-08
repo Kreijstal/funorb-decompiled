@@ -26,7 +26,7 @@ final class qe {
         return var9;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_a = (gf) null;
         }

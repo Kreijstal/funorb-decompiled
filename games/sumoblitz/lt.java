@@ -53,7 +53,7 @@ final class lt extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 != 1) {
           field_m = (PlatformTaskDispatcher) null;

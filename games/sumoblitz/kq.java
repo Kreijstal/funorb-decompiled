@@ -4,10 +4,10 @@
 import java.io.*;
 
 final class kq extends hf implements ai {
-    static ri[] field_S;
+    static SpriteData[] field_S;
     static String tryAgainText;
     static String playerText;
-    static ri field_T;
+    static SpriteData field_T;
     static String youHave1UnreadText;
     private wp field_U;
     private wp field_P;
@@ -97,7 +97,7 @@ final class kq extends hf implements ai {
             try {
               var4 = new byte[param0];
               var3 = var4;
-              nt.a(var4, 7039, param1, param0);
+              TimedSceneEffect.a(var4, 7039, param1, param0);
               if (param2 <= 41) {
                 tryAgainText = (String) null;
               }
@@ -213,7 +213,7 @@ final class kq extends hf implements ai {
             return stackIn_8_0;
           }
           if (param0 <= 59) {
-            field_S = (ri[]) null;
+            field_S = (SpriteData[]) null;
           }
           throw new IllegalArgumentException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

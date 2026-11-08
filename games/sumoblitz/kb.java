@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class kb {
-    fr field_g;
+    LegacyOpenGlGraphicsToolkit field_g;
     static se field_d;
     private boolean field_b;
     static volatile int field_i;
@@ -12,7 +12,7 @@ abstract class kb {
     static is field_c;
     int field_f;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_c = null;
         if (!param0) {
@@ -79,7 +79,7 @@ abstract class kb {
         }
     }
 
-    kb(fr param0, int param1, byte[] param2, int param3, boolean param4) {
+    kb(LegacyOpenGlGraphicsToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
         this.field_b = false;
         try {
           this.field_g = param0;

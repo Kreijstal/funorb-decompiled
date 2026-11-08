@@ -7,7 +7,7 @@ final class bj {
     static IntrusiveDeque field_b;
     static int field_a;
     private boolean field_e;
-    static ri field_g;
+    static SpriteData field_g;
     private boolean field_d;
 
     final boolean c(int param0) {
@@ -18,7 +18,7 @@ final class bj {
         return this.field_e;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 > -69) {
           return;

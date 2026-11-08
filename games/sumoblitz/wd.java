@@ -43,7 +43,7 @@ final class wd extends se {
         return pb.field_b;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 88) {
           field_j = null;
           field_f = null;

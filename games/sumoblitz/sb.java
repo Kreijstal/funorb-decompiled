@@ -27,7 +27,7 @@ final class sb {
             throw new RuntimeException("");
           }
           if (param1 != -6708) {
-            sb.a(false);
+            sb.releaseStatics(false);
           }
           if (!mc.b((byte) 120, "jaggl")) {
             throw new RuntimeException("");
@@ -83,7 +83,7 @@ final class sb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_c = 40;
         }
@@ -140,7 +140,7 @@ final class sb {
               dr.field_S[var5[var6].field_e] = var5[var6];
             }
           }
-          ab.field_a = new te(16);
+          ab.field_a = new IntrusiveNodeHashTable(16);
           for (var6 = 0; 9 > var6; var6++) {
             try {
               var2_int = param1.a(0, "engineered_levels/" + (1 + var6) + "/");

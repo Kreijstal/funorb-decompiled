@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class au extends bq {
+final class au extends LegacyOpenGlEffect {
     static int[] field_h;
     private tq field_f;
-    static ri[] field_j;
+    static SpriteData[] field_j;
     static double field_k;
     private boolean field_g;
     static l[] field_i;
@@ -33,7 +33,7 @@ final class au extends bq {
         }
     }
 
-    au(fr param0) {
+    au(LegacyOpenGlGraphicsToolkit param0) {
         super(param0);
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
@@ -89,7 +89,7 @@ final class au extends bq {
 
     final boolean b(byte param0) {
         if (param0 >= -64) {
-          field_j = (ri[]) null;
+          field_j = (SpriteData[]) null;
           return true;
         }
         return true;
@@ -116,13 +116,13 @@ final class au extends bq {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_h = null;
         field_j = null;
         field_e = null;
         if (param0 > -124) {
-          field_j = (ri[]) null;
+          field_j = (SpriteData[]) null;
         }
     }
 
@@ -192,19 +192,19 @@ final class au extends bq {
     }
 
     final static void a(int param0, ResourceArchive param1) {
-        nt.field_m[0] = tv.a(param1, "titlescreen_track");
-        nt.field_m[1] = tv.a(param1, "track2");
-        nt.field_m[2] = tv.a(param1, "track3");
+        TimedSceneEffect.field_m[0] = MusicTrack.a(param1, "titlescreen_track");
+        TimedSceneEffect.field_m[1] = MusicTrack.a(param1, "track2");
+        TimedSceneEffect.field_m[2] = MusicTrack.a(param1, "track3");
         if (param0 != -1509) {
           return;
         }
         try {
-          nt.field_m[3] = tv.a(param1, "track5");
-          nt.field_m[4] = tv.a(param1, "track6");
-          nt.field_m[5] = tv.a(param1, "track7");
-          nt.field_m[6] = tv.a(param1, "win_track");
-          nt.field_m[7] = tv.a(param1, "defeat_track");
-          nt.field_m[8] = tv.a(param1, "challenge_mode_track");
+          TimedSceneEffect.field_m[3] = MusicTrack.a(param1, "track5");
+          TimedSceneEffect.field_m[4] = MusicTrack.a(param1, "track6");
+          TimedSceneEffect.field_m[5] = MusicTrack.a(param1, "track7");
+          TimedSceneEffect.field_m[6] = MusicTrack.a(param1, "win_track");
+          TimedSceneEffect.field_m[7] = MusicTrack.a(param1, "defeat_track");
+          TimedSceneEffect.field_m[8] = MusicTrack.a(param1, "challenge_mode_track");
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "au.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -212,7 +212,7 @@ final class au extends bq {
 
     final static boolean c(int param0) {
         if (param0 != 1) {
-          au.c((byte) 90);
+          au.releaseStatics((byte) 90);
           return true;
         }
         return true;

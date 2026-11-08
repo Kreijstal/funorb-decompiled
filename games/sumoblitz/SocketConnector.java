@@ -9,7 +9,7 @@ abstract class SocketConnector {
     static ta field_a;
     String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 58 % ((param0 - 20) / 45);
         field_a = null;
     }

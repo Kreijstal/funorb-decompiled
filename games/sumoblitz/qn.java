@@ -20,7 +20,7 @@ final class qn {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_b = null;
         field_d = null;
@@ -29,7 +29,7 @@ final class qn {
           field_e = null;
           return;
         }
-        qn.a(-30);
+        qn.releaseStatics(-30);
         creatingAJagexAccountText = null;
         field_e = null;
     }

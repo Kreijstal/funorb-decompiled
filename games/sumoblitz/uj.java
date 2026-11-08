@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uj {
-    static hr[] field_b;
-    static ri[] field_c;
-    static hr field_a;
+    static ToolkitSprite[] field_b;
+    static SpriteData[] field_c;
+    static ToolkitSprite field_a;
 
     final static ah a(int param0, int param1, int param2, byte param3, int param4) {
         if (param3 != 84) {
@@ -13,10 +13,10 @@ final class uj {
         return (ah) ((Object) new dr(param0, param2, param1, param4));
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         if (!param0) {
-          field_c = (ri[]) null;
+          field_c = (SpriteData[]) null;
           field_b = null;
           field_a = null;
           return;
@@ -25,7 +25,7 @@ final class uj {
         field_a = null;
     }
 
-    final static void a(byte param0, int param1, boolean param2, tv param3) {
+    final static void a(byte param0, int param1, boolean param2, MusicTrack param3) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException stackIn_19_0 = null;

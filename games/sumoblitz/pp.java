@@ -37,82 +37,82 @@ final class pp implements Runnable {
         try {
           var5_int = param3 + param1;
           var6 = param0 + param4;
-          if (lk.field_k < param3) {
+          if (SoftwareRasterizer.field_k < param3) {
             stackIn_4_0 = param3;
           } else {
-            stackIn_4_0 = lk.field_k;
+            stackIn_4_0 = SoftwareRasterizer.field_k;
           }
           var7 = stackIn_4_0;
-          if (lk.field_i >= param0) {
-            stackIn_7_0 = lk.field_i;
+          if (SoftwareRasterizer.field_i >= param0) {
+            stackIn_7_0 = SoftwareRasterizer.field_i;
           } else {
             stackIn_7_0 = param0;
           }
           var8 = stackIn_7_0;
-          if (var5_int >= lk.field_j) {
-            stackIn_10_0 = lk.field_j;
+          if (var5_int >= SoftwareRasterizer.field_j) {
+            stackIn_10_0 = SoftwareRasterizer.field_j;
           } else {
             stackIn_10_0 = var5_int;
           }
           var9 = stackIn_10_0;
-          if (lk.field_e <= var6) {
-            stackIn_13_0 = lk.field_e;
+          if (SoftwareRasterizer.field_e <= var6) {
+            stackIn_13_0 = SoftwareRasterizer.field_e;
           } else {
             stackIn_13_0 = var6;
           }
           var10 = stackIn_13_0;
-          if (lk.field_k <= param3 &&
-            lk.field_j > param3) {
-            var11 = param3 + var8 * lk.field_b;
+          if (SoftwareRasterizer.field_k <= param3 &&
+            SoftwareRasterizer.field_j > param3) {
+            var11 = param3 + var8 * SoftwareRasterizer.field_b;
             var12 = 1 + var10 - var8 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              lk.field_a[var11] = 16777215;
-              var11 = var11 + lk.field_b * 2;
+              SoftwareRasterizer.field_a[var11] = 16777215;
+              var11 = var11 + SoftwareRasterizer.field_b * 2;
             }
           }
           if (param2 != -13181) {
             pp.a(5, 111, 100, -88, -57);
           }
-          if (lk.field_i <= param0 &&
-            var6 < lk.field_e) {
-            var11Lifetime1 = param0 * lk.field_b + var7;
+          if (SoftwareRasterizer.field_i <= param0 &&
+            var6 < SoftwareRasterizer.field_e) {
+            var11Lifetime1 = param0 * SoftwareRasterizer.field_b + var7;
             var12Lifetime1 = -var7 + (1 + var9) >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              lk.field_a[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.field_a[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (lk.field_k <= var5_int &&
-            var5_int < lk.field_j) {
-            var11Lifetime2 = var5_int + lk.field_b * ((1 & var5_int - param3) + var8);
+          if (SoftwareRasterizer.field_k <= var5_int &&
+            var5_int < SoftwareRasterizer.field_j) {
+            var11Lifetime2 = var5_int + SoftwareRasterizer.field_b * ((1 & var5_int - param3) + var8);
             var12Lifetime2 = var10 + 1 - var8 >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              lk.field_a[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + 2 * lk.field_b;
+              SoftwareRasterizer.field_a[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + 2 * SoftwareRasterizer.field_b;
             }
           }
-          if (lk.field_i <= param0 &&
-            lk.field_e > var6) {
-            var11Lifetime3 = (1 & -param0 + var6) + (var7 + lk.field_b * var6);
+          if (SoftwareRasterizer.field_i <= param0 &&
+            SoftwareRasterizer.field_e > var6) {
+            var11Lifetime3 = (1 & -param0 + var6) + (var7 + SoftwareRasterizer.field_b * var6);
             var12Lifetime3 = -var7 + (1 + var9) >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 return;
               }
-              lk.field_a[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.field_a[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -124,10 +124,10 @@ final class pp implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 2) {
-          pp.a(-25);
+          pp.releaseStatics(-25);
           membersText = null;
           padTypeNames = null;
           return;

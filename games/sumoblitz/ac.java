@@ -32,9 +32,9 @@ class ac extends wp {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
-          ac.d(true);
+          ac.releaseStatics(true);
           field_F = null;
           return;
         }

@@ -29,7 +29,7 @@ final class m extends hf {
           super.b(112, param1, param2);
           tq.field_a.a(this.field_W, param1 + (this.field_q >> 1), param2 + 103, 16777215, -1);
           if (null != this.field_U) {
-            lk.f(20 + param1, param2 + 120 - 7, 260, 8421504);
+            SoftwareRasterizer.f(20 + param1, param2 + 120 - 7, 260, 8421504);
             tq.field_a.a(this.field_U, param1 + 20, 128 + param2, 260, 100, 16777215, -1, 1, 0, tq.field_a.field_s);
           }
           return;
@@ -38,12 +38,12 @@ final class m extends hf {
         super.b(112, param1, param2);
         tq.field_a.a(this.field_W, param1 + (this.field_q >> 1), param2 + 103, 16777215, -1);
         if (null != this.field_U) {
-          lk.f(20 + param1, param2 + 120 - 7, 260, 8421504);
+          SoftwareRasterizer.f(20 + param1, param2 + 120 - 7, 260, 8421504);
           tq.field_a.a(this.field_U, param1 + 20, 128 + param2, 260, 100, 16777215, -1, 1, 0, tq.field_a.field_s);
         }
     }
 
-    public static void e(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         namesCannotStartOrText = null;
         field_O = null;
         if (param0) {

@@ -4,16 +4,16 @@
 final class jj {
     static IntrusiveDeque field_a;
     private String field_e;
-    static ri[] field_c;
+    static SpriteData[] field_c;
     static int field_b;
     static int field_d;
     static qr field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_f = null;
         if (param0 != 0) {
-          jj.a(-108);
+          jj.releaseStatics(-108);
           field_a = null;
           return;
         }

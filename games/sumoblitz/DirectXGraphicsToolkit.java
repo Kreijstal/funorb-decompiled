@@ -857,7 +857,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           if (param0 == nl.field_p) {
             return 21;
           }
-          if (param0 == te.field_f) {
+          if (param0 == IntrusiveNodeHashTable.field_f) {
             return 28;
           }
           if (param0 == kd.field_b) {
@@ -924,7 +924,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Cc.a(174, this.field_wc);
     }
 
-    final void a(hr param0, boolean param1) {
+    final void a(ToolkitSprite param0, boolean param1) {
     }
 
     final void o(int param0) {

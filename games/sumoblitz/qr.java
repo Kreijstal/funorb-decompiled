@@ -6,7 +6,7 @@ final class qr {
     static ta field_a;
     static gf field_e;
     static int[] field_d;
-    static ud field_b;
+    static MusicCrossfadeStream field_b;
 
     final static an a(String[] args, int param1) {
         an var2 = null;
@@ -49,7 +49,7 @@ final class qr {
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          vk.a(qu.field_k, GameApplet.field_l, (byte) -107, se.field_d, param1, 0, true);
+          vk.a(GameplaySession.field_k, GameApplet.field_l, (byte) -107, se.field_d, param1, 0, true);
           if (param0 != 13136) {
             field_d = (int[]) null;
           }
@@ -73,11 +73,11 @@ final class qr {
         if (param0 != 17704) {
           return false;
         }
-        stackIn_8_0 = (jj.field_f == this) || (uu.field_l == this) || (this == ga.field_j);
+        stackIn_8_0 = (jj.field_f == this) || (MusicVoice.field_l == this) || (this == ga.field_j);
         return stackIn_8_0;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_c = null;
         field_a = null;

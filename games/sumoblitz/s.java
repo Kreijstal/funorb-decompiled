@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class s extends IntrusiveNode {
-    static hr[] field_n;
+    static ToolkitSprite[] field_n;
     static int field_o;
     int field_l;
     int field_p;
@@ -14,7 +14,7 @@ final class s extends IntrusiveNode {
     static IntrusiveDeque field_u;
     static String thisGameHasBeenText;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 18232) {
           thisGameHasBeenText = null;
           field_n = null;

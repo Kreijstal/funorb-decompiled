@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gb extends nt {
+final class gb extends TimedSceneEffect {
     private boolean field_u;
     static il field_t;
     static long field_s;
@@ -11,7 +11,7 @@ final class gb extends nt {
         this.field_u = false;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }

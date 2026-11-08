@@ -8,7 +8,7 @@ final class ew extends na {
     final static eg a(byte param0, int param1) {
         int var3 = 115 % ((param0 - 30) / 47);
         eg var2 = new eg();
-        wr.field_E.a((IntrusiveNode) (var2), (byte) 39);
+        wr.field_E.addLast((IntrusiveNode) (var2), (byte) 39);
         ou.a(127, param1);
         return var2;
     }

@@ -14,10 +14,10 @@ final class dg extends ie {
           this.field_z = (IntrusiveDeque) null;
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_z);
-        UiWidget var6 = (UiWidget) (var5.a((byte) -119));
+        UiWidget var6 = (UiWidget) (var5.last((byte) -119));
         while (var6 != null) {
           var6.a(this.field_r + param0, param1 + this.field_v, (byte) -105, param3);
-          var6 = (UiWidget) (var5.c((byte) 87));
+          var6 = (UiWidget) (var5.previous((byte) 87));
         }
     }
 
@@ -27,12 +27,12 @@ final class dg extends ie {
           this.h(45);
         }
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
-        rg var3 = (rg) (var2.b((byte) -80));
+        rg var3 = (rg) (var2.first((byte) -80));
         while (var3 != null) {
           if (var3.g(-28778)) {
             var3.unlink(false);
           }
-          var3 = (rg) (var2.b(0));
+          var3 = (rg) (var2.next(0));
         }
         this.field_y = (UiWidget) ((Object) this.e((byte) 54));
     }
@@ -43,18 +43,18 @@ final class dg extends ie {
           return;
         }
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
-        rg var3 = (rg) (var2.b((byte) -80));
+        rg var3 = (rg) (var2.first((byte) -80));
         while (var3 != null) {
           if (var3.h(0)) {
             var3.unlink(false);
           }
-          var3 = (rg) (var2.b(0));
+          var3 = (rg) (var2.next(0));
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 128) {
-          dg.g(-75);
+          dg.releaseStatics(-75);
         }
         field_B = null;
     }
@@ -65,7 +65,7 @@ final class dg extends ie {
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_z);
-        var3 = (rg) (var2.b((byte) -80));
+        var3 = (rg) (var2.first((byte) -80));
         if (param0 != 54) {
           this.field_z = (IntrusiveDeque) null;
         }
@@ -73,7 +73,7 @@ final class dg extends ie {
           if (var3.field_D) {
             return var3;
           }
-          var3 = (rg) (var2.b(param0 - 54));
+          var3 = (rg) (var2.next(param0 - 54));
         }
         return null;
     }
@@ -92,12 +92,12 @@ final class dg extends ie {
           field_B = (int[]) null;
         }
         var2 = new IntrusiveDequeCursor(this.field_z);
-        var3 = (rg) (var2.b((byte) -80));
+        var3 = (rg) (var2.first((byte) -80));
         while (var3 != null) {
           if (var3.field_D) {
             return var3.f(36);
           }
-          var3 = (rg) (var2.b(0));
+          var3 = (rg) (var2.next(0));
         }
         return null;
     }
@@ -114,7 +114,7 @@ final class dg extends ie {
             throw new IllegalArgumentException();
           }
           var3 = (rg) (param1);
-          this.field_z.a(var3, -10295);
+          this.field_z.addFirst(var3, -10295);
           var3.field_D = true;
           var3.a((UiWidget) (this), (byte) 61);
           if (param0 <= 90) {
@@ -139,10 +139,10 @@ final class dg extends ie {
         int var5 = Sumoblitz.field_L ? 1 : 0;
         int var4 = 67 / ((35 - param0) / 49);
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
-        rg var3 = (rg) (var2.b((byte) -80));
+        rg var3 = (rg) (var2.first((byte) -80));
         while (var3 != null) {
           var3.field_D = false;
-          var3 = (rg) (var2.b(0));
+          var3 = (rg) (var2.next(0));
         }
         this.field_y = null;
     }

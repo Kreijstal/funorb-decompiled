@@ -3,14 +3,14 @@
  */
 final class wh extends DualLinkNode {
     int field_v;
-    private fr field_u;
+    private LegacyOpenGlGraphicsToolkit field_u;
     private long field_t;
     static int field_x;
     static String clickToAssignPointsText;
     static int field_s;
     static String[] field_w;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         clickToAssignPointsText = null;
         if (param0 != -1) {
           return;
@@ -26,7 +26,7 @@ final class wh extends DualLinkNode {
         if (param0 == 30611) {
           return;
         }
-        this.field_u = (fr) null;
+        this.field_u = (LegacyOpenGlGraphicsToolkit) null;
     }
 
     final static String a(byte param0) {
@@ -65,7 +65,7 @@ final class wh extends DualLinkNode {
         return this.field_t;
     }
 
-    wh(fr param0, int param1, int param2) {
+    wh(LegacyOpenGlGraphicsToolkit param0, int param1, int param2) {
         try {
           this.field_u = param0;
           this.field_v = param1 * param2;

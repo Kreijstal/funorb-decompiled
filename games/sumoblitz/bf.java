@@ -7,7 +7,7 @@ final class bf {
     static String field_d;
     static String[] field_c;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_d = null;
         if (param0 != 18260) {

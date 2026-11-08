@@ -10,7 +10,7 @@ final class nj {
     int field_g;
     static int field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 5 / ((13 - param0) / 51);
         field_a = null;
         endGameText = null;

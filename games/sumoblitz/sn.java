@@ -3,11 +3,11 @@
  */
 final class sn {
     static ResourceArchive field_d;
-    private fr field_b;
+    private LegacyOpenGlGraphicsToolkit field_b;
     long field_c;
     static Sprite field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 > -30) {
           field_a = (Sprite) null;
@@ -17,7 +17,7 @@ final class sn {
         field_d = null;
     }
 
-    sn(fr param0, long param1, mk[] param2) {
+    sn(LegacyOpenGlGraphicsToolkit param0, long param1, mk[] param2) {
         try {
           this.field_c = param1;
           this.field_b = param0;

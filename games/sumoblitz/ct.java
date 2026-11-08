@@ -6,7 +6,7 @@ import java.util.*;
 final class ct extends ml {
     static int field_x;
     static java.applet.Applet field_z;
-    static hr[] field_A;
+    static ToolkitSprite[] field_A;
     private byte[] field_y;
 
     ct() {
@@ -94,7 +94,7 @@ final class ct extends ml {
         field_x = 71;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_z = null;
         if (param0 >= -15) {
           return;
@@ -112,7 +112,7 @@ final class ct extends ml {
         in.field_z = 0;
         nd.field_F = 1;
         iw.field_b = 0;
-        td.field_m = false;
+        MusicPatch.field_m = false;
         if (param0) {
           ke.a(false);
           oc.field_e = 1000;

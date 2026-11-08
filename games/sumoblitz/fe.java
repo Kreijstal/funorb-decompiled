@@ -9,7 +9,7 @@ final class fe extends ah {
         super(0, 0, param0, param1);
     }
 
-    final static dj a(int param0, qp param1) {
+    final static dj a(int param0, PcmSample param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         dj stackIn_1_0 = null;
@@ -37,8 +37,8 @@ final class fe extends ah {
 
     public static void n(byte param0) {
         if (param0 > -63) {
-          qp var2 = (qp) null;
-          fe.a(44, (qp) null);
+          PcmSample var2 = (PcmSample) null;
+          fe.a(44, (PcmSample) null);
           field_S = null;
           return;
         }

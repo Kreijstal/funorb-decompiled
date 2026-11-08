@@ -3,13 +3,13 @@
  */
 final class kr {
     static String[] field_f;
-    static ri[] field_b;
+    static SpriteData[] field_b;
     static tf field_a;
     static int[] field_d;
     static int field_c;
     static int field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_a = null;
         field_d = null;
@@ -58,7 +58,7 @@ final class kr {
           Sumoblitz.field_H = Sumoblitz.field_H + 1;
           rb.a(-129);
           if (param1 > -16) {
-            kr.a(28);
+            kr.releaseStatics(28);
             if (param0) {
               jj.field_d = jj.field_d + 1;
               o.a((byte) -56);
@@ -78,7 +78,7 @@ final class kr {
           }
           return;
         }
-        kr.a(28);
+        kr.releaseStatics(28);
         if (param0) {
           jj.field_d = jj.field_d + 1;
           o.a((byte) -56);

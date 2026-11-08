@@ -6,16 +6,16 @@ final class rn {
 
     final static void a(String param0, int param1, int param2, int param3, int param4) {
         try {
-          ig.field_b.a((IntrusiveNode) (new to(param0, param3, param1, param2)), (byte) 39);
+          ig.field_b.addLast((IntrusiveNode) (new to(param0, param3, param1, param2)), (byte) 39);
           if (param4 != 28807) {
-            rn.a(16);
+            rn.releaseStatics(16);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         unfortunatelyYouAreNotText = null;
         if (param0 != 13921) {
           String var2 = (String) null;

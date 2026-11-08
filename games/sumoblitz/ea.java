@@ -5,7 +5,7 @@ final class ea {
     static ts field_a;
     static String difficultyText;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -48 % ((-58 - param0) / 49);
         field_a = null;
         difficultyText = null;

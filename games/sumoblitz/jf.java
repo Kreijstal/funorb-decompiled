@@ -47,7 +47,7 @@ final class jf {
         return 0 != (2048 & param0) ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 > 78) {
           field_e = null;
@@ -57,7 +57,7 @@ final class jf {
           field_f = null;
           return;
         }
-        jf.a((byte) 7);
+        jf.releaseStatics((byte) 7);
         field_e = null;
         thisIsAHiddenText = null;
         field_d = null;

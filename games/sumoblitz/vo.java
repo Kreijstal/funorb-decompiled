@@ -128,7 +128,7 @@ final class vo extends ao implements ai {
             var3 = (CharSequence) null;
             vo.a((CharSequence) null, 104);
           }
-          var2 = new bo(param1, er.field_h, av.field_C, vg.field_k, we.field_B, iv.field_l, ag.field_d);
+          var2 = new bo(param1, er.field_h, av.field_C, vg.field_k, we.field_B, LegacyOpenGlEffectManager.field_l, ag.field_d);
           tl.a((byte) -60);
           stackIn_6_0 = var2;
           return stackIn_6_0;

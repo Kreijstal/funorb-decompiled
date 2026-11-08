@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends nt {
+final class be extends TimedSceneEffect {
     static ResourceArchive field_s;
     private boolean field_u;
     private static long[] field_v;
@@ -62,7 +62,7 @@ final class be extends nt {
         return 6407;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_v = null;
         if (param0 != 6408) {

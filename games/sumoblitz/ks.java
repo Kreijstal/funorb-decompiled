@@ -3,10 +3,10 @@
  */
 final class ks extends ff {
     static int field_v;
-    static ri[] field_w;
+    static SpriteData[] field_w;
     static String emailLoginText;
     static cp field_x;
-    static ri field_t;
+    static SpriteData field_t;
     private byte[] field_s;
 
     ks() {

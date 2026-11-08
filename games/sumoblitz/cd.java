@@ -6,7 +6,7 @@ final class cd {
     int field_b;
     static int field_d;
     int field_e;
-    static ri[] field_c;
+    static SpriteData[] field_c;
     static int[] field_f;
     int field_g;
 
@@ -16,13 +16,13 @@ final class cd {
           return true;
         }
         if (param0) {
-          field_c = (ri[]) null;
+          field_c = (SpriteData[]) null;
           return false;
         }
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -82) {
           field_d = -61;
           field_c = null;

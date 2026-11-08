@@ -59,7 +59,7 @@ final class gu extends ka {
           this.field_e = param1;
           if (param3 ||
             jf.a(this.field_e, (byte) -97, this.field_c)) {
-            this.field_i = new lr(te.a(false, this.field_e, this.field_c));
+            this.field_i = new lr(IntrusiveNodeHashTable.a(false, this.field_e, this.field_c));
           }
           if (param3 ||
             sg.a(this.field_c, this.field_e, 37)) {
@@ -93,10 +93,10 @@ final class gu extends ka {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         musicText = null;
         if (!param0) {
-          gu.a(true);
+          gu.releaseStatics(true);
         }
     }
 

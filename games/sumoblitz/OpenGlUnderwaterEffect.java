@@ -10,7 +10,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
     private boolean field_e;
     private wg field_g;
     private boolean field_u;
-    static hr field_t;
+    static ToolkitSprite field_t;
     private float[] field_s;
     private wg field_m;
     private boolean field_h;
@@ -55,7 +55,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 == 12) {
           field_q = null;
@@ -64,7 +64,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           field_t = null;
           return;
         }
-        field_t = (hr) null;
+        field_t = (ToolkitSprite) null;
         field_q = null;
         field_k = null;
         field_p = null;
@@ -163,7 +163,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
 
     final void a(boolean param0, byte param1) {
         if (param1 >= -71) {
-          OpenGlUnderwaterEffect.d(26);
+          OpenGlUnderwaterEffect.releaseStatics(26);
         }
     }
 
@@ -194,7 +194,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
 
     final boolean b(byte param0) {
         if (param0 >= -8) {
-          OpenGlUnderwaterEffect.d(21);
+          OpenGlUnderwaterEffect.releaseStatics(21);
           return this.field_u;
         }
         return this.field_u;
@@ -203,7 +203,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
     final static void d(byte param0) {
         int var1 = uv.b(-25843);
         int var2 = fu.e((byte) 78);
-        gk.field_v.a(var1 + (kf.field_B << 1), -kf.field_B + hu.field_b, (pd.field_l << 1) + var2, 19, hh.field_f - pd.field_l);
+        CompactMeshGeometry.field_v.a(var1 + (kf.field_B << 1), -kf.field_B + hu.field_b, (pd.field_l << 1) + var2, 19, hh.field_f - pd.field_l);
         if (param0 == -7) {
           sj.a((byte) 124);
           return;

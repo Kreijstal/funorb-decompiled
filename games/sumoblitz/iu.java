@@ -33,7 +33,7 @@ final class iu implements mh {
             stackIn_4_0 = null;
           }
           var13 = (fu) (stackIn_4_0);
-          lk.d(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_h);
+          SoftwareRasterizer.d(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_h);
           if (var13 != null) {
           }
           if (param2 != 5592405) {
@@ -43,9 +43,9 @@ final class iu implements mh {
           var7 = param0.field_q - var13.field_I * 2;
           var8 = param4 - (-param0.field_r - var13.field_I);
           var9 = param1 + param0.field_v + var13.field_J;
-          lk.e(var8, var9, var7 + var8, var9, this.field_g);
+          SoftwareRasterizer.e(var8, var9, var7 + var8, var9, this.field_g);
           for (var10 = -1 + var13.g(0); var10 >= 0; var10--) {
-            lk.b(var8 + var13.a(var10, param2 - 5616599) * var7 / var13.h(-1), var9, this.field_d, this.field_a);
+            SoftwareRasterizer.b(var8 + var13.a(var10, param2 - 5616599) * var7 / var13.h(-1), var9, this.field_d, this.field_a);
           }
           if (this.field_c == null) {
             return;
