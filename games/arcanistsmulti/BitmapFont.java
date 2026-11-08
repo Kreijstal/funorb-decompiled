@@ -65,7 +65,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = GameAppletShell.a(var10, 126);
+                                  var9_int = GameAppletShell.parseDecimal(var10, 126);
                                   var4 = var4 + this.field_s[var9_int].field_g;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -311,7 +311,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_G = GameAppletShell.a(var4, 126);
+                field_G = GameAppletShell.parseDecimal(var4, 126);
               }
             } else {
               field_A = field_J;
@@ -387,7 +387,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = GameAppletShell.a(var18, 126);
+                                    var16_int = GameAppletShell.parseDecimal(var18, 126);
                                     var4 = var4 + this.field_s[var16_int].field_g;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -668,7 +668,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = GameAppletShell.a(var13, 127);
+                                  var10 = GameAppletShell.parseDecimal(var13, 127);
                                   var11_ref_s = this.field_s[var10];
                                   if (this.field_x == null) {
                                     stackIn_27_0 = var11_ref_s.field_k;

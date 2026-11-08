@@ -29,7 +29,7 @@ final class SoundCache {
         }
     }
 
-    final static void a(boolean param0, String param1, float param2, byte param3) {
+    final static void showLoadingProgress(boolean param0, String param1, float param2, byte param3) {
         try {
           if (ci.field_c == null) {
             ci.field_c = new LoadingProgressDialog(ClientException.field_b, MusicPatch.field_o);
@@ -39,7 +39,7 @@ final class SoundCache {
           SoftwareRasterizer.clear();
           if (param3 != -100) {
             String var5 = (String) null;
-            SoundCache.a(true, (String) null, -0.9587674736976624f, (byte) 42);
+            SoundCache.showLoadingProgress(true, (String) null, -0.9587674736976624f, (byte) 42);
           }
           lm.drawRootContainer((byte) -120, true);
         } catch (RuntimeException runtimeException) {
@@ -47,7 +47,7 @@ final class SoundCache {
         }
     }
 
-    private final PcmSample a(int param0, int param1, int[] param2, int param3) {
+    private final PcmSample getVorbisSample(int param0, int param1, int[] param2, int param3) {
         PcmSample stackIn_4_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_12_0 = null;
@@ -69,9 +69,9 @@ final class SoundCache {
           var6 = 4294967296L ^ (long)var5_int;
           if (param0 > -121) {
             var10 = (int[]) null;
-            this.a(-17, (int[]) null, 83);
+            this.getSynthSampleById(-17, (int[]) null, 83);
           }
-          var8 = (PcmSample) (this.field_d.a(var6, -48));
+          var8 = (PcmSample) (this.field_d.get(var6, -48));
           if (var8 != null) {
             stackIn_4_0 = var8;
             return stackIn_4_0;
@@ -81,21 +81,21 @@ final class SoundCache {
             stackIn_8_0 = null;
             return (PcmSample) (stackIn_8_0);
           }
-          var9 = (VorbisSample) (this.field_b.a(var6, -82));
+          var9 = (VorbisSample) (this.field_b.get(var6, -82));
           if (var9 == null) {
             var9 = VorbisSample.load(this.field_g, param1, param3);
             if (var9 == null) {
               stackIn_12_0 = null;
               return (PcmSample) (stackIn_12_0);
             }
-            this.field_b.a(var9, true, var6);
+            this.field_b.put(var9, true, var6);
           }
           var8Lifetime1 = var9.decodeToPcm(param2);
           if (var8Lifetime1 == null) {
             return null;
           }
           var9.unlink(true);
-          this.field_d.a(var8Lifetime1, true, var6);
+          this.field_d.put(var8Lifetime1, true, var6);
           stackIn_18_0 = var8Lifetime1;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -112,7 +112,7 @@ final class SoundCache {
         }
     }
 
-    private final PcmSample a(int param0, int param1, int[] param2, boolean param3) {
+    private final PcmSample getSynthSample(int param0, int param1, int[] param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -130,7 +130,7 @@ final class SoundCache {
           var5_int = ((-805302273 & param0) << 4 | param0 >>> 12) ^ param1;
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int;
-          var8 = (PcmSample) (this.field_d.a(var6, -109));
+          var8 = (PcmSample) (this.field_d.get(var6, -109));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -145,7 +145,7 @@ final class SoundCache {
           }
           var10 = var9.toPcmSample();
           var8Lifetime1 = var10;
-          this.field_d.a(var8Lifetime1, param3, var6);
+          this.field_d.put(var8Lifetime1, param3, var6);
           if (param2 != null) {
             param2[0] = param2[0] - var10.field_i.length;
           }
@@ -165,7 +165,7 @@ final class SoundCache {
         }
     }
 
-    final PcmSample a(int[] param0, int param1, int param2) {
+    final PcmSample getVorbisSampleById(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_3_0 = null;
         PcmSample stackIn_6_0 = null;
@@ -175,13 +175,13 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_g.getGroupCount((byte) -79) == 1) {
-            stackIn_3_0 = this.a(-126, 0, param0, param1);
+            stackIn_3_0 = this.getVorbisSample(-126, 0, param0, param1);
             return stackIn_3_0;
           }
           if (param2 != ~this.field_g.getFileCount(param1, (byte) -60)) {
             throw new RuntimeException();
           }
-          stackIn_6_0 = this.a(-127, param1, param0, 0);
+          stackIn_6_0 = this.getVorbisSample(-127, param1, param0, 0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -197,7 +197,7 @@ final class SoundCache {
         }
     }
 
-    final PcmSample a(int param0, int[] param1, int param2) {
+    final PcmSample getSynthSampleById(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_3_0 = null;
         PcmSample stackIn_6_0 = null;
@@ -207,13 +207,13 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_e.getGroupCount((byte) -99) == 1) {
-            stackIn_3_0 = this.a(0, param0, param1, true);
+            stackIn_3_0 = this.getSynthSample(0, param0, param1, true);
             return stackIn_3_0;
           }
           if (param2 != ~this.field_e.getFileCount(param0, (byte) -60)) {
             throw new RuntimeException();
           }
-          stackIn_6_0 = this.a(param0, 0, param1, true);
+          stackIn_6_0 = this.getSynthSample(param0, 0, param1, true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -232,7 +232,7 @@ final class SoundCache {
     final static String a(int param0) {
         if (param0 != 0) {
           String var2 = (String) null;
-          SoundCache.a(true, (String) null, 0.18466001749038696f, (byte) 40);
+          SoundCache.showLoadingProgress(true, (String) null, 0.18466001749038696f, (byte) 40);
           if (null == ah.field_b) {
             return "";
           }

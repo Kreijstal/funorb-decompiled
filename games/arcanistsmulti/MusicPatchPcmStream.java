@@ -31,7 +31,7 @@ final class MusicPatchPcmStream extends PcmStream {
             if (var6 == null) {
               return;
             }
-            stackIn_4_0 = this.field_q.a(true, var6);
+            stackIn_4_0 = this.field_q.discardInactiveVoice(true, var6);
             if (stackIn_4_0) {
               var6 = (MusicPatchNode) (this.field_l.next(0));
               continue;
@@ -40,15 +40,15 @@ final class MusicPatchPcmStream extends PcmStream {
             var4_int = param1;
             do {
               if (var5 <= var6.field_C) {
-                this.a(var6, var4_int, var5, var4_int + var5, param0, 59);
+                this.renderNote(var6, var4_int, var5, var4_int + var5, param0, 59);
                 var6.field_C = var6.field_C - var5;
                 var6 = (MusicPatchNode) (this.field_l.next(0));
                 continue scanLoop1;
               }
-              this.a(var6, var4_int, var6.field_C, var5 + var4_int, param0, 82);
+              this.renderNote(var6, var4_int, var6.field_C, var5 + var4_int, param0, 82);
               var4_int = var4_int + var6.field_C;
               var5 = var5 - var6.field_C;
-            } while (!this.field_q.a(var4_int, 24464, var5, param0, var6));
+            } while (!this.field_q.updateNote(var4_int, 24464, var5, param0, var6));
             var6 = (MusicPatchNode) (this.field_l.next(0));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -83,7 +83,7 @@ final class MusicPatchPcmStream extends PcmStream {
         return 0;
     }
 
-    private final void a(MusicPatchNode param0, int param1, int param2, int param3, int[] param4, int param5) {
+    private final void renderNote(MusicPatchNode param0, int param1, int param2, int param3, int[] param4, int param5) {
         MidiPcmStream stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         boolean stackIn_13_2 = false;
@@ -129,7 +129,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 stackIn_12_0 = this.field_q;
                 stackIn_12_1 = 11132;
                 stackIn_13_2 = !(0 <= param0.field_D.field_m[param0.field_t]);
-                ((MidiPcmStream) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2, param0);
+                ((MidiPcmStream) (Object) stackIn_12_0).applyNoteSampleOffset(stackIn_12_1, stackIn_13_2, param0);
                 param0.field_n.rampVolumeQ6(var9, var11.getTargetVolume());
               }
               if (param0.field_D.field_m[param0.field_t] < 0) {
@@ -200,7 +200,7 @@ final class MusicPatchPcmStream extends PcmStream {
         return this.nextSubStream();
     }
 
-    private final void a(MusicPatchNode param0, int param1, int param2) {
+    private final void skipNote(MusicPatchNode param0, int param1, int param2) {
         MidiPcmStream stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         boolean stackIn_9_2 = false;
@@ -223,7 +223,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 stackIn_8_0 = this.field_q;
                 stackIn_8_1 = 11132;
                 stackIn_9_2 = !(0 <= param0.field_D.field_m[param0.field_t]);
-                ((MidiPcmStream) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2, param0);
+                ((MidiPcmStream) (Object) stackIn_8_0).applyNoteSampleOffset(stackIn_8_1, stackIn_9_2, param0);
               } else {
                 param0.field_n = PcmSampleStream.createAtStepQ8(param0.field_m, param0.field_n.getSampleStepMagnitude(), param0.field_n.getTargetVolume(), param0.field_n.panQ14());
               }
@@ -264,7 +264,7 @@ final class MusicPatchPcmStream extends PcmStream {
           if (var3 == null) {
             return;
           }
-          stackIn_4_0 = this.field_q.a(true, var3);
+          stackIn_4_0 = this.field_q.discardInactiveVoice(true, var3);
           if (stackIn_4_0) {
             var3 = (MusicPatchNode) (this.field_l.next(0));
             continue;
@@ -272,14 +272,14 @@ final class MusicPatchPcmStream extends PcmStream {
           var2 = param0;
           do {
             if (var3.field_C >= var2) {
-              this.a(var3, 0, var2);
+              this.skipNote(var3, 0, var2);
               var3.field_C = var3.field_C - var2;
               var3 = (MusicPatchNode) (this.field_l.next(0));
               continue scanLoop1;
             }
-            this.a(var3, 0, var3.field_C);
+            this.skipNote(var3, 0, var3.field_C);
             var2 = var2 - var3.field_C;
-          } while (!this.field_q.a(0, 24464, var2, (int[]) null, var3));
+          } while (!this.field_q.updateNote(0, 24464, var2, (int[]) null, var3));
           var3 = (MusicPatchNode) (this.field_l.next(0));
         }
     }

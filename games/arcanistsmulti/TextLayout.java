@@ -145,7 +145,7 @@ abstract class TextLayout {
               var3_int = 1;
               hj.field_d = false;
             }
-            MusicCrossfadeStream.a(qj.field_h, bb.getLoadingStatusText((byte) -126), var3_int != 0, ArchiveProvider.computeLoadingPercent((byte) -77), -6885);
+            MusicCrossfadeStream.drawLoadingMessage(qj.field_h, bb.getLoadingStatusText((byte) -126), var3_int != 0, ArchiveProvider.computeLoadingPercent((byte) -77), -6885);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

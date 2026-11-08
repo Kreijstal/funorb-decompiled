@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ud extends GameAppletShell {
+abstract class GameApplet extends GameAppletShell {
     private int field_m;
     static int[][] field_z;
     static int[] field_p;
@@ -23,7 +23,7 @@ abstract class ud extends GameAppletShell {
     private int field_x;
     private boolean field_t;
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void initializeWindow(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
@@ -40,18 +40,18 @@ abstract class ud extends GameAppletShell {
         dm.field_H = param7;
         ce.field_n = param5;
         cj.field_d = param3;
-        this.k(param4 ^ 5016);
+        this.initializePacketLengths(param4 ^ 5016);
         OptionsDialog.g(false);
     }
 
-    private final void l(int param0) {
+    private final void enableMessageGroup1(int param0) {
         cc.field_d[1] = true;
         if (param0 > -72) {
           this.field_n = -27;
         }
     }
 
-    private final void c(int param0) {
+    private final void enableMessageGroup6(int param0) {
         if (param0 <= 35) {
           return;
         }
@@ -65,26 +65,26 @@ abstract class ud extends GameAppletShell {
         field_r = null;
         field_y = null;
         if (!param0) {
-          ud.releaseStatics(true);
+          GameApplet.releaseStatics(true);
         }
         field_p = null;
         field_z = (int[][]) null;
     }
 
-    private final void j(int param0) {
+    private final void enableMessageGroup4(int param0) {
         int var2 = 9 / ((56 - param0) / 58);
         cc.field_d[4] = true;
     }
 
-    final int b(boolean param0, boolean param1) {
+    final int pollLogin(boolean param0, boolean param1) {
         if (!param1) {
           String var4 = (String) null;
-          this.a(119, (String) null, 12, (byte) -85, -59);
+          this.initializeGameApplet(119, (String) null, 12, (byte) -85, -59);
         }
-        return this.a(false, true, param0);
+        return this.pollLoginResponse(false, true, param0);
     }
 
-    final void a(int param0, String param1, int param2, byte param3, int param4) {
+    final void initializeGameApplet(int param0, String param1, int param2, byte param3, int param4) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -99,7 +99,7 @@ abstract class ud extends GameAppletShell {
         String var11 = null;
         try {
           try {
-            if (!this.a((byte) -71)) {
+            if (!this.isHostAllowed((byte) -71)) {
               return;
             }
             this.field_q = this.getCodeBase().getHost();
@@ -130,13 +130,13 @@ abstract class ud extends GameAppletShell {
               this.field_m = Integer.parseInt(var9);
             }
             wa.field_Nb = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(32, param0, param1, 11431, this.field_B, param2, param4);
+            this.startApplet(32, param0, param1, 11431, this.field_B, param2, param4);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             DelegatingCanvas.a((Throwable) ((Object) var6), (String) null, (byte) 20);
-            this.a("crash", (byte) -125);
+            this.showErrorPage("crash", (byte) -125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -153,7 +153,7 @@ abstract class ud extends GameAppletShell {
         }
     }
 
-    private final int a(boolean param0, boolean param1, boolean param2) {
+    private final int pollLoginResponse(boolean param0, boolean param1, boolean param2) {
         try {
           String stackIn_66_0 = null;
           boolean stackIn_67_1 = false;
@@ -211,7 +211,7 @@ abstract class ud extends GameAppletShell {
                   MenuButtonPanel.field_E = null;
                 } else {
                   vg.field_K = fk.field_k;
-                  ArcanistsMulti.j((byte) 48);
+                  ArcanistsMulti.updateNoticeText((byte) 48);
                   qe.field_p = false;
                   fj.field_j = 10;
                 }
@@ -223,7 +223,7 @@ abstract class ud extends GameAppletShell {
               qe.field_p = true;
               fj.field_j = 10;
             } else {
-              MidiPcmStream.a(2, IconButtonPainter.getApplet(120));
+              MidiPcmStream.logoutAndReload(2, IconButtonPainter.getApplet(120));
             }
           }
           if (5 == var4) {
@@ -237,7 +237,7 @@ abstract class ud extends GameAppletShell {
             ConditionalTextValue.openServerList(IconButtonPainter.getApplet(116), 27901);
           }
           if (var4 == 8) {
-            MidiPcmStream.a(2, IconButtonPainter.getApplet(118));
+            MidiPcmStream.logoutAndReload(2, IconButtonPainter.getApplet(118));
           }
           if (var4 == 9) {
             g.openSupportPage(IconButtonPainter.getApplet(122), -10400);
@@ -299,7 +299,7 @@ abstract class ud extends GameAppletShell {
         }
     }
 
-    final void d(int param0) {
+    final void updateConnection(int param0) {
         int discarded$1 = 0;
         int discarded$2 = 0;
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
@@ -307,7 +307,7 @@ abstract class ud extends GameAppletShell {
           this.field_l = 90;
         }
         if (ue.a(122)) {
-          discarded$1 = this.a(false, false, ProxySocketConnector.field_m != null ? true : false);
+          discarded$1 = this.pollLoginResponse(false, false, ProxySocketConnector.field_m != null ? true : false);
         } else {
           if (ih.field_f >= 10) {
             if (!TextFieldValidator.d(true)) {
@@ -316,23 +316,23 @@ abstract class ud extends GameAppletShell {
               if (0 != fj.field_j) {
                 ia.a(-14296, SingleChildContainer.field_y);
               } else {
-                discarded$2 = this.a(false, false, false);
+                discarded$2 = this.pollLoginResponse(false, false, false);
               }
             }
           }
         }
     }
 
-    private final void g(byte param0) {
+    private final void enableMessageGroups11To13(byte param0) {
         if (param0 < 89) {
-          this.l(-128);
+          this.enableMessageGroup1(-128);
         }
         cc.field_d[13] = true;
         cc.field_d[12] = true;
         cc.field_d[11] = true;
     }
 
-    final int e(int param0) {
+    final int attemptReconnect(int param0) {
         int var2;
         if (this.field_d) {
           return -1;
@@ -350,11 +350,11 @@ abstract class ud extends GameAppletShell {
         if (var2 != 0 &&
           1 != var2) {
           if (!oj.field_h) {
-            this.a("reconnect", (byte) -117);
+            this.showErrorPage("reconnect", (byte) -117);
           }
           fk.d(-11);
           if (param0 < 70) {
-            this.j(92);
+            this.enableMessageGroup4(92);
           }
           oa.a(true, var2, MenuButtonPanel.field_E);
           kg.field_f = true;
@@ -367,11 +367,11 @@ abstract class ud extends GameAppletShell {
         if (u.field_b != 0) {
           return var2;
         }
-        ArcanistsMulti.j((byte) 48);
+        ArcanistsMulti.updateNoticeText((byte) 48);
         return var2;
     }
 
-    private final void k(int param0) {
+    private final void initializePacketLengths(int param0) {
         NodeHashTable.field_n[8] = -2;
         NodeHashTable.field_n[12] = -1;
         NodeHashTable.field_n[13] = -1;
@@ -390,7 +390,7 @@ abstract class ud extends GameAppletShell {
         NodeHashTable.field_n[7] = -1;
     }
 
-    private final void b(boolean param0, int param1) {
+    private final void enableDefaultMessageGroups(boolean param0, int param1) {
         cc.field_d[7] = true;
         cc.field_d[17] = true;
         if (param1 != 51) {
@@ -403,7 +403,7 @@ abstract class ud extends GameAppletShell {
         cc.field_d[0] = true;
     }
 
-    private final void f(int param0) {
+    private final void storeSessionCookie(int param0) {
         String var2 = qj.readIncomingString(10040319);
         if (param0 != -18075) {
           return;
@@ -411,7 +411,7 @@ abstract class ud extends GameAppletShell {
         um.setSessionCookie(var2, IconButtonPainter.getApplet(105), param0 ^ -29675);
     }
 
-    final void g(int param0) {
+    final void dispatchServerMessage(int param0) {
         boolean stackIn_31_0 = false;
         int var2;
         jg var3;
@@ -421,7 +421,7 @@ abstract class ud extends GameAppletShell {
         if (var2 < 64 &&
           cc.field_d[var2]) {
           if (param0 > -3) {
-            this.a(true, true);
+            this.updateJs5Connection(true, true);
           }
           if (var2 == 0) {
             return;
@@ -441,7 +441,7 @@ abstract class ud extends GameAppletShell {
                       IntrusiveNode.b(-112);
                     } else {
                       if (var2 == 7) {
-                        this.f(-18075);
+                        this.storeSessionCookie(-18075);
                       } else {
                         if (var2 == 8) {
                           qe.handleReflectionCheck(fi.field_d, fj.field_h, UiContainer.field_z, 0);
@@ -454,7 +454,7 @@ abstract class ud extends GameAppletShell {
                                 return;
                               }
                               if (var2 == 17) {
-                                this.c(false);
+                                this.readUpdateServerResponse(false);
                                 return;
                               }
                               if (var2 == 18) {
@@ -489,14 +489,14 @@ abstract class ud extends GameAppletShell {
         ProxySocketConnector.closeActiveConnection(false);
     }
 
-    private final void h(int param0) {
+    private final void enableMessageGroup2(int param0) {
         if (param0 > -17) {
           field_D = (ResourceArchive) null;
         }
         cc.field_d[2] = true;
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void updateJs5Connection(boolean param0, boolean param1) {
         int stackIn_24_0 = 0;
         boolean stackIn_101_0 = false;
         String stackIn_103_1 = null;
@@ -549,7 +549,7 @@ abstract class ud extends GameAppletShell {
             u.field_b == 0 &&
             11 == fj.field_j &&
             !ProxySocketConnector.c((byte) -44)) {
-            ArcanistsMulti.j((byte) 48);
+            ArcanistsMulti.updateNoticeText((byte) 48);
           }
           if (u.field_b != -1 &&
             u.field_b != 0) {
@@ -560,18 +560,18 @@ abstract class ud extends GameAppletShell {
           u.field_b != 0) {
           if (ih.field_f < 10) {
             if (3 == u.field_b) {
-              this.a("js5crc", (byte) -128);
+              this.showErrorPage("js5crc", (byte) -128);
             } else {
               if (u.field_b == 4) {
-                this.a("js5io", (byte) -128);
+                this.showErrorPage("js5io", (byte) -128);
               } else {
                 if (u.field_b == 2) {
-                  this.a("js5connect_full", (byte) -126);
+                  this.showErrorPage("js5connect_full", (byte) -126);
                 } else {
                   if (5 == u.field_b) {
-                    this.a("outofdate", (byte) -117);
+                    this.showErrorPage("outofdate", (byte) -117);
                   } else {
-                    this.a("js5connect", (byte) -126);
+                    this.showErrorPage("js5connect", (byte) -126);
                   }
                 }
               }
@@ -676,7 +676,7 @@ abstract class ud extends GameAppletShell {
           ho.field_g = null;
           DiskCacheRequest.field_C = null;
           da.field_b = null;
-          ArcanistsMulti.a((java.applet.Applet) (this), -1);
+          ArcanistsMulti.readUsernameParameter((java.applet.Applet) (this), -1);
           Checkbox.a(2);
           ih.field_f = 10;
         }
@@ -716,7 +716,7 @@ abstract class ud extends GameAppletShell {
         if (!param1 &&
           TextWidgetPainter.field_j) {
           UiComponent.attachInputListeners(on.field_c, (byte) 117);
-          this.a(-11232);
+          this.detachCanvas(-11232);
           IntKeyLookup.attachInputHandlers(on.field_c, (byte) 125);
         }
         if (cc.field_d[8]) {
@@ -724,50 +724,50 @@ abstract class ud extends GameAppletShell {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void readUpdateServerResponse(boolean param0) {
         int discarded$0 = 0;
         int var2 = UiContainer.field_z.readUnsignedByte((byte) 97);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = -1 + fj.field_h;
         byte[] var5 = new byte[var4];
         if (param0) {
-          discarded$0 = this.a(false, true, false);
+          discarded$0 = this.pollLoginResponse(false, true, false);
         }
         UiContainer.field_z.readEncryptedBytes(var5, (byte) 108, 0, var4);
         DelegatingCanvas.a(ValidationHelpWidget.a((byte) 113, var5), IconButtonPainter.getApplet(127), var3 != 0, (byte) -116);
     }
 
-    final void a(boolean param0, boolean param1, boolean param2, boolean param3, boolean param4, byte param5, boolean param6) {
+    final void enableMessageGroups(boolean param0, boolean param1, boolean param2, boolean param3, boolean param4, byte param5, boolean param6) {
         int var8 = -88 % ((param5 - 66) / 60);
-        this.b(true, 51);
+        this.enableDefaultMessageGroups(true, 51);
         if (param2) {
-          this.l(-86);
+          this.enableMessageGroup1(-86);
         }
         if (param6) {
-          this.h(-89);
+          this.enableMessageGroup2(-89);
         }
         if (param0) {
-          this.j(115);
+          this.enableMessageGroup4(115);
         }
         if (param4) {
-          this.i(6);
+          this.enableMessageGroup5(6);
         }
         if (param1) {
-          this.c(101);
+          this.enableMessageGroup6(101);
         }
         if (param3) {
-          this.g((byte) 97);
+          this.enableMessageGroups11To13((byte) 97);
         }
     }
 
-    private final void i(int param0) {
+    private final void enableMessageGroup5(int param0) {
         if (param0 != 6) {
-          this.d(-83);
+          this.updateConnection(-83);
         }
         cc.field_d[5] = true;
     }
 
-    protected ud() {
+    protected GameApplet() {
     }
 
     static {

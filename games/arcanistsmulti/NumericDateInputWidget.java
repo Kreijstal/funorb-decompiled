@@ -139,7 +139,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           param1 = param1 + this.field_n;
           param3 = param3 + this.field_j;
           this.drawFieldCaption(param3, ne.field_f, this.field_T, -5187, param1);
-          this.drawFieldCaption(param3, ud.field_y, this.field_Q, -5187, param1);
+          this.drawFieldCaption(param3, GameApplet.field_y, this.field_Q, -5187, param1);
           this.drawFieldCaption(param3, LoadingTracker.field_g, this.field_J, -5187, param1);
           return;
         }
@@ -150,7 +150,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         param1 = param1 + this.field_n;
         param3 = param3 + this.field_j;
         this.drawFieldCaption(param3, ne.field_f, this.field_T, -5187, param1);
-        this.drawFieldCaption(param3, ud.field_y, this.field_Q, -5187, param1);
+        this.drawFieldCaption(param3, GameApplet.field_y, this.field_Q, -5187, param1);
         this.drawFieldCaption(param3, LoadingTracker.field_g, this.field_J, -5187, param1);
     }
 

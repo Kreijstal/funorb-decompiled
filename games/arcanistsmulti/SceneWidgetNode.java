@@ -184,7 +184,7 @@ class SceneWidgetNode extends DualLinkNode {
                 var1.writeInt(hd.field_a, (byte) -101);
                 td.field_E.write(13, 0, (byte) 126, var1.payload);
                 ClipState.field_m = ClipState.field_m + 1;
-                ud.field_E = qj.monotonicTimeMillis(-26572) + 30000L;
+                GameApplet.field_E = qj.monotonicTimeMillis(-26572) + 30000L;
               }
               boolean decompiledFrameRemainder0 = true;
               if (3 == ClipState.field_m) {
@@ -198,7 +198,7 @@ class SceneWidgetNode extends DualLinkNode {
                   decompiledFrameRemainder0 = !(!ArcanistsMulti.field_G);
                 }
                 if ((decompiledFrameRemainder0) &&
-                  (qj.monotonicTimeMillis(-26572) > ud.field_E)) {
+                  (qj.monotonicTimeMillis(-26572) > GameApplet.field_E)) {
                   stackIn_47_0 = FrameClock.a((byte) 110, -2);
                   return stackIn_47_0;
                 }
@@ -339,7 +339,7 @@ class SceneWidgetNode extends DualLinkNode {
               }
               else {
                 if (stackIn_57_0 <= stackIn_57_1) {
-                  ud.field_p[var24Lifetime2] = var28Lifetime1 / var30Lifetime1 + var22Lifetime2;
+                  GameApplet.field_p[var24Lifetime2] = var28Lifetime1 / var30Lifetime1 + var22Lifetime2;
                   ViewportController.field_g[var24Lifetime2] = var29Lifetime1 / var30Lifetime1 + var23Lifetime2;
                   if (var30Lifetime1 > var8) {
                     var8 = var30Lifetime1;

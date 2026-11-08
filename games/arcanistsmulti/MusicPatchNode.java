@@ -41,7 +41,7 @@ final class MusicPatchNode extends IntrusiveNode {
         }
     }
 
-    final void b(boolean param0) {
+    final void release(boolean param0) {
         if (param0) {
           this.field_x = null;
           this.field_n = null;
@@ -49,7 +49,7 @@ final class MusicPatchNode extends IntrusiveNode {
           this.field_D = null;
           return;
         }
-        this.b(false);
+        this.release(false);
         this.field_x = null;
         this.field_n = null;
         this.field_m = null;

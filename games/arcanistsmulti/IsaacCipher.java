@@ -82,7 +82,7 @@ final class IsaacCipher {
         try {
           DisplayNameForm.field_G = param0 * LinkButtonPainter.getFramesPerSecond(-2) / 1000;
           ed.loadJagexLogoSound((byte) -17, param2);
-          ArcanistsMulti.a(param2, (byte) -80);
+          ArcanistsMulti.loadLogoModels(param2, (byte) -80);
           int var4_int = 88 % ((81 - param3) / 36);
           fl.loadFinalFrameImage(-2389, param2);
           tm.buildIntensityTable(5968);

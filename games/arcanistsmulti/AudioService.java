@@ -50,7 +50,7 @@ final class AudioService implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
           this.field_a = false;
-          throw AudioService.<RuntimeException>$cfr$sneakyThrow(var3);
+          throw AudioService.<RuntimeException>sneakyThrow(var3);
         }
         this.field_a = false;
     }
@@ -80,7 +80,7 @@ final class AudioService implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException sneakyThrow(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

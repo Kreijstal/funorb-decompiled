@@ -329,7 +329,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
                       }
                     } else {
                       var16 = var7.field_Cb;
-                      ArcanistsMulti.a(-26335, (int[]) null, IconTextSceneWidget.field_Gb.field_Db, var16, 0L, -1, -1, (String) null, var7);
+                      ArcanistsMulti.openInfoPanel(-26335, (int[]) null, IconTextSceneWidget.field_Gb.field_Db, var16, 0L, -1, -1, (String) null, var7);
                       if (var7.field_Lb != null &&
                         !PasswordFieldPainter.a(eo.field_c.field_h, -31046) &&
                         !wh.field_g) {

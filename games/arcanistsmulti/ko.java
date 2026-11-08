@@ -96,7 +96,7 @@ final class ko extends IntrusiveNode {
         Sprite var20Lifetime5;
         Sprite var20Lifetime6;
         try {
-          ArcanistsMulti.a(-26335, (int[]) null, (SceneScrollPane) null, (String) null, 0L, param0, -1, (String) null, param1);
+          ArcanistsMulti.openInfoPanel(-26335, (int[]) null, (SceneScrollPane) null, (String) null, 0L, param0, -1, (String) null, param1);
           if (param0 == 0) {
             var10 = eo.field_c;
             var11 = ArchiveProvider.field_a[0];
@@ -320,7 +320,7 @@ final class ko extends IntrusiveNode {
         discarded$0 = hi.field_e.append((char) var4);
         var5Lifetime1 = 485;
         var17 = ah.field_b;
-        var16 = MusicPatch.a(var17, -2);
+        var16 = MusicPatch.prefixRankIcon(var17, -2);
         var19 = var16;
         if (2 != nj.field_c) {
           var7Lifetime1 = "";

@@ -15,7 +15,7 @@ final class MusicPatch extends IntrusiveNode {
     PatchEnvelopeSet[] field_n;
     byte[] field_j;
 
-    final static String a(String param0, int param1) {
+    final static String prefixRankIcon(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_6_0 = null;
@@ -47,7 +47,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final void a(int param0) {
+    final void releaseSamples(int param0) {
         if (param0 != 23257) {
           field_g = (String) null;
         }
@@ -64,7 +64,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static byte[] a(String param0, byte param1) {
+    final static byte[] loadNamedFile(String param0, byte param1) {
         RuntimeException var2 = null;
         String var3 = null;
         byte[] stackIn_3_0 = null;
@@ -75,7 +75,7 @@ final class MusicPatch extends IntrusiveNode {
         try {
           if (param1 != -45) {
             var3 = (String) null;
-            MusicPatch.a((String) null, (byte) -82);
+            MusicPatch.loadNamedFile((String) null, (byte) -82);
           }
           stackIn_3_0 = AlternateUsernameCredentials.field_q.getNamedFile(param0, "", -1);
           return stackIn_3_0;
@@ -93,7 +93,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, SoundCache param1, int[] param2, byte[] param3) {
+    final boolean prepareSamples(int param0, SoundCache param1, int[] param2, byte[] param3) {
         int var8 = 0;
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -126,9 +126,9 @@ final class MusicPatch extends IntrusiveNode {
                   var6 = var10;
                   var10--;
                   if ((var10 & 1) == 0) {
-                    var7 = param1.a(var10 >> 2, param2, -2);
+                    var7 = param1.getSynthSampleById(var10 >> 2, param2, -2);
                   } else {
-                    var7 = param1.a(param2, var10 >> 2, -2);
+                    var7 = param1.getVorbisSampleById(param2, var10 >> 2, -2);
                   }
                   if (var7 == null) {
                     var5_int = 0;

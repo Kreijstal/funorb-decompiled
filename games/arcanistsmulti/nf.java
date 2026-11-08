@@ -2471,7 +2471,7 @@ final class nf {
                   while (true) {
                     boolean decompiledFrameRemainder0 = true;
                     if (var10 != 0.0) {
-                      stackIn_87_0 = $cfr$dcmpg(var12 * var12 - var14 * (var10 * 4.0), 0.0);
+                      stackIn_87_0 = compareDoublesNanGreater(var12 * var12 - var14 * (var10 * 4.0), 0.0);
                       decompiledFrameRemainder0 = (var31 == 0);
                       if ((decompiledFrameRemainder0) && (stackIn_87_0 < 0 &&
                         768.0 > var8_double)) {
@@ -2483,7 +2483,7 @@ final class nf {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      stackIn_87_0 = $cfr$dcmpl(var10, 0.0);
+                      stackIn_87_0 = compareDoublesNanLess(var10, 0.0);
                     }
                     if (stackIn_87_0 == 0) {
                       break;
@@ -2583,7 +2583,7 @@ final class nf {
                 var15 = var5_double * (var5_double * 4.0) / (var9 * (2.0 * var9)) - var7_double;
                 while (true) {
                   if (var11 != 0.0) {
-                    stackIn_131_0 = $cfr$dcmpg(-(4.0 * var11 * var15) + var13 * var13, 0.0);
+                    stackIn_131_0 = compareDoublesNanGreater(-(4.0 * var11 * var15) + var13 * var13, 0.0);
                     if (stackIn_131_0 < 0 &&
                       768.0 > var9) {
                       var9 = var9 + 8.0;
@@ -2593,7 +2593,7 @@ final class nf {
                       continue;
                     }
                   }
-                  stackIn_131_0Lifetime1 = $cfr$dcmpl(var11, 0.0);
+                  stackIn_131_0Lifetime1 = compareDoublesNanLess(var11, 0.0);
                   if (stackIn_131_0Lifetime1 == 0) {
                     break;
                   }
@@ -8110,7 +8110,7 @@ final class nf {
                       var32 = (double)(var13Lifetime1 * var13Lifetime1 * 4) / (var26_double * (2.0 * var26_double)) - (double)var14Lifetime1;
                       while (true) {
                         if (0.0 != var28_double) {
-                          stackIn_501_0 = $cfr$dcmpl(0.0, var30 * var30 - var32 * (var28_double * 4.0));
+                          stackIn_501_0 = compareDoublesNanLess(0.0, var30 * var30 - var32 * (var28_double * 4.0));
                           if (stackIn_501_0 > 0 &&
                             768.0 > var26_double) {
                             var26_double = var26_double + 8.0;
@@ -8120,7 +8120,7 @@ final class nf {
                             continue;
                           }
                         }
-                        stackIn_501_0Lifetime1 = $cfr$dcmpl(var28_double, 0.0);
+                        stackIn_501_0Lifetime1 = compareDoublesNanLess(var28_double, 0.0);
                         if (stackIn_501_0Lifetime1 == 0) {
                           break;
                         }
@@ -8275,7 +8275,7 @@ final class nf {
                 }
                 var29 = new Sprite(64, 96);
                 var29.makeRasterTarget();
-                pc.$cfr$intArgs$a$5f050b8899ac(var50, 16, var51, var48, 80, var49, tk.field_x[2], 0);
+                pc.drawTexturedSpriteIntGuard(var50, 16, var51, var48, 80, var49, tk.field_x[2], 0);
                 var12.field_I.normalizeCanvas();
                 var12.field_I.makeRasterTarget();
                 SoftwareRasterizer.fillRectangle(0, 0, 32, 48, 0);
@@ -9810,11 +9810,11 @@ final class nf {
         field_Lb = new int[8192];
     }
 
-    private static int $cfr$dcmpl(double left, double right) {
+    private static int compareDoublesNanLess(double left, double right) {
         return left > right ? 1 : (left == right ? 0 : -1);
     }
 
-    private static int $cfr$dcmpg(double left, double right) {
+    private static int compareDoublesNanGreater(double left, double right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

@@ -358,7 +358,7 @@ final class IntrusiveNodeHashTable {
             }
           }
           if (null != GrowableIntList.field_h) {
-            stackIn_19_0 = GrowableIntList.field_h.e((byte) -8);
+            stackIn_19_0 = GrowableIntList.field_h.isReady((byte) -8);
             if (!stackIn_19_0) {
               f.field_g = null;
               return;

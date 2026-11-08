@@ -115,7 +115,7 @@ final class NanoFrameClock extends FrameClock {
           var8 = new Sprite(640, 480);
           var9 = var8;
           var9.makeRasterTarget();
-          ArcanistsMulti.a(param1, (byte) -26);
+          ArcanistsMulti.drawScreenFrame(param1, (byte) -26);
           wm.field_H[var2].makeRasterTarget();
           var9.drawAdditive(0, 0, 128);
         }

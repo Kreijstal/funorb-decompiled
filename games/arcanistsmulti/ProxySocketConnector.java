@@ -155,7 +155,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (var7 == null) {
           return this.openDirectSocket((byte) -58);
         }
-        throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw ProxySocketConnector.<RuntimeException>sneakyThrow((Throwable) var7);
     }
 
     final static void closeActiveConnection(boolean param0) {
@@ -361,7 +361,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static int a(boolean param0, byte param1, ud param2) {
+    final static int a(boolean param0, byte param1, GameApplet param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -371,7 +371,7 @@ final class ProxySocketConnector extends SocketConnector {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -44 / ((-75 - param1) / 49);
-          stackIn_1_0 = param2.b(param0, true);
+          stackIn_1_0 = param2.pollLogin(param0, true);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -398,7 +398,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException sneakyThrow(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

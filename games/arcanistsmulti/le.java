@@ -3219,7 +3219,7 @@ final class le {
             ri.field_b[82] ||
             ri.field_b[81] ||
             ri.field_b[ko.field_k] ||
-            ri.field_b[ud.field_w] ||
+            ri.field_b[GameApplet.field_w] ||
             ri.field_b[85])) {
             var8 = (rb) (pb.field_m.first(12623));
             var4_ref_rb = var8;
@@ -3750,7 +3750,7 @@ final class le {
             boolean decompiledFrameRemainder0 = true;
             var8 = stackIn_79_0;
             if (var7 != 0 && (ri.field_b[UsernameCredentials.field_g] ||
-              ri.field_b[ud.field_w])) {
+              ri.field_b[GameApplet.field_w])) {
               stackIn_86_0 = 1;
               decompiledFrameRemainder0 = false;
             }

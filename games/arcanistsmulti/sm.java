@@ -76,7 +76,7 @@ final class sm {
               if (param0 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + NodeHashTable.a(param3 ^ 15478, qj.monotonicTimeMillis(-26572) + 1000L * param0) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + NodeHashTable.formatGmtDate(param3 ^ 15478, qj.monotonicTimeMillis(-26572) + 1000L * param0) + "; Max-Age=" + param0;
               }
               ei.a("document.cookie=\"" + var7Lifetime4 + "\"", param2, 269);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -145,7 +145,7 @@ final class sm {
           qc.field_a = 1000 * param5 / param2;
           lf.field_a.setStream(pc.field_e);
           GrowableIntList.field_h = param3;
-          GrowableIntList.field_h.a(Bzip2State.field_A, (byte) -66);
+          GrowableIntList.field_h.setMasterVolume(Bzip2State.field_A, (byte) -66);
           ReflectionCheckRequest.field_k.setStream(GrowableIntList.field_h);
           int var8_int = 110 % ((-25 - param0) / 48);
         } catch (RuntimeException runtimeException) {

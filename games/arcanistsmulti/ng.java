@@ -394,7 +394,7 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
           this.field_E = param0;
           this.field_F = new TextButton(qn.field_lb, (UiListener) null);
           this.field_F.field_r = (WidgetPainter) ((Object) new MenuButtonPainter());
-          var7 = CachedArchiveProvider.formatTemplate(125, new String[]{this.g(-7), this.g((byte) 94)}, ud.field_r);
+          var7 = CachedArchiveProvider.formatTemplate(125, new String[]{this.g(-7), this.g((byte) 94)}, GameApplet.field_r);
           var3 = 20;
           var4 = new TextWidgetPainter(ia.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_c.field_C, -1, 2147483647, true);
           this.field_J = new TextHotspotWidget(var7, var4);

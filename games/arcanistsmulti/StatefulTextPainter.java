@@ -247,7 +247,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ArcanistsMulti.a(param2 ^ -26334, (int[]) null, param4, param1.field_Tb, param1.field_Nb, -1, -1, param1.field_Qb, param1);
+          ArcanistsMulti.openInfoPanel(param2 ^ -26334, (int[]) null, param4, param1.field_Tb, param1.field_Nb, -1, -1, param1.field_Qb, param1);
           eo.field_c.a((byte) 72, true);
           eo.field_c.a(0, (int[]) null, 13);
           eo.field_c.d(param2 + 5549);

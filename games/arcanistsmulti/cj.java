@@ -154,11 +154,11 @@ final class cj {
               stackIn_37_0 = null;
             }
             var21 = stackIn_37_0;
-            var22 = ud.field_p[var15Lifetime1];
+            var22 = GameApplet.field_p[var15Lifetime1];
             var23 = ViewportController.field_g[var15Lifetime1];
-            var24 = ud.field_p[var16];
+            var24 = GameApplet.field_p[var16];
             var25 = ViewportController.field_g[var16];
-            var26 = ud.field_p[var17];
+            var26 = GameApplet.field_p[var17];
             var27 = ViewportController.field_g[var17];
             if (var18 == var19 &&
               var19 == var20) {

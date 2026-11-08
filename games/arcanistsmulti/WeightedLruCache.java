@@ -67,10 +67,10 @@ final class WeightedLruCache {
             stackIn_10_0 = stackOut_9_0;
             if (var19 == 0) {
               if (stackIn_10_0) {
-                var12 = ud.field_p[var9];
+                var12 = GameApplet.field_p[var9];
                 var13 = ViewportController.field_g[var9];
-                var14 = -var12 + ud.field_p[var10];
-                var15 = -var12 + ud.field_p[var11];
+                var14 = -var12 + GameApplet.field_p[var10];
+                var15 = -var12 + GameApplet.field_p[var11];
                 var16 = -var13 + ViewportController.field_g[var10];
                 var17 = ViewportController.field_g[var11] - var13;
               }

@@ -122,7 +122,7 @@ abstract class FrameClock {
             }
             var5 = var6;
             if (var6.field_U != 0) {
-              ArcanistsMulti.a(-26335, (int[]) null, dd.field_c.field_Db, var6.field_Ib, 0L, -1, -1, var6.field_Cb, var6);
+              ArcanistsMulti.openInfoPanel(-26335, (int[]) null, dd.field_c.field_Db, var6.field_Ib, 0L, -1, -1, var6.field_Cb, var6);
               var16 = eo.field_c;
               var13_ref_String = NumericDateInputWidget.field_M;
               var16.field_l.addAction(7, var13_ref_String, (byte) -26);

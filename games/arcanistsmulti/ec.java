@@ -84,7 +84,7 @@ final class ec {
             var2_int = 0;
             kg.field_d[0] = AlternateUsernameCredentials.field_n[0];
             kg.field_d[2] = IsaacCipher.field_d[0];
-            kg.field_d[1] = ud.field_z[0];
+            kg.field_d[1] = GameApplet.field_z[0];
             kg.field_d[3] = hi.field_b[0];
             incrementValue$7 = var2_int;
             var2_int++;
@@ -107,11 +107,11 @@ final class ec {
             incrementValue$12 = var2_int;
             var2_int++;
             var3 = ((255 & param0[incrementValue$10]) << 16) + (((param0[incrementValue$11] & 255) << 8) + (param0[incrementValue$12] & 255));
-            for (var4 = 0; var4 < ud.field_z.length; var4++) {
-              if ((16711680 & var3) == ud.field_z[var4][0] << 16 &&
-                (var3 & 65280) == ud.field_z[var4][1] << 8 &&
-                (var3 & 255) == ud.field_z[var4][2]) {
-                kg.field_d[1] = ud.field_z[var4];
+            for (var4 = 0; var4 < GameApplet.field_z.length; var4++) {
+              if ((16711680 & var3) == GameApplet.field_z[var4][0] << 16 &&
+                (var3 & 65280) == GameApplet.field_z[var4][1] << 8 &&
+                (var3 & 255) == GameApplet.field_z[var4][2]) {
+                kg.field_d[1] = GameApplet.field_z[var4];
               }
             }
             incrementValue$13 = var2_int;
@@ -195,7 +195,7 @@ final class ec {
               kg.field_d[0] = AlternateUsernameCredentials.field_n[NameValidator.bitAnd((int) param0[incrementValue$1], 255)];
               incrementValue$2 = var2_int;
               var2_int++;
-              kg.field_d[1] = ud.field_z[NameValidator.bitAnd(255, (int) param0[incrementValue$2])];
+              kg.field_d[1] = GameApplet.field_z[NameValidator.bitAnd(255, (int) param0[incrementValue$2])];
               incrementValue$3 = var2_int;
               var2_int++;
               kg.field_d[2] = IsaacCipher.field_d[NameValidator.bitAnd((int) param0[incrementValue$3], 255)];

@@ -2262,7 +2262,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("keycode_walkright2", -100);
                 if (null != var2) {
-                  ud.field_w = 255 & var2[0];
+                  GameApplet.field_w = 255 & var2[0];
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("keycode_scrollup", -102);
                 if (var2 != null) {
@@ -3111,7 +3111,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins2", -120);
                 if (null != var2) {
-                  ud.field_u = ValidationHelpWidget.a((byte) 94, var2);
+                  GameApplet.field_u = ValidationHelpWidget.a((byte) 94, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins1", -76);
                 if (var2 != null) {

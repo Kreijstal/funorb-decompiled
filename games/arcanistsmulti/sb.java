@@ -67,15 +67,15 @@ final class sb {
           if (null != GrowableIntList.field_h) {
             var4_ref = ReflectionCheckRequest.field_k;
             synchronized (var4_ref) {
-              GrowableIntList.field_h.b(-1, (byte) 69, param3);
+              GrowableIntList.field_h.setChannelVolume(-1, (byte) 69, param3);
               if (f.field_g == param2) {
                 return;
               }
-              GrowableIntList.field_h.a((byte) -128);
+              GrowableIntList.field_h.stop((byte) -128);
               ReflectionCheckRequest.field_k.flushDeviceSafely();
               f.field_g = param2;
               if (f.field_g != null) {
-                GrowableIntList.field_h.a((byte) -96, param0, f.field_g);
+                GrowableIntList.field_h.playTrack((byte) -96, param0, f.field_g);
               }
             }
           }

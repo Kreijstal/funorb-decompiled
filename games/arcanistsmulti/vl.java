@@ -48,7 +48,7 @@ final class vl extends IntrusiveNode {
               var4 = AlternateUsernameCredentials.field_n;
             }
             if (var3 == 1) {
-              var4 = ud.field_z;
+              var4 = GameApplet.field_z;
             }
             if (var3 == 2) {
               var4 = IsaacCipher.field_d;

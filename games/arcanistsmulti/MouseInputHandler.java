@@ -246,7 +246,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String var14 = null;
         ne var15 = null;
         try {
-          ArcanistsMulti.a(-26335, (int[]) null, DebouncedValidator.field_g, (String) null, 0L, -1, param1.getSortKey((byte) 73), (String) null, param1);
+          ArcanistsMulti.openInfoPanel(-26335, (int[]) null, DebouncedValidator.field_g, (String) null, 0L, -1, param1.getSortKey((byte) 73), (String) null, param1);
           if (param1.field_Lb && (2 == param1.field_Fb ||
             !(qf.field_d < 2))) {
             var9 = eo.field_c;

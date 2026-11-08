@@ -151,7 +151,7 @@ final class GrowableIntList {
           }
           if (decompiledFrameRemainder0) {
             var3 = ah.field_b;
-            var3 = MusicPatch.a(var3, -2);
+            var3 = MusicPatch.prefixRankIcon(var3, -2);
             var4 = "";
             var5 = "|";
             var6 = nj.field_c;

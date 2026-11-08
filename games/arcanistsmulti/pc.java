@@ -22,7 +22,7 @@ final class pc {
         field_c = null;
     }
 
-    final static void a(int[] param0, int param1, int[] param2, int[] param3, byte param4, int[] param5, Sprite param6, int param7) {
+    final static void drawTexturedSprite(int[] param0, int param1, int[] param2, int[] param3, byte param4, int[] param5, Sprite param6, int param7) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -137,7 +137,7 @@ final class pc {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$5f050b8899ac(int[] param0, int param1, int[] param2, int[] param3, int param4, int[] param5, Sprite param6, int param7) {
+    final static void drawTexturedSpriteIntGuard(int[] param0, int param1, int[] param2, int[] param3, int param4, int[] param5, Sprite param6, int param7) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;

@@ -179,7 +179,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 continue;
               }
               var5++;
-              var8 = GameAppletShell.a((CharSequence) ((Object) var13), 126);
+              var8 = GameAppletShell.parseDecimal((CharSequence) ((Object) var13), 126);
               var4 = var4 + (param1[var8].length() - var5 + var6);
               continue;
             }
@@ -213,7 +213,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               continue;
             }
             var5Lifetime1++;
-            var11 = GameAppletShell.a((CharSequence) ((Object) var10), 127);
+            var11 = GameAppletShell.parseDecimal((CharSequence) ((Object) var10), 127);
             discarded$1 = var14.append(param2.substring(var8Lifetime1, var9));
             var8Lifetime1 = var5Lifetime1;
             discarded$2 = var14.append(param1[var11]);
@@ -397,7 +397,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
           if (this.field_z &&
             this.field_r <= qj.monotonicTimeMillis(-26572)) {
-            var2_ref = (ArchiveRequest) (this.field_n.a(10));
+            var2_ref = (ArchiveRequest) (this.field_n.first(10));
             while (var2_ref != null) {
               if (!var2_ref.field_p) {
                 if (!var2_ref.field_n) {
@@ -409,7 +409,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                   var2_ref.unlink(true);
                 }
               }
-              var2_ref = (ArchiveRequest) (this.field_n.c(-87));
+              var2_ref = (ArchiveRequest) (this.field_n.next(-87));
             }
             this.field_r = qj.monotonicTimeMillis(-26572) + 1000L;
           }
@@ -561,7 +561,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         byte[] var31 = null;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var13 = (ArchiveRequest) (this.field_n.a((long)param2, -77));
+          var13 = (ArchiveRequest) (this.field_n.get((long)param2, -77));
           var4 = var13;
           if (var13 != null &&
             param0 == 0 &&
@@ -603,7 +603,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 var4 = this.field_B.requestGroup(param2, true, this.field_i, (byte) -80, (byte) 2);
               }
             }
-            this.field_n.a((IntrusiveNode) (var4), true, (long)param2);
+            this.field_n.put((IntrusiveNode) (var4), true, (long)param2);
           }
           if (((ArchiveRequest) (var4)).field_p) {
             stackIn_38_0 = null;
@@ -660,7 +660,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (((ArchiveRequest) (var4)).field_q &&
                 !this.field_B.isUrgentQueueFull((byte) 67)) {
                 var4 = this.field_B.requestGroup(param2, true, this.field_i, (byte) -80, (byte) 2);
-                this.field_n.a((IntrusiveNode) (var4), true, (long)param2);
+                this.field_n.put((IntrusiveNode) (var4), true, (long)param2);
               }
               stackIn_115_0 = null;
               return (ArchiveRequest) (stackIn_115_0);
@@ -700,7 +700,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             }
             if (!this.field_B.isUrgentQueueFull((byte) 16)) {
               var4 = this.field_B.requestGroup(param2, true, this.field_i, (byte) -80, (byte) 2);
-              this.field_n.a((IntrusiveNode) (var4), true, (long)param2);
+              this.field_n.put((IntrusiveNode) (var4), true, (long)param2);
             }
             stackIn_67_0 = null;
             return (ArchiveRequest) (stackIn_67_0);
@@ -770,7 +770,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (ArchiveRequest) (this.field_n.a((long)param0, -43));
+          var3 = (ArchiveRequest) (this.field_n.get((long)param0, -43));
           if (param1 < 119) {
             this.processPrefetch((byte) -99);
           }

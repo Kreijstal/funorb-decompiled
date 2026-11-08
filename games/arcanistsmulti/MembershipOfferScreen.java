@@ -368,7 +368,7 @@ final class MembershipOfferScreen {
           var7 = param3.getParameter("currency");
           if (var7 != null &&
             fi.isDecimalInteger((CharSequence) ((Object) var7), 10)) {
-            this.field_u = GameAppletShell.a((CharSequence) ((Object) var7), 126);
+            this.field_u = GameAppletShell.parseDecimal((CharSequence) ((Object) var7), 126);
           } else {
             this.field_u = 2;
           }
@@ -578,7 +578,7 @@ final class MembershipOfferScreen {
         if (!param1) {
           return -60;
         }
-        while (65536 <= MidiPcmStream.a(vf.field_q, (byte) 96, this.field_c)) {
+        while (65536 <= MidiPcmStream.multiplyFixed16(vf.field_q, (byte) 96, this.field_c)) {
           this.field_p = this.field_p + 1;
           this.field_c = this.field_c - vf.field_q;
         }

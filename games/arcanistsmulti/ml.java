@@ -1351,7 +1351,7 @@ final class ml extends DualLinkNode {
                 var23 = SoftwareRasterizer.field_e;
                 var24 = SoftwareRasterizer.field_j;
                 var21.makeRasterTarget();
-                pc.$cfr$intArgs$a$5f050b8899ac(var17, 0, var18, var15, 106, var16, (Sprite) (((Object[]) (var13))[var20]), 0);
+                pc.drawTexturedSpriteIntGuard(var17, 0, var18, var15, 106, var16, (Sprite) (((Object[]) (var13))[var20]), 0);
                 SoftwareRasterizer.field_e = var23;
                 SoftwareRasterizer.field_j = var24;
                 SoftwareRasterizer.field_l = var22;
@@ -1394,18 +1394,18 @@ final class ml extends DualLinkNode {
                 var31.makeRasterTarget();
                 var32 = 20;
                 var33 = 32;
-                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33 + var22_int, kg.field_d[3], kg.field_d[0], -127, kg.field_d[1], (Sprite) (((Object[]) (var13))[5]), var32 + var20);
-                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var26 + var33, kg.field_d[3], kg.field_d[0], -95, kg.field_d[1], (Sprite) (((Object[]) (var13))[4]), var24 + var32);
-                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33, kg.field_d[3], kg.field_d[0], 64, kg.field_d[1], (Sprite) (((Object[]) (var13))[3]), var32);
+                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var33 + var22_int, kg.field_d[3], kg.field_d[0], -127, kg.field_d[1], (Sprite) (((Object[]) (var13))[5]), var32 + var20);
+                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var26 + var33, kg.field_d[3], kg.field_d[0], -95, kg.field_d[1], (Sprite) (((Object[]) (var13))[4]), var24 + var32);
+                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var33, kg.field_d[3], kg.field_d[0], 64, kg.field_d[1], (Sprite) (((Object[]) (var13))[3]), var32);
                 var33 -= 3;
                 var33 -= 6;
-                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33, kg.field_d[3], kg.field_d[0], 58, kg.field_d[1], (Sprite) (((Object[]) (var13))[2]), var32);
+                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var33, kg.field_d[3], kg.field_d[0], 58, kg.field_d[1], (Sprite) (((Object[]) (var13))[2]), var32);
                 var33 += 6;
                 var33 -= 6;
                 var33 += 3;
                 var33 += 6;
-                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33 + var27, kg.field_d[3], kg.field_d[0], -91, kg.field_d[1], (Sprite) (((Object[]) (var13))[1]), var25 + var32);
-                pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33 + var23, kg.field_d[3], kg.field_d[0], 18, kg.field_d[1], (Sprite) (((Object[]) (var13))[0]), var32 + var21_int);
+                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var33 + var27, kg.field_d[3], kg.field_d[0], -91, kg.field_d[1], (Sprite) (((Object[]) (var13))[1]), var25 + var32);
+                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var33 + var23, kg.field_d[3], kg.field_d[0], 18, kg.field_d[1], (Sprite) (((Object[]) (var13))[0]), var32 + var21_int);
                 SoftwareRasterizer.field_l = var28;
                 SoftwareRasterizer.field_j = var30;
                 SoftwareRasterizer.field_e = var29;
@@ -2130,48 +2130,48 @@ final class ml extends DualLinkNode {
                                 var4 = var24;
                                 var20 = new Sprite(64, 96);
                                 var20.makeRasterTarget();
-                                pc.$cfr$intArgs$a$5f050b8899ac(var21, 16, var22, var23, -8, var24, var13_ref_qb____[0][var25[1]], 0);
-                                pc.$cfr$intArgs$a$5f050b8899ac(var21, 32, var22, var23, -96, var24, var13_ref_qb____[4][var25[5]], 0);
+                                pc.drawTexturedSpriteIntGuard(var21, 16, var22, var23, -8, var24, var13_ref_qb____[0][var25[1]], 0);
+                                pc.drawTexturedSpriteIntGuard(var21, 32, var22, var23, -96, var24, var13_ref_qb____[4][var25[5]], 0);
                                 if (53 != var25[5] &&
                                   var25[5] != 55) {
-                                  pc.$cfr$intArgs$a$5f050b8899ac(var21, 32, var22, var23, 74, var24, var13_ref_qb____[6][var25[6]], 0);
+                                  pc.drawTexturedSpriteIntGuard(var21, 32, var22, var23, 74, var24, var13_ref_qb____[6][var25[6]], 0);
                                 }
-                                pc.$cfr$intArgs$a$5f050b8899ac(var21, 16, var22, var23, 25, var24, var13_ref_qb____[5][var25[4]], 0);
+                                pc.drawTexturedSpriteIntGuard(var21, 16, var22, var23, 25, var24, var13_ref_qb____[5][var25[4]], 0);
                                 this.field_I = new Sprite(64, 96);
                                 this.field_I.makeRasterTarget();
                                 var20.drawCenteredRotatedScaledBilinear(32, 48, 0, 4096);
                                 this.field_I.trimTransparentBorders();
                                 var26 = new Sprite(64, 64);
                                 var26.makeRasterTarget();
-                                pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, 49, var24, var13_ref_qb____[1][var25[0]], 0);
+                                pc.drawTexturedSpriteIntGuard(var21, 0, var22, var23, 49, var24, var13_ref_qb____[1][var25[0]], 0);
                                 this.field_bb = new Sprite(64, 64);
                                 this.field_bb.makeRasterTarget();
                                 var26.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
                                 this.field_bb.trimTransparentBorders();
                                 var27 = new Sprite(64, 64);
                                 var27.makeRasterTarget();
-                                pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, -104, var24, var13_ref_qb____[7][0], 0);
+                                pc.drawTexturedSpriteIntGuard(var21, 0, var22, var23, -104, var24, var13_ref_qb____[7][0], 0);
                                 this.field_Q = new Sprite(64, 64);
                                 this.field_Q.makeRasterTarget();
                                 var27.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
                                 this.field_Q.trimTransparentBorders();
                                 var28 = new Sprite(64, 64);
                                 var28.makeRasterTarget();
-                                pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, -124, var24, var13_ref_qb____[8][0], 0);
+                                pc.drawTexturedSpriteIntGuard(var21, 0, var22, var23, -124, var24, var13_ref_qb____[8][0], 0);
                                 this.field_cb = new Sprite(64, 64);
                                 this.field_cb.makeRasterTarget();
                                 var28.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
                                 this.field_cb.trimTransparentBorders();
                                 var29 = new Sprite(64, 64);
                                 var29.makeRasterTarget();
-                                pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, -112, var24, var13_ref_qb____[2][var25[2]], 0);
+                                pc.drawTexturedSpriteIntGuard(var21, 0, var22, var23, -112, var24, var13_ref_qb____[2][var25[2]], 0);
                                 this.field_fb = new Sprite(64, 64);
                                 this.field_fb.makeRasterTarget();
                                 var29.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
                                 this.field_fb.trimTransparentBorders();
                                 var30 = new Sprite(64, 64);
                                 var30.makeRasterTarget();
-                                pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, -79, var24, var13_ref_qb____[3][var25[3]], 0);
+                                pc.drawTexturedSpriteIntGuard(var21, 0, var22, var23, -79, var24, var13_ref_qb____[3][var25[3]], 0);
                                 this.field_B = new Sprite(64, 64);
                                 this.field_B.makeRasterTarget();
                                 var30.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
@@ -2344,30 +2344,30 @@ final class ml extends DualLinkNode {
                                         6 != this.field_jb &&
                                         this.field_jb != 25 &&
                                         this.field_U) {
-                                        pc.$cfr$intArgs$a$5f050b8899ac(var5, this.field_Y / 2, var6, var3, -111, var4, var11[6].toRgbSprite(), 0);
+                                        pc.drawTexturedSpriteIntGuard(var5, this.field_Y / 2, var6, var3, -111, var4, var11[6].toRgbSprite(), 0);
                                       } else {
-                                        pc.$cfr$intArgs$a$5f050b8899ac(var5, this.field_Y / 2, var6, var3, -85, var4, var11[2].toRgbSprite(), 0);
+                                        pc.drawTexturedSpriteIntGuard(var5, this.field_Y / 2, var6, var3, -85, var4, var11[2].toRgbSprite(), 0);
                                       }
                                       this.field_I = var39.copy();
                                       var40 = new Sprite(this.field_Y, this.field_Y);
                                       var40.makeRasterTarget();
-                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, 70, var4, var11[3].toRgbSprite(), 0);
+                                      pc.drawTexturedSpriteIntGuard(var5, 0, var6, var3, 70, var4, var11[3].toRgbSprite(), 0);
                                       this.field_bb = var40.copy();
                                       var41 = new Sprite(this.field_Y, this.field_Y);
                                       var41.makeRasterTarget();
-                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, 33, var4, var11[1].toRgbSprite(), 0);
+                                      pc.drawTexturedSpriteIntGuard(var5, 0, var6, var3, 33, var4, var11[1].toRgbSprite(), 0);
                                       this.field_Q = var41.copy();
                                       var42 = new Sprite(this.field_Y, this.field_Y);
                                       var42.makeRasterTarget();
-                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, -127, var4, var11[4].toRgbSprite(), 0);
+                                      pc.drawTexturedSpriteIntGuard(var5, 0, var6, var3, -127, var4, var11[4].toRgbSprite(), 0);
                                       this.field_cb = var42.copy();
                                       var43 = new Sprite(this.field_Y, this.field_Y);
                                       var43.makeRasterTarget();
-                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, -4, var4, var11[0].toRgbSprite(), 0);
+                                      pc.drawTexturedSpriteIntGuard(var5, 0, var6, var3, -4, var4, var11[0].toRgbSprite(), 0);
                                       this.field_fb = var43.copy();
                                       var44 = new Sprite(this.field_Y, this.field_Y);
                                       var44.makeRasterTarget();
-                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, -86, var4, var11[5].toRgbSprite(), 0);
+                                      pc.drawTexturedSpriteIntGuard(var5, 0, var6, var3, -86, var4, var11[5].toRgbSprite(), 0);
                                       this.field_B = var44.copy();
                                       this.field_J = true;
                                     }
@@ -2413,15 +2413,15 @@ final class ml extends DualLinkNode {
                                 var31 = new Sprite(64, 96);
                                 var31.makeRasterTarget();
                                 if (this.field_jb != 16) {
-                                  pc.$cfr$intArgs$a$5f050b8899ac(var19, 16, var32, var17, 78, var18, var9[0][var8[1]], 0);
-                                  pc.$cfr$intArgs$a$5f050b8899ac(var19, 32, var32, var17, -91, var18, var9[4][var8[5]], 0);
+                                  pc.drawTexturedSpriteIntGuard(var19, 16, var32, var17, 78, var18, var9[0][var8[1]], 0);
+                                  pc.drawTexturedSpriteIntGuard(var19, 32, var32, var17, -91, var18, var9[4][var8[5]], 0);
                                   if (var8[5] != 53 &&
                                     var8[5] != 55) {
-                                    pc.$cfr$intArgs$a$5f050b8899ac(var19, 32, var32, var17, -90, var18, var9[6][var8[6]], 0);
+                                    pc.drawTexturedSpriteIntGuard(var19, 32, var32, var17, -90, var18, var9[6][var8[6]], 0);
                                   }
-                                  pc.$cfr$intArgs$a$5f050b8899ac(var19, 16, var32, var17, 13, var18, var9[5][var8[4]], 0);
+                                  pc.drawTexturedSpriteIntGuard(var19, 16, var32, var17, 13, var18, var9[5][var8[4]], 0);
                                 } else {
-                                  pc.$cfr$intArgs$a$5f050b8899ac(var19, 16, var32, var17, 116, var18, tk.field_x[2], 0);
+                                  pc.drawTexturedSpriteIntGuard(var19, 16, var32, var17, 116, var18, tk.field_x[2], 0);
                                 }
                                 this.field_I = new Sprite(32, 48);
                                 this.field_I.makeRasterTarget();
@@ -2429,14 +2429,14 @@ final class ml extends DualLinkNode {
                                 this.field_I.trimTransparentBorders();
                                 var33 = new Sprite(64, 64);
                                 var33.makeRasterTarget();
-                                pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, 91, var18, var9[1][var8[0]], 0);
+                                pc.drawTexturedSpriteIntGuard(var19, 0, var32, var17, 91, var18, var9[1][var8[0]], 0);
                                 this.field_bb = new Sprite(32, 32);
                                 this.field_bb.makeRasterTarget();
                                 var33.drawCenteredRotatedScaledBilinear(16, 16, 0, 2048);
                                 this.field_bb.trimTransparentBorders();
                                 var34 = new Sprite(64, 64);
                                 var34.makeRasterTarget();
-                                pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, 123, var18, var9[7][0], 0);
+                                pc.drawTexturedSpriteIntGuard(var19, 0, var32, var17, 123, var18, var9[7][0], 0);
                                 this.field_Q = new Sprite(32, 32);
                                 this.field_Q.makeRasterTarget();
                                 if (var8[0] != 46) {
@@ -2445,7 +2445,7 @@ final class ml extends DualLinkNode {
                                 this.field_Q.trimTransparentBorders();
                                 var35 = new Sprite(64, 64);
                                 var35.makeRasterTarget();
-                                pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, -81, var18, var9[8][0], 0);
+                                pc.drawTexturedSpriteIntGuard(var19, 0, var32, var17, -81, var18, var9[8][0], 0);
                                 this.field_cb = new Sprite(32, 32);
                                 this.field_cb.makeRasterTarget();
                                 if (var8[0] != 46) {
@@ -2454,14 +2454,14 @@ final class ml extends DualLinkNode {
                                 this.field_cb.trimTransparentBorders();
                                 var36 = new Sprite(64, 64);
                                 var36.makeRasterTarget();
-                                pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, 126, var18, var9[2][var8[2]], 0);
+                                pc.drawTexturedSpriteIntGuard(var19, 0, var32, var17, 126, var18, var9[2][var8[2]], 0);
                                 this.field_fb = new Sprite(32, 32);
                                 this.field_fb.makeRasterTarget();
                                 var36.drawCenteredRotatedScaledBilinear(16, 16, 0, 2048);
                                 this.field_fb.trimTransparentBorders();
                                 var37 = new Sprite(64, 64);
                                 var37.makeRasterTarget();
-                                pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, 14, var18, var9[3][var8[3]], 0);
+                                pc.drawTexturedSpriteIntGuard(var19, 0, var32, var17, 14, var18, var9[3][var8[3]], 0);
                                 this.field_B = new Sprite(32, 32);
                                 this.field_B.makeRasterTarget();
                                 var37.drawCenteredRotatedScaledBilinear(16, 16, 0, 2048);

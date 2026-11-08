@@ -19,7 +19,7 @@ final class NodeHashTable {
     static boolean field_j;
     static int field_m;
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode next(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
@@ -62,12 +62,12 @@ final class NodeHashTable {
         return var6;
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode first(int param0) {
         this.field_e = 0;
         if (param0 != 10) {
           return (IntrusiveNode) null;
         }
-        return this.c(-107);
+        return this.next(-107);
     }
 
     public static void releaseStatics(int param0) {
@@ -83,7 +83,7 @@ final class NodeHashTable {
         field_l = (int[]) null;
     }
 
-    final IntrusiveNode a(long param0, int param1) {
+    final IntrusiveNode get(long param0, int param1) {
         IntrusiveNode var5 = null;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
         if (param1 > -30) {
@@ -103,7 +103,7 @@ final class NodeHashTable {
         return null;
     }
 
-    final static String a(int param0, long param1) {
+    final static String formatGmtDate(int param0, long param1) {
         nf.field_Bb.setTime(new Date(param1));
         int var3 = nf.field_Bb.get(7);
         int var4 = nf.field_Bb.get(5);
@@ -118,7 +118,7 @@ final class NodeHashTable {
         return WhirlpoolHasher.field_m[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + no.field_ub[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    final void a(IntrusiveNode param0, boolean param1, long param2) {
+    final void put(IntrusiveNode param0, boolean param1, long param2) {
         if (param0.previous != null) {
           param0.unlink(true);
         }

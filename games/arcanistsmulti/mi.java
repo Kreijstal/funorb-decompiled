@@ -4436,7 +4436,7 @@ final class mi extends DualLinkNode {
                                             break;
                                           }
                                           if (decompiledNaturalLoopExit0) {
-                                            stackIn_823_0 = $cfr$dcmpg(128.0 * Math.random(), (double)this.field_y);
+                                            stackIn_823_0 = compareDoublesNanGreater(128.0 * Math.random(), (double)this.field_y);
                                           }
                                           if (stackIn_823_0 < 0) {
                                             var5 = this.a(this.field_v + (int)(96.0 * Math.random() - 48.0), (ml) null, (byte) 81, 109, (int)(-480.0 + Math.random() * (double)(this.field_G + 480)), this.field_q);
@@ -9882,7 +9882,7 @@ final class mi extends DualLinkNode {
         field_s = "Sea spells focus on diverse attacks from above, below and summoning armies of minions.";
     }
 
-    private static int $cfr$dcmpg(double left, double right) {
+    private static int compareDoublesNanGreater(double left, double right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

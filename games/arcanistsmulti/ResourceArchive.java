@@ -879,7 +879,7 @@ final class ResourceArchive {
           if (11 == fj.field_j) {
             ContextActionMenu.h(7807);
           }
-          SoundCache.a(ii.field_f, ArrayWidgetContainer.field_C, af.field_Hb, (byte) -100);
+          SoundCache.showLoadingProgress(ii.field_f, ArrayWidgetContainer.field_C, af.field_Hb, (byte) -100);
           OptionsDialog.paintCanvasNow(param0, (byte) -112, 0, 0);
           if (param1 > -15) {
             var3 = (java.awt.Canvas) null;

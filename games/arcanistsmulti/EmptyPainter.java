@@ -65,18 +65,18 @@ final class EmptyPainter implements WidgetPainter {
     final static void setMusicVolume(int param0, boolean param1) {
         Bzip2State.field_A = param0;
         if (null != GrowableIntList.field_h) {
-          GrowableIntList.field_h.a(param0, (byte) -66);
+          GrowableIntList.field_h.setMasterVolume(param0, (byte) -66);
         }
         if (!param1) {
           if (gg.field_h != null) {
-            gg.field_h.a(2, param0);
+            gg.field_h.setFadeStep(2, param0);
           }
           return;
         }
         jg var3 = (jg) null;
         EmptyPainter.a(84, (jg) null);
         if (gg.field_h != null) {
-          gg.field_h.a(2, param0);
+          gg.field_h.setFadeStep(2, param0);
         }
     }
 
@@ -116,7 +116,7 @@ final class EmptyPainter implements WidgetPainter {
           } else {
             stackIn_3_6 = 0;
           }
-          ArcanistsMulti.a(stackIn_2_0, (int[]) (stackIn_2_1), (SceneScrollPane) (stackIn_2_2), stackIn_2_3, stackIn_2_4, stackIn_2_5, stackIn_3_6, param1.field_g, param1.field_a);
+          ArcanistsMulti.openInfoPanel(stackIn_2_0, (int[]) (stackIn_2_1), (SceneScrollPane) (stackIn_2_2), stackIn_2_3, stackIn_2_4, stackIn_2_5, stackIn_3_6, param1.field_g, param1.field_a);
           if (param1.field_m == param0 &&
             !Js5Transport.f(-1) &&
             DirectByteStorage.field_f == null &&
