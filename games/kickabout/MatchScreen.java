@@ -137,7 +137,7 @@ final class MatchScreen extends AppScreen {
           TutorialCaptionSupport.field_j >= 0 &&
           ArrayWidgetContainer.field_x < 640 &&
           TutorialCaptionSupport.field_j < 480 && (((PlayingView) (this.phaseController)).hasHeldMouseInput((byte) -82) ||
-          !ArchiveIndex.b(640))) {
+          !ArchiveIndex.isGamePointerOutsideViewport(640))) {
           stackIn_16_0 = true;
           decompiledFrameRemainder0 = false;
         }

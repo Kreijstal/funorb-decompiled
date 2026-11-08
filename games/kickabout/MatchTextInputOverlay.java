@@ -152,7 +152,7 @@ final class MatchTextInputOverlay implements OverlayLayer {
         String var4;
         MeshPreviewSupport.b(0);
         var4 = (String) null;
-        ReceivedAuctionItem.a((String) null, -1);
+        ReceivedAuctionItem.setChatChannelLabel((String) null, -1);
         if (param0 != -25) {
           field_a = -18;
         }
@@ -162,12 +162,12 @@ final class MatchTextInputOverlay implements OverlayLayer {
               MachineTokenStorageSupport.field_e.isTournamentMatch && (!MachineTokenStorageSupport.field_e.isSpectator(param0 ^ 25) ||
               MachineTokenStorageSupport.field_e.usesTournamentSpectatorControls(-21660))) {
               NetworkArchiveRequest.h(param0 ^ 15419);
-              ReceivedAuctionItem.a(AccountRegistrationResponse.field_h, param0 ^ 24);
+              ReceivedAuctionItem.setChatChannelLabel(AccountRegistrationResponse.field_h, param0 ^ 24);
               AuctionTableWidget.a(6356832, (byte) -25);
             }
           } else {
             NetworkArchiveRequest.h(-15396);
-            ReceivedAuctionItem.a(SessionUrlSupport.field_g, -1);
+            ReceivedAuctionItem.setChatChannelLabel(SessionUrlSupport.field_g, -1);
             AuctionTableWidget.a(6356832, (byte) -25);
           }
           this.field_i = this.field_i + 1;
@@ -196,7 +196,7 @@ final class MatchTextInputOverlay implements OverlayLayer {
     public final void paint(int param0) {
         int var2 = 83 % ((50 - param0) / 45);
         if (this.capturesInput((byte) 87)) {
-          RotaryDialPainter.a((this.field_i & 8) == 0 ? true : false, false);
+          RotaryDialPainter.drawContentTransitionAndTooltip((this.field_i & 8) == 0 ? true : false, false);
         }
     }
 

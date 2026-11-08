@@ -21,7 +21,7 @@ abstract class SortCriterion {
         if (param1 >= -20) {
           field_a = (ConsoleExpression[]) null;
         }
-        ContextMenuItem.a(true, param0);
+        ContextMenuItem.drawSharedPopups(true, param0);
     }
 
     abstract int directionCount(int param0);
@@ -156,7 +156,7 @@ abstract class SortCriterion {
             for (var19Lifetime1 = 0; var19Lifetime1 < var18_ref_nr__.length; var19Lifetime1++) {
               var20 = var18_ref_nr__[var19Lifetime1];
               if (var20 != null) {
-                var20.a(var15Lifetime2, -2);
+                var20.drawSpectatorFrame(var15Lifetime2, -2);
               }
             }
             if (!param2 ||

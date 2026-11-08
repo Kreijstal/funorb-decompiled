@@ -71,7 +71,7 @@ final class TextLine extends IntrusiveNode {
         field_k = null;
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int scaleLobbyPreviewCoordinate(int param0, boolean param1) {
         if (param1) {
           TextLine.releaseStatics(-13);
           return 23 * param0 >> 8;

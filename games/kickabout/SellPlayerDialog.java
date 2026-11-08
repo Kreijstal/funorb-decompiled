@@ -101,7 +101,7 @@ final class SellPlayerDialog extends MessageDialog {
             AuctionLogEntry.field_g = AuctionLogEntry.field_g + var4;
           }
           TextInputUiSupport.updateTutorialMarker(11);
-          ReceivedAuctionItem.h((byte) 125);
+          ReceivedAuctionItem.updateTutorialPossessionAssist((byte) 125);
           if (HuffmanCodec.field_e == 6) {
             DualLinkDeque.a((byte) -127);
           }

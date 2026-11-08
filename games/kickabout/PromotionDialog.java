@@ -18,7 +18,7 @@ final class PromotionDialog extends MessageDialog {
         this.open(ModelMaterialDecoder.messageButtonCount(this.field_y, 1), SharedPanelFactory.getMessageButtonLabels(false, 10), 1054928844);
     }
 
-    final static void a(int param0, byte param1) {
+    final static void resendLookupRequests(int param0, byte param1) {
         int var3 = 0;
         LookupRecordUpdate var4 = null;
         LookupQuery var5 = null;
@@ -47,7 +47,7 @@ final class PromotionDialog extends MessageDialog {
         }
     }
 
-    final static int g(int param0) {
+    final static int pollAccountUiAction(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

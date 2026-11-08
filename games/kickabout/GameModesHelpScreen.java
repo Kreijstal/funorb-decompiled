@@ -124,7 +124,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
         }
     }
 
-    final static int[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static int[] clampTooltipPosition(int param0, int param1, int param2, int param3, int param4) {
         int[] var5;
         int var6;
         int[] var7;
@@ -153,9 +153,9 @@ final class GameModesHelpScreen extends PagedHelpScreen {
         return var5;
     }
 
-    final static void i(byte param0) {
+    final static void closeHoverTooltip(byte param0) {
         if (param0 >= -16) {
-          GameModesHelpScreen.a(-54, 93, 33, 14, -70);
+          GameModesHelpScreen.clampTooltipPosition(-54, 93, 33, 14, -70);
         }
         StreetSceneryLoader.field_m = null;
     }

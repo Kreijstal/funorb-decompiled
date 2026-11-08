@@ -54,7 +54,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
           if (param0 != 2235) {
             RasterStateSnapshot.a(-120, 112, -101, 49);
           }
-          var11 = GameKeyHandler.a(var10 * var10 + var9 * var9, (byte) 80);
+          var11 = GameKeyHandler.approximateSquareRoot(var10 * var10 + var9 * var9, (byte) 80);
           if (0 == var11) {
             var5 = param3;
             var6 = param1;
@@ -92,7 +92,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
           if (param0 != 2235) {
             RasterStateSnapshot.a(-120, 112, -101, 49);
           }
-          var11 = GameKeyHandler.a(var10 * var10 + var9 * var9, (byte) 80);
+          var11 = GameKeyHandler.approximateSquareRoot(var10 * var10 + var9 * var9, (byte) 80);
           if (0 == var11) {
             var5 = param3;
             var6 = param1;

@@ -15,7 +15,7 @@ final class AccountNameCharacterSupport {
         }
         if (RasterGlowSupport.field_c == 10 ||
           !PitchSurfaceLoader.d(1)) {
-          IntTripleCommand.g((byte) -54);
+          IntTripleCommand.openAccountInterface((byte) -54);
           RasterGlowSupport.field_c = 11;
         }
         WhirlpoolHasher.field_h = true;

@@ -153,7 +153,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           if (!this.field_Eb.isEmpty(-2) &&
             this.field_gb &&
             0 == this.field_qb) {
-            MenuButton.a(param1, 0, this.field_Cb, param0, this.field_Eb, this.field_Lb, param3);
+            MenuButton.showPlayerStatsTooltip(param1, 0, this.field_Cb, param0, this.field_Eb, this.field_Lb, param3);
           }
           if (null == this.field_Db) {
             if (!this.field_Eb.isEmpty(-2)) {

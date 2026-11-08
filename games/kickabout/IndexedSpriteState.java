@@ -49,13 +49,13 @@ abstract class IndexedSpriteState {
         field_e = (boolean[][]) null;
     }
 
-    final static void a(byte param0, String param1) {
+    final static void showTextTooltip(byte param0, String param1) {
         ThumbnailStateFactory.field_b = true;
         if (param0 != -67) {
           String var3 = (String) null;
-          IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-25, (String) null);
+          IndexedSpriteState.showTextTooltip(-25, (String) null);
         }
-        if (LoginMethod.a(false)) {
+        if (LoginMethod.shouldDelayTooltip(false)) {
           return;
         }
         try {
@@ -74,13 +74,13 @@ abstract class IndexedSpriteState {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$b6210757cdab(int param0, String param1) {
+    final static void showTextTooltip(int param0, String param1) {
         ThumbnailStateFactory.field_b = true;
         if (param0 != -67) {
           String var3 = (String) null;
-          IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-25, (String) null);
+          IndexedSpriteState.showTextTooltip(-25, (String) null);
         }
-        if (LoginMethod.a(false)) {
+        if (LoginMethod.shouldDelayTooltip(false)) {
           return;
         }
         try {

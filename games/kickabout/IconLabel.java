@@ -81,7 +81,7 @@ final class IconLabel extends UiLayoutNode {
           if (param0 == var2) {
             var3_ref_k = (StreetSceneryLoader) (IterableDualLinkDeque.field_f.first(param0 ^ 24009));
             if (var3_ref_k == null) {
-              FormationView.b((byte) -116);
+              FormationView.closeClientSocket((byte) -116);
               return;
             }
             var4_int = var8.readUnsignedByte((byte) -112);
@@ -93,7 +93,7 @@ final class IconLabel extends UiLayoutNode {
             }
             var8.field_n = var8.field_n + 4;
             if (!var8.verifyCrc32(param0 + 0)) {
-              FormationView.b((byte) -116);
+              FormationView.closeClientSocket((byte) -116);
               return;
             }
             var3_ref_k.unlink((byte) -109);
@@ -101,7 +101,7 @@ final class IconLabel extends UiLayoutNode {
           }
           if (var2 != 1) {
             UnreadMessagesScreen.reportClientError("A1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, param0 + 1);
-            FormationView.b((byte) -116);
+            FormationView.closeClientSocket((byte) -116);
             return;
           }
           var3 = var8.readInt(4);
@@ -117,7 +117,7 @@ final class IconLabel extends UiLayoutNode {
             var4.unlink((byte) -109);
             return;
           }
-          FormationView.b((byte) -116);
+          FormationView.closeClientSocket((byte) -116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -36,12 +36,12 @@ final class ClientProtocolStage {
         if (!param0) {
           field_b = (String[]) null;
         }
-        TrinketCountSortCriterion.b((byte) 44);
+        TrinketCountSortCriterion.closeArchiveResources((byte) 44);
         if (LinkTextPainter.isAwaitingLoginResponse(0)) {
           FootballerAiOverlaySupport.field_d.writeIsaacByte(1, (byte) -106);
           ClientPacketFlushSupport.flushPackets(0, false);
         }
-        FormationView.b((byte) -116);
+        FormationView.closeClientSocket((byte) -116);
     }
 
     public static void releaseStatics(int param0) {

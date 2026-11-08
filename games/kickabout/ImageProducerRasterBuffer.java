@@ -64,7 +64,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           return SetLagCommand.createResourceArchive(param1, (byte) -58, 1, false, false, true);
         }
         PacketBuffer var3 = (PacketBuffer) null;
-        ImageProducerRasterBuffer.a(81, 114, (PacketBuffer) null, 122, 17);
+        ImageProducerRasterBuffer.writeClientHandshake(81, 114, (PacketBuffer) null, 122, 17);
         return SetLagCommand.createResourceArchive(param1, (byte) -58, 1, false, false, true);
     }
 
@@ -148,14 +148,14 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static void a(int param0, int param1, PacketBuffer param2, int param3, int param4) {
+    final static void writeClientHandshake(int param0, int param1, PacketBuffer param2, int param3, int param4) {
         try {
           param2.writeByte(param3 ^ -3315, 12);
           param2.writeShort(param3 ^ 1207447422, 17);
           param2.writeShort(-1207444472, param1);
           if (param3 != -3210) {
             PacketBuffer var6 = (PacketBuffer) null;
-            ImageProducerRasterBuffer.a(106, -79, (PacketBuffer) null, 72, 113);
+            ImageProducerRasterBuffer.writeClientHandshake(106, -79, (PacketBuffer) null, 72, 113);
           }
           param2.writeShort(param3 - 1207441262, param4);
           param2.writeByte(param3 ^ -3298, param0);
@@ -181,7 +181,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     final static void c(byte param0) {
         if (param0 != -77) {
           PacketBuffer var2 = (PacketBuffer) null;
-          ImageProducerRasterBuffer.a(105, -41, (PacketBuffer) null, 7, -41);
+          ImageProducerRasterBuffer.writeClientHandshake(105, -41, (PacketBuffer) null, 7, -41);
           IntrusiveDeque.field_f = false;
           return;
         }

@@ -13,7 +13,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
     static String field_Fb;
     boolean field_Gb;
 
-    final static int a(long param0, int param1, byte param2) {
+    final static int multiplyFixed16(long param0, int param1, byte param2) {
         if (param2 >= 96) {
           param1 = (int)(param0 * (long)param1 >> 16);
           return param1;
@@ -165,7 +165,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           field_Db = null;
           field_Bb = null;
@@ -176,7 +176,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
           field_Ab = null;
           return;
         }
-        CheckboxLabelWidget.a(76);
+        CheckboxLabelWidget.releaseStatics(76);
         field_Db = null;
         field_Bb = null;
         field_Fb = null;
@@ -231,7 +231,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                     var6.draw(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
                     return;
                   }
-                  var7 = IntTripleCommand.h(40);
+                  var7 = IntTripleCommand.getButtonPulseIntensity(40);
                   if (0 <= var7) {
                     SoftwareRasterizer.drawRoundedRectangle(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7);
                   }
@@ -270,7 +270,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
         if (param0 &&
           this.field_lb &&
           !this.field_gb) {
-          var7Lifetime1 = IntTripleCommand.h(40);
+          var7Lifetime1 = IntTripleCommand.getButtonPulseIntensity(40);
           if (0 <= var7Lifetime1) {
             SoftwareRasterizer.drawRoundedRectangle(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7Lifetime1);
           }

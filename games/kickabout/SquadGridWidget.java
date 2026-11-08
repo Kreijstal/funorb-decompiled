@@ -136,7 +136,7 @@ final class SquadGridWidget extends UiLayoutNode {
         for (var3 = 0; 9 > var3; var3++) {
           if (this.field_Eb[var3].field_sb != 0 &&
             !this.field_Eb[var3].field_Eb.isEmpty(-2)) {
-            LoginKind.a((byte) -123);
+            LoginKind.playSelectionSound((byte) -123);
           }
           if (this.field_Eb[var3].field_qb != 0) {
             var2Lifetime1 = var3;
@@ -258,7 +258,7 @@ final class SquadGridWidget extends UiLayoutNode {
                   AuctionTableWidget.field_Hb.field_Db.field_J = -(18 * (var9 - 4));
                 }
               }
-              field_Gb = ReceivedAuctionItem.a(18, -(AuctionTableWidget.field_Hb.field_Db.field_J + 5), (byte) -72);
+              field_Gb = ReceivedAuctionItem.floorDiv(18, -(AuctionTableWidget.field_Hb.field_Db.field_J + 5), (byte) -72);
               break;
             }
           }
@@ -841,7 +841,7 @@ final class SquadGridWidget extends UiLayoutNode {
                   AuctionTableWidget.field_Hb.field_Db.field_J = -(18 * (var9 - 4));
                 }
               }
-              field_Gb = ReceivedAuctionItem.a(18, -(AuctionTableWidget.field_Hb.field_Db.field_J + 5), (byte) -72);
+              field_Gb = ReceivedAuctionItem.floorDiv(18, -(AuctionTableWidget.field_Hb.field_Db.field_J + 5), (byte) -72);
               break;
             }
           }

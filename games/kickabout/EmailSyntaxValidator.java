@@ -8,7 +8,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
     static ModelMesh[] field_l;
     static String field_j;
 
-    final static IntrusiveDeque d(byte param0) {
+    final static IntrusiveDeque createConsoleCommands(byte param0) {
         IntrusiveDeque var1 = new IntrusiveDeque();
         var1.addLast(new SumIntegersCommand("sumIntegers", new Class[]{int[].class}, (String) null), 3);
         var1.addLast(new WriteIntegersCommand("writeIntegers", new Class[]{int[].class}, (String) null), 3);
@@ -68,12 +68,12 @@ final class EmailSyntaxValidator extends TextFieldValidator {
 
     final static int multiplyFixed16(int param0, long param1, long param2) {
         if (param0 != -8905) {
-          EmailSyntaxValidator.e((byte) 58);
+          EmailSyntaxValidator.getFullscreenPromptHeight((byte) 58);
         }
         return (int)(param1 * param2 >> 16);
     }
 
-    final static ArgbSprite g(int param0) {
+    final static ArgbSprite createBallCarrierOverlay(int param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = Kickabout.field_G;
@@ -86,7 +86,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           SoftwareRasterizer.fillCircle(54, 54, var2_int, var3);
         }
         if (param0 != -22976) {
-          EmailSyntaxValidator.g(126);
+          EmailSyntaxValidator.createBallCarrierOverlay(126);
         }
         TeamManagementScreen.e(param0 ^ -22987);
         ArgbSprite var2 = new ArgbSprite(54, 54);
@@ -143,7 +143,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         field_j = null;
     }
 
-    final static boolean a(boolean param0, byte param1) {
+    final static boolean pollClientConnection(boolean param0, byte param1) {
         try {
           CipherPacketBuffer var2_ref_ml = null;
           if (ArrayWidgetContainer.field_A == null) {
@@ -167,7 +167,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
               PagedHelpScreen.field_A = param0 ? -2 : -1;
               TeamSelectionView.field_n = param0 ? -2 : -1;
               SquadSlotWidget.field_Ab = param0 ? -2 : -1;
-              ImageProducerRasterBuffer.a(AuctionItem.field_g, ClassDescriptorSupport.field_g, FootballerAiOverlaySupport.field_d, -3210, RotaryDialWidget.field_E);
+              ImageProducerRasterBuffer.writeClientHandshake(AuctionItem.field_g, ClassDescriptorSupport.field_g, FootballerAiOverlaySupport.field_d, -3210, RotaryDialWidget.field_E);
               ClientPacketFlushSupport.flushPackets(-1, false);
             } catch (IOException iOException) {
               ByteArrayPool.field_c = AudioService.field_h;
@@ -196,7 +196,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         return stackIn_6_0;
     }
 
-    final static int e(byte param0) {
+    final static int getFullscreenPromptHeight(byte param0) {
         if (param0 != 18) {
           field_j = (String) null;
         }

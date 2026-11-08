@@ -11,7 +11,7 @@ final class AuctionBidDialog extends MessageDialog {
     static boolean field_G;
     private long field_M;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           field_I = null;
           field_K = (int[][]) null;

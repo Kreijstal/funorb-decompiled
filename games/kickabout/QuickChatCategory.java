@@ -142,7 +142,7 @@ final class QuickChatCategory extends DualLinkNode {
             LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
             ArchiveNetworkClient.field_i < TutorialCaptionSupport.field_j &&
             AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > TutorialCaptionSupport.field_j) {
-            GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
+            GameQuickChatResolver.showCurrencyTooltip(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
           }
           return;
         }
@@ -172,7 +172,7 @@ final class QuickChatCategory extends DualLinkNode {
               LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
               ArchiveNetworkClient.field_i < TutorialCaptionSupport.field_j &&
               AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > TutorialCaptionSupport.field_j) {
-              GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
+              GameQuickChatResolver.showCurrencyTooltip(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
           }
@@ -199,7 +199,7 @@ final class QuickChatCategory extends DualLinkNode {
             LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
             ArchiveNetworkClient.field_i < TutorialCaptionSupport.field_j &&
             AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > TutorialCaptionSupport.field_j) {
-            GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
+            GameQuickChatResolver.showCurrencyTooltip(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
             return;
           }
           return;
@@ -212,7 +212,7 @@ final class QuickChatCategory extends DualLinkNode {
               LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
               ArchiveNetworkClient.field_i < TutorialCaptionSupport.field_j &&
               AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > TutorialCaptionSupport.field_j) {
-              GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
+              GameQuickChatResolver.showCurrencyTooltip(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
           }
@@ -223,7 +223,7 @@ final class QuickChatCategory extends DualLinkNode {
               LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
               ArchiveNetworkClient.field_i < TutorialCaptionSupport.field_j &&
               AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > TutorialCaptionSupport.field_j) {
-              GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
+              GameQuickChatResolver.showCurrencyTooltip(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
           }
@@ -236,7 +236,7 @@ final class QuickChatCategory extends DualLinkNode {
         }
         if (ArchiveNetworkClient.field_i < TutorialCaptionSupport.field_j &&
           AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > TutorialCaptionSupport.field_j) {
-          GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
+          GameQuickChatResolver.showCurrencyTooltip(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
           return;
         }
     }

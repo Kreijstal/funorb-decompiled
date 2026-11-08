@@ -74,7 +74,7 @@ final class ContextMenu extends UiLayoutNode {
         }
         var6 = 0;
         for (var7 = 0; var7 < this.field_Ab; var7++) {
-          var8 = this.field_Bb[var7].b(this.field_Eb, 0, this.field_Hb);
+          var8 = this.field_Bb[var7].measureWidthWithPadding(this.field_Eb, 0, this.field_Hb);
           if (var8 > var6) {
             var6 = var8;
           }
@@ -85,7 +85,7 @@ final class ContextMenu extends UiLayoutNode {
         var9 = MonotonicClock.placePopupVertically(param3, param4, var7Lifetime1, 29079);
         this.setBounds(true, var6, var8Lifetime1, var9, var7Lifetime1);
         for (var10 = param0; var10 < this.field_Ab; var10++) {
-          this.field_Bb[var10].a(this.field_Eb, this.field_Hb, -(this.field_Mb * 2) + var6, this.field_Cb * var10 + this.field_Fb, this.field_Mb, 15114, this.field_Cb);
+          this.field_Bb[var10].setBoundsAndLayout(this.field_Eb, this.field_Hb, -(this.field_Mb * 2) + var6, this.field_Cb * var10 + this.field_Fb, this.field_Mb, 15114, this.field_Cb);
         }
     }
 
@@ -114,7 +114,7 @@ final class ContextMenu extends UiLayoutNode {
         return true;
     }
 
-    final static ResourceArchive a(boolean param0, int param1, int param2, boolean param3, int param4) {
+    final static ResourceArchive createResourceArchive(boolean param0, int param1, int param2, boolean param3, int param4) {
         if (param4 <= 107) {
           return (ResourceArchive) null;
         }

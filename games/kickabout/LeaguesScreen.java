@@ -99,7 +99,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
             SquadGridWidget.field_Gb = 0;
             var5 = var7;
             AuctionTableWidget.field_Hb.field_Db.field_J = 0;
-            LoginKind.a((byte) 80);
+            LoginKind.playSelectionSound((byte) 80);
             var6 = 1;
           }
         }
@@ -107,7 +107,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           DialogOverlay.field_b.getText((byte) -16).length() > 0) {
           ShopPlayerSlot.requestLeaguePlayerSearch(DialogOverlay.field_b.getText((byte) -16), (byte) 74);
           DialogOverlay.field_b.setText("", -23174);
-          LoginKind.a((byte) -105);
+          LoginKind.playSelectionSound((byte) -105);
         }
         boolean decompiledFrameRemainder0 = true;
         if (PlayerContextMenu.field_f) {
@@ -125,7 +125,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         AuctionTableWidget.field_Hb.updateInput(0, param1);
         AuctionTableWidget.field_Hb.advanceScroll(32 * StatefulTextPainter.field_v, false, (byte) -111, 32);
         if (var6 == 0) {
-          var7 = ReceivedAuctionItem.a(18, -(AuctionTableWidget.field_Hb.field_Db.field_J + 5), (byte) -72);
+          var7 = ReceivedAuctionItem.floorDiv(18, -(AuctionTableWidget.field_Hb.field_Db.field_J + 5), (byte) -72);
           LineupView.field_y.evictExpired(30 + var7, -20 + var7, -108);
           CheckboxPainter.a((byte) 125, -10 + var7, var7 + 20, var5);
           if (SquadGridWidget.field_Gb != var7 ||
@@ -136,13 +136,13 @@ final class LeaguesScreen extends ButtonMenuScreen {
           }
         }
         if (DialogOverlay.field_b.field_gb) {
-          IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, IterableNodeHashTable.field_a);
+          IndexedSpriteState.showTextTooltip(-67, IterableNodeHashTable.field_a);
         }
         var7 = 0;
         while (var7 < WelcomeDialog.field_H.length) {
           stackIn_42_0 = WelcomeDialog.field_H[var7].field_gb;
           if (stackIn_42_0) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GrowableIntList.field_f, new String[]{ConsoleTokenCursor.field_h[var7]}));
+            IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GrowableIntList.field_f, new String[]{ConsoleTokenCursor.field_h[var7]}));
           }
           var7++;
         }
@@ -236,7 +236,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           if (var4.length() > 0) {
             ShopPlayerSlot.requestLeaguePlayerSearch(DialogOverlay.field_b.getText((byte) -16), (byte) 74);
             DialogOverlay.field_b.setText("", -23174);
-            LoginKind.a((byte) -115);
+            LoginKind.playSelectionSound((byte) -115);
           }
         }
         return true;

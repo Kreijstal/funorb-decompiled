@@ -70,7 +70,7 @@ final class MyKitScreen extends TeamManagementScreen {
               } else {
                 AvailabilityCheckRequest.a(123, var6.field_yb);
               }
-              LoginKind.a((byte) -117);
+              LoginKind.playSelectionSound((byte) -117);
             }
             var6 = (ColourSwatchTile) (var5.next(33));
           }
@@ -78,11 +78,11 @@ final class MyKitScreen extends TeamManagementScreen {
         var4Lifetime1 = 0;
         if (this.field_Y.field_sb == 1) {
           var4Lifetime1--;
-          LoginKind.a((byte) -99);
+          LoginKind.playSelectionSound((byte) -99);
         }
         if (this.field_K.field_sb == 1) {
           var4Lifetime1++;
-          LoginKind.a((byte) -116);
+          LoginKind.playSelectionSound((byte) -116);
         }
         if (FormationAgent.field_f < ArrayWidgetContainer.field_x &&
           StatefulTextPainter.field_v != 0) {

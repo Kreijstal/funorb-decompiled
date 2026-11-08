@@ -125,7 +125,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           }
           boolean decompiledFrameRemainder0 = true;
           if (AuctionLogEntry.field_h.screenId == 12) {
-            if (LoadingProgressSupport.a((byte) 97) == GameLoopApplet.field_E.field_p &&
+            if (LoadingProgressSupport.getMusicVolume((byte) 97) == GameLoopApplet.field_E.field_p &&
               IntrusiveNode.getSoundEffectVolume((byte) -110) == GameLoopApplet.field_E.field_F) {
               stackIn_31_0 = (GameLoopApplet.field_E.field_A) ? 0 : 1;
               if (stackIn_31_0 != (RotaryDialPainter.field_n ? 1 : 0)) {
@@ -157,7 +157,7 @@ final class DelayedServerPacket extends IntrusiveNode {
               if (255 < var4Lifetime1) {
                 var4Lifetime1 = 255;
               }
-              var5 = LoadingProgressSupport.a((byte) 97);
+              var5 = LoadingProgressSupport.getMusicVolume((byte) 97);
               if (var5 > 255) {
                 var5 = 255;
               }
@@ -167,7 +167,7 @@ final class DelayedServerPacket extends IntrusiveNode {
                 FootballerAiOverlaySupport.field_d.writeByte(param2 ^ -113, var4Lifetime1);
                 FootballerAiOverlaySupport.field_d.writeByte(param2 + 119, var3_int);
               }
-              GameLoopApplet.field_E.field_p = LoadingProgressSupport.a((byte) 97);
+              GameLoopApplet.field_E.field_p = LoadingProgressSupport.getMusicVolume((byte) 97);
               GameLoopApplet.field_E.field_F = IntrusiveNode.getSoundEffectVolume((byte) -95);
               GameLoopApplet.field_E.field_d = ByteStorage.field_c;
               GameLoopApplet.field_E.field_A = RotaryDialPainter.field_n;

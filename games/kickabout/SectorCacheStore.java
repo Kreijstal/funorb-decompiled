@@ -220,7 +220,7 @@ final class SectorCacheStore {
             PlayerShopScreen.field_S = param1.field_r;
           }
           var2_intLifetime1 = 50 % ((-10 - param0) / 54);
-          LoginText.a(true, param1);
+          LoginText.appendChatMessage(true, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

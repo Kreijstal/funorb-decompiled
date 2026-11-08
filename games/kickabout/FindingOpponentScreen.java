@@ -109,7 +109,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
         if (1 != this.field_A.field_sb) {
           return;
         }
-        AchievementSubmission.a((byte) -120);
+        AchievementSubmission.playUiClickSound((byte) -120);
         RasterGlowSupport.returnToPreviousScreen(-81, true);
     }
 

@@ -179,7 +179,7 @@ final class TooltipOverlay implements OverlayLayer {
           }
           var9Lifetime1 = var7 + 10;
           var10 = 10 + 12 * var8;
-          var27 = GameModesHelpScreen.a(var2, var10, var9Lifetime1, 0, var3);
+          var27 = GameModesHelpScreen.clampTooltipPosition(var2, var10, var9Lifetime1, 0, var3);
           var3 = var27[1];
           var2 = var27[0];
           SoftwareRasterizer.fillRectangleAlpha(4 + var2, 3 + var3, var9Lifetime1, var10, 65793, 128);
@@ -197,7 +197,7 @@ final class TooltipOverlay implements OverlayLayer {
             }
             var6_int = 6 + AccountTermsPanel.field_G.getWidth(0);
             var7 = AccountTermsPanel.field_G.getDetailsPanelHeight(Cp1252EncodingSupport.field_c, CachedListingRow.field_j, (byte) 77) + 7;
-            var24 = GameModesHelpScreen.a(var2, var7, var6_int, 0, var3);
+            var24 = GameModesHelpScreen.clampTooltipPosition(var2, var7, var6_int, 0, var3);
             var3 = var24[1];
             var2 = var24[0];
             SoftwareRasterizer.fillRoundedRectangleBlended(var2 - 2, var3 - 2, 4 + var6_int, var7 + 4, 6, 65793, 200);
@@ -206,7 +206,7 @@ final class TooltipOverlay implements OverlayLayer {
             if (AuctionItem.field_e == 6) {
               var6_int = DisplayNameUiSupport.field_a.getWidth(0) + 6;
               var7 = DisplayNameUiSupport.field_a.getHeight(15) + 7;
-              var26 = GameModesHelpScreen.a(var2, var7, var6_int, 0, var3);
+              var26 = GameModesHelpScreen.clampTooltipPosition(var2, var7, var6_int, 0, var3);
               var2 = var26[0];
               var3 = var26[1];
               SoftwareRasterizer.fillRoundedRectangleBlended(-2 + var2, var3 - 2, var6_int + 4, var7 + 4, 6, 65793, 200);
@@ -221,7 +221,7 @@ final class TooltipOverlay implements OverlayLayer {
                   var8 = 22;
                   var7 = ((BitmapFont) ((Object) var4)).stringWidth(LeaderboardParticipant.field_h) + 10;
                 }
-                var25 = GameModesHelpScreen.a(var2, var8, var7, 0, var3);
+                var25 = GameModesHelpScreen.clampTooltipPosition(var2, var8, var7, 0, var3);
                 var3 = var25[1];
                 var2 = var25[0];
                 SoftwareRasterizer.fillRectangleAlpha(3 + var2, var3 + 2, var7, var8, 65793, 128);

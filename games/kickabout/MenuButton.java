@@ -30,7 +30,7 @@ final class MenuButton {
         if (param0 != -1) {
           return;
         }
-        AchievementSubmission.a((byte) -127);
+        AchievementSubmission.playUiClickSound((byte) -127);
         if (37 == this.kind) {
           ((ButtonMenuScreen) (AuctionLogEntry.field_h)).showTutorialTip((byte) 52);
         } else {
@@ -238,13 +238,13 @@ final class MenuButton {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void stepVolume(boolean param0, int param1) {
         if (param1 != -27) {
           return;
         }
-        int var3 = DateInputWidget.k(256);
+        int var3 = DateInputWidget.getVolumeScale(256);
         int var4 = var3 >> 3;
-        int var5 = 17 != this.kind ? IntrusiveNode.getSoundEffectVolume((byte) -99) : LoadingProgressSupport.a((byte) 97);
+        int var5 = 17 != this.kind ? IntrusiveNode.getSoundEffectVolume((byte) -99) : LoadingProgressSupport.getMusicVolume((byte) 97);
         var5 = var5 + (param0 ? -var4 : var4);
         if (var5 < 0) {
           var5 = 0;
@@ -256,11 +256,11 @@ final class MenuButton {
           ConsoleValue.setMusicVolume(var5, (byte) 20);
         }
         if (this.kind == 16) {
-          MeshPreviewSupport.a(var5, (byte) -121);
+          MeshPreviewSupport.setSoundEffectVolume(var5, (byte) -121);
         }
     }
 
-    final void a(boolean param0, boolean param1, boolean param2, int param3, int param4) {
+    final void updateButtonInput(boolean param0, boolean param1, boolean param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         this.field_g = param0 ? true : false;
@@ -272,13 +272,13 @@ final class MenuButton {
           this.activate(-1, true);
         }
         if (null != this.field_b) {
-          this.field_b.updatePose(17 == this.kind ? LoadingProgressSupport.a((byte) 97) : IntrusiveNode.getSoundEffectVolume((byte) -124), 1);
+          this.field_b.updatePose(17 == this.kind ? LoadingProgressSupport.getMusicVolume((byte) 97) : IntrusiveNode.getSoundEffectVolume((byte) -124), 1);
         }
         if (this.field_r &&
           param2 &&
           param4 != this.field_f) {
           param4 = param4 + (AlternateKeyedLoginCredentials.field_m - TutorialChoiceDialog.field_J);
-          var6 = DateInputWidget.k(param3 + 240);
+          var6 = DateInputWidget.getVolumeScale(param3 + 240);
           var7 = param4 * var6 / AlternateKeyedLoginCredentials.field_m;
           if (var7 < 0) {
             var7 = 0;
@@ -290,15 +290,15 @@ final class MenuButton {
             ConsoleValue.setMusicVolume(var7, (byte) 46);
           }
           if (16 == this.kind) {
-            MeshPreviewSupport.a(var7, (byte) -121);
+            MeshPreviewSupport.setSoundEffectVolume(var7, (byte) -121);
           }
         }
         this.field_f = !param2 ? -1 : param4;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, PlayerStats param4, boolean param5, int param6) {
+    final static void showPlayerStatsTooltip(int param0, int param1, boolean param2, int param3, PlayerStats param4, boolean param5, int param6) {
         ThumbnailStateFactory.field_b = true;
-        if (LoginMethod.a(false)) {
+        if (LoginMethod.shouldDelayTooltip(false)) {
           return;
         }
         Cp1252EncodingSupport.field_c = param5;
@@ -328,7 +328,7 @@ final class MenuButton {
         field_e = null;
     }
 
-    final static void a(int param0) {
+    final static void loadInstructionSprites(int param0) {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -381,7 +381,7 @@ final class MenuButton {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawButton(int param0, int param1, int param2) {
         int var9 = 0;
         int stackIn_18_0 = 0;
         String[] stackIn_25_1 = null;
@@ -406,13 +406,13 @@ final class MenuButton {
           param0 - (this.height >> 1) < TutorialCaptionSupport.field_j &&
           TutorialCaptionSupport.field_j < param0 + (this.height >> 1)) {
           if (49 == this.kind) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, PlayerPortraitCacheEntry.field_l);
+            IndexedSpriteState.showTextTooltip(-67, PlayerPortraitCacheEntry.field_l);
           }
           if (32 == this.kind) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, MarkerSliderWidget.field_G);
+            IndexedSpriteState.showTextTooltip(-67, MarkerSliderWidget.field_G);
           }
           if (37 == this.kind) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, InstrumentEnvelope.field_i);
+            IndexedSpriteState.showTextTooltip(-67, InstrumentEnvelope.field_i);
           }
         }
         stackIn_18_0 = (this.field_g) ? 1 : 0;
@@ -463,10 +463,10 @@ final class MenuButton {
           if (this.kind != 17) {
             stackIn_46_0 = IntrusiveNode.getSoundEffectVolume((byte) -61);
           } else {
-            stackIn_46_0 = LoadingProgressSupport.a((byte) 97);
+            stackIn_46_0 = LoadingProgressSupport.getMusicVolume((byte) 97);
           }
           var7 = stackIn_46_0;
-          var8 = var7 * AlternateKeyedLoginCredentials.field_m / DateInputWidget.k(256);
+          var8 = var7 * AlternateKeyedLoginCredentials.field_m / DateInputWidget.getVolumeScale(256);
           for (var9 = 0; var9 < var8 - 1; var9++) {
             var10 = (-var9 + var8 - 1 << 8) / var8 >> 1;
             if (this.kind == 17) {

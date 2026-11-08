@@ -74,7 +74,7 @@ final class LoginKind {
         }
     }
 
-    final static void a(byte param0) {
+    final static void playSelectionSound(byte param0) {
         ShopPlayerSlot.playDefaultFadingSound(44, -96);
         int var1 = 45 % ((param0 + 37) / 58);
     }

@@ -40,7 +40,7 @@ final class PlayerPortraitCacheEntry {
         }
     }
 
-    final static void a(boolean param0, boolean param1, byte param2) {
+    final static void drawDimmedSharedOverlay(boolean param0, boolean param1, byte param2) {
         if (param0) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 192);
           OverlayLayerSupport.drawSharedWidget((byte) -126, param0);
@@ -203,7 +203,7 @@ final class PlayerPortraitCacheEntry {
 
     final static int millisToMinutes(int param0, long param1) {
         if (param0 != -1090519040) {
-          PlayerPortraitCacheEntry.a(false, true, (byte) -125);
+          PlayerPortraitCacheEntry.drawDimmedSharedOverlay(false, true, (byte) -125);
           return (int)(param1 / 60000L);
         }
         return (int)(param1 / 60000L);

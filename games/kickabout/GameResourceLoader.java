@@ -190,7 +190,7 @@ final class GameResourceLoader implements LoadingSequence {
           ValidatedTextWidget.a(false, 200);
           LoadingProgressSupport.reportStageProgress(-61, 100, 95);
           WhirlpoolHasher.a(var17, var16, 5198);
-          LineupView.a(-70, RankingsScreen.field_A, 0, AnimationClip.field_g, 0, 16777215);
+          LineupView.initializePromotionResources(-70, RankingsScreen.field_A, 0, AnimationClip.field_g, 0, 16777215);
           Object var3 = null;
           EntityAfterimage.field_b = null;
           AnimationPlayer.resetFrameTiming((byte) 104);
@@ -553,7 +553,7 @@ final class GameResourceLoader implements LoadingSequence {
         DelayedServerPacket.a(-5, false, -2);
         CipherPacketBuffer.advanceLoadingProgress(61, 12);
         LoadingProgressSupport.reportStageProgress(-71, 4, 1);
-        PlayerModelPreview.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, IsSixCommand.field_C, ByteArrayPool.field_d, new TexturedPanelPainter(), 20, 16777215, 30, new GeneratedPanelPainter(true), 16777215, 9, new GeneratedPanelPainter(false), 16777215);
+        PlayerModelPreview.configureSharedMenuTheme(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, IsSixCommand.field_C, ByteArrayPool.field_d, new TexturedPanelPainter(), 20, 16777215, 30, new GeneratedPanelPainter(true), 16777215, 9, new GeneratedPanelPainter(false), 16777215);
         LoadingProgressSupport.reportStageProgress(-57, 4, 2);
         GameSoundEffect.a((byte) -94);
         LoadingProgressSupport.reportStageProgress(75, 4, 3);

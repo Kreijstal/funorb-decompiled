@@ -51,7 +51,7 @@ public final class Kickabout extends GameLoopApplet {
           !PlayerValueSortCriterion.field_n ||
           null != MachineTokenStorageSupport.field_e &&
           MyKitScreen.field_O) {
-          MenuButton.a(2);
+          MenuButton.loadInstructionSprites(2);
         }
         if (param0 != -25) {
           this.onShutdown((byte) -89);
@@ -139,7 +139,7 @@ public final class Kickabout extends GameLoopApplet {
         int var3 = -var2.field_o + 640 >> 1;
         if (BytePlusOneCommand.field_A >= var3 && var2.field_o + var3 >= BytePlusOneCommand.field_A && 10 <= ArchiveManager.field_m &&
           !(ArchiveManager.field_m > (10 + var2.field_v))) {
-          IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, IntKeyLookup.field_b);
+          IndexedSpriteState.showTextTooltip(-67, IntKeyLookup.field_b);
         }
     }
 
@@ -163,7 +163,7 @@ public final class Kickabout extends GameLoopApplet {
             StreetSceneryLoader.field_k = true;
             if (null != MachineTokenStorageSupport.field_e) {
               if (!MachineTokenStorageSupport.field_e.isSpectator(-2)) {
-                GameQuickChatResolver.a(2, IntTripleCommand.field_B);
+                GameQuickChatResolver.setServerMessageText(2, IntTripleCommand.field_B);
                 ServerTextTemplate.a(10, 113);
               } else {
                 ServerTextTemplate.a(0, 104);
@@ -173,7 +173,7 @@ public final class Kickabout extends GameLoopApplet {
               if (SortCriterion.field_l == null) {
                 DelayedServerPacket.a(0, false, -2);
               } else {
-                GameQuickChatResolver.a(2, IntTripleCommand.field_B);
+                GameQuickChatResolver.setServerMessageText(2, IntTripleCommand.field_B);
                 ServerTextTemplate.a(10, 112);
                 DelayedServerPacket.a(18, false, -2);
               }
@@ -320,7 +320,7 @@ public final class Kickabout extends GameLoopApplet {
           }
           if (decompiledFrameRemainder0) {
             if (param2 == 96) {
-              ClientProtocolStage.field_d = new DebugConsole(EmailSyntaxValidator.d((byte) 26), IsSixCommand.field_C, PlatformTaskState.field_c);
+              ClientProtocolStage.field_d = new DebugConsole(EmailSyntaxValidator.createConsoleCommands((byte) 26), IsSixCommand.field_C, PlatformTaskState.field_c);
               OverlayLayerSupport.registerOverlay(false, ClientProtocolStage.field_d);
               return ClientProtocolStage.field_d.handleKeyTyped(11516, param1, param2);
             }
@@ -468,7 +468,7 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (35 == param1) {
-              FormationView.b((byte) -116);
+              FormationView.closeClientSocket((byte) -116);
             }
             if (param1 == 39) {
               stackIn_192_0 = !(DisplayNameUiSupport.field_e);
@@ -957,7 +957,7 @@ public final class Kickabout extends GameLoopApplet {
               RotaryDialPainter.field_n = GameLoopApplet.field_E.field_A;
               if (!CachedListingRow.field_h) {
                 ConsoleValue.setMusicVolume(GameLoopApplet.field_E.field_p, (byte) 33);
-                MeshPreviewSupport.a(GameLoopApplet.field_E.field_F, (byte) -116);
+                MeshPreviewSupport.setSoundEffectVolume(GameLoopApplet.field_E.field_F, (byte) -116);
               }
               if (AuctionLogEntry.field_h instanceof TeamManagementScreen &&
                 GameModesHelpScreen.field_G == null) {
@@ -988,7 +988,7 @@ public final class Kickabout extends GameLoopApplet {
               MeshObject.a((byte) 87);
               LoginText.field_e = false;
               DelayedServerPacket.a(10, false, -2);
-              GameQuickChatResolver.a(2, param1.readString(param2 - 98));
+              GameQuickChatResolver.setServerMessageText(2, param1.readString(param2 - 98));
               return true;
             }
             if (param0 == 14) {
@@ -1004,8 +1004,8 @@ public final class Kickabout extends GameLoopApplet {
             }
             if (param0 == 15) {
               if (PlayerValueSortCriterion.field_n) {
-                ReceivedAuctionItem.f((byte) 119);
-                ContextMenuItem.b(122);
+                ReceivedAuctionItem.closeSharedPopups((byte) 119);
+                ContextMenuItem.clearChatHistory(122);
                 DelayedServerPacket.a(0, false, -2);
                 TextButton.field_B = true;
                 StreetSceneryLoader.field_k = true;
@@ -1155,7 +1155,7 @@ public final class Kickabout extends GameLoopApplet {
                   throw new RuntimeException("Tried to init a lobby without the full state being sent [" + (var4_intLifetime6Lifetime1 != 0) + "," + (var5Lifetime4Lifetime1 != 0) + "," + (var6Lifetime3Lifetime1 != 0) + "]");
                 }
                 SortCriterion.field_l = new TournamentLobbyScreen(param1);
-                MusicPatchNode.a(-88);
+                MusicPatchNode.initializeChatComposerPopup(-88);
                 if (null == GameModesHelpScreen.field_G ||
                   GameModesHelpScreen.field_G.screenId != 18) {
                   if (AuctionLogEntry.field_h.screenId == -2) {
@@ -1262,7 +1262,7 @@ public final class Kickabout extends GameLoopApplet {
             stackIn_192_0 = MachineTokenStorageSupport.field_e;
             stackIn_193_1 = (var19 != 0);
             stackIn_192_0.tournamentSpectatorControlsEnabled = stackIn_193_1;
-            MusicPatchNode.a(-76);
+            MusicPatchNode.initializeChatComposerPopup(-76);
             if (GameModesHelpScreen.field_G == null ||
               GameModesHelpScreen.field_G.screenId != 18) {
               if (AuctionLogEntry.field_h.screenId == -1) {
@@ -1649,7 +1649,7 @@ public final class Kickabout extends GameLoopApplet {
         SoftwareDrawingSupport.releaseStatics();
         ScrollContainer.i((byte) -69);
         AuctionsScreen.h((byte) -53);
-        CheckboxLabelWidget.a(0);
+        CheckboxLabelWidget.releaseStatics(0);
         AuctionTableWidget.releaseStatics((byte) 68);
         ReceivedAuctionItemRow.releaseStatics(-25734);
         IntrusiveNodeHashTable.releaseStatics((byte) -111);
@@ -1659,7 +1659,7 @@ public final class Kickabout extends GameLoopApplet {
         PlayerShopScreen.releaseStatics((byte) -111);
         ColumnTableWidget.releaseStatics(false);
         SquadSlotWidget.releaseStatics((byte) -123);
-        ContextMenuItem.a(-15410);
+        ContextMenuItem.releaseStatics(-15410);
         SocialTabsPanel.releaseStatics(-97);
         TabStrip.releaseStatics(true);
         HoverTooltip.releaseStatics((byte) 39);
@@ -1685,7 +1685,7 @@ public final class Kickabout extends GameLoopApplet {
         SquadPickerDialog.g(-14948);
         AuctionSettingsDialog.releaseStatics(-8332);
         ColourSwatchTile.releaseStatics(-31922);
-        AuctionBidDialog.g(0);
+        AuctionBidDialog.releaseStatics(0);
         StatChoiceDialog.releaseStatics(param0 ^ 25994);
         SellPlayerDialog.releaseStatics(24342);
         TrinketShopDialog.releaseStatics(false);
@@ -1763,7 +1763,7 @@ public final class Kickabout extends GameLoopApplet {
         PlayingView.releaseStatics((byte) -40);
         TeamSelectionView.releaseStatics(param0 - 119);
         WaitForPlayersView.releaseStatics(1);
-        FormationView.f(param0 - 15646);
+        FormationView.releaseStatics(param0 - 15646);
         LineupView.releaseStatics((byte) -113);
         DateOfBirthPanel.releaseStatics(param0 + 905215451);
         MeshObject.releaseStatics((byte) -39);
@@ -1901,7 +1901,7 @@ public final class Kickabout extends GameLoopApplet {
         IsSixCommand.g(50);
         NotCommand.g(115);
         IntDoubleCommand.releaseStatics(param0 ^ -107);
-        IntTripleCommand.g(220);
+        IntTripleCommand.releaseStatics(220);
         LongPlusOneCommand.releaseStatics(1);
         BytePlusOneCommand.releaseStatics((byte) 52);
         SetLagCommand.releaseStatics(false);

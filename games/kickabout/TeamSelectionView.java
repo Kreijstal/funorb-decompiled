@@ -138,7 +138,7 @@ final class TeamSelectionView extends MatchPhaseView {
             }
           }
           if (TextFieldNode.field_Wb) {
-            WhirlpoolHasher.a((byte) 49, 20, param1, param4, param3, param6, param4, param7, param0);
+            WhirlpoolHasher.layoutChatComposerPopup((byte) 49, 20, param1, param4, param3, param6, param4, param7, param0);
             ContentTransitionDialog.field_Y.updateInput(0, param2);
             if (param2) {
               if (0 != InstrumentEnvelope.field_c.field_sb) {
@@ -271,7 +271,7 @@ final class TeamSelectionView extends MatchPhaseView {
           if (param0 != -47) {
             field_u = 99;
           }
-          BrowserUiSupport.field_c = EmailSyntaxValidator.g(-22976);
+          BrowserUiSupport.field_c = EmailSyntaxValidator.createBallCarrierOverlay(-22976);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wb.J(" + param0 + ')');
         }
@@ -389,12 +389,12 @@ final class TeamSelectionView extends MatchPhaseView {
           if (0 != this.field_o.field_sb) {
             this.field_o.updateInput(0, param1);
             this.selectTeam((byte) -109, 0);
-            LoginKind.a((byte) 98);
+            LoginKind.playSelectionSound((byte) 98);
           }
           if (this.field_s.field_sb != 0) {
             this.field_s.updateInput(0, param1);
             this.selectTeam((byte) -111, 1);
-            LoginKind.a((byte) -105);
+            LoginKind.playSelectionSound((byte) -105);
           }
           if (0 != this.field_l.field_sb) {
             this.selectTeam((byte) -118, 2);

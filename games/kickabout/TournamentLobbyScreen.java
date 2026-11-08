@@ -61,7 +61,7 @@ final class TournamentLobbyScreen extends AppScreen {
         var2 = -9 / ((param0 - 35) / 36);
         for (var3 = 0; var3 < this.field_X.length; var3++) {
           if (this.isTabVisible(var3, -1)) {
-            this.field_X[var3].a(this.tabY(8, var3), this.tabCenterX(var3, 96), 13800);
+            this.field_X[var3].drawButton(this.tabY(8, var3), this.tabCenterX(var3, 96), 13800);
           }
         }
     }
@@ -127,7 +127,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (param0 == 52) {
           AudioOutputSupport.field_a = 2;
         }
-        AchievementSubmission.a((byte) -121);
+        AchievementSubmission.playUiClickSound((byte) -121);
     }
 
     final void readPlayerNames(CipherPacketBuffer param0, boolean param1) {
@@ -364,7 +364,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
           var8 = stackIn_66_0;
           var9_int = ArrayWidgetContainer.field_x - this.tabCenterX(var5_intLifetime3, 96);
-          this.field_X[var5_intLifetime3].a(var6 != 0, var7_int != 0, var8 != 0, 16, var9_int);
+          this.field_X[var5_intLifetime3].updateButtonInput(var6 != 0, var7_int != 0, var8 != 0, 16, var9_int);
         }
         if (this.field_T == null) {
           this.field_T = new LobbyGameRecord[this.field_S.length];
@@ -601,7 +601,7 @@ final class TournamentLobbyScreen extends AppScreen {
         this.field_s = 0;
         try {
           QuickChatCategoryCache.field_e = false;
-          LookupRecordUpdate.b(22);
+          LookupRecordUpdate.measureQuickChatToggleHint(22);
           SpriteButtonPainter.a(-363021503);
           var5 = new int[]{54, 53, 52, 12};
           var2 = var5;

@@ -126,7 +126,7 @@ final class ConsoleExpression extends IntrusiveNode {
                 var7[incrementValue$0] = var5.a(true, param1);
                 var5 = (ConsoleExpression) (this.field_j.next(33));
               }
-              stackIn_10_0 = PasswordValidator.a(var8, false, param1, this.field_h);
+              stackIn_10_0 = PasswordValidator.invokeConsoleCommand(var8, false, param1, this.field_h);
               return stackIn_10_0;
             }
             if (this.field_k == HelpTipDialog.field_H) {

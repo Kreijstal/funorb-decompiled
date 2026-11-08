@@ -94,14 +94,14 @@ final class WhirlpoolHasher {
         field_f = null;
         if (param0 != 0) {
           String var2 = (String) null;
-          WhirlpoolHasher.a(96, (LoginText) null, (LoginText) null, 12, false, (String) null, true);
+          WhirlpoolHasher.pollRegistrationRequest(96, (LoginText) null, (LoginText) null, 12, false, (String) null, true);
         }
         field_b = null;
         field_m = null;
         field_i = null;
     }
 
-    final static void a(byte param0, int param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void layoutChatComposerPopup(byte param0, int param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -151,7 +151,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static int a(int param0, LoginText param1, LoginText param2, int param3, boolean param4, String param5, boolean param6) {
+    final static int pollRegistrationRequest(int param0, LoginText param1, LoginText param2, int param3, boolean param4, String param5, boolean param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
         PacketBuffer stackIn_17_0 = null;
@@ -191,7 +191,7 @@ final class WhirlpoolHasher {
           var14 = param2.getText(27939);
           var8 = param1.getText(27939);
           if (null == SpriteButtonPainter.field_y &&
-            !EmailSyntaxValidator.a(false, (byte) 123)) {
+            !EmailSyntaxValidator.pollClientConnection(false, (byte) 123)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
@@ -262,7 +262,7 @@ final class WhirlpoolHasher {
               if (var9Lifetime1 == 248) {
                 WidgetTheme.a((byte) -50, AppletContextSupport.getActiveApplet(-71));
                 ListingRowCache.field_b = AccountInputValidationResult.field_i;
-                FormationView.b((byte) -116);
+                FormationView.closeClientSocket((byte) -116);
                 ContextMenuItem.field_Db = false;
                 stackIn_35_0 = var9Lifetime1;
                 return stackIn_35_0;
@@ -288,7 +288,7 @@ final class WhirlpoolHasher {
                 for (var12 = 0; var12 < var11; var12++) {
                   ValidatedTextWidget.field_X[var12] = ByteArrayPool.field_e.readCircumfixedString(17);
                 }
-                FormationView.b((byte) -116);
+                FormationView.closeClientSocket((byte) -116);
                 ContextMenuItem.field_Db = false;
                 stackIn_45_0 = var11 + 100;
                 return stackIn_45_0;
@@ -305,7 +305,7 @@ final class WhirlpoolHasher {
                 BlobSubmission.writeSettingsCookie(AppletContextSupport.getActiveApplet(62), true, var9_ref_String);
               }
             }
-            FormationView.b((byte) -116);
+            FormationView.closeClientSocket((byte) -116);
             ContextMenuItem.field_Db = false;
             stackIn_53_0 = AppletContextSupport.field_b;
             return stackIn_53_0;
@@ -391,7 +391,7 @@ final class WhirlpoolHasher {
           }
           if (param1 != 21024) {
             var9 = (String) null;
-            WhirlpoolHasher.a(64, (LoginText) null, (LoginText) null, -29, false, (String) null, true);
+            WhirlpoolHasher.pollRegistrationRequest(64, (LoginText) null, (LoginText) null, -29, false, (String) null, true);
           }
           ArrayOperations.copyBytes(this.field_j, 0, this.field_e, 32, 32);
           this.compressBlock((byte) 18);

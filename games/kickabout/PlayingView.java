@@ -565,7 +565,7 @@ final class PlayingView extends MatchPhaseView {
         int var5;
         int var2Lifetime1;
         var5 = Kickabout.field_G;
-        if (ArchiveIndex.b(640) &&
+        if (ArchiveIndex.isGamePointerOutsideViewport(640) &&
           !this.hasHeldMouseInput((byte) -65)) {
           return;
         }
@@ -702,7 +702,7 @@ final class PlayingView extends MatchPhaseView {
               var4 = (WorldDrawEntry) (param0.next(33));
             }
           }
-          IntTripleCommand.a(this.field_r, -22488);
+          IntTripleCommand.sortWorldDrawList(this.field_r, -22488);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -959,11 +959,11 @@ final class PlayingView extends MatchPhaseView {
             return;
           }
           if (var4.action != 1) {
-            PasswordValidator.a(706856675, 128, 256, var2, var3, true);
+            PasswordValidator.updateDirectionalIndicatorSprites(706856675, 128, 256, var2, var3, true);
             GameMediaSupport.drawViewportScaledSprite(653278209, var5, var6);
           } else {
             var7 = var4.a(var4.actionTime, (byte) -68);
-            PasswordValidator.a(706856675, 256, var7, var2, var3, true);
+            PasswordValidator.updateDirectionalIndicatorSprites(706856675, 256, var7, var2, var3, true);
             GameMediaSupport.drawViewportScaledSprite(653278209, var5, var6);
           }
         } else {
@@ -981,10 +981,10 @@ final class PlayingView extends MatchPhaseView {
             }
             var9 = (var8 << 8) / var7;
             var9 = 3 * var9 >> 2;
-            PasswordValidator.a(706856675, 256, var9, var2, var3, false);
+            PasswordValidator.updateDirectionalIndicatorSprites(706856675, 256, var9, var2, var3, false);
             GameMediaSupport.drawViewportScaledSprite(653278209, var5, var6);
           } else {
-            PasswordValidator.a(706856675, 128, 192, var2, var3, false);
+            PasswordValidator.updateDirectionalIndicatorSprites(706856675, 128, 192, var2, var3, false);
             GameMediaSupport.drawViewportScaledSprite(653278209, var5, var6);
           }
         }
@@ -1258,7 +1258,7 @@ final class PlayingView extends MatchPhaseView {
           this.isLocalParticipantActive((byte) 13)) {
           this.updateAimIndicator((byte) 107);
         }
-        ReceivedAuctionItem.i((byte) 45);
+        ReceivedAuctionItem.drawPlayerSelectionOverlays((byte) 45);
         for (var2 = 0; 2 > var2; var2++) {
           for (var3 = 0; var3 < 5; var3++) {
             Trinket.drawFootballerShadow((RenderedFootballer) (this.field_a.field_P[var2][var3]), 100);
@@ -1429,11 +1429,11 @@ final class PlayingView extends MatchPhaseView {
         if (param0 > -92) {
           return;
         }
-        IntTripleCommand.a(this.field_r, -22488);
+        IntTripleCommand.sortWorldDrawList(this.field_r, -22488);
         TextLineLayoutSupport.tickWorldEntries(7249);
         this.updateMatchAudio(2115);
         GameKeyHandler.b(40);
-        ArchiveIndex.c(88);
+        ArchiveIndex.advanceSelectionOverlayFrame(88);
         LobbyPlayerRow.i(0);
         PlayerShopScreen.a(false);
     }
@@ -1545,7 +1545,7 @@ final class PlayingView extends MatchPhaseView {
               WidgetStyleFactory.drawRasterToCanvas(27744, 0, 0, param0);
             } else {
               if (RasterGlowSupport.field_c == 0) {
-                PlayerPortraitCacheEntry.a(false, param1, (byte) 39);
+                PlayerPortraitCacheEntry.drawDimmedSharedOverlay(false, param1, (byte) 39);
                 WidgetStyleFactory.drawRasterToCanvas(27744, 0, 0, param0);
               } else {
                 FormationAgent.a(param0, -14142);

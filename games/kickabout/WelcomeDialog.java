@@ -28,11 +28,11 @@ final class WelcomeDialog extends MessageDialog {
         return !param0 ? true : false;
     }
 
-    final static void c(int param0, boolean param1) {
+    final static void drawDimmedSharedOverlay(int param0, boolean param1) {
         if (param0 != 100) {
-          WelcomeDialog.c(23, true);
+          WelcomeDialog.drawDimmedSharedOverlay(23, true);
         }
-        PlayerPortraitCacheEntry.a(true, param1, (byte) 39);
+        PlayerPortraitCacheEntry.drawDimmedSharedOverlay(true, param1, (byte) 39);
     }
 
     final void handleResult(int param0, int param1) {

@@ -126,7 +126,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
           for (var4Lifetime2 = 0; var4Lifetime2 < 5; var4Lifetime2++) {
             SoftwareRasterizer.drawHorizontalLineAlpha(var3 + 4, 187 + 28 * var4Lifetime2 + 28, 174, 16777215, 30);
           }
-          PasswordValidator.a(206, this.slideOffsetX + 180, 100);
+          PasswordValidator.drawRatedRewardsTable(206, this.slideOffsetX + 180, 100);
         }
         if (this.pageIndex == 1) {
           var11 = 0;

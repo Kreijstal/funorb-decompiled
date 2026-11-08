@@ -184,7 +184,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           BytePlusOneCommand.createPlayerContextMenu(param5, false, param6, -1, param5.field_Rb, (int[]) null, param5.field_Ab, param5.field_Nb, -1);
           TextButton.field_v.addGameSetupMenuItems(true, 0);
           TextButton.field_v.addSocialMenuItems(0, -116, (int[]) null);
-          TextButton.field_v.showMenu(-80);
+          TextButton.field_v.addReportAbuseItem(-80);
           var12 = TextButton.field_v;
           var8 = param1;
           var9 = param0;

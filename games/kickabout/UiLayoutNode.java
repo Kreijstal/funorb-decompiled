@@ -370,7 +370,7 @@ class UiLayoutNode extends SharedWidgetFactory {
           var3 = 0;
         }
         if (2 == NodeHashTableIterator.field_b &&
-          !LoggedPlayer.b(-3197)) {
+          !LoggedPlayer.canSendPrivateChatToSelectedPlayer(-3197)) {
           var3 = 0;
         }
         if (84 == FixedQuaternion.field_e) {

@@ -149,14 +149,14 @@ final class MatchUiLayoutSupport {
                       var9.field_q = 0;
                     }
                   } else {
-                    SocialTabsPanel.field_c[var6][0].a(PitchAppearanceSupport.field_b, 2, 38, var5, var8, 15114, var3);
+                    SocialTabsPanel.field_c[var6][0].setBoundsAndLayout(PitchAppearanceSupport.field_b, 2, 38, var5, var8, 15114, var3);
                     var8 += 40;
                   }
                   var9_int = -3 + (AuctionItem.field_p.field_q - var8);
                   var10_int = SocialTabsPanel.field_c[var6].length - 1;
                   for (var11 = 0; var11 < var10_int; var11++) {
                     var12 = var11 * var9_int / var10_int;
-                    SocialTabsPanel.field_c[var6][var11 + 1].a(PitchAppearanceSupport.field_b, 2, -var12 + ((1 + var11) * var9_int / var10_int - 2), var5, var12 + var8, 15114, var3);
+                    SocialTabsPanel.field_c[var6][var11 + 1].setBoundsAndLayout(PitchAppearanceSupport.field_b, 2, -var12 + ((1 + var11) * var9_int / var10_int - 2), var5, var12 + var8, 15114, var3);
                   }
                   var5 = var5 + (var3 + 2);
                 }

@@ -710,9 +710,9 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               this.field_Ab.field_Q &&
               this.field_lb) {
               if (!this.field_Ab.field_lb) {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialListProtocolSupport.field_d, new String[]{this.field_Eb}));
+                IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialListProtocolSupport.field_d, new String[]{this.field_Eb}));
               } else {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MeshPreviewSupport.field_a, new String[]{this.field_Eb}));
+                IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MeshPreviewSupport.field_a, new String[]{this.field_Eb}));
               }
             }
             if (var3 != 0) {
@@ -735,7 +735,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
           }
           if (this.field_sb == 1 &&
             this.isOwned(param0 - 32834)) {
-            LoginKind.a((byte) -111);
+            LoginKind.playSelectionSound((byte) -111);
           }
           return;
         }
@@ -749,9 +749,9 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               this.field_Ab.field_Q &&
               this.field_lb) {
               if (!this.field_Ab.field_lb) {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialListProtocolSupport.field_d, new String[]{this.field_Eb}));
+                IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialListProtocolSupport.field_d, new String[]{this.field_Eb}));
               } else {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MeshPreviewSupport.field_a, new String[]{this.field_Eb}));
+                IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MeshPreviewSupport.field_a, new String[]{this.field_Eb}));
               }
             }
             if (var3 != 0 ||
@@ -770,7 +770,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
           }
           if (this.field_sb == 1 &&
             this.isOwned(param0 - 32834)) {
-            LoginKind.a((byte) -111);
+            LoginKind.playSelectionSound((byte) -111);
           }
           return;
         }
@@ -782,10 +782,10 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
             } else {
               stackIn_79_1 = RasterGlowSupport.field_e;
             }
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_78_0, stackIn_79_1);
+            IndexedSpriteState.showTextTooltip(stackIn_78_0, stackIn_79_1);
           } else {
             if (var5 != 0) {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleValue.field_e, new String[]{QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb], QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb - 1]}));
+              IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleValue.field_e, new String[]{QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb], QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb - 1]}));
               if (null != this.field_Ab) {
                 var6Lifetime2 = ResizableModalPanel.field_M[this.field_zb];
                 stackIn_59_0 = this.field_Ab;
@@ -795,9 +795,9 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                   this.field_Ab.field_Q &&
                   this.field_lb) {
                   if (!this.field_Ab.field_lb) {
-                    IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialListProtocolSupport.field_d, new String[]{this.field_Eb}));
+                    IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialListProtocolSupport.field_d, new String[]{this.field_Eb}));
                   } else {
-                    IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MeshPreviewSupport.field_a, new String[]{this.field_Eb}));
+                    IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MeshPreviewSupport.field_a, new String[]{this.field_Eb}));
                   }
                 }
                 this.field_Ab.unlink((byte) -109);
@@ -806,7 +806,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               }
               if (this.field_sb == 1 &&
                 this.isOwned(param0 - 32834)) {
-                LoginKind.a((byte) -111);
+                LoginKind.playSelectionSound((byte) -111);
               }
               return;
             }
@@ -827,14 +827,14 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               }
             } else {
               if (!this.field_Ab.field_lb) {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialListProtocolSupport.field_d, new String[]{this.field_Eb}));
+                IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialListProtocolSupport.field_d, new String[]{this.field_Eb}));
                 if (var3 != 0 ||
                   var5 != 0) {
                   this.field_Ab.unlink((byte) -109);
                   this.field_Ab = null;
                 }
               } else {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MeshPreviewSupport.field_a, new String[]{this.field_Eb}));
+                IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MeshPreviewSupport.field_a, new String[]{this.field_Eb}));
                 if (var3 != 0 ||
                   var5 != 0) {
                   this.field_Ab.unlink((byte) -109);
@@ -864,7 +864,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
         if (!this.isOwned(param0 - 32834)) {
           return;
         }
-        LoginKind.a((byte) -111);
+        LoginKind.playSelectionSound((byte) -111);
         return;
     }
 

@@ -89,7 +89,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void requestLoadingProgressDialog(boolean param0) {
         if (!param0) {
           return;
         }

@@ -20,13 +20,13 @@ final class LoginText {
         boolean stackIn_8_0 = false;
         if (param3 != -124) {
           var8 = (String) null;
-          LoginText.a(true, (String) null, -17);
+          LoginText.measureMenuText(true, (String) null, -17);
         }
         stackIn_8_0 = (param2 >= param0) && (param0 + param5 > param2) && (param1 >= param4) && (param6 + param4 > param1);
         return stackIn_8_0;
     }
 
-    final static void a(boolean param0, ChatMessage param1) {
+    final static void appendChatMessage(boolean param0, ChatMessage param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -93,7 +93,7 @@ final class LoginText {
         }
     }
 
-    final static int a(boolean param0, String param1, int param2) {
+    final static int measureMenuText(boolean param0, String param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -176,7 +176,7 @@ final class LoginText {
     final String getText(int param0) {
         if (param0 != 27939) {
           String var3 = (String) null;
-          LoginText.a(true, (String) null, 58);
+          LoginText.measureMenuText(true, (String) null, 58);
         }
         return this.field_b;
     }

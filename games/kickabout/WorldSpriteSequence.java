@@ -55,7 +55,7 @@ final class WorldSpriteSequence {
           var9.drawOpaque(0, 0);
           incrementValue$3 = var7;
           var7++;
-          var6.a(incrementValue$3 % 4, -2);
+          var6.drawSpectatorFrame(incrementValue$3 % 4, -2);
           TeamManagementScreen.e(123);
           var16 = var9.field_y.length;
           for (var17 = 0; var17 < var16; var17++) {

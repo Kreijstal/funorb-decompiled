@@ -15,7 +15,7 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
 
     final void h(byte param0) {
         if (this.field_gb) {
-          AnimationSkeleton.a((byte) 100, this);
+          AnimationSkeleton.showTrinketTooltip((byte) 100, this);
         }
         if (param0 != 30) {
           this.h((byte) 44);

@@ -76,7 +76,7 @@ final class ConsoleTokenParser {
               break;
             }
             if (var4 == null) {
-              FormationView.b((byte) -116);
+              FormationView.closeClientSocket((byte) -116);
               return;
             }
             var5 = var28.readUnsignedByte((byte) -128);
@@ -172,14 +172,14 @@ final class ConsoleTokenParser {
               break;
             }
             if (var4_ref == null) {
-              FormationView.b((byte) -116);
+              FormationView.closeClientSocket((byte) -116);
               return;
             }
             var4_ref.unlink((byte) -109);
             return;
           }
           UnreadMessagesScreen.reportClientError("HS1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
-          FormationView.b((byte) -116);
+          FormationView.closeClientSocket((byte) -116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

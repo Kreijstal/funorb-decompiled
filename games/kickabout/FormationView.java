@@ -13,7 +13,7 @@ final class FormationView extends MatchPhaseView {
     static int field_q;
     static String field_j;
 
-    final static void b(byte param0) {
+    final static void closeClientSocket(byte param0) {
         if (null != SpriteButtonPainter.field_y) {
           SpriteButtonPainter.field_y.close(1);
           SpriteButtonPainter.field_y = null;
@@ -128,7 +128,7 @@ final class FormationView extends MatchPhaseView {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachKeyHandler(java.awt.Component param0, int param1) {
         try {
           param0.removeKeyListener(PlayerModelPreview.field_q);
           if (param1 >= -3) {
@@ -141,13 +141,13 @@ final class FormationView extends MatchPhaseView {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_n = (boolean[][]) null;
         field_o = null;
         if (param0 != -15640) {
           java.awt.Component var2 = (java.awt.Component) null;
-          FormationView.a((java.awt.Component) null, 101);
+          FormationView.detachKeyHandler((java.awt.Component) null, 101);
         }
         field_j = null;
         field_l = null;
@@ -199,17 +199,17 @@ final class FormationView extends MatchPhaseView {
           this.field_k.updateInput(0, param1);
           this.field_p.updateInput(0, param1);
           if (this.field_k.field_sb != 0) {
-            LoginKind.a((byte) -121);
-            this.g(8, 0);
+            LoginKind.playSelectionSound((byte) -121);
+            this.selectFormation(8, 0);
           }
           if (this.field_p.field_sb != 0) {
-            LoginKind.a((byte) 49);
-            this.g(8, 1);
+            LoginKind.playSelectionSound((byte) 49);
+            this.selectFormation(8, 1);
           }
         }
     }
 
-    private final void g(int param0, int param1) {
+    private final void selectFormation(int param0, int param1) {
         this.field_a.enqueueEvent(SquadGridWidget.createFormationEvent(param1, this.field_g, (byte) 0), param0 ^ -127);
         if (this.field_f) {
           FootballerAiOverlaySupport.field_d.writeIsaacByte(73, (byte) 112);
@@ -239,7 +239,7 @@ final class FormationView extends MatchPhaseView {
           return;
         }
         if (param1 == 41) {
-          this.g(8, 2);
+          this.selectFormation(8, 2);
         }
     }
 

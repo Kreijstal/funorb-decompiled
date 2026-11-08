@@ -161,7 +161,7 @@ final class FormationAgent extends MatchAgent {
         RuntimeException var2 = null;
         try {
           if (RasterGlowSupport.field_c == 11) {
-            TrinketIcon.a(-127);
+            TrinketIcon.validateLoadingGuard(-127);
           }
           IntDoubleCommand.a(InstrumentNoteMask.field_j, PitchCoordinateSupport.field_b, WhirlpoolHasher.field_h, (byte) 84);
           WidgetStyleFactory.drawRasterToCanvas(param1 ^ -23390, 0, 0, param0);

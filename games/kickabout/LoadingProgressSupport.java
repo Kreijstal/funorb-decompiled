@@ -14,7 +14,7 @@ final class LoadingProgressSupport {
         }
     }
 
-    final static int a(byte param0) {
+    final static int getMusicVolume(byte param0) {
         if (param0 != 97) {
           field_a = (Sprite[]) null;
           return RankingsRequest.field_n[0];
@@ -22,7 +22,7 @@ final class LoadingProgressSupport {
         return RankingsRequest.field_n[0];
     }
 
-    final static void a(boolean param0) {
+    final static void readAcknowledgementResult(boolean param0) {
         PendingRequestAcknowledgement var1 = null;
         CipherPacketBuffer var2 = null;
         PendingRequestAcknowledgement var1Lifetime1;
@@ -31,7 +31,7 @@ final class LoadingProgressSupport {
           LoadingProgressSupport.reportStageProgress(-17, -97, 99);
           var1 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.first(24009));
           if (var1 == null) {
-            FormationView.b((byte) -116);
+            FormationView.closeClientSocket((byte) -116);
             return;
           }
           var2 = ByteArrayPool.field_e;
@@ -44,7 +44,7 @@ final class LoadingProgressSupport {
         }
         var1Lifetime1 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.first(24009));
         if (var1Lifetime1 == null) {
-          FormationView.b((byte) -116);
+          FormationView.closeClientSocket((byte) -116);
           return;
         }
         var2Lifetime1 = ByteArrayPool.field_e;
@@ -103,7 +103,7 @@ final class LoadingProgressSupport {
           if (var13 != null) {
             var12 = var13 + " - " + var6 + "%";
           }
-          ValidationHelpWidget.a(var11, var12, (byte) 30);
+          ValidationHelpWidget.setLoadingStatus(var11, var12, (byte) 30);
           AnimationClip.field_g.paintFrame((byte) 118);
           return;
         }

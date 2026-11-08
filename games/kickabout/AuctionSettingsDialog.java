@@ -472,55 +472,55 @@ final class AuctionSettingsDialog extends MessageDialog {
         for (var3 = 0; var3 < 5; var3++) {
           if (FriendRemovalSupport.field_d[var3].field_gb) {
             if (var3 == GameMediaSupport.field_d) {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionTableWidget.field_Jb, new String[]{HighScoreQuery.field_k[var3]}));
+              IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionTableWidget.field_Jb, new String[]{HighScoreQuery.field_k[var3]}));
             } else {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketPickerDialog.field_H, new String[]{HighScoreQuery.field_k[var3]}));
+              IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketPickerDialog.field_H, new String[]{HighScoreQuery.field_k[var3]}));
             }
           }
         }
         if (AccountMessagePanel.field_L.field_Q) {
           if (LocalizedTextLoader.field_f == IndexedSpriteState.field_g) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, BuyPitchDialog.field_H);
+            IndexedSpriteState.showTextTooltip(-67, BuyPitchDialog.field_H);
           } else {
             if (ServerTextTemplate.field_e &&
               LocalizedTextLoader.field_f == AuctionBidDialog.field_L) {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LocalizedTextLoader.field_a);
+              IndexedSpriteState.showTextTooltip(-67, LocalizedTextLoader.field_a);
             } else {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, WeightedCacheEntry.field_q, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, 26300)}));
+              IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, WeightedCacheEntry.field_q, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, 26300)}));
             }
           }
         }
         if (AuctionBidDialog.field_I.field_Q) {
           if (QuickChatPhraseCache.field_c != LocalizedTextLoader.field_f) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ScrollPane.field_Ib, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, 26300)}));
+            IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ScrollPane.field_Ib, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, 26300)}));
           } else {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, UiWidget.field_j);
+            IndexedSpriteState.showTextTooltip(-67, UiWidget.field_j);
           }
         }
         if (Trinket.field_a.field_Q) {
           if (ServerTextTemplate.field_e) {
             if (AuctionBidDialog.field_L == IndexedSpriteState.field_g) {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, SumIntegersCommand.field_E);
+              IndexedSpriteState.showTextTooltip(-67, SumIntegersCommand.field_E);
             } else {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, IntrusiveDequeCursor.field_c, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, param0 ^ 26303)}));
+              IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, IntrusiveDequeCursor.field_c, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, param0 ^ 26303)}));
             }
           } else {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ListRow.field_zb);
+            IndexedSpriteState.showTextTooltip(-67, ListRow.field_zb);
           }
         }
         if (ClientInteractionSupport.field_c.field_Q) {
           if (ServerTextTemplate.field_e) {
             if (QuickChatPhraseCache.field_c != AuctionBidDialog.field_L) {
               if (LocalizedTextLoader.field_f == AuctionBidDialog.field_L) {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, SpriteBackgroundSupport.field_e);
+                IndexedSpriteState.showTextTooltip(-67, SpriteBackgroundSupport.field_e);
               } else {
-                IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PlayerStats.field_d, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, 26300)}));
+                IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PlayerStats.field_d, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, 26300)}));
               }
             } else {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LeaguesScreen.field_C);
+              IndexedSpriteState.showTextTooltip(-67, LeaguesScreen.field_C);
             }
           } else {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ListRow.field_zb);
+            IndexedSpriteState.showTextTooltip(-67, ListRow.field_zb);
           }
         }
         stackIn_43_0 = AccountMessagePanel.field_L;
@@ -548,7 +548,7 @@ final class AuctionSettingsDialog extends MessageDialog {
           } else {
             stackIn_61_1 = FullscreenFailureReason.field_c;
           }
-          IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_60_0, stackIn_61_1);
+          IndexedSpriteState.showTextTooltip(stackIn_60_0, stackIn_61_1);
         }
         if (DisplayModeSupport.field_a.field_sb == 1) {
           stackIn_66_0 = !(ServerTextTemplate.field_e);

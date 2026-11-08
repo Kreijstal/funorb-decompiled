@@ -275,7 +275,7 @@ final class ModalStack extends SingleChildContainer {
             } else {
               RotaryDialPainter.field_d.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
             }
-            DateInputValidator.a(true, RotaryDialPainter.field_d.field_yb);
+            DateInputValidator.resetChildScrollLayout(true, RotaryDialPainter.field_d.field_yb);
           }
           stackIn_103_0 = var5;
           return (SocialPlayerRow) (stackIn_103_0);

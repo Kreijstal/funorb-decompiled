@@ -123,7 +123,7 @@ abstract class AppScreen {
           var9 = Kickabout.field_G;
           try {
             if (SpriteButtonPainter.field_y == null &&
-              !EmailSyntaxValidator.a(param3, (byte) -7)) {
+              !EmailSyntaxValidator.pollClientConnection(param3, (byte) -7)) {
               stackIn_6_0 = -1;
               return stackIn_6_0;
             }
@@ -174,7 +174,7 @@ abstract class AppScreen {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  FormationView.b((byte) -116);
+                  FormationView.closeClientSocket((byte) -116);
                   ContextMenuItem.field_Db = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
@@ -278,7 +278,7 @@ abstract class AppScreen {
             }
             if (AccountRequestDialog.field_fb == ByteArrayPool.field_c &&
               LoginCredentials.ensureLoginPayloadAvailable(180)) {
-              FormationView.b((byte) -116);
+              FormationView.closeClientSocket((byte) -116);
               if (AppletContextSupport.field_b == 7 &&
                 !ContextMenuItem.field_Db) {
                 ContextMenuItem.field_Db = true;

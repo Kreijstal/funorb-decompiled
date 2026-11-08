@@ -90,7 +90,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
         this.processIncomingPackets(-113);
         if (!CachedListingRow.field_h) {
-          CachedListingRow.a(17, StatefulTextPainter.field_v);
+          CachedListingRow.updateAccountInterface(17, StatefulTextPainter.field_v);
           if (NetworkGameClient.field_t.pollArchives(true)) {
             NetworkGameClient.field_t.buildAssets(12763);
             CachedListingRow.field_h = true;
@@ -284,7 +284,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
         if (!MouseWheelInput.field_b &&
           !PlayArea.isGuestSession(100)) {
-          ValidationHelpWidget.a(100.0f, SumIntegersCommand.field_H, (byte) 30);
+          ValidationHelpWidget.setLoadingStatus(100.0f, SumIntegersCommand.field_H, (byte) 30);
           FormationAgent.a(var2, -14142);
           return;
         }
@@ -337,7 +337,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
         param0 = param0 >> 8;
         param1 = param1 >> 8;
-        return DisplayNameUiSupport.a(param1 * param1 + param0 * param0, -524289);
+        return DisplayNameUiSupport.approximateSquareRootFixed8(param1 * param1 + param0 * param0, -524289);
     }
 
     public static void q(int param0) {

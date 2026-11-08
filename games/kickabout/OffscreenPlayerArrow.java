@@ -37,7 +37,7 @@ final class OffscreenPlayerArrow {
           this.field_a = -PlayerContextMenu.angleFromVector(-param1 + var6, -param0 + var5, (byte) 2);
           var7 = var5 - param0;
           var8 = -param1 + var6;
-          this.field_g = GameKeyHandler.a(var8 * var8 + var7 * var7, (byte) -88) * 100 >> 10;
+          this.field_g = GameKeyHandler.approximateSquareRoot(var8 * var8 + var7 * var7, (byte) -88) * 100 >> 10;
           if (this.field_g > 100) {
             this.field_g = 100;
           }

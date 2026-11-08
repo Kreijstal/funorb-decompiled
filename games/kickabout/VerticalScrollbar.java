@@ -353,7 +353,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             }
             var6 = FootballerPreview.field_a[var3];
             stackIn_11_0 = !(var4 < 0);
-            var7 = LoginText.a(stackIn_11_0, var6, -23044);
+            var7 = LoginText.measureMenuText(stackIn_11_0, var6, -23044);
             var8 = RasterStateSnapshot.field_k - (var7 >> 1);
             if (var4 >= 0) {
               if (CheckboxPainter.field_c.selectedIndex != var4) {
@@ -545,7 +545,7 @@ final class VerticalScrollbar extends UiLayoutNode {
               var27 = ((PacketBuffer) ((Object) var1)).readString(62);
               var6 = ((PacketBuffer) ((Object) var1)).readString(param0 + 64);
               var28 = ((PacketBuffer) ((Object) var1)).readString(-101);
-              var29 = PasswordValidator.a(var3, false);
+              var29 = PasswordValidator.findLobbyPlayerById(var3, false);
               var8 = var29;
               stackIn_140_0 = (var6.equals("")) ? 0 : 1;
               var9 = stackIn_140_0;
@@ -572,7 +572,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             if (var2 == 6) {
               var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);
               var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -121);
-              var26 = PasswordValidator.a(var3Lifetime1, false);
+              var26 = PasswordValidator.findLobbyPlayerById(var3Lifetime1, false);
               if (var26 != null) {
                 if (var26.field_Fb) {
                   SharedSpriteTables.field_b = SharedSpriteTables.field_b - 1;
@@ -718,12 +718,12 @@ final class VerticalScrollbar extends UiLayoutNode {
                     return;
                   }
                   UnreadMessagesScreen.reportClientError("L1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, param0 ^ 15);
-                  FormationView.b((byte) -116);
+                  FormationView.closeClientSocket((byte) -116);
                   return;
                 }
                 var3Lifetime2 = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);
                 var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -123);
-                var12 = PasswordValidator.a(var3Lifetime2, false);
+                var12 = PasswordValidator.findLobbyPlayerById(var3Lifetime2, false);
                 var19 = var12;
                 if (var12 != null) {
                   if (var5Lifetime1Lifetime1 != 0) {
@@ -743,7 +743,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                 return;
               }
               var3Lifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);
-              var18 = PasswordValidator.a(var3Lifetime2Lifetime1, false);
+              var18 = PasswordValidator.findLobbyPlayerById(var3Lifetime2Lifetime1, false);
               if (var18 != null) {
                 if (14 != var2) {
                   if (!var18.field_Fb) {

@@ -307,7 +307,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           if (this.field_Cb.achievementBitIndex != -1) {
             if (GoalkeeperAiSupport.field_a[this.field_Cb.achievementBitIndex] &&
               !ClientPacketFlushSupport.isBitSet(this.field_Cb.achievementBitIndex, 0, BufferedSocket.field_f)) {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, MyKitScreen.field_W.toLowerCase());
+              IndexedSpriteState.showTextTooltip(-67, MyKitScreen.field_W.toLowerCase());
             } else {
               stackIn_23_0 = -67;
               stackIn_23_1 = -18;
@@ -316,7 +316,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
               } else {
                 stackIn_24_2 = RenderedBall.field_R;
               }
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_23_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_23_1, stackIn_24_2, new String[]{AvailabilityCheckRequest.field_c[this.field_Cb.achievementBitIndex].toLowerCase()}));
+              IndexedSpriteState.showTextTooltip(stackIn_23_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_23_1, stackIn_24_2, new String[]{AvailabilityCheckRequest.field_c[this.field_Cb.achievementBitIndex].toLowerCase()}));
             }
           }
           if (-1 != this.field_Cb.unlockBitIndex) {
@@ -327,13 +327,13 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
             } else {
               stackIn_30_2 = TickClock.field_l;
             }
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_29_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_29_1, stackIn_30_2, new String[]{}));
+            IndexedSpriteState.showTextTooltip(stackIn_29_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_29_1, stackIn_30_2, new String[]{}));
           }
           if (this.field_Cb.requiresJagexModeratorRights) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, BytePlusOneCommand.field_G);
+            IndexedSpriteState.showTextTooltip(-67, BytePlusOneCommand.field_G);
           }
           if (this.field_Cb.requiredAccessKey != -1L) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, AccountTermsPanel.field_C);
+            IndexedSpriteState.showTextTooltip(-67, AccountTermsPanel.field_C);
           }
         }
         if (this.field_sb == 1) {
@@ -341,7 +341,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
             KitUnlockNoticeSupport.enqueueLockedKitNotice((byte) -98, this.field_Cb.achievementBitIndex);
           } else {
             if (!this.field_Kb) {
-              LoginKind.a((byte) 81);
+              LoginKind.playSelectionSound((byte) 81);
             } else {
               SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 36);
             }

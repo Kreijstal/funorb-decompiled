@@ -45,7 +45,7 @@ final class ReceivedAuctionItem extends AuctionItem {
           }
           var4.field_i = param1.readInt(4);
           if (param0 != -21832) {
-            ReceivedAuctionItem.b(20);
+            ReceivedAuctionItem.loadBeachSprites(20);
           }
           var4.field_v = param1.readInt(4);
           var4.field_t = param1.readInt(4);
@@ -68,7 +68,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void setChatChannelLabel(String param0, int param1) {
         try {
           if (param1 != -1) {
             field_H = (String) null;
@@ -82,25 +82,25 @@ final class ReceivedAuctionItem extends AuctionItem {
     private ReceivedAuctionItem() {
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int floorDiv(int param0, int param1, byte param2) {
         if (param2 != -72) {
-          ReceivedAuctionItem.f((byte) 120);
+          ReceivedAuctionItem.closeSharedPopups((byte) 120);
         }
         int var3 = param1 >>> 31;
         return -var3 + (var3 + param1) / param0;
     }
 
-    final static void f(byte param0) {
+    final static void closeSharedPopups(byte param0) {
         MusicPatchNode.closePlayerContextMenu(67);
-        GameModesHelpScreen.i((byte) -90);
+        GameModesHelpScreen.closeHoverTooltip((byte) -90);
         TextPromptState.field_b = null;
         PendingRequestAcknowledgement.closeQuickChat(47);
         if (param0 != 119) {
-          ReceivedAuctionItem.b(104);
+          ReceivedAuctionItem.loadBeachSprites(104);
         }
     }
 
-    final static void h(byte param0) {
+    final static void updateTutorialPossessionAssist(byte param0) {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -117,7 +117,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         try {
           if (param0 != 125) {
             var8 = (String) null;
-            ReceivedAuctionItem.a((String) null, 94);
+            ReceivedAuctionItem.setChatChannelLabel((String) null, 94);
           }
           if (HoverTooltip.field_Eb) {
             return;
@@ -187,7 +187,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         field_H = null;
     }
 
-    final static void i(byte param0) {
+    final static void drawPlayerSelectionOverlays(byte param0) {
         int var1_int = 0;
         int var4 = 0;
         int stackIn_14_0 = 0;
@@ -199,7 +199,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         try {
           AlternateKeyedLoginCredentials.drawFootballerOverlay(BrowserUiSupport.field_c, (RenderedFootballer) (NotCommand.field_F.getBallCarrier((byte) -96)), (byte) 118, 256);
           if (param0 != 45) {
-            ReceivedAuctionItem.i((byte) 21);
+            ReceivedAuctionItem.drawPlayerSelectionOverlays((byte) 21);
           }
           for (var1_int = 0; var1_int < NotCommand.field_F.playerCount; var1_int++) {
             if (NotCommand.field_F.participantStatus[var1_int].isActive(3511) &&
@@ -218,7 +218,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         }
     }
 
-    final static int b(int param0) {
+    final static int loadBeachSprites(int param0) {
         if (QuickChatCategory.field_s) {
           return -1;
         }

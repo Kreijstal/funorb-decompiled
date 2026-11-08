@@ -17,7 +17,7 @@ final class FixedVelocitySupport {
         field_c = null;
     }
 
-    final static void a(byte param0) {
+    final static void resetTooltipTracking(byte param0) {
         StreetSceneryLoader.field_i = 0;
         if (param0 > 126) {
           TrinketCatalog.field_d = -1;
@@ -26,7 +26,7 @@ final class FixedVelocitySupport {
           AccountNameCharacterSupport.field_e = -1;
           return;
         }
-        FixedVelocitySupport.a((byte) -102);
+        FixedVelocitySupport.resetTooltipTracking((byte) -102);
         TrinketCatalog.field_d = -1;
         LoginPacketSupport.field_a = false;
         EmailAvailabilityValidator.field_o = null;

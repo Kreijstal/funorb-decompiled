@@ -18,8 +18,8 @@ final class AudioOutputSupport {
     }
 
     final static void b(boolean param0) {
-        int var1 = IntTripleCommand.h((byte) -118);
-        int var2 = EmailSyntaxValidator.e((byte) 18);
+        int var1 = IntTripleCommand.getFullscreenPromptWidth((byte) -118);
+        int var2 = EmailSyntaxValidator.getFullscreenPromptHeight((byte) 18);
         if (param0) {
           IntValueNode.field_g.drawPanel(GameSoundEffect.field_k - TextLineLayoutSupport.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (TextLineLayoutSupport.field_d << 1), 3);
           VerticalScrollbar.k(0);
@@ -78,7 +78,7 @@ final class AudioOutputSupport {
         if (!ServerTextTemplate.a(-4)) {
           return;
         }
-        TrinketCountSortCriterion.a(false, 6, 4);
+        TrinketCountSortCriterion.buildFullscreenPromptMenu(false, 6, 4);
         int var1 = -31 / ((param0 - 88) / 33);
     }
 

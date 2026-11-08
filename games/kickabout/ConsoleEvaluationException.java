@@ -57,7 +57,7 @@ final class ConsoleEvaluationException extends Exception {
               }
               if (ArchiveIndex.field_h == null &&
                 MeshObject.field_e) {
-                TrinketCountSortCriterion.a(param0, param1 + 6, var2);
+                TrinketCountSortCriterion.buildFullscreenPromptMenu(param0, param1 + 6, var2);
               }
               return;
             }
@@ -68,7 +68,7 @@ final class ConsoleEvaluationException extends Exception {
               CanvasInputBindings.attachInputHandlers(SplashScreen.field_m, (byte) -64);
               if (ArchiveIndex.field_h == null &&
                 MeshObject.field_e) {
-                TrinketCountSortCriterion.a(param0, param1 + 6, var2);
+                TrinketCountSortCriterion.buildFullscreenPromptMenu(param0, param1 + 6, var2);
               }
               return;
             }
@@ -81,7 +81,7 @@ final class ConsoleEvaluationException extends Exception {
               var2 = 1;
               if (ArchiveIndex.field_h == null &&
                 MeshObject.field_e) {
-                TrinketCountSortCriterion.a(param0, param1 + 6, var2);
+                TrinketCountSortCriterion.buildFullscreenPromptMenu(param0, param1 + 6, var2);
                 return;
               }
               return;
@@ -89,7 +89,7 @@ final class ConsoleEvaluationException extends Exception {
             var2 = 0;
             if (ArchiveIndex.field_h == null &&
               MeshObject.field_e) {
-              TrinketCountSortCriterion.a(param0, param1 + 6, var2);
+              TrinketCountSortCriterion.buildFullscreenPromptMenu(param0, param1 + 6, var2);
               return;
             }
             return;
@@ -113,7 +113,7 @@ final class ConsoleEvaluationException extends Exception {
         if (!MeshObject.field_e) {
           return;
         }
-        TrinketCountSortCriterion.a(param0, param1 + 6, var2);
+        TrinketCountSortCriterion.buildFullscreenPromptMenu(param0, param1 + 6, var2);
     }
 
     ConsoleEvaluationException(String param0) {

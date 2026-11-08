@@ -80,7 +80,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
         return 2;
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void buildFullscreenPromptMenu(boolean param0, int param1, int param2) {
         int stackIn_22_0 = 0;
         int stackIn_25_0 = 0;
         String[] stackIn_32_0 = null;
@@ -417,7 +417,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
         field_o = null;
     }
 
-    final static void b(byte param0) {
+    final static void closeArchiveResources(byte param0) {
         try {
           int var1_int = 0;
           IOException iOException = null;

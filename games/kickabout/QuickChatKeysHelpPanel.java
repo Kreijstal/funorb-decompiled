@@ -76,7 +76,7 @@ final class QuickChatKeysHelpPanel extends UiLayoutNode {
         }
     }
 
-    final static int a(LoginText param0, byte param1, LoginText param2) {
+    final static int pollRegistrationRequest(LoginText param0, byte param1, LoginText param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -90,7 +90,7 @@ final class QuickChatKeysHelpPanel extends UiLayoutNode {
         try {
           var3_int = 52 % ((param1 + 39) / 59);
           var4 = (String) null;
-          stackIn_1_0 = WhirlpoolHasher.a(0, param2, param0, 0, false, (String) null, false);
+          stackIn_1_0 = WhirlpoolHasher.pollRegistrationRequest(0, param2, param0, 0, false, (String) null, false);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

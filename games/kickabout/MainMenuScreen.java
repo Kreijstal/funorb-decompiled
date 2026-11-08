@@ -266,7 +266,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
           if (this.field_B.field_sb != 1) {
             return;
           }
-          AchievementSubmission.a((byte) -117);
+          AchievementSubmission.playUiClickSound((byte) -117);
           if (PlayArea.isGuestSession(100)) {
             ButtonMenuScreen.enqueueLoginRequiredDialog(16144);
           } else {
@@ -290,7 +290,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
         if (this.field_B.field_sb != 1) {
           return;
         }
-        AchievementSubmission.a((byte) -117);
+        AchievementSubmission.playUiClickSound((byte) -117);
         if (PlayArea.isGuestSession(100)) {
           ButtonMenuScreen.enqueueLoginRequiredDialog(16144);
         } else {

@@ -65,7 +65,7 @@ final class SocialPlayerRow extends UiLayoutNode {
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
             var6 = -var3_int + TriangleMesh.field_B[var5Lifetime1];
             var7 = -var4 + FootballerAiOverlaySupport.field_a[var5Lifetime1];
-            ContentTransitionDialog.field_Q[var5Lifetime1] = GameKeyHandler.a(var6 * var6 + var7 * var7, (byte) -128);
+            ContentTransitionDialog.field_Q[var5Lifetime1] = GameKeyHandler.approximateSquareRoot(var6 * var6 + var7 * var7, (byte) -128);
           }
           var5Lifetime2 = ContentTransitionDialog.field_Q[0] - 30;
           var9 = 0;

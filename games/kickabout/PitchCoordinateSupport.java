@@ -88,7 +88,7 @@ final class PitchCoordinateSupport {
             if (var5 < 0) {
               var4 = var4 + AccountMessagePanel.field_H;
             } else {
-              var6 = LoginText.a(true, FootballerPreview.field_a[var3_int], -23044);
+              var6 = LoginText.measureMenuText(true, FootballerPreview.field_a[var3_int], -23044);
               var4 = var4 + FriendRemovalSupport.field_a;
               var7 = -(var6 >> 1) + RasterStateSnapshot.field_k;
               if (LoginText.rectangleContains(-TextFieldNode.field_zb + var7, param0, param1, (byte) -124, var4, var6 + (TextFieldNode.field_zb << 1), (IsSixCommand.field_H << 1) + ScrollContainer.field_zb)) {

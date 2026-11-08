@@ -27,9 +27,9 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         MatchTextInputOverlay.field_c = param0 * 100 / 150;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int approximateSquareRoot(int param0, byte param1) {
         int var2 = 33 % ((param1 + 15) / 62);
-        return DisplayNameUiSupport.a(param0, -524289) >> 8;
+        return DisplayNameUiSupport.approximateSquareRootFixed8(param0, -524289) >> 8;
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {

@@ -7,9 +7,9 @@ final class GameQuickChatResolver implements QuickChatResolver {
     static boolean field_b;
     static int field_a;
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void showCurrencyTooltip(int param0, int param1, byte param2) {
         ThumbnailStateFactory.field_b = true;
-        if (LoginMethod.a(false)) {
+        if (LoginMethod.shouldDelayTooltip(false)) {
           return;
         }
         ReflectionCheck.field_k = param1;
@@ -20,11 +20,11 @@ final class GameQuickChatResolver implements QuickChatResolver {
         AuctionItem.field_e = 2;
     }
 
-    final static void a(int param0, String param1) {
+    final static void setServerMessageText(int param0, String param1) {
         try {
           MatchTextInputOverlay.field_p = param1;
           if (param0 != 2) {
-            GameQuickChatResolver.a(122, 101, (byte) 60);
+            GameQuickChatResolver.showCurrencyTooltip(122, 101, (byte) 60);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

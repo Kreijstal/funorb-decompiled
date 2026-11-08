@@ -70,7 +70,7 @@ final class PasswordValidator extends TextFieldValidator {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -96) {
-          PasswordValidator.a(32, -1, 38, -7, 52, false);
+          PasswordValidator.updateDirectionalIndicatorSprites(32, -1, 38, -7, 52, false);
         }
         field_k = null;
         field_m = null;
@@ -124,7 +124,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static void updateDirectionalIndicatorSprites(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         boolean stackIn_11_0 = false;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -199,7 +199,7 @@ final class PasswordValidator extends TextFieldValidator {
         try {
           var2 = param1.getParameter("username");
           if (param0 > -78) {
-            PasswordValidator.a(110, 93, 93);
+            PasswordValidator.drawRatedRewardsTable(110, 93, 93);
           }
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
@@ -222,7 +222,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static LobbyPlayerRow a(long param0, boolean param1) {
+    final static LobbyPlayerRow findLobbyPlayerById(long param0, boolean param1) {
         if (param1) {
           field_j = (int[]) null;
         }
@@ -231,7 +231,7 @@ final class PasswordValidator extends TextFieldValidator {
 
     final static void drawAnimatedPlayerMarker(int param0, int param1, int param2, boolean param3, byte param4) {
         if (param4 != -55) {
-          PasswordValidator.a(124L, false);
+          PasswordValidator.findLobbyPlayerById(124L, false);
         }
         int var5 = (int)(MonotonicClock.monotonicMillis(-62) % 2000L * 100L) / 2000;
         var5 = (var5 + (param0 * 100 >> 16)) % 100;
@@ -317,7 +317,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void drawRatedRewardsTable(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -361,7 +361,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static ConsoleValue a(ConsoleValue[] param0, boolean param1, ConsoleCommand[] param2, String param3) throws ConsoleEvaluationException {
+    final static ConsoleValue invokeConsoleCommand(ConsoleValue[] param0, boolean param1, ConsoleCommand[] param2, String param3) throws ConsoleEvaluationException {
         int var5 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -384,7 +384,7 @@ final class PasswordValidator extends TextFieldValidator {
         try {
           var4_int = 0;
           while (var4_int < param2.length) {
-            if (!param2[var4_int].a(param0, 2, param3)) {
+            if (!param2[var4_int].matchesInvocation(param0, 2, param3)) {
               var4_int++;
               continue;
             }

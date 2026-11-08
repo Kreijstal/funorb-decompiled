@@ -361,7 +361,7 @@ final class PlayerStats implements PopupCard {
         if (null != AnimationClip.field_d) {
           AnimationClip.field_d.p(param0 ^ 1496);
         }
-        FixedVelocitySupport.a((byte) 127);
+        FixedVelocitySupport.resetTooltipTracking((byte) 127);
     }
 
     final void writeToPacket(byte param0, PacketBuffer param1) {

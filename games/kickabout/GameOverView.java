@@ -1440,7 +1440,7 @@ final class GameOverView extends MatchPhaseView {
               this.field_S = 2;
             }
           }
-          AchievementSubmission.a((byte) -127);
+          AchievementSubmission.playUiClickSound((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1916,25 +1916,25 @@ final class GameOverView extends MatchPhaseView {
             if (this.field_K &&
               WidgetContainer.field_A == 1 &&
               this.field_ib == 0) {
-              AchievementSubmission.a((byte) -124);
+              AchievementSubmission.playUiClickSound((byte) -124);
               this.field_X = this.field_X - 596;
             }
             if (this.field_W &&
               WidgetContainer.field_A == 1 &&
               this.field_ib == -596) {
-              AchievementSubmission.a((byte) -119);
+              AchievementSubmission.playUiClickSound((byte) -119);
               this.field_X = this.field_X + 596;
             }
             if (this.field_C &&
               WidgetContainer.field_A == 1 &&
               -596 == this.field_ib) {
-              AchievementSubmission.a((byte) -117);
+              AchievementSubmission.playUiClickSound((byte) -117);
               this.field_X = this.field_X - 596;
             }
             if (this.field_D &&
               WidgetContainer.field_A == 1 &&
               this.field_ib == -1192) {
-              AchievementSubmission.a((byte) -125);
+              AchievementSubmission.playUiClickSound((byte) -125);
               this.field_X = this.field_X + 596;
             }
             if (this.field_y &&
@@ -1942,7 +1942,7 @@ final class GameOverView extends MatchPhaseView {
               this.field_P != 0 &&
               this.field_M > this.field_P) {
               if (WidgetContainer.field_A == 1) {
-                AchievementSubmission.a((byte) -118);
+                AchievementSubmission.playUiClickSound((byte) -118);
               }
               this.field_M = this.field_M - 32;
             }
@@ -1950,7 +1950,7 @@ final class GameOverView extends MatchPhaseView {
               1 == FootballerAgent.field_p &&
               this.field_M < 0) {
               if (WidgetContainer.field_A == 1) {
-                AchievementSubmission.a((byte) -122);
+                AchievementSubmission.playUiClickSound((byte) -122);
               }
               this.field_M = this.field_M + 32;
             }
@@ -1959,7 +1959,7 @@ final class GameOverView extends MatchPhaseView {
               this.field_lb != 0 &&
               this.field_M > this.field_lb) {
               if (WidgetContainer.field_A == 1) {
-                AchievementSubmission.a((byte) -121);
+                AchievementSubmission.playUiClickSound((byte) -121);
               }
               this.field_M = this.field_M - 32;
             }
@@ -1967,7 +1967,7 @@ final class GameOverView extends MatchPhaseView {
               FootballerAgent.field_p == 1 &&
               this.field_M < 0) {
               if (WidgetContainer.field_A == 1) {
-                AchievementSubmission.a((byte) -127);
+                AchievementSubmission.playUiClickSound((byte) -127);
               }
               this.field_M = this.field_M + 32;
             }
@@ -2071,7 +2071,7 @@ final class GameOverView extends MatchPhaseView {
                       ShopPlayerSlot.playDefaultFadingSound(49, 52);
                     }
                   }
-                  LoginKind.a((byte) 61);
+                  LoginKind.playSelectionSound((byte) 61);
                 }
               }
               var13++;

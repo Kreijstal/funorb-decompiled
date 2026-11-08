@@ -171,7 +171,7 @@ final class CheckboxPainter implements WidgetPainter {
           AccountNameCheckState.advanceLoadingStep(0, 1);
           if (0 != KitPatternMaskSupport.field_c) {
             if (KitPatternMaskSupport.field_c == 1) {
-              var1Lifetime1 = ReceivedAuctionItem.b(123);
+              var1Lifetime1 = ReceivedAuctionItem.loadBeachSprites(123);
               if (var1Lifetime1 != -1) {
                 DelayedServerPacket.a(100, 9863, var1Lifetime1);
                 return;

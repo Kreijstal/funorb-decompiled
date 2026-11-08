@@ -29,12 +29,12 @@ final class AnimationSkeleton extends IntrusiveNode {
         field_h = null;
     }
 
-    final static void a(byte param0, TrinketSlot param1) {
+    final static void showTrinketTooltip(byte param0, TrinketSlot param1) {
         if (param0 != 100) {
           field_g = (KitStyleDefinition[]) null;
         }
         ThumbnailStateFactory.field_b = true;
-        if (LoginMethod.a(false)) {
+        if (LoginMethod.shouldDelayTooltip(false)) {
           return;
         }
         try {

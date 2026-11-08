@@ -18,7 +18,7 @@ final class PlayerContextMenu {
     private String field_a;
     static Sprite field_m;
 
-    private final boolean openFriendPrompt(int param0, int param1, int param2) {
+    private final boolean openReportPrompt(int param0, int param1, int param2) {
         if (param2 == 17) {
           TextPromptState.field_b = new TextPromptDialog(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, ChatMessage.field_e, AccountTermsPanel.field_H, DateInputValidator.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, TextInputUiSupport.field_c, this.field_k, this.field_b);
           return true;
@@ -82,10 +82,10 @@ final class PlayerContextMenu {
         return var2;
     }
 
-    final void hideMenu(boolean param0, boolean param1) {
+    final void drawMenu(boolean param0, boolean param1) {
         this.field_j.draw(47, param0);
         if (param1) {
-          this.showMenu(97);
+          this.addReportAbuseItem(97);
         }
     }
 
@@ -123,7 +123,7 @@ final class PlayerContextMenu {
           field_m = (Sprite) null;
           return;
         }
-        var7 = PasswordValidator.a(this.field_b, false);
+        var7 = PasswordValidator.findLobbyPlayerById(this.field_b, false);
         var4 = TexturedPanelPainter.a(param1 ^ 31253, this.field_b);
         var5 = this.getDisplayName(-26719);
         if (var4 != null) {
@@ -166,7 +166,7 @@ final class PlayerContextMenu {
         ClientPacketFlushSupport.drawAnimatedPlayerMarker(31, param0, param2, 0);
     }
 
-    final void showMenu(int param0) {
+    final void addReportAbuseItem(int param0) {
         String var3 = null;
         if (null != this.field_k) {
           if (~AnimationPlayer.field_c == ~this.field_b) {
@@ -400,7 +400,7 @@ final class PlayerContextMenu {
             }
           }
         } else {
-          IntTripleCommand.a(this.field_b, param1, 122);
+          IntTripleCommand.sendGameJoinRequest(this.field_b, param1, 122);
         }
         if (param2 == 2) {
           return true;
@@ -679,7 +679,7 @@ final class PlayerContextMenu {
         boolean discarded$0 = this.handleSecondaryAction(var6, param3, 2);
         boolean discarded$1 = this.handleSocialAction(var6, param4, (byte) -100);
         boolean discarded$2 = this.handlePrimaryAction(var6, param1 + 113, param4);
-        boolean discarded$3 = this.openFriendPrompt(param1 - 8983, param2, var6);
+        boolean discarded$3 = this.openReportPrompt(param1 - 8983, param2, var6);
         return true;
     }
 

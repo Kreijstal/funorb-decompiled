@@ -44,7 +44,7 @@ final class LoginPacketSupport {
           if (100 > ThumbnailStateFactory.field_c) {
             ThumbnailStateFactory.field_c = 100;
           }
-          LookupRecordUpdate.b(22);
+          LookupRecordUpdate.measureQuickChatToggleHint(22);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

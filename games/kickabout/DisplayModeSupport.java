@@ -18,7 +18,7 @@ final class DisplayModeSupport {
         field_b = null;
     }
 
-    final static void a(UiLayoutNode param0, boolean param1, int param2) {
+    final static void openChatFilterMenu(UiLayoutNode param0, boolean param1, int param2) {
         PlayerContextMenu var9 = null;
         Sprite var11 = null;
         String var10 = null;
@@ -131,7 +131,7 @@ final class DisplayModeSupport {
         }
     }
 
-    final static String a(String param0, int param1, byte param2) {
+    final static String formatLobbyPlayerStatus(String param0, int param1, byte param2) {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;

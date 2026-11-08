@@ -171,7 +171,7 @@ final class LobbyMatchPreview {
             this.field_i = false;
           }
           if (this.field_f) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ModelMaterialDecoder.field_f);
+            IndexedSpriteState.showTextTooltip(-67, ModelMaterialDecoder.field_f);
           }
           if (this.field_i) {
             if (QuickChatPhraseCache.field_d) {

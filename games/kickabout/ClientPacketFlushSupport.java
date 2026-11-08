@@ -54,7 +54,7 @@ final class ClientPacketFlushSupport {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                FormationView.b((byte) -116);
+                FormationView.closeClientSocket((byte) -116);
               }
               FootballerAiOverlaySupport.field_d.field_n = 0;
             }

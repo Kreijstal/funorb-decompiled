@@ -25,7 +25,7 @@ final class ConsoleParseException extends Exception {
         field_b = null;
     }
 
-    final static void a(UiLayoutNode param0, UiLayoutNode param1, int param2, UiLayoutNode param3, UiLayoutNode param4) {
+    final static void initializeChatComposerPopup(UiLayoutNode param0, UiLayoutNode param1, int param2, UiLayoutNode param3, UiLayoutNode param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

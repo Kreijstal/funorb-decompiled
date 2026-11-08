@@ -8,7 +8,7 @@ final class IntTripleCommand extends ConsoleCommand {
     static int[] field_A;
     static double[][][] field_C;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_D = null;
         if (param0 == 220) {
           field_E = null;
@@ -28,7 +28,7 @@ final class IntTripleCommand extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int h(byte param0) {
+    final static int getFullscreenPromptWidth(byte param0) {
         if (param0 > -7) {
           return -31;
         }
@@ -62,7 +62,7 @@ final class IntTripleCommand extends ConsoleCommand {
         }
     }
 
-    final static int h(int param0) {
+    final static int getButtonPulseIntensity(int param0) {
         int var1 = (int)(MonotonicClock.monotonicMillis(-109) % 1440L) - 1000;
         if (var1 > 0) {
           return 256 - (var1 % 220 << 8) / 220;
@@ -74,7 +74,7 @@ final class IntTripleCommand extends ConsoleCommand {
         return -1;
     }
 
-    final static void a(IntrusiveDeque param0, int param1) {
+    final static void sortWorldDrawList(IntrusiveDeque param0, int param1) {
         int var4 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -112,7 +112,7 @@ final class IntTripleCommand extends ConsoleCommand {
             return;
           }
           var5 = (IntrusiveDeque) null;
-          IntTripleCommand.a((IntrusiveDeque) null, 81);
+          IntTripleCommand.sortWorldDrawList((IntrusiveDeque) null, 81);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -128,7 +128,7 @@ final class IntTripleCommand extends ConsoleCommand {
         }
     }
 
-    final static void a(long param0, int param1, int param2) {
+    final static void sendGameJoinRequest(long param0, int param1, int param2) {
         CipherPacketBuffer var4 = FootballerAiOverlaySupport.field_d;
         var4.writeIsaacByte(param1, (byte) -94);
         var4.field_n = var4.field_n + 1;
@@ -141,7 +141,7 @@ final class IntTripleCommand extends ConsoleCommand {
         }
     }
 
-    final static void g(byte param0) {
+    final static void openAccountInterface(byte param0) {
         StripedProgressBar.a(0);
         AuctionBidDialog.field_G = true;
         if (param0 != -54) {

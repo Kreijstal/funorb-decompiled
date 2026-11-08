@@ -842,7 +842,7 @@ final class CommonGame {
                             }
                           }
                           this.field_V.inheritControlSource((MatchAgent) (var4_ref_nlLifetime2), (byte) 84);
-                          var10Lifetime2 = DisplayNameUiSupport.a(this.field_V.horizontalSpeedSquared(3), -524289) >> 8;
+                          var10Lifetime2 = DisplayNameUiSupport.approximateSquareRootFixed8(this.field_V.horizontalSpeedSquared(3), -524289) >> 8;
                           this.field_V.velocityX = (ClientUiUpdateSupport.cosine(var8_intLifetime1, false) >> 8) * var10Lifetime2;
                           this.field_V.velocityY = var10Lifetime2 * (RotaryDialPainter.sine(var8_intLifetime1, (byte) -23) >> 8);
                           this.field_V.stepPhysics((byte) -78, this.surface, this.field_B);
@@ -901,7 +901,7 @@ final class CommonGame {
                           if (var8_intLifetime1Lifetime1 < 1600) {
                             this.field_V.inheritControlSource((MatchAgent) (var5), (byte) 84);
                             var9Lifetime1 = (4 * var5.stats.effectivePower(var5.member, 0) << 16) / 100 + 524288;
-                            var10_long = (long)(var9Lifetime1 + Math.max(var5.field_q, DisplayNameUiSupport.a(this.field_V.horizontalSpeedSquared(-127), -524289)));
+                            var10_long = (long)(var9Lifetime1 + Math.max(var5.field_q, DisplayNameUiSupport.approximateSquareRootFixed8(this.field_V.horizontalSpeedSquared(-127), -524289)));
                             this.field_V.uncatchable = 5;
                             this.field_V.velocityY = (int)((long)var5.field_m * var10_long / (long)var5.field_q);
                             this.field_V.velocityX = (int)(var10_long * (long)var5.field_k / (long)var5.field_q);
@@ -2263,7 +2263,7 @@ final class CommonGame {
             var9 = var9 + ((var9 * 3 >> 1) + 1280 * param0);
             this.field_V.highFriction = 25;
           }
-          var11 = GameKeyHandler.a(param5 * param5 + param3 * param3, (byte) 84);
+          var11 = GameKeyHandler.approximateSquareRoot(param5 * param5 + param3 * param3, (byte) 84);
           this.field_V.verticalVelocity = var10;
           if (var11 != 0) {
             this.field_V.velocityX = param3 * var9 / var11;

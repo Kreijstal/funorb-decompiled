@@ -65,7 +65,7 @@ final class CheatCodeListener implements OverlayLayer {
           } else {
             stackIn_13_1 = true;
           }
-          WelcomeDialog.c(stackIn_12_0, stackIn_13_1);
+          WelcomeDialog.drawDimmedSharedOverlay(stackIn_12_0, stackIn_13_1);
           var1 = 1;
         }
         if (MarkerSliderWidget.i(0)) {

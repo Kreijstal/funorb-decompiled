@@ -322,8 +322,8 @@ final class LobbyGameRecord {
         this.field_o = -2;
         this.field_k = -1;
         this.field_b = 0;
-        this.field_n = TextLine.a(448, false);
-        this.field_l = TextLine.a(672, false);
+        this.field_n = TextLine.scaleLobbyPreviewCoordinate(448, false);
+        this.field_l = TextLine.scaleLobbyPreviewCoordinate(672, false);
         this.field_f = -1;
         this.field_h = -1;
     }

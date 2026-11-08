@@ -10,7 +10,7 @@ final class TrinketIcon extends UiLayoutNode {
     static String field_Ab;
     static String[] field_Eb;
 
-    final static void a(int param0) {
+    final static void validateLoadingGuard(int param0) {
         int var1 = -1 / ((-68 - param0) / 53);
     }
 

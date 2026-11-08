@@ -13,7 +13,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
     int field_g;
     int field_n;
 
-    final static void b(int param0) {
+    final static void measureQuickChatToggleHint(int param0) {
         MarkerSliderPainter.field_n = param0 + Math.max(ConsoleTokenCursor.field_d.stringWidth(SoundStreamHandle.field_l), ConsoleTokenCursor.field_d.stringWidth(QuickChatMenuBuilder.field_a));
     }
 

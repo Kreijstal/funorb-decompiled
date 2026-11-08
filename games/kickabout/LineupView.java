@@ -24,7 +24,7 @@ final class LineupView extends MatchPhaseView {
 
     private final int getPlayerDisplayY(byte param0, int param1) {
         if (param0 <= 98) {
-          this.a((byte) 101, true, 125, true);
+          this.drawLineupSlotPlaceholder((byte) 101, true, 125, true);
         }
         int var3 = this.findPlayerSlot(param1, 0);
         if (var3 == -1) {
@@ -33,7 +33,7 @@ final class LineupView extends MatchPhaseView {
         return this.field_t[var3].field_T;
     }
 
-    private final void a(byte param0, boolean param1, int param2, boolean param3) {
+    private final void drawLineupSlotPlaceholder(byte param0, boolean param1, int param2, boolean param3) {
         int stackIn_3_0;
         int stackIn_3_1;
         int stackIn_3_2;
@@ -86,7 +86,7 @@ final class LineupView extends MatchPhaseView {
         }
         var11 = (var7 - var9 >> 1) + var5;
         if (param0 > -72) {
-          this.a((byte) 82, true, -69, false);
+          this.drawLineupSlotPlaceholder((byte) 82, true, -69, false);
         }
         var12 = var6 - (-(var8 - var10 >> 1) + 6);
         if (!this.field_v) {
@@ -121,7 +121,7 @@ final class LineupView extends MatchPhaseView {
         return var4;
     }
 
-    private final boolean a(boolean param0, UiLayoutNode param1) {
+    private final boolean containsGamePointer(boolean param0, UiLayoutNode param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -135,7 +135,7 @@ final class LineupView extends MatchPhaseView {
           var3_int = ArrayWidgetContainer.field_x;
           if (param0) {
             var5 = (java.applet.Applet) null;
-            LineupView.a(43, (String[]) null, 37, (java.applet.Applet) null, -63, -56);
+            LineupView.initializePromotionResources(43, (String[]) null, 37, (java.applet.Applet) null, -63, -56);
           }
           var4 = TutorialCaptionSupport.field_j;
           stackIn_8_0 = (var3_int > param1.field_F) && (param1.field_T < var4) && (var3_int < param1.field_F + param1.field_q) && (param1.field_mb + param1.field_T > var4);
@@ -224,11 +224,11 @@ final class LineupView extends MatchPhaseView {
                 }
               } else {
                 this.field_p = -1;
-                if (!this.a(false, this.field_A)) {
+                if (!this.containsGamePointer(false, this.field_A)) {
                   for (var7 = 3; 0 <= var7; var7--) {
                     if (~this.field_a.field_i[this.field_h][var7] == ~this.field_g &&
-                      this.a(false, this.field_t[var7])) {
-                      LoginKind.a((byte) 45);
+                      this.containsGamePointer(false, this.field_t[var7])) {
+                      LoginKind.playSelectionSound((byte) 45);
                       this.selectLineupPlayer(74, var5 + 1 << 2 | var7);
                     }
                   }
@@ -280,7 +280,7 @@ final class LineupView extends MatchPhaseView {
         int var1 = -57 / ((param0 - 52) / 45);
     }
 
-    final static void a(ChatMessage param0, byte param1) {
+    final static void openChatMessageContextMenu(ChatMessage param0, byte param1) {
         UiLayoutNode stackIn_2_0;
         boolean stackIn_2_1;
         Object stackIn_2_2;
@@ -350,7 +350,7 @@ final class LineupView extends MatchPhaseView {
           TextButton.field_v.buildMenuItems(1);
           TextButton.field_v.addGameSetupMenuItems(false, 0);
           TextButton.field_v.addSocialMenuItems(param0.field_c, -118, param0.field_r);
-          TextButton.field_v.showMenu(-120);
+          TextButton.field_v.addReportAbuseItem(-120);
           TextButton.field_v.addChatFilterMenuItems(param0, (byte) 11);
           var13 = TextButton.field_v;
           if (param1 != -60) {
@@ -407,13 +407,13 @@ final class LineupView extends MatchPhaseView {
         var3 = -1;
         for (var4 = 3; 0 <= var4; var4--) {
           if (this.field_g == this.field_a.field_i[this.field_h][var4] &&
-            this.a(false, this.field_t[var4])) {
+            this.containsGamePointer(false, this.field_t[var4])) {
             var2 = var4;
           }
         }
         if (var2 == -1 &&
           this.field_l != -1) {
-          if (!this.a(false, this.field_A)) {
+          if (!this.containsGamePointer(false, this.field_A)) {
             var2 = this.findPlayerSlot(this.field_l, param0 - 1);
           }
           if (var2 == -1) {
@@ -424,11 +424,11 @@ final class LineupView extends MatchPhaseView {
           if (~var4Lifetime1 != ~var2) {
             stackIn_24_1 = -105;
             stackIn_25_2 = (this.field_a.field_i[this.field_h][var4Lifetime1] == this.field_g);
-            this.a((byte) stackIn_24_1, stackIn_25_2, var4Lifetime1, false);
+            this.drawLineupSlotPlaceholder((byte) stackIn_24_1, stackIn_25_2, var4Lifetime1, false);
           }
         }
         if (var2 != -1) {
-          this.a((byte) -108, true, var2, true);
+          this.drawLineupSlotPlaceholder((byte) -108, true, var2, true);
         }
         if (this.isLocalParticipantActive((byte) 13)) {
           ListingRowCache.a(-1, this.field_A.field_T, this.field_A.field_F, (byte) -96, var3);
@@ -446,7 +446,7 @@ final class LineupView extends MatchPhaseView {
         }
         if (param0 != 1) {
           var10 = (UiLayoutNode) null;
-          discarded$0 = this.a(true, (UiLayoutNode) null);
+          discarded$0 = this.containsGamePointer(true, (UiLayoutNode) null);
         }
         if (this.field_v) {
           for (var4Lifetime4 = 0; 4 > var4Lifetime4; var4Lifetime4++) {
@@ -510,7 +510,7 @@ final class LineupView extends MatchPhaseView {
         }
     }
 
-    final static void a(int param0, String[] param1, int param2, java.applet.Applet param3, int param4, int param5) {
+    final static void initializePromotionResources(int param0, String[] param1, int param2, java.applet.Applet param3, int param4, int param5) {
         int var7 = 0;
         String var6 = null;
         int var8 = 0;
@@ -717,7 +717,7 @@ final class LineupView extends MatchPhaseView {
 
     final void onButtonClick(int param0, int param1) {
         if (param0 <= 98) {
-          this.a((byte) -5, false, -85, false);
+          this.drawLineupSlotPlaceholder((byte) -5, false, -85, false);
         }
     }
 

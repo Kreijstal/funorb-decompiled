@@ -35,7 +35,7 @@ abstract class ConsoleCommand extends DualLinkNode {
         field_z = null;
     }
 
-    final boolean a(ConsoleValue[] param0, int param1, String param2) {
+    final boolean matchesInvocation(ConsoleValue[] param0, int param1, String param2) {
         int var4_int = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -51,7 +51,7 @@ abstract class ConsoleCommand extends DualLinkNode {
         try {
           if (param1 != 2) {
             var7 = (NineSlicePanelPainter) null;
-            ConsoleCommand.a(58, 112, true, (NineSlicePanelPainter) null);
+            ConsoleCommand.configureMenuPanel(58, 112, true, (NineSlicePanelPainter) null);
           }
           if (!this.field_o.equals(param2)) {
             return false;
@@ -101,7 +101,7 @@ abstract class ConsoleCommand extends DualLinkNode {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean isReflectionCheckReady(int param0) {
         int var2 = 0;
         ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
@@ -142,7 +142,7 @@ abstract class ConsoleCommand extends DualLinkNode {
 
     abstract ConsoleValue execute(byte param0, ConsoleValue[] param1);
 
-    final static void a(int param0, int param1, boolean param2, NineSlicePanelPainter param3) {
+    final static void configureMenuPanel(int param0, int param1, boolean param2, NineSlicePanelPainter param3) {
         GoalSpriteLoader.field_a = param1;
         if (param2) {
           return;

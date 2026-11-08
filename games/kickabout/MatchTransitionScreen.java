@@ -313,7 +313,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
             TickClock.field_d.field_lb = false;
             LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
-            DateInputValidator.a(true, LineupView.field_u.field_Ab);
+            DateInputValidator.resetChildScrollLayout(true, LineupView.field_u.field_Ab);
           } else {
             LineupView.field_u.field_zb.field_E = null;
             TickClock.field_d.field_lb = true;
@@ -347,7 +347,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                     PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                     TickClock.field_d.field_lb = false;
                     LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
-                    DateInputValidator.a(true, LineupView.field_u.field_Ab);
+                    DateInputValidator.resetChildScrollLayout(true, LineupView.field_u.field_Ab);
                   } else {
                     LineupView.field_u.field_zb.field_E = null;
                     TickClock.field_d.field_lb = true;
@@ -381,7 +381,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                 TickClock.field_d.field_lb = false;
                 LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
-                DateInputValidator.a(true, LineupView.field_u.field_Ab);
+                DateInputValidator.resetChildScrollLayout(true, LineupView.field_u.field_Ab);
               } else {
                 LineupView.field_u.field_zb.field_E = null;
                 TickClock.field_d.field_lb = true;
@@ -405,7 +405,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                 TickClock.field_d.field_lb = false;
                 LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
-                DateInputValidator.a(true, LineupView.field_u.field_Ab);
+                DateInputValidator.resetChildScrollLayout(true, LineupView.field_u.field_Ab);
               } else {
                 LineupView.field_u.field_zb.field_E = null;
                 TickClock.field_d.field_lb = true;
@@ -440,7 +440,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                     PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                     TickClock.field_d.field_lb = false;
                     LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
-                    DateInputValidator.a(true, LineupView.field_u.field_Ab);
+                    DateInputValidator.resetChildScrollLayout(true, LineupView.field_u.field_Ab);
                   } else {
                     LineupView.field_u.field_zb.field_E = null;
                     TickClock.field_d.field_lb = true;
@@ -474,7 +474,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                 TickClock.field_d.field_lb = false;
                 LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
-                DateInputValidator.a(true, LineupView.field_u.field_Ab);
+                DateInputValidator.resetChildScrollLayout(true, LineupView.field_u.field_Ab);
               } else {
                 LineupView.field_u.field_zb.field_E = null;
                 TickClock.field_d.field_lb = true;
@@ -497,7 +497,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                   TickClock.field_d.field_lb = false;
                   LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
-                  DateInputValidator.a(true, LineupView.field_u.field_Ab);
+                  DateInputValidator.resetChildScrollLayout(true, LineupView.field_u.field_Ab);
                 } else {
                   LineupView.field_u.field_zb.field_E = null;
                   TickClock.field_d.field_lb = true;
@@ -515,7 +515,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   if (PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
                     TickClock.field_d.field_lb = false;
                     LineupView.field_u.field_zb.field_E = LeagueWinnerDialog.field_I;
-                    DateInputValidator.a(true, LineupView.field_u.field_Ab);
+                    DateInputValidator.resetChildScrollLayout(true, LineupView.field_u.field_Ab);
                   } else {
                     LineupView.field_u.field_zb.field_E = null;
                     TickClock.field_d.field_lb = true;

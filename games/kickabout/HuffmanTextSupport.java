@@ -19,7 +19,7 @@ final class HuffmanTextSupport {
         var3 = Kickabout.field_G;
         try {
           var1 = FootballerAiOverlaySupport.field_d;
-          while (ConsoleCommand.b(-16000)) {
+          while (ConsoleCommand.isReflectionCheckReady(-16000)) {
             var1.writeIsaacByte(8, (byte) 94);
             fieldTemp$0 = var1.field_n + 1;
             var1.field_n = var1.field_n + 1;

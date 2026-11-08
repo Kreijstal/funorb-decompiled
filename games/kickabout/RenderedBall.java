@@ -89,7 +89,7 @@ final class RenderedBall extends BallAgent {
               var4 = (int)(((long)var4 << 16) / (long)var5);
               var3_intLifetime1 = (int)(((long)var3_intLifetime1 << 16) / (long)var5);
               IntrusiveDeque.field_d.setFromAxisAngle(var3_intLifetime1, true, 0, var4, var5 >> 12);
-              this.field_Q.a(IntrusiveDeque.field_d, -49);
+              this.field_Q.preMultiply(IntrusiveDeque.field_d, -49);
               this.field_L = true;
             }
           }

@@ -129,7 +129,7 @@ final class LoggedPlayer {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean canSendPrivateChatToSelectedPlayer(int param0) {
         if (param0 != -3197) {
           field_k = (String) null;
         }

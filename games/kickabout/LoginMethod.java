@@ -162,7 +162,7 @@ final class LoginMethod {
           var5 = -672 + var3;
           var6 = var4 * var4 + var5 * var5;
           if (var6 > 202500) {
-            var7 = GameKeyHandler.a(var6, (byte) -118);
+            var7 = GameKeyHandler.approximateSquareRoot(var6, (byte) -118);
             var3 = 450 * var5 / var7 + 672;
             var2_int = 448 + var4 * 450 / var7;
           }
@@ -192,7 +192,7 @@ final class LoginMethod {
         TeamManagementScreen.e(126);
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean shouldDelayTooltip(boolean param0) {
         boolean stackIn_6_0 = false;
         if (param0) {
           LoginMethod.createRingSprite(12, -70, true, -119);

@@ -204,7 +204,7 @@ class ButtonMenuScreen extends AppScreen {
                 var5Lifetime2 == 37) {
                 SoftwareRasterizer.fillRoundedRectangleBlended(-4 + (var4Lifetime1 - (this.buttons[var3Lifetime2].width >> 1)), this.buttonCenterY(123, var3Lifetime2) + (-(this.buttons[var3Lifetime2].height >> 1) - 4), 8 + this.buttons[var3Lifetime2].width, 8 + this.buttons[var3Lifetime2].height, 10, 0, 128);
               }
-              this.buttons[var3Lifetime2].a(this.buttonCenterY(-106, var3Lifetime2), var4Lifetime1, 13800);
+              this.buttons[var3Lifetime2].drawButton(this.buttonCenterY(-106, var3Lifetime2), var4Lifetime1, 13800);
             }
           }
         }
@@ -235,7 +235,7 @@ class ButtonMenuScreen extends AppScreen {
             param0 == 97)) {
             stackIn_19_0 = this.buttons[this.buttonSelection.selectedIndex];
             stackIn_20_1 = (param0 == 96);
-            ((MenuButton) (Object) stackIn_19_0).a(stackIn_20_1, -27);
+            ((MenuButton) (Object) stackIn_19_0).stepVolume(stackIn_20_1, -27);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -547,7 +547,7 @@ class ButtonMenuScreen extends AppScreen {
           var4 = stackIn_11_0;
           if (var4 != -1 &&
             null != PendingRequestAcknowledgement.field_g[var4]) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, PendingRequestAcknowledgement.field_g[var4]);
+            IndexedSpriteState.showTextTooltip(-67, PendingRequestAcknowledgement.field_g[var4]);
           }
         }
         var9 = 0;
@@ -568,7 +568,7 @@ class ButtonMenuScreen extends AppScreen {
           }
           var6 = stackIn_32_0;
           var7 = ArrayWidgetContainer.field_x - this.buttonCenterX(var9, -22667);
-          this.buttons[var9].a(var4Lifetime1 != 0, var5 != 0, var6 != 0, 16, var7);
+          this.buttons[var9].updateButtonInput(var4Lifetime1 != 0, var5 != 0, var6 != 0, 16, var7);
           var9++;
         }
         var4Lifetime2 = -54 % ((38 - param0) / 60);
@@ -590,7 +590,7 @@ class ButtonMenuScreen extends AppScreen {
         MenuButton[] var4 = var8;
         for (var5 = 0; var5 < var8.length; var5++) {
           var6 = var8[var5];
-          var6.a(false, false, false, 16, 0);
+          var6.updateButtonInput(false, false, false, 16, 0);
         }
         if (param0 == this.buttons.length) {
           this.buttonSelection.selectedIndex = -1;

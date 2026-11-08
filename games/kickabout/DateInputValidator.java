@@ -7,7 +7,7 @@ final class DateInputValidator extends DebouncedValidationProvider implements Te
     static int field_d;
     static IndexedSprite[] field_e;
 
-    final static void a(boolean param0, UiLayoutNode param1) {
+    final static void resetChildScrollLayout(boolean param0, UiLayoutNode param1) {
         UiLayoutNode var4 = null;
         UiLayoutNode var2 = null;
         int var3 = Kickabout.field_G;

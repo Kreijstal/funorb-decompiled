@@ -617,7 +617,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         stackIn_6_2 = (ModelMaterialDecoder.field_g) ? 0 : 1;
         stackIn_2_0.field_lb = (stackIn_3_1 & stackIn_6_2) != 0;
         if (this.field_R.field_gb) {
-          IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, QuickChatPhraseDefinition.field_v);
+          IndexedSpriteState.showTextTooltip(-67, QuickChatPhraseDefinition.field_v);
         }
         if ((3000L + this.field_J) >= MonotonicClock.monotonicMillis(23)) {
           this.field_P.field_lb = false;
@@ -626,7 +626,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         }
         for (var3 = 0; var3 < this.field_E.length; var3++) {
           if (this.field_E[var3].field_gb) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_e, new String[]{RegistrationUiSupport.field_e[var3]}));
+            IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_e, new String[]{RegistrationUiSupport.field_e[var3]}));
           }
         }
         if (this.field_R.field_sb == 1) {
@@ -661,7 +661,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         if (this.field_P.field_sb == 1) {
           this.field_J = MonotonicClock.monotonicMillis(-72);
           this.requestAuctionPage(false, (byte) -126);
-          LoginKind.a((byte) 24);
+          LoginKind.playSelectionSound((byte) 24);
         }
         QuickChatCategory.a(GameLoopApplet.field_E.field_x, 5464);
     }

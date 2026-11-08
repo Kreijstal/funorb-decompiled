@@ -14,15 +14,15 @@ final class ContextMenuItem extends UiLayoutNode {
     static String field_Gb;
     static int field_Hb;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.setBounds(true, param2, param4, param3, param6);
-        this.a(param0, -90, param1);
+        this.layoutIconAndLabel(param0, -90, param1);
         if (param5 != 15114) {
           field_Hb = -18;
         }
     }
 
-    final static void b(int param0) {
+    final static void clearChatHistory(int param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -34,7 +34,7 @@ final class ContextMenuItem extends UiLayoutNode {
           }
           PitchDecorationSupport.field_j = 0;
           if (param0 < 84) {
-            ContextMenuItem.a(12);
+            ContextMenuItem.releaseStatics(12);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,7 +44,7 @@ final class ContextMenuItem extends UiLayoutNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -15410) {
           field_Eb = null;
           field_zb = null;
@@ -52,7 +52,7 @@ final class ContextMenuItem extends UiLayoutNode {
           field_Ib = null;
           return;
         }
-        ContextMenuItem.a(-117);
+        ContextMenuItem.releaseStatics(-117);
         field_Eb = null;
         field_zb = null;
         field_Gb = null;
@@ -126,13 +126,13 @@ final class ContextMenuItem extends UiLayoutNode {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void layoutIconAndLabel(int param0, int param1, int param2) {
         int var4 = -param0;
         if (this.field_Bb != null) {
           var4 = this.field_Bb.getPreferredWidth((byte) -74);
         }
         if (param1 > -61) {
-          ContextMenuItem.a(-96);
+          ContextMenuItem.releaseStatics(-96);
         }
         int var5 = -param0;
         if (null != this.field_yb) {
@@ -176,7 +176,7 @@ final class ContextMenuItem extends UiLayoutNode {
         this.field_yb.field_A = this.field_A;
     }
 
-    final int b(int param0, int param1, int param2) {
+    final int measureWidthWithPadding(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var4Lifetime1;
@@ -192,7 +192,7 @@ final class ContextMenuItem extends UiLayoutNode {
           }
           return param2 + param0 + (param2 + var4 + var5);
         }
-        this.a(-30, -44, -56, 15, -21, -62, 40);
+        this.setBoundsAndLayout(-30, -44, -56, 15, -21, -62, 40);
         var4Lifetime1 = -param0;
         if (null != this.field_Bb) {
           var4Lifetime1 = this.field_Bb.getPreferredWidth((byte) -92);
@@ -204,13 +204,13 @@ final class ContextMenuItem extends UiLayoutNode {
         return param2 + param0 + (param2 + var4Lifetime1 + var5Lifetime1);
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawSharedPopups(boolean param0, boolean param1) {
         if (null != UrlRequest.field_e) {
           BrowserUiSupport.drawPlainTooltip(15707, UrlRequest.field_e);
         }
         if (param0) {
           if (TextButton.field_v != null) {
-            TextButton.field_v.hideMenu(param1, false);
+            TextButton.field_v.drawMenu(param1, false);
           }
           MonotonicClock.drawActiveDialog(param1, -128);
           if (null != TextPromptState.field_b) {
@@ -221,7 +221,7 @@ final class ContextMenuItem extends UiLayoutNode {
         }
         field_Db = true;
         if (TextButton.field_v != null) {
-          TextButton.field_v.hideMenu(param1, false);
+          TextButton.field_v.drawMenu(param1, false);
         }
         MonotonicClock.drawActiveDialog(param1, -128);
         if (null != TextPromptState.field_b) {

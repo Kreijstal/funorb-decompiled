@@ -296,7 +296,7 @@ final class SplashScreen extends AppScreen {
                 }
               }
             }
-            var23 = DisplayModeSupport.a(var20, var12.field_Mb, (byte) 73);
+            var23 = DisplayModeSupport.formatLobbyPlayerStatus(var20, var12.field_Mb, (byte) 73);
             var24 = var23;
             var30 = var24;
             var25 = var30;
@@ -323,7 +323,7 @@ final class SplashScreen extends AppScreen {
                   MenuSelection.sendLobbyPlayerRemoval(64, param3, var12.field_Ab);
                 }
               } else {
-                IntTripleCommand.a(var12.field_Ab, param3, 122);
+                IntTripleCommand.sendGameJoinRequest(var12.field_Ab, param3, 122);
               }
             }
             var11 = var12;

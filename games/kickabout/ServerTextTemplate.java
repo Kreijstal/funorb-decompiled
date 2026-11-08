@@ -68,7 +68,7 @@ final class ServerTextTemplate {
           PacketBuffer.pushSpriteRaster(87, var10);
           var17 = (PlayerModelPreview) (var8.first(24009));
           while (var17 != null) {
-            var17.a(var9Lifetime1, -2);
+            var17.drawSpectatorFrame(var9Lifetime1, -2);
             var17 = (PlayerModelPreview) (var8.next(33));
           }
           TeamManagementScreen.e(121);

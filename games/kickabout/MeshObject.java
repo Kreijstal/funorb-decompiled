@@ -260,7 +260,7 @@ abstract class MeshObject {
             TickClock.field_j = false;
           }
           if (StreetSceneryLoader.field_k) {
-            ReceivedAuctionItem.f((byte) 119);
+            ReceivedAuctionItem.closeSharedPopups((byte) 119);
             PitchSurfaceLoader.a(-2);
             RasterStateSnapshot.a(0);
             StreetSceneryLoader.field_k = false;

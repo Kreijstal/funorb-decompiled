@@ -103,7 +103,7 @@ final class PlayerInputEvent extends DualLinkNode {
             break;
           }
           if (var3 == null) {
-            FormationView.b((byte) -116);
+            FormationView.closeClientSocket((byte) -116);
             return;
           }
           var4 = var14.readUnsignedByte((byte) -127);

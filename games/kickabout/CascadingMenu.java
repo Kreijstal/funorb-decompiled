@@ -371,7 +371,7 @@ final class CascadingMenu extends UiLayoutNode {
           this.field_Jb = (int[]) null;
         }
         while (this.field_Fb > var7) {
-          this.field_Eb[var7].a(param3, param1, this.field_Bb, this.field_Eb[var7].field_J, 0, 15114, this.field_Ab);
+          this.field_Eb[var7].setBoundsAndLayout(param3, param1, this.field_Bb, this.field_Eb[var7].field_J, 0, 15114, this.field_Ab);
           var7++;
         }
         if (-1 != this.field_Cb &&

@@ -17,7 +17,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           return null;
         }
         String var3 = (String) null;
-        ValidationHelpWidget.a(2.5262746810913086f, (String) null, (byte) 100);
+        ValidationHelpWidget.setLoadingStatus(2.5262746810913086f, (String) null, (byte) 100);
         return null;
     }
 
@@ -86,7 +86,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
         if (param0 != 19805) {
           String var3 = (String) null;
-          ValidationHelpWidget.a(1.7499217987060547f, (String) null, (byte) -94);
+          ValidationHelpWidget.setLoadingStatus(1.7499217987060547f, (String) null, (byte) -94);
         }
         return Character.toTitleCase(param1);
     }
@@ -197,7 +197,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static Sprite a(int param0, int param1, ResourceArchive param2, byte param3) {
+    final static Sprite loadSprite(int param0, int param1, ResourceArchive param2, byte param3) {
         RuntimeException var4 = null;
         Sprite stackIn_2_0 = null;
         Sprite stackIn_7_0 = null;
@@ -229,7 +229,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static void a(float param0, String param1, byte param2) {
+    final static void setLoadingStatus(float param0, String param1, byte param2) {
         if (param2 != 30) {
           return;
         }

@@ -8,13 +8,13 @@ final class FixedQuaternion {
     static int field_e;
     private int field_d;
 
-    private final void a(int param0) {
+    private final void normalize(int param0) {
         int var2 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_a, (long)this.field_a) + EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_b, (long)this.field_b) - (-EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_c, (long)this.field_c) - EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_d, (long)this.field_d));
         if (param0 <= 34) {
           return;
         }
         if (var2 < 65535) {
-          var2 = DisplayNameUiSupport.a(var2, -524289);
+          var2 = DisplayNameUiSupport.approximateSquareRootFixed8(var2, -524289);
           this.field_a = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_a);
           this.field_b = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_b);
           this.field_c = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_c);
@@ -24,14 +24,14 @@ final class FixedQuaternion {
         if (65537 >= var2) {
           return;
         }
-        var2 = DisplayNameUiSupport.a(var2, -524289);
+        var2 = DisplayNameUiSupport.approximateSquareRootFixed8(var2, -524289);
         this.field_a = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_a);
         this.field_b = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_b);
         this.field_c = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_c);
         this.field_d = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_d);
     }
 
-    final void a(FixedQuaternion param0, int param1) {
+    final void preMultiply(FixedQuaternion param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -40,13 +40,13 @@ final class FixedQuaternion {
           var4 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_a, (long)this.field_b) + (EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_b, (long)this.field_a) + (EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_c, (long)this.field_d) - EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_d, (long)this.field_c)));
           var5 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_a, (long)this.field_c) - (EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_b, (long)this.field_d) - EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_c, (long)this.field_a)) + EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_d, (long)this.field_b);
           if (param1 > -28) {
-            this.a(122);
+            this.normalize(122);
           }
           this.field_d = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_a, (long)this.field_d) + EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_b, (long)this.field_c) - (EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_c, (long)this.field_b) - EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_d, (long)this.field_a));
           this.field_a = var3_int;
           this.field_c = var5;
           this.field_b = var4;
-          this.a(62);
+          this.normalize(62);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "cc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -68,7 +68,7 @@ final class FixedQuaternion {
           return;
         }
         FixedQuaternion var8 = (FixedQuaternion) null;
-        this.a((FixedQuaternion) null, 27);
+        this.preMultiply((FixedQuaternion) null, 27);
         var6Lifetime1 = VertexNormal.sine(param4, 3);
         var7Lifetime1 = StringCursor.cosAngle(param4, -127);
         this.field_a = var7Lifetime1;

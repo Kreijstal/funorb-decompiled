@@ -397,7 +397,7 @@ class MessageDialog extends PopupDialog {
     }
 
     void handleResult(int param0, int param1) {
-        AchievementSubmission.a((byte) -125);
+        AchievementSubmission.playUiClickSound((byte) -125);
         if (param0 >= 60) {
           if (this.field_y == 40) {
             AuctionsScreen.startComputerMatch(10, true);
@@ -413,7 +413,7 @@ class MessageDialog extends PopupDialog {
     MessageDialog(int param0, PopupCard param1, String param2, String param3) {
         try {
           this.field_y = param0;
-          this.a(param3, param1, MusicPatchNode.b(2, this.field_y), -125, param2);
+          this.a(param3, param1, MusicPatchNode.getMessageDialogIcon(2, this.field_y), -125, param2);
           this.open(ModelMaterialDecoder.messageButtonCount(this.field_y, 1), SharedPanelFactory.getMessageButtonLabels(false, this.field_y), 1054928844);
           if (this.field_y == 8) {
             this.setOptionLabels(AlternateKeyedLoginCredentials.field_j, (byte) 90);

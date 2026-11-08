@@ -305,7 +305,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
             return stackIn_2_0;
           }
           var8 = new LoginText(param4);
-          stackIn_4_0 = WhirlpoolHasher.a(param6, var8, var7, param1, param5, param3, false);
+          stackIn_4_0 = WhirlpoolHasher.pollRegistrationRequest(param6, var8, var7, param1, param5, param3, false);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

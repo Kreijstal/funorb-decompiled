@@ -339,15 +339,15 @@ class BallAgent extends MatchAgent {
           this.positionX = var17[0];
           this.positionY = var17[1];
           if (this.velocityX != var17[3]) {
-            this.velocityX = CheckboxLabelWidget.a(var6, var17[3], (byte) 115);
+            this.velocityX = CheckboxLabelWidget.multiplyFixed16(var6, var17[3], (byte) 115);
             this.field_y = true;
           }
           if (this.velocityY != var17[4]) {
-            this.velocityY = CheckboxLabelWidget.a(var6, var17[4], (byte) 119);
+            this.velocityY = CheckboxLabelWidget.multiplyFixed16(var6, var17[4], (byte) 119);
             this.field_y = true;
           }
           if (var17[5] != this.verticalVelocity) {
-            this.verticalVelocity = FixedVelocitySupport.decelerateFixedVelocity(true, CheckboxLabelWidget.a(var8, var17[5], (byte) 105));
+            this.verticalVelocity = FixedVelocitySupport.decelerateFixedVelocity(true, CheckboxLabelWidget.multiplyFixed16(var8, var17[5], (byte) 105));
             if (this.verticalVelocity == 0) {
               this.height = 0;
             }

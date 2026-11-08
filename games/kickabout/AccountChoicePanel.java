@@ -36,7 +36,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
           if (this.field_H != param1) {
             return;
           }
-          BufferedSocket.a(true);
+          BufferedSocket.requestLoadingProgressDialog(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

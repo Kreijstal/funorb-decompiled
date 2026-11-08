@@ -84,7 +84,7 @@ final class SocialListLayoutSupport {
             1 != PitchCoordinateSupport.field_d) {
             TournamentChampionDialog.field_F.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
             TournamentChampionDialog.field_F.field_lb = false;
-            DateInputValidator.a(true, TournamentChampionDialog.field_F.field_yb);
+            DateInputValidator.resetChildScrollLayout(true, TournamentChampionDialog.field_F.field_yb);
             return;
           }
           TournamentChampionDialog.field_F.field_lb = true;

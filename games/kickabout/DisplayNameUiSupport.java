@@ -8,7 +8,7 @@ final class DisplayNameUiSupport {
     static String field_b;
     static TrinketSlot field_a;
 
-    final static int a(int param0, int param1) {
+    final static int approximateSquareRootFixed8(int param0, int param1) {
         int var2;
         int var3;
         int var2Lifetime1;

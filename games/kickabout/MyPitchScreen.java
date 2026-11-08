@@ -223,7 +223,7 @@ final class MyPitchScreen extends TeamManagementScreen {
             if (IterableDualLinkDeque.field_a == 2) {
               AnimationSkeleton.field_e = new BufferedSocket((java.net.Socket) (SharedWidgetFactory.field_o.field_b), PainterStyle.field_e);
               var2 = new PacketBuffer(13);
-              ImageProducerRasterBuffer.a(FootballerAiOverlaySupport.field_c, GzipDecoder.field_f, var2, -3210, AlternateKeyedLoginCredentials.field_k);
+              ImageProducerRasterBuffer.writeClientHandshake(FootballerAiOverlaySupport.field_c, GzipDecoder.field_f, var2, -3210, AlternateKeyedLoginCredentials.field_k);
               var2.writeByte(param0 + 52, 15);
               var2.writeInt(param0 ^ -44, SocialPlayerRow.field_Db);
               AnimationSkeleton.field_e.write(13, (byte) -127, 0, var2.field_f);

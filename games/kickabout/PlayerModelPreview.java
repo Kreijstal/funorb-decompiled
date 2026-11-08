@@ -20,7 +20,7 @@ final class PlayerModelPreview extends IntrusiveNode {
     static AccountNameCheckState field_f;
     static String field_k;
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, BitmapFont param10, BitmapFont param11, NineSlicePanelPainter param12, int param13, int param14, int param15, NineSlicePanelPainter param16, int param17, int param18, NineSlicePanelPainter param19, int param20) {
+    final static void configureSharedMenuTheme(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, BitmapFont param10, BitmapFont param11, NineSlicePanelPainter param12, int param13, int param14, int param15, NineSlicePanelPainter param16, int param17, int param18, NineSlicePanelPainter param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -42,7 +42,7 @@ final class PlayerModelPreview extends IntrusiveNode {
           }
           ClientException.setMenuAnchor(param8, 0, param4);
           VertexNormal.a(param19, param6, param16, param9, param15, -110);
-          ConsoleCommand.a(param3, param1, false, param12);
+          ConsoleCommand.configureMenuPanel(param3, param1, false, param12);
           ArchiveNetworkClient.setMenuTextColors(param20, param14, param17, 20);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -83,7 +83,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void drawSpectatorFrame(int param0, int param1) {
         param0 = (this.field_o + param0) % 6;
         if (param0 > 3) {
           param0 = 6 - param0;
@@ -101,7 +101,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         Cp1252EncodingSupport.field_d.drawHalfSize(-64 + this.field_g, this.field_i - 120);
     }
 
-    final static int a(int param0, CipherPacketBuffer param1, int param2, int param3, int param4, int param5) {
+    final static int readSignedTwoRangeValue(int param0, CipherPacketBuffer param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

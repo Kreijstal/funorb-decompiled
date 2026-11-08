@@ -59,7 +59,7 @@ final class AchievementSubmission extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0) {
+    final static void playUiClickSound(byte param0) {
         ShopPlayerSlot.playDefaultFadingSound(48, 36);
         if (param0 >= -116) {
           field_h = (String) null;

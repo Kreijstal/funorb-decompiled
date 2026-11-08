@@ -66,7 +66,7 @@ final class MeshPreviewSupport {
         return 100;
     }
 
-    final static void a(int param0) {
+    final static void updateFullscreenModals(int param0) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -187,7 +187,7 @@ final class MeshPreviewSupport {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void setSoundEffectVolume(int param0, byte param1) {
         Trinket.setSoundEffectVolume(param0, (byte) -32);
         if (param1 >= -114) {
           Sprite var3 = (Sprite) null;

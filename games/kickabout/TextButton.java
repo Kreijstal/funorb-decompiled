@@ -28,7 +28,7 @@ class TextButton extends UiWidget {
             field_x = (String) null;
           }
           var6 = new ChatMessage(param3, param1, param2, param0, param4);
-          LoginText.a(true, var6);
+          LoginText.appendChatMessage(true, var6);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wi.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

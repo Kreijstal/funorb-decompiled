@@ -266,7 +266,7 @@ final class AnimationClip {
         try {
           var7_int = param0 - param4;
           var8 = param2 - param3;
-          var9 = GameKeyHandler.a(var7_int * var7_int + var8 * var8, (byte) -98);
+          var9 = GameKeyHandler.approximateSquareRoot(var7_int * var7_int + var8 * var8, (byte) -98);
           var10 = var9 / param1;
           if (param6 >= -10) {
             return;

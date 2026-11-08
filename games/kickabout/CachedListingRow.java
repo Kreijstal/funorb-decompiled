@@ -205,8 +205,8 @@ final class CachedListingRow extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1) {
-        PromotionDialog.g(-88);
+    final static void updateAccountInterface(int param0, int param1) {
+        PromotionDialog.pollAccountUiAction(-88);
         int var2 = -23 / ((param0 + 81) / 34);
     }
 

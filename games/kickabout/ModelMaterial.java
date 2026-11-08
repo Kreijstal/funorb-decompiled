@@ -91,7 +91,7 @@ final class ModelMaterial {
             }
             var13 = (AchievementQuery) (MatchScreen.field_j.first(24009));
             if (var13 == null) {
-              FormationView.b((byte) -116);
+              FormationView.closeClientSocket((byte) -116);
               return;
             }
             var13.resultValues = var4;
@@ -105,17 +105,17 @@ final class ModelMaterial {
               var14.unlink((byte) -109);
               return;
             }
-            FormationView.b((byte) -116);
+            FormationView.closeClientSocket((byte) -116);
             return;
           }
           if (2 != var3) {
             UnreadMessagesScreen.reportClientError("A1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
-            FormationView.b((byte) -116);
+            FormationView.closeClientSocket((byte) -116);
             return;
           }
           var16_ref = (AchievementQuery) (MatchScreen.field_j.first(24009));
           if (var16_ref == null) {
-            FormationView.b((byte) -116);
+            FormationView.closeClientSocket((byte) -116);
             return;
           }
           var16_ref.resultValues = CachedTextLayout.createEightIntBuffer(-23091);

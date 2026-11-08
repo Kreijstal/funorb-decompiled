@@ -288,7 +288,7 @@ abstract class MatchPhaseView {
           }
           var6 = stackIn_30_0;
           var7 = ArrayWidgetContainer.field_x - this.buttonX(124, var3);
-          this.field_c[var3].a(var4 != 0, var5 != 0, var6 != 0, 16, var7);
+          this.field_c[var3].updateButtonInput(var4 != 0, var5 != 0, var6 != 0, 16, var7);
         }
         if (param0 >= -92) {
           field_b = (String) null;
@@ -525,7 +525,7 @@ abstract class MatchPhaseView {
         var2 = 90 / ((param0 - 78) / 38);
         for (var3 = 0; var3 < this.field_c.length; var3++) {
           if (this.isButtonEnabled(var3, 50)) {
-            this.field_c[var3].a(this.buttonY(342, var3), this.buttonX(124, var3), 13800);
+            this.field_c[var3].drawButton(this.buttonY(342, var3), this.buttonX(124, var3), 13800);
           }
         }
     }

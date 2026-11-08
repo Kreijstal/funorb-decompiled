@@ -42,7 +42,7 @@ final class MusicPatchNode extends IntrusiveNode {
         }
     }
 
-    final static Sprite b(int param0, int param1) {
+    final static Sprite getMessageDialogIcon(int param0, int param1) {
         if (param1 == 0) {
           return TickClock.field_k[1];
         }
@@ -129,12 +129,12 @@ final class MusicPatchNode extends IntrusiveNode {
         int var1 = -77 % ((param0 + 16) / 40);
     }
 
-    final static void a(int param0) {
-        ConsoleParseException.a(ChatMessage.field_e, AccountTermsPanel.field_H, 14594, ConsoleEvaluationException.field_e, SoundCache.field_b);
+    final static void initializeChatComposerPopup(int param0) {
+        ConsoleParseException.initializeChatComposerPopup(ChatMessage.field_e, AccountTermsPanel.field_H, 14594, ConsoleEvaluationException.field_e, SoundCache.field_b);
         int var1 = -41 / ((47 - param0) / 45);
     }
 
-    final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3, int param4) {
+    final static void initializeAccountInterface(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         DualLinkDequeIterator.field_e = WidgetStyleFactory.createAvailabilityRequest(-3505, "");
         if (param4 >= -118) {
           return;
@@ -150,7 +150,7 @@ final class MusicPatchNode extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendRequestAcknowledgements(int param0, int param1) {
         int var3 = 0;
         PendingRequestAcknowledgement var4 = null;
         RuntimeException decompiledCaughtException = null;

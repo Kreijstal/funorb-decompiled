@@ -13,7 +13,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
 
     abstract int getYear(int param0);
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6) {
+    final static void updateChatComposerPopup(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6) {
         String var7 = null;
         if (NodeHashTableIterator.field_b == 2) {
           var7 = ModelMaterialDecoder.field_e;
@@ -51,16 +51,16 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         field_F = null;
         field_E = null;
         if (param0 > -88) {
-          DateInputWidget.k(94);
+          DateInputWidget.getVolumeScale(94);
           field_D = null;
           return;
         }
         field_D = null;
     }
 
-    final static int k(int param0) {
+    final static int getVolumeScale(int param0) {
         if (param0 != 256) {
-          DateInputWidget.k(38);
+          DateInputWidget.getVolumeScale(38);
           return 256;
         }
         return 256;

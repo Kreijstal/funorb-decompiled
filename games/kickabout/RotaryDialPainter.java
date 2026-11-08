@@ -314,7 +314,7 @@ final class RotaryDialPainter implements WidgetPainter {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawContentTransitionAndTooltip(boolean param0, boolean param1) {
         TextHotspotRegion.drawContentTransition((byte) 71, param0);
         if (null != UrlRequest.field_e) {
           BrowserUiSupport.drawPlainTooltip(15707, UrlRequest.field_e);

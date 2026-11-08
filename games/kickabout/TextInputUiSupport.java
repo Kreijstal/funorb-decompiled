@@ -7,7 +7,7 @@ final class TextInputUiSupport {
     static String field_a;
 
     final static void updateTextInput(boolean param0, int param1, int param2, boolean param3) {
-        DateInputWidget.a(DiskCacheWorker.field_b, BytePlusOneCommand.field_I, LineupPositionSupport.field_c, param2, false, param1, param3);
+        DateInputWidget.updateChatComposerPopup(DiskCacheWorker.field_b, BytePlusOneCommand.field_I, LineupPositionSupport.field_c, param2, false, param1, param3);
         if (!param0) {
           int[] var5 = (int[]) null;
           TextInputUiSupport.copyWithPalette((IndexedSprite) null, (byte) -34, (int[]) null);

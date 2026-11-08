@@ -553,7 +553,7 @@ final class Trinket {
             var2 = MatchTextInputOverlay.field_g;
           }
           if (~NodeHashTableIterator.field_b == param0 &&
-            !LoggedPlayer.b(param0 - 3194)) {
+            !LoggedPlayer.canSendPrivateChatToSelectedPlayer(param0 - 3194)) {
             boolean decompiledSharedTail1 = !(IntKeyLookup.a(PlayerStatSortCriterion.field_o, -39));
             if (!decompiledSharedTail1) {
               var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ChatComposeSupport.field_c, new String[]{TrinketTile.field_Kb});

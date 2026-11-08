@@ -96,7 +96,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
             var6 = ValidatedTextWidget.field_W[var5_int];
             if (var6 != null) {
               if (var6.field_sb != 0) {
-                DisplayModeSupport.a(var6, true, var5_int);
+                DisplayModeSupport.openChatFilterMenu(var6, true, var5_int);
               }
               var7 = ClientProtocolStage.getChatFilterValue(0, var5_int);
               SocketConnector.field_b[var5_int].field_N = ClassDescriptorSupport.field_d[var7];
@@ -108,7 +108,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           }
           var9 = TextPromptDialog.rebuildChatHistory(param1, LineupPositionSupport.field_c, (byte) 26, DiskCacheWorker.field_b);
           if (var9 != null) {
-            LineupView.a(var9, (byte) -60);
+            LineupView.openChatMessageContextMenu(var9, (byte) -60);
           }
           var5 = Trinket.updateChatComposeDisplay(-3);
           if (var5 != null) {

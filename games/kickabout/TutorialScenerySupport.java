@@ -502,7 +502,7 @@ final class TutorialScenerySupport {
           } else {
             stackIn_8_4 = 0;
           }
-          stackIn_9_0 = PlayerModelPreview.a(stackIn_5_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, param3);
+          stackIn_9_0 = PlayerModelPreview.readSignedTwoRangeValue(stackIn_5_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, param3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

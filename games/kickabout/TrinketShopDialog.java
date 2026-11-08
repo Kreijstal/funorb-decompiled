@@ -152,7 +152,7 @@ final class TrinketShopDialog extends MessageDialog {
         var4 = (TrinketTile) (this.field_L.field_Db.field_jb.first(param0 + 24006));
         while (var4 != null) {
           if (1 == var4.field_sb) {
-            LoginKind.a((byte) -98);
+            LoginKind.playSelectionSound((byte) -98);
             if (this.field_H != var4) {
               this.field_H = var4;
             } else {
@@ -204,7 +204,7 @@ final class TrinketShopDialog extends MessageDialog {
           MatchingTextValidator.a(var3, this.field_I, (byte) 123, this.field_F);
           ShopPlayerSlot.playDefaultFadingSound(50, -110);
         } else {
-          AchievementSubmission.a((byte) -120);
+          AchievementSubmission.playUiClickSound((byte) -120);
         }
     }
 

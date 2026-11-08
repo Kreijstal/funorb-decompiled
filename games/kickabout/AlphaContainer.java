@@ -44,7 +44,7 @@ final class AlphaContainer extends SingleChildContainer {
           var4.draw(0, 0);
           var6 = (PlayerModelPreview) (param2.first(24009));
           while (var6 != null) {
-            var6.a(param3, -2);
+            var6.drawSpectatorFrame(param3, -2);
             var6 = (PlayerModelPreview) (param2.next(33));
           }
           if (param1 > -41) {

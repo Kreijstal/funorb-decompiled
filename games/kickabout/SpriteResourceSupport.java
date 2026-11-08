@@ -25,7 +25,7 @@ final class SpriteResourceSupport {
           if (param0 <= 96) {
             field_b = (String) null;
           }
-          stackIn_3_0 = ValidationHelpWidget.a(var4_int, var5, param2, (byte) -9);
+          stackIn_3_0 = ValidationHelpWidget.loadSprite(var4_int, var5, param2, (byte) -9);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

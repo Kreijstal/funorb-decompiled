@@ -23,7 +23,7 @@ final class ArchiveIndex {
     private int[][] field_j;
     IntKeyLookup[] field_s;
 
-    final static boolean b(int param0) {
+    final static boolean isGamePointerOutsideViewport(int param0) {
         boolean stackIn_9_0 = false;
         if (param0 != 640) {
           return false;
@@ -41,7 +41,7 @@ final class ArchiveIndex {
         field_m = null;
     }
 
-    final static void c(int param0) {
+    final static void advanceSelectionOverlayFrame(int param0) {
         int fieldTemp$0 = PlayingView.field_J + 1;
         PlayingView.field_J = PlayingView.field_J + 1;
         if (32 <= fieldTemp$0) {
