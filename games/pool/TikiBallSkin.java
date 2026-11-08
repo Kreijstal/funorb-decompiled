@@ -46,7 +46,7 @@ final class TikiBallSkin extends BallSkin {
 
     private final int themeColorForGroup(byte param0, int param1) {
         if (param0 >= -110) {
-          TikiBallSkin.j(-76);
+          TikiBallSkin.expireLobbyRowTransitions(-76);
         }
         if (param1 != 0) {
           if (param1 == 1) {
@@ -103,7 +103,7 @@ final class TikiBallSkin extends BallSkin {
         return this.themeColorForGroup((byte) -113, 0);
     }
 
-    final static byte[] a(int param0, byte param1, byte[] param2, int param3) {
+    final static byte[] whirlpoolDigest(int length, byte obfuscationGuard, byte[] source, int offset) {
         int var5_int = 0;
         byte[] var4 = null;
         int var7 = 0;
@@ -118,20 +118,20 @@ final class TikiBallSkin extends BallSkin {
         byte[] var6 = null;
         var7 = Pool.field_O;
         try {
-          if (0 < param3) {
-            var8 = new byte[param0];
+          if (0 < offset) {
+            var8 = new byte[length];
             var4 = var8;
-            for (var5_int = 0; var5_int < param0; var5_int++) {
-              var8[var5_int] = param2[var5_int + param3];
+            for (var5_int = 0; var5_int < length; var5_int++) {
+              var8[var5_int] = source[var5_int + offset];
             }
           } else {
-            var4 = param2;
+            var4 = source;
           }
           var5 = new WhirlpoolHasher();
           var5.a(false);
-          var5.updateBits(var4, 0, (long)(8 * param0));
+          var5.updateBits(var4, 0, (long)(8 * length));
           var6 = new byte[64];
-          if (param1 >= -42) {
+          if (obfuscationGuard >= -42) {
             TikiBallSkin.releaseStatics(-82);
           }
           var5.finish(var6, (byte) 105, 0);
@@ -141,13 +141,13 @@ final class TikiBallSkin extends BallSkin {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_12_0 = var4_ref;
-          stackIn_12_1 = new StringBuilder().append("jr.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_12_1 = new StringBuilder().append("jr.E(").append(length).append(',').append(obfuscationGuard).append(',');
+          if (source == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(offset).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class TikiBallSkin extends BallSkin {
         }
     }
 
-    final static void j(int param0) {
+    final static void expireLobbyRowTransitions(int obfuscationGuard) {
         int stackIn_24_0 = 0;
         RuntimeException decompiledCaughtException = null;
         LobbyPlayer var1 = null;
@@ -211,7 +211,7 @@ final class TikiBallSkin extends BallSkin {
             }
             var1_ref = (LobbyGame) (NetworkGameClient.field_A.previous((byte) -5));
           }
-          if (param0 != -8) {
+          if (obfuscationGuard != -8) {
             return;
           }
           var1Lifetime1 = (LobbyPlayer) (ValidationMessageWidget.field_W.last((byte) 65));
@@ -234,7 +234,7 @@ final class TikiBallSkin extends BallSkin {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref2), "jr.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref2), "jr.F(" + obfuscationGuard + ')');
         }
     }
 

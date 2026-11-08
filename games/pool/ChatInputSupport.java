@@ -81,7 +81,7 @@ final class ChatInputSupport {
           var4 = 0;
         }
         if (CookieDateSupport.field_b == 2 &&
-          !SupportPageLauncher.a(false)) {
+          !SupportPageLauncher.isQuickChatRecipientAvailable(false)) {
           var4 = 0;
         }
         if (IterableDualLinkDeque.field_a == 84) {
@@ -97,10 +97,10 @@ final class ChatInputSupport {
               if (UiWidget.containsPassword((byte) -71, var5_ref_String)) {
                 var13 = (String) null;
                 var12 = (String) null;
-                MenuScreenBase.a(0, QuickChatDynamicCommand.unableToSendMessagePasswordA, (String) null, 2, (String) null, true);
+                MenuScreenBase.appendChatMessage(0, QuickChatDynamicCommand.unableToSendMessagePasswordA, (String) null, 2, (String) null, true);
                 var15 = (String) null;
                 var14 = (String) null;
-                MenuScreenBase.a(0, DebugTuningSlider.unableToSendMessagePasswordB, (String) null, 2, (String) null, true);
+                MenuScreenBase.appendChatMessage(0, DebugTuningSlider.unableToSendMessagePasswordB, (String) null, 2, (String) null, true);
               } else {
                 var6 = CookieDateSupport.field_b;
                 if (var6 == 0 &&

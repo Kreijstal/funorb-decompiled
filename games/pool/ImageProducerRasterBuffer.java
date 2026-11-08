@@ -10,26 +10,26 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     private java.awt.image.ImageConsumer field_p;
     private java.awt.image.ColorModel field_m;
 
-    final static void a(MeshBuilder param0, byte param1) {
+    final static void reverseFaceWinding(MeshBuilder mesh, byte obfuscationGuard) {
         int[] var3 = null;
         try {
-          var3 = param0.faceVertexB;
+          var3 = mesh.faceVertexB;
           int[] var2 = var3;
-          param0.faceVertexB = param0.faceVertexC;
-          if (param1 != 38) {
+          mesh.faceVertexB = mesh.faceVertexC;
+          if (obfuscationGuard != 38) {
             ratingPlayed = (String) null;
           }
-          param0.faceVertexC = var3;
+          mesh.faceVertexC = var3;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jf.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jf.H(" + (mesh != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    private final synchronized void d(int param0) {
+    private final synchronized void publishPixelsToConsumer(int obfuscationGuard) {
         if (null != this.field_p) {
           this.field_p.setPixels(0, 0, this.width, this.height, this.field_m, this.pixels, 0, this.width);
           this.field_p.imageComplete(2);
-          if (param0 <= 59) {
+          if (obfuscationGuard <= 59) {
             ratingPlayed = (String) null;
           }
           return;
@@ -83,7 +83,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     }
 
     final void drawTo(java.awt.Graphics param0, int param1, int param2, int param3) {
-        this.d(60);
+        this.publishPixelsToConsumer(60);
         if (param3 != -23820) {
           return;
         }
@@ -105,11 +105,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           this.height = param0;
           this.field_m = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_c = param3.createImage((java.awt.image.ImageProducer) (this));
-          this.d(84);
+          this.publishPixelsToConsumer(84);
           param3.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
-          this.d(105);
+          this.publishPixelsToConsumer(105);
           param3.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
-          this.d(65);
+          this.publishPixelsToConsumer(65);
           param3.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
           this.bindAsRenderTarget(15100);
           if (param2 != -6980) {
@@ -161,7 +161,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     ImageProducerRasterBuffer() {
     }
 
-    final static HighScoreRequest a(int param0, int param1, int param2, int param3, int param4) {
+    final static HighScoreRequest getOrCreateHighScoreRequest(int param0, int param1, int param2, int param3, int param4) {
         int var7 = Pool.field_O;
         HighScoreRequest var5 = (HighScoreRequest) (StateIconLabel.field_Lb.last((byte) 118));
         while (var5 != null) {

@@ -194,7 +194,7 @@ final class ProjectedVertex {
             this.field_k == 0) {
             return;
           }
-          var3_int = LoginTextValue.a(false, this.field_k * this.field_k + this.field_i * this.field_i);
+          var3_int = LoginTextValue.approximateIntegerSquareRoot(false, this.field_k * this.field_k + this.field_i * this.field_i);
           if (var3_int != 0) {
             this.field_i = (this.field_i << 8) / var3_int;
             this.field_k = (this.field_k << 8) / var3_int;
@@ -296,7 +296,7 @@ final class ProjectedVertex {
           this.field_f = this.field_q[1] - this.field_q[0];
           if (0 != this.field_f ||
             this.field_m != 0) {
-            var3_int = LoginTextValue.a(false, this.field_m * this.field_m + this.field_f * this.field_f);
+            var3_int = LoginTextValue.approximateIntegerSquareRoot(false, this.field_m * this.field_m + this.field_f * this.field_f);
             if (var3_int != 0) {
               this.field_m = (this.field_m << 8) / var3_int;
               this.field_f = (this.field_f << 8) / var3_int;

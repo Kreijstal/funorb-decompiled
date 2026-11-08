@@ -12,7 +12,7 @@ final class BrowserCookieSupport {
     static int[][] field_a;
     static PcmSample field_f;
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void advanceScrollingChatLines(boolean paused, int centerY, int left) {
         int fieldTemp$0 = 0;
         ChatMessageLine stackIn_21_0 = null;
         int stackIn_21_1 = 0;
@@ -29,16 +29,16 @@ final class BrowserCookieSupport {
           if (MatchingTextValidator.field_r.isEmpty(0)) {
             return;
           }
-          var3_int = param0 ? 1 : 0;
+          var3_int = paused ? 1 : 0;
           var4 = 0;
           var5 = 0;
           var6 = ((ChatMessageLine) (MatchingTextValidator.field_r.last((byte) 63))).renderedSprite;
           if (var6 != null) {
-            param1 = param1 - (var6.field_A >> 1);
-            if (DebouncedValidationProvider.field_f >= param1 &&
-              ReflectionReplySupport.field_i >= param2 &&
-              230 + param2 >= ReflectionReplySupport.field_i &&
-              DebouncedValidationProvider.field_f <= param1 + var6.field_A) {
+            centerY = centerY - (var6.field_A >> 1);
+            if (DebouncedValidationProvider.field_f >= centerY &&
+              ReflectionReplySupport.field_i >= left &&
+              230 + left >= ReflectionReplySupport.field_i &&
+              DebouncedValidationProvider.field_f <= centerY + var6.field_A) {
               if (DateInputWidget.field_W != -1) {
                 var5 = -ReflectionReplySupport.field_i + DateInputWidget.field_W;
               }
@@ -80,7 +80,7 @@ final class BrowserCookieSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "ie.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "ie.F(" + paused + ',' + centerY + ',' + left + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class BrowserCookieSupport {
         }
     }
 
-    final static void a(int param0, int[] param1, MeshBuilder param2) {
+    final static void computeMeshSubdivisionCounts(int obfuscationGuard, int[] counts, MeshBuilder mesh) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -150,35 +150,35 @@ final class BrowserCookieSupport {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param0 != -2656) {
-            BrowserCookieSupport.a(true, -83, -119);
+          if (obfuscationGuard != -2656) {
+            BrowserCookieSupport.advanceScrollingChatLines(true, -83, -119);
           }
-          MeshBoundsSupport.computeMeshBounds(param2, -23109);
-          param1[0] = (int)Math.ceil((double)(param2.field_w - param2.field_D) / ((double)ModelMesh.field_Y.length / 2.5));
-          param1[1] = (int)Math.ceil((double)(param2.field_S - param2.field_y) / ((double)ModelMesh.field_Y.length / 2.5));
-          param1[2] = (int)Math.ceil((double)(param2.field_x - param2.field_V) / ((double)ModelMesh.field_Y.length / 2.5));
-          if (0 == param1[1]) {
-            param1[1] = 1;
+          MeshBoundsSupport.computeMeshBounds(mesh, -23109);
+          counts[0] = (int)Math.ceil((double)(mesh.field_w - mesh.field_D) / ((double)ModelMesh.field_Y.length / 2.5));
+          counts[1] = (int)Math.ceil((double)(mesh.field_S - mesh.field_y) / ((double)ModelMesh.field_Y.length / 2.5));
+          counts[2] = (int)Math.ceil((double)(mesh.field_x - mesh.field_V) / ((double)ModelMesh.field_Y.length / 2.5));
+          if (0 == counts[1]) {
+            counts[1] = 1;
           }
-          if (param1[2] == 0) {
-            param1[2] = 1;
+          if (counts[2] == 0) {
+            counts[2] = 1;
           }
-          if (param1[0] == 0) {
-            param1[0] = 1;
+          if (counts[0] == 0) {
+            counts[0] = 1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_14_0 = var3;
-          stackIn_14_1 = new StringBuilder().append("ie.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_14_1 = new StringBuilder().append("ie.E(").append(obfuscationGuard).append(',');
+          if (counts == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
           stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param2 == null) {
+          if (mesh == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
@@ -257,7 +257,7 @@ final class BrowserCookieSupport {
           ArchiveBootstrapSupport.a(param3, PotEvent.field_l, true, AccountStateQuery.field_u, 0, false);
         }
         if (param2 > -126) {
-          BrowserCookieSupport.a(true, -43, -89);
+          BrowserCookieSupport.advanceScrollingChatLines(true, -43, -89);
         }
         if (SpriteResourceSupport.field_a.pressedButton != 0) {
           LoginPayloadKind.field_d = false;

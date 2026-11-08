@@ -15,57 +15,57 @@ final class ReflectionCheck extends IntrusiveNode {
     static int[] field_s;
     static volatile int field_v;
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int hitTestMembershipButtons(byte obfuscationGuard, int x, int y) {
         if (UiComponentNode.field_C == null) {
           return -1;
         }
-        if (param0 > 0) {
+        if (obfuscationGuard > 0) {
           return -12;
         }
-        if (BufferedFile.field_n > param1) {
-          if (param1 < RasterSnapshot.field_o) {
+        if (BufferedFile.field_n > x) {
+          if (x < RasterSnapshot.field_o) {
             return -1;
           }
-          if (UiComponentNode.field_C.field_z + RasterSnapshot.field_o <= param1) {
+          if (UiComponentNode.field_C.field_z + RasterSnapshot.field_o <= x) {
             return -1;
           }
-          if (param2 < ModelOriginSupport.field_o) {
+          if (y < ModelOriginSupport.field_o) {
             return -1;
           }
-          if (ModelOriginSupport.field_o + UiComponentNode.field_C.field_A <= param2) {
-            return -1;
-          }
-          return 1;
-        }
-        if (BufferedFile.field_n + UiComponentNode.field_C.field_z <= param1) {
-          if (param1 < RasterSnapshot.field_o) {
-            return -1;
-          }
-          if (UiComponentNode.field_C.field_z + RasterSnapshot.field_o <= param1) {
-            return -1;
-          }
-          if (param2 < ModelOriginSupport.field_o) {
-            return -1;
-          }
-          if (ModelOriginSupport.field_o + UiComponentNode.field_C.field_A <= param2) {
+          if (ModelOriginSupport.field_o + UiComponentNode.field_C.field_A <= y) {
             return -1;
           }
           return 1;
         }
-        if (HighScoreSubmission.field_s <= param2 &&
-          param2 < HighScoreSubmission.field_s + UiComponentNode.field_C.field_A) {
+        if (BufferedFile.field_n + UiComponentNode.field_C.field_z <= x) {
+          if (x < RasterSnapshot.field_o) {
+            return -1;
+          }
+          if (UiComponentNode.field_C.field_z + RasterSnapshot.field_o <= x) {
+            return -1;
+          }
+          if (y < ModelOriginSupport.field_o) {
+            return -1;
+          }
+          if (ModelOriginSupport.field_o + UiComponentNode.field_C.field_A <= y) {
+            return -1;
+          }
+          return 1;
+        }
+        if (HighScoreSubmission.field_s <= y &&
+          y < HighScoreSubmission.field_s + UiComponentNode.field_C.field_A) {
           return 0;
         }
-        if (param1 < RasterSnapshot.field_o) {
+        if (x < RasterSnapshot.field_o) {
           return -1;
         }
-        if (UiComponentNode.field_C.field_z + RasterSnapshot.field_o <= param1) {
+        if (UiComponentNode.field_C.field_z + RasterSnapshot.field_o <= x) {
           return -1;
         }
-        if (param2 < ModelOriginSupport.field_o) {
+        if (y < ModelOriginSupport.field_o) {
           return -1;
         }
-        if (ModelOriginSupport.field_o + UiComponentNode.field_C.field_A > param2) {
+        if (ModelOriginSupport.field_o + UiComponentNode.field_C.field_A > y) {
           return 1;
         }
         return -1;

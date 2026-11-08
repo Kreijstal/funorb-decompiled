@@ -18,7 +18,7 @@ final class CheckboxPainter implements WidgetPainter {
     private int field_m;
     static int field_n;
 
-    final static SocialListEntry a(String param0, int param1) {
+    final static SocialListEntry findIgnoreEntryByName(String name, int obfuscationGuard) {
         String var2 = null;
         RuntimeException var2_ref = null;
         SocialListEntry var3 = null;
@@ -37,15 +37,15 @@ final class CheckboxPainter implements WidgetPainter {
             stackIn_2_0 = null;
             return (SocialListEntry) (stackIn_2_0);
           }
-          var5 = (CharSequence) ((Object) param0);
-          var2 = TutorialController.normalizeDisplayName(param1 ^ 123, var5);
+          var5 = (CharSequence) ((Object) name);
+          var2 = TutorialController.normalizeDisplayName(obfuscationGuard ^ 123, var5);
           if (var2 == null) {
-            var2 = param0;
+            var2 = name;
           }
           var3 = (SocialListEntry) (LoginTextSupport.field_c.findFirst((long)var2.hashCode(), false));
           while (true) {
             if (var3 == null) {
-              if (param1 == 1) {
+              if (obfuscationGuard == 1) {
                 return null;
               }
               CheckboxPainter.clientNoticeHeight(-34);
@@ -53,12 +53,12 @@ final class CheckboxPainter implements WidgetPainter {
               return (SocialListEntry) (stackIn_16_0);
             }
             var6 = (CharSequence) ((Object) var3.name);
-            var4 = TutorialController.normalizeDisplayName(param1 ^ 104, var6);
+            var4 = TutorialController.normalizeDisplayName(obfuscationGuard ^ 104, var6);
             if (var4 == null) {
               var4 = var3.name;
             }
             if (!var4.equals(var2)) {
-              var3 = (SocialListEntry) (LoginTextSupport.field_c.findNext(param1 ^ -98));
+              var3 = (SocialListEntry) (LoginTextSupport.field_c.findNext(obfuscationGuard ^ -98));
               continue;
             }
             break;
@@ -70,12 +70,12 @@ final class CheckboxPainter implements WidgetPainter {
           var2_ref = decompiledCaughtException;
           stackIn_19_0 = var2_ref;
           stackIn_19_1 = new StringBuilder().append("hl.E(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

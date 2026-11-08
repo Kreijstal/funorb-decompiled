@@ -85,10 +85,10 @@ final class PlayerContextMenu {
               HighscoresScreen.sendJoinGameRequest(this.field_b, (byte) -125, param1);
             }
           } else {
-            CueStick.a(this.field_l, param1, param0 - 98);
+            CueStick.sendLobbyRemovalRequest(this.field_l, param1, param0 - 98);
           }
         } else {
-          DropTargetWidget.a(param1, (byte) 97, this.field_l);
+          DropTargetWidget.sendLobbyInviteRequest(param1, (byte) 97, this.field_l);
         }
         return true;
     }
@@ -110,7 +110,7 @@ final class PlayerContextMenu {
             var7 = this.getTargetName(3);
             var4 = var7;
             var5 = UsernameSuggestionSupport.findSocialEntryByName(-103, this.field_m);
-            var6 = MenuSelection.a(this.field_m, 24552) ? 1 : 0;
+            var6 = MenuSelection.isIgnoredName(this.field_m, 24552) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, QuickChatHelpDialog.addXToFriends), 17130, 4);
@@ -191,7 +191,7 @@ final class PlayerContextMenu {
                       if (param2 != 19) {
                         return false;
                       }
-                      QuickChatDynamicCommand.a(this.field_a, this.field_h, this.field_l, this.field_m, (byte) 76);
+                      QuickChatDynamicCommand.openQuickChatOptions(this.field_a, this.field_h, this.field_l, this.field_m, (byte) 76);
                     }
                   }
                 } else {
@@ -281,7 +281,7 @@ final class PlayerContextMenu {
         }
         if (var4_ref != null) {
           var5 = (String) null;
-          MenuScreenBase.a(0, var4_ref, (String) null, 2, this.field_m, true);
+          MenuScreenBase.appendChatMessage(0, var4_ref, (String) null, 2, this.field_m, true);
         }
         if (param2 == 6) {
           return true;

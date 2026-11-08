@@ -426,7 +426,7 @@ public final class Pool extends NetworkGameClient {
             MatchingTextValidator.field_w == -2) {
             ChatMessage.field_l.drawAt(0, 0);
           }
-          ViewportController.a(InputIdleSupport.isCaretBlinkOn((byte) 79), (byte) 50);
+          ViewportController.drawInterfaceOverlays(InputIdleSupport.isCaretBlinkOn((byte) 79), (byte) 50);
         }
         if (DebugTuningSupport.field_g) {
           if (MatchingTextValidator.field_w < 0) {
@@ -994,7 +994,7 @@ public final class Pool extends NetworkGameClient {
           if (Bzip2DecoderState.field_c == 14) {
             PoolGameModel.applyPendingScreenTransition(-124);
             SharedWidgetLayoutSupport.a(PackedColorSupport.getAccountDialogContent((byte) 1), 1024, AccountCreationForm.g((byte) 103), 150, ByteArrayNode.field_p, ByteArrayNode.nextPowerOfTwo(-17931, 8), ByteArrayNode.nextPowerOfTwo(-17931, 2000), SpaceTableScene.getChatScrollContent(true), 4, 13162);
-            NineSliceFrameSupport.a(LobbyPlayer.f(0), VerticalScrollbar.getIgnoreListContent((byte) 13), -36);
+            NineSliceFrameSupport.a(LobbyPlayer.getNamePopupContent(0), VerticalScrollbar.getIgnoreListContent((byte) 13), -36);
             AlternateLongAndTextLoginPayload.field_p = false;
             LookupProtocolSupport.field_b = true;
             Base37Support.field_d = true;
@@ -1303,7 +1303,7 @@ public final class Pool extends NetworkGameClient {
         if (StartupInterfaceSupport.a((byte) -84)) {
           this.serviceStartupAndAccountFlow((byte) -75);
           if (StartupInterfaceSupport.a((byte) -111)) {
-            if (!DebouncedValidationProvider.a(true)) {
+            if (!DebouncedValidationProvider.isAccountFlowReady(true)) {
               return;
             }
             discarded$0 = this.loadResources(95, false);
@@ -1593,8 +1593,8 @@ public final class Pool extends NetworkGameClient {
             KeyHandler.setLoadingProgress(var69, (float)GrowableIntListFactory.field_i[23], false);
             this.paintFrame((byte) 120);
             FreePlayRules.field_e = PaletteFontLoader.loadPaletteFont(Ball.field_z, 32362, "", "font", ViewportController.field_q);
-            CollisionContact.field_h = CanvasInputSupport.a(Under13NoticePanel.field_R, "", 0, QuickChatMenu.field_Zb, "arialish12");
-            ModernTableScene.field_Z = CanvasInputSupport.a(Under13NoticePanel.field_R, "", 0, QuickChatMenu.field_Zb, "arialbold14");
+            CollisionContact.field_h = CanvasInputSupport.loadBinaryFontByName(Under13NoticePanel.field_R, "", 0, QuickChatMenu.field_Zb, "arialish12");
+            ModernTableScene.field_Z = CanvasInputSupport.loadBinaryFontByName(Under13NoticePanel.field_R, "", 0, QuickChatMenu.field_Zb, "arialbold14");
             MouseWheelInput.field_c = new CueStick();
             MouseWheelInput.field_c.buildSegments(2);
             SoundCache.loadGameSprites(0, ViewportController.field_q);
@@ -1602,8 +1602,8 @@ public final class Pool extends NetworkGameClient {
             Camera.field_j = WidgetStyleLayer.loadSprite("basic", (byte) 83, "locked", Under13NoticePanel.field_R);
             UsernameAvailabilityValidator.field_r = WidgetStyleLayer.loadSprite("basic", (byte) 122, "unachieved", Under13NoticePanel.field_R);
             TextInputPainter.field_u = WidgetStyleLayer.loadSprite("basic", (byte) 60, "orbcoin", Under13NoticePanel.field_R);
-            TextInputValidator.a(UsernameAvailabilityValidator.field_r, (byte) -12);
-            TextInputValidator.a(TextInputPainter.field_u, (byte) -12);
+            TextInputValidator.padSpriteToFourPixelAlignment(UsernameAvailabilityValidator.field_r, (byte) -12);
+            TextInputValidator.padSpriteToFourPixelAlignment(TextInputPainter.field_u, (byte) -12);
             TransformRotationSupport.field_k = new Sprite(32, 32);
             TransformRotationSupport.field_k.bindAsRenderTarget();
             TextInputPainter.field_u.drawScaledAveraged(0, 0, 32, 32);

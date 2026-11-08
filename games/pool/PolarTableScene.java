@@ -844,7 +844,7 @@ final class PolarTableScene extends ModelTableScene {
           this.field_O[incrementValue$121] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_top_b");
           DraggableWidget.field_V = var3_int;
           this.field_A = new CueStick();
-          this.field_A.a(MeshBuilder.loadFromArchive(param0, "", "cues/ice_cue"), (byte) -105);
+          this.field_A.buildCueSegments(MeshBuilder.loadFromArchive(param0, "", "cues/ice_cue"), (byte) -105);
           for (var4 = 0; this.field_O.length > var4; var4++) {
             VerticalScrollbar.swapMeshYAndZ(0, this.field_O[var4]);
           }

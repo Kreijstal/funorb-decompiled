@@ -36,7 +36,7 @@ final class MembershipBenefitsLoader {
             stackIn_7_0 = TextInputValidator.unableToDeleteIgnore;
             return stackIn_7_0;
           }
-          var8 = CheckboxPainter.a(param1, 1);
+          var8 = CheckboxPainter.findIgnoreEntryByName(param1, 1);
           if (var8 == null) {
             stackIn_11_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, ThemeSelectScreen.ignorenotfound);
             return stackIn_11_0;
@@ -154,8 +154,8 @@ final class MembershipBenefitsLoader {
             Pocket.field_h = WidgetStyleLayer.loadSprite("benefits", (byte) 86, "menu_text", IterableNodeHashTable.field_k);
             UiComponentNode.field_C = WidgetStyleLayer.loadSprite("benefits", (byte) 78, "button_frame", IterableNodeHashTable.field_k);
             ContextMenu.field_Yb = WidgetStyleLayer.loadSprite("benefits", (byte) 75, "arrow", IterableNodeHashTable.field_k);
-            DebugTuningSupport.field_d = (BitmapFont) ((Object) CanvasInputSupport.a(IterableNodeHashTable.field_k, "large_font", 0, MonotonicClock.field_c, "benefits"));
-            SceneNode.field_h = (BitmapFont) ((Object) CanvasInputSupport.a(IterableNodeHashTable.field_k, "small_font", 0, MonotonicClock.field_c, "benefits"));
+            DebugTuningSupport.field_d = (BitmapFont) ((Object) CanvasInputSupport.loadBinaryFontByName(IterableNodeHashTable.field_k, "large_font", 0, MonotonicClock.field_c, "benefits"));
+            SceneNode.field_h = (BitmapFont) ((Object) CanvasInputSupport.loadBinaryFontByName(IterableNodeHashTable.field_k, "small_font", 0, MonotonicClock.field_c, "benefits"));
             var27 = SoftwareRasterizer.pixels;
             var2 = SoftwareRasterizer.width;
             var3 = SoftwareRasterizer.height;
@@ -163,7 +163,7 @@ final class MembershipBenefitsLoader {
             var11 = new Sprite(4 + ContextMenu.field_Yb.field_z, 4 + ContextMenu.field_Yb.field_A);
             var11.bindAsRenderTarget();
             ContextMenu.field_Yb.drawGrayModulated(2, 2, DialWidget.field_X);
-            MembershipBenefitsScreen.a(1, 2, var11.field_A, var11, 4, var11.field_z, 0, 0);
+            MembershipBenefitsScreen.expandSpriteOutline(1, 2, var11.field_A, var11, 4, var11.field_z, 0, 0);
             ContextMenu.field_Yb = var11;
             GrowableIntListFactory.field_f = ContextMenu.field_Yb.copyFlippedHorizontal();
             var12 = new Sprite(195, 221);
@@ -175,13 +175,13 @@ final class MembershipBenefitsLoader {
             SceneNode.field_h.drawCentered(AccountWelcomePanel.substituteTemplateArguments(new String[]{LinkButtonPainter.field_e}, -1, PotEvent.mbAchievementCount2), var6, 130, 16777215, -1);
             DebugTuningSupport.field_d.drawCentered(UsernameSuggestionsPanel.field_X, var6, 180, 16777215, -1);
             SceneNode.field_h.drawCentered(InputIdleSupport.mbExclusive2, var6, 200, 16777215, -1);
-            MembershipBenefitsScreen.a(1, 3, var12.field_A, var12, 4, var12.field_z, 0, 0);
+            MembershipBenefitsScreen.expandSpriteOutline(1, 3, var12.field_A, var12, 4, var12.field_z, 0, 0);
             BallDebugOverlay.field_d.bindAsRenderTarget();
             var12.draw(-BallDebugOverlay.field_d.field_G + 18, -BallDebugOverlay.field_d.field_B + 241);
             for (var7 = 0; var7 < SharedWidgetLayoutSupport.field_a.length; var7++) {
               TikiBallSkin.field_m[var7].bindAsRenderTarget();
               SceneNode.field_h.drawParagraph(SharedWidgetLayoutSupport.field_a[var7], 3, 3, -6 + TikiBallSkin.field_m[var7].field_z, -6 + TikiBallSkin.field_m[var7].field_A, DialWidget.field_X, -1, 1, 1, SceneNode.field_h.maxDescent + SceneNode.field_h.maxAscent);
-              MembershipBenefitsScreen.a(1, 3, TikiBallSkin.field_m[var7].field_A, TikiBallSkin.field_m[var7], 4, TikiBallSkin.field_m[var7].field_z, 0, 0);
+              MembershipBenefitsScreen.expandSpriteOutline(1, 3, TikiBallSkin.field_m[var7].field_A, TikiBallSkin.field_m[var7], 4, TikiBallSkin.field_m[var7].field_z, 0, 0);
             }
             SharedWidgetLayoutSupport.field_a = null;
             Base37Support.field_a = AchievementSubmission.field_o.copy();
@@ -253,7 +253,7 @@ final class MembershipBenefitsLoader {
             var9 = new Sprite(ReflectionRequestSupport.field_j.field_w, ReflectionRequestSupport.field_j.field_y);
             var9.bindAsRenderTarget();
             DebugTuningSupport.field_d.drawParagraph(var14, LongAndTextLoginPayload.field_h, AccountDisplayNameSupport.field_c, AppletUrlSupport.field_h, IsaacCipher.field_e, 16777215, -1, 1, 1, DebugTuningSupport.field_d.maxAscent + DebugTuningSupport.field_d.maxDescent);
-            MembershipBenefitsScreen.a(1, 3, var9.field_y, var9, param0 + 6, var9.field_w, 0, 0);
+            MembershipBenefitsScreen.expandSpriteOutline(1, 3, var9.field_y, var9, param0 + 6, var9.field_w, 0, 0);
             ReflectionRequestSupport.field_j.bindAsRenderTarget();
             var9.draw(0, 0);
             UsernameAvailabilityValidator.field_u = new Sprite(640, 480);
@@ -275,7 +275,7 @@ final class MembershipBenefitsLoader {
             AccountWelcomePanel.field_N = null;
             var16.bindAsRenderTarget();
             SceneNode.field_h.drawParagraph(var5_ref_String, 3, 3, -6 + var16.field_z, var16.field_A - 6, 16777215, -1, 0, 1, SceneNode.field_h.maxAscent + SceneNode.field_h.maxDescent);
-            MembershipBenefitsScreen.a(1, 3, var16.field_A, var16, 4, var16.field_z, 0, 0);
+            MembershipBenefitsScreen.expandSpriteOutline(1, 3, var16.field_A, var16, 4, var16.field_z, 0, 0);
             ProgressDialog.field_gb.bindAsRenderTarget();
             var16.draw(199 - ProgressDialog.field_gb.field_G, -ProgressDialog.field_gb.field_B + 83);
             SoftwareRasterizer.setTarget(var29, var2Lifetime2, var3Lifetime2);
@@ -296,7 +296,7 @@ final class MembershipBenefitsLoader {
             var7Lifetime2 = 20 + (var6Lifetime2 + Camera.field_c.field_w);
             ProgressDialog.field_gb.bindAsRenderTarget();
             SceneNode.field_h.drawLeft(PlasmaTableScene.mbCaptionTitle, -ProgressDialog.field_gb.field_G + var7Lifetime2, SceneNode.field_h.maxDescent + (-ProgressDialog.field_gb.field_B + 155 + SceneNode.field_h.maxAscent), 16777215, -1);
-            MembershipBenefitsScreen.a(1, 3, 50, ProgressDialog.field_gb, 4, var4, var7Lifetime2 - ProgressDialog.field_gb.field_G - 4, -ProgressDialog.field_gb.field_B + 155);
+            MembershipBenefitsScreen.expandSpriteOutline(1, 3, 50, ProgressDialog.field_gb, 4, var4, var7Lifetime2 - ProgressDialog.field_gb.field_G - 4, -ProgressDialog.field_gb.field_B + 155);
             var8Lifetime1 = 155 - ProgressDialog.field_gb.field_B - (-SceneNode.field_h.maxAscent + (-3 + Camera.field_c.field_y - SceneNode.field_h.maxDescent)) / 2;
             Camera.field_c.draw(var6Lifetime2 - ProgressDialog.field_gb.field_G, var8Lifetime1);
             SoftwareRasterizer.setTarget(var30, var2Lifetime3, var3Lifetime3);

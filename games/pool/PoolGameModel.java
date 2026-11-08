@@ -1863,7 +1863,7 @@ final class PoolGameModel {
 
     final static void initializeTutorialPanel(int param0) {
         field_k = new UiComponent(0L, (UiComponent) null, SoftwareRasterizer.width - SlidingPanelSupport.field_e[4].field_z >> 1, -120 + SoftwareRasterizer.height, SlidingPanelSupport.field_e[4].field_z, SoftwareRasterizer.height, (String) null);
-        MenuSelection.a(true, field_k);
+        MenuSelection.applyCenteredPanelStyle(true, field_k);
         field_k.frameSprites = SlidingPanelSupport.field_e;
         HotspotRectangle.field_v = new UiComponent("tut_close", (UiComponent) null);
         UiComponent dupTemp$0 = new UiComponent("tut_skip", (UiComponent) null);

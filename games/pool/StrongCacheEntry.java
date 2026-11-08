@@ -27,7 +27,7 @@ final class StrongCacheEntry extends CacheEntry {
         mouseoveranicon = null;
     }
 
-    final static int a(boolean param0, byte param1) {
+    final static int advanceMembershipSlideshow(boolean inputEnabled, byte obfuscationGuard) {
         int stackIn_60_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_71_0 = 0;
@@ -43,7 +43,7 @@ final class StrongCacheEntry extends CacheEntry {
         var5 = Pool.field_O;
         try {
           IsaacCipher.field_d = IsaacCipher.field_d + 65536;
-          while (ThreeSliceButtonPainter.fixedMultiply(QuickChatDynamicCommand.field_f, param1 - 65, IsaacCipher.field_d) >= 65536) {
+          while (ThreeSliceButtonPainter.fixedMultiply(QuickChatDynamicCommand.field_f, obfuscationGuard - 65, IsaacCipher.field_d) >= 65536) {
             IsaacCipher.field_d = IsaacCipher.field_d - QuickChatDynamicCommand.field_f;
             PoolMatchController.field_X = PoolMatchController.field_X + 1;
           }
@@ -55,7 +55,7 @@ final class StrongCacheEntry extends CacheEntry {
           } else {
             var2_int = AccountCreationForm.field_V.length;
           }
-          if (param1 != 65) {
+          if (obfuscationGuard != 65) {
             StrongCacheEntry.releaseStatics(38);
           }
           if (var2_int != -1) {
@@ -126,10 +126,10 @@ final class StrongCacheEntry extends CacheEntry {
               }
             }
           }
-          if (!param0) {
+          if (!inputEnabled) {
             return 0;
           }
-          AppletUrlSupport.field_j.a(ReflectionCheck.a((byte) -82, DialogLayer.field_W, UsernameAvailabilityValidator.field_o), ReflectionCheck.a((byte) -21, ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f), param1 - 192);
+          AppletUrlSupport.field_j.updatePointerSelection(ReflectionCheck.hitTestMembershipButtons((byte) -82, DialogLayer.field_W, UsernameAvailabilityValidator.field_o), ReflectionCheck.hitTestMembershipButtons((byte) -21, ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f), obfuscationGuard - 192);
           if (AppletUrlSupport.field_j.isPressActivated((byte) 62)) {
             if (AppletUrlSupport.field_j.selectedIndex == 0) {
               stackIn_60_0 = 3;
@@ -166,7 +166,7 @@ final class StrongCacheEntry extends CacheEntry {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "fd.Q(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "fd.Q(" + inputEnabled + ',' + obfuscationGuard + ')');
         }
     }
 

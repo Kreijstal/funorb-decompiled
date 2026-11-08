@@ -528,7 +528,7 @@ final class VerticalScrollbar extends UiComponent {
             field_Vb = (NineSliceFrame) null;
           }
           mesh.vertexZ = var3;
-          ImageProducerRasterBuffer.a(mesh, (byte) 38);
+          ImageProducerRasterBuffer.reverseFaceWinding(mesh, (byte) 38);
           mesh.clearCaches();
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "db.DA(" + obfuscationGuard + ',' + (mesh != null ? "{...}" : "null") + ')');

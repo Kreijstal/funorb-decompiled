@@ -279,7 +279,7 @@ final class ReflectionReplySupport {
           var9 = param3[1] - param3[0];
           if (var8_int != 0 ||
             var9 != 0) {
-            var12 = LoginTextValue.a(false, var9 * var9 + var8_int * var8_int);
+            var12 = LoginTextValue.approximateIntegerSquareRoot(false, var9 * var9 + var8_int * var8_int);
             if (0 != var12) {
               var8_int = (var8_int << 16) / var12;
               var9 = (var9 << 16) / var12;
@@ -297,7 +297,7 @@ final class ReflectionReplySupport {
               var10 = -param6[var15] + param6[var15 + 1];
               if (0 != var10 ||
                 0 != var11) {
-                var13 = LoginTextValue.a(false, var11 * var11 + var10 * var10);
+                var13 = LoginTextValue.approximateIntegerSquareRoot(false, var11 * var11 + var10 * var10);
                 if (var13 != 0) {
                   var11 = (var11 << 16) / var13;
                   var10 = (var10 << 16) / var13;
@@ -413,7 +413,7 @@ final class ReflectionReplySupport {
           var9 = param3[1] - param3[0];
           if (var8_int != 0 ||
             var9 != 0) {
-            var12 = LoginTextValue.a(false, var9 * var9 + var8_int * var8_int);
+            var12 = LoginTextValue.approximateIntegerSquareRoot(false, var9 * var9 + var8_int * var8_int);
             if (0 != var12) {
               var8_int = (var8_int << 16) / var12;
               var9 = (var9 << 16) / var12;
@@ -431,7 +431,7 @@ final class ReflectionReplySupport {
               var10 = -param6[var15] + param6[var15 + 1];
               if (0 != var10 ||
                 0 != var11) {
-                var13 = LoginTextValue.a(false, var11 * var11 + var10 * var10);
+                var13 = LoginTextValue.approximateIntegerSquareRoot(false, var11 * var11 + var10 * var10);
                 if (var13 != 0) {
                   var11 = (var11 << 16) / var13;
                   var10 = (var10 << 16) / var13;

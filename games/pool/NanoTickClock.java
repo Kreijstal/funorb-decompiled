@@ -44,7 +44,7 @@ final class NanoTickClock extends TickClock {
         return var5;
     }
 
-    final static QuickChatMenu a(UiComponent param0, UiComponent param1, QuickChatCategoryDefinition param2, UiComponent param3, byte param4) {
+    final static QuickChatMenu buildQuickChatCategoryMenu(UiComponent param0, UiComponent param1, QuickChatCategoryDefinition param2, UiComponent param3, byte param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -109,7 +109,7 @@ final class NanoTickClock extends TickClock {
               var13_ref_sf = DisplayNamePanel.field_N.getDefinition((byte) -55, param2.subcategoryIds[var12]);
               var8[var12] = var13_ref_sf.title;
               var9[var12] = param2.subcategoryShortcuts[var12];
-              var11[var12] = NanoTickClock.a(param0, param1, var13_ref_sf, param3, (byte) 125);
+              var11[var12] = NanoTickClock.buildQuickChatCategoryMenu(param0, param1, var13_ref_sf, param3, (byte) 125);
             }
           }
           if (null != param2.phraseIds) {
@@ -199,7 +199,7 @@ final class NanoTickClock extends TickClock {
         }
         if (param0 != 26) {
           UiComponent var3 = (UiComponent) null;
-          NanoTickClock.a((UiComponent) null, (UiComponent) null, (QuickChatCategoryDefinition) null, (UiComponent) null, (byte) 20);
+          NanoTickClock.buildQuickChatCategoryMenu((UiComponent) null, (UiComponent) null, (QuickChatCategoryDefinition) null, (UiComponent) null, (byte) 20);
         }
     }
 
@@ -220,7 +220,7 @@ final class NanoTickClock extends TickClock {
         }
         int var2 = ContentTransitionDialog.k((byte) 59);
         VerticalScrollbar.field_Vb.draw((MusicPatchEnvelope.field_d << 1) + var1, AccountContentDialog.field_wb - ShotRecord.field_o, -6316, CacheEntry.field_z - MusicPatchEnvelope.field_d, (ShotRecord.field_o << 1) + var2);
-        BirthDatePromptPanel.h(-9395);
+        BirthDatePromptPanel.drawSharedChoicePanel(-9395);
     }
 
     final static MusicPatch loadMusicPatch(ResourceArchive archive, byte obfuscationGuard, int patchId) {

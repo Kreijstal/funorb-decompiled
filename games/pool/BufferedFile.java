@@ -169,7 +169,7 @@ final class BufferedFile {
         this.position = param1;
     }
 
-    final static double[][] a(int param0, double[] param1) {
+    final static double[][] createOppositeTableLines(int obfuscationGuard, double[] line) {
         RuntimeException var2 = null;
         double[][] stackIn_2_0 = null;
         double[][] stackIn_4_0 = null;
@@ -178,8 +178,8 @@ final class BufferedFile {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 <= -90) {
-            stackIn_4_0 = new double[][]{param1, new double[]{576.0 - param1[0], -param1[1] + 288.0, param1[2], -param1[3] + 576.0, 288.0 - param1[4], param1[5]}};
+          if (obfuscationGuard <= -90) {
+            stackIn_4_0 = new double[][]{line, new double[]{576.0 - line[0], -line[1] + 288.0, line[2], -line[3] + 576.0, 288.0 - line[4], line[5]}};
             return stackIn_4_0;
           }
           stackIn_2_0 = (double[][]) null;
@@ -188,8 +188,8 @@ final class BufferedFile {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("ir.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("ir.D(").append(obfuscationGuard).append(',');
+          if (line == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -358,7 +358,7 @@ final class BufferedFile {
     final long length(byte param0) {
         if (param0 != 17) {
           double[] var3 = (double[]) null;
-          BufferedFile.a(54, (double[]) null);
+          BufferedFile.createOppositeTableLines(54, (double[]) null);
         }
         return this.field_e;
     }

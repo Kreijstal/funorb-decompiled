@@ -161,7 +161,7 @@ final class GlowParticle {
             var2 = ProjectedLineSupport.publicchatUnavailableRatedgame;
           }
           if (CookieDateSupport.field_b == 2 &&
-            !SupportPageLauncher.a(false)) {
+            !SupportPageLauncher.isQuickChatRecipientAvailable(false)) {
             boolean decompiledSharedTail2 = !(!DialogLayer.a(ResourceArchive.field_a, -1));
             if (!decompiledSharedTail2) {
               var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ArrayWidgetGroup.field_I}, obfuscationGuard ^ -2, LookupRetrySupport.privatechatFriendNotlisted);
@@ -171,7 +171,7 @@ final class GlowParticle {
               var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ArrayWidgetGroup.field_I}, -1, IterableNodeHashTable.privatechatFriendOffline);
             }
             if (ArrayWidgetGroup.field_H) {
-              MenuScreenBase.a(0, (String) (var2), (String) null, 2, (String) null, true);
+              MenuScreenBase.appendChatMessage(0, (String) (var2), (String) null, 2, (String) null, true);
               ChatInputSupport.b(-1);
             }
           }
@@ -215,7 +215,7 @@ final class GlowParticle {
                   var6 = 1;
                 }
               }
-              if (MenuSelection.b(-1)) {
+              if (MenuSelection.hasPreviousChatContent(-1)) {
                 stackIn_59_0 = ": ";
               } else {
                 stackIn_59_0 = "<img=3>: ";
@@ -234,7 +234,7 @@ final class GlowParticle {
                 var4 = "<col=999999>" + var4 + ArchiveBootstrapSupport.clickToQuickchat + "</col>";
               }
               var9 = RatingTextState.field_c.stringWidth(var4);
-              if (!MenuSelection.b(obfuscationGuard ^ -2)) {
+              if (!MenuSelection.hasPreviousChatContent(obfuscationGuard ^ -2)) {
                 if (TimeTrialSelectScreen.field_J.activeInside &&
                   -TimeTrialSelectScreen.field_J.screenX + ReflectionReplySupport.field_i < var9) {
                   if (RankingsRequest.field_z) {

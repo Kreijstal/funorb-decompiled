@@ -58,7 +58,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
             var6_int = param2.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = var6_int + 2; var5 < var3_int; var5++) {
-                if (LobbyGame.a(param2.charAt(var5), (byte) 71)) {
+                if (LobbyGame.isAsciiDigit(param2.charAt(var5), (byte) 71)) {
                   continue;
                 }
                 break;
@@ -91,7 +91,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
               return stackIn_27_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (LobbyGame.a(param2.charAt(var5Lifetime1), (byte) 57)) {
+              if (LobbyGame.isAsciiDigit(param2.charAt(var5Lifetime1), (byte) 57)) {
                 continue;
               }
               break;

@@ -8,8 +8,8 @@ final class SupportPageLauncher {
     static String playerX2AreOfferingRematch;
     static int[] field_d;
 
-    final static boolean a(boolean param0) {
-        if (param0) {
+    final static boolean isQuickChatRecipientAvailable(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           SupportPageLauncher.updateQuickChatMenu(-113, false, -92, -109);
         }
         return AccountStateQuery.a(false, QuickChatMenuSupport.field_d, ResourceArchive.field_a);

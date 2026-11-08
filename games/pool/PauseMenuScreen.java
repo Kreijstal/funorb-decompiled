@@ -28,7 +28,7 @@ class PauseMenuScreen extends MenuScreen {
         AccountCreationDialog.switchScreen(-3405, -1, LobbyPlayerLookupSupport.a(true) ? 21 : 0, false);
     }
 
-    final static LoginResponse a(String[] args, int param1) {
+    final static LoginResponse createUsernameSuggestionsResponse(String[] suggestions, int obfuscationGuard) {
         LoginResponse var2 = null;
         RuntimeException var2_ref = null;
         LoginResponse stackIn_3_0 = null;
@@ -37,11 +37,11 @@ class PauseMenuScreen extends MenuScreen {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 57) {
+          if (obfuscationGuard != 57) {
             PauseMenuScreen.g(-2, 69);
           }
           var2 = new LoginResponse(false);
-          var2.field_c = args;
+          var2.field_c = suggestions;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,12 +49,12 @@ class PauseMenuScreen extends MenuScreen {
           var2_ref = decompiledCaughtException;
           stackIn_6_0 = var2_ref;
           stackIn_6_1 = new StringBuilder().append("jo.EA(");
-          if (args == null) {
+          if (suggestions == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -149,21 +149,21 @@ class PauseMenuScreen extends MenuScreen {
         var13.enableFramedPanel(80, 80, -10);
     }
 
-    final static void a(float param0, float param1, float param2, float param3, int param4) {
+    final static void configureSoundEffectReverb(float param0, float param1, float param2, float param3, int param4) {
         if (param4 == -31792) {
           Ball.configureSoundEffectReverb(param3, param0, 1.0f, 1.0f, param2, param1, -1);
           return;
         }
-        PauseMenuScreen.a(0.2009153664112091f, 0.45015275478363037f, 2.6406524181365967f, -0.13969022035598755f, 60);
+        PauseMenuScreen.configureSoundEffectReverb(0.2009153664112091f, 0.45015275478363037f, 2.6406524181365967f, -0.13969022035598755f, 60);
         Ball.configureSoundEffectReverb(param3, param0, 1.0f, 1.0f, param2, param1, -1);
     }
 
-    final static int c(int param0, int param1, int param2) {
-        if (param1 != -54264319) {
+    final static int shiftLeft(int distance, int obfuscationGuard, int value) {
+        if (obfuscationGuard != -54264319) {
           playerNs = (String[]) null;
-          return param2 << param0;
+          return value << distance;
         }
-        return param2 << param0;
+        return value << distance;
     }
 
     final static void g(int param0, int param1) {

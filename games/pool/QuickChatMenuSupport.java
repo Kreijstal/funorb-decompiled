@@ -63,7 +63,7 @@ final class QuickChatMenuSupport {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRasterizer.setTarget(var16, var5, var6);
-          GrowableIntListFactory.field_b = NanoTickClock.a(LoginRequiredScreen.field_J, CushionSegment.field_c, var4, LookupRetrySupport.field_i, (byte) 112);
+          GrowableIntListFactory.field_b = NanoTickClock.buildQuickChatCategoryMenu(LoginRequiredScreen.field_J, CushionSegment.field_c, var4, LookupRetrySupport.field_i, (byte) 112);
           ChoiceButtonSupport.field_a.children = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -313,7 +313,7 @@ final class TikiTableScene extends ModelTableScene {
           this.field_O[incrementValue$43] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_top_b");
           TextInputPainter.field_x = var3_int;
           this.field_A = new CueStick();
-          this.field_A.a(MeshBuilder.loadFromArchive(param0, "", "cues/jungle_cue"), (byte) -115);
+          this.field_A.buildCueSegments(MeshBuilder.loadFromArchive(param0, "", "cues/jungle_cue"), (byte) -115);
           for (var4 = 0; var4 < this.field_O.length; var4++) {
             VerticalScrollbar.swapMeshYAndZ(0, this.field_O[var4]);
           }
@@ -1340,7 +1340,7 @@ final class TikiTableScene extends ModelTableScene {
     final void buildTableGeometry(PoolGameModel param0, int param1) {
         try {
           super.buildTableGeometry(param0, param1);
-          PauseMenuScreen.a(0.8999999761581421f, 1.0f, 0.8999999761581421f, 0.0833333358168602f, -31792);
+          PauseMenuScreen.configureSoundEffectReverb(0.8999999761581421f, 1.0f, 0.8999999761581421f, 0.0833333358168602f, -31792);
           ModelOriginSupport.field_t = 0;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

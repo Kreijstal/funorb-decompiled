@@ -142,7 +142,7 @@ final class BitmapTextLayout extends TextLayout {
         try {
           boolean decompiledSharedTail0 = !(BallDebugOverlay.field_b <= 32);
           if (!decompiledSharedTail0) {
-            AgeValidator.a(true, 0);
+            AgeValidator.setSoundEffectVolume(true, 0);
             decompiledSharedTail0 = (Pool.field_O != 0);
           }
           if (decompiledSharedTail0) {
@@ -150,7 +150,7 @@ final class BitmapTextLayout extends TextLayout {
             if (var1_int == 0) {
               var1_int = 32;
             }
-            AgeValidator.a(true, BallDebugOverlay.field_b - var1_int);
+            AgeValidator.setSoundEffectVolume(true, BallDebugOverlay.field_b - var1_int);
           }
           var1_intLifetime1 = -10 / ((74 - param0) / 42);
           return;

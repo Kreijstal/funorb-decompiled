@@ -12,12 +12,12 @@ final class ByteRecordSubmission extends IntrusiveNode {
     static int[] field_t;
     static ReflectionRequestSupport field_l;
 
-    final static String c(byte param0) {
+    final static String getAccountPassword(byte obfuscationGuard) {
         if (TabbedPane.field_Lb == IntegerRecordProtocolSupport.field_e) {
           return SocialListEntry.field_Rb;
         }
-        if (param0 <= 44) {
-          ByteRecordSubmission.c((byte) 49);
+        if (obfuscationGuard <= 44) {
+          ByteRecordSubmission.getAccountPassword((byte) 49);
           return VertexTransformSupport.field_a;
         }
         return VertexTransformSupport.field_a;
@@ -32,13 +32,13 @@ final class ByteRecordSubmission extends IntrusiveNode {
         field_l = null;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void initializeProjectedVertexPool(int capacity, byte obfuscationGuard) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          ViewportController.field_c = new ProjectedVertex[param0];
-          if (param1 != 49) {
+          ViewportController.field_c = new ProjectedVertex[capacity];
+          if (obfuscationGuard != 49) {
             ByteRecordSubmission.releaseStatics((byte) -107);
           }
           for (var2_int = 0; ViewportController.field_c.length > var2_int; var2_int++) {
@@ -48,7 +48,7 @@ final class ByteRecordSubmission extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "kg.A(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "kg.A(" + capacity + ',' + obfuscationGuard + ')');
         }
     }
 

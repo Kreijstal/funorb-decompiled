@@ -38,8 +38,8 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         }
     }
 
-    final static boolean a(boolean param0) {
-        if (!param0) {
+    final static boolean isAccountFlowReady(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           DebouncedValidationProvider.releaseStatics(39);
           if (10 > PlasmaTableScene.field_ab) {
             return false;
@@ -161,7 +161,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
             if (obfuscationGuard < -45) {
               return;
             }
-            DebouncedValidationProvider.a(false);
+            DebouncedValidationProvider.isAccountFlowReady(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

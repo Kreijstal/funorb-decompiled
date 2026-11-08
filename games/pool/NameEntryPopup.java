@@ -224,7 +224,7 @@ final class NameEntryPopup extends UiComponent {
             discarded$0 = this.nameBuffer.append((char) var2);
           }
           if (ContextMenu.isAsciiLetter((char) var2, 22987) ||
-            LobbyGame.a((char) var2, (byte) 85)) {
+            LobbyGame.isAsciiDigit((char) var2, (byte) 85)) {
             discarded$1 = this.nameBuffer.append((char) var2);
           }
         }

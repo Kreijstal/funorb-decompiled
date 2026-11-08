@@ -78,7 +78,7 @@ final class ProgressBarWidget extends UiWidget {
             return true;
           }
           var3 = (byte[]) null;
-          ProgressBarWidget.a((byte[]) null, 26, -23);
+          ProgressBarWidget.areGameSettingsAllowed((byte[]) null, 26, -23);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -193,7 +193,7 @@ final class ProgressBarWidget extends UiWidget {
         field_R = null;
     }
 
-    final static boolean a(byte[] param0, int param1, int param2) {
+    final static boolean areGameSettingsAllowed(byte[] settings, int playerCount, int obfuscationGuard) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -201,22 +201,22 @@ final class ProgressBarWidget extends UiWidget {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != 2) {
+          if (obfuscationGuard != 2) {
             field_R = (BitmapFont) null;
           }
-          stackIn_6_0 = (2 <= param1) && (!LogoMaterial.a(param1, 125, param0, LoginMethod.field_h));
+          stackIn_6_0 = (2 <= playerCount) && (!LogoMaterial.a(playerCount, 125, settings, LoginMethod.field_h));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("gj.I(");
-          if (param0 == null) {
+          if (settings == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(playerCount).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class ProgressBarWidget extends UiWidget {
         this.stripeSprites = new Sprite[]{this.buildStripeSprite(this.alternateStripeColor, this.stripeColor, (byte) 108), this.buildStripeSprite(this.dimAlternateStripeColor, this.dimStripeColor, (byte) 110)};
         if (param0 <= 8) {
           byte[] var3 = (byte[]) null;
-          ProgressBarWidget.a((byte[]) null, -61, 57);
+          ProgressBarWidget.areGameSettingsAllowed((byte[]) null, -61, 57);
         }
         this.field_U = this.buildEndMask(16711422);
         this.field_F = this.field_U.copyFlippedHorizontal();

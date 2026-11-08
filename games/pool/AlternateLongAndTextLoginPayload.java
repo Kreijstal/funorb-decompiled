@@ -162,7 +162,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
           if (param1 == null) {
             var7.writeShort((byte) -81, param5);
           } else {
-            LobbyPlayer.a(var7, (byte) 75, param1);
+            LobbyPlayer.writeCompressedChatText(var7, (byte) 75, param1);
           }
           var7.writeByteLengthPrefix(-var8 + var7.position, true);
           return;

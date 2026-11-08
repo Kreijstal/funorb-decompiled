@@ -6,11 +6,11 @@ final class SharedRateScaleSupport {
     static int field_a;
     static String whoCanJoin;
 
-    final static void a(byte param0, int param1) {
-        QuickChatDynamicCommand.field_g = 400 * param1 / 150;
-        QuickChatDynamicCommand.field_f = (param1 << 16) / 150;
-        QuickChatDynamicCommand.field_l = param1 * 100 / 150;
-        int var2 = 59 / ((-23 - param0) / 46);
+    final static void configureSlideshowTiming(byte obfuscationGuard, int rate) {
+        QuickChatDynamicCommand.field_g = 400 * rate / 150;
+        QuickChatDynamicCommand.field_f = (rate << 16) / 150;
+        QuickChatDynamicCommand.field_l = rate * 100 / 150;
+        int var2 = 59 / ((-23 - obfuscationGuard) / 46);
     }
 
     public static void releaseStatics(int param0) {
@@ -212,7 +212,7 @@ final class SharedRateScaleSupport {
         }
     }
 
-    final static Sprite a(int param0, boolean param1, int param2, String param3, int param4) {
+    final static Sprite createOutlinedTextSprite(int horizontalAlignment, boolean obfuscationGuard, int wrapWidth, String text, int color) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -228,12 +228,12 @@ final class SharedRateScaleSupport {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = FreePlayRules.field_e.countWrappedLines(param3, param2);
+          var5_int = FreePlayRules.field_e.countWrappedLines(text, wrapWidth);
           var6 = var5_int * FreePlayRules.field_e.baselineHeight + FreePlayRules.field_e.maxDescent;
-          if (!param1) {
+          if (!obfuscationGuard) {
             SharedRateScaleSupport.releaseStatics(-50);
           }
-          var7 = new Sprite(param2 + 4, 4 + var6);
+          var7 = new Sprite(wrapWidth + 4, 4 + var6);
           var7.field_B = -2;
           var7.field_G = -2;
           var19 = new int[4];
@@ -242,7 +242,7 @@ final class SharedRateScaleSupport {
           var11 = SoftwareRasterizer.height;
           SoftwareRasterizer.saveClip(var19);
           var7.bindAsRenderTarget();
-          FreePlayRules.field_e.drawParagraph(param3, 2, 2, param2, var6, param4, -1, param0, 0, FreePlayRules.field_e.baselineHeight * 3 / 4);
+          FreePlayRules.field_e.drawParagraph(text, 2, 2, wrapWidth, var6, color, -1, horizontalAlignment, 0, FreePlayRules.field_e.baselineHeight * 3 / 4);
           var7.addOutline(4144959);
           var7.addOutline(65793);
           SoftwareRasterizer.setTarget(var20, var10, var11);
@@ -259,13 +259,13 @@ final class SharedRateScaleSupport {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_6_0 = var5;
-          stackIn_6_1 = new StringBuilder().append("ic.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_6_1 = new StringBuilder().append("ic.A(").append(horizontalAlignment).append(',').append(obfuscationGuard).append(',').append(wrapWidth).append(',');
+          if (text == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(color).append(')').toString());
         }
     }
 

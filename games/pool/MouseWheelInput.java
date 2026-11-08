@@ -92,8 +92,8 @@ abstract class MouseWheelInput {
         }
     }
 
-    final static void a(int param0, boolean param1) {
-        if (param0 >= -8) {
+    final static void initializeMembershipSlideshow(int obfuscationGuard, boolean pointerDriven) {
+        if (obfuscationGuard >= -8) {
           return;
         }
         SocketArchiveNetworkClient.field_u = QuickChatDynamicCommand.field_l;
@@ -101,7 +101,7 @@ abstract class MouseWheelInput {
         KillerRules.field_f = 0;
         IsaacCipher.field_d = 0;
         AppletUrlSupport.field_j = new MenuSelection(2);
-        AppletUrlSupport.field_j.initializeSelection(param1, -1, ReflectionCheck.a((byte) -84, ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f), true);
+        AppletUrlSupport.field_j.initializeSelection(pointerDriven, -1, ReflectionCheck.hitTestMembershipButtons((byte) -84, ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f), true);
     }
 
     final static void c(int param0) {
@@ -147,7 +147,7 @@ abstract class MouseWheelInput {
         var26 = Pool.field_O;
         try {
           if (param0 < 95) {
-            MouseWheelInput.a(33, true);
+            MouseWheelInput.initializeMembershipSlideshow(33, true);
           }
           var27 = PlayerContextMenu.field_e;
           var2 = var27.readUnsignedByte(-107);
@@ -278,7 +278,7 @@ abstract class MouseWheelInput {
         }
     }
 
-    final static void a(int param0) {
+    final static void snapshotKeyboardState(int obfuscationGuard) {
         Object var1 = null;
         int var2 = 0;
         int var4 = 0;
@@ -287,7 +287,7 @@ abstract class MouseWheelInput {
         RuntimeException var1_ref = null;
         var4 = Pool.field_O;
         try {
-          if (param0 != 127) {
+          if (obfuscationGuard != 127) {
             var5 = (BitmapFont) null;
             MouseWheelInput.createFramedLabel(61, -54, 2, 71, 91, -21, -24, 76, 60, (BitmapFont) null, -98, -116, 30);
           }
@@ -317,13 +317,13 @@ abstract class MouseWheelInput {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "id.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "id.C(" + obfuscationGuard + ')');
         }
     }
 
     abstract int takeRotation(int param0);
 
-    final static void a(int param0, int param1, Sprite[] param2, int param3, byte param4) {
+    final static void drawHorizontalThreeSlice(int y, int width, Sprite[] sprites, int x, byte obfuscationGuard) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -337,22 +337,22 @@ abstract class MouseWheelInput {
         int var10 = 0;
         var10 = Pool.field_O;
         try {
-          if (param2 != null &&
-            param1 > 0) {
-            var5_int = param2[0].field_w;
-            var6 = param2[2].field_w;
-            var7 = param2[1].field_w;
-            if (param4 != 23) {
+          if (sprites != null &&
+            width > 0) {
+            var5_int = sprites[0].field_w;
+            var6 = sprites[2].field_w;
+            var7 = sprites[1].field_w;
+            if (obfuscationGuard != 23) {
               MouseWheelInput.c(-44);
             }
-            param2[0].draw(param3, param0);
-            param2[2].draw(-var6 + (param1 + param3), param0);
+            sprites[0].draw(x, y);
+            sprites[2].draw(-var6 + (width + x), y);
             SoftwareRasterizer.saveClip(GameRules.field_a);
-            SoftwareRasterizer.intersectClip(param3 + var5_int, param0, -var6 + (param3 + param1), param0 + param2[1].field_y);
-            var8 = param3 + var5_int;
-            var9 = param1 + param3 - var6;
-            for (param3 = var8; param3 < var9; param3 = param3 + var7) {
-              param2[1].draw(param3, param0);
+            SoftwareRasterizer.intersectClip(x + var5_int, y, -var6 + (x + width), y + sprites[1].field_y);
+            var8 = x + var5_int;
+            var9 = width + x - var6;
+            for (x = var8; x < var9; x = x + var7) {
+              sprites[1].draw(x, y);
             }
             SoftwareRasterizer.restoreClip(GameRules.field_a);
             return;
@@ -362,13 +362,13 @@ abstract class MouseWheelInput {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("id.H(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = new StringBuilder().append("id.H(").append(y).append(',').append(width).append(',');
+          if (sprites == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(x).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

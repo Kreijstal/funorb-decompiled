@@ -58,7 +58,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2, int param3, int param4) {
+    final static void updateLobbyGameControls(boolean param0, boolean param1, boolean param2, int param3, int param4) {
         UiComponent stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int stackIn_36_0 = 0;

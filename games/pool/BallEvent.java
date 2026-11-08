@@ -56,7 +56,7 @@ final class BallEvent {
           }
           var3 = (byte[]) (param0);
           if (param2) {
-            stackIn_10_0 = BirthDatePromptPanel.a(var3, (byte) 91);
+            stackIn_10_0 = BirthDatePromptPanel.copyByteArray(var3, (byte) 91);
             return stackIn_10_0;
           }
           stackIn_8_0 = var3;

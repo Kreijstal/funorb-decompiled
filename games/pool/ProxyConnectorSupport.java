@@ -19,7 +19,7 @@ final class ProxyConnectorSupport {
         gameoptTrychanging1 = null;
     }
 
-    final static Sprite a(int param0, IndexedSprite param1) {
+    final static Sprite createOutlinedIndexedSprite(int drawY, IndexedSprite source) {
         RuntimeException var2 = null;
         int var5 = 0;
         int var6 = 0;
@@ -33,21 +33,21 @@ final class ProxyConnectorSupport {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new Sprite(4 + param1.width, param1.height + 4);
-          var9.field_B = param1.trimY - 2;
-          var9.field_G = param1.trimX - 2;
+          var9 = new Sprite(4 + source.width, source.height + 4);
+          var9.field_B = source.trimY - 2;
+          var9.field_G = source.trimX - 2;
           var15 = new int[4];
           var16 = SoftwareRasterizer.pixels;
           var5 = SoftwareRasterizer.width;
           var6 = SoftwareRasterizer.height;
           SoftwareRasterizer.saveClip(var15);
           var9.bindAsRenderTarget();
-          param1.trimY = 0;
-          var7 = param1;
-          param1.fullWidth = param1.width;
+          source.trimY = 0;
+          var7 = source;
+          source.fullWidth = source.width;
           var7.trimX = 0;
-          param1.fullHeight = param1.height;
-          param1.draw(2, param0);
+          source.fullHeight = source.height;
+          source.draw(2, drawY);
           var9.addOutline(4144959);
           var9.addOutline(65793);
           SoftwareRasterizer.setTarget(var16, var5, var6);
@@ -58,8 +58,8 @@ final class ProxyConnectorSupport {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_4_0 = var2;
-          stackIn_4_1 = new StringBuilder().append("ii.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("ii.C(").append(drawY).append(',');
+          if (source == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
@@ -135,18 +135,18 @@ final class ProxyConnectorSupport {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void pollSocialNamePopup(int obfuscationGuard, int opcode, boolean active) {
         int var3;
         String var4;
         Object var5;
         String var6;
         CharSequence var7;
-        if (param0 != -31668) {
+        if (obfuscationGuard != -31668) {
           return;
         }
         boolean decompiledFrameRemainder0 = true;
         if (null != PasswordInputPainter.field_C) {
-          var3 = PasswordInputPainter.field_C.updateAndPollNameInput(param2, (byte) -83);
+          var3 = PasswordInputPainter.field_C.updateAndPollNameInput(active, (byte) -83);
           if (0 != var3) {
             if (var3 == 2 &&
               PasswordInputPainter.field_C.text != null &&
@@ -159,23 +159,23 @@ final class ProxyConnectorSupport {
               }
               var5 = null;
               if (MatchingTextValidator.field_m == 0) {
-                var5 = MultiHandleSliderWidget.a(var4, param1, 51);
+                var5 = MultiHandleSliderWidget.a(var4, opcode, 51);
               }
               if (MatchingTextValidator.field_m == 1) {
-                var5 = HalloweenBallSkin.removeFriend((byte) 83, var4, param1);
+                var5 = HalloweenBallSkin.removeFriend((byte) 83, var4, opcode);
               }
               if (MatchingTextValidator.field_m == 2) {
-                var5 = Atan2Support.a(param1, var4, param0 ^ -31666);
+                var5 = Atan2Support.a(opcode, var4, obfuscationGuard ^ -31666);
               }
               if (MatchingTextValidator.field_m == 3) {
-                var5 = MembershipBenefitsLoader.removeIgnore(-3266, var4, var4, param1);
+                var5 = MembershipBenefitsLoader.removeIgnore(-3266, var4, var4, opcode);
               }
               if (var5 == null) {
                 MatchingTextValidator.field_m = -1;
                 PasswordInputPainter.field_C = null;
               } else {
                 var6 = (String) null;
-                MenuScreenBase.a(0, (String) (var5), (String) null, 2, var4, true);
+                MenuScreenBase.appendChatMessage(0, (String) (var5), (String) null, 2, var4, true);
                 MatchingTextValidator.field_m = -1;
                 PasswordInputPainter.field_C = null;
               }

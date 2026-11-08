@@ -10,7 +10,7 @@ final class LoginTextValue {
     private boolean includeInLookupRequest;
     static String gameoptMightchange;
 
-    final static void a(String param0, int param1, String[] param2, byte param3) {
+    final static void completeAccountCreationRequest(String message, int code, String[] suggestions, byte obfuscationGuard) {
         RuntimeException var4 = null;
         int var5 = 0;
         boolean stackIn_7_0 = false;
@@ -23,57 +23,57 @@ final class LoginTextValue {
         var5 = Pool.field_O;
         try {
           TabbedPane.field_Lb = Base37Support.field_f;
-          if (param3 != -16) {
-            LoginTextValue.a(-100);
+          if (obfuscationGuard != -16) {
+            LoginTextValue.persistRandomSeedFromPacket(-100);
           }
-          if (param1 == 255) {
+          if (code == 255) {
             stackIn_7_0 = !(ButtonPainter.field_b >= 13);
-            QuickChatCategoryDefinition.field_B = GradientPaletteSupport.createLoginResponse(stackIn_7_0, param3 - 30898);
+            QuickChatCategoryDefinition.field_B = GradientPaletteSupport.createLoginResponse(stackIn_7_0, obfuscationGuard - 30898);
             return;
           }
-          if (param1 < 100) {
-            QuickChatCategoryDefinition.field_B = DebouncedValidationProvider.createLoginErrorResponse(param1, true, param0);
+          if (code < 100) {
+            QuickChatCategoryDefinition.field_B = DebouncedValidationProvider.createLoginErrorResponse(code, true, message);
             return;
           }
-          if (param1 <= 105) {
-            QuickChatCategoryDefinition.field_B = PauseMenuScreen.a(param2, 57);
+          if (code <= 105) {
+            QuickChatCategoryDefinition.field_B = PauseMenuScreen.createUsernameSuggestionsResponse(suggestions, 57);
             return;
           }
-          QuickChatCategoryDefinition.field_B = DebouncedValidationProvider.createLoginErrorResponse(param1, true, param0);
+          QuickChatCategoryDefinition.field_B = DebouncedValidationProvider.createLoginErrorResponse(code, true, message);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_17_0 = var4;
           stackIn_17_1 = new StringBuilder().append("ke.A(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(code).append(',');
+          if (suggestions == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static void a(int param0) {
+    final static void persistRandomSeedFromPacket(int obfuscationGuard) {
         try {
           Exception var1 = null;
           Throwable decompiledCaughtException = null;
           if (ServerListLauncher.field_c != null) {
             try {
-              ServerListLauncher.field_c.seek(param0 ^ 100, 0L);
+              ServerListLauncher.field_c.seek(obfuscationGuard ^ 100, 0L);
               ServerListLauncher.field_c.write(24, PlayerContextMenu.field_e.payload, PlayerContextMenu.field_e.position, -1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
               PlayerContextMenu.field_e.position = PlayerContextMenu.field_e.position + 24;
-              if (param0 == 100) {
+              if (obfuscationGuard == 100) {
                 return;
               }
               field_f = (IntrusiveDeque) null;
@@ -81,7 +81,7 @@ final class LoginTextValue {
             }
           }
           PlayerContextMenu.field_e.position = PlayerContextMenu.field_e.position + 24;
-          if (param0 != 100) {
+          if (obfuscationGuard != 100) {
             field_f = (IntrusiveDeque) null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -100,7 +100,7 @@ final class LoginTextValue {
 
     final String getText(byte param0) {
         if (param0 != 104) {
-          LoginTextValue.a(true, 103);
+          LoginTextValue.approximateIntegerSquareRoot(true, 103);
           return this.text;
         }
         return this.text;
@@ -143,51 +143,51 @@ final class LoginTextValue {
         this(param0, false);
     }
 
-    final static int a(boolean param0, int param1) {
-        if (65536L > (long)param1) {
-          if ((long)param1 < 256L) {
-            if (param1 >= 0) {
-              return AchievementsScreen.field_J[param1] >> 12;
+    final static int approximateIntegerSquareRoot(boolean obfuscationGuard, int value) {
+        if (65536L > (long)value) {
+          if ((long)value < 256L) {
+            if (value >= 0) {
+              return AchievementsScreen.field_J[value] >> 12;
             }
-            if (!param0) {
+            if (!obfuscationGuard) {
               return -1;
             }
-            LoginTextValue.a(true, 12);
+            LoginTextValue.approximateIntegerSquareRoot(true, 12);
             return -1;
           }
-          if ((long)param1 >= 4096L) {
-            if ((long)param1 >= 16384L) {
-              return AchievementsScreen.field_J[param1 >> 8] >> 8;
+          if ((long)value >= 4096L) {
+            if ((long)value >= 16384L) {
+              return AchievementsScreen.field_J[value >> 8] >> 8;
             }
-            return AchievementsScreen.field_J[param1 >> 6] >> 9;
+            return AchievementsScreen.field_J[value >> 6] >> 9;
           }
-          if ((long)param1 < 1024L) {
-            return AchievementsScreen.field_J[param1 >> 2] >> 11;
+          if ((long)value < 1024L) {
+            return AchievementsScreen.field_J[value >> 2] >> 11;
           }
-          return AchievementsScreen.field_J[param1 >> 4] >> 10;
+          return AchievementsScreen.field_J[value >> 4] >> 10;
         }
-        if ((long)param1 < 16777216L) {
-          if ((long)param1 < 1048576L) {
-            if (262144L <= (long)param1) {
-              return AchievementsScreen.field_J[param1 >> 12] >> 6;
+        if ((long)value < 16777216L) {
+          if ((long)value < 1048576L) {
+            if (262144L <= (long)value) {
+              return AchievementsScreen.field_J[value >> 12] >> 6;
             }
-            return AchievementsScreen.field_J[param1 >> 10] >> 7;
+            return AchievementsScreen.field_J[value >> 10] >> 7;
           }
-          if ((long)param1 < 4194304L) {
-            return AchievementsScreen.field_J[param1 >> 14] >> 5;
+          if ((long)value < 4194304L) {
+            return AchievementsScreen.field_J[value >> 14] >> 5;
           }
-          return AchievementsScreen.field_J[param1 >> 16] >> 4;
+          return AchievementsScreen.field_J[value >> 16] >> 4;
         }
-        if ((long)param1 >= 268435456L) {
-          if ((long)param1 >= 1073741824L) {
-            return AchievementsScreen.field_J[param1 >> 24];
+        if ((long)value >= 268435456L) {
+          if ((long)value >= 1073741824L) {
+            return AchievementsScreen.field_J[value >> 24];
           }
-          return AchievementsScreen.field_J[param1 >> 22] >> 1;
+          return AchievementsScreen.field_J[value >> 22] >> 1;
         }
-        if (67108864L > (long)param1) {
-          return AchievementsScreen.field_J[param1 >> 18] >> 3;
+        if (67108864L > (long)value) {
+          return AchievementsScreen.field_J[value >> 18] >> 3;
         }
-        return AchievementsScreen.field_J[param1 >> 20] >> 2;
+        return AchievementsScreen.field_J[value >> 20] >> 2;
     }
 
     public static void releaseStatics(boolean param0) {

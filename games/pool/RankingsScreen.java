@@ -20,38 +20,38 @@ final class RankingsScreen extends MenuScreen {
           if (IterableDualLinkDeque.field_a == 96) {
             if (this.selection.selectedIndex > 0) {
               if (this.selection.selectedIndex != 2) {
-                this.selection.a(0, (byte) 1);
+                this.selection.selectFromKeyboard(0, (byte) 1);
               }
             } else {
-              this.selection.a(1, (byte) 1);
+              this.selection.selectFromKeyboard(1, (byte) 1);
             }
           }
           if (IterableDualLinkDeque.field_a == 97) {
             if (this.selection.selectedIndex == 1) {
-              this.selection.a(0, (byte) 1);
+              this.selection.selectFromKeyboard(0, (byte) 1);
             } else {
               if (this.selection.selectedIndex != 2) {
-                this.selection.a(1, (byte) 1);
+                this.selection.selectFromKeyboard(1, (byte) 1);
               }
             }
           }
           if (IterableDualLinkDeque.field_a == 99) {
             if (0 <= this.selection.selectedIndex &&
               1 >= this.selection.selectedIndex) {
-              this.selection.a(2, (byte) 1);
+              this.selection.selectFromKeyboard(2, (byte) 1);
             } else {
-              this.selection.a(SocialListEntry.field_Lb, (byte) 1);
+              this.selection.selectFromKeyboard(SocialListEntry.field_Lb, (byte) 1);
             }
           }
           if (IterableDualLinkDeque.field_a == 98) {
             if (this.selection.selectedIndex == 2) {
-              this.selection.a(SocialListEntry.field_Lb, (byte) 1);
+              this.selection.selectFromKeyboard(SocialListEntry.field_Lb, (byte) 1);
             } else {
-              this.selection.a(2, (byte) 1);
+              this.selection.selectFromKeyboard(2, (byte) 1);
             }
-            this.selection.a(false);
+            this.selection.beginKeyInput(false);
           } else {
-            this.selection.a(SocialListEntry.field_Lb, (byte) 1);
+            this.selection.selectFromKeyboard(SocialListEntry.field_Lb, (byte) 1);
           }
         } else {
           super.handleNavigationKey(-34);
@@ -124,7 +124,7 @@ final class RankingsScreen extends MenuScreen {
             }
             var1_int = 1;
           }
-          LookupProtocolSupport.field_f.a(LookupProtocolSupport.a(-49, UsernameAvailabilityValidator.field_o, DialogLayer.field_W), LookupProtocolSupport.a(-49, DebouncedValidationProvider.field_f, ReflectionReplySupport.field_i), -30);
+          LookupProtocolSupport.field_f.updatePointerSelection(LookupProtocolSupport.a(-49, UsernameAvailabilityValidator.field_o, DialogLayer.field_W), LookupProtocolSupport.a(-49, DebouncedValidationProvider.field_f, ReflectionReplySupport.field_i), -30);
           if (LookupProtocolSupport.field_f.isPressActivated((byte) 99)) {
             var1_int = 1;
           }
@@ -1110,7 +1110,7 @@ final class RankingsScreen extends MenuScreen {
             friendlistdupe = (String) null;
           }
           var5 = param0.getFileId(var4_int, 0, param2);
-          stackIn_3_0 = LobbyGame.a(var5, var4_int, (byte) -97, param0);
+          stackIn_3_0 = LobbyGame.loadIndexedSprite(var5, var4_int, (byte) -97, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

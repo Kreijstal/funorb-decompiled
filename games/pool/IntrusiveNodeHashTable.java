@@ -232,7 +232,7 @@ final class IntrusiveNodeHashTable implements Iterable {
             var5 < QuickChatPhraseDefinition.field_E) {
             var10_int = LobbyPanelLayoutSupport.getChatFilterMode(5, var8_ref_pn.field_p);
             if (var8_ref_pn.b(14842) >= var10_int && (var8_ref_pn.field_g ||
-              !MenuSelection.a(var8_ref_pn.field_q, 24552))) {
+              !MenuSelection.isIgnoredName(var8_ref_pn.field_q, 24552))) {
               var9 = 1;
             }
           }

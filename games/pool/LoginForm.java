@@ -330,7 +330,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         if (param1 <= 67) {
           return 14;
         }
-        return PauseMenuScreen.c(16, -54264319, param0);
+        return PauseMenuScreen.shiftLeft(16, -54264319, param0);
     }
 
     final static void a(String param0, int param1, int param2, boolean param3, int param4) {
@@ -400,7 +400,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             if (this.createAccountButton != param3) {
               if (this.secondaryButton == param3) {
                 if (this.field_P) {
-                  MidiNoteMixer.c(-119);
+                  MidiNoteMixer.requestQuitToWebsite(-119);
                 } else {
                   if (!this.field_O) {
                     VerticalScrollbar.requestLoginReset(15158);

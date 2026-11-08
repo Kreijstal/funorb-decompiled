@@ -529,7 +529,7 @@ final class SpaceTableScene extends ModelTableScene {
           for (var5 = 0; var5 < IntegerRecordProtocolSupport.field_f.length; var5++) {
             MultiHandleSliderWidget.field_N[var5] = IntegerRecordProtocolSupport.field_f[ReportAbuseDialog.field_Ub[var5]].viewDepth(var57, (byte) 91);
           }
-          DropTargetWidget.a(ReportAbuseDialog.field_Ub, (byte) -121, MultiHandleSliderWidget.field_N);
+          DropTargetWidget.sortParallelArrays(ReportAbuseDialog.field_Ub, (byte) -121, MultiHandleSliderWidget.field_N);
           PacketBuffer.field_l = var57[11] * -var57[2] + -var57[1] * var57[10] + -var57[0] * var57[9];
           var26 = TextInputValidator.field_h;
           var88 = GzipDecoder.field_d;
@@ -799,7 +799,7 @@ final class SpaceTableScene extends ModelTableScene {
           this.field_O[incrementValue$25] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_top_b");
           ShotPreviewState.field_b = var3_int;
           this.field_A = new CueStick();
-          this.field_A.a(MeshBuilder.loadFromArchive(param0, "", "cues/space_cue"), (byte) -115);
+          this.field_A.buildCueSegments(MeshBuilder.loadFromArchive(param0, "", "cues/space_cue"), (byte) -115);
           for (var4 = 0; this.field_O.length > var4; var4++) {
             VerticalScrollbar.swapMeshYAndZ(0, this.field_O[var4]);
           }
@@ -1035,7 +1035,7 @@ final class SpaceTableScene extends ModelTableScene {
             }
             var2 = 1;
           }
-          LabeledChildWidget.field_W.a(AlternateLongAndTextLoginPayload.a(DialogLayer.field_W, UsernameAvailabilityValidator.field_o, 0), AlternateLongAndTextLoginPayload.a(ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, ~obfuscationGuard), -41);
+          LabeledChildWidget.field_W.updatePointerSelection(AlternateLongAndTextLoginPayload.a(DialogLayer.field_W, UsernameAvailabilityValidator.field_o, 0), AlternateLongAndTextLoginPayload.a(ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, ~obfuscationGuard), -41);
           if (LabeledChildWidget.field_W.isPressActivated((byte) 93)) {
             var1_int = 1;
           }

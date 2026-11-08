@@ -10,7 +10,7 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
     static int field_F;
     static String tutorialTitleBasics;
 
-    final static BrowserCookieSupport a(int param0, String param1) {
+    final static BrowserCookieSupport validateEmailDomain(int obfuscationGuard, String domain) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -31,7 +31,7 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
         RuntimeException decompiledCaughtException = null;
         var9 = Pool.field_O;
         try {
-          var2_int = param1.length();
+          var2_int = domain.length();
           if (0 == var2_int) {
             stackIn_4_0 = WorldPointProjectionSupport.field_e;
             return stackIn_4_0;
@@ -40,12 +40,12 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
             stackIn_8_0 = ChatPanelSupport.field_h;
             return stackIn_8_0;
           }
-          var3 = AppletUrlSupport.splitString(30634, param1, '.');
+          var3 = AppletUrlSupport.splitString(30634, domain, '.');
           if (var3.length < 2) {
             stackIn_12_0 = WorldPointProjectionSupport.field_e;
             return stackIn_12_0;
           }
-          var4 = -7 % ((3 - param0) / 47);
+          var4 = -7 % ((3 - obfuscationGuard) / 47);
           var5 = var3;
           var6 = 0;
           while (true) {
@@ -67,8 +67,8 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_23_0 = var2;
-          stackIn_23_1 = new StringBuilder().append("jj.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_23_1 = new StringBuilder().append("jj.A(").append(obfuscationGuard).append(',');
+          if (domain == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
@@ -87,7 +87,7 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
         this.refreshLayout((byte) -72);
     }
 
-    final static void h(int param0) {
+    final static void drawSharedChoicePanel(int obfuscationGuard) {
         int var3 = 0;
         boolean stackIn_10_0 = false;
         NineSliceFrame stackIn_15_0 = null;
@@ -121,7 +121,7 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
             }
             var6 = QuickChatMenu.field_Sb[var3];
             stackIn_10_0 = !(var4 < 0);
-            var7 = ReportAbuseDialog.a(stackIn_10_0, param0 ^ -9377, var6);
+            var7 = ReportAbuseDialog.a(stackIn_10_0, obfuscationGuard ^ -9377, var6);
             var8 = ArchiveIndex.field_u - (var7 >> 1);
             if (var4 >= 0) {
               var2 = var2 + LookupQuery.field_m;
@@ -144,15 +144,15 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
               var2 = var2 + MenuScreen.field_u;
             }
           }
-          if (param0 != -9395) {
+          if (obfuscationGuard != -9395) {
             var10 = (byte[]) null;
-            BirthDatePromptPanel.a((byte[]) null, (byte) -29);
+            BirthDatePromptPanel.copyByteArray((byte[]) null, (byte) -29);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "jj.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "jj.C(" + obfuscationGuard + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
         }
     }
 
-    final static byte[] a(byte[] param0, byte param1) {
+    final static byte[] copyByteArray(byte[] source, byte obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -199,12 +199,12 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.length;
+          var2_int = source.length;
           var3 = new byte[var2_int];
-          if (param1 != 91) {
+          if (obfuscationGuard != 91) {
             field_S = (Sprite[]) null;
           }
-          ArrayOperations.copy(param0, 0, var3, 0, var2_int);
+          ArrayOperations.copy(source, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -212,12 +212,12 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("jj.B(");
-          if (param0 == null) {
+          if (source == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -227,11 +227,11 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
         PoolUiText.field_a.drawLeft(WireframeQuad.dobEnterforchat, this.widgetX + (param2 + 4), 4 + (param3 + this.widgetY) + PoolUiText.field_a.maxAscent, 16777215, -1);
     }
 
-    final void f(byte param0) {
+    final void layoutChildren(byte obfuscationGuard) {
         int var2 = 250;
         this.field_N.setWidgetBounds(140, -var2 + this.widgetWidth >> 1, 25, false, -25 + (20 + this.widgetHeight) >> 1);
         this.field_O.setWidgetBounds(100, (this.widgetWidth - var2 >> 1) + 140 + 10, 30, false, 2 + (this.widgetHeight + 20 - 30 >> 1));
-        if (param0 > -68) {
+        if (obfuscationGuard > -68) {
           UiWidget var3 = (UiWidget) null;
           this.updatePointerState((UiWidget) null, 99, -2, 11);
         }

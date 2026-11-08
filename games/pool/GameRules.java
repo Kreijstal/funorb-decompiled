@@ -199,7 +199,7 @@ abstract class GameRules {
               param2 <= 105) {
               var4 = args;
               UsernameSuggestionSupport.setNameSuggestions(92, var4);
-              PoolMatchController.field_gb = PauseMenuScreen.a(args, 57);
+              PoolMatchController.field_gb = PauseMenuScreen.createUsernameSuggestionsResponse(args, 57);
               return;
             }
             PoolMatchController.field_gb = DebouncedValidationProvider.createLoginErrorResponse(param2, true, param3);

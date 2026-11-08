@@ -29,7 +29,7 @@ abstract class ModelTableScene extends TableScene {
           var7 = 0;
           for (var6_int = param0; param4 > var6_int; var6_int++) {
             var8 = -param0 + var6_int;
-            param1[var8] = Atan2Support.a(91, this.field_O[var6_int]);
+            param1[var8] = Atan2Support.splitMeshForSpatialCells(91, this.field_O[var6_int]);
             var7 = var7 + param1[var8].length;
             param2[var8] = new int[param1[var8].length][3];
             for (var9 = 0; param1[var8].length > var9; var9++) {

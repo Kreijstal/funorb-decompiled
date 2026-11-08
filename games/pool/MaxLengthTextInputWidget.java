@@ -124,14 +124,14 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
             } else {
               var5 = var4_ref_String;
             }
-            var6 = CheckboxPainter.a(var4_ref_String, 1);
+            var6 = CheckboxPainter.findIgnoreEntryByName(var4_ref_String, 1);
             var7 = var1.readNullTerminatedString(-17);
             var8 = TutorialController.normalizeDisplayName(117, (CharSequence) ((Object) var4_ref_String));
             if (var8 == null) {
               var8 = var4_ref_String;
             }
             if (null == var6) {
-              var6 = CheckboxPainter.a(var7, 1);
+              var6 = CheckboxPainter.findIgnoreEntryByName(var7, 1);
               if (var6 != null) {
                 LoginTextSupport.field_c.put(-6946, (long)var8.hashCode(), var6);
               }

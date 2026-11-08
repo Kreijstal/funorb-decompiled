@@ -162,24 +162,24 @@ final class InstructionsScreen extends MenuScreen {
           if (!this.selection.isPointerHeld((byte) 102)) {
             if (IterableDualLinkDeque.field_a == 96) {
               if (this.selection.selectedIndex <= var2) {
-                this.selection.a(var3, (byte) 1);
+                this.selection.selectFromKeyboard(var3, (byte) 1);
               } else {
-                this.selection.a(-1 + this.selection.selectedIndex, (byte) 1);
+                this.selection.selectFromKeyboard(-1 + this.selection.selectedIndex, (byte) 1);
               }
             }
             if (IterableDualLinkDeque.field_a == 97) {
               if (0 > this.selection.selectedIndex) {
-                this.selection.a(var2, (byte) 1);
+                this.selection.selectFromKeyboard(var2, (byte) 1);
               } else {
                 if (var3 <= this.selection.selectedIndex) {
-                  this.selection.a(var2, (byte) 1);
+                  this.selection.selectFromKeyboard(var2, (byte) 1);
                 } else {
-                  this.selection.a(this.selection.selectedIndex + 1, (byte) 1);
+                  this.selection.selectFromKeyboard(this.selection.selectedIndex + 1, (byte) 1);
                 }
               }
             }
           }
-          this.selection.a(false);
+          this.selection.beginKeyInput(false);
           return;
         }
         this.getButtonRight(false, 51);
@@ -188,24 +188,24 @@ final class InstructionsScreen extends MenuScreen {
         if (!this.selection.isPointerHeld((byte) 102)) {
           if (IterableDualLinkDeque.field_a == 96) {
             if (this.selection.selectedIndex <= var2) {
-              this.selection.a(var3Lifetime1, (byte) 1);
+              this.selection.selectFromKeyboard(var3Lifetime1, (byte) 1);
             } else {
-              this.selection.a(-1 + this.selection.selectedIndex, (byte) 1);
+              this.selection.selectFromKeyboard(-1 + this.selection.selectedIndex, (byte) 1);
             }
           }
           if (IterableDualLinkDeque.field_a == 97) {
             if (0 > this.selection.selectedIndex) {
-              this.selection.a(var2, (byte) 1);
+              this.selection.selectFromKeyboard(var2, (byte) 1);
             } else {
               if (var3Lifetime1 <= this.selection.selectedIndex) {
-                this.selection.a(var2, (byte) 1);
+                this.selection.selectFromKeyboard(var2, (byte) 1);
               } else {
-                this.selection.a(this.selection.selectedIndex + 1, (byte) 1);
+                this.selection.selectFromKeyboard(this.selection.selectedIndex + 1, (byte) 1);
               }
             }
           }
         }
-        this.selection.a(false);
+        this.selection.beginKeyInput(false);
         return;
     }
 

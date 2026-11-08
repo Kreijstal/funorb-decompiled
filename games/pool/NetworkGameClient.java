@@ -146,7 +146,7 @@ abstract class NetworkGameClient extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = TickClock.a(9539, StatefulTextPainter.c(5), HighScoreRequest.createLoginTextValue(8388));
+            var5_int = TickClock.pollAccountLookup(9539, StatefulTextPainter.c(5), HighScoreRequest.createLoginTextValue(8388));
             if (-1 != var5_int) {
               GameRules.handleLoginResponse(LoginPayloadFactory.field_b, false, var5_int, LoginTextValue.field_g);
               LoginPayloadFactory.field_b = null;
@@ -158,9 +158,9 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = QuickChatHelpDialog.pollAccountCreationRequest(LoginTextSupport.getAccountName(true), this.field_w, CollisionContact.a(false), 50, DelegatingCanvas.getAccountCreationRequestFlag((byte) 108), ByteRecordSubmission.c((byte) 64), ThreeSliceButtonPainter.c(12854));
+            var5_intLifetime1 = QuickChatHelpDialog.pollAccountCreationRequest(LoginTextSupport.getAccountName(true), this.field_w, CollisionContact.a(false), 50, DelegatingCanvas.getAccountCreationRequestFlag((byte) 108), ByteRecordSubmission.getAccountPassword((byte) 64), ThreeSliceButtonPainter.c(12854));
             if (-1 != var5_intLifetime1) {
-              LoginTextValue.a(LoginTextValue.field_g, var5_intLifetime1, LoginPayloadFactory.field_b, (byte) -16);
+              LoginTextValue.completeAccountCreationRequest(LoginTextValue.field_g, var5_intLifetime1, LoginPayloadFactory.field_b, (byte) -16);
               LoginPayloadFactory.field_b = null;
               LoginTextValue.field_g = null;
             }
@@ -172,7 +172,7 @@ abstract class NetworkGameClient extends GameApplet {
               ProgressDialog.i((byte) 72);
             }
             if (!param0) {
-              var5_intLifetime2 = SectorCacheStore.a(false, CollisionContact.a(false), false, this.field_x, this.field_w, ByteRecordSubmission.c((byte) 54));
+              var5_intLifetime2 = SectorCacheStore.a(false, CollisionContact.a(false), false, this.field_x, this.field_w, ByteRecordSubmission.getAccountPassword((byte) 54));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 == 0) {
                   ChatReplacementSupport.field_e = Quaternion.field_a;
@@ -543,7 +543,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (obfuscationGuard > -64) {
           return;
         }
-        if (DebouncedValidationProvider.a(true)) {
+        if (DebouncedValidationProvider.isAccountFlowReady(true)) {
           stackIn_10_1 = false;
           stackIn_11_2 = (MatchingTextValidator.field_u != null);
           discarded$42 = this.serviceAccountActions(stackIn_10_1, stackIn_11_2, -114);
@@ -598,7 +598,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (DualLinkNode.field_v) {
           return -1;
         }
-        var2 = SectorCacheStore.a(false, CollisionContact.a(false), true, this.field_x, this.field_w, ByteRecordSubmission.c((byte) 121));
+        var2 = SectorCacheStore.a(false, CollisionContact.a(false), true, this.field_x, this.field_w, ByteRecordSubmission.getAccountPassword((byte) 121));
         if (param0 == ~var2) {
           return -1;
         }
@@ -654,7 +654,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           PlasmaTableScene.field_gb.updateViewportSize(true);
         }
-        MouseWheelInput.a(127);
+        MouseWheelInput.snapshotKeyboardState(127);
         FixedAngleSupport.snapshotPointerInput((byte) 123);
         if (!StartupInterfaceSupport.a((byte) -124) &&
           PlasmaTableScene.field_ab != 11) {
@@ -788,7 +788,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
         }
         if (QuickChatCategoryDefinition.field_y == 3 &&
-          DropTargetWidget.a(WorldPointProjectionSupport.field_d, PolarTableScene.field_nb, DualLinkNode.field_r, true) &&
+          DropTargetWidget.ensureCommonUiResources(WorldPointProjectionSupport.field_d, PolarTableScene.field_nb, DualLinkNode.field_r, true) &&
           ArchiveAvailabilitySupport.isArchiveFullyAvailable(DualLinkNode.field_r, true)) {
           ShotEvent.releaseAwtLoadingResources(8192);
           MenuSelection.validateSelectionGuard((byte) 98);
@@ -914,7 +914,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           var4_int = archive.getGroupId(groupName, -1);
           var5 = archive.getFileId(var4_int, 0, fileName);
-          stackIn_3_0 = LobbyPlayer.a(var4_int, var5, 0, archive);
+          stackIn_3_0 = LobbyPlayer.loadSpriteSheet(var4_int, var5, 0, archive);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

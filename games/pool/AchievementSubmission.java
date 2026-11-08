@@ -58,7 +58,7 @@ final class AchievementSubmission extends IntrusiveNode {
         int stackIn_53_9;
         boolean stackIn_54_10 = false;
         int var2;
-        TikiBallSkin.j(-8);
+        TikiBallSkin.expireLobbyRowTransitions(-8);
         if (HighscoresScreen.field_L == null) {
           var2 = 0;
           stackIn_4_0 = var2;
@@ -74,7 +74,7 @@ final class AchievementSubmission extends IntrusiveNode {
           stackIn_9_10 = (MessageDialogContent.field_P <= 50) ? false : true;
           OpacityWidget.$cfr$intArgs$a$a4481b60e878(stackIn_4_0 != 0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_6_8, stackIn_8_9, stackIn_9_10, true);
         } else {
-          if (ProgressBarWidget.a(HighscoresScreen.field_L.settings, HighscoresScreen.field_L.field_mc, 2)) {
+          if (ProgressBarWidget.areGameSettingsAllowed(HighscoresScreen.field_L.settings, HighscoresScreen.field_L.field_mc, 2)) {
             var2 = 1;
             stackIn_49_0 = var2;
             stackIn_49_1 = 14;

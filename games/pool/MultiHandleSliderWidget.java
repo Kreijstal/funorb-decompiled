@@ -150,7 +150,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
             stackIn_22_0 = MessageDialogContent.friendlistfull;
             return stackIn_22_0;
           }
-          if (MenuSelection.a(param0, 24552)) {
+          if (MenuSelection.isIgnoredName(param0, 24552)) {
             stackIn_26_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, DisplayNamePanel.removeignorefirst);
             return stackIn_26_0;
           }

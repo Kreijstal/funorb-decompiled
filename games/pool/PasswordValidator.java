@@ -122,7 +122,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_5_0 = AchievementProtocolSupport.field_d;
             return stackIn_5_0;
           }
-          if (!Atan2Support.a((byte) -122, var3, var4)) {
+          if (!Atan2Support.isStrongPassword((byte) -122, var3, var4)) {
             stackIn_9_0 = AchievementProtocolSupport.field_d;
             return stackIn_9_0;
           }

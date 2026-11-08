@@ -105,10 +105,10 @@ final class StartupInterfaceSupport {
         }
         if (null != ScrollPane.field_Nb) {
           ScrollPane.field_Nb.stopNormalAnimation(0);
-          ByteArrayPool.a(param0);
+          ByteArrayPool.resetTooltipState(param0);
           return;
         }
-        ByteArrayPool.a(param0);
+        ByteArrayPool.resetTooltipState(param0);
     }
 
     final static boolean a(int param0) {
@@ -136,7 +136,7 @@ final class StartupInterfaceSupport {
           if (QuickChatCategoryDefinition.field_y < 20) {
             return true;
           }
-          if (!DebouncedValidationProvider.a(true)) {
+          if (!DebouncedValidationProvider.isAccountFlowReady(true)) {
             return true;
           }
           if (0 >= Js5Transport.field_l) {
@@ -150,7 +150,7 @@ final class StartupInterfaceSupport {
         if (QuickChatCategoryDefinition.field_y < 20) {
           return true;
         }
-        if (!DebouncedValidationProvider.a(true)) {
+        if (!DebouncedValidationProvider.isAccountFlowReady(true)) {
           return true;
         }
         if (0 >= Js5Transport.field_l) {

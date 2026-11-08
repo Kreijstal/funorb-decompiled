@@ -171,7 +171,7 @@ final class SoundCache {
           ProjectedLineSupport.field_k = DimmedPauseMenu.loadSprite(archive, obfuscationGuard ^ 101, "", "title_corner_ball9");
           IsaacCipher.field_f = NameEntryPopup.loadSpritesByName(0, "", archive, "achievements");
           for (var2_intLifetime2 = 0; IsaacCipher.field_f.length > var2_intLifetime2; var2_intLifetime2++) {
-            TextInputValidator.a(IsaacCipher.field_f[var2_intLifetime2], (byte) -12);
+            TextInputValidator.padSpriteToFourPixelAlignment(IsaacCipher.field_f[var2_intLifetime2], (byte) -12);
           }
           ByteArrayNode.field_n = DimmedPauseMenu.loadSprite(archive, 99, "", "achievement_highlight_hover");
           Base37Support.field_g = DimmedPauseMenu.loadSprite(archive, 109, "", "achievement_highlight_selected");
@@ -189,7 +189,7 @@ final class SoundCache {
           var6 = ShotEvent.scatterByIndex(var4_ref_int__, (byte) 10, GradientPaletteSupport.buildGradientPalette(new int[]{0, 16776960, var25.length, 16777023}, 18));
           var7 = ShotEvent.scatterByIndex(var4_ref_int__, (byte) 7, GradientPaletteSupport.buildGradientPalette(new int[]{0, 8355711, var25.length, 16777215}, obfuscationGuard ^ 70));
           var11.field_i = var5;
-          dupTemp$0 = ProxyConnectorSupport.a(2, var11);
+          dupTemp$0 = ProxyConnectorSupport.createOutlinedIndexedSprite(2, var11);
           SupportPageLauncher.field_b = dupTemp$0;
           var14 = dupTemp$0;
           var8 = var14;
@@ -198,7 +198,7 @@ final class SoundCache {
           var8.field_y = var14.field_A;
           var8.field_G = 0;
           var11.field_i = var6;
-          dupTemp$1 = ProxyConnectorSupport.a(2, var11);
+          dupTemp$1 = ProxyConnectorSupport.createOutlinedIndexedSprite(2, var11);
           HighScoreRequest.field_y = dupTemp$1;
           var15 = dupTemp$1;
           var8Lifetime1 = var15;
@@ -207,7 +207,7 @@ final class SoundCache {
           var8Lifetime1.field_G = 0;
           var8Lifetime1.field_B = 0;
           var11.field_i = var7;
-          dupTemp$2 = ProxyConnectorSupport.a(obfuscationGuard + 2, var11);
+          dupTemp$2 = ProxyConnectorSupport.createOutlinedIndexedSprite(obfuscationGuard + 2, var11);
           ProgressBarWidget.field_T = dupTemp$2;
           var16 = dupTemp$2;
           var8Lifetime2 = var16;
@@ -217,7 +217,7 @@ final class SoundCache {
           var8Lifetime2.field_y = var16.field_A;
           var11.flipHorizontally();
           var11.field_i = var5;
-          dupTemp$3 = ProxyConnectorSupport.a(2, var11);
+          dupTemp$3 = ProxyConnectorSupport.createOutlinedIndexedSprite(2, var11);
           CushionSegment.field_h = dupTemp$3;
           var17 = dupTemp$3;
           var8Lifetime3 = var17;
@@ -226,7 +226,7 @@ final class SoundCache {
           var8Lifetime3.field_y = var17.field_A;
           var8Lifetime3.field_B = 0;
           var11.field_i = var6;
-          dupTemp$4 = ProxyConnectorSupport.a(2, var11);
+          dupTemp$4 = ProxyConnectorSupport.createOutlinedIndexedSprite(2, var11);
           PacketAvailabilitySupport.field_a = dupTemp$4;
           var18 = dupTemp$4;
           var8Lifetime4 = var18;
@@ -235,7 +235,7 @@ final class SoundCache {
           var8Lifetime4.field_y = var18.field_A;
           var8Lifetime4.field_B = 0;
           var11.field_i = var7;
-          dupTemp$5 = ProxyConnectorSupport.a(2, var11);
+          dupTemp$5 = ProxyConnectorSupport.createOutlinedIndexedSprite(2, var11);
           ScreenProjectionSupport.field_b = dupTemp$5;
           var19 = dupTemp$5;
           var8Lifetime5 = var19;

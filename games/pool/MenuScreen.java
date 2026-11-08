@@ -58,7 +58,7 @@ class MenuScreen extends MenuScreenBase {
           }
         }
         if (this.framedPanel) {
-          ByteArrayPool.a(this.panelWidth, this.panelHeight, true, this.panelX, this.panelY);
+          ByteArrayPool.drawDirectionalFrame(this.panelWidth, this.panelHeight, true, this.panelX, this.panelY);
         }
         if (null != this.headerSprite) {
           this.headerSprite.draw(SoftwareRasterizer.width - this.headerSprite.field_z >> 1, 10);
@@ -236,7 +236,7 @@ class MenuScreen extends MenuScreenBase {
             }
             this.handleMenuAction(-16470, false, this.selection.selectedIndex);
           }
-          this.selection.a(this.findButtonAt(-6564, UsernameAvailabilityValidator.field_o, DialogLayer.field_W), this.findButtonAt(-6564, DebouncedValidationProvider.field_f, ReflectionReplySupport.field_i), param0 ^ -109);
+          this.selection.updatePointerSelection(this.findButtonAt(-6564, UsernameAvailabilityValidator.field_o, DialogLayer.field_W), this.findButtonAt(-6564, DebouncedValidationProvider.field_f, ReflectionReplySupport.field_i), param0 ^ -109);
           if (-1 != this.selection.selectedIndex) {
             this.handleMenuAction(-16470, true, this.selection.selectedIndex);
           }
@@ -575,25 +575,25 @@ class MenuScreen extends MenuScreenBase {
                                                                       var5 = 0;
                                                                       if (this.selection.isHomeKey(123) &&
                                                                         BallDebugOverlay.field_b > 0) {
-                                                                        AgeValidator.a(true, 0);
+                                                                        AgeValidator.setSoundEffectVolume(true, 0);
                                                                         var5 = 1;
                                                                       }
                                                                       if (this.selection.isEndKey(103) &&
                                                                         256 > BallDebugOverlay.field_b) {
                                                                         var5 = 1;
-                                                                        AgeValidator.a(true, 256);
+                                                                        AgeValidator.setSoundEffectVolume(true, 256);
                                                                       }
                                                                       if (this.selection.isPointerHeld((byte) 111)) {
                                                                         var6 = this.getButtonLeft(0, param2) + (this.getButtonRight(false, param2) + Ball.field_H) - 120 >> 1;
                                                                         var7 = -var6 + ReflectionReplySupport.field_i;
                                                                         var8 = 256 * var7 / 120;
                                                                         if (0 >= var8) {
-                                                                          AgeValidator.a(true, 0);
+                                                                          AgeValidator.setSoundEffectVolume(true, 0);
                                                                         } else {
                                                                           if (var8 < 256) {
-                                                                            AgeValidator.a(true, var8);
+                                                                            AgeValidator.setSoundEffectVolume(true, var8);
                                                                           } else {
-                                                                            AgeValidator.a(true, 256);
+                                                                            AgeValidator.setSoundEffectVolume(true, 256);
                                                                           }
                                                                         }
                                                                         var5 = 1;

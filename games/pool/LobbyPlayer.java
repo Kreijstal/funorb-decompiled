@@ -45,7 +45,7 @@ final class LobbyPlayer extends UiComponent {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static Sprite[] loadSpriteSheet(int groupId, int fileId, int obfuscationGuard, ResourceArchive archive) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite[] stackIn_5_0 = null;
@@ -55,11 +55,11 @@ final class LobbyPlayer extends UiComponent {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!TextLineLayout.a(param0, param3, param1, (byte) 121)) {
+          if (!TextLineLayout.a(groupId, archive, fileId, (byte) 121)) {
             stackIn_2_0 = null;
             return (Sprite[]) (stackIn_2_0);
           }
-          if (param2 == 0) {
+          if (obfuscationGuard == 0) {
             stackIn_7_0 = ContentTransitionDialog.l((byte) 65);
             return stackIn_7_0;
           }
@@ -69,8 +69,8 @@ final class LobbyPlayer extends UiComponent {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("im.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_10_1 = new StringBuilder().append("im.C(").append(groupId).append(',').append(fileId).append(',').append(obfuscationGuard).append(',');
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -79,8 +79,8 @@ final class LobbyPlayer extends UiComponent {
         }
     }
 
-    final static UiComponent f(int param0) {
-        if (param0 != 0) {
+    final static UiComponent getNamePopupContent(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           LobbyPlayer.releaseStatics((byte) 20);
           return NameEntryPopup.field_Mb.content;
         }
@@ -151,7 +151,7 @@ final class LobbyPlayer extends UiComponent {
         youCanAskToJoin = null;
         if (param0 != -48) {
           String var2 = (String) null;
-          LobbyPlayer.a((PacketBuffer) null, (byte) 100, (String) null);
+          LobbyPlayer.writeCompressedChatText((PacketBuffer) null, (byte) 100, (String) null);
         }
     }
 
@@ -167,7 +167,7 @@ final class LobbyPlayer extends UiComponent {
         return !this.d(59) ? true : false;
     }
 
-    final static int a(PacketBuffer param0, byte param1, String param2) {
+    final static int writeCompressedChatText(PacketBuffer packet, byte obfuscationGuard, String text) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -181,29 +181,29 @@ final class LobbyPlayer extends UiComponent {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 75) {
+          if (obfuscationGuard != 75) {
             stackIn_2_0 = -12;
             return stackIn_2_0;
           }
-          var3_int = param0.position;
-          var5 = (CharSequence) ((Object) param2);
+          var3_int = packet.position;
+          var5 = (CharSequence) ((Object) text);
           var4 = DirectByteStorage.encodeWindows1252(-66, var5);
-          param0.writeUnsignedSmart((byte) -49, var4.length);
-          param0.position = param0.position + Pool.field_J.compress(0, var4.length, param0.payload, param0.position, var4, true);
-          stackIn_4_0 = -var3_int + param0.position;
+          packet.writeUnsignedSmart((byte) -49, var4.length);
+          packet.position = packet.position + Pool.field_J.compress(0, var4.length, packet.payload, packet.position, var4, true);
+          stackIn_4_0 = -var3_int + packet.position;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("im.D(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";

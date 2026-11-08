@@ -46,7 +46,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         }
     }
 
-    private final int a(String param0, String param1, int param2, int param3, UiWidget param4, int param5) {
+    private final int addDefaultValidatedInputRow(String param0, String param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -61,7 +61,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           if (param5 != -17870) {
             removeignorefirst = (String) null;
           }
-          stackIn_3_0 = this.a(param3, param1, param4, 35, param0, 101, param2);
+          stackIn_3_0 = this.addValidatedInputRow(param3, param1, param4, 35, param0, 101, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -202,7 +202,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           IterableDualLinkDeque.a(87, this.displayNameInput.widgetText);
           if (param0 >= -104) {
             String var3 = (String) null;
-            discarded$0 = this.a(-86, (String) null, (UiWidget) null, -74, (String) null, -122, 47);
+            discarded$0 = this.addValidatedInputRow(-86, (String) null, (UiWidget) null, -74, (String) null, -122, 47);
           }
           return;
         }
@@ -227,7 +227,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         var2.setWidgetBounds(270, 20, 50, false, var3);
         this.addChild(true, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(KillerBallSkin.createDisplayname, LongAndTextLoginPayload.createDisplaynameHint, 170, var3, this.displayNameInput, -17870));
+        var3 = var3 + (5 + this.addDefaultValidatedInputRow(KillerBallSkin.createDisplayname, LongAndTextLoginPayload.createDisplaynameHint, 170, var3, this.displayNameInput, -17870));
         this.okButton.setWidgetBounds(var5, -var5 + 496 >> 1, 40, false, var3);
         this.cancelButton.setWidgetBounds(60, 3 + var4, 40, false, var3 + 15);
         this.cancelButton.listener = (WidgetListener) (this);
@@ -240,7 +240,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         this.setWidgetBounds(496, 0, var4 + 55 + var3, false, 0);
     }
 
-    final static Sprite a(int param0, byte param1, ResourceArchive param2, int param3) {
+    final static Sprite loadSprite(int fileId, byte obfuscationGuard, ResourceArchive archive, int groupId) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite stackIn_6_0 = null;
@@ -249,11 +249,11 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!TextLineLayout.a(param3, param2, param0, (byte) 121)) {
+          if (!TextLineLayout.a(groupId, archive, fileId, (byte) 121)) {
             stackIn_2_0 = null;
             return (Sprite) (stackIn_2_0);
           }
-          if (param1 <= 12) {
+          if (obfuscationGuard <= 12) {
             DisplayNamePanel.releaseStatics(true);
           }
           stackIn_6_0 = ContentTransitionDialog.j((byte) -104);
@@ -262,13 +262,13 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("jp.I(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = new StringBuilder().append("jp.I(").append(fileId).append(',').append(obfuscationGuard).append(',');
+          if (archive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(groupId).append(')').toString());
         }
     }
 
@@ -294,7 +294,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         return true;
     }
 
-    private final int a(int param0, String param1, UiWidget param2, int param3, String param4, int param5, int param6) {
+    private final int addValidatedInputRow(int param0, String param1, UiWidget param2, int param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         ValidationMessageWidget var9 = null;
         LabeledChildWidget var10 = null;

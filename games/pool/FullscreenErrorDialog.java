@@ -62,7 +62,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
             if (AchievementsScreen.field_K == param1) {
               var3 = QuickChatPhraseRegistry.fsFocus;
               this.widgetHeight = this.widgetHeight + 10;
-              if (ArchiveBootstrapSupport.b((byte) 124)) {
+              if (ArchiveBootstrapSupport.canResizeViewport((byte) 124)) {
                 this.widgetHeight = this.widgetHeight + 20;
                 var3 = HuffmanCodec.fsFocusOrResolution;
               }

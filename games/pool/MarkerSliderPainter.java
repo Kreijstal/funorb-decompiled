@@ -36,7 +36,7 @@ final class MarkerSliderPainter implements WidgetPainter {
             return stackIn_2_0;
           }
           var3 = new SceneNode();
-          var3.field_d = BeveledFrameSpriteFactory.a((byte) 112, param2);
+          var3.field_d = BeveledFrameSpriteFactory.completeTransform((byte) 112, param2);
           var3.field_i = param1;
           IntrusiveNodeHashTable.a(var3.field_d, -123, var3.field_i);
           stackIn_4_0 = var3;
@@ -195,21 +195,21 @@ final class MarkerSliderPainter implements WidgetPainter {
                 var8 = var8 + var14 * var26;
                 var7 = var7 + var26 * var13;
               }
-              if (LobbyGame.a(-3, param0, (int) param0.field_p[var5])) {
+              if (LobbyGame.isVertexUsedByDrawableFace(-3, param0, (int) param0.field_p[var5])) {
                 param0.field_p[var5] = (short)param0.addVertex(var6, var7, var8);
               } else {
                 param0.vertexX[param0.field_p[var5]] = var6;
                 param0.vertexY[param0.field_p[var5]] = var7;
                 param0.vertexZ[param0.field_p[var5]] = var8;
               }
-              if (!LobbyGame.a(-3, param0, (int) param0.field_p[var5])) {
+              if (!LobbyGame.isVertexUsedByDrawableFace(-3, param0, (int) param0.field_p[var5])) {
                 param0.vertexX[param0.field_H[var5]] = var9 + var6;
                 param0.vertexY[param0.field_H[var5]] = var7 + var10;
                 param0.vertexZ[param0.field_H[var5]] = var8 + var11;
               } else {
                 param0.field_p[var5] = (short)param0.addVertex(var6 + var9, var7 + var10, var8 + var11);
               }
-              if (!LobbyGame.a(-3, param0, (int) param0.field_p[var5])) {
+              if (!LobbyGame.isVertexUsedByDrawableFace(-3, param0, (int) param0.field_p[var5])) {
                 param0.vertexX[param0.field_C[var5]] = var12 + var6;
                 param0.vertexY[param0.field_C[var5]] = var7 + var13;
                 param0.vertexZ[param0.field_C[var5]] = var14 + var8;

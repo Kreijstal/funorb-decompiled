@@ -149,7 +149,7 @@ final class CanvasInputSupport {
         }
     }
 
-    final static BinaryBitmapFont a(ResourceArchive param0, String param1, int param2, ResourceArchive param3, String param4) {
+    final static BinaryBitmapFont loadBinaryFontByName(ResourceArchive spriteArchive, String fileName, int obfuscationGuard, ResourceArchive metricsArchive, String groupName) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -165,34 +165,34 @@ final class CanvasInputSupport {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param0.getGroupId(param4, -1);
-          var6 = param0.getFileId(var5_int, param2, param1);
-          stackIn_1_0 = LoginResponse.a(param0, 43, var5_int, param3, var6);
+          var5_int = spriteArchive.getGroupId(groupName, -1);
+          var6 = spriteArchive.getFileId(var5_int, obfuscationGuard, fileName);
+          stackIn_1_0 = LoginResponse.a(spriteArchive, 43, var5_int, metricsArchive, var6);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_4_0 = var5;
           stackIn_4_1 = new StringBuilder().append("he.C(");
-          if (param0 == null) {
+          if (spriteArchive == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param1 == null) {
+          if (fileName == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(',');
+          if (metricsArchive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param4 == null) {
+          if (groupName == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";

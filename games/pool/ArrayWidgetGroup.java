@@ -383,7 +383,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final static TriangleMesh a(int param0, CipherPacketBuffer param1) {
+    final static TriangleMesh readPackedTriangleMesh(int obfuscationGuard, CipherPacketBuffer packet) {
         int var7 = 0;
         TriangleMesh stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
@@ -397,46 +397,46 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         TriangleMesh var5 = null;
         int var6 = 0;
         try {
-          var2_int = param1.readBits(8, 74);
+          var2_int = packet.readBits(8, 74);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          if (param0 != -16336) {
+          if (obfuscationGuard != -16336) {
             ArrayWidgetGroup.releaseStatics(-31);
           }
-          var3 = FullscreenErrorDialog.readBooleanBit((byte) 118, param1) ? 1 : 0;
-          var4 = FullscreenErrorDialog.readBooleanBit((byte) 118, param1) ? 1 : 0;
+          var3 = FullscreenErrorDialog.readBooleanBit((byte) 118, packet) ? 1 : 0;
+          var4 = FullscreenErrorDialog.readBooleanBit((byte) 118, packet) ? 1 : 0;
           var5 = new TriangleMesh();
-          var5.vertexCount = (short)param1.readBits(16, 98);
-          var5.vertexX = LobbyGame.a(16, var5.vertexX, (byte) 127, param1);
-          var5.vertexY = LobbyGame.a(16, var5.vertexY, (byte) 99, param1);
-          var5.vertexZ = LobbyGame.a(16, var5.vertexZ, (byte) 123, param1);
-          var5.field_d = (short)param1.readBits(16, 69);
-          var5.field_y = LobbyGame.a(16, var5.field_y, (byte) 122, param1);
-          var5.field_r = LobbyGame.a(16, var5.field_r, (byte) 111, param1);
-          var5.field_u = LobbyGame.a(16, var5.field_u, (byte) 109, param1);
+          var5.vertexCount = (short)packet.readBits(16, 98);
+          var5.vertexX = LobbyGame.readPackedShortArray(16, var5.vertexX, (byte) 127, packet);
+          var5.vertexY = LobbyGame.readPackedShortArray(16, var5.vertexY, (byte) 99, packet);
+          var5.vertexZ = LobbyGame.readPackedShortArray(16, var5.vertexZ, (byte) 123, packet);
+          var5.field_d = (short)packet.readBits(16, 69);
+          var5.field_y = LobbyGame.readPackedShortArray(16, var5.field_y, (byte) 122, packet);
+          var5.field_r = LobbyGame.readPackedShortArray(16, var5.field_r, (byte) 111, packet);
+          var5.field_u = LobbyGame.readPackedShortArray(16, var5.field_u, (byte) 109, packet);
           if (var3 != 0) {
-            var5.field_o = (short)param1.readBits(16, param0 + 16375);
-            var5.field_Q = LobbyGame.a(16, var5.field_Q, (byte) 109, param1);
-            var5.field_p = LobbyGame.a(16, var5.field_p, (byte) 121, param1);
-            var5.field_j = LobbyGame.a(16, var5.field_j, (byte) 120, param1);
-            var5.field_x = LobbyGame.a(16, var5.field_x, (byte) 109, param1);
-            var5.field_w = LobbyGame.a(16, var5.field_w, (byte) 110, param1);
-            var5.field_O = LobbyGame.a(16, var5.field_O, (byte) 118, param1);
+            var5.field_o = (short)packet.readBits(16, obfuscationGuard + 16375);
+            var5.field_Q = LobbyGame.readPackedShortArray(16, var5.field_Q, (byte) 109, packet);
+            var5.field_p = LobbyGame.readPackedShortArray(16, var5.field_p, (byte) 121, packet);
+            var5.field_j = LobbyGame.readPackedShortArray(16, var5.field_j, (byte) 120, packet);
+            var5.field_x = LobbyGame.readPackedShortArray(16, var5.field_x, (byte) 109, packet);
+            var5.field_w = LobbyGame.readPackedShortArray(16, var5.field_w, (byte) 110, packet);
+            var5.field_O = LobbyGame.readPackedShortArray(16, var5.field_O, (byte) 118, packet);
           }
           if (var4 != 0) {
-            param1.readBits(16, param0 ^ -16283);
-            var5.field_v = LobbyGame.a(16, var5.field_v, (byte) 94, param1);
-            var5.field_a = LobbyGame.a(16, var5.field_a, (byte) 118, param1);
-            var5.field_i = LobbyGame.a(16, var5.field_i, (byte) 111, param1);
-            var5.field_P = LobbyGame.a(16, var5.field_P, (byte) 104, param1);
-            var5.field_z = LobbyGame.a(16, var5.field_z, (byte) 102, param1);
+            packet.readBits(16, obfuscationGuard ^ -16283);
+            var5.field_v = LobbyGame.readPackedShortArray(16, var5.field_v, (byte) 94, packet);
+            var5.field_a = LobbyGame.readPackedShortArray(16, var5.field_a, (byte) 118, packet);
+            var5.field_i = LobbyGame.readPackedShortArray(16, var5.field_i, (byte) 111, packet);
+            var5.field_P = LobbyGame.readPackedShortArray(16, var5.field_P, (byte) 104, packet);
+            var5.field_z = LobbyGame.readPackedShortArray(16, var5.field_z, (byte) 102, packet);
           }
-          if (FullscreenErrorDialog.readBooleanBit((byte) 118, param1)) {
-            var5.field_H = LobbyGame.a(16, var5.field_H, (byte) 110, param1);
+          if (FullscreenErrorDialog.readBooleanBit((byte) 118, packet)) {
+            var5.field_H = LobbyGame.readPackedShortArray(16, var5.field_H, (byte) 110, packet);
           }
-          if (FullscreenErrorDialog.readBooleanBit((byte) 118, param1)) {
-            var5.field_K = AwtEventQueueSupport.readPackedByteArray(50, 16, param1, var5.field_K);
+          if (FullscreenErrorDialog.readBooleanBit((byte) 118, packet)) {
+            var5.field_K = AwtEventQueueSupport.readPackedByteArray(50, 16, packet, var5.field_K);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_K.length; var7++) {
               if ((var5.field_K[var7] & 255) > var6) {
@@ -455,8 +455,8 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_27_0 = var2;
-          stackIn_27_1 = new StringBuilder().append("fm.SA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_27_1 = new StringBuilder().append("fm.SA(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
@@ -649,7 +649,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
 
     final void setWidgetBounds(int param0, int param1, int param2, boolean param3, int param4) {
         super.setWidgetBounds(param0, param1, param2, param3, param4);
-        this.f((byte) -125);
+        this.layoutChildren((byte) -125);
     }
 
     private final boolean requestNextChildFocus(UiWidget param0, int param1) {
@@ -724,7 +724,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    abstract void f(byte param0);
+    abstract void layoutChildren(byte obfuscationGuard);
 
     final static Class resolveReflectionType(boolean obfuscationGuard, String typeName) throws ClassNotFoundException {
         RuntimeException var2 = null;

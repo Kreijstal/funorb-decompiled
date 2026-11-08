@@ -22,7 +22,7 @@ class MenuScreenBase {
         field_a = null;
     }
 
-    final static void a(int param0, String param1, String param2, int param3, String param4, boolean param5) {
+    final static void appendChatMessage(int param0, String param1, String param2, int param3, String param4, boolean param5) {
         ChatMessage var6 = null;
         RuntimeException var6_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -67,7 +67,7 @@ class MenuScreenBase {
         }
     }
 
-    final static int[] a(int param0, byte param1, int[] param2) {
+    final static int[] extendIntArray(int additionalElements, byte obfuscationGuard, int[] array) {
         RuntimeException var3 = null;
         int[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -75,17 +75,17 @@ class MenuScreenBase {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 108) {
+          if (obfuscationGuard != 108) {
             MenuScreenBase.releaseStatics(92);
           }
-          stackIn_3_0 = VertexTransformSupport.extendIntArray(123, 0, param2, param0);
+          stackIn_3_0 = VertexTransformSupport.extendIntArray(123, 0, array, additionalElements);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("jh.IA(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_6_1 = new StringBuilder().append("jh.IA(").append(additionalElements).append(',').append(obfuscationGuard).append(',');
+          if (array == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

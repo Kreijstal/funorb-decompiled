@@ -998,7 +998,7 @@ final class ModernTableScene extends ModelTableScene {
           this.field_O[incrementValue$21] = MeshBuilder.loadFromArchive(param0, "", "new_classic_table/classic_top_b");
           TableScene.field_I = var3_int;
           this.field_A = new CueStick();
-          this.field_A.a(MeshBuilder.loadFromArchive(param0, "", "cues/classic_cue"), (byte) -121);
+          this.field_A.buildCueSegments(MeshBuilder.loadFromArchive(param0, "", "cues/classic_cue"), (byte) -121);
           for (var4 = 0; var4 < this.field_O.length; var4++) {
             VerticalScrollbar.swapMeshYAndZ(0, this.field_O[var4]);
           }

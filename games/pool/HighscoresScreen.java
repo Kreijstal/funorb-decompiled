@@ -65,7 +65,7 @@ final class HighscoresScreen extends MenuScreen {
         int var7Lifetime1;
         var11 = Pool.field_O;
         if (null == DateInputWidget.field_V) {
-          DateInputWidget.field_V = ImageProducerRasterBuffer.a(-112, 1, StrongCacheEntry.field_O, 3, 10);
+          DateInputWidget.field_V = ImageProducerRasterBuffer.getOrCreateHighScoreRequest(-112, 1, StrongCacheEntry.field_O, 3, 10);
         }
         regionExit1: {
           if (DateInputWidget.field_V.field_u) {
@@ -186,16 +186,16 @@ final class HighscoresScreen extends MenuScreen {
           super.handleNavigationKey(-34);
         } else {
           if (IterableDualLinkDeque.field_a == 96) {
-            this.selection.a(this.selection.selectedIndex / 3 * 3 + (this.selection.selectedIndex + 2) % 3, (byte) 1);
+            this.selection.selectFromKeyboard(this.selection.selectedIndex / 3 * 3 + (this.selection.selectedIndex + 2) % 3, (byte) 1);
           }
           if (IterableDualLinkDeque.field_a == 97) {
-            this.selection.a(3 * (this.selection.selectedIndex / 3) + (this.selection.selectedIndex + 1) % 3, (byte) 1);
+            this.selection.selectFromKeyboard(3 * (this.selection.selectedIndex / 3) + (this.selection.selectedIndex + 1) % 3, (byte) 1);
           }
           if (IterableDualLinkDeque.field_a == 99 ||
             IterableDualLinkDeque.field_a == 98) {
-            this.selection.a((this.selection.selectedIndex + 3) % 6, (byte) 1);
+            this.selection.selectFromKeyboard((this.selection.selectedIndex + 3) % 6, (byte) 1);
           }
-          this.selection.a(false);
+          this.selection.beginKeyInput(false);
         }
         if (param0 != -34) {
           field_I = -119;
@@ -436,7 +436,7 @@ final class HighscoresScreen extends MenuScreen {
           QuickChatPhraseDefinition.loadLobbyTheme(param4, false, param13, param8, param9);
           DualLinkDeque.initializeSocialListPanels(1, param9);
           DiskCacheWorker.a(param10, param14, args, param2, (byte) 60, param12, param18, param15, param1, param5, param11, param19, param16, param7, param9);
-          CueStick.a(param3, false, param9, param6);
+          CueStick.initializeChatInterface(param3, false, param9, param6);
           FaceNormal.initializeRuleDescriptions(-74);
           var20_int = -118 % ((26 - param17) / 52);
           DelegatingCanvas.initializeLobbyChatPanels(-119);

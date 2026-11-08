@@ -401,7 +401,7 @@ final class CachedArchiveSource extends ArchiveProvider {
               if (null != this.index.field_a &&
                 null != this.index.field_a[param0]) {
                 var29 = this.index.field_a[param0];
-                var30 = TikiBallSkin.a(-2 + var18.length, (byte) -83, var18, 0);
+                var30 = TikiBallSkin.whirlpoolDigest(-2 + var18.length, (byte) -83, var18, 0);
                 var11 = 0;
                 var9 = var11;
                 while (64 > var11) {
@@ -454,7 +454,7 @@ final class CachedArchiveSource extends ArchiveProvider {
             if (this.index.field_a != null &&
               null != this.index.field_a[param0]) {
               var27 = this.index.field_a[param0];
-              var28 = TikiBallSkin.a(var18.length - 2, (byte) -76, var18, 0);
+              var28 = TikiBallSkin.whirlpoolDigest(var18.length - 2, (byte) -76, var18, 0);
               for (var9 = 0; 64 > var9; var9++) {
                 if (~var27[var9] != ~var28[var9]) {
                   throw new RuntimeException();

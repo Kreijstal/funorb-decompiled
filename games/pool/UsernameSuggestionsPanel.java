@@ -162,7 +162,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           MessageDialogContent.a(param4, param9, param1, 112);
         }
         if (LogoMaterial.field_b > 0) {
-          ButtonWidget.a(param8, param4, param1, -102, param9);
+          ButtonWidget.updateLobbyGameControls(param8, param4, param1, -102, param9);
         }
         if (AccountWelcomePanel.field_bb &&
           HighscoresScreen.field_L.field_Nb <= HighscoresScreen.field_L.field_mc) {

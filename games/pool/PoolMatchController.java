@@ -1333,7 +1333,7 @@ final class PoolMatchController {
                 }
               }
             }
-            BrowserCookieSupport.a(false, (Js5Transport.field_q.field_y >> 1) + ArrayWidgetGroup.field_M, 300);
+            BrowserCookieSupport.advanceScrollingChatLines(false, (Js5Transport.field_q.field_y >> 1) + ArrayWidgetGroup.field_M, 300);
             stackIn_396_0 = -1;
           }
           if (stackIn_396_0 <= ~this.clockTicks) {
@@ -3841,7 +3841,7 @@ final class PoolMatchController {
                 if (CollisionContact.field_v != var7_ref_StringLifetime2 &&
                   !var7_ref_StringLifetime2.equals(CollisionContact.field_v)) {
                   CollisionContact.field_v = var7_ref_StringLifetime2;
-                  TextInputValidator.field_i = SharedRateScaleSupport.a(1, param0, 320, var7_ref_StringLifetime2, 4);
+                  TextInputValidator.field_i = SharedRateScaleSupport.createOutlinedTextSprite(1, param0, 320, var7_ref_StringLifetime2, 4);
                 }
                 TextInputValidator.field_i.draw(SoftwareRasterizer.width - TextInputValidator.field_i.field_z >> 1, 80);
                 if ((LobbyPanelLayoutSupport.field_f & this.modeFlags) == 0) {
@@ -3929,7 +3929,7 @@ final class PoolMatchController {
             IntrusiveNode.a(2, var3, var4);
             var2[var5_int] = (float)DualLinkDequeIterator.field_g;
           }
-          CollisionContact.field_h.drawLeft("audio falloff start=" + LoginPayload.field_a + " speed=" + DropTargetWidget.a((long)QuickChatPhraseDefinition.field_G, 3, true, 8) + " (" + QuickChatPhraseDefinition.field_G + ")" + ", slope=" + StartupInterfaceSupport.field_e, 10, 50, 65280, 3355443);
+          CollisionContact.field_h.drawLeft("audio falloff start=" + LoginPayload.field_a + " speed=" + DropTargetWidget.formatDecimalFixedPoint((long)QuickChatPhraseDefinition.field_G, 3, true, 8) + " (" + QuickChatPhraseDefinition.field_G + ")" + ", slope=" + StartupInterfaceSupport.field_e, 10, 50, 65280, 3355443);
           SoftwareRasterizer.drawLine(0, 440, 0, 445, 65280);
           CollisionContact.field_h.drawLeft("camera", 1, 460, 65280, 1);
           SoftwareRasterizer.drawLine(SoftwareRasterizer.width / 2, 440, SoftwareRasterizer.width / 2, 445, 65280);

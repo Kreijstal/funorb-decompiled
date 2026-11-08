@@ -124,7 +124,7 @@ final class HotspotRectangle extends IntrusiveNode {
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
             if (!ContextMenu.isAsciiLetter((char) var3, 22987) &&
-              !LobbyGame.a((char) var3, (byte) 120)) {
+              !LobbyGame.isAsciiDigit((char) var3, (byte) 120)) {
               return true;
             }
           }
@@ -149,7 +149,7 @@ final class HotspotRectangle extends IntrusiveNode {
           String var3 = (String) null;
           HotspotRectangle.reverseString((String) null, 95);
         }
-        Quaternion.a(param1, param0 - 19268);
+        Quaternion.drawGameOverlays(param1, param0 - 19268);
     }
 
     final static String reverseString(String param0, int param1) {

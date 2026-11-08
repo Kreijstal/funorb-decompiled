@@ -276,7 +276,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_q = TikiBallSkin.a(param0.length, (byte) -51, param0, 0);
+            this.field_q = TikiBallSkin.whirlpoolDigest(param0.length, (byte) -51, param0, 0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (param2[var4_int] != this.field_q[var4_int]) {
                 throw new RuntimeException();

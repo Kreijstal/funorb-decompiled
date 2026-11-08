@@ -495,7 +495,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_66_0 = LobbyGame.a(var2.charAt(var3), (byte) 19);
+                      stackIn_66_0 = LobbyGame.isAsciiDigit(var2.charAt(var3), (byte) 19);
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;

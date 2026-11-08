@@ -211,7 +211,7 @@ abstract class TextLayout {
         try {
           if (ViewportController.field_c == null ||
             !(param1 <= ViewportController.field_c.length)) {
-            ByteRecordSubmission.a(param1, (byte) 49);
+            ByteRecordSubmission.initializeProjectedVertexPool(param1, (byte) 49);
           }
           for (var11_int = 0; param1 > var11_int; var11_int++) {
             ViewportController.field_c[var11_int].a(param8[var11_int], param10[var11_int], param2[var11_int], param0[var11_int], (byte) 120, param4);

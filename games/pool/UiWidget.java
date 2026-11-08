@@ -757,7 +757,7 @@ class UiWidget extends IntrusiveNode {
         if (param1 < 73) {
           return;
         }
-        String var5 = Atan2Support.a(9383);
+        String var5 = Atan2Support.getVisibleTooltipText(9383);
         if (var5 == null) {
           return;
         }

@@ -468,7 +468,7 @@ final class SectorCacheStore {
             }
             if (RankingsScreen.field_J == Js5Transport.field_h) {
               if (!param2) {
-                CookieDateSupport.field_c = TickClock.a(false, param1, -5790, param5);
+                CookieDateSupport.field_c = TickClock.createNamedLoginPayload(false, param1, -5790, param5);
               } else {
                 var11 = (String) null;
                 CookieDateSupport.field_c = LoginPayloadFactory.createLoginPayload(Quaternion.field_a, -16595, param5, false, (String) null);
@@ -534,7 +534,7 @@ final class SectorCacheStore {
               var12 = PlayerContextMenu.field_e.readNullableString(108);
               var7 = PlayerContextMenu.field_e.readUnsignedByte(-76);
               if (0 != (1 & var7)) {
-                LoginTextValue.a(100);
+                LoginTextValue.persistRandomSeedFromPacket(100);
               }
               stackIn_44_0 = ((16 & var7) != 0);
               NineSliceFrame.field_b = stackIn_44_0;

@@ -106,7 +106,7 @@ final class IntKeyLookup {
             param4 = false;
             ProgressDialog.m(8421504);
           }
-          ProxyConnectorSupport.a(-31668, param3, param4);
+          ProxyConnectorSupport.pollSocialNamePopup(-31668, param3, param4);
           PlasmaBallSkin.updateReportAbuseDialog(true, param0, param4);
           param4 = false;
         }

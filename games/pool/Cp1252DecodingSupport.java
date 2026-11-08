@@ -35,7 +35,7 @@ final class Cp1252DecodingSupport {
             var4 = (String) null;
             Cp1252DecodingSupport.showLoadingProgress((String) null, false, false, -0.28095385432243347f);
           }
-          ImageProducerRasterBuffer.a(param1, (byte) 38);
+          ImageProducerRasterBuffer.reverseFaceWinding(param1, (byte) 38);
           param1.clearCaches();
           stackIn_7_0 = (MeshBuilder) (param1);
           return stackIn_7_0;

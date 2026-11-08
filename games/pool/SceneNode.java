@@ -326,7 +326,7 @@ final class SceneNode {
           var12 = new int[]{var7, var7, var7, var7, var8, var8, var8, var8, var7, var8, var7, var8, var7, var8, var7, var8, var7, var7, var8, var8, var7, var7, var8, var8};
           var13 = new int[]{var9, var9, var10, var10, var9, var9, var10, var10, var9, var9, var10, var10, var9, var9, var10, var10, var9, var10, var9, var10, var9, var10, var9, var10};
           var14 = new int[]{6697779, 6710886, 6710886, 6710886, 3368499, 6710886, 6710886, 6710886, 3355494, 6710886, 6710886, 6710886};
-          MembershipBenefitsScreen.a(24, 0, true, var11, var13, var12, param2);
+          MembershipBenefitsScreen.transformVerticesInPlace(24, 0, true, var11, var13, var12, param2);
           VertexTransformSupport.transformVertices(var13, 0, param0, var12, 24, var11, (byte) 56);
           for (var15 = 0; var15 < 24; var15 += 2) {
             if (0 <= var13[var15] &&
@@ -601,7 +601,7 @@ final class SceneNode {
     final void normalizeOffsets(int param0) {
         int var2 = 0;
         int var3 = Pool.field_O;
-        this.field_d = BeveledFrameSpriteFactory.a((byte) 123, this.field_d);
+        this.field_d = BeveledFrameSpriteFactory.completeTransform((byte) 123, this.field_d);
         if (null != this.field_b) {
           for (var2 = 0; var2 < this.field_b.length; var2++) {
             this.field_b[var2].normalizeOffsets(0);

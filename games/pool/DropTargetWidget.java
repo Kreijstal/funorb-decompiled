@@ -37,14 +37,14 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(int param0, byte param1, long param2) {
+    final static void sendLobbyInviteRequest(int opcode, byte obfuscationGuard, long playerId) {
         CipherPacketBuffer var4 = JaggrabDownloader.field_j;
-        var4.writeCipheredOpcode(false, param0);
+        var4.writeCipheredOpcode(false, opcode);
         var4.position = var4.position + 1;
-        int var6 = 84 / ((-74 - param1) / 37);
+        int var6 = 84 / ((-74 - obfuscationGuard) / 37);
         int var5 = var4.position;
         var4.writeByte(6, false);
-        var4.writeLong(param2, (byte) -126);
+        var4.writeLong(playerId, (byte) -126);
         var4.writeByteLengthPrefix(var4.position - var5, true);
     }
 
@@ -63,12 +63,12 @@ final class DropTargetWidget extends SingleChildWidget {
         CacheEntry.a(false, 4, 4);
     }
 
-    final static String a(long param0, int param1, boolean param2, int param3) {
-        if (param2) {
-          return ResourceArchive.formatFixedPoint(param0, param3, false, -109, param1, 10);
+    final static String formatDecimalFixedPoint(long value, int maxFractionDigits, boolean obfuscationGuard, int fractionalBits) {
+        if (obfuscationGuard) {
+          return ResourceArchive.formatFixedPoint(value, fractionalBits, false, -109, maxFractionDigits, 10);
         }
         DropTargetWidget.releaseStatics(83);
-        return ResourceArchive.formatFixedPoint(param0, param3, false, -109, param1, 10);
+        return ResourceArchive.formatFixedPoint(value, fractionalBits, false, -109, maxFractionDigits, 10);
     }
 
     private DropTargetWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6) {
@@ -80,14 +80,14 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(int[] param0, byte param1, int[] param2) {
+    final static void sortParallelArrays(int[] values, byte obfuscationGuard, int[] keys) {
         try {
-          PlayingSound.sortParallelArrays(param2.length, (byte) -104, param2, param0, 0);
-          if (param1 != -121) {
+          PlayingSound.sortParallelArrays(keys.length, (byte) -104, keys, values, 0);
+          if (obfuscationGuard != -121) {
             field_O = (BallDebugOverlay[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "k.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "k.D(" + (values != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (keys != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, boolean param3) {
+    final static boolean ensureCommonUiResources(ResourceArchive firstArchive, ResourceArchive secondArchive, ResourceArchive buttonArchive, boolean obfuscationGuard) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -110,17 +110,17 @@ final class DropTargetWidget extends SingleChildWidget {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.isIndexReady(85)) {
+          if (!firstArchive.isIndexReady(85)) {
             return false;
           }
-          if (!param0.ensureGroupAvailableByName("commonui", 0)) {
+          if (!firstArchive.ensureGroupAvailableByName("commonui", 0)) {
             return false;
           }
-          if (param1.isIndexReady(71) &&
-            param1.ensureGroupAvailableByName("commonui", 0)) {
-            if (param2.isIndexReady(122) &&
-              param2.ensureGroupAvailableByName("button.gif", 0)) {
-              if (param3) {
+          if (secondArchive.isIndexReady(71) &&
+            secondArchive.ensureGroupAvailableByName("commonui", 0)) {
+            if (buttonArchive.isIndexReady(122) &&
+              buttonArchive.ensureGroupAvailableByName("button.gif", 0)) {
+              if (obfuscationGuard) {
                 return true;
               }
               return true;
@@ -133,24 +133,24 @@ final class DropTargetWidget extends SingleChildWidget {
           var4 = decompiledCaughtException;
           stackIn_22_0 = var4;
           stackIn_22_1 = new StringBuilder().append("k.H(");
-          if (param0 == null) {
+          if (firstArchive == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
           stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
-          if (param1 == null) {
+          if (secondArchive == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
           stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',');
-          if (param2 == null) {
+          if (buttonArchive == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

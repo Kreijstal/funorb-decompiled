@@ -13,7 +13,7 @@ final class QuickChatNavigationSupport {
 
     final static void restoreQuickChatMenu(byte param0) {
         int var1 = -75 / ((-64 - param0) / 62);
-        CueStick.a(120, GrowableIntListFactory.field_b);
+        CueStick.showQuickChatMenu(120, GrowableIntListFactory.field_b);
     }
 
     public static void releaseStatics(boolean param0) {

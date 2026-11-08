@@ -42,7 +42,7 @@ final class BrowserCookieWriter {
           int[] var2 = var4;
           param0.vertexZ = param0.vertexX;
           param0.vertexX = var4;
-          ImageProducerRasterBuffer.a(param0, (byte) 38);
+          ImageProducerRasterBuffer.reverseFaceWinding(param0, (byte) 38);
           param0.clearCaches();
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

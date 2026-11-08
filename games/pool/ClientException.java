@@ -21,7 +21,7 @@ final class ClientException extends RuntimeException {
         if (HighScoreSubmission.c(param1 ^ 48)) {
           param0 = false;
         }
-        CueStick.a(param0, 118);
+        CueStick.drawSlidingGamePanels(param0, 118);
         if (ParticleTrail.field_f) {
           SoftwareRasterizer.darkenRectangle(IntegerSyntaxSupport.field_e.field_i.localX, IntegerSyntaxSupport.field_e.field_i.localY, IntegerSyntaxSupport.field_e.field_i.width, IntegerSyntaxSupport.field_e.field_i.height);
           IntegerSyntaxSupport.field_e.field_i.drawRoot((byte) -79, param0);

@@ -12,7 +12,7 @@ abstract class TickClock {
     static UiComponent field_i;
     static int[] field_g;
 
-    final static int a(int param0, LoginTextValue param1, LoginTextValue param2) {
+    final static int pollAccountLookup(int obfuscationGuard, LoginTextValue secondText, LoginTextValue firstText) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_3_0 = 0;
@@ -23,24 +23,24 @@ abstract class TickClock {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 9539) {
+          if (obfuscationGuard != 9539) {
             TickClock.releaseStatics((byte) -60);
           }
           var4 = (String) null;
-          stackIn_3_0 = LoginRequestSupport.pollAccountCreationRequest((String) null, (byte) 107, 0, false, param2, param1, 0);
+          stackIn_3_0 = LoginRequestSupport.pollAccountCreationRequest((String) null, (byte) 107, 0, false, firstText, secondText, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("kb.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("kb.E(").append(obfuscationGuard).append(',');
+          if (secondText == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param2 == null) {
+          if (firstText == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -69,12 +69,12 @@ abstract class TickClock {
         return this.advanceTicks(param0, (byte) 113);
     }
 
-    final static void a(byte param0, PcmSampleStream param1) {
+    final static void removeSoundEffectStream(byte obfuscationGuard, PcmSampleStream stream) {
         try {
-          int var2_int = 59 % ((param0 + 75) / 33);
-          SpaceObject.field_d.removeSubstream(param1);
+          int var2_int = 59 % ((obfuscationGuard + 75) / 33);
+          SpaceObject.field_d.removeSubstream(stream);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kb.C(" + obfuscationGuard + ',' + (stream != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -89,13 +89,13 @@ abstract class TickClock {
         field_i = null;
         if (param0 != 111) {
           LoginTextValue var2 = (LoginTextValue) null;
-          TickClock.a(-28, (LoginTextValue) null, (LoginTextValue) null);
+          TickClock.pollAccountLookup(-28, (LoginTextValue) null, (LoginTextValue) null);
         }
     }
 
     abstract long delayMillis(int param0);
 
-    final static LoginPayload a(boolean param0, String param1, int param2, String param3) {
+    final static LoginPayload createNamedLoginPayload(boolean mode, String username, int obfuscationGuard, String password) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -109,30 +109,30 @@ abstract class TickClock {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_long = 0L;
-          if (param2 != -5790) {
+          if (obfuscationGuard != -5790) {
             mpYouofferrematch = (String) null;
           }
           var6 = null;
-          if (param1.indexOf('@') != -1) {
-            var6 = param1;
+          if (username.indexOf('@') != -1) {
+            var6 = username;
           } else {
-            var7 = (CharSequence) ((Object) param1);
+            var7 = (CharSequence) ((Object) username);
             var4_long = Base37Support.encodeBase37((byte) 52, var7);
           }
-          stackIn_6_0 = LoginPayloadFactory.createLoginPayload(var4_long, param2 - 10805, param3, param0, (String) (var6));
+          stackIn_6_0 = LoginPayloadFactory.createLoginPayload(var4_long, obfuscationGuard - 10805, password, mode, (String) (var6));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("kb.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("kb.D(").append(mode).append(',');
+          if (username == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',');
+          if (password == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";

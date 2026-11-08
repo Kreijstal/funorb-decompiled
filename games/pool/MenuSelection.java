@@ -21,26 +21,26 @@ final class MenuSelection {
         field_d = null;
     }
 
-    final void a(int param0, byte param1) {
+    final void selectFromKeyboard(int index, byte obfuscationGuard) {
         if (this.heldCode == 0) {
           this.pointerDriven = false;
-          this.selectedIndex = param0;
+          this.selectedIndex = index;
           this.field_a = true;
-          if (param1 != 1) {
+          if (obfuscationGuard != 1) {
             this.isLeftArrow(107);
             return;
           }
           return;
         }
-        if (param1 == 1) {
+        if (obfuscationGuard == 1) {
           return;
         }
         this.isLeftArrow(107);
     }
 
-    final void a(boolean param0) {
+    final void beginKeyInput(boolean selectionChanged) {
         this.pressCode = 0;
-        this.field_a = param0 ? true : false;
+        this.field_a = selectionChanged ? true : false;
         this.keyCode = 0;
         if (this.heldCode == 0) {
           this.keyCode = IterableDualLinkDeque.field_a;
@@ -59,24 +59,24 @@ final class MenuSelection {
         return this.heldCode != 0 ? true : false;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void updatePointerSelection(int pressedIndex, int hoveredIndex, int obfuscationGuard) {
         int var4;
-        if (this.itemCount <= param1) {
+        if (this.itemCount <= hoveredIndex) {
           throw new IllegalArgumentException();
         }
-        if (param0 >= this.itemCount) {
+        if (pressedIndex >= this.itemCount) {
           throw new IllegalArgumentException();
         }
         this.keyCode = 0;
         this.field_a = false;
         this.pressCode = 0;
-        var4 = -36 % ((17 - param2) / 35);
+        var4 = -36 % ((17 - obfuscationGuard) / 35);
         if (0 != MatchingTextValidator.field_s) {
           this.heldCode = MatchingTextValidator.field_s;
           this.field_i = ValidationIconWidget.field_V;
           this.pointerDriven = true;
           this.pressCode = MatchingTextValidator.field_s;
-          this.selectedIndex = param0;
+          this.selectedIndex = pressedIndex;
         }
         if (this.heldCode == 0) {
           if (MatchingTextValidator.field_s == 0 &&
@@ -87,18 +87,18 @@ final class MenuSelection {
                 !LoginPayload.field_c) {
                 return;
               }
-              if (param1 < 0) {
+              if (hoveredIndex < 0) {
                 if (this.pointerDriven) {
                   this.selectedIndex = -1;
                 }
               } else {
-                if (this.selectedIndex == param1) {
+                if (this.selectedIndex == hoveredIndex) {
                   this.pointerDriven = true;
-                  this.selectedIndex = param1;
+                  this.selectedIndex = hoveredIndex;
                 } else {
                   this.field_a = true;
                   this.pointerDriven = true;
-                  this.selectedIndex = param1;
+                  this.selectedIndex = hoveredIndex;
                 }
               }
             }
@@ -111,18 +111,18 @@ final class MenuSelection {
             !LoginPayload.field_c) {
             return;
           }
-          if (param1 < 0) {
+          if (hoveredIndex < 0) {
             if (!this.pointerDriven) {
               return;
             }
             this.selectedIndex = -1;
             return;
           }
-          if (this.selectedIndex != param1) {
+          if (this.selectedIndex != hoveredIndex) {
             this.field_a = true;
           }
           this.pointerDriven = true;
-          this.selectedIndex = param1;
+          this.selectedIndex = hoveredIndex;
           return;
         }
         if (ClientInputResetSupport.field_b == 0) {
@@ -134,18 +134,18 @@ final class MenuSelection {
                 !LoginPayload.field_c) {
                 return;
               }
-              if (param1 < 0) {
+              if (hoveredIndex < 0) {
                 if (this.pointerDriven) {
                   this.selectedIndex = -1;
                 }
               } else {
-                if (this.selectedIndex == param1) {
+                if (this.selectedIndex == hoveredIndex) {
                   this.pointerDriven = true;
-                  this.selectedIndex = param1;
+                  this.selectedIndex = hoveredIndex;
                 } else {
                   this.field_a = true;
                   this.pointerDriven = true;
-                  this.selectedIndex = param1;
+                  this.selectedIndex = hoveredIndex;
                 }
               }
             }
@@ -158,18 +158,18 @@ final class MenuSelection {
             !LoginPayload.field_c) {
             return;
           }
-          if (param1 < 0) {
+          if (hoveredIndex < 0) {
             if (!this.pointerDriven) {
               return;
             }
             this.selectedIndex = -1;
             return;
           }
-          if (this.selectedIndex != param1) {
+          if (this.selectedIndex != hoveredIndex) {
             this.field_a = true;
           }
           this.pointerDriven = true;
-          this.selectedIndex = param1;
+          this.selectedIndex = hoveredIndex;
           return;
         }
         if (this.field_i > 0) {
@@ -185,18 +185,18 @@ final class MenuSelection {
             !LoginPayload.field_c) {
             return;
           }
-          if (param1 < 0) {
+          if (hoveredIndex < 0) {
             if (!this.pointerDriven) {
               return;
             }
             this.selectedIndex = -1;
             return;
           }
-          if (this.selectedIndex != param1) {
+          if (this.selectedIndex != hoveredIndex) {
             this.field_a = true;
           }
           this.pointerDriven = true;
-          this.selectedIndex = param1;
+          this.selectedIndex = hoveredIndex;
           return;
         }
         this.field_i = LobbyGame.field_oc;
@@ -209,21 +209,21 @@ final class MenuSelection {
             !LoginPayload.field_c) {
             return;
           }
-          if (param1 < 0) {
+          if (hoveredIndex < 0) {
             if (!this.pointerDriven) {
               return;
             }
             this.selectedIndex = -1;
             return;
           }
-          if (this.selectedIndex != param1) {
+          if (this.selectedIndex != hoveredIndex) {
             this.field_a = true;
             this.pointerDriven = true;
-            this.selectedIndex = param1;
+            this.selectedIndex = hoveredIndex;
             return;
           }
           this.pointerDriven = true;
-          this.selectedIndex = param1;
+          this.selectedIndex = hoveredIndex;
           return;
         }
         if (0 != ClientInputResetSupport.field_b) {
@@ -234,21 +234,21 @@ final class MenuSelection {
             !LoginPayload.field_c) {
             return;
           }
-          if (param1 < 0) {
+          if (hoveredIndex < 0) {
             if (!this.pointerDriven) {
               return;
             }
             this.selectedIndex = -1;
             return;
           }
-          if (this.selectedIndex != param1) {
+          if (this.selectedIndex != hoveredIndex) {
             this.field_a = true;
             this.pointerDriven = true;
-            this.selectedIndex = param1;
+            this.selectedIndex = hoveredIndex;
             return;
           }
           this.pointerDriven = true;
-          this.selectedIndex = param1;
+          this.selectedIndex = hoveredIndex;
           return;
         }
         this.heldCode = 0;
@@ -259,25 +259,25 @@ final class MenuSelection {
           !LoginPayload.field_c) {
           return;
         }
-        if (param1 < 0) {
+        if (hoveredIndex < 0) {
           if (!this.pointerDriven) {
             return;
           }
           this.selectedIndex = -1;
           return;
         }
-        if (this.selectedIndex != param1) {
+        if (this.selectedIndex != hoveredIndex) {
           this.field_a = true;
           this.pointerDriven = true;
-          this.selectedIndex = param1;
+          this.selectedIndex = hoveredIndex;
           return;
         }
         this.pointerDriven = true;
-        this.selectedIndex = param1;
+        this.selectedIndex = hoveredIndex;
         return;
     }
 
-    final static void h(int param0) {
+    final static void advanceSlidingGamePanels(int obfuscationGuard) {
         if (NodeHashTableIterator.field_a > 0) {
           NodeHashTableIterator.field_a = NodeHashTableIterator.field_a - 1;
           if (NodeHashTableIterator.field_a <= 0) {
@@ -287,7 +287,7 @@ final class MenuSelection {
             if (LogoMaterial.field_b > 0) {
               DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
             }
-            if (param0 != -13953) {
+            if (obfuscationGuard != -13953) {
               MenuSelection.releaseStatics(67);
             }
             return;
@@ -297,7 +297,7 @@ final class MenuSelection {
             if (LogoMaterial.field_b > 0) {
               DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
             }
-            if (param0 != -13953) {
+            if (obfuscationGuard != -13953) {
               MenuSelection.releaseStatics(67);
             }
             return;
@@ -306,7 +306,7 @@ final class MenuSelection {
           if (LogoMaterial.field_b > 0) {
             DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
           }
-          if (param0 == -13953) {
+          if (obfuscationGuard == -13953) {
             return;
           }
           MenuSelection.releaseStatics(67);
@@ -323,7 +323,7 @@ final class MenuSelection {
           if (LogoMaterial.field_b > 0) {
             DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
           }
-          if (param0 == -13953) {
+          if (obfuscationGuard == -13953) {
             return;
           }
           MenuSelection.releaseStatics(67);
@@ -348,7 +348,7 @@ final class MenuSelection {
               if (LogoMaterial.field_b > 0) {
                 DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
               }
-              if (param0 == -13953) {
+              if (obfuscationGuard == -13953) {
                 return;
               }
               MenuSelection.releaseStatics(67);
@@ -360,12 +360,12 @@ final class MenuSelection {
         if (LogoMaterial.field_b > 0) {
           DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
         }
-        if (param0 != -13953) {
+        if (obfuscationGuard != -13953) {
           MenuSelection.releaseStatics(67);
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isIgnoredName(String name, int obfuscationGuard) {
         RuntimeException var2 = null;
         UiComponent var3 = null;
         boolean stackIn_5_0 = false;
@@ -374,28 +374,28 @@ final class MenuSelection {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 24552) {
+          if (obfuscationGuard != 24552) {
             var3 = (UiComponent) null;
-            MenuSelection.a(false, (UiComponent) null);
+            MenuSelection.applyCenteredPanelStyle(false, (UiComponent) null);
           }
-          stackIn_5_0 = (null != CheckboxPainter.a(param0, param1 ^ 24553));
+          stackIn_5_0 = (null != CheckboxPainter.findIgnoreEntryByName(name, obfuscationGuard ^ 24553));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
           stackIn_8_1 = new StringBuilder().append("ia.H(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static boolean b(int param0) {
-        if (param0 == -1) {
+    final static boolean hasPreviousChatContent(int obfuscationGuard) {
+        if (obfuscationGuard == -1) {
           return null != CipherPacketBuffer.field_z ? true : false;
         }
         field_l = 96;
@@ -480,20 +480,20 @@ final class MenuSelection {
         }
     }
 
-    final static void a(boolean param0, UiComponent param1) {
+    final static void applyCenteredPanelStyle(boolean obfuscationGuard, UiComponent component) {
         try {
-          param1.textColor = 16777215;
-          param1.horizontalAlignment = 1;
-          param1.font = (BitmapFont) ((Object) CollisionContact.field_h);
-          param1.frameSprites = MeshSymmetrySupport.field_g;
-          param1.capturedFrameSprites = null;
-          if (!param0) {
+          component.textColor = 16777215;
+          component.horizontalAlignment = 1;
+          component.font = (BitmapFont) ((Object) CollisionContact.field_h);
+          component.frameSprites = MeshSymmetrySupport.field_g;
+          component.capturedFrameSprites = null;
+          if (!obfuscationGuard) {
             field_d = (BufferedFile[]) null;
           }
-          param1.verticalAlignment = 1;
-          param1.activeFrameSprites = null;
+          component.verticalAlignment = 1;
+          component.activeFrameSprites = null;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ia.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ia.O(" + obfuscationGuard + ',' + (component != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -655,7 +655,7 @@ final class MenuSelection {
         if (param0 >= 19) {
           return this.keyCode == 102 ? true : false;
         }
-        MenuSelection.b(-55);
+        MenuSelection.hasPreviousChatContent(-55);
         return this.keyCode == 102 ? true : false;
     }
 

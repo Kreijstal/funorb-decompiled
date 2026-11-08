@@ -16,12 +16,12 @@ final class CueStick {
     static int[] field_h;
     static String playerXLostALife;
 
-    final static void a(boolean param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
+    final static void initializeChatInterface(boolean param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         try {
           AlternateLongAndTextLoginPayload.a(RenderingInitializationSupport.field_d, FixedPointVectorSupport.field_c, TutorialFactory.field_d, RasterBuffer.field_f, AlignedIconLabel.field_Lb, UiWidget.field_A, TimeTrialSelectScreen.field_M, AchievementSubmission.field_l, param0, GameApplet.field_a, ScreenProjectionSupport.field_f, (byte) 37);
           if (param1) {
             ResourceArchive var5 = (ResourceArchive) null;
-            CueStick.a(true, true, (ResourceArchive) null, (ResourceArchive) null);
+            CueStick.initializeChatInterface(true, true, (ResourceArchive) null, (ResourceArchive) null);
           }
           ThemeSelectScreen.field_M = NameEntryPopup.loadSpritesByName(0, "lobby", param2, "chatfilter");
           TranslatedUiText.field_i[1] = ProjectedLineSupport.muChatFriends;
@@ -33,7 +33,7 @@ final class CueStick {
         }
     }
 
-    final void a(MeshBuilder param0, byte param1) {
+    final void buildCueSegments(MeshBuilder mesh, byte obfuscationGuard) {
         int var3_int = 0;
         int var4 = 0;
         int var7_int = 0;
@@ -53,35 +53,35 @@ final class CueStick {
         int[] var13 = null;
         var9 = Pool.field_O;
         try {
-          BrowserCookieWriter.a(param0, true);
-          RankingsBufferSupport.mirrorAlongZ(param0, 5);
-          param0.computeBounds();
-          while (1500 > -param0.field_V + param0.field_x) {
-            for (var3_int = 0; param0.vertexCount > var3_int; var3_int++) {
-              param0.vertexX[var3_int] = param0.vertexX[var3_int] << 1;
-              param0.vertexY[var3_int] = param0.vertexY[var3_int] << 1;
-              param0.vertexZ[var3_int] = param0.vertexZ[var3_int] << 1;
+          BrowserCookieWriter.a(mesh, true);
+          RankingsBufferSupport.mirrorAlongZ(mesh, 5);
+          mesh.computeBounds();
+          while (1500 > -mesh.field_V + mesh.field_x) {
+            for (var3_int = 0; mesh.vertexCount > var3_int; var3_int++) {
+              mesh.vertexX[var3_int] = mesh.vertexX[var3_int] << 1;
+              mesh.vertexY[var3_int] = mesh.vertexY[var3_int] << 1;
+              mesh.vertexZ[var3_int] = mesh.vertexZ[var3_int] << 1;
             }
-            param0.clearCaches();
-            param0.computeBounds();
+            mesh.clearCaches();
+            mesh.computeBounds();
           }
           var13 = new int[3];
-          ModelOriginSupport.recenterModel(var13, 0, param0);
+          ModelOriginSupport.recenterModel(var13, 0, mesh);
           this.segments = new MeshBuilder[2];
-          if (param1 > -96) {
+          if (obfuscationGuard > -96) {
             this.field_m = (ModelMesh[]) null;
           }
           this.field_m = new ModelMesh[this.segments.length];
           this.segmentOffsets = new double[this.segments.length];
           this.field_d = new int[this.segments.length][3];
-          var3 = param0;
+          var3 = mesh;
           for (var4 = 0; var4 < this.segments.length; var4++) {
             if (var4 >= -1 + this.segments.length) {
               this.segments[var4] = var3;
             } else {
               this.segments[var4] = TutorialController.createEmptyMesh((byte) 121);
               var5_ref_eg = TutorialController.createEmptyMesh((byte) 124);
-              var6_int = (-param0.field_V + param0.field_x) * (1 + var4) / this.segments.length + param0.field_V;
+              var6_int = (-mesh.field_V + mesh.field_x) * (1 + var4) / this.segments.length + mesh.field_V;
               JaggrabDownloader.splitMeshByPlane(0, this.segments[var4], 0, false, var6_int, 0, 0, 1, var5_ref_eg, var3);
               var3 = var5_ref_eg;
             }
@@ -108,25 +108,25 @@ final class CueStick {
           var3_ref = decompiledCaughtException;
           stackIn_24_0 = var3_ref;
           stackIn_24_1 = new StringBuilder().append("jk.I(");
-          if (param0 == null) {
+          if (mesh == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static void a(long param0, int param1, int param2) {
+    final static void sendLobbyRemovalRequest(long playerId, int opcode, int obfuscationGuard) {
         CipherPacketBuffer var4 = JaggrabDownloader.field_j;
-        var4.writeCipheredOpcode(false, param1);
+        var4.writeCipheredOpcode(false, opcode);
         var4.position = var4.position + 1;
-        if (param2 != 0) {
+        if (obfuscationGuard != 0) {
           playerXLostALife = (String) null;
         }
         int var5 = var4.position;
         var4.writeByte(7, false);
-        var4.writeLong(param0, (byte) -119);
+        var4.writeLong(playerId, (byte) -119);
         var4.writeByteLengthPrefix(var4.position - var5, true);
     }
 
@@ -209,7 +209,7 @@ final class CueStick {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawSlidingGamePanels(boolean active, int obfuscationGuard) {
         UiComponent stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         boolean stackIn_10_2 = false;
@@ -223,7 +223,7 @@ final class CueStick {
         int stackIn_28_1 = 0;
         boolean stackIn_29_2 = false;
         QuickChatPhraseRegistry.pushRasterClip(-640 + SoftwareRasterizer.width >> 1, 0, SoftwareRasterizer.width + 640 >> 1, (byte) -88, SoftwareRasterizer.height);
-        if (param1 <= 116) {
+        if (obfuscationGuard <= 116) {
           return;
         }
         if (NodeHashTableIterator.field_a > 0) {
@@ -232,11 +232,11 @@ final class CueStick {
           }
           stackIn_9_0 = BufferedFile.field_a;
           stackIn_9_1 = -79;
-          stackIn_10_2 = (param0) && (!LoginPayloadKind.field_d);
+          stackIn_10_2 = (active) && (!LoginPayloadKind.field_d);
           ((UiComponent) (Object) stackIn_9_0).drawRoot((byte) stackIn_9_1, stackIn_10_2);
           stackIn_13_0 = IntegerRecordSubmission.field_n;
           stackIn_13_1 = -79;
-          stackIn_14_2 = (param0) && (!LoginPayloadKind.field_d);
+          stackIn_14_2 = (active) && (!LoginPayloadKind.field_d);
           ((UiComponent) (Object) stackIn_13_0).drawRoot((byte) stackIn_13_1, stackIn_14_2);
         }
         if (!(PoolMatchController.field_z <= 0) ||
@@ -246,11 +246,11 @@ final class CueStick {
           }
           stackIn_24_0 = SceneNode.field_k;
           stackIn_24_1 = -79;
-          stackIn_25_2 = (param0) && (!AccountWelcomePanel.field_bb);
+          stackIn_25_2 = (active) && (!AccountWelcomePanel.field_bb);
           ((UiComponent) (Object) stackIn_24_0).drawRoot((byte) stackIn_24_1, stackIn_25_2);
           stackIn_28_0 = Bzip2DecoderState.field_f;
           stackIn_28_1 = -79;
-          stackIn_29_2 = (param0) && (!AccountWelcomePanel.field_bb);
+          stackIn_29_2 = (active) && (!AccountWelcomePanel.field_bb);
           ((UiComponent) (Object) stackIn_28_0).drawRoot((byte) stackIn_28_1, stackIn_29_2);
         }
         TriangleMesh.a(114);
@@ -269,20 +269,20 @@ final class CueStick {
         field_h = null;
     }
 
-    final static void a(int param0, QuickChatMenu param1) {
-        if (param0 <= 106) {
+    final static void showQuickChatMenu(int obfuscationGuard, QuickChatMenu menu) {
+        if (obfuscationGuard <= 106) {
           return;
         }
-        if (param1 == null) {
+        if (menu == null) {
           return;
         }
         try {
-          LobbyPlayer.field_Ub = param1;
+          LobbyPlayer.field_Ub = menu;
           ChoiceButtonSupport.field_a.children.clear((byte) 53);
           ChoiceButtonSupport.field_a.addChild(-112, LobbyPlayer.field_Ub);
           ArrayWidgetGroup.field_H = true;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jk.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jk.J(" + obfuscationGuard + ',' + (menu != null ? "{...}" : "null") + ')');
         }
     }
 

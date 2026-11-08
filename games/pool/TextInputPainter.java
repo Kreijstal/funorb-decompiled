@@ -155,7 +155,7 @@ class TextInputPainter extends TextWidgetPainter {
             }
             var3 = stackIn_141_0;
             stackIn_146_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 82)) && (var3 == 0);
-            ViewportController.a(stackIn_146_0, (byte) 50);
+            ViewportController.drawInterfaceOverlays(stackIn_146_0, (byte) 50);
             if (var3 != 0) {
               stackIn_158_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
               FadingDialog.a(stackIn_158_0, 1);
@@ -197,7 +197,7 @@ class TextInputPainter extends TextWidgetPainter {
           if (!MidiNoteMixer.field_v) {
             var3 = 0;
             stackIn_26_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 82)) && (var3 == 0);
-            ViewportController.a(stackIn_26_0, (byte) 50);
+            ViewportController.drawInterfaceOverlays(stackIn_26_0, (byte) 50);
             if (var3 != 0) {
               stackIn_32_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
               FadingDialog.a(stackIn_32_0, 1);
@@ -209,7 +209,7 @@ class TextInputPainter extends TextWidgetPainter {
             if (!DualLinkNode.field_p) {
               var3 = 0;
               stackIn_45_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 82)) && (var3 == 0);
-              ViewportController.a(stackIn_45_0, (byte) 50);
+              ViewportController.drawInterfaceOverlays(stackIn_45_0, (byte) 50);
               if (var3 != 0) {
                 stackIn_51_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
                 FadingDialog.a(stackIn_51_0, 1);
@@ -229,7 +229,7 @@ class TextInputPainter extends TextWidgetPainter {
             }
             var3 = 1;
             if (!param1) {
-              ViewportController.a(false, (byte) 50);
+              ViewportController.drawInterfaceOverlays(false, (byte) 50);
               if (var3 == 0) {
                 if (null != AccountContentDialog.field_ub) {
                   AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
@@ -247,7 +247,7 @@ class TextInputPainter extends TextWidgetPainter {
               }
             } else {
               if (!InputIdleSupport.isCaretBlinkOn((byte) 82)) {
-                ViewportController.a(false, (byte) 50);
+                ViewportController.drawInterfaceOverlays(false, (byte) 50);
                 if (var3 == 0) {
                   if (null != AccountContentDialog.field_ub) {
                     AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
@@ -264,7 +264,7 @@ class TextInputPainter extends TextWidgetPainter {
                   }
                 }
               } else {
-                ViewportController.a((var3 == 0), (byte) 50);
+                ViewportController.drawInterfaceOverlays((var3 == 0), (byte) 50);
                 if (var3 != 0) {
                   stackIn_127_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
                   FadingDialog.a(stackIn_127_0, 1);

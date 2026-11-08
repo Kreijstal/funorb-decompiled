@@ -255,9 +255,9 @@ final class IsaacCipher {
           param0.field_p = QuickChatPhraseDefinition.resizeShortArray(param0.field_p, (byte) -73, var2_int * 3);
           param0.field_H = QuickChatPhraseDefinition.resizeShortArray(param0.field_H, (byte) -73, var2_int * 3);
           param0.field_C = QuickChatPhraseDefinition.resizeShortArray(param0.field_C, (byte) -73, var2_int * 3);
-          param0.vertexX = MenuScreenBase.a(var2_int * 3, (byte) 108, param0.vertexX);
-          param0.vertexY = MenuScreenBase.a(3 * var2_int, (byte) 108, param0.vertexY);
-          param0.vertexZ = MenuScreenBase.a(var2_int * 3, (byte) 108, param0.vertexZ);
+          param0.vertexX = MenuScreenBase.extendIntArray(var2_int * 3, (byte) 108, param0.vertexX);
+          param0.vertexY = MenuScreenBase.extendIntArray(3 * var2_int, (byte) 108, param0.vertexY);
+          param0.vertexZ = MenuScreenBase.extendIntArray(var2_int * 3, (byte) 108, param0.vertexZ);
           for (var2_intLifetime1 = 0; param0.faceCount > var2_intLifetime1; var2_intLifetime1++) {
             if (param0.field_L[var2_intLifetime1] != -1) {
               var3Lifetime1 = param0.field_k[var2_intLifetime1];
@@ -301,7 +301,7 @@ final class IsaacCipher {
               var11[2] = param0.vertexZ[param0.field_C[var3Lifetime1]];
               PacketBuffer.computeTriangleBarycentrics(var31, var22, var23, var32, var25, var26, var27, (byte) 111, var28);
               MenuScreen.a(var22, var27, var23, var28, var31, var26, var32, 0, var25);
-              param0.field_k[var2_intLifetime1] = param0.addTextureTriangle((short)param0.addVertex(PauseMenuScreen.c(0, -54264319, var25[0]), PauseMenuScreen.c(0, -54264319, var27[0]), PauseMenuScreen.c(0, -54264319, var22[0])), (short)param0.addVertex(PauseMenuScreen.c(0, TutorialFactory.bitwiseXor(param1, -54264319), var25[1]), PauseMenuScreen.c(0, -54264319, var27[1]), PauseMenuScreen.c(0, -54264319, var22[1])), (short)param0.addVertex(PauseMenuScreen.c(0, -54264319, var25[2]), PauseMenuScreen.c(0, -54264319, var27[2]), PauseMenuScreen.c(0, -54264319, var22[2])));
+              param0.field_k[var2_intLifetime1] = param0.addTextureTriangle((short)param0.addVertex(PauseMenuScreen.shiftLeft(0, -54264319, var25[0]), PauseMenuScreen.shiftLeft(0, -54264319, var27[0]), PauseMenuScreen.shiftLeft(0, -54264319, var22[0])), (short)param0.addVertex(PauseMenuScreen.shiftLeft(0, TutorialFactory.bitwiseXor(param1, -54264319), var25[1]), PauseMenuScreen.shiftLeft(0, -54264319, var27[1]), PauseMenuScreen.shiftLeft(0, -54264319, var22[1])), (short)param0.addVertex(PauseMenuScreen.shiftLeft(0, -54264319, var25[2]), PauseMenuScreen.shiftLeft(0, -54264319, var27[2]), PauseMenuScreen.shiftLeft(0, -54264319, var22[2])));
             }
           }
           return;

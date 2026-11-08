@@ -103,11 +103,11 @@ abstract class TableScene {
         }
     }
 
-    private final int e(int param0) {
-        if (param0 != 31761) {
+    private final int getFloorColor(int obfuscationGuard) {
+        if (obfuscationGuard != 31761) {
           return 92;
         }
-        return this.floorColor(param0 ^ 32445);
+        return this.floorColor(obfuscationGuard ^ 32445);
     }
 
     final void a(int[] param0, int param1, int param2, int[] param3) {
@@ -237,10 +237,10 @@ abstract class TableScene {
           var26 = var18.addVertex(-var23 + var20, -var24 + var22, 0);
           var27 = var18.addVertex(var19 - var23, var21 - var24, SpriteResourceSupport.floatToFixed3(-16.0f, true));
           var28 = var18.addVertex(var20 - var23, var22 - var24, SpriteResourceSupport.floatToFixed3(-16.0f, true));
-          var18.addFace(var25, var27, var26, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) -123, this.e(31761)), this.c(99));
-          var18.addFace(var28, var26, var27, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) 94, this.e(31761)), this.c(97));
-          var18.addFace(var25, var26, var27, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) 93, this.e(31761)), this.c(100));
-          var18.addFace(var28, var27, var26, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) 42, this.e(31761)), this.c(95));
+          var18.addFace(var25, var27, var26, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) -123, this.getFloorColor(31761)), this.getFloorTexture(99));
+          var18.addFace(var28, var26, var27, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) 94, this.getFloorColor(31761)), this.getFloorTexture(97));
+          var18.addFace(var25, var26, var27, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) 93, this.getFloorColor(31761)), this.getFloorTexture(100));
+          var18.addFace(var28, var27, var26, (byte) 1, PackedColorSupport.rgbToPackedHsl((byte) 42, this.getFloorColor(31761)), this.getFloorTexture(95));
           var12[var16] = var18;
           var13[var16] = new ModelInstance((ModelMesh) (var12[var16].createModelMesh(this.field_C, this.field_x, this.field_q, this.field_e, this.field_u)), new int[]{var23, var24, 0});
         }
@@ -540,12 +540,12 @@ abstract class TableScene {
         var34 = var31;
         var35 = -var30;
         var36 = var30 * var30 + var31 * var31;
-        var37 = LoginTextValue.a(false, var36) << 2;
+        var37 = LoginTextValue.approximateIntegerSquareRoot(false, var36) << 2;
         var38 = var28Lifetime4 * var28Lifetime4 + var29 * var29;
         if (var38 == 0) {
           return;
         }
-        var39 = LoginTextValue.a(false, var38) << 2;
+        var39 = LoginTextValue.approximateIntegerSquareRoot(false, var38) << 2;
         var32 = (var32 << 12) / var39;
         var33 = (var33 << 12) / var39;
         var34 = (var34 << 12) / var37;
@@ -759,8 +759,8 @@ abstract class TableScene {
         }
     }
 
-    private final byte c(int param0) {
-        if (param0 <= 94) {
+    private final byte getFloorTexture(int obfuscationGuard) {
+        if (obfuscationGuard <= 94) {
           return (byte) -18;
         }
         return this.floorTexture(-112);
@@ -1511,7 +1511,7 @@ abstract class TableScene {
           var17 = var7 * (double)(1 + 2 * var16) / 2.0;
           for (var19 = 0; var3 > var19; var19++) {
             var20 = var5 * (double)(1 + var19 * 2) / 2.0;
-            this.field_y[var16 * var3 + var19] = new ModelInstance(var15, MidiNoteMixer.a(new double[]{var20, var17, 0.0}, -30100));
+            this.field_y[var16 * var3 + var19] = new ModelInstance(var15, MidiNoteMixer.toFixed3Array(new double[]{var20, var17, 0.0}, -30100));
           }
         }
     }

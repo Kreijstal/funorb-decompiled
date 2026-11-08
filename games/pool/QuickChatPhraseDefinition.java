@@ -214,9 +214,9 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           DualLinkNodeHashTable.field_i = 2;
           ArchiveIndex.field_x = 15;
           ByteArrayPool.field_b = 2;
-          var7 = CanvasInputSupport.a(param4, "largefont", 0, param0, "lobby");
-          MembershipBenefitsLoader.field_a = CanvasInputSupport.a(param4, "generalfont", 0, param0, "lobby");
-          FixedPointVectorSupport.field_c = CanvasInputSupport.a(param4, "chatfont", 0, param0, "lobby");
+          var7 = CanvasInputSupport.loadBinaryFontByName(param4, "largefont", 0, param0, "lobby");
+          MembershipBenefitsLoader.field_a = CanvasInputSupport.loadBinaryFontByName(param4, "generalfont", 0, param0, "lobby");
+          FixedPointVectorSupport.field_c = CanvasInputSupport.loadBinaryFontByName(param4, "chatfont", 0, param0, "lobby");
           var7.setInlineSprites(var5, var24);
           MembershipBenefitsLoader.field_a.setInlineSprites(var5, var24);
           FixedPointVectorSupport.field_c.setInlineSprites(var5, var24);

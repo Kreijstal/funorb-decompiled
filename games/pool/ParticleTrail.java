@@ -20,7 +20,7 @@ final class ParticleTrail {
     static IntegerSyntaxSupport field_h;
     static int[] field_b;
 
-    final void a(boolean param0, byte param1, int[] param2) {
+    final void drawParticles(boolean obfuscationGuard, byte compatibilityGuard, int[] cameraTransform) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -30,8 +30,8 @@ final class ParticleTrail {
         RuntimeException var4 = null;
         var5 = Pool.field_O;
         try {
-          if (param1 <= 56) {
-            this.a((byte) -68);
+          if (compatibilityGuard <= 56) {
+            this.advanceParticles((byte) -68);
           }
           var4_int = 0;
           while (true) {
@@ -44,15 +44,15 @@ final class ParticleTrail {
                 return;
               }
             }
-            this.field_l[var4_int].draw(262144, param2);
+            this.field_l[var4_int].draw(262144, cameraTransform);
             var4_int++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_13_0 = var4;
-          stackIn_13_1 = new StringBuilder().append("ji.D(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = new StringBuilder().append("ji.D(").append(obfuscationGuard).append(',').append(compatibilityGuard).append(',');
+          if (cameraTransform == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -65,11 +65,11 @@ final class ParticleTrail {
         field_b = null;
         field_h = null;
         if (param0) {
-          ParticleTrail.a(-2, true, (byte) 41, 72, false, false);
+          ParticleTrail.createCachedArchive(-2, true, (byte) 41, 72, false, false);
         }
     }
 
-    final static ResourceArchive a(int param0, boolean param1, byte param2, int param3, boolean param4, boolean param5) {
+    final static ResourceArchive createCachedArchive(int param0, boolean param1, byte param2, int param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
@@ -117,7 +117,7 @@ final class ParticleTrail {
         }
     }
 
-    final void a(byte param0) {
+    final void advanceParticles(byte obfuscationGuard) {
         int var2 = 0;
         GlowParticle dupTemp$1 = null;
         GlowParticle dupTemp$2 = null;
@@ -183,7 +183,7 @@ final class ParticleTrail {
             dupTemp$6.field_d = dupTemp$6.field_d + this.field_l[var2].field_l;
           }
         }
-        if (param0 != -43) {
+        if (obfuscationGuard != -43) {
           this.field_j = -58;
         }
     }

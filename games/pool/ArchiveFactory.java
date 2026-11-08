@@ -17,10 +17,10 @@ final class ArchiveFactory {
 
     final static ResourceArchive createResourceArchive(int param0, byte param1) {
         if (param1 == 103) {
-          return ParticleTrail.a(1, true, (byte) -56, param0, false, false);
+          return ParticleTrail.createCachedArchive(1, true, (byte) -56, param0, false, false);
         }
         ArchiveFactory.releaseStatics((byte) 116);
-        return ParticleTrail.a(1, true, (byte) -56, param0, false, false);
+        return ParticleTrail.createCachedArchive(1, true, (byte) -56, param0, false, false);
     }
 
     static {

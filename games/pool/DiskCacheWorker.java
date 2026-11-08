@@ -206,7 +206,7 @@ final class DiskCacheWorker implements Runnable {
         param6 = IntKeyLookup.a(param0, param3, param11, param9, param6, (byte) 33, param10);
         UsernameSuggestionsPanel.a(param1, param6, param8, param13, param5, 13375, param2, param4, param7, param3);
         int var14 = 36 / ((param12 + 84) / 37);
-        ViewportController.a(param4, -108, param1);
+        ViewportController.updateIgnoreListInteraction(param4, -108, param1);
         DialogLayer.a(param1, param6, 0, param11);
     }
 

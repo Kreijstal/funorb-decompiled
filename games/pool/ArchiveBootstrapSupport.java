@@ -27,8 +27,8 @@ final class ArchiveBootstrapSupport {
         }
     }
 
-    final static boolean b(byte param0) {
-        if (param0 < 95) {
+    final static boolean canResizeViewport(byte obfuscationGuard) {
+        if (obfuscationGuard < 95) {
           ArchiveBootstrapSupport.releaseStatics((byte) -44);
           if (PlasmaTableScene.field_gb == null) {
             return false;

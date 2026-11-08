@@ -124,14 +124,14 @@ final class ViewportController {
         field_q = null;
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void updateIgnoreListInteraction(boolean active, int obfuscationGuard, int opcode) {
         PlayerContextMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        SocialListEntry var3 = CompressedContainerSupport.a(param0, param2, 100);
+        SocialListEntry var3 = CompressedContainerSupport.a(active, opcode, 100);
         PlayerContextMenu var4Lifetime1;
-        if (param1 >= -72) {
+        if (obfuscationGuard >= -72) {
           int[] var7 = (int[]) null;
           ViewportController.drawProjectedCrosshair((float[]) null, -27, -27, (int[]) null);
         }
@@ -145,7 +145,7 @@ final class ViewportController {
           var6 = UsernameAvailabilityValidator.field_o;
           var4Lifetime1.field_n.layoutAtAnchor(0, 0, var5, 0, var6);
         }
-        MeshBoundsSupport.updateIgnoreListPanel(param2, (byte) 21, param0);
+        MeshBoundsSupport.updateIgnoreListPanel(opcode, (byte) 21, active);
     }
 
     final static void drawProjectedCrosshair(float[] point, int color, int obfuscationGuard, int[] cameraTransform) {
@@ -217,12 +217,12 @@ final class ViewportController {
         this.field_z = param2;
     }
 
-    final static void a(boolean param0, byte param1) {
-        if (param1 != 50) {
-          ViewportController.a(true, 91, 8);
+    final static void drawInterfaceOverlays(boolean active, byte obfuscationGuard) {
+        if (obfuscationGuard != 50) {
+          ViewportController.updateIgnoreListInteraction(true, 91, 8);
         }
-        HotspotRectangle.a((byte) 55, param0);
-        AudioService.a(0, param0);
+        HotspotRectangle.a((byte) 55, active);
+        AudioService.a(0, active);
     }
 
     private final void applyConstrainedViewportSize(int obfuscationGuard) {

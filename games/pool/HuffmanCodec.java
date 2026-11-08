@@ -492,12 +492,12 @@ final class HuffmanCodec {
             if (var12.pressedButton != 0 &&
               !var12.isUnindexed(true)) {
               if (0 != var12.field_lc.pressedButton) {
-                DropTargetWidget.a(param3, (byte) -127, var12.playerId);
+                DropTargetWidget.sendLobbyInviteRequest(param3, (byte) -127, var12.playerId);
               } else {
                 if (0 == var12.field_Zb.pressedButton) {
                   MenuScreen.a(0, param2, 0, param4 ^ -9770, UsernameAvailabilityValidator.field_o, DialogLayer.field_W, var12);
                 } else {
-                  CueStick.a(var12.playerId, param3, 0);
+                  CueStick.sendLobbyRemovalRequest(var12.playerId, param3, 0);
                 }
               }
             }

@@ -31,11 +31,11 @@ final class TransformSupport {
         if (!param0) {
           TransformSupport.identityTransform(-35);
           WhirlpoolHasher.a((byte) -120);
-          MenuSelection.h(-13953);
+          MenuSelection.advanceSlidingGamePanels(-13953);
           return;
         }
         WhirlpoolHasher.a((byte) -120);
-        MenuSelection.h(-13953);
+        MenuSelection.advanceSlidingGamePanels(-13953);
     }
 
     final static void b(int param0) {

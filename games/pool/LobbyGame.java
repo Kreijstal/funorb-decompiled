@@ -51,7 +51,7 @@ final class LobbyGame extends UiComponent {
     static int field_Wb;
     static int field_uc;
 
-    final static short[] a(int param0, short[] param1, byte param2, CipherPacketBuffer param3) {
+    final static short[] readPackedShortArray(int lengthBits, short[] destination, byte obfuscationGuard, CipherPacketBuffer packet) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -66,43 +66,43 @@ final class LobbyGame extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (param2 <= 88) {
+          if (obfuscationGuard <= 88) {
             var8 = (CipherPacketBuffer) null;
-            LobbyGame.a(8, (short[]) null, (byte) 40, (CipherPacketBuffer) null);
+            LobbyGame.readPackedShortArray(8, (short[]) null, (byte) 40, (CipherPacketBuffer) null);
           }
-          var4_int = param3.readBits(param0, 89);
+          var4_int = packet.readBits(lengthBits, 89);
           if (var4_int == 0) {
             return null;
           }
-          if (param1 == null ||
-            param1.length != var4_int) {
-            param1 = new short[var4_int];
+          if (destination == null ||
+            destination.length != var4_int) {
+            destination = new short[var4_int];
           }
-          var5 = param3.readBits(4, 45);
-          var6 = (short)param3.readBits(16, 18);
+          var5 = packet.readBits(4, 45);
+          var6 = (short)packet.readBits(16, 18);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param1[var7] = (short)(var6 + param3.readBits(var5, 103));
+              destination[var7] = (short)(var6 + packet.readBits(var5, 103));
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param1[var7] = (short)var6;
+              destination[var7] = (short)var6;
             }
           }
-          stackIn_17_0 = (short[]) (param1);
+          stackIn_17_0 = (short[]) (destination);
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_20_0 = var4;
-          stackIn_20_1 = new StringBuilder().append("kh.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_20_1 = new StringBuilder().append("kh.A(").append(lengthBits).append(',');
+          if (destination == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
@@ -143,12 +143,12 @@ final class LobbyGame extends UiComponent {
         return !this.d(param0 ^ -14186) ? true : false;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isAsciiDigit(char character, byte obfuscationGuard) {
         boolean stackIn_6_0 = false;
-        if (param1 <= 18) {
+        if (obfuscationGuard <= 18) {
           return false;
         }
-        stackIn_6_0 = (param0 >= 48) && (57 >= param0);
+        stackIn_6_0 = (character >= 48) && (57 >= character);
         return stackIn_6_0;
     }
 
@@ -166,7 +166,7 @@ final class LobbyGame extends UiComponent {
         }
     }
 
-    final static boolean a(int param0, MeshBuilder param1, int param2) {
+    final static boolean isVertexUsedByDrawableFace(int obfuscationGuard, MeshBuilder mesh, int vertexIndex) {
         int var3_int = 0;
         int var4 = 0;
         int stackIn_3_0 = 0;
@@ -193,7 +193,7 @@ final class LobbyGame extends UiComponent {
                 case 1: {
                     try {
                         var3_int = 0;
-                        if (param0 == -3) {
+                        if (obfuscationGuard == -3) {
                             statePc = 4;
                             continue scanLoop1;
                         } else {
@@ -217,13 +217,13 @@ final class LobbyGame extends UiComponent {
                     return stackIn_3_0 != 0;
                 }
                 case 4: {
-                    stackIn_6_0 = (MeshBuilder) (param1);
+                    stackIn_6_0 = (MeshBuilder) (mesh);
                     statePc = 6;
                     continue scanLoop1;
                 }
                 case 5: {
                     try {
-                        stackIn_6_0 = (MeshBuilder) (param1);
+                        stackIn_6_0 = (MeshBuilder) (mesh);
                         statePc = 6;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_5) {
@@ -247,13 +247,13 @@ final class LobbyGame extends UiComponent {
                         } else {
                             /* Inlined CFG state: 7. */
                             {
-                                if (param1.field_Q == null) {
+                                if (mesh.field_Q == null) {
                                     statePc = 10;
                                     continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 8. */
                                     {
-                                        if (param1.field_Q[var3_int] == 2) {
+                                        if (mesh.field_Q[var3_int] == 2) {
                                             statePc = 16;
                                             continue scanLoop1;
                                         } else {
@@ -278,19 +278,19 @@ final class LobbyGame extends UiComponent {
                 }
                 case 10: {
                     try {
-                        if (param2 == param1.faceVertexA[var3_int]) {
+                        if (vertexIndex == mesh.faceVertexA[var3_int]) {
                             statePc = 14;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 11. */
                             {
-                                if (param2 == param1.faceVertexB[var3_int]) {
+                                if (vertexIndex == mesh.faceVertexB[var3_int]) {
                                     statePc = 14;
                                     continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 12. */
                                     {
-                                        if (param2 != param1.faceVertexC[var3_int]) {
+                                        if (vertexIndex != mesh.faceVertexC[var3_int]) {
                                             statePc = 16;
                                             continue scanLoop1;
                                         } else {
@@ -350,9 +350,9 @@ final class LobbyGame extends UiComponent {
                     var3 = (RuntimeException) ((Object) caughtException);
                     stackIn_21_0 = (RuntimeException) (var3);
                     stackIn_20_0 = stackIn_21_0;
-                    stackIn_21_1 = new StringBuilder().append("kh.F(").append(param0).append(',');
+                    stackIn_21_1 = new StringBuilder().append("kh.F(").append(obfuscationGuard).append(',');
                     stackIn_20_1 = stackIn_21_1;
-                    if (param1 == null) {
+                    if (mesh == null) {
                         statePc = 21;
                     } else {
                         statePc = 20;
@@ -374,14 +374,14 @@ final class LobbyGame extends UiComponent {
                     continue scanLoop1;
                 }
                 case 22: {
-                    throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+                    throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(vertexIndex).append(')').toString());
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
         }
     }
 
-    final static IndexedSprite a(int param0, int param1, byte param2, ResourceArchive param3) {
+    final static IndexedSprite loadIndexedSprite(int fileId, int groupId, byte obfuscationGuard, ResourceArchive archive) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -389,8 +389,8 @@ final class LobbyGame extends UiComponent {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = -89 / ((-33 - param2) / 51);
-          if (TextLineLayout.a(param1, param3, param0, (byte) 121)) {
+          var4_int = -89 / ((-33 - obfuscationGuard) / 51);
+          if (TextLineLayout.a(groupId, archive, fileId, (byte) 121)) {
             return KeyHandler.createDecodedIndexedSprite((byte) -23);
           }
           return null;
@@ -398,8 +398,8 @@ final class LobbyGame extends UiComponent {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
-          stackIn_6_1 = new StringBuilder().append("kh.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_6_1 = new StringBuilder().append("kh.U(").append(fileId).append(',').append(groupId).append(',').append(obfuscationGuard).append(',');
+          if (archive == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

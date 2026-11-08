@@ -75,7 +75,7 @@ final class AgeValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 10) {
-            AgeValidator.a(false, 105);
+            AgeValidator.setSoundEffectVolume(false, 105);
           }
           stackIn_3_0 = IntegerSyntaxSupport.isValidInteger(10, true, param1, 87);
           return stackIn_3_0;
@@ -93,12 +93,12 @@ final class AgeValidator extends TextInputValidator {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void setSoundEffectVolume(boolean obfuscationGuard, int volume) {
         PlayingSound var2 = null;
         PlayingSound var2Lifetime1;
         try {
-          BallDebugOverlay.field_b = param1;
-          if (!param0) {
+          BallDebugOverlay.field_b = volume;
+          if (!obfuscationGuard) {
             field_q = -113;
           }
           var2 = (PlayingSound) (HighScoreSubmission.field_o.last((byte) -36));
@@ -122,12 +122,12 @@ final class AgeValidator extends TextInputValidator {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ka.M(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ka.M(" + obfuscationGuard + ',' + volume + ')');
         }
     }
 
-    final static void b(byte param0) {
-        if (param0 > -71) {
+    final static void drawQuickChatOverlay(byte obfuscationGuard) {
+        if (obfuscationGuard > -71) {
           field_r = 25;
           if (ArrayWidgetGroup.field_H) {
             SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
@@ -143,7 +143,7 @@ final class AgeValidator extends TextInputValidator {
         ChoiceButtonSupport.field_a.drawRoot((byte) -79, false);
     }
 
-    final static void h(int param0) {
+    final static void clearFacePriorityCounts(int startIndex) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -153,7 +153,7 @@ final class AgeValidator extends TextInputValidator {
         try {
           var4 = ProgressDialog.field_ib;
           var1 = var4;
-          var2 = param0;
+          var2 = startIndex;
           var3 = var4.length;
           while (var3 > var2) {
             var4[var2++] = 0;
@@ -169,7 +169,7 @@ final class AgeValidator extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ka.O(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ka.O(" + startIndex + ')');
         }
     }
 

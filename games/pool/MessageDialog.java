@@ -14,7 +14,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
 
     final static void o(byte param0) {
         LobbyGame.field_Vb = new UiComponent("decision box", (UiComponent) null);
-        MenuSelection.a(true, LobbyGame.field_Vb);
+        MenuSelection.applyCenteredPanelStyle(true, LobbyGame.field_Vb);
         NanoTickClock.field_t = new UiComponent("decision button a", (UiComponent) null);
         MonotonicClock.field_b = new UiComponent("decision button b", (UiComponent) null);
         if (param0 < -103) {

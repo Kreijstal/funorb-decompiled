@@ -338,7 +338,7 @@ final class RankingsBufferSupport {
             stackIn_6_0 = (MeshBuilder) null;
             return stackIn_6_0;
           }
-          ImageProducerRasterBuffer.a(param0, (byte) 38);
+          ImageProducerRasterBuffer.reverseFaceWinding(param0, (byte) 38);
           param0.clearCaches();
           stackIn_8_0 = (MeshBuilder) (param0);
           return stackIn_8_0;

@@ -54,7 +54,7 @@ final class HighScoreSubmission extends IntrusiveNode {
           ShotRecord.field_S = new TriangleMesh[var3];
           QuickChatMenu.field_gc = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
-            ShotRecord.field_S[var4] = ArrayWidgetGroup.a(-16336, var7);
+            ShotRecord.field_S[var4] = ArrayWidgetGroup.readPackedTriangleMesh(-16336, var7);
           }
           if (param1 >= -104) {
             loadingGraphics = (String) null;
@@ -102,7 +102,7 @@ final class HighScoreSubmission extends IntrusiveNode {
             var3 != 0) {
             return false;
           }
-          return QuickChatDynamicCommand.a(AppletContainerSupport.field_a, DiskCacheWorker.field_g, SupportPageLauncher.field_a, ProjectedVertex.field_s, (byte) 76);
+          return QuickChatDynamicCommand.openQuickChatOptions(AppletContainerSupport.field_a, DiskCacheWorker.field_g, SupportPageLauncher.field_a, ProjectedVertex.field_s, (byte) 76);
         }
         if (IterableDualLinkDeque.field_a == 10) {
           if (var3 != 0) {

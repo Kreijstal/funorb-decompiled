@@ -39,7 +39,7 @@ final class SceneNodeFactory {
             return stackIn_3_0;
           }
           var4 = new int[]{1, 1, 1};
-          BrowserCookieSupport.a(-2656, var4, param0);
+          BrowserCookieSupport.computeMeshSubdivisionCounts(-2656, var4, param0);
           if (var4[0] == 1 &&
             var4[1] == 1 &&
             1 == var4[2]) {

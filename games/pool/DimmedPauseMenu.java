@@ -42,7 +42,7 @@ final class DimmedPauseMenu extends PauseMenuScreen {
           var5 = 27 / ((29 - param1) / 34);
           var4_int = param0.getGroupId(param2, -1);
           var6 = param0.getFileId(var4_int, 0, param3);
-          stackIn_1_0 = DisplayNamePanel.a(var6, (byte) 119, param0, var4_int);
+          stackIn_1_0 = DisplayNamePanel.loadSprite(var6, (byte) 119, param0, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -183,7 +183,7 @@ final class Js5ArchiveManager {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = TikiBallSkin.a(var10.position + (-var13.length - 5), (byte) -121, var10.payload, 5);
+        var15 = TikiBallSkin.whirlpoolDigest(var10.position + (-var13.length - 5), (byte) -121, var10.payload, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();

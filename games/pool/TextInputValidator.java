@@ -62,7 +62,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
 
     abstract String validationMessageForText(String param0, int param1);
 
-    final static void a(Sprite param0, byte param1) {
+    final static void padSpriteToFourPixelAlignment(Sprite sprite, byte obfuscationGuard) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -80,46 +80,46 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         int var9 = 0;
         var9 = Pool.field_O;
         try {
-          if ((3 & (param0.field_z | param0.field_A | param0.field_G | param0.field_B)) == 0) {
+          if ((3 & (sprite.field_z | sprite.field_A | sprite.field_G | sprite.field_B)) == 0) {
             return;
           }
-          if (param1 != -12) {
+          if (obfuscationGuard != -12) {
             return;
           }
-          var2_int = (param0.field_G & 3) + param0.field_z;
+          var2_int = (sprite.field_G & 3) + sprite.field_z;
           var2_int = 4 - (3 & var2_int) + var2_int;
-          var3 = (param0.field_B & 3) + param0.field_A;
+          var3 = (sprite.field_B & 3) + sprite.field_A;
           var3 = -(var3 & 3) + 4 + var3;
           var4 = new int[var3 * var2_int];
           var5 = 0;
-          var6 = var2_int * (3 & param0.field_B) + (3 & param0.field_G);
-          for (var7 = 0; param0.field_A > var7; var7++) {
-            for (var8 = 0; param0.field_z > var8; var8++) {
+          var6 = var2_int * (3 & sprite.field_B) + (3 & sprite.field_G);
+          for (var7 = 0; sprite.field_A > var7; var7++) {
+            for (var8 = 0; sprite.field_z > var8; var8++) {
               incrementValue$0 = var6;
               var6++;
               incrementValue$1 = var5;
               var5++;
-              var4[incrementValue$0] = param0.field_D[incrementValue$1];
+              var4[incrementValue$0] = sprite.field_D[incrementValue$1];
             }
-            var6 = var6 + (var2_int - param0.field_z);
+            var6 = var6 + (var2_int - sprite.field_z);
           }
-          param0.field_G = param0.field_G & -4;
-          param0.field_B = param0.field_B & -4;
-          param0.field_D = var4;
-          param0.field_z = var2_int;
-          param0.field_A = var3;
+          sprite.field_G = sprite.field_G & -4;
+          sprite.field_B = sprite.field_B & -4;
+          sprite.field_D = var4;
+          sprite.field_z = var2_int;
+          sprite.field_A = var3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_16_0 = var2;
           stackIn_16_1 = new StringBuilder().append("ig.DA(");
-          if (param0 == null) {
+          if (sprite == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

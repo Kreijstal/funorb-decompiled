@@ -235,17 +235,17 @@ final class Quaternion {
         this.z = NameEntryPopup.multiplyFixed16(var6, false, param3);
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawGameOverlays(boolean active, int obfuscationGuard) {
         if (HighScoreSubmission.c(-26)) {
-          param0 = false;
+          active = false;
         }
-        DraggableWidget.a(-114, param0);
-        if (param1 == -19213) {
-          AgeValidator.b((byte) -97);
+        DraggableWidget.a(-114, active);
+        if (obfuscationGuard == -19213) {
+          AgeValidator.drawQuickChatOverlay((byte) -97);
           return;
         }
         keycodeDefaultDown1 = -59;
-        AgeValidator.b((byte) -97);
+        AgeValidator.drawQuickChatOverlay((byte) -97);
     }
 
     public Quaternion() {

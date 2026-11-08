@@ -7,17 +7,17 @@ final class ByteArrayPool {
     static int field_b;
     static int[] field_d;
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4) {
-        if (!param2) {
+    final static void drawDirectionalFrame(int width, int height, boolean enabled, int x, int y) {
+        if (!enabled) {
           return;
         }
-        LogoMaterial.drawNineSlice(TutorialFactory.field_b, (byte) -125, param0, param3, param4, param1);
-        if (param0 > param1) {
-          TransformSupport.field_b.draw(param3 + (-TransformSupport.field_b.field_w + param0 >> 1), param4);
-          DisplayNamePanel.field_T.draw(param3 + (-DisplayNamePanel.field_T.field_w + param0 >> 1), -DisplayNamePanel.field_T.field_y + (param1 + param4));
+        LogoMaterial.drawNineSlice(TutorialFactory.field_b, (byte) -125, width, x, y, height);
+        if (width > height) {
+          TransformSupport.field_b.draw(x + (-TransformSupport.field_b.field_w + width >> 1), y);
+          DisplayNamePanel.field_T.draw(x + (-DisplayNamePanel.field_T.field_w + width >> 1), -DisplayNamePanel.field_T.field_y + (height + y));
         } else {
-          LoginPayloadFactory.field_a.draw(param3, (param1 - LoginPayloadFactory.field_a.field_y >> 1) + param4);
-          MessageDialogContent.field_T.draw(param3 + param0 - MessageDialogContent.field_T.field_w, param4 + (-MessageDialogContent.field_T.field_y + param1 >> 1));
+          LoginPayloadFactory.field_a.draw(x, (height - LoginPayloadFactory.field_a.field_y >> 1) + y);
+          MessageDialogContent.field_T.draw(x + width - MessageDialogContent.field_T.field_w, y + (-MessageDialogContent.field_T.field_y + height >> 1));
         }
     }
 
@@ -82,10 +82,10 @@ final class ByteArrayPool {
         return new byte[param0];
     }
 
-    final static void a(boolean param0) {
+    final static void resetTooltipState(boolean clearText) {
         PauseMenuScreen.field_J = 0;
         MatchingTextValidator.field_n = -1;
-        if (!param0) {
+        if (!clearText) {
           return;
         }
         BrowserCookieWriter.field_d = false;

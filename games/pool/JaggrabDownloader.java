@@ -540,7 +540,7 @@ final class JaggrabDownloader implements Runnable {
           GlowSprite.clearFaceBucketCounts((byte) 48);
           if (0 < mesh.field_I &&
             mesh.field_K != null) {
-            AgeValidator.h(0);
+            AgeValidator.clearFacePriorityCounts(0);
           }
           HighScoreRequest.field_x = 0;
           for (var9 = 0; mesh.field_d > var9; var9++) {

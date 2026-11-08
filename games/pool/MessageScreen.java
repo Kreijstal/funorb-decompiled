@@ -34,7 +34,7 @@ final class MessageScreen extends MenuScreen {
             stackIn_13_0 = (byte[]) (param2);
             return stackIn_13_0;
           }
-          stackIn_11_0 = BirthDatePromptPanel.a(param2, (byte) 91);
+          stackIn_11_0 = BirthDatePromptPanel.copyByteArray(param2, (byte) 91);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

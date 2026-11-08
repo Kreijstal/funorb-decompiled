@@ -43,7 +43,7 @@ final class Atan2Support {
             stackIn_10_0 = MonotonicClock.unableToAddIgnore;
             return stackIn_10_0;
           }
-          if (MenuSelection.a(param1, 24552)) {
+          if (MenuSelection.isIgnoredName(param1, 24552)) {
             stackIn_13_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, LobbyPlayerLookupSupport.ignorelistdupe);
             return stackIn_13_0;
           }
@@ -87,20 +87,20 @@ final class Atan2Support {
         cueCantGoThere = null;
         if (param0 < 47) {
           String var2 = (String) null;
-          Atan2Support.a((byte) 35, (String) null, (String) null);
+          Atan2Support.isStrongPassword((byte) 35, (String) null, (String) null);
         }
     }
 
-    final static String a(int param0) {
+    final static String getVisibleTooltipText(int obfuscationGuard) {
         if (BrowserCookieWriter.field_d) {
-          if (param0 != 9383) {
+          if (obfuscationGuard != 9383) {
             field_h = (int[]) null;
             return null;
           }
           return null;
         }
         if (CompressedContainerSupport.field_c > PauseMenuScreen.field_J) {
-          if (param0 != 9383) {
+          if (obfuscationGuard != 9383) {
             field_h = (int[]) null;
             return null;
           }
@@ -109,14 +109,14 @@ final class Atan2Support {
         if (CompressedContainerSupport.field_c + ParticleTrail.field_d > PauseMenuScreen.field_J) {
           return MessageScreen.field_I;
         }
-        if (param0 != 9383) {
+        if (obfuscationGuard != 9383) {
           field_h = (int[]) null;
           return null;
         }
         return null;
     }
 
-    final static boolean a(byte param0, String param1, String param2) {
+    final static boolean isStrongPassword(byte obfuscationGuard, String username, String password) {
         RuntimeException var3 = null;
         String var4 = null;
         RuntimeException stackIn_28_0 = null;
@@ -126,29 +126,29 @@ final class Atan2Support {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (HotspotRectangle.a(1, param2)) {
+          if (HotspotRectangle.a(1, password)) {
             return false;
           }
-          if (IterableNodeHashTable.hasUniformCharacters(param2, -106)) {
+          if (IterableNodeHashTable.hasUniformCharacters(password, -106)) {
             return false;
           }
-          if (SpaceTableScene.hasInvalidPasswordLength(param2, 28350)) {
+          if (SpaceTableScene.hasInvalidPasswordLength(password, 28350)) {
             return false;
           }
-          if (param0 >= -24) {
+          if (obfuscationGuard >= -24) {
             var4 = (String) null;
-            Atan2Support.a((byte) 61, (String) null, (String) null);
+            Atan2Support.isStrongPassword((byte) 61, (String) null, (String) null);
           }
-          if (0 == param1.length()) {
+          if (0 == username.length()) {
             return true;
           }
-          if (TutorialController.containsForwardOrReversed(param2, param1, 17924)) {
+          if (TutorialController.containsForwardOrReversed(password, username, 17924)) {
             return false;
           }
-          if (BirthDateInputWidget.containsForwardOrReversed(param1, (byte) -111, param2)) {
+          if (BirthDateInputWidget.containsForwardOrReversed(username, (byte) -111, password)) {
             return false;
           }
-          if (!StateIconLabel.a(23138, param1, param2)) {
+          if (!StateIconLabel.a(23138, username, password)) {
             return true;
           }
           return false;
@@ -156,14 +156,14 @@ final class Atan2Support {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_28_0 = var3;
-          stackIn_28_1 = new StringBuilder().append("jd.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_28_1 = new StringBuilder().append("jd.F(").append(obfuscationGuard).append(',');
+          if (username == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
           stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',');
-          if (param2 == null) {
+          if (password == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
@@ -172,7 +172,7 @@ final class Atan2Support {
         }
     }
 
-    final static MeshBuilder[] a(int param0, MeshBuilder param1) {
+    final static MeshBuilder[] splitMeshForSpatialCells(int obfuscationGuard, MeshBuilder mesh) {
         int[] var2 = null;
         RuntimeException var2_ref = null;
         MeshBuilder[] stackIn_3_0 = null;
@@ -181,20 +181,20 @@ final class Atan2Support {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          MeshBoundsSupport.computeMeshBounds(param1, -23109);
+          MeshBoundsSupport.computeMeshBounds(mesh, -23109);
           var2 = new int[]{3, 1, 1};
-          if (param0 <= 65) {
+          if (obfuscationGuard <= 65) {
             field_b = 76;
           }
-          BrowserCookieSupport.a(-2656, var2, param1);
-          stackIn_3_0 = LocalGameSetupScreen.splitMeshIntoGrid(param1, var2, true);
+          BrowserCookieSupport.computeMeshSubdivisionCounts(-2656, var2, mesh);
+          stackIn_3_0 = LocalGameSetupScreen.splitMeshIntoGrid(mesh, var2, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_6_0 = var2_ref;
-          stackIn_6_1 = new StringBuilder().append("jd.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("jd.B(").append(obfuscationGuard).append(',');
+          if (mesh == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

@@ -23,7 +23,7 @@ final class BeveledFrameSpriteFactory {
         field_b = null;
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] createBeveledFrameSprites(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
         Sprite[] var10;
@@ -93,7 +93,7 @@ final class BeveledFrameSpriteFactory {
         return var10Lifetime1;
     }
 
-    final static int[] a(byte param0, int[] param1) {
+    final static int[] completeTransform(byte obfuscationGuard, int[] transform) {
         int[] stackIn_7_0 = null;
         int[] stackIn_15_0 = null;
         int[] stackIn_17_0 = null;
@@ -108,19 +108,19 @@ final class BeveledFrameSpriteFactory {
         int[] var5 = null;
         var4 = Pool.field_O;
         try {
-          if (param0 < 72) {
+          if (obfuscationGuard < 72) {
             BeveledFrameSpriteFactory.releaseStatics(-2);
           }
-          if (param1 != null &&
-            param1.length != 0) {
-            if (param1.length >= 12) {
-              stackIn_17_0 = (int[]) (param1);
+          if (transform != null &&
+            transform.length != 0) {
+            if (transform.length >= 12) {
+              stackIn_17_0 = (int[]) (transform);
               return stackIn_17_0;
             }
             var5 = new int[12];
             var2 = var5;
-            for (var3 = 0; param1.length > var3; var3++) {
-              var5[var3] = param1[var3];
+            for (var3 = 0; transform.length > var3; var3++) {
+              var5[var3] = transform[var3];
             }
             while (ModelOriginSupport.field_m.length > var3) {
               var2[var3] = ModelOriginSupport.field_m[var3];
@@ -135,8 +135,8 @@ final class BeveledFrameSpriteFactory {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_20_0 = var2_ref;
-          stackIn_20_1 = new StringBuilder().append("il.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_20_1 = new StringBuilder().append("il.C(").append(obfuscationGuard).append(',');
+          if (transform == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";

@@ -341,7 +341,7 @@ final class PlasmaTableScene extends TableScene {
             var12 = var11 * var11 + var10 * var10;
             if (var12 >= 0 &&
               var12 <= DisplayNamePanel.field_V) {
-              param1 = LoginTextValue.a(false, var12);
+              param1 = LoginTextValue.approximateIntegerSquareRoot(false, var12);
               if (param1 > EmailAvailabilityValidator.field_x &&
                 param1 < RankingsBufferSupport.field_b) {
                 param1 = (param1 - EmailAvailabilityValidator.field_x - 32) * 255 >> 5;
@@ -732,7 +732,7 @@ final class PlasmaTableScene extends TableScene {
         try {
           super.updatePottedBalls(param0, param1);
           for (var3_int = 0; var3_int < this.field_K.length; var3_int++) {
-            this.field_K[var3_int].a((byte) -43);
+            this.field_K[var3_int].advanceParticles((byte) -43);
           }
           this.advancePlasmaCellAnimations(2);
           this.updateFloorGlowGrid(param1.gameModel.balls, (byte) -122);
@@ -1049,7 +1049,7 @@ final class PlasmaTableScene extends TableScene {
           this.a(77, var16);
           this.drawFloorGlowGrid((byte) -25, var16);
           for (var5 = 0; this.field_K.length > var5; var5++) {
-            this.field_K[var5].a(false, (byte) 98, var16);
+            this.field_K[var5].drawParticles(false, (byte) 98, var16);
           }
           if (0L == (LinkButtonPainter.field_i & 1073741824L)) {
             stackIn_28_0 = this;
@@ -1281,7 +1281,7 @@ final class PlasmaTableScene extends TableScene {
 
     final void stopLoopSounds(boolean param0) {
         if (null != this.field_bb) {
-          TickClock.a((byte) -110, this.field_bb);
+          TickClock.removeSoundEffectStream((byte) -110, this.field_bb);
           this.field_bb = null;
         }
         if (param0) {

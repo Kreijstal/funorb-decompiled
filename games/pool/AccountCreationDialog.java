@@ -283,7 +283,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             }
           }
         } else {
-          MouseWheelInput.a(-83, animate);
+          MouseWheelInput.initializeMembershipSlideshow(-83, animate);
           if (GameRules.field_b < 0) {
             if (-2 == GameRules.field_b) {
               KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);

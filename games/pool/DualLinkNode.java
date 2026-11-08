@@ -57,7 +57,7 @@ class DualLinkNode extends IntrusiveNode {
         if (param2 > -107) {
           DualLinkNode.a(-20, 53, 78, true, 78, 37, 85);
         }
-        return BeveledFrameSpriteFactory.a(1, 1, param4, 3, 4, 1, param0, param3, param1);
+        return BeveledFrameSpriteFactory.createBeveledFrameSprites(1, 1, param4, 3, 4, 1, param0, param3, param1);
     }
 
     final void unlinkNode(boolean param0) {

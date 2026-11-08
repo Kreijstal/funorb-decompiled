@@ -197,11 +197,11 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
 
     final static void f(int param0) {
         if (param0 >= ~BallDebugOverlay.field_b) {
-          AgeValidator.a(true, 256);
+          AgeValidator.setSoundEffectVolume(true, 256);
           return;
         }
         int var1 = BallDebugOverlay.field_b % 32;
-        AgeValidator.a(true, -var1 + (32 + BallDebugOverlay.field_b));
+        AgeValidator.setSoundEffectVolume(true, -var1 + (32 + BallDebugOverlay.field_b));
     }
 
     final static IndexedSprite a(IndexedSprite param0, byte param1, int[] param2) {
