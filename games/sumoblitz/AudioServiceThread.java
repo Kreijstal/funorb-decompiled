@@ -8,7 +8,7 @@ final class AudioServiceThread implements Runnable {
     static String[] padTypeNames;
     PlatformTaskDispatcher taskDispatcher;
     volatile boolean stopRequested;
-    static gm field_d;
+    static TextWidgetRenderer field_d;
     static int field_h;
 
     final static void drawDottedRectangle(int param0, int param1, int param2, int param3, int param4) {

@@ -104,12 +104,12 @@ final class od implements nr {
     }
 
     final static void a(int param0) {
-        rf.field_a.a((byte) 117);
+        rf.field_a.closeAllDialogs((byte) 117);
         if (param0 == 5178) {
           if (he.field_n == null) {
-            he.field_n = new m(rf.field_a, t.field_s);
+            he.field_n = new ProgressDialog(rf.field_a, t.field_s);
           }
-          rf.field_a.a((byte) 115, he.field_n);
+          rf.field_a.pushDialog((byte) 115, he.field_n);
           return;
         }
     }
@@ -122,7 +122,7 @@ final class od implements nr {
           if (11 == jv.field_a) {
             tu.a((byte) -126);
           }
-          hu.a(hn.field_k, ur.field_R, ch.field_h, 122);
+          hu.a(hn.field_k, ContentTransitionDialog.field_R, ch.field_h, 122);
           IterableNodeHashTable.a(0, 0, param1, (byte) 124);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "od.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

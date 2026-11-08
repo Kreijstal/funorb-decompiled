@@ -15,7 +15,7 @@ final class nu {
             if (!of.c((byte) 124)) {
               throw new RuntimeException("");
             }
-            if (!mc.b((byte) 125, "jagdx")) {
+            if (!ScrollPane.b((byte) 125, "jagdx")) {
               throw new RuntimeException("");
             }
             if (param0 != 7023) {

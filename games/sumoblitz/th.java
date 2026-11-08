@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th extends WidgetContainer implements ca, ai {
+final class th extends WidgetContainer implements ca, WidgetActionListener {
     static SpriteData field_C;
     static int field_H;
     private uk field_G;
-    private wp field_D;
+    private InteractiveWidget field_D;
     static ToolkitSprite field_B;
     private ar field_F;
 
-    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
+    final boolean onKey(UiWidget root, char character, byte guard, int keyCode) {
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_18_0 = null;
@@ -18,18 +18,18 @@ final class th extends WidgetContainer implements ca, ai {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (super.a(param0, param1, (byte) 60, param3)) {
+          if (super.onKey(root, character, (byte) 60, keyCode)) {
             return true;
           }
-          if (98 == param3) {
-            stackIn_7_0 = this.a((byte) -94, param0);
+          if (98 == keyCode) {
+            stackIn_7_0 = this.focusPrevious((byte) -94, root);
             return stackIn_7_0;
           }
-          if (param3 == 99) {
-            stackIn_10_0 = this.a(param0, false);
+          if (keyCode == 99) {
+            stackIn_10_0 = this.focusNext(root, false);
             return stackIn_10_0;
           }
-          if (param2 < 9) {
+          if (guard < 9) {
             th.e(false);
           }
           return false;
@@ -38,20 +38,20 @@ final class th extends WidgetContainer implements ca, ai {
           var5 = decompiledCaughtException;
           stackIn_18_0 = var5;
           stackIn_18_1 = new StringBuilder().append("th.KA(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(character).append(',').append(guard).append(',').append(keyCode).append(')').toString());
         }
     }
 
     th(uk param0) {
-        super(0, 0, 288, 0, (mh) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         RuntimeException runtimeException = null;
         int var3 = 0;
-        gm var4 = null;
+        TextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         String var7 = null;
@@ -61,26 +61,26 @@ final class th extends WidgetContainer implements ca, ai {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_G = param0;
-          this.field_D = new wp(wd.continueText, (qm) null);
-          this.field_D.field_w = (mh) ((Object) new ue());
+          this.field_D = new InteractiveWidget(wd.continueText, (WidgetListener) null);
+          this.field_D.renderer = (WidgetRenderer) ((Object) new ue());
           var7 = ic.a(qv.asYouAreUnderText, new String[]{this.a((byte) 43), this.g(116)}, (byte) -128);
           var3 = 20;
-          var4 = new gm(kw.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.field_s, -1, 2147483647, true);
+          var4 = new TextWidgetRenderer(kw.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.field_s, -1, 2147483647, true);
           this.field_F = new ar(var7, var4);
-          this.field_F.field_t = "";
+          this.field_F.tooltip = "";
           this.field_F.a(-57, sb.openInPopupWindowText, 0);
           this.field_F.a(-66, sb.openInPopupWindowText, 1);
-          this.field_F.field_o = (qm) (this);
-          this.field_F.field_q = -40 + this.field_q;
-          this.field_F.a(var3, false, 26, -40 + this.field_q);
-          var3 = var3 + (15 + this.field_F.field_p);
-          this.a(this.field_F, 99);
+          this.field_F.listener = (WidgetListener) (this);
+          this.field_F.width = -40 + this.width;
+          this.field_F.a(var3, false, 26, -40 + this.width);
+          var3 = var3 + (15 + this.field_F.height);
+          this.addChild(this.field_F, 99);
           var5 = 4;
           var6 = 200;
-          this.field_D.a(-79, 300 - var6 >> 1, var3, 40, var6);
-          this.field_D.field_o = (qm) (this);
-          this.a(this.field_D, 76);
-          this.a(-112, 0, 0, 55 + var3 + var5, 300);
+          this.field_D.setBounds(-79, 300 - var6 >> 1, var3, 40, var6);
+          this.field_D.listener = (WidgetListener) (this);
+          this.addChild(this.field_D, 76);
+          this.setBounds(-112, 0, 0, 55 + var3 + var5, 300);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,7 +126,7 @@ final class th extends WidgetContainer implements ca, ai {
           }
           boolean decompiledFrameRemainder1 = true;
           if (3 == param2) {
-            kn.field_b = kn.field_b - ld.field_C;
+            kn.field_b = kn.field_b - DropDownWidget.field_C;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + oh.levelIndex;
             ts.field_a = ts.field_a - nq.field_i;
           } else {
@@ -173,7 +173,7 @@ final class th extends WidgetContainer implements ca, ai {
               ts.field_a = ts.field_a - nq.field_i;
             }
           } else {
-            kn.field_b = kn.field_b + ld.field_C;
+            kn.field_b = kn.field_b + DropDownWidget.field_C;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - oh.levelIndex;
             ts.field_a = ts.field_a + nq.field_i;
           }
@@ -280,18 +280,18 @@ final class th extends WidgetContainer implements ca, ai {
         }
     }
 
-    public final void a(int param0, int param1, wp param2, int param3, int param4) {
+    public final void onAction(int action, int guard, InteractiveWidget source, int pointerX, int pointerY) {
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 == this.field_D) {
+          if (source == this.field_D) {
             kh.a(false);
             this.field_G.n(-7);
           }
-          if (param1 == 710) {
+          if (guard == 710) {
             return;
           }
           th.f(true);
@@ -300,13 +300,13 @@ final class th extends WidgetContainer implements ca, ai {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_9_0 = var6;
-          stackIn_9_1 = new StringBuilder().append("th.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = new StringBuilder().append("th.C(").append(action).append(',').append(guard).append(',');
+          if (source == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(pointerX).append(',').append(pointerY).append(')').toString());
         }
     }
 

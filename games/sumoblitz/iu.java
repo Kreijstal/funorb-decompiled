@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iu implements mh {
+final class iu implements WidgetRenderer {
     private int field_d;
     private LegacyBitmapFont field_c;
     static int field_e;
@@ -11,7 +11,7 @@ final class iu implements mh {
     private int field_f;
     private int field_a;
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+    public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -27,49 +27,49 @@ final class iu implements mh {
         fu var13 = null;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0 instanceof fu) {
-            stackIn_4_0 = (UiWidget) (param0);
+          if (widget instanceof fu) {
+            stackIn_4_0 = (UiWidget) (widget);
           } else {
             stackIn_4_0 = null;
           }
           var13 = (fu) (stackIn_4_0);
-          SoftwareRasterizer.fillRectangle(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_h);
+          SoftwareRasterizer.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.field_h);
           if (var13 != null) {
           }
-          if (param2 != 5592405) {
+          if (guard != 5592405) {
             var12 = (UiWidget) null;
-            this.a((UiWidget) null, -54, -79, true, -72);
+            this.renderWidget((UiWidget) null, -54, -79, true, -72);
           }
-          var7 = param0.field_q - var13.field_I * 2;
-          var8 = param4 - (-param0.field_r - var13.field_I);
-          var9 = param1 + param0.field_v + var13.field_J;
+          var7 = widget.width - var13.field_I * 2;
+          var8 = parentX - (-widget.x - var13.field_I);
+          var9 = parentY + widget.y + var13.field_J;
           SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_g);
           for (var10 = -1 + var13.g(0); var10 >= 0; var10--) {
-            SoftwareRasterizer.fillCircle(var8 + var13.a(var10, param2 - 5616599) * var7 / var13.h(-1), var9, this.field_d, this.field_a);
+            SoftwareRasterizer.fillCircle(var8 + var13.a(var10, guard - 5616599) * var7 / var13.h(-1), var9, this.field_d, this.field_a);
           }
           if (this.field_c == null) {
             return;
           }
-          this.field_c.a(var13.field_m, var8 + var7 / 2, var13.field_J + (this.field_c.field_F + var9), this.field_b, this.field_f);
+          this.field_c.a(var13.text, var8 + var7 / 2, var13.field_J + (this.field_c.field_F + var9), this.field_b, this.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_16_0 = var6;
           stackIn_16_1 = new StringBuilder().append("iu.A(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(parentY).append(',').append(guard).append(',').append(isEnabled).append(',').append(parentX).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
         if (param0 <= -117) {
           pg.field_a = false;
-          lc.field_A = false;
+          StatusMessagePanel.field_A = false;
           rd.a(-1, -69);
           vm.field_c = hm.field_a;
           ProxySocketConnector.field_e = hm.field_a;
@@ -77,7 +77,7 @@ final class iu implements mh {
         }
         iu.a((byte) -85);
         pg.field_a = false;
-        lc.field_A = false;
+        StatusMessagePanel.field_A = false;
         rd.a(-1, -69);
         vm.field_c = hm.field_a;
         ProxySocketConnector.field_e = hm.field_a;

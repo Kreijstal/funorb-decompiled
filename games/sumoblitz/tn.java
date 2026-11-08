@@ -296,7 +296,7 @@ final class tn extends jb {
           return;
         }
         ks.field_x = fw.c(false);
-        pu.field_e = new dg();
+        pu.field_e = new DialogLayer();
         is.a(40);
     }
 

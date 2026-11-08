@@ -11,14 +11,14 @@ final class bn extends ar {
     static String dataServerFullOrText;
     static boolean field_P;
 
-    final String c(int param0) {
-        if (param0 == -6696) {
+    final String hoveredTooltip(int guard) {
+        if (guard == -6696) {
           return null;
         }
         return (String) null;
     }
 
-    final boolean a(UiWidget param0, byte param1) {
+    final boolean requestFocus(UiWidget root, byte guard) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -26,37 +26,37 @@ final class bn extends ar {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == 61) {
+          if (guard == 61) {
             return false;
           }
           var4 = (UiWidget) null;
-          this.a((UiWidget) null, (byte) 73);
+          this.requestFocus((UiWidget) null, (byte) 73);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("bn.Q(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, UiWidget param2, int param3) {
+    final void update(int parentX, int guard, UiWidget root, int parentY) {
         try {
           this.field_S = this.field_S + 1;
-          super.a(param0, 83, param2, param3);
-          int var5_int = -76 / ((param1 + 25) / 45);
+          super.update(parentX, 83, root, parentY);
+          int var5_int = -76 / ((guard + 25) / 45);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bn.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bn.U(" + parentX + ',' + guard + ',' + (root != null ? "{...}" : "null") + ',' + parentY + ')');
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void renderLayer(int parentX, int parentY, byte guard, int layer) {
         String var5;
         gf var6;
         int var13;
@@ -94,12 +94,12 @@ final class bn extends ar {
         Sprite var47;
         Sprite var48;
         Sprite var49;
-        de var50;
-        de var51;
-        de var52;
-        de var53;
-        de var54;
-        de var55;
+        TextWidgetLayout var50;
+        TextWidgetLayout var51;
+        TextWidgetLayout var52;
+        TextWidgetLayout var53;
+        TextWidgetLayout var54;
+        TextWidgetLayout var55;
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
@@ -134,7 +134,7 @@ final class bn extends ar {
         var37 = null;
         var46 = null;
         var13 = Sumoblitz.field_L ? 1 : 0;
-        if (param2 < -35) {
+        if (guard < -35) {
           var6 = this.field_Q.c(-126);
           if (var6 != GameInstructions.field_f &&
             var6 != kt.field_a) {
@@ -145,15 +145,15 @@ final class bn extends ar {
           } else {
             var5 = hi.checkingText;
           }
-          if (!var5.equals(this.field_m)) {
-            this.field_m = var5;
+          if (!var5.equals(this.text)) {
+            this.text = var5;
             this.a(9);
           }
-          super.a(param0, param1, (byte) -119, param3);
+          super.renderLayer(parentX, parentY, (byte) -119, layer);
           var6Lifetime5 = this.field_Q.c(-106);
-          var50 = (de) ((Object) this.field_w);
-          var9 = this.field_r + param0;
-          var10 = var50.b(param1, (UiWidget) (this), 0) + (var50.b(-3, (UiWidget) (this)).height(true) >> 1);
+          var50 = (TextWidgetLayout) ((Object) this.renderer);
+          var9 = this.x + parentX;
+          var10 = var50.textOriginY(parentY, (UiWidget) (this), 0) + (var50.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime5 != GameInstructions.field_f &&
             kt.field_a != var6Lifetime5) {
             if (qr.field_e == var6Lifetime5) {
@@ -193,19 +193,19 @@ final class bn extends ar {
           this.field_K.d(-(var20.field_z >> 1) + var9, -var20.field_w + var10, 256);
           return;
         }
-        this.a(-71, -15, (byte) -42, -1);
+        this.renderLayer(-71, -15, (byte) -42, -1);
         var6Lifetime1 = this.field_Q.c(-126);
         if (var6Lifetime1 == GameInstructions.field_f) {
           var21 = hi.checkingText;
-          if (!var21.equals(this.field_m)) {
-            this.field_m = var21;
+          if (!var21.equals(this.text)) {
+            this.text = var21;
             this.a(9);
           }
-          super.a(param0, param1, (byte) -119, param3);
+          super.renderLayer(parentX, parentY, (byte) -119, layer);
           var6Lifetime1 = this.field_Q.c(-106);
-          var51 = (de) ((Object) this.field_w);
-          var9Lifetime1 = this.field_r + param0;
-          var10Lifetime1 = var51.b(param1, (UiWidget) (this), 0) + (var51.b(-3, (UiWidget) (this)).height(true) >> 1);
+          var51 = (TextWidgetLayout) ((Object) this.renderer);
+          var9Lifetime1 = this.x + parentX;
+          var10Lifetime1 = var51.textOriginY(parentY, (UiWidget) (this), 0) + (var51.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime1 != GameInstructions.field_f &&
             kt.field_a != var6Lifetime1) {
             if (qr.field_e == var6Lifetime1) {
@@ -247,15 +247,15 @@ final class bn extends ar {
         }
         if (var6Lifetime1 == kt.field_a) {
           var26 = hi.checkingText;
-          if (!var26.equals(this.field_m)) {
-            this.field_m = var26;
+          if (!var26.equals(this.text)) {
+            this.text = var26;
             this.a(9);
           }
-          super.a(param0, param1, (byte) -119, param3);
+          super.renderLayer(parentX, parentY, (byte) -119, layer);
           var6Lifetime1 = this.field_Q.c(-106);
-          var52 = (de) ((Object) this.field_w);
-          var9Lifetime2 = this.field_r + param0;
-          var10Lifetime2 = var52.b(param1, (UiWidget) (this), 0) + (var52.b(-3, (UiWidget) (this)).height(true) >> 1);
+          var52 = (TextWidgetLayout) ((Object) this.renderer);
+          var9Lifetime2 = this.x + parentX;
+          var10Lifetime2 = var52.textOriginY(parentY, (UiWidget) (this), 0) + (var52.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime1 != GameInstructions.field_f &&
             kt.field_a != var6Lifetime1) {
             if (qr.field_e == var6Lifetime1) {
@@ -297,15 +297,15 @@ final class bn extends ar {
         }
         var31 = this.field_Q.a(3690);
         if (var31 != null) {
-          if (!var31.equals(this.field_m)) {
-            this.field_m = var31;
+          if (!var31.equals(this.text)) {
+            this.text = var31;
             this.a(9);
           }
-          super.a(param0, param1, (byte) -119, param3);
+          super.renderLayer(parentX, parentY, (byte) -119, layer);
           var6Lifetime2 = this.field_Q.c(-106);
-          var53 = (de) ((Object) this.field_w);
-          var9Lifetime3 = this.field_r + param0;
-          var10Lifetime3 = var53.b(param1, (UiWidget) (this), 0) + (var53.b(-3, (UiWidget) (this)).height(true) >> 1);
+          var53 = (TextWidgetLayout) ((Object) this.renderer);
+          var9Lifetime3 = this.x + parentX;
+          var10Lifetime3 = var53.textOriginY(parentY, (UiWidget) (this), 0) + (var53.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime2 != GameInstructions.field_f &&
             kt.field_a != var6Lifetime2) {
             if (qr.field_e == var6Lifetime2) {
@@ -346,12 +346,12 @@ final class bn extends ar {
           return;
         }
         var36 = this.field_U;
-        if (var36.equals(this.field_m)) {
-          super.a(param0, param1, (byte) -119, param3);
+        if (var36.equals(this.text)) {
+          super.renderLayer(parentX, parentY, (byte) -119, layer);
           var6Lifetime3 = this.field_Q.c(-106);
-          var55 = (de) ((Object) this.field_w);
-          var9Lifetime4 = this.field_r + param0;
-          var10Lifetime4 = var55.b(param1, (UiWidget) (this), 0) + (var55.b(-3, (UiWidget) (this)).height(true) >> 1);
+          var55 = (TextWidgetLayout) ((Object) this.renderer);
+          var9Lifetime4 = this.x + parentX;
+          var10Lifetime4 = var55.textOriginY(parentY, (UiWidget) (this), 0) + (var55.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime3 != GameInstructions.field_f &&
             kt.field_a != var6Lifetime3) {
             if (qr.field_e == var6Lifetime3) {
@@ -387,13 +387,13 @@ final class bn extends ar {
           this.field_K.d(-(var49.field_z >> 1) + var9Lifetime4, -var49.field_w + var10Lifetime4, 256);
           return;
         }
-        this.field_m = var36;
+        this.text = var36;
         this.a(9);
-        super.a(param0, param1, (byte) -119, param3);
+        super.renderLayer(parentX, parentY, (byte) -119, layer);
         var6Lifetime4 = this.field_Q.c(-106);
-        var54 = (de) ((Object) this.field_w);
-        var9Lifetime5 = this.field_r + param0;
-        var10Lifetime5 = var54.b(param1, (UiWidget) (this), 0) + (var54.b(-3, (UiWidget) (this)).height(true) >> 1);
+        var54 = (TextWidgetLayout) ((Object) this.renderer);
+        var9Lifetime5 = this.x + parentX;
+        var10Lifetime5 = var54.textOriginY(parentY, (UiWidget) (this), 0) + (var54.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
         if (var6Lifetime4 == GameInstructions.field_f) {
           var38 = fw.field_m[0];
           var11Lifetime5 = var38.field_z << 1;
@@ -483,7 +483,7 @@ final class bn extends ar {
         try {
           this.field_U = param1;
           this.field_Q = param0;
-          this.a(-60, param2, param3, param5, param4);
+          this.setBounds(-60, param2, param3, param5, param4);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

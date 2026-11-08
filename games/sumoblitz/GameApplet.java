@@ -892,7 +892,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 CompactMeshGeometry.b(true);
                 this.e(1000);
-                m.field_R = sd.a(wq.field_b, gi.field_h, 0, (java.awt.Component) ((Object) qn.field_f));
+                ProgressDialog.field_R = sd.a(wq.field_b, gi.field_h, 0, (java.awt.Component) ((Object) qn.field_f));
                 this.initializeGame(28196);
                 jl.field_a = bt.a(false);
                 do {

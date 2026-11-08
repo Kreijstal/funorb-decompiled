@@ -70,7 +70,7 @@ final class eg extends IntrusiveNode {
           var17.position = -2 + param1.length;
           rl.field_n = var17.a(255);
           vg.field_k = new int[rl.field_n];
-          we.field_B = new int[rl.field_n];
+          ScrollViewport.field_B = new int[rl.field_n];
           SoundCache.field_d = new boolean[rl.field_n];
           TextLayout.field_d = new byte[rl.field_n][];
           StrongCacheReference.field_C = new int[rl.field_n];
@@ -90,7 +90,7 @@ final class eg extends IntrusiveNode {
             vg.field_k[var4Lifetime2] = var17.a(255);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < rl.field_n; var4Lifetime3++) {
-            we.field_B[var4Lifetime3] = var17.a(jg.a(param0, 0));
+            ScrollViewport.field_B[var4Lifetime3] = var17.a(jg.a(param0, 0));
           }
           var17.position = -(8 * rl.field_n) + (-7 + param1.length - (-1 + var3) * 3);
           LegacyOpenGlEffectManager.field_l = new int[var3];
@@ -104,7 +104,7 @@ final class eg extends IntrusiveNode {
           for (var4Lifetime5 = 0; var4Lifetime5 < rl.field_n; var4Lifetime5++) {
             regionExit1: {
               var5 = vg.field_k[var4Lifetime5];
-              var6 = we.field_B[var4Lifetime5];
+              var6 = ScrollViewport.field_B[var4Lifetime5];
               var7 = var6 * var5;
               var20 = new byte[var7];
               var18 = var20;

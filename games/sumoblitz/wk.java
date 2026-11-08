@@ -8,7 +8,7 @@ final class wk extends na {
     static String field_f;
     private boolean field_i;
 
-    wk(dh param0, dh param1) {
+    wk(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         this.field_e = "";
         this.field_i = false;

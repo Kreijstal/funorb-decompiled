@@ -695,7 +695,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         RuntimeException var1_ref = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var6 = rg.field_C;
+          var6 = ModalDialog.field_C;
           var1 = var6;
           var3 = -20 / ((-66 - param0) / 42);
           var2 = 0;
@@ -1954,7 +1954,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
               this.a((byte) -83, lf.field_e, ua.field_n);
             } else {
               if (param1 == 3) {
-                this.a((byte) -83, SlowBurstParticle.field_v, cv.field_F);
+                this.a((byte) -83, SlowBurstParticle.field_v, LoginForm.field_F);
               } else {
                 if (param1 == 4) {
                   this.a((byte) -83, bj.field_c, bj.field_c);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ue extends gm {
+final class ue extends TextWidgetRenderer {
     private int field_n;
     private int field_s;
     private int field_q;
@@ -20,7 +20,7 @@ final class ue extends gm {
         field_p = null;
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+    public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         int stackIn_6_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
@@ -33,19 +33,19 @@ final class ue extends gm {
         int var7 = 0;
         int var8 = 0;
         try {
-          if (!param0.field_k) {
-            stackIn_6_0 = (param0.d(-1)) ? 1 : 0;
+          if (!widget.hovered) {
+            stackIn_6_0 = (widget.hasFocus(-1)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param2 != 5592405) {
+          if (guard != 5592405) {
             this.field_s = 88;
           }
-          if (param0 instanceof wp) {
-            param3 = param3 & ((wp) (param0)).field_x;
+          if (widget instanceof InteractiveWidget) {
+            isEnabled = isEnabled & ((InteractiveWidget) (widget)).enabled;
           }
-          if (!param3) {
+          if (!isEnabled) {
             stackIn_16_0 = this.field_q;
           } else {
             if (var6_int != 0) {
@@ -55,22 +55,22 @@ final class ue extends gm {
             }
           }
           var7 = stackIn_16_0;
-          stackIn_19_0 = (!param3) ? 7105644 : 16777215;
+          stackIn_19_0 = (!isEnabled) ? 7105644 : 16777215;
           var8 = stackIn_19_0;
-          ByteArrayStorage.drawHorizontalSpriteStrip(var7, param0.field_q, param0.field_v + (param1 + (-this.field_r[0].field_w + param0.field_p >> 1)), 67, this.field_r, param0.field_r + param4);
-          this.field_e.a(param0.field_m, param4 + param0.field_r, param0.field_v + (param1 - 2), param0.field_q, param0.field_p, var8, -1, 1, 1, this.field_e.field_s);
+          ByteArrayStorage.drawHorizontalSpriteStrip(var7, widget.width, widget.y + (parentY + (-this.field_r[0].field_w + widget.height >> 1)), 67, this.field_r, widget.x + parentX);
+          this.font.a(widget.text, parentX + widget.x, widget.y + (parentY - 2), widget.width, widget.height, var8, -1, 1, 1, this.font.field_s);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_23_0 = var6;
           stackIn_23_1 = new StringBuilder().append("ue.A(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(parentY).append(',').append(guard).append(',').append(isEnabled).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -139,16 +139,16 @@ final class ue extends gm {
             if (0 != var5) {
               var6_int = var4_ref_of.field_l;
               var7 = var4_ref_of.field_s;
-              jh.field_B[0].field_a = null;
-              jh.field_B[0].field_c = qv.field_o;
-              jh.field_B[0].field_b = false;
+              DraggableWidget.field_B[0].field_a = null;
+              DraggableWidget.field_B[0].field_c = qv.field_o;
+              DraggableWidget.field_B[0].field_b = false;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                jh.field_B[var8_int].field_c = var28.d(-1);
-                jh.field_B[var8_int].field_b = false;
+                DraggableWidget.field_B[var8_int].field_c = var28.d(-1);
+                DraggableWidget.field_B[var8_int].field_b = false;
                 if (var28.e(-31302) == 1) {
-                  jh.field_B[var8_int].field_a = var28.d(param0 + 69);
+                  DraggableWidget.field_B[var8_int].field_a = var28.d(param0 + 69);
                 } else {
-                  jh.field_B[var8_int].field_a = null;
+                  DraggableWidget.field_B[var8_int].field_a = null;
                 }
               }
               dupTemp$0 = new String[3][var6_int];
@@ -171,12 +171,12 @@ final class ue extends gm {
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var28.e(-31302);
-                  var21 = jh.field_B[var20].field_c;
+                  var21 = DraggableWidget.field_B[var20].field_c;
                   var22 = var28.a((byte) 113);
                   var24 = var28.position;
                   if (var6_int > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = jh.field_B[var20].field_a;
+                    var9[0][var12] = DraggableWidget.field_B[var20].field_a;
                     var10[0][var12] = var22;
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$3 = var15;
@@ -199,10 +199,10 @@ final class ue extends gm {
                     }
                   }
                   if (var6_int > var14 &&
-                    !jh.field_B[var20].field_b) {
-                    jh.field_B[var20].field_b = true;
+                    !DraggableWidget.field_B[var20].field_b) {
+                    DraggableWidget.field_B[var20].field_b = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = jh.field_B[var20].field_a;
+                    var9[2][var14] = DraggableWidget.field_B[var20].field_a;
                     var10[2][var14] = var22;
                     var28.position = var24;
                     var14++;
@@ -251,7 +251,7 @@ final class ue extends gm {
     private ue(int param0, int param1, int param2) {
         this.field_q = param2;
         this.field_r = LevelCompleteUpgradeScreen.field_j;
-        this.field_e = tq.field_a;
+        this.font = tq.field_a;
         this.field_s = param1;
         this.field_n = param0;
     }

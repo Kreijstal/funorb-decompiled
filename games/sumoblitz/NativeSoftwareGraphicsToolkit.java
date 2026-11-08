@@ -144,7 +144,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         this.field_q = new IntrusiveNodeHashTable(4);
         this.field_k = false;
         try {
-          if (!mc.b((byte) -124, "sw3d")) {
+          if (!ScrollPane.b((byte) -124, "sw3d")) {
             throw new RuntimeException("");
           }
           NativeResourceReaper.b((byte) -119);

@@ -8,7 +8,7 @@ final class c extends nl {
     static String unfortunatelyThereWasAText;
     static int[] field_u;
 
-    final String a(boolean param0, UiWidget param1) {
+    final String widgetText(boolean guard, UiWidget widget) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -16,17 +16,17 @@ final class c extends nl {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0) {
+          if (!guard) {
             field_s = -86;
           }
-          stackIn_3_0 = oc.a(param1.field_m.length(), '*', -1);
+          stackIn_3_0 = oc.a(widget.text.length(), '*', -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("c.I(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("c.I(").append(guard).append(',');
+          if (widget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

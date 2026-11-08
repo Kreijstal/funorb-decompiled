@@ -31,10 +31,10 @@ final class GraphicsToolkitManager {
           GraphicsToolkitManager.c(113);
         }
         if (!oj.a(false) ||
-          null == pu.field_e.e((byte) 54)) {
+          null == pu.field_e.topOpenDialog((byte) 54)) {
           return -1;
         }
-        return pu.field_e.e((byte) 54).field_r;
+        return pu.field_e.topOpenDialog((byte) 54).x;
     }
 
     final boolean a(boolean param0) {
@@ -328,7 +328,7 @@ final class GraphicsToolkitManager {
     }
 
     GraphicsToolkitManager(int param0, int param1, d param2) {
-        this(kd.a((byte) -123, param0), vo.b(param1, -1), param2, lt.field_m, IntrusiveNode.b(-16754));
+        this(kd.a((byte) -123, param0), ScrollControl.b(param1, -1), param2, lt.field_m, IntrusiveNode.b(-16754));
     }
 
     private GraphicsToolkitManager(ResourceArchive param0, ResourceArchive param1, d param2, PlatformTaskDispatcher param3, nj[] param4) {

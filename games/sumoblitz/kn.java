@@ -227,7 +227,7 @@ final class kn extends eu {
           if (param0) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
           }
-          pu.field_e.a(0, 0, false);
+          pu.field_e.render(0, 0, false);
           return;
         }
     }

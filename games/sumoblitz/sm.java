@@ -228,48 +228,48 @@ final class sm {
         String var7 = null;
         int var8 = 0;
         try {
-          kn.a(param2 + param4.field_r, this.field_j, (byte) -34, param4.field_v + param0, param4.field_p, param4.field_q);
+          kn.a(param2 + param4.x, this.field_j, (byte) -34, param4.y + param0, param4.height, param4.width);
           var6_int = -128 % ((param3 + 9) / 35);
           if (this.field_i != null) {
-            var7_int = this.field_d + (param2 + param4.field_r);
-            var8 = this.field_h + param4.field_v + param0;
-            if (1 == param1.field_f) {
-              var7_int = var7_int + (param4.field_q - this.field_i.field_z) / 2;
+            var7_int = this.field_d + (param2 + param4.x);
+            var8 = this.field_h + param4.y + param0;
+            if (1 == param1.horizontalAlignment) {
+              var7_int = var7_int + (param4.width - this.field_i.field_z) / 2;
             }
-            if (param1.field_f == 2) {
-              var7_int = var7_int + (param4.field_q - this.field_i.field_z);
+            if (param1.horizontalAlignment == 2) {
+              var7_int = var7_int + (param4.width - this.field_i.field_z);
             }
-            if (1 == param1.field_c) {
-              var8 = var8 + (-this.field_i.field_w + param4.field_p) / 2;
+            if (1 == param1.verticalAlignment) {
+              var8 = var8 + (-this.field_i.field_w + param4.height) / 2;
             }
-            if (2 == param1.field_c) {
-              var8 = var8 + (-this.field_i.field_w + param4.field_p);
+            if (2 == param1.verticalAlignment) {
+              var8 = var8 + (-this.field_i.field_w + param4.height);
             }
             this.field_i.draw(var7_int, var8);
           }
-          var7 = param1.a(true, param4);
+          var7 = param1.widgetText(true, param4);
           if (var7 != null &&
-            param1.field_e != null) {
+            param1.font != null) {
             if (this.field_a < 0) {
               return;
             }
-            stackIn_20_0 = param1.field_e;
+            stackIn_20_0 = param1.font;
             stackIn_20_1 = var7;
             if (this.field_d == -2147483648) {
               stackIn_21_2 = 0;
             } else {
               stackIn_21_2 = this.field_d;
             }
-            stackIn_23_2 = stackIn_21_2 + (param1.field_k + (param4.field_r + param2));
-            stackIn_23_3 = param1.field_a + (param4.field_v + param0);
+            stackIn_23_2 = stackIn_21_2 + (param1.paddingLeft + (param4.x + param2));
+            stackIn_23_3 = param1.paddingTop + (param4.y + param0);
             if (this.field_h == -2147483648) {
               stackIn_24_4 = 0;
             } else {
               stackIn_24_4 = this.field_h;
             }
             stackIn_26_3 = stackIn_23_3 + stackIn_24_4;
-            stackIn_26_4 = param4.field_q - (param1.field_k + param1.field_h);
-            stackIn_26_5 = param4.field_p - (param1.field_a + param1.field_m);
+            stackIn_26_4 = param4.width - (param1.paddingLeft + param1.paddingRight);
+            stackIn_26_5 = param4.height - (param1.paddingTop + param1.paddingBottom);
             stackIn_26_6 = this.field_a;
             stackIn_26_7 = this.field_f;
             if (this.field_g == -2147483648) {
@@ -277,7 +277,7 @@ final class sm {
             } else {
               stackIn_27_8 = this.field_g;
             }
-            ((LegacyBitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param1.field_f, param1.field_c, param1.field_j);
+            ((LegacyBitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param1.horizontalAlignment, param1.verticalAlignment, param1.lineSpacing);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

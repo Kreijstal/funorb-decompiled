@@ -46,25 +46,25 @@ final class jv {
           if (!param3) {
             field_a = -32;
           }
-          vm.field_c = st.field_z;
+          vm.field_c = DropTargetWidget.field_z;
           if (255 == param0) {
             stackIn_7_0 = !(lq.field_d >= 13);
-            jh.field_z = LegacyOpenGlEffect.a(stackIn_7_0, 8192);
+            DraggableWidget.field_z = LegacyOpenGlEffect.a(stackIn_7_0, 8192);
             var6 = (String[]) null;
             InwardSparkParticle.a(256, (String[]) null);
             return;
           }
           if (100 > param0) {
-            jh.field_z = au.a(48, param2, param0);
+            DraggableWidget.field_z = au.a(48, param2, param0);
             return;
           }
           if (param0 > 105) {
-            jh.field_z = au.a(48, param2, param0);
+            DraggableWidget.field_z = au.a(48, param2, param0);
             return;
           }
           var7 = param1;
           InwardSparkParticle.a(256, var7);
-          jh.field_z = qr.a(param1, 8192);
+          DraggableWidget.field_z = qr.a(param1, 8192);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

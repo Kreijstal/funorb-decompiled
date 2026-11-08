@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk extends gt implements ai {
+final class uk extends MessageDialog implements WidgetActionListener {
     static boolean field_ob;
     static char[] field_lb;
     private boolean field_nb;
     private boolean field_pb;
     private js field_mb;
 
-    uk(dg param0, js param1) {
+    uk(DialogLayer param0, js param1) {
         super(param0, tq.field_a, ClientException.creatingYourAccountText, false, false);
         try {
           this.field_mb = param1;
@@ -33,7 +33,7 @@ final class uk extends gt implements ai {
         String var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        lc var6 = null;
+        StatusMessagePanel var6 = null;
         int var7 = 0;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
@@ -58,10 +58,10 @@ final class uk extends gt implements ai {
             var4 = vl.accountCreatedSuccessfullyText;
           }
           var5 = -1 / ((-1 - param1) / 45);
-          var6 = new lc((gt) (this), tq.field_a, var4);
+          var6 = new StatusMessagePanel((MessageDialog) (this), tq.field_a, var4);
           if (!param2.field_b) {
             if (this.field_pb) {
-              var6.a(wd.continueText, (byte) -123, (qm) (this));
+              var6.a(wd.continueText, (byte) -123, (WidgetListener) (this));
             } else {
               if (param2.field_e != 5) {
                 var6.a(FullscreenCanvas.backText, -1, true);
@@ -74,19 +74,19 @@ final class uk extends gt implements ai {
               var6.a(lq.toServerListText, 7, true);
             } else {
               if (param2.field_e != 6) {
-                this.b((byte) -123, var6);
+                this.transitionToContent((byte) -123, var6);
                 return;
               }
               var6.a(PowerupTrailParticle.toCustomerSupportText, 9, true);
             }
           } else {
             if (param2.field_c) {
-              this.b((byte) -95, new th(this));
+              this.transitionToContent((byte) -95, new th(this));
               return;
             }
-            var6.a(wd.continueText, (byte) -123, (qm) (this));
+            var6.a(wd.continueText, (byte) -123, (WidgetListener) (this));
           }
-          this.b((byte) -123, var6);
+          this.transitionToContent((byte) -123, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,8 +106,8 @@ final class uk extends gt implements ai {
         this.a(param0, (byte) 127, au.a(-91, rn.unfortunatelyYouAreNotText, 248));
     }
 
-    public final void a(int param0, int param1, wp param2, int param3, int param4) {
-        if (param1 != 710) {
+    public final void onAction(int action, int guard, InteractiveWidget source, int pointerX, int pointerY) {
+        if (guard != 710) {
           field_ob = true;
         }
         if (this.field_pb) {
@@ -118,7 +118,7 @@ final class uk extends gt implements ai {
           kh.a(false);
           this.n(-7);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uk.C(" + action + ',' + guard + ',' + (source != null ? "{...}" : "null") + ',' + pointerX + ',' + pointerY + ')');
         }
     }
 
@@ -197,26 +197,26 @@ final class uk extends gt implements ai {
         }
     }
 
-    final boolean g(int param0) {
+    final boolean advanceAnimation(int guard) {
         an var2 = null;
-        if (this.field_D) {
+        if (this.open) {
           if (this.field_nb) {
-            if (param0 == -28778) {
-              return super.g(param0 + 0);
+            if (guard == -28778) {
+              return super.advanceAnimation(guard + 0);
             }
             return false;
           }
           var2 = ResourceArchive.c((byte) 94);
           if (var2 == null) {
-            if (param0 == -28778) {
-              return super.g(param0 + 0);
+            if (guard == -28778) {
+              return super.advanceAnimation(guard + 0);
             }
             return false;
           }
           this.a(false, (byte) -128, var2);
         }
-        if (param0 == -28778) {
-          return super.g(param0 + 0);
+        if (guard == -28778) {
+          return super.advanceAnimation(guard + 0);
         }
         return false;
     }

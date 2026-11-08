@@ -52,10 +52,10 @@ final class ea {
           return;
         }
         try {
-          rf.field_a.a((byte) -34);
-          no.field_a = new cv(ac.field_F, (String) null, pg.field_a, param3, param1);
-          SlowBurstParticle.field_y = new dc(rf.field_a, no.field_a);
-          rf.field_a.a((byte) 104, SlowBurstParticle.field_y);
+          rf.field_a.closeAllDialogs((byte) -34);
+          no.field_a = new LoginForm(FocusProxyWidget.field_F, (String) null, pg.field_a, param3, param1);
+          SlowBurstParticle.field_y = new ContentDialog(rf.field_a, no.field_a);
+          rf.field_a.pushDialog((byte) 104, SlowBurstParticle.field_y);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

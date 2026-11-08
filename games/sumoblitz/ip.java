@@ -41,17 +41,17 @@ final class ip extends ml {
             if (null != CompactMeshGeometry.field_o &&
               CompactMeshGeometry.field_o.field_a) {
               ib.d(1);
-              pu.field_e.a((byte) 113, new u(pu.field_e, am.field_e));
+              pu.field_e.pushDialog((byte) 113, new DisplayModeErrorDialog(pu.field_e, am.field_e));
             }
             return;
           }
-          pu.field_e.a(JaggrabDownloader.field_j, c.field_r, true, param0 - 1886067878);
+          pu.field_e.dispatchPointerInput(JaggrabDownloader.field_j, c.field_r, true, param0 - 1886067878);
           if (param0 != 1886067877) {
             ip.releaseStatics((byte) -127);
           }
-          pu.field_e.h(-104);
+          pu.field_e.advanceDialogAnimations(-104);
           while (wd.c(-81)) {
-            pu.field_e.a(np.field_c, tg.field_a, true);
+            pu.field_e.dispatchKey(np.field_c, tg.field_a, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

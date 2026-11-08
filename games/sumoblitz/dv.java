@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dv implements mh {
-    private ld field_a;
+final class dv implements WidgetRenderer {
+    private DropDownWidget field_a;
     static boolean field_b;
     static String field_c;
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+    public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -18,24 +18,24 @@ final class dv implements mh {
         String var9 = null;
         int var10 = 0;
         try {
-          if (param2 != 5592405) {
+          if (guard != 5592405) {
             field_b = true;
           }
-          var6_int = param0.field_r + param4;
-          var7 = param1 + param0.field_v;
-          ByteArrayStorage.drawBeveledBorder(param0.field_p, var6_int, param0.field_q, (byte) -84, var7);
-          if (param0.d(-1)) {
-            AudioServiceThread.drawDottedRectangle(var7 + 2, param0.field_q - 4, -13181, var6_int + 2, -4 + param0.field_p);
+          var6_int = widget.x + parentX;
+          var7 = parentY + widget.y;
+          ByteArrayStorage.drawBeveledBorder(widget.height, var6_int, widget.width, (byte) -84, var7);
+          if (widget.hasFocus(-1)) {
+            AudioServiceThread.drawDottedRectangle(var7 + 2, widget.width - 4, -13181, var6_int + 2, -4 + widget.height);
           }
-          SoftwareRasterizer.setClip(var6_int, var7, -2 + param0.field_q + var6_int, param0.field_p + var7);
-          var8 = this.field_a.field_B.a(-72);
+          SoftwareRasterizer.setClip(var6_int, var7, -2 + widget.width + var6_int, widget.height + var7);
+          var8 = this.field_a.optionList.selectedOption(-72);
           if (var8 != null) {
             var9 = var8.toString();
-            this.field_a.field_G.b(var9, var6_int + 2, (this.field_a.field_G.field_s + param0.field_p >> 1) + (var7 - 1), 10000536, -1);
-            if (this.field_a.d(-1) &&
-              var9.startsWith(this.field_a.field_L)) {
-              var10 = this.field_a.field_G.a(this.field_a.field_L);
-              SoftwareRasterizer.fillRectangleAlpha(var6_int + 2, var7 + 2, var10, param0.field_p - 4, 2188450, 100);
+            this.field_a.font.b(var9, var6_int + 2, (this.field_a.font.field_s + widget.height >> 1) + (var7 - 1), 10000536, -1);
+            if (this.field_a.hasFocus(-1) &&
+              var9.startsWith(this.field_a.searchPrefix)) {
+              var10 = this.field_a.font.a(this.field_a.searchPrefix);
+              SoftwareRasterizer.fillRectangleAlpha(var6_int + 2, var7 + 2, var10, widget.height - 4, 2188450, 100);
             }
           }
           SoftwareRasterizer.resetClip();
@@ -45,12 +45,12 @@ final class dv implements mh {
           var6 = decompiledCaughtException;
           stackIn_13_0 = var6;
           stackIn_13_1 = new StringBuilder().append("dv.A(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(parentY).append(',').append(guard).append(',').append(isEnabled).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -62,13 +62,13 @@ final class dv implements mh {
         }
         ne[] var1 = new ne[rl.field_n];
         for (var2 = 0; var2 < rl.field_n; var2++) {
-          var1[var2] = new ne(vf.field_d, li.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], vg.field_k[var2], we.field_B[var2], TextLayout.field_d[var2], LegacyOpenGlEffectManager.field_l);
+          var1[var2] = new ne(vf.field_d, li.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], vg.field_k[var2], ScrollViewport.field_B[var2], TextLayout.field_d[var2], LegacyOpenGlEffectManager.field_l);
         }
         PowerupPickup.releaseSpriteDecoderArrays((byte) -68);
         return var1;
     }
 
-    dv(ld param0) {
+    dv(DropDownWidget param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

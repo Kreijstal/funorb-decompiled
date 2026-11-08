@@ -178,7 +178,7 @@ abstract class GraphicsToolkit {
         if (param0 != 23639) {
           return;
         }
-        hf.field_F = null;
+        ResizingDialog.field_F = null;
         no.field_b = null;
     }
 

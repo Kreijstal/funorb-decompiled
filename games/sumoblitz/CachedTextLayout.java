@@ -334,8 +334,8 @@ final class CachedTextLayout extends TextLayout {
           }
           var15 = param0.a(true);
           var8 = param2.a(true);
-          if (null == qk.field_O &&
-            !nd.a((byte) -83, false)) {
+          if (null == DisplayModeConfirmationDialog.field_O &&
+            !GridWidgetContainer.a((byte) -83, false)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
@@ -391,7 +391,7 @@ final class CachedTextLayout extends TextLayout {
               ks.a(gh.field_a, oh.field_c, false, InwardSparkParticle.field_v, sd.field_e);
               InwardSparkParticle.field_v.c(InwardSparkParticle.field_v.position - var9, -13745);
             }
-            gt.a(0, -1);
+            MessageDialog.a(0, -1);
             kw.field_c = vf.field_c;
           }
           if (kw.field_c == vf.field_c &&
@@ -405,7 +405,7 @@ final class CachedTextLayout extends TextLayout {
             } else {
               if (var9Lifetime1 == 248) {
                 bw.a(false, ra.c(2));
-                MouseWheelInput.field_c = qk.unfortunatelyWeAreUnableText;
+                MouseWheelInput.field_c = DisplayModeConfirmationDialog.unfortunatelyWeAreUnableText;
                 kk.a((byte) -116);
                 LimitedRandomAccessFile.field_g = false;
                 stackIn_37_0 = var9Lifetime1;
@@ -454,12 +454,12 @@ final class CachedTextLayout extends TextLayout {
             stackIn_57_0 = iw.field_a;
             return stackIn_57_0;
           }
-          if (qk.field_O == null) {
+          if (DisplayModeConfirmationDialog.field_O == null) {
             if (LimitedRandomAccessFile.field_g) {
               if (30000L < uc.b(26560)) {
                 MouseWheelInput.field_c = ar.connectionTimedOutPleaseText;
               } else {
-                MouseWheelInput.field_c = nd.errorConnectingToServerText;
+                MouseWheelInput.field_c = GridWidgetContainer.errorConnectingToServerText;
               }
               LimitedRandomAccessFile.field_g = false;
               stackIn_65_0 = 249;

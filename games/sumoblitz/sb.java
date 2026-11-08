@@ -29,7 +29,7 @@ final class sb {
           if (param1 != -6708) {
             sb.releaseStatics(false);
           }
-          if (!mc.b((byte) 120, "jaggl")) {
+          if (!ScrollPane.b((byte) 120, "jaggl")) {
             throw new RuntimeException("");
           }
           var9 = new jaggl.OpenGL();

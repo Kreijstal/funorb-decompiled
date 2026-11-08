@@ -28,16 +28,16 @@ final class ct extends ml {
             var2_double = var2_double + (double)(param1.field_G / 50);
             var2_double = var2_double * (double)pd.field_p;
             IntrusiveDequeCursor.a((int)var2_double, -1372239541);
-            if ((1 << param1.droneType & qk.field_T) == 0) {
-              qk.field_T = qk.field_T | 1 << param1.droneType;
+            if ((1 << param1.droneType & DisplayModeConfirmationDialog.field_T) == 0) {
+              DisplayModeConfirmationDialog.field_T = DisplayModeConfirmationDialog.field_T | 1 << param1.droneType;
               bi.field_c = bi.field_c + 1;
             } else {
-              qk.field_T = 0;
+              DisplayModeConfirmationDialog.field_T = 0;
               bi.field_c = 1;
-              qk.field_T = qk.field_T | 1 << param1.droneType;
+              DisplayModeConfirmationDialog.field_T = DisplayModeConfirmationDialog.field_T | 1 << param1.droneType;
             }
             rn.a(Integer.toString((int)var2_double), param1.xQ8 >> 8, param1.yQ8 >> 8, 16777215, 28807);
-            if (qk.field_T != 0 &&
+            if (DisplayModeConfirmationDialog.field_T != 0 &&
               ps.field_e[13] == bi.field_c) {
               th.b(24753, 242, 13);
             }
@@ -109,8 +109,8 @@ final class ct extends ml {
         is.arenaPads = new IntrusiveDeque();
         he.field_o = new Random();
         db.droneSlotLimit = 1;
-        in.score = 0;
-        nd.livesRemaining = 1;
+        FadingWidget.score = 0;
+        GridWidgetContainer.livesRemaining = 1;
         iw.elapsedTicks = 0;
         MusicPatch.simulationPaused = false;
         if (param0) {

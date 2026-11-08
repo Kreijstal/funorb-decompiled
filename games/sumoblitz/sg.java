@@ -71,7 +71,7 @@ final class sg {
           if (param1 != -56) {
             return;
           }
-          var17 = new PacketBuffer(nd.a(-1, param0));
+          var17 = new PacketBuffer(GridWidgetContainer.a(-1, param0));
           var4 = var17.e(param1 ^ 31346);
           if (var4 >= 5 &&
             var4 <= 7) {

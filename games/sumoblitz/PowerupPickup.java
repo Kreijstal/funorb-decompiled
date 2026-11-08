@@ -254,7 +254,7 @@ final class PowerupPickup extends IntrusiveNode {
         TextLayout.field_d = (byte[][]) null;
         LegacyOpenGlEffectManager.field_l = null;
         vg.field_k = null;
-        we.field_B = null;
+        ScrollViewport.field_B = null;
     }
 
     final int radiusQ8(int param0) {

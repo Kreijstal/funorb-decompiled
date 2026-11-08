@@ -12,9 +12,9 @@ final class VictoryScreen extends MenuScreen {
         kf.field_u.update(param0 ^ 18481);
         if (this.field_i % 50 == 0) {
           up.field_a = ExpandingRingEffect.nextRandomInt(640, he.field_o, (byte) -96) << 8;
-          cv.field_E = ExpandingRingEffect.nextRandomInt(480, he.field_o, (byte) -96) << 8;
+          LoginForm.field_E = ExpandingRingEffect.nextRandomInt(480, he.field_o, (byte) -96) << 8;
         }
-        kf.field_u.steerTowardPoint(false, cv.field_E, up.field_a);
+        kf.field_u.steerTowardPoint(false, LoginForm.field_E, up.field_a);
         if (param0 != -18556) {
           this.field_i = -126;
         }
@@ -54,7 +54,7 @@ final class VictoryScreen extends MenuScreen {
         String var9 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
         int var2 = 42 / ((param0 + 75) / 49);
-        String var7 = "(" + li.field_r + " " + vb.field_I + " " + ur.field_Q + ") " + iw.field_a;
+        String var7 = "(" + li.field_r + " " + vb.field_I + " " + ContentTransitionDialog.field_Q + ") " + iw.field_a;
         String var1 = var7;
         if (0 >= gu.field_d) {
         } else {
@@ -93,9 +93,9 @@ final class VictoryScreen extends MenuScreen {
         int var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           var8 = toolkit;
-          var5 = hf.field_H;
+          var5 = ResizingDialog.field_H;
           wo.a(var5, 60, 210, 0, 1, var8, 220, 350, 1, true);
-          wo.a(hf.field_H, LegacyOpenGlSpriteMask.field_e.a() + 20, -10 + (-(LegacyOpenGlSpriteMask.field_e.c() >> 1) + 320), -1426063360, 3, toolkit, LegacyOpenGlSpriteMask.field_e.c() + 20, 190 - (LegacyOpenGlSpriteMask.field_e.a() >> 1), 1, true);
+          wo.a(ResizingDialog.field_H, LegacyOpenGlSpriteMask.field_e.a() + 20, -10 + (-(LegacyOpenGlSpriteMask.field_e.c() >> 1) + 320), -1426063360, 3, toolkit, LegacyOpenGlSpriteMask.field_e.c() + 20, 190 - (LegacyOpenGlSpriteMask.field_e.a() >> 1), 1, true);
           LegacyOpenGlSpriteMask.field_e.a(-(LegacyOpenGlSpriteMask.field_e.c() >> 1) + 320, 200 - (LegacyOpenGlSpriteMask.field_e.a() >> 1));
           var7 = (TimedSceneEffect) (im.field_b.first(-102));
           while (var7 != null) {

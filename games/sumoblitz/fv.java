@@ -73,7 +73,7 @@ final class fv extends rw {
           if (qc.field_e != null) {
             stackIn_18_0 = qc.field_e.isPlaying(-8192);
             if (!stackIn_18_0) {
-              nd.field_B = null;
+              GridWidgetContainer.field_B = null;
               return;
             }
           }

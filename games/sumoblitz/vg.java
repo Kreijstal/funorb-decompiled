@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg implements mh {
+final class vg implements WidgetRenderer {
     private int field_i;
     private int field_f;
     private int field_d;
@@ -16,7 +16,7 @@ final class vg implements mh {
     private int field_e;
     private int field_h;
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+    public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -29,23 +29,23 @@ final class vg implements mh {
         int var10 = 0;
         wr var11 = null;
         try {
-          if (!(param0 instanceof wr)) {
+          if (!(widget instanceof wr)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (UiWidget) (param0);
+            stackIn_3_0 = (UiWidget) (widget);
           }
           var11 = (wr) (stackIn_3_0);
           if (var11 != null) {
-            param3 = param3 & var11.field_x;
+            isEnabled = isEnabled & var11.enabled;
           }
           var7 = 5592405;
-          if (param3) {
+          if (isEnabled) {
             var7 = 16777215;
           }
-          SoftwareRasterizer.fillRectangle(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_e);
-          var8 = this.field_h + param4 + param0.field_r;
-          var9 = this.field_g + param0.field_v + param1;
-          SoftwareRasterizer.drawDropShadow(var8, var9, this.field_c, this.field_j, param2);
+          SoftwareRasterizer.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.field_e);
+          var8 = this.field_h + parentX + widget.x;
+          var9 = this.field_g + widget.y + parentY;
+          SoftwareRasterizer.drawDropShadow(var8, var9, this.field_c, this.field_j, guard);
           SoftwareRasterizer.fillRectangle(var8, var9, this.field_c, this.field_j, var7);
           if (var11.field_C) {
             SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_c, var9 + this.field_j, 1);
@@ -53,7 +53,7 @@ final class vg implements mh {
           }
           if (null != this.field_m) {
             var10 = this.field_c - (-this.field_h - this.field_l);
-            this.field_m.a(param0.field_m, param4 - (-param0.field_r - var10), this.field_i + param0.field_v + param1, -var10 - this.field_l + param0.field_q, -(this.field_l << 1) + param0.field_p, this.field_a, this.field_f, this.field_d, this.field_b, 0);
+            this.field_m.a(widget.text, parentX - (-widget.x - var10), this.field_i + widget.y + parentY, -var10 - this.field_l + widget.width, -(this.field_l << 1) + widget.height, this.field_a, this.field_f, this.field_d, this.field_b, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,12 +61,12 @@ final class vg implements mh {
           var6 = decompiledCaughtException;
           stackIn_15_0 = var6;
           stackIn_15_1 = new StringBuilder().append("vg.A(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(parentY).append(',').append(guard).append(',').append(isEnabled).append(',').append(parentX).append(')').toString());
         }
     }
 

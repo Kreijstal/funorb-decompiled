@@ -129,10 +129,10 @@ abstract class TextLayout {
           hc.field_c.n(-7);
         }
         String var1 = wh.a((byte) -72);
-        no.field_a = new cv(var1, (String) null, true, false, false);
-        rf.field_a.a((byte) 114, SlowBurstParticle.field_y);
-        SlowBurstParticle.field_y.b((byte) -118, no.field_a);
-        SlowBurstParticle.field_y.f((byte) -128);
+        no.field_a = new LoginForm(var1, (String) null, true, false, false);
+        rf.field_a.pushDialog((byte) 114, SlowBurstParticle.field_y);
+        SlowBurstParticle.field_y.transitionToContent((byte) -118, no.field_a);
+        SlowBurstParticle.field_y.finishResize((byte) -128);
     }
 
     final static void a(int param0, int param1) {

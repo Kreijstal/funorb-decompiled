@@ -77,10 +77,10 @@ final class ih {
             stackIn_10_0 = stackOut_9_0;
             if (var19 == 0) {
               if (stackIn_10_0) {
-                var12 = we.field_z[var9];
+                var12 = ScrollViewport.field_z[var9];
                 var13 = hp.field_o[var9];
-                var14 = we.field_z[var10] - var12;
-                var15 = we.field_z[var11] - var12;
+                var14 = ScrollViewport.field_z[var10] - var12;
+                var15 = ScrollViewport.field_z[var11] - var12;
                 var16 = hp.field_o[var10] - var13;
                 var17 = hp.field_o[var11] - var13;
               }
@@ -94,14 +94,14 @@ final class ih {
                     if (var14 != -2147483648) {
                       var15 = var12Lifetime1 + var13Lifetime1 - (-var14 + var6);
                       stackIn_32_0 = -1;
-                      stackIn_32_1 = rg.field_C.length;
+                      stackIn_32_1 = ModalDialog.field_C.length;
                       if (0 > var7) {
                         stackIn_33_2 = var15 << -var7;
                       } else {
                         stackIn_33_2 = var15 >> var7;
                       }
                       var16 = stackIn_32_0 + (stackIn_32_1 - stackIn_33_2);
-                      var17 = rg.field_C[var16];
+                      var17 = ModalDialog.field_C[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -111,18 +111,18 @@ final class ih {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = rg.field_C[var16];
+                          var17 = ModalDialog.field_C[var16];
                           continue;
                         }
                         stackIn_43_0Lifetime1 = var16 << 4;
                         stackIn_43_1Lifetime1 = -var17;
                         var18 = stackIn_43_0Lifetime1 - stackIn_43_1Lifetime1;
                         Sumoblitz.field_G[var18] = var8;
-                        rg.field_C[var16] = var17 + 1;
+                        ModalDialog.field_C[var16] = var17 + 1;
                         if (param1.field_E > 0 &&
                           null != param1.field_a) {
                           dupTemp$0 = param1.field_a[var8];
-                          cv.field_G[dupTemp$0] = cv.field_G[dupTemp$0] + 1;
+                          LoginForm.field_G[dupTemp$0] = LoginForm.field_G[dupTemp$0] + 1;
                         }
                         sv.field_b = sv.field_b + 1;
                         break;
@@ -146,9 +146,9 @@ final class ih {
             param1.field_a != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(cv.field_G.length <= var9Lifetime1)) {
-              var10Lifetime1 = cv.field_G[var9Lifetime1];
-              cv.field_G[var9Lifetime1] = var8Lifetime1;
+            while (!(LoginForm.field_G.length <= var9Lifetime1)) {
+              var10Lifetime1 = LoginForm.field_G[var9Lifetime1];
+              LoginForm.field_G[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

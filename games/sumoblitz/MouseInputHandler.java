@@ -278,7 +278,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var7 = param1;
           } else {
             var8 = (CharSequence) ((Object) param1);
-            var5 = vo.a(var8, 7441);
+            var5 = ScrollControl.encodeBase37Name(var8, 7441);
           }
           stackIn_4_0 = ds.a(var5, param0, (String) (var7), param2, false);
           return stackIn_4_0;

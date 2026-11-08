@@ -316,7 +316,7 @@ final class MidiPcmStream extends PcmStream {
               if (var11 == 0) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var10 == null) {
-                  var10 = u.a(param3, var9, 0);
+                  var10 = DisplayModeErrorDialog.a(param3, var9, 0);
                   if (var10 == null) {
                     var6_int = 0;
                     decompiledFrameRemainder0 = false;

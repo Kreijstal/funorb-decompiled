@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class va implements mh {
+final class va implements WidgetRenderer {
     private LegacyBitmapFont field_a;
     private int field_e;
     private int field_h;
@@ -12,7 +12,7 @@ final class va implements mh {
     private int field_d;
     static int field_b;
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+    public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         vb var14 = null;
         int var7 = 0;
         int var8 = 0;
@@ -24,12 +24,12 @@ final class va implements mh {
         int var11Lifetime1;
         int var12Lifetime1;
         try {
-          var14 = param0 instanceof vb ? (vb) (param0) : null;
+          var14 = widget instanceof vb ? (vb) (widget) : null;
           if (var14 == null) {
           }
-          SoftwareRasterizer.fillRectangle(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_i);
-          var7 = param4 - (-param0.field_r - var14.field_G);
-          var8 = var14.field_K + (param1 + param0.field_v);
+          SoftwareRasterizer.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.field_i);
+          var7 = parentX - (-widget.x - var14.field_G);
+          var8 = var14.field_K + (parentY + widget.y);
           SoftwareRasterizer.fillCircle(var7, var8, var14.field_F, this.field_e);
           if (-1 != var14.field_M) {
             var9 = 2.0 * (3.141592653589793 * (double)var14.field_M) / (double)var14.field_L;
@@ -38,7 +38,7 @@ final class va implements mh {
             SoftwareRasterizer.fillCircle(var7 + var11, var8 + var12, 1, this.field_h);
           }
           SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
-          if (param2 != 5592405) {
+          if (guard != 5592405) {
             this.field_d = -11;
           }
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_H) / (double)var14.field_L;
@@ -47,10 +47,10 @@ final class va implements mh {
           SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_a) {
             var13 = var14.field_F + (var14.field_G + this.field_f);
-            this.field_a.a(param0.field_m, param0.field_r + (param4 + var13), param0.field_v + (param1 + this.field_d), -this.field_f - var13 + param0.field_q, -(this.field_f << 1) + param0.field_p, this.field_g, this.field_c, 1, 1, 0);
+            this.field_a.a(widget.text, widget.x + (parentX + var13), widget.y + (parentY + this.field_d), -this.field_f - var13 + widget.width, -(this.field_f << 1) + widget.height, this.field_g, this.field_c, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "va.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "va.A(" + (widget != null ? "{...}" : "null") + ',' + parentY + ',' + guard + ',' + isEnabled + ',' + parentX + ')');
         }
     }
 

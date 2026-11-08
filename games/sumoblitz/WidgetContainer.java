@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-class WidgetContainer extends UiWidget implements ug {
+class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
     static qr field_z;
     static int[] field_x;
-    IntrusiveDeque field_y;
+    IntrusiveDeque children;
 
     private final void a(StringBuilder param0, byte param1, Hashtable param2, int param3) {
         StringBuilder discarded$3 = null;
@@ -25,18 +25,18 @@ class WidgetContainer extends UiWidget implements ug {
         RuntimeException var5_ref = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5 = new IntrusiveDequeCursor(this.field_y);
+          var5 = new IntrusiveDequeCursor(this.children);
           var6 = (UiWidget) (var5.first((byte) -80));
           if (param1 >= -30) {
             var9 = (UiWidget) null;
-            this.a((UiWidget) null, (byte) -17);
+            this.requestFocus((UiWidget) null, (byte) -17);
           }
           while (var6 != null) {
             discarded$3 = param0.append('\n');
             for (var7 = 0; var7 <= param3; var7++) {
               discarded$4 = param0.append(' ');
             }
-            var6.a(param3 + 1, param2, param0, 0);
+            var6.appendDebugTree(param3 + 1, param2, param0, 0);
             var6 = (UiWidget) (var5.next(0));
           }
           return;
@@ -60,12 +60,12 @@ class WidgetContainer extends UiWidget implements ug {
         }
     }
 
-    WidgetContainer(int param0, int param1, int param2, int param3, mh param4) {
-        super(param0, param1, param2, param3, param4, (qm) null);
-        this.field_y = new IntrusiveDeque();
+    WidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
+        super(param0, param1, param2, param3, param4, (WidgetListener) null);
+        this.children = new IntrusiveDeque();
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    final boolean onMouseWheel(int parentY, int wheelDelta, int guard, int parentX, int pointerY, UiWidget root, int pointerX) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -76,18 +76,18 @@ class WidgetContainer extends UiWidget implements ug {
         RuntimeException decompiledCaughtException = null;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var8 = new IntrusiveDequeCursor(this.field_y);
-          if (param2 != -1) {
+          var8 = new IntrusiveDequeCursor(this.children);
+          if (guard != -1) {
             return true;
           }
           var9 = (UiWidget) (var8.first((byte) -80));
           while (var9 != null) {
             if (var9.isLinked(false)) {
-              if (var9.d(-1) &&
-                var9.a(param0, param1, -1, param3, param4, param5, param6)) {
+              if (var9.hasFocus(-1) &&
+                var9.onMouseWheel(parentY, wheelDelta, -1, parentX, pointerY, root, pointerX)) {
                 return true;
               }
-              var9 = (UiWidget) (var8.next(~param2));
+              var9 = (UiWidget) (var8.next(~guard));
               continue;
             }
             break;
@@ -97,17 +97,17 @@ class WidgetContainer extends UiWidget implements ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
           stackIn_16_0 = var8_ref;
-          stackIn_16_1 = new StringBuilder().append("sp.RA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_16_1 = new StringBuilder().append("sp.RA(").append(parentY).append(',').append(wheelDelta).append(',').append(guard).append(',').append(parentX).append(',').append(pointerY).append(',');
+          if (root == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(pointerX).append(')').toString());
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean focusPrevious(byte guard, UiWidget root) {
         RuntimeException var3 = null;
         UiWidget var4_ref_pk = null;
         int var4 = 0;
@@ -121,18 +121,18 @@ class WidgetContainer extends UiWidget implements ug {
         RuntimeException decompiledCaughtException = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (this.field_y.isEmpty((byte) -86)) {
+          if (this.children.isEmpty((byte) -86)) {
             return false;
           }
-          var8 = new IntrusiveDequeCursor(this.field_y);
+          var8 = new IntrusiveDequeCursor(this.children);
           var4_ref_pk = (UiWidget) (var8.last((byte) -58));
           while (var4_ref_pk != null) {
-            if (var4_ref_pk.d(-1)) {
-              var5 = new IntrusiveDequeCursor(this.field_y);
+            if (var4_ref_pk.hasFocus(-1)) {
+              var5 = new IntrusiveDequeCursor(this.children);
               var5.startBackwardAt((byte) -70, (IntrusiveNode) (var4_ref_pk));
               var6 = (UiWidget) (var5.previous((byte) 87));
               while (var6 != null) {
-                if (var6.a(param1, (byte) 61)) {
+                if (var6.requestFocus(root, (byte) 61)) {
                   return true;
                 }
                 var6 = (UiWidget) (var5.previous((byte) 87));
@@ -140,14 +140,14 @@ class WidgetContainer extends UiWidget implements ug {
             }
             var4_ref_pk = (UiWidget) (var8.previous((byte) 87));
           }
-          var4 = 39 % ((param0 - 84) / 34);
+          var4 = 39 % ((guard - 84) / 34);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_20_0 = var3;
-          stackIn_20_1 = new StringBuilder().append("sp.VA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_20_1 = new StringBuilder().append("sp.VA(").append(guard).append(',');
+          if (root == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
@@ -156,7 +156,7 @@ class WidgetContainer extends UiWidget implements ug {
         }
     }
 
-    final boolean a(UiWidget param0, boolean param1) {
+    final boolean focusNext(UiWidget root, boolean guard) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -169,18 +169,18 @@ class WidgetContainer extends UiWidget implements ug {
         RuntimeException decompiledCaughtException = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (this.field_y.isEmpty((byte) -87)) {
+          if (this.children.isEmpty((byte) -87)) {
             return false;
           }
-          var3 = new IntrusiveDequeCursor(this.field_y);
+          var3 = new IntrusiveDequeCursor(this.children);
           var4 = (UiWidget) (var3.first((byte) -80));
           while (var4 != null) {
-            if (var4.d(-1)) {
-              var5 = new IntrusiveDequeCursor(this.field_y);
+            if (var4.hasFocus(-1)) {
+              var5 = new IntrusiveDequeCursor(this.children);
               var5.startForwardAt(14, var4);
               var6 = (UiWidget) (var5.next(0));
               while (var6 != null) {
-                if (var6.a(param0, (byte) 61)) {
+                if (var6.requestFocus(root, (byte) 61)) {
                   return true;
                 }
                 var6 = (UiWidget) (var5.next(0));
@@ -188,7 +188,7 @@ class WidgetContainer extends UiWidget implements ug {
             }
             var4 = (UiWidget) (var3.next(0));
           }
-          if (!param1) {
+          if (!guard) {
             return false;
           }
           return false;
@@ -197,16 +197,16 @@ class WidgetContainer extends UiWidget implements ug {
           var3_ref = decompiledCaughtException;
           stackIn_23_0 = var3_ref;
           stackIn_23_1 = new StringBuilder().append("sp.TA(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    final StringBuilder appendDebugTree(int indent, Hashtable visited, StringBuilder output, int guard) {
         RuntimeException var5 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -216,50 +216,50 @@ class WidgetContainer extends UiWidget implements ug {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, param1, -22, param2)) {
-            this.a(param0, (byte) -128, param2, param1);
-            this.a(param2, (byte) -57, param1, param0);
+          if (this.beginDebugDescription(indent, visited, -22, output)) {
+            this.appendDebugDetails(indent, (byte) -128, output, visited);
+            this.a(output, (byte) -57, visited, indent);
           }
-          if (param3 != 0) {
-            this.field_y = (IntrusiveDeque) null;
+          if (guard != 0) {
+            this.children = (IntrusiveDeque) null;
           }
-          stackIn_6_0 = (StringBuilder) (param2);
+          stackIn_6_0 = (StringBuilder) (output);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
-          stackIn_9_1 = new StringBuilder().append("sp.S(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("sp.S(").append(indent).append(',');
+          if (visited == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param2 == null) {
+          if (output == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    String c(int param0) {
+    String hoveredTooltip(int guard) {
         IntrusiveDequeCursor var2;
         UiWidget var3;
         String var4;
         int var5;
         UiWidget var6;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 != -6696) {
+        if (guard != -6696) {
           var6 = (UiWidget) null;
-          this.a((UiWidget) null, (byte) 2);
+          this.requestFocus((UiWidget) null, (byte) 2);
         }
-        var2 = new IntrusiveDequeCursor(this.field_y);
+        var2 = new IntrusiveDequeCursor(this.children);
         var3 = (UiWidget) (var2.first((byte) -80));
         while (var3 != null) {
-          var4 = var3.c(-6696);
+          var4 = var3.hoveredTooltip(-6696);
           if (var4 != null) {
             return var4;
           }
@@ -268,32 +268,32 @@ class WidgetContainer extends UiWidget implements ug {
         return null;
     }
 
-    void a(int param0, int param1, byte param2, int param3) {
+    void renderLayer(int parentX, int parentY, byte guard, int layer) {
         int var7 = Sumoblitz.field_L ? 1 : 0;
-        if (param3 == 0 &&
-          null != this.field_w) {
-          this.field_w.a((UiWidget) (this), param1, 5592405, true, param0);
+        if (layer == 0 &&
+          null != this.renderer) {
+          this.renderer.renderWidget((UiWidget) (this), parentY, 5592405, true, parentX);
         }
-        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_y);
-        if (param2 >= -35) {
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.children);
+        if (guard >= -35) {
           field_x = (int[]) null;
         }
         UiWidget var6 = (UiWidget) (var5.last((byte) -83));
         while (var6 != null) {
-          var6.a(this.field_r + param0, this.field_v + param1, (byte) -62, param3);
+          var6.renderLayer(this.x + parentX, this.y + parentY, (byte) -62, layer);
           var6 = (UiWidget) (var5.previous((byte) 87));
         }
     }
 
-    final int e(int param0) {
+    final int maxRenderLayer(int guard) {
         int var6 = 0;
         int var7 = Sumoblitz.field_L ? 1 : 0;
         int var2 = 0;
-        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_y);
-        int var4 = 51 % ((param0 + 10) / 46);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.children);
+        int var4 = 51 % ((guard + 10) / 46);
         UiWidget var5 = (UiWidget) (var3.first((byte) -80));
         while (var5 != null) {
-          var6 = var5.e(-99);
+          var6 = var5.maxRenderLayer(-99);
           if (var6 > var2) {
             var2 = var6;
           }
@@ -302,7 +302,7 @@ class WidgetContainer extends UiWidget implements ug {
         return var2;
     }
 
-    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean onPointerPressed(UiWidget root, int guard, int pointerY, int button, int parentX, int pointerX, int parentY) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -313,11 +313,11 @@ class WidgetContainer extends UiWidget implements ug {
         RuntimeException decompiledCaughtException = null;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var8 = new IntrusiveDequeCursor(this.field_y);
+          var8 = new IntrusiveDequeCursor(this.children);
           var9 = (UiWidget) (var8.first((byte) -80));
           while (var9 != null) {
             if (var9.isLinked(false)) {
-              if (!var9.a(param0, -79, param2, param3, param4 + this.field_r, param5, param6 + this.field_v)) {
+              if (!var9.onPointerPressed(root, -79, pointerY, button, parentX + this.x, pointerX, parentY + this.y)) {
                 var9 = (UiWidget) (var8.next(0));
                 continue;
               }
@@ -325,7 +325,7 @@ class WidgetContainer extends UiWidget implements ug {
             }
             break;
           }
-          if (param1 < -42) {
+          if (guard < -42) {
             return false;
           }
           field_z = (qr) null;
@@ -335,12 +335,12 @@ class WidgetContainer extends UiWidget implements ug {
           var8_ref = decompiledCaughtException;
           stackIn_14_0 = var8_ref;
           stackIn_14_1 = new StringBuilder().append("sp.R(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(guard).append(',').append(pointerY).append(',').append(button).append(',').append(parentX).append(',').append(pointerX).append(',').append(parentY).append(')').toString());
         }
     }
 
@@ -352,56 +352,56 @@ class WidgetContainer extends UiWidget implements ug {
         field_x = null;
     }
 
-    private final void a(int param0) {
+    private final void refreshChildren(int guard) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 != -29587) {
+        if (guard != -29587) {
           field_x = (int[]) null;
         }
-        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_y);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiWidget var3 = (UiWidget) (var2.first((byte) -80));
         while (var3 != null) {
-          var3.c(false);
-          var3 = (UiWidget) (var2.next(param0 + 29587));
+          var3.refreshLayout(false);
+          var3 = (UiWidget) (var2.next(guard + 29587));
         }
     }
 
-    UiWidget f(int param0) {
+    UiWidget focusedChild(int guard) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_y);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiWidget var3_ref_pk = (UiWidget) (var2.first((byte) -80));
         while (var3_ref_pk != null) {
-          if (var3_ref_pk.d(-1)) {
+          if (var3_ref_pk.hasFocus(-1)) {
             return var3_ref_pk;
           }
           var3_ref_pk = (UiWidget) (var2.next(0));
         }
-        int var3 = -6 / ((param0 + 25) / 58);
+        int var3 = -6 / ((guard + 25) / 58);
         return null;
     }
 
-    final void a(UiWidget param0, int param1) {
+    final void addChild(UiWidget widget, int guard) {
         try {
-          this.field_y.addLast((IntrusiveNode) (param0), (byte) 39);
-          if (param1 <= 59) {
+          this.children.addLast((IntrusiveNode) (widget), (byte) 39);
+          if (guard <= 59) {
             field_x = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sp.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sp.UA(" + (widget != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    void c(byte param0) {
+    void clearFocus(byte guard) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_y);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiWidget var5 = (UiWidget) (var2.first((byte) -80));
         while (var5 != null) {
-          var5.c((byte) 127);
+          var5.clearFocus((byte) 127);
           var5 = (UiWidget) (var2.next(0));
         }
-        int var3 = -115 % ((param0 - 64) / 51);
+        int var3 = -115 % ((guard - 64) / 51);
     }
 
-    boolean a(UiWidget param0, byte param1) {
+    boolean requestFocus(UiWidget root, byte guard) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -413,14 +413,14 @@ class WidgetContainer extends UiWidget implements ug {
         RuntimeException decompiledCaughtException = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var3 = new IntrusiveDequeCursor(this.field_y);
+          var3 = new IntrusiveDequeCursor(this.children);
           var4 = (UiWidget) (var3.first((byte) -80));
-          if (param1 != 61) {
+          if (guard != 61) {
             var6 = (UiWidget) null;
-            this.a(27, -11, (UiWidget) null, -73);
+            this.update(27, -11, (UiWidget) null, -73);
           }
           while (var4 != null) {
-            if (var4.a(param0, (byte) 61)) {
+            if (var4.requestFocus(root, (byte) 61)) {
               return true;
             }
             var4 = (UiWidget) (var3.next(0));
@@ -431,16 +431,16 @@ class WidgetContainer extends UiWidget implements ug {
           var3_ref = decompiledCaughtException;
           stackIn_13_0 = var3_ref;
           stackIn_13_1 = new StringBuilder().append("sp.Q(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, UiWidget param2, int param3) {
+    void update(int parentX, int guard, UiWidget root, int parentY) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         IntrusiveDequeCursor var6 = null;
@@ -452,13 +452,13 @@ class WidgetContainer extends UiWidget implements ug {
         RuntimeException decompiledCaughtException = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5_int = -16 % ((-25 - param1) / 45);
-          super.a(param0, 105, param2, param3);
-          var6 = new IntrusiveDequeCursor(this.field_y);
+          var5_int = -16 % ((-25 - guard) / 45);
+          super.update(parentX, 105, root, parentY);
+          var6 = new IntrusiveDequeCursor(this.children);
           var7 = (UiWidget) (var6.first((byte) -80));
           while (var7 != null) {
             if (var7.isLinked(false)) {
-              var7.a(this.field_r + param0, -88, param2, param3 + this.field_v);
+              var7.update(this.x + parentX, -88, root, parentY + this.y);
               var7 = (UiWidget) (var6.next(0));
               continue;
             }
@@ -469,30 +469,30 @@ class WidgetContainer extends UiWidget implements ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_8_0 = runtimeException;
-          stackIn_8_1 = new StringBuilder().append("sp.U(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_8_1 = new StringBuilder().append("sp.U(").append(parentX).append(',').append(guard).append(',');
+          if (root == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(parentY).append(')').toString());
         }
     }
 
-    boolean d(int param0) {
-        if (param0 != -1) {
+    boolean hasFocus(int guard) {
+        if (guard != -1) {
           field_z = (qr) null;
         }
-        return null != this.f(55) ? true : false;
+        return null != this.focusedChild(55) ? true : false;
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = -30 / ((28 - param0) / 63);
-        super.a(94, param1, param2, param3, param4);
-        this.a(-29587);
+    void setBounds(int guard, int newX, int newY, int newHeight, int newWidth) {
+        int var6 = -30 / ((28 - guard) / 63);
+        super.setBounds(94, newX, newY, newHeight, newWidth);
+        this.refreshChildren(-29587);
     }
 
-    final void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final void onPointerReleased(UiWidget root, boolean guard, int parentX, int pointerY, int pointerX, int parentY) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var7 = null;
         UiWidget var8 = null;
@@ -503,14 +503,14 @@ class WidgetContainer extends UiWidget implements ug {
         RuntimeException decompiledCaughtException = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param1) {
+          if (guard) {
             return;
           }
-          var7 = new IntrusiveDequeCursor(this.field_y);
+          var7 = new IntrusiveDequeCursor(this.children);
           var8 = (UiWidget) (var7.first((byte) -80));
           while (var8 != null) {
-            if (var8.isLinked(param1)) {
-              var8.a(param0, false, param2 + this.field_r, param3, param4, this.field_v + param5);
+            if (var8.isLinked(guard)) {
+              var8.onPointerReleased(root, false, parentX + this.x, pointerY, pointerX, this.y + parentY);
               var8 = (UiWidget) (var7.next(0));
               continue;
             }
@@ -522,16 +522,16 @@ class WidgetContainer extends UiWidget implements ug {
           runtimeException = decompiledCaughtException;
           stackIn_10_0 = runtimeException;
           stackIn_10_1 = new StringBuilder().append("sp.T(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(',').append(parentX).append(',').append(pointerY).append(',').append(pointerX).append(',').append(parentY).append(')').toString());
         }
     }
 
-    boolean a(UiWidget param0, char param1, byte param2, int param3) {
+    boolean onKey(UiWidget root, char character, byte guard, int keyCode) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -544,15 +544,15 @@ class WidgetContainer extends UiWidget implements ug {
         RuntimeException decompiledCaughtException = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var8 = new IntrusiveDequeCursor(this.field_y);
+          var8 = new IntrusiveDequeCursor(this.children);
           var9 = (UiWidget) (var8.first((byte) -80));
-          if (param2 <= 9) {
+          if (guard <= 9) {
             field_x = (int[]) null;
           }
           while (var9 != null) {
             if (var9.isLinked(false)) {
-              if (var9.d(-1) &&
-                var9.a(param0, param1, (byte) 67, param3)) {
+              if (var9.hasFocus(-1) &&
+                var9.onKey(root, character, (byte) 67, keyCode)) {
                 return true;
               }
               var9 = (UiWidget) (var8.next(0));
@@ -560,14 +560,14 @@ class WidgetContainer extends UiWidget implements ug {
             }
             break;
           }
-          var6 = param3;
+          var6 = keyCode;
           if (var6 != 80) {
             return false;
           }
           if (!hw.field_b[81]) {
-            stackIn_15_0 = this.a(param0, false);
+            stackIn_15_0 = this.focusNext(root, false);
           } else {
-            stackIn_15_0 = this.a((byte) -5, param0);
+            stackIn_15_0 = this.focusPrevious((byte) -5, root);
           }
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -575,12 +575,12 @@ class WidgetContainer extends UiWidget implements ug {
           var5 = decompiledCaughtException;
           stackIn_20_0 = var5;
           stackIn_20_1 = new StringBuilder().append("sp.KA(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(character).append(',').append(guard).append(',').append(keyCode).append(')').toString());
         }
     }
 

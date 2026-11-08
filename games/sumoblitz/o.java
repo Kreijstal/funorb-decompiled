@@ -11,7 +11,7 @@ final class o {
         if (rf.a(false)) {
           qn.field_d[oh.levelIndex] = true;
         }
-        if (nd.livesRemaining == 3) {
+        if (GridWidgetContainer.livesRemaining == 3) {
           up.field_g[oh.levelIndex] = true;
         }
         of.a((byte) -104);
@@ -26,8 +26,8 @@ final class o {
         if (!(var1 >= ql.field_z[oh.levelIndex])) {
           ql.field_z[oh.levelIndex] = var1;
         }
-        if (go.field_j[oh.levelIndex] < in.score) {
-          go.field_j[oh.levelIndex] = in.score;
+        if (go.field_j[oh.levelIndex] < FadingWidget.score) {
+          go.field_j[oh.levelIndex] = FadingWidget.score;
         }
         if (param0 != 0) {
           field_a = (String) null;
@@ -37,7 +37,7 @@ final class o {
           th.b(24753, 245, 10);
         }
         nq.field_i = nq.field_i + 1;
-        il.field_a = in.score;
+        il.field_a = FadingWidget.score;
     }
 
     public static void b(int param0) {

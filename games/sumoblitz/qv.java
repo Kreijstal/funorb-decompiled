@@ -77,14 +77,14 @@ final class qv extends IntrusiveNode {
                   }
                 }
                 if (var5 > 0) {
-                  stackIn_33_0 = m.namesCannotStartOrText;
+                  stackIn_33_0 = ProgressDialog.namesCannotStartOrText;
                   return stackIn_33_0;
                 }
                 var6Lifetime1 = -54 / ((48 - param1) / 41);
                 stackIn_35_0 = null;
                 return (String) (stackIn_35_0);
               }
-              stackIn_19_0 = m.namesCannotStartOrText;
+              stackIn_19_0 = ProgressDialog.namesCannotStartOrText;
               return stackIn_19_0;
             }
             stackIn_14_0 = qq.namesShouldContainAText;

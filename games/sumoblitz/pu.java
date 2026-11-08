@@ -8,7 +8,7 @@ final class pu extends ToolkitSprite {
     private boolean field_g;
     private int field_b;
     private boolean field_k;
-    static dg field_e;
+    static DialogLayer field_e;
     static boolean field_m;
     private int field_n;
     private int field_i;
@@ -37,7 +37,7 @@ final class pu extends ToolkitSprite {
             if ((param7 & 1) == 0) {
               ((ru) (Object) stackIn_4_0).a(lh.field_l, 15149);
             } else {
-              ((ru) (Object) stackIn_4_0).a(ao.field_y, 15149);
+              ((ru) (Object) stackIn_4_0).a(ArrayWidgetContainer.field_y, 15149);
             }
           }
         }
@@ -94,7 +94,7 @@ final class pu extends ToolkitSprite {
         if (!this.field_h &&
           !this.field_g &&
           (1 & param9) != 0) {
-          stackIn_5_1 = ao.field_y;
+          stackIn_5_1 = ArrayWidgetContainer.field_y;
         } else {
           stackIn_5_1 = lh.field_l;
         }

@@ -303,9 +303,9 @@ final class ArenaPad extends IntrusiveNode {
             decompiledFrameRemainder7 = (drone.droneType == 0);
             if (decompiledFrameRemainder7) {
               PowerupPickup.field_v = PowerupPickup.field_v + 1;
-              decompiledFrameRemainder7 = !(gt.field_ab > 0);
+              decompiledFrameRemainder7 = !(MessageDialog.field_ab > 0);
               if (decompiledFrameRemainder7) {
-                gt.field_ab = 250;
+                MessageDialog.field_ab = 250;
                 decompiledFrameRemainder7 = (var17 != 0);
               }
             }
@@ -613,9 +613,9 @@ final class ArenaPad extends IntrusiveNode {
           if (param1 < 30) {
             ArenaPad.releaseStatics(-34);
           }
-          qk.field_U = param0.a(255) << 5;
+          DisplayModeConfirmationDialog.field_U = param0.a(255) << 5;
           var2_int = param0.e(-31302);
-          qk.field_U = qk.field_U + (var2_int >> 3);
+          DisplayModeConfirmationDialog.field_U = DisplayModeConfirmationDialog.field_U + (var2_int >> 3);
           sd.field_f = 1835008 & var2_int << 18;
           sd.field_f = sd.field_f + (param0.a(255) << 2);
           var2_intLifetime1 = param0.e(-31302);

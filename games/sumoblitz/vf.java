@@ -13,22 +13,22 @@ final class vf {
           hc.field_c.n(-7);
           if (param0 == -49) {
             ro.field_a = new vq();
-            SlowBurstParticle.field_y.b((byte) -94, ro.field_a);
+            SlowBurstParticle.field_y.transitionToContent((byte) -94, ro.field_a);
             return;
           }
           vf.a(3);
           ro.field_a = new vq();
-          SlowBurstParticle.field_y.b((byte) -94, ro.field_a);
+          SlowBurstParticle.field_y.transitionToContent((byte) -94, ro.field_a);
           return;
         }
         if (param0 != -49) {
           vf.a(3);
           ro.field_a = new vq();
-          SlowBurstParticle.field_y.b((byte) -94, ro.field_a);
+          SlowBurstParticle.field_y.transitionToContent((byte) -94, ro.field_a);
           return;
         }
         ro.field_a = new vq();
-        SlowBurstParticle.field_y.b((byte) -94, ro.field_a);
+        SlowBurstParticle.field_y.transitionToContent((byte) -94, ro.field_a);
     }
 
     final static bo a(ResourceArchive param0, boolean param1, String param2, String param3, ResourceArchive param4) {
@@ -113,9 +113,9 @@ final class vf {
         RuntimeException var1 = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var1_int = rg.field_C[param0];
-          for (var2 = 1; var2 < rg.field_C.length; var2++) {
-            var3 = rg.field_C[var2];
+          var1_int = ModalDialog.field_C[param0];
+          for (var2 = 1; var2 < ModalDialog.field_C.length; var2++) {
+            var3 = ModalDialog.field_C[var2];
             la.a(Sumoblitz.field_G, var2 << 4, Sumoblitz.field_G, var1_int, var3);
             var1_int = var1_int + var3;
           }

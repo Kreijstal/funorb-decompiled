@@ -47,7 +47,7 @@ final class ew extends na {
         }
     }
 
-    ew(dh param0) {
+    ew(TextInputWidget param0) {
         super(param0);
     }
 

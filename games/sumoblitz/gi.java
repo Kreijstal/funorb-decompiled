@@ -67,7 +67,7 @@ final class gi extends LegacyOpenGlEffect {
         if (!ut.field_o.a(true)) {
           return PowerupPickup.field_s;
         }
-        return ac.field_F;
+        return FocusProxyWidget.field_F;
     }
 
     final void a(int param0, boolean param1) {

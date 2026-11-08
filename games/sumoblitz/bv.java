@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bv implements mh {
+final class bv implements WidgetRenderer {
     static String friendsCanBeAddedText;
     private int field_a;
     private int field_d;
@@ -22,7 +22,7 @@ final class bv implements mh {
         this.field_c = kw.field_b;
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+    public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -37,36 +37,36 @@ final class bv implements mh {
         int var11 = 0;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!param0.field_k &&
-            !param0.d(-1)) {
+          if (!widget.hovered &&
+            !widget.hasFocus(-1)) {
             stackIn_6_0 = 2188450;
           } else {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
-          this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_m + "</u>", param4 + param0.field_r, param0.field_v + param1, param0.field_q, param0.field_p, var6_int, -1, this.field_d, this.field_a, this.field_c.field_s + this.field_c.field_I);
-          if (param0.d(-1)) {
-            var7 = this.field_c.a(param0.field_m);
+          this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + widget.text + "</u>", parentX + widget.x, widget.y + parentY, widget.width, widget.height, var6_int, -1, this.field_d, this.field_a, this.field_c.field_s + this.field_c.field_I);
+          if (widget.hasFocus(-1)) {
+            var7 = this.field_c.a(widget.text);
             var8 = this.field_c.field_s + this.field_c.field_I;
-            var9 = param4 + param0.field_r;
+            var9 = parentX + widget.x;
             if (2 == this.field_d) {
-              var9 = var9 + (-var7 + param0.field_q);
+              var9 = var9 + (-var7 + widget.width);
             } else {
               if (1 == this.field_d) {
-                var9 = var9 + (param0.field_q - var7 >> 1);
+                var9 = var9 + (widget.width - var7 >> 1);
               }
             }
-            var10 = param0.field_v + param1;
+            var10 = widget.y + parentY;
             if (this.field_a == 2) {
-              var10 = var10 + (param0.field_p - var8);
+              var10 = var10 + (widget.height - var8);
             } else {
               if (this.field_a == 1) {
-                var10 = var10 + (param0.field_p - var8 >> 1);
+                var10 = var10 + (widget.height - var8 >> 1);
               }
             }
-            AudioServiceThread.drawDottedRectangle(var10 + 2, 4 + var7, param2 ^ -5596714, var9 - 2, var8);
+            AudioServiceThread.drawDottedRectangle(var10 + 2, 4 + var7, guard ^ -5596714, var9 - 2, var8);
           }
-          if (param2 == 5592405) {
+          if (guard == 5592405) {
             return;
           }
           this.field_a = 59;
@@ -76,12 +76,12 @@ final class bv implements mh {
           var6 = decompiledCaughtException;
           stackIn_22_0 = var6;
           stackIn_22_1 = new StringBuilder().append("bv.A(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(parentY).append(',').append(guard).append(',').append(isEnabled).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ final class bv implements mh {
 
     final static void a(int param0) {
         String var2 = (String) null;
-        wv.a((byte) 99, in.field_C, (String) null);
+        wv.a((byte) 99, FadingWidget.field_C, (String) null);
         if (param0 != -363927231) {
           bv.a(-108);
         }

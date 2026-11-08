@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qq extends dh implements op {
+final class qq extends TextInputWidget implements op {
     private int field_T;
     static int field_P;
     private v field_S;
@@ -40,9 +40,9 @@ final class qq extends dh implements op {
         return this.field_S;
     }
 
-    final void g(byte param0) {
-        super.g((byte) 127);
-        if (param0 <= 78) {
+    final void notifyChanged(byte guard) {
+        super.notifyChanged((byte) 127);
+        if (guard <= 78) {
           namesShouldContainAText = (String) null;
           if (null != this.field_S) {
             this.field_S.a((byte) -117);
@@ -87,33 +87,33 @@ final class qq extends dh implements op {
         }
     }
 
-    qq(String param0, qm param1, int param2) {
+    qq(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 
-    final String c(int param0) {
-        if (!this.field_k) {
+    final String hoveredTooltip(int guard) {
+        if (!this.hovered) {
           return null;
         }
-        if (this.field_t == null) {
+        if (this.tooltip == null) {
           return null;
         }
-        if (param0 == -6696) {
-          gi.a(pi.field_e, this.field_q - (this.field_T - ko.field_p), -95);
-          return this.field_t;
+        if (guard == -6696) {
+          gi.a(pi.field_e, this.width - (this.field_T - ko.field_p), -95);
+          return this.tooltip;
         }
         this.field_S = (v) null;
-        gi.a(pi.field_e, this.field_q - (this.field_T - ko.field_p), -95);
-        return this.field_t;
+        gi.a(pi.field_e, this.width - (this.field_T - ko.field_p), -95);
+        return this.tooltip;
     }
 
-    final void a(int param0, int param1, UiWidget param2, int param3) {
+    final void update(int parentX, int guard, UiWidget root, int parentY) {
         try {
-          super.a(param0, -86, param2, param3);
-          int var5_int = 126 % ((param1 + 25) / 45);
-          this.field_T = ko.field_p - (this.field_r + param0);
+          super.update(parentX, -86, root, parentY);
+          int var5_int = 126 % ((guard + 25) / 45);
+          this.field_T = ko.field_p - (this.x + parentX);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qq.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qq.U(" + parentX + ',' + guard + ',' + (root != null ? "{...}" : "null") + ',' + parentY + ')');
         }
     }
 

@@ -132,9 +132,9 @@ final class fw extends IntrusiveNode {
         }
     }
 
-    final static gm a(int param0) {
+    final static TextWidgetRenderer a(int param0) {
         if (null == AudioServiceThread.field_d) {
-          AudioServiceThread.field_d = new gm(jm.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, jm.field_a.field_s, -1, 2147483647, true);
+          AudioServiceThread.field_d = new TextWidgetRenderer(jm.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, jm.field_a.field_s, -1, 2147483647, true);
           if (param0 != 0) {
             fw.c(false);
             return AudioServiceThread.field_d;

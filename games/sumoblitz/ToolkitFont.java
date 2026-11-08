@@ -151,14 +151,14 @@ abstract class ToolkitFont {
                         fl.field_p = -16777216 & mn.field_i | ea.a((byte) -73, var9, 16);
                       }
                     } else {
-                      vo.field_I = -1;
+                      ScrollControl.field_I = -1;
                     }
                   } else {
-                    vo.field_I = 8388608 | -16777216 & mn.field_i;
+                    ScrollControl.field_I = 8388608 | -16777216 & mn.field_i;
                   }
                 } else {
                   var8 = (CharSequence) ((Object) param0.substring(4));
-                  vo.field_I = -16777216 & mn.field_i | ea.a((byte) -73, var8, 16);
+                  ScrollControl.field_I = -16777216 & mn.field_i | ea.a((byte) -73, var8, 16);
                 }
               } else {
                 mn.field_i = PacketBuffer.field_l;
@@ -446,8 +446,8 @@ abstract class ToolkitFont {
                   }
                 }
                 var15 = this.field_b.a(var14, (byte) -53);
-                if (-1 != vo.field_I) {
-                  this.field_a.a(vo.field_I, 103, param1 + (int)(0.7 * (double)this.field_b.field_d), var15, param3);
+                if (-1 != ScrollControl.field_I) {
+                  this.field_a.a(ScrollControl.field_I, 103, param1 + (int)(0.7 * (double)this.field_b.field_d), var15, param3);
                 }
                 if (fl.field_p != -1) {
                   this.field_a.a(fl.field_p, 122, this.field_b.field_d + param1 + 1, var15, param3);
@@ -504,7 +504,7 @@ abstract class ToolkitFont {
         int var13 = Sumoblitz.field_L ? 1 : 0;
         int var8Lifetime1;
         li.field_v = kb.a("frame_top", param0, true, "commonui");
-        hd.field_O = kb.a("frame_bottom", param0, true, "commonui");
+        DropDownListWidget.field_O = kb.a("frame_bottom", param0, true, "commonui");
         ar.field_E = jb.a("commonui", "jagex_logo_grey", -104, param0);
         LevelCompleteUpgradeScreen.field_j = kb.a("button", param0, true, "commonui");
         fw.field_m = DelayedInboundPacket.a(param0, "commonui", (byte) -56, "validation");
@@ -512,7 +512,7 @@ abstract class ToolkitFont {
         kw.field_b = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14", param0));
         tq.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
         Sprite var17 = new Sprite(param3.a("", "button.gif", -1), (java.awt.Component) ((Object) qn.field_f));
-        mc.a((byte) 83, param0, "dropdown", "commonui");
+        ScrollPane.a((byte) 83, param0, "dropdown", "commonui");
         ne[] var5 = ShaderEffect.a("screen_options", param0, 73, "commonui");
         sb.field_d = new ne[4];
         sm.field_c = new ne[4];
@@ -582,7 +582,7 @@ abstract class ToolkitFont {
         if (param1 == -1) {
           param1 = 0;
         }
-        vo.field_I = -1;
+        ScrollControl.field_I = -1;
         sb.field_a = 0;
         if (param2 != 60) {
           this.field_b = (FontMetrics) null;

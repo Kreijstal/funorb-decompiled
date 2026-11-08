@@ -598,7 +598,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime11 = ke.a((byte) 120, "orbpoints");
           if (var2Lifetime11 != null) {
-            pe.orbPointsText = MusicVoice.a(0, var2Lifetime11);
+            NameSuggestionsPanel.orbPointsText = MusicVoice.a(0, var2Lifetime11);
           }
           var2Lifetime12 = ke.a((byte) 102, "achievethisgame");
           if (null != var2Lifetime12) {
@@ -630,7 +630,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime19 = ke.a((byte) 123, "regularscores");
           if (null != var2Lifetime19) {
-            hd.regularText = MusicVoice.a(param1 + 5, var2Lifetime19);
+            DropDownListWidget.regularText = MusicVoice.a(param1 + 5, var2Lifetime19);
           }
           var2Lifetime20 = ke.a((byte) 119, "editorTx");
           if (null != var2Lifetime20) {
@@ -702,7 +702,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime37 = ke.a((byte) 110, "returnToMainMenu");
           if (var2Lifetime37 != null) {
-            wp.returnToMainMenuText = MusicVoice.a(0, var2Lifetime37);
+            InteractiveWidget.returnToMainMenuText = MusicVoice.a(0, var2Lifetime37);
           }
           var2Lifetime38 = ke.a((byte) 114, "respecTx");
           if (var2Lifetime38 != null) {
@@ -874,118 +874,118 @@ final class ArchiveCatalog {
           }
           var2Lifetime80 = ke.a((byte) 110, "achievement_criteria,0");
           if (var2Lifetime80 != null) {
-            jh.achievementDescriptions[0] = MusicVoice.a(0, var2Lifetime80);
+            DraggableWidget.achievementDescriptions[0] = MusicVoice.a(0, var2Lifetime80);
           }
           var2Lifetime81 = ke.a((byte) 120, "achievement_criteria,1");
           if (var2Lifetime81 != null) {
-            jh.achievementDescriptions[1] = MusicVoice.a(0, var2Lifetime81);
+            DraggableWidget.achievementDescriptions[1] = MusicVoice.a(0, var2Lifetime81);
           }
           var2Lifetime82 = ke.a((byte) 88, "achievement_criteria,2");
           if (null != var2Lifetime82) {
-            jh.achievementDescriptions[2] = MusicVoice.a(0, var2Lifetime82);
+            DraggableWidget.achievementDescriptions[2] = MusicVoice.a(0, var2Lifetime82);
           }
           var2Lifetime83 = ke.a((byte) 92, "achievement_criteria,3");
           if (null != var2Lifetime83) {
-            jh.achievementDescriptions[3] = MusicVoice.a(param1 + 5, var2Lifetime83);
+            DraggableWidget.achievementDescriptions[3] = MusicVoice.a(param1 + 5, var2Lifetime83);
           }
           var2Lifetime84 = ke.a((byte) 92, "achievement_criteria,4");
           if (null != var2Lifetime84) {
-            jh.achievementDescriptions[4] = MusicVoice.a(jg.a(param1, -5), var2Lifetime84);
+            DraggableWidget.achievementDescriptions[4] = MusicVoice.a(jg.a(param1, -5), var2Lifetime84);
           }
           var2Lifetime85 = ke.a((byte) 99, "achievement_criteria,5");
           if (var2Lifetime85 != null) {
-            jh.achievementDescriptions[5] = MusicVoice.a(0, var2Lifetime85);
+            DraggableWidget.achievementDescriptions[5] = MusicVoice.a(0, var2Lifetime85);
           }
           var2Lifetime86 = ke.a((byte) 120, "achievement_criteria,6");
           if (var2Lifetime86 != null) {
-            jh.achievementDescriptions[6] = MusicVoice.a(0, var2Lifetime86);
+            DraggableWidget.achievementDescriptions[6] = MusicVoice.a(0, var2Lifetime86);
           }
           var2Lifetime87 = ke.a((byte) 109, "achievement_criteria,7");
           if (null != var2Lifetime87) {
-            jh.achievementDescriptions[7] = MusicVoice.a(0, var2Lifetime87);
+            DraggableWidget.achievementDescriptions[7] = MusicVoice.a(0, var2Lifetime87);
           }
           var2Lifetime88 = ke.a((byte) 92, "achievement_criteria,8");
           if (var2Lifetime88 != null) {
-            jh.achievementDescriptions[8] = MusicVoice.a(0, var2Lifetime88);
+            DraggableWidget.achievementDescriptions[8] = MusicVoice.a(0, var2Lifetime88);
           }
           var2Lifetime89 = ke.a((byte) 113, "achievement_criteria,9");
           if (null != var2Lifetime89) {
-            jh.achievementDescriptions[9] = MusicVoice.a(0, var2Lifetime89);
+            DraggableWidget.achievementDescriptions[9] = MusicVoice.a(0, var2Lifetime89);
           }
           var2Lifetime90 = ke.a((byte) 90, "achievement_criteria,10");
           if (null != var2Lifetime90) {
-            jh.achievementDescriptions[10] = MusicVoice.a(0, var2Lifetime90);
+            DraggableWidget.achievementDescriptions[10] = MusicVoice.a(0, var2Lifetime90);
           }
           var2Lifetime91 = ke.a((byte) 92, "achievement_criteria,11");
           if (var2Lifetime91 != null) {
-            jh.achievementDescriptions[11] = MusicVoice.a(0, var2Lifetime91);
+            DraggableWidget.achievementDescriptions[11] = MusicVoice.a(0, var2Lifetime91);
           }
           var2Lifetime92 = ke.a((byte) 99, "achievement_criteria,12");
           if (var2Lifetime92 != null) {
-            jh.achievementDescriptions[12] = MusicVoice.a(0, var2Lifetime92);
+            DraggableWidget.achievementDescriptions[12] = MusicVoice.a(0, var2Lifetime92);
           }
           var2Lifetime93 = ke.a((byte) 88, "achievement_criteria,13");
           if (null != var2Lifetime93) {
-            jh.achievementDescriptions[13] = MusicVoice.a(0, var2Lifetime93);
+            DraggableWidget.achievementDescriptions[13] = MusicVoice.a(0, var2Lifetime93);
           }
           var2Lifetime94 = ke.a((byte) 101, "achievement_criteria,14");
           if (null != var2Lifetime94) {
-            jh.achievementDescriptions[14] = MusicVoice.a(param1 + 5, var2Lifetime94);
+            DraggableWidget.achievementDescriptions[14] = MusicVoice.a(param1 + 5, var2Lifetime94);
           }
           if (param1 != -5) {
             ArchiveCatalog.a((byte) 119, (String) null);
           }
           var2Lifetime95 = ke.a((byte) 113, "achievement_criteria,15");
           if (null != var2Lifetime95) {
-            jh.achievementDescriptions[15] = MusicVoice.a(0, var2Lifetime95);
+            DraggableWidget.achievementDescriptions[15] = MusicVoice.a(0, var2Lifetime95);
           }
           var2Lifetime96 = ke.a((byte) 92, "achievement_criteria,16");
           if (null != var2Lifetime96) {
-            jh.achievementDescriptions[16] = MusicVoice.a(0, var2Lifetime96);
+            DraggableWidget.achievementDescriptions[16] = MusicVoice.a(0, var2Lifetime96);
           }
           var2Lifetime97 = ke.a((byte) 94, "achievement_criteria,17");
           if (null != var2Lifetime97) {
-            jh.achievementDescriptions[17] = MusicVoice.a(0, var2Lifetime97);
+            DraggableWidget.achievementDescriptions[17] = MusicVoice.a(0, var2Lifetime97);
           }
           var2Lifetime98 = ke.a((byte) 119, "achievement_criteria,18");
           if (null != var2Lifetime98) {
-            jh.achievementDescriptions[18] = MusicVoice.a(0, var2Lifetime98);
+            DraggableWidget.achievementDescriptions[18] = MusicVoice.a(0, var2Lifetime98);
           }
           var2Lifetime99 = ke.a((byte) 100, "achievement_criteria,19");
           if (null != var2Lifetime99) {
-            jh.achievementDescriptions[19] = MusicVoice.a(jg.a(param1, -5), var2Lifetime99);
+            DraggableWidget.achievementDescriptions[19] = MusicVoice.a(jg.a(param1, -5), var2Lifetime99);
           }
           var2Lifetime100 = ke.a((byte) 101, "achievement_criteria,20");
           if (null != var2Lifetime100) {
-            jh.achievementDescriptions[20] = MusicVoice.a(0, var2Lifetime100);
+            DraggableWidget.achievementDescriptions[20] = MusicVoice.a(0, var2Lifetime100);
           }
           var2Lifetime101 = ke.a((byte) 114, "achievement_criteria,21");
           if (var2Lifetime101 != null) {
-            jh.achievementDescriptions[21] = MusicVoice.a(param1 + 5, var2Lifetime101);
+            DraggableWidget.achievementDescriptions[21] = MusicVoice.a(param1 + 5, var2Lifetime101);
           }
           var2Lifetime102 = ke.a((byte) 105, "achievement_criteria,22");
           if (null != var2Lifetime102) {
-            jh.achievementDescriptions[22] = MusicVoice.a(0, var2Lifetime102);
+            DraggableWidget.achievementDescriptions[22] = MusicVoice.a(0, var2Lifetime102);
           }
           var2Lifetime103 = ke.a((byte) 94, "achievement_criteria,23");
           if (null != var2Lifetime103) {
-            jh.achievementDescriptions[23] = MusicVoice.a(0, var2Lifetime103);
+            DraggableWidget.achievementDescriptions[23] = MusicVoice.a(0, var2Lifetime103);
           }
           var2Lifetime104 = ke.a((byte) 93, "achievement_criteria,24");
           if (var2Lifetime104 != null) {
-            jh.achievementDescriptions[24] = MusicVoice.a(0, var2Lifetime104);
+            DraggableWidget.achievementDescriptions[24] = MusicVoice.a(0, var2Lifetime104);
           }
           var2Lifetime105 = ke.a((byte) 105, "achievement_criteria,25");
           if (null != var2Lifetime105) {
-            jh.achievementDescriptions[25] = MusicVoice.a(0, var2Lifetime105);
+            DraggableWidget.achievementDescriptions[25] = MusicVoice.a(0, var2Lifetime105);
           }
           var2Lifetime106 = ke.a((byte) 92, "achievement_criteria,26");
           if (null != var2Lifetime106) {
-            jh.achievementDescriptions[26] = MusicVoice.a(jg.a(param1, -5), var2Lifetime106);
+            DraggableWidget.achievementDescriptions[26] = MusicVoice.a(jg.a(param1, -5), var2Lifetime106);
           }
           var2Lifetime107 = ke.a((byte) 92, "achievement_criteria,27");
           if (null != var2Lifetime107) {
-            jh.achievementDescriptions[27] = MusicVoice.a(0, var2Lifetime107);
+            DraggableWidget.achievementDescriptions[27] = MusicVoice.a(0, var2Lifetime107);
           }
           var2Lifetime108 = ke.a((byte) 121, "score_colon_space");
           if (var2Lifetime108 != null) {
@@ -1113,15 +1113,15 @@ final class ArchiveCatalog {
           }
           var2Lifetime139 = ke.a((byte) 119, "benefits,0");
           if (null != var2Lifetime139) {
-            hf.membershipPromoLines[0] = MusicVoice.a(0, var2Lifetime139);
+            ResizingDialog.membershipPromoLines[0] = MusicVoice.a(0, var2Lifetime139);
           }
           var2Lifetime140 = ke.a((byte) 117, "benefits,1");
           if (null != var2Lifetime140) {
-            hf.membershipPromoLines[1] = MusicVoice.a(0, var2Lifetime140);
+            ResizingDialog.membershipPromoLines[1] = MusicVoice.a(0, var2Lifetime140);
           }
           var2Lifetime141 = ke.a((byte) 117, "benefits,2");
           if (null != var2Lifetime141) {
-            hf.membershipPromoLines[2] = MusicVoice.a(param1 + 5, var2Lifetime141);
+            ResizingDialog.membershipPromoLines[2] = MusicVoice.a(param1 + 5, var2Lifetime141);
           }
           var2Lifetime142 = ke.a((byte) 122, "arcadeunlocked");
           if (var2Lifetime142 != null) {
@@ -1575,10 +1575,10 @@ final class ArchiveCatalog {
         int var4 = 0;
         try {
           var3_int = 59 / ((param0 + 40) / 55);
-          lc.field_A = false;
-          mc.field_E = false;
+          StatusMessagePanel.field_A = false;
+          ScrollPane.field_E = false;
           if (null != hc.field_c &&
-            hc.field_c.field_D) {
+            hc.field_c.open) {
             if (8 == param1) {
               param1 = 2;
               if (!pg.field_a) {
@@ -1589,7 +1589,7 @@ final class ArchiveCatalog {
               } else {
                 param2 = RasterBuffer.invalidPasswordText;
               }
-              no.field_a.a(-3499, ac.field_F);
+              no.field_a.a(-3499, FocusProxyWidget.field_F);
             }
             var4 = 1;
             if (param1 == 10) {
@@ -1597,7 +1597,7 @@ final class ArchiveCatalog {
               vf.a((byte) -49);
             }
             if (var4 != 0) {
-              if (mc.field_E) {
+              if (ScrollPane.field_E) {
                 param2 = ic.a(hh.connectionLostText, new String[]{param2}, (byte) -128);
               }
               if (ih.field_c) {

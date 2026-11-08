@@ -58,10 +58,10 @@ final class sj {
             var6 = bf.field_c[var3];
             if (2 == DroneChargeParticle.field_s &&
               1 == var2) {
-              if (no.field_b.length >= hf.field_F.length) {
+              if (no.field_b.length >= ResizingDialog.field_F.length) {
                 stackIn_20_0 = no.field_b.length;
               } else {
-                stackIn_20_0 = hf.field_F.length;
+                stackIn_20_0 = ResizingDialog.field_F.length;
               }
               var7 = stackIn_20_0;
               if (uw.field_c.length >= uw.field_b.length) {
@@ -95,7 +95,7 @@ final class sj {
             stackIn_42_0 = -9;
             stackIn_42_1 = var6;
             stackIn_43_2 = !(0 > var4);
-            var7Lifetime1 = gt.$cfr$intArgs$a$590e95718a07(stackIn_42_0, stackIn_42_1, stackIn_43_2);
+            var7Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(stackIn_42_0, stackIn_42_1, stackIn_43_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + oj.field_a;
             if (var4 >= 0) {
               var1_int = var1_int + qc.field_a;

@@ -48,14 +48,14 @@ final class is {
 
     final static void a(int param0) {
         if (param0 >= 27) {
-          pu.field_e.a((byte) 123);
-          pu.field_e.a((byte) 112, new dd(pu.field_e));
+          pu.field_e.closeAllDialogs((byte) 123);
+          pu.field_e.pushDialog((byte) 112, new GraphicsOptionsDialog(pu.field_e));
           return;
         }
         String var2 = (String) null;
         is.a((byte) 10, (String) null);
-        pu.field_e.a((byte) 123);
-        pu.field_e.a((byte) 112, new dd(pu.field_e));
+        pu.field_e.closeAllDialogs((byte) 123);
+        pu.field_e.pushDialog((byte) 112, new GraphicsOptionsDialog(pu.field_e));
     }
 
     final static cn a(byte param0, String param1) {

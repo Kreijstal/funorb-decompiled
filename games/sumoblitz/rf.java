@@ -5,7 +5,7 @@ final class rf extends Exception {
     static ts field_e;
     static String[] field_b;
     static String menuText;
-    static dg field_a;
+    static DialogLayer field_a;
     static int field_d;
 
     public rf() {

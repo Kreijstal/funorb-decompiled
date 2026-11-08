@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vr extends wp {
+final class vr extends InteractiveWidget {
     static String field_G;
     private int field_E;
     private v field_H;
     static String thisPasswordContainsYourText;
 
-    final void a(int param0, int param1, UiWidget param2, int param3) {
+    final void update(int parentX, int guard, UiWidget root, int parentY) {
         try {
           this.field_E = this.field_E + 1;
-          int var5_int = 46 / ((param1 + 25) / 45);
-          super.a(param0, 54, param2, param3);
+          int var5_int = 46 / ((guard + 25) / 45);
+          super.update(parentX, 54, root, parentY);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vr.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vr.U(" + parentX + ',' + guard + ',' + (root != null ? "{...}" : "null") + ',' + parentY + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class vr extends wp {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void renderLayer(int parentX, int parentY, byte guard, int layer) {
         Sprite var16 = null;
         Sprite var17 = null;
         Sprite var14 = null;
@@ -47,12 +47,12 @@ final class vr extends wp {
         UiWidget var12Lifetime1Lifetime3;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.a(param0, param1, (byte) -122, param3);
-        if (0 != param3) {
+        super.renderLayer(parentX, parentY, (byte) -122, layer);
+        if (0 != layer) {
           return;
         }
-        int var5 = (this.field_q >> 1) + (this.field_r + param0);
-        int var6 = (this.field_p >> 1) + param1 + this.field_v;
+        int var5 = (this.width >> 1) + (this.x + parentX);
+        int var6 = (this.height >> 1) + parentY + this.y;
         gf var8 = this.field_H.c(-103);
         if (GameInstructions.field_f == var8) {
           var16 = fw.field_m[0];
@@ -64,9 +64,9 @@ final class vr extends wp {
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
-            if (param2 >= -35) {
+            if (guard >= -35) {
               var12 = (UiWidget) null;
-              this.a(86, -51, (UiWidget) null, 16);
+              this.update(86, -51, (UiWidget) null, 16);
             }
             return;
           }
@@ -76,9 +76,9 @@ final class vr extends wp {
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
-            if (param2 >= -35) {
+            if (guard >= -35) {
               var12Lifetime4 = (UiWidget) null;
-              this.a(86, -51, (UiWidget) null, 16);
+              this.update(86, -51, (UiWidget) null, 16);
             }
             return;
           }
@@ -88,9 +88,9 @@ final class vr extends wp {
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
-            if (param2 >= -35) {
+            if (guard >= -35) {
               var12Lifetime5 = (UiWidget) null;
-              this.a(86, -51, (UiWidget) null, 16);
+              this.update(86, -51, (UiWidget) null, 16);
             }
             return;
           }
@@ -99,9 +99,9 @@ final class vr extends wp {
           var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
           ClientException.a((byte) 126);
           kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
-          if (param2 >= -35) {
+          if (guard >= -35) {
             var12Lifetime6 = (UiWidget) null;
-            this.a(86, -51, (UiWidget) null, 16);
+            this.update(86, -51, (UiWidget) null, 16);
           }
           return;
         }
@@ -115,9 +115,9 @@ final class vr extends wp {
             var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
-            if (param2 >= -35) {
+            if (guard >= -35) {
               var12Lifetime1 = (UiWidget) null;
-              this.a(86, -51, (UiWidget) null, 16);
+              this.update(86, -51, (UiWidget) null, 16);
             }
             return;
           }
@@ -127,9 +127,9 @@ final class vr extends wp {
             var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
-            if (param2 >= -35) {
+            if (guard >= -35) {
               var12Lifetime1Lifetime1 = (UiWidget) null;
-              this.a(86, -51, (UiWidget) null, 16);
+              this.update(86, -51, (UiWidget) null, 16);
             }
             return;
           }
@@ -139,11 +139,11 @@ final class vr extends wp {
             var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
-            if (param2 < -35) {
+            if (guard < -35) {
               return;
             }
             var12Lifetime1Lifetime2 = (UiWidget) null;
-            this.a(86, -51, (UiWidget) null, 16);
+            this.update(86, -51, (UiWidget) null, 16);
             return;
           }
           jq.a(7161, kv.field_a);
@@ -151,53 +151,53 @@ final class vr extends wp {
           var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
           ClientException.a((byte) 126);
           kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
-          if (param2 < -35) {
+          if (guard < -35) {
             return;
           }
           var12Lifetime1Lifetime3 = (UiWidget) null;
-          this.a(86, -51, (UiWidget) null, 16);
+          this.update(86, -51, (UiWidget) null, 16);
           return;
         }
         if (qr.field_e == var8) {
           var14 = fw.field_m[2];
           var14.d(-(var14.field_x >> 1) + var5, var6 - (var14.field_u >> 1), 256);
-          if (param2 < -35) {
+          if (guard < -35) {
             return;
           }
           var12Lifetime2 = (UiWidget) null;
-          this.a(86, -51, (UiWidget) null, 16);
+          this.update(86, -51, (UiWidget) null, 16);
           return;
         }
         if (var8 == qe.field_a) {
           var15 = fw.field_m[1];
           var15.d(var5 - (var15.field_x >> 1), var6 - (var15.field_u >> 1), 256);
         }
-        if (param2 < -35) {
+        if (guard < -35) {
           return;
         }
         var12Lifetime3 = (UiWidget) null;
-        this.a(86, -51, (UiWidget) null, 16);
+        this.update(86, -51, (UiWidget) null, 16);
     }
 
-    final String c(int param0) {
-        if (this.field_k) {
+    final String hoveredTooltip(int guard) {
+        if (this.hovered) {
           return this.field_H.a(3690);
         }
-        if (param0 != -6696) {
-          this.a(-102, 53, (byte) -40, -114);
+        if (guard != -6696) {
+          this.renderLayer(-102, 53, (byte) -40, -114);
           return null;
         }
         return null;
     }
 
-    final boolean a(UiWidget param0, byte param1) {
+    final boolean requestFocus(UiWidget root, byte guard) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == 61) {
+          if (guard == 61) {
             return false;
           }
           this.field_E = 103;
@@ -207,12 +207,12 @@ final class vr extends wp {
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("vr.Q(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 

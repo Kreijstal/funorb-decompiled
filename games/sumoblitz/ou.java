@@ -6,7 +6,7 @@ final class ou extends na {
     private boolean field_e;
     private String field_f;
 
-    ou(dh param0) {
+    ou(TextInputWidget param0) {
         super(param0);
         this.field_e = false;
     }
@@ -224,7 +224,7 @@ final class ou extends na {
             bf.field_c[-2 + var4] = AudioServiceThread.membersText;
             eb.field_a[-2 + var4] = 0;
             jo.field_b[0] = 4;
-            bf.field_c[-1 + var4] = jh.closeText;
+            bf.field_c[-1 + var4] = DraggableWidget.closeText;
             eb.field_a[-1 + var4] = 1;
             jo.field_b[1] = 5;
           } else if (DroneChargeParticle.field_s == 1) {
@@ -240,7 +240,7 @@ final class ou extends na {
               bf.field_c[var5] = GameInstructions.field_c[var5];
             }
             bf.field_c[-2 + var4] = "";
-            bf.field_c[-1 + var4] = jh.closeText;
+            bf.field_c[-1 + var4] = DraggableWidget.closeText;
             eb.field_a[var4 - 1] = 0;
             jo.field_b[0] = 5;
           } else if (DroneChargeParticle.field_s != 2) {
@@ -261,7 +261,7 @@ final class ou extends na {
                 bf.field_c[var5] = GameInstructions.field_c[var5];
               }
               bf.field_c[-2 + var4] = "";
-              bf.field_c[-1 + var4] = jh.closeText;
+              bf.field_c[-1 + var4] = DraggableWidget.closeText;
               eb.field_a[-1 + var4] = 0;
               jo.field_b[0] = 5;
             } else if (4 == DroneChargeParticle.field_s) {
@@ -277,7 +277,7 @@ final class ou extends na {
                 bf.field_c[var5] = GameInstructions.field_c[var5];
               }
               bf.field_c[-2 + var4] = "";
-              bf.field_c[var4 - 1] = jh.closeText;
+              bf.field_c[var4 - 1] = DraggableWidget.closeText;
               eb.field_a[var4 - 1] = 0;
               jo.field_b[0] = 5;
             } else {
@@ -296,10 +296,10 @@ final class ou extends na {
                 bf.field_c[var5] = GameInstructions.field_c[var5];
               }
               bf.field_c[-3 + var4] = "";
-              bf.field_c[var4 - 2] = kq.tryAgainText;
+              bf.field_c[var4 - 2] = FullscreenMembershipDialog.tryAgainText;
               eb.field_a[-2 + var4] = 0;
               jo.field_b[0] = 3;
-              bf.field_c[var4 - 1] = jh.closeText;
+              bf.field_c[var4 - 1] = DraggableWidget.closeText;
               eb.field_a[var4 - 1] = 1;
               jo.field_b[1] = 5;
             }
@@ -332,14 +332,14 @@ final class ou extends na {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            hf.field_F = new String[var4];
-            la.a(GameInstructions.field_c, 0, hf.field_F, 0, var4);
+            ResizingDialog.field_F = new String[var4];
+            la.a(GameInstructions.field_c, 0, ResizingDialog.field_F, 0, var4);
             uw.field_b = new String[-1 + (-var4 + var3_int)];
             la.a(GameInstructions.field_c, var4 + 1, uw.field_b, 0, -1 - var4 + var3_int);
-            if (no.field_b.length >= hf.field_F.length) {
+            if (no.field_b.length >= ResizingDialog.field_F.length) {
               stackIn_31_0 = no.field_b.length;
             } else {
-              stackIn_31_0 = hf.field_F.length;
+              stackIn_31_0 = ResizingDialog.field_F.length;
             }
             var5 = stackIn_31_0;
             if (uw.field_b.length <= uw.field_c.length) {
@@ -368,10 +368,10 @@ final class ou extends na {
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_41_0 = bf.field_c;
               stackIn_41_1 = var8Lifetime2 + 6;
-              if (hf.field_F.length + (var8Lifetime2 - var5) < 0) {
+              if (ResizingDialog.field_F.length + (var8Lifetime2 - var5) < 0) {
                 stackIn_42_2 = "";
               } else {
-                stackIn_42_2 = hf.field_F[var8Lifetime2 + hf.field_F.length - var5];
+                stackIn_42_2 = ResizingDialog.field_F[var8Lifetime2 + ResizingDialog.field_F.length - var5];
               }
               stackIn_41_0[stackIn_41_1] = stackIn_42_2;
             }
@@ -397,7 +397,7 @@ final class ou extends na {
             stackIn_90_0 = -27;
             stackIn_90_1 = bf.field_c[var4Lifetime1];
             stackIn_91_2 = !(eb.field_a[var4Lifetime1] < 0);
-            var5Lifetime1 = gt.$cfr$intArgs$a$590e95718a07(stackIn_90_0, stackIn_90_1, stackIn_91_2);
+            var5Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(stackIn_90_0, stackIn_90_1, stackIn_91_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -407,7 +407,7 @@ final class ou extends na {
             var4_ref_String__ = var11;
             for (var5Lifetime2 = 0; var11.length > var5Lifetime2; var5Lifetime2++) {
               var12 = var11[var5Lifetime2];
-              var7Lifetime1 = gt.$cfr$intArgs$a$590e95718a07(-42, var12, false);
+              var7Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(-42, var12, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -415,7 +415,7 @@ final class ou extends na {
             var4_ref_String__Lifetime1 = uw.field_c;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var13 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = gt.$cfr$intArgs$a$590e95718a07(-120, var13, false);
+              var7Lifetime1Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(-120, var13, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -443,7 +443,7 @@ final class ou extends na {
             if (var7Lifetime2 < 0) {
               var6Lifetime1 = var6Lifetime1 + GameClientShell.field_t;
             } else {
-              var8Lifetime1 = gt.$cfr$intArgs$a$590e95718a07(-116, bf.field_c[var5Lifetime3], true);
+              var8Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(-116, bf.field_c[var5Lifetime3], true);
               var9 = -(var8Lifetime1 >> 1) + oj.field_a;
               var6Lifetime1 = var6Lifetime1 + qc.field_a;
               ib.field_g[var5Lifetime3] = new int[4];

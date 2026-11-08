@@ -48,14 +48,14 @@ final class fd extends uw {
           }
           var8 = new uk(rf.field_a, param0);
           var7 = var8;
-          rf.field_a.a((byte) 111, var8);
+          rf.field_a.pushDialog((byte) 111, var8);
           if (ImageProducerRasterBuffer.c(param6 ^ -123)) {
             var8.f(true);
             return true;
           }
           dv.field_b = param2;
           vr.field_G = param1;
-          in.field_C = param3;
+          FadingWidget.field_C = param3;
           eg.field_l = null;
           ProxySocketConnector.field_e = ad.field_p;
           bi.field_d = param4;
@@ -128,10 +128,10 @@ final class fd extends uw {
           return 25;
         }
         if (!oj.a(false) ||
-          null == pu.field_e.e((byte) 54)) {
+          null == pu.field_e.topOpenDialog((byte) 54)) {
           return -1;
         }
-        return pu.field_e.e((byte) 54).field_v;
+        return pu.field_e.topOpenDialog((byte) 54).y;
     }
 
     final long a(byte param0) {

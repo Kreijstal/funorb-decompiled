@@ -36,7 +36,7 @@ class TimedSceneEffect extends IntrusiveNode {
     final static boolean a(byte param0) {
         if (param0 <= 82) {
           TimedSceneEffect.a((byte) 13);
-          if (null == qk.field_O) {
+          if (null == DisplayModeConfirmationDialog.field_O) {
             return false;
           }
           if (kw.field_c == ga.field_j) {
@@ -44,7 +44,7 @@ class TimedSceneEffect extends IntrusiveNode {
           }
           return false;
         }
-        if (null == qk.field_O) {
+        if (null == DisplayModeConfirmationDialog.field_O) {
           return false;
         }
         if (kw.field_c == ga.field_j) {

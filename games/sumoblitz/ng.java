@@ -102,14 +102,14 @@ final class ng extends ShaderEffect {
             }
             var8 = null;
             if (null != bc.field_a) {
-              if (null == m.field_O) {
-                m.field_O = new gj[CompactMeshGeometry.field_u.field_i.length];
+              if (null == ProgressDialog.field_O) {
+                ProgressDialog.field_O = new gj[CompactMeshGeometry.field_u.field_i.length];
               }
-              if (m.field_O[param3] == null) {
-                m.field_O[param3] = new gj(CompactMeshGeometry.field_u.field_i[param3], 12000, 0);
+              if (ProgressDialog.field_O[param3] == null) {
+                ProgressDialog.field_O[param3] = new gj(CompactMeshGeometry.field_u.field_i[param3], 12000, 0);
                 CompactMeshGeometry.field_u.field_i[param3] = null;
               }
-              var8 = new wl(param3, bc.field_a, m.field_O[param3], 2097152);
+              var8 = new wl(param3, bc.field_a, ProgressDialog.field_O[param3], 2097152);
             }
             var9 = wt.field_i.a(false, param3, (wl) (var7), param5, (wl) (var8));
             if (param4) {
@@ -262,13 +262,13 @@ final class ng extends ShaderEffect {
               this.field_b.a((byte) -83, SlowBurstParticle.field_v, lf.field_e);
               this.field_b.a(FontMetrics.field_a, 0, param1 ^ 20186);
               this.field_b.g(2, param1 - 20295);
-              this.field_b.a((byte) -83, lf.field_e, cv.field_F);
+              this.field_b.a((byte) -83, lf.field_e, LoginForm.field_F);
               this.field_b.a(FontMetrics.field_a, 0, 0);
               this.field_b.a((byte) 102, 1, true, false, FontMetrics.field_a);
               this.field_b.a(fv.field_y, 0, true);
               this.field_b.a(this.field_b.field_D, param1 - 20079);
             } else {
-              this.field_b.a((byte) -83, lf.field_e, cv.field_F);
+              this.field_b.a((byte) -83, lf.field_e, LoginForm.field_F);
               this.field_b.a((byte) -66, 0, true, false, jq.field_a);
               this.field_b.a(fv.field_y, 0, true);
             }

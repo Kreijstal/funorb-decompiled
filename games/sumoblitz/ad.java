@@ -18,7 +18,7 @@ final class ad extends za {
         RuntimeException decompiledCaughtException = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5 = cv.field_G;
+          var5 = LoginForm.field_G;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;
@@ -136,7 +136,7 @@ final class ad extends za {
     final static ne e(int param0) {
         ne var1 = null;
         if (param0 == 12768) {
-          var1 = new ne(vf.field_d, li.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], we.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
+          var1 = new ne(vf.field_d, li.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], ScrollViewport.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -20);
           return var1;
         }

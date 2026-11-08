@@ -39,7 +39,7 @@ final class wh extends DualLinkNode {
             var1 = kf.f(1);
           }
           if (var1.length() == 0) {
-            var1 = kq.playerText;
+            var1 = FullscreenMembershipDialog.playerText;
           }
           return var1;
         }
@@ -48,7 +48,7 @@ final class wh extends DualLinkNode {
           var1 = kf.f(1);
         }
         if (var1.length() == 0) {
-          var1 = kq.playerText;
+          var1 = FullscreenMembershipDialog.playerText;
         }
         return var1;
     }

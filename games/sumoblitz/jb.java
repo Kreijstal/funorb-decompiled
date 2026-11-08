@@ -148,8 +148,8 @@ class jb extends se {
               stackIn_3_0 = -61;
               return stackIn_3_0;
             }
-            if (qk.field_O == null &&
-              !nd.a((byte) -34, param3)) {
+            if (DisplayModeConfirmationDialog.field_O == null &&
+              !GridWidgetContainer.a((byte) -34, param3)) {
               stackIn_8_0 = -1;
               return stackIn_8_0;
             }
@@ -163,7 +163,7 @@ class jb extends se {
               InwardSparkParticle.field_v.position = 0;
               InwardSparkParticle.field_v.b((byte) 42, 14);
               InwardSparkParticle.field_v.b((byte) 96, kb.field_d.a((byte) 126).field_c);
-              gt.a(0, -1);
+              MessageDialog.a(0, -1);
               kw.field_c = gi.field_g;
             }
             if (kw.field_c == gi.field_g &&
@@ -300,10 +300,10 @@ class jb extends se {
               stackIn_83_0 = iw.field_a;
               return stackIn_83_0;
             }
-            if (qk.field_O == null) {
+            if (DisplayModeConfirmationDialog.field_O == null) {
               if (LimitedRandomAccessFile.field_g) {
                 if (uc.b(26560) <= 30000L) {
-                  MouseWheelInput.field_c = nd.errorConnectingToServerText;
+                  MouseWheelInput.field_c = GridWidgetContainer.errorConnectingToServerText;
                 } else {
                   MouseWheelInput.field_c = ar.connectionTimedOutPleaseText;
                 }

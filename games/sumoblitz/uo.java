@@ -642,7 +642,7 @@ final class uo extends ShaderEffect {
         if (param0) {
           this.field_b.g(1, -122);
           this.field_b.a(var3, 91);
-          this.field_b.a(param1 - 6432, rt.field_C);
+          this.field_b.a(param1 - 6432, LabeledWidget.field_C);
           this.field_b.g(1, -114);
           this.field_b.a((byte) -83, lf.field_e, ua.field_n);
           this.field_b.a((byte) 101, 2, true, false, FontMetrics.field_a);

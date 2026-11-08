@@ -58,9 +58,9 @@ final class kk {
     final static void a(byte param0) {
         ResourceArchive var2 = null;
         ResourceArchive var2Lifetime1;
-        if (qk.field_O != null) {
-          qk.field_O.a((byte) -102);
-          qk.field_O = null;
+        if (DisplayModeConfirmationDialog.field_O != null) {
+          DisplayModeConfirmationDialog.field_O.a((byte) -102);
+          DisplayModeConfirmationDialog.field_O = null;
           if (param0 > -108) {
             var2 = (ResourceArchive) null;
             kk.a(-15, -46, 72, (ResourceArchive) null);

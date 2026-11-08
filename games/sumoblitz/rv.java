@@ -8,11 +8,11 @@ final class rv {
     final static void a(byte param0) {
         ce.field_o = new js();
         if (param0 >= 35) {
-          SlowBurstParticle.field_y.b((byte) -119, ce.field_o);
+          SlowBurstParticle.field_y.transitionToContent((byte) -119, ce.field_o);
           return;
         }
         warningIfYouQuitText = (String) null;
-        SlowBurstParticle.field_y.b((byte) -119, ce.field_o);
+        SlowBurstParticle.field_y.transitionToContent((byte) -119, ce.field_o);
     }
 
     public static void releaseStatics(boolean param0) {

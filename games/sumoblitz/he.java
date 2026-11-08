@@ -7,7 +7,7 @@ final class he extends za {
     jaclib.memory.heap.NativeHeap field_p;
     static tf field_m;
     static Random field_o;
-    static m field_n;
+    static ProgressDialog field_n;
 
     public static void releaseStatics(int param0) {
         field_o = null;

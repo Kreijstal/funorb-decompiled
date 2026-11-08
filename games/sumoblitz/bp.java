@@ -148,14 +148,14 @@ abstract class bp implements ed {
             return 80;
           }
         } else {
-          if (null != hd.field_H) {
-            if (!hd.field_H.b((byte) 127)) {
+          if (null != DropDownListWidget.field_H) {
+            if (!DropDownListWidget.field_H.b((byte) 127)) {
               return 14;
             }
-            if (!hd.field_H.b((byte) -98, "")) {
+            if (!DropDownListWidget.field_H.b((byte) -98, "")) {
               return 29;
             }
-            if (!hd.field_H.a("", 100)) {
+            if (!DropDownListWidget.field_H.a("", 100)) {
               return 29;
             }
           }
@@ -421,7 +421,7 @@ abstract class bp implements ed {
 
     private final void b(byte param0) {
         this.field_e.a((ed) (this), 112);
-        if (ao.field_y == this.field_a) {
+        if (ArrayWidgetContainer.field_y == this.field_a) {
           jaggl.OpenGL.glTexParameteri(this.field_h, 10241, this.field_d ? 9987 : 9729);
           jaggl.OpenGL.glTexParameteri(this.field_h, 10240, 9729);
         } else {
@@ -435,7 +435,7 @@ abstract class bp implements ed {
         int var2;
         var2 = -58 / ((param0 - 57) / 34);
         if (this.field_g == io.field_g) {
-          if (this.field_c == m.field_X) {
+          if (this.field_c == ProgressDialog.field_X) {
             return 6407;
           }
           if (this.field_c == nl.field_p) {
@@ -450,12 +450,12 @@ abstract class bp implements ed {
           if (ps.field_c == this.field_c) {
             return 6410;
           }
-          if (rg.field_A == this.field_c) {
+          if (ModalDialog.field_A == this.field_c) {
             return 6145;
           }
         } else {
           if (io.field_e == this.field_g) {
-            if (m.field_X == this.field_c) {
+            if (ProgressDialog.field_X == this.field_c) {
               return 34843;
             }
             if (nl.field_p == this.field_c) {
@@ -470,12 +470,12 @@ abstract class bp implements ed {
             if (ps.field_c == this.field_c) {
               return 34847;
             }
-            if (this.field_c == rg.field_A) {
+            if (this.field_c == ModalDialog.field_A) {
               return 6145;
             }
           } else {
             if (this.field_g == io.field_d) {
-              if (this.field_c == m.field_X) {
+              if (this.field_c == ProgressDialog.field_X) {
                 return 34837;
               }
               if (nl.field_p == this.field_c) {
@@ -490,7 +490,7 @@ abstract class bp implements ed {
               if (this.field_c == ps.field_c) {
                 return 34841;
               }
-              if (this.field_c == rg.field_A) {
+              if (this.field_c == ModalDialog.field_A) {
                 return 6145;
               }
             }
@@ -535,7 +535,7 @@ abstract class bp implements ed {
     }
 
     bp(OpenGlGraphicsToolkit param0, int param1, iw param2, io param3, int param4, boolean param5) {
-        this.field_a = ao.field_y;
+        this.field_a = ArrayWidgetContainer.field_y;
         try {
           this.field_g = param3;
           this.field_d = param5 ? true : false;

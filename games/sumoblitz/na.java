@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class na extends dw implements pw {
+abstract class na extends dw implements TextInputListener {
     static jj field_c;
-    private dh field_d;
+    private TextInputWidget field_d;
 
     abstract gf a(byte param0, String param1);
 
-    public final void a(dh param0, int param1) {
+    public final void onTextSubmitted(TextInputWidget source, int guard) {
         try {
-          if (param1 >= -41) {
-            this.field_d = (dh) null;
+          if (guard >= -41) {
+            this.field_d = (TextInputWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "na.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "na.H(" + (source != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -21,10 +21,10 @@ abstract class na extends dw implements pw {
         if (param0 != -8003) {
           return true;
         }
-        if (null == this.field_d.field_m) {
+        if (null == this.field_d.text) {
           return true;
         }
-        if (0 != this.field_d.field_m.length()) {
+        if (0 != this.field_d.text.length()) {
           return false;
         }
         return true;
@@ -34,18 +34,18 @@ abstract class na extends dw implements pw {
         if (param0 > -93) {
           return (String) null;
         }
-        return this.a(0, this.field_d.field_m);
+        return this.a(0, this.field_d.text);
     }
 
-    public final void a(dh param0, byte param1) {
+    public final void onTextChanged(TextInputWidget source, byte guard) {
         try {
           this.a((byte) -101);
-          if (param1 > -127) {
+          if (guard > -127) {
             ResourceArchive var4 = (ResourceArchive) null;
             na.a(-98, -50, (ResourceArchive) null, -100);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "na.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "na.I(" + (source != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -83,10 +83,10 @@ abstract class na extends dw implements pw {
 
     final gf b(byte param0) {
         if (param0 == 114) {
-          return this.a((byte) 26, this.field_d.field_m);
+          return this.a((byte) 26, this.field_d.text);
         }
         field_c = (jj) null;
-        return this.a((byte) 26, this.field_d.field_m);
+        return this.a((byte) 26, this.field_d.text);
     }
 
     public static void releaseStatics(boolean param0) {
@@ -98,7 +98,7 @@ abstract class na extends dw implements pw {
 
     abstract String a(int param0, String param1);
 
-    na(dh param0) {
+    na(TextInputWidget param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

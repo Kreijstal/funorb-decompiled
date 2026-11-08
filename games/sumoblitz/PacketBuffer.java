@@ -124,14 +124,14 @@ class PacketBuffer extends IntrusiveNode {
         try {
           gd.field_a = param3;
           rd.field_l = param7;
-          ie.field_x = param1;
+          SingleChildWidget.field_x = param1;
           CompactMeshGeometry.field_u = param0;
           qq.field_P = param5;
           ow.field_e = param8;
           bt.field_d = param6;
           jk.field_b = (gd) ((Object) new t());
-          in.field_D = new ti(param0);
-          wt.field_i = new ArchiveCatalog(jk.field_b, in.field_D);
+          FadingWidget.field_D = new ti(param0);
+          wt.field_i = new ArchiveCatalog(jk.field_b, FadingWidget.field_D);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fs.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

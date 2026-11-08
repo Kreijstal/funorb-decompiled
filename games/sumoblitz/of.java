@@ -129,7 +129,7 @@ final class of extends IntrusiveNode {
     final static String c(int param0) {
         int var1 = -4 / ((param0 - 48) / 36);
         if (ProxySocketConnector.field_e == ad.field_p) {
-          return in.field_C;
+          return FadingWidget.field_C;
         }
         if (!ut.field_o.a(true)) {
           return ut.field_o.b(32);
@@ -137,15 +137,15 @@ final class of extends IntrusiveNode {
         if (ad.field_p == vm.field_c) {
           return ut.field_o.b(107);
         }
-        return ac.field_F;
+        return FocusProxyWidget.field_F;
     }
 
     final static boolean c(byte param0) {
         int var1 = -123 % ((67 - param0) / 50);
-        if (!mc.b((byte) -89, "jaclib")) {
+        if (!ScrollPane.b((byte) -89, "jaclib")) {
           return false;
         }
-        return mc.b((byte) 93, "hw3d");
+        return ScrollPane.b((byte) 93, "hw3d");
     }
 
     public static void a(int param0) {

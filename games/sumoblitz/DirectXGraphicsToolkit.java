@@ -424,7 +424,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param0 == ua.field_n) {
           return 26;
         }
-        if (param0 == cv.field_F) {
+        if (param0 == LoginForm.field_F) {
           return 7;
         }
         if (bj.field_c == param0) {
@@ -664,7 +664,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param1) {
           return -35;
         }
-        if (param0 == ao.field_y) {
+        if (param0 == ArrayWidgetContainer.field_y) {
           return 2;
         }
         if (lh.field_l == param0) {
@@ -796,7 +796,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           this.field_Cc.SetSamplerState(var2, 5, 2);
           this.field_Cc.SetSamplerState(var2, 1, 1);
           this.field_Cc.SetSamplerState(var2, 2, 1);
-          this.field_Dc[var2] = ao.field_y;
+          this.field_Dc[var2] = ArrayWidgetContainer.field_y;
           var3 = this.field_Uc;
           var4 = var2;
           this.field_Bc[var2] = true;
@@ -851,7 +851,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     final static int a(iw param0, int param1, io param2) {
         int var3;
         if (param2 == io.field_g) {
-          if (m.field_X == param0) {
+          if (ProgressDialog.field_X == param0) {
             return 22;
           }
           if (param0 == nl.field_p) {
@@ -866,7 +866,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           if (param0 == ps.field_c) {
             return 51;
           }
-          if (rg.field_A == param0) {
+          if (ModalDialog.field_A == param0) {
             return 77;
           }
         }
@@ -1032,7 +1032,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           var3 = 65536;
         } else {
           if (param1 != wn.field_b) {
-            if (rt.field_C == param1) {
+            if (LabeledWidget.field_C == param1) {
               var3 = 196608;
             }
           } else {

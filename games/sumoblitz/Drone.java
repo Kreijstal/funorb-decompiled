@@ -822,7 +822,7 @@ class Drone {
           if (this.destructionTicks == 0) {
             if (this.droneType != 0) {
               if (this.droneType == 1) {
-                stackIn_53_0 = dc.field_ab[0];
+                stackIn_53_0 = ContentDialog.field_ab[0];
                 stackIn_53_1 = (float)(this.xQ8 >> 8);
                 stackIn_53_2 = (float)(this.yQ8 >> 8);
                 if (!this.isBlastActive(28)) {
@@ -933,7 +933,7 @@ class Drone {
             if (this.destructionTicks <= 0) {
               if (this.droneType != 0) {
                 if (1 == this.droneType) {
-                  stackIn_92_0 = dc.field_ab[1];
+                  stackIn_92_0 = ContentDialog.field_ab[1];
                   stackIn_92_1 = (float)(var8 + this.xQ8 >> 8);
                   stackIn_92_2 = (float)(var9 + this.yQ8 >> 8);
                   if (this.isBlastActive(111)) {

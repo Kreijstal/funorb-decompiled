@@ -29,18 +29,18 @@ final class ClientException extends RuntimeException {
           var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param0);
           jaggl.OpenGL.glShaderSourceRawARB(var4_long, param2);
           jaggl.OpenGL.glCompileShaderARB(var4_long);
-          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, dh.field_H, 0);
-          if (dh.field_H[0] == 0) {
-            if (dh.field_H[0] == 0) {
+          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, TextInputWidget.field_H, 0);
+          if (TextInputWidget.field_H[0] == 0) {
+            if (TextInputWidget.field_H[0] == 0) {
               System.out.println("Shader compile failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, dh.field_H, 1);
-            if (dh.field_H[1] > 1) {
-              var10 = new byte[dh.field_H[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var4_long, dh.field_H[1], dh.field_H, 0, var10, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, TextInputWidget.field_H, 1);
+            if (TextInputWidget.field_H[1] > 1) {
+              var10 = new byte[TextInputWidget.field_H[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var4_long, TextInputWidget.field_H[1], TextInputWidget.field_H, 0, var10, 0);
               System.out.println(new String(var10));
             }
-            if (dh.field_H[0] == 0) {
+            if (TextInputWidget.field_H[0] == 0) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               stackIn_15_0 = null;
               return (qj) (stackIn_15_0);

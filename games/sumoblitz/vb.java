@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vb extends wp {
+final class vb extends InteractiveWidget {
     int field_F;
     static int field_I;
     int field_G;
@@ -26,7 +26,7 @@ final class vb extends wp {
         kt.b((byte) 108);
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean onPointerPressed(UiWidget root, int guard, int pointerY, int button, int parentX, int pointerX, int parentY) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -38,14 +38,14 @@ final class vb extends wp {
         int var12 = 0;
         var12 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!super.a(param0, -47, param2, param3, param4, param5, param6)) {
-            if (param1 > -42) {
+          if (!super.onPointerPressed(root, -47, pointerY, button, parentX, pointerX, parentY)) {
+            if (guard > -42) {
               vb.a((byte) 68, false);
             }
             return false;
           }
-          var8_int = param5 + (-param4 + (-this.field_r - this.field_G));
-          var9 = -this.field_K - this.field_v + (-param6 + param2);
+          var8_int = pointerX + (-parentX + (-this.x - this.field_G));
+          var9 = -this.field_K - this.y + (-parentY + pointerY);
           if (this.field_F * this.field_F > var9 * var9 + var8_int * var8_int) {
             var10 = Math.atan2((double)var9, (double)var8_int) - s.field_m;
             if (!(var10 < 0.0)) {
@@ -69,12 +69,12 @@ final class vb extends wp {
           var8 = decompiledCaughtException;
           stackIn_20_0 = var8;
           stackIn_20_1 = new StringBuilder().append("vb.R(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(guard).append(',').append(pointerY).append(',').append(button).append(',').append(parentX).append(',').append(pointerX).append(',').append(parentY).append(')').toString());
         }
     }
 

@@ -44,7 +44,7 @@ abstract class RasterBuffer {
         int var1;
         int var2;
         var2 = Sumoblitz.field_L ? 1 : 0;
-        lc.field_A = false;
+        StatusMessagePanel.field_A = false;
         t.field_s = null;
         if (pg.field_a) {
           hc.field_c.e(false);
@@ -59,7 +59,7 @@ abstract class RasterBuffer {
           if (1 != var1) {
             t.field_s = ic.a(ph.youHaveUnreadMessagesText, new String[]{Integer.toString(var1)}, (byte) -128);
           } else {
-            t.field_s = kq.youHave1UnreadText;
+            t.field_s = FullscreenMembershipDialog.youHave1UnreadText;
           }
           t.field_s = uo.a(false, new CharSequence[]{(CharSequence) ((Object) t.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) lv.visitTheAccountManagementText)});
         }

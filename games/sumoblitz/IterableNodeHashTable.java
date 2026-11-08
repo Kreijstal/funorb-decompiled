@@ -122,7 +122,7 @@ final class IterableNodeHashTable implements Iterable {
         }
         try {
           var4 = param2.getGraphics();
-          m.field_R.a(-52, param1, var4, param0);
+          ProgressDialog.field_R.a(-52, param1, var4, param0);
           var4.dispose();
         } catch (Exception exception) {
           param2.repaint();

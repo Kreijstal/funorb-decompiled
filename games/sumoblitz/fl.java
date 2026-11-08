@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl extends gm {
+final class fl extends TextWidgetRenderer {
     private sm field_t;
     static String waitingForExtraDataText;
     static int field_p;
@@ -45,7 +45,7 @@ final class fl extends gm {
         }
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+    public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -55,62 +55,62 @@ final class fl extends gm {
         sm var7 = null;
         sm var9 = null;
         Sprite[] var10 = null;
-        wp var11 = null;
+        InteractiveWidget var11 = null;
         sm var12 = null;
         sm var13 = null;
         sm var14 = null;
         sm var15 = null;
         try {
-          if (!(param0 instanceof wp)) {
+          if (!(widget instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (UiWidget) (param0);
+            stackIn_3_0 = (UiWidget) (widget);
           }
-          var11 = (wp) (stackIn_3_0);
-          kw.a(param1 + param0.field_v + param0.field_p, param1 + param0.field_v, 1, param4 + param0.field_r, param0.field_r + (param4 + param0.field_q));
+          var11 = (InteractiveWidget) (stackIn_3_0);
+          kw.a(parentY + widget.y + widget.height, parentY + widget.y, 1, parentX + widget.x, widget.x + (parentX + widget.width));
           if (var11 != null) {
-            param3 = param3 & var11.field_x;
+            isEnabled = isEnabled & var11.enabled;
           }
           var7 = this.field_q[0];
           this.field_t.a(true);
-          var7.a(param4, param0, -28, this, param1, this.field_t);
+          var7.a(parentX, widget, -28, this, parentY, this.field_t);
           if (var11 != null) {
             if (var11.field_C) {
               var12 = this.field_q[1];
               if (var12 != null) {
-                var12.a(param4, param0, -75, this, param1, this.field_t);
+                var12.a(parentX, widget, -75, this, parentY, this.field_t);
               }
             }
-            if (var11.field_k) {
+            if (var11.hovered) {
               var13 = this.field_q[3];
-              if (var11.field_l != 0 &&
+              if (var11.pressedButton != 0 &&
                 var13 != null) {
-                var13.a(param4, param0, param2 ^ -5592346, this, param1, this.field_t);
+                var13.a(parentX, widget, guard ^ -5592346, this, parentY, this.field_t);
               } else {
                 var9 = this.field_q[2];
                 if (var9 != null) {
-                  var9.a(param4, param0, -97, this, param1, this.field_t);
+                  var9.a(parentX, widget, -97, this, parentY, this.field_t);
                 }
               }
             }
           }
-          if (param2 != 5592405) {
+          if (guard != 5592405) {
             var10 = (Sprite[]) null;
             this.a((Sprite[]) null, -110);
           }
-          if (param0.d(-1)) {
+          if (widget.hasFocus(-1)) {
             var14 = this.field_q[5];
             if (var14 != null) {
-              var14.a(param4, param0, param2 ^ -5592417, this, param1, this.field_t);
+              var14.a(parentX, widget, guard ^ -5592417, this, parentY, this.field_t);
             }
           }
-          if (!param3) {
+          if (!isEnabled) {
             var15 = this.field_q[4];
             if (var15 != null) {
-              var15.a(param4, param0, -66, this, param1, this.field_t);
+              var15.a(parentX, widget, -66, this, parentY, this.field_t);
             }
           }
-          this.field_t.a(param1, this, param4, -66, param0);
+          this.field_t.a(parentY, this, parentX, -66, widget);
           ClientException.a((byte) -70);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,12 +118,12 @@ final class fl extends gm {
           var6 = decompiledCaughtException;
           stackIn_34_0 = var6;
           stackIn_34_1 = new StringBuilder().append("fl.A(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_35_2 = "null";
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(parentY).append(',').append(guard).append(',').append(isEnabled).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class fl extends gm {
         int var7 = 0;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          super.a(param0, -123);
+          super.copyStyleTo(param0, -123);
           if (param2 != -26407) {
             field_p = -38;
           }

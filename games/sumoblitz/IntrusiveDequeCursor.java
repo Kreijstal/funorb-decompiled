@@ -345,22 +345,22 @@ final class IntrusiveDequeCursor {
         int var2;
         int var3;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        var2 = in.score;
+        var2 = FadingWidget.score;
         IntrusiveNodeHashTable.field_c = IntrusiveNodeHashTable.field_c + param0;
         if (param1 != -1372239541) {
           return;
         }
-        in.score = in.score + param0;
+        FadingWidget.score = FadingWidget.score + param0;
         if (gj.a((byte) -84, 10) < 5) {
           if (5 <= gj.a((byte) -84, 10)) {
             kn.field_b = kn.field_b + param0;
             if (var2 >= 50000) {
               return;
             }
-            if (in.score < 50000) {
+            if (FadingWidget.score < 50000) {
               return;
             }
-            if (!gt.arcadeMode) {
+            if (!MessageDialog.arcadeMode) {
               th.b(24753, 241, 14);
             }
             return;
@@ -376,10 +376,10 @@ final class IntrusiveDequeCursor {
         if (var2 >= 50000) {
           return;
         }
-        if (in.score < 50000) {
+        if (FadingWidget.score < 50000) {
           return;
         }
-        if (gt.arcadeMode) {
+        if (MessageDialog.arcadeMode) {
           return;
         }
         th.b(24753, 241, 14);

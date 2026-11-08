@@ -158,7 +158,7 @@ final class kf extends DualLinkNode implements ft {
             var3 = (CharSequence) null;
             kf.a((CharSequence) null, (byte) -40);
           }
-          var2 = MusicPatch.a(-29275, vo.a(param0, 7441));
+          var2 = MusicPatch.a(-29275, ScrollControl.encodeBase37Name(param0, 7441));
           if (var2 == null) {
             var2 = "";
           }

@@ -24,14 +24,14 @@ final class gg extends DualLinkNode {
           if (hp.a(param0, true)) {
             return false;
           }
-          if (ao.a(param0, 30996)) {
+          if (ArrayWidgetContainer.a(param0, 30996)) {
             return false;
           }
           var3_int = 11 / ((param2 - 63) / 59);
           if (param1.length() == 0) {
             return true;
           }
-          if (gt.a(param0, param1, 106)) {
+          if (MessageDialog.a(param0, param1, 106)) {
             return false;
           }
           if (CachedTextLayout.a(param0, (byte) 111, param1)) {
@@ -90,7 +90,7 @@ final class gg extends DualLinkNode {
           }
           he.field_o = new Random();
           db.droneSlotLimit = 1;
-          nd.livesRemaining = 3;
+          GridWidgetContainer.livesRemaining = 3;
           an.waveIndex = 0;
           ku.field_J = new wc[6];
           var1_int = 0;
@@ -104,7 +104,7 @@ final class gg extends DualLinkNode {
               ku.field_J = ((om) (ab.field_a.a(107, (long)oh.levelIndex))).a(-120);
             }
           }
-          in.score = 0;
+          FadingWidget.score = 0;
           if (5 >= gj.a((byte) -84, 10)) {
             fb.field_a = fb.field_a + iw.elapsedTicks;
           } else {

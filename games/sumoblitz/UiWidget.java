@@ -4,30 +4,30 @@
 import java.util.*;
 
 class UiWidget extends IntrusiveNode {
-    String field_t;
-    boolean field_k;
-    int field_q;
-    int field_n;
-    TextLayout field_u;
-    int field_v;
-    int field_p;
-    String field_m;
-    int field_s;
-    qm field_o;
-    int field_r;
-    int field_l;
-    mh field_w;
+    String tooltip;
+    boolean hovered;
+    int width;
+    int textOffsetY;
+    TextLayout textLayout;
+    int y;
+    int height;
+    String text;
+    int textOffsetX;
+    WidgetListener listener;
+    int x;
+    int pressedButton;
+    WidgetRenderer renderer;
 
-    final void a(int param0, int param1, boolean param2) {
+    final void render(int parentY, int parentX, boolean guard) {
         int var4;
         int var5_int;
         String var5;
         int var6;
         var6 = Sumoblitz.field_L ? 1 : 0;
-        var4 = this.e(93);
+        var4 = this.maxRenderLayer(93);
         var5_int = 0;
         while (var5_int <= var4) {
-          this.a(param1, param0, (byte) -110, var5_int);
+          this.renderLayer(parentX, parentY, (byte) -110, var5_int);
           var5_int++;
           if (var6 == 0) {
             continue;
@@ -38,24 +38,24 @@ class UiWidget extends IntrusiveNode {
         if (var5 != null) {
           ks.field_x.a(za.field_k, 13421772, hq.field_b, var5);
         }
-        if (!param2) {
+        if (!guard) {
           return;
         }
-        this.field_s = 113;
+        this.textOffsetX = 113;
     }
 
-    void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
+    void onPointerReleased(UiWidget root, boolean guard, int parentX, int pointerY, int pointerX, int parentY) {
         try {
-          this.field_l = 0;
-          if (param1) {
-            this.field_p = 20;
+          this.pressedButton = 0;
+          if (guard) {
+            this.height = 20;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pk.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pk.T(" + (root != null ? "{...}" : "null") + ',' + guard + ',' + parentX + ',' + pointerY + ',' + pointerX + ',' + parentY + ')');
         }
     }
 
-    final static Class a(byte param0, String param1) throws ClassNotFoundException {
+    final static Class resolvePrimitiveOrNamedClass(byte guard, String descriptorOrClassName) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_3_0 = null;
         Class stackIn_6_0 = null;
@@ -70,39 +70,39 @@ class UiWidget extends IntrusiveNode {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.equals("B")) {
+          if (descriptorOrClassName.equals("B")) {
             stackIn_3_0 = Byte.TYPE;
             return stackIn_3_0;
           }
-          if (param1.equals("I")) {
+          if (descriptorOrClassName.equals("I")) {
             stackIn_6_0 = Integer.TYPE;
             return stackIn_6_0;
           }
-          if (param1.equals("S")) {
+          if (descriptorOrClassName.equals("S")) {
             stackIn_9_0 = Short.TYPE;
             return stackIn_9_0;
           }
-          if (param1.equals("J")) {
+          if (descriptorOrClassName.equals("J")) {
             stackIn_13_0 = Long.TYPE;
             return stackIn_13_0;
           }
-          if (param1.equals("Z")) {
+          if (descriptorOrClassName.equals("Z")) {
             stackIn_17_0 = Boolean.TYPE;
             return stackIn_17_0;
           }
-          if (param1.equals("F")) {
+          if (descriptorOrClassName.equals("F")) {
             stackIn_21_0 = Float.TYPE;
             return stackIn_21_0;
           }
-          if (param1.equals("D")) {
+          if (descriptorOrClassName.equals("D")) {
             stackIn_24_0 = Double.TYPE;
             return stackIn_24_0;
           }
-          if (param0 != -24) {
+          if (guard != -24) {
             UiWidget.d((byte) -20);
           }
-          if (!param1.equals("C")) {
-            return Class.forName(param1);
+          if (!descriptorOrClassName.equals("C")) {
+            return Class.forName(descriptorOrClassName);
           }
           stackIn_30_0 = Character.TYPE;
           return stackIn_30_0;
@@ -110,8 +110,8 @@ class UiWidget extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_33_0 = var2;
-          stackIn_33_1 = new StringBuilder().append("pk.NB(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_33_1 = new StringBuilder().append("pk.NB(").append(guard).append(',');
+          if (descriptorOrClassName == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
@@ -120,14 +120,14 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final void c(boolean param0) {
-        this.a(-57, this.field_r, this.field_v, this.field_p, this.field_q);
-        if (param0) {
-          this.field_t = (String) null;
+    final void refreshLayout(boolean guard) {
+        this.setBounds(-57, this.x, this.y, this.height, this.width);
+        if (guard) {
+          this.tooltip = (String) null;
         }
     }
 
-    StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    StringBuilder appendDebugTree(int indent, Hashtable visited, StringBuilder output, int guard) {
         RuntimeException var5 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -137,43 +137,43 @@ class UiWidget extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 != 0) {
+          if (guard != 0) {
             this.toString();
           }
-          if (this.a(param0, param1, -123, param2)) {
-            this.a(param0, (byte) -128, param2, param1);
+          if (this.beginDebugDescription(indent, visited, -123, output)) {
+            this.appendDebugDetails(indent, (byte) -128, output, visited);
           }
-          stackIn_6_0 = (StringBuilder) (param2);
+          stackIn_6_0 = (StringBuilder) (output);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
-          stackIn_9_1 = new StringBuilder().append("pk.S(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("pk.S(").append(indent).append(',');
+          if (visited == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param2 == null) {
+          if (output == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
-        this.field_q = param4;
-        this.field_v = param2;
-        int var6 = -104 % ((param0 - 28) / 63);
-        this.field_p = param3;
-        this.field_r = param1;
+    void setBounds(int guard, int newX, int newY, int newHeight, int newWidth) {
+        this.width = newWidth;
+        this.y = newY;
+        int var6 = -104 % ((guard - 28) / 63);
+        this.height = newHeight;
+        this.x = newX;
     }
 
-    void a(int param0, int param1, UiWidget param2, int param3) {
+    void update(int parentX, int guard, UiWidget root, int parentY) {
         int var5_int = 0;
         int var6 = 0;
         int stackIn_3_0 = 0;
@@ -185,9 +185,9 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = 66 % ((-25 - param1) / 45);
-          var6 = this.b(ko.field_p, -1, param0, pi.field_e, param3) ? 1 : 0;
-          stackIn_3_0 = (this.field_k) ? 0 : 1;
+          var5_int = 66 % ((-25 - guard) / 45);
+          var6 = this.containsPoint(ko.field_p, -1, parentX, pi.field_e, parentY) ? 1 : 0;
+          stackIn_3_0 = (this.hovered) ? 0 : 1;
           if (var6 != 0) {
             stackIn_6_1 = 0;
           } else {
@@ -195,10 +195,10 @@ class UiWidget extends IntrusiveNode {
           }
           if (stackIn_3_0 != stackIn_6_1) {
             stackIn_11_1 = (var6 != 0);
-            this.field_k = stackIn_11_1;
-            if (this.field_o != null &&
-              this.field_o instanceof bd) {
-              ((bd) (this.field_o)).a(103, var6 != 0, this);
+            this.hovered = stackIn_11_1;
+            if (this.listener != null &&
+              this.listener instanceof WidgetHoverListener) {
+              ((WidgetHoverListener) (this.listener)).onHoverChanged(103, var6 != 0, this);
               return;
             }
           }
@@ -207,17 +207,17 @@ class UiWidget extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_17_0 = var5;
-          stackIn_17_1 = new StringBuilder().append("pk.U(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_17_1 = new StringBuilder().append("pk.U(").append(parentX).append(',').append(guard).append(',');
+          if (root == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(parentY).append(')').toString());
         }
     }
 
-    final boolean a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    final boolean beginDebugDescription(int indent, Hashtable visited, int guard, StringBuilder output) {
         StringBuilder discarded$1 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -228,25 +228,25 @@ class UiWidget extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = 110 / ((param2 + 73) / 48);
-          if (!param1.containsKey(this)) {
-            param1.put(this, this);
+          var5_int = 110 / ((guard + 73) / 48);
+          if (!visited.containsKey(this)) {
+            visited.put(this, this);
             return true;
           }
-          discarded$1 = param3.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
+          discarded$1 = output.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_7_0 = var5;
-          stackIn_7_1 = new StringBuilder().append("pk.PB(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("pk.PB(").append(indent).append(',');
+          if (visited == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(',');
+          if (output == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -278,103 +278,103 @@ class UiWidget extends IntrusiveNode {
         UiWidget.d((byte) -33);
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3) {
+    final boolean dispatchPointerInput(int parentY, int parentX, boolean inputAvailable, int guard) {
         int var5;
         int var7;
-        jh var8;
-        jh var9;
-        jh var10;
-        jh var11;
-        jh var12;
-        jh var13;
-        jh var14;
+        DraggableWidget var8;
+        DraggableWidget var9;
+        DraggableWidget var10;
+        DraggableWidget var11;
+        DraggableWidget var12;
+        DraggableWidget var13;
+        DraggableWidget var14;
         var7 = Sumoblitz.field_L ? 1 : 0;
-        this.a(param1, -71, this, param0);
-        var5 = this.d(param3 ^ 0) ? 1 : 0;
-        if (param3 != -1) {
-          this.field_n = 102;
-          if (!param2) {
+        this.update(parentX, -71, this, parentY);
+        var5 = this.hasFocus(guard ^ 0) ? 1 : 0;
+        if (guard != -1) {
+          this.textOffsetY = 102;
+          if (!inputAvailable) {
             if (var5 != 0 &&
               0 != hk.field_c) {
-              this.c((byte) 115);
+              this.clearFocus((byte) 115);
             }
           } else {
             if (0 == OpenGlUnderwaterEffect.field_r) {
               if (hk.field_c != 0) {
-                if (!this.a(this, param3 ^ 80, jc.field_f, hk.field_c, param1, nb.field_a, param0)) {
+                if (!this.onPointerPressed(this, guard ^ 80, jc.field_f, hk.field_c, parentX, nb.field_a, parentY)) {
                   if (var5 != 0) {
-                    this.c((byte) -116);
+                    this.clearFocus((byte) -116);
                     if (var7 != 0) {
-                      param2 = false;
+                      inputAvailable = false;
                     }
                   }
                 } else {
-                  param2 = false;
+                  inputAvailable = false;
                 }
               }
               if (ar.field_G == 0 &&
                 ml.field_l != 0) {
-                this.a(this, false, param1, pi.field_e, ko.field_p, param0);
-                var8 = gt.field_gb;
+                this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+                var8 = MessageDialog.field_gb;
                 if (var8 != null) {
-                  if (var8.field_o instanceof sf) {
-                    ((sf) (var8.field_o)).a(var8, (st) null, 20302);
+                  if (var8.listener instanceof WidgetDropListener) {
+                    ((WidgetDropListener) (var8.listener)).onDrop(var8, (DropTargetWidget) null, 20302);
                   }
-                  gt.field_gb = null;
+                  MessageDialog.field_gb = null;
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
                   0 != hk.field_c) {
-                  this.c((byte) 115);
+                  this.clearFocus((byte) 115);
                 }
               }
             } else {
               if (var5 == 0) {
                 if (hk.field_c != 0 &&
-                  this.a(this, param3 ^ 80, jc.field_f, hk.field_c, param1, nb.field_a, param0)) {
-                  param2 = false;
+                  this.onPointerPressed(this, guard ^ 80, jc.field_f, hk.field_c, parentX, nb.field_a, parentY)) {
+                  inputAvailable = false;
                 }
                 if (ar.field_G == 0 &&
                   ml.field_l != 0) {
-                  this.a(this, false, param1, pi.field_e, ko.field_p, param0);
-                  var9 = gt.field_gb;
+                  this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+                  var9 = MessageDialog.field_gb;
                   if (var9 != null) {
-                    if (var9.field_o instanceof sf) {
-                      ((sf) (var9.field_o)).a(var9, (st) null, 20302);
+                    if (var9.listener instanceof WidgetDropListener) {
+                      ((WidgetDropListener) (var9.listener)).onDrop(var9, (DropTargetWidget) null, 20302);
                     }
-                    gt.field_gb = null;
+                    MessageDialog.field_gb = null;
                   }
                   if (var7 != 0 &&
                     var5 != 0 &&
                     0 != hk.field_c) {
-                    this.c((byte) 115);
+                    this.clearFocus((byte) 115);
                   }
                 }
               } else {
-                this.a(param0, OpenGlUnderwaterEffect.field_r, -1, param1, pi.field_e, this, ko.field_p);
+                this.onMouseWheel(parentY, OpenGlUnderwaterEffect.field_r, -1, parentX, pi.field_e, this, ko.field_p);
                 if (hk.field_c != 0) {
-                  if (!this.a(this, param3 ^ 80, jc.field_f, hk.field_c, param1, nb.field_a, param0)) {
-                    this.c((byte) -116);
+                  if (!this.onPointerPressed(this, guard ^ 80, jc.field_f, hk.field_c, parentX, nb.field_a, parentY)) {
+                    this.clearFocus((byte) -116);
                     if (var7 != 0) {
-                      param2 = false;
+                      inputAvailable = false;
                     }
                   } else {
-                    param2 = false;
+                    inputAvailable = false;
                   }
                 }
                 if (ar.field_G == 0 &&
                   ml.field_l != 0) {
-                  this.a(this, false, param1, pi.field_e, ko.field_p, param0);
-                  var10 = gt.field_gb;
+                  this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+                  var10 = MessageDialog.field_gb;
                   if (var10 != null) {
-                    if (var10.field_o instanceof sf) {
-                      ((sf) (var10.field_o)).a(var10, (st) null, 20302);
+                    if (var10.listener instanceof WidgetDropListener) {
+                      ((WidgetDropListener) (var10.listener)).onDrop(var10, (DropTargetWidget) null, 20302);
                     }
-                    gt.field_gb = null;
+                    MessageDialog.field_gb = null;
                   }
                   if (var7 != 0 &&
                     0 != hk.field_c) {
-                    this.c((byte) 115);
+                    this.clearFocus((byte) 115);
                   }
                 }
               }
@@ -382,175 +382,175 @@ class UiWidget extends IntrusiveNode {
           }
         } else {
           regionExit1: {
-            if (param2) {
+            if (inputAvailable) {
               if (0 != OpenGlUnderwaterEffect.field_r &&
                 var5 != 0) {
-                this.a(param0, OpenGlUnderwaterEffect.field_r, -1, param1, pi.field_e, this, ko.field_p);
+                this.onMouseWheel(parentY, OpenGlUnderwaterEffect.field_r, -1, parentX, pi.field_e, this, ko.field_p);
                 if (hk.field_c != 0) {
-                  if (!this.a(this, param3 ^ 80, jc.field_f, hk.field_c, param1, nb.field_a, param0)) {
-                    this.c((byte) -116);
+                  if (!this.onPointerPressed(this, guard ^ 80, jc.field_f, hk.field_c, parentX, nb.field_a, parentY)) {
+                    this.clearFocus((byte) -116);
                     if (var7 != 0) {
-                      param2 = false;
+                      inputAvailable = false;
                     }
                   } else {
-                    param2 = false;
+                    inputAvailable = false;
                   }
                 }
                 if (ar.field_G != 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
                 if (ml.field_l == 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
-                this.a(this, false, param1, pi.field_e, ko.field_p, param0);
-                var11 = gt.field_gb;
+                this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+                var11 = MessageDialog.field_gb;
                 if (var11 != null) {
-                  if (!(var11.field_o instanceof sf)) {
-                    gt.field_gb = null;
+                  if (!(var11.listener instanceof WidgetDropListener)) {
+                    MessageDialog.field_gb = null;
                   } else {
-                    ((sf) (var11.field_o)).a(var11, (st) null, 20302);
-                    gt.field_gb = null;
+                    ((WidgetDropListener) (var11.listener)).onDrop(var11, (DropTargetWidget) null, 20302);
+                    MessageDialog.field_gb = null;
                   }
                 }
                 if (var7 == 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
                 if (0 == hk.field_c) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
-                this.c((byte) 115);
+                this.clearFocus((byte) 115);
                 ml.field_l = ar.field_G;
-                ek.a(this.c(-6696), -124);
-                return param2;
+                ek.a(this.hoveredTooltip(-6696), -124);
+                return inputAvailable;
               }
               if (hk.field_c == 0) {
                 if (ar.field_G != 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
                 if (ml.field_l == 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
-                this.a(this, false, param1, pi.field_e, ko.field_p, param0);
-                var12 = gt.field_gb;
+                this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+                var12 = MessageDialog.field_gb;
                 if (var12 == null) {
                   if (var7 == 0) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.c(-6696), -124);
-                    return param2;
+                    ek.a(this.hoveredTooltip(-6696), -124);
+                    return inputAvailable;
                   }
                   if (var5 == 0) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.c(-6696), -124);
-                    return param2;
+                    ek.a(this.hoveredTooltip(-6696), -124);
+                    return inputAvailable;
                   }
                   if (0 == hk.field_c) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.c(-6696), -124);
-                    return param2;
+                    ek.a(this.hoveredTooltip(-6696), -124);
+                    return inputAvailable;
                   }
-                  this.c((byte) 115);
+                  this.clearFocus((byte) 115);
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
-                if (!(var12.field_o instanceof sf)) {
-                  gt.field_gb = null;
+                if (!(var12.listener instanceof WidgetDropListener)) {
+                  MessageDialog.field_gb = null;
                   if (var7 == 0) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.c(-6696), -124);
-                    return param2;
+                    ek.a(this.hoveredTooltip(-6696), -124);
+                    return inputAvailable;
                   }
                   if (var5 == 0) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.c(-6696), -124);
-                    return param2;
+                    ek.a(this.hoveredTooltip(-6696), -124);
+                    return inputAvailable;
                   }
                   if (0 == hk.field_c) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.c(-6696), -124);
-                    return param2;
+                    ek.a(this.hoveredTooltip(-6696), -124);
+                    return inputAvailable;
                   }
-                  this.c((byte) 115);
+                  this.clearFocus((byte) 115);
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
-                ((sf) (var12.field_o)).a(var12, (st) null, 20302);
-                gt.field_gb = null;
+                ((WidgetDropListener) (var12.listener)).onDrop(var12, (DropTargetWidget) null, 20302);
+                MessageDialog.field_gb = null;
                 if (var7 == 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
                 if (var5 == 0) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
                 if (0 == hk.field_c) {
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
-                this.c((byte) 115);
+                this.clearFocus((byte) 115);
                 ml.field_l = ar.field_G;
-                ek.a(this.c(-6696), -124);
-                return param2;
+                ek.a(this.hoveredTooltip(-6696), -124);
+                return inputAvailable;
               }
-              if (!this.a(this, param3 ^ 80, jc.field_f, hk.field_c, param1, nb.field_a, param0)) {
+              if (!this.onPointerPressed(this, guard ^ 80, jc.field_f, hk.field_c, parentX, nb.field_a, parentY)) {
                 if (var5 == 0) {
                   if (ar.field_G != 0) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.c(-6696), -124);
-                    return param2;
+                    ek.a(this.hoveredTooltip(-6696), -124);
+                    return inputAvailable;
                   }
                   if (ml.field_l == 0) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.c(-6696), -124);
-                    return param2;
+                    ek.a(this.hoveredTooltip(-6696), -124);
+                    return inputAvailable;
                   }
-                  this.a(this, false, param1, pi.field_e, ko.field_p, param0);
-                  var13 = gt.field_gb;
+                  this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+                  var13 = MessageDialog.field_gb;
                   if (var13 == null) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.c(-6696), -124);
-                    return param2;
+                    ek.a(this.hoveredTooltip(-6696), -124);
+                    return inputAvailable;
                   }
-                  if (!(var13.field_o instanceof sf)) {
-                    gt.field_gb = null;
+                  if (!(var13.listener instanceof WidgetDropListener)) {
+                    MessageDialog.field_gb = null;
                     if (var7 != 0 &&
                       var5 != 0 &&
                       0 != hk.field_c) {
-                      this.c((byte) 115);
+                      this.clearFocus((byte) 115);
                     }
                     ml.field_l = ar.field_G;
-                    ek.a(this.c(-6696), -124);
-                    return param2;
+                    ek.a(this.hoveredTooltip(-6696), -124);
+                    return inputAvailable;
                   }
-                  ((sf) (var13.field_o)).a(var13, (st) null, 20302);
-                  gt.field_gb = null;
+                  ((WidgetDropListener) (var13.listener)).onDrop(var13, (DropTargetWidget) null, 20302);
+                  MessageDialog.field_gb = null;
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
-                this.c((byte) -116);
+                this.clearFocus((byte) -116);
                 if (var7 != 0) {
-                  param2 = false;
+                  inputAvailable = false;
                 }
               } else {
-                param2 = false;
+                inputAvailable = false;
               }
               if (ar.field_G != 0) {
                 break regionExit1;
@@ -558,38 +558,38 @@ class UiWidget extends IntrusiveNode {
               if (ml.field_l == 0) {
                 break regionExit1;
               }
-              this.a(this, false, param1, pi.field_e, ko.field_p, param0);
-              var14 = gt.field_gb;
+              this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
+              var14 = MessageDialog.field_gb;
               if (var14 != null) {
-                if (!(var14.field_o instanceof sf)) {
-                  gt.field_gb = null;
+                if (!(var14.listener instanceof WidgetDropListener)) {
+                  MessageDialog.field_gb = null;
                   if (var7 != 0 &&
                     var5 != 0) {
                     if (0 == hk.field_c) {
                       ml.field_l = ar.field_G;
-                      ek.a(this.c(-6696), -124);
-                      return param2;
+                      ek.a(this.hoveredTooltip(-6696), -124);
+                      return inputAvailable;
                     }
-                    this.c((byte) 115);
+                    this.clearFocus((byte) 115);
                   }
                   ml.field_l = ar.field_G;
-                  ek.a(this.c(-6696), -124);
-                  return param2;
+                  ek.a(this.hoveredTooltip(-6696), -124);
+                  return inputAvailable;
                 }
-                ((sf) (var14.field_o)).a(var14, (st) null, 20302);
-                gt.field_gb = null;
+                ((WidgetDropListener) (var14.listener)).onDrop(var14, (DropTargetWidget) null, 20302);
+                MessageDialog.field_gb = null;
                 if (var7 != 0 &&
                   var5 != 0) {
                   if (0 == hk.field_c) {
                     ml.field_l = ar.field_G;
-                    ek.a(this.c(-6696), -124);
-                    return param2;
+                    ek.a(this.hoveredTooltip(-6696), -124);
+                    return inputAvailable;
                   }
-                  this.c((byte) 115);
+                  this.clearFocus((byte) 115);
                 }
                 ml.field_l = ar.field_G;
-                ek.a(this.c(-6696), -124);
-                return param2;
+                ek.a(this.hoveredTooltip(-6696), -124);
+                return inputAvailable;
               }
               if (var7 == 0) {
                 break regionExit1;
@@ -598,84 +598,84 @@ class UiWidget extends IntrusiveNode {
             if (var5 != 0) {
               if (0 == hk.field_c) {
                 ml.field_l = ar.field_G;
-                ek.a(this.c(-6696), -124);
-                return param2;
+                ek.a(this.hoveredTooltip(-6696), -124);
+                return inputAvailable;
               }
-              this.c((byte) 115);
+              this.clearFocus((byte) 115);
             }
           }
         }
         ml.field_l = ar.field_G;
-        ek.a(this.c(-6696), -124);
-        return param2;
+        ek.a(this.hoveredTooltip(-6696), -124);
+        return inputAvailable;
     }
 
-    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean onPointerPressed(UiWidget root, int guard, int pointerY, int button, int parentX, int pointerX, int parentY) {
         RuntimeException var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 >= -42) {
+          if (guard >= -42) {
             return true;
           }
-          if (!this.b(param5, -1, param4, param2, param6)) {
+          if (!this.containsPoint(pointerX, -1, parentX, pointerY, parentY)) {
             return false;
           }
-          this.field_l = param3;
+          this.pressedButton = button;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_9_0 = var8;
           stackIn_9_1 = new StringBuilder().append("pk.R(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(',').append(pointerY).append(',').append(button).append(',').append(parentX).append(',').append(pointerX).append(',').append(parentY).append(')').toString());
         }
     }
 
-    boolean b(int param0, int param1, int param2, int param3, int param4) {
+    boolean containsPoint(int pointerX, int guard, int parentX, int pointerY, int parentY) {
         boolean stackIn_18_0 = false;
-        if (param1 != -1) {
-          this.a(-12, -50, (byte) 63, 31);
-          if (this.field_r + param2 > param0) {
+        if (guard != -1) {
+          this.renderLayer(-12, -50, (byte) 63, 31);
+          if (this.x + parentX > pointerX) {
             return false;
           }
-          if (this.field_v + param4 > param3) {
+          if (this.y + parentY > pointerY) {
             return false;
           }
-          if (param0 >= this.field_q + this.field_r + param2) {
+          if (pointerX >= this.width + this.x + parentX) {
             return false;
           }
-          if (this.field_p + (param4 + this.field_v) <= param3) {
+          if (this.height + (parentY + this.y) <= pointerY) {
             return false;
           }
           return true;
         }
-        if (this.field_r + param2 > param0) {
+        if (this.x + parentX > pointerX) {
           return false;
         }
-        if (this.field_v + param4 > param3) {
+        if (this.y + parentY > pointerY) {
           return false;
         }
-        stackIn_18_0 = (param0 < this.field_q + this.field_r + param2) && (this.field_p + (param4 + this.field_v) > param3);
+        stackIn_18_0 = (pointerX < this.width + this.x + parentX) && (this.height + (parentY + this.y) > pointerY);
         return stackIn_18_0;
     }
 
-    boolean d(int param0) {
-        if (param0 != -1) {
-          this.field_w = (mh) null;
+    boolean hasFocus(int guard) {
+        if (guard != -1) {
+          this.renderer = (WidgetRenderer) null;
           return false;
         }
         return false;
     }
 
-    final void a(int param0, byte param1, StringBuilder param2, Hashtable param3) {
+    final void appendDebugDetails(int indent, byte guard, StringBuilder output, Hashtable visited) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -694,53 +694,53 @@ class UiWidget extends IntrusiveNode {
         int var6 = 0;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          discarded$0 = param2.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_r).append(",").append(this.field_v).append(" ").append(this.field_q).append("x").append(this.field_p);
-          if (param1 != -128) {
+          discarded$0 = output.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.x).append(",").append(this.y).append(" ").append(this.width).append("x").append(this.height);
+          if (guard != -128) {
             return;
           }
-          if (this.field_m != null) {
-            discarded$1 = param2.append(" text=\"").append(this.field_m).append('"');
+          if (this.text != null) {
+            discarded$1 = output.append(" text=\"").append(this.text).append('"');
           }
-          if (this.field_k) {
-            discarded$2 = param2.append(" mouseover");
+          if (this.hovered) {
+            discarded$2 = output.append(" mouseover");
           }
-          if (this.d(-1)) {
-            discarded$3 = param2.append(" focused");
+          if (this.hasFocus(-1)) {
+            discarded$3 = output.append(" focused");
           }
-          if (null != this.field_w) {
-            discarded$4 = param2.append(" renderer=");
-            if (!(this.field_w instanceof UiWidget)) {
-              discarded$5 = param2.append(this.field_w);
+          if (null != this.renderer) {
+            discarded$4 = output.append(" renderer=");
+            if (!(this.renderer instanceof UiWidget)) {
+              discarded$5 = output.append(this.renderer);
               if (var6 != 0) {
-                param2 = this.a(param0 + 1, param3, param2, 0);
+                output = this.appendDebugTree(indent + 1, visited, output, 0);
               }
             } else {
-              param2 = this.a(param0 + 1, param3, param2, 0);
+              output = this.appendDebugTree(indent + 1, visited, output, 0);
             }
           }
-          if (this.field_o != null) {
-            discarded$6 = param2.append(" listener=");
-            if (!(this.field_o instanceof UiWidget)) {
-              discarded$7 = param2.append(this.field_o);
+          if (this.listener != null) {
+            discarded$6 = output.append(" listener=");
+            if (!(this.listener instanceof UiWidget)) {
+              discarded$7 = output.append(this.listener);
               if (var6 == 0) {
                 return;
               }
             }
-            param2 = this.a(param0 + 1, param3, param2, 0);
+            output = this.appendDebugTree(indent + 1, visited, output, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_23_0 = var5;
-          stackIn_23_1 = new StringBuilder().append("pk.OB(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_23_1 = new StringBuilder().append("pk.OB(").append(indent).append(',').append(guard).append(',');
+          if (output == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
           stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
-          if (param3 == null) {
+          if (visited == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
@@ -749,14 +749,14 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    boolean onMouseWheel(int parentY, int wheelDelta, int guard, int parentX, int pointerY, UiWidget root, int pointerX) {
         RuntimeException var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 == -1) {
+          if (guard == -1) {
             return false;
           }
           return false;
@@ -764,49 +764,49 @@ class UiWidget extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_7_0 = var8;
-          stackIn_7_1 = new StringBuilder().append("pk.RA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_7_1 = new StringBuilder().append("pk.RA(").append(parentY).append(',').append(wheelDelta).append(',').append(guard).append(',').append(parentX).append(',').append(pointerY).append(',');
+          if (root == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(pointerX).append(')').toString());
         }
     }
 
     public final String toString() {
-        return this.a(0, new Hashtable(), new StringBuilder(), 0).toString();
+        return this.appendDebugTree(0, new Hashtable(), new StringBuilder(), 0).toString();
     }
 
-    void a(int param0, int param1, byte param2, int param3) {
+    void renderLayer(int parentX, int parentY, byte guard, int layer) {
         UiWidget var6 = null;
         UiWidget var6Lifetime1;
         UiWidget var6Lifetime2;
-        if (param3 != 0) {
-          if (param2 < -35) {
+        if (layer != 0) {
+          if (guard < -35) {
             return;
           }
           var6 = (UiWidget) null;
-          this.a((UiWidget) null, (byte) -58);
+          this.requestFocus((UiWidget) null, (byte) -58);
           return;
         }
-        if (this.field_w == null) {
-          if (param2 < -35) {
+        if (this.renderer == null) {
+          if (guard < -35) {
             return;
           }
           var6Lifetime1 = (UiWidget) null;
-          this.a((UiWidget) null, (byte) -58);
+          this.requestFocus((UiWidget) null, (byte) -58);
           return;
         }
-        this.field_w.a(this, param1, 5592405, true, param0);
-        if (param2 < -35) {
+        this.renderer.renderWidget(this, parentY, 5592405, true, parentX);
+        if (guard < -35) {
           return;
         }
         var6Lifetime2 = (UiWidget) null;
-        this.a((UiWidget) null, (byte) -58);
+        this.requestFocus((UiWidget) null, (byte) -58);
     }
 
-    UiWidget(String param0, qm param1) {
+    UiWidget(String param0, WidgetListener param1) {
         this(param0, ks.field_x.field_e, param1);
     }
 
@@ -817,14 +817,14 @@ class UiWidget extends IntrusiveNode {
         return 0 != (param0 & 52) ? true : false;
     }
 
-    boolean a(UiWidget param0, byte param1) {
+    boolean requestFocus(UiWidget root, byte guard) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == 61) {
+          if (guard == 61) {
             return false;
           }
           this.toString();
@@ -834,104 +834,104 @@ class UiWidget extends IntrusiveNode {
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("pk.Q(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    void c(byte param0) {
-        int var2 = -25 / ((64 - param0) / 51);
+    void clearFocus(byte guard) {
+        int var2 = -25 / ((64 - guard) / 51);
     }
 
-    int e(int param0) {
-        int var2 = -90 / ((-10 - param0) / 46);
+    int maxRenderLayer(int guard) {
+        int var2 = -90 / ((-10 - guard) / 46);
         return 0;
     }
 
-    final boolean a(char param0, int param1, boolean param2) {
+    final boolean dispatchKey(char character, int keyCode, boolean guard) {
         int var4 = 0;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
-        if (!this.d(-1)) {
-          if (!param2) {
-            this.a(-3, -1, (byte) 78, -21);
-            var4 = param1;
+        if (!this.hasFocus(-1)) {
+          if (!guard) {
+            this.renderLayer(-3, -1, (byte) 78, -21);
+            var4 = keyCode;
             if (var4 == 80) {
-              return this.a(this, (byte) 61);
+              return this.requestFocus(this, (byte) 61);
             }
             return false;
           }
-          var4Lifetime3 = param1;
+          var4Lifetime3 = keyCode;
           if (var4Lifetime3 == 80) {
-            return this.a(this, (byte) 61);
+            return this.requestFocus(this, (byte) 61);
           }
           return false;
         }
-        if (this.a(this, param0, (byte) 108, param1)) {
+        if (this.onKey(this, character, (byte) 108, keyCode)) {
           return true;
         }
-        if (!param2) {
-          this.a(-3, -1, (byte) 78, -21);
-          var4Lifetime1 = param1;
+        if (!guard) {
+          this.renderLayer(-3, -1, (byte) 78, -21);
+          var4Lifetime1 = keyCode;
           if (var4Lifetime1 == 80) {
-            return this.a(this, (byte) 61);
+            return this.requestFocus(this, (byte) 61);
           }
           return false;
         }
-        var4Lifetime2 = param1;
+        var4Lifetime2 = keyCode;
         if (var4Lifetime2 == 80) {
-          return this.a(this, (byte) 61);
+          return this.requestFocus(this, (byte) 61);
         }
         return false;
     }
 
-    boolean a(UiWidget param0, char param1, byte param2, int param3) {
+    boolean onKey(UiWidget root, char character, byte guard, int keyCode) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 > 9) {
+          if (guard > 9) {
             return false;
           }
-          this.field_k = false;
+          this.hovered = false;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_6_0 = var5;
           stackIn_6_1 = new StringBuilder().append("pk.KA(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(character).append(',').append(guard).append(',').append(keyCode).append(')').toString());
         }
     }
 
-    String c(int param0) {
-        if (param0 == -6696) {
-          return !this.field_k ? null : this.field_t;
+    String hoveredTooltip(int guard) {
+        if (guard == -6696) {
+          return !this.hovered ? null : this.tooltip;
         }
-        this.field_n = -60;
-        return !this.field_k ? null : this.field_t;
+        this.textOffsetY = -60;
+        return !this.hovered ? null : this.tooltip;
     }
 
     protected UiWidget() {
-        this.field_n = 0;
-        this.field_s = 0;
+        this.textOffsetY = 0;
+        this.textOffsetX = 0;
     }
 
-    UiWidget(String param0, mh param1, qm param2) {
+    UiWidget(String param0, WidgetRenderer param1, WidgetListener param2) {
         RuntimeException runtimeException = null;
-        de var4 = null;
+        TextWidgetLayout var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -940,16 +940,16 @@ class UiWidget extends IntrusiveNode {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_n = 0;
-        this.field_s = 0;
+        this.textOffsetY = 0;
+        this.textOffsetX = 0;
         try {
-          this.field_w = param1;
-          this.field_m = param0;
-          this.field_o = param2;
-          if (this.field_w instanceof de) {
-            var4 = (de) ((Object) this.field_w);
-            this.field_q = var4.a(this, (byte) 83);
-            this.field_p = var4.b(this, (byte) 105);
+          this.renderer = param1;
+          this.text = param0;
+          this.listener = param2;
+          if (this.renderer instanceof TextWidgetLayout) {
+            var4 = (TextWidgetLayout) ((Object) this.renderer);
+            this.width = var4.measuredTextWidth(this, (byte) 83);
+            this.height = var4.measuredTextHeight(this, (byte) 105);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -978,16 +978,16 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, mh param4, qm param5) {
-        this.field_n = 0;
-        this.field_s = 0;
+    UiWidget(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5) {
+        this.textOffsetY = 0;
+        this.textOffsetX = 0;
         try {
-          this.field_r = param0;
-          this.field_o = param5;
-          this.field_p = param3;
-          this.field_w = param4;
-          this.field_v = param1;
-          this.field_q = param2;
+          this.x = param0;
+          this.listener = param5;
+          this.height = param3;
+          this.renderer = param4;
+          this.y = param1;
+          this.width = param2;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

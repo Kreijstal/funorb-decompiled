@@ -3,7 +3,7 @@
  */
 final class nq extends na {
     static GraphicsToolkitManager field_h;
-    private dh field_e;
+    private TextInputWidget field_e;
     static int field_i;
     static eg field_g;
     static int[] field_j;
@@ -30,7 +30,7 @@ final class nq extends na {
           if (param0 != 26) {
             nq.a(-47, 52, 56);
           }
-          if (!param1.equals(this.field_e.field_m)) {
+          if (!param1.equals(this.field_e.text)) {
             stackIn_11_0 = qr.field_e;
           } else {
             stackIn_11_0 = qe.field_a;
@@ -111,7 +111,7 @@ final class nq extends na {
             var3 = ((op) ((Object) this.field_e)).a(-114);
             if (var3 != null) {
               if (var3.c(param0 - 98) == qe.field_a &&
-                !param1.equals(this.field_e.field_m)) {
+                !param1.equals(this.field_e.text)) {
                 stackIn_8_0 = gq.thisEntryDoesnTText;
                 return stackIn_8_0;
               }
@@ -119,7 +119,7 @@ final class nq extends na {
               return stackIn_10_0;
             }
           }
-          if (!param1.equals(this.field_e.field_m)) {
+          if (!param1.equals(this.field_e.text)) {
             stackIn_13_0 = gq.thisEntryDoesnTText;
             return stackIn_13_0;
           }
@@ -143,7 +143,7 @@ final class nq extends na {
         }
     }
 
-    nq(dh param0, dh param1) {
+    nq(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         try {
           this.field_e = param1;

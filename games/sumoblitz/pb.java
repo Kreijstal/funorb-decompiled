@@ -23,7 +23,7 @@ abstract class pb {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = hf.a(true, param4, param5, param2, param3, param0);
+          var8 = ResizingDialog.a(true, param4, param5, param2, param3, param0);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;

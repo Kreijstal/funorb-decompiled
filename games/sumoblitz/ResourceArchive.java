@@ -77,7 +77,7 @@ final class ResourceArchive {
         if (ProxySocketConnector.field_e == hm.field_a) {
           throw new IllegalStateException();
         }
-        if (st.field_z == ProxySocketConnector.field_e) {
+        if (DropTargetWidget.field_z == ProxySocketConnector.field_e) {
           ProxySocketConnector.field_e = hm.field_a;
           return eg.field_l;
         }
@@ -515,7 +515,7 @@ final class ResourceArchive {
             var9 = ab.a(false, this.field_d[param3], 0);
           }
           try {
-            var36 = nd.a(-1, var9);
+            var36 = GridWidgetContainer.a(-1, var9);
             var27 = var36;
             var23 = var27;
             var43 = var23;

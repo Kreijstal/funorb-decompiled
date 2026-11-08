@@ -140,10 +140,10 @@ final class BurstParticle extends TimedSceneEffect {
     final static void a(boolean param0, boolean param1) {
         if (!param1) {
           BurstParticle.a(false, false);
-          rf.field_a.a(0, 0, false);
+          rf.field_a.render(0, 0, false);
           return;
         }
-        rf.field_a.a(0, 0, false);
+        rf.field_a.render(0, 0, false);
     }
 
     static {

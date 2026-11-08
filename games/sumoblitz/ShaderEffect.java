@@ -100,7 +100,7 @@ abstract class ShaderEffect {
             stackIn_8_0 = 34165;
             return stackIn_8_0;
           }
-          if (cv.field_F == param1) {
+          if (LoginForm.field_F == param1) {
             stackIn_14_0 = 260;
             return stackIn_14_0;
           }

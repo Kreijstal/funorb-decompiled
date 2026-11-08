@@ -59,7 +59,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     }
 
     final void a(boolean param0, byte param1) {
-        this.field_b.a((byte) -83, cv.field_F, ua.field_n);
+        this.field_b.a((byte) -83, LoginForm.field_F, ua.field_n);
         if (param1 >= -71) {
           field_g = (float[]) null;
         }

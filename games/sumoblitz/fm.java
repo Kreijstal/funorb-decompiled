@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fm implements mh {
+final class fm implements WidgetRenderer {
     static String ageText;
     static qr field_b;
 
@@ -13,7 +13,7 @@ final class fm implements mh {
         field_b = null;
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+    public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -29,18 +29,18 @@ final class fm implements mh {
         int var8Lifetime1;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param2 != 5592405) {
+          if (guard != 5592405) {
             fm.releaseStatics((byte) 119);
           }
-          for (var6_int = 0; param0.field_p >= var6_int; var6_int++) {
-            var7 = 152 + 48 * var6_int / param0.field_p;
+          for (var6_int = 0; widget.height >= var6_int; var6_int++) {
+            var7 = 152 + 48 * var6_int / widget.height;
             var8 = var7 << 16 | var7 << 8 | var7;
-            SoftwareRasterizer.drawHorizontalLine(param4 + param0.field_r, var6_int + param0.field_v + param1, param0.field_q, var8);
+            SoftwareRasterizer.drawHorizontalLine(parentX + widget.x, var6_int + widget.y + parentY, widget.width, var8);
           }
           for (var6_intLifetime1 = 1; var6_intLifetime1 <= 5; var6_intLifetime1++) {
-            var7Lifetime1 = -(param0.field_q >> 1) + (param0.field_q + (param4 + param0.field_r) + (-5 + var6_intLifetime1));
-            var8Lifetime1 = -(2 * var6_intLifetime1) + (param0.field_q >> 1);
-            var9 = (-4 + param0.field_p >> 1) + (param1 + param0.field_v + var6_intLifetime1);
+            var7Lifetime1 = -(widget.width >> 1) + (widget.width + (parentX + widget.x) + (-5 + var6_intLifetime1));
+            var8Lifetime1 = -(2 * var6_intLifetime1) + (widget.width >> 1);
+            var9 = (-4 + widget.height >> 1) + (parentY + widget.y + var6_intLifetime1);
             if (var9 >= SoftwareRasterizer.clipTop &&
               SoftwareRasterizer.clipBottom > var9) {
               if (SoftwareRasterizer.clipLeft < var7Lifetime1) {
@@ -58,12 +58,12 @@ final class fm implements mh {
           var6 = decompiledCaughtException;
           stackIn_20_0 = var6;
           stackIn_20_1 = new StringBuilder().append("fm.A(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(parentY).append(',').append(guard).append(',').append(isEnabled).append(',').append(parentX).append(')').toString());
         }
     }
 

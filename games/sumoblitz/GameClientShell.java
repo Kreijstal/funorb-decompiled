@@ -41,7 +41,7 @@ abstract class GameClientShell extends GameApplet {
         if (param0 != 68) {
           return;
         }
-        wp.field_z[5] = true;
+        InteractiveWidget.field_z[5] = true;
     }
 
     final void b(boolean param0, int param1) {
@@ -68,7 +68,7 @@ abstract class GameClientShell extends GameApplet {
         }
         c.a((byte) 124);
         au.d(123);
-        if (!in.g(-66) &&
+        if (!FadingWidget.g(-66) &&
           11 != jv.field_a) {
           ip.d(1886067877);
         }
@@ -85,7 +85,7 @@ abstract class GameClientShell extends GameApplet {
             !(za.c(false) <= var3)) {
             this.field_B = false;
             kk.a((byte) -112);
-            we.a((byte) 16);
+            ScrollViewport.a((byte) 16);
             ArchiveCatalog.a((byte) 87, 2, ab.weClosedTheConnectionText);
             GraphicsToolkit.a(-36);
             ts.field_d = true;
@@ -130,7 +130,7 @@ abstract class GameClientShell extends GameApplet {
             }
           } else {
             if (10 <= jv.field_a) {
-              we.a((byte) 70);
+              ScrollViewport.a((byte) 70);
               if (gr.field_l == 3) {
                 ArchiveCatalog.a((byte) -97, 256, o.field_a);
               } else {
@@ -143,7 +143,7 @@ abstract class GameClientShell extends GameApplet {
                     if (gr.field_l == 5) {
                       ArchiveCatalog.a((byte) -113, 5, s.thisGameHasBeenText);
                     } else {
-                      ArchiveCatalog.a((byte) -97, 256, ao.unableToConnectToText);
+                      ArchiveCatalog.a((byte) -97, 256, ArrayWidgetContainer.unableToConnectToText);
                     }
                   }
                 }
@@ -173,7 +173,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if (mp.field_a == 1) {
           if (dk.field_c != 0) {
-            hd.field_H = wd.a(u.field_P, (byte) 125);
+            DropDownListWidget.field_H = wd.a(DisplayModeErrorDialog.field_P, (byte) 125);
           }
           wd.field_j = ve.a(11880, true, OpenGlUnderwaterEffect.field_i, 1, false);
           eb.field_f = ve.a(11880, true, AudioServiceThread.field_h, 1, false);
@@ -183,19 +183,19 @@ abstract class GameClientShell extends GameApplet {
           vb.field_J = eb.field_f;
         }
         if (mp.field_a == 2) {
-          if (null != hd.field_H &&
-            hd.field_H.b((byte) 127)) {
-            if (!hd.field_H.b((byte) -99, "")) {
-              hd.field_H = null;
+          if (null != DropDownListWidget.field_H &&
+            DropDownListWidget.field_H.b((byte) 127)) {
+            if (!DropDownListWidget.field_H.b((byte) -99, "")) {
+              DropDownListWidget.field_H = null;
             } else {
-              if (hd.field_H.a("", 100)) {
-                ni.a(7, hd.field_H);
-                hd.field_H = null;
+              if (DropDownListWidget.field_H.a("", 100)) {
+                ni.a(7, DropDownListWidget.field_H);
+                DropDownListWidget.field_H = null;
                 ls.b(0);
               }
             }
           }
-          if (hd.field_H == null) {
+          if (DropDownListWidget.field_H == null) {
             mp.field_a = 3;
           }
         }
@@ -208,10 +208,10 @@ abstract class GameClientShell extends GameApplet {
           hn.field_k = li.loadingText;
           ea.a(hw.field_a, qn.field_a, (byte) 40, eb.field_f, wd.field_j);
           if (hv.field_c ||
-            st.field_B != null) {
+            DropTargetWidget.field_B != null) {
             stackIn_106_0 = 1;
             stackIn_107_1 = !(hv.field_c);
-            stackIn_109_2 = st.field_B;
+            stackIn_109_2 = DropTargetWidget.field_B;
             stackIn_110_3 = !(hv.field_c);
             ea.a(stackIn_106_0, stackIn_107_1, stackIn_109_2, stackIn_110_3);
           }
@@ -220,9 +220,9 @@ abstract class GameClientShell extends GameApplet {
           }
           if (hh.field_d == null) {
             hh.field_d = ea.a(14263);
-            ur.field_O = cv.e(false);
+            ContentTransitionDialog.field_O = LoginForm.e(false);
           }
-          ss.a(hh.field_d, (byte) 127, hw.field_a, ur.field_O);
+          ss.a(hh.field_d, (byte) 127, hw.field_a, ContentTransitionDialog.field_O);
           hw.field_a = null;
           eb.field_f = null;
           wd.field_j = null;
@@ -240,7 +240,7 @@ abstract class GameClientShell extends GameApplet {
         if (mp.field_a == 11) {
           if (vf.field_a != null && (!vf.field_a.b((byte) 127) ||
             !vf.field_a.a(true))) {
-            pe.a(20, 0.0f, lq.a(117, mm.field_c, ek.field_k, vf.field_a));
+            NameSuggestionsPanel.a(20, 0.0f, lq.a(117, mm.field_c, ek.field_k, vf.field_a));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -257,7 +257,7 @@ abstract class GameClientShell extends GameApplet {
           if (ih.field_a != null) {
             stackIn_138_0 = (!ih.field_a.a(100)) ? 0 : 1;
             var3Lifetime2 = stackIn_138_0;
-            pe.a(20, ih.field_a.field_d, ih.field_a.field_f);
+            NameSuggestionsPanel.a(20, ih.field_a.field_d, ih.field_a.field_f);
           }
           if (var3Lifetime2 != 0) {
             mp.field_a = 20;
@@ -269,7 +269,7 @@ abstract class GameClientShell extends GameApplet {
           this.e(1000);
           db.a(false, qn.field_f);
         }
-        if (wp.field_z[8]) {
+        if (InteractiveWidget.field_z[8]) {
           qi.a(8);
         }
     }
@@ -297,7 +297,7 @@ abstract class GameClientShell extends GameApplet {
           if (!nl.field_o) {
             this.a("reconnect", 21253);
           }
-          we.a((byte) 63);
+          ScrollViewport.a((byte) 63);
           ArchiveCatalog.a((byte) 114, var2, MouseWheelInput.field_c);
           ts.field_d = true;
           sj.field_a = 15000L + wq.a(-50);
@@ -311,7 +311,7 @@ abstract class GameClientShell extends GameApplet {
     }
 
     private final void n(int param0) {
-        wp.field_z[param0] = true;
+        InteractiveWidget.field_z[param0] = true;
     }
 
     final void m(int param0) {
@@ -324,7 +324,7 @@ abstract class GameClientShell extends GameApplet {
         if (param0 <= 94) {
           waitingForSoundEffectsText = (String) null;
         }
-        if (we.g(-1)) {
+        if (ScrollViewport.g(-1)) {
           stackIn_11_1 = 16981;
           stackIn_12_2 = (CompactMeshGeometry.field_o != null);
           discarded$33 = this.a(stackIn_11_1, stackIn_12_2, false);
@@ -334,7 +334,7 @@ abstract class GameClientShell extends GameApplet {
               rm.a((byte) 126);
             } else {
               if (jv.field_a != 0) {
-                rg.a((byte) 55, OpenGlUnderwaterEffect.field_r);
+                ModalDialog.a((byte) 55, OpenGlUnderwaterEffect.field_r);
               } else {
                 discarded$34 = this.a(16981, false, false);
               }
@@ -354,7 +354,7 @@ abstract class GameClientShell extends GameApplet {
         }
         var2 = iw.field_a;
         if (var2 < 64 &&
-          wp.field_z[var2]) {
+          InteractiveWidget.field_z[var2]) {
           if (0 == var2) {
             return;
           }
@@ -371,7 +371,7 @@ abstract class GameClientShell extends GameApplet {
                       if (var2 != 7) {
                         if (var2 != 8) {
                           if (var2 == 16) {
-                            we.e((byte) -93);
+                            ScrollViewport.e((byte) -93);
                           } else {
                             if (11 != var2 &&
                               var2 != 12) {
@@ -441,11 +441,11 @@ abstract class GameClientShell extends GameApplet {
         if (param0 != -1) {
           return;
         }
-        ie.a(61, var2, ra.c(2));
+        SingleChildWidget.setSessionCookie(61, var2, ra.c(2));
     }
 
     private final void l(int param0) {
-        wp.field_z[2] = true;
+        InteractiveWidget.field_z[2] = true;
         if (param0 != 8) {
           this.field_E = 114;
         }
@@ -459,25 +459,25 @@ abstract class GameClientShell extends GameApplet {
         }
         if (var2 == 0 ||
           var2 == 1) {
-          if (wp.field_z[1]) {
+          if (InteractiveWidget.field_z[1]) {
             dq.a((byte) 115, 2);
           }
-          if (wp.field_z[2]) {
+          if (InteractiveWidget.field_z[2]) {
             SlowBurstParticle.a(3, (byte) -73);
           }
-          if (wp.field_z[3]) {
+          if (InteractiveWidget.field_z[3]) {
             ko.a(0, 4);
           }
-          if (wp.field_z[4]) {
-            dd.a(28778, 5);
+          if (InteractiveWidget.field_z[4]) {
+            GraphicsOptionsDialog.a(28778, 5);
           }
-          if (wp.field_z[5]) {
+          if (InteractiveWidget.field_z[5]) {
             wm.a(false, 6);
           }
-          if (wp.field_z[6]) {
+          if (InteractiveWidget.field_z[6]) {
             jl.a(7, param0);
           }
-          if (wp.field_z[8]) {
+          if (InteractiveWidget.field_z[8]) {
             vk.a(-58);
           }
         }
@@ -665,7 +665,7 @@ abstract class GameClientShell extends GameApplet {
           }
           if (var4 == 4) {
             if (qn.field_a) {
-              gt.a(-1540, ra.c(param0 ^ 16983));
+              MessageDialog.a(-1540, ra.c(param0 ^ 16983));
             } else {
               IntrusiveNode.field_a = true;
               jv.field_a = 10;
@@ -682,7 +682,7 @@ abstract class GameClientShell extends GameApplet {
             ic.a(false, ra.c(2));
           }
           if (8 == var4) {
-            gt.a(-1540, ra.c(param0 - 16979));
+            MessageDialog.a(-1540, ra.c(param0 - 16979));
           }
           if (9 == var4) {
             us.a(ra.c(2), (byte) -124);
@@ -740,20 +740,20 @@ abstract class GameClientShell extends GameApplet {
 
     private final void e(byte param0) {
         int var2 = 76 / ((param0 + 76) / 48);
-        wp.field_z[4] = true;
+        InteractiveWidget.field_z[4] = true;
     }
 
     private final void c(boolean param0, int param1) {
-        wp.field_z[0] = true;
-        wp.field_z[7] = true;
-        wp.field_z[18] = true;
+        InteractiveWidget.field_z[0] = true;
+        InteractiveWidget.field_z[7] = true;
+        InteractiveWidget.field_z[18] = true;
         if (param1 != -12605) {
           this.q(112);
         }
-        wp.field_z[3] = true;
-        wp.field_z[8] = param0;
-        wp.field_z[17] = true;
-        wp.field_z[16] = true;
+        InteractiveWidget.field_z[3] = true;
+        InteractiveWidget.field_z[8] = param0;
+        InteractiveWidget.field_z[17] = true;
+        InteractiveWidget.field_z[16] = true;
     }
 
     protected GameClientShell() {
@@ -773,7 +773,7 @@ abstract class GameClientShell extends GameApplet {
         int var10 = -116 / ((2 - param2) / 36);
         db.a(false, qn.field_f);
         MenuScreen.field_f = param7;
-        u.field_P = param4;
+        DisplayModeErrorDialog.field_P = param4;
         OpenGlUnderwaterEffect.field_i = param5;
         ra.field_f = param3;
         AudioServiceThread.field_h = param6;

@@ -95,7 +95,7 @@ final class kh {
     }
 
     final static void a(boolean param0) {
-        lr.a(true, bi.field_d, (byte) 122, in.field_C);
+        lr.a(true, bi.field_d, (byte) 122, FadingWidget.field_C);
         if (param0) {
           field_c = (int[][]) null;
         }

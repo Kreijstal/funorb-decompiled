@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class js extends WidgetContainer implements ca, ai, oe {
+final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
     private qq field_L;
-    private wp field_M;
+    private InteractiveWidget field_M;
     private qq field_E;
     private wr field_H;
-    private wp field_D;
+    private InteractiveWidget field_D;
     private qq field_K;
-    pe field_B;
+    NameSuggestionsPanel field_B;
     private qq field_A;
     private ar field_C;
     static String field_J;
@@ -16,7 +16,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
     private qq field_I;
     static ts field_G;
 
-    final void a(int param0, int param1, UiWidget param2, int param3) {
+    final void update(int parentX, int guard, UiWidget root, int parentY) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -24,21 +24,21 @@ final class js extends WidgetContainer implements ca, ai, oe {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, -91, param2, param3);
-          var5_int = 70 % ((param1 + 25) / 45);
-          this.field_M.field_x = this.j(97);
+          super.update(parentX, -91, root, parentY);
+          var5_int = 70 % ((guard + 25) / 45);
+          this.field_M.enabled = this.j(97);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_5_0 = runtimeException;
-          stackIn_5_1 = new StringBuilder().append("js.U(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_5_1 = new StringBuilder().append("js.U(").append(parentX).append(',').append(guard).append(',');
+          if (root == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(parentY).append(')').toString());
         }
     }
 
@@ -51,7 +51,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
         }
     }
 
-    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
+    final boolean onKey(UiWidget root, char character, byte guard, int keyCode) {
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
         boolean stackIn_15_0 = false;
@@ -60,18 +60,18 @@ final class js extends WidgetContainer implements ca, ai, oe {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 < 9) {
-            this.field_B = (pe) null;
+          if (guard < 9) {
+            this.field_B = (NameSuggestionsPanel) null;
           }
-          if (super.a(param0, param1, (byte) 66, param3)) {
+          if (super.onKey(root, character, (byte) 66, keyCode)) {
             return true;
           }
-          if (param3 == 98) {
-            stackIn_10_0 = this.a((byte) -58, param0);
+          if (keyCode == 98) {
+            stackIn_10_0 = this.focusPrevious((byte) -58, root);
             return stackIn_10_0;
           }
-          if (param3 == 99) {
-            stackIn_15_0 = this.a(param0, false);
+          if (keyCode == 99) {
+            stackIn_15_0 = this.focusNext(root, false);
             return stackIn_15_0;
           }
           return false;
@@ -80,17 +80,17 @@ final class js extends WidgetContainer implements ca, ai, oe {
           var5 = decompiledCaughtException;
           stackIn_21_0 = var5;
           stackIn_21_1 = new StringBuilder().append("js.KA(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(character).append(',').append(guard).append(',').append(keyCode).append(')').toString());
         }
     }
 
     private final int a(int param0, String param1, int param2, UiWidget param3, int param4) {
-        rt var6 = null;
+        LabeledWidget var6 = null;
         RuntimeException var6_ref = null;
         vr var7 = null;
         int stackIn_2_0 = 0;
@@ -102,16 +102,16 @@ final class js extends WidgetContainer implements ca, ai, oe {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new rt(20, param2, param0 + 120, 25, param3, false, 120, 3, kw.field_b, 16777215, param1);
-          this.a(var6, 82);
+          var6 = new LabeledWidget(20, param2, param0 + 120, 25, param3, false, 120, 3, kw.field_b, 16777215, param1);
+          this.addChild(var6, 82);
           var7 = new vr(((op) ((Object) param3)).a(34));
-          this.a(var7, 63);
+          this.addChild(var7, 63);
           if (param4 < 63) {
             stackIn_2_0 = -35;
             return stackIn_2_0;
           }
-          var7.a(-57, 3 + var6.field_r + var6.field_q, (var6.field_p - 15 >> 1) + var6.field_v, 15, 15);
-          stackIn_4_0 = var6.field_p;
+          var7.setBounds(-57, 3 + var6.x + var6.width, (var6.height - 15 >> 1) + var6.y, 15, 15);
+          stackIn_4_0 = var6.height;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
         }
     }
 
-    public final void a(int param0, int param1, wp param2, int param3, int param4) {
+    public final void onAction(int action, int guard, InteractiveWidget source, int pointerX, int pointerY) {
         boolean discarded$0 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -141,11 +141,11 @@ final class js extends WidgetContainer implements ca, ai, oe {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param1 != 710) {
+          if (guard != 710) {
             return;
           }
-          if (param2 != this.field_D) {
-            if (this.field_M != param2) {
+          if (source != this.field_D) {
+            if (this.field_M != source) {
               return;
             }
             discarded$0 = this.i(513);
@@ -159,13 +159,13 @@ final class js extends WidgetContainer implements ca, ai, oe {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_15_0 = var6;
-          stackIn_15_1 = new StringBuilder().append("js.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_15_1 = new StringBuilder().append("js.C(").append(action).append(',').append(guard).append(',');
+          if (source == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(pointerX).append(',').append(pointerY).append(')').toString());
         }
     }
 
@@ -347,7 +347,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
           }
           var2_int = -1;
           try {
-            var2_int = Integer.parseInt(this.field_K.field_m);
+            var2_int = Integer.parseInt(this.field_K.text);
             if (param0 != 513) {
               discarded$1 = this.i(8);
             }
@@ -355,7 +355,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
             decompiledCaughtException = decompiledCaughtParameter0;
             numberFormatException = (NumberFormatException) (Object) decompiledCaughtException;
           }
-          stackIn_12_0 = fd.a(this, this.field_A.field_m, this.field_H.field_C, this.field_I.field_m, this.field_N.field_m, var2_int, 0);
+          stackIn_12_0 = fd.a(this, this.field_A.text, this.field_H.field_C, this.field_I.text, this.field_N.text, var2_int, 0);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -385,7 +385,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
 
     final static void h(int param0) {
         try {
-          dc.l(param0 ^ 224);
+          ContentDialog.l(param0 ^ 224);
           if (param0 != 0) {
             js.f((byte) -20);
           }
@@ -440,7 +440,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
     }
 
     private final int a(int param0, int param1, byte param2, int param3, String param4, UiWidget param5, String param6) {
-        rt var8 = null;
+        LabeledWidget var8 = null;
         RuntimeException var8_ref = null;
         bn var9 = null;
         int stackIn_4_0 = 0;
@@ -453,15 +453,15 @@ final class js extends WidgetContainer implements ca, ai, oe {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new rt(20, param0, param1 + 120, 25, param5, false, 120, 3, kw.field_b, 16777215, param6);
-          this.a(var8, 122);
-          var9 = new bn(((op) ((Object) param5)).a(-128), param4, 126, param0 + var8.field_p, param1 + 50, param3);
-          var9.field_o = (qm) (this);
-          this.a(var9, 109);
+          var8 = new LabeledWidget(20, param0, param1 + 120, 25, param5, false, 120, 3, kw.field_b, 16777215, param6);
+          this.addChild(var8, 122);
+          var9 = new bn(((op) ((Object) param5)).a(-128), param4, 126, param0 + var8.height, param1 + 50, param3);
+          var9.listener = (WidgetListener) (this);
+          this.addChild(var9, 109);
           if (param2 < 31) {
             field_J = (String) null;
           }
-          stackIn_4_0 = var9.field_p + var8.field_p;
+          stackIn_4_0 = var9.height + var8.height;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -541,7 +541,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
         try {
           var3 = this.field_A;
           var4 = param0;
-          ((dh) ((Object) var3)).a(false, var4, (byte) 124);
+          ((TextInputWidget) ((Object) var3)).setText(false, var4, (byte) 124);
           if (param1 != 0) {
             field_G = (ts) null;
           }
@@ -561,7 +561,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
     }
 
     private final int a(String param0, int param1, int param2, int param3, UiWidget param4) {
-        rt var6 = null;
+        LabeledWidget var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -572,10 +572,10 @@ final class js extends WidgetContainer implements ca, ai, oe {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new rt(20, param2, 120 + param1, 25, param4, false, 120, 3, kw.field_b, 16777215, param0);
-          this.a(var6, 79);
+          var6 = new LabeledWidget(20, param2, 120 + param1, 25, param4, false, 120, 3, kw.field_b, 16777215, param0);
+          this.addChild(var6, 79);
           if (param3 >= 32) {
-            stackIn_4_0 = var6.field_p;
+            stackIn_4_0 = var6.height;
             return stackIn_4_0;
           }
           stackIn_2_0 = -85;
@@ -601,52 +601,52 @@ final class js extends WidgetContainer implements ca, ai, oe {
     }
 
     public js() {
-        super(0, 0, 496, 0, (mh) null);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
         int var1_int = 0;
         nl dupTemp$0 = null;
         c dupTemp$1 = null;
         String var2 = null;
         int var3 = 0;
-        rt var4 = null;
-        gm var5 = null;
+        LabeledWidget var4 = null;
+        TextWidgetRenderer var5 = null;
         int var6 = 0;
         int var7 = 0;
         try {
-          this.field_A = new qq("", (qm) null, 12);
-          this.field_I = new qq("", (qm) null, 100);
-          this.field_E = new qq("", (qm) null, 100);
-          this.field_N = new qq("", (qm) null, 20);
-          this.field_L = new qq("", (qm) null, 20);
-          this.field_K = new qq("", (qm) null, 3);
+          this.field_A = new qq("", (WidgetListener) null, 12);
+          this.field_I = new qq("", (WidgetListener) null, 100);
+          this.field_E = new qq("", (WidgetListener) null, 100);
+          this.field_N = new qq("", (WidgetListener) null, 20);
+          this.field_L = new qq("", (WidgetListener) null, 20);
+          this.field_K = new qq("", (WidgetListener) null, 3);
           var1_int = 1;
-          this.field_H = new wr("", (qm) null, var1_int != 0);
-          this.field_M = new wp(ff.createText, (qm) null);
-          this.field_D = new wp(jc.goBackText, (qm) null);
-          this.field_A.field_t = ShaderEffect.enterTheNameYouText;
-          this.field_I.field_t = pi.yourEmailAddressIsText;
-          this.field_E.field_t = kn.typeYourEmailAddressText;
-          this.field_N.field_t = pl.enterAPasswordForText;
-          this.field_L.field_t = InstrumentNoteMask.typeYourPasswordAgainText;
-          this.field_K.field_t = dc.typeYourAgeInText;
-          this.field_H.field_t = gr.updatesWillSentToText;
+          this.field_H = new wr("", (WidgetListener) null, var1_int != 0);
+          this.field_M = new InteractiveWidget(ff.createText, (WidgetListener) null);
+          this.field_D = new InteractiveWidget(jc.goBackText, (WidgetListener) null);
+          this.field_A.tooltip = ShaderEffect.enterTheNameYouText;
+          this.field_I.tooltip = pi.yourEmailAddressIsText;
+          this.field_E.tooltip = kn.typeYourEmailAddressText;
+          this.field_N.tooltip = pl.enterAPasswordForText;
+          this.field_L.tooltip = InstrumentNoteMask.typeYourPasswordAgainText;
+          this.field_K.tooltip = ContentDialog.typeYourAgeInText;
+          this.field_H.tooltip = gr.updatesWillSentToText;
           this.field_A.a((byte) -54, new ou(this.field_A));
           this.field_I.a((byte) 118, new ew(this.field_I));
           this.field_E.a((byte) -127, new wk(this.field_E, this.field_I));
           this.field_N.a((byte) 127, new tc(this.field_N, this.field_A, this.field_I));
           this.field_L.a((byte) -17, new nq(this.field_L, this.field_N));
           this.field_K.a((byte) 122, new jc(this.field_K));
-          this.field_M.field_x = false;
-          this.field_M.field_w = (mh) ((Object) new ue());
-          this.field_D.field_w = (mh) ((Object) new bv());
-          this.field_A.field_w = (mh) ((Object) new nl(10000536));
+          this.field_M.enabled = false;
+          this.field_M.renderer = (WidgetRenderer) ((Object) new ue());
+          this.field_D.renderer = (WidgetRenderer) ((Object) new bv());
+          this.field_A.renderer = (WidgetRenderer) ((Object) new nl(10000536));
           dupTemp$0 = new nl(10000536);
-          this.field_E.field_w = (mh) ((Object) dupTemp$0);
-          this.field_I.field_w = (mh) ((Object) dupTemp$0);
-          this.field_K.field_w = (mh) ((Object) new nl(10000536));
-          this.field_H.field_w = (mh) ((Object) new oj());
+          this.field_E.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+          this.field_I.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+          this.field_K.renderer = (WidgetRenderer) ((Object) new nl(10000536));
+          this.field_H.renderer = (WidgetRenderer) ((Object) new oj());
           dupTemp$1 = new c(10000536);
-          this.field_L.field_w = (mh) ((Object) dupTemp$1);
-          this.field_N.field_w = (mh) ((Object) dupTemp$1);
+          this.field_L.renderer = (WidgetRenderer) ((Object) dupTemp$1);
+          this.field_N.renderer = (WidgetRenderer) ((Object) dupTemp$1);
           var2 = ic.a(cn.byClickingCreateYouText, new String[]{this.e((byte) 66), this.k(128)}, (byte) -128);
           var3 = 20;
           var3 = var3 + this.a(ks.emailLoginText, 170, var3, 78, this.field_I);
@@ -655,30 +655,30 @@ final class js extends WidgetContainer implements ca, ai, oe {
           var3 = var3 + (5 + this.a(ht.confirmPasswordText, 170, 15632, var3, qw.passwordsMustBeBetweenText, this.field_L));
           var3 = var3 + (this.a(un.playerNameText, 170, 15632, var3, oq.playerNamesCanBeText, this.field_A) + 5);
           var3 = var3 + this.a(170, fm.ageText, var3, this.field_K, 64);
-          var4 = new rt(46, var3, -90 + this.field_q, 25, this.field_H, true, -120 + this.field_q, 5, jm.field_a, 11579568, lv.pleaseSendMeNewsText);
-          this.a(var4, 100);
-          var3 = var3 + var4.field_p;
-          var5 = new gm(kw.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, kw.field_b.field_s, -1, 2147483647, true);
+          var4 = new LabeledWidget(46, var3, -90 + this.width, 25, this.field_H, true, -120 + this.width, 5, jm.field_a, 11579568, lv.pleaseSendMeNewsText);
+          this.addChild(var4, 100);
+          var3 = var3 + var4.height;
+          var5 = new TextWidgetRenderer(kw.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, kw.field_b.field_s, -1, 2147483647, true);
           this.field_C = new ar(var2, var5);
-          this.field_C.field_t = "";
+          this.field_C.tooltip = "";
           this.field_C.a(-90, sb.openInPopupWindowText, 0);
           this.field_C.a(-61, sb.openInPopupWindowText, 1);
-          this.field_C.field_o = (qm) (this);
-          this.field_C.a(var3, false, 46, this.field_q - 90);
-          var3 = var3 + (15 + this.field_C.field_p);
-          this.a(this.field_C, 111);
+          this.field_C.listener = (WidgetListener) (this);
+          this.field_C.a(var3, false, 46, this.width - 90);
+          var3 = var3 + (15 + this.field_C.height);
+          this.addChild(this.field_C, 111);
           var6 = 4;
           var7 = 200;
-          this.field_M.a(118, -var7 + 496 >> 1, var3, 40, var7);
-          this.field_D.a(-122, 3 + var6, 15 + var3, 40, 60);
-          this.field_D.field_o = (qm) (this);
-          this.field_M.field_o = (qm) (this);
-          this.a(this.field_M, 109);
-          this.a(this.field_D, 124);
-          this.field_B = new pe((oe) (this));
-          this.field_B.a(93, 60 + this.field_A.field_q + this.field_A.field_r, this.field_A.field_v + 20, 150, -this.field_A.field_q - this.field_A.field_r + (this.field_q - 60));
-          this.a(this.field_B, 108);
-          this.a(-39, 0, 0, var6 + (var3 + 55), 496);
+          this.field_M.setBounds(118, -var7 + 496 >> 1, var3, 40, var7);
+          this.field_D.setBounds(-122, 3 + var6, 15 + var3, 40, 60);
+          this.field_D.listener = (WidgetListener) (this);
+          this.field_M.listener = (WidgetListener) (this);
+          this.addChild(this.field_M, 109);
+          this.addChild(this.field_D, 124);
+          this.field_B = new NameSuggestionsPanel((oe) (this));
+          this.field_B.setBounds(93, 60 + this.field_A.width + this.field_A.x, this.field_A.y + 20, 150, -this.field_A.width - this.field_A.x + (this.width - 60));
+          this.addChild(this.field_B, 108);
+          this.setBounds(-39, 0, 0, var6 + (var3 + 55), 496);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "js.<init>()");
         }
@@ -781,7 +781,7 @@ final class js extends WidgetContainer implements ca, ai, oe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 2) {
-            this.field_B = (pe) null;
+            this.field_B = (NameSuggestionsPanel) null;
           }
           stackIn_4_0 = "<u=2164A2><col=2164A2>";
           return stackIn_4_0;

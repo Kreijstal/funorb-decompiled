@@ -34,7 +34,7 @@ final class ReassignUpgradesScreen extends MenuScreen {
           wo.a(up.field_c, 490, -20 - MouseWheelInput.field_b.c() / 2 + 290, opacity << 24, 3, toolkit, MouseWheelInput.field_b.c() + 100, -5, 1, true);
           ForceFieldRingEffect.field_t.a(bw.reassignPowerupsText, 5023231 | opacity << 24, -1, 60, 320, 0);
           hc.field_e.a(bw.reassignPowerupsText, -1, -1, 60, 320, 0);
-          gt.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard - 6432, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
+          MessageDialog.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard - 6432, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
           LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard ^ 11104, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
           qv.field_k.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(oc.d(guard ^ -19334) - ok.field_k)}, (byte) -128).toUpperCase(), 5023231 | opacity << 24, -1, 180, 320, 0);
           uq.field_a.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(oc.d(guard + 19434) - ok.field_k)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);

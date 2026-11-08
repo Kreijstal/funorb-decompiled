@@ -49,7 +49,7 @@ final class jc extends na {
         }
     }
 
-    jc(dh param0) {
+    jc(TextInputWidget param0) {
         super(param0);
     }
 

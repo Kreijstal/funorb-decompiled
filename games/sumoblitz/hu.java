@@ -15,8 +15,8 @@ final class hu {
             field_c = (FontMetrics) null;
           }
           if (null == he.field_n) {
-            he.field_n = new m(rf.field_a, t.field_s);
-            rf.field_a.a((byte) 100, he.field_n);
+            he.field_n = new ProgressDialog(rf.field_a, t.field_s);
+            rf.field_a.pushDialog((byte) 100, he.field_n);
           }
           he.field_n.a(false, param1, param0, param2);
           SoftwareRasterizer.clear();

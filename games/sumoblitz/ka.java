@@ -25,7 +25,7 @@ abstract class ka {
             stackIn_9_0 = 34065;
             return stackIn_9_0;
           }
-          if (param0 != rt.field_C) {
+          if (param0 != LabeledWidget.field_C) {
             throw new IllegalArgumentException();
           }
           stackIn_7_0 = 34066;

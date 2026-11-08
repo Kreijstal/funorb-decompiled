@@ -32,13 +32,13 @@ final class im {
             stackIn_4_0 = null;
             return (an) (stackIn_4_0);
           }
-          if (st.field_z == vm.field_c &&
+          if (DropTargetWidget.field_z == vm.field_c &&
             param1.equals(PowerupPickup.field_s)) {
             vm.field_c = hm.field_a;
-            stackIn_8_0 = jh.field_z;
+            stackIn_8_0 = DraggableWidget.field_z;
             return stackIn_8_0;
           }
-          jh.field_z = null;
+          DraggableWidget.field_z = null;
           vm.field_c = ad.field_p;
           PowerupPickup.field_s = param1;
           stackIn_10_0 = null;

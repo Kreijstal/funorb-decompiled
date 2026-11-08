@@ -49,11 +49,11 @@ final class ju extends ua implements cr {
           if (ig.field_a.position >= param1) {
             return true;
           }
-          if (null == qk.field_O) {
+          if (null == DisplayModeConfirmationDialog.field_O) {
             return false;
           }
           try {
-            var2_int = qk.field_O.c(param0 ^ 36);
+            var2_int = DisplayModeConfirmationDialog.field_O.c(param0 ^ 36);
             if (0 >= var2_int) {
               if (~var2_int > param0) {
                 kk.a((byte) -118);
@@ -68,7 +68,7 @@ final class ju extends ua implements cr {
             if (-ig.field_a.position + param1 < var2_int) {
               var2_int = -ig.field_a.position + param1;
             }
-            qk.field_O.a(param0 ^ 99, ig.field_a.position, var2_int, ig.field_a.payload);
+            DisplayModeConfirmationDialog.field_O.a(param0 ^ 99, ig.field_a.position, var2_int, ig.field_a.payload);
             CacheReferenceNode.field_x = wq.a(-47);
             ig.field_a.position = ig.field_a.position + var2_int;
             if (ig.field_a.position < param1) {

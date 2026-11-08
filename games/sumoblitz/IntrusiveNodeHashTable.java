@@ -139,7 +139,7 @@ final class IntrusiveNodeHashTable {
             stackIn_2_0 = 57;
             return stackIn_2_0;
           }
-          if (m.field_X == param1) {
+          if (ProgressDialog.field_X == param1) {
             stackIn_5_0 = 6407;
             return stackIn_5_0;
           }
@@ -159,7 +159,7 @@ final class IntrusiveNodeHashTable {
             stackIn_21_0 = 6410;
             return stackIn_21_0;
           }
-          if (rg.field_A != param1) {
+          if (ModalDialog.field_A != param1) {
             throw new IllegalStateException();
           }
           stackIn_19_0 = 6145;

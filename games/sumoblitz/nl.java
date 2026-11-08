@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class nl extends gm {
+class nl extends TextWidgetRenderer {
     static iw field_p;
     static mp field_n;
     static boolean field_o;
@@ -20,14 +20,14 @@ class nl extends gm {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_s, -1, 2147483647, false);
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+    public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         try {
-          if (param3) {
-            ByteArrayStorage.drawBeveledBorder(param0.field_p, param0.field_r + param4, param0.field_q, (byte) -84, param1 + param0.field_v);
+          if (isEnabled) {
+            ByteArrayStorage.drawBeveledBorder(widget.height, widget.x + parentX, widget.width, (byte) -84, parentY + widget.y);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.renderWidget(widget, parentY, guard, isEnabled, parentX);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nl.A(" + (widget != null ? "{...}" : "null") + ',' + parentY + ',' + guard + ',' + isEnabled + ',' + parentX + ')');
         }
     }
 

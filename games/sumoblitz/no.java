@@ -4,7 +4,7 @@
 final class no {
     static SpriteData field_c;
     static IntrusiveDeque field_d;
-    static cv field_a;
+    static LoginForm field_a;
     static String[] field_b;
 
     public static void releaseStatics(int param0) {

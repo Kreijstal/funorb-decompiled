@@ -18,7 +18,7 @@ final class me {
           }
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!rg.a(98, (char) var3) &&
+            if (!ModalDialog.isAsciiLetter(98, (char) var3) &&
               !ea.a((byte) -54, (char) var3)) {
               return true;
             }

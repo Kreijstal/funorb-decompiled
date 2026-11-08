@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wr extends wp {
+final class wr extends InteractiveWidget {
     static IntrusiveDeque field_E;
     static ci field_G;
     static int field_F;
 
-    wr(String param0, qm param1, boolean param2) {
+    wr(String param0, WidgetListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_C = param2 ? true : false;
@@ -15,10 +15,10 @@ final class wr extends wp {
         }
     }
 
-    private wr(String param0, mh param1, qm param2) {
+    private wr(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.field_w = ks.field_x.field_i;
+          this.renderer = ks.field_x.field_i;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -170,10 +170,10 @@ final class wr extends wp {
         field_E = null;
     }
 
-    private wr(String param0, qm param1) {
+    private wr(String param0, WidgetListener param1) {
         this(param0, ks.field_x.field_h, param1);
         try {
-          this.field_w = ks.field_x.field_i;
+          this.renderer = ks.field_x.field_i;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -209,9 +209,9 @@ final class wr extends wp {
         }
     }
 
-    final void b(int param0, int param1, boolean param2, int param3) {
+    final void notifyAction(int action, int pointerX, boolean guard, int pointerY) {
         this.field_C = !this.field_C ? true : false;
-        super.b(param0, param1, param2, param3);
+        super.notifyAction(action, pointerX, guard, pointerY);
     }
 
     final static wc a(boolean param0, PacketBuffer param1, boolean param2) {

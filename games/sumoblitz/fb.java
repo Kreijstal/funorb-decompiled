@@ -65,7 +65,7 @@ final class fb {
           }
           ks.a(gh.field_a, oh.field_c, false, InwardSparkParticle.field_v, sd.field_e);
           InwardSparkParticle.field_v.a(param2 + 12793, InwardSparkParticle.field_v.position - var5_int);
-          gt.a(param2 + 12793, -1);
+          MessageDialog.a(param2 + 12793, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -36,20 +36,20 @@ final class uj {
         RuntimeException var4_ref2 = null;
         try {
           if (qr.field_b != null) {
-            u.a(param3, param1, (byte) -87, 1048576, param2);
+            DisplayModeErrorDialog.a(param3, param1, (byte) -87, 1048576, param2);
           }
           if (null != qc.field_e) {
             var4_ref = wd.field_f;
             synchronized (var4_ref) {
               qc.field_e.setChannelVolumeScale((byte) -91, -1, param1);
-              if (nd.field_B == param3) {
+              if (GridWidgetContainer.field_B == param3) {
                 return;
               }
               qc.field_e.stop(0);
               wd.field_f.flush();
-              nd.field_B = param3;
-              if (null != nd.field_B) {
-                qc.field_e.playTrack(param2, nd.field_B, 91);
+              GridWidgetContainer.field_B = param3;
+              if (null != GridWidgetContainer.field_B) {
+                qc.field_e.playTrack(param2, GridWidgetContainer.field_B, 91);
               }
             }
           }

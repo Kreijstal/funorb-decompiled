@@ -2,26 +2,26 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cp {
-    mh field_i;
+    WidgetRenderer field_i;
     int field_l;
     int field_m;
     static String instructionsText;
-    mh field_f;
+    WidgetRenderer field_f;
     int field_u;
     int field_d;
     private int field_t;
-    mh field_h;
+    WidgetRenderer field_h;
     int field_s;
-    mh field_j;
+    WidgetRenderer field_j;
     int field_g;
     LegacyBitmapFont field_v;
     static int[] field_c;
-    mh field_e;
+    WidgetRenderer field_e;
     int field_a;
-    mh field_p;
+    WidgetRenderer field_p;
     int field_b;
     private boolean field_o;
-    mh field_n;
+    WidgetRenderer field_n;
     int field_r;
     int field_q;
 
@@ -157,7 +157,7 @@ final class cp {
     final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         SoftwareRasterizer.drawLine(param3, param5, param1, param4, param0);
         if (param2) {
-          this.field_f = (mh) null;
+          this.field_f = (WidgetRenderer) null;
         }
     }
 
@@ -272,7 +272,7 @@ final class cp {
     }
 
     final void a(LegacyBitmapFont param0, byte param1) {
-        gm var17 = null;
+        TextWidgetRenderer var17 = null;
         fl var4 = null;
         Sprite[] var5 = null;
         mg var16 = null;
@@ -295,22 +295,22 @@ final class cp {
         fl var14Lifetime1;
         fl var14Lifetime2;
         try {
-          var17 = new gm(param0, 2, 2, 2236962, 1, 1, 1, param0.field_I + (param0.field_s + 2));
-          this.field_e = (mh) ((Object) var17);
-          var17.field_d = 16777215;
+          var17 = new TextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.field_I + (param0.field_s + 2));
+          this.field_e = (WidgetRenderer) ((Object) var17);
+          var17.textColor = 16777215;
           var4 = new fl();
-          var17.a(var4, -102);
+          var17.copyStyleTo(var4, -102);
           this.field_s = 3;
           this.field_m = 3;
           this.field_l = 3;
           this.field_d = 5592405;
           this.field_v = param0;
-          var4.field_b = 15658734;
+          var4.caretColor = 15658734;
           this.field_r = 15658734;
           this.field_q = 3;
           this.field_t = 15658734;
           this.field_u = -1;
-          var4.field_l = 11711154;
+          var4.selectionColor = 11711154;
           var4.a(false, 0).c(15658734, 17818).a(FontMetrics.a(8947848, 92, 10066329, 7829367), 2147483647);
           var4.a(false, 1).a(FontMetrics.a(11184810, 126, 10066329, 13421772), 2147483647);
           var4.a(false, 3).a(FontMetrics.a(8947848, 97, 7829367, 10066329), 2147483647).a(1, -1).b(1, 1);
@@ -321,26 +321,26 @@ final class cp {
             var16.pixels[var7_int] = 1077952576;
           }
           if (param1 >= -37) {
-            this.field_i = (mh) null;
+            this.field_i = (WidgetRenderer) null;
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.a(false, 4).a(true, true).a(var5, 2147483647);
           var4.a(false, 5).a(ks.a((byte) -71, 0, 65793, 0, 0), 2147483647).a(true, true).c(-1, 17818);
-          this.field_h = (mh) ((Object) var4);
+          this.field_h = (WidgetRenderer) ((Object) var4);
           var6 = new fl(var4, true);
-          var6.field_f = 0;
+          var6.horizontalAlignment = 0;
           var7 = new fl(var4, true);
-          var7.field_f = 0;
+          var7.horizontalAlignment = 0;
           var7.a(ua.a(8947848, -115), 28715);
           var7.a(false, 1).a(ua.a(11184810, -125), 2147483647).c(2236962, 17818);
-          this.field_i = (mh) ((Object) new vg(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_i = (WidgetRenderer) ((Object) new vg(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new va(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new iu(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new fl();
-          var17.a(var8, 107);
+          var17.copyStyleTo(var8, 107);
           var8.a(false, 0).a(FontMetrics.a(15658734, 102, 7829367, 10066329), 2147483647).c(1118481, 17818).d(-1, 30149);
           var8.a(false, 4).a(true, true).a(var5, 2147483647);
-          this.field_j = (mh) ((Object) var8);
+          this.field_j = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
           var10 = new Sprite[9];
@@ -352,8 +352,8 @@ final class cp {
           var12 = new fl();
           var11.a((byte) 116, var9, 0);
           var12.a((byte) 115, var10, 0);
-          this.field_f = (mh) ((Object) var12);
-          this.field_p = (mh) ((Object) var4);
+          this.field_f = (WidgetRenderer) ((Object) var12);
+          this.field_p = (WidgetRenderer) ((Object) var4);
           var13 = new Sprite(7, 4);
           this.field_g = 10;
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};

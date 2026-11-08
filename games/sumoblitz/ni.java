@@ -91,7 +91,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("loginm2", (byte) -23);
                 if (var2 != null) {
-                  nd.errorConnectingToServerText = MusicVoice.a(0, var2);
+                  GridWidgetContainer.errorConnectingToServerText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("loginm1", (byte) -23);
                 if (var2 != null) {
@@ -115,7 +115,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("error_js5connect", (byte) -23);
                 if (null != var2) {
-                  ao.unableToConnectToText = MusicVoice.a(0, var2);
+                  ArrayWidgetContainer.unableToConnectToText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("login_gameupdated", (byte) -23);
                 if (var2 != null) {
@@ -123,7 +123,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("create_unable", (byte) -23);
                 if (null != var2) {
-                  qk.unfortunatelyWeAreUnableText = MusicVoice.a(0, var2);
+                  DisplayModeConfirmationDialog.unfortunatelyWeAreUnableText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_ineligible", (byte) -23);
                 if (null != var2) {
@@ -151,7 +151,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("ticketing_oneunread", (byte) -23);
                 if (var2 != null) {
-                  kq.youHave1UnreadText = MusicVoice.a(0, var2);
+                  FullscreenMembershipDialog.youHave1UnreadText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("ticketing_xunread", (byte) -23);
                 if (var2 != null) {
@@ -1596,7 +1596,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("create_age_tooltip", (byte) -23);
                 if (null != var2) {
-                  dc.typeYourAgeInText = MusicVoice.a(0, var2);
+                  ContentDialog.typeYourAgeInText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_optin_news_tooltip", (byte) -23);
                 if (var2 != null) {
@@ -1644,7 +1644,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("create_alert_nameleadingspace", (byte) -23);
                 if (null != var2) {
-                  m.namesCannotStartOrText = MusicVoice.a(param0 ^ 7, var2);
+                  ProgressDialog.namesCannotStartOrText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_alert_doublespace", (byte) -23);
                 if (var2 != null) {
@@ -1652,11 +1652,11 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("create_alert_passchars", (byte) -23);
                 if (var2 != null) {
-                  ur.passwordsCanOnlyContainText = MusicVoice.a(0, var2);
+                  ContentTransitionDialog.passwordsCanOnlyContainText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passrepeated", (byte) -23);
                 if (var2 != null) {
-                  mc.thisPasswordContainsRepeatedText = MusicVoice.a(0, var2);
+                  ScrollPane.thisPasswordContainsRepeatedText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passlength", (byte) -23);
                 if (null != var2) {
@@ -1808,7 +1808,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("waitingfor_graphics", (byte) -23);
                 if (var2 != null) {
-                  m.waitingForGraphicsText = MusicVoice.a(0, var2);
+                  ProgressDialog.waitingForGraphicsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("waitingfor_models", (byte) -23);
                 if (null != var2) {
@@ -1868,7 +1868,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("loading_music", (byte) -23);
                 if (var2 != null) {
-                  gt.loadingMusicText = MusicVoice.a(param0 ^ 7, var2);
+                  MessageDialog.loadingMusicText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("loading_instruments", (byte) -23);
                 if (var2 != null) {
@@ -2094,7 +2094,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("next", (byte) -23);
                 if (null != var2) {
-                  in.nextText = MusicVoice.a(0, var2);
+                  FadingWidget.nextText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_colon", (byte) -23);
                 if (var2 != null) {
@@ -2726,7 +2726,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("fs_button_close", (byte) -23);
                 if (null != var2) {
-                  jh.closeText = MusicVoice.a(0, var2);
+                  DraggableWidget.closeText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_button_members", (byte) -23);
                 if (null != var2) {
@@ -2754,7 +2754,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("fs_button_tryagain", (byte) -23);
                 if (null != var2) {
-                  kq.tryAgainText = MusicVoice.a(0, var2);
+                  FullscreenMembershipDialog.tryAgainText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_ui_fs_countdown", (byte) -23);
                 if (var2 != null) {
@@ -2846,7 +2846,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("graphics_config_done", (byte) -23);
                 if (var2 != null) {
-                  jh.backText = MusicVoice.a(param0 - 7, var2);
+                  DraggableWidget.backText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("graphics_config_apply", (byte) -23);
                 if (var2 != null) {
@@ -2886,7 +2886,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("DEFAULT_PLAYER_NAME", (byte) -23);
                 if (var2 != null) {
-                  kq.playerText = MusicVoice.a(0, var2);
+                  FullscreenMembershipDialog.playerText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin1", (byte) -23);
                 if (var2 != null) {
@@ -2922,31 +2922,31 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("mustlogin3,1", (byte) -23);
                 if (var2 != null) {
-                  rt.field_G[1] = MusicVoice.a(0, var2);
+                  LabeledWidget.field_G[1] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin3,2", (byte) -23);
                 if (var2 != null) {
-                  rt.field_G[2] = MusicVoice.a(0, var2);
+                  LabeledWidget.field_G[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin3,3", (byte) -23);
                 if (null != var2) {
-                  rt.field_G[3] = MusicVoice.a(0, var2);
+                  LabeledWidget.field_G[3] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin3,4", (byte) -23);
                 if (null != var2) {
-                  rt.field_G[4] = MusicVoice.a(0, var2);
+                  LabeledWidget.field_G[4] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin3,5", (byte) -23);
                 if (null != var2) {
-                  rt.field_G[5] = MusicVoice.a(0, var2);
+                  LabeledWidget.field_G[5] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("mustlogin3,6", (byte) -23);
                 if (var2 != null) {
-                  rt.field_G[6] = MusicVoice.a(param0 - 7, var2);
+                  LabeledWidget.field_G[6] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("mustlogin3,7", (byte) -23);
                 if (var2 != null) {
-                  rt.field_G[7] = MusicVoice.a(jg.a(param0, 7), var2);
+                  LabeledWidget.field_G[7] = MusicVoice.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("discard", (byte) -23);
                 if (null != var2) {

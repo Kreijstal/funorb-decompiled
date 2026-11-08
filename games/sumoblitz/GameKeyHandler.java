@@ -14,7 +14,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              vo.a(-125, (char) var2_int)) {
+              ScrollControl.isCp1252Character(-125, (char) var2_int)) {
               var3 = CacheReferenceNode.field_s + 1 & 127;
               if (var3 != bj.field_a) {
                 cp.field_c[CacheReferenceNode.field_s] = -1;
@@ -104,7 +104,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        if (gt.arcadeMode) {
+        if (MessageDialog.arcadeMode) {
           return;
         }
         try {
@@ -201,9 +201,9 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static vo a(byte param0) {
+    final static ScrollControl a(byte param0) {
         int var1 = -91 % ((79 - param0) / 41);
-        return new vo(0, 0, ks.field_x.field_g, 0, (mh) null, ks.field_x.field_f, ks.field_x.field_p, ks.field_x.field_g, ks.field_x.field_g, ks.field_x.field_a, ks.field_x.field_b, false, true, 32768, 0);
+        return new ScrollControl(0, 0, ks.field_x.field_g, 0, (WidgetRenderer) null, ks.field_x.field_f, ks.field_x.field_p, ks.field_x.field_g, ks.field_x.field_g, ks.field_x.field_a, ks.field_x.field_b, false, true, 32768, 0);
     }
 
     final static boolean a(cn param0, int param1, cn param2) {

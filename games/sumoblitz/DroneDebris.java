@@ -46,7 +46,7 @@ final class DroneDebris extends TimedSceneEffect {
             ht.field_e[2 + this.fragmentIndex].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
           } else {
             if (this.droneType == 1) {
-              dc.field_ab[this.fragmentIndex + 2].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(this.rotation * 65535.0), 1, 0, 2);
+              ContentDialog.field_ab[this.fragmentIndex + 2].a((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(this.rotation * 65535.0), 1, 0, 2);
             } else {
               if (this.droneType != 2) {
                 if (this.droneType != 3) {

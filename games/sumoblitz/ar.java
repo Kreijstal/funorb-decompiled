@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ar extends wp {
+class ar extends InteractiveWidget {
     static IntrusiveNodeHashTable field_N;
     private s field_J;
     static String connectionTimedOutPleaseText;
@@ -13,10 +13,10 @@ class ar extends wp {
     static tf field_L;
 
     final void a(int param0, boolean param1, int param2, int param3) {
-        this.a(-50, param2, param0, ((de) ((Object) this.field_w)).b((UiWidget) (this), (byte) 116), param3);
+        this.setBounds(-50, param2, param0, ((TextWidgetLayout) ((Object) this.renderer)).measuredTextHeight((UiWidget) (this), (byte) 116), param3);
         if (param1) {
           UiWidget var6 = (UiWidget) null;
-          this.a(-89, -87, (UiWidget) null, -5);
+          this.update(-89, -87, (UiWidget) null, -5);
         }
     }
 
@@ -31,7 +31,7 @@ class ar extends wp {
         field_L = null;
     }
 
-    void a(int param0, int param1, UiWidget param2, int param3) {
+    void update(int parentX, int guard, UiWidget root, int parentY) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -41,12 +41,12 @@ class ar extends wp {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, -117, param2, param3);
-          var5_int = 65 % ((param1 + 25) / 45);
+          super.update(parentX, -117, root, parentY);
+          var5_int = 65 % ((guard + 25) / 45);
           this.field_J = null;
-          if (this.field_k) {
-            var6 = -this.field_r + (-param0 + ko.field_p);
-            var7 = -param3 + (pi.field_e - this.field_v);
+          if (this.hovered) {
+            var6 = -this.x + (-parentX + ko.field_p);
+            var7 = -parentY + (pi.field_e - this.y);
             this.field_J = this.b(-40, var6, var7);
           }
           return;
@@ -54,13 +54,13 @@ class ar extends wp {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_6_0 = var5;
-          stackIn_6_1 = new StringBuilder().append("ar.U(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_6_1 = new StringBuilder().append("ar.U(").append(parentX).append(',').append(guard).append(',');
+          if (root == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(parentY).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ class ar extends wp {
         int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
         int var2;
-        de var3;
+        TextWidgetLayout var3;
         TextLayout var4;
         int var5;
         String var6;
@@ -159,20 +159,20 @@ class ar extends wp {
         var16 = Sumoblitz.field_L ? 1 : 0;
         this.field_H = new IntrusiveDeque();
         var2 = 0;
-        var3 = (de) ((Object) this.field_w);
-        var4 = var3.b(-3, (UiWidget) (this));
+        var3 = (TextWidgetLayout) ((Object) this.renderer);
+        var4 = var3.layoutText(-3, (UiWidget) (this));
         if (param0 != 9) {
           connectionTimedOutPleaseText = (String) null;
         }
         while (true) {
-          var5 = this.field_m.indexOf("<hotspot=", var2);
+          var5 = this.text.indexOf("<hotspot=", var2);
           if (var5 == -1) {
             return;
           }
-          var7 = this.field_m.indexOf(">", var5);
-          var6 = this.field_m.substring(9 + var5, var7);
+          var7 = this.text.indexOf(">", var5);
+          var6 = this.text.substring(9 + var5, var7);
           var7Lifetime1 = Integer.parseInt(var6);
-          var2 = this.field_m.indexOf("</hotspot>", var5);
+          var2 = this.text.indexOf("</hotspot>", var5);
           var8 = var4.lineForCharacter(var5, -17500);
           var9 = var4.lineForCharacter(var2, param0 - 17509);
           var10 = null;
@@ -194,7 +194,7 @@ class ar extends wp {
               stackIn_13_0 = var4.caretX((byte) 126, var2);
             }
             var14 = stackIn_13_0;
-            var15 = new s(var7Lifetime1, var13, var12.top, -var13 + var14, Math.max(var3.a(14763), -var12.top + var12.bottom));
+            var15 = new s(var7Lifetime1, var13, var12.top, -var13 + var14, Math.max(var3.lineHeight(14763), -var12.top + var12.bottom));
             if (var10 != null) {
               ((s) (var10)).field_r = var15;
             }
@@ -204,30 +204,30 @@ class ar extends wp {
         }
     }
 
-    ar(String param0, mh param1) {
-        super(param0, (qm) null);
+    ar(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetListener) null);
         this.field_J = null;
         try {
-          this.field_w = param1;
+          this.renderer = param1;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ar.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(-114, param1, param2, param3, param4);
-        int var6 = -60 / ((param0 - 28) / 63);
+    final void setBounds(int guard, int newX, int newY, int newHeight, int newWidth) {
+        super.setBounds(-114, newX, newY, newHeight, newWidth);
+        int var6 = -60 / ((guard - 28) / 63);
         this.a(9);
     }
 
-    boolean a(UiWidget param0, byte param1) {
+    boolean requestFocus(UiWidget root, byte guard) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == 61) {
+          if (guard == 61) {
             return false;
           }
           field_N = (IntrusiveNodeHashTable) null;
@@ -237,12 +237,12 @@ class ar extends wp {
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("ar.Q(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -270,21 +270,21 @@ class ar extends wp {
         return null;
     }
 
-    void a(int param0, int param1, byte param2, int param3) {
+    void renderLayer(int parentX, int parentY, byte guard, int layer) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, (byte) -113, param3);
-        if (param3 != 0) {
+        super.renderLayer(parentX, parentY, (byte) -113, layer);
+        if (layer != 0) {
           return;
         }
-        de var9 = (de) ((Object) this.field_w);
-        if (param2 >= -35) {
+        TextWidgetLayout var9 = (TextWidgetLayout) ((Object) this.renderer);
+        if (guard >= -35) {
           field_L = (tf) null;
         }
         s var6 = this.field_J;
         if (var6 != null) {
-          var7 = var9.a(param0, (UiWidget) (this), 16098);
-          var8 = var9.b(param1, (UiWidget) (this), 0);
+          var7 = var9.textOriginX(parentX, (UiWidget) (this), 16098);
+          var8 = var9.textOriginY(parentY, (UiWidget) (this), 0);
           do {
             AudioServiceThread.drawDottedRectangle(-2 + (var6.field_l + var8), var6.field_t + 2, -13181, -2 + (var7 + var6.field_s), 2 + var6.field_p);
             var6 = var6.field_r;
@@ -336,25 +336,25 @@ class ar extends wp {
         }
     }
 
-    final void b(int param0, int param1, boolean param2, int param3) {
-        super.b(param0, param1, param2, param3);
-        int var5 = -this.field_r + param1;
-        int var6 = param3 - this.field_v;
+    final void notifyAction(int action, int pointerX, boolean guard, int pointerY) {
+        super.notifyAction(action, pointerX, guard, pointerY);
+        int var5 = -this.x + pointerX;
+        int var6 = pointerY - this.y;
         s var7 = this.b(126, var5, var6);
         if (var7 != null &&
-          this.field_o != null) {
-          ((ca) ((Object) this.field_o)).a(var7.field_q, this, param0, -20036);
+          this.listener != null) {
+          ((ca) ((Object) this.listener)).a(var7.field_q, this, action, -20036);
         }
     }
 
-    String c(int param0) {
+    String hoveredTooltip(int guard) {
         if (null == this.field_J) {
           return null;
         }
         if (this.field_I == null) {
           return null;
         }
-        if (param0 != -6696) {
+        if (guard != -6696) {
           connectionTimedOutPleaseText = (String) null;
         }
         if (this.field_I.length <= this.field_J.field_q) {

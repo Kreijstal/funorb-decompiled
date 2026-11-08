@@ -3,19 +3,19 @@
  */
 import java.io.*;
 
-final class tm implements mh {
+final class tm implements WidgetRenderer {
     static String field_b;
     static int field_d;
     static jr field_a;
     static int[] field_c;
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+    public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         try {
-          if (param2 != 5592405) {
+          if (guard != 5592405) {
             field_a = (jr) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "tm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "tm.A(" + (widget != null ? "{...}" : "null") + ',' + parentY + ',' + guard + ',' + isEnabled + ',' + parentX + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class tm implements mh {
             ql.field_v = param5;
             vp.field_a = param7;
             jm.field_b = param13;
-            mc.field_C = param9;
+            ScrollPane.field_C = param9;
             CacheReferenceNode.field_t = param2;
             qn.field_a = param10;
             if (param1 != 84) {
@@ -50,7 +50,7 @@ final class tm implements mh {
               return;
             }
             try {
-              pe.field_E = new gj(CacheReferenceNode.field_t.field_n, 64, 0);
+              NameSuggestionsPanel.field_E = new gj(CacheReferenceNode.field_t.field_n, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,8 +87,8 @@ final class tm implements mh {
         BufferedSocket.field_p = null;
         InstrumentNoteMask.field_n = null;
         cd.field_d = 0;
-        int var2 = ie.field_x;
-        ie.field_x = rl.field_q;
+        int var2 = SingleChildWidget.field_x;
+        SingleChildWidget.field_x = rl.field_q;
         rl.field_q = var2;
         if (param0 == 51) {
           jk.field_b.field_j = 2;

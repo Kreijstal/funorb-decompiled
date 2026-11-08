@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hc {
-    static gt field_c;
+    static MessageDialog field_c;
     static ToolkitFont field_e;
     static int field_f;
     static SpriteData[] field_a;

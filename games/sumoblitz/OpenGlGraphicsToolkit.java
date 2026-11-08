@@ -116,7 +116,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          jaggl.OpenGL.glTexEnvi(8960, 34176 + param1, kq.a(81, param4));
+          jaggl.OpenGL.glTexEnvi(8960, 34176 + param1, FullscreenMembershipDialog.a(81, param4));
           var6_int = 45 / ((16 - param0) / 56);
           if (!param2) {
             stackIn_7_0 = 8960;
@@ -1281,7 +1281,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
 
     final void a(int param0, boolean param1, byte param2, mi param3) {
         try {
-          jaggl.OpenGL.glTexEnvi(8960, 34184 + param0, kq.a(127, param3));
+          jaggl.OpenGL.glTexEnvi(8960, 34184 + param0, FullscreenMembershipDialog.a(127, param3));
           jaggl.OpenGL.glTexEnvi(8960, param0 + 34200, !param1 ? 770 : 771);
           int var5_int = -37 % ((param2 - 1) / 45);
         } catch (RuntimeException runtimeException) {

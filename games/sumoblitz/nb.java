@@ -11,7 +11,7 @@ final class nb {
     }
 
     final static void a(boolean param0) {
-        SlowBurstParticle.field_y.b((byte) -107, new fo());
+        SlowBurstParticle.field_y.transitionToContent((byte) -107, new AccountSignupPrompt());
         if (!param0) {
           nb.a(false);
         }

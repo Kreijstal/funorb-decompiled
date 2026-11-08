@@ -106,7 +106,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -1 % ((39 - param1) / 49);
-          stackIn_1_0 = kq.a((int)param0.length(), param0, (byte) 103);
+          stackIn_1_0 = FullscreenMembershipDialog.a((int)param0.length(), param0, (byte) 103);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -179,7 +179,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
           var2 = param0.getParameter("username");
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (vo.a(var3, 7441) != 0L) {
+            if (ScrollControl.encodeBase37Name(var3, 7441) != 0L) {
               if (param1 > -42) {
                 field_c = -99;
               }

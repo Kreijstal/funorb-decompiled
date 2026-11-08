@@ -17,7 +17,7 @@ final class mn {
 
     final static void b(byte param0) {
         if (null != rf.field_a) {
-          rf.field_a.e(false);
+          rf.field_a.finishDialogAnimations(false);
           if (null != he.field_n) {
             he.field_n.k(-43);
           }

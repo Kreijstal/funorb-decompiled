@@ -59,7 +59,7 @@ final class br {
           if (wh.field_s != 2) {
             return 0;
           }
-          if (lc.a(false, this.field_d)) {
+          if (StatusMessagePanel.a(false, this.field_d)) {
             return 1;
           }
           return 0;
@@ -73,7 +73,7 @@ final class br {
         if (wh.field_s != 2) {
           return 0;
         }
-        if (lc.a(false, this.field_d)) {
+        if (StatusMessagePanel.a(false, this.field_d)) {
           return 1;
         }
         return 0;

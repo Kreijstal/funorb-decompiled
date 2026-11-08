@@ -75,8 +75,8 @@ final class id extends IntrusiveNode {
         try {
           this.field_n = param2;
           this.field_q = param6;
-          fieldTemp$0 = ld.field_D;
-          ld.field_D = ld.field_D + 1;
+          fieldTemp$0 = DropDownWidget.field_D;
+          DropDownWidget.field_D = DropDownWidget.field_D + 1;
           this.field_r = 65535 & fieldTemp$0;
           this.field_t = param1;
           this.field_p = param4;

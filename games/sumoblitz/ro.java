@@ -115,10 +115,10 @@ final class ro {
                     var18 = 0;
                     var14Lifetime1 = var18;
                     while (var18 < var10) {
-                      var13[var18] = UiWidget.a((byte) -24, var11[var18]);
+                      var13[var18] = UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var11[var18]);
                       var18++;
                     }
-                    var5.field_s[var6] = param2.a(0, UiWidget.a((byte) -24, var20), var21, var13);
+                    var5.field_s[var6] = param2.a(0, UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var20), var21, var13);
                     var5.field_u[var6] = var22;
                   }
                 } else {
@@ -132,7 +132,7 @@ final class ro {
                   }
                   var5.field_r[var6] = var7_int;
                   var5.field_n[var6] = var10;
-                  var5.field_o[var6] = param2.a(0, var16, UiWidget.a((byte) -24, var17));
+                  var5.field_o[var6] = param2.a(0, var16, UiWidget.resolvePrimitiveOrNamedClass((byte) -24, var17));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -185,7 +185,7 @@ final class ro {
 
     final static void b(int param0) {
         ks.field_x = fw.c(false);
-        rf.field_a = new dg();
+        rf.field_a = new DialogLayer();
         sm.a((byte) 127, true, true);
         if (param0 != 246) {
           ro.a(22, 45, -112, 42, -110, true, -91, 8, 90);

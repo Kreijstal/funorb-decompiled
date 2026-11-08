@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tc extends na {
-    private dh field_e;
+    private TextInputWidget field_e;
     static ToolkitSprite[] field_j;
     static SpriteData field_i;
     static ck field_g;
-    private dh field_h;
+    private TextInputWidget field_h;
     static String field_f;
 
     final String a(int param0, String param1) {
@@ -28,23 +28,23 @@ final class tc extends na {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_h.field_m.toLowerCase();
+          var3 = this.field_h.text.toLowerCase();
           var4 = param1.toLowerCase();
           if (param0 == var4.length()) {
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (ao.a(var5, 30996)) {
+          if (ArrayWidgetContainer.a(var5, 30996)) {
             stackIn_5_0 = sg.passwordsMustBeBetweenText;
             return stackIn_5_0;
           }
           if (me.a(false, var5)) {
-            stackIn_8_0 = ur.passwordsCanOnlyContainText;
+            stackIn_8_0 = ContentTransitionDialog.passwordsCanOnlyContainText;
             return stackIn_8_0;
           }
           if (hp.a(var5, true)) {
-            stackIn_11_0 = mc.thisPasswordContainsRepeatedText;
+            stackIn_11_0 = ScrollPane.thisPasswordContainsRepeatedText;
             return stackIn_11_0;
           }
           if (this.b(-53, param1)) {
@@ -55,7 +55,7 @@ final class tc extends na {
             stackIn_28_0 = ka.passwordIsValidText;
             return stackIn_28_0;
           }
-          if (gt.a(var5, var3, 82)) {
+          if (MessageDialog.a(var5, var3, 82)) {
             stackIn_19_0 = vr.thisPasswordContainsYourText;
             return stackIn_19_0;
           }
@@ -95,7 +95,7 @@ final class tc extends na {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_h.field_m.toLowerCase();
+          var3 = this.field_h.text.toLowerCase();
           var4 = param1.toLowerCase();
           if (var4.length() == 0) {
             stackIn_2_0 = qr.field_e;
@@ -141,7 +141,7 @@ final class tc extends na {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = this.field_e.field_m.toLowerCase();
+          var9 = this.field_e.text.toLowerCase();
           var4 = param1.toLowerCase();
           var5 = -109 % ((10 - param0) / 60);
           if (0 < var9.length() &&
@@ -177,7 +177,7 @@ final class tc extends na {
 
     final static void e(int param0) {
         FontMetrics.field_b = 0;
-        qk.field_T = -1;
+        DisplayModeConfirmationDialog.field_T = -1;
         bn.field_P = false;
         ei.field_a = 0;
         if (param0 >= 85) {
@@ -202,7 +202,7 @@ final class tc extends na {
         field_f = null;
     }
 
-    tc(dh param0, dh param1, dh param2) {
+    tc(TextInputWidget param0, TextInputWidget param1, TextInputWidget param2) {
         super(param0);
         try {
           this.field_e = param2;

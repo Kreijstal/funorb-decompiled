@@ -31,7 +31,7 @@ final class tf {
             return null;
           }
           if (param1 < -11) {
-            stackIn_7_0 = vo.a(false, param0.a((byte) 94, param3, param2));
+            stackIn_7_0 = ScrollControl.a(false, param0.a((byte) 94, param3, param2));
             return stackIn_7_0;
           }
           stackIn_5_0 = (bo) null;

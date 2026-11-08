@@ -622,10 +622,10 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         try {
           this.field_Bc = param2;
           this.field_ab = param0;
-          if (!mc.b((byte) -107, "jaclib")) {
+          if (!ScrollPane.b((byte) -107, "jaclib")) {
             throw new RuntimeException("");
           }
-          if (!mc.b((byte) 97, "jaggl")) {
+          if (!ScrollPane.b((byte) 97, "jaggl")) {
             throw new RuntimeException("");
           }
           try {
@@ -1968,7 +1968,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           var8 = jo.a(var8, false);
           jaggl.OpenGL.glVertex2f(var6 + (float)param2, var7);
           for (var9 = 16384 - var8; var9 > 0; var9 = var9 - var8) {
-            jaggl.OpenGL.glVertex2f((float)param2 * dh.field_M[var9] + var6, dh.field_N[var9] * (float)param2 + var7);
+            jaggl.OpenGL.glVertex2f((float)param2 * TextInputWidget.field_M[var9] + var6, TextInputWidget.field_N[var9] * (float)param2 + var7);
           }
           jaggl.OpenGL.glEnd();
           return;

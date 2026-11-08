@@ -24,10 +24,10 @@ abstract class za extends IntrusiveNode {
         try {
           var5_int = param3;
           while (true) {
-            if (rg.field_C.length <= var5_int) {
+            if (ModalDialog.field_C.length <= var5_int) {
               return;
             }
-            param2 = rg.field_C[var5_int];
+            param2 = ModalDialog.field_C[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param2;

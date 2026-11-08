@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fu extends wp {
+final class fu extends InteractiveWidget {
     int field_J;
     private rs field_H;
     static String namesCanOnlyContainText;
@@ -24,8 +24,8 @@ final class fu extends wp {
             if (null != jk.field_b) {
               jk.field_b.c(-106);
             }
-            if (in.field_D != null) {
-              in.field_D.b(109);
+            if (FadingWidget.field_D != null) {
+              FadingWidget.field_D.b(109);
             }
             if (null != bc.field_a) {
               try {
@@ -38,11 +38,11 @@ final class fu extends wp {
             if (param0 != -1) {
               namesCanOnlyContainText = (String) null;
             }
-            if (m.field_O != null) {
-              for (var1_int = 0; m.field_O.length > var1_int; var1_int++) {
-                if (null != m.field_O[var1_int]) {
+            if (ProgressDialog.field_O != null) {
+              for (var1_int = 0; ProgressDialog.field_O.length > var1_int; var1_int++) {
+                if (null != ProgressDialog.field_O[var1_int]) {
                   try {
-                    m.field_O[var1_int].b(-1);
+                    ProgressDialog.field_O[var1_int].b(-1);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -97,7 +97,7 @@ final class fu extends wp {
         return this.field_H.a((byte) 70);
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean onPointerPressed(UiWidget root, int guard, int pointerY, int button, int parentX, int pointerX, int parentY) {
         int var12 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -112,14 +112,14 @@ final class fu extends wp {
         int var14 = 0;
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param1 > -42) {
+          if (guard > -42) {
             fu.f(-122);
           }
-          if (!super.a(param0, -105, param2, param3, param4, param5, param6)) {
+          if (!super.onPointerPressed(root, -105, pointerY, button, parentX, pointerX, parentY)) {
             return false;
           }
-          var8_int = param5 - (param4 + this.field_I);
-          var9 = -(this.field_I * 2) + this.field_q;
+          var8_int = pointerX - (parentX + this.field_I);
+          var9 = -(this.field_I * 2) + this.width;
           if (var9 < var8_int) {
             var8_int = var9;
           }
@@ -127,8 +127,8 @@ final class fu extends wp {
             var8_int = 0;
           }
           var8_int = var8_int * this.field_G / var9;
-          if (param3 != 1) {
-            if (param3 != 2) {
+          if (button != 1) {
+            if (button != 2) {
               return true;
             }
             var10 = 2147483647;
@@ -153,12 +153,12 @@ final class fu extends wp {
           var8 = decompiledCaughtException;
           stackIn_28_0 = var8;
           stackIn_28_1 = new StringBuilder().append("fu.R(");
-          if (param0 == null) {
+          if (root == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(guard).append(',').append(pointerY).append(',').append(button).append(',').append(parentX).append(',').append(pointerX).append(',').append(parentY).append(')').toString());
         }
     }
 
@@ -173,10 +173,10 @@ final class fu extends wp {
 
     final static void f(int param0) {
         try {
-          if (pe.field_E != null) {
+          if (NameSuggestionsPanel.field_E != null) {
             try {
-              pe.field_E.a(-7564, 0L);
-              pe.field_E.a(ig.field_a.payload, 24, (byte) -41, ig.field_a.position);
+              NameSuggestionsPanel.field_E.a(-7564, 0L);
+              NameSuggestionsPanel.field_E.a(ig.field_a.payload, 24, (byte) -41, ig.field_a.position);
             } catch (Exception exception) {
             }
           }

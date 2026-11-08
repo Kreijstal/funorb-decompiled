@@ -55,7 +55,7 @@ final class qc {
         String var11 = null;
         int var7 = 0;
         int var8 = 0;
-        wo.a(hf.field_H, 160, 140, -16777216, 3, param0, 360, 170, 1, true);
+        wo.a(ResizingDialog.field_H, 160, 140, -16777216, 3, param0, 360, 170, 1, true);
         if (!(Sumoblitz.field_J.length <= this.field_d)) {
           wo.a(up.field_c, Sumoblitz.field_J[this.field_d].a() + 6, 167, -16777216, 3, param0, Sumoblitz.field_J[this.field_d].c() + 6, 187, 1, true);
           Sumoblitz.field_J[this.field_d].a(170, 190);
@@ -72,7 +72,7 @@ final class qc {
         try {
           var10 = LimitedRandomAccessFile.droneDescriptions[2 * this.field_d + 1];
           var3_int -= 10;
-          gt.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, param1 - 4312, var10, (SpriteMask) null, 1, 0);
+          MessageDialog.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, param1 - 4312, var10, (SpriteMask) null, 1, 0);
           LegacyOpenGlEffect.field_c.a(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, -8787, var10, (SpriteMask) null, 1, 0);
           if (this.field_b <= 0) {
             var4 += 115;
@@ -130,7 +130,7 @@ final class qc {
         if (!param1) {
           return;
         }
-        ld.field_N.b((byte) -128);
+        DropDownWidget.field_N.b((byte) -128);
         ut.field_j = 0;
     }
 

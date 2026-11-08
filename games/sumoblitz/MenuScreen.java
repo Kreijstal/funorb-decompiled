@@ -212,14 +212,14 @@ class MenuScreen {
           var15 = this.field_c;
         }
         if (var15 == -1) {
-          gt.field_db.a(hk.mouseOverAnIconText, param2 << 24 | 5023231, -1, 348, 320, 0);
+          MessageDialog.field_db.a(hk.mouseOverAnIconText, param2 << 24 | 5023231, -1, 348, 320, 0);
           LegacyOpenGlEffect.field_c.a(hk.mouseOverAnIconText, var5, -1, 348, 320, 0);
           if (vs.b((byte) 9)) {
-            gt.field_db.a(InstrumentNoteMask.createAFreeAccountText, var5, -1, 64 + (SocketConnector.field_a.field_i * 3 + 200), 320, 0);
+            MessageDialog.field_db.a(InstrumentNoteMask.createAFreeAccountText, var5, -1, 64 + (SocketConnector.field_a.field_i * 3 + 200), 320, 0);
             LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.createAFreeAccountText, var5, -1, 32 + (SocketConnector.field_a.field_i * 3 + 200 + 32), 320, 0);
           }
         } else {
-          wo.a(hf.field_H, 160, 140, param2 << 24, 3, var22, 360, 160, 1, true);
+          wo.a(ResizingDialog.field_H, 160, 140, param2 << 24, 3, var22, 360, 160, 1, true);
           var8Lifetime2 = 390;
           var13Lifetime1 = 310;
           var17_ref_String = Integer.toString(sl.field_c[var15] * 100);
@@ -227,8 +227,8 @@ class MenuScreen {
             (1 << var15 & var14) == 0) {
             var17_ref_String = MusicVoice.field_s;
           }
-          gt.field_db.a(pe.orbPointsText + ": " + var17_ref_String, param2 << 24 | 5023231, var7, var13Lifetime1, var8Lifetime2, 0);
-          LegacyOpenGlEffect.field_c.a(pe.orbPointsText + ": " + var17_ref_String, var5, var7, var13Lifetime1, var8Lifetime2, 0);
+          MessageDialog.field_db.a(NameSuggestionsPanel.orbPointsText + ": " + var17_ref_String, param2 << 24 | 5023231, var7, var13Lifetime1, var8Lifetime2, 0);
+          LegacyOpenGlEffect.field_c.a(NameSuggestionsPanel.orbPointsText + ": " + var17_ref_String, var5, var7, var13Lifetime1, var8Lifetime2, 0);
           var13Lifetime1Lifetime1 = 280;
           var8Lifetime2Lifetime1 = 490;
           stackIn_77_0 = ((1 << var15 & var14) == 0) ? 0 : 1;
@@ -236,23 +236,23 @@ class MenuScreen {
           var8Lifetime2Lifetime2 = 390;
           var13Lifetime1Lifetime2 = 210;
           if (var18Lifetime1 == 0) {
-            gt.field_db.a(gi.notYetAchievedText, param2 << 24 | 5023231, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            MessageDialog.field_db.a(gi.notYetAchievedText, param2 << 24 | 5023231, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
             LegacyOpenGlEffect.field_c.a(gi.notYetAchievedText, 16720452 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
           }
           if (var18Lifetime1 != 0 ||
             var21 != 0) {
-            gt.field_db.a(ab.achievedText, 5023231 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            MessageDialog.field_db.a(ab.achievedText, 5023231 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
             LegacyOpenGlEffect.field_c.a(ab.achievedText, param2 << 24 | 2293572, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
           }
           var13Lifetime1Lifetime2 += 10;
           var8Lifetime2Lifetime2 -= 10;
           var19Lifetime1 = 160;
-          var17_ref_StringLifetime1 = jh.achievementDescriptions[var15];
+          var17_ref_StringLifetime1 = DraggableWidget.achievementDescriptions[var15];
           if (var11[var15] &&
             (var14 & 1 << var15) == 0) {
             var17_ref_StringLifetime1 = jf.thisIsAHiddenText;
           }
-          gt.field_db.a(480, 5023231 | param2 << 24, 0, var19Lifetime1 + 20, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (ToolkitSprite[]) null, 8 + var13Lifetime1Lifetime2, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (SpriteMask) null, 1, 0);
+          MessageDialog.field_db.a(480, 5023231 | param2 << 24, 0, var19Lifetime1 + 20, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (ToolkitSprite[]) null, 8 + var13Lifetime1Lifetime2, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (SpriteMask) null, 1, 0);
           LegacyOpenGlEffect.field_c.a(480, var5, 0, 20 + var19Lifetime1, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (ToolkitSprite[]) null, var13Lifetime1Lifetime2 + 8, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (SpriteMask) null, 1, 0);
           var8Lifetime2Lifetime3 = 390;
           var13Lifetime1Lifetime3 = 190;
@@ -308,7 +308,7 @@ class MenuScreen {
               qv.field_k.a(var4, var3, 5023231 | param0 << 24, GameInstructions.objectiveHelpLines[var5], (byte) -11, 0);
               uq.field_a.a(var4, var3, 16777215 | param0 << 24, GameInstructions.objectiveHelpLines[var5], (byte) -37, 0);
             } else {
-              gt.field_db.a(100, param0 << 24 | 5023231, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.objectiveHelpLines[var5], (SpriteMask) null, 0, 1);
+              MessageDialog.field_db.a(100, param0 << 24 | 5023231, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.objectiveHelpLines[var5], (SpriteMask) null, 0, 1);
               LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.objectiveHelpLines[var5], (SpriteMask) null, 0, 1);
             }
             if (var5 >= 1) {
@@ -323,7 +323,7 @@ class MenuScreen {
           this.a(28, false);
         }
         while (GameInstructions.controlsHelpLines.length > var5) {
-          gt.field_db.a(100, 5023231 | param0 << 24, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var5], (SpriteMask) null, 0, 1);
+          MessageDialog.field_db.a(100, 5023231 | param0 << 24, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var5], (SpriteMask) null, 0, 1);
           LegacyOpenGlEffect.field_c.a(100, param0 << 24 | 16777215, 0, 520, var3, (int[]) null, (ToolkitSprite[]) null, var4, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var5], (SpriteMask) null, 0, 1);
           if (var6 == 0) {
             if (var5 >= 1) {
@@ -430,10 +430,10 @@ class MenuScreen {
             if (var8 != 25) {
               if (var8 != 27) {
                 if (var8 == 33) {
-                  if (!gt.arcadeMode) {
+                  if (!MessageDialog.arcadeMode) {
                     stackIn_30_0 = mm.levelSelectText;
                   } else {
-                    stackIn_30_0 = wp.returnToMainMenuText;
+                    stackIn_30_0 = InteractiveWidget.returnToMainMenuText;
                   }
                   var22 = stackIn_30_0;
                   var18_ref_String = var22;
@@ -456,7 +456,7 @@ class MenuScreen {
                 if (bl.field_e != -1) {
                   return;
                 }
-                wo.a(hf.field_H, var11 + 8, 9 + var7, param4, 1, param3, var10 - 18, 22 + var6_int - var11, 1, true);
+                wo.a(ResizingDialog.field_H, var11 + 8, 9 + var7, param4, 1, param3, var10 - 18, 22 + var6_int - var11, 1, true);
                 if (var21 == 0) {
                   return;
                 }
@@ -708,18 +708,18 @@ class MenuScreen {
         qv.field_k.a(var5, var3, 5023231 | param1 << 24, GameInstructions.dronesHelpLines[0], (byte) -37, 0);
         uq.field_a.a(var5, var3, 16777215 | param1 << 24, GameInstructions.dronesHelpLines[0], (byte) -8, 0);
         var5 += 30;
-        dc.field_ab[0].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        dc.field_ab[1].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        gt.field_db.a(var5, 60 + var3, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[1], (byte) -120, 0);
+        ContentDialog.field_ab[0].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
+        ContentDialog.field_ab[1].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
+        MessageDialog.field_db.a(var5, 60 + var3, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[1], (byte) -120, 0);
         LegacyOpenGlEffect.field_c.a(var5, 60 + var3, 5023231 | param1 << 24, GameInstructions.dronesHelpLines[1], (byte) -56, 0);
-        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[2], (SpriteMask) null, 0, 0);
+        MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[2], (SpriteMask) null, 0, 0);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[2], (SpriteMask) null, 0, 0);
         var5 += 70;
         s.field_n[0].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
         s.field_n[1].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        gt.field_db.a(var5, var3 + 60, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[3], (byte) -110, 0);
+        MessageDialog.field_db.a(var5, var3 + 60, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[3], (byte) -110, 0);
         LegacyOpenGlEffect.field_c.a(var5, 60 + var3, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[3], (byte) -117, 0);
-        gt.field_db.a(100, param1 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[4], (SpriteMask) null, 0, 0);
+        MessageDialog.field_db.a(100, param1 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[4], (SpriteMask) null, 0, 0);
         LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[4], (SpriteMask) null, 0, 0);
         var5 += 70;
         hv.field_d[0].a((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
@@ -727,9 +727,9 @@ class MenuScreen {
         if (!param0) {
           this.resetSelection(-98, false);
         }
-        gt.field_db.a(var5, 60 + var3, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[5], (byte) -92, 0);
+        MessageDialog.field_db.a(var5, 60 + var3, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[5], (byte) -92, 0);
         LegacyOpenGlEffect.field_c.a(var5, var3 + 60, 5023231 | param1 << 24, GameInstructions.dronesHelpLines[5], (byte) -59, 0);
-        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[6], (SpriteMask) null, 0, 0);
+        MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[6], (SpriteMask) null, 0, 0);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[6], (SpriteMask) null, 0, 0);
     }
 
@@ -858,7 +858,7 @@ class MenuScreen {
                     {
                       qc.a(param0, true, false);
                       StrongCacheReference.switchMenuScreen(-7753, param0, -1);
-                      if (gt.arcadeMode) {
+                      if (MessageDialog.arcadeMode) {
                         ph.gameplaySession.startArcadeGame((byte) -120);
                         if (var9 != 0) {
                           ph.gameplaySession.startLevel(oh.levelIndex, false, false);
@@ -867,7 +867,7 @@ class MenuScreen {
                         ph.gameplaySession.startLevel(oh.levelIndex, false, false);
                       }
                     }
-                    ld.field_C = oh.levelIndex;
+                    DropDownWidget.field_C = oh.levelIndex;
                     IntrusiveNodeHashTable.field_c = 0;
                     ph.gameplaySession.closePauseMenu((byte) 112);
                     ut.field_j = 0;
@@ -925,7 +925,7 @@ class MenuScreen {
                     regionExit3: {
                       qc.a(param0, true, false);
                       if (!vs.b((byte) 9)) {
-                        if (!gt.arcadeMode) {
+                        if (!MessageDialog.arcadeMode) {
                           StrongCacheReference.switchMenuScreen(-7753, true, 7);
                           if (var9 == 0) {
                             break regionExit3;
@@ -939,7 +939,7 @@ class MenuScreen {
                       if (IntrusiveNodeHashTable.field_c > 0) {
                         StrongCacheReference.switchMenuScreen(-7753, param0, 6);
                         if (var9 != 0) {
-                          if (!gt.arcadeMode) {
+                          if (!MessageDialog.arcadeMode) {
                             StrongCacheReference.switchMenuScreen(-7753, true, 7);
                             StrongCacheReference.switchMenuScreen(-7753, true, 0);
                           } else {
@@ -947,7 +947,7 @@ class MenuScreen {
                           }
                         }
                       } else {
-                        if (!gt.arcadeMode) {
+                        if (!MessageDialog.arcadeMode) {
                           StrongCacheReference.switchMenuScreen(-7753, true, 7);
                           if (var9 != 0) {
                             StrongCacheReference.switchMenuScreen(-7753, true, 0);
@@ -999,7 +999,7 @@ class MenuScreen {
                   case 5:
                     var5 = 0;
                     if (~vl.field_a != ~var5) {
-                      lc.a((byte) 100, true, false, 4, 2, TimedSceneEffect.field_m[var5]);
+                      StatusMessagePanel.a((byte) 100, true, false, 4, 2, TimedSceneEffect.field_m[var5]);
                     }
                     vl.field_a = var5;
                     if (!this.field_g.d(-31260)) {
@@ -1116,7 +1116,7 @@ class MenuScreen {
                       ig.a(22075);
                     }
                     if (this.field_g.e(2542)) {
-                      kq.l(34168);
+                      FullscreenMembershipDialog.l(34168);
                     }
                     if (this.field_g.g(116224)) {
                       ArchiveCatalog.a((byte) -6);
@@ -1318,16 +1318,16 @@ class MenuScreen {
         var5 += 30;
         field_a[0].a((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
         field_a[1].a((float)(var3 + 30), (float)(var5 + 10), 4096, 0, 1, 0, 2);
-        gt.field_db.a(var5, var3 + 60, 5023231 | param0 << 24, GameInstructions.dronesHelpLinesPartTwo[1], (byte) -76, 0);
+        MessageDialog.field_db.a(var5, var3 + 60, 5023231 | param0 << 24, GameInstructions.dronesHelpLinesPartTwo[1], (byte) -76, 0);
         LegacyOpenGlEffect.field_c.a(var5, var3 + 60, param0 << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[1], (byte) -28, 0);
-        gt.field_db.a(100, param0 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[2], (SpriteMask) null, 0, 0);
+        MessageDialog.field_db.a(100, param0 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[2], (SpriteMask) null, 0, 0);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[2], (SpriteMask) null, 0, 0);
         var5 += 70;
         mr.field_e[0].a((float)(30 + var3), (float)(var5 + 10), 4096, 0, 1, 0, 2);
         mr.field_e[1].a((float)(30 + var3), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        gt.field_db.a(var5, var3 + 60, param0 << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[3], (byte) -44, 0);
+        MessageDialog.field_db.a(var5, var3 + 60, param0 << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[3], (byte) -44, 0);
         LegacyOpenGlEffect.field_c.a(var5, 60 + var3, param0 << 24 | 5023231, GameInstructions.dronesHelpLinesPartTwo[3], (byte) -117, 0);
-        gt.field_db.a(100, param0 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[4], (SpriteMask) null, 0, 0);
+        MessageDialog.field_db.a(100, param0 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[4], (SpriteMask) null, 0, 0);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLinesPartTwo[4], (SpriteMask) null, 0, 0);
         if (param1 >= -25) {
           this.update(-117);
@@ -1435,7 +1435,7 @@ class MenuScreen {
                   stackIn_39_2 = (OpenGlTransparentWaterEffect.field_e != 0);
                   stackIn_41_3 = false;
                   stackIn_42_4 = (0 != IntrusiveNodeHashTable.field_c);
-                  ((ToolkitFont) (Object) stackIn_38_0).a(pe.$cfr$intArgs$a$c7de0d339b2a(stackIn_38_1, stackIn_39_2, stackIn_41_3, stackIn_42_4), opacity << 24 | 5023231, -1, 32 + (var7 * 4 + var6Lifetime1), 320, 0);
+                  ((ToolkitFont) (Object) stackIn_38_0).a(NameSuggestionsPanel.$cfr$intArgs$a$c7de0d339b2a(stackIn_38_1, stackIn_39_2, stackIn_41_3, stackIn_42_4), opacity << 24 | 5023231, -1, 32 + (var7 * 4 + var6Lifetime1), 320, 0);
                   stackIn_44_0 = qv.field_k;
                   stackIn_44_1 = 0;
                   stackIn_45_2 = (IntrusiveNodeHashTable.field_c != 0);
@@ -1453,7 +1453,7 @@ class MenuScreen {
                   stackIn_57_2 = (OpenGlTransparentWaterEffect.field_e != 0);
                   stackIn_59_3 = false;
                   stackIn_60_4 = (0 != IntrusiveNodeHashTable.field_c);
-                  ((ToolkitFont) (Object) stackIn_56_0).a(pe.$cfr$intArgs$a$c7de0d339b2a(stackIn_56_1, stackIn_57_2, stackIn_59_3, stackIn_60_4), opacity << 24 | 16777215, -1, 32 + var7 * 4 + var6Lifetime1, 320, 0);
+                  ((ToolkitFont) (Object) stackIn_56_0).a(NameSuggestionsPanel.$cfr$intArgs$a$c7de0d339b2a(stackIn_56_1, stackIn_57_2, stackIn_59_3, stackIn_60_4), opacity << 24 | 16777215, -1, 32 + var7 * 4 + var6Lifetime1, 320, 0);
                   stackIn_62_0 = uq.field_a;
                   stackIn_62_1 = 0;
                   stackIn_63_2 = (IntrusiveNodeHashTable.field_c != 0);
@@ -1515,25 +1515,25 @@ class MenuScreen {
         qv.field_k.a(var5, var3, 5023231 | param1 << 24, GameInstructions.upgradesHelpLines[0], (byte) -34, 0);
         uq.field_a.a(var5, var3, param1 << 24 | 16777215, GameInstructions.upgradesHelpLines[0], (byte) -40, 0);
         var5 += 30;
-        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[1], (SpriteMask) null, 0, 1);
+        MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[1], (SpriteMask) null, 0, 1);
         LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[1], (SpriteMask) null, 0, 1);
         var5 += 42;
         MusicCrossfadeStream.field_q[0].a((float)(30 + var3), (float)(var5 + 20), 2048, 0, 1, 0, 2);
-        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[2], (SpriteMask) null, 0, 1);
+        MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[2], (SpriteMask) null, 0, 1);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[2], (SpriteMask) null, 0, 1);
         var5 += 35;
         MusicCrossfadeStream.field_q[1].a((float)(var3 + 30), (float)(20 + var5), 2048, 0, 1, 0, 2);
-        gt.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[3], (SpriteMask) null, 0, 1);
+        MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[3], (SpriteMask) null, 0, 1);
         if (param0 > -54) {
           this.screenId = 74;
         }
         LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[3], (SpriteMask) null, 0, 1);
         var5 += 35;
         MusicCrossfadeStream.field_q[2].a((float)(30 + var3), (float)(var5 + 20), 2048, 0, 1, 0, 2);
-        gt.field_db.a(100, param1 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[4], (SpriteMask) null, 0, 1);
+        MessageDialog.field_db.a(100, param1 << 24 | 5023231, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[4], (SpriteMask) null, 0, 1);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[4], (SpriteMask) null, 0, 1);
         var5 += 40;
-        gt.field_db.a(100, param1 << 24 | 5023231, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[5], (SpriteMask) null, 0, 1);
+        MessageDialog.field_db.a(100, param1 << 24 | 5023231, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, var5 - 30, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[5], (SpriteMask) null, 0, 1);
         LegacyOpenGlEffect.field_c.a(100, param1 << 24 | 16777215, 0, var4, var3, (int[]) null, (ToolkitSprite[]) null, -30 + var5, -1, 0, 0, -8787, GameInstructions.upgradesHelpLines[5], (SpriteMask) null, 0, 1);
     }
 
@@ -1623,7 +1623,7 @@ class MenuScreen {
           this.a((byte) -123, param1);
           break;
         }
-        gt.field_db.a(vl.a(1 + fl.field_n, true, GameInstructions.field_e.length), 5023231 | param1 << 24, -1, 380, 555, 0);
+        MessageDialog.field_db.a(vl.a(1 + fl.field_n, true, GameInstructions.field_e.length), 5023231 | param1 << 24, -1, 380, 555, 0);
         LegacyOpenGlEffect.field_c.a(vl.a(1 + fl.field_n, true, GameInstructions.field_e.length), var4, -1, 380, 555, 0);
         return;
     }
@@ -1991,12 +1991,12 @@ class MenuScreen {
                     var20.a((byte) -59, 60 + (var13Lifetime1 - var12Lifetime1), var11 - 12, 16759807 | (param0 & 772132860) << 22, var12Lifetime1 - 30, 16);
                     var15Lifetime1 = -17409;
                   }
-                  gt.field_db.a(0, var12Lifetime1 - 1, 1 + var4 + ". ", var11, param0 << 24 | 5023231, param1 ^ 64);
-                  gt.field_db.a(var11, var12Lifetime1 - 1, 5023231 | param0 << 24, var17, (byte) -54, 0);
-                  gt.field_db.a(0, var12Lifetime1, 1 + var4 + ". ", -1 + var11, param0 << 24 | 5023231, 96);
-                  gt.field_db.a(var11 - 1, var12Lifetime1, 5023231 | param0 << 24, var17, (byte) -41, 0);
-                  gt.field_db.a(-1, var12Lifetime1, var4 + 1 + ". ", var11, param0 << 24 | 5023231, param1 ^ 80);
-                  gt.field_db.a(var11, var12Lifetime1, param0 << 24 | 5023231, var17, (byte) -119, -1);
+                  MessageDialog.field_db.a(0, var12Lifetime1 - 1, 1 + var4 + ". ", var11, param0 << 24 | 5023231, param1 ^ 64);
+                  MessageDialog.field_db.a(var11, var12Lifetime1 - 1, 5023231 | param0 << 24, var17, (byte) -54, 0);
+                  MessageDialog.field_db.a(0, var12Lifetime1, 1 + var4 + ". ", -1 + var11, param0 << 24 | 5023231, 96);
+                  MessageDialog.field_db.a(var11 - 1, var12Lifetime1, 5023231 | param0 << 24, var17, (byte) -41, 0);
+                  MessageDialog.field_db.a(-1, var12Lifetime1, var4 + 1 + ". ", var11, param0 << 24 | 5023231, param1 ^ 80);
+                  MessageDialog.field_db.a(var11, var12Lifetime1, param0 << 24 | 5023231, var17, (byte) -119, -1);
                   LegacyOpenGlEffect.field_c.a(0, -1 + var12Lifetime1, 1 + var4 + ". ", var11, 0, 80);
                   LegacyOpenGlEffect.field_c.a(var11, var12Lifetime1 - 1, 0, var17, (byte) -110, 0);
                   LegacyOpenGlEffect.field_c.a(0, var12Lifetime1, var4 + 1 + ". ", var11 - 1, 0, 82);
@@ -2004,9 +2004,9 @@ class MenuScreen {
                   LegacyOpenGlEffect.field_c.a(-1, var12Lifetime1, 1 + var4 + ". ", var11, var15Lifetime1, 84);
                   LegacyOpenGlEffect.field_c.a(var11, var12Lifetime1, var15Lifetime1, var17, (byte) -116, -1);
                   var18 = this.a(var16, (byte) -81);
-                  gt.field_db.a(-1, -1 + var13Lifetime1, var18, var11, 5023231 | param0 << 24, 124);
-                  gt.field_db.a(-1, var13Lifetime1, var18, var11 - 1, param0 << 24 | 5023231, 124);
-                  gt.field_db.a(-1, var13Lifetime1, var18, var11, 5023231 | param0 << 24, 43);
+                  MessageDialog.field_db.a(-1, -1 + var13Lifetime1, var18, var11, 5023231 | param0 << 24, 124);
+                  MessageDialog.field_db.a(-1, var13Lifetime1, var18, var11 - 1, param0 << 24 | 5023231, 124);
+                  MessageDialog.field_db.a(-1, var13Lifetime1, var18, var11, 5023231 | param0 << 24, 43);
                   LegacyOpenGlEffect.field_c.a(-1, var13Lifetime1, var18, var11, param0 << 24 | var15Lifetime1, 116);
                   var6 = "";
                 }
@@ -2023,7 +2023,7 @@ class MenuScreen {
           stackIn_34_0 = 100 + (140 + SocketConnector.field_a.field_i);
         }
         var7 = stackIn_34_0;
-        gt.field_db.a(var6, 5023231 | param0 << 24, -1, var7, 320, 0);
+        MessageDialog.field_db.a(var6, 5023231 | param0 << 24, -1, var7, 320, 0);
         LegacyOpenGlEffect.field_c.a(var6, param0 << 24 | 16777215, -1, var7, 320, param1 - 1);
         if (!vs.b((byte) 9)) {
           stackIn_37_0 = bv.friendsCanBeAddedText;
@@ -2031,7 +2031,7 @@ class MenuScreen {
           stackIn_37_0 = InstrumentNoteMask.createAFreeAccountText;
         }
         var6Lifetime1 = stackIn_37_0;
-        gt.field_db.a(var6Lifetime1, param0 << 24 | 5023231, -1, SocketConnector.field_a.field_i + 140 + 220, 320, 0);
+        MessageDialog.field_db.a(var6Lifetime1, param0 << 24 | 5023231, -1, SocketConnector.field_a.field_i + 140 + 220, 320, 0);
         LegacyOpenGlEffect.field_c.a(var6Lifetime1, 16777215 | param0 << 24, -1, 140 + SocketConnector.field_a.field_i + 220, 320, 0);
     }
 
@@ -2089,7 +2089,7 @@ class MenuScreen {
               uq.field_a.a(var5, var3Lifetime1, param0 << 24 | 16777215, GameInstructions.controlsHelpLines[var6], (byte) -32, 0);
             } else if (var6 != 1) {
               if (3 != var6) {
-                gt.field_db.a(100, 5023231 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var6], (SpriteMask) null, 0, 1);
+                MessageDialog.field_db.a(100, 5023231 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var6], (SpriteMask) null, 0, 1);
                 LegacyOpenGlEffect.field_c.a(100, 16777215 | param0 << 24, 0, var4Lifetime1, var3Lifetime1, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.controlsHelpLines[var6], (SpriteMask) null, 0, 1);
               } else {
                 bt.field_e.a(var3Lifetime1 + 16, 14 + var5);

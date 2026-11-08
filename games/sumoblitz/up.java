@@ -118,7 +118,7 @@ final class up {
               }
               else {
                 if (stackIn_62_0 >= stackIn_62_1) {
-                  we.field_z[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
+                  ScrollViewport.field_z[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
                   hp.field_o[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;

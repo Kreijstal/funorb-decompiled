@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class uv extends gm {
+final class uv extends TextWidgetRenderer {
     private ne[] field_p;
     static int[] field_o;
     static long field_n;
@@ -19,7 +19,7 @@ final class uv extends gm {
 
     uv(ne[] param0) {
         try {
-          this.field_e = kw.field_b;
+          this.font = kw.field_b;
           this.field_p = param0;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uv.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -85,7 +85,7 @@ final class uv extends gm {
         }
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+    public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -103,18 +103,18 @@ final class uv extends gm {
         int var12 = 0;
         int var13 = 0;
         try {
-          SoftwareRasterizer.drawRectangle(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, 10197915);
-          if (param3) {
-            stackIn_6_0 = (((wp) (param0)).field_C) ? 1 : 0;
+          SoftwareRasterizer.drawRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, 10197915);
+          if (isEnabled) {
+            stackIn_6_0 = (((InteractiveWidget) (widget)).field_C) ? 1 : 0;
           } else {
             stackIn_6_0 = 0;
           }
           var6_int = stackIn_6_0;
-          if (param2 != 5592405) {
+          if (guard != 5592405) {
             uv.b(124);
           }
-          if (param3) {
-            stackIn_14_0 = (param0.d(-1)) ? 1 : 0;
+          if (isEnabled) {
+            stackIn_14_0 = (widget.hasFocus(-1)) ? 1 : 0;
           } else {
             stackIn_14_0 = 0;
           }
@@ -129,23 +129,23 @@ final class uv extends gm {
             var8 = var8 | 1;
           }
           var10 = this.field_p[var8];
-          var11 = param4 - (-param0.field_r - (param0.field_q - var10.field_e) / 2);
-          var12 = (param0.field_p - var10.field_a) / 2 + (param0.field_v + param1);
-          var13 = param0.field_q / 2 + (param4 + param0.field_r);
+          var11 = parentX - (-widget.x - (widget.width - var10.field_e) / 2);
+          var12 = (widget.height - var10.field_a) / 2 + (widget.y + parentY);
+          var13 = widget.width / 2 + (parentX + widget.x);
           var10.a(var11, var12);
-          this.field_e.a(this.a(true, param0), var13, param1, var9, -1);
+          this.font.a(this.widgetText(true, widget), var13, parentY, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_26_0 = var6;
           stackIn_26_1 = new StringBuilder().append("uv.A(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(parentY).append(',').append(guard).append(',').append(isEnabled).append(',').append(parentX).append(')').toString());
         }
     }
 

@@ -17,14 +17,14 @@ final class dn {
         if (mp.field_a < 2) {
           return pi.field_b;
         }
-        if (null != hd.field_H) {
-          if (!hd.field_H.b((byte) 127)) {
+        if (null != DropDownListWidget.field_H) {
+          if (!DropDownListWidget.field_H.b((byte) 127)) {
             return ek.field_k;
           }
           return mm.field_c;
         }
         if (!wd.field_j.b((byte) 127)) {
-          return m.waitingForGraphicsText;
+          return ProgressDialog.waitingForGraphicsText;
         }
         if (!wd.field_j.a("commonui", 100)) {
           return es.loadingGraphicsText + " - " + wd.field_j.a("commonui", (byte) 33) + "%";

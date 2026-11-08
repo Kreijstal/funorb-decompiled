@@ -96,7 +96,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     }
 
     final void a(boolean param0, byte param1) {
-        this.field_b.a((byte) -83, cv.field_F, lf.field_e);
+        this.field_b.a((byte) -83, LoginForm.field_F, lf.field_e);
         if (param1 >= -71) {
           OpenGlTransparentWaterEffect.d(-46);
         }
@@ -191,9 +191,9 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
                       var19 = (float)Math.cos(var2.facingRadians);
                       var20 = (float)Math.sin(var4.facingRadians);
                       var21 = (float)Math.cos(var4.facingRadians);
-                      stackIn_21_0 = (!(0.0f < st.a(86, new float[]{var18, var19}, new float[]{var16, var17}))) ? 0 : 1;
+                      stackIn_21_0 = (!(0.0f < DropTargetWidget.a(86, new float[]{var18, var19}, new float[]{var16, var17}))) ? 0 : 1;
                       var22 = stackIn_21_0;
-                      stackIn_24_0 = (!(st.a(89, new float[]{var20, var21}, new float[]{var16, var17}) < 0.0f)) ? 0 : 1;
+                      stackIn_24_0 = (!(DropTargetWidget.a(89, new float[]{var20, var21}, new float[]{var16, var17}) < 0.0f)) ? 0 : 1;
                       var23 = stackIn_24_0;
                       if (var23 != 0) {
                         if (var4.variant == 2 &&

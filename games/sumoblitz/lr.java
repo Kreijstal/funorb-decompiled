@@ -17,7 +17,7 @@ final class lr {
     final static void a(boolean param0, String param1, byte param2, String param3) {
         try {
           int var4_int = -26 % ((76 - param2) / 42);
-          ac.field_F = param3;
+          FocusProxyWidget.field_F = param3;
           kh.field_d = param1;
           oc.a(us.loggingInText, param0, (byte) -99);
         } catch (RuntimeException runtimeException) {

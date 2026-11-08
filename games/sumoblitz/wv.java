@@ -97,12 +97,12 @@ final class wv {
           if (hc.field_c != null) {
             hc.field_c.n(-7);
           }
-          no.field_a = new cv(param1, param2, false, true, true);
+          no.field_a = new LoginForm(param1, param2, false, true, true);
           if (param0 < 73) {
             String var4 = (String) null;
             wv.a(false, (String) null, (String) null);
           }
-          SlowBurstParticle.field_y.b((byte) -119, no.field_a);
+          SlowBurstParticle.field_y.transitionToContent((byte) -119, no.field_a);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wv.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

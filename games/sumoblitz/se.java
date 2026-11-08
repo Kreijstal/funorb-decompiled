@@ -20,10 +20,10 @@ abstract class se {
         RuntimeException decompiledCaughtException = null;
         var2 = Sumoblitz.field_L ? 1 : 0;
         try {
-          rf.field_a.a(wr.field_F, GraphicsToolkit.field_b, true, param0 - 19887);
-          rf.field_a.h(-90);
+          rf.field_a.dispatchPointerInput(wr.field_F, GraphicsToolkit.field_b, true, param0 - 19887);
+          rf.field_a.advanceDialogAnimations(-90);
           while (wd.c(param0 ^ -19954)) {
-            rf.field_a.a(np.field_c, tg.field_a, true);
+            rf.field_a.dispatchKey(np.field_c, tg.field_a, true);
           }
           if (iu.field_e != -1) {
             var1_int = iu.field_e;
@@ -31,7 +31,7 @@ abstract class se {
             stackIn_6_0 = var1_int;
             return stackIn_6_0;
           }
-          if (lc.field_A) {
+          if (StatusMessagePanel.field_A) {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }

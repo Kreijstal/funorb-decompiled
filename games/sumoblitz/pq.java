@@ -34,7 +34,7 @@ final class pq extends UiWidget {
           this.field_K = -125;
         }
         this.field_G = this.field_M.a();
-        this.field_E = new Sprite(this.field_p >> 1, this.field_p);
+        this.field_E = new Sprite(this.height >> 1, this.height);
     }
 
     final void b(int param0, int param1, int param2) {
@@ -48,7 +48,7 @@ final class pq extends UiWidget {
         this.g(880072001);
     }
 
-    final void a(int param0, int param1, UiWidget param2, int param3) {
+    final void update(int parentX, int guard, UiWidget root, int parentY) {
         int var5_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -56,7 +56,7 @@ final class pq extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = 94 / ((param1 + 25) / 45);
+          var5_int = 94 / ((guard + 25) / 45);
           if (this.field_J) {
             this.field_A = this.field_A + 1;
             if (this.field_A <= this.field_H * 2) {
@@ -69,13 +69,13 @@ final class pq extends UiWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_7_0 = var5;
-          stackIn_7_1 = new StringBuilder().append("pq.U(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_7_1 = new StringBuilder().append("pq.U(").append(parentX).append(',').append(guard).append(',');
+          if (root == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(parentY).append(')').toString());
         }
     }
 
@@ -85,15 +85,15 @@ final class pq extends UiWidget {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Sumoblitz.field_L ? 1 : 0;
-        int var2 = this.field_p >> 1;
-        Sprite var3 = new Sprite(var2, this.field_p);
+        int var2 = this.height >> 1;
+        Sprite var3 = new Sprite(var2, this.height);
         jq.a(7161, var3);
         if (param0 > -23) {
           this.field_M = (Sprite) null;
         }
-        for (var4 = 0; this.field_p > var4; var4++) {
+        for (var4 = 0; this.height > var4; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)((-var4 + this.field_p) * var4);
+            var6 = (double)var5 * (double)var5 / (double)((-var4 + this.height) * var4);
             var8 = 1;
             if (var6 < 1.0) {
               var6 = Math.sqrt(1.0 - var6);
@@ -115,14 +115,14 @@ final class pq extends UiWidget {
         int var12 = 0;
         int var6 = 0;
         int var13 = Sumoblitz.field_L ? 1 : 0;
-        Sprite var14 = new Sprite(2 * this.field_H, this.field_p);
+        Sprite var14 = new Sprite(2 * this.field_H, this.height);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         int var6Lifetime1;
         jq.a(7161, var14);
-        int var5 = this.field_p >> 1;
-        for (var6 = 0; this.field_p > var6; var6++) {
+        int var5 = this.height >> 1;
+        for (var6 = 0; this.height > var6; var6++) {
           var7 = (var6 >> 1) * (-1 + this.field_H * 2) % (2 * this.field_H);
           var8 = param2 & 16711935;
           var9 = 65280 & param2;
@@ -154,8 +154,8 @@ final class pq extends UiWidget {
         int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5_int = param3 + this.field_q;
-          kw.a(this.field_p + param1, param1, 1, param3 + this.field_M.field_x, -this.field_M.field_x + var5_int);
+          var5_int = param3 + this.width;
+          kw.a(this.height + param1, param1, 1, param3 + this.field_M.field_x, -this.field_M.field_x + var5_int);
           for (var6 = param3 - this.field_A; var6 < var5_int; var6 = var6 + param0.field_x) {
             param0.draw(var6, param1);
           }
@@ -173,7 +173,7 @@ final class pq extends UiWidget {
           }
           if (SoftwareRasterizer.clipRight >= -this.field_M.field_x + var5_int) {
             jq.a(7161, this.field_E);
-            for (var7 = this.field_A + this.field_q - this.field_M.field_x; this.field_H * 2 < var7; var7 = var7 - this.field_H * 2) {
+            for (var7 = this.field_A + this.width - this.field_M.field_x; this.field_H * 2 < var7; var7 = var7 - this.field_H * 2) {
             }
             param0.draw(-var7, 0);
             param0.draw(2 * this.field_H - var7, 0);
@@ -213,10 +213,10 @@ final class pq extends UiWidget {
         return var3;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(-57, param1, param2, param3, param4);
+    final void setBounds(int guard, int newX, int newY, int newHeight, int newWidth) {
+        super.setBounds(-57, newX, newY, newHeight, newWidth);
         this.g(880072001);
-        int var6 = 85 % ((28 - param0) / 63);
+        int var6 = 85 % ((28 - guard) / 63);
     }
 
     private pq(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -225,21 +225,21 @@ final class pq extends UiWidget {
         this.field_K = param6;
         this.field_x = param5;
         this.field_H = param4;
-        this.a(-79, param0, param1, param3, param2);
+        this.setBounds(-79, param0, param1, param3, param2);
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        if (param3 != 0) {
+    final void renderLayer(int parentX, int parentY, byte guard, int layer) {
+        if (layer != 0) {
           return;
         }
-        int var5 = param0 + this.field_r;
-        if (param2 >= -35) {
+        int var5 = parentX + this.x;
+        if (guard >= -35) {
           this.field_z = (Sprite[]) null;
         }
-        int var6 = this.field_v + param1;
+        int var6 = this.y + parentY;
         this.a(this.field_z[0], var6, 256, var5);
         if (this.field_I < 65536) {
-          kw.a(var6 + this.field_p, var6, 1, var5 + (this.field_I * this.field_q >> 16), this.field_q + var5);
+          kw.a(var6 + this.height, var6, 1, var5 + (this.field_I * this.width >> 16), this.width + var5);
           this.a(this.field_z[1], var6, 256, var5);
           ClientException.a((byte) -110);
         }

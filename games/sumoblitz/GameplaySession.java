@@ -509,7 +509,7 @@ final class GameplaySession {
           if (null != var8.field_a &&
             var8.field_E > 1) {
             var9 = var8.field_a;
-            za.a(var9, cv.field_G, 0, 0, 0);
+            za.a(var9, LoginForm.field_G, 0, 0, 0);
             if (var40 != 0) {
               vf.a(0);
             }
@@ -599,11 +599,11 @@ final class GameplaySession {
               stackIn_64_0 = null;
             }
             var21 = stackIn_64_0;
-            var22 = we.field_z[var15Lifetime1];
+            var22 = ScrollViewport.field_z[var15Lifetime1];
             var23 = hp.field_o[var15Lifetime1];
-            var24 = we.field_z[var16];
+            var24 = ScrollViewport.field_z[var16];
             var25 = hp.field_o[var16];
-            var26 = we.field_z[var17];
+            var26 = ScrollViewport.field_z[var17];
             var27 = hp.field_o[var17];
             if (var19 == var18 &&
               var20 == var19) {
@@ -819,7 +819,7 @@ final class GameplaySession {
                       return;
                     }
                   }
-                  nd.livesRemaining = nd.livesRemaining + 1;
+                  GridWidgetContainer.livesRemaining = GridWidgetContainer.livesRemaining + 1;
                   f.field_w = true;
                   if (var3 == 0) {
                     return;
@@ -875,7 +875,7 @@ final class GameplaySession {
           }
           GameKeyHandler.field_a = null;
           ig.hudMessages.clear(116);
-          in.score = 0;
+          FadingWidget.score = 0;
           f.field_w = false;
           fb.field_a = 0;
           GraphicsToolkit.field_f = 0;
@@ -886,7 +886,7 @@ final class GameplaySession {
           IntrusiveNodeHashTable.field_c = 0;
           tc.e(101);
           ct.b(true);
-          gt.arcadeMode = true;
+          MessageDialog.arcadeMode = true;
           MusicPatch.simulationPaused = false;
           this.closePauseMenu((byte) 112);
           return;
@@ -1072,8 +1072,8 @@ final class GameplaySession {
           if (stackIn_31_0) {
             return;
           }
-          if (ld.field_N.a(false)) {
-            ld.field_N.c(5008);
+          if (DropDownWidget.field_N.a(false)) {
+            DropDownWidget.field_N.c(5008);
             return;
           }
           if (cd.a(false)) {
@@ -1084,11 +1084,11 @@ final class GameplaySession {
           }
           if (iw.elapsedTicks - uc.field_f == 100 &&
             !MusicPatch.simulationPaused &&
-            !gt.arcadeMode) {
+            !MessageDialog.arcadeMode) {
             sj.a(-1, an.waveIndex, oh.levelIndex);
           }
           boolean decompiledFrameRemainder2 = true;
-          if (nd.livesRemaining > 0) {
+          if (GridWidgetContainer.livesRemaining > 0) {
             ts.field_a = ts.field_a + 8;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + 10;
             fb.field_a = fb.field_a - 5;
@@ -1135,20 +1135,20 @@ final class GameplaySession {
             this.updateArenaPads((byte) 111);
           }
           this.compatibilityTickHook(-112);
-          boolean decompiledSharedTail1 = !(gt.field_ab <= 0);
+          boolean decompiledSharedTail1 = !(MessageDialog.field_ab <= 0);
           if (!decompiledSharedTail1) {
             PowerupPickup.field_v = 0;
             decompiledSharedTail1 = (var6 != 0);
           }
           if (decompiledSharedTail1) {
-            gt.field_ab = gt.field_ab - 1;
+            MessageDialog.field_ab = MessageDialog.field_ab - 1;
             if (PowerupPickup.field_v >= ps.field_e[11]) {
               th.b(24753, 244, 11);
             }
           }
           if (SpriteMask.drones[0] != null && (!(6 > oh.levelIndex) ||
             wm.field_f[6] ||
-            gt.arcadeMode)) {
+            MessageDialog.arcadeMode)) {
             boolean decompiledFrameRemainder1 = true;
             if (fa.field_b > 0 &&
               30 >= fa.field_b) {
@@ -1236,7 +1236,7 @@ final class GameplaySession {
                 if (incrementValue$0 <= 0) {
                   break;
                 }
-                oc.a(uj.createEnemyDrone(Math.max(7, ExpandingRingEffect.nextRandomInt((int)(Math.log((double)in.score) / Math.log(10.0)), ResourceArchive.field_b, (byte) -96)), ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 0, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8), false);
+                oc.a(uj.createEnemyDrone(Math.max(7, ExpandingRingEffect.nextRandomInt((int)(Math.log((double)FadingWidget.score) / Math.log(10.0)), ResourceArchive.field_b, (byte) -96)), ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 0, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8), false);
                 if (var6 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -1258,7 +1258,7 @@ final class GameplaySession {
             }
             boolean decompiledFrameRemainder0 = true;
             er.c((byte) 54);
-            if ((gt.arcadeMode) &&
+            if ((MessageDialog.arcadeMode) &&
               (decompiledFrameRemainder0 = (0 == iw.elapsedTicks % 250)) &&
               (decompiledFrameRemainder0 = !(jc.b(true) >= (SpriteMask.drones.length - 1)))) {
               var4 = uj.createEnemyDrone(1, ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 4, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
@@ -1351,7 +1351,7 @@ final class GameplaySession {
                   if (ku.a((byte) -94) > ps.field_e[20]) {
                     th.b(24753, 235, 20);
                   }
-                  if (ld.field_C == 0) {
+                  if (DropDownWidget.field_C == 0) {
                     th.b(24753, 252, 3);
                   }
                   if (oh.levelIndex == 25) {
@@ -1376,14 +1376,14 @@ final class GameplaySession {
             stackIn_336_1 = SpriteMask.drones[0];
           }
           if (stackIn_336_0 == stackIn_336_1 &&
-            nd.livesRemaining > 0) {
-            nd.livesRemaining = nd.livesRemaining - 1;
-            if (nd.livesRemaining <= 0) {
+            GridWidgetContainer.livesRemaining > 0) {
+            GridWidgetContainer.livesRemaining = GridWidgetContainer.livesRemaining - 1;
+            if (GridWidgetContainer.livesRemaining <= 0) {
               jk.field_a = iw.elapsedTicks;
               uq.a(7, 8);
               StrongCacheReference.switchMenuScreen(-7753, true, 11);
               if (var6 != 0) {
-                if (!gt.arcadeMode) {
+                if (!MessageDialog.arcadeMode) {
                   ds.a(107);
                   sm.a(72);
                 } else {
@@ -1391,7 +1391,7 @@ final class GameplaySession {
                 }
               }
             } else {
-              if (!gt.arcadeMode) {
+              if (!MessageDialog.arcadeMode) {
                 ds.a(107);
                 if (var6 != 0) {
                   sm.a(72);
@@ -1400,7 +1400,7 @@ final class GameplaySession {
                 sm.a(72);
               }
             }
-            qk.field_T = 0;
+            DisplayModeConfirmationDialog.field_T = 0;
             bi.field_c = 0;
           }
           if (null != SpriteMask.drones[0]) {
@@ -1418,7 +1418,7 @@ final class GameplaySession {
             this.updatePowerupPickups(-14854);
           }
           GameOverScreen.a(true);
-          if (gt.arcadeMode &&
+          if (MessageDialog.arcadeMode &&
             SpriteMask.drones[0] != null) {
             if (300 <= iw.elapsedTicks * 20 / 1000) {
               th.b(24753, 231, 24);
@@ -1644,7 +1644,7 @@ final class GameplaySession {
           if (null == GameKeyHandler.field_a &&
             0 < IntrusiveNodeHashTable.field_c &&
             !f.field_w) {
-            boolean decompiledSharedTail0 = !(!gt.arcadeMode);
+            boolean decompiledSharedTail0 = !(!MessageDialog.arcadeMode);
             if (!decompiledSharedTail0) {
               GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{IntrusiveNodeHashTable.field_c, iw.elapsedTicks});
               decompiledSharedTail0 = (Sumoblitz.field_L);
@@ -1694,10 +1694,10 @@ final class GameplaySession {
             return;
           }
           var3 = wq.a(toolkit, (byte) 36);
-          if ((0 != nd.livesRemaining ||
+          if ((0 != GridWidgetContainer.livesRemaining ||
             MusicPatch.simulationPaused) && !MusicPatch.simulationPaused) {
             var4 = (PlayerDrone) (SpriteMask.drones[0]);
-            if (!gt.arcadeMode &&
+            if (!MessageDialog.arcadeMode &&
               ku.field_J != null) {
               HudMessage.field_s[0].a(55, 0);
               HudMessage.field_s[1].a(HudMessage.field_s[0].c() + 55, 0);
@@ -1712,13 +1712,13 @@ final class GameplaySession {
                 } else {
                   HudMessage.field_s[3].a(-HudMessage.field_s[4].c() + 567, 0);
                   HudMessage.field_s[4].a(567, 0);
-                  qv.field_k.a(19, 85, -11753985, ps.scoreText + "" + in.score, (byte) -21, -1);
-                  uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + in.score, (byte) -18, -1);
-                  qv.field_k.a(-1, 560, pl.levelText + "" + (oh.levelIndex + 1) + " " + fq.multiplierText + "" + pd.field_p + "x " + InwardSparkParticle.livesText + "" + nd.livesRemaining + "", 19, -11753985, 74);
+                  qv.field_k.a(19, 85, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -21, -1);
+                  uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -18, -1);
+                  qv.field_k.a(-1, 560, pl.levelText + "" + (oh.levelIndex + 1) + " " + fq.multiplierText + "" + pd.field_p + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
                 }
                 break;
               }
-              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + oh.levelIndex) + "<col=ffffff> " + fq.multiplierText + "</col>" + pd.field_p + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + nd.livesRemaining + "", 19, -4720129, 120);
+              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + oh.levelIndex) + "<col=ffffff> " + fq.multiplierText + "</col>" + pd.field_p + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
             }
             SpriteState.field_B[0].a(139, 448);
             SpriteState.field_B[1].a(-16 + HudMessage.field_s[0].c() + 155, 448);
@@ -1736,9 +1736,9 @@ final class GameplaySession {
                 qv.field_k.a(473, 320, -11753985, InstrumentNoteMask.timeText + dp.b(iw.elapsedTicks, -23620) + "", (byte) -73, -1);
                 uq.field_a.a(473, 320, -4720129, "<col=ffffff>" + InstrumentNoteMask.timeText + "</col>" + dp.b(iw.elapsedTicks, -23620) + "</col>", (byte) -76, -1);
               }
-              if (gt.arcadeMode) {
-                qv.field_k.a(473, 175, -11753985, ps.scoreText + "" + in.score, (byte) -125, -1);
-                uq.field_a.a(473, 175, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + in.score, (byte) -112, -1);
+              if (MessageDialog.arcadeMode) {
+                qv.field_k.a(473, 175, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -125, -1);
+                uq.field_a.a(473, 175, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -112, -1);
               }
               pr.field_k[0].a(3, 42);
               var3.a((byte) 75, 395 - var4.blastChargeGaugeWidth((byte) -106) + 42, 42 + pr.field_k[0].a(), 0, 40);
@@ -1754,7 +1754,7 @@ final class GameplaySession {
                 var6 = stackIn_40_0;
                 pr.field_k[2].a(3, 42, 0, 16777215 | var6 << 24, 1);
               }
-              if (gt.arcadeMode) {
+              if (MessageDialog.arcadeMode) {
                 break;
               }
               if (var4 == null) {
@@ -1772,8 +1772,8 @@ final class GameplaySession {
               break;
             }
           }
-          if (ld.field_N.a(false)) {
-            ld.field_N.a(true, toolkit);
+          if (DropDownWidget.field_N.a(false)) {
+            DropDownWidget.field_N.a(true, toolkit);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1819,9 +1819,9 @@ final class GameplaySession {
           GameKeyHandler.field_a = null;
           ig.hudMessages.clear(119);
           OpenGlTransparentWaterEffect.field_e = 0;
-          in.score = 0;
+          FadingWidget.score = 0;
           kn.field_b = 0;
-          ld.field_C = levelIndex;
+          DropDownWidget.field_C = levelIndex;
           f.field_w = false;
           IntrusiveNodeHashTable.field_c = 0;
           oh.levelIndex = levelIndex;
@@ -1837,7 +1837,7 @@ final class GameplaySession {
           }
           gg.a((byte) 105);
           MusicPatch.simulationPaused = false;
-          gt.arcadeMode = arcadeMode;
+          MessageDialog.arcadeMode = arcadeMode;
           this.closePauseMenu((byte) 112);
           lg.field_c = 0;
           return;
@@ -1856,7 +1856,7 @@ final class GameplaySession {
           rc.sceneEffects = new IntrusiveDeque();
           this.resetSession(127);
           discarded$0 = new LevelCompleteUpgradeScreen();
-          ld.field_N = new bw();
+          DropDownWidget.field_N = new bw();
           discarded$1 = new GameOverScreen();
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qu.<init>()");

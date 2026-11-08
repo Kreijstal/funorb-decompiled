@@ -25,10 +25,10 @@ final class StrongCacheReference extends CacheReferenceNode {
           try {
             var6 = new byte[24];
             var2 = var6;
-            if (null != pe.field_E) {
+            if (null != NameSuggestionsPanel.field_E) {
               try {
-                pe.field_E.a(-7564, 0L);
-                pe.field_E.a(var6, (byte) 124);
+                NameSuggestionsPanel.field_E.a(-7564, 0L);
+                NameSuggestionsPanel.field_E.a(var6, (byte) 124);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;

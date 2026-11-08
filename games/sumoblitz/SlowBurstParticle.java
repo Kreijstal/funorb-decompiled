@@ -8,7 +8,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
     private int velocityYQ8;
     static int[] field_z;
     boolean field_u;
-    static dc field_y;
+    static ContentDialog field_y;
     private int textureKind;
 
     final static void e(int param0) {
@@ -167,9 +167,9 @@ final class SlowBurstParticle extends TimedSceneEffect {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               ArenaPad.a(var15, (byte) 61);
               if (var6_intLifetime1 == 0) {
-                oc.a(ReassignUpgradesScreen.field_l, qk.field_U, true, var6_intLifetime1, sd.field_f, ch.field_d);
+                oc.a(ReassignUpgradesScreen.field_l, DisplayModeConfirmationDialog.field_U, true, var6_intLifetime1, sd.field_f, ch.field_d);
               } else {
-                oc.a(ReassignUpgradesScreen.field_l, qk.field_U, true, var6_intLifetime1, sd.field_f, ch.field_d);
+                oc.a(ReassignUpgradesScreen.field_l, DisplayModeConfirmationDialog.field_U, true, var6_intLifetime1, sd.field_f, ch.field_d);
               }
             }
             qr.a(13136, var5);

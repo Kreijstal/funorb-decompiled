@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj implements mh {
+final class oj implements WidgetRenderer {
     static int field_a;
     static String emailAddressIsUnavailableText;
 
@@ -22,7 +22,7 @@ final class oj implements mh {
         return (34 & param0) != 0 ? true : false;
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, int param4) {
+    public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -32,33 +32,33 @@ final class oj implements mh {
         int var7 = 0;
         Sprite var8 = null;
         try {
-          var6_int = param4 + param0.field_r;
-          if (param2 != 5592405) {
+          var6_int = parentX + widget.x;
+          if (guard != 5592405) {
             emailAddressIsUnavailableText = (String) null;
           }
-          var7 = param1 + param0.field_v;
-          ByteArrayStorage.drawBeveledBorder(param0.field_p, var6_int, param0.field_q, (byte) -84, var7);
+          var7 = parentY + widget.y;
+          ByteArrayStorage.drawBeveledBorder(widget.height, var6_int, widget.width, (byte) -84, var7);
           var8 = fw.field_m[1];
-          if (param0 instanceof wp &&
-            ((wp) (param0)).field_C) {
-            var8.d((-var8.field_z + param0.field_q >> 1) + (var6_int + 1), (-var8.field_w + param0.field_p >> 1) + (var7 + 1), 256);
+          if (widget instanceof InteractiveWidget &&
+            ((InteractiveWidget) (widget)).field_C) {
+            var8.d((-var8.field_z + widget.width >> 1) + (var6_int + 1), (-var8.field_w + widget.height >> 1) + (var7 + 1), 256);
           }
-          if (!param0.d(param2 - 5592406)) {
+          if (!widget.hasFocus(guard - 5592406)) {
             return;
           }
-          AudioServiceThread.drawDottedRectangle(var7 + 2, -4 + param0.field_q, param2 - 5605586, var6_int + 2, -4 + param0.field_p);
+          AudioServiceThread.drawDottedRectangle(var7 + 2, -4 + widget.width, guard - 5605586, var6_int + 2, -4 + widget.height);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_11_0 = var6;
           stackIn_11_1 = new StringBuilder().append("oj.A(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(parentY).append(',').append(guard).append(',').append(isEnabled).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class oj implements mh {
           if (pu.field_e == null) {
             return false;
           }
-          if (null != pu.field_e.e((byte) 54)) {
+          if (null != pu.field_e.topOpenDialog((byte) 54)) {
             return true;
           }
           return false;
@@ -89,7 +89,7 @@ final class oj implements mh {
         if (pu.field_e == null) {
           return false;
         }
-        if (null != pu.field_e.e((byte) 54)) {
+        if (null != pu.field_e.topOpenDialog((byte) 54)) {
           return true;
         }
         return false;

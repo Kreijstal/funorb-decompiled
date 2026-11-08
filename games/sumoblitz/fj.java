@@ -20,7 +20,7 @@ abstract class fj {
     abstract jagdx.IDirect3DBaseTexture d(int param0);
 
     fj(DirectXGraphicsToolkit param0, iw param1, io param2, boolean param3, int param4) {
-        this.field_a = ao.field_y;
+        this.field_a = ArrayWidgetContainer.field_y;
         this.field_c = param2;
         this.field_b = param0;
         this.field_d = param1;

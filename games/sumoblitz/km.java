@@ -82,7 +82,7 @@ final class km extends IntrusiveNode {
                 var6Lifetime1Lifetime1 = var3Lifetime2;
                 if (var3Lifetime2 != null) {
                   var4 = var2.field_a;
-                  if (gt.arcadeMode) {
+                  if (MessageDialog.arcadeMode) {
                     if (wn.a(var3Lifetime2.yQ8, var4, -114, var2.xQ8, var3Lifetime2.xQ8, var2.yQ8) &&
                       var3Lifetime2.isAliveAndSpawned((byte) -63) &&
                       var3Lifetime2.hasVelocityOnBothAxes((byte) 125)) {
