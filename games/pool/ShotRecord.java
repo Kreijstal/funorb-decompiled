@@ -82,7 +82,7 @@ final class ShotRecord extends IntrusiveNode {
           if (param0 != 1) {
             ShotRecord.b(false);
           }
-          var5 = "Shot " + this.shotNumber + " " + TextWidgetPainter.a(8, this.phase) + " player " + param1.field_h[this.playerIndex];
+          var5 = "Shot " + this.shotNumber + " " + TextWidgetPainter.shotPhaseName(8, this.phase) + " player " + param1.field_h[this.playerIndex];
           var3 = var5;
           var3Lifetime1 = var5;
           var3Lifetime2 = var5;

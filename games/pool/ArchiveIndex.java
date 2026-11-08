@@ -29,11 +29,11 @@ final class ArchiveIndex {
     static String createCreateanaccount;
     static int field_u;
 
-    final static void a(byte param0, java.math.BigInteger param1, PacketBuffer param2, java.math.BigInteger param3, PacketBuffer param4) {
+    final static void writeEncryptedBuffer(byte param0, java.math.BigInteger param1, PacketBuffer param2, java.math.BigInteger param3, PacketBuffer param4) {
         try {
           LoginEncryptionSupport.writeEncryptedPayload(param3, param2.payload, param1, param4, param2.position, 0, 0);
           if (param0 != 93) {
-            ArchiveIndex.a(122, 64, 86);
+            ArchiveIndex.createSolidSquareSprite(122, 64, 86);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ad.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -289,15 +289,15 @@ final class ArchiveIndex {
         }
     }
 
-    final static Sprite a(int param0, int param1, int param2) {
+    final static Sprite createSolidSquareSprite(int color, int size, int obfuscationGuard) {
         int var4 = 0;
-        if (param2 != 7) {
+        if (obfuscationGuard != 7) {
           ArchiveIndex.releaseStatics(82);
         }
-        Sprite var5 = new Sprite(param1, param1);
+        Sprite var5 = new Sprite(size, size);
         Sprite var3 = var5;
         for (var4 = 0; var4 < var3.field_D.length; var4++) {
-          var5.field_D[var4] = param0;
+          var5.field_D[var4] = color;
         }
         return var3;
     }

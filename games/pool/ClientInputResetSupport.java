@@ -16,7 +16,7 @@ final class ClientInputResetSupport {
         LimitedRandomAccessFile.a(-22444);
         int var1 = 8 / ((param0 + 12) / 55);
         DebugOverlayLayoutSupport.detachMouseHandler(0);
-        TextWidgetPainter.b((byte) 70);
+        TextWidgetPainter.closeNetworkAndCacheResources((byte) 70);
         if (!TriangleMesh.b((byte) 84)) {
           ShotEvent.c(-111);
           return;

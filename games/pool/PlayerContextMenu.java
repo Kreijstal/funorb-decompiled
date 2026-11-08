@@ -267,7 +267,7 @@ final class PlayerContextMenu {
           var4_ref = MultiHandleSliderWidget.a(this.field_m, param1, 88);
         } else {
           if (param0 == 5) {
-            var4_ref = HalloweenBallSkin.a((byte) 91, this.field_m, param1);
+            var4_ref = HalloweenBallSkin.removeFriend((byte) 91, this.field_m, param1);
           } else {
             if (param0 == 6) {
               var4_ref = Atan2Support.a(param1, this.field_m, param2 ^ 4);

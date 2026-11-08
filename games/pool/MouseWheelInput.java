@@ -19,11 +19,11 @@ abstract class MouseWheelInput {
         RuntimeException decompiledCaughtException = null;
         try {
           var13 = new UiComponent((long)param1, (UiComponent) null);
-          var13.frameSprites = TikiBallSkin.a(param12, (byte) 20, param4);
-          var13.activeFrameSprites = TikiBallSkin.a(param7, (byte) 20, param10);
-          var13.capturedFrameSprites = TikiBallSkin.a(param0, (byte) 20, param11);
-          var13.selectedFrameSprites = TikiBallSkin.a(param3, (byte) 20, param6);
-          var13.disabledFrameSprites = TikiBallSkin.a(param5, (byte) 20, param8);
+          var13.frameSprites = TikiBallSkin.createPanelSprites(param12, (byte) 20, param4);
+          var13.activeFrameSprites = TikiBallSkin.createPanelSprites(param7, (byte) 20, param10);
+          var13.capturedFrameSprites = TikiBallSkin.createPanelSprites(param0, (byte) 20, param11);
+          var13.selectedFrameSprites = TikiBallSkin.createPanelSprites(param3, (byte) 20, param6);
+          var13.disabledFrameSprites = TikiBallSkin.createPanelSprites(param5, (byte) 20, param8);
           var13.textColor = param2;
           var13.font = param9;
           stackIn_1_0 = var13;

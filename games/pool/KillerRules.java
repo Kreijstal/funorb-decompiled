@@ -11,11 +11,11 @@ final class KillerRules extends GameRules {
     int[] field_e;
     static int field_h;
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean handleChatOrQuickChatKey(int param0, int param1, int param2, int param3) {
         int var4;
         int stackIn_22_0 = 0;
         if (param2 != -1) {
-          KillerRules.a(56, -99, 1, -23);
+          KillerRules.handleChatOrQuickChatKey(56, -99, 1, -23);
         }
         if (CollisionContact.field_f != null &&
           IterableDualLinkDeque.field_a == 13) {
@@ -267,7 +267,7 @@ final class KillerRules extends GameRules {
         }
     }
 
-    final static float e(int param0, int param1) {
+    final static float fixed3ToFloat(int param0, int param1) {
         if (param1 != 3) {
           return -1.207617998123169f;
         }
@@ -433,17 +433,17 @@ final class KillerRules extends GameRules {
         return -1;
     }
 
-    final static void c(byte param0) {
-        PoolUiText.field_f.sprite = TransformRotationSupport.createTextLabelSprite(1, param0 ^ -45, Integer.toString(DelayedServerPacket.field_n));
+    final static void updateKillerPlayerCountControls(byte obfuscationGuard) {
+        PoolUiText.field_f.sprite = TransformRotationSupport.createTextLabelSprite(1, obfuscationGuard ^ -45, Integer.toString(DelayedServerPacket.field_n));
         GlowParticle.a(PoolUiText.field_f, (byte) 93);
         RasterSnapshot.field_w.enabled = 2 < DelayedServerPacket.field_n ? true : false;
         LoginRequestSupport.field_e.enabled = DelayedServerPacket.field_n < 8 ? true : false;
-        if (param0 != -45) {
-          KillerRules.c((byte) -61);
+        if (obfuscationGuard != -45) {
+          KillerRules.updateKillerPlayerCountControls((byte) -61);
         }
     }
 
-    final boolean isTargetVisible(int param0, int param1) {
+    final boolean isPlayerSnookered(int param0, int param1) {
         if (param1 >= -28) {
           youAreGroupName = (String) null;
           return false;

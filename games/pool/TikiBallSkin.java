@@ -44,7 +44,7 @@ final class TikiBallSkin extends BallSkin {
         }
     }
 
-    private final int b(byte param0, int param1) {
+    private final int themeColorForGroup(byte param0, int param1) {
         if (param0 >= -110) {
           TikiBallSkin.j(-76);
         }
@@ -57,8 +57,8 @@ final class TikiBallSkin extends BallSkin {
         return 7824981;
     }
 
-    final boolean c(int param0) {
-        if (param0 != 2) {
+    final boolean usesNumberedBallLabels(int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           field_n = -44;
           return false;
         }
@@ -70,7 +70,7 @@ final class TikiBallSkin extends BallSkin {
         int var4;
         var4 = Pool.field_O;
         if (!param1) {
-          this.c(13);
+          this.usesNumberedBallLabels(13);
         }
         var3 = param0;
         if (var3 == 0) {
@@ -92,15 +92,15 @@ final class TikiBallSkin extends BallSkin {
             12 != var3 &&
             var3 != 13) {
             if (14 == var3) {
-              return this.b((byte) -118, 1);
+              return this.themeColorForGroup((byte) -118, 1);
             }
             if (var3 != 15) {
               return 16711935;
             }
           }
-          return this.b((byte) -118, 1);
+          return this.themeColorForGroup((byte) -118, 1);
         }
-        return this.b((byte) -113, 0);
+        return this.themeColorForGroup((byte) -113, 0);
     }
 
     final static byte[] a(int param0, byte param1, byte[] param2, int param3) {
@@ -153,14 +153,14 @@ final class TikiBallSkin extends BallSkin {
 
     final String groupName(byte param0, int param1) {
         if (param0 < 9) {
-          this.c(-109);
+          this.usesNumberedBallLabels(-109);
         }
         return 0 == param1 ? BirthDateValidator.ballsetSpaceGroup0 : TransformRotationSupport.field_g;
     }
 
     final void loadTopBarSprites(int param0, ResourceArchive param1) {
         try {
-          this.field_e = NameEntryPopup.a(param0 ^ param0, "", param1, "top_bar_balls_jungle");
+          this.field_e = NameEntryPopup.loadSpritesByName(param0 ^ param0, "", param1, "top_bar_balls_jungle");
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -238,7 +238,7 @@ final class TikiBallSkin extends BallSkin {
         }
     }
 
-    final static Sprite[] a(int param0, byte param1, int param2) {
+    final static Sprite[] createPanelSprites(int param0, byte param1, int param2) {
         if (param1 != 20) {
           return (Sprite[]) null;
         }

@@ -258,9 +258,9 @@ final class UiTheme {
         var4.caretColor = 15658734;
         this.tooltipBorderColor = 15658734;
         this.tooltipLineSpacing = -1;
-        var4.createStateLayer(0, 0).setTextColor(15658734, 57).setFrameSprites(NineBallRules.a(8947848, 10066329, 7829367, false), (byte) 67);
-        var4.createStateLayer(1, 0).setFrameSprites(NineBallRules.a(11184810, 10066329, 13421772, false), (byte) 76);
-        var4.createStateLayer(3, 0).setFrameSprites(NineBallRules.a(8947848, 7829367, 10066329, false), (byte) 64).setOffsetX(1, -1).setOffsetY(1, (byte) 90);
+        var4.createStateLayer(0, 0).setTextColor(15658734, 57).setFrameSprites(NineBallRules.createBeveledPanelSprites(8947848, 10066329, 7829367, false), (byte) 67);
+        var4.createStateLayer(1, 0).setFrameSprites(NineBallRules.createBeveledPanelSprites(11184810, 10066329, 13421772, false), (byte) 76);
+        var4.createStateLayer(3, 0).setFrameSprites(NineBallRules.createBeveledPanelSprites(8947848, 7829367, 10066329, false), (byte) 64).setOffsetX(1, -1).setOffsetY(1, (byte) 90);
         Sprite[] var5 = new Sprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
@@ -282,7 +282,7 @@ final class UiTheme {
         MarkerSliderPainter discarded$1 = new MarkerSliderPainter(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
         StatefulTextPainter var8 = new StatefulTextPainter();
         var17.copyStyleTo(-1177150015, var8);
-        var8.createStateLayer(0, 0).setFrameSprites(NineBallRules.a(15658734, 7829367, 10066329, false), (byte) 74).setTextColor(1118481, 72).setShadowColor(true, -1);
+        var8.createStateLayer(0, 0).setFrameSprites(NineBallRules.createBeveledPanelSprites(15658734, 7829367, 10066329, false), (byte) 74).setTextColor(1118481, 72).setShadowColor(true, -1);
         var8.createStateLayer(4, 0).setFlushBeforeApply(-15359, true).setFrameSprites(var5, (byte) 77);
         this.field_j = (WidgetPainter) ((Object) var8);
         Sprite[] var9 = new Sprite[9];

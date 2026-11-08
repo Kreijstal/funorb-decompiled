@@ -126,9 +126,9 @@ abstract class IndexedSpriteState {
         }
     }
 
-    final static double a(byte param0, int param1, long param2) {
-        int var4 = -8 % ((param0 + 43) / 55);
-        return (double)param2 / (double)(1 << param1);
+    final static double fixedToDouble(byte obfuscationGuard, int fractionalBits, long value) {
+        int var4 = -8 % ((obfuscationGuard + 43) / 55);
+        return (double)value / (double)(1 << fractionalBits);
     }
 
     abstract void drawAlpha(int param0, int param1, int param2);
@@ -145,7 +145,7 @@ abstract class IndexedSpriteState {
 
     final static int a(int param0, int param1, byte param2) {
         if (param2 != 99) {
-          IndexedSpriteState.a((byte) 28, -74, 125L);
+          IndexedSpriteState.fixedToDouble((byte) 28, -74, 125L);
         }
         return (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 2) + (param1 << 11) / param0;
     }

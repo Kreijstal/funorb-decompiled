@@ -42,7 +42,7 @@ final class LookupRetrySupport {
         try {
           var4 = (LookupQuery) (BallSkin.field_i.last((byte) 73));
           while (var4 != null) {
-            LookupProtocolSupport.a(param1, var4, (byte) -51);
+            LookupProtocolSupport.sendLookupQuery(param1, var4, (byte) -51);
             var4 = (LookupQuery) (BallSkin.field_i.previous((byte) -5));
           }
           if (param0) {

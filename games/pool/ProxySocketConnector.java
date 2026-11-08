@@ -43,7 +43,7 @@ final class ProxySocketConnector extends SocketConnector {
         Class var14 = null;
         try {
           if (param1.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_3_0 = this.b(5101);
+            stackIn_3_0 = this.openDirectSocket(5101);
             return stackIn_3_0;
           }
           var3 = param1.address();
@@ -286,7 +286,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.b(5101);
+          return this.openDirectSocket(5101);
         }
         var3.addAll((Collection) ((Object) var4));
         var6_array = var3.toArray();
@@ -314,7 +314,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (var7 != null) {
           throw ProxySocketConnector.<RuntimeException>throwUnchecked((Throwable) var7);
         }
-        return this.b(5101);
+        return this.openDirectSocket(5101);
     }
 
     final static void a(boolean param0) {

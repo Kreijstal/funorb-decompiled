@@ -9,8 +9,8 @@ abstract class SocketConnector {
     String field_c;
     static int field_d;
 
-    final java.net.Socket b(int param0) throws IOException {
-        if (param0 == 5101) {
+    final java.net.Socket openDirectSocket(int obfuscationGuard) throws IOException {
+        if (obfuscationGuard == 5101) {
           return new java.net.Socket(this.field_c, this.field_a);
         }
         this.field_a = 29;

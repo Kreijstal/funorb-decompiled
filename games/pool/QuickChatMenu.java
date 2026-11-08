@@ -212,7 +212,7 @@ final class QuickChatMenu extends UiComponent {
               DialogLayer.i(15975);
               InputIdleSupport.resetInputIdleTimer(false);
             } else {
-              ClassicBallSkin.j(1);
+              ClassicBallSkin.createQuickChatHelpDialog(1);
               DialogLayer.i(15975);
             }
           }

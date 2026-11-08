@@ -115,7 +115,7 @@ final class CanvasInputSupport {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!HalloweenBallSkin.a(param0, (byte) 125)) {
+          if (!HalloweenBallSkin.isAllowedNameCharacter(param0, (byte) 125)) {
             return false;
           }
           if (param1 == null) {

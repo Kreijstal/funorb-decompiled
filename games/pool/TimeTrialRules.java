@@ -52,7 +52,7 @@ final class TimeTrialRules extends GameRules {
         return WorldPointProjectionSupport.field_a;
     }
 
-    final boolean isTargetVisible(int param0, int param1) {
+    final boolean isPlayerSnookered(int param0, int param1) {
         if (param1 >= -28) {
           field_f = -107;
           return false;

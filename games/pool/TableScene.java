@@ -1252,20 +1252,20 @@ abstract class TableScene {
               if (var6 != 17) {
                 if (var6 == 18) {
                   if (null != this.field_n) {
-                    KillerBallSkin.a(256, false, false, this.field_n);
+                    KillerBallSkin.playMusicTrack(256, false, false, this.field_n);
                   } else {
                     if (null != this.field_i) {
-                      KillerBallSkin.a(256, false, false, this.field_i);
+                      KillerBallSkin.playMusicTrack(256, false, false, this.field_i);
                     }
                   }
                 }
               } else {
                 if (this.field_i != null) {
-                  KillerBallSkin.a(256, false, false, this.field_i);
+                  KillerBallSkin.playMusicTrack(256, false, false, this.field_i);
                 }
               }
             } else {
-              KillerBallSkin.a(256, true, true, this.field_b);
+              KillerBallSkin.playMusicTrack(256, true, true, this.field_b);
             }
           } else {
             this.playTableSound(3, param1, (byte) -117, param3);

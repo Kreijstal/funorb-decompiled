@@ -166,7 +166,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.widgetY = this.widgetY + (5 + var7.measureWrappedHeight(this.field_T, -40 + this.widgetWidth, var7.maxAscent));
           }
           var8 = Cp1252CharacterSupport.loginUsernameEmail;
-          var9 = NameEntryPopup.a(NanoTickClock.getApplet(76), 5137);
+          var9 = NameEntryPopup.readLastLoginMethod(NanoTickClock.getApplet(76), 5137);
           if (var9 == SocialListEntry.field_Xb) {
             var8 = ReportAbuseDialog.loginEmail;
           } else {

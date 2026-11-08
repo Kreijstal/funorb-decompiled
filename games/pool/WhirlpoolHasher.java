@@ -137,7 +137,7 @@ final class WhirlpoolHasher {
             }
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
               var11 = UiComponentNode.field_x.getDefinition(127, param2[var10_int]);
-              var6[var10_int] = var11.e(0);
+              var6[var10_int] = var11.getTemplateText(0);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
               var8[var10_int] = null;

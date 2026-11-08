@@ -36,7 +36,7 @@ final class TutorialFactory {
         int var6 = Pool.field_O;
         Sprite[] var7 = new Sprite[9];
         Sprite[] var4 = var7;
-        var7[0] = ArchiveIndex.a(param2, param0, 7);
+        var7[0] = ArchiveIndex.createSolidSquareSprite(param2, param0, 7);
         int var5 = 1;
         if (param1 != 4578) {
           TutorialFactory.a(true, -89);
@@ -45,7 +45,7 @@ final class TutorialFactory {
           var4[var5] = var4[0];
           var5++;
         }
-        var4[4] = ArchiveIndex.a(param3, 64, param1 - 4571);
+        var4[4] = ArchiveIndex.createSolidSquareSprite(param3, 64, param1 - 4571);
         return var4;
     }
 

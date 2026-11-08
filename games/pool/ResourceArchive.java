@@ -478,7 +478,7 @@ final class ResourceArchive {
         } else {
           SoftwareRasterizer.clear();
         }
-        PolarBallSkin.a((byte) -39, param2);
+        PolarBallSkin.drawAccountInterfaceOverlays((byte) -39, param2);
         if (param1 <= 84) {
           field_j = (String) null;
         }

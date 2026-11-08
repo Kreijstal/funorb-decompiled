@@ -67,7 +67,7 @@ final class DiskCacheWorker implements Runnable {
           var5 = 2 / ((10 - param0) / 52);
           var6 = this.requestQueue;
           synchronized (var6) {
-            var7 = (DiskArchiveRequest) (this.requestQueue.a((byte) 110));
+            var7 = (DiskArchiveRequest) (this.requestQueue.first((byte) 110));
             while (var7 != null) {
               if (var7.field_m == (long)param2 &&
                 param1 == var7.field_R &&
@@ -109,7 +109,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var3 = this.requestQueue;
           synchronized (var3) {
-            this.requestQueue.a(param0, false);
+            this.requestQueue.addLast(param0, false);
             this.pendingRequestCount = this.pendingRequestCount + 1;
             this.requestQueue.notifyAll();
           }
@@ -146,7 +146,7 @@ final class DiskCacheWorker implements Runnable {
           while (!this.stopRequested) {
             var2 = this.requestQueue;
             synchronized (var2) {
-              var7 = (DiskArchiveRequest) (this.requestQueue.a(0));
+              var7 = (DiskArchiveRequest) (this.requestQueue.removeFirst(0));
               if (var7 == null) {
                 try {
                   this.requestQueue.wait();
@@ -276,10 +276,10 @@ final class DiskCacheWorker implements Runnable {
           ParticleTrail.field_g = param8;
           SpriteSheetLoadSupport.field_d = param6;
           PotEvent.field_l = param9;
-          IntrusiveNodeHashTable.field_i = NameEntryPopup.a(0, "lobby", param14, "gameprivacy");
-          QuickChatMenuSupport.field_c = NameEntryPopup.a(0, "lobby", param14, "ratedgame");
-          RasterBuffer.field_a = NameEntryPopup.a(0, "lobby", param14, "opentome");
-          PackedColorSupport.field_f = NameEntryPopup.a(0, "lobby", param14, "allowspectators");
+          IntrusiveNodeHashTable.field_i = NameEntryPopup.loadSpritesByName(0, "lobby", param14, "gameprivacy");
+          QuickChatMenuSupport.field_c = NameEntryPopup.loadSpritesByName(0, "lobby", param14, "ratedgame");
+          RasterBuffer.field_a = NameEntryPopup.loadSpritesByName(0, "lobby", param14, "opentome");
+          PackedColorSupport.field_f = NameEntryPopup.loadSpritesByName(0, "lobby", param14, "allowspectators");
           ChatMessage.field_i = new String[5];
           ChatMessage.field_i[4] = CipherPacketBuffer.multiconstOpen;
           ChatMessage.field_i[2] = DialogLayer.multiconstFriends;

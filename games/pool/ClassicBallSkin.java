@@ -7,8 +7,8 @@ final class ClassicBallSkin extends BallSkin {
     static boolean field_o;
     static int field_m;
 
-    final boolean c(int param0) {
-        if (param0 != 2) {
+    final boolean usesNumberedBallLabels(int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           field_o = true;
           return true;
         }
@@ -65,7 +65,7 @@ final class ClassicBallSkin extends BallSkin {
     final void loadTopBarSprites(int param0, ResourceArchive param1) {
         Sprite[] dupTemp$0 = null;
         try {
-          dupTemp$0 = NameEntryPopup.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
+          dupTemp$0 = NameEntryPopup.loadSpritesByName(param0 ^ param0, "", param1, "top_bar_balls_modern");
           this.field_e = dupTemp$0;
           MeshBoundsSupport.field_a = dupTemp$0;
         } catch (RuntimeException runtimeException) {
@@ -76,12 +76,12 @@ final class ClassicBallSkin extends BallSkin {
     public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 != 1) {
-          ClassicBallSkin.j(26);
+          ClassicBallSkin.createQuickChatHelpDialog(26);
         }
     }
 
-    final static void j(int param0) {
-        if (param0 != 1) {
+    final static void createQuickChatHelpDialog(int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           NineSliceFrame var2 = (NineSliceFrame) null;
           ClassicBallSkin.a((byte) -32, 29, (NineSliceFrame) null, (NineSliceFrame) null, -126, -60);
           CollisionContact.field_f = new QuickChatHelpDialog(AccountStateQuery.field_m, DiskArchiveRequest.field_J, VertexTransformSupport.field_f, AlignedIconLabel.field_Lb, ChoiceButtonSupport.field_e, UiWidget.field_A);

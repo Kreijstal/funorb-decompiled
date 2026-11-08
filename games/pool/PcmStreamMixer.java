@@ -46,7 +46,7 @@ final class PcmStreamMixer extends PcmStream {
           param1 = param1 + var4;
           param2 = param2 - var4;
           this.field_r = this.field_r + var4;
-          this.e();
+          this.normalizeListenerDelays();
           var5 = (PcmMixerListener) (this.field_q.last((byte) 74));
           var6 = var5;
           synchronized (var6) {
@@ -74,7 +74,7 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    private final void e() {
+    private final void normalizeListenerDelays() {
         PcmMixerListener var1 = null;
         if (this.field_r > 0) {
           var1 = (PcmMixerListener) (this.field_q.last((byte) -83));
@@ -127,7 +127,7 @@ final class PcmStreamMixer extends PcmStream {
           this.skipSubstreams(var2);
           length = length - var2;
           this.field_r = this.field_r + var2;
-          this.e();
+          this.normalizeListenerDelays();
           var3 = (PcmMixerListener) (this.field_q.last((byte) -51));
           var4 = var3;
           synchronized (var4) {

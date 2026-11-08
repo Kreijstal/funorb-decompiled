@@ -168,7 +168,7 @@ final class GrowableIntList {
               }
               var3 = var3 + param1;
             }
-            ScrollPaneWithFooter.a(55, var3);
+            ScrollPaneWithFooter.printClientError(55, var3);
             var6 = DiskArchiveRequest.replaceAll(14, "%3a", var3, ":");
             var7 = DiskArchiveRequest.replaceAll(124, "%40", var6, "@");
             var8 = DiskArchiveRequest.replaceAll(123, "%26", var7, "&");

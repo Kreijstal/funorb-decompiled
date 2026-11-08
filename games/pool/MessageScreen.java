@@ -104,7 +104,7 @@ final class MessageScreen extends MenuScreen {
           if (null != CheckboxWidget.field_N) {
             JaggrabDownloader.field_j.a(false, CheckboxWidget.field_N);
           }
-          ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, FontPaletteSupport.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
+          ArchiveIndex.writeEncryptedBuffer((byte) 93, ArchiveLoadSequence.field_l, FontPaletteSupport.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
           JaggrabDownloader.field_j.writeShortLengthPrefix(JaggrabDownloader.field_j.position - var5_int, (byte) -92);
           DebugTuningSupport.flushClientPackets(-1, 0);
           if (param3 != -98300704) {

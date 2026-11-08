@@ -212,7 +212,7 @@ final class Camera {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(var2_int + 1);
-            var5 = PlasmaBallSkin.a(7, var3);
+            var5 = PlasmaBallSkin.validateEmailLocalPart(7, var3);
             if (var5 == null) {
               stackIn_13_0 = BirthDatePromptPanel.a(102, var4);
               return stackIn_13_0;

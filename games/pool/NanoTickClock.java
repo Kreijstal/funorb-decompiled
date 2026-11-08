@@ -106,7 +106,7 @@ final class NanoTickClock extends TickClock {
           var11 = new QuickChatMenu[var7];
           if (null != param2.subcategoryIds) {
             for (var12 = 0; param2.subcategoryIds.length > var12; var12++) {
-              var13_ref_sf = DisplayNamePanel.field_N.a((byte) -55, param2.subcategoryIds[var12]);
+              var13_ref_sf = DisplayNamePanel.field_N.getDefinition((byte) -55, param2.subcategoryIds[var12]);
               var8[var12] = var13_ref_sf.title;
               var9[var12] = param2.subcategoryShortcuts[var12];
               var11[var12] = NanoTickClock.a(param0, param1, var13_ref_sf, param3, (byte) 125);
@@ -119,7 +119,7 @@ final class NanoTickClock extends TickClock {
               var15 = param2.phraseIds[var14];
               if (var15 != -1) {
                 var16 = UiComponentNode.field_x.getDefinition(127, var15);
-                var8[var12Lifetime1 + var14] = var16.e(0);
+                var8[var12Lifetime1 + var14] = var16.getTemplateText(0);
                 var9[var12Lifetime1 + var14] = param2.phraseShortcuts[var14];
                 if (var9[var14 + var12Lifetime1] <= 0) {
                   var13 = (char)(var13 + 1);

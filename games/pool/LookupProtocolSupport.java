@@ -19,7 +19,7 @@ final class LookupProtocolSupport {
           highscores = null;
           return;
         }
-        LookupProtocolSupport.b(-108);
+        LookupProtocolSupport.advanceIntroTick(-108);
         field_f = null;
         field_a = null;
         highscores = null;
@@ -66,8 +66,8 @@ final class LookupProtocolSupport {
         }
     }
 
-    final static void b(int param0) {
-        int var1 = 69 % ((param0 + 18) / 59);
+    final static void advanceIntroTick(int obfuscationGuard) {
+        int var1 = 69 % ((obfuscationGuard + 18) / 59);
         if (LobbyPlayer.field_fc == 0 - ProjectedLineSupport.field_h) {
           LobbyPlayer.field_fc = LobbyPlayer.field_fc + 1;
           return;
@@ -88,7 +88,7 @@ final class LookupProtocolSupport {
         MatchingTextValidator.field_r.clear((byte) 47);
     }
 
-    final static void a(int param0, LookupQuery param1, byte param2) {
+    final static void sendLookupQuery(int opcode, LookupQuery query, byte obfuscationGuard) {
         CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -97,10 +97,10 @@ final class LookupProtocolSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = JaggrabDownloader.field_j;
-          var3.writeCipheredOpcode(false, param0);
-          var3.writeByte(param1.field_n, false);
-          var3.writeShort((byte) -81, param1.field_l);
-          if (param2 == -51) {
+          var3.writeCipheredOpcode(false, opcode);
+          var3.writeByte(query.field_n, false);
+          var3.writeShort((byte) -81, query.field_l);
+          if (obfuscationGuard == -51) {
             return;
           }
           highscores = (String) null;
@@ -109,13 +109,13 @@ final class LookupProtocolSupport {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_5_0 = var3_ref;
-          stackIn_5_1 = new StringBuilder().append("un.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_5_1 = new StringBuilder().append("un.D(").append(opcode).append(',');
+          if (query == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

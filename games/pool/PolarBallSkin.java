@@ -47,7 +47,7 @@ final class PolarBallSkin extends BallSkin {
         }
     }
 
-    private final int b(int param0, byte param1) {
+    private final int themeColorForGroup(int param0, byte param1) {
         if (param1 != -102) {
           field_o = 0;
           if (param0 == 0) {
@@ -70,8 +70,8 @@ final class PolarBallSkin extends BallSkin {
     PolarBallSkin() {
     }
 
-    final boolean c(int param0) {
-        if (param0 != 2) {
+    final boolean usesNumberedBallLabels(int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           this.groupName((byte) -23, 90);
           return false;
         }
@@ -82,7 +82,7 @@ final class PolarBallSkin extends BallSkin {
         field_l = null;
         createPassword = null;
         if (param0 != 8) {
-          PolarBallSkin.a((byte) 80, true);
+          PolarBallSkin.drawAccountInterfaceOverlays((byte) 80, true);
           field_m = (boolean[][]) null;
           return;
         }
@@ -98,49 +98,49 @@ final class PolarBallSkin extends BallSkin {
           return 13421772;
         }
         if (1 == var3) {
-          return this.b(0, (byte) -102);
+          return this.themeColorForGroup(0, (byte) -102);
         }
         if (2 == var3) {
-          return this.b(0, (byte) -102);
+          return this.themeColorForGroup(0, (byte) -102);
         }
         if (var3 == 3) {
-          return this.b(0, (byte) -102);
+          return this.themeColorForGroup(0, (byte) -102);
         }
         if (4 == var3) {
-          return this.b(0, (byte) -102);
+          return this.themeColorForGroup(0, (byte) -102);
         }
         if (var3 == 5) {
-          return this.b(0, (byte) -102);
+          return this.themeColorForGroup(0, (byte) -102);
         }
         if (var3 == 6) {
-          return this.b(0, (byte) -102);
+          return this.themeColorForGroup(0, (byte) -102);
         }
         if (var3 == 7) {
-          return this.b(0, (byte) -102);
+          return this.themeColorForGroup(0, (byte) -102);
         }
         if (var3 == 8) {
           return 3355443;
         }
         if (var3 == 9) {
-          return this.b(1, (byte) -102);
+          return this.themeColorForGroup(1, (byte) -102);
         }
         if (var3 == 10) {
-          return this.b(1, (byte) -102);
+          return this.themeColorForGroup(1, (byte) -102);
         }
         if (var3 == 11) {
-          return this.b(1, (byte) -102);
+          return this.themeColorForGroup(1, (byte) -102);
         }
         if (var3 == 12) {
-          return this.b(1, (byte) -102);
+          return this.themeColorForGroup(1, (byte) -102);
         }
         if (var3 == 13) {
-          return this.b(1, (byte) -102);
+          return this.themeColorForGroup(1, (byte) -102);
         }
         if (var3 == 14) {
-          return this.b(1, (byte) -102);
+          return this.themeColorForGroup(1, (byte) -102);
         }
         if (var3 == 15) {
-          return this.b(1, (byte) -102);
+          return this.themeColorForGroup(1, (byte) -102);
         }
         if (param1) {
           return 16711935;
@@ -154,13 +154,13 @@ final class PolarBallSkin extends BallSkin {
           return;
         }
         try {
-          this.field_e = NameEntryPopup.a(0, "", param1, "top_bar_balls_polar");
+          this.field_e = NameEntryPopup.loadSpritesByName(0, "", param1, "top_bar_balls_polar");
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "to.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawAccountInterfaceOverlays(byte param0, boolean param1) {
         TabbedPane.field_Ub.renderWidgetPassesAndTooltip(0, (byte) 92, 0);
         int var2 = -32 % ((37 - param0) / 60);
     }
@@ -173,8 +173,8 @@ final class PolarBallSkin extends BallSkin {
         return param1 == 0 ? AnimatedNotification.ballsetPolarGroup0 : WhirlpoolHasher.ballsetPolarGroup1;
     }
 
-    final static LoginMethod[] a(byte param0) {
-        if (param0 == -66) {
+    final static LoginMethod[] getLoginMethods(byte obfuscationGuard) {
+        if (obfuscationGuard == -66) {
           return new LoginMethod[]{SocialListEntry.field_Xb, SocketArchiveNetworkClient.field_v, BitmapTextLayout.field_l};
         }
         field_p = 19;

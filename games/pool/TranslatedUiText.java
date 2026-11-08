@@ -30,7 +30,7 @@ final class TranslatedUiText {
           try {
             var1_int = 0;
             while (true) {
-              var2 = DisplayNamePanel.field_N.a((byte) -55, var1_int);
+              var2 = DisplayNamePanel.field_N.getDefinition((byte) -55, var1_int);
               if (var2.rootMarker) {
                 stackIn_5_0 = var2;
                 return stackIn_5_0;

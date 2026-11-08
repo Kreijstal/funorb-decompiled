@@ -74,7 +74,7 @@ final class DebugOverlayLayoutSupport {
         ScrollPane.field_Ob = -Js5Transport.field_q.field_w + SoftwareRasterizer.width >> 1;
         ArrayWidgetGroup.field_M = -Js5Transport.field_q.field_A;
         MidiPcmStream.field_H = ScrollPane.field_Ob + 224;
-        KillerBallSkin.b(param0, (byte) -94);
+        KillerBallSkin.offsetSharedOverlayY(param0, (byte) -94);
     }
 
     static {

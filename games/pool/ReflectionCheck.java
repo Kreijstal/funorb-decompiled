@@ -74,7 +74,7 @@ final class ReflectionCheck extends IntrusiveNode {
     final static void c(byte param0) {
         ProgressDialog.l(23323);
         int var1 = 95 / ((param0 - 47) / 60);
-        EightBallRules.a(ThemeSelectScreen.field_M[0].field_w, CueAim.field_j, ArchiveIndex.field_x, TranslatedUiText.field_n, (byte) 36, DualLinkNodeHashTable.field_i);
+        EightBallRules.layoutLobbyOptionRows(ThemeSelectScreen.field_M[0].field_w, CueAim.field_j, ArchiveIndex.field_x, TranslatedUiText.field_n, (byte) 36, DualLinkNodeHashTable.field_i);
     }
 
     public static void releaseStatics(boolean param0) {

@@ -146,7 +146,7 @@ final class DraggableWidget extends SingleChildWidget {
           HighScoreSubmission.loadLogoModel(param0, (byte) -106);
           LogoFinalFrameLoader.loadFinalFrame((byte) -65, param0);
           MessageDialogContent.a(-257);
-          SpaceBallSkin.i(23);
+          SpaceBallSkin.buildBlurredIntroSprite(23);
           LobbyPlayer.field_fc = 0 - ProjectedLineSupport.field_h;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

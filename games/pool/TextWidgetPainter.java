@@ -22,11 +22,11 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
     static int field_h;
     int field_b;
 
-    final static String a(int param0, int param1) {
-        if (param0 != 8) {
+    final static String shotPhaseName(int obfuscationGuard, int phase) {
+        if (obfuscationGuard != 8) {
           field_h = -19;
         }
-        return param1 != 0 ? param1 == 1 ? "animating" : 2 != param1 ? param1 != 3 ? "illegal state" : "finished with end choice" : "finished" : "waiting";
+        return phase != 0 ? phase == 1 ? "animating" : 2 != phase ? phase != 3 ? "illegal state" : "finished with end choice" : "finished" : "waiting";
     }
 
     String getWidgetText(int param0, UiWidget param1) {
@@ -70,7 +70,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           if (param0 != 1) {
             var4 = (UiWidget) null;
-            discarded$1 = this.a((UiWidget) null, -35, -25, (byte) -43);
+            discarded$1 = this.textOriginY((UiWidget) null, -35, -25, (byte) -43);
           }
           this.ensureTextLayout(0, param1);
           stackIn_3_0 = param1.field_x.totalHeight((byte) 66) + this.field_f + this.field_j;
@@ -153,7 +153,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 stackIn_19_0 = var18.caretX(var9, (byte) -102);
               }
               var15 = stackIn_19_0;
-              VerticalScrollbar.field_Sb.fillRectangleAlpha(var15 - var14, this.selectionColor >>> 24, var13.bottom, var13.top + this.field_f + (param5.widgetY + (param3 + param5.textOffsetY)), this.selectionColor, (byte) 124, this.a(var14, (byte) 11, param2, param5));
+              VerticalScrollbar.field_Sb.fillRectangleAlpha(var15 - var14, this.selectionColor >>> 24, var13.bottom, var13.top + this.field_f + (param5.widgetY + (param3 + param5.textOffsetY)), this.selectionColor, (byte) 124, this.textOriginX(var14, (byte) 11, param2, param5));
             }
             TriangleMesh.a(121);
             return;
@@ -202,7 +202,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final int a(int param0, byte param1, int param2, UiWidget param3) {
+    private final int textOriginX(int offset, byte obfuscationGuard, int originX, UiWidget widget) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -210,17 +210,17 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 11) {
+          if (obfuscationGuard != 11) {
             field_h = 21;
           }
-          stackIn_3_0 = param3.textOffsetX + this.field_i + param2 + (param3.widgetX + param0);
+          stackIn_3_0 = widget.textOffsetX + this.field_i + originX + (widget.widgetX + offset);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_6_0 = var5;
-          stackIn_6_1 = new StringBuilder().append("am.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_6_1 = new StringBuilder().append("am.Q(").append(offset).append(',').append(obfuscationGuard).append(',').append(originX).append(',');
+          if (widget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -246,7 +246,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             param1.field_x = (TextLayout) ((Object) new BitmapTextLayout());
           }
           if (!this.wrapText) {
-            this.a(param1, false);
+            this.layoutWidgetText(param1, false);
           } else {
             ((BitmapTextLayout) (param1.field_x)).layoutParagraph(this.horizontalAlignment, this.getWidgetText(-1, param1), this.font, this.contentHeight(param1, -3), this.field_b, this.contentWidth((byte) 26, param1), this.verticalAlignment, 0);
           }
@@ -276,7 +276,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           return;
         }
         try {
-          this.a((byte) -117, param4, param1, param3);
+          this.drawWidgetText((byte) -117, param4, param1, param3);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "am.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -340,7 +340,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final void a(UiWidget param0, boolean param1) {
+    private final void layoutWidgetText(UiWidget widget, boolean obfuscationGuard) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -355,11 +355,11 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var6Lifetime1;
         var7 = Pool.field_O;
         try {
-          if (param0.field_x == null) {
-            param0.field_x = (TextLayout) ((Object) new BitmapTextLayout());
+          if (widget.field_x == null) {
+            widget.field_x = (TextLayout) ((Object) new BitmapTextLayout());
           }
-          var3_int = this.contentWidth((byte) 26, param0);
-          var4 = this.contentHeight(param0, -3);
+          var3_int = this.contentWidth((byte) 26, widget);
+          var4 = this.contentHeight(widget, -3);
           var6 = this.verticalAlignment;
           if (var6 != 0) {
             if (2 == var6) {
@@ -373,7 +373,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             var5 = this.font.maxAscent;
           }
-          if (param1) {
+          if (obfuscationGuard) {
             var8 = (UiWidget) null;
             this.drawSelection(116, 45, -107, -47, -40, (UiWidget) null);
           }
@@ -381,23 +381,23 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (var6Lifetime1 != 0 &&
             var6Lifetime1 != 3) {
             if (1 == var6Lifetime1) {
-              if (!(param0.field_x instanceof BitmapTextLayout)) {
+              if (!(widget.field_x instanceof BitmapTextLayout)) {
                 return;
               }
-              ((BitmapTextLayout) (param0.field_x)).layoutCentered(this.font, var3_int >> 1, var5, this.getWidgetText(-1, param0), false);
+              ((BitmapTextLayout) (widget.field_x)).layoutCentered(this.font, var3_int >> 1, var5, this.getWidgetText(-1, widget), false);
               return;
             }
             if (var6Lifetime1 != 2) {
               return;
             }
-            if (!(param0.field_x instanceof BitmapTextLayout)) {
+            if (!(widget.field_x instanceof BitmapTextLayout)) {
               return;
             }
-            ((BitmapTextLayout) (param0.field_x)).layoutRightAligned(this.getWidgetText(-1, param0), this.font, false, var5, var3_int);
+            ((BitmapTextLayout) (widget.field_x)).layoutRightAligned(this.getWidgetText(-1, widget), this.font, false, var5, var3_int);
             return;
           }
-          if (param0.field_x instanceof BitmapTextLayout) {
-            ((BitmapTextLayout) (param0.field_x)).layoutLeftAligned(var5, this.getWidgetText(-1, param0), this.font, true, 0);
+          if (widget.field_x instanceof BitmapTextLayout) {
+            ((BitmapTextLayout) (widget.field_x)).layoutLeftAligned(var5, this.getWidgetText(-1, widget), this.font, true, 0);
             return;
           }
           return;
@@ -406,12 +406,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           var3 = decompiledCaughtException;
           stackIn_31_0 = var3;
           stackIn_31_1 = new StringBuilder().append("am.U(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -438,7 +438,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static void b(byte param0) {
+    final static void closeNetworkAndCacheResources(byte obfuscationGuard) {
         try {
           int var1_int = 0;
           int var3 = Pool.field_O;
@@ -464,8 +464,8 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               }
             }
           }
-          if (param0 != 70) {
-            TextWidgetPainter.a(-10, 42);
+          if (obfuscationGuard != 70) {
+            TextWidgetPainter.shotPhaseName(-10, 42);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -521,7 +521,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final int a(UiWidget param0, int param1, int param2, byte param3) {
+    private final int textOriginY(UiWidget widget, int offset, int originY, byte obfuscationGuard) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -529,22 +529,22 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 <= 68) {
+          if (obfuscationGuard <= 68) {
             this.field_f = -82;
           }
-          stackIn_3_0 = param2 + (param0.widgetY + this.field_f) - (-param0.textOffsetY - param1);
+          stackIn_3_0 = originY + (widget.widgetY + this.field_f) - (-widget.textOffsetY - offset);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_6_0 = var5;
           stackIn_6_1 = new StringBuilder().append("am.O(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(offset).append(',').append(originY).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -561,7 +561,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var5 = (UiWidget) null;
             this.textLeft(51, (UiWidget) null, 122);
           }
-          stackIn_3_0 = this.a(0, (byte) 11, param2, param1);
+          stackIn_3_0 = this.textOriginX(0, (byte) 11, param2, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -604,7 +604,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var7 = var15.lineOfCaret(param2, 0);
             var8 = var14.field_b[var7];
             var9 = var15.caretX(param2, (byte) -94);
-            var10 = this.a(var9, (byte) 11, param3, param4);
+            var10 = this.textOriginX(var9, (byte) 11, param3, param4);
             var11 = this.textTop(param1, param4, (byte) -7) + Math.max(0, var8.top);
             stackIn_3_0 = this.textTop(param1, param4, (byte) -7);
             stackIn_3_1 = this.contentHeight(param4, -3);
@@ -621,7 +621,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           }
           if (param0 != 1) {
             var13 = (UiWidget) null;
-            discarded$1 = this.a((UiWidget) null, 37, -42, (byte) -76);
+            discarded$1 = this.textOriginY((UiWidget) null, 37, -42, (byte) -76);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -649,7 +649,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param2 != -7) {
             this.field_g = -17;
           }
-          stackIn_3_0 = this.a(param1, 0, param0, (byte) 98);
+          stackIn_3_0 = this.textOriginY(param1, 0, param0, (byte) 98);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -665,11 +665,11 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static void b(int param0) {
-        if (param0 < 114) {
+    final static void closeChatCompositionPanel(int obfuscationGuard) {
+        if (obfuscationGuard < 114) {
           field_h = 49;
         }
-        LimitedRandomAccessFile.b((byte) -60);
+        LimitedRandomAccessFile.closeChatCompositionPanel((byte) -60);
     }
 
     private final int contentHeight(UiWidget param0, int param1) {
@@ -683,7 +683,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           if (param1 != -3) {
             var4 = (UiWidget) null;
-            this.a((byte) -37, (UiWidget) null, 11, -127);
+            this.drawWidgetText((byte) -37, (UiWidget) null, 11, -127);
           }
           stackIn_3_0 = param0.widgetHeight - this.field_f - this.field_j;
           return stackIn_3_0;
@@ -701,7 +701,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6, byte param7) {
+    private final void drawAlignedText(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6, byte param7) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -740,19 +740,19 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.font.drawCentered(this.getWidgetText(-1, param2), this.a(param3, (byte) 11, param6, param2) + (var9_int >> 1), this.a(param2, param0, param5, (byte) 125) + var11, param1, param4);
+                this.font.drawCentered(this.getWidgetText(-1, param2), this.textOriginX(param3, (byte) 11, param6, param2) + (var9_int >> 1), this.textOriginY(param2, param0, param5, (byte) 125) + var11, param1, param4);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.font.c(this.getWidgetText(-1, param2), this.a(param3, (byte) 11, param6, param2) + var9_int, this.a(param2, param0, param5, (byte) 106) + var11, param1, param4);
+                  this.font.c(this.getWidgetText(-1, param2), this.textOriginX(param3, (byte) 11, param6, param2) + var9_int, this.textOriginY(param2, param0, param5, (byte) 106) + var11, param1, param4);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.font.d(this.getWidgetText(param7 ^ 21, param2), this.a(param3, (byte) 11, param6, param2), var11 + this.a(param2, param0, param5, (byte) 92), param1, param4);
+              this.font.d(this.getWidgetText(param7 ^ 21, param2), this.textOriginX(param3, (byte) 11, param6, param2), var11 + this.textOriginY(param2, param0, param5, (byte) 92), param1, param4);
             }
           } else {
-            this.font.drawParagraph(this.getWidgetText(param7 ^ 21, param2), this.a(param3, (byte) 11, param6, param2), this.a(param2, param0, param5, (byte) 70), var9_int, var10, param1, param4, this.horizontalAlignment, this.verticalAlignment, this.field_b);
+            this.font.drawParagraph(this.getWidgetText(param7 ^ 21, param2), this.textOriginX(param3, (byte) 11, param6, param2), this.textOriginY(param2, param0, param5, (byte) 70), var9_int, var10, param1, param4, this.horizontalAlignment, this.verticalAlignment, this.field_b);
           }
           TriangleMesh.a(114);
           return;
@@ -770,12 +770,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final void a(byte param0, UiWidget param1, int param2, int param3) {
+    private final void drawWidgetText(byte obfuscationGuard, UiWidget widget, int originX, int originY) {
         try {
-          int var5_int = -52 / ((param0 + 10) / 61);
-          this.a(0, this.textColor, param1, 0, this.shadowColor, param3, param2, (byte) -22);
+          int var5_int = -52 / ((obfuscationGuard + 10) / 61);
+          this.drawAlignedText(0, this.textColor, widget, 0, this.shadowColor, originY, originX, (byte) -22);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "am.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "am.M(" + obfuscationGuard + ',' + (widget != null ? "{...}" : "null") + ',' + originX + ',' + originY + ')');
         }
     }
 

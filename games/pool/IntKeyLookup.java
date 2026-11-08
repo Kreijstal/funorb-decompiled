@@ -107,7 +107,7 @@ final class IntKeyLookup {
             ProgressDialog.m(8421504);
           }
           ProxyConnectorSupport.a(-31668, param3, param4);
-          PlasmaBallSkin.a(true, param0, param4);
+          PlasmaBallSkin.updateReportAbuseDialog(true, param0, param4);
           param4 = false;
         }
         return param4;

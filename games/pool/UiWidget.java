@@ -313,12 +313,12 @@ class UiWidget extends IntrusiveNode {
         Sprite[] var4 = new Sprite[9];
         Sprite[] var2 = var4;
         if (param0 > 4) {
-          var4[4] = ArchiveIndex.a(param1, 64, 7);
+          var4[4] = ArchiveIndex.createSolidSquareSprite(param1, 64, 7);
           return var2;
         }
         String var3 = (String) null;
         UiWidget.a((byte) 3, (String) null);
-        var4[4] = ArchiveIndex.a(param1, 64, 7);
+        var4[4] = ArchiveIndex.createSolidSquareSprite(param1, 64, 7);
         return var2;
     }
 

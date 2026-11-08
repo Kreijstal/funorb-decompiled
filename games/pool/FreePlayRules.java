@@ -202,7 +202,7 @@ final class FreePlayRules extends GameRules {
 
     final void updateGroupLabels(int param0) {
         if (param0 > -25) {
-          this.isTargetVisible(41, 107);
+          this.isPlayerSnookered(41, 107);
         }
     }
 
@@ -243,7 +243,7 @@ final class FreePlayRules extends GameRules {
         return 16;
     }
 
-    final boolean isTargetVisible(int param0, int param1) {
+    final boolean isPlayerSnookered(int param0, int param1) {
         if (param1 >= -28) {
           this.showsTargetBall(-106);
           return false;

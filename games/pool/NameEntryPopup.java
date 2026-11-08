@@ -12,7 +12,7 @@ final class NameEntryPopup extends UiComponent {
     static ScrollPaneWithFooter field_Mb;
     static String waitingforMusic;
 
-    final static Sprite f(byte param0) {
+    final static Sprite createDecodedSprite(byte obfuscationGuard) {
         int var4_int = 0;
         int var5 = Pool.field_O;
         int var1 = AccountTextSupport.field_f[0] * LinkButtonPainter.field_a[0];
@@ -22,8 +22,8 @@ final class NameEntryPopup extends UiComponent {
           var3[var4_int] = IntrusiveNode.field_h[ArchiveLoadSequence.bitwiseAnd((int) var2[var4_int], 255)];
         }
         Sprite var4 = new Sprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[0], LoginRequestSupport.field_d[0], LinkButtonPainter.field_a[0], AccountTextSupport.field_f[0], var3);
-        if (param0 != 89) {
-          NameEntryPopup.f((byte) 30);
+        if (obfuscationGuard != 89) {
+          NameEntryPopup.createDecodedSprite((byte) 30);
         }
         OpacityWidget.h(-1);
         return var4;
@@ -108,15 +108,15 @@ final class NameEntryPopup extends UiComponent {
         tutorialNext = null;
     }
 
-    final static int a(boolean param0, int param1, int param2) {
-        if (!param0) {
+    final static int floorModPositiveDivisor(boolean obfuscationGuard, int divisor, int value) {
+        if (!obfuscationGuard) {
           return -93;
         }
-        int var3 = param2 >> 31 & -1 + param1;
-        return (param2 + (param2 >>> 31)) % param1 + var3;
+        int var3 = value >> 31 & -1 + divisor;
+        return (value + (value >>> 31)) % divisor + var3;
     }
 
-    final static Sprite[] a(int param0, String param1, ResourceArchive param2, String param3) {
+    final static Sprite[] loadSpritesByName(int obfuscationGuard, String groupName, ResourceArchive archive, String fileName) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -130,28 +130,28 @@ final class NameEntryPopup extends UiComponent {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.getGroupId(param1, param0 - 1);
-          var5 = param2.getFileId(var4_int, param0, param3);
-          stackIn_1_0 = ModelOriginSupport.a(var4_int, (byte) 110, param2, var5);
+          var4_int = archive.getGroupId(groupName, obfuscationGuard - 1);
+          var5 = archive.getFileId(var4_int, obfuscationGuard, fileName);
+          stackIn_1_0 = ModelOriginSupport.a(var4_int, (byte) 110, archive, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_4_0 = var4;
-          stackIn_4_1 = new StringBuilder().append("aj.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("aj.E(").append(obfuscationGuard).append(',');
+          if (groupName == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param2 == null) {
+          if (archive == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param3 == null) {
+          if (fileName == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -160,7 +160,7 @@ final class NameEntryPopup extends UiComponent {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1, String param2) {
+    final static void setSessionCookie(java.applet.Applet applet, int obfuscationGuard, String session) {
         try {
           String var3 = null;
           String var5 = null;
@@ -170,27 +170,27 @@ final class NameEntryPopup extends UiComponent {
           String var5Lifetime3;
           String var5Lifetime4;
           try {
-            TextInputPainter.field_y = param2;
+            TextInputPainter.field_y = session;
             try {
-              if (param1 != -18788) {
+              if (obfuscationGuard != -18788) {
                 waitingforMusic = (String) null;
               }
-              var3 = param0.getParameter("cookieprefix");
+              var3 = applet.getParameter("cookieprefix");
               var5 = var3;
               var5Lifetime1 = var3;
-              var4 = param0.getParameter("cookiehost");
+              var4 = applet.getParameter("cookiehost");
               var5Lifetime2 = var4;
               var5Lifetime3 = var4;
-              var5Lifetime4 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
-              if (param2.length() == 0) {
+              var5Lifetime4 = var3 + "session=" + session + "; version=1; path=/; domain=" + var4;
+              if (session.length() == 0) {
                 var5Lifetime4 = var5Lifetime4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              JavaScriptBridge.evaluateScript("document.cookie=\"" + var5Lifetime4 + "\"", param0, (byte) 35);
+              JavaScriptBridge.evaluateScript("document.cookie=\"" + var5Lifetime4 + "\"", applet, (byte) 35);
             } catch (Throwable throwable) {
             }
-            IntrusiveNodeHashTable.a(558370049, param0);
+            IntrusiveNodeHashTable.a(558370049, applet);
           } catch (RuntimeException runtimeException) {
-            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "aj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "aj.D(" + (applet != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (session != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -208,7 +208,7 @@ final class NameEntryPopup extends UiComponent {
         }
         if (param0 != 20628) {
           java.applet.Applet var3 = (java.applet.Applet) null;
-          NameEntryPopup.a((java.applet.Applet) null, 1);
+          NameEntryPopup.readLastLoginMethod((java.applet.Applet) null, 1);
         }
         if (85 == IterableDualLinkDeque.field_a &&
           !(this.nameBuffer.length() <= 0)) {
@@ -243,7 +243,7 @@ final class NameEntryPopup extends UiComponent {
         return true;
     }
 
-    final static LoginMethod a(java.applet.Applet param0, int param1) {
+    final static LoginMethod readLastLoginMethod(java.applet.Applet applet, int obfuscationGuard) {
         String var2 = null;
         RuntimeException var2_ref = null;
         LoginMethod[] var3 = null;
@@ -257,15 +257,15 @@ final class NameEntryPopup extends UiComponent {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = LoginPayload.readCookie(-21721, "jagex-last-login-method", param0);
-          if (param1 != 5137) {
+          var2 = LoginPayload.readCookie(-21721, "jagex-last-login-method", applet);
+          if (obfuscationGuard != 5137) {
             NameEntryPopup.a(-103, false, 80);
           }
           if (var2 == null) {
             stackIn_4_0 = BitmapTextLayout.field_l;
             return stackIn_4_0;
           }
-          var3 = PolarBallSkin.a((byte) -66);
+          var3 = PolarBallSkin.getLoginMethods((byte) -66);
           var4 = 0;
           while (true) {
             if (var3.length <= var4) {
@@ -286,12 +286,12 @@ final class NameEntryPopup extends UiComponent {
           var2_ref = decompiledCaughtException;
           stackIn_15_0 = var2_ref;
           stackIn_15_1 = new StringBuilder().append("aj.B(");
-          if (param0 == null) {
+          if (applet == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ final class NameEntryPopup extends UiComponent {
         }
         if (param1) {
           var5 = (String) null;
-          NameEntryPopup.a(23, (String) null, (ResourceArchive) null, (String) null);
+          NameEntryPopup.loadSpritesByName(23, (String) null, (ResourceArchive) null, (String) null);
         }
         if (0 > param2 &&
           0 > param0 &&

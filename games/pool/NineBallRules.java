@@ -129,12 +129,12 @@ final class NineBallRules extends GameRules {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, boolean param3) {
+    final static Sprite[] createBeveledPanelSprites(int param0, int param1, int param2, boolean param3) {
         if (param3) {
           String var5 = (String) null;
           NineBallRules.a((String) null, (byte) 90);
         }
-        return EightBallRules.a(param0, 64, param2, param1, 1);
+        return EightBallRules.createBeveledPanelSprites(param0, 64, param2, param1, 1);
     }
 
     final static boolean a(String param0, byte param1) {
@@ -188,7 +188,7 @@ final class NineBallRules extends GameRules {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -33) {
-            NineBallRules.a(67, 8, 86, true);
+            NineBallRules.createBeveledPanelSprites(67, 8, 86, true);
           }
           stackIn_5_0 = (param0.field_n == param0.groupBefore);
           return stackIn_5_0;
@@ -336,11 +336,11 @@ final class NineBallRules extends GameRules {
             }
           }
           if (this.field_d.shouldChangePlayer(false, (byte) 81, var9)) {
-            if (this.isTargetVisible((var9.playerIndex + 1) % this.field_d.playerCount, -102)) {
+            if (this.isPlayerSnookered((var9.playerIndex + 1) % this.field_d.playerCount, -102)) {
               var9.field_w = (byte)(var9.field_w + 1);
             }
           } else {
-            if (this.isTargetVisible(var9.playerIndex % this.field_d.playerCount, -41)) {
+            if (this.isPlayerSnookered(var9.playerIndex % this.field_d.playerCount, -41)) {
               var9.field_w = (byte)(var9.field_w - 1);
             }
           }
@@ -463,12 +463,12 @@ final class NineBallRules extends GameRules {
         return this.baseResolutionFlags(10);
     }
 
-    final boolean isTargetVisible(int param0, int param1) {
+    final boolean isPlayerSnookered(int param0, int param1) {
         if (param1 >= -28) {
           return true;
         }
         this.field_d.computeAimTargets(12226, 0);
-        return !this.field_d.field_r[this.initialGroup(-1)].field_j ? true : false;
+        return !this.field_d.field_r[this.initialGroup(-1)].visible ? true : false;
     }
 
     static {

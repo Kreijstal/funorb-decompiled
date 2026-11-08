@@ -23,7 +23,7 @@ final class CueStick {
             ResourceArchive var5 = (ResourceArchive) null;
             CueStick.a(true, true, (ResourceArchive) null, (ResourceArchive) null);
           }
-          ThemeSelectScreen.field_M = NameEntryPopup.a(0, "lobby", param2, "chatfilter");
+          ThemeSelectScreen.field_M = NameEntryPopup.loadSpritesByName(0, "lobby", param2, "chatfilter");
           TranslatedUiText.field_i[1] = ProjectedLineSupport.muChatFriends;
           TranslatedUiText.field_i[2] = KillerRules.muChatOff;
           TranslatedUiText.field_i[0] = AccountCreationDialog.muChatOn;
@@ -94,7 +94,7 @@ final class CueStick {
               var6.vertexZ[var7_int] = var6.vertexZ[var7_int] - var5;
             }
             var6.clearCaches();
-            this.segmentOffsets[var4] = (double)KillerRules.e(-this.segments[0].field_V + var5, 3);
+            this.segmentOffsets[var4] = (double)KillerRules.fixed3ToFloat(-this.segments[0].field_V + var5, 3);
             if (var4 > 0) {
               var7 = this.segments[var4 - 1];
               var7.computeNormals();

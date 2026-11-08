@@ -10,8 +10,8 @@ final class DualLinkDeque {
     static int field_a;
     static ServerListLauncher field_g;
 
-    final DualLinkNode a(byte param0) {
-        int var3 = -47 % ((param0 - 25) / 39);
+    final DualLinkNode first(byte obfuscationGuard) {
+        int var3 = -47 % ((obfuscationGuard - 25) / 39);
         DualLinkNode var2 = this.field_d.field_q;
         if (this.field_d != var2) {
           this.field_e = var2.field_q;
@@ -32,42 +32,42 @@ final class DualLinkDeque {
         return var2;
     }
 
-    final void a(DualLinkNode param0, boolean param1) {
+    final void addLast(DualLinkNode node, boolean obfuscationGuard) {
         try {
-          if (param1) {
+          if (obfuscationGuard) {
             this.field_e = (DualLinkNode) null;
           }
-          if (param0.field_n != null) {
-            param0.unlinkNode(param1);
+          if (node.field_n != null) {
+            node.unlinkNode(obfuscationGuard);
           }
-          param0.field_q = this.field_d;
-          param0.field_n = this.field_d.field_n;
-          param0.field_n.field_q = param0;
-          param0.field_q.field_n = param0;
+          node.field_q = this.field_d;
+          node.field_n = this.field_d.field_n;
+          node.field_n.field_q = node;
+          node.field_q.field_n = node;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wo.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wo.E(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void initializeSocialListPanels(int alignment, ResourceArchive archive) {
         UiComponent var5 = null;
         UiComponent var6 = null;
         UiComponent var3 = null;
         try {
-          IntegerRecordSubmission.field_o = WidgetStyleLayer.loadSprite("basic", (byte) 54, "display_name_changed", param1);
+          IntegerRecordSubmission.field_o = WidgetStyleLayer.loadSprite("basic", (byte) 54, "display_name_changed", archive);
           NameEntryPopup.field_Mb = new ScrollPaneWithFooter(0L, HighscoresScreen.field_J, StateIconLabel.muLobbyFriendAdd, PacketBuffer.muLobbyFriendRm);
           InputIdleSupport.field_c = new ScrollPaneWithFooter(0L, HighscoresScreen.field_J, ScreenProjectionSupport.muLobbyNameAdd, LookupRetrySupport.muLobbyNameRm);
           SingleChildWidget.field_J = new UiComponent(0L, (UiComponent) null);
           AccountContentDialog.field_sb = new UiComponent(0L, AlignedIconLabel.field_Lb);
-          AccountContentDialog.field_sb.horizontalAlignment = param0;
+          AccountContentDialog.field_sb.horizontalAlignment = alignment;
           PoolUiText.field_e = new UiComponent(0L, LoginEncryptionSupport.field_d, MenuScreenBase.muLobbyName);
           ByteStorage.field_f = new UiComponent(0L, Under13NoticePanel.field_Q, LobbyPanelLayoutSupport.muLobbyLocation);
           AccountTextSupport.field_b = new UiComponent(0L, UiWidget.field_A);
-          SingleChildWidget.field_J.addChild(param0 - 103, AccountContentDialog.field_sb);
+          SingleChildWidget.field_J.addChild(alignment - 103, AccountContentDialog.field_sb);
           SingleChildWidget.field_J.addChild(92, PoolUiText.field_e);
           SingleChildWidget.field_J.addChild(14, ByteStorage.field_f);
           SingleChildWidget.field_J.addChild(127, NameEntryPopup.field_Mb);
-          SingleChildWidget.field_J.addChild(param0 ^ -107, AccountTextSupport.field_b);
+          SingleChildWidget.field_J.addChild(alignment ^ -107, AccountTextSupport.field_b);
           NameEntryPopup.field_Mb.scrollPane.viewport.copyStyle((byte) -87, AlignedIconLabel.field_Lb);
           NameEntryPopup.field_Mb.scrollPane.viewport.verticalAlignment = 1;
           var5 = NameEntryPopup.field_Mb.scrollPane.viewport;
@@ -78,20 +78,20 @@ final class DualLinkDeque {
           InputIdleSupport.field_c.scrollPane.viewport.verticalAlignment = 1;
           var3.horizontalAlignment = 1;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wo.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wo.D(" + alignment + ',' + (archive != null ? "{...}" : "null") + ')');
         }
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode removeFirst(int obfuscationGuard) {
         DualLinkNode var2 = this.field_d.field_q;
         if (this.field_d == var2) {
           return null;
         }
         var2.unlinkNode(false);
-        if (param0 == 0) {
+        if (obfuscationGuard == 0) {
           return var2;
         }
-        this.a((byte) -4);
+        this.first((byte) -4);
         return var2;
     }
 

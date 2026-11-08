@@ -1073,7 +1073,7 @@ final class RankingsScreen extends MenuScreen {
           }
           if (var5 != 0 &&
             !param3) {
-            SpaceBallSkin.c(5, param0);
+            SpaceBallSkin.sendGameSettings(5, param0);
             return;
           }
           return;

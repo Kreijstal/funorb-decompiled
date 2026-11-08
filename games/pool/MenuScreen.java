@@ -619,10 +619,10 @@ class MenuScreen extends MenuScreenBase {
                                                                     } else {
                                                                       if (var6 == 21) {
                                                                         if (this.selection.isHomeKey(121)) {
-                                                                          QuickChatPhraseDefinition.a(0, 3815994);
+                                                                          QuickChatPhraseDefinition.setMusicVolume(0, 3815994);
                                                                         }
                                                                         if (this.selection.isEndKey(103)) {
-                                                                          QuickChatPhraseDefinition.a(256, 3815994);
+                                                                          QuickChatPhraseDefinition.setMusicVolume(256, 3815994);
                                                                         }
                                                                         if (this.selection.isPointerHeld((byte) 105)) {
                                                                           var6 = this.getButtonLeft(0, param2) + this.getButtonRight(false, param2) + Ball.field_H - 120 >> 1;
@@ -630,12 +630,12 @@ class MenuScreen extends MenuScreenBase {
                                                                           var8 = 256 * var7 / 120;
                                                                           if (var8 > 0) {
                                                                             if (var8 >= 256) {
-                                                                              QuickChatPhraseDefinition.a(256, param0 + 3832464);
+                                                                              QuickChatPhraseDefinition.setMusicVolume(256, param0 + 3832464);
                                                                             } else {
-                                                                              QuickChatPhraseDefinition.a(var8, 3815994);
+                                                                              QuickChatPhraseDefinition.setMusicVolume(var8, 3815994);
                                                                             }
                                                                           } else {
-                                                                            QuickChatPhraseDefinition.a(0, 3815994);
+                                                                            QuickChatPhraseDefinition.setMusicVolume(0, 3815994);
                                                                           }
                                                                         }
                                                                         if (this.selection.isLeftArrow(-20421)) {

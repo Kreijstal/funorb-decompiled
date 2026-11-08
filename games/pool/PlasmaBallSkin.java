@@ -85,7 +85,7 @@ final class PlasmaBallSkin extends BallSkin {
           TransformRotationSupport.field_i = WidgetStyleLayer.loadSprite("", (byte) 46, "grad_lightning_blue", param1).field_D;
           LimitedRandomAccessFile.field_a = WidgetStyleLayer.loadSprite("", (byte) 53, "grad_lightning_red", param1).field_D;
           AppletUrlSupport.field_i = WidgetStyleLayer.loadSprite("", (byte) 37, "grad_lightning_white", param1).field_D;
-          this.field_e = NameEntryPopup.a(0, "", param1, "top_bar_balls_plasma");
+          this.field_e = NameEntryPopup.loadSpritesByName(0, "", param1, "top_bar_balls_plasma");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,7 +126,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, boolean param3) {
+    final static void drawActiveScreen(int param0, int param1, boolean param2, boolean param3) {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -186,7 +186,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final static BrowserCookieSupport a(int param0, String param1) {
+    final static BrowserCookieSupport validateEmailLocalPart(int obfuscationGuard, String localPart) {
         BrowserCookieSupport stackIn_5_0 = null;
         BrowserCookieSupport stackIn_10_0 = null;
         BrowserCookieSupport stackIn_16_0 = null;
@@ -212,7 +212,7 @@ final class PlasmaBallSkin extends BallSkin {
         int var5Lifetime1;
         var6 = Pool.field_O;
         try {
-          var2_int = param1.length();
+          var2_int = localPart.length();
           if (var2_int == 0) {
             stackIn_5_0 = WorldPointProjectionSupport.field_e;
             return stackIn_5_0;
@@ -221,15 +221,15 @@ final class PlasmaBallSkin extends BallSkin {
             stackIn_10_0 = ChatPanelSupport.field_h;
             return stackIn_10_0;
           }
-          if (param1.charAt(0) == 34) {
-            if (param1.charAt(-1 + var2_int) != 34) {
+          if (localPart.charAt(0) == 34) {
+            if (localPart.charAt(-1 + var2_int) != 34) {
               stackIn_16_0 = MessageScreen.field_K;
               return stackIn_16_0;
             }
             var3 = 0;
             var4 = 1;
             while (-1 + var2_int > var4) {
-              var5 = param1.charAt(var4);
+              var5 = localPart.charAt(var4);
               if (92 == var5) {
                 stackIn_26_0 = (var3 != 0) ? 0 : 1;
                 var3 = stackIn_26_0;
@@ -252,7 +252,7 @@ final class PlasmaBallSkin extends BallSkin {
             stackIn_40_0 = null;
             return (BrowserCookieSupport) (stackIn_40_0);
           }
-          if (param0 != 7) {
+          if (obfuscationGuard != 7) {
             stackIn_43_0 = (BrowserCookieSupport) null;
             return stackIn_43_0;
           }
@@ -260,7 +260,7 @@ final class PlasmaBallSkin extends BallSkin {
           var4Lifetime1 = 0;
           while (var4Lifetime1 < var2_int) {
             boolean decompiledFrameRemainder0 = true;
-            var5Lifetime1 = param1.charAt(var4Lifetime1);
+            var5Lifetime1 = localPart.charAt(var4Lifetime1);
             if (var5Lifetime1 == 46) {
               if (0 != var4Lifetime1 &&
                 var2_int - 1 != var4Lifetime1 &&
@@ -291,8 +291,8 @@ final class PlasmaBallSkin extends BallSkin {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_71_0 = var2;
-          stackIn_71_1 = new StringBuilder().append("vl.EA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_71_1 = new StringBuilder().append("vl.EA(").append(obfuscationGuard).append(',');
+          if (localPart == null) {
             stackIn_72_2 = "null";
           } else {
             stackIn_72_2 = "{...}";
@@ -301,7 +301,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    private final void a(int[] param0, int[] param1, int param2, byte param3, int param4) {
+    private final void drawBallLightning(int[] cameraTransform, int[] ballTransform, int ballIndex, byte obfuscationGuard, int fade) {
         int[] dupTemp$2 = null;
         int[] dupTemp$3 = null;
         RuntimeException runtimeException = null;
@@ -346,45 +346,45 @@ final class PlasmaBallSkin extends BallSkin {
         int var20Lifetime2;
         var27 = Pool.field_O;
         try {
-          var18 = param0[3] >> 2;
-          var19 = param0[4] >> 2;
-          var20 = param0[5] >> 2;
-          var21 = param0[6] >> 2;
-          var22 = param0[7] >> 2;
-          var23 = param0[8] >> 2;
-          var24 = param0[9] >> 2;
-          var25 = param0[10] >> 2;
-          if (param3 >= -37) {
+          var18 = cameraTransform[3] >> 2;
+          var19 = cameraTransform[4] >> 2;
+          var20 = cameraTransform[5] >> 2;
+          var21 = cameraTransform[6] >> 2;
+          var22 = cameraTransform[7] >> 2;
+          var23 = cameraTransform[8] >> 2;
+          var24 = cameraTransform[9] >> 2;
+          var25 = cameraTransform[10] >> 2;
+          if (obfuscationGuard >= -37) {
             return;
           }
-          var26 = param0[11] >> 2;
-          var9 = param1[5] * var20 + param1[4] * var19 + param1[3] * var18 >> 14;
-          var10 = param1[3] * var21 + param1[4] * var22 + param1[5] * var23 >> 14;
-          var13 = param1[6] * var21 + var22 * param1[7] + param1[8] * var23 >> 14;
-          var17 = var26 * param1[11] + param1[10] * var25 + var24 * param1[9] >> 14;
-          var15 = param1[11] * var20 + param1[9] * var18 + var19 * param1[10] >> 14;
-          var12 = var18 * param1[6] + var19 * param1[7] + param1[8] * var20 >> 14;
-          var11 = param1[5] * var26 + param1[4] * var25 + var24 * param1[3] >> 14;
-          var14 = var26 * param1[8] + param1[7] * var25 + var24 * param1[6] >> 14;
-          var16 = var22 * param1[10] + param1[9] * var21 + param1[11] * var23 >> 14;
-          var18Lifetime1 = param1[0] - param0[0];
-          var19Lifetime1 = -param0[1] + param1[1];
-          var20Lifetime1 = -param0[2] + param1[2];
-          var7 = var19Lifetime1 * param0[7] + (var18Lifetime1 * param0[6] + param0[8] * var20Lifetime1) >> 16;
-          var8 = param0[10] * var19Lifetime1 + (var18Lifetime1 * param0[9] + param0[11] * var20Lifetime1) >> 16;
-          var6_int = var20Lifetime1 * param0[5] + (var18Lifetime1 * param0[3] + var19Lifetime1 * param0[4]) >> 16;
+          var26 = cameraTransform[11] >> 2;
+          var9 = ballTransform[5] * var20 + ballTransform[4] * var19 + ballTransform[3] * var18 >> 14;
+          var10 = ballTransform[3] * var21 + ballTransform[4] * var22 + ballTransform[5] * var23 >> 14;
+          var13 = ballTransform[6] * var21 + var22 * ballTransform[7] + ballTransform[8] * var23 >> 14;
+          var17 = var26 * ballTransform[11] + ballTransform[10] * var25 + var24 * ballTransform[9] >> 14;
+          var15 = ballTransform[11] * var20 + ballTransform[9] * var18 + var19 * ballTransform[10] >> 14;
+          var12 = var18 * ballTransform[6] + var19 * ballTransform[7] + ballTransform[8] * var20 >> 14;
+          var11 = ballTransform[5] * var26 + ballTransform[4] * var25 + var24 * ballTransform[3] >> 14;
+          var14 = var26 * ballTransform[8] + ballTransform[7] * var25 + var24 * ballTransform[6] >> 14;
+          var16 = var22 * ballTransform[10] + ballTransform[9] * var21 + ballTransform[11] * var23 >> 14;
+          var18Lifetime1 = ballTransform[0] - cameraTransform[0];
+          var19Lifetime1 = -cameraTransform[1] + ballTransform[1];
+          var20Lifetime1 = -cameraTransform[2] + ballTransform[2];
+          var7 = var19Lifetime1 * cameraTransform[7] + (var18Lifetime1 * cameraTransform[6] + cameraTransform[8] * var20Lifetime1) >> 16;
+          var8 = cameraTransform[10] * var19Lifetime1 + (var18Lifetime1 * cameraTransform[9] + cameraTransform[11] * var20Lifetime1) >> 16;
+          var6_int = var20Lifetime1 * cameraTransform[5] + (var18Lifetime1 * cameraTransform[3] + var19Lifetime1 * cameraTransform[4]) >> 16;
           var18Lifetime2 = 0;
           var19Lifetime2 = 0;
           scanLoop1: while (true) {
             regionExit2: {
-              if (var19Lifetime2 < QuickChatDynamicCommand.field_d[param2].length) {
-                var20Lifetime2 = 2 + (128 * var19Lifetime2 / QuickChatDynamicCommand.field_d[param2].length - 64);
-                MusicPatchEnvelope.field_i[param2][var19Lifetime2] = var20Lifetime2 * var15 + var12 * ResizableDialog.field_ab[param2][var19Lifetime2] + QuickChatDynamicCommand.field_d[param2][var19Lifetime2] * var9 >> 16;
-                field_n[param2][var19Lifetime2] = var13 * ResizableDialog.field_ab[param2][var19Lifetime2] + (var10 * QuickChatDynamicCommand.field_d[param2][var19Lifetime2] + var16 * var20Lifetime2) >> 16;
-                var20Lifetime2 = var14 * ResizableDialog.field_ab[param2][var19Lifetime2] + QuickChatDynamicCommand.field_d[param2][var19Lifetime2] * var11 + var20Lifetime2 * var17 >> 16;
-                dupTemp$2 = MusicPatchEnvelope.field_i[param2];
+              if (var19Lifetime2 < QuickChatDynamicCommand.field_d[ballIndex].length) {
+                var20Lifetime2 = 2 + (128 * var19Lifetime2 / QuickChatDynamicCommand.field_d[ballIndex].length - 64);
+                MusicPatchEnvelope.field_i[ballIndex][var19Lifetime2] = var20Lifetime2 * var15 + var12 * ResizableDialog.field_ab[ballIndex][var19Lifetime2] + QuickChatDynamicCommand.field_d[ballIndex][var19Lifetime2] * var9 >> 16;
+                field_n[ballIndex][var19Lifetime2] = var13 * ResizableDialog.field_ab[ballIndex][var19Lifetime2] + (var10 * QuickChatDynamicCommand.field_d[ballIndex][var19Lifetime2] + var16 * var20Lifetime2) >> 16;
+                var20Lifetime2 = var14 * ResizableDialog.field_ab[ballIndex][var19Lifetime2] + QuickChatDynamicCommand.field_d[ballIndex][var19Lifetime2] * var11 + var20Lifetime2 * var17 >> 16;
+                dupTemp$2 = MusicPatchEnvelope.field_i[ballIndex];
                 dupTemp$2[var19Lifetime2] = dupTemp$2[var19Lifetime2] + var6_int;
-                dupTemp$3 = field_n[param2];
+                dupTemp$3 = field_n[ballIndex];
                 dupTemp$3[var19Lifetime2] = dupTemp$3[var19Lifetime2] + var7;
                 var20Lifetime2 = var20Lifetime2 + var8;
                 stackIn_27_0 = 0;
@@ -393,13 +393,13 @@ final class PlasmaBallSkin extends BallSkin {
                   break scanLoop1;
                 }
                 if (stackIn_27_0 < stackIn_27_1) {
-                  MusicPatchEnvelope.field_i[param2][var19Lifetime2] = (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 2) + (MusicPatchEnvelope.field_i[param2][var19Lifetime2] << 11) / var20Lifetime2;
-                  field_n[param2][var19Lifetime2] = (SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 2) + (field_n[param2][var19Lifetime2] << 11) / var20Lifetime2;
-                  stackIn_15_0 = TikiBallSkin.field_o[param2];
+                  MusicPatchEnvelope.field_i[ballIndex][var19Lifetime2] = (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 2) + (MusicPatchEnvelope.field_i[ballIndex][var19Lifetime2] << 11) / var20Lifetime2;
+                  field_n[ballIndex][var19Lifetime2] = (SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 2) + (field_n[ballIndex][var19Lifetime2] << 11) / var20Lifetime2;
+                  stackIn_15_0 = TikiBallSkin.field_o[ballIndex];
                   stackIn_15_1 = var19Lifetime2;
                   if (0 != var19Lifetime2 &&
                     var18Lifetime2 == 0) {
-                    stackIn_18_2 = (int)(((long)BrowserCookieSupport.field_a[param2][var19Lifetime2] << 10) / (long)var20Lifetime2);
+                    stackIn_18_2 = (int)(((long)BrowserCookieSupport.field_a[ballIndex][var19Lifetime2] << 10) / (long)var20Lifetime2);
                   } else {
                     stackIn_18_2 = 0;
                   }
@@ -419,25 +419,25 @@ final class PlasmaBallSkin extends BallSkin {
             stackIn_27_1 = 0;
             break;
           }
-          ReflectionReplySupport.$cfr$intArgs$a$2435eea43ef1(stackIn_27_0, stackIn_27_1, DisplayModeSupport.a(param2, 115), field_n[param2], 32512 - param4 * 127 >> 8, 0, MusicPatchEnvelope.field_i[param2], TikiBallSkin.field_o[param2]);
+          ReflectionReplySupport.$cfr$intArgs$a$2435eea43ef1(stackIn_27_0, stackIn_27_1, DisplayModeSupport.a(ballIndex, 115), field_n[ballIndex], 32512 - fade * 127 >> 8, 0, MusicPatchEnvelope.field_i[ballIndex], TikiBallSkin.field_o[ballIndex]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_32_0 = runtimeException;
           stackIn_32_1 = new StringBuilder().append("vl.J(");
-          if (param0 == null) {
+          if (cameraTransform == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
           }
           stackIn_36_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',');
-          if (param1 == null) {
+          if (ballTransform == null) {
             stackIn_37_2 = "null";
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(ballIndex).append(',').append(obfuscationGuard).append(',').append(fade).append(')').toString());
         }
     }
 
@@ -567,7 +567,7 @@ final class PlasmaBallSkin extends BallSkin {
             break;
           }
           if (stackIn_13_0 != 2147483647) {
-            PlasmaBallSkin.a(106, (String) null);
+            PlasmaBallSkin.validateEmailLocalPart(106, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -591,7 +591,7 @@ final class PlasmaBallSkin extends BallSkin {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 108) {
-            PlasmaBallSkin.a(7, (String) null);
+            PlasmaBallSkin.validateEmailLocalPart(7, (String) null);
           }
           if (param0 == 0) {
             stackIn_7_0 = ChatMessage.ballsetPlasmaGroup0Nocolour;
@@ -609,7 +609,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, int[] param3, int[] param4) {
+    private final void drawBallGlow(int fade, byte obfuscationGuard, int ballIndex, int[] cameraTransform, int[] ballTransform) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         long var7 = 0L;
@@ -625,35 +625,35 @@ final class PlasmaBallSkin extends BallSkin {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = -100 / ((47 - param1) / 45);
-          var7 = (long)(-param3[0] + param4[0]);
-          var9 = (long)(-param3[1] + param4[1]);
-          var11 = (long)(-param3[2] + param4[2]);
-          var13 = (long)param3[9] * var7 + ((long)param3[10] * var9 + (long)param3[11] * var11);
+          var6_int = -100 / ((47 - obfuscationGuard) / 45);
+          var7 = (long)(-cameraTransform[0] + ballTransform[0]);
+          var9 = (long)(-cameraTransform[1] + ballTransform[1]);
+          var11 = (long)(-cameraTransform[2] + ballTransform[2]);
+          var13 = (long)cameraTransform[9] * var7 + ((long)cameraTransform[10] * var9 + (long)cameraTransform[11] * var11);
           if (var13 <= 0L) {
             return;
           }
-          var15 = (long)param3[4] * var9 + (long)param3[3] * var7 + (long)param3[5] * var11;
-          var17 = var9 * (long)param3[7] + (var7 * (long)param3[6] + var11 * (long)param3[8]);
+          var15 = (long)cameraTransform[4] * var9 + (long)cameraTransform[3] * var7 + (long)cameraTransform[5] * var11;
+          var17 = var9 * (long)cameraTransform[7] + (var7 * (long)cameraTransform[6] + var11 * (long)cameraTransform[8]);
           var15 = (var15 << 13) / var13 + (long)(SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 4);
           var17 = (var17 << 13) / var13 + (long)(SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 4);
-          SoftwareRasterizer.fillCircleBlended((int)(var15 >> 4), (int)(var17 >> 4), -2 + ((int)(2147483648L / var13) * (256 - param0) >> 8), 0, 224);
+          SoftwareRasterizer.fillCircleBlended((int)(var15 >> 4), (int)(var17 >> 4), -2 + ((int)(2147483648L / var13) * (256 - fade) >> 8), 0, 224);
           if (2147483647L > 127L * (34359738368L / var13) * (34359738368L / var13)) {
-            SoftwareRasterizer.fillRadialGlow((int)var15, (int)var17, (int)(34359738368L / var13) * (256 - param0) >> 8, 127, DiskArchiveRequest.a(-9, param2));
+            SoftwareRasterizer.fillRadialGlow((int)var15, (int)var17, (int)(34359738368L / var13) * (256 - fade) >> 8, 127, DiskArchiveRequest.a(-9, ballIndex));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_12_0 = runtimeException;
-          stackIn_12_1 = new StringBuilder().append("vl.FA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_12_1 = new StringBuilder().append("vl.FA(").append(fade).append(',').append(obfuscationGuard).append(',').append(ballIndex).append(',');
+          if (cameraTransform == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
           stackIn_16_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param4 == null) {
+          if (ballTransform == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -662,7 +662,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2) {
+    final static void updateReportAbuseDialog(boolean param0, int param1, boolean param2) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
@@ -788,8 +788,8 @@ final class PlasmaBallSkin extends BallSkin {
               var5_int = 256;
             }
           }
-          this.a(var5_int, (byte) 106, param2, param1, param0);
-          this.a(param1, param0, param2, (byte) -56, var5_int);
+          this.drawBallGlow(var5_int, (byte) 106, param2, param1, param0);
+          this.drawBallLightning(param1, param0, param2, (byte) -56, var5_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -811,7 +811,7 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final static boolean j(int param0) {
+    final static boolean allowRateLimitedMessage(int obfuscationGuard) {
         long var1_long = 0L;
         RuntimeException var1 = null;
         long var3 = 0L;
@@ -821,7 +821,7 @@ final class PlasmaBallSkin extends BallSkin {
         var6 = Pool.field_O;
         try {
           var1_long = MonotonicClock.monotonicTimeMillis((byte) -101);
-          if (param0 != 12000) {
+          if (obfuscationGuard != 12000) {
             PlasmaBallSkin.releaseStatics(32);
           }
           var3 = var1_long - VerticalScrollbar.field_Pb;
@@ -859,7 +859,7 @@ final class PlasmaBallSkin extends BallSkin {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "vl.GA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "vl.GA(" + obfuscationGuard + ')');
         }
     }
 
@@ -869,7 +869,7 @@ final class PlasmaBallSkin extends BallSkin {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 384) {
-            this.a((int[]) null, (int[]) null, 41, (byte) 82, 126);
+            this.drawBallLightning((int[]) null, (int[]) null, 41, (byte) 82, 126);
           }
           stackIn_4_0 = QuickChatDynamicCommand.field_d.length;
           return stackIn_4_0;
@@ -912,8 +912,8 @@ final class PlasmaBallSkin extends BallSkin {
           } else {
             var6_int = 0;
           }
-          this.a(var6_int, (byte) -93, param1, param3, param2);
-          this.a(param3, param2, param1, (byte) -77, var6_int);
+          this.drawBallGlow(var6_int, (byte) -93, param1, param3, param2);
+          this.drawBallLightning(param3, param2, param1, (byte) -77, var6_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -935,18 +935,18 @@ final class PlasmaBallSkin extends BallSkin {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean usesNumberedBallLabels(int obfuscationGuard) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == 2) {
+          if (obfuscationGuard == 2) {
             return false;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "vl.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "vl.B(" + obfuscationGuard + ')');
         }
     }
 

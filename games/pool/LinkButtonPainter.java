@@ -19,14 +19,14 @@ final class LinkButtonPainter implements WidgetPainter {
           if (0 == var1) {
             var1 = 32;
           }
-          QuickChatPhraseDefinition.a(TranslatedUiText.field_h - var1, 3815994);
+          QuickChatPhraseDefinition.setMusicVolume(TranslatedUiText.field_h - var1, 3815994);
           if (param0 != 0) {
             LinkButtonPainter.releaseStatics(false);
             return;
           }
           return;
         }
-        QuickChatPhraseDefinition.a(0, param0 + 3815994);
+        QuickChatPhraseDefinition.setMusicVolume(0, param0 + 3815994);
         if (param0 != 0) {
           LinkButtonPainter.releaseStatics(false);
           return;

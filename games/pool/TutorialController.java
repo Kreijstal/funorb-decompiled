@@ -854,7 +854,7 @@ final class TutorialController {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
-            if (HalloweenBallSkin.a((char) var7, (byte) 125)) {
+            if (HalloweenBallSkin.isAllowedNameCharacter((char) var7, (byte) 125)) {
               var8 = IntKeyLookup.stripAccent(true, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);

@@ -328,7 +328,7 @@ abstract class NetworkGameClient extends GameApplet {
                       this.readBrowserUrlResponse(70);
                       break regionExit1;
                     case 18:
-                      HalloweenBallSkin.i(3);
+                      HalloweenBallSkin.readChatPermission(3);
                       break regionExit1;
                     default:
                       GrowableIntList.reportClientError((Throwable) null, "MGS1: " + PacketDiagnosticsSupport.formatPacketDump(127), param0 - 23555);
@@ -339,7 +339,7 @@ abstract class NetworkGameClient extends GameApplet {
                 stackIn_29_0 = -31;
                 stackIn_30_1 = (var2 == 12);
                 var3 = QuickChatCategoryCache.$cfr$intArgs$a$9af18640dc82(stackIn_29_0, stackIn_30_1);
-                QuickChatCategoryCache.a(var3, 101);
+                QuickChatCategoryCache.displayChatMessageIfNew(var3, 101);
                 break;
               case 16:
                 RankingsRequest.c((byte) -56);
@@ -550,7 +550,7 @@ abstract class NetworkGameClient extends GameApplet {
         } else {
           if (QuickChatCategoryDefinition.field_y >= 10) {
             if (!MeshRenderSupport.a(77)) {
-              LookupProtocolSupport.b(121);
+              LookupProtocolSupport.advanceIntroTick(121);
             } else {
               if (PlasmaTableScene.field_ab != 0) {
                 ModelOriginSupport.a(0, CompressedContainerSupport.field_d);
@@ -567,7 +567,7 @@ abstract class NetworkGameClient extends GameApplet {
           this.l((byte) -16);
         }
         String var2 = BallDebugOverlay.readPacketString(false);
-        NameEntryPopup.a(NanoTickClock.getApplet(115), -18788, var2);
+        NameEntryPopup.setSessionCookie(NanoTickClock.getApplet(115), -18788, var2);
     }
 
     final int pollAccountActions(boolean param0, boolean param1) {
@@ -962,7 +962,7 @@ abstract class NetworkGameClient extends GameApplet {
             VerticalScrollbar.a((byte) 58, 4);
           }
           if (ButtonWidget.field_H[4]) {
-            EightBallRules.a(5, true);
+            EightBallRules.resendIntegerRecordOperations(5, true);
           }
           if (ButtonWidget.field_H[5]) {
             MeshBase.a(10, 6);

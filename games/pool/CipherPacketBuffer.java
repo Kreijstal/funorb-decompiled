@@ -77,10 +77,10 @@ final class CipherPacketBuffer extends PacketBuffer {
     final static void n(int param0) {
         int var1 = 0;
         if (TranslatedUiText.field_h >= 224) {
-          QuickChatPhraseDefinition.a(256, 3815994);
+          QuickChatPhraseDefinition.setMusicVolume(256, 3815994);
         } else {
           var1 = TranslatedUiText.field_h % 32;
-          QuickChatPhraseDefinition.a(32 + (TranslatedUiText.field_h - var1), param0 ^ -3807027);
+          QuickChatPhraseDefinition.setMusicVolume(32 + (TranslatedUiText.field_h - var1), param0 ^ -3807027);
         }
         if (param0 != -11529) {
           CipherPacketBuffer.a(true, -4, 116, -60, false);

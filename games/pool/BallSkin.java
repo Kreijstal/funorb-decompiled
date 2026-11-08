@@ -58,19 +58,19 @@ abstract class BallSkin {
         }
     }
 
-    final static QuickChatDynamicCommand a(int param0, int param1) {
+    final static QuickChatDynamicCommand findDynamicCommand(int commandId, int obfuscationGuard) {
         QuickChatDynamicCommand[] var2;
         int var3;
         int var4;
         int var5;
         QuickChatDynamicCommand[] var6;
         var5 = Pool.field_O;
-        var6 = SpaceBallSkin.a((byte) -32);
+        var6 = SpaceBallSkin.getDynamicCommands((byte) -32);
         var2 = var6;
         var3 = 0;
-        var4 = -81 / ((param1 + 69) / 37);
+        var4 = -81 / ((obfuscationGuard + 69) / 37);
         while (var3 < var6.length) {
-          if (var6[var3].field_i == param0) {
+          if (var6[var3].field_i == commandId) {
             return var6[var3];
           }
           var3++;
@@ -197,10 +197,10 @@ abstract class BallSkin {
             var26 = var29.addVertex(PotEvent.a(4885, var13 * var16), PotEvent.a(4885, var13 * var18), PotEvent.a(4885, var11));
             var27 = var29.addVertex(PotEvent.a(4885, var20 * var13), PotEvent.a(4885, var13 * var22), PotEvent.a(4885, var11));
             if (var24 != var25) {
-              var29.addFace(var24, var26, var25, (byte) 0, (short) 96, this.a(true));
+              var29.addFace(var24, var26, var25, (byte) 0, (short) 96, this.sphereFaceAlpha(true));
             }
             if (var26 != var27) {
-              var29.addFace(var27, var25, var26, (byte) 0, (short) 96, this.a(true));
+              var29.addFace(var27, var25, var26, (byte) 0, (short) 96, this.sphereFaceAlpha(true));
             }
           }
         }
@@ -281,7 +281,7 @@ abstract class BallSkin {
             stackIn_4_0 = BallEvent.nineBallNumbers[param0];
             return stackIn_4_0;
           }
-          if (this.c(2)) {
+          if (this.usesNumberedBallLabels(2)) {
             stackIn_7_0 = ReflectionCheck.eightBallNumbers[param0];
             return stackIn_7_0;
           }
@@ -342,17 +342,17 @@ abstract class BallSkin {
         }
     }
 
-    final void e(int param0) {
-        if (param0 != -26707) {
+    final void validateSkinReleaseGuard(int obfuscationGuard) {
+        if (obfuscationGuard != -26707) {
           int[] var3 = (int[]) null;
           this.drawBallShadow(true, (int[]) null, 13, (int[]) null, -85);
         }
     }
 
-    abstract boolean c(int param0);
+    abstract boolean usesNumberedBallLabels(int obfuscationGuard);
 
-    private final byte a(boolean param0) {
-        if (!param0) {
+    private final byte sphereFaceAlpha(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return (byte) -68;
         }
         return (byte) 0;

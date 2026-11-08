@@ -35,7 +35,7 @@ abstract class GameRules {
         try {
           param0.groupBefore = this.initialGroup(-1);
           stackIn_3_0 = (ShotRecord) (param0);
-          stackIn_4_1 = (0 == param0.ballInHandMode) && (this.isTargetVisible(param0.playerIndex, -35));
+          stackIn_4_1 = (0 == param0.ballInHandMode) && (this.isPlayerSnookered(param0.playerIndex, -35));
           stackIn_3_0.field_E = stackIn_4_1;
           if (param1) {
             this.field_d = (PoolGameModel) null;
@@ -169,7 +169,7 @@ abstract class GameRules {
         }
     }
 
-    abstract boolean isTargetVisible(int param0, int param1);
+    abstract boolean isPlayerSnookered(int param0, int param1);
 
     final static int getAudioBufferMillis(int param0) {
         if (param0 <= 107) {

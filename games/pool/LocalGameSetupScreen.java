@@ -192,7 +192,7 @@ final class LocalGameSetupScreen extends MenuScreen {
               if (this.selection.isPressActivated((byte) 89) &&
                 DelayedServerPacket.field_n < 8) {
                 DelayedServerPacket.field_n = DelayedServerPacket.field_n + 1;
-                KillerRules.c((byte) -45);
+                KillerRules.updateKillerPlayerCountControls((byte) -45);
               }
             } else {
               if (27 != var4) {
@@ -238,7 +238,7 @@ final class LocalGameSetupScreen extends MenuScreen {
             if (this.selection.isPressActivated((byte) 59) &&
               2 < DelayedServerPacket.field_n) {
               DelayedServerPacket.field_n = DelayedServerPacket.field_n - 1;
-              KillerRules.c((byte) -45);
+              KillerRules.updateKillerPlayerCountControls((byte) -45);
             }
           }
         } else {
@@ -300,7 +300,7 @@ final class LocalGameSetupScreen extends MenuScreen {
         PoolGameModel.field_v.addChild(33, dupTemp$3);
         MultiHandleSliderWidget.a(false, PoolGameModel.field_v, RasterSnapshot.field_w);
         MultiHandleSliderWidget.a(false, PoolGameModel.field_v, LoginRequestSupport.field_e);
-        KillerRules.c((byte) -45);
+        KillerRules.updateKillerPlayerCountControls((byte) -45);
         NineSliceFrame.field_a.addChild(-111, PoolGameModel.field_v);
         AppletContainerSupport.field_c = new UiComponent(0L, (UiComponent) null, PoolGameModel.field_v.localX, PoolGameModel.field_v.localY - (-PoolGameModel.field_v.height - 10), PoolGameModel.field_v.width, PoolGameModel.field_v.height, (String) null);
         AppletContainerSupport.field_c.horizontalAlignment = 0;
@@ -447,7 +447,7 @@ final class LocalGameSetupScreen extends MenuScreen {
     final void onEnter(int param0, int param1, boolean param2) {
         super.onEnter(param0, param1, param2);
         ByteStorage.d(param0 ^ -107);
-        KillerRules.c((byte) -45);
+        KillerRules.updateKillerPlayerCountControls((byte) -45);
         this.g(4);
         PlayerContextMenu.updatePageControls(13);
     }

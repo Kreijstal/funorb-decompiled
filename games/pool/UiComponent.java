@@ -745,7 +745,7 @@ class UiComponent extends UiComponentNode {
             field_Ab = (TutorialController) null;
           }
           if (TextLineLayout.a(param0, param1, param3, (byte) 121)) {
-            stackIn_6_0 = NameEntryPopup.f((byte) 89);
+            stackIn_6_0 = NameEntryPopup.createDecodedSprite((byte) 89);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

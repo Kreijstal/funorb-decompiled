@@ -13,8 +13,8 @@ final class HalloweenBallSkin extends BallSkin {
         mbFullAccess1 = null;
     }
 
-    final static void i(int param0) {
-        if (param0 != 3) {
+    final static void readChatPermission(int obfuscationGuard) {
+        if (obfuscationGuard != 3) {
           return;
         }
         RankingsRequest.field_z = false;
@@ -34,7 +34,7 @@ final class HalloweenBallSkin extends BallSkin {
         return 7824981;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isAllowedNameCharacter(char character, byte obfuscationGuard) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -47,10 +47,10 @@ final class HalloweenBallSkin extends BallSkin {
         int var3Lifetime1;
         int var4Lifetime1;
         try {
-          if (Character.isISOControl(param0)) {
+          if (Character.isISOControl(character)) {
             return false;
           }
-          if (Base37Support.isAlphanumeric(param0, (byte) 123)) {
+          if (Base37Support.isAlphanumeric(character, (byte) 123)) {
             return true;
           }
           var5 = LinkButtonPainter.field_d;
@@ -58,7 +58,7 @@ final class HalloweenBallSkin extends BallSkin {
           var3 = 0;
           while (var3 < var5.length) {
             var4 = var5[var3];
-            if (param0 != var4) {
+            if (character != var4) {
               var3++;
               continue;
             }
@@ -70,20 +70,20 @@ final class HalloweenBallSkin extends BallSkin {
           var3Lifetime1 = var7;
           while (var7 < var6.length) {
             var4Lifetime1 = var6[var7];
-            if (param0 == var4Lifetime1) {
+            if (character == var4Lifetime1) {
               return true;
             }
             var7++;
           }
-          if (param1 > 123) {
+          if (obfuscationGuard > 123) {
             return false;
           }
-          HalloweenBallSkin.a('￉', (byte) 82);
+          HalloweenBallSkin.isAllowedNameCharacter('￉', (byte) 82);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "ul.F(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "ul.F(" + character + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class HalloweenBallSkin extends BallSkin {
         return MembershipBenefitsLoader.ballsetEnglishGroup0;
     }
 
-    final void a(int param0, byte param1, Ball[] param2) {
+    final void highlightObjectBall(int ballIndex, byte obfuscationGuard, Ball[] balls) {
         int var4_int = 0;
         int var5 = 0;
         MeshBuilder var6 = null;
@@ -105,12 +105,12 @@ final class HalloweenBallSkin extends BallSkin {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (param1 != -37) {
+          if (obfuscationGuard != -37) {
             HalloweenBallSkin.releaseStatics((byte) 26);
           }
           for (var4_int = 0; var4_int < 14; var4_int++) {
             var5 = 1 - (-var4_int - var4_int / 7);
-            if (param0 == var5) {
+            if (ballIndex == var5) {
               stackIn_7_0 = QuickChatCategoryDefinition.field_E;
             } else {
               stackIn_7_0 = DisplayNamePanel.field_P;
@@ -118,7 +118,7 @@ final class HalloweenBallSkin extends BallSkin {
             var6 = stackIn_7_0;
             if (this.field_a[var5] != var6) {
               this.field_a[var5] = var6;
-              this.buildBallModel(false, param2[var5].renderTransform, var5);
+              this.buildBallModel(false, balls[var5].renderTransform, var5);
             }
           }
           return;
@@ -126,8 +126,8 @@ final class HalloweenBallSkin extends BallSkin {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_14_0 = var4;
-          stackIn_14_1 = new StringBuilder().append("ul.H(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_14_1 = new StringBuilder().append("ul.H(").append(ballIndex).append(',').append(obfuscationGuard).append(',');
+          if (balls == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -136,7 +136,7 @@ final class HalloweenBallSkin extends BallSkin {
         }
     }
 
-    final static String a(byte param0, String param1, int param2) {
+    final static String removeFriend(byte param0, String param1, int param2) {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;
@@ -203,8 +203,8 @@ final class HalloweenBallSkin extends BallSkin {
         }
     }
 
-    final boolean c(int param0) {
-        if (param0 != 2) {
+    final boolean usesNumberedBallLabels(int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           return true;
         }
         return false;
@@ -223,7 +223,7 @@ final class HalloweenBallSkin extends BallSkin {
     final void loadBallMeshes(ResourceArchive param0, byte param1) {
         if (param1 != 117) {
           Ball[] var4 = (Ball[]) null;
-          this.a(-110, (byte) 38, (Ball[]) null);
+          this.highlightObjectBall(-110, (byte) 38, (Ball[]) null);
         }
         if (this.field_a != null) {
           return;

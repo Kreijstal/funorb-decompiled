@@ -257,7 +257,7 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
           do {
             var4 = param2.nextInt();
           } while (var4 >= var3_int);
-          stackIn_16_0 = NameEntryPopup.a(true, param0, var4);
+          stackIn_16_0 = NameEntryPopup.floorModPositiveDivisor(true, param0, var4);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

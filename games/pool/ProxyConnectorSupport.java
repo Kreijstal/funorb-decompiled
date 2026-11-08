@@ -162,7 +162,7 @@ final class ProxyConnectorSupport {
                 var5 = MultiHandleSliderWidget.a(var4, param1, 51);
               }
               if (MatchingTextValidator.field_m == 1) {
-                var5 = HalloweenBallSkin.a((byte) 83, var4, param1);
+                var5 = HalloweenBallSkin.removeFriend((byte) 83, var4, param1);
               }
               if (MatchingTextValidator.field_m == 2) {
                 var5 = Atan2Support.a(param1, var4, param0 ^ -31666);

@@ -5,13 +5,13 @@ final class SpaceBallSkin extends BallSkin {
     SpaceBallSkin() {
     }
 
-    final static void i(int param0) {
+    final static void buildBlurredIntroSprite(int obfuscationGuard) {
         Sprite var1 = null;
         Sprite var3 = null;
         int var4 = 0;
         try {
           var1 = new Sprite(540, 140);
-          int var2 = -31 / ((79 - param0) / 34);
+          int var2 = -31 / ((79 - obfuscationGuard) / 34);
           CueAim.a(62, var1);
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clear();
@@ -26,7 +26,7 @@ final class SpaceBallSkin extends BallSkin {
           var1.drawHalfSize(0, 0);
           TriangleMesh.a(126);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lm.E(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lm.E(" + obfuscationGuard + ')');
         }
     }
 
@@ -35,18 +35,18 @@ final class SpaceBallSkin extends BallSkin {
           return;
         }
         try {
-          this.field_e = NameEntryPopup.a(0, "", param1, "top_bar_balls_space");
+          this.field_e = NameEntryPopup.loadSpritesByName(0, "", param1, "top_bar_balls_space");
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void c(int param0, int param1) {
+    final static void sendGameSettings(int operation, int opcode) {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
-        var2.writeCipheredOpcode(false, param1);
+        var2.writeCipheredOpcode(false, opcode);
         var2.position = var2.position + 1;
         int var3 = var2.position;
-        var2.writeByte(param0, false);
+        var2.writeByte(operation, false);
         var2.writeByte(HighscoresScreen.field_L.field_Nb, false);
         int var4 = HighscoresScreen.field_L.field_ac + (HighscoresScreen.field_L.field_Yb << 6);
         var2.writeByte(var4, false);
@@ -97,11 +97,11 @@ final class SpaceBallSkin extends BallSkin {
           return param1 == 0 ? BirthDateValidator.ballsetSpaceGroup0 : TransformRotationSupport.field_g;
         }
         String var4 = (String) null;
-        SpaceBallSkin.a(-24, 10, -99, 68, -80, 113, (String) null, 109, 92);
+        SpaceBallSkin.layoutChatCompositionPanel(-24, 10, -99, 68, -80, 113, (String) null, 109, 92);
         return param1 == 0 ? BirthDateValidator.ballsetSpaceGroup0 : TransformRotationSupport.field_g;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6, int param7, int param8) {
+    final static void layoutChatCompositionPanel(int param0, int param1, int param2, int param3, int param4, int param5, String param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -136,8 +136,8 @@ final class SpaceBallSkin extends BallSkin {
         }
     }
 
-    final static QuickChatDynamicCommand[] a(byte param0) {
-        if (param0 == -32) {
+    final static QuickChatDynamicCommand[] getDynamicCommands(byte obfuscationGuard) {
+        if (obfuscationGuard == -32) {
           return new QuickChatDynamicCommand[]{ArchiveRequest.field_G, DimmedPauseMenu.field_N, TranslatedUiText.field_g, CacheEntry.field_A, QuaternionRotationSupport.field_c, CueStick.field_i, Js5Transport.field_g, ScrollPane.field_Tb, TransformSupport.field_d, WidgetStyleLayer.field_e, Ball.field_J, WidgetContainer.field_K, AchievementNotice.field_r, ChatMessage.field_k};
         }
         return (QuickChatDynamicCommand[]) null;
@@ -155,51 +155,51 @@ final class SpaceBallSkin extends BallSkin {
             return 13421772;
           }
           if (var3 == 1) {
-            return this.b(0, (byte) -108);
+            return this.themeColorForGroup(0, (byte) -108);
           }
           if (var3 == 2) {
-            return this.b(0, (byte) -108);
+            return this.themeColorForGroup(0, (byte) -108);
           }
           if (var3 == 3) {
-            return this.b(0, (byte) -108);
+            return this.themeColorForGroup(0, (byte) -108);
           }
           if (4 == var3) {
-            return this.b(0, (byte) -108);
+            return this.themeColorForGroup(0, (byte) -108);
           }
           if (var3 == 5) {
-            return this.b(0, (byte) -108);
+            return this.themeColorForGroup(0, (byte) -108);
           }
           if (var3 == 6) {
-            return this.b(0, (byte) -108);
+            return this.themeColorForGroup(0, (byte) -108);
           }
           if (7 == var3) {
-            return this.b(0, (byte) -108);
+            return this.themeColorForGroup(0, (byte) -108);
           }
           if (var3 == 8) {
             return 3355443;
           }
           if (9 == var3) {
-            return this.b(1, (byte) -108);
+            return this.themeColorForGroup(1, (byte) -108);
           }
           if (var3 == 10) {
-            return this.b(1, (byte) -108);
+            return this.themeColorForGroup(1, (byte) -108);
           }
           if (var3 == 11) {
-            return this.b(1, (byte) -108);
+            return this.themeColorForGroup(1, (byte) -108);
           }
           if (var3 == 12) {
-            return this.b(1, (byte) -108);
+            return this.themeColorForGroup(1, (byte) -108);
           }
           if (13 == var3) {
-            return this.b(1, (byte) -108);
+            return this.themeColorForGroup(1, (byte) -108);
           }
           if (var3 == 14) {
-            return this.b(1, (byte) -108);
+            return this.themeColorForGroup(1, (byte) -108);
           }
           if (var3 != 15) {
             return 16711935;
           }
-          return this.b(1, (byte) -108);
+          return this.themeColorForGroup(1, (byte) -108);
         }
         var5 = (ResourceArchive) null;
         this.loadBallMeshes((ResourceArchive) null, (byte) -106);
@@ -208,61 +208,61 @@ final class SpaceBallSkin extends BallSkin {
           return 13421772;
         }
         if (var3Lifetime1 == 1) {
-          return this.b(0, (byte) -108);
+          return this.themeColorForGroup(0, (byte) -108);
         }
         if (var3Lifetime1 == 2) {
-          return this.b(0, (byte) -108);
+          return this.themeColorForGroup(0, (byte) -108);
         }
         if (var3Lifetime1 == 3) {
-          return this.b(0, (byte) -108);
+          return this.themeColorForGroup(0, (byte) -108);
         }
         if (4 == var3Lifetime1) {
-          return this.b(0, (byte) -108);
+          return this.themeColorForGroup(0, (byte) -108);
         }
         if (var3Lifetime1 == 5) {
-          return this.b(0, (byte) -108);
+          return this.themeColorForGroup(0, (byte) -108);
         }
         if (var3Lifetime1 == 6) {
-          return this.b(0, (byte) -108);
+          return this.themeColorForGroup(0, (byte) -108);
         }
         if (7 == var3Lifetime1) {
-          return this.b(0, (byte) -108);
+          return this.themeColorForGroup(0, (byte) -108);
         }
         if (var3Lifetime1 == 8) {
           return 3355443;
         }
         if (9 == var3Lifetime1) {
-          return this.b(1, (byte) -108);
+          return this.themeColorForGroup(1, (byte) -108);
         }
         if (var3Lifetime1 == 10) {
-          return this.b(1, (byte) -108);
+          return this.themeColorForGroup(1, (byte) -108);
         }
         if (var3Lifetime1 == 11) {
-          return this.b(1, (byte) -108);
+          return this.themeColorForGroup(1, (byte) -108);
         }
         if (var3Lifetime1 == 12) {
-          return this.b(1, (byte) -108);
+          return this.themeColorForGroup(1, (byte) -108);
         }
         if (13 == var3Lifetime1) {
-          return this.b(1, (byte) -108);
+          return this.themeColorForGroup(1, (byte) -108);
         }
         if (var3Lifetime1 == 14) {
-          return this.b(1, (byte) -108);
+          return this.themeColorForGroup(1, (byte) -108);
         }
         if (var3Lifetime1 == 15) {
-          return this.b(1, (byte) -108);
+          return this.themeColorForGroup(1, (byte) -108);
         }
         return 16711935;
     }
 
-    final boolean c(int param0) {
-        if (param0 != 2) {
+    final boolean usesNumberedBallLabels(int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           return true;
         }
         return false;
     }
 
-    private final int b(int param0, byte param1) {
+    private final int themeColorForGroup(int param0, byte param1) {
         if (param1 != -108) {
           return -14;
         }

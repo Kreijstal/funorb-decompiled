@@ -174,7 +174,7 @@ public final class Pool extends NetworkGameClient {
             while (LabeledChildWidget.h(127)) {
               if (LookupProtocolSupport.field_b) {
                 if (MidiNoteMixer.field_v) {
-                  if (KillerRules.a(15, 12, -1, 13)) {
+                  if (KillerRules.handleChatOrQuickChatKey(15, 12, -1, 13)) {
                     continue;
                   }
                 } else {
@@ -397,28 +397,28 @@ public final class Pool extends NetworkGameClient {
         if (!DebugTuningSupport.field_g &&
           MatchingTextValidator.field_w != GameRules.field_b) {
           if (MatchingTextValidator.field_w == -2) {
-            PlasmaBallSkin.a(GameRules.field_b, -21972, false, AppletUrlSupport.field_c);
+            PlasmaBallSkin.drawActiveScreen(GameRules.field_b, -21972, false, AppletUrlSupport.field_c);
             var3_int = 32 - ThemeSelectScreen.field_P;
             ChatMessage.field_l.drawShadedGrayscale(0, 0, (var3_int << 8) / 32);
           } else if (-2 == GameRules.field_b) {
-            PlasmaBallSkin.a(MatchingTextValidator.field_w, -21972, false, TranslatedUiText.field_d);
+            PlasmaBallSkin.drawActiveScreen(MatchingTextValidator.field_w, -21972, false, TranslatedUiText.field_d);
             ChatMessage.field_l.drawShadedGrayscale(0, 0, (ThemeSelectScreen.field_P << 8) / 32);
           } else {
             var3_int = TextureCache.a(ThemeSelectScreen.field_P, 32, 108);
             SoftwareRasterizer.setClip(0, 0, var3_int, SoftwareRasterizer.height);
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(320, 240);
-            PlasmaBallSkin.a(GameRules.field_b, -21972, false, AppletUrlSupport.field_c);
+            PlasmaBallSkin.drawActiveScreen(GameRules.field_b, -21972, false, AppletUrlSupport.field_c);
             SoftwareRasterizer.setClip(var3_int, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(320, 240);
-            PlasmaBallSkin.a(MatchingTextValidator.field_w, -21972, false, TranslatedUiText.field_d);
+            PlasmaBallSkin.drawActiveScreen(MatchingTextValidator.field_w, -21972, false, TranslatedUiText.field_d);
             SoftwareRasterizer.resetClip();
             TriangleRasterizer.useRasterClip();
             BrowserCookieWriter.a(true, 32, ThemeSelectScreen.field_P);
           }
         } else {
-          PlasmaBallSkin.a(MatchingTextValidator.field_w, -21972, true, TranslatedUiText.field_d);
+          PlasmaBallSkin.drawActiveScreen(MatchingTextValidator.field_w, -21972, true, TranslatedUiText.field_d);
         }
         if (!TranslatedUiText.field_d ||
           !AppletUrlSupport.field_c) {
@@ -1014,7 +1014,7 @@ public final class Pool extends NetworkGameClient {
               AppletUrlSupport.field_c = false;
               MidiNoteMixer.field_v = false;
               ClientUiResourceState.field_a = true;
-              TextWidgetPainter.b(120);
+              TextWidgetPainter.closeChatCompositionPanel(120);
             }
             AlternateLongAndTextLoginPayload.field_p = false;
             LoginRequiredScreen.field_H = false;
@@ -1084,7 +1084,7 @@ public final class Pool extends NetworkGameClient {
                 MidiNoteMixer.field_v = false;
                 ContextMenu.field_Sb = true;
                 LookupProtocolSupport.field_b = true;
-                TextWidgetPainter.b(116);
+                TextWidgetPainter.closeChatCompositionPanel(116);
               }
               LoginRequiredScreen.field_H = false;
               continue;
@@ -1435,7 +1435,7 @@ public final class Pool extends NetworkGameClient {
                 Base37Support.field_d = false;
                 MidiNoteMixer.field_v = false;
                 TransformSupport.field_e = false;
-                TextWidgetPainter.b(116);
+                TextWidgetPainter.closeChatCompositionPanel(116);
               }
               LoginRequiredScreen.field_H = false;
               AlternateLongAndTextLoginPayload.field_p = false;

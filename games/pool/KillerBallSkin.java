@@ -10,7 +10,7 @@ final class KillerBallSkin extends BallSkin {
     static int[] field_o;
     static int field_m;
 
-    final static void a(int param0, boolean param1, boolean param2, MusicTrack param3) {
+    final static void playMusicTrack(int param0, boolean param1, boolean param2, MusicTrack param3) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -56,51 +56,51 @@ final class KillerBallSkin extends BallSkin {
             return 13421772;
           }
           if (1 == var3) {
-            return this.c(91, 0);
+            return this.themeColorForGroup(91, 0);
           }
           if (var3 == 2) {
-            return this.c(91, 0);
+            return this.themeColorForGroup(91, 0);
           }
           if (var3 == 3) {
-            return this.c(91, 0);
+            return this.themeColorForGroup(91, 0);
           }
           if (var3 == 4) {
-            return this.c(91, 0);
+            return this.themeColorForGroup(91, 0);
           }
           if (5 == var3) {
-            return this.c(91, 0);
+            return this.themeColorForGroup(91, 0);
           }
           if (6 == var3) {
-            return this.c(91, 0);
+            return this.themeColorForGroup(91, 0);
           }
           if (7 == var3) {
-            return this.c(91, 0);
+            return this.themeColorForGroup(91, 0);
           }
           if (var3 == 8) {
             return 3355443;
           }
           if (var3 == 9) {
-            return this.c(101, 1);
+            return this.themeColorForGroup(101, 1);
           }
           if (10 == var3) {
-            return this.c(101, 1);
+            return this.themeColorForGroup(101, 1);
           }
           if (var3 == 11) {
-            return this.c(101, 1);
+            return this.themeColorForGroup(101, 1);
           }
           if (var3 == 12) {
-            return this.c(101, 1);
+            return this.themeColorForGroup(101, 1);
           }
           if (13 == var3) {
-            return this.c(101, 1);
+            return this.themeColorForGroup(101, 1);
           }
           if (var3 == 14) {
-            return this.c(101, 1);
+            return this.themeColorForGroup(101, 1);
           }
           if (var3 != 15) {
             return 16711935;
           }
-          return this.c(101, 1);
+          return this.themeColorForGroup(101, 1);
         }
         var5 = (ResourceArchive) null;
         this.loadTopBarSprites(-117, (ResourceArchive) null);
@@ -109,49 +109,49 @@ final class KillerBallSkin extends BallSkin {
           return 13421772;
         }
         if (1 == var3Lifetime1) {
-          return this.c(91, 0);
+          return this.themeColorForGroup(91, 0);
         }
         if (var3Lifetime1 == 2) {
-          return this.c(91, 0);
+          return this.themeColorForGroup(91, 0);
         }
         if (var3Lifetime1 == 3) {
-          return this.c(91, 0);
+          return this.themeColorForGroup(91, 0);
         }
         if (var3Lifetime1 == 4) {
-          return this.c(91, 0);
+          return this.themeColorForGroup(91, 0);
         }
         if (5 == var3Lifetime1) {
-          return this.c(91, 0);
+          return this.themeColorForGroup(91, 0);
         }
         if (6 == var3Lifetime1) {
-          return this.c(91, 0);
+          return this.themeColorForGroup(91, 0);
         }
         if (7 == var3Lifetime1) {
-          return this.c(91, 0);
+          return this.themeColorForGroup(91, 0);
         }
         if (var3Lifetime1 == 8) {
           return 3355443;
         }
         if (var3Lifetime1 == 9) {
-          return this.c(101, 1);
+          return this.themeColorForGroup(101, 1);
         }
         if (10 == var3Lifetime1) {
-          return this.c(101, 1);
+          return this.themeColorForGroup(101, 1);
         }
         if (var3Lifetime1 == 11) {
-          return this.c(101, 1);
+          return this.themeColorForGroup(101, 1);
         }
         if (var3Lifetime1 == 12) {
-          return this.c(101, 1);
+          return this.themeColorForGroup(101, 1);
         }
         if (13 == var3Lifetime1) {
-          return this.c(101, 1);
+          return this.themeColorForGroup(101, 1);
         }
         if (var3Lifetime1 == 14) {
-          return this.c(101, 1);
+          return this.themeColorForGroup(101, 1);
         }
         if (var3Lifetime1 == 15) {
-          return this.c(101, 1);
+          return this.themeColorForGroup(101, 1);
         }
         return 16711935;
     }
@@ -166,8 +166,8 @@ final class KillerBallSkin extends BallSkin {
         return MembershipBenefitsLoader.ballsetEnglishGroup0;
     }
 
-    final boolean c(int param0) {
-        if (param0 != 2) {
+    final boolean usesNumberedBallLabels(int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           unpackingMusic = (String) null;
           return false;
         }
@@ -193,7 +193,7 @@ final class KillerBallSkin extends BallSkin {
         field_r = null;
     }
 
-    private final int c(int param0, int param1) {
+    private final int themeColorForGroup(int param0, int param1) {
         if (param0 <= 75) {
           KillerBallSkin.releaseStatics(-122);
           if (param1 == 0) {
@@ -216,16 +216,16 @@ final class KillerBallSkin extends BallSkin {
     final void loadTopBarSprites(int param0, ResourceArchive param1) {
         try {
           if (param0 != 198123656) {
-            this.c(45);
+            this.usesNumberedBallLabels(45);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ac.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void b(int param0, byte param1) {
-        int var2 = 99 % ((-11 - param1) / 49);
-        ArrayWidgetGroup.field_M = ArrayWidgetGroup.field_M + param0;
+    final static void offsetSharedOverlayY(int offset, byte obfuscationGuard) {
+        int var2 = 99 % ((-11 - obfuscationGuard) / 49);
+        ArrayWidgetGroup.field_M = ArrayWidgetGroup.field_M + offset;
         AccountStateQuery.field_q = (Js5Transport.field_q.field_y + CollisionContact.field_h.maxAscent >> 1) + ArrayWidgetGroup.field_M;
     }
 
@@ -254,7 +254,7 @@ final class KillerBallSkin extends BallSkin {
           this.field_a[1] = dupTemp$0;
           this.field_a[8] = MeshBuilder.loadFromArchive(param0, "", "balls/ball_killer_black");
           if (param1 != 117) {
-            this.c(40);
+            this.usesNumberedBallLabels(40);
           }
           this.field_a[1].scaleVertices(8, 8, 8, 4);
           this.field_a[8].scaleVertices(8, 8, 8, 4);

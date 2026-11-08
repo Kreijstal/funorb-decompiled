@@ -482,27 +482,27 @@ class PauseMenuScreen extends MenuScreen {
         var4 = this.itemIds[param2];
         if (var4 == 54) {
           if (this.selection.isPressActivated((byte) 54)) {
-            KillerBallSkin.a(param0 ^ -16726, true, true, BrowserCookieWriter.field_b[0].field_b);
+            KillerBallSkin.playMusicTrack(param0 ^ -16726, true, true, BrowserCookieWriter.field_b[0].field_b);
           }
         } else {
           if (var4 == 55) {
             if (this.selection.isPressActivated((byte) 115)) {
-              KillerBallSkin.a(256, true, true, BrowserCookieWriter.field_b[1].field_b);
+              KillerBallSkin.playMusicTrack(256, true, true, BrowserCookieWriter.field_b[1].field_b);
             }
           } else {
             if (56 == var4) {
               if (this.selection.isPressActivated((byte) 54)) {
-                KillerBallSkin.a(param0 ^ -16726, true, true, BrowserCookieWriter.field_b[2].field_b);
+                KillerBallSkin.playMusicTrack(param0 ^ -16726, true, true, BrowserCookieWriter.field_b[2].field_b);
               }
             } else {
               if (var4 == 57) {
                 if (this.selection.isPressActivated((byte) 56)) {
-                  KillerBallSkin.a(param0 ^ -16726, true, true, BrowserCookieWriter.field_b[3].field_b);
+                  KillerBallSkin.playMusicTrack(param0 ^ -16726, true, true, BrowserCookieWriter.field_b[3].field_b);
                 }
               } else {
                 if (58 == var4) {
                   if (this.selection.isPressActivated((byte) 62)) {
-                    KillerBallSkin.a(param0 + 16726, true, true, BrowserCookieWriter.field_b[4].field_b);
+                    KillerBallSkin.playMusicTrack(param0 + 16726, true, true, BrowserCookieWriter.field_b[4].field_b);
                   }
                 } else {
                   if (59 != var4) {
@@ -510,12 +510,12 @@ class PauseMenuScreen extends MenuScreen {
                       super.handleMenuAction(-16470, param1, param2);
                     } else {
                       if (this.selection.isPressActivated((byte) 125)) {
-                        KillerBallSkin.a(256, true, true, MenuScreenBase.field_d);
+                        KillerBallSkin.playMusicTrack(256, true, true, MenuScreenBase.field_d);
                       }
                     }
                   } else {
                     if (this.selection.isPressActivated((byte) 73)) {
-                      KillerBallSkin.a(256, true, true, HalloweenBallSkin.field_m);
+                      KillerBallSkin.playMusicTrack(256, true, true, HalloweenBallSkin.field_m);
                     }
                   }
                 }

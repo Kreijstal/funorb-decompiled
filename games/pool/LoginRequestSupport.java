@@ -90,7 +90,7 @@ final class LoginRequestSupport {
               JaggrabDownloader.field_j.writeByte(16, false);
               JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 1;
               var9 = JaggrabDownloader.field_j.position;
-              ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, FontPaletteSupport.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
+              ArchiveIndex.writeEncryptedBuffer((byte) 93, ArchiveLoadSequence.field_l, FontPaletteSupport.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
               JaggrabDownloader.field_j.writeByteLengthPrefix(-var9 + JaggrabDownloader.field_j.position, true);
             } else {
               var9 = 0;
@@ -115,7 +115,7 @@ final class LoginRequestSupport {
                 var11_ref_String = "";
               }
               JaggrabDownloader.field_j.a(-9946, var11_ref_String);
-              ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, FontPaletteSupport.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
+              ArchiveIndex.writeEncryptedBuffer((byte) 93, ArchiveLoadSequence.field_l, FontPaletteSupport.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
               JaggrabDownloader.field_j.writeShortLengthPrefix(-var10 + JaggrabDownloader.field_j.position, (byte) -92);
             }
             DebugTuningSupport.flushClientPackets(-1, 0);

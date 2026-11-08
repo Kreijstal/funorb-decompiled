@@ -72,7 +72,7 @@ final class LimitedRandomAccessFile {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (param0 != -22444) {
-          LimitedRandomAccessFile.b((byte) -109);
+          LimitedRandomAccessFile.closeChatCompositionPanel((byte) -109);
         }
         if (ReflectionReplySupport.field_a != null) {
           var1 = ReflectionReplySupport.field_a;
@@ -86,7 +86,7 @@ final class LimitedRandomAccessFile {
         this.file.seek(param1);
         this.position = param1;
         if (param0 != -1) {
-          LimitedRandomAccessFile.b((byte) -63);
+          LimitedRandomAccessFile.closeChatCompositionPanel((byte) -63);
         }
     }
 
@@ -112,7 +112,7 @@ final class LimitedRandomAccessFile {
         return this.file.length();
     }
 
-    final static void b(byte param0) {
+    final static void closeChatCompositionPanel(byte obfuscationGuard) {
         IntrusiveNode.field_e = null;
         ReflectionReplySupport.field_g = null;
         OptionsScreen.field_L = null;
@@ -126,7 +126,7 @@ final class LimitedRandomAccessFile {
           TimeTrialSelectScreen.field_J.capturedTextColor = -1;
           ArchiveProvider.field_i = null;
         }
-        if (param0 >= -59) {
+        if (obfuscationGuard >= -59) {
           LimitedRandomAccessFile.a(-8, -59, 'ﾽ');
         }
         DualLinkNode.field_p = true;

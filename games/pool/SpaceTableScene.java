@@ -662,7 +662,7 @@ final class SpaceTableScene extends ModelTableScene {
     }
 
     final void loadSceneSprites(int param0, ResourceArchive param1) {
-        ThreeSliceButtonPainter.field_t = NameEntryPopup.a(0, "", param1, "space_stars");
+        ThreeSliceButtonPainter.field_t = NameEntryPopup.loadSpritesByName(0, "", param1, "space_stars");
         NodeHashTableIterator.field_k = WidgetStyleLayer.loadSprite("", (byte) 103, "shuttle_planet", param1);
         if (param0 != -23569) {
           return;

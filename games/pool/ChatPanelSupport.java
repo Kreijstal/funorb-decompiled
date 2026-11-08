@@ -64,7 +64,7 @@ final class ChatPanelSupport {
           }
           int var8_int = -106 % ((param0 + 1) / 55);
           if (DualLinkNode.field_p) {
-            SpaceBallSkin.a(param1, param6, 20, 4, param2, param7, param4, param3, param3);
+            SpaceBallSkin.layoutChatCompositionPanel(param1, param6, 20, 4, param2, param7, param4, param3, param3);
             Bzip2DecoderState.field_D.updateRoot(param5, false);
             if (!param5) {
               return;

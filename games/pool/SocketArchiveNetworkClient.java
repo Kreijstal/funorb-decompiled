@@ -292,17 +292,17 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             this.incomingHeader.position = 0;
             this.currentRequest = null;
             while (true) {
-              var4_ref = (NetworkArchiveRequest) (this.urgentInFlight.a(0));
+              var4_ref = (NetworkArchiveRequest) (this.urgentInFlight.removeFirst(0));
               if (var4_ref != null) {
-                this.urgentPending.a(var4_ref, false);
+                this.urgentPending.addLast(var4_ref, false);
                 continue;
               }
               break;
             }
             while (true) {
-              var4_refLifetime1 = (NetworkArchiveRequest) (this.prefetchInFlight.a(0));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.prefetchInFlight.removeFirst(0));
               if (var4_refLifetime1 != null) {
-                this.prefetchPending.a(var4_refLifetime1, false);
+                this.prefetchPending.addLast(var4_refLifetime1, false);
                 continue;
               }
               break;
@@ -416,22 +416,22 @@ final class SocketArchiveNetworkClient extends Js5Transport {
           }
           try {
             this.socket.e(0);
-            var2 = (NetworkArchiveRequest) (this.urgentPending.a((byte) -22));
+            var2 = (NetworkArchiveRequest) (this.urgentPending.first((byte) -22));
             while (var2 != null) {
               this.outgoingControl.position = 0;
               this.outgoingControl.writeByte(1, false);
               this.outgoingControl.writeLong40(var2.field_m, 24136);
               this.socket.a(this.outgoingControl.payload, (byte) -97, this.outgoingControl.payload.length, 0);
-              this.urgentInFlight.a(var2, false);
+              this.urgentInFlight.addLast(var2, false);
               var2 = (NetworkArchiveRequest) (this.urgentPending.next((byte) -116));
             }
-            var2Lifetime1 = (NetworkArchiveRequest) (this.prefetchPending.a((byte) 117));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.prefetchPending.first((byte) 117));
             while (var2Lifetime1 != null) {
               this.outgoingControl.position = 0;
               this.outgoingControl.writeByte(0, false);
               this.outgoingControl.writeLong40(var2Lifetime1.field_m, 24136);
               this.socket.a(this.outgoingControl.payload, (byte) 55, this.outgoingControl.payload.length, 0);
-              this.prefetchInFlight.a(var2Lifetime1, false);
+              this.prefetchInFlight.addLast(var2Lifetime1, false);
               var2Lifetime1 = (NetworkArchiveRequest) (this.prefetchPending.next((byte) -112));
             }
             if (param0 != -2147483648) {
@@ -516,7 +516,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (NetworkArchiveRequest) (this.urgentInFlight.a((byte) -113));
+                        var14_ref = (NetworkArchiveRequest) (this.urgentInFlight.first((byte) -113));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_m) {
                             decompiledFrameCompleted0 = false;
@@ -528,7 +528,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (NetworkArchiveRequest) (this.prefetchInFlight.a((byte) 96));
+                        var14_ref = (NetworkArchiveRequest) (this.prefetchInFlight.first((byte) 96));
                         while (var14_ref != null) {
                           if (var12 == var14_ref.field_m) {
                             break;

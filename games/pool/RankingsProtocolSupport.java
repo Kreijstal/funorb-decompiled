@@ -11,7 +11,7 @@ final class RankingsProtocolSupport {
 
     final static void resetAppletPreferences(boolean param0, java.applet.Applet param1) {
         try {
-          NameEntryPopup.a(param1, -18788, "");
+          NameEntryPopup.setSessionCookie(param1, -18788, "");
           if (param0) {
             RankingsProtocolSupport.releaseStatics((byte) 31);
           }

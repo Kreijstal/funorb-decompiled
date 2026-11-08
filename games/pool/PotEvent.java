@@ -58,9 +58,9 @@ final class PotEvent extends IntrusiveNode {
     final static double a(byte param0, long param1) {
         if (param0 != 89) {
           PotEvent.a(-26, 0.6233354276237926);
-          return IndexedSpriteState.a((byte) -107, 16, param1);
+          return IndexedSpriteState.fixedToDouble((byte) -107, 16, param1);
         }
-        return IndexedSpriteState.a((byte) -107, 16, param1);
+        return IndexedSpriteState.fixedToDouble((byte) -107, 16, param1);
     }
 
     PotEvent(int param0, int param1) {

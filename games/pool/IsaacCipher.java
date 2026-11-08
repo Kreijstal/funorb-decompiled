@@ -41,7 +41,7 @@ final class IsaacCipher {
         do {
           var4 = this.a((byte) 7);
         } while (var4 > var3);
-        return NameEntryPopup.a(true, param1, var4);
+        return NameEntryPopup.floorModPositiveDivisor(true, param1, var4);
     }
 
     private final void a(boolean param0) {
@@ -252,9 +252,9 @@ final class IsaacCipher {
             }
           }
           param0.field_o = OpacityWidget.a((byte) 60, param0.field_o, var2_int);
-          param0.field_p = QuickChatPhraseDefinition.a(param0.field_p, (byte) -73, var2_int * 3);
-          param0.field_H = QuickChatPhraseDefinition.a(param0.field_H, (byte) -73, var2_int * 3);
-          param0.field_C = QuickChatPhraseDefinition.a(param0.field_C, (byte) -73, var2_int * 3);
+          param0.field_p = QuickChatPhraseDefinition.resizeShortArray(param0.field_p, (byte) -73, var2_int * 3);
+          param0.field_H = QuickChatPhraseDefinition.resizeShortArray(param0.field_H, (byte) -73, var2_int * 3);
+          param0.field_C = QuickChatPhraseDefinition.resizeShortArray(param0.field_C, (byte) -73, var2_int * 3);
           param0.vertexX = MenuScreenBase.a(var2_int * 3, (byte) 108, param0.vertexX);
           param0.vertexY = MenuScreenBase.a(3 * var2_int, (byte) 108, param0.vertexY);
           param0.vertexZ = MenuScreenBase.a(var2_int * 3, (byte) 108, param0.vertexZ);

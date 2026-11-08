@@ -211,13 +211,13 @@ final class QuickChatPhraseRegistry {
               this.definitions.put(90, var6, (long)param1);
               return var6;
             }
-            var6.b(true);
+            var6.markExtendedLinks(true);
             this.definitions.put(90, var6, (long)param1);
             return var6;
           }
-          var6.a(-20678, new PacketBuffer(var4));
+          var6.decode(-20678, new PacketBuffer(var4));
           if (param1 >= 32768) {
-            var6.b(true);
+            var6.markExtendedLinks(true);
             this.definitions.put(90, var6, (long)param1);
             return var6;
           }
@@ -235,12 +235,12 @@ final class QuickChatPhraseRegistry {
         }
         QuickChatPhraseDefinition var7 = new QuickChatPhraseDefinition();
         if (var4Lifetime1 != null) {
-          var7.a(-20678, new PacketBuffer(var4Lifetime1));
+          var7.decode(-20678, new PacketBuffer(var4Lifetime1));
           if (param1 < 32768) {
             this.definitions.put(90, var7, (long)param1);
             return var7;
           }
-          var7.b(true);
+          var7.markExtendedLinks(true);
           this.definitions.put(90, var7, (long)param1);
           return var7;
         }
@@ -248,7 +248,7 @@ final class QuickChatPhraseRegistry {
           this.definitions.put(90, var7, (long)param1);
           return var7;
         }
-        var7.b(true);
+        var7.markExtendedLinks(true);
         this.definitions.put(90, var7, (long)param1);
         return var7;
     }

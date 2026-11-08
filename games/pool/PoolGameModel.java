@@ -1029,8 +1029,8 @@ final class PoolGameModel {
         this.field_a = new int[this.field_r.length];
         var4 = this.balls[param1];
         for (var3Lifetime2 = 0; var3Lifetime2 < this.balls.length; var3Lifetime2++) {
-          this.field_r[var3Lifetime2].a(var3Lifetime2, true, true);
-          if (this.field_r[var3Lifetime2].a((byte) -8, param1, this)) {
+          this.field_r[var3Lifetime2].setTarget(var3Lifetime2, true, true);
+          if (this.field_r[var3Lifetime2].isEligibleTarget((byte) -8, param1, this)) {
             this.field_r[var3Lifetime2].computeDistance(param0 + 1763061160, var4, this);
             this.field_a[var3Lifetime2] = this.field_r[var3Lifetime2].distance;
             this.field_t[var3Lifetime2] = var3Lifetime2;
@@ -1038,7 +1038,7 @@ final class PoolGameModel {
         }
         for (var3Lifetime3 = 0; this.field_e.length > var3Lifetime3; var3Lifetime3++) {
           var5_int = this.balls.length + var3Lifetime3;
-          this.field_r[var5_int].a(var3Lifetime3, false, true);
+          this.field_r[var5_int].setTarget(var3Lifetime3, false, true);
           this.field_r[var5_int].computeDistance(1763073386, var4, this);
           this.field_a[var5_int] = this.field_r[var5_int].distance;
           this.field_t[var5_int] = var5_int;
@@ -1046,75 +1046,75 @@ final class PoolGameModel {
         StrongCacheEntry.a(this.field_a, this.field_t, (byte) -54);
         for (var3Lifetime4 = 0; this.field_r.length > var3Lifetime4; var3Lifetime4++) {
           var5 = this.field_r[this.field_t[var3Lifetime4]];
-          if (var5.a((byte) -8, param1, this)) {
-            var6 = var5.a(this, var4, -6661);
-            var7 = var5.a(1048576);
+          if (var5.isEligibleTarget((byte) -8, param1, this)) {
+            var6 = var5.angleFromBall(this, var4, -6661);
+            var7 = var5.angularHalfWidth(1048576);
             var8 = 8191 & -var7 + var6;
             var9 = 8191 & var6 + var7;
-            var5.field_j = true;
+            var5.visible = true;
             var10 = 0;
             scanLoop1: while (true) {
               if (var10 < var3Lifetime4) {
                 boolean decompiledFrameRemainder0 = true;
                 var11 = this.field_r[this.field_t[var10]];
-                if (var11.a((byte) -8, param1, this)) {
+                if (var11.isEligibleTarget((byte) -8, param1, this)) {
                   if (var9 > var8) {
-                    if (var11.field_k >= var11.field_d) {
-                      if (var11.field_k >= var8 &&
-                        var11.field_d <= var9) {
-                        if (var11.field_k < var9) {
-                          var9 = var11.field_k;
+                    if (var11.angleStart >= var11.angleEnd) {
+                      if (var11.angleStart >= var8 &&
+                        var11.angleEnd <= var9) {
+                        if (var11.angleStart < var9) {
+                          var9 = var11.angleStart;
                         } else {
-                          if (!(var8 >= var11.field_d)) {
-                            var8 = var11.field_d;
+                          if (!(var8 >= var11.angleEnd)) {
+                            var8 = var11.angleEnd;
                           }
                         }
                         decompiledFrameRemainder0 = false;
                       }
                       else {
-                        var5.field_j = false;
+                        var5.visible = false;
                         break scanLoop1;
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      if (var11.field_k < var8 &&
-                        var8 < var11.field_d &&
-                        var11.field_k < var9 &&
-                        var11.field_d > var9) {
-                        var5.field_j = false;
+                      if (var11.angleStart < var8 &&
+                        var8 < var11.angleEnd &&
+                        var11.angleStart < var9 &&
+                        var11.angleEnd > var9) {
+                        var5.visible = false;
                         break scanLoop1;
                       }
-                      if (var11.field_k < var8 &&
-                        var8 < var11.field_d) {
-                        var8 = var11.field_d;
+                      if (var11.angleStart < var8 &&
+                        var8 < var11.angleEnd) {
+                        var8 = var11.angleEnd;
                       } else {
-                        if (var9 > var11.field_k &&
-                          var11.field_d > var9) {
-                          var9 = var11.field_k;
+                        if (var9 > var11.angleStart &&
+                          var11.angleEnd > var9) {
+                          var9 = var11.angleStart;
                         }
                       }
                     }
                   } else {
-                    if (var11.field_d > var11.field_k) {
-                      if (var11.field_d <= var8) {
-                        if (var9 > var11.field_k) {
-                          var9 = var11.field_k;
+                    if (var11.angleEnd > var11.angleStart) {
+                      if (var11.angleEnd <= var8) {
+                        if (var9 > var11.angleStart) {
+                          var9 = var11.angleStart;
                         }
                       } else {
-                        var8 = var11.field_d;
+                        var8 = var11.angleEnd;
                       }
                     } else {
-                      if (var8 > var11.field_k &&
-                        var9 < var11.field_d) {
-                        var5.field_j = false;
+                      if (var8 > var11.angleStart &&
+                        var9 < var11.angleEnd) {
+                        var5.visible = false;
                         break scanLoop1;
                       }
-                      if (var11.field_d >= var9) {
-                        if (var11.field_k > var8) {
-                          var9 = var11.field_k;
+                      if (var11.angleEnd >= var9) {
+                        if (var11.angleStart > var8) {
+                          var9 = var11.angleStart;
                         }
                       } else {
-                        var8 = var11.field_d;
+                        var8 = var11.angleEnd;
                       }
                     }
                   }
@@ -1124,8 +1124,8 @@ final class PoolGameModel {
               }
               break;
             }
-            this.field_r[this.field_t[var3Lifetime4]].field_k = 8191 & -var7 + var6;
-            this.field_r[this.field_t[var3Lifetime4]].field_d = 8191 & var7 + var6;
+            this.field_r[this.field_t[var3Lifetime4]].angleStart = 8191 & -var7 + var6;
+            this.field_r[this.field_t[var3Lifetime4]].angleEnd = 8191 & var7 + var6;
           }
         }
     }

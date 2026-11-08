@@ -178,9 +178,9 @@ final class ScrollPaneWithFooter extends UiComponent {
         field_Lb = null;
     }
 
-    final static void a(int param0, String param1) {
-        System.out.println("Error: " + DiskArchiveRequest.replaceAll(param0 ^ 76, "\n", param1, "%0a"));
-        if (param0 != 55) {
+    final static void printClientError(int obfuscationGuard, String message) {
+        System.out.println("Error: " + DiskArchiveRequest.replaceAll(obfuscationGuard ^ 76, "\n", message, "%0a"));
+        if (obfuscationGuard != 55) {
           field_Pb = (Sprite) null;
         }
     }

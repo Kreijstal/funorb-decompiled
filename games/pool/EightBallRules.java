@@ -49,7 +49,7 @@ final class EightBallRules extends GameRules {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    final static void layoutLobbyOptionRows(int param0, int param1, int param2, int param3, byte param4, int param5) {
         int var12 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -121,7 +121,7 @@ final class EightBallRules extends GameRules {
     public static void releaseStatics(byte param0) {
         muYouDeclinedInvite = null;
         if (param0 >= -2) {
-          EightBallRules.a(-47, 110, -56, 55, 78);
+          EightBallRules.createBeveledPanelSprites(-47, 110, -56, 55, 78);
         }
     }
 
@@ -144,7 +144,7 @@ final class EightBallRules extends GameRules {
         var9 = Pool.field_O;
         try {
           if (param1 <= 82) {
-            EightBallRules.a(66, 112, 38, -91, 125);
+            EightBallRules.createBeveledPanelSprites(66, 112, 38, -91, 125);
           }
           if (this.field_f == null) {
             stackIn_13_0 = (1 + param0.playerIndex) % this.field_d.playerCount;
@@ -197,8 +197,8 @@ final class EightBallRules extends GameRules {
         return 1;
     }
 
-    private final boolean r(int param0) {
-        if (param0 != 9) {
+    private final boolean retainTurnOnGroupAssignment(int obfuscationGuard) {
+        if (obfuscationGuard != 9) {
           return false;
         }
         return true;
@@ -211,30 +211,30 @@ final class EightBallRules extends GameRules {
         return this.baseResolutionFlags(4);
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] createBeveledPanelSprites(int param0, int param1, int param2, int param3, int param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
         if (param1 != 64) {
-          EightBallRules.a(-37, true);
+          EightBallRules.resendIntegerRecordOperations(-37, true);
         }
-        Sprite dupTemp$0 = ArchiveIndex.a(param3, param4, 7);
+        Sprite dupTemp$0 = ArchiveIndex.createSolidSquareSprite(param3, param4, 7);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = ArchiveIndex.a(param2, param4, 7);
+        Sprite dupTemp$1 = ArchiveIndex.createSolidSquareSprite(param2, param4, 7);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param0 != 0) {
-          var6[4] = ArchiveIndex.a(param0, 64, 7);
+          var6[4] = ArchiveIndex.createSolidSquareSprite(param0, 64, 7);
         }
         return var5;
     }
 
-    private final int d(byte param0) {
-        int var2 = -75 % ((27 - param0) / 44);
+    private final int requiredObjectBallCushionTouches(byte obfuscationGuard) {
+        int var2 = -75 % ((27 - obfuscationGuard) / 44);
         return 0;
     }
 
@@ -363,24 +363,24 @@ final class EightBallRules extends GameRules {
             decompiledFrameRemainder1 = false;
           }
           else {
-            if (var7 < this.d((byte) 87)) {
+            if (var7 < this.requiredObjectBallCushionTouches((byte) 87)) {
               if (var7 != 0) {
                 var14.addEvent(14, -14, new int[]{});
               } else {
                 var14.addEvent(13, -14, new int[]{});
               }
               var14.field_t = true;
-              var4 = var4 | this.e((byte) 91);
+              var4 = var4 | this.foulFlagsNotEnoughObjectBallCushions((byte) 91);
             } else {
-              if (!(var6 >= this.p(89))) {
+              if (!(var6 >= this.requiredOwnGroupCushionTouches(89))) {
                 if (var6 != 0) {
                   var14.addEvent(16, -14, new int[]{});
                   var14.field_t = true;
-                  var4 = var4 | this.g((byte) -46);
+                  var4 = var4 | this.foulFlagsNotEnoughOwnGroupCushions((byte) -46);
                 } else {
                   var14.addEvent(15, -14, new int[]{});
                   var14.field_t = true;
-                  var4 = var4 | this.g((byte) -46);
+                  var4 = var4 | this.foulFlagsNotEnoughOwnGroupCushions((byte) -46);
                 }
               }
             }
@@ -389,9 +389,9 @@ final class EightBallRules extends GameRules {
         var5Lifetime1 = -52 % ((param0 + 37) / 60);
         if (var14.field_t &&
           0 == (AccountWelcomePanel.field_Y & var4) &&
-          this.isTargetVisible((1 + this.field_d.field_A) % this.field_d.playerCount, -119)) {
+          this.isPlayerSnookered((1 + this.field_d.field_A) % this.field_d.playerCount, -119)) {
           var14.addEvent(11, -14, new int[]{});
-          var4 = this.f((byte) -30);
+          var4 = this.snookeredFoulResolutionFlags((byte) -30);
         }
         boolean decompiledFrameRemainder0 = true;
         if (!var14.pottedBalls.isEmpty(0)) {
@@ -427,7 +427,7 @@ final class EightBallRules extends GameRules {
             if (var7Lifetime1 <= 0) {
               this.assignGroups((int) this.ballGroup(var8Lifetime1, 30554), -1, var14.playerIndex);
               stackIn_98_0 = var4;
-              if (this.r(9)) {
+              if (this.retainTurnOnGroupAssignment(9)) {
                 stackIn_99_1 = MarkerSliderPainter.field_j;
               } else {
                 stackIn_99_1 = 0;
@@ -437,7 +437,7 @@ final class EightBallRules extends GameRules {
               decompiledFrameRemainder0 = false;
             }
             else {
-              var10 = this.v(-13243);
+              var10 = this.mixedGroupPotPolicy(-13243);
               var11 = 3 & var10;
               if (var11 != 0) {
                 if (var11 == 1) {
@@ -467,11 +467,11 @@ final class EightBallRules extends GameRules {
           }
         }
         if (!this.field_d.shouldChangePlayer(false, (byte) 69, var14)) {
-          if (this.isTargetVisible(var14.playerIndex % this.field_d.playerCount, -57)) {
+          if (this.isPlayerSnookered(var14.playerIndex % this.field_d.playerCount, -57)) {
             var14.field_w = (byte)(var14.field_w - 1);
           }
         } else {
-          if (this.isTargetVisible((1 + var14.playerIndex) % this.field_d.playerCount, -122)) {
+          if (this.isPlayerSnookered((1 + var14.playerIndex) % this.field_d.playerCount, -122)) {
             var14.field_w = (byte)(var14.field_w + 1);
           }
         }
@@ -521,7 +521,7 @@ final class EightBallRules extends GameRules {
         return var4;
     }
 
-    final boolean isTargetVisible(int param0, int param1) {
+    final boolean isPlayerSnookered(int param0, int param1) {
         int[] stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         int var3;
@@ -553,7 +553,7 @@ final class EightBallRules extends GameRules {
             var6 = var10;
             while (16 > var10) {
               if (var10 != 8 &&
-                this.field_d.field_r[var10].field_j) {
+                this.field_d.field_r[var10].visible) {
                 var3 = 0;
                 break;
               }
@@ -568,7 +568,7 @@ final class EightBallRules extends GameRules {
               if (var7 > var8) {
                 if (this.field_d.balls[var8].inPlay) {
                   var4 = 0;
-                  if (this.field_d.field_r[var8].field_j) {
+                  if (this.field_d.field_r[var8].visible) {
                     var3 = 0;
                     decompiledFrameRemainder0 = false;
                   }
@@ -581,7 +581,7 @@ final class EightBallRules extends GameRules {
               if (var4 == 0) {
                 break;
               }
-              if (!this.field_d.field_r[8].field_j) {
+              if (!this.field_d.field_r[8].visible) {
                 break;
               }
               var3 = 0;
@@ -607,8 +607,8 @@ final class EightBallRules extends GameRules {
         return ThemeSelectScreen.field_O | BrowserUrlSupport.field_f;
     }
 
-    private final int p(int param0) {
-        if (param0 <= 46) {
+    private final int requiredOwnGroupCushionTouches(int obfuscationGuard) {
+        if (obfuscationGuard <= 46) {
           ShotRecord var3 = (ShotRecord) null;
           this.targetBallSprite((ShotRecord) null, -66);
           return 0;
@@ -616,7 +616,7 @@ final class EightBallRules extends GameRules {
         return 0;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void resendIntegerRecordOperations(int param0, boolean param1) {
         IntegerRecordSubmission var3 = null;
         IntLookupQuery var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -624,7 +624,7 @@ final class EightBallRules extends GameRules {
         try {
           var3 = (IntegerRecordSubmission) (AvailabilityQueryResult.field_a.last((byte) 69));
           while (var3 != null) {
-            IntegerRecordProtocolSupport.a(param0, var3, -102);
+            IntegerRecordProtocolSupport.sendIntegerRecordSubmission(param0, var3, -102);
             var3 = (IntegerRecordSubmission) (AvailabilityQueryResult.field_a.previous((byte) -5));
           }
           if (!param1) {
@@ -793,8 +793,8 @@ final class EightBallRules extends GameRules {
         return true;
     }
 
-    private final int v(int param0) {
-        if (param0 != -13243) {
+    private final int mixedGroupPotPolicy(int obfuscationGuard) {
+        if (obfuscationGuard != -13243) {
           field_e = 18;
         }
         return 9;
@@ -845,7 +845,7 @@ final class EightBallRules extends GameRules {
 
     final int rulesStateByteLength(int param0) {
         if (param0 != 0) {
-          EightBallRules.a(108, false);
+          EightBallRules.resendIntegerRecordOperations(108, false);
         }
         return 1;
     }
@@ -924,8 +924,8 @@ final class EightBallRules extends GameRules {
         }
     }
 
-    private final int f(byte param0) {
-        if (param0 != -30) {
+    private final int snookeredFoulResolutionFlags(byte obfuscationGuard) {
+        if (obfuscationGuard != -30) {
           this.initialGroup(-100);
         }
         return ThemeSelectScreen.field_O | BrowserUrlSupport.field_f | AccountWelcomePanel.field_R | BitmapTextLayout.field_j;
@@ -1064,21 +1064,21 @@ final class EightBallRules extends GameRules {
 
     final int groupOfPlayer(int param0, int param1) {
         if (param0 != 22533) {
-          EightBallRules.a(115, -64, -57, 83, -73);
+          EightBallRules.createBeveledPanelSprites(115, -64, -57, 83, -73);
         }
         return this.field_g[1 == this.field_d.playerCount ? 0 : param1 / (this.field_d.playerCount >> 1)];
     }
 
-    private final int g(byte param0) {
-        if (param0 != -46) {
+    private final int foulFlagsNotEnoughOwnGroupCushions(byte obfuscationGuard) {
+        if (obfuscationGuard != -46) {
           return -121;
         }
         return this.foulFlagsNotEnoughCushions(0);
     }
 
-    private final int e(byte param0) {
+    private final int foulFlagsNotEnoughObjectBallCushions(byte obfuscationGuard) {
         boolean discarded$0 = false;
-        if (param0 <= 52) {
+        if (obfuscationGuard <= 52) {
           discarded$0 = this.areSameGroup(11, -35, (byte) -35);
         }
         return this.foulFlagsNotEnoughCushions(0);
@@ -1108,9 +1108,9 @@ final class EightBallRules extends GameRules {
           var3Lifetime1 = this.baseResolutionFlags(4) | AccountWelcomePanel.field_Q;
         }
         var6.addEvent(17, param0 - 13, new int[]{var6.playerIndex});
-        if (this.isTargetVisible((var6.playerIndex - param0) % this.field_d.playerCount, -112)) {
+        if (this.isPlayerSnookered((var6.playerIndex - param0) % this.field_d.playerCount, -112)) {
           var6.addEvent(11, -14, new int[]{});
-          var3Lifetime1 = this.f((byte) -30);
+          var3Lifetime1 = this.snookeredFoulResolutionFlags((byte) -30);
         }
         var6.field_t = true;
         return var3Lifetime1;

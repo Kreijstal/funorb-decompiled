@@ -87,7 +87,7 @@ final class Cp1252DecodingSupport {
           }
           ScrollPane.field_Nb.updateProgress(param0, 2113632, param3, param2);
           SoftwareRasterizer.clear();
-          PolarBallSkin.a((byte) -118, param1);
+          PolarBallSkin.drawAccountInterfaceOverlays((byte) -118, param1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "a.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

@@ -279,12 +279,12 @@ abstract class Js5Transport {
           if (20 <= this.prefetchCount(false)) {
             throw new RuntimeException();
           }
-          this.prefetchPending.a(var8, false);
+          this.prefetchPending.addLast(var8, false);
         } else {
           if (!(this.urgentCount(4609) < 20)) {
             throw new RuntimeException();
           }
-          this.urgentPending.a(var8, false);
+          this.urgentPending.addLast(var8, false);
         }
         return var8;
     }
