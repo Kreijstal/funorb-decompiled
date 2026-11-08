@@ -8,17 +8,17 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
     static String[] field_F;
     static UiLayoutNode field_G;
 
-    final static void d(boolean param0) {
+    final static void releaseTutorialOpponentControl(boolean param0) {
         FootballerAgent var1 = null;
         FootballerAgent var2 = null;
         if (!param0) {
-          AuctionsHelpScreen.g(57);
+          AuctionsHelpScreen.pollFullscreenPromptAction(57);
         }
         if (0 != ThumbnailStateFactory.field_d.participantStatus[1].controlledSlot) {
           if (ThumbnailStateFactory.field_d.field_V.possessorTeam == 1) {
             var1 = ThumbnailStateFactory.field_d.getControlledFootballer((byte) 104, 0);
             var2 = ThumbnailStateFactory.field_d.getControlledFootballer((byte) -71, 1);
-            SelectableAchievementIcon.b(var1.pixelX(-121) - var2.pixelX(-99), -2, var1.pixelY(true) - var2.pixelY(true), 10);
+            SelectableAchievementIcon.startTutorialKick(var1.pixelX(-121) - var2.pixelX(-99), -2, var1.pixelY(true) - var2.pixelY(true), 10);
           }
           ThumbnailStateFactory.field_d.participantStatus[1].controlledSlot = 0;
         }
@@ -177,7 +177,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         field_G = null;
     }
 
-    final static int g(int param0) {
+    final static int pollFullscreenPromptAction(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -206,7 +206,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
             CheckboxPainter.field_c.selectedIndex >= 0) {
             var2 = InstrumentEnvelope.field_d[CheckboxPainter.field_c.selectedIndex];
             if (2 == var2) {
-              ImageProducerRasterBuffer.c((byte) -77);
+              ImageProducerRasterBuffer.closeLegacyFullscreenPrompt((byte) -77);
             }
           }
           stackIn_16_0 = var2;

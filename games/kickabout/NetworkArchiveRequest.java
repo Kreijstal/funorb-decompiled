@@ -74,7 +74,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static void h(int param0) {
+    final static void enableTournamentChatPrefix(int param0) {
         GameOverView.field_R = true;
         if (param0 != -15396) {
           field_w = (ReceivedAuctionItem[]) null;

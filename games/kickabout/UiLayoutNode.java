@@ -64,7 +64,7 @@ class UiLayoutNode extends SharedWidgetFactory {
     int field_J;
     static double field_K;
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void renderPitchSurface(int param0, int param1, int param2, int param3) {
         Sprite var10 = null;
         int var5 = 0;
         int var6 = 0;
@@ -73,7 +73,7 @@ class UiLayoutNode extends SharedWidgetFactory {
         int var9 = Kickabout.field_G;
         try {
           PacketBuffer.pushSpriteRaster(-123, DebouncedValidationProvider.field_a);
-          var10 = FootballerPreview.a(-5275);
+          var10 = FootballerPreview.getSelectedPitchSprite(-5275);
           var5 = var10.field_o;
           var6 = var10.field_v;
           for (var7 = 0; var7 < SoftwareRasterizer.field_g; var7 = var7 + var5) {
@@ -83,10 +83,10 @@ class UiLayoutNode extends SharedWidgetFactory {
           }
           TrinketCatalog.createPitchLineAlphaNoise(param0, 15, param2, param1, param3, false);
           if (KitPatternMaskSupport.field_c == 0) {
-            RasterBuffer.a(75, HuffmanTextSupport.field_d, 15, 15);
+            RasterBuffer.drawPitchStains(75, HuffmanTextSupport.field_d, 15, 15);
           }
           if (1 == KitPatternMaskSupport.field_c) {
-            RasterBuffer.a(116, ChatMessage.field_b, 15, 15);
+            RasterBuffer.drawPitchStains(116, ChatMessage.field_b, 15, 15);
           }
           if (2 == KitPatternMaskSupport.field_c) {
             RankingsRequest.scatterStreetCracks(15, 15, 124);
@@ -330,7 +330,7 @@ class UiLayoutNode extends SharedWidgetFactory {
         this.updateInputTree(0, ~param0, true, SoftwareRasterizer.field_f, param0, SoftwareRasterizer.field_g);
     }
 
-    final static boolean a(boolean param0, int param1, int param2) {
+    final static boolean handleChatInput(boolean param0, int param1, int param2) {
         StringBuilder discarded$0 = null;
         int var3;
         String var4_ref_String;

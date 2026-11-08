@@ -162,7 +162,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         ResourceArchive var4;
         ColorQuantizationBox.field_a = SoftwareRasterizer.field_g;
         BufferedSocket.field_s = SoftwareRasterizer.field_f;
-        GeneratedPanelPainter.b((byte) 92);
+        GeneratedPanelPainter.positionSlidingLobbyPanels((byte) 92);
         SocialUiState.field_d.layout(0, UiKeyRoutingSupport.field_c.field_q, 0, -2 + UiKeyRoutingSupport.field_c.field_mb - 40, (byte) -123);
         ConsoleValue.field_a.setBounds(true, WhirlpoolHasher.field_m.field_q, 0, 0, LineupPositionSupport.field_c);
         var1 = LineupPositionSupport.field_c + 2;

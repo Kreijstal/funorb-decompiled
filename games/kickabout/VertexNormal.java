@@ -11,7 +11,7 @@ final class VertexNormal {
     static String field_h;
     static int[] field_d;
 
-    final static void a(NineSlicePanelPainter param0, int param1, NineSlicePanelPainter param2, int param3, int param4, int param5) {
+    final static void configureSharedPanelStyles(NineSlicePanelPainter param0, int param1, NineSlicePanelPainter param2, int param3, int param4, int param5) {
         try {
           LinkTextPainter.field_e = param0;
           if (param5 > -80) {
@@ -32,7 +32,7 @@ final class VertexNormal {
           return ByteArrayPool.field_b[param1];
         }
         NineSlicePanelPainter var3 = (NineSlicePanelPainter) null;
-        VertexNormal.a((NineSlicePanelPainter) null, 59, (NineSlicePanelPainter) null, 65, 60, 35);
+        VertexNormal.configureSharedPanelStyles((NineSlicePanelPainter) null, 59, (NineSlicePanelPainter) null, 65, 60, 35);
         return ByteArrayPool.field_b[param1];
     }
 

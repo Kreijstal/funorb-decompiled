@@ -174,7 +174,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           if (param1 != this.field_I) {
             return;
           }
-          WorldSpriteDecoration.a(-124);
+          WorldSpriteDecoration.startLoginAfterRegistration(-124);
           this.field_B.closeDialog(-87);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

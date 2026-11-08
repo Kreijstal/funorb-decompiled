@@ -73,15 +73,15 @@ final class RotaryDialWidget extends TextButton {
         field_F = null;
     }
 
-    final static LoginText j(int param0) {
+    final static LoginText getCurrentAccountNameText(int param0) {
         String var1 = null;
         if (param0 >= 33) {
-          var1 = BigCommand.g(-26370);
+          var1 = BigCommand.getCurrentAccountName(-26370);
           if (var1 != null &&
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new LoginText(BigCommand.g(-26370), ContextMenu.b(-20010));
+          return new LoginText(BigCommand.getCurrentAccountName(-26370), ContextMenu.isAccountNameCheckPending(-20010));
         }
         return (LoginText) null;
     }

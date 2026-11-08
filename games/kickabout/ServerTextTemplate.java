@@ -118,7 +118,7 @@ final class ServerTextTemplate {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isFullscreenPromptOpen(int param0) {
         if (param0 != -4) {
           field_e = false;
         }
@@ -206,7 +206,7 @@ final class ServerTextTemplate {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void setLoadingDestination(int param0, int param1) {
         MatchHudSupport.field_d = param0;
         SquadGridWidget.field_Db = null;
         MachineTokenStorageSupport.field_b = false;
@@ -219,7 +219,7 @@ final class ServerTextTemplate {
         field_j = null;
         field_k = null;
         if (param0 <= 40) {
-          ServerTextTemplate.a(-83);
+          ServerTextTemplate.isFullscreenPromptOpen(-83);
         }
         field_i = null;
         field_d = null;

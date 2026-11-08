@@ -30,7 +30,7 @@ final class AuctionListing extends IntrusiveNode {
           if (~this.slotIndex != ~param0.getSlotIndex(3)) {
             return false;
           }
-          if (this.field_g != param0.b(6)) {
+          if (this.field_g != param0.getEventAmount(6)) {
             return false;
           }
           if (null != this.playerStats &&
@@ -71,7 +71,7 @@ final class AuctionListing extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 37) {
-            AuctionListing.a(true, (ResourceArchive) null);
+            AuctionListing.loadLocalizedText(true, (ResourceArchive) null);
           }
           stackIn_4_0 = this.listingType;
           return stackIn_4_0;
@@ -120,7 +120,7 @@ final class AuctionListing extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void requestRatedMatchmaking(boolean param0, int param1) {
         CipherPacketBuffer var2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
@@ -252,7 +252,7 @@ final class AuctionListing extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, ResourceArchive param1) {
+    final static void loadLocalizedText(boolean param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2604_0;
             StringBuilder stackIn_2604_1;
@@ -3297,7 +3297,7 @@ final class AuctionListing extends IntrusiveNode {
         decompiledBody.run();
     }
 
-    final int b(int param0) {
+    final int getEventAmount(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;

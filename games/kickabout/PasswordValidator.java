@@ -270,7 +270,7 @@ final class PasswordValidator extends TextFieldValidator {
             return null;
           }
           var5 = var4;
-          if (DebouncedValidationProvider.a(var5, (byte) 79)) {
+          if (DebouncedValidationProvider.isInvalidPasswordLength(var5, (byte) 79)) {
             stackIn_8_0 = MySquadScreen.field_M;
             return stackIn_8_0;
           }

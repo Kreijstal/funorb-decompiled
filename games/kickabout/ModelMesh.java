@@ -2024,7 +2024,7 @@ final class ModelMesh extends ModelMeshBase {
           for (var9 = 0; var9 < this.field_ab; var9++) {
             var10 = param0.field_u[var9];
             if (var10 != -1 &&
-              TriangleRasterizer.field_d.a(var10, 2738)) {
+              TriangleRasterizer.field_d.isTextureReady(var10, 2738)) {
               this.field_x[var9] = (short)var10;
             } else {
               this.field_x[var9] = (short)-1;

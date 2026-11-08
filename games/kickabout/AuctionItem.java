@@ -107,7 +107,7 @@ class AuctionItem extends IntrusiveNode {
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_kk = TrinketCountSortCriterion.field_n[var3];
             var4_ref_kk.computeBounds(false);
-            MouseWheelInput.a(var3, 1);
+            MouseWheelInput.updateLogoMeshRotation(var3, 1);
             var5 = var4_ref_kk.field_y + var4_ref_kk.field_h >> 1;
             var6 = var4_ref_kk.field_s + var4_ref_kk.field_x >> 1;
             var7 = var4_ref_kk.field_w + var4_ref_kk.field_t >> 1;
@@ -153,11 +153,11 @@ class AuctionItem extends IntrusiveNode {
             }
             var22[var17] = -2147483648;
             var18 = TrinketCountSortCriterion.field_n[var17];
-            MouseWheelInput.a(var17, 1);
+            MouseWheelInput.updateLogoMeshRotation(var17, 1);
             for (var19 = 0; var19 < 3; var19++) {
               FullscreenFailureReason.field_g[var19] = FullscreenFailureReason.field_g[var19] + HighScoreSubmission.field_l[var16][var19];
             }
-            Bzip2State.a(var18, false, FullscreenFailureReason.field_g, ImageProducerRasterBuffer.field_i, (byte) -96, false, true);
+            Bzip2State.transformAndProjectMesh(var18, false, FullscreenFailureReason.field_g, ImageProducerRasterBuffer.field_i, (byte) -96, false, true);
             RotaryDialPainter.rasterizeLitMesh(var8Lifetime1, var7Lifetime1, var13Lifetime1, var9Lifetime1, var14, (byte) -125, var18, var15);
           }
           return;

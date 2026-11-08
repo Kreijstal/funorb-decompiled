@@ -34,14 +34,14 @@ final class SquadSlotWidget extends UiLayoutNode {
         }
     }
 
-    final void h(byte param0) {
+    final void drawSquadSlot(byte param0) {
         int[] var2;
         int[] var3;
         int[] var4;
         int[] var5;
         if (this.field_Eb.isEmpty(-2)) {
           if (param0 >= -114) {
-            this.h((byte) -68);
+            this.drawSquadSlot((byte) -68);
           }
           if (this.field_Fb == null) {
             return;
@@ -53,7 +53,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           ReceivedAuctionItemRow.drawLoadingSpinner(this.field_F + (this.field_q >> 1), -36, (this.field_mb >> 1) + this.field_T);
           if (!this.field_Hb) {
             if (param0 >= -114) {
-              this.h((byte) -68);
+              this.drawSquadSlot((byte) -68);
             }
             if (this.field_Fb == null) {
               return;
@@ -71,7 +71,7 @@ final class SquadSlotWidget extends UiLayoutNode {
             this.field_Fb.draw(18 + this.field_F, 41 + this.field_T);
             return;
           }
-          this.h((byte) -68);
+          this.drawSquadSlot((byte) -68);
           if (this.field_Fb != null) {
             this.field_Fb.draw(18 + this.field_F, 41 + this.field_T);
           }
@@ -103,7 +103,7 @@ final class SquadSlotWidget extends UiLayoutNode {
               ConsoleTokenCursor.field_d.drawText(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
             }
             if (param0 >= -114) {
-              this.h((byte) -68);
+              this.drawSquadSlot((byte) -68);
             }
             if (this.field_Fb != null) {
               this.field_Fb.draw(18 + this.field_F, 41 + this.field_T);
@@ -118,7 +118,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           ConsoleTokenCursor.field_d.drawText(WeightedLruCache.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
         }
         if (param0 >= -114) {
-          this.h((byte) -68);
+          this.drawSquadSlot((byte) -68);
         }
         if (this.field_Fb == null) {
           return;

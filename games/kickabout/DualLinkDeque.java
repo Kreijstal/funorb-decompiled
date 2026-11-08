@@ -155,7 +155,7 @@ final class DualLinkDeque {
         RuntimeException var1 = null;
         var3 = Kickabout.field_G;
         try {
-          AuctionsHelpScreen.d(true);
+          AuctionsHelpScreen.releaseTutorialOpponentControl(true);
           var1_int = 0;
           if (param0 != -127) {
             return;

@@ -49,7 +49,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
         return false;
     }
 
-    final static void c(int param0, boolean param1) {
+    final static void beginTutorialLesson(int param0, boolean param1) {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -190,7 +190,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
         this(param0, param1, -1);
     }
 
-    final void a(boolean param0, byte param1) {
+    final void drawCheckboxLabel(boolean param0, byte param1) {
         int var3;
         int var4;
         int var5;
@@ -240,7 +240,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                 var6.draw(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
                 return;
               }
-              this.a(true, (byte) -8);
+              this.drawCheckboxLabel(true, (byte) -8);
               if (!this.field_lb) {
                 stackIn_24_0 = SaveChangesDialog.field_F;
               } else {
@@ -256,7 +256,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
           stackIn_43_0 = (!this.field_lb) ? 7829367 : 16777215;
           var5 = stackIn_43_0;
           if (param1 != 46) {
-            this.a(true, (byte) -8);
+            this.drawCheckboxLabel(true, (byte) -8);
           }
           if (!this.field_lb) {
             stackIn_48_0 = SaveChangesDialog.field_F;

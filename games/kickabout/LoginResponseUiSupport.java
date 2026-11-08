@@ -55,7 +55,7 @@ final class LoginResponseUiSupport {
               if (TextLineLayoutSupport.field_a) {
                 param0 = AccountTermsPanel.field_L;
               }
-              WorldSpriteSequence.field_f.a(param1, 101, param0);
+              WorldSpriteSequence.field_f.showRequestResponse(param1, 101, param0);
             }
             if (param1 != 256 &&
               param1 != 10 &&

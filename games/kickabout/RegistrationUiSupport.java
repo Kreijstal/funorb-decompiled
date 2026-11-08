@@ -43,11 +43,11 @@ final class RegistrationUiSupport {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          BeveledTextPainter.a(param10, param16, param7 ^ -17016, param5, param6);
+          BeveledTextPainter.initializeLobbyWidgetStyles(param10, param16, param7 ^ -17016, param5, param6);
           SocketArchiveNetworkClient.initializeSocialPanels(-92, param6);
-          LeaderboardParticipant.a(param2, param11, param18, param19, param13, param17, param8, param0, param14, param6, param15, param12, param9, (byte) 117, param4);
+          LeaderboardParticipant.initializeLobbyGamePanels(param2, param11, param18, param19, param13, param17, param8, param0, param14, param6, param15, param12, param9, (byte) 117, param4);
           BufferedCacheFile.initializeChatInterface(param3, param6, param1, 0);
-          StringCursor.b((byte) -124);
+          StringCursor.initializeTutorialMessages((byte) -124);
           if (param7 != 16971) {
             RegistrationUiSupport.buildLoadingSpinnerSprites((byte) -8);
           }
@@ -152,20 +152,20 @@ final class RegistrationUiSupport {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean isStartupInterfaceActive(int param0) {
         if (param0 != 608) {
           String[] var2 = (String[]) null;
           RegistrationUiSupport.initializeSharedUiResources((Sprite[][]) null, (ResourceArchive) null, (int[]) null, true, (byte[]) null, (IndexedSprite[]) null, (ResourceArchive) null, 32, (String[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, 71, (String[]) null, (Sprite[][]) null, (int[]) null, -120, 61, (String[]) null);
           if (DateInputValidator.field_d < 20) {
             return true;
           }
-          if (!FullscreenFailureReason.b((byte) 97)) {
+          if (!FullscreenFailureReason.isAccountInterfaceReady((byte) 97)) {
             return true;
           }
           if (PlayerArchetypeSortCriterion.field_n <= 0) {
             return false;
           }
-          if (!PitchSurfaceLoader.d(1)) {
+          if (!PitchSurfaceLoader.alwaysTrue(1)) {
             return true;
           }
           return false;
@@ -173,13 +173,13 @@ final class RegistrationUiSupport {
         if (DateInputValidator.field_d < 20) {
           return true;
         }
-        if (!FullscreenFailureReason.b((byte) 97)) {
+        if (!FullscreenFailureReason.isAccountInterfaceReady((byte) 97)) {
           return true;
         }
         if (PlayerArchetypeSortCriterion.field_n <= 0) {
           return false;
         }
-        if (!PitchSurfaceLoader.d(1)) {
+        if (!PitchSurfaceLoader.alwaysTrue(1)) {
           return true;
         }
         return false;

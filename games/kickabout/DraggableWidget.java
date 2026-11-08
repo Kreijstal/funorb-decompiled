@@ -16,7 +16,7 @@ final class DraggableWidget extends SingleChildContainer {
     private boolean field_B;
     private int field_C;
 
-    final static void a(int param0, CoverageBitmapFont param1, byte param2) {
+    final static void configureMenuButtonLayout(int param0, CoverageBitmapFont param1, byte param2) {
         try {
           AlternateKeyedLoginCredentials.field_m = 150;
           DirectByteStorage.field_o = param1;
@@ -29,7 +29,7 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5, int param6) {
+    final static void drawOptionIcon(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5, int param6) {
         int var9 = 0;
         RuntimeException decompiledCaughtException = null;
         Sprite var7 = null;

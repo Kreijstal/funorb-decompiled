@@ -363,7 +363,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               }
             }
           }
-          LeaderboardParticipant.a(IntTripleCommand.field_C, RandomAccessCacheFile.field_i, GameModesHelpScreen.field_F, 121, RenderedFootballer.field_fb, IntrusiveDeque.field_g);
+          LeaderboardParticipant.buildColorHistogram(IntTripleCommand.field_C, RandomAccessCacheFile.field_i, GameModesHelpScreen.field_F, 121, RenderedFootballer.field_fb, IntrusiveDeque.field_g);
           AccountInputValidationResult.buildSummedColorMoments(RandomAccessCacheFile.field_i, RenderedFootballer.field_fb, IntTripleCommand.field_C, GameModesHelpScreen.field_F, IntrusiveDeque.field_g, false);
           var14 = var26[0];
           var26[0].field_k = 0;
@@ -378,7 +378,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           var16.field_l = 32;
           var8Lifetime1 = 1;
           while (var8Lifetime1 < FullscreenFailureReason.field_d) {
-            if (ClientUiOverlay.a(var26[var8Lifetime1], false, var26[var10Lifetime1]) == 0) {
+            if (ClientUiOverlay.splitColorBox(var26[var8Lifetime1], false, var26[var10Lifetime1]) == 0) {
               var8Lifetime1--;
               var5[var10Lifetime1] = 0.0;
             } else {

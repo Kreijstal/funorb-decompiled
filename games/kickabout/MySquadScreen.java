@@ -221,11 +221,11 @@ final class MySquadScreen extends TeamManagementScreen {
           var11Lifetime1 = -10 + (this.field_I.field_T + this.field_I.field_mb);
           var13 = this.field_W.field_F + (-100 + this.field_W.field_q >> 1);
           var14 = this.field_W.field_T + 32;
-          SoftwareDrawingSupport.drawStatBar(var13, var14, var26.power, 0, true, var26.trinketPowerBonus(true, IntValueNode.b(param0 - 73)));
+          SoftwareDrawingSupport.drawStatBar(var13, var14, var26.power, 0, true, var26.trinketPowerBonus(true, IntValueNode.canUseMemberTrinkets(param0 - 73)));
           var14 += 18;
-          SoftwareDrawingSupport.drawStatBar(var13, var14, var26.speed, 1, true, var26.trinketSpeedBonus(param0 + 5210, IntValueNode.b(-89)));
+          SoftwareDrawingSupport.drawStatBar(var13, var14, var26.speed, 1, true, var26.trinketSpeedBonus(param0 + 5210, IntValueNode.canUseMemberTrinkets(-89)));
           var14 += 18;
-          SoftwareDrawingSupport.drawStatBar(var13, var14, var26.tackle, 2, true, var26.trinketTackleBonus((byte) 108, IntValueNode.b(param0 ^ 95)));
+          SoftwareDrawingSupport.drawStatBar(var13, var14, var26.tackle, 2, true, var26.trinketTackleBonus((byte) 108, IntValueNode.canUseMemberTrinkets(param0 ^ 95)));
           if (var26.power == 100 &&
             100 == var26.tackle &&
             var26.speed == 100) {

@@ -55,11 +55,11 @@ final class IterableDualLinkDeque implements Iterable {
 
     final static void drawMenuPanel(boolean param0) {
         int var2 = 0;
-        int var1 = DiagnosticsOverlaySupport.b((byte) 46);
+        int var1 = DiagnosticsOverlaySupport.getMenuPanelWidth((byte) 46);
         if (!param0) {
           var2 = IntrusiveNode.getMenuHeight((byte) 101);
           TrinketCountSortCriterion.field_p.drawPanel(-ProxySocketConnector.field_f + GameQuickChatResolver.field_a, (GoalSpriteLoader.field_a << 1) + var2, ChatInputState.field_c - GoalSpriteLoader.field_a, (ProxySocketConnector.field_f << 1) + var1, 3);
-          CheckboxPainter.a(0);
+          CheckboxPainter.drawPromptRows(0);
           return;
         }
     }

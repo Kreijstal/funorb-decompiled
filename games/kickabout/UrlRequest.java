@@ -20,7 +20,7 @@ final class UrlRequest {
         if (null == this.field_h) {
           return true;
         }
-        if (!this.field_h.a((byte) 70)) {
+        if (!this.field_h.pollDownload((byte) 70)) {
           return false;
         }
         this.field_d = this.field_h.getCompletedResponse(0);

@@ -18,7 +18,7 @@ final class AuctionTableWidget extends ColumnTableWidget {
           }
           return;
         }
-        AuctionTableWidget.a(108, (byte) -45);
+        AuctionTableWidget.setTournamentChatColor(108, (byte) -45);
         if (var4 != null) {
           if (this.field_Db == param2) {
             var4.cycleDirection(true, 125);
@@ -34,9 +34,9 @@ final class AuctionTableWidget extends ColumnTableWidget {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void setTournamentChatColor(int param0, byte param1) {
         if (param1 != -25) {
-          AuctionTableWidget.a(-62, (byte) -61);
+          AuctionTableWidget.setTournamentChatColor(-62, (byte) -61);
           StringCursor.field_h[4] = param0;
           return;
         }

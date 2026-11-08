@@ -86,7 +86,7 @@ final class NodeHashTableIterator implements Iterator {
         field_c = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void requestRatedMatchmaking(int param0, int param1) {
         CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
         int var3 = -31 / ((param0 - 40) / 56);
         var2.writeIsaacByte(param1, (byte) 120);

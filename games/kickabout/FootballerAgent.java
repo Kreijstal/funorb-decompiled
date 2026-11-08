@@ -53,7 +53,7 @@ class FootballerAgent extends MatchAgent {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean usesCardinalOrDashMovement(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 != 292603688) {
           this.field_z = -70;
@@ -185,7 +185,7 @@ class FootballerAgent extends MatchAgent {
           }
           var7Lifetime6 = stackIn_54_0 | stackIn_55_1;
           if (var7Lifetime6 != 0 &&
-            this.e(292603688)) {
+            this.usesCardinalOrDashMovement(292603688)) {
             if (!this.isMovingDiagonally(false)) {
               stackIn_60_0 = this.field_A;
             } else {

@@ -27,7 +27,7 @@ final class JaggrabDownloader implements Runnable {
         return null;
     }
 
-    final synchronized boolean a(byte param0) {
+    final synchronized boolean pollDownload(byte param0) {
         Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
@@ -64,7 +64,7 @@ final class JaggrabDownloader implements Runnable {
         }
         if (null != this.field_d) {
           if (param0 <= 45) {
-            JaggrabDownloader.a(false);
+            JaggrabDownloader.getVisibleTextTooltip(false);
           }
           if (null == this.field_i) {
             this.field_i = this.field_a.requestThreadStart(5, (byte) 125, (Runnable) (this));
@@ -89,7 +89,7 @@ final class JaggrabDownloader implements Runnable {
             var3 = var4.getOutputStream();
             var3.write(17);
             var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_k.getFile() + "\n\n"));
-            var3.write(Cp1252EncodingSupport.a(var5, (byte) 106));
+            var3.write(Cp1252EncodingSupport.encodeCp1252(var5, (byte) 106));
             this.field_d = new DataInputStream(var4.getInputStream());
           }
           this.field_g.field_n = 0;
@@ -111,7 +111,7 @@ final class JaggrabDownloader implements Runnable {
             }
             return false;
           }
-          JaggrabDownloader.a(false);
+          JaggrabDownloader.getVisibleTextTooltip(false);
           if (null == this.field_i) {
             this.field_i = this.field_a.requestThreadStart(5, (byte) 125, (Runnable) (this));
           }
@@ -125,7 +125,7 @@ final class JaggrabDownloader implements Runnable {
           return false;
         }
         if (param0 <= 45) {
-          JaggrabDownloader.a(false);
+          JaggrabDownloader.getVisibleTextTooltip(false);
         }
         if (null == this.field_i) {
           this.field_i = this.field_a.requestThreadStart(5, (byte) 125, (Runnable) (this));
@@ -140,7 +140,7 @@ final class JaggrabDownloader implements Runnable {
         return false;
     }
 
-    final static String a(boolean param0) {
+    final static String getVisibleTextTooltip(boolean param0) {
         if (!param0) {
           JaggrabDownloader.releaseStatics(28);
           if (LoginPacketSupport.field_a) {

@@ -7,7 +7,7 @@ final class SellPlayerDialog extends MessageDialog {
     static int field_F;
     static int field_G;
 
-    final static void g(int param0) {
+    final static void updateTutorial(int param0) {
         int fieldTemp$0 = 0;
         int var7 = 0;
         int stackIn_25_0 = 0;
@@ -52,16 +52,16 @@ final class SellPlayerDialog extends MessageDialog {
             if (QuickChatCategoryCache.advanceScriptedTutorialPlayers(105)) {
               SocialNamePrompt.field_Eb = false;
               ThumbnailStateFactory.field_d.participantStatus[0].controlledSlot = PitchDecorationSupport.field_d;
-              LoggedPossession.a(false);
+              LoggedPossession.configureTutorialPlayAreas(false);
               TutorialScenerySupport.buildTutorialScenery(-1622);
               LeagueWinnerDialog.updateTutorialRestrictions(99);
             }
           } else {
-            if (ButtonMenuScreen.d(-8)) {
-              CheckboxLabelWidget.c(HuffmanCodec.field_e + 1, false);
+            if (ButtonMenuScreen.isTutorialLessonComplete(-8)) {
+              CheckboxLabelWidget.beginTutorialLesson(HuffmanCodec.field_e + 1, false);
             }
           }
-          var1_int = AnimationSkeleton.a(false);
+          var1_int = AnimationSkeleton.getTutorialMessageIndex(false);
           var2 = RenderedBall.measureTutorialMessageWidth(var1_int, -128);
           if (TickClock.field_a != var2) {
             AnimationPlayer.field_f = 60;
@@ -139,10 +139,10 @@ final class SellPlayerDialog extends MessageDialog {
               ThumbnailStateFactory.field_d.participantStatus[1].controlledSlot = 0;
               var4Lifetime2 = ThumbnailStateFactory.field_d.field_V.pixelX(true);
               var5_intLifetime1 = ThumbnailStateFactory.field_d.field_V.pixelY(879306160);
-              IntDoubleCommand.a((byte) -109, var4Lifetime2, 400, var5_intLifetime1, 100, 348, 0, 648);
-              IntDoubleCommand.a((byte) -107, var4Lifetime2, 810, var5_intLifetime1, 510, 258, 1, 558);
-              IntDoubleCommand.a((byte) -118, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 2, 748);
-              IntDoubleCommand.a((byte) 45, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 3, 748);
+              IntDoubleCommand.updateTutorialDefender((byte) -109, var4Lifetime2, 400, var5_intLifetime1, 100, 348, 0, 648);
+              IntDoubleCommand.updateTutorialDefender((byte) -107, var4Lifetime2, 810, var5_intLifetime1, 510, 258, 1, 558);
+              IntDoubleCommand.updateTutorialDefender((byte) -118, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 2, 748);
+              IntDoubleCommand.updateTutorialDefender((byte) 45, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 3, 748);
             } else {
               MatchHudSupport.moveTutorialPlayerToLineup(false, (byte) 109, 4, 1);
             }
@@ -157,7 +157,7 @@ final class SellPlayerDialog extends MessageDialog {
                 ThumbnailStateFactory.field_d.field_P[1][var4Lifetime3Lifetime1].setDirectionFromMask(1, 26214);
               }
             }
-            AuctionsHelpScreen.d(true);
+            AuctionsHelpScreen.releaseTutorialOpponentControl(true);
           }
           var4Lifetime4 = -97 / ((param0 - 88) / 34);
           if (HuffmanCodec.field_e == 10) {
@@ -172,7 +172,7 @@ final class SellPlayerDialog extends MessageDialog {
             ThumbnailStateFactory.field_d.field_X.goalCount > 25) {
             ThumbnailStateFactory.field_d.field_X.goalCount = 0;
             if (ThumbnailStateFactory.field_d.field_V.horizontalSpeedSquared(-1) == 0) {
-              CheckboxLabelWidget.c(13, false);
+              CheckboxLabelWidget.beginTutorialLesson(13, false);
             }
           }
           if (HuffmanCodec.field_e == 13) {
@@ -180,7 +180,7 @@ final class SellPlayerDialog extends MessageDialog {
               if (ThumbnailStateFactory.field_d.field_X.goalCount > 25) {
                 ThumbnailStateFactory.field_d.field_X.goalCount = 0;
                 if (ThumbnailStateFactory.field_d.field_V.horizontalSpeedSquared(44) == 0) {
-                  CheckboxLabelWidget.c(14, false);
+                  CheckboxLabelWidget.beginTutorialLesson(14, false);
                 }
               }
             } else {

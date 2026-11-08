@@ -1787,7 +1787,7 @@ final class CommonGame {
                   }
                   else {
                     var6.positionX = LineupPositionSupport.lineupSlotX(70, var4_int);
-                    var6.positionY = AchievementsScreen.a((byte) -27, var3_int);
+                    var6.positionY = AchievementsScreen.getOffPitchPlayerY((byte) -27, var3_int);
                   }
                   var4_int++;
                 }

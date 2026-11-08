@@ -144,7 +144,7 @@ final class LoginDialog extends ContentTransitionDialog {
         }
     }
 
-    final static void a(byte param0, byte[] param1) {
+    final static void decodeSpriteSheet(byte param0, byte[] param1) {
         byte dupTemp$1 = 0;
         byte dupTemp$0 = 0;
         int stackIn_31_0 = 0;

@@ -50,7 +50,7 @@ final class ParticipantStatus extends MatchAgent {
         }
     }
 
-    final static WorldDrawEntry c(int param0) {
+    final static WorldDrawEntry createTutorialTargetMarker(int param0) {
         WorldDrawEntry var1 = null;
         RuntimeException var1_ref = null;
         WorldDrawEntry var2 = null;

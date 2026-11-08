@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ModelMeshBase extends MeshObject {
-    private final void a(AnimationSkeleton param0, AnimationFrame param1, AnimationFrame param2, int param3, int param4, boolean[] param5, boolean param6, boolean param7, int param8, int[] param9) {
+    private final void applySkeletonFrames(AnimationSkeleton param0, AnimationFrame param1, AnimationFrame param2, int param3, int param4, boolean[] param5, boolean param6, boolean param7, int param8, int[] param9) {
         int var11;
         int var12;
         int var13;
@@ -216,7 +216,7 @@ abstract class ModelMeshBase extends MeshObject {
             var10 = null;
           }
         }
-        this.a(var9, var8, (AnimationFrame) (var10), param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
+        this.applySkeletonFrames(var9, var8, (AnimationFrame) (var10), param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
         this.finishAnimation();
     }
 

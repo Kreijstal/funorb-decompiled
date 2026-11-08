@@ -27,7 +27,7 @@ final class FadingSoundSupport {
         return new Date().getYear() + 1900;
     }
 
-    final static void a(int param0, int param1, byte[] param2, int[] param3, int param4) {
+    final static void groupFaceBucketsByPriority(int param0, int param1, byte[] param2, int[] param3, int param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$2 = 0;

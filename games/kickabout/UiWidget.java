@@ -512,7 +512,7 @@ class UiWidget extends IntrusiveNode {
         if (param2 >= -85) {
           return;
         }
-        String var5 = JaggrabDownloader.a(true);
+        String var5 = JaggrabDownloader.getVisibleTextTooltip(true);
         if (var5 != null) {
           GameSoundEffect.field_i.drawTooltip(AccountNameCharacterSupport.field_e, (byte) 115, TrinketCatalog.field_d, var5);
         }

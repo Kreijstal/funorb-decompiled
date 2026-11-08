@@ -60,7 +60,7 @@ abstract class ArchiveNetworkClient {
           if (ArchivePreloader.isRepeatedCharacter(true, param0)) {
             return false;
           }
-          if (DebouncedValidationProvider.a(param0, (byte) 79)) {
+          if (DebouncedValidationProvider.isInvalidPasswordLength(param0, (byte) 79)) {
             return false;
           }
           if (param1 != -32341) {

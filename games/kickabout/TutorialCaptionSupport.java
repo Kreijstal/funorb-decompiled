@@ -10,7 +10,7 @@ final class TutorialCaptionSupport extends IntrusiveNode {
     static int field_e;
     static String[] field_h;
 
-    final static int a(byte param0) {
+    final static int getLogoStartDelayMillis(byte param0) {
         if (param0 >= -69) {
           field_g = (String) null;
           return TextPromptState.field_d;
@@ -34,7 +34,7 @@ final class TutorialCaptionSupport extends IntrusiveNode {
           return;
         }
         Object var1 = null;
-        int var2 = AnimationSkeleton.a(false);
+        int var2 = AnimationSkeleton.getTutorialMessageIndex(false);
         if (var2 != -1) {
           var1 = TextEntrySupport.field_g[var2];
         }

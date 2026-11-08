@@ -28,7 +28,7 @@ final class ProxySocketConnector extends SocketConnector {
           }
           var2 = IterableDualLinkDeque.field_f.first(24009);
           while (var2 != null) {
-            AuctionListing.a(true, param1);
+            AuctionListing.requestRatedMatchmaking(true, param1);
             var2 = IterableDualLinkDeque.field_f.next(33);
           }
           return;

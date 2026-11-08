@@ -66,7 +66,7 @@ final class SelectionMarkerSupport {
         }
     }
 
-    final static void c(int param0) {
+    final static void readFreeChatPermission(int param0) {
         PacketBuffer.field_l = false;
         WriteIntegersCommand.field_C = ByteArrayPool.field_e.readUnsignedByte((byte) -111) == 0 ? true : false;
         if (param0 == 25957) {

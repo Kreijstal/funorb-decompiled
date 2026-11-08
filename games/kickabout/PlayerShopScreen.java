@@ -34,7 +34,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         return param0 != 1 ? 320 : 600;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void recordPurchasedShopPlayer(int param0, int param1, int param2, int param3) {
         int var5 = this.field_J.getScrollOffset((byte) -48);
         SortCriterion var6 = this.field_J.field_zb[this.field_J.field_Db];
         this.field_I.addLast(new IntValueNode(param0 | param3 << 16), 3);
@@ -102,7 +102,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
           this.field_O = this.field_O - 1;
         }
         var3 = this.field_J.getScrollOffset((byte) -38);
-        QuickChatCategory.a(RegistrationRequestState.field_h.field_x, 5464);
+        QuickChatCategory.updateCurrencyAnimation(RegistrationRequestState.field_h.field_x, 5464);
         this.field_J.updateTableInput(param1, false);
         this.field_L.field_s = this.slideOffsetX;
         this.field_L.updateInput(0, param1);
@@ -218,7 +218,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
                 break scanLoop1;
               }
               for (var4_int = 0; var4_int < 8; var4_int++) {
-                var5 = WelcomeDialog.a(RegistrationRequestState.field_h.field_e, var4_int, RegistrationRequestState.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
+                var5 = WelcomeDialog.generateShopPlayer(RegistrationRequestState.field_h.field_e, var4_int, RegistrationRequestState.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
                 stackIn_16_0 = (~BufferedSocket.field_k != ~var3) ? 0 : 1;
                 var6 = stackIn_16_0;
                 var7 = (IntValueNode) (this.field_I.first(24009));

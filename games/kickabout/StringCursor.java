@@ -19,12 +19,12 @@ final class StringCursor {
         field_e = null;
     }
 
-    final static void a(boolean param0, boolean param1, int param2) {
+    final static void updateFriendsListActions(boolean param0, boolean param1, int param2) {
         PlayerContextMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        SocialPlayerRow var3 = ModalStack.a(param0, 2, param2);
+        SocialPlayerRow var3 = ModalStack.updateFriendsListRows(param0, 2, param2);
         PlayerContextMenu var4Lifetime1;
         if (!param1) {
           if (var3 != null) {
@@ -42,7 +42,7 @@ final class StringCursor {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void configurePromptTextMetrics(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 == 5) {
           PlayerModelPreview.field_j = param1;
           InputLayoutState.field_d = param2;
@@ -57,16 +57,16 @@ final class StringCursor {
         PlayArea.field_c = param3;
     }
 
-    final static void a(boolean param0, byte param1, int param2, int param3) {
+    final static void beginGameLoading(boolean param0, byte param1, int param2, int param3) {
         MachineTokenStorageSupport.field_b = true;
         ChatComposeSupport.field_g = param3;
         SquadGridWidget.field_Db = null;
         TeamSelectionView.field_j = param0 ? true : false;
         FullscreenFailureReason.field_f = param2;
         TextInputWidget.field_R = 0.0f;
-        DelayedServerPacket.a(18, false, -2);
+        DelayedServerPacket.requestScreenTransition(18, false, -2);
         if (param1 > -85) {
-          StringCursor.b((byte) -66);
+          StringCursor.initializeTutorialMessages((byte) -66);
         }
     }
 
@@ -82,7 +82,7 @@ final class StringCursor {
         return TriangleRasterizer.field_o[2047 & param0];
     }
 
-    final static void b(byte param0) {
+    final static void initializeTutorialMessages(byte param0) {
         BufferedSocket.field_i = new String[RenderedBall.field_B];
         BufferedSocket.field_i[6] = TextLine.field_j;
         BufferedSocket.field_i[15] = ShopPlayerSlot.field_Eb;

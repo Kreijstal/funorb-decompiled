@@ -15,7 +15,7 @@ final class PlayArea {
     static DateOfBirthPanel field_a;
     static int field_c;
 
-    final static boolean b(int param0) {
+    final static boolean isRegistrationNewsOptIn(int param0) {
         if (param0 != 820907312) {
           field_k = (int[][]) null;
           return ArchiveManager.field_c;
@@ -42,19 +42,19 @@ final class PlayArea {
         SoftwareRasterizer.drawRectangle(var3, var4, var5, var6, param1);
     }
 
-    final static void a(CommonGame param0, int param1) {
+    final static void initializeTutorial(CommonGame param0, int param1) {
         try {
           MyKitScreen.field_O = true;
           ThumbnailStateFactory.field_d = param0;
           if (null == UiKeyRoutingSupport.field_b) {
-            UiKeyRoutingSupport.field_b = ParticipantStatus.c(0);
+            UiKeyRoutingSupport.field_b = ParticipantStatus.createTutorialTargetMarker(0);
           }
           AccountInputValidationResult.field_f = (RenderedFootballer) (ThumbnailStateFactory.field_d.field_P[0][3]);
           LoginResponseUiSupport.field_c = (RenderedFootballer) (ThumbnailStateFactory.field_d.field_P[0][4]);
           TickClock.field_a = 0;
           AuctionLogEntry.field_g = 640;
           EmailAvailabilityValidator.field_k = (RenderedFootballer) (ThumbnailStateFactory.field_d.field_P[param1][1]);
-          CheckboxLabelWidget.c(1, false);
+          CheckboxLabelWidget.beginTutorialLesson(1, false);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "la.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -118,7 +118,7 @@ final class PlayArea {
 
     final static boolean isGuestSession(int param0) {
         if (param0 != 100) {
-          PlayArea.b(78);
+          PlayArea.isRegistrationNewsOptIn(78);
           return GameSoundEffect.field_f;
         }
         return GameSoundEffect.field_f;

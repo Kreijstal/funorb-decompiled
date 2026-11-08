@@ -11,7 +11,7 @@ final class LoggedPossession {
     private int[][] perFootballer;
     static String field_a;
 
-    final static void a(boolean param0) {
+    final static void configureTutorialPlayAreas(boolean param0) {
         int var2;
         var2 = Kickabout.field_G;
         ThumbnailStateFactory.field_d.field_B = NanoTickClock.field_t;
@@ -175,7 +175,7 @@ final class LoggedPossession {
 
     public static void releaseStatics(int param0) {
         if (param0 != 320) {
-          LoggedPossession.a(false);
+          LoggedPossession.configureTutorialPlayAreas(false);
         }
         field_a = null;
     }
@@ -223,7 +223,7 @@ final class LoggedPossession {
             this.perPlayer[var3_intLifetime2] = param1.perPlayer[var3_intLifetime2];
           }
           if (param0 <= 27) {
-            LoggedPossession.a(true);
+            LoggedPossession.configureTutorialPlayAreas(true);
           }
           this.nobody = param1.nobody;
         } catch (RuntimeException runtimeException) {

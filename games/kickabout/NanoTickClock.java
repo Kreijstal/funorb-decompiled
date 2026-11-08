@@ -14,9 +14,9 @@ final class NanoTickClock extends TickClock {
     static boolean field_n;
     static int field_s;
 
-    final static boolean c(int param0) {
+    final static boolean isLegacyFullscreenPromptOpen(int param0) {
         if (param0 != 2915) {
-          NanoTickClock.c((byte) 16);
+          NanoTickClock.sendTournamentRoundExit((byte) 16);
         }
         return IntrusiveDeque.field_f;
     }
@@ -124,7 +124,7 @@ final class NanoTickClock extends TickClock {
         var9 = Kickabout.field_G;
         try {
           if (param1 < 123) {
-            NanoTickClock.c((byte) 59);
+            NanoTickClock.sendTournamentRoundExit((byte) 59);
           }
           if (param2 == null) {
             return false;
@@ -174,7 +174,7 @@ final class NanoTickClock extends TickClock {
         }
     }
 
-    final static void c(byte param0) {
+    final static void sendTournamentRoundExit(byte param0) {
         int var1;
         var1 = -1;
         if (param0 != -59) {

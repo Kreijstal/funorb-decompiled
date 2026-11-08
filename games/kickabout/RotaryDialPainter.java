@@ -153,7 +153,7 @@ final class RotaryDialPainter implements WidgetPainter {
           if (null != var44.field_G &&
             1 < var44.field_u) {
             var60 = var44.field_G;
-            FadingSoundSupport.a(param5 ^ -125, 0, var60, ContextMenuItem.field_zb, 0);
+            FadingSoundSupport.groupFaceBucketsByPriority(param5 ^ -125, 0, var60, ContextMenuItem.field_zb, 0);
           } else {
             FootballerAiOverlaySupport.compactFaceDepthBuckets(false);
           }
@@ -270,7 +270,7 @@ final class RotaryDialPainter implements WidgetPainter {
               var38 = var38 + 65793 * var32;
               var37 = var37 + 65793 * var31;
               var39 = var39 + 65793 * var33;
-              Bzip2State.a(var26, (var38 & 65313) >> 8, var25, (65336 & var37) >> 8, var37 & 255, 255 & var39, (var39 & 65385) >> 8, var37 >> 16, var38 >> 16, var38 & 255, var24, var39 >> 16, var23, -15343, var27, var22);
+              Bzip2State.rasterizeRgbTriangleHalfBlend(var26, (var38 & 65313) >> 8, var25, (65336 & var37) >> 8, var37 & 255, 255 & var39, (var39 & 65385) >> 8, var37 >> 16, var38 >> 16, var38 & 255, var24, var39 >> 16, var23, -15343, var27, var22);
             }
           }
           return;

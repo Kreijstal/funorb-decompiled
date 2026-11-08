@@ -66,7 +66,7 @@ final class OverlayLayerSupport {
         return var13;
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, byte[] param5) {
+    final static void sendGameSetupPreferences(boolean param0, int param1, int param2, boolean param3, int param4, byte[] param5) {
         CipherPacketBuffer var10 = null;
         int var7 = 0;
         int var8 = 0;
@@ -74,7 +74,7 @@ final class OverlayLayerSupport {
           var10 = FootballerAiOverlaySupport.field_d;
           if (param0) {
             byte[] var9 = (byte[]) null;
-            OverlayLayerSupport.a(true, 43, -115, false, -33, (byte[]) null);
+            OverlayLayerSupport.sendGameSetupPreferences(true, 43, -115, false, -33, (byte[]) null);
           }
           var10.writeIsaacByte(param1, (byte) 120);
           var10.field_n = var10.field_n + 1;

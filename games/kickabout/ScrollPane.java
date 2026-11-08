@@ -279,9 +279,9 @@ final class ScrollPane extends UiLayoutNode {
             return;
           }
           if (!SaveChangesDialog.field_G) {
-            SquadPickerDialog.g((byte) 66);
+            SquadPickerDialog.showLoginAndResetClientStage((byte) 66);
           } else {
-            AvailabilityCheckRequest.b(0);
+            AvailabilityCheckRequest.showLoginAndSetClientStage(0);
           }
           WeightedLruCache.field_a = ContextMenuItem.field_Hb;
           return;
@@ -302,7 +302,7 @@ final class ScrollPane extends UiLayoutNode {
           if (PlayerPortraitCacheEntry.field_g != null) {
             LoginForm.submitHighScore((byte) 70, 3, PlayerPortraitCacheEntry.field_g);
           }
-          ImageProducerRasterBuffer.c((byte) -77);
+          ImageProducerRasterBuffer.closeLegacyFullscreenPrompt((byte) -77);
           if (ProxySocketConnector.field_e) {
             ProxySocketConnector.field_e = false;
             ConsoleEvaluationException.enterConfiguredFullscreen(false, 0);

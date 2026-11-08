@@ -524,9 +524,9 @@ final class GameResourceLoader implements LoadingSequence {
         TeamSelectionView.initializeSelectionOverlays((byte) -47);
         SocialTabsPanel.initializeAbilityIndicatorMasks((byte) -124);
         LoadingProgressSupport.reportStageProgress(127, 4, 1);
-        SpriteButtonPainter.a(param0 ^ -363033958);
+        SpriteButtonPainter.initializeMinimapPitchSprite(param0 ^ -363033958);
         LoadingProgressSupport.reportStageProgress(-69, 4, 2);
-        Bzip2State.a(param0 - 12857);
+        Bzip2State.allocateDirectionalIndicatorSprites(param0 - 12857);
         LoadingProgressSupport.reportStageProgress(-124, 4, 3);
         MySquadScreen.field_U = (Sprite[]) ((Object) new ArgbSprite[WriteIntegersCommand.field_E.length]);
         for (var2 = 0; var2 < WriteIntegersCommand.field_E.length; var2++) {
@@ -550,7 +550,7 @@ final class GameResourceLoader implements LoadingSequence {
         BufferedCacheFile.field_a = ProxySocketConnector.nextBoundedInt(-65, MarkerSliderWidget.field_E.length, new Random());
         PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
         SocialPlayerRow.resetCameraToTarget((byte) 51);
-        DelayedServerPacket.a(-5, false, -2);
+        DelayedServerPacket.requestScreenTransition(-5, false, -2);
         CipherPacketBuffer.advanceLoadingProgress(61, 12);
         LoadingProgressSupport.reportStageProgress(-71, 4, 1);
         PlayerModelPreview.configureSharedMenuTheme(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, IsSixCommand.field_C, ByteArrayPool.field_d, new TexturedPanelPainter(), 20, 16777215, 30, new GeneratedPanelPainter(true), 16777215, 9, new GeneratedPanelPainter(false), 16777215);

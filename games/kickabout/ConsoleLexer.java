@@ -14,7 +14,7 @@ final class ConsoleLexer {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void setTradingEnabled(boolean param0, boolean param1) {
         NineSlicePanelPainter.field_e = !param1 ? true : false;
         if (param0) {
           field_c = -78;
@@ -33,7 +33,7 @@ final class ConsoleLexer {
         if (param0 == -40) {
           return param1 >>> 28 | param1 << 4;
         }
-        ConsoleLexer.a(true, false);
+        ConsoleLexer.setTradingEnabled(true, false);
         return param1 >>> 28 | param1 << 4;
     }
 

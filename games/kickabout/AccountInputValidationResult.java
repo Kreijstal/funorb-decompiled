@@ -36,7 +36,7 @@ final class AccountInputValidationResult {
           var4 = new ManagerAction(0, new int[]{1 + param1, param2});
           AchievementSubmission.applyAndQueueManagerAction(var4, 81);
           if (23 == AuctionLogEntry.field_h.screenId) {
-            ((PlayerShopScreen) (AuctionLogEntry.field_h)).a(param2, var3_int, param0 ^ -66, param1);
+            ((PlayerShopScreen) (AuctionLogEntry.field_h)).recordPurchasedShopPlayer(param2, var3_int, param0 ^ -66, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

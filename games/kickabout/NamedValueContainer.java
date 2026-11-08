@@ -36,7 +36,7 @@ final class NamedValueContainer {
         return null;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawSharedSidebarPanels(int param0, boolean param1) {
         UiLayoutNode stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         boolean stackIn_6_2 = false;

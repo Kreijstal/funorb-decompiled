@@ -92,7 +92,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final static SocialPlayerRow a(boolean param0, int param1, int param2) {
+    final static SocialPlayerRow updateFriendsListRows(boolean param0, int param1, int param2) {
         ScrollPane stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
@@ -497,7 +497,7 @@ final class ModalStack extends SingleChildContainer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -108) {
-            ModalStack.a(true, 64, 120);
+            ModalStack.updateFriendsListRows(true, 64, 120);
           }
           stackIn_16_0 = ((!(65 > param1) &&
             !(param1 > 90)) ||

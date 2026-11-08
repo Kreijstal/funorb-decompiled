@@ -88,7 +88,7 @@ final class ClientUiOverlay implements OverlayLayer {
         return var1;
     }
 
-    final static int a(ColorQuantizationBox param0, boolean param1, ColorQuantizationBox param2) {
+    final static int splitColorBox(ColorQuantizationBox param0, boolean param1, ColorQuantizationBox param2) {
         int stackIn_12_0 = 0;
         int stackIn_23_0 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -116,11 +116,11 @@ final class ClientUiOverlay implements OverlayLayer {
           var14 = NameSuggestionsPanel.colorBoxMoment(param2, IntrusiveDeque.field_g, true);
           var15 = NameSuggestionsPanel.colorBoxMoment(param2, RenderedFootballer.field_fb, true);
           var16 = NameSuggestionsPanel.colorBoxMoment(param2, RandomAccessCacheFile.field_i, true);
-          var7 = ServerMessageScreen.a(2, param2.field_l, (byte) -99, var15, param2, var13, var16, param2.field_c + 1, var14);
+          var7 = ServerMessageScreen.maximizeColorBoxSplitScore(2, param2.field_l, (byte) -99, var15, param2, var13, var16, param2.field_c + 1, var14);
           var4 = ReceivedAuctionItemRow.field_Mb;
-          var9 = ServerMessageScreen.a(1, param2.field_d, (byte) -99, var15, param2, var13, var16, 1 + param2.field_i, var14);
+          var9 = ServerMessageScreen.maximizeColorBoxSplitScore(1, param2.field_d, (byte) -99, var15, param2, var13, var16, 1 + param2.field_i, var14);
           var5 = ReceivedAuctionItemRow.field_Mb;
-          var11 = ServerMessageScreen.a(0, param2.field_e, (byte) -99, var15, param2, var13, var16, 1 + param2.field_k, var14);
+          var11 = ServerMessageScreen.maximizeColorBoxSplitScore(0, param2.field_e, (byte) -99, var15, param2, var13, var16, 1 + param2.field_k, var14);
           var6 = ReceivedAuctionItemRow.field_Mb;
           if (var9 <= var7 &&
             var7 >= var11) {
@@ -244,7 +244,7 @@ final class ClientUiOverlay implements OverlayLayer {
         }
     }
 
-    private final boolean c(int param0) {
+    private final boolean blocksGameInput(int param0) {
         boolean stackIn_9_0 = false;
         if (param0 != -1) {
           this.field_a = -6;
@@ -283,11 +283,11 @@ final class ClientUiOverlay implements OverlayLayer {
           field_e = (int[]) null;
         }
         if (PlayerValueSortCriterion.field_n) {
-          if (this.c(-1) &&
+          if (this.blocksGameInput(-1) &&
             this.field_a < 20) {
             this.field_a = this.field_a + 1;
           }
-          if (!this.c(-1) &&
+          if (!this.blocksGameInput(-1) &&
             this.field_a > 0) {
             this.field_a = this.field_a - 1;
           }

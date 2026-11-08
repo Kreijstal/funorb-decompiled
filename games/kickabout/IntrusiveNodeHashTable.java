@@ -54,7 +54,7 @@ final class IntrusiveNodeHashTable {
         return null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void initializeCurrencyDisplay(int param0, int param1) {
         GoalStateAgent.field_l = param0;
         if (param1 != 415422632) {
           return;

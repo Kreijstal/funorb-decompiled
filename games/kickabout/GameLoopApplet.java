@@ -36,7 +36,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
     }
 
-    final static void b(int param0, int param1, int param2) {
+    final static void sendSpectatorGameRequest(int param0, int param1, int param2) {
         if (param0 != 15848) {
           GameLoopApplet.createTeamTintedHudSprites((byte) 32);
         }
@@ -47,7 +47,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         var3.writeShort(-1207444472, param2);
     }
 
-    private final void r(int param0) {
+    private final void validateClubStateGuard(int param0) {
         if (param0 != 10) {
           field_E = (ClubState) null;
         }
@@ -73,7 +73,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         if (SplashScreen.field_m != null &&
           SplashScreen.field_m.field_b) {
           UiWidget.leaveFullscreen(0);
-          AudioOutputSupport.a((byte) -122);
+          AudioOutputSupport.refreshFullscreenPrompt((byte) -122);
         }
         stackIn_6_1 = 0;
         stackIn_7_2 = (SplashScreen.field_m != null);
@@ -82,9 +82,9 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
           NetworkGameClient.field_t.bindArchives(7312);
           PitchBoundaryCacheState.field_c = false;
         }
-        if (RegistrationUiSupport.c(608)) {
+        if (RegistrationUiSupport.isStartupInterfaceActive(608)) {
           this.processStartupInterface(-93);
-          if (RegistrationUiSupport.c(608)) {
+          if (RegistrationUiSupport.isStartupInterfaceActive(608)) {
             return;
           }
         }
@@ -124,7 +124,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
         HuffmanTextSupport.sendReadyReflectionCheckReplies(5);
         TextFieldNode.flushWithSimulatedLag(0, 0);
-        if (ClientInteractionSupport.a((byte) 10)) {
+        if (ClientInteractionSupport.canBeginLogin((byte) 10)) {
           var2 = this.pollLoginResult((byte) -65);
           if (var2 == 0 ||
             var2 == 1) {
@@ -137,11 +137,11 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
           if (this.isConnectionBusy((byte) -120)) {
             var3 = 1;
           }
-          if (!ClientInteractionSupport.a((byte) 10)) {
+          if (!ClientInteractionSupport.canBeginLogin((byte) 10)) {
             var3 = 0;
           }
           if (var3 != 0) {
-            AccountNameCharacterSupport.a((byte) -113);
+            AccountNameCharacterSupport.requestAccountInterface((byte) -113);
           }
         }
     }
@@ -164,8 +164,8 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         var5 = Kickabout.field_G;
         var2 = 0;
         if (!ArchiveManager.hasActiveModal(false)) {
-          if (ServerTextTemplate.a(-4)) {
-            if (MarkerSliderWidget.i(0)) {
+          if (ServerTextTemplate.isFullscreenPromptOpen(-4)) {
+            if (MarkerSliderWidget.isLoginTransitionActive(0)) {
               ScrollPane.advanceLoginTransition(-1);
             } else {
               var3 = SharedPanelFactory.pollPromptAction(-3);
@@ -203,9 +203,9 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                 }
               }
             } else {
-              if (NanoTickClock.c(2915)) {
-                if (!MarkerSliderWidget.i(0)) {
-                  var3 = AuctionsHelpScreen.g(-61);
+              if (NanoTickClock.isLegacyFullscreenPromptOpen(2915)) {
+                if (!MarkerSliderWidget.isLoginTransitionActive(0)) {
+                  var3 = AuctionsHelpScreen.pollFullscreenPromptAction(-61);
                   if (var3 == 1) {
                     MatchHudRoutingSupport.startLoginTransition((byte) 50, true, NineSlicePanelPainter.field_f);
                   }
@@ -214,7 +214,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                   ScrollPane.advanceLoginTransition(-1);
                 }
               } else {
-                if (!MarkerSliderWidget.i(0)) {
+                if (!MarkerSliderWidget.isLoginTransitionActive(0)) {
                   var2 = 1;
                   var3 = -1;
                   while (TexturedPanelPainter.pollKeyEvent(-59)) {
@@ -225,7 +225,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                         var3 = -1;
                       }
                     } else {
-                      if (MatchTransitionScreen.c(FixedQuaternion.field_e, param0 - 1831)) {
+                      if (MatchTransitionScreen.isDeferredTypingKey(FixedQuaternion.field_e, param0 - 1831)) {
                         var3 = FixedQuaternion.field_e;
                         continue;
                       }
@@ -274,7 +274,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         int var3 = 0;
         int var4 = Kickabout.field_G;
         java.awt.Canvas var2 = DropTargetWidget.getActiveCanvas(64);
-        if (RegistrationUiSupport.c(608)) {
+        if (RegistrationUiSupport.isStartupInterfaceActive(608)) {
           PlayingView.drawClientToCanvas(var2, StrongCacheEntry.hasGameFocus(2368), 0);
           return;
         }
@@ -296,7 +296,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
           this.handleKeyTyped(34, 72, 'ￆ');
         }
         if (!TextFieldNode.field_Rb) {
-          this.r(10);
+          this.validateClubStateGuard(10);
         } else {
           CheatCodeListener.drawBlockingOverlays(-27302);
           WidgetStyleFactory.drawRasterToCanvas(27744, 0, 0, var2);

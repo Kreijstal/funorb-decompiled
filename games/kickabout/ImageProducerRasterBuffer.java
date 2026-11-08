@@ -178,7 +178,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     ImageProducerRasterBuffer() {
     }
 
-    final static void c(byte param0) {
+    final static void closeLegacyFullscreenPrompt(byte param0) {
         if (param0 != -77) {
           PacketBuffer var2 = (PacketBuffer) null;
           ImageProducerRasterBuffer.writeClientHandshake(105, -41, (PacketBuffer) null, 7, -41);
@@ -217,7 +217,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           PlayerStats var3 = (PlayerStats) null;
           ImageProducerRasterBuffer.calculatePlayerSaleValue((PlayerStats) null, false);
           if (!CachedListingRow.field_h) {
-            IterableNodeHashTable.a(true, (byte) 89);
+            IterableNodeHashTable.updateCameraSmoothing(true, (byte) 89);
             return;
           }
           if (null == MachineTokenStorageSupport.field_e) {
@@ -230,12 +230,12 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               BufferedCacheFile.field_a = fieldTemp$0 % MarkerSliderWidget.field_E.length;
             }
             PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
-            IterableNodeHashTable.a(false, (byte) 89);
+            IterableNodeHashTable.updateCameraSmoothing(false, (byte) 89);
             return;
           }
           if (GameModesHelpScreen.field_G == null) {
             if (AuctionLogEntry.field_h.screenId != 0) {
-              IterableNodeHashTable.a(true, (byte) 89);
+              IterableNodeHashTable.updateCameraSmoothing(true, (byte) 89);
             } else {
               FaceNormal.field_c = false;
               var1Lifetime4 = NotCommand.getCameraX(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
@@ -246,7 +246,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
                 BufferedCacheFile.field_a = fieldTemp$1 % MarkerSliderWidget.field_E.length;
               }
               PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
-              IterableNodeHashTable.a(false, (byte) 89);
+              IterableNodeHashTable.updateCameraSmoothing(false, (byte) 89);
             }
             return;
           }
@@ -260,11 +260,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               BufferedCacheFile.field_a = fieldTemp$2 % MarkerSliderWidget.field_E.length;
             }
             PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
-            IterableNodeHashTable.a(false, (byte) 89);
+            IterableNodeHashTable.updateCameraSmoothing(false, (byte) 89);
             return;
           }
           if (AuctionLogEntry.field_h.screenId != 0) {
-            IterableNodeHashTable.a(true, (byte) 89);
+            IterableNodeHashTable.updateCameraSmoothing(true, (byte) 89);
             return;
           }
           FaceNormal.field_c = false;
@@ -276,11 +276,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             BufferedCacheFile.field_a = fieldTemp$3 % MarkerSliderWidget.field_E.length;
           }
           PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
-          IterableNodeHashTable.a(false, (byte) 89);
+          IterableNodeHashTable.updateCameraSmoothing(false, (byte) 89);
           return;
         }
         if (!CachedListingRow.field_h) {
-          IterableNodeHashTable.a(true, (byte) 89);
+          IterableNodeHashTable.updateCameraSmoothing(true, (byte) 89);
           return;
         }
         if (null == MachineTokenStorageSupport.field_e) {
@@ -293,13 +293,13 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             BufferedCacheFile.field_a = fieldTemp$4 % MarkerSliderWidget.field_E.length;
           }
           PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
-          IterableNodeHashTable.a(false, (byte) 89);
+          IterableNodeHashTable.updateCameraSmoothing(false, (byte) 89);
           return;
         }
         if (GameModesHelpScreen.field_G != null) {
           if (GameModesHelpScreen.field_G.screenId != 0) {
             if (AuctionLogEntry.field_h.screenId != 0) {
-              IterableNodeHashTable.a(true, (byte) 89);
+              IterableNodeHashTable.updateCameraSmoothing(true, (byte) 89);
             } else {
               FaceNormal.field_c = false;
               var1Lifetime2 = NotCommand.getCameraX(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
@@ -310,7 +310,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
                 BufferedCacheFile.field_a = fieldTemp$5 % MarkerSliderWidget.field_E.length;
               }
               PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
-              IterableNodeHashTable.a(false, (byte) 89);
+              IterableNodeHashTable.updateCameraSmoothing(false, (byte) 89);
             }
             return;
           }
@@ -323,7 +323,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             BufferedCacheFile.field_a = fieldTemp$6 % MarkerSliderWidget.field_E.length;
           }
           PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
-          IterableNodeHashTable.a(false, (byte) 89);
+          IterableNodeHashTable.updateCameraSmoothing(false, (byte) 89);
           return;
         }
         if (AuctionLogEntry.field_h.screenId == 0) {
@@ -336,10 +336,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             BufferedCacheFile.field_a = fieldTemp$7 % MarkerSliderWidget.field_E.length;
           }
           PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
-          IterableNodeHashTable.a(false, (byte) 89);
+          IterableNodeHashTable.updateCameraSmoothing(false, (byte) 89);
           return;
         }
-        IterableNodeHashTable.a(true, (byte) 89);
+        IterableNodeHashTable.updateCameraSmoothing(true, (byte) 89);
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {

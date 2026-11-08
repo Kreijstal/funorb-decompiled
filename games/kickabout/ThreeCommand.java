@@ -34,13 +34,13 @@ final class ThreeCommand extends ConsoleCommand {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawSharedLobbyPanels(boolean param0, int param1) {
         if (WeightedLruCache.hasBlockingInputPopup(false)) {
           param0 = false;
         }
         if (param1 != 16355) {
-          ThreeCommand.a(false, 111);
-          NamedValueContainer.a(63, param0);
+          ThreeCommand.drawSharedLobbyPanels(false, 111);
+          NamedValueContainer.drawSharedSidebarPanels(63, param0);
           if (SelectionMarkerSupport.field_b) {
             SoftwareRasterizer.darkenRectangle(HighScoreQuery.field_l.tabs.field_s, HighScoreQuery.field_l.tabs.field_J, HighScoreQuery.field_l.tabs.field_q, HighScoreQuery.field_l.tabs.field_mb);
             HighScoreQuery.field_l.tabs.draw(122, param0);
@@ -50,7 +50,7 @@ final class ThreeCommand extends ConsoleCommand {
           PasswordLoginCredentials.drawSharedTextPanel(param0, (byte) -93);
           return;
         }
-        NamedValueContainer.a(63, param0);
+        NamedValueContainer.drawSharedSidebarPanels(63, param0);
         if (!SelectionMarkerSupport.field_b) {
           PasswordLoginCredentials.drawSharedTextPanel(param0, (byte) -93);
           return;
@@ -65,7 +65,7 @@ final class ThreeCommand extends ConsoleCommand {
         field_C = null;
         field_B = null;
         if (param0) {
-          ThreeCommand.a(false, -68);
+          ThreeCommand.drawSharedLobbyPanels(false, -68);
         }
     }
 

@@ -179,7 +179,7 @@ final class MusicPatchPcmStream extends PcmStream {
         RuntimeException var2 = null;
         try {
           if (param0 != 18267) {
-            MusicPatchPcmStream.b(-60);
+            MusicPatchPcmStream.buildPitchWorldDecorations(-60);
           }
           if (null != CachedArchiveSource.field_u) {
             CachedArchiveSource.field_u.field_L.setNameSuggestions(param1, -48);
@@ -202,7 +202,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final static void b(int param0) {
+    final static void buildPitchWorldDecorations(int param0) {
         int incrementValue$3 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;

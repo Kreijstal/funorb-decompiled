@@ -53,11 +53,11 @@ final class SaveChangesDialog extends MessageDialog {
         super.handleResult(127, param1);
         if (0 == param1) {
           TexturedPanelPainter.flushManagerActions((byte) -56);
-          DelayedServerPacket.a(13, true, -2);
+          DelayedServerPacket.requestScreenTransition(13, true, -2);
         } else {
           if (param1 == 1) {
             TeamSelectionView.discardPendingManagerActions(-120);
-            DelayedServerPacket.a(13, true, -2);
+            DelayedServerPacket.requestScreenTransition(13, true, -2);
           } else {
             if (param1 != 2) {
             }

@@ -9,7 +9,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
     static int[] field_g;
     private TextInputWidget field_f;
 
-    final static ChatMessage a(byte param0, boolean param1) {
+    final static ChatMessage readChatMessage(byte param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
@@ -196,7 +196,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static ChatMessage $cfr$intArgs$a$e7eed804270c(int param0, boolean param1) {
+    final static ChatMessage readChatMessage(int param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;

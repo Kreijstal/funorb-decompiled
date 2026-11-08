@@ -92,7 +92,7 @@ final class BufferedCacheFile {
           MeshObject.field_f = param2;
           int var4_int = 82 / ((60 - param0) / 61);
           ClientException.setMenuAnchor(SoftwareRasterizer.field_f / 2, 0, SoftwareRasterizer.field_g / 2);
-          StringCursor.a(param3.field_L, param3.field_p + param3.field_L, param2.field_L, param2.field_p + param2.field_L, (byte) 5);
+          StringCursor.configurePromptTextMetrics(param3.field_L, param3.field_p + param3.field_L, param2.field_L, param2.field_p + param2.field_L, (byte) 5);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ew.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

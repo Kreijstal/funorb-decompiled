@@ -487,7 +487,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final static void a(int param0, TriangleMesh param1, int param2, int param3, boolean param4) {
+    final static void buildFaceDepthBuckets(int param0, TriangleMesh param1, int param2, int param3, boolean param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_12_0 = false;
         int stackIn_31_0 = 0;
@@ -763,7 +763,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         var9 = Kickabout.field_G;
         try {
           if (param4 != -1) {
-            WidgetContainer.a(104, (TriangleMesh) null, 40, 112, false);
+            WidgetContainer.buildFaceDepthBuckets(104, (TriangleMesh) null, 40, 112, false);
           }
           var7 = new IntrusiveDequeCursor(this.field_y);
           var8 = (UiWidget) (var7.first((byte) -93));

@@ -36,7 +36,7 @@ final class WorldSpriteSequence {
         var5 = ProxySocketConnector.nextBoundedInt(87, 5, var19);
         var6 = new PlayerModelPreview(27, 64, param2, var5);
         var7 = ProxySocketConnector.nextBoundedInt(83, 4, var19);
-        var8 = FootballerPreview.a(-5275);
+        var8 = FootballerPreview.getSelectedPitchSprite(-5275);
         var9 = new Sprite(54, 85);
         PacketBuffer.pushSpriteRaster(114, var9);
         var10 = var8.field_o;

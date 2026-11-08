@@ -84,7 +84,7 @@ final class ConsoleExpression extends IntrusiveNode {
         field_i = null;
     }
 
-    final ConsoleValue a(boolean param0, ConsoleCommand[] param1) throws ConsoleEvaluationException, ConsoleParseException {
+    final ConsoleValue evaluate(boolean param0, ConsoleCommand[] param1) throws ConsoleEvaluationException, ConsoleParseException {
         int incrementValue$0 = 0;
         IntrusiveDeque stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
@@ -123,7 +123,7 @@ final class ConsoleExpression extends IntrusiveNode {
               while (var5 != null) {
                 incrementValue$0 = var4;
                 var4++;
-                var7[incrementValue$0] = var5.a(true, param1);
+                var7[incrementValue$0] = var5.evaluate(true, param1);
                 var5 = (ConsoleExpression) (this.field_j.next(33));
               }
               stackIn_10_0 = PasswordValidator.invokeConsoleCommand(var8, false, param1, this.field_h);

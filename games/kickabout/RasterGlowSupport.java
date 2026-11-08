@@ -50,7 +50,7 @@ final class RasterGlowSupport {
         if (GameModesHelpScreen.field_G != null) {
           MeshObject.finishScreenTransition((byte) 93);
         }
-        DelayedServerPacket.a(AuctionLogEntry.field_h.previousScreenId, param1, -2);
+        DelayedServerPacket.requestScreenTransition(AuctionLogEntry.field_h.previousScreenId, param1, -2);
     }
 
     final static void applyRasterGlow(int param0) {

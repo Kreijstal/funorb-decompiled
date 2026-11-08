@@ -118,7 +118,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         boolean decompiledFrameRemainder1 = true;
         var4Lifetime1 = stackIn_15_0 | (stackIn_16_1 | stackIn_20_2);
         stackIn_28_0 = var4Lifetime1;
-        if (this.b(-111, param2) && (this.field_F &&
+        if (this.isAllowedPriceCharacter(-111, param2) && (this.field_F &&
           UnreadMessagesScreen.field_A.getText((byte) -16).length() < BlackFadeScreen.field_l ||
           this.field_I &&
           !(StatChoiceDialog.field_F.getText((byte) -16).length() >= BlackFadeScreen.field_l))) {
@@ -131,7 +131,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         boolean decompiledFrameRemainder0 = true;
         var4Lifetime2 = stackIn_28_0 | stackIn_29_1;
         stackIn_39_0 = var4Lifetime2;
-        if (this.b(-118, param2) && (this.field_F &&
+        if (this.isAllowedPriceCharacter(-118, param2) && (this.field_F &&
           UnreadMessagesScreen.field_A.getText((byte) -16).length() == BlackFadeScreen.field_l &&
           UnreadMessagesScreen.field_A.getSelectedText((byte) 35).length() > 0 ||
           this.field_I &&
@@ -256,7 +256,7 @@ final class AuctionSettingsDialog extends MessageDialog {
           IsSixCommand.field_C.drawCenteredCharacter('£', OverlayLayerSupport.field_b.field_s + 91, 53 + OverlayLayerSupport.field_b.field_J, 16777215);
         }
         OverlayLayerSupport.field_b.draw(94, var10 != 0 & this.field_I);
-        DisplayModeSupport.field_a.a(false, (byte) 46);
+        DisplayModeSupport.field_a.drawCheckboxLabel(false, (byte) 46);
         if (LocalizedTextLoader.field_f < QuickChatPhraseCache.field_c) {
           IsSixCommand.field_C.drawCentered(IntDoubleCommand.field_E, var4 + 130, 75 + var6 - 8, 16711680, -1);
         } else {
@@ -296,7 +296,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         }
     }
 
-    private final boolean b(int param0, char param1) {
+    private final boolean isAllowedPriceCharacter(int param0, char param1) {
         int var4 = Kickabout.field_G;
         int var3 = 0;
         if (param0 >= -109) {

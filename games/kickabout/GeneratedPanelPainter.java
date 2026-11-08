@@ -60,7 +60,7 @@ final class GeneratedPanelPainter extends NineSlicePanelPainter {
         this.field_h = param0 ? 1 : 0;
     }
 
-    final static void b(byte param0) {
+    final static void positionSlidingLobbyPanels(byte param0) {
         int var1 = (ColorQuantizationBox.field_a - 640) / 2;
         int var2 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var3 = var2 - NotificationPanelPositionSupport.field_a * NotificationPanelPositionSupport.field_a;

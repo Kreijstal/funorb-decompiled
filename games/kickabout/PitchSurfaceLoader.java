@@ -135,7 +135,7 @@ final class PitchSurfaceLoader {
         }
     }
 
-    final static boolean d(int param0) {
+    final static boolean alwaysTrue(int param0) {
         if (param0 != 1) {
           PitchSurfaceLoader.loadPitchSurface(8, 93, (byte) -111);
           return true;

@@ -71,7 +71,7 @@ final class NamedValueEntry extends IntrusiveNode {
         field_g = null;
         if (param0 <= 9) {
           String var2 = (String) null;
-          NamedValueEntry.a((String) null, (byte) -102);
+          NamedValueEntry.validateTextHookGuard((String) null, (byte) -102);
         }
     }
 
@@ -93,7 +93,7 @@ final class NamedValueEntry extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0) {
+    final static void drawGoalScoreOverlay(byte param0) {
         int stackIn_24_0 = 0;
         int[] stackIn_26_0 = null;
         int stackIn_26_1 = 0;
@@ -144,7 +144,7 @@ final class NamedValueEntry extends IntrusiveNode {
           }
           if (param0 <= 47) {
             var12 = (String) null;
-            NamedValueEntry.a((String) null, (byte) -120);
+            NamedValueEntry.validateTextHookGuard((String) null, (byte) -120);
           }
           AuctionListing.pushRasterClip(640, -22914, 0, 229 + var2, -var2 + 229);
           SoftwareRasterizer.fillRectangleAlpha(0, 229 - var2, 640, var2 << 1, 0, 128);
@@ -259,7 +259,7 @@ final class NamedValueEntry extends IntrusiveNode {
         return ArchiveSource.field_e;
     }
 
-    final static void a(String param0, byte param1) {
+    final static void validateTextHookGuard(String param0, byte param1) {
         try {
           int var2_int = 99 / ((48 - param1) / 59);
         } catch (RuntimeException runtimeException) {

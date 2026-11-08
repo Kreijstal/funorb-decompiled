@@ -206,8 +206,8 @@ final class MatchScreen extends AppScreen {
         if (this.isOnlineMatch) {
           this.field_i.tick(4);
         }
-        SellPlayerDialog.g(-128);
-        CheckboxPainter.b(101);
+        SellPlayerDialog.updateTutorial(-128);
+        CheckboxPainter.advancePitchLoading(101);
         this.phaseController.updateCamera(true);
         this.phaseController.update(-117, param1);
         if (this.isOnlineMatch &&
@@ -354,8 +354,8 @@ final class MatchScreen extends AppScreen {
           return;
         }
         if (!this.isOnlineMatch) {
-          ServerTextTemplate.a(0, 115);
-          DelayedServerPacket.a(18, param0, -2);
+          ServerTextTemplate.setLoadingDestination(0, 115);
+          DelayedServerPacket.requestScreenTransition(18, param0, -2);
         }
     }
 
@@ -720,7 +720,7 @@ final class MatchScreen extends AppScreen {
             if (!this.isSpectator(-2) &&
               this.matchState.phase != 5 &&
               this.matchState.participantStatus[this.localSeat].isActive(3511)) {
-              DelayedServerPacket.a(var4, false, -2);
+              DelayedServerPacket.requestScreenTransition(var4, false, -2);
               return true;
             }
             var4 = 5;
@@ -728,7 +728,7 @@ final class MatchScreen extends AppScreen {
               var4 = 6;
             }
           }
-          DelayedServerPacket.a(var4, false, -2);
+          DelayedServerPacket.requestScreenTransition(var4, false, -2);
           return true;
         }
         if (param0 == ClassDescriptorSupport.field_h) {
@@ -804,7 +804,7 @@ final class MatchScreen extends AppScreen {
             this.matchState.phase < 5 && (RankingsScreen.field_C != this.matchState.tier ||
             KitPatternMaskSupport.field_c != this.matchState.surface ||
             !NanoTickClock.field_n)) {
-            StringCursor.a(true, (byte) -125, this.matchState.tier, this.matchState.surface);
+            StringCursor.beginGameLoading(true, (byte) -125, this.matchState.tier, this.matchState.surface);
           }
           if (5 == this.matchState.phase &&
             param1.readUnsignedByte((byte) -113) == 1) {

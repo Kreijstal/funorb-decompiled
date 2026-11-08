@@ -7,7 +7,7 @@ final class GameOptionMenuSupport {
     static String field_b;
     static int field_d;
 
-    final static void a(int param0, int param1, GameSetupPanel param2, int param3, byte param4, int param5, int param6, boolean param7) {
+    final static void findValidGameOptionCombination(int param0, int param1, GameSetupPanel param2, int param3, byte param4, int param5, int param6, boolean param7) {
         ContextMenuItem[][] stackIn_4_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_22_0 = 0;
@@ -154,7 +154,7 @@ final class GameOptionMenuSupport {
                   } else {
                     param3 = var11;
                   }
-                  GameOptionMenuSupport.a(param0, param1, param2, param3, (byte) -120, param5, param6 + 1, param7);
+                  GameOptionMenuSupport.findValidGameOptionCombination(param0, param1, param2, param3, (byte) -120, param5, param6 + 1, param7);
                   if (SocialListProtocolSupport.field_c) {
                     return;
                   }
@@ -192,7 +192,7 @@ final class GameOptionMenuSupport {
                 }
               }
               if (var12 != 0) {
-                GameOptionMenuSupport.a(param0, param1, param2, param3, (byte) -125, param5, 1 + param6, param7);
+                GameOptionMenuSupport.findValidGameOptionCombination(param0, param1, param2, param3, (byte) -125, param5, 1 + param6, param7);
                 var10_intLifetime1 = 1;
               }
               if (SocialListProtocolSupport.field_c) {

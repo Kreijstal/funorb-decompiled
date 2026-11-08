@@ -18,12 +18,12 @@ final class LongPlusOneCommand extends ConsoleCommand {
         field_D = null;
     }
 
-    final static String h(int param0) {
+    final static String getCurrentLoginPassword(int param0) {
         if (PlayerModelPreview.field_f == ClubStateFactory.field_f) {
           return AccountRegistrationResponse.field_i;
         }
         if (param0 != 10326) {
-          LongPlusOneCommand.h(113);
+          LongPlusOneCommand.getCurrentLoginPassword(113);
           return NetworkGameClient.field_y;
         }
         return NetworkGameClient.field_y;
@@ -82,7 +82,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
         int var12Lifetime2;
         int var15Lifetime1;
         int var16Lifetime1;
-        SocialPlayerRow.a(param2, 0, param0.field_V);
+        SocialPlayerRow.computeGoalkeeperTarget(param2, 0, param0.field_V);
         int var3_int = SocialListLayoutSupport.worldToScreenX(0, param0.field_V.pixelX(true));
         int var4 = IntKeyLookup.projectPitchY((byte) -110, param0.field_V.pixelY(879306160));
         SoftwareRasterizer.drawLineBlendedInclusive(var3_int, var4, SocialListLayoutSupport.worldToScreenX(0, TriangleMesh.field_B[0]), IntKeyLookup.projectPitchY((byte) -70, FootballerAiOverlaySupport.field_a[0]), 16777215, 64);

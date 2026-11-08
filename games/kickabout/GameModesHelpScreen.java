@@ -16,7 +16,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
     static ArgbSprite field_L;
     static AppScreen field_G;
 
-    final static void a(boolean param0, int param1, PacketBuffer param2, GameSetupPanel param3) {
+    final static void readLobbyGameSetup(boolean param0, int param1, PacketBuffer param2, GameSetupPanel param3) {
         int var8 = 0;
         GameSetupPanel stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
@@ -90,7 +90,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           param3.field_Nb = param2.readLong((byte) -124);
           if (param1 < 113) {
             var10 = (GameSetupPanel) null;
-            GameModesHelpScreen.a(true, -32, (PacketBuffer) null, (GameSetupPanel) null);
+            GameModesHelpScreen.readLobbyGameSetup(true, -32, (PacketBuffer) null, (GameSetupPanel) null);
           }
           var7 = param2.field_n;
           param3.field_ec = param2.readString(22);
@@ -261,7 +261,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           for (var12Lifetime4 = 0; var12Lifetime4 < 9; var12Lifetime4++) {
             this.field_K[var12Lifetime4].field_s = this.slideOffsetX + 45 + var12Lifetime4 % 3 * 52;
             this.field_K[var12Lifetime4].updateInput(0, false);
-            this.field_K[var12Lifetime4].h((byte) -123);
+            this.field_K[var12Lifetime4].drawSquadSlot((byte) -123);
           }
           SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
           IsSixCommand.field_C.drawParagraph(ClientUiOverlay.field_c, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);

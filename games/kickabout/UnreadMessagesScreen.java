@@ -23,10 +23,10 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
         int var4Lifetime1;
         super.updateScreen((byte) 117, param1);
         stackIn_3_0 = !(PlayerStats.beginReconnectGracePeriod((byte) -3));
-        var3 = PasswordFieldPainter.a(stackIn_3_0, -587);
+        var3 = PasswordFieldPainter.updateContentCarousel(stackIn_3_0, -587);
         if (var3 != 3) {
           if (var3 == 1) {
-            DelayedServerPacket.a(0, false, -2);
+            DelayedServerPacket.requestScreenTransition(0, false, -2);
           }
         } else {
           if (null == SplashScreen.field_m) {
@@ -39,7 +39,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
           }
         }
         if (var3 == 2) {
-          DelayedServerPacket.a(0, true, -2);
+          DelayedServerPacket.requestScreenTransition(0, true, -2);
         }
         var4Lifetime1 = 62 / ((38 - param0) / 60);
     }
@@ -74,7 +74,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
           return;
         }
         if (AuctionBidDialog.field_G) {
-          WorldSpriteSequence.field_f.r(2121792);
+          WorldSpriteSequence.field_f.showConnectionRestored(2121792);
         } else {
           var1 = PlayerArchetypeSortCriterion.field_n;
           if (var1 > 0) {

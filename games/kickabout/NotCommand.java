@@ -14,12 +14,12 @@ final class NotCommand extends ConsoleCommand {
           SharedChatLayoutSupport.layoutChatAndSidePanels(param0 - 24776, ClassDescriptorSupport.field_d[0].field_o, BytePlusOneCommand.field_I, DiskCacheWorker.field_b, LineupPositionSupport.field_c, TeamSelectionAgent.field_f);
           return;
         }
-        NotCommand.a(83, false, -82, 24, true, (byte) 68);
+        NotCommand.createGradientPanelRowSprites(83, false, -82, 24, true, (byte) 68);
         WeightedLruCache.layoutAnimatedChatPanel(0);
         SharedChatLayoutSupport.layoutChatAndSidePanels(param0 - 24776, ClassDescriptorSupport.field_d[0].field_o, BytePlusOneCommand.field_I, DiskCacheWorker.field_b, LineupPositionSupport.field_c, TeamSelectionAgent.field_f);
     }
 
-    final static Sprite[] a(int param0, boolean param1, int param2, int param3, boolean param4, byte param5) {
+    final static Sprite[] createGradientPanelRowSprites(int param0, boolean param1, int param2, int param3, boolean param4, byte param5) {
         Sprite var19 = null;
         Sprite var20 = null;
         Sprite var17 = null;
@@ -137,7 +137,7 @@ final class NotCommand extends ConsoleCommand {
           field_F = null;
           return;
         }
-        NotCommand.$cfr$intArgs$a$7ffe4b125357(12, false);
+        NotCommand.setMovementKeyLayout(12, false);
         field_B = null;
         field_D = null;
         field_C = null;
@@ -145,7 +145,7 @@ final class NotCommand extends ConsoleCommand {
         field_F = null;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void setMovementKeyLayout(byte param0, boolean param1) {
         FullscreenDisplayMode.field_d = param1 ? true : false;
         if (param0 != 50) {
           NotCommand.releaseStatics(-123);
@@ -160,7 +160,7 @@ final class NotCommand extends ConsoleCommand {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
+    final static void setMovementKeyLayout(int param0, boolean param1) {
         FullscreenDisplayMode.field_d = param1 ? true : false;
         if (param0 != 50) {
           NotCommand.releaseStatics(-123);

@@ -398,7 +398,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         field_d = null;
         if (!param0) {
           PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
-          TextWidgetPainter.a((PacketBuffer) null, -40, 96, (PlatformTaskDispatcher) null);
+          TextWidgetPainter.readReflectionCheckRequest((PacketBuffer) null, -40, 96, (PlatformTaskDispatcher) null);
         }
         field_g = null;
     }
@@ -516,7 +516,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static void a(PacketBuffer param0, int param1, int param2, PlatformTaskDispatcher param3) {
+    final static void readReflectionCheckRequest(PacketBuffer param0, int param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;

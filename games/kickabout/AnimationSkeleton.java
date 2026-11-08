@@ -45,7 +45,7 @@ final class AnimationSkeleton extends IntrusiveNode {
         }
     }
 
-    final static int a(boolean param0) {
+    final static int getTutorialMessageIndex(boolean param0) {
         if (HuffmanCodec.field_e == 1 &&
           !SocialNamePrompt.field_Eb) {
           return 0;
@@ -63,7 +63,7 @@ final class AnimationSkeleton extends IntrusiveNode {
           return 4;
         }
         if (param0) {
-          AnimationSkeleton.a(false);
+          AnimationSkeleton.getTutorialMessageIndex(false);
         }
         if (HuffmanCodec.field_e == 4 &&
           !SocialNamePrompt.field_Eb) {

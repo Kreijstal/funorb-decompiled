@@ -8,7 +8,7 @@ final class ClientInteractionSupport {
     static int field_d;
     static IndexedSprite[] field_e;
 
-    final static boolean a(byte param0) {
+    final static boolean canBeginLogin(byte param0) {
         if (param0 != 10) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
           ClientInteractionSupport.readTwoRangeUnsigned(-49, -20, (CipherPacketBuffer) null, 91);
@@ -16,7 +16,7 @@ final class ClientInteractionSupport {
             return false;
           }
           if (!GameSoundEffect.field_f) {
-            return !WorldSpriteDecoration.b(-14954) ? true : false;
+            return !WorldSpriteDecoration.isAccountRequestConnected(-14954) ? true : false;
           }
           return false;
         }
@@ -24,7 +24,7 @@ final class ClientInteractionSupport {
           return false;
         }
         if (!GameSoundEffect.field_f) {
-          return !WorldSpriteDecoration.b(-14954) ? true : false;
+          return !WorldSpriteDecoration.isAccountRequestConnected(-14954) ? true : false;
         }
         return false;
     }
@@ -38,7 +38,7 @@ final class ClientInteractionSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 22531) {
-            ClientInteractionSupport.a((byte) -59);
+            ClientInteractionSupport.canBeginLogin((byte) -59);
           }
           stackIn_3_0 = FormationAgent.readTwoRangeUnsigned(param1, param2, 1 << param3, param3, 1 << param1, 1);
           return stackIn_3_0;
@@ -61,7 +61,7 @@ final class ClientInteractionSupport {
           PendingRequestAcknowledgement.closeQuickChat(-127);
         }
         if (param0 < 108) {
-          ClientInteractionSupport.a((byte) 11);
+          ClientInteractionSupport.canBeginLogin((byte) 11);
           return;
         }
     }

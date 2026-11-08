@@ -126,7 +126,7 @@ final class SetLagCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(TextFieldNode.e(-63, param1[0].asInt(-30368)));
+            stackIn_4_0 = new ConsoleValue(TextFieldNode.disableSimulatedNetworkLag(-63, param1[0].asInt(-30368)));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

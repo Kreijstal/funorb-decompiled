@@ -64,7 +64,7 @@ final class PlayerValueSortCriterion extends SortCriterion {
         field_o = null;
     }
 
-    final static void a(int[] param0, int param1, ParticipantStatus[] param2, int param3) {
+    final static void drawMatchParticipantSummary(int[] param0, int param1, ParticipantStatus[] param2, int param3) {
         int dupTemp$0 = 0;
         int var12 = 0;
         ParticipantAgent[] stackIn_6_0 = null;

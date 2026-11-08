@@ -76,7 +76,7 @@ final class PlayerStatSortCriterion extends SortCriterion {
     PlayerStatSortCriterion() {
     }
 
-    final static int b(int param0) {
+    final static int getBigCommandValue(int param0) {
         if (param0 != 3) {
           return 118;
         }

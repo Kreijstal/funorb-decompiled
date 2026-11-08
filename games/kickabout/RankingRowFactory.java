@@ -85,7 +85,7 @@ final class RankingRowFactory {
           if (var5 == null) {
             return false;
           }
-          LoginDialog.a((byte) -77, var5);
+          LoginDialog.decodeSpriteSheet((byte) -77, var5);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -147,7 +147,7 @@ final class RankingRowFactory {
           }
           var3_int = param2.field_n;
           var5 = (CharSequence) ((Object) param1);
-          var4 = Cp1252EncodingSupport.a(var5, (byte) 106);
+          var4 = Cp1252EncodingSupport.encodeCp1252(var5, (byte) 106);
           param2.writeUnsignedSmart(-53, var4.length);
           param2.field_n = param2.field_n + Bzip2State.field_I.compress(-1, var4.length, param2.field_n, param2.field_f, var4, 0);
           stackIn_3_0 = param2.field_n - var3_int;

@@ -132,7 +132,7 @@ final class TeamSelectionAgent extends MatchAgent {
         return var2;
     }
 
-    final static void c(int param0) {
+    final static void validateSelectionGuard(int param0) {
         if (param0 != 30929) {
           field_m = (String) null;
         }

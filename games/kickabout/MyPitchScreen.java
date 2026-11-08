@@ -179,7 +179,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           }
           var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.next(33));
         }
-        QuickChatCategory.a(RegistrationRequestState.field_h.field_x, 5464);
+        QuickChatCategory.updateCurrencyAnimation(RegistrationRequestState.field_h.field_x, 5464);
         var3 = 4 % ((param0 - 38) / 60);
     }
 

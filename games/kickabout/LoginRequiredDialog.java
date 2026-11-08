@@ -10,7 +10,7 @@ final class LoginRequiredDialog extends MessageDialog {
     static String[] field_L;
     static String field_J;
 
-    final static UiLayoutNode h(byte param0) {
+    final static UiLayoutNode getFriendsListContent(byte param0) {
         if (param0 >= -39) {
           LoginRequiredDialog.releaseStatics(-104);
           return RotaryDialPainter.field_d.field_yb;
@@ -58,7 +58,7 @@ final class LoginRequiredDialog extends MessageDialog {
         }
     }
 
-    final static int g(byte param0) {
+    final static int getRegistrationAge(byte param0) {
         int var1 = -2 % ((param0 - 47) / 61);
         return SocialUiState.field_b;
     }

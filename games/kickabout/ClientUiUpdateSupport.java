@@ -82,7 +82,7 @@ final class ClientUiUpdateSupport {
         UiLayoutNode stackIn_65_0 = null;
         int stackIn_65_1 = 0;
         boolean stackIn_66_2 = false;
-        GeneratedPanelPainter.b((byte) 123);
+        GeneratedPanelPainter.positionSlidingLobbyPanels((byte) 123);
         if (ConsoleArgumentSupport.field_d >= 0) {
           ConsoleValue.field_a.field_E = LoginDialog.substitutePlaceholders(-18, StatefulTextPainter.field_r, new String[]{Integer.toString(ConsoleArgumentSupport.field_d)});
           stackIn_51_0 = UiKeyRoutingSupport.field_c;
@@ -124,14 +124,14 @@ final class ClientUiUpdateSupport {
         }
         if (ClassNameSupport.field_d.field_sb != 0) {
           if (TooltipOverlay.field_d) {
-            NodeHashTableIterator.a(-43, param3);
+            NodeHashTableIterator.requestRatedMatchmaking(-43, param3);
           } else {
             if (WeightedLruCache.field_d > 0) {
-              NodeHashTableIterator.a(-43, param3);
+              NodeHashTableIterator.requestRatedMatchmaking(-43, param3);
             } else {
               if (ScrollContainer.field_Ib >= 2 &&
                 GameplayHelpScreen.field_G[12]) {
-                NodeHashTableIterator.a(-43, param3);
+                NodeHashTableIterator.requestRatedMatchmaking(-43, param3);
               }
             }
           }
@@ -141,7 +141,7 @@ final class ClientUiUpdateSupport {
             VertexNormal.field_d[0] != ThreeCommand.field_D) {
             ThreeCommand.field_D = VertexNormal.field_d[0];
           }
-          OverlayLayerSupport.a(false, param3, ThreeCommand.field_D, true, 0, LeagueWinnerDialog.field_J);
+          OverlayLayerSupport.sendGameSetupPreferences(false, param3, ThreeCommand.field_D, true, 0, LeagueWinnerDialog.field_J);
         }
         if (RandomAccessCacheFile.field_a.field_sb != 0) {
           TextWidgetPainter.field_f = false;

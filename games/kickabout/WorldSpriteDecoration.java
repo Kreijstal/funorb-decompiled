@@ -11,7 +11,7 @@ final class WorldSpriteDecoration {
     private Sprite field_c;
     static String field_h;
 
-    final static boolean b(int param0) {
+    final static boolean isAccountRequestConnected(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -14954) {
           field_d = (NineSlicePanelPainter) null;
@@ -82,7 +82,7 @@ final class WorldSpriteDecoration {
         }
     }
 
-    final static void a(int param0) {
+    final static void startLoginAfterRegistration(int param0) {
         MatchHudRoutingSupport.setAccountStatusText(true, AccountRegistrationResponse.field_i, AccountInputValidationResult.field_a, 3960);
         TextLineLayoutSupport.field_a = true;
         if (param0 > -63) {

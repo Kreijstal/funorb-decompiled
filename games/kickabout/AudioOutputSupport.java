@@ -9,7 +9,7 @@ final class AudioOutputSupport {
     static int field_a;
     static IndexedSprite[][] field_e;
 
-    final static boolean a(boolean param0) {
+    final static boolean isFreeChatAllowed(boolean param0) {
         if (!param0) {
           field_c = (String) null;
           return !WriteIntegersCommand.field_C ? true : false;
@@ -74,8 +74,8 @@ final class AudioOutputSupport {
         field_d = null;
     }
 
-    final static void a(byte param0) {
-        if (!ServerTextTemplate.a(-4)) {
+    final static void refreshFullscreenPrompt(byte param0) {
+        if (!ServerTextTemplate.isFullscreenPromptOpen(-4)) {
           return;
         }
         TrinketCountSortCriterion.buildFullscreenPromptMenu(false, 6, 4);

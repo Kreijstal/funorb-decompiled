@@ -126,7 +126,7 @@ final class GoalkeeperAiSupport {
             if (ArrayWidgetContainer.tryKeeperDive(param1.field_V, var19, (byte) -75, param2)) {
               return;
             }
-            SocialPlayerRow.a(param2, 0, param1.field_V);
+            SocialPlayerRow.computeGoalkeeperTarget(param2, 0, param1.field_V);
             NamedValueEntry.steerTowardsPoint(4, TrinketSlot.field_zb[0], var18, TrinketSlot.field_zb[1]);
             if (var19.action == 0 &&
               0 == var19.directionMask) {

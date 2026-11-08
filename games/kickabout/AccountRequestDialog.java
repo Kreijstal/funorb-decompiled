@@ -111,7 +111,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
     }
 
-    final void r(int param0) {
+    final void showConnectionRestored(int param0) {
         this.field_jb.setColors((byte) 21, 4210752, param0);
         AccountMessagePanel var2 = new AccountMessagePanel(this, this.field_eb, AchievementSubmission.field_m);
         var2.addActionButton((byte) 99, 15, TeamManagementScreen.field_E);
@@ -149,7 +149,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void showRequestResponse(int param0, int param1, String param2) {
         boolean stackIn_6_1 = false;
         AccountMessagePanel stackIn_10_0 = null;
         int stackIn_10_1 = 0;

@@ -22,19 +22,19 @@ abstract class MouseWheelInput {
         field_c = null;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawChatOverlays(byte param0, boolean param1) {
         if (WeightedLruCache.hasBlockingInputPopup(false)) {
           param1 = false;
         }
-        ScrollBar.a((byte) 123, param1);
+        ScrollBar.drawChatBlockingOverlays((byte) 123, param1);
         NetworkGameClient.drawQuickChatOverlay(1);
         if (param0 < -115) {
           return;
         }
-        MouseWheelInput.a((byte) 9, true);
+        MouseWheelInput.drawChatOverlays((byte) 9, true);
     }
 
-    final static void a(int param0, int param1) {
+    final static void updateLogoMeshRotation(int param0, int param1) {
         int var2;
         int var3;
         int var4;
@@ -250,10 +250,10 @@ abstract class MouseWheelInput {
         return;
     }
 
-    final static void a(int param0) {
+    final static void requestGameExit(int param0) {
         FootballerAiOverlaySupport.field_d.writeIsaacByte(9, (byte) -52);
         if (param0 != -1822) {
-          MouseWheelInput.a(-16, -37);
+          MouseWheelInput.updateLogoMeshRotation(-16, -37);
           LoginText.field_e = true;
           return;
         }

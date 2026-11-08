@@ -431,7 +431,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           field_I = (LoginMethod) null;
         }
         if (!(NotificationPanelPositionSupport.field_a <= 0)) {
-          GeneratedPanelPainter.b((byte) 82);
+          GeneratedPanelPainter.positionSlidingLobbyPanels((byte) 82);
         }
         if (ConsoleLexer.field_a > 0) {
           ConsoleEvaluationException.layoutLobbyPanels(param0 + 19335, ConsoleLexer.field_a);

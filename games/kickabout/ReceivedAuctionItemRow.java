@@ -205,12 +205,12 @@ final class ReceivedAuctionItemRow extends ListRow {
               var9_int = stackIn_36_0;
               if (var7 != 0) {
                 if (var7 == 1) {
-                  stackIn_41_0 = var12.trinketSpeedBonus(5205, IntValueNode.b(87));
+                  stackIn_41_0 = var12.trinketSpeedBonus(5205, IntValueNode.canUseMemberTrinkets(87));
                 } else {
-                  stackIn_41_0 = var12.trinketTackleBonus((byte) -51, IntValueNode.b(-112));
+                  stackIn_41_0 = var12.trinketTackleBonus((byte) -51, IntValueNode.canUseMemberTrinkets(-112));
                 }
               } else {
-                stackIn_41_0 = var12.trinketPowerBonus(true, IntValueNode.b(-113));
+                stackIn_41_0 = var12.trinketPowerBonus(true, IntValueNode.canUseMemberTrinkets(-113));
               }
               var10 = stackIn_41_0;
               stackIn_44_0 = var6;

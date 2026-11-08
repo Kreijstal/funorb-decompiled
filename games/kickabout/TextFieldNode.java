@@ -267,11 +267,11 @@ final class TextFieldNode extends UiLayoutNode {
         return this.field_Mb;
     }
 
-    final static boolean e(int param0, int param1) {
+    final static boolean disableSimulatedNetworkLag(int param0, int param1) {
         int var2 = param1;
-        MarkerSliderWidget.a(var2, WhirlpoolHasher.field_a, MessageDialog.field_B, 0, var2);
+        MarkerSliderWidget.configureSimulatedNetworkLag(var2, WhirlpoolHasher.field_a, MessageDialog.field_B, 0, var2);
         if (param0 != -63) {
-          TextFieldNode.b(-62, 88);
+          TextFieldNode.setLoadingLanguage(-62, 88);
         }
         return true;
     }
@@ -300,7 +300,7 @@ final class TextFieldNode extends UiLayoutNode {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void setLoadingLanguage(int param0, int param1) {
         SortCriterion.field_c = StatChoiceDialog.field_G[param0];
         HuffmanCodec.field_g = ConsoleParseException.field_g[param0];
         if (param1 != 31900) {

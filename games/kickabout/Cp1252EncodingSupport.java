@@ -9,7 +9,7 @@ final class Cp1252EncodingSupport {
     static boolean field_c;
     static String[] field_b;
 
-    final static ModelMesh a(int param0, int param1, Random param2) {
+    final static ModelMesh createRandomlyRecoloredModel(int param0, int param1, Random param2) {
         int var7 = 0;
         ModelMesh stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -65,7 +65,7 @@ final class Cp1252EncodingSupport {
         }
     }
 
-    final static byte[] a(CharSequence param0, byte param1) {
+    final static byte[] encodeCp1252(CharSequence param0, byte param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;

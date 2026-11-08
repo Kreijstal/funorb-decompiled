@@ -126,7 +126,7 @@ final class LoginMethod {
     public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 < 111) {
-          LoginMethod.a(-36, -71, -68, 100, 65);
+          LoginMethod.drawGridCellHighlight(-36, -71, -68, 100, 65);
         }
         field_g = null;
         field_c = null;
@@ -138,7 +138,7 @@ final class LoginMethod {
         try {
           BallAgent.writeCookie(this.field_a, param1, (byte) -5, 31536000L, "jagex-last-login-method");
           if (param0 > -110) {
-            LoginMethod.a(78, 31, 85, 37, 61);
+            LoginMethod.drawGridCellHighlight(78, 31, 85, 37, 61);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vl.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -186,7 +186,7 @@ final class LoginMethod {
         return var5;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawGridCellHighlight(int param0, int param1, int param2, int param3, int param4) {
         AchievementQuery.clipToGridCell(param2, -109, param1, param3 / param0, param3 % 3);
         SoftwareRasterizer.fillRoundedRectangleBlended(param2, param1, 156, 225, 10, 16777215, param4);
         TeamManagementScreen.popRasterState(126);
@@ -209,10 +209,10 @@ final class LoginMethod {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean isSpecialRewardEnabled(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
-          LoginMethod.a(-68, -48, 74, 38, -61);
+          LoginMethod.drawGridCellHighlight(-68, -48, 74, 38, -61);
         }
         stackIn_6_0 = (ClassDescriptorSupport.isGuardAtLeastTen((byte) 100)) && (ClientPacketFlushSupport.field_g);
         return stackIn_6_0;

@@ -466,7 +466,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         }
     }
 
-    final static void i(int param0) {
+    final static void readLobbyUpdate(int param0) {
         LobbyPlayerRow stackIn_91_0 = null;
         boolean stackIn_92_1 = false;
         int stackIn_140_0 = 0;
@@ -605,7 +605,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                 var4_ref_qb = new GameSetupPanel(UiKeyRoutingSupport.field_j);
                 SortCriterion.field_f.put(var4_ref_qb, (byte) -4, (long)var3_int);
               }
-              GameModesHelpScreen.a(true, 116, var1, var4_ref_qb);
+              GameModesHelpScreen.readLobbyGameSetup(true, 116, var1, var4_ref_qb);
               FullscreenErrorDialog.insertLobbyGameInOrder(var4_ref_qb, (byte) -119);
               return;
             }
@@ -696,7 +696,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                     return;
                   }
                   if (var2 == 20) {
-                    GameModesHelpScreen.a(false, param0 ^ 116, var1, PlayerContextMenu.field_i);
+                    GameModesHelpScreen.readLobbyGameSetup(false, param0 ^ 116, var1, PlayerContextMenu.field_i);
                     return;
                   }
                   if (21 == var2) {
@@ -800,7 +800,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             var3_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 81);
             PlayerContextMenu.field_i = new GameSetupPanel(UiKeyRoutingSupport.field_j);
             PlayerContextMenu.field_i.setSecondaryKey((long)var3_intLifetime1, (byte) -113);
-            GameModesHelpScreen.a(false, 114, var1, PlayerContextMenu.field_i);
+            GameModesHelpScreen.readLobbyGameSetup(false, 114, var1, PlayerContextMenu.field_i);
             TextFieldNode.field_Ib = 0L;
           }
           if (var2 != 2 &&

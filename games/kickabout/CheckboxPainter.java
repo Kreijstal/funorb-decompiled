@@ -19,7 +19,7 @@ final class CheckboxPainter implements WidgetPainter {
     private int field_l;
     private int field_h;
 
-    final static void a(int param0) {
+    final static void drawPromptRows(int param0) {
         int var3 = 0;
         int stackIn_18_0 = 0;
         int stackIn_21_0 = 0;
@@ -145,7 +145,7 @@ final class CheckboxPainter implements WidgetPainter {
         field_c = null;
     }
 
-    final static void b(int param0) {
+    final static void advancePitchLoading(int param0) {
         int var1;
         int var1Lifetime1;
         int var1Lifetime2;
@@ -248,16 +248,16 @@ final class CheckboxPainter implements WidgetPainter {
             ClientPacketFlushSupport.field_f = null;
             AccountNameCheckState.advanceLoadingStep(0, 6);
             if (0 == RankingsScreen.field_C) {
-              UiLayoutNode.a(15, 6, 50, 0);
+              UiLayoutNode.renderPitchSurface(15, 6, 50, 0);
             }
             if (RankingsScreen.field_C == 1) {
-              UiLayoutNode.a(15, 5, 70, 20);
+              UiLayoutNode.renderPitchSurface(15, 5, 70, 20);
             }
             if (2 == RankingsScreen.field_C) {
-              UiLayoutNode.a(15, 4, 128, 0);
+              UiLayoutNode.renderPitchSurface(15, 4, 128, 0);
             }
             if (3 == RankingsScreen.field_C) {
-              UiLayoutNode.a(15, 3, 256, 0);
+              UiLayoutNode.renderPitchSurface(15, 3, 256, 0);
             }
             AccountNameCheckState.advanceLoadingStep(0, 7);
             if (RankingsScreen.field_C == 2) {
@@ -270,7 +270,7 @@ final class CheckboxPainter implements WidgetPainter {
             PitchDecorationSupport.buildPitchDecorations(true);
             AccountNameCheckState.advanceLoadingStep(0, 9);
             if (0 == KitPatternMaskSupport.field_c) {
-              MusicPatchPcmStream.b(1);
+              MusicPatchPcmStream.buildPitchWorldDecorations(1);
             }
             if (KitPatternMaskSupport.field_c == 1) {
               GameResourceLoader.buildBeachPitchScenery((byte) -48);
@@ -370,7 +370,7 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static WorldDrawEntry a(boolean param0, int param1) {
+    final static WorldDrawEntry createGoalSceneryEntry(boolean param0, int param1) {
         WorldDrawEntry var2 = new WorldDrawEntry(3);
         var2.field_n = param0 ? true : false;
         if (param1 < 33) {

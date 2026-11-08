@@ -40,7 +40,7 @@ final class Bzip2State {
     int[] field_o;
     byte[][] field_b;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void rasterizeRgbTriangleHalfBlend(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var16 = null;
         int var17 = 0;
@@ -49,16 +49,16 @@ final class Bzip2State {
           boolean decompiledFrameRemainder0 = true;
           if (param12 < param2) {
             if (param2 < param14) {
-              TutorialScenerySupport.a(param15, param14, param0, param4, param6, param1, false, param12, param7, param8, param3, param11, param5, param9, SoftwareRasterizer.field_a, param2, param10);
+              TutorialScenerySupport.rasterizeSortedRgbTriangleHalfBlend(param15, param14, param0, param4, param6, param1, false, param12, param7, param8, param3, param11, param5, param9, SoftwareRasterizer.field_a, param2, param10);
               decompiledFrameRemainder0 = (var17 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (param14 > param12) {
-                TutorialScenerySupport.a(param15, param2, param10, param4, param1, param6, false, param12, param7, param11, param3, param8, param9, param5, SoftwareRasterizer.field_a, param14, param0);
+                TutorialScenerySupport.rasterizeSortedRgbTriangleHalfBlend(param15, param2, param10, param4, param1, param6, false, param12, param7, param11, param3, param8, param9, param5, SoftwareRasterizer.field_a, param14, param0);
                 decompiledFrameRemainder0 = (var17 != 0);
               }
               if (decompiledFrameRemainder0) {
-                TutorialScenerySupport.a(param0, param2, param10, param5, param1, param3, false, param14, param11, param7, param6, param8, param9, param4, SoftwareRasterizer.field_a, param12, param15);
+                TutorialScenerySupport.rasterizeSortedRgbTriangleHalfBlend(param0, param2, param10, param5, param1, param3, false, param14, param11, param7, param6, param8, param9, param4, SoftwareRasterizer.field_a, param12, param15);
               }
             }
           }
@@ -66,23 +66,23 @@ final class Bzip2State {
             (!(param12 < param2) ||
             var17 != 0)) {
             if (param14 > param12) {
-              TutorialScenerySupport.a(param10, param14, param0, param9, param6, param3, false, param2, param8, param7, param1, param11, param5, param4, SoftwareRasterizer.field_a, param12, param15);
+              TutorialScenerySupport.rasterizeSortedRgbTriangleHalfBlend(param10, param14, param0, param9, param6, param3, false, param2, param8, param7, param1, param11, param5, param4, SoftwareRasterizer.field_a, param12, param15);
               if (var17 != 0) {
                 if (param14 <= param2) {
-                  TutorialScenerySupport.a(param0, param12, param15, param5, param3, param1, false, param14, param11, param8, param6, param7, param4, param9, SoftwareRasterizer.field_a, param2, param10);
-                  TutorialScenerySupport.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
+                  TutorialScenerySupport.rasterizeSortedRgbTriangleHalfBlend(param0, param12, param15, param5, param3, param1, false, param14, param11, param8, param6, param7, param4, param9, SoftwareRasterizer.field_a, param2, param10);
+                  TutorialScenerySupport.rasterizeSortedRgbTriangleHalfBlend(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
                 } else {
-                  TutorialScenerySupport.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
+                  TutorialScenerySupport.rasterizeSortedRgbTriangleHalfBlend(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
                 }
               }
             } else {
               boolean decompiledSharedTail0 = !(param14 <= param2);
               if (!decompiledSharedTail0) {
-                TutorialScenerySupport.a(param0, param12, param15, param5, param3, param1, false, param14, param11, param8, param6, param7, param4, param9, SoftwareRasterizer.field_a, param2, param10);
+                TutorialScenerySupport.rasterizeSortedRgbTriangleHalfBlend(param0, param12, param15, param5, param3, param1, false, param14, param11, param8, param6, param7, param4, param9, SoftwareRasterizer.field_a, param2, param10);
                 decompiledSharedTail0 = (var17 != 0);
               }
               if (decompiledSharedTail0) {
-                TutorialScenerySupport.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
+                TutorialScenerySupport.rasterizeSortedRgbTriangleHalfBlend(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
               }
             }
           }
@@ -97,7 +97,7 @@ final class Bzip2State {
         }
     }
 
-    final static void a(int param0) {
+    final static void allocateDirectionalIndicatorSprites(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -121,7 +121,7 @@ final class Bzip2State {
           field_I = null;
           field_l = null;
           if (param0 != 3) {
-            Bzip2State.a(-82);
+            Bzip2State.allocateDirectionalIndicatorSprites(-82);
           }
           field_w = null;
           field_i = null;
@@ -163,7 +163,7 @@ final class Bzip2State {
         }
     }
 
-    final static void a(TriangleMesh param0, boolean param1, int[] param2, int[] param3, byte param4, boolean param5, boolean param6) {
+    final static void transformAndProjectMesh(TriangleMesh param0, boolean param1, int[] param2, int[] param3, byte param4, boolean param5, boolean param6) {
         int stackIn_56_0 = 0;
         int stackIn_56_1 = 0;
         int stackIn_65_0 = 0;
@@ -364,7 +364,7 @@ final class Bzip2State {
             stackIn_65_0 = -336184828;
             break;
           }
-          WidgetContainer.a(stackIn_65_0, param0, var7_int, var8, param5);
+          WidgetContainer.buildFaceDepthBuckets(stackIn_65_0, param0, var7_int, var8, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

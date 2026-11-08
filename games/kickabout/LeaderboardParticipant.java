@@ -22,7 +22,7 @@ final class LeaderboardParticipant {
         field_e = null;
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, String[] param3, int param4, int param5, String[][] param6, Sprite[][] param7, String[] param8, ResourceArchive param9, Sprite[][] param10, String[] param11, String[][] param12, byte param13, byte[] param14) {
+    final static void initializeLobbyGamePanels(int[] param0, byte[] param1, int param2, String[] param3, int param4, int param5, String[][] param6, Sprite[][] param7, String[] param8, ResourceArchive param9, Sprite[][] param10, String[] param11, String[][] param12, byte param13, byte[] param14) {
         ContextMenuItem[] array$0 = null;
         ContextMenuItem[] array$1 = null;
         ContextMenuItem[] array$2 = null;
@@ -423,7 +423,7 @@ final class LeaderboardParticipant {
         try {
           if (param0 >= -31) {
             var7 = (byte[]) null;
-            LeaderboardParticipant.a((int[]) null, (byte[]) null, 68, (String[]) null, -103, -47, (String[][]) null, (Sprite[][]) null, (String[]) null, (ResourceArchive) null, (Sprite[][]) null, (String[]) null, (String[][]) null, (byte) 59, (byte[]) null);
+            LeaderboardParticipant.initializeLobbyGamePanels((int[]) null, (byte[]) null, 68, (String[]) null, -103, -47, (String[][]) null, (Sprite[][]) null, (String[]) null, (ResourceArchive) null, (Sprite[][]) null, (String[]) null, (String[][]) null, (byte) 59, (byte[]) null);
           }
           var4_long = 0L;
           var6 = null;
@@ -455,7 +455,7 @@ final class LeaderboardParticipant {
         }
     }
 
-    final static void a(double[][][] param0, int[][][] param1, int[][][] param2, int param3, int[][][] param4, int[][][] param5) {
+    final static void buildColorHistogram(double[][][] param0, int[][][] param1, int[][][] param2, int param3, int[][][] param4, int[][][] param5) {
         int[] dupTemp$0 = null;
         int[] dupTemp$1 = null;
         int[] dupTemp$2 = null;

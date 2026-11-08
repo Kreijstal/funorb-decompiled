@@ -113,7 +113,7 @@ final class MatchHudRoutingSupport {
           var3_int = FriendsListPanel.getHudOpacity(false, (byte) 71);
           if (4 == AsciiCharacterSupport.field_c.phase) {
             LoadingProgressSupport.drawActiveMatchTimer(1, var3_int);
-            PlayerValueSortCriterion.a(param2, var3_int, AsciiCharacterSupport.field_c.participantStatus, 14839);
+            PlayerValueSortCriterion.drawMatchParticipantSummary(param2, var3_int, AsciiCharacterSupport.field_c.participantStatus, 14839);
             if (ContextMenuItem.field_Cb == -2 ||
               !AsciiCharacterSupport.field_c.participantStatus[ContextMenuItem.field_Cb].isActive(3511)) {
               MatchHudSupport.drawControlLegend(param1, 16777215, var3_int);

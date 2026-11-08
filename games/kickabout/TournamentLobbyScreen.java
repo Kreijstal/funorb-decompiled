@@ -180,7 +180,7 @@ final class TournamentLobbyScreen extends AppScreen {
         return -1;
     }
 
-    final boolean c(int param0) {
+    final boolean hasTournamentAssignment(int param0) {
         if (param0 != 0) {
           this.field_w = (int[]) null;
         }
@@ -508,7 +508,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (param0 == 13) {
           stackIn_5_0 = (this.field_R == 2) ? 4 : 5;
           var4_int = stackIn_5_0;
-          DelayedServerPacket.a(var4_int, false, -2);
+          DelayedServerPacket.requestScreenTransition(var4_int, false, -2);
           return true;
         }
         if (param0 == ClassDescriptorSupport.field_h) {
@@ -602,7 +602,7 @@ final class TournamentLobbyScreen extends AppScreen {
         try {
           QuickChatCategoryCache.field_e = false;
           LookupRecordUpdate.measureQuickChatToggleHint(22);
-          SpriteButtonPainter.a(-363021503);
+          SpriteButtonPainter.initializeMinimapPitchSprite(-363021503);
           var5 = new int[]{54, 53, 52, 12};
           var2 = var5;
           if (var2 != null) {

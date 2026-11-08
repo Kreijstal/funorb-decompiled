@@ -26,7 +26,7 @@ abstract class SortCriterion {
 
     abstract int directionCount(int param0);
 
-    final static IndexedSprite[] a(int param0, int param1, boolean param2, byte param3, int param4, int param5) {
+    final static IndexedSprite[] buildStadiumCrowdFrames(int param0, int param1, boolean param2, byte param3, int param4, int param5) {
         Sprite[] array$0 = null;
         IndexedSprite[][] stackIn_3_0 = null;
         int stackIn_12_0 = 0;

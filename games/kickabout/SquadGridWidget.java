@@ -586,11 +586,11 @@ final class SquadGridWidget extends UiLayoutNode {
           if (0 != this.field_Eb[var6].field_qb) {
             var4 = this.field_Eb[var6];
           } else {
-            this.field_Eb[var6].h((byte) -125);
+            this.field_Eb[var6].drawSquadSlot((byte) -125);
           }
         }
         if (var4 != null) {
-          ((SquadSlotWidget) (var4)).h((byte) -118);
+          ((SquadSlotWidget) (var4)).drawSquadSlot((byte) -118);
         }
         TeamManagementScreen.popRasterState(121);
     }

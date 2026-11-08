@@ -113,7 +113,7 @@ final class ScrollBar extends UiLayoutNode {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawChatBlockingOverlays(byte param0, boolean param1) {
         if (NotificationPanelPositionSupport.field_a <= 0) {
           if (param0 <= 10) {
             field_Eb = (String) null;

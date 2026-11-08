@@ -102,7 +102,7 @@ final class FullscreenFailureReason {
         throw new IllegalStateException();
     }
 
-    final static boolean b(byte param0) {
+    final static boolean isAccountInterfaceReady(byte param0) {
         if (param0 != 97) {
           field_d = -103;
           if (10 > RasterGlowSupport.field_c) {

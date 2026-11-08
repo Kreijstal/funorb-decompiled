@@ -394,7 +394,7 @@ final class PlayerContextMenu {
                     NamedValueEntry.requestLobbyGameDetails(0, -58, param1);
                   }
                 } else {
-                  GameLoopApplet.b(15848, param1, this.field_c);
+                  GameLoopApplet.sendSpectatorGameRequest(15848, param1, this.field_c);
                 }
               }
             }

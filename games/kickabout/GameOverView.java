@@ -702,7 +702,7 @@ final class GameOverView extends MatchPhaseView {
               if (stackIn_25_0 != stackIn_25_1) {
                 var7 = this.field_o[var6_int].field_Eb;
                 SoftwareRasterizer.fillRoundedRectangleBlended(-30 + this.field_o[var6_int].field_F, 92, 110, 180, 10, 0, 128);
-                this.field_o[var6_int].h((byte) -116);
+                this.field_o[var6_int].drawSquadSlot((byte) -116);
                 this.field_s[var6_int].draw(59, true);
                 if (var7.power >= 100 &&
                   100 <= var7.speed &&

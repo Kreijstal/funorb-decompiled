@@ -82,7 +82,7 @@ final class DiskCacheWorker implements Runnable {
                 var7.pending = false;
               } else {
                 if (3 == var7.field_t) {
-                  var7.field_u = var7.field_v.a((int)var7.field_l, 65280);
+                  var7.field_u = var7.field_v.readFile((int)var7.field_l, 65280);
                   var7.pending = false;
                 } else {
                   var7.pending = false;
@@ -173,7 +173,7 @@ final class DiskCacheWorker implements Runnable {
               var6 = (DiskCacheRequest) (this.field_h.next(0));
             }
           }
-          var4.field_u = param1.a(param2, param0 + 66193);
+          var4.field_u = param1.readFile(param2, param0 + 66193);
           var4.field_q = true;
           var4.pending = false;
           stackIn_17_0 = var4;

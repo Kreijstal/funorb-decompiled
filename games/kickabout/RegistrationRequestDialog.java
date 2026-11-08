@@ -93,7 +93,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     }
 
     final void showRegistrationFailure(int param0) {
-        this.a(true, TeamSelectionView.createRegistrationFailure(param0 ^ -105, GameSoundEffect.field_g, 248), (byte) -71);
+        this.showRegistrationResponse(true, TeamSelectionView.createRegistrationFailure(param0 ^ -105, GameSoundEffect.field_g, 248), (byte) -71);
         if (param0 != 17) {
           field_qb = (Sprite) null;
         }
@@ -114,7 +114,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           if (var2 == null) {
             return super.advanceDialogAnimation(-1);
           }
-          this.a(false, var2, (byte) -71);
+          this.showRegistrationResponse(false, var2, (byte) -71);
           return super.advanceDialogAnimation(-1);
         }
         if (!this.field_C) {
@@ -127,7 +127,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         if (var2Lifetime1 == null) {
           return super.advanceDialogAnimation(-1);
         }
-        this.a(false, var2Lifetime1, (byte) -71);
+        this.showRegistrationResponse(false, var2Lifetime1, (byte) -71);
         return super.advanceDialogAnimation(-1);
     }
 
@@ -137,7 +137,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           return;
         }
         try {
-          WorldSpriteDecoration.a(-87);
+          WorldSpriteDecoration.startLoginAfterRegistration(-87);
           this.closeDialog(-96);
           if (param3 <= 64) {
             field_rb = (ClientProtocolStage) null;
@@ -147,7 +147,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         }
     }
 
-    private final void a(boolean param0, AccountRegistrationResponse param1, byte param2) {
+    private final void showRegistrationResponse(boolean param0, AccountRegistrationResponse param1, byte param2) {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;

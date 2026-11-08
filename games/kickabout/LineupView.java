@@ -434,15 +434,15 @@ final class LineupView extends MatchPhaseView {
           ListingRowCache.drawGridSelectionOverlay(-1, this.field_A.field_T, this.field_A.field_F, (byte) -96, var3);
           stackIn_34_0 = this.field_o;
           stackIn_35_1 = (this.field_o.field_lb) && (!this.field_o.field_Gb);
-          ((CheckboxLabelWidget) (Object) stackIn_34_0).a(stackIn_35_1, (byte) 46);
+          ((CheckboxLabelWidget) (Object) stackIn_34_0).drawCheckboxLabel(stackIn_35_1, (byte) 46);
           for (var4Lifetime2 = 0; var4Lifetime2 < 9; var4Lifetime2++) {
             if (this.field_l != var4Lifetime2) {
-              this.field_j[var4Lifetime2].h((byte) -116);
+              this.field_j[var4Lifetime2].drawSquadSlot((byte) -116);
             }
           }
         }
         for (var4Lifetime3 = 0; var4Lifetime3 < 4; var4Lifetime3++) {
-          this.field_z[var4Lifetime3].h((byte) -124);
+          this.field_z[var4Lifetime3].drawSquadSlot((byte) -124);
         }
         if (param0 != 1) {
           var10 = (UiLayoutNode) null;
@@ -462,7 +462,7 @@ final class LineupView extends MatchPhaseView {
           }
         }
         if (this.field_l != -1) {
-          this.field_j[this.field_l].h((byte) -117);
+          this.field_j[this.field_l].drawSquadSlot((byte) -117);
         }
         if (this.field_v) {
           this.drawTeamParticipantRows(this.field_h, 240, (byte) -60, 412);

@@ -69,7 +69,7 @@ final class AvailabilityCheckRequest {
         this.result = param0 ? true : false;
     }
 
-    final static void b(int param0) {
+    final static void showLoginAndSetClientStage(int param0) {
         if (!GameSoundEffect.field_f) {
           throw new IllegalStateException();
         }
@@ -129,7 +129,7 @@ final class AvailabilityCheckRequest {
         return this.query;
     }
 
-    final static void b(boolean param0, byte param1) {
+    final static void updateCapturedPointer(boolean param0, byte param1) {
         int stackIn_10_0 = 0;
         Object stackIn_20_0 = null;
         int stackIn_26_0 = 0;
@@ -152,7 +152,7 @@ final class AvailabilityCheckRequest {
         int var2;
         int var3;
         var3 = Kickabout.field_G;
-        if (!EmailSyntaxValidator.c((byte) -42)) {
+        if (!EmailSyntaxValidator.hasPrivilegedPlatformAccess((byte) -42)) {
           if (!ClassNameSupport.field_a) {
             ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
             TutorialCaptionSupport.field_j = ArchiveManager.field_m;

@@ -89,7 +89,7 @@ final class QuickChatCategory extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void updateCurrencyAnimation(int param0, int param1) {
         int stackIn_19_0 = 0;
         int stackIn_20_1 = 0;
         int stackIn_23_0 = 0;

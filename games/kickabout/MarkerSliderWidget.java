@@ -15,7 +15,7 @@ final class MarkerSliderWidget extends TextButton {
 
     final int getMarkerCount(byte param0) {
         if (param0 != 31) {
-          MarkerSliderWidget.a(121, -34);
+          MarkerSliderWidget.requestReturnToLobby(121, -34);
           return this.field_K.size(1);
         }
         return this.field_K.size(1);
@@ -53,7 +53,7 @@ final class MarkerSliderWidget extends TextButton {
         }
     }
 
-    final static void a(int param0, double param1, double param2, int param3, int param4) {
+    final static void configureSimulatedNetworkLag(int param0, double param1, double param2, int param3, int param4) {
         int var8;
         var8 = Kickabout.field_G;
         if (RankingRowFactory.field_c != 0) {
@@ -197,7 +197,7 @@ final class MarkerSliderWidget extends TextButton {
           field_E = null;
           return;
         }
-        MarkerSliderWidget.a(-1, -86);
+        MarkerSliderWidget.requestReturnToLobby(-1, -86);
         field_I = null;
         field_F = null;
         field_G = null;
@@ -206,7 +206,7 @@ final class MarkerSliderWidget extends TextButton {
         field_E = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void requestReturnToLobby(int param0, int param1) {
         CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
         var2.writeIsaacByte(param0, (byte) -104);
         var2.writeByte(106, 1);
@@ -217,7 +217,7 @@ final class MarkerSliderWidget extends TextButton {
         field_E = (int[]) null;
     }
 
-    final static boolean i(int param0) {
+    final static boolean isLoginTransitionActive(int param0) {
         if (param0 == 0) {
           return WeightedLruCache.field_j != WeightedLruCache.field_a ? true : false;
         }

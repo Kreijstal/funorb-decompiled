@@ -195,7 +195,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
             ChatInputState.field_a = new UiLayoutNode(0L, param2);
             ChatInputState.field_a.field_E = MatchHudSupport.field_i;
             GrayscalePaletteSupport.field_a.addChild((byte) -104, ChatInputState.field_a);
-            stackIn_31_0 = WorldSpriteDecoration.b(-14954) ? 1 : 0;
+            stackIn_31_0 = WorldSpriteDecoration.isAccountRequestConnected(-14954) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&
             !PacketBuffer.field_l) {

@@ -39,7 +39,7 @@ final class DebugConsole extends ConsolePanel {
               if (!var7.isAtEnd(6)) {
                 throw new ConsoleParseException(var7.readToken((byte) 114).field_f);
               }
-              this.print(-98, var5.a(param1, this.field_t));
+              this.print(-98, var5.evaluate(param1, this.field_t));
               return true;
             } catch (ConsoleParseException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

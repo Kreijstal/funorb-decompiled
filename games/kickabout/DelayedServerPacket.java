@@ -26,7 +26,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           try {
             try {
               if (param0 < 49) {
-                DelayedServerPacket.a(93, true, 85);
+                DelayedServerPacket.requestScreenTransition(93, true, 85);
               }
               var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
@@ -71,7 +71,7 @@ final class DelayedServerPacket extends IntrusiveNode {
         MeshObject.field_d = 0;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void requestScreenTransition(int param0, boolean param1, int param2) {
         int stackIn_31_0 = 0;
         int stackIn_35_0 = 0;
         int stackIn_38_1 = 0;
@@ -204,7 +204,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           BuyPlayerDialog.field_I = 0;
           if (GameModesHelpScreen.field_G instanceof UnreadMessagesScreen) {
             ((ButtonMenuScreen) (GameModesHelpScreen.field_G)).enterScreen(0, -1, param1);
-            WeightedLruCache.a(1, param1);
+            WeightedLruCache.resetContentCarousel(1, param1);
             return;
           }
           if (!(GameModesHelpScreen.field_G instanceof ButtonMenuScreen)) {

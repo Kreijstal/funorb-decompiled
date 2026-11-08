@@ -70,7 +70,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           field_I = null;
           return;
         }
-        AccountMessagePanel.a(-121, true, 59);
+        AccountMessagePanel.formatAuctionLogMessage(-121, true, 59);
         field_C = null;
         field_F = null;
         field_I = null;
@@ -175,7 +175,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
         }
     }
 
-    final static String a(int param0, boolean param1, int param2) {
+    final static String formatAuctionLogMessage(int param0, boolean param1, int param2) {
         if (5 == param0) {
           return LoginDialog.substitutePlaceholders(-18, ConsoleParseException.field_b, new String[]{LocalizedTextLoader.formatCurrencyAmount(param2, 26300)});
         }

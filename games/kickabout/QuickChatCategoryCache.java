@@ -16,15 +16,15 @@ final class QuickChatCategoryCache {
         int var2;
         var2 = Kickabout.field_G;
         if (SortCriterion.field_l != null) {
-          if (SortCriterion.field_l.c(0)) {
+          if (SortCriterion.field_l.hasTournamentAssignment(0)) {
             ContextMenu.sendGameWithdrawalRequest(PlayerContextMenu.field_i.getGameId((byte) -77), (byte) -88, 11);
           } else {
-            GameLoopApplet.b(15848, 11, 0);
+            GameLoopApplet.sendSpectatorGameRequest(15848, 11, 0);
           }
         } else {
           if (MachineTokenStorageSupport.field_e.isSpectator(param0 - 2) &&
             !MachineTokenStorageSupport.field_e.usesTournamentSpectatorControls(-21660)) {
-            GameLoopApplet.b(param0 + 15848, 11, 0);
+            GameLoopApplet.sendSpectatorGameRequest(param0 + 15848, 11, 0);
           } else {
             ContextMenu.sendGameWithdrawalRequest(PlayerContextMenu.field_i.getGameId((byte) 74), (byte) -114, 11);
             QuickChatPhraseCache.field_d = true;
@@ -166,7 +166,7 @@ final class QuickChatCategoryCache {
             }
             var2Lifetime3Lifetime1 = stackIn_50_0 & stackIn_51_1;
             stackIn_53_0 = var2Lifetime3Lifetime1;
-            if (ThumbnailStateFactory.field_d.field_P[1][4].positionY != AchievementsScreen.a((byte) -27, 1)) {
+            if (ThumbnailStateFactory.field_d.field_P[1][4].positionY != AchievementsScreen.getOffPitchPlayerY((byte) -27, 1)) {
               stackIn_54_1 = 0;
             } else {
               stackIn_54_1 = 1;
@@ -227,7 +227,7 @@ final class QuickChatCategoryCache {
           if (var2Lifetime6 != 0 &&
             EmailAvailabilityValidator.field_k.action == 0 &&
             0 == ThumbnailStateFactory.field_d.field_V.possessorTeam) {
-            SelectableAchievementIcon.b(200, -2, -100, 30);
+            SelectableAchievementIcon.startTutorialKick(200, -2, -100, 30);
           }
           var2Lifetime6 = var2Lifetime6 != 0 & QuickChatCategory.advanceToPoint(8, (byte) 86, 29360128, LoginResponseUiSupport.field_c, 36438016) ? 1 : 0;
           stackIn_26_0 = var2Lifetime6;

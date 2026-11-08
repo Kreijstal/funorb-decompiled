@@ -14,7 +14,7 @@ abstract class SpriteState extends DualLinkNode {
     static String field_u;
     int field_w;
 
-    final static void a(int param0, int param1) {
+    final static void sendHostedGamePreferences(int param0, int param1) {
         CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
         var2.writeIsaacByte(param1, (byte) 108);
         var2.field_n = var2.field_n + 1;
@@ -32,7 +32,7 @@ abstract class SpriteState extends DualLinkNode {
 
     abstract void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, boolean param4) {
+    final static void updateHostedGameLobby(boolean param0, int param1, int param2, boolean param3, boolean param4) {
         UiLayoutNode stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
         int stackIn_37_0 = 0;
@@ -399,7 +399,7 @@ abstract class SpriteState extends DualLinkNode {
         param0 = (param0 << 4) + (var7 & 15);
         this.rotateNearest(var6, var7, param3, param0, param2, param4);
         if (param1 != 24407) {
-          SpriteState.a(false, 46, 70, true, false);
+          SpriteState.updateHostedGameLobby(false, 46, 70, true, false);
         }
     }
 
@@ -503,7 +503,7 @@ abstract class SpriteState extends DualLinkNode {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -28) {
-          SpriteState.a(47, -58);
+          SpriteState.sendHostedGamePreferences(47, -58);
         }
         field_p = null;
         field_t = null;

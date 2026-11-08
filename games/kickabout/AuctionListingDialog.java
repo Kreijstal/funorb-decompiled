@@ -19,7 +19,7 @@ final class AuctionListingDialog extends MessageDialog {
         try {
           this.field_G = param1 ? true : false;
           this.field_J = param0;
-          var6 = AccountMessagePanel.a(this.field_J.getListingType((byte) 37), false, this.field_J.b(6));
+          var6 = AccountMessagePanel.formatAuctionLogMessage(this.field_J.getListingType((byte) 37), false, this.field_J.getEventAmount(6));
           this.setMessageContent(var6, this.field_t, this.field_D, -87, this.field_u);
           dupTemp$0 = this.field_i[0];
           dupTemp$0.field_s = dupTemp$0.field_s - 30;
@@ -46,7 +46,7 @@ final class AuctionListingDialog extends MessageDialog {
         BuyPlayerDialog.field_K.addLast(this.field_J, 3);
         ((AuctionsScreen) (VertexNormal.getMenuScreen(-104, 16))).field_H = -1L;
         if (param1 == 1) {
-          DelayedServerPacket.a(16, true, -2);
+          DelayedServerPacket.requestScreenTransition(16, true, -2);
         }
     }
 

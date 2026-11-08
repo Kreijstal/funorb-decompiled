@@ -127,7 +127,7 @@ final class AnimationClip {
         KitPatternMaskSupport.field_c = param3;
     }
 
-    private final void a(int param0, PacketBuffer param1, int param2) {
+    private final void decodeTag(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var7 = 0;
         RuntimeException stackIn_59_0 = null;
@@ -302,7 +302,7 @@ final class AnimationClip {
           while (true) {
             var3_int = param1.readUnsignedByte((byte) -124);
             if (var3_int != 0) {
-              this.a(var3_int, param1, param0 ^ 118);
+              this.decodeTag(var3_int, param1, param0 ^ 118);
               continue;
             }
             break;

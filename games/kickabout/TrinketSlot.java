@@ -44,7 +44,7 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
         }
     }
 
-    final static MeshData a(boolean param0, int param1, boolean[][] param2, byte param3, boolean[][] param4, int param5, int param6) {
+    final static MeshData createAlternateFootballerMesh(boolean param0, int param1, boolean[][] param2, byte param3, boolean[][] param4, int param5, int param6) {
         MeshData[] array$0 = null;
         MeshData stackIn_7_0;
         MeshData stackIn_7_1;

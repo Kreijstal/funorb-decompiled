@@ -239,7 +239,7 @@ final class PlayingView extends MatchPhaseView {
           this.field_a.field_X.goalCount < 40) {
           stackIn_61_1 = (var6 != 0);
           this.field_L = stackIn_61_1;
-          AppletContextSupport.a(RankingsScreen.field_C, NanoTickClock.field_n, true, this.field_L);
+          AppletContextSupport.updatePitchAmbientMusic(RankingsScreen.field_C, NanoTickClock.field_n, true, this.field_L);
         }
         if (NanoTickClock.field_n) {
           if (RankingsScreen.field_C == 1 ||
@@ -305,7 +305,7 @@ final class PlayingView extends MatchPhaseView {
           stackIn_116_1 = NanoTickClock.field_n;
           stackIn_116_2 = true;
           stackIn_117_3 = (var5 == 0);
-          AppletContextSupport.a(stackIn_116_0, stackIn_116_1, stackIn_116_2, stackIn_117_3);
+          AppletContextSupport.updatePitchAmbientMusic(stackIn_116_0, stackIn_116_1, stackIn_116_2, stackIn_117_3);
           if (NanoTickClock.field_n) {
             if (RankingsScreen.field_C == 1) {
               stackIn_122_0 = false;
@@ -466,12 +466,12 @@ final class PlayingView extends MatchPhaseView {
               var12[99] ||
               var12[96] ||
               var12[97])) {
-              NotCommand.$cfr$intArgs$a$7ffe4b125357(50, false);
+              NotCommand.setMovementKeyLayout(50, false);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            NotCommand.$cfr$intArgs$a$7ffe4b125357(50, true);
+            NotCommand.setMovementKeyLayout(50, true);
           }
         }
         if (this.field_l) {
@@ -691,9 +691,9 @@ final class PlayingView extends MatchPhaseView {
             }
           }
           this.field_r.addLast(ValidatedTextWidget.createBallDrawEntry((RenderedBall) (this.field_a.field_V), false), 3);
-          this.field_r.addLast(CheckboxPainter.a(true, 115), 3);
+          this.field_r.addLast(CheckboxPainter.createGoalSceneryEntry(true, 115), 3);
           var3_intLifetime1 = -88 / ((4 - param1) / 50);
-          this.field_r.addLast(CheckboxPainter.a(false, 92), 3);
+          this.field_r.addLast(CheckboxPainter.createGoalSceneryEntry(false, 92), 3);
           if (param0 != null) {
             var4 = (WorldDrawEntry) (param0.first(24009));
             while (var4 != null) {
@@ -1155,7 +1155,7 @@ final class PlayingView extends MatchPhaseView {
           var6_int = this.getFocusedParticipant(-41);
           this.field_C = SetLagCommand.createParticipantNameSprites((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].team);
           this.field_l = true;
-          MainMenuScreen.a(this.field_h, param1, param0, true);
+          MainMenuScreen.configureFootballerOverlays(this.field_h, param1, param0, true);
           ArrayWidgetContainer.initializePlayerArrows(0, param0, var6_int, this.field_C);
           CachedTextLayout.initializeMatchMinimap(param0, var6_int, 50);
           KitPatternMaskSupport.buildMatchKitPreviewSprites(-3, param0, this.field_h);
@@ -1295,7 +1295,7 @@ final class PlayingView extends MatchPhaseView {
             CommonGame.drawOffscreenPlayerArrows(false);
           }
         } else {
-          NamedValueEntry.a((byte) 70);
+          NamedValueEntry.drawGoalScoreOverlay((byte) 70);
         }
         if (this.field_f &&
           this.field_a.timeLimit < this.field_a.phaseTime) {
@@ -1356,7 +1356,7 @@ final class PlayingView extends MatchPhaseView {
           MyKitScreen.field_O)) {
           stackIn_8_0 = 50;
           stackIn_9_1 = (83 == param2);
-          NotCommand.$cfr$intArgs$a$7ffe4b125357(stackIn_8_0, stackIn_9_1);
+          NotCommand.setMovementKeyLayout(stackIn_8_0, stackIn_9_1);
         }
         if (AchievementsScreen.hasJagexModeratorRights(false) &&
           GameplayHelpScreen.field_G[81] &&
@@ -1541,7 +1541,7 @@ final class PlayingView extends MatchPhaseView {
           } else {
             if (!TournamentChampionDialog.isLogoSequenceComplete(-86)) {
               SoftwareRasterizer.clearFramebuffer();
-              ValidationState.a(320, 240, (byte) 122);
+              ValidationState.drawLogoSequence(320, 240, (byte) 122);
               WidgetStyleFactory.drawRasterToCanvas(27744, 0, 0, param0);
             } else {
               if (RasterGlowSupport.field_c == 0) {

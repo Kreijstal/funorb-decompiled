@@ -71,7 +71,7 @@ final class TeamSelectionView extends MatchPhaseView {
           TeamSelectionView.drawWrappedTextPanel(var4_ref_String, 302, 46, 316, 88, 0);
           stackIn_24_0 = this.field_l;
           stackIn_25_1 = (var2 != 0) ? false : true;
-          ((CheckboxLabelWidget) (Object) stackIn_24_0).a(stackIn_25_1, (byte) 46);
+          ((CheckboxLabelWidget) (Object) stackIn_24_0).drawCheckboxLabel(stackIn_25_1, (byte) 46);
         }
         this.field_t.draw(96, false);
         var4Lifetime1 = 128;

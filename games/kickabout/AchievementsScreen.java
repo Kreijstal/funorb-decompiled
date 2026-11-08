@@ -406,7 +406,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         RenderedBall.field_C = -1;
     }
 
-    final static int a(byte param0, int param1) {
+    final static int getOffPitchPlayerY(byte param0, int param1) {
         if (param0 == -27) {
           return 88080384 + (100 * param1 + 500 << 16);
         }

@@ -75,7 +75,7 @@ final class SessionUrlSupport {
             !SpriteState.field_t.equals(param0.getParameter("session"))) {
             var4 = SpriteState.field_t;
           }
-          stackIn_11_0 = StatChoiceDialog.a(param1, (String) (var4), -1, (String) (var3), false);
+          stackIn_11_0 = StatChoiceDialog.rewriteAppletUrl(param1, (String) (var4), -1, (String) (var3), false);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

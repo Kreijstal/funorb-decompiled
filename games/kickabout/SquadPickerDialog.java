@@ -215,7 +215,7 @@ final class SquadPickerDialog extends MessageDialog {
         this.field_H = new SquadGridWidget(GameLoopApplet.field_E);
     }
 
-    final static void g(byte param0) {
+    final static void showLoginAndResetClientStage(byte param0) {
         if (!GameSoundEffect.field_f) {
           throw new IllegalStateException();
         }

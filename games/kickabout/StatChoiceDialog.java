@@ -159,7 +159,7 @@ final class StatChoiceDialog extends MessageDialog {
         return 280;
     }
 
-    final static java.net.URL a(java.net.URL param0, String param1, int param2, String param3, boolean param4) {
+    final static java.net.URL rewriteAppletUrl(java.net.URL param0, String param1, int param2, String param3, boolean param4) {
         try {
           StringBuilder discarded$0 = null;
           StringBuilder discarded$1 = null;
@@ -358,13 +358,13 @@ final class StatChoiceDialog extends MessageDialog {
           }
           var9 = 0;
           if (0 == var4) {
-            var9 = this.field_J.trinketPowerBonus(true, IntValueNode.b(-79));
+            var9 = this.field_J.trinketPowerBonus(true, IntValueNode.canUseMemberTrinkets(-79));
           }
           if (var4 == 1) {
-            var9 = this.field_J.trinketSpeedBonus(5205, IntValueNode.b(-79));
+            var9 = this.field_J.trinketSpeedBonus(5205, IntValueNode.canUseMemberTrinkets(-79));
           }
           if (var4 == 2) {
-            var9 = this.field_J.trinketTackleBonus((byte) 120, IntValueNode.b(27));
+            var9 = this.field_J.trinketTackleBonus((byte) 120, IntValueNode.canUseMemberTrinkets(27));
           }
           SoftwareDrawingSupport.drawStatBar(16 + var5, 9 + var6, this.field_M[var4], var4, true, var9);
         }

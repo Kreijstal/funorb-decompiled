@@ -85,7 +85,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
         int var9Lifetime1Lifetime1;
         var14 = Kickabout.field_G;
         try {
-          var15 = FootballerPreview.a(-5275);
+          var15 = FootballerPreview.getSelectedPitchSprite(-5275);
           if (IsSixCommand.field_B &&
             var15 != null) {
             SoftwareRasterizer.fillRect(0, 0, 640, 480, ConsoleCommand.field_x[KitPatternMaskSupport.field_c][RankingsScreen.field_C]);

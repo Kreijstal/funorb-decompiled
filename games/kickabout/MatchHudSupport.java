@@ -119,7 +119,7 @@ final class MatchHudSupport {
           return;
         }
         int var4 = LineupPositionSupport.lineupSlotX(70, param2);
-        int var5 = AchievementsScreen.a((byte) -27, param3);
+        int var5 = AchievementsScreen.getOffPitchPlayerY((byte) -27, param3);
         RenderedFootballer var6 = (RenderedFootballer) (ThumbnailStateFactory.field_d.field_P[param3][param2]);
         int var7 = !param0 ? 80 + TextLayoutLine.screenToWorldY(-6779, 480) : TextLayoutLine.screenToWorldY(-6779, 0) - 50;
         if (var6.positionY != var5 &&

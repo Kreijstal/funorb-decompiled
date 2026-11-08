@@ -48,21 +48,21 @@ final class MenuButton {
             if (this.kind != 1) {
               if (this.kind == 2) {
                 if (null != MachineTokenStorageSupport.field_e) {
-                  DelayedServerPacket.a(-1, param1, param0 - 1);
+                  DelayedServerPacket.requestScreenTransition(-1, param1, param0 - 1);
                 } else {
                   if (SortCriterion.field_l != null) {
-                    DelayedServerPacket.a(-2, param1, param0 ^ 1);
+                    DelayedServerPacket.requestScreenTransition(-2, param1, param0 ^ 1);
                   }
                 }
               } else {
                 if (6 == this.kind) {
-                  DelayedServerPacket.a(0, param1, -2);
+                  DelayedServerPacket.requestScreenTransition(0, param1, -2);
                 } else {
                   if (this.kind == 27) {
-                    DelayedServerPacket.a(17, param1, -2);
+                    DelayedServerPacket.requestScreenTransition(17, param1, -2);
                   } else {
                     if (20 == this.kind) {
-                      DelayedServerPacket.a(11, param1, -2);
+                      DelayedServerPacket.requestScreenTransition(11, param1, -2);
                       TickClock.field_j = true;
                     } else {
                       if (18 != this.kind) {
@@ -70,16 +70,16 @@ final class MenuButton {
                           if (45 != this.kind) {
                             if (this.kind != 48) {
                               if (this.kind == 46) {
-                                DelayedServerPacket.a(24, param1, -2);
+                                DelayedServerPacket.requestScreenTransition(24, param1, -2);
                               } else {
                                 if (this.kind == 28) {
-                                  DelayedServerPacket.a(14, param1, -2);
+                                  DelayedServerPacket.requestScreenTransition(14, param1, -2);
                                 } else {
                                   if (this.kind == 25) {
-                                    DelayedServerPacket.a(15, param1, -2);
+                                    DelayedServerPacket.requestScreenTransition(15, param1, -2);
                                   } else {
                                     if (this.kind == 26) {
-                                      DelayedServerPacket.a(16, param1, -2);
+                                      DelayedServerPacket.requestScreenTransition(16, param1, -2);
                                     } else {
                                       if (this.kind != 42) {
                                         if (43 == this.kind) {
@@ -91,29 +91,29 @@ final class MenuButton {
                                             if (this.kind != 22) {
                                               if (this.kind != 4) {
                                                 if (33 == this.kind) {
-                                                  DelayedServerPacket.a(19, param1, -2);
+                                                  DelayedServerPacket.requestScreenTransition(19, param1, -2);
                                                 } else {
                                                   if (this.kind == 34) {
-                                                    DelayedServerPacket.a(20, param1, param0 ^ 1);
+                                                    DelayedServerPacket.requestScreenTransition(20, param1, param0 ^ 1);
                                                   } else {
                                                     if (this.kind == 35) {
-                                                      DelayedServerPacket.a(22, param1, -2);
+                                                      DelayedServerPacket.requestScreenTransition(22, param1, -2);
                                                     } else {
                                                       if (this.kind == 36) {
-                                                        DelayedServerPacket.a(21, param1, param0 - 1);
+                                                        DelayedServerPacket.requestScreenTransition(21, param1, param0 - 1);
                                                       } else {
                                                         if (this.kind != 24) {
                                                           if (this.kind == 7) {
                                                             RasterGlowSupport.returnToPreviousScreen(param0 ^ -106, param1);
                                                           } else {
                                                             if (this.kind == 3) {
-                                                              DelayedServerPacket.a(7, param1, param0 ^ 1);
+                                                              DelayedServerPacket.requestScreenTransition(7, param1, param0 ^ 1);
                                                             } else {
                                                               if (this.kind != 5) {
                                                                 if (this.kind != 8) {
                                                                   if (this.kind == 9) {
                                                                     MachineTokenStorageSupport.field_e.offerDraw(-94);
-                                                                    DelayedServerPacket.a(-1, param1, param0 - 1);
+                                                                    DelayedServerPacket.requestScreenTransition(-1, param1, param0 - 1);
                                                                   } else {
                                                                     if (10 != this.kind) {
                                                                       if (this.kind != 11) {
@@ -121,7 +121,7 @@ final class MenuButton {
                                                                           QuickChatCategoryCache.returnToLobby(param0 + 1);
                                                                         } else {
                                                                           if (this.kind == 55) {
-                                                                            NanoTickClock.c((byte) -59);
+                                                                            NanoTickClock.sendTournamentRoundExit((byte) -59);
                                                                           } else {
                                                                             if (this.kind == 13) {
                                                                               AccountRequestDialog.field_ib = 0;
@@ -130,7 +130,7 @@ final class MenuButton {
                                                                                 if (this.kind != 19) {
                                                                                   if (this.kind != 32) {
                                                                                     if (49 == this.kind) {
-                                                                                      if (!EmailSyntaxValidator.c((byte) -42)) {
+                                                                                      if (!EmailSyntaxValidator.hasPrivilegedPlatformAccess((byte) -42)) {
                                                                                         ColorQuantizationBox.showMessageDialog(39, (byte) 99);
                                                                                       } else {
                                                                                         stackIn_81_0 = !(ByteStorage.field_c);
@@ -163,7 +163,7 @@ final class MenuButton {
                                                                       }
                                                                     } else {
                                                                       MachineTokenStorageSupport.field_e.resign(-76);
-                                                                      DelayedServerPacket.a(-1, param1, -2);
+                                                                      DelayedServerPacket.requestScreenTransition(-1, param1, -2);
                                                                     }
                                                                   }
                                                                 } else {
@@ -181,14 +181,14 @@ final class MenuButton {
                                                             }
                                                           }
                                                         } else {
-                                                          DelayedServerPacket.a(12, param1, param0 - 1);
+                                                          DelayedServerPacket.requestScreenTransition(12, param1, param0 - 1);
                                                         }
                                                       }
                                                     }
                                                   }
                                                 }
                                               } else {
-                                                DelayedServerPacket.a(8, param1, -2);
+                                                DelayedServerPacket.requestScreenTransition(8, param1, -2);
                                               }
                                             } else {
                                               ((PagedHelpScreen) (AuctionLogEntry.field_h)).showNextPage(21);
@@ -203,16 +203,16 @@ final class MenuButton {
                                 }
                               }
                             } else {
-                              DelayedServerPacket.a(25, param1, param0 - 1);
+                              DelayedServerPacket.requestScreenTransition(25, param1, param0 - 1);
                             }
                           } else {
-                            DelayedServerPacket.a(23, param1, param0 ^ 1);
+                            DelayedServerPacket.requestScreenTransition(23, param1, param0 ^ 1);
                           }
                         } else {
-                          DelayedServerPacket.a(13, param1, -2);
+                          DelayedServerPacket.requestScreenTransition(13, param1, -2);
                         }
                       } else {
-                        DelayedServerPacket.a(9, param1, -2);
+                        DelayedServerPacket.requestScreenTransition(9, param1, -2);
                       }
                     }
                   }
@@ -226,7 +226,7 @@ final class MenuButton {
                   if (!GameLoopApplet.field_E.hasFourAvailablePlayers((byte) 64)) {
                     SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 5);
                   } else {
-                    MouseWheelInput.a(-1822);
+                    MouseWheelInput.requestGameExit(-1822);
                   }
                 }
               } else {
@@ -362,7 +362,7 @@ final class MenuButton {
             }
             var9 = QuickChatPhraseDefinition.loadSpriteByName("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 119, "arrowkey");
             var10 = QuickChatPhraseDefinition.loadSpriteByName("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 43, "key");
-            AccountRegistrationPanel.field_C = AuctionsScreen.a(3, var9);
+            AccountRegistrationPanel.field_C = AuctionsScreen.createMovementKeySprites(3, var9);
             DebugConsole.field_y = new Sprite[][]{ThumbnailStateFactory.createThumbnailStates(0, PlatformTaskState.field_a, var10, var10.field_o), ThumbnailStateFactory.createThumbnailStates(0, SocialUiState.field_c, var10, 62)};
             PlayAreaMovementSupport.field_d = new Sprite[]{ThumbnailStateFactory.createThumbnailStates(0, RasterGammaSupport.field_d[0], var10, 50)[1], ThumbnailStateFactory.createThumbnailStates(param0 - 2, RasterGammaSupport.field_d[1], var10, 50)[1]};
             DirectByteStorage.field_g = QuickChatPhraseDefinition.loadSpriteByName("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 78, "mouse");
@@ -424,7 +424,7 @@ final class MenuButton {
         this.field_n[var4].draw(param1 - (this.width >> 1), -(this.height >> 1) + param0);
         if (this.kind != 32) {
           if (this.kind == 49 &&
-            EmailSyntaxValidator.c((byte) -42)) {
+            EmailSyntaxValidator.hasPrivilegedPlatformAccess((byte) -42)) {
             stackIn_40_1 = AccountTermsPanel.field_K;
             if (ByteStorage.field_c) {
               stackIn_41_2 = 1;
@@ -588,7 +588,7 @@ final class MenuButton {
         if (21 != this.kind) {
           if (22 != this.kind) {
             if (49 == this.kind &&
-              !EmailSyntaxValidator.c((byte) -42)) {
+              !EmailSyntaxValidator.hasPrivilegedPlatformAccess((byte) -42)) {
               param1 = 11184810;
               this.field_n[0] = AccountRegistrationPanel.createButtonStateSprite(var4 != 0, (byte) -52, 0, var5, param1);
               this.field_n[1] = this.field_n[0];

@@ -12,7 +12,7 @@ final class SpriteButtonPainter extends TextWidgetPainter {
     static String field_u;
     static int field_v;
 
-    final static void a(int param0) {
+    final static void initializeMinimapPitchSprite(int param0) {
         PitchOptionTile.field_yb = 80;
         IconLabel.field_Bb = 120;
         ClientInteractionSupport.field_d = -IconLabel.field_Bb + 480 - 21;
@@ -117,7 +117,7 @@ final class SpriteButtonPainter extends TextWidgetPainter {
         this(2188450, 2591221, 9543);
     }
 
-    final static void a(int param0, byte param1, String param2) {
+    final static void parseFormationCoordinates(int param0, byte param1, String param2) {
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
         String[] var3 = null;
@@ -135,7 +135,7 @@ final class SpriteButtonPainter extends TextWidgetPainter {
           var5 = 0;
           if (param1 <= 125) {
             var6 = (String) null;
-            SpriteButtonPainter.a(72, (byte) -7, (String) null);
+            SpriteButtonPainter.parseFormationCoordinates(72, (byte) -7, (String) null);
           }
           while (var5 < 4) {
             incrementValue$4 = var4;

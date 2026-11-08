@@ -23,7 +23,7 @@ final class ValidationState {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void drawLogoSequence(int param0, int param1, byte param2) {
         int var3;
         int var4;
         int var5;

@@ -61,7 +61,7 @@ final class IterableNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void updateCameraSmoothing(boolean param0, byte param1) {
         double stackIn_5_0 = 0.0;
         int stackIn_17_0 = 0;
         int stackIn_28_0 = 0;

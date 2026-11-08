@@ -82,7 +82,7 @@ final class MeshPreviewSupport {
           }
           ValidatedTextWidget.field_Z.processPointerFrame(HuffmanTextSupport.field_c, 31947, TournamentChampionDialog.field_J, true);
           if (param0 <= 104) {
-            MeshPreviewSupport.b(104);
+            MeshPreviewSupport.disableTournamentChatPrefix(104);
           }
           ValidatedTextWidget.field_Z.advanceModalAnimations(2);
           while (TexturedPanelPainter.pollKeyEvent(-59)) {
@@ -96,7 +96,7 @@ final class MeshPreviewSupport {
         }
     }
 
-    final static void b(int param0) {
+    final static void disableTournamentChatPrefix(int param0) {
         GameOverView.field_R = false;
         if (param0 != 0) {
           field_a = (String) null;

@@ -150,7 +150,7 @@ final class MatchTextInputOverlay implements OverlayLayer {
 
     public final void update(int param0, boolean param1) {
         String var4;
-        MeshPreviewSupport.b(0);
+        MeshPreviewSupport.disableTournamentChatPrefix(0);
         var4 = (String) null;
         ReceivedAuctionItem.setChatChannelLabel((String) null, -1);
         if (param0 != -25) {
@@ -161,14 +161,14 @@ final class MatchTextInputOverlay implements OverlayLayer {
             if (MachineTokenStorageSupport.field_e != null &&
               MachineTokenStorageSupport.field_e.isTournamentMatch && (!MachineTokenStorageSupport.field_e.isSpectator(param0 ^ 25) ||
               MachineTokenStorageSupport.field_e.usesTournamentSpectatorControls(-21660))) {
-              NetworkArchiveRequest.h(param0 ^ 15419);
+              NetworkArchiveRequest.enableTournamentChatPrefix(param0 ^ 15419);
               ReceivedAuctionItem.setChatChannelLabel(AccountRegistrationResponse.field_h, param0 ^ 24);
-              AuctionTableWidget.a(6356832, (byte) -25);
+              AuctionTableWidget.setTournamentChatColor(6356832, (byte) -25);
             }
           } else {
-            NetworkArchiveRequest.h(-15396);
+            NetworkArchiveRequest.enableTournamentChatPrefix(-15396);
             ReceivedAuctionItem.setChatChannelLabel(SessionUrlSupport.field_g, -1);
-            AuctionTableWidget.a(6356832, (byte) -25);
+            AuctionTableWidget.setTournamentChatColor(6356832, (byte) -25);
           }
           this.field_i = this.field_i + 1;
           TextInputUiSupport.updateTextInput(true, 300, 320, param1);
@@ -189,7 +189,7 @@ final class MatchTextInputOverlay implements OverlayLayer {
         if (param0 != 11516) {
           return true;
         }
-        stackIn_6_0 = (this.isMatchInputActive(param0 ^ 11508)) && (MatchTransitionScreen.a(13, 12, 17860, 15));
+        stackIn_6_0 = (this.isMatchInputActive(param0 ^ 11508)) && (MatchTransitionScreen.handleChatShortcutKey(13, 12, 17860, 15));
         return stackIn_6_0;
     }
 

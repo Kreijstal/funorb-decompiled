@@ -14,7 +14,7 @@ final class TutorialScenerySupport {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int[] param14, int param15, int param16) {
+    final static void rasterizeSortedRgbTriangleHalfBlend(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int[] param14, int param15, int param16) {
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -386,7 +386,7 @@ final class TutorialScenerySupport {
                           var4.addLast(TrinketShopDialog.createGroundMarker(true, var2_int, 920), 3);
                         }
                         var4.addLast(UiKeyRoutingSupport.field_b, 3);
-                        var2 = ParticipantStatus.c(0);
+                        var2 = ParticipantStatus.createTutorialTargetMarker(0);
                         var2.setSpritePosition(896, 940, -51);
                         var4.addLast(var2, param0 + 1625);
                       }

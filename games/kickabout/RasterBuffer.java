@@ -10,7 +10,7 @@ abstract class RasterBuffer {
 
     abstract void drawImage(int param0, int param1, int param2, java.awt.Graphics param3);
 
-    final static void a(int param0, Sprite[] param1, int param2, int param3) {
+    final static void drawPitchStains(int param0, Sprite[] param1, int param2, int param3) {
         Sprite var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -120,7 +120,7 @@ abstract class RasterBuffer {
 
     abstract void initialize(int param0, int param1, int param2, java.awt.Component param3);
 
-    final static String[] a(String param0, int param1, byte param2) {
+    final static String[] wrapTextByCharacterCount(String param0, int param1, byte param2) {
         StringBuilder discarded$0 = null;
         int var12 = 0;
         String[] stackIn_4_0 = null;

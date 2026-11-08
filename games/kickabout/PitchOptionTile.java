@@ -120,7 +120,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               stackIn_10_2 = -2 + this.field_T;
               stackIn_10_3 = -2 + this.field_F - var6;
               stackIn_11_4 = (var2 != 0) ? false : true;
-              DraggableWidget.a(stackIn_10_0, stackIn_10_1, stackIn_10_2, stackIn_10_3, stackIn_11_4, var3 != 0, 4);
+              DraggableWidget.drawOptionIcon(stackIn_10_0, stackIn_10_1, stackIn_10_2, stackIn_10_3, stackIn_11_4, var3 != 0, 4);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -139,7 +139,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               stackIn_23_2 = -2 + this.field_T;
               stackIn_23_3 = -2 + this.field_F - var6;
               stackIn_24_4 = (var2 != 0) ? false : true;
-              DraggableWidget.a(stackIn_23_0, stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, var3 != 0, 4);
+              DraggableWidget.drawOptionIcon(stackIn_23_0, stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, var3 != 0, 4);
             } else {
               if (param0 == 0) {
                 stackIn_32_0 = var5;
@@ -147,7 +147,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_32_2 = -2 + this.field_T;
                 stackIn_32_3 = -2 + this.field_F - var6;
                 stackIn_33_4 = (var2 != 0) ? false : true;
-                DraggableWidget.a(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_33_4, var3 != 0, 4);
+                DraggableWidget.drawOptionIcon(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_33_4, var3 != 0, 4);
               } else {
                 this.field_Db = -70;
                 stackIn_40_0 = var5;
@@ -155,7 +155,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_40_2 = -2 + this.field_T;
                 stackIn_40_3 = -2 + this.field_F - var6;
                 stackIn_41_4 = (var2 != 0) ? false : true;
-                DraggableWidget.a(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, var3 != 0, 4);
+                DraggableWidget.drawOptionIcon(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, var3 != 0, 4);
               }
             }
           }
@@ -178,7 +178,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
             stackIn_62_2 = -2 + this.field_T;
             stackIn_62_3 = -2 + this.field_F - var6;
             stackIn_63_4 = (var2 != 0) ? false : true;
-            DraggableWidget.a(stackIn_62_0, stackIn_62_1, stackIn_62_2, stackIn_62_3, stackIn_63_4, var3 != 0, 4);
+            DraggableWidget.drawOptionIcon(stackIn_62_0, stackIn_62_1, stackIn_62_2, stackIn_62_3, stackIn_63_4, var3 != 0, 4);
           } else {
             if (this.field_zb == 3) {
               if (2 != this.field_Db) {
@@ -194,7 +194,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_77_2 = -2 + this.field_T;
                 stackIn_77_3 = -2 + this.field_F - var6;
                 stackIn_78_4 = (var2 != 0) ? false : true;
-                DraggableWidget.a(stackIn_77_0, stackIn_77_1, stackIn_77_2, stackIn_77_3, stackIn_78_4, var3 != 0, 4);
+                DraggableWidget.drawOptionIcon(stackIn_77_0, stackIn_77_1, stackIn_77_2, stackIn_77_3, stackIn_78_4, var3 != 0, 4);
                 ConsoleTokenCursor.field_d.drawCentered(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
                 if (var2 == 0) {
                   IsSixCommand.field_C.drawCentered(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
@@ -217,7 +217,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               stackIn_90_2 = -2 + this.field_T;
               stackIn_90_3 = -2 + this.field_F - var6;
               stackIn_91_4 = (var2 != 0) ? false : true;
-              DraggableWidget.a(stackIn_90_0, stackIn_90_1, stackIn_90_2, stackIn_90_3, stackIn_91_4, var3 != 0, 4);
+              DraggableWidget.drawOptionIcon(stackIn_90_0, stackIn_90_1, stackIn_90_2, stackIn_90_3, stackIn_91_4, var3 != 0, 4);
               ConsoleTokenCursor.field_d.drawCentered(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
               if (var2 == 0) {
                 IsSixCommand.field_C.drawCentered(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
@@ -233,7 +233,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               stackIn_99_2 = -2 + this.field_T;
               stackIn_99_3 = -2 + this.field_F - var6;
               stackIn_100_4 = (var2 != 0) ? false : true;
-              DraggableWidget.a(stackIn_99_0, stackIn_99_1, stackIn_99_2, stackIn_99_3, stackIn_100_4, var3 != 0, 4);
+              DraggableWidget.drawOptionIcon(stackIn_99_0, stackIn_99_1, stackIn_99_2, stackIn_99_3, stackIn_100_4, var3 != 0, 4);
             } else {
               this.field_Db = -70;
               stackIn_107_0 = var5;
@@ -241,7 +241,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               stackIn_107_2 = -2 + this.field_T;
               stackIn_107_3 = -2 + this.field_F - var6;
               stackIn_108_4 = (var2 != 0) ? false : true;
-              DraggableWidget.a(stackIn_107_0, stackIn_107_1, stackIn_107_2, stackIn_107_3, stackIn_108_4, var3 != 0, 4);
+              DraggableWidget.drawOptionIcon(stackIn_107_0, stackIn_107_1, stackIn_107_2, stackIn_107_3, stackIn_108_4, var3 != 0, 4);
             }
           }
         }
@@ -429,7 +429,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               stackIn_11_2 = -48 + param0;
               stackIn_11_3 = var5;
               stackIn_12_4 = (this.isOwned(-29050)) ? false : true;
-              DraggableWidget.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_12_4, false, param1 ^ 19);
+              DraggableWidget.drawOptionIcon(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_12_4, false, param1 ^ 19);
               decompiledFrameRemainder1 = false;
             }
             else {
@@ -448,7 +448,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               stackIn_21_2 = -48 + param0;
               stackIn_21_3 = var5;
               stackIn_22_4 = (this.isOwned(-29050)) ? false : true;
-              DraggableWidget.a(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_21_3, stackIn_22_4, false, param1 ^ 19);
+              DraggableWidget.drawOptionIcon(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_21_3, stackIn_22_4, false, param1 ^ 19);
             } else {
               if (this.field_zb != 3) {
                 stackIn_26_0 = var4;
@@ -456,7 +456,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_26_2 = -48 + param0;
                 stackIn_26_3 = var5;
                 stackIn_27_4 = (this.isOwned(-29050)) ? false : true;
-                DraggableWidget.a(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4, false, param1 ^ 19);
+                DraggableWidget.drawOptionIcon(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4, false, param1 ^ 19);
               } else {
                 if (this.field_Db != 1) {
                   stackIn_35_0 = var4;
@@ -464,7 +464,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                   stackIn_35_2 = -48 + param0;
                   stackIn_35_3 = var5;
                   stackIn_36_4 = (this.isOwned(-29050)) ? false : true;
-                  DraggableWidget.a(stackIn_35_0, stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_36_4, false, param1 ^ 19);
+                  DraggableWidget.drawOptionIcon(stackIn_35_0, stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_36_4, false, param1 ^ 19);
                 } else {
                   var5 += 8;
                   stackIn_31_0 = var4;
@@ -472,7 +472,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                   stackIn_31_2 = -48 + param0;
                   stackIn_31_3 = var5;
                   stackIn_32_4 = (this.isOwned(-29050)) ? false : true;
-                  DraggableWidget.a(stackIn_31_0, stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_32_4, false, param1 ^ 19);
+                  DraggableWidget.drawOptionIcon(stackIn_31_0, stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_32_4, false, param1 ^ 19);
                 }
               }
             }
@@ -495,7 +495,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_93_2 = -48 + param0;
                 stackIn_93_3 = var5;
                 stackIn_94_4 = (this.isOwned(-29050)) ? false : true;
-                DraggableWidget.a(stackIn_93_0, stackIn_93_1, stackIn_93_2, stackIn_93_3, stackIn_94_4, false, param1 ^ 19);
+                DraggableWidget.drawOptionIcon(stackIn_93_0, stackIn_93_1, stackIn_93_2, stackIn_93_3, stackIn_94_4, false, param1 ^ 19);
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -514,7 +514,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_103_2 = -48 + param0;
                 stackIn_103_3 = var5;
                 stackIn_104_4 = (this.isOwned(-29050)) ? false : true;
-                DraggableWidget.a(stackIn_103_0, stackIn_103_1, stackIn_103_2, stackIn_103_3, stackIn_104_4, false, param1 ^ 19);
+                DraggableWidget.drawOptionIcon(stackIn_103_0, stackIn_103_1, stackIn_103_2, stackIn_103_3, stackIn_104_4, false, param1 ^ 19);
               } else {
                 if (this.field_zb != 3) {
                   stackIn_108_0 = var4;
@@ -522,7 +522,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                   stackIn_108_2 = -48 + param0;
                   stackIn_108_3 = var5;
                   stackIn_109_4 = (this.isOwned(-29050)) ? false : true;
-                  DraggableWidget.a(stackIn_108_0, stackIn_108_1, stackIn_108_2, stackIn_108_3, stackIn_109_4, false, param1 ^ 19);
+                  DraggableWidget.drawOptionIcon(stackIn_108_0, stackIn_108_1, stackIn_108_2, stackIn_108_3, stackIn_109_4, false, param1 ^ 19);
                 } else {
                   if (this.field_Db != 1) {
                     stackIn_117_0 = var4;
@@ -530,7 +530,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                     stackIn_117_2 = -48 + param0;
                     stackIn_117_3 = var5;
                     stackIn_118_4 = (this.isOwned(-29050)) ? false : true;
-                    DraggableWidget.a(stackIn_117_0, stackIn_117_1, stackIn_117_2, stackIn_117_3, stackIn_118_4, false, param1 ^ 19);
+                    DraggableWidget.drawOptionIcon(stackIn_117_0, stackIn_117_1, stackIn_117_2, stackIn_117_3, stackIn_118_4, false, param1 ^ 19);
                   } else {
                     var5 += 8;
                     stackIn_113_0 = var4;
@@ -538,7 +538,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                     stackIn_113_2 = -48 + param0;
                     stackIn_113_3 = var5;
                     stackIn_114_4 = (this.isOwned(-29050)) ? false : true;
-                    DraggableWidget.a(stackIn_113_0, stackIn_113_1, stackIn_113_2, stackIn_113_3, stackIn_114_4, false, param1 ^ 19);
+                    DraggableWidget.drawOptionIcon(stackIn_113_0, stackIn_113_1, stackIn_113_2, stackIn_113_3, stackIn_114_4, false, param1 ^ 19);
                   }
                 }
               }
@@ -558,7 +558,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_49_2 = -48 + param0;
                 stackIn_49_3 = var5;
                 stackIn_50_4 = (this.isOwned(-29050)) ? false : true;
-                DraggableWidget.a(stackIn_49_0, stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_50_4, false, param1 ^ 19);
+                DraggableWidget.drawOptionIcon(stackIn_49_0, stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_50_4, false, param1 ^ 19);
                 ConsoleTokenCursor.field_d.drawCentered(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
                 return;
               }
@@ -571,7 +571,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_71_2 = -48 + param0;
                 stackIn_71_3 = var5;
                 stackIn_72_4 = (this.isOwned(-29050)) ? false : true;
-                DraggableWidget.a(stackIn_71_0, stackIn_71_1, stackIn_71_2, stackIn_71_3, stackIn_72_4, false, param1 ^ 19);
+                DraggableWidget.drawOptionIcon(stackIn_71_0, stackIn_71_1, stackIn_71_2, stackIn_71_3, stackIn_72_4, false, param1 ^ 19);
               } else {
                 if (this.field_Db != 1) {
                   stackIn_80_0 = var4;
@@ -579,7 +579,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                   stackIn_80_2 = -48 + param0;
                   stackIn_80_3 = var5;
                   stackIn_81_4 = (this.isOwned(-29050)) ? false : true;
-                  DraggableWidget.a(stackIn_80_0, stackIn_80_1, stackIn_80_2, stackIn_80_3, stackIn_81_4, false, param1 ^ 19);
+                  DraggableWidget.drawOptionIcon(stackIn_80_0, stackIn_80_1, stackIn_80_2, stackIn_80_3, stackIn_81_4, false, param1 ^ 19);
                 } else {
                   var5 += 8;
                   stackIn_76_0 = var4;
@@ -587,7 +587,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                   stackIn_76_2 = -48 + param0;
                   stackIn_76_3 = var5;
                   stackIn_77_4 = (this.isOwned(-29050)) ? false : true;
-                  DraggableWidget.a(stackIn_76_0, stackIn_76_1, stackIn_76_2, stackIn_76_3, stackIn_77_4, false, param1 ^ 19);
+                  DraggableWidget.drawOptionIcon(stackIn_76_0, stackIn_76_1, stackIn_76_2, stackIn_76_3, stackIn_77_4, false, param1 ^ 19);
                 }
               }
             } else {
@@ -598,7 +598,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_56_2 = -48 + param0;
                 stackIn_56_3 = var5;
                 stackIn_57_4 = (this.isOwned(-29050)) ? false : true;
-                DraggableWidget.a(stackIn_56_0, stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_57_4, false, param1 ^ 19);
+                DraggableWidget.drawOptionIcon(stackIn_56_0, stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_57_4, false, param1 ^ 19);
               } else {
                 if (this.field_Db != 1) {
                   stackIn_65_0 = var4;
@@ -606,7 +606,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                   stackIn_65_2 = -48 + param0;
                   stackIn_65_3 = var5;
                   stackIn_66_4 = (this.isOwned(-29050)) ? false : true;
-                  DraggableWidget.a(stackIn_65_0, stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, false, param1 ^ 19);
+                  DraggableWidget.drawOptionIcon(stackIn_65_0, stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, false, param1 ^ 19);
                 } else {
                   var5 += 8;
                   stackIn_61_0 = var4;
@@ -614,7 +614,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                   stackIn_61_2 = -48 + param0;
                   stackIn_61_3 = var5;
                   stackIn_62_4 = (this.isOwned(-29050)) ? false : true;
-                  DraggableWidget.a(stackIn_61_0, stackIn_61_1, stackIn_61_2, stackIn_61_3, stackIn_62_4, false, param1 ^ 19);
+                  DraggableWidget.drawOptionIcon(stackIn_61_0, stackIn_61_1, stackIn_61_2, stackIn_61_3, stackIn_62_4, false, param1 ^ 19);
                 }
               }
             }

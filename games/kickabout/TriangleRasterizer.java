@@ -520,7 +520,7 @@ final class TriangleRasterizer {
         if (var19 != null &&
           field_h <= 10) {
           field_n = field_d.isLowDetailTexture(true, param18);
-          stackIn_6_0 = (field_d.b(-27077, param18) == 0);
+          stackIn_6_0 = (field_d.getTextureAlphaMode(-27077, param18) == 0);
           field_c = stackIn_6_0;
           var20 = param4 - param3;
           var21 = param1 - param0;

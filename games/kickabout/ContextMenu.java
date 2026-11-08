@@ -27,7 +27,7 @@ final class ContextMenu extends UiLayoutNode {
         LoadingProgressSupport.field_d.field_n[param0] = -param2;
     }
 
-    final static boolean b(int param0) {
+    final static boolean isAccountNameCheckPending(int param0) {
         if (param0 != -20010) {
           field_Ib = (String) null;
         }

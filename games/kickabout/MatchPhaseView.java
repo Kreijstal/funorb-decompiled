@@ -119,7 +119,7 @@ abstract class MatchPhaseView {
         var26 = Kickabout.field_G;
         try {
           if (param0) {
-            stackIn_4_0 = TrinketSlot.a(param9, param2, param4, (byte) -103, param6, param3, param10);
+            stackIn_4_0 = TrinketSlot.createAlternateFootballerMesh(param9, param2, param4, (byte) -103, param6, param3, param10);
             return stackIn_4_0;
           }
           var27 = new MeshData(new MeshData[]{WidgetContainer.field_v[param2][param8]}, 1);

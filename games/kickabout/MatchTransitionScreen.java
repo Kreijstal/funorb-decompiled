@@ -23,7 +23,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           var5 = ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
           PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)var4, (double)var5);
           SocialPlayerRow.resetCameraToTarget((byte) 93);
-          DelayedServerPacket.a(MatchHudSupport.field_d, false, -2);
+          DelayedServerPacket.requestScreenTransition(MatchHudSupport.field_d, false, -2);
           return;
         }
         if (KitPatternMaskSupport.field_c != ChatComposeSupport.field_g) {
@@ -48,7 +48,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         SocialPlayerRow.resetCameraToTarget((byte) -125);
         System.gc();
         AnimationPlayer.resetFrameTiming((byte) 98);
-        DelayedServerPacket.a(-1, false, -2);
+        DelayedServerPacket.requestScreenTransition(-1, false, -2);
     }
 
     final static int measureMenuText(int param0, String param1, boolean param2) {
@@ -85,7 +85,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         }
     }
 
-    final static boolean c(int param0, int param1) {
+    final static boolean isDeferredTypingKey(int param0, int param1) {
         boolean stackIn_27_0 = false;
         boolean stackIn_44_0 = false;
         boolean stackIn_64_0 = false;
@@ -292,7 +292,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2, int param3, boolean param4, boolean param5, int param6, boolean param7, int param8, boolean param9) {
+    final static void updateSharedLobbyInterface(boolean param0, int param1, boolean param2, int param3, boolean param4, boolean param5, int param6, boolean param7, int param8, boolean param9) {
         int var11;
         var11 = Kickabout.field_G;
         if (param4) {
@@ -307,7 +307,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
           }
           if (GameMediaSupport.field_b > 0) {
-            SpriteState.a(param7, param6, -2, param9, param4);
+            SpriteState.updateHostedGameLobby(param7, param6, -2, param9, param4);
           }
           if (TrinketCatalog.field_b &&
             PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
@@ -341,7 +341,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                     BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
                   }
                   if (GameMediaSupport.field_b > 0) {
-                    SpriteState.a(param7, param6, -2, param9, param4);
+                    SpriteState.updateHostedGameLobby(param7, param6, -2, param9, param4);
                   }
                   if (TrinketCatalog.field_b &&
                     PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
@@ -353,7 +353,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                     TickClock.field_d.field_lb = true;
                     SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
-                  DialogOverlay.a(param2, param0, param6, param8, param5, param3, param1);
+                  DialogOverlay.updateLobbyGameRows(param2, param0, param6, param8, param5, param3, param1);
                   SplashScreen.layoutPlayerRows(ClientException.field_c, param3, param2, param6, 38);
                   GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
                   return;
@@ -375,7 +375,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
               }
               if (GameMediaSupport.field_b > 0) {
-                SpriteState.a(param7, param6, -2, param9, param4);
+                SpriteState.updateHostedGameLobby(param7, param6, -2, param9, param4);
               }
               if (TrinketCatalog.field_b &&
                 PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
@@ -399,7 +399,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
               }
               if (GameMediaSupport.field_b > 0) {
-                SpriteState.a(param7, param6, -2, param9, param4);
+                SpriteState.updateHostedGameLobby(param7, param6, -2, param9, param4);
               }
               if (TrinketCatalog.field_b &&
                 PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
@@ -434,7 +434,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                     BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
                   }
                   if (GameMediaSupport.field_b > 0) {
-                    SpriteState.a(param7, param6, -2, param9, param4);
+                    SpriteState.updateHostedGameLobby(param7, param6, -2, param9, param4);
                   }
                   if (TrinketCatalog.field_b &&
                     PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
@@ -446,7 +446,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                     TickClock.field_d.field_lb = true;
                     SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
                   }
-                  DialogOverlay.a(param2, param0, param6, param8, param5, param3, param1);
+                  DialogOverlay.updateLobbyGameRows(param2, param0, param6, param8, param5, param3, param1);
                   SplashScreen.layoutPlayerRows(ClientException.field_c, param3, param2, param6, 38);
                   GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
                   return;
@@ -468,7 +468,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
               }
               if (GameMediaSupport.field_b > 0) {
-                SpriteState.a(param7, param6, -2, param9, param4);
+                SpriteState.updateHostedGameLobby(param7, param6, -2, param9, param4);
               }
               if (TrinketCatalog.field_b &&
                 PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
@@ -491,7 +491,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               if (ConsoleLexer.field_a > 0) {
                 BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
                 if (GameMediaSupport.field_b > 0) {
-                  SpriteState.a(param7, param6, -2, param9, param4);
+                  SpriteState.updateHostedGameLobby(param7, param6, -2, param9, param4);
                 }
                 if (TrinketCatalog.field_b &&
                   PlayerContextMenu.field_i.field_gc >= PlayerContextMenu.field_i.field_bc) {
@@ -505,7 +505,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                 }
               } else {
                 if (GameMediaSupport.field_b > 0) {
-                  SpriteState.a(param7, param6, -2, param9, param4);
+                  SpriteState.updateHostedGameLobby(param7, param6, -2, param9, param4);
                 }
                 if (!TrinketCatalog.field_b) {
                   LineupView.field_u.field_zb.field_E = null;
@@ -526,7 +526,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             }
           }
         }
-        DialogOverlay.a(param2, param0, param6, param8, param5, param3, param1);
+        DialogOverlay.updateLobbyGameRows(param2, param0, param6, param8, param5, param3, param1);
         SplashScreen.layoutPlayerRows(ClientException.field_c, param3, param2, param6, 38);
         GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
     }
@@ -542,7 +542,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         MachineTokenStorageSupport.field_e.drawParticipantPanels((byte) 80);
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean handleChatShortcutKey(int param0, int param1, int param2, int param3) {
         int stackIn_11_0 = 0;
         int stackIn_44_0 = 0;
         int var4;
@@ -566,16 +566,16 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             if (FixedQuaternion.field_e != 80) {
               return false;
             }
-            if (!AudioOutputSupport.a(true)) {
+            if (!AudioOutputSupport.isFreeChatAllowed(true)) {
               return false;
             }
             TextFieldNode.field_Wb = true;
             return true;
           }
-          if (!AudioOutputSupport.a(true)) {
+          if (!AudioOutputSupport.isFreeChatAllowed(true)) {
             return false;
           }
-          stackIn_44_0 = (!UiLayoutNode.a(false, param1, param0)) ? 0 : 1;
+          stackIn_44_0 = (!UiLayoutNode.handleChatInput(false, param1, param0)) ? 0 : 1;
           var4 = stackIn_44_0;
           if (80 == FixedQuaternion.field_e ||
             84 == FixedQuaternion.field_e) {
@@ -603,16 +603,16 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             if (FixedQuaternion.field_e != 80) {
               return false;
             }
-            if (!AudioOutputSupport.a(true)) {
+            if (!AudioOutputSupport.isFreeChatAllowed(true)) {
               return false;
             }
             TextFieldNode.field_Wb = true;
             return true;
           }
-          if (!AudioOutputSupport.a(true)) {
+          if (!AudioOutputSupport.isFreeChatAllowed(true)) {
             return false;
           }
-          stackIn_11_0 = (!UiLayoutNode.a(false, param1, param0)) ? 0 : 1;
+          stackIn_11_0 = (!UiLayoutNode.handleChatInput(false, param1, param0)) ? 0 : 1;
           var4 = stackIn_11_0;
           if (80 == FixedQuaternion.field_e) {
             TextFieldNode.field_Wb = false;

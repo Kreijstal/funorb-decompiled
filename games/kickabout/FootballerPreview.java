@@ -8,7 +8,7 @@ final class FootballerPreview {
     public static void releaseStatics(boolean param0) {
         field_a = null;
         if (!param0) {
-          FootballerPreview.a(112);
+          FootballerPreview.getSelectedPitchSprite(112);
         }
     }
 
@@ -54,7 +54,7 @@ final class FootballerPreview {
         }
     }
 
-    final static Sprite a(int param0) {
+    final static Sprite getSelectedPitchSprite(int param0) {
         if (param0 != -5275) {
           field_a = (String[]) null;
           return MeshObject.field_b[KitPatternMaskSupport.field_c][RankingsScreen.field_C];

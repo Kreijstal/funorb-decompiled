@@ -401,7 +401,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         RuntimeException var1 = null;
         var10 = Kickabout.field_G;
         try {
-          var12 = FootballerPreview.a(param0 ^ 5332);
+          var12 = FootballerPreview.getSelectedPitchSprite(param0 ^ 5332);
           var2 = MySquadScreen.worldToScreenX(param0 ^ 62, -var12.field_o - 15 + 120);
           var3 = MySquadScreen.worldToScreenX(-54, 10 + var12.field_o * 3 - 15);
           var4 = var12.field_v;

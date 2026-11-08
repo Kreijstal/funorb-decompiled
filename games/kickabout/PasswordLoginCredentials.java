@@ -189,7 +189,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           }
           var8 = new RegistrationRequestDialog(RankingsRequest.field_l, param4);
           RankingsRequest.field_l.pushModal(var8, false);
-          if (!DiagnosticsOverlaySupport.c((byte) 59)) {
+          if (!DiagnosticsOverlaySupport.hasTuhstatbutSetting((byte) 59)) {
             ArchiveIndex.field_a = null;
             ArchiveManager.field_c = param2;
             SocialUiState.field_b = param5;

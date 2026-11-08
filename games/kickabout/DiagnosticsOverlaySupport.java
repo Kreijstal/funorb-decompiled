@@ -15,7 +15,7 @@ final class DiagnosticsOverlaySupport {
         return param0 + 1L;
     }
 
-    final static int b(byte param0) {
+    final static int getMenuPanelWidth(byte param0) {
         if (param0 != 46) {
           field_c = (String) null;
         }
@@ -181,7 +181,7 @@ final class DiagnosticsOverlaySupport {
         }
     }
 
-    final static boolean c(byte param0) {
+    final static boolean hasTuhstatbutSetting(byte param0) {
         int var1 = 42 % ((param0 + 20) / 57);
         return RegistrationRequestDialog.hasTuhstatbutSetting(17, AppletContextSupport.getActiveApplet(71));
     }

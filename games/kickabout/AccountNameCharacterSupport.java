@@ -9,12 +9,12 @@ final class AccountNameCharacterSupport {
     static boolean field_f;
     static int field_e;
 
-    final static void a(byte param0) {
+    final static void requestAccountInterface(byte param0) {
         if (param0 > -10) {
           field_b = (int[][]) null;
         }
         if (RasterGlowSupport.field_c == 10 ||
-          !PitchSurfaceLoader.d(1)) {
+          !PitchSurfaceLoader.alwaysTrue(1)) {
           IntTripleCommand.openAccountInterface((byte) -54);
           RasterGlowSupport.field_c = 11;
         }
@@ -86,14 +86,14 @@ final class AccountNameCharacterSupport {
         field_d = new int[8][4];
         field_b = new int[8][4];
         field_c = new int[8][4][4];
-        SpriteButtonPainter.a(0, (byte) 126, "220,1014,676,1014,220,330,676,330");
-        SpriteButtonPainter.a(1, (byte) 126, "448,1044,448,672,230,300,666,300");
-        SpriteButtonPainter.a(2, (byte) 126, "448,994,448,450,190,350,706,350");
-        SpriteButtonPainter.a(3, (byte) 126, "160,944,736,944,448,400,448,994");
-        SpriteButtonPainter.a(4, (byte) 126, "240,1044,656,1044,448,300,448,672");
-        SpriteButtonPainter.a(5, (byte) 127, "250,894,646,1044,250,300,646,450");
-        SpriteButtonPainter.a(6, (byte) 127, "250,1044,646,824,250,520,646,300");
-        SpriteButtonPainter.a(7, (byte) 126, "448,1044,716,672,180,672,448,300");
+        SpriteButtonPainter.parseFormationCoordinates(0, (byte) 126, "220,1014,676,1014,220,330,676,330");
+        SpriteButtonPainter.parseFormationCoordinates(1, (byte) 126, "448,1044,448,672,230,300,666,300");
+        SpriteButtonPainter.parseFormationCoordinates(2, (byte) 126, "448,994,448,450,190,350,706,350");
+        SpriteButtonPainter.parseFormationCoordinates(3, (byte) 126, "160,944,736,944,448,400,448,994");
+        SpriteButtonPainter.parseFormationCoordinates(4, (byte) 126, "240,1044,656,1044,448,300,448,672");
+        SpriteButtonPainter.parseFormationCoordinates(5, (byte) 127, "250,894,646,1044,250,300,646,450");
+        SpriteButtonPainter.parseFormationCoordinates(6, (byte) 127, "250,1044,646,824,250,520,646,300");
+        SpriteButtonPainter.parseFormationCoordinates(7, (byte) 126, "448,1044,716,672,180,672,448,300");
         field_c[5] = new int[][]{new int[]{152, 768, 328, 440}, new int[]{416, 952, 288, 328}, new int[]{188, 128, 296, 360}, new int[]{480, 232, 268, 376}};
         field_c[1] = new int[][]{new int[]{352, 900, 184, 336}, new int[]{160, 540, 560, 344}, new int[]{168, 116, 328, 408}, new int[]{416, 44, 300, 488}};
         field_c[6] = new int[][]{new int[]{188, 996, 284, 320}, new int[]{400, 756, 356, 368}, new int[]{124, 420, 312, 344}, new int[]{444, 76, 252, 352}};

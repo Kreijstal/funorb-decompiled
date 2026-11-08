@@ -119,12 +119,12 @@ final class ShopPlayerSlot extends ListRow {
             }
             var8 = stackIn_16_0;
             if (0 == var6) {
-              stackIn_21_0 = this.field_Sb.trinketPowerBonus(true, IntValueNode.b(-91));
+              stackIn_21_0 = this.field_Sb.trinketPowerBonus(true, IntValueNode.canUseMemberTrinkets(-91));
             } else {
               if (var6 != 1) {
-                stackIn_21_0 = this.field_Sb.trinketTackleBonus((byte) 84, IntValueNode.b(99));
+                stackIn_21_0 = this.field_Sb.trinketTackleBonus((byte) 84, IntValueNode.canUseMemberTrinkets(99));
               } else {
-                stackIn_21_0 = this.field_Sb.trinketSpeedBonus(5205, IntValueNode.b(param0 + 118));
+                stackIn_21_0 = this.field_Sb.trinketSpeedBonus(5205, IntValueNode.canUseMemberTrinkets(param0 + 118));
               }
             }
             var9 = stackIn_21_0;

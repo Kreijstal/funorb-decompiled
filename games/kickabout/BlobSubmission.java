@@ -89,7 +89,7 @@ final class BlobSubmission extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void sendMatchmakingCancellation(int param0, byte param1) {
         CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
         var2.writeIsaacByte(param0, (byte) 109);
         var2.writeByte(127, 1);

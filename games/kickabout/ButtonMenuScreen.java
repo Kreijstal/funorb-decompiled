@@ -392,7 +392,7 @@ class ButtonMenuScreen extends AppScreen {
         this.slideOffsetX = 0;
     }
 
-    final static boolean d(int param0) {
+    final static boolean isTutorialLessonComplete(int param0) {
         int var2 = 0;
         boolean stackIn_6_0 = false;
         boolean stackIn_12_0 = false;
@@ -443,7 +443,7 @@ class ButtonMenuScreen extends AppScreen {
             var1_int = stackIn_49_0;
             for (var2 = 1; 4 > var2; var2++) {
               stackIn_53_0 = var1_int;
-              if (ThumbnailStateFactory.field_d.field_P[1][var2].positionY != AchievementsScreen.a((byte) -27, 1)) {
+              if (ThumbnailStateFactory.field_d.field_P[1][var2].positionY != AchievementsScreen.getOffPitchPlayerY((byte) -27, 1)) {
                 stackIn_54_1 = 0;
               } else {
                 stackIn_54_1 = 1;
@@ -577,7 +577,7 @@ class ButtonMenuScreen extends AppScreen {
     final static void enqueueLoginRequiredDialog(int param0) {
         ScrollPane.field_Jb.addLast(new LoginRequiredDialog(), 3);
         if (param0 != 16144) {
-          ButtonMenuScreen.d(-47);
+          ButtonMenuScreen.isTutorialLessonComplete(-47);
         }
     }
 
@@ -665,7 +665,7 @@ class ButtonMenuScreen extends AppScreen {
         }
     }
 
-    final static UiLayoutNode f(byte param0) {
+    final static UiLayoutNode getIgnoreListContent(byte param0) {
         if (param0 != -63) {
           return (UiLayoutNode) null;
         }

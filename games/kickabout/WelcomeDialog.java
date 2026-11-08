@@ -45,7 +45,7 @@ final class WelcomeDialog extends MessageDialog {
         }
     }
 
-    final static PlayerStats a(long param0, int param1, int param2, int param3, int param4) {
+    final static PlayerStats generateShopPlayer(long param0, int param1, int param2, int param3, int param4) {
         int stackIn_6_0 = 0;
         PlayerStats stackIn_18_0 = null;
         int stackIn_18_1 = 0;
@@ -77,7 +77,7 @@ final class WelcomeDialog extends MessageDialog {
         var16 = Kickabout.field_G;
         param2 = param2 & 15;
         if (param3 > -37) {
-          WelcomeDialog.a(-62L, -5, -19, -99, -27);
+          WelcomeDialog.generateShopPlayer(-62L, -5, -19, -99, -27);
         }
         var6 = param0;
         var6 = var6 ^ (long)(2 + param4);

@@ -16,7 +16,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
         }
     }
 
-    final static void a(int param0, int param1, CommonGame param2, boolean param3) {
+    final static void configureFootballerOverlays(int param0, int param1, CommonGame param2, boolean param3) {
         try {
           RegistrationRequestDialog.field_kb = param1;
           NotCommand.field_F = param2;
@@ -277,7 +277,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
                 SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 5);
               } else {
                 FootballerAiOverlaySupport.field_d.writeIsaacByte(90, (byte) 93);
-                DelayedServerPacket.a(26, true, -2);
+                DelayedServerPacket.requestScreenTransition(26, true, -2);
               }
             }
           }
@@ -301,7 +301,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
               SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 5);
             } else {
               FootballerAiOverlaySupport.field_d.writeIsaacByte(90, (byte) 93);
-              DelayedServerPacket.a(26, true, -2);
+              DelayedServerPacket.requestScreenTransition(26, true, -2);
             }
           }
         }

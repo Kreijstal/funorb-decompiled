@@ -189,11 +189,11 @@ final class AuctionLogEntry extends IntrusiveNode {
     }
 
     final static void drawSharedChatInterface(boolean param0, int param1) {
-        ThreeCommand.a(param0, param1 + 16355);
+        ThreeCommand.drawSharedLobbyPanels(param0, param1 + 16355);
         if (param1 != 0) {
           field_m = (StringBuilder) null;
         }
-        MouseWheelInput.a((byte) -125, param0);
+        MouseWheelInput.drawChatOverlays((byte) -125, param0);
     }
 
     final static Sprite[] createSolidNineSliceSprites(int param0, int param1, int param2, int param3) {

@@ -205,7 +205,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         return stackIn_14_0;
     }
 
-    final static Sprite[][][] a(int param0, Sprite param1) {
+    final static Sprite[][][] createMovementKeySprites(int param0, Sprite param1) {
         int var4_int = 0;
         int var6_int = 0;
         int var7_int = 0;
@@ -302,7 +302,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
 
     final void enterScreen(int param0, int param1, boolean param2) {
         super.enterScreen(param0 ^ 0, param1, param2);
-        IntrusiveNodeHashTable.a(GameLoopApplet.field_E.field_x, param0 + 415422632);
+        IntrusiveNodeHashTable.initializeCurrencyDisplay(GameLoopApplet.field_E.field_x, param0 + 415422632);
         this.field_N = true;
         this.field_B = new ReceivedAuctionItemRow[param0];
         this.field_G.installRows(0, (byte) -47, this.field_B, 5);
@@ -376,7 +376,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         SoftwareRasterizer.fillRoundedRectangleBlended(this.field_K.field_F + 8, 23 + this.field_K.field_T, this.field_K.field_q - 16, -30 + this.field_K.field_mb, 10, 65793, 96);
         ByteArrayPool.field_d.drawText(this.field_K.field_E, 13 + this.field_K.field_F, 17 + this.field_K.field_T, 16777215, -1);
         for (var3_int = 0; 4 > var3_int; var3_int++) {
-          this.field_E[var3_int].a(false, (byte) 46);
+          this.field_E[var3_int].drawCheckboxLabel(false, (byte) 46);
         }
         this.field_G.drawTable(-82);
         this.field_L.draw(63, false);
@@ -663,7 +663,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           this.requestAuctionPage(false, (byte) -126);
           LoginKind.playSelectionSound((byte) 24);
         }
-        QuickChatCategory.a(GameLoopApplet.field_E.field_x, 5464);
+        QuickChatCategory.updateCurrencyAnimation(GameLoopApplet.field_E.field_x, 5464);
     }
 
     final static void startComputerMatch(int param0, boolean param1) {
@@ -721,12 +721,12 @@ final class AuctionsScreen extends ButtonMenuScreen {
             MachineTokenStorageSupport.field_e.matchState.disableLocal = true;
             MachineTokenStorageSupport.field_e.matchState.field_b[1][3] = var4.squad[3];
             MachineTokenStorageSupport.field_e.beginPhase(param0 + 26405, 4);
-            PlayArea.a(MachineTokenStorageSupport.field_e.matchState, 0);
+            PlayArea.initializeTutorial(MachineTokenStorageSupport.field_e.matchState, 0);
           } else {
             MachineTokenStorageSupport.field_e.beginPhase(26415, 2);
             RenderedFootballer.enqueueFadingChatMessage(GameKeyHandler.field_a, true, (byte) -117);
           }
-          StringCursor.a(false, (byte) -122, MachineTokenStorageSupport.field_e.matchState.tier, MachineTokenStorageSupport.field_e.matchState.surface);
+          StringCursor.beginGameLoading(false, (byte) -122, MachineTokenStorageSupport.field_e.matchState.tier, MachineTokenStorageSupport.field_e.matchState.surface);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wf.IA(" + param0 + ',' + param1 + ')');
         }

@@ -14,8 +14,8 @@ final class PitchAppearanceSupport {
         int var4 = Kickabout.field_G;
         DateInputValidator.field_e = ServerTextTemplate.buildStadiumCrowdFrames(0, param1, param0 - 7, 11, true, 30);
         ClientInteractionSupport.field_e = ServerTextTemplate.buildStadiumCrowdFrames(30, param1, param0 ^ 111, 11, false, 60);
-        DualLinkNode.field_h = SortCriterion.a(60, param1, true, (byte) -67, 80, 11);
-        ModalPanel.field_G = SortCriterion.a(80, param1, false, (byte) -120, 95, 11);
+        DualLinkNode.field_h = SortCriterion.buildStadiumCrowdFrames(60, param1, true, (byte) -67, 80, 11);
+        ModalPanel.field_G = SortCriterion.buildStadiumCrowdFrames(80, param1, false, (byte) -120, 95, 11);
         ClientPacketFlushSupport.field_f = (Sprite[]) ((Object) new ArgbSprite[4]);
         if (param0 != -39) {
           return;

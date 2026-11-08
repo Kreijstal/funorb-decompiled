@@ -616,7 +616,7 @@ final class RenderedFootballer extends FootballerAgent {
         }
         var7Lifetime1 = 3;
         var8 = 1.0;
-        if (this.e(292603688)) {
+        if (this.usesCardinalOrDashMovement(292603688)) {
           var7Lifetime1 = 5;
           if (this.field_eb) {
             var7Lifetime1 = 16;
@@ -715,7 +715,7 @@ final class RenderedFootballer extends FootballerAgent {
           var8 = 0.0;
         }
         if (this.action == 11 &&
-          this.e(292603688) &&
+          this.usesCardinalOrDashMovement(292603688) &&
           param0) {
           var7Lifetime1 = 9;
         }
@@ -723,7 +723,7 @@ final class RenderedFootballer extends FootballerAgent {
           var8 = 2.0;
         }
         if (this.action == 1 &&
-          this.e(292603688)) {
+          this.usesCardinalOrDashMovement(292603688)) {
           var8 = (!this.stats.usesHotshotAbilities(this.member, (byte) -62)) ? 0.25 : 0.5;
         }
         if (!this.field_nb) {
@@ -759,7 +759,7 @@ final class RenderedFootballer extends FootballerAgent {
               this.field_mb.setFrame(0, 109);
             }
             if (this.field_ob == 15 &&
-              !this.e(292603688)) {
+              !this.usesCardinalOrDashMovement(292603688)) {
               this.field_mb.setFrame(0, 124);
             }
           }
@@ -825,8 +825,8 @@ final class RenderedFootballer extends FootballerAgent {
         UrlRequest.field_e = null;
         NetworkGameClient.showPendingServerNotice(true);
         param11 = UiInputRoutingSupport.routePointerInput(param4, 50, param5, param11, param13, param12, param1);
-        MatchTransitionScreen.a(false, param7, param9, param8, param10, param6, param5, param11, param3, param2);
-        StringCursor.a(param9, false, param8);
+        MatchTransitionScreen.updateSharedLobbyInterface(false, param7, param9, param8, param10, param6, param5, param11, param3, param2);
+        StringCursor.updateFriendsListActions(param9, false, param8);
         if (param0 >= -42) {
           field_S = (String) null;
         }

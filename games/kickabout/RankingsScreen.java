@@ -74,7 +74,7 @@ final class RankingsScreen extends ButtonMenuScreen {
     RankingsScreen() {
     }
 
-    private final void a(int param0, int param1, byte param2, String param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void drawRankingRow(int param0, int param1, byte param2, String param3, int param4, int param5, int param6, int param7, int param8) {
         int var12 = 0;
         int var13 = 0;
         String var15 = null;
@@ -280,13 +280,13 @@ final class RankingsScreen extends ButtonMenuScreen {
               var5 = "";
               var13Lifetime1 = var5;
               var13Lifetime1Lifetime1 = var5;
-              this.a(var7[4 * var9], var7[2 + 4 * var9], (byte) 104, var11[var9], var7[1 + 4 * var9], var4Lifetime1, var7[4 * var9 + 3], var9, var3);
+              this.drawRankingRow(var7[4 * var9], var7[2 + 4 * var9], (byte) 104, var11[var9], var7[1 + 4 * var9], var4Lifetime1, var7[4 * var9 + 3], var9, var3);
             }
             var3 += 25;
           }
           if (var8 == 0) {
             var4Lifetime1Lifetime1 = 16777215;
-            this.a(SocialListLayoutSupport.field_e.field_f, SocialListLayoutSupport.field_e.field_h, (byte) 105, ArchiveSource.field_e, SocialListLayoutSupport.field_e.field_m, var4Lifetime1Lifetime1, SocialListLayoutSupport.field_e.field_j, -1, var3);
+            this.drawRankingRow(SocialListLayoutSupport.field_e.field_f, SocialListLayoutSupport.field_e.field_h, (byte) 105, ArchiveSource.field_e, SocialListLayoutSupport.field_e.field_m, var4Lifetime1Lifetime1, SocialListLayoutSupport.field_e.field_j, -1, var3);
           }
         }
         var3Lifetime1 = 385 + ConsoleTokenCursor.field_d.field_G;

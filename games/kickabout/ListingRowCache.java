@@ -110,10 +110,10 @@ final class ListingRowCache {
             param4 = -1;
           }
           if (param0 != -1) {
-            LoginMethod.a(3, param1, param2, param0, 160);
+            LoginMethod.drawGridCellHighlight(3, param1, param2, param0, 160);
           }
           if (param4 != -1) {
-            LoginMethod.a(param3 + 99, param1, param2, param4, 50);
+            LoginMethod.drawGridCellHighlight(param3 + 99, param1, param2, param4, 50);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

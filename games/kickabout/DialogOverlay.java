@@ -53,7 +53,7 @@ final class DialogOverlay implements OverlayLayer {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6) {
+    final static void updateLobbyGameRows(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6) {
         int var18_int = 0;
         int var22_int = 0;
         UiLayoutNode dupTemp$0 = null;
@@ -601,7 +601,7 @@ final class DialogOverlay implements OverlayLayer {
                 if (var12.field_Cb && (!var12.field_ic ||
                   !var12.field_Xb &&
                   !var12.field_hc)) {
-                  GameLoopApplet.b(15848, param2, var12.getGameId((byte) 92));
+                  GameLoopApplet.sendSpectatorGameRequest(15848, param2, var12.getGameId((byte) 92));
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -732,7 +732,7 @@ final class DialogOverlay implements OverlayLayer {
           return WidgetStyleFactory.field_c.handleKey(param1, (byte) -21, param2);
         }
         if (param0 != 11516) {
-          DialogOverlay.a(true, true, 2, -89, false, 39, -5);
+          DialogOverlay.updateLobbyGameRows(true, true, 2, -89, false, 39, -5);
         }
         return false;
     }

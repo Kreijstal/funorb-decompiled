@@ -38,9 +38,9 @@ final class SectorCacheStore {
           synchronized (var5) {
             if (param2 >= 0 &&
               param2 <= this.field_d) {
-              var6 = this.a(true, 16, param1, param3, param2) ? 1 : 0;
+              var6 = this.writeFileSectors(true, 16, param1, param3, param2) ? 1 : 0;
               if (var6 == 0) {
-                var6 = this.a(false, 16, param1, param3, param2) ? 1 : 0;
+                var6 = this.writeFileSectors(false, 16, param1, param3, param2) ? 1 : 0;
               }
               if (param0 != 66) {
                 this.field_h = -36;
@@ -65,7 +65,7 @@ final class SectorCacheStore {
         }
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] readFile(int param0, int param1) {
         try {
           int var16 = 0;
           int incrementValue$2 = 0;
@@ -236,7 +236,7 @@ final class SectorCacheStore {
         }
     }
 
-    private final boolean a(boolean param0, int param1, int param2, byte[] param3, int param4) {
+    private final boolean writeFileSectors(boolean param0, int param1, int param2, byte[] param3, int param4) {
         try {
           RuntimeException stackIn_69_0 = null;
           StringBuilder stackIn_69_1 = null;

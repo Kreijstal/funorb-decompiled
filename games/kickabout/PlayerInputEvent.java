@@ -12,7 +12,7 @@ final class PlayerInputEvent extends DualLinkNode {
     ClubState field_t;
     byte field_p;
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int getAccountIconTier(int param0, byte param1, int param2) {
         if (param1 > -24) {
           field_n = (DisplayNameForm) null;
         }
@@ -65,7 +65,7 @@ final class PlayerInputEvent extends DualLinkNode {
         field_q = null;
     }
 
-    final static void a(boolean param0) {
+    final static void readRankingsResponse(boolean param0) {
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
         RankingsRequest stackIn_35_0 = null;

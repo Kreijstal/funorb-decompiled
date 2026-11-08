@@ -12,7 +12,7 @@ final class SocialPlayerRow extends UiLayoutNode {
     static int field_Db;
     UiLayoutNode field_Fb;
 
-    final static void a(int param0, int param1, BallAgent param2) {
+    final static void computeGoalkeeperTarget(int param0, int param1, BallAgent param2) {
         int[] stackIn_3_0;
         int stackIn_3_1;
         int[] stackIn_3_2;

@@ -8,7 +8,7 @@ final class PanelSpriteFactory {
 
     public static void releaseStatics(int param0) {
         if (param0 > -80) {
-          PanelSpriteFactory.a((byte) 122);
+          PanelSpriteFactory.advanceLogoSequence((byte) 122);
           field_a = null;
           field_c = null;
           return;
@@ -176,7 +176,7 @@ final class PanelSpriteFactory {
         }
     }
 
-    final static void a(byte param0) {
+    final static void advanceLogoSequence(byte param0) {
         if (param0 != -126) {
           field_a = (String[]) null;
           if (PlayerStats.field_p == 0 - ButtonMenuScreen.field_l) {

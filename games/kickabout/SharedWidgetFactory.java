@@ -40,7 +40,7 @@ class SharedWidgetFactory extends DualLinkNode {
         try {
           var2_int = param0.stringWidth(MatchingTextValidator.field_o[16]);
           var3 = param0.stringWidth(MatchingTextValidator.field_o[17]);
-          DraggableWidget.a(Math.max(var2_int, var3), param0, (byte) -46);
+          DraggableWidget.configureMenuButtonLayout(Math.max(var2_int, var3), param0, (byte) -46);
           var4 = new UiLayoutNode();
           var4.field_R = LeaguesScreen.field_B;
           var5 = new UiLayoutNode();

@@ -75,7 +75,7 @@ final class HighScoreQuery extends IntrusiveNode {
           return true;
         }
         if (!WriteIntegersCommand.field_C) {
-          return UiLayoutNode.a(false, param2, param0);
+          return UiLayoutNode.handleChatInput(false, param2, param0);
         }
         return false;
     }

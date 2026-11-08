@@ -177,7 +177,7 @@ final class ClubState {
           while (var8 != null) {
             var9 = new PlayerStats();
             var9.copyFrom((byte) -65, var8.getPlayerStats(-128));
-            var5 = new AuctionListing(var8.getAuctionId(-29), var8.getListingType((byte) 37), var8.getSlotIndex(3), var8.b(6), var9);
+            var5 = new AuctionListing(var8.getAuctionId(-29), var8.getListingType((byte) 37), var8.getSlotIndex(3), var8.getEventAmount(6), var9);
             this.auctionListings.addLast(var5, 3);
             var8 = (AuctionListing) (param0.auctionListings.next(33));
           }
@@ -821,7 +821,7 @@ final class ClubState {
                   boolean decompiledFrameRemainder0 = true;
                   boolean decompiledFrameCompleted0 = true;
                   if (-1 != var5) {
-                    var13 = WelcomeDialog.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
+                    var13 = WelcomeDialog.generateShopPlayer(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
                     var7_ref_up = var13;
                     var8 = 0;
                     if (-1 != var5) {
@@ -859,7 +859,7 @@ final class ClubState {
                     if (!param1) {
                       throw new IllegalStateException("User tried to buy a MOD player when they are not a MOD" + param0.toString());
                     }
-                    var12 = WelcomeDialog.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
+                    var12 = WelcomeDialog.generateShopPlayer(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
                     var7_ref_upLifetime1 = var12;
                     var8 = 0;
                     if (-1 != var5) {

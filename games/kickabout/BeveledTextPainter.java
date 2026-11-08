@@ -131,7 +131,7 @@ class BeveledTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static void a(ResourceArchive param0, int[] param1, int param2, IndexedSprite[] param3, ResourceArchive param4) {
+    final static void initializeLobbyWidgetStyles(ResourceArchive param0, int[] param1, int param2, IndexedSprite[] param3, ResourceArchive param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
@@ -256,7 +256,7 @@ class BeveledTextPainter extends TextWidgetPainter {
           LeaguesHelpScreen.field_H = new UiLayoutNode(0L, var8);
           LeaguesHelpScreen.field_H.field_R = ClientException.resetSpriteCanvasBounds(ModalStack.loadSpriteSheetByName(param4, -22, "lobby", "heading"), (byte) 86);
           DoSomethingCommand.field_B = new UiLayoutNode(0L, (UiLayoutNode) null);
-          DoSomethingCommand.field_B.field_R = NotCommand.a(120, false, 8421504, 4210752, false, (byte) -46);
+          DoSomethingCommand.field_B.field_R = NotCommand.createGradientPanelRowSprites(120, false, 8421504, 4210752, false, (byte) -46);
           ClientProtocolStage.field_c = new UiLayoutNode(0L, (UiLayoutNode) null);
           ClientProtocolStage.field_c.field_R = PanelSpriteFactory.createPanelSprites(114, 3, 1, 6316128, 6316128, (byte) 92);
           StrongCacheEntry.field_u = new UiLayoutNode(0L, (UiLayoutNode) null);
@@ -270,16 +270,16 @@ class BeveledTextPainter extends TextWidgetPainter {
           DateInputValidator.field_f.field_N = SpriteResourceSupport.loadNamedSprite((byte) 127, "lobby", param4, "closebutton");
           DateInputValidator.field_f.field_vb = SpriteResourceSupport.loadNamedSprite((byte) 114, "lobby", param4, "closebutton_mouseover");
           IntValueNode.field_i = new UiLayoutNode(0L, var8);
-          IntValueNode.field_i.field_R = NotCommand.a(40, true, 3815994, 2039583, true, (byte) -46);
+          IntValueNode.field_i.field_R = NotCommand.createGradientPanelRowSprites(40, true, 3815994, 2039583, true, (byte) -46);
           TrinketIcon.field_zb = new UiLayoutNode(0L, var10);
           TrinketIcon.field_zb.field_kb = 2;
-          TrinketIcon.field_zb.field_R = NotCommand.a(30, false, 3815994, 2039583, true, (byte) -46);
+          TrinketIcon.field_zb.field_R = NotCommand.createGradientPanelRowSprites(30, false, 3815994, 2039583, true, (byte) -46);
           HuffmanTextSupport.field_a = new UiLayoutNode(0L, var10);
           HuffmanTextSupport.field_a.field_kb = 2;
-          HuffmanTextSupport.field_a.field_R = NotCommand.a(30, false, 3815994, 2039583, false, (byte) -46);
+          HuffmanTextSupport.field_a.field_R = NotCommand.createGradientPanelRowSprites(30, false, 3815994, 2039583, false, (byte) -46);
           SquadPickerDialog.field_P = new UiLayoutNode(0L, var10);
           SquadPickerDialog.field_P.field_kb = 2;
-          SquadPickerDialog.field_P.field_R = NotCommand.a(30, true, 3815994, 2039583, false, (byte) -46);
+          SquadPickerDialog.field_P.field_R = NotCommand.createGradientPanelRowSprites(30, true, 3815994, 2039583, false, (byte) -46);
           ConsoleEvaluationException.field_e = new UiLayoutNode(0L, (UiLayoutNode) null);
           ConsoleEvaluationException.field_e.field_X = (BitmapFont) ((Object) ServerMessageScreen.field_E);
           ConsoleEvaluationException.field_e.field_y = 13421772;
@@ -296,10 +296,10 @@ class BeveledTextPainter extends TextWidgetPainter {
           var15.field_X = (BitmapFont) ((Object) var7);
           var15.field_xb = LineupPositionSupport.field_c;
           RasterGammaSupport.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
-          RasterGammaSupport.field_c.field_R = NotCommand.a(16, false, 2236962, 2236962, false, (byte) -46);
+          RasterGammaSupport.field_c.field_R = NotCommand.createGradientPanelRowSprites(16, false, 2236962, 2236962, false, (byte) -46);
           RasterGammaSupport.field_c.field_kb = 2;
           DisplayModeSupport.field_b = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
-          DisplayModeSupport.field_b.field_R = NotCommand.a(16, false, 1513239, 1513239, false, (byte) -46);
+          DisplayModeSupport.field_b.field_R = NotCommand.createGradientPanelRowSprites(16, false, 1513239, 1513239, false, (byte) -46);
           DisplayModeSupport.field_b.field_kb = 2;
           AuctionSettingsDialog.field_J = new UiLayoutNode(0L, RasterGammaSupport.field_c);
           AuctionSettingsDialog.field_J.applyStyle(TextInputUiSupport.field_c, (byte) -100);
@@ -666,7 +666,7 @@ class BeveledTextPainter extends TextWidgetPainter {
                   WhirlpoolHasher.field_f[var14] = false;
                   var14++;
                 }
-                GameOptionMenuSupport.a(0, UiKeyRoutingSupport.field_j, ArchiveSource.field_b, -1, (byte) -121, -1, -1, true);
+                GameOptionMenuSupport.findValidGameOptionCombination(0, UiKeyRoutingSupport.field_j, ArchiveSource.field_b, -1, (byte) -121, -1, -1, true);
                 if (!(2 > ScrollContainer.field_Ib) &&
                   GameplayHelpScreen.field_G[12]) {
                   SocialListProtocolSupport.field_c = true;
@@ -716,11 +716,11 @@ class BeveledTextPainter extends TextWidgetPainter {
           if (null != ArchiveSource.field_b) {
             stackIn_78_0 = 0;
             if (stackIn_78_0 != TrinketUnlockNotice.field_b.field_sb) {
-              MarkerSliderWidget.a(param3, 32361);
+              MarkerSliderWidget.requestReturnToLobby(param3, 32361);
             }
             if (GoalStateAgent.field_k.field_sb != 0) {
               if (InstrumentNoteMask.field_k) {
-                BlobSubmission.a(param3, (byte) 79);
+                BlobSubmission.sendMatchmakingCancellation(param3, (byte) 79);
               } else {
                 PlayerStats.sendLobbyGamePreferences(param3, 0);
               }

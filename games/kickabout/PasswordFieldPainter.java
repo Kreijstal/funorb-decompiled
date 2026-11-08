@@ -19,7 +19,7 @@ final class PasswordFieldPainter extends BeveledTextPainter {
           AchievementSubmission.applyAndQueueManagerAction(var2, 69);
           return;
         }
-        PasswordFieldPainter.a(false, -70);
+        PasswordFieldPainter.updateContentCarousel(false, -70);
         var2Lifetime1 = new ManagerAction(1, new int[]{param1});
         AchievementSubmission.applyAndQueueManagerAction(var2Lifetime1, 69);
     }
@@ -40,7 +40,7 @@ final class PasswordFieldPainter extends BeveledTextPainter {
         return -2;
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int updateContentCarousel(boolean param0, int param1) {
         int stackIn_58_0 = 0;
         int stackIn_61_0 = 0;
         int stackIn_64_0 = 0;

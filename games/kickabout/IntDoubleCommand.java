@@ -17,7 +17,7 @@ final class IntDoubleCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 84) {
-            IntDoubleCommand.a((byte) -8, 27, -76, -11, 111, 51, -121, -63);
+            IntDoubleCommand.updateTutorialDefender((byte) -8, 27, -76, -11, 111, 51, -121, -63);
           }
           stackIn_3_0 = new ConsoleValue(LoggedPlayer.twice(param1[0].asInt(-30368), true));
           return stackIn_3_0;
@@ -35,7 +35,7 @@ final class IntDoubleCommand extends ConsoleCommand {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void updateTutorialDefender(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_6_0 = 0;
         int stackIn_34_0 = 0;
         int stackIn_40_0 = 0;
@@ -258,7 +258,7 @@ final class IntDoubleCommand extends ConsoleCommand {
             RankingsRequest.field_l.pushModal(AnimationClip.field_d, false);
           }
           if (param3 < 71) {
-            IntDoubleCommand.a((byte) -14, 61, 24, 8, -65, -11, 102, -101);
+            IntDoubleCommand.updateTutorialDefender((byte) -14, 61, 24, 8, -65, -11, 102, -101);
           }
           AnimationClip.field_d.setProgress(param1, param0, 9255, param2);
           SoftwareRasterizer.clearFramebuffer();

@@ -104,7 +104,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
         super.enterScreen(param0 + param0, param1, param2);
         RegistrationRequestState.field_h.copyFrom(GameLoopApplet.field_E, (byte) 120);
         MusicPatchNode.field_h.clear(22997);
-        IntrusiveNodeHashTable.a(RegistrationRequestState.field_h.field_x, 415422632);
+        IntrusiveNodeHashTable.initializeCurrencyDisplay(RegistrationRequestState.field_h.field_x, 415422632);
     }
 
     final static void popRasterState(int param0) {
@@ -125,7 +125,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
     void updateScreen(byte param0, boolean param1) {
         super.updateScreen((byte) -36, param1);
         int var3 = 31 / ((38 - param0) / 60);
-        QuickChatCategory.a(RegistrationRequestState.field_h.field_x, 5464);
+        QuickChatCategory.updateCurrencyAnimation(RegistrationRequestState.field_h.field_x, 5464);
     }
 
     public static void releaseStatics(byte param0) {

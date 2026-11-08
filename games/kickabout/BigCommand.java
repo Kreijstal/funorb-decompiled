@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BigCommand extends ConsoleCommand {
-    final static String g(int param0) {
+    final static String getCurrentAccountName(int param0) {
         if (param0 != -26370) {
           return (String) null;
         }
@@ -28,7 +28,7 @@ final class BigCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(PlayerStatSortCriterion.b(3));
+            stackIn_4_0 = new ConsoleValue(PlayerStatSortCriterion.getBigCommandValue(3));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

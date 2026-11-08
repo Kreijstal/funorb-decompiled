@@ -38,7 +38,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         }
         var2 = 0;
         var3 = GradientRasterSupport.field_f.length;
-        if (!LoginMethod.b(param0 - 15) ||
+        if (!LoginMethod.isSpecialRewardEnabled(param0 - 15) ||
           !AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 50) &&
           !ClientPacketFlushSupport.isBitSet(QuickChatKeysHelpPanel.field_Ab[32], 0, BufferedSocket.field_f)) {
           var3--;
@@ -676,7 +676,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         for (var3Lifetime1 = 0; var3Lifetime1 < 9; var3Lifetime1++) {
           this.field_K[var3Lifetime1].field_s = this.slideOffsetX + 45 + var3Lifetime1 % 3 * 52;
           this.field_K[var3Lifetime1].updateInput(0, false);
-          this.field_K[var3Lifetime1].h((byte) -122);
+          this.field_K[var3Lifetime1].drawSquadSlot((byte) -122);
         }
         SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 40, 120, 560, 50, 10, 65793, 140);
         IsSixCommand.field_C.drawParagraph(LineupPositionSupport.field_e, 70 + this.slideOffsetX, 126, 500, 40, 16777215, -1, 0, 1, 16);

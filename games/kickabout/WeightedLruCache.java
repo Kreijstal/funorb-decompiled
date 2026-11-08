@@ -79,7 +79,7 @@ final class WeightedLruCache {
         this.removeEntry(var4, -64);
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void resetContentCarousel(int param0, boolean param1) {
         if (param0 == 1) {
           TournamentChampionDialog.field_I = 0;
           MatchHudSupport.field_g = MatchTextInputOverlay.field_c;

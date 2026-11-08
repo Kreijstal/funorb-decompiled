@@ -9,7 +9,7 @@ final class AppletContextSupport {
     static String field_c;
     static String field_a;
 
-    final static void a(int param0, boolean param1, boolean param2, boolean param3) {
+    final static void updatePitchAmbientMusic(int param0, boolean param1, boolean param2, boolean param3) {
         int var5;
         var5 = Kickabout.field_G;
         if (param2) {
@@ -37,7 +37,7 @@ final class AppletContextSupport {
           }
           ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         } else {
-          AppletContextSupport.a(44, true, true, false);
+          AppletContextSupport.updatePitchAmbientMusic(44, true, true, false);
           if (!param1) {
             return;
           }

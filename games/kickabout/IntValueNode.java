@@ -10,7 +10,7 @@ final class IntValueNode extends IntrusiveNode {
     int field_j;
     static UiLayoutNode field_i;
 
-    final static boolean b(int param0) {
+    final static boolean canUseMemberTrinkets(int param0) {
         int var1 = 66 % ((param0 + 43) / 35);
         if (TextFieldValidator.areAccountTrinketsDisabled(-1)) {
           return false;
@@ -31,15 +31,15 @@ final class IntValueNode extends IntrusiveNode {
           field_g = null;
           return;
         }
-        IntValueNode.a(-54);
+        IntValueNode.releaseAwtLoadingResources(-54);
         field_i = null;
         field_k = null;
         field_g = null;
     }
 
-    final static void a(int param0) {
+    final static void releaseAwtLoadingResources(int param0) {
         if (param0 < 13) {
-          IntValueNode.a(-87);
+          IntValueNode.releaseAwtLoadingResources(-87);
           QuickChatCategoryCache.field_i = null;
           BrowserUiSupport.field_b = null;
           return;

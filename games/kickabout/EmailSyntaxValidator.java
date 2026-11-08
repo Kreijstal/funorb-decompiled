@@ -44,7 +44,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           stackIn_3_0 = (null != ModelMaterial.validateEmailParts(64, param0)) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (param1 != -5) {
-            EmailSyntaxValidator.c((byte) -62);
+            EmailSyntaxValidator.hasPrivilegedPlatformAccess((byte) -62);
           }
           if (var3_int != 0) {
             stackIn_9_0 = LobbyPlayerRow.field_yb;
@@ -187,7 +187,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         super(param0);
     }
 
-    final static boolean c(byte param0) {
+    final static boolean hasPrivilegedPlatformAccess(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -42) {
           return true;

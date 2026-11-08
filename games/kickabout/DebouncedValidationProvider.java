@@ -96,7 +96,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
         field_a = null;
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isInvalidPasswordLength(String param0, byte param1) {
         RuntimeException var2 = null;
         Object var3 = null;
         RuntimeException stackIn_10_0 = null;

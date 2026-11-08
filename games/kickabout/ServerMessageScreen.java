@@ -32,7 +32,7 @@ final class ServerMessageScreen extends ButtonMenuScreen {
         ((BitmapFont) ((Object) var3)).drawParagraph(MatchTextInputOverlay.field_p, var4, 160, -var4 + var5, 1000, 16777215, -1, 0, 0, var6);
     }
 
-    final static double a(int param0, int param1, byte param2, int param3, ColorQuantizationBox param4, int param5, int param6, int param7, int param8) {
+    final static double maximizeColorBoxSplitScore(int param0, int param1, byte param2, int param3, ColorQuantizationBox param4, int param5, int param6, int param7, int param8) {
         int var21 = 0;
         int var9_int = 0;
         int var10 = 0;

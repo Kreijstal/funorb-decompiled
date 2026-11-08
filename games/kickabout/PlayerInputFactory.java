@@ -24,12 +24,12 @@ final class PlayerInputFactory {
         }
     }
 
-    final static void a(byte param0) {
+    final static void playSplashExitSound(byte param0) {
         FadingSoundPlayer var1 = ArrayWidgetContainer.createFadingSoundPlayer(72, false, DualLinkHashTable.field_e, 43, 128, 34);
         if (var1 != null) {
           var1.startFadeOut(150, (byte) -4);
           if (param0 != -25) {
-            PlayerInputFactory.a((byte) 127);
+            PlayerInputFactory.playSplashExitSound((byte) 127);
             return;
           }
           return;
@@ -37,7 +37,7 @@ final class PlayerInputFactory {
         if (param0 == -25) {
           return;
         }
-        PlayerInputFactory.a((byte) 127);
+        PlayerInputFactory.playSplashExitSound((byte) 127);
     }
 
     final static RenderedFootballer createRenderedPlayer(PlayerStats param0, int param1, int param2, boolean param3, int param4, byte param5) {

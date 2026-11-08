@@ -519,9 +519,9 @@ final class SplashScreen extends AppScreen {
           AppScreen var3 = (AppScreen) null;
           this.setTransitionProgress(-112, true, 15, (AppScreen) null);
         }
-        PlayerInputFactory.a((byte) -25);
+        PlayerInputFactory.playSplashExitSound((byte) -25);
         DefaultPlayerFactory.buildSharedContextActions(122);
-        DelayedServerPacket.a(0, false, param0 + 255);
+        DelayedServerPacket.requestScreenTransition(0, false, param0 + 255);
     }
 
     SplashScreen() {

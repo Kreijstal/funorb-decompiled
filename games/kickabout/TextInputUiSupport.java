@@ -95,7 +95,7 @@ final class TextInputUiSupport {
           AuctionListing.pushRasterClip(var4Lifetime1, -22914, 320, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(0, 388, var4Lifetime1, 72, 8, 65793, 128);
           TeamManagementScreen.popRasterState(122);
-          var5 = AnimationSkeleton.a(false);
+          var5 = AnimationSkeleton.getTutorialMessageIndex(false);
           if (var5 != -1) {
             FriendRemovalSupport.field_e = 1;
             if (var5 == 6 ||

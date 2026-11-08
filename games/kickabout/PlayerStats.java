@@ -1034,13 +1034,13 @@ final class PlayerStats implements PopupCard {
           }
           var18Lifetime1 = stackIn_51_0;
           if (0 == var17_int) {
-            stackIn_58_0 = this.trinketPowerBonus(true, IntValueNode.b(-89));
+            stackIn_58_0 = this.trinketPowerBonus(true, IntValueNode.canUseMemberTrinkets(-89));
           } else {
             if (var17_int == 1) {
-              stackIn_58_0 = this.trinketSpeedBonus(5205, IntValueNode.b(-120));
+              stackIn_58_0 = this.trinketSpeedBonus(5205, IntValueNode.canUseMemberTrinkets(-120));
             } else {
               if (var17_int == 2) {
-                stackIn_58_0 = this.trinketTackleBonus((byte) -118, IntValueNode.b(-110));
+                stackIn_58_0 = this.trinketTackleBonus((byte) -118, IntValueNode.canUseMemberTrinkets(-110));
               } else {
                 stackIn_58_0 = 0;
               }
