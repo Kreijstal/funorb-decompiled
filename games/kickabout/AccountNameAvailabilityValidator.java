@@ -224,7 +224,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              UnreadMessagesScreen.a("MGR1: " + param1, (Throwable) null, 1);
+              UnreadMessagesScreen.reportClientError("MGR1: " + param1, (Throwable) null, 1);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

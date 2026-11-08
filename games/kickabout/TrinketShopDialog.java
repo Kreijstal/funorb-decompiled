@@ -46,7 +46,7 @@ final class TrinketShopDialog extends MessageDialog {
         return var8;
     }
 
-    final static WorldDrawEntry b(boolean param0, int param1, int param2) {
+    final static WorldDrawEntry createGroundMarker(boolean param0, int param1, int param2) {
         WorldDrawEntry var3 = new WorldDrawEntry(0);
         var3.field_k = param1;
         if (!param0) {
@@ -119,7 +119,7 @@ final class TrinketShopDialog extends MessageDialog {
     final static void enqueueTrinketPickerDialog(int param0) {
         ScrollPane.field_Jb.addLast(new TrinketPickerDialog(), 3);
         if (param0 != -29315) {
-          TrinketShopDialog.b(true, -105, 126);
+          TrinketShopDialog.createGroundMarker(true, -105, 126);
         }
     }
 
@@ -138,12 +138,12 @@ final class TrinketShopDialog extends MessageDialog {
         this.field_L.advanceScroll(StatefulTextPainter.field_v * 32, true, (byte) -78, 32);
         if (var3 < this.field_L.field_Db.field_J &&
           this.field_K == 0) {
-          ShopPlayerSlot.c(59, 52);
+          ShopPlayerSlot.playDefaultFadingSound(59, 52);
           this.field_K = 10;
         }
         if (this.field_L.field_Db.field_J < var3 &&
           this.field_K == 0) {
-          ShopPlayerSlot.c(60, -119);
+          ShopPlayerSlot.playDefaultFadingSound(60, -119);
           this.field_K = 10;
         }
         if (param0 != 3) {
@@ -202,7 +202,7 @@ final class TrinketShopDialog extends MessageDialog {
           null != this.field_H) {
           var3 = this.field_H.field_yb;
           MatchingTextValidator.a(var3, this.field_I, (byte) 123, this.field_F);
-          ShopPlayerSlot.c(50, -110);
+          ShopPlayerSlot.playDefaultFadingSound(50, -110);
         } else {
           AchievementSubmission.a((byte) -120);
         }

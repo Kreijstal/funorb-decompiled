@@ -62,7 +62,7 @@ final class ValidationIndicator extends TextButton {
           var10 = var15.field_v << 1;
           if (null == TournamentChampionDialog.field_G) {
             TournamentChampionDialog.field_G = new Sprite(var9, var10);
-            PacketBuffer.a(-54, TournamentChampionDialog.field_G);
+            PacketBuffer.pushSpriteRaster(-54, TournamentChampionDialog.field_G);
             var15.rotateBilinear(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             TeamManagementScreen.e(120);
             TournamentChampionDialog.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
@@ -70,7 +70,7 @@ final class ValidationIndicator extends TextButton {
           }
           if (TournamentChampionDialog.field_G.field_q < var9) {
             TournamentChampionDialog.field_G = new Sprite(var9, var10);
-            PacketBuffer.a(-54, TournamentChampionDialog.field_G);
+            PacketBuffer.pushSpriteRaster(-54, TournamentChampionDialog.field_G);
             var15.rotateBilinear(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             TeamManagementScreen.e(120);
             TournamentChampionDialog.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
@@ -78,13 +78,13 @@ final class ValidationIndicator extends TextButton {
           }
           if (TournamentChampionDialog.field_G.field_w < var10) {
             TournamentChampionDialog.field_G = new Sprite(var9, var10);
-            PacketBuffer.a(-54, TournamentChampionDialog.field_G);
+            PacketBuffer.pushSpriteRaster(-54, TournamentChampionDialog.field_G);
             var15.rotateBilinear(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             TeamManagementScreen.e(120);
             TournamentChampionDialog.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
             return;
           }
-          PacketBuffer.a(116, TournamentChampionDialog.field_G);
+          PacketBuffer.pushSpriteRaster(116, TournamentChampionDialog.field_G);
           SoftwareRasterizer.clearFramebuffer();
           var15.rotateBilinear(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
           TeamManagementScreen.e(120);
@@ -97,7 +97,7 @@ final class ValidationIndicator extends TextButton {
           var10Lifetime1 = var16.field_v << 1;
           if (null == TournamentChampionDialog.field_G) {
             TournamentChampionDialog.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
-            PacketBuffer.a(-54, TournamentChampionDialog.field_G);
+            PacketBuffer.pushSpriteRaster(-54, TournamentChampionDialog.field_G);
             var16.rotateBilinear(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             TeamManagementScreen.e(120);
             TournamentChampionDialog.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
@@ -105,7 +105,7 @@ final class ValidationIndicator extends TextButton {
           }
           if (TournamentChampionDialog.field_G.field_q < var9Lifetime1) {
             TournamentChampionDialog.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
-            PacketBuffer.a(-54, TournamentChampionDialog.field_G);
+            PacketBuffer.pushSpriteRaster(-54, TournamentChampionDialog.field_G);
             var16.rotateBilinear(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             TeamManagementScreen.e(120);
             TournamentChampionDialog.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
@@ -113,13 +113,13 @@ final class ValidationIndicator extends TextButton {
           }
           if (TournamentChampionDialog.field_G.field_w < var10Lifetime1) {
             TournamentChampionDialog.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
-            PacketBuffer.a(-54, TournamentChampionDialog.field_G);
+            PacketBuffer.pushSpriteRaster(-54, TournamentChampionDialog.field_G);
             var16.rotateBilinear(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             TeamManagementScreen.e(120);
             TournamentChampionDialog.field_G.drawAdditive(var5 - var16.field_o, var6 - var16.field_v, 256);
             return;
           }
-          PacketBuffer.a(116, TournamentChampionDialog.field_G);
+          PacketBuffer.pushSpriteRaster(116, TournamentChampionDialog.field_G);
           SoftwareRasterizer.clearFramebuffer();
           var16.rotateBilinear(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
           TeamManagementScreen.e(120);

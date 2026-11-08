@@ -31,7 +31,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         AnimationSkeleton.field_k = GameLoopApplet.field_E.field_t;
         PlayerContextMenu.field_f = false;
         LineupView.field_y.clear(72);
-        TournamentChampionDialog.b(AnimationSkeleton.field_k, 500);
+        TournamentChampionDialog.requestLeagueRankings(AnimationSkeleton.field_k, 500);
     }
 
     final static String charToString(char param0, byte param1) {
@@ -94,7 +94,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         var6 = 0;
         for (var7 = 0; var7 < WelcomeDialog.field_H.length; var7++) {
           if (WelcomeDialog.field_H[var7].field_sb == 1) {
-            TournamentChampionDialog.b(var7, 500);
+            TournamentChampionDialog.requestLeagueRankings(var7, 500);
             AnimationSkeleton.field_k = var7;
             SquadGridWidget.field_Gb = 0;
             var5 = var7;
@@ -105,7 +105,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         }
         if (1 == ScrollPane.field_Cb.field_sb &&
           DialogOverlay.field_b.getText((byte) -16).length() > 0) {
-          ShopPlayerSlot.a(DialogOverlay.field_b.getText((byte) -16), (byte) 74);
+          ShopPlayerSlot.requestLeaguePlayerSearch(DialogOverlay.field_b.getText((byte) -16), (byte) 74);
           DialogOverlay.field_b.setText("", -23174);
           LoginKind.a((byte) -105);
         }
@@ -148,12 +148,12 @@ final class LeaguesScreen extends ButtonMenuScreen {
         }
         if (AuctionTableWidget.field_Hb.field_Db.field_J > var3 &&
           this.field_D == 0) {
-          ShopPlayerSlot.c(59, 76);
+          ShopPlayerSlot.playDefaultFadingSound(59, 76);
           this.field_D = 5;
         }
         if (AuctionTableWidget.field_Hb.field_Db.field_J < var3 &&
           0 == this.field_D) {
-          ShopPlayerSlot.c(60, -118);
+          ShopPlayerSlot.playDefaultFadingSound(60, -118);
           this.field_D = 5;
         }
         return;
@@ -205,7 +205,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         MenuButton.field_e.addChild((byte) -106, (UiLayoutNode) (DialogOverlay.field_b));
         MenuButton.field_e.addChild((byte) -112, ScrollPane.field_Cb);
         if (!PlayArea.isGuestSession(100)) {
-          ShopPlayerSlot.a(ArchiveSource.field_e, (byte) 74);
+          ShopPlayerSlot.requestLeaguePlayerSearch(ArchiveSource.field_e, (byte) 74);
         }
     }
 
@@ -234,7 +234,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           param0 == 84) {
           var4 = DialogOverlay.field_b.getText((byte) -16);
           if (var4.length() > 0) {
-            ShopPlayerSlot.a(DialogOverlay.field_b.getText((byte) -16), (byte) 74);
+            ShopPlayerSlot.requestLeaguePlayerSearch(DialogOverlay.field_b.getText((byte) -16), (byte) 74);
             DialogOverlay.field_b.setText("", -23174);
             LoginKind.a((byte) -115);
           }

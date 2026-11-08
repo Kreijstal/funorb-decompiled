@@ -18,7 +18,7 @@ final class TrinketIcon extends UiLayoutNode {
         this.field_Bb = param0;
         Sprite var3 = new Sprite(ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].field_q >> 2, ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].field_w >> 2);
         Sprite var2 = var3;
-        PacketBuffer.a(-59, var3);
+        PacketBuffer.pushSpriteRaster(-59, var3);
         ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(0, 0);
         TeamManagementScreen.e(121);
         this.field_N = var2;
@@ -47,7 +47,7 @@ final class TrinketIcon extends UiLayoutNode {
           for (var4 = 0; var4 < var2_int; var4++) {
             var5 = param0.charAt(var4);
             if (var4 == 0) {
-              var5 = ValidationHelpWidget.b(19805, (char) var5);
+              var5 = ValidationHelpWidget.titleCaseCharacter(19805, (char) var5);
             } else {
               var5 = Character.toLowerCase((char) var5);
             }
@@ -86,10 +86,10 @@ final class TrinketIcon extends UiLayoutNode {
           TrinketIcon.releaseStatics(false);
         }
         if (TextPromptState.field_b != null) {
-          var3 = TextPromptState.field_b.a(param0, 0);
+          var3 = TextPromptState.field_b.updateAndGetResult(param0, 0);
           if (var3 != -2) {
             if (-1 != var3) {
-              var4 = TextPromptState.field_b.b(26) ? 1 : 0;
+              var4 = TextPromptState.field_b.isMuteSelected(26) ? 1 : 0;
               CommonGame.sendTextPromptResponse(119, TextPromptState.field_b.field_Eb, var3, param1, var4 != 0, TextPromptState.field_b.getText(-15596));
             }
             TextPromptState.field_b = null;

@@ -155,7 +155,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             BroadcastServerCommand.a(8, 73, (String) null);
           }
           var2 = new ListingRow();
-          var2.a(param0, 62);
+          var2.readFromPacket(param0, 62);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

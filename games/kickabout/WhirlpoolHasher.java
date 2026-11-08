@@ -251,7 +251,7 @@ final class WhirlpoolHasher {
             ByteArrayPool.field_c = ByteStorage.field_e;
           }
           if (ByteStorage.field_e == ByteArrayPool.field_c &&
-            SetLagCommand.a((byte) 55, 1)) {
+            SetLagCommand.readPacketBytes((byte) 55, 1)) {
             var9Lifetime1 = ByteArrayPool.field_e.readUnsignedByte((byte) -116);
             ByteArrayPool.field_e.field_n = 0;
             if (var9Lifetime1 >= 100 &&
@@ -268,7 +268,7 @@ final class WhirlpoolHasher {
                 return stackIn_35_0;
               }
               if (var9Lifetime1 == 99) {
-                SetLagCommand.a((byte) 51, PlayAreaMovementSupport.constantOne((byte) 40));
+                SetLagCommand.readPacketBytes((byte) 51, PlayAreaMovementSupport.constantOne((byte) 40));
                 TutorialMessages.field_f = new Boolean(PlayerInputEvent.a(ByteArrayPool.field_e, (byte) 93));
                 ByteArrayPool.field_e.field_n = 0;
               } else {
@@ -280,10 +280,10 @@ final class WhirlpoolHasher {
           }
           if (StatefulTextPainter.field_t == ByteArrayPool.field_c) {
             var9Lifetime2 = 2;
-            if (SetLagCommand.a((byte) -96, var9Lifetime2)) {
+            if (SetLagCommand.readPacketBytes((byte) -96, var9Lifetime2)) {
               var10Lifetime1 = ByteArrayPool.field_e.readUnsignedShort((byte) 81);
               ByteArrayPool.field_e.field_n = 0;
-              if (SetLagCommand.a((byte) -118, var10Lifetime1)) {
+              if (SetLagCommand.readPacketBytes((byte) -118, var10Lifetime1)) {
                 var11 = ValidatedTextWidget.field_X.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   ValidatedTextWidget.field_X[var12] = ByteArrayPool.field_e.readCircumfixedString(17);

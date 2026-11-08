@@ -21,7 +21,7 @@ final class RenderedBall extends BallAgent {
     static int field_B;
     private int field_M;
 
-    final void a(RenderedFootballer param0, byte param1) {
+    final void updateBallVisuals(RenderedFootballer param0, byte param1) {
         int stackIn_6_0 = 0;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
@@ -147,7 +147,7 @@ final class RenderedBall extends BallAgent {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_R = null;
         int var1 = -60 / ((43 - param0) / 45);
         field_F = null;
@@ -155,8 +155,8 @@ final class RenderedBall extends BallAgent {
         field_T = null;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void setPositionAndStop(int param0, int param1, byte param2, int param3) {
+        super.setPositionAndStop(param0, param1, param2, param3);
         this.field_N = param0;
         this.field_M = param1;
         this.field_E = param3;
@@ -186,7 +186,7 @@ final class RenderedBall extends BallAgent {
         TriangleRasterizer.setProjectionCenter(param1, param2);
         if (param4 != 300) {
           ChatMessage var7 = (ChatMessage) null;
-          RenderedBall.a((byte) -13, (ChatMessage) null);
+          RenderedBall.formatChatMessagePrefix((byte) -13, (ChatMessage) null);
         }
         if (this.field_L) {
           this.field_Q.toRotationMatrix(8, this.field_G);
@@ -205,7 +205,7 @@ final class RenderedBall extends BallAgent {
         return this.field_N >> 16;
     }
 
-    final static int a(int param0, int param1) {
+    final static int measureTutorialMessageWidth(int param0, int param1) {
         String var2 = null;
         BinaryBitmapFont var3 = null;
         int var4 = 0;
@@ -327,7 +327,7 @@ final class RenderedBall extends BallAgent {
         return -var4 + var2;
     }
 
-    final static boolean m(int param0) {
+    final static boolean pollAndMergeAchievementMask(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var4 = 0;
@@ -458,7 +458,7 @@ final class RenderedBall extends BallAgent {
         this.field_D[7] = -var5;
     }
 
-    final static String a(byte param0, ChatMessage param1) {
+    final static String formatChatMessagePrefix(byte param0, ChatMessage param1) {
         String stackIn_31_0 = null;
         Object stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -531,7 +531,7 @@ final class RenderedBall extends BallAgent {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawDottedRectangle(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -608,7 +608,7 @@ final class RenderedBall extends BallAgent {
             }
           }
           if (param0 != 2) {
-            RenderedBall.m(53);
+            RenderedBall.pollAndMergeAchievementMask(53);
           }
           if (SoftwareRasterizer.field_b <= var5_int &&
             SoftwareRasterizer.field_c > var5_int) {
@@ -657,7 +657,7 @@ final class RenderedBall extends BallAgent {
           var2 = (var2 << 8) / InstrumentNoteMask.field_i;
           this.drawBall(300, var3, var4, var2, 300);
         } else {
-          PacketBuffer.a(-115, AvailabilityCheckRequest.field_f);
+          PacketBuffer.pushSpriteRaster(-115, AvailabilityCheckRequest.field_f);
           SoftwareRasterizer.clearFramebuffer();
           var2 = (var2 << 7) / InstrumentNoteMask.field_i;
           this.drawBall(300, 64, 64, var2, 300);

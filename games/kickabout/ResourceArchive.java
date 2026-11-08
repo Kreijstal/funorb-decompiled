@@ -192,7 +192,7 @@ final class ResourceArchive {
         if (this.field_b) {
           this.field_e[param0] = this.field_i.getGroupBytes(param0, 4);
         } else {
-          this.field_e[param0] = AuctionLogEntry.a(this.field_i.getGroupBytes(param0, 4), false, 136);
+          this.field_e[param0] = AuctionLogEntry.wrapByteStorage(this.field_i.getGroupBytes(param0, 4), false, 136);
         }
         if (param1 < 31) {
           this.ensureFlatFileAvailable(-52, ((int[]) (this.field_e[5]))[1]);
@@ -872,7 +872,7 @@ final class ResourceArchive {
                 if (this.field_c != 0) {
                   var7[var18] = var40[var17];
                 } else {
-                  var7[var18] = AuctionLogEntry.a(var40[var17], false, TrinketShopDialog.bitwiseXor(param3, 138));
+                  var7[var18] = AuctionLogEntry.wrapByteStorage(var40[var17], false, TrinketShopDialog.bitwiseXor(param3, 138));
                 }
               }
             }
@@ -886,7 +886,7 @@ final class ResourceArchive {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = AuctionLogEntry.a(var43, false, 136);
+            var7[var11] = AuctionLogEntry.wrapByteStorage(var43, false, 136);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

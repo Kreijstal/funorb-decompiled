@@ -8,14 +8,14 @@ final class TournamentChampionDialog extends MessageDialog {
     static int field_J;
     static FriendsListPanel field_F;
 
-    final static boolean i(int param0) {
+    final static boolean isLogoSequenceComplete(int param0) {
         if (param0 >= -55) {
           field_H = (String) null;
         }
         return 250 < PlayerStats.field_p ? true : false;
     }
 
-    final static boolean a(boolean param0, String param1, long param2) {
+    final static boolean canSendPrivateChatTo(boolean param0, String param1, long param2) {
         SocialPlayerRow var4 = null;
         RuntimeException var4_ref = null;
         boolean stackIn_11_0 = false;
@@ -48,7 +48,7 @@ final class TournamentChampionDialog extends MessageDialog {
         }
     }
 
-    final static short[] a(short[] param0, CipherPacketBuffer param1, int param2, int param3) {
+    final static short[] readBaseOffsetShortArray(short[] param0, CipherPacketBuffer param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -121,7 +121,7 @@ final class TournamentChampionDialog extends MessageDialog {
         }
     }
 
-    final static void a(int param0, int param1, FootballerAgent param2, int param3, byte param4, int param5) {
+    final static void setDirectionTowardPoint(int param0, int param1, FootballerAgent param2, int param3, byte param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         FootballerAgent stackIn_4_0 = null;
@@ -182,7 +182,7 @@ final class TournamentChampionDialog extends MessageDialog {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void requestLeagueRankings(int param0, int param1) {
         if (PlayArea.isGuestSession(100)) {
           return;
         }
@@ -195,15 +195,15 @@ final class TournamentChampionDialog extends MessageDialog {
         PlayerContextMenu.field_f = true;
     }
 
-    final static void b(int param0, int param1, int param2) {
+    final static void setTooltipAnchor(int param0, int param1, int param2) {
         TextLine.field_h = param0;
         ScrollBar.field_Hb = param2;
         if (param1 != 0) {
-          TournamentChampionDialog.h(-29);
+          TournamentChampionDialog.releaseStatics(-29);
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_G = (Sprite) null;
         }
@@ -212,7 +212,7 @@ final class TournamentChampionDialog extends MessageDialog {
         field_F = null;
     }
 
-    final static int g(int param0) {
+    final static int getMouseIdleTicks(int param0) {
         if (param0 != 0) {
           return 9;
         }

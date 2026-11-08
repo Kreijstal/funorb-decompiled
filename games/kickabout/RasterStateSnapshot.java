@@ -108,7 +108,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
             if (var7 != 0 &&
               var5 > param3) {
               var5 = param3;
-              var12_ref.a(var5, var12_ref.height, (byte) 26, var6);
+              var12_ref.setPositionAndStop(var5, var12_ref.height, (byte) 26, var6);
               return false;
             }
             if (var7 == 0 &&
@@ -117,7 +117,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
             }
           }
         }
-        var12_ref.a(var5, var12_ref.height, (byte) 26, var6);
+        var12_ref.setPositionAndStop(var5, var12_ref.height, (byte) 26, var6);
         return false;
     }
 

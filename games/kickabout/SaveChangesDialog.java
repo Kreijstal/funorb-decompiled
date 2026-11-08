@@ -27,7 +27,7 @@ final class SaveChangesDialog extends MessageDialog {
         if (11 == FixedQuaternion.field_e &&
           CommonGame.field_j) {
           if (PlayerShopScreen.field_K == 2 &&
-            !TournamentChampionDialog.a(false, ArchivePreloadEntry.field_f, SectorCacheStore.field_c)) {
+            !TournamentChampionDialog.canSendPrivateChatTo(false, ArchivePreloadEntry.field_f, SectorCacheStore.field_c)) {
             return false;
           }
           if (2 != PlayerShopScreen.field_K &&
@@ -56,7 +56,7 @@ final class SaveChangesDialog extends MessageDialog {
           DelayedServerPacket.a(13, true, -2);
         } else {
           if (param1 == 1) {
-            TeamSelectionView.f(-120);
+            TeamSelectionView.discardPendingManagerActions(-120);
             DelayedServerPacket.a(13, true, -2);
           } else {
             if (param1 != 2) {

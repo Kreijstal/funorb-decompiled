@@ -14,7 +14,7 @@ abstract class IndexedSpriteState {
     int field_a;
     static String field_f;
 
-    final static void b(int param0, int param1) {
+    final static void setAccountMenuMode(int param0, int param1) {
         BlackFadeScreen.field_j = param1;
         if (param0 != 38) {
           field_f = (String) null;
@@ -23,9 +23,9 @@ abstract class IndexedSpriteState {
 
     abstract void a(int param0, int param1);
 
-    final static void a(int param0, IntrusiveDeque param1, java.awt.Point[] param2) {
+    final static void addPolygonGroundMarkers(int param0, IntrusiveDeque param1, java.awt.Point[] param2) {
         try {
-          AccountRequestDialog.a((byte) -108, 38, param1, param2);
+          AccountRequestDialog.addPolygonGroundMarkers((byte) -108, 38, param1, param2);
           if (param0 >= -39) {
             field_f = (String) null;
           }
@@ -34,7 +34,7 @@ abstract class IndexedSpriteState {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 <= -67) {
           field_j = null;
@@ -43,7 +43,7 @@ abstract class IndexedSpriteState {
           return;
         }
         java.awt.Point[] var2 = (java.awt.Point[]) null;
-        IndexedSpriteState.a(-75, (IntrusiveDeque) null, (java.awt.Point[]) null);
+        IndexedSpriteState.addPolygonGroundMarkers(-75, (IntrusiveDeque) null, (java.awt.Point[]) null);
         field_j = null;
         field_c = null;
         field_e = (boolean[][]) null;

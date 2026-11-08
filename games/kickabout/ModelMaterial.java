@@ -109,7 +109,7 @@ final class ModelMaterial {
             return;
           }
           if (2 != var3) {
-            UnreadMessagesScreen.a("A1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
+            UnreadMessagesScreen.reportClientError("A1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
             FormationView.b((byte) -116);
             return;
           }

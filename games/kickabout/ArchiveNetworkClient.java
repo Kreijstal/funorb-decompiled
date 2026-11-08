@@ -57,7 +57,7 @@ abstract class ArchiveNetworkClient {
           if (PainterStyle.containsNonAlphanumeric(param0, -3)) {
             return false;
           }
-          if (ArchivePreloader.a(true, param0)) {
+          if (ArchivePreloader.isRepeatedCharacter(true, param0)) {
             return false;
           }
           if (DebouncedValidationProvider.a(param0, (byte) 79)) {
@@ -72,7 +72,7 @@ abstract class ArchiveNetworkClient {
           if (FootballerPreview.containsForwardOrReversed((byte) -125, param2, param0)) {
             return false;
           }
-          if (SetLagCommand.a(63, param0, param2)) {
+          if (SetLagCommand.containsForwardOrReversedIgnoringUnderscores(63, param0, param2)) {
             return false;
           }
           if (!TextLine.containsNameOrReverse((byte) -120, param2, param0)) {

@@ -140,7 +140,7 @@ final class SplashScreen extends AppScreen {
           stackIn_44_0 = (ScrollPane) (param0);
           stackIn_44_1 = param1 * (4 * LineupPositionSupport.field_c + 8);
           stackIn_45_2 = (MatchHudSupport.field_f == param0);
-          stackIn_48_0 = (!((ScrollPane) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_45_2, param2, 2, false, (LineupPositionSupport.field_c + 2) * 2)) ? 0 : 1;
+          stackIn_48_0 = (!((ScrollPane) (Object) stackIn_44_0).layoutAndScroll(stackIn_44_1, stackIn_45_2, param2, 2, false, (LineupPositionSupport.field_c + 2) * 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_48_0;
           var10 = param0.field_Ab.field_jb;
           if (param4 < 0) {
@@ -250,7 +250,7 @@ final class SplashScreen extends AppScreen {
               }
               var25_int = 0;
               if (null != PlayerContextMenu.field_i &&
-                ScrollPane.a(38) &&
+                ScrollPane.isLocalGameHost(38) &&
                 ~var12.field_Ab != ~AnimationPlayer.field_c) {
                 if (null != var12.field_Tb.field_E) {
                   var26 = var12.field_Tb.getPreferredWidth((byte) 122) + DiskCacheWorker.field_b * 2;
@@ -458,7 +458,7 @@ final class SplashScreen extends AppScreen {
                   }
                 }
                 if (param0 == ClientException.field_c &&
-                  ScrollPane.a(47)) {
+                  ScrollPane.isLocalGameHost(47)) {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var34 + "<br>" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_V, new String[]{(String) (var25)});
                   } else {
@@ -472,7 +472,7 @@ final class SplashScreen extends AppScreen {
                   }
                 }
                 if (ClientException.field_c == param0 &&
-                  !ScrollPane.a(111)) {
+                  !ScrollPane.isLocalGameHost(111)) {
                   var27 = PlayerContextMenu.field_i.field_ec;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LoginRequiredDialog.field_F, new String[]{var27});
                 }

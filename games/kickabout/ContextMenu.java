@@ -118,7 +118,7 @@ final class ContextMenu extends UiLayoutNode {
         if (param4 <= 107) {
           return (ResourceArchive) null;
         }
-        return SetLagCommand.a(param1, (byte) 112, param2, param0, false, param3);
+        return SetLagCommand.createResourceArchive(param1, (byte) 112, param2, param0, false, param3);
     }
 
     final void addItemWithIcon(String param0, boolean param1, int param2, Sprite param3) {

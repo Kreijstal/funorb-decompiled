@@ -66,7 +66,7 @@ final class FootballerPreview {
         int var4 = this.field_b.field_R;
         if (FaceNormal.field_c) {
           this.field_b.field_R = (this.field_b.field_R + 1024) % 2048;
-          PacketBuffer.a(param0 + 39, SpriteResourceSupport.field_a);
+          PacketBuffer.pushSpriteRaster(param0 + 39, SpriteResourceSupport.field_a);
           SoftwareRasterizer.clearFramebuffer();
           this.field_b.renderModel(1200, 300, 48, 90, (byte) -105);
           TeamManagementScreen.e(127);
@@ -77,7 +77,7 @@ final class FootballerPreview {
           }
           return;
         }
-        PacketBuffer.a(param0 + 39, SpriteResourceSupport.field_a);
+        PacketBuffer.pushSpriteRaster(param0 + 39, SpriteResourceSupport.field_a);
         SoftwareRasterizer.clearFramebuffer();
         this.field_b.renderModel(1200, 300, 48, 90, (byte) -105);
         TeamManagementScreen.e(127);

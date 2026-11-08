@@ -369,7 +369,7 @@ final class SoftwareDrawingSupport {
 
     private final static void drawRotatedParagraph(String param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         Sprite var8 = new Sprite(param4, param5);
-        PacketBuffer.a(-79, var8);
+        PacketBuffer.pushSpriteRaster(-79, var8);
         param1.drawParagraph(param0, 0, 0, param4, param5, param6, -1, 1, 1, 0);
         TeamManagementScreen.e(126);
         var8.drawRotatedBilinear(param2, param3, param7, 4096);
@@ -623,12 +623,12 @@ final class SoftwareDrawingSupport {
         field_n = new Sprite[4];
         for (var5 = 0; var5 < 4; var5++) {
           field_n[var5] = AccountRegistrationPanel.createButtonStateSprite(true, (byte) -52, var5, var4, 7126504);
-          PacketBuffer.a(-41, field_n[var5]);
+          PacketBuffer.pushSpriteRaster(-41, field_n[var5]);
           ((BitmapFont) (var2)).drawCentered(var0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, 16777215, -1);
           TeamManagementScreen.e(127);
         }
         field_g = new Sprite(102, 13);
-        PacketBuffer.a(-67, field_g);
+        PacketBuffer.pushSpriteRaster(-67, field_g);
         SoftwareDrawingSupport.drawStatBarStrip(1, 1, 10066329, 2, 20, 0, 200);
         SoftwareRasterizer.drawRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 65793);
         TeamManagementScreen.e(124);
@@ -636,7 +636,7 @@ final class SoftwareDrawingSupport {
         for (var5Lifetime1 = 0; var5Lifetime1 < 4; var5Lifetime1++) {
           for (var6 = 0; var6 < 4; var6++) {
             var7 = new Sprite(100, 11);
-            PacketBuffer.a(81, var7);
+            PacketBuffer.pushSpriteRaster(81, var7);
             SoftwareDrawingSupport.drawStatBarStrip(0, 0, LoginForm.field_B[var5Lifetime1], var6, 40, 90, 160);
             TeamManagementScreen.e(120);
             field_h[var5Lifetime1][var6] = var7;
@@ -767,7 +767,7 @@ final class SoftwareDrawingSupport {
 
     private final static ArgbSprite createHighlightedArgbCopy(Sprite param0) {
         ArgbSprite var1 = ((ArgbSprite) (param0)).copyArgb();
-        PacketBuffer.a(-112, var1);
+        PacketBuffer.pushSpriteRaster(-112, var1);
         param0.drawAdditive(0, 0, 90);
         TeamManagementScreen.e(117);
         return var1;
@@ -868,7 +868,7 @@ final class SoftwareDrawingSupport {
         Sprite[] var5 = new Sprite[4];
         for (var6_int = 0; var6_int < 4; var6_int++) {
           var5[var6_int] = AccountRegistrationPanel.createButtonStateSprite(param4, (byte) -52, var6_int, param3, param1);
-          PacketBuffer.a(-52, var5[var6_int]);
+          PacketBuffer.pushSpriteRaster(-52, var5[var6_int]);
           var7 = param4 ? 8 : 9;
           param2.drawCentered(param0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - var7, 16777215, -1);
           TeamManagementScreen.e(122);
@@ -889,7 +889,7 @@ final class SoftwareDrawingSupport {
         int var9 = 0;
         int var4 = 256 - (param2 - param1 << 8) / param2;
         ArgbSprite var5 = new ArgbSprite(param3, param3);
-        PacketBuffer.a(-38, var5);
+        PacketBuffer.pushSpriteRaster(-38, var5);
         SoftwareRasterizer.drawRadialGlow(SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, SoftwareRasterizer.field_g << 3, param0.length - 1, param0);
         TeamManagementScreen.e(122);
         byte[] var6 = new byte[var5.field_y.length];
@@ -989,7 +989,7 @@ final class SoftwareDrawingSupport {
         StringBuilder discarded$42 = null;
         if (param2 > 100) {
           var6_ref_ut = new Sprite(102, 13);
-          PacketBuffer.a(73, var6_ref_ut);
+          PacketBuffer.pushSpriteRaster(73, var6_ref_ut);
           SoftwareDrawingSupport.drawStatBar(0, 0, param2 - 100, param3, false, 0);
           TeamManagementScreen.e(126);
           var6_ref_ut.drawAlpha(param0 + 3, param1 + 7, 128);
@@ -1004,7 +1004,7 @@ final class SoftwareDrawingSupport {
         TeamManagementScreen.e(127);
         SoftwareRasterizer.drawRectangle(param0 - 1, param1 - 1, 102, 13, 65793);
         if (param4) {
-          PacketBuffer.a(-38, field_d);
+          PacketBuffer.pushSpriteRaster(-38, field_d);
           SoftwareRasterizer.clearFramebuffer();
           var7 = 131586;
           var8 = 10;
@@ -1438,7 +1438,7 @@ final class SoftwareDrawingSupport {
         var4 = var3 * var3 >> 8;
         var5 = var3 * var3 >> 12;
         var6 = new ArgbSprite(72, 72);
-        PacketBuffer.a(-115, var6);
+        PacketBuffer.pushSpriteRaster(-115, var6);
         SoftwareRasterizer.drawRadialGlow(SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, SoftwareRasterizer.field_g << 3, param0.length - 1, param0);
         TeamManagementScreen.e(119);
         var7 = new byte[var6.field_y.length];

@@ -69,7 +69,7 @@ final class PromotionDialog extends MessageDialog {
           }
           if (BlackFadeScreen.field_j != -1) {
             var2 = BlackFadeScreen.field_j;
-            IndexedSpriteState.b(38, -1);
+            IndexedSpriteState.setAccountMenuMode(38, -1);
             stackIn_7_0 = var2;
             return stackIn_7_0;
           }

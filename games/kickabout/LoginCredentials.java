@@ -99,7 +99,7 @@ abstract class LoginCredentials {
 
     final static boolean ensureLoginPayloadAvailable(int param0) {
         if (MusicVolumeSupport.field_b == -1) {
-          if (!SetLagCommand.a((byte) 52, 1)) {
+          if (!SetLagCommand.readPacketBytes((byte) 52, 1)) {
             return false;
           }
           MusicVolumeSupport.field_b = ByteArrayPool.field_e.readUnsignedByte((byte) -106);
@@ -109,14 +109,14 @@ abstract class LoginCredentials {
           return false;
         }
         if (MusicVolumeSupport.field_b != -2) {
-          return SetLagCommand.a((byte) -114, MusicVolumeSupport.field_b);
+          return SetLagCommand.readPacketBytes((byte) -114, MusicVolumeSupport.field_b);
         }
-        if (!SetLagCommand.a((byte) 29, 2)) {
+        if (!SetLagCommand.readPacketBytes((byte) 29, 2)) {
           return false;
         }
         MusicVolumeSupport.field_b = ByteArrayPool.field_e.readUnsignedShort((byte) 81);
         ByteArrayPool.field_e.field_n = 0;
-        return SetLagCommand.a((byte) -114, MusicVolumeSupport.field_b);
+        return SetLagCommand.readPacketBytes((byte) -114, MusicVolumeSupport.field_b);
     }
 
     abstract LoginKind getLoginKind(byte param0);

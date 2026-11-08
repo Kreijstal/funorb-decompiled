@@ -10,8 +10,8 @@ final class SumIntegersCommand extends ConsoleCommand {
     static String field_C;
     static String field_H;
 
-    final static void a(boolean param0, int param1) {
-        LobbyMatchPreview.a(param0, false, (byte) -57);
+    final static void showLoginDialog(boolean param0, int param1) {
+        LobbyMatchPreview.showLoginDialog(param0, false, (byte) -57);
         if (param1 >= -89) {
           field_E = (String) null;
         }

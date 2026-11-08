@@ -106,7 +106,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                   if (this.field_C) {
                     MusicPatch.showAccountChoice((byte) -124);
                   } else {
-                    PacketBuffer.g(4);
+                    PacketBuffer.setAccountMenuMode(4);
                   }
                 } else {
                   PlayerContextMenu.requestLoginMenuMode(false);

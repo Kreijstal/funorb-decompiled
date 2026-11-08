@@ -34,7 +34,7 @@ final class ThumbnailStateFactory {
             var4[var5] = new Sprite(param2.field_o, param2.field_v);
             stackIn_6_0 = (1 != var5) ? 0 : 1;
             var6 = stackIn_6_0;
-            PacketBuffer.a(param0 ^ 55, var9[var5]);
+            PacketBuffer.pushSpriteRaster(param0 ^ 55, var9[var5]);
             param2.drawOpaque(0, 0);
             if (var6 == 0) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);

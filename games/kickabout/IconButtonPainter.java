@@ -41,7 +41,7 @@ final class IconButtonPainter implements WidgetPainter {
           if (!param3.isFocused(44)) {
             return;
           }
-          RenderedBall.b(2, param3.field_n - 4, var8 + 2, -4 + param3.field_i, 2 + var6_int);
+          RenderedBall.drawDottedRectangle(2, param3.field_n - 4, var8 + 2, -4 + param3.field_i, 2 + var6_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

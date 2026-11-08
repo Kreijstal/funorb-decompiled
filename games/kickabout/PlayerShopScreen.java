@@ -118,7 +118,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         if (this.field_T.field_Fb != -1 &&
           this.field_U.field_sb == 1) {
           var4 = RegistrationRequestState.field_h.field_q[this.field_T.field_Fb];
-          DoSomethingCommand.a(64, RegistrationRequestState.field_h.squad[var4], var4);
+          DoSomethingCommand.enqueueSellPlayerDialog(64, RegistrationRequestState.field_h.squad[var4], var4);
         }
         var5 = 63 % ((param0 - 38) / 60);
         var7 = 0;
@@ -138,12 +138,12 @@ final class PlayerShopScreen extends TeamManagementScreen {
         }
         if (this.field_J.getScrollOffset((byte) -73) > var3 &&
           this.field_O == 0) {
-          ShopPlayerSlot.c(59, -112);
+          ShopPlayerSlot.playDefaultFadingSound(59, -112);
           this.field_O = 10;
         }
         if (this.field_J.getScrollOffset((byte) -86) < var3 &&
           this.field_O == 0) {
-          ShopPlayerSlot.c(60, -127);
+          ShopPlayerSlot.playDefaultFadingSound(60, -127);
           this.field_O = 10;
         }
     }

@@ -57,14 +57,14 @@ final class AuctionLogEntry extends IntrusiveNode {
         return var1Lifetime3;
     }
 
-    final static int a(int param0) {
+    final static int encodeChatFilters(int param0) {
         if (param0 != 1315216324) {
-          AuctionLogEntry.a(0);
+          AuctionLogEntry.encodeChatFilters(0);
         }
         return LoginResponseUiSupport.field_a + (ConsoleTokenCursor.field_b << 2) + (ServerTextTemplate.field_a << 4);
     }
 
-    final static BinaryBitmapFont a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
+    final static BinaryBitmapFont loadBinaryFont(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         java.applet.Applet var6 = null;
         BinaryBitmapFont stackIn_6_0 = null;
@@ -123,7 +123,7 @@ final class AuctionLogEntry extends IntrusiveNode {
         }
     }
 
-    final static String a(int param0, String param1, byte param2) {
+    final static String describeGameJoinStatus(int param0, String param1, byte param2) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -188,7 +188,7 @@ final class AuctionLogEntry extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawSharedChatInterface(boolean param0, int param1) {
         ThreeCommand.a(param0, param1 + 16355);
         if (param1 != 0) {
           field_m = (StringBuilder) null;
@@ -238,7 +238,7 @@ final class AuctionLogEntry extends IntrusiveNode {
         return stackIn_6_0;
     }
 
-    final static Object a(byte[] param0, boolean param1, int param2) {
+    final static Object wrapByteStorage(byte[] param0, boolean param1, int param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         DirectByteStorage stackIn_6_0 = null;

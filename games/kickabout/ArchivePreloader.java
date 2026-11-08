@@ -13,9 +13,9 @@ final class ArchivePreloader {
     static int[] field_b;
     float field_h;
 
-    final void a(ResourceArchive param0, byte param1, String param2, String param3) {
+    final void addArchivePreload(ResourceArchive param0, byte param1, String param2, String param3) {
         try {
-          this.a(18476, param0, (String) null, param2, param3, -1);
+          this.addPreloadEntry(18476, param0, (String) null, param2, param3, -1);
           if (param1 > -105) {
             this.field_c = -99;
           }
@@ -24,7 +24,7 @@ final class ArchivePreloader {
         }
     }
 
-    private final void a(int param0, int param1, ArchivePreloadEntry param2) {
+    private final void updateProgress(int param0, int param1, ArchivePreloadEntry param2) {
         float var4_float = 0.0f;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -57,7 +57,7 @@ final class ArchivePreloader {
         }
     }
 
-    final static boolean a(boolean param0, String param1) {
+    final static boolean isRepeatedCharacter(boolean param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -92,7 +92,7 @@ final class ArchivePreloader {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, int param8) {
+    final static void rasterizeSortedTriangleHalfBlend(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, int param8) {
         RuntimeException stackIn_81_0 = null;
         StringBuilder stackIn_81_1 = null;
         String stackIn_82_2 = null;
@@ -288,7 +288,7 @@ final class ArchivePreloader {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean pollCompletion(int param0) {
         int var3;
         ArchivePreloadEntry var4;
         var3 = Kickabout.field_G;
@@ -298,24 +298,24 @@ final class ArchivePreloader {
         while (this.field_g < this.field_e) {
           var4 = this.field_d[this.field_g];
           if (!var4.field_h.ensureIndex(-118)) {
-            this.a(-1, 0, var4);
+            this.updateProgress(-1, 0, var4);
             return false;
           }
           if (0 <= var4.field_a &&
             !var4.field_h.ensurePackedGroup((byte) 20, var4.field_a)) {
-            this.a(-1, var4.field_h.getGroupProgress(var4.field_a, (byte) 56), var4);
+            this.updateProgress(-1, var4.field_h.getGroupProgress(var4.field_a, (byte) 56), var4);
             return false;
           }
           if (null != var4.field_g &&
             !var4.field_h.ensurePackedGroupByName(false, var4.field_g)) {
-            this.a(-1, var4.field_h.getGroupProgressByName(var4.field_g, -16248), var4);
+            this.updateProgress(-1, var4.field_h.getGroupProgressByName(var4.field_g, -16248), var4);
             return false;
           }
           if (var4.field_a < 0 &&
             null == var4.field_g &&
             var4.field_c != null &&
             !var4.field_h.ensureAllGroupsAvailable(false)) {
-            this.a(param0 - 1183118481, var4.field_h.getOverallProgress(param0 ^ -1183116137), var4);
+            this.updateProgress(param0 - 1183118481, var4.field_h.getOverallProgress(param0 ^ -1183116137), var4);
             return false;
           }
           this.field_g = this.field_g + 1;
@@ -323,18 +323,18 @@ final class ArchivePreloader {
         return true;
     }
 
-    final void a(ResourceArchive param0, String param1, int param2, String param3, String param4) {
+    final void addNamedGroupPreload(ResourceArchive param0, String param1, int param2, String param3, String param4) {
         if (param2 != -6869) {
           return;
         }
         try {
-          this.a(param2 ^ -21241, param0, param3, param1, param4, -1);
+          this.addPreloadEntry(param2 ^ -21241, param0, param3, param1, param4, -1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qe.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(int param0, ResourceArchive param1, String param2, String param3, String param4, int param5) {
+    private final void addPreloadEntry(int param0, ResourceArchive param1, String param2, String param3, String param4, int param5) {
         int fieldTemp$1 = 0;
         ArchivePreloadEntry[] var7 = null;
         ArchivePreloadEntry var7_ref = null;
@@ -416,13 +416,13 @@ final class ArchivePreloader {
         field_j = null;
     }
 
-    final void a(String param0, ResourceArchive param1, int param2) {
+    final void addArchiveIndexPreload(String param0, ResourceArchive param1, int param2) {
         try {
           if (param2 >= -67) {
             ResourceArchive var5 = (ResourceArchive) null;
-            this.a((String) null, (ResourceArchive) null, -7);
+            this.addArchiveIndexPreload((String) null, (ResourceArchive) null, -7);
           }
-          this.a(18476, param1, (String) null, (String) null, param0, -1);
+          this.addPreloadEntry(18476, param1, (String) null, (String) null, param0, -1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qe.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

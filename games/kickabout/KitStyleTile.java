@@ -237,7 +237,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           var10 = LineupPositionSupport.field_g;
           var10.draw(-(var10.field_q >> 1) + var5, var6 - (var10.field_w >> 1));
           var8 = new ArgbSprite(18, 13);
-          PacketBuffer.a(param0 ^ -24576, var8);
+          PacketBuffer.pushSpriteRaster(param0 ^ -24576, var8);
           ConsoleTokenCursor.field_d.drawCentered("10", SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 2, -1, -1);
           SoftwareDrawingSupport.outlineSpriteInPlace(var8, -16711423);
           SoftwareDrawingSupport.outlineSpriteInPlace(var8, 1996554497);

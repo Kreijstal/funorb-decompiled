@@ -99,7 +99,7 @@ final class CanvasResizePolicy {
           stackIn_2_3 = true;
           stackIn_3_4 = !(param3);
           var7 = (ModelMesh) (((AnimationPlayer) (Object) stackIn_2_0).applyCurrentFrame(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4));
-          PacketBuffer.a(102, BuyPitchDialog.field_F);
+          PacketBuffer.pushSpriteRaster(102, BuyPitchDialog.field_F);
           SoftwareRasterizer.clearFramebuffer();
           TriangleRasterizer.useRasterClip();
           if (FormationAgent.field_l == 3) {

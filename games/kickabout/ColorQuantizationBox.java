@@ -67,7 +67,7 @@ final class ColorQuantizationBox {
           }
           SoftwareRasterizer.fillRoundedRectangleBlended(-var13 + param3, param1, var13, var14, 2, 0, param4);
           if (256 != var9) {
-            PacketBuffer.a(-122, AudioOutputSupport.field_b);
+            PacketBuffer.pushSpriteRaster(-122, AudioOutputSupport.field_b);
             SoftwareRasterizer.clearFramebuffer();
           }
           var15 = ByteArrayPool.field_d;

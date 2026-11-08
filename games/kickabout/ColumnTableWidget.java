@@ -23,7 +23,7 @@ class ColumnTableWidget extends UiLayoutNode {
         this.field_Cb.advanceScroll(32 * StatefulTextPainter.field_v, param1, (byte) -108, 32);
         for (var3_int = 0; var3_int < this.field_Bb.length; var3_int++) {
           if (this.field_Bb[var3_int].field_sb == 1) {
-            ShopPlayerSlot.c(45, 81);
+            ShopPlayerSlot.playDefaultFadingSound(45, 81);
             this.cycleColumnSort(var3_int, 99);
           }
         }

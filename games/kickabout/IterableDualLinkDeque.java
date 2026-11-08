@@ -53,7 +53,7 @@ final class IterableDualLinkDeque implements Iterable {
         this.field_d.field_e = this.field_d;
     }
 
-    final static void a(boolean param0) {
+    final static void drawMenuPanel(boolean param0) {
         int var2 = 0;
         int var1 = DiagnosticsOverlaySupport.b((byte) 46);
         if (!param0) {

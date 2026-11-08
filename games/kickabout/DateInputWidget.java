@@ -21,11 +21,11 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           var7 = LoginDialog.field_db;
         }
         if (!param4) {
-          TeamSelectionView.a(param0, var7, param6, param3, param2, 73, param5, param1);
+          TeamSelectionView.updateChatComposerPopup(param0, var7, param6, param3, param2, 73, param5, param1);
           return;
         }
         DateInputWidget.releaseStatics(-38);
-        TeamSelectionView.a(param0, var7, param6, param3, param2, 73, param5, param1);
+        TeamSelectionView.updateChatComposerPopup(param0, var7, param6, param3, param2, 73, param5, param1);
     }
 
     void setValidator(DateInputValidator param0, int param1) {

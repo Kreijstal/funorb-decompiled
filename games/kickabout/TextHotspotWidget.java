@@ -266,7 +266,7 @@ class TextHotspotWidget extends TextButton {
           var7 = var5.textOriginX((UiWidget) (this), param2, -1);
           var8 = var5.textOriginY(true, (UiWidget) (this), param3);
           do {
-            RenderedBall.b(param1 - 63, 2 + var6.width, var6.y + (var8 - 2), var6.height + 2, -2 + (var7 + var6.x));
+            RenderedBall.drawDottedRectangle(param1 - 63, 2 + var6.width, var6.y + (var8 - 2), var6.height + 2, -2 + (var7 + var6.x));
             var6 = var6.nextLineRegion;
           } while (var6 != null);
         }

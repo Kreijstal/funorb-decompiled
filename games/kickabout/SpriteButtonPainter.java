@@ -26,7 +26,7 @@ final class SpriteButtonPainter extends TextWidgetPainter {
         int var5 = 48;
         int var6 = 21;
         Sprite var7 = new Sprite(PitchOptionTile.field_yb << 1, IconLabel.field_Bb << 1);
-        PacketBuffer.a(97, var7);
+        PacketBuffer.pushSpriteRaster(97, var7);
         SoftwareRasterizer.clearFramebuffer();
         SoftwareRasterizer.drawThickRectangle(0, 0, PitchOptionTile.field_yb << 1, IconLabel.field_Bb << 1, 2, 16777215);
         SoftwareRasterizer.drawRectangle(1, 1, -2 + (PitchOptionTile.field_yb << 1), (IconLabel.field_Bb << 1) - 2, 16777215);
@@ -44,7 +44,7 @@ final class SpriteButtonPainter extends TextWidgetPainter {
         TeamManagementScreen.e(param0 ^ -363021514);
         TeamManagementScreen.e(127);
         SquadPickerDialog.field_Q = new Sprite(2 + PitchOptionTile.field_yb, 2 + IconLabel.field_Bb);
-        PacketBuffer.a(param0 + 363021421, SquadPickerDialog.field_Q);
+        PacketBuffer.pushSpriteRaster(param0 + 363021421, SquadPickerDialog.field_Q);
         SoftwareRasterizer.fillRect(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 65793);
         var7.drawHalfSize(1, 1);
         TeamManagementScreen.e(125);

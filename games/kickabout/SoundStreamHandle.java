@@ -13,7 +13,7 @@ final class SoundStreamHandle extends IntrusiveNode {
 
     final static UiLayoutNode createSpriteBackedWidget(int param0, int param1) {
         UiLayoutNode var2 = new UiLayoutNode((long)param1, (UiLayoutNode) null);
-        var2.field_R = ShopPlayerSlot.a((byte) 26, param0);
+        var2.field_R = ShopPlayerSlot.createSolidNineSliceSprites((byte) 26, param0);
         return var2;
     }
 

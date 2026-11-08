@@ -161,7 +161,7 @@ final class MeshPreviewSupport {
 
     final static void renderMeshPreview(ModelMesh param0, Sprite param1, int param2, int param3) {
         try {
-          PacketBuffer.a(-51, param1);
+          PacketBuffer.pushSpriteRaster(-51, param1);
           SoftwareRasterizer.clearFramebuffer();
           if (param3 != 40) {
             int[] var5 = (int[]) null;

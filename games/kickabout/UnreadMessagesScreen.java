@@ -90,7 +90,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
         }
     }
 
-    final static void a(String param0, Throwable param1, int param2) {
+    final static void reportClientError(String param0, Throwable param1, int param2) {
         try {
           PlatformTaskDispatcher stackIn_13_0;
           java.net.URL stackIn_13_1;

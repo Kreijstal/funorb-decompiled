@@ -29,7 +29,7 @@ abstract class TickClock {
         field_h = null;
     }
 
-    final static void a(int param0) {
+    final static void resetChatComposerLayout(int param0) {
         TextFieldNode.field_Wb = true;
         InstrumentEnvelope.field_c = null;
         MySquadScreen.field_N = null;
@@ -63,7 +63,7 @@ abstract class TickClock {
         Kickabout.field_H = null;
     }
 
-    final static boolean a(long param0, boolean param1) {
+    final static boolean isTradingExemptAccount(long param0, boolean param1) {
         if (!param1) {
           return true;
         }
@@ -76,7 +76,7 @@ abstract class TickClock {
         return true;
     }
 
-    final int a(byte param0, long param1) {
+    final int waitAndAdvanceTicks(byte param0, long param1) {
         long var4 = this.delayMillis((byte) -36);
         if (var4 > 0L) {
           ThreadSleepSupport.sleepMillis(var4, 1);
@@ -84,7 +84,7 @@ abstract class TickClock {
         if (param0 <= -51) {
           return this.advanceTicks(114, param1);
         }
-        TickClock.a(19);
+        TickClock.resetChatComposerLayout(19);
         return this.advanceTicks(114, param1);
     }
 
@@ -94,7 +94,7 @@ abstract class TickClock {
 
     abstract void resetTiming(int param0);
 
-    final static double a(double param0, double param1, boolean param2) {
+    final static double cameraApproachSpeed(double param0, double param1, boolean param2) {
         if (param2) {
           TickClock.releaseStatics((byte) -58);
           return Math.sqrt(param0 * (1.7 * param1));

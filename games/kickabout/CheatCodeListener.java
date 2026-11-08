@@ -54,7 +54,7 @@ final class CheatCodeListener implements OverlayLayer {
             }
           } else {
             var1 = 1;
-            IterableDualLinkDeque.a(false);
+            IterableDualLinkDeque.drawMenuPanel(false);
           }
         }
         if (PlayerStats.beginReconnectGracePeriod((byte) -3) &&
@@ -151,7 +151,7 @@ final class CheatCodeListener implements OverlayLayer {
           }
           var8 = (int)stackIn_16_0 + 320;
           var9 = (int)var7 + 140;
-          PacketBuffer.a(-102, this.field_b);
+          PacketBuffer.pushSpriteRaster(-102, this.field_b);
           SoftwareRasterizer.clearFramebuffer();
           this.field_i[var4].renderModel(var3, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, (byte) -105);
           TeamManagementScreen.e(120);

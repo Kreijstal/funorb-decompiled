@@ -97,8 +97,8 @@ class PacketBuffer extends IntrusiveNode {
         return this.field_f[fieldTemp$0];
     }
 
-    final static void g(int param0) {
-        IndexedSpriteState.b(38, param0);
+    final static void setAccountMenuMode(int param0) {
+        IndexedSpriteState.setAccountMenuMode(38, param0);
     }
 
     final int readInt(int param0) {
@@ -510,7 +510,7 @@ class PacketBuffer extends IntrusiveNode {
         return var4 | var3;
     }
 
-    final static void a(int param0, Sprite param1) {
+    final static void pushSpriteRaster(int param0, Sprite param1) {
         try {
           int var2_int = 120 % ((param0 - 9) / 46);
           ClientUiOverlay.pushRasterState(-12974);

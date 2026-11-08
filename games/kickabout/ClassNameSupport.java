@@ -22,7 +22,7 @@ final class ClassNameSupport {
         field_g = null;
     }
 
-    final static boolean a(int param0, int[] param1) {
+    final static boolean pollIncomingPacket(int param0, int[] param1) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_40_0 = null;
@@ -65,7 +65,7 @@ final class ClassNameSupport {
           while (true) {
             if (0 > DirectByteStorage.field_i) {
               ByteArrayPool.field_e.field_n = 0;
-              if (!SetLagCommand.a((byte) 83, 1)) {
+              if (!SetLagCommand.readPacketBytes((byte) 83, 1)) {
                 return false;
               }
               DirectByteStorage.field_i = ByteArrayPool.field_e.readIsaacByte((byte) 107);

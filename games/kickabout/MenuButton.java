@@ -151,7 +151,7 @@ final class MenuButton {
                                                                                     RotaryDialPainter.field_n = stackIn_67_0;
                                                                                   }
                                                                                 } else {
-                                                                                  MatchHudRoutingSupport.a((byte) 101, true, NineSlicePanelPainter.field_f);
+                                                                                  MatchHudRoutingSupport.startLoginTransition((byte) 101, true, NineSlicePanelPainter.field_f);
                                                                                   SpriteButtonPainter.field_v = 2147483647;
                                                                                 }
                                                                               } else {
@@ -598,9 +598,9 @@ final class MenuButton {
                 this.field_n[0] = (Sprite) ((Object) ArchiveIndex.field_m);
                 var6 = ArchiveIndex.field_m.copyArgb();
                 this.field_n[2] = (Sprite) ((Object) ArchiveIndex.field_m);
-                PacketBuffer.a(-104, var6);
+                PacketBuffer.pushSpriteRaster(-104, var6);
                 AuctionListing.pushRasterClip(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
-                PacketBuffer.a(103, var6);
+                PacketBuffer.pushSpriteRaster(103, var6);
                 var6.drawAdditive(0, 0, 60);
                 TeamManagementScreen.e(119);
                 var11 = new int[64];

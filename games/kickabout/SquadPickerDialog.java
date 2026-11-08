@@ -14,7 +14,7 @@ final class SquadPickerDialog extends MessageDialog {
     static String field_M;
     static Sprite field_Q;
 
-    final static void a(int param0, String param1, boolean param2) {
+    final static void requestLeaguePlayerSearch(int param0, String param1, boolean param2) {
         int fieldTemp$0 = 0;
         int var3_int = 0;
         if (PlayArea.isGuestSession(100)) {
@@ -93,7 +93,7 @@ final class SquadPickerDialog extends MessageDialog {
           return 255 & param1;
         }
         String var3 = (String) null;
-        SquadPickerDialog.a(12, (String) null, false);
+        SquadPickerDialog.requestLeaguePlayerSearch(12, (String) null, false);
         return 255 & param1;
     }
 
@@ -110,7 +110,7 @@ final class SquadPickerDialog extends MessageDialog {
             GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].drawCentered(param2 + 35 + 105, 23, param1 + 320);
             if (!GameLoopApplet.field_E.hasLogEntryForSlot((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
               if (AuctionLogEntry.isLoggedInJagexModerator(15137) &&
-                !ScrollPane.h((byte) 5)) {
+                !ScrollPane.hasModeratorTradingExemption((byte) 5)) {
                 IsSixCommand.field_C.drawParagraph("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
@@ -136,7 +136,7 @@ final class SquadPickerDialog extends MessageDialog {
             }
             return;
           }
-          if (!ScrollPane.h((byte) 5)) {
+          if (!ScrollPane.hasModeratorTradingExemption((byte) 5)) {
             IsSixCommand.field_C.drawParagraph("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
             return;
           }
@@ -166,7 +166,7 @@ final class SquadPickerDialog extends MessageDialog {
               IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
-            if (!ScrollPane.h((byte) 5)) {
+            if (!ScrollPane.hasModeratorTradingExemption((byte) 5)) {
               IsSixCommand.field_C.drawParagraph("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
             } else {
               if (this.field_H.field_Fb == -1) {
@@ -194,7 +194,7 @@ final class SquadPickerDialog extends MessageDialog {
             }
           }
         } else {
-          if (!ScrollPane.h((byte) 5)) {
+          if (!ScrollPane.hasModeratorTradingExemption((byte) 5)) {
             IsSixCommand.field_C.drawParagraph("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
           } else {
             if (this.field_H.field_Fb == -1) {
@@ -220,7 +220,7 @@ final class SquadPickerDialog extends MessageDialog {
           throw new IllegalStateException();
         }
         TutorialChoiceDialog.field_H = true;
-        SumIntegersCommand.a(false, -112);
+        SumIntegersCommand.showLoginDialog(false, -112);
         RasterGlowSupport.field_c = 0;
         if (param0 == 66) {
           return;
@@ -268,7 +268,7 @@ final class SquadPickerDialog extends MessageDialog {
         if (!AuctionLogEntry.isLoggedInJagexModerator(15137)) {
           return;
         }
-        if (ScrollPane.h((byte) -128)) {
+        if (ScrollPane.hasModeratorTradingExemption((byte) -128)) {
           return;
         }
         this.field_i[0].field_lb = false;

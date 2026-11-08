@@ -13,7 +13,7 @@ final class ListingRow {
     String field_f;
     int field_h;
 
-    final void a(PacketBuffer param0, int param1) {
+    final void readFromPacket(PacketBuffer param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -63,7 +63,7 @@ final class ListingRow {
         }
     }
 
-    final static void a(byte param0, int[] param1) {
+    final static void initializeGamePacketLengths(byte param0, int[] param1) {
         if (param0 != -8) {
           return;
         }

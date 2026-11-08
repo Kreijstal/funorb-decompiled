@@ -69,7 +69,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         if (param3 == -1) {
           var17 = AnimationClip.tintGrayscaleSprite(param4, -74, DirectByteStorage.field_m);
           var5 = var17;
-          PacketBuffer.a(param1 + 13, var17);
+          PacketBuffer.pushSpriteRaster(param1 + 13, var17);
         } else {
           if (param3 != -2) {
             stackIn_5_0 = param4;
@@ -98,7 +98,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             var9_ref_ut = AnimationClip.tintGrayscaleSprite(stackIn_11_0, stackIn_11_1, stackIn_12_2);
             var15 = new Sprite(param3, var14.field_v);
             var5 = var15;
-            PacketBuffer.a(-116, var15);
+            PacketBuffer.pushSpriteRaster(-116, var15);
             var9_ref_ut.drawOpaque(var15.field_o - var9_ref_ut.field_o, 0);
             for (var10 = var14.field_o; var10 < var15.field_o - var9_ref_ut.field_o; var10 = var10 + var16.field_o) {
               var16.drawOpaque(var10, 0);
@@ -108,7 +108,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           } else {
             var13 = AnimationClip.tintGrayscaleSprite(param4, -85, TextHotspotWidget.field_L);
             var5 = var13;
-            PacketBuffer.a(98, var13);
+            PacketBuffer.pushSpriteRaster(98, var13);
           }
         }
         AuctionListing.pushRasterClip(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
@@ -126,7 +126,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           SpritePixelSupport.drawGlowingLine(10, 6, SoftwareRasterizer.field_g - 10, 6, 6, 8, var25);
           SpritePixelSupport.drawGlowingLine(10, 8, SoftwareRasterizer.field_g - 10, 8, 6, 8, var25);
         } else if (1 == param2) {
-          PacketBuffer.a(109, var5);
+          PacketBuffer.pushSpriteRaster(109, var5);
           var5.drawAdditive(0, 0, 60);
           TeamManagementScreen.e(param1 + 174);
           var24 = new int[64];
@@ -142,7 +142,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           var19 = var5;
           var18 = new Sprite(var5.field_o, var5.field_v);
           var5 = var18;
-          PacketBuffer.a(-45, var18);
+          PacketBuffer.pushSpriteRaster(-45, var18);
           SoftwareDrawingSupport.drawSpriteWithBrightness(var19, 0, 0, 230);
           AuctionListing.pushRasterClip(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
           var23 = new int[64];
@@ -363,13 +363,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           if (param2 != 0) {
             if (1 != param2) {
               if (2 == param2) {
-                TextPromptDialog.a((byte) -51, "conduct.ws");
+                TextPromptDialog.requestAccountPage((byte) -51, "conduct.ws");
               }
             } else {
-              TextPromptDialog.a((byte) -51, "privacy.ws");
+              TextPromptDialog.requestAccountPage((byte) -51, "privacy.ws");
             }
           } else {
-            TextPromptDialog.a((byte) -51, "terms.ws");
+            TextPromptDialog.requestAccountPage((byte) -51, "terms.ws");
           }
           if (param3 < 7) {
             discarded$1 = this.allFieldsValid(-42);

@@ -23,7 +23,7 @@ final class MatchHudRoutingSupport {
           return;
         }
         String var2 = (String) null;
-        MatchHudRoutingSupport.a((byte) 32, false, (String) null);
+        MatchHudRoutingSupport.startLoginTransition((byte) 32, false, (String) null);
         ScrollPane.field_Jb.addLast(new WelcomeDialog(), 3);
     }
 
@@ -73,7 +73,7 @@ final class MatchHudRoutingSupport {
         field_c = null;
     }
 
-    final static void a(byte param0, boolean param1, String param2) {
+    final static void startLoginTransition(byte param0, boolean param1, String param2) {
         try {
           WeightedLruCache.field_a = ClientUiUpdateSupport.field_c;
           SaveChangesDialog.field_G = param1 ? true : false;

@@ -32,7 +32,7 @@ abstract class ListRow extends UiLayoutNode {
         java.awt.Canvas var1 = null;
         if (ClassNameSupport.field_a) {
           ClassNameSupport.field_a = false;
-          var1 = DropTargetWidget.l(param0 ^ 634588136);
+          var1 = DropTargetWidget.getActiveCanvas(param0 ^ 634588136);
           PlatformTaskState.field_c.requestMouseMove((byte) 53, TutorialCaptionSupport.field_j, ArrayWidgetContainer.field_x, (java.awt.Component) ((Object) var1));
           PlatformTaskState.field_c.requestCursorVisibility(-118, (java.awt.Component) ((Object) var1), true);
           ArchiveManager.field_m = TutorialCaptionSupport.field_j;

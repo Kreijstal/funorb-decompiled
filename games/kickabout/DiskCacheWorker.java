@@ -92,7 +92,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              UnreadMessagesScreen.a((String) null, (Throwable) ((Object) var2_ref), 1);
+              UnreadMessagesScreen.reportClientError((String) null, (Throwable) ((Object) var2_ref), 1);
               var7.pending = false;
             }
           }

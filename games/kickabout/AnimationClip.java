@@ -250,7 +250,7 @@ final class AnimationClip {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, IntrusiveDeque param5, byte param6) {
+    final static void addGroundMarkerLine(int param0, int param1, int param2, int param3, int param4, IntrusiveDeque param5, byte param6) {
         int var11 = 0;
         int var7_int = 0;
         int var8 = 0;
@@ -272,7 +272,7 @@ final class AnimationClip {
             return;
           }
           for (var11 = 0; -1 + var10 > var11; var11++) {
-            param5.addLast(TrinketShopDialog.b(true, param4 + (param0 - param4) * var11 / (-1 + var10), param3 + var11 * (-param3 + param2) / (-1 + var10)), 3);
+            param5.addLast(TrinketShopDialog.createGroundMarker(true, param4 + (param0 - param4) * var11 / (-1 + var10), param3 + var11 * (-param3 + param2) / (-1 + var10)), 3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

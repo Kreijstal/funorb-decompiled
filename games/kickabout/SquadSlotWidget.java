@@ -77,7 +77,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           }
           return;
         }
-        PacketBuffer.a(85, PortraitCacheOrder.field_b);
+        PacketBuffer.pushSpriteRaster(85, PortraitCacheOrder.field_b);
         SoftwareRasterizer.clearFramebuffer();
         var5 = new int[4];
         var4 = var5;

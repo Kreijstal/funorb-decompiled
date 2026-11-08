@@ -173,12 +173,12 @@ final class AuctionsScreen extends ButtonMenuScreen {
         var7 = -68 % ((38 - param0) / 60);
         if (var3 < this.field_G.getScrollOffset((byte) -25) &&
           this.field_V == 0) {
-          ShopPlayerSlot.c(59, 42);
+          ShopPlayerSlot.playDefaultFadingSound(59, 42);
           this.field_V = 10;
         }
         if (var3 > this.field_G.getScrollOffset((byte) -126) &&
           this.field_V == 0) {
-          ShopPlayerSlot.c(60, -101);
+          ShopPlayerSlot.playDefaultFadingSound(60, -101);
           this.field_V = 10;
         }
     }
@@ -236,7 +236,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         try {
           var16 = new int[]{PlayerContextMenu.field_e, IsSixCommand.field_A, TextPromptDialog.field_Kb, ArchivePreloadEntry.field_e};
           var3 = new Sprite(32, 32);
-          PacketBuffer.a(-111, var3);
+          PacketBuffer.pushSpriteRaster(-111, var3);
           for (var4_int = 15; var4_int < 19; var4_int++) {
             SoftwareRasterizer.drawHorizontalLine(4, var4_int, 26, 592137);
           }
@@ -264,7 +264,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             stackIn_21_0 = (var11 != 0) ? 1 : 0;
             var12 = stackIn_21_0;
             var13 = new Sprite(param1.field_o, param1.field_v);
-            PacketBuffer.a(-96, var13);
+            PacketBuffer.pushSpriteRaster(-96, var13);
             param1.drawOpaque(0, 0);
             if (var11 == 0) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
@@ -633,14 +633,14 @@ final class AuctionsScreen extends ButtonMenuScreen {
           if (GameLoopApplet.field_E.canStartAuction(-3)) {
             if (GameLoopApplet.field_E.hasAuctionablePlayer((byte) -97)) {
               RankingsScreen.queueNewAuctionDialog(25);
-              ShopPlayerSlot.c(49, 55);
+              ShopPlayerSlot.playDefaultFadingSound(49, 55);
             } else {
               SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 33);
-              ShopPlayerSlot.c(53, -126);
+              ShopPlayerSlot.playDefaultFadingSound(53, -126);
             }
           } else {
             SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 6);
-            ShopPlayerSlot.c(53, -120);
+            ShopPlayerSlot.playDefaultFadingSound(53, -120);
           }
         }
         var5 = 0;
@@ -648,7 +648,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         while (var5 < this.field_E.length) {
           if (this.field_E[var5].field_sb == 1) {
             this.field_U = this.field_U ^ 1 << var5;
-            ShopPlayerSlot.c(61, -118);
+            ShopPlayerSlot.playDefaultFadingSound(61, -118);
           }
           stackIn_32_0 = this.field_E[var5];
           stackIn_33_1 = (0 != (this.field_U & 1 << var5));

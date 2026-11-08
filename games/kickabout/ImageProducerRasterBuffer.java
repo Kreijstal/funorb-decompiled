@@ -61,11 +61,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     final static ResourceArchive createResourceArchive(byte param0, int param1) {
         if (param0 <= -124) {
-          return SetLagCommand.a(param1, (byte) -58, 1, false, false, true);
+          return SetLagCommand.createResourceArchive(param1, (byte) -58, 1, false, false, true);
         }
         PacketBuffer var3 = (PacketBuffer) null;
         ImageProducerRasterBuffer.a(81, 114, (PacketBuffer) null, 122, 17);
-        return SetLagCommand.a(param1, (byte) -58, 1, false, false, true);
+        return SetLagCommand.createResourceArchive(param1, (byte) -58, 1, false, false, true);
     }
 
     private final synchronized void pushPixels(byte param0) {

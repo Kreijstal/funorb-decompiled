@@ -30,7 +30,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           }
           var4_int = param0.getGroupId(param1, -1);
           var5 = param0.getFileId((byte) -70, param3, var4_int);
-          stackIn_4_0 = TutorialChoiceDialog.a(var5, var4_int, param0, 2);
+          stackIn_4_0 = TutorialChoiceDialog.loadIndexedSprite(var5, var4_int, param0, 2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,7 +114,7 @@ final class MyPitchScreen extends TeamManagementScreen {
         SoftwareRasterizer.fillRoundedRectangleBlended(var3, 207, 348, 102, 10, 65793, 96);
         SoftwareRasterizer.fillRoundedRectangleBlended(var3, 314, 348, 100, 10, 65793, 96);
         for (var4 = 0; var4 < RankingRowNode.field_Gb.field_jb.toArray(606511077).length; var4++) {
-          ((PitchOptionTile) (RankingRowNode.field_Gb.field_jb.toArray(param0 ^ -606511074)[var4])).j(0);
+          ((PitchOptionTile) (RankingRowNode.field_Gb.field_jb.toArray(param0 ^ -606511074)[var4])).drawPitchTile(0);
         }
         RankingRowNode.field_Gb.draw(96, false);
         if (!this.field_F) {
@@ -163,14 +163,14 @@ final class MyPitchScreen extends TeamManagementScreen {
         RankingRowNode.field_Gb.updateInput(0, param1);
         var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.first(24009));
         while (var3_ref_jt != null) {
-          var3_ref_jt.c(3784, param1);
+          var3_ref_jt.updatePitchTile(3784, param1);
           if (var3_ref_jt.field_Ab != null &&
             var3_ref_jt.field_Ab.field_sb != 0) {
             PitchPurchaseSupport.enqueueBuyPitchDialog(var3_ref_jt, (byte) 125);
           } else {
             if (var3_ref_jt.field_sb != 0 &&
-              var3_ref_jt.i(-29050)) {
-              if (var3_ref_jt.k(-9)) {
+              var3_ref_jt.isOwned(-29050)) {
+              if (var3_ref_jt.isSelected(-9)) {
                 var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.next(33));
                 continue;
               }

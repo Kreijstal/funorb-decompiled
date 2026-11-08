@@ -360,7 +360,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         var3.field_A = 1;
         var3.field_y = 16777215;
         UiLayoutNode var10 = new UiLayoutNode(0L, (UiLayoutNode) null);
-        var10.field_R = ShopPlayerSlot.a((byte) 26, 8947956);
+        var10.field_R = ShopPlayerSlot.createSolidNineSliceSprites((byte) 26, 8947956);
         UiLayoutNode var5 = new UiLayoutNode();
         var5.field_B = 2;
         var5.field_y = 16777215;
@@ -553,7 +553,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         if (DisplayModeSupport.field_a.field_sb == 1) {
           stackIn_66_0 = !(ServerTextTemplate.field_e);
           ServerTextTemplate.field_e = stackIn_66_0;
-          ShopPlayerSlot.c(61, -17);
+          ShopPlayerSlot.playDefaultFadingSound(61, -17);
           if (ServerTextTemplate.field_e) {
             StatChoiceDialog.field_F.setText(Integer.toString(AuctionBidDialog.field_L), -23174);
           } else {
@@ -598,7 +598,7 @@ final class AuctionSettingsDialog extends MessageDialog {
                   }
                   LocalizedTextLoader.field_f = stackIn_93_0;
                 }
-                ShopPlayerSlot.c(60, param0 ^ -17);
+                ShopPlayerSlot.playDefaultFadingSound(60, param0 ^ -17);
                 var4 = 1;
               }
             }
@@ -611,7 +611,7 @@ final class AuctionSettingsDialog extends MessageDialog {
               if (LocalizedTextLoader.field_f < QuickChatPhraseCache.field_c) {
                 LocalizedTextLoader.field_f = QuickChatPhraseCache.field_c;
               }
-              ShopPlayerSlot.c(59, -94);
+              ShopPlayerSlot.playDefaultFadingSound(59, -94);
               var4 = 1;
             }
             var3 = 1;
@@ -623,7 +623,7 @@ final class AuctionSettingsDialog extends MessageDialog {
               if (AuctionBidDialog.field_L > IndexedSpriteState.field_g) {
                 AuctionBidDialog.field_L = IndexedSpriteState.field_g;
               }
-              ShopPlayerSlot.c(60, param0 - 125);
+              ShopPlayerSlot.playDefaultFadingSound(60, param0 - 125);
               var4 = 1;
             }
             var3 = 1;
@@ -640,7 +640,7 @@ final class AuctionSettingsDialog extends MessageDialog {
                 if (AuctionBidDialog.field_L < LocalizedTextLoader.field_f) {
                   AuctionBidDialog.field_L = LocalizedTextLoader.field_f;
                 }
-                ShopPlayerSlot.c(59, 88);
+                ShopPlayerSlot.playDefaultFadingSound(59, 88);
                 var4 = 1;
               }
             }
@@ -697,7 +697,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         for (var6Lifetime1 = 0; FriendRemovalSupport.field_d.length > var6Lifetime1; var6Lifetime1++) {
           if (FriendRemovalSupport.field_d[var6Lifetime1].field_sb == 1) {
             GameMediaSupport.field_d = var6Lifetime1;
-            ShopPlayerSlot.c(61, 14);
+            ShopPlayerSlot.playDefaultFadingSound(61, 14);
             this.field_I = false;
             this.field_F = false;
           }

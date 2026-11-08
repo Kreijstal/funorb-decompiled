@@ -155,13 +155,13 @@ final class OffscreenPlayerArrow {
             TriangleRasterizer.drawFlatTriangle(this.field_d, var7 + this.field_d, this.field_d + var5, this.field_b, -var6 + this.field_b, -var4 + this.field_b, 4487082);
             TriangleRasterizer.drawFlatTriangle(this.field_d, var9 + this.field_d, this.field_d + var5, this.field_b, this.field_b - var8, -var4 + this.field_b, 85);
           } else {
-            PacketBuffer.a(param0 + 112, UiWidget.field_e);
+            PacketBuffer.pushSpriteRaster(param0 + 112, UiWidget.field_e);
             SoftwareRasterizer.clearFramebuffer();
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.drawFlatTriangle(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, -(var6 << 1) + TextInputWidget.field_P, TextInputWidget.field_P - (var4 << 1), -16777216);
             TriangleRasterizer.drawFlatTriangle(TextInputWidget.field_P, TextInputWidget.field_P + (var9 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, TextInputWidget.field_P - (var8 << 1), -(var4 << 1) + TextInputWidget.field_P, -16777216);
             TeamManagementScreen.e(param0 + 116);
-            PacketBuffer.a(param0 ^ 68, TextInputWidget.field_N);
+            PacketBuffer.pushSpriteRaster(param0 ^ 68, TextInputWidget.field_N);
             SoftwareRasterizer.clearFramebuffer();
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(TextInputWidget.field_P, TextInputWidget.field_P);

@@ -60,7 +60,7 @@ final class AchievementSubmission extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        ShopPlayerSlot.c(48, 36);
+        ShopPlayerSlot.playDefaultFadingSound(48, 36);
         if (param0 >= -116) {
           field_h = (String) null;
         }

@@ -8,7 +8,7 @@ final class AlphaContainer extends SingleChildContainer {
     static String field_D;
     static UiLayoutNode field_E;
 
-    final static IndexedSprite a(boolean param0, int param1, IntrusiveDeque param2, int param3) {
+    final static IndexedSprite renderCrowdFrame(boolean param0, int param1, IntrusiveDeque param2, int param3) {
         Sprite var4 = null;
         RuntimeException var4_ref = null;
         Sprite var5 = null;
@@ -33,7 +33,7 @@ final class AlphaContainer extends SingleChildContainer {
           }
           var4 = stackIn_3_0[stackIn_4_1];
           var5 = new Sprite(var4.field_o, var4.field_v);
-          PacketBuffer.a(-55, var5);
+          PacketBuffer.pushSpriteRaster(-55, var5);
           stackIn_6_0 = FootballerPreview.a(-5275);
           if (!param0) {
             stackIn_7_1 = -10;
@@ -110,7 +110,7 @@ final class AlphaContainer extends SingleChildContainer {
           return;
         }
         Sprite var6 = new Sprite(this.field_z.field_n, this.field_z.field_i);
-        PacketBuffer.a(-46, var6);
+        PacketBuffer.pushSpriteRaster(-46, var6);
         this.field_z.drawLayer(param0, (int) (char)param1, 0, 0);
         TeamManagementScreen.e(127);
         var6.drawAlpha(param2 + this.field_t, this.field_g + param3, this.field_F);

@@ -68,13 +68,13 @@ final class SpriteResourceSupport {
         int var4Lifetime1;
         if (param0 < -89) {
           var8 = new Sprite(108, 108);
-          PacketBuffer.a(-118, var8);
+          PacketBuffer.pushSpriteRaster(-118, var8);
           SoftwareRasterizer.fillCircle(54, 54, 51, 255);
           SoftwareRasterizer.fillCircle(54, 54, 43, 0);
           PitchCoordinateSupport.drawSpinnerSpokes(param1, 0, 124);
           TeamManagementScreen.e(117);
           var9 = new ArgbSprite(54, 54);
-          PacketBuffer.a(-92, var9);
+          PacketBuffer.pushSpriteRaster(-92, var9);
           var8.drawHalfSize(0, 0);
           TeamManagementScreen.e(119);
           for (var4 = 0; var9.field_y.length > var4; var4++) {
@@ -84,13 +84,13 @@ final class SpriteResourceSupport {
         }
         SpriteResourceSupport.clearTemporaryRaster((byte) 1);
         Sprite var6 = new Sprite(108, 108);
-        PacketBuffer.a(-118, var6);
+        PacketBuffer.pushSpriteRaster(-118, var6);
         SoftwareRasterizer.fillCircle(54, 54, 51, 255);
         SoftwareRasterizer.fillCircle(54, 54, 43, 0);
         PitchCoordinateSupport.drawSpinnerSpokes(param1, 0, 124);
         TeamManagementScreen.e(117);
         ArgbSprite var7 = new ArgbSprite(54, 54);
-        PacketBuffer.a(-92, var7);
+        PacketBuffer.pushSpriteRaster(-92, var7);
         var6.drawHalfSize(0, 0);
         TeamManagementScreen.e(119);
         for (var4Lifetime1 = 0; var7.field_y.length > var4Lifetime1; var4Lifetime1++) {

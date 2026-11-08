@@ -133,7 +133,7 @@ final class LoggedPlayer {
         if (param0 != -3197) {
           field_k = (String) null;
         }
-        return TournamentChampionDialog.a(false, PlayerStatSortCriterion.field_o, IntDoubleCommand.field_A);
+        return TournamentChampionDialog.canSendPrivateChatTo(false, PlayerStatSortCriterion.field_o, IntDoubleCommand.field_A);
     }
 
     public static void releaseStatics(int param0) {

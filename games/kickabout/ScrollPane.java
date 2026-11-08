@@ -59,7 +59,7 @@ final class ScrollPane extends UiLayoutNode {
                 }
                 this.field_Fb.layoutThumb(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
                 if (param0) {
-                  ScrollPane.a(-14);
+                  ScrollPane.isLocalGameHost(-14);
                 }
                 return;
               }
@@ -75,7 +75,7 @@ final class ScrollPane extends UiLayoutNode {
                 }
                 this.field_Fb.layoutThumb(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
                 if (param0) {
-                  ScrollPane.a(-14);
+                  ScrollPane.isLocalGameHost(-14);
                 }
                 return;
               }
@@ -89,7 +89,7 @@ final class ScrollPane extends UiLayoutNode {
             if (!param0) {
               return;
             }
-            ScrollPane.a(-14);
+            ScrollPane.isLocalGameHost(-14);
             return;
           }
           if (!param4) {
@@ -107,7 +107,7 @@ final class ScrollPane extends UiLayoutNode {
             if (!param0) {
               return;
             }
-            ScrollPane.a(-14);
+            ScrollPane.isLocalGameHost(-14);
             return;
           }
           if (-(this.field_Ab.field_J + this.field_Ab.field_v) >= 0) {
@@ -122,7 +122,7 @@ final class ScrollPane extends UiLayoutNode {
             if (!param0) {
               return;
             }
-            ScrollPane.a(-14);
+            ScrollPane.isLocalGameHost(-14);
             return;
           }
           this.field_Ab.field_v = -this.field_Ab.field_J;
@@ -135,7 +135,7 @@ final class ScrollPane extends UiLayoutNode {
             if (!param0) {
               return;
             }
-            ScrollPane.a(-14);
+            ScrollPane.isLocalGameHost(-14);
             return;
           }
           this.field_Ab.field_v = -(-this.field_zb.field_mb + this.field_Ab.field_mb + this.field_Ab.field_L) - this.field_Ab.field_J;
@@ -146,13 +146,13 @@ final class ScrollPane extends UiLayoutNode {
         }
         this.field_Fb.layoutThumb(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
         if (param0) {
-          ScrollPane.a(-14);
+          ScrollPane.isLocalGameHost(-14);
         }
     }
 
-    final static boolean h(byte param0) {
+    final static boolean hasModeratorTradingExemption(byte param0) {
         int var1 = -35 % ((-48 - param0) / 50);
-        return TickClock.a(DiagnosticsOverlaySupport.field_d, true);
+        return TickClock.isTradingExemptAccount(DiagnosticsOverlaySupport.field_d, true);
     }
 
     private final void layoutViewport(int param0, byte param1, int param2) {
@@ -171,17 +171,17 @@ final class ScrollPane extends UiLayoutNode {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isLocalGameHost(int param0) {
         if (param0 < 11) {
           return true;
         }
         return AnimationPlayer.field_c == PlayerContextMenu.field_i.field_Nb ? true : false;
     }
 
-    final static void b(int param0) {
+    final static void resetArchiveFailureState(int param0) {
         ParticipantStatus.field_t.field_o = 0;
         if (param0 != 23877) {
-          ScrollPane.a(85, 43, -33);
+          ScrollPane.drawHalfSizePlayerMarker(85, 43, -33);
           ParticipantStatus.field_t.field_l = 0;
           return;
         }
@@ -225,20 +225,20 @@ final class ScrollPane extends UiLayoutNode {
         }
     }
 
-    final boolean a(int param0, boolean param1, boolean param2, int param3, boolean param4, int param5) {
+    final boolean layoutAndScroll(int param0, boolean param1, boolean param2, int param3, boolean param4, int param5) {
         if (param4) {
           return false;
         }
-        return this.a(param2, (byte) 38, param3, param5, this.field_zb.field_mb, param0, param1);
+        return this.layoutAndScroll(param2, (byte) 38, param3, param5, this.field_zb.field_mb, param0, param1);
     }
 
-    private final boolean a(boolean param0, byte param1, int param2, int param3, int param4, int param5, boolean param6) {
+    private final boolean layoutAndScroll(boolean param0, byte param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8 = 0;
         int var8Lifetime1;
         int var8Lifetime2;
         int var8Lifetime3;
         if (param1 != 38) {
-          ScrollPane.b(-63);
+          ScrollPane.resetArchiveFailureState(-63);
         }
         if (param6) {
           var8 = 1;
@@ -264,7 +264,7 @@ final class ScrollPane extends UiLayoutNode {
         return var8Lifetime3 != 0;
     }
 
-    final static void h(int param0) {
+    final static void advanceLoginTransition(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int var2;
@@ -318,11 +318,11 @@ final class ScrollPane extends UiLayoutNode {
         this.field_s = param4;
         this.layoutViewport(param6, (byte) 124, param0);
         if (param1 < 36) {
-          ScrollPane.h((byte) 12);
+          ScrollPane.hasModeratorTradingExemption((byte) 12);
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void drawHalfSizePlayerMarker(int param0, int param1, int param2) {
         PasswordValidator.drawAnimatedPlayerMarker(0, param2, param0, true, (byte) -55);
         int var3 = -114 / ((param1 - 16) / 57);
     }

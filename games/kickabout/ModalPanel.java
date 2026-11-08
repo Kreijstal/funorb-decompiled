@@ -31,7 +31,7 @@ abstract class ModalPanel extends WidgetContainer {
         }
         if (null == FixedVelocitySupport.field_a) {
           FixedVelocitySupport.field_a = new Sprite(this.field_n, this.field_i);
-          PacketBuffer.a(param1 - 190, FixedVelocitySupport.field_a);
+          PacketBuffer.pushSpriteRaster(param1 - 190, FixedVelocitySupport.field_a);
           SoftwareRasterizer.clearFramebuffer();
           this.a(0, (byte) 125, 0);
           super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
@@ -41,7 +41,7 @@ abstract class ModalPanel extends WidgetContainer {
         }
         if (FixedVelocitySupport.field_a.field_q < this.field_n) {
           FixedVelocitySupport.field_a = new Sprite(this.field_n, this.field_i);
-          PacketBuffer.a(param1 - 190, FixedVelocitySupport.field_a);
+          PacketBuffer.pushSpriteRaster(param1 - 190, FixedVelocitySupport.field_a);
           SoftwareRasterizer.clearFramebuffer();
           this.a(0, (byte) 125, 0);
           super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
@@ -51,7 +51,7 @@ abstract class ModalPanel extends WidgetContainer {
         }
         if (this.field_i > FixedVelocitySupport.field_a.field_w) {
           FixedVelocitySupport.field_a = new Sprite(this.field_n, this.field_i);
-          PacketBuffer.a(param1 - 190, FixedVelocitySupport.field_a);
+          PacketBuffer.pushSpriteRaster(param1 - 190, FixedVelocitySupport.field_a);
           SoftwareRasterizer.clearFramebuffer();
           this.a(0, (byte) 125, 0);
           super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
@@ -59,7 +59,7 @@ abstract class ModalPanel extends WidgetContainer {
           FixedVelocitySupport.field_a.drawAlpha(this.field_t + param2, this.field_g + param3, this.field_F);
           return;
         }
-        PacketBuffer.a(param1 - 190, FixedVelocitySupport.field_a);
+        PacketBuffer.pushSpriteRaster(param1 - 190, FixedVelocitySupport.field_a);
         SoftwareRasterizer.clearFramebuffer();
         this.a(0, (byte) 125, 0);
         super.drawLayer(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);

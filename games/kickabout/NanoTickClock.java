@@ -46,32 +46,32 @@ final class NanoTickClock extends TickClock {
           var4 = ContentTransitionDialog.a(param1, (byte) -39) ? 1 : 0;
           var5 = new TriangleMesh();
           var5.field_b = (short)param1.readBits(16, 59);
-          var5.field_f = TournamentChampionDialog.a(var5.field_f, param1, 16, -72);
-          var5.field_r = TournamentChampionDialog.a(var5.field_r, param1, 16, -61);
-          var5.field_P = TournamentChampionDialog.a(var5.field_P, param1, 16, -92);
+          var5.field_f = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_f, param1, 16, -72);
+          var5.field_r = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_r, param1, 16, -61);
+          var5.field_P = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_P, param1, 16, -92);
           var5.field_g = (short)param1.readBits(16, 59);
-          var5.field_n = TournamentChampionDialog.a(var5.field_n, param1, 16, 105);
-          var5.field_z = TournamentChampionDialog.a(var5.field_z, param1, 16, 48);
-          var5.field_T = TournamentChampionDialog.a(var5.field_T, param1, 16, 109);
+          var5.field_n = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_n, param1, 16, 105);
+          var5.field_z = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_z, param1, 16, 48);
+          var5.field_T = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_T, param1, 16, 109);
           if (var3 != 0) {
             var5.field_k = (short)param1.readBits(16, 59);
-            var5.field_F = TournamentChampionDialog.a(var5.field_F, param1, 16, -66);
-            var5.field_I = TournamentChampionDialog.a(var5.field_I, param1, 16, 109);
-            var5.field_v = TournamentChampionDialog.a(var5.field_v, param1, 16, -79);
-            var5.field_M = TournamentChampionDialog.a(var5.field_M, param1, 16, 116);
-            var5.field_U = TournamentChampionDialog.a(var5.field_U, param1, 16, -73);
-            var5.field_l = TournamentChampionDialog.a(var5.field_l, param1, 16, -106);
+            var5.field_F = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_F, param1, 16, -66);
+            var5.field_I = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_I, param1, 16, 109);
+            var5.field_v = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_v, param1, 16, -79);
+            var5.field_M = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_M, param1, 16, 116);
+            var5.field_U = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_U, param1, 16, -73);
+            var5.field_l = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_l, param1, 16, -106);
           }
           if (var4 != 0) {
             param1.readBits(16, 59);
-            var5.field_p = TournamentChampionDialog.a(var5.field_p, param1, 16, 116);
-            var5.field_E = TournamentChampionDialog.a(var5.field_E, param1, 16, -104);
-            var5.field_N = TournamentChampionDialog.a(var5.field_N, param1, 16, -76);
-            var5.field_i = TournamentChampionDialog.a(var5.field_i, param1, 16, -65);
-            var5.field_K = TournamentChampionDialog.a(var5.field_K, param1, 16, -87);
+            var5.field_p = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_p, param1, 16, 116);
+            var5.field_E = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_E, param1, 16, -104);
+            var5.field_N = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_N, param1, 16, -76);
+            var5.field_i = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_i, param1, 16, -65);
+            var5.field_K = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_K, param1, 16, -87);
           }
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
-            var5.field_o = TournamentChampionDialog.a(var5.field_o, param1, 16, 106);
+            var5.field_o = TournamentChampionDialog.readBaseOffsetShortArray(var5.field_o, param1, 16, 106);
           }
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
             var5.field_G = ColumnTableWidget.readPackedByteArray(2280703, param1, var5.field_G, 16);
@@ -107,7 +107,7 @@ final class NanoTickClock extends TickClock {
         }
     }
 
-    final static boolean a(int param0, int param1, int[][] param2, byte[] param3) {
+    final static boolean matchesConfigurationRule(int param0, int param1, int[][] param2, byte[] param3) {
         int var4_int = 0;
         int[] var5 = null;
         int var6 = 0;

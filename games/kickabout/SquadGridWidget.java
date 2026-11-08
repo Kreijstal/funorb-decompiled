@@ -106,7 +106,7 @@ final class SquadGridWidget extends UiLayoutNode {
                 this.field_Eb[var2] = this.field_Eb[var9];
                 this.field_Eb[var9] = var3_ref_kq;
                 if (this.field_zb == 0) {
-                  ShopPlayerSlot.c(54, -108);
+                  ShopPlayerSlot.playDefaultFadingSound(54, -108);
                   this.field_zb = 5;
                 }
               }

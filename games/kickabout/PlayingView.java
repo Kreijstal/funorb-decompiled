@@ -191,19 +191,19 @@ final class PlayingView extends MatchPhaseView {
           this.field_B = true;
         } else {
           if (this.field_B) {
-            ShopPlayerSlot.c(34, 75);
+            ShopPlayerSlot.playDefaultFadingSound(34, 75);
             this.field_B = false;
           }
         }
         if (this.field_f &&
           this.field_a.phaseTime == this.field_a.timeLimit) {
-          ShopPlayerSlot.c(34, param0 - 2004);
+          ShopPlayerSlot.playDefaultFadingSound(34, param0 - 2004);
         }
         if (this.field_f &&
           this.field_a.phaseTime <= 100 &&
           !this.field_j) {
           this.field_j = true;
-          ShopPlayerSlot.c(33, 98);
+          ShopPlayerSlot.playDefaultFadingSound(33, 98);
         }
         if (-2 != this.field_g) {
           stackIn_25_0 = this.field_a.field_g[this.field_g].team;
@@ -255,12 +255,12 @@ final class PlayingView extends MatchPhaseView {
           !(0 > this.field_a.field_V.field_j)) {
           if (Math.abs(this.field_a.field_V.verticalVelocity >> 16) <= 4) {
             if (this.field_a.field_V.horizontalSpeedSquared(-118) > 6553600) {
-              ShopPlayerSlot.c(37, -113);
+              ShopPlayerSlot.playDefaultFadingSound(37, -113);
             } else {
-              ShopPlayerSlot.c(36, param0 ^ -2087);
+              ShopPlayerSlot.playDefaultFadingSound(36, param0 ^ -2087);
             }
           } else {
-            ShopPlayerSlot.c(35, param0 - 2024);
+            ShopPlayerSlot.playDefaultFadingSound(35, param0 - 2024);
           }
         }
         if (NanoTickClock.field_n) {
@@ -1153,7 +1153,7 @@ final class PlayingView extends MatchPhaseView {
           this.wrapAgentsForRendering(param0, param3, 370);
           this.rebuildWorldDrawList((IntrusiveDeque) null, (byte) -97);
           var6_int = this.getFocusedParticipant(-41);
-          this.field_C = SetLagCommand.a((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].team);
+          this.field_C = SetLagCommand.createParticipantNameSprites((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].team);
           this.field_l = true;
           MainMenuScreen.a(this.field_h, param1, param0, true);
           ArrayWidgetContainer.initializePlayerArrows(0, param0, var6_int, this.field_C);
@@ -1515,7 +1515,7 @@ final class PlayingView extends MatchPhaseView {
               var5.updateAnimationFlags(var6 != 0, false, var8);
             }
           }
-          ((RenderedBall) (param1.field_V)).a((RenderedFootballer) (param1.getBallCarrier((byte) -96)), (byte) 50);
+          ((RenderedBall) (param1.field_V)).updateBallVisuals((RenderedFootballer) (param1.getBallCarrier((byte) -96)), (byte) 50);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "va.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1539,7 +1539,7 @@ final class PlayingView extends MatchPhaseView {
             }
             AgeValidator.a(var3_int != 0, -68, PlayerInputEvent.g((byte) 60), SumIntegersCommand.field_A, MeshPreviewSupport.getCommonUiLoadProgress((byte) 92));
           } else {
-            if (!TournamentChampionDialog.i(-86)) {
+            if (!TournamentChampionDialog.isLogoSequenceComplete(-86)) {
               SoftwareRasterizer.clearFramebuffer();
               ValidationState.a(320, 240, (byte) 122);
               WidgetStyleFactory.drawRasterToCanvas(27744, 0, 0, param0);

@@ -65,7 +65,7 @@ final class ServerTextTemplate {
         for (var9Lifetime1 = 0; var9Lifetime1 < 6; var9Lifetime1++) {
           DelayedServerPacket.a(100, 9863, (param5 - param0) * var9Lifetime1 / 6 + param0);
           var10 = QuickChatCategoryCache.buildStadiumSeatColumn(-127, param4, param3);
-          PacketBuffer.a(87, var10);
+          PacketBuffer.pushSpriteRaster(87, var10);
           var17 = (PlayerModelPreview) (var8.first(24009));
           while (var17 != null) {
             var17.a(var9Lifetime1, -2);

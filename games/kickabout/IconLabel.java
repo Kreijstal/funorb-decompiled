@@ -100,7 +100,7 @@ final class IconLabel extends UiLayoutNode {
             return;
           }
           if (var2 != 1) {
-            UnreadMessagesScreen.a("A1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, param0 + 1);
+            UnreadMessagesScreen.reportClientError("A1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, param0 + 1);
             FormationView.b((byte) -116);
             return;
           }

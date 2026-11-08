@@ -5,7 +5,7 @@ final class GuestLoginSupport {
     static int[] field_a;
     static String field_b;
 
-    final static void a(byte param0, int param1, int param2) {
+    final static void drawQuickChatToggleHint(byte param0, int param1, int param2) {
         MouseInputHandler.drawQuickChatToggleHint(16777215, FriendsListPanel.getHudOpacity(false, (byte) 66), param2, -1, param1, 0);
         if (param0 >= -126) {
           GuestLoginSupport.releaseStatics((byte) 70);

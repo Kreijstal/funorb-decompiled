@@ -129,7 +129,7 @@ final class CommonGame {
                 var3_int++;
                 continue;
               }
-              this.field_V.c(param0, 17);
+              this.field_V.readDeltaState(param0, 17);
               this.field_X.readState(param0, (byte) -65);
               this.aiTick = param0.readBits(8, 59);
               break;
@@ -1795,7 +1795,7 @@ final class CommonGame {
                 continue;
               }
             } else {
-              this.field_V.a(29360128, 0, (byte) 26, 44040192);
+              this.field_V.setPositionAndStop(29360128, 0, (byte) 26, 44040192);
               this.field_V.possessorTeam = -1;
               stackIn_35_0 = param1;
             }
@@ -3223,7 +3223,7 @@ final class CommonGame {
                 var4_int++;
                 continue;
               }
-              this.field_V.a(param0, (byte) -124);
+              this.field_V.readFullState(param0, (byte) -124);
               this.field_X.readState(param0, (byte) -84);
               this.aiTick = param0.readBits(8, 59);
               break;

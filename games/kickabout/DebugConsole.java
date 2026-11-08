@@ -15,7 +15,7 @@ final class DebugConsole extends ConsolePanel {
     static UiLayoutNode field_z;
     static String field_A;
 
-    final boolean a(String param0, boolean param1) {
+    final boolean executeCommand(String param0, boolean param1) {
         try {
           ConsoleExpression var5 = null;
           IntrusiveDeque var6 = null;
@@ -32,7 +32,7 @@ final class DebugConsole extends ConsolePanel {
             try {
               var6 = ConsoleLexer.tokenize(false, param0);
               if (!param1) {
-                this.b(5);
+                this.completeCommandInput(5);
               }
               var7 = new ConsoleTokenCursor(var6);
               var5 = AuctionTableWidget.a(var7, 1422);
@@ -73,7 +73,7 @@ final class DebugConsole extends ConsolePanel {
         }
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isCp1252Character(char param0, byte param1) {
         int var3 = 0;
         char[] var2 = null;
         int var4 = 0;
@@ -100,7 +100,7 @@ final class DebugConsole extends ConsolePanel {
             if (param1 >= 63) {
               return false;
             }
-            DebugConsole.a('{', (byte) -51);
+            DebugConsole.isCp1252Character('{', (byte) -51);
             return false;
           }
           return true;
@@ -112,7 +112,7 @@ final class DebugConsole extends ConsolePanel {
 
     }
 
-    final String[] b(byte param0) {
+    final String[] getCommandSuggestions(byte param0) {
         int incrementValue$0 = 0;
         String[] stackIn_23_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -174,7 +174,7 @@ final class DebugConsole extends ConsolePanel {
               }
             }
           }
-          var15 = this.b(var6Lifetime2, (byte) -91);
+          var15 = this.findCommandsByPrefix(var6Lifetime2, (byte) -91);
           var8 = new String[var15.size(-1976587888)];
           var9Lifetime1 = 0;
           var10Lifetime1 = 43 % ((-2 - param0) / 41);
@@ -263,7 +263,7 @@ final class DebugConsole extends ConsolePanel {
           field_A = null;
           field_u = null;
           if (param0 != -1) {
-            DebugConsole.a('4', (byte) -128);
+            DebugConsole.isCp1252Character('4', (byte) -128);
           }
           field_r = null;
           field_v = null;
@@ -310,7 +310,7 @@ final class DebugConsole extends ConsolePanel {
           var8 = 0;
           var9 = 0;
           if (param0 != 11516) {
-            this.b(102);
+            this.completeCommandInput(102);
           }
           while (var9 < var5) {
             if (var8 != 0) {
@@ -411,7 +411,7 @@ final class DebugConsole extends ConsolePanel {
         }
     }
 
-    private final DualLinkDeque b(String param0, byte param1) {
+    private final DualLinkDeque findCommandsByPrefix(String param0, byte param1) {
         int var5 = 0;
         DualLinkDeque var3 = null;
         int var4 = 0;
@@ -450,7 +450,7 @@ final class DebugConsole extends ConsolePanel {
         }
     }
 
-    final void b(int param0) {
+    final void completeCommandInput(int param0) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         int stackIn_26_0 = 0;
@@ -495,7 +495,7 @@ final class DebugConsole extends ConsolePanel {
               var6Lifetime2 = var17.field_h.substring(0, var8_int);
             }
           }
-          var18 = this.b(var6Lifetime2, (byte) -124);
+          var18 = this.findCommandsByPrefix(var6Lifetime2, (byte) -124);
           if (0 == var18.size(-1976587888)) {
             return;
           }
@@ -553,7 +553,7 @@ final class DebugConsole extends ConsolePanel {
         }
     }
 
-    final static void a(int param0, GameSetupPanel param1, boolean param2, String param3) {
+    final static void buildGameSetupContextMenu(int param0, GameSetupPanel param1, boolean param2, String param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -637,7 +637,7 @@ final class DebugConsole extends ConsolePanel {
         }
     }
 
-    final static IndexedSprite[] a(int param0, int param1, boolean param2, boolean param3, int param4, int param5) {
+    final static IndexedSprite[] createCrowdAnimationFrames(int param0, int param1, boolean param2, boolean param3, int param4, int param5) {
         int var11 = 0;
         IndexedSprite[] stackIn_9_0 = null;
         int stackIn_16_0 = 0;
@@ -662,7 +662,7 @@ final class DebugConsole extends ConsolePanel {
           var16 = new IndexedSprite[6];
           var6 = var16;
           if (!NanoTickClock.field_n) {
-            var7_ref_kg = AlphaContainer.a(param2, -87, new IntrusiveDeque(), 0);
+            var7_ref_kg = AlphaContainer.renderCrowdFrame(param2, -87, new IntrusiveDeque(), 0);
             for (var8 = 0; var16.length > var8; var8++) {
               var16[var8] = var7_ref_kg;
             }
@@ -671,7 +671,7 @@ final class DebugConsole extends ConsolePanel {
           }
           var7 = TeamSelectionAgent.field_p[0].field_o;
           if (param3) {
-            DebugConsole.a('^', (byte) 107);
+            DebugConsole.isCp1252Character('^', (byte) 107);
           }
           stackIn_16_0 = (param2) ? 6 : 2;
           var8Lifetime1 = stackIn_16_0;
@@ -691,7 +691,7 @@ final class DebugConsole extends ConsolePanel {
           }
           for (var10Lifetime1 = 0; var10Lifetime1 < 6; var10Lifetime1++) {
             DelayedServerPacket.a(100, 9863, var10Lifetime1 * (-param1 + param0) / 6 + param1);
-            var16[var10Lifetime1] = AlphaContainer.a(param2, -76, var9, var10Lifetime1);
+            var16[var10Lifetime1] = AlphaContainer.renderCrowdFrame(param2, -76, var9, var10Lifetime1);
           }
           stackIn_33_0 = var6;
           return stackIn_33_0;

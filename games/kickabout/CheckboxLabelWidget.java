@@ -75,7 +75,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
             EmailAvailabilityValidator.field_k.setPosition(29360128, false, 0, 107085824);
             EmailAvailabilityValidator.field_k.field_R = 1024;
             EmailAvailabilityValidator.field_k.setDirectionFromMask(4, 26214);
-            ThumbnailStateFactory.field_d.field_V.a(29360128, 0, (byte) 26, 44040192);
+            ThumbnailStateFactory.field_d.field_V.setPositionAndStop(29360128, 0, (byte) 26, 44040192);
             PitchDecorationSupport.field_d = 1;
           } else {
             if (HuffmanCodec.field_e != 2) {

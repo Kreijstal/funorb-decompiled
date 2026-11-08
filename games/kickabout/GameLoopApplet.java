@@ -166,13 +166,13 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         if (!ArchiveManager.hasActiveModal(false)) {
           if (ServerTextTemplate.a(-4)) {
             if (MarkerSliderWidget.i(0)) {
-              ScrollPane.h(-1);
+              ScrollPane.advanceLoginTransition(-1);
             } else {
               var3 = SharedPanelFactory.pollPromptAction(-3);
               if (var3 != 2) {
                 if (3 != var3) {
                   if (var3 == 4) {
-                    MatchHudRoutingSupport.a((byte) 50, false, FullscreenFailureReason.field_b);
+                    MatchHudRoutingSupport.startLoginTransition((byte) 50, false, FullscreenFailureReason.field_b);
                     ProxySocketConnector.field_e = true;
                   }
                 } else {
@@ -207,11 +207,11 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                 if (!MarkerSliderWidget.i(0)) {
                   var3 = AuctionsHelpScreen.g(-61);
                   if (var3 == 1) {
-                    MatchHudRoutingSupport.a((byte) 50, true, NineSlicePanelPainter.field_f);
+                    MatchHudRoutingSupport.startLoginTransition((byte) 50, true, NineSlicePanelPainter.field_f);
                   }
                   this.update(-25, false);
                 } else {
-                  ScrollPane.h(-1);
+                  ScrollPane.advanceLoginTransition(-1);
                 }
               } else {
                 if (!MarkerSliderWidget.i(0)) {
@@ -239,7 +239,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                     }
                   }
                 } else {
-                  ScrollPane.h(param0 - 18862);
+                  ScrollPane.advanceLoginTransition(param0 - 18862);
                 }
               }
             }
@@ -273,7 +273,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
     final void paintFrame(byte param0) {
         int var3 = 0;
         int var4 = Kickabout.field_G;
-        java.awt.Canvas var2 = DropTargetWidget.l(64);
+        java.awt.Canvas var2 = DropTargetWidget.getActiveCanvas(64);
         if (RegistrationUiSupport.c(608)) {
           PlayingView.drawClientToCanvas(var2, StrongCacheEntry.hasGameFocus(2368), 0);
           return;
@@ -355,7 +355,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         int var2;
         int var3;
         var3 = Kickabout.field_G;
-        while (ClassNameSupport.a(-125, IntTripleCommand.field_A)) {
+        while (ClassNameSupport.pollIncomingPacket(-125, IntTripleCommand.field_A)) {
           if (this.handlePacket(AppletContextSupport.field_b, ByteArrayPool.field_e, 1)) {
             continue;
           }

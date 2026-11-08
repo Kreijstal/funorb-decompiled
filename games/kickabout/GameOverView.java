@@ -1575,7 +1575,7 @@ final class GameOverView extends MatchPhaseView {
               }
             }
             var5 = IsSixCommand.field_C.paragraphHeight(var4, 380, 16);
-            TeamSelectionView.a(var4, 400, var5, -5 + (300 - var5), 120, 0);
+            TeamSelectionView.drawWrappedTextPanel(var4, 400, var5, -5 + (300 - var5), 120, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2058,17 +2058,17 @@ final class GameOverView extends MatchPhaseView {
                       var14.tackle >= 100 &&
                       var14.speed >= 100) {
                       LoadingProgressSupport.enqueueMessageDialog(7, 16586, var14);
-                      ShopPlayerSlot.c(49, -122);
+                      ShopPlayerSlot.playDefaultFadingSound(49, -122);
                     } else {
                       NineSlicePanelPainter.a((byte) -120, var13, this.field_hb[var13], var14);
-                      ShopPlayerSlot.c(49, -121);
+                      ShopPlayerSlot.playDefaultFadingSound(49, -121);
                     }
                   } else {
                     if (var14.power >= 100 &&
                       var14.tackle >= 100 &&
                       var14.speed >= 100) {
                       LoadingProgressSupport.enqueueMessageDialog(7, 16586, var14);
-                      ShopPlayerSlot.c(49, 52);
+                      ShopPlayerSlot.playDefaultFadingSound(49, 52);
                     }
                   }
                   LoginKind.a((byte) 61);

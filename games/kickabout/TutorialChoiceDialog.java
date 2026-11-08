@@ -18,7 +18,7 @@ final class TutorialChoiceDialog extends MessageDialog {
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        TutorialChoiceDialog.a(90, 5, (ResourceArchive) null, 24);
+        TutorialChoiceDialog.loadIndexedSprite(90, 5, (ResourceArchive) null, 24);
         field_K = null;
         field_I = null;
     }
@@ -46,7 +46,7 @@ final class TutorialChoiceDialog extends MessageDialog {
         }
     }
 
-    final static IndexedSprite a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static IndexedSprite loadIndexedSprite(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite stackIn_6_0 = null;

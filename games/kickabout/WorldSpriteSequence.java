@@ -38,7 +38,7 @@ final class WorldSpriteSequence {
         var7 = ProxySocketConnector.nextBoundedInt(83, 4, var19);
         var8 = FootballerPreview.a(-5275);
         var9 = new Sprite(54, 85);
-        PacketBuffer.a(114, var9);
+        PacketBuffer.pushSpriteRaster(114, var9);
         var10 = var8.field_o;
         var11 = var8.field_v;
         var12 = -15 - SingleChildContainer.floorMod(105, this.field_a - 27, var10);
@@ -51,7 +51,7 @@ final class WorldSpriteSequence {
         for (var14 = 0; var14 < 4; var14++) {
           this.field_c[var14] = new Sprite(54, 85);
           var15 = this.field_c[var14];
-          PacketBuffer.a(-114, var15);
+          PacketBuffer.pushSpriteRaster(-114, var15);
           var9.drawOpaque(0, 0);
           incrementValue$3 = var7;
           var7++;

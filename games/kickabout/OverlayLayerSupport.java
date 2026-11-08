@@ -33,7 +33,7 @@ final class OverlayLayerSupport {
           var4 = var10[0].field_a;
           var15 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};
           var16 = new Sprite(var15[1] * param1 + var15[0] + var15[2], var4);
-          PacketBuffer.a(-122, var16);
+          PacketBuffer.pushSpriteRaster(-122, var16);
           var7 = 0;
           var10[0].a(var7, 0);
           var7 = var7 + var15[0];
@@ -52,7 +52,7 @@ final class OverlayLayerSupport {
         var4Lifetime1 = var10[0].field_a;
         int[] var12 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};
         Sprite var13 = new Sprite(var12[1] * param1 + var12[0] + var12[2], var4Lifetime1);
-        PacketBuffer.a(-122, var13);
+        PacketBuffer.pushSpriteRaster(-122, var13);
         var7Lifetime1 = 0;
         var10[0].a(var7Lifetime1, 0);
         var7Lifetime1 = var7Lifetime1 + var12[0];

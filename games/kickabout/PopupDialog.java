@@ -35,7 +35,7 @@ abstract class PopupDialog extends IntrusiveNode {
         this.field_j.updatePointerSelection(param0 ^ 4642, this.a(true, TutorialCaptionSupport.field_j, ArrayWidgetContainer.field_x), this.a(true, TabStrip.field_Eb, TrinketIcon.field_yb));
         if (this.field_n == 0 &&
           0 == this.field_m) {
-          ShopPlayerSlot.c(this.getOpenSoundId(false), -104);
+          ShopPlayerSlot.playDefaultFadingSound(this.getOpenSoundId(false), -104);
         }
         if (this.field_n != 0) {
           if (this.field_n == 1) {
@@ -123,7 +123,7 @@ abstract class PopupDialog extends IntrusiveNode {
           var3 = this.field_e * this.field_q >> 12;
           var4_int = this.field_r * this.field_q >> 12;
           var5 = -var3 + 640 >> 1;
-          PacketBuffer.a(73, this.field_l);
+          PacketBuffer.pushSpriteRaster(73, this.field_l);
           var6 = -var4_int + 480 >> 1;
           this.a(32, 0, 0);
           for (var7 = 0; var7 < this.field_i.length; var7++) {

@@ -170,7 +170,7 @@ final class DialogOverlay implements OverlayLayer {
           stackIn_3_0 = ShopPlayerSlot.field_Jb;
           stackIn_3_1 = param5 * (LineupPositionSupport.field_c * 4 + 8);
           stackIn_4_2 = (MatchHudSupport.field_f == ShopPlayerSlot.field_Jb);
-          var7_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param0, 2, param1, (2 + LineupPositionSupport.field_c) * 2) ? 1 : 0;
+          var7_int = ((ScrollPane) (Object) stackIn_3_0).layoutAndScroll(stackIn_3_1, stackIn_4_2, param0, 2, param1, (2 + LineupPositionSupport.field_c) * 2) ? 1 : 0;
           var8 = ShopPlayerSlot.field_Jb.field_Ab.field_jb;
           var9 = MonotonicClock.monotonicMillis(97);
           var11 = null;
@@ -521,7 +521,7 @@ final class DialogOverlay implements OverlayLayer {
                 var31 = var31 + LineupPositionSupport.field_c;
               }
             }
-            var33 = AuctionLogEntry.a(var12.field_Ab, var32, (byte) 112);
+            var33 = AuctionLogEntry.describeGameJoinStatus(var12.field_Ab, var32, (byte) 112);
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
@@ -596,7 +596,7 @@ final class DialogOverlay implements OverlayLayer {
             if (0 != var12.field_sb &&
               !var12.isDetachedFromGameTable(-7)) {
               if (var12.field_Lb.field_sb == 0) {
-                DebugConsole.a(15, var12, param4, var32);
+                DebugConsole.buildGameSetupContextMenu(15, var12, param4, var32);
               } else {
                 if (var12.field_Cb && (!var12.field_ic ||
                   !var12.field_Xb &&

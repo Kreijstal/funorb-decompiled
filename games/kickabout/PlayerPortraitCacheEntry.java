@@ -115,7 +115,7 @@ final class PlayerPortraitCacheEntry {
           }
           var12 = PlayerInputFactory.createRenderedPlayer(this.playerStats, var9, var10, this.field_j, var11, (byte) 108);
           var12.field_mb.setFrame(0, 99);
-          PacketBuffer.a(-81, ConsoleCommand.field_u);
+          PacketBuffer.pushSpriteRaster(-81, ConsoleCommand.field_u);
           SoftwareRasterizer.clearFramebuffer();
           var12.renderModel(var8[this.playerStats.archetype], 0, SoftwareRasterizer.field_g >> 1, var17[this.playerStats.archetype], (byte) -118);
           TeamManagementScreen.e(122);
@@ -179,7 +179,7 @@ final class PlayerPortraitCacheEntry {
             ArchiveIndex.field_a = ArrayWidgetContainer.createNameSuggestionResponse(-111, param1);
             return;
           }
-          ArchiveIndex.field_a = TeamSelectionView.a(-126, param0, param3);
+          ArchiveIndex.field_a = TeamSelectionView.createRegistrationFailure(-126, param0, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

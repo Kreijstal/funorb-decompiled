@@ -42,7 +42,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           }
           var7 = this.field_M[var6_int];
           if (var7 != -1) {
-            IndexedSpriteState.b(38, this.field_M[var6_int]);
+            IndexedSpriteState.setAccountMenuMode(38, this.field_M[var6_int]);
             return;
           }
           this.field_E.closeDialog(-77);

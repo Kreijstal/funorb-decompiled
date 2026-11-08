@@ -74,7 +74,7 @@ final class AvailabilityCheckRequest {
           throw new IllegalStateException();
         }
         TutorialChoiceDialog.field_H = true;
-        SumIntegersCommand.a(true, -91);
+        SumIntegersCommand.showLoginDialog(true, -91);
         RasterGlowSupport.field_c = param0;
     }
 

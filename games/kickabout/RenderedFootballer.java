@@ -335,7 +335,7 @@ final class RenderedFootballer extends FootballerAgent {
           var12 = this.stats.getWidth(0);
           var13 = this.stats.getHeight(15);
           var14 = new Sprite(var12, 10 * var8_ref_String__.length + 5 + var13 + 20);
-          PacketBuffer.a(-64, var14);
+          PacketBuffer.pushSpriteRaster(-64, var14);
           this.stats.drawCentered(var13 >> 1, 23, var12 >> 1);
           var15 = ConsoleTokenCursor.field_d;
           var16 = var13 + 11;
@@ -381,7 +381,7 @@ final class RenderedFootballer extends FootballerAgent {
         if (!this.megamode && (1 == SocketArchiveNetworkClient.field_v ||
           this.field_ab ||
           this.field_T)) {
-          PacketBuffer.a(-88, AvailabilityCheckRequest.field_f);
+          PacketBuffer.pushSpriteRaster(-88, AvailabilityCheckRequest.field_f);
           SoftwareRasterizer.clearFramebuffer();
           var2 = (var2 << 7) / InstrumentNoteMask.field_i;
           this.renderModel(var2, var8, 128, 190, (byte) -91);
@@ -652,7 +652,7 @@ final class RenderedFootballer extends FootballerAgent {
             } else {
               var10 = 84;
             }
-            ShopPlayerSlot.c(var10, -121);
+            ShopPlayerSlot.playDefaultFadingSound(var10, -121);
             this.field_db = true;
           }
         }
@@ -701,10 +701,10 @@ final class RenderedFootballer extends FootballerAgent {
               }
             }
             if (var10Lifetime1 != -1) {
-              ShopPlayerSlot.c(var10Lifetime1, -3);
+              ShopPlayerSlot.playDefaultFadingSound(var10Lifetime1, -3);
             }
             if (-1 != var11) {
-              ShopPlayerSlot.c(var11, 11);
+              ShopPlayerSlot.playDefaultFadingSound(var11, 11);
             }
             this.field_Y = true;
           }

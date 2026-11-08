@@ -136,7 +136,7 @@ final class LoginMethod {
 
     final void saveLastLoginMethod(int param0, java.applet.Applet param1) {
         try {
-          BallAgent.a(this.field_a, param1, (byte) -5, 31536000L, "jagex-last-login-method");
+          BallAgent.writeCookie(this.field_a, param1, (byte) -5, 31536000L, "jagex-last-login-method");
           if (param0 > -110) {
             LoginMethod.a(78, 31, 85, 37, 61);
           }
@@ -176,7 +176,7 @@ final class LoginMethod {
     final static Sprite createRingSprite(int param0, int param1, boolean param2, int param3) {
         int var4 = (param1 << 1) + 1;
         Sprite var5 = new Sprite(var4, var4);
-        PacketBuffer.a(56, var5);
+        PacketBuffer.pushSpriteRaster(56, var5);
         SoftwareRasterizer.fillCircle(param1, param1, param1, param3);
         SoftwareRasterizer.fillCircle(param1, param1, param1 - param0, 0);
         TeamManagementScreen.e(120);
@@ -197,7 +197,7 @@ final class LoginMethod {
         if (param0) {
           LoginMethod.createRingSprite(12, -70, true, -119);
         }
-        stackIn_6_0 = (AuctionItem.field_e == -1) && (TournamentChampionDialog.g(0) < 10);
+        stackIn_6_0 = (AuctionItem.field_e == -1) && (TournamentChampionDialog.getMouseIdleTicks(0) < 10);
         return stackIn_6_0;
     }
 

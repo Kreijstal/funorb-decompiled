@@ -180,7 +180,7 @@ final class PitchSurfaceLoader {
     }
 
     final static void b(int param0) {
-        TickClock.a(-106);
+        TickClock.resetChatComposerLayout(-106);
         if (param0 != 1) {
           field_b = (String) null;
         }

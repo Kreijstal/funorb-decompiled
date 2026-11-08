@@ -66,7 +66,7 @@ final class DraggableWidget extends SingleChildContainer {
             if (LobbyGameRecord.field_m == null) {
               LobbyGameRecord.field_m = new Sprite(var7.field_o + 8, var7.field_v + 8);
             }
-            PacketBuffer.a(-56, LobbyGameRecord.field_m);
+            PacketBuffer.pushSpriteRaster(-56, LobbyGameRecord.field_m);
             SoftwareRasterizer.clearFramebuffer();
             var7.draw(4, 4);
             SpritePixelSupport.adjustSpriteHsv(LobbyGameRecord.field_m, 0.0, 1.3, 1.2);

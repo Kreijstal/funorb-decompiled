@@ -182,7 +182,7 @@ final class RankingsScreen extends ButtonMenuScreen {
         if (!param0) {
           if (!ClassNameSupport.field_a) {
             ClassNameSupport.field_a = true;
-            var1 = DropTargetWidget.l(64);
+            var1 = DropTargetWidget.getActiveCanvas(64);
             ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
             TutorialCaptionSupport.field_j = ArchiveManager.field_m;
             PlatformTaskState.field_c.requestMouseMove((byte) 76, 240, 320, (java.awt.Component) ((Object) var1));
@@ -195,7 +195,7 @@ final class RankingsScreen extends ButtonMenuScreen {
         field_B = (boolean[]) null;
         if (!ClassNameSupport.field_a) {
           ClassNameSupport.field_a = true;
-          var1Lifetime1 = DropTargetWidget.l(64);
+          var1Lifetime1 = DropTargetWidget.getActiveCanvas(64);
           ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
           TutorialCaptionSupport.field_j = ArchiveManager.field_m;
           PlatformTaskState.field_c.requestMouseMove((byte) 76, 240, 320, (java.awt.Component) ((Object) var1Lifetime1));
@@ -244,7 +244,7 @@ final class RankingsScreen extends ButtonMenuScreen {
           return;
         }
         if (SocialListLayoutSupport.field_e == null) {
-          SocialListLayoutSupport.field_e = PitchOptionTile.a(10, (byte) 100, 0, 7);
+          SocialListLayoutSupport.field_e = PitchOptionTile.getOrCreateRankingsRequest(10, (byte) 100, 0, 7);
         }
         var3 = 99;
         var4 = 11184810;

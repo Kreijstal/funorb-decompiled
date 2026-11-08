@@ -651,7 +651,7 @@ final class CachedArchiveSource extends ArchiveSource {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new Sprite(param2, param1.field_v);
-          PacketBuffer.a(-59, var3);
+          PacketBuffer.pushSpriteRaster(-59, var3);
           param1.draw(0, 0);
           AuctionListing.pushRasterClip(SoftwareRasterizer.field_g, -22914, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, 0);
           if (param0 >= -20) {

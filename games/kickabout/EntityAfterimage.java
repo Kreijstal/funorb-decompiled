@@ -40,7 +40,7 @@ final class EntityAfterimage {
           this.field_e = param1;
           this.field_g = 64;
           this.field_h = 96;
-          PacketBuffer.a(74, this.field_f);
+          PacketBuffer.pushSpriteRaster(74, this.field_f);
           SoftwareRasterizer.clearFramebuffer();
           var4_int = 486400 / InstrumentNoteMask.field_i;
           param0.renderModel(var4_int, 300, this.field_g, this.field_h, (byte) -74);
@@ -106,7 +106,7 @@ final class EntityAfterimage {
           this.field_e = param0;
           this.field_j = param2.getRenderedY(true);
           this.field_a = 17;
-          PacketBuffer.a(-57, this.field_f);
+          PacketBuffer.pushSpriteRaster(-57, this.field_f);
           SoftwareRasterizer.clearFramebuffer();
           int var5 = 64 / ((-64 - param1) / 38);
           var4_int = (param2.getRenderedScale(-1) << 8) / InstrumentNoteMask.field_i;

@@ -137,7 +137,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         if (param0 != -1) {
           this.getTooltip(54);
         }
-        TournamentChampionDialog.b(ArchiveManager.field_m, 0, this.field_n - this.field_ab + BytePlusOneCommand.field_A);
+        TournamentChampionDialog.setTooltipAnchor(ArchiveManager.field_m, 0, this.field_n - this.field_ab + BytePlusOneCommand.field_A);
         return this.field_u;
     }
 

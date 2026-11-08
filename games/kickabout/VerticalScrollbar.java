@@ -717,7 +717,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                     AnimationPlayer.field_c = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);
                     return;
                   }
-                  UnreadMessagesScreen.a("L1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, param0 ^ 15);
+                  UnreadMessagesScreen.reportClientError("L1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, param0 ^ 15);
                   FormationView.b((byte) -116);
                   return;
                 }

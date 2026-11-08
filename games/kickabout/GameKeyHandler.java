@@ -67,7 +67,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (PlayerModelPreview.field_q != null) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && 65535 != var2_int &&
-              DebugConsole.a((char) var2_int, (byte) 80)) {
+              DebugConsole.isCp1252Character((char) var2_int, (byte) 80)) {
               var3 = MarkerSliderPainter.field_j + 1 & 127;
               if (var3 != LineupAgent.field_n) {
                 QuickChatCategoryCache.field_a[MarkerSliderPainter.field_j] = -1;

@@ -57,7 +57,7 @@ final class ValidationState {
           if (PlayerStats.field_p > 200) {
             var5 = (-PlayerStats.field_p + 250 << 8) / 50;
           }
-          PacketBuffer.a(110, NamedValueContainer.field_f);
+          PacketBuffer.pushSpriteRaster(110, NamedValueContainer.field_f);
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clearFramebuffer();
           AuctionItem.a((byte) 47);
@@ -114,7 +114,7 @@ final class ValidationState {
         if (PlayerStats.field_p > 200) {
           var5Lifetime1 = (-PlayerStats.field_p + 250 << 8) / 50;
         }
-        PacketBuffer.a(110, NamedValueContainer.field_f);
+        PacketBuffer.pushSpriteRaster(110, NamedValueContainer.field_f);
         TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clearFramebuffer();
         AuctionItem.a((byte) 47);

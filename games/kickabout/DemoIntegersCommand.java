@@ -106,7 +106,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           if (0 != ChatInputState.field_a.field_sb) {
             TextPromptState.field_b = new TextPromptDialog(ChatInputState.field_a.field_F, ChatInputState.field_a.field_T, ChatInputState.field_a.field_q, ChatInputState.field_a.field_mb, param2, ChatMessage.field_e, AccountTermsPanel.field_H, DateInputValidator.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, TextInputUiSupport.field_c, (String) null, 0L);
           }
-          var9 = TextPromptDialog.a(param1, LineupPositionSupport.field_c, (byte) 26, DiskCacheWorker.field_b);
+          var9 = TextPromptDialog.rebuildChatHistory(param1, LineupPositionSupport.field_c, (byte) 26, DiskCacheWorker.field_b);
           if (var9 != null) {
             LineupView.a(var9, (byte) -60);
           }

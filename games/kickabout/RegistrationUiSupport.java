@@ -202,7 +202,7 @@ final class RegistrationUiSupport {
           if (param0 != -32) {
             return;
           }
-          PacketBuffer.a(119, var2);
+          PacketBuffer.pushSpriteRaster(119, var2);
           for (var3 = 0; var3 < 6; var3++) {
             for (var4 = 0; 6 > var4; var4++) {
               var5 = 6710886;
@@ -218,7 +218,7 @@ final class RegistrationUiSupport {
               if (var3 == SingleChildContainer.floorMod(124, -3 + var4, 6)) {
                 var5 = 8947848;
               }
-              PacketBuffer.a(-110, var8);
+              PacketBuffer.pushSpriteRaster(-110, var8);
               SoftwareRasterizer.clearFramebuffer();
               SoftwareRasterizer.fillRect(SoftwareRasterizer.field_g - 6 >> 1, 26, 6, 10, var5);
               TeamManagementScreen.e(120);

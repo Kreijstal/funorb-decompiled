@@ -65,26 +65,26 @@ final class ListingRowCache {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void setChatFilter(int param0, int param1, int param2, int param3) {
         int var4;
         var4 = 115 / ((-39 - param0) / 47);
         if (param2 == 0 &&
           param1 != ServerTextTemplate.field_a) {
           WidgetContainer.field_z = true;
           ServerTextTemplate.field_a = param1;
-          GradientRasterSupport.a(3, param3);
+          GradientRasterSupport.writeChatFilterSettings(3, param3);
         }
         if (param2 == 1 &&
           ConsoleTokenCursor.field_b != param1) {
           ConsoleTokenCursor.field_b = param1;
           WidgetContainer.field_z = true;
-          GradientRasterSupport.a(3, param3);
+          GradientRasterSupport.writeChatFilterSettings(3, param3);
         }
         if (param2 == 2 &&
           LoginResponseUiSupport.field_a != param1) {
           WidgetContainer.field_z = true;
           LoginResponseUiSupport.field_a = param1;
-          GradientRasterSupport.a(3, param3);
+          GradientRasterSupport.writeChatFilterSettings(3, param3);
         }
     }
 

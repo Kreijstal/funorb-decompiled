@@ -52,7 +52,7 @@ class BallAgent extends MatchAgent {
         return var2;
     }
 
-    void a(int param0, int param1, byte param2, int param3) {
+    void setPositionAndStop(int param0, int param1, byte param2, int param3) {
         if (param2 == 26) {
           this.positionX = param0;
           this.verticalVelocity = 0;
@@ -84,7 +84,7 @@ class BallAgent extends MatchAgent {
         return var2.toString();
     }
 
-    final static void a(String param0, java.applet.Applet param1, byte param2, long param3, String param4) {
+    final static void writeCookie(String param0, java.applet.Applet param1, byte param2, long param3, String param4) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;
@@ -186,7 +186,7 @@ class BallAgent extends MatchAgent {
         return this.positionY >> 16;
     }
 
-    final void c(CipherPacketBuffer param0, int param1) {
+    final void readDeltaState(CipherPacketBuffer param0, int param1) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -229,7 +229,7 @@ class BallAgent extends MatchAgent {
         }
     }
 
-    final void a(CipherPacketBuffer param0, byte param1) {
+    final void readFullState(CipherPacketBuffer param0, byte param1) {
         int discarded$0 = 0;
         try {
           this.possessorTeam = param0.readBits(2, 59) - 1;
@@ -280,7 +280,7 @@ class BallAgent extends MatchAgent {
           this.height = var5.height;
           if (param0 > -52) {
             CipherPacketBuffer var4 = (CipherPacketBuffer) null;
-            this.c((CipherPacketBuffer) null, -54);
+            this.readDeltaState((CipherPacketBuffer) null, -54);
           }
           this.positionX = var5.positionX;
           this.velocityX = var5.velocityX;

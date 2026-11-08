@@ -288,7 +288,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                                 SelectionMarkerSupport.c(25957);
                                 return;
                               }
-                              UnreadMessagesScreen.a("MGS1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
+                              UnreadMessagesScreen.reportClientError("MGS1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
                               FormationView.b((byte) -116);
                               return;
                             }
@@ -317,7 +317,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           return;
         }
-        UnreadMessagesScreen.a("MGS2: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
+        UnreadMessagesScreen.reportClientError("MGS2: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
         FormationView.b((byte) -116);
     }
 
@@ -331,7 +331,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         } else {
           if (10 > DateInputValidator.field_d) {
           } else {
-            if (!TournamentChampionDialog.i(-92)) {
+            if (!TournamentChampionDialog.isLogoSequenceComplete(-92)) {
               PanelSpriteFactory.a((byte) -126);
             } else {
               if (RasterGlowSupport.field_c != 0) {
@@ -456,7 +456,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (-1 != RowRangeRequest.field_h &&
             RowRangeRequest.field_h != 0) {
             RowRangeRequest.field_h = -1;
-            ScrollPane.b(23877);
+            ScrollPane.resetArchiveFailureState(23877);
           }
         }
         if (0 == RowRangeRequest.field_h &&
@@ -464,7 +464,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           WhirlpoolHasher.field_h = false;
         }
         if (DateInputValidator.field_d == 0 &&
-          TeamSelectionView.h(param0 - 96)) {
+          TeamSelectionView.pollArchiveMasterIndex(param0 - 96)) {
           DateInputValidator.field_d = 1;
         }
         if (DateInputValidator.field_d == 1) {
@@ -550,7 +550,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (DateInputValidator.field_d == 13) {
           var3Lifetime2 = 1;
           if (BlobSubmission.field_h != null) {
-            stackIn_134_0 = (!BlobSubmission.field_h.a(param0 + 1183118480)) ? 0 : 1;
+            stackIn_134_0 = (!BlobSubmission.field_h.pollCompletion(param0 + 1183118480)) ? 0 : 1;
             var3Lifetime2 = stackIn_134_0;
             ValidationHelpWidget.a(BlobSubmission.field_h.field_h, BlobSubmission.field_h.field_a, (byte) 30);
           }
@@ -687,7 +687,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         var26 = Kickabout.field_G;
         try {
           if (!param3) {
-            if (ScrollPane.a(99)) {
+            if (ScrollPane.isLocalGameHost(99)) {
               stackIn_12_0 = (!param2.field_Cb) ? 1 : 0;
             } else {
               stackIn_12_0 = 0;
@@ -740,7 +740,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               stackIn_43_0.field_I = stackIn_44_1;
             }
             if (SocialTabsPanel.field_c[0][2].field_Q) {
-              if (!ScrollPane.a(77)) {
+              if (!ScrollPane.isLocalGameHost(77)) {
                 UrlRequest.field_e = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClubState.field_v, new String[]{PlayerContextMenu.field_i.field_ec});
               } else {
                 UrlRequest.field_e = DateOfBirthPanel.field_B;
@@ -1231,7 +1231,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (RowRangeRequest.field_h != -1 &&
               RowRangeRequest.field_h != 0) {
               RowRangeRequest.field_h = -1;
-              ScrollPane.b(23877);
+              ScrollPane.resetArchiveFailureState(23877);
             }
             if (param0) {
               LoginResponseUiSupport.field_d = false;
@@ -1305,7 +1305,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              UnreadMessagesScreen.a("S1", (Throwable) ((Object) var5), 1);
+              UnreadMessagesScreen.reportClientError("S1", (Throwable) ((Object) var5), 1);
               var10 = (String) null;
               NamedValueEntry.a((String) null, (byte) 119);
               WorldSpriteSequence.field_d = null;
@@ -1379,7 +1379,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            UnreadMessagesScreen.a((String) null, (Throwable) ((Object) var6_ref), 1);
+            UnreadMessagesScreen.reportClientError((String) null, (Throwable) ((Object) var6_ref), 1);
             this.showGameErrorPage((byte) 87, "crash");
           }
           return;

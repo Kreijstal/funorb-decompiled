@@ -31,7 +31,7 @@ final class LoggedGoal extends IntrusiveNode {
             ArchivePreloader.field_i[var4_int] = param2;
           }
           PlayerShopScreen.field_R = new Sprite(32, 32);
-          PacketBuffer.a(-49, PlayerShopScreen.field_R);
+          PacketBuffer.pushSpriteRaster(-49, PlayerShopScreen.field_R);
           var4_intLifetime1 = 88 / ((param3 + 76) / 44);
           param0.drawScaledAveraged(0, 0, 32, 32);
           TeamManagementScreen.e(123);

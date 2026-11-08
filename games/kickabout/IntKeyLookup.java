@@ -56,11 +56,11 @@ final class IntKeyLookup {
         GameSoundEffect.field_i = LeaguesHelpScreen.h(-117);
         RankingsRequest.field_l = new ModalStack();
         if (param0 < -59) {
-          LobbyMatchPreview.a(true, true, (byte) -72);
+          LobbyMatchPreview.showLoginDialog(true, true, (byte) -72);
           return;
         }
         IntKeyLookup.a(-98);
-        LobbyMatchPreview.a(true, true, (byte) -72);
+        LobbyMatchPreview.showLoginDialog(true, true, (byte) -72);
     }
 
     IntKeyLookup(int[] param0) {

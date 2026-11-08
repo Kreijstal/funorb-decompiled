@@ -294,7 +294,7 @@ final class CascadingMenu extends UiLayoutNode {
                 var6 = 1;
               }
               if (ClientProtocolStage.getChatFilterValue(0, var6) == 2) {
-                ListingRowCache.a(21, 1, var6, param2);
+                ListingRowCache.setChatFilter(21, 1, var6, param2);
               }
               String var8 = (String) null;
               PasswordLoginCredentials.sendChatPacket(var5, -128, NodeHashTableIterator.field_b, param3, TrinketTile.field_Kb, (String) null);

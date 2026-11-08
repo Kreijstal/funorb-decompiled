@@ -91,7 +91,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         this.field_h.setFrame(param0, 111);
         ModelMesh var5 = (ModelMesh) (this.field_h.applyCurrentFrame(this.field_p, false, true, true));
         SpritePixelSupport.drawRadialShadow(param1 + this.field_g << 4, this.field_i << 4, 320, -4 + UiWidget.field_f.length, UiWidget.field_f);
-        PacketBuffer.a(103, Cp1252EncodingSupport.field_d);
+        PacketBuffer.pushSpriteRaster(103, Cp1252EncodingSupport.field_d);
         SoftwareRasterizer.clearFramebuffer();
         TriangleRasterizer.useRasterClip();
         int var4 = 950;

@@ -173,7 +173,7 @@ final class MyKitScreen extends TeamManagementScreen {
             var2 = 1;
           }
           if (CaptionedContainer.field_D == 0) {
-            ShopPlayerSlot.c(59, 119);
+            ShopPlayerSlot.playDefaultFadingSound(59, 119);
             CaptionedContainer.field_D = 8;
           }
           this.field_R = this.field_R + 1;
@@ -184,7 +184,7 @@ final class MyKitScreen extends TeamManagementScreen {
             var2 = 1;
           }
           if (CaptionedContainer.field_D == 0) {
-            ShopPlayerSlot.c(60, 33);
+            ShopPlayerSlot.playDefaultFadingSound(60, 33);
             CaptionedContainer.field_D = 8;
           }
           this.field_R = this.field_R + 1;
@@ -196,7 +196,7 @@ final class MyKitScreen extends TeamManagementScreen {
           var2 = 1;
           if (0 == CaptionedContainer.field_D) {
             stackIn_25_0 = (var3 > 0) ? 60 : 59;
-            ShopPlayerSlot.c(stackIn_25_0, -125);
+            ShopPlayerSlot.playDefaultFadingSound(stackIn_25_0, -125);
             CaptionedContainer.field_D = 8;
           }
         }

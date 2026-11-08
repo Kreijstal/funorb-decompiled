@@ -327,7 +327,7 @@ final class StatChoiceDialog extends MessageDialog {
         this.field_L.field_J = 95 + param2;
         this.field_L.field_s = param1 + 180;
         this.field_L.updateInput(0, true);
-        PacketBuffer.a(-65, ClientPacketFlushSupport.field_b);
+        PacketBuffer.pushSpriteRaster(-65, ClientPacketFlushSupport.field_b);
         SoftwareRasterizer.clearFramebuffer();
         this.field_I.renderModel(1200, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 10, (byte) -68);
         if (param0 >= -11) {

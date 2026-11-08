@@ -45,7 +45,7 @@ final class QuickChatCategoryCache {
           return (Sprite) null;
         }
         Sprite var6 = new Sprite(var3, param2 * var4[1] + var4[2] + var4[0]);
-        PacketBuffer.a(83, var6);
+        PacketBuffer.pushSpriteRaster(83, var6);
         int var7 = 0;
         var5[0].a(0, var7);
         var7 = var7 + var4[0];

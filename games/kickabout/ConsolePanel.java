@@ -20,7 +20,7 @@ abstract class ConsolePanel implements OverlayLayer {
     private String field_p;
     private int field_e;
 
-    private final void a(int param0, String param1, byte param2) {
+    private final void printWrapped(int param0, String param1, byte param2) {
         int var7 = 0;
         int var4_int = 0;
         String[] var5 = null;
@@ -45,14 +45,14 @@ abstract class ConsolePanel implements OverlayLayer {
           for (var7 = 0; var7 < var6.length; var7++) {
             var8 = var6[var7];
             if (this.field_d.stringWidth(var8) >= var4_int) {
-              var9 = this.b(0, var8, var4_int);
+              var9 = this.wrapTextLines(0, var8, var4_int);
               var10 = (TextLine) (var9.first(24009));
               while (var10 != null) {
-                this.a(31779, param0, var10.text);
+                this.appendOutputLine(31779, param0, var10.text);
                 var10 = (TextLine) (var9.next(33));
               }
             } else {
-              this.a(31779, param0, var8);
+              this.appendOutputLine(31779, param0, var8);
             }
           }
           return;
@@ -116,7 +116,7 @@ abstract class ConsolePanel implements OverlayLayer {
         }
     }
 
-    private final IntrusiveDeque b(int param0, String param1, int param2) {
+    private final IntrusiveDeque wrapTextLines(int param0, String param1, int param2) {
         UiLayoutNode discarded$0 = null;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -136,7 +136,7 @@ abstract class ConsolePanel implements OverlayLayer {
         try {
           if (param0 != 0) {
             var9 = (String) null;
-            discarded$0 = this.a(92, (String) null, -8);
+            discarded$0 = this.createOutputLine(92, (String) null, -8);
           }
           var4 = new IntrusiveDeque();
           while (param1 != null) {
@@ -189,25 +189,25 @@ abstract class ConsolePanel implements OverlayLayer {
         }
     }
 
-    abstract boolean a(String param0, boolean param1);
+    abstract boolean executeCommand(String param0, boolean param1);
 
     private final UiLayoutNode createSpriteBackedWidget(int param0, int param1) {
         if (param0 != 4) {
           return (UiLayoutNode) null;
         }
         UiLayoutNode var3 = new UiLayoutNode(0L, (UiLayoutNode) null);
-        var3.field_R = ShopPlayerSlot.a((byte) 26, param1);
+        var3.field_R = ShopPlayerSlot.createSolidNineSliceSprites((byte) 26, param1);
         return var3;
     }
 
-    abstract String[] b(byte param0);
+    abstract String[] getCommandSuggestions(byte param0);
 
-    private final void a(int param0, int param1, String param2) {
+    private final void appendOutputLine(int param0, int param1, String param2) {
         int var4_int = 0;
         UiLayoutNode var5 = null;
         int var6 = Kickabout.field_G;
         try {
-          this.field_g.field_Ab.addChild((byte) -109, this.a(param1, param2, -73));
+          this.field_g.field_Ab.addChild((byte) -109, this.createOutputLine(param1, param2, -73));
           if (!(256 >= this.field_g.field_Ab.field_jb.size(false))) {
             this.field_g.field_Ab.field_jb.removeFirst((byte) 125);
           }
@@ -271,7 +271,7 @@ abstract class ConsolePanel implements OverlayLayer {
               if (param1 != 80) {
                 this.field_k.handleKey(param1, param2, param0 ^ 12183);
               } else {
-                this.b(72);
+                this.completeCommandInput(72);
               }
             } else {
               if (this.field_o != null &&
@@ -286,19 +286,19 @@ abstract class ConsolePanel implements OverlayLayer {
           if (var7.length() <= 0) {
             return true;
           }
-          this.a(5635925, this.field_a + var7, (byte) -122);
+          this.printWrapped(5635925, this.field_a + var7, (byte) -122);
           var5 = (UiLayoutNode) (this.field_g.field_Ab.field_jb.last(param0 ^ -4021));
-          if (!this.a(var7, true)) {
+          if (!this.executeCommand(var7, true)) {
             var5.field_y = 16733525;
           }
           this.field_k.clear(param0 ^ -26138);
-          this.a(var7, 30);
+          this.rememberCommand(var7, 30);
           this.field_o = null;
         }
         return true;
     }
 
-    private final void a(String param0, int param1) {
+    private final void rememberCommand(String param0, int param1) {
         TextLine var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -329,7 +329,7 @@ abstract class ConsolePanel implements OverlayLayer {
         }
     }
 
-    private final UiLayoutNode a(int param0, String param1, int param2) {
+    private final UiLayoutNode createOutputLine(int param0, String param1, int param2) {
         UiLayoutNode var4 = null;
         RuntimeException var4_ref = null;
         String var5 = null;
@@ -365,7 +365,7 @@ abstract class ConsolePanel implements OverlayLayer {
 
     final void print(String param0, byte param1) {
         try {
-          this.a(13421772, param0, (byte) -122);
+          this.printWrapped(13421772, param0, (byte) -122);
           if (param1 != 94) {
             this.field_e = 33;
           }
@@ -389,7 +389,7 @@ abstract class ConsolePanel implements OverlayLayer {
         return var4;
     }
 
-    abstract void b(int param0);
+    abstract void completeCommandInput(int param0);
 
     public static void releaseStatics(byte param0) {
         field_i = null;
@@ -468,7 +468,7 @@ abstract class ConsolePanel implements OverlayLayer {
           this.field_k.getCaretPosition(-1) != this.field_b) {
           this.field_p = this.field_k.getText((byte) -16);
           this.field_b = this.field_k.getCaretPosition(-1);
-          this.field_c = this.b((byte) -86);
+          this.field_c = this.getCommandSuggestions((byte) -86);
           if (null != this.field_c &&
             0 == this.field_c.length) {
             this.field_c = null;

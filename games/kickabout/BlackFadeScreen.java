@@ -43,7 +43,7 @@ final class BlackFadeScreen extends AppScreen {
     }
 
     final static void drawQuickChatToggleHint(byte param0) {
-        GuestLoginSupport.a((byte) -128, GrayscalePaletteSupport.field_a.field_J, 15);
+        GuestLoginSupport.drawQuickChatToggleHint((byte) -128, GrayscalePaletteSupport.field_a.field_J, 15);
         if (param0 != -85) {
           field_j = 82;
         }

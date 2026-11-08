@@ -116,7 +116,7 @@ final class PlayerContextMenu {
           field_m = (Sprite) null;
           return;
         }
-        if (!ScrollPane.a(param1 + 123)) {
+        if (!ScrollPane.isLocalGameHost(param1 + 123)) {
           if (param1 == 0) {
             return;
           }
@@ -200,15 +200,15 @@ final class PlayerContextMenu {
           return true;
         }
         if (param0 == 11) {
-          ListingRowCache.a(-100, 0, this.field_l, param2);
+          ListingRowCache.setChatFilter(-100, 0, this.field_l, param2);
           return true;
         }
         if (param0 == 12) {
-          ListingRowCache.a(11, 1, this.field_l, param2);
+          ListingRowCache.setChatFilter(11, 1, this.field_l, param2);
           return true;
         }
         if (param0 == 13) {
-          ListingRowCache.a(63, 2, this.field_l, param2);
+          ListingRowCache.setChatFilter(63, 2, this.field_l, param2);
           return true;
         }
         if (param0 == 14) {
@@ -548,7 +548,7 @@ final class PlayerContextMenu {
     }
 
     final static void requestLoginMenuMode(boolean param0) {
-        IndexedSpriteState.b(38, 17);
+        IndexedSpriteState.setAccountMenuMode(38, 17);
         if (param0) {
           PlayerContextMenu.releaseStatics(-102);
         }

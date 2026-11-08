@@ -20,7 +20,7 @@ abstract class AppScreen {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          PacketBuffer.a(-94, param2);
+          PacketBuffer.pushSpriteRaster(-94, param2);
           SoftwareRasterizer.clearFramebuffer();
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setProjectionCenter(SoftwareRasterizer.field_g >> 1, 202);
@@ -141,7 +141,7 @@ abstract class AppScreen {
               ByteArrayPool.field_c = SharedScrollbarState.field_c;
             }
             if (ByteArrayPool.field_c == SharedScrollbarState.field_c &&
-              SetLagCommand.a((byte) -98, 1)) {
+              SetLagCommand.readPacketBytes((byte) -98, 1)) {
               var6_int = ByteArrayPool.field_e.readUnsignedByte((byte) -123);
               if (var6_int == 0) {
                 ByteArrayPool.field_c = ConsoleTokenParser.field_c;
@@ -153,7 +153,7 @@ abstract class AppScreen {
               ByteArrayPool.field_e.field_n = 0;
             }
             if (ByteArrayPool.field_c == ConsoleTokenParser.field_c &&
-              SetLagCommand.a((byte) 115, 8)) {
+              SetLagCommand.readPacketBytes((byte) 115, 8)) {
               AccountInputValidationResult.field_c = ByteArrayPool.field_e.readLong((byte) -124);
               ByteArrayPool.field_e.field_n = 0;
               LoginPacketSupport.sendLoginPacket(param2, param3, FullscreenFocusCanvas.field_h, -16161, param5);
@@ -161,7 +161,7 @@ abstract class AppScreen {
             }
             boolean decompiledFrameRemainder0 = true;
             if (ByteArrayPool.field_c == ClubState.field_c &&
-              SetLagCommand.a((byte) -127, 1)) {
+              SetLagCommand.readPacketBytes((byte) -127, 1)) {
               var6_intLifetime1 = ByteArrayPool.field_e.readUnsignedByte((byte) -105);
               AppletContextSupport.field_b = var6_intLifetime1;
               BroadcastServerCommand.field_A = null;

@@ -79,7 +79,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static char b(int param0, char param1) {
+    final static char titleCaseCharacter(int param0, char param1) {
         if (param1 == 181 ||
           param1 == 402) {
           return param1;
@@ -185,11 +185,11 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           if (null != this.field_Q &&
             this.field_Q.field_q >= var11 &&
             this.field_Q.field_w >= var12) {
-            PacketBuffer.a(param1 ^ -19, this.field_Q);
+            PacketBuffer.pushSpriteRaster(param1 ^ -19, this.field_Q);
             SoftwareRasterizer.clearFramebuffer();
           } else {
             this.field_Q = new Sprite(var11, var12);
-            PacketBuffer.a(70, this.field_Q);
+            PacketBuffer.pushSpriteRaster(70, this.field_Q);
           }
           var14.rotateBilinear(112, 144, var14.field_o << 4, var14.field_v << 4, -this.field_S << 10, 4096);
           TeamManagementScreen.e(126);

@@ -12,7 +12,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
     private BitmapFont field_eb;
     static String field_bb;
 
-    final static void a(byte param0, int param1, IntrusiveDeque param2, java.awt.Point[] param3) {
+    final static void addPolygonGroundMarkers(byte param0, int param1, IntrusiveDeque param2, java.awt.Point[] param3) {
         int var4_int = 0;
         java.awt.Point var5 = null;
         java.awt.Point var6 = null;
@@ -29,7 +29,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           for (var4_int = 0; var4_int < param3.length; var4_int++) {
             var5 = param3[var4_int];
             var6 = param3[(var4_int + 1) % param3.length];
-            AnimationClip.a(var6.x, param1, var6.y, var5.y, var5.x, param2, (byte) -109);
+            AnimationClip.addGroundMarkerLine(var6.x, param1, var6.y, var5.y, var5.x, param2, (byte) -109);
           }
           if (param0 != -108) {
             field_bb = (String) null;
@@ -67,7 +67,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
         this.field_C = false;
         if (this.field_gb) {
-          SetLagCommand.b(true);
+          SetLagCommand.showLoginForm(true);
         } else {
           if (this.field_db) {
             PitchSurfaceLoader.c(-3);
@@ -93,7 +93,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           if (!this.field_cb) {
             ListRow.openUrlInBrowser(AppletContextSupport.getActiveApplet(-79), 126, "tochangedisplayname.ws");
           } else {
-            IndexedSpriteState.b(38, 3);
+            IndexedSpriteState.setAccountMenuMode(38, 3);
             this.closeDialog(-97);
           }
           return;
@@ -210,7 +210,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           }
           if (param1 < 96) {
             var6 = (java.awt.Point[]) null;
-            AccountRequestDialog.a((byte) -60, 109, (IntrusiveDeque) null, (java.awt.Point[]) null);
+            AccountRequestDialog.addPolygonGroundMarkers((byte) -60, 109, (IntrusiveDeque) null, (java.awt.Point[]) null);
           }
           this.a((byte) -120, (UiWidget) (var7));
           return;

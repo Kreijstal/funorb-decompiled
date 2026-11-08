@@ -324,7 +324,7 @@ final class Trinket {
         var4 = Kickabout.field_G;
         try {
           var1 = new Sprite(540, 140);
-          PacketBuffer.a(param0 + 26, var1);
+          PacketBuffer.pushSpriteRaster(param0 + 26, var1);
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clearFramebuffer();
           PlayerStats.field_p = 0;

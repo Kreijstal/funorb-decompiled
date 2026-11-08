@@ -337,7 +337,7 @@ final class MatchScreen extends AppScreen {
           this.leaveMatch(true, 17);
         }
         if (null != this.phaseController) {
-          PacketBuffer.a(-44, WorldSpriteSequence.field_h);
+          PacketBuffer.pushSpriteRaster(-44, WorldSpriteSequence.field_h);
           LookupRecordUpdate.a((byte) -48);
           this.drawScreen(-5, false);
           TeamManagementScreen.e(122);

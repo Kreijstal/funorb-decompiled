@@ -28,7 +28,7 @@ final class StripedProgressBar extends UiWidget {
           this.field_D = (Sprite) null;
         }
         Sprite var3 = new Sprite(var2, this.field_i);
-        PacketBuffer.a(99, var3);
+        PacketBuffer.pushSpriteRaster(99, var3);
         for (var4 = 0; this.field_i > var4; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
             var6 = (double)var5 * (double)var5 / (double)((this.field_i - var4) * var4);
@@ -123,7 +123,7 @@ final class StripedProgressBar extends UiWidget {
           }
           TeamManagementScreen.e(param2 - 1);
           if (SoftwareRasterizer.field_b <= this.field_v.field_q + param1) {
-            PacketBuffer.a(param2 ^ -84, this.field_I);
+            PacketBuffer.pushSpriteRaster(param2 ^ -84, this.field_I);
             param0.draw(-this.field_H, 0);
             param0.draw(this.field_G * 2 - this.field_H, 0);
             this.field_D.drawMultiply(0, 0);
@@ -131,7 +131,7 @@ final class StripedProgressBar extends UiWidget {
             this.field_I.draw(param1, param3);
           }
           if (SoftwareRasterizer.field_c >= var5_int - this.field_v.field_q) {
-            PacketBuffer.a(-107, this.field_I);
+            PacketBuffer.pushSpriteRaster(-107, this.field_I);
             for (var7 = this.field_n - this.field_v.field_q + this.field_H; var7 > this.field_G * 2; var7 = var7 - this.field_G * 2) {
             }
             param0.draw(-var7, 0);
@@ -162,7 +162,7 @@ final class StripedProgressBar extends UiWidget {
         }
         DiagnosticsOverlaySupport.field_g = false;
         AuctionBidDialog.field_G = false;
-        IndexedSpriteState.b(38, -1);
+        IndexedSpriteState.setAccountMenuMode(38, -1);
         PitchAppearanceSupport.field_a = RasterGlowSupport.field_a;
         ClubStateFactory.field_f = RasterGlowSupport.field_a;
     }
@@ -197,7 +197,7 @@ final class StripedProgressBar extends UiWidget {
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
-        PacketBuffer.a(-66, var14);
+        PacketBuffer.pushSpriteRaster(-66, var14);
         if (param0 != -257) {
           return (Sprite) null;
         }

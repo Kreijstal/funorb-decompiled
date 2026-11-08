@@ -377,7 +377,7 @@ abstract class MatchPhaseView {
         var3 = 47;
         var4 = 83;
         var5 = Integer.toString(param1 / 50);
-        PacketBuffer.a(-45, PromotionDialog.field_G);
+        PacketBuffer.pushSpriteRaster(-45, PromotionDialog.field_G);
         SoftwareRasterizer.clearFramebuffer();
         var6 = SoftwareRasterizer.field_g >> 1;
         var7 = SoftwareRasterizer.field_f >> 1;

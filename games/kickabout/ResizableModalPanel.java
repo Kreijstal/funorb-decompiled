@@ -120,7 +120,7 @@ abstract class ResizableModalPanel extends ModalPanel {
           var3 = ArrayWidgetContainer.field_y.field_v;
           for (var4 = 0; var4 < 100; var4++) {
             PlayAreaMovementSupport.field_c[var4] = new Sprite(var2, var3);
-            PacketBuffer.a(123, PlayAreaMovementSupport.field_c[var4]);
+            PacketBuffer.pushSpriteRaster(123, PlayAreaMovementSupport.field_c[var4]);
             var5 = (var4 << 16) / 100;
             ArrayWidgetContainer.field_y.rotateBilinear(ArrayWidgetContainer.field_y.field_o << 3, ArrayWidgetContainer.field_y.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, -var5, 4096);
             TeamManagementScreen.e(127);

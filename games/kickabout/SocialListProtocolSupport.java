@@ -111,7 +111,7 @@ final class SocialListProtocolSupport {
               PlayerSurnameSortCriterion.decodeChatFilters(var4, -1);
               return;
             }
-            UnreadMessagesScreen.a("F1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
+            UnreadMessagesScreen.reportClientError("F1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
             FormationView.b((byte) -116);
             if (param0 <= 38) {
               field_e = (Sprite) null;

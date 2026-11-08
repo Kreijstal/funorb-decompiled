@@ -78,7 +78,7 @@ final class SocialListLayoutSupport {
           stackIn_3_0 = TournamentChampionDialog.field_F.field_Cb;
           stackIn_3_1 = (3 * LineupPositionSupport.field_c + 6) * param0;
           stackIn_4_2 = (TournamentChampionDialog.field_F.field_Cb == MatchHudSupport.field_f);
-          var3_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param2, param1, false, 2 + LineupPositionSupport.field_c) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_3_0).layoutAndScroll(stackIn_3_1, stackIn_4_2, param2, param1, false, 2 + LineupPositionSupport.field_c) ? 1 : 0;
           var4 = TournamentChampionDialog.field_F.field_yb.field_jb;
           if (PitchCoordinateSupport.field_d != 2 &&
             1 != PitchCoordinateSupport.field_d) {

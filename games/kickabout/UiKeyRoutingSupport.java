@@ -56,7 +56,7 @@ final class UiKeyRoutingSupport {
           return true;
         }
         if (null != TextPromptState.field_b &&
-          TextPromptState.field_b.h((byte) 37)) {
+          TextPromptState.field_b.interceptPromptKey((byte) 37)) {
           TextPromptState.field_b = null;
           MusicPatchNode.closePlayerContextMenu(85);
           return true;

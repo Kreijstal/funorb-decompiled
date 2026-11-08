@@ -80,7 +80,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          UnreadMessagesScreen.a("CC1", (Throwable) ((Object) var6), 1);
+          UnreadMessagesScreen.reportClientError("CC1", (Throwable) ((Object) var6), 1);
           GameMediaSupport.field_a = null;
           ChatComposeSupport.field_b = null;
           if (param0 > 84) {
@@ -267,7 +267,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          UnreadMessagesScreen.a("CC1", (Throwable) ((Object) var6), 1);
+          UnreadMessagesScreen.reportClientError("CC1", (Throwable) ((Object) var6), 1);
           GameMediaSupport.field_a = null;
           ChatComposeSupport.field_b = null;
           if (param0 > 84) {

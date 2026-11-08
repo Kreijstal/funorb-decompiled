@@ -79,7 +79,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         int var4 = Kickabout.field_G;
         Sprite var6 = new Sprite(108, 108);
         int var3Lifetime1;
-        PacketBuffer.a(-110, var6);
+        PacketBuffer.pushSpriteRaster(-110, var6);
         SoftwareRasterizer.fillCircle(54, 54, 51, 204);
         for (var2_int = 43; var2_int > 0; var2_int--) {
           var3 = 119 * var2_int / 43 + 34;
@@ -90,7 +90,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         }
         TeamManagementScreen.e(param0 ^ -22987);
         ArgbSprite var2 = new ArgbSprite(54, 54);
-        PacketBuffer.a(param0 ^ -23017, var2);
+        PacketBuffer.pushSpriteRaster(param0 ^ -23017, var2);
         var6.drawHalfSize(0, 0);
         TeamManagementScreen.e(125);
         int var5 = 0;

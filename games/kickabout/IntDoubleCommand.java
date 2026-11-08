@@ -123,7 +123,7 @@ final class IntDoubleCommand extends ConsoleCommand {
               stackIn_44_1 = var10;
               stackIn_44_2 = var8;
               stackIn_45_3 = (param6 == 1) ? 8 : 2;
-              TournamentChampionDialog.a(stackIn_44_0, stackIn_44_1, stackIn_44_2, stackIn_45_3, (byte) 69, var9);
+              TournamentChampionDialog.setDirectionTowardPoint(stackIn_44_0, stackIn_44_1, stackIn_44_2, stackIn_45_3, (byte) 69, var9);
               return;
             }
             if (0 != ThumbnailStateFactory.field_d.field_V.possessorTeam) {
@@ -139,18 +139,18 @@ final class IntDoubleCommand extends ConsoleCommand {
               var12Lifetime1 = stackIn_56_0;
               var13Lifetime1 = 0 / ((-30 - param0) / 52);
               if (ThumbnailStateFactory.field_d.field_V.possessorTeam == -1) {
-                TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
+                TournamentChampionDialog.setDirectionTowardPoint(30, param3, var14, 0, (byte) 42, param1);
                 return;
               }
               if (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0) {
                 if (var12Lifetime1 != 0) {
-                  TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
+                  TournamentChampionDialog.setDirectionTowardPoint(30, param3, var14, 0, (byte) 42, param1);
                 } else {
                   stackIn_62_0 = 10;
                   stackIn_62_1 = var10;
                   stackIn_62_2 = var8;
                   stackIn_63_3 = (param6 == 1) ? 8 : 2;
-                  TournamentChampionDialog.a(stackIn_62_0, stackIn_62_1, stackIn_62_2, stackIn_63_3, (byte) 69, var9);
+                  TournamentChampionDialog.setDirectionTowardPoint(stackIn_62_0, stackIn_62_1, stackIn_62_2, stackIn_63_3, (byte) 69, var9);
                 }
                 return;
               }
@@ -158,7 +158,7 @@ final class IntDoubleCommand extends ConsoleCommand {
               stackIn_66_1 = var10;
               stackIn_66_2 = var8;
               stackIn_67_3 = (param6 == 1) ? 8 : 2;
-              TournamentChampionDialog.a(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3, (byte) 69, var9);
+              TournamentChampionDialog.setDirectionTowardPoint(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3, (byte) 69, var9);
               return;
             }
             var12Lifetime2 = -var14.pixelY(true) + param3;
@@ -177,19 +177,19 @@ final class IntDoubleCommand extends ConsoleCommand {
               var12Lifetime2 = stackIn_78_0;
               var13Lifetime2 = 0 / ((-30 - param0) / 52);
               if (ThumbnailStateFactory.field_d.field_V.possessorTeam == -1) {
-                TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
+                TournamentChampionDialog.setDirectionTowardPoint(30, param3, var14, 0, (byte) 42, param1);
                 return;
               }
               if (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0 &&
                 var12Lifetime2 != 0) {
-                TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
+                TournamentChampionDialog.setDirectionTowardPoint(30, param3, var14, 0, (byte) 42, param1);
                 return;
               }
               stackIn_85_0 = 10;
               stackIn_85_1 = var10;
               stackIn_85_2 = var8;
               stackIn_86_3 = (param6 == 1) ? 8 : 2;
-              TournamentChampionDialog.a(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_86_3, (byte) 69, var9);
+              TournamentChampionDialog.setDirectionTowardPoint(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_86_3, (byte) 69, var9);
               return;
             }
             if (AccountInputValidationResult.field_f.action != 9 &&
@@ -204,18 +204,18 @@ final class IntDoubleCommand extends ConsoleCommand {
             var12Lifetime3 = stackIn_96_0;
             var13Lifetime3 = 0 / ((-30 - param0) / 52);
             if (ThumbnailStateFactory.field_d.field_V.possessorTeam == -1) {
-              TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
+              TournamentChampionDialog.setDirectionTowardPoint(30, param3, var14, 0, (byte) 42, param1);
               return;
             }
             if (ThumbnailStateFactory.field_d.field_V.possessorTeam == 0) {
               if (var12Lifetime3 != 0) {
-                TournamentChampionDialog.a(30, param3, var14, 0, (byte) 42, param1);
+                TournamentChampionDialog.setDirectionTowardPoint(30, param3, var14, 0, (byte) 42, param1);
               } else {
                 stackIn_102_0 = 10;
                 stackIn_102_1 = var10;
                 stackIn_102_2 = var8;
                 stackIn_103_3 = (param6 == 1) ? 8 : 2;
-                TournamentChampionDialog.a(stackIn_102_0, stackIn_102_1, stackIn_102_2, stackIn_103_3, (byte) 69, var9);
+                TournamentChampionDialog.setDirectionTowardPoint(stackIn_102_0, stackIn_102_1, stackIn_102_2, stackIn_103_3, (byte) 69, var9);
               }
               return;
             }
@@ -223,14 +223,14 @@ final class IntDoubleCommand extends ConsoleCommand {
             stackIn_106_1 = var10;
             stackIn_106_2 = var8;
             stackIn_107_3 = (param6 == 1) ? 8 : 2;
-            TournamentChampionDialog.a(stackIn_106_0, stackIn_106_1, stackIn_106_2, stackIn_107_3, (byte) 69, var9);
+            TournamentChampionDialog.setDirectionTowardPoint(stackIn_106_0, stackIn_106_1, stackIn_106_2, stackIn_107_3, (byte) 69, var9);
             return;
           }
           if (0 == ThumbnailStateFactory.field_d.field_V.possessorTeam) {
             if (var11 == 0) {
               return;
             }
-            TournamentChampionDialog.a(30, param3, var14, 0, (byte) 112, param1);
+            TournamentChampionDialog.setDirectionTowardPoint(30, param3, var14, 0, (byte) 112, param1);
           }
           return;
         }

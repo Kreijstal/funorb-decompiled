@@ -93,7 +93,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     }
 
     final void t(int param0) {
-        this.a(true, TeamSelectionView.a(param0 ^ -105, GameSoundEffect.field_g, 248), (byte) -71);
+        this.a(true, TeamSelectionView.createRegistrationFailure(param0 ^ -105, GameSoundEffect.field_g, 248), (byte) -71);
         if (param0 != 17) {
           field_qb = (Sprite) null;
         }
@@ -133,7 +133,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
 
     public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         if (this.field_nb) {
-          LobbyMatchPreview.a(false, true, (byte) -121);
+          LobbyMatchPreview.showLoginDialog(false, true, (byte) -121);
           return;
         }
         try {

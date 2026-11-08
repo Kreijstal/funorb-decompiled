@@ -147,8 +147,8 @@ final class WidgetTheme {
           var6.field_e = 0;
           var7 = new StatefulTextPainter(var4, true);
           var7.field_e = 0;
-          var7.a(ShopPlayerSlot.a((byte) 26, 8947848), -23952);
-          var7.createStateStyle(1, -12085).withPanelSprites(true, ShopPlayerSlot.a((byte) 26, 11184810)).withTextColor(-2, 2236962);
+          var7.a(ShopPlayerSlot.createSolidNineSliceSprites((byte) 26, 8947848), -23952);
+          var7.createStateStyle(1, -12085).withPanelSprites(true, ShopPlayerSlot.createSolidNineSliceSprites((byte) 26, 11184810)).withTextColor(-2, 2236962);
           this.field_o = (WidgetPainter) ((Object) new CheckboxPainter(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new RotaryDialPainter(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MarkerSliderPainter(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
@@ -198,7 +198,7 @@ final class WidgetTheme {
           }
           var3 = "rvnadlm";
           var4 = -1L;
-          BallAgent.a(var3, param1, (byte) -5, var4, var2);
+          BallAgent.writeCookie(var3, param1, (byte) -5, var4, var2);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

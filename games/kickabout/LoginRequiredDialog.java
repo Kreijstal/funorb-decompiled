@@ -54,7 +54,7 @@ final class LoginRequiredDialog extends MessageDialog {
           return;
         }
         if (0 == param1) {
-          MatchHudRoutingSupport.a((byte) 58, true, NineSlicePanelPainter.field_f);
+          MatchHudRoutingSupport.startLoginTransition((byte) 58, true, NineSlicePanelPainter.field_f);
         }
     }
 

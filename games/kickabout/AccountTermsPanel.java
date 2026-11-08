@@ -135,17 +135,17 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
             return;
           }
           if (param2 == 0) {
-            TextPromptDialog.a((byte) -51, "terms.ws");
+            TextPromptDialog.requestAccountPage((byte) -51, "terms.ws");
             return;
           }
           if (1 == param2) {
-            TextPromptDialog.a((byte) -51, "privacy.ws");
+            TextPromptDialog.requestAccountPage((byte) -51, "privacy.ws");
             return;
           }
           if (2 != param2) {
             return;
           }
-          TextPromptDialog.a((byte) -51, "conduct.ws");
+          TextPromptDialog.requestAccountPage((byte) -51, "conduct.ws");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

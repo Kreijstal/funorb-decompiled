@@ -24,7 +24,7 @@ final class PitchPurchaseSupport {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param3 != null && (param0 != 2 ||
-            TournamentChampionDialog.a(false, param1, param4))) {
+            TournamentChampionDialog.canSendPrivateChatTo(false, param1, param4))) {
             stackIn_9_0 = true;
             decompiledFrameRemainder0 = false;
           }

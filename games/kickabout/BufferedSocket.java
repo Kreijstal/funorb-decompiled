@@ -94,7 +94,7 @@ final class BufferedSocket implements Runnable {
           return;
         }
         ConsoleLexer.showLoadingProgressDialog(-45);
-        IndexedSpriteState.b(38, 4);
+        IndexedSpriteState.setAccountMenuMode(38, 4);
     }
 
     public final void run() {
@@ -183,7 +183,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            UnreadMessagesScreen.a((String) null, (Throwable) ((Object) var1_ref), 1);
+            UnreadMessagesScreen.reportClientError((String) null, (Throwable) ((Object) var1_ref), 1);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

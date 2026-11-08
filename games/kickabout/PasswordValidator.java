@@ -151,7 +151,7 @@ final class PasswordValidator extends TextFieldValidator {
           ReceivedAuctionItemRow.field_Kb = param1;
           var6_int = (100 * ReceivedAuctionItemRow.field_Kb >> 8) + 50;
           var7 = (116 * FadingChatMessage.field_h >> 8) + 40;
-          PacketBuffer.a(-68, AccountRegistrationResponse.field_j);
+          PacketBuffer.pushSpriteRaster(-68, AccountRegistrationResponse.field_j);
           SoftwareRasterizer.clearFramebuffer();
           AuctionListing.pushRasterClip(var7, -22914, 0, SoftwareRasterizer.field_f, 0);
           SocialUiState.field_e.drawScaled(0, 0, SocialUiState.field_e.field_o * var7 / 140, SocialUiState.field_e.field_v);
@@ -169,7 +169,7 @@ final class PasswordValidator extends TextFieldValidator {
             }
           }
           TeamManagementScreen.e(121);
-          PacketBuffer.a(65, PacketBuffer.field_g);
+          PacketBuffer.pushSpriteRaster(65, PacketBuffer.field_g);
           SoftwareRasterizer.clearFramebuffer();
           var8Lifetime1 = PlayerContextMenu.angleFromVector(-ValidationIndicator.field_K, TextButton.field_C, (byte) 2);
           if (param0 != 706856675) {
@@ -278,7 +278,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_11_0 = GoalStateAgent.field_h;
             return stackIn_11_0;
           }
-          if (ArchivePreloader.a(true, var5)) {
+          if (ArchivePreloader.isRepeatedCharacter(true, var5)) {
             stackIn_15_0 = NotCommand.field_D;
             return stackIn_15_0;
           }
@@ -294,7 +294,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_22_0 = ClientUiUpdateSupport.field_b;
             return stackIn_22_0;
           }
-          if (SetLagCommand.a(68, var5, var6)) {
+          if (SetLagCommand.containsForwardOrReversedIgnoringUnderscores(68, var5, var6)) {
             stackIn_26_0 = AppScreen.field_f;
             return stackIn_26_0;
           }

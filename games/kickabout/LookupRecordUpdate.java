@@ -116,7 +116,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
               StripedProgressBar.field_B = InstrumentNoteMask.field_i;
               var2_intLifetime1 = var15.field_o * InstrumentNoteMask.field_i >> 8;
               var3Lifetime1 = InstrumentNoteMask.field_i * var15.field_v >> 8;
-              PacketBuffer.a(param0 ^ 10, MyKitScreen.field_S);
+              PacketBuffer.pushSpriteRaster(param0 ^ 10, MyKitScreen.field_S);
               var15.drawScaled(0, 0, var2_intLifetime1, var3Lifetime1);
               TeamManagementScreen.e(118);
             }

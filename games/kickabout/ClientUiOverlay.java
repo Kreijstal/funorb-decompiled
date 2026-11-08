@@ -297,7 +297,7 @@ final class ClientUiOverlay implements OverlayLayer {
           this.field_h = this.field_h + 1;
           LobbyGameRecord.a(-121);
           if (null != PlayerContextMenu.field_i) {
-            if (ShopPlayerSlot.a(PlayerContextMenu.field_i.field_Eb, -3, PlayerContextMenu.field_i.field_bc, PlayerContextMenu.field_i.field_gc)) {
+            if (ShopPlayerSlot.canStartConfiguredGame(PlayerContextMenu.field_i.field_Eb, -3, PlayerContextMenu.field_i.field_bc, PlayerContextMenu.field_i.field_gc)) {
               stackIn_19_0 = (GameLoopApplet.field_E.hasFourAvailablePlayers((byte) 46)) ? 1 : 0;
             } else {
               stackIn_19_0 = 0;
@@ -309,7 +309,7 @@ final class ClientUiOverlay implements OverlayLayer {
           stackIn_21_0 = 0;
           stackIn_21_1 = -117;
           stackIn_21_2 = 15;
-          stackIn_22_3 = (TournamentChampionDialog.g(0) <= 50) ? false : true;
+          stackIn_22_3 = (TournamentChampionDialog.getMouseIdleTicks(0) <= 50) ? false : true;
           stackIn_24_4 = 14;
           stackIn_24_5 = var5;
           stackIn_24_6 = StatefulTextPainter.field_v;

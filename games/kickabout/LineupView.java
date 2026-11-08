@@ -252,7 +252,7 @@ final class LineupView extends MatchPhaseView {
           }
           if (this.field_o.field_sb == 1) {
             this.selectLineupPlayer(74, -1);
-            ShopPlayerSlot.c(61, 47);
+            ShopPlayerSlot.playDefaultFadingSound(61, 47);
           }
           this.field_o.field_Gb = this.field_a.field_o.isReadyOrInactive(-82, this.field_g);
           this.field_o.field_lb = this.field_a.field_o.hasChosenAllSlots(false, this.field_g);
@@ -453,7 +453,7 @@ final class LineupView extends MatchPhaseView {
             var5_int = this.field_a.field_i[this.field_h][var4Lifetime4];
             var6 = (this.field_t[var4Lifetime4].field_q >> 1) + this.field_t[var4Lifetime4].field_F;
             var7 = -16 + this.field_t[var4Lifetime4].field_T + this.field_t[var4Lifetime4].field_mb;
-            PacketBuffer.a(67, QuickChatCommandType.field_b);
+            PacketBuffer.pushSpriteRaster(67, QuickChatCommandType.field_b);
             SoftwareRasterizer.clearFramebuffer();
             ConsoleTokenCursor.field_d.drawCentered(this.field_a.field_S[var5_int].toLowerCase(), SoftwareRasterizer.field_g >> 1, -1 + SoftwareRasterizer.field_f, 16777062, -1);
             TeamManagementScreen.e(param0 + 116);

@@ -72,7 +72,7 @@ class UiLayoutNode extends SharedWidgetFactory {
         int var8 = 0;
         int var9 = Kickabout.field_G;
         try {
-          PacketBuffer.a(-123, DebouncedValidationProvider.field_a);
+          PacketBuffer.pushSpriteRaster(-123, DebouncedValidationProvider.field_a);
           var10 = FootballerPreview.a(-5275);
           var5 = var10.field_o;
           var6 = var10.field_v;
@@ -392,7 +392,7 @@ class UiLayoutNode extends SharedWidgetFactory {
                   var5 = 1;
                 }
                 if (ClientProtocolStage.getChatFilterValue(0, var5) == 2) {
-                  ListingRowCache.a(-117, 1, var5, param2);
+                  ListingRowCache.setChatFilter(-117, 1, var5, param2);
                 }
                 PasswordLoginCredentials.sendChatPacket(-1, 82, NodeHashTableIterator.field_b, param1, TrinketTile.field_Kb, var4_ref_String);
               }

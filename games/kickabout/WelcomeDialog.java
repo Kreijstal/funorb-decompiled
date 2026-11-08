@@ -41,7 +41,7 @@ final class WelcomeDialog extends MessageDialog {
           return;
         }
         if (param1 == 1) {
-          MatchHudRoutingSupport.a((byte) 29, true, NineSlicePanelPainter.field_f);
+          MatchHudRoutingSupport.startLoginTransition((byte) 29, true, NineSlicePanelPainter.field_f);
         }
     }
 

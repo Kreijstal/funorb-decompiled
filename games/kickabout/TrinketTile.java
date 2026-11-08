@@ -48,7 +48,7 @@ final class TrinketTile extends UiLayoutNode {
           LeaguesHelpScreen.field_E = new UiLayoutNode(0L, (UiLayoutNode) null);
           if (param1 == null) {
             var10 = (Throwable) null;
-            UnreadMessagesScreen.a("QC1", (Throwable) null, 1);
+            UnreadMessagesScreen.reportClientError("QC1", (Throwable) null, 1);
             return;
           }
           param1.field_c = 0;
@@ -61,7 +61,7 @@ final class TrinketTile extends UiLayoutNode {
           var4 = FriendsListPanel.findMarkedQuickChatCategory((byte) 124);
           if (var4 == null) {
             var11 = (Throwable) null;
-            UnreadMessagesScreen.a("QC2", (Throwable) null, 1);
+            UnreadMessagesScreen.reportClientError("QC2", (Throwable) null, 1);
             return;
           }
           TeamSelectionAgent.a((byte) -45, var4);

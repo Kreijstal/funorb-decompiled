@@ -132,7 +132,7 @@ final class ModalStack extends SingleChildContainer {
           stackIn_4_1 = (LineupPositionSupport.field_c * 3 + 6) * param2;
           stackIn_5_2 = (RotaryDialPainter.field_d.field_Cb == MatchHudSupport.field_f);
           boolean decompiledFrameRemainder0 = true;
-          var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, param0, 2, false, param1 + LineupPositionSupport.field_c) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_4_0).layoutAndScroll(stackIn_4_1, stackIn_5_2, param0, 2, false, param1 + LineupPositionSupport.field_c) ? 1 : 0;
           var4 = RotaryDialPainter.field_d.field_yb.field_jb;
           var5 = null;
           if (PitchCoordinateSupport.field_d == 2) {

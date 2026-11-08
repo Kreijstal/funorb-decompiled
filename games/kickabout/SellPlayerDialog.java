@@ -62,7 +62,7 @@ final class SellPlayerDialog extends MessageDialog {
             }
           }
           var1_int = AnimationSkeleton.a(false);
-          var2 = RenderedBall.a(var1_int, -128);
+          var2 = RenderedBall.measureTutorialMessageWidth(var1_int, -128);
           if (TickClock.field_a != var2) {
             AnimationPlayer.field_f = 60;
             var3 = -TickClock.field_a + (TickClock.field_a + var2 >> 1);

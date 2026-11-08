@@ -68,7 +68,7 @@ final class TeamSelectionView extends MatchPhaseView {
             stackIn_22_0 = TriangleMesh.field_A;
           }
           var4_ref_String = stackIn_22_0;
-          TeamSelectionView.a(var4_ref_String, 302, 46, 316, 88, 0);
+          TeamSelectionView.drawWrappedTextPanel(var4_ref_String, 302, 46, 316, 88, 0);
           stackIn_24_0 = this.field_l;
           stackIn_25_1 = (var2 != 0) ? false : true;
           ((CheckboxLabelWidget) (Object) stackIn_24_0).a(stackIn_25_1, (byte) 46);
@@ -101,18 +101,18 @@ final class TeamSelectionView extends MatchPhaseView {
         }
     }
 
-    final static void f(int param0) {
+    final static void discardPendingManagerActions(int param0) {
         int var1 = 113 % ((-88 - param0) / 32);
         MusicPatchNode.field_h.clear(22997);
     }
 
     final void onButtonClick(int param0, int param1) {
         if (param0 < 98) {
-          TeamSelectionView.f(77);
+          TeamSelectionView.discardPendingManagerActions(77);
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         if (param0 >= -20) {
           return;
@@ -121,7 +121,7 @@ final class TeamSelectionView extends MatchPhaseView {
         field_m = null;
     }
 
-    final static void a(int param0, String param1, boolean param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void updateChatComposerPopup(int param0, String param1, boolean param2, int param3, int param4, int param5, int param6, int param7) {
         String var9 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -152,7 +152,7 @@ final class TeamSelectionView extends MatchPhaseView {
           }
           if (param5 <= 70) {
             var9 = (String) null;
-            TeamSelectionView.a(27, (String) null, 93);
+            TeamSelectionView.createRegistrationFailure(27, (String) null, 93);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -169,14 +169,14 @@ final class TeamSelectionView extends MatchPhaseView {
         }
     }
 
-    final static boolean h(int param0) {
+    final static boolean pollArchiveMasterIndex(int param0) {
         if (param0 > -35) {
           field_r = (int[]) null;
         }
         return FriendsListPanel.field_Ab.pollMasterIndex((byte) -45);
     }
 
-    private final void a(byte param0, int param1) {
+    private final void selectTeam(byte param0, int param1) {
         this.field_a.enqueueEvent(PlayerInputFactory.createTeamEvent(this.field_g, (byte) 0, param1), -125);
         if (param0 >= -95) {
           return;
@@ -212,7 +212,7 @@ final class TeamSelectionView extends MatchPhaseView {
             var5.field_s = PlayerShopScreen.field_P[0] - (var5.field_q >> 1) + 1;
             if (this.isLocalParticipantActive((byte) 13) &&
               var4_int == param1) {
-              this.a(var5, (byte) -64);
+              this.addTeamArrowButtons(var5, (byte) -64);
             }
             this.field_k[var4_int] = var5;
             this.field_t.addChild((byte) -126, this.field_k[var4_int]);
@@ -243,14 +243,14 @@ final class TeamSelectionView extends MatchPhaseView {
           !this.field_a.field_n.isReadyOrInactive(8658, this.field_g)) {
           if (param2 == 96 &&
             this.field_a.field_n.canJoinTeamZero((byte) 107, this.field_g)) {
-            this.a((byte) -119, 0);
+            this.selectTeam((byte) -119, 0);
           }
           if (param2 == 97 &&
             this.field_a.field_n.canJoinTeamOne((byte) 100, this.field_g)) {
-            this.a((byte) -103, 1);
+            this.selectTeam((byte) -103, 1);
           }
           if (param2 == 84) {
-            this.a((byte) -127, 2);
+            this.selectTeam((byte) -127, 2);
           }
         }
         if (param1 == 1670) {
@@ -258,7 +258,7 @@ final class TeamSelectionView extends MatchPhaseView {
         return true;
     }
 
-    final static void b(byte param0) {
+    final static void initializeSelectionOverlays(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = Kickabout.field_G;
@@ -277,7 +277,7 @@ final class TeamSelectionView extends MatchPhaseView {
         }
     }
 
-    final static AccountRegistrationResponse a(int param0, String param1, int param2) {
+    final static AccountRegistrationResponse createRegistrationFailure(int param0, String param1, int param2) {
         AccountRegistrationResponse var3 = null;
         RuntimeException var3_ref = null;
         AccountRegistrationResponse stackIn_3_0 = null;
@@ -308,13 +308,13 @@ final class TeamSelectionView extends MatchPhaseView {
         }
     }
 
-    private final void a(UiLayoutNode param0, byte param1) {
+    private final void addTeamArrowButtons(UiLayoutNode param0, byte param1) {
         UiLayoutNode var5 = null;
         try {
           this.field_o = new UiLayoutNode();
           this.field_s = new UiLayoutNode();
           var5 = new UiLayoutNode(0L, param0);
-          var5.field_S = ShopPlayerSlot.a((byte) 26, 12303291);
+          var5.field_S = ShopPlayerSlot.createSolidNineSliceSprites((byte) 26, 12303291);
           var5.field_B = -2;
           var5.field_hb = 5592405;
           var5.field_ub = 65793;
@@ -388,23 +388,23 @@ final class TeamSelectionView extends MatchPhaseView {
           this.field_s.field_lb = this.field_a.field_n.canJoinTeamOne((byte) 79, this.field_g);
           if (0 != this.field_o.field_sb) {
             this.field_o.updateInput(0, param1);
-            this.a((byte) -109, 0);
+            this.selectTeam((byte) -109, 0);
             LoginKind.a((byte) 98);
           }
           if (this.field_s.field_sb != 0) {
             this.field_s.updateInput(0, param1);
-            this.a((byte) -111, 1);
+            this.selectTeam((byte) -111, 1);
             LoginKind.a((byte) -105);
           }
           if (0 != this.field_l.field_sb) {
-            this.a((byte) -118, 2);
-            ShopPlayerSlot.c(61, -126);
+            this.selectTeam((byte) -118, 2);
+            ShopPlayerSlot.playDefaultFadingSound(61, -126);
           }
           this.field_l.field_Gb = this.field_a.field_n.isReadyOrInactive(8658, this.field_g);
         }
     }
 
-    final static void a(String param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawWrappedTextPanel(String param0, int param1, int param2, int param3, int param4, int param5) {
         if (param5 != 0) {
           return;
         }

@@ -178,7 +178,7 @@ final class ConsoleTokenParser {
             var4_ref.unlink((byte) -109);
             return;
           }
-          UnreadMessagesScreen.a("HS1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
+          UnreadMessagesScreen.reportClientError("HS1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
           FormationView.b((byte) -116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

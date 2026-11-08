@@ -80,7 +80,7 @@ final class AudioService implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          UnreadMessagesScreen.a((String) null, (Throwable) ((Object) exception), 1);
+          UnreadMessagesScreen.reportClientError((String) null, (Throwable) ((Object) exception), 1);
         } finally {
           this.field_c = false;
         }

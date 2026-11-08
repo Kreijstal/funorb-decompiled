@@ -44,7 +44,7 @@ final class LobbyMatchPreview {
         var3 = this.field_b;
         if (this.field_f) {
           SoftwareRasterizer.fillRoundedRectangleBlended(-2 + var2, -2 + var3, this.field_a + 6, 6 + this.field_j, 4, 16777215, 48);
-          PacketBuffer.a(-47, StreetSceneryLoader.field_j);
+          PacketBuffer.pushSpriteRaster(-47, StreetSceneryLoader.field_j);
           SoftwareRasterizer.clearFramebuffer();
           ByteArrayPool.field_d.drawParagraph(MusicPatchPcmStream.field_k.toUpperCase(), 0, 0, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           ByteArrayPool.field_d.drawParagraph(MarkerSliderPainter.field_g.toUpperCase(), 0, -32 + this.field_j >> 1, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
@@ -56,7 +56,7 @@ final class LobbyMatchPreview {
         }
         SquadPickerDialog.field_Q.drawAlpha(var2, var3, FriendsListPanel.getHudOpacity(false, (byte) 14));
         if (this.field_e.field_f == 4) {
-          PacketBuffer.a(-45, DraggableWidget.field_K);
+          PacketBuffer.pushSpriteRaster(-45, DraggableWidget.field_K);
           SoftwareRasterizer.clearFramebuffer();
           ColorQuantizationBox.drawMatchTimer(this.field_e.field_h, 0, false, DraggableWidget.field_K.field_q, 0, -52);
           TeamManagementScreen.e(119);
@@ -106,7 +106,7 @@ final class LobbyMatchPreview {
         SoftwareDrawingSupport.drawMatchScoreSummary(stackIn_29_0, stackIn_32_1, stackIn_32_2[stackIn_33_3], this.field_l, this.field_b + 123, 80, 32);
     }
 
-    final static void a(boolean param0, boolean param1, byte param2) {
+    final static void showLoginDialog(boolean param0, boolean param1, byte param2) {
         String var4 = (String) null;
         TriangleMesh.showLoginDialog(-101, param1, param0, (String) null);
         if (param2 > -35) {

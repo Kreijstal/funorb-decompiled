@@ -20,7 +20,7 @@ final class ShopPlayerSlot extends ListRow {
     static String field_Cb;
     String field_Nb;
 
-    final static void a(int param0, PendingRequestAcknowledgement param1, int param2) {
+    final static void writeRequestAcknowledgement(int param0, PendingRequestAcknowledgement param1, int param2) {
         CipherPacketBuffer var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -50,17 +50,17 @@ final class ShopPlayerSlot extends ListRow {
         }
     }
 
-    final static FadingSoundPlayer c(int param0, int param1) {
+    final static FadingSoundPlayer playDefaultFadingSound(int param0, int param1) {
         int var2 = 62 % ((-55 - param1) / 32);
         return ParticipantStatus.playFadingSound(false, 128, 126, param0);
     }
 
-    final static void a(String param0, byte param1) {
+    final static void requestLeaguePlayerSearch(String param0, byte param1) {
         try {
-          SquadPickerDialog.a(16, param0, true);
+          SquadPickerDialog.requestLeaguePlayerSearch(16, param0, true);
           if (param1 != 74) {
             PendingRequestAcknowledgement var3 = (PendingRequestAcknowledgement) null;
-            ShopPlayerSlot.a(40, (PendingRequestAcknowledgement) null, -96);
+            ShopPlayerSlot.writeRequestAcknowledgement(40, (PendingRequestAcknowledgement) null, -96);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "sp.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -150,7 +150,7 @@ final class ShopPlayerSlot extends ListRow {
         }
     }
 
-    final static Sprite[] a(byte param0, int param1) {
+    final static Sprite[] createSolidNineSliceSprites(byte param0, int param1) {
         if (param0 != 26) {
           return (Sprite[]) null;
         }
@@ -173,7 +173,7 @@ final class ShopPlayerSlot extends ListRow {
         }
     }
 
-    final static void i(int param0) {
+    final static void clampCameraToPitch(int param0) {
         if (IsSixCommand.field_B) {
           return;
         }
@@ -201,7 +201,7 @@ final class ShopPlayerSlot extends ListRow {
         }
     }
 
-    final static boolean a(byte[] param0, int param1, int param2, int param3) {
+    final static boolean canStartConfiguredGame(byte[] param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         String var5 = null;
         boolean stackIn_11_0 = false;
@@ -212,12 +212,12 @@ final class ShopPlayerSlot extends ListRow {
         try {
           if (param1 != -3) {
             var5 = (String) null;
-            ShopPlayerSlot.a((String) null, (byte) -105);
+            ShopPlayerSlot.requestLeaguePlayerSearch((String) null, (byte) -105);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param3 >= 2 &&
             param3 <= param2 &&
-            !NanoTickClock.a(param3, 127, MusicPatchNode.field_k, param0) && (param0[3] == 0 ||
+            !NanoTickClock.matchesConfigurationRule(param3, 127, MusicPatchNode.field_k, param0) && (param0[3] == 0 ||
             param0[3] == 1 &&
             param3 >= 4)) {
             stackIn_11_0 = true;
@@ -241,7 +241,7 @@ final class ShopPlayerSlot extends ListRow {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_Jb = null;
         field_Cb = null;
         field_Kb = null;

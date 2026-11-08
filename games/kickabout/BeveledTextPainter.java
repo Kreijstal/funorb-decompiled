@@ -471,7 +471,7 @@ class BeveledTextPainter extends TextWidgetPainter {
             }
           }
           var3 = new ArgbSprite(param0.field_o, param0.field_v);
-          PacketBuffer.a(-54, var3);
+          PacketBuffer.pushSpriteRaster(-54, var3);
           SoftwareRasterizer.fillRect(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 6710886);
           for (var4 = 2; 10 > var4; var4++) {
             var5 = (-var4 + 12 << 7) / 13;

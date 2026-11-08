@@ -629,7 +629,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    SectorCacheStore.field_b = SplashScreen.field_k.a((byte) -113, LeagueWinnerDialog.field_H);
+                    SectorCacheStore.field_b = SplashScreen.field_k.waitAndAdvanceTicks((byte) -113, LeagueWinnerDialog.field_H);
                     stackIn_99_0 = 0;
                   }
                   var3 = stackIn_99_0;
@@ -647,7 +647,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              UnreadMessagesScreen.a((String) null, (Throwable) (var1), 1);
+              UnreadMessagesScreen.reportClientError((String) null, (Throwable) (var1), 1);
               this.showGameErrorPage((byte) 60, "crash");
             }
             this.shutdownShell(true, (byte) -119);
@@ -735,7 +735,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              UnreadMessagesScreen.a((String) null, var8_ref, 1);
+              UnreadMessagesScreen.reportClientError((String) null, var8_ref, 1);
               this.showGameErrorPage((byte) -118, "crash");
             }
             return;

@@ -20,7 +20,7 @@ final class TextPromptDialog extends UiLayoutNode {
     private int field_Ob;
     private UiLayoutNode field_Gb;
 
-    final static ChatMessage a(int param0, int param1, byte param2, int param3) {
+    final static ChatMessage rebuildChatHistory(int param0, int param1, byte param2, int param3) {
         boolean stackIn_47_0 = false;
         Object var4;
         int var5;
@@ -59,7 +59,7 @@ final class TextPromptDialog extends UiLayoutNode {
               WidgetContainer.field_z) {
               if (var8_ref_tv.field_s != null) {
               }
-              var10 = RenderedBall.a((byte) -92, var8_ref_tv);
+              var10 = RenderedBall.formatChatMessagePrefix((byte) -92, var8_ref_tv);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_tv.field_g);
               var12 = LeaguesHelpScreen.a(var8_ref_tv, 31100);
               var8_ref_tv.field_s = new UiLayoutNode(0L, ArchiveRequest.field_o, var11);
@@ -116,10 +116,10 @@ final class TextPromptDialog extends UiLayoutNode {
         return (ChatMessage) (var4);
     }
 
-    final static void a(byte param0, String param1) {
+    final static void requestAccountPage(byte param0, String param1) {
         try {
           TrinketShopDialog.field_M = param1;
-          IndexedSpriteState.b(38, 12);
+          IndexedSpriteState.setAccountMenuMode(38, 12);
           if (param0 != -51) {
             field_Ib = (String) null;
           }
@@ -128,7 +128,7 @@ final class TextPromptDialog extends UiLayoutNode {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isMuteSelected(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 26) {
           this.field_Lb = (UiLayoutNode) null;
@@ -145,7 +145,7 @@ final class TextPromptDialog extends UiLayoutNode {
         }
     }
 
-    final int a(boolean param0, int param1) {
+    final int updateAndGetResult(boolean param0, int param1) {
         int var3 = 0;
         IconLabel stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
@@ -194,7 +194,7 @@ final class TextPromptDialog extends UiLayoutNode {
         return this.field_Db.toString();
     }
 
-    private final int a(int param0, String param1, int param2, UiLayoutNode param3, UiLayoutNode param4, byte param5) {
+    private final int appendLabelRow(int param0, String param1, int param2, UiLayoutNode param3, UiLayoutNode param4, byte param5) {
         UiLayoutNode var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_3_0 = 0;
@@ -211,7 +211,7 @@ final class TextPromptDialog extends UiLayoutNode {
           param0 += 32;
           param4.addChild((byte) -106, var7);
           if (param5 < 4) {
-            this.b(-117);
+            this.isMuteSelected(-117);
           }
           stackIn_3_0 = param0;
           return stackIn_3_0;
@@ -241,7 +241,7 @@ final class TextPromptDialog extends UiLayoutNode {
         }
     }
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean isSix(byte param0, int param1) {
         if (param0 != -46) {
           return true;
         }
@@ -415,31 +415,31 @@ final class TextPromptDialog extends UiLayoutNode {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(var18Lifetime3, BuyPlayerDialog.field_F, var16Lifetime2, param6, var28[0], (byte) 9);
-            var18Lifetime3 = this.a(-6305, this.field_Jb[6], var16Lifetime2, var18Lifetime3, var28[0]);
-            var18Lifetime3 = this.a(-6305, this.field_Jb[9], var16Lifetime2, var18Lifetime3, var28[0]);
-            var18Lifetime3 = this.a(-6305, this.field_Jb[5], var16Lifetime2, var18Lifetime3, var28[0]);
-            var18Lifetime3 = this.a(-6305, this.field_Jb[7], var16Lifetime2, var18Lifetime3, var28[0]);
-            var18Lifetime3 = this.a(-6305, this.field_Jb[15], var16Lifetime2, var18Lifetime3, var28[0]);
-            var18Lifetime3 = this.a(-6305, this.field_Jb[4], var16Lifetime2, var18Lifetime3, var28[0]);
+            var18Lifetime3 = this.appendLabelRow(var18Lifetime3, BuyPlayerDialog.field_F, var16Lifetime2, param6, var28[0], (byte) 9);
+            var18Lifetime3 = this.appendParagraph(-6305, this.field_Jb[6], var16Lifetime2, var18Lifetime3, var28[0]);
+            var18Lifetime3 = this.appendParagraph(-6305, this.field_Jb[9], var16Lifetime2, var18Lifetime3, var28[0]);
+            var18Lifetime3 = this.appendParagraph(-6305, this.field_Jb[5], var16Lifetime2, var18Lifetime3, var28[0]);
+            var18Lifetime3 = this.appendParagraph(-6305, this.field_Jb[7], var16Lifetime2, var18Lifetime3, var28[0]);
+            var18Lifetime3 = this.appendParagraph(-6305, this.field_Jb[15], var16Lifetime2, var18Lifetime3, var28[0]);
+            var18Lifetime3 = this.appendParagraph(-6305, this.field_Jb[4], var16Lifetime2, var18Lifetime3, var28[0]);
             if (var17Lifetime5 < var18Lifetime3) {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(var18Lifetime4, DateInputWidget.field_H, var16Lifetime2, param6, var28[1], (byte) 119);
-            var18Lifetime4 = this.a(-6305, this.field_Jb[16], var16Lifetime2, var18Lifetime4, var28[1]);
-            var18Lifetime4 = this.a(-6305, this.field_Jb[17], var16Lifetime2, var18Lifetime4, var28[1]);
-            var18Lifetime4 = this.a(-6305, this.field_Jb[18], var16Lifetime2, var18Lifetime4, var28[1]);
-            var18Lifetime4 = this.a(-6305, this.field_Jb[19], var16Lifetime2, var18Lifetime4, var28[1]);
-            var18Lifetime4 = this.a(-6305, this.field_Jb[20], var16Lifetime2, var18Lifetime4, var28[1]);
+            var18Lifetime4 = this.appendLabelRow(var18Lifetime4, DateInputWidget.field_H, var16Lifetime2, param6, var28[1], (byte) 119);
+            var18Lifetime4 = this.appendParagraph(-6305, this.field_Jb[16], var16Lifetime2, var18Lifetime4, var28[1]);
+            var18Lifetime4 = this.appendParagraph(-6305, this.field_Jb[17], var16Lifetime2, var18Lifetime4, var28[1]);
+            var18Lifetime4 = this.appendParagraph(-6305, this.field_Jb[18], var16Lifetime2, var18Lifetime4, var28[1]);
+            var18Lifetime4 = this.appendParagraph(-6305, this.field_Jb[19], var16Lifetime2, var18Lifetime4, var28[1]);
+            var18Lifetime4 = this.appendParagraph(-6305, this.field_Jb[20], var16Lifetime2, var18Lifetime4, var28[1]);
             if (var17Lifetime5 < var18Lifetime4) {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(var18Lifetime5, ScrollContainer.field_Hb, var16Lifetime2, param6, var28[2], (byte) 127);
-            var18Lifetime5 = this.a(-6305, this.field_Jb[13], var16Lifetime2, var18Lifetime5, var28[2]);
-            var18Lifetime5 = this.a(-6305, this.field_Jb[21], var16Lifetime2, var18Lifetime5, var28[2]);
-            var18Lifetime5 = this.a(-6305, this.field_Jb[11], var16Lifetime2, var18Lifetime5, var28[2]);
+            var18Lifetime5 = this.appendLabelRow(var18Lifetime5, ScrollContainer.field_Hb, var16Lifetime2, param6, var28[2], (byte) 127);
+            var18Lifetime5 = this.appendParagraph(-6305, this.field_Jb[13], var16Lifetime2, var18Lifetime5, var28[2]);
+            var18Lifetime5 = this.appendParagraph(-6305, this.field_Jb[21], var16Lifetime2, var18Lifetime5, var28[2]);
+            var18Lifetime5 = this.appendParagraph(-6305, this.field_Jb[11], var16Lifetime2, var18Lifetime5, var28[2]);
             if (var18Lifetime5 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime5;
             }
@@ -548,7 +548,7 @@ final class TextPromptDialog extends UiLayoutNode {
         }
     }
 
-    private final int a(int param0, UiLayoutNode param1, int param2, int param3, UiLayoutNode param4) {
+    private final int appendParagraph(int param0, UiLayoutNode param1, int param2, int param3, UiLayoutNode param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_3_0 = 0;
@@ -589,7 +589,7 @@ final class TextPromptDialog extends UiLayoutNode {
         }
     }
 
-    final boolean h(byte param0) {
+    final boolean interceptPromptKey(byte param0) {
         if (this.field_Ob != -2) {
           return false;
         }

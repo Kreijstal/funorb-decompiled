@@ -18,7 +18,7 @@ final class GameResourceLoader implements LoadingSequence {
         boolean stackIn_24_0 = false;
         var3 = Kickabout.field_G;
         if (!this.field_a &&
-          RenderedBall.m(99)) {
+          RenderedBall.pollAndMergeAchievementMask(99)) {
           this.field_a = true;
           var2_ref_oi = (IntValueNode) (LoginText.field_f.first(24009));
           while (var2_ref_oi != null) {
@@ -108,7 +108,7 @@ final class GameResourceLoader implements LoadingSequence {
           ConsoleTokenCursor.field_d = Checkbox.a("font", EntityAfterimage.field_b, 75, "fonts", QuickChatKeysHelpPanel.field_Cb);
           IsSixCommand.field_C = Checkbox.a("", var17, 105, "arialish12", var16);
           var4 = new Sprite(16, 9);
-          PacketBuffer.a(-64, var4);
+          PacketBuffer.pushSpriteRaster(-64, var4);
           SoftwareRasterizer.fillCircle(4, 4, 3, 7829367);
           SoftwareRasterizer.fillCircle(4, 4, 2, 13421772);
           TeamManagementScreen.e(122);
@@ -198,47 +198,47 @@ final class GameResourceLoader implements LoadingSequence {
         }
         if (ResourceArchive.field_f != null) {
           CipherPacketBuffer.advanceLoadingProgress(61, 3);
-          AuctionLogEntry.field_j = new Sprite(ResourceArchive.field_f.takeFileByName("background_guy.png", "", 36), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          TutorialScenerySupport.field_a = new Sprite(ResourceArchive.field_f.takeFileByName("background.png", "", 66), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          CachedListingRow.field_k = new Sprite(ResourceArchive.field_f.takeFileByName("splash.jpg", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          AccountTermsPanel.field_E = new Sprite(ResourceArchive.field_f.takeFileByName("botbar.png", "", 66), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          AuctionLogEntry.field_j = new Sprite(ResourceArchive.field_f.takeFileByName("background_guy.png", "", 36), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64)));
+          TutorialScenerySupport.field_a = new Sprite(ResourceArchive.field_f.takeFileByName("background.png", "", 66), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64)));
+          CachedListingRow.field_k = new Sprite(ResourceArchive.field_f.takeFileByName("splash.jpg", "", 8), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64)));
+          AccountTermsPanel.field_E = new Sprite(ResourceArchive.field_f.takeFileByName("botbar.png", "", 66), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64)));
           LoadingProgressSupport.reportStageProgress(-114, 23, 2);
-          LoginDialog.field_cb = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_top.png", "", 3), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          AccountChoicePanel.field_C = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_mid.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          MarkerSliderPainter.field_i = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_bot.png", "", 123), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          TextHotspotWidget.field_L = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_lrg.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          DirectByteStorage.field_m = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_sml.png", "", 81), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          LoginDialog.field_cb = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_top.png", "", 3), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
+          AccountChoicePanel.field_C = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_mid.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
+          MarkerSliderPainter.field_i = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_bot.png", "", 123), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
+          TextHotspotWidget.field_L = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_lrg.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
+          DirectByteStorage.field_m = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_sml.png", "", 81), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
           LoadingProgressSupport.reportStageProgress(122, 23, 4);
-          AccountChoicePanel.field_K = new ArgbSprite(ResourceArchive.field_f.takeFileByName("cone_1.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          CheckboxPainter.field_o = new ArgbSprite(ResourceArchive.field_f.takeFileByName("cone_2.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          PlayerContextMenu.field_m = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_left.png", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          SetLagCommand.field_B = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_middle.png", "", 97), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          AccountChoicePanel.field_K = new ArgbSprite(ResourceArchive.field_f.takeFileByName("cone_1.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64)));
+          CheckboxPainter.field_o = new ArgbSprite(ResourceArchive.field_f.takeFileByName("cone_2.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64)));
+          PlayerContextMenu.field_m = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_left.png", "", 8), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
+          SetLagCommand.field_B = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_middle.png", "", 97), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
           LoadingProgressSupport.reportStageProgress(-114, 23, 6);
-          SquadGridWidget.field_Cb = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_right.png", "", 90), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          AuctionSettingsDialog.field_H = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.takeFileByName("stopwatch.png", "", 101), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          SquadGridWidget.field_Cb = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_right.png", "", 90), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
+          AuctionSettingsDialog.field_H = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.takeFileByName("stopwatch.png", "", 101), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
           LoadingProgressSupport.reportStageProgress(-58, 23, 8);
-          SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("thin_button_endl.png", "", 89), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("thin_button_mid.png", "", 5), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("thin_button_endl.png", "", 89), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
+          SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("thin_button_mid.png", "", 5), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
           LoadingProgressSupport.reportStageProgress(-105, 23, 10);
-          SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("thin_button_endr.png", "", 58), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          ContextMenu.field_zb = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("small_button_L.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("thin_button_endr.png", "", 58), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
+          ContextMenu.field_zb = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("small_button_L.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
           LoadingProgressSupport.reportStageProgress(-61, 23, 12);
-          AccountRegistrationPanel.field_H = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("small_button_mid.png", "", 53), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          TooltipOverlay.field_b = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("small_button_R.png", "", 117), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          AccountRegistrationPanel.field_H = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("small_button_mid.png", "", 53), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
+          TooltipOverlay.field_b = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("small_button_R.png", "", 117), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
           LoadingProgressSupport.reportStageProgress(-85, 23, 14);
-          PlayerInputFactory.field_g = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("top_bar_Seg.png", "", 127), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          PlayerInputFactory.field_g = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("top_bar_Seg.png", "", 127), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
           LoadingProgressSupport.reportStageProgress(-49, 23, 16);
-          ButtonMenuScreen.field_u = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("top.png", "", 82), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          ButtonMenuScreen.field_u = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("top.png", "", 82), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
           LoadingProgressSupport.reportStageProgress(-98, 23, 18);
-          Trinket.field_f = new ArgbSprite(ResourceArchive.field_f.takeFileByName("asphalt_corner.png", "", 6), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          TrinketPickerDialog.field_J = new Sprite(ResourceArchive.field_f.takeFileByName("asphalt_v.png", "", 69), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          Trinket.field_f = new ArgbSprite(ResourceArchive.field_f.takeFileByName("asphalt_corner.png", "", 6), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64)));
+          TrinketPickerDialog.field_J = new Sprite(ResourceArchive.field_f.takeFileByName("asphalt_v.png", "", 69), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64)));
           LoadingProgressSupport.reportStageProgress(126, 23, 20);
-          LoginMethod.field_g = new Sprite(ResourceArchive.field_f.takeFileByName("asphalt_h.png", "", 124), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          SoftwareDrawingSupport.field_a = new ArgbSprite(ResourceArchive.field_f.takeFileByName("arrow_on.png", "", 63), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          SoftwareDrawingSupport.field_b = new ArgbSprite(ResourceArchive.field_f.takeFileByName("arrow_off.png", "", 4), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          LoginMethod.field_g = new Sprite(ResourceArchive.field_f.takeFileByName("asphalt_h.png", "", 124), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64)));
+          SoftwareDrawingSupport.field_a = new ArgbSprite(ResourceArchive.field_f.takeFileByName("arrow_on.png", "", 63), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64)));
+          SoftwareDrawingSupport.field_b = new ArgbSprite(ResourceArchive.field_f.takeFileByName("arrow_off.png", "", 4), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64)));
           LoadingProgressSupport.reportStageProgress(-89, 23, 23);
-          this.a(11264, new ArgbSprite(ResourceArchive.field_f.takeFileByName("achievements_large.png", "", 63), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          MainMenuScreen.field_C = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.takeFileByName("ka_logo.png", "", 37), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          this.a(11264, new ArgbSprite(ResourceArchive.field_f.takeFileByName("achievements_large.png", "", 63), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
+          MainMenuScreen.field_C = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.takeFileByName("ka_logo.png", "", 37), (java.awt.Component) ((Object) DropTargetWidget.getActiveCanvas(64))));
           ResourceArchive.field_f = null;
           AnimationPlayer.resetFrameTiming((byte) 99);
           return false;
@@ -521,7 +521,7 @@ final class GameResourceLoader implements LoadingSequence {
         LoadingProgressSupport.reportStageProgress(-49, 6, 5);
         GameLoopApplet.n((byte) -10);
         CipherPacketBuffer.advanceLoadingProgress(61, 10);
-        TeamSelectionView.b((byte) -47);
+        TeamSelectionView.initializeSelectionOverlays((byte) -47);
         SocialTabsPanel.a((byte) -124);
         LoadingProgressSupport.reportStageProgress(127, 4, 1);
         SpriteButtonPainter.a(param0 ^ -363033958);
@@ -531,7 +531,7 @@ final class GameResourceLoader implements LoadingSequence {
         MySquadScreen.field_U = (Sprite[]) ((Object) new ArgbSprite[WriteIntegersCommand.field_E.length]);
         for (var2 = 0; var2 < WriteIntegersCommand.field_E.length; var2++) {
           var3 = new ArgbSprite(40, 40);
-          PacketBuffer.a(-100, var3);
+          PacketBuffer.pushSpriteRaster(-100, var3);
           WriteIntegersCommand.field_E[var2].draw(0, 0);
           TeamManagementScreen.e(param0 - 12637);
           for (var4 = 0; var3.field_y.length > var4; var4++) {
@@ -623,7 +623,7 @@ final class GameResourceLoader implements LoadingSequence {
           var3 = (Exception) (Object) decompiledCaughtException;
           IntKeyLookup.field_b = null;
           DelayedServerPacket.field_g = null;
-          UnreadMessagesScreen.a("Error when unpacking the MOTD data in KickaboutLoader.service_motd()", (Throwable) ((Object) var3), 1);
+          UnreadMessagesScreen.reportClientError("Error when unpacking the MOTD data in KickaboutLoader.service_motd()", (Throwable) ((Object) var3), 1);
           return true;
         }
     }
@@ -654,39 +654,39 @@ final class GameResourceLoader implements LoadingSequence {
         ResourceArchive var4 = CanvasResizePolicy.field_g;
         ResourceArchive var3 = IterableNodeHashTable.field_b;
         BlobSubmission.field_h = new ArchivePreloader(55);
-        BlobSubmission.field_h.a(var4, BufferedSocket.field_q, -6869, "basic", CommonGame.field_M);
-        BlobSubmission.field_h.a(ResourceArchive.field_f, BufferedSocket.field_q, -6869, "", CommonGame.field_M);
-        BlobSubmission.field_h.a(var4, BufferedSocket.field_q, -6869, "arialish12", CommonGame.field_M);
-        BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, TextLine.field_l, -6869, "fonts", CommonGame.field_M);
-        BlobSubmission.field_h.a(EntityAfterimage.field_b, TextLine.field_l, -6869, "fonts", QuickChatMenuFactory.field_b);
-        BlobSubmission.field_h.a(var3, TextLine.field_l, -6869, "arialish12", QuickChatMenuFactory.field_b);
-        BlobSubmission.field_h.a(var3, TextLine.field_l, -6869, "lobby", QuickChatMenuFactory.field_b);
-        BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, LoggedPossession.field_a, -6869, "menu", CommonGame.field_M);
-        BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, HighScoreSubmission.field_j, param0 - 14181, "hud", CommonGame.field_M);
-        BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
-        BlobSubmission.field_h.a(var4, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
+        BlobSubmission.field_h.addNamedGroupPreload(var4, BufferedSocket.field_q, -6869, "basic", CommonGame.field_M);
+        BlobSubmission.field_h.addNamedGroupPreload(ResourceArchive.field_f, BufferedSocket.field_q, -6869, "", CommonGame.field_M);
+        BlobSubmission.field_h.addNamedGroupPreload(var4, BufferedSocket.field_q, -6869, "arialish12", CommonGame.field_M);
+        BlobSubmission.field_h.addNamedGroupPreload(QuickChatKeysHelpPanel.field_Cb, TextLine.field_l, -6869, "fonts", CommonGame.field_M);
+        BlobSubmission.field_h.addNamedGroupPreload(EntityAfterimage.field_b, TextLine.field_l, -6869, "fonts", QuickChatMenuFactory.field_b);
+        BlobSubmission.field_h.addNamedGroupPreload(var3, TextLine.field_l, -6869, "arialish12", QuickChatMenuFactory.field_b);
+        BlobSubmission.field_h.addNamedGroupPreload(var3, TextLine.field_l, -6869, "lobby", QuickChatMenuFactory.field_b);
+        BlobSubmission.field_h.addNamedGroupPreload(QuickChatKeysHelpPanel.field_Cb, LoggedPossession.field_a, -6869, "menu", CommonGame.field_M);
+        BlobSubmission.field_h.addNamedGroupPreload(QuickChatKeysHelpPanel.field_Cb, HighScoreSubmission.field_j, param0 - 14181, "hud", CommonGame.field_M);
+        BlobSubmission.field_h.addNamedGroupPreload(QuickChatKeysHelpPanel.field_Cb, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
+        BlobSubmission.field_h.addNamedGroupPreload(var4, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
         if (KitPatternMaskSupport.field_c == 0) {
-          BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, PlayerMeshFactory.field_c, param0 - 14181, "park", CommonGame.field_M);
-          BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, PlayerMeshFactory.field_c, param0 - 14181, "park_surface0", CommonGame.field_M);
+          BlobSubmission.field_h.addNamedGroupPreload(QuickChatKeysHelpPanel.field_Cb, PlayerMeshFactory.field_c, param0 - 14181, "park", CommonGame.field_M);
+          BlobSubmission.field_h.addNamedGroupPreload(QuickChatKeysHelpPanel.field_Cb, PlayerMeshFactory.field_c, param0 - 14181, "park_surface0", CommonGame.field_M);
         }
         if (KitPatternMaskSupport.field_c == 1) {
-          BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, FadingSoundSupport.field_b, -6869, "beach", CommonGame.field_M);
-          BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, FadingSoundSupport.field_b, -6869, "beach_surface0", CommonGame.field_M);
+          BlobSubmission.field_h.addNamedGroupPreload(QuickChatKeysHelpPanel.field_Cb, FadingSoundSupport.field_b, -6869, "beach", CommonGame.field_M);
+          BlobSubmission.field_h.addNamedGroupPreload(QuickChatKeysHelpPanel.field_Cb, FadingSoundSupport.field_b, -6869, "beach_surface0", CommonGame.field_M);
         }
         if (KitPatternMaskSupport.field_c == 2) {
-          BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, QuickChatMenuBuilder.field_d, param0 - 14181, "street", CommonGame.field_M);
-          BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, QuickChatMenuBuilder.field_d, -6869, "beach_surface0", CommonGame.field_M);
+          BlobSubmission.field_h.addNamedGroupPreload(QuickChatKeysHelpPanel.field_Cb, QuickChatMenuBuilder.field_d, param0 - 14181, "street", CommonGame.field_M);
+          BlobSubmission.field_h.addNamedGroupPreload(QuickChatKeysHelpPanel.field_Cb, QuickChatMenuBuilder.field_d, -6869, "beach_surface0", CommonGame.field_M);
         }
-        BlobSubmission.field_h.a(IterableNodeHashTable.field_c, (byte) -115, TutorialCaptionSupport.field_f, TextLayoutLine.field_c);
-        BlobSubmission.field_h.a(TextLayoutLine.field_c, FixedVelocitySupport.field_b, -100);
-        BlobSubmission.field_h.a(MatchTextInputOverlay.field_j, (byte) -109, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
-        BlobSubmission.field_h.a(HighScoreQuery.field_i, (byte) -123, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
-        BlobSubmission.field_h.a(Kickabout.field_J, (byte) -124, CachedTextLayout.field_d, LobbyMatchPreview.field_n);
-        BlobSubmission.field_h.a(KitStyleTile.field_Bb, (byte) -122, MatchTextInputOverlay.field_l, RankingRowFactory.field_b);
-        BlobSubmission.field_h.a(ContextMenuItem.field_Eb, (byte) -126, MatchTextInputOverlay.field_l, RankingRowFactory.field_b);
-        BlobSubmission.field_h.a(ListingRowCache.field_h, (byte) -106, MatchTextInputOverlay.field_l, RankingRowFactory.field_b);
-        BlobSubmission.field_h.a(MySquadScreen.field_H, (byte) -128, AvailabilityCheckRequest.field_g, Bzip2State.field_d);
-        BlobSubmission.field_h.a(StatefulTextPainter.field_y, (byte) -116, CascadingMenu.field_Ib, TrinketUnlockNotice.field_e);
+        BlobSubmission.field_h.addArchivePreload(IterableNodeHashTable.field_c, (byte) -115, TutorialCaptionSupport.field_f, TextLayoutLine.field_c);
+        BlobSubmission.field_h.addArchiveIndexPreload(TextLayoutLine.field_c, FixedVelocitySupport.field_b, -100);
+        BlobSubmission.field_h.addArchivePreload(MatchTextInputOverlay.field_j, (byte) -109, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
+        BlobSubmission.field_h.addArchivePreload(HighScoreQuery.field_i, (byte) -123, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
+        BlobSubmission.field_h.addArchivePreload(Kickabout.field_J, (byte) -124, CachedTextLayout.field_d, LobbyMatchPreview.field_n);
+        BlobSubmission.field_h.addArchivePreload(KitStyleTile.field_Bb, (byte) -122, MatchTextInputOverlay.field_l, RankingRowFactory.field_b);
+        BlobSubmission.field_h.addArchivePreload(ContextMenuItem.field_Eb, (byte) -126, MatchTextInputOverlay.field_l, RankingRowFactory.field_b);
+        BlobSubmission.field_h.addArchivePreload(ListingRowCache.field_h, (byte) -106, MatchTextInputOverlay.field_l, RankingRowFactory.field_b);
+        BlobSubmission.field_h.addArchivePreload(MySquadScreen.field_H, (byte) -128, AvailabilityCheckRequest.field_g, Bzip2State.field_d);
+        BlobSubmission.field_h.addArchivePreload(StatefulTextPainter.field_y, (byte) -116, CascadingMenu.field_Ib, TrinketUnlockNotice.field_e);
     }
 
     private final void a(int param0, ArgbSprite param1) {

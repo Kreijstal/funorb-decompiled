@@ -256,7 +256,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
               return;
             }
             if (this.field_B == 0) {
-              ShopPlayerSlot.c(60, -100);
+              ShopPlayerSlot.playDefaultFadingSound(60, -100);
               this.field_B = 8;
               return;
             }
@@ -267,18 +267,18 @@ final class AchievementsScreen extends ButtonMenuScreen {
               if (this.field_B != 0) {
                 return;
               }
-              ShopPlayerSlot.c(60, -100);
+              ShopPlayerSlot.playDefaultFadingSound(60, -100);
               this.field_B = 8;
             }
             return;
           }
-          ShopPlayerSlot.c(59, 66);
+          ShopPlayerSlot.playDefaultFadingSound(59, 66);
           this.field_B = 8;
           if (var4 > ContextMenuItem.field_Ib.field_Db.field_J) {
             if (this.field_B != 0) {
               return;
             }
-            ShopPlayerSlot.c(60, -100);
+            ShopPlayerSlot.playDefaultFadingSound(60, -100);
             this.field_B = 8;
           }
           return;
@@ -298,13 +298,13 @@ final class AchievementsScreen extends ButtonMenuScreen {
         this.handleScrollButtons(-1);
         if (ContextMenuItem.field_Ib.field_Db.field_J > var4Lifetime1 &&
           this.field_B == 0) {
-          ShopPlayerSlot.c(59, 66);
+          ShopPlayerSlot.playDefaultFadingSound(59, 66);
           this.field_B = 8;
           if (var4Lifetime1 > ContextMenuItem.field_Ib.field_Db.field_J) {
             if (this.field_B != 0) {
               return;
             }
-            ShopPlayerSlot.c(60, -100);
+            ShopPlayerSlot.playDefaultFadingSound(60, -100);
             this.field_B = 8;
           }
           return;
@@ -313,7 +313,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           if (this.field_B != 0) {
             return;
           }
-          ShopPlayerSlot.c(60, -100);
+          ShopPlayerSlot.playDefaultFadingSound(60, -100);
           this.field_B = 8;
         }
     }

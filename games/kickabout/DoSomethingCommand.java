@@ -6,7 +6,7 @@ final class DoSomethingCommand extends ConsoleCommand {
     static String field_A;
     static UiLayoutNode field_D;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= 26) {
           field_D = null;
           field_A = null;
@@ -14,7 +14,7 @@ final class DoSomethingCommand extends ConsoleCommand {
           return;
         }
         PlayerStats var2 = (PlayerStats) null;
-        DoSomethingCommand.a(70, (PlayerStats) null, -110);
+        DoSomethingCommand.enqueueSellPlayerDialog(70, (PlayerStats) null, -110);
         field_D = null;
         field_A = null;
         field_B = null;
@@ -53,7 +53,7 @@ final class DoSomethingCommand extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, PlayerStats param1, int param2) {
+    final static void enqueueSellPlayerDialog(int param0, PlayerStats param1, int param2) {
         try {
           ScrollPane.field_Jb.addLast(new SellPlayerDialog(param2, param1), 3);
           int var3_int = -77 % ((param0 + 44) / 63);

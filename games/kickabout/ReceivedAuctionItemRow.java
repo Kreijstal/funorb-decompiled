@@ -27,7 +27,7 @@ final class ReceivedAuctionItemRow extends ListRow {
         var5 = Kickabout.field_G;
         if (!this.field_Lb) {
           if (AuctionLogEntry.isLoggedInJagexModerator(15137)) {
-            stackIn_8_0 = (!ScrollPane.h((byte) 19)) ? 1 : 0;
+            stackIn_8_0 = (!ScrollPane.hasModeratorTradingExemption((byte) 19)) ? 1 : 0;
           } else {
             stackIn_8_0 = 0;
           }
@@ -46,27 +46,27 @@ final class ReceivedAuctionItemRow extends ListRow {
           if (this.field_Jb.field_sb == 1) {
             if (GameLoopApplet.field_E.hasOwnEntry(param0 ^ 1, this.field_Hb.field_a)) {
               SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 31);
-              ShopPlayerSlot.c(53, param0 - 9);
+              ShopPlayerSlot.playDefaultFadingSound(53, param0 - 9);
             } else {
               if (GameLoopApplet.field_E.hasBidOrBuyEntry(this.field_Hb.field_a, (byte) -79)) {
                 SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 3);
-                ShopPlayerSlot.c(53, -3);
+                ShopPlayerSlot.playDefaultFadingSound(53, -3);
               } else {
                 if (GameLoopApplet.field_E.canStartAuction(-3)) {
                   if (GameLoopApplet.field_E.findEmptySquadSlot(-1) == -1) {
                     SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 2);
-                    ShopPlayerSlot.c(53, 112);
+                    ShopPlayerSlot.playDefaultFadingSound(53, 112);
                   } else {
                     if (this.field_Hb.field_i > GameLoopApplet.field_E.field_x) {
                       SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 4);
-                      ShopPlayerSlot.c(53, 9);
+                      ShopPlayerSlot.playDefaultFadingSound(53, 9);
                     } else {
                       LoadingProgressDialog.a(-45, this.field_Hb);
                     }
                   }
                 } else {
                   SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 6);
-                  ShopPlayerSlot.c(53, 34);
+                  ShopPlayerSlot.playDefaultFadingSound(53, 34);
                 }
               }
             }
@@ -75,7 +75,7 @@ final class ReceivedAuctionItemRow extends ListRow {
             if (GameLoopApplet.field_E.hasBidOrBuyEntry(this.field_Hb.field_a, (byte) -79)) {
               if (this.field_Hb.field_t > GameLoopApplet.field_E.field_x) {
                 SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 4);
-                ShopPlayerSlot.c(53, -113);
+                ShopPlayerSlot.playDefaultFadingSound(53, -113);
               } else {
                 GradientRasterSupport.enqueueAuctionBidDialog(this.field_Hb, 255);
               }
@@ -83,23 +83,23 @@ final class ReceivedAuctionItemRow extends ListRow {
               if (!GameLoopApplet.field_E.hasOwnEntry(param0 + 1, this.field_Hb.field_a)) {
                 if (this.field_Hb.field_t > GameLoopApplet.field_E.field_x) {
                   SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 4);
-                  ShopPlayerSlot.c(53, -12);
+                  ShopPlayerSlot.playDefaultFadingSound(53, -12);
                 } else {
                   if (GameLoopApplet.field_E.canStartAuction(-3)) {
                     if (GameLoopApplet.field_E.findEmptySquadSlot(-1) == -1) {
                       SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 2);
-                      ShopPlayerSlot.c(53, 40);
+                      ShopPlayerSlot.playDefaultFadingSound(53, 40);
                     } else {
                       TextLineLayoutSupport.enqueueAuctionPurchaseDialog((byte) -123, this.field_Hb);
                     }
                   } else {
                     SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 6);
-                    ShopPlayerSlot.c(53, 111);
+                    ShopPlayerSlot.playDefaultFadingSound(53, 111);
                   }
                 }
               } else {
                 SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 31);
-                ShopPlayerSlot.c(53, 54);
+                ShopPlayerSlot.playDefaultFadingSound(53, 54);
               }
             }
           }

@@ -162,7 +162,7 @@ final class MusicPatchNode extends IntrusiveNode {
             MusicPatchNode.closePlayerContextMenu(79);
           }
           while (var4 != null) {
-            ShopPlayerSlot.a(param1, var4, -51265247);
+            ShopPlayerSlot.writeRequestAcknowledgement(param1, var4, -51265247);
             var4 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.next(33));
           }
           return;

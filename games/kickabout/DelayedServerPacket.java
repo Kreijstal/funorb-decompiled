@@ -191,14 +191,14 @@ final class DelayedServerPacket extends IntrusiveNode {
             GameModesHelpScreen.field_G instanceof ButtonMenuScreen) {
             stackIn_74_0 = (!((ButtonMenuScreen) (GameModesHelpScreen.field_G)).isShallowerThan((ButtonMenuScreen) (AuctionLogEntry.field_h), -4319)) ? 55 : 56;
             var3_intLifetime1 = stackIn_74_0;
-            ShopPlayerSlot.c(var3_intLifetime1, -119);
+            ShopPlayerSlot.playDefaultFadingSound(var3_intLifetime1, -119);
           } else if (!(GameModesHelpScreen.field_G instanceof ButtonMenuScreen) &&
             AuctionLogEntry.field_h instanceof ButtonMenuScreen) {
-            ShopPlayerSlot.c(55, 22);
+            ShopPlayerSlot.playDefaultFadingSound(55, 22);
           } else {
             if (!(AuctionLogEntry.field_h instanceof ButtonMenuScreen) &&
               GameModesHelpScreen.field_G instanceof ButtonMenuScreen) {
-              ShopPlayerSlot.c(56, 49);
+              ShopPlayerSlot.playDefaultFadingSound(56, 49);
             }
           }
           BuyPlayerDialog.field_I = 0;
