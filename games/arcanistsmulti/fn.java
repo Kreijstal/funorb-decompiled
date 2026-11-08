@@ -328,7 +328,7 @@ final class fn {
               var12.field_Cb = new SceneWidget(0L, IntrusiveNode.field_c);
               var12.addChild(var12.field_Cb, 109);
               var12.markTreeDirty((byte) 20);
-              var12.field_Hb = new SceneWidget(0L, ml.field_V);
+              var12.field_Hb = new SceneWidget(0L, BattleUnit.field_V);
               var12.addChild(var12.field_Hb, 43);
               var12.field_Ub = new SceneWidget(0L, ScrollContainer.field_S);
               var12.addChild(var12.field_Ub, 107);

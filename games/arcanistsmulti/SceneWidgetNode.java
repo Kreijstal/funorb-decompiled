@@ -424,7 +424,7 @@ class SceneWidgetNode extends DualLinkNode {
                   var20 = param4.field_e[var18];
                   var21 = param4.field_S[var18];
                   GameAppletShell.field_k[var18] = var9 * var19 - (-(var12 * var20) - var21 * var15Lifetime1) >> 16;
-                  nf.field_Lb[var18] = var16 * var21 + var13 * var20 + var10 * var19 >> 16;
+                  Battle.field_Lb[var18] = var16 * var21 + var13 * var20 + var10 * var19 >> 16;
                   mf.field_b[var18] = var21 * var17 + var19 * var11 + var20 * var14 >> 16;
                   var18++;
                 }

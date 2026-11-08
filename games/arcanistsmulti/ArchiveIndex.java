@@ -388,7 +388,7 @@ final class ArchiveIndex {
             if (SpriteState.field_z.field_b != 0) {
               ce.field_g[12] = IntrusiveNodeHashTable.field_g;
             } else {
-              if ((SpriteState.field_z.field_a | 1 << SpriteState.field_z.field_I) == (1 << SpriteState.field_z.field_V.s(0)) - 1) {
+              if ((SpriteState.field_z.field_a | 1 << SpriteState.field_z.field_I) == (1 << SpriteState.field_z.field_V.getPlayerCount(0)) - 1) {
                 ce.field_g[12] = rb.field_m;
               } else {
                 ce.field_g[12] = ra.field_n;
@@ -402,7 +402,7 @@ final class ArchiveIndex {
             ce.field_g[12] = vm.field_e;
           } else {
             if (0 == SpriteState.field_z.field_b) {
-              if ((1 << SpriteState.field_z.field_I | SpriteState.field_z.field_a) != -1 + (1 << SpriteState.field_z.field_V.s(param0 ^ 121))) {
+              if ((1 << SpriteState.field_z.field_I | SpriteState.field_z.field_a) != -1 + (1 << SpriteState.field_z.field_V.getPlayerCount(param0 ^ 121))) {
                 ce.field_g[12] = IconTextSceneWidget.field_Bb;
               } else {
                 ce.field_g[12] = so.field_b;

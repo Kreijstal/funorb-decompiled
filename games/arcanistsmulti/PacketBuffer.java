@@ -294,28 +294,28 @@ class PacketBuffer extends IntrusiveNode {
     final static void j(int param0) {
         IntrusiveDeque var1 = null;
         int var2 = 0;
-        ml var3 = null;
+        BattleUnit var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var1 = rk.field_O.g((byte) 34);
+          var1 = rk.field_O.getUnits((byte) 34);
           if (param0 != 13805) {
             PacketBuffer.releaseStatics(false);
           }
           var2 = 0;
-          var3 = (ml) (var1.first(12623));
+          var3 = (BattleUnit) (var1.first(12623));
           while (var3 != null) {
             if (var3.field_jb == 11) {
               var2++;
             }
-            var3 = (ml) (var1.next(0));
+            var3 = (BattleUnit) (var1.next(0));
           }
           if (3 <= var2) {
-            rk.field_O.a(0, 0, 0, 104, 6);
+            rk.field_O.setSpellSlot(0, 0, 0, 104, 6);
           } else {
-            rk.field_O.a(0, 0, -1, param0 - 13767, 6);
+            rk.field_O.setSpellSlot(0, 0, -1, param0 - 13767, 6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -824,7 +824,7 @@ class PacketBuffer extends IntrusiveNode {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         co.field_e[MouseInputHandler.field_b] = param2;
         ki.field_r[MouseInputHandler.field_b] = MouseInputHandler.field_b;
-        nf.field_z[MouseInputHandler.field_b] = param4;
+        Battle.field_z[MouseInputHandler.field_b] = param4;
         if (!(ao.field_g <= param4)) {
           AlternateUsernameCredentials.field_m = param4;
         }

@@ -24,7 +24,7 @@ final class fk extends IntrusiveNode {
     final static Sprite[] a(int param0, int param1, int param2) {
         if (param1 <= 27) {
           Sprite var4 = (Sprite) null;
-          fk.a((nf) null, -111, (IndexedSprite) null, 35, (byte) -40, (Sprite) null);
+          fk.a((Battle) null, -111, (IndexedSprite) null, 35, (byte) -40, (Sprite) null);
         }
         return LoginMethod.createSolidFrame(1, (byte) 127, param2, param0);
     }
@@ -41,7 +41,7 @@ final class fk extends IntrusiveNode {
         ii.field_f = true;
     }
 
-    final static boolean a(nf param0, int param1, IndexedSprite param2, int param3, byte param4, Sprite param5) {
+    final static boolean a(Battle param0, int param1, IndexedSprite param2, int param3, byte param4, Sprite param5) {
         int var19 = 0;
         int var20 = 0;
         int stackIn_16_0 = 0;

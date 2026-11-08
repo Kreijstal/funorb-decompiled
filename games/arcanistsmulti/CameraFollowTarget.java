@@ -5,9 +5,9 @@ final class CameraFollowTarget {
     static int field_g;
     static int field_i;
     static String field_a;
-    ml field_d;
+    BattleUnit field_d;
     static ec field_f;
-    mi field_h;
+    SpellProjectile field_h;
     static String field_e;
     static String field_c;
     static String field_b;
@@ -141,7 +141,7 @@ final class CameraFollowTarget {
         }
     }
 
-    final void followUnit(int param0, ml param1) {
+    final void followUnit(int param0, BattleUnit param1) {
         try {
           this.field_h = null;
           if (param0 > -79) {
@@ -153,7 +153,7 @@ final class CameraFollowTarget {
         }
     }
 
-    final void followProjectile(mi param0, int param1) {
+    final void followProjectile(SpellProjectile param0, int param1) {
         try {
           if (param1 >= -122) {
             field_b = (String) null;

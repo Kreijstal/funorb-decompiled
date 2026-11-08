@@ -61,7 +61,7 @@ final class lf {
           if (fi.field_h) {
             if (null != SpriteState.field_z ||
               r.field_b != null) {
-              mi.a(DelegatingCanvas.field_c[0], 3);
+              SpellProjectile.playMusic(DelegatingCanvas.field_c[0], 3);
             }
             r.field_b = null;
             SpriteState.field_z = null;

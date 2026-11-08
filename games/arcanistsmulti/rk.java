@@ -5,7 +5,7 @@ final class rk extends TextButton {
     int field_T;
     static String field_H;
     static volatile int field_K;
-    static nf field_O;
+    static Battle field_O;
     static String[] field_I;
     static String field_S;
     static String field_J;

@@ -582,7 +582,7 @@ final class ne {
 
     ne(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_l = new ContextActionMenu(ml.field_H);
+          this.field_l = new ContextActionMenu(BattleUnit.field_H);
           param0.field_ab = true;
           this.field_i = param5;
           this.field_m = param6;

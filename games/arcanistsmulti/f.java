@@ -74,11 +74,11 @@ final class f extends IntrusiveNode {
               var10 = ArchiveIndex.formatChatLine(3, var8_ref_jg);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_jg.field_e);
               var12 = WhirlpoolHasher.a(var8_ref_jg, (byte) 106);
-              var8_ref_jg.field_a = new SceneWidget(0L, nf.field_A, var11);
+              var8_ref_jg.field_a = new SceneWidget(0L, Battle.field_A, var11);
               var6 = var6 + param2;
               var8_ref_jg.field_a.field_ob = var12;
-              var8_ref_jg.field_a.field_J = var12 + (-((var12 & 16711422) >> 1) + ((16711422 & nf.field_A.field_J) >> 1));
-              var8_ref_jg.field_a.field_eb = var12 + (-(var12 >> 1 & 8355711) + (nf.field_A.field_eb >> 1 & 8355711));
+              var8_ref_jg.field_a.field_J = var12 + (-((var12 & 16711422) >> 1) + ((16711422 & Battle.field_A.field_J) >> 1));
+              var8_ref_jg.field_a.field_eb = var12 + (-(var12 >> 1 & 8355711) + (Battle.field_A.field_eb >> 1 & 8355711));
               var8_ref_jg.field_a.field_Z = oo.field_x;
               var5++;
             }

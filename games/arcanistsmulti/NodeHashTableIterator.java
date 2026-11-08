@@ -153,7 +153,7 @@ final class NodeHashTableIterator implements Iterator {
               ei.a("document.cookie=\"" + var5Lifetime6 + "\"", param1, param2 ^ 269);
             } catch (Throwable throwable) {
             }
-            ml.a(-122, param1);
+            BattleUnit.updateBrowserLinks(-122, param1);
           } catch (RuntimeException runtimeException) {
             throw aa.wrapException((Throwable) ((Object) runtimeException), "jf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }

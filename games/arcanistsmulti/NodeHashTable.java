@@ -104,17 +104,17 @@ final class NodeHashTable {
     }
 
     final static String formatGmtDate(int param0, long param1) {
-        nf.field_Bb.setTime(new Date(param1));
-        int var3 = nf.field_Bb.get(7);
-        int var4 = nf.field_Bb.get(5);
-        int var5 = nf.field_Bb.get(2);
-        int var6 = nf.field_Bb.get(1);
-        int var7 = nf.field_Bb.get(11);
-        int var8 = nf.field_Bb.get(12);
+        Battle.field_Bb.setTime(new Date(param1));
+        int var3 = Battle.field_Bb.get(7);
+        int var4 = Battle.field_Bb.get(5);
+        int var5 = Battle.field_Bb.get(2);
+        int var6 = Battle.field_Bb.get(1);
+        int var7 = Battle.field_Bb.get(11);
+        int var8 = Battle.field_Bb.get(12);
         if (param0 > -42) {
           return (String) null;
         }
-        int var9 = nf.field_Bb.get(13);
+        int var9 = Battle.field_Bb.get(13);
         return WhirlpoolHasher.field_m[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + no.field_ub[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 

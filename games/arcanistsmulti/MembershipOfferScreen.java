@@ -261,9 +261,9 @@ final class MembershipOfferScreen {
         this.field_g.drawTransparent(16, 302);
         NameSuggestionsPanel.field_F.drawParagraph(this.field_a[this.field_l], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
         fd.field_f.drawTransparent(30, 330);
-        NameSuggestionsPanel.field_F.drawParagraph(nf.field_qb[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        NameSuggestionsPanel.field_F.drawParagraph(nf.field_qb[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        NameSuggestionsPanel.field_F.drawParagraph(nf.field_qb[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        NameSuggestionsPanel.field_F.drawParagraph(Battle.field_qb[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        NameSuggestionsPanel.field_F.drawParagraph(Battle.field_qb[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        NameSuggestionsPanel.field_F.drawParagraph(Battle.field_qb[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
         qf.field_b.drawTransparent(508 + (127 - qf.field_b.field_n) / 2, 315);
         if (0 != this.field_d.field_h) {
           if (this.field_d.field_h == 1) {

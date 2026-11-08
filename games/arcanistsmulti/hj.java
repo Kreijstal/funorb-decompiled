@@ -88,7 +88,7 @@ final class hj extends IOException {
     }
 
     final static void a(int param0) {
-        nf stackIn_14_0;
+        Battle stackIn_14_0;
         int stackIn_14_1;
         int stackIn_14_2;
         int stackIn_14_3;
@@ -98,7 +98,7 @@ final class hj extends IOException {
         int stackIn_14_7;
         int stackIn_14_8;
         int stackIn_15_9 = 0;
-        nf stackIn_17_0;
+        Battle stackIn_17_0;
         int stackIn_17_1;
         int stackIn_17_2;
         int stackIn_17_3;
@@ -108,7 +108,7 @@ final class hj extends IOException {
         int stackIn_17_7;
         int stackIn_17_8;
         int stackIn_18_9 = 0;
-        nf stackIn_20_0;
+        Battle stackIn_20_0;
         int stackIn_20_1;
         int stackIn_20_2;
         int stackIn_20_3;
@@ -118,7 +118,7 @@ final class hj extends IOException {
         int stackIn_20_7;
         int stackIn_20_8;
         int stackIn_21_9;
-        nf stackIn_24_0;
+        Battle stackIn_24_0;
         int stackIn_24_1;
         int stackIn_24_2;
         int stackIn_24_3;
@@ -128,7 +128,7 @@ final class hj extends IOException {
         int stackIn_24_7;
         int stackIn_24_8;
         int stackIn_25_9 = 0;
-        nf stackIn_27_0;
+        Battle stackIn_27_0;
         int stackIn_27_1;
         int stackIn_27_2;
         int stackIn_27_3;
@@ -138,7 +138,7 @@ final class hj extends IOException {
         int stackIn_27_7;
         int stackIn_27_8;
         int stackIn_28_9 = 0;
-        nf stackIn_30_0;
+        Battle stackIn_30_0;
         int stackIn_30_1;
         int stackIn_30_2;
         int stackIn_30_3;
@@ -151,128 +151,128 @@ final class hj extends IOException {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         Object var2 = null;
-        ml var3 = null;
-        ml var4 = null;
+        BattleUnit var3 = null;
+        BattleUnit var4 = null;
         int var5 = 0;
         IntrusiveDeque var6 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var6 = rk.field_O.g((byte) 101);
+          var6 = rk.field_O.getUnits((byte) 101);
           var2 = null;
-          var3 = (ml) (var6.first(param0 + 33225));
+          var3 = (BattleUnit) (var6.first(param0 + 33225));
           if (param0 != -20602) {
             field_a = (int[]) null;
           }
           while (var3 != null) {
-            if (var3.y(17571) != 0 && (Math.random() < 0.3 ||
+            if (var3.getOwnerId(17571) != 0 && (Math.random() < 0.3 ||
               var2 == null)) {
               var2 = var3;
             }
-            var3 = (ml) (var6.next(0));
+            var3 = (BattleUnit) (var6.next(0));
           }
-          var4 = rk.field_O.a(0, true);
+          var4 = rk.field_O.getUnitByOwner(0, true);
           if (var2 != null) {
-            rk.field_O.c(-4207, ((ml) (var2)).field_T);
-            rk.field_O.a(((ml) (var2)).field_T, 157, (byte) 0, 0, 0, 0, 0, ((ml) (var2)).field_T, 0);
-            if (100 >= Math.abs(var4.field_lb - ((ml) (var2)).field_lb)) {
+            rk.field_O.setCurrentPlayer(-4207, ((BattleUnit) (var2)).field_T);
+            rk.field_O.queueAction(((BattleUnit) (var2)).field_T, 157, (byte) 0, 0, 0, 0, 0, ((BattleUnit) (var2)).field_T, 0);
+            if (100 >= Math.abs(var4.field_lb - ((BattleUnit) (var2)).field_lb)) {
               stackIn_24_0 = rk.field_O;
-              stackIn_24_1 = ((ml) (var2)).field_T;
+              stackIn_24_1 = ((BattleUnit) (var2)).field_T;
               stackIn_24_2 = 158;
               stackIn_24_3 = -115;
               stackIn_24_4 = 32;
               stackIn_24_5 = var4.field_lb;
               stackIn_24_6 = var4.field_db;
               stackIn_24_7 = 0;
-              stackIn_24_8 = ((ml) (var2)).field_T;
-              if (var4.field_lb >= ((ml) (var2)).field_lb) {
+              stackIn_24_8 = ((BattleUnit) (var2)).field_T;
+              if (var4.field_lb >= ((BattleUnit) (var2)).field_lb) {
                 stackIn_25_9 = 0;
               } else {
                 stackIn_25_9 = 1;
               }
-              ((nf) (Object) stackIn_24_0).a(stackIn_24_1, stackIn_24_2, (byte) stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_24_8, stackIn_25_9);
+              ((Battle) (Object) stackIn_24_0).queueAction(stackIn_24_1, stackIn_24_2, (byte) stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_24_8, stackIn_25_9);
               stackIn_27_0 = rk.field_O;
-              stackIn_27_1 = ((ml) (var2)).field_T;
+              stackIn_27_1 = ((BattleUnit) (var2)).field_T;
               stackIn_27_2 = 158;
               stackIn_27_3 = 34;
               stackIn_27_4 = 0;
               stackIn_27_5 = var4.field_lb;
               stackIn_27_6 = var4.field_db;
               stackIn_27_7 = 0;
-              stackIn_27_8 = ((ml) (var2)).field_T;
-              if (var4.field_lb >= ((ml) (var2)).field_lb) {
+              stackIn_27_8 = ((BattleUnit) (var2)).field_T;
+              if (var4.field_lb >= ((BattleUnit) (var2)).field_lb) {
                 stackIn_28_9 = 5;
               } else {
                 stackIn_28_9 = 3;
               }
-              ((nf) (Object) stackIn_27_0).a(stackIn_27_1, stackIn_27_2, (byte) stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_27_8, stackIn_28_9);
+              ((Battle) (Object) stackIn_27_0).queueAction(stackIn_27_1, stackIn_27_2, (byte) stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_27_8, stackIn_28_9);
               stackIn_30_0 = rk.field_O;
-              stackIn_30_1 = ((ml) (var2)).field_T;
+              stackIn_30_1 = ((BattleUnit) (var2)).field_T;
               stackIn_30_2 = 158;
               stackIn_30_3 = -88;
               stackIn_30_4 = 0;
               stackIn_30_5 = var4.field_lb;
               stackIn_30_6 = var4.field_db;
               stackIn_30_7 = 0;
-              stackIn_30_8 = ((ml) (var2)).field_T;
-              if (var4.field_lb < ((ml) (var2)).field_lb) {
+              stackIn_30_8 = ((BattleUnit) (var2)).field_T;
+              if (var4.field_lb < ((BattleUnit) (var2)).field_lb) {
                 stackIn_31_9 = 2;
               } else {
                 stackIn_31_9 = 4;
               }
-              ((nf) (Object) stackIn_30_0).a(stackIn_30_1, stackIn_30_2, (byte) stackIn_30_3, stackIn_30_4, stackIn_30_5, stackIn_30_6, stackIn_30_7, stackIn_30_8, stackIn_31_9);
-              rk.field_O.a(((ml) (var2)).field_T, 37, (byte) -100, 32, var4.field_lb, var4.field_db, var4.field_db, ((ml) (var2)).field_T, var4.field_lb);
+              ((Battle) (Object) stackIn_30_0).queueAction(stackIn_30_1, stackIn_30_2, (byte) stackIn_30_3, stackIn_30_4, stackIn_30_5, stackIn_30_6, stackIn_30_7, stackIn_30_8, stackIn_31_9);
+              rk.field_O.queueAction(((BattleUnit) (var2)).field_T, 37, (byte) -100, 32, var4.field_lb, var4.field_db, var4.field_db, ((BattleUnit) (var2)).field_T, var4.field_lb);
             } else {
               stackIn_14_0 = rk.field_O;
-              stackIn_14_1 = ((ml) (var2)).field_T;
+              stackIn_14_1 = ((BattleUnit) (var2)).field_T;
               stackIn_14_2 = 158;
               stackIn_14_3 = -92;
               stackIn_14_4 = 0;
               stackIn_14_5 = var4.field_lb;
               stackIn_14_6 = var4.field_db;
               stackIn_14_7 = 0;
-              stackIn_14_8 = ((ml) (var2)).field_T;
-              if (((ml) (var2)).field_lb <= var4.field_lb) {
+              stackIn_14_8 = ((BattleUnit) (var2)).field_T;
+              if (((BattleUnit) (var2)).field_lb <= var4.field_lb) {
                 stackIn_15_9 = 4;
               } else {
                 stackIn_15_9 = 2;
               }
-              ((nf) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, (byte) stackIn_14_3, stackIn_14_4, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_14_8, stackIn_15_9);
+              ((Battle) (Object) stackIn_14_0).queueAction(stackIn_14_1, stackIn_14_2, (byte) stackIn_14_3, stackIn_14_4, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_14_8, stackIn_15_9);
               stackIn_17_0 = rk.field_O;
-              stackIn_17_1 = ((ml) (var2)).field_T;
+              stackIn_17_1 = ((BattleUnit) (var2)).field_T;
               stackIn_17_2 = 158;
               stackIn_17_3 = 83;
               stackIn_17_4 = 32;
               stackIn_17_5 = var4.field_lb;
               stackIn_17_6 = var4.field_db;
               stackIn_17_7 = 0;
-              stackIn_17_8 = ((ml) (var2)).field_T;
-              if (var4.field_lb >= ((ml) (var2)).field_lb) {
+              stackIn_17_8 = ((BattleUnit) (var2)).field_T;
+              if (var4.field_lb >= ((BattleUnit) (var2)).field_lb) {
                 stackIn_18_9 = 1;
               } else {
                 stackIn_18_9 = 0;
               }
-              ((nf) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_17_2, (byte) stackIn_17_3, stackIn_17_4, stackIn_17_5, stackIn_17_6, stackIn_17_7, stackIn_17_8, stackIn_18_9);
+              ((Battle) (Object) stackIn_17_0).queueAction(stackIn_17_1, stackIn_17_2, (byte) stackIn_17_3, stackIn_17_4, stackIn_17_5, stackIn_17_6, stackIn_17_7, stackIn_17_8, stackIn_18_9);
               stackIn_20_0 = rk.field_O;
-              stackIn_20_1 = ((ml) (var2)).field_T;
+              stackIn_20_1 = ((BattleUnit) (var2)).field_T;
               stackIn_20_2 = 158;
               stackIn_20_3 = -117;
               stackIn_20_4 = 0;
               stackIn_20_5 = var4.field_lb;
               stackIn_20_6 = var4.field_db;
               stackIn_20_7 = 0;
-              stackIn_20_8 = ((ml) (var2)).field_T;
-              if (((ml) (var2)).field_lb <= var4.field_lb) {
+              stackIn_20_8 = ((BattleUnit) (var2)).field_T;
+              if (((BattleUnit) (var2)).field_lb <= var4.field_lb) {
                 stackIn_21_9 = 5;
               } else {
                 stackIn_21_9 = 3;
               }
-              ((nf) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_20_2, (byte) stackIn_20_3, stackIn_20_4, stackIn_20_5, stackIn_20_6, stackIn_20_7, stackIn_20_8, stackIn_21_9);
-              rk.field_O.a(((ml) (var2)).field_T, 36, (byte) 96, 64, var4.field_lb, var4.field_db, var4.field_db, ((ml) (var2)).field_T, var4.field_lb);
+              ((Battle) (Object) stackIn_20_0).queueAction(stackIn_20_1, stackIn_20_2, (byte) stackIn_20_3, stackIn_20_4, stackIn_20_5, stackIn_20_6, stackIn_20_7, stackIn_20_8, stackIn_21_9);
+              rk.field_O.queueAction(((BattleUnit) (var2)).field_T, 36, (byte) 96, 64, var4.field_lb, var4.field_db, var4.field_db, ((BattleUnit) (var2)).field_T, var4.field_lb);
             }
-            rk.field_O.a(((ml) (var2)).field_T, 157, (byte) 27, 0, 0, 0, 0, ((ml) (var2)).field_T, 0);
+            rk.field_O.queueAction(((BattleUnit) (var2)).field_T, 157, (byte) 27, 0, 0, 0, 0, ((BattleUnit) (var2)).field_T, 0);
           }
-          rk.field_O.e(true);
-          rk.field_O.c(-4207, 3);
+          rk.field_O.setAnimating(true);
+          rk.field_O.setCurrentPlayer(-4207, 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -284,14 +284,14 @@ final class hj extends IOException {
     public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 <= 93) {
-          nf var2 = (nf) null;
-          hj.a((IndexedSprite) null, -60, 88, (nf) null, (byte) -107, -114, 54);
+          Battle var2 = (Battle) null;
+          hj.a((IndexedSprite) null, -60, 88, (Battle) null, (byte) -107, -114, 54);
         }
         field_c = null;
         field_e = null;
     }
 
-    final static void a(IndexedSprite param0, int param1, int param2, nf param3, byte param4, int param5, int param6) {
+    final static void a(IndexedSprite param0, int param1, int param2, Battle param3, byte param4, int param5, int param6) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;

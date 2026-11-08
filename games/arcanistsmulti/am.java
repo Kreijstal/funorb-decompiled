@@ -52,8 +52,8 @@ final class am {
               for (var5_int = 0; var5_int < fj.field_h; var5_int++) {
                 UiContainer.field_z.payload[var5_int] = var4_ref_qe.field_k[var5_int];
               }
-              ArchiveRequest.field_m = nf.field_W;
-              nf.field_W = DraggableWidget.field_I;
+              ArchiveRequest.field_m = Battle.field_W;
+              Battle.field_W = DraggableWidget.field_I;
               DraggableWidget.field_I = on.field_g;
               on.field_g = var4_ref_qe.field_g;
               return true;
@@ -73,8 +73,8 @@ final class am {
               return false;
             }
             if (ResizableModalPanel.field_ab == 0) {
-              ArchiveRequest.field_m = nf.field_W;
-              nf.field_W = DraggableWidget.field_I;
+              ArchiveRequest.field_m = Battle.field_W;
+              Battle.field_W = DraggableWidget.field_I;
               DraggableWidget.field_I = on.field_g;
               on.field_g = so.field_d;
               so.field_d = -1;

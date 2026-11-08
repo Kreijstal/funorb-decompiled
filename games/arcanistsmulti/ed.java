@@ -124,14 +124,14 @@ class ed extends ContentTransitionDialog implements ButtonListener {
               ui.a(stackIn_97_0, stackIn_98_1);
               if (var3 != 0) {
                 if (!param0) {
-                  ml.a(false, -101);
+                  BattleUnit.applyMusicVolume(false, -101);
                   return;
                 }
                 if (!gj.a(29372)) {
-                  ml.a(false, -101);
+                  BattleUnit.applyMusicVolume(false, -101);
                   return;
                 }
-                ml.a(true, -101);
+                BattleUnit.applyMusicVolume(true, -101);
               }
             }
             return;
@@ -158,12 +158,12 @@ class ed extends ContentTransitionDialog implements ButtonListener {
             return;
           }
           if (!param0) {
-            ml.a(false, -101);
+            BattleUnit.applyMusicVolume(false, -101);
           } else {
             if (!gj.a(29372)) {
-              ml.a(false, -101);
+              BattleUnit.applyMusicVolume(false, -101);
             } else {
-              ml.a(true, -101);
+              BattleUnit.applyMusicVolume(true, -101);
             }
           }
           return;
@@ -213,12 +213,12 @@ class ed extends ContentTransitionDialog implements ButtonListener {
           return;
         }
         if (!param0) {
-          ml.a(false, -101);
+          BattleUnit.applyMusicVolume(false, -101);
         } else {
           if (!gj.a(29372)) {
-            ml.a(false, -101);
+            BattleUnit.applyMusicVolume(false, -101);
           } else {
-            ml.a(true, -101);
+            BattleUnit.applyMusicVolume(true, -101);
           }
         }
     }

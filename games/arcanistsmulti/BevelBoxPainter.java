@@ -17,8 +17,8 @@ final class BevelBoxPainter implements WidgetPainter {
         field_b = null;
         field_e = null;
         if (param0 != -122) {
-          nf var2 = (nf) null;
-          BevelBoxPainter.createProjectile((ml) null, -73, (byte) -49, (nf) null, -70, 53, 100);
+          Battle var2 = (Battle) null;
+          BevelBoxPainter.createProjectile((BattleUnit) null, -73, (byte) -49, (Battle) null, -70, 53, 100);
         }
     }
 
@@ -64,12 +64,12 @@ final class BevelBoxPainter implements WidgetPainter {
         }
     }
 
-    final static mi createProjectile(ml param0, int param1, byte param2, nf param3, int param4, int param5, int param6) {
-        mi var7 = null;
+    final static SpellProjectile createProjectile(BattleUnit param0, int param1, byte param2, Battle param3, int param4, int param5, int param6) {
+        SpellProjectile var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
-        mi stackIn_2_0 = null;
-        mi stackIn_4_0 = null;
+        SpellProjectile stackIn_2_0 = null;
+        SpellProjectile stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -78,12 +78,12 @@ final class BevelBoxPainter implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = 117 % ((param2 + 43) / 50);
-          var7 = (mi) (ClipState.field_n.removeFirst(true));
+          var7 = (SpellProjectile) (ClipState.field_n.removeFirst(true));
           if (var7 == null) {
-            stackIn_2_0 = new mi(param6, param4, param5, param1, param0, param3);
+            stackIn_2_0 = new SpellProjectile(param6, param4, param5, param1, param0, param3);
             return stackIn_2_0;
           }
-          var7.a(-104, param6, param1, param5, param4, param3, param0);
+          var7.initialize(-104, param6, param1, param5, param4, param3, param0);
           stackIn_4_0 = var7;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

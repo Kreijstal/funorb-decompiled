@@ -90,13 +90,13 @@ final class fl {
           var3 = var2.field_q;
           var4 = var2.field_y;
           ec.pushClipState(65280);
-          mi.field_E = new Sprite(var3, 3 * var4 / 4);
-          mi.field_E.makeRasterTarget();
+          SpellProjectile.field_E = new Sprite(var3, 3 * var4 / 4);
+          SpellProjectile.field_E.makeRasterTarget();
           var2.drawOpaque(0, 0);
-          LinkButtonPainter.field_l = new Sprite(var3, -mi.field_E.field_y + var4);
+          LinkButtonPainter.field_l = new Sprite(var3, -SpellProjectile.field_E.field_y + var4);
           LinkButtonPainter.field_l.makeRasterTarget();
-          var2.drawOpaque(0, -mi.field_E.field_y);
-          LinkButtonPainter.field_l.field_o = mi.field_E.field_y;
+          var2.drawOpaque(0, -SpellProjectile.field_E.field_y);
+          LinkButtonPainter.field_l.field_o = SpellProjectile.field_E.field_y;
           oo.popClipState(-15405);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "fl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

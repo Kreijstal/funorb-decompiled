@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi extends DualLinkNode {
+final class SpellProjectile extends DualLinkNode {
     int field_v;
     int field_F;
     static SceneWidget field_A;
@@ -11,9 +11,9 @@ final class mi extends DualLinkNode {
     private int field_J;
     int field_I;
     static BinaryBitmapFont field_B;
-    private nf field_q;
+    private Battle field_q;
     private int field_x;
-    ml field_t;
+    BattleUnit field_t;
     int field_o;
     int field_H;
     boolean field_w;
@@ -27,11 +27,11 @@ final class mi extends DualLinkNode {
     private int field_r;
     static SceneWidget field_m;
 
-    final boolean d(int param0) {
+    final boolean canCollide(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (!this.h(-139)) {
+          if (!this.isAlive(-139)) {
             return false;
           }
           if (this.field_I == 74 &&
@@ -74,7 +74,7 @@ final class mi extends DualLinkNode {
             return false;
           }
           if (param0 != 6) {
-            this.h(-117);
+            this.isAlive(-117);
           }
           if (this.field_I == 19 &&
             this.field_y > 50) {
@@ -109,7 +109,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void playSound(int param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
@@ -128,7 +128,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final int c(int param0) {
+    final int getX(int param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -147,7 +147,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final static void a(MusicTrack param0, int param1) {
+    final static void playMusic(MusicTrack param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -156,7 +156,7 @@ final class mi extends DualLinkNode {
         try {
           da.playMusicTrack(param0, true, (byte) -119);
           if (param1 != 3) {
-            mi.a(-112, 22, 80, -24, 120);
+            SpellProjectile.isPointerInRect(-112, 22, 80, -24, 120);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -173,7 +173,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final boolean k(int param0) {
+    final boolean isPersistentType(int param0) {
         boolean stackIn_43_0 = false;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -189,13 +189,13 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4) {
+    final static boolean isPointerInRect(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException var5 = null;
         boolean stackIn_16_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -8) {
-            mi.a(-116, -3, 107, 69, 64);
+            SpellProjectile.isPointerInRect(-116, -3, 107, 69, 64);
           }
           stackIn_16_0 = (EmailLoginCredentials.field_g >= param4) && ((param4 + param2) > EmailLoginCredentials.field_g) && (param1 <= MenuButtonPanel.field_I) && ((param1 + param0) > MenuButtonPanel.field_I);
           return stackIn_16_0;
@@ -206,7 +206,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3) {
+    private final void detonate(int param0, int param1, int param2, int param3) {
         int stackIn_958_0 = 0;
         int stackIn_1007_1 = 0;
         int stackIn_1293_0 = 0;
@@ -265,30 +265,30 @@ final class mi extends DualLinkNode {
                 }
                 if (var6 == 133 &&
                   var19 == 0) {
-                  this.a(7, (byte) 34);
+                  this.updateFlightSound(7, (byte) 34);
                   if (this.field_G >= this.field_q.field_H) {
                     if (96 == this.field_q.field_Y) {
                       this.field_q.field_Y = -96;
                     }
                     this.field_G = this.field_q.field_H;
-                    this.a(this.field_H, this.field_H, this.field_H, 8);
+                    this.applyAreaEffect(this.field_H, this.field_H, this.field_H, 8);
                     var6_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                     var7 = 0;
                     while (40 > var7) {
-                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 135, this.field_G, this.field_q);
+                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 135, this.field_G, this.field_q);
                       var8 = 8191 & var6_ref_jd.nextInt((byte) -46);
                       if (0 == this.field_u) {
                         this.field_u = 1;
                       }
-                      ((mi) (var5)).field_u = this.field_u + Math.abs((127 & var6_ref_jd.nextInt((byte) -46)) * of.sine(param0 - 5896, var8) >> 17) * this.field_u / Math.abs(this.field_u);
-                      ((mi) (var5)).field_F = -Math.abs(this.field_F) - Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * BevelBoxPainter.cosine(var8, param0 - 6134) >> 17);
-                      this.field_q.b(param0 ^ 6068, (mi) (var5));
+                      ((SpellProjectile) (var5)).field_u = this.field_u + Math.abs((127 & var6_ref_jd.nextInt((byte) -46)) * of.sine(param0 - 5896, var8) >> 17) * this.field_u / Math.abs(this.field_u);
+                      ((SpellProjectile) (var5)).field_F = -Math.abs(this.field_F) - Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * BevelBoxPainter.cosine(var8, param0 - 6134) >> 17);
+                      this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
                       var7++;
                     }
-                    this.a(1, (byte) 37, 7);
-                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 130, this.field_G, this.field_q);
-                    this.field_q.b(52, (mi) (var5));
-                    this.f(0);
+                    this.playTypeSound(1, (byte) 37, 7);
+                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 130, this.field_G, this.field_q);
+                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                    this.remove(0);
                     return;
                   }
                   this.field_o = this.field_o + this.field_u;
@@ -300,13 +300,13 @@ final class mi extends DualLinkNode {
                     this.field_y < 25) {
                     this.field_q.a(this.field_t, param0 ^ 6016);
                   }
-                  if (!this.field_q.b(this.field_G - this.field_r, param0 ^ 6018, -this.field_r + this.field_v, this.field_p)) {
+                  if (!this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, param0 ^ 6018, -this.field_r + this.field_v, this.field_p)) {
                     if (this.field_v < -640) {
-                      this.f(0);
+                      this.remove(0);
                       return;
                     }
                     if (this.field_v > 640 + this.field_q.field_y) {
-                      this.f(0);
+                      this.remove(0);
                       return;
                     }
                     if (this.field_t == null) {
@@ -315,27 +315,27 @@ final class mi extends DualLinkNode {
                     if (this.field_y >= 25) {
                       return;
                     }
-                    this.field_q.a(param0 ^ -6129, this.field_t);
+                    this.field_q.stampUnitMask(param0 ^ -6129, this.field_t);
                     return;
                   }
                   var6_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                   var7 = 0;
                   while (var7 < 17) {
-                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 135, this.field_G, this.field_q);
+                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 135, this.field_G, this.field_q);
                     var8 = (var6_ref_jd.nextInt((byte) -46) & 8191) * 3 / 2;
                     if (this.field_u == 0) {
                       this.field_u = 1;
                     }
-                    ((mi) (var5)).field_u = this.field_u + Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * of.sine(113, var8) >> 17) * this.field_u / Math.abs(this.field_u);
-                    ((mi) (var5)).field_F = this.field_F - (-((127 & var6_ref_jd.nextInt((byte) -46)) * BevelBoxPainter.cosine(var8, param0 ^ -6134) >> 17) + 64);
-                    this.field_q.b(52, (mi) (var5));
+                    ((SpellProjectile) (var5)).field_u = this.field_u + Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * of.sine(113, var8) >> 17) * this.field_u / Math.abs(this.field_u);
+                    ((SpellProjectile) (var5)).field_F = this.field_F - (-((127 & var6_ref_jd.nextInt((byte) -46)) * BevelBoxPainter.cosine(var8, param0 ^ -6134) >> 17) + 64);
+                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                     var7++;
                   }
-                  this.a(1, (byte) 37, 7);
-                  var5 = this.a(this.field_v, (ml) null, (byte) 81, 130, this.field_G, this.field_q);
-                  this.field_q.b(param0 - 5964, (mi) (var5));
-                  this.a(9, 5, 16, 8);
-                  this.f(0);
+                  this.playTypeSound(1, (byte) 37, 7);
+                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 130, this.field_G, this.field_q);
+                  this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
+                  this.applyAreaEffect(9, 5, 16, 8);
+                  this.remove(0);
                   return;
                 }
                 if (var6 != 45) {
@@ -435,15 +435,15 @@ final class mi extends DualLinkNode {
                                           this.field_x = this.field_x - 256;
                                         }
                                         if (25 <= this.field_y) {
-                                          if (!this.field_q.b(this.field_G - this.field_r, param0 - 6014, this.field_v - this.field_r, this.field_p)) {
+                                          if (!this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, param0 - 6014, this.field_v - this.field_r, this.field_p)) {
                                             return;
                                           }
                                           if (jo.field_b) {
-                                            var5 = this.a(this.field_v, (ml) null, (byte) 81, 101, this.field_G, this.field_q);
-                                            this.field_q.b(52, (mi) (var5));
-                                            this.a(10, 64, 32, 8);
+                                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 101, this.field_G, this.field_q);
+                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                            this.applyAreaEffect(10, 64, 32, 8);
                                           }
-                                          this.f(param0 - 6016);
+                                          this.remove(param0 - 6016);
                                           return;
                                         }
                                         this.field_y = this.field_y + 1;
@@ -461,16 +461,16 @@ final class mi extends DualLinkNode {
                                             this.field_x = this.field_x + 1;
                                             if (this.field_x > 64) {
                                               this.field_x = this.field_x - (-(int)(4.0 * Math.random()) + 64);
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 87, this.field_G, this.field_q);
-                                              ((mi) (var5)).field_F = -1;
-                                              this.field_q.b(52, (mi) (var5));
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
+                                              ((SpellProjectile) (var5)).field_F = -1;
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                             }
                                             if ((63 & this.field_x) == 0) {
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 88, this.field_G, this.field_q);
-                                              ((mi) (var5)).field_F = -16;
-                                              ((mi) (var5)).field_u = 0;
-                                              ((mi) (var5)).field_H = -4;
-                                              this.field_q.b(52, (mi) (var5));
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
+                                              ((SpellProjectile) (var5)).field_F = -16;
+                                              ((SpellProjectile) (var5)).field_u = 0;
+                                              ((SpellProjectile) (var5)).field_H = -4;
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                             }
                                             if (var6 == 0) {
                                               this.field_F = 0;
@@ -479,16 +479,16 @@ final class mi extends DualLinkNode {
                                               jo.field_b = false;
                                               NodeHashTable.field_m = 0;
                                               var8 = 0;
-                                              if (this.field_q.a(this.field_G + 1, -3 + this.field_v, (byte) -83)) {
+                                              if (this.field_q.isSolidAt(this.field_G + 1, -3 + this.field_v, (byte) -83)) {
                                                 var8++;
                                               }
-                                              if (this.field_q.a(1 + this.field_G, this.field_v + 3, (byte) -83)) {
+                                              if (this.field_q.isSolidAt(1 + this.field_G, this.field_v + 3, (byte) -83)) {
                                                 var8++;
                                               }
-                                              if (this.field_q.a(1 + this.field_G - 5, this.field_v, (byte) -83)) {
+                                              if (this.field_q.isSolidAt(1 + this.field_G - 5, this.field_v, (byte) -83)) {
                                                 var8++;
                                               }
-                                              if (this.field_q.a(5 + this.field_G + 1, this.field_v, (byte) -83)) {
+                                              if (this.field_q.isSolidAt(5 + this.field_G + 1, this.field_v, (byte) -83)) {
                                                 var8++;
                                               }
                                               if (0 < var8) {
@@ -503,23 +503,23 @@ final class mi extends DualLinkNode {
                                                 }
                                                 if (jo.field_b) {
                                                   if (this.field_I == 16) {
-                                                    this.a(2, (byte) 37, 0);
-                                                    this.a(5, 20, 16, 8);
-                                                    this.f(param0 ^ 6016);
+                                                    this.playTypeSound(2, (byte) 37, 0);
+                                                    this.applyAreaEffect(5, 20, 16, 8);
+                                                    this.remove(param0 ^ 6016);
                                                     return;
                                                   }
                                                 } else {
                                                   if (16 == this.field_I) {
                                                     jo.field_b = false;
                                                     if (!(this.field_G <= (this.field_q.field_H - 32)) ||
-                                                      this.field_q.a(this.field_G, -3 + this.field_v, (byte) -83) ||
-                                                      this.field_q.a(this.field_G, this.field_v + 3, (byte) -83) ||
-                                                      this.field_q.a(this.field_G - 5, this.field_v, (byte) -83) ||
-                                                      this.field_q.a(5 + this.field_G, this.field_v, (byte) -83)) {
+                                                      this.field_q.isSolidAt(this.field_G, -3 + this.field_v, (byte) -83) ||
+                                                      this.field_q.isSolidAt(this.field_G, this.field_v + 3, (byte) -83) ||
+                                                      this.field_q.isSolidAt(this.field_G - 5, this.field_v, (byte) -83) ||
+                                                      this.field_q.isSolidAt(5 + this.field_G, this.field_v, (byte) -83)) {
                                                       if (jo.field_b) {
-                                                        this.a(5, 20, 16, 8);
+                                                        this.applyAreaEffect(5, 20, 16, 8);
                                                       }
-                                                      this.f(0);
+                                                      this.remove(0);
                                                       return;
                                                     }
                                                   }
@@ -541,19 +541,19 @@ final class mi extends DualLinkNode {
                                               NodeHashTable.field_m = 0;
                                               ce.field_k = 0;
                                               var10 = 0;
-                                              if (this.field_q.a(this.field_G, -3 + this.field_v, (byte) -83)) {
+                                              if (this.field_q.isSolidAt(this.field_G, -3 + this.field_v, (byte) -83)) {
                                                 var10++;
                                                 var9 = 1;
                                               }
-                                              if (this.field_q.a(this.field_G, this.field_v + 3, (byte) -83)) {
+                                              if (this.field_q.isSolidAt(this.field_G, this.field_v + 3, (byte) -83)) {
                                                 var10++;
                                                 var9 = 1;
                                               }
-                                              if (this.field_q.a(this.field_G - 5, this.field_v, (byte) -83)) {
+                                              if (this.field_q.isSolidAt(this.field_G - 5, this.field_v, (byte) -83)) {
                                                 var9 = 1;
                                                 var10++;
                                               }
-                                              if (this.field_q.a(5 + this.field_G, this.field_v, (byte) -83)) {
+                                              if (this.field_q.isSolidAt(5 + this.field_G, this.field_v, (byte) -83)) {
                                                 var9 = 1;
                                                 var10++;
                                               }
@@ -564,9 +564,9 @@ final class mi extends DualLinkNode {
                                               if (var9 != 0 &&
                                                 var7 < this.field_y &&
                                                 !jo.field_b) {
-                                                this.a(2, (byte) 37, 0);
-                                                this.a(0, 0, 8, 8);
-                                                this.f(0);
+                                                this.playTypeSound(2, (byte) 37, 0);
+                                                this.applyAreaEffect(0, 0, 8, 8);
+                                                this.remove(0);
                                                 return;
                                               }
                                               this.field_F = this.field_F + 4;
@@ -590,16 +590,16 @@ final class mi extends DualLinkNode {
                                                 var10 = 0;
                                                 this.field_v = this.field_o >> 4;
                                                 this.field_G = this.field_z >> 4;
-                                                if (this.field_q.a(this.field_G, -3 + this.field_v, (byte) -83)) {
+                                                if (this.field_q.isSolidAt(this.field_G, -3 + this.field_v, (byte) -83)) {
                                                   var10++;
                                                 }
-                                                if (this.field_q.a(this.field_G, 3 + this.field_v, (byte) -83)) {
+                                                if (this.field_q.isSolidAt(this.field_G, 3 + this.field_v, (byte) -83)) {
                                                   var10++;
                                                 }
-                                                if (this.field_q.a(-5 + this.field_G, this.field_v, (byte) -83)) {
+                                                if (this.field_q.isSolidAt(-5 + this.field_G, this.field_v, (byte) -83)) {
                                                   var10++;
                                                 }
-                                                if (this.field_q.a(5 + this.field_G, this.field_v, (byte) -83)) {
+                                                if (this.field_q.isSolidAt(5 + this.field_G, this.field_v, (byte) -83)) {
                                                   var10++;
                                                 }
                                                 stackIn_1293_0 = 0;
@@ -618,11 +618,11 @@ final class mi extends DualLinkNode {
                                                   }
                                                   if (decompiledFrameRemainder14) {
                                                     if (jo.field_b) {
-                                                      this.a(2, (byte) 37, 0);
+                                                      this.playTypeSound(2, (byte) 37, 0);
                                                       this.field_G = this.field_G - 4;
                                                       this.field_z = this.field_z - 64;
-                                                      this.a(5, 20, 48, 8);
-                                                      this.f(param0 ^ 6016);
+                                                      this.applyAreaEffect(5, 20, 48, 8);
+                                                      this.remove(param0 ^ 6016);
                                                       return;
                                                     }
                                                     if (null != this.field_t) {
@@ -655,16 +655,16 @@ final class mi extends DualLinkNode {
                                                         this.field_y = 6;
                                                         if (var19 != 0) {
                                                           if (this.field_y < 50) {
-                                                            this.a(2, (byte) 37, 0);
-                                                            this.a(0, 0, 8, 8);
+                                                            this.playTypeSound(2, (byte) 37, 0);
+                                                            this.applyAreaEffect(0, 0, 8, 8);
                                                           }
                                                           this.field_y = 50;
                                                         }
                                                       }
                                                     } else {
                                                       if (this.field_y < 50) {
-                                                        this.a(2, (byte) 37, 0);
-                                                        this.a(0, 0, 8, 8);
+                                                        this.playTypeSound(2, (byte) 37, 0);
+                                                        this.applyAreaEffect(0, 0, 8, 8);
                                                       }
                                                       this.field_y = 50;
                                                     }
@@ -691,7 +691,7 @@ final class mi extends DualLinkNode {
                                               }
                                               if (this.field_t != null &&
                                                 var8 != 0) {
-                                                this.field_q.a(-127, this.field_t);
+                                                this.field_q.stampUnitMask(-127, this.field_t);
                                               }
                                             }
                                             if (this.field_y <= 250 && (this.field_y > 5 ||
@@ -699,17 +699,17 @@ final class mi extends DualLinkNode {
                                               this.field_y = this.field_y + 1;
                                             }
                                             if (this.field_v < -640) {
-                                              this.f(0);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (640 + this.field_q.field_y < this.field_v) {
-                                              this.f(0);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (this.field_G <= this.field_q.field_H) {
                                               return;
                                             }
-                                            this.f(0);
+                                            this.remove(0);
                                             return;
                                           }
                                           if ((var6 != 26 ||
@@ -786,23 +786,23 @@ final class mi extends DualLinkNode {
                                             if (this.field_I == 13 ||
                                               67 == this.field_I ||
                                               12 == this.field_I) {
-                                              this.a(0, (byte) 34);
+                                              this.updateFlightSound(0, (byte) 34);
                                             }
                                             if (this.field_I == 46 ||
                                               76 == this.field_I ||
                                               this.field_I == 41) {
-                                              this.a(3, (byte) 34);
+                                              this.updateFlightSound(3, (byte) 34);
                                             }
                                             if (this.field_I == 26 ||
                                               25 == this.field_I ||
                                               this.field_I == 20) {
-                                              this.a(1, (byte) 34);
+                                              this.updateFlightSound(1, (byte) 34);
                                             }
                                             boolean decompiledFrameCompleted36 = true;
                                             if (this.field_I == 31 ||
                                               this.field_I == 34 ||
                                               this.field_I == 33) {
-                                              this.a(2, (byte) 34);
+                                              this.updateFlightSound(2, (byte) 34);
                                               if (this.field_I == 34) {
                                                 var7 = Math.abs(-this.field_t.field_lb + this.field_v);
                                                 if (var7 < 50) {
@@ -818,8 +818,8 @@ final class mi extends DualLinkNode {
                                                 var8 -= 50;
                                                 var9 = 0;
                                                 while (var8 > var9) {
-                                                  var5 = this.a(this.field_v + (int)((double)(-var8) + (double)var8 * Math.random() * 2.0) / 25, (ml) null, (byte) 81, 112, this.field_G + (int)((double)(-var8) + Math.random() * (double)var8 * 2.0) / 25, this.field_q);
-                                                  this.field_q.b(52, (mi) (var5));
+                                                  var5 = this.spawnFromHere(this.field_v + (int)((double)(-var8) + (double)var8 * Math.random() * 2.0) / 25, (BattleUnit) null, (byte) 81, 112, this.field_G + (int)((double)(-var8) + Math.random() * (double)var8 * 2.0) / 25, this.field_q);
+                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   var9 += 50;
                                                   if (var19 != 0) {
                                                     decompiledFrameCompleted36 = false;
@@ -830,21 +830,21 @@ final class mi extends DualLinkNode {
                                             }
                                             if ((decompiledFrameCompleted36) &&
                                               (this.field_I == 53)) {
-                                              this.a(4, (byte) 34);
+                                              this.updateFlightSound(4, (byte) 34);
                                             }
                                             if (this.field_I == 116 ||
                                               this.field_I == 135 ||
                                               this.field_I == 152 ||
                                               this.field_I == 122) {
-                                              this.a(6, (byte) 34);
+                                              this.updateFlightSound(6, (byte) 34);
                                             }
                                             if (this.field_I == 146 ||
                                               this.field_I == 143) {
-                                              this.a(7, (byte) 34);
+                                              this.updateFlightSound(7, (byte) 34);
                                             }
                                             if (147 == this.field_I) {
-                                              var5 = this.a(this.field_v + (int)(11.0 * Math.random() - 5.0), (ml) null, (byte) 81, 102, this.field_G, this.field_q);
-                                              this.field_q.b(param0 ^ 6068, (mi) (var5));
+                                              var5 = this.spawnFromHere(this.field_v + (int)(11.0 * Math.random() - 5.0), (BattleUnit) null, (byte) 81, 102, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
                                               if (this.field_y == 225 &&
                                                 this.field_q.field_sb != null &&
                                                 null != this.field_q.field_sb[74]) {
@@ -856,10 +856,10 @@ final class mi extends DualLinkNode {
                                             this.field_x = this.field_x + 1;
                                             if (16 < this.field_x) {
                                               this.field_x = this.field_x - (-(int)(4.0 * Math.random()) + 16);
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 166, this.field_G, this.field_q);
-                                              ((mi) (var5)).field_u = (int)(21.0 * Math.random()) - 10;
-                                              ((mi) (var5)).field_F = -10 + (int)(Math.random() * 21.0);
-                                              this.field_q.b(param0 ^ 6068, (mi) (var5));
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 166, this.field_G, this.field_q);
+                                              ((SpellProjectile) (var5)).field_u = (int)(21.0 * Math.random()) - 10;
+                                              ((SpellProjectile) (var5)).field_F = -10 + (int)(Math.random() * 21.0);
+                                              this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
                                             }
                                           }
                                           boolean decompiledFrameRemainder13 = true;
@@ -867,17 +867,17 @@ final class mi extends DualLinkNode {
                                             this.field_x = this.field_x + 1;
                                             if (this.field_x > 16) {
                                               this.field_x = this.field_x - (16 - (int)(Math.random() * 4.0));
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 87, this.field_G, this.field_q);
-                                              ((mi) (var5)).field_F = -1;
-                                              this.field_q.b(52, (mi) (var5));
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
+                                              ((SpellProjectile) (var5)).field_F = -1;
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                             }
                                             decompiledFrameRemainder13 = ((3 & this.field_x) == 0);
                                             if (decompiledFrameRemainder13) {
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 88, this.field_G, this.field_q);
-                                              ((mi) (var5)).field_H = -4;
-                                              ((mi) (var5)).field_u = 0;
-                                              ((mi) (var5)).field_F = -16;
-                                              this.field_q.b(param0 ^ 6068, (mi) (var5));
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
+                                              ((SpellProjectile) (var5)).field_H = -4;
+                                              ((SpellProjectile) (var5)).field_u = 0;
+                                              ((SpellProjectile) (var5)).field_F = -16;
+                                              this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
                                               decompiledFrameRemainder13 = (var19 != 0);
                                             }
                                           }
@@ -887,9 +887,9 @@ final class mi extends DualLinkNode {
                                               decompiledFrameRemainder13 = !(this.field_x <= 4);
                                               if (decompiledFrameRemainder13) {
                                                 this.field_x = this.field_x - 4;
-                                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 88, this.field_G, this.field_q);
-                                                ((mi) (var5)).field_F = -16;
-                                                this.field_q.b(52, (mi) (var5));
+                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
+                                                ((SpellProjectile) (var5)).field_F = -16;
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                 decompiledFrameRemainder13 = (var19 != 0);
                                               }
                                             }
@@ -903,10 +903,10 @@ final class mi extends DualLinkNode {
                                                 }
                                                 decompiledFrameRemainder13 = ((3 & this.field_x) == 0);
                                                 if (decompiledFrameRemainder13) {
-                                                  var5 = this.a(this.field_v + (int)(-2.0 + Math.random() * 4.0), (ml) null, (byte) 81, 112, this.field_G + (int)(Math.random() * 4.0 - 2.0), this.field_q);
-                                                  ((mi) (var5)).field_u = 4 * this.field_u + (int)(-8.0 + 16.0 * Math.random());
-                                                  ((mi) (var5)).field_F = 4 * this.field_F + (int)(Math.random() * 16.0 - 8.0);
-                                                  this.field_q.b(52, (mi) (var5));
+                                                  var5 = this.spawnFromHere(this.field_v + (int)(-2.0 + Math.random() * 4.0), (BattleUnit) null, (byte) 81, 112, this.field_G + (int)(Math.random() * 4.0 - 2.0), this.field_q);
+                                                  ((SpellProjectile) (var5)).field_u = 4 * this.field_u + (int)(-8.0 + 16.0 * Math.random());
+                                                  ((SpellProjectile) (var5)).field_F = 4 * this.field_F + (int)(Math.random() * 16.0 - 8.0);
+                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   decompiledFrameRemainder13 = (var19 != 0);
                                                 }
                                               }
@@ -916,9 +916,9 @@ final class mi extends DualLinkNode {
                                                   decompiledFrameRemainder13 = !(this.field_x <= 4);
                                                   if (decompiledFrameRemainder13) {
                                                     this.field_x = this.field_x - 4;
-                                                    var5 = this.a(this.field_v + (int)(4.0 * Math.random() - 2.0), (ml) null, (byte) 81, 129, this.field_G + (int)(-2.0 + 4.0 * Math.random()), this.field_q);
-                                                    ((mi) (var5)).field_F = -16;
-                                                    this.field_q.b(52, (mi) (var5));
+                                                    var5 = this.spawnFromHere(this.field_v + (int)(4.0 * Math.random() - 2.0), (BattleUnit) null, (byte) 81, 129, this.field_G + (int)(-2.0 + 4.0 * Math.random()), this.field_q);
+                                                    ((SpellProjectile) (var5)).field_F = -16;
+                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                     decompiledFrameRemainder13 = (var19 != 0);
                                                   }
                                                 }
@@ -927,9 +927,9 @@ final class mi extends DualLinkNode {
                                                     this.field_x = this.field_x + 1;
                                                     if (this.field_x > 4) {
                                                       this.field_x = this.field_x - 4;
-                                                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 129, this.field_G, this.field_q);
-                                                      ((mi) (var5)).field_F = -16;
-                                                      this.field_q.b(52, (mi) (var5));
+                                                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 129, this.field_G, this.field_q);
+                                                      ((SpellProjectile) (var5)).field_F = -16;
+                                                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                     }
                                                   } else {
                                                     if (this.field_I != 146 &&
@@ -953,7 +953,7 @@ final class mi extends DualLinkNode {
                                                 this.field_G = this.field_z >> 4;
                                                 this.field_v = this.field_o >> 4;
                                                 if (this.field_I != 31 &&
-                                                  this.field_q.b(this.field_G - this.field_r, param0 - 6014, -this.field_r + this.field_v, this.field_p)) {
+                                                  this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, param0 - 6014, -this.field_r + this.field_v, this.field_p)) {
                                                   this.field_F = 0;
                                                   this.field_u = 0;
                                                   var8 = 1;
@@ -962,10 +962,10 @@ final class mi extends DualLinkNode {
                                                 if (this.field_I == 25 &&
                                                   this.field_F > 0 &&
                                                   this.field_y > 50) {
-                                                  var5 = this.a(this.field_v, (ml) null, (byte) 81, 89, this.field_G, this.field_q);
-                                                  this.field_q.b(52, (mi) (var5));
-                                                  this.a(1, (byte) 37, 1);
-                                                  this.a(25, 64, 12, param0 - 6008);
+                                                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
+                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                  this.playTypeSound(1, (byte) 37, 1);
+                                                  this.applyAreaEffect(25, 64, 12, param0 - 6008);
                                                   this.field_I = 26;
                                                   this.field_F = this.field_F / 2;
                                                   this.field_p = tk.field_x[0];
@@ -1006,8 +1006,8 @@ final class mi extends DualLinkNode {
                                                 }
                                                 if (this.field_I == 46) {
                                                   if (this.field_G > this.field_q.field_H - 32) {
-                                                    this.j(77);
-                                                    this.f(0);
+                                                    this.checkHeightEffects(77);
+                                                    this.remove(0);
                                                     return;
                                                   }
                                                   if (0 < this.field_u) {
@@ -1057,14 +1057,14 @@ final class mi extends DualLinkNode {
                                                       this.field_o = this.field_o + this.field_u;
                                                       this.field_G = this.field_z >> 4;
                                                       this.field_v = this.field_o >> 4;
-                                                      if (!this.field_q.b(this.field_G - this.field_r, param0 ^ 6018, this.field_v - this.field_r, this.field_p)) {
+                                                      if (!this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, param0 ^ 6018, this.field_v - this.field_r, this.field_p)) {
                                                         var11 = 6;
                                                         if (var19 == 0) {
                                                           if (var8 == 0 &&
                                                             5 > var11) {
                                                             continue;
                                                           }
-                                                          this.e((byte) -123);
+                                                          this.notifyOwner((byte) -123);
                                                           break regionExit7;
                                                         }
                                                       }
@@ -1125,15 +1125,15 @@ final class mi extends DualLinkNode {
                                                           }
                                                           boolean decompiledFrameRemainder12 = true;
                                                           if (this.field_I == 20) {
-                                                            var5 = this.a(this.field_v, (ml) null, (byte) 81, 90, this.field_G, this.field_q);
-                                                            this.field_q.b(52, (mi) (var5));
-                                                            this.a(5, 32, 3, param0 ^ 6024);
+                                                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
+                                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                            this.applyAreaEffect(5, 32, 3, param0 ^ 6024);
                                                             decompiledFrameRemainder12 = (var19 != 0);
                                                           }
                                                           if (decompiledFrameRemainder12) {
                                                             if (this.field_I == 135 &&
                                                               this.field_y < 25) {
-                                                              this.a(0, 32, 3, param0 ^ 6024);
+                                                              this.applyAreaEffect(0, 32, 3, param0 ^ 6024);
                                                               decompiledFrameRemainder12 = (var19 != 0);
                                                               if (decompiledFrameRemainder12) {
                                                                 decompiledFrameCompleted26 = false;
@@ -1142,8 +1142,8 @@ final class mi extends DualLinkNode {
                                                             }
                                                             if ((decompiledFrameRemainder12) &&
                                                               (this.field_I == 152)) {
-                                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 130, this.field_G, this.field_q);
-                                                              this.field_q.b(52, (mi) (var5));
+                                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 130, this.field_G, this.field_q);
+                                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                               if (0 > this.field_F) {
                                                                 decompiledFrameCompleted25 = false;
                                                                 break;
@@ -1180,8 +1180,8 @@ final class mi extends DualLinkNode {
                                                                 decompiledFrameRemainder11 = (var19 != 0);
                                                               }
                                                               if (decompiledFrameRemainder11) {
-                                                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 132, this.field_G, this.field_q);
-                                                                this.field_q.b(52, (mi) (var5));
+                                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 132, this.field_G, this.field_q);
+                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 this.field_y = this.field_y + 5;
                                                                 decompiledFrameRemainder11 = (var19 != 0);
                                                               }
@@ -1216,15 +1216,15 @@ final class mi extends DualLinkNode {
                                                                   }
                                                                   if (decompiledFrameRemainder11) {
                                                                     this.field_x = 0;
-                                                                    this.a(1, (byte) 37, 2);
+                                                                    this.playTypeSound(1, (byte) 37, 2);
                                                                     this.field_y = this.field_y + 50;
                                                                     var17 = this.field_v;
                                                                     this.field_v = NodeHashTable.field_m;
                                                                     var18 = this.field_G;
                                                                     this.field_G = ce.field_k;
-                                                                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 99, this.field_G, this.field_q);
-                                                                    this.field_q.b(52, (mi) (var5));
-                                                                    this.a(10, 64, 64, 8);
+                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 99, this.field_G, this.field_q);
+                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    this.applyAreaEffect(10, 64, 64, 8);
                                                                     this.field_G = var18;
                                                                     this.field_v = var17;
                                                                     if (this.field_y > 1000) {
@@ -1257,8 +1257,8 @@ final class mi extends DualLinkNode {
                                                                   if (decompiledFrameRemainder11) {
                                                                     if (this.field_y < 50 &&
                                                                       16 == this.field_I) {
-                                                                      this.a(2, (byte) 37, 0);
-                                                                      this.a(0, 0, 8, 8);
+                                                                      this.playTypeSound(2, (byte) 37, 0);
+                                                                      this.applyAreaEffect(0, 0, 8, 8);
                                                                     }
                                                                     this.field_y = 50;
                                                                     decompiledFrameRemainder11 = (var19 != 0);
@@ -1269,20 +1269,20 @@ final class mi extends DualLinkNode {
                                                           }
                                                           if (decompiledFrameRemainder11) {
                                                             if (this.field_I != 165) {
-                                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 90, this.field_G, this.field_q);
-                                                              this.field_q.b(param0 ^ 6068, (mi) (var5));
+                                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
+                                                              this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
                                                             }
                                                             if (Math.abs(var16) >= 128) {
                                                               this.field_y = this.field_y + 5;
                                                               if ((!(this.field_y < 300)) &&
                                                                 (this.field_I == 165) &&
                                                                 (this.field_I == 165)) {
-                                                                this.field_q.a(this.field_G - this.field_r, -112, this.field_v - this.field_r, this.field_p);
+                                                                this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, -112, this.field_v - this.field_r, this.field_p);
                                                                 if ((var19 != 0) &&
                                                                   (this.field_y > 200)) {
                                                                   this.field_y = 300;
                                                                   if (165 == this.field_I) {
-                                                                    this.field_q.a(-this.field_r + this.field_G, param0 ^ -6132, -this.field_r + this.field_v, this.field_p);
+                                                                    this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, param0 ^ -6132, -this.field_r + this.field_v, this.field_p);
                                                                   }
                                                                 }
                                                               }
@@ -1290,7 +1290,7 @@ final class mi extends DualLinkNode {
                                                               if (this.field_y > 200) {
                                                                 this.field_y = 300;
                                                                 if (165 == this.field_I) {
-                                                                  this.field_q.a(-this.field_r + this.field_G, param0 ^ -6132, -this.field_r + this.field_v, this.field_p);
+                                                                  this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, param0 ^ -6132, -this.field_r + this.field_v, this.field_p);
                                                                 }
                                                               }
                                                             }
@@ -1311,11 +1311,11 @@ final class mi extends DualLinkNode {
                                                                 (this.field_q.field_sb[CacheEntry.field_n[7][0]] != null)) {
                                                                 ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][0]], SceneWidgetNode.field_r[CacheEntry.field_n[7][0]] / 8);
                                                                 if (var19 != 0) {
-                                                                  this.a(1, (byte) 37, 3);
+                                                                  this.playTypeSound(1, (byte) 37, 3);
                                                                 }
                                                               }
                                                             } else {
-                                                              this.a(1, (byte) 37, 3);
+                                                              this.playTypeSound(1, (byte) 37, 3);
                                                             }
                                                           }
                                                           this.field_u = (var15 * var12 + var16 * var13) / var14;
@@ -1333,13 +1333,13 @@ final class mi extends DualLinkNode {
                                                             100 < this.field_y) {
                                                             this.field_F = -64;
                                                             this.field_u = 0;
-                                                            this.a(0, 0, 32, 8);
+                                                            this.applyAreaEffect(0, 0, 32, 8);
                                                           }
                                                           if (var8 == 0 &&
                                                             5 > var11) {
                                                             continue scanLoop6;
                                                           }
-                                                          this.e((byte) -123);
+                                                          this.notifyOwner((byte) -123);
                                                         } while (var19 != 0);
                                                         if ((decompiledFrameCompleted35) &&
                                                           (decompiledFrameCompleted34) &&
@@ -1419,15 +1419,15 @@ final class mi extends DualLinkNode {
                                                           }
                                                           boolean decompiledFrameRemainder9 = true;
                                                           if (this.field_I == 20) {
-                                                            var5 = this.a(this.field_v, (ml) null, (byte) 81, 90, this.field_G, this.field_q);
-                                                            this.field_q.b(52, (mi) (var5));
-                                                            this.a(5, 32, 3, param0 ^ 6024);
+                                                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
+                                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                            this.applyAreaEffect(5, 32, 3, param0 ^ 6024);
                                                             decompiledFrameRemainder9 = (var19 != 0);
                                                           }
                                                           if (decompiledFrameRemainder9) {
                                                             if (this.field_I == 135 &&
                                                               this.field_y < 25) {
-                                                              this.a(0, 32, 3, param0 ^ 6024);
+                                                              this.applyAreaEffect(0, 32, 3, param0 ^ 6024);
                                                               decompiledFrameRemainder9 = (var19 != 0);
                                                               if (decompiledFrameRemainder9) {
                                                                 decompiledFrameCompleted13 = false;
@@ -1436,8 +1436,8 @@ final class mi extends DualLinkNode {
                                                             }
                                                             if ((decompiledFrameRemainder9) &&
                                                               (this.field_I == 152)) {
-                                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 130, this.field_G, this.field_q);
-                                                              this.field_q.b(52, (mi) (var5));
+                                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 130, this.field_G, this.field_q);
+                                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                               if (0 > this.field_F) {
                                                                 decompiledFrameCompleted12 = false;
                                                                 break;
@@ -1474,8 +1474,8 @@ final class mi extends DualLinkNode {
                                                                 decompiledFrameRemainder8 = (var19 != 0);
                                                               }
                                                               if (decompiledFrameRemainder8) {
-                                                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 132, this.field_G, this.field_q);
-                                                                this.field_q.b(52, (mi) (var5));
+                                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 132, this.field_G, this.field_q);
+                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 this.field_y = this.field_y + 5;
                                                                 decompiledFrameRemainder8 = (var19 != 0);
                                                               }
@@ -1510,15 +1510,15 @@ final class mi extends DualLinkNode {
                                                                   }
                                                                   if (decompiledFrameRemainder8) {
                                                                     this.field_x = 0;
-                                                                    this.a(1, (byte) 37, 2);
+                                                                    this.playTypeSound(1, (byte) 37, 2);
                                                                     this.field_y = this.field_y + 50;
                                                                     var17 = this.field_v;
                                                                     this.field_v = NodeHashTable.field_m;
                                                                     var18 = this.field_G;
                                                                     this.field_G = ce.field_k;
-                                                                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 99, this.field_G, this.field_q);
-                                                                    this.field_q.b(52, (mi) (var5));
-                                                                    this.a(10, 64, 64, 8);
+                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 99, this.field_G, this.field_q);
+                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    this.applyAreaEffect(10, 64, 64, 8);
                                                                     this.field_G = var18;
                                                                     this.field_v = var17;
                                                                     if (this.field_y > 1000) {
@@ -1551,8 +1551,8 @@ final class mi extends DualLinkNode {
                                                                   if (decompiledFrameRemainder8) {
                                                                     if (this.field_y < 50 &&
                                                                       16 == this.field_I) {
-                                                                      this.a(2, (byte) 37, 0);
-                                                                      this.a(0, 0, 8, 8);
+                                                                      this.playTypeSound(2, (byte) 37, 0);
+                                                                      this.applyAreaEffect(0, 0, 8, 8);
                                                                     }
                                                                     this.field_y = 50;
                                                                     decompiledFrameRemainder8 = (var19 != 0);
@@ -1563,20 +1563,20 @@ final class mi extends DualLinkNode {
                                                           }
                                                           if (decompiledFrameRemainder8) {
                                                             if (this.field_I != 165) {
-                                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 90, this.field_G, this.field_q);
-                                                              this.field_q.b(param0 ^ 6068, (mi) (var5));
+                                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
+                                                              this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
                                                             }
                                                             if (Math.abs(var16) >= 128) {
                                                               this.field_y = this.field_y + 5;
                                                               if ((!(this.field_y < 300)) &&
                                                                 (this.field_I == 165) &&
                                                                 (this.field_I == 165)) {
-                                                                this.field_q.a(this.field_G - this.field_r, -112, this.field_v - this.field_r, this.field_p);
+                                                                this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, -112, this.field_v - this.field_r, this.field_p);
                                                                 if ((var19 != 0) &&
                                                                   (this.field_y > 200)) {
                                                                   this.field_y = 300;
                                                                   if (165 == this.field_I) {
-                                                                    this.field_q.a(-this.field_r + this.field_G, param0 ^ -6132, -this.field_r + this.field_v, this.field_p);
+                                                                    this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, param0 ^ -6132, -this.field_r + this.field_v, this.field_p);
                                                                   }
                                                                 }
                                                               }
@@ -1584,7 +1584,7 @@ final class mi extends DualLinkNode {
                                                               if (this.field_y > 200) {
                                                                 this.field_y = 300;
                                                                 if (165 == this.field_I) {
-                                                                  this.field_q.a(-this.field_r + this.field_G, param0 ^ -6132, -this.field_r + this.field_v, this.field_p);
+                                                                  this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, param0 ^ -6132, -this.field_r + this.field_v, this.field_p);
                                                                 }
                                                               }
                                                             }
@@ -1605,11 +1605,11 @@ final class mi extends DualLinkNode {
                                                                 (this.field_q.field_sb[CacheEntry.field_n[7][0]] != null)) {
                                                                 ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][0]], SceneWidgetNode.field_r[CacheEntry.field_n[7][0]] / 8);
                                                                 if (var19 != 0) {
-                                                                  this.a(1, (byte) 37, 3);
+                                                                  this.playTypeSound(1, (byte) 37, 3);
                                                                 }
                                                               }
                                                             } else {
-                                                              this.a(1, (byte) 37, 3);
+                                                              this.playTypeSound(1, (byte) 37, 3);
                                                             }
                                                           }
                                                           this.field_u = (var15 * var12 + var16 * var13) / var14;
@@ -1627,13 +1627,13 @@ final class mi extends DualLinkNode {
                                                             100 < this.field_y) {
                                                             this.field_F = -64;
                                                             this.field_u = 0;
-                                                            this.a(0, 0, 32, 8);
+                                                            this.applyAreaEffect(0, 0, 32, 8);
                                                           }
                                                           if (var8 == 0 &&
                                                             5 > var11) {
                                                             continue scanLoop6;
                                                           }
-                                                          this.e((byte) -123);
+                                                          this.notifyOwner((byte) -123);
                                                           if (var19 == 0) {
                                                             decompiledFrameCompleted8 = false;
                                                             break;
@@ -1675,8 +1675,8 @@ final class mi extends DualLinkNode {
                                                         (decompiledFrameCompleted10) &&
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
-                                                        this.a(2, (byte) 37, 0);
-                                                        this.a(5, 20, 32, 8);
+                                                        this.playTypeSound(2, (byte) 37, 0);
+                                                        this.applyAreaEffect(5, 20, 32, 8);
                                                         break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted33) &&
@@ -1704,9 +1704,9 @@ final class mi extends DualLinkNode {
                                                         (decompiledFrameCompleted10) &&
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
-                                                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 90, this.field_G, this.field_q);
-                                                        this.field_q.b(52, (mi) (var5));
-                                                        this.a(5, 20, 32, 8);
+                                                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
+                                                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                        this.applyAreaEffect(5, 20, 32, 8);
                                                         break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted32) &&
@@ -1732,7 +1732,7 @@ final class mi extends DualLinkNode {
                                                         (decompiledFrameCompleted10) &&
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
-                                                        this.a(10, 32, 32, param0 - 6008);
+                                                        this.applyAreaEffect(10, 32, 32, param0 - 6008);
                                                         break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted31) &&
@@ -1756,8 +1756,8 @@ final class mi extends DualLinkNode {
                                                         (decompiledFrameCompleted10) &&
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
-                                                        this.a(50, 128, 128, 8);
-                                                        this.field_q.a(-this.field_r + this.field_G, -120, this.field_v - this.field_r, this.field_p);
+                                                        this.applyAreaEffect(50, 128, 128, 8);
+                                                        this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, -120, this.field_v - this.field_r, this.field_p);
                                                         break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted29) &&
@@ -1777,10 +1777,10 @@ final class mi extends DualLinkNode {
                                                         (decompiledFrameCompleted10) &&
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
-                                                        this.a(1, (byte) 37, 7);
-                                                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 132, this.field_G, this.field_q);
-                                                        this.field_q.b(param0 ^ 6068, (mi) (var5));
-                                                        this.a(3, 20, 32, param0 ^ 6024);
+                                                        this.playTypeSound(1, (byte) 37, 7);
+                                                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 132, this.field_G, this.field_q);
+                                                        this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                                                        this.applyAreaEffect(3, 20, 32, param0 ^ 6024);
                                                         break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted28) &&
@@ -1798,10 +1798,10 @@ final class mi extends DualLinkNode {
                                                         (decompiledFrameCompleted10) &&
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
-                                                        this.a(2, (byte) 37, 3);
-                                                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 95, this.field_G, this.field_q);
-                                                        this.field_q.b(param0 - 5964, (mi) (var5));
-                                                        this.a(5, 20, 32, 8);
+                                                        this.playTypeSound(2, (byte) 37, 3);
+                                                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 95, this.field_G, this.field_q);
+                                                        this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
+                                                        this.applyAreaEffect(5, 20, 32, 8);
                                                         break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted28) &&
@@ -1819,7 +1819,7 @@ final class mi extends DualLinkNode {
                                                         (decompiledFrameCompleted8)) {
                                                         if (this.field_x > 0) {
                                                           this.field_x = this.field_x - 1;
-                                                          this.e((byte) -123);
+                                                          this.notifyOwner((byte) -123);
                                                           return;
                                                         }
                                                         this.field_x = 5;
@@ -1828,16 +1828,16 @@ final class mi extends DualLinkNode {
                                                         this.field_v = NodeHashTable.field_m;
                                                         var13 = this.field_G;
                                                         this.field_G = ce.field_k;
-                                                        this.a(1, (byte) 37, 2);
-                                                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 99, this.field_G, this.field_q);
-                                                        this.field_q.b(52, (mi) (var5));
-                                                        this.a(10, 64, 64, 8);
+                                                        this.playTypeSound(1, (byte) 37, 2);
+                                                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 99, this.field_G, this.field_q);
+                                                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                        this.applyAreaEffect(10, 64, 64, 8);
                                                         this.field_G = var13;
                                                         this.field_v = var12;
                                                         if (1000 < this.field_y) {
-                                                          this.f(0);
+                                                          this.remove(0);
                                                         }
-                                                        this.e((byte) 118);
+                                                        this.notifyOwner((byte) 118);
                                                         return;
                                                       }
                                                       if ((decompiledFrameCompleted25) &&
@@ -1849,9 +1849,9 @@ final class mi extends DualLinkNode {
                                                         (decompiledFrameCompleted10) &&
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
-                                                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 95, this.field_G, this.field_q);
-                                                        this.field_q.b(52, (mi) (var5));
-                                                        this.a(2, 10, 8, 8);
+                                                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 95, this.field_G, this.field_q);
+                                                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                        this.applyAreaEffect(2, 10, 8, 8);
                                                       }
                                                     }
                                                     if ((decompiledFrameCompleted25) &&
@@ -1861,7 +1861,7 @@ final class mi extends DualLinkNode {
                                                       (decompiledFrameCompleted11) &&
                                                       (decompiledFrameCompleted9) &&
                                                       (decompiledFrameCompleted8)) {
-                                                      this.f(0);
+                                                      this.remove(0);
                                                       return;
                                                     }
                                                     if ((decompiledFrameCompleted25) &&
@@ -1872,14 +1872,14 @@ final class mi extends DualLinkNode {
                                                       var18 = this.field_G;
                                                       this.field_v = NodeHashTable.field_m;
                                                       this.field_G = ce.field_k;
-                                                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 89, this.field_G, this.field_q);
-                                                      this.field_q.b(52, (mi) (var5));
-                                                      this.a(1, (byte) 37, 1);
+                                                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
+                                                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                      this.playTypeSound(1, (byte) 37, 1);
                                                       if (!jo.field_b) {
-                                                        this.a(50, 64, 96, 8);
+                                                        this.applyAreaEffect(50, 64, 96, 8);
                                                         if (var19 != 0) {
                                                           var10 -= 256;
-                                                          this.a(25, 64, 96, 8);
+                                                          this.applyAreaEffect(25, 64, 96, 8);
                                                           if (0 == (this.field_v & 1)) {
                                                             this.field_u = this.field_u - 64;
                                                             this.field_u = this.field_u + 64;
@@ -1890,7 +1890,7 @@ final class mi extends DualLinkNode {
                                                         }
                                                       } else {
                                                         var10 -= 256;
-                                                        this.a(25, 64, 96, 8);
+                                                        this.applyAreaEffect(25, 64, 96, 8);
                                                         if (0 == (this.field_v & 1)) {
                                                           this.field_u = this.field_u - 64;
                                                           if (var19 != 0) {
@@ -1904,7 +1904,7 @@ final class mi extends DualLinkNode {
                                                       this.field_v = var17;
                                                       this.field_G = var18;
                                                       if (this.field_y > 200) {
-                                                        this.f(0);
+                                                        this.remove(0);
                                                         return;
                                                       }
                                                       var12 = -(this.field_u >> 1);
@@ -1920,7 +1920,7 @@ final class mi extends DualLinkNode {
                                                       }
                                                       this.field_v = this.field_o >> 4;
                                                       this.field_G = this.field_z >> 4;
-                                                      this.e((byte) 104);
+                                                      this.notifyOwner((byte) 104);
                                                       return;
                                                     }
                                                   }
@@ -1928,7 +1928,7 @@ final class mi extends DualLinkNode {
                                                     (decompiledFrameCompleted12)) {
                                                     if (null != this.field_t &&
                                                       var7 != 0) {
-                                                      this.field_q.a(-46, this.field_t);
+                                                      this.field_q.stampUnitMask(-46, this.field_t);
                                                     }
                                                     if (5 == var11) {
                                                       this.field_F = this.field_F >> 1;
@@ -1941,9 +1941,9 @@ final class mi extends DualLinkNode {
                                                   }
                                                   break;
                                                 }
-                                                this.a(3, 32, 64, 8);
-                                                this.a(160, true);
-                                                this.f(0);
+                                                this.applyAreaEffect(3, 32, 64, 8);
+                                                this.playSound(160, true);
+                                                this.remove(0);
                                                 return;
                                               }
                                             }
@@ -1954,36 +1954,36 @@ final class mi extends DualLinkNode {
                                               if (this.field_I != 34 ||
                                                 null == this.field_t) {
                                                 if (this.field_I == 46) {
-                                                  this.j(87);
-                                                  this.f(param0 ^ 6016);
+                                                  this.checkHeightEffects(87);
+                                                  this.remove(param0 ^ 6016);
                                                   return;
                                                 }
                                                 if (this.field_I == 76) {
                                                   if (7 <= this.field_G) {
-                                                    this.field_q.a(this.field_G - this.field_r, param0 ^ -6020, -this.field_r + this.field_v, this.field_p);
+                                                    this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, param0 ^ -6020, -this.field_r + this.field_v, this.field_p);
                                                   }
-                                                  this.f(0);
+                                                  this.remove(0);
                                                   return;
                                                 }
                                                 if (20 == this.field_I) {
-                                                  var5 = this.a(this.field_v, (ml) null, (byte) 81, 90, this.field_G, this.field_q);
-                                                  this.field_q.b(52, (mi) (var5));
-                                                  this.f(0);
+                                                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
+                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                  this.remove(0);
                                                   return;
                                                 }
                                                 if (159 == this.field_I) {
-                                                  this.a(10, 32, 32, 8);
-                                                  this.f(param0 ^ 6016);
+                                                  this.applyAreaEffect(10, 32, 32, 8);
+                                                  this.remove(param0 ^ 6016);
                                                   return;
                                                 }
                                                 if (160 == this.field_I) {
-                                                  this.field_q.a(this.field_G - this.field_r, -82, this.field_v - this.field_r, this.field_p);
-                                                  this.f(param0 ^ 6016);
+                                                  this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, -82, this.field_v - this.field_r, this.field_p);
+                                                  this.remove(param0 ^ 6016);
                                                   return;
                                                 }
                                                 if (this.field_I != 135 &&
                                                   152 != this.field_I) {
-                                                  if (!this.field_q.b(1 + this.field_G - this.field_r, 2, -this.field_r + this.field_v, this.field_p)) {
+                                                  if (!this.field_q.spriteOverlapsTerrain(1 + this.field_G - this.field_r, 2, -this.field_r + this.field_v, this.field_p)) {
                                                     this.field_y = 0;
                                                     if (var19 == 0) {
                                                       break regionExit4;
@@ -1995,28 +1995,28 @@ final class mi extends DualLinkNode {
                                                       if (this.field_I != 16) {
                                                         break regionExit4;
                                                       }
-                                                      this.a(2, (byte) 37, 0);
-                                                      this.a(5, 20, 32, 8);
-                                                      this.f(0);
+                                                      this.playTypeSound(2, (byte) 37, 0);
+                                                      this.applyAreaEffect(5, 20, 32, 8);
+                                                      this.remove(0);
                                                       return;
                                                     }
                                                     if (16 != this.field_I) {
                                                       break regionExit4;
                                                     }
                                                     if ((-32 + this.field_q.field_H) >= this.field_G &&
-                                                      !this.field_q.b(this.field_G - this.field_r + 1, 2, -this.field_r + this.field_v, gj.field_f[0].toRgbSprite())) {
+                                                      !this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r + 1, 2, -this.field_r + this.field_v, gj.field_f[0].toRgbSprite())) {
                                                       break regionExit4;
                                                     }
-                                                    this.f(0);
+                                                    this.remove(0);
                                                     return;
                                                   }
                                                 }
                                                 if (decompiledFrameRemainder15) {
-                                                  this.a(1, (byte) 37, 7);
-                                                  var5 = this.a(this.field_v, (ml) null, (byte) 81, 130, this.field_G, this.field_q);
-                                                  this.field_q.b(52, (mi) (var5));
-                                                  this.a(3, 16, 16, param0 ^ 6024);
-                                                  this.f(0);
+                                                  this.playTypeSound(1, (byte) 37, 7);
+                                                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 130, this.field_G, this.field_q);
+                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                  this.applyAreaEffect(3, 16, 16, param0 ^ 6024);
+                                                  this.remove(0);
                                                   return;
                                                 }
                                               }
@@ -2064,15 +2064,15 @@ final class mi extends DualLinkNode {
                                               }
                                               if (~this.field_v != ~var7 &&
                                                 this.field_y <= var8) {
-                                                this.a(100, true);
-                                                var5 = this.a(var7, (ml) null, (byte) 81, 84, -480, this.field_q);
-                                                ((mi) (var5)).field_u = (-var7 + this.field_v) / 3;
-                                                ((mi) (var5)).field_y = 45;
-                                                ((mi) (var5)).field_F = (480 + this.field_G) / 3;
-                                                this.field_q.b(52, (mi) (var5));
+                                                this.playSound(100, true);
+                                                var5 = this.spawnFromHere(var7, (BattleUnit) null, (byte) 81, 84, -480, this.field_q);
+                                                ((SpellProjectile) (var5)).field_u = (-var7 + this.field_v) / 3;
+                                                ((SpellProjectile) (var5)).field_y = 45;
+                                                ((SpellProjectile) (var5)).field_F = (480 + this.field_G) / 3;
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                               }
                                               if (var9 < this.field_y) {
-                                                this.f(0);
+                                                this.remove(0);
                                                 return;
                                               }
                                             }
@@ -2090,10 +2090,10 @@ final class mi extends DualLinkNode {
                                           if (decompiledFrameRemainder17) {
                                             if (this.field_I == 116) {
                                               if (this.field_y == 251) {
-                                                this.a(1, (byte) 37, 6);
-                                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 128, this.field_G, this.field_q);
-                                                this.field_q.b(52, (mi) (var5));
-                                                this.a(40, 128, 32, param0 ^ 6024);
+                                                this.playTypeSound(1, (byte) 37, 6);
+                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 128, this.field_G, this.field_q);
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                this.applyAreaEffect(40, 128, 32, param0 ^ 6024);
                                               }
                                               this.field_y = this.field_y + 1;
                                               var7 = 1;
@@ -2112,7 +2112,7 @@ final class mi extends DualLinkNode {
                                                   var11 = of.sine(-43, var9) * (3 + var10) >> 12;
                                                   var12 = (3 + var10) * BevelBoxPainter.cosine(var9, param0 - 6137) >> 12;
                                                   jo.field_b = false;
-                                                  stackOut_2218_0 = this.field_q.a(this.field_G + var12, this.field_v + var11, (byte) -83);
+                                                  stackOut_2218_0 = this.field_q.isSolidAt(this.field_G + var12, this.field_v + var11, (byte) -83);
                                                   stackIn_2234_0 = stackOut_2218_0 ? 1 : 0;
                                                   stackIn_2219_0 = stackOut_2218_0;
                                                   if (var19 != 0) {
@@ -2121,75 +2121,75 @@ final class mi extends DualLinkNode {
                                                   }
                                                   if (stackIn_2219_0 &&
                                                     !jo.field_b) {
-                                                    this.a(1, (byte) 37, 6);
-                                                    var5 = this.a(var11 + this.field_v, this.field_t, (byte) 81, 117, var12 + this.field_G, this.field_q);
-                                                    this.field_q.b(52, (mi) (var5));
-                                                    var5 = this.a(this.field_v + var11, (ml) null, (byte) 81, 128, this.field_G + var12, this.field_q);
-                                                    this.field_q.b(param0 - 5964, (mi) (var5));
+                                                    this.playTypeSound(1, (byte) 37, 6);
+                                                    var5 = this.spawnFromHere(var11 + this.field_v, this.field_t, (byte) 81, 117, var12 + this.field_G, this.field_q);
+                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                    var5 = this.spawnFromHere(this.field_v + var11, (BattleUnit) null, (byte) 81, 128, this.field_G + var12, this.field_q);
+                                                    this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
                                                   }
                                                   var10++;
                                                 }
                                               }
                                               if (decompiledFrameCompleted7) {
                                                 if (this.field_t != null) {
-                                                  this.field_q.a(-68, this.field_t);
+                                                  this.field_q.stampUnitMask(-68, this.field_t);
                                                 }
                                                 this.field_F = 0;
                                                 this.field_u = 0;
                                                 stackIn_2234_0 = -326;
                                               }
                                               if (stackIn_2234_0 > ~this.field_y) {
-                                                this.f(0);
+                                                this.remove(0);
                                               }
                                               return;
                                             }
                                             if (this.field_I == 33) {
                                               var7 = 0;
                                               while (var7 < 10) {
-                                                var5 = this.a(this.field_v, this.field_t, (byte) 81, 112, this.field_G, this.field_q);
-                                                ((mi) (var5)).field_u = (int)(96.0 * Math.sin(3.14 * (double)var7 / 5.0)) << 4;
-                                                ((mi) (var5)).field_F = (int)(-32.0 + 96.0 * Math.cos((double)var7 * 3.14 / 5.0)) << 4;
-                                                this.field_q.b(52, (mi) (var5));
+                                                var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 112, this.field_G, this.field_q);
+                                                ((SpellProjectile) (var5)).field_u = (int)(96.0 * Math.sin(3.14 * (double)var7 / 5.0)) << 4;
+                                                ((SpellProjectile) (var5)).field_F = (int)(-32.0 + 96.0 * Math.cos((double)var7 * 3.14 / 5.0)) << 4;
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                 var7++;
                                                 if (var19 != 0) {
                                                   return;
                                                 }
                                               }
-                                              this.a(1, (byte) 37, 2);
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 99, this.field_G, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
-                                              this.a(80, 256, 64, 8);
-                                              this.f(param0 ^ 6016);
+                                              this.playTypeSound(1, (byte) 37, 2);
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 99, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              this.applyAreaEffect(80, 256, 64, 8);
+                                              this.remove(param0 ^ 6016);
                                               return;
                                             }
                                             if (this.field_I == 122) {
-                                              this.a(1, (byte) 37, 1);
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 154, this.field_G, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
-                                              this.a(30, 128, 64, 8);
+                                              this.playTypeSound(1, (byte) 37, 1);
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 154, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              this.applyAreaEffect(30, 128, 64, 8);
                                               this.field_y = this.field_y + 1;
-                                              this.l(88);
-                                              this.f(0);
+                                              this.drawOrbitEffect(88);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (this.field_I == 53) {
-                                              this.a(1, (byte) 37, 4);
-                                              this.a(132, true);
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 104, this.field_G, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
-                                              var5 = this.a(this.field_v, this.field_t, (byte) 81, 55, this.field_G, this.field_q);
-                                              ((mi) (var5)).field_H = 1;
-                                              this.field_q.b(52, (mi) (var5));
-                                              this.a(40, 64, 48, 8);
-                                              this.f(0);
+                                              this.playTypeSound(1, (byte) 37, 4);
+                                              this.playSound(132, true);
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 104, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 55, this.field_G, this.field_q);
+                                              ((SpellProjectile) (var5)).field_H = 1;
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              this.applyAreaEffect(40, 64, 48, 8);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (12 == this.field_I) {
-                                              this.a(1, (byte) 37, 0);
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 86, this.field_G, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
-                                              this.a(50, 128, 80, 8);
-                                              this.f(0);
+                                              this.playTypeSound(1, (byte) 37, 0);
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 86, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              this.applyAreaEffect(50, 128, 80, 8);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (this.field_I == 143) {
@@ -2197,54 +2197,54 @@ final class mi extends DualLinkNode {
                                                 null != this.field_q.field_sb[CacheEntry.field_n[7][2]]) {
                                                 ii.playSample((int)(Math.random() * 50.0) + 100, false, this.field_q.field_sb[CacheEntry.field_n[7][2]], SceneWidgetNode.field_r[CacheEntry.field_n[7][2]] / 2);
                                               }
-                                              var5 = this.a(-32 + this.field_v, (ml) null, (byte) 81, 131, this.field_G, this.field_q);
-                                              this.field_q.b(param0 - 5964, (mi) (var5));
-                                              var5 = this.a(32 + this.field_v, (ml) null, (byte) 81, 131, this.field_G, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 131, -32 + this.field_G, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 131, this.field_G + 32, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
-                                              this.a(50, 128, 128, 8);
-                                              this.f(0);
+                                              var5 = this.spawnFromHere(-32 + this.field_v, (BattleUnit) null, (byte) 81, 131, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(32 + this.field_v, (BattleUnit) null, (byte) 81, 131, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 131, -32 + this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 131, this.field_G + 32, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              this.applyAreaEffect(50, 128, 128, 8);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (this.field_I == 147) {
-                                              this.a(0, (byte) 37, 9);
-                                              this.a(10, 256, 128, 8);
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 101, this.field_G, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
-                                              var5 = this.a(this.field_v, this.field_t, (byte) 81, 74, this.field_G, this.field_q);
-                                              ((mi) (var5)).field_u = 0;
-                                              ((mi) (var5)).field_F = -256;
-                                              ((mi) (var5)).field_y = 5;
-                                              this.field_q.b(52, (mi) (var5));
-                                              this.f(0);
+                                              this.playTypeSound(0, (byte) 37, 9);
+                                              this.applyAreaEffect(10, 256, 128, 8);
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 101, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 74, this.field_G, this.field_q);
+                                              ((SpellProjectile) (var5)).field_u = 0;
+                                              ((SpellProjectile) (var5)).field_F = -256;
+                                              ((SpellProjectile) (var5)).field_y = 5;
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              this.remove(0);
                                               return;
                                             }
                                             if (this.field_I == 13) {
-                                              this.a(0, (byte) 37, 0);
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 86, this.field_G, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
+                                              this.playTypeSound(0, (byte) 37, 0);
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 86, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                               var7_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                                               var8 = 0;
                                               while (var8 < 5) {
-                                                var5 = this.a(this.field_v, this.field_t, (byte) 81, 14, this.field_G, this.field_q);
+                                                var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 14, this.field_G, this.field_q);
                                                 var9 = u.a(var7_ref_jd, -2147483648, 8192);
-                                                ((mi) (var5)).field_u = of.sine(127, var9) >> 9;
-                                                ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var9, -115) * 3 >> 11) - 64;
-                                                this.field_q.b(52, (mi) (var5));
+                                                ((SpellProjectile) (var5)).field_u = of.sine(127, var9) >> 9;
+                                                ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var9, -115) * 3 >> 11) - 64;
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                 var8++;
                                                 if (var19 != 0) {
                                                   return;
                                                 }
                                               }
-                                              this.a(25, 128, 64, param0 ^ 6024);
-                                              this.f(0);
+                                              this.applyAreaEffect(25, 128, 64, param0 ^ 6024);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (41 == this.field_I) {
-                                              this.a(0, (byte) 37, 3);
+                                              this.playTypeSound(0, (byte) 37, 3);
                                               var7_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                                               var8 = 0;
                                               do {
@@ -2252,99 +2252,99 @@ final class mi extends DualLinkNode {
                                                   var8 = 0;
                                                   break;
                                                 }
-                                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 42, this.field_G, this.field_q);
+                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 42, this.field_G, this.field_q);
                                                 var9 = u.a(var7_ref_jd, -2147483648, 8192);
-                                                ((mi) (var5)).field_u = of.sine(-95, var9) >> 9;
-                                                ((mi) (var5)).field_F = (3 * BevelBoxPainter.cosine(var9, -111) >> 11) - 64;
-                                                this.field_q.b(52, (mi) (var5));
+                                                ((SpellProjectile) (var5)).field_u = of.sine(-95, var9) >> 9;
+                                                ((SpellProjectile) (var5)).field_F = (3 * BevelBoxPainter.cosine(var9, -111) >> 11) - 64;
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                 var8++;
                                               } while (var19 == 0);
                                               while (var8 < 4) {
-                                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 76, this.field_G, this.field_q);
+                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 76, this.field_G, this.field_q);
                                                 var9 = u.a(var7_ref_jd, param0 ^ -2147477632, 8192);
-                                                ((mi) (var5)).field_u = of.sine(-71, var9) >> 11;
-                                                ((mi) (var5)).field_F = BevelBoxPainter.cosine(var9, param0 - 6130) >> 11;
-                                                this.field_q.b(52, (mi) (var5));
+                                                ((SpellProjectile) (var5)).field_u = of.sine(-71, var9) >> 11;
+                                                ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var9, param0 - 6130) >> 11;
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                 var8++;
                                                 if (var19 != 0) {
                                                   return;
                                                 }
                                               }
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
-                                              this.a(5, 128, 64, 8);
-                                              this.f(param0 ^ 6016);
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              this.applyAreaEffect(5, 128, 64, 8);
+                                              this.remove(param0 ^ 6016);
                                               return;
                                             }
                                             if (this.field_I == 67) {
-                                              this.a(1, (byte) 37, 0);
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 86, this.field_G, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
+                                              this.playTypeSound(1, (byte) 37, 0);
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 86, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                               var7 = 0;
                                               while (var7 < 15) {
-                                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 16, this.field_G, this.field_q);
+                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 16, this.field_G, this.field_q);
                                                 var8 = 8192 * var7 / 15;
-                                                ((mi) (var5)).field_u = of.sine(118, var8) >> 9;
-                                                ((mi) (var5)).field_F = (3 * BevelBoxPainter.cosine(var8, param0 ^ -6117) >> 11) - 64;
-                                                ((mi) (var5)).field_w = this.field_w;
-                                                this.field_q.b(param0 ^ 6068, (mi) (var5));
+                                                ((SpellProjectile) (var5)).field_u = of.sine(118, var8) >> 9;
+                                                ((SpellProjectile) (var5)).field_F = (3 * BevelBoxPainter.cosine(var8, param0 ^ -6117) >> 11) - 64;
+                                                ((SpellProjectile) (var5)).field_w = this.field_w;
+                                                this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
                                                 var7++;
                                                 if (var19 != 0) {
                                                   return;
                                                 }
                                               }
-                                              this.a(25, 128, 64, 8);
-                                              this.f(0);
+                                              this.applyAreaEffect(25, 128, 64, 8);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (this.field_I == 146) {
-                                              this.a(0, (byte) 37, 7);
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 131, this.field_G, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
+                                              this.playTypeSound(0, (byte) 37, 7);
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 131, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                               var7 = 0;
                                               while (var7 < 15) {
-                                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 145, this.field_G, this.field_q);
+                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 145, this.field_G, this.field_q);
                                                 var8 = 8192 * var7 / 15;
-                                                ((mi) (var5)).field_u = of.sine(-78, var8) >> 9;
-                                                ((mi) (var5)).field_F = -64 + (3 * BevelBoxPainter.cosine(var8, -116) >> 11);
-                                                ((mi) (var5)).field_z = ((mi) (var5)).field_z + 4 * ((mi) (var5)).field_F;
-                                                ((mi) (var5)).field_o = ((mi) (var5)).field_o + 4 * ((mi) (var5)).field_u;
-                                                ((mi) (var5)).field_G = ((mi) (var5)).field_z >> 4;
-                                                ((mi) (var5)).field_v = ((mi) (var5)).field_o >> 4;
-                                                this.field_q.b(param0 ^ 6068, (mi) (var5));
+                                                ((SpellProjectile) (var5)).field_u = of.sine(-78, var8) >> 9;
+                                                ((SpellProjectile) (var5)).field_F = -64 + (3 * BevelBoxPainter.cosine(var8, -116) >> 11);
+                                                ((SpellProjectile) (var5)).field_z = ((SpellProjectile) (var5)).field_z + 4 * ((SpellProjectile) (var5)).field_F;
+                                                ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_o + 4 * ((SpellProjectile) (var5)).field_u;
+                                                ((SpellProjectile) (var5)).field_G = ((SpellProjectile) (var5)).field_z >> 4;
+                                                ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_o >> 4;
+                                                this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
                                                 var7++;
                                                 if (var19 != 0) {
                                                   return;
                                                 }
                                               }
-                                              this.a(25, 128, 128, 8);
-                                              this.f(0);
+                                              this.applyAreaEffect(25, 128, 128, 8);
+                                              this.remove(0);
                                               return;
                                             }
                                           }
                                           if (this.field_v < -640) {
-                                            this.f(0);
+                                            this.remove(0);
                                             return;
                                           }
                                           if (this.field_v > this.field_q.field_y + 640) {
-                                            this.f(0);
+                                            this.remove(0);
                                             return;
                                           }
                                           if (this.field_G <= this.field_q.field_H) {
                                             return;
                                           }
-                                          this.f(0);
+                                          this.remove(0);
                                           return;
                                         }
                                       }
-                                      if (this.field_q.a(this.field_G, this.field_v, (byte) -83)) {
+                                      if (this.field_q.isSolidAt(this.field_G, this.field_v, (byte) -83)) {
                                         return;
                                       }
-                                      this.a(1, (byte) 37, 6);
-                                      this.a(25, 32, 64, 8);
-                                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 128, this.field_G, this.field_q);
-                                      this.field_q.b(52, (mi) (var5));
-                                      this.f(0);
+                                      this.playTypeSound(1, (byte) 37, 6);
+                                      this.applyAreaEffect(25, 32, 64, 8);
+                                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 128, this.field_G, this.field_q);
+                                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                      this.remove(0);
                                       return;
                                     }
                                   }
@@ -2364,31 +2364,31 @@ final class mi extends DualLinkNode {
                     if (this.field_I == 49 ||
                       10 == this.field_I ||
                       43 == this.field_I) {
-                      this.a(3, (byte) 34);
+                      this.updateFlightSound(3, (byte) 34);
                     }
                     if (this.field_I == 0) {
-                      this.a(9, (byte) 34);
+                      this.updateFlightSound(9, (byte) 34);
                     }
                     if (this.field_I == 52 ||
                       this.field_I == 50 ||
                       this.field_I == 54) {
-                      this.a(4, (byte) 34);
+                      this.updateFlightSound(4, (byte) 34);
                     }
                     if (this.field_I == 23 ||
                       24 == this.field_I ||
                       this.field_I == 82 ||
                       this.field_I == 21) {
-                      this.a(1, (byte) 34);
+                      this.updateFlightSound(1, (byte) 34);
                       if (this.field_I == 23) {
-                        var5 = this.a(this.field_v + (int)(-8.0 + Math.random() * 17.0), (ml) null, (byte) 81, 90, this.field_G + (int)(-8.0 + Math.random() * 17.0), this.field_q);
-                        this.field_q.b(52, (mi) (var5));
+                        var5 = this.spawnFromHere(this.field_v + (int)(-8.0 + Math.random() * 17.0), (BattleUnit) null, (byte) 81, 90, this.field_G + (int)(-8.0 + Math.random() * 17.0), this.field_q);
+                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                       }
                       if (this.field_I == 82) {
                         this.field_x = this.field_x + 1;
                         if (this.field_x > 4) {
                           this.field_x = this.field_x - 4;
-                          var5 = this.a(this.field_v, (ml) null, (byte) 81, 90, this.field_G, this.field_q);
-                          this.field_q.b(param0 ^ 6068, (mi) (var5));
+                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
+                          this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
                         }
                       }
                     }
@@ -2398,13 +2398,13 @@ final class mi extends DualLinkNode {
                       if (this.field_I != 17 &&
                         this.field_I != 91) {
                         if (14 == this.field_I) {
-                          this.a(0, (byte) 34);
+                          this.updateFlightSound(0, (byte) 34);
                           this.field_x = this.field_x + 1;
                           decompiledFrameRemainder16 = !(this.field_x <= 4);
                           if (decompiledFrameRemainder16) {
                             this.field_x = this.field_x - 4;
-                            var5 = this.a(this.field_v, (ml) null, (byte) 81, 88, this.field_G, this.field_q);
-                            this.field_q.b(52, (mi) (var5));
+                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
+                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                             decompiledFrameRemainder16 = (var19 != 0);
                           }
                         }
@@ -2418,38 +2418,38 @@ final class mi extends DualLinkNode {
                                   92 != this.field_I) {
                                   if (this.field_I != 18) {
                                     if (115 == this.field_I) {
-                                      this.a(6, (byte) 34);
+                                      this.updateFlightSound(6, (byte) 34);
                                       this.field_x = this.field_x + 1;
                                       decompiledFrameRemainder16 = !(4 >= this.field_x);
                                       if (decompiledFrameRemainder16) {
                                         this.field_x = this.field_x - 4;
-                                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 129, this.field_G, this.field_q);
-                                        this.field_q.b(52, (mi) (var5));
+                                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 129, this.field_G, this.field_q);
+                                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                         decompiledFrameRemainder16 = (var19 != 0);
                                       }
                                     }
                                     if (decompiledFrameRemainder16) {
                                       if (this.field_I == 120 ||
                                         this.field_I == 124) {
-                                        this.a(6, (byte) 34);
+                                        this.updateFlightSound(6, (byte) 34);
                                         decompiledFrameRemainder16 = (var19 != 0);
                                       }
                                       if (decompiledFrameRemainder16) {
                                         if ((this.field_I != 140) &&
                                           (decompiledFrameRemainder16 = (this.field_I == 145))) {
-                                          this.a(7, (byte) 34);
+                                          this.updateFlightSound(7, (byte) 34);
                                           decompiledFrameRemainder16 = (var19 != 0);
                                         }
                                         if (decompiledFrameRemainder16) {
-                                          this.a(7, (byte) 34);
+                                          this.updateFlightSound(7, (byte) 34);
                                           this.field_x = this.field_x + 1;
                                           decompiledFrameRemainder16 = !(this.field_x <= 2);
                                           if (decompiledFrameRemainder16) {
                                             this.field_x = this.field_x - 2;
-                                            var5 = this.a(this.field_v, (ml) null, (byte) 81, 130, this.field_G, this.field_q);
-                                            this.field_q.b(52, (mi) (var5));
-                                            var5 = this.a(-16 + (this.field_v + (int)(32.0 * Math.random())), (ml) null, (byte) 81, 130, -16 + this.field_G + (int)(32.0 * Math.random()), this.field_q);
-                                            this.field_q.b(param0 ^ 6068, (mi) (var5));
+                                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 130, this.field_G, this.field_q);
+                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                            var5 = this.spawnFromHere(-16 + (this.field_v + (int)(32.0 * Math.random())), (BattleUnit) null, (byte) 81, 130, -16 + this.field_G + (int)(32.0 * Math.random()), this.field_q);
+                                            this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
                                             decompiledFrameRemainder16 = (var19 != 0);
                                           }
                                         }
@@ -2457,101 +2457,101 @@ final class mi extends DualLinkNode {
                                     }
                                   }
                                   if (decompiledFrameRemainder16) {
-                                    this.a(0, (byte) 34);
+                                    this.updateFlightSound(0, (byte) 34);
                                     this.field_x = this.field_x + 1;
                                     decompiledFrameRemainder16 = !(this.field_x <= 2);
                                     if (decompiledFrameRemainder16) {
                                       this.field_x = this.field_x - 2;
-                                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 87, this.field_G, this.field_q);
-                                      this.field_q.b(param0 ^ 6068, (mi) (var5));
-                                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 88, this.field_G, this.field_q);
-                                      ((mi) (var5)).field_F = -this.field_F;
-                                      ((mi) (var5)).field_u = -this.field_u;
-                                      this.field_q.b(52, (mi) (var5));
+                                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
+                                      this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
+                                      ((SpellProjectile) (var5)).field_F = -this.field_F;
+                                      ((SpellProjectile) (var5)).field_u = -this.field_u;
+                                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                       decompiledFrameRemainder16 = (var19 != 0);
                                     }
                                   }
                                 }
                                 if (decompiledFrameRemainder16) {
-                                  this.a(3, (byte) 34);
+                                  this.updateFlightSound(3, (byte) 34);
                                   this.field_x = this.field_x + 1;
                                   decompiledFrameRemainder16 = !(this.field_x <= 2);
                                   if (decompiledFrameRemainder16) {
                                     this.field_x = this.field_x - 2;
-                                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 95, this.field_G, this.field_q);
-                                    this.field_q.b(52, (mi) (var5));
+                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 95, this.field_G, this.field_q);
+                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                     decompiledFrameRemainder16 = (var19 != 0);
                                   }
                                 }
                               }
                               if (decompiledFrameRemainder16) {
-                                this.a(8, (byte) 34);
-                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 166, this.field_G, this.field_q);
-                                this.field_q.b(52, (mi) (var5));
-                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 166, this.field_G, this.field_q);
-                                ((mi) (var5)).field_u = (int)(21.0 * Math.random()) - 10;
-                                ((mi) (var5)).field_F = (int)(21.0 * Math.random()) - 10;
-                                this.field_q.b(52, (mi) (var5));
-                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 166, this.field_G, this.field_q);
-                                ((mi) (var5)).field_u = (int)(Math.random() * 21.0) - 10;
-                                ((mi) (var5)).field_F = (int)(21.0 * Math.random()) - 10;
-                                this.field_q.b(52, (mi) (var5));
+                                this.updateFlightSound(8, (byte) 34);
+                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 166, this.field_G, this.field_q);
+                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 166, this.field_G, this.field_q);
+                                ((SpellProjectile) (var5)).field_u = (int)(21.0 * Math.random()) - 10;
+                                ((SpellProjectile) (var5)).field_F = (int)(21.0 * Math.random()) - 10;
+                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 166, this.field_G, this.field_q);
+                                ((SpellProjectile) (var5)).field_u = (int)(Math.random() * 21.0) - 10;
+                                ((SpellProjectile) (var5)).field_F = (int)(21.0 * Math.random()) - 10;
+                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                 decompiledFrameRemainder16 = (var19 != 0);
                               }
                             }
                             if (decompiledFrameRemainder16) {
-                              this.a(8, (byte) 34);
-                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 166, this.field_G, this.field_q);
-                              this.field_q.b(param0 - 5964, (mi) (var5));
+                              this.updateFlightSound(8, (byte) 34);
+                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 166, this.field_G, this.field_q);
+                              this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
                               decompiledFrameRemainder16 = (var19 != 0);
                             }
                           }
                           if (decompiledFrameRemainder16) {
-                            this.a(0, (byte) 34);
+                            this.updateFlightSound(0, (byte) 34);
                             this.field_x = this.field_x + 1;
                             decompiledFrameRemainder16 = !(2 >= this.field_x);
                             if (decompiledFrameRemainder16) {
                               this.field_x = this.field_x - 2;
-                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 87, this.field_G, this.field_q);
-                              this.field_q.b(param0 ^ 6068, (mi) (var5));
-                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 88, this.field_G, this.field_q);
-                              ((mi) (var5)).field_F = -this.field_F;
-                              ((mi) (var5)).field_u = -this.field_u;
-                              this.field_q.b(52, (mi) (var5));
+                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
+                              this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
+                              ((SpellProjectile) (var5)).field_F = -this.field_F;
+                              ((SpellProjectile) (var5)).field_u = -this.field_u;
+                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                               decompiledFrameRemainder16 = (var19 != 0);
                             }
                           }
                         }
                       }
                       if (decompiledFrameRemainder16) {
-                        this.a(0, (byte) 34);
+                        this.updateFlightSound(0, (byte) 34);
                         this.field_x = this.field_x + 1;
                         if (!(this.field_x <= 2)) {
                           this.field_x = this.field_x - 2;
-                          var5 = this.a(this.field_v, (ml) null, (byte) 81, 87, this.field_G, this.field_q);
-                          this.field_q.b(52, (mi) (var5));
-                          var5 = this.a(this.field_v, (ml) null, (byte) 81, 88, this.field_G, this.field_q);
-                          ((mi) (var5)).field_u = -this.field_u;
-                          ((mi) (var5)).field_F = -this.field_F;
-                          this.field_q.b(52, (mi) (var5));
+                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
+                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
+                          ((SpellProjectile) (var5)).field_u = -this.field_u;
+                          ((SpellProjectile) (var5)).field_F = -this.field_F;
+                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                           if (var19 != 0) {
-                            this.a(0, (byte) 34);
+                            this.updateFlightSound(0, (byte) 34);
                             this.field_x = this.field_x + 1;
                             if (4 < this.field_x) {
                               this.field_x = this.field_x - 4;
-                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 87, this.field_G, this.field_q);
-                              this.field_q.b(52, (mi) (var5));
+                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
+                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                             }
                           }
                         }
                       }
                     } else {
-                      this.a(0, (byte) 34);
+                      this.updateFlightSound(0, (byte) 34);
                       this.field_x = this.field_x + 1;
                       if (4 < this.field_x) {
                         this.field_x = this.field_x - 4;
-                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 87, this.field_G, this.field_q);
-                        this.field_q.b(52, (mi) (var5));
+                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
+                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                       }
                     }
                     boolean decompiledFrameRemainder6 = true;
@@ -2769,23 +2769,23 @@ final class mi extends DualLinkNode {
                           this.field_F = this.field_F + 4;
                           if (158 == this.field_I &&
                             250 <= this.field_y) {
-                            var5 = this.a(this.field_v, (ml) null, (byte) 81, 163, this.field_G, this.field_q);
-                            this.a(0, (byte) 37, 0);
-                            this.field_q.b(52, (mi) (var5));
+                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 163, this.field_G, this.field_q);
+                            this.playTypeSound(0, (byte) 37, 0);
+                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                             var6 = 0;
                             while (15 > var6) {
-                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 159, this.field_G, this.field_q);
+                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 159, this.field_G, this.field_q);
                               var7 = var6 * 8192 / 15;
-                              ((mi) (var5)).field_u = of.sine(-36, var7) >> 10;
-                              ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var7, -127) >> 11) - 64;
-                              this.field_q.b(52, (mi) (var5));
+                              ((SpellProjectile) (var5)).field_u = of.sine(-36, var7) >> 10;
+                              ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var7, -127) >> 11) - 64;
+                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                               var6++;
                               if (var19 != 0) {
                                 return;
                               }
                             }
-                            this.a(0, 128, 64, 8);
-                            this.f(0);
+                            this.applyAreaEffect(0, 128, 64, 8);
+                            this.remove(0);
                             return;
                           }
                         }
@@ -2793,14 +2793,14 @@ final class mi extends DualLinkNode {
                           this.field_y == 100 ||
                           150 == this.field_y ||
                           this.field_y == 200)) {
-                          var5 = this.a(this.field_v, this.field_t, (byte) 81, 159, this.field_G, this.field_q);
-                          ((mi) (var5)).field_F = this.field_F / 2;
-                          ((mi) (var5)).field_u = this.field_u / 2;
-                          this.field_q.b(52, (mi) (var5));
+                          var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 159, this.field_G, this.field_q);
+                          ((SpellProjectile) (var5)).field_F = this.field_F / 2;
+                          ((SpellProjectile) (var5)).field_u = this.field_u / 2;
+                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                         }
                         if (this.field_I == 0) {
-                          var5 = this.a(this.field_v, (ml) null, (byte) 81, 102, this.field_G, this.field_q);
-                          this.field_q.b(param0 - 5964, (mi) (var5));
+                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 102, this.field_G, this.field_q);
+                          this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
                         }
                         this.field_z = this.field_z + this.field_F;
                         this.field_o = this.field_o + this.field_u;
@@ -2815,17 +2815,17 @@ final class mi extends DualLinkNode {
                     }
                     var6 = this.field_o;
                     var7 = this.field_z;
-                    if (!this.field_q.b(-this.field_r + this.field_G, 2, this.field_v - this.field_r, this.field_p)) {
+                    if (!this.field_q.spriteOverlapsTerrain(-this.field_r + this.field_G, 2, this.field_v - this.field_r, this.field_p)) {
                       if (-640 > this.field_v) {
-                        this.f(0);
+                        this.remove(0);
                         return;
                       }
                       if ((this.field_q.field_y + 640) < this.field_v) {
-                        this.f(0);
+                        this.remove(0);
                         return;
                       }
                       if (this.field_G > this.field_q.field_H) {
-                        this.f(0);
+                        this.remove(0);
                         return;
                       }
                       if (null == this.field_t) {
@@ -2834,28 +2834,28 @@ final class mi extends DualLinkNode {
                       if (this.field_y > 25) {
                         return;
                       }
-                      this.field_q.a(-54, this.field_t);
+                      this.field_q.stampUnitMask(-54, this.field_t);
                       return;
                     }
                     boolean decompiledFrameCompleted6 = true;
                     if (92 == this.field_I) {
-                      this.a(0, (byte) 37, 3);
-                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
-                      this.field_q.b(param0 ^ 6068, (mi) (var5));
-                      this.a(50, 96, 48, 8);
+                      this.playTypeSound(0, (byte) 37, 3);
+                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
+                      this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                      this.applyAreaEffect(50, 96, 48, 8);
                       var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                       var10 = 0;
                       while (var10 < 15) {
-                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 76, this.field_G, this.field_q);
+                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 76, this.field_G, this.field_q);
                         stackIn_958_0 = u.a(var9_ref_jd, -2147483648, 8192);
                         if (var19 != 0) {
                           decompiledFrameCompleted6 = false;
                           break;
                         }
                         var11 = stackIn_958_0;
-                        ((mi) (var5)).field_u = of.sine(119, var11) >> 10;
-                        ((mi) (var5)).field_F = BevelBoxPainter.cosine(var11, -119) >> 10;
-                        this.field_q.b(52, (mi) (var5));
+                        ((SpellProjectile) (var5)).field_u = of.sine(119, var11) >> 10;
+                        ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -119) >> 10;
+                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                         var10++;
                       }
                     }
@@ -2864,113 +2864,113 @@ final class mi extends DualLinkNode {
                     }
                     var8 = stackIn_958_0;
                     if (this.field_I == 162) {
-                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 163, this.field_G, this.field_q);
-                      this.a(0, (byte) 37, 0);
-                      this.field_q.b(52, (mi) (var5));
+                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 163, this.field_G, this.field_q);
+                      this.playTypeSound(0, (byte) 37, 0);
+                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                       var9 = 0;
                       while (var9 < 4) {
-                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 159, this.field_G, this.field_q);
+                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 159, this.field_G, this.field_q);
                         var10 = 8192 * var9 / 4;
-                        ((mi) (var5)).field_u = of.sine(param0 ^ 6136, var10) >> 10;
-                        ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var10, -113) >> 11) - 64;
-                        this.field_q.b(52, (mi) (var5));
+                        ((SpellProjectile) (var5)).field_u = of.sine(param0 ^ 6136, var10) >> 10;
+                        ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var10, -113) >> 11) - 64;
+                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                         var9++;
                         if (var19 != 0) {
                           return;
                         }
                       }
-                      var5 = this.a(this.field_v, this.field_t, (byte) 81, 167, this.field_G, this.field_q);
-                      ((mi) (var5)).field_u = 0;
-                      ((mi) (var5)).field_F = -1;
-                      this.field_q.b(52, (mi) (var5));
-                      this.a(60, 128, 64, param0 ^ 6024);
-                      this.f(0);
+                      var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 167, this.field_G, this.field_q);
+                      ((SpellProjectile) (var5)).field_u = 0;
+                      ((SpellProjectile) (var5)).field_F = -1;
+                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      this.applyAreaEffect(60, 128, 64, param0 ^ 6024);
+                      this.remove(0);
                       return;
                     }
                     if (91 == this.field_I) {
-                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 86, this.field_G, this.field_q);
-                      this.a(0, (byte) 37, 0);
-                      this.field_q.b(52, (mi) (var5));
+                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 86, this.field_G, this.field_q);
+                      this.playTypeSound(0, (byte) 37, 0);
+                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                       var9 = 0;
                       while (var9 < 15) {
-                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 16, this.field_G, this.field_q);
+                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 16, this.field_G, this.field_q);
                         var10 = var9 * 8192 / 15;
-                        ((mi) (var5)).field_u = of.sine(param0 - 6056, var10) >> 10;
-                        ((mi) (var5)).field_F = -64 + (BevelBoxPainter.cosine(var10, param0 - 6119) >> 11);
-                        this.field_q.b(52, (mi) (var5));
+                        ((SpellProjectile) (var5)).field_u = of.sine(param0 - 6056, var10) >> 10;
+                        ((SpellProjectile) (var5)).field_F = -64 + (BevelBoxPainter.cosine(var10, param0 - 6119) >> 11);
+                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                         var9++;
                         if (var19 != 0) {
                           return;
                         }
                       }
-                      this.a(25, 128, 64, 8);
-                      this.f(0);
+                      this.applyAreaEffect(25, 128, 64, 8);
+                      this.remove(0);
                       return;
                     }
                     if (52 == this.field_I) {
-                      this.a(1, (byte) 37, 4);
+                      this.playTypeSound(1, (byte) 37, 4);
                       var8 = 103;
-                      this.a(30, 128, 64, 8);
+                      this.applyAreaEffect(30, 128, 64, 8);
                     }
                     if (this.field_I == 50) {
-                      this.a(1, (byte) 37, 4);
+                      this.playTypeSound(1, (byte) 37, 4);
                       var8 = 103;
-                      this.a(15, 256, 48, 8);
+                      this.applyAreaEffect(15, 256, 48, 8);
                     }
                     if (this.field_I == 54) {
-                      this.a(1, (byte) 37, 4);
-                      this.a(25, 128, 64, param0 - 6008);
+                      this.playTypeSound(1, (byte) 37, 4);
+                      this.applyAreaEffect(25, 128, 64, param0 - 6008);
                       var8 = 104;
                     }
                     if (10 == this.field_I) {
-                      this.a(1, (byte) 37, 0);
+                      this.playTypeSound(1, (byte) 37, 0);
                       var8 = 85;
-                      this.a(50, 128, 64, 8);
+                      this.applyAreaEffect(50, 128, 64, 8);
                     }
                     if (17 == this.field_I) {
-                      this.a(1, (byte) 37, 0);
+                      this.playTypeSound(1, (byte) 37, 0);
                       var8 = 85;
-                      this.a(25, 128, 64, 8);
+                      this.applyAreaEffect(25, 128, 64, 8);
                     }
                     if (18 == this.field_I) {
-                      this.a(1, (byte) 37, 0);
-                      this.a(15, 128, 64, 8);
+                      this.playTypeSound(1, (byte) 37, 0);
+                      this.applyAreaEffect(15, 128, 64, 8);
                       var8 = 85;
                     }
                     if (this.field_I == 14) {
-                      this.a(1, (byte) 37, 0);
-                      this.a(25, 96, 48, 8);
+                      this.playTypeSound(1, (byte) 37, 0);
+                      this.applyAreaEffect(25, 96, 48, 8);
                       var8 = 86;
                     }
                     if (11 == this.field_I) {
-                      this.a(1, (byte) 37, 0);
+                      this.playTypeSound(1, (byte) 37, 0);
                       var8 = 85;
-                      this.a(50, 128, 64, 8);
+                      this.applyAreaEffect(50, 128, 64, 8);
                     }
                     if (this.field_I == 140) {
-                      this.a(0, (byte) 37, 6);
+                      this.playTypeSound(0, (byte) 37, 6);
                       var8 = 130;
-                      this.a(50, 128, 64, 8);
+                      this.applyAreaEffect(50, 128, 64, 8);
                     }
                     if (124 == this.field_I) {
-                      this.a(2, (byte) 37, 6);
-                      this.a(20, 32, 16, 8);
+                      this.playTypeSound(2, (byte) 37, 6);
+                      this.applyAreaEffect(20, 32, 16, 8);
                       var8 = 128;
                     }
                     if (this.field_I == 164) {
-                      this.a(2, (byte) 37, 0);
+                      this.playTypeSound(2, (byte) 37, 0);
                       var8 = 99;
                       if (this.field_y > 1) {
                         stackIn_1007_1 = 5;
                       } else {
                         stackIn_1007_1 = 0;
                       }
-                      this.a(stackIn_1007_1, 32, 32, 8);
+                      this.applyAreaEffect(stackIn_1007_1, 32, 32, 8);
                     }
                     if (this.field_I == 161) {
                       var8 = 163;
                       if (jo.field_b) {
-                        this.a(0, 0, 16, param0 ^ 6024);
+                        this.applyAreaEffect(0, 0, 16, param0 ^ 6024);
                       }
                     }
                     if (this.field_I == 158) {
@@ -2979,70 +2979,70 @@ final class mi extends DualLinkNode {
                         var9 = 50;
                       }
                       var8 = 163;
-                      this.a(var9, 128, 64, 8);
+                      this.applyAreaEffect(var9, 128, 64, 8);
                     }
                     if (this.field_I == 120) {
-                      this.a(1, (byte) 37, 6);
+                      this.playTypeSound(1, (byte) 37, 6);
                       var8 = 154;
-                      this.a(0, 32, 32, 8);
+                      this.applyAreaEffect(0, 32, 32, 8);
                     }
                     if (this.field_I == 115) {
                       boolean decompiledSharedTail2 = !(!jo.field_b);
                       if (!decompiledSharedTail2) {
-                        this.a(2, (byte) 37, 6);
-                        this.field_q.a(this.field_G - 8, param0 ^ -6121, -8 + this.field_v, gj.field_f[0].toRgbSprite());
-                        var5 = this.a(this.field_v, this.field_t, (byte) 81, 117, this.field_G, this.field_q);
-                        this.field_q.b(52, (mi) (var5));
+                        this.playTypeSound(2, (byte) 37, 6);
+                        this.field_q.carveTerrainAndSprite(this.field_G - 8, param0 ^ -6121, -8 + this.field_v, gj.field_f[0].toRgbSprite());
+                        var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 117, this.field_G, this.field_q);
+                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                         decompiledSharedTail2 = (var19 != 0);
                       }
                       if (decompiledSharedTail2) {
-                        this.a(1, (byte) 37, 6);
-                        this.a(50, 128, 64, 8);
+                        this.playTypeSound(1, (byte) 37, 6);
+                        this.applyAreaEffect(50, 128, 64, 8);
                         var8 = 128;
                       }
                     }
                     if (this.field_I == 0) {
-                      this.a(1, (byte) 37, 9);
-                      this.a(10, 64, 32, 8);
+                      this.playTypeSound(1, (byte) 37, 9);
+                      this.applyAreaEffect(10, 64, 32, 8);
                       var8 = 101;
                     }
                     if (this.field_I == 43) {
-                      this.a(2, (byte) 37, 3);
-                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 95, this.field_G, this.field_q);
-                      this.field_q.b(param0 ^ 6068, (mi) (var5));
-                      this.a(5, 32, 16, 8);
+                      this.playTypeSound(2, (byte) 37, 3);
+                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 95, this.field_G, this.field_q);
+                      this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                      this.applyAreaEffect(5, 32, 16, 8);
                     }
                     if (this.field_I == 24) {
-                      this.a(1, (byte) 37, 1);
-                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 89, this.field_G, this.field_q);
-                      this.field_q.b(52, (mi) (var5));
-                      this.a(25, 128, 64, 8);
+                      this.playTypeSound(1, (byte) 37, 1);
+                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
+                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      this.applyAreaEffect(25, 128, 64, 8);
                       this.field_y = this.field_y + 1;
-                      this.f((byte) -104);
+                      this.drawUnitMarkers((byte) -104);
                     }
                     if (this.field_I == 82) {
-                      this.a(1, (byte) 37, 1);
-                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 89, this.field_G, this.field_q);
-                      this.field_q.b(52, (mi) (var5));
-                      this.a(25, 128, 48, 8);
-                      this.f((byte) -100);
+                      this.playTypeSound(1, (byte) 37, 1);
+                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
+                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      this.applyAreaEffect(25, 128, 48, 8);
+                      this.drawUnitMarkers((byte) -100);
                       this.field_o = var6;
                       this.field_z = var7;
                       this.field_G = this.field_z >> 4;
                       this.field_v = this.field_o >> 4;
                     }
                     if (this.field_I == 49) {
-                      this.a(0, (byte) 37, 3);
+                      this.playTypeSound(0, (byte) 37, 3);
                       var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                       var10 = 0;
                       while (true) {
                         if (var10 < 10) {
-                          var5 = this.a(this.field_v, (ml) null, (byte) 81, 42, this.field_G, this.field_q);
-                          ((mi) (var5)).field_w = this.field_w;
+                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 42, this.field_G, this.field_q);
+                          ((SpellProjectile) (var5)).field_w = this.field_w;
                           var11 = u.a(var9_ref_jd, param0 ^ -2147477632, 8192);
-                          ((mi) (var5)).field_u = of.sine(126, var11) >> 9;
-                          ((mi) (var5)).field_F = -64 + (BevelBoxPainter.cosine(var11, -119) >> 9);
-                          this.field_q.b(52, (mi) (var5));
+                          ((SpellProjectile) (var5)).field_u = of.sine(126, var11) >> 9;
+                          ((SpellProjectile) (var5)).field_F = -64 + (BevelBoxPainter.cosine(var11, -119) >> 9);
+                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                           var10++;
                           if (var19 == 0) {
                             continue;
@@ -3050,22 +3050,22 @@ final class mi extends DualLinkNode {
                         } else {
                           this.field_G = ce.field_k;
                           this.field_v = NodeHashTable.field_m;
-                          var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
-                          this.field_q.b(52, (mi) (var5));
+                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
+                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                         }
                         break;
                       }
-                      this.a(50, 128, 96, 8);
+                      this.applyAreaEffect(50, 128, 96, 8);
                     }
                     boolean decompiledFrameCompleted3 = true;
                     boolean decompiledFrameRemainder3 = true;
                     boolean decompiledFrameCompleted4 = true;
                     boolean decompiledFrameCompleted5 = true;
                     if (23 == this.field_I) {
-                      this.a(0, (byte) 37, 1);
-                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 89, this.field_G, this.field_q);
-                      this.field_q.b(52, (mi) (var5));
-                      this.a(25, 128, 128, 8);
+                      this.playTypeSound(0, (byte) 37, 1);
+                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
+                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      this.applyAreaEffect(25, 128, 128, 8);
                       this.field_o = var6;
                       this.field_z = var7;
                       this.field_v = this.field_o >> 4;
@@ -3081,15 +3081,15 @@ final class mi extends DualLinkNode {
                         var10++;
                       } while (var19 == 0);
                       while (var10 < 5) {
-                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 82, this.field_G, this.field_q);
+                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 82, this.field_G, this.field_q);
                         var11 = u.a(var9_ref_jd, -2147483648, 8192);
-                        ((mi) (var5)).field_u = of.sine(param0 - 5899, var11) >> 10;
-                        ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var11, -120) >> 11) - 48;
-                        ((mi) (var5)).field_v = ((mi) (var5)).field_v + ((mi) (var5)).field_u;
-                        ((mi) (var5)).field_G = ((mi) (var5)).field_G + 2 * (48 + ((mi) (var5)).field_F);
-                        ((mi) (var5)).field_o = ((mi) (var5)).field_v << 4;
-                        ((mi) (var5)).field_z = ((mi) (var5)).field_G << 4;
-                        this.field_q.b(52, (mi) (var5));
+                        ((SpellProjectile) (var5)).field_u = of.sine(param0 - 5899, var11) >> 10;
+                        ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var11, -120) >> 11) - 48;
+                        ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_v + ((SpellProjectile) (var5)).field_u;
+                        ((SpellProjectile) (var5)).field_G = ((SpellProjectile) (var5)).field_G + 2 * (48 + ((SpellProjectile) (var5)).field_F);
+                        ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
+                        ((SpellProjectile) (var5)).field_z = ((SpellProjectile) (var5)).field_G << 4;
+                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                         var10++;
                         if (var19 != 0) {
                           decompiledFrameCompleted5 = false;
@@ -3099,19 +3099,19 @@ final class mi extends DualLinkNode {
                     }
                     if ((decompiledFrameCompleted5) &&
                       (this.field_I == 21)) {
-                      this.a(1, (byte) 37, 1);
-                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 89, this.field_G, this.field_q);
-                      this.field_q.b(52, (mi) (var5));
-                      this.a(40, 96, 48, param0 - 6008);
+                      this.playTypeSound(1, (byte) 37, 1);
+                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
+                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      this.applyAreaEffect(40, 96, 48, param0 - 6008);
                       var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                       var10 = 0;
                       while (var10 < 7) {
-                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 20, this.field_G, this.field_q);
-                        ((mi) (var5)).field_w = this.field_w;
+                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 20, this.field_G, this.field_q);
+                        ((SpellProjectile) (var5)).field_w = this.field_w;
                         var11 = u.a(var9_ref_jd, -2147483648, 8192);
-                        ((mi) (var5)).field_u = of.sine(10, var11) >> 9;
-                        ((mi) (var5)).field_F = BevelBoxPainter.cosine(var11, -114) >> 9;
-                        this.field_q.b(52, (mi) (var5));
+                        ((SpellProjectile) (var5)).field_u = of.sine(10, var11) >> 9;
+                        ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -114) >> 9;
+                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                         var10++;
                         if (var19 != 0) {
                           decompiledFrameCompleted4 = false;
@@ -3121,20 +3121,20 @@ final class mi extends DualLinkNode {
                     }
                     if ((decompiledFrameCompleted4) &&
                       (decompiledFrameRemainder3 = (40 == this.field_I))) {
-                      this.a(1, (byte) 37, 3);
-                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
-                      this.field_q.b(52, (mi) (var5));
-                      this.a(25, 128, 48, 8);
+                      this.playTypeSound(1, (byte) 37, 3);
+                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
+                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      this.applyAreaEffect(25, 128, 48, 8);
                       var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                     }
                     if (decompiledFrameRemainder3) {
                       var10 = 0;
                       while (var10 < 10) {
-                        var5 = this.a(this.field_v, (ml) null, (byte) 81, 76, this.field_G, this.field_q);
+                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 76, this.field_G, this.field_q);
                         var11 = u.a(var9_ref_jd, -2147483648, 8192);
-                        ((mi) (var5)).field_u = of.sine(0, var11) >> 11;
-                        ((mi) (var5)).field_F = BevelBoxPainter.cosine(var11, -116) >> 11;
-                        this.field_q.b(52, (mi) (var5));
+                        ((SpellProjectile) (var5)).field_u = of.sine(0, var11) >> 11;
+                        ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -116) >> 11;
+                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                         var10++;
                         if (var19 != 0) {
                           decompiledFrameCompleted3 = false;
@@ -3151,18 +3151,18 @@ final class mi extends DualLinkNode {
                         boolean decompiledFrameRemainder0 = true;
                         boolean decompiledFrameCompleted2 = true;
                         if (this.field_I == 42) {
-                          this.a(1, (byte) 37, 3);
-                          var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
-                          this.field_q.b(52, (mi) (var5));
-                          this.a(25, 96, 48, param0 - 6008);
+                          this.playTypeSound(1, (byte) 37, 3);
+                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
+                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                          this.applyAreaEffect(25, 96, 48, param0 - 6008);
                           var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                           var10 = 0;
                           while (var10 < 4) {
-                            var5 = this.a(this.field_v, (ml) null, (byte) 81, 76, this.field_G, this.field_q);
+                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 76, this.field_G, this.field_q);
                             var11 = u.a(var9_ref_jd, -2147483648, 8192);
-                            ((mi) (var5)).field_u = of.sine(param0 - 6088, var11) >> 11;
-                            ((mi) (var5)).field_F = BevelBoxPainter.cosine(var11, -114) >> 11;
-                            this.field_q.b(52, (mi) (var5));
+                            ((SpellProjectile) (var5)).field_u = of.sine(param0 - 6088, var11) >> 11;
+                            ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -114) >> 11;
+                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                             var10++;
                             if (var19 != 0) {
                               decompiledFrameCompleted2 = false;
@@ -3172,20 +3172,20 @@ final class mi extends DualLinkNode {
                         }
                         if ((decompiledFrameCompleted2) &&
                           (decompiledFrameRemainder0 = (this.field_I == 96))) {
-                          this.a(1, (byte) 37, 3);
-                          var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
-                          this.field_q.b(52, (mi) (var5));
-                          this.a(10, 64, 32, 8);
+                          this.playTypeSound(1, (byte) 37, 3);
+                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
+                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                          this.applyAreaEffect(10, 64, 32, 8);
                           var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                         }
                         if (decompiledFrameRemainder0) {
                           var10 = 0;
                           while (var10 < 2) {
-                            var5 = this.a(this.field_v, (ml) null, (byte) 81, 43, this.field_G, this.field_q);
+                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 43, this.field_G, this.field_q);
                             var11 = u.a(var9_ref_jd, -2147483648, 8192);
-                            ((mi) (var5)).field_u = of.sine(-5, var11) >> 10;
-                            ((mi) (var5)).field_F = BevelBoxPainter.cosine(var11, -103) >> 10;
-                            this.field_q.b(52, (mi) (var5));
+                            ((SpellProjectile) (var5)).field_u = of.sine(-5, var11) >> 10;
+                            ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -103) >> 10;
+                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                             var10++;
                             if (var19 != 0) {
                               decompiledFrameCompleted1 = false;
@@ -3195,20 +3195,20 @@ final class mi extends DualLinkNode {
                         }
                         if ((decompiledFrameCompleted1) &&
                           (decompiledFrameRemainder1 = (44 == this.field_I))) {
-                          this.a(1, (byte) 37, 3);
-                          var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
-                          this.field_q.b(param0 - 5964, (mi) (var5));
-                          this.a(25, 64, 32, 8);
+                          this.playTypeSound(1, (byte) 37, 3);
+                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
+                          this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
+                          this.applyAreaEffect(25, 64, 32, 8);
                           var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                         }
                         if (decompiledFrameRemainder1) {
                           var10 = 0;
                           while (15 > var10) {
-                            var5 = this.a(this.field_v, (ml) null, (byte) 81, 43, this.field_G, this.field_q);
+                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 43, this.field_G, this.field_q);
                             var11 = u.a(var9_ref_jd, -2147483648, 8192);
-                            ((mi) (var5)).field_u = of.sine(116, var11) >> 9;
-                            ((mi) (var5)).field_F = BevelBoxPainter.cosine(var11, -112) >> 9;
-                            this.field_q.b(param0 - 5964, (mi) (var5));
+                            ((SpellProjectile) (var5)).field_u = of.sine(116, var11) >> 9;
+                            ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -112) >> 9;
+                            this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
                             var10++;
                             if (var19 != 0) {
                               decompiledFrameCompleted0 = false;
@@ -3218,33 +3218,33 @@ final class mi extends DualLinkNode {
                         }
                         if ((decompiledFrameCompleted0) &&
                           (decompiledFrameRemainder2 = (this.field_I == 156))) {
-                          var5 = this.a(this.field_v, this.field_t, (byte) 81, 168, this.field_G, this.field_q);
-                          this.field_q.b(52, (mi) (var5));
+                          var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 168, this.field_G, this.field_q);
+                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                         }
                         if (decompiledFrameRemainder2) {
-                          ((mi) (var5)).field_H = 1;
+                          ((SpellProjectile) (var5)).field_H = 1;
                         }
                         if (var8 != -1) {
-                          var5 = this.a(this.field_v, (ml) null, (byte) 81, var8, this.field_G, this.field_q);
-                          this.field_q.b(param0 ^ 6068, (mi) (var5));
+                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, var8, this.field_G, this.field_q);
+                          this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
                         }
                         if (this.field_I != 121) {
-                          this.f(param0 - 6016);
+                          this.remove(param0 - 6016);
                         }
                         return;
                       }
-                      this.a(2, (byte) 37, 3);
-                      this.a(5, 32, 16, 8);
+                      this.playTypeSound(2, (byte) 37, 3);
+                      this.applyAreaEffect(5, 32, 16, 8);
                     }
                     if (this.field_G >= 7 &&
                       !jo.field_b) {
-                      this.field_q.a(-this.field_r + this.field_G, -119, -this.field_r + this.field_v, this.field_p);
+                      this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, -119, -this.field_r + this.field_v, this.field_p);
                     }
-                    this.f(0);
+                    this.remove(0);
                     return;
                   }
                 } else {
-                  this.a(3, (byte) 34);
+                  this.updateFlightSound(3, (byte) 34);
                   this.field_z = this.field_z + this.field_F;
                   this.field_o = this.field_o + this.field_u;
                   this.field_G = this.field_z >> 4;
@@ -3258,17 +3258,17 @@ final class mi extends DualLinkNode {
                     this.field_q.a(this.field_t, param0 - 6016);
                   }
                   if (this.field_y < 50 &&
-                    !this.field_q.b(this.field_G - this.field_r, 2, -this.field_r + this.field_v, this.field_p)) {
+                    !this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, 2, -this.field_r + this.field_v, this.field_p)) {
                     if (-640 > this.field_v) {
-                      this.f(0);
+                      this.remove(0);
                       return;
                     }
                     if (this.field_q.field_y + 640 < this.field_v) {
-                      this.f(param0 ^ 6016);
+                      this.remove(param0 ^ 6016);
                       return;
                     }
                     if (this.field_q.field_H < this.field_G) {
-                      this.f(0);
+                      this.remove(0);
                       return;
                     }
                     if (null == this.field_t) {
@@ -3277,7 +3277,7 @@ final class mi extends DualLinkNode {
                     if (this.field_y >= 25) {
                       return;
                     }
-                    this.field_q.a(param0 ^ -6067, this.field_t);
+                    this.field_q.stampUnitMask(param0 ^ -6067, this.field_t);
                     if (var19 == 0) {
                       return;
                     }
@@ -3285,21 +3285,21 @@ final class mi extends DualLinkNode {
                     var6_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                     var7 = 0;
                     while (var7 < 45) {
-                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 46, this.field_G, this.field_q);
+                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 46, this.field_G, this.field_q);
                       var8 = var6_ref_jd.nextInt((byte) -46) & 8191;
-                      ((mi) (var5)).field_u = this.field_u + ((var6_ref_jd.nextInt((byte) -46) & 127) * of.sine(-122, var8) >> 16);
-                      ((mi) (var5)).field_F = this.field_F + ((127 & var6_ref_jd.nextInt((byte) -46)) * BevelBoxPainter.cosine(var8, param0 - 6140) >> 16);
-                      this.field_q.b(52, (mi) (var5));
+                      ((SpellProjectile) (var5)).field_u = this.field_u + ((var6_ref_jd.nextInt((byte) -46) & 127) * of.sine(-122, var8) >> 16);
+                      ((SpellProjectile) (var5)).field_F = this.field_F + ((127 & var6_ref_jd.nextInt((byte) -46)) * BevelBoxPainter.cosine(var8, param0 - 6140) >> 16);
+                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                       var7++;
                       if (var19 != 0) {
                         return;
                       }
                     }
-                    this.a(1, (byte) 37, 3);
-                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
-                    this.field_q.b(52, (mi) (var5));
-                    this.a(10, 5, 16, 8);
-                    this.f(0);
+                    this.playTypeSound(1, (byte) 37, 3);
+                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
+                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                    this.applyAreaEffect(10, 5, 16, 8);
+                    this.remove(0);
                     return;
                   }
                 }
@@ -3308,16 +3308,16 @@ final class mi extends DualLinkNode {
                 this.field_G = this.field_z >> 4;
                 this.field_F = this.field_F + 4;
                 this.field_v = this.field_o >> 4;
-                if (this.field_q.b(-this.field_r + this.field_G, 2, -this.field_r + this.field_v, this.field_p)) {
+                if (this.field_q.spriteOverlapsTerrain(-this.field_r + this.field_G, 2, -this.field_r + this.field_v, this.field_p)) {
                   this.field_y = this.field_y + 1;
                   var6 = this.field_v;
                   var7 = this.field_G;
                   this.field_v = NodeHashTable.field_m;
                   this.field_G = ce.field_k;
-                  this.a(1, (byte) 37, 1);
-                  var5 = this.a(this.field_v, (ml) null, (byte) 81, 89, this.field_G, this.field_q);
-                  this.field_q.b(52, (mi) (var5));
-                  this.a(5, 128, 64, param0 - 6008);
+                  this.playTypeSound(1, (byte) 37, 1);
+                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
+                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                  this.applyAreaEffect(5, 128, 64, param0 - 6008);
                   this.field_v = var6;
                   this.field_G = var7;
                   if (this.field_C == null) {
@@ -3326,11 +3326,11 @@ final class mi extends DualLinkNode {
                   var8 = 0;
                   while (true) {
                     if (this.field_y / 2 > var8) {
-                      var5 = this.a(this.field_v, (ml) null, (byte) 81, 20, this.field_G, this.field_q);
+                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 20, this.field_G, this.field_q);
                       var9 = u.a(this.field_C, -2147483648, 8192);
-                      ((mi) (var5)).field_u = of.sine(-46, var9) >> 9;
-                      ((mi) (var5)).field_F = BevelBoxPainter.cosine(var9, -127) >> 9;
-                      this.field_q.b(param0 ^ 6068, (mi) (var5));
+                      ((SpellProjectile) (var5)).field_u = of.sine(-46, var9) >> 9;
+                      ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var9, -127) >> 9;
+                      this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
                       var8++;
                       if (var19 != 0) {
                         return;
@@ -3340,24 +3340,24 @@ final class mi extends DualLinkNode {
                     if (10 >= this.field_y) {
                       break;
                     }
-                    this.f(0);
+                    this.remove(0);
                     return;
                   }
                 }
                 if (-640 > this.field_v) {
-                  this.f(0);
+                  this.remove(0);
                   return;
                 }
                 if (this.field_v > 640 + this.field_q.field_y) {
-                  this.f(0);
+                  this.remove(0);
                   return;
                 }
                 if (this.field_G > this.field_q.field_H) {
-                  this.f(0);
+                  this.remove(0);
                   return;
                 }
-                var5 = this.a(this.field_v + (int)(64.0 * Math.random() - 32.0), (ml) null, (byte) 81, 90, this.field_G + (int)(Math.random() * 64.0 - 32.0), this.field_q);
-                this.field_q.b(52, (mi) (var5));
+                var5 = this.spawnFromHere(this.field_v + (int)(64.0 * Math.random() - 32.0), (BattleUnit) null, (byte) 81, 90, this.field_G + (int)(Math.random() * 64.0 - 32.0), this.field_q);
+                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                 return;
               }
             }
@@ -3408,79 +3408,79 @@ final class mi extends DualLinkNode {
               return;
             }
             if (this.field_I == 73) {
-              var5 = this.a(this.field_v, this.field_t, (byte) 81, 16, this.field_G, this.field_q);
+              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 16, this.field_G, this.field_q);
               if (null != this.field_t &&
                 0 == this.field_q.field_x[this.field_t.field_u]) {
                 var7 = 2 * this.field_q.field_X[this.field_t.field_u];
-                ((mi) (var5)).field_u = this.field_u + u.a(this.field_C, -2147483648, var7 * 2 + 1) - var7;
-                ((mi) (var5)).field_F = -var7 + this.field_F + u.a(this.field_C, -2147483648, var7 * 2 + 1);
+                ((SpellProjectile) (var5)).field_u = this.field_u + u.a(this.field_C, -2147483648, var7 * 2 + 1) - var7;
+                ((SpellProjectile) (var5)).field_F = -var7 + this.field_F + u.a(this.field_C, -2147483648, var7 * 2 + 1);
               }
             }
             if (this.field_I == 144) {
-              var5 = this.a(this.field_v, this.field_t, (byte) 81, 145, this.field_G, this.field_q);
-              this.a(166, true);
+              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 145, this.field_G, this.field_q);
+              this.playSound(166, true);
             }
             if (this.field_I == 75) {
-              var5 = this.a(this.field_v, this.field_t, (byte) 81, 43, this.field_G, this.field_q);
+              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 43, this.field_G, this.field_q);
             }
             if (97 == this.field_I) {
-              var5 = this.a(this.field_v, this.field_t, (byte) 81, 96, this.field_G, this.field_q);
+              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 96, this.field_G, this.field_q);
             }
             if (this.field_I == 125) {
-              var5 = this.a(this.field_v, this.field_t, (byte) 81, 124, this.field_G, this.field_q);
+              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 124, this.field_G, this.field_q);
             }
             if (this.field_I == 153) {
               boolean decompiledSharedTail1 = !(!Js5Transport.isFeatureEnabled(0, (byte) -89));
               if (!decompiledSharedTail1) {
-                var5 = this.a(this.field_v, this.field_t, (byte) 81, 115, this.field_G, this.field_q);
+                var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 115, this.field_G, this.field_q);
                 decompiledSharedTail1 = (var19 != 0);
               }
               if (decompiledSharedTail1) {
-                var5 = this.a(this.field_v, this.field_t, (byte) 81, 116, this.field_G, this.field_q);
+                var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 116, this.field_G, this.field_q);
               }
-              ((mi) (var5)).field_w = this.field_w;
+              ((SpellProjectile) (var5)).field_w = this.field_w;
             }
             if (this.field_I == 81) {
-              var5 = this.a(this.field_v, this.field_t, (byte) 81, 20, this.field_G, this.field_q);
-              this.a(88, true);
+              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 20, this.field_G, this.field_q);
+              this.playSound(88, true);
             }
             if (this.field_I == 113) {
-              var5 = this.a(this.field_v, this.field_t, (byte) 81, 52, this.field_G, this.field_q);
+              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 52, this.field_G, this.field_q);
             }
             if (this.field_I == 84) {
-              var5 = this.a((this.field_u >> 4) + this.field_v, this.field_t, (byte) 81, 30, this.field_G + (this.field_F >> 4), this.field_q);
-              ((mi) (var5)).field_w = this.field_w;
-              ((mi) (var5)).field_F = this.field_F;
-              ((mi) (var5)).field_u = this.field_u;
+              var5 = this.spawnFromHere((this.field_u >> 4) + this.field_v, this.field_t, (byte) 81, 30, this.field_G + (this.field_F >> 4), this.field_q);
+              ((SpellProjectile) (var5)).field_w = this.field_w;
+              ((SpellProjectile) (var5)).field_F = this.field_F;
+              ((SpellProjectile) (var5)).field_u = this.field_u;
               if (var19 != 0) {
                 if (125 != this.field_I &&
                   153 != this.field_I) {
-                  ((mi) (var5)).field_u = -15 + (this.field_u >> 1) + u.a(this.field_C, -2147483648, 31);
-                  ((mi) (var5)).field_F = -15 + (this.field_F >> 1) + u.a(this.field_C, param0 + 2147477632, 31);
-                  ((mi) (var5)).field_u = this.field_u + u.a(this.field_C, -2147483648, 31) - 15;
-                  ((mi) (var5)).field_F = this.field_F + (u.a(this.field_C, -2147483648, 31) - 15);
+                  ((SpellProjectile) (var5)).field_u = -15 + (this.field_u >> 1) + u.a(this.field_C, -2147483648, 31);
+                  ((SpellProjectile) (var5)).field_F = -15 + (this.field_F >> 1) + u.a(this.field_C, param0 + 2147477632, 31);
+                  ((SpellProjectile) (var5)).field_u = this.field_u + u.a(this.field_C, -2147483648, 31) - 15;
+                  ((SpellProjectile) (var5)).field_F = this.field_F + (u.a(this.field_C, -2147483648, 31) - 15);
                 } else {
-                  ((mi) (var5)).field_u = this.field_u + u.a(this.field_C, -2147483648, 31) - 15;
-                  ((mi) (var5)).field_F = this.field_F + (u.a(this.field_C, -2147483648, 31) - 15);
+                  ((SpellProjectile) (var5)).field_u = this.field_u + u.a(this.field_C, -2147483648, 31) - 15;
+                  ((SpellProjectile) (var5)).field_F = this.field_F + (u.a(this.field_C, -2147483648, 31) - 15);
                 }
               }
             } else {
               boolean decompiledSharedTail0 = (125 == this.field_I ||
                 153 == this.field_I);
               if (!decompiledSharedTail0) {
-                ((mi) (var5)).field_u = -15 + (this.field_u >> 1) + u.a(this.field_C, -2147483648, 31);
-                ((mi) (var5)).field_F = -15 + (this.field_F >> 1) + u.a(this.field_C, param0 + 2147477632, 31);
+                ((SpellProjectile) (var5)).field_u = -15 + (this.field_u >> 1) + u.a(this.field_C, -2147483648, 31);
+                ((SpellProjectile) (var5)).field_F = -15 + (this.field_F >> 1) + u.a(this.field_C, param0 + 2147477632, 31);
                 decompiledSharedTail0 = (var19 != 0);
               }
               if (decompiledSharedTail0) {
-                ((mi) (var5)).field_u = this.field_u + u.a(this.field_C, -2147483648, 31) - 15;
-                ((mi) (var5)).field_F = this.field_F + (u.a(this.field_C, -2147483648, 31) - 15);
+                ((SpellProjectile) (var5)).field_u = this.field_u + u.a(this.field_C, -2147483648, 31) - 15;
+                ((SpellProjectile) (var5)).field_F = this.field_F + (u.a(this.field_C, -2147483648, 31) - 15);
               }
             }
-            this.field_q.b(52, (mi) (var5));
+            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
             return;
           }
-          this.f(0);
+          this.remove(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3489,13 +3489,13 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final void e(byte param0) {
+    private final void notifyOwner(byte param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (null != this.field_t) {
-            this.field_q.a(-49, this.field_t);
+            this.field_q.stampUnitMask(-49, this.field_t);
           }
           var2_int = 48 % ((param0 + 53) / 38);
           return;
@@ -3506,7 +3506,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final void f(int param0) {
+    final void remove(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -3517,8 +3517,8 @@ final class mi extends DualLinkNode {
             if (this == this.field_t.field_gb) {
               this.field_t.field_gb = null;
             }
-            if (!this.field_t.c(-1)) {
-              this.field_q.a(-44, this.field_t);
+            if (!this.field_t.isDead(-1)) {
+              this.field_q.stampUnitMask(-44, this.field_t);
             }
           }
           this.field_J = 0;
@@ -3529,7 +3529,7 @@ final class mi extends DualLinkNode {
           this.field_H = 0;
           this.field_y = 0;
           this.field_C = null;
-          this.field_q.a(-1, this);
+          this.field_q.addProjectile(-1, this);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3538,7 +3538,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final PcmSampleStream a(PcmSample param0, int param1) {
+    private final PcmSampleStream createFlightSoundStream(PcmSample param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -3579,7 +3579,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void playTypeSound(int param0, byte param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
@@ -3598,15 +3598,15 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final boolean g(byte param0) {
+    private final boolean isActiveEffect(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          if (!this.h(-139)) {
+          if (!this.isAlive(-139)) {
             return false;
           }
-          if (this.k(120)) {
+          if (this.isPersistentType(120)) {
             return false;
           }
           if (this.field_I != 1 &&
@@ -3747,9 +3747,9 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final mi a(int param0, ml param1, byte param2, int param3, int param4, nf param5) {
+    private final SpellProjectile spawnFromHere(int param0, BattleUnit param1, byte param2, int param3, int param4, Battle param5) {
         RuntimeException var7 = null;
-        mi stackIn_4_0 = null;
+        SpellProjectile stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -3758,7 +3758,7 @@ final class mi extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 81) {
-            this.a(76, (nf) null);
+            this.setBattle(76, (Battle) null);
           }
           stackIn_4_0 = BevelBoxPainter.createProjectile(param1, param4, (byte) -118, param5, this.field_n, param0, param3);
           return stackIn_4_0;
@@ -3782,7 +3782,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, nf param5, ml param6) {
+    final void initialize(int param0, int param1, int param2, int param3, int param4, Battle param5, BattleUnit param6) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -3802,7 +3802,7 @@ final class mi extends DualLinkNode {
           this.field_q = param5;
           this.field_o = this.field_v << 4;
           this.field_z = this.field_G << 4;
-          this.i(-103);
+          this.initializeSprite(-103);
           this.field_w = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3825,7 +3825,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final boolean m(int param0) {
+    private final boolean shouldCameraFollow(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_41_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -3852,7 +3852,7 @@ final class mi extends DualLinkNode {
             return true;
           }
           if (param0 != -8209) {
-            this.a(-104, (byte) 102);
+            this.updateFlightSound(-104, (byte) 102);
           }
           if (this.field_I == 28) {
             return true;
@@ -3860,7 +3860,7 @@ final class mi extends DualLinkNode {
           if (this.field_I == 49) {
             return true;
           }
-          stackIn_41_0 = this.g((byte) -108);
+          stackIn_41_0 = this.isActiveEffect((byte) -108);
           return stackIn_41_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3869,7 +3869,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final void a(int param0, nf param1) {
+    final void setBattle(int param0, Battle param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -3894,11 +3894,11 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void updateMotion(int param0, byte param1, int param2, int param3) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         Object stackIn_392_0 = null;
-        ml stackIn_431_0 = null;
+        BattleUnit stackIn_431_0 = null;
         Object stackIn_472_0 = null;
         int stackIn_539_0 = 0;
         int stackIn_539_1 = 0;
@@ -3910,50 +3910,50 @@ final class mi extends DualLinkNode {
         IndexedSprite[] stackIn_950_1 = null;
         int stackIn_951_2 = 0;
         Object stackIn_953_0 = null;
-        nf stackIn_957_0 = null;
+        Battle stackIn_957_0 = null;
         int stackIn_957_1 = 0;
         int stackIn_958_2 = 0;
         boolean stackIn_1134_0 = false;
         int stackIn_1159_0 = 0;
-        mi stackIn_1285_0 = null;
+        SpellProjectile stackIn_1285_0 = null;
         Object stackIn_1322_0 = null;
         int stackIn_1322_1 = 0;
         boolean stackIn_1434_0 = false;
         int stackIn_1444_0 = 0;
-        mi stackIn_1494_0 = null;
+        SpellProjectile stackIn_1494_0 = null;
         Object stackIn_1544_0 = null;
-        mi stackIn_1871_0 = null;
+        SpellProjectile stackIn_1871_0 = null;
         Object stackIn_1893_0 = null;
         int stackIn_1893_1 = 0;
-        mi stackIn_2017_0 = null;
+        SpellProjectile stackIn_2017_0 = null;
         Object stackIn_2042_0 = null;
         int stackIn_2042_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        ml stackOut_430_0;
+        BattleUnit stackOut_430_0;
         boolean stackOut_1133_0;
-        mi stackOut_1284_0;
+        SpellProjectile stackOut_1284_0;
         boolean stackOut_1433_0;
-        mi stackOut_1493_0;
-        mi stackOut_2016_0;
-        mi stackOut_1870_0;
+        SpellProjectile stackOut_1493_0;
+        SpellProjectile stackOut_2016_0;
+        SpellProjectile stackOut_1870_0;
         Object var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ml var9_ref_ml = null;
+        BattleUnit var9_ref_ml = null;
         double var9_double = 0.0;
-        mi var9_ref_mi = null;
+        SpellProjectile var9_ref_mi = null;
         int var10 = 0;
-        ml var10_ref_ml = null;
+        BattleUnit var10_ref_ml = null;
         double var10_double = 0.0;
-        mi var10_ref_mi = null;
+        SpellProjectile var10_ref_mi = null;
         IntrusiveDequeCursor var10_ref_oc = null;
         int var11 = 0;
-        ml var11_ref_ml = null;
-        mi var11_ref_mi = null;
+        BattleUnit var11_ref_ml = null;
+        SpellProjectile var11_ref_mi = null;
         int var12 = 0;
-        mi var12_ref_mi = null;
+        SpellProjectile var12_ref_mi = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -3967,14 +3967,14 @@ final class mi extends DualLinkNode {
         Object stackIn_1322_0Lifetime1;
         Object stackIn_1544_0Lifetime1;
         Object stackIn_2042_0Lifetime1;
-        ml var9_ref_mlLifetime1;
-        mi var9_ref_miLifetime1;
-        mi var9_ref_miLifetime2;
-        mi var9_ref_miLifetime3;
-        ml var10_ref_mlLifetime1;
-        mi var11_ref_miLifetime1;
-        ml var9_ref_mlLifetime1Lifetime1;
-        mi var9_ref_miLifetime2Lifetime1;
+        BattleUnit var9_ref_mlLifetime1;
+        SpellProjectile var9_ref_miLifetime1;
+        SpellProjectile var9_ref_miLifetime2;
+        SpellProjectile var9_ref_miLifetime3;
+        BattleUnit var10_ref_mlLifetime1;
+        SpellProjectile var11_ref_miLifetime1;
+        BattleUnit var9_ref_mlLifetime1Lifetime1;
+        SpellProjectile var9_ref_miLifetime2Lifetime1;
         int stackIn_539_0Lifetime1;
         int stackIn_539_1Lifetime1;
         int stackIn_1159_0Lifetime1;
@@ -4023,7 +4023,7 @@ final class mi extends DualLinkNode {
               if (var9 == 149 &&
                 var19 == 0) {
                 if (this.field_t != null &&
-                  !this.field_t.c(-1)) {
+                  !this.field_t.isDead(-1)) {
                   if (256 <= this.field_y) {
                     return;
                   }
@@ -4032,40 +4032,40 @@ final class mi extends DualLinkNode {
                     this.field_y = 0;
                   }
                   MidiPcmStream.field_L.setDeque((byte) 90, this.field_q.field_Kb);
-                  var5 = (mi) (MidiPcmStream.field_L.first(-69));
+                  var5 = (SpellProjectile) (MidiPcmStream.field_L.first(-69));
                   while (null != var5) {
                     stackIn_392_0 = var5;
                     boolean decompiledFrameRemainder2 = true;
-                    if (((mi) stackIn_392_0).g((byte) -124)) {
-                      var9 = this.field_v - ((mi) (var5)).field_v;
-                      var10 = this.field_G - ((mi) (var5)).field_G;
+                    if (((SpellProjectile) stackIn_392_0).isActiveEffect((byte) -124)) {
+                      var9 = this.field_v - ((SpellProjectile) (var5)).field_v;
+                      var10 = this.field_G - ((SpellProjectile) (var5)).field_G;
                       if (!(Math.abs(var9) < 32) ||
                         !(Math.abs(var10) < 32)) {
-                        var9 = this.field_u + (this.field_v - ((mi) (var5)).field_v);
-                        var10 = this.field_G - (-this.field_F + ((mi) (var5)).field_G);
+                        var9 = this.field_u + (this.field_v - ((SpellProjectile) (var5)).field_v);
+                        var10 = this.field_G - (-this.field_F + ((SpellProjectile) (var5)).field_G);
                         if ((!(Math.abs(var9) >= 32)) &&
                           (!(Math.abs(var10) >= 32))) {
-                          ((mi) (var5)).field_G = this.field_G;
-                          ((mi) (var5)).field_v = this.field_v;
+                          ((SpellProjectile) (var5)).field_G = this.field_G;
+                          ((SpellProjectile) (var5)).field_v = this.field_v;
                           this.field_y = 256;
-                          ((mi) (var5)).field_o = ((mi) (var5)).field_v << 4;
-                          ((mi) (var5)).field_z = ((mi) (var5)).field_G << 4;
+                          ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
+                          ((SpellProjectile) (var5)).field_z = ((SpellProjectile) (var5)).field_G << 4;
                         }
                         decompiledFrameRemainder2 = false;
                       }
                       else {
-                        ((mi) (var5)).field_v = this.field_v + this.field_u;
+                        ((SpellProjectile) (var5)).field_v = this.field_v + this.field_u;
                         this.field_y = 256;
-                        ((mi) (var5)).field_G = this.field_F + this.field_G;
-                        ((mi) (var5)).field_o = ((mi) (var5)).field_v << 4;
-                        ((mi) (var5)).field_z = ((mi) (var5)).field_G << 4;
+                        ((SpellProjectile) (var5)).field_G = this.field_F + this.field_G;
+                        ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
+                        ((SpellProjectile) (var5)).field_z = ((SpellProjectile) (var5)).field_G << 4;
                       }
                     }
-                    var5 = (mi) (MidiPcmStream.field_L.next(-18502));
+                    var5 = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                   }
                   MidiPcmStream.field_L.setDeque((byte) 28, this.field_q.field_i);
                   stackIn_392_0Lifetime1 = MidiPcmStream.field_L.first(-66);
-                  var9_ref_ml = (ml) (stackIn_392_0Lifetime1);
+                  var9_ref_ml = (BattleUnit) (stackIn_392_0Lifetime1);
                   while (null != var9_ref_ml) {
                     boolean decompiledFrameRemainder1 = true;
                     if (var9_ref_ml.field_Y <= 32) {
@@ -4097,11 +4097,11 @@ final class mi extends DualLinkNode {
                         var9_ref_ml.field_R = var9_ref_ml.field_db << 4;
                       }
                     }
-                    var9_ref_ml = (ml) (MidiPcmStream.field_L.next(-18502));
+                    var9_ref_ml = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                   }
                   return;
                 }
-                this.f(0);
+                this.remove(0);
                 return;
               }
               if (32 == var9 &&
@@ -4112,16 +4112,16 @@ final class mi extends DualLinkNode {
                   null != this.field_q.field_sb[103])) {
                   DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[103], this.field_q.field_sb[103]);
                 }
-                var5 = this.a(this.field_t.field_lb, (ml) null, (byte) 81, 100, this.field_t.field_db - (this.field_t.field_Y >> 1), this.field_q);
-                ((mi) (var5)).field_u = (int)(64.0 * Math.sin(0.1 * (double)this.field_y));
-                ((mi) (var5)).field_F = (int)(Math.cos((double)this.field_y * 0.1) * 64.0);
-                this.field_q.b(52, (mi) (var5));
+                var5 = this.spawnFromHere(this.field_t.field_lb, (BattleUnit) null, (byte) 81, 100, this.field_t.field_db - (this.field_t.field_Y >> 1), this.field_q);
+                ((SpellProjectile) (var5)).field_u = (int)(64.0 * Math.sin(0.1 * (double)this.field_y));
+                ((SpellProjectile) (var5)).field_F = (int)(Math.cos((double)this.field_y * 0.1) * 64.0);
+                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                 var9_double = 2.0 * (3.141592653589793 * Math.random());
-                var5 = this.a(this.field_t.field_lb + (int)(Math.random() * 256.0 * Math.cos(var9_double)), (ml) null, (byte) 81, 100, this.field_t.field_db - (this.field_t.field_Y >> 1) + (int)(Math.random() * 256.0 * Math.sin(var9_double)), this.field_q);
-                this.field_q.b(52, (mi) (var5));
+                var5 = this.spawnFromHere(this.field_t.field_lb + (int)(Math.random() * 256.0 * Math.cos(var9_double)), (BattleUnit) null, (byte) 81, 100, this.field_t.field_db - (this.field_t.field_Y >> 1) + (int)(Math.random() * 256.0 * Math.sin(var9_double)), this.field_q);
+                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                 if (this.field_y % 15 == 1) {
                   MidiPcmStream.field_L.setDeque((byte) 39, this.field_q.field_i);
-                  var11_ref_ml = (ml) (MidiPcmStream.field_L.first(-59));
+                  var11_ref_ml = (BattleUnit) (MidiPcmStream.field_L.first(-59));
                   while (var11_ref_ml != null) {
                     stackOut_430_0 = var11_ref_ml;
                     stackIn_472_0 = stackOut_430_0;
@@ -4161,16 +4161,16 @@ final class mi extends DualLinkNode {
                           var11_ref_ml.field_kb = var11_ref_ml.field_kb - var12 * var15 / var14;
                           var11_ref_ml.field_eb = var11_ref_ml.field_eb - (var15 * var13 / var14 + 8);
                           var11_ref_ml.field_z = true;
-                          var5 = this.a(var11_ref_ml.field_lb + (int)(Math.random() * (double)var11_ref_ml.field_Y - (double)(var11_ref_ml.field_Y / 2)), (ml) null, (byte) 81, 100, var11_ref_ml.field_db, this.field_q);
-                          this.field_q.b(52, (mi) (var5));
+                          var5 = this.spawnFromHere(var11_ref_ml.field_lb + (int)(Math.random() * (double)var11_ref_ml.field_Y - (double)(var11_ref_ml.field_Y / 2)), (BattleUnit) null, (byte) 81, 100, var11_ref_ml.field_db, this.field_q);
+                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                         }
                       }
                     }
-                    var11_ref_ml = (ml) (MidiPcmStream.field_L.next(-18502));
+                    var11_ref_ml = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                   }
                   MidiPcmStream.field_L.setDeque((byte) 122, this.field_q.field_Kb);
                   stackIn_472_0Lifetime1 = MidiPcmStream.field_L.first(-109);
-                  var11_ref_mi = (mi) (stackIn_472_0Lifetime1);
+                  var11_ref_mi = (SpellProjectile) (stackIn_472_0Lifetime1);
                   while (var11_ref_mi != null) {
                     stackIn_539_0 = var11_ref_mi.field_I;
                     stackIn_539_1 = 30;
@@ -4181,7 +4181,7 @@ final class mi extends DualLinkNode {
                       var13Lifetime3 = this.field_G - var11_ref_mi.field_G;
                       var14Lifetime3 = am.a(var13Lifetime3, var12Lifetime3, false);
                       if (var14Lifetime3 < 256 ||
-                        var11_ref_mi.h(-139)) {
+                        var11_ref_mi.isAlive(-139)) {
                         if (0 <= var11_ref_mi.field_G &&
                           this.field_y <= 200) {
                           if (!(Math.abs(var12Lifetime3) > 64) ||
@@ -4224,7 +4224,7 @@ final class mi extends DualLinkNode {
                         }
                       }
                     }
-                    var11_ref_mi = (mi) (MidiPcmStream.field_L.next(-18502));
+                    var11_ref_mi = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                   }
                 }
                 stackIn_539_0Lifetime1 = -251;
@@ -4232,7 +4232,7 @@ final class mi extends DualLinkNode {
                 if (stackIn_539_0Lifetime1 <= stackIn_539_1Lifetime1) {
                   return;
                 }
-                this.f(0);
+                this.remove(0);
                 return;
               }
               regionExit2: {
@@ -4246,7 +4246,7 @@ final class mi extends DualLinkNode {
                   }
                   regionExit3: {
                     if (var9 == 56) {
-                      if (!this.field_t.c(-1) &&
+                      if (!this.field_t.isDead(-1) &&
                         (128 + this.field_q.field_H) > this.field_t.field_db) {
                         this.field_v = this.field_t.field_lb;
                         this.field_G = this.field_t.field_db - (this.field_t.field_Y >> 1);
@@ -4260,7 +4260,7 @@ final class mi extends DualLinkNode {
                         }
                         var9 = 0;
                         MidiPcmStream.field_L.setDeque((byte) 69, this.field_q.field_i);
-                        var10_ref_ml = (ml) (MidiPcmStream.field_L.first(-111));
+                        var10_ref_ml = (BattleUnit) (MidiPcmStream.field_L.first(-111));
                         while (var10_ref_ml != null) {
                           if (var19 != 0) {
                             return;
@@ -4272,7 +4272,7 @@ final class mi extends DualLinkNode {
                             var10_ref_ml.field_x = var10_ref_ml.field_x + 1;
                             var9 = 1;
                           }
-                          var10_ref_ml = (ml) (MidiPcmStream.field_L.next(-18502));
+                          var10_ref_ml = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                         }
                         if (var9 != 0) {
                           if (var19 == 0) {
@@ -4280,12 +4280,12 @@ final class mi extends DualLinkNode {
                           }
                           break regionExit3;
                         }
-                        this.f(0);
+                        this.remove(0);
                         return;
                       }
-                      if (this.field_q.d(false) == this.field_t.field_T) {
+                      if (this.field_q.getCurrentPlayer(false) == this.field_t.field_T) {
                       }
-                      this.f(0);
+                      this.remove(0);
                       return;
                     }
                     if (var9 != 167) {
@@ -4294,7 +4294,7 @@ final class mi extends DualLinkNode {
                         if (250 >= this.field_x) {
                           return;
                         }
-                        this.f(0);
+                        this.remove(0);
                         return;
                       }
                       if (var9 != 108 &&
@@ -4304,7 +4304,7 @@ final class mi extends DualLinkNode {
                           if (this.field_y <= 50) {
                             return;
                           }
-                          this.f(0);
+                          this.remove(0);
                           return;
                         }
                         regionExit4: {
@@ -4371,19 +4371,19 @@ final class mi extends DualLinkNode {
                                           this.field_y = this.field_y + 1;
                                           if (this.field_y == 3 &&
                                             0 == this.field_H) {
-                                            this.a(160, true);
+                                            this.playSound(160, true);
                                           }
                                           if (this.field_y > 8) {
                                             this.field_y = this.field_y - 8;
                                             this.field_H = this.field_H + 1;
                                             if (this.field_H == 1) {
-                                              this.a(0, this.field_t.field_Y, this.field_t.field_Y * 2, 8);
+                                              this.applyAreaEffect(0, this.field_t.field_Y, this.field_t.field_Y * 2, 8);
                                             }
                                           }
                                           if (this.field_H < 8) {
                                             return;
                                           }
-                                          this.f(0);
+                                          this.remove(0);
                                           return;
                                         }
                                         if (var9 == 114 &&
@@ -4393,7 +4393,7 @@ final class mi extends DualLinkNode {
                                           if (this.field_F >= this.field_y) {
                                             return;
                                           }
-                                          this.f(0);
+                                          this.remove(0);
                                           return;
                                         }
                                         if (var9 == 155) {
@@ -4407,16 +4407,16 @@ final class mi extends DualLinkNode {
                                           }
                                           if (this.field_t.field_q <= 0) {
                                             if (this.field_y > 128) {
-                                              this.f(0);
+                                              this.remove(0);
                                             }
                                             return;
                                           }
-                                          var5 = this.a(this.field_t.field_lb, this.field_t, (byte) 81, 0, this.field_t.field_db - this.field_t.field_Y - 8, this.field_q);
-                                          ((mi) (var5)).field_u = -56 + 8 * (this.field_y / 5 & 15);
+                                          var5 = this.spawnFromHere(this.field_t.field_lb, this.field_t, (byte) 81, 0, this.field_t.field_db - this.field_t.field_Y - 8, this.field_q);
+                                          ((SpellProjectile) (var5)).field_u = -56 + 8 * (this.field_y / 5 & 15);
                                           this.field_q.field_mb = this.field_t.field_lb;
-                                          ((mi) (var5)).field_F = -100;
+                                          ((SpellProjectile) (var5)).field_F = -100;
                                           this.field_q.field_t = -240;
-                                          this.field_q.b(52, (mi) (var5));
+                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                           return;
                                         }
                                         if (var9 == 60) {
@@ -4427,7 +4427,7 @@ final class mi extends DualLinkNode {
                                             stackIn_823_0 = this.field_G;
                                             if (var19 == 0) {
                                               if (stackIn_823_0 < -32 + this.field_q.field_H &&
-                                                !this.field_q.b(this.field_G - this.field_r, 2, this.field_v - this.field_r, this.field_p)) {
+                                                !this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, 2, this.field_v - this.field_r, this.field_p)) {
                                                 this.field_G = this.field_G + 1;
                                               }
                                               var9++;
@@ -4439,17 +4439,17 @@ final class mi extends DualLinkNode {
                                             stackIn_823_0 = compareDoublesNanGreater(128.0 * Math.random(), (double)this.field_y);
                                           }
                                           if (stackIn_823_0 < 0) {
-                                            var5 = this.a(this.field_v + (int)(96.0 * Math.random() - 48.0), (ml) null, (byte) 81, 109, (int)(-480.0 + Math.random() * (double)(this.field_G + 480)), this.field_q);
-                                            this.field_q.b(52, (mi) (var5));
+                                            var5 = this.spawnFromHere(this.field_v + (int)(96.0 * Math.random() - 48.0), (BattleUnit) null, (byte) 81, 109, (int)(-480.0 + Math.random() * (double)(this.field_G + 480)), this.field_q);
+                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                           }
                                           if (this.field_y < 128) {
                                             return;
                                           }
-                                          var5 = this.a(this.field_v, (ml) null, (byte) 81, 108, this.field_G, this.field_q);
-                                          this.field_q.b(52, (mi) (var5));
-                                          this.a(50, 128, 96, 8);
-                                          this.a(1, (byte) 37, 5);
-                                          this.f(0);
+                                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 108, this.field_G, this.field_q);
+                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                          this.applyAreaEffect(50, 128, 96, 8);
+                                          this.playTypeSound(1, (byte) 37, 5);
+                                          this.remove(0);
                                           return;
                                         }
                                         if ((61 != var9 ||
@@ -4465,14 +4465,14 @@ final class mi extends DualLinkNode {
                                                 if (this.field_y <= 80) {
                                                   return;
                                                 }
-                                                this.f(0);
+                                                this.remove(0);
                                                 return;
                                               }
                                               this.field_y = this.field_y + 1;
                                               if (this.field_y <= 50) {
                                                 return;
                                               }
-                                              this.f(0);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (this.field_t != null) {
@@ -4484,10 +4484,10 @@ final class mi extends DualLinkNode {
                                             var12Lifetime1 = 0;
                                             var13Lifetime1 = 0;
                                             while (var13Lifetime1 == 0) {
-                                              if (this.field_q.a(this.field_G, this.field_v + 2, (byte) -83) ||
-                                                this.field_q.a(this.field_G, this.field_v - 2, (byte) -83) ||
-                                                this.field_q.a(this.field_G - 2, this.field_v, (byte) -83) ||
-                                                this.field_q.a(this.field_G + 2, this.field_v, (byte) -83)) {
+                                              if (this.field_q.isSolidAt(this.field_G, this.field_v + 2, (byte) -83) ||
+                                                this.field_q.isSolidAt(this.field_G, this.field_v - 2, (byte) -83) ||
+                                                this.field_q.isSolidAt(this.field_G - 2, this.field_v, (byte) -83) ||
+                                                this.field_q.isSolidAt(this.field_G + 2, this.field_v, (byte) -83)) {
                                                 var13Lifetime1 = 1;
                                               }
                                               var12Lifetime1++;
@@ -4526,9 +4526,9 @@ final class mi extends DualLinkNode {
                                                   var15Lifetime1 = (this.field_u * var14Lifetime1 / var12Lifetime1 >> 4) + this.field_v;
                                                   var16 = this.field_G + (var14Lifetime1 * this.field_F / var12Lifetime1 >> 4);
                                                   var17 = Math.abs(var12Lifetime1 / 2 - var14Lifetime1);
-                                                  var18 = (var12Lifetime1 * var12Lifetime1 / 4 - var17 * var17) / 4 + (-var14Lifetime1 + var12Lifetime1) * this.field_t.p(-8323) / (2 * var12Lifetime1);
+                                                  var18 = (var12Lifetime1 * var12Lifetime1 / 4 - var17 * var17) / 4 + (-var14Lifetime1 + var12Lifetime1) * this.field_t.getSize(-8323) / (2 * var12Lifetime1);
                                                   var16 = var16 + var18;
-                                                  var5 = this.a(var15Lifetime1, (ml) null, (byte) 81, 151, var16, this.field_q);
+                                                  var5 = this.spawnFromHere(var15Lifetime1, (BattleUnit) null, (byte) 81, 151, var16, this.field_q);
                                                   stackIn_953_0 = var5;
                                                   stackIn_950_1 = gj.field_f;
                                                   if (0 == (1 & var14Lifetime1)) {
@@ -4540,10 +4540,10 @@ final class mi extends DualLinkNode {
                                                       stackIn_951_2 = 27;
                                                     }
                                                   }
-                                                  ((mi) (stackIn_953_0)).field_p = ((IndexedSprite) (Object) stackIn_950_1[stackIn_951_2]).toRgbSprite();
-                                                  ((mi) (var5)).field_y = var18;
-                                                  ((mi) (var5)).field_x = 2 * var14Lifetime1;
-                                                  this.field_q.b(52, (mi) (var5));
+                                                  ((SpellProjectile) (stackIn_953_0)).field_p = ((IndexedSprite) (Object) stackIn_950_1[stackIn_951_2]).toRgbSprite();
+                                                  ((SpellProjectile) (var5)).field_y = var18;
+                                                  ((SpellProjectile) (var5)).field_x = 2 * var14Lifetime1;
+                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   var14Lifetime1++;
                                                 }
                                                 DropdownList.field_N = -1;
@@ -4558,11 +4558,11 @@ final class mi extends DualLinkNode {
                                               } else {
                                                 stackIn_958_2 = this.field_t.field_T;
                                               }
-                                              ((nf) (Object) stackIn_957_0).a(stackIn_957_1, stackIn_958_2, true);
+                                              ((Battle) (Object) stackIn_957_0).resetSpellSlots(stackIn_957_1, stackIn_958_2, true);
                                               this.field_y = 51;
                                             }
                                             if (null != this.field_t) {
-                                              this.field_q.a(-100, this.field_t);
+                                              this.field_q.stampUnitMask(-100, this.field_t);
                                             }
                                             return;
                                           }
@@ -4577,18 +4577,18 @@ final class mi extends DualLinkNode {
                                             if (this.field_y > 0) {
                                               return;
                                             }
-                                            this.field_q.b(-8 + this.field_G, 2, this.field_v - 8, this.field_p);
+                                            this.field_q.spriteOverlapsTerrain(-8 + this.field_G, 2, this.field_v - 8, this.field_p);
                                             if (!jo.field_b) {
-                                              this.field_q.a(this.field_G - 8, -19, -8 + this.field_v, this.field_p);
+                                              this.field_q.carveTerrainAndSprite(this.field_G - 8, -19, -8 + this.field_v, this.field_p);
                                             }
-                                            this.f(0);
+                                            this.remove(0);
                                             return;
                                           }
                                           if (var9 != 30 &&
                                             93 != var9) {
                                             if (var9 == 72 &&
                                               var19 == 0) {
-                                              if (!this.field_t.c(-1) &&
+                                              if (!this.field_t.isDead(-1) &&
                                                 (this.field_q.field_H + 128) > this.field_t.field_db) {
                                                 this.field_G = this.field_t.field_db - (this.field_t.field_Y >> 1);
                                                 this.field_v = this.field_t.field_lb;
@@ -4598,27 +4598,27 @@ final class mi extends DualLinkNode {
                                                 var10Lifetime1 = of.sine(10, var9) >> 10;
                                                 var11Lifetime1 = BevelBoxPainter.cosine(var9, -105) >> 10;
                                                 this.field_y = this.field_y + 1;
-                                                var5 = this.a(this.field_v - var10Lifetime1, (ml) null, (byte) 81, 95, this.field_G - var11Lifetime1, this.field_q);
-                                                this.field_q.b(52, (mi) (var5));
-                                                var5 = this.a(this.field_v + var10Lifetime1, (ml) null, (byte) 81, 95, this.field_G - var11Lifetime1, this.field_q);
-                                                this.field_q.b(52, (mi) (var5));
-                                                if (!this.field_q.b(this.field_G - var11Lifetime1 - this.field_r, 2, var10Lifetime1 + (this.field_v - this.field_r), ra.field_a)) {
-                                                  this.field_q.a(-var11Lifetime1 + this.field_G - 8, -125, -8 + (this.field_v + var10Lifetime1), gj.field_f[7].toRgbSprite());
+                                                var5 = this.spawnFromHere(this.field_v - var10Lifetime1, (BattleUnit) null, (byte) 81, 95, this.field_G - var11Lifetime1, this.field_q);
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                var5 = this.spawnFromHere(this.field_v + var10Lifetime1, (BattleUnit) null, (byte) 81, 95, this.field_G - var11Lifetime1, this.field_q);
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                if (!this.field_q.spriteOverlapsTerrain(this.field_G - var11Lifetime1 - this.field_r, 2, var10Lifetime1 + (this.field_v - this.field_r), ra.field_a)) {
+                                                  this.field_q.carveTerrainAndSprite(-var11Lifetime1 + this.field_G - 8, -125, -8 + (this.field_v + var10Lifetime1), gj.field_f[7].toRgbSprite());
                                                 }
-                                                if (!this.field_q.b(this.field_G + (-var11Lifetime1 - this.field_r), 2, -this.field_r + (-var10Lifetime1 + this.field_v), ra.field_a)) {
-                                                  this.field_q.a(-8 + this.field_G - var11Lifetime1, -44, -8 + (this.field_v - var10Lifetime1), gj.field_f[7].toRgbSprite());
+                                                if (!this.field_q.spriteOverlapsTerrain(this.field_G + (-var11Lifetime1 - this.field_r), 2, -this.field_r + (-var10Lifetime1 + this.field_v), ra.field_a)) {
+                                                  this.field_q.carveTerrainAndSprite(-8 + this.field_G - var11Lifetime1, -44, -8 + (this.field_v - var10Lifetime1), gj.field_f[7].toRgbSprite());
                                                 }
                                                 if (this.field_y <= 100) {
                                                   return;
                                                 }
-                                                this.f(0);
+                                                this.remove(0);
                                                 return;
                                               }
-                                              this.f(0);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (var9 == 83) {
-                                              if (!this.field_t.c(-1) &&
+                                              if (!this.field_t.isDead(-1) &&
                                                 (this.field_q.field_H + 128) > this.field_t.field_db) {
                                                 this.field_v = this.field_t.field_lb;
                                                 this.field_G = -(this.field_t.field_Y >> 1) + this.field_t.field_db;
@@ -4628,17 +4628,17 @@ final class mi extends DualLinkNode {
                                                 var10Lifetime1 = of.sine(117, var9) >> 10;
                                                 var11Lifetime1 = BevelBoxPainter.cosine(var9, -112) >> 10;
                                                 this.field_y = this.field_y + 20;
-                                                var5 = this.a(var10Lifetime1 + this.field_v, this.field_t, (byte) 81, 3, this.field_G + var11Lifetime1, this.field_q);
-                                                ((mi) (var5)).field_u = var10Lifetime1;
-                                                ((mi) (var5)).field_F = var11Lifetime1;
-                                                this.field_q.b(52, (mi) (var5));
+                                                var5 = this.spawnFromHere(var10Lifetime1 + this.field_v, this.field_t, (byte) 81, 3, this.field_G + var11Lifetime1, this.field_q);
+                                                ((SpellProjectile) (var5)).field_u = var10Lifetime1;
+                                                ((SpellProjectile) (var5)).field_F = var11Lifetime1;
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                 if (this.field_y < 200) {
                                                   return;
                                                 }
-                                                this.f(0);
+                                                this.remove(0);
                                                 return;
                                               }
-                                              this.f(0);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (var9 == 22 &&
@@ -4655,7 +4655,7 @@ final class mi extends DualLinkNode {
                                               this.field_y = this.field_y + 1;
                                               if (this.field_y % 15 == 1) {
                                                 MidiPcmStream.field_L.setDeque((byte) 28, this.field_q.field_i);
-                                                var9_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.first(-70));
+                                                var9_ref_mlLifetime1 = (BattleUnit) (MidiPcmStream.field_L.first(-70));
                                                 while (var9_ref_mlLifetime1 != null) {
                                                   stackOut_1133_0 = var9_ref_mlLifetime1.field_z;
                                                   stackIn_1159_0 = stackOut_1133_0 ? 1 : 0;
@@ -4664,8 +4664,8 @@ final class mi extends DualLinkNode {
                                                     var9_ref_mlLifetime1.field_z = true;
                                                     var9_ref_mlLifetime1.field_eb = -16;
                                                     var9_ref_mlLifetime1.field_kb = 64 * (u.a(this.field_C, -2147483648, 256) & 2) - 32;
-                                                    var5 = this.a(var9_ref_mlLifetime1.field_lb + (int)(Math.random() * (double)var9_ref_mlLifetime1.field_Y - (double)(var9_ref_mlLifetime1.field_Y / 2)), (ml) null, (byte) 81, 90, var9_ref_mlLifetime1.field_db, this.field_q);
-                                                    this.field_q.b(52, (mi) (var5));
+                                                    var5 = this.spawnFromHere(var9_ref_mlLifetime1.field_lb + (int)(Math.random() * (double)var9_ref_mlLifetime1.field_Y - (double)(var9_ref_mlLifetime1.field_Y / 2)), (BattleUnit) null, (byte) 81, 90, var9_ref_mlLifetime1.field_db, this.field_q);
+                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   }
                                                   if (var9_ref_mlLifetime1.field_jb == 22 ||
                                                     23 == var9_ref_mlLifetime1.field_jb ||
@@ -4676,7 +4676,7 @@ final class mi extends DualLinkNode {
                                                     var9_ref_mlLifetime1.field_x = var9_ref_mlLifetime1.field_x + 2;
                                                     var9_ref_mlLifetime1.field_z = true;
                                                   }
-                                                  var9_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.next(-18502));
+                                                  var9_ref_mlLifetime1 = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                                                 }
                                               }
                                               stackIn_1159_0Lifetime1 = this.field_y;
@@ -4684,14 +4684,14 @@ final class mi extends DualLinkNode {
                                                 return;
                                               }
                                               uc.field_b = 0;
-                                              this.f(0);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (var9 == 29 &&
                                               var19 == 0) {
                                               if (this.field_t != null &&
-                                                this.field_t.c(-1)) {
-                                                this.f(0);
+                                                this.field_t.isDead(-1)) {
+                                                this.remove(0);
                                                 return;
                                               }
                                               if (this.field_H > 0 ||
@@ -4704,17 +4704,17 @@ final class mi extends DualLinkNode {
                                                   this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
                                                 }
                                                 var9 = u.a(this.field_C, -2147483648, 8192);
-                                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 21, this.field_G, this.field_q);
-                                                ((mi) (var5)).field_w = this.field_w;
-                                                this.a(89, true);
-                                                ((mi) (var5)).field_u = of.sine(126, var9) >> 11;
-                                                ((mi) (var5)).field_F = -256 + (BevelBoxPainter.cosine(var9, -119) >> 9);
-                                                this.field_q.b(52, (mi) (var5));
+                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 21, this.field_G, this.field_q);
+                                                ((SpellProjectile) (var5)).field_w = this.field_w;
+                                                this.playSound(89, true);
+                                                ((SpellProjectile) (var5)).field_u = of.sine(126, var9) >> 11;
+                                                ((SpellProjectile) (var5)).field_F = -256 + (BevelBoxPainter.cosine(var9, -119) >> 9);
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                               }
                                               if (this.field_y <= 250) {
                                                 return;
                                               }
-                                              this.f(0);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (var9 == 118) {
@@ -4724,10 +4724,10 @@ final class mi extends DualLinkNode {
                                                 this.field_v = this.field_t.field_X + this.field_u * this.field_y / 3 >> 4;
                                                 var10Lifetime1 = this.field_G;
                                                 this.field_G = -(this.field_t.field_Y / 2) + (this.field_t.field_R + this.field_y * this.field_F / 3 >> 4);
-                                                this.a(5, 64, 32, 8);
-                                                this.a(2, (byte) 37, 6);
-                                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 129, this.field_G, this.field_q);
-                                                this.field_q.b(52, (mi) (var5));
+                                                this.applyAreaEffect(5, 64, 32, 8);
+                                                this.playTypeSound(2, (byte) 37, 6);
+                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 129, this.field_G, this.field_q);
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                 this.field_v = var9;
                                                 this.field_G = var10Lifetime1;
                                               }
@@ -4738,13 +4738,13 @@ final class mi extends DualLinkNode {
                                               var10Lifetime1 = this.field_G;
                                               this.field_v = this.field_t.field_X + this.field_u * this.field_y / 3 >> 4;
                                               this.field_G = -(this.field_t.field_Y / 2) + (this.field_t.field_R + this.field_F * this.field_y / 3 >> 4);
-                                              this.a(10, 128, 48, 8);
-                                              this.a(1, (byte) 37, 6);
-                                              var5 = this.a(this.field_v, (ml) null, (byte) 81, 154, this.field_G, this.field_q);
-                                              this.field_q.b(52, (mi) (var5));
+                                              this.applyAreaEffect(10, 128, 48, 8);
+                                              this.playTypeSound(1, (byte) 37, 6);
+                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 154, this.field_G, this.field_q);
+                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                               this.field_G = var10Lifetime1;
                                               this.field_v = var9;
-                                              this.f(0);
+                                              this.remove(0);
                                               return;
                                             }
                                             if (var9 != 79) {
@@ -4752,10 +4752,10 @@ final class mi extends DualLinkNode {
                                                 var19 != 0) {
                                                 if (var9 == 80 &&
                                                   var19 == 0) {
-                                                  var5 = this.a(this.field_v, (ml) null, (byte) 81, 87, this.field_G, this.field_q);
-                                                  ((mi) (var5)).field_u = (int)(Math.random() * 15.0) - 8;
-                                                  ((mi) (var5)).field_F = ((mi) (var5)).field_F - 16;
-                                                  this.field_q.b(52, (mi) (var5));
+                                                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
+                                                  ((SpellProjectile) (var5)).field_u = (int)(Math.random() * 15.0) - 8;
+                                                  ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F - 16;
+                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   if (this.field_t.field_lb < this.field_v) {
                                                     this.field_t.field_M = -1;
                                                   }
@@ -4766,15 +4766,15 @@ final class mi extends DualLinkNode {
                                                   if (this.field_y <= 50) {
                                                     return;
                                                   }
-                                                  this.a(0, (byte) 37, 1);
-                                                  var5 = this.a(this.field_v, (ml) null, (byte) 81, 89, this.field_G, this.field_q);
-                                                  this.field_q.b(52, (mi) (var5));
-                                                  this.a(75, 256, 80, 8);
-                                                  this.f(0);
+                                                  this.playTypeSound(0, (byte) 37, 1);
+                                                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
+                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                  this.applyAreaEffect(75, 256, 80, 8);
+                                                  this.remove(0);
                                                   return;
                                                 }
                                                 if (69 == var9) {
-                                                  if (!this.field_t.c(-1) &&
+                                                  if (!this.field_t.isDead(-1) &&
                                                     this.field_t.field_db < (128 + this.field_q.field_H)) {
                                                     this.field_x = this.field_x + 1;
                                                     this.field_G = this.field_t.field_db;
@@ -4788,7 +4788,7 @@ final class mi extends DualLinkNode {
                                                         this.field_y = this.field_y + 1;
                                                       }
                                                       MidiPcmStream.field_L.setDeque((byte) 121, this.field_q.field_Kb);
-                                                      var9_ref_mi = (mi) (MidiPcmStream.field_L.first(-60));
+                                                      var9_ref_mi = (SpellProjectile) (MidiPcmStream.field_L.first(-60));
                                                       while (null != var9_ref_mi) {
                                                         stackOut_1284_0 = var9_ref_mi;
                                                         stackIn_1322_0 = stackOut_1284_0;
@@ -4798,7 +4798,7 @@ final class mi extends DualLinkNode {
                                                           decompiledFrameCompleted1 = false;
                                                           break;
                                                         }
-                                                        if (((mi) (Object) stackIn_1285_0).h(stackIn_1322_1) &&
+                                                        if (((SpellProjectile) (Object) stackIn_1285_0).isAlive(stackIn_1322_1) &&
                                                           30 != var9_ref_mi.field_I &&
                                                           93 != var9_ref_mi.field_I &&
                                                           var9_ref_mi.field_I != 84 &&
@@ -4825,7 +4825,7 @@ final class mi extends DualLinkNode {
                                                             }
                                                           }
                                                         }
-                                                        var9_ref_mi = (mi) (MidiPcmStream.field_L.next(-18502));
+                                                        var9_ref_mi = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                                                       }
                                                     }
                                                     if (decompiledFrameCompleted1) {
@@ -4836,9 +4836,9 @@ final class mi extends DualLinkNode {
                                                     this.field_o = stackIn_1322_1;
                                                     return;
                                                   }
-                                                  if (this.field_q.d(false) == this.field_t.field_T) {
+                                                  if (this.field_q.getCurrentPlayer(false) == this.field_t.field_T) {
                                                   }
-                                                  this.f(0);
+                                                  this.remove(0);
                                                   return;
                                                 }
                                                 if (138 == var9 &&
@@ -4853,7 +4853,7 @@ final class mi extends DualLinkNode {
                                                         this.field_t.field_gb = this;
                                                       }
                                                       MidiPcmStream.field_L.setDeque((byte) 117, this.field_q.field_i);
-                                                      var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.first(-62));
+                                                      var9_ref_mlLifetime1Lifetime1 = (BattleUnit) (MidiPcmStream.field_L.first(-62));
                                                       while (var9_ref_mlLifetime1Lifetime1 != null) {
                                                         if (var9_ref_mlLifetime1Lifetime1 != this.field_t &&
                                                           this.field_y == 0) {
@@ -4871,40 +4871,40 @@ final class mi extends DualLinkNode {
                                                             }
                                                             this.field_G = var9_ref_mlLifetime1Lifetime1.field_db;
                                                             this.field_G = this.field_G + 8;
-                                                            var5 = this.a(this.field_t.field_lb, this.field_t, (byte) 81, 139, this.field_t.field_db, this.field_q);
-                                                            this.field_q.b(52, (mi) (var5));
-                                                            ((mi) (var5)).field_u = var10Lifetime1;
-                                                            ((mi) (var5)).field_F = var11Lifetime1;
+                                                            var5 = this.spawnFromHere(this.field_t.field_lb, this.field_t, (byte) 81, 139, this.field_t.field_db, this.field_q);
+                                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                            ((SpellProjectile) (var5)).field_u = var10Lifetime1;
+                                                            ((SpellProjectile) (var5)).field_F = var11Lifetime1;
                                                             if (28 == this.field_t.field_jb) {
-                                                              this.a(2, (byte) 37, 6);
-                                                              this.a(5, 32, 16, 8);
+                                                              this.playTypeSound(2, (byte) 37, 6);
+                                                              this.applyAreaEffect(5, 32, 16, 8);
                                                             }
                                                             if (this.field_t.field_jb == 29) {
-                                                              this.a(1, (byte) 37, 6);
-                                                              this.a(15, 32, 16, 8);
+                                                              this.playTypeSound(1, (byte) 37, 6);
+                                                              this.applyAreaEffect(15, 32, 16, 8);
                                                             }
                                                             if (this.field_t.field_jb == 30) {
-                                                              this.a(0, (byte) 37, 6);
-                                                              this.a(30, 32, 16, 8);
+                                                              this.playTypeSound(0, (byte) 37, 6);
+                                                              this.applyAreaEffect(30, 32, 16, 8);
                                                             }
                                                             this.field_v = var12Lifetime1;
                                                             this.field_G = var13Lifetime1;
                                                             this.field_y = 1;
                                                           }
                                                         }
-                                                        var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.next(-18502));
+                                                        var9_ref_mlLifetime1Lifetime1 = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                                                       }
                                                     }
                                                     this.field_z = this.field_G << 4;
                                                     this.field_o = this.field_v << 4;
                                                     return;
                                                   }
-                                                  this.f(0);
+                                                  this.remove(0);
                                                   return;
                                                 }
                                                 if (var9 == 70 &&
                                                   var19 == 0) {
-                                                  if (!this.field_t.c(-1) &&
+                                                  if (!this.field_t.isDead(-1) &&
                                                     (128 + this.field_q.field_H) > this.field_t.field_db) {
                                                     this.field_x = this.field_x + 1;
                                                     this.field_v = this.field_t.field_lb;
@@ -4914,7 +4914,7 @@ final class mi extends DualLinkNode {
                                                     this.field_G = this.field_t.field_db;
                                                     if (this.field_y < 5) {
                                                       MidiPcmStream.field_L.setDeque((byte) 116, this.field_q.field_i);
-                                                      var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.first(-57));
+                                                      var9_ref_mlLifetime1Lifetime1 = (BattleUnit) (MidiPcmStream.field_L.first(-57));
                                                       while (var9_ref_mlLifetime1Lifetime1 != null) {
                                                         if (~this.field_t.field_u != ~var9_ref_mlLifetime1Lifetime1.field_u) {
                                                           var10Lifetime1 = -var9_ref_mlLifetime1Lifetime1.field_lb + this.field_v;
@@ -4931,37 +4931,37 @@ final class mi extends DualLinkNode {
                                                               this.field_v = this.field_v + 8;
                                                             }
                                                             this.field_G = this.field_G + 8;
-                                                            var5 = this.a(this.field_v, (ml) null, (byte) 81, 100, this.field_G, this.field_q);
-                                                            this.field_q.b(52, (mi) (var5));
-                                                            this.a(2, (byte) 37, 2);
+                                                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 100, this.field_G, this.field_q);
+                                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                            this.playTypeSound(2, (byte) 37, 2);
                                                             var14Lifetime1 = 0;
                                                             while (true) {
                                                               if (var14Lifetime1 < 5) {
-                                                                var5 = this.a(this.field_v + (int)(-2.0 + Math.random() * 4.0), (ml) null, (byte) 81, 112, this.field_G + (int)(-2.0 + Math.random() * 4.0), this.field_q);
-                                                                ((mi) (var5)).field_u = (int)(32.0 * Math.random() - 16.0) << 4;
-                                                                ((mi) (var5)).field_F = (int)(-16.0 + Math.random() * 32.0) << 4;
-                                                                this.field_q.b(52, (mi) (var5));
+                                                                var5 = this.spawnFromHere(this.field_v + (int)(-2.0 + Math.random() * 4.0), (BattleUnit) null, (byte) 81, 112, this.field_G + (int)(-2.0 + Math.random() * 4.0), this.field_q);
+                                                                ((SpellProjectile) (var5)).field_u = (int)(32.0 * Math.random() - 16.0) << 4;
+                                                                ((SpellProjectile) (var5)).field_F = (int)(-16.0 + Math.random() * 32.0) << 4;
+                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 var14Lifetime1++;
                                                                 continue;
                                                               }
                                                               break;
                                                             }
-                                                            this.a(5, 32, 16, 8);
+                                                            this.applyAreaEffect(5, 32, 16, 8);
                                                             this.field_y = this.field_y + 1;
                                                             this.field_v = var12Lifetime1;
                                                             this.field_G = var13Lifetime1;
                                                           }
                                                         }
-                                                        var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.next(-18502));
+                                                        var9_ref_mlLifetime1Lifetime1 = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                                                       }
                                                     }
                                                     this.field_z = this.field_G << 4;
                                                     this.field_o = this.field_v << 4;
                                                     return;
                                                   }
-                                                  if (this.field_q.d(false) == this.field_t.field_T) {
+                                                  if (this.field_q.getCurrentPlayer(false) == this.field_t.field_T) {
                                                   }
-                                                  this.f(0);
+                                                  this.remove(0);
                                                   return;
                                                 }
                                                 if (var9 == 123) {
@@ -4974,7 +4974,7 @@ final class mi extends DualLinkNode {
                                                   }
                                                   scanLoop6: while (true) {
                                                     if (this.field_q.field_H > this.field_G) {
-                                                      stackOut_1433_0 = this.field_q.b(-this.field_r + this.field_G, 2, this.field_v - this.field_r, this.field_p);
+                                                      stackOut_1433_0 = this.field_q.spriteOverlapsTerrain(-this.field_r + this.field_G, 2, this.field_v - this.field_r, this.field_p);
                                                       stackIn_1444_0 = stackOut_1433_0 ? 1 : 0;
                                                       stackIn_1434_0 = stackOut_1433_0;
                                                       if (var19 != 0) {
@@ -4995,44 +4995,44 @@ final class mi extends DualLinkNode {
                                                   if (stackIn_1444_0 < this.field_q.field_H) {
                                                     return;
                                                   }
-                                                  this.f(0);
+                                                  this.remove(0);
                                                   return;
                                                 }
                                                 if (126 == var9 &&
                                                   var19 == 0) {
-                                                  if (this.field_t.c(-1)) {
-                                                    this.f(0);
+                                                  if (this.field_t.isDead(-1)) {
+                                                    this.remove(0);
                                                     return;
                                                   }
                                                   this.field_x = this.field_x + 7;
                                                   if (this.field_x >= 255) {
                                                     this.field_x = this.field_x - 255;
                                                   }
-                                                  if (!this.field_q.m(-28046)) {
+                                                  if (!this.field_q.isRecording(-28046)) {
                                                     var9 = -this.field_q.field_H;
                                                     while (true) {
                                                       if (var9 < this.field_G) {
                                                         var10Lifetime1 = this.field_v + (int)(Math.sin((double)(this.field_G - var9) * 3.14 / (double)(this.field_G + this.field_q.field_H)) * Math.cos(-((double)SpriteState.field_v * 0.1) + (double)(-var9)) * 64.0);
-                                                        var5 = this.a(var10Lifetime1, (ml) null, (byte) 81, 129, var9 + (int)(32.0 * Math.random() - 16.0), this.field_q);
-                                                        this.field_q.b(52, (mi) (var5));
-                                                        ((mi) (var5)).field_u = (int)(Math.random() * 5.0 - 2.0);
-                                                        ((mi) (var5)).field_F = -64;
-                                                        ((mi) (var5)).field_x = 1;
+                                                        var5 = this.spawnFromHere(var10Lifetime1, (BattleUnit) null, (byte) 81, 129, var9 + (int)(32.0 * Math.random() - 16.0), this.field_q);
+                                                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                        ((SpellProjectile) (var5)).field_u = (int)(Math.random() * 5.0 - 2.0);
+                                                        ((SpellProjectile) (var5)).field_F = -64;
+                                                        ((SpellProjectile) (var5)).field_x = 1;
                                                         var9 += 32;
                                                         continue;
                                                       }
                                                       break;
                                                     }
-                                                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 129, this.field_G, this.field_q);
-                                                    ((mi) (var5)).field_u = (int)(-64.0 + Math.random() * 128.0);
-                                                    ((mi) (var5)).field_F = -(int)Math.sqrt((double)(-(((mi) (var5)).field_u * ((mi) (var5)).field_u) + 4096));
-                                                    this.field_q.b(52, (mi) (var5));
+                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 129, this.field_G, this.field_q);
+                                                    ((SpellProjectile) (var5)).field_u = (int)(-64.0 + Math.random() * 128.0);
+                                                    ((SpellProjectile) (var5)).field_F = -(int)Math.sqrt((double)(-(((SpellProjectile) (var5)).field_u * ((SpellProjectile) (var5)).field_u) + 4096));
+                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   }
                                                   if (this.field_y == -1) {
                                                     this.field_y = 0;
                                                   }
                                                   while (this.field_G < this.field_q.field_H &&
-                                                    !this.field_q.b(-this.field_r + this.field_G, 2, -this.field_r + this.field_v, this.field_p)) {
+                                                    !this.field_q.spriteOverlapsTerrain(-this.field_r + this.field_G, 2, -this.field_r + this.field_v, this.field_p)) {
                                                     this.field_z = this.field_z + 16;
                                                     this.field_G = this.field_z >> 4;
                                                     if (0 != this.field_y) {
@@ -5052,13 +5052,13 @@ final class mi extends DualLinkNode {
                                                     this.field_y = this.field_y + 1;
                                                   }
                                                   MidiPcmStream.field_L.setDeque((byte) 51, this.field_q.field_Kb);
-                                                  var9_ref_miLifetime1 = (mi) (MidiPcmStream.field_L.first(-62));
+                                                  var9_ref_miLifetime1 = (SpellProjectile) (MidiPcmStream.field_L.first(-62));
                                                   while (null != var9_ref_miLifetime1) {
                                                     stackOut_1493_0 = var9_ref_miLifetime1;
                                                     stackIn_1544_0 = stackOut_1493_0;
                                                     stackIn_1494_0 = stackOut_1493_0;
                                                     regionExit7: {
-                                                      if (((mi) (Object) stackIn_1494_0).h(-139) &&
+                                                      if (((SpellProjectile) (Object) stackIn_1494_0).isAlive(-139) &&
                                                         126 != var9_ref_miLifetime1.field_I &&
                                                         var9_ref_miLifetime1.field_I != 30 &&
                                                         93 != var9_ref_miLifetime1.field_I &&
@@ -5087,11 +5087,11 @@ final class mi extends DualLinkNode {
                                                         }
                                                       }
                                                     }
-                                                    var9_ref_miLifetime1 = (mi) (MidiPcmStream.field_L.next(-18502));
+                                                    var9_ref_miLifetime1 = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                                                   }
                                                   MidiPcmStream.field_L.setDeque((byte) 77, this.field_q.field_i);
                                                   stackIn_1544_0Lifetime1 = MidiPcmStream.field_L.first(-78);
-                                                  var9_ref_mlLifetime1Lifetime1 = (ml) (stackIn_1544_0Lifetime1);
+                                                  var9_ref_mlLifetime1Lifetime1 = (BattleUnit) (stackIn_1544_0Lifetime1);
                                                   while (var9_ref_mlLifetime1Lifetime1 != null) {
                                                     if (var9_ref_mlLifetime1Lifetime1.field_z) {
                                                       var10Lifetime1 = var9_ref_mlLifetime1Lifetime1.field_lb - this.field_v;
@@ -5118,7 +5118,7 @@ final class mi extends DualLinkNode {
                                                         this.field_y = this.field_y + 1;
                                                       }
                                                     }
-                                                    var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.next(-18502));
+                                                    var9_ref_mlLifetime1Lifetime1 = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                                                   }
                                                   return;
                                                 }
@@ -5128,7 +5128,7 @@ final class mi extends DualLinkNode {
                                                       regionExit10: {
                                                         regionExit11: {
                                                           if (148 == var9) {
-                                                            if (!this.field_t.c(-1) &&
+                                                            if (!this.field_t.isDead(-1) &&
                                                               128 + this.field_q.field_H > this.field_t.field_db) {
                                                               this.field_x = this.field_x + 1;
                                                               if (this.field_x >= 256) {
@@ -5143,9 +5143,9 @@ final class mi extends DualLinkNode {
                                                               }
                                                               break regionExit11;
                                                             }
-                                                            if (this.field_q.d(false) == this.field_t.field_T) {
+                                                            if (this.field_q.getCurrentPlayer(false) == this.field_t.field_T) {
                                                             }
-                                                            this.f(0);
+                                                            this.remove(0);
                                                             return;
                                                           }
                                                           if (121 != var9) {
@@ -5165,11 +5165,11 @@ final class mi extends DualLinkNode {
                                                               if (var9 == 142 &&
                                                                 var19 == 0) {
                                                                 if (this.field_t == null) {
-                                                                  this.f(0);
+                                                                  this.remove(0);
                                                                   return;
                                                                 }
-                                                                if (this.field_t.c(-1)) {
-                                                                  this.f(0);
+                                                                if (this.field_t.isDead(-1)) {
+                                                                  this.remove(0);
                                                                   return;
                                                                 }
                                                                 this.field_G = -240;
@@ -5196,7 +5196,7 @@ final class mi extends DualLinkNode {
                                                                     this.field_y == 401 ||
                                                                     this.field_C == null) {
                                                                     this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
-                                                                    this.a(165, true);
+                                                                    this.playSound(165, true);
                                                                   }
                                                                   this.field_y = this.field_y + 1;
                                                                   var9 = 15;
@@ -5214,25 +5214,25 @@ final class mi extends DualLinkNode {
                                                                     var10Lifetime1 = -128 + (this.field_v + u.a(this.field_C, -2147483648, 256));
                                                                     var11Lifetime1 = 48 + (this.field_G + u.a(this.field_C, -2147483648, 16));
                                                                     var12Lifetime1 = u.a(this.field_C, -2147483648, 8192);
-                                                                    var5 = this.a(var10Lifetime1, (ml) null, (byte) 81, 135, var11Lifetime1, this.field_q);
+                                                                    var5 = this.spawnFromHere(var10Lifetime1, (BattleUnit) null, (byte) 81, 135, var11Lifetime1, this.field_q);
                                                                     if (this.field_q.field_sb != null &&
                                                                       null != this.field_q.field_sb[CacheEntry.field_n[7][1]]) {
                                                                       ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][1]], SceneWidgetNode.field_r[CacheEntry.field_n[7][1]] / 8);
                                                                     }
-                                                                    ((mi) (var5)).field_u = of.sine(113, var12Lifetime1) >> 11;
-                                                                    ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var12Lifetime1, -101) >> 11) + 32;
-                                                                    this.field_q.b(52, (mi) (var5));
+                                                                    ((SpellProjectile) (var5)).field_u = of.sine(113, var12Lifetime1) >> 11;
+                                                                    ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var12Lifetime1, -101) >> 11) + 32;
+                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                   }
                                                                 } else {
                                                                   MidiPcmStream.field_L.setDeque((byte) 75, this.field_q.field_Kb);
-                                                                  var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.first(-43));
+                                                                  var9_ref_miLifetime2 = (SpellProjectile) (MidiPcmStream.field_L.first(-43));
                                                                   while (true) {
                                                                     if (null != var9_ref_miLifetime2) {
                                                                       stackOut_2016_0 = var9_ref_miLifetime2;
                                                                       stackIn_2042_0 = stackOut_2016_0;
                                                                       stackIn_2017_0 = stackOut_2016_0;
                                                                       stackIn_2042_1 = -139;
-                                                                      if (((mi) (Object) stackIn_2017_0).h(stackIn_2042_1) &&
+                                                                      if (((SpellProjectile) (Object) stackIn_2017_0).isAlive(stackIn_2042_1) &&
                                                                         var9_ref_miLifetime2.field_t != this.field_t &&
                                                                         30 != var9_ref_miLifetime2.field_I &&
                                                                         var9_ref_miLifetime2.field_I != 84) {
@@ -5246,48 +5246,48 @@ final class mi extends DualLinkNode {
                                                                           }
                                                                         }
                                                                       }
-                                                                      var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.next(-18502));
+                                                                      var9_ref_miLifetime2 = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                                                                       continue;
                                                                     }
                                                                     break;
                                                                   }
                                                                   stackIn_2042_0Lifetime1 = this;
                                                                   stackIn_2042_1Lifetime1 = -128 + this.field_v + (int)(Math.random() * 256.0);
-                                                                  var5 = this.a(stackIn_2042_1Lifetime1, (ml) null, (byte) 81, 132, this.field_G + 48 + (int)(Math.random() * 16.0), this.field_q);
+                                                                  var5 = this.spawnFromHere(stackIn_2042_1Lifetime1, (BattleUnit) null, (byte) 81, 132, this.field_G + 48 + (int)(Math.random() * 16.0), this.field_q);
                                                                   var9 = (int)(Math.random() * 256.0);
-                                                                  ((mi) (var5)).field_u = 0;
+                                                                  ((SpellProjectile) (var5)).field_u = 0;
                                                                   var10_double = 3.141592653589793 * (double)var9 / 128.0;
-                                                                  ((mi) (var5)).field_F = 32 + (int)(Math.cos(var10_double) * 32.0);
-                                                                  ((mi) (var5)).field_x = 1;
-                                                                  this.field_q.b(52, (mi) (var5));
+                                                                  ((SpellProjectile) (var5)).field_F = 32 + (int)(Math.cos(var10_double) * 32.0);
+                                                                  ((SpellProjectile) (var5)).field_x = 1;
+                                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 }
                                                                 if (this.field_y < 500) {
                                                                   return;
                                                                 }
-                                                                this.f(0);
+                                                                this.remove(0);
                                                                 return;
                                                               }
                                                               if (var9 == 136) {
                                                                 this.field_y = this.field_y + 1;
                                                                 if (this.field_y > 480) {
-                                                                  this.f(0);
+                                                                  this.remove(0);
                                                                   return;
                                                                 }
                                                                 var9 = 31 * this.field_y % 480;
-                                                                var5 = this.a(-320, (ml) null, (byte) 81, 152, this.field_q.field_H - var9, this.field_q);
-                                                                ((mi) (var5)).field_F = -var9;
-                                                                ((mi) (var5)).field_u = 128;
-                                                                this.field_q.b(52, (mi) (var5));
-                                                                var5 = this.a(320 + this.field_q.field_y, (ml) null, (byte) 81, 152, this.field_q.field_H - var9, this.field_q);
-                                                                ((mi) (var5)).field_u = -128;
-                                                                ((mi) (var5)).field_F = -var9;
-                                                                this.field_q.b(52, (mi) (var5));
+                                                                var5 = this.spawnFromHere(-320, (BattleUnit) null, (byte) 81, 152, this.field_q.field_H - var9, this.field_q);
+                                                                ((SpellProjectile) (var5)).field_F = -var9;
+                                                                ((SpellProjectile) (var5)).field_u = 128;
+                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                var5 = this.spawnFromHere(320 + this.field_q.field_y, (BattleUnit) null, (byte) 81, 152, this.field_q.field_H - var9, this.field_q);
+                                                                ((SpellProjectile) (var5)).field_u = -128;
+                                                                ((SpellProjectile) (var5)).field_F = -var9;
+                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 return;
                                                               }
                                                               if (var9 == 134) {
                                                                 if (this.field_t != null &&
                                                                   0 >= this.field_t.field_ib) {
-                                                                  this.f(0);
+                                                                  this.remove(0);
                                                                   return;
                                                                 }
                                                                 if (this.field_y != 100 &&
@@ -5317,7 +5317,7 @@ final class mi extends DualLinkNode {
                                                                   }
                                                                 }
                                                                 if (this.field_y >= 300) {
-                                                                  this.f(0);
+                                                                  this.remove(0);
                                                                   return;
                                                                 }
                                                                 var8 = 1;
@@ -5330,36 +5330,36 @@ final class mi extends DualLinkNode {
                                                                     return;
                                                                   }
                                                                   if (var7Lifetime4 != -1) {
-                                                                    var5 = this.a(this.field_v, (ml) null, (byte) 81, var7Lifetime4, this.field_G, this.field_q);
+                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, var7Lifetime4, this.field_G, this.field_q);
                                                                   }
                                                                   if (null != var5) {
                                                                     var10Lifetime1 = (int)(Math.random() * 8192.0);
                                                                     if (var7Lifetime4 != 132) {
                                                                       var10Lifetime1 = u.a(this.field_C, -2147483648, 8192);
                                                                     }
-                                                                    ((mi) (var5)).field_u = of.sine(-17, var10Lifetime1) >> 9;
-                                                                    ((mi) (var5)).field_F = -256 + (BevelBoxPainter.cosine(var10Lifetime1, -101) >> 9);
+                                                                    ((SpellProjectile) (var5)).field_u = of.sine(-17, var10Lifetime1) >> 9;
+                                                                    ((SpellProjectile) (var5)).field_F = -256 + (BevelBoxPainter.cosine(var10Lifetime1, -101) >> 9);
                                                                     if (var7Lifetime4 == 152) {
-                                                                      ((mi) (var5)).field_u = ((mi) (var5)).field_u >> 1;
-                                                                      ((mi) (var5)).field_F = ((mi) (var5)).field_F >> 1;
-                                                                      ((mi) (var5)).field_F = ((mi) (var5)).field_F - 96;
-                                                                      ((mi) (var5)).field_y = u.a(this.field_C, -2147483648, 200);
-                                                                      ((mi) (var5)).field_v = ((mi) (var5)).field_v - 2 * ((mi) (var5)).field_u;
-                                                                      ((mi) (var5)).field_o = ((mi) (var5)).field_v << 4;
+                                                                      ((SpellProjectile) (var5)).field_u = ((SpellProjectile) (var5)).field_u >> 1;
+                                                                      ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F >> 1;
+                                                                      ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F - 96;
+                                                                      ((SpellProjectile) (var5)).field_y = u.a(this.field_C, -2147483648, 200);
+                                                                      ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_v - 2 * ((SpellProjectile) (var5)).field_u;
+                                                                      ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
                                                                     } else {
-                                                                      ((mi) (var5)).field_F = ((mi) (var5)).field_F >> 2;
-                                                                      ((mi) (var5)).field_u = ((mi) (var5)).field_u >> 1;
-                                                                      ((mi) (var5)).field_F = ((mi) (var5)).field_F - 16;
+                                                                      ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F >> 2;
+                                                                      ((SpellProjectile) (var5)).field_u = ((SpellProjectile) (var5)).field_u >> 1;
+                                                                      ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F - 16;
                                                                       var11Lifetime1 = this.field_y * 48 / 500 + 48;
-                                                                      ((mi) (var5)).field_v = ((mi) (var5)).field_v + (int)((double)var11Lifetime1 * Math.random() - (double)(var11Lifetime1 / 2));
-                                                                      ((mi) (var5)).field_v = ((mi) (var5)).field_v - 2 * ((mi) (var5)).field_u;
-                                                                      ((mi) (var5)).field_G = ((mi) (var5)).field_G + 16;
-                                                                      ((mi) (var5)).field_o = ((mi) (var5)).field_v << 4;
-                                                                      ((mi) (var5)).field_x = 1;
-                                                                      ((mi) (var5)).field_z = ((mi) (var5)).field_G << 4;
-                                                                      ((mi) (var5)).field_y = (int)(4.0 * Math.random() - 10.0);
+                                                                      ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_v + (int)((double)var11Lifetime1 * Math.random() - (double)(var11Lifetime1 / 2));
+                                                                      ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_v - 2 * ((SpellProjectile) (var5)).field_u;
+                                                                      ((SpellProjectile) (var5)).field_G = ((SpellProjectile) (var5)).field_G + 16;
+                                                                      ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
+                                                                      ((SpellProjectile) (var5)).field_x = 1;
+                                                                      ((SpellProjectile) (var5)).field_z = ((SpellProjectile) (var5)).field_G << 4;
+                                                                      ((SpellProjectile) (var5)).field_y = (int)(4.0 * Math.random() - 10.0);
                                                                     }
-                                                                    this.field_q.b(52, (mi) (var5));
+                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                   }
                                                                   var9++;
                                                                 }
@@ -5367,8 +5367,8 @@ final class mi extends DualLinkNode {
                                                               }
                                                               if (var9 == 36) {
                                                                 if (this.field_t != null &&
-                                                                  this.field_t.c(-1)) {
-                                                                  this.f(0);
+                                                                  this.field_t.isDead(-1)) {
+                                                                  this.remove(0);
                                                                   return;
                                                                 }
                                                                 this.field_G = -240;
@@ -5376,10 +5376,10 @@ final class mi extends DualLinkNode {
                                                                 if (100 < this.field_x) {
                                                                   this.field_x = this.field_x - 100;
                                                                 }
-                                                                var5 = this.a(this.field_v + ((int)(-50.0 + Math.random() * 100.0) + (int)(96.0 * Math.sin(0.01 * (6.28 * (double)this.field_x)))), (ml) null, (byte) 81, 112, 48 + (this.field_G + (int)(Math.random() * 8.0)), this.field_q);
-                                                                ((mi) (var5)).field_u = (int)(-256.0 + Math.random() * 512.0);
-                                                                ((mi) (var5)).field_F = -(int)(Math.random() * 512.0) + 192;
-                                                                this.field_q.b(52, (mi) (var5));
+                                                                var5 = this.spawnFromHere(this.field_v + ((int)(-50.0 + Math.random() * 100.0) + (int)(96.0 * Math.sin(0.01 * (6.28 * (double)this.field_x)))), (BattleUnit) null, (byte) 81, 112, 48 + (this.field_G + (int)(Math.random() * 8.0)), this.field_q);
+                                                                ((SpellProjectile) (var5)).field_u = (int)(-256.0 + Math.random() * 512.0);
+                                                                ((SpellProjectile) (var5)).field_F = -(int)(Math.random() * 512.0) + 192;
+                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 if (this.field_y == 100) {
                                                                   return;
                                                                 }
@@ -5394,27 +5394,27 @@ final class mi extends DualLinkNode {
                                                                 }
                                                                 this.field_y = this.field_y + 1;
                                                                 if (this.field_y == 300) {
-                                                                  this.f(0);
+                                                                  this.remove(0);
                                                                   return;
                                                                 }
                                                                 if (this.field_y % 15 != 10) {
                                                                   return;
                                                                 }
                                                                 var9 = u.a(this.field_C, -2147483648, 320) - 160;
-                                                                this.a(100, true);
-                                                                var5 = this.a(this.field_v + var9, (ml) null, (byte) 81, 84, 48 + this.field_G, this.field_q);
-                                                                ((mi) (var5)).field_u = 0;
-                                                                ((mi) (var5)).field_w = this.field_w;
-                                                                ((mi) (var5)).field_y = 45;
-                                                                ((mi) (var5)).field_F = 256;
-                                                                this.field_q.b(52, (mi) (var5));
+                                                                this.playSound(100, true);
+                                                                var5 = this.spawnFromHere(this.field_v + var9, (BattleUnit) null, (byte) 81, 84, 48 + this.field_G, this.field_q);
+                                                                ((SpellProjectile) (var5)).field_u = 0;
+                                                                ((SpellProjectile) (var5)).field_w = this.field_w;
+                                                                ((SpellProjectile) (var5)).field_y = 45;
+                                                                ((SpellProjectile) (var5)).field_F = 256;
+                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 return;
                                                               }
                                                               if (var9 != 19) {
                                                                 if (62 == var9 &&
                                                                   var19 == 0) {
                                                                   if (this.field_t != null &&
-                                                                    !this.field_t.c(-1)) {
+                                                                    !this.field_t.isDead(-1)) {
                                                                     this.field_x = this.field_x + 1;
                                                                     if (this.field_y != 100 &&
                                                                       this.field_y != 200 &&
@@ -5467,25 +5467,25 @@ final class mi extends DualLinkNode {
                                                                       var7Lifetime1 = 64;
                                                                     }
                                                                     if (500 == this.field_y) {
-                                                                      this.f(0);
+                                                                      this.remove(0);
                                                                       return;
                                                                     }
                                                                     if (var7Lifetime1 != -1) {
-                                                                      var5 = this.a(this.field_v, (ml) null, (byte) 81, var7Lifetime1, -480, this.field_q);
+                                                                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, var7Lifetime1, -480, this.field_q);
                                                                     }
                                                                     if (var5 == null) {
                                                                       return;
                                                                     }
                                                                     var9 = u.a(this.field_C, -2147483648, 8192);
-                                                                    ((mi) (var5)).field_u = of.sine(127, var9) >> 11;
-                                                                    ((mi) (var5)).field_F = 0;
+                                                                    ((SpellProjectile) (var5)).field_u = of.sine(127, var9) >> 11;
+                                                                    ((SpellProjectile) (var5)).field_F = 0;
                                                                     if (var7Lifetime1 == 64) {
-                                                                      ((mi) (var5)).field_u = 0;
+                                                                      ((SpellProjectile) (var5)).field_u = 0;
                                                                     }
-                                                                    this.field_q.b(52, (mi) (var5));
+                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                     return;
                                                                   }
-                                                                  this.f(0);
+                                                                  this.remove(0);
                                                                   return;
                                                                 }
                                                                 if (var9 == 77 &&
@@ -5494,23 +5494,23 @@ final class mi extends DualLinkNode {
                                                                   if (this.field_y < this.field_t.field_ib) {
                                                                     return;
                                                                   }
-                                                                  var5 = this.a(this.field_v, (ml) null, (byte) 81, 101, this.field_G, this.field_q);
-                                                                  this.field_q.b(52, (mi) (var5));
+                                                                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 101, this.field_G, this.field_q);
+                                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                   this.field_t.field_db = 1000 + this.field_q.field_H;
                                                                   if (this.field_t.field_ib >= 50) {
                                                                     if (this.field_t.field_ib < 100) {
-                                                                      this.a(1, (byte) 37, 9);
+                                                                      this.playTypeSound(1, (byte) 37, 9);
                                                                     } else {
-                                                                      this.a(0, (byte) 37, 9);
+                                                                      this.playTypeSound(0, (byte) 37, 9);
                                                                     }
                                                                   } else {
-                                                                    this.a(2, (byte) 37, 9);
+                                                                    this.playTypeSound(2, (byte) 37, 9);
                                                                   }
-                                                                  this.a(this.field_t.field_ib, this.field_t.field_ib + this.field_t.field_Y, this.field_t.field_ib * 2 + this.field_t.field_Y, 8);
+                                                                  this.applyAreaEffect(this.field_t.field_ib, this.field_t.field_ib + this.field_t.field_Y, this.field_t.field_ib * 2 + this.field_t.field_Y, 8);
                                                                   this.field_t.field_db = this.field_q.field_H + 128;
                                                                   this.field_t.field_x = 1;
                                                                   this.field_t.field_ib = 0;
-                                                                  this.f(0);
+                                                                  this.remove(0);
                                                                   return;
                                                                 }
                                                                 if ((139 != var9 ||
@@ -5522,11 +5522,11 @@ final class mi extends DualLinkNode {
                                                                     if (25 > this.field_y) {
                                                                       return;
                                                                     }
-                                                                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 101, this.field_G, this.field_q);
-                                                                    this.field_q.b(52, (mi) (var5));
-                                                                    this.a(0, (byte) 37, 9);
-                                                                    this.a(15, 256, 96, 8);
-                                                                    this.f(0);
+                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 101, this.field_G, this.field_q);
+                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    this.playTypeSound(0, (byte) 37, 9);
+                                                                    this.applyAreaEffect(15, 256, 96, 8);
+                                                                    this.remove(0);
                                                                     return;
                                                                   }
                                                                   if (var9 == 74 &&
@@ -5544,18 +5544,18 @@ final class mi extends DualLinkNode {
                                                                       if (Math.abs(this.field_y) % 5 != 0) {
                                                                         return;
                                                                       }
-                                                                      var5 = this.a(this.field_v, this.field_t, (byte) 81, 0, this.field_G, this.field_q);
-                                                                      ((mi) (var5)).field_u = (this.field_u >> 1) + (u.a(this.field_C, -2147483648, 65) - 32);
-                                                                      ((mi) (var5)).field_F = -32 + (this.field_F >> 1) + u.a(this.field_C, -2147483648, 65);
-                                                                      ((mi) (var5)).field_w = this.field_w;
-                                                                      this.field_q.b(52, (mi) (var5));
+                                                                      var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 0, this.field_G, this.field_q);
+                                                                      ((SpellProjectile) (var5)).field_u = (this.field_u >> 1) + (u.a(this.field_C, -2147483648, 65) - 32);
+                                                                      ((SpellProjectile) (var5)).field_F = -32 + (this.field_F >> 1) + u.a(this.field_C, -2147483648, 65);
+                                                                      ((SpellProjectile) (var5)).field_w = this.field_w;
+                                                                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                       return;
                                                                     }
-                                                                    this.f(0);
+                                                                    this.remove(0);
                                                                     return;
                                                                   }
                                                                   if (var9 != 141) {
-                                                                    this.b(6016, param3, param2, param0);
+                                                                    this.detonate(6016, param3, param2, param0);
                                                                     if (var19 == 0) {
                                                                       return;
                                                                     }
@@ -5566,7 +5566,7 @@ final class mi extends DualLinkNode {
                                                                   }
                                                                   this.field_y = this.field_y + 1;
                                                                   if (this.field_y % 5 == 4) {
-                                                                    this.a(1, (byte) 37, 7);
+                                                                    this.playTypeSound(1, (byte) 37, 7);
                                                                   }
                                                                   var9 = 90;
                                                                   if (this.field_y <= var9 && (null == this.field_t ||
@@ -5574,13 +5574,13 @@ final class mi extends DualLinkNode {
                                                                     if (this.field_y % 3 != 0) {
                                                                       return;
                                                                     }
-                                                                    var5 = this.a(-15 + (this.field_v + u.a(this.field_C, -2147483648, 31)), this.field_t, (byte) 81, 135, this.field_G, this.field_q);
-                                                                    ((mi) (var5)).field_u = 0 + (u.a(this.field_C, -2147483648, 3) - 1);
-                                                                    ((mi) (var5)).field_F = 64 - (-u.a(this.field_C, -2147483648, 31) + 15);
-                                                                    this.field_q.b(52, (mi) (var5));
+                                                                    var5 = this.spawnFromHere(-15 + (this.field_v + u.a(this.field_C, -2147483648, 31)), this.field_t, (byte) 81, 135, this.field_G, this.field_q);
+                                                                    ((SpellProjectile) (var5)).field_u = 0 + (u.a(this.field_C, -2147483648, 3) - 1);
+                                                                    ((SpellProjectile) (var5)).field_F = 64 - (-u.a(this.field_C, -2147483648, 31) + 15);
+                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                     return;
                                                                   }
-                                                                  this.f(0);
+                                                                  this.remove(0);
                                                                   return;
                                                                 }
                                                                 this.field_y = this.field_y + 1;
@@ -5589,39 +5589,39 @@ final class mi extends DualLinkNode {
                                                                 }
                                                                 if (this.field_y == 13) {
                                                                   if (5 == this.field_t.field_jb) {
-                                                                    this.a(1, (byte) 37, 3);
-                                                                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
-                                                                    this.field_q.b(52, (mi) (var5));
-                                                                    this.a(30, 256, 64, 8);
+                                                                    this.playTypeSound(1, (byte) 37, 3);
+                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
+                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    this.applyAreaEffect(30, 256, 64, 8);
                                                                   }
                                                                   if (this.field_t.field_jb == 2) {
-                                                                    this.a(1, (byte) 37, 1);
-                                                                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 86, this.field_G, this.field_q);
-                                                                    this.field_q.b(52, (mi) (var5));
-                                                                    this.a(30, 256, 64, 8);
+                                                                    this.playTypeSound(1, (byte) 37, 1);
+                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 86, this.field_G, this.field_q);
+                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    this.applyAreaEffect(30, 256, 64, 8);
                                                                   }
                                                                   if (this.field_t.field_jb == 9) {
-                                                                    this.a(0, (byte) 37, 5);
-                                                                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 108, this.field_G, this.field_q);
-                                                                    this.field_q.b(52, (mi) (var5));
-                                                                    this.a(75, 256, 64, 8);
+                                                                    this.playTypeSound(0, (byte) 37, 5);
+                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 108, this.field_G, this.field_q);
+                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    this.applyAreaEffect(75, 256, 64, 8);
                                                                   }
                                                                   if (this.field_t.field_jb == 39) {
-                                                                    this.a(0, (byte) 37, 0);
-                                                                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 163, this.field_G, this.field_q);
-                                                                    this.field_q.b(52, (mi) (var5));
-                                                                    this.a(50, 64, 96, 8);
+                                                                    this.playTypeSound(0, (byte) 37, 0);
+                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 163, this.field_G, this.field_q);
+                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    this.applyAreaEffect(50, 64, 96, 8);
                                                                   }
                                                                 }
                                                                 if (this.field_y < 25) {
                                                                   return;
                                                                 }
-                                                                this.f(0);
+                                                                this.remove(0);
                                                                 return;
                                                               }
                                                               if (this.field_t != null &&
-                                                                this.field_t.c(-1)) {
-                                                                this.f(0);
+                                                                this.field_t.isDead(-1)) {
+                                                                this.remove(0);
                                                                 return;
                                                               }
                                                               if (this.field_y != 100 &&
@@ -5810,10 +5810,10 @@ final class mi extends DualLinkNode {
                                                                 pn.field_e.makeRasterTarget();
                                                                 SoftwareRasterizer.fillRectangle(0, 0, 512, 128, 0);
                                                                 vg.field_M.drawScaled(0, 0, 4 * var9, var9);
-                                                                this.field_q.a(var10Lifetime1, -38, -(2 * var9) + this.field_v, pn.field_e);
+                                                                this.field_q.carveTerrainAndSprite(var10Lifetime1, -38, -(2 * var9) + this.field_v, pn.field_e);
                                                               }
                                                               if (this.field_y >= 500) {
-                                                                this.f(0);
+                                                                this.remove(0);
                                                                 return;
                                                               }
                                                               var8Lifetime1 = 1;
@@ -5831,7 +5831,7 @@ final class mi extends DualLinkNode {
                                                                   if (this.field_y < 100) {
                                                                     var10Lifetime1 = this.field_y * (64 * this.field_y / 500 + 64) / 100;
                                                                   }
-                                                                  var5 = this.a(this.field_v, this.field_t, (byte) 81, var7Lifetime3, -var10Lifetime1 + this.field_G, this.field_q);
+                                                                  var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, var7Lifetime3, -var10Lifetime1 + this.field_G, this.field_q);
                                                                 }
                                                                 if (var5 != null) {
                                                                   var10Lifetime1 = (int)(8192.0 * Math.random());
@@ -5840,57 +5840,57 @@ final class mi extends DualLinkNode {
                                                                     var10Lifetime1 = u.a(this.field_C, -2147483648, 8192);
                                                                   }
                                                                   if (var7Lifetime3 == 10) {
-                                                                    this.a(76, true);
+                                                                    this.playSound(76, true);
                                                                   }
                                                                   if (var7Lifetime3 == 67) {
-                                                                    this.a(83, true);
+                                                                    this.playSound(83, true);
                                                                   }
-                                                                  ((mi) (var5)).field_u = of.sine(123, var10Lifetime1) >> 9;
-                                                                  ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var10Lifetime1, -101) >> 9) - 256;
+                                                                  ((SpellProjectile) (var5)).field_u = of.sine(123, var10Lifetime1) >> 9;
+                                                                  ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var10Lifetime1, -101) >> 9) - 256;
                                                                   if (var7Lifetime3 == 10) {
-                                                                    ((mi) (var5)).field_u = ((mi) (var5)).field_u >> 1;
-                                                                    ((mi) (var5)).field_F = ((mi) (var5)).field_F - 64;
+                                                                    ((SpellProjectile) (var5)).field_u = ((SpellProjectile) (var5)).field_u >> 1;
+                                                                    ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F - 64;
                                                                   }
-                                                                  ((mi) (var5)).field_w = this.field_w;
+                                                                  ((SpellProjectile) (var5)).field_w = this.field_w;
                                                                   if (67 == var7Lifetime3 ||
                                                                     var7Lifetime3 == 13) {
-                                                                    ((mi) (var5)).field_u = ((mi) (var5)).field_u >> 2;
-                                                                    ((mi) (var5)).field_F = ((mi) (var5)).field_F - 128;
-                                                                    ((mi) (var5)).field_y = u.a(this.field_C, -2147483648, 200);
+                                                                    ((SpellProjectile) (var5)).field_u = ((SpellProjectile) (var5)).field_u >> 2;
+                                                                    ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F - 128;
+                                                                    ((SpellProjectile) (var5)).field_y = u.a(this.field_C, -2147483648, 200);
                                                                   }
                                                                   if (var7Lifetime3 == 87 ||
                                                                     var7Lifetime3 == 88) {
-                                                                    ((mi) (var5)).field_F = ((mi) (var5)).field_F >> 2;
-                                                                    ((mi) (var5)).field_u = ((mi) (var5)).field_u >> 2;
+                                                                    ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F >> 2;
+                                                                    ((SpellProjectile) (var5)).field_u = ((SpellProjectile) (var5)).field_u >> 2;
                                                                     var11Lifetime1 = 48 + this.field_y * 48 / 500;
-                                                                    ((mi) (var5)).field_v = ((mi) (var5)).field_v + (int)((double)(-(var11Lifetime1 / 2)) + (double)var11Lifetime1 * Math.random());
-                                                                    ((mi) (var5)).field_G = ((mi) (var5)).field_G + 16;
-                                                                    ((mi) (var5)).field_o = ((mi) (var5)).field_v << 4;
-                                                                    ((mi) (var5)).field_z = ((mi) (var5)).field_G << 4;
+                                                                    ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_v + (int)((double)(-(var11Lifetime1 / 2)) + (double)var11Lifetime1 * Math.random());
+                                                                    ((SpellProjectile) (var5)).field_G = ((SpellProjectile) (var5)).field_G + 16;
+                                                                    ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
+                                                                    ((SpellProjectile) (var5)).field_z = ((SpellProjectile) (var5)).field_G << 4;
                                                                     if (var7Lifetime3 == 87) {
-                                                                      ((mi) (var5)).field_x = 1;
+                                                                      ((SpellProjectile) (var5)).field_x = 1;
                                                                     }
-                                                                    ((mi) (var5)).field_y = (int)(-10.0 + Math.random() * 4.0);
+                                                                    ((SpellProjectile) (var5)).field_y = (int)(-10.0 + Math.random() * 4.0);
                                                                   }
-                                                                  this.field_q.b(52, (mi) (var5));
+                                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 }
                                                                 var9++;
                                                               }
                                                               return;
                                                             }
                                                             if (this.field_t == null) {
-                                                              this.f(0);
+                                                              this.remove(0);
                                                               return;
                                                             }
                                                             if (5 == this.field_t.field_jb) {
                                                               this.field_v = this.field_t.field_lb;
                                                               if (this.field_t.field_db >= (this.field_q.field_H + 128)) {
-                                                                this.f(0);
+                                                                this.remove(0);
                                                                 return;
                                                               }
                                                             }
-                                                            if (this.field_t.c(-1)) {
-                                                              this.f(0);
+                                                            if (this.field_t.isDead(-1)) {
+                                                              this.remove(0);
                                                               return;
                                                             }
                                                             this.field_G = -240;
@@ -5925,18 +5925,18 @@ final class mi extends DualLinkNode {
                                                                   var9 = this.field_v - (-u.a(this.field_C, -2147483648, 256) + 128);
                                                                   var10Lifetime1 = this.field_G - (-u.a(this.field_C, -2147483648, 16) - 48);
                                                                   var11Lifetime1 = u.a(this.field_C, -2147483648, 8192);
-                                                                  var5 = this.a(var9, (ml) null, (byte) 81, 46, var10Lifetime1, this.field_q);
-                                                                  ((mi) (var5)).field_u = of.sine(125, var11Lifetime1) >> 11;
-                                                                  ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var11Lifetime1, -104) >> 11) + 32;
-                                                                  this.field_q.b(52, (mi) (var5));
+                                                                  var5 = this.spawnFromHere(var9, (BattleUnit) null, (byte) 81, 46, var10Lifetime1, this.field_q);
+                                                                  ((SpellProjectile) (var5)).field_u = of.sine(125, var11Lifetime1) >> 11;
+                                                                  ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var11Lifetime1, -104) >> 11) + 32;
+                                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 } else {
                                                                   var9 = this.field_v + u.a(this.field_C, -2147483648, 192) - 96;
                                                                   var10Lifetime1 = this.field_G + (48 + u.a(this.field_C, -2147483648, 16));
-                                                                  var5 = this.a(var9, (ml) null, (byte) 81, 46, var10Lifetime1, this.field_q);
+                                                                  var5 = this.spawnFromHere(var9, (BattleUnit) null, (byte) 81, 46, var10Lifetime1, this.field_q);
                                                                   var11Lifetime1 = u.a(this.field_C, -2147483648, 8192);
-                                                                  ((mi) (var5)).field_u = of.sine(-2, var11Lifetime1) >> 11;
-                                                                  ((mi) (var5)).field_F = 32 + (BevelBoxPainter.cosine(var11Lifetime1, -128) >> 11);
-                                                                  this.field_q.b(52, (mi) (var5));
+                                                                  ((SpellProjectile) (var5)).field_u = of.sine(-2, var11Lifetime1) >> 11;
+                                                                  ((SpellProjectile) (var5)).field_F = 32 + (BevelBoxPainter.cosine(var11Lifetime1, -128) >> 11);
+                                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                   if (100 != this.field_y &&
                                                                     this.field_y != 200 &&
                                                                     this.field_y != 300 &&
@@ -5948,7 +5948,7 @@ final class mi extends DualLinkNode {
                                                             } else {
                                                               if (this.field_I != 71) {
                                                                 MidiPcmStream.field_L.setDeque((byte) 100, this.field_q.field_Kb);
-                                                                var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.first(-123));
+                                                                var9_ref_miLifetime2 = (SpellProjectile) (MidiPcmStream.field_L.first(-123));
                                                                 while (true) {
                                                                   if (var9_ref_miLifetime2 != null) {
                                                                     stackOut_1870_0 = var9_ref_miLifetime2;
@@ -5956,7 +5956,7 @@ final class mi extends DualLinkNode {
                                                                     stackIn_1871_0 = stackOut_1870_0;
                                                                     stackIn_1893_1 = -139;
                                                                     if (var19 == 0) {
-                                                                      if (((mi) (Object) stackIn_1871_0).h(stackIn_1893_1) &&
+                                                                      if (((SpellProjectile) (Object) stackIn_1871_0).isAlive(stackIn_1893_1) &&
                                                                         var9_ref_miLifetime2.field_t != this.field_t &&
                                                                         30 != var9_ref_miLifetime2.field_I &&
                                                                         var9_ref_miLifetime2.field_I != 84) {
@@ -5970,7 +5970,7 @@ final class mi extends DualLinkNode {
                                                                           }
                                                                         }
                                                                       }
-                                                                      var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.next(-18502));
+                                                                      var9_ref_miLifetime2 = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                                                                       continue;
                                                                     }
                                                                   } else {
@@ -5979,13 +5979,13 @@ final class mi extends DualLinkNode {
                                                                   }
                                                                   break;
                                                                 }
-                                                                var5 = this.a(stackIn_1893_1, (ml) null, (byte) 81, 95, this.field_G - (-48 - (int)(16.0 * Math.random())), this.field_q);
+                                                                var5 = this.spawnFromHere(stackIn_1893_1, (BattleUnit) null, (byte) 81, 95, this.field_G - (-48 - (int)(16.0 * Math.random())), this.field_q);
                                                                 var9 = (int)(256.0 * Math.random());
                                                                 var10_doubleLifetime1 = (double)var9 * 3.141592653589793 / 128.0;
-                                                                ((mi) (var5)).field_u = (int)(Math.sin(var10_doubleLifetime1) * 32.0);
-                                                                ((mi) (var5)).field_F = 32 + (int)(32.0 * Math.cos(var10_doubleLifetime1));
-                                                                ((mi) (var5)).field_x = 1;
-                                                                this.field_q.b(52, (mi) (var5));
+                                                                ((SpellProjectile) (var5)).field_u = (int)(Math.sin(var10_doubleLifetime1) * 32.0);
+                                                                ((SpellProjectile) (var5)).field_F = 32 + (int)(32.0 * Math.cos(var10_doubleLifetime1));
+                                                                ((SpellProjectile) (var5)).field_x = 1;
+                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                               }
                                                             }
                                                             if (71 == this.field_I) {
@@ -5998,18 +5998,18 @@ final class mi extends DualLinkNode {
                                                             if (this.field_y < 500) {
                                                               return;
                                                             }
-                                                            this.f(0);
+                                                            this.remove(0);
                                                             return;
                                                           }
                                                         }
-                                                        if (!this.field_t.c(-1) &&
+                                                        if (!this.field_t.isDead(-1) &&
                                                           128 + this.field_q.field_H > this.field_t.field_db) {
                                                           this.field_t.field_gb = this;
                                                           if (this.field_t.field_x > 0) {
                                                             if (this == this.field_t.field_gb) {
                                                               this.field_t.field_gb = null;
                                                             }
-                                                            this.f(0);
+                                                            this.remove(0);
                                                             return;
                                                           }
                                                           this.field_v = this.field_t.field_lb;
@@ -6031,13 +6031,13 @@ final class mi extends DualLinkNode {
                                                             return;
                                                           }
                                                         } else {
-                                                          if (~this.field_q.d(false) == ~this.field_t.field_T) {
+                                                          if (~this.field_q.getCurrentPlayer(false) == ~this.field_t.field_T) {
                                                           }
-                                                          this.f(0);
+                                                          this.remove(0);
                                                           return;
                                                         }
                                                       }
-                                                      if (!this.field_t.c(-1) &&
+                                                      if (!this.field_t.isDead(-1) &&
                                                         (128 + this.field_q.field_H) > this.field_t.field_db) {
                                                         if (this.field_t.field_x > 0) {
                                                           this.field_y = this.field_y + this.field_t.field_x;
@@ -6051,7 +6051,7 @@ final class mi extends DualLinkNode {
                                                           }
                                                         }
                                                         if (this.field_y >= 50) {
-                                                          this.f(0);
+                                                          this.remove(0);
                                                           return;
                                                         }
                                                         this.field_x = this.field_x + (this.field_y + 8);
@@ -6066,13 +6066,13 @@ final class mi extends DualLinkNode {
                                                           return;
                                                         }
                                                       } else {
-                                                        if (this.field_q.d(false) == this.field_t.field_T) {
+                                                        if (this.field_q.getCurrentPlayer(false) == this.field_t.field_T) {
                                                         }
-                                                        this.f(0);
+                                                        this.remove(0);
                                                         return;
                                                       }
                                                     }
-                                                    if (!this.field_t.c(-1) &&
+                                                    if (!this.field_t.isDead(-1) &&
                                                       this.field_t.field_db < (128 + this.field_q.field_H)) {
                                                       this.field_x = this.field_x + 16;
                                                       if (this.field_t.field_x > 0) {
@@ -6089,13 +6089,13 @@ final class mi extends DualLinkNode {
                                                         return;
                                                       }
                                                     } else {
-                                                      if (this.field_q.d(false) != this.field_t.field_T) {
+                                                      if (this.field_q.getCurrentPlayer(false) != this.field_t.field_T) {
                                                       }
-                                                      this.f(0);
+                                                      this.remove(0);
                                                       return;
                                                     }
                                                   }
-                                                  if (!this.field_t.c(-1) &&
+                                                  if (!this.field_t.isDead(-1) &&
                                                     128 + this.field_q.field_H > this.field_t.field_db) {
                                                     this.field_x = this.field_x + 1;
                                                     if (16 <= this.field_x) {
@@ -6112,9 +6112,9 @@ final class mi extends DualLinkNode {
                                                       this.field_y = this.field_y + 1;
                                                     }
                                                     MidiPcmStream.field_L.setDeque((byte) 107, this.field_q.field_Kb);
-                                                    var9_ref_miLifetime2Lifetime1 = (mi) (MidiPcmStream.field_L.first(-32));
+                                                    var9_ref_miLifetime2Lifetime1 = (SpellProjectile) (MidiPcmStream.field_L.first(-32));
                                                     while (var9_ref_miLifetime2Lifetime1 != null) {
-                                                      if (var9_ref_miLifetime2Lifetime1.h(-139) &&
+                                                      if (var9_ref_miLifetime2Lifetime1.isAlive(-139) &&
                                                         var9_ref_miLifetime2Lifetime1.field_I != 30 &&
                                                         var9_ref_miLifetime2Lifetime1.field_I != 93 &&
                                                         var9_ref_miLifetime2Lifetime1.field_I != 84 &&
@@ -6148,7 +6148,7 @@ final class mi extends DualLinkNode {
                                                           }
                                                         }
                                                       }
-                                                      var9_ref_miLifetime2Lifetime1 = (mi) (MidiPcmStream.field_L.next(-18502));
+                                                      var9_ref_miLifetime2Lifetime1 = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                                                       if (var19 == 0) {
                                                         continue;
                                                       }
@@ -6156,13 +6156,13 @@ final class mi extends DualLinkNode {
                                                     }
                                                     return;
                                                   }
-                                                  if (~this.field_q.d(false) != ~this.field_t.field_T) {
+                                                  if (~this.field_q.getCurrentPlayer(false) != ~this.field_t.field_T) {
                                                   }
-                                                  this.f(0);
+                                                  this.remove(0);
                                                   return;
                                                 }
-                                                if (this.field_t.c(-1)) {
-                                                  this.f(0);
+                                                if (this.field_t.isDead(-1)) {
+                                                  this.remove(0);
                                                   return;
                                                 }
                                                 this.field_x = this.field_x + 1;
@@ -6173,7 +6173,7 @@ final class mi extends DualLinkNode {
                                                   this.field_x = this.field_x - 16;
                                                 }
                                                 while (this.field_G < this.field_q.field_H &&
-                                                  !this.field_q.b(-this.field_r + this.field_G, 2, -this.field_r + this.field_v, this.field_p)) {
+                                                  !this.field_q.spriteOverlapsTerrain(-this.field_r + this.field_G, 2, -this.field_r + this.field_v, this.field_p)) {
                                                   this.field_z = this.field_z + 16;
                                                   this.field_G = this.field_z >> 4;
                                                   if (0 != this.field_y) {
@@ -6191,21 +6191,21 @@ final class mi extends DualLinkNode {
                                                   if (this.field_y > 0) {
                                                     this.field_y = this.field_y + 1;
                                                   }
-                                                  if (this.field_q.b(-this.field_r + this.field_G, 2, -this.field_r + this.field_v, this.field_p) &&
+                                                  if (this.field_q.spriteOverlapsTerrain(-this.field_r + this.field_G, 2, -this.field_r + this.field_v, this.field_p) &&
                                                     jo.field_b) {
-                                                    var5 = this.a(this.field_v, this.field_t, (byte) 81, 85, this.field_G, this.field_q);
-                                                    this.field_q.b(52, (mi) (var5));
-                                                    this.a(1, (byte) 37, 0);
-                                                    this.a(50, 64, 32, 8);
+                                                    var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 85, this.field_G, this.field_q);
+                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                    this.playTypeSound(1, (byte) 37, 0);
+                                                    this.applyAreaEffect(50, 64, 32, 8);
                                                     this.field_y = 250;
                                                   }
                                                   MidiPcmStream.field_L.setDeque((byte) 31, this.field_q.field_Kb);
-                                                  var9_ref_miLifetime3 = (mi) (MidiPcmStream.field_L.first(-78));
+                                                  var9_ref_miLifetime3 = (SpellProjectile) (MidiPcmStream.field_L.first(-78));
                                                   while (var9_ref_miLifetime3 != null) {
                                                     if (var19 != 0) {
                                                       return;
                                                     }
-                                                    if (var9_ref_miLifetime3.h(-139) &&
+                                                    if (var9_ref_miLifetime3.isAlive(-139) &&
                                                       30 != var9_ref_miLifetime3.field_I &&
                                                       var9_ref_miLifetime3.field_I != 93 &&
                                                       var9_ref_miLifetime3.field_I != 84 &&
@@ -6236,16 +6236,16 @@ final class mi extends DualLinkNode {
                                                         }
                                                       }
                                                     }
-                                                    var9_ref_miLifetime3 = (mi) (MidiPcmStream.field_L.next(-18502));
+                                                    var9_ref_miLifetime3 = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                                                   }
                                                   return;
                                                 }
-                                                this.f(0);
+                                                this.remove(0);
                                                 return;
                                               }
                                             }
                                             if (null == this.field_t) {
-                                              this.f(0);
+                                              this.remove(0);
                                               return;
                                             }
                                             regionExit12: {
@@ -6253,7 +6253,7 @@ final class mi extends DualLinkNode {
                                               this.field_y = this.field_y + 1;
                                               if (0 == this.field_y % 2) {
                                                 if (this.field_y % 16 == 0) {
-                                                  this.a(2, (byte) 37, 1);
+                                                  this.playTypeSound(2, (byte) 37, 1);
                                                 }
                                                 var9 = param3 - this.field_t.field_lb;
                                                 var10Lifetime1 = (this.field_t.field_Y >> 1) + (-this.field_t.field_db + param2);
@@ -6298,22 +6298,22 @@ final class mi extends DualLinkNode {
                                                   }
                                                   this.field_G = this.field_z >> 4;
                                                   this.field_v = this.field_o >> 4;
-                                                  var5 = this.a(this.field_v + (int)(-8.0 + 16.0 * Math.random()), (ml) null, (byte) 81, 90, this.field_G + (int)(Math.random() * 16.0 - 8.0), this.field_q);
-                                                  this.field_q.b(52, (mi) (var5));
+                                                  var5 = this.spawnFromHere(this.field_v + (int)(-8.0 + 16.0 * Math.random()), (BattleUnit) null, (byte) 81, 90, this.field_G + (int)(Math.random() * 16.0 - 8.0), this.field_q);
+                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   if (this.field_I == 79) {
                                                     this.field_G = this.field_G - 2;
-                                                    this.a(1, 32, 28, 8);
+                                                    this.applyAreaEffect(1, 32, 28, 8);
                                                     this.field_G = this.field_G + 2;
                                                     if (var19 == 0) {
                                                       break regionExit12;
                                                     }
                                                   }
                                                   if ((this.field_I == 98)) {
-                                                    this.a(10, 5, 36, 8);
+                                                    this.applyAreaEffect(10, 5, 36, 8);
                                                   }
                                                   break regionExit12;
                                                 }
-                                                this.f(0);
+                                                this.remove(0);
                                                 return;
                                               }
                                             }
@@ -6329,7 +6329,7 @@ final class mi extends DualLinkNode {
                                               this.field_t.field_eb = -64;
                                               this.field_t.field_kb = 16 * this.field_t.field_E;
                                             }
-                                            this.f(0);
+                                            this.remove(0);
                                             return;
                                           }
                                           var9 = 1;
@@ -6347,7 +6347,7 @@ final class mi extends DualLinkNode {
                                               return;
                                             }
                                             if (this.field_y == 0) {
-                                              this.a(0, 0, 16, 8);
+                                              this.applyAreaEffect(0, 0, 16, 8);
                                             }
                                             boolean decompiledFrameRemainder0 = true;
                                             if (20 == this.field_y ||
@@ -6365,22 +6365,22 @@ final class mi extends DualLinkNode {
                                               var12Lifetime1 = this.field_z;
                                               var13Lifetime1 = 0;
                                               while (var13Lifetime1 == 0) {
-                                                if (this.field_q.a(this.field_G, this.field_v + 2, (byte) -83) ||
-                                                  this.field_q.a(this.field_G, -2 + this.field_v, (byte) -83) ||
-                                                  this.field_q.a(this.field_G - 2, this.field_v, (byte) -83) ||
-                                                  this.field_q.a(2 + this.field_G, this.field_v, (byte) -83)) {
+                                                if (this.field_q.isSolidAt(this.field_G, this.field_v + 2, (byte) -83) ||
+                                                  this.field_q.isSolidAt(this.field_G, -2 + this.field_v, (byte) -83) ||
+                                                  this.field_q.isSolidAt(this.field_G - 2, this.field_v, (byte) -83) ||
+                                                  this.field_q.isSolidAt(2 + this.field_G, this.field_v, (byte) -83)) {
                                                   if (this.field_I == 30) {
-                                                    this.a(2, (byte) 37, 2);
-                                                    this.a(5, 64, 8, 8);
-                                                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 100, this.field_G, this.field_q);
-                                                    this.field_q.b(52, (mi) (var5));
+                                                    this.playTypeSound(2, (byte) 37, 2);
+                                                    this.applyAreaEffect(5, 64, 8, 8);
+                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 100, this.field_G, this.field_q);
+                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   }
                                                   var13Lifetime1 = 1;
                                                   if (93 == this.field_I) {
-                                                    this.a(0, (byte) 37, 2);
-                                                    this.a(75, 256, 32, 8);
-                                                    var5 = this.a(this.field_v, (ml) null, (byte) 81, 99, this.field_G, this.field_q);
-                                                    this.field_q.b(52, (mi) (var5));
+                                                    this.playTypeSound(0, (byte) 37, 2);
+                                                    this.applyAreaEffect(75, 256, 32, 8);
+                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 99, this.field_G, this.field_q);
+                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   }
                                                 }
                                                 this.field_o = this.field_o + (this.field_u >> 1);
@@ -6403,15 +6403,15 @@ final class mi extends DualLinkNode {
                                               }
                                               if (this.field_I == 30 &&
                                                 null == this.field_t) {
-                                                var5 = this.a(this.field_v, (ml) null, (byte) 81, 31, this.field_G, this.field_q);
-                                                ((mi) (var5)).field_y = 950;
-                                                ((mi) (var5)).field_u = 0;
-                                                ((mi) (var5)).field_w = this.field_w;
-                                                ((mi) (var5)).field_F = 0;
-                                                this.field_q.b(52, (mi) (var5));
+                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 31, this.field_G, this.field_q);
+                                                ((SpellProjectile) (var5)).field_y = 950;
+                                                ((SpellProjectile) (var5)).field_u = 0;
+                                                ((SpellProjectile) (var5)).field_w = this.field_w;
+                                                ((SpellProjectile) (var5)).field_F = 0;
+                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                               }
                                               if (null != this.field_t) {
-                                                this.field_q.a(-87, this.field_t);
+                                                this.field_q.stampUnitMask(-87, this.field_t);
                                               }
                                               this.field_F = this.field_z - var12Lifetime1;
                                               this.field_u = this.field_o - var11Lifetime1;
@@ -6424,7 +6424,7 @@ final class mi extends DualLinkNode {
                                                 decompiledFrameRemainder0 = (this.field_I == 30);
                                               }
                                               if (decompiledFrameRemainder0) {
-                                                this.f(0);
+                                                this.remove(0);
                                                 return;
                                               }
                                             }
@@ -6432,10 +6432,10 @@ final class mi extends DualLinkNode {
                                           }
                                           return;
                                         }
-                                        this.a(5, (byte) 34);
+                                        this.updateFlightSound(5, (byte) 34);
                                         if (this.field_I == 61) {
-                                          var5 = this.a(this.field_v, (ml) null, (byte) 81, 109, this.field_G, this.field_q);
-                                          this.field_q.b(52, (mi) (var5));
+                                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 109, this.field_G, this.field_q);
+                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                           if (this.field_t != null &&
                                             this.field_y < 25) {
                                             this.field_q.a(this.field_t, 0);
@@ -6443,20 +6443,20 @@ final class mi extends DualLinkNode {
                                         }
                                         if (63 == this.field_I) {
                                           this.field_x = this.field_x + 12;
-                                          var5 = this.a(this.field_v + (int)(Math.sin((double)this.field_x * 3.14 / 128.0) * 24.0), (ml) null, (byte) 81, 109, this.field_G + (int)(Math.cos(3.14 * (double)this.field_x / 128.0) * 32.0), this.field_q);
-                                          this.field_q.b(52, (mi) (var5));
+                                          var5 = this.spawnFromHere(this.field_v + (int)(Math.sin((double)this.field_x * 3.14 / 128.0) * 24.0), (BattleUnit) null, (byte) 81, 109, this.field_G + (int)(Math.cos(3.14 * (double)this.field_x / 128.0) * 32.0), this.field_q);
+                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                         }
                                         if (this.field_I == 64) {
                                           this.field_x = this.field_x + 12;
-                                          var5 = this.a(this.field_v + (int)(48.0 * Math.sin((double)this.field_x * 3.14 / 128.0)), (ml) null, (byte) 81, 109, this.field_G + (int)(Math.cos((double)this.field_x * 3.14 / 128.0) * 64.0), this.field_q);
-                                          this.field_q.b(52, (mi) (var5));
+                                          var5 = this.spawnFromHere(this.field_v + (int)(48.0 * Math.sin((double)this.field_x * 3.14 / 128.0)), (BattleUnit) null, (byte) 81, 109, this.field_G + (int)(Math.cos((double)this.field_x * 3.14 / 128.0) * 64.0), this.field_q);
+                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                         }
                                         if (this.field_I == 66) {
                                           this.field_x = this.field_x + 12;
-                                          var5 = this.a(this.field_v + (int)(Math.sin((double)this.field_x * 3.14 / 128.0) * 24.0), (ml) null, (byte) 81, 109, this.field_G + (int)(Math.cos(3.14 * (double)this.field_x / 128.0) * 64.0), this.field_q);
-                                          this.field_q.b(52, (mi) (var5));
-                                          var5 = this.a(this.field_v - (int)(Math.sin((double)this.field_x * 3.14 / 128.0) * 64.0), (ml) null, (byte) 81, 109, this.field_G - (int)(Math.cos(3.14 * (double)this.field_x / 128.0) * 24.0), this.field_q);
-                                          this.field_q.b(52, (mi) (var5));
+                                          var5 = this.spawnFromHere(this.field_v + (int)(Math.sin((double)this.field_x * 3.14 / 128.0) * 24.0), (BattleUnit) null, (byte) 81, 109, this.field_G + (int)(Math.cos(3.14 * (double)this.field_x / 128.0) * 64.0), this.field_q);
+                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                          var5 = this.spawnFromHere(this.field_v - (int)(Math.sin((double)this.field_x * 3.14 / 128.0) * 64.0), (BattleUnit) null, (byte) 81, 109, this.field_G - (int)(Math.cos(3.14 * (double)this.field_x / 128.0) * 24.0), this.field_q);
+                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                           if (null != this.field_t &&
                                             this.field_y < 25) {
                                             this.field_q.a(this.field_t, 0);
@@ -6467,17 +6467,17 @@ final class mi extends DualLinkNode {
                                         this.field_G = this.field_z >> 4;
                                         this.field_v = this.field_o >> 4;
                                         this.field_F = this.field_F + 2;
-                                        if (!this.field_q.b(this.field_G - this.field_r, 2, -this.field_r + this.field_v, this.field_p)) {
+                                        if (!this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, 2, -this.field_r + this.field_v, this.field_p)) {
                                           if (this.field_v < -640) {
-                                            this.f(0);
+                                            this.remove(0);
                                             return;
                                           }
                                           if (this.field_v > this.field_q.field_y + 640) {
-                                            this.f(0);
+                                            this.remove(0);
                                             return;
                                           }
                                           if (this.field_G > this.field_q.field_H) {
-                                            this.f(0);
+                                            this.remove(0);
                                             return;
                                           }
                                           if (61 != this.field_I &&
@@ -6490,35 +6490,35 @@ final class mi extends DualLinkNode {
                                           if (this.field_y >= 25) {
                                             return;
                                           }
-                                          this.field_q.a(-63, this.field_t);
+                                          this.field_q.stampUnitMask(-63, this.field_t);
                                           return;
                                         }
                                         var9 = -1;
                                         if (61 == this.field_I) {
-                                          this.a(45, 64, 80, 8);
+                                          this.applyAreaEffect(45, 64, 80, 8);
                                           var9 = 108;
-                                          this.a(2, (byte) 37, 5);
+                                          this.playTypeSound(2, (byte) 37, 5);
                                         }
                                         if (63 == this.field_I) {
                                           var9 = 108;
-                                          this.a(25, 192, 80, 8);
-                                          this.a(1, (byte) 37, 5);
+                                          this.applyAreaEffect(25, 192, 80, 8);
+                                          this.playTypeSound(1, (byte) 37, 5);
                                         }
                                         if (this.field_I == 64) {
-                                          this.a(50, 192, 192, 8);
+                                          this.applyAreaEffect(50, 192, 192, 8);
                                           var9 = 108;
-                                          this.a(0, (byte) 37, 5);
+                                          this.playTypeSound(0, (byte) 37, 5);
                                         }
                                         if (this.field_I == 66) {
-                                          this.a(25, 32, 64, 8);
+                                          this.applyAreaEffect(25, 32, 64, 8);
                                           var9 = 108;
-                                          this.a(2, (byte) 37, 5);
+                                          this.playTypeSound(2, (byte) 37, 5);
                                         }
                                         if (var9 != -1) {
-                                          var5 = this.a(this.field_v, (ml) null, (byte) 81, var9, this.field_G, this.field_q);
-                                          this.field_q.b(52, (mi) (var5));
+                                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, var9, this.field_G, this.field_q);
+                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                         }
-                                        this.f(0);
+                                        this.remove(0);
                                         return;
                                       }
                                     }
@@ -6543,14 +6543,14 @@ final class mi extends DualLinkNode {
                         if (this.field_H < 8) {
                           return;
                         }
-                        this.f(0);
+                        this.remove(0);
                         return;
                       }
                       this.field_y = this.field_y + 1;
                       if (this.field_y <= 32) {
                         return;
                       }
-                      this.f(0);
+                      this.remove(0);
                       return;
                     }
                   }
@@ -6616,7 +6616,7 @@ final class mi extends DualLinkNode {
                   if (this.field_x <= 3000) {
                     return;
                   }
-                  this.f(0);
+                  this.remove(0);
                   return;
                 }
                 if (null != this.field_t &&
@@ -6630,7 +6630,7 @@ final class mi extends DualLinkNode {
                 }
                 var9 = 2048;
                 if ((null == this.field_t ||
-                  !this.field_t.c(-1)) && this.field_y != -1) {
+                  !this.field_t.isDead(-1)) && this.field_y != -1) {
                   boolean decompiledFrameCompleted0 = true;
                   if (null != this.field_t &&
                     this.field_I == 157) {
@@ -6643,7 +6643,7 @@ final class mi extends DualLinkNode {
                     if (~var10Lifetime1Lifetime1 != ~this.field_o ||
                       ~this.field_z != ~var11Lifetime1Lifetime1) {
                       MidiPcmStream.field_L.setDeque((byte) 38, this.field_q.field_r);
-                      var12_ref_mi = (mi) (MidiPcmStream.field_L.first(-62));
+                      var12_ref_mi = (SpellProjectile) (MidiPcmStream.field_L.first(-62));
                       while (var12_ref_mi != null) {
                         var13Lifetime1Lifetime1 = var12_ref_mi.field_o - var10Lifetime1Lifetime1;
                         var14Lifetime1Lifetime1 = var12_ref_mi.field_z - var11Lifetime1Lifetime1;
@@ -6659,7 +6659,7 @@ final class mi extends DualLinkNode {
                           var12_ref_mi.field_v = var12_ref_mi.field_o >> 4;
                           var12_ref_mi.field_G = var12_ref_mi.field_z >> 4;
                         }
-                        var12_ref_mi = (mi) (MidiPcmStream.field_L.next(-18502));
+                        var12_ref_mi = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                       }
                     }
                   }
@@ -6672,16 +6672,16 @@ final class mi extends DualLinkNode {
                     this.field_x = this.field_x - 256;
                   }
                   MidiPcmStream.field_L.setDeque((byte) 75, this.field_q.field_Kb);
-                  var10_ref_mi = (mi) (MidiPcmStream.field_L.first(-52));
+                  var10_ref_mi = (SpellProjectile) (MidiPcmStream.field_L.first(-52));
                   while (null != var10_ref_mi) {
-                    if (var10_ref_mi.m(-8209)) {
+                    if (var10_ref_mi.shouldCameraFollow(-8209)) {
                       var11Lifetime1Lifetime1 = this.field_o - var10_ref_mi.field_o;
                       var12Lifetime1Lifetime1 = this.field_z - var10_ref_mi.field_z;
                       if (var9 * (var9 >> 4) > (var12Lifetime1Lifetime1 >> 4) * var12Lifetime1Lifetime1 + (var11Lifetime1Lifetime1 >> 4) * var11Lifetime1Lifetime1) {
                         this.field_q.field_h.addLast(var10_ref_mi, 15893);
                       }
                     }
-                    var10_ref_mi = (mi) (MidiPcmStream.field_L.next(-18502));
+                    var10_ref_mi = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                     if (var19 == 0) {
                       continue;
                     }
@@ -6693,7 +6693,7 @@ final class mi extends DualLinkNode {
                   break regionExit2;
                 }
                 var10_ref_oc = new IntrusiveDequeCursor(this.field_q.field_r);
-                var11_ref_miLifetime1 = (mi) (var10_ref_oc.first(-123));
+                var11_ref_miLifetime1 = (SpellProjectile) (var10_ref_oc.first(-123));
                 while (var11_ref_miLifetime1 != null) {
                   var12Lifetime1Lifetime2 = -var11_ref_miLifetime1.field_o + this.field_o;
                   var13Lifetime1Lifetime2 = -var11_ref_miLifetime1.field_z + this.field_z;
@@ -6703,13 +6703,13 @@ final class mi extends DualLinkNode {
                   if (((var9 >> 4) * var9) > (var13Lifetime1Lifetime2 * (var13Lifetime1Lifetime2 >> 4) + (var12Lifetime1Lifetime2 >> 4) * var12Lifetime1Lifetime2)) {
                     this.field_q.field_kb.addLast(var11_ref_miLifetime1, -1);
                   }
-                  var11_ref_miLifetime1 = (mi) (var10_ref_oc.next(-18502));
+                  var11_ref_miLifetime1 = (SpellProjectile) (var10_ref_oc.next(-18502));
                 }
-                this.f(0);
+                this.remove(0);
                 return;
               }
               if (this.field_t != null &&
-                !this.field_t.c(-1) && (this.field_I != 111 ||
+                !this.field_t.isDead(-1) && (this.field_I != 111 ||
                 this.field_t.field_jb == 23 ||
                 this.field_t.field_jb == 16)) {
                 this.field_x = this.field_x + 1;
@@ -6730,7 +6730,7 @@ final class mi extends DualLinkNode {
                   return;
                 }
                 MidiPcmStream.field_L.setDeque((byte) 27, this.field_q.field_i);
-                var10_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.first(-99));
+                var10_ref_mlLifetime1 = (BattleUnit) (MidiPcmStream.field_L.first(-99));
                 while (null != var10_ref_mlLifetime1) {
                   if (var19 != 0) {
                     return;
@@ -6749,29 +6749,29 @@ final class mi extends DualLinkNode {
                       var14Lifetime2 = this.field_G;
                       this.field_v = var10_ref_mlLifetime1.field_lb;
                       this.field_G = var10_ref_mlLifetime1.field_db;
-                      var5 = this.a(this.field_v, this.field_t, (byte) 81, 104, this.field_G - var10_ref_mlLifetime1.field_Y / 2, this.field_q);
-                      this.field_q.b(52, (mi) (var5));
+                      var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 104, this.field_G - var10_ref_mlLifetime1.field_Y / 2, this.field_q);
+                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                       if (var11Lifetime2 < 0) {
                         this.field_v = this.field_v + 8;
                       } else {
                         this.field_v = this.field_v - 8;
                       }
                       this.field_G = this.field_G + 8;
-                      this.a(15, 32, 16, 8);
+                      this.applyAreaEffect(15, 32, 16, 8);
                       this.field_y = this.field_y + 1;
                       this.field_v = var13Lifetime2;
                       this.field_G = var14Lifetime2;
                     }
                   }
-                  var10_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.next(-18502));
+                  var10_ref_mlLifetime1 = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                 }
                 return;
               }
-              this.f(0);
+              this.remove(0);
               return;
             }
           }
-          if (!this.field_t.c(-1)) {
+          if (!this.field_t.isDead(-1)) {
             this.field_v = this.field_t.field_lb;
             this.field_G = this.field_t.field_db;
             this.field_z = this.field_G << 4;
@@ -6780,7 +6780,7 @@ final class mi extends DualLinkNode {
               return;
             }
           }
-          this.f(0);
+          this.remove(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -6789,7 +6789,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final int e(int param0) {
+    final int getY(int param0) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -6805,7 +6805,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final void i(int param0) {
+    private final void initializeSprite(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -6971,7 +6971,7 @@ final class mi extends DualLinkNode {
             this.field_p = md.field_f[3];
           }
           if (this.field_I == 165) {
-            this.field_H = (1 + this.field_q.n((byte) -75) * 3) % (this.field_q.s(0) * 5) + 1 * this.field_q.s(0);
+            this.field_H = (1 + this.field_q.getRound((byte) -75) * 3) % (this.field_q.getPlayerCount(0) * 5) + 1 * this.field_q.getPlayerCount(0);
           }
           this.field_r = this.field_p.field_n >> 1;
           return;
@@ -6982,14 +6982,14 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final mi b(int param0, nf param1) {
-        mi var3 = null;
+    final SpellProjectile copyForBattle(int param0, Battle param1) {
+        SpellProjectile var3 = null;
         RuntimeException var3_ref = null;
-        mi stackIn_3_0 = null;
+        SpellProjectile stackIn_3_0 = null;
         IsaacRandom stackIn_4_1 = null;
-        mi stackIn_10_0 = null;
-        ml stackIn_11_1 = null;
-        mi stackIn_12_0 = null;
+        SpellProjectile stackIn_10_0 = null;
+        BattleUnit stackIn_11_1 = null;
+        SpellProjectile stackIn_12_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -7011,7 +7011,7 @@ final class mi extends DualLinkNode {
             field_m = (SceneWidget) null;
           }
           var3.field_z = this.field_z;
-          var3.i(44);
+          var3.initializeSprite(44);
           var3.field_F = this.field_F;
           var3.field_H = this.field_H;
           var3.field_y = this.field_y;
@@ -7020,7 +7020,7 @@ final class mi extends DualLinkNode {
           if (this.field_t == null) {
             stackIn_11_1 = null;
           } else {
-            stackIn_11_1 = param1.a(this.field_t.field_T, true);
+            stackIn_11_1 = param1.getUnitByOwner(this.field_t.field_T, true);
           }
           stackIn_10_0.field_t = stackIn_11_1;
           var3.field_w = this.field_w;
@@ -7040,7 +7040,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void applyAreaEffect(int param0, int param1, int param2, int param3) {
         int stackIn_52_0 = 0;
         int stackIn_52_1 = 0;
         int stackIn_347_0 = 0;
@@ -7049,15 +7049,15 @@ final class mi extends DualLinkNode {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        mi var6_ref_mi = null;
-        ml var7 = null;
+        SpellProjectile var6_ref_mi = null;
+        BattleUnit var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        ml var14 = null;
+        BattleUnit var14 = null;
         int var15 = 0;
         int var6Lifetime1;
         int var6Lifetime2;
@@ -7087,7 +7087,7 @@ final class mi extends DualLinkNode {
             this.field_I == 3 ||
             147 == this.field_I) {
             ki.field_v.setDeque((byte) 116, this.field_q.field_Kb);
-            var6_ref_mi = (mi) (ki.field_v.first(param3 ^ -40));
+            var6_ref_mi = (SpellProjectile) (ki.field_v.first(param3 ^ -40));
             while (var6_ref_mi != null) {
               stackIn_52_0 = 148;
               stackIn_52_1 = var6_ref_mi.field_I;
@@ -7101,7 +7101,7 @@ final class mi extends DualLinkNode {
                 param2 += 5;
                 param0 += 5;
               }
-              var6_ref_mi = (mi) (ki.field_v.next(param3 - 18510));
+              var6_ref_mi = (SpellProjectile) (ki.field_v.next(param3 - 18510));
             }
           }
           if (decompiledFrameCompleted0) {
@@ -7136,7 +7136,7 @@ final class mi extends DualLinkNode {
                 this.field_I == 16) {
                 var6Lifetime1 = param2;
               }
-              this.field_q.a(this.field_v, var6Lifetime1, (byte) 51, this.field_G);
+              this.field_q.refreshTerrainArea(this.field_v, var6Lifetime1, (byte) 51, this.field_G);
               if (var15 != 0) {
                 this.field_G = this.field_G + 32;
                 param2 += 32;
@@ -7161,7 +7161,7 @@ final class mi extends DualLinkNode {
           if (param3 != 8) {
             this.field_F = -5;
           }
-          var7 = (ml) (ki.field_v.first(-46));
+          var7 = (BattleUnit) (ki.field_v.first(-46));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var7 == null))) {
             var6Lifetime3 = 1;
@@ -7240,7 +7240,7 @@ final class mi extends DualLinkNode {
                   var7.field_jb != 12 &&
                   (16 + (var7.field_Y >> 1) + param2) > var11) {
                   var14 = var7;
-                  var7 = (ml) (ki.field_v.first(param3 - 88));
+                  var7 = (BattleUnit) (ki.field_v.first(param3 - 88));
                   while (var7 != null) {
                     if (var7.field_jb == 37) {
                       this.field_q.a(var14, 0);
@@ -7251,12 +7251,12 @@ final class mi extends DualLinkNode {
                       var14.field_R = var7.field_R;
                       var14.field_z = true;
                       var14.field_db = var7.field_db;
-                      this.a(2, (byte) 37, 8);
+                      this.playTypeSound(2, (byte) 37, 8);
                       return;
                     }
-                    var7 = (ml) (ki.field_v.next(param3 ^ -18510));
+                    var7 = (BattleUnit) (ki.field_v.next(param3 ^ -18510));
                   }
-                  this.a(0, (byte) 37, 8);
+                  this.playTypeSound(0, (byte) 37, 8);
                   return;
                 }
                 if ((this.field_I == 55 ||
@@ -7339,7 +7339,7 @@ final class mi extends DualLinkNode {
                   if (this.field_I == 120 &&
                     12 != var7.field_jb) {
                     if (this.field_t != null) {
-                      this.field_q.a(-107, this.field_t);
+                      this.field_q.stampUnitMask(-107, this.field_t);
                     }
                     this.field_o = var7.field_X;
                     this.field_G = var7.field_db;
@@ -7350,10 +7350,10 @@ final class mi extends DualLinkNode {
                   }
                 }
                 if (0 < var13) {
-                  this.a(var5_int, true, var13, var7);
+                  this.onHitUnit(var5_int, true, var13, var7);
                 }
               }
-              var7 = (ml) (ki.field_v.next(-18502));
+              var7 = (BattleUnit) (ki.field_v.next(-18502));
               continue;
             }
             break;
@@ -7363,7 +7363,7 @@ final class mi extends DualLinkNode {
             stackIn_347_1 = 161;
           }
           if (stackIn_347_0 == stackIn_347_1) {
-            this.a(2, (byte) 37, 8);
+            this.playTypeSound(2, (byte) 37, 8);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7373,7 +7373,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final static CoverageBitmapFont a(byte[] param0, int param1) {
+    final static CoverageBitmapFont createCoverageFont(byte[] param0, int param1) {
         CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -7410,19 +7410,19 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final void j(int param0) {
+    private final void checkHeightEffects(int param0) {
         RuntimeException decompiledCaughtException = null;
-        mi var2 = null;
+        SpellProjectile var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param0 < 58) {
-            mi.g(27);
+            SpellProjectile.g(27);
           }
           if (this.field_G < this.field_q.field_H / 4) {
             if (this.field_G >= this.field_q.field_H / 5) {
-              this.field_q.a(-this.field_r + this.field_G, -87, -this.field_r + this.field_v, gj.field_f[16].toRgbSprite());
+              this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, -87, -this.field_r + this.field_v, gj.field_f[16].toRgbSprite());
               if (var3 == 0) {
                 return;
               }
@@ -7430,28 +7430,28 @@ final class mi extends DualLinkNode {
             if (this.field_G < (this.field_q.field_H / 6)) {
               if (this.field_G < this.field_q.field_H / 7) {
                 if (this.field_q.field_H / 8 > this.field_G) {
-                  var2 = this.a(this.field_v, (ml) null, (byte) 81, 95, this.field_G, this.field_q);
-                  this.field_q.b(52, var2);
+                  var2 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 95, this.field_G, this.field_q);
+                  this.field_q.onProjectileFinished(52, var2);
                   if (var3 == 0) {
                     return;
                   }
                 }
-                this.field_q.a(this.field_G - this.field_r, -97, -this.field_r + this.field_v, gj.field_f[19].toRgbSprite());
+                this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, -97, -this.field_r + this.field_v, gj.field_f[19].toRgbSprite());
                 if (var3 == 0) {
                   return;
                 }
               }
-              this.field_q.a(-this.field_r + this.field_G, -5, this.field_v - this.field_r, gj.field_f[18].toRgbSprite());
+              this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, -5, this.field_v - this.field_r, gj.field_f[18].toRgbSprite());
               if (var3 == 0) {
                 return;
               }
             }
-            this.field_q.a(this.field_G - this.field_r, -18, -this.field_r + this.field_v, gj.field_f[17].toRgbSprite());
+            this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, -18, -this.field_r + this.field_v, gj.field_f[17].toRgbSprite());
             if (var3 == 0) {
               return;
             }
           }
-          this.field_q.a(this.field_G - this.field_r, -34, -this.field_r + this.field_v, gj.field_f[6].toRgbSprite());
+          this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, -34, -this.field_r + this.field_v, gj.field_f[6].toRgbSprite());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7465,7 +7465,7 @@ final class mi extends DualLinkNode {
         RuntimeException var1 = null;
         try {
           if (param0 != 2) {
-            mi.g(-17);
+            SpellProjectile.g(-17);
           }
           field_E = null;
           field_m = null;
@@ -7480,31 +7480,31 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final void a(int param0, boolean param1, int param2, ml param3) {
-        ml stackIn_552_0 = null;
-        ml stackIn_552_1 = null;
-        ml stackIn_563_0 = null;
+    private final void onHitUnit(int param0, boolean param1, int param2, BattleUnit param3) {
+        BattleUnit stackIn_552_0 = null;
+        BattleUnit stackIn_552_1 = null;
+        BattleUnit stackIn_563_0 = null;
         int stackIn_564_0 = 0;
         int stackIn_564_1 = 0;
         RuntimeException stackIn_587_0 = null;
         StringBuilder stackIn_587_1 = null;
         String stackIn_588_2 = null;
         RuntimeException decompiledCaughtException = null;
-        mi var5 = null;
+        SpellProjectile var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
         IntrusiveDequeCursor var6 = null;
         int var6_int = 0;
-        mi var7 = null;
+        SpellProjectile var7 = null;
         int var7_int = 0;
-        ml var7_ref = null;
+        BattleUnit var7_ref = null;
         int var8 = 0;
-        ml stackIn_552_0Lifetime1;
-        ml stackIn_552_1Lifetime1;
-        mi var5Lifetime1;
+        BattleUnit stackIn_552_0Lifetime1;
+        BattleUnit stackIn_552_1Lifetime1;
+        SpellProjectile var5Lifetime1;
         IntrusiveDequeCursor var6Lifetime1;
-        ml var7_refLifetime1;
-        mi var5Lifetime2;
+        BattleUnit var7_refLifetime1;
+        SpellProjectile var5Lifetime2;
         IntrusiveDequeCursor var6Lifetime1Lifetime1;
         int var5_intLifetime1;
         int var5_intLifetime2;
@@ -7516,10 +7516,10 @@ final class mi extends DualLinkNode {
             if (param3.field_jb == 28) {
               param3.field_J = false;
               param3.field_jb = 29;
-              param3.a(12, true);
+              param3.buildSprites(12, true);
               param2 = 0;
-              var5 = this.a(param3.field_lb, param3, (byte) 81, 137, param3.field_db - param3.field_Y / 2, this.field_q);
-              this.field_q.b(52, var5);
+              var5 = this.spawnFromHere(param3.field_lb, param3, (byte) 81, 137, param3.field_db - param3.field_Y / 2, this.field_q);
+              this.field_q.onProjectileFinished(52, var5);
               decompiledFrameRemainder2 = (var8 != 0);
             }
             if (decompiledFrameRemainder2) {
@@ -7529,19 +7529,19 @@ final class mi extends DualLinkNode {
                   if (var8 != 0) {
                     param3.field_jb = 30;
                     param3.field_J = false;
-                    param3.a(12, true);
+                    param3.buildSprites(12, true);
                     param2 = 0;
-                    var5Lifetime2 = this.a(param3.field_lb, param3, (byte) 81, 137, param3.field_db - param3.field_Y / 2, this.field_q);
-                    this.field_q.b(52, var5Lifetime2);
+                    var5Lifetime2 = this.spawnFromHere(param3.field_lb, param3, (byte) 81, 137, param3.field_db - param3.field_Y / 2, this.field_q);
+                    this.field_q.onProjectileFinished(52, var5Lifetime2);
                   }
                 }
               } else {
                 param3.field_jb = 30;
                 param3.field_J = false;
-                param3.a(12, true);
+                param3.buildSprites(12, true);
                 param2 = 0;
-                var5Lifetime2 = this.a(param3.field_lb, param3, (byte) 81, 137, param3.field_db - param3.field_Y / 2, this.field_q);
-                this.field_q.b(52, var5Lifetime2);
+                var5Lifetime2 = this.spawnFromHere(param3.field_lb, param3, (byte) 81, 137, param3.field_db - param3.field_Y / 2, this.field_q);
+                this.field_q.onProjectileFinished(52, var5Lifetime2);
               }
             }
           }
@@ -7576,8 +7576,8 @@ final class mi extends DualLinkNode {
               if ((decompiledFrameRemainder1) &&
                 (decompiledFrameRemainder1 = (this.field_t.field_jb == 27)) &&
                 (decompiledFrameRemainder1 = (this.field_I == 2))) {
-                var5Lifetime1 = this.a(param3.field_lb, param3, (byte) 81, 155, param3.field_db - param3.field_Y / 2, this.field_q);
-                this.field_q.b(52, var5Lifetime1);
+                var5Lifetime1 = this.spawnFromHere(param3.field_lb, param3, (byte) 81, 155, param3.field_db - param3.field_Y / 2, this.field_q);
+                this.field_q.onProjectileFinished(52, var5Lifetime1);
                 decompiledFrameRemainder1 = (var8 != 0);
               }
             }
@@ -7660,11 +7660,11 @@ final class mi extends DualLinkNode {
           }
           if (param3.field_U) {
             if (52 == this.field_I) {
-              param3.b(124, param2, this.field_n);
+              param3.recordDamage(124, param2, this.field_n);
               if (param0 >= 0) {
                 this.field_q.field_K[param0] = this.field_q.field_K[param0] + param2;
               }
-              if (param3.t(46)) {
+              if (param3.hasNoLinkedUnit(46)) {
                 this.field_q.field_db[param3.field_T] = this.field_q.field_db[param3.field_T] + param2;
               }
               this.field_q.field_tb = this.field_q.field_tb + param2;
@@ -7673,11 +7673,11 @@ final class mi extends DualLinkNode {
             if (this.field_I == 54 ||
               this.field_I == 55 ||
               this.field_I == 111) {
-              param3.b(-19, -param2, this.field_n);
+              param3.recordDamage(-19, -param2, this.field_n);
               if (0 <= param0) {
                 this.field_q.field_g[param0] = this.field_q.field_g[param0] + param2;
               }
-              if (param3.t(102)) {
+              if (param3.hasNoLinkedUnit(102)) {
                 this.field_q.field_s[param3.field_T] = this.field_q.field_s[param3.field_T] - param2;
               }
               param2 = 0;
@@ -7705,7 +7705,7 @@ final class mi extends DualLinkNode {
               }
               this.field_t.field_x = this.field_t.field_x - var5_intLifetime2;
               this.field_q.field_g[param0] = this.field_q.field_g[param0] + var5_intLifetime2;
-              if (param3.t(121)) {
+              if (param3.hasNoLinkedUnit(121)) {
                 this.field_q.field_s[param3.field_T] = this.field_q.field_s[param3.field_T] + var5_intLifetime2;
               }
               if ((var8 != 0) &&
@@ -7713,7 +7713,7 @@ final class mi extends DualLinkNode {
                 this.field_t.field_x = this.field_t.field_x - (param2 >> 1);
                 this.field_q.field_p[param0] = this.field_q.field_p[param0] + (param2 >> 1);
                 this.field_q.field_g[param0] = this.field_q.field_g[param0] + (param2 >> 1);
-                if (param3.t(68)) {
+                if (param3.hasNoLinkedUnit(68)) {
                   this.field_q.field_s[param3.field_T] = this.field_q.field_s[param3.field_T] + (param2 >> 1);
                 }
               }
@@ -7722,7 +7722,7 @@ final class mi extends DualLinkNode {
                 this.field_t.field_x = this.field_t.field_x - (param2 >> 1);
                 this.field_q.field_p[param0] = this.field_q.field_p[param0] + (param2 >> 1);
                 this.field_q.field_g[param0] = this.field_q.field_g[param0] + (param2 >> 1);
-                if (param3.t(68)) {
+                if (param3.hasNoLinkedUnit(68)) {
                   this.field_q.field_s[param3.field_T] = this.field_q.field_s[param3.field_T] + (param2 >> 1);
                 }
               }
@@ -7742,7 +7742,7 @@ final class mi extends DualLinkNode {
             this.field_t.field_s.field_x = this.field_t.field_s.field_x - (param2 >> 1);
             this.field_q.field_p[param0] = this.field_q.field_p[param0] + (param2 >> 1);
             this.field_q.field_g[param0] = this.field_q.field_g[param0] + (param2 >> 1);
-            if (param3.t(34)) {
+            if (param3.hasNoLinkedUnit(34)) {
               this.field_q.field_s[param3.field_T] = this.field_q.field_s[param3.field_T] + (param2 >> 1);
             }
           }
@@ -7779,23 +7779,23 @@ final class mi extends DualLinkNode {
             if (param3.field_U) {
               param2 = param2 * 2;
             }
-            if (param3.t(62)) {
+            if (param3.hasNoLinkedUnit(62)) {
               if (this.field_q.field_x[param3.field_T] == 4 &&
                 -param3.field_x + (-param2 + param3.field_ib) <= 0) {
                 this.field_q.field_X[param3.field_T] = 0;
               }
               if (param3.field_jb == 16 &&
                 66 == this.field_I) {
-                this.field_q.a(this.field_v, 64, (byte) 51, this.field_G);
+                this.field_q.refreshTerrainArea(this.field_v, 64, (byte) 51, this.field_G);
               }
             }
           }
-          param3.b(-7, param2, this.field_n);
+          param3.recordDamage(-7, param2, this.field_n);
           if (0 >= param2) {
             if (param0 >= 0) {
               this.field_q.field_g[param0] = this.field_q.field_g[param0] - param2;
             }
-            if (param3.t(93)) {
+            if (param3.hasNoLinkedUnit(93)) {
               this.field_q.field_s[param3.field_T] = this.field_q.field_s[param3.field_T] - param2;
             }
           } else {
@@ -7803,7 +7803,7 @@ final class mi extends DualLinkNode {
               param3.field_q > 0) {
               this.field_x = 0;
             }
-            if (param3.t(118)) {
+            if (param3.hasNoLinkedUnit(118)) {
               this.field_q.field_db[param3.field_T] = this.field_q.field_db[param3.field_T] + param2;
             }
             if (param3.field_jb != 12 &&
@@ -7825,7 +7825,7 @@ final class mi extends DualLinkNode {
             if (34 == param3.field_jb && (this.field_I == 145 ||
               this.field_I == 146)) {
               param3.field_ib = 0;
-              param3.d(param0, 104);
+              param3.updateTurnLogic(param0, 104);
             }
             if (null == param3.field_s) {
               if (-param3.field_x + param3.field_ib > 0) {
@@ -7847,14 +7847,14 @@ final class mi extends DualLinkNode {
               if (this.field_I == 77) {
                 this.field_q.field_wb[param0] = this.field_q.field_wb[param0] + param2;
               }
-              if (this.field_t.j(-26)) {
+              if (this.field_t.isFlyingType(-26)) {
                 this.field_q.field_Nb[param0] = this.field_q.field_Nb[param0] + param2;
               }
               if (null != this.field_t.field_s) {
                 this.field_q.field_T[param0] = this.field_q.field_T[param0] + param2;
               }
               if (null != this.field_t.field_s &&
-                this.field_t.field_s != this.field_q.a(this.field_q.d(false), param1)) {
+                this.field_t.field_s != this.field_q.getUnitByOwner(this.field_q.getCurrentPlayer(false), param1)) {
               }
             }
           }
@@ -7870,7 +7870,7 @@ final class mi extends DualLinkNode {
               55 == this.field_I ||
               this.field_I == 53 ||
               this.field_I == 111) && (-param3.field_x + param3.field_ib <= 0 &&
-              !param3.t(71) &&
+              !param3.hasNoLinkedUnit(71) &&
               12 != param3.field_jb &&
               param3.field_jb != 2 &&
               param3.field_jb != 6 &&
@@ -7883,7 +7883,7 @@ final class mi extends DualLinkNode {
               if (17 == param3.field_jb ||
                 param3.field_jb == 9) {
                 var6 = new IntrusiveDequeCursor(this.field_q.field_Kb);
-                var7 = (mi) (var6.first(-77));
+                var7 = (SpellProjectile) (var6.first(-77));
                 while (var7 != null) {
                   stackIn_564_0 = var7.field_I;
                   stackIn_564_1 = 106;
@@ -7895,15 +7895,15 @@ final class mi extends DualLinkNode {
                     param3 == var7.field_t) {
                     var5_intLifetime3 = 0;
                   }
-                  var7 = (mi) (var6.next(-18502));
+                  var7 = (SpellProjectile) (var6.next(-18502));
                 }
               }
               if ((decompiledFrameCompleted1) && (!param3.field_U &&
                 var5_intLifetime3 != 0)) {
-                if (param3.j(-26)) {
+                if (param3.isFlyingType(-26)) {
                   param3.field_jb = 26;
                 }
-                if (param3.x(32)) {
+                if (param3.isAirborneOrHovering(32)) {
                   var6_int = -this.field_v + param3.field_s.field_lb;
                   var7_int = -(param3.field_s.field_Y / 2) + param3.field_Y / 2 + (param3.field_s.field_db - this.field_G);
                   if (((param3.field_s.field_Y + param3.field_Y) * (param3.field_s.field_Y + param3.field_Y) >> 2) <= (var7_int * var7_int + var6_int * var6_int)) {
@@ -7911,15 +7911,15 @@ final class mi extends DualLinkNode {
                 }
                 param3.field_x = 0;
                 param3.field_U = true;
-                param3.field_s = this.field_q.a(this.field_t.field_u, param1);
+                param3.field_s = this.field_q.getUnitByOwner(this.field_t.field_u, param1);
                 param3.field_u = this.field_t.field_u;
                 param3.field_J = false;
-                param3.a(12, true);
+                param3.buildSprites(12, true);
                 param3.field_ib = param3.field_ib / 4;
                 if (param3.field_jb == 9) {
                   param3.field_jb = 7;
                   var6Lifetime1 = new IntrusiveDequeCursor(this.field_q.field_i);
-                  var7_ref = (ml) (var6Lifetime1.first(-38));
+                  var7_ref = (BattleUnit) (var6Lifetime1.first(-38));
                   while (var7_ref != null) {
                     stackIn_552_0 = var7_ref.field_s;
                     stackIn_552_1 = param3.field_s;
@@ -7928,7 +7928,7 @@ final class mi extends DualLinkNode {
                         var7_ref.field_U &&
                         17 == var7_ref.field_jb) {
                       }
-                      var7_ref = (ml) (var6Lifetime1.next(-18502));
+                      var7_ref = (BattleUnit) (var6Lifetime1.next(-18502));
                       continue;
                     }
                     while (true) {
@@ -7936,14 +7936,14 @@ final class mi extends DualLinkNode {
                         var7_ref.field_U &&
                         var7_ref.field_jb == 7) {
                       }
-                      var7_ref = (ml) (var6Lifetime1.next(-18502));
+                      var7_ref = (BattleUnit) (var6Lifetime1.next(-18502));
                       break regionExit1;
                     }
                   }
                 }
                 if (param3.field_jb == 17) {
                   var6Lifetime1Lifetime1 = new IntrusiveDequeCursor(this.field_q.field_i);
-                  var7_refLifetime1 = (ml) (var6Lifetime1Lifetime1.first(-62));
+                  var7_refLifetime1 = (BattleUnit) (var6Lifetime1Lifetime1.first(-62));
                   while (null != var7_refLifetime1) {
                     stackIn_563_0 = param3.field_s;
                     if (var8 != 0) {
@@ -7956,7 +7956,7 @@ final class mi extends DualLinkNode {
                       var7_refLifetime1.field_U &&
                       var7_refLifetime1.field_jb == 7) {
                     }
-                    var7_refLifetime1 = (ml) (var6Lifetime1Lifetime1.next(-18502));
+                    var7_refLifetime1 = (BattleUnit) (var6Lifetime1Lifetime1.next(-18502));
                   }
                 }
               }
@@ -7967,15 +7967,15 @@ final class mi extends DualLinkNode {
             if (!this.field_q.field_Z) {
               return;
             }
-            stackIn_563_0 = (ml) (param3);
+            stackIn_563_0 = (BattleUnit) (param3);
           }
           if (decompiledFrameCompleted1) {
             stackIn_564_0 = -stackIn_563_0.field_x;
             stackIn_564_1 = param3.field_ib;
           }
           if (stackIn_564_0 + stackIn_564_1 < 0 &&
-            param3.t(81) &&
-            !param3.g((byte) 104) &&
+            param3.hasNoLinkedUnit(81) &&
+            !param3.isTower((byte) 104) &&
             !this.field_w &&
             this.field_t != null &&
             Math.abs(-param3.field_X + this.field_t.field_X) > 10240) {
@@ -7996,12 +7996,12 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean isAlive(int param0) {
         boolean stackIn_118_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (this.k(125)) {
+          if (this.isPersistentType(125)) {
             return false;
           }
           if (29 == this.field_I &&
@@ -8103,7 +8103,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final void a(int param0, byte param1) {
+    private final void updateFlightSound(int param0, byte param1) {
         RuntimeException decompiledCaughtException = null;
         PcmSample var3 = null;
         RuntimeException var3_ref = null;
@@ -8124,14 +8124,14 @@ final class mi extends DualLinkNode {
               this.field_D.isSamplePositionOutOfRange() ||
               this.field_J > 5) {
               this.field_J = 0;
-              this.field_D = this.a(var3, 19227);
+              this.field_D = this.createFlightSoundStream(var3, 19227);
               if (this.field_D != null) {
                 ValidationHelpWidget.a(this.field_D, (byte) 68);
               }
             }
           }
           if (param1 != 34) {
-            this.a(34, true, -6, (ml) null);
+            this.onHitUnit(34, true, -6, (BattleUnit) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8141,7 +8141,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final void f(byte param0) {
+    private final void drawUnitMarkers(byte param0) {
         int stackIn_14_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_20_0 = 0;
@@ -8152,7 +8152,7 @@ final class mi extends DualLinkNode {
         Sprite var3 = null;
         Sprite var4 = null;
         IntrusiveDequeCursor var5 = null;
-        ml var6_ref_ml = null;
+        BattleUnit var6_ref_ml = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -8166,17 +8166,17 @@ final class mi extends DualLinkNode {
           var3 = gj.field_f[5].toRgbSprite();
           var4 = DualLinkDeque.field_b[2].toRgbSprite();
           var5 = new IntrusiveDequeCursor(this.field_q.field_i);
-          var6_ref_ml = (ml) (var5.first(-36));
+          var6_ref_ml = (BattleUnit) (var5.first(-36));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var6_ref_ml == null))) {
             stackIn_14_0 = 0;
             if (var12 == 0) {
               if (stackIn_14_0 < var6_ref_ml.field_ib) {
-                this.field_q.a(-114, var6_ref_ml);
+                this.field_q.stampUnitMask(-114, var6_ref_ml);
               } else {
                 this.field_q.a(var6_ref_ml, 0);
               }
-              var6_ref_ml = (ml) (var5.next(-18502));
+              var6_ref_ml = (BattleUnit) (var5.next(-18502));
               continue;
             }
             break;
@@ -8206,15 +8206,15 @@ final class mi extends DualLinkNode {
                     stackIn_20_1 = var6;
                     if (stackIn_20_0 != stackIn_20_1) {
                       if (var6 == 1) {
-                        if (!this.field_q.b(this.field_G - var11 - 8, 2, -8 + (var10 + this.field_v), var3)) {
-                          this.field_q.a(-8 + (-var11 + this.field_G), -90, this.field_v + var10 - 8, var3);
+                        if (!this.field_q.spriteOverlapsTerrain(this.field_G - var11 - 8, 2, -8 + (var10 + this.field_v), var3)) {
+                          this.field_q.carveTerrainAndSprite(-8 + (-var11 + this.field_G), -90, this.field_v + var10 - 8, var3);
                         }
-                      } else if (!this.field_q.b(-var11 + (this.field_G - 16), 2, this.field_v + var10 - 16, var4)) {
-                        this.field_q.a(-16 - var11 + this.field_G, -11, this.field_v + var10 - 16, var4);
+                      } else if (!this.field_q.spriteOverlapsTerrain(-var11 + (this.field_G - 16), 2, this.field_v + var10 - 16, var4)) {
+                        this.field_q.carveTerrainAndSprite(-16 - var11 + this.field_G, -11, this.field_v + var10 - 16, var4);
                       }
                     } else {
-                      if (!this.field_q.b(-8 - var11 + this.field_G, 2, var10 + this.field_v - 8, var2)) {
-                        this.field_q.a(-8 + this.field_G - var11, -43, -8 + var10 + this.field_v, var2);
+                      if (!this.field_q.spriteOverlapsTerrain(-8 - var11 + this.field_G, 2, var10 + this.field_v - 8, var2)) {
+                        this.field_q.carveTerrainAndSprite(-8 + this.field_G - var11, -43, -8 + var10 + this.field_v, var2);
                       }
                     }
                     var9 += 64;
@@ -8237,7 +8237,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void draw(int param0, int param1, int param2) {
         Sprite stackIn_473_0 = null;
         int stackIn_473_1 = 0;
         int stackIn_474_2 = 0;
@@ -8258,7 +8258,7 @@ final class mi extends DualLinkNode {
         double var5_double = 0.0;
         int var6_int = 0;
         int[] var6 = null;
-        ml var6_ref = null;
+        BattleUnit var6_ref = null;
         int var7 = 0;
         int[] var7_ref_int__ = null;
         int var8 = 0;
@@ -8345,7 +8345,7 @@ final class mi extends DualLinkNode {
                                                                                                 }
                                                                                                 if (this.field_x < 200) {
                                                                                                   var8 = 65;
-                                                                                                  var9 = this.field_q.a(-31497);
+                                                                                                  var9 = this.field_q.getArenaTheme(-31497);
                                                                                                   if (var9 == 6) {
                                                                                                     var8 = 70;
                                                                                                   }
@@ -9095,7 +9095,7 @@ final class mi extends DualLinkNode {
                                                                                                         var5 = 64;
                                                                                                       }
                                                                                                       MidiPcmStream.field_L.setDeque((byte) 36, this.field_q.field_i);
-                                                                                                      var6_ref = (ml) (MidiPcmStream.field_L.first(-68));
+                                                                                                      var6_ref = (BattleUnit) (MidiPcmStream.field_L.first(-68));
                                                                                                       while (var6_ref != null) {
                                                                                                         if (var16 != 0) {
                                                                                                           return;
@@ -9109,13 +9109,13 @@ final class mi extends DualLinkNode {
                                                                                                           var8 = this.field_G - var6_ref.field_db + var6_ref.field_Y / 2;
                                                                                                           if ((var7 * var7 + var8 * var8 < (var5 + var6_ref.field_Y / 2) * (var5 + var6_ref.field_Y / 2)) &&
                                                                                                             (var6_ref.field_jb != 35)) {
-                                                                                                            var9 = var6_ref.p(-8323) / 2;
+                                                                                                            var9 = var6_ref.getSize(-8323) / 2;
                                                                                                             var10 = param2 + var6_ref.field_lb;
                                                                                                             var11 = var6_ref.field_db + param0 - var9;
                                                                                                             wg.field_J[this.field_x >> 2].drawScaledAlpha(-var9 + var10, -var9 + var11, var9 * 2, 2 * var9, 48);
                                                                                                           }
                                                                                                         }
-                                                                                                        var6_ref = (ml) (MidiPcmStream.field_L.next(-18502));
+                                                                                                        var6_ref = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                                                                                                         continue;
                                                                                                       }
                                                                                                       if (var16 == 0) {
@@ -9742,7 +9742,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final void l(int param0) {
+    private final void drawOrbitEffect(int param0) {
         int stackIn_11_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_15_1 = 0;
@@ -9792,12 +9792,12 @@ final class mi extends DualLinkNode {
                     stackIn_15_1 = var6;
                     if (stackIn_15_0 != stackIn_15_1) {
                       if (1 == var6 &&
-                        !this.field_q.b(-var10 + (this.field_G - 8), 2, this.field_v - (-var9 + 8), var3)) {
-                        this.field_q.a(-8 - var10 + this.field_G, -12, var9 + this.field_v - 8, var3);
+                        !this.field_q.spriteOverlapsTerrain(-var10 + (this.field_G - 8), 2, this.field_v - (-var9 + 8), var3)) {
+                        this.field_q.carveTerrainAndSprite(-8 - var10 + this.field_G, -12, var9 + this.field_v - 8, var3);
                       }
                     } else {
-                      if (!this.field_q.b(-8 + (-var10 + this.field_G), 2, var9 + (this.field_v - 8), var2[var4])) {
-                        this.field_q.a(-8 + (-var10 + this.field_G), -90, this.field_v + var9 - 8, var2[var4]);
+                      if (!this.field_q.spriteOverlapsTerrain(-8 + (-var10 + this.field_G), 2, var9 + (this.field_v - 8), var2[var4])) {
+                        this.field_q.carveTerrainAndSprite(-8 + (-var10 + this.field_G), -90, this.field_v + var9 - 8, var2[var4]);
                         var4++;
                         if (var2.length <= var4) {
                           var4 = var4 - var2.length;
@@ -9824,7 +9824,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    mi(int param0, int param1, int param2, int param3, ml param4, nf param5) {
+    SpellProjectile(int param0, int param1, int param2, int param3, BattleUnit param4, Battle param5) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -9833,7 +9833,7 @@ final class mi extends DualLinkNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(-103, param0, param3, param2, param1, param5, param4);
+          this.initialize(-103, param0, param3, param2, param1, param5, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -9855,7 +9855,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    mi(nf param0) {
+    SpellProjectile(Battle param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

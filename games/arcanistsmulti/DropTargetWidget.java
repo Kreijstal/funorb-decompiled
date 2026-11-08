@@ -108,9 +108,9 @@ final class DropTargetWidget extends SingleChildContainer {
           rb.a(ArchiveIndex.field_u, var5, 0, (String) null, 97);
           lo.field_y = sa.field_Cb;
           ResizableViewResizeListener.field_a = SingleChildContainer.field_D;
-          SingleChildContainer.field_D.field_J = ArchiveIndex.field_u + (-(8355711 & ArchiveIndex.field_u >> 1) + ((16711422 & nf.field_A.field_J) >> 1));
-          SingleChildContainer.field_D.field_eb = -((16711423 & ArchiveIndex.field_u) >> 1) + ArchiveIndex.field_u + (8355711 & nf.field_A.field_eb >> 1);
-          SingleChildContainer.field_D.field_zb = ((nf.field_A.field_zb & 16711422) >> 1) + (-(8355711 & ArchiveIndex.field_u >> 1) + ArchiveIndex.field_u);
+          SingleChildContainer.field_D.field_J = ArchiveIndex.field_u + (-(8355711 & ArchiveIndex.field_u >> 1) + ((16711422 & Battle.field_A.field_J) >> 1));
+          SingleChildContainer.field_D.field_eb = -((16711423 & ArchiveIndex.field_u) >> 1) + ArchiveIndex.field_u + (8355711 & Battle.field_A.field_eb >> 1);
+          SingleChildContainer.field_D.field_zb = ((Battle.field_A.field_zb & 16711422) >> 1) + (-(8355711 & ArchiveIndex.field_u >> 1) + ArchiveIndex.field_u);
           tm.field_d = new SceneWidget(0L, param3);
           ValidatedTextWidget.field_U = new SceneWidget(0L, param2);
           SceneScrollbar.field_Jb = new SceneWidget(0L, (SceneWidget) null);
@@ -120,8 +120,8 @@ final class DropTargetWidget extends SingleChildContainer {
           ck.field_d.addChild(SingleChildContainer.field_D, 41);
           sa.field_Cb = new SceneWidget(0L, lo.field_y);
           ck.field_d.addChild(sa.field_Cb, 97);
-          MembershipOfferScreen.field_f = new SceneWidget(0L, nf.field_A, fe.field_k);
-          ih.field_d = new SceneWidget(0L, nf.field_A);
+          MembershipOfferScreen.field_f = new SceneWidget(0L, Battle.field_A, fe.field_k);
+          ih.field_d = new SceneWidget(0L, Battle.field_A);
           tm.field_d.addChild(ValidatedTextWidget.field_U, 65);
           tm.field_d.addChild(SceneScrollbar.field_Jb, 126);
           SceneScrollbar.field_Jb.addChild(ck.field_d, 115);

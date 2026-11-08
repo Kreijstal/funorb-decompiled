@@ -118,7 +118,7 @@ final class Bzip2State {
         try {
           oo.field_x = param7;
           ResizableViewResizeListener.field_c[3] = 16736511;
-          nf.field_A = param2;
+          Battle.field_A = param2;
           ResizableViewResizeListener.field_c[2] = 9474303;
           ResizableViewResizeListener.field_c[1] = 6356832;
           hm.field_c = param5;
@@ -185,10 +185,10 @@ final class Bzip2State {
               }
               if (decompiledFrameRemainder0) {
                 mn.field_s[var18] = new SceneWidget(0L, param9);
-                ta.field_i[var18] = new SceneWidget(0L, nf.field_A, var19);
+                ta.field_i[var18] = new SceneWidget(0L, Battle.field_A, var19);
                 ia.field_b[var18] = new SceneWidget(0L, (SceneWidget) null);
                 ia.field_b[var18].field_gb = 1;
-                IntrusiveDequeCursor.field_f[var18] = new SceneWidget(0L, nf.field_A);
+                IntrusiveDequeCursor.field_f[var18] = new SceneWidget(0L, Battle.field_A);
                 IntrusiveDequeCursor.field_f[var18].field_gb = 1;
                 mn.field_s[var18].addChild(ta.field_i[var18], param8 - 27777);
                 mn.field_s[var18].addChild(ia.field_b[var18], 81);

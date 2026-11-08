@@ -318,8 +318,8 @@ final class WhirlpoolHasher {
           this.field_i[var2Lifetime1] = 0L;
         }
         if (param0 != -23645) {
-          ml var4 = (ml) null;
-          WhirlpoolHasher.a((ml) null, false);
+          BattleUnit var4 = (BattleUnit) null;
+          WhirlpoolHasher.a((BattleUnit) null, false);
         }
     }
 
@@ -371,7 +371,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(ml param0, boolean param1) {
+    final static void a(BattleUnit param0, boolean param1) {
         jg var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -381,7 +381,7 @@ final class WhirlpoolHasher {
         try {
           qn.field_ob.a(0, 4, 0, rk.field_O.field_y / 2, 0, rk.field_O.field_y / 2, 0, -60);
           if (StatefulTextPainter.field_p != 6) {
-            param0.b((byte) -92, 250);
+            param0.setHealth((byte) -92, 250);
           } else {
             field_k = 6;
           }

@@ -114,7 +114,7 @@ final class ae {
                 if (!MenuButtonPanel.field_C) {
                   return;
                 }
-                LabeledField.a(ResizableViewResizeListener.field_h, true, mi.field_B, 1, ArchiveRequest.field_t, 1, EmailLoginCredentials.field_j / 2, 16, mi.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, NameValidator.field_t, true, mi.field_B.field_m + mi.field_B.field_o, -21071);
+                LabeledField.a(ResizableViewResizeListener.field_h, true, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 1, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, NameValidator.field_t, true, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_o, -21071);
                 MenuButtonPanel.field_C = false;
                 return;
               }
@@ -141,7 +141,7 @@ final class ae {
             if (!MenuButtonPanel.field_C) {
               return;
             }
-            LabeledField.a(ResizableViewResizeListener.field_h, true, mi.field_B, 1, ArchiveRequest.field_t, 1, EmailLoginCredentials.field_j / 2, 16, mi.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, NameValidator.field_t, true, mi.field_B.field_m + mi.field_B.field_o, -21071);
+            LabeledField.a(ResizableViewResizeListener.field_h, true, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 1, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, NameValidator.field_t, true, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_o, -21071);
             MenuButtonPanel.field_C = false;
             return;
           }
@@ -167,7 +167,7 @@ final class ae {
               if (!MenuButtonPanel.field_C) {
                 return;
               }
-              LabeledField.a(ResizableViewResizeListener.field_h, true, mi.field_B, 1, ArchiveRequest.field_t, 1, EmailLoginCredentials.field_j / 2, 16, mi.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, NameValidator.field_t, true, mi.field_B.field_m + mi.field_B.field_o, -21071);
+              LabeledField.a(ResizableViewResizeListener.field_h, true, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 1, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, NameValidator.field_t, true, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_o, -21071);
               MenuButtonPanel.field_C = false;
               return;
             }
@@ -195,7 +195,7 @@ final class ae {
         if (!MenuButtonPanel.field_C) {
           return;
         }
-        LabeledField.a(ResizableViewResizeListener.field_h, true, mi.field_B, 1, ArchiveRequest.field_t, 1, EmailLoginCredentials.field_j / 2, 16, mi.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, NameValidator.field_t, true, mi.field_B.field_m + mi.field_B.field_o, -21071);
+        LabeledField.a(ResizableViewResizeListener.field_h, true, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 1, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, NameValidator.field_t, true, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_o, -21071);
         MenuButtonPanel.field_C = false;
     }
 

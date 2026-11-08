@@ -291,7 +291,7 @@ final class ResourceArchive {
             return stackIn_6_0;
           }
           var5 = (CharSequence) ((Object) param0);
-          var4_int = this.field_i.field_c[param2].get(ml.a(var5, -76), -140);
+          var4_int = this.field_i.field_c[param2].get(BattleUnit.stringHash(var5, -76), -140);
           if (this.isValidFile(var4_int, 0, param2)) {
             return var4_int;
           }
@@ -493,7 +493,7 @@ final class ResourceArchive {
           var3_int = 94 % ((23 - param1) / 61);
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
-          var4 = this.field_i.field_l.get(ml.a(var5, -83), -140);
+          var4 = this.field_i.field_l.get(BattleUnit.stringHash(var5, -83), -140);
           if (this.isValidGroup(-106, var4)) {
             return var4;
           }
@@ -550,7 +550,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_i.field_l.get(ml.a(var4, 80), -140);
+          var3_int = this.field_i.field_l.get(BattleUnit.stringHash(var4, 80), -140);
           stackIn_8_0 = this.getGroupProgress(var3_int, -23760);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -591,12 +591,12 @@ final class ResourceArchive {
           param2 = param2.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.field_i.field_l.get(ml.a(var6, 71), -140);
+          var4_int = this.field_i.field_l.get(BattleUnit.stringHash(var6, 71), -140);
           if (!this.isValidGroup(-43, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_i.field_c[var4_int].get(ml.a(var7, -78), -140);
+          var5 = this.field_i.field_c[var4_int].get(BattleUnit.stringHash(var7, -78), -140);
           if (!param0) {
             return false;
           }
@@ -649,7 +649,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_i.field_l.get(ml.a(var4, 82), -140);
+          var3_int = this.field_i.field_l.get(BattleUnit.stringHash(var4, 82), -140);
           stackIn_6_0 = this.ensureGroupLoaded(true, var3_int);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -800,12 +800,12 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           param0 = param0.toLowerCase();
           var6 = (CharSequence) ((Object) param1);
-          var4_int = this.field_i.field_l.get(ml.a(var6, param2 ^ 79), -140);
+          var4_int = this.field_i.field_l.get(BattleUnit.stringHash(var6, param2 ^ 79), -140);
           if (!this.isValidGroup(-125, var4_int)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.field_i.field_c[var4_int].get(ml.a(var7, param2 - 123), -140);
+          var5 = this.field_i.field_c[var4_int].get(BattleUnit.stringHash(var7, param2 - 123), -140);
           if (param2 == -1) {
             stackIn_10_0 = this.getFile(var5, 26219, var4_int);
             return stackIn_10_0;
@@ -849,7 +849,7 @@ final class ResourceArchive {
             this.getNamedFile((String) (((Object[]) (((Object[]) (this.field_c[6]))[19]))[0]), (String) (this.field_c[2]), -82);
           }
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_i.field_l.get(ml.a(var4, 116), -140);
+          var3_int = this.field_i.field_l.get(BattleUnit.stringHash(var4, 116), -140);
           if (var3_int >= 0) {
             return true;
           }

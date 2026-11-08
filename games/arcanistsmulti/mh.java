@@ -8,7 +8,7 @@ class mh extends TextButton {
     static String field_I;
 
     final static void i(byte param0) {
-        rk.field_O.q(-256);
+        rk.field_O.clearTurnActive(-256);
         if (StatefulTextPainter.field_p >= 6) {
           if (7 != StatefulTextPainter.field_p) {
             gj.a(true, true, 14, mn.field_r);

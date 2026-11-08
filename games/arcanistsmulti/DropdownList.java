@@ -210,7 +210,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
         }
     }
 
-    final static boolean spriteHitsTerrain(int param0, int param1, boolean param2, Sprite param3, IndexedSprite param4, nf param5, int param6) {
+    final static boolean spriteHitsTerrain(int param0, int param1, boolean param2, Sprite param3, IndexedSprite param4, Battle param5, int param6) {
         int var21 = 0;
         int var22 = 0;
         int stackIn_17_0 = 0;
@@ -679,8 +679,8 @@ final class DropdownList extends UiContainer implements ButtonListener {
 
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          nf var2 = (nf) null;
-          DropdownList.spriteHitsTerrain(64, -6, true, (Sprite) null, (IndexedSprite) null, (nf) null, 111);
+          Battle var2 = (Battle) null;
+          DropdownList.spriteHitsTerrain(64, -6, true, (Sprite) null, (IndexedSprite) null, (Battle) null, 111);
         }
         field_F = null;
         field_M = null;

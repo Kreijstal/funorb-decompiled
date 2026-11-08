@@ -34,10 +34,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
     }
 
     final static void a(int param0, boolean param1) {
-        ml dupTemp$0 = null;
+        BattleUnit dupTemp$0 = null;
         int var3;
-        ml var4;
-        ml var5;
+        BattleUnit var4;
+        BattleUnit var5;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (StatefulTextPainter.field_p == 0) {
           qn.field_ob.field_X = false;
@@ -55,7 +55,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   if (4 == WhirlpoolHasher.field_k) {
                     IntrusiveNodeHashTable.field_f = TextHotspotWidget.field_Q;
                     if (DropdownList.field_N != 12 &&
-                      !rk.field_O.c((byte) 89)) {
+                      !rk.field_O.isTurnFinished((byte) 89)) {
                       IntrusiveNodeHashTable.field_f = sk.field_i;
                     }
                     if (co.countUnitsOfType40(-20675) <= 2) {
@@ -125,7 +125,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               } else {
                 IntrusiveNodeHashTable.field_f = ValidationStatusIcon.field_R;
                 if (DropdownList.field_N != 14 &&
-                  !rk.field_O.c((byte) 89)) {
+                  !rk.field_O.isTurnFinished((byte) 89)) {
                   IntrusiveNodeHashTable.field_f = LabeledField.field_E;
                 }
                 if (co.countUnitsOfType40(param0 - 20672) <= 2) {
@@ -150,7 +150,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               if (WhirlpoolHasher.field_k != 2) {
                 if (WhirlpoolHasher.field_k != 3) {
                   if (WhirlpoolHasher.field_k == 4) {
-                    if (!rk.field_O.c((byte) 89)) {
+                    if (!rk.field_O.isTurnFinished((byte) 89)) {
                       IntrusiveNodeHashTable.field_f = DualLinkNode.field_h;
                     }
                     if (co.countUnitsOfType40(-20675) <= 2) {
@@ -170,7 +170,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   }
                 } else {
                   IntrusiveNodeHashTable.field_f = ub.field_d;
-                  if (rk.field_O.c((byte) 89)) {
+                  if (rk.field_O.isTurnFinished((byte) 89)) {
                     WhirlpoolHasher.field_k = 4;
                   }
                   if (-1000 == qn.field_ob.field_s) {
@@ -216,7 +216,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             if (1 == WhirlpoolHasher.field_k) {
               IntrusiveNodeHashTable.field_f = qn.field_jb;
               if (20 != DropdownList.field_N &&
-                !rk.field_O.c((byte) 89)) {
+                !rk.field_O.isTurnFinished((byte) 89)) {
                 WhirlpoolHasher.field_k = 0;
               }
               if (co.countUnitsOfType40(param0 ^ 20672) <= 2) {
@@ -242,7 +242,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           qn.field_ob.field_H = false;
           qn.field_ob.field_g = false;
           if (WhirlpoolHasher.field_k <= 2 &&
-            520 > rk.field_O.a(0, true).field_lb) {
+            520 > rk.field_O.getUnitByOwner(0, true).field_lb) {
             WhirlpoolHasher.field_k = 8;
           }
           if (0 != WhirlpoolHasher.field_k) {
@@ -254,7 +254,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             } else {
               if (2 == WhirlpoolHasher.field_k) {
                 IntrusiveNodeHashTable.field_f = gn.field_f;
-                if (rk.field_O.a(0, true).field_lb > 1300) {
+                if (rk.field_O.getUnitByOwner(0, true).field_lb > 1300) {
                   WhirlpoolHasher.field_k = 3;
                 }
                 ArrayWidgetContainer.field_A = 300;
@@ -273,7 +273,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                           }
                         } else {
                           IntrusiveNodeHashTable.field_f = IsaacRandom.field_c;
-                          if (rk.field_O.a(0, true).field_lb < 516) {
+                          if (rk.field_O.getUnitByOwner(0, true).field_lb < 516) {
                             WhirlpoolHasher.field_k = 6;
                           }
                         }
@@ -281,7 +281,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                         IntrusiveNodeHashTable.field_f = EmptyPainter.field_c;
                       }
                     } else {
-                      if (rk.field_O.a(3, true) == null) {
+                      if (rk.field_O.getUnitByOwner(3, true) == null) {
                         IntrusiveNodeHashTable.field_f = ub.field_f;
                       } else {
                         IntrusiveNodeHashTable.field_f = ui.field_u;
@@ -289,8 +289,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
                       if (co.countUnitsOfType40(-20675) <= 1) {
                         WhirlpoolHasher.field_k = 6;
                       }
-                      if (null == rk.field_O.a(2, true) &&
-                        null == rk.field_O.a(3, true)) {
+                      if (null == rk.field_O.getUnitByOwner(2, true) &&
+                        null == rk.field_O.getUnitByOwner(3, true)) {
                         WhirlpoolHasher.field_k = 7;
                       }
                     }
@@ -315,16 +315,16 @@ final class DelegatingCanvas extends java.awt.Canvas {
             i.b(19);
             ArrayWidgetContainer.field_A = 400;
           }
-          if (rk.field_O.a(0, true).field_db > 800) {
+          if (rk.field_O.getUnitByOwner(0, true).field_db > 800) {
             WhirlpoolHasher.field_k = -Math.abs(WhirlpoolHasher.field_k);
           }
           if (WhirlpoolHasher.field_k < 0) {
             IntrusiveNodeHashTable.field_f = MusicCrossfadeStream.field_u;
-            if (800 > rk.field_O.a(0, true).field_db) {
-              if (rk.field_O.a(0, true).field_lb < 800) {
+            if (800 > rk.field_O.getUnitByOwner(0, true).field_db) {
+              if (rk.field_O.getUnitByOwner(0, true).field_lb < 800) {
                 WhirlpoolHasher.field_k = -WhirlpoolHasher.field_k;
               }
-              if (rk.field_O.a(0, true).field_lb > 1200) {
+              if (rk.field_O.getUnitByOwner(0, true).field_lb > 1200) {
                 WhirlpoolHasher.field_k = -WhirlpoolHasher.field_k;
               }
             }
@@ -336,12 +336,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
           qn.field_ob.field_X = false;
           qn.field_ob.field_H = false;
           qn.field_ob.field_g = false;
-          if (rk.field_O.a(0, true) == null) {
+          if (rk.field_O.getUnitByOwner(0, true) == null) {
             gj.a(true, true, 14, mn.field_r);
             co.resetBattleState(114);
             return;
           }
-          var4 = rk.field_O.a(qn.field_ob.field_bb, true);
+          var4 = rk.field_O.getUnitByOwner(qn.field_ob.field_bb, true);
           if (0 == WhirlpoolHasher.field_k) {
             ArrayWidgetContainer.field_A = 400;
             if (DropdownList.field_N == 6) {
@@ -370,12 +370,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
                       }
                     } else {
                       IntrusiveNodeHashTable.field_f = SceneWidgetNode.field_o;
-                      if (null == rk.field_O.a(1, true) ||
-                        null == rk.field_O.a(2, true) ||
-                        null == rk.field_O.a(3, true) ||
-                        rk.field_O.a(1, true).field_jb != 40 ||
-                        rk.field_O.a(2, true).field_jb != 40 ||
-                        rk.field_O.a(3, true).field_jb != 40) {
+                      if (null == rk.field_O.getUnitByOwner(1, true) ||
+                        null == rk.field_O.getUnitByOwner(2, true) ||
+                        null == rk.field_O.getUnitByOwner(3, true) ||
+                        rk.field_O.getUnitByOwner(1, true).field_jb != 40 ||
+                        rk.field_O.getUnitByOwner(2, true).field_jb != 40 ||
+                        rk.field_O.getUnitByOwner(3, true).field_jb != 40) {
                         WhirlpoolHasher.field_k = 6;
                       }
                     }
@@ -388,23 +388,23 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     if (DropdownList.field_N != 120) {
                       WhirlpoolHasher.field_k = 5;
                     }
-                    if (rk.field_O.a(1, true) == null ||
-                      rk.field_O.a(2, true) == null ||
-                      rk.field_O.a(3, true) == null ||
-                      rk.field_O.a(1, true).field_jb != 40 ||
-                      rk.field_O.a(2, true).field_jb != 40 ||
-                      rk.field_O.a(3, true).field_jb != 40) {
+                    if (rk.field_O.getUnitByOwner(1, true) == null ||
+                      rk.field_O.getUnitByOwner(2, true) == null ||
+                      rk.field_O.getUnitByOwner(3, true) == null ||
+                      rk.field_O.getUnitByOwner(1, true).field_jb != 40 ||
+                      rk.field_O.getUnitByOwner(2, true).field_jb != 40 ||
+                      rk.field_O.getUnitByOwner(3, true).field_jb != 40) {
                       WhirlpoolHasher.field_k = 6;
                     }
                   }
                 } else {
                   IntrusiveNodeHashTable.field_f = va.field_b;
-                  if (rk.field_O.a(1, true) == null ||
-                    rk.field_O.a(2, true) == null ||
-                    rk.field_O.a(3, true) == null ||
-                    40 != rk.field_O.a(1, true).field_jb ||
-                    rk.field_O.a(2, true).field_jb != 40 ||
-                    rk.field_O.a(3, true).field_jb != 40) {
+                  if (rk.field_O.getUnitByOwner(1, true) == null ||
+                    rk.field_O.getUnitByOwner(2, true) == null ||
+                    rk.field_O.getUnitByOwner(3, true) == null ||
+                    40 != rk.field_O.getUnitByOwner(1, true).field_jb ||
+                    rk.field_O.getUnitByOwner(2, true).field_jb != 40 ||
+                    rk.field_O.getUnitByOwner(3, true).field_jb != 40) {
                     WhirlpoolHasher.field_k = 6;
                   }
                   if (var4 == null ||
@@ -419,13 +419,13 @@ final class DelegatingCanvas extends java.awt.Canvas {
               }
             } else {
               IntrusiveNodeHashTable.field_f = ValidationStatusIcon.field_M;
-              if (rk.field_O.b(12) >= 3) {
+              if (rk.field_O.countUnits(12) >= 3) {
                 WhirlpoolHasher.field_k = 2;
               }
               ArrayWidgetContainer.field_A = 400;
             }
           }
-          if (rk.field_O.a(0, true).field_db > 800) {
+          if (rk.field_O.getUnitByOwner(0, true).field_db > 800) {
             WhirlpoolHasher.field_k = -Math.abs(WhirlpoolHasher.field_k);
           }
           if (0 > WhirlpoolHasher.field_k) {
@@ -440,22 +440,22 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 }
               } else {
                 WhirlpoolHasher.field_k = -WhirlpoolHasher.field_k;
-                rk.field_O.a(0, true).field_ib = 250;
+                rk.field_O.getUnitByOwner(0, true).field_ib = 250;
               }
             }
             ArrayWidgetContainer.field_A = 400;
           }
-          if (rk.field_O.a(0, true).field_ib < 250) {
+          if (rk.field_O.getUnitByOwner(0, true).field_ib < 250) {
             WhirlpoolHasher.field_k = -Math.abs(WhirlpoolHasher.field_k);
-            qn.field_ob.field_bb = rk.field_O.a(0, true).field_T;
-            if (240 > rk.field_O.a(0, true).field_ib) {
-              dupTemp$0 = rk.field_O.a(0, true);
+            qn.field_ob.field_bb = rk.field_O.getUnitByOwner(0, true).field_T;
+            if (240 > rk.field_O.getUnitByOwner(0, true).field_ib) {
+              dupTemp$0 = rk.field_O.getUnitByOwner(0, true);
               dupTemp$0.field_ib = dupTemp$0.field_ib + 1;
             }
           }
         }
         if (StatefulTextPainter.field_p == 6) {
-          if (null == rk.field_O.a(0, true)) {
+          if (null == rk.field_O.getUnitByOwner(0, true)) {
             gj.a(true, true, 14, mn.field_r);
             co.resetBattleState(108);
             return;
@@ -519,7 +519,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         if (7 != StatefulTextPainter.field_p) {
           return;
         }
-        if (null == rk.field_O.a(0, true)) {
+        if (null == rk.field_O.getUnitByOwner(0, true)) {
           gj.a(true, true, 14, mn.field_r);
           co.resetBattleState(113);
           return;
@@ -532,7 +532,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             IntrusiveNodeHashTable.field_f = IntrusiveDequeCursor.field_h;
           }
         }
-        var5 = rk.field_O.a(qn.field_ob.field_bb, true);
+        var5 = rk.field_O.getUnitByOwner(qn.field_ob.field_bb, true);
         if (WhirlpoolHasher.field_k < 0) {
           ArrayWidgetContainer.field_A = 400;
           if (var5 != null &&
@@ -545,9 +545,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
             IntrusiveNodeHashTable.field_f = DropTargetWidget.field_F;
           }
         }
-        if (rk.field_O.a(0, true).field_x > 0) {
+        if (rk.field_O.getUnitByOwner(0, true).field_x > 0) {
           WhirlpoolHasher.field_k = -Math.abs(WhirlpoolHasher.field_k);
-          qn.field_ob.field_bb = rk.field_O.a(0, true).field_T;
+          qn.field_ob.field_bb = rk.field_O.getUnitByOwner(0, true).field_T;
         }
         return;
     }

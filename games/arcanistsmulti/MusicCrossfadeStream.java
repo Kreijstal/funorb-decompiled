@@ -437,7 +437,7 @@ final class MusicCrossfadeStream extends PcmStream {
           var2_int = -29 / ((84 - param0) / 36);
           IntrusiveNodeHashTable.field_o.setBounds(hl.field_m.field_x, 0, -40 + hl.field_m.field_I, 40, (byte) -120);
           IconTextSceneWidget.field_Db.setBounds(ReflectionCheckRequest.field_h.field_x, 0, 0, 30, (byte) -120);
-          mi.field_m.setBounds(ReflectionCheckRequest.field_h.field_x, 0, 30, -42 + ReflectionCheckRequest.field_h.field_I - 30, (byte) -120);
+          SpellProjectile.field_m.setBounds(ReflectionCheckRequest.field_h.field_x, 0, 30, -42 + ReflectionCheckRequest.field_h.field_I - 30, (byte) -120);
           var3 = 3 + vf.field_l;
           if (ao.field_h.length < 2) {
             var3--;
@@ -445,15 +445,15 @@ final class MusicCrossfadeStream extends PcmStream {
           if (param1) {
             var3--;
           }
-          var4 = ((var3 + 1) / 2 + (2 + (-5 + mi.field_m.field_I) - 5 - 10)) / (1 + var3) - 2;
+          var4 = ((var3 + 1) / 2 + (2 + (-5 + SpellProjectile.field_m.field_I) - 5 - 10)) / (1 + var3) - 2;
           if (var4 > 30) {
             var4 = 30;
           }
-          var5 = -(var3 * (2 + var4)) + (mi.field_m.field_I - 10);
+          var5 = -(var3 * (2 + var4)) + (SpellProjectile.field_m.field_I - 10);
           if (var5 > 40) {
             var5 = 40;
           }
-          BevelTextPainter.field_s.setBounds(-5 + mi.field_m.field_x - 5, 5, 5, var5, (byte) -120);
+          BevelTextPainter.field_s.setBounds(-5 + SpellProjectile.field_m.field_x - 5, 5, 5, var5, (byte) -120);
           var6 = var5 + 7;
           for (var7 = 0; var7 < 4 + vf.field_l; var7++) {
             if ((var7 != 1 ||

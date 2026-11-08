@@ -268,7 +268,7 @@ final class ContextActionMenu extends SceneWidget {
               var12.field_Kb = new SceneWidget(0L, IntrusiveNode.field_c);
               var12.addChild(var12.field_Kb, 44);
               var12.markTreeDirty((byte) 20);
-              var12.field_Zb = new SceneWidget(0L, ml.field_V);
+              var12.field_Zb = new SceneWidget(0L, BattleUnit.field_V);
               var13 = 1;
               var12.addChild(var12.field_Zb, 69);
             }
@@ -650,7 +650,7 @@ final class ContextActionMenu extends SceneWidget {
         }
         if (param2 <= 25) {
           IndexedSprite var5 = (IndexedSprite) null;
-          ContextActionMenu.a(6, (nf) null, (byte) -73, -25, -95, (Sprite) null, (IndexedSprite) null);
+          ContextActionMenu.a(6, (Battle) null, (byte) -73, -25, -95, (Sprite) null, (IndexedSprite) null);
         }
         return false;
     }
@@ -698,7 +698,7 @@ final class ContextActionMenu extends SceneWidget {
         }
     }
 
-    final static void a(int param0, nf param1, byte param2, int param3, int param4, Sprite param5, IndexedSprite param6) {
+    final static void a(int param0, Battle param1, byte param2, int param3, int param4, Sprite param5, IndexedSprite param6) {
         int var19 = 0;
         int var20 = 0;
         int var23 = 0;

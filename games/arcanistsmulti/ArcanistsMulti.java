@@ -485,7 +485,7 @@ public final class ArcanistsMulti extends GameApplet {
                   SpriteState.field_z = null;
                   System.gc();
                   var17 = new le(true, var2_intLifetime1, var3, var4Lifetime2 != 0, var7, var8Lifetime1, var9, var10, var11, var14Lifetime1, var15Lifetime1, var5Lifetime1 != 0, var6Lifetime1, var12);
-                  mi.a(DelegatingCanvas.field_c[var17.field_V.a(-31497) + 1], 3);
+                  SpellProjectile.playMusic(DelegatingCanvas.field_c[var17.field_V.getArenaTheme(-31497) + 1], 3);
                   var17.m(413355681);
                   if (var13 != 0) {
                     var18 = SceneTabbedPanel.field_Tb.field_A.length;
@@ -889,7 +889,7 @@ public final class ArcanistsMulti extends GameApplet {
                 ce.field_m.a(true);
                 SceneTextInput.loadSceneSprites(ue.field_d, (byte) -66);
                 CachedArchiveProvider.field_t = LoadingTracker.loadBinaryFont(so.field_k, -24755, "", "font", ue.field_d);
-                mi.field_B = LoadingTracker.loadBinaryFont(so.field_k, -24755, "", "smallfont", ue.field_d);
+                SpellProjectile.field_B = LoadingTracker.loadBinaryFont(so.field_k, -24755, "", "smallfont", ue.field_d);
                 Checkbox.a(2);
                 stackIn_188_0 = 0;
               }
@@ -1182,7 +1182,7 @@ public final class ArcanistsMulti extends GameApplet {
           Js5ArchiveManager.releaseStatics((byte) -90);
           BufferedRandomAccessFile.releaseStatics(-1);
           BufferedSocket.releaseStatics(11138);
-          nf.releaseStatics(0);
+          Battle.releaseStatics(0);
           IntrusiveNode.releaseStatics((byte) -115);
           pn.releaseStatics((byte) 122);
           cc.releaseStatics((byte) 107);
@@ -1201,10 +1201,10 @@ public final class ArcanistsMulti extends GameApplet {
           ArchiveIndex.releaseStatics(0);
           GzipDecoder.releaseStatics(-79);
           ArchiveProvider.releaseStatics((byte) -51);
-          ml.h(false);
+          BattleUnit.h(false);
           qc.releaseStatics(54);
           DualLinkNode.releaseStatics(49);
-          mi.g(2);
+          SpellProjectile.g(2);
           IntrusiveDequeCursor.releaseStatics(false);
           hi.releaseStatics((byte) 60);
           IsaacRandom.releaseStatics((byte) -109);
@@ -1516,7 +1516,7 @@ public final class ArcanistsMulti extends GameApplet {
                   Js5NetworkRequest.c(false);
                   if (ChatInputWidget.field_Cb) {
                     ChatInputWidget.field_Cb = false;
-                    km.a(1, 10, 240, 16, mi.field_B, 320, (byte) 40, mi.field_B.field_o, false, ResizableViewResizeListener.field_h, mi.field_B.field_m + mi.field_B.field_o, ArchiveRequest.field_t);
+                    km.a(1, 10, 240, 16, SpellProjectile.field_B, 320, (byte) 40, SpellProjectile.field_B.field_o, false, ResizableViewResizeListener.field_h, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_o, ArchiveRequest.field_t);
                   }
                   if (pi.field_c) {
                     pi.field_c = false;
@@ -1751,7 +1751,7 @@ public final class ArcanistsMulti extends GameApplet {
           }
           if (-4 == mn.field_r) {
             if (DelegatingCanvas.field_c[0] == f.field_g) {
-              mi.a(DelegatingCanvas.field_c[0], param0 + 92);
+              SpellProjectile.playMusic(DelegatingCanvas.field_c[0], param0 + 92);
             }
             he.field_e.writeOpcode((byte) -59, 64);
             var3_int = 0;
@@ -2078,7 +2078,7 @@ public final class ArcanistsMulti extends GameApplet {
                       var14 != 0 || var20 != 0) {
                       var12Lifetime1 = 512;
                       SoftwareRasterizer.fillRectangleAlpha(-4 + (-300 + var12Lifetime1) + var17, 78 + var13 + var18, 308, 64, 0, 192);
-                      mi.field_B.drawParagraph(MusicCrossfadeStream.field_x, var17 + (-300 + var12Lifetime1), var13 + (80 + var18), 300, 64, 16777215, -1, 1, 1, mi.field_B.field_C);
+                      SpellProjectile.field_B.drawParagraph(MusicCrossfadeStream.field_x, var17 + (-300 + var12Lifetime1), var13 + (80 + var18), 300, 64, 16777215, -1, 1, 1, SpellProjectile.field_B.field_C);
                       var15.drawHorizontalFlip(var12Lifetime1 + var17, var19);
                       if (var20 != 0) {
                         var12Lifetime1 = -(1023 & SpriteState.field_v) + 1024;
@@ -2086,7 +2086,7 @@ public final class ArcanistsMulti extends GameApplet {
                           var14 != 0) {
                           var12Lifetime1 = 512;
                           SoftwareRasterizer.fillRectangleAlpha(var17 + var12Lifetime1 - 300 - 4, var18 + 78 + var13, 308, 64, 0, 192);
-                          mi.field_B.drawParagraph(MusicCrossfadeStream.field_x, var17 + var12Lifetime1 - 300, var18 + (var13 + 80), 300, 64, 16777215, -1, 1, 1, mi.field_B.field_C);
+                          SpellProjectile.field_B.drawParagraph(MusicCrossfadeStream.field_x, var17 + var12Lifetime1 - 300, var18 + (var13 + 80), 300, 64, 16777215, -1, 1, 1, SpellProjectile.field_B.field_C);
                         }
                         var15.drawHorizontalFlip(var17 + var12Lifetime1, var19);
                       }
@@ -2096,7 +2096,7 @@ public final class ArcanistsMulti extends GameApplet {
                       var14 != 0) {
                       var12Lifetime1 = 512;
                       SoftwareRasterizer.fillRectangleAlpha(var17 + var12Lifetime1 - 300 - 4, var18 + 78 + var13, 308, 64, 0, 192);
-                      mi.field_B.drawParagraph(MusicCrossfadeStream.field_x, var17 + var12Lifetime1 - 300, var18 + (var13 + 80), 300, 64, 16777215, -1, 1, 1, mi.field_B.field_C);
+                      SpellProjectile.field_B.drawParagraph(MusicCrossfadeStream.field_x, var17 + var12Lifetime1 - 300, var18 + (var13 + 80), 300, 64, 16777215, -1, 1, 1, SpellProjectile.field_B.field_C);
                     }
                     var15.drawHorizontalFlip(var17 + var12Lifetime1, var19);
                   }
@@ -2107,7 +2107,7 @@ public final class ArcanistsMulti extends GameApplet {
                     if ((SpriteState.field_v & 64) > 0) {
                       var19 = 16777215;
                     }
-                    mi.field_B.drawParagraph("If you are playing with super mod powers, remember that the 'Mark of Fame' achievement is meant to be a CHALLENGE. Do not create games of over 3 players if you are not competent at the game. Never play with more than 4 players as you CANNOT win! Kill Seas and Nature players at ALL costs. Most of all, good luck!", -300 + var12Lifetime1 + var17, 91 + var13 + var18, 424, 64, var19, -1, 1, 1, -2 + mi.field_B.field_C);
+                    SpellProjectile.field_B.drawParagraph("If you are playing with super mod powers, remember that the 'Mark of Fame' achievement is meant to be a CHALLENGE. Do not create games of over 3 players if you are not competent at the game. Never play with more than 4 players as you CANNOT win! Kill Seas and Nature players at ALL costs. Most of all, good luck!", -300 + var12Lifetime1 + var17, 91 + var13 + var18, 424, 64, var19, -1, 1, 1, -2 + SpellProjectile.field_B.field_C);
                   }
                 } else {
                   var12Lifetime1 = 512;
@@ -2116,7 +2116,7 @@ public final class ArcanistsMulti extends GameApplet {
                   if ((SpriteState.field_v & 64) > 0) {
                     var19 = 16777215;
                   }
-                  mi.field_B.drawParagraph("If you are playing with super mod powers, remember that the 'Mark of Fame' achievement is meant to be a CHALLENGE. Do not create games of over 3 players if you are not competent at the game. Never play with more than 4 players as you CANNOT win! Kill Seas and Nature players at ALL costs. Most of all, good luck!", -300 + var12Lifetime1 + var17, 91 + var13 + var18, 424, 64, var19, -1, 1, 1, -2 + mi.field_B.field_C);
+                  SpellProjectile.field_B.drawParagraph("If you are playing with super mod powers, remember that the 'Mark of Fame' achievement is meant to be a CHALLENGE. Do not create games of over 3 players if you are not competent at the game. Never play with more than 4 players as you CANNOT win! Kill Seas and Nature players at ALL costs. Most of all, good luck!", -300 + var12Lifetime1 + var17, 91 + var13 + var18, 424, 64, var19, -1, 1, 1, -2 + SpellProjectile.field_B.field_C);
                 }
               }
               SoftwareRasterizer.resetClip();
@@ -2282,7 +2282,7 @@ public final class ArcanistsMulti extends GameApplet {
               DelegatingCanvas.field_c[0] = MusicTrack.loadNamed(PasswordFieldPainter.field_x, "", "arcanists_titlescreen");
               jo.field_c = 1;
               GrowableIntList.field_h.prepareTrack(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[0], -123);
-              mi.a(DelegatingCanvas.field_c[0], 3);
+              SpellProjectile.playMusic(DelegatingCanvas.field_c[0], 3);
             }
             return;
           }
@@ -2643,7 +2643,7 @@ public final class ArcanistsMulti extends GameApplet {
                                     return;
                                   }
                                 }
-                                ml.field_v = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "brinegoblin", ue.field_d);
+                                BattleUnit.field_v = IterableNodeHashTable.loadIndexedSpritesByName("streamed", 0, "brinegoblin", ue.field_d);
                                 SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                 if (var3 == 0) {
                                   return;

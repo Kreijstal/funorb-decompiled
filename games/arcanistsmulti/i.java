@@ -72,7 +72,7 @@ final class i {
         field_g = null;
     }
 
-    final static void a(IndexedSprite param0, int param1, int param2, byte param3, nf param4, Sprite param5, int param6) {
+    final static void a(IndexedSprite param0, int param1, int param2, byte param3, Battle param4, Sprite param5, int param6) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;

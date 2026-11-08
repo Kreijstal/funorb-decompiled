@@ -37,10 +37,10 @@ final class lc {
             return;
           }
           if (param1 > 0) {
-            mi.field_B.drawParagraph(ic.field_b, param2, -48 + param0, 300, 80, 0, -1, 1, 1, mi.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(ic.field_b, param2, -48 + param0, 300, 80, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
             param0 += 24;
             param2 += 16;
-            mi.field_B.drawParagraph(IsaacCipher.field_l + param1, param2, param0, 70, 32, 0, -1, 1, 1, mi.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(IsaacCipher.field_l + param1, param2, param0, 70, 32, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
             param2 += 90;
             if (param1 > 99) {
               param2 += 8;
@@ -66,8 +66,8 @@ final class lc {
               var5_int++;
             }
           } else {
-            mi.field_B.drawParagraph(TextFieldValidator.field_i, param2, -48 + param0, 300, 80, 0, -1, 1, 1, mi.field_B.field_C);
-            mi.field_B.drawParagraph(aa.field_j, param2, param0 + 24, 300, 32, 0, -1, 1, 1, mi.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(TextFieldValidator.field_i, param2, -48 + param0, 300, 80, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(aa.field_j, param2, param0 + 24, 300, 32, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
           }
           stackIn_28_0Lifetime1 = 97;
           stackIn_28_1Lifetime1 = (param3 - 56) / 48;
@@ -308,7 +308,7 @@ final class lc {
                 var10 = 230 + ValidatedTextWidget.field_I;
                 SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                 var2 = cf.field_e;
-                var3 = var3 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, mi.field_B.field_C + mi.field_B.field_m);
+                var3 = var3 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                 bb.field_g[0].drawTransparent(var4, var3);
                 var4 += 40;
                 bb.field_g[12].drawHalfSize(var4, var3);
@@ -343,10 +343,10 @@ final class lc {
                 var3 += 30;
                 var2 = pm.field_g;
                 var4 = var7;
-                mi.field_B.drawParagraph(var2, var10, -65 + var3, 356, 60, 0, -1, 0, 1, mi.field_B.field_m + mi.field_B.field_C);
+                SpellProjectile.field_B.drawParagraph(var2, var10, -65 + var3, 356, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                 SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                 var2 = ClientException.field_h;
-                var3 = var3 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, mi.field_B.field_C + mi.field_B.field_m);
+                var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                 bb.field_g[1].drawTransparent(var4, var3);
                 var4 += 40;
                 bb.field_g[8].drawHalfSize(var4, var3);
@@ -381,11 +381,11 @@ final class lc {
                 var4 += 20;
                 var3 += 50;
                 var2 = field_o;
-                mi.field_B.drawParagraph(var2, var10, var3 - 65, 356, 60, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
+                SpellProjectile.field_B.drawParagraph(var2, var10, var3 - 65, 356, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                 var4 = var7;
                 SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                 var2 = Scrollbar.field_S;
-                var3 = var3 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, mi.field_B.field_C + mi.field_B.field_m);
+                var3 = var3 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                 bb.field_g[7].drawTransparent(var4, var3);
                 var4 += 40;
                 bb.field_g[20].drawHalfSize(var4, var3);
@@ -398,10 +398,10 @@ final class lc {
                 var3 += 30;
                 var2 = oj.field_a;
                 var4 = var7;
-                mi.field_B.drawParagraph(var2, var10, -65 + var3, 356, 60, 0, -1, 0, 1, mi.field_B.field_m + mi.field_B.field_C);
+                SpellProjectile.field_B.drawParagraph(var2, var10, -65 + var3, 356, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                 SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                 var2 = mn.field_q;
-                var3 = var3 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, mi.field_B.field_m + mi.field_B.field_C);
+                var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                 bb.field_g[3].drawTransparent(var4, var3);
                 var4 += 40;
                 bb.field_g[13].drawHalfSize(var4, var3);
@@ -422,7 +422,7 @@ final class lc {
                 var2 = am.field_b;
                 var3 += 30;
                 var4 = var7;
-                mi.field_B.drawParagraph(var2, var10, -65 + var3, 356, 60, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
+                SpellProjectile.field_B.drawParagraph(var2, var10, -65 + var3, 356, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
               } else {
                 if (3 == var12_int) {
                   var9 = 45 + ValidatedTextWidget.field_I;
@@ -434,7 +434,7 @@ final class lc {
                   var7 = var4;
                   SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                   var2 = qj.field_b;
-                  var3 = var3 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, mi.field_B.field_m + mi.field_B.field_C);
+                  var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                   bb.field_g[2].drawTransparent(var4, var3);
                   var4 += 40;
                   bb.field_g[15].drawHalfSize(var4, var3);
@@ -476,11 +476,11 @@ final class lc {
                   var3 += 20;
                   var2 = hn.field_i;
                   var3 += 30;
-                  mi.field_B.drawParagraph(var2, var10, var3 - 65, 286, 60, 0, -1, 0, 1, mi.field_B.field_m + mi.field_B.field_C);
+                  SpellProjectile.field_B.drawParagraph(var2, var10, var3 - 65, 286, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                   var4 = var7;
                   SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                   var2 = LoadingTracker.field_f;
-                  var3 = var3 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, mi.field_B.field_m + mi.field_B.field_C);
+                  var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                   bb.field_g[4].drawTransparent(var4, var3);
                   var4 += 40;
                   bb.field_g[5].drawHalfSize(var4, var3);
@@ -530,10 +530,10 @@ final class lc {
                   var4 += 20;
                   var2 = DisplayNameForm.field_J;
                   var4 = var7;
-                  mi.field_B.drawParagraph(var2, var10, -65 + var3, 286, 60, 0, -1, 0, 1, mi.field_B.field_m + mi.field_B.field_C);
+                  SpellProjectile.field_B.drawParagraph(var2, var10, -65 + var3, 286, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                   SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                   var2 = MenuButtonPanel.field_P;
-                  var3 = var3 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 16777215, 0, 0, 0, mi.field_B.field_C + mi.field_B.field_m);
+                  var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                   bb.field_g[73].drawTransparent(var4, var3);
                   var4 += 40;
                   bb.field_g[22].drawHalfSize(var4, var3);
@@ -550,14 +550,14 @@ final class lc {
                   var3 += 20;
                   var3 += 30;
                   var2 = IsaacRandom.field_e;
-                  mi.field_B.drawParagraph(var2, var10, var3 - 65, 286, 60, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
+                  SpellProjectile.field_B.drawParagraph(var2, var10, var3 - 65, 286, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                   var4 = var7;
                   SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
                   SoftwareRasterizer.setClip(0, var3 + 60, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j);
                   SoftwareRasterizer.fillRoundedRectangleBlended(var9, var3, var8, 105, 25, 16777215, 128);
                   SoftwareRasterizer.resetClip();
                   var2 = om.field_L;
-                  var3 = var3 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, mi.field_B.field_C + mi.field_B.field_m);
+                  var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                   bb.field_g[75].drawTransparent(var4, var3);
                   var4 += 40;
                   bb.field_g[6].drawHalfSize(var4, var3);
@@ -606,9 +606,9 @@ final class lc {
                   var4 += 20;
                   var3 += 30;
                   var2 = SecondaryNodeDeque.field_e;
-                  mi.field_B.drawParagraph(var2, var10, -65 + var3, 286, 60, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
+                  SpellProjectile.field_B.drawParagraph(var2, var10, -65 + var3, 286, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                   var2 = jn.field_b;
-                  mi.field_B.drawParagraph(var2, var5, -5 + var3, var6, 60, 0, -1, 1, 0, mi.field_B.field_C + mi.field_B.field_m);
+                  SpellProjectile.field_B.drawParagraph(var2, var5, -5 + var3, var6, 60, 0, -1, 1, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                   var4 = var7;
                 } else {
                   if (var12_int == 4) {
@@ -620,36 +620,36 @@ final class lc {
                     md.field_f[2].drawScaled(var4, -24 + var3, 160, 160);
                     SoftwareRasterizer.drawLine(var4 - 170, var3 + 22, var4 - 10, 22 + var3, 16711680);
                     SoftwareRasterizer.drawLine(var4 + 5, 5 + var3 + 15, -10 + var4, var3 + 22, 16711680);
-                    mi.field_B.drawText(ue.field_a, -180 + var4, 20 + var3, 0, 16711680);
+                    SpellProjectile.field_B.drawText(ue.field_a, -180 + var4, 20 + var3, 0, 16711680);
                     SoftwareRasterizer.drawRoundedRectangle(var4 + 5, var3 + 5, 50, 30, 6, 16711680);
                     SoftwareRasterizer.fillRoundedRectangleBlended(5 + var4, var3 + 5, 50, 30, 6, 16711680, 64);
                     SoftwareRasterizer.drawLine(-170 + var4, -18 + var3, var4 + 40, -18 + var3, 65280);
                     SoftwareRasterizer.drawLine(10 + (var4 + 70), var3, var4 + 40, var3 - 18, 65280);
-                    mi.field_B.drawText(lh.field_h, var4 - 180, -20 + var3, 0, 65280);
+                    SpellProjectile.field_B.drawText(lh.field_h, var4 - 180, -20 + var3, 0, 65280);
                     SoftwareRasterizer.drawRoundedRectangle(70 + var4, var3, 20, 15, 4, 65280);
                     SoftwareRasterizer.fillRoundedRectangleBlended(70 + var4, var3, 20, 15, 4, 65280, 64);
                     SoftwareRasterizer.drawLine(180 + (160 + var4), var3 + 22, 10 + (160 + var4), var3 + 22, 33023);
                     SoftwareRasterizer.drawLine(var4 + 145 + 10, var3 + 10, 160 + var4 + 10, var3 + 22, 33023);
-                    mi.field_B.drawRightAlignedText(u.field_m, 160 + var4 + 180, 20 + var3, 0, 33023);
+                    SpellProjectile.field_B.drawRightAlignedText(u.field_m, 160 + var4 + 180, 20 + var3, 0, 33023);
                     SoftwareRasterizer.drawRoundedRectangle(145 + var4, 5 + var3, 10, 10, 4, 33023);
                     SoftwareRasterizer.fillRoundedRectangleBlended(var4 + 145, 5 + var3, 10, 10, 4, 33023, 64);
                     SoftwareRasterizer.drawLine(-170 + var4, 122 + var3, -10 + var4, 122 + var3, 16711935);
                     SoftwareRasterizer.drawLine(var4 + 5, 7 + (var3 + 105), -10 + var4, var3 + 122, 16711935);
-                    mi.field_B.drawText(ConditionalTextValue.field_a, var4 - 180, var3 + 120, 0, 16711935);
+                    SpellProjectile.field_B.drawText(ConditionalTextValue.field_a, var4 - 180, var3 + 120, 0, 16711935);
                     SoftwareRasterizer.drawRoundedRectangle(var4 + 5, var3 + 105, 110, 15, 6, 16711935);
                     SoftwareRasterizer.fillRoundedRectangleBlended(var4 + 5, 105 + var3, 110, 15, 6, 16711935, 64);
                     SoftwareRasterizer.drawLine(180 + var4 + 160, var3 + 102, var4 + 170, 102 + var3, 16776960);
                     SoftwareRasterizer.drawLine(40 + var4 + 125, 7 + (105 + var3), 170 + var4, 102 + var3, 16776960);
-                    mi.field_B.drawRightAlignedText(oa.field_b, 180 + (var4 + 160), 100 + var3, 0, 16776960);
+                    SpellProjectile.field_B.drawRightAlignedText(oa.field_b, 180 + (var4 + 160), 100 + var3, 0, 16776960);
                     SoftwareRasterizer.drawRoundedRectangle(125 + var4, var3 + 105, 40, 15, 6, 16776960);
                     SoftwareRasterizer.fillRoundedRectangleBlended(125 + var4, var3 + 105, 40, 15, 6, 16776960, 64);
                     var3 += 140;
                     var2 = tk.field_m;
                     var4 = ValidatedTextWidget.field_I + 64;
-                    var3 = var3 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var4, var3, 512, 128, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C);
+                    var3 = var3 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var4, var3, 512, 128, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                     var2 = tn.field_Kb;
                     var3 += 16;
-                    var3 = var3 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var4, var3, 192, 128, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m);
+                    var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var4, var3, 192, 128, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                     var12_int = 0;
                     var13_int = 0;
                     var14 = 0;
@@ -693,85 +693,85 @@ final class lc {
                     SoftwareRasterizer.setClip(var21, 46 + var22, 64 + var21, EmailLoginCredentials.field_j);
                     TextLayout.field_d.draw(var21 - 32, -92 + (10 + var22));
                     SoftwareRasterizer.resetClip();
-                    mi.field_B.drawCentered("250", var21 + 32, var22 + 8, 16777215, -1);
+                    SpellProjectile.field_B.drawCentered("250", var21 + 32, var22 + 8, 16777215, -1);
                   } else {
                     if (var12_int != 5) {
                       if (var12_int == 6) {
                         var2 = gl.field_a;
                         var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                         var2 = hl.field_i;
-                        var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m) + 8);
+                        var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) + 8);
                         var2 = GrowableIntList.field_f;
-                        var3 = var3 + (8 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m));
+                        var3 = var3 + (8 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m));
                         var2 = nm.field_d;
-                        var3 = var3 + (16 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5 + 32, var3, var6 - 64, 480, 16777215, 0, 1, 0, mi.field_B.field_m + mi.field_B.field_C));
+                        var3 = var3 + (16 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5 + 32, var3, var6 - 64, 480, 16777215, 0, 1, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
                         var2 = va.field_a;
-                        var3 = var3 + (8 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m));
+                        var3 = var3 + (8 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m));
                       } else {
                         if (var12_int == 7) {
                           var2 = db.field_d;
                           if (ArcanistsMulti.i((byte) -99)) {
                             var12_int = 74 + ValidatedTextWidget.field_I + CachedArchiveProvider.field_t.textWidth(var2);
                             ii.field_d.drawScaled(var12_int, -2 + var3, 32, 32);
-                            mi.field_B.drawText(SceneWidget.field_M, var12_int + 40, (mi.field_B.field_C + CachedArchiveProvider.field_t.field_C) / 2 + var3, 16711680, -1);
+                            SpellProjectile.field_B.drawText(SceneWidget.field_M, var12_int + 40, (SpellProjectile.field_B.field_C + CachedArchiveProvider.field_t.field_C) / 2 + var3, 16711680, -1);
                           }
                           var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                           var2 = GzipDecoder.field_c;
-                          var3 = var3 + (8 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m));
+                          var3 = var3 + (8 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m));
                           var2 = ArrayWidgetContainer.field_F;
-                          var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 6);
+                          var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 6);
                           var11 = new int[]{16711935, 16711680, 16746632, 16776960, 65535, 34816, 16777215, 4521762, 1364125, 16755302};
                           var2 = ClipState.field_q;
-                          mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
+                          SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                           var2 = CachedArchiveProvider.formatTemplate(-115, new String[]{Integer.toString(var11[1], 16)}, ArchiveRequest.field_s);
-                          var3 = var3 + (2 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
+                          var3 = var3 + (2 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
                           var2 = ik.field_a;
-                          mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_m + mi.field_B.field_C);
+                          SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                           var2 = CachedArchiveProvider.formatTemplate(-51, new String[]{Integer.toString(var11[2], 16)}, ra.field_b);
-                          var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 2);
+                          var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 2);
                           var2 = field_p;
-                          mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
+                          SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                           var2 = CachedArchiveProvider.formatTemplate(-116, new String[]{Integer.toString(var11[3], 16)}, hm.field_a);
-                          var3 = var3 + (2 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
+                          var3 = var3 + (2 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
                           var2 = IterableNodeHashTable.field_b;
-                          mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
+                          SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                           var2 = CachedArchiveProvider.formatTemplate(-47, new String[]{Integer.toString(var11[4], 16)}, pc.field_a);
-                          var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m) + 2);
+                          var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) + 2);
                           var2 = ScrollContainer.field_M;
-                          mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
+                          SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                           var2 = CachedArchiveProvider.formatTemplate(-120, new String[]{Integer.toString(var11[5], 16)}, NodeHashTable.field_b);
-                          var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 2);
+                          var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 2);
                           var2 = pb.field_l;
-                          mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_m + mi.field_B.field_C);
+                          SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                           var2 = CachedArchiveProvider.formatTemplate(122, new String[]{Integer.toString(var11[6], 16)}, SocketConnector.field_f);
-                          var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 2);
+                          var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 2);
                           var2 = CanvasRasterBuffer.field_f;
-                          mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_m + mi.field_B.field_C);
+                          SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                           var2 = CachedArchiveProvider.formatTemplate(-71, new String[]{Integer.toString(var11[7], 16)}, ra.field_e);
-                          var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m) + 2);
+                          var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) + 2);
                           var2 = MusicPatch.field_i;
-                          mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
+                          SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                           var2 = CachedArchiveProvider.formatTemplate(113, new String[]{Integer.toString(var11[8], 16)}, fo.field_i);
-                          var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 2);
+                          var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 2);
                           var2 = mf.field_e;
-                          mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
+                          SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                           var2 = CachedArchiveProvider.formatTemplate(-33, new String[]{Integer.toString(var11[9], 16)}, ie.field_Rb);
-                          var3 = var3 + (6 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
+                          var3 = var3 + (6 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
                           var2 = IntrusiveDeque.field_a;
-                          var3 = var3 + (8 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
+                          var3 = var3 + (8 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
                         } else {
                           if (var12_int == 8) {
                             var2 = EmailLoginCredentials.field_m;
                             var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                             this.a(var3, var4, (byte) -102, 3);
                             var2 = ne.field_j;
-                            mi.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
+                            SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                             var2 = LobbyGameEntry.field_Tb;
                             var3 += 128;
                             var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                             this.a(var3, var4, (byte) -77, 0);
                             var2 = OptionsDialog.field_pb;
-                            mi.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_m + mi.field_B.field_C);
+                            SpellProjectile.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                             bb.field_g[5].drawTransparent(var4, var3 + 80);
                           } else {
                             if (var12_int != 9) {
@@ -780,14 +780,14 @@ final class lc {
                                 var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                                 this.a(var3, var4, (byte) -47, 4);
                                 var2 = ValidationHelpWidget.field_S;
-                                mi.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
+                                SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                                 bb.field_g[29].drawTransparent(var4, 120 + (-40 + var3));
                                 var2 = SingleChildContainer.field_A;
                                 var3 += 128;
                                 var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                                 this.a(var3, var4, (byte) -86, 5);
                                 var2 = lm.field_d;
-                                mi.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
+                                SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                                 bb.field_g[55].drawTransparent(var4, 80 + var3);
                               } else {
                                 if (var12_int == 11) {
@@ -795,14 +795,14 @@ final class lc {
                                   var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                                   this.a(var3, var4, (byte) -36, 6);
                                   var2 = qj.field_f;
-                                  mi.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_m + mi.field_B.field_C);
+                                  SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                                   bb.field_g[67].drawTransparent(var4, var3 + 80);
                                   var3 += 128;
                                   var2 = b.field_c;
                                   var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                                   this.a(var3, var4, (byte) -42, 7);
                                   var2 = ClipState.field_l;
-                                  mi.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
+                                  SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                                   bb.field_g[85].drawTransparent(var4, 120 + (-40 + var3));
                                 } else {
                                   if (12 == var12_int) {
@@ -811,19 +811,19 @@ final class lc {
                                     var2 = ao.field_b;
                                     var12 = new String[50];
                                     var13 = new int[]{480};
-                                    var14 = mi.field_B.wrapText(var2, var13, var12);
-                                    var3 = var3 + (mi.field_B.field_C + mi.field_B.field_m);
+                                    var14 = SpellProjectile.field_B.wrapText(var2, var13, var12);
+                                    var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                                     var24 = 0;
                                     var15 = var24;
                                     while (var14 > var24) {
-                                      mi.field_B.drawText(var12[var24], var4, var3, 0, -1);
+                                      SpellProjectile.field_B.drawText(var12[var24], var4, var3, 0, -1);
                                       stackIn_94_0 = var12[var24].length();
                                       stackIn_94_1 = 2;
                                       if (stackIn_94_0 > stackIn_94_1 &&
                                         45 == var12[var24].charAt(1)) {
                                         gj.field_f[0].draw(-2 + var4, -12 + var3);
                                       }
-                                      var3 = var3 + (mi.field_B.field_C + mi.field_B.field_m);
+                                      var3 = var3 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                                       var24++;
                                     }
                                   }
@@ -834,14 +834,14 @@ final class lc {
                               var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                               this.a(var3, var4, (byte) -49, 1);
                               var2 = ah.field_e;
-                              mi.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
+                              SpellProjectile.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                               bb.field_g[17].drawTransparent(var4, var3 + 80);
                               var2 = hn.field_o;
                               var3 += 128;
                               var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                               this.a(var3, var4, (byte) -71, 2);
                               var2 = SceneScrollPane.field_Bb;
-                              mi.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
+                              SpellProjectile.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                               bb.field_g[42].drawTransparent(var4, 80 + var3);
                             }
                           }
@@ -852,13 +852,13 @@ final class lc {
                       if (ArcanistsMulti.i((byte) -92)) {
                         var12_int = ValidatedTextWidget.field_I + (74 + CachedArchiveProvider.field_t.textWidth(var2));
                         ii.field_d.drawScaled(var12_int, -2 + var3, 32, 32);
-                        mi.field_B.drawText(tk.field_o, 40 + var12_int, var3 + (CachedArchiveProvider.field_t.field_C + mi.field_B.field_C) / 2, 16711680, -1);
+                        SpellProjectile.field_B.drawText(tk.field_o, 40 + var12_int, var3 + (CachedArchiveProvider.field_t.field_C + SpellProjectile.field_B.field_C) / 2, 16711680, -1);
                       }
                       var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                       var2 = km.field_b;
-                      var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 8);
+                      var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 8);
                       var2 = MouseWheelHandler.field_a;
-                      var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, 32 + var5, var3, 448, 480, 16777215, 0, 1, 0, mi.field_B.field_C + mi.field_B.field_m) + 16);
+                      var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, 32 + var5, var3, 448, 480, 16777215, 0, 1, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) + 16);
                       var3 += 24;
                       var4 += 320;
                       var3 += 16;
@@ -867,14 +867,14 @@ final class lc {
                       fe.field_g.drawTransparent(106 + ValidatedTextWidget.field_I, -32 + var3);
                       SoftwareRasterizer.resetClip();
                       DualLinkDeque.field_b[7].draw(var4, -2 + var3);
-                      mi.field_B.drawText("= 1" + SingleChildContainer.field_x, 20 + var4, 20 + var3, 16776960, 0);
+                      SpellProjectile.field_B.drawText("= 1" + SingleChildContainer.field_x, 20 + var4, 20 + var3, 16776960, 0);
                       DualLinkDeque.field_b[8].draw(var4 + 100, -2 + var3);
-                      mi.field_B.drawText("= 5" + CanvasRasterBuffer.field_g, 20 + var4 + 100, var3 + 20, 16776960, 0);
+                      SpellProjectile.field_B.drawText("= 5" + CanvasRasterBuffer.field_g, 20 + var4 + 100, var3 + 20, 16776960, 0);
                       var2 = EmailLoginCredentials.field_n;
                       var4 -= 320;
                       var2 = CachedArchiveProvider.formatTemplate(127, new String[]{KeyboardInputHandler.field_l}, var2);
                       var3 -= 48;
-                      var3 = var3 + (16 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 312, 480, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
+                      var3 = var3 + (16 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 312, 480, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
                       var3 += 48;
                       var3 += 24;
                       var2 = fo.field_j;
@@ -883,7 +883,7 @@ final class lc {
                       WhirlpoolHasher.field_o[2].drawHalfSize(ValidatedTextWidget.field_I + 64, var3);
                       tk.field_x[4].drawHalfSize(56 + ValidatedTextWidget.field_I, var3);
                       var3 += 16;
-                      var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, 136 + ValidatedTextWidget.field_I, var3, 440, EmailLoginCredentials.field_j, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m) + 16);
+                      var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, 136 + ValidatedTextWidget.field_I, var3, 440, EmailLoginCredentials.field_j, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) + 16);
                     }
                   }
                 }
@@ -892,23 +892,23 @@ final class lc {
               var2 = fj.field_g;
               var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
               var2 = md.field_e;
-              var3 = var3 + (16 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
+              var3 = var3 + (16 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
               var2 = UiComponent.field_l;
               var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
               var2 = cc.field_b;
               var2 = CachedArchiveProvider.formatTemplate(118, new String[]{fn.field_g[84], fn.field_g[85], fn.field_g[82], fn.field_g[81]}, var2);
-              var3 = var3 + (16 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
+              var3 = var3 + (16 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C));
               var2 = CredentialKind.field_e;
               var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
               var2 = vf.field_p;
               var2 = CachedArchiveProvider.formatTemplate(124, new String[]{fn.field_g[69], fn.field_g[ao.field_f]}, var2);
-              var3 = var3 + (32 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m));
+              var3 = var3 + (32 + (SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m));
             }
           } else {
             var2 = wm.field_J;
             var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 16);
             var2 = nj.field_j;
-            var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 16);
+            var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 16);
             var2 = GameApplet.field_u;
             var3 = var3 + (16 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
             if (ArcanistsMulti.i((byte) -121)) {
@@ -918,9 +918,9 @@ final class lc {
             }
             var2 = stackIn_48_0;
             var2 = CachedArchiveProvider.formatTemplate(119, new String[]{ie.field_Lb, KeyboardInputHandler.field_l}, var2);
-            var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 16);
+            var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 16);
             var2 = fd.field_c;
-            var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 32);
+            var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 32);
           }
           stackIn_94_0Lifetime1 = param0;
           stackIn_94_1Lifetime1 = 71;
@@ -1186,11 +1186,11 @@ final class lc {
                                 this.field_m = 7;
                                 var6 = -128 + (var4_int * 86 + 32 + ValidatedTextWidget.field_I);
                                 var7 = 103 + (uc.field_a - 16);
-                                mi.field_B.drawParagraph(nj.field_l, var6, var7 - 1, 192, 192, 0, 0, 1, 0, mi.field_B.field_C);
-                                mi.field_B.drawParagraph(nj.field_l, var6 - 1, var7, 192, 192, 0, 0, 1, 0, mi.field_B.field_C);
-                                mi.field_B.drawParagraph(nj.field_l, 1 + var6, var7, 192, 192, 0, 0, 1, 0, mi.field_B.field_C);
-                                mi.field_B.drawParagraph(nj.field_l, var6, 1 + var7, 192, 192, 0, 0, 1, 0, mi.field_B.field_C);
-                                mi.field_B.drawParagraph(nj.field_l, var6, var7, 192, 192, 16777215, 0, 1, 0, mi.field_B.field_C);
+                                SpellProjectile.field_B.drawParagraph(nj.field_l, var6, var7 - 1, 192, 192, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                SpellProjectile.field_B.drawParagraph(nj.field_l, var6 - 1, var7, 192, 192, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                SpellProjectile.field_B.drawParagraph(nj.field_l, 1 + var6, var7, 192, 192, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                SpellProjectile.field_B.drawParagraph(nj.field_l, var6, 1 + var7, 192, 192, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                SpellProjectile.field_B.drawParagraph(nj.field_l, var6, var7, 192, 192, 16777215, 0, 1, 0, SpellProjectile.field_B.field_C);
                                 statePc = 17;
                                 continue scanLoop1;
                             }
@@ -2534,7 +2534,7 @@ final class lc {
                         } else {
                             /* Inlined CFG state: 178. */
                             {
-                                if (mi.a(SceneWidgetNode.field_q.field_w, uc.field_a + 182, SceneWidgetNode.field_q.field_n, param0 ^ -12, 590 + ValidatedTextWidget.field_I)) {
+                                if (SpellProjectile.isPointerInRect(SceneWidgetNode.field_q.field_w, uc.field_a + 182, SceneWidgetNode.field_q.field_n, param0 ^ -12, 590 + ValidatedTextWidget.field_I)) {
                                     /* Inlined CFG state: 183. */
                                     {
                                         if (this.field_b == null) {
@@ -2757,11 +2757,11 @@ final class lc {
                                 if (var18 != null) {
                                     /* Inlined CFG state: 677. */
                                     {
-                                        mi.field_B.drawParagraph((String) (var18), 96 + var19 * var22 + (var2_int - 256), var22 * var20 + (var3 - 1) - 16, 256, 64, 0, 0, 1, 0, mi.field_B.field_C);
-                                        mi.field_B.drawParagraph((String) (var18), 96 + (-1 + (var19 * var22 + (var2_int - 256))), -16 + (var3 + var22 * var20), 256, 64, 0, 0, 1, 0, mi.field_B.field_C);
-                                        mi.field_B.drawParagraph((String) (var18), 97 + (var2_int + var22 * var19) - 256, -16 + var22 * var20 + var3, 256, 64, 0, 0, 1, 0, mi.field_B.field_C);
-                                        mi.field_B.drawParagraph((String) (var18), -256 + (var2_int + var19 * var22) + 96, var22 * var20 + (var3 - 15), 256, 64, 0, 0, 1, 0, mi.field_B.field_C);
-                                        mi.field_B.drawParagraph((String) (var18), -160 + var2_int + var22 * var19, -16 + (var3 + var22 * var20), 256, 64, 16777215, 0, 1, 0, mi.field_B.field_C);
+                                        SpellProjectile.field_B.drawParagraph((String) (var18), 96 + var19 * var22 + (var2_int - 256), var22 * var20 + (var3 - 1) - 16, 256, 64, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                        SpellProjectile.field_B.drawParagraph((String) (var18), 96 + (-1 + (var19 * var22 + (var2_int - 256))), -16 + (var3 + var22 * var20), 256, 64, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                        SpellProjectile.field_B.drawParagraph((String) (var18), 97 + (var2_int + var22 * var19) - 256, -16 + var22 * var20 + var3, 256, 64, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                        SpellProjectile.field_B.drawParagraph((String) (var18), -256 + (var2_int + var19 * var22) + 96, var22 * var20 + (var3 - 15), 256, 64, 0, 0, 1, 0, SpellProjectile.field_B.field_C);
+                                        SpellProjectile.field_B.drawParagraph((String) (var18), -160 + var2_int + var22 * var19, -16 + (var3 + var22 * var20), 256, 64, 16777215, 0, 1, 0, SpellProjectile.field_B.field_C);
                                         statePc = 678;
                                         continue scanLoop1;
                                     }
@@ -8050,7 +8050,7 @@ final class lc {
             } else {
               if (this.field_g.b(true)) {
                 if (lc.a((byte) 112)) {
-                  LabeledField.a(ResizableViewResizeListener.field_h, param0, mi.field_B, 1, ArchiveRequest.field_t, 0, EmailLoginCredentials.field_j / 2, 16, mi.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, GameApplet.field_o, true, mi.field_B.field_o + mi.field_B.field_m, -21071);
+                  LabeledField.a(ResizableViewResizeListener.field_h, param0, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 0, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, GameApplet.field_o, true, SpellProjectile.field_B.field_o + SpellProjectile.field_B.field_m, -21071);
                 } else {
                   var6 = param0 ? 1 : 0;
                   gj.a(var6 != 0, true, -4, mn.field_r);
@@ -8165,7 +8165,7 @@ final class lc {
             CachedArchiveProvider.field_t.drawParagraph((String) (var2), (EmailLoginCredentials.field_f >> 1) - 232, var6Lifetime1, 208, 288, 12569299, -1, 1, 0, CachedArchiveProvider.field_t.field_m + CachedArchiveProvider.field_t.field_C);
           }
           if (var3 != null) {
-            mi.field_B.drawParagraph((String) (var3), 16 + (EmailLoginCredentials.field_f >> 1) + 8, var6Lifetime1, 224, 288, 0, -1, 1, 0, mi.field_B.field_m + mi.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph((String) (var3), 16 + (EmailLoginCredentials.field_f >> 1) + 8, var6Lifetime1, 224, 288, 0, -1, 1, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8278,7 +8278,7 @@ final class lc {
               for (var16 = 0; var3[var14][var15].length > var16; var16++) {
                 var17 = var3[var14][var15][var16];
                 var6Lifetime1 = ValidatedTextWidget.field_I + var11 + var12 * (1 + var16) / (1 + var3[var14][var15].length);
-                stackOut_40_0 = mi.a(32, var7Lifetime1, 32, -8, var6Lifetime1);
+                stackOut_40_0 = SpellProjectile.isPointerInRect(32, var7Lifetime1, 32, -8, var6Lifetime1);
                 stackIn_37_0 = stackOut_40_0 ? 1 : 0;
                 stackIn_41_0 = stackOut_40_0;
                 if (stackIn_41_0) {
@@ -8319,13 +8319,13 @@ final class lc {
           var15Lifetime1 = stackIn_75_0;
           if (-1 != var15Lifetime1) {
             var16Lifetime1 = CachedArchiveProvider.field_t.field_o + CachedArchiveProvider.field_t.field_m;
-            mi.field_B.drawCentered(rb.field_n[var15Lifetime1], 447 + ValidatedTextWidget.field_I, uc.field_a + 126, 0, -1);
+            SpellProjectile.field_B.drawCentered(rb.field_n[var15Lifetime1], 447 + ValidatedTextWidget.field_I, uc.field_a + 126, 0, -1);
             stackIn_85_0 = ((var4[var15Lifetime1 >> 5] & 1 << (31 & var15Lifetime1)) == 0) ? 0 : 1;
             var17Lifetime1 = stackIn_85_0;
             if (var17Lifetime1 != 0) {
-              mi.field_B.drawCentered(rk.field_H, ValidatedTextWidget.field_I + 447, -8 + uc.field_a + (126 + var16Lifetime1), 0, -1);
+              SpellProjectile.field_B.drawCentered(rk.field_H, ValidatedTextWidget.field_I + 447, -8 + uc.field_a + (126 + var16Lifetime1), 0, -1);
             } else {
-              mi.field_B.drawCentered(AlternateUsernameCredentials.field_l, ValidatedTextWidget.field_I + 447, var16Lifetime1 + uc.field_a + 118, 16711680, -1);
+              SpellProjectile.field_B.drawCentered(AlternateUsernameCredentials.field_l, ValidatedTextWidget.field_I + 447, var16Lifetime1 + uc.field_a + 118, 16711680, -1);
             }
             var18 = 126 + var16Lifetime1;
             if (var17Lifetime1 != 0) {
@@ -8338,21 +8338,21 @@ final class lc {
             if (var17Lifetime1 == 0 &&
               var26[var15Lifetime1]) {
               var30 = new String[16];
-              var20 = mi.field_B.wrapText(PacketBuffer.field_k, new int[]{220}, var30);
+              var20 = SpellProjectile.field_B.wrapText(PacketBuffer.field_k, new int[]{220}, var30);
               for (var21 = 0; var20 > var21; var21++) {
-                mi.field_B.drawText(var30[var21], 12 + (340 + ValidatedTextWidget.field_I), 95 + uc.field_a + var18, 0, -1);
-                var18 = var18 + mi.field_B.field_C;
+                SpellProjectile.field_B.drawText(var30[var21], 12 + (340 + ValidatedTextWidget.field_I), 95 + uc.field_a + var18, 0, -1);
+                var18 = var18 + SpellProjectile.field_B.field_C;
               }
             } else {
               var29 = new String[16];
-              var20 = mi.field_B.wrapText(af.field_Bb[var15Lifetime1], new int[]{220}, var29);
+              var20 = SpellProjectile.field_B.wrapText(af.field_Bb[var15Lifetime1], new int[]{220}, var29);
               for (var21 = 0; var20 > var21; var21++) {
-                mi.field_B.drawText(var29[var21], 340 + (ValidatedTextWidget.field_I + 12), -8 + (uc.field_a + var18) + 120, 0, -1);
-                var18 = var18 + mi.field_B.field_C;
+                SpellProjectile.field_B.drawText(var29[var21], 340 + (ValidatedTextWidget.field_I + 12), -8 + (uc.field_a + var18) + 120, 0, -1);
+                var18 = var18 + SpellProjectile.field_B.field_C;
               }
-              mi.field_B.drawCentered(lo.field_x, ValidatedTextWidget.field_I + 530, uc.field_a + 170, 0, -1);
-              mi.field_B.drawCentered("" + 100 * ValidationState.field_g[var15Lifetime1], ValidatedTextWidget.field_I + 530, 185 + uc.field_a, 0, -1);
-              mi.field_B.drawCentered(FullscreenFocusCanvas.field_c, 530 + ValidatedTextWidget.field_I, uc.field_a + 220, 0, -1);
+              SpellProjectile.field_B.drawCentered(lo.field_x, ValidatedTextWidget.field_I + 530, uc.field_a + 170, 0, -1);
+              SpellProjectile.field_B.drawCentered("" + 100 * ValidationState.field_g[var15Lifetime1], ValidatedTextWidget.field_I + 530, 185 + uc.field_a, 0, -1);
+              SpellProjectile.field_B.drawCentered(FullscreenFocusCanvas.field_c, 530 + ValidatedTextWidget.field_I, uc.field_a + 220, 0, -1);
               var21 = 514;
               var22 = 224;
               if (10 == ValidationState.field_g[var15Lifetime1]) {
@@ -8375,14 +8375,14 @@ final class lc {
               }
             }
           } else {
-            mi.field_B.drawParagraph(qo.field_c, -16 + (ValidatedTextWidget.field_I + 320) + 50, 134 + uc.field_a, 200, 64, 0, -1, 1, 1, mi.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(qo.field_c, -16 + (ValidatedTextWidget.field_I + 320) + 50, 134 + uc.field_a, 200, 64, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
             if (!lc.a((byte) 112)) {
-              mi.field_B.drawText(var14 + 1 + "/" + 4, ValidatedTextWidget.field_I + 285, uc.field_a + 325, 0, -1);
+              SpellProjectile.field_B.drawText(var14 + 1 + "/" + 4, ValidatedTextWidget.field_I + 285, uc.field_a + 325, 0, -1);
               return;
             }
-            mi.field_B.drawParagraph(FrameClock.field_c, -16 + (50 + ValidatedTextWidget.field_I) + 320, -16 + (250 + uc.field_a), 200, 64, 0, -1, 1, 1, mi.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(FrameClock.field_c, -16 + (50 + ValidatedTextWidget.field_I) + 320, -16 + (250 + uc.field_a), 200, 64, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
           }
-          mi.field_B.drawText(var14 + 1 + "/" + 4, ValidatedTextWidget.field_I + 285, uc.field_a + 325, 0, -1);
+          SpellProjectile.field_B.drawText(var14 + 1 + "/" + 4, ValidatedTextWidget.field_I + 285, uc.field_a + 325, 0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8463,14 +8463,14 @@ final class lc {
               }
               if (ad.field_d <= 0) {
                 if (ad.field_d <= 0) {
-                  mi.field_B.drawParagraph(mh.field_I + var4, var3 + 25, 4, var2_int - 30, 44, 16777215, -1, 1, 1, 14);
+                  SpellProjectile.field_B.drawParagraph(mh.field_I + var4, var3 + 25, 4, var2_int - 30, 44, 16777215, -1, 1, 1, 14);
                 } else {
                   rb.field_o[-1 + ad.field_d].drawTintedGrayscale(var3 + 23, -(rb.field_o[ad.field_d - 1].field_y / 2) - rb.field_o[ad.field_d - 1].field_o + 33, 16711680);
-                  mi.field_B.drawParagraph(mh.field_I + var4, var3 + 23, 4, -30 + var2_int, 44, 16777215, -1, 2, 1, 14);
+                  SpellProjectile.field_B.drawParagraph(mh.field_I + var4, var3 + 23, 4, -30 + var2_int, 44, 16777215, -1, 2, 1, 14);
                 }
               } else {
                 rb.field_o[-1 + ad.field_d].drawTintedGrayscale(var3 + 23, -(rb.field_o[-1 + ad.field_d].field_y / 2) + (-rb.field_o[-1 + ad.field_d].field_o + 33), 16711680);
-                mi.field_B.drawParagraph(mh.field_I + var4, var3 + 23, 4, 50, 44, 16777215, -1, 2, 1, 14);
+                SpellProjectile.field_B.drawParagraph(mh.field_I + var4, var3 + 23, 4, 50, 44, 16777215, -1, 2, 1, 14);
               }
             } else {
               if (ad.field_d > 0) {
@@ -8479,21 +8479,21 @@ final class lc {
                   var5 -= 7;
                 }
                 rb.field_o[-1 + ad.field_d].drawTintedGrayscale(var3 + 23, -(rb.field_o[ad.field_d - 1].field_y / 2) - rb.field_o[-1 + ad.field_d].field_o + var5, 16711680);
-                mi.field_B.drawParagraph(GrowableIntList.field_l, var3 + 5, 4, -10 + var2_int, 38, 16777215, -1, 1, 2, 14);
+                SpellProjectile.field_B.drawParagraph(GrowableIntList.field_l, var3 + 5, 4, -10 + var2_int, 38, 16777215, -1, 1, 2, 14);
               } else {
-                mi.field_B.drawParagraph(GrowableIntList.field_l, 5 + var3, 4, -10 + var2_int, 44, 16777215, -1, 1, 1, 14);
+                SpellProjectile.field_B.drawParagraph(GrowableIntList.field_l, 5 + var3, 4, -10 + var2_int, 44, 16777215, -1, 1, 1, 14);
               }
             }
           } else {
             DualLinkDeque.field_b[8].draw(10 + (var3 - 4), 8);
             if (var4 > 5) {
-              mi.field_B.drawCharacter('+', 17 + var3, 30, 16711935);
+              SpellProjectile.field_B.drawCharacter('+', 17 + var3, 30, 16711935);
             }
             if (ad.field_d <= 0) {
-              mi.field_B.drawParagraph(mh.field_I + var4, 23 + var3, 4, var2_int - 30, 44, 16777215, -1, 1, 1, 14);
+              SpellProjectile.field_B.drawParagraph(mh.field_I + var4, 23 + var3, 4, var2_int - 30, 44, 16777215, -1, 1, 1, 14);
             } else {
               rb.field_o[-1 + ad.field_d].drawTintedGrayscale(23 + var3, -(rb.field_o[ad.field_d - 1].field_y / 2) + (33 - rb.field_o[-1 + ad.field_d].field_o), 16711680);
-              mi.field_B.drawParagraph(mh.field_I + var4, var3 + 23, 4, -30 + var2_int, 44, 16777215, -1, 2, 1, 14);
+              SpellProjectile.field_B.drawParagraph(mh.field_I + var4, var3 + 23, 4, -30 + var2_int, 44, 16777215, -1, 2, 1, 14);
             }
           }
           return;
@@ -8596,7 +8596,7 @@ final class lc {
           if (var2 == null) {
             var2 = r.field_b;
           }
-          var3 = var2.field_V.s(0);
+          var3 = var2.field_V.getPlayerCount(0);
           var6 = EmailLoginCredentials.field_f / 2;
           var7 = EmailLoginCredentials.field_j / 2;
           for (var8_int = 0; var8_int < 300; var8_int++) {
@@ -8651,7 +8651,7 @@ final class lc {
             SoftwareRasterizer.resetClip();
             var18Lifetime2 = -5 + var7;
             var19 = ae.field_d;
-            if (var2.field_I == var2.field_V.d(false)) {
+            if (var2.field_I == var2.field_V.getCurrentPlayer(false)) {
               if (250 > MusicPatchNode.field_s) {
                 var20_ref_String = Integer.toString(5 - (MusicPatchNode.field_s - 1) / 50);
                 CachedArchiveProvider.field_t.drawCentered(var20_ref_String, var6 - 1, var18Lifetime2 + 64, 0, 0);
@@ -8661,15 +8661,15 @@ final class lc {
             } else {
               var19 = qe.field_s;
             }
-            mi.field_B.drawParagraph(var19, var6 - 128 - 1, -1 + var18Lifetime2, 256, 64, 0, -1, 1, 0, 14);
-            mi.field_B.drawParagraph(var19, -129 + var6, var18Lifetime2 + 1, 256, 64, 0, -1, 1, 0, 14);
-            mi.field_B.drawParagraph(var19, var6 - 128 + 1, 1 + var18Lifetime2, 256, 64, 0, -1, 1, 0, 14);
-            mi.field_B.drawParagraph(var19, 1 + (var6 - 128), -1 + var18Lifetime2, 256, 64, 0, -1, 1, 0, 14);
-            mi.field_B.drawParagraph(var19, -1 + (var6 - 128), var18Lifetime2, 256, 64, 0, 0, 1, 0, 14);
-            mi.field_B.drawParagraph(var19, var6 - 128, var18Lifetime2 - 1, 256, 64, 0, 0, 1, 0, 14);
+            SpellProjectile.field_B.drawParagraph(var19, var6 - 128 - 1, -1 + var18Lifetime2, 256, 64, 0, -1, 1, 0, 14);
+            SpellProjectile.field_B.drawParagraph(var19, -129 + var6, var18Lifetime2 + 1, 256, 64, 0, -1, 1, 0, 14);
+            SpellProjectile.field_B.drawParagraph(var19, var6 - 128 + 1, 1 + var18Lifetime2, 256, 64, 0, -1, 1, 0, 14);
+            SpellProjectile.field_B.drawParagraph(var19, 1 + (var6 - 128), -1 + var18Lifetime2, 256, 64, 0, -1, 1, 0, 14);
+            SpellProjectile.field_B.drawParagraph(var19, -1 + (var6 - 128), var18Lifetime2, 256, 64, 0, 0, 1, 0, 14);
+            SpellProjectile.field_B.drawParagraph(var19, var6 - 128, var18Lifetime2 - 1, 256, 64, 0, 0, 1, 0, 14);
             var16 -= 64;
             var15 -= 32;
-            mi.field_B.drawParagraph(var19, -128 + var6, var18Lifetime2, 256, 64, 16777215, -1, 1, 0, 14);
+            SpellProjectile.field_B.drawParagraph(var19, -128 + var6, var18Lifetime2, 256, 64, 16777215, -1, 1, 0, 14);
             var20 = 0;
             if (~var14 == ~(SpriteState.field_v / 50 % var3)) {
               var20 = (int)(-16.0 * Math.sin(3.141592653589793 * (double)(SpriteState.field_v % 50) / 50.0));
@@ -8702,7 +8702,7 @@ final class lc {
             var16 += 64;
             var21 = var2.field_V.field_k[var14];
             var16 += 16;
-            var22 = mi.field_B.textWidth("Wmmmmmmmmmmm");
+            var22 = SpellProjectile.field_B.textWidth("Wmmmmmmmmmmm");
             var15 = var15 - (var22 / 2 + 7);
             var23 = 15 + var22;
             SoftwareRasterizer.fillVerticalGradient(var15 + 3, -8 + (var16 + 3), -6 + var23, 15, var17, (8421504 | var17) ^ 8421504);
@@ -8718,14 +8718,14 @@ final class lc {
             SoftwareRasterizer.drawRoundedRectangle(var15 + 1, -8 + (var16 + 1), -2 + var23Lifetime1, 19, 6, 16777215);
             SoftwareRasterizer.drawRoundedRectangle(2 + var15, var16 + 2 - 8, -4 + var23Lifetime1, 17, 6, 0);
             var15 = var15 + (7 + var22 / 2);
-            mi.field_B.drawCentered(var21, -1 + var15, 1 + var16 + mi.field_B.field_C / 2, 0, 0);
-            mi.field_B.drawCentered(var21, var15, -1 + (var16 - (-1 - mi.field_B.field_C / 2)), 0, 0);
-            mi.field_B.drawCentered(var21, var15, mi.field_B.field_C / 2 + (1 + var16), 16777215, -1);
+            SpellProjectile.field_B.drawCentered(var21, -1 + var15, 1 + var16 + SpellProjectile.field_B.field_C / 2, 0, 0);
+            SpellProjectile.field_B.drawCentered(var21, var15, -1 + (var16 - (-1 - SpellProjectile.field_B.field_C / 2)), 0, 0);
+            SpellProjectile.field_B.drawCentered(var21, var15, SpellProjectile.field_B.field_C / 2 + (1 + var16), 16777215, -1);
             var16 -= 20;
             var15 -= 40;
             var16 -= 10;
             var23Lifetime2 = 1;
-            var31 = var2.field_V.e(3, var14);
+            var31 = var2.field_V.getPlayerSpellSlots(3, var14);
             for (var25 = 0; var25 < 16; var25++) {
               var26 = var31[var25];
               stackIn_20_0Lifetime1 = ~var26;
@@ -8865,8 +8865,8 @@ final class lc {
           if (var2 == null) {
             var2 = r.field_b;
           }
-          var3 = var2.field_V.s(0);
-          var4 = var2.field_V.d(false);
+          var3 = var2.field_V.getPlayerCount(0);
+          var4 = var2.field_V.getCurrentPlayer(false);
           if (0 <= var4 &&
             var2.field_V.field_d) {
             var4 = var4 & 1;
@@ -8920,7 +8920,7 @@ final class lc {
             }
           }
           var15 = var14.toString();
-          if (var2.field_V.d(1)) {
+          if (var2.field_V.hasStats(1)) {
             var16 = 0;
             incrementValue$5 = var16;
             var16++;
@@ -8978,17 +8978,17 @@ final class lc {
           } else {
             var15 = nj.field_b;
           }
-          var16Lifetime1 = 128 + 14 * mi.field_B.wrappedLineCount(var15, 256);
+          var16Lifetime1 = 128 + 14 * SpellProjectile.field_B.wrappedLineCount(var15, 256);
           var17 = SpriteState.field_v / 3 % var16Lifetime1 - 128;
           var18 = uc.field_a + 180;
           SoftwareRasterizer.setClip(0, var18, EmailLoginCredentials.field_f, 128 + var18);
-          mi.field_B.drawParagraph(var15, -128 + var7 - 1, -var17 - 1 + var18, 256, 256, 0, -1, 1, 0, 14);
-          mi.field_B.drawParagraph(var15, var7 - 129, -var17 + var18 + 1, 256, 256, 0, -1, 1, 0, 14);
-          mi.field_B.drawParagraph(var15, -128 + var7 + 1, -var17 + (var18 + 1), 256, 256, 0, -1, 1, 0, 14);
-          mi.field_B.drawParagraph(var15, -128 + var7 + 1, -var17 + var18 - 1, 256, 256, 0, -1, 1, 0, 14);
-          mi.field_B.drawParagraph(var15, var7 - 129, -var17 + var18, 256, 256, 0, 0, 1, 0, 14);
-          mi.field_B.drawParagraph(var15, var7 - 128, -1 + (var18 - var17), 256, 256, 0, 0, 1, 0, 14);
-          mi.field_B.drawParagraph(var15, -128 + var7, -var17 + var18, 256, 256, 16777215, -1, 1, 0, 14);
+          SpellProjectile.field_B.drawParagraph(var15, -128 + var7 - 1, -var17 - 1 + var18, 256, 256, 0, -1, 1, 0, 14);
+          SpellProjectile.field_B.drawParagraph(var15, var7 - 129, -var17 + var18 + 1, 256, 256, 0, -1, 1, 0, 14);
+          SpellProjectile.field_B.drawParagraph(var15, -128 + var7 + 1, -var17 + (var18 + 1), 256, 256, 0, -1, 1, 0, 14);
+          SpellProjectile.field_B.drawParagraph(var15, -128 + var7 + 1, -var17 + var18 - 1, 256, 256, 0, -1, 1, 0, 14);
+          SpellProjectile.field_B.drawParagraph(var15, var7 - 129, -var17 + var18, 256, 256, 0, 0, 1, 0, 14);
+          SpellProjectile.field_B.drawParagraph(var15, var7 - 128, -1 + (var18 - var17), 256, 256, 0, 0, 1, 0, 14);
+          SpellProjectile.field_B.drawParagraph(var15, -128 + var7, -var17 + var18, 256, 256, 16777215, -1, 1, 0, 14);
           SoftwareRasterizer.resetClip();
           SoftwareRasterizer.blurRectangle(3, 2, -128 + var7, -1 + var18, 256, 2);
           SoftwareRasterizer.blurRectangle(2, 1, -128 + var7, var18 + 1, 256, 1);
@@ -9100,7 +9100,7 @@ final class lc {
             var22 += 32;
             var23 += 64;
             var27 = var2.field_V.field_k[var20];
-            var28 = mi.field_B.textWidth("Wmmmmmmmmmmm");
+            var28 = SpellProjectile.field_B.textWidth("Wmmmmmmmmmmm");
             if (var4 == var20) {
               var23 += 16;
             }
@@ -9148,16 +9148,16 @@ final class lc {
               0 == (128 & SpriteState.field_v)) {
               var27 = var29;
             }
-            mi.field_B.drawCentered((String) (var27), var22 - 1, var23 + 1 + mi.field_B.field_C / 2, 0, 0);
-            mi.field_B.drawCentered((String) (var27), var22, -1 + (mi.field_B.field_C / 2 + 1) + var23, 0, 0);
-            mi.field_B.drawCentered((String) (var27), var22, mi.field_B.field_C / 2 + var23 + 1, 16777215, -1);
+            SpellProjectile.field_B.drawCentered((String) (var27), var22 - 1, var23 + 1 + SpellProjectile.field_B.field_C / 2, 0, 0);
+            SpellProjectile.field_B.drawCentered((String) (var27), var22, -1 + (SpellProjectile.field_B.field_C / 2 + 1) + var23, 0, 0);
+            SpellProjectile.field_B.drawCentered((String) (var27), var22, SpellProjectile.field_B.field_C / 2 + var23 + 1, 16777215, -1);
             var22 -= 16;
             var23 -= 32;
-            if (var2.field_V.d(1)) {
+            if (var2.field_V.hasStats(1)) {
               if (!var2.field_i) {
                 stackIn_157_0 = 0;
               } else {
-                stackIn_157_0 = var2.field_V.d(-108, var20);
+                stackIn_157_0 = var2.field_V.getPlayerValue(-108, var20);
               }
               var30 = stackIn_157_0;
               var31 = new Sprite(32 + (24 + var30 * 8), 80);
@@ -9307,11 +9307,11 @@ final class lc {
           var2_int = 125 + uc.field_a - 16;
           var2_int += 16;
           var3 = 0;
-          mi.field_B.drawCentered(FixedViewResizeListener.field_d, no.field_tb[0] + ValidatedTextWidget.field_I, var2_int, var3, -1);
-          mi.field_B.drawCentered(TextHotspotWidget.field_H, no.field_tb[1] + ValidatedTextWidget.field_I, var2_int, var3, -1);
-          mi.field_B.drawCentered(oo.field_o, no.field_tb[2] + ValidatedTextWidget.field_I, var2_int, var3, -1);
-          mi.field_B.drawCentered(fc.field_d, no.field_tb[3] + ValidatedTextWidget.field_I, var2_int, var3, -1);
-          mi.field_B.drawCentered(ScrollContainer.field_N, no.field_tb[4] + ValidatedTextWidget.field_I, var2_int, var3, -1);
+          SpellProjectile.field_B.drawCentered(FixedViewResizeListener.field_d, no.field_tb[0] + ValidatedTextWidget.field_I, var2_int, var3, -1);
+          SpellProjectile.field_B.drawCentered(TextHotspotWidget.field_H, no.field_tb[1] + ValidatedTextWidget.field_I, var2_int, var3, -1);
+          SpellProjectile.field_B.drawCentered(oo.field_o, no.field_tb[2] + ValidatedTextWidget.field_I, var2_int, var3, -1);
+          SpellProjectile.field_B.drawCentered(fc.field_d, no.field_tb[3] + ValidatedTextWidget.field_I, var2_int, var3, -1);
+          SpellProjectile.field_B.drawCentered(ScrollContainer.field_N, no.field_tb[4] + ValidatedTextWidget.field_I, var2_int, var3, -1);
           if (!param0) {
             this.f(-123);
           }
@@ -9360,14 +9360,14 @@ final class lc {
           SoftwareRasterizer.drawVerticalLine(ValidatedTextWidget.field_I + (no.field_tb[3] + no.field_tb[4]) / 2, 9 + var2_intLifetime1 + 16, 276, var3Lifetime2);
           if ("" != var4) {
             var2_intLifetime2 = 16 + uc.field_a + 125;
-            mi.field_B.drawText(var4, ValidatedTextWidget.field_I + 64, -16 + var2_intLifetime2, 0, -1);
+            SpellProjectile.field_B.drawText(var4, ValidatedTextWidget.field_I + 64, -16 + var2_intLifetime2, 0, -1);
           }
           if (ie.field_Sb != 0) {
             var2_intLifetime3 = uc.field_a + 125;
-            mi.field_B.drawCentered(SceneTabbedPanel.field_Cb, 320 + ValidatedTextWidget.field_I, var2_intLifetime3 - 16, 0, -1);
+            SpellProjectile.field_B.drawCentered(SceneTabbedPanel.field_Cb, 320 + ValidatedTextWidget.field_I, var2_intLifetime3 - 16, 0, -1);
           } else {
             var2_intLifetime3 = uc.field_a + 125;
-            mi.field_B.drawCentered(MenuButtonPanel.field_N, ValidatedTextWidget.field_I + 320, var2_intLifetime3 - 16, 0, -1);
+            SpellProjectile.field_B.drawCentered(MenuButtonPanel.field_N, ValidatedTextWidget.field_I + 320, var2_intLifetime3 - 16, 0, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -9870,7 +9870,7 @@ final class lc {
                       gn.a(16, (byte) 111, 128, -(8 * var18 / 4096) + (148 + ValidatedTextWidget.field_I), -(var18 * 8 / 4096) + 300 + uc.field_a);
                     }
                   }
-                  if (!(!mi.a(256, 178 + uc.field_a, 256, -8, ValidatedTextWidget.field_I + 26))) {
+                  if (!(!SpellProjectile.isPointerInRect(256, 178 + uc.field_a, 256, -8, ValidatedTextWidget.field_I + 26))) {
                     this.field_i = var9;
                     this.field_m = 5;
                   }
@@ -9904,7 +9904,7 @@ final class lc {
             }
             WhirlpoolHasher.field_o[10].drawHalfSize(2 + var10, var11);
             WhirlpoolHasher.field_o[var9].drawHalfSize(var10 + 2, var11);
-            if (mi.a(65, var11, 65, -8, var10)) {
+            if (SpellProjectile.isPointerInRect(65, var11, 65, -8, var10)) {
               this.field_m = 0;
               this.field_i = var9;
             }
@@ -10378,10 +10378,10 @@ final class lc {
                 var13_intLifetime7 >= 22 && (~(var13_intLifetime7 / 12) != ~bc.field_b ||
                 ~(-(var13_intLifetime7 / 12 * 12) + var13_intLifetime7) != ~mf.field_a &&
                 var13_intLifetime7 - 12 * (var13_intLifetime7 / 12) != 1 + mf.field_a)) {
-                mi.field_B.drawParagraph(var36, var16Lifetime4 - 1, var17_intLifetime4, 141, 29, 13158, 13158, 1, 1, mi.field_B.field_C);
-                mi.field_B.drawParagraph(var36, var16Lifetime4, -1 + var17_intLifetime4, 141, 29, 13158, 13158, 1, 1, mi.field_B.field_C);
-                mi.field_B.drawParagraph(var36, var16Lifetime4, var17_intLifetime4, 141, 29, 12569299, -1, 1, 1, mi.field_B.field_C);
-                mi.field_B.drawParagraph(qe.field_r, 447, 294, 171, 29, 16711680, 0, 1, 1, mi.field_B.field_C);
+                SpellProjectile.field_B.drawParagraph(var36, var16Lifetime4 - 1, var17_intLifetime4, 141, 29, 13158, 13158, 1, 1, SpellProjectile.field_B.field_C);
+                SpellProjectile.field_B.drawParagraph(var36, var16Lifetime4, -1 + var17_intLifetime4, 141, 29, 13158, 13158, 1, 1, SpellProjectile.field_B.field_C);
+                SpellProjectile.field_B.drawParagraph(var36, var16Lifetime4, var17_intLifetime4, 141, 29, 12569299, -1, 1, 1, SpellProjectile.field_B.field_C);
+                SpellProjectile.field_B.drawParagraph(qe.field_r, 447, 294, 171, 29, 16711680, 0, 1, 1, SpellProjectile.field_B.field_C);
                 decompiledFrameRemainder1 = false;
               }
               else {
@@ -10389,7 +10389,7 @@ final class lc {
                 CachedArchiveProvider.field_t.drawParagraph(var36, 10 + var16Lifetime4, var17_intLifetime4 - 1, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
                 CachedArchiveProvider.field_t.drawParagraph(var36, var16Lifetime4 + 10, var17_intLifetime4, 281, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
               }
-              mi.field_B.drawParagraph(var37, 8 + (290 + ValidatedTextWidget.field_I), uc.field_a + 340 - 8, 307, 128, 0, -1, 1, 0, mi.field_B.field_C);
+              SpellProjectile.field_B.drawParagraph(var37, 8 + (290 + ValidatedTextWidget.field_I), uc.field_a + 340 - 8, 307, 128, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
               return;
             }
             var13 = vl.field_l;
@@ -10437,11 +10437,11 @@ final class lc {
                   var14_ref_String = TextHotspotWidget.field_M;
                 }
                 if (Math.abs(this.field_i) == 7) {
-                  var14_ref_String = nf.field_e;
+                  var14_ref_String = Battle.field_e;
                   var13 = tk.field_w;
                 }
                 if (Math.abs(this.field_i) == 8) {
-                  var13 = mi.field_s;
+                  var13 = SpellProjectile.field_s;
                   var14_ref_String = oo.field_r;
                 }
                 if (Math.abs(this.field_i) == 9) {
@@ -10483,7 +10483,7 @@ final class lc {
                       var15_ref_String = TextHotspotWidget.field_M;
                     }
                     if (this.field_h == 7) {
-                      var15_ref_String = nf.field_e;
+                      var15_ref_String = Battle.field_e;
                     }
                     if (this.field_h == 8) {
                       var15_ref_String = oo.field_r;
@@ -10536,7 +10536,7 @@ final class lc {
                       }
                       if (7 == Math.abs(this.field_h)) {
                         var13 = NameValidator.field_q + var3;
-                        var14_ref_String = nf.field_e;
+                        var14_ref_String = Battle.field_e;
                       }
                       if (Math.abs(this.field_h) == 8) {
                         var14_ref_String = oo.field_r;
@@ -10548,7 +10548,7 @@ final class lc {
                       var13 = "";
                       var15Lifetime3 = 300 + ValidatedTextWidget.field_I;
                       var16Lifetime4Lifetime1 = uc.field_a + 336;
-                      mi.field_B.drawParagraph(aj.field_b, var15Lifetime3, var16Lifetime4Lifetime1, 70, 32, 0, -1, 1, 1, mi.field_B.field_C);
+                      SpellProjectile.field_B.drawParagraph(aj.field_b, var15Lifetime3, var16Lifetime4Lifetime1, 70, 32, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
                       var15Lifetime3 += 74;
                       var17_intLifetime4Lifetime1 = 0;
                       while (true) {
@@ -10567,7 +10567,7 @@ final class lc {
                         break;
                       }
                       if (ArcanistsMulti.i((byte) -90)) {
-                        var13 = nf.field_yb;
+                        var13 = Battle.field_yb;
                       } else {
                         stackIn_731_0Lifetime1 = var3;
                         stackIn_731_1Lifetime1 = 5;
@@ -10577,7 +10577,7 @@ final class lc {
                           var13 = SceneTabbedPanel.field_Ob;
                         }
                       }
-                      mi.field_B.drawParagraph(var13, 440 + ValidatedTextWidget.field_I, var16Lifetime4Lifetime1, 170, 32, 0, -1, 1, 1, mi.field_B.field_C);
+                      SpellProjectile.field_B.drawParagraph(var13, 440 + ValidatedTextWidget.field_I, var16Lifetime4Lifetime1, 170, 32, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
                       var13 = "";
                     }
                   }
@@ -10605,7 +10605,7 @@ final class lc {
                 var14 = 250 + ad.field_d * 250;
                 var13 = var35 + CachedArchiveProvider.formatTemplate(param0 ^ -50, new String[]{Integer.toString(var14)}, ck.field_e);
               }
-              mi.field_B.drawParagraph(var13, ValidatedTextWidget.field_I + 302, 116 + (178 + uc.field_a), 299, 129, 0, -1, 1, 0, mi.field_B.field_C);
+              SpellProjectile.field_B.drawParagraph(var13, ValidatedTextWidget.field_I + 302, 116 + (178 + uc.field_a), 299, 129, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
               for (var14 = 0; var14 < 10; var14++) {
                 var15Lifetime3Lifetime2 = 308 + ValidatedTextWidget.field_I + var14 * 32;
                 var16Lifetime4Lifetime2 = uc.field_a + 400;
@@ -10645,7 +10645,7 @@ final class lc {
               }
               return;
             }
-            mi.field_B.drawParagraph(var13, 12 + (290 + ValidatedTextWidget.field_I), 294 + uc.field_a, 299, 129, 0, -1, 1, 1, mi.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(var13, 12 + (290 + ValidatedTextWidget.field_I), 294 + uc.field_a, 299, 129, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
             return;
           }
           if (this.field_i >= var12Lifetime4) {
@@ -10655,9 +10655,9 @@ final class lc {
             var15Lifetime4 = 11 + ValidatedTextWidget.field_I + 290;
             var16Lifetime5 = 302 + uc.field_a;
             if (1 != this.field_m) {
-              mi.field_B.drawParagraph(var38, -1 + var15Lifetime4, var16Lifetime5, 141, 29, 13158, 13158, 1, 1, mi.field_B.field_C);
-              mi.field_B.drawParagraph(var38, var15Lifetime4, -1 + var16Lifetime5, 141, 29, 13158, 13158, 1, 1, mi.field_B.field_C);
-              mi.field_B.drawParagraph(var13Lifetime1, var15Lifetime4, var16Lifetime5, 141, 29, 12569299, -1, 1, 1, mi.field_B.field_C);
+              SpellProjectile.field_B.drawParagraph(var38, -1 + var15Lifetime4, var16Lifetime5, 141, 29, 13158, 13158, 1, 1, SpellProjectile.field_B.field_C);
+              SpellProjectile.field_B.drawParagraph(var38, var15Lifetime4, -1 + var16Lifetime5, 141, 29, 13158, 13158, 1, 1, SpellProjectile.field_B.field_C);
+              SpellProjectile.field_B.drawParagraph(var13Lifetime1, var15Lifetime4, var16Lifetime5, 141, 29, 12569299, -1, 1, 1, SpellProjectile.field_B.field_C);
               var17 = null;
               var18Lifetime3 = 16711680;
               if (!ArcanistsMulti.i((byte) -101)) {
@@ -10682,8 +10682,8 @@ final class lc {
                 } else {
                   var40 = ra.field_i;
                   if (9 != this.field_h) {
-                    mi.field_B.drawParagraph(var40, 163 + var15Lifetime4 - 22, var16Lifetime5, 141, 29, var18Lifetime3, 0, 1, 1, mi.field_B.field_C);
-                    mi.field_B.drawParagraph(var39, -3 + var15Lifetime4, 340 + (uc.field_a - 8), 307, 128, 0, -1, 1, 0, mi.field_B.field_C);
+                    SpellProjectile.field_B.drawParagraph(var40, 163 + var15Lifetime4 - 22, var16Lifetime5, 141, 29, var18Lifetime3, 0, 1, 1, SpellProjectile.field_B.field_C);
+                    SpellProjectile.field_B.drawParagraph(var39, -3 + var15Lifetime4, 340 + (uc.field_a - 8), 307, 128, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
                     return;
                   }
                   var17 = vf.field_h;
@@ -10691,13 +10691,13 @@ final class lc {
               } else {
                 var17 = gg.field_g;
               }
-              mi.field_B.drawParagraph((String) (var17), 163 + var15Lifetime4 - 22, var16Lifetime5, 141, 29, var18Lifetime3, 0, 1, 1, mi.field_B.field_C);
+              SpellProjectile.field_B.drawParagraph((String) (var17), 163 + var15Lifetime4 - 22, var16Lifetime5, 141, 29, var18Lifetime3, 0, 1, 1, SpellProjectile.field_B.field_C);
             } else {
               CachedArchiveProvider.field_t.drawParagraph(var38, var15Lifetime4 - 1, var16Lifetime5, 301, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
               CachedArchiveProvider.field_t.drawParagraph(var38, var15Lifetime4, -1 + var16Lifetime5, 301, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
               CachedArchiveProvider.field_t.drawParagraph(var13Lifetime1, var15Lifetime4, var16Lifetime5, 301, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
             }
-            mi.field_B.drawParagraph(var39, -3 + var15Lifetime4, 340 + (uc.field_a - 8), 307, 128, 0, -1, 1, 0, mi.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(var39, -3 + var15Lifetime4, 340 + (uc.field_a - 8), 307, 128, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -11044,7 +11044,7 @@ final class lc {
           param8 -= 4;
           param0 = 0;
           if (-1 != param5) {
-            mi.field_B.drawRightAlignedText(param5 + 1 + ". ", 60 + (ValidatedTextWidget.field_I + 30), param8, param0, -1);
+            SpellProjectile.field_B.drawRightAlignedText(param5 + 1 + ". ", 60 + (ValidatedTextWidget.field_I + 30), param8, param0, -1);
           }
           var14 = param2;
           var11 = var14;
@@ -11052,26 +11052,26 @@ final class lc {
             this.field_h = -20;
           }
           var12 = var14.length();
-          while (175 < mi.field_B.textWidth(var11)) {
+          while (175 < SpellProjectile.field_B.textWidth(var11)) {
             var11 = param2.substring(0, var12) + "...";
             var12--;
           }
-          mi.field_B.drawText(var11, 90 + ValidatedTextWidget.field_I, param8, param0, -1);
+          SpellProjectile.field_B.drawText(var11, 90 + ValidatedTextWidget.field_I, param8, param0, -1);
           var15 = Integer.toString(param4);
-          mi.field_B.drawCentered(var15, no.field_tb[0] + ValidatedTextWidget.field_I, param8, param0, -1);
+          SpellProjectile.field_B.drawCentered(var15, no.field_tb[0] + ValidatedTextWidget.field_I, param8, param0, -1);
           if (500 <= var10_int) {
             stackIn_25_0 = "500+";
           } else {
             stackIn_25_0 = Integer.toString(var10_int);
           }
           var11Lifetime1 = stackIn_25_0;
-          mi.field_B.drawCentered(var11Lifetime1, ValidatedTextWidget.field_I + no.field_tb[1], param8, param0, -1);
+          SpellProjectile.field_B.drawCentered(var11Lifetime1, ValidatedTextWidget.field_I + no.field_tb[1], param8, param0, -1);
           var16 = param1 + "%";
-          mi.field_B.drawCentered(var16, ValidatedTextWidget.field_I + no.field_tb[2], param8, param0, -1);
+          SpellProjectile.field_B.drawCentered(var16, ValidatedTextWidget.field_I + no.field_tb[2], param8, param0, -1);
           var17 = param3 + "%";
-          mi.field_B.drawCentered(var17, ValidatedTextWidget.field_I + no.field_tb[3], param8, param0, -1);
+          SpellProjectile.field_B.drawCentered(var17, ValidatedTextWidget.field_I + no.field_tb[3], param8, param0, -1);
           var18 = param7 + "%";
-          mi.field_B.drawCentered(var18, ValidatedTextWidget.field_I + no.field_tb[4], param8, param0, -1);
+          SpellProjectile.field_B.drawCentered(var18, ValidatedTextWidget.field_I + no.field_tb[4], param8, param0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -11222,7 +11222,7 @@ final class lc {
             if (var2 == null) {
               var2 = r.field_b;
             }
-            var3 = var2.field_V.d(false);
+            var3 = var2.field_V.getCurrentPlayer(false);
             if (var3 < 0) {
               var3 = 6;
             }
@@ -11321,7 +11321,7 @@ final class lc {
             var2Lifetime1 = r.field_b;
           }
           if (this.field_l == 2 &&
-            var2Lifetime1.field_V.d(false) == var2Lifetime1.field_I) {
+            var2Lifetime1.field_V.getCurrentPlayer(false) == var2Lifetime1.field_I) {
             var3Lifetime2 = 0;
             var4Lifetime2 = 0;
             var5Lifetime2 = 0;
@@ -11393,7 +11393,7 @@ final class lc {
             }
             var20_ref = CachedArchiveProvider.formatTemplate(param0 + 1, new String[]{var20_ref}, UsernameCredentials.field_i);
             var17.drawHorizontalFlip(152 + var18, var19 - 104);
-            mi.field_B.drawParagraph(var20_ref, 8 + var18, 8 + var19, 176, 112, 16777215, 0, 0, 0, mi.field_B.field_C + mi.field_B.field_m);
+            SpellProjectile.field_B.drawParagraph(var20_ref, 8 + var18, 8 + var19, 176, 112, 16777215, 0, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
           }
           if (13 != this.field_l) {
             for (var3Lifetime3 = 0; var3Lifetime3 < this.field_g.field_f; var3Lifetime3++) {
@@ -11437,7 +11437,7 @@ final class lc {
                     }
                   }
                 } else {
-                  mi.field_B.drawParagraph(TextWidgetPainter.field_b, ValidatedTextWidget.field_I + 80, uc.field_a + 140, 480, 180, 0, -1, 0, 1, 30);
+                  SpellProjectile.field_B.drawParagraph(TextWidgetPainter.field_b, ValidatedTextWidget.field_I + 80, uc.field_a + 140, 480, 180, 0, -1, 0, 1, 30);
                 }
               } else {
                 this.e(true);
@@ -11459,10 +11459,10 @@ final class lc {
           if (200 > var5Lifetime3) {
             SoftwareRasterizer.setClip(var3Lifetime4, var4Lifetime3, var3Lifetime4 + var5Lifetime3, var4Lifetime3 + 32);
             SoftwareRasterizer.fillRoundedVerticalGradientAdditive(var3Lifetime4, var4Lifetime3, 200, 32, 15, var6Lifetime2, var7Lifetime2);
-            mi.field_B.drawCentered(pi.field_e, var3Lifetime4 + 100, var4Lifetime3 + 19, 16777215, 0);
+            SpellProjectile.field_B.drawCentered(pi.field_e, var3Lifetime4 + 100, var4Lifetime3 + 19, 16777215, 0);
             SoftwareRasterizer.setClip(var5Lifetime3 + var3Lifetime4, var4Lifetime3, 200 + var3Lifetime4, var4Lifetime3 + 32);
             SoftwareRasterizer.fillRoundedVerticalGradientAdditive(var3Lifetime4, var4Lifetime3, 200, 32, 15, var6Lifetime2 >> 1 & 8355711, var7Lifetime2);
-            mi.field_B.drawCentered(pi.field_e, var3Lifetime4 + 100, var4Lifetime3 + 19, 0, 16777215);
+            SpellProjectile.field_B.drawCentered(pi.field_e, var3Lifetime4 + 100, var4Lifetime3 + 19, 0, 16777215);
             SoftwareRasterizer.resetClip();
             SoftwareRasterizer.drawRoundedRectangle(var3Lifetime4, var4Lifetime3, 200, 32, 15, 0);
           }
@@ -11514,7 +11514,7 @@ final class lc {
 
     private final void g(int param0) {
         try {
-          mi.field_B.drawParagraph(FrameClock.field_c, 64 + ValidatedTextWidget.field_I, 128 + uc.field_a, 512, 224, 0, -1, 1, 1, mi.field_B.field_m + mi.field_B.field_C);
+          SpellProjectile.field_B.drawParagraph(FrameClock.field_c, 64 + ValidatedTextWidget.field_I, 128 + uc.field_a, 512, 224, 0, -1, 1, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
           if (param0 != 12) {
             lc.a((byte) -6);
           }

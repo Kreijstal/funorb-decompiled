@@ -246,7 +246,7 @@ abstract class FrameClock {
           if (param3 > -97) {
             field_b = 88;
           }
-          Bzip2State.a(md.field_b, mi.field_A, nj.field_d, ml.field_S, MouseWheelHandler.field_c, param1, BevelBoxPainter.field_f, th.field_k, 27874, MouseWheelHandler.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
+          Bzip2State.a(md.field_b, SpellProjectile.field_A, nj.field_d, BattleUnit.field_S, MouseWheelHandler.field_c, param1, BevelBoxPainter.field_f, th.field_k, 27874, MouseWheelHandler.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
           ArchiveProvider.field_a = qe.loadSpriteSheet(param2, "chatfilter", "lobby", 119);
           cf.field_b[2] = TextButton.field_A;
           cf.field_b[1] = u.field_d;

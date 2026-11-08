@@ -45,7 +45,7 @@ final class le {
     private boolean field_F;
     private boolean field_k;
     boolean field_O;
-    nf field_V;
+    Battle field_V;
     int field_b;
     private boolean field_T;
     static String field_A;
@@ -55,7 +55,7 @@ final class le {
     private int field_W;
     private int field_r;
     private int field_Z;
-    nf field_w;
+    Battle field_w;
     private int field_h;
     int field_s;
 
@@ -119,7 +119,7 @@ final class le {
         int var4_int = 0;
         RuntimeException var4 = null;
         try {
-          if (this.field_V.b(param2) < 0) {
+          if (this.field_V.getTerrainOffset(param2) < 0) {
             stackIn_4_0 = -EmailLoginCredentials.field_f / 2;
           } else {
             stackIn_4_0 = EmailLoginCredentials.field_f / 2;
@@ -188,15 +188,15 @@ final class le {
         RuntimeException var2 = null;
         try {
           if (null != this.field_m.field_h) {
-            if (this.field_m.field_h.h(param0 - 17747)) {
-              IntrusiveDeque.field_c = IntrusiveDeque.field_c * 7 + this.field_m.field_h.c(param0 - 17583) >> 3;
-              CameraFollowTarget.field_g = 7 * CameraFollowTarget.field_g + this.field_m.field_h.e(52) >> 3;
+            if (this.field_m.field_h.isAlive(param0 - 17747)) {
+              IntrusiveDeque.field_c = IntrusiveDeque.field_c * 7 + this.field_m.field_h.getX(param0 - 17583) >> 3;
+              CameraFollowTarget.field_g = 7 * CameraFollowTarget.field_g + this.field_m.field_h.getY(52) >> 3;
             }
           } else {
-            if (this.field_m.field_d != null && (this.field_m.field_d.f(true) ||
-              this.field_m.field_d.y(param0 - 37) == this.field_bb)) {
-              IntrusiveDeque.field_c = IntrusiveDeque.field_c * 7 + this.field_m.field_d.f(64) >> 3;
-              CameraFollowTarget.field_g = 7 * CameraFollowTarget.field_g + this.field_m.field_d.i((byte) -53) >> 3;
+            if (this.field_m.field_d != null && (this.field_m.field_d.isMarkedForRemoval(true) ||
+              this.field_m.field_d.getOwnerId(param0 - 37) == this.field_bb)) {
+              IntrusiveDeque.field_c = IntrusiveDeque.field_c * 7 + this.field_m.field_d.getX(64) >> 3;
+              CameraFollowTarget.field_g = 7 * CameraFollowTarget.field_g + this.field_m.field_d.getY((byte) -53) >> 3;
             }
           }
           if (param0 != 17608) {
@@ -211,14 +211,14 @@ final class le {
     }
 
     private final void b(int param0) {
-        ml var2 = null;
+        BattleUnit var2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          this.field_V.t(8);
+          this.field_V.resetTurnState(8);
           this.field_C = true;
-          this.field_bb = this.field_V.d(false);
-          var2 = this.field_V.a(this.field_V.d(false), true);
+          this.field_bb = this.field_V.getCurrentPlayer(false);
+          var2 = this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true);
           if (param0 != 0) {
             return;
           }
@@ -232,7 +232,7 @@ final class le {
           if (!this.field_ab &&
             StatefulTextPainter.field_p == 7 &&
             this.field_V.field_q > 1) {
-            this.field_I = this.field_V.d(false);
+            this.field_I = this.field_V.getCurrentPlayer(false);
             return;
           }
           return;
@@ -353,7 +353,7 @@ final class le {
     private final int b(int param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var15 = 0;
-        ml var16 = null;
+        BattleUnit var16 = null;
         int stackIn_34_0;
         int stackIn_34_1;
         int stackIn_34_2;
@@ -384,26 +384,26 @@ final class le {
         int var11_intLifetime2;
         var15 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var16 = this.field_V.a(param2, true);
+          var16 = this.field_V.getUnitByOwner(param2, true);
           if (var16 != null &&
             0 == (1 << param2 & (this.field_a | this.field_J)) &&
             var16.field_I != null && (param2 == 0 ||
             !qg.a(param3 - 99) ||
             StatefulTextPainter.field_p == 6)) {
-            var6 = var16.v(-126);
+            var6 = var16.getStatusTimer(-126);
             if (0 > var6) {
               var6 = 0;
             }
-            var7 = var16.m(-20357) + var6;
+            var7 = var16.getDisplayedHealth(-20357) + var6;
             var8 = nj.field_n[param2];
-            if (var16.o(-22625) == 27) {
+            if (var16.getType(-22625) == 27) {
               var8 = 13413102;
             }
             SoftwareRasterizer.fillRectangleAlpha(8, 2 + param0, 40 + param1 - 4, -4 + this.field_l[param2], 0, 192);
             SoftwareRasterizer.drawRoundedRectangle(6, param0, param1 + 40, this.field_l[param2], 6, 0);
             SoftwareRasterizer.drawRoundedRectangle(7, 1 + param0, param1 + 38, -2 + this.field_l[param2], 6, 16777215);
-            if (var16.o(-22625) != 3 &&
-              var16.o(param3 - 22621) != 27) {
+            if (var16.getType(-22625) != 3 &&
+              var16.getType(param3 - 22621) != 27) {
               if (this.field_l[param2] == 17) {
                 var16.field_I.drawHalfSize(8, -4 + param0);
               } else {
@@ -416,8 +416,8 @@ final class le {
                 var16.field_I.drawQuarterSize(8, -4 + param0);
               }
             }
-            var9 = this.field_V.c((byte) -123, param2);
-            var10 = 4 * this.field_V.s(0) + (-this.field_V.b(12) + this.field_V.c((byte) -105, param2));
+            var9 = this.field_V.countTeamUnits((byte) -123, param2);
+            var10 = 4 * this.field_V.getPlayerCount(0) + (-this.field_V.countUnits(12) + this.field_V.countTeamUnits((byte) -105, param2));
             if (var10 > 4) {
               var10 = 4;
             }
@@ -426,18 +426,18 @@ final class le {
               stackIn_34_0 = ~(param1 + (48 + var11_int));
               stackIn_34_1 = -32;
               stackIn_34_2 = 272;
-              stackIn_34_3 = mi.field_B.textWidth("350");
+              stackIn_34_3 = SpellProjectile.field_B.textWidth("350");
               if (var9 <= 0) {
                 stackIn_35_4 = 0;
               } else {
-                stackIn_35_4 = mi.field_B.textWidth("5/5") + 1;
+                stackIn_35_4 = SpellProjectile.field_B.textWidth("5/5") + 1;
               }
               if (stackIn_34_0 < ~(stackIn_34_1 + (stackIn_34_2 - (stackIn_34_3 + stackIn_35_4)))) {
-                stackIn_41_0 = -32 - mi.field_B.textWidth("350");
+                stackIn_41_0 = -32 - SpellProjectile.field_B.textWidth("350");
                 stackIn_41_1 = -param1;
                 stackIn_41_2 = 224;
                 if (var9 > 0) {
-                  stackIn_42_3 = mi.field_B.textWidth("5/5") + 1;
+                  stackIn_42_3 = SpellProjectile.field_B.textWidth("5/5") + 1;
                 } else {
                   stackIn_42_3 = 0;
                 }
@@ -450,11 +450,11 @@ final class le {
                 this.field_v[param2] = this.field_v[param2] - 1;
               }
               if (this.field_l[param2] > 17 &&
-                this.field_V.d(false) != param2) {
+                this.field_V.getCurrentPlayer(false) != param2) {
                 this.field_l[param2] = this.field_l[param2] - 1;
               }
               if (this.field_l[param2] < 34 &&
-                param2 == this.field_V.d(false)) {
+                param2 == this.field_V.getCurrentPlayer(false)) {
                 this.field_l[param2] = this.field_l[param2] + 1;
               }
             }
@@ -463,7 +463,7 @@ final class le {
             if (var9 <= 0) {
               stackIn_63_1 = 0;
             } else {
-              stackIn_63_1 = 1 + mi.field_B.textWidth("5/4");
+              stackIn_63_1 = 1 + SpellProjectile.field_B.textWidth("5/4");
             }
             var12 = stackIn_62_0 + stackIn_63_1;
             SoftwareRasterizer.fillVerticalGradient(3 + var12, -8 + param0 + (this.field_l[param2] / 2 + 3), -6 + var11_intLifetime1, 11, var8, (var8 | 8421504) ^ 8421504);
@@ -481,11 +481,11 @@ final class le {
             SoftwareRasterizer.drawRoundedRectangle(var12 + 2, -8 + this.field_l[param2] / 2 + param0 + 2, -4 + var11_intLifetime2, 13, 6, 0);
             var13_int = var11_intLifetime2 + var12 + 2;
             var14 = Integer.toString(var7);
-            mi.field_B.drawText(var14, var13_int, 3 + (-8 + this.field_l[param2] / 2 + param0 - (-4 - mi.field_B.field_C / 2 + 1)), 8421504 ^ (var8 | 8421504), 0);
-            mi.field_B.drawText(var14, -1 + var13_int, mi.field_B.field_C / 2 + 4 - 8 + (param0 - (-(this.field_l[param2] / 2) - 3)), (var8 | 8421504) ^ 8421504, 0);
-            mi.field_B.drawText(var14, var13_int, -4 + (this.field_l[param2] / 2 + param0 + (3 + mi.field_B.field_C / 2)), var8, -1);
+            SpellProjectile.field_B.drawText(var14, var13_int, 3 + (-8 + this.field_l[param2] / 2 + param0 - (-4 - SpellProjectile.field_B.field_C / 2 + 1)), 8421504 ^ (var8 | 8421504), 0);
+            SpellProjectile.field_B.drawText(var14, -1 + var13_int, SpellProjectile.field_B.field_C / 2 + 4 - 8 + (param0 - (-(this.field_l[param2] / 2) - 3)), (var8 | 8421504) ^ 8421504, 0);
+            SpellProjectile.field_B.drawText(var14, var13_int, -4 + (this.field_l[param2] / 2 + param0 + (3 + SpellProjectile.field_B.field_C / 2)), var8, -1);
             if (0 < var9) {
-              var12 = var12 - (mi.field_B.textWidth("5/5") + 1);
+              var12 = var12 - (SpellProjectile.field_B.textWidth("5/5") + 1);
               var13 = var9 + "/" + var10;
               if (var9 > 4) {
                 var13 = Integer.toString(var9);
@@ -495,24 +495,24 @@ final class le {
                 null != fb.field_a[2]) {
                 fb.field_a[2].draw(1 + var12, param0);
               }
-              mi.field_B.drawText(var13, var12, -6 + (param0 + this.field_l[param2] - 8 - (-4 - mi.field_B.field_C / 2)), 0, 0);
-              mi.field_B.drawText(var13, var12 - 1, mi.field_B.field_C / 2 + 3 + (-8 + param0) + (this.field_l[param2] - 8 + 4), 0, 0);
-              mi.field_B.drawText(var13, var12, mi.field_B.field_C / 2 + 3 + (-8 + (this.field_l[param2] + param0 - 8)) + 4, var8, -1);
+              SpellProjectile.field_B.drawText(var13, var12, -6 + (param0 + this.field_l[param2] - 8 - (-4 - SpellProjectile.field_B.field_C / 2)), 0, 0);
+              SpellProjectile.field_B.drawText(var13, var12 - 1, SpellProjectile.field_B.field_C / 2 + 3 + (-8 + param0) + (this.field_l[param2] - 8 + 4), 0, 0);
+              SpellProjectile.field_B.drawText(var13, var12, SpellProjectile.field_B.field_C / 2 + 3 + (-8 + (this.field_l[param2] + param0 - 8)) + 4, var8, -1);
             }
             var11 = qo.normalizeName((byte) 121, (CharSequence) ((Object) this.field_V.field_k[param2]));
-            mi.field_B.drawCentered(var11, 12 + param1 / 2 + 25, mi.field_B.field_C / 2 + (-1 + param0 + this.field_l[param2] / 2), 8421504 ^ (var8 | 8421504), 0);
-            mi.field_B.drawCentered(var11, 12 + param1 / 2 + 26, -1 + (-1 + this.field_l[param2] / 2 + param0 + mi.field_B.field_C / 2), 8421504 ^ (8421504 | var8), 0);
-            mi.field_B.drawCentered(var11, param1 / 2 + 12 + 26, -1 + (param0 + this.field_l[param2] / 2 + mi.field_B.field_C / 2), var8, -1);
-            if (this.field_V.s(0) > 2) {
+            SpellProjectile.field_B.drawCentered(var11, 12 + param1 / 2 + 25, SpellProjectile.field_B.field_C / 2 + (-1 + param0 + this.field_l[param2] / 2), 8421504 ^ (var8 | 8421504), 0);
+            SpellProjectile.field_B.drawCentered(var11, 12 + param1 / 2 + 26, -1 + (-1 + this.field_l[param2] / 2 + param0 + SpellProjectile.field_B.field_C / 2), 8421504 ^ (8421504 | var8), 0);
+            SpellProjectile.field_B.drawCentered(var11, param1 / 2 + 12 + 26, -1 + (param0 + this.field_l[param2] / 2 + SpellProjectile.field_B.field_C / 2), var8, -1);
+            if (this.field_V.getPlayerCount(0) > 2) {
               param0 = param0 + (3 + this.field_l[param2]);
             } else {
               if (param2 == 1) {
                 var8Lifetime1 = 16777215;
                 param0 -= 20;
                 var11Lifetime1 = sb.field_c;
-                mi.field_B.drawCentered(var11Lifetime1, -1 + param1 / 2 + 36, mi.field_B.field_C / 2 + param0 + 8, 8421504 ^ (var8Lifetime1 | 8421504), 0);
-                mi.field_B.drawCentered(var11Lifetime1, 12 + param1 / 2 + 24, -1 + param0 - (-8 - mi.field_B.field_C / 2), (var8Lifetime1 | 8421504) ^ 8421504, 0);
-                mi.field_B.drawCentered(var11Lifetime1, param1 / 2 + 36, 8 + param0 + mi.field_B.field_C / 2, var8Lifetime1, -1);
+                SpellProjectile.field_B.drawCentered(var11Lifetime1, -1 + param1 / 2 + 36, SpellProjectile.field_B.field_C / 2 + param0 + 8, 8421504 ^ (var8Lifetime1 | 8421504), 0);
+                SpellProjectile.field_B.drawCentered(var11Lifetime1, 12 + param1 / 2 + 24, -1 + param0 - (-8 - SpellProjectile.field_B.field_C / 2), (var8Lifetime1 | 8421504) ^ 8421504, 0);
+                SpellProjectile.field_B.drawCentered(var11Lifetime1, param1 / 2 + 36, 8 + param0 + SpellProjectile.field_B.field_C / 2, var8Lifetime1, -1);
               }
               param0 = param0 + (20 + (this.field_l[param2] + 3));
             }
@@ -543,7 +543,7 @@ final class le {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        ml var14 = null;
+        BattleUnit var14 = null;
         Object var15 = null;
         String var15_ref = null;
         IntrusiveDeque var16 = null;
@@ -564,83 +564,83 @@ final class le {
           ce.field_m.a(true);
           SoftwareRasterizer.setClip(param4, param2, param4 + param6, param2 + param1);
           if (this.field_k &&
-            !this.field_V.n(4)) {
+            !this.field_V.isTurnActive(4)) {
             SoftwareRasterizer.fillRectangle(param4, param2, param6, param1, 0);
             var8 = rb.field_l + " - " + this.field_L + "%";
             CachedArchiveProvider.field_t.drawParagraph(var8, param4, param2, param6, param1, 16777215, -1, 1, 1, 0);
             return;
           }
           var8_int = 2158624;
-          if (this.field_V.a(param5 ^ -31593) == 2) {
+          if (this.field_V.getArenaTheme(param5 ^ -31593) == 2) {
             var8_int = 2239508;
           }
-          if (3 == this.field_V.a(-31497)) {
+          if (3 == this.field_V.getArenaTheme(-31497)) {
             var8_int = 3298412;
           }
-          if (this.field_V.a(-31497) == 1) {
+          if (this.field_V.getArenaTheme(-31497) == 1) {
             var8_int = 4214874;
           }
-          if (this.field_V.a(-31497) == 0) {
+          if (this.field_V.getArenaTheme(-31497) == 0) {
             var8_int = 5663344;
           }
-          if (4 == this.field_V.a(-31497)) {
+          if (4 == this.field_V.getArenaTheme(-31497)) {
             var8_int = 2895400;
           }
-          if (this.field_V.a(-31497) == 5) {
+          if (this.field_V.getArenaTheme(-31497) == 5) {
             var8_int = 9054474;
           }
           if (param5 != 96) {
-            var14 = (ml) null;
-            this.a(106, (byte) -85, (ml) null, -35);
+            var14 = (BattleUnit) null;
+            this.a(106, (byte) -85, (BattleUnit) null, -35);
           }
-          if (this.field_V.a(-31497) == 6) {
+          if (this.field_V.getArenaTheme(-31497) == 6) {
             var8_int = 15658734;
           }
-          if (this.field_V.a(-31497) == 7) {
+          if (this.field_V.getArenaTheme(-31497) == 7) {
             var8_int = 1213580;
           }
-          if (this.field_V.a(param5 ^ -31593) == 8) {
+          if (this.field_V.getArenaTheme(param5 ^ -31593) == 8) {
             var8_int = 15597806;
           }
-          if (null != this.field_V.m((byte) 69)) {
+          if (null != this.field_V.getTerrainMask((byte) 69)) {
             this.a(IntrusiveDeque.field_c, (byte) -121, var8_int, CameraFollowTarget.field_g);
             this.b(IntrusiveDeque.field_c, -98, CameraFollowTarget.field_g);
             this.c(CameraFollowTarget.field_g, 0, IntrusiveDeque.field_c);
             this.a(-8, IntrusiveDeque.field_c, CameraFollowTarget.field_g);
             var9_int = IntKeyLookup.field_g.field_nb;
-            var16 = this.field_V.e(param5 - 184);
+            var16 = this.field_V.getCameraTargets(param5 - 184);
             if (var16 != null) {
-              var11_ref = (mi) (var16.first(12623));
+              var11_ref = (SpellProjectile) (var16.first(12623));
               while (var11_ref != null) {
-                ((mi) (var11_ref)).a(-CameraFollowTarget.field_g + (var9_int >> 1), 41, -IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
-                var11_ref = (mi) (var16.next(0));
+                ((SpellProjectile) (var11_ref)).draw(-CameraFollowTarget.field_g + (var9_int >> 1), 41, -IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
+                var11_ref = (SpellProjectile) (var16.next(0));
               }
             }
-            var17 = this.field_V.l((byte) 48);
+            var17 = this.field_V.getEffectList((byte) 48);
             if (var17 != null &&
               0 == (SpriteState.field_v & 16)) {
-              var11_refLifetime3 = (mi) (var17.first(param5 + 12527));
+              var11_refLifetime3 = (SpellProjectile) (var17.first(param5 + 12527));
               while (var11_refLifetime3 != null) {
-                ((mi) (var11_refLifetime3)).a((var9_int >> 1) - CameraFollowTarget.field_g, -108, -IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
-                var11_refLifetime3 = (mi) (var17.next(0));
+                ((SpellProjectile) (var11_refLifetime3)).draw((var9_int >> 1) - CameraFollowTarget.field_g, -108, -IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
+                var11_refLifetime3 = (SpellProjectile) (var17.next(0));
               }
             }
             this.a(CameraFollowTarget.field_g, var8_int, 12224, IntrusiveDeque.field_c);
             this.b(-113, param0);
           }
           if (param3 &&
-            !this.field_V.n(param5 ^ 100) &&
-            this.field_V.d(false) >= 0) {
-            var9_intLifetime1 = nj.field_n[this.field_V.d(false)];
+            !this.field_V.isTurnActive(param5 ^ 100) &&
+            this.field_V.getCurrentPlayer(false) >= 0) {
+            var9_intLifetime1 = nj.field_n[this.field_V.getCurrentPlayer(false)];
             if (this.field_y &&
-              !this.field_V.a(true) &&
+              !this.field_V.isAnimating(true) &&
               this.field_z > 0 && (StatefulTextPainter.field_p == -1 ||
-              !(this.field_z >= this.field_V.f(12955)) ||
+              !(this.field_z >= this.field_V.getThemeParameter(12955)) ||
               StatefulTextPainter.field_p == 6) && MusicPatchNode.field_s == 0) {
               var10 = (this.field_z + 49) / 50;
-              if (var10 > this.field_V.f(12955) / 50 && (this.field_V.field_x[this.field_V.d(false)] != 8 ||
-                this.field_V.field_X[this.field_V.d(false)] == 0)) {
-                var10 = this.field_V.f(param5 ^ 13051) / 50;
+              if (var10 > this.field_V.getThemeParameter(12955) / 50 && (this.field_V.field_x[this.field_V.getCurrentPlayer(false)] != 8 ||
+                this.field_V.field_X[this.field_V.getCurrentPlayer(false)] == 0)) {
+                var10 = this.field_V.getThemeParameter(param5 ^ 13051) / 50;
               }
               if (this.field_X) {
                 var11_refLifetime1 = null;
@@ -661,16 +661,16 @@ final class le {
                   var11_refLifetime1Lifetime1 = ((StringBuilder) (Object) stackIn_73_0).append(stackIn_74_1).append(var12).toString();
                 }
                 var12Lifetime2 = EmailLoginCredentials.field_f / 2;
-                mi.field_B.drawCentered(co.field_i, var12Lifetime2, 16, var9_intLifetime1, -1);
+                SpellProjectile.field_B.drawCentered(co.field_i, var12Lifetime2, 16, var9_intLifetime1, -1);
                 CachedArchiveProvider.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), var12Lifetime2, 40, var9_intLifetime1, -1);
                 SoftwareRasterizer.blurRectangle(5, 5, var12Lifetime2 - 48, 0, 96, 44);
                 SoftwareRasterizer.drawRectangle(-48 + var12Lifetime2, 0, 96, 44, 0);
                 SoftwareRasterizer.drawRectangle(-1 + var12Lifetime2 - 48, 0, 98, 45, 11768360);
                 SoftwareRasterizer.drawRectangle(-50 + var12Lifetime2, 0, 100, 46, 8547138);
                 SoftwareRasterizer.drawRectangle(var12Lifetime2 - 51, 0, 102, 47, 0);
-                mi.field_B.drawCentered(co.field_i, -1 + var12Lifetime2, 16, 0, 0);
-                mi.field_B.drawCentered(co.field_i, var12Lifetime2, 15, 0, 0);
-                mi.field_B.drawCentered(co.field_i, var12Lifetime2, 16, var9_intLifetime1, -1);
+                SpellProjectile.field_B.drawCentered(co.field_i, -1 + var12Lifetime2, 16, 0, 0);
+                SpellProjectile.field_B.drawCentered(co.field_i, var12Lifetime2, 15, 0, 0);
+                SpellProjectile.field_B.drawCentered(co.field_i, var12Lifetime2, 16, var9_intLifetime1, -1);
                 if (var11_refLifetime1Lifetime1 != null) {
                   CachedArchiveProvider.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), -1 + var12Lifetime2, 40, 0, 0);
                   CachedArchiveProvider.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), var12Lifetime2, 39, 0, 0);
@@ -679,9 +679,9 @@ final class le {
               }
             }
           }
-          if (!this.field_V.n(param5 ^ 100)) {
+          if (!this.field_V.isTurnActive(param5 ^ 100)) {
             var9_intLifetime2 = -64 + IntKeyLookup.field_g.field_nb - 10;
-            for (var10Lifetime1 = 0; this.field_V.s(0) > var10Lifetime1; var10Lifetime1++) {
+            for (var10Lifetime1 = 0; this.field_V.getPlayerCount(0) > var10Lifetime1; var10Lifetime1++) {
               regionExit1: {
                 if (this.field_I == var10Lifetime1) {
                   if ((1 << var10Lifetime1 & this.field_b) != 0) {
@@ -692,7 +692,7 @@ final class le {
                     }
                   } else {
                     if ((1 << var10Lifetime1 & this.field_J) == 0) {
-                      if (this.field_V.n(param5 - 92)) {
+                      if (this.field_V.isTurnActive(param5 - 92)) {
                         break regionExit1;
                       }
                       if ((this.field_D & 1 << var10Lifetime1) == 0) {
@@ -725,7 +725,7 @@ final class le {
                       if ((this.field_J & 1 << var10Lifetime1) != 0) {
                         var11_refLifetime2 = null;
                       } else {
-                        if (this.field_V.n(4)) {
+                        if (this.field_V.isTurnActive(4)) {
                           break regionExit1;
                         }
                         if ((this.field_D & 1 << var10Lifetime1) == 0) {
@@ -738,17 +738,17 @@ final class le {
                 }
                 if (var11_refLifetime2 != null) {
                   var12Lifetime1 = -8 + EmailLoginCredentials.field_f;
-                  mi.field_B.drawRightAlignedText((String) (var11_refLifetime2), -1 + var12Lifetime1, var9_intLifetime2, 0, 0);
-                  mi.field_B.drawRightAlignedText((String) (var11_refLifetime2), 1 + var12Lifetime1, var9_intLifetime2, 0, 0);
-                  mi.field_B.drawRightAlignedText((String) (var11_refLifetime2), var12Lifetime1, var9_intLifetime2 - 1, 0, 0);
-                  mi.field_B.drawRightAlignedText((String) (var11_refLifetime2), var12Lifetime1, var9_intLifetime2 + 1, 0, 0);
-                  mi.field_B.drawRightAlignedText((String) (var11_refLifetime2), var12Lifetime1, var9_intLifetime2, 16777215, 0);
+                  SpellProjectile.field_B.drawRightAlignedText((String) (var11_refLifetime2), -1 + var12Lifetime1, var9_intLifetime2, 0, 0);
+                  SpellProjectile.field_B.drawRightAlignedText((String) (var11_refLifetime2), 1 + var12Lifetime1, var9_intLifetime2, 0, 0);
+                  SpellProjectile.field_B.drawRightAlignedText((String) (var11_refLifetime2), var12Lifetime1, var9_intLifetime2 - 1, 0, 0);
+                  SpellProjectile.field_B.drawRightAlignedText((String) (var11_refLifetime2), var12Lifetime1, var9_intLifetime2 + 1, 0, 0);
+                  SpellProjectile.field_B.drawRightAlignedText((String) (var11_refLifetime2), var12Lifetime1, var9_intLifetime2, 16777215, 0);
                   var9_intLifetime2 -= 14;
                 }
               }
             }
           }
-          if (!this.field_V.n(4)) {
+          if (!this.field_V.isTurnActive(4)) {
           }
           var9 = (qa) (b.field_a.first(12623));
           if (var9 != null) {
@@ -767,10 +767,10 @@ final class le {
           }
           if (SpriteState.field_p) {
             if (null != this.field_V) {
-              CachedArchiveProvider.field_t.drawText("Visible c-sum" + this.field_V.o(4), 64, 64, 16776960, 0);
+              CachedArchiveProvider.field_t.drawText("Visible c-sum" + this.field_V.countUnitsWithDebugOverlay(4), 64, 64, 16776960, 0);
             }
             if (null != this.field_w) {
-              CachedArchiveProvider.field_t.drawText("Backup c-sum" + this.field_w.o(4), 64, 96, 65535, 0);
+              CachedArchiveProvider.field_t.drawText("Backup c-sum" + this.field_w.countUnitsWithDebugOverlay(4), 64, 96, 65535, 0);
             }
           }
           sb.b(param5 ^ 47);
@@ -800,7 +800,7 @@ final class le {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        ml var5 = null;
+        BattleUnit var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -825,12 +825,12 @@ final class le {
             he.field_e.writeInt(0, (byte) -101);
             we.a(0, (byte) 113);
           }
-          if ((!this.field_V.c((byte) 89) ||
-            this.field_V.j(39)) &&
-            !this.field_V.a(true)) {
-            if (this.field_V.k(-75)) {
+          if ((!this.field_V.isTurnFinished((byte) 89) ||
+            this.field_V.isWaitingForInput(39)) &&
+            !this.field_V.isAnimating(true)) {
+            if (this.field_V.hasPendingActions(-75)) {
               stackIn_26_0 = 0;
-            } else if (this.field_V.g(125)) {
+            } else if (this.field_V.isFinished(125)) {
               stackIn_26_0 = 0;
             } else if (1 < this.field_z) {
               stackIn_26_0 = 1;
@@ -845,7 +845,7 @@ final class le {
             stackIn_32_0 = var2_int;
             if (!SocketJs5Transport.field_r &&
               !pn.a((byte) 119) &&
-              this.field_V.d(false) == this.field_I) {
+              this.field_V.getCurrentPlayer(false) == this.field_I) {
               stackIn_33_1 = 1;
             } else {
               stackIn_33_1 = 0;
@@ -861,7 +861,7 @@ final class le {
             if (this.field_u > 0) {
               var4 = this.field_c;
             }
-            var5 = this.field_V.a(this.field_bb, true);
+            var5 = this.field_V.getUnitByOwner(this.field_bb, true);
             if (IntrusiveDeque.field_d != 84 &&
               IntrusiveDeque.field_d != 82) {
               stackIn_47_0 = 0;
@@ -877,7 +877,7 @@ final class le {
             }
             var7 = stackIn_53_0;
             if (var5 != null &&
-              !this.field_V.j(39) &&
+              !this.field_V.isWaitingForInput(39) &&
               this.field_G &&
               this.field_Z == 0) {
               stackIn_60_0 = 1;
@@ -893,7 +893,7 @@ final class le {
                 this.i(param0 + 1999);
               }
               if (this.field_ab) {
-                stackIn_71_0 = this.field_V.n((byte) -75);
+                stackIn_71_0 = this.field_V.getRound((byte) -75);
                 if (var5.field_E != -1) {
                   stackIn_72_1 = 4;
                 } else {
@@ -903,7 +903,7 @@ final class le {
                 this.field_p = this.field_p + 1;
                 ClientException.a(stackIn_71_0, stackIn_72_1, (byte) 11, 158, this.field_r, 1, this.field_bb, var4, fieldTemp$0);
               }
-              var5.c(0, 2);
+              var5.setMarkerValue(0, 2);
               this.field_m.followUnit(-119, var5);
               DropdownList.field_N = -1;
               EmptyPainter.field_b = null;
@@ -915,7 +915,7 @@ final class le {
                 this.i(param0 ^ 2001);
               }
               if (this.field_ab) {
-                stackIn_84_0 = this.field_V.n((byte) -75);
+                stackIn_84_0 = this.field_V.getRound((byte) -75);
                 if (-1 != var5.field_E) {
                   stackIn_85_1 = 5;
                 } else {
@@ -925,7 +925,7 @@ final class le {
                 this.field_p = this.field_p + 1;
                 ClientException.a(stackIn_84_0, stackIn_85_1, (byte) 11, 158, this.field_r, 1, this.field_bb, var4, fieldTemp$1);
               }
-              var5.c(param0 - 1, 3);
+              var5.setMarkerValue(param0 - 1, 3);
               this.field_m.followUnit(-90, var5);
               DropdownList.field_N = -1;
               EmptyPainter.field_b = null;
@@ -950,7 +950,7 @@ final class le {
           var3Lifetime1 = 1;
           if (this.field_ab) {
             if (0 <= this.field_I &&
-              null != this.field_V.a(this.field_I, true) &&
+              null != this.field_V.getUnitByOwner(this.field_I, true) &&
               (1 << this.field_I & this.field_J) == 0) {
               var3Lifetime1 = 2;
             } else {
@@ -1111,7 +1111,7 @@ final class le {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        ml var5_ref_ml = null;
+        BattleUnit var5_ref_ml = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1134,28 +1134,28 @@ final class le {
           IntrusiveNodeHashTable.field_f = null;
           var3_int = IntKeyLookup.field_g.field_nb;
           var4 = 0;
-          if (this.field_I == this.field_V.d(false)) {
-            var5_ref_ml = this.field_V.a(this.field_bb, true);
+          if (this.field_I == this.field_V.getCurrentPlayer(false)) {
+            var5_ref_ml = this.field_V.getUnitByOwner(this.field_bb, true);
             if (var5_ref_ml != null &&
-              null == var5_ref_ml.w(24501) &&
-              var5_ref_ml.i((byte) -60) >= 128 + this.field_V.field_H) {
+              null == var5_ref_ml.getLinkedUnit(24501) &&
+              var5_ref_ml.getY((byte) -60) >= 128 + this.field_V.field_H) {
               var4 = 1;
-              var6 = var5_ref_ml.m(-20357) / 2;
+              var6 = var5_ref_ml.getDisplayedHealth(-20357) / 2;
               if (var6 < 25) {
                 var6 = 25;
               }
-              var7 = var5_ref_ml.y(17571);
-              if (this.field_V.a(4, var7, -770226943) <= 0) {
-                var8 = var5_ref_ml.m(-20357) / 3;
+              var7 = var5_ref_ml.getOwnerId(17571);
+              if (this.field_V.getSpellCharges(4, var7, -770226943) <= 0) {
+                var8 = var5_ref_ml.getDisplayedHealth(-20357) / 3;
                 if (5 > var8) {
                   var8 = 5;
                 }
                 IntrusiveNodeHashTable.field_f = SceneScrollbar.field_Kb;
-                if (var6 >= var5_ref_ml.m(-20357)) {
-                  IntrusiveNodeHashTable.field_f = ml.field_K;
+                if (var6 >= var5_ref_ml.getDisplayedHealth(-20357)) {
+                  IntrusiveNodeHashTable.field_f = BattleUnit.field_K;
                 }
                 IntrusiveNodeHashTable.field_f = CachedArchiveProvider.formatTemplate(-33, new String[]{Integer.toString(var6), Integer.toString(var8)}, IntrusiveNodeHashTable.field_f);
-                if (var8 >= var5_ref_ml.m(-20357)) {
+                if (var8 >= var5_ref_ml.getDisplayedHealth(-20357)) {
                   if (!this.field_ab) {
                     this.d(false);
                   } else {
@@ -1165,7 +1165,7 @@ final class le {
                 }
               } else {
                 IntrusiveNodeHashTable.field_f = ck.field_g;
-                if (var5_ref_ml.m(-20357) <= var6) {
+                if (var5_ref_ml.getDisplayedHealth(-20357) <= var6) {
                   IntrusiveNodeHashTable.field_f = bc.field_a;
                 }
                 IntrusiveNodeHashTable.field_f = CachedArchiveProvider.formatTemplate(-44, new String[]{Integer.toString(var6)}, IntrusiveNodeHashTable.field_f);
@@ -1186,14 +1186,14 @@ final class le {
             var5 = this.a(var5, 0);
           }
           if (!this.field_V.field_d) {
-            for (var6 = 0; var6 < this.field_V.s(0); var6++) {
+            for (var6 = 0; var6 < this.field_V.getPlayerCount(0); var6++) {
               var5 = this.a(var5, (byte) -3, var6);
             }
           } else {
-            for (var6 = 0; this.field_V.s(0) > var6; var6 += 2) {
+            for (var6 = 0; this.field_V.getPlayerCount(0) > var6; var6 += 2) {
               var5 = this.a(var5, (byte) -3, var6);
             }
-            for (var6 = 1; this.field_V.s(0) > var6; var6 += 2) {
+            for (var6 = 1; this.field_V.getPlayerCount(0) > var6; var6 += 2) {
               var5 = this.a(var5, (byte) -3, var6);
             }
           }
@@ -1230,7 +1230,7 @@ final class le {
                     IntrusiveNodeHashTable.field_f = vm.field_d[157];
                   }
                 }
-                if (this.field_V.a(this.field_V.d(false), true).m(-20357) <= 20) {
+                if (this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true).getDisplayedHealth(-20357) <= 20) {
                   var8 = 0;
                   if (ConditionalTextValue.field_f) {
                     IntrusiveNodeHashTable.field_f = IntrusiveNodeHashTable.field_f + hm.field_b;
@@ -1296,9 +1296,9 @@ final class le {
               var10 = var12;
               var10Lifetime2 = var12;
               var7Lifetime1 += 16;
-              mi.field_B.drawCentered(var12, var6 - 1, var7Lifetime1, 0, 0);
-              mi.field_B.drawCentered(var12, var6, -1 + var7Lifetime1, 0, 0);
-              mi.field_B.drawCentered(var12, var6, var7Lifetime1, 16777215, -1);
+              SpellProjectile.field_B.drawCentered(var12, var6 - 1, var7Lifetime1, 0, 0);
+              SpellProjectile.field_B.drawCentered(var12, var6, -1 + var7Lifetime1, 0, 0);
+              SpellProjectile.field_B.drawCentered(var12, var6, var7Lifetime1, 16777215, -1);
             }
           }
           sb.a(param1, -58);
@@ -1379,11 +1379,11 @@ final class le {
                   var10Lifetime1 = CachedArchiveProvider.formatTemplate(120, new String[]{Integer.toString(UiTheme.field_t)}, WeightedLruCache.field_d);
                 }
               }
-              mi.field_B.drawText(var10Lifetime1, 5 + var6, var7Lifetime2 - 1, 0, 0);
-              mi.field_B.drawText(var10Lifetime1, 4 + var6, var7Lifetime2, 0, 0);
-              mi.field_B.drawText(var10Lifetime1, 5 + (var6 + 1), var7Lifetime2, 0, 0);
-              mi.field_B.drawText(var10Lifetime1, var6 + 5, var7Lifetime2 + 1, 0, 0);
-              mi.field_B.drawText(var10Lifetime1, var6 + 5, var7Lifetime2, 16777215, 0);
+              SpellProjectile.field_B.drawText(var10Lifetime1, 5 + var6, var7Lifetime2 - 1, 0, 0);
+              SpellProjectile.field_B.drawText(var10Lifetime1, 4 + var6, var7Lifetime2, 0, 0);
+              SpellProjectile.field_B.drawText(var10Lifetime1, 5 + (var6 + 1), var7Lifetime2, 0, 0);
+              SpellProjectile.field_B.drawText(var10Lifetime1, var6 + 5, var7Lifetime2 + 1, 0, 0);
+              SpellProjectile.field_B.drawText(var10Lifetime1, var6 + 5, var7Lifetime2, 16777215, 0);
             }
           }
           return;
@@ -1403,39 +1403,39 @@ final class le {
         int var5 = 0;
         String var5_ref_String = null;
         int var6 = 0;
-        ml var6_ref_ml = null;
+        BattleUnit var6_ref_ml = null;
         int var7 = 0;
         int var5Lifetime1;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var3_int = 50;
           var4 = param1;
-          for (var5 = 0; this.field_V.s(0) > var5; var5++) {
-            var6_ref_ml = this.field_V.a(var5, true);
+          for (var5 = 0; this.field_V.getPlayerCount(0) > var5; var5++) {
+            var6_ref_ml = this.field_V.getUnitByOwner(var5, true);
             if (var6_ref_ml != null) {
-              if (var6_ref_ml.m(-20357) > var3_int) {
-                var3_int = var6_ref_ml.m(-20357);
+              if (var6_ref_ml.getDisplayedHealth(-20357) > var3_int) {
+                var3_int = var6_ref_ml.getDisplayedHealth(-20357);
               }
-              if (var4 < mi.field_B.textWidth(this.field_V.field_k[var5])) {
-                var4 = mi.field_B.textWidth(this.field_V.field_k[var5]);
+              if (var4 < SpellProjectile.field_B.textWidth(this.field_V.field_k[var5])) {
+                var4 = SpellProjectile.field_B.textWidth(this.field_V.field_k[var5]);
               }
             }
           }
           if (!this.field_V.field_d) {
-            for (var5Lifetime1 = 0; var5Lifetime1 < this.field_V.s(0); var5Lifetime1++) {
+            for (var5Lifetime1 = 0; var5Lifetime1 < this.field_V.getPlayerCount(0); var5Lifetime1++) {
               param0 = this.b(param0, var4, var5Lifetime1, param1 - 4);
             }
           } else {
-            for (var5Lifetime1 = 0; this.field_V.s(0) > var5Lifetime1; var5Lifetime1 += 2) {
+            for (var5Lifetime1 = 0; this.field_V.getPlayerCount(0) > var5Lifetime1; var5Lifetime1 += 2) {
               param0 = this.b(param0, var4, var5Lifetime1, -4);
             }
             var5_ref_String = sb.field_c;
             var6 = 16777215;
-            mi.field_B.drawCentered(var5_ref_String, 23 + (12 + var4 / 2), mi.field_B.field_C / 2 + (8 + param0), 8421504 ^ (8421504 | var6), 0);
-            mi.field_B.drawCentered(var5_ref_String, 12 + (var4 / 2 + 24), -1 + (mi.field_B.field_C / 2 + param0 + 8), 8421504 ^ (var6 | 8421504), 0);
-            mi.field_B.drawCentered(var5_ref_String, 36 + var4 / 2, mi.field_B.field_C / 2 + (param0 + 8), var6, -1);
+            SpellProjectile.field_B.drawCentered(var5_ref_String, 23 + (12 + var4 / 2), SpellProjectile.field_B.field_C / 2 + (8 + param0), 8421504 ^ (8421504 | var6), 0);
+            SpellProjectile.field_B.drawCentered(var5_ref_String, 12 + (var4 / 2 + 24), -1 + (SpellProjectile.field_B.field_C / 2 + param0 + 8), 8421504 ^ (var6 | 8421504), 0);
+            SpellProjectile.field_B.drawCentered(var5_ref_String, 36 + var4 / 2, SpellProjectile.field_B.field_C / 2 + (param0 + 8), var6, -1);
             param0 += 20;
-            for (var5Lifetime1 = 1; this.field_V.s(0) > var5Lifetime1; var5Lifetime1 += 2) {
+            for (var5Lifetime1 = 1; this.field_V.getPlayerCount(0) > var5Lifetime1; var5Lifetime1 += 2) {
               param0 = this.b(param0, var4, var5Lifetime1, -4);
             }
           }
@@ -1461,7 +1461,7 @@ final class le {
         int var6 = 0;
         int var7 = 0;
         IntrusiveDeque var8 = null;
-        ml var9 = null;
+        BattleUnit var9 = null;
         int var10 = 0;
         int[] var11 = null;
         int var11_int = 0;
@@ -1478,9 +1478,9 @@ final class le {
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
-        ml var9Lifetime1;
-        ml var9Lifetime1Lifetime1;
-        ml var9Lifetime1Lifetime2;
+        BattleUnit var9Lifetime1;
+        BattleUnit var9Lifetime1Lifetime1;
+        BattleUnit var9Lifetime1Lifetime2;
         int var2_intLifetime1;
         int var14Lifetime1;
         int var14Lifetime2;
@@ -1489,7 +1489,7 @@ final class le {
         int var2_intLifetime1Lifetime1;
         var17 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (null != this.field_V.m((byte) 69)) {
+          if (null != this.field_V.getTerrainMask((byte) 69)) {
             stackIn_7_0 = nj.field_n;
             if (0 > this.field_I) {
               stackIn_8_1 = 6;
@@ -1522,34 +1522,34 @@ final class le {
             var7++;
             SoftwareRasterizer.setClip(EmailLoginCredentials.field_f - (var3 + var6), -var4 + (var5 - var6), -var6 + EmailLoginCredentials.field_f, -var6 + var5);
             SoftwareRasterizer.fillVerticalGradient(-var6 - var3 + EmailLoginCredentials.field_f, var5 - (var4 + var6), var3, var4, GzipDecoder.field_a, SocialListEntry.field_Lb);
-            this.field_V.m((byte) 69).drawScaled(-var6 + (-var3 + EmailLoginCredentials.field_f), -var4 + var5 - var6, var3, var4);
+            this.field_V.getTerrainMask((byte) 69).drawScaled(-var6 + (-var3 + EmailLoginCredentials.field_f), -var4 + var5 - var6, var3, var4);
             SoftwareRasterizer.drawRectangleAlpha(EmailLoginCredentials.field_f - var3 - (var6 - (-(EmailLoginCredentials.field_f >> 1) + IntrusiveDeque.field_c >> this.field_K)), (CameraFollowTarget.field_g - (var5 >> 1) >> this.field_K) + var5 + (-var4 - var6), EmailLoginCredentials.field_f >> this.field_K, var5 >> this.field_K, 16777215, 128);
-            var8 = this.field_V.g((byte) 61);
+            var8 = this.field_V.getUnits((byte) 61);
             if (var8 != null &&
               !var8.isEmpty(true)) {
-              var9 = (ml) (var8.last(true));
+              var9 = (BattleUnit) (var8.last(true));
               while (var9 != null) {
                 if (null != var9 &&
-                  var9.o(-22625) != 12) {
+                  var9.getType(-22625) != 12) {
                   var2_intLifetime1 = 0;
-                  var10 = var9.g(false);
+                  var10 = var9.getTeam(false);
                   var2_intLifetime1 = nj.field_n[var10];
-                  var11_int = EmailLoginCredentials.field_f + (-var3 - var6) + (var9.f(-99) >> this.field_K);
-                  var12_int = var5 - (var4 + var6 - (var9.i((byte) 110) - (var9.p(param0 - 8331) >> 1) >> this.field_K));
-                  SoftwareRasterizer.fillCircle(var11_int, var12_int, 14 + (var9.p(-8323) >> 1) >> this.field_K, (var2_intLifetime1 | 8421504) ^ 8421504);
-                  SoftwareRasterizer.fillCircle(var11_int, var12_int, var9.p(param0 - 8331) >> 1 >> this.field_K, var2_intLifetime1);
-                  SoftwareRasterizer.drawCircleOutline(var11_int, var12_int, 14 + (var9.p(-8323) >> 1) >> this.field_K, 8421504 ^ (var2_intLifetime1 | 8421504));
-                  gn.a(14 + (var9.p(-8323) >> 1) >> this.field_K, (byte) 72, 255, var11_int, var12_int);
-                  if (var9.y(param0 + 17563) == this.field_V.d(false)) {
+                  var11_int = EmailLoginCredentials.field_f + (-var3 - var6) + (var9.getX(-99) >> this.field_K);
+                  var12_int = var5 - (var4 + var6 - (var9.getY((byte) 110) - (var9.getSize(param0 - 8331) >> 1) >> this.field_K));
+                  SoftwareRasterizer.fillCircle(var11_int, var12_int, 14 + (var9.getSize(-8323) >> 1) >> this.field_K, (var2_intLifetime1 | 8421504) ^ 8421504);
+                  SoftwareRasterizer.fillCircle(var11_int, var12_int, var9.getSize(param0 - 8331) >> 1 >> this.field_K, var2_intLifetime1);
+                  SoftwareRasterizer.drawCircleOutline(var11_int, var12_int, 14 + (var9.getSize(-8323) >> 1) >> this.field_K, 8421504 ^ (var2_intLifetime1 | 8421504));
+                  gn.a(14 + (var9.getSize(-8323) >> 1) >> this.field_K, (byte) 72, 255, var11_int, var12_int);
+                  if (var9.getOwnerId(param0 + 17563) == this.field_V.getCurrentPlayer(false)) {
                     if (this.field_K == 4) {
-                      DualLinkDeque.field_b[3].drawQuarterSize(-3 + var11_int, var12_int - (var9.p(-8323) >> this.field_K + 1) - 8);
+                      DualLinkDeque.field_b[3].drawQuarterSize(-3 + var11_int, var12_int - (var9.getSize(-8323) >> this.field_K + 1) - 8);
                     }
                     if (this.field_K == 2) {
                       DualLinkDeque.field_b[6].draw(var11_int - 16, 8 + var12_int);
                     }
                   }
                 }
-                var9 = (ml) (var8.previous((byte) 53));
+                var9 = (BattleUnit) (var8.previous((byte) 53));
               }
               if (this.field_K != 2) {
                 SoftwareRasterizer.resetClip();
@@ -1557,7 +1557,7 @@ final class le {
                 i.b(90);
                 DropdownList.field_N = -1;
                 EmptyPainter.field_b = null;
-                var10Lifetime1 = this.field_V.s(param0 ^ 8);
+                var10Lifetime1 = this.field_V.getPlayerCount(param0 ^ 8);
                 var22 = new int[var10Lifetime1];
                 var19 = var22;
                 var11 = var19;
@@ -1567,54 +1567,54 @@ final class le {
                 var23 = new int[var10Lifetime1];
                 var20 = var23;
                 var13 = var20;
-                var9Lifetime1 = (ml) (var8.first(12623));
+                var9Lifetime1 = (BattleUnit) (var8.first(12623));
                 while (var9Lifetime1 != null) {
-                  if (var9Lifetime1.o(-22625) != 12 &&
-                    null == var9Lifetime1.w(24501)) {
-                    var14 = var9Lifetime1.y(param0 ^ 17579);
-                    var11[var14] = -var6 + EmailLoginCredentials.field_f - var3 + (var9Lifetime1.f(-85) >> this.field_K);
+                  if (var9Lifetime1.getType(-22625) != 12 &&
+                    null == var9Lifetime1.getLinkedUnit(24501)) {
+                    var14 = var9Lifetime1.getOwnerId(param0 ^ 17579);
+                    var11[var14] = -var6 + EmailLoginCredentials.field_f - var3 + (var9Lifetime1.getX(-85) >> this.field_K);
                     var12[var14] = -var6 - var4 + (var5 - 8);
-                    var13[var14] = mi.field_B.textWidth(this.field_V.field_k[var14]);
+                    var13[var14] = SpellProjectile.field_B.textWidth(this.field_V.field_k[var14]);
                     for (var15_int = 0; var15_int < var14; var15_int++) {
                       if (var21[var15_int] != 0 &&
                         Math.abs(var22[var15_int] - var22[var14]) < 4 + (var23[var14] + var23[var15_int]) / 2 &&
                         var21[var14] >= var21[var15_int]) {
-                        var12[var14] = var21[var15_int] - mi.field_B.field_C;
+                        var12[var14] = var21[var15_int] - SpellProjectile.field_B.field_C;
                       }
                     }
                   }
-                  var9Lifetime1 = (ml) (var8.next(0));
+                  var9Lifetime1 = (BattleUnit) (var8.next(0));
                 }
                 SoftwareRasterizer.setClip(-var6 + (-var3 + EmailLoginCredentials.field_f), 0, -var6 + EmailLoginCredentials.field_f, -var6 + var5);
-                var9Lifetime1Lifetime1 = (ml) (var8.first(param0 + 12615));
+                var9Lifetime1Lifetime1 = (BattleUnit) (var8.first(param0 + 12615));
                 while (var9Lifetime1Lifetime1 != null) {
-                  if (var9Lifetime1Lifetime1.o(-22625) != 12 &&
-                    null == var9Lifetime1Lifetime1.w(24501)) {
+                  if (var9Lifetime1Lifetime1.getType(-22625) != 12 &&
+                    null == var9Lifetime1Lifetime1.getLinkedUnit(24501)) {
                     var2_intLifetime1Lifetime1 = 0;
-                    var14Lifetime1 = var9Lifetime1Lifetime1.y(17571);
+                    var14Lifetime1 = var9Lifetime1Lifetime1.getOwnerId(17571);
                     var2_intLifetime1Lifetime1 = nj.field_n[var14Lifetime1];
-                    var15_intLifetime1 = var9Lifetime1Lifetime1.i((byte) -39);
-                    var16 = var9Lifetime1Lifetime1.p(-8323);
+                    var15_intLifetime1 = var9Lifetime1Lifetime1.getY((byte) -39);
+                    var16 = var9Lifetime1Lifetime1.getSize(-8323);
                     SoftwareRasterizer.drawVerticalLine(var22[var14Lifetime1], var21[var14Lifetime1] - 1, -var6 + (var5 - var4) + ((var15_intLifetime1 - var16 >> this.field_K) - var21[var14Lifetime1]), var2_intLifetime1Lifetime1);
                     SoftwareRasterizer.drawVerticalLine(var22[var14Lifetime1] - 1, var21[var14Lifetime1] - 2, (var15_intLifetime1 - var16 >> this.field_K) + var5 + (-var4 + (-var6 - var21[var14Lifetime1])), 8421504 ^ (8421504 | var2_intLifetime1Lifetime1));
                     SoftwareRasterizer.drawVerticalLine(1 + var22[var14Lifetime1], -2 + var21[var14Lifetime1], -var6 - var4 + var5 + (-var16 + var15_intLifetime1 >> this.field_K) - var21[var14Lifetime1], (var2_intLifetime1Lifetime1 | 8421504) ^ 8421504);
                   }
-                  var9Lifetime1Lifetime1 = (ml) (var8.next(0));
+                  var9Lifetime1Lifetime1 = (BattleUnit) (var8.next(0));
                 }
                 SoftwareRasterizer.resetClip();
-                var9Lifetime1Lifetime2 = (ml) (var8.first(12623));
+                var9Lifetime1Lifetime2 = (BattleUnit) (var8.first(12623));
                 while (var9Lifetime1Lifetime2 != null) {
-                  if (12 != var9Lifetime1Lifetime2.o(-22625) &&
-                    var9Lifetime1Lifetime2.w(param0 + 24493) == null) {
+                  if (12 != var9Lifetime1Lifetime2.getType(-22625) &&
+                    var9Lifetime1Lifetime2.getLinkedUnit(param0 + 24493) == null) {
                     var2_intLifetime1Lifetime1 = 0;
-                    var14Lifetime2 = var9Lifetime1Lifetime2.y(17571);
+                    var14Lifetime2 = var9Lifetime1Lifetime2.getOwnerId(17571);
                     var2_intLifetime1Lifetime1 = nj.field_n[var14Lifetime2];
                     var15 = this.field_V.field_k[var14Lifetime2];
-                    mi.field_B.drawCentered(var15, var22[var14Lifetime2], var21[var14Lifetime2] - 1, (var2_intLifetime1Lifetime1 | 8421504) ^ 8421504, 0);
-                    mi.field_B.drawCentered(var15, -1 + var22[var14Lifetime2], var21[var14Lifetime2], 8421504 ^ (8421504 | var2_intLifetime1Lifetime1), 0);
-                    mi.field_B.drawCentered(var15, var22[var14Lifetime2], var21[var14Lifetime2], var2_intLifetime1Lifetime1, -1);
+                    SpellProjectile.field_B.drawCentered(var15, var22[var14Lifetime2], var21[var14Lifetime2] - 1, (var2_intLifetime1Lifetime1 | 8421504) ^ 8421504, 0);
+                    SpellProjectile.field_B.drawCentered(var15, -1 + var22[var14Lifetime2], var21[var14Lifetime2], 8421504 ^ (8421504 | var2_intLifetime1Lifetime1), 0);
+                    SpellProjectile.field_B.drawCentered(var15, var22[var14Lifetime2], var21[var14Lifetime2], var2_intLifetime1Lifetime1, -1);
                   }
-                  var9Lifetime1Lifetime2 = (ml) (var8.next(param0 ^ 8));
+                  var9Lifetime1Lifetime2 = (BattleUnit) (var8.next(param0 ^ 8));
                 }
               }
             }
@@ -1670,7 +1670,7 @@ final class le {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6_int = 0;
-        ml var6 = null;
+        BattleUnit var6 = null;
         int var7 = 0;
         int var8 = 0;
         Sprite var9 = null;
@@ -1715,34 +1715,34 @@ final class le {
             var6_int = FixedViewResizeListener.field_e[DropdownList.field_N];
             if (1 == var6_int &&
               this.field_s == -1000 &&
-              !this.field_V.c((byte) 89)) {
+              !this.field_V.isTurnFinished((byte) 89)) {
               var7 = EmailLoginCredentials.field_g;
               var8 = MenuButtonPanel.field_I;
               DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var7, var8, this.field_P << 8, 4096 - Math.abs(this.field_P - 128));
             }
           }
-          if (this.field_V.d(false) != this.field_I &&
+          if (this.field_V.getCurrentPlayer(false) != this.field_I &&
             this.field_ab) {
             return;
           }
-          var6 = this.field_V.a(this.field_bb, true);
+          var6 = this.field_V.getUnitByOwner(this.field_bb, true);
           if (var6 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var7Lifetime1 = var6.f(-98);
-            var8Lifetime1 = var6.i((byte) -5);
+            var7Lifetime1 = var6.getX(-98);
+            var8Lifetime1 = var6.getY((byte) -5);
             if (this.field_s != -1000) {
               if (DropdownList.field_N == 78) {
                 var9_int = -(SocketConnector.field_j[29].field_g / 2) + ((EmailLoginCredentials.field_f >> 1) + (this.field_s - param1));
                 var10 = (var4_int >> 1) + this.field_r - param2 - SocketConnector.field_j[29].field_k;
-                if (!this.field_V.a(var6, this.field_r, this.field_s, -5)) {
+                if (!this.field_V.canLandAt(var6, this.field_r, this.field_s, -5)) {
                   SocketConnector.field_j[29].toRgbSprite().drawSilhouette(var9_int, var10, 16711680);
                 }
                 SocketConnector.field_j[29].drawAlpha(var9_int, var10, 64);
                 return;
               }
               if (DropdownList.field_N == 4) {
-                var9_intLifetime1 = var6.p(-8323);
-                stackIn_152_0 = (this.field_V.b(this.field_s, var6, -16, this.field_r)) ? 65280 : 16711680;
+                var9_intLifetime1 = var6.getSize(-8323);
+                stackIn_152_0 = (this.field_V.canStandAt(this.field_s, var6, -16, this.field_r)) ? 65280 : 16711680;
                 var10Lifetime2 = stackIn_152_0;
                 ce.field_m.a(true);
                 SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), (var4_int >> 1) - param2, (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.field_y), this.field_V.field_H - param2 + (var4_int >> 1));
@@ -1751,15 +1751,15 @@ final class le {
                 var12 = -param2 + (this.field_r + ((var4_int >> 1) - (var9_intLifetime1 >> 1)));
                 SoftwareRasterizer.fillCircleAlpha(var11_int, var12, var9_intLifetime1 >> 1, var10Lifetime2, 128);
                 gn.a(var9_intLifetime1 >> 1, (byte) 100, 128 + Math.abs(-16 + (this.field_P & 31)) * 3, var11_int, var12);
-                if (this.field_V.c((byte) 89)) {
+                if (this.field_V.isTurnFinished((byte) 89)) {
                   return;
                 }
                 DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var11_int, var12, this.field_P << 8, var9_intLifetime1 * (4096 - 64 * Math.abs((this.field_P & 31) - 16)) / 32);
                 return;
               }
               if (DropdownList.field_N == 150) {
-                var9_intLifetime2 = var6.p(-8323);
-                stackIn_25_0 = (this.field_V.a(this.field_s, this.field_V.field_H - 16, (byte) -75, var6)) ? 65280 : 16711680;
+                var9_intLifetime2 = var6.getSize(-8323);
+                stackIn_25_0 = (this.field_V.canPlaceUnitAt(this.field_s, this.field_V.field_H - 16, (byte) -75, var6)) ? 65280 : 16711680;
                 var10Lifetime3 = stackIn_25_0;
                 ce.field_m.a(true);
                 SoftwareRasterizer.setClip((EmailLoginCredentials.field_f >> 1) - param1, (var4_int >> 1) - param2, this.field_V.field_y - param1 + (EmailLoginCredentials.field_f >> 1), (var4_int >> 1) + (this.field_V.field_H - param2));
@@ -1768,7 +1768,7 @@ final class le {
                 var12Lifetime1 = (var4_int >> 1) - param2 + this.field_V.field_H + (-16 - (var9_intLifetime2 >> 1));
                 SoftwareRasterizer.fillCircleAlpha(var11_intLifetime1, var12Lifetime1, var9_intLifetime2 >> 1, var10Lifetime3, 128);
                 gn.a(var9_intLifetime2 >> 1, (byte) 78, 3 * Math.abs(-16 + (this.field_P & 31)) + 128, var11_intLifetime1, var12Lifetime1);
-                if (this.field_V.c((byte) 89)) {
+                if (this.field_V.isTurnFinished((byte) 89)) {
                   return;
                 }
                 DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var11_intLifetime1, var12Lifetime1, this.field_P << 8, var9_intLifetime2 * (-(Math.abs((this.field_P & 31) - 16) * 64) + 4096) / 32);
@@ -1799,7 +1799,7 @@ final class le {
                 112 != DropdownList.field_N &&
                 DropdownList.field_N != 118) {
                 if (9 == DropdownList.field_N) {
-                  stackIn_57_0 = (this.field_V.a(false, this.field_s, this.field_r)) ? 65280 : 16711680;
+                  stackIn_57_0 = (this.field_V.isInsideMargin(false, this.field_s, this.field_r)) ? 65280 : 16711680;
                   var9_intLifetime3 = stackIn_57_0;
                   ce.field_m.a(true);
                   var10Lifetime4 = 32;
@@ -1807,7 +1807,7 @@ final class le {
                   var12Lifetime2 = -(var10Lifetime4 >> 1) + (-param2 + this.field_r + (var4_int >> 1));
                   SoftwareRasterizer.fillCircleAlpha(var11_intLifetime2, var12Lifetime2, var10Lifetime4 >> 1, var9_intLifetime3, 128);
                   gn.a(var10Lifetime4 >> 1, (byte) 94, Math.abs((31 & this.field_P) - 16) * 3 + 128, var11_intLifetime2, var12Lifetime2);
-                  if (this.field_V.c((byte) 89)) {
+                  if (this.field_V.isTurnFinished((byte) 89)) {
                     return;
                   }
                   DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var11_intLifetime2, var12Lifetime2, this.field_P << 8, (4096 - 64 * Math.abs((this.field_P & 31) - 16)) * var10Lifetime4 / 32);
@@ -1815,7 +1815,7 @@ final class le {
                 }
                 if (DropdownList.field_N != 5) {
                   if (DropdownList.field_N == 30) {
-                    stackIn_77_0 = (this.field_V.a(this.field_s, var6, 30882, this.field_r)) ? 65280 : 16711680;
+                    stackIn_77_0 = (this.field_V.canTargetPoint(this.field_s, var6, 30882, this.field_r)) ? 65280 : 16711680;
                     var9_intLifetime3Lifetime1 = stackIn_77_0;
                     ByteStorage.field_e.drawSilhouette(-(ByteStorage.field_e.field_n >> 1) + ((EmailLoginCredentials.field_f >> 1) - param1 + this.field_s), (var4_int >> 1) + (-param2 + (this.field_r - ByteStorage.field_e.field_w)), var9_intLifetime3Lifetime1);
                     ByteStorage.field_e.drawAlpha(-param1 + this.field_s + (EmailLoginCredentials.field_f >> 1) - (ByteStorage.field_e.field_n >> 1), -ByteStorage.field_e.field_w + (this.field_r - (param2 - (var4_int >> 1))), 128);
@@ -1831,8 +1831,8 @@ final class le {
                 }
                 if (decompiledFrameRemainder0) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (this.field_V.a(false, this.field_s, this.field_r) &&
-                    this.field_V.a(false, var6.f(100), -32 + var6.i((byte) -65) - var6.p(-8323))) {
+                  if (this.field_V.isInsideMargin(false, this.field_s, this.field_r) &&
+                    this.field_V.isInsideMargin(false, var6.getX(100), -32 + var6.getY((byte) -65) - var6.getSize(-8323))) {
                     stackIn_66_0 = 65280;
                     decompiledFrameRemainder1 = false;
                   }
@@ -1843,14 +1843,14 @@ final class le {
                   ce.field_m.a(true);
                   var10Lifetime4 = 32;
                   var11_intLifetime2Lifetime1 = (EmailLoginCredentials.field_f >> 1) - param1 + var7Lifetime1;
-                  var12Lifetime2Lifetime1 = (var4_int >> 1) + var8Lifetime1 - param2 - (var6.p(-8323) + 32);
+                  var12Lifetime2Lifetime1 = (var4_int >> 1) + var8Lifetime1 - param2 - (var6.getSize(-8323) + 32);
                   SoftwareRasterizer.fillCircleAlpha(var11_intLifetime2Lifetime1, var12Lifetime2Lifetime1, var10Lifetime4 >> 1, var9_intLifetime3Lifetime2, 128);
                   gn.a(var10Lifetime4 >> 1, (byte) 63, 128 + 3 * Math.abs((this.field_P & 31) - 16), var11_intLifetime2Lifetime1, var12Lifetime2Lifetime1);
                   var13 = this.field_s - param1 + (EmailLoginCredentials.field_f >> 1);
                   var14 = (var4_int >> 1) + (this.field_r - param2) - (var10Lifetime4 >> 1);
                   SoftwareRasterizer.fillCircleAlpha(var13, var14, var10Lifetime4 >> 1, var9_intLifetime3Lifetime2, 128);
                   gn.a(var10Lifetime4 >> 1, (byte) 125, 128 + Math.abs(-16 + (this.field_P & 31)) * 3, var13, var14);
-                  if (this.field_V.c((byte) 89)) {
+                  if (this.field_V.isTurnFinished((byte) 89)) {
                     return;
                   }
                   DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var13, var14, this.field_P << 8, (4096 - 64 * Math.abs((this.field_P & 31) - 16)) * var10Lifetime4 / 32);
@@ -1860,7 +1860,7 @@ final class le {
               if (decompiledFrameRemainder0) {
                 var9_intLifetime4 = 32;
                 if (DropdownList.field_N == 4) {
-                  var9_intLifetime4 = var6.p(-8323);
+                  var9_intLifetime4 = var6.getSize(-8323);
                 }
                 if (DropdownList.field_N == 57) {
                   var9_intLifetime4 = 64;
@@ -1916,7 +1916,7 @@ final class le {
                 if (DropdownList.field_N == 118) {
                   var9_intLifetime4 = 100;
                 }
-                stackIn_144_0 = (this.field_V.a(false, var6, DropdownList.field_N, this.field_r, this.field_s)) ? 65280 : 16711680;
+                stackIn_144_0 = (this.field_V.isUnitInRange(false, var6, DropdownList.field_N, this.field_r, this.field_s)) ? 65280 : 16711680;
                 var10Lifetime5 = stackIn_144_0;
                 ce.field_m.a(true);
                 SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), -param2 + (var4_int >> 1), (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.field_y), (var4_int >> 1) + (-param2 + this.field_V.field_H));
@@ -1928,7 +1928,7 @@ final class le {
                 var14Lifetime1 = -(var9_intLifetime4 >> 1) + ((var4_int >> 1) + (-param2 + this.field_r));
                 SoftwareRasterizer.fillCircleAlpha(var13Lifetime1, var14Lifetime1, var9_intLifetime4 >> 1, var10Lifetime5, 128);
                 gn.a(var9_intLifetime4 >> 1, (byte) 73, Math.abs(-16 + (31 & this.field_P)) * 3 + 128, var13Lifetime1, var14Lifetime1);
-                if (this.field_V.c((byte) 89)) {
+                if (this.field_V.isTurnFinished((byte) 89)) {
                   return;
                 }
                 DualLinkDeque.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var13Lifetime1, var14Lifetime1, this.field_P << 8, var9_intLifetime4 * (4096 - 64 * Math.abs(-16 + (this.field_P & 31))) / 32);
@@ -1964,7 +1964,7 @@ final class le {
               if (114 == DropdownList.field_N) {
                 var9 = ScreenDisplayMode.field_i[6];
               }
-              stackIn_194_0 = (!this.field_V.a(DropdownList.field_N, var6.i((byte) 116), var6, (byte) 91, var6.f(45))) ? 16711680 : 65280;
+              stackIn_194_0 = (!this.field_V.canSummonAt(DropdownList.field_N, var6.getY((byte) 116), var6, (byte) 91, var6.getX(45))) ? 16711680 : 65280;
               var10Lifetime1 = stackIn_194_0;
               var11 = new Sprite(16 + var9.field_n, 16 + var9.field_w);
               var11.makeRasterTarget();
@@ -2064,14 +2064,14 @@ final class le {
             SceneTabbedPanel.field_Tb = new Sprite(640, 480);
           }
           SceneTabbedPanel.field_Tb.makeRasterTarget();
-          var2_int = wm.statusColour(this.field_V.a(-31497), (byte) -124);
-          var3 = ng.rankColour((byte) -124, this.field_V.a(-31497));
+          var2_int = wm.statusColour(this.field_V.getArenaTheme(-31497), (byte) -124);
+          var3 = ng.rankColour((byte) -124, this.field_V.getArenaTheme(-31497));
           GzipDecoder.field_a = var2_int;
           SocialListEntry.field_Lb = var3;
           SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, var2_int, var3);
-          if (null == LoginPanel.field_M[this.field_V.a(-31497)]) {
+          if (null == LoginPanel.field_M[this.field_V.getArenaTheme(-31497)]) {
             ue.field_d.field_f = 0;
-            af.loadIndexedSpriteByName(CachedArchiveProvider.formatTemplate(115, new String[]{Integer.toString(this.field_V.a(-31497))}, "background<%0>"), "", 19412, ue.field_d).drawScaled(0, 0, 640, 480);
+            af.loadIndexedSpriteByName(CachedArchiveProvider.formatTemplate(115, new String[]{Integer.toString(this.field_V.getArenaTheme(-31497))}, "background<%0>"), "", 19412, ue.field_d).drawScaled(0, 0, 640, 480);
           }
           if (param0 != 413355681) {
             this.field_S = 49;
@@ -2096,19 +2096,19 @@ final class le {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        ml var6 = null;
+        BattleUnit var6 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1 > -50) {
             this.field_p = -101;
           }
           var4_int = IntKeyLookup.field_g.field_nb;
-          var5 = this.field_V.g((byte) 115);
+          var5 = this.field_V.getUnits((byte) 115);
           if (var5 != null) {
-            var6 = (ml) (var5.first(12623));
+            var6 = (BattleUnit) (var5.first(12623));
             while (var6 != null) {
-              var6.a(2, -param2 + (var4_int >> 1), (EmailLoginCredentials.field_f >> 1) - param0);
-              var6 = (ml) (var5.next(0));
+              var6.drawSelectionHighlight(2, -param2 + (var4_int >> 1), (EmailLoginCredentials.field_f >> 1) - param0);
+              var6 = (BattleUnit) (var5.next(0));
             }
             return;
           }
@@ -2120,7 +2120,7 @@ final class le {
         }
     }
 
-    private final void a(byte param0, ml param1) {
+    private final void a(byte param0, BattleUnit param1) {
         int var15 = 0;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
@@ -2154,9 +2154,9 @@ final class le {
             var5 = this.field_c;
             var4 = this.field_e;
           }
-          var6 = param1.f(45);
-          var7 = param1.i((byte) 114);
-          var8 = param1.p(-8323);
+          var6 = param1.getX(45);
+          var7 = param1.getY((byte) 114);
+          var8 = param1.getSize(-8323);
           var9 = -var6 + var4;
           var10 = (var8 >> 1) - var7 + var5;
           var11 = (int)Math.sqrt((double)(var10 * var10 + var9 * var9));
@@ -2164,7 +2164,7 @@ final class le {
             var10 = -1;
             var11 = 1;
           }
-          if (!this.field_V.a(true)) {
+          if (!this.field_V.isAnimating(true)) {
             if (var9 <= 0) {
               param1.field_E = -1;
             } else {
@@ -2180,7 +2180,7 @@ final class le {
                 var10 = -1;
               }
             }
-            var12 = param1.p(param0 ^ 8324) / 2;
+            var12 = param1.getSize(param0 ^ 8324) / 2;
             for (var15 = 0; 100 > var15; var15++) {
               var16 = var12 + var15 / 4;
               var14 = -var12 + var10 * var16 / var11;
@@ -2245,9 +2245,9 @@ final class le {
         try {
           int var2_int = -52 / ((-45 - param0) / 63);
           he.field_e.writeOpcode((byte) -78, 63);
-          he.field_e.writeByte(this.field_V.n((byte) -75), (byte) -10);
-          this.field_V.e(true);
-          this.field_w.e(true);
+          he.field_e.writeByte(this.field_V.getRound((byte) -75), (byte) -10);
+          this.field_V.setAnimating(true);
+          this.field_w.setAnimating(true);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "le.SA(" + param0 + ')');
         }
@@ -2341,7 +2341,7 @@ final class le {
           if (this.field_ab) {
             fieldTemp$1 = this.field_p + 1;
             this.field_p = this.field_p + 1;
-            ClientException.a(this.field_V.n((byte) -75), this.field_R, (byte) 11, 158, this.field_r, this.field_h, this.field_bb, 0, fieldTemp$1);
+            ClientException.a(this.field_V.getRound((byte) -75), this.field_R, (byte) 11, 158, this.field_r, this.field_h, this.field_bb, 0, fieldTemp$1);
           }
           if (param0 != 2000) {
             this.field_T = false;
@@ -2356,7 +2356,7 @@ final class le {
     }
 
     private final void a(PacketBuffer param0, int param1, int param2) {
-        ml var5 = null;
+        BattleUnit var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -2372,12 +2372,12 @@ final class le {
           }
           if (this.field_k) {
             this.field_k = false;
-            this.field_V.a((byte) 112, this.field_w);
+            this.field_V.copyFrom((byte) 112, this.field_w);
             this.field_V.field_rb = FullscreenFocusCanvas.field_g;
             this.field_V.field_sb = cf.field_h;
             this.field_C = true;
-            this.field_bb = this.field_V.d(false);
-            var5 = this.field_V.a(this.field_V.d(false), true);
+            this.field_bb = this.field_V.getCurrentPlayer(false);
+            var5 = this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true);
             if (var5 == null) {
               this.field_m.clearTarget(0);
             } else {
@@ -2466,7 +2466,7 @@ final class le {
     }
 
     final void a(boolean param0, int param1) {
-        ml discarded$0 = null;
+        BattleUnit discarded$0 = null;
         try {
           if (param1 != -26449) {
             discarded$0 = this.q(-86);
@@ -2509,7 +2509,7 @@ final class le {
           param0 = param0 + ue.b((byte) -32);
           var7 = EmailLoginCredentials.field_j;
           var7Lifetime1 = IntKeyLookup.field_g.field_nb;
-          var8 = this.field_V.b(true);
+          var8 = this.field_V.getTerrainOffset(true);
           var6 = -(param3 + 240) * (-EmailLoginCredentials.field_j + 960) / 1440;
           var5_intLifetime1 = (EmailLoginCredentials.field_f - 1280) * (var8 + param0) / (2 * var8 + this.field_V.field_y);
           if (var6 > 0) {
@@ -2553,7 +2553,7 @@ final class le {
             SoftwareRasterizer.drawVerticalLine(var9Lifetime1, -param3 + this.field_V.field_H - (-(var7Lifetime1 >> 1) + var10Lifetime1), var10Lifetime1, 16448 | param2 >> 1);
           }
           if (param1 > -82) {
-            this.field_V = (nf) null;
+            this.field_V = (Battle) null;
           }
           for (var9Lifetime2 = 0; var9Lifetime2 < EmailLoginCredentials.field_f; var9Lifetime2++) {
             var10Lifetime2 = (int)Math.abs(Math.sin(3.141592653589793 * (double)(var9Lifetime2 + ge.field_r * 2 + param0) / 64.0) * 16.0);
@@ -2571,7 +2571,7 @@ final class le {
           }
           if (td.e(true) &&
             this.field_T) {
-            this.field_V.m((byte) 69).drawScaled((EmailLoginCredentials.field_f >> 1) - param0, -param3 + (var7Lifetime1 >> 1), this.field_V.field_y, this.field_V.field_H);
+            this.field_V.getTerrainMask((byte) 69).drawScaled((EmailLoginCredentials.field_f >> 1) - param0, -param3 + (var7Lifetime1 >> 1), this.field_V.field_y, this.field_V.field_H);
           } else {
             var9_ref_int__ = this.field_V.field_V.field_l;
             if (null != this.field_V.field_pb) {
@@ -2583,7 +2583,7 @@ final class le {
           if (null != this.field_V.field_V) {
             var9Lifetime3 = 0;
             var10Lifetime3 = 0;
-            var11 = this.field_V.m((byte) 69);
+            var11 = this.field_V.getTerrainMask((byte) 69);
             LoadingProgressDialog.field_tb = LoadingProgressDialog.field_tb + 1;
             if (-1 + this.field_V.field_y <= LoadingProgressDialog.field_tb) {
               LoadingProgressDialog.field_tb = 0;
@@ -2659,11 +2659,11 @@ final class le {
             this.d((byte) 118);
           }
           if (!this.field_k) {
-            this.field_V.a((byte) 88, this.field_w);
+            this.field_V.copyFrom((byte) 88, this.field_w);
           }
-          this.field_w.t(-111);
-          this.field_w.e((byte) 72);
-          this.field_w.f((byte) -20);
+          this.field_w.resetTurnState(-111);
+          this.field_w.runUntilIdle((byte) 72);
+          this.field_w.refreshUnits((byte) -20);
           if (this.field_k) {
             Checkbox.a(2);
           } else {
@@ -2692,9 +2692,9 @@ final class le {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_w.e(true);
+          this.field_w.setAnimating(true);
           if (!this.field_k) {
-            this.field_V.e(true);
+            this.field_V.setAnimating(true);
             this.field_z = 0;
           }
           if (param0 <= 11) {
@@ -2719,53 +2719,53 @@ final class le {
     private final void c(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        ml var3 = null;
+        BattleUnit var3 = null;
         IntrusiveDeque var4 = null;
-        mi var5 = null;
+        SpellProjectile var5 = null;
         int var6 = 0;
         IntrusiveDeque var7 = null;
-        ml var3Lifetime1;
+        BattleUnit var3Lifetime1;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var7 = this.field_V.g((byte) 68);
-          var3 = (ml) (var7.first(param0 + 20398));
+          var7 = this.field_V.getUnits((byte) 68);
+          var3 = (BattleUnit) (var7.first(param0 + 20398));
           while (var3 != null) {
-            if (var3.i(-52)) {
+            if (var3.hasPendingDamage(-52)) {
               this.field_m.followUnit(-105, var3);
               return;
             }
-            var3 = (ml) (var7.next(0));
+            var3 = (BattleUnit) (var7.next(0));
           }
           if (this.field_m.field_h != null &&
-            this.field_m.field_h.d(6)) {
+            this.field_m.field_h.canCollide(6)) {
             return;
           }
-          var4 = this.field_V.e(2);
-          var5 = (mi) (var4.first(param0 + 20398));
+          var4 = this.field_V.getCameraTargets(2);
+          var5 = (SpellProjectile) (var4.first(param0 + 20398));
           while (var5 != null) {
-            if (var5.d(6)) {
+            if (var5.canCollide(6)) {
               this.field_m.followProjectile(var5, -126);
               return;
             }
-            var5 = (mi) (var4.next(0));
+            var5 = (SpellProjectile) (var4.next(0));
           }
           if (null != this.field_m.field_d &&
-            this.field_m.field_d.f(true)) {
+            this.field_m.field_d.isMarkedForRemoval(true)) {
             return;
           }
-          var3Lifetime1 = (ml) (var7.first(12623));
+          var3Lifetime1 = (BattleUnit) (var7.first(12623));
           if (param0 != -7775) {
             this.field_j = 56;
           }
           while (var3Lifetime1 != null) {
-            if (var3Lifetime1.f(true)) {
+            if (var3Lifetime1.isMarkedForRemoval(true)) {
               this.field_m.followUnit(param0 ^ 7725, var3Lifetime1);
               return;
             }
-            var3Lifetime1 = (ml) (var7.next(0));
+            var3Lifetime1 = (BattleUnit) (var7.next(0));
           }
           if (this.field_m.field_d != null &&
-            this.field_m.field_d.y(17571) == this.field_V.d(false)) {
+            this.field_m.field_d.getOwnerId(17571) == this.field_V.getCurrentPlayer(false)) {
             return;
           }
           return;
@@ -2868,16 +2868,16 @@ final class le {
           if (EmptyPainter.field_b != null) {
             this.field_M = 2000;
           } else {
-            if (!this.field_V.a(true) &&
-              !this.field_V.c((byte) 89)) {
+            if (!this.field_V.isAnimating(true) &&
+              !this.field_V.isTurnFinished((byte) 89)) {
               this.field_M = 0 + 15 * this.field_M >> 4;
             } else {
               this.field_M = 2000;
             }
           }
           var4 = 0;
-          if (!this.field_V.c((byte) 89) &&
-            !this.field_V.k(-45) && (!SocketJs5Transport.field_r &&
+          if (!this.field_V.isTurnFinished((byte) 89) &&
+            !this.field_V.hasPendingActions(-45) && (!SocketJs5Transport.field_r &&
             !pn.a((byte) 110) ||
             !this.field_ab)) {
             var5 = this.field_V.field_y >> this.field_K;
@@ -2910,14 +2910,14 @@ final class le {
           boolean decompiledFrameRemainder0 = true;
           var6Lifetime1 = 64 - var2_int / 2 + this.field_V.field_H;
           this.a(var6Lifetime1, var5Lifetime1, true);
-          if ((this.field_V.d(false) == this.field_I &&
-            !(this.field_z <= 1) || !this.field_ab) && (!this.field_V.a(true))) {
+          if ((this.field_V.getCurrentPlayer(false) == this.field_I &&
+            !(this.field_z <= 1) || !this.field_ab) && (!this.field_V.isAnimating(true))) {
             if ((this.field_ab) &&
               (decompiledFrameRemainder0 = !(pn.a((byte) -51)))) {
               decompiledFrameRemainder0 = !(SocketJs5Transport.field_r);
             }
             if ((decompiledFrameRemainder0) &&
-              (!this.field_V.n(param0 + 4))) {
+              (!this.field_V.isTurnActive(param0 + 4))) {
               this.a(var4 != 0, (byte) 10);
               decompiledFrameRemainder1 = false;
             }
@@ -2926,7 +2926,7 @@ final class le {
             EmptyPainter.field_b = null;
             DropdownList.field_N = -1;
           }
-          if (this.field_V.c((byte) 89)) {
+          if (this.field_V.isTurnFinished((byte) 89)) {
             this.field_K = 4;
           }
           return;
@@ -2946,16 +2946,16 @@ final class le {
         String var6 = null;
         int var7 = 0;
         String var8 = null;
-        ml var9 = null;
+        BattleUnit var9 = null;
         String var6Lifetime1;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1 != -3) {
             discarded$0 = this.r(122);
           }
-          var9 = this.field_V.a(param2, true);
+          var9 = this.field_V.getUnitByOwner(param2, true);
           if ((var9 == null ||
-            !(0 >= ((this.field_J | this.field_a) & 1 << var9.y(17571)))) && (0 == param2 ||
+            !(0 >= ((this.field_J | this.field_a) & 1 << var9.getOwnerId(17571)))) && (0 == param2 ||
             !qg.a(-113) ||
             WhirlpoolHasher.field_k == 6)) {
             var5 = 16777215;
@@ -2974,9 +2974,9 @@ final class le {
                 var6Lifetime1 = CachedArchiveProvider.formatTemplate(param1 - 14, new String[]{var8}, BirthDateEntryPanel.field_Q);
               }
             }
-            mi.field_B.drawText(var6Lifetime1, 3, mi.field_B.field_C / 2 + (param0 + 8), 15790320 ^ (var5 | 15790320), 0);
-            mi.field_B.drawText(var6Lifetime1, 4, 8 + param0 + (mi.field_B.field_C / 2 - 1), 15790320 ^ (var5 | 15790320), 0);
-            mi.field_B.drawText(var6Lifetime1, 4, mi.field_B.field_C / 2 + (8 + param0), var5, -1);
+            SpellProjectile.field_B.drawText(var6Lifetime1, 3, SpellProjectile.field_B.field_C / 2 + (param0 + 8), 15790320 ^ (var5 | 15790320), 0);
+            SpellProjectile.field_B.drawText(var6Lifetime1, 4, 8 + param0 + (SpellProjectile.field_B.field_C / 2 - 1), 15790320 ^ (var5 | 15790320), 0);
+            SpellProjectile.field_B.drawText(var6Lifetime1, 4, SpellProjectile.field_B.field_C / 2 + (8 + param0), var5, -1);
             param0 += 18;
           }
           stackIn_21_0 = param0;
@@ -2988,7 +2988,7 @@ final class le {
         }
     }
 
-    private final void a(int param0, byte param1, ml param2, int param3) {
+    private final void a(int param0, byte param1, BattleUnit param2, int param3) {
         boolean discarded$0 = false;
         int var15 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -3015,9 +3015,9 @@ final class le {
             discarded$0 = this.j(-127);
           }
           var5_int = IntKeyLookup.field_g.field_nb;
-          var6 = param2.f(-99);
-          var7 = param2.i((byte) 120);
-          var8 = param2.p(-8323);
+          var6 = param2.getX(-99);
+          var7 = param2.getY((byte) 120);
+          var8 = param2.getSize(-8323);
           var9 = -var6 + param3;
           var10 = param0 - var7 + (var8 >> 1);
           var11 = (int)Math.sqrt((double)(var10 * var10 + var9 * var9));
@@ -3025,7 +3025,7 @@ final class le {
             var11 = 1;
             var10 = -1;
           }
-          if (!this.field_V.a(true)) {
+          if (!this.field_V.isAnimating(true)) {
             if (var9 > 0) {
               param2.field_E = 1;
             } else {
@@ -3096,7 +3096,7 @@ final class le {
         RuntimeException var2 = null;
         try {
           if (param0 < -26) {
-            stackIn_7_0 = !(this.field_V.d((byte) -128));
+            stackIn_7_0 = !(this.field_V.isBusy((byte) -128));
             return stackIn_7_0;
           }
           return false;
@@ -3122,14 +3122,14 @@ final class le {
         int var6 = 0;
         int var7 = 0;
         rb var8 = null;
-        ml var9 = null;
+        BattleUnit var9 = null;
         int var4Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (this.field_V.d(false) < 0 &&
-            !this.field_V.n(4)) {
+          if (this.field_V.getCurrentPlayer(false) < 0 &&
+            !this.field_V.isTurnActive(4)) {
             param1 = false;
           }
           this.field_o = false;
@@ -3137,7 +3137,7 @@ final class le {
             !pn.a((byte) 111) && (ri.field_b[69] ||
             ri.field_b[ao.field_f])) {
             this.field_t = false;
-            this.field_m.followUnit(-96, this.field_V.a(this.field_bb, true));
+            this.field_m.followUnit(-96, this.field_V.getUnitByOwner(this.field_bb, true));
           }
           if (0 < this.field_V.field_G) {
             this.field_V.field_G = this.field_V.field_G - 1;
@@ -3167,12 +3167,12 @@ final class le {
           LoginPanel.tickMessageTimer((byte) -49);
           if (dm.h((byte) 97)) {
             this.c((byte) -106);
-            if (!this.field_V.c((byte) 89) &&
-              this.field_V.n(4) &&
+            if (!this.field_V.isTurnFinished((byte) 89) &&
+              this.field_V.isTurnActive(4) &&
               mn.field_r != 3 &&
               -5 != mn.field_r &&
-              this.field_V.d(1)) {
-              var4 = this.field_V.d(false);
+              this.field_V.hasStats(1)) {
+              var4 = this.field_V.getCurrentPlayer(false);
               if (ResizableModalPanel.field_Y != null &&
                 ResizableModalPanel.field_Y.field_l) {
                 stackIn_50_0 = 1;
@@ -3229,13 +3229,13 @@ final class le {
               var8.field_i = false;
             }
           }
-          if (!this.field_V.c((byte) 89) &&
-            !this.field_V.k(103)) {
+          if (!this.field_V.isTurnFinished((byte) 89) &&
+            !this.field_V.hasPendingActions(103)) {
             if (this.field_C) {
               this.field_C = false;
-              this.field_V.f((byte) -20);
-              this.field_bb = this.field_V.d(false);
-              var9 = this.field_V.a(this.field_bb, param0);
+              this.field_V.refreshUnits((byte) -20);
+              this.field_bb = this.field_V.getCurrentPlayer(false);
+              var9 = this.field_V.getUnitByOwner(this.field_bb, param0);
               if (var9 != null) {
                 this.field_m.followUnit(-89, var9);
               } else {
@@ -3247,9 +3247,9 @@ final class le {
             if (this.field_w == null &&
               !this.field_F) {
               this.field_F = true;
-              this.field_V.f((byte) -20);
+              this.field_V.refreshUnits((byte) -20);
               if (!this.field_ab &&
-                this.field_V.b(this.field_J, -93)) {
+                this.field_V.isGameOver(this.field_J, -93)) {
                 if (!qg.a(-102)) {
                   gj.a(false, true, -1, mn.field_r);
                 } else {
@@ -3269,10 +3269,10 @@ final class le {
               this.field_G = true;
             }
           }
-          if (this.field_V.a(param0) &&
-            !this.field_V.c((byte) 89) &&
-            !this.field_V.n(4) &&
-            !this.field_V.k(-127) &&
+          if (this.field_V.isAnimating(param0) &&
+            !this.field_V.isTurnFinished((byte) 89) &&
+            !this.field_V.isTurnActive(4) &&
+            !this.field_V.hasPendingActions(-127) &&
             var3_int == 0 &&
             pb.field_m.isEmpty(true) &&
             !this.field_ab) {
@@ -3280,10 +3280,10 @@ final class le {
               this.field_t = false;
               this.c(false);
               if (StatefulTextPainter.field_p == 6 &&
-                this.field_V.d(false) != 0) {
+                this.field_V.getCurrentPlayer(false) != 0) {
                 hj.a(-20602);
               } else {
-                this.field_V.a(this.field_V.d(false), 157, (byte) 36, 0, 0, 0, 0, this.field_V.d(false), 0);
+                this.field_V.queueAction(this.field_V.getCurrentPlayer(false), 157, (byte) 36, 0, 0, 0, 0, this.field_V.getCurrentPlayer(false), 0);
               }
             } else {
               if (qg.a(-96)) {
@@ -3305,7 +3305,7 @@ final class le {
           fieldTemp$0 = this.field_x - 1;
           this.field_x = this.field_x - 1;
           if (fieldTemp$0 <= 0) {
-            if (this.field_W == this.field_V.n((byte) -75)) {
+            if (this.field_W == this.field_V.getRound((byte) -75)) {
               ResizableModalPanel.a(20, this.field_f, this.field_W);
             }
             this.field_x = 50;
@@ -3317,8 +3317,8 @@ final class le {
                 if (this.field_h > 0) {
                   this.i(2000);
                 }
-                if (!this.field_V.a(true) &&
-                  this.field_V.d(false) == this.field_I) {
+                if (!this.field_V.isAnimating(true) &&
+                  this.field_V.getCurrentPlayer(false) == this.field_I) {
                   this.a(-113);
                 }
               }
@@ -3349,7 +3349,7 @@ final class le {
     }
 
     private final void c(byte param0) {
-        nf stackIn_3_0 = null;
+        Battle stackIn_3_0 = null;
         boolean stackIn_3_1 = false;
         CameraFollowTarget stackIn_4_2 = null;
         RuntimeException decompiledCaughtException = null;
@@ -3363,7 +3363,7 @@ final class le {
           } else {
             stackIn_4_2 = this.field_m;
           }
-          ((nf) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param0 ^ -17);
+          ((Battle) (Object) stackIn_3_0).update(stackIn_3_1, stackIn_4_2, param0 ^ -17);
           if (param0 != -106) {
             var3 = (PacketBuffer) null;
             this.a(19, (PacketBuffer) null);
@@ -3537,7 +3537,7 @@ final class le {
     private final void d(boolean param0) {
         try {
           this.a(0, 0, 0, 0, 0, 0, -1, -118);
-          this.field_V.e(true);
+          this.field_V.setAnimating(true);
           if (param0) {
             this.field_Z = 120;
           }
@@ -3588,14 +3588,14 @@ final class le {
           }
           var3_int = param0.readUnsignedByte((byte) -99);
           if (!this.field_k) {
-            this.field_V.a((byte) 106, this.field_w);
+            this.field_V.copyFrom((byte) 106, this.field_w);
           }
-          this.field_w.b((byte) 88, var3_int);
-          this.field_w.e((byte) 72);
+          this.field_w.updateTurnTimer((byte) 88, var3_int);
+          this.field_w.runUntilIdle((byte) 72);
           if (this.field_k) {
             Checkbox.a(2);
           } else {
-            this.field_V.b((byte) 88, var3_int);
+            this.field_V.updateTurnTimer((byte) 88, var3_int);
           }
           this.field_o = true;
           return;
@@ -3625,8 +3625,8 @@ final class le {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        ml var6 = null;
-        ml var7_ref_ml = null;
+        BattleUnit var6 = null;
+        BattleUnit var7_ref_ml = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -3636,8 +3636,8 @@ final class le {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ml var16 = null;
-        ml var17 = null;
+        BattleUnit var16 = null;
+        BattleUnit var17 = null;
         int var8Lifetime1;
         int var9Lifetime1;
         int var13Lifetime1;
@@ -3659,52 +3659,52 @@ final class le {
           if (DropdownList.field_N == 78) {
             var5 += 64;
           }
-          var16 = this.field_V.a(this.field_bb, true);
+          var16 = this.field_V.getUnitByOwner(this.field_bb, true);
           var6 = var16;
           if (var16 == null ||
-            !(var16.m(-20357) > 0)) {
-            var17 = this.field_V.a(this.field_V.d(false), true);
+            !(var16.getDisplayedHealth(-20357) > 0)) {
+            var17 = this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true);
             var6 = var17;
             if (var17 != null) {
-              this.field_bb = var17.y(17571);
+              this.field_bb = var17.getOwnerId(17571);
             }
           }
           if (var6 == null &&
             this.field_ab &&
-            !this.field_V.a(true)) {
+            !this.field_V.isAnimating(true)) {
             this.a(36);
           }
           if (var6 != null &&
-            var6.w(param1 ^ 24511) == null &&
-            var6.y(17571) != this.field_V.d(false)) {
+            var6.getLinkedUnit(param1 ^ 24511) == null &&
+            var6.getOwnerId(17571) != this.field_V.getCurrentPlayer(false)) {
             var6 = this.q(param1 + 10771);
           }
           if (var6 != null &&
-            var6.w(24501) != null &&
-            37 != var6.o(-22625)) {
-            var7_ref_ml = this.field_V.a(this.field_V.d(false), true);
+            var6.getLinkedUnit(24501) != null &&
+            37 != var6.getType(-22625)) {
+            var7_ref_ml = this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true);
             if (var7_ref_ml != null &&
-              var7_ref_ml.i((byte) -32) > this.field_V.field_H) {
+              var7_ref_ml.getY((byte) -32) > this.field_V.field_H) {
               var6 = this.q(10781);
             }
           }
           if (var6 != null &&
-            null != var6.w(24501)) {
+            null != var6.getLinkedUnit(24501)) {
             if (!this.field_V.field_d) {
-              if (var6.g(false) != this.field_V.d(false)) {
+              if (var6.getTeam(false) != this.field_V.getCurrentPlayer(false)) {
                 var6 = this.q(10781);
               }
             } else {
-              if (var6.y(17571) != this.field_V.d(false) && (var6.w(24501) == null ||
-                var6.r(param1 - 132) != this.field_V.q((byte) -122))) {
+              if (var6.getOwnerId(17571) != this.field_V.getCurrentPlayer(false) && (var6.getLinkedUnit(24501) == null ||
+                var6.getSide(param1 - 132) != this.field_V.getCurrentSide((byte) -122))) {
                 var6 = this.q(10781);
               }
             }
           }
-          if ((!this.field_V.c((byte) 89) ||
-            this.field_V.j(39)) &&
-            (!this.field_V.k(-92) &&
-            !this.field_V.g(119) &&
+          if ((!this.field_V.isTurnFinished((byte) 89) ||
+            this.field_V.isWaitingForInput(39)) &&
+            (!this.field_V.hasPendingActions(-92) &&
+            !this.field_V.isFinished(119) &&
             1 < this.field_z)) {
             if (!this.field_ab) {
               stackIn_60_0 = 1;
@@ -3721,9 +3721,9 @@ final class le {
           var7 = stackIn_60_0;
           if (var6 != null) {
             boolean decompiledFrameRemainder3 = true;
-            if (var6.i((byte) 121) >= 128 + this.field_V.field_H) {
-              if (var6.m(param1 ^ -20367) > 0 &&
-                null == var6.w(24501)) {
+            if (var6.getY((byte) 121) >= 128 + this.field_V.field_H) {
+              if (var6.getDisplayedHealth(param1 ^ -20367) > 0 &&
+                null == var6.getLinkedUnit(24501)) {
                 if ((!(this.field_ab)) &&
                   (!(!qg.a(-92))) &&
                   ((StatefulTextPainter.field_p != 7))) {
@@ -3732,8 +3732,8 @@ final class le {
                 decompiledFrameRemainder3 = false;
               }
               else {
-                this.field_bb = this.field_V.d(false);
-                var6 = this.field_V.a(this.field_bb, true);
+                this.field_bb = this.field_V.getCurrentPlayer(false);
+                var6 = this.field_V.getUnitByOwner(this.field_bb, true);
                 EmptyPainter.field_b = null;
                 DropdownList.field_N = -1;
               }
@@ -3778,7 +3778,7 @@ final class le {
                   this.field_Y = 25;
                   var6 = this.q(10781);
                   if (var6 == null) {
-                    var6 = this.field_V.a(this.field_V.d(false), true);
+                    var6 = this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true);
                   }
                 }
               }
@@ -3795,7 +3795,7 @@ final class le {
                 }
                 this.field_h = this.field_h + 1;
                 this.field_R = 0;
-                var6.c(0, -1);
+                var6.setMarkerValue(0, -1);
                 this.field_m.followUnit(-80, var6);
                 EmptyPainter.field_b = null;
                 DropdownList.field_N = -1;
@@ -3816,7 +3816,7 @@ final class le {
                 }
                 this.field_R = 1;
                 this.field_h = this.field_h + 1;
-                var6.c(param1 - 10, 1);
+                var6.setMarkerValue(param1 - 10, 1);
                 this.field_m.followUnit(param1 ^ -106, var6);
                 EmptyPainter.field_b = null;
                 DropdownList.field_N = -1;
@@ -3827,7 +3827,7 @@ final class le {
             if (re.field_r == 1) {
               if (mf.field_g >= 0 &&
                 null != lm.field_f &&
-                this.field_V.a(lm.field_f[mf.field_g], true, this.field_bb)) {
+                this.field_V.canOwnerCast(lm.field_f[mf.field_g], true, this.field_bb)) {
                 DropdownList.field_N = lm.field_f[mf.field_g];
                 var8Lifetime1 = 9;
                 if (DropdownList.field_N / 12 <= 9) {
@@ -3858,13 +3858,13 @@ final class le {
                   }
                 }
                 if (this.field_V.field_X[this.field_I] < var8Lifetime1 &&
-                  this.field_V.a(this.field_V.d(false), true).m(-20357) > 20) {
+                  this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true).getDisplayedHealth(-20357) > 20) {
                   if (this.field_ab) {
                     fieldTemp$0 = this.field_p + 1;
                     this.field_p = this.field_p + 1;
-                    ClientException.a(this.field_V.n((byte) -75), 0, (byte) 11, 159, 0, 1, this.field_bb, 0, fieldTemp$0);
+                    ClientException.a(this.field_V.getRound((byte) -75), 0, (byte) 11, 159, 0, 1, this.field_bb, 0, fieldTemp$0);
                   }
-                  this.field_V.e(this.field_bb, false);
+                  this.field_V.onPlayerDefeated(this.field_bb, false);
                 }
               }
               if (mf.field_g < -1) {
@@ -3916,7 +3916,7 @@ final class le {
                   }
                 }
                 if (DropdownList.field_N >= 0 &&
-                  !this.field_V.c((byte) 89) &&
+                  !this.field_V.isTurnFinished((byte) 89) &&
                   FixedViewResizeListener.field_e[DropdownList.field_N] == 1 &&
                   this.field_s == -1000) {
                   this.field_u = 0;
@@ -3947,14 +3947,14 @@ final class le {
                   sm.field_e = null;
                 }
                 boolean decompiledFrameRemainder2 = true;
-                var9Lifetime1Lifetime2 = var6.f(-51);
-                var10 = var6.i((byte) 11);
-                var11 = var6.p(param1 ^ -8329);
+                var9Lifetime1Lifetime2 = var6.getX(-51);
+                var10 = var6.getY((byte) 11);
+                var11 = var6.getSize(param1 ^ -8329);
                 var12 = -var9Lifetime1Lifetime2 + var4;
                 var13 = -var10 + (var5 + (var11 >> 1));
                 var14 = (int)Math.sqrt((double)(var12 * var12 + var13 * var13));
                 if (0 <= DropdownList.field_N &&
-                  !this.field_V.c((byte) 89)) {
+                  !this.field_V.isTurnFinished((byte) 89)) {
                   if (FixedViewResizeListener.field_e[DropdownList.field_N] == 1 &&
                     -1000 == this.field_s) {
                     this.field_u = 0;
@@ -3962,7 +3962,7 @@ final class le {
                   if (FixedViewResizeListener.field_e[DropdownList.field_N] != 2 &&
                     FixedViewResizeListener.field_e[DropdownList.field_N] != 4) {
                     if (((FixedViewResizeListener.field_e[DropdownList.field_N] == 3)) &&
-                      (!(this.field_V.a(var6, var6.i((byte) -111), var6.f(param1 ^ -103), -129, DropdownList.field_N)))) {
+                      (!(this.field_V.isValidTarget(var6, var6.getY((byte) -111), var6.getX(param1 ^ -103), -129, DropdownList.field_N)))) {
                       this.field_u = 0;
                     }
                     decompiledFrameRemainder2 = false;
@@ -3970,7 +3970,7 @@ final class le {
                   else {
                     this.field_s = var4;
                     this.field_r = var5;
-                    if (!this.field_V.a(var6, this.field_r, this.field_s, -129, DropdownList.field_N)) {
+                    if (!this.field_V.isValidTarget(var6, this.field_r, this.field_s, -129, DropdownList.field_N)) {
                       this.field_u = 0;
                     }
                   }
@@ -3980,8 +3980,8 @@ final class le {
                   var14 = 1;
                 }
                 if (this.field_u > 0 &&
-                  !this.field_V.c((byte) 89)) {
-                  if (!this.field_V.a(true) &&
+                  !this.field_V.isTurnFinished((byte) 89)) {
+                  if (!this.field_V.isAnimating(true) &&
                     DropdownList.field_N >= 0) {
                     this.field_u = (int)Math.sqrt((double)(this.field_u * 32));
                     if (DropdownList.field_N != 87 &&
@@ -3991,7 +3991,7 @@ final class le {
                       154 != DropdownList.field_N &&
                       DropdownList.field_N != 139 &&
                       DropdownList.field_N != 152) {
-                      this.field_V.e(true);
+                      this.field_V.setAnimating(true);
                     }
                     if (this.field_ab) {
                       if (DropdownList.field_N == 4 ||
@@ -4004,15 +4004,15 @@ final class le {
                         this.i(2000);
                       }
                       if (FixedViewResizeListener.field_e[DropdownList.field_N] == 3) {
-                        this.a(DropdownList.field_N, var4, this.field_V.n((byte) -75), this.field_bb, var5, (byte) -30, var6.f(-80), var6.i((byte) 113), this.field_u);
+                        this.a(DropdownList.field_N, var4, this.field_V.getRound((byte) -75), this.field_bb, var5, (byte) -30, var6.getX(-80), var6.getY((byte) 113), this.field_u);
                       } else {
-                        this.a(DropdownList.field_N, var4, this.field_V.n((byte) -75), this.field_bb, var5, (byte) -30, this.field_s, this.field_r, this.field_u);
+                        this.a(DropdownList.field_N, var4, this.field_V.getRound((byte) -75), this.field_bb, var5, (byte) -30, this.field_s, this.field_r, this.field_u);
                       }
                       if (DropdownList.field_N != 87) {
                         DropdownList.field_N = -1;
                       }
                     } else {
-                      this.a(var5, DropdownList.field_N, this.field_r, var4, this.field_u, this.field_s, var6.y(17571), param1 ^ -65);
+                      this.a(var5, DropdownList.field_N, this.field_r, var4, this.field_u, this.field_s, var6.getOwnerId(17571), param1 ^ -65);
                       if (DropdownList.field_N != 87) {
                         DropdownList.field_N = -1;
                       }
@@ -4056,7 +4056,7 @@ final class le {
         }
     }
 
-    private final void a(ml param0, int param1) {
+    private final void a(BattleUnit param0, int param1) {
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -4077,19 +4077,19 @@ final class le {
               DropdownList.field_N == 137 ||
               DropdownList.field_N == 155) &&
               (!this.field_ab ||
-              this.field_V.d(false) == this.field_I))) {
+              this.field_V.getCurrentPlayer(false) == this.field_I))) {
               this.a((byte) -7, param0);
             }
             if ((0 == var3_int ||
               var3_int == 1 &&
               this.field_s != -1000) &&
               (!this.field_ab ||
-              this.field_V.d(false) == this.field_I)) {
+              this.field_V.getCurrentPlayer(false) == this.field_I)) {
               this.a(-110, param0);
             }
           }
           if (this.field_u > 0 && (!this.field_ab ||
-            this.field_V.d(false) == this.field_I)) {
+            this.field_V.getCurrentPlayer(false) == this.field_I)) {
             var3_intLifetime1 = this.field_e;
             var4 = this.field_c;
             if (DropdownList.field_N == 78) {
@@ -4128,8 +4128,8 @@ final class le {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ml var10 = null;
-        ml var11 = null;
+        BattleUnit var10 = null;
+        BattleUnit var11 = null;
         int var12 = 0;
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         try {
@@ -4145,13 +4145,13 @@ final class le {
           var7 = param1.readSignedShort(0);
           var8 = param1.readUnsignedByte((byte) -127);
           var9 = param1.readUnsignedByte((byte) -94);
-          this.field_w.a(this.field_w.d(false), var8, (byte) -107, var9, var4, var5, var7, var3_int, var6);
-          this.field_w.e((byte) 72);
+          this.field_w.queueAction(this.field_w.getCurrentPlayer(false), var8, (byte) -107, var9, var4, var5, var7, var3_int, var6);
+          this.field_w.runUntilIdle((byte) 72);
           if (!this.field_k) {
             if (var8 != 158 &&
               var8 != 159) {
               this.field_t = false;
-              this.field_V.a(this.field_V.d(false), var8, (byte) 11, var9, var4, var5, var7, var3_int, var6);
+              this.field_V.queueAction(this.field_V.getCurrentPlayer(false), var8, (byte) 11, var9, var4, var5, var7, var3_int, var6);
               if (((var8 != 6 &&
                 var8 != 79) || pb.field_m.isEmpty(true))) {
                 Scrollbar.queueTimedMessage(NameSuggestionsPanel.field_I + PasswordFieldPainter.field_w[var8], 8421504, (byte) -41);
@@ -4159,25 +4159,25 @@ final class le {
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (this.field_V.d(false) == this.field_I) {
+              if (this.field_V.getCurrentPlayer(false) == this.field_I) {
                 if (var4 == this.field_p &&
                   0 == this.field_h) {
-                  var10 = this.field_V.a(this.field_bb, true);
-                  var11 = this.field_w.a(this.field_bb, true);
+                  var10 = this.field_V.getUnitByOwner(this.field_bb, true);
+                  var11 = this.field_w.getUnitByOwner(this.field_bb, true);
                   if ((var10 != null ||
                     var11 != null) && (var10 == null ||
                     null == var11 ||
-                    var10.f(-118) != var11.f(72) ||
-                    var10.i((byte) -102) != var11.i((byte) 116) ||
-                    var10.o(-22625) != var11.o(-22625) ||
-                    var10.m(-20357) != var11.m(-20357))) {
-                    this.field_V.a((byte) 125, this.field_w);
-                    this.field_V.e((byte) 72);
-                    this.field_m.followUnit(-86, this.field_V.a(this.field_bb, true));
+                    var10.getX(-118) != var11.getX(72) ||
+                    var10.getY((byte) -102) != var11.getY((byte) 116) ||
+                    var10.getType(-22625) != var11.getType(-22625) ||
+                    var10.getDisplayedHealth(-20357) != var11.getDisplayedHealth(-20357))) {
+                    this.field_V.copyFrom((byte) 125, this.field_w);
+                    this.field_V.runUntilIdle((byte) 72);
+                    this.field_m.followUnit(-86, this.field_V.getUnitByOwner(this.field_bb, true));
                   }
                 }
               } else {
-                this.field_V.a(this.field_V.d(false), var8, (byte) 25, var9, var4, var5, var7, var3_int, var6);
+                this.field_V.queueAction(this.field_V.getCurrentPlayer(false), var8, (byte) 25, var9, var4, var5, var7, var3_int, var6);
                 if (var8 == 159) {
                   Scrollbar.queueTimedMessage(kj.field_b, 8421504, (byte) -117);
                 }
@@ -4227,7 +4227,7 @@ final class le {
         }
     }
 
-    private final void a(int param0, ml param1) {
+    private final void a(int param0, BattleUnit param1) {
         RuntimeException stackIn_108_0 = null;
         StringBuilder stackIn_108_1 = null;
         String stackIn_109_2 = null;
@@ -4267,9 +4267,9 @@ final class le {
             var4 = this.field_e;
             var5 = this.field_c;
           }
-          var6 = param1.f(54);
-          var7 = param1.i((byte) 108);
-          var8 = param1.p(-8323);
+          var6 = param1.getX(54);
+          var7 = param1.getY((byte) 108);
+          var8 = param1.getSize(-8323);
           var9 = -var6 + var4;
           var10 = (var8 >> 1) + (-var7 + var5);
           var11 = (int)Math.sqrt((double)(var9 * var9 + var10 * var10));
@@ -4333,7 +4333,7 @@ final class le {
             this.field_u > 0) {
             this.field_u = 100;
           }
-          if (!this.field_V.a(true)) {
+          if (!this.field_V.isAnimating(true)) {
             if (0 < var9) {
               param1.field_E = 1;
             } else {
@@ -4420,8 +4420,8 @@ final class le {
         RuntimeException var3 = null;
         try {
           var3_int = param0.readInt(-10674);
-          this.field_w.c(-1);
-          var4 = this.field_w.o(4);
+          this.field_w.advanceToNextPlayer(-1);
+          var4 = this.field_w.countUnitsWithDebugOverlay(4);
           if (param1 <= 47) {
             this.field_I = -95;
           }
@@ -4434,7 +4434,7 @@ final class le {
             ProxySocketConnector.closeActiveConnection(false);
           }
           if (!this.field_k) {
-            this.field_V.c(-1);
+            this.field_V.advanceToNextPlayer(-1);
             this.field_z = 0;
           }
           this.field_o = true;
@@ -4458,12 +4458,12 @@ final class le {
         int var4_int = 0;
         RuntimeException var4 = null;
         IntrusiveDeque var5 = null;
-        ml var6 = null;
+        BattleUnit var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ml var6Lifetime1;
+        BattleUnit var6Lifetime1;
         int var7Lifetime1;
         int var8Lifetime1;
         var10 = ArcanistsMulti.field_G ? 1 : 0;
@@ -4472,25 +4472,25 @@ final class le {
             return;
           }
           var4_int = IntKeyLookup.field_g.field_nb;
-          var5 = this.field_V.g((byte) 70);
+          var5 = this.field_V.getUnits((byte) 70);
           if (var5 == null) {
             return;
           }
-          var6 = (ml) (var5.first(param1 + 12623));
+          var6 = (BattleUnit) (var5.first(param1 + 12623));
           while (var6 != null) {
-            if (var6.y(17571) != this.field_bb) {
-              var6.c((var4_int >> 1) - param0, -param2 + (EmailLoginCredentials.field_f >> 1), 1703903841);
+            if (var6.getOwnerId(17571) != this.field_bb) {
+              var6.draw((var4_int >> 1) - param0, -param2 + (EmailLoginCredentials.field_f >> 1), 1703903841);
             }
-            var6 = (ml) (var5.next(0));
+            var6 = (BattleUnit) (var5.next(0));
           }
-          var6Lifetime1 = this.field_V.a(this.field_bb, true);
+          var6Lifetime1 = this.field_V.getUnitByOwner(this.field_bb, true);
           if (var6Lifetime1 != null) {
-            var6Lifetime1.c((var4_int >> 1) - param0, (EmailLoginCredentials.field_f >> 1) - param2, 1703903841);
+            var6Lifetime1.draw((var4_int >> 1) - param0, (EmailLoginCredentials.field_f >> 1) - param2, 1703903841);
             if (this.field_u == 0 &&
               -1 != DropdownList.field_N &&
               null == EmptyPainter.field_b) {
-              var7 = -param2 + (EmailLoginCredentials.field_f >> 1) + var6Lifetime1.f(-88);
-              var8 = -48 + (var4_int >> 1) - param0 + var6Lifetime1.i((byte) 115) + (-var6Lifetime1.p(-8323) - this.field_M);
+              var7 = -param2 + (EmailLoginCredentials.field_f >> 1) + var6Lifetime1.getX(-88);
+              var8 = -48 + (var4_int >> 1) - param0 + var6Lifetime1.getY((byte) 115) + (-var6Lifetime1.getSize(-8323) - this.field_M);
               SoftwareRasterizer.fillCircle(var7, var8, 20, 16777215);
               gn.a(20, (byte) 99, 192, var7, var8);
               SoftwareRasterizer.drawCircleOutline(var7, var8, 20, 0);
@@ -4499,15 +4499,15 @@ final class le {
             if (this.field_u == 0 &&
               DropdownList.field_N == -1 &&
               null == EmptyPainter.field_b) {
-              if (this.field_V.d(false) < 0) {
+              if (this.field_V.getCurrentPlayer(false) < 0) {
                 this.g(0);
                 this.a(var6Lifetime1, 98);
                 return;
               }
-              var7Lifetime1 = -param2 + ((EmailLoginCredentials.field_f >> 1) + var6Lifetime1.f(param1 ^ -82));
-              var8Lifetime1 = -64 + var6Lifetime1.i((byte) 117) + (-param0 + ((var4_int >> 1) - var6Lifetime1.p(-8323))) - this.field_M;
-              var9 = nj.field_n[this.field_V.d(false)];
-              if (this.field_V.d(false) >= 0) {
+              var7Lifetime1 = -param2 + ((EmailLoginCredentials.field_f >> 1) + var6Lifetime1.getX(param1 ^ -82));
+              var8Lifetime1 = -64 + var6Lifetime1.getY((byte) 117) + (-param0 + ((var4_int >> 1) - var6Lifetime1.getSize(-8323))) - this.field_M;
+              var9 = nj.field_n[this.field_V.getCurrentPlayer(false)];
+              if (this.field_V.getCurrentPlayer(false) >= 0) {
                 DualLinkDeque.field_b[3].drawTinted(var7Lifetime1 - 16, -(int)(Math.sin(3.14 * (double)this.field_P / 32.0) * 32.0) - 16 + var8Lifetime1, var9);
               }
             }
@@ -4522,37 +4522,37 @@ final class le {
         }
     }
 
-    private final ml q(int param0) {
-        ml stackIn_3_0 = null;
+    private final BattleUnit q(int param0) {
+        BattleUnit stackIn_3_0 = null;
         Object stackIn_6_0 = null;
         IntrusiveNode stackIn_13_0 = null;
-        ml stackIn_33_0 = null;
+        BattleUnit stackIn_33_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
-        ml var4 = null;
+        BattleUnit var4 = null;
         int var5 = 0;
-        ml var6 = null;
+        BattleUnit var6 = null;
         int var7 = 0;
-        ml var8 = null;
+        BattleUnit var8 = null;
         IntrusiveDeque var9 = null;
-        ml var10 = null;
+        BattleUnit var10 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var9 = this.field_V.g((byte) 85);
+          var9 = this.field_V.getUnits((byte) 85);
           var3 = this.field_bb;
-          var8 = this.field_V.a(var3, true);
+          var8 = this.field_V.getUnitByOwner(var3, true);
           var4 = var8;
           if (param0 != 10781) {
-            stackIn_3_0 = (ml) null;
+            stackIn_3_0 = (BattleUnit) null;
             return stackIn_3_0;
           }
           if (var8 == null) {
             stackIn_6_0 = null;
-            return (ml) (stackIn_6_0);
+            return (BattleUnit) (stackIn_6_0);
           }
           var5 = 0;
-          if (var8.i((byte) 127) >= this.field_V.field_H) {
+          if (var8.getY((byte) 127) >= this.field_V.field_H) {
             var5 = 1;
           }
           var6 = var8;
@@ -4562,46 +4562,46 @@ final class le {
             } else {
               stackIn_13_0 = var6.next;
             }
-            var10 = (ml) (stackIn_13_0);
+            var10 = (BattleUnit) (stackIn_13_0);
             if (var10 != var8) {
               if (var5 != 0 &&
-                !var10.t(34) &&
-                37 != var10.o(-22625)) {
+                !var10.hasNoLinkedUnit(34) &&
+                37 != var10.getType(-22625)) {
                 continue;
               }
               if (this.field_V.field_d) {
                 if (var10 == null ||
-                  ~var10.y(17571) != ~this.field_V.d(false)) {
-                  if (var10.w(24501) == null) {
+                  ~var10.getOwnerId(17571) != ~this.field_V.getCurrentPlayer(false)) {
+                  if (var10.getLinkedUnit(24501) == null) {
                     continue;
                   }
-                  if (var10.r(106) != this.field_V.q((byte) -115)) {
+                  if (var10.getSide(106) != this.field_V.getCurrentSide((byte) -115)) {
                     continue;
                   }
                 }
-                if (var10.o(param0 - 33406) == 12) {
+                if (var10.getType(param0 - 33406) == 12) {
                   continue;
                 }
                 var4 = var10;
-                this.field_bb = var10.y(param0 + 6790);
+                this.field_bb = var10.getOwnerId(param0 + 6790);
                 EmptyPainter.field_b = null;
                 DropdownList.field_N = -1;
-                var10.a((byte) -31, 0);
+                var10.playTypeSound((byte) -31, 0);
               } else {
                 if (var10 == null) {
                   continue;
                 }
-                if (var10.o(-22625) == 12) {
+                if (var10.getType(-22625) == 12) {
                   continue;
                 }
-                if (var10.g(false) != this.field_V.d(false)) {
+                if (var10.getTeam(false) != this.field_V.getCurrentPlayer(false)) {
                   continue;
                 }
                 var4 = var10;
-                this.field_bb = var10.y(17571);
+                this.field_bb = var10.getOwnerId(17571);
                 EmptyPainter.field_b = null;
                 DropdownList.field_N = -1;
-                var10.a((byte) 65, 0);
+                var10.playTypeSound((byte) 65, 0);
               }
             }
             break;
@@ -4618,11 +4618,11 @@ final class le {
 
     private final void c(boolean param0) {
         try {
-          this.field_V.b((byte) 88, this.field_J);
-          this.field_V.c(-1);
+          this.field_V.updateTurnTimer((byte) 88, this.field_J);
+          this.field_V.advanceToNextPlayer(-1);
           this.b(0);
           this.field_F = param0 ? true : false;
-          this.field_z = this.field_V.f(12955);
+          this.field_z = this.field_V.getThemeParameter(12955);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "le.R(" + param0 + ')');
         }
@@ -4636,51 +4636,51 @@ final class le {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        ml var7 = null;
+        BattleUnit var7 = null;
         try {
           var2_int = -50 + EmailLoginCredentials.field_f;
           var3 = 10;
           var4 = -1;
-          if (0 == this.field_V.a(param0 - 6154)) {
+          if (0 == this.field_V.getArenaTheme(param0 - 6154)) {
             var4 = 5;
           }
           if (param0 != -25343) {
-            var7 = (ml) null;
-            this.a(-125, (ml) null);
+            var7 = (BattleUnit) null;
+            this.a(-125, (BattleUnit) null);
           }
-          if (this.field_V.a(param0 ^ 6646) == 1) {
+          if (this.field_V.getArenaTheme(param0 ^ 6646) == 1) {
             var4 = 17;
           }
-          if (2 == this.field_V.a(param0 ^ 6646)) {
+          if (2 == this.field_V.getArenaTheme(param0 ^ 6646)) {
             var4 = 42;
           }
-          if (this.field_V.a(-31497) == 4) {
+          if (this.field_V.getArenaTheme(-31497) == 4) {
             var4 = 29;
           }
-          if (this.field_V.a(-31497) == 5) {
+          if (this.field_V.getArenaTheme(-31497) == 5) {
             var4 = 55;
           }
-          if (this.field_V.a(-31497) == 6) {
+          if (this.field_V.getArenaTheme(-31497) == 6) {
             var4 = 67;
           }
-          if (this.field_V.a(-31497) == 7) {
+          if (this.field_V.getArenaTheme(-31497) == 7) {
             var4 = 85;
           }
-          if (this.field_V.a(-31497) == 8) {
+          if (this.field_V.getArenaTheme(-31497) == 8) {
             var4 = 72;
           }
           if (var4 != -1) {
-            if (this.field_V.n((byte) -75) >= this.field_V.l(4)) {
+            if (this.field_V.getRound((byte) -75) >= this.field_V.getTurnTimeLimit(4)) {
               SoftwareRasterizer.fillRoundedRectangle(-4 + var2_int, -4 + var3, 48, 48, 8, 8323072);
               SoftwareRasterizer.fillRoundedRectangle(-2 + var2_int, var3 - 2, 44, 44, 6, 16711680);
               bb.field_g[var4].drawTransparent(var2_int, var3);
               return;
             }
-            var5 = 256 * (this.field_V.l(4) - this.field_V.n((byte) -75)) / this.field_V.l(4);
+            var5 = 256 * (this.field_V.getTurnTimeLimit(4) - this.field_V.getRound((byte) -75)) / this.field_V.getTurnTimeLimit(4);
             SoftwareRasterizer.fillRoundedRectangle(-4 + var2_int, var3 - 4, 48, 48, 8, 8355711);
             SoftwareRasterizer.fillRoundedRectangle(-2 + var2_int, var3 - 2, 44, 44, 6, 16777215);
             bb.field_g[var4].drawAlpha(var2_int, var3, -var5 + 256);
-            var6 = (-1 + this.field_V.l(4) + (-this.field_V.n((byte) -75) + this.field_V.s(0))) / this.field_V.s(0);
+            var6 = (-1 + this.field_V.getTurnTimeLimit(4) + (-this.field_V.getRound((byte) -75) + this.field_V.getPlayerCount(0))) / this.field_V.getPlayerCount(0);
             CachedArchiveProvider.field_t.drawParagraph(Integer.toString(var6), -4 + var2_int, -4 + (var3 - 1), 48, 48, 8355711, 0, 1, 1, CachedArchiveProvider.field_t.field_C);
             CachedArchiveProvider.field_t.drawParagraph(Integer.toString(var6), -5 + var2_int, -4 + var3, 48, 48, 8355711, 0, 1, 1, CachedArchiveProvider.field_t.field_C);
             CachedArchiveProvider.field_t.drawParagraph(Integer.toString(var6), -4 + var2_int, -4 + var3, 48, 48, 16777215, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
@@ -4715,12 +4715,12 @@ final class le {
                 Scrollbar.queueTimedMessage(NameSuggestionsPanel.field_I + PasswordFieldPainter.field_w[param1], 8421504, (byte) -103);
               }
             }
-            this.field_V.a(this.field_V.d(false), param1, (byte) 77, param4, param3, param0, param2, param6, param5);
+            this.field_V.queueAction(this.field_V.getCurrentPlayer(false), param1, (byte) 77, param4, param3, param0, param2, param6, param5);
           } else {
-            this.field_V.e(true);
+            this.field_V.setAnimating(true);
           }
           if (!qg.a(-127)) {
-            if (!this.field_V.b(this.field_J, -89)) {
+            if (!this.field_V.isGameOver(this.field_J, -89)) {
               return;
             }
             gj.a(false, true, -1, mn.field_r);
@@ -4762,12 +4762,12 @@ final class le {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_k = false;
-          this.field_V.a((byte) 72, this.field_w);
+          this.field_V.copyFrom((byte) 72, this.field_w);
           var3_int = param0.readByte(6);
           var4 = param0.readUnsignedByte((byte) -114);
-          this.field_V.a(var3_int, (byte) 63, var4);
+          this.field_V.beginTurn(var3_int, (byte) 63, var4);
           if (null != this.field_w) {
-            this.field_w.a(var3_int, (byte) 60, var4);
+            this.field_w.beginTurn(var3_int, (byte) 60, var4);
           }
           gj.a(false, true, param1, mn.field_r);
           this.field_o = true;
@@ -4834,13 +4834,13 @@ final class le {
           this.field_i = stackIn_7_1;
           this.field_I = param5;
           var15_int = param12;
-          this.field_V = new nf(false, false, param1, param2, param3, param4, param9, param10, param6, param7, param8, var15_int, param13);
+          this.field_V = new Battle(false, false, param1, param2, param3, param4, param9, param10, param6, param7, param8, var15_int, param13);
           this.field_V.field_H = 960;
           this.field_V.field_y = 1920;
           this.field_V.field_Hb = this.field_V.field_H >> 1;
           this.field_V.field_hb = this.field_V.field_y >> 1;
-          this.field_V.p(88);
-          this.field_V.c(true);
+          this.field_V.regenerateTerrain(88);
+          this.field_V.renderTerrainSprite(true);
           ue.a((byte) -117, this);
           this.field_W = -1;
           this.field_x = 0;
@@ -4854,9 +4854,9 @@ final class le {
             this.field_V.field_rb = FullscreenFocusCanvas.field_g;
           } else {
             CachedArchiveProvider.c(63);
-            this.field_w = new nf(false, false, param1, param2, param3, param4, param9, param10, param6, param7, param8, var15_int, param13);
-            this.field_w.p(63);
-            this.field_w.c(true);
+            this.field_w = new Battle(false, false, param1, param2, param3, param4, param9, param10, param6, param7, param8, var15_int, param13);
+            this.field_w.regenerateTerrain(63);
+            this.field_w.renderTerrainSprite(true);
             this.field_k = true;
             this.field_L = 0;
           }

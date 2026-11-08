@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class nf {
+final class Battle {
     int field_mb;
     private int field_w;
     private DualLinkDeque field_I;
@@ -98,7 +98,7 @@ final class nf {
     static SceneWidget field_A;
     static int[] field_Lb;
 
-    private final int c(int param0, boolean param1) {
+    private final int drawDebugOverlay(int param0, boolean param1) {
         boolean stackIn_10_0 = false;
         int stackIn_14_0 = 0;
         boolean stackIn_17_0 = false;
@@ -108,16 +108,16 @@ final class nf {
         boolean stackOut_16_0;
         int var3;
         IntrusiveDequeCursor var4;
-        ml var5_ref_ml;
-        mi var5_ref_mi;
+        BattleUnit var5_ref_ml;
+        SpellProjectile var5_ref_mi;
         int var5;
         int var6;
         int var7;
-        mi var5_ref_miLifetime1;
+        SpellProjectile var5_ref_miLifetime1;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         var3 = 0;
         var4 = new IntrusiveDequeCursor(this.field_i);
-        var5_ref_ml = (ml) (var4.first(-99));
+        var5_ref_ml = (BattleUnit) (var4.first(-99));
         while (true) {
           if (var5_ref_ml == null) {
             var4.setDeque((byte) 82, this.field_Kb);
@@ -131,46 +131,46 @@ final class nf {
               System.out.println("Health:" + var5_ref_ml.field_ib + " TYPE:" + var5_ref_ml.field_jb);
               System.out.println("TOWER HEALTH:" + var5_ref_ml.field_q);
             }
-            var5_ref_ml = (ml) (var4.next(-18502));
+            var5_ref_ml = (BattleUnit) (var4.next(-18502));
             continue;
           }
           break;
         }
-        var5_ref_mi = (mi) (var4.first(-60));
+        var5_ref_mi = (SpellProjectile) (var4.first(-60));
         while (true) {
           if (var5_ref_mi == null) {
             var4.setDeque((byte) 31, this.field_r);
             stackIn_14_0 = -104 / ((-60 - param0) / 40);
             break;
           }
-          stackOut_9_0 = var5_ref_mi.k(-36);
+          stackOut_9_0 = var5_ref_mi.isPersistentType(-36);
           stackIn_14_0 = stackOut_9_0 ? 1 : 0;
           stackIn_10_0 = stackOut_9_0;
           if (var7 == 0) {
             if (!stackIn_10_0) {
               var3 = var3 + ((var5_ref_mi.field_y + var5_ref_mi.field_H * 29) * (23 + var5_ref_mi.field_I) + (var5_ref_mi.field_o + 17) * 19 * var5_ref_mi.field_z);
             }
-            var5_ref_mi = (mi) (var4.next(-18502));
+            var5_ref_mi = (SpellProjectile) (var4.next(-18502));
             continue;
           }
           break;
         }
         var6 = stackIn_14_0;
-        var5_ref_miLifetime1 = (mi) (var4.first(-104));
+        var5_ref_miLifetime1 = (SpellProjectile) (var4.first(-104));
         while (true) {
           if (var5_ref_miLifetime1 == null) {
             var3 = var3 + this.field_mb;
             stackIn_22_0 = 999;
             break;
           }
-          stackOut_16_0 = var5_ref_miLifetime1.k(-83);
+          stackOut_16_0 = var5_ref_miLifetime1.isPersistentType(-83);
           stackIn_22_0 = stackOut_16_0 ? 1 : 0;
           stackIn_17_0 = stackOut_16_0;
           if (var7 == 0) {
             if (!stackIn_17_0) {
               var3 = var3 + (19 * (var5_ref_miLifetime1.field_z * (var5_ref_miLifetime1.field_o + 17)) + (23 + var5_ref_miLifetime1.field_I) * (var5_ref_miLifetime1.field_H * 29 + var5_ref_miLifetime1.field_y));
             }
-            var5_ref_miLifetime1 = (mi) (var4.next(-18502));
+            var5_ref_miLifetime1 = (SpellProjectile) (var4.next(-18502));
             continue;
           }
           break;
@@ -192,14 +192,14 @@ final class nf {
         return var3;
     }
 
-    final ml a(int param0, boolean param1) {
+    final BattleUnit getUnitByOwner(int param0, boolean param1) {
         if (!param1) {
           this.field_u = (boolean[]) null;
         }
-        return (ml) (this.field_B.get((long)param0, (byte) -87));
+        return (BattleUnit) (this.field_B.get((long)param0, (byte) -87));
     }
 
-    final boolean b(int param0, int param1, int param2, Sprite param3) {
+    final boolean spriteOverlapsTerrain(int param0, int param1, int param2, Sprite param3) {
         RuntimeException var5 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -208,7 +208,7 @@ final class nf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 2) {
-            nf.releaseStatics(-29);
+            Battle.releaseStatics(-29);
           }
           stackIn_3_0 = fk.a(this, param0, this.field_Jb, param2, (byte) -1, param3);
           return stackIn_3_0;
@@ -226,7 +226,7 @@ final class nf {
         }
     }
 
-    private final void b(byte param0) {
+    private final void drawThemeBackground(byte param0) {
         int stackIn_19_0 = 0;
         int stackIn_19_1 = 0;
         int stackIn_23_0 = 0;
@@ -433,7 +433,7 @@ final class nf {
         }
     }
 
-    private final void a(int[] param0, IsaacRandom param1, byte param2) {
+    private final void placeTerrainDecorations(int[] param0, IsaacRandom param1, byte param2) {
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         byte stackIn_9_1 = 0;
@@ -648,7 +648,7 @@ final class nf {
                     var17 = 0;
                   }
                   var5.toRgbSprite().drawRotatedAboutPivot(var5.field_h / 2 + var5.field_j << 4, var16 << 4, 4096, 4096, var15 << 3, 4096);
-                  this.a(false, -256 + var8, this.field_V, var17 != 0, -256 + var14, var7);
+                  this.stampSpriteMask(false, -256 + var8, this.field_V, var17 != 0, -256 + var14, var7);
                   if (26 == var4_int) {
                     var8 += 24;
                   }
@@ -691,13 +691,13 @@ final class nf {
         }
     }
 
-    final void t(int param0) {
+    final void resetTurnState(int param0) {
         int[] dupTemp$0 = null;
         int var2;
         int var3;
         int var4;
         int var5;
-        ml var6;
+        BattleUnit var6;
         int var7;
         int var3Lifetime1;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
@@ -715,7 +715,7 @@ final class nf {
           while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (this.field_q > var5) {
-              var6 = this.a(var5, true);
+              var6 = this.getUnitByOwner(var5, true);
               if (var7 == 0) {
                 if (var6 != null &&
                   var6.field_ib > 0) {
@@ -754,8 +754,8 @@ final class nf {
             break;
           }
         }
-        if (this.field_jb >= this.l(4)) {
-          this.i(-17837);
+        if (this.field_jb >= this.getTurnTimeLimit(4)) {
+          this.generateArenaFeatures(-17837);
         }
         var3Lifetime1 = 0;
         while (var3Lifetime1 < 16) {
@@ -774,25 +774,25 @@ final class nf {
           }
           break;
         }
-        this.o((byte) 69);
+        this.updateCurrentTurn((byte) 69);
         return;
     }
 
-    final int d(boolean param0) {
+    final int getCurrentPlayer(boolean param0) {
         if (param0) {
           return -114;
         }
         return this.field_J;
     }
 
-    final boolean d(int param0) {
+    final boolean hasStats(int param0) {
         if (param0 != 1) {
-          this.a(false, (ml) null, 79, -2, -47);
+          this.isUnitInRange(false, (BattleUnit) null, 79, -2, -47);
         }
         return this.field_fb != null ? true : false;
     }
 
-    private final int[] c(IsaacRandom param0, int param1) {
+    private final int[] generateSixPointProfile(IsaacRandom param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -916,15 +916,15 @@ final class nf {
             if (null != DropdownList.field_I) {
               this.field_V.field_l = DropdownList.field_I[this.field_O].field_l;
             }
-            this.a(0, 120, mn.field_y, 0, this.field_V);
+            this.stampShapeWithMask(0, 120, mn.field_y, 0, this.field_V);
             var21 = SocketConnector.field_j[0 + this.field_O * 8];
-            this.a(false, -32 + (var34[0] - 128), this.field_V, true, -var35[0] + (this.field_H - 256) - 120, var21.toRgbSprite());
+            this.stampSpriteMask(false, -32 + (var34[0] - 128), this.field_V, true, -var35[0] + (this.field_H - 256) - 120, var21.toRgbSprite());
             var22 = SocketConnector.field_j[this.field_O * 8 + 1];
-            this.a(false, -96 + var34[3], this.field_V, true, -376 + (this.field_H - var35[3]), var22.toRgbSprite());
+            this.stampSpriteMask(false, -96 + var34[3], this.field_V, true, -376 + (this.field_H - var35[3]), var22.toRgbSprite());
             var23 = SocketConnector.field_j[3 + this.field_O * 8];
-            this.a(false, var34[4] - 128, this.field_V, true, -32 + (-256 + this.field_H) - var35[4], var23.toRgbSprite());
+            this.stampSpriteMask(false, var34[4] - 128, this.field_V, true, -32 + (-256 + this.field_H) - var35[4], var23.toRgbSprite());
             var24 = var23.copyFlippedHorizontal();
-            this.a(false, -128 + var34[2], this.field_V, true, -256 + this.field_H + (-var35[2] - param1), var24.toRgbSprite());
+            this.stampSpriteMask(false, -128 + var34[2], this.field_V, true, -256 + this.field_H + (-var35[2] - param1), var24.toRgbSprite());
             var10 = 0;
             do {
               if (var10 >= 3) {
@@ -932,20 +932,20 @@ final class nf {
                 break;
               }
               var25 = SocketConnector.field_j[8 * this.field_O + 2];
-              this.a(false, 3 + (var34[var10] - 128), this.field_V, true, -256 + this.field_H - var35[var10], var25.toRgbSprite());
+              this.stampSpriteMask(false, 3 + (var34[var10] - 128), this.field_V, true, -256 + this.field_H - var35[var10], var25.toRgbSprite());
               var26 = SocketConnector.field_j[ScreenDisplayMode.a(param0, 4, (byte) -39) - (-4 - this.field_O * 8)];
-              this.a(false, -192 + var34[var10] + 3, this.field_V, true, -160 + this.field_H, var26.toRgbSprite());
+              this.stampSpriteMask(false, -192 + var34[var10] + 3, this.field_V, true, -160 + this.field_H, var26.toRgbSprite());
               var27 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -100) + this.field_O * 8)];
-              this.a(false, 3 + (-64 + var34[var10]), this.field_V, true, this.field_H - 160, var27.toRgbSprite());
+              this.stampSpriteMask(false, 3 + (-64 + var34[var10]), this.field_V, true, this.field_H - 160, var27.toRgbSprite());
               var10++;
             } while (var18 == 0);
             while (var10 < 6) {
               var28 = SocketConnector.field_j[this.field_O * 8 + 2];
-              this.a(false, 3 + var34[var10] - 128, this.field_V, true, -256 + (this.field_H - var35[var10]), var28.toRgbSprite());
+              this.stampSpriteMask(false, 3 + var34[var10] - 128, this.field_V, true, -256 + (this.field_H - var35[var10]), var28.toRgbSprite());
               var29 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -56) + this.field_O * 8)];
-              this.a(false, 3 + (var34[var10] - 192), this.field_V, true, -160 + this.field_H, var29.toRgbSprite());
+              this.stampSpriteMask(false, 3 + (var34[var10] - 192), this.field_V, true, -160 + this.field_H, var29.toRgbSprite());
               var30 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -127) + 8 * this.field_O)];
-              this.a(false, 3 + (var34[var10] - 64), this.field_V, true, this.field_H - 160, var30.toRgbSprite());
+              this.stampSpriteMask(false, 3 + (var34[var10] - 64), this.field_V, true, this.field_H - 160, var30.toRgbSprite());
               var10++;
               if (var18 == 0) {
                 continue;
@@ -981,15 +981,15 @@ final class nf {
                   var40[var12] = var14;
                   var41[var12] = var15;
                   var12++;
-                  this.a(false, var14, this.field_V, false, var15, var33.toRgbSprite());
+                  this.stampSpriteMask(false, var14, this.field_V, false, var15, var33.toRgbSprite());
                 }
                 var13++;
                 continue scanLoop2;
               }
               break;
             }
-            this.a(0, 121, this.field_V, 0, mn.field_y);
-            this.b((byte) 5);
+            this.stampShapeWithMask(0, 121, this.field_V, 0, mn.field_y);
+            this.drawThemeBackground((byte) 5);
             stackIn_62_0 = null;
             return (int[]) (stackIn_62_0);
           }
@@ -1007,7 +1007,7 @@ final class nf {
         }
     }
 
-    private final void a(int[] param0, byte param1) {
+    private final void rasterizeTerrainProfile(int[] param0, byte param1) {
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
@@ -1261,22 +1261,22 @@ final class nf {
         }
     }
 
-    final void a(byte param0, nf param1) {
-        ml stackIn_54_0 = null;
+    final void copyFrom(byte param0, Battle param1) {
+        BattleUnit stackIn_54_0 = null;
         Object stackIn_59_0 = null;
         RuntimeException stackIn_104_0 = null;
         StringBuilder stackIn_104_1 = null;
         String stackIn_105_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ml stackOut_53_0;
+        BattleUnit stackOut_53_0;
         int var3_int = 0;
-        ml var3 = null;
-        mi var3_ref = null;
+        BattleUnit var3 = null;
+        SpellProjectile var3_ref = null;
         RuntimeException var3_ref2 = null;
-        mi var4 = null;
+        SpellProjectile var4 = null;
         int var5 = 0;
-        ml var6 = null;
-        ml var7 = null;
+        BattleUnit var6 = null;
+        BattleUnit var7 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1.field_Jb == null) {
@@ -1322,24 +1322,24 @@ final class nf {
                 continue;
               }
             } else {
-              var3 = (ml) (this.field_i.first(12623));
+              var3 = (BattleUnit) (this.field_i.first(12623));
               while (true) {
                 if (var3 != null) {
                   var3.unlink(true);
                   var3.unlinkSecondary((byte) 88);
-                  var3 = (ml) (this.field_i.next(0));
+                  var3 = (BattleUnit) (this.field_i.next(0));
                   if (var5 == 0) {
                     continue;
                   }
                 } else {
-                  var3_ref = (mi) (this.field_Kb.first(12623));
+                  var3_ref = (SpellProjectile) (this.field_Kb.first(12623));
                   do {
                     if (var3_ref == null) {
-                      var3_ref = (mi) (this.field_r.first(12623));
+                      var3_ref = (SpellProjectile) (this.field_r.first(12623));
                       break;
                     }
-                    var3_ref.f(0);
-                    var3_ref = (mi) (this.field_Kb.next(0));
+                    var3_ref.remove(0);
+                    var3_ref = (SpellProjectile) (this.field_Kb.next(0));
                   } while (var5 == 0);
                   do {
                     if (var3_ref == null) {
@@ -1347,34 +1347,34 @@ final class nf {
                       this.field_r.clear(3);
                       break;
                     }
-                    var3_ref.f(0);
-                    var3_ref = (mi) (this.field_r.next(0));
+                    var3_ref.remove(0);
+                    var3_ref = (SpellProjectile) (this.field_r.next(0));
                   } while (var5 == 0);
-                  var3 = (ml) (param1.field_i.first(12623));
+                  var3 = (BattleUnit) (param1.field_i.first(12623));
                 }
                 break;
               }
               do {
                 if (var3 == null) {
-                  var3 = (ml) (this.field_i.first(12623));
+                  var3 = (BattleUnit) (this.field_i.first(12623));
                   break;
                 }
-                var6 = var3.a(this, (byte) 59);
+                var6 = var3.copyForBattle(this, (byte) 59);
                 this.field_i.addLast(var6, -1);
                 this.field_B.put(var6, (long)var6.field_T, (byte) 121);
-                var3 = (ml) (param1.field_i.next(0));
+                var3 = (BattleUnit) (param1.field_i.next(0));
               } while (var5 == 0);
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
-                stackOut_53_0 = param1.a(var3.field_T, true);
+                stackOut_53_0 = param1.getUnitByOwner(var3.field_T, true);
                 stackIn_59_0 = stackOut_53_0;
                 stackIn_54_0 = stackOut_53_0;
                 if (var5 == 0) {
                   var7 = stackIn_54_0;
                   if (null != var7.field_s) {
-                    var3.field_s = this.a(var7.field_s.field_T, true);
+                    var3.field_s = this.getUnitByOwner(var7.field_s.field_T, true);
                   }
-                  var3 = (ml) (this.field_i.next(0));
+                  var3 = (BattleUnit) (this.field_i.next(0));
                   continue;
                 }
                 break;
@@ -1382,15 +1382,15 @@ final class nf {
               if (decompiledNaturalLoopExit0) {
                 stackIn_59_0 = param1.field_Kb.first(12623);
               }
-              var3_ref = (mi) (stackIn_59_0);
+              var3_ref = (SpellProjectile) (stackIn_59_0);
               do {
                 if (var3_ref == null) {
-                  var3_ref = (mi) (param1.field_r.first(12623));
+                  var3_ref = (SpellProjectile) (param1.field_r.first(12623));
                   break;
                 }
-                var4 = var3_ref.b(21310, this);
+                var4 = var3_ref.copyForBattle(21310, this);
                 this.field_Kb.addLast(var4, -1);
-                var3_ref = (mi) (param1.field_Kb.next(0));
+                var3_ref = (SpellProjectile) (param1.field_Kb.next(0));
               } while (var5 == 0);
               do {
                 if (var3_ref == null) {
@@ -1405,9 +1405,9 @@ final class nf {
                   }
                   break;
                 }
-                var4 = var3_ref.b(21310, this);
+                var4 = var3_ref.copyForBattle(21310, this);
                 this.field_r.addLast(var4, -1);
-                var3_ref = (mi) (param1.field_r.next(0));
+                var3_ref = (SpellProjectile) (param1.field_r.next(0));
               } while (var5 == 0);
               throw new RuntimeException();
             }
@@ -1492,12 +1492,12 @@ final class nf {
         }
     }
 
-    final void h(byte param0) {
+    final void clearFirstPlayerSlots(byte param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != 19) {
-          this.a(103, (ml) null);
+          this.stampUnitMask(103, (BattleUnit) null);
         }
         var2 = 0;
         while (var2 < 16) {
@@ -1512,23 +1512,23 @@ final class nf {
         }
     }
 
-    final int h(int param0) {
+    final int nextUnitId(int param0) {
         if (param0 >= -69) {
-          this.a(118, (ml) null);
+          this.stampUnitMask(118, (BattleUnit) null);
         }
         int fieldTemp$0 = this.field_nb;
         this.field_nb = this.field_nb + 1;
         return fieldTemp$0;
     }
 
-    final int f(int param0) {
+    final int getThemeParameter(int param0) {
         if (param0 != 12955) {
           this.field_N = (int[][]) null;
         }
         return gj.field_a[this.field_F];
     }
 
-    private final int[] a(int param0, IsaacRandom param1) {
+    private final int[] generateTenPointProfile(int param0, IsaacRandom param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1606,7 +1606,7 @@ final class nf {
                 continue;
               }
             }
-            this.a(var5, (byte) -121);
+            this.rasterizeTerrainProfile(var5, (byte) -121);
             stackIn_25_0 = var5;
             return stackIn_25_0;
           }
@@ -1624,7 +1624,7 @@ final class nf {
         }
     }
 
-    final void b(int param0, boolean param1, int param2) {
+    final void startTurn(int param0, boolean param1, int param2) {
         int[] discarded$1 = null;
         int var4 = 0;
         int var5 = 0;
@@ -1670,39 +1670,39 @@ final class nf {
           stackIn_15_0 = param1 ? 1 : 0;
         }
         if (stackIn_15_0 != 1) {
-          discarded$1 = this.d(67, (IsaacRandom) null);
+          discarded$1 = this.generateTwentyPointLowProfile(67, (IsaacRandom) null);
         }
     }
 
-    final void f(byte param0) {
-        ml var2;
+    final void refreshUnits(byte param0) {
+        BattleUnit var2;
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         ValidationStatusIcon.field_J.setDeque((byte) 72, this.field_i);
         if (param0 != -20) {
           return;
         }
-        var2 = (ml) (ValidationStatusIcon.field_J.first(-64));
+        var2 = (BattleUnit) (ValidationStatusIcon.field_J.first(-64));
         while (var2 != null) {
           if (var3 == 0) {
             if (~var2.field_u == ~this.field_J) {
               var2.field_D = false;
             }
-            var2 = (ml) (ValidationStatusIcon.field_J.next(param0 - 18482));
+            var2 = (BattleUnit) (ValidationStatusIcon.field_J.next(param0 - 18482));
             continue;
           }
           break;
         }
     }
 
-    final boolean g(int param0) {
+    final boolean isFinished(int param0) {
         if (param0 < 115) {
-          this.e((byte) 27);
+          this.runUntilIdle((byte) 27);
         }
         return this.field_Mb;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setSpellSlot(int param0, int param1, int param2, int param3, int param4) {
         this.field_v[param0][param1] = param4;
         if (param3 < 12) {
           this.field_X = (int[]) null;
@@ -1711,18 +1711,18 @@ final class nf {
         this.field_lb[param0][param1] = 0;
     }
 
-    final void a(ml param0, int param1) {
+    final void a(BattleUnit param0, int param1) {
         try {
           ContextActionMenu.a(-(param0.field_Y >> 1) + param0.field_lb, this, (byte) 0, param0.field_db - param0.field_Y, 21374, param0.field_w, this.field_Jb);
           if (param1 != 0) {
-            this.a((int[]) null, (byte) 67);
+            this.rasterizeTerrainProfile((int[]) null, (byte) 67);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void c(int param0) {
+    final void advanceToNextPlayer(int param0) {
         int var2;
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
@@ -1740,7 +1740,7 @@ final class nf {
               this.field_jb = this.field_jb + 1;
               this.field_J = (this.field_J + 1) % this.field_q;
               do {
-                if (this.a(this.field_J, true) == null) {
+                if (this.getUnitByOwner(this.field_J, true) == null) {
                   continue scanLoop2;
                 }
               } while (var3 != 0);
@@ -1754,7 +1754,7 @@ final class nf {
               this.field_J = (this.field_J + 2) % this.field_q;
               this.field_jb = this.field_jb + 1;
               do {
-                if (this.a(this.field_J, true) == null) {
+                if (this.getUnitByOwner(this.field_J, true) == null) {
                   continue scanLoop3;
                 }
               } while (var3 != 0);
@@ -1766,7 +1766,7 @@ final class nf {
             this.field_jb = this.field_jb + 1;
             this.field_J = (this.field_J + 1) % this.field_q;
             do {
-              if (this.a(this.field_J, true) == null) {
+              if (this.getUnitByOwner(this.field_J, true) == null) {
                 continue scanLoop4;
               }
             } while (var3 != 0);
@@ -1776,7 +1776,7 @@ final class nf {
         this.field_Cb = var2;
     }
 
-    final boolean a(int param0, int param1, byte param2, ml param3) {
+    final boolean canPlaceUnitAt(int param0, int param1, byte param2, BattleUnit param3) {
         boolean discarded$3 = false;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -1786,12 +1786,12 @@ final class nf {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.p(-8323);
+          var5_int = param3.getSize(-8323);
           if (var5_int <= param0 &&
             param0 <= (-var5_int + this.field_y) &&
             param1 >= var5_int &&
             -16 + this.field_H >= param1) {
-            discarded$3 = this.a(param0, var5_int >> 1, this.field_H - 16, -59);
+            discarded$3 = this.circleHitsTerrain(param0, var5_int >> 1, this.field_H - 16, -59);
             if (param2 != -75) {
               this.field_i = (IntrusiveDeque) null;
             }
@@ -1813,28 +1813,28 @@ final class nf {
         }
     }
 
-    final IntrusiveDeque g(byte param0) {
+    final IntrusiveDeque getUnits(byte param0) {
         if (param0 <= 33) {
-          this.p(-3);
+          this.regenerateTerrain(-3);
         }
         return this.field_i;
     }
 
-    final boolean c(byte param0) {
+    final boolean isTurnFinished(byte param0) {
         if (param0 != 89) {
-          this.b(-39, (ml) null, 42, -60);
+          this.canStandAt(-39, (BattleUnit) null, 42, -60);
         }
         return this.field_Gb;
     }
 
-    final int a(byte param0, int param1) {
+    final int getPlayerStat(byte param0, int param1) {
         if (param0 < 97) {
-          this.a(55, -107, -93, -42, -41);
+          this.setSpellSlot(55, -107, -93, -42, -41);
         }
         return this.field_fb[param1];
     }
 
-    final int l(int param0) {
+    final int getTurnTimeLimit(int param0) {
         if (7 == this.field_O &&
           Js5Transport.isFeatureEnabled(0, (byte) -52)) {
           return 0;
@@ -1845,7 +1845,7 @@ final class nf {
         return 10 * this.field_q;
     }
 
-    private final int[] b(IsaacRandom param0, int param1) {
+    private final int[] generateSevenPointLowProfile(IsaacRandom param0, int param1) {
         int[] stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
@@ -1943,7 +1943,7 @@ final class nf {
                 }
                 break;
               }
-              this.a(var5, (byte) -107);
+              this.rasterizeTerrainProfile(var5, (byte) -107);
             }
             stackIn_21_0 = 2;
             stackIn_21_1 = 7;
@@ -2073,14 +2073,14 @@ final class nf {
         }
     }
 
-    final int s(int param0) {
+    final int getPlayerCount(int param0) {
         if (param0 != 0) {
-          this.h(114);
+          this.nextUnitId(114);
         }
         return this.field_q;
     }
 
-    final boolean a(int param0, ml param1, int param2, int param3) {
+    final boolean canTargetPoint(int param0, BattleUnit param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_12_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -2099,7 +2099,7 @@ final class nf {
             if ((this.field_H - ByteStorage.field_e.field_w) < param3) {
               return false;
             }
-            stackIn_12_0 = !(this.b(param3, 2, param0, ByteStorage.field_e));
+            stackIn_12_0 = !(this.spriteOverlapsTerrain(param3, 2, param0, ByteStorage.field_e));
             return stackIn_12_0;
           }
           return false;
@@ -2117,12 +2117,12 @@ final class nf {
         }
     }
 
-    final IntrusiveDeque e(int param0) {
+    final IntrusiveDeque getCameraTargets(int param0) {
         int var2 = -15 / ((-54 - param0) / 34);
         return this.field_Kb;
     }
 
-    final boolean a(int param0, int param1, ml param2, byte param3, int param4) {
+    final boolean canSummonAt(int param0, int param1, BattleUnit param2, byte param3, int param4) {
         boolean discarded$0 = false;
         boolean discarded$1 = false;
         RuntimeException stackIn_31_0 = null;
@@ -2154,11 +2154,11 @@ final class nf {
           if (param1 < var6.field_w + 2) {
             return false;
           }
-          discarded$0 = this.a(param2, var6, 0, param1 - var6.field_w, -(var6.field_n / 2) + param4);
+          discarded$0 = this.unitSpriteHitsTerrain(param2, var6, 0, param1 - var6.field_w, -(var6.field_n / 2) + param4);
           if (jo.field_b) {
             return false;
           }
-          discarded$1 = this.a(param2, var6, 0, 2 + (param1 - var6.field_w), param4 - var6.field_n / 2);
+          discarded$1 = this.unitSpriteHitsTerrain(param2, var6, 0, 2 + (param1 - var6.field_w), param4 - var6.field_n / 2);
           if (jo.field_b) {
             return false;
           }
@@ -2181,12 +2181,12 @@ final class nf {
         }
     }
 
-    private final boolean a(int param0, int param1, int param2, int param3) {
+    private final boolean circleHitsTerrain(int param0, int param1, int param2, int param3) {
         int var5 = -106 / ((9 - param3) / 60);
         return ko.circleHitsMask(this, param2, param0, param1, this.field_Jb, 16777215);
     }
 
-    private final boolean c(int param0, int param1, int param2) {
+    private final boolean hasFreeSpellSlot(int param0, int param1, int param2) {
         int var4;
         int var5;
         int stackIn_12_0 = 0;
@@ -2211,17 +2211,17 @@ final class nf {
         return false;
     }
 
-    final void a(int param0, int param1, IndexedSprite param2, int param3) {
+    final void stampShape(int param0, int param1, IndexedSprite param2, int param3) {
         try {
           int var5_int = 37 % ((-78 - param0) / 34);
-          this.a(param3, this.field_Jb, param2, param1, -126);
-          this.a(param3, 117, param2, param1, this.field_V);
+          this.copyMaskRegion(param3, this.field_Jb, param2, param1, -126);
+          this.stampShapeWithMask(param3, 117, param2, param1, this.field_V);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.JB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, ml param1) {
+    final void stampUnitMask(int param0, BattleUnit param1) {
         try {
           ContextActionMenu.a(param1.field_lb - (param1.field_Y >> 1), this, (byte) -1, -param1.field_Y + param1.field_db, 21374, param1.field_w, this.field_Jb);
           if (param0 > -36) {
@@ -2232,7 +2232,7 @@ final class nf {
         }
     }
 
-    private final void o(byte param0) {
+    private final void updateCurrentTurn(byte param0) {
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_41_0 = 0;
@@ -2240,7 +2240,7 @@ final class nf {
         int stackIn_47_0 = 0;
         int stackIn_56_0 = 0;
         int stackIn_87_0 = 0;
-        ml stackIn_106_0 = null;
+        BattleUnit stackIn_106_0 = null;
         int stackIn_107_0 = 0;
         int stackIn_107_1 = 0;
         Object stackIn_111_0 = null;
@@ -2249,22 +2249,22 @@ final class nf {
         int stackIn_150_1 = 0;
         int stackIn_250_0 = 0;
         int stackIn_250_1 = 0;
-        ml stackIn_254_0 = null;
-        ml stackOut_253_0;
-        ml stackOut_105_0;
+        BattleUnit stackIn_254_0 = null;
+        BattleUnit stackOut_253_0;
+        BattleUnit stackOut_105_0;
         int var3_int = 0;
-        ml var3 = null;
-        mi var3_ref = null;
+        BattleUnit var3 = null;
+        SpellProjectile var3_ref = null;
         int var4_int = 0;
         Object var4 = null;
         double var4_double = 0.0;
-        mi var5_ref_mi = null;
+        SpellProjectile var5_ref_mi = null;
         double var5_double = 0.0;
         IsaacRandom var5_ref_jd = null;
         int var5 = 0;
         double var6_double = 0.0;
         int var6_int = 0;
-        mi var6 = null;
+        SpellProjectile var6 = null;
         double var7_double = 0.0;
         int var7 = 0;
         double var8_double = 0.0;
@@ -2289,20 +2289,20 @@ final class nf {
         int var26 = 0;
         int var27 = 0;
         int var28 = 0;
-        mi var29_ref_mi = null;
+        SpellProjectile var29_ref_mi = null;
         int var29 = 0;
-        mi var30 = null;
+        SpellProjectile var30 = null;
         int var31 = 0;
-        mi var32 = null;
-        ml var33 = null;
-        mi var34 = null;
-        ml var35 = null;
-        mi var36 = null;
-        mi var37 = null;
-        ml var38 = null;
-        mi var39 = null;
-        mi var40 = null;
-        mi var41 = null;
+        SpellProjectile var32 = null;
+        BattleUnit var33 = null;
+        SpellProjectile var34 = null;
+        BattleUnit var35 = null;
+        SpellProjectile var36 = null;
+        SpellProjectile var37 = null;
+        BattleUnit var38 = null;
+        SpellProjectile var39 = null;
+        SpellProjectile var40 = null;
+        SpellProjectile var41 = null;
         Object var4Lifetime1;
         int stackIn_7_0Lifetime1;
         int stackIn_7_1Lifetime1;
@@ -2319,10 +2319,10 @@ final class nf {
         int var4_intLifetime1Lifetime1;
         var31 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != 69) {
-          this.a(38, (mi) null);
+          this.addProjectile(38, (SpellProjectile) null);
         }
         boolean decompiledFrameCompleted2 = true;
-        var35 = this.a(this.field_J, true);
+        var35 = this.getUnitByOwner(this.field_J, true);
         this.field_f = false;
         if (this.field_q > this.field_jb &&
           StatefulTextPainter.field_p == -1) {
@@ -2352,7 +2352,7 @@ final class nf {
         if (decompiledFrameCompleted2) {
           ge.field_p.setDeque((byte) 31, this.field_i);
         }
-        var3 = (ml) (ge.field_p.first(-98));
+        var3 = (BattleUnit) (ge.field_p.first(-98));
         scanLoop1: while (true) {
           boolean decompiledFrameCompleted1 = true;
           if (var3 != null) {
@@ -2361,11 +2361,11 @@ final class nf {
             if (var31 != 0) {
               while (true) {
                 if (stackIn_250_0 == stackIn_250_1) {
-                  var3.a(false, true);
+                  var3.updateAuras(false, true);
                 }
                 var3.field_W = 0;
                 var3.field_G = -1;
-                var3 = (ml) (ge.field_p.next(-18502));
+                var3 = (BattleUnit) (ge.field_p.next(-18502));
                 decompiledFrameCompleted1 = false;
                 break;
               }
@@ -2379,7 +2379,7 @@ final class nf {
                   var3.field_jb != 12 &&
                   !var3.field_U) {
                   var4 = null;
-                  var5_ref_mi = (mi) (this.field_Kb.first(12623));
+                  var5_ref_mi = (SpellProjectile) (this.field_Kb.first(12623));
                   while (var5_ref_mi != null) {
                     stackIn_41_0 = -107;
                     stackIn_41_1 = ~var5_ref_mi.field_I;
@@ -2391,25 +2391,25 @@ final class nf {
                       var5_ref_mi.field_t == var3) {
                       var4 = var5_ref_mi;
                     }
-                    var5_ref_mi = (mi) (this.field_Kb.next(0));
+                    var5_ref_mi = (SpellProjectile) (this.field_Kb.next(0));
                   }
                   if (decompiledFrameCompleted0) {
                     if (var4 != null) {
-                      ((mi) (var4)).field_y = ((mi) (var4)).field_y - this.field_X[this.field_J] / 20;
-                      if (!(((mi) (var4)).field_y >= 0)) {
-                        ((mi) (var4)).field_y = 0;
+                      ((SpellProjectile) (var4)).field_y = ((SpellProjectile) (var4)).field_y - this.field_X[this.field_J] / 20;
+                      if (!(((SpellProjectile) (var4)).field_y >= 0)) {
+                        ((SpellProjectile) (var4)).field_y = 0;
                         if (var31 != 0) {
                           var32 = BevelBoxPainter.createProjectile(var3, var3.field_db, (byte) 35, this, 145, var3.field_lb, 106);
                           var34 = var32;
                           var32.field_y = 50 - this.field_X[this.field_J] / 20;
-                          this.b(52, var34);
+                          this.onProjectileFinished(52, var34);
                         }
                       }
                     } else {
                       var32 = BevelBoxPainter.createProjectile(var3, var3.field_db, (byte) 35, this, 145, var3.field_lb, 106);
                       var34 = var32;
                       var32.field_y = 50 - this.field_X[this.field_J] / 20;
-                      this.b(52, var34);
+                      this.onProjectileFinished(52, var34);
                     }
                   }
                 }
@@ -2423,7 +2423,7 @@ final class nf {
                   var4_intLifetime1 = stackIn_47_0;
                   var36 = BevelBoxPainter.createProjectile(var35, var3.field_db, (byte) 49, this, var4_intLifetime1, var3.field_lb, 111);
                   var36.field_H = 4;
-                  this.b(52, var36);
+                  this.onProjectileFinished(52, var36);
                 }
                 if (var3.field_jb == 6 ||
                   var3.field_jb == 26 ||
@@ -2433,7 +2433,7 @@ final class nf {
                   var4_intLifetime1Lifetime1 = stackIn_56_0;
                   var37 = BevelBoxPainter.createProjectile(var3, var3.field_db, (byte) 11, this, var4_intLifetime1Lifetime1, var3.field_lb, 55);
                   var37.field_H = 4;
-                  this.b(52, var37);
+                  this.onProjectileFinished(52, var37);
                 }
                 if (var3.field_U &&
                   16 != var3.field_jb) {
@@ -2459,11 +2459,11 @@ final class nf {
                 }
                 if (var3.field_jb == 24 ||
                   var3.field_jb == 18) {
-                  var3.a(10, -28922);
+                  var3.heal(10, -28922);
                 }
                 if (var3.field_jb == 36) {
-                  var4_double = (double)(var3.w(24501).field_lb - var3.field_lb << 4);
-                  var6_double = (double)(256 + (var3.w(param0 + 24432).field_db - var3.field_db << 4));
+                  var4_double = (double)(var3.getLinkedUnit(24501).field_lb - var3.field_lb << 4);
+                  var6_double = (double)(256 + (var3.getLinkedUnit(param0 + 24432).field_db - var3.field_db << 4));
                   var8_double = 64.0;
                   var10 = var4_double * 4.0 * var4_double / (2.0 * var8_double * var8_double);
                   var12 = var4_double;
@@ -2520,8 +2520,8 @@ final class nf {
                     var26 = 8;
                     var27 = (int)((double)(var24 * (4 + (var3.field_Y / 2 + var26))) / var8_double + (double)var3.field_lb);
                     var28 = (int)((double)(-(var3.field_Y / 2)) + ((double)var3.field_db + (double)(var25 * (var26 + (var3.field_Y / 2 + 4))) / var8_double));
-                    var29_ref_mi = BevelBoxPainter.createProjectile(this.a(var3.field_u, true), var28, (byte) 18, this, -1, var27, 153);
-                    this.b(52, var29_ref_mi);
+                    var29_ref_mi = BevelBoxPainter.createProjectile(this.getUnitByOwner(var3.field_u, true), var28, (byte) 18, this, -1, var27, 153);
+                    this.onProjectileFinished(52, var29_ref_mi);
                     var29_ref_mi.field_y = 20;
                     var29_ref_mi.field_u = var24;
                     var29_ref_mi.field_F = var25;
@@ -2530,14 +2530,14 @@ final class nf {
                   }
                 }
               }
-              var3 = (ml) (ge.field_p.next(-18502));
+              var3 = (BattleUnit) (ge.field_p.next(-18502));
               if (var31 == 0) {
                 continue;
               }
             }
           }
           if (decompiledFrameCompleted1) {
-            var3 = (ml) (ge.field_p.first(-102));
+            var3 = (BattleUnit) (ge.field_p.first(-102));
             while (var3 != null) {
               stackOut_105_0 = var3;
               stackIn_111_0 = stackOut_105_0;
@@ -2548,17 +2548,17 @@ final class nf {
               stackIn_107_0 = ~stackIn_106_0.field_jb;
               stackIn_107_1 = -36;
               if (stackIn_107_0 == stackIn_107_1) {
-                var3.a(false, true);
+                var3.updateAuras(false, true);
               }
               var3.field_W = 0;
               var3.field_G = -1;
-              var3 = (ml) (ge.field_p.next(-18502));
+              var3 = (BattleUnit) (ge.field_p.next(-18502));
             }
           }
           stackIn_111_0 = this.field_Kb.first(12623);
           break;
         }
-        var3_ref = (mi) (stackIn_111_0);
+        var3_ref = (SpellProjectile) (stackIn_111_0);
         while (var3_ref != null) {
           if (var31 != 0) {
             return;
@@ -2569,14 +2569,14 @@ final class nf {
           }
           if (var3_ref.field_I == 123) {
             IntKeyLookup.field_d.setDeque((byte) 41, this.field_i);
-            var4Lifetime1 = (ml) (IntKeyLookup.field_d.first(-96));
+            var4Lifetime1 = (BattleUnit) (IntKeyLookup.field_d.first(-96));
             while (var4Lifetime1 != null) {
-              stackIn_150_0 = ~((ml) (var4Lifetime1)).field_jb;
+              stackIn_150_0 = ~((BattleUnit) (var4Lifetime1)).field_jb;
               stackIn_150_1 = -34;
               if (stackIn_150_0 == stackIn_150_1 &&
-                ~this.field_J == ~((ml) (var4Lifetime1)).field_u) {
-                var5_double = (double)(-((ml) (var4Lifetime1)).field_lb + var3_ref.field_v << 4);
-                var7_double = (double)((var3_ref.field_G - ((ml) (var4Lifetime1)).field_db << 4) + 256);
+                ~this.field_J == ~((BattleUnit) (var4Lifetime1)).field_u) {
+                var5_double = (double)(-((BattleUnit) (var4Lifetime1)).field_lb + var3_ref.field_v << 4);
+                var7_double = (double)((var3_ref.field_G - ((BattleUnit) (var4Lifetime1)).field_db << 4) + 256);
                 var9 = 64.0;
                 var11 = var5_double * (4.0 * var5_double) / (var9 * 2.0 * var9);
                 var13 = var5_double;
@@ -2623,20 +2623,20 @@ final class nf {
                     var25Lifetime1 = -var25Lifetime1;
                   }
                   var27Lifetime1 = 8;
-                  var28Lifetime1 = (int)((double)((ml) (var4Lifetime1)).field_lb + (double)(var25Lifetime1 * (4 + ((ml) (var4Lifetime1)).field_Y / 2 + var27Lifetime1)) / var9);
-                  var29 = (int)((double)((ml) (var4Lifetime1)).field_db + (double)((var27Lifetime1 - (-(((ml) (var4Lifetime1)).field_Y / 2) - 4)) * var26Lifetime1) / var9 - (double)(((ml) (var4Lifetime1)).field_Y / 2));
-                  var30 = BevelBoxPainter.createProjectile(this.a(((ml) (var4Lifetime1)).field_u, true), var29, (byte) -122, this, 148, var28Lifetime1, 125);
-                  this.b(52, var30);
+                  var28Lifetime1 = (int)((double)((BattleUnit) (var4Lifetime1)).field_lb + (double)(var25Lifetime1 * (4 + ((BattleUnit) (var4Lifetime1)).field_Y / 2 + var27Lifetime1)) / var9);
+                  var29 = (int)((double)((BattleUnit) (var4Lifetime1)).field_db + (double)((var27Lifetime1 - (-(((BattleUnit) (var4Lifetime1)).field_Y / 2) - 4)) * var26Lifetime1) / var9 - (double)(((BattleUnit) (var4Lifetime1)).field_Y / 2));
+                  var30 = BevelBoxPainter.createProjectile(this.getUnitByOwner(((BattleUnit) (var4Lifetime1)).field_u, true), var29, (byte) -122, this, 148, var28Lifetime1, 125);
+                  this.onProjectileFinished(52, var30);
                   var30.field_y = 20;
-                  if (this.field_x[((ml) (var4Lifetime1)).field_u] == 6) {
-                    var30.field_y = var30.field_y - this.field_X[((ml) (var4Lifetime1)).field_u] / 4;
+                  if (this.field_x[((BattleUnit) (var4Lifetime1)).field_u] == 6) {
+                    var30.field_y = var30.field_y - this.field_X[((BattleUnit) (var4Lifetime1)).field_u] / 4;
                   }
                   var30.field_u = var25Lifetime1;
                   var30.field_F = var26Lifetime1;
                   break;
                 }
               }
-              var4Lifetime1 = (ml) (IntKeyLookup.field_d.next(-18502));
+              var4Lifetime1 = (BattleUnit) (IntKeyLookup.field_d.next(-18502));
             }
           }
           stackIn_150_0Lifetime1 = 149;
@@ -2655,25 +2655,25 @@ final class nf {
                 var5_ref_jd = new IsaacRandom(new int[]{this.field_Q, this.field_jb, var33.field_lb, var33.field_db});
                 var6_int = 0;
                 while (var6_int < 5) {
-                  var39 = BevelBoxPainter.createProjectile((ml) null, var38.field_db - var38.field_Y / 2, (byte) 51, this, 95, var38.field_lb, 116);
+                  var39 = BevelBoxPainter.createProjectile((BattleUnit) null, var38.field_db - var38.field_Y / 2, (byte) 51, this, 95, var38.field_lb, 116);
                   var8 = u.a(var5_ref_jd, param0 + 2147483579, 8192);
                   var39.field_u = of.sine(-56, var8) >> 9;
                   var39.field_F = (BevelBoxPainter.cosine(var8, -109) * 3 >> 11) - 64;
-                  this.b(52, var39);
+                  this.onProjectileFinished(52, var39);
                   var6_int++;
                 }
                 var6_intLifetime1 = 0;
                 while (5 > var6_intLifetime1) {
-                  var40 = BevelBoxPainter.createProjectile((ml) null, -(var38.field_Y / 2) + var38.field_db, (byte) -97, this, 95, var38.field_lb, 122);
+                  var40 = BevelBoxPainter.createProjectile((BattleUnit) null, -(var38.field_Y / 2) + var38.field_db, (byte) -97, this, 95, var38.field_lb, 122);
                   var8Lifetime1 = u.a(var5_ref_jd, -2147483648, 8192);
                   var40.field_u = of.sine(-8, var8Lifetime1) >> 9;
                   var40.field_F = -64 + (3 * BevelBoxPainter.cosine(var8Lifetime1, -113) >> 11);
-                  this.b(param0 ^ 113, var40);
+                  this.onProjectileFinished(param0 ^ 113, var40);
                   var6_intLifetime1++;
                 }
                 this.a(var38, 0);
                 var38.field_ib = 0;
-                var38.d(this.field_J, param0 + 51);
+                var38.updateTurnLogic(this.field_J, param0 + 51);
               }
             }
             if (var3_ref.field_I == 148) {
@@ -2708,7 +2708,7 @@ final class nf {
                           var3_ref.field_y = 0;
                           this.field_Gb = true;
                           if (!(var3_ref.field_H < 5)) {
-                            var3_ref.f(param0 - 69);
+                            var3_ref.remove(param0 - 69);
                           }
                         } else {
                           if (var3_ref.field_I != 69 &&
@@ -2721,7 +2721,7 @@ final class nf {
                               var3_ref.field_y = 0;
                               this.field_Gb = true;
                               if (!(var3_ref.field_H < 5)) {
-                                var3_ref.f(param0 - 69);
+                                var3_ref.remove(param0 - 69);
                               }
                             } else {
                               if ((var3_ref.field_I == 157 ||
@@ -2730,8 +2730,8 @@ final class nf {
                                 var3_ref.field_H = var3_ref.field_H + 1;
                                 if (!(3 > var3_ref.field_H)) {
                                   var3_ref.field_y = -1;
-                                  var3_ref.a(this.field_jb, (byte) -67, this.field_t, this.field_mb);
-                                  var3_ref.f(param0 ^ 69);
+                                  var3_ref.updateMotion(this.field_jb, (byte) -67, this.field_t, this.field_mb);
+                                  var3_ref.remove(param0 ^ 69);
                                 }
                               }
                             }
@@ -2740,7 +2740,7 @@ final class nf {
                             this.field_Gb = true;
                             var3_ref.field_y = 0;
                             if (!(var3_ref.field_H < 3)) {
-                              var3_ref.f(0);
+                              var3_ref.remove(0);
                             }
                           }
                         }
@@ -2750,7 +2750,7 @@ final class nf {
                       var3_ref.field_H = var3_ref.field_H + 1;
                       var3_ref.field_y = 0;
                       if (!(var3_ref.field_H < 5)) {
-                        var3_ref.f(0);
+                        var3_ref.remove(0);
                       }
                     }
                   } else {
@@ -2777,15 +2777,15 @@ final class nf {
             var3_ref.field_H = var3_ref.field_H + 1;
             this.field_Gb = true;
             if (var3_ref.field_H > this.field_q * 5) {
-              var3_ref.f(0);
+              var3_ref.remove(0);
             }
           }
           if (117 == var3_ref.field_I) {
             this.field_Gb = true;
             var3_ref.field_H = var3_ref.field_H + 1;
             if (var3_ref.field_H > this.field_q * 20) {
-              var3_ref.a(0, 16, 32, 8);
-              var3_ref.f(param0 ^ 69);
+              var3_ref.applyAreaEffect(0, 16, 32, 8);
+              var3_ref.remove(param0 ^ 69);
             }
           }
           if (var3_ref.field_I == 127) {
@@ -2795,48 +2795,48 @@ final class nf {
             this.field_Gb = true;
             var3_ref.field_H = var3_ref.field_H - 1;
             if (var3_ref.field_H <= 0) {
-              var41 = aj.spawnProjectile((ml) null, var3_ref.field_G, false, 163, this, var3_ref.field_v);
-              this.b(52, var41);
-              var3_ref.a(50, 100, 100, param0 ^ 77);
-              var3_ref.f(0);
+              var41 = aj.spawnProjectile((BattleUnit) null, var3_ref.field_G, false, 163, this, var3_ref.field_v);
+              this.onProjectileFinished(52, var41);
+              var3_ref.applyAreaEffect(50, 100, 100, param0 ^ 77);
+              var3_ref.remove(0);
               var5 = 0;
               while (var5 < 5) {
                 var6 = BevelBoxPainter.createProjectile(var3_ref.field_t, var3_ref.field_G, (byte) -109, this, 117, var3_ref.field_v, 159);
                 var7 = var5 * 8192 / 5;
                 var6.field_u = of.sine(-93, var7) >> 10;
                 var6.field_F = (BevelBoxPainter.cosine(var7, -112) >> 11) - 64;
-                this.b(param0 ^ 113, var6);
+                this.onProjectileFinished(param0 ^ 113, var6);
                 var5++;
               }
             }
           }
-          var3_ref = (mi) (this.field_Kb.next(0));
+          var3_ref = (SpellProjectile) (this.field_Kb.next(0));
         }
-        this.p((byte) 123);
+        this.clearProjectiles((byte) 123);
         return;
     }
 
-    private final void i(int param0) {
+    private final void generateArenaFeatures(int param0) {
         int stackIn_68_0 = 0;
         int stackIn_68_1 = 0;
         int var3 = 0;
-        ml var5 = null;
+        BattleUnit var5 = null;
         int var6 = 0;
-        ml var6_ref_ml = null;
-        ml var7 = null;
+        BattleUnit var6_ref_ml = null;
+        BattleUnit var7 = null;
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         IsaacRandom var12 = null;
-        mi var13 = null;
-        mi var14 = null;
-        mi var15 = null;
-        mi var16 = null;
-        mi var17 = null;
-        mi var18 = null;
-        mi var19 = null;
+        SpellProjectile var13 = null;
+        SpellProjectile var14 = null;
+        SpellProjectile var15 = null;
+        SpellProjectile var16 = null;
+        SpellProjectile var17 = null;
+        SpellProjectile var18 = null;
+        SpellProjectile var19 = null;
         int stackIn_68_0Lifetime1;
         int stackIn_68_1Lifetime1;
         int var7_intLifetime1;
@@ -2852,24 +2852,24 @@ final class nf {
         var12 = new IsaacRandom(new int[]{this.field_Q, this.field_jb});
         var3 = ScreenDisplayMode.a(var12, 2, (byte) -68);
         if (var3 != 0) {
-          var3 = -128 + this.field_y - ScreenDisplayMode.a(var12, (this.field_jb - this.l(4)) / this.field_q * 128 + 1, (byte) -57);
+          var3 = -128 + this.field_y - ScreenDisplayMode.a(var12, (this.field_jb - this.getTurnTimeLimit(4)) / this.field_q * 128 + 1, (byte) -57);
           if (!(var3 >= 128)) {
             var3 = 128 + ScreenDisplayMode.a(var12, -256 + this.field_y, (byte) -32);
             if (var11 != 0) {
-              var3 = 128 + ScreenDisplayMode.a(var12, 128 * ((this.field_jb - this.l(4)) / this.field_q) + 1, (byte) -66);
+              var3 = 128 + ScreenDisplayMode.a(var12, 128 * ((this.field_jb - this.getTurnTimeLimit(4)) / this.field_q) + 1, (byte) -66);
               if ((-128 + this.field_y) < var3) {
                 var3 = ScreenDisplayMode.a(var12, -256 + this.field_y, (byte) -31) + 128;
               }
             }
           }
         } else {
-          var3 = 128 + ScreenDisplayMode.a(var12, 128 * ((this.field_jb - this.l(4)) / this.field_q) + 1, (byte) -66);
+          var3 = 128 + ScreenDisplayMode.a(var12, 128 * ((this.field_jb - this.getTurnTimeLimit(4)) / this.field_q) + 1, (byte) -66);
           if ((-128 + this.field_y) < var3) {
             var3 = ScreenDisplayMode.a(var12, -256 + this.field_y, (byte) -31) + 128;
           }
         }
         boolean decompiledFrameRemainder6 = true;
-        var5 = this.a(this.field_J, true);
+        var5 = this.getUnitByOwner(this.field_J, true);
         var6 = this.field_O;
         if (var6 != 3 ||
           var11 != 0) {
@@ -2902,10 +2902,10 @@ final class nf {
               if (var19.field_y < -100) {
                 var19.field_y = -100;
               }
-              this.b(52, var19);
+              this.onProjectileFinished(52, var19);
               this.field_mb = -1;
               var6 = 0;
-              var7 = (ml) (this.field_i.first(param0 ^ -29924));
+              var7 = (BattleUnit) (this.field_i.first(param0 ^ -29924));
               while (var7 != null) {
                 stackIn_68_0 = ~var7.field_jb;
                 stackIn_68_1 = -12;
@@ -2920,14 +2920,14 @@ final class nf {
                     this.field_t = var9;
                   }
                 }
-                if (var7.t(94) &&
+                if (var7.hasNoLinkedUnit(94) &&
                   var7.field_jb != 20 &&
                   this.field_jb > (20 * this.field_q) &&
                   var7 == var5) {
                   this.field_t = var7.field_R >> 4;
                   this.field_mb = var7.field_X >> 4;
                 }
-                var7 = (ml) (this.field_i.next(0));
+                var7 = (BattleUnit) (this.field_i.next(0));
               }
               stackIn_68_0Lifetime1 = -1;
               stackIn_68_1Lifetime1 = this.field_mb;
@@ -2943,14 +2943,14 @@ final class nf {
             (decompiledFrameRemainder6 = (this.field_jb % 5 == 0))) {
             var13 = BevelBoxPainter.createProjectile(var5, this.field_H, (byte) 82, this, 22, var3, 19);
             var13.field_w = true;
-            this.b(52, var13);
+            this.onProjectileFinished(52, var13);
             decompiledFrameRemainder7 = (var11 != 0);
           }
           if (((decompiledFrameRemainder7) && (decompiledFrameRemainder6) && (decompiledFrameRemainder5) && (decompiledFrameRemainder4) && (decompiledFrameRemainder3) && (decompiledFrameRemainder2) && (decompiledFrameRemainder1)) &&
             (decompiledFrameRemainder7 = (0 == this.field_jb % 2))) {
             var14 = BevelBoxPainter.createProjectile(var5, this.field_H, (byte) -97, this, 35, var3, 29);
             var14.field_w = true;
-            this.b(52, var14);
+            this.onProjectileFinished(52, var14);
             decompiledFrameRemainder7 = (var11 != 0);
           }
           if ((decompiledFrameRemainder7) &&
@@ -2971,7 +2971,7 @@ final class nf {
                 var15.field_F = 0;
                 var15.field_u = var9Lifetime1 * var8Lifetime2;
                 var15.field_w = true;
-                this.b(52, var15);
+                this.onProjectileFinished(52, var15);
                 var10Lifetime1++;
                 if (var11 == 0) {
                   continue;
@@ -2996,7 +2996,7 @@ final class nf {
             var16.field_w = true;
             var16.field_F = 0;
             var16.field_u = var8Lifetime1;
-            this.b(52, var16);
+            this.onProjectileFinished(52, var16);
             decompiledFrameRemainder7 = (var11 != 0);
           }
           if ((decompiledFrameRemainder7) &&
@@ -3007,31 +3007,31 @@ final class nf {
             var17.field_w = true;
             var17.field_F = 0;
             var17.field_u = 0;
-            this.b(52, var17);
+            this.onProjectileFinished(52, var17);
             decompiledFrameRemainder7 = (var11 != 0);
           }
           if (((decompiledFrameRemainder7) && (decompiledFrameRemainder6) && (decompiledFrameRemainder5)) &&
             (decompiledFrameRemainder7 = (this.field_jb % 2 == 0))) {
             var18 = BevelBoxPainter.createProjectile(var5, -480, (byte) -125, this, 73, var3, 60);
             var18.field_w = true;
-            this.b(param0 ^ -17817, var18);
+            this.onProjectileFinished(param0 ^ -17817, var18);
             decompiledFrameRemainder7 = (var11 != 0);
           }
           if ((decompiledFrameRemainder7) && ((decompiledFrameRemainder6) &&
-            (decompiledFrameRemainder6 = !(this.c((byte) -119, this.field_J) >= 4)))) {
-            var6_ref_ml = new ml(36, var3, -480, this.h(param0 ^ 17881), this, var5);
-            this.a((byte) -117, var6_ref_ml);
+            (decompiledFrameRemainder6 = !(this.countTeamUnits((byte) -119, this.field_J) >= 4)))) {
+            var6_ref_ml = new BattleUnit(36, var3, -480, this.nextUnitId(param0 ^ 17881), this, var5);
+            this.addUnit((byte) -117, var6_ref_ml);
             this.field_ob[this.field_J] = this.field_ob[this.field_J] + 1;
           }
         }
 
     }
 
-    final void b(byte param0, int param1) {
+    final void updateTurnTimer(byte param0, int param1) {
         int var4;
-        ml var5;
+        BattleUnit var5;
         int var6;
-        ml var7;
+        BattleUnit var7;
         int stackIn_20_0 = 0;
         int var4Lifetime1;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
@@ -3039,7 +3039,7 @@ final class nf {
           this.field_ib[this.field_J] < this.field_tb) {
           this.field_ib[this.field_J] = this.field_tb;
         }
-        var7 = this.a(this.field_J, true);
+        var7 = this.getUnitByOwner(this.field_J, true);
         if (var7 != null &&
           128 + this.field_H <= var7.field_db) {
           var4 = var7.field_ib / 2;
@@ -3055,7 +3055,7 @@ final class nf {
           stackIn_20_0 = 1 << var4Lifetime1 & param1;
           if (var6 == 0) {
             if (stackIn_20_0 != 0) {
-              var5 = this.a(var4Lifetime1, true);
+              var5 = this.getUnitByOwner(var4Lifetime1, true);
               if (var5 != null) {
                 var5.field_ib = 0;
                 var5.field_x = 1;
@@ -3070,12 +3070,12 @@ final class nf {
           stackIn_20_0 = param0;
         }
         if (stackIn_20_0 != 88) {
-          this.b((byte) -37, -9);
+          this.updateTurnTimer((byte) -37, -9);
         }
         return;
     }
 
-    final boolean a(ml param0, int param1, int param2, int param3) {
+    final boolean canLandAt(BattleUnit param0, int param1, int param2, int param3) {
         boolean discarded$1 = false;
         IndexedSprite var6 = null;
         boolean stackIn_14_0 = false;
@@ -3088,7 +3088,7 @@ final class nf {
           var6 = SocketConnector.field_j[29];
           param1 = param1 - var6.field_k;
           if (param3 != -5) {
-            discarded$1 = this.c(-47, -85, 123);
+            discarded$1 = this.hasFreeSpellSlot(-47, -85, 123);
           }
           param2 = param2 - var6.field_g / 2;
           if (var6.field_j + param2 >= 0 &&
@@ -3097,7 +3097,7 @@ final class nf {
             if (param1 + var6.field_k >= -5 + this.field_H) {
               return false;
             }
-            stackIn_14_0 = !(this.b(param1, param3 + 7, param2, var6.toRgbSprite())) || !(jo.field_b);
+            stackIn_14_0 = !(this.spriteOverlapsTerrain(param1, param3 + 7, param2, var6.toRgbSprite())) || !(jo.field_b);
             return stackIn_14_0;
           }
           return false;
@@ -3115,7 +3115,7 @@ final class nf {
         }
     }
 
-    private final void a(int param0, int param1, IndexedSprite param2, int param3, IndexedSprite param4) {
+    private final void stampShapeWithMask(int param0, int param1, IndexedSprite param2, int param3, IndexedSprite param4) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -3141,7 +3141,7 @@ final class nf {
           var6_int = param0 * this.field_y + param3;
           var7 = 0;
           if (param1 < 103) {
-            this.b(-7, -107);
+            this.isGameOver(-7, -107);
           }
           var8 = param2.field_c;
           var9 = param2.field_h;
@@ -3198,32 +3198,32 @@ final class nf {
         }
     }
 
-    final int d(int param0, int param1) {
+    final int getPlayerValue(int param0, int param1) {
         int var3 = -119 % ((param0 + 17) / 56);
         return this.field_E[param1];
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void beginTurn(int param0, byte param1, int param2) {
         boolean discarded$0 = false;
         if (param1 < 18) {
-          discarded$0 = this.k((byte) 46);
+          discarded$0 = this.hasLivingPlayers((byte) 46);
         }
         this.field_J = param0;
         this.field_ub = true;
-        this.a(9, param2);
+        this.finishTurn(9, param2);
     }
 
-    final boolean b(int param0, int param1) {
+    final boolean isGameOver(int param0, int param1) {
         int var3;
         int var4;
         int var5;
-        ml var6;
+        BattleUnit var6;
         int var7;
         int var3Lifetime1;
         int var3Lifetime2;
         int var4Lifetime1;
         int var5Lifetime1;
-        ml var6Lifetime1;
+        BattleUnit var6Lifetime1;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         if (this.field_ub) {
           throw new IllegalStateException();
@@ -3235,7 +3235,7 @@ final class nf {
           var5 = 0;
           while (true) {
             if (var5 < this.field_q) {
-              var6 = this.a(var5, true);
+              var6 = this.getUnitByOwner(var5, true);
               if (var7 == 0) {
                 if (var6 != null) {
                   var3 = var3 | (var5 & 1) + 1;
@@ -3252,7 +3252,7 @@ final class nf {
                 }
                 break;
               }
-              this.a(var4, (byte) 98, param0);
+              this.beginTurn(var4, (byte) 98, param0);
             }
             return true;
           }
@@ -3263,7 +3263,7 @@ final class nf {
           var5Lifetime1 = 0;
           while (true) {
             if (var5Lifetime1 < this.field_q) {
-              var6Lifetime1 = this.a(var5Lifetime1, true);
+              var6Lifetime1 = this.getUnitByOwner(var5Lifetime1, true);
               if (var7 == 0) {
                 if (var6Lifetime1 != null) {
                   var4Lifetime1++;
@@ -3276,7 +3276,7 @@ final class nf {
               if (1 < var4Lifetime1) {
                 break;
               }
-              this.a(var3Lifetime2, (byte) 46, param0);
+              this.beginTurn(var3Lifetime2, (byte) 46, param0);
             }
             return true;
           }
@@ -3285,36 +3285,36 @@ final class nf {
         return false;
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final void queueAction(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         this.field_Db.addLast(new ge(param0, param7, param4, param5, param8, param6, param1, param3), -1);
         int var10 = -97 % ((param2 + 41) / 40);
     }
 
-    final boolean d(byte param0) {
+    final boolean isBusy(byte param0) {
         int[] discarded$1 = null;
         boolean stackIn_7_0 = false;
         if (param0 != -128) {
-          discarded$1 = this.a(-37, (IsaacRandom) null);
+          discarded$1 = this.generateTenPointProfile(-37, (IsaacRandom) null);
         }
-        stackIn_7_0 = (this.j((byte) -94)) || !(this.field_Db.isEmpty(true));
+        stackIn_7_0 = (this.isGameEnded((byte) -94)) || !(this.field_Db.isEmpty(true));
         return stackIn_7_0;
     }
 
-    final int b(boolean param0) {
+    final int getTerrainOffset(boolean param0) {
         if (!param0) {
-          this.b(20, true, -2);
+          this.startTurn(20, true, -2);
         }
         return this.field_w;
     }
 
-    final int e(byte param0) {
+    final int runUntilIdle(byte param0) {
         int var2;
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = 0;
         scanLoop1: while (true) {
-          this.a(false, (CameraFollowTarget) null, 106);
-          if (!this.d((byte) -128) &&
+          this.update(false, (CameraFollowTarget) null, 106);
+          if (!this.isBusy((byte) -128) &&
             !this.field_zb &&
             var3 == 0) {
             if (param0 != 72) {
@@ -3333,7 +3333,7 @@ final class nf {
         throw new qg();
     }
 
-    final void b(int param0, mi param1) {
+    final void onProjectileFinished(int param0, SpellProjectile param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -3341,7 +3341,7 @@ final class nf {
         RuntimeException decompiledCaughtException = null;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if (!param1.k(param0 - 149)) {
+          if (!param1.isPersistentType(param0 - 149)) {
             this.field_Gb = true;
             decompiledFrameRemainder0 = !(!ArcanistsMulti.field_G);
           }
@@ -3368,7 +3368,7 @@ final class nf {
         }
     }
 
-    private final boolean a(int param0, ml param1, int param2) {
+    private final boolean isImmuneToSpell(int param0, BattleUnit param1, int param2) {
         int stackIn_96_0 = 0;
         int stackIn_97_1 = 0;
         int stackIn_105_0 = 0;
@@ -3484,16 +3484,16 @@ final class nf {
             }
           }
           if (param2 != 1) {
-            this.b(40, true);
+            this.generateTerrain(40, true);
           }
           if (135 == param0) {
-            stackIn_114_0 = this.c(param1.field_u, 72, 0);
+            stackIn_114_0 = this.hasFreeSpellSlot(param1.field_u, 72, 0);
             return stackIn_114_0;
           }
           if (param0 != 134) {
             return false;
           }
-          stackIn_117_0 = this.c(param1.field_u, 41, 0);
+          stackIn_117_0 = this.hasFreeSpellSlot(param1.field_u, 41, 0);
           return stackIn_117_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3509,26 +3509,26 @@ final class nf {
         }
     }
 
-    final IntrusiveDeque l(byte param0) {
+    final IntrusiveDeque getEffectList(byte param0) {
         if (param0 != 48) {
           this.field_t = -21;
         }
         return this.field_r;
     }
 
-    final int c(byte param0, int param1) {
+    final int countTeamUnits(byte param0, int param1) {
         int[] discarded$1 = null;
         int var3;
-        ml var4;
+        BattleUnit var4;
         int var5;
         int stackIn_11_0 = 0;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         MidiPcmStream.field_D.setDeque((byte) 102, this.field_i);
         var3 = 0;
         if (param0 >= -101) {
-          discarded$1 = this.c((IsaacRandom) null, -100);
+          discarded$1 = this.generateSixPointProfile((IsaacRandom) null, -100);
         }
-        var4 = (ml) (MidiPcmStream.field_D.first(-107));
+        var4 = (BattleUnit) (MidiPcmStream.field_D.first(-107));
         while (var4 != null) {
           stackIn_11_0 = 12;
           if (var5 != 0) {
@@ -3539,12 +3539,12 @@ final class nf {
             param1 == var4.field_u) {
             var3++;
           }
-          var4 = (ml) (MidiPcmStream.field_D.next(-18502));
+          var4 = (BattleUnit) (MidiPcmStream.field_D.next(-18502));
         }
         return var3;
     }
 
-    final void c(boolean param0) {
+    final void renderTerrainSprite(boolean param0) {
         int[] discarded$0 = null;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -3597,9 +3597,9 @@ final class nf {
         int[] var22 = null;
         int[] var23 = null;
         IsaacRandom var24 = null;
-        ml var25 = null;
-        ml var26 = null;
-        ml var27 = null;
+        BattleUnit var25 = null;
+        BattleUnit var26 = null;
+        BattleUnit var27 = null;
         int[] var28 = null;
         int[] var29 = null;
         int[] var30 = null;
@@ -3627,7 +3627,7 @@ final class nf {
         var16 = ArcanistsMulti.field_G ? 1 : 0;
         var24 = new IsaacRandom(new int[]{this.field_Q, -2});
         if (!param0) {
-          discarded$0 = this.d(-68, (IsaacRandom) null);
+          discarded$0 = this.generateTwentyPointLowProfile(-68, (IsaacRandom) null);
         }
         boolean decompiledFrameRemainder3 = true;
         var3 = 0;
@@ -3813,29 +3813,29 @@ final class nf {
                 var14Lifetime1 = ScreenDisplayMode.a(var24, var3, (byte) -110);
                 fieldTemp$1 = this.field_nb;
                 this.field_nb = this.field_nb + 1;
-                this.a((byte) -123, new ml(var13Lifetime1, var28[var14Lifetime1], var29[var14Lifetime1], fieldTemp$1, this, var12Lifetime1));
+                this.addUnit((byte) -123, new BattleUnit(var13Lifetime1, var28[var14Lifetime1], var29[var14Lifetime1], fieldTemp$1, this, var12Lifetime1));
                 var3--;
                 var5[var14Lifetime1] = var28[var3];
                 var6[var14Lifetime1] = var29[var3];
               } else {
                 var14Lifetime1 = ScreenDisplayMode.a(var24, var12Lifetime1, (byte) -123);
-                var25 = this.a(var14Lifetime1, true);
+                var25 = this.getUnitByOwner(var14Lifetime1, true);
                 fieldTemp$2 = this.field_nb;
                 this.field_nb = this.field_nb + 1;
-                this.a((byte) -124, new ml(var13Lifetime1, var25.field_lb, -32 + var25.field_db, fieldTemp$2, this, var12Lifetime1));
+                this.addUnit((byte) -124, new BattleUnit(var13Lifetime1, var25.field_lb, -32 + var25.field_db, fieldTemp$2, this, var12Lifetime1));
               }
             } else if (var8 == 0) {
               var14Lifetime1 = ScreenDisplayMode.a(var24, var12Lifetime1, (byte) -81);
-              var26 = this.a(var14Lifetime1, true);
+              var26 = this.getUnitByOwner(var14Lifetime1, true);
               fieldTemp$3 = this.field_nb;
               this.field_nb = this.field_nb + 1;
-              this.a((byte) -122, new ml(var13Lifetime1, var26.field_lb, var26.field_db - 32, fieldTemp$3, this, var12Lifetime1));
+              this.addUnit((byte) -122, new BattleUnit(var13Lifetime1, var26.field_lb, var26.field_db - 32, fieldTemp$3, this, var12Lifetime1));
             } else {
               var14Lifetime1 = ScreenDisplayMode.a(var24, var8, (byte) -53);
               var8--;
               fieldTemp$4 = this.field_nb;
               this.field_nb = this.field_nb + 1;
-              this.a((byte) -116, new ml(var13Lifetime1, var30[var14Lifetime1], var31[var14Lifetime1], fieldTemp$4, this, var12Lifetime1));
+              this.addUnit((byte) -116, new BattleUnit(var13Lifetime1, var30[var14Lifetime1], var31[var14Lifetime1], fieldTemp$4, this, var12Lifetime1));
               var10_ref_int__[var14Lifetime1] = var30[var8];
               var17[var14Lifetime1] = var31[var8];
             }
@@ -3940,68 +3940,68 @@ final class nf {
               var10 = ScreenDisplayMode.a(var24, var3, (byte) -79);
               fieldTemp$7 = this.field_nb;
               this.field_nb = this.field_nb + 1;
-              this.a((byte) -127, new ml(var9, var18[var10], var19[var10], fieldTemp$7, this, var8));
+              this.addUnit((byte) -127, new BattleUnit(var9, var18[var10], var19[var10], fieldTemp$7, this, var8));
               var3--;
               var18[var10] = var18[var3];
               var19[var10] = var19[var3];
             } else {
               var10 = ScreenDisplayMode.a(var24, var8, (byte) -124);
-              var27 = this.a(var10, true);
+              var27 = this.getUnitByOwner(var10, true);
               fieldTemp$8 = this.field_nb;
               this.field_nb = this.field_nb + 1;
-              this.a((byte) -118, new ml(var9, var27.field_lb, -32 + var27.field_db, fieldTemp$8, this, var8));
+              this.addUnit((byte) -118, new BattleUnit(var9, var27.field_lb, -32 + var27.field_db, fieldTemp$8, this, var8));
             }
             var8++;
           }
         }
-        stackIn_131_0 = this.e((byte) 72);
+        stackIn_131_0 = this.runUntilIdle((byte) 72);
     }
 
-    final int[] e(int param0, int param1) {
+    final int[] getPlayerSpellSlots(int param0, int param1) {
         if (param0 != 3) {
           field_P = (hn) null;
         }
         return this.field_v[param1];
     }
 
-    final void a(boolean param0, CameraFollowTarget param1, int param2) {
+    final void update(boolean param0, CameraFollowTarget param1, int param2) {
         int[] discarded$0 = null;
         int stackIn_4_0 = 0;
-        mi stackIn_10_0 = null;
+        SpellProjectile stackIn_10_0 = null;
         Object stackIn_14_0 = null;
         int stackIn_30_0 = 0;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
-        mi stackOut_9_0;
+        SpellProjectile stackOut_9_0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        mi var5 = null;
-        ml var5_ref = null;
+        SpellProjectile var5 = null;
+        BattleUnit var5_ref = null;
         int var6 = 0;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          stackIn_4_0 = (this.j((byte) -104)) ? 0 : 1;
+          stackIn_4_0 = (this.isGameEnded((byte) -104)) ? 0 : 1;
           var4_int = stackIn_4_0;
           this.field_zb = false;
           this.field_Gb = false;
           this.field_Mb = false;
           if (var4_int != 0) {
-            this.a(-109, param1);
+            this.executeNextAction(-109, param1);
           }
-          var5 = (mi) (this.field_Kb.first(12623));
+          var5 = (SpellProjectile) (this.field_Kb.first(12623));
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var5 == null))) {
-            var5.a(this.field_jb, (byte) -47, this.field_t, this.field_mb);
+            var5.updateMotion(this.field_jb, (byte) -47, this.field_t, this.field_mb);
             stackOut_9_0 = var5;
             stackIn_14_0 = stackOut_9_0;
             stackIn_10_0 = stackOut_9_0;
             if (var6 == 0) {
-              if (((mi) (Object) stackIn_10_0).isLinked((byte) -32)) {
-                this.field_Gb = this.field_Gb | var5.h(-139);
+              if (((SpellProjectile) (Object) stackIn_10_0).isLinked((byte) -32)) {
+                this.field_Gb = this.field_Gb | var5.isAlive(-139);
               }
-              var5 = (mi) (this.field_Kb.next(0));
+              var5 = (SpellProjectile) (this.field_Kb.next(0));
               continue;
             }
             break;
@@ -4010,7 +4010,7 @@ final class nf {
             u.field_f.setDeque((byte) 120, this.field_i);
             stackIn_14_0 = u.field_f.first(-67);
           }
-          var5_ref = (ml) (stackIn_14_0);
+          var5_ref = (BattleUnit) (stackIn_14_0);
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5_ref == null))) {
             stackIn_30_0 = var5_ref.field_M;
@@ -4022,14 +4022,14 @@ final class nf {
                 var5_ref.field_x == 0) {
                 this.field_zb = true;
               }
-              var5_ref.k(-55);
+              var5_ref.processTurnStart(-55);
               if (var5_ref.isLinked((byte) -32)) {
-                this.field_Gb = this.field_Gb | var5_ref.f(true);
-                this.field_Mb = this.field_Mb | var5_ref.e(120);
+                this.field_Gb = this.field_Gb | var5_ref.isMarkedForRemoval(true);
+                this.field_Mb = this.field_Mb | var5_ref.isRemoving(120);
               } else {
                 this.field_Gb = true;
               }
-              var5_ref = (ml) (u.field_f.next(-18502));
+              var5_ref = (BattleUnit) (u.field_f.next(-18502));
               continue;
             }
             break;
@@ -4038,9 +4038,9 @@ final class nf {
             stackIn_30_0 = param2;
           }
           if (stackIn_30_0 < 103) {
-            discarded$0 = this.b(126, (IsaacRandom) null);
+            discarded$0 = this.generateThirtyPointProfile(126, (IsaacRandom) null);
           }
-          this.p((byte) 78);
+          this.clearProjectiles((byte) 78);
           if (this.field_Gb) {
             this.field_zb = false;
           }
@@ -4048,7 +4048,7 @@ final class nf {
             this.field_Gb = true;
           }
           if (!param0 &&
-            this.k((byte) -127)) {
+            this.hasLivingPlayers((byte) -127)) {
             this.field_D = true;
             return;
           }
@@ -4067,7 +4067,7 @@ final class nf {
         }
     }
 
-    private final int[] c(int param0, IsaacRandom param1) {
+    private final int[] generateSevenPointWrappedProfile(int param0, IsaacRandom param1) {
         int[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_10_2 = 0;
@@ -4348,7 +4348,7 @@ final class nf {
         }
     }
 
-    final boolean a(boolean param0, ml param1, int param2, int param3, int param4) {
+    final boolean isUnitInRange(boolean param0, BattleUnit param1, int param2, int param3, int param4) {
         boolean stackIn_56_0 = false;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -4421,7 +4421,7 @@ final class nf {
             if (param3 > (this.field_H - var6_int / 2)) {
               return false;
             }
-            stackIn_56_0 = !(this.a(param4, var6_int >> 1, param3, 124));
+            stackIn_56_0 = !(this.circleHitsTerrain(param4, var6_int >> 1, param3, 124));
             return stackIn_56_0;
           }
           return false;
@@ -4439,22 +4439,22 @@ final class nf {
         }
     }
 
-    final boolean n(int param0) {
+    final boolean isTurnActive(int param0) {
         if (param0 != 4) {
           field_Bb = (Calendar) null;
         }
         return this.field_ub;
     }
 
-    final boolean m(int param0) {
+    final boolean isRecording(int param0) {
         boolean discarded$0 = false;
         if (param0 != -28046) {
-          discarded$0 = this.a((ml) null, (Sprite) null, 91, 30, -97);
+          discarded$0 = this.unitSpriteHitsTerrain((BattleUnit) null, (Sprite) null, 91, 30, -97);
         }
         return this.field_l;
     }
 
-    final boolean d(byte param0, int param1) {
+    final boolean isArenaSpell(byte param0, int param1) {
         if (param1 == 158) {
           return true;
         }
@@ -4465,7 +4465,7 @@ final class nf {
           return true;
         }
         if (param0 != 66) {
-          this.a((ml) null, 31, 63, -105);
+          this.canLandAt((BattleUnit) null, 31, 63, -105);
         }
         if (3 == param1) {
           return true;
@@ -4542,7 +4542,7 @@ final class nf {
         return false;
     }
 
-    final boolean a(int param0, Sprite param1, int param2, int param3, int param4) {
+    final boolean spriteHitsTerrain(int param0, Sprite param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -4569,7 +4569,7 @@ final class nf {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void setCurrentPlayer(int param0, int param1) {
         this.field_Cb = -1 + param1;
         this.field_J = param1;
         if (this.field_Cb < 0) {
@@ -4580,28 +4580,28 @@ final class nf {
         }
     }
 
-    final void a(int param0, int param1, int param2, Sprite param3) {
+    final void carveTerrainAndSprite(int param0, int param1, int param2, Sprite param3) {
         try {
           if (param1 > -3) {
-            this.c((byte) 69);
+            this.isTurnFinished((byte) 69);
           }
-          this.a(param2, (byte) -79, param0, this.field_Jb, param3);
-          this.a(false, param2, this.field_V, true, param0, param3);
+          this.carveTerrainWithSprite(param2, (byte) -79, param0, this.field_Jb, param3);
+          this.stampSpriteMask(false, param2, this.field_V, true, param0, param3);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.LC(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0) {
-        ml var2 = null;
+    final void clearUnits(byte param0) {
+        BattleUnit var2 = null;
         int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         this.field_nb = 0;
-        var2 = (ml) (this.field_i.first(param0 ^ -12561));
+        var2 = (BattleUnit) (this.field_i.first(param0 ^ -12561));
         while (var2 != null) {
           var2.unlink(true);
           var2.unlinkSecondary((byte) 88);
-          var2 = (ml) (this.field_i.next(0));
+          var2 = (BattleUnit) (this.field_i.next(0));
           if (var3 != 0) {
             return;
           }
@@ -4614,7 +4614,7 @@ final class nf {
         return;
     }
 
-    final void b(int param0, boolean param1) {
+    final void generateTerrain(int param0, boolean param1) {
         int stackIn_78_0 = 0;
         int var4_int = 0;
         Object var4 = null;
@@ -4731,40 +4731,40 @@ final class nf {
           if (var5 != 1 ||
             var15 != 0) {
             if (var5 == 2) {
-              var4_array = this.b((byte) 34, var16);
+              var4_array = this.generateSevenPointProfile((byte) 34, var16);
               decompiledFrameRemainder3 = false;
             }
             else {
               if (var5 == 3) {
-                var4_array = this.a(var16, -12260);
+                var4_array = this.generateTenPointCentredProfile(var16, -12260);
                 decompiledFrameRemainder3 = false;
               }
               else {
                 if (var5 == 4 &&
                   var15 == 0) {
-                  var4_array = this.c(param0 ^ 649860713, var16);
+                  var4_array = this.generateSevenPointWrappedProfile(param0 ^ 649860713, var16);
                   decompiledFrameRemainder3 = false;
                 }
                 else {
                   if (var5 == 5) {
-                    var4_array = this.b(var16, -30390);
+                    var4_array = this.generateSevenPointLowProfile(var16, -30390);
                     decompiledFrameRemainder3 = false;
                   }
                   else {
                     if (var5 == 6 &&
                       var15 == 0) {
-                      var4_array = this.c(var16, 32);
+                      var4_array = this.generateSixPointProfile(var16, 32);
                       decompiledFrameRemainder3 = false;
                     }
                     else {
                       if (var5 == 7) {
-                        var4_array = this.d(-22070, var16);
+                        var4_array = this.generateTwentyPointLowProfile(-22070, var16);
                         decompiledFrameRemainder3 = false;
                       }
                       else {
                         if ((var5 == 8) &&
                           (decompiledFrameRemainder0 = (var15 == 0))) {
-                          var4_array = this.b(0, var16);
+                          var4_array = this.generateThirtyPointProfile(0, var16);
                           decompiledFrameRemainder3 = false;
                         }
                       }
@@ -4776,12 +4776,12 @@ final class nf {
           }
           if ((decompiledFrameRemainder3) &&
             (decompiledFrameRemainder0)) {
-            var4_array = this.a((byte) -70, var16);
+            var4_array = this.generateTwentyPointProfile((byte) -70, var16);
             decompiledFrameRemainder3 = false;
           }
         }
         if (decompiledFrameRemainder3) {
-          var4_array = this.a(param0 ^ 649860704, var16);
+          var4_array = this.generateTenPointProfile(param0 ^ 649860704, var16);
         }
         if (var4_array != null) {
           System.gc();
@@ -4789,14 +4789,14 @@ final class nf {
           if (DropdownList.field_I != null) {
             this.field_V.field_l = DropdownList.field_I[this.field_O].field_l;
           }
-          this.a(0, 117, mn.field_y, 0, this.field_V);
-          this.a(var4_array, var16, (byte) -121);
-          this.a(0, 113, this.field_V, 0, mn.field_y);
-          this.b((byte) 5);
+          this.stampShapeWithMask(0, 117, mn.field_y, 0, this.field_V);
+          this.placeTerrainDecorations(var4_array, var16, (byte) -121);
+          this.stampShapeWithMask(0, 113, this.field_V, 0, mn.field_y);
+          this.drawThemeBackground((byte) 5);
         }
         this.field_Jb = new IndexedSprite(this.field_hb, this.field_Hb, gg.field_c);
         this.field_Jb.field_l = this.field_V.field_l;
-        this.a(0, this.field_Jb, this.field_V, 0, -126);
+        this.copyMaskRegion(0, this.field_Jb, this.field_V, 0, -126);
         var5Lifetime1 = 0;
         var6 = 0;
         while (true) {
@@ -4841,15 +4841,15 @@ final class nf {
         return;
     }
 
-    final void a(boolean param0, int param1, boolean param2) {
+    final void setDisplayFlags(boolean param0, int param1, boolean param2) {
         if (param1 != -1) {
-          this.o((byte) -114);
+          this.updateCurrentTurn((byte) -114);
         }
         this.field_M = param0 ? true : false;
         this.field_eb = param2 ? true : false;
     }
 
-    private final int[] b(byte param0, IsaacRandom param1) {
+    private final int[] generateSevenPointProfile(byte param0, IsaacRandom param1) {
         int[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_10_2 = 0;
@@ -4977,7 +4977,7 @@ final class nf {
           var15 = var18;
           var6_array = var15;
           if (param0 < 18) {
-            this.a(-85, (byte) 104, 4, (IndexedSprite) null, (Sprite) null);
+            this.carveTerrainWithSprite(-85, (byte) 104, 4, (IndexedSprite) null, (Sprite) null);
           }
           var5 = 0;
           do {
@@ -5160,40 +5160,40 @@ final class nf {
         }
     }
 
-    final boolean j(int param0) {
+    final boolean isWaitingForInput(int param0) {
         if (param0 != 39) {
           return true;
         }
         return this.field_zb;
     }
 
-    final int a(int param0) {
+    final int getArenaTheme(int param0) {
         if (param0 != -31497) {
           return -27;
         }
         return this.field_O;
     }
 
-    final void a(int param0, byte param1) {
+    final void setPlayerCount(int param0, byte param1) {
         int var3 = 12 % ((-31 - param1) / 48);
         this.field_q = param0;
     }
 
-    final boolean a(boolean param0) {
+    final boolean isAnimating(boolean param0) {
         if (!param0) {
           this.field_T = (int[]) null;
         }
         return this.field_D;
     }
 
-    final void q(int param0) {
+    final void clearTurnActive(int param0) {
         this.field_ub = false;
         if (param0 != -256) {
           this.field_o = (int[]) null;
         }
     }
 
-    final void a(byte param0, ml param1) {
+    final void addUnit(byte param0, BattleUnit param1) {
         try {
           this.field_i.addLast(param1, -1);
           if (param0 > -114) {
@@ -5205,7 +5205,7 @@ final class nf {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, IndexedSprite param3, Sprite param4) {
+    private final void carveTerrainWithSprite(int param0, byte param1, int param2, IndexedSprite param3, Sprite param4) {
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -5265,7 +5265,7 @@ final class nf {
           } while (var26 == 0);
           var8 = param4.field_y >> 1;
           if (param1 > -55) {
-            this.a((ml) null, 126, -2, -112, 24);
+            this.isValidTarget((BattleUnit) null, 126, -2, -112, 24);
           }
           param2 = param2 + param4.field_o / 2;
           param0 = param0 + param4.field_x / 2;
@@ -5366,32 +5366,32 @@ final class nf {
         }
     }
 
-    final boolean a(int param0, boolean param1, int param2) {
-        ml var4 = this.a(param2, param1);
+    final boolean canOwnerCast(int param0, boolean param1, int param2) {
+        BattleUnit var4 = this.getUnitByOwner(param2, param1);
         if (var4 == null) {
           return false;
         }
-        return this.a(param0, var4, param1);
+        return this.canCastSpell(param0, var4, param1);
     }
 
-    final int n(byte param0) {
+    final int getRound(byte param0) {
         if (param0 != -75) {
-          this.d(-46);
+          this.hasStats(-46);
         }
         return this.field_jb;
     }
 
-    final void e(boolean param0) {
+    final void setAnimating(boolean param0) {
         this.field_D = param0 ? true : false;
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int getSpellCharges(int param0, int param1, int param2) {
         int var4;
         int var5;
         int stackIn_16_0 = 0;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 == 153) {
-          return this.a(39, param1, -770226943);
+          return this.getSpellCharges(39, param1, -770226943);
         }
         if (param0 < 0) {
           return 0;
@@ -5416,7 +5416,7 @@ final class nf {
         return 0;
     }
 
-    private final int[] b(int param0, IsaacRandom param1) {
+    private final int[] generateThirtyPointProfile(int param0, IsaacRandom param1) {
         int[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_10_2 = 0;
@@ -5500,7 +5500,7 @@ final class nf {
                 continue scanLoop1;
               }
             }
-            this.a(var4, (byte) -113);
+            this.rasterizeTerrainProfile(var4, (byte) -113);
             var5 = 0;
             stackIn_20_0 = 0;
             break;
@@ -5559,7 +5559,7 @@ final class nf {
           if (DropdownList.field_I != null) {
             this.field_V.field_l = DropdownList.field_I[this.field_O].field_l;
           }
-          this.a(0, 120, mn.field_y, 0, this.field_V);
+          this.stampShapeWithMask(0, 120, mn.field_y, 0, this.field_V);
           var25 = new int[1000];
           var26 = new int[1000];
           var10 = param0;
@@ -5586,14 +5586,14 @@ final class nf {
                 var25[var10] = var11;
                 var26[var10] = var12;
                 var10++;
-                this.a(false, var11, this.field_V, false, var12, var7.toRgbSprite());
+                this.stampSpriteMask(false, var11, this.field_V, false, var12, var7.toRgbSprite());
               }
               var5++;
               continue scanLoop4;
             }
             break;
           }
-          this.a(0, 114, this.field_V, 0, mn.field_y);
+          this.stampShapeWithMask(0, 114, this.field_V, 0, mn.field_y);
           stackIn_62_0 = var4;
           return stackIn_62_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5610,14 +5610,14 @@ final class nf {
         }
     }
 
-    final void p(int param0) {
+    final void regenerateTerrain(int param0) {
         if (param0 <= 40) {
-          this.a(-94, 10, (byte) 54, 18);
+          this.refreshTerrainArea(-94, 10, (byte) 54, 18);
         }
-        this.b(649860712, false);
+        this.generateTerrain(649860712, false);
     }
 
-    private final void a(int param0, IndexedSprite param1, IndexedSprite param2, int param3, int param4) {
+    private final void copyMaskRegion(int param0, IndexedSprite param1, IndexedSprite param2, int param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -5762,16 +5762,16 @@ final class nf {
         }
     }
 
-    final void e(int param0, boolean param1) {
-        ml dupTemp$0 = null;
-        ml dupTemp$1 = null;
+    final void onPlayerDefeated(int param0, boolean param1) {
+        BattleUnit dupTemp$0 = null;
+        BattleUnit dupTemp$1 = null;
         int stackIn_35_1 = 0;
         boolean stackIn_36_2 = false;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        ml var7 = null;
-        ml var8 = null;
+        BattleUnit var7 = null;
+        BattleUnit var8 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 < 0) {
           return;
@@ -5779,7 +5779,7 @@ final class nf {
         if (param0 >= this.field_q) {
           return;
         }
-        var7 = this.a(param0, true);
+        var7 = this.getUnitByOwner(param0, true);
         var8 = var7;
         if (var8 == null) {
           return;
@@ -5802,7 +5802,7 @@ final class nf {
           return;
         }
         if (9 != this.field_x[param0]) {
-          dupTemp$0 = this.a(param0, true);
+          dupTemp$0 = this.getUnitByOwner(param0, true);
           dupTemp$0.field_ib = dupTemp$0.field_ib - 20;
           if (this.field_x[param0] == 4) {
             this.field_X[param0] = this.field_X[param0] + 1;
@@ -5830,7 +5830,7 @@ final class nf {
         }
         stackIn_35_1 = param0;
         stackIn_36_2 = !(param1);
-        dupTemp$1 = this.a(stackIn_35_1, stackIn_36_2);
+        dupTemp$1 = this.getUnitByOwner(stackIn_35_1, stackIn_36_2);
         dupTemp$1.field_ib = dupTemp$1.field_ib - 100;
         var5 = 0;
         while (this.field_q > var5) {
@@ -5843,7 +5843,7 @@ final class nf {
         return;
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void resetSpellSlots(int param0, int param1, boolean param2) {
         int[] dupTemp$1 = null;
         int var4 = 0;
         int var5 = 0;
@@ -5856,7 +5856,7 @@ final class nf {
         }
         var4 = 0;
         if (!param2) {
-          this.a(true, (ml) null, 10, -31, 10);
+          this.isUnitInRange(true, (BattleUnit) null, 10, -31, 10);
         }
         while (var4 < 16 &&
           var5 == 0) {
@@ -5873,7 +5873,7 @@ final class nf {
         return;
     }
 
-    final boolean a(ml param0, int param1, int param2, int param3, int param4) {
+    final boolean isValidTarget(BattleUnit param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_3_0 = false;
         boolean stackIn_21_0 = false;
         boolean stackIn_25_0 = false;
@@ -5890,14 +5890,14 @@ final class nf {
         RuntimeException var6 = null;
         try {
           if (param4 == 153) {
-            stackIn_3_0 = this.a(param0, param1, param2, param3 ^ 0, 39);
+            stackIn_3_0 = this.isValidTarget(param0, param1, param2, param3 ^ 0, 39);
             return stackIn_3_0;
           }
           if (param4 == 151) {
             return false;
           }
           if (this.field_f &&
-            !this.d((byte) 66, param4)) {
+            !this.isArenaSpell((byte) 66, param4)) {
             return false;
           }
           if (2 != param4 &&
@@ -5908,22 +5908,22 @@ final class nf {
             param4 != 55 &&
             param4 != 114) {
             if (30 == param4) {
-              stackIn_25_0 = this.a(param2, param0, param3 + 31011, param1);
+              stackIn_25_0 = this.canTargetPoint(param2, param0, param3 + 31011, param1);
               return stackIn_25_0;
             }
             if (param3 != -129) {
               return false;
             }
             if (param4 == 78) {
-              stackIn_31_0 = this.a(param0, param1, param2, -5);
+              stackIn_31_0 = this.canLandAt(param0, param1, param2, -5);
               return stackIn_31_0;
             }
             if (param4 == 4) {
-              stackIn_34_0 = this.b(param2, param0, -16, param1);
+              stackIn_34_0 = this.canStandAt(param2, param0, -16, param1);
               return stackIn_34_0;
             }
             if (param4 == 150) {
-              stackIn_38_0 = this.a(param2, param1, (byte) -75, param0);
+              stackIn_38_0 = this.canPlaceUnitAt(param2, param1, (byte) -75, param0);
               return stackIn_38_0;
             }
             if (param4 != 56 &&
@@ -5951,7 +5951,7 @@ final class nf {
               param4 != 112 &&
               118 != param4) {
               if (9 == param4) {
-                stackIn_69_0 = this.a(false, param2, param1);
+                stackIn_69_0 = this.isInsideMargin(false, param2, param1);
                 return stackIn_69_0;
               }
               if (5 != DropdownList.field_N) {
@@ -5960,13 +5960,13 @@ final class nf {
                 }
                 return false;
               }
-              stackIn_75_0 = (this.a(false, param2, param1)) && (this.a(false, param0.field_lb, -32 + (param0.field_db - param0.field_Y)));
+              stackIn_75_0 = (this.isInsideMargin(false, param2, param1)) && (this.isInsideMargin(false, param0.field_lb, -32 + (param0.field_db - param0.field_Y)));
               return stackIn_75_0;
             }
-            stackIn_65_0 = this.a(false, param0, param4, param1, param2);
+            stackIn_65_0 = this.isUnitInRange(false, param0, param4, param1, param2);
             return stackIn_65_0;
           }
-          stackIn_21_0 = this.a(param4, param1, param0, (byte) 74, param2);
+          stackIn_21_0 = this.canSummonAt(param4, param1, param0, (byte) 74, param2);
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5982,19 +5982,19 @@ final class nf {
         }
     }
 
-    final boolean k(int param0) {
+    final boolean hasPendingActions(int param0) {
         int var2 = 16 % ((param0 - 46) / 48);
         return !this.field_Db.isEmpty(true) ? true : false;
     }
 
-    final void d(int param0, boolean param1) {
+    final void setSeed(int param0, boolean param1) {
         if (!param1) {
-          this.a((byte) -37);
+          this.clearUnits((byte) -37);
         }
         this.field_Q = param0;
     }
 
-    private final boolean a(ml param0, Sprite param1, int param2, int param3, int param4) {
+    private final boolean unitSpriteHitsTerrain(BattleUnit param0, Sprite param1, int param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_1_0 = 0;
@@ -6006,8 +6006,8 @@ final class nf {
         RuntimeException decompiledCaughtException = null;
         try {
           this.a(param0, param2 + param2);
-          var6_int = this.b(param3, 2, param4, param1) ? 1 : 0;
-          this.a(-62, param0);
+          var6_int = this.spriteOverlapsTerrain(param3, 2, param4, param1) ? 1 : 0;
+          this.stampUnitMask(-62, param0);
           stackIn_1_0 = var6_int;
           return stackIn_1_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6030,7 +6030,7 @@ final class nf {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void finishTurn(int param0, int param1) {
         int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
         int stackIn_138_0 = 0;
@@ -6040,12 +6040,12 @@ final class nf {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ml var6_ref_ml = null;
+        BattleUnit var6_ref_ml = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ml var10 = null;
+        BattleUnit var10 = null;
         int var4Lifetime1;
         int var6Lifetime1;
         int var6Lifetime2;
@@ -6056,13 +6056,13 @@ final class nf {
           throw new IllegalStateException();
         }
         if (this.field_J >= 0) {
-          var10 = this.a(this.field_J, true);
+          var10 = this.getUnitByOwner(this.field_J, true);
           if (var10 != null) {
             if (var10.field_ib != 1) {
             }
             var4 = 0;
             var5 = 0;
-            var6_ref_ml = (ml) (this.field_i.first(12623));
+            var6_ref_ml = (BattleUnit) (this.field_i.first(12623));
             while (true) {
               if (var6_ref_ml != null) {
                 stackIn_18_0 = var6_ref_ml.field_jb;
@@ -6074,7 +6074,7 @@ final class nf {
                   if (var6_ref_ml.field_jb == 30) {
                     var4++;
                   }
-                  var6_ref_ml = (ml) (this.field_i.next(0));
+                  var6_ref_ml = (BattleUnit) (this.field_i.next(0));
                   continue;
                 }
               } else {
@@ -6293,7 +6293,7 @@ final class nf {
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2) {
+    final boolean isInsideMargin(boolean param0, int param1, int param2) {
         int var4;
         boolean stackIn_11_0 = false;
         if (param0) {
@@ -6304,17 +6304,17 @@ final class nf {
           param1 <= (this.field_y - var4) &&
           var4 <= param2 &&
           (this.field_H - var4) >= param2) {
-          stackIn_11_0 = !(this.a(param1, var4 >> 1, param2, -66));
+          stackIn_11_0 = !(this.circleHitsTerrain(param1, var4 >> 1, param2, -66));
           return stackIn_11_0;
         }
         return false;
     }
 
-    private final boolean k(byte param0) {
+    private final boolean hasLivingPlayers(byte param0) {
         int var2;
         int var3;
         int var4;
-        ml var5;
+        BattleUnit var5;
         int var6;
         boolean stackIn_10_0 = false;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
@@ -6323,7 +6323,7 @@ final class nf {
         var4 = 0;
         scanLoop1: while (true) {
           if (var4 < this.field_q) {
-            var5 = this.a(var4, true);
+            var5 = this.getUnitByOwner(var4, true);
             if (var6 == 0) {
               if (var5 != null) {
                 var2++;
@@ -6343,7 +6343,7 @@ final class nf {
         return stackIn_10_0;
     }
 
-    private final int[] d(int param0, IsaacRandom param1) {
+    private final int[] generateTwentyPointLowProfile(int param0, IsaacRandom param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int[] var4 = null;
@@ -6494,7 +6494,7 @@ final class nf {
           } while (var24 == 0);
           do {
             if (var14 >= 1) {
-              this.a(var4, (byte) -106);
+              this.rasterizeTerrainProfile(var4, (byte) -106);
               System.gc();
               this.field_V = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
               break;
@@ -6508,7 +6508,7 @@ final class nf {
           if (DropdownList.field_I != null) {
             this.field_V.field_l = DropdownList.field_I[this.field_O].field_l;
           }
-          this.a(0, 127, mn.field_y, 0, this.field_V);
+          this.stampShapeWithMask(0, 127, mn.field_y, 0, this.field_V);
           var14 = this.field_y * var6 / var4.length;
           var15 = this.field_y * var7 / var4.length;
           var16 = var8 * this.field_y / var4.length;
@@ -6535,7 +6535,7 @@ final class nf {
             while (var15 > var21) {
               var22 = Math.abs(var19 / 2 - var21 + var14);
               var23 = (-(var22 * var22) + var19 * var19 / 4) / (var19 * 4);
-              this.a(false, var21 - 10, this.field_V, false, var23 + (var9 + var20 * (var21 - var14) / var19) - 10, var18);
+              this.stampSpriteMask(false, var21 - 10, this.field_V, false, var23 + (var9 + var20 * (var21 - var14) / var19) - 10, var18);
               var21 += 14;
               if (var24 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -6552,16 +6552,16 @@ final class nf {
             while (var21Lifetime1 < var17) {
               var22Lifetime1 = Math.abs(-var21Lifetime1 + var16 + var19 / 2);
               var23Lifetime1 = (-(var22Lifetime1 * var22Lifetime1) + var19 * var19 / 4) / (var19 * 4);
-              this.a(false, var21Lifetime1 - 10, this.field_V, false, var23Lifetime1 + (-10 + (-var16 + var21Lifetime1) * var20 / var19 + var10), var18);
+              this.stampSpriteMask(false, var21Lifetime1 - 10, this.field_V, false, var23Lifetime1 + (-10 + (-var16 + var21Lifetime1) * var20 / var19 + var10), var18);
               var21Lifetime1 += 14;
               if (var24 != 0) {
                 return null;
               }
             }
           }
-          this.a(var4, param1, (byte) 75);
-          this.a(0, 121, this.field_V, 0, mn.field_y);
-          this.b((byte) 5);
+          this.placeTerrainDecorations(var4, param1, (byte) 75);
+          this.stampShapeWithMask(0, 121, this.field_V, 0, mn.field_y);
+          this.drawThemeBackground((byte) 5);
           stackIn_67_0 = null;
           return (int[]) (stackIn_67_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6578,19 +6578,19 @@ final class nf {
         }
     }
 
-    final IndexedSprite m(byte param0) {
+    final IndexedSprite getTerrainMask(byte param0) {
         if (param0 != 69) {
           return (IndexedSprite) null;
         }
         return this.field_Jb;
     }
 
-    final int o(int param0) {
+    final int countUnitsWithDebugOverlay(int param0) {
         boolean discarded$0 = false;
         if (param0 != 4) {
-          discarded$0 = this.c(-95, 63, -13);
+          discarded$0 = this.hasFreeSpellSlot(-95, 63, -13);
         }
-        return this.c(106, false);
+        return this.drawDebugOverlay(106, false);
     }
 
     public static void releaseStatics(int param0) {
@@ -6608,19 +6608,19 @@ final class nf {
         field_z = null;
     }
 
-    private final void i(byte param0) {
+    private final void updateAllUnits(byte param0) {
         IntrusiveDequeCursor var2 = null;
-        ml var3 = null;
+        BattleUnit var3 = null;
         int var4 = 0;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_i);
         if (param0 != 86) {
           this.field_Kb = (IntrusiveDeque) null;
         }
-        var3 = (ml) (var2.first(-42));
+        var3 = (BattleUnit) (var2.first(-42));
         while (var3 != null) {
-          this.a(-100, var3);
-          var3 = (ml) (var2.next(-18502));
+          this.stampUnitMask(-100, var3);
+          var3 = (BattleUnit) (var2.next(-18502));
           if (var4 == 0) {
             continue;
           }
@@ -6628,7 +6628,7 @@ final class nf {
         }
     }
 
-    private final int[] a(IsaacRandom param0, int param1) {
+    private final int[] generateTenPointCentredProfile(IsaacRandom param0, int param1) {
         int[] stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
@@ -6696,7 +6696,7 @@ final class nf {
                 continue scanLoop1;
               }
             }
-            this.a(var4, (byte) -115);
+            this.rasterizeTerrainProfile(var4, (byte) -115);
             break;
           }
           stackIn_22_0 = var4;
@@ -6715,7 +6715,7 @@ final class nf {
         }
     }
 
-    final int q(byte param0) {
+    final int getCurrentSide(byte param0) {
         if (param0 >= -109) {
           field_z = (int[]) null;
         }
@@ -6725,25 +6725,25 @@ final class nf {
         return 1 & this.field_J;
     }
 
-    final boolean a(int param0, int param1, byte param2) {
+    final boolean isSolidAt(int param0, int param1, byte param2) {
         if (param2 != -83) {
-          this.a(1, (byte) 42, 71, (IndexedSprite) null, (Sprite) null);
+          this.carveTerrainWithSprite(1, (byte) 42, 71, (IndexedSprite) null, (Sprite) null);
         }
         return DebouncedValidator.a(this.field_Jb, param0, param1, 96);
     }
 
-    private final void p(byte param0) {
-        mi var2 = null;
+    private final void clearProjectiles(byte param0) {
+        SpellProjectile var2 = null;
         int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
-        var2 = (mi) (this.field_I.first(117));
+        var2 = (SpellProjectile) (this.field_I.first(117));
         do {
           if (var2 == null) {
-            var2 = (mi) (this.field_h.first(117));
+            var2 = (SpellProjectile) (this.field_h.first(117));
             break;
           }
           var2.unlink(true);
-          var2 = (mi) (this.field_I.next(-124));
+          var2 = (SpellProjectile) (this.field_I.next(-124));
         } while (var3 == 0);
         do {
           if (var2 == null) {
@@ -6752,17 +6752,17 @@ final class nf {
             break;
           }
           this.field_r.addLast(var2, -1);
-          var2 = (mi) (this.field_h.next(123));
+          var2 = (SpellProjectile) (this.field_h.next(123));
         } while (var3 == 0);
         if (param0 <= 71) {
-          this.a(-89, (byte) 119, 52, (IndexedSprite) null, (Sprite) null);
+          this.carveTerrainWithSprite(-89, (byte) 119, 52, (IndexedSprite) null, (Sprite) null);
         }
         this.field_h.clear(17);
         this.field_kb.clear(-128);
         return;
     }
 
-    private final void a(boolean param0, int param1, IndexedSprite param2, boolean param3, int param4, Sprite param5) {
+    private final void stampSpriteMask(boolean param0, int param1, IndexedSprite param2, boolean param3, int param4, Sprite param5) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -6862,7 +6862,7 @@ final class nf {
         }
     }
 
-    private final boolean j(byte param0) {
+    private final boolean isGameEnded(byte param0) {
         boolean stackIn_9_0 = false;
         if (param0 > -62) {
           this.field_Ab = (int[]) null;
@@ -6873,7 +6873,7 @@ final class nf {
         return stackIn_9_0;
     }
 
-    private final void a(int param0, CameraFollowTarget param1) {
+    private final void executeNextAction(int param0, CameraFollowTarget param1) {
         int stackIn_312_0 = 0;
         int stackIn_312_1 = 0;
         int stackIn_320_0 = 0;
@@ -6889,11 +6889,11 @@ final class nf {
         int stackIn_522_1 = 0;
         int stackIn_524_0 = 0;
         int stackIn_524_1 = 0;
-        ml stackIn_541_0 = null;
+        BattleUnit stackIn_541_0 = null;
         int stackIn_631_0 = 0;
         int stackIn_631_1 = 0;
-        ml stackIn_689_0 = null;
-        ml stackIn_689_1 = null;
+        BattleUnit stackIn_689_0 = null;
+        BattleUnit stackIn_689_1 = null;
         RuntimeException stackIn_717_0 = null;
         StringBuilder stackIn_717_1 = null;
         String stackIn_718_2 = null;
@@ -6908,8 +6908,8 @@ final class nf {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ml var12 = null;
-        mi var13_ref_mi = null;
+        BattleUnit var12 = null;
+        SpellProjectile var13_ref_mi = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -6922,25 +6922,25 @@ final class nf {
         int var22 = 0;
         int var23 = 0;
         Object var24_ref = null;
-        mi var24_ref_mi = null;
+        SpellProjectile var24_ref_mi = null;
         int var24 = 0;
-        ml var24_ref_ml = null;
+        BattleUnit var24_ref_ml = null;
         int[] var24_ref_int__ = null;
         int var25_int = 0;
-        mi var25 = null;
-        ml var25_ref = null;
+        SpellProjectile var25 = null;
+        BattleUnit var25_ref = null;
         int[] var25_array = null;
         int var26 = 0;
         double var26_double = 0.0;
         int[] var26_ref_int__ = null;
-        mi var26_ref_mi = null;
+        SpellProjectile var26_ref_mi = null;
         int var27 = 0;
         int[] var27_ref_int__ = null;
-        mi var27_ref_mi = null;
-        mi var28 = null;
+        SpellProjectile var27_ref_mi = null;
+        SpellProjectile var28 = null;
         double var28_double = 0.0;
         int var28_int = 0;
-        ml var28_ref = null;
+        BattleUnit var28_ref = null;
         Sprite var29 = null;
         double var30 = 0.0;
         double var32 = 0.0;
@@ -6952,96 +6952,96 @@ final class nf {
         int var43 = 0;
         int var44 = 0;
         int var45 = 0;
-        mi var46 = null;
+        SpellProjectile var46 = null;
         int var47 = 0;
         int[] var48 = null;
         int[] var49 = null;
         int[] var50 = null;
         int[] var51 = null;
-        mi var24_ref_miLifetime1;
-        mi var24_ref_miLifetime2;
-        mi var24_ref_miLifetime3;
-        mi var24_ref_miLifetime4;
-        mi var24_ref_miLifetime5;
-        mi var24_ref_miLifetime6;
-        mi var24_ref_miLifetime7;
-        mi var24_ref_miLifetime8;
-        mi var24_ref_miLifetime9;
-        mi var24_ref_miLifetime10;
-        mi var24_ref_miLifetime11;
-        mi var24_ref_miLifetime12;
-        mi var24_ref_miLifetime13;
-        mi var24_ref_miLifetime14;
-        mi var24_ref_miLifetime15;
-        mi var24_ref_miLifetime16;
-        mi var24_ref_miLifetime17;
-        mi var24_ref_miLifetime18;
-        mi var24_ref_miLifetime19;
-        mi var24_ref_miLifetime20;
-        mi var24_ref_miLifetime21;
-        ml var24_ref_mlLifetime1;
-        ml var24_ref_mlLifetime2;
-        ml var24_ref_mlLifetime3;
-        ml var24_ref_mlLifetime4;
-        ml var24_ref_mlLifetime5;
-        ml var24_ref_mlLifetime6;
-        ml var24_ref_mlLifetime7;
-        ml var24_ref_mlLifetime8;
-        ml var24_ref_mlLifetime9;
-        ml var24_ref_mlLifetime10;
-        ml var24_ref_mlLifetime11;
-        ml var24_ref_mlLifetime12;
-        ml var24_ref_mlLifetime13;
-        ml var24_ref_mlLifetime14;
-        ml var24_ref_mlLifetime15;
-        ml var24_ref_mlLifetime16;
-        ml var24_ref_mlLifetime17;
-        ml var24_ref_mlLifetime18;
-        ml var24_ref_mlLifetime19;
-        ml var24_ref_mlLifetime20;
-        ml var24_ref_mlLifetime21;
-        ml var24_ref_mlLifetime22;
-        ml var24_ref_mlLifetime23;
-        mi var25Lifetime1;
-        mi var25Lifetime2;
-        mi var25Lifetime3;
-        mi var25Lifetime4;
-        mi var25Lifetime5;
-        mi var25Lifetime6;
-        mi var25Lifetime7;
-        mi var25Lifetime8;
-        mi var25Lifetime9;
-        mi var25Lifetime10;
-        mi var25Lifetime11;
-        mi var25Lifetime12;
-        mi var25Lifetime13;
-        mi var25Lifetime14;
-        mi var25Lifetime15;
-        mi var25Lifetime16;
-        mi var25Lifetime17;
-        mi var25Lifetime18;
-        mi var25Lifetime19;
-        mi var26_ref_miLifetime1;
-        mi var28Lifetime1;
-        mi var28Lifetime2;
-        mi var25Lifetime20;
-        mi var24_ref_miLifetime9Lifetime1;
-        mi var24_ref_miLifetime13Lifetime1;
-        mi var24_ref_miLifetime13Lifetime2;
-        mi var24_ref_miLifetime15Lifetime1;
-        mi var24_ref_miLifetime16Lifetime1;
-        mi var24_ref_miLifetime17Lifetime1;
-        mi var24_ref_miLifetime17Lifetime2;
-        ml var24_ref_mlLifetime5Lifetime1;
-        ml var24_ref_mlLifetime6Lifetime1;
-        mi var25Lifetime3Lifetime1;
-        mi var25Lifetime5Lifetime1;
-        mi var25Lifetime11Lifetime1;
-        mi var25Lifetime11Lifetime2;
-        mi var25Lifetime11Lifetime3;
-        mi var25Lifetime12Lifetime1;
-        mi var25Lifetime13Lifetime1;
-        mi var25Lifetime15Lifetime1;
+        SpellProjectile var24_ref_miLifetime1;
+        SpellProjectile var24_ref_miLifetime2;
+        SpellProjectile var24_ref_miLifetime3;
+        SpellProjectile var24_ref_miLifetime4;
+        SpellProjectile var24_ref_miLifetime5;
+        SpellProjectile var24_ref_miLifetime6;
+        SpellProjectile var24_ref_miLifetime7;
+        SpellProjectile var24_ref_miLifetime8;
+        SpellProjectile var24_ref_miLifetime9;
+        SpellProjectile var24_ref_miLifetime10;
+        SpellProjectile var24_ref_miLifetime11;
+        SpellProjectile var24_ref_miLifetime12;
+        SpellProjectile var24_ref_miLifetime13;
+        SpellProjectile var24_ref_miLifetime14;
+        SpellProjectile var24_ref_miLifetime15;
+        SpellProjectile var24_ref_miLifetime16;
+        SpellProjectile var24_ref_miLifetime17;
+        SpellProjectile var24_ref_miLifetime18;
+        SpellProjectile var24_ref_miLifetime19;
+        SpellProjectile var24_ref_miLifetime20;
+        SpellProjectile var24_ref_miLifetime21;
+        BattleUnit var24_ref_mlLifetime1;
+        BattleUnit var24_ref_mlLifetime2;
+        BattleUnit var24_ref_mlLifetime3;
+        BattleUnit var24_ref_mlLifetime4;
+        BattleUnit var24_ref_mlLifetime5;
+        BattleUnit var24_ref_mlLifetime6;
+        BattleUnit var24_ref_mlLifetime7;
+        BattleUnit var24_ref_mlLifetime8;
+        BattleUnit var24_ref_mlLifetime9;
+        BattleUnit var24_ref_mlLifetime10;
+        BattleUnit var24_ref_mlLifetime11;
+        BattleUnit var24_ref_mlLifetime12;
+        BattleUnit var24_ref_mlLifetime13;
+        BattleUnit var24_ref_mlLifetime14;
+        BattleUnit var24_ref_mlLifetime15;
+        BattleUnit var24_ref_mlLifetime16;
+        BattleUnit var24_ref_mlLifetime17;
+        BattleUnit var24_ref_mlLifetime18;
+        BattleUnit var24_ref_mlLifetime19;
+        BattleUnit var24_ref_mlLifetime20;
+        BattleUnit var24_ref_mlLifetime21;
+        BattleUnit var24_ref_mlLifetime22;
+        BattleUnit var24_ref_mlLifetime23;
+        SpellProjectile var25Lifetime1;
+        SpellProjectile var25Lifetime2;
+        SpellProjectile var25Lifetime3;
+        SpellProjectile var25Lifetime4;
+        SpellProjectile var25Lifetime5;
+        SpellProjectile var25Lifetime6;
+        SpellProjectile var25Lifetime7;
+        SpellProjectile var25Lifetime8;
+        SpellProjectile var25Lifetime9;
+        SpellProjectile var25Lifetime10;
+        SpellProjectile var25Lifetime11;
+        SpellProjectile var25Lifetime12;
+        SpellProjectile var25Lifetime13;
+        SpellProjectile var25Lifetime14;
+        SpellProjectile var25Lifetime15;
+        SpellProjectile var25Lifetime16;
+        SpellProjectile var25Lifetime17;
+        SpellProjectile var25Lifetime18;
+        SpellProjectile var25Lifetime19;
+        SpellProjectile var26_ref_miLifetime1;
+        SpellProjectile var28Lifetime1;
+        SpellProjectile var28Lifetime2;
+        SpellProjectile var25Lifetime20;
+        SpellProjectile var24_ref_miLifetime9Lifetime1;
+        SpellProjectile var24_ref_miLifetime13Lifetime1;
+        SpellProjectile var24_ref_miLifetime13Lifetime2;
+        SpellProjectile var24_ref_miLifetime15Lifetime1;
+        SpellProjectile var24_ref_miLifetime16Lifetime1;
+        SpellProjectile var24_ref_miLifetime17Lifetime1;
+        SpellProjectile var24_ref_miLifetime17Lifetime2;
+        BattleUnit var24_ref_mlLifetime5Lifetime1;
+        BattleUnit var24_ref_mlLifetime6Lifetime1;
+        SpellProjectile var25Lifetime3Lifetime1;
+        SpellProjectile var25Lifetime5Lifetime1;
+        SpellProjectile var25Lifetime11Lifetime1;
+        SpellProjectile var25Lifetime11Lifetime2;
+        SpellProjectile var25Lifetime11Lifetime3;
+        SpellProjectile var25Lifetime12Lifetime1;
+        SpellProjectile var25Lifetime13Lifetime1;
+        SpellProjectile var25Lifetime15Lifetime1;
         int stackIn_501_0Lifetime1;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -7086,7 +7086,7 @@ final class nf {
         var24_ref = null;
         var47 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (this.j((byte) -82)) {
+          if (this.isGameEnded((byte) -82)) {
             throw new IllegalStateException();
           }
           var3 = (ge) (this.field_Db.removeFirst(true));
@@ -7109,7 +7109,7 @@ final class nf {
           if (this.field_ub) {
             throw new IllegalStateException();
           }
-          var12 = this.a(var5, true);
+          var12 = this.getUnitByOwner(var5, true);
           if (var12 == null) {
             return;
           }
@@ -7154,12 +7154,12 @@ final class nf {
             return;
           }
           if (var10 == 159) {
-            this.e(var4, false);
+            this.onPlayerDefeated(var4, false);
             return;
           }
           boolean decompiledFrameCompleted14 = true;
           if (null == var12.field_s) {
-            var13_ref_mi = (mi) (this.field_Kb.first(12623));
+            var13_ref_mi = (SpellProjectile) (this.field_Kb.first(12623));
             while (var13_ref_mi != null) {
               if (var47 != 0) {
                 decompiledFrameCompleted14 = false;
@@ -7167,9 +7167,9 @@ final class nf {
               }
               if (var12 == var13_ref_mi.field_t &&
                 var13_ref_mi.field_I == 107) {
-                var13_ref_mi.f(0);
+                var13_ref_mi.remove(0);
               }
-              var13_ref_mi = (mi) (this.field_Kb.next(0));
+              var13_ref_mi = (SpellProjectile) (this.field_Kb.next(0));
             }
           }
           if ((decompiledFrameCompleted14) &&
@@ -7217,13 +7217,13 @@ final class nf {
               var8 = var6;
             }
             if (var10 == 4 &&
-              this.b(-var12.field_Y + var9, 2, var8 - (var12.field_Y >> 1), var12.field_w) &&
+              this.spriteOverlapsTerrain(-var12.field_Y + var9, 2, var8 - (var12.field_Y >> 1), var12.field_w) &&
               32 < var15Lifetime1) {
               var11 = 0;
             }
           }
           if (FixedViewResizeListener.field_e[var10] == 0 &&
-            var12.t(44)) {
+            var12.hasNoLinkedUnit(44)) {
             this.field_Z = true;
           }
           this.field_Y = var10;
@@ -7451,7 +7451,7 @@ final class nf {
             var18 = 162;
           }
           if (116 == var10) {
-            if (this.b(116, -102, var12.field_u) > 0) {
+            if (this.getSpellRecharge(116, -102, var12.field_u) > 0) {
               return;
             }
             var19 = 1;
@@ -7522,8 +7522,8 @@ final class nf {
             var18 = 98;
           }
           if (var16 != 0 &&
-            !var12.s(-1) &&
-            !var12.g((byte) 113)) {
+            !var12.isWithinArena(-1) &&
+            !var12.isTower((byte) 113)) {
           }
           var20 = (var12.field_Y / 2 + (var17 + 4)) * var13 / var15Lifetime1;
           var21 = (var12.field_Y / 2 + var17 + 4) * var14 / var15Lifetime1 - var12.field_Y / 2;
@@ -7552,7 +7552,7 @@ final class nf {
               var18 == 70 ||
               var18 == 68 ||
               var18 == 157) {
-              var24_ref_mi = (mi) (this.field_Kb.first(12623));
+              var24_ref_mi = (SpellProjectile) (this.field_Kb.first(12623));
               while (var24_ref_mi != null) {
                 stackIn_312_0 = var18;
                 stackIn_312_1 = var24_ref_mi.field_I;
@@ -7562,13 +7562,13 @@ final class nf {
                 }
                 if (stackIn_312_0 == stackIn_312_1 &&
                   var24_ref_mi.field_t == var12) {
-                  var24_ref_mi.f(0);
+                  var24_ref_mi.remove(0);
                 }
-                var24_ref_mi = (mi) (this.field_Kb.next(0));
+                var24_ref_mi = (SpellProjectile) (this.field_Kb.next(0));
               }
             }
             if (decompiledFrameCompleted13) {
-              var24_ref_mi = (mi) (this.field_Kb.first(12623));
+              var24_ref_mi = (SpellProjectile) (this.field_Kb.first(12623));
               while (var24_ref_mi != null) {
                 stackIn_312_0 = 69;
                 stackIn_312_1 = var24_ref_mi.field_I;
@@ -7579,14 +7579,14 @@ final class nf {
                 if (stackIn_312_0 == stackIn_312_1) {
                   var24_ref_mi.field_y = 0;
                 }
-                var24_ref_mi = (mi) (this.field_Kb.next(0));
+                var24_ref_mi = (SpellProjectile) (this.field_Kb.next(0));
               }
               if (decompiledFrameCompleted12) {
-                this.a((byte) 80, var10, var4);
+                this.consumeSpellCharge((byte) 80, var10, var4);
                 var24_ref_mi = BevelBoxPainter.createProjectile(var12, var12.field_db + var21, (byte) 36, this, var10, var12.field_lb + var20, var18);
                 var24_ref_mi.field_F = 8 * var23;
                 var24_ref_mi.field_u = var22 * 8;
-                this.b(52, var24_ref_mi);
+                this.onProjectileFinished(52, var24_ref_mi);
                 stackIn_312_0 = var18;
                 stackIn_312_1 = 119;
               }
@@ -7642,223 +7642,223 @@ final class nf {
             stackIn_339_0 = 78;
           }
           if (stackIn_339_0 == var10) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_ml = new ml(12, var8, var9, this.h(-111), this, var12);
-            this.a((byte) -120, var24_ref_ml);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_ml = new BattleUnit(12, var8, var9, this.nextUnitId(-111), this, var12);
+            this.addUnit((byte) -120, var24_ref_ml);
             var8 = -1000;
             this.field_D = true;
           }
           if (var10 == 23) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime1 = new ml(13, var8, var9, this.h(-92), this, var12);
-            this.a((byte) -124, var24_ref_mlLifetime1);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime1 = new BattleUnit(13, var8, var9, this.nextUnitId(-92), this, var12);
+            this.addUnit((byte) -124, var24_ref_mlLifetime1);
             var8 = -1000;
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (118 == var10) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime2 = new ml(39, var8, var9, this.h(-98), this, var12);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime2 = new BattleUnit(39, var8, var9, this.nextUnitId(-98), this, var12);
             var8 = -1000;
-            this.a((byte) -116, var24_ref_mlLifetime2);
+            this.addUnit((byte) -116, var24_ref_mlLifetime2);
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 59) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime3 = new ml(15, var8, var9, this.h(-107), this, var12);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime3 = new BattleUnit(15, var8, var9, this.nextUnitId(-107), this, var12);
             var8 = -1000;
-            this.a((byte) -123, var24_ref_mlLifetime3);
+            this.addUnit((byte) -123, var24_ref_mlLifetime3);
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 47) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime4 = new ml(14, var8, var9, this.h(-119), this, var12);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime4 = new BattleUnit(14, var8, var9, this.nextUnitId(-119), this, var12);
             var8 = -1000;
-            this.a((byte) -120, var24_ref_mlLifetime4);
+            this.addUnit((byte) -120, var24_ref_mlLifetime4);
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 98) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime5 = new ml(28, -32 + var8, var9, this.h(-81), this, var12);
-            this.a((byte) -124, var24_ref_mlLifetime5);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime5 = new BattleUnit(28, -32 + var8, var9, this.nextUnitId(-81), this, var12);
+            this.addUnit((byte) -124, var24_ref_mlLifetime5);
             var25 = aj.spawnProjectile(var24_ref_mlLifetime5, var24_ref_mlLifetime5.field_db, false, 138, this, var24_ref_mlLifetime5.field_lb);
-            this.b(52, var25);
-            var24_ref_mlLifetime5Lifetime1 = new ml(28, 32 + var8, var9, this.h(-98), this, var12);
-            this.a((byte) -124, var24_ref_mlLifetime5Lifetime1);
+            this.onProjectileFinished(52, var25);
+            var24_ref_mlLifetime5Lifetime1 = new BattleUnit(28, 32 + var8, var9, this.nextUnitId(-98), this, var12);
+            this.addUnit((byte) -124, var24_ref_mlLifetime5Lifetime1);
             var25Lifetime20 = aj.spawnProjectile(var24_ref_mlLifetime5Lifetime1, var24_ref_mlLifetime5Lifetime1.field_db, false, 138, this, var24_ref_mlLifetime5Lifetime1.field_lb);
-            this.b(52, var25Lifetime20);
+            this.onProjectileFinished(52, var25Lifetime20);
             var8 = -1000;
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 2;
           }
           if (92 == var10) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime6 = new ml(33, var8 - 32, var9, this.h(-113), this, var12);
-            this.a((byte) -119, var24_ref_mlLifetime6);
-            var24_ref_mlLifetime6Lifetime1 = new ml(33, var8 + 32, var9, this.h(-118), this, var12);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime6 = new BattleUnit(33, var8 - 32, var9, this.nextUnitId(-113), this, var12);
+            this.addUnit((byte) -119, var24_ref_mlLifetime6);
+            var24_ref_mlLifetime6Lifetime1 = new BattleUnit(33, var8 + 32, var9, this.nextUnitId(-118), this, var12);
             var8 = -1000;
-            this.a((byte) -128, var24_ref_mlLifetime6Lifetime1);
+            this.addUnit((byte) -128, var24_ref_mlLifetime6Lifetime1);
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 2;
           }
           if (90 == var10) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime7 = new ml(31, var8, var9, this.h(-80), this, var12);
-            this.a((byte) -119, var24_ref_mlLifetime7);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime7 = new BattleUnit(31, var8, var9, this.nextUnitId(-80), this, var12);
+            this.addUnit((byte) -119, var24_ref_mlLifetime7);
             var8 = -1000;
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (107 == var10) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime8 = new ml(32, var8, var9, this.h(-124), this, var12);
-            this.a((byte) -128, var24_ref_mlLifetime8);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime8 = new BattleUnit(32, var8, var9, this.nextUnitId(-124), this, var12);
+            this.addUnit((byte) -128, var24_ref_mlLifetime8);
             var8 = -1000;
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 56) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime9 = new ml(4, var8, var9, this.h(-120), this, var12);
-            this.a((byte) -116, var24_ref_mlLifetime9);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime9 = new BattleUnit(4, var8, var9, this.nextUnitId(-120), this, var12);
+            this.addUnit((byte) -116, var24_ref_mlLifetime9);
             var8 = -1000;
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 112) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime10 = new ml(37, var8, var9, this.h(-93), this, var12);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime10 = new BattleUnit(37, var8, var9, this.nextUnitId(-93), this, var12);
             var8 = -1000;
-            this.a((byte) -118, var24_ref_mlLifetime10);
+            this.addUnit((byte) -118, var24_ref_mlLifetime10);
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (104 == var10) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime11 = new ml(34, var8, var9, this.h(-107), this, var12);
-            this.a((byte) -121, var24_ref_mlLifetime11);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime11 = new BattleUnit(34, var8, var9, this.nextUnitId(-107), this, var12);
+            this.addUnit((byte) -121, var24_ref_mlLifetime11);
             var8 = -1000;
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 64) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime12 = new ml(6, var8, var9, this.h(-122), this, var12);
-            this.a((byte) -127, var24_ref_mlLifetime12);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime12 = new BattleUnit(6, var8, var9, this.nextUnitId(-122), this, var12);
+            this.addUnit((byte) -127, var24_ref_mlLifetime12);
             var8 = -1000;
             this.field_D = true;
             var25Lifetime1 = BevelBoxPainter.createProjectile(var24_ref_mlLifetime12, var24_ref_mlLifetime12.field_db, (byte) 17, this, var10, var24_ref_mlLifetime12.field_lb, 55);
             var25Lifetime1.field_H = 4;
-            this.b(52, var25Lifetime1);
+            this.onProjectileFinished(52, var25Lifetime1);
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 44) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime13 = new ml(25, var8, var9, this.h(-122), this, var12);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime13 = new BattleUnit(25, var8, var9, this.nextUnitId(-122), this, var12);
             var8 = -1000;
-            this.a((byte) -119, var24_ref_mlLifetime13);
+            this.addUnit((byte) -119, var24_ref_mlLifetime13);
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 57) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime14 = new ml(5, var8, var9, this.h(-98), this, var12);
-            this.a((byte) -120, var24_ref_mlLifetime14);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime14 = new BattleUnit(5, var8, var9, this.nextUnitId(-98), this, var12);
+            this.addUnit((byte) -120, var24_ref_mlLifetime14);
             var8 = -1000;
             var25Lifetime2 = BevelBoxPainter.createProjectile(var24_ref_mlLifetime14, -480, (byte) -103, this, var10, var8, 71);
             var25Lifetime2.field_u = 0;
             var25Lifetime2.field_F = 0;
-            this.b(52, var25Lifetime2);
+            this.onProjectileFinished(52, var25Lifetime2);
             this.field_ob[var4] = this.field_ob[var4] + 1;
             this.field_D = true;
           }
           if (var10 == 42) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime15 = new ml(3, var8, var9, this.h(-91), this, var12);
-            this.a((byte) -115, var24_ref_mlLifetime15);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime15 = new BattleUnit(3, var8, var9, this.nextUnitId(-91), this, var12);
+            this.addUnit((byte) -115, var24_ref_mlLifetime15);
             var8 = -1000;
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (65 == var10) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime16 = new ml(7, var8, var9, this.h(-82), this, var12);
-            this.a((byte) -121, var24_ref_mlLifetime16);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime16 = new BattleUnit(7, var8, var9, this.nextUnitId(-82), this, var12);
+            this.addUnit((byte) -121, var24_ref_mlLifetime16);
             var8 = -1000;
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 67) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime17 = new ml(8, var8, var9, this.h(-99), this, var12);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime17 = new BattleUnit(8, var8, var9, this.nextUnitId(-99), this, var12);
             var8 = -1000;
-            this.a((byte) -127, var24_ref_mlLifetime17);
+            this.addUnit((byte) -127, var24_ref_mlLifetime17);
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 6) {
-            this.a((byte) 80, var10, var4);
-            this.a((byte) -115, new ml(11, -32 + var8, var9, this.h(-93), this, var12));
-            this.a((byte) -120, new ml(11, var8, var9 - 16, this.h(-84), this, var12));
-            this.a((byte) -121, new ml(11, var8 + 32, var9, this.h(-120), this, var12));
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            this.addUnit((byte) -115, new BattleUnit(11, -32 + var8, var9, this.nextUnitId(-93), this, var12));
+            this.addUnit((byte) -120, new BattleUnit(11, var8, var9 - 16, this.nextUnitId(-84), this, var12));
+            this.addUnit((byte) -121, new BattleUnit(11, var8 + 32, var9, this.nextUnitId(-120), this, var12));
             var8 = -1000;
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 32) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime18 = new ml(1, var8, var9, this.h(-77), this, var12);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime18 = new BattleUnit(1, var8, var9, this.nextUnitId(-77), this, var12);
             var8 = -1000;
-            this.a((byte) -115, var24_ref_mlLifetime18);
+            this.addUnit((byte) -115, var24_ref_mlLifetime18);
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 33) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime19 = new ml(2, var8, var9, this.h(-78), this, var12);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime19 = new BattleUnit(2, var8, var9, this.nextUnitId(-78), this, var12);
             var8 = -1000;
-            this.a((byte) -120, var24_ref_mlLifetime19);
+            this.addUnit((byte) -120, var24_ref_mlLifetime19);
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 79) {
-            this.a((byte) 80, var10, var4);
-            this.a((byte) -116, new ml(10, var8 - 32, var9, this.h(-76), this, var12));
-            this.a((byte) -124, new ml(10, var8, -16 + var9, this.h(-87), this, var12));
-            this.a((byte) -127, new ml(10, var8 + 32, var9, this.h(-108), this, var12));
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            this.addUnit((byte) -116, new BattleUnit(10, var8 - 32, var9, this.nextUnitId(-76), this, var12));
+            this.addUnit((byte) -124, new BattleUnit(10, var8, -16 + var9, this.nextUnitId(-87), this, var12));
+            this.addUnit((byte) -127, new BattleUnit(10, var8 + 32, var9, this.nextUnitId(-108), this, var12));
             var8 = -1000;
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 77) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime20 = new ml(9, var8, var9, this.h(-83), this, var12);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime20 = new BattleUnit(9, var8, var9, this.nextUnitId(-83), this, var12);
             var8 = -1000;
-            this.a((byte) -124, var24_ref_mlLifetime20);
+            this.addUnit((byte) -124, var24_ref_mlLifetime20);
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (76 == var10) {
-            this.a((byte) 80, var10, var4);
-            var24_ref_mlLifetime21 = new ml(17, var8, var9, this.h(-112), this, var12);
+            this.consumeSpellCharge((byte) 80, var10, var4);
+            var24_ref_mlLifetime21 = new BattleUnit(17, var8, var9, this.nextUnitId(-112), this, var12);
             var8 = -1000;
-            this.a((byte) -118, var24_ref_mlLifetime21);
+            this.addUnit((byte) -118, var24_ref_mlLifetime21);
             this.field_D = true;
             this.field_ob[var4] = this.field_ob[var4] + 1;
           }
           if (var10 == 54) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime1 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) -106, this, var10, var12.field_lb, 72);
-            this.b(52, var24_ref_miLifetime1);
+            this.onProjectileFinished(52, var24_ref_miLifetime1);
           }
           if (var10 == 39 ||
             var10 == 153) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime2 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) 37, this, var10, var12.field_lb, 32);
-            this.b(52, var24_ref_miLifetime2);
+            this.onProjectileFinished(52, var24_ref_miLifetime2);
             if (153 == var10) {
               var12.field_z = true;
               var12.field_ib = 0;
@@ -7866,83 +7866,83 @@ final class nf {
             this.field_D = true;
           }
           if (var10 == 106) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime3 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) -110, this, var10, var12.field_lb, 136);
-            this.b(52, var24_ref_miLifetime3);
+            this.onProjectileFinished(52, var24_ref_miLifetime3);
             this.field_D = true;
           }
           if (var10 == 8) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime4 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) -97, this, var10, var12.field_lb, 83);
-            this.b(52, var24_ref_miLifetime4);
+            this.onProjectileFinished(52, var24_ref_miLifetime4);
             this.field_D = true;
           }
           if (var10 == 26) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime5 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) -113, this, var10, var12.field_lb, 22);
-            this.b(52, var24_ref_miLifetime5);
+            this.onProjectileFinished(52, var24_ref_miLifetime5);
             this.field_D = true;
           }
           if (var10 == 35) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime6 = BevelBoxPainter.createProjectile(var12, this.field_H, (byte) -96, this, var10, var8, 29);
-            this.b(52, var24_ref_miLifetime6);
+            this.onProjectileFinished(52, var24_ref_miLifetime6);
             this.field_D = true;
           }
           if (var10 == 73) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime7 = BevelBoxPainter.createProjectile(var12, -480, (byte) -96, this, var10, var8, 60);
-            this.b(52, var24_ref_miLifetime7);
+            this.onProjectileFinished(52, var24_ref_miLifetime7);
             this.field_D = true;
           }
           if (120 == var10) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime8 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) -101, this, var10, var12.field_lb, 77);
-            this.b(52, var24_ref_miLifetime8);
+            this.onProjectileFinished(52, var24_ref_miLifetime8);
             this.field_D = true;
           }
           if (60 == var10) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var12.field_jb = 23;
-            var12.e((byte) 6);
-            this.a(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, -(var12.field_Y >> 1) + (var12.field_db - 10));
+            var12.initializeAppearance((byte) 6);
+            this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, -(var12.field_Y >> 1) + (var12.field_db - 10));
             i.a(this.field_V, -var12.field_Y + var12.field_db, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
-            this.i((byte) 86);
+            this.updateAllUnits((byte) 86);
             var11Lifetime2 = 0;
             this.field_D = true;
             var24_ref_miLifetime9 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
-            this.b(52, var24_ref_miLifetime9);
+            this.onProjectileFinished(52, var24_ref_miLifetime9);
             var24_ref_miLifetime9Lifetime1 = BevelBoxPainter.createProjectile(var12, -(var12.field_Y / 2) + var12.field_db, (byte) -107, this, var10, var12.field_lb, 111);
             var24_ref_miLifetime9Lifetime1.field_H = 4;
-            this.b(52, var24_ref_miLifetime9Lifetime1);
+            this.onProjectileFinished(52, var24_ref_miLifetime9Lifetime1);
           }
           if (var10 == 81) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var12.field_jb = 24;
-            var12.e((byte) 6);
-            this.a(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, -10 + (var12.field_db - (var12.field_Y >> 1)));
+            var12.initializeAppearance((byte) 6);
+            this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, -10 + (var12.field_db - (var12.field_Y >> 1)));
             i.a(this.field_V, var12.field_db - var12.field_Y, var12.field_lb - (var12.field_Y >> 1), (byte) 0, this, var12.field_w, 0);
-            this.i((byte) 86);
+            this.updateAllUnits((byte) 86);
             this.field_D = true;
             var11Lifetime3 = 0;
             var24_ref_miLifetime10 = aj.spawnProjectile(var12, -(var12.field_Y / 2) + var12.field_db, false, 108, this, var12.field_lb);
-            this.b(52, var24_ref_miLifetime10);
+            this.onProjectileFinished(52, var24_ref_miLifetime10);
           }
           if (91 == var10) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var12.field_jb = 35;
-            var12.e((byte) 6);
-            this.a(var12.field_lb, (var12.field_Y >> 1) + 10, (byte) 51, -10 + (-(var12.field_Y >> 1) + var12.field_db));
+            var12.initializeAppearance((byte) 6);
+            this.refreshTerrainArea(var12.field_lb, (var12.field_Y >> 1) + 10, (byte) 51, -10 + (-(var12.field_Y >> 1) + var12.field_db));
             i.a(this.field_V, -var12.field_Y + var12.field_db, var12.field_lb - (var12.field_Y >> 1), (byte) 0, this, var12.field_w, 0);
-            this.i((byte) 86);
+            this.updateAllUnits((byte) 86);
             this.field_D = true;
             var11Lifetime4 = 0;
             var24_ref_miLifetime11 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 154, this, var12.field_lb);
-            this.b(52, var24_ref_miLifetime11);
+            this.onProjectileFinished(52, var24_ref_miLifetime11);
           }
           boolean decompiledFrameCompleted10 = true;
           if (var10 == 61) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24Lifetime1 = gf.a((var9 + 480) * 32 / 4, -266740663);
             var25_intLifetime1 = -96 + 192 * (1 & var8);
             var26 = 1;
@@ -7952,7 +7952,7 @@ final class nf {
               var28 = BevelBoxPainter.createProjectile(var12, -544, (byte) 55, this, var10, -(var24Lifetime1 * (var25_intLifetime1 * var26) / 16) + (48 * var27 - 144 + var8), 50);
               var28.field_u = var26 * var25_intLifetime1;
               var28.field_F = 0;
-              this.b(52, var28);
+              this.onProjectileFinished(52, var28);
               var27++;
               if (var47 != 0) {
                 decompiledFrameCompleted10 = false;
@@ -7964,26 +7964,26 @@ final class nf {
             }
           }
           if (var10 == 68) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime12 = BevelBoxPainter.createProjectile(var12, var9, (byte) -104, this, var10, var8, 55);
-            this.b(52, var24_ref_miLifetime12);
+            this.onProjectileFinished(52, var24_ref_miLifetime12);
             this.field_D = true;
           }
           if (var10 == 9) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime13 = BevelBoxPainter.createProjectile(var12, -24 + var9, (byte) 121, this, var10, var8, 3);
-            this.b(52, var24_ref_miLifetime13);
+            this.onProjectileFinished(52, var24_ref_miLifetime13);
             var24_ref_miLifetime13Lifetime1 = BevelBoxPainter.createProjectile(var12, -11 + var9, (byte) -122, this, var10, -8 + var8, 3);
-            this.b(52, var24_ref_miLifetime13Lifetime1);
+            this.onProjectileFinished(52, var24_ref_miLifetime13Lifetime1);
             var24_ref_miLifetime13Lifetime2 = BevelBoxPainter.createProjectile(var12, var9 - 12, (byte) -114, this, var10, 8 + var8, 3);
-            this.b(52, var24_ref_miLifetime13Lifetime2);
+            this.onProjectileFinished(52, var24_ref_miLifetime13Lifetime2);
             this.field_D = true;
           }
           boolean decompiledFrameCompleted9 = true;
           if (var10 == 7) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             IntKeyLookup.field_d.setDeque((byte) 96, this.field_i);
-            var24_ref_mlLifetime22 = (ml) (IntKeyLookup.field_d.first(-74));
+            var24_ref_mlLifetime22 = (BattleUnit) (IntKeyLookup.field_d.first(-74));
             while (var24_ref_mlLifetime22 != null) {
               stackIn_456_0 = -12;
               stackIn_456_1 = ~var24_ref_mlLifetime22.field_jb;
@@ -7992,17 +7992,17 @@ final class nf {
                 break;
               }
               if (stackIn_456_0 == stackIn_456_1) {
-                var25Lifetime3 = aj.spawnProjectile(this.a(var24_ref_mlLifetime22.field_u, true), var24_ref_mlLifetime22.field_db, false, 101, this, var24_ref_mlLifetime22.field_lb);
-                this.b(52, var25Lifetime3);
+                var25Lifetime3 = aj.spawnProjectile(this.getUnitByOwner(var24_ref_mlLifetime22.field_u, true), var24_ref_mlLifetime22.field_db, false, 101, this, var24_ref_mlLifetime22.field_lb);
+                this.onProjectileFinished(52, var25Lifetime3);
                 var25Lifetime3Lifetime1 = BevelBoxPainter.createProjectile(var12, var24_ref_mlLifetime22.field_db, (byte) 38, this, var10, var24_ref_mlLifetime22.field_lb, 74);
                 var25Lifetime3Lifetime1.field_y = -(var24_ref_mlLifetime22.field_ib / 2) + 20;
                 var25Lifetime3Lifetime1.field_u = 0;
                 var25Lifetime3Lifetime1.field_F = -var24_ref_mlLifetime22.field_ib;
-                this.b(52, var25Lifetime3Lifetime1);
+                this.onProjectileFinished(52, var25Lifetime3Lifetime1);
                 var24_ref_mlLifetime22.field_ib = 0;
-                var24_ref_mlLifetime22.d(var4, 116);
+                var24_ref_mlLifetime22.updateTurnLogic(var4, 116);
               }
-              var24_ref_mlLifetime22 = (ml) (IntKeyLookup.field_d.next(-18502));
+              var24_ref_mlLifetime22 = (BattleUnit) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted9) {
               this.field_D = true;
@@ -8013,16 +8013,16 @@ final class nf {
             stackIn_456_1 = ~var10;
           }
           if (stackIn_456_0 == stackIn_456_1) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime14 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) 95, this, var10, var12.field_lb, 127);
-            this.b(52, var24_ref_miLifetime14);
+            this.onProjectileFinished(52, var24_ref_miLifetime14);
             this.field_D = true;
           }
           boolean decompiledFrameCompleted8 = true;
           if (var10 == 94) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             IntKeyLookup.field_d.setDeque((byte) 83, this.field_Kb);
-            var24_ref_miLifetime15 = (mi) (IntKeyLookup.field_d.first(-105));
+            var24_ref_miLifetime15 = (SpellProjectile) (IntKeyLookup.field_d.first(-105));
             while (var24_ref_miLifetime15 != null) {
               stackIn_470_0 = ~var24_ref_miLifetime15.field_I;
               stackIn_470_1 = -127;
@@ -8031,16 +8031,16 @@ final class nf {
                 break;
               }
               if (stackIn_470_0 == stackIn_470_1) {
-                var24_ref_miLifetime15.f(0);
+                var24_ref_miLifetime15.remove(0);
               }
               if (var24_ref_miLifetime15.field_I == 117) {
-                var24_ref_miLifetime15.a(0, 0, 16, 8);
+                var24_ref_miLifetime15.applyAreaEffect(0, 0, 16, 8);
               }
-              var24_ref_miLifetime15 = (mi) (IntKeyLookup.field_d.next(-18502));
+              var24_ref_miLifetime15 = (SpellProjectile) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted8) {
               var24_ref_miLifetime15Lifetime1 = BevelBoxPainter.createProjectile(var12, 0, (byte) -125, this, var10, var8, 126);
-              this.b(52, var24_ref_miLifetime15Lifetime1);
+              this.onProjectileFinished(52, var24_ref_miLifetime15Lifetime1);
               this.field_D = true;
             }
           }
@@ -8050,9 +8050,9 @@ final class nf {
           }
           boolean decompiledFrameCompleted7 = true;
           if (stackIn_470_0 == stackIn_470_1) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             IntKeyLookup.field_d.setDeque((byte) 67, this.field_Kb);
-            var24_ref_miLifetime16 = (mi) (IntKeyLookup.field_d.first(-57));
+            var24_ref_miLifetime16 = (SpellProjectile) (IntKeyLookup.field_d.first(-57));
             while (var24_ref_miLifetime16 != null) {
               stackIn_480_0 = -124;
               stackIn_480_1 = ~var24_ref_miLifetime16.field_I;
@@ -8061,13 +8061,13 @@ final class nf {
                 break;
               }
               if (stackIn_480_0 == stackIn_480_1) {
-                var24_ref_miLifetime16.f(0);
+                var24_ref_miLifetime16.remove(0);
               }
-              var24_ref_miLifetime16 = (mi) (IntKeyLookup.field_d.next(-18502));
+              var24_ref_miLifetime16 = (SpellProjectile) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted7) {
               var24_ref_miLifetime16Lifetime1 = BevelBoxPainter.createProjectile(var12, var9, (byte) -105, this, var10, var8, 123);
-              this.b(52, var24_ref_miLifetime16Lifetime1);
+              this.onProjectileFinished(52, var24_ref_miLifetime16Lifetime1);
               this.field_D = true;
             }
           }
@@ -8077,10 +8077,10 @@ final class nf {
           }
           boolean decompiledFrameCompleted6 = true;
           if (stackIn_480_0 == stackIn_480_1) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             IntKeyLookup.field_d.setDeque((byte) 40, this.field_Kb);
             var24Lifetime2 = 0;
-            var25Lifetime4 = (mi) (IntKeyLookup.field_d.first(-83));
+            var25Lifetime4 = (SpellProjectile) (IntKeyLookup.field_d.first(-83));
             while (var25Lifetime4 != null) {
               stackIn_524_0 = var25Lifetime4.field_I;
               stackIn_524_1 = 123;
@@ -8089,13 +8089,13 @@ final class nf {
                 break;
               }
               if (stackIn_524_0 == stackIn_524_1) {
-                var25Lifetime4.f(0);
+                var25Lifetime4.remove(0);
               }
-              var25Lifetime4 = (mi) (IntKeyLookup.field_d.next(-18502));
+              var25Lifetime4 = (SpellProjectile) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted6) {
               IntKeyLookup.field_d.setDeque((byte) 69, this.field_i);
-              var25_ref = (ml) (IntKeyLookup.field_d.first(-50));
+              var25_ref = (BattleUnit) (IntKeyLookup.field_d.first(-50));
               while (true) {
                 if (var25_ref != null) {
                   stackIn_522_0 = -34;
@@ -8151,8 +8151,8 @@ final class nf {
                         }
                         var44 = (int)((double)((4 + (var25_ref.field_Y / 2 + var17)) * var42) / var26_double + (double)var25_ref.field_lb);
                         var45 = (int)((double)(-(var12.field_Y / 2)) + ((double)(var43 * (var17 + (var25_ref.field_Y / 2 + 4))) / var26_double + (double)var25_ref.field_db));
-                        var46 = BevelBoxPainter.createProjectile(this.a(var25_ref.field_u, true), var45, (byte) -95, this, var10, var44, 125);
-                        this.b(52, var46);
+                        var46 = BevelBoxPainter.createProjectile(this.getUnitByOwner(var25_ref.field_u, true), var45, (byte) -95, this, var10, var44, 125);
+                        this.onProjectileFinished(52, var46);
                         var46.field_y = 10;
                         if (this.field_x[var25_ref.field_u] == 6) {
                           var46.field_y = var46.field_y - this.field_X[var25_ref.field_u] / 2;
@@ -8165,7 +8165,7 @@ final class nf {
                         break;
                       }
                     }
-                    var25_ref = (ml) (IntKeyLookup.field_d.next(-18502));
+                    var25_ref = (BattleUnit) (IntKeyLookup.field_d.next(-18502));
                     continue;
                   }
                 } else {
@@ -8184,9 +8184,9 @@ final class nf {
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameCompleted5 = true;
           if (stackIn_524_0 == stackIn_524_1) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             IntKeyLookup.field_d.setDeque((byte) 99, this.field_i);
-            var24_ref_mlLifetime23 = (ml) (IntKeyLookup.field_d.first(-113));
+            var24_ref_mlLifetime23 = (BattleUnit) (IntKeyLookup.field_d.first(-113));
             while (var24_ref_mlLifetime23 != null) {
               stackIn_541_0 = var24_ref_mlLifetime23.field_s;
               if (var47 != 0) {
@@ -8196,14 +8196,14 @@ final class nf {
               if (stackIn_541_0 != null &&
                 !var24_ref_mlLifetime23.field_U &&
                 var24_ref_mlLifetime23.field_jb != 12) {
-                var25Lifetime5 = aj.spawnProjectile(this.a(var24_ref_mlLifetime23.field_u, true), var24_ref_mlLifetime23.field_db, false, 103, this, var24_ref_mlLifetime23.field_lb);
-                this.b(52, var25Lifetime5);
+                var25Lifetime5 = aj.spawnProjectile(this.getUnitByOwner(var24_ref_mlLifetime23.field_u, true), var24_ref_mlLifetime23.field_db, false, 103, this, var24_ref_mlLifetime23.field_lb);
+                this.onProjectileFinished(52, var25Lifetime5);
                 var25Lifetime5Lifetime1 = BevelBoxPainter.createProjectile(var12, var24_ref_mlLifetime23.field_db, (byte) 40, this, var10, var24_ref_mlLifetime23.field_lb, 55);
-                this.b(52, var25Lifetime5Lifetime1);
+                this.onProjectileFinished(52, var25Lifetime5Lifetime1);
                 var24_ref_mlLifetime23.field_ib = 0;
-                var24_ref_mlLifetime23.d(var4, 24);
+                var24_ref_mlLifetime23.updateTurnLogic(var4, 24);
               }
-              var24_ref_mlLifetime23 = (ml) (IntKeyLookup.field_d.next(-18502));
+              var24_ref_mlLifetime23 = (BattleUnit) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted5) {
               this.field_D = true;
@@ -8211,17 +8211,17 @@ final class nf {
           }
           if (decompiledFrameCompleted5) {
             if (83 == var10) {
-              this.a((byte) 80, var10, var4);
+              this.consumeSpellCharge((byte) 80, var10, var4);
               var12.field_eb = -50;
               var12.field_jb = 18;
               var12.field_z = true;
               var24_ref_miLifetime17 = aj.spawnProjectile(var12, var12.field_db - (var12.field_Y >> 1), false, 108, this, var12.field_lb);
-              this.b(52, var24_ref_miLifetime17);
+              this.onProjectileFinished(52, var24_ref_miLifetime17);
               this.field_D = true;
             }
             decompiledFrameRemainder1 = (var10 == 71);
             if (decompiledFrameRemainder1) {
-              this.a((byte) 80, var10, var4);
+              this.consumeSpellCharge((byte) 80, var10, var4);
               var12.field_U = true;
               var12.field_jb = 16;
               stackIn_541_0 = var12;
@@ -8285,46 +8285,46 @@ final class nf {
             }
             var24_ref_miLifetime17Lifetime1 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) 32, this, var10, var12.field_lb, 111);
             var24_ref_miLifetime17Lifetime1.field_H = 4;
-            this.b(52, var24_ref_miLifetime17Lifetime1);
-            var24_ref_miLifetime17Lifetime2 = aj.spawnProjectile((ml) null, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
-            this.b(52, var24_ref_miLifetime17Lifetime2);
+            this.onProjectileFinished(52, var24_ref_miLifetime17Lifetime1);
+            var24_ref_miLifetime17Lifetime2 = aj.spawnProjectile((BattleUnit) null, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
+            this.onProjectileFinished(52, var24_ref_miLifetime17Lifetime2);
             this.field_D = true;
           }
           if (45 == var10) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var12.field_z = true;
             var12.field_eb = -50;
             var12.field_jb = 19;
           }
           if (var10 == 58) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24Lifetime3 = gf.a((480 + var9) * 32 / 4, -266740663);
             var25_intLifetime2 = -96 + (var8 & 1) * 192;
             var26_ref_mi = BevelBoxPainter.createProjectile(var12, -544, (byte) -128, this, var10, var8 - var24Lifetime3 * var25_intLifetime2 / 16, 49);
             var26_ref_mi.field_u = var25_intLifetime2;
             var26_ref_mi.field_F = 0;
-            this.b(52, var26_ref_mi);
+            this.onProjectileFinished(52, var26_ref_mi);
             this.field_D = true;
           }
           if (var10 == 17) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime18 = BevelBoxPainter.createProjectile(var12, var9, (byte) 103, this, var10, var8, 15);
-            this.b(52, var24_ref_miLifetime18);
+            this.onProjectileFinished(52, var24_ref_miLifetime18);
             this.field_D = true;
           }
           if (var10 == 34) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24Lifetime4 = gf.a((var9 + 480) * 32 / 4, -266740663);
             var25_intLifetime3 = (1 & var8) * 192 - 96;
             var26_ref_miLifetime1 = BevelBoxPainter.createProjectile(var12, -544, (byte) -119, this, var10, var8 - var24Lifetime4 * var25_intLifetime3 / 16, 28);
             var26_ref_miLifetime1.field_u = var25_intLifetime3;
             var26_ref_miLifetime1.field_F = 0;
-            this.b(52, var26_ref_miLifetime1);
+            this.onProjectileFinished(52, var26_ref_miLifetime1);
             this.field_D = true;
           }
           boolean decompiledFrameCompleted4 = true;
           if (var10 == 20) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24Lifetime5 = gf.a((var9 + 480) * 32 / 4, -266740663);
             var25_intLifetime4 = (1 & var8) * 192 - 96;
             var26Lifetime1 = 5;
@@ -8336,7 +8336,7 @@ final class nf {
               var28Lifetime1 = BevelBoxPainter.createProjectile(var12, -544, (byte) -94, this, var10, -(var24Lifetime5 * var25_intLifetime4 / 16) + (64 * var27Lifetime1 - 128 + var8), 17);
               var28Lifetime1.field_u = var25_intLifetime4;
               var28Lifetime1.field_F = 0;
-              this.b(52, var28Lifetime1);
+              this.onProjectileFinished(52, var28Lifetime1);
               var27Lifetime1++;
               if (var47 != 0) {
                 decompiledFrameCompleted4 = false;
@@ -8349,7 +8349,7 @@ final class nf {
           }
           boolean decompiledFrameCompleted3 = true;
           if (var10 == 105) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24Lifetime6 = gf.a((15360 + var9 * 32) / 4, -266740663);
             var25_intLifetime5 = -96 + 192 * (var8 & 1);
             var26Lifetime2 = 0;
@@ -8357,7 +8357,7 @@ final class nf {
               var27_ref_mi = BevelBoxPainter.createProjectile(var12, -544, (byte) 17, this, var10, var8 - (192 - 96 * var26Lifetime2) - var24Lifetime6 * var25_intLifetime5 / 16, 143);
               var27_ref_mi.field_u = var25_intLifetime5;
               var27_ref_mi.field_F = 0;
-              this.b(52, var27_ref_mi);
+              this.onProjectileFinished(52, var27_ref_mi);
               var26Lifetime2++;
               if (var47 != 0) {
                 decompiledFrameCompleted3 = false;
@@ -8370,7 +8370,7 @@ final class nf {
           }
           boolean decompiledFrameCompleted2 = true;
           if (var10 == 21) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24Lifetime7 = gf.a(32 * (var9 + 480) / 4, -266740663);
             var25_intLifetime6 = -96 + 192 * (1 & var8);
             var26Lifetime3 = 5;
@@ -8380,7 +8380,7 @@ final class nf {
             var27Lifetime2 = 0;
             while (var26Lifetime3 > var27Lifetime2) {
               var28Lifetime2 = BevelBoxPainter.createProjectile(var12, -544, (byte) -128, this, var10, var8 - (-(64 * (-2 + var27Lifetime2)) + var25_intLifetime6 * var24Lifetime7 / 16), 18);
-              this.b(52, var28Lifetime2);
+              this.onProjectileFinished(52, var28Lifetime2);
               var27Lifetime2++;
               if (var47 != 0) {
                 decompiledFrameCompleted2 = false;
@@ -8392,78 +8392,78 @@ final class nf {
             }
           }
           if (var10 == 22) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime19 = BevelBoxPainter.createProjectile(var12, this.field_H, (byte) -109, this, var10, var8, 19);
             var24_ref_miLifetime19.field_F = 0;
             var24_ref_miLifetime19.field_u = 0;
-            this.b(52, var24_ref_miLifetime19);
+            this.onProjectileFinished(52, var24_ref_miLifetime19);
             this.field_D = true;
           }
           if (var10 == 75) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime20 = BevelBoxPainter.createProjectile(var12, -480, (byte) -98, this, var10, var8, 62);
             var24_ref_miLifetime20.field_u = 0;
             var24_ref_miLifetime20.field_F = 0;
-            this.b(52, var24_ref_miLifetime20);
+            this.onProjectileFinished(52, var24_ref_miLifetime20);
             this.field_D = true;
           }
           if (var10 == 53) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var24_ref_miLifetime21 = BevelBoxPainter.createProjectile(var12, -480, (byte) 30, this, var10, var8, 47);
             var24_ref_miLifetime21.field_u = 0;
             var24_ref_miLifetime21.field_F = 0;
-            this.b(52, var24_ref_miLifetime21);
+            this.onProjectileFinished(52, var24_ref_miLifetime21);
             this.field_D = true;
           }
           var24Lifetime8 = -115 % ((param0 + 53) / 37);
           if (var10 == 100) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var25Lifetime6 = BevelBoxPainter.createProjectile(var12, -480, (byte) -120, this, var10, var8, 141);
             var25Lifetime6.field_u = 0;
             var25Lifetime6.field_F = 0;
-            this.b(52, var25Lifetime6);
+            this.onProjectileFinished(52, var25Lifetime6);
             this.field_D = true;
           }
           if (111 == var10) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var25Lifetime7 = BevelBoxPainter.createProjectile(var12, -480, (byte) 124, this, var10, var8, 160);
             var25Lifetime7.field_F = 0;
             var25Lifetime7.field_u = 0;
-            this.b(52, var25Lifetime7);
+            this.onProjectileFinished(52, var25Lifetime7);
             this.field_D = true;
           }
           if (var10 == 101) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var25Lifetime8 = BevelBoxPainter.createProjectile(var12, -480, (byte) 118, this, var10, var8, 142);
             var25Lifetime8.field_u = 0;
             var25Lifetime8.field_F = 0;
-            this.b(52, var25Lifetime8);
+            this.onProjectileFinished(52, var25Lifetime8);
             this.field_D = true;
           }
           if (var10 == 97) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var25Lifetime9 = BevelBoxPainter.createProjectile(var12, this.field_H, (byte) -93, this, var10, var8, 134);
             var25Lifetime9.field_u = 0;
             var25Lifetime9.field_F = 0;
-            this.b(52, var25Lifetime9);
+            this.onProjectileFinished(52, var25Lifetime9);
             this.field_D = true;
           }
           if (46 == var10) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var25Lifetime10 = BevelBoxPainter.createProjectile(var12, -480, (byte) 29, this, var10, var8, 36);
             var25Lifetime10.field_F = 0;
             var25Lifetime10.field_u = 0;
-            this.b(52, var25Lifetime10);
+            this.onProjectileFinished(52, var25Lifetime10);
             this.field_D = true;
           }
           boolean decompiledFrameCompleted1 = true;
           if (var10 == 5) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var25Lifetime11 = aj.spawnProjectile(var12, var9, false, 101, this, var8);
-            this.b(52, var25Lifetime11);
+            this.onProjectileFinished(52, var25Lifetime11);
             var25Lifetime11Lifetime1 = aj.spawnProjectile(var12, -32 - var12.field_Y + var12.field_db, false, 101, this, var12.field_lb);
-            this.b(52, var25Lifetime11Lifetime1);
-            var25Lifetime11Lifetime2 = (mi) (this.field_Kb.first(12623));
+            this.onProjectileFinished(52, var25Lifetime11Lifetime1);
+            var25Lifetime11Lifetime2 = (SpellProjectile) (this.field_Kb.first(12623));
             while (var25Lifetime11Lifetime2 != null) {
               stackIn_631_0 = var25Lifetime11Lifetime2.field_I;
               stackIn_631_1 = 149;
@@ -8473,15 +8473,15 @@ final class nf {
               }
               if (stackIn_631_0 == stackIn_631_1 &&
                 var12 == var25Lifetime11Lifetime2.field_t) {
-                var25Lifetime11Lifetime2.f(0);
+                var25Lifetime11Lifetime2.remove(0);
               }
-              var25Lifetime11Lifetime2 = (mi) (this.field_Kb.next(0));
+              var25Lifetime11Lifetime2 = (SpellProjectile) (this.field_Kb.next(0));
             }
             if (decompiledFrameCompleted1) {
               var25Lifetime11Lifetime3 = BevelBoxPainter.createProjectile(var12, -32 + (var12.field_db - var12.field_Y), (byte) 29, this, var10, var12.field_lb, 149);
               var25Lifetime11Lifetime3.field_F = -var12.field_db - (-var12.field_Y - 32) + var9;
               var25Lifetime11Lifetime3.field_u = var8 - var12.field_lb;
-              this.b(52, var25Lifetime11Lifetime3);
+              this.onProjectileFinished(52, var25Lifetime11Lifetime3);
               this.field_D = true;
             }
           }
@@ -8491,7 +8491,7 @@ final class nf {
           }
           if (stackIn_631_0 == stackIn_631_1) {
             if (var12.field_db >= this.field_H) {
-              var25_intLifetime7 = this.a(4, var4, -770226943);
+              var25_intLifetime7 = this.getSpellCharges(4, var4, -770226943);
               if (0 >= var25_intLifetime7) {
                 var26Lifetime4 = var12.field_ib / 3;
                 if (5 > var26Lifetime4) {
@@ -8504,14 +8504,14 @@ final class nf {
               }
             }
             var25Lifetime12 = aj.spawnProjectile(var12, var9, false, 101, this, var8);
-            this.b(52, var25Lifetime12);
+            this.onProjectileFinished(52, var25Lifetime12);
             var25Lifetime12Lifetime1 = aj.spawnProjectile(var12, var12.field_db, false, 101, this, var12.field_lb);
-            this.b(52, var25Lifetime12Lifetime1);
-            this.a((byte) 80, var10, var4);
+            this.onProjectileFinished(52, var25Lifetime12Lifetime1);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             this.a(var12, 0);
             if (var12.field_jb != 20) {
               var12.field_q = 0;
-              if (var12.g((byte) 111)) {
+              if (var12.isTower((byte) 111)) {
                 var12.field_db = var12.field_db - var12.field_Y / 2;
                 var12.field_q = 0;
                 var12.field_Y = 32;
@@ -8537,12 +8537,12 @@ final class nf {
           }
           if (var10 == 150) {
             var25Lifetime13 = aj.spawnProjectile(var12, var12.field_db, false, 137, this, var8);
-            this.b(52, var25Lifetime13);
+            this.onProjectileFinished(52, var25Lifetime13);
             var25Lifetime13Lifetime1 = aj.spawnProjectile(var12, var12.field_db, false, 137, this, var12.field_lb);
-            this.b(52, var25Lifetime13Lifetime1);
-            this.a((byte) 80, var10, var4);
+            this.onProjectileFinished(52, var25Lifetime13Lifetime1);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             this.a(var12, 0);
-            if (var12.x(32) &&
+            if (var12.isAirborneOrHovering(32) &&
               var12.field_s.field_q <= 0) {
               this.a(var12.field_s, 0);
               var13Lifetime2 = -var12.field_lb + var12.field_s.field_lb;
@@ -8575,11 +8575,11 @@ final class nf {
             var12.field_ib = 0;
             var12.field_x = 1;
             var25Lifetime14 = aj.spawnProjectile(var12, var12.field_db, false, 101, this, var12.field_lb);
-            this.b(52, var25Lifetime14);
-            var25Lifetime14.a(0, 0, 32, 8);
+            this.onProjectileFinished(52, var25Lifetime14);
+            var25Lifetime14.applyAreaEffect(0, 0, 32, 8);
           }
           if (var10 == 152) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var12.field_z = true;
             var12.field_jb = 0;
           }
@@ -8587,7 +8587,7 @@ final class nf {
           boolean decompiledFrameCompleted0 = true;
           if (var10 == 132) {
             var25Lifetime15 = aj.spawnProjectile(var12, var12.field_db, false, 108, this, var12.field_lb);
-            this.b(52, var25Lifetime15);
+            this.onProjectileFinished(52, var25Lifetime15);
             var26Lifetime5 = var12.field_lb;
             var27Lifetime3 = var12.field_db;
             if (var26Lifetime5 < 96) {
@@ -8601,11 +8601,11 @@ final class nf {
             }
             var25Lifetime15.field_v = var26Lifetime5;
             var25Lifetime15.field_G = var27Lifetime3;
-            var25Lifetime15.a(0, 0, 64, 8);
+            var25Lifetime15.applyAreaEffect(0, 0, 64, 8);
             var25Lifetime15.field_v = var12.field_lb;
             var25Lifetime15.field_G = var12.field_db;
             IntKeyLookup.field_d.setDeque((byte) 83, this.field_i);
-            var28_ref = (ml) (IntKeyLookup.field_d.first(-44));
+            var28_ref = (BattleUnit) (IntKeyLookup.field_d.first(-44));
             while (var28_ref != null) {
               stackIn_689_0 = var28_ref;
               stackIn_689_1 = var12;
@@ -8631,7 +8631,7 @@ final class nf {
                   var28_ref.field_R = var28_ref.field_db << 4;
                 }
               }
-              var28_ref = (ml) (IntKeyLookup.field_d.next(-18502));
+              var28_ref = (BattleUnit) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted0) {
               this.field_D = true;
@@ -8646,9 +8646,9 @@ final class nf {
           }
           if (decompiledFrameRemainder0) {
             var25Lifetime15Lifetime1 = aj.spawnProjectile(stackIn_689_0, stackIn_689_1.field_db, false, 86, this, var12.field_lb);
-            this.b(52, var25Lifetime15Lifetime1);
+            this.onProjectileFinished(52, var25Lifetime15Lifetime1);
             this.a(var12.field_s, 0);
-            if (var12.field_s.i((byte) -3) > this.field_H) {
+            if (var12.field_s.getY((byte) -3) > this.field_H) {
               this.field_D = true;
             }
             var12.field_s.field_R = var12.field_R;
@@ -8661,56 +8661,56 @@ final class nf {
             var12.field_ib = 0;
           }
           if (var10 == 2) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var12.field_jb = 20;
-            var12.e((byte) 6);
-            this.a(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, var12.field_db + (-(var12.field_Y >> 1) - 10));
+            var12.initializeAppearance((byte) 6);
+            this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, var12.field_db + (-(var12.field_Y >> 1) - 10));
             i.a(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
-            this.i((byte) 86);
+            this.updateAllUnits((byte) 86);
             var11Lifetime7 = 0;
             this.field_D = true;
             var25Lifetime16 = aj.spawnProjectile(var12, -(var12.field_Y / 2) + var12.field_db, false, 101, this, var12.field_lb);
-            this.b(52, var25Lifetime16);
+            this.onProjectileFinished(52, var25Lifetime16);
           }
           if (var10 == 114) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var12.field_jb = 38;
-            var12.e((byte) 6);
-            this.a(var12.field_lb, (var12.field_Y >> 1) + 10, (byte) 51, -10 + (-(var12.field_Y >> 1) + var12.field_db));
+            var12.initializeAppearance((byte) 6);
+            this.refreshTerrainArea(var12.field_lb, (var12.field_Y >> 1) + 10, (byte) 51, -10 + (-(var12.field_Y >> 1) + var12.field_db));
             i.a(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
-            this.i((byte) 86);
+            this.updateAllUnits((byte) 86);
             var11Lifetime8 = 0;
             this.field_D = true;
             var25Lifetime17 = aj.spawnProjectile(var12, -(var12.field_Y / 2) + var12.field_db, false, 86, this, var12.field_lb);
-            this.b(52, var25Lifetime17);
+            this.onProjectileFinished(52, var25Lifetime17);
           }
           if (55 == var10) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var12.field_jb = 22;
-            var12.e((byte) 6);
-            this.a(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, var12.field_db + (-(var12.field_Y >> 1) - 10));
+            var12.initializeAppearance((byte) 6);
+            this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, var12.field_db + (-(var12.field_Y >> 1) - 10));
             i.a(this.field_V, -var12.field_Y + var12.field_db, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
-            this.i((byte) 86);
+            this.updateAllUnits((byte) 86);
             var11Lifetime9 = 0;
             this.field_D = true;
             var25Lifetime18 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 94, this, var12.field_lb);
-            this.b(52, var25Lifetime18);
+            this.onProjectileFinished(52, var25Lifetime18);
           }
           if (var10 == 31) {
-            this.a((byte) 80, var10, var4);
+            this.consumeSpellCharge((byte) 80, var10, var4);
             var12.field_jb = 21;
-            var12.e((byte) 6);
-            this.a(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, -(var12.field_Y >> 1) + var12.field_db - 10);
+            var12.initializeAppearance((byte) 6);
+            this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, -(var12.field_Y >> 1) + var12.field_db - 10);
             i.a(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
-            this.i((byte) 86);
+            this.updateAllUnits((byte) 86);
             this.field_D = true;
             var11Lifetime10 = 0;
             var25Lifetime19 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 89, this, var12.field_lb);
-            this.b(52, var25Lifetime19);
+            this.onProjectileFinished(52, var25Lifetime19);
           }
           if (30 == var10) {
-            this.a(false, var8 - (ByteStorage.field_e.field_n >> 1), this.field_V, true, var9 - ByteStorage.field_e.field_w, ByteStorage.field_e);
-            this.a(-(ByteStorage.field_e.field_n >> 1) + var8, (byte) -91, -ByteStorage.field_e.field_w + var9, this.field_Jb, ByteStorage.field_e);
+            this.stampSpriteMask(false, var8 - (ByteStorage.field_e.field_n >> 1), this.field_V, true, var9 - ByteStorage.field_e.field_w, ByteStorage.field_e);
+            this.carveTerrainWithSprite(-(ByteStorage.field_e.field_n >> 1) + var8, (byte) -91, -ByteStorage.field_e.field_w + var9, this.field_Jb, ByteStorage.field_e);
             this.field_D = true;
           }
           this.field_mb = var8;
@@ -8725,7 +8725,7 @@ final class nf {
             !this.field_D) {
             throw new IllegalStateException();
           }
-          this.p((byte) 99);
+          this.clearProjectiles((byte) 99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8741,7 +8741,7 @@ final class nf {
         }
     }
 
-    private final int[] a(byte param0, IsaacRandom param1) {
+    private final int[] generateTwentyPointProfile(byte param0, IsaacRandom param1) {
         int stackIn_9_0 = 0;
         int stackIn_9_1 = 0;
         int[] stackIn_20_0 = null;
@@ -8828,7 +8828,7 @@ final class nf {
                 continue;
               }
             } else {
-              this.a(var5, (byte) -109);
+              this.rasterizeTerrainProfile(var5, (byte) -109);
               stackIn_24_0 = 0;
             }
             var6 = stackIn_24_0;
@@ -8901,7 +8901,7 @@ final class nf {
         }
     }
 
-    private final boolean a(int param0, ml param1, boolean param2) {
+    private final boolean canCastSpell(int param0, BattleUnit param1, boolean param2) {
         boolean stackIn_4_0 = false;
         int stackIn_87_0 = 0;
         int stackIn_88_1 = 0;
@@ -8922,7 +8922,7 @@ final class nf {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param0 == 153) {
-            stackIn_4_0 = this.a(39, param1, true);
+            stackIn_4_0 = this.canCastSpell(39, param1, true);
             return stackIn_4_0;
           }
           if (param0 == 11) {
@@ -8938,7 +8938,7 @@ final class nf {
               }
             }
             if (20 < param1.field_ib &&
-              param1.t(29) &&
+              param1.hasNoLinkedUnit(29) &&
               this.field_x[param1.field_u] != 10) {
               if (var4_int <= this.field_X[param1.field_u]) {
                 return false;
@@ -8952,15 +8952,15 @@ final class nf {
             return false;
           }
           if (this.field_f &&
-            !this.d((byte) 66, param0)) {
+            !this.isArenaSpell((byte) 66, param0)) {
             return false;
           }
           if (param0 == 87 &&
-            0 < this.b(param0, -102, param1.field_u)) {
+            0 < this.getSpellRecharge(param0, -102, param1.field_u)) {
             return false;
           }
           if (param0 == 116 &&
-            0 < this.b(param0, -102, param1.field_u)) {
+            0 < this.getSpellRecharge(param0, -102, param1.field_u)) {
             return false;
           }
           if ((param0 == 124 ||
@@ -8994,7 +8994,7 @@ final class nf {
           }
           boolean decompiledFrameCompleted1 = true;
           if (null != param1.field_s) {
-            if (this.a(param0, param1, 1)) {
+            if (this.isImmuneToSpell(param0, param1, 1)) {
               return true;
             }
             var4 = gj.field_c[param1.field_jb];
@@ -9044,22 +9044,22 @@ final class nf {
               (decompiledFrameRemainder0 = !(param0 >= 156)) &&
               (decompiledFrameRemainder0 = !(param0 <= -1)) &&
               (decompiledFrameRemainder0 = (FixedViewResizeListener.field_e[param0] == 4))) {
-              if (4 < 1 + this.c((byte) -116, param1.field_u)) {
+              if (4 < 1 + this.countTeamUnits((byte) -116, param1.field_u)) {
                 cf.field_f = true;
                 return false;
               }
-              decompiledFrameRemainder0 = !(this.b(12) + 1 <= 4 * this.field_q);
+              decompiledFrameRemainder0 = !(this.countUnits(12) + 1 <= 4 * this.field_q);
               if (decompiledFrameRemainder0) {
                 cf.field_f = true;
                 return false;
               }
             }
             if (decompiledFrameRemainder0) {
-              if (4 < 2 + this.c((byte) -113, param1.field_u)) {
+              if (4 < 2 + this.countTeamUnits((byte) -113, param1.field_u)) {
                 cf.field_f = true;
                 return false;
               }
-              decompiledFrameRemainder0 = !(2 + this.b(12) <= this.field_q * 4);
+              decompiledFrameRemainder0 = !(2 + this.countUnits(12) <= this.field_q * 4);
               if (decompiledFrameRemainder0) {
                 cf.field_f = true;
                 return false;
@@ -9067,21 +9067,21 @@ final class nf {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (3 + this.c((byte) -128, param1.field_u) > 4) {
+            if (3 + this.countTeamUnits((byte) -128, param1.field_u) > 4) {
               cf.field_f = true;
               return false;
             }
-            if (3 + this.b(12) > 4 * this.field_q) {
+            if (3 + this.countUnits(12) > 4 * this.field_q) {
               cf.field_f = true;
               return false;
             }
           }
           if (param0 == 93 &&
-            param1.t(57)) {
+            param1.hasNoLinkedUnit(57)) {
             return false;
           }
           if (param0 == 95 &&
-            param1.t(27)) {
+            param1.hasNoLinkedUnit(27)) {
             return false;
           }
           if (2 == param0 &&
@@ -9126,7 +9126,7 @@ final class nf {
             return false;
           }
           if (param0 == 45 &&
-            param1.g((byte) 90)) {
+            param1.isTower((byte) 90)) {
             return false;
           }
           if (param0 == 45 &&
@@ -9195,7 +9195,7 @@ final class nf {
         }
     }
 
-    final void a(int param0, mi param1) {
+    final void addProjectile(int param0, SpellProjectile param1) {
         try {
           if (param0 != -1) {
             this.field_fb = (int[]) null;
@@ -9206,7 +9206,7 @@ final class nf {
         }
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void consumeSpellCharge(byte param0, int param1, int param2) {
         int[] dupTemp$0 = null;
         int[] dupTemp$1 = null;
         int[] dupTemp$2 = null;
@@ -9223,7 +9223,7 @@ final class nf {
           return;
         }
         if (param1 == 153) {
-          this.a((byte) 80, 39, param2);
+          this.consumeSpellCharge((byte) 80, 39, param2);
           return;
         }
         if (152 == param1) {
@@ -9297,12 +9297,12 @@ final class nf {
           break;
         }
         if (stackIn_45_0 != stackIn_45_1) {
-          discarded$3 = this.c(18, (IsaacRandom) null);
+          discarded$3 = this.generateSevenPointWrappedProfile(18, (IsaacRandom) null);
         }
         return;
     }
 
-    final int b(int param0, int param1, int param2) {
+    final int getSpellRecharge(int param0, int param1, int param2) {
         int var4;
         int var5;
         int stackIn_16_0 = 0;
@@ -9317,7 +9317,7 @@ final class nf {
           return 57;
         }
         if (param0 == 153) {
-          return this.b(39, -102, param2);
+          return this.getSpellRecharge(39, -102, param2);
         }
         var4 = 0;
         while (var4 < 16) {
@@ -9333,7 +9333,7 @@ final class nf {
         return -1;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void refreshTerrainArea(int param0, int param1, byte param2, int param3) {
         if (!this.field_eb) {
           return;
         }
@@ -9345,7 +9345,7 @@ final class nf {
         hj.a(this.field_Jb, param1, param3, this, (byte) 0, param0, param2 ^ -95);
     }
 
-    final boolean b(int param0, ml param1, int param2, int param3) {
+    final boolean canStandAt(int param0, BattleUnit param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_17_0 = false;
@@ -9354,7 +9354,7 @@ final class nf {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param1.p(-8323);
+          var5_int = param1.getSize(-8323);
           if (param2 != -16) {
             this.field_lb = (int[][]) null;
           }
@@ -9366,7 +9366,7 @@ final class nf {
               121 == param1.field_gb.field_I) {
               return false;
             }
-            stackIn_17_0 = !(this.a(param0, var5_int >> 1, param3, param2 ^ -70));
+            stackIn_17_0 = !(this.circleHitsTerrain(param0, var5_int >> 1, param3, param2 ^ -70));
             return stackIn_17_0;
           }
           return false;
@@ -9384,7 +9384,7 @@ final class nf {
         }
     }
 
-    nf(boolean param0, boolean param1, int param2, int param3, boolean param4, String[] param5, int param6, int param7, int[][] param8, int[][] param9, int[] param10, int param11, boolean[] param12) {
+    Battle(boolean param0, boolean param1, int param2, int param3, boolean param4, String[] param5, int param6, int param7, int[][] param8, int[][] param9, int[] param10, int param11, boolean[] param12) {
         boolean stackIn_4_1 = false;
         boolean stackIn_10_1 = false;
         int stackIn_29_0 = 0;
@@ -9775,18 +9775,18 @@ final class nf {
         }
     }
 
-    final int b(int param0) {
+    final int countUnits(int param0) {
         int var2;
-        ml var3;
+        BattleUnit var3;
         int var4;
         int stackIn_11_0 = 0;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = 0;
         if (param0 != 12) {
-          this.f(-25);
+          this.getThemeParameter(-25);
         }
         MidiPcmStream.field_D.setDeque((byte) 78, this.field_i);
-        var3 = (ml) (MidiPcmStream.field_D.first(-43));
+        var3 = (BattleUnit) (MidiPcmStream.field_D.first(-43));
         while (var3 != null) {
           stackIn_11_0 = 12;
           if (var4 != 0) {
@@ -9796,7 +9796,7 @@ final class nf {
             null != var3.field_s) {
             var2++;
           }
-          var3 = (ml) (MidiPcmStream.field_D.next(param0 ^ -18506));
+          var3 = (BattleUnit) (MidiPcmStream.field_D.next(param0 ^ -18506));
         }
         return var2;
     }

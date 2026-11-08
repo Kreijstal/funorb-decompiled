@@ -112,7 +112,7 @@ final class IntKeyLookup {
           }
           return;
         }
-        mi.field_E.drawAlpha(15 + var3, var4 + 10, var5);
+        SpellProjectile.field_E.drawAlpha(15 + var3, var4 + 10, var5);
         var6Lifetime1 = -125 + SoundCache.field_a;
         if (param2 != 1) {
           return;

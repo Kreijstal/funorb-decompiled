@@ -192,8 +192,8 @@ final class DraggableWidget extends SingleChildContainer {
           !(param1 <= co.field_e.length)) {
           co.field_e = new int[param1 * 2];
         }
-        if (nf.field_z == null) {
-          nf.field_z = new int[param1 * 2];
+        if (Battle.field_z == null) {
+          Battle.field_z = new int[param1 * 2];
           if (null == ConditionalTextValue.field_e ||
             !(param1 <= ConditionalTextValue.field_e.length)) {
             ConditionalTextValue.field_e = new int[2 * param1];
@@ -222,8 +222,8 @@ final class DraggableWidget extends SingleChildContainer {
             wh.field_e = new boolean[2 * param1];
           }
         } else {
-          if (nf.field_z.length < param1) {
-            nf.field_z = new int[param1 * 2];
+          if (Battle.field_z.length < param1) {
+            Battle.field_z = new int[param1 * 2];
             if (null == ConditionalTextValue.field_e) {
               ConditionalTextValue.field_e = new int[2 * param1];
               if (CachedArchiveProvider.field_u == null ||

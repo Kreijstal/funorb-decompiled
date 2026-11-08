@@ -52,7 +52,7 @@ final class um {
               java.applet.Applet var6 = (java.applet.Applet) null;
               um.setSessionCookie((String) null, (java.applet.Applet) null, -110);
             }
-            ml.a(-104, param1);
+            BattleUnit.updateBrowserLinks(-104, param1);
           } catch (RuntimeException runtimeException) {
             throw aa.wrapException((Throwable) ((Object) runtimeException), "um.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }

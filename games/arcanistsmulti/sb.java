@@ -105,7 +105,7 @@ final class sb {
         int var2_int = 0;
         RuntimeException var2 = null;
         Object var3 = null;
-        ml var4_ref_ml = null;
+        BattleUnit var4_ref_ml = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -119,7 +119,7 @@ final class sb {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var2_int = IntKeyLookup.field_g.field_nb;
-          if (Checkbox.field_J.a(-31497) == 8) {
+          if (Checkbox.field_J.getArenaTheme(-31497) == 8) {
             SoftwareRasterizer.setClip(0, 0, 391, 480);
           }
           stackIn_5_0 = fe.field_g;
@@ -144,12 +144,12 @@ final class sb {
           boolean decompiledFrameRemainder1 = true;
           var3 = null;
           if (bm.field_g.field_bb != -1) {
-            var4_ref_ml = Checkbox.field_J.a(bm.field_g.field_bb, true);
+            var4_ref_ml = Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true);
             if (var4_ref_ml != null) {
-              var5 = var4_ref_ml.o(-22625);
+              var5 = var4_ref_ml.getType(-22625);
               if (17 == var5) {
-                var3 = gj.field_c[var4_ref_ml.o(-22625)];
-                if (var4_ref_ml.q(26)) {
+                var3 = gj.field_c[var4_ref_ml.getType(-22625)];
+                if (var4_ref_ml.getControlFlag(26)) {
                   var3 = NanoFrameClock.field_u;
                 }
               } else {
@@ -167,15 +167,15 @@ final class sb {
                     20 != var5 &&
                     var5 != 35) {
                     if (var5 != 38) {
-                      var3 = gj.field_c[var4_ref_ml.o(-22625)];
+                      var3 = gj.field_c[var4_ref_ml.getType(-22625)];
                       decompiledFrameRemainder1 = false;
                     }
                     else {
-                      var12 = Checkbox.field_J.e(3, var4_ref_ml.y(17571));
+                      var12 = Checkbox.field_J.getPlayerSpellSlots(3, var4_ref_ml.getOwnerId(17571));
                       var11 = var12;
                       var10 = var11;
                       var3 = var10;
-                      if (19 == var4_ref_ml.o(-22625)) {
+                      if (19 == var4_ref_ml.getType(-22625)) {
                         for (var5 = 0; var5 < 16; var5++) {
                           if (45 == var12[var5]) {
                             var12[var5] = 152;
@@ -185,11 +185,11 @@ final class sb {
                       }
                     }
                   } else {
-                    var12 = Checkbox.field_J.e(3, var4_ref_ml.y(17571));
+                    var12 = Checkbox.field_J.getPlayerSpellSlots(3, var4_ref_ml.getOwnerId(17571));
                     var11 = var12;
                     var10 = var11;
                     var3 = var10;
-                    if (19 == var4_ref_ml.o(-22625)) {
+                    if (19 == var4_ref_ml.getType(-22625)) {
                       for (var5 = 0; var5 < 16; var5++) {
                         if (45 == var12[var5]) {
                           var12[var5] = 152;
@@ -207,15 +207,15 @@ final class sb {
                     }
                   }
                   if ((decompiledFrameRemainder1) &&
-                    (var4_ref_ml.i((byte) -106) > Checkbox.field_J.field_H)) {
+                    (var4_ref_ml.getY((byte) -106) > Checkbox.field_J.field_H)) {
                     DropdownList.field_N = 4;
                     pn.field_a = th.field_b;
                     var3 = th.field_b;
                     lm.field_f = th.field_b;
                   }
                 } else {
-                  var3 = gj.field_c[var4_ref_ml.o(-22625)];
-                  if (var4_ref_ml.q(72)) {
+                  var3 = gj.field_c[var4_ref_ml.getType(-22625)];
+                  if (var4_ref_ml.getControlFlag(72)) {
                     var3 = FadingModalPanel.field_N;
                   }
                 }
@@ -227,11 +227,11 @@ final class sb {
             lm.field_f = (int[]) (var3);
             DropdownList.field_N = -1;
           }
-          if (Checkbox.field_J.a(true) ||
-            bm.field_g.field_I != Checkbox.field_J.d(false) ||
-            Checkbox.field_J.c((byte) 89) &&
-            !Checkbox.field_J.j(39) ||
-            Checkbox.field_J.g(116)) {
+          if (Checkbox.field_J.isAnimating(true) ||
+            bm.field_g.field_I != Checkbox.field_J.getCurrentPlayer(false) ||
+            Checkbox.field_J.isTurnFinished((byte) 89) &&
+            !Checkbox.field_J.isWaitingForInput(39) ||
+            Checkbox.field_J.isFinished(116)) {
             var3 = null;
           }
           if (var3 != null) {
@@ -246,8 +246,8 @@ final class sb {
             }
             var4 = 0;
             var5Lifetime1 = 0;
-            var6 = mi.field_B.getWrappedWidth(IntrusiveNodeHashTable.field_f, ArrayWidgetContainer.field_A - 32);
-            var7 = 32 + mi.field_B.field_C * mi.field_B.wrappedLineCount(IntrusiveNodeHashTable.field_f, -32 + var6);
+            var6 = SpellProjectile.field_B.getWrappedWidth(IntrusiveNodeHashTable.field_f, ArrayWidgetContainer.field_A - 32);
+            var7 = 32 + SpellProjectile.field_B.field_C * SpellProjectile.field_B.wrappedLineCount(IntrusiveNodeHashTable.field_f, -32 + var6);
             var6 += 32;
             var8 = Math.min(-var6 + EmailLoginCredentials.field_f, EmailLoginCredentials.field_f / 2 + 54);
             SoftwareRasterizer.fillRectangleAlpha(-var4 + var8, var5Lifetime1 - var4, var6 + 2 * var4, var4 * 2 + var7, 16777215, 192);
@@ -259,7 +259,7 @@ final class sb {
             SoftwareRasterizer.drawRectangle(var8 - var4, var5Lifetime1 - var4, var6 + 2 * var4, var4 * 2 + var7, 11768360);
             var4++;
             SoftwareRasterizer.drawRectangle(var8 - var4, -var4 + var5Lifetime1, var6 + 2 * var4, 2 * var4 + var7, 0);
-            mi.field_B.drawParagraph(IntrusiveNodeHashTable.field_f, 16 + var8, var5Lifetime1, -32 + var6, var7, 0, -1, 1, 1, mi.field_B.field_C);
+            SpellProjectile.field_B.drawParagraph(IntrusiveNodeHashTable.field_f, 16 + var8, var5Lifetime1, -32 + var6, var7, 0, -1, 1, 1, SpellProjectile.field_B.field_C);
             var4++;
           }
           return;

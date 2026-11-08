@@ -358,16 +358,16 @@ class TextHotspotWidget extends TextButton {
         String var15 = null;
         int var17 = 0;
         String var18 = null;
-        ml var19 = null;
+        BattleUnit var19 = null;
         String var20 = null;
         String var21 = null;
         String var22 = null;
         String var23 = null;
         String var24 = null;
-        ml var25 = null;
-        ml var26 = null;
+        BattleUnit var25 = null;
+        BattleUnit var26 = null;
         String var27 = null;
-        ml var28 = null;
+        BattleUnit var28 = null;
         String var29 = null;
         String var30 = null;
         String var31 = null;
@@ -423,10 +423,10 @@ class TextHotspotWidget extends TextButton {
           }
           SoftwareRasterizer.fillCircle(stackIn_9_0, stackIn_9_1, stackIn_9_2, stackIn_10_3);
           SoftwareRasterizer.drawCircleOutline(var6, var7, 7, 0);
-          stackIn_12_0 = mi.field_B;
+          stackIn_12_0 = SpellProjectile.field_B;
           stackIn_12_1 = "?";
           stackIn_12_2 = var6;
-          stackIn_12_3 = var7 - (-(mi.field_B.field_C / 2) + mi.field_B.field_m / 2);
+          stackIn_12_3 = var7 - (-(SpellProjectile.field_B.field_C / 2) + SpellProjectile.field_B.field_m / 2);
           if (!ConditionalTextValue.field_f) {
             stackIn_13_4 = 8421504;
           } else {
@@ -440,20 +440,20 @@ class TextHotspotWidget extends TextButton {
             mf.field_g = -2;
             SoftwareRasterizer.fillCircleAlpha(var6, var7, 9, 16777215, 128);
             var18 = ValidationStatusIcon.field_L;
-            mi.field_B.drawText(var18, 5 + var6, -1 + var7, 0, 0);
-            mi.field_B.drawText(var18, var6 + 4, var7, 0, 0);
-            mi.field_B.drawText(var18, 5 + var6 + 1, var7, 0, 0);
-            mi.field_B.drawText(var18, var6 + 5, 1 + var7, 0, 0);
-            mi.field_B.drawText(var18, 5 + var6, var7, 16777215, 0);
+            SpellProjectile.field_B.drawText(var18, 5 + var6, -1 + var7, 0, 0);
+            SpellProjectile.field_B.drawText(var18, var6 + 4, var7, 0, 0);
+            SpellProjectile.field_B.drawText(var18, 5 + var6 + 1, var7, 0, 0);
+            SpellProjectile.field_B.drawText(var18, var6 + 5, 1 + var7, 0, 0);
+            SpellProjectile.field_B.drawText(var18, 5 + var6, var7, 16777215, 0);
           }
-          if (Checkbox.field_J.a(-31497) == 8 &&
+          if (Checkbox.field_J.getArenaTheme(-31497) == 8 &&
             12 < lm.field_f.length) {
             var4 -= 6;
             var3 -= 40;
           }
           for (var12 = param0; var12 < lm.field_f.length; var12++) {
             if (lm.field_f[var12] > -1) {
-              if (Checkbox.field_J.a(param0 - 31497) == 8 &&
+              if (Checkbox.field_J.getArenaTheme(param0 - 31497) == 8 &&
                 lm.field_f.length > 12) {
                 if (0 != (var12 & 1)) {
                   var4 -= 16;
@@ -475,18 +475,18 @@ class TextHotspotWidget extends TextButton {
               SoftwareRasterizer.drawCircleOutline(var3, var4, var5, 0);
               SoftwareRasterizer.drawCircleOutline(var3, var4, var5 - 3, 0);
               bb.field_g[dd.field_f[lm.field_f[var12]]].drawHalfSize(var3 - 9, -9 + var4);
-              if (Checkbox.field_J.a(lm.field_f[var12], true, bm.field_g.field_bb)) {
-                var13 = Checkbox.field_J.a(lm.field_f[var12], Checkbox.field_J.d(false), param0 - 770226943);
+              if (Checkbox.field_J.canOwnerCast(lm.field_f[var12], true, bm.field_g.field_bb)) {
+                var13 = Checkbox.field_J.getSpellCharges(lm.field_f[var12], Checkbox.field_J.getCurrentPlayer(false), param0 - 770226943);
                 if (var13 > 0 &&
                   0 < MouseWheelHandler.field_b[lm.field_f[var12]]) {
                   var23 = Integer.toString(var13);
-                  mi.field_B.drawRightAlignedText(var23, var3 + (var5 / 2 - 1), 10 + var4, 0, 0);
-                  mi.field_B.drawRightAlignedText(var23, var3 + var5 / 2, -1 + (10 + var4), 0, 0);
-                  mi.field_B.drawRightAlignedText(var23, var5 / 2 + var3, var4 + 10, 16777215, 0);
+                  SpellProjectile.field_B.drawRightAlignedText(var23, var3 + (var5 / 2 - 1), 10 + var4, 0, 0);
+                  SpellProjectile.field_B.drawRightAlignedText(var23, var3 + var5 / 2, -1 + (10 + var4), 0, 0);
+                  SpellProjectile.field_B.drawRightAlignedText(var23, var5 / 2 + var3, var4 + 10, 16777215, 0);
                 }
               } else {
                 SoftwareRasterizer.fillCircleAlpha(var3, var4, var5, 0, 192);
-                var13 = Checkbox.field_J.a(lm.field_f[var12], Checkbox.field_J.d(false), -770226943);
+                var13 = Checkbox.field_J.getSpellCharges(lm.field_f[var12], Checkbox.field_J.getCurrentPlayer(false), -770226943);
                 if (Checkbox.field_J.field_f) {
                   if (lm.field_f[var12] != 11) {
                     bb.field_g[90].drawHalfSize(var3 - 9, var4 - 9);
@@ -495,12 +495,12 @@ class TextHotspotWidget extends TextButton {
                   if (var13 <= 0 &&
                     lm.field_f[var12] != 37) {
                     if (MouseWheelHandler.field_b[lm.field_f[var12]] == -1) {
-                      var14_int = Checkbox.field_J.b(lm.field_f[var12], param0 - 102, Checkbox.field_J.d(false));
+                      var14_int = Checkbox.field_J.getSpellRecharge(lm.field_f[var12], param0 - 102, Checkbox.field_J.getCurrentPlayer(false));
                       if (!(var14_int <= 0)) {
                         var21 = Integer.toString(var14_int);
-                        mi.field_B.drawRightAlignedText(var21, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
-                        mi.field_B.drawRightAlignedText(var21, var5 / 2 + var3, 10 + (var4 - 1), 0, 0);
-                        mi.field_B.drawRightAlignedText(var21, var5 / 2 + var3, var4 + 10, 16711680, 0);
+                        SpellProjectile.field_B.drawRightAlignedText(var21, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
+                        SpellProjectile.field_B.drawRightAlignedText(var21, var5 / 2 + var3, 10 + (var4 - 1), 0, 0);
+                        SpellProjectile.field_B.drawRightAlignedText(var21, var5 / 2 + var3, var4 + 10, 16711680, 0);
                       }
                     } else {
                       if (MouseWheelHandler.field_b[lm.field_f[var12]] == 0 &&
@@ -508,41 +508,41 @@ class TextHotspotWidget extends TextButton {
                         104 != lm.field_f[var12] &&
                         lm.field_f[var12] != 11) {
                         var14 = "";
-                        var19 = Checkbox.field_J.a(bm.field_g.field_bb, true);
+                        var19 = Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true);
                         if ((lm.field_f[var12] == 124 ||
-                          lm.field_f[var12] == 130) && var19.c(false)) {
+                          lm.field_f[var12] == 130) && var19.getDisplayFlag(false)) {
                           var14 = "X";
                         }
-                        mi.field_B.drawRightAlignedText(var14, var3 + var5 / 2 - 1, 10 + var4, 0, 0);
-                        mi.field_B.drawRightAlignedText(var14, var5 / 2 + var3, 10 + var4 - 1, 0, 0);
-                        mi.field_B.drawRightAlignedText(var14, var5 / 2 + var3, 10 + var4, 16711680, 0);
+                        SpellProjectile.field_B.drawRightAlignedText(var14, var3 + var5 / 2 - 1, 10 + var4, 0, 0);
+                        SpellProjectile.field_B.drawRightAlignedText(var14, var5 / 2 + var3, 10 + var4 - 1, 0, 0);
+                        SpellProjectile.field_B.drawRightAlignedText(var14, var5 / 2 + var3, 10 + var4, 16711680, 0);
                       } else {
                         if ((var13 == -1)) {
                           var20 = "X";
                           var14 = var20;
-                          mi.field_B.drawRightAlignedText(var20, var5 / 2 + var3 - 1, var4 + 10, 0, 0);
-                          mi.field_B.drawRightAlignedText(var20, var5 / 2 + var3, 10 + (var4 - 1), 0, 0);
-                          mi.field_B.drawRightAlignedText(var14, var3 + var5 / 2, var4 + 10, 16711680, 0);
+                          SpellProjectile.field_B.drawRightAlignedText(var20, var5 / 2 + var3 - 1, var4 + 10, 0, 0);
+                          SpellProjectile.field_B.drawRightAlignedText(var20, var5 / 2 + var3, 10 + (var4 - 1), 0, 0);
+                          SpellProjectile.field_B.drawRightAlignedText(var14, var3 + var5 / 2, var4 + 10, 16711680, 0);
                         }
                       }
                     }
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    if (le.field_d[lm.field_f[var12]] - Checkbox.field_J.n((byte) -75) / Checkbox.field_J.s(0) > 0) {
-                      var22 = Integer.toString(le.field_d[lm.field_f[var12]] - Checkbox.field_J.n((byte) -75) / Checkbox.field_J.s(0));
-                      mi.field_B.drawRightAlignedText(var22, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
-                      mi.field_B.drawRightAlignedText(var22, var5 / 2 + var3, -1 + var4 + 10, 0, 0);
-                      mi.field_B.drawRightAlignedText(var22, var5 / 2 + var3, 10 + var4, 16711680, 0);
+                    if (le.field_d[lm.field_f[var12]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0) > 0) {
+                      var22 = Integer.toString(le.field_d[lm.field_f[var12]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0));
+                      SpellProjectile.field_B.drawRightAlignedText(var22, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
+                      SpellProjectile.field_B.drawRightAlignedText(var22, var5 / 2 + var3, -1 + var4 + 10, 0, 0);
+                      SpellProjectile.field_B.drawRightAlignedText(var22, var5 / 2 + var3, 10 + var4, 16711680, 0);
                     } else {
                       var14Lifetime2 = "X";
                       if (lm.field_f[var12] == 87 ||
                         116 == lm.field_f[var12]) {
                         var14Lifetime2 = Integer.toString(var13);
                       }
-                      mi.field_B.drawRightAlignedText(var14Lifetime2, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
-                      mi.field_B.drawRightAlignedText(var14Lifetime2, var3 + var5 / 2, -1 + var4 + 10, 0, 0);
-                      mi.field_B.drawRightAlignedText(var14Lifetime2, var3 + var5 / 2, 10 + var4, 16711680, 0);
+                      SpellProjectile.field_B.drawRightAlignedText(var14Lifetime2, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
+                      SpellProjectile.field_B.drawRightAlignedText(var14Lifetime2, var3 + var5 / 2, -1 + var4 + 10, 0, 0);
+                      SpellProjectile.field_B.drawRightAlignedText(var14Lifetime2, var3 + var5 / 2, 10 + var4, 16711680, 0);
                     }
                   }
                 }
@@ -573,7 +573,7 @@ class TextHotspotWidget extends TextButton {
                 IntrusiveNodeHashTable.field_f = vm.field_d[lm.field_f[mf.field_g]];
               }
               var4Lifetime2 = -50 + var2_int;
-              if (8 == Checkbox.field_J.a(-31497) &&
+              if (8 == Checkbox.field_J.getArenaTheme(-31497) &&
                 lm.field_f.length > 12) {
                 var4Lifetime2Lifetime1 = -(16 * (1 & mf.field_g)) + 450 - 480 + var2_int;
                 var3Lifetime2Lifetime1 = 50 + mf.field_g * 22;
@@ -590,13 +590,13 @@ class TextHotspotWidget extends TextButton {
               bb.field_g[dd.field_f[lm.field_f[mf.field_g]]].drawTransparent(-20 + var3Lifetime2Lifetime1, -20 + var4Lifetime2Lifetime1);
               var24 = PasswordFieldPainter.field_w[lm.field_f[mf.field_g]];
               var12_ref_String = var24;
-              mi.field_B.drawCentered(var12_ref_String, var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 + (-1 - var5Lifetime1), 0, 0);
-              mi.field_B.drawCentered(var12_ref_String, -1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 - var5Lifetime1, 0, 0);
-              mi.field_B.drawCentered(var24, var3Lifetime2Lifetime1 + 1, var4Lifetime2Lifetime1 - var5Lifetime1, 0, 0);
-              mi.field_B.drawCentered(var12_ref_String, var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 + 1 - var5Lifetime1, 0, 0);
-              mi.field_B.drawCentered(var12_ref_String, var3Lifetime2Lifetime1, -var5Lifetime1 + var4Lifetime2Lifetime1, 16777215, 0);
-              var12Lifetime1 = Checkbox.field_J.a(lm.field_f[mf.field_g], Checkbox.field_J.d(false), -770226943);
-              if (Checkbox.field_J.a(lm.field_f[mf.field_g], true, bm.field_g.field_bb)) {
+              SpellProjectile.field_B.drawCentered(var12_ref_String, var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 + (-1 - var5Lifetime1), 0, 0);
+              SpellProjectile.field_B.drawCentered(var12_ref_String, -1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 - var5Lifetime1, 0, 0);
+              SpellProjectile.field_B.drawCentered(var24, var3Lifetime2Lifetime1 + 1, var4Lifetime2Lifetime1 - var5Lifetime1, 0, 0);
+              SpellProjectile.field_B.drawCentered(var12_ref_String, var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 + 1 - var5Lifetime1, 0, 0);
+              SpellProjectile.field_B.drawCentered(var12_ref_String, var3Lifetime2Lifetime1, -var5Lifetime1 + var4Lifetime2Lifetime1, 16777215, 0);
+              var12Lifetime1 = Checkbox.field_J.getSpellCharges(lm.field_f[mf.field_g], Checkbox.field_J.getCurrentPlayer(false), -770226943);
+              if (Checkbox.field_J.canOwnerCast(lm.field_f[mf.field_g], true, bm.field_g.field_bb)) {
                 if (var12Lifetime1 > 0) {
                   stackIn_184_0 = new StringBuilder().append(var12Lifetime1);
                   if (1 >= var12Lifetime1) {
@@ -608,44 +608,44 @@ class TextHotspotWidget extends TextButton {
                   if (-1 == MouseWheelHandler.field_b[lm.field_f[mf.field_g]]) {
                     var14Lifetime1 = StatefulTextPainter.field_x;
                   }
-                  mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
-                  mi.field_B.drawText(var14Lifetime1, var3Lifetime2Lifetime1 - (-var5Lifetime1 + 1), var4Lifetime2Lifetime1, 0, 0);
-                  mi.field_B.drawText(var14Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
-                  mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                  mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                  SpellProjectile.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
+                  SpellProjectile.field_B.drawText(var14Lifetime1, var3Lifetime2Lifetime1 - (-var5Lifetime1 + 1), var4Lifetime2Lifetime1, 0, 0);
+                  SpellProjectile.field_B.drawText(var14Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
+                  SpellProjectile.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                  SpellProjectile.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                 }
               } else {
                 SoftwareRasterizer.fillCircleAlpha(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1, 0, 192);
                 if (11 != lm.field_f[mf.field_g] && ((93 != lm.field_f[mf.field_g] ||
-                  Checkbox.field_J.a(bm.field_g.field_bb, true).o(-22625) == 33) &&
+                  Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true).getType(-22625) == 33) &&
                   (lm.field_f[mf.field_g] != 95 ||
-                  Checkbox.field_J.a(bm.field_g.field_bb, true).o(-22625) == 31))) {
+                  Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true).getType(-22625) == 31))) {
                   if (Checkbox.field_J.field_f &&
-                    !Checkbox.field_J.d((byte) 66, lm.field_f[mf.field_g])) {
+                    !Checkbox.field_J.isArenaSpell((byte) 66, lm.field_f[mf.field_g])) {
                     var31 = IndexedSpriteState.field_a;
-                    if (8 + mi.field_B.textWidth(var31) + var5Lifetime1 + var3Lifetime2Lifetime1 > 640) {
-                      var3Lifetime2Lifetime1 = 640 + (-var5Lifetime1 - mi.field_B.textWidth(var31) - 8);
+                    if (8 + SpellProjectile.field_B.textWidth(var31) + var5Lifetime1 + var3Lifetime2Lifetime1 > 640) {
+                      var3Lifetime2Lifetime1 = 640 + (-var5Lifetime1 - SpellProjectile.field_B.textWidth(var31) - 8);
                     }
-                    mi.field_B.drawText(var31, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
-                    mi.field_B.drawText(var31, var5Lifetime1 + (var3Lifetime2Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
-                    mi.field_B.drawText(var31, 1 + (var5Lifetime1 + var3Lifetime2Lifetime1), var4Lifetime2Lifetime1, 0, 0);
-                    mi.field_B.drawText(var31, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                    mi.field_B.drawText(var31, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                    SpellProjectile.field_B.drawText(var31, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
+                    SpellProjectile.field_B.drawText(var31, var5Lifetime1 + (var3Lifetime2Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
+                    SpellProjectile.field_B.drawText(var31, 1 + (var5Lifetime1 + var3Lifetime2Lifetime1), var4Lifetime2Lifetime1, 0, 0);
+                    SpellProjectile.field_B.drawText(var31, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                    SpellProjectile.field_B.drawText(var31, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                   } else {
                     if (lm.field_f[mf.field_g] == 150) {
                       var30 = bj.field_jb;
-                      if (var5Lifetime1 + (var3Lifetime2Lifetime1 - (-mi.field_B.textWidth(var30) - 8)) > 640) {
-                        var3Lifetime2Lifetime1 = -8 - (mi.field_B.textWidth(var30) + var5Lifetime1) + 640;
+                      if (var5Lifetime1 + (var3Lifetime2Lifetime1 - (-SpellProjectile.field_B.textWidth(var30) - 8)) > 640) {
+                        var3Lifetime2Lifetime1 = -8 - (SpellProjectile.field_B.textWidth(var30) + var5Lifetime1) + 640;
                       }
-                      mi.field_B.drawText(var30, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
-                      mi.field_B.drawText(var30, var3Lifetime2Lifetime1 + var5Lifetime1 - 1, var4Lifetime2Lifetime1, 0, 0);
-                      mi.field_B.drawText(var30, 1 + var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 0, 0);
-                      mi.field_B.drawText(var30, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                      mi.field_B.drawText(var30, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                      SpellProjectile.field_B.drawText(var30, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
+                      SpellProjectile.field_B.drawText(var30, var3Lifetime2Lifetime1 + var5Lifetime1 - 1, var4Lifetime2Lifetime1, 0, 0);
+                      SpellProjectile.field_B.drawText(var30, 1 + var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 0, 0);
+                      SpellProjectile.field_B.drawText(var30, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                      SpellProjectile.field_B.drawText(var30, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                     } else {
                       if (var12Lifetime1 > 0) {
                         if ((MouseWheelHandler.field_b[lm.field_f[mf.field_g]] != 0)) {
-                          var14_intLifetime1 = le.field_d[lm.field_f[mf.field_g]] - Checkbox.field_J.n((byte) -75) / Checkbox.field_J.s(0);
+                          var14_intLifetime1 = le.field_d[lm.field_f[mf.field_g]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0);
                           if (var14_intLifetime1 > 0) {
                             stackIn_166_0 = new StringBuilder().append(var14_intLifetime1);
                             if (var14_intLifetime1 > 1) {
@@ -654,36 +654,36 @@ class TextHotspotWidget extends TextButton {
                               stackIn_167_1 = DualLinkDeque.field_g;
                             }
                             var29 = ((StringBuilder) (Object) stackIn_166_0).append(stackIn_167_1).toString();
-                            if (640 < mi.field_B.textWidth(var29) + (var5Lifetime1 + var3Lifetime2Lifetime1 + 8)) {
-                              var3Lifetime2Lifetime1 = -var5Lifetime1 - mi.field_B.textWidth(var29) - 8 + 640;
+                            if (640 < SpellProjectile.field_B.textWidth(var29) + (var5Lifetime1 + var3Lifetime2Lifetime1 + 8)) {
+                              var3Lifetime2Lifetime1 = -var5Lifetime1 - SpellProjectile.field_B.textWidth(var29) - 8 + 640;
                             }
-                            mi.field_B.drawText(var29, var3Lifetime2Lifetime1 + var5Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.drawText(var29, var5Lifetime1 + (var3Lifetime2Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.drawText(var29, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.drawText(var29, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.drawText(var29, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                            SpellProjectile.field_B.drawText(var29, var3Lifetime2Lifetime1 + var5Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
+                            SpellProjectile.field_B.drawText(var29, var5Lifetime1 + (var3Lifetime2Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
+                            SpellProjectile.field_B.drawText(var29, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
+                            SpellProjectile.field_B.drawText(var29, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                            SpellProjectile.field_B.drawText(var29, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                             break regionExit1;
                           }
                           var15 = qa.field_k;
-                          var28 = Checkbox.field_J.a(bm.field_g.field_bb, true);
-                          if (var28.o(param0 ^ -22625) == 19) {
+                          var28 = Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true);
+                          if (var28.getType(param0 ^ -22625) == 19) {
                             var15 = ValidationHelpWidget.field_T;
                           }
-                          if (var28.o(-22625) == 18) {
+                          if (var28.getType(-22625) == 18) {
                             var15 = bj.field_sb;
                           }
-                          if (16 == var28.o(-22625)) {
+                          if (16 == var28.getType(-22625)) {
                             var15 = oi.field_a;
                           }
                           if (cf.field_f) {
                             var15 = tk.field_p;
                           }
                           if (lm.field_f[mf.field_g] == 87 &&
-                            var28.o(-22625) != 19) {
+                            var28.getType(-22625) != 19) {
                             var15 = ConditionalTextValue.field_g;
                           }
                           if (lm.field_f[mf.field_g] == 87 &&
-                            var28.o(param0 - 22625) == 19) {
+                            var28.getType(param0 - 22625) == 19) {
                             var15 = LoadingTracker.field_l;
                           }
                           if (lm.field_f[mf.field_g] == 116) {
@@ -692,18 +692,18 @@ class TextHotspotWidget extends TextButton {
                           if (lm.field_f[mf.field_g] == 4) {
                             var15 = "Being entangled blocks this spell.";
                           }
-                          if (mi.field_B.textWidth(var15) + var5Lifetime1 + (var3Lifetime2Lifetime1 + 8) > 640) {
-                            var3Lifetime2Lifetime1 = -8 - mi.field_B.textWidth(var15) - (var5Lifetime1 - 640);
+                          if (SpellProjectile.field_B.textWidth(var15) + var5Lifetime1 + (var3Lifetime2Lifetime1 + 8) > 640) {
+                            var3Lifetime2Lifetime1 = -8 - SpellProjectile.field_B.textWidth(var15) - (var5Lifetime1 - 640);
                           }
-                          mi.field_B.drawText(var15, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
-                          mi.field_B.drawText(var15, -1 + var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 0, 0);
-                          mi.field_B.drawText(var15, var3Lifetime2Lifetime1 - (-var5Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
-                          mi.field_B.drawText(var15, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                          mi.field_B.drawText(var15, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                          SpellProjectile.field_B.drawText(var15, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
+                          SpellProjectile.field_B.drawText(var15, -1 + var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 0, 0);
+                          SpellProjectile.field_B.drawText(var15, var3Lifetime2Lifetime1 - (-var5Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
+                          SpellProjectile.field_B.drawText(var15, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                          SpellProjectile.field_B.drawText(var15, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                         }
                       } else {
                         if (MouseWheelHandler.field_b[lm.field_f[mf.field_g]] == -1) {
-                          var14_intLifetime1Lifetime1 = Checkbox.field_J.b(lm.field_f[mf.field_g], -102, Checkbox.field_J.d(false));
+                          var14_intLifetime1Lifetime1 = Checkbox.field_J.getSpellRecharge(lm.field_f[mf.field_g], -102, Checkbox.field_J.getCurrentPlayer(false));
                           if (!(var14_intLifetime1Lifetime1 <= 0)) {
                             stackIn_132_0 = new StringBuilder().append(var14_intLifetime1Lifetime1);
                             if (var14_intLifetime1Lifetime1 > 1) {
@@ -712,34 +712,34 @@ class TextHotspotWidget extends TextButton {
                               stackIn_133_1 = DualLinkDeque.field_g;
                             }
                             var27 = ((StringBuilder) (Object) stackIn_132_0).append(stackIn_133_1).toString();
-                            if (var5Lifetime1 + (var3Lifetime2Lifetime1 + mi.field_B.textWidth(var27)) + 8 > 640) {
-                              var3Lifetime2Lifetime1 = -8 - (var5Lifetime1 + (mi.field_B.textWidth(var27) - 640));
+                            if (var5Lifetime1 + (var3Lifetime2Lifetime1 + SpellProjectile.field_B.textWidth(var27)) + 8 > 640) {
+                              var3Lifetime2Lifetime1 = -8 - (var5Lifetime1 + (SpellProjectile.field_B.textWidth(var27) - 640));
                             }
-                            mi.field_B.drawText(var27, var3Lifetime2Lifetime1 + var5Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.drawText(var27, var5Lifetime1 + (var3Lifetime2Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.drawText(var27, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.drawText(var27, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.drawText(var27, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                            SpellProjectile.field_B.drawText(var27, var3Lifetime2Lifetime1 + var5Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
+                            SpellProjectile.field_B.drawText(var27, var5Lifetime1 + (var3Lifetime2Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
+                            SpellProjectile.field_B.drawText(var27, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
+                            SpellProjectile.field_B.drawText(var27, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                            SpellProjectile.field_B.drawText(var27, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                           }
                         } else {
                           if (MouseWheelHandler.field_b[lm.field_f[mf.field_g]] != 0) {
                             if (!(0 <= var12Lifetime1)) {
                               var14Lifetime1 = qa.field_k;
-                              var25 = Checkbox.field_J.a(bm.field_g.field_bb, true);
-                              if (18 == var25.o(-22625)) {
+                              var25 = Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true);
+                              if (18 == var25.getType(-22625)) {
                                 var14Lifetime1 = bj.field_sb;
                               }
-                              if (16 == var25.o(-22625)) {
+                              if (16 == var25.getType(-22625)) {
                                 var14Lifetime1 = oi.field_a;
                               }
-                              mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
-                              mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1 - 1, var4Lifetime2Lifetime1, 0, 0);
-                              mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + (var3Lifetime2Lifetime1 + 1), var4Lifetime2Lifetime1, 0, 0);
-                              mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                              mi.field_B.drawText(var14Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                              SpellProjectile.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
+                              SpellProjectile.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1 - 1, var4Lifetime2Lifetime1, 0, 0);
+                              SpellProjectile.field_B.drawText(var14Lifetime1, var5Lifetime1 + (var3Lifetime2Lifetime1 + 1), var4Lifetime2Lifetime1, 0, 0);
+                              SpellProjectile.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                              SpellProjectile.field_B.drawText(var14Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                             }
                           } else {
-                            var14_intLifetime1Lifetime2 = le.field_d[lm.field_f[mf.field_g]] - Checkbox.field_J.n((byte) -75) / Checkbox.field_J.s(0);
+                            var14_intLifetime1Lifetime2 = le.field_d[lm.field_f[mf.field_g]] - Checkbox.field_J.getRound((byte) -75) / Checkbox.field_J.getPlayerCount(0);
                             stackIn_111_0 = new StringBuilder().append(var14_intLifetime1Lifetime2);
                             if (var14_intLifetime1Lifetime2 > 1) {
                               stackIn_112_1 = ki.field_x;
@@ -753,22 +753,22 @@ class TextHotspotWidget extends TextButton {
                             if (lm.field_f[mf.field_g] == 104) {
                               var15Lifetime1 = tk.field_p;
                             }
-                            var26 = Checkbox.field_J.a(bm.field_g.field_bb, true);
+                            var26 = Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true);
                             if ((lm.field_f[mf.field_g] == 124 ||
-                              lm.field_f[mf.field_g] == 130) && var26.c(false)) {
+                              lm.field_f[mf.field_g] == 130) && var26.getDisplayFlag(false)) {
                               var15Lifetime1 = qn.field_kb;
                             }
-                            if (var26.o(-22625) == 18) {
+                            if (var26.getType(-22625) == 18) {
                               var15Lifetime1 = bj.field_sb;
                             }
-                            if (var26.o(-22625) == 16) {
+                            if (var26.getType(-22625) == 16) {
                               var15Lifetime1 = oi.field_a;
                             }
-                            mi.field_B.drawText(var15Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
-                            mi.field_B.drawText(var15Lifetime1, -1 + (var5Lifetime1 + var3Lifetime2Lifetime1), var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.drawText(var15Lifetime1, 1 + var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.drawText(var15Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.drawText(var15Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                            SpellProjectile.field_B.drawText(var15Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
+                            SpellProjectile.field_B.drawText(var15Lifetime1, -1 + (var5Lifetime1 + var3Lifetime2Lifetime1), var4Lifetime2Lifetime1, 0, 0);
+                            SpellProjectile.field_B.drawText(var15Lifetime1, 1 + var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 0, 0);
+                            SpellProjectile.field_B.drawText(var15Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                            SpellProjectile.field_B.drawText(var15Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                           }
                         }
                       }
@@ -780,14 +780,14 @@ class TextHotspotWidget extends TextButton {
                 var14Lifetime1 = var32;
                 var14Lifetime1 = var32;
                 var14Lifetime1 = var32;
-                if (mi.field_B.textWidth(var32) + var5Lifetime1 + var3Lifetime2Lifetime1 + 8 > 640) {
-                  var3Lifetime2Lifetime1 = -mi.field_B.textWidth(var32) - (var5Lifetime1 + 8) + 640;
+                if (SpellProjectile.field_B.textWidth(var32) + var5Lifetime1 + var3Lifetime2Lifetime1 + 8 > 640) {
+                  var3Lifetime2Lifetime1 = -SpellProjectile.field_B.textWidth(var32) - (var5Lifetime1 + 8) + 640;
                 }
-                mi.field_B.drawText(var32, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
-                mi.field_B.drawText(var14Lifetime1, -1 + (var3Lifetime2Lifetime1 + var5Lifetime1), var4Lifetime2Lifetime1, 0, 0);
-                mi.field_B.drawText(var32, 1 + (var3Lifetime2Lifetime1 + var5Lifetime1), var4Lifetime2Lifetime1, 0, 0);
-                mi.field_B.drawText(var32, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                SpellProjectile.field_B.drawText(var32, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
+                SpellProjectile.field_B.drawText(var14Lifetime1, -1 + (var3Lifetime2Lifetime1 + var5Lifetime1), var4Lifetime2Lifetime1, 0, 0);
+                SpellProjectile.field_B.drawText(var32, 1 + (var3Lifetime2Lifetime1 + var5Lifetime1), var4Lifetime2Lifetime1, 0, 0);
+                SpellProjectile.field_B.drawText(var32, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                SpellProjectile.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
               }
             }
           }

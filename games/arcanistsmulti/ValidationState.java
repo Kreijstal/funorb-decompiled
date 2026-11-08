@@ -261,7 +261,7 @@ final class ValidationState {
             SocketJs5Transport.field_t != ao.field_h[0]) {
             SocketJs5Transport.field_t = ao.field_h[0];
           }
-          SceneScrollPane.sendBytesPacket(param2 - 13218, 0, ml.field_m, param3, SocketJs5Transport.field_t, true);
+          SceneScrollPane.sendBytesPacket(param2 - 13218, 0, BattleUnit.field_m, param3, SocketJs5Transport.field_t, true);
         }
         if (0 != dm.field_E.field_U) {
           IntrusiveNode.field_d = false;

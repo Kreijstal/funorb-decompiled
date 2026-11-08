@@ -400,7 +400,7 @@ final class ko extends IntrusiveNode {
           var4 = 0;
           if (!param2) {
             var6 = (IndexedSprite) null;
-            ko.circleHitsMask((nf) null, -45, 124, 15, (IndexedSprite) null, 88);
+            ko.circleHitsMask((Battle) null, -45, 124, 15, (IndexedSprite) null, 88);
           }
           while (var4 < 8) {
             var3[var4] = fj.bitOr(param0[var4], param1[var4]);
@@ -467,7 +467,7 @@ final class ko extends IntrusiveNode {
         throw new Error();
     }
 
-    final static boolean circleHitsMask(nf param0, int param1, int param2, int param3, IndexedSprite param4, int param5) {
+    final static boolean circleHitsMask(Battle param0, int param1, int param2, int param3, IndexedSprite param4, int param5) {
         Sprite var6 = null;
         RuntimeException var6_ref = null;
         boolean stackIn_1_0 = false;

@@ -89,7 +89,7 @@ final class ik {
           field_d = (int[]) null;
         }
         if (StatefulTextPainter.field_p < 6) {
-          rk.field_O.c(param0 ^ -4207, -1);
+          rk.field_O.setCurrentPlayer(param0 ^ -4207, -1);
         }
     }
 

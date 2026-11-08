@@ -72,7 +72,7 @@ abstract class Js5Transport {
     final static String a(String param0, int param1, int param2, String param3) {
         le var4 = null;
         RuntimeException var4_ref = null;
-        nf var5 = null;
+        Battle var5 = null;
         int var6 = 0;
         String stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -90,7 +90,7 @@ abstract class Js5Transport {
             var4 = r.field_b;
           }
           var5 = var4.field_V;
-          var6 = var5.a((byte) 120, param2);
+          var6 = var5.getPlayerStat((byte) 120, param2);
           if (var6 != -1) {
             param0 = param0 + param3 + var5.field_k[var6] + "<br>";
           }

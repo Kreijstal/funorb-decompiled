@@ -152,13 +152,13 @@ final class th {
         field_b = null;
         if (param0 != -113) {
           IndexedSprite var2 = (IndexedSprite) null;
-          th.a((nf) null, (IndexedSprite) null, -127, -97, -25, -84);
+          th.a((Battle) null, (IndexedSprite) null, -127, -97, -25, -84);
         }
         field_j = null;
         field_c = null;
     }
 
-    final static void a(nf param0, IndexedSprite param1, int param2, int param3, int param4, int param5) {
+    final static void a(Battle param0, IndexedSprite param1, int param2, int param3, int param4, int param5) {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;

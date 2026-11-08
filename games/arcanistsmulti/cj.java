@@ -90,7 +90,7 @@ final class cj {
           var8 = var41;
           var65 = new int[param4.field_A];
           var64 = GameAppletShell.field_k;
-          var63 = nf.field_Lb;
+          var63 = Battle.field_Lb;
           var62 = mf.field_b;
           for (var13 = 0; param4.field_A > var13; var13++) {
             var14 = var62[var13] * param5 + var63[var13] * param0 + var64[var13] * param6 >> 8;

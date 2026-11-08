@@ -12,24 +12,24 @@ final class aj {
     static int field_g;
     static i field_h;
 
-    final static mi acquireProjectile(nf param0, int param1) {
-        mi var2 = null;
+    final static SpellProjectile acquireProjectile(Battle param0, int param1) {
+        SpellProjectile var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        mi stackIn_3_0 = null;
-        mi stackIn_5_0 = null;
+        SpellProjectile stackIn_3_0 = null;
+        SpellProjectile stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = (mi) (ClipState.field_n.removeFirst(true));
+          var2 = (SpellProjectile) (ClipState.field_n.removeFirst(true));
           if (var2 == null) {
-            stackIn_3_0 = new mi(param0);
+            stackIn_3_0 = new SpellProjectile(param0);
             return stackIn_3_0;
           }
           var3 = -18 / ((param1 - 64) / 43);
-          var2.a(-117, param0);
+          var2.setBattle(-117, param0);
           stackIn_5_0 = var2;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,10 +70,10 @@ final class aj {
         field_b = null;
     }
 
-    final static mi spawnProjectile(ml param0, int param1, boolean param2, int param3, nf param4, int param5) {
+    final static SpellProjectile spawnProjectile(BattleUnit param0, int param1, boolean param2, int param3, Battle param4, int param5) {
         RuntimeException var6 = null;
-        mi stackIn_2_0 = null;
-        mi stackIn_4_0 = null;
+        SpellProjectile stackIn_2_0 = null;
+        SpellProjectile stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -85,7 +85,7 @@ final class aj {
             stackIn_4_0 = BevelBoxPainter.createProjectile(param0, param1, (byte) -116, param4, -1, param5, param3);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (mi) null;
+          stackIn_2_0 = (SpellProjectile) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

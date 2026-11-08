@@ -30,7 +30,7 @@ final class IsaacCipher {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          ml.a(param4, param3, (byte) 95, param13);
+          BattleUnit.setFonts(param4, param3, (byte) 95, param13);
           if (param0 < 85) {
             return;
           }

@@ -14,10 +14,10 @@ final class db {
 
     final static SceneWidget a(boolean param0) {
         if (oo.field_y > 0) {
-          return mi.field_m;
+          return SpellProjectile.field_m;
         }
         if (sm.field_a > 0) {
-          return mi.field_m;
+          return SpellProjectile.field_m;
         }
         if (param0) {
           return (SceneWidget) null;

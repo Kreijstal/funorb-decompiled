@@ -92,10 +92,10 @@ final class bo {
         int var4Lifetime3;
         int var5Lifetime3;
         if (param0) {
-          if (nf.field_z[param1] < nf.field_z[param3]) {
+          if (Battle.field_z[param1] < Battle.field_z[param3]) {
             return true;
           }
-          if (nf.field_z[param1] > nf.field_z[param3]) {
+          if (Battle.field_z[param1] > Battle.field_z[param3]) {
             return false;
           }
           if (lm.field_i[param3] > lm.field_i[param1]) {
@@ -132,10 +132,10 @@ final class bo {
         if (lm.field_i[param3] < lm.field_i[param1]) {
           return false;
         }
-        if (nf.field_z[param3] > nf.field_z[param1]) {
+        if (Battle.field_z[param3] > Battle.field_z[param1]) {
           return true;
         }
-        if (nf.field_z[param1] > nf.field_z[param3]) {
+        if (Battle.field_z[param1] > Battle.field_z[param3]) {
           return false;
         }
         if (param2 < -32) {

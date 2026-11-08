@@ -83,7 +83,7 @@ final class GzipDecoder {
               if (!param0) {
                 stackIn_23_0 = lm.field_i[var12];
               } else {
-                stackIn_23_0 = nf.field_z[var12];
+                stackIn_23_0 = Battle.field_z[var12];
               }
               var13 = stackIn_23_0;
               if (var13 <= var7_int) {

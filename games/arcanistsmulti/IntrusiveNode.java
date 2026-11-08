@@ -117,7 +117,7 @@ class IntrusiveNode {
             while (var9 < var8) {
               var11 = ki.field_r[var9];
               var6[0][var10] = bb.field_i[var11];
-              var7[0][4 * var10] = nf.field_z[var11];
+              var7[0][4 * var10] = Battle.field_z[var11];
               var7[0][var10 * 4 + 1] = ConditionalTextValue.field_e[var11];
               var7[0][4 * var10 + 2] = CachedArchiveProvider.field_u[var11];
               var7[0][3 + var10 * 4] = PatchEnvelopeSet.field_o[var11];
@@ -135,7 +135,7 @@ class IntrusiveNode {
             while (var9Lifetime1 < var8) {
               var11Lifetime1 = ki.field_r[var9Lifetime1 + var5];
               var6[1][var14] = bb.field_i[var11Lifetime1];
-              var7[1][4 * var14] = nf.field_z[var11Lifetime1];
+              var7[1][4 * var14] = Battle.field_z[var11Lifetime1];
               var7[1][1 + var14 * 4] = ConditionalTextValue.field_e[var11Lifetime1];
               var7[1][var14 * 4 + 2] = CachedArchiveProvider.field_u[var11Lifetime1];
               var7[1][4 * var14 + 3] = PatchEnvelopeSet.field_o[var11Lifetime1];

@@ -320,7 +320,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         }
     }
 
-    final static void a(int param0, IndexedSprite param1, int param2, int param3, nf param4, boolean param5, int param6, byte param7) {
+    final static void a(int param0, IndexedSprite param1, int param2, int param3, Battle param4, boolean param5, int param6, byte param7) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;

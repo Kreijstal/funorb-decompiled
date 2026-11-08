@@ -2618,7 +2618,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("getmorewands_free", -76);
                 if (var2 != null) {
-                  nf.field_yb = ValidationHelpWidget.a((byte) 111, var2);
+                  Battle.field_yb = ValidationHelpWidget.a((byte) 111, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("wandstobuy5", param1 - 95);
                 if (var2 != null) {
@@ -2727,11 +2727,11 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("naturebook", param1 - 93);
                 if (null != var2) {
-                  nf.field_e = ValidationHelpWidget.a((byte) 101, var2);
+                  Battle.field_e = ValidationHelpWidget.a((byte) 101, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("oceandisc", -93);
                 if (null != var2) {
-                  mi.field_s = ValidationHelpWidget.a((byte) 95, var2);
+                  SpellProjectile.field_s = ValidationHelpWidget.a((byte) 95, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("oceanbook", -92);
                 if (null != var2) {
@@ -3411,7 +3411,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("youfallenintowater2", -108);
                 if (var2 != null) {
-                  ml.field_K = ValidationHelpWidget.a((byte) 105, var2);
+                  BattleUnit.field_K = ValidationHelpWidget.a((byte) 105, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("youfallenintowater", -106);
                 if (null != var2) {

@@ -26,7 +26,7 @@ abstract class CacheEntry extends DualLinkNode {
         if (param0 != -25) {
           CacheEntry.releaseStatics(-47);
         }
-        var6 = "(" + ArchiveRequest.field_m + " " + nf.field_W + " " + DraggableWidget.field_I + ") " + on.field_g;
+        var6 = "(" + ArchiveRequest.field_m + " " + Battle.field_W + " " + DraggableWidget.field_I + ") " + on.field_g;
         var1 = var6;
         if (fj.field_h > 0) {
           var1 = var6 + ":";
@@ -128,7 +128,7 @@ abstract class CacheEntry extends DualLinkNode {
           rk.field_I = param5;
           nk.field_m = param3;
           ResizableModalPanel.field_bb = param10;
-          ml.field_m = param9;
+          BattleUnit.field_m = param9;
           SecondaryNodeDeque.field_d = param0;
           IntrusiveNodeHashTable.field_b = qe.loadSpriteSheet(param8, "gameprivacy", "lobby", 92);
           re.field_j = qe.loadSpriteSheet(param8, "ratedgame", "lobby", 81);
@@ -224,40 +224,40 @@ abstract class CacheEntry extends DualLinkNode {
           Checkbox.field_M.addChild(lf.field_b, 31);
           IntrusiveNodeHashTable.field_o = new SceneWidget(0L, th.field_c, SecondaryNodeDeque.field_a.toUpperCase());
           IconTextSceneWidget.field_Db = new SceneWidget(0L, wa.field_Pb);
-          mi.field_m = new SceneWidget(0L, ia.field_a);
+          SpellProjectile.field_m = new SceneWidget(0L, ia.field_a);
           BevelTextPainter.field_s = new SceneWidget(0L, dd.field_b, MusicPatchNode.field_o.toUpperCase());
           IndexedSpriteState.field_e = new IconTextSceneWidget[param2 + 4][];
           ResizableViewResizeListener.field_g = new SceneWidget[4 + param2];
-          ResizableViewResizeListener.field_g[0] = new SceneWidget(0L, mi.field_A, gg.field_i);
+          ResizableViewResizeListener.field_g[0] = new SceneWidget(0L, SpellProjectile.field_A, gg.field_i);
           IndexedSpriteState.field_e[0] = new IconTextSceneWidget[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            IndexedSpriteState.field_e[0][var17_int + 1] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, IntrusiveNodeHashTable.field_b[var17_int], vm.field_c[var17_int]);
+            IndexedSpriteState.field_e[0][var17_int + 1] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, IntrusiveNodeHashTable.field_b[var17_int], vm.field_c[var17_int]);
           }
           if (ao.field_h.length >= 2) {
-            ResizableViewResizeListener.field_g[1] = new SceneWidget(0L, mi.field_A, ChatInputWidget.field_Bb);
+            ResizableViewResizeListener.field_g[1] = new SceneWidget(0L, SpellProjectile.field_A, ChatInputWidget.field_Bb);
             array$0 = new IconTextSceneWidget[ao.field_h.length + 1];
             IndexedSpriteState.field_e[1] = array$0;
-            IndexedSpriteState.field_e[1][0] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
+            IndexedSpriteState.field_e[1][0] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
             for (var17_intLifetime1 = 0; ao.field_h.length > var17_intLifetime1; var17_intLifetime1++) {
-              IndexedSpriteState.field_e[1][var17_intLifetime1 + 1] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, Integer.toString(ao.field_h[var17_intLifetime1]));
+              IndexedSpriteState.field_e[1][var17_intLifetime1 + 1] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, Integer.toString(ao.field_h[var17_intLifetime1]));
             }
           }
-          ResizableViewResizeListener.field_g[2] = new SceneWidget(0L, mi.field_A, SecondaryNodeDeque.field_b);
-          IndexedSpriteState.field_e[param14] = new IconTextSceneWidget[]{new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb), new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, ec.field_i[0], StrongCacheEntry.field_B), new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, ec.field_i[1], cf.field_d)};
+          ResizableViewResizeListener.field_g[2] = new SceneWidget(0L, SpellProjectile.field_A, SecondaryNodeDeque.field_b);
+          IndexedSpriteState.field_e[param14] = new IconTextSceneWidget[]{new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb), new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, ec.field_i[0], StrongCacheEntry.field_B), new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, ec.field_i[1], cf.field_d)};
           if (le.field_q > 1) {
-            ResizableViewResizeListener.field_g[3] = new SceneWidget(0L, mi.field_A, fm.field_e);
+            ResizableViewResizeListener.field_g[3] = new SceneWidget(0L, SpellProjectile.field_A, fm.field_e);
             array$1 = new IconTextSceneWidget[le.field_q + 1];
             IndexedSpriteState.field_e[3] = array$1;
-            IndexedSpriteState.field_e[3][0] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
+            IndexedSpriteState.field_e[3][0] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < le.field_q; var17_intLifetime2++) {
-              IndexedSpriteState.field_e[3][1 + var17_intLifetime2] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, fl.field_b[var17_intLifetime2]);
+              IndexedSpriteState.field_e[3][1 + var17_intLifetime2] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, fl.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param2 > var17_intLifetime3; var17_intLifetime3++) {
-            ResizableViewResizeListener.field_g[var17_intLifetime3 + 4] = new SceneWidget(0L, mi.field_A, ResizableModalPanel.field_bb[var17_intLifetime3]);
+            ResizableViewResizeListener.field_g[var17_intLifetime3 + 4] = new SceneWidget(0L, SpellProjectile.field_A, ResizableModalPanel.field_bb[var17_intLifetime3]);
             array$2 = new IconTextSceneWidget[1 + NameValidator.bitAnd((int) SecondaryNodeDeque.field_d[var17_intLifetime3], 255)];
             IndexedSpriteState.field_e[var17_intLifetime3 + 4] = array$2;
-            IndexedSpriteState.field_e[4 + var17_intLifetime3][0] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
+            IndexedSpriteState.field_e[4 + var17_intLifetime3][0] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) null, SceneTabbedPanel.field_Rb);
             for (var18 = 0; var18 < (SecondaryNodeDeque.field_d[var17_intLifetime3] & 255); var18++) {
               if (null == pn.field_b) {
                 var19_ref = null;
@@ -277,7 +277,7 @@ abstract class CacheEntry extends DualLinkNode {
                   var20 = null;
                 }
               }
-              IndexedSpriteState.field_e[4 + var17_intLifetime3][var18 + 1] = new IconTextSceneWidget(0L, nf.field_j, (SceneWidget) null, nj.field_d, (Sprite) (var19_ref), (String) (var20));
+              IndexedSpriteState.field_e[4 + var17_intLifetime3][var18 + 1] = new IconTextSceneWidget(0L, Battle.field_j, (SceneWidget) null, nj.field_d, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param2 + 4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -302,16 +302,16 @@ abstract class CacheEntry extends DualLinkNode {
           var17.field_X = 1;
           ReflectionCheckRequest.field_h = new SceneWidget(0L, (SceneWidget) null);
           ReflectionCheckRequest.field_h.addChild(IconTextSceneWidget.field_Db, 19);
-          ReflectionCheckRequest.field_h.addChild(mi.field_m, 49);
-          mi.field_m.addChild(BevelTextPainter.field_s, 98);
+          ReflectionCheckRequest.field_h.addChild(SpellProjectile.field_m, 49);
+          SpellProjectile.field_m.addChild(BevelTextPainter.field_s, 98);
           for (var18Lifetime2 = 0; var18Lifetime2 < param2 + 4; var18Lifetime2++) {
             if ((1 != var18Lifetime2 ||
               !(2 > ao.field_h.length)) && (3 != var18Lifetime2 ||
               !(1 >= le.field_q))) {
-              mi.field_m.addChild(ResizableViewResizeListener.field_g[var18Lifetime2], param14 + 5);
+              SpellProjectile.field_m.addChild(ResizableViewResizeListener.field_g[var18Lifetime2], param14 + 5);
               for (var19 = 0; IndexedSpriteState.field_e[var18Lifetime2].length > var19; var19++) {
                 if (IndexedSpriteState.field_e[var18Lifetime2][var19] != null) {
-                  mi.field_m.addChild(IndexedSpriteState.field_e[var18Lifetime2][var19], 92);
+                  SpellProjectile.field_m.addChild(IndexedSpriteState.field_e[var18Lifetime2][var19], 92);
                 }
               }
             }

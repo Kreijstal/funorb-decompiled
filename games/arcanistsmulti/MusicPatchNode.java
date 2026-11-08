@@ -30,7 +30,7 @@ final class MusicPatchNode extends IntrusiveNode {
     int field_z;
     int field_B;
 
-    final static void a(IndexedSprite param0, byte param1, int param2, byte param3, int param4, int param5, nf param6) {
+    final static void a(IndexedSprite param0, byte param1, int param2, byte param3, int param4, int param5, Battle param6) {
         try {
           if (param1 != -47) {
             field_o = (String) null;

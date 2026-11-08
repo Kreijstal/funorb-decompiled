@@ -2680,15 +2680,15 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("members_expansion_benefits,0", (byte) -45);
                 if (var2 != null) {
-                  nf.field_qb[0] = ValidationHelpWidget.a((byte) 108, var2);
+                  Battle.field_qb[0] = ValidationHelpWidget.a((byte) 108, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("members_expansion_benefits,1", (byte) -45);
                 if (var2 != null) {
-                  nf.field_qb[1] = ValidationHelpWidget.a((byte) 98, var2);
+                  Battle.field_qb[1] = ValidationHelpWidget.a((byte) 98, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("members_expansion_benefits,2", (byte) -45);
                 if (var2 != null) {
-                  nf.field_qb[2] = ValidationHelpWidget.a((byte) 115, var2);
+                  Battle.field_qb[2] = ValidationHelpWidget.a((byte) 115, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("members_expansion_price_top", (byte) -45);
                 if (var2 != null) {

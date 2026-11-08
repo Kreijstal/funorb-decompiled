@@ -7,7 +7,7 @@ final class Checkbox extends TextButton {
     static String field_K;
     static String field_H;
     static SceneWidget field_M;
-    static nf field_J;
+    static Battle field_J;
 
     final void activate(int param0, int param1, int param2, int param3) {
         this.field_z = !this.field_z ? true : false;

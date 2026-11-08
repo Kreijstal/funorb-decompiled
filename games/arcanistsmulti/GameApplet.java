@@ -253,11 +253,11 @@ abstract class GameApplet extends GameAppletShell {
           }
           if (var4 == 13) {
             try {
-              if (nf.field_P == null) {
-                nf.field_P = new hn(fi.field_d, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (Battle.field_P == null) {
+                Battle.field_P = new hn(fi.field_d, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (nf.field_P.c(-91)) {
-                var11 = nf.field_P.b(21496);
+              if (Battle.field_P.c(-91)) {
+                var11 = Battle.field_P.b(21496);
                 if (var11 == null) {
                   stackIn_70_0 = null;
                   stackIn_71_1 = !(param0);
@@ -268,7 +268,7 @@ abstract class GameApplet extends GameAppletShell {
                   stackIn_67_1 = !(param0);
                   bc.a(stackIn_66_0, stackIn_67_1);
                 }
-                nf.field_P = null;
+                Battle.field_P = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -276,7 +276,7 @@ abstract class GameApplet extends GameAppletShell {
               DelegatingCanvas.a((Throwable) ((Object) var5), "S1", (byte) 20);
               var9 = (String) null;
               bc.a((String) null, true);
-              nf.field_P = null;
+              Battle.field_P = null;
             }
           }
           if (param0) {

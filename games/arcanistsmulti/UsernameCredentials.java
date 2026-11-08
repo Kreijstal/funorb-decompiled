@@ -243,7 +243,7 @@ class UsernameCredentials extends LoginCredentials {
           if (param3 < 44) {
             field_i = (String) null;
           }
-          stackIn_6_0 = mi.a(param2.getFile(param1, 26219, param4), 45);
+          stackIn_6_0 = SpellProjectile.createCoverageFont(param2.getFile(param1, 26219, param4), 45);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
