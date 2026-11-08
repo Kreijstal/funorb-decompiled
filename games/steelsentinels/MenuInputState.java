@@ -87,7 +87,7 @@ final class MenuInputState {
         this.field_c = true;
     }
 
-    final boolean isLeftPressed(int param0) {
+    final boolean isHomePressed(int param0) {
         int var2 = -101 / ((50 - param0) / 62);
         return this.field_b == 102 ? true : false;
     }
@@ -108,7 +108,7 @@ final class MenuInputState {
         return true;
     }
 
-    final boolean isHomePressed(int param0) {
+    final boolean isLeftPressed(int param0) {
         if (param0 == -97) {
           return this.field_b == 96 ? true : false;
         }
@@ -119,9 +119,9 @@ final class MenuInputState {
     final static void initializeReportReasonLabels(byte param0) {
         if (param0 <= -79) {
           LoginActionHelpers.field_g = new String[SoundAndUrlHelpers.field_d];
-          LoginActionHelpers.field_g[21] = am.field_a;
+          LoginActionHelpers.field_g[21] = DesignerPageSetup.field_a;
           LoginActionHelpers.field_g[6] = LobbySetupHelpers.field_d;
-          LoginActionHelpers.field_g[4] = dj.field_a;
+          LoginActionHelpers.field_g[4] = NumberParsingHelpers.field_a;
           LoginActionHelpers.field_g[19] = ImageProducerRasterBuffer.field_q;
           LoginActionHelpers.field_g[15] = MusicPatchNode.field_u;
           LoginActionHelpers.field_g[20] = LoadingScreenHelpers.field_c;
@@ -130,7 +130,7 @@ final class MenuInputState {
           LoginActionHelpers.field_g[7] = rb.field_e;
           LoginActionHelpers.field_g[5] = MusicPatchEnvelope.field_f;
           LoginActionHelpers.field_g[16] = SentinelCommandSimulator.field_i;
-          LoginActionHelpers.field_g[17] = nf.field_d;
+          LoginActionHelpers.field_g[17] = LoginEncryptionHelpers.field_d;
           LoginActionHelpers.field_g[9] = LoginActionHelpers.field_e;
           LoginActionHelpers.field_g[13] = GameKeyHandler.field_c;
           return;
@@ -239,7 +239,7 @@ final class MenuInputState {
           if (0 == VerticalScrollbar.field_gc) {
             if (WeightedLruCache.field_d != 0) {
               if (param0 <= 123) {
-                this.isHomePressed(-13);
+                this.isLeftPressed(-13);
               }
               if (0 == this.field_d) {
                 if (!this.field_l &&
@@ -266,7 +266,7 @@ final class MenuInputState {
             this.field_d = 0;
           }
           if (param0 <= 123) {
-            this.isHomePressed(-13);
+            this.isLeftPressed(-13);
             if (0 == this.field_d) {
               if (!this.field_l &&
                 !ConditionalTextValue.field_a) {
@@ -354,7 +354,7 @@ final class MenuInputState {
               }
               return;
             }
-            this.isHomePressed(-13);
+            this.isLeftPressed(-13);
             if (0 == this.field_d) {
               if (!this.field_l &&
                 !ConditionalTextValue.field_a) {
@@ -380,7 +380,7 @@ final class MenuInputState {
           this.field_d = 0;
         }
         if (param0 <= 123) {
-          this.isHomePressed(-13);
+          this.isLeftPressed(-13);
           if (0 != this.field_d) {
             return;
           }
@@ -414,7 +414,7 @@ final class MenuInputState {
     final void handleKeyWithoutNavigation(byte param0) {
         this.field_k = 0;
         if (param0 != 22) {
-          this.isHomePressed(51);
+          this.isLeftPressed(51);
           this.field_b = 0;
           this.field_c = false;
           if (this.field_d == 0) {

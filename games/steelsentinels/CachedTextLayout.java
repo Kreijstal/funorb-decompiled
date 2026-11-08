@@ -28,7 +28,7 @@ final class CachedTextLayout extends TextLayout {
     static int field_t;
     static RgbSprite[] field_E;
 
-    final static void c(int param0) {
+    final static void drawTopShadeGradient(int param0) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;
@@ -52,7 +52,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final static int a(SceneWidget param0, boolean param1, int param2) {
+    final static int appendDesignSummaryRows(SceneWidget param0, boolean param1, int param2) {
         int var8 = 0;
         int stackIn_4_0 = 0;
         int stackIn_17_0 = 0;
@@ -78,7 +78,7 @@ final class CachedTextLayout extends TextLayout {
           }
           var4 = Js5NetworkRequest.field_O;
           var5 = new SceneWidget(-1L, (SceneWidget) null);
-          var5.field_Pb = gj.field_a;
+          var5.field_Pb = SpriteDrawHelpers.field_a;
           var5.field_Kb = 2;
           var5.setBounds(0, param2, 18, 0, var4);
           param0.addChild(var5, 118);
@@ -88,7 +88,7 @@ final class CachedTextLayout extends TextLayout {
           var7.field_L = (BitmapFont) ((Object) BirthDateEntryPanel.field_U);
           if (!param1) {
             var11 = (SceneWidget) null;
-            CachedTextLayout.a((SceneWidget) null, true, -1);
+            CachedTextLayout.appendDesignSummaryRows((SceneWidget) null, true, -1);
           }
           var7.setBounds(0, param2, 18, 0, var4);
           var7.field_Fb = 1;
@@ -99,7 +99,7 @@ final class CachedTextLayout extends TextLayout {
           param2 = param2 + var7.field_Lb;
           for (var8 = 0; var8 < LoginHandshakeHelpers.field_c.length; var8++) {
             if (LoginHandshakeHelpers.field_c[var8] != null) {
-              var9 = ValidationHelpWidget.a(false, 1 + var8, LoginHandshakeHelpers.field_c[var8]);
+              var9 = ValidationHelpWidget.createDesignSlotWidget(false, 1 + var8, LoginHandshakeHelpers.field_c[var8]);
               param2 += 2;
               var9.setBounds(0, param2, var3_int, 0, var4);
               param2 = param2 + var3_int;
@@ -122,16 +122,16 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final static ConditionalTextValue b(int param0) {
-        String var1 = jj.a(true);
+    final static ConditionalTextValue createRememberedUsername(int param0) {
+        String var1 = MeshMaterial.getAccountStatusText(true);
         if (param0 != 64) {
-          CachedTextLayout.c(-82);
+          CachedTextLayout.drawTopShadeGradient(-82);
         }
         if (var1 != null &&
           !(var1.indexOf('@') < 0)) {
           var1 = "";
         }
-        return new ConditionalTextValue(jj.a(true), Projectile.j(param0 ^ 16777151));
+        return new ConditionalTextValue(MeshMaterial.getAccountStatusText(true), Projectile.isCurrentGameCompatible(param0 ^ 16777151));
     }
 
     public static void releaseStatics(int param0) {
@@ -142,7 +142,7 @@ final class CachedTextLayout extends TextLayout {
         field_D = null;
         field_w = null;
         if (param0 != 24) {
-          CachedTextLayout.b(30);
+          CachedTextLayout.createRememberedUsername(30);
         }
         field_o = null;
         field_v = null;
@@ -233,7 +233,7 @@ final class CachedTextLayout extends TextLayout {
         }
         try {
           if (param3 != -1385548511) {
-            CachedTextLayout.c(24);
+            CachedTextLayout.drawTopShadeGradient(24);
           }
           this.field_x = param4;
           this.field_r = 1;

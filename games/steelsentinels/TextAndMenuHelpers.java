@@ -159,16 +159,16 @@ final class TextAndMenuHelpers {
           var16 = var12;
           var14 = var16;
           var2 = var14;
-          var3 = Projectile.a(var15, 0, true, param0);
-          var4 = SoundCache.a(127, param0.componentId);
+          var3 = Projectile.collectRequiredComponentTypes(var15, 0, true, param0);
+          var4 = SoundCache.getPartSlotIndex(127, param0.componentId);
           if (0 > var4) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = NodeDeque.a(var4, (byte) 67);
+            stackIn_4_0 = NodeDeque.findPartDefinition(var4, (byte) 67);
           }
           var5 = stackIn_4_0;
           if (var5 != null) {
-            var3 = Projectile.a(var15, var3, true, var5);
+            var3 = Projectile.collectRequiredComponentTypes(var15, var3, true, var5);
           }
           for (var6_int = 0; var6_int < var3 - 1; var6_int++) {
             var7 = var6_int;
@@ -191,7 +191,7 @@ final class TextAndMenuHelpers {
               }
               break;
             }
-            var9 = dc.a(var16[var7Lifetime1], 32);
+            var9 = TableColumns.formatFlagLabels(var16[var7Lifetime1], 32);
             if (var9 != null) {
               if (var6 == null) {
                 var6 = SocketConnector.formatTemplate(FrameStyleHelpers.field_a, param1 ^ 4221, new String[]{Integer.toString(var8), var9});
@@ -224,7 +224,7 @@ final class TextAndMenuHelpers {
         if (param0 != -28548) {
           field_g = (int[]) null;
         }
-        return ~GameplayController.field_G == ~nf.field_b.field_fc ? true : false;
+        return ~GameplayController.field_G == ~LoginEncryptionHelpers.field_b.field_fc ? true : false;
     }
 
     final static int approximateVectorLength(int deltaY, int deltaX, int obfuscationGuard) {

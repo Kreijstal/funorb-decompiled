@@ -9,7 +9,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
     static String field_h;
     static int field_l;
 
-    final vd evaluateState(int param0) {
+    final TransitionTimerHelpers evaluateState(int param0) {
         if (param0 == -31992) {
           return this.validateText(this.field_k.field_y, -1);
         }
@@ -26,7 +26,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           return;
         }
         PcmSample var2 = (PcmSample) null;
-        TextFieldValidator.a(55, (PcmSample) null);
+        TextFieldValidator.playSample(55, (PcmSample) null);
         field_h = null;
         field_i = null;
     }
@@ -54,7 +54,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         }
     }
 
-    final static void a(SpriteFrame param0, SpriteFrame param1, SpriteFrame param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, BitmapFont param18, int param19) {
+    final static void configureLobbyStyles(SpriteFrame param0, SpriteFrame param1, SpriteFrame param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, BitmapFont param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -74,10 +74,10 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           }
           NumericDateInputWidget.field_ib = param3;
           MouseWheelInput.field_a = param18;
-          BufferedRandomAccessFile.a(param14, param19, param7, param12, (byte) -89);
+          BufferedRandomAccessFile.setTextFieldLayout(param14, param19, param7, param12, (byte) -89);
           TabbedPanel.setDialogFrame(param1, param10, param16, -89);
           LoadingScreenHelpers.configurePopupStyle((byte) -55, param2, param15, param4, param0, param5);
-          of.a(param9, param6, 11);
+          SessionExitHelpers.setPopupMenuAnchor(param9, param6, 11);
           DualNodeHashTable.setPopupMenuColours(-92, param17, param13, param8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -128,7 +128,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         }
     }
 
-    final static PlayingSound a(int param0, PcmSample param1) {
+    final static PlayingSound playSample(int param0, PcmSample param1) {
         RuntimeException var2 = null;
         PlayingSound stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -139,7 +139,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           if (param0 != 6940) {
             field_j = (String) null;
           }
-          stackIn_3_0 = EmailCredentials.a(PcmSampleStream.createAtRatePercent(param1, 100, 96), -48);
+          stackIn_3_0 = EmailCredentials.playStream(PcmSampleStream.createAtRatePercent(param1, 100, 96), -48);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,7 +155,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         }
     }
 
-    abstract vd validateText(String param0, int param1);
+    abstract TransitionTimerHelpers validateText(String param0, int param1);
 
     final String evaluateMessage(byte param0) {
         if (param0 != -42) {

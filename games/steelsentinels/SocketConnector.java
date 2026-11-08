@@ -34,7 +34,7 @@ abstract class SocketConnector {
         RuntimeException decompiledCaughtException = null;
         var6 = SteelSentinels.obfuscationControl;
         try {
-          var2 = DateInputWidget.a(param1, "jagex-last-login-method", -15645);
+          var2 = DateInputWidget.readCookie(param1, "jagex-last-login-method", -15645);
           if (var2 == null) {
             stackIn_4_0 = DraggableWidget.field_Y;
             return stackIn_4_0;
@@ -42,7 +42,7 @@ abstract class SocketConnector {
           if (param0 > -41) {
             field_a = (MusicTrack) null;
           }
-          var3 = sh.b(-26);
+          var3 = MenuLayoutHelpers.getLoginMethods(-26);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5.matchesName(var2, 8)) {
@@ -107,7 +107,7 @@ abstract class SocketConnector {
                 break;
               }
               var7_ref_String = param0.substring(2 + var6_int, var5);
-              if (!RegistrationRequestDialog.a((CharSequence) ((Object) var7_ref_String), -110)) {
+              if (!RegistrationRequestDialog.isDecimalInteger((CharSequence) ((Object) var7_ref_String), -110)) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -117,7 +117,7 @@ abstract class SocketConnector {
                 continue;
               }
               var5++;
-              var8 = dj.a((CharSequence) ((Object) var7_ref_String), -109);
+              var8 = NumberParsingHelpers.parseDecimalInt((CharSequence) ((Object) var7_ref_String), -109);
               var4 = var4 + (param2[var8].length() + (var6_int - var5));
               continue;
             }
@@ -144,7 +144,7 @@ abstract class SocketConnector {
               break;
             }
             var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!RegistrationRequestDialog.a((CharSequence) ((Object) var9), -114)) {
+            if (!RegistrationRequestDialog.isDecimalInteger((CharSequence) ((Object) var9), -114)) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {
@@ -154,7 +154,7 @@ abstract class SocketConnector {
               continue;
             }
             var5Lifetime1++;
-            var10 = dj.a((CharSequence) ((Object) var9), -115);
+            var10 = NumberParsingHelpers.parseDecimalInt((CharSequence) ((Object) var9), -115);
             discarded$0 = var6.append(param0.substring(var7, var8Lifetime1));
             discarded$1 = var6.append(param2[var10]);
             var7 = var5Lifetime1;

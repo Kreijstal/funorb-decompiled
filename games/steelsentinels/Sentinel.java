@@ -125,7 +125,7 @@ final class Sentinel extends IntrusiveNode {
     int[] field_Xb;
     int field_ub;
 
-    private final void d(int param0, int param1) {
+    private final void handleDestroyed(int param0, int param1) {
         String[] array$0 = null;
         int stackIn_42_0 = 0;
         int stackIn_45_0 = 0;
@@ -181,9 +181,9 @@ final class Sentinel extends IntrusiveNode {
           var13 = new Projectile(this.worldX, this.worldY, 0, 0, 0, 0, 0, this.world, this, 1000, 0, -2);
           var13.field_O = 1000;
           SoundAndUrlHelpers.playSoundEffect((byte) -82, 104, this.worldX);
-          var13.a(250, 1500, 0, -110, 50);
-          var13.a(5000, 5000, 2, param1 - 2839, 500);
-          var13.a(5000, 2500, 3, param1 - 2840, 500);
+          var13.explode(250, 1500, 0, -110, 50);
+          var13.explode(5000, 5000, 2, param1 - 2839, 500);
+          var13.explode(5000, 2500, 3, param1 - 2840, 500);
           if (this.world.field_b == 0) {
             this.world.field_b = 1;
           }
@@ -227,7 +227,7 @@ final class Sentinel extends IntrusiveNode {
         }
         SoundAndUrlHelpers.playSoundEffect((byte) -85, 9, this.worldX);
         if (!this.world.field_lb) {
-          if (di.field_g == 10) {
+          if (OptionMaskHelpers.field_g == 10) {
             if (QuickChatHelpDialog.field_Ub == 3) {
               stackIn_42_0 = (DirectByteStorage.field_j > 0) ? 1 : 0;
             } else {
@@ -282,7 +282,7 @@ final class Sentinel extends IntrusiveNode {
               this.field_S = this.field_Q;
               this.field_Dc = 0;
               this.field_oc = 0;
-              this.j(-5);
+              this.chooseSpawnX(-5);
               SoundAndUrlHelpers.playSoundEffect((byte) -123, 8, this.worldX);
               this.worldY = -320000;
               this.field_fc = this.worldY;
@@ -308,7 +308,7 @@ final class Sentinel extends IntrusiveNode {
           this.field_dc) {
           if (!this.world.field_lb &&
             !this.world.field_h &&
-            di.field_g == -1 && (this.field_sc ||
+            OptionMaskHelpers.field_g == -1 && (this.field_sc ||
             this.field_dc ||
             null != this.field_L &&
             !(this.field_L.playerId < 0) &&
@@ -353,7 +353,7 @@ final class Sentinel extends IntrusiveNode {
                     } else {
                       if (this.field_yc != -2) {
                         if (this.field_yc == -3) {
-                          var8 = un.field_k[0];
+                          var8 = ChatHistoryAllocator.field_k[0];
                         } else {
                           if (this.field_yc != -4) {
                             if (-5 != this.field_yc) {
@@ -364,17 +364,17 @@ final class Sentinel extends IntrusiveNode {
                                   var8 = LobbyPlayer.field_Tb;
                                 }
                               } else {
-                                var8 = ob.field_s;
+                                var8 = PendingPackedReply.field_s;
                               }
                             } else {
-                              var8 = un.field_k[3];
+                              var8 = ChatHistoryAllocator.field_k[3];
                             }
                           } else {
                             if (this.field_Ib == this.field_L &&
                               !this.field_M) {
-                              var8 = un.field_k[2];
+                              var8 = ChatHistoryAllocator.field_k[2];
                             } else {
-                              var8 = un.field_k[1];
+                              var8 = ChatHistoryAllocator.field_k[1];
                             }
                           }
                         }
@@ -395,7 +395,7 @@ final class Sentinel extends IntrusiveNode {
                 if (this.world.terrain.getTerrainType(118) != 4) {
                   var8 = GzipDecoder.field_h;
                 } else {
-                  var8 = gm.field_d;
+                  var8 = EmailValidationHelpers.field_d;
                 }
               }
             } else {
@@ -407,12 +407,12 @@ final class Sentinel extends IntrusiveNode {
               if (4 == this.world.terrain.getTerrainType(126)) {
                 var8 = var8 + TextLayout.field_i;
               } else {
-                var8 = var8 + vc.field_k;
+                var8 = var8 + DisplayMode.field_k;
               }
             } else {
               if (this.field_M) {
                 if (0 == var8.length()) {
-                  var8 = kf.field_v;
+                  var8 = HighscoreTable.field_v;
                 } else {
                   var8 = var8 + PartInstruction.field_c;
                 }
@@ -429,13 +429,13 @@ final class Sentinel extends IntrusiveNode {
             if (null == this.field_L) {
               stackIn_154_5 = TextLayoutLine.field_d;
             } else {
-              stackIn_154_5 = this.world.d(-1661904765, this.field_L.playerId);
+              stackIn_154_5 = this.world.getPlayerName(-1661904765, this.field_L.playerId);
             }
             stackIn_153_3[stackIn_153_4] = stackIn_154_5;
-            stackIn_153_2[1] = this.world.d(-1661904765, this.playerId);
+            stackIn_153_2[1] = this.world.getPlayerName(-1661904765, this.playerId);
             var14 = SocketConnector.formatTemplate(stackIn_153_0, stackIn_153_1, stackIn_153_2);
-            LinkButtonPainter.a(35020, var14, (byte) 121);
-            ValidatedTextWidget.a(var14, this.world, (byte) 100);
+            LinkButtonPainter.addTimedMessage(35020, var14, (byte) 121);
+            ValidatedTextWidget.addWrappedChatLine(var14, this.world, (byte) 100);
           }
           this.field_R = 0;
           this.field_yb = 0;
@@ -481,8 +481,8 @@ final class Sentinel extends IntrusiveNode {
                     this.field_Ib.field_wc = this.field_Ib.field_wc + 1;
                   } else {
                     if (this.field_ac >= 0 &&
-                      this.field_ac < t.field_d.length) {
-                      var8_intLifetime1 = t.field_d[this.field_ac];
+                      this.field_ac < NameTable.field_d.length) {
+                      var8_intLifetime1 = NameTable.field_d[this.field_ac];
                       if (var8_intLifetime1 >= 0) {
                         var8_intLifetime1 = LobbyGame.getKillStatisticId(false, var8_intLifetime1);
                         this.field_Ib.field_jb[var8_intLifetime1 - 12] = this.field_Ib.field_jb[var8_intLifetime1 - 12] + 1;
@@ -500,7 +500,7 @@ final class Sentinel extends IntrusiveNode {
                   }
                   this.field_Ib.field_yb = 250;
                   if (this.field_Nb != 8) {
-                    this.field_L.b((this.field_lb + wb.a(500, this.activeModuleType)) * this.world.field_l, param1 ^ 27962);
+                    this.field_L.awardDamageScore((this.field_lb + RewardValueHelpers.getDestructionReward(500, this.activeModuleType)) * this.world.field_l, param1 ^ 27962);
                   }
                   if (this.field_lb / 4 < this.field_Ib.field_lb) {
                   }
@@ -511,18 +511,18 @@ final class Sentinel extends IntrusiveNode {
                 108 == param0 &&
                 null != this.field_Ib) {
                 this.field_Ib.field_kc = this.field_Ib.field_kc + 1;
-                this.field_Ib.b(5000 * this.world.field_l, 26511);
+                this.field_Ib.awardDamageScore(5000 * this.world.field_l, 26511);
               }
             }
           }
         }
         if (!this.world.field_h &&
           this == this.world.spawnedSpecialSentinel &&
-          -2 != ed.field_j) {
+          -2 != SessionSeedHelpers.field_j) {
           var15 = AccountNoticeDialog.field_mb[this.world.simulationTick % AccountNoticeDialog.field_mb.length];
-          var9 = dc.field_a + ": " + var15;
-          LinkButtonPainter.a(16776960, var9, (byte) -102);
-          ValidatedTextWidget.a(var9, this.world, (byte) 100);
+          var9 = TableColumns.field_a + ": " + var15;
+          LinkButtonPainter.addTimedMessage(16776960, var9, (byte) -102);
+          ValidatedTextWidget.addWrappedChatLine(var9, this.world, (byte) 100);
         }
         this.field_sc = false;
         this.field_dc = false;
@@ -530,7 +530,7 @@ final class Sentinel extends IntrusiveNode {
         if (var5 != 0) {
           this.world.field_j = true;
           if (!this.world.field_h &&
-            10 == di.field_g &&
+            10 == OptionMaskHelpers.field_g &&
             0 == DirectByteStorage.field_j &&
             this.world.field_M == 0) {
             TabbedPanel.recordMissionCompletion(0, 0, 1200, QuickChatHelpDialog.field_Ub, 0, 0, 0, (byte) -65);
@@ -560,7 +560,7 @@ final class Sentinel extends IntrusiveNode {
           this.field_hb = -1;
         }
         if (this.activeModuleType == 20) {
-          Bzip2State.a(true, this);
+          Bzip2State.consumeModuleCost(true, this);
         }
         this.field_yc = -1;
         this.field_Ib = null;
@@ -570,7 +570,7 @@ final class Sentinel extends IntrusiveNode {
         return;
     }
 
-    private final void a(SentinelCommand param0, int param1) {
+    private final void redeploy(SentinelCommand param0, int param1) {
         int stackIn_3_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -595,7 +595,7 @@ final class Sentinel extends IntrusiveNode {
             return;
           }
           if (var3_int != 0) {
-            Bzip2State.a(true, this);
+            Bzip2State.consumeModuleCost(true, this);
           }
           if (!param0.activated &&
             var3_int == 0) {
@@ -613,7 +613,7 @@ final class Sentinel extends IntrusiveNode {
           var5.field_U = 500;
           this.world.explosions.addLast(param1 ^ 9, var5);
           this.field_Jb = true;
-          this.j(-5);
+          this.chooseSpawnX(-5);
           this.worldY = -500 - (this.world.terrain.getGroundHeightAt((byte) -98, this.worldX >> 4) << 4);
           param0.activated = false;
           this.field_U = 0;
@@ -670,21 +670,21 @@ final class Sentinel extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0) {
+    final void callAirstrike(byte param0) {
         int var4 = 0;
         int var5 = 0;
         Sentinel var6 = null;
         Projectile var6_ref = null;
         int var7 = SteelSentinels.obfuscationControl;
         if (param0 != -65) {
-          this.g(-111, 33);
+          this.advanceAnimation(-111, 33);
         }
         SoundAndUrlHelpers.playSoundEffect((byte) -118, 44, -1);
         NodeIterator var8 = new NodeIterator(this.world.sentinels);
         int var3 = this.world.terrain.getProfileLength(-128) << 4;
         for (var4 = 8192; var4 < var3; var4 += 16384) {
           var5 = 0;
-          var6 = (Sentinel) (var8.b(2));
+          var6 = (Sentinel) (var8.first(2));
           while (var6 != null) {
             if (~this.teamId == ~var6.teamId &&
               24576 > Math.abs(-var4 + var6.worldX)) {
@@ -700,7 +700,7 @@ final class Sentinel extends IntrusiveNode {
         }
     }
 
-    final void b(byte param0, SentinelCommand param1) {
+    final void dischargeShockwave(byte param0, SentinelCommand param1) {
         int var6_int = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -772,11 +772,11 @@ final class Sentinel extends IntrusiveNode {
         }
     }
 
-    private final boolean a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+    private final boolean drawOrHitTestInWorld(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         if (param6 > -89) {
           this.armour = -93;
         }
-        return this.a(param1, param5, param4, param0, (byte) 125, false, param3, param2);
+        return this.drawOrHitTestSentinel(param1, param5, param4, param0, (byte) 125, false, param3, param2);
     }
 
     private final void executeCommand(boolean obfuscationGuard, SentinelCommand command, int simulationTick) {
@@ -863,11 +863,11 @@ final class Sentinel extends IntrusiveNode {
                     }
                   }
                 }
-                this.a(command, (byte) -106);
-                if (3 == di.field_g &&
+                this.performJump(command, (byte) -106);
+                if (3 == OptionMaskHelpers.field_g &&
                   1 == IconTextComponent.field_Yb &&
                   this.field_Lb) {
-                  tj.field_c = 1;
+                  HighscoreSubmissionFactory.field_c = 1;
                 }
               }
             }
@@ -914,7 +914,7 @@ final class Sentinel extends IntrusiveNode {
             if (command.actionType == 0 &&
               !this.field_pc) {
               this.field_F = -Math.abs(this.field_F);
-              this.c((byte) 69, command);
+              this.fireWeapons((byte) 69, command);
               command.activated = false;
             } else {
               if (3 == command.actionType) {
@@ -961,7 +961,7 @@ final class Sentinel extends IntrusiveNode {
                     }
                   }
                   if (var4_int == 0 &&
-                    command.startTick != command.endTick - 100 + ModalStack.field_G[o.a((byte) 84, this.chassis.componentId)][25][2] &&
+                    command.startTick != command.endTick - 100 + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.chassis.componentId)][25][2] &&
                     39 != this.activeModuleType) {
                     this.field_U = 0;
                     if (command.startTick == -100 + command.endTick) {
@@ -969,12 +969,12 @@ final class Sentinel extends IntrusiveNode {
                     }
                     command.startTick = command.startTick + 1;
                   } else {
-                    this.a(command, (byte) -96);
+                    this.performJump(command, (byte) -96);
                   }
-                  if (di.field_g == 3 &&
+                  if (OptionMaskHelpers.field_g == 3 &&
                     IconTextComponent.field_Yb == 1 &&
                     var4_int != 0) {
-                    tj.field_c = 1;
+                    HighscoreSubmissionFactory.field_c = 1;
                   }
                 }
               } else {
@@ -989,18 +989,18 @@ final class Sentinel extends IntrusiveNode {
                         1 < this.field_U) {
                         this.field_U = -1;
                       }
-                      if (0 == di.field_g) {
+                      if (0 == OptionMaskHelpers.field_g) {
                         if (1 == IconTextComponent.field_Yb &&
                           this.field_U < 0) {
-                          tj.field_c = 1;
+                          HighscoreSubmissionFactory.field_c = 1;
                         }
                         if (IconTextComponent.field_Yb == 2 &&
                           this.field_U > 0) {
-                          tj.field_c = 1;
+                          HighscoreSubmissionFactory.field_c = 1;
                         }
                         if (3 == IconTextComponent.field_Yb &&
                           this.field_U == 0) {
-                          tj.field_c = 1;
+                          HighscoreSubmissionFactory.field_c = 1;
                         }
                       }
                       if (var4_int != this.field_U) {
@@ -1010,19 +1010,19 @@ final class Sentinel extends IntrusiveNode {
                       if (command.actionType != 7) {
                         if (8 == command.actionType) {
                           this.field_F = -Math.abs(this.field_F);
-                          this.b((byte) -31, command);
+                          this.dischargeShockwave((byte) -31, command);
                           command.activated = false;
                         } else {
                           if (9 == command.actionType ||
                             command.actionType == 11) {
                             this.field_F = -Math.abs(this.field_F);
-                            this.a(command, 10);
+                            this.redeploy(command, 10);
                             command.activated = false;
                           }
                         }
                       } else {
                         this.field_F = -Math.abs(this.field_F);
-                        this.a((byte) 10, command);
+                        this.performChassisAttack((byte) 10, command);
                       }
                     }
                   }
@@ -1032,14 +1032,14 @@ final class Sentinel extends IntrusiveNode {
                   if (null != this.field_Vb) {
                     this.field_ec = 1000;
                     if (!this.field_Vb.hasModuleType(18, -27)) {
-                      if (ed.field_j == this.playerId) {
+                      if (SessionSeedHelpers.field_j == this.playerId) {
                         SoundAndUrlHelpers.playSoundEffect((byte) 122, 79, -1);
                       } else {
                         SoundAndUrlHelpers.playSoundEffect((byte) 64, 26, -1);
                       }
                     } else {
                       this.field_ec = 250;
-                      if (this.playerId == ed.field_j) {
+                      if (this.playerId == SessionSeedHelpers.field_j) {
                         SoundAndUrlHelpers.playSoundEffect((byte) -101, 80, -1);
                       } else {
                         SoundAndUrlHelpers.playSoundEffect((byte) -126, 26, -1);
@@ -1073,7 +1073,7 @@ final class Sentinel extends IntrusiveNode {
         }
     }
 
-    private final void c(byte param0, SentinelCommand param1) {
+    private final void fireWeapons(byte param0, SentinelCommand param1) {
         int stackIn_4_0 = 0;
         boolean stackIn_22_1 = false;
         int stackIn_143_0 = 0;
@@ -1110,7 +1110,7 @@ final class Sentinel extends IntrusiveNode {
             !param1.activated) {
             this.field_Lb = false;
           }
-          var5 = this.chassis.a(0, this, new ArticulatedPart[]{}, var3_int * param1.aimAngle, param1.actionVariant);
+          var5 = this.chassis.collectWeaponsCoveringAngle(0, this, new ArticulatedPart[]{}, var3_int * param1.aimAngle, param1.actionVariant);
           if (var5.length > 0) {
             this.field_E = var3_int;
           }
@@ -1120,8 +1120,8 @@ final class Sentinel extends IntrusiveNode {
           }
           stackIn_22_1 = (var4 != 0);
           this.field_Lb = stackIn_22_1;
-          this.chassis.a(param1.aimAngle * this.field_E, -97, param1.actionVariant);
-          this.chassis.b((byte) -128, this.worldX, this.field_E, this.field_fc);
+          this.chassis.updateAimRange(param1.aimAngle * this.field_E, -97, param1.actionVariant);
+          this.chassis.updateWorldPositions((byte) -128, this.worldX, this.field_E, this.field_fc);
           if (param1.activated) {
             var6 = 0;
             for (var7 = 0; var5.length > var7; var7++) {
@@ -1290,7 +1290,7 @@ final class Sentinel extends IntrusiveNode {
                 var8Lifetime1 = 0;
               }
               if (var8Lifetime1 != 0 &&
-                !this.a(param1, -126, var5[var7Lifetime2])) {
+                !this.fireWeaponPart(param1, -126, var5[var7Lifetime2])) {
                 var7Lifetime2 = var5.length;
               }
               var7Lifetime2++;
@@ -1411,7 +1411,7 @@ final class Sentinel extends IntrusiveNode {
             this.field_v = this.field_v - 1;
           }
           if (this.field_v <= 0) {
-            Bzip2State.a(true, this);
+            Bzip2State.consumeModuleCost(true, this);
           }
         }
         if (this.field_Yb > 0) {
@@ -1437,7 +1437,7 @@ final class Sentinel extends IntrusiveNode {
                 if (0 == (1 << 4 + var3Lifetime1 & this.world.field_v)) {
                   if (this.field_Cb) {
                     this.field_Cb = false;
-                    this.world.a(this.teamId, (byte) 59, this);
+                    this.world.launchBaseStrike(this.teamId, (byte) 59, this);
                   }
                 } else {
                   if (var3Lifetime1 != this.teamId &&
@@ -1504,8 +1504,8 @@ final class Sentinel extends IntrusiveNode {
           this.charge >= 10 &&
           !this.field_pc &&
           !this.field_Hb) {
-          var11 = this.chassis.a(0, "Energy Blade");
-          this.chassis.b((byte) -128, this.worldX, this.field_E, this.worldY);
+          var11 = this.chassis.findPartByName(0, "Energy Blade");
+          this.chassis.updateWorldPositions((byte) -128, this.worldX, this.field_E, this.worldY);
           var4Lifetime2 = this.field_E * (jh.sine16(var11.rotation - 5000 >> 3, 4096) * 100 >> 16);
           var5Lifetime2 = 100 * -ScrollContainer.cosine16(var11.rotation - 5000 >> 3, (byte) -119) >> 16;
           var6Lifetime2 = 100;
@@ -1539,7 +1539,7 @@ final class Sentinel extends IntrusiveNode {
         }
         if (this.field_oc > 0) {
           this.field_oc = this.field_oc + 1;
-          if (this.field_oc >= ModalStack.field_G[o.a((byte) 84, this.chassis.componentId)][25][2]) {
+          if (this.field_oc >= ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.chassis.componentId)][25][2]) {
             this.field_oc = 0;
           }
         }
@@ -1566,7 +1566,7 @@ final class Sentinel extends IntrusiveNode {
           var3Lifetime4 = 0;
         }
         if (var3Lifetime4 != 0) {
-          this.a(true);
+          this.interceptIncomingProjectile(true);
         }
         if (null != this.field_Vb) {
           this.field_ec = this.field_ec - 1;
@@ -1585,7 +1585,7 @@ final class Sentinel extends IntrusiveNode {
           if (this.playerId >= 0 &&
             this.world.playerCount > this.playerId) {
             var4Lifetime3 = this.worldX;
-            if (this.playerId == ed.field_j) {
+            if (this.playerId == SessionSeedHelpers.field_j) {
               var4Lifetime3 = -1;
             }
             if (1 == this.field_Qb) {
@@ -1704,7 +1704,7 @@ final class Sentinel extends IntrusiveNode {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  this.e((byte) 13);
+                  this.regenerateCharge((byte) 13);
                   if (!(this.field_Fc <= 0)) {
                     this.field_Fc = this.field_Fc - 1;
                     if ((this.field_Fc == 0)) {
@@ -1717,7 +1717,7 @@ final class Sentinel extends IntrusiveNode {
               if ((decompiledFrameRemainder1) &&
                 (decompiledFrameRemainder0)) {
                 if (this.worldY <= var5Lifetime4) {
-                  this.e((byte) 13);
+                  this.regenerateCharge((byte) 13);
                   if (!(this.field_Fc <= 0)) {
                     this.field_Fc = this.field_Fc - 1;
                     if ((this.field_Fc == 0)) {
@@ -1728,7 +1728,7 @@ final class Sentinel extends IntrusiveNode {
                 }
                 else {
                   if (this.field_Qb <= 0) {
-                    this.e((byte) 13);
+                    this.regenerateCharge((byte) 13);
                     if (!(this.field_Fc <= 0)) {
                       this.field_Fc = this.field_Fc - 1;
                       if ((this.field_Fc == 0)) {
@@ -1743,7 +1743,7 @@ final class Sentinel extends IntrusiveNode {
                 }
               }
               if (decompiledFrameRemainder1) {
-                this.e((byte) 13);
+                this.regenerateCharge((byte) 13);
                 if (this.field_Fc > 0) {
                   this.field_Fc = this.field_Fc - 1;
                   if (this.field_Fc == 0) {
@@ -1752,7 +1752,7 @@ final class Sentinel extends IntrusiveNode {
                 }
               }
             } else {
-              this.e((byte) 13);
+              this.regenerateCharge((byte) 13);
               if (this.field_Fc > 0) {
                 this.field_Fc = this.field_Fc - 1;
                 if (this.field_Fc == 0) {
@@ -1761,7 +1761,7 @@ final class Sentinel extends IntrusiveNode {
               }
             }
           } else {
-            this.e((byte) 13);
+            this.regenerateCharge((byte) 13);
             if (this.field_Fc > 0) {
               this.field_Fc = this.field_Fc - 1;
               if (this.field_Fc == 0) {
@@ -1770,7 +1770,7 @@ final class Sentinel extends IntrusiveNode {
             }
           }
         } else {
-          this.e((byte) 13);
+          this.regenerateCharge((byte) 13);
           if (this.field_Fc > 0) {
             this.field_Fc = this.field_Fc - 1;
             if (this.field_Fc == 0) {
@@ -1787,39 +1787,39 @@ final class Sentinel extends IntrusiveNode {
         }
         var6Lifetime4 = stackIn_270_0;
         for (var7Lifetime2 = 0; this.weaponParts.length > var7Lifetime2; var7Lifetime2++) {
-          this.weaponParts[var7Lifetime2].a((byte) -37, var6Lifetime4 != 0, var5Lifetime5 != 0);
+          this.weaponParts[var7Lifetime2].advanceDisableTimer((byte) -37, var6Lifetime4 != 0, var5Lifetime5 != 0);
         }
         this.field_Jb = false;
         this.advanceCommandQueues((byte) 75, simulationTick);
         var5Lifetime6 = this.chassis.componentId;
         if (this.chassis != null) {
-          this.g(-18, var5Lifetime6);
+          this.advanceAnimation(-18, var5Lifetime6);
         }
         if (this.field_Jb) {
           var4Lifetime4 = this.worldX;
         }
-        this.a(0, var4Lifetime4);
+        this.applyTerrainContact(0, var4Lifetime4);
         if ((this.field_z > 0 ||
           this.activeModuleType == 38 ||
           this.field_pc &&
           var5Lifetime6 != 109) && !this.field_M) {
           this.restoreArmour(-20039);
         }
-        if (obfuscationGuard == di.field_g &&
+        if (obfuscationGuard == OptionMaskHelpers.field_g &&
           IconTextComponent.field_Yb == 13 &&
           this.field_Nb == 9 &&
-          tj.field_c < 2 &&
+          HighscoreSubmissionFactory.field_c < 2 &&
           this.maximumArmour > this.armour) {
-          tj.field_c = 2;
+          HighscoreSubmissionFactory.field_c = 2;
         }
         if (this.armour <= 0 &&
           -1 != this.field_Qb) {
           this.clearArmour(obfuscationGuard + 127);
-          this.d(var5Lifetime6, obfuscationGuard ^ 2740);
+          this.handleDestroyed(var5Lifetime6, obfuscationGuard ^ 2740);
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3) {
+    final boolean drawTargetLockCountdown(int param0, int param1, int param2, int param3) {
         if (this.field_Hb) {
           return false;
         }
@@ -1835,10 +1835,10 @@ final class Sentinel extends IntrusiveNode {
         }
         BoundedUrlRequest.field_d.drawCentered(var10, var5, var6 + 4, 16711680, -1);
         var7 = var7 + (int)var8;
-        UiContainer.a(-var7 + var6, var5 - 5, 5 + var5, true, 16711680, -var7 + var6, var6 - var7 + 5, var5);
-        UiContainer.a(5 + var6, var5 - var7, var5 - var7, true, 16711680, -5 + var6, var6, var5 - var7 + 5);
-        UiContainer.a(var7 + var6, -5 + var5, var5 + 5, true, 16711680, var6 + var7, -5 + (var7 + var6), var5);
-        UiContainer.a(var6 + 5, var5 + var7, var5 + var7, true, 16711680, -5 + var6, var6, -5 + (var5 + var7));
+        UiContainer.drawFilledTriangle(-var7 + var6, var5 - 5, 5 + var5, true, 16711680, -var7 + var6, var6 - var7 + 5, var5);
+        UiContainer.drawFilledTriangle(5 + var6, var5 - var7, var5 - var7, true, 16711680, -5 + var6, var6, var5 - var7 + 5);
+        UiContainer.drawFilledTriangle(var7 + var6, -5 + var5, var5 + 5, true, 16711680, var6 + var7, -5 + (var7 + var6), var5);
+        UiContainer.drawFilledTriangle(var6 + 5, var5 + var7, var5 + var7, true, 16711680, -5 + var6, var6, -5 + (var5 + var7));
         return false;
     }
 
@@ -1853,18 +1853,18 @@ final class Sentinel extends IntrusiveNode {
         try {
           if (!obfuscationGuard) {
             var7 = (SentinelCommand) null;
-            this.a((SentinelCommand) null, (byte) -56);
+            this.performJump((SentinelCommand) null, (byte) -56);
           }
           this.playerId = playerId;
           if (this.playerId == -1) {
-            this.playerId = this.world.d(-3905);
+            this.playerId = this.world.findFreeComputerPlayerId(-3905);
           }
           this.moduleTypes = new int[8];
           this.field_uc = design;
           this.teamId = teamId;
           ArraySupport.copy(this.field_uc, this.field_uc.length - 8, this.moduleTypes, 0, 8);
           this.chassis = MusicPatchNode.decodeChassisDesign(-24809, alternateConfiguration, this.moduleTypes, this.field_uc);
-          DelayedServerPacket.a(this.field_uc, this.moduleTypes, 2);
+          DelayedServerPacket.computeDesignCode(this.field_uc, this.moduleTypes, 2);
           if (null == this.chassis) {
             this.weaponParts = new ArticulatedPart[]{};
             this.field_Db = 64;
@@ -1873,11 +1873,11 @@ final class Sentinel extends IntrusiveNode {
             this.field_lb = 0;
             this.maximumArmour = 500;
           } else {
-            this.maximumCharge = sl.a(this.chassis, this.moduleTypes, -7);
+            this.maximumCharge = ArchiveLoadStep.computeSecondaryModuleScore(this.chassis, this.moduleTypes, -7);
             this.field_wb = EmailFormatError.computeModuleWeight(this.chassis, 12258, this.moduleTypes);
-            this.field_Q = SentinelCommandSimulator.a(this.moduleTypes, 10, this.chassis);
+            this.field_Q = SentinelCommandSimulator.sumModuleValues(this.moduleTypes, 10, this.chassis);
             this.maximumArmour = this.chassis.getTotalArmour(8192);
-            this.moduleCount = this.chassis.i(-128);
+            this.moduleCount = this.chassis.getTotalModuleSlots(-128);
             var6_int = this.hasModuleType(34, -27) ? 1 : 0;
             if (this.hasModuleType(34, -27)) {
               if (this.field_ib) {
@@ -1885,7 +1885,7 @@ final class Sentinel extends IntrusiveNode {
               }
               this.maximumArmour = this.maximumArmour * 2;
             }
-            this.field_lb = hm.a((byte) 127, this.moduleTypes, this.chassis);
+            this.field_lb = LoadoutCostHelpers.computeLoadoutCost((byte) 127, this.moduleTypes, this.chassis);
             if (this.world.field_eb < this.field_lb && (!this.world.field_lb ||
               this.teamId == 0) && this.playerId < this.world.playerCount + this.world.computerPlayerCount) {
               this.world.field_eb = this.field_lb;
@@ -1900,8 +1900,8 @@ final class Sentinel extends IntrusiveNode {
               this.maximumArmour = this.maximumArmour * 2;
               this.field_lb = this.field_lb * 4;
             }
-            this.field_Fb = (int)((double)this.chassis.h(-31496) / Math.sqrt((double)this.chassis.getTotalArmour(8192)));
-            this.field_cb = (int)((double)this.chassis.j(0) / Math.sqrt((double)this.chassis.getTotalArmour(8192)));
+            this.field_Fb = (int)((double)this.chassis.getTotalJump(-31496) / Math.sqrt((double)this.chassis.getTotalArmour(8192)));
+            this.field_cb = (int)((double)this.chassis.getTotalThrust(0) / Math.sqrt((double)this.chassis.getTotalArmour(8192)));
             if (this.field_Fb < 0) {
               this.field_Fb = 0;
             }
@@ -1914,185 +1914,185 @@ final class Sentinel extends IntrusiveNode {
             if (this.hasModuleType(29, -27)) {
               this.field_cb = this.field_cb * 2;
             }
-            if (null != this.chassis.a(59, (byte) -120)) {
+            if (null != this.chassis.findPartByComponentId(59, (byte) -120)) {
               this.field_Fb = this.field_Fb + 5;
             }
             if (20 < this.field_Fb) {
               this.field_Fb = 20;
             }
-            this.chassis.a(0, 0, 0, 0);
-            this.field_Xb = this.chassis.c((byte) 125);
+            this.chassis.layoutAngleRanges(0, 0, 0, 0);
+            this.field_Xb = this.chassis.getWeaponClasses((byte) 125);
             this.field_Mb = new int[this.field_Xb.length];
-            this.weaponParts = this.chassis.k(-123);
+            this.weaponParts = this.chassis.getWeaponParts(-123);
             MusicPatchNode.field_w = 4096;
             AccountTermsPanel.field_V = 0;
             ImageProducerRasterBuffer.field_y = 0;
             LoadingScreenHelpers.field_d = 0;
             UiComponent.field_t = 0;
-            this.chassis.a(0, false, 0, 0, (byte) 49, 0);
+            this.chassis.positionPartTree(0, false, 0, 0, (byte) 49, 0);
             this.field_fb = 0;
             this.field_Db = (-ImageProducerRasterBuffer.field_y + UiComponent.field_t) * 2;
             this.field_Ub = (LoadingScreenHelpers.field_d - AccountTermsPanel.field_V) * 2;
-            if (null != this.chassis.a(66, (byte) -47)) {
+            if (null != this.chassis.findPartByComponentId(66, (byte) -47)) {
               this.field_fb = 1;
             }
-            if (null != this.chassis.a(76, (byte) -38)) {
+            if (null != this.chassis.findPartByComponentId(76, (byte) -38)) {
               this.field_fb = 2;
             }
-            if (null != this.chassis.a(89, (byte) -124)) {
+            if (null != this.chassis.findPartByComponentId(89, (byte) -124)) {
               this.field_fb = 3;
             }
             this.animatedParts = null;
             if (this.chassis.componentId == 0) {
               this.animatedParts = new ArticulatedPart[3];
-              this.animatedParts[0] = this.chassis.a(0, "A");
-              this.animatedParts[1] = this.chassis.a(0, "B");
-              this.animatedParts[2] = this.chassis.a(0, "Golem Chassis");
+              this.animatedParts[0] = this.chassis.findPartByName(0, "A");
+              this.animatedParts[1] = this.chassis.findPartByName(0, "B");
+              this.animatedParts[2] = this.chassis.findPartByName(0, "Golem Chassis");
             }
             if (55 == this.chassis.componentId) {
               this.animatedParts = new ArticulatedPart[11];
-              this.animatedParts[0] = this.chassis.a(0, "Front0Leg");
-              this.animatedParts[1] = this.chassis.a(0, "Front1Leg");
-              this.animatedParts[2] = this.chassis.a(0, "Front2Leg");
-              this.animatedParts[3] = this.chassis.a(0, "Front3Leg");
-              this.animatedParts[4] = this.chassis.a(0, "Front4Leg");
-              this.animatedParts[5] = this.chassis.a(0, "Back0Leg");
-              this.animatedParts[6] = this.chassis.a(0, "Back1Leg");
-              this.animatedParts[7] = this.chassis.a(0, "Back2Leg");
-              this.animatedParts[8] = this.chassis.a(0, "Back3Leg");
-              this.animatedParts[9] = this.chassis.a(0, "Back4Leg");
-              this.animatedParts[10] = this.chassis.a(0, "Slave Chassis");
+              this.animatedParts[0] = this.chassis.findPartByName(0, "Front0Leg");
+              this.animatedParts[1] = this.chassis.findPartByName(0, "Front1Leg");
+              this.animatedParts[2] = this.chassis.findPartByName(0, "Front2Leg");
+              this.animatedParts[3] = this.chassis.findPartByName(0, "Front3Leg");
+              this.animatedParts[4] = this.chassis.findPartByName(0, "Front4Leg");
+              this.animatedParts[5] = this.chassis.findPartByName(0, "Back0Leg");
+              this.animatedParts[6] = this.chassis.findPartByName(0, "Back1Leg");
+              this.animatedParts[7] = this.chassis.findPartByName(0, "Back2Leg");
+              this.animatedParts[8] = this.chassis.findPartByName(0, "Back3Leg");
+              this.animatedParts[9] = this.chassis.findPartByName(0, "Back4Leg");
+              this.animatedParts[10] = this.chassis.findPartByName(0, "Slave Chassis");
             }
             if (this.chassis.componentId == 57) {
               this.animatedParts = new ArticulatedPart[6];
-              this.animatedParts[0] = this.chassis.a(0, "Aghilla Chassis");
-              this.animatedParts[1] = this.chassis.a(0, "Torso");
-              this.animatedParts[2] = this.chassis.a(0, "Front0Leg");
-              this.animatedParts[3] = this.chassis.a(0, "Front1Leg");
-              this.animatedParts[4] = this.chassis.a(0, "Back0Leg");
-              this.animatedParts[5] = this.chassis.a(0, "Back1Leg");
+              this.animatedParts[0] = this.chassis.findPartByName(0, "Aghilla Chassis");
+              this.animatedParts[1] = this.chassis.findPartByName(0, "Torso");
+              this.animatedParts[2] = this.chassis.findPartByName(0, "Front0Leg");
+              this.animatedParts[3] = this.chassis.findPartByName(0, "Front1Leg");
+              this.animatedParts[4] = this.chassis.findPartByName(0, "Back0Leg");
+              this.animatedParts[5] = this.chassis.findPartByName(0, "Back1Leg");
             }
             if (62 == this.chassis.componentId) {
               this.animatedParts = new ArticulatedPart[19];
-              this.animatedParts[0] = this.chassis.a(0, "F0");
-              this.animatedParts[1] = this.chassis.a(0, "F1");
-              this.animatedParts[2] = this.chassis.a(0, "F2");
-              this.animatedParts[3] = this.chassis.a(0, "F3");
-              this.animatedParts[4] = this.chassis.a(0, "F4");
-              this.animatedParts[5] = this.chassis.a(0, "B0");
-              this.animatedParts[6] = this.chassis.a(0, "B1");
-              this.animatedParts[7] = this.chassis.a(0, "B2");
-              this.animatedParts[8] = this.chassis.a(0, "B3");
-              this.animatedParts[9] = this.chassis.a(0, "B4");
-              this.animatedParts[10] = this.chassis.a(0, "2F1");
-              this.animatedParts[11] = this.chassis.a(0, "2F2");
-              this.animatedParts[12] = this.chassis.a(0, "2F3");
-              this.animatedParts[13] = this.chassis.a(0, "2F4");
-              this.animatedParts[14] = this.chassis.a(0, "2B1");
-              this.animatedParts[15] = this.chassis.a(0, "2B2");
-              this.animatedParts[16] = this.chassis.a(0, "2B3");
-              this.animatedParts[17] = this.chassis.a(0, "2B4");
-              this.animatedParts[18] = this.chassis.a(0, "Turtle Chassis");
+              this.animatedParts[0] = this.chassis.findPartByName(0, "F0");
+              this.animatedParts[1] = this.chassis.findPartByName(0, "F1");
+              this.animatedParts[2] = this.chassis.findPartByName(0, "F2");
+              this.animatedParts[3] = this.chassis.findPartByName(0, "F3");
+              this.animatedParts[4] = this.chassis.findPartByName(0, "F4");
+              this.animatedParts[5] = this.chassis.findPartByName(0, "B0");
+              this.animatedParts[6] = this.chassis.findPartByName(0, "B1");
+              this.animatedParts[7] = this.chassis.findPartByName(0, "B2");
+              this.animatedParts[8] = this.chassis.findPartByName(0, "B3");
+              this.animatedParts[9] = this.chassis.findPartByName(0, "B4");
+              this.animatedParts[10] = this.chassis.findPartByName(0, "2F1");
+              this.animatedParts[11] = this.chassis.findPartByName(0, "2F2");
+              this.animatedParts[12] = this.chassis.findPartByName(0, "2F3");
+              this.animatedParts[13] = this.chassis.findPartByName(0, "2F4");
+              this.animatedParts[14] = this.chassis.findPartByName(0, "2B1");
+              this.animatedParts[15] = this.chassis.findPartByName(0, "2B2");
+              this.animatedParts[16] = this.chassis.findPartByName(0, "2B3");
+              this.animatedParts[17] = this.chassis.findPartByName(0, "2B4");
+              this.animatedParts[18] = this.chassis.findPartByName(0, "Turtle Chassis");
             }
             if (72 == this.chassis.componentId) {
               this.animatedParts = new ArticulatedPart[11];
-              this.animatedParts[0] = this.chassis.a(0, "SA");
-              this.animatedParts[1] = this.chassis.a(0, "LA");
-              this.animatedParts[2] = this.chassis.a(0, "BA");
-              this.animatedParts[3] = this.chassis.a(0, "SC");
-              this.animatedParts[4] = this.chassis.a(0, "PC");
-              this.animatedParts[5] = this.chassis.a(0, "LC");
-              this.animatedParts[6] = this.chassis.a(0, "BC");
-              this.animatedParts[7] = this.chassis.a(0, "SD");
-              this.animatedParts[8] = this.chassis.a(0, "LD");
-              this.animatedParts[9] = this.chassis.a(0, "BD");
-              this.animatedParts[10] = this.chassis.a(0, "Scorpion Chassis");
+              this.animatedParts[0] = this.chassis.findPartByName(0, "SA");
+              this.animatedParts[1] = this.chassis.findPartByName(0, "LA");
+              this.animatedParts[2] = this.chassis.findPartByName(0, "BA");
+              this.animatedParts[3] = this.chassis.findPartByName(0, "SC");
+              this.animatedParts[4] = this.chassis.findPartByName(0, "PC");
+              this.animatedParts[5] = this.chassis.findPartByName(0, "LC");
+              this.animatedParts[6] = this.chassis.findPartByName(0, "BC");
+              this.animatedParts[7] = this.chassis.findPartByName(0, "SD");
+              this.animatedParts[8] = this.chassis.findPartByName(0, "LD");
+              this.animatedParts[9] = this.chassis.findPartByName(0, "BD");
+              this.animatedParts[10] = this.chassis.findPartByName(0, "Scorpion Chassis");
             }
             if (this.chassis.componentId == 69) {
               this.animatedParts = new ArticulatedPart[14];
-              this.animatedParts[0] = this.chassis.a(0, "Hurricane Chassis");
-              this.animatedParts[1] = this.chassis.a(0, "F0");
-              this.animatedParts[2] = this.chassis.a(0, "F1");
-              this.animatedParts[3] = this.chassis.a(0, "F2");
-              this.animatedParts[4] = this.chassis.a(0, "MB0");
-              this.animatedParts[5] = this.chassis.a(0, "MB1");
-              this.animatedParts[6] = this.chassis.a(0, "MB2");
-              this.animatedParts[7] = this.chassis.a(0, "MF0");
-              this.animatedParts[8] = this.chassis.a(0, "MF1");
-              this.animatedParts[9] = this.chassis.a(0, "MF2");
-              this.animatedParts[10] = this.chassis.a(0, "B0");
-              this.animatedParts[11] = this.chassis.a(0, "B1");
-              this.animatedParts[12] = this.chassis.a(0, "B2");
-              this.animatedParts[13] = this.chassis.a(0, "TopChassis");
+              this.animatedParts[0] = this.chassis.findPartByName(0, "Hurricane Chassis");
+              this.animatedParts[1] = this.chassis.findPartByName(0, "F0");
+              this.animatedParts[2] = this.chassis.findPartByName(0, "F1");
+              this.animatedParts[3] = this.chassis.findPartByName(0, "F2");
+              this.animatedParts[4] = this.chassis.findPartByName(0, "MB0");
+              this.animatedParts[5] = this.chassis.findPartByName(0, "MB1");
+              this.animatedParts[6] = this.chassis.findPartByName(0, "MB2");
+              this.animatedParts[7] = this.chassis.findPartByName(0, "MF0");
+              this.animatedParts[8] = this.chassis.findPartByName(0, "MF1");
+              this.animatedParts[9] = this.chassis.findPartByName(0, "MF2");
+              this.animatedParts[10] = this.chassis.findPartByName(0, "B0");
+              this.animatedParts[11] = this.chassis.findPartByName(0, "B1");
+              this.animatedParts[12] = this.chassis.findPartByName(0, "B2");
+              this.animatedParts[13] = this.chassis.findPartByName(0, "TopChassis");
             }
             if (this.chassis.componentId == 65) {
               this.animatedParts = new ArticulatedPart[7];
-              this.animatedParts[0] = this.chassis.a(0, "Front0Leg");
-              this.animatedParts[1] = this.chassis.a(0, "Front1Leg");
-              this.animatedParts[2] = this.chassis.a(0, "FrontFoot");
-              this.animatedParts[3] = this.chassis.a(0, "Back0Leg");
-              this.animatedParts[4] = this.chassis.a(0, "Back1Leg");
-              this.animatedParts[5] = this.chassis.a(0, "BackFoot");
-              this.animatedParts[6] = this.chassis.a(0, "Commando Chassis");
+              this.animatedParts[0] = this.chassis.findPartByName(0, "Front0Leg");
+              this.animatedParts[1] = this.chassis.findPartByName(0, "Front1Leg");
+              this.animatedParts[2] = this.chassis.findPartByName(0, "FrontFoot");
+              this.animatedParts[3] = this.chassis.findPartByName(0, "Back0Leg");
+              this.animatedParts[4] = this.chassis.findPartByName(0, "Back1Leg");
+              this.animatedParts[5] = this.chassis.findPartByName(0, "BackFoot");
+              this.animatedParts[6] = this.chassis.findPartByName(0, "Commando Chassis");
             }
             if (this.chassis.componentId == 88) {
               this.animatedParts = new ArticulatedPart[12];
-              this.animatedParts[0] = this.chassis.a(0, "Front0Leg");
-              this.animatedParts[1] = this.chassis.a(0, "Front1Leg");
-              this.animatedParts[2] = this.chassis.a(0, "Front2Leg");
-              this.animatedParts[3] = this.chassis.a(0, "Front3Leg");
-              this.animatedParts[4] = this.chassis.a(0, "Front4Leg");
-              this.animatedParts[5] = this.chassis.a(0, "Back0Leg");
-              this.animatedParts[6] = this.chassis.a(0, "Back1Leg");
-              this.animatedParts[7] = this.chassis.a(0, "Back2Leg");
-              this.animatedParts[8] = this.chassis.a(0, "Back3Leg");
-              this.animatedParts[9] = this.chassis.a(0, "Back4Leg");
-              this.animatedParts[10] = this.chassis.a(0, "Valhalla Chassis");
-              this.animatedParts[11] = this.chassis.a(0, "TopChassis");
+              this.animatedParts[0] = this.chassis.findPartByName(0, "Front0Leg");
+              this.animatedParts[1] = this.chassis.findPartByName(0, "Front1Leg");
+              this.animatedParts[2] = this.chassis.findPartByName(0, "Front2Leg");
+              this.animatedParts[3] = this.chassis.findPartByName(0, "Front3Leg");
+              this.animatedParts[4] = this.chassis.findPartByName(0, "Front4Leg");
+              this.animatedParts[5] = this.chassis.findPartByName(0, "Back0Leg");
+              this.animatedParts[6] = this.chassis.findPartByName(0, "Back1Leg");
+              this.animatedParts[7] = this.chassis.findPartByName(0, "Back2Leg");
+              this.animatedParts[8] = this.chassis.findPartByName(0, "Back3Leg");
+              this.animatedParts[9] = this.chassis.findPartByName(0, "Back4Leg");
+              this.animatedParts[10] = this.chassis.findPartByName(0, "Valhalla Chassis");
+              this.animatedParts[11] = this.chassis.findPartByName(0, "TopChassis");
             }
             if (this.chassis.componentId == 75) {
               this.animatedParts = new ArticulatedPart[11];
-              this.animatedParts[1] = this.chassis.a(0, "C1");
-              this.animatedParts[2] = this.chassis.a(0, "C2");
-              this.animatedParts[3] = this.chassis.a(0, "C3");
-              this.animatedParts[4] = this.chassis.a(0, "C4");
-              this.animatedParts[5] = this.chassis.a(0, "C5");
-              this.animatedParts[6] = this.chassis.a(0, "C6");
-              this.animatedParts[7] = this.chassis.a(0, "C7");
-              this.animatedParts[8] = this.chassis.a(0, "C8");
-              this.animatedParts[9] = this.chassis.a(0, "C9");
-              this.animatedParts[10] = this.chassis.a(0, "C10");
-              this.animatedParts[0] = this.chassis.a(0, "Crusher Chassis");
+              this.animatedParts[1] = this.chassis.findPartByName(0, "C1");
+              this.animatedParts[2] = this.chassis.findPartByName(0, "C2");
+              this.animatedParts[3] = this.chassis.findPartByName(0, "C3");
+              this.animatedParts[4] = this.chassis.findPartByName(0, "C4");
+              this.animatedParts[5] = this.chassis.findPartByName(0, "C5");
+              this.animatedParts[6] = this.chassis.findPartByName(0, "C6");
+              this.animatedParts[7] = this.chassis.findPartByName(0, "C7");
+              this.animatedParts[8] = this.chassis.findPartByName(0, "C8");
+              this.animatedParts[9] = this.chassis.findPartByName(0, "C9");
+              this.animatedParts[10] = this.chassis.findPartByName(0, "C10");
+              this.animatedParts[0] = this.chassis.findPartByName(0, "Crusher Chassis");
             }
             if (this.chassis.componentId == 79) {
               this.animatedParts = new ArticulatedPart[2];
-              this.animatedParts[0] = this.chassis.a(0, "A");
-              this.animatedParts[1] = this.chassis.a(0, "Bertha Chassis");
+              this.animatedParts[0] = this.chassis.findPartByName(0, "A");
+              this.animatedParts[1] = this.chassis.findPartByName(0, "Bertha Chassis");
             }
             if (this.chassis.componentId == 84) {
               this.animatedParts = new ArticulatedPart[6];
-              this.animatedParts[0] = this.chassis.a(0, "A");
-              this.animatedParts[1] = this.chassis.a(0, "B");
-              this.animatedParts[2] = this.chassis.a(0, "C");
-              this.animatedParts[3] = this.chassis.a(0, "D");
-              this.animatedParts[4] = this.chassis.a(0, "E");
-              this.animatedParts[5] = this.chassis.a(0, "F");
+              this.animatedParts[0] = this.chassis.findPartByName(0, "A");
+              this.animatedParts[1] = this.chassis.findPartByName(0, "B");
+              this.animatedParts[2] = this.chassis.findPartByName(0, "C");
+              this.animatedParts[3] = this.chassis.findPartByName(0, "D");
+              this.animatedParts[4] = this.chassis.findPartByName(0, "E");
+              this.animatedParts[5] = this.chassis.findPartByName(0, "F");
             }
             if (this.chassis.componentId == 92) {
               this.animatedParts = new ArticulatedPart[13];
-              this.animatedParts[1] = this.chassis.a(0, "B1");
-              this.animatedParts[2] = this.chassis.a(0, "B2");
-              this.animatedParts[3] = this.chassis.a(0, "B3");
-              this.animatedParts[4] = this.chassis.a(0, "B4");
-              this.animatedParts[5] = this.chassis.a(0, "B5");
-              this.animatedParts[6] = this.chassis.a(0, "B6");
-              this.animatedParts[7] = this.chassis.a(0, "B7");
-              this.animatedParts[8] = this.chassis.a(0, "B8");
-              this.animatedParts[9] = this.chassis.a(0, "B9");
-              this.animatedParts[10] = this.chassis.a(0, "B10");
-              this.animatedParts[11] = this.chassis.a(0, "B11");
-              this.animatedParts[12] = this.chassis.a(0, "B12");
-              this.animatedParts[0] = this.chassis.a(0, "Babel Chassis");
+              this.animatedParts[1] = this.chassis.findPartByName(0, "B1");
+              this.animatedParts[2] = this.chassis.findPartByName(0, "B2");
+              this.animatedParts[3] = this.chassis.findPartByName(0, "B3");
+              this.animatedParts[4] = this.chassis.findPartByName(0, "B4");
+              this.animatedParts[5] = this.chassis.findPartByName(0, "B5");
+              this.animatedParts[6] = this.chassis.findPartByName(0, "B6");
+              this.animatedParts[7] = this.chassis.findPartByName(0, "B7");
+              this.animatedParts[8] = this.chassis.findPartByName(0, "B8");
+              this.animatedParts[9] = this.chassis.findPartByName(0, "B9");
+              this.animatedParts[10] = this.chassis.findPartByName(0, "B10");
+              this.animatedParts[11] = this.chassis.findPartByName(0, "B11");
+              this.animatedParts[12] = this.chassis.findPartByName(0, "B12");
+              this.animatedParts[0] = this.chassis.findPartByName(0, "Babel Chassis");
             }
           }
           this.refillCharge(5);
@@ -2114,7 +2114,7 @@ final class Sentinel extends IntrusiveNode {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean isRecoveryTimerIdle(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -120) {
           return true;
@@ -2123,7 +2123,7 @@ final class Sentinel extends IntrusiveNode {
         return stackIn_6_0;
     }
 
-    private final boolean a(SentinelCommand param0, int param1, ArticulatedPart param2) {
+    private final boolean fireWeaponPart(SentinelCommand param0, int param1, ArticulatedPart param2) {
         int var25 = 0;
         int stackIn_205_0;
         int stackIn_205_1;
@@ -2177,9 +2177,9 @@ final class Sentinel extends IntrusiveNode {
         int var22Lifetime2;
         var27 = SteelSentinels.obfuscationControl;
         try {
-          if (di.field_g == 1 &&
+          if (OptionMaskHelpers.field_g == 1 &&
             IconTextComponent.field_Yb == 11) {
-            tj.field_c = tj.field_c + 1;
+            HighscoreSubmissionFactory.field_c = HighscoreSubmissionFactory.field_c + 1;
           }
           var4_int = 1;
           var5 = 2;
@@ -2462,7 +2462,7 @@ final class Sentinel extends IntrusiveNode {
             } else {
               if (param2.componentId == 31 ||
                 param2.componentId == 45) {
-                var13 = cl.a(param0.aimAngle, 12);
+                var13 = LoginResultHelpers.alwaysOne(param0.aimAngle, 12);
               }
             }
             var16 = 5000;
@@ -2533,7 +2533,7 @@ final class Sentinel extends IntrusiveNode {
           if (!this.world.field_h) {
             var21_intLifetime1 = var18 * var13 / var20;
             var22Lifetime1 = var13 * var19 / var20;
-            var23 = this.velocityX + 3 * (this.field_U * ModalStack.field_G[o.a((byte) 84, this.chassis.componentId)][25][0]);
+            var23 = this.velocityX + 3 * (this.field_U * ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.chassis.componentId)][25][0]);
             if (var5 == 0) {
               var24 = ArticulatedPart.createParticle(3, var22Lifetime1 + var21_intLifetime1 + var23, this.world, 114, var8Lifetime1, this.field_u, 50, this.velocityY + (var22Lifetime1 - var21_intLifetime1), var7Lifetime2, var7Lifetime2);
               this.world.particles.addLast(3, var24);
@@ -2696,11 +2696,11 @@ final class Sentinel extends IntrusiveNode {
         }
     }
 
-    final boolean i(int param0) {
+    final boolean isWeaponReady(int param0) {
         boolean discarded$1 = false;
         boolean stackIn_6_0 = false;
         if (param0 < 62) {
-          discarded$1 = this.a(26, -22, -11, -26, false, 13, 87);
+          discarded$1 = this.drawOrHitTestInWorld(26, -22, -11, -26, false, 13, 87);
         }
         stackIn_6_0 = (this.field_F >= 250) && (this.field_S == 0);
         return stackIn_6_0;
@@ -2724,7 +2724,7 @@ final class Sentinel extends IntrusiveNode {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void applyTerrainContact(int param0, int param1) {
         int stackIn_10_0 = 0;
         boolean stackIn_34_1 = false;
         int stackIn_84_1 = 0;
@@ -2842,7 +2842,7 @@ final class Sentinel extends IntrusiveNode {
                 stackIn_95_0 = this;
                 stackIn_95_1 = this.worldX;
                 stackIn_95_2 = this.field_E;
-                stackIn_95_3 = ModalStack.field_G[o.a((byte) 84, this.chassis.componentId)][25];
+                stackIn_95_3 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.chassis.componentId)][25];
                 if (0 != this.field_Pb) {
                   stackIn_96_0 = this;
                   stackIn_96_4 = 5;
@@ -2883,7 +2883,7 @@ final class Sentinel extends IntrusiveNode {
           this.field_u = stackIn_114_1;
           if (var8 == 0) {
             this.velocityY = this.velocityY + this.world.gravityAcceleration;
-            this.velocityX = this.field_E * ModalStack.field_G[o.a((byte) 84, this.chassis.componentId)][25][0];
+            this.velocityX = this.field_E * ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.chassis.componentId)][25][0];
           } else {
             this.velocityY = 0;
           }
@@ -2943,7 +2943,7 @@ final class Sentinel extends IntrusiveNode {
               } else {
                 var11 = var11 + (this.field_Db << 4);
                 if (this.worldY < var11 &&
-                  this.world.b(this.worldX, param0 ^ -5)) {
+                  this.world.isOutsideBaseZone(this.worldX, param0 ^ -5)) {
                   if (this.world.terrain.getSecondaryHeightAt(false, param1 >> 4) != this.world.terrain.getSurfaceProfileAt((byte) 124, param1 >> 4)) {
                     if (this.velocityY < 0) {
                       this.velocityY = -this.velocityY / 2;
@@ -3016,13 +3016,13 @@ final class Sentinel extends IntrusiveNode {
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void pollWeaponReady(int param0, boolean param1) {
         if (!param1) {
-          this.i(2);
+          this.isWeaponReady(2);
         }
     }
 
-    final void j(int param0) {
+    final void chooseSpawnX(int param0) {
         int stackIn_5_0 = 0;
         int var2;
         int var3;
@@ -3069,14 +3069,14 @@ final class Sentinel extends IntrusiveNode {
             }
           } else {
             if (this.world.terrain.getTerrainType(121) == 1 &&
-              di.field_g == -1) {
+              OptionMaskHelpers.field_g == -1) {
               var4Lifetime1 = var4Lifetime1 * 2 / 3;
               if (0 < this.teamId) {
                 var4Lifetime1 = var4Lifetime1 + (var5 >> 2) / 3;
               }
             }
           }
-          var9 = (Sentinel) (var6.b(2));
+          var9 = (Sentinel) (var6.first(2));
           while (var9 != null) {
             var10 = (Math.abs(-var4Lifetime1 + (var9.worldX >> 6)) >> 2) + 1;
             var3 = var3 + 1000 / var10;
@@ -3090,13 +3090,13 @@ final class Sentinel extends IntrusiveNode {
         }
         this.worldX = var7;
         if (this.field_Nb == 0 &&
-          -1 != di.field_g &&
-          4 != di.field_g) {
-          if (di.field_g == 10 &&
+          -1 != OptionMaskHelpers.field_g &&
+          4 != OptionMaskHelpers.field_g) {
+          if (OptionMaskHelpers.field_g == 10 &&
             DirectByteStorage.field_j != 0) {
             return;
           }
-          var8Lifetime1 = vc.a((byte) 32);
+          var8Lifetime1 = DisplayMode.getModeStartWorldX((byte) 32);
           if (var8Lifetime1 >= 0) {
             this.worldX = var8Lifetime1;
           }
@@ -3115,7 +3115,7 @@ final class Sentinel extends IntrusiveNode {
         field_D = null;
     }
 
-    final void b(int param0, int param1) {
+    final void awardDamageScore(int param0, int param1) {
         int var3;
         NodeIterator var4;
         int var5;
@@ -3141,7 +3141,7 @@ final class Sentinel extends IntrusiveNode {
           if (var3 > 0) {
             var5 = 0;
             var6 = 1;
-            var7_ref_mb = (Sentinel) (var4.b(2));
+            var7_ref_mb = (Sentinel) (var4.first(2));
             while (var7_ref_mb != null) {
               if (var7_ref_mb != this) {
                 if (this.teamId != var7_ref_mb.teamId) {
@@ -3165,7 +3165,7 @@ final class Sentinel extends IntrusiveNode {
               }
               var7 = var7 + var3 * var5 / (2 * var6);
             }
-            var8 = (Sentinel) (var4.b(param1 ^ 26509));
+            var8 = (Sentinel) (var4.first(param1 ^ 26509));
             while (var8 != null) {
               if (this != var8 &&
                 var8.teamId == this.teamId &&
@@ -3189,11 +3189,11 @@ final class Sentinel extends IntrusiveNode {
           }
         }
         if (param1 != 26511) {
-          this.f(30, -10);
+          this.interpolateAnimationPose(30, -10);
         }
     }
 
-    final void g(int param0, int param1) {
+    final void advanceAnimation(int param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -3214,17 +3214,17 @@ final class Sentinel extends IntrusiveNode {
           this.field_fc = this.worldY;
           return;
         }
-        var3 = ModalStack.field_G[o.a((byte) 84, param1)][25][1];
-        var4 = ModalStack.field_G[o.a((byte) 84, param1)][25][3];
+        var3 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, param1)][25][1];
+        var4 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, param1)][25][3];
         if (this.field_Pb > 0) {
-          var3 = ModalStack.field_G[o.a((byte) 84, param1)][25][6];
-          var4 = ModalStack.field_G[o.a((byte) 84, param1)][25][7];
+          var3 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, param1)][25][6];
+          var4 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, param1)][25][7];
         }
         if (param0 != -18) {
           this.field_Q = 125;
         }
-        var5 = ModalStack.field_G[o.a((byte) 84, param1)][25][4];
-        var6 = ModalStack.field_G[o.a((byte) 84, param1)][25][2];
+        var5 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, param1)][25][4];
+        var6 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, param1)][25][2];
         if (0 < this.field_oc &&
           var6 > this.field_oc) {
           this.field_mb = this.field_oc * 50 * var5 / var6 % 50;
@@ -3294,7 +3294,7 @@ final class Sentinel extends IntrusiveNode {
               }
             }
             if (!this.world.field_h) {
-              this.a(param1, true);
+              this.pollWeaponReady(param1, true);
             }
           }
         } else {
@@ -3340,7 +3340,7 @@ final class Sentinel extends IntrusiveNode {
         return;
     }
 
-    private final void e(byte param0) {
+    private final void regenerateCharge(byte param0) {
         int stackIn_39_0 = 0;
         int stackIn_39_1 = 0;
         int var2;
@@ -3438,7 +3438,7 @@ final class Sentinel extends IntrusiveNode {
 
     }
 
-    private final void a(byte param0, SentinelCommand param1) {
+    private final void performChassisAttack(byte param0, SentinelCommand param1) {
         int var6_int = 0;
         RuntimeException stackIn_82_0 = null;
         StringBuilder stackIn_82_1 = null;
@@ -3586,18 +3586,18 @@ final class Sentinel extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawInWorld(int param0, int param1, byte param2, int param3) {
         if (param2 != -116) {
           return;
         }
-        boolean discarded$0 = this.a(0, param1, param0, 0, false, param3, -92);
+        boolean discarded$0 = this.drawOrHitTestInWorld(0, param1, param0, 0, false, param3, -92);
     }
 
-    final boolean a(byte param0, int param1, int param2, int param3, int param4) {
+    final boolean hitTestAtPointer(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 != -22) {
           this.field_Rb = 58;
         }
-        return this.a(param2, param1, param4, param3, true, 256, -125);
+        return this.drawOrHitTestInWorld(param2, param1, param4, param3, true, 256, -125);
     }
 
     final void restoreArmour(int obfuscationGuard) {
@@ -3606,17 +3606,17 @@ final class Sentinel extends IntrusiveNode {
           this.world.field_q = this.world.field_q + 128 * this.maximumArmour;
         }
         if (obfuscationGuard != -20039) {
-          this.j(-92);
+          this.chooseSpawnX(-92);
         }
         this.armour = this.maximumArmour;
     }
 
-    final void d(int param0) {
+    final void applyTeamColours(int param0) {
         int var2 = 0;
         if (this.teamId >= 0 &&
           this.teamId < 12) {
-          var2 = fj.field_a[this.teamId];
-          this.chassis.b(var2, -9);
+          var2 = PasswordRuleHelpers.field_a[this.teamId];
+          this.chassis.updateAttachedParts(var2, -9);
         }
         if (param0 != -28033) {
           this.field_fc = 81;
@@ -3819,7 +3819,7 @@ final class Sentinel extends IntrusiveNode {
           }
           if (!obfuscationGuard) {
             var4 = (SentinelCommand) null;
-            this.a((SentinelCommand) null, (byte) -26);
+            this.performJump((SentinelCommand) null, (byte) -26);
           }
           if (29 == statisticId) {
             if (2 != this.world.terrain.getTerrainType(107)) {
@@ -3845,7 +3845,7 @@ final class Sentinel extends IntrusiveNode {
         return this.field_tc;
     }
 
-    final int[] f(int param0, int param1) {
+    final int[] interpolateAnimationPose(int param0, int param1) {
         boolean discarded$0 = false;
         int var6 = 0;
         int[] var3;
@@ -3855,10 +3855,10 @@ final class Sentinel extends IntrusiveNode {
         var7 = SteelSentinels.obfuscationControl;
         var3 = new int[]{0, 0};
         if (param1 != 22742) {
-          discarded$0 = this.a(-81, -111, true, -69, (byte) -49, true, 14, 52);
+          discarded$0 = this.drawOrHitTestSentinel(-81, -111, true, -69, (byte) -49, true, 14, 52);
         }
         var4 = 50;
-        var5 = ModalStack.field_G[o.a((byte) 84, param0)];
+        var5 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, param0)];
         if (this.animatedParts != null &&
           var5[this.field_J] != null &&
           null != var5[this.field_r] &&
@@ -3884,7 +3884,7 @@ final class Sentinel extends IntrusiveNode {
         this.charge = this.maximumCharge;
     }
 
-    private final void a(boolean param0) {
+    private final void interceptIncomingProjectile(boolean param0) {
         int stackIn_37_0 = 0;
         int var2;
         Object var3;
@@ -3946,7 +3946,7 @@ final class Sentinel extends IntrusiveNode {
           var4 = (Projectile) (this.world.field_db.next((byte) -23));
         }
         if (var3 != null) {
-          this.chassis.b((byte) -128, 0, this.field_E, 0);
+          this.chassis.updateWorldPositions((byte) -128, 0, this.field_E, 0);
           var4_array = new ArticulatedPart[]{};
           var5 = null;
           var8 = -this.worldX + ((Projectile) (var3)).worldX;
@@ -3957,8 +3957,8 @@ final class Sentinel extends IntrusiveNode {
           var21.targetWorldX = ((Projectile) (var3)).worldX;
           var6 = Math.atan2((double)var8, (double)(-var9));
           var21.aimAngle = (int)(65536.0 * var6 / 6.283185307179586);
-          this.chassis.a(this.field_E * var21.aimAngle, -96, 1);
-          var20 = this.chassis.a(0, this, new ArticulatedPart[]{}, var21.aimAngle * this.field_E, 1);
+          this.chassis.updateAimRange(this.field_E * var21.aimAngle, -96, 1);
+          var20 = this.chassis.collectWeaponsCoveringAngle(0, this, new ArticulatedPart[]{}, var21.aimAngle * this.field_E, 1);
           var4_arrayLifetime1 = var20;
           if (var20.length == 0) {
             var22 = new SentinelCommand(0, 0, 1 + this.world.simulationTick);
@@ -3968,8 +3968,8 @@ final class Sentinel extends IntrusiveNode {
             var22.targetWorldX = ((Projectile) (var3)).worldX;
             var6Lifetime1 = Math.atan2((double)var8, (double)(-var9));
             var22.aimAngle = (int)(65536.0 * var6Lifetime1 / 6.283185307179586);
-            this.chassis.a(var22.aimAngle * this.field_E, -86, 0);
-            var4_arrayLifetime1 = this.chassis.a(0, this, new ArticulatedPart[]{}, this.field_E * var22.aimAngle, 0);
+            this.chassis.updateAimRange(var22.aimAngle * this.field_E, -86, 0);
+            var4_arrayLifetime1 = this.chassis.collectWeaponsCoveringAngle(0, this, new ArticulatedPart[]{}, this.field_E * var22.aimAngle, 0);
           }
           if (var4_arrayLifetime1.length == 0 &&
             1 <= this.charge) {
@@ -3979,10 +3979,10 @@ final class Sentinel extends IntrusiveNode {
             var23.targetWorldY = ((Projectile) (var3)).worldY;
             var6Lifetime2 = Math.atan2((double)var8, (double)(-var9));
             var23.aimAngle = (int)(var6Lifetime2 * 65536.0 / 6.283185307179586);
-            this.chassis.a(var23.aimAngle * this.field_E, -95, 7);
-            var4_arrayLifetime1 = this.chassis.a(0, this, new ArticulatedPart[]{}, var23.aimAngle * this.field_E, 7);
+            this.chassis.updateAimRange(var23.aimAngle * this.field_E, -95, 7);
+            var4_arrayLifetime1 = this.chassis.collectWeaponsCoveringAngle(0, this, new ArticulatedPart[]{}, var23.aimAngle * this.field_E, 7);
           }
-          this.chassis.b((byte) -128, 0, this.field_E, 0);
+          this.chassis.updateWorldPositions((byte) -128, 0, this.field_E, 0);
           var10 = 0;
           for (var11 = 0; var11 < var4_arrayLifetime1.length; var11++) {
             var10 = var10 + var4_arrayLifetime1[var11].field_V;
@@ -3996,7 +3996,7 @@ final class Sentinel extends IntrusiveNode {
             var16 = var12 >> 4;
             var17 = var5_ref.targetWorldX >> 4;
             var18 = var5_ref.targetWorldY >> 4;
-            stackIn_37_0 = (!this.world.a(var18, var14, var13, var16, var15, (byte) 112, var17)) ? 0 : 1;
+            stackIn_37_0 = (!this.world.isLineOfSightBlocked(var18, var14, var13, var16, var15, (byte) 112, var17)) ? 0 : 1;
             var11Lifetime1 = stackIn_37_0;
           }
           if (0 < var4_arrayLifetime1.length) {
@@ -4009,11 +4009,11 @@ final class Sentinel extends IntrusiveNode {
               if (17 != var4_arrayLifetime1[0].componentId) {
                 if (var4_arrayLifetime1[0].componentId == 28) {
                   var25 = new Projectile(((Projectile) (var3)).worldX, ((Projectile) (var3)).worldY, 0, 0, 0, 0, 7, this.world, this, 0, 0, 0);
-                  var25.a(10, 750, 2, -121, 500);
+                  var25.explode(10, 750, 2, -121, 500);
                 }
               } else {
                 var24 = new Projectile(((Projectile) (var3)).worldX, ((Projectile) (var3)).worldY, 0, 0, 0, 0, 7, this.world, this, 0, 0, 0);
-                var24.a(2, 500, 2, -106, 100);
+                var24.explode(2, 500, 2, -106, 100);
               }
               ((Projectile) (var3)).sourceSentinel = this;
             }
@@ -4039,7 +4039,7 @@ final class Sentinel extends IntrusiveNode {
         return;
     }
 
-    final void a(int param0, boolean param1, int param2, byte param3) {
+    final void drawActiveModuleIndicator(int param0, boolean param1, int param2, byte param3) {
         int var5;
         int var6;
         int var7;
@@ -4065,11 +4065,11 @@ final class Sentinel extends IntrusiveNode {
           var8 = var8 * (-Math.abs(this.field_F) + 250) / 250;
         }
         SoftwareRaster.fillRectangleBlended(-(var7 / 2) + param2, -var6 + param0, var7, var8, 0, 128);
-        var9 = WeightedLruCache.a(this.activeModuleType, (byte) -102);
+        var9 = WeightedLruCache.getIconSprite(this.activeModuleType, (byte) -102);
         SoftwareRaster.drawRectangleOutlineAlpha(param2 - var7 / 2, param0 - var6, var7, var8, 16711935, 128 + jh.sine16(200 * this.world.simulationTick, param3 ^ 4141) / 513);
         if (param3 != 45) {
           var11 = (int[]) null;
-          this.a(82, -14, (int[]) null, -75);
+          this.applyDesign(82, -14, (int[]) null, -75);
         }
         var10 = null;
         if (var8 < var6) {
@@ -4090,7 +4090,7 @@ final class Sentinel extends IntrusiveNode {
         return;
     }
 
-    final void a(byte param0, Projectile param1) {
+    final void recordHitBy(byte param0, Projectile param1) {
         boolean stackIn_21_1 = false;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
@@ -4178,11 +4178,11 @@ final class Sentinel extends IntrusiveNode {
         }
         this.armour = 0;
         if (obfuscationGuard != 128) {
-          discarded$0 = this.a(87, 110, false, 67, (byte) -33, true, -26, -114);
+          discarded$0 = this.drawOrHitTestSentinel(87, 110, false, 67, (byte) -33, true, -26, -114);
         }
     }
 
-    final boolean a(int param0, int param1, int param2, Sentinel param3, int param4) {
+    final boolean drawStatusOverlay(int param0, int param1, int param2, Sentinel param3, int param4) {
         int stackIn_15_0 = 0;
         int stackIn_63_0 = 0;
         RuntimeException stackIn_85_0 = null;
@@ -4267,7 +4267,7 @@ final class Sentinel extends IntrusiveNode {
           }
           var11Lifetime1 = -(param1 * this.field_Db >> 12) + (var10 - 4);
           var12Lifetime1 = 0;
-          var13 = di.field_g;
+          var13 = OptionMaskHelpers.field_g;
           if (0 != var13 &&
             1 != var13 &&
             var13 != 3 &&
@@ -4284,7 +4284,7 @@ final class Sentinel extends IntrusiveNode {
           if (this != param3) {
             if (this.playerId >= 0 &&
               this.world.playerNames.length > this.playerId) {
-              var20 = this.world.d(-1661904765, this.playerId);
+              var20 = this.world.getPlayerName(-1661904765, this.playerId);
               var14Lifetime1 = this.getTeamColour((byte) 104);
               if (var14Lifetime1 == PartInstruction.field_t[0]) {
                 var14Lifetime1 = 12583104;
@@ -4294,7 +4294,7 @@ final class Sentinel extends IntrusiveNode {
               BoundedUrlRequest.field_d.drawCenteredAlpha(var20, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
             } else {
               if (this.field_Nb == 11) {
-                var23 = this.world.d(param2 ^ -1676781437, this.playerId);
+                var23 = this.world.getPlayerName(param2 ^ -1676781437, this.playerId);
                 var14Lifetime1 = this.getTeamColour((byte) -123);
                 BoundedUrlRequest.field_d.drawCenteredAlpha(var23, var9, 1 + var11Lifetime1, 0, -1, var7 * 3);
                 BoundedUrlRequest.field_d.drawCenteredAlpha(var23, 1 + var9, var11Lifetime1, 0, -1, 3 * var7);
@@ -4348,7 +4348,7 @@ final class Sentinel extends IntrusiveNode {
               return false;
             }
             var13 = -(param1 >> 5) + var11Lifetime1;
-            this.a(var13, true, var9, (byte) 45);
+            this.drawActiveModuleIndicator(var13, true, var9, (byte) 45);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4380,7 +4380,7 @@ final class Sentinel extends IntrusiveNode {
         this.charge = amount;
     }
 
-    private final void a(SentinelCommand param0, byte param1) {
+    private final void performJump(SentinelCommand param0, byte param1) {
         int stackIn_15_0 = 0;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
@@ -4392,9 +4392,9 @@ final class Sentinel extends IntrusiveNode {
         int var5 = 0;
         int var6 = 0;
         try {
-          if (di.field_g == 0 &&
+          if (OptionMaskHelpers.field_g == 0 &&
             IconTextComponent.field_Yb == 6) {
-            tj.field_c = 1;
+            HighscoreSubmissionFactory.field_c = 1;
           }
           var3_int = -this.worldX + param0.targetWorldX >> 4;
           var4 = param0.targetWorldY - this.worldY >> 4;
@@ -4465,14 +4465,14 @@ final class Sentinel extends IntrusiveNode {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawAtScreen(int param0, int param1, int param2, int param3) {
         if (param3 > -15) {
           this.field_yb = -7;
         }
-        boolean discarded$0 = this.a(param0, param1, false, 0, (byte) -81, true, 0, param2);
+        boolean discarded$0 = this.drawOrHitTestSentinel(param0, param1, false, 0, (byte) -81, true, 0, param2);
     }
 
-    final void a(int param0, int param1, int[] param2, int param3) {
+    final void applyDesign(int param0, int param1, int[] param2, int param3) {
         try {
           if (param1 != 3) {
             this.field_qb = (PlayingSound) null;
@@ -4499,7 +4499,7 @@ final class Sentinel extends IntrusiveNode {
           }
         }
         if (obfuscationGuard != -27) {
-          this.j(53);
+          this.chooseSpawnX(53);
         }
         for (var3 = 0; var3 < this.moduleCount; var3++) {
           if (this.moduleTypes[var3] == moduleType) {
@@ -4518,8 +4518,8 @@ final class Sentinel extends IntrusiveNode {
     final int getTeamColour(byte obfuscationGuard) {
         int var2 = 118 % ((obfuscationGuard + 48) / 44);
         if (this.teamId >= 0 &&
-          !(fj.field_h.length <= this.teamId)) {
-          return fj.field_h[this.teamId];
+          !(PasswordRuleHelpers.field_h.length <= this.teamId)) {
+          return PasswordRuleHelpers.field_h[this.teamId];
         }
         if (this.teamId == 12) {
           return 16776960;
@@ -4527,7 +4527,7 @@ final class Sentinel extends IntrusiveNode {
         return 16777215;
     }
 
-    private final boolean a(int param0, int param1, boolean param2, int param3, byte param4, boolean param5, int param6, int param7) {
+    private final boolean drawOrHitTestSentinel(int param0, int param1, boolean param2, int param3, byte param4, boolean param5, int param6, int param7) {
         int stackIn_12_0 = 0;
         int stackIn_13_1 = 0;
         int stackIn_16_0 = 0;
@@ -4594,8 +4594,8 @@ final class Sentinel extends IntrusiveNode {
           this.chassis != null &&
           this.chassis.componentId == 108) {
           var11 = (this.playerId + this.world.simulationTick & 14) >> 1;
-          this.chassis.field_U = ja.field_d[var11];
-          this.chassis.field_H = ja.field_d[var11];
+          this.chassis.field_U = IconLookupHelpers.field_d[var11];
+          this.chassis.field_H = IconLookupHelpers.field_d[var11];
         }
         if (109 == this.chassis.componentId) {
           var11Lifetime1 = this.field_r;
@@ -4630,8 +4630,8 @@ final class Sentinel extends IntrusiveNode {
           if (this.teamId >= 0 &&
             12 > this.teamId) {
             for (var15 = 0; var15 < 64; var15++) {
-              var16 = 16711935 & fj.field_a[this.teamId];
-              var17 = 255 & fj.field_a[this.teamId] >> 8;
+              var16 = 16711935 & PasswordRuleHelpers.field_a[this.teamId];
+              var17 = 255 & PasswordRuleHelpers.field_a[this.teamId] >> 8;
               var18 = 255 * var15 / 64;
               MenuInputState.field_h[var15 + 1] = ClientUiHelpers.bitAnd(16711935, var16 * var18 >> 8) + ClientUiHelpers.bitAnd(65280, var18 * var17);
               MenuInputState.field_h[64 + var15] = this.field_ic * (var18 >> 1);
@@ -4639,15 +4639,15 @@ final class Sentinel extends IntrusiveNode {
           } else {
             if (this.teamId == 12) {
               for (var15 = 0; var15 < 64; var15++) {
-                var16 = fj.field_a[0] & 16711935;
-                var17 = fj.field_a[0] >> 8 & 255;
+                var16 = PasswordRuleHelpers.field_a[0] & 16711935;
+                var17 = PasswordRuleHelpers.field_a[0] >> 8 & 255;
                 var18 = 255 * var15 / 64;
                 MenuInputState.field_h[1 + var15] = ClientUiHelpers.bitAnd(16711935, var18 * var16 >> 8) + ClientUiHelpers.bitAnd(var18 * var17, 65280);
                 MenuInputState.field_h[var15 + 64] = 65793 * (var18 >> 1);
               }
             }
           }
-          var13 = this.f(this.chassis.componentId, 22742);
+          var13 = this.interpolateAnimationPose(this.chassis.componentId, 22742);
         }
         this.worldX = this.worldX + var13[0] * this.field_E;
         this.field_fc = this.field_fc + var13[1];
@@ -4674,14 +4674,14 @@ final class Sentinel extends IntrusiveNode {
           } else {
             if (var17Lifetime1 <= 100) {
               if (var17Lifetime1 > 50) {
-                this.chassis.a((byte) 112, var15Lifetime1, var16Lifetime1, this.field_E);
+                this.chassis.drawPartTree((byte) 112, var15Lifetime1, var16Lifetime1, this.field_E);
                 IconTextComponent.drawBubbleDistortion(var17Lifetime1 * 400 - 20000, -var11Lifetime2 + var16Lifetime1 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
               } else {
-                this.chassis.a((byte) 125, var15Lifetime1, var16Lifetime1, this.field_E);
+                this.chassis.drawPartTree((byte) 125, var15Lifetime1, var16Lifetime1, this.field_E);
               }
             } else {
               MusicPatchNode.field_w = MusicPatchNode.field_w * (-var17Lifetime1 + 250) / 150;
-              this.chassis.a((byte) 118, var15Lifetime1, var16Lifetime1 - var11Lifetime2 * (var17Lifetime1 - 100) / 150, this.field_E);
+              this.chassis.drawPartTree((byte) 118, var15Lifetime1, var16Lifetime1 - var11Lifetime2 * (var17Lifetime1 - 100) / 150, this.field_E);
               IconTextComponent.drawBubbleDistortion(19000 * (-var17Lifetime1 + 250) / 150 + 1000, var16Lifetime1 - var11Lifetime2 << 4, 15, var15Lifetime1 << 4, var11Lifetime2 << 4);
             }
           }
@@ -4730,18 +4730,18 @@ final class Sentinel extends IntrusiveNode {
           var25 = -(var23 / 2) + var15Lifetime1;
           var26 = var16Lifetime1 - (int)(((-1.0 + var19_double) / 2.0 + 1.0) * ((double)var24_int / var19_double));
           var27 = 16777215;
-          if (di.field_g == -1 && (this.world.field_P == 3 &&
+          if (OptionMaskHelpers.field_g == -1 && (this.world.field_P == 3 &&
             this.world.playerCount > 1 ||
             (1 == this.world.field_P ||
             this.world.field_P == 2)) && (0 <= this.teamId &&
-            fj.field_h.length > this.teamId)) {
-            var27 = uj.a(fj.field_h[this.teamId], 124);
+            PasswordRuleHelpers.field_h.length > this.teamId)) {
+            var27 = ReflectionCheckHelpers.lightenColour(PasswordRuleHelpers.field_h[this.teamId], 124);
           }
           if (this.world.terrain.getTerrainType(50) != 4) {
             if (var27 == 16777215) {
-              ml.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int);
+              ListRequestHelpers.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int);
             } else {
-              ml.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int, var27);
+              ListRequestHelpers.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int, var27);
             }
           } else {
             var28 = SoftwareRaster.field_i;
@@ -4756,9 +4756,9 @@ final class Sentinel extends IntrusiveNode {
               var26 = var26 + var24_int * (-225 + this.field_Qb) / 25;
             }
             if (var27 != 16777215) {
-              ml.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int, var27);
+              ListRequestHelpers.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int, var27);
             } else {
-              ml.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int);
+              ListRequestHelpers.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int);
             }
             SoftwareRaster.setClip(var28, var30, var29, var31);
           }
@@ -4791,11 +4791,11 @@ final class Sentinel extends IntrusiveNode {
           if (this.world.field_P != 0) {
             if (0 <= this.teamId &&
               this.teamId < 12 &&
-              fj.field_a[this.teamId] == 65535) {
+              PasswordRuleHelpers.field_a[this.teamId] == 65535) {
               var21 -= 6;
             }
           } else {
-            if (ed.field_j == this.playerId) {
+            if (SessionSeedHelpers.field_j == this.playerId) {
               var21 -= 6;
             }
           }

@@ -9,7 +9,7 @@ final class PcmStreamMixer extends PcmStream {
 
     final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
-        w var5 = null;
+        PcmStreamMixerListener var5 = null;
         int var7 = 0;
         Throwable decompiledCaughtException = null;
         Object var6 = null;
@@ -29,10 +29,10 @@ final class PcmStreamMixer extends PcmStream {
           param2 = param2 - var4;
           this.field_t = this.field_t + var4;
           this.commitElapsed();
-          var5 = (w) (this.field_s.first(13058));
+          var5 = (PcmStreamMixerListener) (this.field_s.first(13058));
           var6 = var5;
           synchronized (var6) {
-            var7 = var5.a(this);
+            var7 = var5.onMixerTick(this);
             if (var7 >= 0) {
               var5.field_o = var7;
               this.insertListener(var5.next, var5);
@@ -53,14 +53,14 @@ final class PcmStreamMixer extends PcmStream {
         return (PcmStream) (this.field_u.first(13058));
     }
 
-    private final void removeListener(w param0) {
+    private final void removeListener(PcmStreamMixerListener param0) {
         param0.unlink(4);
-        param0.a();
+        param0.onRemoved();
         IntrusiveNode var2 = this.field_s.sentinel.next;
         if (var2 == this.field_s.sentinel) {
           this.field_v = -1;
         } else {
-          this.field_v = ((w) (var2)).field_o;
+          this.field_v = ((PcmStreamMixerListener) (var2)).field_o;
         }
     }
 
@@ -68,27 +68,27 @@ final class PcmStreamMixer extends PcmStream {
         return (PcmStream) (this.field_u.next((byte) -25));
     }
 
-    private final void insertListener(IntrusiveNode param0, w param1) {
+    private final void insertListener(IntrusiveNode param0, PcmStreamMixerListener param1) {
         while (true) {
           if (param0 == this.field_s.sentinel) {
             IsaacRandom.insertNodeBefore(param0, 30, param1);
-            this.field_v = ((w) (this.field_s.sentinel.next)).field_o;
+            this.field_v = ((PcmStreamMixerListener) (this.field_s.sentinel.next)).field_o;
             return;
           }
-          if (((w) (param0)).field_o <= param1.field_o) {
+          if (((PcmStreamMixerListener) (param0)).field_o <= param1.field_o) {
             param0 = param0.next;
             continue;
           }
           break;
         }
         IsaacRandom.insertNodeBefore(param0, 30, param1);
-        this.field_v = ((w) (this.field_s.sentinel.next)).field_o;
+        this.field_v = ((PcmStreamMixerListener) (this.field_s.sentinel.next)).field_o;
         return;
     }
 
     final synchronized void skipFrames(int param0) {
         int var2 = 0;
-        w var3 = null;
+        PcmStreamMixerListener var3 = null;
         int var5 = 0;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -107,10 +107,10 @@ final class PcmStreamMixer extends PcmStream {
           param0 = param0 - var2;
           this.field_t = this.field_t + var2;
           this.commitElapsed();
-          var3 = (w) (this.field_s.first(13058));
+          var3 = (PcmStreamMixerListener) (this.field_s.first(13058));
           var4 = var3;
           synchronized (var4) {
-            var5 = var3.a(this);
+            var5 = var3.onMixerTick(this);
             if (var5 >= 0) {
               var3.field_o = var5;
               this.insertListener(var3.next, var3);
@@ -124,12 +124,12 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void commitElapsed() {
-        w var1 = null;
+        PcmStreamMixerListener var1 = null;
         if (this.field_t > 0) {
-          var1 = (w) (this.field_s.first(13058));
+          var1 = (PcmStreamMixerListener) (this.field_s.first(13058));
           while (var1 != null) {
             var1.field_o = var1.field_o - this.field_t;
-            var1 = (w) (this.field_s.next((byte) -75));
+            var1 = (PcmStreamMixerListener) (this.field_s.next((byte) -75));
           }
           this.field_v = this.field_v - this.field_t;
           this.field_t = 0;

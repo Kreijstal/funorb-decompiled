@@ -12,7 +12,7 @@ final class MarkerSlider extends TextButton {
     static String[] field_cb;
     int field_ab;
 
-    final static QuickChatMenu a(SceneWidget param0, SceneWidget param1, SceneWidget param2, int[] param3, int param4) {
+    final static QuickChatMenu createQuickChatMenu(SceneWidget param0, SceneWidget param1, SceneWidget param2, int[] param3, int param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
@@ -97,7 +97,7 @@ final class MarkerSlider extends TextButton {
         }
     }
 
-    final static void f(byte param0) {
+    final static void encodeSavedDesigns(byte param0) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -132,7 +132,7 @@ final class MarkerSlider extends TextButton {
         int var6Lifetime1;
         var8 = SteelSentinels.obfuscationControl;
         try {
-          var1_int = uc.field_b.length + 7;
+          var1_int = DesignerPageTables.field_b.length + 7;
           var17 = LoginHandshakeHelpers.field_c;
           var13 = var17;
           var2 = var13;
@@ -169,7 +169,7 @@ final class MarkerSlider extends TextButton {
           if (ConditionalTextValue.field_h) {
             var5 = (byte)(var5 | 16);
           }
-          if (tj.field_a) {
+          if (HighscoreSubmissionFactory.field_a) {
             var5 = (byte)(var5 | 32);
           }
           incrementValue$0 = var4Lifetime1;
@@ -183,11 +183,11 @@ final class MarkerSlider extends TextButton {
           var10[incrementValue$2] = (byte)NameCheckResult.field_a;
           incrementValue$3 = var4Lifetime1;
           var4Lifetime1++;
-          var10[incrementValue$3] = (byte)uc.field_b.length;
-          for (var6 = 0; var6 < uc.field_b.length; var6++) {
+          var10[incrementValue$3] = (byte)DesignerPageTables.field_b.length;
+          for (var6 = 0; var6 < DesignerPageTables.field_b.length; var6++) {
             incrementValue$7 = var4Lifetime1;
             var4Lifetime1++;
-            var10[incrementValue$7] = (byte)uc.field_b[var6];
+            var10[incrementValue$7] = (byte)DesignerPageTables.field_b[var6];
           }
           for (var6Lifetime1 = 0; var17.length > var6Lifetime1; var6Lifetime1++) {
             if (var17[var6Lifetime1] != null) {
@@ -205,8 +205,8 @@ final class MarkerSlider extends TextButton {
               var3_array[incrementValue$6] = (byte) 0;
             }
           }
-          if (!ni.b(35)) {
-            GzipDecoder.a(6, var18, (byte) -30);
+          if (!ByteArrayPoolHelpers.isAccountCreationMode(35)) {
+            GzipDecoder.queueByteRequest(6, var18, (byte) -30);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -224,7 +224,7 @@ final class MarkerSlider extends TextButton {
           this.field_V.size(false) <= param0) {
           return -1;
         }
-        return this.field_V.c(46, param0);
+        return this.field_V.get(46, param0);
     }
 
     final int markerCount(int param0) {
@@ -273,7 +273,7 @@ final class MarkerSlider extends TextButton {
             var10 = 2147483647;
             var11 = -1;
             for (var12 = 0; this.field_V.size(false) > var12; var12++) {
-              var13 = -var8_int + this.field_V.c(50, var12);
+              var13 = -var8_int + this.field_V.get(50, var12);
               var13 = var13 * var13;
               if (var10 > var13) {
                 var11 = var12;
@@ -281,10 +281,10 @@ final class MarkerSlider extends TextButton {
               }
             }
             if (var11 >= 0) {
-              this.field_V.d(-98, var11);
+              this.field_V.removeAt(-98, var11);
             }
           } else {
-            this.field_V.a(var8_int, (byte) 22);
+            this.field_V.add(var8_int, (byte) 22);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

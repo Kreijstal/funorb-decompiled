@@ -77,7 +77,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (0 <= SentinelAnimationEditor.field_h &&
               var2_int >= 0) {
-              ni.field_b[SentinelAnimationEditor.field_h] = var2_int;
+              ByteArrayPoolHelpers.field_b[SentinelAnimationEditor.field_h] = var2_int;
               SentinelAnimationEditor.field_h = 1 + SentinelAnimationEditor.field_h & 127;
               if (SentinelAnimationEditor.field_h == LoginActionHelpers.field_b) {
                 SentinelAnimationEditor.field_h = -1;
@@ -133,7 +133,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (0 <= SentinelAnimationEditor.field_h &&
               var2_int >= 0) {
-              ni.field_b[SentinelAnimationEditor.field_h] = ~var2_int;
+              ByteArrayPoolHelpers.field_b[SentinelAnimationEditor.field_h] = ~var2_int;
               SentinelAnimationEditor.field_h = 127 & 1 + SentinelAnimationEditor.field_h;
               if (LoginActionHelpers.field_b == SentinelAnimationEditor.field_h) {
                 SentinelAnimationEditor.field_h = -1;

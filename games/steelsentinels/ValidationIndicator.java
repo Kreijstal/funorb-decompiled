@@ -15,7 +15,7 @@ final class ValidationIndicator extends TextButton {
     static PcmStreamMixer field_cb;
     static String field_Z;
 
-    final static void a(SystemTaskService param0, String param1, boolean param2, int param3, int param4, boolean param5, int param6, int param7, int param8, long param9, byte param10, int param11, int param12, int param13) {
+    final static void configureConnection(SystemTaskService param0, String param1, boolean param2, int param3, int param4, boolean param5, int param6, int param7, int param8, long param9, byte param10, int param11, int param12, int param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -31,11 +31,11 @@ final class ValidationIndicator extends TextButton {
             StripedProgressBar.field_Z = param4;
             ScrollContainer.field_Wb = param3;
             UiTheme.field_l = param13;
-            og.field_b = param9;
-            cd.field_a = param2;
+            QuickChatPopupHelpers.field_b = param9;
+            QuickChatPacketHelpers.field_a = param2;
             LoadingProgressDialog.field_ib = param5;
             if (param10 < 112) {
-              ValidationIndicator.g(-71);
+              ValidationIndicator.openChatInput(-71);
             }
             ArchiveRequest.field_F = param6;
             AccountRequestResult.field_b = param1;
@@ -77,7 +77,7 @@ final class ValidationIndicator extends TextButton {
         }
     }
 
-    final static boolean a(String param0, byte param1, String param2) {
+    final static boolean isPasswordAcceptable(String param0, byte param1, String param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_28_0 = null;
@@ -87,10 +87,10 @@ final class ValidationIndicator extends TextButton {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (PasswordValidator.b(param0, 75)) {
+          if (PasswordValidator.hasNonAlphanumeric(param0, 75)) {
             return false;
           }
-          if (AgeValidator.b(param0, 29974)) {
+          if (AgeValidator.isRepeatedCharacter(param0, 29974)) {
             return false;
           }
           if (QuickChatCategory.isLengthOutOfRange(-30157, param0)) {
@@ -99,13 +99,13 @@ final class ValidationIndicator extends TextButton {
           if (param2.length() == 0) {
             return true;
           }
-          if (AccountTermsPanel.a(param0, 300, param2)) {
+          if (AccountTermsPanel.containsTextOrReverse(param0, 300, param2)) {
             return false;
           }
-          if (fj.a(param2, -7036, param0)) {
+          if (PasswordRuleHelpers.passwordContainsName(param2, -7036, param0)) {
             return false;
           }
-          if (Projectile.a(param0, true, param2)) {
+          if (Projectile.containsForwardOrReversed(param0, true, param2)) {
             return false;
           }
           var3_int = -38 % ((param1 + 50) / 37);
@@ -142,16 +142,16 @@ final class ValidationIndicator extends TextButton {
         field_bb = null;
     }
 
-    final static void a(byte param0, boolean param1) {
-        SentinelDesigner.a(param1, (byte) 44);
+    final static void drawFrontEndFrame(byte param0, boolean param1) {
+        SentinelDesigner.drawOverlayDialogs(param1, (byte) 44);
         if (param0 > -58) {
           return;
         }
         ClientErrorSupport.updateOverlays(param1, (byte) 122);
     }
 
-    final static void g(int param0) {
-        jn.field_g = true;
+    final static void openChatInput(int param0) {
+        MusicTrackHelpers.field_g = true;
         ChatPanelHelpers.field_b = param0;
     }
 
@@ -163,7 +163,7 @@ final class ValidationIndicator extends TextButton {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void initializeSpecularTable(boolean param0) {
         int var1_int = 0;
         double var2 = 0.0;
         int var4 = 0;
@@ -173,17 +173,17 @@ final class ValidationIndicator extends TextButton {
         int var1_intLifetime1;
         var4 = SteelSentinels.obfuscationControl;
         try {
-          lf.a();
-          kf.field_t = new int[260];
+          MeshRasterState.useRasterClip();
+          HighscoreTable.field_t = new int[260];
           ArchiveLoadSequence.field_j = 11;
           for (var1_int = 0; 256 > var1_int; var1_int++) {
             var2 = 15.0;
-            kf.field_t[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+            HighscoreTable.field_t[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
           var5 = 256;
           var1_intLifetime1 = var5;
-          while (var5 < kf.field_t.length) {
-            kf.field_t[var5] = 255;
+          while (var5 < HighscoreTable.field_t.length) {
+            HighscoreTable.field_t[var5] = 255;
             var5++;
           }
           if (!param0) {
@@ -212,7 +212,7 @@ final class ValidationIndicator extends TextButton {
     final void drawLayer(int param0, byte param1, int param2, int param3) {
         int var5;
         int var6;
-        vd var8;
+        TransitionTimerHelpers var8;
         int var9;
         int var10;
         int var11;
@@ -233,28 +233,28 @@ final class ValidationIndicator extends TextButton {
         if (Bzip2State.field_J != var8 &&
           TextHotspotWidget.field_Y != var8) {
           if (var8 == ArchiveProvider.field_d) {
-            var14 = t.field_i[2];
+            var14 = NameTable.field_i[2];
             var14.drawAdditive(var5 - (var14.field_A >> 1), -(var14.field_F >> 1) + var6, 256);
-          } else if (vf.field_b == var8) {
-            var13 = t.field_i[1];
+          } else if (RequestResendHelpers.field_b == var8) {
+            var13 = NameTable.field_i[1];
             var13.drawAdditive(var5 - (var13.field_A >> 1), var6 - (var13.field_F >> 1), 256);
           }
         } else {
-          var12 = t.field_i[0];
+          var12 = NameTable.field_i[0];
           var9 = var12.field_z << 1;
           var10 = var12.field_B << 1;
-          if (null != qf.field_f &&
-            var9 <= qf.field_f.field_A &&
-            var10 <= qf.field_f.field_F) {
-            IterableNodeHashTable.a(qf.field_f, (byte) -71);
+          if (null != RankingAndRasterHelpers.field_f &&
+            var9 <= RankingAndRasterHelpers.field_f.field_A &&
+            var10 <= RankingAndRasterHelpers.field_f.field_F) {
+            IterableNodeHashTable.bindSpriteRaster(RankingAndRasterHelpers.field_f, (byte) -71);
             SoftwareRaster.clear();
           } else {
-            qf.field_f = new RgbSprite(var9, var10);
-            IterableNodeHashTable.a(qf.field_f, (byte) -108);
+            RankingAndRasterHelpers.field_f = new RgbSprite(var9, var10);
+            IterableNodeHashTable.bindSpriteRaster(RankingAndRasterHelpers.field_f, (byte) -108);
           }
           var12.drawRotatedAboutPivot(112, 144, var12.field_z << 4, var12.field_B << 4, -this.field_ab << 10, 4096);
           MatchingTextValidator.popRasterStateWithIntGuard(106);
-          qf.field_f.drawAdditive(-var12.field_z + var5, -var12.field_B + var6, 256);
+          RankingAndRasterHelpers.field_f.drawAdditive(-var12.field_z + var5, -var12.field_B + var6, 256);
         }
     }
 
@@ -305,8 +305,8 @@ final class ValidationIndicator extends TextButton {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
-        SentinelDesigner.a(param1, (byte) 44);
+    final static void drawFrontEndFrameWithIntGuard(int param0, boolean param1) {
+        SentinelDesigner.drawOverlayDialogs(param1, (byte) 44);
         if (param0 > -58) {
           return;
         }

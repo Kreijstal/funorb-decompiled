@@ -70,7 +70,7 @@ final class CheckboxPainter implements WidgetPainter {
           }
           if (param2 != -30) {
             var11 = (java.applet.Applet) null;
-            CheckboxPainter.a((java.applet.Applet) null, -4);
+            CheckboxPainter.reloadPage((java.applet.Applet) null, -4);
           }
           if (null == this.field_c) {
             return;
@@ -92,7 +92,7 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void reloadPage(java.applet.Applet param0, int param1) {
         try {
           String var2 = null;
           Exception var2_ref = null;
@@ -113,7 +113,7 @@ final class CheckboxPainter implements WidgetPainter {
                 var4 = var4 + var2.substring(var3);
               }
               var5 = new java.net.URL(param0.getCodeBase(), var4);
-              param0.getAppletContext().showDocument(DirectByteStorage.a(0, var5, param0), "_self");
+              param0.getAppletContext().showDocument(DirectByteStorage.appendSessionParameters(0, var5, param0), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,7 +140,7 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isOnFriendList(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
@@ -150,7 +150,7 @@ final class CheckboxPainter implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 89 % ((param1 - 62) / 38);
-          stackIn_3_0 = (wi.a(param0, (byte) 118) != null);
+          stackIn_3_0 = (SpriteState.findFriend(param0, (byte) 118) != null);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

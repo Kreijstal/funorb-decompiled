@@ -55,9 +55,9 @@ final class Checkbox extends TextButton {
         this.notifyAction(-25, (byte) 43, -53, 29);
     }
 
-    final static void a(boolean param0) {
-        FullscreenFocusCanvas.a(param0);
-        RegistrationRequestDialog.a(10, SocketConnector.field_b, SceneWidgetNode.field_y[0].field_z, TextLayout.field_g, ReflectionCheck.field_G, te.field_b);
+    final static void layoutLobbyChat(boolean param0) {
+        FullscreenFocusCanvas.animateOverlayPosition(param0);
+        RegistrationRequestDialog.layoutLobbyPanels(10, SocketConnector.field_b, SceneWidgetNode.field_y[0].field_z, TextLayout.field_g, ReflectionCheck.field_G, FriendListHelpers.field_b);
     }
 
     private Checkbox(String param0, UiListener param1) {

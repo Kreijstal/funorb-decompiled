@@ -27,7 +27,7 @@ final class Bzip2State {
     int field_G;
     int field_L;
     int field_a;
-    static vd field_J;
+    static TransitionTimerHelpers field_J;
     int[] field_D;
     byte[] field_C;
     int field_m;
@@ -56,7 +56,7 @@ final class Bzip2State {
         }
     }
 
-    final static void a(boolean param0, Sentinel param1) {
+    final static void consumeModuleCost(boolean param0, Sentinel param1) {
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         String stackIn_54_2 = null;
@@ -95,7 +95,7 @@ final class Bzip2State {
                 var2_int != 7 &&
                 var2_int != 8) {
                 if (var2_int == 9) {
-                  param1.maximumCharge = param1.maximumCharge - GradientOutlineTextPainter.a(48, param1.activeModuleType);
+                  param1.maximumCharge = param1.maximumCharge - GradientOutlineTextPainter.offsetInFiveToNineRange(48, param1.activeModuleType);
                   break;
                 }
                 if (var2_int == 29) {
@@ -108,7 +108,7 @@ final class Bzip2State {
                 param1.field_Fb = param1.field_Fb / 2;
                 break;
               }
-              param1.maximumCharge = param1.maximumCharge - GradientOutlineTextPainter.a(48, param1.activeModuleType);
+              param1.maximumCharge = param1.maximumCharge - GradientOutlineTextPainter.offsetInFiveToNineRange(48, param1.activeModuleType);
               break;
             case 4:
               param1.field_wb = param1.field_wb - 5;
@@ -151,7 +151,7 @@ final class Bzip2State {
         }
     }
 
-    final static void a(byte param0, SceneWidget param1, SceneWidget param2) {
+    final static void bindLobbyLists(byte param0, SceneWidget param1, SceneWidget param2) {
         try {
           if (null == param1.field_M) {
             param1.field_M = new NodeDeque();
@@ -169,8 +169,8 @@ final class Bzip2State {
           if (param0 > -97) {
             field_o = (String[]) null;
           }
-          am.field_c = param2.field_M;
-          SoundCache.a(true);
+          DesignerPageSetup.field_c = param2.field_M;
+          SoundCache.clearSocialLists(true);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -198,7 +198,7 @@ final class Bzip2State {
     static {
         field_A = "SUDDEN DEATH!";
         field_n = "You have entered another game.";
-        field_J = new vd();
+        field_J = new TransitionTimerHelpers();
         field_f = 0.0;
         field_o = new String[]{"", "<br>You have ten minutes before the battle in orbit reaches the surface.", "<br>Capture the MGFN technology to win the score-gaining power.", "<br>Stay within the crashed ship's energy shield to gain score.", "<br>Reach the enemy ship and return to help your team win the battle."};
         field_F = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";

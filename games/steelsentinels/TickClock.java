@@ -12,9 +12,9 @@ abstract class TickClock {
     static String field_b;
     static String field_h;
 
-    abstract long a(byte param0);
+    abstract long getSleepMillis(byte param0);
 
-    final static void a(boolean param0, java.awt.Component param1) {
+    final static void attachMouseInput(boolean param0, java.awt.Component param1) {
         param1.addMouseListener(SoundCache.field_e);
         param1.addMouseMotionListener(SoundCache.field_e);
         if (!param0) {
@@ -27,30 +27,30 @@ abstract class TickClock {
         }
     }
 
-    final static int a(int param0) {
+    final static int getPopupHeight(int param0) {
         if (param0 != 0) {
           field_a = (String[]) null;
         }
         return SceneWidget.field_hb;
     }
 
-    final static RgbSprite[] a(int param0, byte param1, int param2, int param3) {
+    final static RgbSprite[] createPanelFrameSpritesThin(int param0, byte param1, int param2, int param3) {
         if (param1 <= 72) {
-          TickClock.a(-2);
+          TickClock.getPopupHeight(-2);
         }
         return SteelSentinels.createPanelFrameSprites(param0, param3, (byte) -62, 1, param2);
     }
 
-    final int a(byte param0, long param1) {
+    final int waitForTicks(byte param0, long param1) {
         int var4 = -100 / ((param0 + 28) / 54);
-        long var5 = this.a((byte) 120);
+        long var5 = this.getSleepMillis((byte) 120);
         if (var5 > 0L) {
-          MouseWheelInput.a((byte) 121, var5);
+          MouseWheelInput.sleepMillis((byte) 121, var5);
         }
         return this.advanceTicks(param1, (byte) -97);
     }
 
-    final static void a(SystemTaskService param0, boolean param1, PacketBuffer param2, int param3) {
+    final static void readReflectionCheckRequest(SystemTaskService param0, boolean param1, PacketBuffer param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -88,7 +88,7 @@ abstract class TickClock {
           var14 = SteelSentinels.obfuscationControl;
           try {
             if (param1) {
-              TickClock.a(-105, (byte) -107, 76, 3);
+              TickClock.createPanelFrameSpritesThin(-105, (byte) -107, 76, 3);
             }
             var18 = new ReflectionCheck();
             var18.field_B = param2.readUnsignedByte((byte) -80);
@@ -198,7 +198,7 @@ abstract class TickClock {
         }
     }
 
-    final static void a(int param0, int[] param1, int param2, int[][] param3, int param4, int param5, int param6) {
+    final static void addLevelDefinition(int param0, int[] param1, int param2, int[][] param3, int param4, int param5, int param6) {
         if (ReflectionCheck.field_p >= 30) {
           ReflectionCheck.field_p = ReflectionCheck.field_p + 1;
           return;
@@ -219,11 +219,11 @@ abstract class TickClock {
         }
     }
 
-    abstract void c(byte param0);
+    abstract void reset(byte param0);
 
-    final static AccountRequestResult b(byte param0) {
+    final static AccountRequestResult takeRegistrationResult(byte param0) {
         if (param0 != 73) {
-          TickClock.a(105, (int[]) null, -49, (int[][]) null, 72, 102, -29);
+          TickClock.addLevelDefinition(105, (int[]) null, -49, (int[][]) null, 72, 102, -29);
         }
         if (DiskCacheWorker.field_j == ClockAndCookieHelpers.field_e) {
           throw new IllegalStateException();
@@ -232,14 +232,14 @@ abstract class TickClock {
           return null;
         }
         DiskCacheWorker.field_j = ClockAndCookieHelpers.field_e;
-        return qf.field_d;
+        return RankingAndRasterHelpers.field_d;
     }
 
     abstract int advanceTicks(long param0, byte param1);
 
     public static void releaseStatics(int param0) {
         if (param0 != 30) {
-          TickClock.a(-15);
+          TickClock.getPopupHeight(-15);
         }
         field_c = null;
         field_b = null;

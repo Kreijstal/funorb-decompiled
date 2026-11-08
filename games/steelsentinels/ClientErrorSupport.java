@@ -21,7 +21,7 @@ final class ClientErrorSupport {
         String var7;
         String var8;
         var5 = SteelSentinels.obfuscationControl;
-        var6 = "(" + di.field_d + " " + TextHotspotWidget.field_W + " " + RasterSnapshot.field_u + ") " + ArrayWidgetContainer.field_N;
+        var6 = "(" + OptionMaskHelpers.field_d + " " + TextHotspotWidget.field_W + " " + RasterSnapshot.field_u + ") " + ArrayWidgetContainer.field_N;
         var1 = var6;
         if (param0 != 94) {
           return (String) null;
@@ -82,19 +82,19 @@ final class ClientErrorSupport {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          jj.field_k = cf.a("frame_top", "commonui", (byte) -95, param0);
-          Explosion.field_J = cf.a("frame_bottom", "commonui", (byte) -94, param0);
+          MeshMaterial.field_k = StatSubmission.loadSpritesByName("frame_top", "commonui", (byte) -95, param0);
+          Explosion.field_J = StatSubmission.loadSpritesByName("frame_bottom", "commonui", (byte) -94, param0);
           Explosion.field_L = PacketLoopHelpers.loadRgbSpriteByName(param0, "commonui", "jagex_logo_grey", false);
-          un.field_m = cf.a("button", "commonui", (byte) -54, param0);
-          t.field_i = ClientUiHelpers.loadRgbSpritesByName((byte) -62, "validation", param0, "commonui");
+          ChatHistoryAllocator.field_m = StatSubmission.loadSpritesByName("button", "commonui", (byte) -54, param0);
+          NameTable.field_i = ClientUiHelpers.loadRgbSpritesByName((byte) -62, "validation", param0, "commonui");
           SectorCacheStore.field_m = (BitmapFont) ((Object) UrlAndReplyHelpers.loadCoverageFontByName(param0, param2, (byte) -48, "arezzo12", "commonui"));
-          tj.field_e = (BitmapFont) ((Object) UrlAndReplyHelpers.loadCoverageFontByName(param0, param2, (byte) -62, "arezzo14", "commonui"));
-          gf.field_d = (BitmapFont) ((Object) UrlAndReplyHelpers.loadCoverageFontByName(param0, param2, (byte) -57, "arezzo14bold", "commonui"));
-          var17 = new RgbSprite(param3.a("", -742, "button.gif"), (java.awt.Component) ((Object) sl.field_n));
+          HighscoreSubmissionFactory.field_e = (BitmapFont) ((Object) UrlAndReplyHelpers.loadCoverageFontByName(param0, param2, (byte) -62, "arezzo14", "commonui"));
+          GeneratedSpriteHelpers.field_d = (BitmapFont) ((Object) UrlAndReplyHelpers.loadCoverageFontByName(param0, param2, (byte) -57, "arezzo14bold", "commonui"));
+          var17 = new RgbSprite(param3.getFileByName("", -742, "button.gif"), (java.awt.Component) ((Object) ArchiveLoadStep.field_n));
           if (param1 < 63) {
             ClientErrorSupport.releaseStatics(true);
           }
-          NanoTickClock.a(param0, (byte) 85, "commonui", "dropdown");
+          NanoTickClock.loadIndexedSprite(param0, (byte) 85, "commonui", "dropdown");
           var5 = ArchiveLoadSequence.loadIndexedSpritesByName(45, "commonui", param0, "screen_options");
           UiComponent.field_q = new IndexedSprite[4];
           ce.field_q = new IndexedSprite[4];
@@ -115,11 +115,11 @@ final class ClientErrorSupport {
             var14 = var6[var9];
             IndexedSprite[] var10 = var14;
             for (var11_int = 0; var14.length > var11_int; var11_int++) {
-              var14[var11_int] = NodeHashTable.a(var5[var9], var19[var11_int], false);
+              var14[var11_int] = NodeHashTable.createRepalettedSprite(var5[var9], var19[var11_int], false);
             }
           }
           var9Lifetime1 = var17.field_F;
-          ArchiveIndex.a(false);
+          ArchiveIndex.pushRasterState(false);
           var17.bindRasterTarget();
           SoftwareRaster.desaturateRectangle(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
           var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
@@ -133,7 +133,7 @@ final class ClientErrorSupport {
           var12.bindRasterTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
           MatchingTextValidator.popRasterStateWithIntGuard(122);
-          un.field_m = new RgbSprite[]{var15, var12, var11};
+          ChatHistoryAllocator.field_m = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ci.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -208,17 +208,17 @@ final class ClientErrorSupport {
 
     final static void updateOverlays(boolean param0, byte param1) {
         if (null != UiTheme.field_i) {
-          ViewportController.a(UiTheme.field_i, 1);
+          ViewportController.drawPointerTooltip(UiTheme.field_i, 1);
         }
         if (null != AudioService.field_i) {
           AudioService.field_i.updateMenu(param0, (byte) -114);
         }
-        SentinelCommandSimulator.a((byte) -115, param0);
+        SentinelCommandSimulator.drawAccountNamePrompt((byte) -115, param0);
         int var2 = 40 % ((param1 - 49) / 45);
         if (FunOrbClient.field_x != null) {
           FunOrbClient.field_x.drawFullScreen(param0, (byte) 127);
         }
-        tf.a(0, param0);
+        ChatHistoryHelpers.drawQuickChatHelpOverlay(0, param0);
     }
 
     static {

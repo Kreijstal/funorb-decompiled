@@ -59,7 +59,7 @@ final class HuffmanDecoder {
                   if (~var11 == ~var8) {
                     var12 = 1 << 32 - var10;
                     if ((var11 & var12) == 0) {
-                      var3[var10] = DateOfBirthValidator.a(var11, var12);
+                      var3[var10] = DateOfBirthValidator.bitOr(var11, var12);
                       continue;
                     }
                     var3[var10] = var3[var10 - 1];
@@ -453,7 +453,7 @@ final class HuffmanDecoder {
             var7_int = var7_int & -var13 >> 31;
             var14 = (-1 + var11 + var13 >> 3) + var12;
             var13 += 24;
-            dupTemp$0 = DateOfBirthValidator.a(var7_int, var10 >>> var13);
+            dupTemp$0 = DateOfBirthValidator.bitOr(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param1[var12] = (byte)dupTemp$0;
             if (var14 > var12) {

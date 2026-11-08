@@ -32,10 +32,10 @@ final class ChatMessage {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        ob var4 = null;
+        PendingPackedReply var4 = null;
         int var4_int = 0;
         int var5 = 0;
-        rn var5_ref_rn = null;
+        PendingAckRequest var5_ref_rn = null;
         int[] var6 = null;
         int var8 = 0;
         CipherPacketBuffer var10 = null;
@@ -50,9 +50,9 @@ final class ChatMessage {
           var2 = var10.readUnsignedByte((byte) -87);
           var3 = var10.readUnsignedByte((byte) -80);
           if (var2 == 0) {
-            var4 = (ob) (ImageProducerRasterBuffer.field_z.first(13058));
+            var4 = (PendingPackedReply) (ImageProducerRasterBuffer.field_z.first(13058));
             if (var4 == null) {
-              LoginForm.m(123);
+              LoginForm.closeConnection(123);
               return;
             }
             var5 = ViewportController.field_f - var10.position;
@@ -70,11 +70,11 @@ final class ChatMessage {
           }
           if (var2 == 1) {
             var4_int = var10.readSignedSmart(27);
-            var5_ref_rn = (rn) (BoundedRandomAccessFile.field_r.first(13058));
+            var5_ref_rn = (PendingAckRequest) (BoundedRandomAccessFile.field_r.first(13058));
             while (var5_ref_rn != null) {
               if (var5_ref_rn.field_p != var3 ||
                 var4_int != var5_ref_rn.field_x) {
-                var5_ref_rn = (rn) (BoundedRandomAccessFile.field_r.next((byte) -26));
+                var5_ref_rn = (PendingAckRequest) (BoundedRandomAccessFile.field_r.next((byte) -26));
                 continue;
               }
               break;
@@ -83,11 +83,11 @@ final class ChatMessage {
               var5_ref_rn.unlink(4);
               return;
             }
-            LoginForm.m(73);
+            LoginForm.closeConnection(73);
             return;
           }
           MusicCrossfadeStream.reportClientError("LR1: " + ClientErrorSupport.describePacketHistory((byte) 94), -102, (Throwable) null);
-          LoginForm.m(83);
+          LoginForm.closeConnection(83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,7 +108,7 @@ final class ChatMessage {
           if (DisplayNameForm.field_P != 2) {
             return 0;
           }
-          if (CheckboxPainter.a(this.field_p, param0 ^ -43)) {
+          if (CheckboxPainter.isOnFriendList(this.field_p, param0 ^ -43)) {
             return 1;
           }
           return 0;
@@ -175,7 +175,7 @@ final class ChatMessage {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (JavaScriptBridge.callWindowFunction(param0, (byte) -96, "getcookies"));
-              var4 = ModalStack.a(';', false, var3);
+              var4 = ModalStack.split(';', false, var3);
               for (var5 = param1; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -214,9 +214,9 @@ final class ChatMessage {
         this.field_t = UrlAndReplyHelpers.field_b;
         this.field_w = DualNodeHashTable.field_a;
         this.field_e = ContentTransitionDialog.field_lb;
-        this.field_s = uj.field_a;
+        this.field_s = ReflectionCheckHelpers.field_a;
         this.field_k = HuffmanDecoder.field_a;
-        this.field_j = ni.field_d;
+        this.field_j = ByteArrayPoolHelpers.field_d;
         this.field_o = WeightedCacheEntry.field_F;
         if (param0) {
           this.field_l = ValidatedTextWidget.field_ob;
@@ -224,7 +224,7 @@ final class ChatMessage {
           this.field_l = null;
         }
         this.field_g = LobbySetupHelpers.field_e;
-        this.field_n = t.field_k;
+        this.field_n = NameTable.field_k;
     }
 
     ChatMessage(int param0, String param1, int param2, String param3, String param4) {

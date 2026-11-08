@@ -6,7 +6,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
     static byte[] field_Y;
     static int field_V;
     static String field_X;
-    static ml field_ab;
+    static ListRequestHelpers field_ab;
     static int field_Q;
     static int field_S;
     static int[] field_U;
@@ -20,14 +20,14 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         return "</col></u>";
     }
 
-    final static SceneWidget a(byte param0) {
+    final static SceneWidget getActiveTabContent(byte param0) {
         if (param0 >= -81) {
           return (SceneWidget) null;
         }
         return BoundedUrlRequest.getListPanelContent((byte) 111);
     }
 
-    final static boolean a(String param0, int param1, String param2) {
+    final static boolean containsTextOrReverse(String param0, int param1, String param2) {
         String var3 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_17_0 = null;
@@ -68,7 +68,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void openBlankLoginDialog(boolean param0, int param1) {
         if (param1 == 40) {
           ChecksumAndFrameHelpers.showLoginDialog(param0, false, param1 ^ 95);
           return;
@@ -90,11 +90,11 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           this.field_W.field_p = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           var7 = SocketConnector.formatTemplate(CachedTextLayout.field_w, -39, new String[]{this.linkOpenMarkup(0), this.linkCloseMarkup(-114)});
           var3 = 20;
-          var4 = new TextWidgetPainter(tj.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, tj.field_e.field_G, -1, 2147483647, true);
+          var4 = new TextWidgetPainter(HighscoreSubmissionFactory.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, HighscoreSubmissionFactory.field_e.field_G, -1, 2147483647, true);
           this.field_Z = new TextHotspotWidget(var7, var4);
           this.field_Z.field_v = "";
-          this.field_Z.setHotspotTooltip(ph.field_b, 0, -53);
-          this.field_Z.setHotspotTooltip(ph.field_b, 1, -65);
+          this.field_Z.setHotspotTooltip(ChatLineMenuHelpers.field_b, 0, -53);
+          this.field_Z.setHotspotTooltip(ChatLineMenuHelpers.field_b, 1, -65);
           this.field_Z.field_x = this.field_x - 40;
           this.field_Z.field_A = (UiListener) (this);
           this.field_Z.setBoundsToTextHeight(26, var3, this.field_x - 40, -1);
@@ -111,18 +111,18 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
-        RegistrationRequestDialog.field_Tb = param0 ? new uf(GameplayController.field_x, Projectile.field_J) : new uf(StripedProgressBar.field_P, HuffmanDecoder.field_i);
+    final static void buildSocialPanels(boolean param0, boolean param1) {
+        RegistrationRequestDialog.field_Tb = param0 ? new SocialTabsPanel(GameplayController.field_x, Projectile.field_J) : new SocialTabsPanel(StripedProgressBar.field_P, HuffmanDecoder.field_i);
         SocialListPanel.field_ec = new SceneWidget(0L, (SceneWidget) null);
         SocialListPanel.field_ec.addChild(RegistrationRequestDialog.field_Tb.field_d, 126);
         SocialListPanel.field_ec.addChild(QuickChatCategory.field_E, 127);
         UsernameCredentials.field_r = new SceneWidget(0L, AudioService.field_a);
-        nd.field_a = new SceneWidget(0L, (SceneWidget) null);
+        ChatFilterPackingHelpers.field_a = new SceneWidget(0L, (SceneWidget) null);
         if (param1) {
-          UsernameCredentials.field_r.addChild(tf.field_a, 121);
-          UsernameCredentials.field_r.addChild(nd.field_a, 119);
-          nd.field_a.addChild(TeamColourTinter.field_c, 120);
-          nd.field_a.addChild(Js5ArchiveManager.field_i, 118);
+          UsernameCredentials.field_r.addChild(ChatHistoryHelpers.field_a, 121);
+          UsernameCredentials.field_r.addChild(ChatFilterPackingHelpers.field_a, 119);
+          ChatFilterPackingHelpers.field_a.addChild(TeamColourTinter.field_c, 120);
+          ChatFilterPackingHelpers.field_a.addChild(Js5ArchiveManager.field_i, 118);
           EmailFormatError.layoutLobbyComponents(1, param0);
           return;
         }
@@ -185,7 +185,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         var6 = SteelSentinels.obfuscationControl;
         try {
           if (param3 <= 124) {
-            AccountTermsPanel.a((byte) 18);
+            AccountTermsPanel.getActiveTabContent((byte) 18);
           }
           if (param1 == 0) {
             TabbedPanel.requestOpenLinkNotice("terms.ws", (byte) 65);
@@ -217,7 +217,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
     public final void onAction(int param0, byte param1, int param2, TextButton param3, int param4) {
         try {
           if (param3 == this.field_W) {
-            lc.a(0);
+            SettingSearchHelpers.beginStoredLogin(0);
             this.field_R.closeDialog(126);
           }
           int var6_int = 92 % ((-85 - param1) / 36);
@@ -226,7 +226,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         }
     }
 
-    final static void h(byte param0) {
+    final static void showAccountRegistration(byte param0) {
         TextLayout.field_b = new AccountRegistrationPanel();
         if (param0 == 45) {
           ClientErrorSupport.field_a.transitionToContent(TextLayout.field_b, -22908735);
@@ -247,7 +247,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         field_T = "Default arm for the <%0>-class sentinel.";
         field_V = 500;
         field_X = "A detailed explanation of each rule can be found through the link on our website.<br>(in the Help Section)";
-        field_ab = new ml();
+        field_ab = new ListRequestHelpers();
         field_P = "Waiting for music";
     }
 }

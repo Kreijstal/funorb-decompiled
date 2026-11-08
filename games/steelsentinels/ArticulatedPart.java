@@ -19,10 +19,10 @@ final class ArticulatedPart extends DualNode {
     int field_Q;
     int field_W;
     private PartInstruction[] instructions;
-    static dj field_F;
+    static NumberParsingHelpers field_F;
     private static int[] field_M;
     static SystemTaskService field_A;
-    static fm field_O;
+    static QuickChatParameterType field_O;
     IndexedSprite field_H;
     static String field_P;
     static int field_J;
@@ -74,7 +74,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, byte param4, int param5) {
+    final void positionPartTree(int param0, boolean param1, int param2, int param3, byte param4, int param5) {
         ArticulatedPart stackIn_5_0 = null;
         Object stackIn_11_0 = null;
         ArticulatedPart stackOut_4_0;
@@ -97,7 +97,7 @@ final class ArticulatedPart extends DualNode {
         var14 = SteelSentinels.obfuscationControl;
         var7 = this.field_z + param5;
         if (param4 != 49) {
-          this.k(14);
+          this.getWeaponParts(14);
         }
         var8 = 0;
         boolean decompiledNaturalLoopExit0 = false;
@@ -115,7 +115,7 @@ final class ArticulatedPart extends DualNode {
               var11 = (MusicPatchNode.field_w * ((this.instructions[var8].field_r - this.field_E) * var9 + (this.instructions[var8].field_s - this.field_G) * var10) >> 16) + param2;
               var12 = param3 + ((-(var9 * (this.instructions[var8].field_s - this.field_G)) + var10 * (-this.field_E + this.instructions[var8].field_r)) * MusicPatchNode.field_w >> 16);
               var13 = var7 + this.instructions[var8].field_n;
-              this.a((byte) -101, param1, var13, var8, var11, param0, var12);
+              this.positionAttachedPart((byte) -101, param1, var13, var8, var11, param0, var12);
             }
             var8++;
             continue;
@@ -178,7 +178,7 @@ final class ArticulatedPart extends DualNode {
                   var11Lifetime1Lifetime1 = ScrollContainer.cosine16(this.instructions[var15].field_f * 8192 / 65536, (byte) -68) * 16 / 65536;
                 }
               } else {
-                this.a((byte) -69, param1, this.instructions[var15].field_f, var15, this.instructions[var15].field_k, param0, this.instructions[var15].field_l);
+                this.positionAttachedPart((byte) -69, param1, this.instructions[var15].field_f, var15, this.instructions[var15].field_k, param0, this.instructions[var15].field_l);
               }
             }
             var15++;
@@ -189,7 +189,7 @@ final class ArticulatedPart extends DualNode {
         return;
     }
 
-    final ArticulatedPart[] a(int param0, Sentinel param1, ArticulatedPart[] param2, int param3, int param4) {
+    final ArticulatedPart[] collectWeaponsCoveringAngle(int param0, Sentinel param1, ArticulatedPart[] param2, int param3, int param4) {
         int stackIn_21_0 = 0;
         ArticulatedPart[] stackIn_36_0 = null;
         RuntimeException stackIn_39_0 = null;
@@ -211,7 +211,7 @@ final class ArticulatedPart extends DualNode {
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
-          if (param4 != ja.a(this.componentId, false) ||
+          if (param4 != IconLookupHelpers.getComponentSlotIndex(this.componentId, false) ||
             this.field_Q <= 0 ||
             this.field_C > 0) {
             var6_int = 0;
@@ -221,7 +221,7 @@ final class ArticulatedPart extends DualNode {
                 break;
               }
               if (this.instructions[var6_int].attachedPart != null) {
-                param2 = this.instructions[var6_int].attachedPart.a(param0 + 0, param1, param2, param3, param4);
+                param2 = this.instructions[var6_int].attachedPart.collectWeaponsCoveringAngle(param0 + 0, param1, param2, param3, param4);
               }
               var6_int++;
             }
@@ -283,7 +283,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    final int e(byte param0) {
+    final int getTotalTechValue(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -307,7 +307,7 @@ final class ArticulatedPart extends DualNode {
             stackIn_7_0 = stackOut_6_0;
             if (var4 == 0) {
               if (stackIn_7_0 != null) {
-                var2 = var2 + this.instructions[var3].attachedPart.e((byte) -63);
+                var2 = var2 + this.instructions[var3].attachedPart.getTotalTechValue((byte) -63);
               }
               var3++;
               continue;
@@ -324,7 +324,7 @@ final class ArticulatedPart extends DualNode {
         return var2;
     }
 
-    final int a(byte param0, PartInstruction param1) {
+    final int findAttachedComponentId(byte param0, PartInstruction param1) {
         PartInstruction[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -357,7 +357,7 @@ final class ArticulatedPart extends DualNode {
                   stackIn_11_0 = var6.componentId;
                   return stackIn_11_0;
                 }
-                var7 = var6.a((byte) 2, param1);
+                var7 = var6.findAttachedComponentId((byte) 2, param1);
                 if (var7 >= 0) {
                   stackIn_14_0 = var7;
                   return stackIn_14_0;
@@ -398,7 +398,7 @@ final class ArticulatedPart extends DualNode {
         var2 = 0;
         if (obfuscationGuard != 8192) {
           var5 = (String) null;
-          this.a(-87, (String) null);
+          this.findPartByName(-87, (String) null);
         }
         var3 = 0;
         while (this.instructions.length > var3) {
@@ -415,7 +415,7 @@ final class ArticulatedPart extends DualNode {
         return var2;
     }
 
-    final int j(int param0) {
+    final int getTotalThrust(int param0) {
         int var2;
         int var3;
         int var4;
@@ -430,14 +430,14 @@ final class ArticulatedPart extends DualNode {
           }
           var2 = stackIn_7_0;
           if (this.instructions[var3].attachedPart != null) {
-            var2 = var2 + this.instructions[var3].attachedPart.j(param0 ^ 0);
+            var2 = var2 + this.instructions[var3].attachedPart.getTotalThrust(param0 ^ 0);
           }
           var3++;
         }
         return var2;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawPartTree(byte param0, int param1, int param2, int param3) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         ArticulatedPart stackIn_9_1 = null;
@@ -484,7 +484,7 @@ final class ArticulatedPart extends DualNode {
                 var10 = ScrollContainer.cosine16(-var7 / 8, (byte) -103) / 256;
                 var11 = param3 * (MusicPatchNode.field_w * ((this.instructions[var8].field_r - this.field_E) * var9 + (this.instructions[var8].field_s - this.field_G) * var10) >> 20) + param1;
                 var12 = ((-((this.instructions[var8].field_s - this.field_G) * var9) + (-this.field_E + this.instructions[var8].field_r) * var10) * MusicPatchNode.field_w >> 20) + param2;
-                this.instructions[var8].attachedPart.a((byte) 122, var11, var12, param3);
+                this.instructions[var8].attachedPart.drawPartTree((byte) 122, var11, var12, param3);
               }
               var8++;
               continue;
@@ -555,7 +555,7 @@ final class ArticulatedPart extends DualNode {
               var10Lifetime1 = ScrollContainer.cosine16(-var7 / 8, (byte) -71) / 256;
               var11Lifetime1 = param3 * (MusicPatchNode.field_w * ((this.instructions[var14].field_r - this.field_E) * var9Lifetime1 + var10Lifetime1 * (-this.field_G + this.instructions[var14].field_s)) >> 20) + param1;
               var12Lifetime1 = param2 + (MusicPatchNode.field_w * ((this.instructions[var14].field_r - this.field_E) * var10Lifetime1 - var9Lifetime1 * (-this.field_G + this.instructions[var14].field_s)) >> 20);
-              this.instructions[var14].attachedPart.a((byte) 101, var11Lifetime1, var12Lifetime1, param3);
+              this.instructions[var14].attachedPart.drawPartTree((byte) 101, var11Lifetime1, var12Lifetime1, param3);
             }
             var14++;
             continue;
@@ -565,7 +565,7 @@ final class ArticulatedPart extends DualNode {
         return;
     }
 
-    final int a(int param0, int[] param1, boolean param2, int param3) {
+    final int readComponentIds(int param0, int[] param1, boolean param2, int param3) {
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_19_0 = 0;
@@ -586,7 +586,7 @@ final class ArticulatedPart extends DualNode {
               if (-1 != this.instructions[var5_int].field_q) {
                 var6 = param1[param0++];
                 if (var6 != -1) {
-                  var7 = NodeDeque.a(var6, (byte) 67);
+                  var7 = NodeDeque.findPartDefinition(var6, (byte) 67);
                   if (var7 == null) {
                     SceneWidgetNode.logDebugMessage(SocketConnector.formatTemplate("Component Id not valid ID=<%0> data_pos=<%1>", -61, new String[]{Integer.toString(var6), Integer.toString(-1 + param0)}), (byte) 118);
                     stackIn_10_0 = param0;
@@ -598,14 +598,14 @@ final class ArticulatedPart extends DualNode {
                     return stackIn_13_0;
                   }
                   this.instructions[var5_int].attachedPart = new ArticulatedPart(var7, param2);
-                  param0 = this.instructions[var5_int].attachedPart.a(param0, param1, param2, 0);
+                  param0 = this.instructions[var5_int].attachedPart.readComponentIds(param0, param1, param2, 0);
                 }
                 if (var8 != 0) {
-                  param0 = this.instructions[var5_int].attachedPart.a(param0, param1, param2, 0);
+                  param0 = this.instructions[var5_int].attachedPart.readComponentIds(param0, param1, param2, 0);
                 }
               }
             } else {
-              param0 = this.instructions[var5_int].attachedPart.a(param0, param1, param2, 0);
+              param0 = this.instructions[var5_int].attachedPart.readComponentIds(param0, param1, param2, 0);
             }
             var5_int++;
             if (var8 == 0) {
@@ -641,7 +641,7 @@ final class ArticulatedPart extends DualNode {
         field_O = null;
     }
 
-    final void b(int param0, int param1) {
+    final void updateAttachedParts(int param0, int param1) {
         int var3;
         int var4;
         int var3Lifetime1;
@@ -652,7 +652,7 @@ final class ArticulatedPart extends DualNode {
             return;
           }
           if (null != this.instructions[var3].attachedPart) {
-            this.instructions[var3].attachedPart.b(param0, -107);
+            this.instructions[var3].attachedPart.updateAttachedParts(param0, -107);
           }
           var3++;
         }
@@ -660,7 +660,7 @@ final class ArticulatedPart extends DualNode {
         return;
     }
 
-    final void b(byte param0, int param1, int param2, int param3) {
+    final void updateWorldPositions(byte param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -681,7 +681,7 @@ final class ArticulatedPart extends DualNode {
               var7 = ScrollContainer.cosine16(-this.rotation * 8192 / 65536, (byte) -68) * 32 / 65536;
               var8 = param1 + ((-this.field_E + this.instructions[var5].field_r) * var6 + var7 * (this.instructions[var5].field_s - this.field_G)) * param2;
               var9 = param3 + (-this.field_E + this.instructions[var5].field_r) * var7 - var6 * (this.instructions[var5].field_s - this.field_G);
-              this.instructions[var5].attachedPart.b((byte) -128, var8, param2, var9);
+              this.instructions[var5].attachedPart.updateWorldPositions((byte) -128, var8, param2, var9);
             }
             var5++;
             continue;
@@ -690,7 +690,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    private final void a(int param0, boolean param1, ArticulatedPart param2) {
+    private final void initFromTemplate(int param0, boolean param1, ArticulatedPart param2) {
         boolean stackIn_4_1 = false;
         int stackIn_24_0 = 0;
         RuntimeException stackIn_35_0 = null;
@@ -764,7 +764,7 @@ final class ArticulatedPart extends DualNode {
             stackIn_24_0 = param0;
           }
           if (stackIn_24_0 != -353384856) {
-            this.a(41, (byte) 107);
+            this.findPartByComponentId(41, (byte) 107);
           }
           var4_int = 0;
           while (var4_int < this.instructions.length) {
@@ -792,24 +792,24 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    private final void a(byte param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
+    private final void positionAttachedPart(byte param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         if (param0 > -63) {
           return;
         }
-        this.instructions[param3].attachedPart.a(this.field_D + param5 + this.instructions[param3].field_i, param1, param4, param6, (byte) 49, param2);
+        this.instructions[param3].attachedPart.positionPartTree(this.field_D + param5 + this.instructions[param3].field_i, param1, param4, param6, (byte) 49, param2);
     }
 
-    final void d(int param0, int param1) {
-        ed.field_f = 0;
+    final void countReadyWeapons(int param0, int param1) {
+        SessionSeedHelpers.field_f = 0;
         NanoTickClock.field_p = -1;
         CachedTextLayout.field_t = 0;
         if (param0 != 65536) {
           this.rotation = 13;
         }
-        this.e(param1, 5307);
+        this.accumulateReadyWeapons(param1, 5307);
     }
 
-    final void a(byte param0, boolean param1, boolean param2) {
+    final void advanceDisableTimer(byte param0, boolean param1, boolean param2) {
         if (this.field_C > 0) {
           this.field_C = this.field_C - 1;
           if (param2 &&
@@ -833,13 +833,13 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    final ArticulatedPart[] k(int param0) {
+    final ArticulatedPart[] getWeaponParts(int param0) {
         int var2 = 66 / ((29 - param0) / 57);
         ArticulatedPart[] var3 = new ArticulatedPart[]{};
-        return this.a(var3, 3);
+        return this.collectWeaponParts(var3, 3);
     }
 
-    final int i(int param0) {
+    final int getTotalModuleSlots(int param0) {
         int var2;
         int var3;
         int var4;
@@ -857,14 +857,14 @@ final class ArticulatedPart extends DualNode {
           }
           var2 = stackIn_9_0;
           if (null != this.instructions[var3].attachedPart) {
-            var2 = var2 + this.instructions[var3].attachedPart.i(-116);
+            var2 = var2 + this.instructions[var3].attachedPart.getTotalModuleSlots(-116);
           }
           var3++;
         }
         return var2;
     }
 
-    final int h(int param0) {
+    final int getTotalJump(int param0) {
         int var2;
         int var3;
         int var4;
@@ -882,14 +882,14 @@ final class ArticulatedPart extends DualNode {
           }
           var2 = stackIn_9_0;
           if (this.instructions[var3].attachedPart != null) {
-            var2 = var2 + this.instructions[var3].attachedPart.h(-31496);
+            var2 = var2 + this.instructions[var3].attachedPart.getTotalJump(-31496);
           }
           var3++;
         }
         return var2;
     }
 
-    final PartInstruction c(int param0, int param1) {
+    final PartInstruction findCoreSlot(int param0, int param1) {
         int var3 = 0;
         PartInstruction var4 = null;
         int var5 = 0;
@@ -908,7 +908,7 @@ final class ArticulatedPart extends DualNode {
             if (this.instructions[var3].attachedPart.field_Q == 1024) {
               return this.instructions[var3];
             }
-            var4 = this.instructions[var3].attachedPart.c(0, param1);
+            var4 = this.instructions[var3].attachedPart.findCoreSlot(0, param1);
             if (var4 != null) {
               return var4;
             }
@@ -921,7 +921,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    final boolean f(int param0, int param1) {
+    final boolean hasSlotForType(int param0, int param1) {
         int var3;
         int var4;
         int stackIn_12_0 = 0;
@@ -936,7 +936,7 @@ final class ArticulatedPart extends DualNode {
               return true;
             }
             if (null != this.instructions[var3].attachedPart &&
-              this.instructions[var3].attachedPart.f(param0, -1)) {
+              this.instructions[var3].attachedPart.hasSlotForType(param0, -1)) {
               return true;
             }
             var3++;
@@ -954,7 +954,7 @@ final class ArticulatedPart extends DualNode {
         return false;
     }
 
-    final int a(int param0, int[] param1, int param2) {
+    final int writeComponentIds(int param0, int[] param1, int param2) {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int var4_int = 0;
@@ -980,11 +980,11 @@ final class ArticulatedPart extends DualNode {
                 param2++;
                 param1[incrementValue$3] = -1;
                 if (var5 != 0) {
-                  param2 = this.instructions[var4_int].attachedPart.a(0, param1, param2);
+                  param2 = this.instructions[var4_int].attachedPart.writeComponentIds(0, param1, param2);
                 }
               }
             } else {
-              param2 = this.instructions[var4_int].attachedPart.a(0, param1, param2);
+              param2 = this.instructions[var4_int].attachedPart.writeComponentIds(0, param1, param2);
             }
             var4_int++;
             if (var5 == 0) {
@@ -1011,13 +1011,13 @@ final class ArticulatedPart extends DualNode {
     final String getPartName(int obfuscationGuard) {
         int var3 = SteelSentinels.obfuscationControl;
         if (this.componentId >= 0 &&
-          !(t.field_e.length <= this.componentId) &&
-          t.field_e[this.componentId] != null) {
-          return t.field_e[this.componentId];
+          !(NameTable.field_e.length <= this.componentId) &&
+          NameTable.field_e[this.componentId] != null) {
+          return NameTable.field_e[this.componentId];
         }
         if (obfuscationGuard != -24719) {
           PartInstruction[] var4 = (PartInstruction[]) null;
-          this.a((PartInstruction[]) null, -66, -17);
+          this.collectSlotsAcceptingType((PartInstruction[]) null, -66, -17);
         }
         int var2 = 0;
         do {
@@ -1032,16 +1032,16 @@ final class ArticulatedPart extends DualNode {
         return null;
     }
 
-    final int[] c(byte param0) {
+    final int[] getWeaponClasses(byte param0) {
         if (param0 != 125) {
           this.componentId = -25;
         }
         int[] var3 = new int[]{};
         int[] var2 = var3;
-        return this.a(var3, param0 ^ 6900);
+        return this.collectWeaponClasses(var3, param0 ^ 6900);
     }
 
-    private final int[] a(int[] param0, int param1) {
+    private final int[] collectWeaponClasses(int[] param0, int param1) {
         int[] stackIn_22_0 = null;
         int[] stackIn_25_0 = null;
         int stackIn_34_0 = 0;
@@ -1076,7 +1076,7 @@ final class ArticulatedPart extends DualNode {
             if (var9 == 0) {
               if (null != this.instructions[var4].attachedPart) {
                 var3_int = 0;
-                param0 = this.instructions[var4].attachedPart.a(param0, 6793);
+                param0 = this.instructions[var4].attachedPart.collectWeaponClasses(param0, 6793);
               }
               var4++;
               continue;
@@ -1085,7 +1085,7 @@ final class ArticulatedPart extends DualNode {
           }
           if ((decompiledNaturalLoopExit2) &&
             (param1 != 6793)) {
-            this.a((byte) -7, true, true);
+            this.advanceDisableTimer((byte) -7, true, true);
           }
           if (var3_int != 0 &&
             -1 != this.componentId) {
@@ -1095,7 +1095,7 @@ final class ArticulatedPart extends DualNode {
             while (!(decompiledNaturalLoopExit1 = (var5_int >= var4Lifetime1))) {
               stackIn_25_0 = (int[]) (param0);
               if (var9 == 0) {
-                if (stackIn_25_0[var5_int] == ja.a(this.componentId, false)) {
+                if (stackIn_25_0[var5_int] == IconLookupHelpers.getComponentSlotIndex(this.componentId, false)) {
                   stackIn_22_0 = (int[]) (param0);
                   return stackIn_22_0;
                 }
@@ -1111,7 +1111,7 @@ final class ArticulatedPart extends DualNode {
             var5 = var11;
             var10 = new int[var4Lifetime1 + 1];
             param0 = var10;
-            var6 = ja.a(this.componentId, false);
+            var6 = IconLookupHelpers.getComponentSlotIndex(this.componentId, false);
             var7 = 0;
             var8 = 0;
             boolean decompiledNaturalLoopExit0 = false;
@@ -1156,7 +1156,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    final ArticulatedPart a(int param0, byte param1) {
+    final ArticulatedPart findPartByComponentId(int param0, byte param1) {
         ArticulatedPart var4 = null;
         int var5 = SteelSentinels.obfuscationControl;
         if (param1 > -29) {
@@ -1171,7 +1171,7 @@ final class ArticulatedPart extends DualNode {
             return this;
           }
           if (this.instructions[var3].attachedPart != null) {
-            var4 = this.instructions[var3].attachedPart.a(param0, (byte) -73);
+            var4 = this.instructions[var3].attachedPart.findPartByComponentId(param0, (byte) -73);
             if (var4 != null) {
               return var4;
             }
@@ -1181,7 +1181,7 @@ final class ArticulatedPart extends DualNode {
         return null;
     }
 
-    final static void a(byte param0, PacketBuffer param1) {
+    final static void readPackedEntryFields(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -1198,11 +1198,11 @@ final class ArticulatedPart extends DualNode {
           LoginForm.field_S = LoginForm.field_S + (param1.readUnsignedShort((byte) -60) << 2);
           var2_intLifetime1 = param1.readUnsignedByte((byte) -59);
           LoginForm.field_S = LoginForm.field_S + (var2_intLifetime1 >> 6);
-          uf.field_h = (63 & var2_intLifetime1) << 15;
-          uf.field_h = uf.field_h + (param1.readUnsignedByte((byte) -65) << 7);
+          SocialTabsPanel.field_h = (63 & var2_intLifetime1) << 15;
+          SocialTabsPanel.field_h = SocialTabsPanel.field_h + (param1.readUnsignedByte((byte) -65) << 7);
           var2_intLifetime2 = param1.readUnsignedByte((byte) -77);
           VerticalScrollbar.field_Tb = (1 & var2_intLifetime2) << 16;
-          uf.field_h = uf.field_h + (var2_intLifetime2 >> 1);
+          SocialTabsPanel.field_h = SocialTabsPanel.field_h + (var2_intLifetime2 >> 1);
           VerticalScrollbar.field_Tb = VerticalScrollbar.field_Tb + param1.readUnsignedShort((byte) -60);
           if (param0 > -70) {
             field_M = (int[]) null;
@@ -1222,7 +1222,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void layoutAngleRanges(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -1238,7 +1238,7 @@ final class ArticulatedPart extends DualNode {
             if (this.instructions[var6].attachedPart != null) {
               var7 = var5 + this.instructions[var6].field_n;
               this.instructions[var6].attachedPart.field_S = this;
-              this.instructions[var6].attachedPart.a(var7, this.field_W + (this.instructions[var6].field_i + this.instructions[var6].field_n), param2 + 0, this.instructions[var6].field_n + (-this.instructions[var6].field_i + this.field_K));
+              this.instructions[var6].attachedPart.layoutAngleRanges(var7, this.field_W + (this.instructions[var6].field_i + this.instructions[var6].field_n), param2 + 0, this.instructions[var6].field_n + (-this.instructions[var6].field_i + this.field_K));
             }
             var6++;
             continue;
@@ -1247,7 +1247,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    final ArticulatedPart a(int param0, String param1) {
+    final ArticulatedPart findPartByName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -1274,7 +1274,7 @@ final class ArticulatedPart extends DualNode {
                 return this;
               }
               if (this.instructions[var3_int].attachedPart != null) {
-                var5 = this.instructions[var3_int].attachedPart.a(param0 + 0, param1);
+                var5 = this.instructions[var3_int].attachedPart.findPartByName(param0 + 0, param1);
                 if (var5 != null) {
                   stackIn_13_0 = var5;
                   return stackIn_13_0;
@@ -1300,7 +1300,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    final static String a(int param0, ChatMessage param1) {
+    final static String formatChatPrefix(int param0, ChatMessage param1) {
         String stackIn_32_0 = null;
         Object stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -1339,7 +1339,7 @@ final class ArticulatedPart extends DualNode {
           }
           if (decompiledFrameRemainder0) {
             if (param1.field_k == 0 &&
-              cd.field_g) {
+              QuickChatPacketHelpers.field_g) {
               var4 = "[" + ThreeSliceButtonPainter.field_p + "] ";
             }
             if (param1.field_k == 1) {
@@ -1372,7 +1372,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    private final ArticulatedPart[] a(ArticulatedPart[] param0, int param1) {
+    private final ArticulatedPart[] collectWeaponParts(ArticulatedPart[] param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1400,7 +1400,7 @@ final class ArticulatedPart extends DualNode {
               if (var7 == 0) {
                 if (this.instructions[var4].attachedPart != null) {
                   var3_int = 0;
-                  param0 = this.instructions[var4].attachedPart.a(param0, 3);
+                  param0 = this.instructions[var4].attachedPart.collectWeaponParts(param0, 3);
                 }
                 var4++;
                 continue;
@@ -1441,7 +1441,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void updateAimRange(int param0, int param1, int param2) {
         ArticulatedPart var4_ref_nk;
         int var4;
         int var5;
@@ -1452,24 +1452,24 @@ final class ArticulatedPart extends DualNode {
         }
         boolean decompiledFrameCompleted0 = true;
         boolean decompiledFrameRemainder0 = true;
-        if (ja.a(this.componentId, false) == param2 &&
+        if (IconLookupHelpers.getComponentSlotIndex(this.componentId, false) == param2 &&
           this.field_C <= 0) {
           if (param0 >= this.field_K &&
             this.field_W >= param0) {
-            qi.field_k = true;
-            if (sl.field_i != MidiPcmStream.field_P) {
+            LoginCredentialHelpers.field_k = true;
+            if (ArchiveLoadStep.field_i != MidiPcmStream.field_P) {
               if (MidiPcmStream.field_P < this.field_W) {
                 MidiPcmStream.field_P = this.field_W;
               }
-              if (!(this.field_K >= sl.field_i)) {
-                sl.field_i = this.field_K;
+              if (!(this.field_K >= ArchiveLoadStep.field_i)) {
+                ArchiveLoadStep.field_i = this.field_K;
                 if (var5 != 0) {
-                  sl.field_i = this.field_K;
+                  ArchiveLoadStep.field_i = this.field_K;
                   MidiPcmStream.field_P = this.field_W;
                 }
               }
             } else {
-              sl.field_i = this.field_K;
+              ArchiveLoadStep.field_i = this.field_K;
               MidiPcmStream.field_P = this.field_W;
             }
             this.rotation = param0;
@@ -1490,21 +1490,21 @@ final class ArticulatedPart extends DualNode {
           }
           if ((decompiledFrameCompleted0) &&
             (decompiledFrameRemainder0)) {
-            if (!qi.field_k) {
-              if (sl.field_i != MidiPcmStream.field_P) {
-                if (sl.field_i > this.field_K) {
-                  sl.field_i = this.field_K;
+            if (!LoginCredentialHelpers.field_k) {
+              if (ArchiveLoadStep.field_i != MidiPcmStream.field_P) {
+                if (ArchiveLoadStep.field_i > this.field_K) {
+                  ArchiveLoadStep.field_i = this.field_K;
                 }
                 if (!(this.field_W <= MidiPcmStream.field_P)) {
                   MidiPcmStream.field_P = this.field_W;
                   if (var5 != 0) {
                     MidiPcmStream.field_P = this.field_W;
-                    sl.field_i = this.field_K;
+                    ArchiveLoadStep.field_i = this.field_K;
                   }
                 }
               } else {
                 MidiPcmStream.field_P = this.field_W;
-                sl.field_i = this.field_K;
+                ArchiveLoadStep.field_i = this.field_K;
               }
             }
             decompiledFrameRemainder0 = (this.field_S != null);
@@ -1525,7 +1525,7 @@ final class ArticulatedPart extends DualNode {
               break;
             }
             if (null != this.instructions[var4].attachedPart) {
-              this.instructions[var4].attachedPart.a(param0, -90, param2);
+              this.instructions[var4].attachedPart.updateAimRange(param0, -90, param2);
             }
             var4++;
           }
@@ -1533,16 +1533,16 @@ final class ArticulatedPart extends DualNode {
 
     }
 
-    final static boolean f(byte param0) {
+    final static boolean isMemberSession(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -14) {
           return false;
         }
-        stackIn_6_0 = (!ni.b(24)) && (rd.field_b > 0);
+        stackIn_6_0 = (!ByteArrayPoolHelpers.isAccountCreationMode(24)) && (SpriteLoadingHelpers.field_b > 0);
         return stackIn_6_0;
     }
 
-    final PartInstruction a(int param0, int param1) {
+    final PartInstruction findSlotForType(int param0, int param1) {
         PartInstruction[] var3;
         int var4;
         PartInstruction var5;
@@ -1567,7 +1567,7 @@ final class ArticulatedPart extends DualNode {
             if (param1 == var5.attachedPart.field_Q) {
               return var5;
             }
-            var6 = var5.attachedPart.a(param0 + 0, param1);
+            var6 = var5.attachedPart.findSlotForType(param0 + 0, param1);
             if (var6 != null) {
               return var6;
             }
@@ -1580,7 +1580,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    private final void e(int param0, int param1) {
+    private final void accumulateReadyWeapons(int param0, int param1) {
         ArticulatedPart[] discarded$1 = null;
         int var3;
         int var4;
@@ -1588,9 +1588,9 @@ final class ArticulatedPart extends DualNode {
         var4 = SteelSentinels.obfuscationControl;
         if (param1 != 5307) {
           var5 = (ArticulatedPart[]) null;
-          discarded$1 = this.a((ArticulatedPart[]) null, 24);
+          discarded$1 = this.collectWeaponParts((ArticulatedPart[]) null, 24);
         }
-        if (param0 == ja.a(this.componentId, false)) {
+        if (param0 == IconLookupHelpers.getComponentSlotIndex(this.componentId, false)) {
           if (0 >= this.field_C) {
             CachedTextLayout.field_t = CachedTextLayout.field_t + 1;
             if ((var4 != 0) && (NanoTickClock.field_p == -1 ||
@@ -1603,13 +1603,13 @@ final class ArticulatedPart extends DualNode {
               NanoTickClock.field_p = this.field_C;
             }
           }
-          ed.field_f = -17 + this.componentId;
+          SessionSeedHelpers.field_f = -17 + this.componentId;
         }
         var3 = 0;
         while (this.instructions.length > var3) {
           if (var4 == 0) {
             if (this.instructions[var3].attachedPart != null) {
-              this.instructions[var3].attachedPart.e(param0, 5307);
+              this.instructions[var3].attachedPart.accumulateReadyWeapons(param0, 5307);
             }
             var3++;
             continue;
@@ -1618,7 +1618,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    final static int b(int param0, int param1, int param2) {
+    final static int getDaysInMonth(int param0, int param1, int param2) {
         if (param1 == 1 &&
           EmailFormatError.isLeapYear(-15020, param2)) {
           return 29;
@@ -1629,7 +1629,7 @@ final class ArticulatedPart extends DualNode {
         return PacketBuffer.field_s[param1];
     }
 
-    final PartInstruction[] a(PartInstruction[] param0, int param1, int param2) {
+    final PartInstruction[] collectSlotsAcceptingType(PartInstruction[] param0, int param1, int param2) {
         int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
         PartInstruction[] stackIn_21_0 = null;
@@ -1666,7 +1666,7 @@ final class ArticulatedPart extends DualNode {
                 param0 = var5;
               }
               if (null != this.instructions[var4_int].attachedPart) {
-                param0 = this.instructions[var4_int].attachedPart.a(param0, -21636, param2);
+                param0 = this.instructions[var4_int].attachedPart.collectSlotsAcceptingType(param0, -21636, param2);
               }
               var4_int++;
               continue;
@@ -1696,7 +1696,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    final void a(int param0, int param1, int[] param2) {
+    final void accumulateAimCoverage(int param0, int param1, int[] param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -1710,7 +1710,7 @@ final class ArticulatedPart extends DualNode {
         var5 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameCompleted0 = true;
-          if (param0 == ja.a(this.componentId, false) &&
+          if (param0 == IconLookupHelpers.getComponentSlotIndex(this.componentId, false) &&
             this.field_C <= 0) {
             var4_int = this.field_K;
             while (this.field_W > var4_int) {
@@ -1740,7 +1740,7 @@ final class ArticulatedPart extends DualNode {
               return;
             }
             if (null != this.instructions[var4_intLifetime1].attachedPart) {
-              this.instructions[var4_intLifetime1].attachedPart.a(param0, -1, param2);
+              this.instructions[var4_intLifetime1].attachedPart.accumulateAimCoverage(param0, -1, param2);
             }
             var4_intLifetime1++;
           }
@@ -1761,7 +1761,7 @@ final class ArticulatedPart extends DualNode {
 
     ArticulatedPart(ArticulatedPart param0) {
         try {
-          this.a(-353384856, true, param0);
+          this.initFromTemplate(-353384856, true, param0);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -1769,7 +1769,7 @@ final class ArticulatedPart extends DualNode {
 
     ArticulatedPart(ArticulatedPart param0, boolean param1) {
         try {
-          this.a(-353384856, param1, param0);
+          this.initFromTemplate(-353384856, param1, param0);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1820,7 +1820,7 @@ final class ArticulatedPart extends DualNode {
         int var3 = 0;
         int var2 = 0;
         int var1 = 0;
-        field_F = new dj(3);
+        field_F = new NumberParsingHelpers(3);
         field_M = new int[98304];
         for (var0 = 92682; var0 >= 46341; var0--) {
           var4 = (long)(-1 + (var0 << 1));
@@ -1834,7 +1834,7 @@ final class ArticulatedPart extends DualNode {
             field_M[var1] = var0;
           }
         }
-        field_O = new fm(9, 0, 4, 1);
+        field_O = new QuickChatParameterType(9, 0, 4, 1);
         field_P = "Accept <%0> into this game";
         field_J = 0;
         field_X = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};

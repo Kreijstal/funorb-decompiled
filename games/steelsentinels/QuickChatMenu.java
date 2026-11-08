@@ -60,27 +60,27 @@ final class QuickChatMenu extends SceneWidget {
             this.setCollapseTicks(-89, 0);
             this.field_Sb = param0;
             this.field_mc = this.field_Vb[this.field_Sb];
-            MouseInputHandler.a(this.field_mc, -116);
+            MouseInputHandler.showQuickChatMenu(this.field_mc, -116);
             this.field_mc.setCollapseTicks(43, 12);
           } else {
             if (this.field_bc[param0] == -1) {
-              AccountNoticeDialog.m(-6);
-              WidgetStyleLayer.a(2);
+              AccountNoticeDialog.openQuickChatHelp(-6);
+              WidgetStyleLayer.closeQuickChatMenu(2);
             } else {
               var5 = this.field_bc[param0] | 32768;
               var6 = ChatPanelHelpers.field_b;
               if (var6 == 0 &&
-                null != nf.field_b) {
+                null != LoginEncryptionHelpers.field_b) {
                 var6 = 1;
               }
-              if (NameAvailabilityValidator.a(var6, 1) == 2) {
-                TextLayoutLine.a(1, var6, param1, -18853);
+              if (NameAvailabilityValidator.getChatFilterMode(var6, 1) == 2) {
+                TextLayoutLine.setChatFilterMode(1, var6, param1, -18853);
               }
               var8 = (String) null;
               QuickChatPhraseCache.sendReport(param2, LoadingScreenHelpers.field_e, -6988, ChatPanelHelpers.field_b, var5, (String) null);
               SentinelAnimationEditor.storeInviteRequest(ImageProducerRasterBuffer.field_p, LoadingScreenHelpers.field_e, ChatPanelHelpers.field_b, -29368, var5);
-              WidgetStyleLayer.a(2);
-              wi.c((byte) -119);
+              WidgetStyleLayer.closeQuickChatMenu(2);
+              SpriteState.resetRetryBackoff((byte) -119);
             }
           }
         }
@@ -105,7 +105,7 @@ final class QuickChatMenu extends SceneWidget {
           if (param1 != 7411) {
             field_Tb = (String) null;
           }
-          uc.field_e[param2] = param0;
+          DesignerPageTables.field_e[param2] = param0;
           GameKeyHandler.field_e[param2] = new SentinelDesigner(param2);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "mg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -154,7 +154,7 @@ final class QuickChatMenu extends SceneWidget {
           var12 = "</col>";
           for (var13 = 0; var13 < this.field_dc; var13++) {
             if (0 < this.field_cc[var13]) {
-              param6[var13] = var11 + ArchiveProvider.a(this.field_cc[var13], 29448).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + ArchiveProvider.charToString(this.field_cc[var13], 29448).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (null != this.field_Vb[var13] ||
@@ -328,7 +328,7 @@ final class QuickChatMenu extends SceneWidget {
         if (this.field_mc == null &&
           this == IntKeyLookup.field_i &&
           var4 != 0) {
-          WidgetStyleLayer.a(2);
+          WidgetStyleLayer.closeQuickChatMenu(2);
           return true;
         }
         var5 = LoginMethod.field_c;

@@ -21,7 +21,7 @@ final class BufferedSocket implements Runnable {
     private SystemTaskService field_a;
     private boolean field_f;
 
-    final void a(boolean param0) throws IOException {
+    final void checkWriteError(boolean param0) throws IOException {
         if (this.field_f) {
           return;
         }
@@ -30,12 +30,12 @@ final class BufferedSocket implements Runnable {
           throw new IOException();
         }
         if (!param0) {
-          BufferedSocket.a((byte) -109, '`');
+          BufferedSocket.normalizeNameCharacter((byte) -109, '`');
           return;
         }
     }
 
-    final static QuickChatMenu a(SceneWidget param0, QuickChatCategory param1, boolean param2, SceneWidget param3, SceneWidget param4) {
+    final static QuickChatMenu createQuickChatMenu(SceneWidget param0, QuickChatCategory param1, boolean param2, SceneWidget param3, SceneWidget param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
@@ -104,10 +104,10 @@ final class BufferedSocket implements Runnable {
           var11 = new QuickChatMenu[var7];
           if (param1.field_C != null) {
             for (var12 = 0; param1.field_C.length > var12; var12++) {
-              var13_ref_mn = cd.field_e.getCategory((byte) -13, param1.field_C[var12]);
+              var13_ref_mn = QuickChatPacketHelpers.field_e.getCategory((byte) -13, param1.field_C[var12]);
               var8[var12] = var13_ref_mn.field_D;
               var9[var12] = param1.field_z[var12];
-              var11[var12] = BufferedSocket.a(param0, var13_ref_mn, false, param3, param4);
+              var11[var12] = BufferedSocket.createQuickChatMenu(param0, var13_ref_mn, false, param3, param4);
             }
           }
           if (null != param1.field_A) {
@@ -171,7 +171,7 @@ final class BufferedSocket implements Runnable {
         field_i = null;
         if (param0 > -43) {
           SceneWidget var2 = (SceneWidget) null;
-          BufferedSocket.a(30, -23, (SceneWidget) null, -70, 104, (SceneWidget) null, (byte[]) null, (byte) 72, (SceneWidget) null, 102);
+          BufferedSocket.initializeLobbyState(30, -23, (SceneWidget) null, -70, 104, (SceneWidget) null, (byte[]) null, (byte) 72, (SceneWidget) null, 102);
           return;
         }
     }
@@ -196,7 +196,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_o) {
             while (this.field_o.field_a == 0) {
-              MouseWheelInput.a((byte) 120, 1L);
+              MouseWheelInput.sleepMillis((byte) 120, 1L);
             }
             if (this.field_o.field_a == 1) {
               try {
@@ -353,7 +353,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static void a(int param0, int param1, SceneWidget param2, int param3, int param4, SceneWidget param5, byte[] param6, byte param7, SceneWidget param8, int param9) {
+    final static void initializeLobbyState(int param0, int param1, SceneWidget param2, int param3, int param4, SceneWidget param5, byte[] param6, byte param7, SceneWidget param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -371,16 +371,16 @@ final class BufferedSocket implements Runnable {
         var12 = SteelSentinels.obfuscationControl;
         try {
           GameplayController.field_G = -1L;
-          wb.field_j = param6;
+          RewardValueHelpers.field_j = param6;
           NanoTickClock.field_v = param1;
           UrlAndReplyHelpers.field_a = param6.length;
           LoadoutHelpers.field_f = false;
           rb.field_i = new byte[(NanoTickClock.field_v + 7) / 8];
-          nf.field_b = null;
-          ni.field_a = null;
+          LoginEncryptionHelpers.field_b = null;
+          ByteArrayPoolHelpers.field_a = null;
           var10_int = 0;
-          for (var11 = 0; wb.field_j.length > var11; var11++) {
-            var10_int = var10_int + (255 & wb.field_j[var11]);
+          for (var11 = 0; RewardValueHelpers.field_j.length > var11; var11++) {
+            var10_int = var10_int + (255 & RewardValueHelpers.field_j[var11]);
           }
           var10_int = (var10_int + 7) / 8;
           ImageProducerRasterBuffer.field_s = new byte[var10_int];
@@ -389,25 +389,25 @@ final class BufferedSocket implements Runnable {
           }
           IterableNodeHashTable.field_m = param5.field_M;
           IterableNodeHashTable.field_m.clear(6);
-          t.field_c = new DualNodeHashTable(param0);
+          NameTable.field_c = new DualNodeHashTable(param0);
           if (param7 >= -10) {
             return;
           }
           QuickChatInputHelpers.field_b = -1;
-          ja.field_a = 0;
+          IconLookupHelpers.field_a = 0;
           MusicPatchEnvelope.field_j = 0;
-          ud.field_D = -1;
+          RankingQuery.field_D = -1;
           if (null == param8.field_M) {
             param8.field_M = new NodeDeque();
           }
           ClientErrorSupport.field_e = param8.field_M;
           ClientErrorSupport.field_e.clear(6);
-          fm.field_a = new DualNodeHashTable(param3);
+          QuickChatParameterType.field_a = new DualNodeHashTable(param3);
           if (param2.field_M == null) {
             param2.field_M = new NodeDeque();
           }
-          o.field_d = param2.field_M;
-          o.field_d.clear(6);
+          SocialStateHelpers.field_d = param2.field_M;
+          SocialStateHelpers.field_d.clear(6);
           LoginCredentials.field_b = new DualNodeHashTable(param4);
           ModalStack.field_R = 0L;
           Js5ArchiveManager.field_l = param9;
@@ -476,7 +476,7 @@ final class BufferedSocket implements Runnable {
         this.close(12110);
     }
 
-    final static char a(byte param0, char param1) {
+    final static char normalizeNameCharacter(byte param0, char param1) {
         int var2;
         int var3;
         var3 = SteelSentinels.obfuscationControl;
@@ -655,7 +655,7 @@ final class BufferedSocket implements Runnable {
         return Character.toLowerCase(param1);
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, int param3) throws IOException {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;

@@ -206,7 +206,7 @@ final class MusicCrossfadeStream extends PcmStream {
             field_x = (RgbSprite[]) null;
           }
           var6 = new ChatMessage(param5, param4, param2, param0, param1);
-          tf.a(var6, (byte) -107);
+          ChatHistoryHelpers.appendChatHistory(var6, (byte) -107);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "sj.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -308,7 +308,7 @@ final class MusicCrossfadeStream extends PcmStream {
           try {
             var3 = "";
             if (param2 != null) {
-              var3 = AlternateUsernameCredentials.a((byte) -85, param2);
+              var3 = AlternateUsernameCredentials.formatThrowable((byte) -85, param2);
             }
             if (param0 != null) {
               if (param2 != null) {
@@ -316,7 +316,7 @@ final class MusicCrossfadeStream extends PcmStream {
               }
               var3 = var3 + param0;
             }
-            SentinelDesigner.a(var3, -29771);
+            SentinelDesigner.printError(var3, -29771);
             if (param1 >= -13) {
               return;
             }
@@ -343,7 +343,7 @@ final class MusicCrossfadeStream extends PcmStream {
             }
             var4 = ((SystemTaskService) (Object) stackIn_15_0).requestUrlStream(new java.net.URL(stackIn_15_3, ((StringBuilder) (Object) stackIn_15_4).append(stackIn_16_5).append("&v1=").append(SystemTaskService.field_p).append("&v2=").append(SystemTaskService.field_r).append("&e=").append(var10).toString()), 38);
             while (var4.field_a == 0) {
-              MouseWheelInput.a((byte) 126, 1L);
+              MouseWheelInput.sleepMillis((byte) 126, 1L);
             }
             if (var4.field_a == 1) {
               var5 = (DataInputStream) (var4.field_c);
@@ -406,7 +406,7 @@ final class MusicCrossfadeStream extends PcmStream {
               var5 <= DelegatingCanvas.field_c) {
               var1_int = 1;
             }
-            ViewportController.a(0, 48, var2, false, 480, var5);
+            ViewportController.drawVerticalGrayGradient(0, 48, var2, false, 480, var5);
             var6 = var5 - 1;
             var7 = var5 + 1;
             var8 = (int)(((double)var5 - var3) * 256.0);
@@ -420,7 +420,7 @@ final class MusicCrossfadeStream extends PcmStream {
               var12 = var12 * (-var9 + 256) / 256;
               var13 = var13 * (256 - var9) / 256;
               var9 = var9 * 6 / 7;
-              SoftwareRaster.field_g[var10] = DateOfBirthValidator.a(DateOfBirthValidator.a(var11 << 16, var12 << 8), var13);
+              SoftwareRaster.field_g[var10] = DateOfBirthValidator.bitOr(DateOfBirthValidator.bitOr(var11 << 16, var12 << 8), var13);
             }
             SoftwareRaster.drawVerticalLine(var2, var6, -var6 + var7, 4210752);
             if (var8 >= 0) {
@@ -432,7 +432,7 @@ final class MusicCrossfadeStream extends PcmStream {
               var13Lifetime1 = (var13Lifetime1 * (256 - var8) + var14) / 256;
               var12Lifetime1 = (var14 + var12Lifetime1 * (256 - var8)) / 256;
               var11Lifetime1 = (var14 + var11Lifetime1 * (256 - var8)) / 256;
-              SoftwareRaster.field_g[var10Lifetime1] = DateOfBirthValidator.a(var13Lifetime1, DateOfBirthValidator.a(var11Lifetime1 << 16, var12Lifetime1 << 8));
+              SoftwareRaster.field_g[var10Lifetime1] = DateOfBirthValidator.bitOr(var13Lifetime1, DateOfBirthValidator.bitOr(var11Lifetime1 << 16, var12Lifetime1 << 8));
               var10Lifetime1Lifetime1 = var2 + SoftwareRaster.field_c * var7;
               var13Lifetime1Lifetime1 = 255 & SoftwareRaster.field_g[var10Lifetime1Lifetime1];
               var14Lifetime1 = 16384 - var8 * 64;
@@ -441,7 +441,7 @@ final class MusicCrossfadeStream extends PcmStream {
               var11Lifetime1Lifetime1 = (var11Lifetime1Lifetime1 * var8 + var14Lifetime1) / 256;
               var13Lifetime1Lifetime1 = (var13Lifetime1Lifetime1 * var8 + var14Lifetime1) / 256;
               var12Lifetime1Lifetime1 = (var8 * var12Lifetime1Lifetime1 + var14Lifetime1) / 256;
-              SoftwareRaster.field_g[var10Lifetime1Lifetime1] = DateOfBirthValidator.a(DateOfBirthValidator.a(var12Lifetime1Lifetime1 << 8, var11Lifetime1Lifetime1 << 16), var13Lifetime1Lifetime1);
+              SoftwareRaster.field_g[var10Lifetime1Lifetime1] = DateOfBirthValidator.bitOr(DateOfBirthValidator.bitOr(var12Lifetime1Lifetime1 << 8, var11Lifetime1Lifetime1 << 16), var13Lifetime1Lifetime1);
             }
           }
           stackIn_17_0 = var1_int;
@@ -570,7 +570,7 @@ final class MusicCrossfadeStream extends PcmStream {
 
     final static int getTargetFrameRate(byte param0) {
         int var1 = -51 % ((-72 - param0) / 33);
-        return (int)(1000000000L / ud.field_v);
+        return (int)(1000000000L / RankingQuery.field_v);
     }
 
     final PcmStream nextSubstream() {

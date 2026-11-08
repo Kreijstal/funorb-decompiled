@@ -14,7 +14,7 @@ final class NodeHashTableIterator implements Iterator {
     private int field_b;
     private IntrusiveNode field_c;
 
-    final static void a(PcmSampleStream param0, byte param1) {
+    final static void removeSoundStream(PcmSampleStream param0, byte param1) {
         try {
           int var2_int = -112 % ((-14 - param1) / 32);
           UiTheme.field_e.removeSubstream(param0);
@@ -23,7 +23,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    final static void a(IndexedSprite[] param0, ResourceArchive param1, String[] param2, int[] param3, int param4, String[] param5, String[][] param6, int param7, ResourceArchive param8, byte param9, String[][] param10, RgbSprite[][] param11, ResourceArchive param12, byte[] param13, RgbSprite[][] param14, boolean param15, int[] param16, int param17, String[] param18, byte[] param19) {
+    final static void initializeLobbyUi(IndexedSprite[] param0, ResourceArchive param1, String[] param2, int[] param3, int param4, String[] param5, String[][] param6, int param7, ResourceArchive param8, byte param9, String[][] param10, RgbSprite[][] param11, ResourceArchive param12, byte[] param13, RgbSprite[][] param14, boolean param15, int[] param16, int param17, String[] param18, byte[] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -63,13 +63,13 @@ final class NodeHashTableIterator implements Iterator {
           VerticalScrollbar.loadDisplayNameSprites((byte) 109, param8);
           if (param9 != 94) {
             var21 = (byte[]) null;
-            NodeHashTableIterator.a((IndexedSprite[]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 58, (String[]) null, (String[][]) null, -8, (ResourceArchive) null, (byte) -10, (String[][]) null, (RgbSprite[][]) null, (ResourceArchive) null, (byte[]) null, (RgbSprite[][]) null, true, (int[]) null, 95, (String[]) null, (byte[]) null);
+            NodeHashTableIterator.initializeLobbyUi((IndexedSprite[]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 58, (String[]) null, (String[][]) null, -8, (ResourceArchive) null, (byte) -10, (String[][]) null, (RgbSprite[][]) null, (ResourceArchive) null, (byte[]) null, (RgbSprite[][]) null, true, (int[]) null, 95, (String[]) null, (byte[]) null);
           }
           LobbySetupHelpers.initializeGameOptions(param7, param16, param5, param10, param2, param9 ^ 94, param6, param4, param11, param14, param17, param18, param13, param19, param8);
-          TextHotspotRegion.a(param8, param1, param15, -119);
+          TextHotspotRegion.initializeLobbyChatResources(param8, param1, param15, -119);
           MenuInputState.initializeReportReasonLabels((byte) -115);
-          LoginDialog.m(854);
-          Checkbox.a(false);
+          LoginDialog.buildMainScreenRoots(854);
+          Checkbox.layoutLobbyChat(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -221,7 +221,7 @@ final class NodeHashTableIterator implements Iterator {
         return var3;
     }
 
-    private final void a(int param0) {
+    private final void reset(int param0) {
         this.field_b = 1;
         if (param0 == 29329) {
           this.field_h = null;
@@ -242,7 +242,7 @@ final class NodeHashTableIterator implements Iterator {
           return;
         }
         byte[] var2 = (byte[]) null;
-        NodeHashTableIterator.a((IndexedSprite[]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 96, (String[]) null, (String[][]) null, -31, (ResourceArchive) null, (byte) 116, (String[][]) null, (RgbSprite[][]) null, (ResourceArchive) null, (byte[]) null, (RgbSprite[][]) null, true, (int[]) null, -127, (String[]) null, (byte[]) null);
+        NodeHashTableIterator.initializeLobbyUi((IndexedSprite[]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 96, (String[]) null, (String[][]) null, -31, (ResourceArchive) null, (byte) 116, (String[][]) null, (RgbSprite[][]) null, (ResourceArchive) null, (byte[]) null, (RgbSprite[][]) null, true, (int[]) null, -127, (String[]) null, (byte[]) null);
         field_i = null;
         field_f = null;
         field_e = null;
@@ -253,7 +253,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_h = null;
         try {
           this.field_d = param0;
-          this.a(29329);
+          this.reset(29329);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

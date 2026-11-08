@@ -12,7 +12,7 @@ final class ParticleEffect extends DualNode {
     int effectType;
     int velocityY;
     static String[][] field_y;
-    static fm field_H;
+    static QuickChatParameterType field_H;
     CombatWorld world;
     int ageTicks;
     int worldX;
@@ -51,7 +51,7 @@ final class ParticleEffect extends DualNode {
             var6 = WeightedCacheEntry.field_C;
           }
           var7 = 8 * MouseWheelInput.field_c / 50 % var6.length;
-          LoginMethod.a(-param1 + param4, param3 - param1, vh.field_b, param0 + 2 * param1, 160, (byte) -31, param1 * 2 + param5);
+          LoginMethod.drawNineSliceFrame(-param1 + param4, param3 - param1, KeyRoutingHelpers.field_b, param0 + 2 * param1, 160, (byte) -31, param1 * 2 + param5);
           var6[var7].drawSilhouette(param4, param3, 2254472);
           SoftwareRaster.blurRectangle(16, 4, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
           if (param2 < 26) {
@@ -258,7 +258,7 @@ final class ParticleEffect extends DualNode {
 
     final void detachWorld(int obfuscationGuard) {
         if (obfuscationGuard != -15809) {
-          field_H = (fm) null;
+          field_H = (QuickChatParameterType) null;
         }
         this.world = null;
     }
@@ -267,7 +267,7 @@ final class ParticleEffect extends DualNode {
         if (param0 != 2) {
           ParticleEffect.drawAnimatedHighlightBox(-13, 21, (byte) 84, -39, 29, 95);
         }
-        return wb.field_c == null ? DelayedServerPacket.field_q : true;
+        return RewardValueHelpers.field_c == null ? DelayedServerPacket.field_q : true;
     }
 
     final void advanceParticle(byte obfuscationGuard) {
@@ -361,14 +361,14 @@ final class ParticleEffect extends DualNode {
 
     final static void showSavedLayout(int param0, int param1, String param2, int param3, String param4) {
         try {
-          vd.field_d.field_zb = vd.field_d.field_zb + DualNodeDequeIterator.field_e.field_zb;
-          vd.field_d.field_Db = param4;
-          vd.field_d.field_S = param2;
-          vd.field_d.field_nb = param1;
+          TransitionTimerHelpers.field_d.field_zb = TransitionTimerHelpers.field_d.field_zb + DualNodeDequeIterator.field_e.field_zb;
+          TransitionTimerHelpers.field_d.field_Db = param4;
+          TransitionTimerHelpers.field_d.field_S = param2;
+          TransitionTimerHelpers.field_d.field_nb = param1;
           int var5_int = -48 % ((-12 - param0) / 61);
           DualNodeDequeIterator.field_e.field_Y = DualNodeDequeIterator.field_e.field_Y + DualNodeDequeIterator.field_e.field_zb;
           DualNodeDequeIterator.field_e.field_zb = param3;
-          vd.field_d.field_zb = vd.field_d.field_zb - DualNodeDequeIterator.field_e.field_zb;
+          TransitionTimerHelpers.field_d.field_zb = TransitionTimerHelpers.field_d.field_zb - DualNodeDequeIterator.field_e.field_zb;
           DualNodeDequeIterator.field_e.field_Y = DualNodeDequeIterator.field_e.field_Y - DualNodeDequeIterator.field_e.field_zb;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qb.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -454,11 +454,11 @@ final class ParticleEffect extends DualNode {
             }
             if (param0.componentId == 76) {
               var8 -= 20;
-              param0 = NodeDeque.a(102, (byte) 67);
+              param0 = NodeDeque.findPartDefinition(102, (byte) 67);
             }
             if (66 == param0.componentId) {
               var8 -= 20;
-              param0 = NodeDeque.a(99, (byte) 67);
+              param0 = NodeDeque.findPartDefinition(99, (byte) 67);
             }
             if (param0.field_Q == 2048) {
               var9 -= 20;
@@ -1246,10 +1246,10 @@ final class ParticleEffect extends DualNode {
               param4 > 100) {
               var8 -= 5;
             }
-            param0.a(0, false, var8, var9, (byte) 49, 16384);
+            param0.positionPartTree(0, false, var8, var9, (byte) 49, 16384);
             MusicPatchNode.field_w = var10;
             if (var12 == 0) {
-              Checkbox.field_bb.b((byte) 123);
+              Checkbox.field_bb.bindRaster((byte) 123);
               return;
             }
           }
@@ -1290,9 +1290,9 @@ final class ParticleEffect extends DualNode {
           if (param0.componentId == 92) {
             MusicPatchNode.field_w = 700;
           }
-          param0.a(0, false, param4 / 2, param5, (byte) 49, 0);
+          param0.positionPartTree(0, false, param4 / 2, param5, (byte) 49, 0);
           MusicPatchNode.field_w = var8Lifetime1;
-          Checkbox.field_bb.b((byte) 123);
+          Checkbox.field_bb.bindRaster((byte) 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1316,7 +1316,7 @@ final class ParticleEffect extends DualNode {
 
     static {
         field_y = new String[][]{new String[]{"Tactical<br>Two-second delay before actions", "Action<br>Very little delay before actions.<br><col=ff0000>This mode is only recommended if you have a good internet connection.</col>"}, new String[]{"Only the default versions of the Slave, Aquila and Golem are allowed within smaller battles.", "Any sentinel with a tech value in the standard range may participate.", "Any sentinel with any tech value may participate in large battles.", "High-tech designs are allowed within larger battles.", "All designs of sentinel are available for massive battles."}, new String[]{"War Zone<br>Join in the eternal solarite war.<br>Anything goes in this massive free-for-all arena!<br>Free-for-all", "Lost World<br>Your team has ten minutes to claim victory before the battle in orbit reaches the surface!<br>Top vs bottom teams", "City<br>This pitted landscape is all that remains of a once mighty metropolis.<br>Collect the MGFN technology and hold it for extra points.<br>Free-for-all", "Moon<br>A crashed cruiser occupies this world. Use its shields for defence and earn extra points while you occupy it.<br>Free-for-all", "Star Fleet<br>Bring your team victory in an epic struggle against the opposing star cruiser!<br>Reach the enemy ship then return safely to help your team win.<br>Top vs bottom team, Capture the Flag", "Co-op Campaign<br>Take your sentinel to aid in the epic fight to maintain the flow of solarite.<br>2-player, Unrated only"}};
-        field_H = new fm(10, 2, 2, 0);
+        field_H = new QuickChatParameterType(10, 2, 2, 0);
         field_C = "Enter multiplayer lobby";
         field_N = "Confirm Password: ";
     }

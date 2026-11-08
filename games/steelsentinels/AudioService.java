@@ -13,11 +13,11 @@ final class AudioService implements Runnable {
     static String[] field_g;
     volatile boolean field_f;
 
-    final static void a(int param0, boolean param1, boolean param2, int param3) {
+    final static void drawScreen(int param0, boolean param1, boolean param2, int param3) {
         int var5 = SteelSentinels.obfuscationControl;
         int var4 = 83 % ((param3 - 35) / 50);
         if (param0 == -1) {
-          qf.a(param2, (byte) -122);
+          RankingAndRasterHelpers.drawCurrentScreen(param2, (byte) -122);
           return;
         }
         if (param0 == -2) {
@@ -25,9 +25,9 @@ final class AudioService implements Runnable {
           return;
         }
         if (param1) {
-          qf.a(false, (byte) -117);
+          RankingAndRasterHelpers.drawCurrentScreen(false, (byte) -117);
         }
-        GameKeyHandler.field_e[param0].r(0);
+        GameKeyHandler.field_e[param0].drawScreen(0);
     }
 
     public final void run() {
@@ -50,8 +50,8 @@ final class AudioService implements Runnable {
                   var2.serviceOutput();
                 }
               }
-              MouseWheelInput.a((byte) 118, 10L);
-              StrongCacheEntry.a((Object) null, 50, this.field_j);
+              MouseWheelInput.sleepMillis((byte) 118, 10L);
+              StrongCacheEntry.pumpPlatformEvents((Object) null, 50, this.field_j);
             }
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -73,7 +73,7 @@ final class AudioService implements Runnable {
         this.field_f = false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_i = null;
         field_g = null;

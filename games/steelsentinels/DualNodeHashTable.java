@@ -104,7 +104,7 @@ final class DualNodeHashTable {
         try {
           var1_int = SingleChildContainer.field_Q;
           var2 = 0;
-          if (in.field_a == 2) {
+          if (SocialPacketHelpers.field_a == 2) {
             var3_long = -rb.field_c + ClockAndCookieHelpers.monotonicMillis(117);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
@@ -123,7 +123,7 @@ final class DualNodeHashTable {
               }
             }
             var6 = ProxySocketConnector.field_j[var3];
-            if (2 == in.field_a &&
+            if (2 == SocialPacketHelpers.field_a &&
               var2 == 1) {
               if (MessageMenuHelpers.field_d.length > EmailAvailabilityValidator.field_n.length) {
                 stackIn_18_0 = MessageMenuHelpers.field_d.length;
@@ -131,8 +131,8 @@ final class DualNodeHashTable {
                 stackIn_18_0 = EmailAvailabilityValidator.field_n.length;
               }
               var7 = stackIn_18_0;
-              if (MouseWheelInput.field_g.length <= dj.field_j.length) {
-                stackIn_21_0 = dj.field_j.length;
+              if (MouseWheelInput.field_g.length <= NumberParsingHelpers.field_j.length) {
+                stackIn_21_0 = NumberParsingHelpers.field_j.length;
               } else {
                 stackIn_21_0 = MouseWheelInput.field_g.length;
               }
@@ -148,8 +148,8 @@ final class DualNodeHashTable {
               }
               if (var3 >= 7 + var7 &&
                 var7 + (7 + var8) > var3) {
-                if (dj.field_j.length > -7 + var3 - var7) {
-                  stackIn_32_0 = dj.field_j[-var7 - 7 + var3];
+                if (NumberParsingHelpers.field_j.length > -7 + var3 - var7) {
+                  stackIn_32_0 = NumberParsingHelpers.field_j[-var7 - 7 + var3];
                 } else {
                   stackIn_32_0 = "";
                 }
@@ -166,23 +166,23 @@ final class DualNodeHashTable {
             var8Lifetime1 = QuickChatMenu.field_kc - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (DualNodeDeque.field_f.field_e != var4) {
-                stackIn_44_0 = vd.field_f;
+                stackIn_44_0 = TransitionTimerHelpers.field_f;
               } else {
                 stackIn_44_0 = TextAndMenuHelpers.field_c;
               }
               var9 = stackIn_44_0;
               var1_int = var1_int + MembershipPromotionScreen.field_m;
               if (var9 != null) {
-                var9.drawFrame(var7Lifetime1 + (ud.field_y << 1), -15203, var8Lifetime1 - ud.field_y, (SectorCacheStore.field_j << 1) + rn.field_q, var1_int);
+                var9.drawFrame(var7Lifetime1 + (RankingQuery.field_y << 1), -15203, var8Lifetime1 - RankingQuery.field_y, (SectorCacheStore.field_j << 1) + PendingAckRequest.field_q, var1_int);
               }
               var1_int = var1_int + SectorCacheStore.field_j;
             }
             if (var4 < 0) {
-              pa.field_k.drawLeft(var6, var8Lifetime1, var1_int + GradientOutlineTextPainter.field_s, var5, -1);
+              TutorialStepTable.field_k.drawLeft(var6, var8Lifetime1, var1_int + GradientOutlineTextPainter.field_s, var5, -1);
               var1_int = var1_int + EmailSyntaxValidator.field_r;
             } else {
-              wb.field_a.drawLeft(var6, var8Lifetime1, var1_int + TextFieldValidator.field_l, var5, -1);
-              var1_int = var1_int + (SectorCacheStore.field_j + (MembershipPromotionScreen.field_m + rn.field_q));
+              RewardValueHelpers.field_a.drawLeft(var6, var8Lifetime1, var1_int + TextFieldValidator.field_l, var5, -1);
+              var1_int = var1_int + (SectorCacheStore.field_j + (MembershipPromotionScreen.field_m + PendingAckRequest.field_q));
             }
           }
           if (param0 != -6561) {
@@ -231,7 +231,7 @@ final class DualNodeHashTable {
             stackIn_12_0 = var3;
             return stackIn_12_0;
           }
-          stackIn_10_0 = ValidationHelpWidget.a((byte) 89, var3);
+          stackIn_10_0 = ValidationHelpWidget.copyBytes((byte) 89, var3);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -285,7 +285,7 @@ final class DualNodeHashTable {
 
     final static void setPopupMenuColours(int param0, int param1, int param2, int param3) {
         LoginDialog.field_Fb = param3;
-        o.field_b = param1;
+        SocialStateHelpers.field_b = param1;
         if (param0 > 0) {
           field_h = (BinaryBitmapFont) null;
         }

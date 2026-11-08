@@ -29,7 +29,7 @@ final class ProxyAuthenticationException extends IOException {
     }
 
     final static void setTargetFrameRate(int param0, byte param1) {
-        ud.field_v = 1000000000L / (long)param0;
+        RankingQuery.field_v = 1000000000L / (long)param0;
         int var2 = -47 / ((58 - param1) / 61);
     }
 

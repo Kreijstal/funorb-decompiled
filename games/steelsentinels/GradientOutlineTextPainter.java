@@ -11,7 +11,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
     static int field_q;
 
     GradientOutlineTextPainter(int param0) {
-        this(tj.field_e, param0);
+        this(HighscoreSubmissionFactory.field_e, param0);
     }
 
     public static void releaseStatics(int param0) {
@@ -27,7 +27,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
     public final void drawWidget(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
         try {
           if (param3) {
-            DualNodeDeque.a(param1.field_z + param4, param1.field_x, param1.field_E, param1.field_o + param0, (byte) 116);
+            DualNodeDeque.drawInsetBorder(param1.field_z + param4, param1.field_x, param1.field_E, param1.field_o + param0, (byte) 116);
           }
           super.drawWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
@@ -35,7 +35,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
+    final static String chooseClickPrompt(boolean param0, boolean param1, boolean param2, boolean param3) {
         int var4;
         var4 = 0;
         if (!param1) {
@@ -48,39 +48,39 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
           var4 += 2;
         }
         if (!param3) {
-          return tf.field_d[var4];
+          return ChatHistoryHelpers.field_d[var4];
         }
         var4++;
-        return tf.field_d[var4];
+        return ChatHistoryHelpers.field_d[var4];
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void requestFullscreen(int param0, boolean param1) {
         int var2;
         int var3;
         var3 = SteelSentinels.obfuscationControl;
-        if (rd.field_b <= 0) {
-          if (ni.b(89)) {
+        if (SpriteLoadingHelpers.field_b <= 0) {
+          if (ByteArrayPoolHelpers.isAccountCreationMode(89)) {
             var2 = 0;
           } else {
             var2 = 1;
           }
         } else {
           if (null == AssetDecoders.field_a) {
-            wb.field_c = LabeledField.a(0, IterableDualNodeDeque.field_i, 0, 480, 0, 640);
-            if (null == wb.field_c) {
+            RewardValueHelpers.field_c = LabeledField.openFullscreenCanvas(0, IterableDualNodeDeque.field_i, 0, 480, 0, 640);
+            if (null == RewardValueHelpers.field_c) {
               var2 = 3;
             } else {
               var2 = 2;
-              hg.a((byte) -93, wb.field_c);
+              HighscoreColumnHeader.attachCanvasInput((byte) -93, RewardValueHelpers.field_c);
             }
           } else {
-            wb.field_c = AssetDecoders.field_a.enterFullscreen(param0 ^ -32476);
+            RewardValueHelpers.field_c = AssetDecoders.field_a.enterFullscreen(param0 ^ -32476);
             LobbyGameDecoding.notifyBrowserResize(2, (byte) -31);
-            if (null == wb.field_c) {
+            if (null == RewardValueHelpers.field_c) {
               var2 = 3;
             } else {
               var2 = 2;
-              hg.a((byte) -93, wb.field_c);
+              HighscoreColumnHeader.attachCanvasInput((byte) -93, RewardValueHelpers.field_c);
             }
           }
         }
@@ -93,14 +93,14 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
         if (!ValidationHelpWidget.field_fb) {
           return;
         }
-        cl.a(113, param1, var2);
+        LoginResultHelpers.buildPopupMenu(113, param1, var2);
     }
 
     GradientOutlineTextPainter(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_G, -1, 2147483647, false);
     }
 
-    final static int a(int param0, int param1) {
+    final static int offsetInFiveToNineRange(int param0, int param1) {
         if (param1 < 5) {
           return 0;
         }

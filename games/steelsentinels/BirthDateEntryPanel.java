@@ -14,7 +14,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
     static String field_Q;
     static int[][] field_ab;
 
-    final static String a(int param0, int param1) {
+    final static String specialAttackName(int param0, int param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -34,7 +34,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
     }
 
     public final void onAction(int param0, byte param1, int param2, TextButton param3, int param4) {
-        if (this.field_Z.validator(false).validationState((byte) 21) != vf.field_b) {
+        if (this.field_Z.validator(false).validationState((byte) 21) != RequestResendHelpers.field_b) {
           return;
         }
         try {
@@ -45,12 +45,12 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
         }
     }
 
-    final static java.awt.Container g(int param0) {
-        if (vd.field_c != null) {
-          return (java.awt.Container) ((Object) vd.field_c);
+    final static java.awt.Container getGameContainer(int param0) {
+        if (TransitionTimerHelpers.field_c != null) {
+          return (java.awt.Container) ((Object) TransitionTimerHelpers.field_c);
         }
         int var1 = -117 / ((13 - param0) / 50);
-        return (java.awt.Container) ((Object) Projectile.d((byte) -21));
+        return (java.awt.Container) ((Object) Projectile.getApplet((byte) -21));
     }
 
     public static void releaseStatics(boolean param0) {
@@ -60,14 +60,14 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
         field_Q = null;
         field_W = null;
         if (!param0) {
-          BirthDateEntryPanel.g(-79);
+          BirthDateEntryPanel.getGameContainer(-79);
         }
         field_T = null;
         field_S = null;
         field_U = null;
     }
 
-    final static void a(boolean param0, boolean param1, int param2, byte param3) {
+    final static void updateGameSetupPanel(boolean param0, boolean param1, int param2, byte param3) {
         int stackIn_11_0 = 0;
         SceneWidget stackIn_25_0 = null;
         String stackIn_26_1 = null;
@@ -105,21 +105,21 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
         int var10Lifetime1;
         var12 = SteelSentinels.obfuscationControl;
         try {
-          GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(103, bd.field_c);
-          if (null != ni.field_a) {
-            var15 = rn.field_C;
+          GzipDecoder.layoutSlidingSidePanels(103, SolidSpriteHelpers.field_c);
+          if (null != ByteArrayPoolHelpers.field_a) {
+            var15 = PendingAckRequest.field_C;
             var17 = var15;
-            rn.field_C.field_Lb = 0;
+            PendingAckRequest.field_C.field_Lb = 0;
             var17.field_zb = 0;
             var5 = BoundedUrlRequest.field_q;
             BoundedUrlRequest.field_q.field_Lb = 0;
             var5.field_zb = 0;
-            rh.field_w.field_Lb = 0;
-            var6 = rh.field_w;
+            PendingDataRequest.field_w.field_Lb = 0;
+            var6 = PendingDataRequest.field_w;
             var6.field_zb = 0;
             EmailAvailabilityValidator.field_q.field_S = RasterBuffer.field_g.toUpperCase();
             var7 = (NanoTickClock.field_y.field_zb + 2) / 2;
-            rh.field_w.setBounds(0, -40 + NanoTickClock.field_y.field_Lb, 40, 0, -2 + var7);
+            PendingDataRequest.field_w.setBounds(0, -40 + NanoTickClock.field_y.field_Lb, 40, 0, -2 + var7);
             BoundedUrlRequest.field_q.setBounds(param3 - 66, -40 + NanoTickClock.field_y.field_Lb, 40, var7, NanoTickClock.field_y.field_zb - var7);
             if (ViewportController.field_l.length == 1 &&
               ViewportController.field_l[0] == 2) {
@@ -157,26 +157,26 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
               if (var8 == 0) {
                 stackIn_57_0 = SocialListEntry.field_fc;
               } else {
-                stackIn_57_0 = uj.field_b;
+                stackIn_57_0 = ReflectionCheckHelpers.field_b;
               }
               var16 = stackIn_57_0;
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = rh.field_w.field_L.textWidth(var16) + 3 * rh.field_w.field_L.measureCharacterAdvance('.');
+              var10Lifetime1 = PendingDataRequest.field_w.field_L.textWidth(var16) + 3 * PendingDataRequest.field_w.field_L.measureCharacterAdvance('.');
               if ((Js5NetworkRequest.field_H & 48) == 16) {
                 var9 = var16 + ".";
               }
-              rh.field_w.field_Kb = 0;
-              rh.field_w.field_ub = (-var10Lifetime1 + rh.field_w.field_zb) / 2;
+              PendingDataRequest.field_w.field_Kb = 0;
+              PendingDataRequest.field_w.field_ub = (-var10Lifetime1 + PendingDataRequest.field_w.field_zb) / 2;
               if ((Js5NetworkRequest.field_H & 48) == 32) {
                 var9 = (String) (var9) + "..";
               }
               if ((Js5NetworkRequest.field_H & 48) == 48) {
                 var9 = (String) (var9) + "...";
               }
-              rh.field_w.field_S = (String) (var9);
-              BoundedUrlRequest.field_q.field_S = tj.field_b.toUpperCase();
+              PendingDataRequest.field_w.field_S = (String) (var9);
+              BoundedUrlRequest.field_q.field_S = HighscoreSubmissionFactory.field_b.toUpperCase();
             } else {
               stackIn_25_0 = BoundedUrlRequest.field_q;
               if (var8 != 0) {
@@ -193,7 +193,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
               }
               stackIn_28_0.field_S = SocketConnector.formatTemplate(stackIn_29_1, -30, new String[]{BoundedUrlRequest.field_q.field_S});
               QuickChatCategory.field_E.field_T = true;
-              rh.field_w.field_S = NameCheckResult.field_h;
+              PendingDataRequest.field_w.field_S = NameCheckResult.field_h;
               MembershipPromotionScreen.field_k = true;
               if (HuffmanDecoder.field_b != null) {
                 MembershipPromotionScreen.field_k = false;
@@ -208,7 +208,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
                   HuffmanDecoder.field_h[var13] = false;
                   var13++;
                 }
-                lc.a(-1, -1, ni.field_a, UrlAndReplyHelpers.field_a, -1, -97, 0, true);
+                SettingSearchHelpers.findValidSettingCombination(-1, -1, ByteArrayPoolHelpers.field_a, UrlAndReplyHelpers.field_a, -1, -97, 0, true);
                 if (!(2 > NodeDeque.field_d) &&
                   SoundAndUrlHelpers.field_e[12]) {
                   MembershipPromotionScreen.field_k = true;
@@ -237,7 +237,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
                       }
                     }
                   }
-                  UiTheme.field_i = "<col=A00000>" + wi.field_G + "<br>" + WidgetStyleLayer.field_i + (String) (var9);
+                  UiTheme.field_i = "<col=A00000>" + SpriteState.field_G + "<br>" + WidgetStyleLayer.field_i + (String) (var9);
                 }
               }
             }
@@ -258,18 +258,18 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
           stackIn_82_2 = (param0) && (!param1) && (GzipDecoder.field_c);
           ((SceneWidget) (Object) stackIn_81_0).updateInputFullScreen((byte) stackIn_81_1, stackIn_82_2);
           RegistrationRequestDialog.field_Tb.field_d.processTabPresses(param3 ^ 10066);
-          if (ni.field_a != null) {
+          if (ByteArrayPoolHelpers.field_a != null) {
             if (QuickChatCategory.field_E.field_Eb != 0) {
-              EmailAvailabilityValidator.a(param2, (byte) -80);
+              EmailAvailabilityValidator.sendGameSetupAction(param2, (byte) -80);
             }
             if (0 != BoundedUrlRequest.field_q.field_Eb) {
               if (!LoadoutHelpers.field_f) {
-                DialWidgetPainter.a(-107, param2);
+                DialWidgetPainter.sendGameOptions(-107, param2);
               } else {
-                ml.a((byte) 12, param2);
+                ListRequestHelpers.sendRequestCodeThree((byte) 12, param2);
               }
             }
-            DiskCacheWorker.a(ni.field_a, (byte) -127, param2, true);
+            DiskCacheWorker.updateGameOptionsPanel(ByteArrayPoolHelpers.field_a, (byte) -127, param2, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -289,7 +289,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
         this.refreshLayout((byte) 50);
     }
 
-    final static SceneWidget d(boolean param0) {
+    final static SceneWidget getTabbedPanelContent(boolean param0) {
         if (!param0) {
           field_Q = (String) null;
         }
@@ -310,7 +310,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
           return;
         }
         try {
-          this.field_R.field_K = this.field_Z.validator(false).validationState((byte) 21) == vf.field_b ? true : false;
+          this.field_R.field_K = this.field_Z.validator(false).validationState((byte) 21) == RequestResendHelpers.field_b ? true : false;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "pl.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

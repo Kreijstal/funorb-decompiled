@@ -10,7 +10,7 @@ final class EmailCredentials extends LoginCredentials {
     static String field_k;
     private String field_l;
 
-    final static void b(int param0) {
+    final static void refreshSpecialWeaponFlags(int param0) {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -22,26 +22,26 @@ final class EmailCredentials extends LoginCredentials {
         PartInstruction[] var8 = null;
         var6 = SteelSentinels.obfuscationControl;
         try {
-          lc.field_f = false;
-          qf.field_b = false;
+          SettingSearchHelpers.field_f = false;
+          RankingAndRasterHelpers.field_b = false;
           IconTextComponent.field_Wb = false;
           GameplayController.field_I = false;
           AccountMessagePanel.field_Q = false;
           if (param0 != 50) {
             return;
           }
-          vc.field_d = false;
+          DisplayMode.field_d = false;
           Projectile.field_lb = false;
           LoginDialog.field_Gb = false;
           var8 = new PartInstruction[]{};
-          var7 = PendingIntArrayRequest.field_v.a(var8, -21636, 4095);
+          var7 = PendingIntArrayRequest.field_v.collectSlotsAcceptingType(var8, -21636, 4095);
           var2 = var7;
           for (var3 = 0; var3 < var2.length; var3++) {
             var4 = var2[var3];
             if (null != var4.attachedPart &&
               var4.attachedPart.componentId == 89) {
               IconTextComponent.field_Wb = true;
-              lc.field_f = true;
+              SettingSearchHelpers.field_f = true;
             } else {
               if (null != var4.attachedPart &&
                 var4.attachedPart.componentId == 66) {
@@ -55,7 +55,7 @@ final class EmailCredentials extends LoginCredentials {
                     83 != var4.attachedPart.componentId &&
                     (var4.attachedPart.field_Q & 1008) != 0) {
                     IconTextComponent.field_Wb = true;
-                    var5 = ja.a(var4.attachedPart.componentId, false);
+                    var5 = IconLookupHelpers.getComponentSlotIndex(var4.attachedPart.componentId, false);
                     switch (var5) {
                       case 9:
                       default:
@@ -71,28 +71,28 @@ final class EmailCredentials extends LoginCredentials {
                             if (var5 != 9) {
                               break;
                             }
-                            qf.field_b = true;
+                            RankingAndRasterHelpers.field_b = true;
                             break;
                           }
                           GameplayController.field_I = true;
                           break;
                         }
-                        vc.field_d = true;
+                        DisplayMode.field_d = true;
                         LoginDialog.field_Gb = true;
                         break;
                       case 8:
                         if (var4.attachedPart.componentId == 47) {
                           AccountMessagePanel.field_Q = true;
                         }
-                        vc.field_d = true;
+                        DisplayMode.field_d = true;
                         break;
                       case 7:
                         Projectile.field_lb = true;
-                        vc.field_d = true;
+                        DisplayMode.field_d = true;
                         AccountMessagePanel.field_Q = true;
                         break;
                       case 0:
-                        vc.field_d = true;
+                        DisplayMode.field_d = true;
                         Projectile.field_lb = true;
                         break;
                       case 1:
@@ -104,9 +104,9 @@ final class EmailCredentials extends LoginCredentials {
               }
             }
           }
-          if (dc.field_g == 8 &&
+          if (TableColumns.field_g == 8 &&
             !GameplayController.field_I) {
-            SectorCacheStore.a(false);
+            SectorCacheStore.advanceTutorialStep(false);
           }
           EmailFormatError.field_b = true;
           return;
@@ -120,16 +120,16 @@ final class EmailCredentials extends LoginCredentials {
     final void writeTo(PacketBuffer param0, boolean param1) {
         try {
           param0.writePrefixedString(13588, this.field_m);
-          param0.a(this.field_l, (byte) -83);
+          param0.writeBase38Name(this.field_l, (byte) -83);
           if (param1) {
-            EmailCredentials.b(114);
+            EmailCredentials.refreshSpecialWeaponFlags(114);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "on.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static PlayingSound a(PcmSampleStream param0, int param1) {
+    final static PlayingSound playStream(PcmSampleStream param0, int param1) {
         PlayingSound var2 = null;
         RuntimeException var2_ref = null;
         PlayingSound stackIn_2_0 = null;
@@ -162,7 +162,7 @@ final class EmailCredentials extends LoginCredentials {
         }
     }
 
-    final dj type(byte param0) {
+    final NumberParsingHelpers type(byte param0) {
         if (param0 < 47) {
           PacketBuffer var3 = (PacketBuffer) null;
           this.writeTo((PacketBuffer) null, true);

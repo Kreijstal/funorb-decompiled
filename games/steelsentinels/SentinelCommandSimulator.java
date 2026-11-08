@@ -23,17 +23,17 @@ final class SentinelCommandSimulator {
 
     public static void releaseStatics(byte param0) {
         if (param0 > -69) {
-          SentinelCommandSimulator.a((byte) 39, true);
+          SentinelCommandSimulator.drawAccountNamePrompt((byte) 39, true);
         }
         field_o = null;
         field_i = null;
     }
 
-    final void a(byte param0, int param1, int param2, int param3, boolean param4, int param5) {
+    final void drawTrajectoryDot(byte param0, int param1, int param2, int param3, boolean param4, int param5) {
         int[] var9 = null;
         if (param0 >= -11) {
           SentinelCommand var10 = (SentinelCommand) null;
-          this.a((SentinelCommand) null, false, -87);
+          this.advanceSimulationStep((SentinelCommand) null, false, -87);
         }
         int var7 = param2 + (this.field_g >> 8);
         int var8 = param5 + (this.field_q - this.field_c.field_Db * 8 >> 8);
@@ -57,7 +57,7 @@ final class SentinelCommandSimulator {
         }
     }
 
-    final static void a(int param0, boolean param1, byte param2) {
+    final static void handleNameEntryResult(int param0, boolean param1, byte param2) {
         int var3;
         String var4;
         Object var5;
@@ -80,20 +80,20 @@ final class SentinelCommandSimulator {
                 var5Lifetime2 = var4;
               } else {
                 var7 = (CharSequence) ((Object) DelayedServerPacket.field_y.field_S);
-                var4 = AlphaContainer.a(1, var7);
+                var4 = AlphaContainer.normalizeDisplayName(1, var7);
               }
               var5Lifetime1 = null;
               if (QuickChatHelpDialog.field_bc == 0) {
                 var5Lifetime1 = SocialRequestHelpers.requestAddFriend(var4, (byte) -79, param0);
               }
               if (QuickChatHelpDialog.field_bc == 1) {
-                var5Lifetime1 = DialWidget.a(var4, param0, true);
+                var5Lifetime1 = DialWidget.requestRemoveFriend(var4, param0, true);
               }
               if (QuickChatHelpDialog.field_bc == 2) {
                 var5Lifetime1 = PlayerContextMenu.requestAddIgnore(param0, (byte) 55, var4);
               }
               if (3 == QuickChatHelpDialog.field_bc) {
-                var5Lifetime1 = rn.a(var4, param0, var4, true);
+                var5Lifetime1 = PendingAckRequest.requestRemoveIgnore(var4, param0, var4, true);
               }
               if (var5Lifetime1 != null) {
                 var6 = (String) null;
@@ -109,7 +109,7 @@ final class SentinelCommandSimulator {
         }
     }
 
-    private final void a(boolean param0, SentinelCommand param1) {
+    private final void applyMoveTowardTarget(boolean param0, SentinelCommand param1) {
         int stackIn_13_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -170,11 +170,11 @@ final class SentinelCommandSimulator {
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isFirstCampaignChapter(boolean param0) {
         if (!param0) {
           return true;
         }
-        int var1 = di.field_g;
+        int var1 = OptionMaskHelpers.field_g;
         if (10 != var1) {
           if (var1 == -1) {
             return false;
@@ -184,7 +184,7 @@ final class SentinelCommandSimulator {
         return 0 == DirectByteStorage.field_j ? true : false;
     }
 
-    final SentinelCommand a(SentinelCommand param0, boolean param1, int param2) {
+    final SentinelCommand advanceSimulationStep(SentinelCommand param0, boolean param1, int param2) {
         int stackIn_18_0 = 0;
         BattleTerrain stackIn_18_1 = null;
         boolean stackIn_19_2 = false;
@@ -285,7 +285,7 @@ final class SentinelCommandSimulator {
                   if (!this.field_j) {
                     this.field_d = 0;
                   } else {
-                    this.a(true, var6);
+                    this.applyMoveTowardTarget(true, var6);
                     this.field_r = false;
                   }
                 }
@@ -316,11 +316,11 @@ final class SentinelCommandSimulator {
             }
             else {
               if (!this.field_r &&
-                -100 + var6.endTick + ModalStack.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][2] == -1 + param2 &&
+                -100 + var6.endTick + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_c.chassis.componentId)][25][2] == -1 + param2 &&
                 var6.actionType == 3 &&
                 !this.field_j) {
                 this.field_a = 0;
-                this.a(param1, var6);
+                this.applyMoveTowardTarget(param1, var6);
               }
             }
             var6 = (SentinelCommand) (this.field_c.pendingCommands.next((byte) -59));
@@ -334,7 +334,7 @@ final class SentinelCommandSimulator {
                 if (!this.field_j ||
                   !(0 >= this.field_c.field_cb)) {
                   if (this.field_j) {
-                    this.a(true, var6Lifetime1);
+                    this.applyMoveTowardTarget(true, var6Lifetime1);
                   } else {
                     this.field_d = 0;
                   }
@@ -353,14 +353,14 @@ final class SentinelCommandSimulator {
               }
             } else {
               if (!this.field_r &&
-                var6Lifetime1.endTick - 100 + ModalStack.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][2] == param2 - 1 &&
+                var6Lifetime1.endTick - 100 + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_c.chassis.componentId)][25][2] == param2 - 1 &&
                 3 == var6Lifetime1.actionType) {
                 if (this.field_j) {
                   var6Lifetime1 = (SentinelCommand) (this.field_c.secondaryCommands.next((byte) -45));
                   continue;
                 }
                 this.field_a = 0;
-                this.a(true, var6Lifetime1);
+                this.applyMoveTowardTarget(true, var6Lifetime1);
               }
             }
             var6Lifetime1 = (SentinelCommand) (this.field_c.secondaryCommands.next((byte) -45));
@@ -388,7 +388,7 @@ final class SentinelCommandSimulator {
                 if (!this.field_j ||
                   !(0 >= this.field_c.field_cb) ||
                   this.field_r) {
-                  this.a(true, param0);
+                  this.applyMoveTowardTarget(true, param0);
                 }
               } else {
                 if (param0.actionType == 0) {
@@ -401,11 +401,11 @@ final class SentinelCommandSimulator {
                   if (BoundedRandomAccessFile.field_n) {
                     BoundedRandomAccessFile.field_n = false;
                     LoginForm.field_db.clear(6);
-                    this.a(param0, (byte) 43);
+                    this.simulateFireCommand(param0, (byte) 43);
                   }
                 } else {
                   if (param0.actionType != 0) {
-                    cf.field_q = -1;
+                    StatSubmission.field_q = -1;
                     NodeHashTableIterator.field_g = -1;
                   } else {
                     if (this.field_g < param0.targetWorldX) {
@@ -416,7 +416,7 @@ final class SentinelCommandSimulator {
                     var4 = param0;
                     if (BoundedRandomAccessFile.field_n) {
                       BoundedRandomAccessFile.field_n = false;
-                      this.a(param0, (byte) 35);
+                      this.simulateFireCommand(param0, (byte) 35);
                     }
                   }
                 }
@@ -496,7 +496,7 @@ final class SentinelCommandSimulator {
                   stackIn_209_0 = this;
                   stackIn_209_1 = this.field_g;
                   stackIn_209_2 = this.field_b;
-                  stackIn_209_3 = ModalStack.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25];
+                  stackIn_209_3 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_c.chassis.componentId)][25];
                   if (0 == this.field_a) {
                     stackIn_210_0 = this;
                     stackIn_210_4 = 0;
@@ -559,7 +559,7 @@ final class SentinelCommandSimulator {
                 } else {
                   var15 = var15 + (this.field_c.field_Db << 4);
                   if (this.field_q < var15 &&
-                    var19.b(this.field_g, -5)) {
+                    var19.isOutsideBaseZone(this.field_g, -5)) {
                     if (var19.terrain.getSecondaryHeightAt(false, var5 >> 4) == var19.terrain.getSurfaceProfileAt((byte) 119, var5 >> 4)) {
                       this.field_m = this.field_m / 2;
                       this.field_l = -this.field_l / 2;
@@ -608,7 +608,7 @@ final class SentinelCommandSimulator {
         }
     }
 
-    private final void a(SentinelCommand param0, byte param1) {
+    private final void simulateFireCommand(SentinelCommand param0, byte param1) {
         ArticulatedPart[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -631,13 +631,13 @@ final class SentinelCommandSimulator {
           if (param1 <= 0) {
             this.field_c = (Sentinel) null;
           }
-          var6 = this.field_c.chassis.a(0, this.field_c, new ArticulatedPart[]{}, this.field_b * param0.aimAngle, param0.actionVariant);
+          var6 = this.field_c.chassis.collectWeaponsCoveringAngle(0, this.field_c, new ArticulatedPart[]{}, this.field_b * param0.aimAngle, param0.actionVariant);
           var3 = var6;
-          this.field_c.chassis.a(param0.aimAngle * this.field_b, -86, param0.actionVariant);
-          this.field_c.chassis.b((byte) -128, this.field_g, this.field_b, this.field_q);
+          this.field_c.chassis.updateAimRange(param0.aimAngle * this.field_b, -86, param0.actionVariant);
+          this.field_c.chassis.updateWorldPositions((byte) -128, this.field_g, this.field_b, this.field_q);
           var4 = 0;
           while (var4 < var6.length) {
-            this.a(true, var6[var4], param0);
+            this.simulateWeaponFire(true, var6[var4], param0);
             var4 = var6.length;
           }
           return;
@@ -655,7 +655,7 @@ final class SentinelCommandSimulator {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawAccountNamePrompt(byte param0, boolean param1) {
         if (DelayedServerPacket.field_y != null) {
           DelayedServerPacket.field_y.drawFullScreen(param1, (byte) 127);
         }
@@ -664,7 +664,7 @@ final class SentinelCommandSimulator {
         }
     }
 
-    final Projectile a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
+    final Projectile createSimulatedProjectile(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         Projectile stackIn_147_0 = null;
         Sentinel stackIn_148_1 = null;
         int var8;
@@ -845,7 +845,7 @@ final class SentinelCommandSimulator {
           var17 -= 10;
         }
         if (param1 <= 18) {
-          this.a((byte) 116, 50, 70, -127, false, -106);
+          this.drawTrajectoryDot((byte) 116, 50, 70, -127, false, -106);
         }
         if (param0 == 43) {
           var17 -= 5;
@@ -864,7 +864,7 @@ final class SentinelCommandSimulator {
           if (param0 != 19) {
             if (param0 == 31 ||
               param0 == 45) {
-              var14 = cl.a(param3, 48);
+              var14 = LoginResultHelpers.alwaysOne(param3, 48);
             }
           } else {
             var15 = 20;
@@ -939,7 +939,7 @@ final class SentinelCommandSimulator {
         return var19;
     }
 
-    private final void a(boolean param0, ArticulatedPart param1, SentinelCommand param2) {
+    private final void simulateWeaponFire(boolean param0, ArticulatedPart param1, SentinelCommand param2) {
         Projectile stackIn_151_0 = null;
         Sentinel stackIn_152_1 = null;
         Projectile stackIn_154_0 = null;
@@ -1156,7 +1156,7 @@ final class SentinelCommandSimulator {
             } else {
               if (param1.componentId == 31 ||
                 param1.componentId == 45) {
-                var10 = cl.a(param2.aimAngle, -127);
+                var10 = LoginResultHelpers.alwaysOne(param2.aimAngle, -127);
               }
             }
             var13 = 5000;
@@ -1230,7 +1230,7 @@ final class SentinelCommandSimulator {
             var15.targetWorldX = param2.targetWorldX;
           }
           LoginForm.field_db.addLast(3, var15);
-          cf.field_q = var15.worldY - this.field_q;
+          StatSubmission.field_q = var15.worldY - this.field_q;
           NodeHashTableIterator.field_g = -this.field_g + var15.worldX;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1268,13 +1268,13 @@ final class SentinelCommandSimulator {
           this.field_q = this.field_c.worldY;
           this.field_n = 16777215;
           this.field_m = this.field_c.velocityY;
-          this.field_e = ModalStack.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][0];
+          this.field_e = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_c.chassis.componentId)][25][0];
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0) {
+    final static void layoutLobbySlidePanels(int param0) {
         int var1 = (NumericDateInputWidget.field_Z - 640) / 2;
         int var2 = AudioService.field_h * AudioService.field_h;
         int var3 = -(SentinelCommand.field_t * SentinelCommand.field_t) + var2;
@@ -1282,7 +1282,7 @@ final class SentinelCommandSimulator {
         PlayingSound.field_q.setBounds(param0 ^ param0, 0, -4 + (-120 + SoftwareRaster.field_j), 438 * var3 / var2 + (202 + var1), 438);
     }
 
-    final static int a(int[] param0, int param1, ArticulatedPart param2) {
+    final static int sumModuleValues(int[] param0, int param1, ArticulatedPart param2) {
         int var6 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -1300,7 +1300,7 @@ final class SentinelCommandSimulator {
         var7 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
-          var4 = param2.i(-121);
+          var4 = param2.getTotalModuleSlots(-121);
           var5 = 0;
           for (var6 = 0; var4 > var6; var6++) {
             if (10 == param0[var6]) {
@@ -1351,7 +1351,7 @@ final class SentinelCommandSimulator {
         }
     }
 
-    final void a(int param0, SentinelCommand param1, int param2, int param3, int param4) {
+    final void ignoreCommand(int param0, SentinelCommand param1, int param2, int param3, int param4) {
         try {
           if (param3 != -1) {
             this.field_d = 31;

@@ -159,7 +159,7 @@ final class PopupMenuHelpers {
               if (var5 != PopupMenuSupport.field_c.field_e) {
                 var6 = LoginDialog.field_Fb;
               } else {
-                var6 = o.field_b;
+                var6 = SocialStateHelpers.field_b;
               }
             } else {
               var6 = ProxyAuthenticationException.field_c;
@@ -170,7 +170,7 @@ final class PopupMenuHelpers {
             var8 = PopupMenuHelpers.measureText(stackIn_10_0, stackIn_11_1, (byte) -94);
             var9 = ProxyAuthenticationException.field_f - (var8 >> 1);
             if (var5 >= 0) {
-              var2 = var2 + tf.field_c;
+              var2 = var2 + ChatHistoryHelpers.field_c;
               if (var5 == PopupMenuSupport.field_c.field_e) {
                 stackIn_16_0 = (SpriteFrame) (field_b);
               } else {
@@ -184,7 +184,7 @@ final class PopupMenuHelpers {
             }
             if (var5 >= 0) {
               MouseWheelInput.field_a.drawLeft(var7, var9, var2 + MenuInputState.field_g, var6, -1);
-              var2 = var2 + (WhirlpoolHasher.field_e + (tf.field_c + IconLabelControl.field_ac));
+              var2 = var2 + (WhirlpoolHasher.field_e + (ChatHistoryHelpers.field_c + IconLabelControl.field_ac));
             } else {
               NumericDateInputWidget.field_ib.drawLeft(var7, var9, var2 + IntKeyLookup.field_d, var6, -1);
               var2 = var2 + IntrusiveNode.field_e;
@@ -220,8 +220,8 @@ final class PopupMenuHelpers {
           SoftwareRaster.drawRectangleOutline(243, 197, 369, 143, 16777215);
           SoftwareRaster.fillRectangle(244, 198, 367, 141, 0);
           if (Explosion.field_S == null) {
-            if (null != wn.field_a) {
-              wn.field_a.drawParagraph(AgeValidator.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != ChatPanelSetupHelpers.field_a) {
+              ChatPanelSetupHelpers.field_a.drawParagraph(AgeValidator.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -229,8 +229,8 @@ final class PopupMenuHelpers {
           var7 = var6;
           var7Lifetime1 = var6;
           if (var6 == null) {
-            if (wn.field_a != null) {
-              wn.field_a.drawParagraph(AgeValidator.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (ChatPanelSetupHelpers.field_a != null) {
+              ChatPanelSetupHelpers.field_a.drawParagraph(AgeValidator.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.drawTransparent(245, 199);
@@ -241,13 +241,13 @@ final class PopupMenuHelpers {
               var2_int = (var7Lifetime2.field_z + 60) * NodeDeque.field_g / LoginActionHelpers.field_i;
               var3 = var2_int - 30;
               if (LoginConnectionStage.field_b) {
-                FullscreenFocusCanvas.a(245, -256 * var3 / 30, (var7Lifetime2.field_z - var3) * 256 / 30, 199, var7Lifetime2, -1);
+                FullscreenFocusCanvas.drawHorizontalFadeSprite(245, -256 * var3 / 30, (var7Lifetime2.field_z - var3) * 256 / 30, 199, var7Lifetime2, -1);
               } else {
-                FullscreenFocusCanvas.a(245, (var7Lifetime2.field_z - var3) * 256 / 30, var3 * -256 / 30, 199, var7Lifetime2, -1);
+                FullscreenFocusCanvas.drawHorizontalFadeSprite(245, (var7Lifetime2.field_z - var3) * 256 / 30, var3 * -256 / 30, 199, var7Lifetime2, -1);
               }
             }
           }
-          if (null != wn.field_a) {
+          if (null != ChatPanelSetupHelpers.field_a) {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
@@ -266,7 +266,7 @@ final class PopupMenuHelpers {
             if (var2 == null) {
               return;
             }
-            wn.field_a.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            ChatPanelSetupHelpers.field_a.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             return;
           }
           return;

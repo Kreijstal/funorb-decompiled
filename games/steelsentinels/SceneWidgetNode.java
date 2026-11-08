@@ -49,7 +49,7 @@ class SceneWidgetNode extends DualNode {
             return stackIn_19_0;
           }
           if (param2 == 10) {
-            stackIn_23_0 = te.field_d;
+            stackIn_23_0 = FriendListHelpers.field_d;
             return stackIn_23_0;
           }
           if (param2 == 11) {
@@ -85,7 +85,7 @@ class SceneWidgetNode extends DualNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = qe.a(di.field_h, NodeDeque.field_d, -126);
+          var2_int = TextSpriteHelpers.selectRankTier(OptionMaskHelpers.field_h, NodeDeque.field_d, -126);
           if (1 == var2_int) {
             param1 = "<img=0>" + param1;
           }
@@ -151,7 +151,7 @@ class SceneWidgetNode extends DualNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!StatefulTextPainter.a((byte) 30, param1, param0, param2)) {
+          if (!StatefulTextPainter.loadSpriteSheet((byte) 30, param1, param0, param2)) {
             return null;
           }
           var5_int = -18 % ((param3 - 56) / 45);

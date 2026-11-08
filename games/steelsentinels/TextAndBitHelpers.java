@@ -12,10 +12,10 @@ final class TextAndBitHelpers {
 
     final static void consumeIntReply(int param0) {
         CipherPacketBuffer var2 = null;
-        jm var1 = (jm) (LoginStateQueries.field_c.first(13058));
+        PendingIntReplyRequest var1 = (PendingIntReplyRequest) (LoginStateQueries.field_c.first(13058));
         CipherPacketBuffer var2Lifetime1;
         if (var1 == null) {
-          LoginForm.m(103);
+          LoginForm.closeConnection(103);
           return;
         }
         if (param0 == 2158) {
@@ -96,11 +96,11 @@ final class TextAndBitHelpers {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == gj.field_b) {
+          if (null == SpriteDrawHelpers.field_b) {
             return false;
           }
           if (param1) {
-            stackIn_9_0 = !(param0.toLowerCase().indexOf(gj.field_b.toLowerCase()) < 0);
+            stackIn_9_0 = !(param0.toLowerCase().indexOf(SpriteDrawHelpers.field_b.toLowerCase()) < 0);
             return stackIn_9_0;
           }
           return true;

@@ -89,7 +89,7 @@ final class PopupMenuSupport {
               NameCheckResult.field_c = stackIn_20_0;
               stackIn_24_0 = ((2 & var4_int) != 0);
               ModalStack.field_V = stackIn_24_0;
-              var6 = tj.field_a ? 1 : 0;
+              var6 = HighscoreSubmissionFactory.field_a ? 1 : 0;
               stackIn_28_0 = (0 != (16 & var4_int));
               ConditionalTextValue.field_h = stackIn_28_0;
               stackIn_32_0 = ((var4_int & 8) != 0);
@@ -99,11 +99,11 @@ final class PopupMenuSupport {
               if (!NameCheckResult.field_c) {
                 stackIn_36_2 = ClientException.field_j;
               } else {
-                stackIn_36_2 = qm.field_c;
+                stackIn_36_2 = DisplayNameAndAudioHelpers.field_c;
               }
               stackIn_35_0[stackIn_35_1] = stackIn_36_2;
               stackIn_40_0 = (0 != (32 & var4_int));
-              tj.field_a = stackIn_40_0;
+              HighscoreSubmissionFactory.field_a = stackIn_40_0;
               stackIn_43_0 = ImageProducerRasterBuffer.field_A;
               stackIn_43_1 = 37;
               if (ModalStack.field_V) {
@@ -117,27 +117,27 @@ final class PopupMenuSupport {
               if (CachedTextLayout.field_p) {
                 stackIn_48_2 = FrameStyleHelpers.field_b;
               } else {
-                stackIn_48_2 = fm.field_h;
+                stackIn_48_2 = QuickChatParameterType.field_h;
               }
               stackIn_47_0[stackIn_47_1] = stackIn_48_2;
               stackIn_51_0 = ImageProducerRasterBuffer.field_A;
               stackIn_51_1 = 44;
               if (!ConditionalTextValue.field_h) {
-                stackIn_52_2 = sa.field_b;
+                stackIn_52_2 = LoadingStatusHelpers.field_b;
               } else {
-                stackIn_52_2 = o.field_a;
+                stackIn_52_2 = SocialStateHelpers.field_a;
               }
               stackIn_51_0[stackIn_51_1] = stackIn_52_2;
               stackIn_55_0 = ImageProducerRasterBuffer.field_A;
               stackIn_55_1 = 43;
               if (AlphaContainer.field_G) {
-                stackIn_56_2 = tm.field_f;
+                stackIn_56_2 = SessionUiHelpers.field_f;
               } else {
-                stackIn_56_2 = fj.field_i;
+                stackIn_56_2 = PasswordRuleHelpers.field_i;
               }
               stackIn_55_0[stackIn_55_1] = stackIn_56_2;
               if ((NameCheckResult.field_c ? 1 : 0) == var5) {
-                stackIn_63_0 = (tj.field_a) ? 0 : 1;
+                stackIn_63_0 = (HighscoreSubmissionFactory.field_a) ? 0 : 1;
                 if (var6 != 0) {
                   stackIn_67_1 = 0;
                 } else {
@@ -151,7 +151,7 @@ final class PopupMenuSupport {
               }
               stackIn_73_0 = ImageProducerRasterBuffer.field_A;
               stackIn_73_1 = 47;
-              if (!tj.field_a) {
+              if (!HighscoreSubmissionFactory.field_a) {
                 stackIn_74_2 = RasterBuffer.field_d;
               } else {
                 stackIn_74_2 = SentinelAnimationEditor.field_u;
@@ -176,46 +176,46 @@ final class PopupMenuSupport {
               if (param1.length < var2_int + var4_intLifetime1) {
                 return;
               }
-              uc.field_b = new int[var4_intLifetime1];
+              DesignerPageTables.field_b = new int[var4_intLifetime1];
               var5Lifetime1 = 0;
               while (var5Lifetime1 < var4_intLifetime1) {
                 incrementValue$4 = var2_int;
                 var2_int++;
-                uc.field_b[var5Lifetime1] = ClientUiHelpers.bitAnd(255, (int) param1[incrementValue$4]);
+                DesignerPageTables.field_b[var5Lifetime1] = ClientUiHelpers.bitAnd(255, (int) param1[incrementValue$4]);
                 stackIn_133_0 = 255;
-                stackIn_133_1 = uc.field_b[var5Lifetime1];
+                stackIn_133_1 = DesignerPageTables.field_b[var5Lifetime1];
                 if (var10 != 0) {
                   decompiledFrameCompleted1 = false;
                   break;
                 }
                 if (stackIn_133_0 == stackIn_133_1) {
-                  uc.field_b[var5Lifetime1] = -1;
+                  DesignerPageTables.field_b[var5Lifetime1] = -1;
                 }
                 var5Lifetime1++;
               }
               if (decompiledFrameCompleted1) {
                 var5_ref_int__ = new int[8];
-                if (SentinelDesigner.a(uc.field_b, (byte) 97, var5_ref_int__) == null) {
-                  uc.field_b = new int[ReflectionCheck.field_x.length];
-                  ArraySupport.copy(ReflectionCheck.field_x, 0, uc.field_b, 0, uc.field_b.length);
+                if (SentinelDesigner.buildChassisFromDesign(DesignerPageTables.field_b, (byte) 97, var5_ref_int__) == null) {
+                  DesignerPageTables.field_b = new int[ReflectionCheck.field_x.length];
+                  ArraySupport.copy(ReflectionCheck.field_x, 0, DesignerPageTables.field_b, 0, DesignerPageTables.field_b.length);
                 }
-                if (ni.b(58) ||
-                  !(rd.field_b > 0)) {
-                  var6Lifetime1 = uc.field_b[0];
-                  var7_ref_int__ = DialWidget.a(var6Lifetime1, (byte) 126);
+                if (ByteArrayPoolHelpers.isAccountCreationMode(58) ||
+                  !(SpriteLoadingHelpers.field_b > 0)) {
+                  var6Lifetime1 = DesignerPageTables.field_b[0];
+                  var7_ref_int__ = DialWidget.getComponentPreset(var6Lifetime1, (byte) 126);
                   var8 = 0;
                   if (var7_ref_int__ != null &&
                     !MessageMenuHelpers.isComponentUnused(var6Lifetime1, -87, false)) {
                     var9 = 0;
                     while (true) {
-                      if (var9 < uc.field_b.length) {
-                        stackIn_133_0 = uc.field_b[var9];
+                      if (var9 < DesignerPageTables.field_b.length) {
+                        stackIn_133_0 = DesignerPageTables.field_b[var9];
                         stackIn_133_1 = param0 - 87;
                         if (var10 != 0) {
                           decompiledFrameCompleted0 = false;
                           break;
                         }
-                        stackIn_120_2 = !(-8 + uc.field_b.length > var9);
+                        stackIn_120_2 = !(-8 + DesignerPageTables.field_b.length > var9);
                         if (MessageMenuHelpers.isComponentUnused(stackIn_133_0, stackIn_133_1, stackIn_120_2)) {
                           var8 = 1;
                         } else {
@@ -236,8 +236,8 @@ final class PopupMenuSupport {
                   }
                   if ((decompiledFrameCompleted0) &&
                     (var8 != 0)) {
-                    uc.field_b = new int[var7_ref_int__.length];
-                    ArraySupport.copy(var7_ref_int__, 0, uc.field_b, 0, var7_ref_int__.length);
+                    DesignerPageTables.field_b = new int[var7_ref_int__.length];
+                    ArraySupport.copy(var7_ref_int__, 0, DesignerPageTables.field_b, 0, var7_ref_int__.length);
                   }
                 }
               }
@@ -397,13 +397,13 @@ final class PopupMenuSupport {
             if (var8 == 0) {
               if (stackIn_18_0 <= var5) {
                 var6 = PopupMenuHelpers.measureText(AudioService.field_g[var3_int], true, (byte) -115);
-                var4 = var4 + tf.field_c;
+                var4 = var4 + ChatHistoryHelpers.field_c;
                 var7 = ProxyAuthenticationException.field_f - (var6 >> 1);
-                if (AlternateUsernameCredentials.a(WhirlpoolHasher.field_e + (IconLabelControl.field_ac << 1), var6 + (DraggableWidget.field_U << 1), param2, var7 - DraggableWidget.field_U, param0 - 32, var4, param1)) {
+                if (AlternateUsernameCredentials.rectContains(WhirlpoolHasher.field_e + (IconLabelControl.field_ac << 1), var6 + (DraggableWidget.field_U << 1), param2, var7 - DraggableWidget.field_U, param0 - 32, var4, param1)) {
                   stackIn_13_0 = var5;
                   return stackIn_13_0;
                 }
-                var4 = var4 + (tf.field_c + ((IconLabelControl.field_ac << 1) + WhirlpoolHasher.field_e));
+                var4 = var4 + (ChatHistoryHelpers.field_c + ((IconLabelControl.field_ac << 1) + WhirlpoolHasher.field_e));
               } else {
                 var4 = var4 + IntrusiveNode.field_e;
               }
@@ -425,7 +425,7 @@ final class PopupMenuSupport {
 
     final static void selectCreateAccountOption(int param0) {
         try {
-          LabeledField.a(4, 0);
+          LabeledField.setPendingMessageId(4, 0);
           if (param0 <= 17) {
             field_b = -41L;
           }
@@ -509,8 +509,8 @@ final class PopupMenuSupport {
         try {
           boolean decompiledFrameRemainder2 = true;
           var5_int = Js5NetworkRequest.field_O;
-          if ((ni.b(104) ||
-            !(0 < rd.field_b)) && MessageMenuHelpers.isComponentUnused(param3.componentId, -125, false)) {
+          if ((ByteArrayPoolHelpers.isAccountCreationMode(104) ||
+            !(0 < SpriteLoadingHelpers.field_b)) && MessageMenuHelpers.isComponentUnused(param3.componentId, -125, false)) {
             stackIn_11_0 = 1;
             decompiledFrameRemainder2 = false;
           }
@@ -548,7 +548,7 @@ final class PopupMenuSupport {
           if (param3.field_Q == 1 &&
             param2 != 0) {
             var11_ref_int__ = FallingPickup.getUniqueChildComponentIds(param3.componentId, (byte) 28);
-            var12 = LoadingProgressDialog.b(param3.componentId, (byte) -101);
+            var12 = LoadingProgressDialog.distinctPresetTail(param3.componentId, (byte) -101);
             var13_int = 0;
             var14_int = 0;
             var15_ref_int__ = var11_ref_int__;
@@ -557,7 +557,7 @@ final class PopupMenuSupport {
             while (!(decompiledNaturalLoopExit0 = (var16 >= var15_ref_int__.length))) {
               var17_int = var15_ref_int__[var16];
               var18_int = MusicCrossfadeStream.field_v[var17_int];
-              stackOut_40_0 = t.a(rn.field_D, var17_int, -20370);
+              stackOut_40_0 = NameTable.isBitSet(PendingAckRequest.field_D, var17_int, -20370);
               stackIn_48_0 = stackOut_40_0 ? 1 : 0;
               stackIn_41_0 = stackOut_40_0;
               if (var19 == 0) {
@@ -583,9 +583,9 @@ final class PopupMenuSupport {
                 break;
               }
               var17_intLifetime2 = var15_ref_int__[var16Lifetime4];
-              var18_intLifetime1 = qf.field_h[var17_intLifetime2];
+              var18_intLifetime1 = RankingAndRasterHelpers.field_h[var17_intLifetime2];
               var13_int = var13_int + var18_intLifetime1;
-              stackOut_50_0 = t.a(ArchiveRequest.field_D, var17_intLifetime2, -20370);
+              stackOut_50_0 = NameTable.isBitSet(ArchiveRequest.field_D, var17_intLifetime2, -20370);
               stackIn_58_0 = stackOut_50_0 ? 1 : 0;
               stackIn_51_0 = stackOut_50_0;
               if (var19 == 0) {
@@ -612,7 +612,7 @@ final class PopupMenuSupport {
           var13.setBounds(0, 2, var7 - 19, -4 + var11, -var11 + var5_int);
           var13.field_Ib = 10;
           if (var7 < 40) {
-            var12_ref = WeightedCacheEntry.a(var12_ref, var13.field_zb - var13.field_ub * 2, (byte) -45, var13.field_L);
+            var12_ref = WeightedCacheEntry.truncateWithEllipsis(var12_ref, var13.field_zb - var13.field_ub * 2, (byte) -45, var13.field_L);
           }
           var13.field_S = var12_ref;
           if (param4 != 14) {
@@ -627,24 +627,24 @@ final class PopupMenuSupport {
             !(53 > param3.componentId)) && param3.componentId != 83) {
             if (1 == param3.field_Q) {
               var14_intLifetime1 = var13.field_L.paragraphHeight(var13.field_S, var13.field_zb - var13.field_ub * 2, var13.field_Ib) + 6;
-              ThreeSliceButtonPainter.a(var8, "<img=1>", HighscoreSubmission.field_B[param3.componentId], param3.componentId, var14_intLifetime1, var5_int, 3000, var11, true);
+              ThreeSliceButtonPainter.addLabeledProgressBar(var8, "<img=1>", HighscoreSubmission.field_B[param3.componentId], param3.componentId, var14_intLifetime1, var5_int, 3000, var11, true);
               var14_intLifetime1 += 14;
-              ThreeSliceButtonPainter.a(var8, "<img=0>", param3.getTotalArmour(8192), param3.componentId, var14_intLifetime1, var5_int, 800, var11, true);
+              ThreeSliceButtonPainter.addLabeledProgressBar(var8, "<img=0>", param3.getTotalArmour(8192), param3.componentId, var14_intLifetime1, var5_int, 800, var11, true);
               var14_intLifetime1 += 14;
-              if (0 >= param3.j(0)) {
-                if (!(param3.h(-31496) <= 0)) {
-                  ThreeSliceButtonPainter.a(var8, "<img=2>", (int)((double)param3.h(-31496) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
+              if (0 >= param3.getTotalThrust(0)) {
+                if (!(param3.getTotalJump(-31496) <= 0)) {
+                  ThreeSliceButtonPainter.addLabeledProgressBar(var8, "<img=2>", (int)((double)param3.getTotalJump(-31496) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
                   if (var19 != 0) {
-                    ThreeSliceButtonPainter.a(var8, "<img=3>", (int)((double)param3.j(0) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
+                    ThreeSliceButtonPainter.addLabeledProgressBar(var8, "<img=3>", (int)((double)param3.getTotalThrust(0) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
                   }
                 }
               } else {
-                ThreeSliceButtonPainter.a(var8, "<img=3>", (int)((double)param3.j(0) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
+                ThreeSliceButtonPainter.addLabeledProgressBar(var8, "<img=3>", (int)((double)param3.getTotalThrust(0) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
               }
               var14_intLifetime1 += 14;
               var16_ref_String = "";
               var17_intLifetime1 = 0;
-              while (param3.i(-122) > var17_intLifetime1) {
+              while (param3.getTotalModuleSlots(-122) > var17_intLifetime1) {
                 var16_ref_String = var16_ref_String + "<img=6>";
                 var17_intLifetime1++;
                 if (var19 != 0) {
@@ -664,14 +664,14 @@ final class PopupMenuSupport {
               (decompiledFrameCompleted1)) {
               boolean decompiledFrameCompleted0 = true;
               var14_intLifetime1Lifetime1 = var13.field_L.paragraphHeight(var13.field_S, var13.field_zb - var13.field_ub * 2, var13.field_Ib) + 6;
-              ThreeSliceButtonPainter.a(var8, "<img=1>", HighscoreSubmission.field_B[param3.componentId], param3.componentId, var14_intLifetime1Lifetime1, var5_int, 3000, var11, true);
+              ThreeSliceButtonPainter.addLabeledProgressBar(var8, "<img=1>", HighscoreSubmission.field_B[param3.componentId], param3.componentId, var14_intLifetime1Lifetime1, var5_int, 3000, var11, true);
               var14_intLifetime1Lifetime1 += 14;
-              ThreeSliceButtonPainter.a(var8, "<img=0>", param3.getTotalArmour(8192), param3.componentId, var14_intLifetime1Lifetime1, var5_int, 400, var11, true);
+              ThreeSliceButtonPainter.addLabeledProgressBar(var8, "<img=0>", param3.getTotalArmour(8192), param3.componentId, var14_intLifetime1Lifetime1, var5_int, 400, var11, true);
               var14_intLifetime1Lifetime1 += 14;
-              if (0 < param3.i(-122)) {
+              if (0 < param3.getTotalModuleSlots(-122)) {
                 var16_ref_StringLifetime1 = "";
                 var17_intLifetime1Lifetime1 = 0;
-                while (param3.i(param4 - 129) > var17_intLifetime1Lifetime1) {
+                while (param3.getTotalModuleSlots(param4 - 129) > var17_intLifetime1Lifetime1) {
                   var16_ref_StringLifetime1 = var16_ref_StringLifetime1 + "<img=6>";
                   var17_intLifetime1Lifetime1++;
                   if (var19 != 0) {
@@ -685,7 +685,7 @@ final class PopupMenuSupport {
                   var8.addChild(var15_ref_ghLifetime1, 125);
                 }
               }
-              if (param3.j(0) > 0) {
+              if (param3.getTotalThrust(0) > 0) {
                 if (param3.componentId != 59 &&
                   param3.componentId != 77) {
                   stackIn_112_0 = 0;
@@ -712,28 +712,28 @@ final class PopupMenuSupport {
                 var8.addChild(var15_ref_ghLifetime1Lifetime1, param4 + 108);
               }
               if (var19 != 0) {
-                ThreeSliceButtonPainter.a(var8, "<img=1>", HighscoreSubmission.field_B[param3.componentId], param3.componentId, 18, var5_int, 500, var11, true);
+                ThreeSliceButtonPainter.addLabeledProgressBar(var8, "<img=1>", HighscoreSubmission.field_B[param3.componentId], param3.componentId, 18, var5_int, 500, var11, true);
               }
             }
           } else {
-            ThreeSliceButtonPainter.a(var8, "<img=1>", HighscoreSubmission.field_B[param3.componentId], param3.componentId, 18, var5_int, 500, var11, true);
+            ThreeSliceButtonPainter.addLabeledProgressBar(var8, "<img=1>", HighscoreSubmission.field_B[param3.componentId], param3.componentId, 18, var5_int, 500, var11, true);
           }
           boolean decompiledFrameRemainder0 = true;
           var14 = new SceneWidget((long)param3.componentId, (SceneWidget) null);
           var14.setBounds(0, 2, -4 + var7, 2, var11 - 4);
           var14.field_I = QuickChatCategoryCache.field_d;
           if (1 != param3.field_Q ||
-            !(NodeDeque.a((byte) -82, param3.componentId) >= 0)) {
+            !(NodeDeque.indexOfUnlockItem((byte) -82, param3.componentId) >= 0)) {
             ParticleEffect.renderPartIcon(param3, var14, (byte) -93, false, -4 + var11, -4 + var7);
             decompiledFrameRemainder0 = (var19 != 0);
           }
           if (decompiledFrameRemainder0) {
-            var15 = NodeDeque.a((byte) 83, param3.componentId);
+            var15 = NodeDeque.indexOfUnlockItem((byte) 83, param3.componentId);
             var14.field_Pb = new RgbSprite(Math.min(64, -4 + var11), Math.min(64, var7 - 4));
             var14.field_Pb.bindRasterTarget();
             CachedTextLayout.field_E[var15].drawTransparent(0, 0);
             SoftwareRaster.resetClip();
-            Checkbox.field_bb.b((byte) 121);
+            Checkbox.field_bb.bindRaster((byte) 121);
             ViewportController.field_h[var15] = var14;
             var14.field_Kb = 1;
             var14.field_Fb = 1;
@@ -745,9 +745,9 @@ final class PopupMenuSupport {
             SoftwareRaster.fillRectangleBlended(0, 0, var14.field_Pb.field_A, var14.field_Pb.field_F, 0, 128);
             if (param1 &&
               var6 == 0) {
-              BirthDateEntryPanel.field_U.drawCentered(mc.field_d, var14.field_Pb.field_A / 2, (BirthDateEntryPanel.field_U.field_G + var14.field_Pb.field_F) / 2, 12632256, 0);
+              BirthDateEntryPanel.field_U.drawCentered(LoadingCaptionHelpers.field_d, var14.field_Pb.field_A / 2, (BirthDateEntryPanel.field_U.field_G + var14.field_Pb.field_F) / 2, 12632256, 0);
             }
-            Checkbox.field_bb.b((byte) 122);
+            Checkbox.field_bb.bindRaster((byte) 122);
           }
           var8.addChild(var14, 123);
           if (var6 != 0) {
@@ -794,10 +794,10 @@ final class PopupMenuSupport {
             }
           }
           if (param3.componentId == 55) {
-            pa.field_d[1].field_a = var8;
+            TutorialStepTable.field_d[1].field_a = var8;
           }
           if (param3.componentId == 18) {
-            pa.field_d[7].field_a = var8;
+            TutorialStepTable.field_d[7].field_a = var8;
           }
           stackIn_170_0 = var8;
           return stackIn_170_0;

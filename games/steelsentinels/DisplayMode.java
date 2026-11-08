@@ -1,0 +1,87 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DisplayMode {
+    int field_a;
+    static String field_k;
+    static boolean field_d;
+    static IndexedSprite[] field_b;
+    static SceneWidget field_h;
+    static String field_l;
+    int field_g;
+    static int field_c;
+    static SceneWidget field_f;
+    int field_i;
+    static RgbSprite[] field_e;
+    int field_j;
+
+    final static void setPromotionCaption(String param0, RgbSprite param1, boolean param2) {
+        try {
+          NameSuggestionsPanel.field_P = param0;
+          if (param2) {
+            field_d = true;
+          }
+          EditableTextWidget.field_kb = param1;
+        } catch (RuntimeException runtimeException) {
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "vc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_e = null;
+        field_l = null;
+        field_h = null;
+        field_b = null;
+        if (param0 == -13) {
+          field_f = null;
+          field_k = null;
+          return;
+        }
+        DisplayMode.releaseStatics(45);
+        field_f = null;
+        field_k = null;
+    }
+
+    final static void resetSharedWidgets(int param0) {
+        MouseInputHandler.closeChatContextState(23825);
+        if (param0 != -1) {
+          DisplayMode.resetSharedWidgets(79);
+        }
+    }
+
+    final static int getModeStartWorldX(byte param0) {
+        int var1;
+        int var2;
+        var2 = SteelSentinels.obfuscationControl;
+        var1 = OptionMaskHelpers.field_g;
+        if (var1 == 0) {
+          return 90000;
+        }
+        if (1 != var1) {
+          if (var1 == 7) {
+            return 218000;
+          }
+          if (var1 == 5) {
+            return 216000;
+          }
+        } else {
+          if (10 >= IconTextComponent.field_Yb) {
+            return 218000;
+          }
+          if (IconTextComponent.field_Yb <= 12) {
+            return 30000;
+          }
+        }
+        if (param0 == 32) {
+          return -1;
+        }
+        field_h = (SceneWidget) null;
+        return -1;
+    }
+
+    static {
+        field_k = ", and was finished off by a drone";
+        field_l = "Resign";
+        field_d = false;
+    }
+}

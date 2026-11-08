@@ -104,7 +104,7 @@ final class NameValidationHelpers {
         if (param0 > -53) {
           field_a = 61;
         }
-        return new ConditionalTextValue(PendingIntArrayRequest.getCurrentAccountName(87), IntKeyLookup.c((byte) 105));
+        return new ConditionalTextValue(PendingIntArrayRequest.getCurrentAccountName(87), IntKeyLookup.isLoginOptionCleared((byte) 105));
     }
 
     final static byte[] decompressContainer(byte[] encodedContainer, byte obfuscationGuard) {
@@ -133,8 +133,8 @@ final class NameValidationHelpers {
           }
           var3 = var9.readUnsignedByte((byte) -72);
           var4 = var9.readInt(0);
-          if (var4 >= 0 && (uf.field_c == 0 ||
-            !(var4 > uf.field_c))) {
+          if (var4 >= 0 && (SocialTabsPanel.field_c == 0 ||
+            !(var4 > SocialTabsPanel.field_c))) {
             if (0 == var3) {
               var12 = new byte[var4];
               var10 = var12;
@@ -144,15 +144,15 @@ final class NameValidationHelpers {
               return stackIn_9_0;
             }
             var5 = var9.readInt(0);
-            if (var5 >= 0 && (uf.field_c == 0 ||
-              !(var5 > uf.field_c))) {
+            if (var5 >= 0 && (SocialTabsPanel.field_c == 0 ||
+              !(var5 > SocialTabsPanel.field_c))) {
               var13 = new byte[var5];
               var11 = var13;
               var6 = var11;
               if (1 != var3) {
                 var7 = MouseInputHandler.field_e;
                 synchronized (var7) {
-                  MouseInputHandler.field_e.a(var9, var13, true);
+                  MouseInputHandler.field_e.decompress(var9, var13, true);
                 }
               } else {
                 Bzip2Decoder.decompressInto(var13, var5, encodedContainer, var4, 9);
@@ -195,7 +195,7 @@ final class NameValidationHelpers {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
           }
-          var3 = AccountNoticeDialog.a(param0, param1, 88);
+          var3 = AccountNoticeDialog.validatePlayerNameFormat(param0, param1, 88);
           if (var3 != null) {
             stackIn_6_0 = var3;
             return stackIn_6_0;
@@ -246,7 +246,7 @@ final class NameValidationHelpers {
           var3 = SteelSentinels.obfuscationControl;
           try {
             if (FallingPickup.field_N != null) {
-              FallingPickup.field_N.b(111);
+              FallingPickup.field_N.close(111);
             }
             if (param0 != -8601) {
               field_b = (String) null;
@@ -256,17 +256,17 @@ final class NameValidationHelpers {
             }
             if (null != CachedTextLayout.field_o) {
               try {
-                CachedTextLayout.field_o.c(param0 ^ 8679);
+                CachedTextLayout.field_o.close(param0 ^ 8679);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (rh.field_o != null) {
-              for (var1_int = 0; var1_int < rh.field_o.length; var1_int++) {
-                if (rh.field_o[var1_int] != null) {
+            if (PendingDataRequest.field_o != null) {
+              for (var1_int = 0; var1_int < PendingDataRequest.field_o.length; var1_int++) {
+                if (PendingDataRequest.field_o[var1_int] != null) {
                   try {
-                    rh.field_o[var1_int].c(-127);
+                    PendingDataRequest.field_o[var1_int].close(-127);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

@@ -29,7 +29,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.field_o instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.field_o)).validator(false);
             if (var3 != null) {
-              if (var3.validationState((byte) 21) == vf.field_b &&
+              if (var3.validationState((byte) 21) == RequestResendHelpers.field_b &&
                 !param1.equals(this.field_o.field_y)) {
                 stackIn_9_0 = LoginActionHelpers.field_h;
                 return stackIn_9_0;
@@ -111,13 +111,13 @@ final class MatchingTextValidator extends TextFieldValidator {
         if (param0 > 96) {
           SoftwareRaster.setClip(var1.field_p, var1.field_o, var1.field_y, var1.field_t);
           var1.field_q = null;
-          sl.field_b.addLast(3, var1);
+          ArchiveLoadStep.field_b.addLast(3, var1);
           return;
         }
         field_t = (RgbSprite[]) null;
         SoftwareRaster.setClip(var1.field_p, var1.field_o, var1.field_y, var1.field_t);
         var1.field_q = null;
-        sl.field_b.addLast(3, var1);
+        ArchiveLoadStep.field_b.addLast(3, var1);
     }
 
     public static void releaseStatics(byte param0) {
@@ -132,11 +132,11 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final vd validateText(String param0, int param1) {
+    final TransitionTimerHelpers validateText(String param0, int param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        vd stackIn_7_0 = null;
-        vd stackIn_11_0 = null;
+        TransitionTimerHelpers stackIn_7_0 = null;
+        TransitionTimerHelpers stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -148,7 +148,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.field_o instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.field_o)).validator(false);
             if (var3 != null &&
-              var3.validationState((byte) 21) != vf.field_b) {
+              var3.validationState((byte) 21) != RequestResendHelpers.field_b) {
               stackIn_7_0 = ArchiveProvider.field_d;
               return stackIn_7_0;
             }
@@ -156,7 +156,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (!param0.equals(this.field_o.field_y)) {
             stackIn_11_0 = ArchiveProvider.field_d;
           } else {
-            stackIn_11_0 = vf.field_b;
+            stackIn_11_0 = RequestResendHelpers.field_b;
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -196,12 +196,12 @@ final class MatchingTextValidator extends TextFieldValidator {
         if (param0 > 96) {
           SoftwareRaster.setClip(var1.field_p, var1.field_o, var1.field_y, var1.field_t);
           var1.field_q = null;
-          sl.field_b.addLast(3, var1);
+          ArchiveLoadStep.field_b.addLast(3, var1);
           return;
         }
         field_t = (RgbSprite[]) null;
         SoftwareRaster.setClip(var1.field_p, var1.field_o, var1.field_y, var1.field_t);
         var1.field_q = null;
-        sl.field_b.addLast(3, var1);
+        ArchiveLoadStep.field_b.addLast(3, var1);
     }
 }

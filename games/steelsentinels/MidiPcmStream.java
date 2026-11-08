@@ -136,7 +136,7 @@ final class MidiPcmStream extends PcmStream {
           }
           LoadingScreenHelpers.field_e = param2;
           ChatPanelHelpers.field_b = 2;
-          StripedProgressBar.field_U = AlphaContainer.a(1, (CharSequence) ((Object) param2));
+          StripedProgressBar.field_U = AlphaContainer.normalizeDisplayName(1, (CharSequence) ((Object) param2));
           ImageProducerRasterBuffer.field_p = param1;
           QuickChatInputHelpers.openQuickChatMenu(false);
           return;
@@ -853,7 +853,7 @@ final class MidiPcmStream extends PcmStream {
             if (var11 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (null == var10) {
-                var10 = TextHotspotRegion.a(param4, var9, 40);
+                var10 = TextHotspotRegion.loadMusicPatch(param4, var9, 40);
                 if (null == var10) {
                   var6_int = 0;
                   decompiledFrameRemainder0 = false;
@@ -942,7 +942,7 @@ final class MidiPcmStream extends PcmStream {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            ja.field_h = param1;
+            IconLookupHelpers.field_h = param1;
             try {
               var3 = param2.getParameter("cookieprefix");
               if (param0 > -123) {
@@ -1110,7 +1110,7 @@ final class MidiPcmStream extends PcmStream {
           }
           if (var5Lifetime4 == 64) {
             if (64 <= var6Lifetime3) {
-              this.field_F[var4Lifetime4] = DateOfBirthValidator.a(this.field_F[var4Lifetime4], 1);
+              this.field_F[var4Lifetime4] = DateOfBirthValidator.bitOr(this.field_F[var4Lifetime4], 1);
               if (var8 != 0) {
                 this.field_F[var4Lifetime4] = ClientUiHelpers.bitAnd(this.field_F[var4Lifetime4], -2);
               }
@@ -1120,7 +1120,7 @@ final class MidiPcmStream extends PcmStream {
           }
           if (var5Lifetime4 == 65) {
             if (64 <= var6Lifetime3) {
-              this.field_F[var4Lifetime4] = DateOfBirthValidator.a(this.field_F[var4Lifetime4], 2);
+              this.field_F[var4Lifetime4] = DateOfBirthValidator.bitOr(this.field_F[var4Lifetime4], 2);
               if (var8 != 0) {
                 this.releaseUnsustainedNotes(param0 ^ -32693, var4Lifetime4);
                 this.field_F[var4Lifetime4] = ClientUiHelpers.bitAnd(this.field_F[var4Lifetime4], -3);
@@ -1174,10 +1174,10 @@ final class MidiPcmStream extends PcmStream {
               this.resetRetriggerPhases(var4Lifetime4, param0 ^ 21766);
               this.field_F[var4Lifetime4] = ClientUiHelpers.bitAnd(this.field_F[var4Lifetime4], -5);
               if (var8 != 0) {
-                this.field_F[var4Lifetime4] = DateOfBirthValidator.a(this.field_F[var4Lifetime4], 4);
+                this.field_F[var4Lifetime4] = DateOfBirthValidator.bitOr(this.field_F[var4Lifetime4], 4);
               }
             } else {
-              this.field_F[var4Lifetime4] = DateOfBirthValidator.a(this.field_F[var4Lifetime4], 4);
+              this.field_F[var4Lifetime4] = DateOfBirthValidator.bitOr(this.field_F[var4Lifetime4], 4);
             }
           }
           if (var5Lifetime4 == 17) {
@@ -1245,7 +1245,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 3443) {
-            stackIn_4_0 = ResizableModalPanel.k(param0 ^ -8138);
+            stackIn_4_0 = ResizableModalPanel.getAccountSceneContent(param0 ^ -8138);
             return stackIn_4_0;
           }
           stackIn_2_0 = (SceneWidget) null;
@@ -1338,7 +1338,7 @@ final class MidiPcmStream extends PcmStream {
           var5 = null;
           if (DisplayNameForm.field_P == 2) {
             WhirlpoolHasher.field_m.field_T = true;
-            vc.field_h.field_S = SocketConnector.formatTemplate(AgeValidator.field_r, -66, new String[]{FullscreenFocusCanvas.field_f});
+            DisplayMode.field_h.field_S = SocketConnector.formatTemplate(AgeValidator.field_r, -66, new String[]{FullscreenFocusCanvas.field_f});
             ClientGlobals.field_j.field_Xb.field_Tb.field_S = null;
             var6 = null;
             var7 = (SocialListEntry) (var4.first(13058));
@@ -1427,9 +1427,9 @@ final class MidiPcmStream extends PcmStream {
                   TextAndMenuHelpers.openPlayerContextMenu(var7, -1, -1, (int[]) null, var16, (String) null, 1073741824, 0L, ClientGlobals.field_j.field_Xb);
                   var5 = var7;
                   if (null != var7.field_ac &&
-                    !ob.a((byte) -38, AudioService.field_i.field_k) &&
-                    !fj.field_e) {
-                    if (!uc.field_g) {
+                    !PendingPackedReply.isPrivateChatInputTo((byte) -38, AudioService.field_i.field_k) &&
+                    !PasswordRuleHelpers.field_e) {
+                    if (!DesignerPageTables.field_g) {
                       var17 = AudioService.field_i;
                       var18 = SocketConnector.formatTemplate(BufferedRandomAccessFile.field_c, -67, new String[]{var16});
                       var17.field_j.addItem(2, 8, var18);
@@ -1451,17 +1451,17 @@ final class MidiPcmStream extends PcmStream {
             }
             if ((decompiledNaturalLoopExit0) &&
               (ClientGlobals.field_j.field_bc.field_Eb != 0)) {
-              DelayedServerPacket.field_y = new AccountNamePrompt(ClientGlobals.field_j.field_bc.field_Rb, ClientGlobals.field_j.field_bc.field_cb, ClientGlobals.field_j.field_bc.field_zb, ClientGlobals.field_j.field_bc.field_Lb, NameSuggestionsPanel.field_S, kf.field_y, bd.field_f, bd.field_f);
+              DelayedServerPacket.field_y = new AccountNamePrompt(ClientGlobals.field_j.field_bc.field_Rb, ClientGlobals.field_j.field_bc.field_cb, ClientGlobals.field_j.field_bc.field_zb, ClientGlobals.field_j.field_bc.field_Lb, NameSuggestionsPanel.field_S, HighscoreTable.field_y, SolidSpriteHelpers.field_f, SolidSpriteHelpers.field_f);
               QuickChatHelpDialog.field_bc = 0;
             }
             if (ClientGlobals.field_j.field_Sb.field_Eb != 0) {
-              DelayedServerPacket.field_y = new AccountNamePrompt(ClientGlobals.field_j.field_Sb.field_Rb, ClientGlobals.field_j.field_Sb.field_cb, ClientGlobals.field_j.field_Sb.field_zb, ClientGlobals.field_j.field_Sb.field_Lb, Js5Transport.field_b, kf.field_y, bd.field_f, bd.field_f);
+              DelayedServerPacket.field_y = new AccountNamePrompt(ClientGlobals.field_j.field_Sb.field_Rb, ClientGlobals.field_j.field_Sb.field_cb, ClientGlobals.field_j.field_Sb.field_zb, ClientGlobals.field_j.field_Sb.field_Lb, Js5Transport.field_b, HighscoreTable.field_y, SolidSpriteHelpers.field_f, SolidSpriteHelpers.field_f);
               QuickChatHelpDialog.field_bc = 1;
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            vc.field_h.field_S = GameApplet.field_a;
+            DisplayMode.field_h.field_S = GameApplet.field_a;
             WhirlpoolHasher.field_m.field_T = false;
             if (DisplayNameForm.field_P == 1) {
               ClientGlobals.field_j.field_Xb.field_Tb.field_S = DualNode.field_q;

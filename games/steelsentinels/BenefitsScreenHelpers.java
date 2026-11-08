@@ -115,55 +115,55 @@ final class BenefitsScreenHelpers {
         try {
           if (null != Js5ArchiveManager.field_d &&
             Js5ArchiveManager.field_d.ensureIndex(true) &&
-            Js5ArchiveManager.field_d.a("benefits", (byte) 90) &&
+            Js5ArchiveManager.field_d.isGroupLoadedByName("benefits", (byte) 90) &&
             UsernameCredentials.field_h != null &&
             UsernameCredentials.field_h.ensureIndex(true) &&
-            UsernameCredentials.field_h.a("benefits", (byte) 90)) {
-            c.field_o = PacketLoopHelpers.loadRgbSpriteByName(Js5ArchiveManager.field_d, "benefits", "headline", false);
-            wb.field_i = PacketLoopHelpers.loadRgbSpriteByName(Js5ArchiveManager.field_d, "benefits", "blurbpane", false);
+            UsernameCredentials.field_h.isGroupLoadedByName("benefits", (byte) 90)) {
+            PendingByteArrayRequest.field_o = PacketLoopHelpers.loadRgbSpriteByName(Js5ArchiveManager.field_d, "benefits", "headline", false);
+            RewardValueHelpers.field_i = PacketLoopHelpers.loadRgbSpriteByName(Js5ArchiveManager.field_d, "benefits", "blurbpane", false);
             QuickChatInputHelpers.field_e = PacketLoopHelpers.loadRgbSpriteByName(Js5ArchiveManager.field_d, "benefits", "button", false);
             TextLayout.field_f = PacketLoopHelpers.loadRgbSpriteByName(Js5ArchiveManager.field_d, "benefits", "signup_text", false);
             ValidatedTextWidget.field_pb = PacketLoopHelpers.loadRgbSpriteByName(Js5ArchiveManager.field_d, "benefits", "menu_text", false);
             ValidatedTextWidget.field_ub = PacketLoopHelpers.loadRgbSpriteByName(Js5ArchiveManager.field_d, "benefits", "button_frame", false);
             NodeIterator.field_b = PacketLoopHelpers.loadRgbSpriteByName(Js5ArchiveManager.field_d, "benefits", "arrow", false);
-            FullscreenFocusCanvas.field_g = (BitmapFont) ((Object) vd.a(UsernameCredentials.field_h, "benefits", Js5ArchiveManager.field_d, -1, "large_font"));
-            wn.field_a = (BitmapFont) ((Object) vd.a(UsernameCredentials.field_h, "benefits", Js5ArchiveManager.field_d, -1, "small_font"));
+            FullscreenFocusCanvas.field_g = (BitmapFont) ((Object) TransitionTimerHelpers.loadBinaryFontByName(UsernameCredentials.field_h, "benefits", Js5ArchiveManager.field_d, -1, "large_font"));
+            ChatPanelSetupHelpers.field_a = (BitmapFont) ((Object) TransitionTimerHelpers.loadBinaryFontByName(UsernameCredentials.field_h, "benefits", Js5ArchiveManager.field_d, -1, "small_font"));
             var27 = SoftwareRaster.field_g;
             var2 = SoftwareRaster.field_c;
             var3 = SoftwareRaster.field_j;
             SoftwareRaster.getClip(ImageProducerRasterBuffer.field_n);
             var4_ref_wk = new RgbSprite(NodeIterator.field_b.field_A + 4, 4 + NodeIterator.field_b.field_F);
             var4_ref_wk.bindRasterTarget();
-            NodeIterator.field_b.drawTintedGrayscale(2, 2, dc.field_h);
-            uj.a(2, 0, 0, (byte) -19, var4_ref_wk.field_F, 1, var4_ref_wk, var4_ref_wk.field_A);
+            NodeIterator.field_b.drawTintedGrayscale(2, 2, TableColumns.field_h);
+            ReflectionCheckHelpers.drawSpriteOutline(2, 0, 0, (byte) -19, var4_ref_wk.field_F, 1, var4_ref_wk, var4_ref_wk.field_A);
             NodeIterator.field_b = var4_ref_wk;
-            in.field_e = NodeIterator.field_b.copyFlippedHorizontal();
+            SocialPacketHelpers.field_e = NodeIterator.field_b.copyFlippedHorizontal();
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_A / 2;
             var12.bindRasterTarget();
-            FullscreenFocusCanvas.field_g.drawCentered(SocketConnector.formatTemplate(hg.field_a, -127, new String[]{GzipDecoder.field_d}), var6, 40, 16777215, -1);
-            wn.field_a.drawCentered(SocketConnector.formatTemplate(SceneWidget.field_Bb, -119, new String[]{GzipDecoder.field_d}), var6, 60, 16777215, -1);
-            FullscreenFocusCanvas.field_g.drawCentered(SocketConnector.formatTemplate(rn.field_z, -40, new String[]{PopupMenuHelpers.field_c}), var6, 110, 16777215, -1);
-            wn.field_a.drawCentered(SocketConnector.formatTemplate(IntKeyLookup.field_f, -25, new String[]{PopupMenuHelpers.field_c}), var6, 130, 16777215, -1);
+            FullscreenFocusCanvas.field_g.drawCentered(SocketConnector.formatTemplate(HighscoreColumnHeader.field_a, -127, new String[]{GzipDecoder.field_d}), var6, 40, 16777215, -1);
+            ChatPanelSetupHelpers.field_a.drawCentered(SocketConnector.formatTemplate(SceneWidget.field_Bb, -119, new String[]{GzipDecoder.field_d}), var6, 60, 16777215, -1);
+            FullscreenFocusCanvas.field_g.drawCentered(SocketConnector.formatTemplate(PendingAckRequest.field_z, -40, new String[]{PopupMenuHelpers.field_c}), var6, 110, 16777215, -1);
+            ChatPanelSetupHelpers.field_a.drawCentered(SocketConnector.formatTemplate(IntKeyLookup.field_f, -25, new String[]{PopupMenuHelpers.field_c}), var6, 130, 16777215, -1);
             FullscreenFocusCanvas.field_g.drawCentered(QuickChatHelpDialog.field_Xb, var6, 180, 16777215, -1);
-            wn.field_a.drawCentered(wn.field_c, var6, 200, 16777215, -1);
-            uj.a(3, 0, 0, (byte) -45, var12.field_F, 1, var12, var12.field_A);
-            wb.field_i.bindRasterTarget();
-            var12.drawTransparent(18 - wb.field_i.field_D, -wb.field_i.field_H + 241);
+            ChatPanelSetupHelpers.field_a.drawCentered(ChatPanelSetupHelpers.field_c, var6, 200, 16777215, -1);
+            ReflectionCheckHelpers.drawSpriteOutline(3, 0, 0, (byte) -45, var12.field_F, 1, var12, var12.field_A);
+            RewardValueHelpers.field_i.bindRasterTarget();
+            var12.drawTransparent(18 - RewardValueHelpers.field_i.field_D, -RewardValueHelpers.field_i.field_H + 241);
             for (var7 = 0; Js5ArchiveManager.field_f.length > var7; var7++) {
               AccountMessagePanel.field_R[var7].bindRasterTarget();
-              wn.field_a.drawParagraph(Js5ArchiveManager.field_f[var7], 3, 3, AccountMessagePanel.field_R[var7].field_A - 6, -6 + AccountMessagePanel.field_R[var7].field_F, dc.field_h, -1, 1, 1, wn.field_a.field_F + wn.field_a.field_G);
-              uj.a(3, 0, 0, (byte) -79, AccountMessagePanel.field_R[var7].field_F, 1, AccountMessagePanel.field_R[var7], AccountMessagePanel.field_R[var7].field_A);
+              ChatPanelSetupHelpers.field_a.drawParagraph(Js5ArchiveManager.field_f[var7], 3, 3, AccountMessagePanel.field_R[var7].field_A - 6, -6 + AccountMessagePanel.field_R[var7].field_F, TableColumns.field_h, -1, 1, 1, ChatPanelSetupHelpers.field_a.field_F + ChatPanelSetupHelpers.field_a.field_G);
+              ReflectionCheckHelpers.drawSpriteOutline(3, 0, 0, (byte) -79, AccountMessagePanel.field_R[var7].field_F, 1, AccountMessagePanel.field_R[var7], AccountMessagePanel.field_R[var7].field_A);
             }
             Js5ArchiveManager.field_f = null;
-            tf.field_e = TextLayout.field_f.copySprite();
-            tf.field_e.bindRasterTarget();
+            ChatHistoryHelpers.field_e = TextLayout.field_f.copySprite();
+            ChatHistoryHelpers.field_e.bindRasterTarget();
             MusicPatchPcmStream.recolorGreenPixelsInRect(SoftwareRaster.field_j * 2 / 3, 0, SoftwareRaster.field_c, 64, 0, 40);
             SoftwareRaster.setTarget(var27, var2, var3);
             SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
-            mc.field_a = (QuickChatInputHelpers.field_e.field_F - ValidatedTextWidget.field_ub.field_F) / 2 + 390;
+            LoadingCaptionHelpers.field_a = (QuickChatInputHelpers.field_e.field_F - ValidatedTextWidget.field_ub.field_F) / 2 + 390;
             Js5ArchiveManager.field_d = null;
-            rn.field_u = 434 + (-ValidatedTextWidget.field_ub.field_A + QuickChatInputHelpers.field_e.field_A) / 2;
+            PendingAckRequest.field_u = 434 + (-ValidatedTextWidget.field_ub.field_A + QuickChatInputHelpers.field_e.field_A) / 2;
             RasterSnapshot.field_s = 231 + (-ValidatedTextWidget.field_ub.field_A + QuickChatInputHelpers.field_e.field_A) / 2;
             ClientException.field_m = (QuickChatInputHelpers.field_e.field_F - ValidatedTextWidget.field_ub.field_F) / 2 + 390;
           }
@@ -178,9 +178,9 @@ final class BenefitsScreenHelpers {
             var4 = SoftwareRaster.field_j;
             SoftwareRaster.getClip(ImageProducerRasterBuffer.field_n);
             var14 = SocketConnector.formatTemplate(CombatWorld.field_x, -69, new String[]{ResourceArchive.field_m[MouseInputHandler.field_j]});
-            var6Lifetime1 = FullscreenFocusCanvas.field_g.getWrappedWidth(var14, pa.field_b);
-            var7Lifetime1 = FullscreenFocusCanvas.field_g.paragraphHeight(var14, pa.field_b, FullscreenFocusCanvas.field_g.field_G + FullscreenFocusCanvas.field_g.field_F);
-            var8 = BufferedSocket.field_e + (-var6Lifetime1 + pa.field_b) / 2;
+            var6Lifetime1 = FullscreenFocusCanvas.field_g.getWrappedWidth(var14, TutorialStepTable.field_b);
+            var7Lifetime1 = FullscreenFocusCanvas.field_g.paragraphHeight(var14, TutorialStepTable.field_b, FullscreenFocusCanvas.field_g.field_G + FullscreenFocusCanvas.field_g.field_F);
+            var8 = BufferedSocket.field_e + (-var6Lifetime1 + TutorialStepTable.field_b) / 2;
             var9 = NameSuggestionsPanel.field_W + (ClientErrorSupport.field_g - var7Lifetime1) / 2;
             var8 -= 3;
             var6Lifetime1 += 6;
@@ -225,8 +225,8 @@ final class BenefitsScreenHelpers {
             PendingIntArrayRequest.field_r.normalizeCanvas();
             var10 = new RgbSprite(PendingIntArrayRequest.field_r.field_z, PendingIntArrayRequest.field_r.field_B);
             var10.bindRasterTarget();
-            FullscreenFocusCanvas.field_g.drawParagraph(var14, BufferedSocket.field_e, NameSuggestionsPanel.field_W, pa.field_b, ClientErrorSupport.field_g, 16777215, -1, 1, 1, FullscreenFocusCanvas.field_g.field_F + FullscreenFocusCanvas.field_g.field_G);
-            uj.a(3, 0, 0, (byte) -119, var10.field_B, 1, var10, var10.field_z);
+            FullscreenFocusCanvas.field_g.drawParagraph(var14, BufferedSocket.field_e, NameSuggestionsPanel.field_W, TutorialStepTable.field_b, ClientErrorSupport.field_g, 16777215, -1, 1, 1, FullscreenFocusCanvas.field_g.field_F + FullscreenFocusCanvas.field_g.field_G);
+            ReflectionCheckHelpers.drawSpriteOutline(3, 0, 0, (byte) -119, var10.field_B, 1, var10, var10.field_z);
             PendingIntArrayRequest.field_r.bindRasterTarget();
             var10.drawTransparent(0, 0);
             ArchiveProvider.field_e = new RgbSprite(640, 480);
@@ -238,7 +238,7 @@ final class BenefitsScreenHelpers {
             SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
           }
           if (NameSuggestionsPanel.field_P != null &&
-            null != wn.field_a) {
+            null != ChatPanelSetupHelpers.field_a) {
             var29 = SoftwareRaster.field_g;
             var3Lifetime2 = SoftwareRaster.field_c;
             var4Lifetime1 = SoftwareRaster.field_j;
@@ -247,40 +247,40 @@ final class BenefitsScreenHelpers {
             var6_ref_String = SocketConnector.formatTemplate(PlayerContextMenu.field_l, -109, new String[]{NameSuggestionsPanel.field_P});
             NameSuggestionsPanel.field_P = null;
             var16.bindRasterTarget();
-            wn.field_a.drawParagraph(var6_ref_String, 3, 3, var16.field_A - 6, var16.field_F - 6, 16777215, -1, 0, 1, wn.field_a.field_G + wn.field_a.field_F);
-            uj.a(3, 0, 0, (byte) -42, var16.field_F, 1, var16, var16.field_A);
+            ChatPanelSetupHelpers.field_a.drawParagraph(var6_ref_String, 3, 3, var16.field_A - 6, var16.field_F - 6, 16777215, -1, 0, 1, ChatPanelSetupHelpers.field_a.field_G + ChatPanelSetupHelpers.field_a.field_F);
+            ReflectionCheckHelpers.drawSpriteOutline(3, 0, 0, (byte) -42, var16.field_F, 1, var16, var16.field_A);
             EditableTextWidget.field_kb.bindRasterTarget();
             var16.drawTransparent(-EditableTextWidget.field_kb.field_D + 199, -EditableTextWidget.field_kb.field_H + 83);
             SoftwareRaster.setTarget(var29, var3Lifetime2, var4Lifetime1);
             SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
           }
-          if (qi.field_i != null &&
-            wn.field_a != null) {
+          if (LoginCredentialHelpers.field_i != null &&
+            ChatPanelSetupHelpers.field_a != null) {
             var30 = SoftwareRaster.field_g;
             var3Lifetime3 = SoftwareRaster.field_c;
             var4Lifetime2 = SoftwareRaster.field_j;
             SoftwareRaster.getClip(ImageProducerRasterBuffer.field_n);
-            var5 = wn.field_a.getWrappedWidth(TextFieldValidator.field_j, 640) + 6;
-            var6Lifetime2 = 20 + (var5 + qi.field_i.field_z);
+            var5 = ChatPanelSetupHelpers.field_a.getWrappedWidth(TextFieldValidator.field_j, 640) + 6;
+            var6Lifetime2 = 20 + (var5 + LoginCredentialHelpers.field_i.field_z);
             var7Lifetime2 = 427 - var6Lifetime2 / 2;
-            var8Lifetime1 = qi.field_i.field_z + (var7Lifetime2 + 20);
+            var8Lifetime1 = LoginCredentialHelpers.field_i.field_z + (var7Lifetime2 + 20);
             EditableTextWidget.field_kb.bindRasterTarget();
-            wn.field_a.drawLeft(TextFieldValidator.field_j, -EditableTextWidget.field_kb.field_D + var8Lifetime1, wn.field_a.field_F + wn.field_a.field_G + (155 - EditableTextWidget.field_kb.field_H), 16777215, -1);
-            uj.a(3, var8Lifetime1 - EditableTextWidget.field_kb.field_D - 4, 155 - EditableTextWidget.field_kb.field_H, (byte) -60, 50, 1, EditableTextWidget.field_kb, var5);
-            var9Lifetime1 = 155 - EditableTextWidget.field_kb.field_H - (-wn.field_a.field_F + (-wn.field_a.field_G + qi.field_i.field_B - 3)) / 2;
-            qi.field_i.drawTransparent(-EditableTextWidget.field_kb.field_D + var7Lifetime2, var9Lifetime1);
+            ChatPanelSetupHelpers.field_a.drawLeft(TextFieldValidator.field_j, -EditableTextWidget.field_kb.field_D + var8Lifetime1, ChatPanelSetupHelpers.field_a.field_F + ChatPanelSetupHelpers.field_a.field_G + (155 - EditableTextWidget.field_kb.field_H), 16777215, -1);
+            ReflectionCheckHelpers.drawSpriteOutline(3, var8Lifetime1 - EditableTextWidget.field_kb.field_D - 4, 155 - EditableTextWidget.field_kb.field_H, (byte) -60, 50, 1, EditableTextWidget.field_kb, var5);
+            var9Lifetime1 = 155 - EditableTextWidget.field_kb.field_H - (-ChatPanelSetupHelpers.field_a.field_F + (-ChatPanelSetupHelpers.field_a.field_G + LoginCredentialHelpers.field_i.field_B - 3)) / 2;
+            LoginCredentialHelpers.field_i.drawTransparent(-EditableTextWidget.field_kb.field_D + var7Lifetime2, var9Lifetime1);
             SoftwareRaster.setTarget(var30, var3Lifetime3, var4Lifetime2);
             SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
-            qi.field_i = null;
+            LoginCredentialHelpers.field_i = null;
           }
           SoftwareRaster.getClip(ImageProducerRasterBuffer.field_n);
           SoftwareRaster.fillRoundedRectangleBlended(16, 16, 608, 112, 15, Sentinel.field_bc, AudioService.field_b);
           SoftwareRaster.fillRoundedRectangleBlended(231, 144, 393, 232, 15, Sentinel.field_bc, AudioService.field_b);
-          if (c.field_o != null) {
-            c.field_o.drawTransparent(0, 0);
+          if (PendingByteArrayRequest.field_o != null) {
+            PendingByteArrayRequest.field_o.drawTransparent(0, 0);
           }
-          if (null != wb.field_i) {
-            wb.field_i.drawTransparent(0, 0);
+          if (null != RewardValueHelpers.field_i) {
+            RewardValueHelpers.field_i.drawTransparent(0, 0);
           }
           EditableTextWidget.field_kb.drawTransparent(0, 0);
           if (null != ArchiveProvider.field_e) {
@@ -291,7 +291,7 @@ final class BenefitsScreenHelpers {
             QuickChatInputHelpers.field_e.drawTransparent(231, 390);
             var2_ref_wk = TextLayout.field_f;
             if (jh.field_i.field_e == 0) {
-              var2_ref_wk = tf.field_e;
+              var2_ref_wk = ChatHistoryHelpers.field_e;
             }
             var2_ref_wk.drawTransparent(0, 0);
             stackIn_51_0 = 40;
@@ -313,7 +313,7 @@ final class BenefitsScreenHelpers {
               var2_ref_wk.drawAdditive(1, -1, var3Lifetime4);
               var2_ref_wk.drawAdditive(-1, -1, var3Lifetime4);
             }
-            stackIn_57_0 = mc.field_a;
+            stackIn_57_0 = LoadingCaptionHelpers.field_a;
             stackIn_57_1 = -28;
             stackIn_58_2 = (jh.field_i.field_e == 0);
             TutorialStep.drawGlintingButtonFrame(stackIn_57_0, stackIn_57_1, stackIn_58_2, RasterSnapshot.field_s);
@@ -328,12 +328,12 @@ final class BenefitsScreenHelpers {
             stackIn_66_0 = ClientException.field_m;
             stackIn_66_1 = -3;
             stackIn_67_2 = (jh.field_i.field_e == 1);
-            TutorialStep.drawGlintingButtonFrame(stackIn_66_0, stackIn_66_1, stackIn_67_2, rn.field_u);
+            TutorialStep.drawGlintingButtonFrame(stackIn_66_0, stackIn_66_1, stackIn_67_2, PendingAckRequest.field_u);
           }
           if (NodeIterator.field_b != null) {
             var2Lifetime1 = 357 - NodeIterator.field_b.field_B / 2;
             NodeIterator.field_b.drawTransparent(-NodeIterator.field_b.field_z + 269, var2Lifetime1);
-            in.field_e.drawTransparent(586, var2Lifetime1);
+            SocialPacketHelpers.field_e.drawTransparent(586, var2Lifetime1);
             if (DelegatingCanvas.field_c > var2Lifetime1 &&
               DelegatingCanvas.field_c < NodeIterator.field_b.field_F + var2Lifetime1) {
               var3Lifetime5 = 40 + (PlayerContextMenu.sine(20612, ConditionalTextValue.field_e << 4) * 40 >> 16);
@@ -347,10 +347,10 @@ final class BenefitsScreenHelpers {
                 } else {
                   if (LobbySetupHelpers.field_f > 586 &&
                     586 + NodeIterator.field_b.field_A > LobbySetupHelpers.field_f) {
-                    in.field_e.drawAdditive(585, var2Lifetime1 - 1, var3Lifetime5);
-                    in.field_e.drawAdditive(587, var2Lifetime1 - 1, var3Lifetime5);
-                    in.field_e.drawAdditive(585, 1 + var2Lifetime1, var3Lifetime5);
-                    in.field_e.drawAdditive(587, var2Lifetime1 + 1, var3Lifetime5);
+                    SocialPacketHelpers.field_e.drawAdditive(585, var2Lifetime1 - 1, var3Lifetime5);
+                    SocialPacketHelpers.field_e.drawAdditive(587, var2Lifetime1 - 1, var3Lifetime5);
+                    SocialPacketHelpers.field_e.drawAdditive(585, 1 + var2Lifetime1, var3Lifetime5);
+                    SocialPacketHelpers.field_e.drawAdditive(587, var2Lifetime1 + 1, var3Lifetime5);
                   }
                 }
               }
@@ -451,30 +451,30 @@ final class BenefitsScreenHelpers {
         int stackIn_13_6;
         int stackIn_13_7;
         boolean stackIn_14_8 = false;
-        ArchiveRequest.c((byte) 123);
-        if (nf.field_b != null) {
-          stackIn_6_0 = (RasterBuffer.a((int) nf.field_b.field_Sb[2], false, nf.field_b.field_wc)) ? 1 : 0;
+        ArchiveRequest.tickLobbyHighlights((byte) 123);
+        if (LoginEncryptionHelpers.field_b != null) {
+          stackIn_6_0 = (RasterBuffer.isPlayerCountValidForMode((int) LoginEncryptionHelpers.field_b.field_Sb[2], false, LoginEncryptionHelpers.field_b.field_wc)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
         var2 = stackIn_6_0;
         stackIn_9_0 = 15;
-        stackIn_9_1 = jj.field_d;
-        stackIn_11_2 = (ob.field_y) || (CombatWorld.field_G);
+        stackIn_9_1 = MeshMaterial.field_d;
+        stackIn_11_2 = (PendingPackedReply.field_y) || (CombatWorld.field_G);
         stackIn_13_3 = param0;
         stackIn_13_4 = 0;
         stackIn_13_5 = 72;
         stackIn_13_6 = var2;
         stackIn_13_7 = 11;
         stackIn_14_8 = (ScrollContainer.field_Vb <= 50) ? false : true;
-        LinkButtonPainter.a(stackIn_9_0, stackIn_9_1, stackIn_11_2, stackIn_13_3, stackIn_13_4, stackIn_13_5, stackIn_13_6 != 0, stackIn_13_7, stackIn_14_8, 14, param1, true);
+        LinkButtonPainter.runFrontEndFrame(stackIn_9_0, stackIn_9_1, stackIn_11_2, stackIn_13_3, stackIn_13_4, stackIn_13_5, stackIn_13_6 != 0, stackIn_13_7, stackIn_14_8, 14, param1, true);
         if (ParticleEffect.field_J) {
           ClockAndCookieHelpers.field_g.writeCipheredOpcode(57, (byte) -117);
           ParticleEffect.field_J = false;
         }
-        if (of.field_c) {
+        if (SessionExitHelpers.field_c) {
           ClockAndCookieHelpers.field_g.writeCipheredOpcode(10, (byte) -117);
-          of.field_c = false;
+          SessionExitHelpers.field_c = false;
         }
     }
 

@@ -33,7 +33,7 @@ final class TutorialStep {
         int var2 = SpriteFrame.drawInfoBox(this.field_r, this.field_g, this.field_c, this.field_u, this.field_o, param0 + 38, this.field_e, 1071146, this.field_q ? TickClock.field_f : null, false);
         if (var2 >= 0) {
           if (!this.field_w) {
-            CombatWorld.c(-2483, 97);
+            CombatWorld.playSoundEffect(-2483, 97);
           }
           this.field_w = true;
         } else {
@@ -118,7 +118,7 @@ final class TutorialStep {
     }
 
     TutorialStep(int param0, int param1, int param2, int param3, int param4, RgbSprite param5, boolean param6) {
-        this(jm.field_u[param0], param1, param2, param3, param4, param5, param6);
+        this(PendingIntReplyRequest.field_u[param0], param1, param2, param3, param4, param5, param6);
         try {
           this.field_s = param0;
         } catch (RuntimeException runtimeException) {
@@ -127,7 +127,7 @@ final class TutorialStep {
     }
 
     final void restoreHighlightedWidget(byte param0) {
-        kf.field_s = true;
+        HighscoreTable.field_s = true;
         GameApplet.field_l = true;
         if (param0 <= 57) {
           field_d = 94;
@@ -141,7 +141,7 @@ final class TutorialStep {
         this.field_j = null;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         if (param0) {
           field_d = 20;
@@ -154,7 +154,7 @@ final class TutorialStep {
     }
 
     final boolean isAutoAdvance(int param0) {
-        kf.field_s = true;
+        HighscoreTable.field_s = true;
         GameApplet.field_l = true;
         if (param0 <= 9) {
           return false;
@@ -165,7 +165,7 @@ final class TutorialStep {
     final static void setDialogCentre(int param0, int param1, int param2) {
         QuickChatMenu.field_kc = param1;
         int var3 = 78 % ((param0 + 41) / 56);
-        kb.field_a = param2;
+        DefaultQuickChatCacheHook.field_a = param2;
     }
 
     final static void applyVerticalGreyGradient(int param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
@@ -273,15 +273,15 @@ final class TutorialStep {
         var6 = SteelSentinels.obfuscationControl;
         try {
           GameApplet.field_l = true;
-          kf.field_s = true;
+          HighscoreTable.field_s = true;
           if (this.field_q &&
             this.field_w) {
-            CombatWorld.c(-2483, 95);
-            SectorCacheStore.a(false);
+            CombatWorld.playSoundEffect(-2483, 95);
+            SectorCacheStore.advanceTutorialStep(false);
           }
           if (param0.field_e == 3) {
             this.restoreHighlightedWidget((byte) 69);
-            dc.field_g = -1;
+            TableColumns.field_g = -1;
             return true;
           }
           if (param1 != 23123) {
@@ -293,7 +293,7 @@ final class TutorialStep {
             var7.field_Sb.field_kb) {
             return true;
           }
-          var8 = vd.field_a;
+          var8 = TransitionTimerHelpers.field_a;
           if (var8 != null &&
             var8.field_Sb != null &&
             var8.field_Sb.field_kb) {
@@ -309,7 +309,7 @@ final class TutorialStep {
           var5 = this.field_s;
           if (var5 == 1) {
             if (var4 != 0) {
-              SectorCacheStore.a(false);
+              SectorCacheStore.advanceTutorialStep(false);
               return true;
             }
           } else {
@@ -322,19 +322,19 @@ final class TutorialStep {
                   }
                   if (var5 == 10) {
                     if (var4 != 0) {
-                      SectorCacheStore.a(false);
+                      SectorCacheStore.advanceTutorialStep(false);
                       return true;
                     }
                   } else {
                     if (var5 == 12) {
                       if (DiskCacheRequest.field_K) {
-                        SectorCacheStore.a(false);
+                        SectorCacheStore.advanceTutorialStep(false);
                         return true;
                       }
                     } else {
                       if (14 == var5) {
                         if (var4 != 0) {
-                          SectorCacheStore.a(false);
+                          SectorCacheStore.advanceTutorialStep(false);
                           return true;
                         }
                       } else {
@@ -349,19 +349,19 @@ final class TutorialStep {
                   }
                 } else {
                   if (var4 != 0) {
-                    SectorCacheStore.a(false);
+                    SectorCacheStore.advanceTutorialStep(false);
                     return true;
                   }
                 }
               } else {
                 if (var4 != 0) {
-                  SectorCacheStore.a(false);
+                  SectorCacheStore.advanceTutorialStep(false);
                   return true;
                 }
               }
             } else {
               if (var4 != 0) {
-                SectorCacheStore.a(false);
+                SectorCacheStore.advanceTutorialStep(false);
                 return true;
               }
             }

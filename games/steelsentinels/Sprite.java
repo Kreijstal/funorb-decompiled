@@ -123,14 +123,14 @@ abstract class Sprite {
         var4 = null;
         var5 = 0;
         var6 = 0;
-        for (var7 = uc.field_a - 1; 0 <= var7; var7--) {
-          var8_ref_na = ph.field_e[var7];
+        for (var7 = DesignerPageTables.field_a - 1; 0 <= var7; var7--) {
+          var8_ref_na = ChatLineMenuHelpers.field_e[var7];
           var9 = 0;
-          if (!fj.field_e &&
+          if (!PasswordRuleHelpers.field_e &&
             var5 < ArchiveLoadSequence.field_h) {
-            var10_int = NameAvailabilityValidator.a(var8_ref_na.field_k, 1);
+            var10_int = NameAvailabilityValidator.getChatFilterMode(var8_ref_na.field_k, 1);
             if (var8_ref_na.getVisibilityClass((byte) 58) >= var10_int && (var8_ref_na.field_g ||
-              !o.a(-99, var8_ref_na.field_p))) {
+              !SocialStateHelpers.isIgnored(-99, var8_ref_na.field_p))) {
               var9 = 1;
             }
           }
@@ -143,7 +143,7 @@ abstract class Sprite {
               if (var8_ref_na.field_m == null) {
                 NameValidationHelpers.field_e = NameValidationHelpers.field_e + 1;
               }
-              var10 = ArticulatedPart.a(-118, var8_ref_na);
+              var10 = ArticulatedPart.formatChatPrefix(-118, var8_ref_na);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_na.field_o);
               var12 = LoginConnectionStage.getChatLineColour(-102, var8_ref_na);
               var8_ref_na.field_m = new SceneWidget(0L, ReportAbuseDialog.field_ic, var11);
@@ -156,8 +156,8 @@ abstract class Sprite {
           }
         }
         var7Lifetime1 = 0;
-        for (var8 = 0; var8 < uc.field_a; var8++) {
-          var9_ref_na = ph.field_e[var8];
+        for (var8 = 0; var8 < DesignerPageTables.field_a; var8++) {
+          var9_ref_na = ChatLineMenuHelpers.field_e[var8];
           if (null != var9_ref_na.field_m) {
             BoundedRandomAccessFile.field_j.field_Ub.addChild(var9_ref_na.field_m, 127);
             var9_ref_na.field_m.setBounds(0, var7Lifetime1, param3, param1, var9_ref_na.field_m.getContentWidth(-2147483648));
@@ -183,7 +183,7 @@ abstract class Sprite {
         if (param2 <= 0) {
           return (ChatMessage) null;
         }
-        if (jn.field_g &&
+        if (MusicTrackHelpers.field_g &&
           LoginActionHelpers.field_a != null) {
           PopupMenuHelpers.field_f = true;
         }
@@ -200,7 +200,7 @@ abstract class Sprite {
     final static void loadLogoJingle(ResourceArchive param0, int param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.decodeSetup(param0.a("", -742, "headers.packvorbis"));
+          VorbisSample.decodeSetup(param0.getFileByName("", -742, "headers.packvorbis"));
           if (param1 != 1728986241) {
             field_c = (NodeDeque) null;
           }

@@ -99,8 +99,8 @@ final class UiTheme {
           var11 = 1;
           if (var9 > var8 ||
             param3.indexOf("<br>") != -1) {
-            if (t.field_b == null) {
-              t.field_b = new String[16];
+            if (NameTable.field_b == null) {
+              NameTable.field_b = new String[16];
             }
             if (var9 > var8) {
               var13 = var9 / var8;
@@ -108,11 +108,11 @@ final class UiTheme {
             } else {
               var12 = var8;
             }
-            var11Lifetime1 = this.field_v.wrapText(param3, new int[]{var12}, t.field_b);
+            var11Lifetime1 = this.field_v.wrapText(param3, new int[]{var12}, NameTable.field_b);
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_v.textWidth(t.field_b[var13Lifetime2]);
+              var14 = this.field_v.textWidth(NameTable.field_b[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -210,9 +210,9 @@ final class UiTheme {
         this.field_a = 3;
         this.field_g = 3;
         var4.field_c = 11711154;
-        var4.createStateLayer(-25088, 0).setFontColor((byte) -107, 15658734).setFrameSprites(1, TickClock.a(8947848, (byte) 112, 7829367, 10066329));
-        var4.createStateLayer(-25088, 1).setFrameSprites(1, TickClock.a(11184810, (byte) 123, 13421772, 10066329));
-        var4.createStateLayer(-25088, 3).setFrameSprites(1, TickClock.a(8947848, (byte) 116, 10066329, 7829367)).setOffsetX(true, 1).setTextColor(1, 120);
+        var4.createStateLayer(-25088, 0).setFontColor((byte) -107, 15658734).setFrameSprites(1, TickClock.createPanelFrameSpritesThin(8947848, (byte) 112, 7829367, 10066329));
+        var4.createStateLayer(-25088, 1).setFrameSprites(1, TickClock.createPanelFrameSpritesThin(11184810, (byte) 123, 13421772, 10066329));
+        var4.createStateLayer(-25088, 3).setFrameSprites(1, TickClock.createPanelFrameSpritesThin(8947848, (byte) 116, 10066329, 7829367)).setOffsetX(true, 1).setOffsetY(1, 120);
         RgbSprite[] var5 = new RgbSprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
@@ -227,14 +227,14 @@ final class UiTheme {
         var6.field_a = 0;
         StatefulTextPainter var7 = new StatefulTextPainter(var4, true);
         var7.field_a = 0;
-        var7.setFrameSpritesForAllStates(false, sl.a(8947848, 2));
-        var7.createStateLayer(-25088, 1).setFrameSprites(1, sl.a(11184810, 2)).setFontColor((byte) -120, 2236962);
+        var7.setFrameSpritesForAllStates(false, ArchiveLoadStep.createSolidCenterSlices(8947848, 2));
+        var7.createStateLayer(-25088, 1).setFrameSprites(1, ArchiveLoadStep.createSolidCenterSlices(11184810, 2)).setFontColor((byte) -120, 2236962);
         this.field_x = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
         DialWidgetPainter discarded$0 = new DialWidgetPainter(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
         MarkerSliderPainter discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
         StatefulTextPainter var8 = new StatefulTextPainter();
         var17.copyStyleTo(var8, -3);
-        var8.createStateLayer(-25088, 0).setFrameSprites(1, TickClock.a(15658734, (byte) 118, 10066329, 7829367)).setFontColor((byte) -96, 1118481).setShadowColor(1, -1);
+        var8.createStateLayer(-25088, 0).setFrameSprites(1, TickClock.createPanelFrameSpritesThin(15658734, (byte) 118, 10066329, 7829367)).setFontColor((byte) -96, 1118481).setShadowColor(1, -1);
         var8.createStateLayer(-25088, 4).setFlushBeforeApply(true, (byte) 125).setFrameSprites(1, var5);
         this.field_c = (WidgetPainter) ((Object) var8);
         RgbSprite[] var9 = new RgbSprite[9];

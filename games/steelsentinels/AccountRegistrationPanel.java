@@ -44,18 +44,18 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         return PacketLoopHelpers.startAccountCreation(this.field_cb.field_y, this, this.field_hb.field_y, var2, this.field_Y.field_y, this.field_ib.field_T, true);
     }
 
-    final static boolean l(int param0) {
+    final static boolean canOpenPopup(int param0) {
         if (param0 != 13539) {
-          AccountRegistrationPanel.i(110);
-          if (!ni.b(param0 ^ 13551)) {
-            return rd.field_b <= 0 ? true : false;
+          AccountRegistrationPanel.initializeCustomCursorReflection(110);
+          if (!ByteArrayPoolHelpers.isAccountCreationMode(param0 ^ 13551)) {
+            return SpriteLoadingHelpers.field_b <= 0 ? true : false;
           }
           return true;
         }
-        if (ni.b(param0 ^ 13551)) {
+        if (ByteArrayPoolHelpers.isAccountCreationMode(param0 ^ 13551)) {
           return true;
         }
-        if (rd.field_b > 0) {
+        if (SpriteLoadingHelpers.field_b > 0) {
           return false;
         }
         return true;
@@ -86,14 +86,14 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_eb = new ValidatedTextWidget("", (UiListener) null, 3);
         int var1 = 1;
         this.field_ib = new Checkbox("", (UiListener) null, var1 != 0);
-        this.field_U = new TextButton(lc.field_d, (UiListener) null);
-        this.field_V = new TextButton(hg.field_f, (UiListener) null);
-        this.field_cb.field_v = lc.field_i;
+        this.field_U = new TextButton(SettingSearchHelpers.field_d, (UiListener) null);
+        this.field_V = new TextButton(HighscoreColumnHeader.field_f, (UiListener) null);
+        this.field_cb.field_v = SettingSearchHelpers.field_i;
         this.field_Y.field_v = StripedProgressBar.field_H;
         this.field_jb.field_v = PacketBuffer.field_v;
         this.field_hb.field_v = IsaacRandom.field_a;
         this.field_Q.field_v = Explosion.field_W;
-        this.field_eb.field_v = wb.field_b;
+        this.field_eb.field_v = RewardValueHelpers.field_b;
         this.field_ib.field_v = SingleChildContainer.field_K;
         this.field_cb.setValidator(true, new NameAvailabilityValidator(this.field_cb));
         this.field_Y.setValidator(true, new EmailSyntaxValidator(this.field_Y));
@@ -113,22 +113,22 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         PasswordFieldPainter dupTemp$1 = new PasswordFieldPainter(10000536);
         this.field_Q.field_p = (WidgetPainter) ((Object) dupTemp$1);
         this.field_hb.field_p = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = SocketConnector.formatTemplate(te.field_e, -95, new String[]{this.linkStartMarkup(-99), this.linkEndMarkup(170)});
+        String var2 = SocketConnector.formatTemplate(FriendListHelpers.field_e, -95, new String[]{this.linkStartMarkup(-99), this.linkEndMarkup(170)});
         int var3 = 20;
         var3 = var3 + this.addLabeledField(this.field_Y, 170, WeightedLruCache.field_i, var3, 126);
         var3 = var3 + (5 + this.addFieldWithHelp(var3, true, GrowableIntList.field_m, this.field_jb, "", 20, 170));
         var3 = var3 + this.addLabeledField(this.field_hb, 170, jh.field_c, var3, 126);
         var3 = var3 + (this.addFieldWithHelpDefaultWidth(ParticleEffect.field_N, 170, GrowableIntList.field_b, 12973, this.field_Q, var3) + 5);
-        var3 = var3 + (5 + this.addFieldWithHelpDefaultWidth(LinkButtonPainter.field_b, 170, cf.field_s, 12973, this.field_cb, var3));
+        var3 = var3 + (5 + this.addFieldWithHelpDefaultWidth(LinkButtonPainter.field_b, 170, StatSubmission.field_s, 12973, this.field_cb, var3));
         var3 = var3 + this.addFieldWithIndicator(var3, false, CombatWorld.field_L, this.field_eb, 170);
         LabeledField var4 = new LabeledField(46, var3, this.field_x - 90, 25, this.field_ib, true, -120 + this.field_x, 5, SectorCacheStore.field_m, 11579568, MidiPcmStream.field_cb);
         this.addChild(var4, -125);
         var3 = var3 + var4.field_E;
-        TextWidgetPainter var5 = new TextWidgetPainter(tj.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, tj.field_e.field_G, -1, 2147483647, true);
+        TextWidgetPainter var5 = new TextWidgetPainter(HighscoreSubmissionFactory.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, HighscoreSubmissionFactory.field_e.field_G, -1, 2147483647, true);
         this.field_fb = new TextHotspotWidget(var2, var5);
         this.field_fb.field_v = "";
-        this.field_fb.setHotspotTooltip(ph.field_b, 0, -55);
-        this.field_fb.setHotspotTooltip(ph.field_b, 1, -109);
+        this.field_fb.setHotspotTooltip(ChatLineMenuHelpers.field_b, 0, -55);
+        this.field_fb.setHotspotTooltip(ChatLineMenuHelpers.field_b, 1, -109);
         this.field_fb.field_A = (UiListener) (this);
         this.field_fb.setBoundsToTextHeight(46, var3, -90 + this.field_x, -1);
         var3 = var3 + (15 + this.field_fb.field_E);
@@ -159,7 +159,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new LabeledField(20, param0, param4 + 120, 25, param3, param1, 120, 3, tj.field_e, 16777215, param2);
+          var8 = new LabeledField(20, param0, param4 + 120, 25, param3, param1, 120, 3, HighscoreSubmissionFactory.field_e, 16777215, param2);
           this.addChild(var8, -83);
           var7 = new ValidationIndicator(((ValidationProvider) ((Object) param3)).validator(param1));
           this.addChild(var7, -124);
@@ -226,7 +226,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new LabeledField(20, param0, param6 + 120, 25, param3, false, 120, 3, tj.field_e, 16777215, param2);
+          var10 = new LabeledField(20, param0, param6 + 120, 25, param3, false, 120, 3, HighscoreSubmissionFactory.field_e, 16777215, param2);
           if (!param1) {
             stackIn_2_0 = -83;
             return stackIn_2_0;
@@ -319,7 +319,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        AccountRegistrationPanel.a((byte) 115, true, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
+        AccountRegistrationPanel.initializeAccountUiResources((byte) 115, true, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
         field_ab = null;
         field_Z = null;
         field_W = null;
@@ -339,14 +339,14 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         }
     }
 
-    final static void i(int param0) {
+    final static void initializeCustomCursorReflection(int param0) {
         try {
           Class var5 = null;
           Class var2 = null;
-          if (o.field_c) {
+          if (SocialStateHelpers.field_c) {
             return;
           }
-          o.field_c = true;
+          SocialStateHelpers.field_c = true;
           Class var4 = java.awt.Toolkit.class;
           Class var1 = var4;
           try {
@@ -355,7 +355,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             var5 = Class.forName("java.awt.image.BufferedImage");
             var2 = var5;
             PendingIntArrayRequest.field_u = var5.getConstructor(new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE});
-            lc.field_h = var2.getField("TYPE_INT_ARGB").getInt((Object) null);
+            SettingSearchHelpers.field_h = var2.getField("TYPE_INT_ARGB").getInt((Object) null);
             Bzip2State.field_u = var5.getMethod("setRGB", new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE, int[].class, Integer.TYPE, Integer.TYPE});
           } catch (IllegalAccessException illegalAccessException) {
             AccountNoticeDialog.field_rb = null;
@@ -448,7 +448,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
     private final boolean isFieldValid(int param0, ValidationProvider param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        vd var4 = null;
+        TransitionTimerHelpers var4 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -533,17 +533,17 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         }
     }
 
-    final static void a(byte param0, boolean param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
-        gf.field_a = TutorialStep.createNameCheckResult("", 16);
+    final static void initializeAccountUiResources(byte param0, boolean param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
+        GeneratedSpriteHelpers.field_a = TutorialStep.createNameCheckResult("", 16);
         if (param0 != -127) {
           return;
         }
         try {
-          gf.field_a.complete(param0 ^ -183, false);
+          GeneratedSpriteHelpers.field_a.complete(param0 ^ -183, false);
           ClientErrorSupport.loadCommonUiResources(param3, (byte) 99, param4, param2);
           ConditionalTextValue.initializeLoginStack(true);
           DiskCacheWorker.field_j = ClockAndCookieHelpers.field_e;
-          jn.field_b = ClockAndCookieHelpers.field_e;
+          MusicTrackHelpers.field_b = ClockAndCookieHelpers.field_e;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "vi.CA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -571,7 +571,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new LabeledField(20, param3, param1 + 120, 25, param0, false, 120, 3, tj.field_e, 16777215, param2);
+          var6 = new LabeledField(20, param3, param1 + 120, 25, param0, false, 120, 3, HighscoreSubmissionFactory.field_e, 16777215, param2);
           this.addChild(var6, -110);
           if (param4 != 126) {
             var7 = (String) null;

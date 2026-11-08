@@ -15,7 +15,7 @@ final class SoundCache {
     static String field_b;
     private NodeHashTable field_d;
 
-    final PcmSample a(int[] param0, int param1, int param2) {
+    final PcmSample getSoundEffectById(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_3_0 = null;
         PcmSample stackIn_7_0 = null;
@@ -25,15 +25,15 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_c.getGroupCapacity((byte) -61) == 1) {
-            stackIn_3_0 = this.a(param1, false, 0, param0);
+            stackIn_3_0 = this.getSoundEffect(param1, false, 0, param0);
             return stackIn_3_0;
           }
           if (this.field_c.getFileCapacity(true, param1) == 1) {
-            stackIn_7_0 = this.a(0, false, param1, param0);
+            stackIn_7_0 = this.getSoundEffect(0, false, param1, param0);
             return stackIn_7_0;
           }
           if (param2 != -6923) {
-            SoundCache.a(false, 68);
+            SoundCache.playJingle(false, 68);
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -50,16 +50,16 @@ final class SoundCache {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void clearSocialLists(boolean param0) {
         DualNode var1 = null;
         int var2 = SteelSentinels.obfuscationControl;
         DualNode var1Lifetime1;
         try {
           FullscreenFocusCanvas.field_f = null;
-          vd.field_h = 0;
+          TransitionTimerHelpers.field_h = 0;
           LobbyPlayer.field_gc = 0;
           Sprite.field_c.clear(6);
-          am.field_c.clear(6);
+          DesignerPageSetup.field_c.clear(6);
           var1 = DelegatingCanvas.field_a.first(114);
           while (var1 != null) {
             var1.unlinkDual(480);
@@ -71,7 +71,7 @@ final class SoundCache {
             var1Lifetime1 = SocketConnector.field_h.next((byte) -117);
           }
           if (!param0) {
-            SoundCache.c(-100);
+            SoundCache.exitFullscreen(-100);
           }
           DisplayNameForm.field_P = 0;
         } catch (RuntimeException runtimeException) {
@@ -95,7 +95,7 @@ final class SoundCache {
         field_e = null;
     }
 
-    final static String a(byte param0, int param1, byte[] param2, int param3) {
+    final static String decodeWindowsCodePageText(byte param0, int param1, byte[] param2, int param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
@@ -154,7 +154,7 @@ final class SoundCache {
         }
     }
 
-    final PcmSample a(byte param0, int[] param1, int param2) {
+    final PcmSample getVorbisSampleById(byte param0, int[] param1, int param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_4_0 = null;
         PcmSample stackIn_7_0 = null;
@@ -167,13 +167,13 @@ final class SoundCache {
             SoundCache.releaseStatics(-82);
           }
           if (this.field_l.getGroupCapacity((byte) 121) == 1) {
-            stackIn_4_0 = this.a(0, 0, param2, param1);
+            stackIn_4_0 = this.getVorbisSample(0, 0, param2, param1);
             return stackIn_4_0;
           }
           if (1 != this.field_l.getFileCapacity(true, param2)) {
             throw new RuntimeException();
           }
-          stackIn_7_0 = this.a(param2, 0, 0, param1);
+          stackIn_7_0 = this.getVorbisSample(param2, 0, 0, param1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -189,30 +189,30 @@ final class SoundCache {
         }
     }
 
-    final static void c(int param0) {
-        if (wb.field_c == null) {
+    final static void exitFullscreen(int param0) {
+        if (RewardValueHelpers.field_c == null) {
           return;
         }
-        pa.a(wb.field_c, 9174);
+        TutorialStepTable.detachInputListeners(RewardValueHelpers.field_c, 9174);
         if (param0 == 0) {
-          wb.field_c.a(IterableDualNodeDeque.field_i, param0 ^ -101);
-          wb.field_c = null;
+          RewardValueHelpers.field_c.closeFrame(IterableDualNodeDeque.field_i, param0 ^ -101);
+          RewardValueHelpers.field_c = null;
           if (null != AssetDecoders.field_a) {
             AssetDecoders.field_a.restoreWindowedSize(15481);
           }
-          sl.field_n.requestFocus();
+          ArchiveLoadStep.field_n.requestFocus();
           return;
         }
         field_k = (String) null;
-        wb.field_c.a(IterableDualNodeDeque.field_i, param0 ^ -101);
-        wb.field_c = null;
+        RewardValueHelpers.field_c.closeFrame(IterableDualNodeDeque.field_i, param0 ^ -101);
+        RewardValueHelpers.field_c = null;
         if (null != AssetDecoders.field_a) {
           AssetDecoders.field_a.restoreWindowedSize(15481);
         }
-        sl.field_n.requestFocus();
+        ArchiveLoadStep.field_n.requestFocus();
     }
 
-    private final PcmSample a(int param0, int param1, int param2, int[] param3) {
+    private final PcmSample getVorbisSample(int param0, int param1, int param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -271,7 +271,7 @@ final class SoundCache {
         }
     }
 
-    private final PcmSample a(String param0, int param1, String param2, int[] param3) {
+    private final PcmSample loadSoundEffectByName(String param0, int param1, String param2, int[] param3) {
         PcmSample discarded$1 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -293,13 +293,13 @@ final class SoundCache {
           }
           if (param1 > -67) {
             var7 = (int[]) null;
-            discarded$1 = this.a((String) null, 67, (String) null, (int[]) null);
+            discarded$1 = this.loadSoundEffectByName((String) null, 67, (String) null, (int[]) null);
           }
           var6 = this.field_c.getFileId(var5_int, -32759, param2);
           if (var6 < 0) {
             return null;
           }
-          stackIn_9_0 = this.a(var6, false, var5_int, param3);
+          stackIn_9_0 = this.getSoundEffect(var6, false, var5_int, param3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -339,7 +339,7 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -34 / ((param2 - 33) / 60);
-          stackIn_1_0 = this.a(param1, -78, param0, (int[]) null);
+          stackIn_1_0 = this.loadSoundEffectByName(param1, -78, param0, (int[]) null);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -361,7 +361,7 @@ final class SoundCache {
         }
     }
 
-    private final PcmSample a(int param0, boolean param1, int param2, int[] param3) {
+    private final PcmSample getSoundEffect(int param0, boolean param1, int param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -419,7 +419,7 @@ final class SoundCache {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int getPartSlotIndex(int param0, int param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -493,25 +493,25 @@ final class SoundCache {
         return -1;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void playJingle(boolean param0, int param1) {
         if (param0) {
           return;
         }
         if (GrowableIntList.field_c != null) {
-          NodeHashTableIterator.a(GrowableIntList.field_c, (byte) -128);
+          NodeHashTableIterator.removeSoundStream(GrowableIntList.field_c, (byte) -128);
           EmailFormatError.setMusicVolume(1, UiTheme.field_q * 2);
         }
         if (param1 != -1) {
           if (SentinelAnimationEditor.field_q[param1] != null) {
             GrowableIntList.field_c = PcmSampleStream.createAtRatePercent(SentinelAnimationEditor.field_q[param1], 100, UiTheme.field_q);
             EmailFormatError.setMusicVolume(1, UiTheme.field_q / 2);
-            EmailCredentials.a(GrowableIntList.field_c, -48);
+            EmailCredentials.playStream(GrowableIntList.field_c, -48);
           }
           return;
         }
     }
 
-    final static int b(int param0) {
+    final static int getInputFrameCount(int param0) {
         if (param0 >= -62) {
           field_k = (String) null;
           return ClientGlobals.field_f;

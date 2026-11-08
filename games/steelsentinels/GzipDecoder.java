@@ -13,7 +13,7 @@ final class GzipDecoder {
     static int[] field_b;
     private java.util.zip.Inflater field_f;
 
-    final static void a(SceneWidget param0, byte param1) {
+    final static void buildSettingsPanelRows(SceneWidget param0, byte param1) {
         int var11 = 0;
         int var9 = 0;
         SceneWidget stackIn_13_0 = null;
@@ -49,7 +49,7 @@ final class GzipDecoder {
           var14 = new SceneWidget();
           var14.field_nb = 0;
           var14.field_ub = 4;
-          var14.field_I = pa.field_g;
+          var14.field_I = TutorialStepTable.field_g;
           var14.field_L = (BitmapFont) ((Object) BoundedUrlRequest.field_d);
           var14.field_Fb = 0;
           var14.field_Ib = 15;
@@ -60,10 +60,10 @@ final class GzipDecoder {
             param0.field_M.clear(param1 - 13);
           }
           var5 = new SceneWidget("", var14);
-          var5.field_S = vf.field_c;
+          var5.field_S = RequestResendHelpers.field_c;
           var5.setBounds(0, 0, 18, 0, 110);
           param0.addChild(var5, 120);
-          var6 = PendingIntArrayRequest.field_v.i(param1 ^ -97);
+          var6 = PendingIntArrayRequest.field_v.getTotalModuleSlots(param1 ^ -97);
           var7 = new SceneWidget(-1L, (SceneWidget) null);
           var7.field_I = MatchingTextValidator.field_t;
           var8 = (var6 + 1) / 2 * 51 + 32;
@@ -76,7 +76,7 @@ final class GzipDecoder {
           var9_ref_gh = new SceneWidget("", NameAvailabilityValidator.field_n);
           var10 = 0;
           for (var11 = 0; var6 > var11; var11++) {
-            if (ContextMenu.field_bc[var11] == di.field_c[var11]) {
+            if (ContextMenu.field_bc[var11] == OptionMaskHelpers.field_c[var11]) {
               continue;
             }
             var10 = 1;
@@ -109,7 +109,7 @@ final class GzipDecoder {
               LobbySetupHelpers.field_f < param0.field_Rb + 110 &&
               DelegatingCanvas.field_c >= param0.field_cb + var4 &&
               18 + (var4 + param0.field_cb) > DelegatingCanvas.field_c) {
-              pa.field_e = -2;
+              TutorialStepTable.field_e = -2;
               var9_ref_gh.field_I = MatchingTextValidator.field_t;
             }
           }
@@ -126,21 +126,21 @@ final class GzipDecoder {
               LobbySetupHelpers.field_f < 47 + param0.field_Rb + var3Lifetime1 &&
               DelegatingCanvas.field_c >= param0.field_cb + var4 &&
               param0.field_cb - (-var4 - 47) > DelegatingCanvas.field_c) {
-              pa.field_e = var9;
+              TutorialStepTable.field_e = var9;
               var15.field_I = UrlAndReplyHelpers.field_f;
             } else if (!(NameSuggestionsPanel.field_Y < 0) ||
-              !(t.field_h < 0)) {
+              !(NameTable.field_h < 0)) {
               var15.field_I = UrlAndReplyHelpers.field_f;
             }
-            if (di.field_c[var9] != -1) {
+            if (OptionMaskHelpers.field_c[var9] != -1) {
               var13 = new SceneWidget();
               var16 = var13;
               stackIn_42_0 = var13;
               stackIn_42_1 = IsaacRandom.field_d;
-              if (t.a(ArchiveRequest.field_D, di.field_c[var9], -20370)) {
-                stackIn_43_2 = di.field_c[var9];
+              if (NameTable.isBitSet(ArchiveRequest.field_D, OptionMaskHelpers.field_c[var9], -20370)) {
+                stackIn_43_2 = OptionMaskHelpers.field_c[var9];
               } else {
-                stackIn_43_2 = di.field_c[var9] + 64;
+                stackIn_43_2 = OptionMaskHelpers.field_c[var9] + 64;
               }
               stackIn_42_0.field_Pb = ((IndexedSprite) (Object) stackIn_42_1[stackIn_43_2]).toRgbSprite();
               var16.setBounds(0, var4 + 3, 40, var3Lifetime1 + 3, 40);
@@ -166,7 +166,7 @@ final class GzipDecoder {
         }
     }
 
-    final void a(PacketBuffer param0, byte[] param1, boolean param2) {
+    final void decompress(PacketBuffer param0, byte[] param1, boolean param2) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -223,7 +223,7 @@ final class GzipDecoder {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void layoutSlidingSidePanels(byte param0, int param1) {
         int var2 = (-640 + NumericDateInputWidget.field_Z) / 2;
         int var3 = AudioService.field_h * AudioService.field_h;
         int var4 = -(param1 * param1) + var3;
@@ -233,7 +233,7 @@ final class GzipDecoder {
           return;
         }
         byte[] var5 = (byte[]) null;
-        GzipDecoder.a(-9, (byte[]) null, (byte) 24);
+        GzipDecoder.queueByteRequest(-9, (byte[]) null, (byte) 24);
     }
 
     public static void releaseStatics(int param0) {
@@ -250,16 +250,16 @@ final class GzipDecoder {
         this(-1, 1000000, 1000000);
     }
 
-    final static boolean b(int param0) {
+    final static boolean ownsSpecialPart(int param0) {
         int var1 = 61 % ((24 - param0) / 62);
-        return t.a(rn.field_D, 55, -20370);
+        return NameTable.isBitSet(PendingAckRequest.field_D, 55, -20370);
     }
 
-    final static rh a(int param0, byte[] param1, byte param2) {
-        rh var3 = null;
+    final static PendingDataRequest queueByteRequest(int param0, byte[] param1, byte param2) {
+        PendingDataRequest var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        rh stackIn_3_0 = null;
+        PendingDataRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -267,11 +267,11 @@ final class GzipDecoder {
         try {
           if (param2 != -30) {
             var4 = (byte[]) null;
-            GzipDecoder.a(-34, (byte[]) null, (byte) 32);
+            GzipDecoder.queueByteRequest(-34, (byte[]) null, (byte) 32);
           }
-          var3 = new rh(param1);
+          var3 = new PendingDataRequest(param1);
           QuickChatHelpDialog.field_Vb.addLast(3, var3);
-          PasswordValidator.a(param0, param2 - 39, var3);
+          PasswordValidator.sendBlobWithCrc(param0, param2 - 39, var3);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -299,7 +299,7 @@ final class GzipDecoder {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$e9dea5688aa5(int param0, int param1) {
+    final static void layoutSlidingSidePanels(int param0, int param1) {
         int var2 = (-640 + NumericDateInputWidget.field_Z) / 2;
         int var3 = AudioService.field_h * AudioService.field_h;
         int var4 = -(param1 * param1) + var3;
@@ -309,6 +309,6 @@ final class GzipDecoder {
           return;
         }
         byte[] var5 = (byte[]) null;
-        GzipDecoder.a(-9, (byte[]) null, (byte) 24);
+        GzipDecoder.queueByteRequest(-9, (byte[]) null, (byte) 24);
     }
 }

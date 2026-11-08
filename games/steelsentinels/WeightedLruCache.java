@@ -20,7 +20,7 @@ final class WeightedLruCache {
     static boolean field_q;
     static SceneWidget field_n;
 
-    private final void a(byte param0, int param1, Object param2, long param3) {
+    private final void putWeighted(byte param0, int param1, Object param2, long param3) {
         WeightedCacheEntry var6 = null;
         StrongCacheEntry var6_ref = null;
         int var7 = SteelSentinels.obfuscationControl;
@@ -28,18 +28,18 @@ final class WeightedLruCache {
           if (this.field_c < param1) {
             throw new IllegalStateException();
           }
-          this.a((byte) 117, param3);
+          this.remove((byte) 117, param3);
           this.field_l = this.field_l - param1;
           while (this.field_l < 0) {
-            var6 = (WeightedCacheEntry) (this.field_k.a(12515));
-            this.a(var6, -17389);
+            var6 = (WeightedCacheEntry) (this.field_k.removeFirst(12515));
+            this.removeEntry(var6, -17389);
           }
           if (param0 > -47) {
             field_e = (DraggableWidget) null;
           }
           var6_ref = new StrongCacheEntry(param2, param1);
           this.field_o.put(var6_ref, param3, false);
-          this.field_k.a((byte) 47, var6_ref);
+          this.field_k.addLast((byte) 47, var6_ref);
           ((WeightedCacheEntry) ((Object) var6_ref)).field_w = 0L;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -59,73 +59,73 @@ final class WeightedLruCache {
           return;
         }
         byte[] var2 = (byte[]) null;
-        WeightedLruCache.a((byte[]) null, 57);
+        WeightedLruCache.createPaletteFont((byte[]) null, 57);
         field_j = null;
         field_h = null;
         field_i = null;
     }
 
-    private final void a(byte param0, long param1) {
+    private final void remove(byte param0, long param1) {
         if (param0 != 117) {
           return;
         }
-        WeightedCacheEntry var4 = (WeightedCacheEntry) (this.field_o.a(param1, (byte) -125));
-        this.a(var4, param0 ^ -17306);
+        WeightedCacheEntry var4 = (WeightedCacheEntry) (this.field_o.get(param1, (byte) -125));
+        this.removeEntry(var4, param0 ^ -17306);
     }
 
-    final Object a(long param0, int param1) {
+    final Object get(long param0, int param1) {
         Object var9 = null;
         StrongCacheEntry var6 = null;
-        WeightedCacheEntry var8 = (WeightedCacheEntry) (this.field_o.a(param0, (byte) -127));
+        WeightedCacheEntry var8 = (WeightedCacheEntry) (this.field_o.get(param0, (byte) -127));
         StrongCacheEntry var6Lifetime1;
         if (var8 == null) {
           return null;
         }
         if (param1 > -30) {
           WeightedCacheEntry var7 = (WeightedCacheEntry) null;
-          this.a((WeightedCacheEntry) null, -108);
-          var9 = var8.d((byte) 125);
+          this.removeEntry((WeightedCacheEntry) null, -108);
+          var9 = var8.getValue((byte) 125);
           if (var9 == null) {
             var8.unlink(4);
             var8.unlinkDual(480);
             this.field_l = this.field_l + var8.field_z;
             return null;
           }
-          if (!var8.h(-29304)) {
-            this.field_k.a((byte) 50, var8);
+          if (!var8.isSoftReference(-29304)) {
+            this.field_k.addLast((byte) 50, var8);
             var8.field_w = 0L;
             return var9;
           }
           var6 = new StrongCacheEntry(var9, var8.field_z);
           this.field_o.put(var6, var8.key, false);
-          this.field_k.a((byte) 72, var6);
+          this.field_k.addLast((byte) 72, var6);
           ((WeightedCacheEntry) ((Object) var6)).field_w = 0L;
           var8.unlink(4);
           var8.unlinkDual(480);
           return var9;
         }
-        Object var10 = var8.d((byte) 125);
+        Object var10 = var8.getValue((byte) 125);
         if (var10 == null) {
           var8.unlink(4);
           var8.unlinkDual(480);
           this.field_l = this.field_l + var8.field_z;
           return null;
         }
-        if (!var8.h(-29304)) {
-          this.field_k.a((byte) 50, var8);
+        if (!var8.isSoftReference(-29304)) {
+          this.field_k.addLast((byte) 50, var8);
           var8.field_w = 0L;
           return var10;
         }
         var6Lifetime1 = new StrongCacheEntry(var10, var8.field_z);
         this.field_o.put(var6Lifetime1, var8.key, false);
-        this.field_k.a((byte) 72, var6Lifetime1);
+        this.field_k.addLast((byte) 72, var6Lifetime1);
         ((WeightedCacheEntry) ((Object) var6Lifetime1)).field_w = 0L;
         var8.unlink(4);
         var8.unlinkDual(480);
         return var10;
     }
 
-    private final void a(WeightedCacheEntry param0, int param1) {
+    private final void removeEntry(WeightedCacheEntry param0, int param1) {
         RuntimeException var3 = null;
         java.applet.Applet var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -142,7 +142,7 @@ final class WeightedLruCache {
             return;
           }
           var4 = (java.applet.Applet) null;
-          WeightedLruCache.a((byte) -12, (java.applet.Applet) null);
+          WeightedLruCache.openServerListPage((byte) -12, (java.applet.Applet) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -158,7 +158,7 @@ final class WeightedLruCache {
         }
     }
 
-    final static PaletteBitmapFont a(byte[] param0, int param1) {
+    final static PaletteBitmapFont createPaletteFont(byte[] param0, int param1) {
         PaletteBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         java.applet.Applet var3 = null;
@@ -175,10 +175,10 @@ final class WeightedLruCache {
           }
           if (param1 != 7045) {
             var3 = (java.applet.Applet) null;
-            WeightedLruCache.a((byte) 100, (java.applet.Applet) null);
+            WeightedLruCache.openServerListPage((byte) 100, (java.applet.Applet) null);
           }
           var2 = new PaletteBitmapFont(param0, PacketLoopHelpers.field_a, TextButton.field_M, StrongCacheEntry.field_L, MusicPatch.field_r, QuickChatInputHelpers.field_d, UiContainer.field_L);
-          NodeHashTable.a(param1 + 2279);
+          NodeHashTable.releaseDecodeArrays(param1 + 2279);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -195,7 +195,7 @@ final class WeightedLruCache {
         }
     }
 
-    final static void a(String param0, String param1, int param2) {
+    final static void openLoginForm(String param0, String param1, int param2) {
         RuntimeException var3 = null;
         java.applet.Applet var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -214,7 +214,7 @@ final class WeightedLruCache {
             return;
           }
           var4 = (java.applet.Applet) null;
-          WeightedLruCache.a((byte) 60, (java.applet.Applet) null);
+          WeightedLruCache.openServerListPage((byte) 60, (java.applet.Applet) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -238,7 +238,7 @@ final class WeightedLruCache {
 
     final void put(long param0, Object param1, int param2) {
         try {
-          this.a((byte) -109, param2, param1, param0);
+          this.putWeighted((byte) -109, param2, param1, param0);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "nc.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -248,20 +248,20 @@ final class WeightedLruCache {
         this(param0, param0);
     }
 
-    final static vc[] a(int param0, SystemTaskService param1) {
+    final static DisplayMode[] queryDisplayModes(int param0, SystemTaskService param1) {
         int var5 = 0;
-        vc[] stackIn_4_0 = null;
-        vc[] stackIn_10_0 = null;
-        vc[] stackIn_13_0 = null;
-        vc[] stackIn_18_0 = null;
+        DisplayMode[] stackIn_4_0 = null;
+        DisplayMode[] stackIn_10_0 = null;
+        DisplayMode[] stackIn_13_0 = null;
+        DisplayMode[] stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
-        vc[] var4 = null;
-        vc var6 = null;
+        DisplayMode[] var4 = null;
+        DisplayMode var6 = null;
         int var7 = 0;
         SystemTask var8 = null;
         int[] var9 = null;
@@ -269,27 +269,27 @@ final class WeightedLruCache {
         var7 = SteelSentinels.obfuscationControl;
         try {
           if (!param1.supportsFullscreen(-35)) {
-            stackIn_4_0 = new vc[]{};
+            stackIn_4_0 = new DisplayMode[]{};
             return stackIn_4_0;
           }
           var8 = param1.requestDisplayModes(param0 ^ -30726);
           while (var8.field_a == 0) {
-            MouseWheelInput.a((byte) 121, 10L);
+            MouseWheelInput.sleepMillis((byte) 121, 10L);
           }
           if (var8.field_a == 2) {
-            stackIn_10_0 = new vc[]{};
+            stackIn_10_0 = new DisplayMode[]{};
             return stackIn_10_0;
           }
           if (param0 != 38) {
-            stackIn_13_0 = (vc[]) null;
+            stackIn_13_0 = (DisplayMode[]) null;
             return stackIn_13_0;
           }
           var10 = (int[]) (var8.field_c);
           var9 = var10;
           var3 = var9;
-          var4 = new vc[var10.length >> 2];
+          var4 = new DisplayMode[var10.length >> 2];
           for (var5 = 0; var4.length > var5; var5++) {
-            var6 = new vc();
+            var6 = new DisplayMode();
             var4[var5] = var6;
             var6.field_a = var3[var5 << 2];
             var6.field_g = var3[1 + (var5 << 2)];
@@ -312,7 +312,7 @@ final class WeightedLruCache {
         }
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void openServerListPage(byte param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -325,7 +325,7 @@ final class WeightedLruCache {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-              param1.getAppletContext().showDocument(DirectByteStorage.a(0, var2, param1), "_top");
+              param1.getAppletContext().showDocument(DirectByteStorage.appendSessionParameters(0, var2, param1), "_top");
               var3 = 58 % ((-15 - param0) / 42);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -374,7 +374,7 @@ final class WeightedLruCache {
         return;
     }
 
-    final static IndexedSprite a(int param0, byte param1) {
+    final static IndexedSprite getIconSprite(int param0, byte param1) {
         if (param0 >= 35) {
           return LinkButtonPainter.field_p[param0 - 35];
         }

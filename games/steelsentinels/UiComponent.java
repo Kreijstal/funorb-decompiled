@@ -47,9 +47,9 @@ class UiComponent extends IntrusiveNode {
           this.updateHover(param3, 71, this, param2);
           var5 = this.isFocused(0) ? 1 : 0;
           if (param1) {
-            if (jj.field_d != 0 &&
+            if (MeshMaterial.field_d != 0 &&
               var5 != 0) {
-              this.onMouseWheel((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, LobbySetupHelpers.field_f);
+              this.onMouseWheel((byte) -127, param2, DelegatingCanvas.field_c, param3, this, MeshMaterial.field_d, LobbySetupHelpers.field_f);
             }
             if (VerticalScrollbar.field_gc != 0) {
               if (this.handlePointerPress(BufferedRandomAccessFile.field_j, this, param3, TextButton.field_S, param2, true, VerticalScrollbar.field_gc)) {
@@ -80,9 +80,9 @@ class UiComponent extends IntrusiveNode {
               VerticalScrollbar.field_gc != 0) {
               this.refreshChildLayouts((byte) -45);
               if (var7 != 0) {
-                if (jj.field_d != 0 &&
+                if (MeshMaterial.field_d != 0 &&
                   var5 != 0) {
-                  this.onMouseWheel((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, LobbySetupHelpers.field_f);
+                  this.onMouseWheel((byte) -127, param2, DelegatingCanvas.field_c, param3, this, MeshMaterial.field_d, LobbySetupHelpers.field_f);
                 }
                 if (VerticalScrollbar.field_gc == 0) {
                   if (0 == WeightedLruCache.field_d &&
@@ -131,7 +131,7 @@ class UiComponent extends IntrusiveNode {
             }
           }
           QuickChatInputHelpers.field_c = WeightedLruCache.field_d;
-          hg.a(-127, this.getTooltip(0));
+          HighscoreColumnHeader.updateTooltip(-127, this.getTooltip(0));
           return param1;
         }
         this.updateHover(param3, 71, this, param2);
@@ -141,8 +141,8 @@ class UiComponent extends IntrusiveNode {
             VerticalScrollbar.field_gc != 0) {
             this.refreshChildLayouts((byte) -45);
             if (var7 != 0) {
-              if (jj.field_d != 0) {
-                this.onMouseWheel((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, LobbySetupHelpers.field_f);
+              if (MeshMaterial.field_d != 0) {
+                this.onMouseWheel((byte) -127, param2, DelegatingCanvas.field_c, param3, this, MeshMaterial.field_d, LobbySetupHelpers.field_f);
               }
               if (VerticalScrollbar.field_gc == 0) {
                 if (0 == WeightedLruCache.field_d &&
@@ -176,7 +176,7 @@ class UiComponent extends IntrusiveNode {
             }
           }
         } else {
-          if (jj.field_d != 0) {
+          if (MeshMaterial.field_d != 0) {
             if (var5Lifetime1 == 0) {
               if (VerticalScrollbar.field_gc == 0) {
                 if (0 == WeightedLruCache.field_d &&
@@ -224,10 +224,10 @@ class UiComponent extends IntrusiveNode {
                 }
               }
               QuickChatInputHelpers.field_c = WeightedLruCache.field_d;
-              hg.a(-127, this.getTooltip(0));
+              HighscoreColumnHeader.updateTooltip(-127, this.getTooltip(0));
               return param1;
             }
-            this.onMouseWheel((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, LobbySetupHelpers.field_f);
+            this.onMouseWheel((byte) -127, param2, DelegatingCanvas.field_c, param3, this, MeshMaterial.field_d, LobbySetupHelpers.field_f);
           }
           if (VerticalScrollbar.field_gc == 0) {
             if (0 == WeightedLruCache.field_d &&
@@ -257,7 +257,7 @@ class UiComponent extends IntrusiveNode {
                   }
                 }
                 QuickChatInputHelpers.field_c = WeightedLruCache.field_d;
-                hg.a(-127, this.getTooltip(0));
+                HighscoreColumnHeader.updateTooltip(-127, this.getTooltip(0));
                 return param1;
               }
             }
@@ -290,7 +290,7 @@ class UiComponent extends IntrusiveNode {
           }
         }
         QuickChatInputHelpers.field_c = WeightedLruCache.field_d;
-        hg.a(-127, this.getTooltip(0));
+        HighscoreColumnHeader.updateTooltip(-127, this.getTooltip(0));
         return param1;
     }
 
@@ -303,7 +303,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    final static void a(int[] param0, RgbSprite[][] param1, int param2, String[][] param3, ResourceArchive param4, int[] param5, boolean param6, ResourceArchive param7, String[] param8, IndexedSprite[] param9, ResourceArchive param10, String[][] param11, byte[] param12, RgbSprite[][] param13, int param14, String[] param15, byte[] param16, int param17, int param18) {
+    final static void initializeLobbyAssets(int[] param0, RgbSprite[][] param1, int param2, String[][] param3, ResourceArchive param4, int[] param5, boolean param6, ResourceArchive param7, String[] param8, IndexedSprite[] param9, ResourceArchive param10, String[][] param11, byte[] param12, RgbSprite[][] param13, int param14, String[] param15, byte[] param16, int param17, int param18) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -339,7 +339,7 @@ class UiComponent extends IntrusiveNode {
           if (param2 < 52) {
             UiComponent.releaseStatics((byte) 15);
           }
-          NodeHashTableIterator.a(param9, param4, (String[]) null, param5, param18, param8, param3, 1, param10, (byte) 94, param11, param13, param7, param12, param1, param6, param0, param14, param15, param16);
+          NodeHashTableIterator.initializeLobbyUi(param9, param4, (String[]) null, param5, param18, param8, param3, 1, param10, (byte) 94, param11, param13, param7, param12, param1, param6, param0, param14, param15, param16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -859,9 +859,9 @@ class UiComponent extends IntrusiveNode {
             break;
           }
         }
-        var5 = NodeIterator.b((byte) -122);
+        var5 = NodeIterator.getVisibleTooltipText((byte) -122);
         if (var5 != null) {
-          LoadoutHelpers.field_j.drawTooltip(SocialListUiHelpers.field_a, var5, t.field_l, 15658734);
+          LoadoutHelpers.field_j.drawTooltip(SocialListUiHelpers.field_a, var5, NameTable.field_l, 15658734);
         }
     }
 

@@ -22,19 +22,19 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         field_q = null;
     }
 
-    final vd validateText(String param0, int param1) {
+    final TransitionTimerHelpers validateText(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_3_0 = 0;
-        vd stackIn_6_0 = null;
-        vd stackIn_10_0 = null;
+        TransitionTimerHelpers stackIn_6_0 = null;
+        TransitionTimerHelpers stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (gm.a(true, param0) != null) ? 0 : 1;
+          stackIn_3_0 = (EmailValidationHelpers.validateEmailAddress(true, param0) != null) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (var3_int == 0) {
             stackIn_6_0 = ArchiveProvider.field_d;
@@ -44,7 +44,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
             var4 = (String) null;
             this.validateText((String) null, -6);
           }
-          stackIn_10_0 = vf.field_b;
+          stackIn_10_0 = RequestResendHelpers.field_b;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

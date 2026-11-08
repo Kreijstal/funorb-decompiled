@@ -11,7 +11,7 @@ final class TextLayoutLine {
     static String field_g;
     static String field_d;
 
-    final static RgbSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static RgbSprite[] loadSpritesFromArchive(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -19,7 +19,7 @@ final class TextLayoutLine {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!StatefulTextPainter.a((byte) 30, param0, param2, param3)) {
+          if (!StatefulTextPainter.loadSpriteSheet((byte) 30, param0, param2, param3)) {
             return null;
           }
           if (param1 != 20178) {
@@ -41,20 +41,20 @@ final class TextLayoutLine {
         }
     }
 
-    final static void a(int param0) {
+    final static void showEmptyLoginForm(int param0) {
         if (param0 <= 97) {
           return;
         }
         String var2 = (String) null;
-        WeightedLruCache.a("", (String) null, -54);
+        WeightedLruCache.openLoginForm("", (String) null, -54);
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void setChatFilterMode(int param0, int param1, int param2, int param3) {
         if (param1 == 0 &&
           BufferedSocket.field_c != param0) {
           BufferedSocket.field_c = param0;
           TextWidgetPainter.field_l = true;
-          DialWidgetPainter.a(param2, (byte) -118);
+          DialWidgetPainter.sendOptionByte(param2, (byte) -118);
         }
         if (param3 != -18853) {
           field_b = (String) null;
@@ -63,19 +63,19 @@ final class TextLayoutLine {
           param0 != LoginForm.field_Z) {
           LoginForm.field_Z = param0;
           TextWidgetPainter.field_l = true;
-          DialWidgetPainter.a(param2, (byte) -96);
+          DialWidgetPainter.sendOptionByte(param2, (byte) -96);
         }
         if (param1 == 2 &&
           param0 != CachedArchiveProvider.field_y) {
           CachedArchiveProvider.field_y = param0;
           TextWidgetPainter.field_l = true;
-          DialWidgetPainter.a(param2, (byte) -100);
+          DialWidgetPainter.sendOptionByte(param2, (byte) -100);
         }
     }
 
     public static void releaseStatics(int param0) {
         if (param0 >= -14) {
-          TextLayoutLine.a(false, (byte) 111);
+          TextLayoutLine.drawRootScenes(false, (byte) 111);
         }
         field_d = null;
         field_e = null;
@@ -90,24 +90,24 @@ final class TextLayoutLine {
         this.field_f = new int[1 + param2];
     }
 
-    final static void d(int param0) {
+    final static void showLoginForm(int param0) {
         if (!LoginMethod.field_d) {
           throw new IllegalStateException();
         }
         if (param0 != 0) {
-          TextLayoutLine.a(-7, 91, 38, 66);
+          TextLayoutLine.setChatFilterMode(-7, 91, 38, 66);
         }
         if (ArrayWidgetContainer.field_O != null) {
           ArrayWidgetContainer.field_O.closeDialog(106);
         }
-        String var1 = CachedArchiveProvider.e(35);
+        String var1 = CachedArchiveProvider.getLoginNameOrDefault(35);
         AccountNoticeDialog.field_kb = new LoginForm(var1, (String) null, true, false, false);
         GradientOutlineTextPainter.field_p.pushPanel(ClientErrorSupport.field_a, -114);
         ClientErrorSupport.field_a.transitionToContent(AccountNoticeDialog.field_kb, param0 - 22908735);
         ClientErrorSupport.field_a.finishTransition((byte) -14);
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawRootScenes(boolean param0, byte param1) {
         DisplayNameForm.field_V.drawFullScreen(param0, (byte) 126);
         BirthDateEntryPanel var2 = AssetDecoders.field_b;
         if (param1 > -108) {
@@ -140,7 +140,7 @@ final class TextLayoutLine {
     final int width(int param0) {
         int stackIn_7_0 = 0;
         if (param0 != -1) {
-          TextLayoutLine.a(-87);
+          TextLayoutLine.showEmptyLoginForm(-87);
         }
         if (this.field_f != null &&
           this.field_f.length != 0) {

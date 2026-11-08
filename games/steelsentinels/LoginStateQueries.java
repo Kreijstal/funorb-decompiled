@@ -37,11 +37,11 @@ final class LoginStateQueries {
             var3 = (java.applet.Applet) null;
             LoginStateQueries.writeSettingsCookie((String) null, (java.applet.Applet) null, 26);
           }
-          if (gf.field_a.isComplete((byte) -72) &&
-            !param0.equals(gf.field_a.getName(true))) {
-            gf.field_a = TutorialStep.createNameCheckResult(param0, 16);
+          if (GeneratedSpriteHelpers.field_a.isComplete((byte) -72) &&
+            !param0.equals(GeneratedSpriteHelpers.field_a.getName(true))) {
+            GeneratedSpriteHelpers.field_a = TutorialStep.createNameCheckResult(param0, 16);
           }
-          stackIn_6_0 = gf.field_a;
+          stackIn_6_0 = GeneratedSpriteHelpers.field_a;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,7 +62,7 @@ final class LoginStateQueries {
         if (param0 != 6995) {
           field_b = (Projectile) null;
         }
-        stackIn_6_0 = (uj.field_d >= 10) && (13 <= AccountTermsPanel.field_Q);
+        stackIn_6_0 = (ReflectionCheckHelpers.field_d >= 10) && (13 <= AccountTermsPanel.field_Q);
         return stackIn_6_0;
     }
 
@@ -193,7 +193,7 @@ final class LoginStateQueries {
         if (param0 != 16731221) {
           return false;
         }
-        stackIn_7_0 = (10 <= uj.field_d) && (!QuickChatMenu.field_ac) && (!ud.e(-111));
+        stackIn_7_0 = (10 <= ReflectionCheckHelpers.field_d) && (!QuickChatMenu.field_ac) && (!RankingQuery.isLoggedIn(-111));
         return stackIn_7_0;
     }
 
@@ -201,7 +201,7 @@ final class LoginStateQueries {
         if (param1) {
           return (LobbyPlayer) null;
         }
-        return (LobbyPlayer) (t.field_c.get(param0, (byte) 96));
+        return (LobbyPlayer) (NameTable.field_c.get(param0, (byte) 96));
     }
 
     static {

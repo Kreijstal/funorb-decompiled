@@ -49,12 +49,12 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
               this.field_Z[var4_int] = TextWidgetPainter.normalizeName((byte) 90, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
-            var4 = new LinkButtonPainter(tj.field_e, 0, 1);
+            var4 = new LinkButtonPainter(HighscoreSubmissionFactory.field_e, 0, 1);
             this.field_U = new TextButton[var3_int + 1];
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_U[var5] = new TextButton(this.field_Z[var5], (UiListener) (this));
               this.field_U[var5].field_p = (WidgetPainter) ((Object) var4);
-              this.field_U[var5].field_v = un.field_f;
+              this.field_U[var5].field_v = ChatHistoryAllocator.field_f;
               this.field_U[var5].setBounds(0, (byte) -120, var5 * 16 + 20, 80, 15);
               this.addChild(this.field_U[var5], -95);
             }
@@ -159,7 +159,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         }
     }
 
-    final static int a(CharSequence param0, boolean param1) {
+    final static int hashString(CharSequence param0, boolean param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -198,19 +198,19 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         }
     }
 
-    final static void k(int param0) {
+    final static void stepSoundVolumeDown(int param0) {
         int var1 = 0;
         if (32 >= VerticalScrollbar.field_ac) {
-          ModalPanel.a(0, (byte) 64);
+          ModalPanel.setSoundEffectVolume(0, (byte) 64);
         } else {
           var1 = VerticalScrollbar.field_ac % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          ModalPanel.a(-var1 + VerticalScrollbar.field_ac, (byte) 64);
+          ModalPanel.setSoundEffectVolume(-var1 + VerticalScrollbar.field_ac, (byte) 64);
         }
         if (param0 >= -15) {
-          NameSuggestionsPanel.j(111);
+          NameSuggestionsPanel.buildFirstRgbSprite(111);
         }
     }
 
@@ -223,13 +223,13 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           String[] var6 = (String[]) null;
           this.setSuggestions(false, (String[]) null);
         }
-        BitmapFont var5 = tj.field_e;
+        BitmapFont var5 = HighscoreSubmissionFactory.field_e;
         if (null != this.field_Z) {
-          var5.drawParagraph(qi.field_h, param2 + this.field_o, this.field_z + param0, this.field_x, 20, 16777215, -1, 0, 0, var5.field_F + var5.field_G);
+          var5.drawParagraph(LoginCredentialHelpers.field_h, param2 + this.field_o, this.field_z + param0, this.field_x, 20, 16777215, -1, 0, 0, var5.field_F + var5.field_G);
         }
     }
 
-    final static RgbSprite j(int param0) {
+    final static RgbSprite buildFirstRgbSprite(int param0) {
         int var4_int = 0;
         int var5 = SteelSentinels.obfuscationControl;
         int var1 = MusicPatch.field_r[0] * StrongCacheEntry.field_L[0];
@@ -241,22 +241,22 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = QuickChatInputHelpers.field_d[ClientUiHelpers.bitAnd(255, (int) var2[var4_int])];
         }
-        RgbSprite var4 = new RgbSprite(un.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], var3);
-        NodeHashTable.a(9324);
+        RgbSprite var4 = new RgbSprite(ChatHistoryAllocator.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], var3);
+        NodeHashTable.releaseDecodeArrays(9324);
         return var4;
     }
 
-    final static IndexedSprite[] i(int param0) {
+    final static IndexedSprite[] buildIndexedSprites(int param0) {
         int var2 = 0;
         int var3 = SteelSentinels.obfuscationControl;
         IndexedSprite[] var1 = new IndexedSprite[PacketLoopHelpers.field_d];
         for (var2 = 0; PacketLoopHelpers.field_d > var2; var2++) {
-          var1[var2] = new IndexedSprite(un.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], UiContainer.field_L[var2], QuickChatInputHelpers.field_d);
+          var1[var2] = new IndexedSprite(ChatHistoryAllocator.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], UiContainer.field_L[var2], QuickChatInputHelpers.field_d);
         }
         if (param0 >= -66) {
           field_W = 104;
         }
-        NodeHashTable.a(9324);
+        NodeHashTable.releaseDecodeArrays(9324);
         return var1;
     }
 

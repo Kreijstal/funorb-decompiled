@@ -14,7 +14,7 @@ final class NodeIterator {
     static String field_e;
     static String field_g;
 
-    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+    final IntrusiveNode startReverseAt(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
@@ -56,12 +56,12 @@ final class NodeIterator {
         }
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode first(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 2) {
           IntrusiveNode var3 = (IntrusiveNode) null;
-          this.a(-4, (IntrusiveNode) null);
+          this.startReverseAt(-4, (IntrusiveNode) null);
           var2 = this.field_h.sentinel.next;
           if (var2 == this.field_h.sentinel) {
             this.field_a = null;
@@ -79,7 +79,7 @@ final class NodeIterator {
         return var2Lifetime1;
     }
 
-    final static String b(byte param0) {
+    final static String getVisibleTooltipText(byte param0) {
         if (AlternateUsernameCredentials.field_A) {
           if (param0 != -122) {
             field_j = (String) null;
@@ -94,7 +94,7 @@ final class NodeIterator {
           }
           return null;
         }
-        if (ConditionalTextValue.field_c + ni.field_c > CachedTextLayout.field_m) {
+        if (ConditionalTextValue.field_c + ByteArrayPoolHelpers.field_c > CachedTextLayout.field_m) {
           return SectorCacheStore.field_b;
         }
         if (param0 != -122) {
@@ -104,7 +104,7 @@ final class NodeIterator {
         return null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean isOverlayOpen(int param0) {
         if (param0 != 2) {
           field_c = (IndexedSprite[]) null;
           if (AudioService.field_i != null) {
@@ -116,7 +116,7 @@ final class NodeIterator {
           if (FunOrbClient.field_x != null) {
             return true;
           }
-          if (!MouseWheelInput.a(false)) {
+          if (!MouseWheelInput.isQuickChatHelpOpen(false)) {
             return false;
           }
           return true;
@@ -130,7 +130,7 @@ final class NodeIterator {
         if (FunOrbClient.field_x != null) {
           return true;
         }
-        if (!MouseWheelInput.a(false)) {
+        if (!MouseWheelInput.isQuickChatHelpOpen(false)) {
           return false;
         }
         return true;
@@ -157,18 +157,18 @@ final class NodeIterator {
         return null;
     }
 
-    final static void a(byte param0) {
+    final static void clearSharedReferences(byte param0) {
         EmailAvailabilityValidator.field_n = null;
-        dj.field_j = null;
+        NumberParsingHelpers.field_j = null;
         TextHotspotRegion.field_r = false;
         MessageMenuHelpers.field_d = null;
         MouseWheelInput.field_g = null;
         if (param0 != -2) {
-          NodeIterator.b((byte) 42);
+          NodeIterator.getVisibleTooltipText((byte) 42);
         }
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode last(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 2) {
@@ -190,11 +190,11 @@ final class NodeIterator {
         return var2Lifetime1;
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode previous(boolean param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (!param0) {
-          NodeIterator.a(-87);
+          NodeIterator.isOverlayOpen(-87);
           var2 = this.field_a;
           if (this.field_h.sentinel == var2) {
             this.field_a = null;
@@ -254,7 +254,7 @@ final class NodeIterator {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 == 5370) {
           field_j = null;

@@ -1,0 +1,179 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LoadingStatusHelpers {
+    static String field_a;
+    static HighscoreColumnHeader[] field_f;
+    static String field_d;
+    static RgbSprite[] field_e;
+    static int field_c;
+    static String field_b;
+
+    public static void releaseStatics(boolean param0) {
+        field_e = null;
+        field_d = null;
+        field_b = null;
+        field_f = null;
+        field_a = null;
+        if (!param0) {
+          return;
+        }
+        LoadingStatusHelpers.releaseStatics(false);
+    }
+
+    final static String getLoadingStatusText(byte param0) {
+        if (AccountTermsPanel.field_Q < 2) {
+          return RankingQuery.field_w;
+        }
+        if (null != ChecksumAndFrameHelpers.field_f) {
+          if (ChecksumAndFrameHelpers.field_f.ensureIndex(true)) {
+            return EmailAvailabilityValidator.field_t;
+          }
+          return IntKeyLookup.field_g;
+        }
+        int var1 = -86 / ((69 - param0) / 47);
+        if (!WidgetStyleLayer.field_k.ensureIndex(true)) {
+          return NotificationMessage.field_t;
+        }
+        if (!WidgetStyleLayer.field_k.isGroupLoadedByName("commonui", (byte) 90)) {
+          return LoadingScreenHelpers.field_f + " - " + WidgetStyleLayer.field_k.getGroupProgressByName((byte) 78, "commonui") + "%";
+        }
+        if (!QuickChatPhraseCache.field_d.ensureIndex(true)) {
+          return QuickChatPopupHelpers.field_c;
+        }
+        if (!QuickChatPhraseCache.field_d.isGroupLoadedByName("commonui", (byte) 90)) {
+          return DefaultQuickChatCacheHook.field_c + " - " + QuickChatPhraseCache.field_d.getGroupProgressByName((byte) 103, "commonui") + "%";
+        }
+        if (!IconLabelControl.field_bc.ensureIndex(true)) {
+          return ArchiveLoadStep.field_l;
+        }
+        if (!IconLabelControl.field_bc.ensureAllGroupsAvailable(25)) {
+          return SentinelAnimationEditor.field_i + " - " + IconLabelControl.field_bc.getOverallProgress((byte) -33) + "%";
+        }
+        return GameApplet.field_a;
+    }
+
+    final static String getJoinFailureMessage(int param0, String param1, byte param2) {
+        String stackIn_2_0 = null;
+        String stackIn_5_0 = null;
+        String stackIn_8_0 = null;
+        String stackIn_11_0 = null;
+        String stackIn_14_0 = null;
+        String stackIn_17_0 = null;
+        String stackIn_20_0 = null;
+        String stackIn_23_0 = null;
+        String stackIn_26_0 = null;
+        String stackIn_29_0 = null;
+        String stackIn_33_0 = null;
+        Object stackIn_37_0 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_41_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          if (param0 == 1) {
+            stackIn_2_0 = SocketConnector.formatTemplate(NotificationMessage.field_w, -73, new String[]{param1});
+            return stackIn_2_0;
+          }
+          if (2 == param0) {
+            stackIn_5_0 = SocketConnector.formatTemplate(DefaultQuickChatCacheHook.field_d, -43, new String[]{param1});
+            return stackIn_5_0;
+          }
+          if (param0 == 3) {
+            stackIn_8_0 = SocketConnector.formatTemplate(MeshMaterial.field_j, -75, new String[]{param1});
+            return stackIn_8_0;
+          }
+          if (param0 == 4) {
+            stackIn_11_0 = SocketConnector.formatTemplate(BoundedUrlRequest.field_p, -93, new String[]{param1});
+            return stackIn_11_0;
+          }
+          if (5 == param0) {
+            stackIn_14_0 = SocketConnector.formatTemplate(SpriteCheckboxPainter.field_b, -67, new String[]{param1});
+            return stackIn_14_0;
+          }
+          if (param0 == 6) {
+            stackIn_17_0 = SocketConnector.formatTemplate(RankingAndRasterHelpers.field_i, -65, new String[]{param1});
+            return stackIn_17_0;
+          }
+          if (7 == param0) {
+            stackIn_20_0 = SocketConnector.formatTemplate(MarkerSlider.field_db, -32, new String[]{param1});
+            return stackIn_20_0;
+          }
+          if (8 == param0) {
+            stackIn_23_0 = SocketConnector.formatTemplate(VerticalScrollbar.field_Ub, -63, new String[]{param1});
+            return stackIn_23_0;
+          }
+          if (11 == param0) {
+            stackIn_26_0 = SocketConnector.formatTemplate(FunOrbClient.field_y, -107, new String[]{param1});
+            return stackIn_26_0;
+          }
+          if (param0 == 12) {
+            stackIn_29_0 = SocketConnector.formatTemplate(SocialTabsPanel.field_e, -117, new String[]{param1});
+            return stackIn_29_0;
+          }
+          if (13 == param0) {
+            stackIn_33_0 = SocketConnector.formatTemplate(AccountRegistrationPanel.field_ab, -17, new String[]{param1});
+            return stackIn_33_0;
+          }
+          if (param2 < -103) {
+            return null;
+          }
+          LoadingStatusHelpers.getLoadingStatusText((byte) 118);
+          stackIn_37_0 = null;
+          return (String) (stackIn_37_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_40_0 = var3;
+          stackIn_40_1 = new StringBuilder().append("sa.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_41_2 = "null";
+          } else {
+            stackIn_41_2 = "{...}";
+          }
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final static void sendReflectionCheckReplies(byte param0) {
+        int fieldTemp$0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        CipherPacketBuffer var1 = null;
+        RuntimeException var1_ref = null;
+        int var2 = 0;
+        int var3 = 0;
+        var3 = SteelSentinels.obfuscationControl;
+        try {
+          var1 = ClockAndCookieHelpers.field_g;
+          if (param0 != -110) {
+            return;
+          }
+          while (PartInstruction.isFirstReflectionCheckReady(true)) {
+            var1.writeCipheredOpcode(8, (byte) -117);
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
+            var2 = fieldTemp$0;
+            ReflectionCheckHelpers.writeReflectionCheckReply(true, var1);
+            ClockAndCookieHelpers.field_g.backpatchByteLength((byte) -93, -var2 + var1.position);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) var1_ref), "sa.A(" + param0 + ')');
+        }
+    }
+
+    static {
+        int var0 = 0;
+        field_f = new HighscoreColumnHeader[255];
+        field_a = "Remove name";
+        for (var0 = 0; field_f.length > var0; var0++) {
+          field_f[var0] = new HighscoreColumnHeader();
+        }
+        field_d = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        field_b = "Camera up/down: Normal";
+        field_c = 48;
+    }
+}

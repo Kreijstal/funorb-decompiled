@@ -17,9 +17,9 @@ final class QuickChatCategoryCache {
           if (DiskCacheRequest.field_I) {
             return true;
           }
-          return ni.b(56) ? true : false;
+          return ByteArrayPoolHelpers.isAccountCreationMode(56) ? true : false;
         }
-        if (!ni.b(56)) {
+        if (!ByteArrayPoolHelpers.isAccountCreationMode(56)) {
           return false;
         }
         return true;
@@ -37,7 +37,7 @@ final class QuickChatCategoryCache {
         QuickChatCategory var3;
         byte[] var4;
         QuickChatCategory var3Lifetime1;
-        var3 = (QuickChatCategory) (this.field_a.a((long)param1, -100));
+        var3 = (QuickChatCategory) (this.field_a.get((long)param1, -100));
         if (var3 != null) {
           return var3;
         }

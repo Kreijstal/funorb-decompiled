@@ -1,0 +1,141 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SessionUiHelpers {
+    static String field_g;
+    static long[] field_e;
+    static ResourceArchive field_d;
+    static boolean field_h;
+    static String field_c;
+    static long[][] field_i;
+    static String field_b;
+    static String field_a;
+    static String field_f;
+
+    final static void updateCreateGameControls(int param0, boolean param1, boolean param2, int param3) {
+        SceneWidget stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        boolean stackIn_10_2 = false;
+        SceneWidget stackIn_16_0 = null;
+        int stackIn_16_1 = 0;
+        boolean stackIn_17_2 = false;
+        SceneWidget stackIn_21_0 = null;
+        int stackIn_21_1 = 0;
+        boolean stackIn_22_2 = false;
+        SentinelCommandSimulator.layoutLobbySlidePanels(param0 + 2);
+        if (QuickChatInputHelpers.field_b >= 0) {
+          Explosion.field_C.field_S = SocketConnector.formatTemplate(MarkerSliderPainter.field_g, -34, new String[]{Integer.toString(QuickChatInputHelpers.field_b)});
+        } else {
+          Explosion.field_C.field_S = null;
+        }
+        stackIn_9_0 = QuickChatMenu.field_Ub;
+        stackIn_9_1 = 125;
+        stackIn_10_2 = (param2) && (!param1) && (!LobbyStateHelpers.field_b) && (LoginEncryptionHelpers.field_b == null) && (ByteArrayPoolHelpers.field_a == null);
+        ((SceneWidget) (Object) stackIn_9_0).updateInputFullScreen((byte) stackIn_9_1, stackIn_10_2);
+        stackIn_16_0 = PlayingSound.field_q;
+        stackIn_16_1 = 12;
+        stackIn_17_2 = (param2) && (!param1) && (!LobbyStateHelpers.field_b) && (null == LoginEncryptionHelpers.field_b) && (null == ByteArrayPoolHelpers.field_a);
+        ((SceneWidget) (Object) stackIn_16_0).updateInputFullScreen((byte) stackIn_16_1, stackIn_17_2);
+        stackIn_21_0 = TeamColourTinter.field_b;
+        stackIn_21_1 = 22;
+        stackIn_22_2 = (param2) && (!param1) && (LobbyStateHelpers.field_b);
+        ((SceneWidget) (Object) stackIn_21_0).updateInputFullScreen((byte) stackIn_21_1, stackIn_22_2);
+        BoundedRandomAccessFile.field_f.field_d.processTabPresses(10000);
+        if (BufferedSocket.field_i.field_Eb != 0) {
+          SessionExitHelpers.field_c = true;
+        }
+        if (0 != DisplayNameAndAudioHelpers.field_b.field_Eb && (ProxyAuthenticationException.field_a ||
+          !(SpriteLoadingHelpers.field_b <= 0) ||
+          !(NodeDeque.field_d < 2) &&
+          SoundAndUrlHelpers.field_e[12])) {
+          AlphaContainer.sendByteRequest(param3, param0 + 2);
+        }
+        if (0 != DesignerPageTables.field_j.field_Eb) {
+          if (ViewportController.field_l.length == 1 &&
+            ChecksumAndFrameHelpers.field_a != ViewportController.field_l[0]) {
+            ChecksumAndFrameHelpers.field_a = ViewportController.field_l[0];
+          }
+          DialWidget.sendFlaggedBytePayload(ChecksumAndFrameHelpers.field_a, SocialListUiHelpers.field_e, true, 0, param3, (byte) 81);
+        }
+        if (LoginForm.field_gb.field_Eb != 0) {
+          LobbyStateHelpers.field_b = false;
+        }
+        if (param0 != -2) {
+          field_c = (String) null;
+        }
+    }
+
+    final static SceneWidget getActiveWidget(byte param0) {
+        int var1 = -54 % ((-38 - param0) / 57);
+        return BirthDateEntryPanel.getTabbedPanelContent(true);
+    }
+
+    public static void releaseStatics(int param0) {
+        field_f = null;
+        field_e = null;
+        if (param0 != 5) {
+          SessionUiHelpers.updateCreateGameControls(-91, false, true, 52);
+        }
+        field_b = null;
+        field_a = null;
+        field_c = null;
+        field_i = (long[][]) null;
+        field_d = null;
+        field_g = null;
+    }
+
+    static {
+        int var14 = 0;
+        long stackIn_5_0 = 0L;
+        int var0;
+        int var1;
+        long var2;
+        long var4;
+        long var6;
+        long var8;
+        long var10;
+        long var12;
+        field_g = "1000 (MAX)";
+        field_c = "Who can join";
+        field_i = new long[8][256];
+        field_h = false;
+        field_b = "Password is valid";
+        field_e = new long[11];
+        field_a = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
+        var0 = 0;
+        scanLoop1: while (var0 < 256) {
+          var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+          if ((var0 & 1) != 0) {
+            stackIn_5_0 = (long)(255 & var1);
+          } else {
+            stackIn_5_0 = (long)(var1 >>> 8);
+          }
+          var2 = stackIn_5_0;
+          var4 = var2 << 1;
+          if (var4 >= 256L) {
+            var4 = var4 ^ 285L;
+          }
+          var6 = var4 << 1;
+          if (var6 >= 256L) {
+            var6 = var6 ^ 285L;
+          }
+          var8 = var2 ^ var6;
+          var10 = var6 << 1;
+          if (256L <= var10) {
+            var10 = var10 ^ 285L;
+          }
+          var12 = var2 ^ var10;
+          field_i[0][var0] = LoadingCaptionHelpers.bitOr(LoadingCaptionHelpers.bitOr(LoadingCaptionHelpers.bitOr(LoadingCaptionHelpers.bitOr(var10 << 24, LoadingCaptionHelpers.bitOr(var2 << 32, LoadingCaptionHelpers.bitOr(LoadingCaptionHelpers.bitOr(var2 << 56, var2 << 48), var6 << 40))), var8 << 16), var4 << 8), var12);
+          for (var14 = 1; 8 > var14; var14++) {
+            field_i[var14][var0] = LoadingCaptionHelpers.bitOr(field_i[var14 - 1][var0] >>> 8, field_i[-1 + var14][var0] << 56);
+          }
+          var0++;
+        }
+        field_e[0] = 0L;
+        for (var0 = 1; var0 <= 10; var0++) {
+          var1 = -8 + 8 * var0;
+          field_e[var0] = AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd(255L, field_i[7][7 + var1]), AccountNamePrompt.bitXor(AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd(16711680L, field_i[5][var1 + 5]), AccountNamePrompt.bitXor(AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd(1095216660480L, field_i[3][var1 + 3]), AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd(280375465082880L, field_i[2][2 + var1]), AccountNamePrompt.bitXor(ReportAbuseDialog.bitAnd(71776119061217280L, field_i[1][1 + var1]), ReportAbuseDialog.bitAnd(-72057594037927936L, field_i[0][var1])))), ReportAbuseDialog.bitAnd(field_i[4][var1 + 4], 4278190080L))), ReportAbuseDialog.bitAnd(field_i[6][var1 + 6], 65280L)));
+        }
+        field_f = "Camera left/right: Inverted";
+    }
+}

@@ -17,7 +17,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
     static RgbSprite[] field_rb;
     static String field_nb;
 
-    final static void a(String param0, CombatWorld param1, byte param2) {
+    final static void addWrappedChatLine(String param0, CombatWorld param1, byte param2) {
         int var6 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -34,12 +34,12 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         RgbSprite var9 = null;
         var8 = SteelSentinels.obfuscationControl;
         try {
-          if (ed.field_j == -2) {
+          if (SessionSeedHelpers.field_j == -2) {
             return;
           }
           if (param2 != 100) {
             var9 = (RgbSprite) null;
-            ValidatedTextWidget.a(32, 18, 86, -6, (RgbSprite) null, -101, -54);
+            ValidatedTextWidget.replaceColorWithGradient(32, 18, 86, -6, (RgbSprite) null, -101, -54);
           }
           var3_int = BoundedRandomAccessFile.field_j.field_zb - 20 - BirthDateEntryPanel.field_X.textWidth("[" + SocketConnector.formatTemplate(AccountChoicePanel.field_ab, -49, new String[]{param1.playerNames[0], "] "}));
           if (var3_int < BirthDateEntryPanel.field_X.textWidth(param0)) {
@@ -75,7 +75,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2, LoginCredentials param3, int param4) {
+    final static void writeLoginPacket(boolean param0, int param1, boolean param2, LoginCredentials param3, int param4) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -85,16 +85,16 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         int var6 = 0;
         String var7 = null;
         try {
-          dj.field_k[0] = rb.field_g.nextInt();
-          dj.field_k[1] = rb.field_g.nextInt();
+          NumberParsingHelpers.field_k[0] = rb.field_g.nextInt();
+          NumberParsingHelpers.field_k[1] = rb.field_g.nextInt();
           FallingPickup.field_y.position = 0;
-          dj.field_k[param1] = (int)(TextButton.field_G >> 32);
-          dj.field_k[3] = (int)TextButton.field_G;
-          FallingPickup.field_y.writeInt(true, dj.field_k[0]);
-          FallingPickup.field_y.writeInt(true, dj.field_k[1]);
-          FallingPickup.field_y.writeInt(true, dj.field_k[2]);
-          FallingPickup.field_y.writeInt(true, dj.field_k[3]);
-          IntKeyLookup.a(125, FallingPickup.field_y);
+          NumberParsingHelpers.field_k[param1] = (int)(TextButton.field_G >> 32);
+          NumberParsingHelpers.field_k[3] = (int)TextButton.field_G;
+          FallingPickup.field_y.writeInt(true, NumberParsingHelpers.field_k[0]);
+          FallingPickup.field_y.writeInt(true, NumberParsingHelpers.field_k[1]);
+          FallingPickup.field_y.writeInt(true, NumberParsingHelpers.field_k[2]);
+          FallingPickup.field_y.writeInt(true, NumberParsingHelpers.field_k[3]);
+          IntKeyLookup.writeMachineId(125, FallingPickup.field_y);
           FallingPickup.field_y.writeShort(param4, 18);
           param3.writeTo(FallingPickup.field_y, false);
           ClockAndCookieHelpers.field_g.position = 0;
@@ -106,12 +106,12 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           ClockAndCookieHelpers.field_g.position = ClockAndCookieHelpers.field_g.position + 2;
           var5_int = ClockAndCookieHelpers.field_g.position;
           ClockAndCookieHelpers.field_g.writeInt(true, TextAndMenuHelpers.field_d);
-          ClockAndCookieHelpers.field_g.writeLong(-28875, og.field_b);
+          ClockAndCookieHelpers.field_g.writeLong(-28875, QuickChatPopupHelpers.field_b);
           var6 = 0;
           if (LoadingProgressDialog.field_ib) {
             var6 = var6 | 1;
           }
-          if (cd.field_a) {
+          if (QuickChatPacketHelpers.field_a) {
             var6 = var6 | 4;
           }
           if (param2) {
@@ -121,7 +121,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
             var6 = var6 | 16;
           }
           ClockAndCookieHelpers.field_g.writeByte((byte) 124, var6);
-          var7 = SceneWidget.readSettingsCookie(param1 ^ -82, Projectile.d((byte) -21));
+          var7 = SceneWidget.readSettingsCookie(param1 ^ -82, Projectile.getApplet((byte) -21));
           if (var7 == null) {
             var7 = "";
           }
@@ -129,9 +129,9 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           if (null != EmailCredentials.field_k) {
             ClockAndCookieHelpers.field_g.writePrefixedString(13588, EmailCredentials.field_k);
           }
-          qi.a(AccountNoticeDialog.field_ib, FallingPickup.field_y, ClockAndCookieHelpers.field_g, qe.field_d, 5);
+          LoginCredentialHelpers.writeEncryptedLoginBlock(AccountNoticeDialog.field_ib, FallingPickup.field_y, ClockAndCookieHelpers.field_g, TextSpriteHelpers.field_d, 5);
           ClockAndCookieHelpers.field_g.writeShortLengthPrefix(param1 ^ 28, -var5_int + ClockAndCookieHelpers.field_g.position);
-          gj.a(0, -1);
+          SpriteDrawHelpers.flushOutgoingPackets(0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -147,7 +147,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void sortEntryIndices(int param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -159,7 +159,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
             return;
           }
           for (var2_int = 0; var2_int < DelayedServerPacket.field_z; var2_int++) {
-            un.field_j[param0 + var2_int] = var2_int;
+            ChatHistoryAllocator.field_j[param0 + var2_int] = var2_int;
           }
           ArchiveLoadSequence.sortRankingRange(param0 + param0, TabbedPanel.field_cc, (byte) 125, DelayedServerPacket.field_z + param0, param0, false, ImageProducerRasterBuffer.field_w);
           if (param0 < DelayedServerPacket.field_z) {
@@ -173,21 +173,21 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         }
     }
 
-    final static void a(long param0, String param1, int param2) {
+    final static void openPrivateChatTo(long param0, String param1, int param2) {
         CharSequence var5 = null;
         try {
           ChatPanelHelpers.field_b = param2;
           LoadingScreenHelpers.field_e = param1;
           var5 = (CharSequence) ((Object) param1);
-          StripedProgressBar.field_U = AlphaContainer.a(param2 ^ 3, var5);
-          jn.field_g = true;
+          StripedProgressBar.field_U = AlphaContainer.normalizeDisplayName(param2 ^ 3, var5);
+          MusicTrackHelpers.field_g = true;
           ImageProducerRasterBuffer.field_p = param0;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bc.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, RgbSprite param4, int param5, int param6) {
+    final static void replaceColorWithGradient(int param0, int param1, int param2, int param3, RgbSprite param4, int param5, int param6) {
         int var11 = 0;
         int var10 = 0;
         RuntimeException stackIn_13_0 = null;

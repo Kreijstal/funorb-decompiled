@@ -3,7 +3,7 @@
  */
 class TextHotspotWidget extends TextButton {
     private TextHotspotRegion field_db;
-    static vd field_Y;
+    static TransitionTimerHelpers field_Y;
     static EmailFormatError field_cb;
     static int field_W;
     private NodeDeque field_ab;
@@ -23,14 +23,14 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final static void a(boolean param0, byte param1, String param2, String param3) {
+    final static void startLoginWithCredentials(boolean param0, byte param1, String param2, String param3) {
         if (param1 > -60) {
           return;
         }
         try {
           DateOfBirthValidator.field_i = param3;
           LobbyPlayer.field_Xb = param2;
-          LoginDialog.a((byte) -102, param0, rh.field_p);
+          LoginDialog.openAccountRequestDialog((byte) -102, param0, PendingDataRequest.field_p);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ma.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -52,7 +52,7 @@ class TextHotspotWidget extends TextButton {
         return null;
     }
 
-    final static String a(boolean param0) {
+    final static String getPendingPassword(boolean param0) {
         if (param0) {
           return (String) null;
         }
@@ -164,7 +164,7 @@ class TextHotspotWidget extends TextButton {
         super.notifyAction(param0, (byte) -124, param2, param3);
         if (param1 >= -122) {
           String var8 = (String) null;
-          TextHotspotWidget.a(true, (byte) -7, (String) null, (String) null);
+          TextHotspotWidget.startLoginWithCredentials(true, (byte) -7, (String) null, (String) null);
           var5 = -this.field_o + param2;
           var6 = -this.field_z + param3;
           var7 = this.hotspotAt(-1, var5, var6);
@@ -189,7 +189,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final static void a(int param0, kf param1, int param2) {
+    final static void sendListRequest(int param0, HighscoreTable param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
           var3 = ClockAndCookieHelpers.field_g;
@@ -197,7 +197,7 @@ class TextHotspotWidget extends TextButton {
           var3.writeByte((byte) 115, 5);
           var3.writeByte((byte) 110, 0);
           if (param2 != -2864) {
-            TextHotspotWidget.a(false);
+            TextHotspotWidget.getPendingPassword(false);
           }
           var3.writeShort(param1.field_C, param2 + 2960);
           var3.writeByte((byte) 125, param1.field_u);
@@ -207,7 +207,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final static void g(int param0) {
+    final static void disableKeyboard(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -215,7 +215,7 @@ class TextHotspotWidget extends TextButton {
           if (param0 == 0) {
             return;
           }
-          TextHotspotWidget.a(false);
+          TextHotspotWidget.getPendingPassword(false);
           return;
         }
         var1 = MouseInputHandler.field_i;
@@ -223,7 +223,7 @@ class TextHotspotWidget extends TextButton {
           MouseInputHandler.field_i = null;
         }
         if (param0 != 0) {
-          TextHotspotWidget.a(false);
+          TextHotspotWidget.getPendingPassword(false);
         }
     }
 
@@ -256,7 +256,7 @@ class TextHotspotWidget extends TextButton {
           if (param2 < -42) {
             return;
           }
-          field_Y = (vd) null;
+          field_Y = (TransitionTimerHelpers) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -399,7 +399,7 @@ class TextHotspotWidget extends TextButton {
             var7 = var9.textOriginX(param2, 3, (UiComponent) (this));
             var8 = var9.textOriginY((byte) -121, (UiComponent) (this), param0);
             do {
-              DateInputWidget.a(var7 + var6.field_s - 2, var6.field_u + 2, 2 + var6.field_o, 0, var6.field_w + var8 - 2);
+              DateInputWidget.drawDottedRectangle(var7 + var6.field_s - 2, var6.field_u + 2, 2 + var6.field_o, 0, var6.field_w + var8 - 2);
               var6 = var6.field_q;
             } while (var6 != null);
           }
@@ -408,7 +408,7 @@ class TextHotspotWidget extends TextButton {
     }
 
     static {
-        field_Y = new vd();
+        field_Y = new TransitionTimerHelpers();
         field_W = -1;
         field_V = -1;
         field_Z = "Ignore";

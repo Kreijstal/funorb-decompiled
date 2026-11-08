@@ -23,8 +23,8 @@ final class EmailFormatError {
         if (null != IterableNodeHashTable.field_f) {
           IterableNodeHashTable.field_f.setMasterVolume(param1, 1000000);
         }
-        if (ja.field_g != null) {
-          ja.field_g.setVolume(param1, param0 - 2);
+        if (IconLookupHelpers.field_g != null) {
+          IconLookupHelpers.field_g.setVolume(param1, param0 - 2);
         }
     }
 
@@ -48,7 +48,7 @@ final class EmailFormatError {
         var6 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
-          var4 = param0.i(-110);
+          var4 = param0.getTotalModuleSlots(-110);
           for (var5 = 0; var5 < var4; var5++) {
             if (param2[var5] == 0) {
               var3_int++;
@@ -165,13 +165,13 @@ final class EmailFormatError {
           NumericDateInputWidget.field_Z = SoftwareRaster.field_c;
           stackIn_3_0 = 61;
           if (param1) {
-            stackIn_4_1 = bd.field_c;
+            stackIn_4_1 = SolidSpriteHelpers.field_c;
           } else {
-            stackIn_4_1 = fj.field_f;
+            stackIn_4_1 = PasswordRuleHelpers.field_f;
           }
-          GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(stackIn_3_0, stackIn_4_1);
-          RegistrationRequestDialog.field_Tb.a(-2 + (SocialListPanel.field_ec.field_Lb - 40), 0, SocialListPanel.field_ec.field_zb, param0 ^ 3, 0);
-          uj.field_e.setBounds(0, 0, SocketConnector.field_b, 0, HuffmanDecoder.field_i.field_zb);
+          GzipDecoder.layoutSlidingSidePanels(stackIn_3_0, stackIn_4_1);
+          RegistrationRequestDialog.field_Tb.layout(-2 + (SocialListPanel.field_ec.field_Lb - 40), 0, SocialListPanel.field_ec.field_zb, param0 ^ 3, 0);
+          ReflectionCheckHelpers.field_e.setBounds(0, 0, SocketConnector.field_b, 0, HuffmanDecoder.field_i.field_zb);
           stackIn_6_0 = NanoTickClock.field_u;
           stackIn_6_1 = 0;
           stackIn_6_2 = SocketConnector.field_b + 2;
@@ -212,26 +212,26 @@ final class EmailFormatError {
               !(HighscoreSubmission.field_z <= 1))) {
               if (!param1 &&
                 var6 == 3) {
-                var7 = sl.field_k[var6];
-                sl.field_k[var6].field_Lb = 0;
+                var7 = ArchiveLoadStep.field_k[var6];
+                ArchiveLoadStep.field_k[var6].field_Lb = 0;
                 var7.field_zb = 0;
-                for (var8 = 0; var8 < un.field_h[var6].length; var8++) {
-                  if (null != un.field_h[var6][var8]) {
-                    var9 = un.field_h[var6][var8];
-                    un.field_h[var6][var8].field_Lb = 0;
+                for (var8 = 0; var8 < ChatHistoryAllocator.field_h[var6].length; var8++) {
+                  if (null != ChatHistoryAllocator.field_h[var6][var8]) {
+                    var9 = ChatHistoryAllocator.field_h[var6][var8];
+                    ChatHistoryAllocator.field_h[var6][var8].field_Lb = 0;
                     var9.field_zb = 0;
                   }
                 }
               } else if (param1 &&
                 0 == var6) {
-                var14 = sl.field_k[var6];
+                var14 = ArchiveLoadStep.field_k[var6];
                 var7 = var14;
-                sl.field_k[var6].field_Lb = 0;
+                ArchiveLoadStep.field_k[var6].field_Lb = 0;
                 var14.field_zb = 0;
-                for (var8 = 0; un.field_h[var6].length > var8; var8++) {
-                  if (un.field_h[var6][var8] != null) {
-                    var9 = un.field_h[var6][var8];
-                    un.field_h[var6][var8].field_Lb = 0;
+                for (var8 = 0; ChatHistoryAllocator.field_h[var6].length > var8; var8++) {
+                  if (ChatHistoryAllocator.field_h[var6][var8] != null) {
+                    var9 = ChatHistoryAllocator.field_h[var6][var8];
+                    ChatHistoryAllocator.field_h[var6][var8].field_Lb = 0;
                     var9.field_zb = 0;
                   }
                 }
@@ -251,34 +251,34 @@ final class EmailFormatError {
                 }
                 var7_int = stackIn_40_0;
                 if (var7_int != 0) {
-                  var8_ref_gh = sl.field_k[var6];
-                  sl.field_k[var6].field_Lb = 0;
+                  var8_ref_gh = ArchiveLoadStep.field_k[var6];
+                  ArchiveLoadStep.field_k[var6].field_Lb = 0;
                   var8_ref_gh.field_zb = 0;
-                  for (var9_int = 0; un.field_h[var6].length > var9_int; var9_int++) {
-                    if (un.field_h[var6][var9_int] != null) {
-                      var10_ref_qh = un.field_h[var6][var9_int];
-                      un.field_h[var6][var9_int].field_Lb = 0;
+                  for (var9_int = 0; ChatHistoryAllocator.field_h[var6].length > var9_int; var9_int++) {
+                    if (ChatHistoryAllocator.field_h[var6][var9_int] != null) {
+                      var10_ref_qh = ChatHistoryAllocator.field_h[var6][var9_int];
+                      ChatHistoryAllocator.field_h[var6][var9_int].field_Lb = 0;
                       var10_ref_qh.field_zb = 0;
                     }
                   }
                 } else {
-                  sl.field_k[var6].setBounds(0, var5, var3, 5, 103);
+                  ArchiveLoadStep.field_k[var6].setBounds(0, var5, var3, 5, 103);
                   var8 = 110;
                   if (param1) {
-                    un.field_h[var6][0].setLayout(var3, 38, 2, var8, LoginDialogHelpers.field_e, var5, (byte) 122);
+                    ChatHistoryAllocator.field_h[var6][0].setLayout(var3, 38, 2, var8, LoginDialogHelpers.field_e, var5, (byte) 122);
                     var8 += 40;
                   } else {
-                    if (null != un.field_h[var6][0]) {
-                      var9 = un.field_h[var6][0];
-                      un.field_h[var6][0].field_Lb = 0;
+                    if (null != ChatHistoryAllocator.field_h[var6][0]) {
+                      var9 = ChatHistoryAllocator.field_h[var6][0];
+                      ChatHistoryAllocator.field_h[var6][0].field_Lb = 0;
                       var9.field_zb = 0;
                     }
                   }
                   var9_int = 2 + NanoTickClock.field_y.field_zb - (5 + var8);
-                  var10 = un.field_h[var6].length - 1;
+                  var10 = ChatHistoryAllocator.field_h[var6].length - 1;
                   for (var11 = 0; var11 < var10; var11++) {
                     var12 = var9_int * var11 / var10;
-                    un.field_h[var6][var11 + 1].setLayout(var3, -var12 + (1 + var11) * var9_int / var10 - 2, 2, var8 + var12, LoginDialogHelpers.field_e, var5, (byte) 121);
+                    ChatHistoryAllocator.field_h[var6][var11 + 1].setLayout(var3, -var12 + (1 + var11) * var9_int / var10 - 2, 2, var8 + var12, LoginDialogHelpers.field_e, var5, (byte) 121);
                   }
                   var5 = var5 + (var3 + 2);
                 }
@@ -286,11 +286,11 @@ final class EmailFormatError {
             }
           }
           UsernameCredentials.field_r.setBounds(0, 10, -134 + (SoftwareRaster.field_j - 10), SoftwareRaster.field_c - 360 >> 1, 360);
-          tf.field_a.setBounds(0, 0, 24, 0, UsernameCredentials.field_r.field_zb);
-          nd.field_a.setBounds(0, 24, UsernameCredentials.field_r.field_Lb - 24, 0, UsernameCredentials.field_r.field_zb);
-          nd.field_a.field_I = PopupMenuSupport.buildSolidFrameSprites(3, param0, 11579568, nd.field_a.field_Lb, 8421504, 13574);
-          TeamColourTinter.field_c.setBounds(0, 5, -26 + (-10 + nd.field_a.field_Lb), 5, -10 + nd.field_a.field_zb);
-          Js5ArchiveManager.field_i.setBounds(0, -29 + nd.field_a.field_Lb, 24, (-80 + nd.field_a.field_zb) / 2, 80);
+          ChatHistoryHelpers.field_a.setBounds(0, 0, 24, 0, UsernameCredentials.field_r.field_zb);
+          ChatFilterPackingHelpers.field_a.setBounds(0, 24, UsernameCredentials.field_r.field_Lb - 24, 0, UsernameCredentials.field_r.field_zb);
+          ChatFilterPackingHelpers.field_a.field_I = PopupMenuSupport.buildSolidFrameSprites(3, param0, 11579568, ChatFilterPackingHelpers.field_a.field_Lb, 8421504, 13574);
+          TeamColourTinter.field_c.setBounds(0, 5, -26 + (-10 + ChatFilterPackingHelpers.field_a.field_Lb), 5, -10 + ChatFilterPackingHelpers.field_a.field_zb);
+          Js5ArchiveManager.field_i.setBounds(0, -29 + ChatFilterPackingHelpers.field_a.field_Lb, 24, (-80 + ChatFilterPackingHelpers.field_a.field_zb) / 2, 80);
           SocialListPanel.layoutLobbySocialPanels(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -308,8 +308,8 @@ final class EmailFormatError {
         if (param0 != 12) {
           field_b = true;
         }
-        AccountTermsPanel.a(false, 40);
-        uj.field_d = 0;
+        AccountTermsPanel.openBlankLoginDialog(false, 40);
+        ReflectionCheckHelpers.field_d = 0;
     }
 
     final static boolean isLeapYear(int param0, int param1) {

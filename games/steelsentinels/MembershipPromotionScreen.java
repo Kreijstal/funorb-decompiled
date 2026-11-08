@@ -75,23 +75,23 @@ final class MembershipPromotionScreen {
           var2Lifetime1++;
         }
         this.drawScreenshotTransition((byte) -117);
-        if (null != pa.field_a &&
-          pa.field_a.ensureIndex(param0) &&
-          pa.field_a.a("members_expansion_screen", (byte) 90) &&
-          pa.field_a.a("arialish12", (byte) 90) &&
-          pa.field_a.a("pump32", (byte) 90) &&
+        if (null != TutorialStepTable.field_a &&
+          TutorialStepTable.field_a.ensureIndex(param0) &&
+          TutorialStepTable.field_a.isGroupLoadedByName("members_expansion_screen", (byte) 90) &&
+          TutorialStepTable.field_a.isGroupLoadedByName("arialish12", (byte) 90) &&
+          TutorialStepTable.field_a.isGroupLoadedByName("pump32", (byte) 90) &&
           null != BufferedRandomAccessFile.field_d &&
           BufferedRandomAccessFile.field_d.ensureIndex(true) &&
-          BufferedRandomAccessFile.field_d.a("arialish12", (byte) 90) &&
-          BufferedRandomAccessFile.field_d.a("pump32", (byte) 90)) {
-          QuickChatHelpDialog.field_Wb = NanoTickClock.a(pa.field_a, (byte) 85, "members_expansion_screen", "frame");
-          di.field_f = PacketLoopHelpers.loadRgbSpriteByName(pa.field_a, "members_expansion_screen", "arrow", false);
-          GameApplet.field_g = vd.a(BufferedRandomAccessFile.field_d, "arialish12", pa.field_a, -1, "");
-          FunOrbClient.field_w = UrlAndReplyHelpers.loadCoverageFontByName(pa.field_a, BufferedRandomAccessFile.field_d, (byte) -69, "", "pump32");
-          qe.field_g = ContextMenu.loadSprite("members_expansion_screen", -42, "benefit_orbs", pa.field_a);
-          SectorCacheStore.field_d = ContextMenu.loadSprite("members_expansion_screen", -83, "button_text", pa.field_a);
-          ce.field_v = ClientUiHelpers.loadRgbSpritesByName((byte) -80, "button_highlights", pa.field_a, "members_expansion_screen");
-          pa.field_a = null;
+          BufferedRandomAccessFile.field_d.isGroupLoadedByName("arialish12", (byte) 90) &&
+          BufferedRandomAccessFile.field_d.isGroupLoadedByName("pump32", (byte) 90)) {
+          QuickChatHelpDialog.field_Wb = NanoTickClock.loadIndexedSprite(TutorialStepTable.field_a, (byte) 85, "members_expansion_screen", "frame");
+          OptionMaskHelpers.field_f = PacketLoopHelpers.loadRgbSpriteByName(TutorialStepTable.field_a, "members_expansion_screen", "arrow", false);
+          GameApplet.field_g = TransitionTimerHelpers.loadBinaryFontByName(BufferedRandomAccessFile.field_d, "arialish12", TutorialStepTable.field_a, -1, "");
+          FunOrbClient.field_w = UrlAndReplyHelpers.loadCoverageFontByName(TutorialStepTable.field_a, BufferedRandomAccessFile.field_d, (byte) -69, "", "pump32");
+          TextSpriteHelpers.field_g = ContextMenu.loadSprite("members_expansion_screen", -42, "benefit_orbs", TutorialStepTable.field_a);
+          SectorCacheStore.field_d = ContextMenu.loadSprite("members_expansion_screen", -83, "button_text", TutorialStepTable.field_a);
+          ce.field_v = ClientUiHelpers.loadRgbSpritesByName((byte) -80, "button_highlights", TutorialStepTable.field_a, "members_expansion_screen");
+          TutorialStepTable.field_a = null;
           BufferedRandomAccessFile.field_d = null;
         }
         this.buildTextSprites((byte) 106);
@@ -101,28 +101,28 @@ final class MembershipPromotionScreen {
         this.field_a.drawTransparent(376, 339);
         this.field_u.drawTransparent(9, 9);
         QuickChatHelpDialog.field_Wb.draw(0, 0);
-        if (di.field_f != null) {
-          di.field_f.drawTransparent(9, 257);
-          di.field_f.drawHorizontalFlip(558, 257);
+        if (OptionMaskHelpers.field_f != null) {
+          OptionMaskHelpers.field_f.drawTransparent(9, 257);
+          OptionMaskHelpers.field_f.drawHorizontalFlip(558, 257);
           if (DelegatingCanvas.field_c > 257 &&
             DelegatingCanvas.field_c < 290) {
             var2Lifetime2 = (PlayerContextMenu.sine(20612, this.field_h << 4) * 40 >> 16) + 40;
             if (var2Lifetime2 > 0) {
               if (LobbySetupHelpers.field_f > 9 &&
                 LobbySetupHelpers.field_f < 82) {
-                di.field_f.drawAdditive(8, 256, var2Lifetime2);
-                di.field_f.drawAdditive(10, 256, var2Lifetime2);
-                di.field_f.drawAdditive(8, 258, var2Lifetime2);
-                di.field_f.drawAdditive(10, 258, var2Lifetime2);
+                OptionMaskHelpers.field_f.drawAdditive(8, 256, var2Lifetime2);
+                OptionMaskHelpers.field_f.drawAdditive(10, 256, var2Lifetime2);
+                OptionMaskHelpers.field_f.drawAdditive(8, 258, var2Lifetime2);
+                OptionMaskHelpers.field_f.drawAdditive(10, 258, var2Lifetime2);
               } else {
                 if (LobbySetupHelpers.field_f > 558 &&
                   LobbySetupHelpers.field_f < 631) {
-                  di.field_f.flipHorizontal();
-                  di.field_f.drawAdditive(557, 256, var2Lifetime2);
-                  di.field_f.drawAdditive(559, 256, var2Lifetime2);
-                  di.field_f.drawAdditive(557, 258, var2Lifetime2);
-                  di.field_f.drawAdditive(559, 258, var2Lifetime2);
-                  di.field_f.flipHorizontal();
+                  OptionMaskHelpers.field_f.flipHorizontal();
+                  OptionMaskHelpers.field_f.drawAdditive(557, 256, var2Lifetime2);
+                  OptionMaskHelpers.field_f.drawAdditive(559, 256, var2Lifetime2);
+                  OptionMaskHelpers.field_f.drawAdditive(557, 258, var2Lifetime2);
+                  OptionMaskHelpers.field_f.drawAdditive(559, 258, var2Lifetime2);
+                  OptionMaskHelpers.field_f.flipHorizontal();
                 }
               }
             }
@@ -130,7 +130,7 @@ final class MembershipPromotionScreen {
         }
         this.field_t.drawTransparent(16, 302);
         GameApplet.field_g.drawParagraph(this.field_d[this.field_q], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-        qe.field_g.drawTransparent(30, 330);
+        TextSpriteHelpers.field_g.drawTransparent(30, 330);
         GameApplet.field_g.drawParagraph(ArchiveRequest.field_A[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
         GameApplet.field_g.drawParagraph(ArchiveRequest.field_A[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
         GameApplet.field_g.drawParagraph(ArchiveRequest.field_A[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
@@ -157,8 +157,8 @@ final class MembershipPromotionScreen {
         int var4Lifetime1;
         var6 = SteelSentinels.obfuscationControl;
         this.field_i = this.field_i + 65536;
-        while (StatefulTextPainter.a(this.field_i, cf.field_x, (byte) -27) >= 65536) {
-          this.field_i = this.field_i - cf.field_x;
+        while (StatefulTextPainter.multiplyFixed16(this.field_i, StatSubmission.field_x, (byte) -27) >= 65536) {
+          this.field_i = this.field_i - StatSubmission.field_x;
           this.field_h = this.field_h + 1;
         }
         if (param0 != 4540749) {
@@ -170,21 +170,21 @@ final class MembershipPromotionScreen {
         }
         if (-1 != var3) {
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_e < cf.field_o) {
+          if (this.field_e < StatSubmission.field_o) {
             this.field_e = this.field_e + 1;
-            if (cf.field_D < this.field_e && (null == this.field_s ||
+            if (StatSubmission.field_D < this.field_e && (null == this.field_s ||
               null == this.field_s[this.field_q])) {
               this.field_e = this.field_e - 1;
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (this.field_e >= cf.field_o &&
+              if (this.field_e >= StatSubmission.field_o &&
                 this.field_s[(1 + this.field_q) % var3] == null) {
                 this.field_e = this.field_e - 1;
               }
             }
           }
-          if (cf.field_o <= this.field_e) {
+          if (StatSubmission.field_o <= this.field_e) {
             this.field_j = this.field_q;
             if (!this.field_v) {
               this.field_q = this.field_q - 1;
@@ -197,13 +197,13 @@ final class MembershipPromotionScreen {
                 this.field_q = this.field_q - var3;
               }
             }
-            this.field_e = this.field_e - cf.field_o;
+            this.field_e = this.field_e - StatSubmission.field_o;
           }
-          if (this.field_e > cf.field_D) {
+          if (this.field_e > StatSubmission.field_D) {
             this.field_v = true;
           }
         }
-        if (di.field_f != null) {
+        if (OptionMaskHelpers.field_f != null) {
           var4 = 0;
           if (VerticalScrollbar.field_gc != 0 &&
             257 < BufferedRandomAccessFile.field_j &&
@@ -212,26 +212,26 @@ final class MembershipPromotionScreen {
               TextButton.field_S < 82) {
               this.field_v = false;
               var4 = 1;
-              this.field_e = cf.field_o;
+              this.field_e = StatSubmission.field_o;
             }
             if (TextButton.field_S > 558 &&
               TextButton.field_S < 631) {
               var4 = 1;
-              this.field_e = cf.field_o;
+              this.field_e = StatSubmission.field_o;
               this.field_v = true;
             }
           }
           if (var4 == 0 &&
-            cf.field_D < this.field_e &&
+            StatSubmission.field_D < this.field_e &&
             BufferedRandomAccessFile.field_j > 257 &&
             290 > BufferedRandomAccessFile.field_j) {
             if (LobbySetupHelpers.field_f > 9 &&
               LobbySetupHelpers.field_f < 82) {
-              this.field_e = cf.field_D;
+              this.field_e = StatSubmission.field_D;
             }
             if (LobbySetupHelpers.field_f > 558 &&
               LobbySetupHelpers.field_f < 631) {
-              this.field_e = cf.field_D;
+              this.field_e = StatSubmission.field_D;
             }
           }
         }
@@ -249,7 +249,7 @@ final class MembershipPromotionScreen {
           }
         }
         if (SocialListPanel.field_cc) {
-          while (UiContainer.f(22759)) {
+          while (UiContainer.pollKeyEvent(22759)) {
             var5 = this.handleKeyboard((byte) 103);
             if (var5 != 0) {
               return var5;
@@ -286,31 +286,31 @@ final class MembershipPromotionScreen {
             return;
           }
           this.field_u = new RgbSprite(622, 47);
-          IterableNodeHashTable.a(this.field_u, (byte) -124);
+          IterableNodeHashTable.bindSpriteRaster(this.field_u, (byte) -124);
           SoftwareRaster.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           if (param0 < 86) {
             this.update(-93, false);
           }
           var2 = 16448250;
           var3 = 10068666;
-          var16 = ContentTransitionDialog.b(var2, var3, (byte) -104);
+          var16 = ContentTransitionDialog.createColorRamp(var2, var3, (byte) -104);
           this.drawGradientText(0, var16, 622, 0, this.field_l, 47, FunOrbClient.field_w, (byte) -27);
           MatchingTextValidator.popRasterStateWithIntGuard(118);
           this.field_t = new RgbSprite(475, 24);
           this.drawScaledGradientText(24, 0.75f, this.field_t, 0, 475, VerticalScrollbar.field_Yb, -4, FunOrbClient.field_w, var16, 259);
-          var17 = ContentTransitionDialog.b(526344, 526344, (byte) -104);
+          var17 = ContentTransitionDialog.createColorRamp(526344, 526344, (byte) -104);
           var5 = new RgbSprite(121, 122);
-          IterableNodeHashTable.a(var5, (byte) -117);
+          IterableNodeHashTable.bindSpriteRaster(var5, (byte) -117);
           SoftwareRaster.fillVerticalGradient(0, 0, var5.field_A, var5.field_F / 2, 16180917, 16306250);
           SoftwareRaster.fillVerticalGradient(0, var5.field_F / 2, var5.field_A, var5.field_F, 16306250, 15568919);
-          var6 = cl.field_d;
+          var6 = LoginResultHelpers.field_d;
           var7 = AgeValidator.field_t;
           this.drawScaledGradientText(var5.field_F, 0.5f, var5, 0, var5.field_A, var6, -16, FunOrbClient.field_w, var17, 259);
           this.drawScaledGradientText(var5.field_F, 0.5f, var5, 0, var5.field_A, var7, 20, FunOrbClient.field_w, var17, 259);
           this.drawScaledGradientText(var5.field_F / 3, 0.699999988079071f, var5, 0, var5.field_A, ResourceArchive.field_m[this.field_g], 12 + (var5.field_F / 2 - FunOrbClient.field_w.field_G), FunOrbClient.field_w, var17, 259);
           MatchingTextValidator.popRasterStateWithIntGuard(118);
           this.field_a = new RgbSprite(121, 122);
-          IterableNodeHashTable.a(this.field_a, (byte) -75);
+          IterableNodeHashTable.bindSpriteRaster(this.field_a, (byte) -75);
           var5.drawRotatedAboutCenter(this.field_a.field_A / 2, this.field_a.field_F / 2, -2048, 4096);
           MatchingTextValidator.popRasterStateWithIntGuard(112);
           return;
@@ -344,16 +344,16 @@ final class MembershipPromotionScreen {
         } else {
           var6.draw(9, 58);
         }
-        if (cf.field_D > this.field_e) {
+        if (StatSubmission.field_D > this.field_e) {
           var7 = this.field_s[this.field_j];
           var2Lifetime1 = var7;
           if (var2Lifetime1 != null) {
-            var3 = this.field_e * (var7.field_g + 60) / cf.field_D;
+            var3 = this.field_e * (var7.field_g + 60) / StatSubmission.field_D;
             var4 = -30 + var3;
             if (this.field_v) {
-              gj.a(9, var2Lifetime1, (byte) -120, (-var4 + var7.field_g) * 256 / 30, 58, -256 * var4 / 30);
+              SpriteDrawHelpers.drawHorizontalFadeSprite(9, var2Lifetime1, (byte) -120, (-var4 + var7.field_g) * 256 / 30, 58, -256 * var4 / 30);
             } else {
-              gj.a(9, var2Lifetime1, (byte) -104, -256 * var4 / 30, 58, (-var4 + var7.field_g) * 256 / 30);
+              SpriteDrawHelpers.drawHorizontalFadeSprite(9, var2Lifetime1, (byte) -104, -256 * var4 / 30, 58, (-var4 + var7.field_g) * 256 / 30);
             }
           }
         }
@@ -377,8 +377,8 @@ final class MembershipPromotionScreen {
         try {
           var7 = param0.getParameter("currency");
           if (var7 != null &&
-            RegistrationRequestDialog.a((CharSequence) ((Object) var7), -98)) {
-            this.field_g = dj.a((CharSequence) ((Object) var7), -116);
+            RegistrationRequestDialog.isDecimalInteger((CharSequence) ((Object) var7), -98)) {
+            this.field_g = NumberParsingHelpers.parseDecimalInt((CharSequence) ((Object) var7), -116);
           } else {
             this.field_g = 2;
           }
@@ -434,7 +434,7 @@ final class MembershipPromotionScreen {
         int var11 = 0;
         int var12 = SteelSentinels.obfuscationControl;
         try {
-          ArchiveIndex.a(false);
+          ArchiveIndex.pushRasterState(false);
           var9_int = param3;
           if (param7 != -27) {
             this.field_a = (RgbSprite) null;
@@ -471,14 +471,14 @@ final class MembershipPromotionScreen {
           var11_int = (int)((float)param4 / param1);
           var12 = (int)((float)param0 / param1);
           var13 = new RgbSprite(var11_int, var12);
-          IterableNodeHashTable.a(var13, (byte) -113);
+          IterableNodeHashTable.bindSpriteRaster(var13, (byte) -113);
           param2.drawScaled((int)((float)(-param3) / param1), (int)((float)(-param6) / param1), (int)((float)param2.field_A / param1), (int)((float)param2.field_F / param1));
           if (param9 != 259) {
             return;
           }
           this.drawGradientText(0, param8, var11_int, 0, param5, var12, param7, (byte) -27);
           MatchingTextValidator.popRasterStateWithIntGuard(111);
-          IterableNodeHashTable.a(param2, (byte) -126);
+          IterableNodeHashTable.bindSpriteRaster(param2, (byte) -126);
           var13.drawScaledAveraged(param3, param6, param4, param0);
           MatchingTextValidator.popRasterStateWithIntGuard(117);
           return;
@@ -536,7 +536,7 @@ final class MembershipPromotionScreen {
 
     private final void openMembershipPage(int param0) {
         try {
-          NumericDateInputWidget.a(Projectile.d((byte) -21), 9268);
+          NumericDateInputWidget.openSubscribePage(Projectile.getApplet((byte) -21), 9268);
         } catch (Exception exception) {
           exception.printStackTrace();
         }

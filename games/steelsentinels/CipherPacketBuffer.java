@@ -73,13 +73,13 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static int j(int param0) {
-        ByteStorage.field_c.a(false);
-        if (!FallingPickup.field_N.d((byte) 125)) {
+    final static int serviceArchiveConnection(int param0) {
+        ByteStorage.field_c.serviceProviders(false);
+        if (!FallingPickup.field_N.poll((byte) 125)) {
           return IconTextComponent.pollServerConnection((byte) -107);
         }
         if (param0 <= 9) {
-          CipherPacketBuffer.j(-98);
+          CipherPacketBuffer.serviceArchiveConnection(-98);
           return 0;
         }
         return 0;
@@ -87,7 +87,7 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     final void endBitReading(byte obfuscationGuard) {
         if (obfuscationGuard != -3) {
-          CipherPacketBuffer.j(53);
+          CipherPacketBuffer.serviceArchiveConnection(53);
           this.position = (7 + this.readBitPosition) / 8;
           return;
         }
@@ -108,7 +108,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void beginBitReading(boolean obfuscationGuard) {
         this.readBitPosition = this.position * 8;
         if (obfuscationGuard) {
-          CipherPacketBuffer.j(-27);
+          CipherPacketBuffer.serviceArchiveConnection(-27);
         }
     }
 

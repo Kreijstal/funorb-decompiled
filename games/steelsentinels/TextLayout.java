@@ -12,7 +12,7 @@ abstract class TextLayout {
     static String field_i;
     static int field_g;
 
-    final static boolean a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
+    final static boolean areCommonUiArchivesReady(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -24,11 +24,11 @@ abstract class TextLayout {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.ensureIndex(true) &&
-            param0.a("commonui", (byte) 90)) {
+            param0.isGroupLoadedByName("commonui", (byte) 90)) {
             if (param3.ensureIndex(true) &&
-              param3.a("commonui", (byte) 90)) {
+              param3.isGroupLoadedByName("commonui", (byte) 90)) {
               if (param1.ensureIndex(true) &&
-                param1.a("button.gif", (byte) 90)) {
+                param1.isGroupLoadedByName("button.gif", (byte) 90)) {
                 if (param2 == -1) {
                   return true;
                 }
@@ -99,18 +99,18 @@ abstract class TextLayout {
         return -1;
     }
 
-    final static void a(ResourceArchive param0, int param1, int param2, PcmStreamMixer param3) {
+    final static void prepareLogoAnimation(ResourceArchive param0, int param1, int param2, PcmStreamMixer param3) {
         try {
           if (param1 <= 67) {
-            TextLayout.a(true, -102);
+            TextLayout.drawLobbyAndChatPanels(true, -102);
           }
-          vc.field_c = param2 * MusicCrossfadeStream.getTargetFrameRate((byte) -108) / 1000;
+          DisplayMode.field_c = param2 * MusicCrossfadeStream.getTargetFrameRate((byte) -108) / 1000;
           Sprite.loadLogoJingle(param0, 1728986241);
-          DialWidget.a((byte) 90, param0);
+          DialWidget.loadLogoModel((byte) 90, param0);
           SocialListEntry.loadFinalFrameImage(77, param0);
-          ValidationIndicator.a(true);
-          CombatWorld.a(true);
-          DateOfBirthValidator.field_h = 0 - vc.field_c;
+          ValidationIndicator.initializeSpecularTable(true);
+          CombatWorld.renderLogoGlowSprite(true);
+          DateOfBirthValidator.field_h = 0 - DisplayMode.field_c;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "da.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -143,7 +143,7 @@ abstract class TextLayout {
         return var2;
     }
 
-    final static SocialListEntry a(String param0, byte param1) {
+    final static SocialListEntry findSocialEntryByName(String param0, byte param1) {
         String var2 = null;
         SocialListEntry var3 = null;
         String var4 = null;
@@ -165,7 +165,7 @@ abstract class TextLayout {
             return (SocialListEntry) (stackIn_3_0);
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = AlphaContainer.a(param1 ^ -42, var6);
+          var2 = AlphaContainer.normalizeDisplayName(param1 ^ -42, var6);
           if (var2 == null) {
             var2 = param0;
           }
@@ -179,7 +179,7 @@ abstract class TextLayout {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_dc);
-            var4 = AlphaContainer.a(1, var7);
+            var4 = AlphaContainer.normalizeDisplayName(1, var7);
             if (var4 == null) {
               var4 = var3.field_dc;
             }
@@ -211,7 +211,7 @@ abstract class TextLayout {
         int var5 = SteelSentinels.obfuscationControl;
         if (param0 != -1) {
           ResourceArchive var6 = (ResourceArchive) null;
-          TextLayout.a((ResourceArchive) null, (ResourceArchive) null, -88, (ResourceArchive) null);
+          TextLayout.areCommonUiArchivesReady((ResourceArchive) null, (ResourceArchive) null, -88, (ResourceArchive) null);
         }
         for (var3 = 0; var3 < this.field_h.length; var3++) {
           var4 = this.field_h[var3];
@@ -313,19 +313,19 @@ abstract class TextLayout {
         return 0;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawLobbyAndChatPanels(boolean param0, int param1) {
         if (param1 != 25104) {
           return;
         }
-        if (NodeIterator.a(2)) {
+        if (NodeIterator.isOverlayOpen(2)) {
           param0 = false;
         }
-        LoginDialog.a((byte) -112, param0);
-        if (di.field_b) {
+        LoginDialog.drawLobbyOverlays((byte) -112, param0);
+        if (OptionMaskHelpers.field_b) {
           SoftwareRaster.halveBrightnessRectangle(RegistrationRequestDialog.field_Tb.field_d.field_Y, RegistrationRequestDialog.field_Tb.field_d.field_eb, RegistrationRequestDialog.field_Tb.field_d.field_zb, RegistrationRequestDialog.field_Tb.field_d.field_Lb);
           RegistrationRequestDialog.field_Tb.field_d.drawFullScreen(param0, (byte) 127);
         }
-        TextLayoutLine.a(param0, (byte) -125);
+        TextLayoutLine.drawRootScenes(param0, (byte) -125);
     }
 
     public static void releaseStatics(boolean param0) {

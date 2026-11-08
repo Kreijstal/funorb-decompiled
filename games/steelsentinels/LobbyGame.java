@@ -260,9 +260,9 @@ final class LobbyGame extends SceneWidget {
     final int getGameId(int param0) {
         if (param0 > -2) {
           this.isUnlisted(-29);
-          return (int)this.d(94);
+          return (int)this.getDualKey(94);
         }
-        return (int)this.d(94);
+        return (int)this.getDualKey(94);
     }
 
     LobbyGame(int param0) {
@@ -272,7 +272,7 @@ final class LobbyGame extends SceneWidget {
 
     final static void setTooltipAnchor(int param0, int param1, int param2) {
         TriangleMesh.field_d = param1;
-        jj.field_c = param0;
+        MeshMaterial.field_c = param0;
         if (param2 == 17237) {
           return;
         }
@@ -330,15 +330,15 @@ final class LobbyGame extends SceneWidget {
     final static void resendAchievementMessages(byte param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        cf var4 = null;
+        StatSubmission var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          var4 = (cf) (Explosion.field_A.first(param0 ^ 13140));
+          var4 = (StatSubmission) (Explosion.field_A.first(param0 ^ 13140));
           while (var4 != null) {
-            ml.a(param0 ^ 87, var4, param1);
-            var4 = (cf) (Explosion.field_A.next((byte) -124));
+            ListRequestHelpers.sendStatSubmission(param0 ^ 87, var4, param1);
+            var4 = (StatSubmission) (Explosion.field_A.next((byte) -124));
           }
           var2 = MidiPcmStream.field_D.first(param0 ^ 13140);
           if (param0 != 86) {
@@ -360,7 +360,7 @@ final class LobbyGame extends SceneWidget {
         if (param0 != 4219) {
           return false;
         }
-        return !this.a((byte) 30) ? true : false;
+        return !this.isDualLinked((byte) 30) ? true : false;
     }
 
     static {

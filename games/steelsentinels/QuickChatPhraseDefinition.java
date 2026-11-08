@@ -19,7 +19,7 @@ final class QuickChatPhraseDefinition extends DualNode {
         int var2 = -79 % ((param0 + 50) / 55);
         if (this.field_F != null) {
           for (var3 = 0; var3 < this.field_F.length; var3++) {
-            this.field_F[var3] = DateOfBirthValidator.a(this.field_F[var3], 32768);
+            this.field_F[var3] = DateOfBirthValidator.bitOr(this.field_F[var3], 32768);
           }
         }
     }
@@ -161,18 +161,18 @@ final class QuickChatPhraseDefinition extends DualNode {
     }
 
     final static void shutdownConnectionAndInput(int param0) {
-        SoundCache.c(param0);
-        if (null != sl.field_n) {
-          pa.a(sl.field_n, 9174);
+        SoundCache.exitFullscreen(param0);
+        if (null != ArchiveLoadStep.field_n) {
+          TutorialStepTable.detachInputListeners(ArchiveLoadStep.field_n, 9174);
         }
-        TextHotspotWidget.g(0);
-        og.b(-115);
+        TextHotspotWidget.disableKeyboard(0);
+        QuickChatPopupHelpers.detachMouseInput(-115);
         NameValidationHelpers.closeArchiveConnections(param0 ^ -8601);
-        if (rn.a((byte) -14)) {
+        if (PendingAckRequest.isConnected((byte) -14)) {
           ClockAndCookieHelpers.field_g.writeCipheredOpcode(1, (byte) -117);
-          gj.a(0, 0);
+          SpriteDrawHelpers.flushOutgoingPackets(0, 0);
         }
-        LoginForm.m(param0 - 47);
+        LoginForm.closeConnection(param0 - 47);
     }
 
     QuickChatPhraseDefinition() {
@@ -189,13 +189,13 @@ final class QuickChatPhraseDefinition extends DualNode {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        fm var7 = null;
+        QuickChatParameterType var7 = null;
         int var9 = 0;
         int var4_intLifetime1;
         var9 = SteelSentinels.obfuscationControl;
         try {
           if (param0 == 1) {
-            this.field_G = ModalStack.a('<', false, param1.readString(1));
+            this.field_G = ModalStack.split('<', false, param1.readString(1));
           } else {
             if (param0 == 2) {
               var4_int = param1.readUnsignedByte((byte) -114);
@@ -210,7 +210,7 @@ final class QuickChatPhraseDefinition extends DualNode {
                 this.field_D = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
                   var6 = param1.readUnsignedShort((byte) -60);
-                  var7 = StatefulTextPainter.b(var6, 99);
+                  var7 = StatefulTextPainter.findKindById(var6, 99);
                   if (var7 != null) {
                     this.field_D[var5] = var6;
                     array$0 = new int[var7.field_k];
@@ -246,24 +246,24 @@ final class QuickChatPhraseDefinition extends DualNode {
         int var0 = 0;
         int[] var1 = null;
         int var2 = 0;
-        field_A = ViewportController.a(true);
+        field_A = ViewportController.createEightIntArray(true);
         field_A[0] = -410976256;
         int[] var3 = field_A;
-        var3[1] = DateOfBirthValidator.a(var3[1], 32);
-        field_E = ViewportController.a(true);
+        var3[1] = DateOfBirthValidator.bitOr(var3[1], 32);
+        field_E = ViewportController.createEightIntArray(true);
         int[] var4 = field_E;
-        var4[1] = DateOfBirthValidator.a(var4[1], 8);
+        var4[1] = DateOfBirthValidator.bitOr(var4[1], 8);
         field_E[0] = -1711275968;
         int[] var5 = field_E;
-        var5[1] = DateOfBirthValidator.a(var5[1], 16);
-        field_B = ViewportController.a(true);
+        var5[1] = DateOfBirthValidator.bitOr(var5[1], 16);
+        field_B = ViewportController.createEightIntArray(true);
         field_B[0] = 64712;
         for (var0 = 32; var0 <= 36; var0++) {
           var1 = field_B;
           var2 = var0;
-          var1[var2 >> 5] = DateOfBirthValidator.a(var1[var2 >> 5], 1 << ClientUiHelpers.bitAnd(31, var2));
+          var1[var2 >> 5] = DateOfBirthValidator.bitOr(var1[var2 >> 5], 1 << ClientUiHelpers.bitAnd(31, var2));
         }
         int[] var6 = field_A;
-        var6[1] = DateOfBirthValidator.a(var6[1], 64);
+        var6[1] = DateOfBirthValidator.bitOr(var6[1], 64);
     }
 }

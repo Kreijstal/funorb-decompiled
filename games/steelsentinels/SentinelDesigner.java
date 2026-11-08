@@ -15,7 +15,7 @@ final class SentinelDesigner {
     private int field_c;
     static volatile int field_j;
 
-    private final void e(byte param0) {
+    private final void cycleAvailableSelectionByKeys(byte param0) {
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -29,9 +29,9 @@ final class SentinelDesigner {
           if (param0 != -108) {
             field_d = (int[]) null;
           }
-          stackIn_8_0 = (this.e(0, param0 + 128)) ? 0 : 1;
+          stackIn_8_0 = (this.isItemVisible(0, param0 + 128)) ? 0 : 1;
           var2_int = stackIn_8_0;
-          stackIn_12_0 = (this.e(2, 20)) ? 2 : 1;
+          stackIn_12_0 = (this.isItemVisible(2, 20)) ? 2 : 1;
           var3 = stackIn_12_0;
           if (!this.field_g.isPointerHeld(0)) {
             if (NameAvailabilityValidator.field_q == 96) {
@@ -56,8 +56,8 @@ final class SentinelDesigner {
               }
             }
           }
-          if (nf.field_a != null &&
-            null != nf.field_a.field_Ub) {
+          if (LoginEncryptionHelpers.field_a != null &&
+            null != LoginEncryptionHelpers.field_a.field_Ub) {
             var4 = NameAvailabilityValidator.field_q;
             if (var4 == 105 &&
               var5 == 0 ||
@@ -77,7 +77,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final int b(int param0, int param1) {
+    private final int getBottomRowIndex(int param0, int param1) {
         int stackIn_31_0 = 0;
         int stackIn_36_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -92,12 +92,12 @@ final class SentinelDesigner {
             this.field_c == 8 ||
             19 == this.field_c ||
             20 == this.field_c) &&
-            (-4 + uc.field_e[this.field_c].length) <= param1) {
-            stackIn_31_0 = param1 - uc.field_e[this.field_c].length + 4;
+            (-4 + DesignerPageTables.field_e[this.field_c].length) <= param1) {
+            stackIn_31_0 = param1 - DesignerPageTables.field_e[this.field_c].length + 4;
             return stackIn_31_0;
           }
           if (param0 >= -59) {
-            this.i(-28);
+            this.updateAnimationEditor(-28);
           }
           stackIn_36_0 = -1;
           return stackIn_36_0;
@@ -108,21 +108,21 @@ final class SentinelDesigner {
         }
     }
 
-    private final void i(int param0) {
+    private final void updateAnimationEditor(int param0) {
         if (LoginDialogHelpers.field_c == null) {
           return;
         }
         try {
           LoginDialogHelpers.field_c.updateAnimationPreview(60);
           if (param0 != 21003) {
-            this.a((byte) -45, -31, true);
+            this.activateItem((byte) -45, -31, true);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.RA(" + param0 + ')');
         }
     }
 
-    final void b(boolean param0) {
+    final void updateScreen(boolean param0) {
         Object stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         boolean stackIn_19_2 = false;
@@ -152,7 +152,7 @@ final class SentinelDesigner {
             ArticulatedPart.field_J = ArticulatedPart.field_J - 1;
           }
           if (SceneWidget.field_J &&
-            !ni.b(11)) {
+            !ByteArrayPoolHelpers.isAccountCreationMode(11)) {
             SceneWidget.field_J = false;
             ClientGlobals.field_a = null;
           }
@@ -172,17 +172,17 @@ final class SentinelDesigner {
                 var5 == 8) {
                 var5 = SceneWidget.field_Jb;
               }
-              IterableNodeHashTable.a(0, var4 != 0, -1, var5);
+              IterableNodeHashTable.switchScreen(0, var4 != 0, -1, var5);
             }
           }
           boolean decompiledFrameCompleted0 = true;
-          if (!this.a(-2)) {
+          if (!this.isNarrowItemScreen(-2)) {
             if (BoundedRandomAccessFile.field_q != -1 &&
               VerticalScrollbar.field_gc == 1) {
               boolean decompiledFrameRemainder1 = true;
               boolean decompiledFrameCompleted2 = true;
               if (ArchiveIndex.field_p == 0 &&
-                !ni.b(47)) {
+                !ByteArrayPoolHelpers.isAccountCreationMode(47)) {
                 if (128 > BoundedRandomAccessFile.field_q) {
                   ClockAndCookieHelpers.field_g.writeCipheredOpcode(66, (byte) -117);
                   ClockAndCookieHelpers.field_g.writeByte((byte) 111, 1);
@@ -196,7 +196,7 @@ final class SentinelDesigner {
                         continue;
                       }
                     } else {
-                      DateOfBirthValidator.d(-65);
+                      DateOfBirthValidator.clearSceneReferences(-65);
                     }
                     break;
                   }
@@ -216,14 +216,14 @@ final class SentinelDesigner {
                     }
                   }
                   if (decompiledFrameCompleted2) {
-                    DateOfBirthValidator.d(-78);
+                    DateOfBirthValidator.clearSceneReferences(-78);
                   }
                 }
               }
               if (ArchiveIndex.field_p >= 0) {
-                CombatWorld.c(-2483, 95);
+                CombatWorld.playSoundEffect(-2483, 95);
                 GameApplet.field_l = true;
-                kf.field_s = true;
+                HighscoreTable.field_s = true;
                 BoundedRandomAccessFile.field_q = -1;
                 VerticalScrollbar.field_gc = 0;
                 ArchiveIndex.field_p = -1;
@@ -248,18 +248,18 @@ final class SentinelDesigner {
               if ((decompiledFrameRemainder4) &&
                 (decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2)) {
-                CombatWorld.c(-2483, 95);
+                CombatWorld.playSoundEffect(-2483, 95);
                 var2_int = GzipDecoder.field_g;
                 if (var2_int == 5 ||
                   var2_int == 6 ||
                   var2_int == 8) {
                   var2_int = SceneWidget.field_Jb;
                 }
-                IterableNodeHashTable.a(0, true, -1, var2_int);
+                IterableNodeHashTable.switchScreen(0, true, -1, var2_int);
                 ClientGlobals.field_a = null;
                 SceneWidget.field_J = false;
                 GameApplet.field_l = true;
-                kf.field_s = true;
+                HighscoreTable.field_s = true;
                 var2_int = 0;
                 do {
                   if (3 <= var2_int) {
@@ -267,16 +267,16 @@ final class SentinelDesigner {
                     Explosion.field_P = 0;
                     break;
                   }
-                  fm.field_f[var2_int] = 0;
+                  QuickChatParameterType.field_f[var2_int] = 0;
                   var2_int++;
                 } while (var6 == 0);
                 var2_int = 0;
                 do {
-                  if (!(var2_int < rn.field_D.length)) {
+                  if (!(var2_int < PendingAckRequest.field_D.length)) {
                     var2_int = 0;
                     break;
                   }
-                  rn.field_D[var2_int] = 0;
+                  PendingAckRequest.field_D[var2_int] = 0;
                   var2_int++;
                 } while (var6 == 0);
                 while (ArchiveRequest.field_D.length > var2_int) {
@@ -294,15 +294,15 @@ final class SentinelDesigner {
               if ((decompiledFrameRemainder4) &&
                 (decompiledFrameRemainder3) &&
                 (decompiledFrameCompleted1)) {
-                CombatWorld.c(-2483, 95);
-                DebouncedValidator.a(20, (String) null, 10);
+                CombatWorld.playSoundEffect(-2483, 95);
+                DebouncedValidator.setDesignerMode(20, (String) null, 10);
                 decompiledFrameRemainder4 = (var6 != 0);
               }
               if ((decompiledFrameRemainder4) &&
                 (decompiledFrameCompleted1)) {
-                CombatWorld.c(-2483, 95);
+                CombatWorld.playSoundEffect(-2483, 95);
                 SceneWidget.field_J = false;
-                kf.field_s = true;
+                HighscoreTable.field_s = true;
                 ClientGlobals.field_a = null;
                 GameApplet.field_l = true;
               }
@@ -315,27 +315,27 @@ final class SentinelDesigner {
               VerticalScrollbar.field_gc == 1) {
               VerticalScrollbar.field_gc = 0;
               ClientGlobals.field_a = null;
-              kf.field_s = true;
+              HighscoreTable.field_s = true;
               NameValidationHelpers.field_c = null;
               GameApplet.field_l = true;
               ContentTransitionDialog.field_ub = false;
             }
             if ((ClientGlobals.field_a == ReportAbuseDialog.field_ac ||
               ClientGlobals.field_a == DualNodeDeque.field_b) &&
-              !ni.b(11)) {
+              !ByteArrayPoolHelpers.isAccountCreationMode(11)) {
               ClientGlobals.field_a = null;
               GameApplet.field_l = true;
-              kf.field_s = true;
+              HighscoreTable.field_s = true;
             }
             if ((ClientGlobals.field_a == ReportAbuseDialog.field_ac ||
               DualNodeDeque.field_b == ClientGlobals.field_a) &&
               (VerticalScrollbar.field_gc == 1 &&
               NameValidationHelpers.field_g == 0)) {
-              CombatWorld.c(-2483, 95);
-              DebouncedValidator.a(20, (String) null, 10);
+              CombatWorld.playSoundEffect(-2483, 95);
+              DebouncedValidator.setDesignerMode(20, (String) null, 10);
             }
             if (null != ClientGlobals.field_a) {
-              while (UiContainer.f(22759)) {
+              while (UiContainer.pollKeyEvent(22759)) {
                 if (NameAvailabilityValidator.field_q != 13 &&
                   NameAvailabilityValidator.field_q != 84 &&
                   NameAvailabilityValidator.field_q != 83) {
@@ -344,7 +344,7 @@ final class SentinelDesigner {
                 ClientGlobals.field_a = null;
                 GameApplet.field_l = true;
                 NameValidationHelpers.field_c = null;
-                kf.field_s = true;
+                HighscoreTable.field_s = true;
                 if (var6 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -358,13 +358,13 @@ final class SentinelDesigner {
             }
           }
           var2 = null;
-          if (dc.field_g >= 0) {
-            var2 = pa.field_d[dc.field_g];
+          if (TableColumns.field_g >= 0) {
+            var2 = TutorialStepTable.field_d[TableColumns.field_g];
           }
           if (null != var2) {
             while (true) {
               boolean decompiledFrameRemainder0 = true;
-              if (UiContainer.f(22759)) {
+              if (UiContainer.pollKeyEvent(22759)) {
                 if (13 != NameAvailabilityValidator.field_q) {
                   if (NameAvailabilityValidator.field_q != 84) {
                     continue;
@@ -378,7 +378,7 @@ final class SentinelDesigner {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  dc.field_g = -1;
+                  TableColumns.field_g = -1;
                   ((TutorialStep) (var2)).restoreHighlightedWidget((byte) 92);
                   var3_intLifetime1 = GzipDecoder.field_g;
                   if (var3_intLifetime1 == 5 ||
@@ -386,7 +386,7 @@ final class SentinelDesigner {
                     8 == var3_intLifetime1) {
                     var3_intLifetime1 = SceneWidget.field_Jb;
                   }
-                  IterableNodeHashTable.a(0, false, -1, var3_intLifetime1);
+                  IterableNodeHashTable.switchScreen(0, false, -1, var3_intLifetime1);
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -407,25 +407,25 @@ final class SentinelDesigner {
               break;
             }
           }
-          if (wb.field_c != null) {
-            wb.field_c.setCursor((java.awt.Cursor) null);
+          if (RewardValueHelpers.field_c != null) {
+            RewardValueHelpers.field_c.setCursor((java.awt.Cursor) null);
             if (var6 != 0) {
-              sl.field_n.setCursor((java.awt.Cursor) null);
+              ArchiveLoadStep.field_n.setCursor((java.awt.Cursor) null);
             }
           } else {
-            sl.field_n.setCursor((java.awt.Cursor) null);
+            ArchiveLoadStep.field_n.setCursor((java.awt.Cursor) null);
           }
           if (!param0) {
             field_a = -33;
           }
           if (12 == this.field_c) {
             stackIn_248_0 = !(ClockAndCookieHelpers.isReconnectStage(false));
-            var3_intLifetime2 = c.a(stackIn_248_0, 269);
+            var3_intLifetime2 = PendingByteArrayRequest.advanceSlideshow(stackIn_248_0, 269);
             if (var3_intLifetime2 == 3) {
-              if (null != wb.field_c) {
-                SoundCache.c(0);
+              if (null != RewardValueHelpers.field_c) {
+                SoundCache.exitFullscreen(0);
               }
-              NumericDateInputWidget.a(Projectile.d((byte) -21), 9268);
+              NumericDateInputWidget.openSubscribePage(Projectile.getApplet((byte) -21), 9268);
             }
             if (var3_intLifetime2 == 1) {
               var4 = GzipDecoder.field_g;
@@ -434,7 +434,7 @@ final class SentinelDesigner {
                 var4 == 8) {
                 var4 = SceneWidget.field_Jb;
               }
-              IterableNodeHashTable.a(0, false, -1, var4);
+              IterableNodeHashTable.switchScreen(0, false, -1, var4);
             }
             if (var3_intLifetime2 == 2) {
               var4 = GzipDecoder.field_g;
@@ -443,23 +443,23 @@ final class SentinelDesigner {
                 8 == var4) {
                 var4 = SceneWidget.field_Jb;
               }
-              IterableNodeHashTable.a(0, true, -1, var4);
+              IterableNodeHashTable.switchScreen(0, true, -1, var4);
             }
             return;
           }
           if (!SectorCacheStore.field_n &&
             !TextLayout.field_d) {
             boolean decompiledNaturalLoopExit0 = false;
-            while (!(decompiledNaturalLoopExit0 = (!UiContainer.f(22759)))) {
+            while (!(decompiledNaturalLoopExit0 = (!UiContainer.pollKeyEvent(22759)))) {
               stackIn_387_0 = 13;
               stackIn_387_1 = NameAvailabilityValidator.field_q;
               if (var6 == 0) {
                 if (stackIn_387_0 != stackIn_387_1) {
-                  this.a((byte) -120);
+                  this.handleArrowKeys((byte) -120);
                   if (this.field_g.field_e == -1) {
                     continue;
                   }
-                  this.a((byte) -32, this.field_g.field_e, false);
+                  this.activateItem((byte) -32, this.field_g.field_e, false);
                   continue;
                 }
                 if (this.field_c == 7 &&
@@ -467,8 +467,8 @@ final class SentinelDesigner {
                   Sprite.field_k = true;
                 }
                 if (this.field_c != 20 ||
-                  !(fm.field_f[0] > 0) ||
-                  !ni.b(49)) {
+                  !(QuickChatParameterType.field_f[0] > 0) ||
+                  !ByteArrayPoolHelpers.isAccountCreationMode(49)) {
                   if (this.field_c != 18) {
                     if (this.field_c != 1 &&
                       this.field_c != 2 &&
@@ -487,8 +487,8 @@ final class SentinelDesigner {
                           13 == this.field_c)) {
                           SceneWidget.field_Jb = 0;
                         }
-                      } else if (!(10 <= fm.field_f[0]) ||
-                        ni.b(36)) {
+                      } else if (!(10 <= QuickChatParameterType.field_f[0]) ||
+                        ByteArrayPoolHelpers.isAccountCreationMode(36)) {
                         SceneWidget.field_Jb = 0;
                       } else {
                         SceneWidget.field_Jb = 19;
@@ -496,11 +496,11 @@ final class SentinelDesigner {
                       if (LoginForm.field_T == 19) {
                         SceneWidget.field_Jb = 0;
                       }
-                      IterableNodeHashTable.a(SceneWidget.field_Jb, false, -1, SceneWidget.field_Jb);
+                      IterableNodeHashTable.switchScreen(SceneWidget.field_Jb, false, -1, SceneWidget.field_Jb);
                       continue;
                     }
-                    CombatWorld.c(-2483, 85);
-                    IterableNodeHashTable.a(-1, false, -1, 0);
+                    CombatWorld.playSoundEffect(-2483, 85);
+                    IterableNodeHashTable.switchScreen(-1, false, -1, 0);
                     continue;
                   }
                   var3_intLifetime3 = 0;
@@ -508,14 +508,14 @@ final class SentinelDesigner {
                     LoginDialogHelpers.field_k[var3_intLifetime3] = 0;
                     var3_intLifetime3++;
                   }
-                  DateOfBirthValidator.d(-66);
+                  DateOfBirthValidator.clearSceneReferences(-66);
                   var3_intLifetime3Lifetime1 = GzipDecoder.field_g;
                   if (var3_intLifetime3Lifetime1 == 5 ||
                     var3_intLifetime3Lifetime1 == 6 ||
                     var3_intLifetime3Lifetime1 == 8) {
                     var3_intLifetime3Lifetime1 = SceneWidget.field_Jb;
                   }
-                  IterableNodeHashTable.a(0, false, -1, var3_intLifetime3Lifetime1);
+                  IterableNodeHashTable.switchScreen(0, false, -1, var3_intLifetime3Lifetime1);
                   continue;
                 }
                 SceneWidget.field_J = true;
@@ -525,53 +525,53 @@ final class SentinelDesigner {
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              this.field_g.updatePointer(124, this.a(LobbySetupHelpers.field_f, DelegatingCanvas.field_c, 70), this.a(TextButton.field_S, BufferedRandomAccessFile.field_j, 125));
+              this.field_g.updatePointer(124, this.hitTestItem(LobbySetupHelpers.field_f, DelegatingCanvas.field_c, 70), this.hitTestItem(TextButton.field_S, BufferedRandomAccessFile.field_j, 125));
               stackIn_387_0 = this.field_g.field_e;
               stackIn_387_1 = -1;
             }
             if ((stackIn_387_0 ^ stackIn_387_1) != 0) {
-              this.a((byte) -110, this.field_g.field_e, true);
+              this.activateItem((byte) -110, this.field_g.field_e, true);
             }
           }
           if (0 == this.field_c &&
-            hg.field_h &&
+            HighscoreColumnHeader.field_h &&
             VerticalScrollbar.field_gc == 1) {
-            CombatWorld.c(-2483, 95);
+            CombatWorld.playSoundEffect(-2483, 95);
             var3_intLifetime4 = GzipDecoder.field_g;
             if (var3_intLifetime4 == 5 ||
               var3_intLifetime4 == 6 ||
               var3_intLifetime4 == 8) {
               var3_intLifetime4 = SceneWidget.field_Jb;
             }
-            IterableNodeHashTable.a(18, true, -1, var3_intLifetime4);
+            IterableNodeHashTable.switchScreen(18, true, -1, var3_intLifetime4);
             if (var6 == 0) {
               return;
             }
           }
           if (this.field_c != 18) {
             if (this.field_c == 8) {
-              this.a(true, false);
+              this.handlePageButtons(true, false);
               if (var6 == 0) {
                 return;
               }
             }
             if (9 == this.field_c ||
               LoginForm.field_T == 10) {
-              this.a(true, true);
+              this.handlePageButtons(true, true);
               if (var6 == 0) {
                 return;
               }
             }
             if (this.field_c == 14) {
               try {
-                BufferedRandomAccessFile.d(6993661);
+                BufferedRandomAccessFile.updateDesignerScreen(6993661);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var3 = decompiledCaughtException;
                 System.err.println("Update constr: " + var3);
                 var3.printStackTrace();
-                DateOfBirthValidator.d(-58);
+                DateOfBirthValidator.clearSceneReferences(-58);
                 var4 = 0;
                 while (true) {
                   if (LoginDialogHelpers.field_k.length > var4) {
@@ -581,8 +581,8 @@ final class SentinelDesigner {
                       continue;
                     }
                   } else {
-                    PendingIntArrayRequest.field_v = SentinelDesigner.a(ReflectionCheck.field_x, (byte) 108, di.field_c);
-                    uc.field_b = ArchiveLoadSequence.buildComponentLoadout(-94, di.field_c, PendingIntArrayRequest.field_v);
+                    PendingIntArrayRequest.field_v = SentinelDesigner.buildChassisFromDesign(ReflectionCheck.field_x, (byte) 108, OptionMaskHelpers.field_c);
+                    DesignerPageTables.field_b = ArchiveLoadSequence.buildComponentLoadout(-94, OptionMaskHelpers.field_c, PendingIntArrayRequest.field_v);
                   }
                   if (var6 == 0) {
                     decompiledRegionSelector0 = 0;
@@ -600,7 +600,7 @@ final class SentinelDesigner {
               return;
             }
             if (this.field_c == 7) {
-              this.g((byte) -40);
+              this.updateDialogContent((byte) -40);
               if (var6 == 0) {
                 return;
               }
@@ -608,12 +608,12 @@ final class SentinelDesigner {
             if (this.field_c != 16) {
               return;
             }
-            this.i(21003);
+            this.updateAnimationEditor(21003);
             if (var6 == 0) {
               return;
             }
           }
-          this.o(-29628);
+          this.handleDesignerClick(-29628);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -622,7 +622,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final int g(int param0, int param1) {
+    private final int getItemLeft(int param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -651,13 +651,13 @@ final class SentinelDesigner {
         RuntimeException var3 = null;
         int var4 = 0;
         try {
-          var3_int = this.b(-106, param1);
+          var3_int = this.getBottomRowIndex(-106, param1);
           if (var3_int >= 0) {
             stackIn_4_0 = 159 * var3_int + 1;
             return stackIn_4_0;
           }
           if (this.field_c == 5 &&
-            !ni.b(52)) {
+            !ByteArrayPoolHelpers.isAccountCreationMode(52)) {
             if (param1 >= 3) {
               stackIn_15_0 = 260;
             } else {
@@ -669,12 +669,12 @@ final class SentinelDesigner {
             stackIn_18_0 = 195;
             return stackIn_18_0;
           }
-          if (this.a(-2)) {
+          if (this.isNarrowItemScreen(-2)) {
             stackIn_21_0 = 195;
             return stackIn_21_0;
           }
           if (this.field_c == 6 &&
-            !ni.b(54)) {
+            !ByteArrayPoolHelpers.isAccountCreationMode(54)) {
             if (2 <= param1) {
               stackIn_32_0 = 260;
             } else {
@@ -683,11 +683,11 @@ final class SentinelDesigner {
             return stackIn_32_0;
           }
           if (this.field_c == 7) {
-            stackIn_37_0 = uc.field_k[this.field_c] + 180 * param1;
+            stackIn_37_0 = DesignerPageTables.field_k[this.field_c] + 180 * param1;
             return stackIn_37_0;
           }
           if (this.field_c == 13) {
-            if (ni.b(82)) {
+            if (ByteArrayPoolHelpers.isAccountCreationMode(82)) {
               stackIn_45_0 = 320 + (800 * param1 - 1200) / 5;
               return stackIn_45_0;
             }
@@ -695,7 +695,7 @@ final class SentinelDesigner {
             return stackIn_43_0;
           }
           if (this.field_c == 14) {
-            if (ni.b(114)) {
+            if (ByteArrayPoolHelpers.isAccountCreationMode(114)) {
               stackIn_53_0 = 240 + (-1200 + 800 * param1) / 5;
               return stackIn_53_0;
             }
@@ -703,7 +703,7 @@ final class SentinelDesigner {
             return stackIn_51_0;
           }
           if (this.field_c == 0) {
-            var4 = uc.field_e[this.field_c][param1];
+            var4 = DesignerPageTables.field_e[this.field_c][param1];
             if (var4 == 34) {
               stackIn_61_0 = 19;
               return stackIn_61_0;
@@ -720,7 +720,7 @@ final class SentinelDesigner {
             return stackIn_69_0;
           }
           if (this.field_c == 19) {
-            if (ArchiveProvider.field_c == uc.field_e[this.field_c]) {
+            if (ArchiveProvider.field_c == DesignerPageTables.field_e[this.field_c]) {
               if (param1 >= 0 &&
                 param1 < 10) {
                 stackIn_95_0 = 30;
@@ -750,7 +750,7 @@ final class SentinelDesigner {
             }
           }
           if (20 == this.field_c) {
-            var4 = uc.field_e[this.field_c][param1];
+            var4 = DesignerPageTables.field_e[this.field_c][param1];
             switch (var4) {
               case 26:
                 stackIn_126_0 = 540;
@@ -767,7 +767,7 @@ final class SentinelDesigner {
                 return stackIn_124_0;
             }
           }
-          stackIn_130_0 = uc.field_k[this.field_c];
+          stackIn_130_0 = DesignerPageTables.field_k[this.field_c];
           return stackIn_130_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -776,7 +776,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final int c(int param0, int param1) {
+    private final int getItemHeight(int param0, int param1) {
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_18_0 = 0;
@@ -791,30 +791,30 @@ final class SentinelDesigner {
         RuntimeException var3 = null;
         try {
           if (this.field_c == 17 &&
-            param1 < (uc.field_e[this.field_c].length - 4)) {
+            param1 < (DesignerPageTables.field_e[this.field_c].length - 4)) {
             stackIn_7_0 = 25;
             return stackIn_7_0;
           }
-          if (this.a(-2)) {
+          if (this.isNarrowItemScreen(-2)) {
             stackIn_12_0 = 25;
             return stackIn_12_0;
           }
           if (this.field_c == 0 &&
-            uc.field_e[this.field_c][param1] == 34) {
+            DesignerPageTables.field_e[this.field_c][param1] == 34) {
             stackIn_18_0 = 65;
             return stackIn_18_0;
           }
           if (param0 != 25) {
-            SentinelDesigner.h((byte) -119);
+            SentinelDesigner.releaseStatics((byte) -119);
           }
           if (this.field_c == 19 &&
-            uc.field_e[this.field_c][param1] == 38) {
+            DesignerPageTables.field_e[this.field_c][param1] == 38) {
             stackIn_27_0 = 24;
             return stackIn_27_0;
           }
           boolean decompiledFrameRemainder0 = true;
           if (this.field_c == 20) {
-            var3_int = uc.field_e[this.field_c][param1];
+            var3_int = DesignerPageTables.field_e[this.field_c][param1];
             if ((25 != var3_int && (var3_int != 26 ||
               SteelSentinels.obfuscationControl != 0)) &&
               (decompiledFrameRemainder0 = (var3_int == 39))) {
@@ -827,13 +827,13 @@ final class SentinelDesigner {
             }
           }
           if (this.field_c == 5 &&
-            !ni.b(87) &&
+            !ByteArrayPoolHelpers.isAccountCreationMode(87) &&
             param1 < 3) {
             stackIn_55_0 = 25;
             return stackIn_55_0;
           }
           if (this.field_c == 6 &&
-            !ni.b(param0 ^ 127) &&
+            !ByteArrayPoolHelpers.isAccountCreationMode(param0 ^ 127) &&
             param1 < 2) {
             stackIn_66_0 = 25;
             return stackIn_66_0;
@@ -847,7 +847,7 @@ final class SentinelDesigner {
         }
     }
 
-    final static ArticulatedPart a(int[] param0, byte param1, int[] param2) {
+    final static ArticulatedPart buildChassisFromDesign(int[] param0, byte param1, int[] param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         ArticulatedPart stackIn_1_0 = null;
@@ -881,7 +881,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void drawEngineeringScreen(int param0, boolean param1) {
         int[] stackIn_50_0 = null;
         boolean stackIn_56_0 = false;
         int stackIn_64_0 = 0;
@@ -976,7 +976,7 @@ final class SentinelDesigner {
               74 <= DelegatingCanvas.field_c &&
               DelegatingCanvas.field_c < 97) {
               var3_int = 0;
-              jm.a(73, 24, MouseInputHandler.field_d, 1, 98, 61);
+              PendingIntReplyRequest.drawNineSliceFrame(73, 24, MouseInputHandler.field_d, 1, 98, 61);
               IterableNodeHashTable.field_i = -1;
               if (var24 != 0) {
                 var3_int = 1146810;
@@ -992,7 +992,7 @@ final class SentinelDesigner {
               74 <= DelegatingCanvas.field_c &&
               97 > DelegatingCanvas.field_c) {
               var5 = 0;
-              jm.a(73, 24, MouseInputHandler.field_d, param0 - 47, 481, 61);
+              PendingIntReplyRequest.drawNineSliceFrame(73, 24, MouseInputHandler.field_d, param0 - 47, 481, 61);
               IterableNodeHashTable.field_i = 1;
               if (var24 != 0) {
                 var5 = 1146810;
@@ -1003,15 +1003,15 @@ final class SentinelDesigner {
           }
           if (var4 != IterableNodeHashTable.field_i &&
             IterableNodeHashTable.field_i != 0) {
-            CombatWorld.c(-2483, 97);
+            CombatWorld.playSoundEffect(-2483, 97);
           }
           AccountNamePrompt.field_Ub.drawTintedGrayscale((61 - AccountNamePrompt.field_Ub.field_A) / 2 + 98, 74 + (-AccountNamePrompt.field_Ub.field_F + 23) / 2, var3_int);
-          gm.field_b.drawTintedGrayscale(481 + (-gm.field_b.field_A + 61) / 2, 74 + (-gm.field_b.field_F + 23) / 2, var5);
+          EmailValidationHelpers.field_b.drawTintedGrayscale(481 + (-EmailValidationHelpers.field_b.field_A + 61) / 2, 74 + (-EmailValidationHelpers.field_b.field_F + 23) / 2, var5);
           if (param0 != 48) {
             return;
           }
           SoftwareRaster.drawRectangleOutline(163, 74, 314, 23, 930889);
-          BirthDateEntryPanel.field_U.drawCentered(SocketConnector.formatTemplate(am.field_e, -63, new String[]{Integer.toString(1 + BattleTerrain.field_i), Integer.toString(SceneWidgetNode.field_C.length)}), 320, 74 + (BirthDateEntryPanel.field_U.field_U + 23) / 2, 1021128, -1);
+          BirthDateEntryPanel.field_U.drawCentered(SocketConnector.formatTemplate(DesignerPageSetup.field_e, -63, new String[]{Integer.toString(1 + BattleTerrain.field_i), Integer.toString(SceneWidgetNode.field_C.length)}), 320, 74 + (BirthDateEntryPanel.field_U.field_U + 23) / 2, 1021128, -1);
           SoftwareRaster.drawRectangleOutline(98, 101, 444, 154, 5789784);
           SoftwareRaster.drawVerticalLine(262, 259, 157, 930889);
           SoftwareRaster.drawRectangleOutline(98, 259, 444, 157, 1130327);
@@ -1052,7 +1052,7 @@ final class SentinelDesigner {
               var16 = stackIn_69_0;
               while (var15_ref_int__.length > var16) {
                 var17 = var15_ref_int__[var16];
-                stackOut_55_0 = this.f(var17, 111);
+                stackOut_55_0 = this.isPartAvailable(var17, 111);
                 stackIn_64_0 = stackOut_55_0 ? 1 : 0;
                 stackIn_56_0 = stackOut_55_0;
                 if (stackIn_56_0) {
@@ -1089,7 +1089,7 @@ final class SentinelDesigner {
               var17Lifetime1 = stackIn_138_0;
               while (var16_ref_int__.length > var17Lifetime1) {
                 var18 = var16_ref_int__[var17Lifetime1];
-                stackOut_74_0 = this.f(var18, 111);
+                stackOut_74_0 = this.isPartAvailable(var18, 111);
                 stackIn_82_0 = stackOut_74_0 ? 1 : 0;
                 stackIn_75_0 = stackOut_74_0;
                 if (stackIn_75_0) {
@@ -1121,8 +1121,8 @@ final class SentinelDesigner {
                       if (AssetDecoders.isBitSet(QuickChatPhraseDefinition.field_A, 1, var19_int)) {
                         var20_ref = null;
                       } else {
-                        if (AssetDecoders.isBitSet(QuickChatPhraseDefinition.field_E, param0 ^ 49, var19_int) && (ni.b(72) ||
-                          !(rd.field_b > 0))) {
+                        if (AssetDecoders.isBitSet(QuickChatPhraseDefinition.field_E, param0 ^ 49, var19_int) && (ByteArrayPoolHelpers.isAccountCreationMode(72) ||
+                          !(SpriteLoadingHelpers.field_b > 0))) {
                           var20_ref = null;
                         }
                       }
@@ -1133,7 +1133,7 @@ final class SentinelDesigner {
                       }
                     } else {
                       var21 = 0;
-                      if (in.field_k != var19_int) {
+                      if (SocialPacketHelpers.field_k != var19_int) {
                         if (~var19_int == ~QuickChatPhraseDefinition.field_C) {
                           var21 = 2;
                         }
@@ -1155,11 +1155,11 @@ final class SentinelDesigner {
               var13_int++;
               continue scanLoop2;
             }
-            stackIn_138_0 = in.field_k;
+            stackIn_138_0 = SocialPacketHelpers.field_k;
             break;
           }
           if (stackIn_138_0 != -1) {
-            stackIn_142_0 = in.field_k;
+            stackIn_142_0 = SocialPacketHelpers.field_k;
           } else {
             stackIn_142_0 = QuickChatPhraseDefinition.field_C;
           }
@@ -1167,7 +1167,7 @@ final class SentinelDesigner {
           if (var12Lifetime1 != -1) {
             var13_intLifetime1 = 402;
             var14_intLifetime1 = (23 + AlphaContainer.field_U.field_U) / 2 + 263;
-            AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(42, ViewportController.field_t[var12Lifetime1]), var13_intLifetime1, var14_intLifetime1, 1021128, -1);
+            AlphaContainer.field_U.drawCentered(WidgetStyleLayer.toUpperCaseOutsideTags(42, ViewportController.field_t[var12Lifetime1]), var13_intLifetime1, var14_intLifetime1, 1021128, -1);
             var14_intLifetime1Lifetime1 = 306;
             var15Lifetime1 = AssetDecoders.isBitSet(var9, param0 - 47, var12Lifetime1) ? 1 : 0;
             if (var15Lifetime1 == 0) {
@@ -1208,11 +1208,11 @@ final class SentinelDesigner {
               boolean decompiledFrameCompleted1 = true;
               boolean decompiledFrameCompleted0 = true;
               boolean decompiledFrameRemainder0 = true;
-              BoundedUrlRequest.field_d.drawLeft(WidgetStyleLayer.a(param0 - 6, sh.field_c + "<col=ffffff>" + 100 * wb.field_h[var12Lifetime1] + "</col>"), 276, var14_intLifetime1Lifetime2, 1021128, -1);
+              BoundedUrlRequest.field_d.drawLeft(WidgetStyleLayer.toUpperCaseOutsideTags(param0 - 6, MenuLayoutHelpers.field_c + "<col=ffffff>" + 100 * RewardValueHelpers.field_h[var12Lifetime1] + "</col>"), 276, var14_intLifetime1Lifetime2, 1021128, -1);
               var13_intLifetime1Lifetime1 += 130;
               var19_intLifetime1 = 528 - ValidatedTextWidget.field_sb.field_A;
               var20 = -ValidatedTextWidget.field_sb.field_F + 10 + var14_intLifetime1Lifetime2;
-              if (wb.field_h[var12Lifetime1] == 10) {
+              if (RewardValueHelpers.field_h[var12Lifetime1] == 10) {
                 var20 -= 10;
                 var21Lifetime1 = 0;
                 while (5 > var21Lifetime1) {
@@ -1232,7 +1232,7 @@ final class SentinelDesigner {
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted1)) {
                 var21Lifetime1Lifetime1 = 0;
-                while (!(var21Lifetime1Lifetime1 >= wb.field_h[var12Lifetime1])) {
+                while (!(var21Lifetime1Lifetime1 >= RewardValueHelpers.field_h[var12Lifetime1])) {
                   ValidatedTextWidget.field_sb.drawTransparent(var19_intLifetime1, var20);
                   var19_intLifetime1 = var19_intLifetime1 - ValidatedTextWidget.field_sb.field_A / 3;
                   var21Lifetime1Lifetime1++;
@@ -1244,13 +1244,13 @@ final class SentinelDesigner {
               }
               if ((decompiledFrameCompleted1) &&
                 (decompiledFrameCompleted0)) {
-                BoundedUrlRequest.field_d.drawRight(WidgetStyleLayer.a(42, DebouncedValidator.field_d), ValidatedTextWidget.field_sb.field_A / 3 + var19_intLifetime1, var14_intLifetime1Lifetime2, 1021128, -1);
+                BoundedUrlRequest.field_d.drawRight(WidgetStyleLayer.toUpperCaseOutsideTags(42, DebouncedValidator.field_d), ValidatedTextWidget.field_sb.field_A / 3 + var19_intLifetime1, var14_intLifetime1Lifetime2, 1021128, -1);
               }
               if (var24 != 0) {
-                BirthDateEntryPanel.field_U.drawParagraph(gj.field_c, 276, 345, 252, 122, 1021128, -1, 1, 0, 0);
+                BirthDateEntryPanel.field_U.drawParagraph(SpriteDrawHelpers.field_c, 276, 345, 252, 122, 1021128, -1, 1, 0, 0);
               }
             } else {
-              BirthDateEntryPanel.field_U.drawParagraph(gj.field_c, 276, 345, 252, 122, 1021128, -1, 1, 0, 0);
+              BirthDateEntryPanel.field_U.drawParagraph(SpriteDrawHelpers.field_c, 276, 345, 252, 122, 1021128, -1, 1, 0, 0);
             }
           }
           if (var12Lifetime1 == -1 ||
@@ -1335,7 +1335,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int hitTestItem(int param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1350,17 +1350,17 @@ final class SentinelDesigner {
         try {
           var4_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(uc.field_e[this.field_c].length > var4_int)))) {
-            var5 = this.b(var4_int, (byte) -106);
-            stackOut_3_0 = this.e(var4_int, 20);
+          while (!(decompiledNaturalLoopExit0 = (!(DesignerPageTables.field_e[this.field_c].length > var4_int)))) {
+            var5 = this.getItemTop(var4_int, (byte) -106);
+            stackOut_3_0 = this.isItemVisible(var4_int, 20);
             stackIn_23_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
             if (var6 == 0) {
               if (stackIn_4_0 &&
-                param0 >= this.g(126, var4_int) &&
-                param0 < this.a(var4_int, (byte) 121) &&
+                param0 >= this.getItemLeft(126, var4_int) &&
+                param0 < this.getItemRight(var4_int, (byte) 121) &&
                 var5 <= param1 &&
-                param1 < this.c(25, var4_int) + var5) {
+                param1 < this.getItemHeight(25, var4_int) + var5) {
                 stackIn_20_0 = var4_int;
                 return stackIn_20_0;
               }
@@ -1373,7 +1373,7 @@ final class SentinelDesigner {
             stackIn_23_0 = param2;
           }
           if (stackIn_23_0 <= 68) {
-            SentinelDesigner.a((String) null, -71);
+            SentinelDesigner.printError((String) null, -71);
           }
           stackIn_27_0 = -1;
           return stackIn_27_0;
@@ -1384,7 +1384,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final int g(int param0) {
+    private final int findItemBelow(int param0) {
         int stackIn_3_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_21_1 = 0;
@@ -1424,10 +1424,10 @@ final class SentinelDesigner {
           }
           var3 = 76 % ((80 - param0) / 42);
           var2_int = this.field_g.field_e;
-          var4 = this.b(-78, var2_int);
+          var4 = this.getBottomRowIndex(-78, var2_int);
           if (var2_int >= 0 &&
-            uc.field_e[this.field_c].length > var2_int &&
-            uc.field_e[this.field_c][var2_int] != -1) {
+            DesignerPageTables.field_e[this.field_c].length > var2_int &&
+            DesignerPageTables.field_e[this.field_c][var2_int] != -1) {
             if (this.field_c == 20) {
               if (0 <= var2_int &&
                 2 > var2_int) {
@@ -1435,7 +1435,7 @@ final class SentinelDesigner {
                 return stackIn_34_0;
               }
               if (var4 >= 0) {
-                if (!this.a(117, 0)) {
+                if (!this.isItemEnabled(117, 0)) {
                   stackIn_42_0 = 1;
                   return stackIn_42_0;
                 }
@@ -1444,12 +1444,12 @@ final class SentinelDesigner {
               }
             }
             if (this.field_c == 0) {
-              if (uc.field_e[this.field_c][var2_int] == 34) {
+              if (DesignerPageTables.field_e[this.field_c][var2_int] == 34) {
                 stackIn_50_0 = var2_int;
                 return stackIn_50_0;
               }
-              if (uc.field_e[this.field_c][var2_int] != 19 &&
-                (var2_int + 1) < uc.field_e[this.field_c].length) {
+              if (DesignerPageTables.field_e[this.field_c][var2_int] != 19 &&
+                (var2_int + 1) < DesignerPageTables.field_e[this.field_c].length) {
                 stackIn_60_0 = 1 + var2_int;
                 return stackIn_60_0;
               }
@@ -1457,11 +1457,11 @@ final class SentinelDesigner {
               return stackIn_58_0;
             }
             if (this.field_c == 17) {
-              if (var2_int == -5 + uc.field_e[this.field_c].length) {
-                stackIn_66_0 = -1 + uc.field_e[this.field_c].length;
+              if (var2_int == -5 + DesignerPageTables.field_e[this.field_c].length) {
+                stackIn_66_0 = -1 + DesignerPageTables.field_e[this.field_c].length;
                 return stackIn_66_0;
               }
-              if (-5 + uc.field_e[this.field_c].length > var2_int) {
+              if (-5 + DesignerPageTables.field_e[this.field_c].length > var2_int) {
                 stackIn_71_0 = 1 + var2_int;
                 return stackIn_71_0;
               }
@@ -1499,10 +1499,10 @@ final class SentinelDesigner {
                 stackIn_112_0 = 0;
                 return stackIn_112_0;
               }
-              stackIn_117_0 = (ArchiveProvider.field_c != uc.field_e[this.field_c]) ? 20 : 30;
+              stackIn_117_0 = (ArchiveProvider.field_c != DesignerPageTables.field_e[this.field_c]) ? 20 : 30;
               var5 = stackIn_117_0;
               if (~var2_int == ~(var5 - 1)) {
-                stackIn_121_0 = -1 + uc.field_e[this.field_c].length;
+                stackIn_121_0 = -1 + DesignerPageTables.field_e[this.field_c].length;
                 return stackIn_121_0;
               }
             }
@@ -1511,9 +1511,9 @@ final class SentinelDesigner {
           }
           var2_intLifetime1 = 0;
           scanLoop1: while (true) {
-            if (var2_intLifetime1 < uc.field_e[this.field_c].length) {
+            if (var2_intLifetime1 < DesignerPageTables.field_e[this.field_c].length) {
               stackIn_21_0 = 0;
-              stackIn_21_1 = ~uc.field_e[this.field_c][var2_intLifetime1];
+              stackIn_21_1 = ~DesignerPageTables.field_e[this.field_c][var2_intLifetime1];
               if (var6 != 0) {
                 break scanLoop1;
               }
@@ -1522,7 +1522,7 @@ final class SentinelDesigner {
                 continue;
               }
             }
-            stackIn_21_0 = uc.field_e[this.field_c].length;
+            stackIn_21_0 = DesignerPageTables.field_e[this.field_c].length;
             stackIn_21_1 = var2_intLifetime1;
             break;
           }
@@ -1539,7 +1539,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void m(int param0) {
+    private final void drawDesignSlots(int param0) {
         boolean stackIn_6_0 = false;
         int stackIn_12_0 = 0;
         boolean stackIn_26_0 = false;
@@ -1600,12 +1600,12 @@ final class SentinelDesigner {
           var9_int = 0;
           boolean decompiledNaturalLoopExit2 = false;
           while (!(decompiledNaturalLoopExit2 = (var9_int >= 3))) {
-            stackOut_5_0 = t.a(rn.field_D, FunOrbClient.field_z[var9_int], -20370);
+            stackOut_5_0 = NameTable.isBitSet(PendingAckRequest.field_D, FunOrbClient.field_z[var9_int], -20370);
             stackIn_12_0 = stackOut_5_0 ? 1 : 0;
             stackIn_6_0 = stackOut_5_0;
             if (var12 == 0) {
               if (stackIn_6_0) {
-                var8 = var8 + ", " + cd.field_c[var9_int];
+                var8 = var8 + ", " + QuickChatPacketHelpers.field_c[var9_int];
               }
               var9_int++;
               continue;
@@ -1626,11 +1626,11 @@ final class SentinelDesigner {
           var8 = "Currently unlocked: " + var8;
           ((BitmapFont) ((Object) var7)).drawCentered(var8, 320, var4, 16777215, -1);
           var4 += 5;
-          if (EmailAvailabilityValidator.a(var4, var3, 126, "Lock mechs 1,2,3", var6, var5)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3, 126, "Lock mechs 1,2,3", var6, var5)) {
             LoginDialogHelpers.field_d = 0;
           }
           var3 = var3 + (var5 + 20);
-          if (EmailAvailabilityValidator.a(var4, var3, 124, "Unlock mechs 1,2,3", var6, var5)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3, 124, "Unlock mechs 1,2,3", var6, var5)) {
             LoginDialogHelpers.field_d = 1;
           }
           var3 = var3 - (20 + var5);
@@ -1639,12 +1639,12 @@ final class SentinelDesigner {
           var9_intLifetime1 = 3;
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var9_intLifetime1 >= 6))) {
-            stackOut_25_0 = t.a(rn.field_D, FunOrbClient.field_z[var9_intLifetime1], -20370);
+            stackOut_25_0 = NameTable.isBitSet(PendingAckRequest.field_D, FunOrbClient.field_z[var9_intLifetime1], -20370);
             stackIn_32_0 = stackOut_25_0 ? 1 : 0;
             stackIn_26_0 = stackOut_25_0;
             if (var12 == 0) {
               if (stackIn_26_0) {
-                var8Lifetime1 = var8Lifetime1 + ", " + cd.field_c[var9_intLifetime1];
+                var8Lifetime1 = var8Lifetime1 + ", " + QuickChatPacketHelpers.field_c[var9_intLifetime1];
               }
               var9_intLifetime1++;
               continue;
@@ -1666,11 +1666,11 @@ final class SentinelDesigner {
           var4 = var4 + ((BitmapFont) ((Object) var7)).field_G;
           ((BitmapFont) ((Object) var7)).drawCentered(var8Lifetime1, 320, var4, 16777215, -1);
           var4 += 5;
-          if (EmailAvailabilityValidator.a(var4, var3, 116, "Lock mechs 4,5,6", var6, var5)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3, 116, "Lock mechs 4,5,6", var6, var5)) {
             LoginDialogHelpers.field_d = 2;
           }
           var3 = var3 + (var5 + 20);
-          if (EmailAvailabilityValidator.a(var4, var3, 118, "Unlock mechs 4,5,6", var6, var5)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3, 118, "Unlock mechs 4,5,6", var6, var5)) {
             LoginDialogHelpers.field_d = 3;
           }
           var4 = var4 + (5 + var6);
@@ -1679,12 +1679,12 @@ final class SentinelDesigner {
           var9_intLifetime2 = 6;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var9_intLifetime2 >= 12))) {
-            stackOut_45_0 = t.a(rn.field_D, FunOrbClient.field_z[var9_intLifetime2], -20370);
+            stackOut_45_0 = NameTable.isBitSet(PendingAckRequest.field_D, FunOrbClient.field_z[var9_intLifetime2], -20370);
             stackIn_53_0 = stackOut_45_0 ? 1 : 0;
             stackIn_46_0 = stackOut_45_0;
             if (var12 == 0) {
               if (stackIn_46_0) {
-                var8Lifetime2 = var8Lifetime2 + ", " + cd.field_c[var9_intLifetime2];
+                var8Lifetime2 = var8Lifetime2 + ", " + QuickChatPacketHelpers.field_c[var9_intLifetime2];
               }
               var9_intLifetime2++;
               continue;
@@ -1706,11 +1706,11 @@ final class SentinelDesigner {
           var8Lifetime2 = "Currently unlocked: " + var8Lifetime2;
           ((BitmapFont) ((Object) var7)).drawCentered(var8Lifetime2, 320, var4, 16777215, -1);
           var4 += 5;
-          if (EmailAvailabilityValidator.a(var4, var3, 116, "Lock mechs 7-12", var6, var5)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3, 116, "Lock mechs 7-12", var6, var5)) {
             LoginDialogHelpers.field_d = 4;
           }
           var3 = var3 + (20 + var5);
-          if (EmailAvailabilityValidator.a(var4, var3, 123, "Unlock mechs 7-12", var6, var5)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3, 123, "Unlock mechs 7-12", var6, var5)) {
             LoginDialogHelpers.field_d = 5;
           }
           var4 = var4 + (var6 + 5);
@@ -1718,11 +1718,11 @@ final class SentinelDesigner {
           var4 = var4 + ((BitmapFont) ((Object) var7)).field_G;
           ((BitmapFont) ((Object) var7)).drawCentered("Solarite: " + PasswordFieldPainter.field_v, 320, var4, 16777215, -1);
           var4 += 5;
-          if (EmailAvailabilityValidator.a(var4, var3, 127, "Revoke 100 Solarite", var6, var5)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3, 127, "Revoke 100 Solarite", var6, var5)) {
             LoginDialogHelpers.field_d = 6;
           }
           var3 = var3 + (var5 + 20);
-          if (EmailAvailabilityValidator.a(var4, var3, 119, "Get 100 Solarite", var6, var5)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3, 119, "Get 100 Solarite", var6, var5)) {
             LoginDialogHelpers.field_d = 7;
           }
           var4 = var4 + (10 + var6);
@@ -1730,11 +1730,11 @@ final class SentinelDesigner {
           var4 = var4 + ((BitmapFont) ((Object) var7)).field_G;
           ((BitmapFont) ((Object) var7)).drawCentered("Total items engineered: " + PlayingSound.countUnlockedComponents(126), 320, var4, 16777215, -1);
           var4 += 5;
-          if (EmailAvailabilityValidator.a(var4, var3, 127, "Unengineer all", var6, var5)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3, 127, "Unengineer all", var6, var5)) {
             LoginDialogHelpers.field_d = 8;
           }
           var3 = var3 + (20 + var5);
-          if (EmailAvailabilityValidator.a(var4, var3, 127, "Engineer all", var6, var5)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3, 127, "Engineer all", var6, var5)) {
             LoginDialogHelpers.field_d = 9;
           }
           var4 = var4 + (10 + var6);
@@ -1743,20 +1743,20 @@ final class SentinelDesigner {
           var5Lifetime1 = 80;
           var6Lifetime1 = 30;
           ((BitmapFont) ((Object) var7)).drawLeft("COMPLETE CAMPAIGN:", 50, 20 + var4, 1021128, -1);
-          if (EmailAvailabilityValidator.a(var4, var3Lifetime1, 124, "Training", var6Lifetime1, var5Lifetime1)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3Lifetime1, 124, "Training", var6Lifetime1, var5Lifetime1)) {
             LoginDialogHelpers.field_d = 24;
           }
-          ((BitmapFont) ((Object) var7)).drawCentered(Integer.toString(fm.field_f[0]), var5Lifetime1 / 2 + var3Lifetime1, var4 - 2, 16777215, -1);
+          ((BitmapFont) ((Object) var7)).drawCentered(Integer.toString(QuickChatParameterType.field_f[0]), var5Lifetime1 / 2 + var3Lifetime1, var4 - 2, 16777215, -1);
           var3Lifetime1 = var3Lifetime1 + (10 + var5Lifetime1);
-          if (EmailAvailabilityValidator.a(var4, var3Lifetime1, 124, "Free", var6Lifetime1, var5Lifetime1)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3Lifetime1, 124, "Free", var6Lifetime1, var5Lifetime1)) {
             LoginDialogHelpers.field_d = 25;
           }
-          ((BitmapFont) ((Object) var7)).drawCentered(Integer.toString(fm.field_f[1]), var5Lifetime1 / 2 + var3Lifetime1, var4 - 2, 16777215, -1);
+          ((BitmapFont) ((Object) var7)).drawCentered(Integer.toString(QuickChatParameterType.field_f[1]), var5Lifetime1 / 2 + var3Lifetime1, var4 - 2, 16777215, -1);
           var3Lifetime1 = var3Lifetime1 + (10 + var5Lifetime1);
-          if (EmailAvailabilityValidator.a(var4, var3Lifetime1, 117, "Member", var6Lifetime1, var5Lifetime1)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3Lifetime1, 117, "Member", var6Lifetime1, var5Lifetime1)) {
             LoginDialogHelpers.field_d = 26;
           }
-          ((BitmapFont) ((Object) var7)).drawCentered(Integer.toString(fm.field_f[2]), var5Lifetime1 / 2 + var3Lifetime1, -2 + var4, 16777215, -1);
+          ((BitmapFont) ((Object) var7)).drawCentered(Integer.toString(QuickChatParameterType.field_f[2]), var5Lifetime1 / 2 + var3Lifetime1, -2 + var4, 16777215, -1);
           var3Lifetime2 = 170;
           var6Lifetime2 = 30;
           var4 += 34;
@@ -1765,21 +1765,21 @@ final class SentinelDesigner {
           ((BitmapFont) ((Object) var7)).drawLeft("SET STATE:", var3Lifetime3, 20 + var4, 1021128, -1);
           var5Lifetime2 = 60;
           var3Lifetime3 += 70;
-          if (EmailAvailabilityValidator.a(var4, var3Lifetime3, 120, "Noob", var6Lifetime2, var5Lifetime2)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3Lifetime3, 120, "Noob", var6Lifetime2, var5Lifetime2)) {
             LoginDialogHelpers.field_d = 10;
           }
           var3Lifetime3 = var3Lifetime3 + (10 + var5Lifetime2);
-          if (EmailAvailabilityValidator.a(var4, var3Lifetime3, 124, "Basic", var6Lifetime2, var5Lifetime2)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3Lifetime3, 124, "Basic", var6Lifetime2, var5Lifetime2)) {
             LoginDialogHelpers.field_d = 11;
           }
           var3Lifetime3 = var3Lifetime3 + (var5Lifetime2 + 10);
           var5Lifetime3 = 90;
-          if (EmailAvailabilityValidator.a(var4, var3Lifetime3, 118, "Advanced", var6Lifetime2, var5Lifetime3)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3Lifetime3, 118, "Advanced", var6Lifetime2, var5Lifetime3)) {
             LoginDialogHelpers.field_d = 12;
           }
           var3Lifetime3 = var3Lifetime3 + (var5Lifetime3 + 10);
           var5Lifetime4 = 90;
-          if (EmailAvailabilityValidator.a(var4, var3Lifetime3, 122, "Mighty God", var6Lifetime2, var5Lifetime4)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3Lifetime3, 122, "Mighty God", var6Lifetime2, var5Lifetime4)) {
             LoginDialogHelpers.field_d = 13;
           }
           var3Lifetime3 = var3Lifetime3 + (40 + var5Lifetime4);
@@ -1797,7 +1797,7 @@ final class SentinelDesigner {
             stackIn_110_0 = "Reset";
           }
           var10 = stackIn_110_0;
-          if (EmailAvailabilityValidator.a(var4, var3Lifetime3, 125, var10, var6Lifetime2, var5Lifetime5)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3Lifetime3, 125, var10, var6Lifetime2, var5Lifetime5)) {
             LoginDialogHelpers.field_d = 16;
           }
           var4 += 46;
@@ -1810,10 +1810,10 @@ final class SentinelDesigner {
               var6Lifetime2 = 30;
               var5Lifetime6 = 100;
               var3Lifetime4 = (-var5Lifetime6 + 640) / 2;
-              stackIn_124_0 = EmailAvailabilityValidator.a(var4, var3Lifetime4, 118, "MAIN MENU", var6Lifetime2, var5Lifetime6);
+              stackIn_124_0 = EmailAvailabilityValidator.drawHoverTextButton(var4, var3Lifetime4, 118, "MAIN MENU", var6Lifetime2, var5Lifetime6);
               break;
             }
-            stackIn_124_0 = EmailAvailabilityValidator.a(var4, var3Lifetime4, 127, "" + var11, var6Lifetime2, var5Lifetime6);
+            stackIn_124_0 = EmailAvailabilityValidator.drawHoverTextButton(var4, var3Lifetime4, 127, "" + var11, var6Lifetime2, var5Lifetime6);
             if (var12 == 0) {
               if (stackIn_124_0) {
                 LoginDialogHelpers.field_d = var11 + 17;
@@ -1829,7 +1829,7 @@ final class SentinelDesigner {
           }
           var3Lifetime4 = var3Lifetime4 + (var5Lifetime6 + 40);
           var5Lifetime7 = 140;
-          if (EmailAvailabilityValidator.a(var4, var3Lifetime4, 116, "Update server", var6Lifetime2, var5Lifetime7)) {
+          if (EmailAvailabilityValidator.drawHoverTextButton(var4, var3Lifetime4, 116, "Update server", var6Lifetime2, var5Lifetime7)) {
             LoginDialogHelpers.field_d = 15;
             if ((var12 != 0) && (ViewportController.field_j &&
               0 == (MouseWheelInput.field_c & 16))) {
@@ -1843,7 +1843,7 @@ final class SentinelDesigner {
           }
           if (LoginDialogHelpers.field_d != -1 &&
             ~var2_int != ~LoginDialogHelpers.field_d) {
-            CombatWorld.c(-2483, 97);
+            CombatWorld.playSoundEffect(-2483, 97);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1853,7 +1853,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final boolean b(boolean param0, int param1, int param2) {
+    private final boolean isMissionUnlocked(boolean param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -1865,14 +1865,14 @@ final class SentinelDesigner {
             if (0 <= param1 &&
               param1 < 3) {
               if (param1 == 2 &&
-                rd.field_b <= 0) {
+                SpriteLoadingHelpers.field_b <= 0) {
                 return false;
               }
               if (param1 > 0 &&
-                3 > fm.field_f[0]) {
+                3 > QuickChatParameterType.field_f[0]) {
                 return false;
               }
-              if (fm.field_f[param1] >= param2) {
+              if (QuickChatParameterType.field_f[param1] >= param2) {
                 return true;
               }
               return false;
@@ -1887,7 +1887,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void a(byte param0, int param1, boolean param2) {
+    private final void activateItem(byte param0, int param1, boolean param2) {
         boolean stackIn_243_0 = false;
         String[] stackIn_246_0 = null;
         int stackIn_246_1 = 0;
@@ -1930,14 +1930,14 @@ final class SentinelDesigner {
             return;
           }
           var4_int = this.field_g.isForwardAction(0) ? 1 : 0;
-          var5 = uc.field_e[this.field_c][param1];
+          var5 = DesignerPageTables.field_e[this.field_c][param1];
           if (param0 >= -1) {
             return;
           }
           if (var5 != -1 &&
             this.field_g.field_c &&
-            this.a(121, param1)) {
-            CombatWorld.c(-2483, 97);
+            this.isItemEnabled(121, param1)) {
+            CombatWorld.playSoundEffect(-2483, 97);
           }
           regionExit1: {
             regionExit2: {
@@ -2132,13 +2132,13 @@ final class SentinelDesigner {
                                                                     if (this.field_c == 19) {
                                                                       DirectByteStorage.field_j = param1 / 10;
                                                                     }
-                                                                    if (!this.b(false, DirectByteStorage.field_j, param1 % 10)) {
+                                                                    if (!this.isMissionUnlocked(false, DirectByteStorage.field_j, param1 % 10)) {
                                                                       break regionExit1;
                                                                     }
                                                                     ArticulatedPart.field_J = 500;
                                                                     QuickChatHelpDialog.field_Ub = param1 % 10;
                                                                     var6 = param2 ? 1 : 0;
-                                                                    IterableNodeHashTable.a(20, var6 != 0, -1, 0);
+                                                                    IterableNodeHashTable.switchScreen(20, var6 != 0, -1, 0);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2157,7 +2157,7 @@ final class SentinelDesigner {
                                                                     (decompiledFrameRemainder3) &&
                                                                     (decompiledFrameRemainder2) &&
                                                                     (decompiledFrameRemainder1)) {
-                                                                    sh.a(-23, param2, this.field_g.isForwardAction(0));
+                                                                    MenuLayoutHelpers.applyMenuSelection(-23, param2, this.field_g.isForwardAction(0));
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2188,10 +2188,10 @@ final class SentinelDesigner {
                                                                       stackIn_247_2 = DirectByteStorage.field_i;
                                                                     }
                                                                     stackIn_246_0[stackIn_246_1] = stackIn_247_2;
-                                                                    if (ni.b(22)) {
+                                                                    if (ByteArrayPoolHelpers.isAccountCreationMode(22)) {
                                                                       break regionExit1;
                                                                     }
-                                                                    MarkerSlider.f((byte) 3);
+                                                                    MarkerSlider.encodeSavedDesigns((byte) 3);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2211,11 +2211,11 @@ final class SentinelDesigner {
                                                                     if (!this.field_g.isForwardAction(0)) {
                                                                       break regionExit1;
                                                                     }
-                                                                    WeightedCacheEntry.c((byte) 120);
-                                                                    if (ni.b(51)) {
+                                                                    WeightedCacheEntry.toggleCameraFollow((byte) 120);
+                                                                    if (ByteArrayPoolHelpers.isAccountCreationMode(51)) {
                                                                       break regionExit1;
                                                                     }
-                                                                    MarkerSlider.f((byte) 3);
+                                                                    MarkerSlider.encodeSavedDesigns((byte) 3);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2231,19 +2231,19 @@ final class SentinelDesigner {
                                                                     (decompiledFrameRemainder6) &&
                                                                     (decompiledFrameRemainder5) &&
                                                                     (decompiledFrameRemainder4)) {
-                                                                    if (this.a(124, param1)) {
+                                                                    if (this.isItemEnabled(124, param1)) {
                                                                       if (!this.field_g.isForwardAction(0)) {
                                                                         break regionExit1;
                                                                       }
-                                                                      if (this.b(false, 1, 0) ||
+                                                                      if (this.isMissionUnlocked(false, 1, 0) ||
                                                                         this.field_c == 20) {
                                                                         var6 = param2 ? 1 : 0;
-                                                                        IterableNodeHashTable.a(19, var6 != 0, -1, 0);
+                                                                        IterableNodeHashTable.switchScreen(19, var6 != 0, -1, 0);
                                                                         if (var10 == 0) {
                                                                           break regionExit1;
                                                                         }
                                                                       }
-                                                                      QuickChatHelpDialog.field_Ub = fm.field_f[0];
+                                                                      QuickChatHelpDialog.field_Ub = QuickChatParameterType.field_f[0];
                                                                       DirectByteStorage.field_j = 0;
                                                                       var6 = param2 ? 1 : 0;
                                                                       var7 = GzipDecoder.field_g;
@@ -2252,7 +2252,7 @@ final class SentinelDesigner {
                                                                         var7 == 8) {
                                                                         var7 = SceneWidget.field_Jb;
                                                                       }
-                                                                      IterableNodeHashTable.a(20, var6 != 0, -1, var7);
+                                                                      IterableNodeHashTable.switchScreen(20, var6 != 0, -1, var7);
                                                                       if (var10 == 0) {
                                                                         break regionExit1;
                                                                       }
@@ -2272,7 +2272,7 @@ final class SentinelDesigner {
                                                                     (decompiledFrameRemainder7) &&
                                                                     (decompiledFrameRemainder6) &&
                                                                     (decompiledFrameRemainder5)) {
-                                                                    if (!this.a(118, param1)) {
+                                                                    if (!this.isItemEnabled(118, param1)) {
                                                                       var4_int = 0;
                                                                       if (var10 == 0) {
                                                                         break regionExit1;
@@ -2281,7 +2281,7 @@ final class SentinelDesigner {
                                                                     if (!this.field_g.isForwardAction(0)) {
                                                                       break regionExit1;
                                                                     }
-                                                                    DialWidget.g(127);
+                                                                    DialWidget.saveDesignToFreeSlot(127);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2298,7 +2298,7 @@ final class SentinelDesigner {
                                                                     if (!this.field_g.isForwardAction(0)) {
                                                                       break regionExit1;
                                                                     }
-                                                                    dc.field_g = -1;
+                                                                    TableColumns.field_g = -1;
                                                                     if (!ChatPanelHelpers.areBaseAssetsLoaded(-99)) {
                                                                       ClientGlobals.field_a = dg.field_e;
                                                                       if (var10 == 0) {
@@ -2306,13 +2306,13 @@ final class SentinelDesigner {
                                                                       }
                                                                     }
                                                                     IconTextComponent.field_Yb = 0;
-                                                                    di.field_g = 4;
+                                                                    OptionMaskHelpers.field_g = 4;
                                                                     if (this.field_c == 14) {
-                                                                      uc.field_b = ArchiveLoadSequence.buildComponentLoadout(-107, di.field_c, PendingIntArrayRequest.field_v);
-                                                                      PendingIntArrayRequest.field_v = SentinelDesigner.a(uc.field_b, (byte) -25, di.field_c);
+                                                                      DesignerPageTables.field_b = ArchiveLoadSequence.buildComponentLoadout(-107, OptionMaskHelpers.field_c, PendingIntArrayRequest.field_v);
+                                                                      PendingIntArrayRequest.field_v = SentinelDesigner.buildChassisFromDesign(DesignerPageTables.field_b, (byte) -25, OptionMaskHelpers.field_c);
                                                                     }
                                                                     var6 = param2 ? 1 : 0;
-                                                                    IterableNodeHashTable.a(-3, var6 != 0, -1, 0);
+                                                                    IterableNodeHashTable.switchScreen(-3, var6 != 0, -1, 0);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2328,7 +2328,7 @@ final class SentinelDesigner {
                                                                     if (!this.field_g.isForwardAction(0)) {
                                                                       break regionExit1;
                                                                     }
-                                                                    if (ni.b(111)) {
+                                                                    if (ByteArrayPoolHelpers.isAccountCreationMode(111)) {
                                                                       CachedTextLayout.field_y = false;
                                                                       var6 = 0;
                                                                       MessageMenuHelpers.showMessageMenu(99, var6, SocialListPanel.field_dc, param2, true);
@@ -2336,7 +2336,7 @@ final class SentinelDesigner {
                                                                         break regionExit1;
                                                                       }
                                                                     }
-                                                                    if (this.a(127, param1)) {
+                                                                    if (this.isItemEnabled(127, param1)) {
                                                                       if (ChatPanelHelpers.areBaseAssetsLoaded(-47)) {
                                                                         var6 = param2 ? 1 : 0;
                                                                         var7 = GzipDecoder.field_g;
@@ -2345,7 +2345,7 @@ final class SentinelDesigner {
                                                                           var7 == 8) {
                                                                           var7 = SceneWidget.field_Jb;
                                                                         }
-                                                                        IterableNodeHashTable.a(-4, var6 != 0, -1, var7);
+                                                                        IterableNodeHashTable.switchScreen(-4, var6 != 0, -1, var7);
                                                                         if (var10 == 0) {
                                                                           break regionExit1;
                                                                         }
@@ -2372,7 +2372,7 @@ final class SentinelDesigner {
                                                                       break regionExit1;
                                                                     }
                                                                     var6 = param2 ? 1 : 0;
-                                                                    IterableNodeHashTable.a(-1, var6 != 0, -1, 0);
+                                                                    IterableNodeHashTable.switchScreen(-1, var6 != 0, -1, 0);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2383,16 +2383,16 @@ final class SentinelDesigner {
                                                                     (decompiledFrameRemainder11) &&
                                                                     (decompiledFrameRemainder10) &&
                                                                     (decompiledFrameRemainder9)) {
-                                                                    SoundCache.a(false, -1);
+                                                                    SoundCache.playJingle(false, -1);
                                                                     if (!this.field_g.isForwardAction(0)) {
                                                                       break regionExit1;
                                                                     }
                                                                     if (14 == LoginForm.field_T) {
-                                                                      uc.field_b = ArchiveLoadSequence.buildComponentLoadout(-109, di.field_c, PendingIntArrayRequest.field_v);
+                                                                      DesignerPageTables.field_b = ArchiveLoadSequence.buildComponentLoadout(-109, OptionMaskHelpers.field_c, PendingIntArrayRequest.field_v);
                                                                     }
                                                                     if (LoginForm.field_T == 20 &&
-                                                                      ni.b(28) &&
-                                                                      0 < fm.field_f[0]) {
+                                                                      ByteArrayPoolHelpers.isAccountCreationMode(28) &&
+                                                                      0 < QuickChatParameterType.field_f[0]) {
                                                                       NameValidationHelpers.field_g = -1;
                                                                       SceneWidget.field_J = true;
                                                                       if (var10 == 0) {
@@ -2406,7 +2406,7 @@ final class SentinelDesigner {
                                                                       8 == var7) {
                                                                       var7 = SceneWidget.field_Jb;
                                                                     }
-                                                                    IterableNodeHashTable.a(0, var6 != 0, -1, var7);
+                                                                    IterableNodeHashTable.switchScreen(0, var6 != 0, -1, var7);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2426,7 +2426,7 @@ final class SentinelDesigner {
                                                                       8 == var7) {
                                                                       var7 = SceneWidget.field_Jb;
                                                                     }
-                                                                    IterableNodeHashTable.a(12, var6 != 0, -1, var7);
+                                                                    IterableNodeHashTable.switchScreen(12, var6 != 0, -1, var7);
                                                                     ReportAbuseDialog.field_Sb = true;
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
@@ -2446,7 +2446,7 @@ final class SentinelDesigner {
                                                                       var7 == 8) {
                                                                       var7 = SceneWidget.field_Jb;
                                                                     }
-                                                                    IterableNodeHashTable.a(8, var6 != 0, -1, var7);
+                                                                    IterableNodeHashTable.switchScreen(8, var6 != 0, -1, var7);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2464,11 +2464,11 @@ final class SentinelDesigner {
                                                                       8 == var7) {
                                                                       var7 = SceneWidget.field_Jb;
                                                                     }
-                                                                    IterableNodeHashTable.a(13, var6 != 0, -1, var7);
+                                                                    IterableNodeHashTable.switchScreen(13, var6 != 0, -1, var7);
                                                                     if (LoginForm.field_T != 14) {
                                                                       break regionExit1;
                                                                     }
-                                                                    uc.field_b = ArchiveLoadSequence.buildComponentLoadout(-100, di.field_c, PendingIntArrayRequest.field_v);
+                                                                    DesignerPageTables.field_b = ArchiveLoadSequence.buildComponentLoadout(-100, OptionMaskHelpers.field_c, PendingIntArrayRequest.field_v);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2478,19 +2478,19 @@ final class SentinelDesigner {
                                                                     if (!this.field_g.isForwardAction(0)) {
                                                                       break regionExit1;
                                                                     }
-                                                                    if (!this.a(124, param1)) {
+                                                                    if (!this.isItemEnabled(124, param1)) {
                                                                       var4_int = 0;
                                                                       ClientGlobals.field_a = MusicCrossfadeStream.field_C + "<br>" + DialWidgetPainter.field_l;
                                                                       if (var10 == 0) {
                                                                         break regionExit1;
                                                                       }
                                                                     }
-                                                                    if (PacketBuffer.h((byte) -79)) {
+                                                                    if (PacketBuffer.needsSpecialPartTutorial((byte) -79)) {
                                                                       NameSuggestionsPanel.field_Y = -1;
                                                                       RegistrationRequestDialog.field_Ob = 1;
                                                                       SocketJs5Transport.field_A = null;
                                                                       ImageProducerRasterBuffer.field_B = null;
-                                                                      DateOfBirthValidator.d(-52);
+                                                                      DateOfBirthValidator.clearSceneReferences(-52);
                                                                       var6 = 0;
                                                                       while (true) {
                                                                         if (var6 < LoginDialogHelpers.field_k.length) {
@@ -2504,7 +2504,7 @@ final class SentinelDesigner {
                                                                         }
                                                                         break;
                                                                       }
-                                                                      dc.field_g = 0;
+                                                                      TableColumns.field_g = 0;
                                                                     }
                                                                     NumericDateInputWidget.field_eb = -1;
                                                                     var6 = param2 ? 1 : 0;
@@ -2514,9 +2514,9 @@ final class SentinelDesigner {
                                                                       var7 == 8) {
                                                                       var7 = SceneWidget.field_Jb;
                                                                     }
-                                                                    IterableNodeHashTable.a(14, var6 != 0, -1, var7);
-                                                                    PendingIntArrayRequest.field_v = SentinelDesigner.a(uc.field_b, (byte) -67, di.field_c);
-                                                                    PendingIntArrayRequest.field_v.b(6993661, -110);
+                                                                    IterableNodeHashTable.switchScreen(14, var6 != 0, -1, var7);
+                                                                    PendingIntArrayRequest.field_v = SentinelDesigner.buildChassisFromDesign(DesignerPageTables.field_b, (byte) -67, OptionMaskHelpers.field_c);
+                                                                    PendingIntArrayRequest.field_v.updateAttachedParts(6993661, -110);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2533,7 +2533,7 @@ final class SentinelDesigner {
                                                                       var7 == 8) {
                                                                       var7 = SceneWidget.field_Jb;
                                                                     }
-                                                                    IterableNodeHashTable.a(7, var6 != 0, -1, var7);
+                                                                    IterableNodeHashTable.switchScreen(7, var6 != 0, -1, var7);
                                                                     if (var10 == 0) {
                                                                       break regionExit1;
                                                                     }
@@ -2556,7 +2556,7 @@ final class SentinelDesigner {
                                                                     var8 == 8) {
                                                                     var8 = SceneWidget.field_Jb;
                                                                   }
-                                                                  IterableNodeHashTable.a(var6, var7 != 0, -1, var8);
+                                                                  IterableNodeHashTable.switchScreen(var6, var7 != 0, -1, var8);
                                                                   if (var10 == 0) {
                                                                     break regionExit1;
                                                                   }
@@ -2571,7 +2571,7 @@ final class SentinelDesigner {
                                                                   var7 == 8) {
                                                                   var7 = SceneWidget.field_Jb;
                                                                 }
-                                                                IterableNodeHashTable.a(6, var6 != 0, -1, var7);
+                                                                IterableNodeHashTable.switchScreen(6, var6 != 0, -1, var7);
                                                                 if (var10 == 0) {
                                                                   break regionExit1;
                                                                 }
@@ -2581,7 +2581,7 @@ final class SentinelDesigner {
                                                               }
                                                               if (this.field_c == 9) {
                                                                 var6 = param2 ? 1 : 0;
-                                                                IterableNodeHashTable.a(5, var6 != 0, -1, 0);
+                                                                IterableNodeHashTable.switchScreen(5, var6 != 0, -1, 0);
                                                                 if (var10 == 0) {
                                                                   break regionExit1;
                                                                 }
@@ -2593,53 +2593,53 @@ final class SentinelDesigner {
                                                                 8 == var7) {
                                                                 var7 = SceneWidget.field_Jb;
                                                               }
-                                                              IterableNodeHashTable.a(5, var6 != 0, -1, var7);
+                                                              IterableNodeHashTable.switchScreen(5, var6 != 0, -1, var7);
                                                               if (var10 == 0) {
                                                                 break regionExit1;
                                                               }
                                                             }
                                                             var4_int = 0;
                                                             var6 = 0;
-                                                            if (this.field_g.isLeftPressed(117) &&
+                                                            if (this.field_g.isHomePressed(117) &&
                                                               VerticalScrollbar.field_ac > 0) {
-                                                              ModalPanel.a(0, (byte) 64);
+                                                              ModalPanel.setSoundEffectVolume(0, (byte) 64);
                                                               var6 = 1;
                                                             }
                                                             if (this.field_g.isEndPressed((byte) 105) &&
                                                               VerticalScrollbar.field_ac < 256) {
                                                               var6 = 1;
-                                                              ModalPanel.a(256, (byte) 64);
+                                                              ModalPanel.setSoundEffectVolume(256, (byte) 64);
                                                             }
                                                             if (this.field_g.isPointerHeld(0)) {
-                                                              var7 = this.g(125, param1) + this.a(param1, (byte) 118) + StrongCacheEntry.field_K - 170 >> 1;
+                                                              var7 = this.getItemLeft(125, param1) + this.getItemRight(param1, (byte) 118) + StrongCacheEntry.field_K - 170 >> 1;
                                                               var8Lifetime2 = LobbySetupHelpers.field_f - var7 + 2;
                                                               var9 = 256 * var8Lifetime2 / 170;
                                                               if (0 >= var9) {
-                                                                ModalPanel.a(0, (byte) 64);
+                                                                ModalPanel.setSoundEffectVolume(0, (byte) 64);
                                                                 if (var10 != 0) {
                                                                   if (var9 < 256) {
-                                                                    ModalPanel.a(var9, (byte) 64);
-                                                                    ModalPanel.a(256, (byte) 64);
+                                                                    ModalPanel.setSoundEffectVolume(var9, (byte) 64);
+                                                                    ModalPanel.setSoundEffectVolume(256, (byte) 64);
                                                                   } else {
-                                                                    ModalPanel.a(256, (byte) 64);
+                                                                    ModalPanel.setSoundEffectVolume(256, (byte) 64);
                                                                   }
                                                                 }
                                                               } else {
                                                                 if (var9 < 256) {
-                                                                  ModalPanel.a(var9, (byte) 64);
+                                                                  ModalPanel.setSoundEffectVolume(var9, (byte) 64);
                                                                   if (var10 != 0) {
-                                                                    ModalPanel.a(256, (byte) 64);
+                                                                    ModalPanel.setSoundEffectVolume(256, (byte) 64);
                                                                   }
                                                                 } else {
-                                                                  ModalPanel.a(256, (byte) 64);
+                                                                  ModalPanel.setSoundEffectVolume(256, (byte) 64);
                                                                 }
                                                               }
                                                               var6 = 1;
                                                             }
-                                                            if (this.field_g.isHomePressed(-97) &&
+                                                            if (this.field_g.isLeftPressed(-97) &&
                                                               VerticalScrollbar.field_ac > 0) {
                                                               var6 = 1;
-                                                              NameSuggestionsPanel.k(-44);
+                                                              NameSuggestionsPanel.stepSoundVolumeDown(-44);
                                                             }
                                                             if (this.field_g.isRightPressed((byte) 51) &&
                                                               VerticalScrollbar.field_ac < 256) {
@@ -2648,14 +2648,14 @@ final class SentinelDesigner {
                                                             }
                                                             if (var6 != 0 && (!this.field_g.isPointerHeld(0) ||
                                                               !(MouseWheelInput.field_c <= ByteStorage.field_a))) {
-                                                              CombatWorld.c(-2483, 0);
+                                                              CombatWorld.playSoundEffect(-2483, 0);
                                                               ByteStorage.field_a = MouseWheelInput.field_c + 20;
                                                             }
                                                             if (var10 == 0) {
                                                               break regionExit1;
                                                             }
                                                           }
-                                                          if (this.field_g.isLeftPressed(126)) {
+                                                          if (this.field_g.isHomePressed(126)) {
                                                             EmailFormatError.setMusicVolume(1, 0);
                                                           }
                                                           var4_int = 0;
@@ -2663,7 +2663,7 @@ final class SentinelDesigner {
                                                             EmailFormatError.setMusicVolume(1, 256);
                                                           }
                                                           if (this.field_g.isPointerHeld(0)) {
-                                                            var6 = -170 + (this.g(125, param1) + this.a(param1, (byte) 110)) + StrongCacheEntry.field_K >> 1;
+                                                            var6 = -170 + (this.getItemLeft(125, param1) + this.getItemRight(param1, (byte) 110)) + StrongCacheEntry.field_K >> 1;
                                                             var7 = -var6 + LobbySetupHelpers.field_f + 2;
                                                             var8Lifetime1 = var7 * 256 / 170;
                                                             if (var8Lifetime1 <= 0) {
@@ -2687,13 +2687,13 @@ final class SentinelDesigner {
                                                               }
                                                             }
                                                           }
-                                                          if (this.field_g.isHomePressed(-97)) {
-                                                            SpriteCheckboxPainter.b(125);
+                                                          if (this.field_g.isLeftPressed(-97)) {
+                                                            SpriteCheckboxPainter.stepMusicVolumeDown(125);
                                                           }
                                                           if (!this.field_g.isRightPressed((byte) 51)) {
                                                             break regionExit1;
                                                           }
-                                                          un.a((byte) 125);
+                                                          ChatHistoryAllocator.increaseMusicVolume((byte) 125);
                                                           if (var10 == 0) {
                                                             break regionExit1;
                                                           }
@@ -2701,15 +2701,15 @@ final class SentinelDesigner {
                                                         if (!this.field_g.isForwardAction(0)) {
                                                           break regionExit1;
                                                         }
-                                                        if (wb.field_c != null) {
-                                                          SoundCache.c(0);
+                                                        if (RewardValueHelpers.field_c != null) {
+                                                          SoundCache.exitFullscreen(0);
                                                           if (var10 == 0) {
                                                             break regionExit1;
                                                           }
                                                         }
                                                         var6 = param2 ? 1 : 0;
                                                         CachedTextLayout.field_y = false;
-                                                        GradientOutlineTextPainter.a(-4, var6 != 0);
+                                                        GradientOutlineTextPainter.requestFullscreen(-4, var6 != 0);
                                                         if (var10 == 0) {
                                                           break regionExit1;
                                                         }
@@ -2718,7 +2718,7 @@ final class SentinelDesigner {
                                                         break regionExit1;
                                                       }
                                                       var6 = 0;
-                                                      var7 = di.field_g;
+                                                      var7 = OptionMaskHelpers.field_g;
                                                       if (0 == var7 || var7 == 1 &&
                                                         var10 == 0 || 7 == var7 &&
                                                         var10 == 0 || var7 == 3 &&
@@ -2727,14 +2727,14 @@ final class SentinelDesigner {
                                                         var6 = 1;
                                                       }
                                                       if (var6 != 0) {
-                                                        BoundedUrlRequest.field_i.i(77);
+                                                        BoundedUrlRequest.field_i.returnToMenu(77);
                                                       }
                                                       if (var6 == 0 ||
                                                         var10 != 0) {
-                                                        boolean decompiledSharedTail0 = (di.field_g != 4);
+                                                        boolean decompiledSharedTail0 = (OptionMaskHelpers.field_g != 4);
                                                         if (!decompiledSharedTail0) {
-                                                          PendingIntArrayRequest.field_v = SentinelDesigner.a(uc.field_b, (byte) 109, di.field_c);
-                                                          lc.field_e = true;
+                                                          PendingIntArrayRequest.field_v = SentinelDesigner.buildChassisFromDesign(DesignerPageTables.field_b, (byte) 109, OptionMaskHelpers.field_c);
+                                                          SettingSearchHelpers.field_e = true;
                                                           Sprite.field_k = false;
                                                           var7 = GzipDecoder.field_g;
                                                           if (var7 == 5 ||
@@ -2742,13 +2742,13 @@ final class SentinelDesigner {
                                                             var7 == 8) {
                                                             var7 = SceneWidget.field_Jb;
                                                           }
-                                                          IterableNodeHashTable.a(14, false, -1, var7);
+                                                          IterableNodeHashTable.switchScreen(14, false, -1, var7);
                                                           decompiledSharedTail0 = (var10 != 0);
                                                         }
                                                         if (decompiledSharedTail0) {
-                                                          BoundedUrlRequest.field_i.a((byte) 30, param2);
+                                                          BoundedUrlRequest.field_i.exitToMenuScreen((byte) 30, param2);
                                                           Sprite.field_k = false;
-                                                          lc.field_e = true;
+                                                          SettingSearchHelpers.field_e = true;
                                                         }
                                                       }
                                                       if (var10 == 0) {
@@ -2758,9 +2758,9 @@ final class SentinelDesigner {
                                                     if (!this.field_g.isForwardAction(0)) {
                                                       break regionExit1;
                                                     }
-                                                    BoundedUrlRequest.field_i.m(1125);
+                                                    BoundedUrlRequest.field_i.sendMatchMenuRequest(1125);
                                                     var6 = param2 ? 1 : 0;
-                                                    IterableNodeHashTable.a(-1, var6 != 0, -1, 0);
+                                                    IterableNodeHashTable.switchScreen(-1, var6 != 0, -1, 0);
                                                     if (var10 == 0) {
                                                       break regionExit1;
                                                     }
@@ -2768,9 +2768,9 @@ final class SentinelDesigner {
                                                   if (!this.field_g.isForwardAction(0)) {
                                                     break regionExit1;
                                                   }
-                                                  BoundedUrlRequest.field_i.c(126);
+                                                  BoundedUrlRequest.field_i.sendForfeitRequest(126);
                                                   var6 = param2 ? 1 : 0;
-                                                  IterableNodeHashTable.a(-1, var6 != 0, -1, 0);
+                                                  IterableNodeHashTable.switchScreen(-1, var6 != 0, -1, 0);
                                                   if (var10 == 0) {
                                                     break regionExit1;
                                                   }
@@ -2778,9 +2778,9 @@ final class SentinelDesigner {
                                                 if (!this.field_g.isForwardAction(0)) {
                                                   break regionExit1;
                                                 }
-                                                BoundedUrlRequest.field_i.a(false);
+                                                BoundedUrlRequest.field_i.sendMatchExitRequest(false);
                                                 var6 = param2 ? 1 : 0;
-                                                IterableNodeHashTable.a(-1, var6 != 0, -1, 0);
+                                                IterableNodeHashTable.switchScreen(-1, var6 != 0, -1, 0);
                                                 if (var10 == 0) {
                                                   break regionExit1;
                                                 }
@@ -2788,7 +2788,7 @@ final class SentinelDesigner {
                                               if (!this.field_g.isForwardAction(0)) {
                                                 break regionExit1;
                                               }
-                                              if (ob.field_y) {
+                                              if (PendingPackedReply.field_y) {
                                                 var6 = param2 ? 1 : 0;
                                                 var7 = GzipDecoder.field_g;
                                                 if (var7 == 5 ||
@@ -2796,12 +2796,12 @@ final class SentinelDesigner {
                                                   var7 == 8) {
                                                   var7 = SceneWidget.field_Jb;
                                                 }
-                                                IterableNodeHashTable.a(-5, var6 != 0, -1, var7);
+                                                IterableNodeHashTable.switchScreen(-5, var6 != 0, -1, var7);
                                               }
                                               if (!CombatWorld.field_G) {
                                                 break regionExit1;
                                               }
-                                              NameAvailabilityValidator.a(0, (byte) -23, 11);
+                                              NameAvailabilityValidator.sendShortRequest(0, (byte) -23, 11);
                                               if (var10 == 0) {
                                                 break regionExit1;
                                               }
@@ -2852,14 +2852,14 @@ final class SentinelDesigner {
                                   CachedTextLayout.field_y = false;
                                   if (20 == this.field_c ||
                                     this.field_c == 19) {
-                                    stackIn_737_0 = (fm.field_f[0] < 3) ? 20 : 19;
-                                    DebouncedValidator.a(stackIn_737_0, (String) null, 10);
+                                    stackIn_737_0 = (QuickChatParameterType.field_f[0] < 3) ? 20 : 19;
+                                    DebouncedValidator.setDesignerMode(stackIn_737_0, (String) null, 10);
                                     if (var10 == 0) {
                                       break regionExit1;
                                     }
                                   }
                                   if (this.field_c == 10) {
-                                    DebouncedValidator.a(9, (String) null, 10);
+                                    DebouncedValidator.setDesignerMode(9, (String) null, 10);
                                     if (var10 == 0) {
                                       break regionExit1;
                                     }
@@ -2870,13 +2870,13 @@ final class SentinelDesigner {
                                     14 != LoginForm.field_T) {
                                     break regionExit1;
                                   }
-                                  DebouncedValidator.a(this.field_c, BirthDateEntryPanel.field_Q, 10);
+                                  DebouncedValidator.setDesignerMode(this.field_c, BirthDateEntryPanel.field_Q, 10);
                                   if (var10 == 0) {
                                     break regionExit1;
                                   }
                                 }
                                 if (this.field_g.isForwardAction(0) &&
-                                  this.a(121, param1)) {
+                                  this.isItemEnabled(121, param1)) {
                                   ArticulatedPart.field_J = 500;
                                   QuickChatHelpDialog.field_Ub = QuickChatHelpDialog.field_Ub - 1;
                                   if (var10 == 0) {
@@ -2889,7 +2889,7 @@ final class SentinelDesigner {
                                 }
                               }
                               if (this.field_g.isForwardAction(0) &&
-                                this.a(126, param1)) {
+                                this.isItemEnabled(126, param1)) {
                                 QuickChatHelpDialog.field_Ub = QuickChatHelpDialog.field_Ub + 1;
                                 ArticulatedPart.field_J = 500;
                                 if (var10 == 0) {
@@ -2904,7 +2904,7 @@ final class SentinelDesigner {
                             if (!this.field_g.isForwardAction(0)) {
                               break regionExit1;
                             }
-                            t.a(true, Projectile.d((byte) -21));
+                            NameTable.openQuitPage(true, Projectile.getApplet((byte) -21));
                             if (var10 == 0) {
                               break regionExit1;
                             }
@@ -2912,7 +2912,7 @@ final class SentinelDesigner {
                           if (!this.field_g.isForwardAction(0)) {
                             break regionExit1;
                           }
-                          if (ArticulatedPart.f((byte) -28)) {
+                          if (ArticulatedPart.isMemberSession((byte) -28)) {
                             break regionExit1;
                           }
                           var6 = param2 ? 1 : 0;
@@ -2922,7 +2922,7 @@ final class SentinelDesigner {
                             8 == var7) {
                             var7 = SceneWidget.field_Jb;
                           }
-                          IterableNodeHashTable.a(21, var6 != 0, -1, var7);
+                          IterableNodeHashTable.switchScreen(21, var6 != 0, -1, var7);
                           if (var10 == 0) {
                             break regionExit1;
                           }
@@ -2935,7 +2935,7 @@ final class SentinelDesigner {
                         SocketJs5Transport.field_A = null;
                         ImageProducerRasterBuffer.field_B = null;
                         RegistrationRequestDialog.field_Ob = 1;
-                        DateOfBirthValidator.d(-68);
+                        DateOfBirthValidator.clearSceneReferences(-68);
                         var6 = 0;
                         while (true) {
                           if (var6 < LoginDialogHelpers.field_k.length) {
@@ -2945,7 +2945,7 @@ final class SentinelDesigner {
                               continue;
                             }
                           } else {
-                            dc.field_g = 0;
+                            TableColumns.field_g = 0;
                           }
                           break;
                         }
@@ -2963,7 +2963,7 @@ final class SentinelDesigner {
                         8 == var7Lifetime2) {
                         var7Lifetime2 = SceneWidget.field_Jb;
                       }
-                      IterableNodeHashTable.a(17, var6Lifetime2 != 0, -1, var7Lifetime2);
+                      IterableNodeHashTable.switchScreen(17, var6Lifetime2 != 0, -1, var7Lifetime2);
                       if (var10 == 0) {
                         break regionExit1;
                       }
@@ -2978,7 +2978,7 @@ final class SentinelDesigner {
                       var7Lifetime1 == 8) {
                       var7Lifetime1 = SceneWidget.field_Jb;
                     }
-                    IterableNodeHashTable.a(22, var6Lifetime1 != 0, -1, var7Lifetime1);
+                    IterableNodeHashTable.switchScreen(22, var6Lifetime1 != 0, -1, var7Lifetime1);
                     if (var10 == 0) {
                       break regionExit1;
                     }
@@ -2994,33 +2994,33 @@ final class SentinelDesigner {
                   if (!NameCheckResult.field_c) {
                     stackIn_860_2 = ClientException.field_j;
                   } else {
-                    stackIn_860_2 = qm.field_c;
+                    stackIn_860_2 = DisplayNameAndAudioHelpers.field_c;
                   }
                   stackIn_859_0[stackIn_859_1] = stackIn_860_2;
-                  if (ni.b(81)) {
+                  if (ByteArrayPoolHelpers.isAccountCreationMode(81)) {
                     break regionExit1;
                   }
-                  MarkerSlider.f((byte) 3);
+                  MarkerSlider.encodeSavedDesigns((byte) 3);
                   if (var10 == 0) {
                     break regionExit1;
                   }
                 }
-                if (this.a(125, param1) &&
+                if (this.isItemEnabled(125, param1) &&
                   this.field_g.isForwardAction(0)) {
                   stackIn_876_0 = !(AlphaContainer.field_G);
                   AlphaContainer.field_G = stackIn_876_0;
                   stackIn_879_0 = ImageProducerRasterBuffer.field_A;
                   stackIn_879_1 = 43;
                   if (!AlphaContainer.field_G) {
-                    stackIn_880_2 = fj.field_i;
+                    stackIn_880_2 = PasswordRuleHelpers.field_i;
                   } else {
-                    stackIn_880_2 = tm.field_f;
+                    stackIn_880_2 = SessionUiHelpers.field_f;
                   }
                   stackIn_879_0[stackIn_879_1] = stackIn_880_2;
-                  if (ni.b(45)) {
+                  if (ByteArrayPoolHelpers.isAccountCreationMode(45)) {
                     break regionExit1;
                   }
-                  MarkerSlider.f((byte) 3);
+                  MarkerSlider.encodeSavedDesigns((byte) 3);
                   if (var10 == 0) {
                     break regionExit1;
                   }
@@ -3030,22 +3030,22 @@ final class SentinelDesigner {
                   break regionExit1;
                 }
               }
-              if (this.a(125, param1) &&
+              if (this.isItemEnabled(125, param1) &&
                 this.field_g.isForwardAction(0)) {
                 stackIn_897_0 = !(ConditionalTextValue.field_h);
                 ConditionalTextValue.field_h = stackIn_897_0;
                 stackIn_900_0 = ImageProducerRasterBuffer.field_A;
                 stackIn_900_1 = 44;
                 if (!ConditionalTextValue.field_h) {
-                  stackIn_901_2 = sa.field_b;
+                  stackIn_901_2 = LoadingStatusHelpers.field_b;
                 } else {
-                  stackIn_901_2 = o.field_a;
+                  stackIn_901_2 = SocialStateHelpers.field_a;
                 }
                 stackIn_900_0[stackIn_900_1] = stackIn_901_2;
-                if (ni.b(12)) {
+                if (ByteArrayPoolHelpers.isAccountCreationMode(12)) {
                   break regionExit1;
                 }
-                MarkerSlider.f((byte) 3);
+                MarkerSlider.encodeSavedDesigns((byte) 3);
                 if (var10 == 0) {
                   break regionExit1;
                 }
@@ -3055,7 +3055,7 @@ final class SentinelDesigner {
                 break regionExit1;
               }
             }
-            if (!this.a(127, param1) ||
+            if (!this.isItemEnabled(127, param1) ||
               !this.field_g.isForwardAction(0)) {
               var4_int = 0;
               if (var10 == 0) {
@@ -3063,22 +3063,22 @@ final class SentinelDesigner {
               }
             }
             ContentTransitionDialog.field_sb = null;
-            stackIn_919_0 = !(tj.field_a);
-            tj.field_a = stackIn_919_0;
+            stackIn_919_0 = !(HighscoreSubmissionFactory.field_a);
+            HighscoreSubmissionFactory.field_a = stackIn_919_0;
             stackIn_922_0 = ImageProducerRasterBuffer.field_A;
             stackIn_922_1 = 47;
-            if (!tj.field_a) {
+            if (!HighscoreSubmissionFactory.field_a) {
               stackIn_923_2 = RasterBuffer.field_d;
             } else {
               stackIn_923_2 = SentinelAnimationEditor.field_u;
             }
             stackIn_922_0[stackIn_922_1] = stackIn_923_2;
-            if (!ni.b(75)) {
-              MarkerSlider.f((byte) 3);
+            if (!ByteArrayPoolHelpers.isAccountCreationMode(75)) {
+              MarkerSlider.encodeSavedDesigns((byte) 3);
             }
           }
           if (var4_int != 0) {
-            CombatWorld.c(-2483, 95);
+            CombatWorld.playSoundEffect(-2483, 95);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3088,7 +3088,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void a(byte param0) {
+    private final void handleArrowKeys(byte param0) {
         int stackIn_90_0 = 0;
         int stackIn_90_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -3100,29 +3100,29 @@ final class SentinelDesigner {
         try {
           var2_int = -1;
           if (param0 != -120) {
-            this.b(false);
+            this.updateScreen(false);
           }
           var3 = NameAvailabilityValidator.field_q;
           switch ((var4 == 0
             || var3 == 98
             ) ? var3 : -1) {
             case 96:
-              var2_int = this.b((byte) -20);
+              var2_int = this.findItemLeft((byte) -20);
               if (var4 == 0) {
                 break;
               }
             case 97:
-              var2_int = this.f((byte) 32);
+              var2_int = this.findItemRight((byte) 32);
               if (var4 == 0) {
                 break;
               }
             case 99:
-              var2_int = this.g(param0 + 83);
+              var2_int = this.findItemBelow(param0 + 83);
               if (var4 == 0) {
                 break;
               }
             case 98:
-              var2_int = this.d(-119);
+              var2_int = this.findItemAbove(-119);
             default:
               break;
           }
@@ -3132,15 +3132,15 @@ final class SentinelDesigner {
           }
           if (7 != LoginForm.field_T) {
             if (5 == LoginForm.field_T &&
-              !ni.b(param0 ^ -100)) {
-              this.l(-1);
+              !ByteArrayPoolHelpers.isAccountCreationMode(param0 ^ -100)) {
+              this.cycleSelectionByKeysWithBack(-1);
               if (var4 == 0) {
                 return;
               }
             }
             if (6 == LoginForm.field_T &&
-              !ni.b(86)) {
-              this.c((byte) 116);
+              !ByteArrayPoolHelpers.isAccountCreationMode(86)) {
+              this.cycleSelectionByKeys((byte) 116);
               if (var4 == 0) {
                 return;
               }
@@ -3150,17 +3150,17 @@ final class SentinelDesigner {
                 if (16 != LoginForm.field_T) {
                   if (0 == LoginForm.field_T) {
                     if (this.field_g.field_e >= 0 &&
-                      uc.field_e[LoginForm.field_T].length > this.field_g.field_e &&
-                      uc.field_e[LoginForm.field_T][this.field_g.field_e] != 34) {
+                      DesignerPageTables.field_e[LoginForm.field_T].length > this.field_g.field_e &&
+                      DesignerPageTables.field_e[LoginForm.field_T][this.field_g.field_e] != 34) {
                       SceneWidgetNode.field_F = this.field_g.field_e;
                     }
                     boolean decompiledFrameCompleted0 = true;
                     if (NameAvailabilityValidator.field_q == 96 &&
-                      0 >= rd.field_b) {
+                      0 >= SpriteLoadingHelpers.field_b) {
                       var3 = 0;
-                      while (!(uc.field_e[LoginForm.field_T].length <= var3)) {
+                      while (!(DesignerPageTables.field_e[LoginForm.field_T].length <= var3)) {
                         stackIn_90_0 = -35;
-                        stackIn_90_1 = ~uc.field_e[LoginForm.field_T][var3];
+                        stackIn_90_1 = ~DesignerPageTables.field_e[LoginForm.field_T][var3];
                         if (var4 != 0) {
                           decompiledFrameCompleted0 = false;
                           break;
@@ -3180,8 +3180,8 @@ final class SentinelDesigner {
                     if (stackIn_90_0 == stackIn_90_1) {
                       var3 = this.field_g.field_e;
                       if (var3 >= 0 &&
-                        var3 < uc.field_e[LoginForm.field_T].length &&
-                        34 == uc.field_e[LoginForm.field_T][var3]) {
+                        var3 < DesignerPageTables.field_e[LoginForm.field_T].length &&
+                        34 == DesignerPageTables.field_e[LoginForm.field_T][var3]) {
                         this.field_g.field_e = SceneWidgetNode.field_F;
                         return;
                       }
@@ -3196,22 +3196,22 @@ final class SentinelDesigner {
                     return;
                   }
                 }
-                this.q(param0 - 30628);
+                this.handleAnimationEditorKey(param0 - 30628);
                 if (var4 == 0) {
                   return;
                 }
               }
-              this.k(-112);
+              this.clearMenuInput(-112);
               if (var4 == 0) {
                 return;
               }
             }
-            this.b(16383);
+            this.resetMenuInput(16383);
             if (var4 == 0) {
               return;
             }
           }
-          this.e((byte) -108);
+          this.cycleAvailableSelectionByKeys((byte) -108);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3220,20 +3220,20 @@ final class SentinelDesigner {
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void printError(String param0, int param1) {
         System.out.println("Error: " + CombatWorld.replaceAll("%0a", param0, "\n", param1 ^ -29743));
         if (param1 != -29771) {
           field_e = -33;
         }
     }
 
-    private final boolean a(int param0) {
+    private final boolean isNarrowItemScreen(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_19_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2) {
-            this.a((byte) -79);
+            this.handleArrowKeys((byte) -79);
           }
           stackIn_19_0 = (this.field_c == 1) || (2 == this.field_c) || (this.field_c == 3) || (this.field_c == 4) || (this.field_c == 22);
           return stackIn_19_0;
@@ -3244,7 +3244,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void j(int param0) {
+    private final void drawLoadingMessage(int param0) {
         CoverageBitmapFont var3 = null;
         String var4 = null;
         try {
@@ -3257,21 +3257,21 @@ final class SentinelDesigner {
         }
     }
 
-    private final void h(int param0) {
+    private final void drawAnimationEditor(int param0) {
         if (null == LoginDialogHelpers.field_c) {
           return;
         }
         try {
           LoginDialogHelpers.field_c.drawEditor(-1);
           if (param0 != 7165) {
-            this.h(-118);
+            this.drawAnimationEditor(-118);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.B(" + param0 + ')');
         }
     }
 
-    private final void c(int param0) {
+    private final void drawHighscoresPanel(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -3280,13 +3280,13 @@ final class SentinelDesigner {
           }
           SoftwareRaster.drawRectangleOutline(40, 80, 560, 330, 3487029);
           SoftwareRaster.drawRectangleOutline(41, 81, 558, 328, 3487029);
-          if (ni.b(25)) {
-            this.j(60);
+          if (ByteArrayPoolHelpers.isAccountCreationMode(25)) {
+            this.drawLoadingMessage(60);
             if (SteelSentinels.obfuscationControl == 0) {
               return;
             }
           }
-          this.j((byte) 127);
+          this.drawHighscoreTable((byte) 127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3295,7 +3295,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void i(byte param0) {
+    private final void drawOpenDialog(byte param0) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -3304,7 +3304,7 @@ final class SentinelDesigner {
         try {
           if (ContentTransitionDialog.field_sb != null) {
             if (NameCheckResult.field_c) {
-              ValidationHelpWidget.field_lb.setInlineSprites(lc.field_a, AlternateUsernameCredentials.field_w);
+              ValidationHelpWidget.field_lb.setInlineSprites(SettingSearchHelpers.field_a, AlternateUsernameCredentials.field_w);
               if (var3 != 0) {
                 ValidationHelpWidget.field_lb.setInlineSprites(SoundCache.field_a, AlternateUsernameCredentials.field_w);
               }
@@ -3314,8 +3314,8 @@ final class SentinelDesigner {
             boolean decompiledSharedTail0 = (ClientException.field_e ||
               LoginForm.field_U != 0);
             if (!decompiledSharedTail0) {
-              SoftwareRaster.fillRectangle(jj.field_a.field_Rb, jj.field_a.field_cb, jj.field_a.field_zb, jj.field_a.field_Lb, 0);
-              jj.field_a.drawFullScreen(true, (byte) 127);
+              SoftwareRaster.fillRectangle(MeshMaterial.field_a.field_Rb, MeshMaterial.field_a.field_cb, MeshMaterial.field_a.field_zb, MeshMaterial.field_a.field_Lb, 0);
+              MeshMaterial.field_a.drawFullScreen(true, (byte) 127);
               decompiledSharedTail0 = (var3 != 0);
             }
             if (decompiledSharedTail0) {
@@ -3332,7 +3332,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void a(boolean param0, boolean param1) {
+    private final void handlePageButtons(boolean param0, boolean param1) {
         int[] stackIn_30_0 = null;
         RuntimeException decompiledCaughtException = null;
         int[] var3 = null;
@@ -3344,16 +3344,16 @@ final class SentinelDesigner {
             !(IterableNodeHashTable.field_i > 0) ||
             !(BattleTerrain.field_i < (SceneWidgetNode.field_C.length - 1)));
           if (!decompiledSharedTail0) {
-            CombatWorld.c(-2483, 95);
+            CombatWorld.playSoundEffect(-2483, 95);
             BattleTerrain.field_i = BattleTerrain.field_i + 1;
-            in.field_k = -1;
+            SocialPacketHelpers.field_k = -1;
             decompiledSharedTail0 = (var4 != 0);
           }
           if ((decompiledSharedTail0) && (VerticalScrollbar.field_gc == 1 &&
             IterableNodeHashTable.field_i < 0 &&
             0 < BattleTerrain.field_i)) {
-            CombatWorld.c(-2483, 95);
-            in.field_k = -1;
+            CombatWorld.playSoundEffect(-2483, 95);
+            SocialPacketHelpers.field_k = -1;
             BattleTerrain.field_i = BattleTerrain.field_i - 1;
           }
           if (!param0) {
@@ -3374,28 +3374,28 @@ final class SentinelDesigner {
           boolean decompiledFrameRemainder0 = true;
           if ((VerticalScrollbar.field_gc != 1) &&
             (decompiledFrameRemainder0 = !(QuickChatPhraseDefinition.field_C < 0)) &&
-            (decompiledFrameRemainder0 = (~QuickChatPhraseDefinition.field_C != ~un.field_i)) &&
-            (decompiledFrameRemainder0 = (QuickChatPhraseDefinition.field_C != in.field_k))) {
-            CombatWorld.c(-2483, 97);
+            (decompiledFrameRemainder0 = (~QuickChatPhraseDefinition.field_C != ~ChatHistoryAllocator.field_i)) &&
+            (decompiledFrameRemainder0 = (QuickChatPhraseDefinition.field_C != SocialPacketHelpers.field_k))) {
+            CombatWorld.playSoundEffect(-2483, 97);
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (QuickChatPhraseDefinition.field_C != -1) {
-              CombatWorld.c(-2483, 0);
+              CombatWorld.playSoundEffect(-2483, 0);
             }
-            if (~QuickChatPhraseDefinition.field_C == ~in.field_k) {
-              in.field_k = -1;
+            if (~QuickChatPhraseDefinition.field_C == ~SocialPacketHelpers.field_k) {
+              SocialPacketHelpers.field_k = -1;
               if ((var4 != 0) &&
                 (-1 != QuickChatPhraseDefinition.field_C)) {
-                in.field_k = QuickChatPhraseDefinition.field_C;
+                SocialPacketHelpers.field_k = QuickChatPhraseDefinition.field_C;
               }
             } else {
               if (-1 != QuickChatPhraseDefinition.field_C) {
-                in.field_k = QuickChatPhraseDefinition.field_C;
+                SocialPacketHelpers.field_k = QuickChatPhraseDefinition.field_C;
               }
             }
           }
-          un.field_i = QuickChatPhraseDefinition.field_C;
+          ChatHistoryAllocator.field_i = QuickChatPhraseDefinition.field_C;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3404,7 +3404,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void a(int param0, boolean param1, int param2) {
+    private final void drawItemDetails(int param0, boolean param1, int param2) {
         int stackIn_14_0 = 0;
         String stackIn_40_0 = null;
         CoverageBitmapFont stackIn_179_0 = null;
@@ -3459,7 +3459,7 @@ final class SentinelDesigner {
         int var23Lifetime1;
         var24 = SteelSentinels.obfuscationControl;
         try {
-          var4_int = uc.field_e[this.field_c][param0];
+          var4_int = DesignerPageTables.field_e[this.field_c][param0];
           var5 = 0;
           var6 = 0;
           if (1 == var4_int ||
@@ -3469,13 +3469,13 @@ final class SentinelDesigner {
             var6 = stackIn_14_0;
           }
           if (var4_int == 28 &&
-            PacketBuffer.h((byte) -72) &&
+            PacketBuffer.needsSpecialPartTutorial((byte) -72) &&
             0 != (32 & MouseWheelInput.field_c)) {
             var5 = 13548069;
           }
           if (var6 == 0 &&
             var4_int == 0 &&
-            !GzipDecoder.b(106) &&
+            !GzipDecoder.ownsSpecialPart(106) &&
             (MouseWheelInput.field_c & 32) == 0) {
             var5 = 13696896;
           }
@@ -3489,7 +3489,7 @@ final class SentinelDesigner {
           if (param2 != 30241) {
             return;
           }
-          var9 = di.field_g;
+          var9 = OptionMaskHelpers.field_g;
           if (var9 == 0 ||
             var9 == 1 ||
             var9 == 7 ||
@@ -3508,7 +3508,7 @@ final class SentinelDesigner {
           }
           if ((var4_int != 9 ||
             var8 == 0 || var24 != 0) && (var4_int == 9 &&
-            di.field_g == 4)) {
+            OptionMaskHelpers.field_g == 4)) {
             var7 = VerticalScrollbar.field_fc;
           }
           if (var6 != 0) {
@@ -3522,7 +3522,7 @@ final class SentinelDesigner {
               GzipDecoder.field_g != 12) {
               if (SceneWidget.field_Jb == 1 ||
                 GzipDecoder.field_g == 1) {
-                var7 = un.field_d;
+                var7 = ChatHistoryAllocator.field_d;
                 decompiledFrameRemainder0 = (var24 != 0);
               }
               if ((decompiledFrameRemainder0) && (SceneWidget.field_Jb == 2 ||
@@ -3552,21 +3552,21 @@ final class SentinelDesigner {
             var15 = 0;
             var16 = -1;
             var5 = 0;
-            if (var11 < fm.field_f[var10_int]) {
+            if (var11 < QuickChatParameterType.field_f[var10_int]) {
               var17 = var10_int;
               if (var17 != 0 ||
                 var24 != 0) {
                 if (1 == var17) {
-                  var12_ref = Js5NetworkRequest.a(-1, jh.field_a[var11]);
-                  var16 = ed.field_c[1][var11];
+                  var12_ref = Js5NetworkRequest.formatMinutesSeconds(-1, jh.field_a[var11]);
+                  var16 = SessionSeedHelpers.field_c[1][var11];
                   var15 = jh.field_a[var11];
                   decompiledFrameRemainder1 = false;
                 }
                 if (((decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder1 = (var17 == 2))) && (var24 == 0)) {
-                  var12_ref = Js5NetworkRequest.a(param2 ^ -30242, jh.field_a[10 + var11]);
+                  var12_ref = Js5NetworkRequest.formatMinutesSeconds(param2 ^ -30242, jh.field_a[10 + var11]);
                   var15 = jh.field_a[var11 + 10];
-                  var16 = ed.field_c[2][var11];
+                  var16 = SessionSeedHelpers.field_c[2][var11];
                   decompiledFrameRemainder1 = false;
                 }
               }
@@ -3574,7 +3574,7 @@ final class SentinelDesigner {
                 var12_ref = SceneWidget.field_jb[5];
               }
             } else {
-              if (this.b(false, var10_int, var11)) {
+              if (this.isMissionUnlocked(false, var10_int, var11)) {
                 var14_ref_String = "8fdfff";
                 var12_ref = SceneWidget.field_jb[6];
               } else {
@@ -3601,12 +3601,12 @@ final class SentinelDesigner {
               }
             }
             if (param1 &&
-              var11 <= fm.field_f[var10_int]) {
+              var11 <= QuickChatParameterType.field_f[var10_int]) {
               var9Lifetime1 = -1;
               var7 = MarkerSlider.field_cb[var11 + var10_int * 10];
             }
           }
-          var7 = WidgetStyleLayer.a(42, var7);
+          var7 = WidgetStyleLayer.toUpperCaseOutsideTags(42, var7);
           var10 = BirthDateEntryPanel.field_U;
           var11 = 0;
           if (this.field_c == 0) {
@@ -3622,17 +3622,17 @@ final class SentinelDesigner {
             var10 = stackIn_179_0;
           }
           var12 = ((BitmapFont) ((Object) var10)).textWidth(var7);
-          var13 = this.g(127, param0);
-          var14 = this.a(param0, (byte) 109);
-          var15Lifetime1 = this.b(param0, (byte) 27);
+          var13 = this.getItemLeft(127, param0);
+          var14 = this.getItemRight(param0, (byte) 109);
+          var15Lifetime1 = this.getItemTop(param0, (byte) 27);
           if (var4_int == 20 ||
             var4_int == 21) {
             var12 = 170 + StrongCacheEntry.field_K;
           }
           var16Lifetime1 = var14 - (-var13 + var12) >> 1;
-          var17Lifetime1 = this.c(25, param0);
+          var17Lifetime1 = this.getItemHeight(25, param0);
           var18 = var14 - var13;
-          var19 = this.c(25, param0);
+          var19 = this.getItemHeight(25, param0);
           var20 = GradientOutlineTextPainter.field_o;
           if (param1) {
             var20Lifetime1 = Js5Transport.field_l;
@@ -3647,29 +3647,29 @@ final class SentinelDesigner {
             EmailCredentials.field_j == 0 ||
             var4_int == 18 &&
             EmailCredentials.field_j == 1) {
-            var20Lifetime2 = ja.field_e;
+            var20Lifetime2 = IconLookupHelpers.field_e;
           }
           var20Lifetime3 = BirthDateEntryPanel.field_T;
           if (var4_int == 38 ||
             var4_int == 25 ||
             var4_int == 26 ||
             var4_int == 39) {
-            var20Lifetime3 = sa.field_e;
+            var20Lifetime3 = LoadingStatusHelpers.field_e;
           }
           stackIn_233_0 = (param1) ? 1044724 : 1021128;
           var21 = stackIn_233_0;
           if ((var4_int == 38 ||
             25 == var4_int ||
-            var4_int == 26) && (this.a(param2 - 30122, param0) &&
+            var4_int == 26) && (this.isItemEnabled(param2 - 30122, param0) &&
             param1)) {
             var20Lifetime3 = MouseInputHandler.field_d;
             var21 = 0;
           }
-          if (!this.a(-2) && (this.field_c != 17 ||
-            !(0 > this.b(-125, param0))) && var4_int != 39 && (this.field_c != 5 ||
-            !(this.b(-73, param0) < 0))) {
+          if (!this.isNarrowItemScreen(-2) && (this.field_c != 17 ||
+            !(0 > this.getBottomRowIndex(-125, param0))) && var4_int != 39 && (this.field_c != 5 ||
+            !(this.getBottomRowIndex(-73, param0) < 0))) {
             if ((this.field_c == 6) &&
-              (!(this.b(-81, param0) >= 0))) {
+              (!(this.getBottomRowIndex(-81, param0) >= 0))) {
               if (param1) {
                 stackIn_275_0 = MouseInputHandler.field_d;
               } else {
@@ -3697,13 +3697,13 @@ final class SentinelDesigner {
           }
           if (var4_int == 20 ||
             var4_int == 21) {
-            jm.a(var15Lifetime1, var19, var20Lifetime3, 1, -3 + StrongCacheEntry.field_K + var13, 176);
+            PendingIntReplyRequest.drawNineSliceFrame(var15Lifetime1, var19, var20Lifetime3, 1, -3 + StrongCacheEntry.field_K + var13, 176);
           }
           if (var4_int != 20 &&
             var4_int != 21 || var24 != 0) {
-            jm.a(var15Lifetime1, var19, var20Lifetime3, 1, var13, var18);
+            PendingIntReplyRequest.drawNineSliceFrame(var15Lifetime1, var19, var20Lifetime3, 1, var13, var18);
           }
-          if (!this.a(param2 ^ 30292, param0)) {
+          if (!this.isItemEnabled(param2 ^ 30292, param0)) {
             var21 = 7829367;
             if (param1 &&
               25 != var4_int &&
@@ -3726,16 +3726,16 @@ final class SentinelDesigner {
           if (25 != var4_int ||
             var24 != 0) {
             if (var4_int == 26) {
-              var22Lifetime1 = (var14 - var13 - gm.field_b.field_A) / 2 + var13;
+              var22Lifetime1 = (var14 - var13 - EmailValidationHelpers.field_b.field_A) / 2 + var13;
               if (1021128 == var21) {
                 var21 = 2061990;
               }
-              var23Lifetime1 = var15Lifetime1 + (var19 - gm.field_b.field_F) / 2;
+              var23Lifetime1 = var15Lifetime1 + (var19 - EmailValidationHelpers.field_b.field_F) / 2;
               var7 = "";
               if (var21 == 7829367) {
                 var21 = 930889;
               }
-              gm.field_b.drawTintedGrayscale(var22Lifetime1, var23Lifetime1, var21);
+              EmailValidationHelpers.field_b.drawTintedGrayscale(var22Lifetime1, var23Lifetime1, var21);
             }
             if (var4_int != 26 ||
               var24 != 0) {
@@ -3801,7 +3801,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void q(int param0) {
+    private final void handleAnimationEditorKey(int param0) {
         if (LoginDialogHelpers.field_c == null) {
           return;
         }
@@ -3815,7 +3815,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void a(String param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void drawStatRow(String param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8) {
         RuntimeException runtimeException = null;
         CoverageBitmapFont var10 = null;
         int var11 = 0;
@@ -3871,7 +3871,7 @@ final class SentinelDesigner {
           ((BitmapFont) ((Object) var10)).drawRight(var13Lifetime3, -6 + QuickChatPhraseCache.field_h[4], param2, var11, -1);
           var13Lifetime4 = param6 + "%";
           if (param8 > -125) {
-            this.a(-34, false, -5);
+            this.drawItemDetails(-34, false, -5);
           }
           ((BitmapFont) ((Object) var10)).drawRight(var13Lifetime4, -6 + QuickChatPhraseCache.field_h[5], param2, var11, -1);
           var13Lifetime5 = param4 + "%";
@@ -3891,7 +3891,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void f(int param0) {
+    private final void updateMembershipNotice(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -3903,10 +3903,10 @@ final class SentinelDesigner {
           if (param0 <= 63) {
             this.field_k = -30;
           }
-          stackIn_7_0 = (lc.field_c == null) ? 0 : 1;
+          stackIn_7_0 = (SettingSearchHelpers.field_c == null) ? 0 : 1;
           var3 = stackIn_7_0;
           var4 = ChatMessage.field_v;
-          var4 = var4 + " " + LobbyGame.replaceCharacter('#', "<br><br>", true, SocketConnector.formatTemplate(GradientOutlineTextPainter.a(var2_int != 0, true, var3 != 0, false), -48, new String[]{BoundedRandomAccessFile.field_h}));
+          var4 = var4 + " " + LobbyGame.replaceCharacter('#', "<br><br>", true, SocketConnector.formatTemplate(GradientOutlineTextPainter.chooseClickPrompt(var2_int != 0, true, var3 != 0, false), -48, new String[]{BoundedRandomAccessFile.field_h}));
           LoginDialogHelpers.field_j.drawParagraph(var4, 10, 70, 620, 180, 1021128, -1, 1, 0, 18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3916,7 +3916,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void j(byte param0) {
+    private final void drawHighscoreTable(byte param0) {
         int stackIn_34_0 = 0;
         int stackIn_34_1 = 0;
         boolean stackIn_48_1 = false;
@@ -3954,30 +3954,30 @@ final class SentinelDesigner {
           }
           var2 = BirthDateEntryPanel.field_U;
           var3 = 1;
-          if (qi.field_d == null ||
-            ~qi.field_d.field_C != ~var3) {
-            qi.field_d = LoginDialog.a((byte) 122, 1, var3, 3, 10);
+          if (LoginCredentialHelpers.field_d == null ||
+            ~LoginCredentialHelpers.field_d.field_C != ~var3) {
+            LoginCredentialHelpers.field_d = LoginDialog.findOrSendListRequest((byte) 122, 1, var3, 3, 10);
           }
           var4 = DropTargetWidget.field_R;
-          var5 = ChatPanelHelpers.findSubmittedScoreRow(lc.field_c, 7047, var4, qi.field_d);
-          if (null != lc.field_c &&
-            ~lc.field_c.field_y != ~var3) {
+          var5 = ChatPanelHelpers.findSubmittedScoreRow(SettingSearchHelpers.field_c, 7047, var4, LoginCredentialHelpers.field_d);
+          if (null != SettingSearchHelpers.field_c &&
+            ~SettingSearchHelpers.field_c.field_y != ~var3) {
             var5 = 100;
           }
-          if (lc.field_c != null &&
+          if (SettingSearchHelpers.field_c != null &&
             0 <= var5) {
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!qi.field_d.field_q) {
+          if (!LoginCredentialHelpers.field_d.field_q) {
             var6 = GameApplet.field_a;
             decompiledFrameRemainder0 = (var16 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (null != qi.field_d.field_x &&
-              null != qi.field_d.field_z) {
+            if (null != LoginCredentialHelpers.field_d.field_x &&
+              null != LoginCredentialHelpers.field_d.field_z) {
               var8 = 1021128;
-              var9 = qi.field_d.field_x[var4];
-              var10 = qi.field_d.field_z[var4];
+              var9 = LoginCredentialHelpers.field_d.field_x[var4];
+              var10 = LoginCredentialHelpers.field_d.field_z[var4];
               SoftwareRaster.drawRectangleOutline(48, 88, 544, 286, 1130327);
               var11_int = 1;
               boolean decompiledNaturalLoopExit0 = false;
@@ -4007,16 +4007,16 @@ final class SentinelDesigner {
               var11_intLifetime1 = 0;
               while (true) {
                 if (var11_intLifetime1 >= 10) {
-                  if (lc.field_c != null &&
+                  if (SettingSearchHelpers.field_c != null &&
                     var5 < 0) {
                     var7Lifetime2 = 345;
-                    var10 = lc.field_c.field_q;
+                    var10 = SettingSearchHelpers.field_c.field_q;
                     var11 = GrowableIntList.field_l;
                     var12 = 0;
                     var13 = NodeHashTable.nonnegativeRemainder(false, var10[var12], 12);
                     var14 = NodeHashTable.nonnegativeRemainder(false, LoadoutHelpers.floorDivide(126, var10[var12], 12), 43);
                     var15 = LoadoutHelpers.floorDivide(113, var10[var12], 516);
-                    this.a(true, false, var7Lifetime2, var14, var11, var13, var15, 0);
+                    this.drawTableRow(true, false, var7Lifetime2, var14, var11, var13, var15, 0);
                   }
                   break;
                 }
@@ -4031,7 +4031,7 @@ final class SentinelDesigner {
                     var14Lifetime1 = NodeHashTable.nonnegativeRemainder(false, LoadoutHelpers.floorDivide(119, var10[var11_intLifetime1], 12), 43);
                     var15Lifetime1 = LoadoutHelpers.floorDivide(122, var10[var11_intLifetime1], 516);
                     stackIn_48_1 = (~var5 == ~var11_intLifetime1);
-                    this.a(stackIn_48_1, false, var7Lifetime2, var14Lifetime1, var12_ref_String, var13Lifetime1, var15Lifetime1, 1 + var11_intLifetime1);
+                    this.drawTableRow(stackIn_48_1, false, var7Lifetime2, var14Lifetime1, var12_ref_String, var13Lifetime1, var15Lifetime1, 1 + var11_intLifetime1);
                     var6 = AccountRequestDialog.field_Fb;
                   }
                   var7Lifetime2 += 17;
@@ -4041,10 +4041,10 @@ final class SentinelDesigner {
                 break;
               }
               if (var16 != 0) {
-                var6 = dj.field_h;
+                var6 = NumberParsingHelpers.field_h;
               }
             } else {
-              var6 = dj.field_h;
+              var6 = NumberParsingHelpers.field_h;
             }
           }
           var7Lifetime1 = 368;
@@ -4057,7 +4057,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void a(int param0, int param1, boolean param2) {
+    private final void drawItemButton(int param0, int param1, boolean param2) {
         int stackIn_18_0 = 0;
         int stackIn_80_0 = 0;
         int stackIn_93_0 = 0;
@@ -4077,7 +4077,7 @@ final class SentinelDesigner {
         int var15 = 0;
         var15 = SteelSentinels.obfuscationControl;
         try {
-          var4_int = uc.field_e[this.field_c][param1];
+          var4_int = DesignerPageTables.field_e[this.field_c][param1];
           if (-1 == var4_int) {
             param2 = false;
           }
@@ -4090,11 +4090,11 @@ final class SentinelDesigner {
           }
           var6 = -107 % ((-50 - param0) / 53);
           var7 = BirthDateEntryPanel.field_T;
-          var8 = this.g(127, param1);
-          var9 = this.b(param1, (byte) 95);
-          var10 = this.a(param1, (byte) 108) - var8;
-          var11 = this.c(25, param1);
-          jm.a(var9, var11, var7, 1, var8, var10);
+          var8 = this.getItemLeft(127, param1);
+          var9 = this.getItemTop(param1, (byte) 95);
+          var10 = this.getItemRight(param1, (byte) 108) - var8;
+          var11 = this.getItemHeight(25, param1);
+          PendingIntReplyRequest.drawNineSliceFrame(var9, var11, var7, 1, var8, var10);
           if (var4_int < 0) {
             ResizableModalPanel.field_bb.drawTransparent(3 + var8, 2 + var9);
             if (var15 == 0) {
@@ -4115,7 +4115,7 @@ final class SentinelDesigner {
               boolean decompiledSharedTail0 = (SceneWidget.field_Jb != 1 &&
                 GzipDecoder.field_g != 1);
               if (!decompiledSharedTail0) {
-                var12 = un.field_d;
+                var12 = ChatHistoryAllocator.field_d;
                 decompiledSharedTail0 = (var15 != 0);
               }
               if ((decompiledSharedTail0) && (SceneWidget.field_Jb == 2 ||
@@ -4132,13 +4132,13 @@ final class SentinelDesigner {
             this.field_c == 20) {
             var12 = BoundedUrlRequest.field_f;
           }
-          var12 = WidgetStyleLayer.a(42, var12);
+          var12 = WidgetStyleLayer.toUpperCaseOutsideTags(42, var12);
           if (var5 != 0) {
             var12 = var12 + " " + (TickClock.field_g * 33 / ReflectionCheck.field_r + DiskCacheWorker.field_l * 33) + "%";
           }
           stackIn_80_0 = (param2) ? 1044724 : 1021128;
           var13 = stackIn_80_0;
-          if (!this.a(119, param1)) {
+          if (!this.isItemEnabled(119, param1)) {
             if (param2 &&
               var4_int != 26 &&
               var4_int != 25) {
@@ -4158,7 +4158,7 @@ final class SentinelDesigner {
           }
           if ((var4_int == 33 ||
             var4_int == 40) &&
-            (dc.field_g == 16 &&
+            (TableColumns.field_g == 16 &&
             !param2 &&
             0 == (32 & MouseWheelInput.field_c))) {
             var13 = 13696896;
@@ -4178,7 +4178,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void n(int param0) {
+    private final void drawMissionSelection(int param0) {
         String stackIn_24_0 = null;
         RgbSprite[] stackIn_34_0 = null;
         int stackIn_35_1 = 0;
@@ -4246,23 +4246,23 @@ final class SentinelDesigner {
         var29 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder1 = true;
-          var2_int = this.b(0, (byte) 29);
-          var3 = this.g(126, 0);
-          var4 = this.a(1, (byte) 114);
-          var5 = this.b(2, (byte) -103) + this.c(25, 2);
+          var2_int = this.getItemTop(0, (byte) 29);
+          var3 = this.getItemLeft(126, 0);
+          var4 = this.getItemRight(1, (byte) 114);
+          var5 = this.getItemTop(2, (byte) -103) + this.getItemHeight(25, 2);
           var2_int -= 8;
           var3 -= 8;
           var4 += 8;
           var5 += 8;
           SoftwareRaster.drawRectangleOutline(var3, var2_int, -var3 + var4, -var2_int + var5, 6316128);
-          var6 = this.a(0, (byte) 108) + 4;
-          var7 = -var6 + (-4 + this.g(127, 1));
-          var8 = this.b(0, (byte) -125);
-          var9 = this.c(25, 0);
+          var6 = this.getItemRight(0, (byte) 108) + 4;
+          var7 = -var6 + (-4 + this.getItemLeft(127, 1));
+          var8 = this.getItemTop(0, (byte) -125);
+          var9 = this.getItemHeight(25, 0);
           var10 = 1064792;
           var11 = SceneWidget.field_jb[0];
-          if ((QuickChatHelpDialog.field_Ub >= fm.field_f[DirectByteStorage.field_j]) &&
-            (decompiledFrameRemainder1 = !(!this.b(false, DirectByteStorage.field_j, QuickChatHelpDialog.field_Ub)))) {
+          if ((QuickChatHelpDialog.field_Ub >= QuickChatParameterType.field_f[DirectByteStorage.field_j]) &&
+            (decompiledFrameRemainder1 = !(!this.isMissionUnlocked(false, DirectByteStorage.field_j, QuickChatHelpDialog.field_Ub)))) {
             var11 = SceneWidget.field_jb[3];
             decompiledFrameRemainder1 = (var29 != 0);
           }
@@ -4280,11 +4280,11 @@ final class SentinelDesigner {
             }
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameRemainder0)) {
-              var11 = SocketConnector.formatTemplate(SceneWidget.field_jb[2], -45, new String[]{Js5NetworkRequest.a(param0 ^ -21346, jh.field_a[QuickChatHelpDialog.field_Ub])});
+              var11 = SocketConnector.formatTemplate(SceneWidget.field_jb[2], -45, new String[]{Js5NetworkRequest.formatMinutesSeconds(param0 ^ -21346, jh.field_a[QuickChatHelpDialog.field_Ub])});
               decompiledFrameRemainder1 = (var29 != 0);
             }
             if (decompiledFrameRemainder1) {
-              var11 = SocketConnector.formatTemplate(SceneWidget.field_jb[2], -84, new String[]{Js5NetworkRequest.a(param0 ^ -21346, jh.field_a[10 + QuickChatHelpDialog.field_Ub])});
+              var11 = SocketConnector.formatTemplate(SceneWidget.field_jb[2], -84, new String[]{Js5NetworkRequest.formatMinutesSeconds(param0 ^ -21346, jh.field_a[10 + QuickChatHelpDialog.field_Ub])});
             }
           }
           if (DirectByteStorage.field_j != 0) {
@@ -4295,8 +4295,8 @@ final class SentinelDesigner {
           var12 = SocketConnector.formatTemplate(stackIn_24_0, -88, new String[]{Integer.toString(QuickChatHelpDialog.field_Ub + 1), var11});
           BirthDateEntryPanel.field_U.drawCentered(var12, var7 / 2 + var6, var8 + 16, 1021128, -1);
           if (0 < DirectByteStorage.field_j &&
-            QuickChatHelpDialog.field_Ub < fm.field_f[DirectByteStorage.field_j]) {
-            var13 = ed.field_c[DirectByteStorage.field_j][QuickChatHelpDialog.field_Ub];
+            QuickChatHelpDialog.field_Ub < QuickChatParameterType.field_f[DirectByteStorage.field_j]) {
+            var13 = SessionSeedHelpers.field_c[DirectByteStorage.field_j][QuickChatHelpDialog.field_Ub];
             var14 = 3 * var13 / 2;
             var15 = jh.field_a[(-1 + DirectByteStorage.field_j) * 10 + QuickChatHelpDialog.field_Ub];
             if (var14 >= var15) {
@@ -4320,7 +4320,7 @@ final class SentinelDesigner {
           var2_intLifetime1 = 6 + (var8 + var9);
           var4 -= 8;
           SoftwareRaster.drawRectangleOutline(var6, var8, var7, var9, var10);
-          var5Lifetime1 = -8 + this.b(2, (byte) -109);
+          var5Lifetime1 = -8 + this.getItemTop(2, (byte) -109);
           SoftwareRaster.drawRectangleOutline(var3, var2_intLifetime1, var4 - var3, -var2_intLifetime1 + var5Lifetime1, 2061990);
           var13Lifetime1 = 100;
           var14Lifetime1 = 110;
@@ -4340,12 +4340,12 @@ final class SentinelDesigner {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var22.length <= var23))) {
             var24 = var22[var23];
-            var25_int = DialWidget.a(var24, param0 ^ 21371);
+            var25_int = DialWidget.componentPresetIndex(var24, param0 ^ 21371);
             stackIn_55_0 = 0;
             stackIn_55_1 = var25_int;
             if (var29 == 0) {
               if (stackIn_55_0 <= stackIn_55_1 &&
-                fm.field_f[var25_int / 10] > (var25_int % 10)) {
+                QuickChatParameterType.field_f[var25_int / 10] > (var25_int % 10)) {
                 var21++;
               }
               var23++;
@@ -4354,7 +4354,7 @@ final class SentinelDesigner {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_55_0 = fm.field_f[2];
+            stackIn_55_0 = QuickChatParameterType.field_f[2];
             stackIn_55_1 = 10;
           }
           if (stackIn_55_0 == stackIn_55_1) {
@@ -4363,12 +4363,12 @@ final class SentinelDesigner {
           if (QuickChatInputHelpers.readPendingByte((byte) -57)) {
             var21++;
           }
-          var22_ref = SocketConnector.formatTemplate(c.field_s[10 * DirectByteStorage.field_j + QuickChatHelpDialog.field_Ub], param0 ^ -21265, new String[]{qf.field_a[var21], IconLabelControl.capitalizeFirstVisibleLetter(qf.field_a[var21], 0)});
-          var23 = this.a((byte) -128, QuickChatHelpDialog.field_Ub, DirectByteStorage.field_j);
-          if ((15 & fm.field_f[0]) < var23 &&
-            fm.field_f[DirectByteStorage.field_j] <= QuickChatHelpDialog.field_Ub) {
+          var22_ref = SocketConnector.formatTemplate(PendingByteArrayRequest.field_s[10 * DirectByteStorage.field_j + QuickChatHelpDialog.field_Ub], param0 ^ -21265, new String[]{RankingAndRasterHelpers.field_a[var21], IconLabelControl.capitalizeFirstVisibleLetter(RankingAndRasterHelpers.field_a[var21], 0)});
+          var23 = this.getRequiredTrainingProgress((byte) -128, QuickChatHelpDialog.field_Ub, DirectByteStorage.field_j);
+          if ((15 & QuickChatParameterType.field_f[0]) < var23 &&
+            QuickChatParameterType.field_f[DirectByteStorage.field_j] <= QuickChatHelpDialog.field_Ub) {
             if (var23 == 10) {
-              stackIn_70_0 = uj.field_l;
+              stackIn_70_0 = ReflectionCheckHelpers.field_l;
             } else {
               stackIn_70_0 = SocketConnector.formatTemplate(GameApplet.field_b, -26, new String[]{Integer.toString(var23), MarkerSlider.field_cb[var23 - 1]});
             }
@@ -4411,7 +4411,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final int b(int param0, byte param1) {
+    private final int getItemTop(int param0, byte param1) {
         int stackIn_3_0 = 0;
         int stackIn_72_0 = 0;
         int stackIn_92_0 = 0;
@@ -4428,7 +4428,7 @@ final class SentinelDesigner {
         int var4Lifetime1;
         var6 = SteelSentinels.obfuscationControl;
         try {
-          var3_int = this.b(-117, param0);
+          var3_int = this.getBottomRowIndex(-117, param0);
           if (0 <= var3_int) {
             stackIn_3_0 = 448;
             return stackIn_3_0;
@@ -4468,7 +4468,7 @@ final class SentinelDesigner {
                           break regionExit2;
                         }
                         if (var5 == 20) {
-                          var5 = uc.field_e[this.field_c][param0];
+                          var5 = DesignerPageTables.field_e[this.field_c][param0];
                           if (((var5 != 25 ||
                             var6 != 0) && (var5 != 26 ||
                             var6 != 0)) && (var5 != 39)) {
@@ -4497,7 +4497,7 @@ final class SentinelDesigner {
                           return stackIn_92_0;
                         }
                       }
-                      if (ni.b(99)) {
+                      if (ByteArrayPoolHelpers.isAccountCreationMode(99)) {
                         break regionExit1;
                       }
                       var3_intLifetime1 = 379;
@@ -4505,7 +4505,7 @@ final class SentinelDesigner {
                         break regionExit1;
                       }
                     }
-                    if (ni.b(92)) {
+                    if (ByteArrayPoolHelpers.isAccountCreationMode(92)) {
                       break regionExit1;
                     }
                     var3_intLifetime1 = 448;
@@ -4518,11 +4518,11 @@ final class SentinelDesigner {
                     break regionExit1;
                   }
                 }
-                var3_intLifetime1 = uc.field_f[this.field_c] * param0 + 175;
-                if (!ArticulatedPart.f((byte) -15)) {
+                var3_intLifetime1 = DesignerPageTables.field_f[this.field_c] * param0 + 175;
+                if (!ArticulatedPart.isMemberSession((byte) -15)) {
                   var3_intLifetime1 = var3_intLifetime1 + 4 * param0;
                 }
-                var4 = uc.field_e[this.field_c][param0];
+                var4 = DesignerPageTables.field_e[this.field_c][param0];
                 if (34 != var4) {
                   break regionExit1;
                 }
@@ -4535,7 +4535,7 @@ final class SentinelDesigner {
               if (param0 <= 0) {
                 break regionExit1;
               }
-              if (param0 >= uc.field_e[this.field_c].length - 4) {
+              if (param0 >= DesignerPageTables.field_e[this.field_c].length - 4) {
                 break regionExit1;
               }
               var3_intLifetime1 = var3_intLifetime1 + 30 * param0;
@@ -4546,8 +4546,8 @@ final class SentinelDesigner {
             stackIn_72_0 = 29 * (param0 % 10) + 111;
             return stackIn_72_0;
           }
-          if (this.a(-2)) {
-            if (uc.field_e[this.field_c].length < 8) {
+          if (this.isNarrowItemScreen(-2)) {
+            if (DesignerPageTables.field_e[this.field_c].length < 8) {
               stackIn_100_0 = 120 + param0 * 30;
               return stackIn_100_0;
             }
@@ -4555,7 +4555,7 @@ final class SentinelDesigner {
             return stackIn_98_0;
           }
           if (var3_intLifetime1 == 0) {
-            var3_intLifetime1 = param0 * uc.field_f[this.field_c] + uc.field_c[this.field_c];
+            var3_intLifetime1 = param0 * DesignerPageTables.field_f[this.field_c] + DesignerPageTables.field_c[this.field_c];
           }
           var4Lifetime1 = 23 / ((-41 - param1) / 62);
           stackIn_104_0 = this.field_k + var3_intLifetime1;
@@ -4567,7 +4567,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final int f(byte param0) {
+    private final int findItemRight(byte param0) {
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_26_0 = 0;
@@ -4604,10 +4604,10 @@ final class SentinelDesigner {
             return stackIn_8_0;
           }
           var2_int = this.field_g.field_e;
-          var3 = this.b(-107, var2_int);
+          var3 = this.getBottomRowIndex(-107, var2_int);
           if (0 <= var2_int &&
-            var2_int < uc.field_e[this.field_c].length &&
-            uc.field_e[this.field_c][var2_int] != -1) {
+            var2_int < DesignerPageTables.field_e[this.field_c].length &&
+            DesignerPageTables.field_e[this.field_c][var2_int] != -1) {
             if (this.field_c == 20 &&
               var2_int >= 0 &&
               var2_int < 3) {
@@ -4615,7 +4615,7 @@ final class SentinelDesigner {
               return stackIn_39_0;
             }
             if (this.field_c == 0) {
-              if (34 == uc.field_e[this.field_c][var2_int]) {
+              if (34 == DesignerPageTables.field_e[this.field_c][var2_int]) {
                 stackIn_47_0 = SceneWidgetNode.field_F;
                 return stackIn_47_0;
               }
@@ -4630,7 +4630,7 @@ final class SentinelDesigner {
                 var3 = 0;
               }
               do {
-                if (uc.field_e[this.field_c][var2_int] != -1) {
+                if (DesignerPageTables.field_e[this.field_c][var2_int] != -1) {
                   stackIn_65_0 = var2_int;
                   decompiledRegionSelector0 = 1;
                   decompiledFrameCompleted0 = false;
@@ -4671,7 +4671,7 @@ final class SentinelDesigner {
               }
               if (this.field_c == 19 &&
                 19 == this.field_c) {
-                stackIn_99_0 = (uc.field_e[this.field_c] != ArchiveProvider.field_c) ? 20 : 30;
+                stackIn_99_0 = (DesignerPageTables.field_e[this.field_c] != ArchiveProvider.field_c) ? 20 : 30;
                 var4 = stackIn_99_0;
                 if (var2_int >= 0 &&
                   var2_int < -10 + var4) {
@@ -4687,9 +4687,9 @@ final class SentinelDesigner {
             (decompiledFrameCompleted0)) {
             var2_int = 0;
             scanLoop1: while (true) {
-              if (uc.field_e[this.field_c].length > var2_int) {
+              if (DesignerPageTables.field_e[this.field_c].length > var2_int) {
                 stackIn_26_0 = -1;
-                stackIn_26_1 = uc.field_e[this.field_c][var2_int];
+                stackIn_26_1 = DesignerPageTables.field_e[this.field_c][var2_int];
                 if (var5 != 0) {
                   break scanLoop1;
                 }
@@ -4698,7 +4698,7 @@ final class SentinelDesigner {
                   continue;
                 }
               }
-              stackIn_26_0 = uc.field_e[this.field_c].length;
+              stackIn_26_0 = DesignerPageTables.field_e[this.field_c].length;
               stackIn_26_1 = var2_int;
               break;
             }
@@ -4723,7 +4723,7 @@ final class SentinelDesigner {
         return stackIn_65_0;
     }
 
-    private final int d(byte param0) {
+    private final int getHeaderHeight(byte param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -4738,7 +4738,7 @@ final class SentinelDesigner {
             stackIn_7_0 = 37;
             return stackIn_7_0;
           }
-          stackIn_5_0 = ob.field_z.field_B;
+          stackIn_5_0 = PendingPackedReply.field_z.field_B;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4747,7 +4747,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final int d(int param0) {
+    private final int findItemAbove(int param0) {
         int stackIn_3_0 = 0;
         int stackIn_26_0 = 0;
         int stackIn_26_1 = 0;
@@ -4780,15 +4780,15 @@ final class SentinelDesigner {
           }
           var2_int = this.field_g.field_e;
           if (param0 >= -41) {
-            this.a(true);
+            this.updateTransitionOffset(true);
           }
-          var3 = this.b(-102, var2_int);
+          var3 = this.getBottomRowIndex(-102, var2_int);
           if (var2_int >= 0 &&
-            var2_int < uc.field_e[this.field_c].length &&
-            uc.field_e[this.field_c][var2_int] != -1) {
+            var2_int < DesignerPageTables.field_e[this.field_c].length &&
+            DesignerPageTables.field_e[this.field_c][var2_int] != -1) {
             if (this.field_c == 19 &&
               0 <= var3) {
-              stackIn_45_0 = (uc.field_e[this.field_c] != ArchiveProvider.field_c) ? 19 : 29;
+              stackIn_45_0 = (DesignerPageTables.field_e[this.field_c] != ArchiveProvider.field_c) ? 19 : 29;
               return stackIn_45_0;
             }
             if (this.field_c == 20) {
@@ -4797,8 +4797,8 @@ final class SentinelDesigner {
                 return stackIn_51_0;
               }
               if (var2_int == 1 &&
-                !this.a(117, 0)) {
-                stackIn_59_0 = -1 + uc.field_e[this.field_c].length;
+                !this.isItemEnabled(117, 0)) {
+                stackIn_59_0 = -1 + DesignerPageTables.field_e[this.field_c].length;
                 return stackIn_59_0;
               }
             }
@@ -4836,14 +4836,14 @@ final class SentinelDesigner {
               }
             }
             if (this.field_c == 0) {
-              if (uc.field_e[this.field_c][var2_int] != 34) {
+              if (DesignerPageTables.field_e[this.field_c][var2_int] != 34) {
                 var2_int--;
                 if (var2_int >= 0) {
                   stackIn_110_0 = var2_int;
                   return stackIn_110_0;
                 }
-                var2_int = var2_int + uc.field_e[this.field_c].length;
-                if (34 == uc.field_e[this.field_c][var2_int]) {
+                var2_int = var2_int + DesignerPageTables.field_e[this.field_c].length;
+                if (34 == DesignerPageTables.field_e[this.field_c][var2_int]) {
                   var2_int--;
                 }
               }
@@ -4855,21 +4855,21 @@ final class SentinelDesigner {
               return stackIn_130_0;
             }
             if (var2_int == 0) {
-              stackIn_121_0 = uc.field_e[this.field_c].length - 1;
+              stackIn_121_0 = DesignerPageTables.field_e[this.field_c].length - 1;
               return stackIn_121_0;
             }
-            if (var2_int < (uc.field_e[this.field_c].length - 4)) {
+            if (var2_int < (DesignerPageTables.field_e[this.field_c].length - 4)) {
               stackIn_126_0 = var2_int - 1;
               return stackIn_126_0;
             }
-            stackIn_128_0 = uc.field_e[this.field_c].length - 5;
+            stackIn_128_0 = DesignerPageTables.field_e[this.field_c].length - 5;
             return stackIn_128_0;
           }
-          var2_intLifetime1 = uc.field_e[this.field_c].length - 1;
+          var2_intLifetime1 = DesignerPageTables.field_e[this.field_c].length - 1;
           scanLoop1: while (true) {
             if (var2_intLifetime1 >= 0) {
               stackIn_26_0 = 0;
-              stackIn_26_1 = ~uc.field_e[this.field_c][var2_intLifetime1];
+              stackIn_26_1 = ~DesignerPageTables.field_e[this.field_c][var2_intLifetime1];
               if (var4 != 0) {
                 break scanLoop1;
               }
@@ -4883,7 +4883,7 @@ final class SentinelDesigner {
             break;
           }
           if (stackIn_26_0 <= stackIn_26_1 &&
-            uc.field_e[this.field_c][var2_intLifetime1] == 34) {
+            DesignerPageTables.field_e[this.field_c][var2_intLifetime1] == 34) {
             var2_intLifetime1--;
           }
           stackIn_34_0 = var2_intLifetime1;
@@ -4895,7 +4895,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void p(int param0) {
+    private final void drawRankingPanel(int param0) {
         int stackIn_19_0 = 0;
         RuntimeException decompiledCaughtException = null;
         CoverageBitmapFont var2 = null;
@@ -4919,12 +4919,12 @@ final class SentinelDesigner {
           var2 = BirthDateEntryPanel.field_U;
           SoftwareRaster.drawRectangleOutline(40, 80, 560, 330, 3487029);
           SoftwareRaster.drawRectangleOutline(41, 81, 558, 328, 3487029);
-          if (ni.b(25)) {
-            this.e(1021128);
+          if (ByteArrayPoolHelpers.isAccountCreationMode(25)) {
+            this.drawColouredLoadingMessage(1021128);
             return;
           }
-          if (qi.field_j == null) {
-            qi.field_j = QuickChatHelpDialog.getRankingQuery(7, true, 0, 10);
+          if (LoginCredentialHelpers.field_j == null) {
+            LoginCredentialHelpers.field_j = QuickChatHelpDialog.getRankingQuery(7, true, 0, 10);
           }
           if (param0 > -87) {
             return;
@@ -4951,15 +4951,15 @@ final class SentinelDesigner {
           }
           boolean decompiledFrameRemainder0 = true;
           var4 = stackIn_19_0;
-          if (qi.field_j.field_r) {
-            if (null == qi.field_j.field_z) {
-              var5 = dj.field_h;
+          if (LoginCredentialHelpers.field_j.field_r) {
+            if (null == LoginCredentialHelpers.field_j.field_z) {
+              var5 = NumberParsingHelpers.field_h;
               decompiledFrameRemainder0 = (var12 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var5 = wb.field_d;
-              var6 = qi.field_j.field_z[EmailCredentials.field_j];
-              var7 = qi.field_j.field_x[EmailCredentials.field_j];
+              var5 = RewardValueHelpers.field_d;
+              var6 = LoginCredentialHelpers.field_j.field_z[EmailCredentials.field_j];
+              var7 = LoginCredentialHelpers.field_j.field_x[EmailCredentials.field_j];
               SoftwareRaster.drawRectangleOutline(48, 88, 544, 286, 1130327);
               SoftwareRaster.drawHorizontalLine(48, 109, 544, 1130327);
               var8 = 1;
@@ -4985,9 +4985,9 @@ final class SentinelDesigner {
                     if (var6[var9] != null) {
                       var3 = 1021128;
                       var10 = var6[var9];
-                      var11 = Projectile.a(50, var10) ? 1 : 0;
+                      var11 = Projectile.isLocalAccountName(50, var10) ? 1 : 0;
                       var5 = "";
-                      this.a(var10, var9, var4, var11 != 0, var7[3 + var9 * 4], var7[var9 * 4], var7[4 * var9 + 2], var7[4 * var9 + 1], -128);
+                      this.drawStatRow(var10, var9, var4, var11 != 0, var7[3 + var9 * 4], var7[var9 * 4], var7[4 * var9 + 2], var7[4 * var9 + 1], -128);
                       if (var11 != 0) {
                         var3 = 1044724;
                         var8 = 1;
@@ -5004,7 +5004,7 @@ final class SentinelDesigner {
                   var4 = 369;
                   var3 = 1021128;
                 }
-                this.a(GrowableIntList.field_l, -1, var4, true, qi.field_j.field_B, qi.field_j.field_p, qi.field_j.field_o, qi.field_j.field_s, -126);
+                this.drawStatRow(GrowableIntList.field_l, -1, var4, true, LoginCredentialHelpers.field_j.field_B, LoginCredentialHelpers.field_j.field_p, LoginCredentialHelpers.field_j.field_o, LoginCredentialHelpers.field_j.field_s, -126);
                 break;
               }
               if (var12 != 0) {
@@ -5024,7 +5024,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final int a(int param0, byte param1) {
+    private final int getItemRight(int param0, byte param1) {
         int stackIn_3_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
@@ -5050,15 +5050,15 @@ final class SentinelDesigner {
         int var4Lifetime1;
         var5 = SteelSentinels.obfuscationControl;
         try {
-          var3_int = this.b(-72, param0);
+          var3_int = this.getBottomRowIndex(-72, param0);
           if (0 <= var3_int) {
             stackIn_3_0 = var3_int * 159 + 159;
             return stackIn_3_0;
           }
           if (this.field_c == 5 &&
-            !ni.b(79)) {
+            !ByteArrayPoolHelpers.isAccountCreationMode(79)) {
             if (3 > param0) {
-              stackIn_14_0 = this.g(126, param0) + 144;
+              stackIn_14_0 = this.getItemLeft(126, param0) + 144;
             } else {
               stackIn_14_0 = 380;
             }
@@ -5069,22 +5069,22 @@ final class SentinelDesigner {
             return stackIn_17_0;
           }
           if (this.field_c == 6 &&
-            !ni.b(30)) {
+            !ByteArrayPoolHelpers.isAccountCreationMode(30)) {
             if (param0 < 2) {
-              stackIn_28_0 = this.g(127, param0) + 160;
+              stackIn_28_0 = this.getItemLeft(127, param0) + 160;
             } else {
               stackIn_28_0 = 380;
             }
             return stackIn_28_0;
           }
           if (this.field_c == 7) {
-            stackIn_33_0 = 140 + this.g(125, param0);
+            stackIn_33_0 = 140 + this.getItemLeft(125, param0);
             return stackIn_33_0;
           }
           if (this.field_c != 14 &&
             this.field_c != 13) {
             if (0 == this.field_c) {
-              var4 = uc.field_e[this.field_c][param0];
+              var4 = DesignerPageTables.field_e[this.field_c][param0];
               if (34 != var4) {
                 stackIn_47_0 = 450;
                 return stackIn_47_0;
@@ -5093,11 +5093,11 @@ final class SentinelDesigner {
               return stackIn_45_0;
             }
             if (this.field_c == 17) {
-              stackIn_52_0 = -this.g(127, param0) + 640;
+              stackIn_52_0 = -this.getItemLeft(127, param0) + 640;
               return stackIn_52_0;
             }
-            if (this.a(-2)) {
-              stackIn_55_0 = 640 - this.g(126, param0);
+            if (this.isNarrowItemScreen(-2)) {
+              stackIn_55_0 = 640 - this.getItemLeft(126, param0);
               return stackIn_55_0;
             }
             if (15 == this.field_c) {
@@ -5105,8 +5105,8 @@ final class SentinelDesigner {
               return stackIn_60_0;
             }
             if (this.field_c == 19) {
-              stackIn_67_0 = this.g(126, param0);
-              if (uc.field_e[this.field_c] != ArchiveProvider.field_c) {
+              stackIn_67_0 = this.getItemLeft(126, param0);
+              if (DesignerPageTables.field_e[this.field_c] != ArchiveProvider.field_c) {
                 stackIn_68_1 = 260;
               } else {
                 stackIn_68_1 = 180;
@@ -5116,25 +5116,25 @@ final class SentinelDesigner {
             }
             boolean decompiledFrameRemainder0 = true;
             if (this.field_c == 20) {
-              var4Lifetime1 = uc.field_e[this.field_c][param0];
+              var4Lifetime1 = DesignerPageTables.field_e[this.field_c][param0];
               if ((25 != var4Lifetime1 ||
                 var5 != 0) && var4Lifetime1 != 26) {
                 decompiledFrameRemainder0 = (39 == var4Lifetime1);
                 if ((decompiledFrameRemainder0) &&
                   (var5 == 0)) {
-                  stackIn_89_0 = -this.g(125, param0) + 640;
+                  stackIn_89_0 = -this.getItemLeft(125, param0) + 640;
                   return stackIn_89_0;
                 }
               }
               if (decompiledFrameRemainder0) {
-                stackIn_87_0 = 60 + this.g(127, param0);
+                stackIn_87_0 = 60 + this.getItemLeft(127, param0);
                 return stackIn_87_0;
               }
             }
-            stackIn_91_0 = uc.field_d[this.field_c];
+            stackIn_91_0 = DesignerPageTables.field_d[this.field_c];
             return stackIn_91_0;
           }
-          stackIn_39_0 = 160 + this.g(125, param0);
+          stackIn_39_0 = 160 + this.getItemLeft(125, param0);
           return stackIn_39_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5143,7 +5143,7 @@ final class SentinelDesigner {
         }
     }
 
-    final static byte[] a(int param0, String param1) {
+    final static byte[] readTextResourceBytes(int param0, String param1) {
         RuntimeException var2 = null;
         byte[] stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -5152,9 +5152,9 @@ final class SentinelDesigner {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 50) {
-            SentinelDesigner.a(-98, (CharSequence) null);
+            SentinelDesigner.encodeBase37Name(-98, (CharSequence) null);
           }
-          stackIn_4_0 = MusicCrossfadeStream.field_y.a(param1, -742, "");
+          stackIn_4_0 = MusicCrossfadeStream.field_y.getFileByName(param1, -742, "");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5170,12 +5170,12 @@ final class SentinelDesigner {
         }
     }
 
-    private final boolean f(int param0, int param1) {
+    private final boolean isPartAvailable(int param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 111) {
-            this.a(18, false);
+            this.drawEngineeringScreen(18, false);
           }
           if (AssetDecoders.isBitSet(DirectByteStorage.field_m, 1, param0)) {
             return true;
@@ -5183,8 +5183,8 @@ final class SentinelDesigner {
           if (AssetDecoders.isBitSet(QuickChatPhraseDefinition.field_A, param1 - 110, param0)) {
             return false;
           }
-          if (AssetDecoders.isBitSet(QuickChatPhraseDefinition.field_E, 1, param0) && (ni.b(param1 ^ 54) ||
-            !(0 < rd.field_b))) {
+          if (AssetDecoders.isBitSet(QuickChatPhraseDefinition.field_E, 1, param0) && (ByteArrayPoolHelpers.isAccountCreationMode(param1 ^ 54) ||
+            !(0 < SpriteLoadingHelpers.field_b))) {
             return false;
           }
           return true;
@@ -5195,7 +5195,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void e(int param0) {
+    private final void drawColouredLoadingMessage(int param0) {
         CoverageBitmapFont var2 = null;
         String var3 = null;
         try {
@@ -5207,7 +5207,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void o(int param0) {
+    private final void handleDesignerClick(int param0) {
         int stackIn_121_0 = 0;
         int stackIn_121_1 = 0;
         int stackIn_385_0 = 0;
@@ -5324,21 +5324,21 @@ final class SentinelDesigner {
               }
               var4 = 12;
               var2_int = -1 + LoginDialogHelpers.field_d;
-              ArchiveRequest.field_D[0] = DateOfBirthValidator.a(ArchiveRequest.field_D[0], 67108864);
+              ArchiveRequest.field_D[0] = DateOfBirthValidator.bitOr(ArchiveRequest.field_D[0], 67108864);
               var3 = 0;
-              ArchiveRequest.field_D[1] = DateOfBirthValidator.a(ArchiveRequest.field_D[1], 1);
-              ArchiveRequest.field_D[0] = DateOfBirthValidator.a(ArchiveRequest.field_D[0], 1073741824);
-              rn.field_D[1] = DateOfBirthValidator.a(rn.field_D[1], 131072);
-              ArchiveRequest.field_D[0] = DateOfBirthValidator.a(ArchiveRequest.field_D[0], 16777216);
+              ArchiveRequest.field_D[1] = DateOfBirthValidator.bitOr(ArchiveRequest.field_D[1], 1);
+              ArchiveRequest.field_D[0] = DateOfBirthValidator.bitOr(ArchiveRequest.field_D[0], 1073741824);
+              PendingAckRequest.field_D[1] = DateOfBirthValidator.bitOr(PendingAckRequest.field_D[1], 131072);
+              ArchiveRequest.field_D[0] = DateOfBirthValidator.bitOr(ArchiveRequest.field_D[0], 16777216);
             }
             if (LoginDialogHelpers.field_d == 13) {
               NodeIterator.field_f = 2;
               PasswordFieldPainter.field_v = 1000;
-              fm.field_f[0] = 10;
+              QuickChatParameterType.field_f[0] = 10;
               NameCheckResult.field_a = 8;
               DraggableWidget.field_G = 1000;
-              fm.field_f[1] = 10;
-              fm.field_f[2] = 10;
+              QuickChatParameterType.field_f[1] = 10;
+              QuickChatParameterType.field_f[2] = 10;
             }
             boolean decompiledFrameCompleted2 = true;
             boolean decompiledFrameCompleted0 = true;
@@ -5363,18 +5363,18 @@ final class SentinelDesigner {
                       stackIn_121_1 = ~var5;
                       if (stackIn_121_0 < stackIn_121_1) {
                         var6 = FunOrbClient.field_z[var5];
-                        rn.field_D[var6 >> 5] = ClientUiHelpers.bitAnd(rn.field_D[var6 >> 5], ~(1 << ClientUiHelpers.bitAnd(var6, 31)));
+                        PendingAckRequest.field_D[var6 >> 5] = ClientUiHelpers.bitAnd(PendingAckRequest.field_D[var6 >> 5], ~(1 << ClientUiHelpers.bitAnd(var6, 31)));
                         var7 = FallingPickup.getUniqueChildComponentIds(var6, (byte) 28);
                         var8 = var7;
                         stackIn_385_0 = 0;
                         var9_int = stackIn_385_0;
                         while (var8.length > var9_int) {
                           var10 = var8[var9_int];
-                          var11_ref_nk = NodeDeque.a(var10, (byte) 67);
+                          var11_ref_nk = NodeDeque.findPartDefinition(var10, (byte) 67);
                           stackIn_121_0 = -1;
                           stackIn_121_1 = ~(var11_ref_nk.field_Q & 2055);
                           if (stackIn_121_0 != stackIn_121_1) {
-                            rn.field_D[var10 >> 5] = ClientUiHelpers.bitAnd(rn.field_D[var10 >> 5], ~(1 << ClientUiHelpers.bitAnd(var10, 31)));
+                            PendingAckRequest.field_D[var10 >> 5] = ClientUiHelpers.bitAnd(PendingAckRequest.field_D[var10 >> 5], ~(1 << ClientUiHelpers.bitAnd(var10, 31)));
                           }
                           var9_int++;
                         }
@@ -5406,8 +5406,8 @@ final class SentinelDesigner {
                           break regionExit7;
                         case 24:
                           ViewportController.field_j = true;
-                          if (fm.field_f[var2_int] != 10) {
-                            fm.field_f[var2_int] = 10;
+                          if (QuickChatParameterType.field_f[var2_int] != 10) {
+                            QuickChatParameterType.field_f[var2_int] = 10;
                             if (var2_int != 0) {
                               break regionExit6;
                             }
@@ -5419,7 +5419,7 @@ final class SentinelDesigner {
                               break regionExit6;
                             }
                           }
-                          fm.field_f[var2_int] = 0;
+                          QuickChatParameterType.field_f[var2_int] = 0;
                           if (0 != var2_int) {
                             break regionExit6;
                           }
@@ -5439,7 +5439,7 @@ final class SentinelDesigner {
                     var5 = var3;
                     while (var5 < var4) {
                       var6 = FunOrbClient.field_z[var5];
-                      rn.field_D[var6 >> 5] = DateOfBirthValidator.a(rn.field_D[var6 >> 5], 1 << ClientUiHelpers.bitAnd(var6, 31));
+                      PendingAckRequest.field_D[var6 >> 5] = DateOfBirthValidator.bitOr(PendingAckRequest.field_D[var6 >> 5], 1 << ClientUiHelpers.bitAnd(var6, 31));
                       var7 = FallingPickup.getUniqueChildComponentIds(var6, (byte) 28);
                       var8 = var7;
                       stackIn_385_0 = 0;
@@ -5450,15 +5450,15 @@ final class SentinelDesigner {
                       var9_int = stackIn_385_0;
                       while (var9_int < var8.length) {
                         var10 = var8[var9_int];
-                        rn.field_D[var10 >> 5] = DateOfBirthValidator.a(rn.field_D[var10 >> 5], 1 << ClientUiHelpers.bitAnd(31, var10));
+                        PendingAckRequest.field_D[var10 >> 5] = DateOfBirthValidator.bitOr(PendingAckRequest.field_D[var10 >> 5], 1 << ClientUiHelpers.bitAnd(31, var10));
                         var9_int++;
                       }
-                      var8 = LoadingProgressDialog.b(var6, (byte) -110);
+                      var8 = LoadingProgressDialog.distinctPresetTail(var6, (byte) -110);
                       var9 = var8;
                       var10 = 0;
                       while (var9.length > var10) {
                         var11 = var9[var10];
-                        ArchiveRequest.field_D[var11 >> 5] = DateOfBirthValidator.a(ArchiveRequest.field_D[var11 >> 5], 1 << ClientUiHelpers.bitAnd(var11, 31));
+                        ArchiveRequest.field_D[var11 >> 5] = DateOfBirthValidator.bitOr(ArchiveRequest.field_D[var11 >> 5], 1 << ClientUiHelpers.bitAnd(var11, 31));
                         var10++;
                       }
                       var5++;
@@ -5479,8 +5479,8 @@ final class SentinelDesigner {
                     ViewportController.field_j = true;
                     var5 = 0;
                     while (true) {
-                      if (var5 < rn.field_D.length) {
-                        rn.field_D[var5] = 0;
+                      if (var5 < PendingAckRequest.field_D.length) {
+                        PendingAckRequest.field_D[var5] = 0;
                         var5++;
                         if (var12 == 0) {
                           continue;
@@ -5542,21 +5542,21 @@ final class SentinelDesigner {
                     NodeIterator.field_f = 0;
                     var5 = 0;
                     do {
-                      if (!(rn.field_D.length > var5)) {
+                      if (!(PendingAckRequest.field_D.length > var5)) {
                         var5 = 0;
                         break;
                       }
-                      rn.field_D[var5] = 0;
+                      PendingAckRequest.field_D[var5] = 0;
                       var5++;
                     } while (var12 == 0);
                     do {
                       if (!(var5 < ArchiveRequest.field_D.length)) {
                         NameCheckResult.field_a = 0;
-                        fm.field_f[0] = 0;
+                        QuickChatParameterType.field_f[0] = 0;
                         PasswordFieldPainter.field_v = 0;
                         DraggableWidget.field_G = 0;
-                        fm.field_f[1] = 0;
-                        fm.field_f[2] = 0;
+                        QuickChatParameterType.field_f[1] = 0;
+                        QuickChatParameterType.field_f[2] = 0;
                         break;
                       }
                       ArchiveRequest.field_D[var5] = 0;
@@ -5576,11 +5576,11 @@ final class SentinelDesigner {
                     NodeIterator.field_f = 1;
                     var5 = 0;
                     do {
-                      if (!(rn.field_D.length > var5)) {
+                      if (!(PendingAckRequest.field_D.length > var5)) {
                         var5 = 0;
                         break;
                       }
-                      rn.field_D[var5] = 0;
+                      PendingAckRequest.field_D[var5] = 0;
                       var5++;
                     } while (var12 == 0);
                     do {
@@ -5588,7 +5588,7 @@ final class SentinelDesigner {
                         DraggableWidget.field_G = 0;
                         PasswordFieldPainter.field_v = 0;
                         var5 = 55;
-                        rn.field_D[var5 >> 5] = DateOfBirthValidator.a(rn.field_D[var5 >> 5], 1 << ClientUiHelpers.bitAnd(var5, 31));
+                        PendingAckRequest.field_D[var5 >> 5] = DateOfBirthValidator.bitOr(PendingAckRequest.field_D[var5 >> 5], 1 << ClientUiHelpers.bitAnd(var5, 31));
                         break;
                       }
                       ArchiveRequest.field_D[var5] = 0;
@@ -5599,11 +5599,11 @@ final class SentinelDesigner {
                     var8_int = 0;
                     do {
                       if (var8_int >= var7.length) {
-                        var7 = LoadingProgressDialog.b(var5, (byte) -103);
+                        var7 = LoadingProgressDialog.distinctPresetTail(var5, (byte) -103);
                         break;
                       }
                       var9_int = var7[var8_int];
-                      rn.field_D[var9_int >> 5] = DateOfBirthValidator.a(rn.field_D[var9_int >> 5], 1 << ClientUiHelpers.bitAnd(31, var9_int));
+                      PendingAckRequest.field_D[var9_int >> 5] = DateOfBirthValidator.bitOr(PendingAckRequest.field_D[var9_int >> 5], 1 << ClientUiHelpers.bitAnd(31, var9_int));
                       DraggableWidget.field_G = DraggableWidget.field_G + MusicCrossfadeStream.field_v[var9_int];
                       var8_int++;
                     } while (var12 == 0);
@@ -5611,14 +5611,14 @@ final class SentinelDesigner {
                     var9_int = 0;
                     do {
                       if (var9_int >= var8.length) {
-                        fm.field_f[0] = 3;
-                        fm.field_f[1] = 0;
-                        fm.field_f[2] = 0;
+                        QuickChatParameterType.field_f[0] = 3;
+                        QuickChatParameterType.field_f[1] = 0;
+                        QuickChatParameterType.field_f[2] = 0;
                         break;
                       }
                       var10 = var8[var9_int];
-                      ArchiveRequest.field_D[var10 >> 5] = DateOfBirthValidator.a(ArchiveRequest.field_D[var10 >> 5], 1 << ClientUiHelpers.bitAnd(31, var10));
-                      DraggableWidget.field_G = DraggableWidget.field_G + qf.field_h[var10];
+                      ArchiveRequest.field_D[var10 >> 5] = DateOfBirthValidator.bitOr(ArchiveRequest.field_D[var10 >> 5], 1 << ClientUiHelpers.bitAnd(31, var10));
+                      DraggableWidget.field_G = DraggableWidget.field_G + RankingAndRasterHelpers.field_h[var10];
                       var9_int++;
                     } while (var12 == 0);
                     if (var12 == 0) {
@@ -5634,11 +5634,11 @@ final class SentinelDesigner {
                     ViewportController.field_j = true;
                     var5 = 0;
                     do {
-                      if (!(rn.field_D.length > var5)) {
+                      if (!(PendingAckRequest.field_D.length > var5)) {
                         var5 = 0;
                         break;
                       }
-                      rn.field_D[var5] = 0;
+                      PendingAckRequest.field_D[var5] = 0;
                       var5++;
                     } while (var12 == 0);
                     do {
@@ -5653,7 +5653,7 @@ final class SentinelDesigner {
                     var5 = 0;
                     while (var5 < 3) {
                       var6 = FunOrbClient.field_z[var5];
-                      rn.field_D[var6 >> 5] = DateOfBirthValidator.a(rn.field_D[var6 >> 5], 1 << ClientUiHelpers.bitAnd(31, var6));
+                      PendingAckRequest.field_D[var6 >> 5] = DateOfBirthValidator.bitOr(PendingAckRequest.field_D[var6 >> 5], 1 << ClientUiHelpers.bitAnd(31, var6));
                       var7 = FallingPickup.getUniqueChildComponentIds(var6, (byte) 28);
                       var8 = var7;
                       stackIn_385_0 = 0;
@@ -5664,25 +5664,25 @@ final class SentinelDesigner {
                       var9_int = stackIn_385_0;
                       while (var9_int < var8.length) {
                         var10 = var8[var9_int];
-                        rn.field_D[var10 >> 5] = DateOfBirthValidator.a(rn.field_D[var10 >> 5], 1 << ClientUiHelpers.bitAnd(31, var10));
+                        PendingAckRequest.field_D[var10 >> 5] = DateOfBirthValidator.bitOr(PendingAckRequest.field_D[var10 >> 5], 1 << ClientUiHelpers.bitAnd(31, var10));
                         DraggableWidget.field_G = DraggableWidget.field_G + MusicCrossfadeStream.field_v[var10];
                         var9_int++;
                       }
-                      var8 = LoadingProgressDialog.b(var6, (byte) -93);
+                      var8 = LoadingProgressDialog.distinctPresetTail(var6, (byte) -93);
                       var9 = var8;
                       var10 = 0;
                       while (var9.length > var10) {
                         var11 = var9[var10];
-                        ArchiveRequest.field_D[var11 >> 5] = DateOfBirthValidator.a(ArchiveRequest.field_D[var11 >> 5], 1 << ClientUiHelpers.bitAnd(31, var11));
-                        DraggableWidget.field_G = DraggableWidget.field_G + qf.field_h[var11];
+                        ArchiveRequest.field_D[var11 >> 5] = DateOfBirthValidator.bitOr(ArchiveRequest.field_D[var11 >> 5], 1 << ClientUiHelpers.bitAnd(31, var11));
+                        DraggableWidget.field_G = DraggableWidget.field_G + RankingAndRasterHelpers.field_h[var11];
                         var10++;
                       }
                       var5++;
                     }
                     if (decompiledFrameCompleted0) {
-                      fm.field_f[2] = 0;
-                      fm.field_f[0] = 10;
-                      fm.field_f[1] = 0;
+                      QuickChatParameterType.field_f[2] = 0;
+                      QuickChatParameterType.field_f[0] = 10;
+                      QuickChatParameterType.field_f[1] = 0;
                       if (var12 == 0) {
                         break regionExit6;
                       }
@@ -5706,7 +5706,7 @@ final class SentinelDesigner {
                   if ((decompiledFrameCompleted2) &&
                     (decompiledFrameCompleted1) &&
                     (decompiledFrameCompleted0)) {
-                    if (ni.b(46)) {
+                    if (ByteArrayPoolHelpers.isAccountCreationMode(46)) {
                       ClientGlobals.field_a = "Not logged in.";
                       if (var12 == 0) {
                         break regionExit6;
@@ -5722,7 +5722,7 @@ final class SentinelDesigner {
                         var5 = 0;
                         break;
                       }
-                      ClockAndCookieHelpers.field_g.writeInt(true, rn.field_D[var5]);
+                      ClockAndCookieHelpers.field_g.writeInt(true, PendingAckRequest.field_D[var5]);
                       var5++;
                     } while (var12 == 0);
                     do {
@@ -5739,7 +5739,7 @@ final class SentinelDesigner {
                         ClientGlobals.field_a = "Data sent.";
                         break;
                       }
-                      ClockAndCookieHelpers.field_g.writeByte((byte) 115, fm.field_f[var5]);
+                      ClockAndCookieHelpers.field_g.writeByte((byte) 115, QuickChatParameterType.field_f[var5]);
                       var5++;
                     } while (var12 == 0);
                     if (NodeDeque.field_d >= 2) {
@@ -5754,7 +5754,7 @@ final class SentinelDesigner {
                 if ((decompiledFrameCompleted2) &&
                   (decompiledFrameCompleted1) &&
                   (decompiledFrameCompleted0)) {
-                  DateOfBirthValidator.d(-57);
+                  DateOfBirthValidator.clearSceneReferences(-57);
                   var5 = 0;
                   while (true) {
                     if (LoginDialogHelpers.field_k.length > var5) {
@@ -5773,7 +5773,7 @@ final class SentinelDesigner {
                     var5 == 8) {
                     var5 = SceneWidget.field_Jb;
                   }
-                  IterableNodeHashTable.a(0, true, param0 + 29627, var5);
+                  IterableNodeHashTable.switchScreen(0, true, param0 + 29627, var5);
                   if (var12 == 0) {
                     break regionExit6;
                   }
@@ -5808,7 +5808,7 @@ final class SentinelDesigner {
                   (decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder0)) {
-                  jn.a(true, (byte) 114, 200, LoginCredentials.field_f);
+                  MusicTrackHelpers.changeMusicTrack(true, (byte) 114, 200, LoginCredentials.field_f);
                   if (var12 == 0) {
                     return;
                   }
@@ -5817,7 +5817,7 @@ final class SentinelDesigner {
                   (decompiledFrameRemainder3) &&
                   (decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder1)) {
-                  jn.a(true, (byte) 108, 200, NodeHashTableIterator.field_i);
+                  MusicTrackHelpers.changeMusicTrack(true, (byte) 108, 200, NodeHashTableIterator.field_i);
                   if (var12 == 0) {
                     return;
                   }
@@ -5825,25 +5825,25 @@ final class SentinelDesigner {
                 if ((decompiledFrameRemainder4) &&
                   (decompiledFrameRemainder3) &&
                   (decompiledFrameRemainder2)) {
-                  jn.a(true, (byte) 77, 200, ByteStorage.field_e);
+                  MusicTrackHelpers.changeMusicTrack(true, (byte) 77, 200, ByteStorage.field_e);
                   if (var12 == 0) {
                     return;
                   }
                 }
                 if ((decompiledFrameRemainder4) &&
                   (decompiledFrameRemainder3)) {
-                  jn.a(true, (byte) 91, 200, CipherPacketBuffer.field_z);
+                  MusicTrackHelpers.changeMusicTrack(true, (byte) 91, 200, CipherPacketBuffer.field_z);
                   if (var12 == 0) {
                     return;
                   }
                 }
                 if (decompiledFrameRemainder4) {
-                  jn.a(true, (byte) 96, 200, LoginHandshakeHelpers.field_e);
+                  MusicTrackHelpers.changeMusicTrack(true, (byte) 96, 200, LoginHandshakeHelpers.field_e);
                   if (var12 == 0) {
                     return;
                   }
                 }
-                jn.a(true, (byte) 122, 200, SocketConnector.field_a);
+                MusicTrackHelpers.changeMusicTrack(true, (byte) 122, 200, SocketConnector.field_a);
                 return;
               }
             }
@@ -5851,7 +5851,7 @@ final class SentinelDesigner {
               (decompiledFrameCompleted0)) {
               stackIn_385_0 = param0 ^ 31241;
             }
-            CombatWorld.c(stackIn_385_0, 95);
+            CombatWorld.playSoundEffect(stackIn_385_0, 95);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5861,7 +5861,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void l(int param0) {
+    private final void cycleSelectionByKeysWithBack(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -5913,7 +5913,7 @@ final class SentinelDesigner {
             }
           }
           if (param0 != -1) {
-            SentinelDesigner.a(12, (String) null);
+            SentinelDesigner.readTextResourceBytes(12, (String) null);
           }
           this.field_g.handleKeyWithoutNavigation((byte) 22);
           return;
@@ -5924,7 +5924,7 @@ final class SentinelDesigner {
         }
     }
 
-    final void r(int param0) {
+    final void drawScreen(int param0) {
         int stackIn_59_0 = 0;
         int stackIn_60_1 = 0;
         int stackIn_68_0 = 0;
@@ -5976,7 +5976,7 @@ final class SentinelDesigner {
         int var19 = 0;
         var19 = SteelSentinels.obfuscationControl;
         try {
-          if (fm.field_f[0] < 3) {
+          if (QuickChatParameterType.field_f[0] < 3) {
             ImageProducerRasterBuffer.field_A[0] = MarkerSliderPainter.field_p;
             if (var19 != 0) {
               ImageProducerRasterBuffer.field_A[0] = BoundedUrlRequest.field_f;
@@ -5984,7 +5984,7 @@ final class SentinelDesigner {
           } else {
             ImageProducerRasterBuffer.field_A[0] = BoundedUrlRequest.field_f;
           }
-          this.a(false);
+          this.updateTransitionOffset(false);
           if (12 == this.field_c) {
             if (MusicPatchPcmStream.loadMembersBenefitsAssets(-127)) {
               BenefitsScreenHelpers.drawBenefitsScreen(35);
@@ -5992,30 +5992,30 @@ final class SentinelDesigner {
             return;
           }
           if (this.field_c == 21) {
-            if (!tm.field_h &&
-              tm.field_d != null &&
-              tm.field_d.ensureIndex(true) &&
-              tm.field_d.a("members_expansion_screen", (byte) 90) &&
-              tm.field_d.a("arialish12", (byte) 90) &&
-              tm.field_d.a("pump32", (byte) 90) &&
+            if (!SessionUiHelpers.field_h &&
+              SessionUiHelpers.field_d != null &&
+              SessionUiHelpers.field_d.ensureIndex(true) &&
+              SessionUiHelpers.field_d.isGroupLoadedByName("members_expansion_screen", (byte) 90) &&
+              SessionUiHelpers.field_d.isGroupLoadedByName("arialish12", (byte) 90) &&
+              SessionUiHelpers.field_d.isGroupLoadedByName("pump32", (byte) 90) &&
               MusicPatchPcmStream.field_t != null &&
               MusicPatchPcmStream.field_t.ensureIndex(true) &&
-              MusicPatchPcmStream.field_t.a("arialish12", (byte) 90) &&
-              MusicPatchPcmStream.field_t.a("pump32", (byte) 90)) {
-              tm.field_h = true;
+              MusicPatchPcmStream.field_t.isGroupLoadedByName("arialish12", (byte) 90) &&
+              MusicPatchPcmStream.field_t.isGroupLoadedByName("pump32", (byte) 90)) {
+              SessionUiHelpers.field_h = true;
             }
-            if (tm.field_h) {
+            if (SessionUiHelpers.field_h) {
               SocialListUiHelpers.field_c.draw(true);
             }
             return;
           }
           if (this.field_c == param0) {
             TextHotspotWidget.field_eb.drawTransparent(0, -this.field_h + 0);
-            ob.field_z.drawTransparent(0, 60 + this.field_k);
+            PendingPackedReply.field_z.drawTransparent(0, 60 + this.field_k);
             var2_int = 0;
             var2_int = var2_int + PlayingSound.countUnlockedComponents(param0 + 127);
-            var2_int = var2_int + 10 * (fm.field_f[2] + fm.field_f[0] + fm.field_f[1]);
-            var2_int = var2_int + uf.a(param0 ^ 118, DirectByteStorage.field_m) * 10;
+            var2_int = var2_int + 10 * (QuickChatParameterType.field_f[2] + QuickChatParameterType.field_f[0] + QuickChatParameterType.field_f[1]);
+            var2_int = var2_int + SocialTabsPanel.countSetBitsInArray(param0 ^ 118, DirectByteStorage.field_m) * 10;
             stackIn_59_0 = var2_int;
             if (AssetDecoders.isBitSet(DirectByteStorage.field_m, param0 + 1, 25)) {
               stackIn_60_1 = 10;
@@ -6038,13 +6038,13 @@ final class SentinelDesigner {
             var7 = 14419;
             var8 = -var2_int + (450 + this.field_k);
             SoftwareRaster.setClip(550, this.field_k + 171, 560, 450 + this.field_k);
-            Js5ArchiveManager.a(10, var7, 0, 0, var7, 192, 550, var8, var5_int);
+            Js5ArchiveManager.fillAlphaTrapezoid(10, var7, 0, 0, var7, 192, 550, var8, var5_int);
             if (var8 + var5_int < 450 + this.field_k) {
               SoftwareRaster.fillRectangleBlended(550, var8 + var5_int, 10, this.field_k + 450 - (var8 + var5_int), var7, 192);
             }
             SoftwareRaster.resetClip();
             ArchiveProvider.field_b.drawTransparent((-ArchiveProvider.field_b.field_z + 640) / 2, -this.field_h + 15);
-            if (!ni.b(param0 + 98) &&
+            if (!ByteArrayPoolHelpers.isAccountCreationMode(param0 + 98) &&
               NodeDeque.field_d >= 2) {
               var9 = 520;
               var10 = this.field_k + 100;
@@ -6059,12 +6059,12 @@ final class SentinelDesigner {
                 stackIn_93_0 = 0;
               }
               var13 = stackIn_93_0;
-              UsernameCredentials.a(var12, var10, "TESTING", var11_int, var9, param0 + 12490);
+              UsernameCredentials.drawHoverCaptionButton(var12, var10, "TESTING", var11_int, var9, param0 + 12490);
               if (var13 != 0 &&
-                !hg.field_h) {
-                CombatWorld.c(-2483, 97);
+                !HighscoreColumnHeader.field_h) {
+                CombatWorld.playSoundEffect(-2483, 97);
               }
-              hg.field_h = var13 != 0;
+              HighscoreColumnHeader.field_h = var13 != 0;
             }
           }
           boolean decompiledFrameRemainder2 = true;
@@ -6094,7 +6094,7 @@ final class SentinelDesigner {
                   else {
                     if (var5_int == 5 &&
                       var19 == 0) {
-                      var2 = pa.field_j;
+                      var2 = TutorialStepTable.field_j;
                       decompiledFrameRemainder2 = false;
                     }
                     else {
@@ -6124,7 +6124,7 @@ final class SentinelDesigner {
                               if (var5_int == 22 &&
                                 var19 == 0) {
                                 var4 = 1;
-                                var2 = un.field_e;
+                                var2 = ChatHistoryAllocator.field_e;
                                 var3 = 1;
                                 decompiledFrameRemainder2 = false;
                               }
@@ -6144,7 +6144,7 @@ final class SentinelDesigner {
                             if ((decompiledFrameRemainder2) &&
                               (decompiledFrameRemainder1)) {
                               var4 = 1;
-                              var2 = un.field_d;
+                              var2 = ChatHistoryAllocator.field_d;
                               var3 = 1;
                               decompiledFrameRemainder2 = false;
                             }
@@ -6162,24 +6162,24 @@ final class SentinelDesigner {
           }
           if (var4 != 0) {
             var5_int = 60;
-            var5_int = var5_int + 30 * uc.field_e[this.field_c].length;
-            var6_int = -30 + this.b(0, (byte) 126);
-            var7 = -25 + this.g(param0 + 125, 0);
+            var5_int = var5_int + 30 * DesignerPageTables.field_e[this.field_c].length;
+            var6_int = -30 + this.getItemTop(0, (byte) 126);
+            var7 = -25 + this.getItemLeft(param0 + 125, 0);
             var8 = 640 - var7 * 2;
-            jm.a(var6_int, var5_int, AgeValidator.field_p, 1, var7, var8);
+            PendingIntReplyRequest.drawNineSliceFrame(var6_int, var5_int, AgeValidator.field_p, 1, var7, var8);
           }
           if (this.field_c != 0) {
-            var5_int = this.d((byte) 114);
+            var5_int = this.getHeaderHeight((byte) 114);
             CachedArchiveProvider.field_j.drawTiled(0, -5, 80, 7);
             CachedArchiveProvider.field_j.drawTiled(0, 474 - var5_int, 80, 2 + var5_int / 8);
-            CachedTextLayout.c(103);
+            CachedTextLayout.drawTopShadeGradient(103);
             if (var3 != 0 ||
               this.field_c == 7 &&
               !ClientException.field_e &&
               LoginForm.field_U == 0 ||
               this.field_c == 14 &&
               0 == LoginForm.field_U &&
-              (!kf.field_s ||
+              (!HighscoreTable.field_s ||
               !GameApplet.field_l)) {
               if (14 == this.field_c) {
                 var6 = LinkButtonPainter.field_c;
@@ -6227,37 +6227,37 @@ final class SentinelDesigner {
             } else {
               SoftwareRaster.fillRectangle(0, 50, 640, -var5_int + 430, 0);
             }
-            IterableDualNodeDeque.a((byte) -95, TextButton.field_U, 640, 49, 0, 431 - var5_int);
+            IterableDualNodeDeque.drawNineSlicePanel((byte) -95, TextButton.field_U, 640, 49, 0, 431 - var5_int);
             var6_int = 50 - MidiPcmStream.field_db.field_B;
             MidiPcmStream.field_db.drawTransparent(0, var6_int - this.field_h);
             SoftwareRaster.drawHorizontalLineAlpha(0, -this.field_h + 49, 640, 0, 128);
-            sh.a(-16088, 640, var5_int, 480 - var5_int + this.field_k, 0);
+            MenuLayoutHelpers.drawTitleBar(-16088, 640, var5_int, 480 - var5_int + this.field_k, 0);
           }
           if (this.field_c == 17) {
-            var5_int = this.b(0, (byte) 87) - 30;
-            var6_int = 30 + this.b(uc.field_e[this.field_c].length - 5, (byte) -113) + this.c(25, -5 + uc.field_e[this.field_c].length);
-            jm.a(var5_int, var6_int - var5_int, AgeValidator.field_p, 1, 170, 300);
+            var5_int = this.getItemTop(0, (byte) 87) - 30;
+            var6_int = 30 + this.getItemTop(DesignerPageTables.field_e[this.field_c].length - 5, (byte) -113) + this.getItemHeight(25, -5 + DesignerPageTables.field_e[this.field_c].length);
+            PendingIntReplyRequest.drawNineSliceFrame(var5_int, var6_int - var5_int, AgeValidator.field_p, 1, 170, 300);
           }
           if (null != var2) {
-            SocialListPanel.field_Tb.drawCentered(WidgetStyleLayer.a(42, (String) (var2)), 320, 18 + (SocialListPanel.field_Tb.field_G / 2 - this.field_h), 0, -1);
+            SocialListPanel.field_Tb.drawCentered(WidgetStyleLayer.toUpperCaseOutsideTags(42, (String) (var2)), 320, 18 + (SocialListPanel.field_Tb.field_G / 2 - this.field_h), 0, -1);
           }
           var5_int = 0;
           boolean decompiledNaturalLoopExit2 = false;
           while (!(decompiledNaturalLoopExit2 = (!(var5_int < this.field_g.field_m)))) {
-            stackOut_274_0 = this.e(var5_int, param0 + 20);
+            stackOut_274_0 = this.isItemVisible(var5_int, param0 + 20);
             stackIn_296_0 = stackOut_274_0 ? 1 : 0;
             stackIn_275_0 = stackOut_274_0;
             if (var19 == 0) {
               if (stackIn_275_0) {
-                if (this.b(param0 - 103, var5_int) >= 0) {
+                if (this.getBottomRowIndex(param0 - 103, var5_int) >= 0) {
                   stackIn_285_1 = -124;
                   stackIn_285_2 = var5_int;
                   stackIn_286_3 = (~var5_int == ~this.field_g.field_e);
-                  this.a(stackIn_285_1, stackIn_285_2, stackIn_286_3);
+                  this.drawItemButton(stackIn_285_1, stackIn_285_2, stackIn_286_3);
                 } else {
                   stackIn_292_1 = var5_int;
                   stackIn_293_2 = (this.field_g.field_e == var5_int);
-                  this.a(stackIn_292_1, stackIn_293_2, 30241);
+                  this.drawItemDetails(stackIn_292_1, stackIn_293_2, 30241);
                 }
               }
               var5_int++;
@@ -6277,7 +6277,7 @@ final class SentinelDesigner {
                     regionExit6: {
                       if (stackIn_296_0 == 5 &&
                         var19 == 0) {
-                        this.c(-87);
+                        this.drawHighscoresPanel(-87);
                         break regionExit1;
                       } else if (var5_int != 6 ||
                         var19 != 0) {
@@ -6312,19 +6312,19 @@ final class SentinelDesigner {
                                 break regionExit1;
                               }
                             case 16:
-                              this.h(7165);
+                              this.drawAnimationEditor(7165);
                               if (var19 == 0) {
                                 break regionExit1;
                               }
                             case 18:
-                              this.m(param0 + 126);
+                              this.drawDesignSlots(param0 + 126);
                               if (var19 == 0) {
                                 break regionExit1;
                               }
                             case 19:
-                              if (uc.field_e[this.field_c] != ArchiveProvider.field_c) {
-                                AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(42, LobbyPlayer.field_ic[0]), 180, 98, 1021128, -1);
-                                AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(42, LobbyPlayer.field_ic[1]), 460, 98, 1021128, -1);
+                              if (DesignerPageTables.field_e[this.field_c] != ArchiveProvider.field_c) {
+                                AlphaContainer.field_U.drawCentered(WidgetStyleLayer.toUpperCaseOutsideTags(42, LobbyPlayer.field_ic[0]), 180, 98, 1021128, -1);
+                                AlphaContainer.field_U.drawCentered(WidgetStyleLayer.toUpperCaseOutsideTags(42, LobbyPlayer.field_ic[1]), 460, 98, 1021128, -1);
                                 var5_int = 0;
                                 boolean decompiledNaturalLoopExit1 = false;
                                 while (!(decompiledNaturalLoopExit1 = (var5_int >= 20))) {
@@ -6332,24 +6332,24 @@ final class SentinelDesigner {
                                   stackIn_465_1 = 10;
                                   if (var19 == 0) {
                                     if (stackIn_465_0 >= stackIn_465_1 &&
-                                      fm.field_f[var5_int / 10] > 0) {
+                                      QuickChatParameterType.field_f[var5_int / 10] > 0) {
                                       stackIn_460_0 = 21;
                                     } else {
                                       stackIn_460_0 = 0;
                                     }
                                     var6_int = stackIn_460_0;
                                     var7 = 74;
-                                    SoftwareRaster.drawRectangleOutline(-4 + this.g(127, var5_int + 0), var7, this.a(var5_int - 0, (byte) 115) - (this.g(126, 0 + var5_int) - 8), -var7 + (4 + this.b(9 + var5_int, (byte) -103)) + (this.c(25, var5_int + 9) + var6_int), 3158064);
+                                    SoftwareRaster.drawRectangleOutline(-4 + this.getItemLeft(127, var5_int + 0), var7, this.getItemRight(var5_int - 0, (byte) 115) - (this.getItemLeft(126, 0 + var5_int) - 8), -var7 + (4 + this.getItemTop(9 + var5_int, (byte) -103)) + (this.getItemHeight(25, var5_int + 9) + var6_int), 3158064);
                                     var5_int += 10;
                                     continue;
                                   }
                                   break;
                                 }
                                 if (decompiledNaturalLoopExit1) {
-                                  if (fm.field_f[1] <= 0) {
+                                  if (QuickChatParameterType.field_f[1] <= 0) {
                                     break regionExit1;
                                   }
-                                  stackIn_465_0 = ~fm.field_f[1];
+                                  stackIn_465_0 = ~QuickChatParameterType.field_f[1];
                                   stackIn_465_1 = -11;
                                 }
                                 stackIn_469_0 = (stackIn_465_0 != stackIn_465_1) ? 1656673 : 1021128;
@@ -6357,8 +6357,8 @@ final class SentinelDesigner {
                                 var6_int = 0;
                                 var7 = 0;
                                 do {
-                                  if (!(fm.field_f[1] > var7)) {
-                                    BirthDateEntryPanel.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.a(param0 - 1, var6_int), (this.g(127, 19) + this.a(19, (byte) 120)) / 2, this.b(19, (byte) 76) - (-this.c(25, 19) - 17), var5_int, -1);
+                                  if (!(QuickChatParameterType.field_f[1] > var7)) {
+                                    BirthDateEntryPanel.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.formatMinutesSeconds(param0 - 1, var6_int), (this.getItemLeft(127, 19) + this.getItemRight(19, (byte) 120)) / 2, this.getItemTop(19, (byte) 76) - (-this.getItemHeight(25, 19) - 17), var5_int, -1);
                                     break;
                                   }
                                   var6_int = var6_int + jh.field_a[var7];
@@ -6377,8 +6377,8 @@ final class SentinelDesigner {
                                     var6_int = 0;
                                     break;
                                   }
-                                  var5[var6_int] = (this.g(127, var6_int * 10) + this.a(10 * var6_int, (byte) 110)) / 2;
-                                  AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(42, LobbyPlayer.field_ic[var6_int]), var5[var6_int], 98, 1021128, -1);
+                                  var5[var6_int] = (this.getItemLeft(127, var6_int * 10) + this.getItemRight(10 * var6_int, (byte) 110)) / 2;
+                                  AlphaContainer.field_U.drawCentered(WidgetStyleLayer.toUpperCaseOutsideTags(42, LobbyPlayer.field_ic[var6_int]), var5[var6_int], 98, 1021128, -1);
                                   var6_int++;
                                 } while (var19 == 0);
                                 boolean decompiledNaturalLoopExit0 = false;
@@ -6387,14 +6387,14 @@ final class SentinelDesigner {
                                   stackIn_419_1 = -11;
                                   if (var19 == 0) {
                                     if (stackIn_419_0 <= stackIn_419_1 &&
-                                      0 < fm.field_f[var6_int / 10]) {
+                                      0 < QuickChatParameterType.field_f[var6_int / 10]) {
                                       stackIn_417_0 = 21;
                                     } else {
                                       stackIn_417_0 = 0;
                                     }
                                     var7 = stackIn_417_0;
                                     var8 = 74;
-                                    SoftwareRaster.drawRectangleOutline(this.g(126, var6_int + 0) - 4, var8, this.a(0 + var6_int, (byte) 112) - (this.g(126, 0 + var6_int) - 8), this.b(9 + var6_int, (byte) 32) - (-this.c(25, 9 + var6_int) - 4) + (-var8 + var7), 3158064);
+                                    SoftwareRaster.drawRectangleOutline(this.getItemLeft(126, var6_int + 0) - 4, var8, this.getItemRight(0 + var6_int, (byte) 112) - (this.getItemLeft(126, 0 + var6_int) - 8), this.getItemTop(9 + var6_int, (byte) 32) - (-this.getItemHeight(25, 9 + var6_int) - 4) + (-var8 + var7), 3158064);
                                     var6_int += 10;
                                     continue;
                                   }
@@ -6402,15 +6402,15 @@ final class SentinelDesigner {
                                 }
                                 if (decompiledNaturalLoopExit0) {
                                   stackIn_419_0 = 0;
-                                  stackIn_419_1 = fm.field_f[1];
+                                  stackIn_419_1 = QuickChatParameterType.field_f[1];
                                 }
                                 boolean decompiledFrameCompleted1 = true;
                                 if (stackIn_419_0 < stackIn_419_1) {
-                                  stackIn_426_0 = (fm.field_f[1] == 10) ? 1021128 : 1656673;
+                                  stackIn_426_0 = (QuickChatParameterType.field_f[1] == 10) ? 1021128 : 1656673;
                                   var6_int = stackIn_426_0;
                                   var7 = 0;
                                   var8 = 0;
-                                  while (var8 < fm.field_f[1]) {
+                                  while (var8 < QuickChatParameterType.field_f[1]) {
                                     var7 = var7 + jh.field_a[var8];
                                     var8++;
                                     if (var19 != 0) {
@@ -6419,16 +6419,16 @@ final class SentinelDesigner {
                                     }
                                   }
                                   if (decompiledFrameCompleted1) {
-                                    BirthDateEntryPanel.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.a(-1, var7), var5[1], this.b(19, (byte) -125) + (this.c(param0 + 25, 19) + 17), var6_int, -1);
+                                    BirthDateEntryPanel.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.formatMinutesSeconds(-1, var7), var5[1], this.getItemTop(19, (byte) -125) + (this.getItemHeight(param0 + 25, 19) + 17), var6_int, -1);
                                   }
                                 }
                                 boolean decompiledFrameCompleted0 = true;
-                                if (0 < fm.field_f[2]) {
-                                  stackIn_440_0 = (fm.field_f[2] == 10) ? 1021128 : 1656673;
+                                if (0 < QuickChatParameterType.field_f[2]) {
+                                  stackIn_440_0 = (QuickChatParameterType.field_f[2] == 10) ? 1021128 : 1656673;
                                   var6_int = stackIn_440_0;
                                   var7 = 0;
                                   var8 = 0;
-                                  while (var8 < fm.field_f[2]) {
+                                  while (var8 < QuickChatParameterType.field_f[2]) {
                                     var7 = var7 + jh.field_a[var8 + 10];
                                     var8++;
                                     if (var19 != 0) {
@@ -6437,7 +6437,7 @@ final class SentinelDesigner {
                                     }
                                   }
                                   if (decompiledFrameCompleted0) {
-                                    BirthDateEntryPanel.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.a(~param0, var7), var5[2], 17 + (this.b(29, (byte) 108) + this.c(25, 29)), var6_int, -1);
+                                    BirthDateEntryPanel.field_U.drawCentered(MidiPcmStream.field_E + Js5NetworkRequest.formatMinutesSeconds(~param0, var7), var5[2], 17 + (this.getItemTop(29, (byte) 108) + this.getItemHeight(25, 29)), var6_int, -1);
                                   }
                                 }
                                 break regionExit1;
@@ -6448,41 +6448,41 @@ final class SentinelDesigner {
                             default:
                               break regionExit1;
                           }
-                          this.n(21345);
+                          this.drawMissionSelection(21345);
                         }
                         break regionExit1;
                       }
-                      this.p(-119);
+                      this.drawRankingPanel(-119);
                       break regionExit1;
                     }
-                    this.i((byte) -127);
+                    this.drawOpenDialog((byte) -127);
                     if (var19 == 0) {
                       break regionExit1;
                     }
                   }
-                  this.a(48, false);
+                  this.drawEngineeringScreen(48, false);
                   if (var19 == 0) {
                     break regionExit1;
                   }
                 }
-                this.a(48, true);
+                this.drawEngineeringScreen(48, true);
                 if (var19 == 0) {
                   break regionExit1;
                 }
               }
-              this.f(param0 ^ 126);
+              this.updateMembershipNotice(param0 ^ 126);
               if (var19 == 0) {
                 break regionExit1;
               }
             }
             try {
-              ValidationHelpWidget.g((byte) 35);
+              ValidationHelpWidget.drawDesignerPanel((byte) 35);
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5_ref = decompiledCaughtException;
-              PendingIntArrayRequest.field_v = SentinelDesigner.a(ReflectionCheck.field_x, (byte) 118, di.field_c);
-              uc.field_b = ArchiveLoadSequence.buildComponentLoadout(param0 ^ 95, di.field_c, PendingIntArrayRequest.field_v);
-              DateOfBirthValidator.d(param0 - 119);
+              PendingIntArrayRequest.field_v = SentinelDesigner.buildChassisFromDesign(ReflectionCheck.field_x, (byte) 118, OptionMaskHelpers.field_c);
+              DesignerPageTables.field_b = ArchiveLoadSequence.buildComponentLoadout(param0 ^ 95, OptionMaskHelpers.field_c, PendingIntArrayRequest.field_v);
+              DateOfBirthValidator.clearSceneReferences(param0 - 119);
               System.err.println("Draw config: " + var5_ref);
               var5_ref.printStackTrace();
             }
@@ -6507,22 +6507,22 @@ final class SentinelDesigner {
               var11_int = -var8 - 8 + (var7 + var6_int);
               var12 = NameValidationHelpers.field_g;
               NameValidationHelpers.field_g = -1;
-              if (EmailAvailabilityValidator.a(var11_int, var10, 123, BoundedRandomAccessFile.field_h, var8, var9)) {
+              if (EmailAvailabilityValidator.drawHoverTextButton(var11_int, var10, 123, BoundedRandomAccessFile.field_h, var8, var9)) {
                 NameValidationHelpers.field_g = 0;
               }
               var10 = var10 + (var9 + 10);
               var9 = 200;
-              if (EmailAvailabilityValidator.a(var11_int, var10, 126, cf.field_v, var8, var9)) {
+              if (EmailAvailabilityValidator.drawHoverTextButton(var11_int, var10, 126, StatSubmission.field_v, var8, var9)) {
                 NameValidationHelpers.field_g = 1;
               }
               var10 = var10 + (var9 + 10);
               var9 = 100;
-              if (EmailAvailabilityValidator.a(var11_int, var10, 116, tj.field_b, var8, var9)) {
+              if (EmailAvailabilityValidator.drawHoverTextButton(var11_int, var10, 116, HighscoreSubmissionFactory.field_b, var8, var9)) {
                 NameValidationHelpers.field_g = 2;
               }
               if (NameValidationHelpers.field_g != var12 &&
                 NameValidationHelpers.field_g != -1) {
-                CombatWorld.c(-2483, 97);
+                CombatWorld.playSoundEffect(-2483, 97);
               }
               if (var19 == 0) {
                 return;
@@ -6564,7 +6564,7 @@ final class SentinelDesigner {
               DualNodeDeque.field_b != ClientGlobals.field_a) {
               if (var12 >= 0 &&
                 !ContentTransitionDialog.field_ub) {
-                CombatWorld.c(-2483, 97);
+                CombatWorld.playSoundEffect(-2483, 97);
               }
               ContentTransitionDialog.field_ub = !(var12 < 0);
               decompiledFrameRemainder0 = (var19 != 0);
@@ -6574,19 +6574,19 @@ final class SentinelDesigner {
               var14 = 100;
               NameValidationHelpers.field_g = -1;
               var15 = 165;
-              var18 = EmailAvailabilityValidator.a(var16, var15, 124, TextHotspotWidget.field_Z, var13, var14) ? 1 : 0;
+              var18 = EmailAvailabilityValidator.drawHoverTextButton(var16, var15, 124, TextHotspotWidget.field_Z, var13, var14) ? 1 : 0;
               if (var18 != 0 &&
                 !ContentTransitionDialog.field_ub) {
-                CombatWorld.c(-2483, 97);
+                CombatWorld.playSoundEffect(-2483, 97);
               }
               var15 = var15 + (10 + var14);
               ContentTransitionDialog.field_ub = var18 != 0;
               var14 = 200;
-              var18 = EmailAvailabilityValidator.a(var16, var15, 121, cf.field_v, var13, var14) ? 1 : 0;
+              var18 = EmailAvailabilityValidator.drawHoverTextButton(var16, var15, 121, StatSubmission.field_v, var13, var14) ? 1 : 0;
               if (var18 != 0) {
                 NameValidationHelpers.field_g = 0;
                 if (var17 != 0) {
-                  CombatWorld.c(param0 - 2483, 97);
+                  CombatWorld.playSoundEffect(param0 - 2483, 97);
                 }
               }
             }
@@ -6598,7 +6598,7 @@ final class SentinelDesigner {
           ClientGlobals.field_a = AlternateUsernameCredentials.field_y;
           var5 = null;
           if ((BoundedRandomAccessFile.field_q & 128) != 0) {
-            var5_ref3 = t.field_e[-128 + BoundedRandomAccessFile.field_q];
+            var5_ref3 = NameTable.field_e[-128 + BoundedRandomAccessFile.field_q];
           } else {
             if (BoundedRandomAccessFile.field_q == 34) {
               var5_ref3 = "GODULE";
@@ -6615,7 +6615,7 @@ final class SentinelDesigner {
           var10 = SpriteFrame.drawInfoBox(NameValidationHelpers.field_c, var9, ClientGlobals.field_a, 300, 170, -2, var8, 1071146, AccountNamePrompt.field_Vb, true);
           if (0 <= var10 &&
             ArchiveIndex.field_p != var10) {
-            CombatWorld.c(-2483, 97);
+            CombatWorld.playSoundEffect(-2483, 97);
           }
           ArchiveIndex.field_p = var10;
           return;
@@ -6626,24 +6626,24 @@ final class SentinelDesigner {
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void updatePointerSelection(boolean param0, int param1, int param2) {
         if (-1 != this.field_g.field_e) {
           param1 = this.field_g.field_e;
         }
-        this.field_g.initializeSelection(param0, param1, 0, this.a(LobbySetupHelpers.field_f, DelegatingCanvas.field_c, 77));
+        this.field_g.initializeSelection(param0, param1, 0, this.hitTestItem(LobbySetupHelpers.field_f, DelegatingCanvas.field_c, 77));
         ByteStorage.field_a = MouseWheelInput.field_c;
         if (param2 >= -56) {
           return;
         }
         try {
-          in.field_k = -1;
+          SocialPacketHelpers.field_k = -1;
           QuickChatPhraseDefinition.field_C = -1;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.NA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final int a(byte param0, int param1, int param2) {
+    private final int getRequiredTrainingProgress(byte param0, int param1, int param2) {
         int stackIn_6_0 = 0;
         int stackIn_58_0 = 0;
         int stackIn_60_0 = 0;
@@ -6795,12 +6795,12 @@ final class SentinelDesigner {
         }
     }
 
-    private final void b(int param0) {
+    private final void resetMenuInput(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 != 16383) {
-            this.a(53, false);
+            this.drawEngineeringScreen(53, false);
           }
           this.field_g.handleKeyWithoutNavigation((byte) 22);
           return;
@@ -6811,7 +6811,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void g(byte param0) {
+    private final void updateDialogContent(byte param0) {
         boolean stackIn_113_0 = false;
         boolean stackIn_135_0 = false;
         int stackIn_241_0 = 0;
@@ -6895,7 +6895,7 @@ final class SentinelDesigner {
         var31 = SteelSentinels.obfuscationControl;
         try {
           if (param0 > -28) {
-            this.q(-72);
+            this.handleAnimationEditorKey(-72);
           }
           var2_int = DateInputWidget.field_V;
           DateInputWidget.field_V = -1;
@@ -6905,7 +6905,7 @@ final class SentinelDesigner {
           }
           if (null != ContentTransitionDialog.field_sb) {
             boolean decompiledFrameRemainder1 = true;
-            var3 = nf.field_a;
+            var3 = LoginEncryptionHelpers.field_a;
             var4_int = var3.field_Ub.field_eb;
             var5_int = EmailFormatError.field_c;
             if (var5_int == 104 &&
@@ -6921,7 +6921,7 @@ final class SentinelDesigner {
             ContentTransitionDialog.field_sb.updateInputFullScreen((byte) -44, true);
             var5_intLifetime1 = -1;
             if (null != var3) {
-              var3.applyScrollInput((byte) 96, jj.field_d * 32, 128, false, 32);
+              var3.applyScrollInput((byte) 96, MeshMaterial.field_d * 32, 128, false, 32);
               var6_int = var3.field_Ub.field_eb;
               var7 = null;
               var8_int = 0;
@@ -6998,11 +6998,11 @@ final class SentinelDesigner {
                   if ((VerticalScrollbar.field_gc != 1) &&
                     (decompiledFrameRemainder0 = (var2_int != var7_int))) {
                     var2_int = var7_int;
-                    CombatWorld.c(-2483, 97);
+                    CombatWorld.playSoundEffect(-2483, 97);
                     decompiledFrameRemainder0 = (var31 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    CombatWorld.c(-2483, 95);
+                    CombatWorld.playSoundEffect(-2483, 95);
                     var3.field_Ub.field_gb = -LabeledField.field_R[var7_int] - var3.field_Ub.field_eb - 4;
                     if (var3.field_Ub.field_gb > -var3.field_Ub.field_eb) {
                       var3.field_Ub.field_gb = -var3.field_Ub.field_eb;
@@ -7041,7 +7041,7 @@ final class SentinelDesigner {
           var4.field_nb = 10526880;
           var4.field_L = (BitmapFont) ((Object) ValidationHelpWidget.field_lb);
           var5 = new SceneWidget(-1L, var4);
-          var5.field_I = gf.field_c;
+          var5.field_I = GeneratedSpriteHelpers.field_c;
           var5.field_nb = 0;
           var6Lifetime1 = new SceneWidget();
           var6Lifetime1.field_Kb = 1;
@@ -7050,7 +7050,7 @@ final class SentinelDesigner {
           var7Lifetime1 = new SceneWidget(-1L, var5);
           ((SceneWidget) (var7Lifetime1)).field_ub = 3;
           ((SceneWidget) (var7Lifetime1)).field_Ib = 10;
-          ((SceneWidget) (var7Lifetime1)).field_I = sa.field_e;
+          ((SceneWidget) (var7Lifetime1)).field_I = LoadingStatusHelpers.field_e;
           ((SceneWidget) (var7Lifetime1)).field_nb = 2061990;
           ((SceneWidget) (var7Lifetime1)).field_Ab = MouseInputHandler.field_d;
           ((SceneWidget) (var7Lifetime1)).field_Kb = 1;
@@ -7062,7 +7062,7 @@ final class SentinelDesigner {
           var8.field_I = MatchingTextValidator.field_t;
           var4.field_Fb = 1;
           var9 = new SceneWidget("HeadingsPane", (SceneWidget) null);
-          jj.field_a = var9;
+          MeshMaterial.field_a = var9;
           var9.setBounds(0, 60, 370, 16, 106);
           var10 = 4;
           var11 = 0;
@@ -7072,7 +7072,7 @@ final class SentinelDesigner {
           while (!(decompiledNaturalLoopExit1 = (!(var13_int < MouseInputHandler.field_g.length)))) {
             var14 = MouseInputHandler.field_g[var13_int];
             var15_int = 0;
-            stackOut_112_0 = ArticulatedPart.f((byte) -96);
+            stackOut_112_0 = ArticulatedPart.isMemberSession((byte) -96);
             stackIn_305_0 = stackOut_112_0 ? 1 : 0;
             stackIn_113_0 = stackOut_112_0;
             if (var31 == 0) {
@@ -7101,7 +7101,7 @@ final class SentinelDesigner {
                       stackIn_135_0 = stackOut_134_0;
                       if (stackIn_135_0) {
                         var25_ref_String = var25_ref_String.substring(6);
-                        if (!ArticulatedPart.f((byte) -20)) {
+                        if (!ArticulatedPart.isMemberSession((byte) -20)) {
                           var26 = 1;
                         }
                       }
@@ -7128,7 +7128,7 @@ final class SentinelDesigner {
                             }
                             var18[var23].field_S = var25_ref_String.substring(3);
                             var27 = new SceneWidget((long)var11, (SceneWidget) (var7Lifetime1));
-                            var27.field_S = WidgetStyleLayer.a(42, var18[var23].field_S);
+                            var27.field_S = WidgetStyleLayer.toUpperCaseOutsideTags(42, var18[var23].field_S);
                             var28 = var27.field_L.paragraphHeight(var27.field_S, -(var27.field_ub * 2) + 106, var27.field_Ib) + 3;
                             var27.setBounds(0, var10, var28, 0, 106);
                             var10 = var10 + (var28 + 4);
@@ -7141,7 +7141,7 @@ final class SentinelDesigner {
                             if (NameCheckResult.field_c) {
                               var25_ref_String = NameValidationHelpers.replaceAllOccurrences(" <img=13> <img=14> <img=15>", (byte) 11, "", var25_ref_String);
                             }
-                            if (tj.field_a) {
+                            if (HighscoreSubmissionFactory.field_a) {
                               var25_ref_String = NameValidationHelpers.replaceAllOccurrences("<rmbcancelonoff>", (byte) 11, ValidatedTextWidget.field_yb, var25_ref_String);
                             } else {
                               var25_ref_String = NameValidationHelpers.replaceAllOccurrences("<rmbcancelonoff>", (byte) 11, GameKeyHandler.field_a, var25_ref_String);
@@ -7164,7 +7164,7 @@ final class SentinelDesigner {
                         } else {
                           var18[var23] = new SceneWidget(-1L, var6Lifetime1);
                           var27_int = Integer.parseInt(var25_ref_String.substring(4, var25_ref_String.length() - 1));
-                          var18[var23].field_Pb = ja.b(var27_int, true);
+                          var18[var23].field_Pb = IconLookupHelpers.getActionIconSprite(var27_int, true);
                           var28 = 0;
                           if (var27_int >= 100 &&
                             var27_int < 200) {
@@ -7195,7 +7195,7 @@ final class SentinelDesigner {
                           }
                           var22_int = var22_int + var28;
                         }
-                      } else if (!ArticulatedPart.f((byte) -87)) {
+                      } else if (!ArticulatedPart.isMemberSession((byte) -87)) {
                         var18[var23] = new SceneWidget(-1L, var6Lifetime1);
                         var18[var23].field_Pb = MusicCrossfadeStream.field_F;
                         var22_int = var22_int + (var18[var23].field_Pb.field_A + 4);
@@ -7320,12 +7320,12 @@ final class SentinelDesigner {
           var14_refLifetime1.field_Pb = SocialListEntry.field_Zb[0];
           var14_refLifetime1.field_db = SocialListEntry.field_Zb[1];
           var15 = new SceneWidget();
-          var15.field_I = qi.field_a;
+          var15.field_I = LoginCredentialHelpers.field_a;
           var16 = new SceneWidget();
-          var16.field_I = jn.field_f;
+          var16.field_I = MusicTrackHelpers.field_f;
           var17 = new VerticalScrollbar("", var13, var14_refLifetime1, var15, var16);
           var18_ref = new ScrollContainer("Scrollingview", var3_ref, (SceneWidget) null, var17);
-          nf.field_a = var18_ref;
+          LoginEncryptionHelpers.field_a = var18_ref;
           var18_ref.setBoundsAndLayout(TextAndBitHelpers.field_d + 480, -2048, TextAndBitHelpers.field_d, 358, WeightedCacheEntry.field_y, 0, 4);
           var18_ref.field_I = null;
           var19 = new SceneWidget(-1L, (SceneWidget) null);
@@ -7356,7 +7356,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void updateTransitionOffset(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -7404,10 +7404,10 @@ final class SentinelDesigner {
             this.field_c == 4) {
             var3Lifetime1 = 200;
             if (var5 != 0) {
-              var3Lifetime1 = this.d((byte) 114);
+              var3Lifetime1 = this.getHeaderHeight((byte) 114);
             }
           } else {
-            var3Lifetime1 = this.d((byte) 114);
+            var3Lifetime1 = this.getHeaderHeight((byte) 114);
           }
           var4 = 50;
           if (this.field_c == 0) {
@@ -7467,18 +7467,18 @@ final class SentinelDesigner {
         }
     }
 
-    final void s(int param0) {
+    final void releaseScreenQueries(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (this.field_c == 6) {
-            qi.field_j = null;
+            LoginCredentialHelpers.field_j = null;
           }
           if (this.field_c == 5) {
-            qi.field_d = null;
+            LoginCredentialHelpers.field_d = null;
           }
           if (param0 <= 125) {
-            this.a(false);
+            this.updateTransitionOffset(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7488,14 +7488,14 @@ final class SentinelDesigner {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawOverlayDialogs(boolean param0, byte param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param1 != 44) {
-            SentinelDesigner.d(-110, -20);
+            SentinelDesigner.layoutLobbyBannerAt(-110, -20);
           }
-          TextLayout.a(param0, 25104);
+          TextLayout.drawLobbyAndChatPanels(param0, 25104);
           ProxySocketConnector.drawOverlayDialogs(false, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7505,7 +7505,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final boolean e(int param0, int param1) {
+    private final boolean isItemVisible(int param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -7525,13 +7525,13 @@ final class SentinelDesigner {
         this.field_h = 0;
         try {
           this.field_c = param0;
-          this.field_g = new MenuInputState(uc.field_e[this.field_c].length);
+          this.field_g = new MenuInputState(DesignerPageTables.field_e[this.field_c].length);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ')');
         }
     }
 
-    private final void a(boolean param0, boolean param1, int param2, int param3, String param4, int param5, int param6, int param7) {
+    private final void drawTableRow(boolean param0, boolean param1, int param2, int param3, String param4, int param5, int param6, int param7) {
         String stackIn_24_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -7573,7 +7573,7 @@ final class SentinelDesigner {
           if (decompiledFrameCompleted0) {
             ((BitmapFont) ((Object) var10)).drawLeft(param4, EmailAvailabilityValidator.field_v[0] + 5, param2, var9_int, -1);
             param3++;
-            ((BitmapFont) ((Object) var10)).drawLeft(cd.field_c[param5], 5 + EmailAvailabilityValidator.field_v[1], param2, var9_int, -1);
+            ((BitmapFont) ((Object) var10)).drawLeft(QuickChatPacketHelpers.field_c[param5], 5 + EmailAvailabilityValidator.field_v[1], param2, var9_int, -1);
           }
           if (param3 != 43) {
             if (param3 != 42) {
@@ -7583,10 +7583,10 @@ final class SentinelDesigner {
                 stackIn_24_0 = "40+";
               }
             } else {
-              stackIn_24_0 = ob.field_x;
+              stackIn_24_0 = PendingPackedReply.field_x;
             }
           } else {
-            stackIn_24_0 = of.field_a;
+            stackIn_24_0 = SessionExitHelpers.field_a;
           }
           var11 = stackIn_24_0;
           ((BitmapFont) ((Object) var10)).drawRight(var11, -1 + EmailAvailabilityValidator.field_v[3] - 5, param2, var9_int, -1);
@@ -7606,7 +7606,7 @@ final class SentinelDesigner {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         try {
           field_d = null;
           field_l = null;
@@ -7620,18 +7620,18 @@ final class SentinelDesigner {
         }
     }
 
-    final static void d(int param0, int param1) {
+    final static void layoutLobbyBannerAt(int param0, int param1) {
         try {
-          GameplayController.b(param1, false);
+          GameplayController.layoutLobbyBanner(param1, false);
           if (param0 != 0) {
-            SentinelDesigner.a(true, (byte) 17);
+            SentinelDesigner.drawOverlayDialogs(true, (byte) 17);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ji.O(" + param0 + ',' + param1 + ')');
         }
     }
 
-    private final int b(byte param0) {
+    private final int findItemLeft(byte param0) {
         int stackIn_5_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_38_0 = 0;
@@ -7659,17 +7659,17 @@ final class SentinelDesigner {
           }
           var2_int = this.field_g.field_e;
           if (var2_int >= 0 &&
-            var2_int >= uc.field_e[this.field_c].length) {
+            var2_int >= DesignerPageTables.field_e[this.field_c].length) {
           }
-          var3 = this.b(param0 ^ 105, var2_int);
+          var3 = this.getBottomRowIndex(param0 ^ 105, var2_int);
           if (var2_int >= 0 &&
-            uc.field_e[this.field_c].length > var2_int &&
-            uc.field_e[this.field_c][var2_int] != -1) {
+            DesignerPageTables.field_e[this.field_c].length > var2_int &&
+            DesignerPageTables.field_e[this.field_c][var2_int] != -1) {
             if (0 == this.field_c) {
-              if (uc.field_e[this.field_c][var2_int] != 34 &&
-                uc.field_e[this.field_c][-1 + uc.field_e[this.field_c].length] == 34) {
+              if (DesignerPageTables.field_e[this.field_c][var2_int] != 34 &&
+                DesignerPageTables.field_e[this.field_c][-1 + DesignerPageTables.field_e[this.field_c].length] == 34) {
                 SceneWidgetNode.field_F = var2_int;
-                stackIn_38_0 = -1 + uc.field_e[this.field_c].length;
+                stackIn_38_0 = -1 + DesignerPageTables.field_e[this.field_c].length;
                 return stackIn_38_0;
               }
               stackIn_40_0 = var2_int;
@@ -7689,7 +7689,7 @@ final class SentinelDesigner {
                 var2_int += 4;
               }
               while (true) {
-                if (-1 == uc.field_e[this.field_c][var2_int]) {
+                if (-1 == DesignerPageTables.field_e[this.field_c][var2_int]) {
                   var2_int--;
                   var3--;
                   stackIn_72_0 = var3;
@@ -7730,7 +7730,7 @@ final class SentinelDesigner {
               return stackIn_95_0;
             }
             if (this.field_c == 19) {
-              stackIn_103_0 = (uc.field_e[this.field_c] == ArchiveProvider.field_c) ? 30 : 20;
+              stackIn_103_0 = (DesignerPageTables.field_e[this.field_c] == ArchiveProvider.field_c) ? 30 : 20;
               var4 = stackIn_103_0;
               if (var2_int >= 10 &&
                 var2_int < var4) {
@@ -7739,19 +7739,19 @@ final class SentinelDesigner {
               }
             }
             if (param0 != -20) {
-              this.r(1);
+              this.drawScreen(1);
             }
             stackIn_115_0 = -1;
             return stackIn_115_0;
           }
-          var2_intLifetime1 = uc.field_e[this.field_c].length - 1;
+          var2_intLifetime1 = DesignerPageTables.field_e[this.field_c].length - 1;
           scanLoop1: while (true) {
             if (var2_intLifetime1 >= 0) {
               stackIn_29_0 = -1;
               if (var5 != 0) {
                 break scanLoop1;
               }
-              if (stackIn_29_0 == uc.field_e[this.field_c][var2_intLifetime1]) {
+              if (stackIn_29_0 == DesignerPageTables.field_e[this.field_c][var2_intLifetime1]) {
                 var2_intLifetime1--;
                 continue;
               }
@@ -7767,7 +7767,7 @@ final class SentinelDesigner {
         }
     }
 
-    final static long a(int param0, CharSequence param1) {
+    final static long encodeBase37Name(int param0, CharSequence param1) {
         int stackIn_30_0 = 0;
         int stackIn_30_1 = 0;
         long stackIn_40_0 = 0L;
@@ -7817,7 +7817,7 @@ final class SentinelDesigner {
             break;
           }
           if (stackIn_30_0 >= stackIn_30_1) {
-            SentinelDesigner.h((byte) -101);
+            SentinelDesigner.releaseStatics((byte) -101);
           }
           scanLoop2: while (true) {
             if (var2_long % 37L == 0L) {
@@ -7848,7 +7848,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean isItemEnabled(int param0, int param1) {
         boolean stackIn_47_0 = false;
         boolean stackIn_61_0 = false;
         boolean stackIn_75_0 = false;
@@ -7857,26 +7857,26 @@ final class SentinelDesigner {
         RuntimeException var3 = null;
         try {
           if (param0 < 116) {
-            this.p(-101);
+            this.drawRankingPanel(-101);
           }
-          var3_int = uc.field_e[this.field_c][param1];
+          var3_int = DesignerPageTables.field_e[this.field_c][param1];
           if ((43 == var3_int ||
             var3_int == 44) && !NameCheckResult.field_c) {
             return false;
           }
           if (var3_int == 40 &&
-            dc.field_g >= 0) {
+            TableColumns.field_g >= 0) {
             return false;
           }
           if (-1 == var3_int) {
             return false;
           }
           if (28 == var3_int &&
-            !GzipDecoder.b(116)) {
+            !GzipDecoder.ownsSpecialPart(116)) {
             return false;
           }
           if (var3_int == 1 &&
-            !GzipDecoder.b(122)) {
+            !GzipDecoder.ownsSpecialPart(122)) {
             return false;
           }
           if (var3_int == 25 &&
@@ -7886,17 +7886,17 @@ final class SentinelDesigner {
           }
           if (var3_int == 26 &&
             this.field_c == 20) {
-            stackIn_61_0 = (QuickChatHelpDialog.field_Ub < 9) && (QuickChatHelpDialog.field_Ub < fm.field_f[DirectByteStorage.field_j]);
+            stackIn_61_0 = (QuickChatHelpDialog.field_Ub < 9) && (QuickChatHelpDialog.field_Ub < QuickChatParameterType.field_f[DirectByteStorage.field_j]);
             return stackIn_61_0;
           }
           if (var3_int == 0 &&
             this.field_c == 20) {
-            stackIn_75_0 = (GzipDecoder.b(114)) && (!ni.b(111));
+            stackIn_75_0 = (GzipDecoder.ownsSpecialPart(114)) && (!ByteArrayPoolHelpers.isAccountCreationMode(111));
             return stackIn_75_0;
           }
           if (14 == this.field_c &&
             var3_int == 46 &&
-            0 <= dc.field_g) {
+            0 <= TableColumns.field_g) {
             return false;
           }
           return true;
@@ -7907,12 +7907,12 @@ final class SentinelDesigner {
         }
     }
 
-    private final void k(int param0) {
+    private final void clearMenuInput(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 > -90) {
-            this.a((String) null, -9, 98, true, 4, -58, 114, -36, 75);
+            this.drawStatRow((String) null, -9, 98, true, 4, -58, 114, -36, 75);
           }
           this.field_g.handleKeyWithoutNavigation((byte) 22);
           return;
@@ -7923,7 +7923,7 @@ final class SentinelDesigner {
         }
     }
 
-    private final void c(byte param0) {
+    private final void cycleSelectionByKeys(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;

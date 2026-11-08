@@ -102,7 +102,7 @@ final class MusicPatchPcmStream extends PcmStream {
                   var10 = 65280 & var8;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = var8 >> 3 & 31;
-                  SoftwareRaster.field_g[var6_int] = DateOfBirthValidator.a(DateOfBirthValidator.a(var9 << 16, var10), var11);
+                  SoftwareRaster.field_g[var6_int] = DateOfBirthValidator.bitOr(DateOfBirthValidator.bitOr(var9 << 16, var10), var11);
                 }
                 var6_int++;
               }
@@ -321,7 +321,7 @@ final class MusicPatchPcmStream extends PcmStream {
         if (null != Explosion.field_B) {
           return true;
         }
-        if (!DualNode.field_x.a("benefits", (byte) 90)) {
+        if (!DualNode.field_x.isGroupLoadedByName("benefits", (byte) 90)) {
           return false;
         }
         Explosion.field_B = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "benefits", "members_benefits_borders", false);
@@ -330,11 +330,11 @@ final class MusicPatchPcmStream extends PcmStream {
         }
         AccountNamePrompt.field_ac = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "benefits", "members_benefits_price", false);
         ValidatedTextWidget.field_qb = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "benefits", "members_benefits_logo", false);
-        AlternateUsernameCredentials.field_v = cf.a("members_benefits_screenshots", "benefits", (byte) -73, DualNode.field_x);
-        vc.a(uj.field_h, Explosion.field_B, false);
-        DateInputWidget.a(16744576, 2, (byte) 120, LoginDialogHelpers.field_j, -2400, AccountNamePrompt.field_ac, 80, 40, 15, 80, 40);
-        NodeHashTable.a(1, AlternateUsernameCredentials.field_v);
-        Js5NetworkRequest.a(ValidatedTextWidget.field_qb, (byte) 69);
+        AlternateUsernameCredentials.field_v = StatSubmission.loadSpritesByName("members_benefits_screenshots", "benefits", (byte) -73, DualNode.field_x);
+        DisplayMode.setPromotionCaption(ReflectionCheckHelpers.field_h, Explosion.field_B, false);
+        DateInputWidget.configureDialogFrameStyle(16744576, 2, (byte) 120, LoginDialogHelpers.field_j, -2400, AccountNamePrompt.field_ac, 80, 40, 15, 80, 40);
+        NodeHashTable.setSlideshowSprites(1, AlternateUsernameCredentials.field_v);
+        Js5NetworkRequest.setHeaderIconSprite(ValidatedTextWidget.field_qb, (byte) 69);
         return true;
     }
 

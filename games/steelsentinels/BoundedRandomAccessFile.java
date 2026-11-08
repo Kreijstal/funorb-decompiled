@@ -8,7 +8,7 @@ final class BoundedRandomAccessFile {
     static NodeDeque field_r;
     private long field_c;
     private RandomAccessFile field_e;
-    static ml field_p;
+    static ListRequestHelpers field_p;
     static String field_h;
     static String field_a;
     static int field_b;
@@ -21,7 +21,7 @@ final class BoundedRandomAccessFile {
     static byte[][] field_g;
     static String field_o;
     static String[] field_i;
-    static uf field_f;
+    static SocialTabsPanel field_f;
     static int field_q;
 
     final static void compactBuckets(int param0) {
@@ -79,7 +79,7 @@ final class BoundedRandomAccessFile {
             return (BinaryBitmapFont) (stackIn_2_0);
           }
           var3 = new BinaryBitmapFont(param0, PacketLoopHelpers.field_a, TextButton.field_M, StrongCacheEntry.field_L, MusicPatch.field_r, UiContainer.field_L);
-          NodeHashTable.a(9324);
+          NodeHashTable.releaseDecodeArrays(9324);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -232,19 +232,19 @@ final class BoundedRandomAccessFile {
         var2 = SteelSentinels.obfuscationControl;
         try {
           if (!MessageMenuHelpers.hasOpenDialog((byte) 84)) {
-            if (wb.field_c != null &&
-              wb.field_c.field_b) {
-              SoundCache.c(0);
+            if (RewardValueHelpers.field_c != null &&
+              RewardValueHelpers.field_c.field_b) {
+              SoundCache.exitFullscreen(0);
               UiContainer.field_J.pushPanel(new AccountNoticeDialog(UiContainer.field_J, DualNodeDequeIterator.field_b), 116);
             }
             return;
           }
-          UiContainer.field_J.handlePointerFrame((byte) 40, true, ClientGlobals.field_l, ml.field_e);
+          UiContainer.field_J.handlePointerFrame((byte) 40, true, ClientGlobals.field_l, ListRequestHelpers.field_e);
           if (param0 >= -13) {
             return;
           }
           UiContainer.field_J.updatePanels((byte) -4);
-          while (UiContainer.f(22759)) {
+          while (UiContainer.pollKeyEvent(22759)) {
             UiContainer.field_J.handleKey(true, NameAvailabilityValidator.field_q, LoginMethod.field_c);
           }
           return;
@@ -257,7 +257,7 @@ final class BoundedRandomAccessFile {
 
     static {
         field_r = new NodeDeque();
-        field_p = new ml();
+        field_p = new ListRequestHelpers();
         field_b = 1;
         field_s = "<%0> is already on your ignore list.";
         field_h = "Discard";

@@ -6,7 +6,7 @@ class IntrusiveNode {
     static int field_e;
     static String field_d;
     long key;
-    static fm field_g;
+    static QuickChatParameterType field_g;
     static String[] field_b;
     static boolean field_a;
     static String field_n;
@@ -17,13 +17,13 @@ class IntrusiveNode {
     static int field_h;
     static SceneWidget[] field_f;
 
-    final static UiTheme a(int param0) {
+    final static UiTheme getSharedUiTheme(int param0) {
         int var1 = -105 / ((param0 - 83) / 42);
         if (ThreeSliceButtonPainter.field_w != null) {
           return ThreeSliceButtonPainter.field_w;
         }
         ThreeSliceButtonPainter.field_w = new UiTheme();
-        ThreeSliceButtonPainter.field_w.initializePainters(111, tj.field_e);
+        ThreeSliceButtonPainter.field_w.initializePainters(111, HighscoreSubmissionFactory.field_e);
         ThreeSliceButtonPainter.field_w.field_t = 7697781;
         ThreeSliceButtonPainter.field_w.field_d = 5;
         ThreeSliceButtonPainter.field_w.field_b = 14;
@@ -91,7 +91,7 @@ class IntrusiveNode {
         field_m = "End Game";
         field_n = "F2";
         field_l = 640;
-        field_g = new fm(1, 2, 2, 0);
+        field_g = new QuickChatParameterType(1, 2, 2, 0);
         field_h = 0;
         field_f = new SceneWidget[32];
     }

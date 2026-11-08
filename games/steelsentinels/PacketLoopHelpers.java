@@ -104,7 +104,7 @@ final class PacketLoopHelpers {
                 }
                 case 1: {
                     try {
-                        if (rn.field_v == AccountNoticeDialog.field_sb) {
+                        if (PendingAckRequest.field_v == AccountNoticeDialog.field_sb) {
                             /* Inlined CFG state: 4. */
                             {
                                 if (param0 > 10) {
@@ -212,7 +212,7 @@ final class PacketLoopHelpers {
                         if (ViewportController.field_f <= var5_int) {
                             /* Inlined CFG state: 16. */
                             {
-                                di.field_d = TextHotspotWidget.field_W;
+                                OptionMaskHelpers.field_d = TextHotspotWidget.field_W;
                                 TextHotspotWidget.field_W = RasterSnapshot.field_u;
                                 RasterSnapshot.field_u = ArrayWidgetContainer.field_N;
                                 ArrayWidgetContainer.field_N = var4_ref_kc.field_p;
@@ -307,7 +307,7 @@ final class PacketLoopHelpers {
                 }
                 case 26: {
                     try {
-                        if (LoginForm.n(24)) {
+                        if (LoginForm.isPacketPayloadReady(24)) {
                             /* Inlined CFG state: 29. */
                             {
                                 if (MusicPatchPcmStream.field_H != 0) {
@@ -324,7 +324,7 @@ final class PacketLoopHelpers {
                                 } else {
                                     /* Inlined CFG state: 30. */
                                     {
-                                        di.field_d = TextHotspotWidget.field_W;
+                                        OptionMaskHelpers.field_d = TextHotspotWidget.field_W;
                                         TextHotspotWidget.field_W = RasterSnapshot.field_u;
                                         RasterSnapshot.field_u = ArrayWidgetContainer.field_N;
                                         ArrayWidgetContainer.field_N = SoundCache.field_g;
@@ -484,7 +484,7 @@ final class PacketLoopHelpers {
           if (!param6) {
             PacketLoopHelpers.releaseStatics(121);
           }
-          if (CombatWorld.b(88)) {
+          if (CombatWorld.hasTuhstatbutCookie(88)) {
             var8.showIneligibleResult(126);
             return true;
           }
@@ -492,9 +492,9 @@ final class PacketLoopHelpers {
           LinkButtonPainter.field_a = param5;
           DiskCacheWorker.field_j = AccountTermsPanel.field_ab;
           LinkButtonPainter.field_f = param2;
-          qf.field_d = null;
-          wi.field_y = param3;
-          kf.field_o = param4;
+          RankingAndRasterHelpers.field_d = null;
+          SpriteState.field_y = param3;
+          HighscoreTable.field_o = param4;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -533,8 +533,8 @@ final class PacketLoopHelpers {
         Object var1 = null;
         var1 = SoundCache.field_e;
         synchronized (var1) {
-          WeightedLruCache.field_d = wn.field_d;
-          ob.field_q = ob.field_q + 1;
+          WeightedLruCache.field_d = ChatPanelSetupHelpers.field_d;
+          PendingPackedReply.field_q = PendingPackedReply.field_q + 1;
           LobbySetupHelpers.field_f = SentinelDesigner.field_j;
           DelegatingCanvas.field_c = LabeledField.field_G;
           ConditionalTextValue.field_a = ce.field_w;

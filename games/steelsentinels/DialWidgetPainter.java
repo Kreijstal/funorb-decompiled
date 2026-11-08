@@ -63,7 +63,7 @@ final class DialWidgetPainter implements WidgetPainter {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendGameOptions(int param0, int param1) {
         CipherPacketBuffer var2 = ClockAndCookieHelpers.field_g;
         var2.writeCipheredOpcode(param1, (byte) -117);
         var2.position = var2.position + 1;
@@ -80,12 +80,12 @@ final class DialWidgetPainter implements WidgetPainter {
         field_g = (String) null;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void sendOptionByte(int param0, byte param1) {
         CipherPacketBuffer var2 = ClockAndCookieHelpers.field_g;
         var2.writeCipheredOpcode(param0, (byte) -117);
         var2.writeByte((byte) 123, 2);
         var2.writeByte((byte) 112, 4);
-        var2.writeByte((byte) 127, nd.a((byte) 56));
+        var2.writeByte((byte) 127, ChatFilterPackingHelpers.packChatFilterSettings((byte) 56));
         int var3 = -47 % ((param1 + 35) / 61);
     }
 
@@ -103,7 +103,7 @@ final class DialWidgetPainter implements WidgetPainter {
         }
     }
 
-    final static AccountRequestResult a(boolean param0, String param1) {
+    final static AccountRequestResult pollAccountNameCheck(boolean param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         AccountRequestResult stackIn_8_0 = null;
@@ -116,17 +116,17 @@ final class DialWidgetPainter implements WidgetPainter {
           if (param0) {
             field_n = (RgbSprite[]) null;
           }
-          if (jn.field_b == AccountTermsPanel.field_ab) {
+          if (MusicTrackHelpers.field_b == AccountTermsPanel.field_ab) {
             stackIn_4_0 = null;
             return (AccountRequestResult) (stackIn_4_0);
           }
-          if (BoundedRandomAccessFile.field_p == jn.field_b &&
+          if (BoundedRandomAccessFile.field_p == MusicTrackHelpers.field_b &&
             param1.equals(ThreeSliceButtonPainter.field_z)) {
-            jn.field_b = ClockAndCookieHelpers.field_e;
+            MusicTrackHelpers.field_b = ClockAndCookieHelpers.field_e;
             stackIn_8_0 = TextHotspotRegion.field_x;
             return stackIn_8_0;
           }
-          jn.field_b = AccountTermsPanel.field_ab;
+          MusicTrackHelpers.field_b = AccountTermsPanel.field_ab;
           TextHotspotRegion.field_x = null;
           ThreeSliceButtonPainter.field_z = param1;
           stackIn_10_0 = null;

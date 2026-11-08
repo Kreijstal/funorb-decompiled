@@ -91,7 +91,7 @@ final class IconLabelControl extends SceneWidget {
           }
           var7 = new ConditionalTextValue(param2);
           var8 = new ConditionalTextValue(param4);
-          stackIn_4_0 = ModalStack.a(param0, param5, param6, (byte) -124, param3, var7, var8);
+          stackIn_4_0 = ModalStack.performAccountServerRequest(param0, param5, param6, (byte) -124, param3, var7, var8);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

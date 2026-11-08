@@ -5,7 +5,7 @@ final class PlayingSound extends IntrusiveNode {
     PcmSampleStream field_v;
     IntrusiveNode field_u;
     static String field_r;
-    static fm field_p;
+    static QuickChatParameterType field_p;
     int field_t;
     static String field_s;
     static String field_o;
@@ -34,8 +34,8 @@ final class PlayingSound extends IntrusiveNode {
           }
           var4 = 0;
           var2Lifetime1 = var4;
-          while (rn.field_D.length > var4) {
-            var1_int = var1_int + ClockAndCookieHelpers.countSetBits((byte) 112, rn.field_D[var4]);
+          while (PendingAckRequest.field_D.length > var4) {
+            var1_int = var1_int + ClockAndCookieHelpers.countSetBits((byte) 112, PendingAckRequest.field_D[var4]);
             var4++;
           }
           stackIn_11_0 = var1_int;
@@ -62,9 +62,9 @@ final class PlayingSound extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          Js5Transport.a(param14, param13, param5, param6, param10, param7, new SpriteFrame(param18), (byte) -115, param16, param11, new SpriteFrame(param9), param19, param15, param2, param0, param12, param4, param17, param3, new SpriteFrame(param1), param8);
+          Js5Transport.configureMenuStyle(param14, param13, param5, param6, param10, param7, new SpriteFrame(param18), (byte) -115, param16, param11, new SpriteFrame(param9), param19, param15, param2, param0, param12, param4, param17, param3, new SpriteFrame(param1), param8);
           if (param20 < 2) {
-            field_p = (fm) null;
+            field_p = (QuickChatParameterType) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -115,9 +115,9 @@ final class PlayingSound extends IntrusiveNode {
     }
 
     final static void trackCanvasHeightChange(int param0) {
-        if (Checkbox.field_bb.field_i != jn.field_c) {
-          LoginDialogHelpers.field_b = LoginDialogHelpers.field_b + (-jn.field_c + Checkbox.field_bb.field_i);
-          jn.field_c = Checkbox.field_bb.field_i;
+        if (Checkbox.field_bb.field_i != MusicTrackHelpers.field_c) {
+          LoginDialogHelpers.field_b = LoginDialogHelpers.field_b + (-MusicTrackHelpers.field_c + Checkbox.field_bb.field_i);
+          MusicTrackHelpers.field_c = Checkbox.field_bb.field_i;
         }
         if (!(StatefulTextPainter.field_p <= 0)) {
           StatefulTextPainter.field_p = StatefulTextPainter.field_p - 1;
@@ -126,7 +126,7 @@ final class PlayingSound extends IntrusiveNode {
           return;
         }
         if (!(0 >= StatefulTextPainter.field_p)) {
-          FullscreenFocusCanvas.a(false);
+          FullscreenFocusCanvas.animateOverlayPosition(false);
         }
     }
 
@@ -143,7 +143,7 @@ final class PlayingSound extends IntrusiveNode {
 
     static {
         field_r = "Invite more players, or alternatively try changing the following settings:  ";
-        field_p = new fm(8, 0, 4, 1);
+        field_p = new QuickChatParameterType(8, 0, 4, 1);
         field_s = "This password contains repeated characters, and would be easy to guess";
         field_o = "Match by...";
     }

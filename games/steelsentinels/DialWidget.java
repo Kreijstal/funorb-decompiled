@@ -63,7 +63,7 @@ final class DialWidget extends TextButton {
         }
     }
 
-    final static boolean g(int param0) {
+    final static boolean saveDesignToFreeSlot(int param0) {
         int[] array$1 = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -83,19 +83,19 @@ final class DialWidget extends TextButton {
           if (param0 <= 122) {
             return true;
           }
-          DateOfBirthValidator.d(-31);
+          DateOfBirthValidator.clearSceneReferences(-31);
           if (var1_int >= LoginHandshakeHelpers.field_c.length) {
             ClientGlobals.field_a = DualNodeDequeIterator.field_i;
             NameValidationHelpers.field_c = SocialRequestHelpers.field_e[0];
             return false;
           }
-          uc.field_b = ArchiveLoadSequence.buildComponentLoadout(73, di.field_c, PendingIntArrayRequest.field_v);
+          DesignerPageTables.field_b = ArchiveLoadSequence.buildComponentLoadout(73, OptionMaskHelpers.field_c, PendingIntArrayRequest.field_v);
           if (null == LoginHandshakeHelpers.field_c[var1_int] ||
-            LoginHandshakeHelpers.field_c[var1_int].length != uc.field_b.length) {
-            array$1 = new int[uc.field_b.length];
+            LoginHandshakeHelpers.field_c[var1_int].length != DesignerPageTables.field_b.length) {
+            array$1 = new int[DesignerPageTables.field_b.length];
             LoginHandshakeHelpers.field_c[var1_int] = array$1;
           }
-          ArraySupport.copy(uc.field_b, 0, LoginHandshakeHelpers.field_c[var1_int], 0, uc.field_b.length);
+          ArraySupport.copy(DesignerPageTables.field_b, 0, LoginHandshakeHelpers.field_c[var1_int], 0, DesignerPageTables.field_b.length);
           LoadoutHelpers.updateSavedLoadout(var1_int, PendingIntArrayRequest.field_v, 55);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,7 +105,7 @@ final class DialWidget extends TextButton {
         }
     }
 
-    final static void a(int param0, byte[] param1, boolean param2, int param3, int param4, byte param5) {
+    final static void sendFlaggedBytePayload(int param0, byte[] param1, boolean param2, int param3, int param4, byte param5) {
         int var7 = 0;
         int var8 = 0;
         CipherPacketBuffer var6 = ClockAndCookieHelpers.field_g;
@@ -135,11 +135,11 @@ final class DialWidget extends TextButton {
         field_V = null;
         field_Z = null;
         if (param0 >= -23) {
-          DialWidget.a(false, 19, true, 116, 99, 62);
+          DialWidget.createGradientTabSprites(false, 19, true, 116, 99, 62);
         }
     }
 
-    final static RgbSprite[] a(boolean param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final static RgbSprite[] createGradientTabSprites(boolean param0, int param1, boolean param2, int param3, int param4, int param5) {
         RgbSprite var13 = null;
         RgbSprite var14 = null;
         int[] var16 = SoftwareRaster.field_g;
@@ -180,7 +180,7 @@ final class DialWidget extends TextButton {
         return new RgbSprite[]{null, null, null, (RgbSprite) (var10), var9, (RgbSprite) (var11), null, null, null};
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
+    final static void loadLogoModel(byte param0, ResourceArchive param1) {
         CipherPacketBuffer var8 = null;
         CipherPacketBuffer var10 = null;
         int var3 = 0;
@@ -191,13 +191,13 @@ final class DialWidget extends TextButton {
         int var7 = SteelSentinels.obfuscationControl;
         int var4Lifetime1;
         try {
-          var8 = new CipherPacketBuffer(param1.a("", -742, "logo.fo3d"));
+          var8 = new CipherPacketBuffer(param1.getFileByName("", -742, "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -119);
           var10.beginBitReading(false);
-          LoginForm.field_W = EmailAvailabilityValidator.a(var10, (byte) 87);
+          LoginForm.field_W = EmailAvailabilityValidator.readMeshMaterialRecords(var10, (byte) 87);
           FullscreenFocusCanvas.field_h = new TriangleMesh[var3];
-          cl.field_f = new int[var3][];
+          LoginResultHelpers.field_f = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
             FullscreenFocusCanvas.field_h[var4] = AssetDecoders.decodeMesh(-100, var8);
           }
@@ -209,7 +209,7 @@ final class DialWidget extends TextButton {
             var5_ref_pe.scale(6, 6, 1, 6, 14866);
             var5_ref_pe.computeBounds(32767);
             var6 = new int[]{var5_ref_pe.field_J + var5_ref_pe.field_c >> 1, var5_ref_pe.field_p + var5_ref_pe.field_W >> 1, var5_ref_pe.field_n + var5_ref_pe.field_s >> 1};
-            cl.field_f[var9] = var6;
+            LoginResultHelpers.field_f[var9] = var6;
             var5_ref_pe.translate(0, -var6[1], -var6[2], -var6[0]);
             var9++;
           }
@@ -219,7 +219,7 @@ final class DialWidget extends TextButton {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int componentPresetIndex(int param0, int param1) {
         int var2;
         int var3;
         var3 = SteelSentinels.obfuscationControl;
@@ -257,7 +257,7 @@ final class DialWidget extends TextButton {
         return -1;
     }
 
-    final static int[] a(int param0, byte param1) {
+    final static int[] getComponentPreset(int param0, byte param1) {
         int var2;
         int var3;
         var3 = SteelSentinels.obfuscationControl;
@@ -296,7 +296,7 @@ final class DialWidget extends TextButton {
           return Js5Transport.field_s;
         }
         if (88 == var2) {
-          return jm.field_p;
+          return PendingIntReplyRequest.field_p;
         }
         if (92 == var2) {
           return CachedTextLayout.field_k;
@@ -304,7 +304,7 @@ final class DialWidget extends TextButton {
         return null;
     }
 
-    final static String a(String param0, int param1, boolean param2) {
+    final static String requestRemoveFriend(String param0, int param1, boolean param2) {
         int var6 = 0;
         SocialListEntry var7 = null;
         SocialListEntry var8 = null;
@@ -323,7 +323,7 @@ final class DialWidget extends TextButton {
         var6 = SteelSentinels.obfuscationControl;
         try {
           var10 = (CharSequence) ((Object) param0);
-          if (!ArchiveProvider.a(param2, var10)) {
+          if (!ArchiveProvider.isValidAccountName(param2, var10)) {
             stackIn_4_0 = LoadingScreenHelpers.field_a;
             return stackIn_4_0;
           }
@@ -331,9 +331,9 @@ final class DialWidget extends TextButton {
             stackIn_8_0 = SingleChildContainer.field_N;
             return stackIn_8_0;
           }
-          var8 = wi.a(param0, (byte) 113);
+          var8 = SpriteState.findFriend(param0, (byte) 113);
           if (var8 == null) {
-            stackIn_12_0 = SocketConnector.formatTemplate(bd.field_a, -75, new String[]{param0});
+            stackIn_12_0 = SocketConnector.formatTemplate(SolidSpriteHelpers.field_a, -75, new String[]{param0});
             return stackIn_12_0;
           }
           Sprite.field_c.traverseFrom((byte) 125, (IntrusiveNode) (var8));
@@ -347,7 +347,7 @@ final class DialWidget extends TextButton {
           }
           var8.unlink(4);
           var8.unlinkDual(480);
-          vd.field_h = vd.field_h - 1;
+          TransitionTimerHelpers.field_h = TransitionTimerHelpers.field_h - 1;
           var9 = ClockAndCookieHelpers.field_g;
           var9.writeCipheredOpcode(param1, (byte) -117);
           var9.position = var9.position + 1;
@@ -375,7 +375,7 @@ final class DialWidget extends TextButton {
         throw new Error();
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void sendSelectedGameId(int param0, int param1, int param2) {
         LobbyGame var6 = null;
         LobbyGame var7 = null;
         CipherPacketBuffer var4 = null;
@@ -383,7 +383,7 @@ final class DialWidget extends TextButton {
           field_V = (String) null;
         }
         if (MusicPatchEnvelope.field_j != param0) {
-          var6 = (LobbyGame) (fm.field_a.get((long)MusicPatchEnvelope.field_j, (byte) 92));
+          var6 = (LobbyGame) (QuickChatParameterType.field_a.get((long)MusicPatchEnvelope.field_j, (byte) 92));
           var7 = var6;
           if (var7 != null) {
             var7.field_hc = null;

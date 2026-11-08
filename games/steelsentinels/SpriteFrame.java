@@ -70,7 +70,7 @@ final class SpriteFrame {
           }
           var3 = stackIn_6_0;
           var22 = new PartInstruction[]{};
-          var21 = PendingIntArrayRequest.field_v.a(var22, -21636, RegistrationRequestDialog.field_Ob);
+          var21 = PendingIntArrayRequest.field_v.collectSlotsAcceptingType(var22, -21636, RegistrationRequestDialog.field_Ob);
           if (param1 <= 82) {
             var20 = (String[]) null;
             SpriteFrame.drawInfoBox((RgbSprite) null, -101, (String) null, 108, -59, -84, 124, -128, (String[]) null, true);
@@ -83,8 +83,8 @@ final class SpriteFrame {
               var7.applyStyle(Checkbox.field_Y, 6402);
             }
             if (null == ImageProducerRasterBuffer.field_B &&
-              t.field_h >= 0) {
-              var23 = NodeDeque.a(t.field_h, (byte) 67);
+              NameTable.field_h >= 0) {
+              var23 = NodeDeque.findPartDefinition(NameTable.field_h, (byte) 67);
               if (var23 != null &&
                 (var23.field_Q & var5.field_q) != 0) {
                 var7.applyStyle(Checkbox.field_Y, 6402);
@@ -105,7 +105,7 @@ final class SpriteFrame {
             var9 = var5.field_q;
             var10 = 0;
             var11 = 1;
-            var12 = ThreeSliceButtonPainter.field_v.a((byte) 2, var5);
+            var12 = ThreeSliceButtonPainter.field_v.findAttachedComponentId((byte) 2, var5);
             if (null == var5.attachedPart &&
               (var5.field_q & 256) == 0) {
             }
@@ -114,7 +114,7 @@ final class SpriteFrame {
                 var12 = -1;
               }
               var10 = var5.attachedPart.field_Q;
-              var24.field_S = WeightedCacheEntry.a(var5.attachedPart.getPartName(-24719), var24.field_zb - 2 * var24.field_ub, (byte) -45, var24.field_L);
+              var24.field_S = WeightedCacheEntry.truncateWithEllipsis(var5.attachedPart.getPartName(-24719), var24.field_zb - 2 * var24.field_ub, (byte) -45, var24.field_L);
               var13 = var5.attachedPart.componentId;
               if (var13 != 83 &&
                 0 != (1008 & var10)) {
@@ -177,8 +177,8 @@ final class SpriteFrame {
                 }
                 stackIn_60_0.field_S = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).toString();
               }
-              if ((var9 & 512) > 0 && (t.a(rn.field_D, 49, -20370) ||
-                RasterSnapshot.a(DirectByteStorage.field_m, (byte) 124, rn.field_D, 49, ArticulatedPart.f((byte) -95)))) {
+              if ((var9 & 512) > 0 && (NameTable.isBitSet(PendingAckRequest.field_D, 49, -20370) ||
+                RasterSnapshot.isPartAvailable(DirectByteStorage.field_m, (byte) 124, PendingAckRequest.field_D, 49, ArticulatedPart.isMemberSession((byte) -95)))) {
                 stackIn_68_0 = var7;
                 stackIn_68_1 = new StringBuilder().append(var7.field_S);
                 if ((var10 & 512) == 0) {
@@ -273,7 +273,7 @@ final class SpriteFrame {
         try {
           var10 = ValidationHelpWidget.field_lb;
           SoftwareRaster.fillRectangleBlended(-8 + (param4 - param5), param1 - 8 + 2, 16 + (param3 - 4), param6 + 12, 0, 210);
-          jm.a(-8 + param1, param6 + 16, TextButton.field_Q, 1, param4 - 8, param3 + 16);
+          PendingIntReplyRequest.drawNineSliceFrame(-8 + param1, param6 + 16, TextButton.field_Q, 1, param4 - 8, param3 + 16);
           var11 = 4 + param1;
           if (param0 != null) {
             param0.drawTransparent((-param0.field_A + param3) / 2 + param4, var11);
@@ -308,7 +308,7 @@ final class SpriteFrame {
             var11Lifetime1 = -5 + param1 - (-param6 + var13);
             var15 = -1;
             for (var16 = 0; param8.length > var16; var16++) {
-              if (EmailAvailabilityValidator.a(var11Lifetime1, var14, 116, param8[var16], var13, var12Lifetime1)) {
+              if (EmailAvailabilityValidator.drawHoverTextButton(var11Lifetime1, var14, 116, param8[var16], var13, var12Lifetime1)) {
                 var15 = var16;
               }
               var14 = var14 + (5 + var12Lifetime1);
@@ -349,7 +349,7 @@ final class SpriteFrame {
           SceneWidget var7 = (SceneWidget) null;
           SpriteFrame.buildPartListWidgets((SceneWidget) null, 87);
         }
-        IterableDualNodeDeque.a((byte) -77, this.field_d, param0, param4, param2, param3);
+        IterableDualNodeDeque.drawNineSlicePanel((byte) -77, this.field_d, param0, param4, param2, param3);
     }
 
     public static void releaseStatics(int param0) {
@@ -431,9 +431,9 @@ final class SpriteFrame {
             var6 = param0;
           } else {
             var7 = (CharSequence) ((Object) param0);
-            var4_long = SentinelDesigner.a(-60, var7);
+            var4_long = SentinelDesigner.encodeBase37Name(-60, var7);
           }
-          stackIn_6_0 = qi.a(param3, var4_long, param1, 0, (String) (var6));
+          stackIn_6_0 = LoginCredentialHelpers.createCredentials(param3, var4_long, param1, 0, (String) (var6));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

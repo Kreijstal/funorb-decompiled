@@ -17,8 +17,8 @@ final class UrlAndReplyHelpers {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        c var3_ref_c = null;
-        rh var4 = null;
+        PendingByteArrayRequest var3_ref_c = null;
+        PendingDataRequest var4 = null;
         int var4_int = 0;
         Object var5 = null;
         int var6 = 0;
@@ -36,14 +36,14 @@ final class UrlAndReplyHelpers {
           if (var2 != 0) {
             if (var2 != 1) {
               MusicCrossfadeStream.reportClientError("A1: " + ClientErrorSupport.describePacketHistory((byte) 94), -126, (Throwable) null);
-              LoginForm.m(param0 ^ -16880);
+              LoginForm.closeConnection(param0 ^ -16880);
               return;
             }
             var3 = var9.readInt(0);
-            var4 = (rh) (QuickChatHelpDialog.field_Vb.first(13058));
+            var4 = (PendingDataRequest) (QuickChatHelpDialog.field_Vb.first(13058));
             while (var4 != null) {
               if (~var4.field_x != ~var3) {
-                var4 = (rh) (QuickChatHelpDialog.field_Vb.next((byte) -59));
+                var4 = (PendingDataRequest) (QuickChatHelpDialog.field_Vb.next((byte) -59));
                 continue;
               }
               break;
@@ -54,12 +54,12 @@ final class UrlAndReplyHelpers {
             }
             stackIn_24_0 = param0;
             stackIn_24_1 = 16882;
-            LoginForm.m(stackIn_24_0 + stackIn_24_1);
+            LoginForm.closeConnection(stackIn_24_0 + stackIn_24_1);
             return;
           }
-          var3_ref_c = (c) (RegistrationRequestDialog.field_Ub.first(13058));
+          var3_ref_c = (PendingByteArrayRequest) (RegistrationRequestDialog.field_Ub.first(13058));
           if (var3_ref_c == null) {
-            LoginForm.m(111);
+            LoginForm.closeConnection(111);
             return;
           }
           var4_int = var9.readUnsignedByte((byte) -106);
@@ -74,7 +74,7 @@ final class UrlAndReplyHelpers {
           }
           var9.position = var9.position + 4;
           if (!var9.verifyTrailingChecksum((byte) -32)) {
-            LoginForm.m(param0 ^ 16871);
+            LoginForm.closeConnection(param0 ^ 16871);
             return;
           }
           var3_ref_c.field_q = true;

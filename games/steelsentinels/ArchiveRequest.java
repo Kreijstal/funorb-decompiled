@@ -19,17 +19,17 @@ abstract class ArchiveRequest extends DualNode {
         field_A = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        ArchiveIndex.a(false);
+    final static void pushClip(int param0, int param1, int param2, int param3, int param4) {
+        ArchiveIndex.pushRasterState(false);
         int var5 = 80 % ((param2 + 37) / 40);
         SoftwareRaster.intersectClip(param0, param1, param3, param4);
     }
 
-    abstract int g(int param0);
+    abstract int getProgress(int param0);
 
-    abstract byte[] d(byte param0);
+    abstract byte[] getData(byte param0);
 
-    final static void c(byte param0) {
+    final static void tickLobbyHighlights(byte param0) {
         RuntimeException decompiledCaughtException = null;
         LobbyPlayer var1 = null;
         LobbyGame var1_ref = null;
@@ -67,12 +67,12 @@ abstract class ArchiveRequest extends DualNode {
             }
             var1_ref = (LobbyGame) (ClientErrorSupport.field_e.next((byte) -33));
           }
-          var1Lifetime1 = (LobbyPlayer) (o.field_d.first(13058));
+          var1Lifetime1 = (LobbyPlayer) (SocialStateHelpers.field_d.first(13058));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_Ub > 0) {
               var1Lifetime1.field_Ub = var1Lifetime1.field_Ub - 1;
               if (var1Lifetime1.field_Ub != 0) {
-                var1Lifetime1 = (LobbyPlayer) (o.field_d.next((byte) -34));
+                var1Lifetime1 = (LobbyPlayer) (SocialStateHelpers.field_d.next((byte) -34));
                 continue;
               }
               var1Lifetime1.field_Wb = 0;
@@ -80,7 +80,7 @@ abstract class ArchiveRequest extends DualNode {
                 var1Lifetime1.unlink(4);
               }
             }
-            var1Lifetime1 = (LobbyPlayer) (o.field_d.next((byte) -34));
+            var1Lifetime1 = (LobbyPlayer) (SocialStateHelpers.field_d.next((byte) -34));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

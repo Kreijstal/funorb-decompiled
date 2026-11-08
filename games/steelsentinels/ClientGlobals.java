@@ -177,14 +177,14 @@ final class ClientGlobals {
 
     final static void defineComponentPage(byte param0, int param1, int[] param2, int param3, int param4, int param5, int param6) {
         try {
-          uc.field_e[param6] = param2;
-          uc.field_k[param6] = param3;
+          DesignerPageTables.field_e[param6] = param2;
+          DesignerPageTables.field_k[param6] = param3;
           if (param0 != -44) {
             field_e = (RgbSprite[]) null;
           }
-          uc.field_d[param6] = param1;
-          uc.field_c[param6] = param5;
-          uc.field_f[param6] = param4;
+          DesignerPageTables.field_d[param6] = param1;
+          DesignerPageTables.field_c[param6] = param5;
+          DesignerPageTables.field_f[param6] = param4;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "km.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
@@ -211,7 +211,7 @@ final class ClientGlobals {
         int var5Lifetime1;
         int var7Lifetime1;
         var10 = SteelSentinels.obfuscationControl;
-        var13 = NodeDeque.a(param0, (byte) 67);
+        var13 = NodeDeque.findPartDefinition(param0, (byte) 67);
         if (param1 <= 29) {
           field_c = 12;
         }
@@ -220,10 +220,10 @@ final class ClientGlobals {
         if (var3 == 2) {
           for (var3 = 0; FunOrbClient.field_z.length > var3; var3++) {
             var4_int = FunOrbClient.field_z[var3];
-            var22 = DialWidget.a(var4_int, (byte) 127);
+            var22 = DialWidget.getComponentPreset(var4_int, (byte) 127);
             for (var6 = 0; var22.length - 8 > var6; var6++) {
               if (var22[var6] == param0) {
-                return SocketConnector.formatTemplate(CachedTextLayout.field_F, -66, new String[]{cd.field_c[var3]});
+                return SocketConnector.formatTemplate(CachedTextLayout.field_F, -66, new String[]{QuickChatPacketHelpers.field_c[var3]});
               }
             }
           }
@@ -234,7 +234,7 @@ final class ClientGlobals {
             var3 = 0;
             for (var4_int = 0; var4_int < FunOrbClient.field_z.length; var4_int++) {
               var5 = FunOrbClient.field_z[var4_int];
-              var24 = DialWidget.a(var5, (byte) 124);
+              var24 = DialWidget.getComponentPreset(var5, (byte) 124);
               for (var7 = 0; var7 < -8 + var24.length; var7++) {
                 if (var24[var7] != param0) {
                   continue;
@@ -247,7 +247,7 @@ final class ClientGlobals {
             var5Lifetime1 = 0;
             for (var6 = 0; var6 < FunOrbClient.field_z.length; var6++) {
               var7Lifetime1 = FunOrbClient.field_z[var6];
-              var25 = DialWidget.a(var7Lifetime1, (byte) 123);
+              var25 = DialWidget.getComponentPreset(var7Lifetime1, (byte) 123);
               for (var9 = 0; -8 + var25.length > var9; var9++) {
                 if (var25[var9] != param0) {
                   continue;
@@ -256,13 +256,13 @@ final class ClientGlobals {
                 if (var5Lifetime1 >= var3 - 1) {
                   if (-1 + var3 != var5Lifetime1) {
                     if (var3 <= 1) {
-                      return var4 + cd.field_c[var6] + SocialRequestHelpers.field_g[3];
+                      return var4 + QuickChatPacketHelpers.field_c[var6] + SocialRequestHelpers.field_g[3];
                     }
-                    return var4 + cd.field_c[var6] + SocialRequestHelpers.field_g[4];
+                    return var4 + QuickChatPacketHelpers.field_c[var6] + SocialRequestHelpers.field_g[4];
                   }
-                  var4 = var4 + cd.field_c[var6] + SocialRequestHelpers.field_g[2];
+                  var4 = var4 + QuickChatPacketHelpers.field_c[var6] + SocialRequestHelpers.field_g[2];
                 } else {
-                  var4 = var4 + cd.field_c[var6] + SocialRequestHelpers.field_g[1];
+                  var4 = var4 + QuickChatPacketHelpers.field_c[var6] + SocialRequestHelpers.field_g[1];
                 }
                 break;
               }
@@ -272,10 +272,10 @@ final class ClientGlobals {
           if (decompiledFrameRemainder0) {
             for (var3 = 0; FunOrbClient.field_z.length > var3; var3++) {
               var4_int = FunOrbClient.field_z[var3];
-              var23 = DialWidget.a(var4_int, (byte) 126);
+              var23 = DialWidget.getComponentPreset(var4_int, (byte) 126);
               for (var6 = 0; -8 + var23.length > var6; var6++) {
                 if (var23[var6] == param0) {
-                  return SocketConnector.formatTemplate(AccountTermsPanel.field_T, -54, new String[]{cd.field_c[var3]});
+                  return SocketConnector.formatTemplate(AccountTermsPanel.field_T, -54, new String[]{QuickChatPacketHelpers.field_c[var3]});
                 }
               }
             }

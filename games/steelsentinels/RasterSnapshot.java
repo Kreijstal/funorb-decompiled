@@ -15,7 +15,7 @@ final class RasterSnapshot extends IntrusiveNode {
     int field_p;
     static int field_s;
 
-    final static boolean a(int[] param0, byte param1, int[] param2, int param3, boolean param4) {
+    final static boolean isPartAvailable(int[] param0, byte param1, int[] param2, int param3, boolean param4) {
         int var6 = 0;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_24_0 = null;
@@ -46,9 +46,9 @@ final class RasterSnapshot extends IntrusiveNode {
           var5 = var11;
           for (var6 = 0; var6 < var14.length; var6++) {
             var7 = var14[var6];
-            if (t.a(param2, var7, -20370) ||
+            if (NameTable.isBitSet(param2, var7, -20370) ||
               MusicPatchEnvelope.isItemUnlockable(param2, var7, param4, (byte) 86)) {
-              var17 = DialWidget.a(var7, (byte) 124);
+              var17 = DialWidget.getComponentPreset(var7, (byte) 124);
               var9 = 0;
               while (var9 < -8 + var17.length) {
                 if (~var17[var9] != ~param3) {
@@ -81,7 +81,7 @@ final class RasterSnapshot extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_v = null;
         field_r = null;
         field_x = null;
@@ -90,9 +90,9 @@ final class RasterSnapshot extends IntrusiveNode {
         }
     }
 
-    final static Boolean a(boolean param0) {
+    final static Boolean takePendingLoginFlag(boolean param0) {
         if (!param0) {
-          RasterSnapshot.a(true);
+          RasterSnapshot.takePendingLoginFlag(true);
         }
         Boolean var1 = TextHotspotWidget.field_bb;
         TextHotspotWidget.field_bb = null;

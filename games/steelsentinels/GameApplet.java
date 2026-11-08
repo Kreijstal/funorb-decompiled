@@ -32,7 +32,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (null != vd.field_c) {
+        if (null != TransitionTimerHelpers.field_c) {
           return null;
         }
         if (UsernameCredentials.field_o != null &&
@@ -49,7 +49,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.net.URL stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (vd.field_c != null) {
+          if (TransitionTimerHelpers.field_c != null) {
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
@@ -125,8 +125,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (RegistrationRequestDialog.a((CharSequence) ((Object) var4), -111) &&
-                        !(dj.a((CharSequence) ((Object) var4), -118) >= 10)) {
+                      if (RegistrationRequestDialog.isDecimalInteger((CharSequence) ((Object) var4), -111) &&
+                        !(NumberParsingHelpers.parseDecimalInt((CharSequence) ((Object) var4), -118) >= 10)) {
                         this.showErrorPage("wrongjava", -16946);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -164,7 +164,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   if (stackIn_83_0 > stackIn_83_1) {
                     break;
                   }
-                  ob.field_u = true;
+                  PendingPackedReply.field_u = true;
                   break;
                 }
               }
@@ -184,9 +184,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 LobbyStateHelpers.detectMaxMemoryMb((byte) 98);
                 this.recreateCanvas(false);
-                Checkbox.field_bb = qf.a(PasswordFieldPainter.field_A, ChatMessage.field_i, (java.awt.Component) ((Object) sl.field_n), (byte) -113);
+                Checkbox.field_bb = RankingAndRasterHelpers.createRasterBuffer(PasswordFieldPainter.field_A, ChatMessage.field_i, (java.awt.Component) ((Object) ArchiveLoadStep.field_n), (byte) -113);
                 this.initializeClient(26689);
-                ContentTransitionDialog.field_qb = UiContainer.g((byte) 3);
+                ContentTransitionDialog.field_qb = UiContainer.createTickClock((byte) 3);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != Js5NetworkRequest.field_P) {
@@ -198,14 +198,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    di.field_a = ContentTransitionDialog.field_qb.a((byte) -122, ud.field_v);
+                    OptionMaskHelpers.field_a = ContentTransitionDialog.field_qb.waitForTicks((byte) -122, RankingQuery.field_v);
                     stackIn_102_0 = 0;
                   }
                   var3 = stackIn_102_0;
                   do {
-                    if (!(var3 < di.field_a)) {
+                    if (!(var3 < OptionMaskHelpers.field_a)) {
                       this.runDraw(-7035);
-                      StrongCacheEntry.a(sl.field_n, 50, IterableDualNodeDeque.field_i);
+                      StrongCacheEntry.pumpPlatformEvents(ArchiveLoadStep.field_n, 50, IterableDualNodeDeque.field_i);
                       break;
                     }
                     this.runUpdate(0);
@@ -243,7 +243,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.applet.AppletContext stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (vd.field_c != null) {
+          if (TransitionTimerHelpers.field_c != null) {
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
@@ -278,7 +278,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (this == ClientGlobals.field_m &&
             !SentinelCommand.field_v) {
             Js5NetworkRequest.field_P = ClockAndCookieHelpers.monotonicMillis(-91);
-            MouseWheelInput.a((byte) 124, 5000L);
+            MouseWheelInput.sleepMillis((byte) 124, 5000L);
             SingleChildContainer.field_M = null;
             this.shutdownAppletServices(false, (byte) -101);
             return;
@@ -298,7 +298,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          pa.field_f = false;
+          TutorialStepTable.field_f = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -357,7 +357,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (~SentinelAnimationEditor.field_h == ~LoginActionHelpers.field_b) {
                   break;
                 }
-                var2Lifetime1 = ni.field_b[LoginActionHelpers.field_b];
+                var2Lifetime1 = ByteArrayPoolHelpers.field_b[LoginActionHelpers.field_b];
                 LoginActionHelpers.field_b = 127 & 1 + LoginActionHelpers.field_b;
                 stackIn_28_0 = var2Lifetime1;
                 if (var4 != 0) {
@@ -396,7 +396,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -75 % ((13 - param2) / 60);
-          stackIn_1_0 = ModalStack.a((String) null, false, 0, (byte) -90, 0, param1, param0);
+          stackIn_1_0 = ModalStack.performAccountServerRequest((String) null, false, 0, (byte) -90, 0, param1, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -459,22 +459,22 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           ResourceArchive.field_g = 1 + ResourceArchive.field_g & 31;
-          fieldTemp$1 = ml.field_a;
-          ml.field_a = ml.field_a + 1;
+          fieldTemp$1 = ListRequestHelpers.field_a;
+          ListRequestHelpers.field_a = ListRequestHelpers.field_a + 1;
           if (fieldTemp$1 > 50) {
             PlayerContextMenu.field_e = true;
-            ml.field_a = ml.field_a - 50;
-            sl.field_n.setSize(ChatMessage.field_i, PasswordFieldPainter.field_A);
-            sl.field_n.setVisible(true);
-            if (vd.field_c != null &&
+            ListRequestHelpers.field_a = ListRequestHelpers.field_a - 50;
+            ArchiveLoadStep.field_n.setSize(ChatMessage.field_i, PasswordFieldPainter.field_A);
+            ArchiveLoadStep.field_n.setVisible(true);
+            if (TransitionTimerHelpers.field_c != null &&
               SceneWidget.field_N == null) {
-              var6 = vd.field_c.getInsets();
-              sl.field_n.setLocation(kf.field_p + var6.left, var6.top + NameSuggestionsPanel.field_X);
+              var6 = TransitionTimerHelpers.field_c.getInsets();
+              ArchiveLoadStep.field_n.setLocation(HighscoreTable.field_p + var6.left, var6.top + NameSuggestionsPanel.field_X);
               if (SteelSentinels.obfuscationControl != 0) {
-                sl.field_n.setLocation(kf.field_p, NameSuggestionsPanel.field_X);
+                ArchiveLoadStep.field_n.setLocation(HighscoreTable.field_p, NameSuggestionsPanel.field_X);
               }
             } else {
-              sl.field_n.setLocation(kf.field_p, NameSuggestionsPanel.field_X);
+              ArchiveLoadStep.field_n.setLocation(HighscoreTable.field_p, NameSuggestionsPanel.field_X);
             }
           }
           this.renderClient((byte) 112);
@@ -515,15 +515,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         var4 = SteelSentinels.obfuscationControl;
         try {
-          if (null != sl.field_n) {
-            sl.field_n.removeFocusListener((java.awt.event.FocusListener) (this));
-            sl.field_n.getParent().setBackground(java.awt.Color.black);
-            sl.field_n.getParent().remove((java.awt.Component) ((Object) sl.field_n));
+          if (null != ArchiveLoadStep.field_n) {
+            ArchiveLoadStep.field_n.removeFocusListener((java.awt.event.FocusListener) (this));
+            ArchiveLoadStep.field_n.getParent().setBackground(java.awt.Color.black);
+            ArchiveLoadStep.field_n.getParent().remove((java.awt.Component) ((Object) ArchiveLoadStep.field_n));
           }
           boolean decompiledFrameRemainder0 = true;
           if (null == SceneWidget.field_N) {
-            if (null != vd.field_c) {
-              var2 = vd.field_c;
+            if (null != TransitionTimerHelpers.field_c) {
+              var2 = TransitionTimerHelpers.field_c;
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -544,23 +544,23 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var2 = SceneWidget.field_N;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          sl.field_n = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) sl.field_n));
-          sl.field_n.setSize(ChatMessage.field_i, PasswordFieldPainter.field_A);
-          sl.field_n.setVisible(true);
-          if (vd.field_c == var2) {
-            var3 = vd.field_c.getInsets();
-            sl.field_n.setLocation(kf.field_p + var3.left, var3.top + NameSuggestionsPanel.field_X);
+          ArchiveLoadStep.field_n = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ArchiveLoadStep.field_n));
+          ArchiveLoadStep.field_n.setSize(ChatMessage.field_i, PasswordFieldPainter.field_A);
+          ArchiveLoadStep.field_n.setVisible(true);
+          if (TransitionTimerHelpers.field_c == var2) {
+            var3 = TransitionTimerHelpers.field_c.getInsets();
+            ArchiveLoadStep.field_n.setLocation(HighscoreTable.field_p + var3.left, var3.top + NameSuggestionsPanel.field_X);
             if (var4 != 0) {
-              sl.field_n.setLocation(kf.field_p, NameSuggestionsPanel.field_X);
+              ArchiveLoadStep.field_n.setLocation(HighscoreTable.field_p, NameSuggestionsPanel.field_X);
             }
           } else {
-            sl.field_n.setLocation(kf.field_p, NameSuggestionsPanel.field_X);
+            ArchiveLoadStep.field_n.setLocation(HighscoreTable.field_p, NameSuggestionsPanel.field_X);
           }
-          sl.field_n.addFocusListener((java.awt.event.FocusListener) (this));
-          sl.field_n.requestFocus();
+          ArchiveLoadStep.field_n.addFocusListener((java.awt.event.FocusListener) (this));
+          ArchiveLoadStep.field_n.requestFocus();
           DelayedServerPacket.field_q = true;
-          pa.field_f = true;
+          TutorialStepTable.field_f = true;
           PlayerContextMenu.field_e = true;
           ImageProducerRasterBuffer.field_x = param0;
           BirthDateEntryPanel.field_Y = ClockAndCookieHelpers.monotonicMillis(-61);
@@ -603,15 +603,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var6 = null;
         try {
           var2_long = ClockAndCookieHelpers.monotonicMillis(-111);
-          var4 = hg.field_c[SocialListEntry.field_Wb];
-          hg.field_c[SocialListEntry.field_Wb] = var2_long;
+          var4 = HighscoreColumnHeader.field_c[SocialListEntry.field_Wb];
+          HighscoreColumnHeader.field_c[SocialListEntry.field_Wb] = var2_long;
           if (var4 != (long)param0 &&
             var4 < var2_long) {
           }
           SocialListEntry.field_Wb = 31 & SocialListEntry.field_Wb + 1;
           var6 = this;
           synchronized (var6) {
-            DelayedServerPacket.field_q = pa.field_f;
+            DelayedServerPacket.field_q = TutorialStepTable.field_f;
           }
           this.updateClient(2);
           return;
@@ -648,10 +648,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (sl.field_n != null) {
+          if (ArchiveLoadStep.field_n != null) {
             try {
-              sl.field_n.removeFocusListener((java.awt.event.FocusListener) (this));
-              sl.field_n.getParent().remove((java.awt.Component) ((Object) sl.field_n));
+              ArchiveLoadStep.field_n.removeFocusListener((java.awt.event.FocusListener) (this));
+              ArchiveLoadStep.field_n.getParent().remove((java.awt.Component) ((Object) ArchiveLoadStep.field_n));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -666,7 +666,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           this.releaseClientStatics(91);
-          if (vd.field_c != null) {
+          if (TransitionTimerHelpers.field_c != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -695,7 +695,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (vd.field_c != null) {
+          if (TransitionTimerHelpers.field_c != null) {
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
@@ -751,11 +751,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var6 = LobbyGameDecoding.measureMenuText(ProxySocketConnector.field_j[var3_int], 52, true);
                 var7 = QuickChatMenu.field_kc - (var6 >> 1);
                 var4 = var4 + MembershipPromotionScreen.field_m;
-                if (AlternateUsernameCredentials.a(rn.field_q + (SectorCacheStore.field_j << 1), (ud.field_y << 1) + var6, param1, var7 - ud.field_y, 0, var4, param2)) {
+                if (AlternateUsernameCredentials.rectContains(PendingAckRequest.field_q + (SectorCacheStore.field_j << 1), (RankingQuery.field_y << 1) + var6, param1, var7 - RankingQuery.field_y, 0, var4, param2)) {
                   stackIn_13_0 = var5;
                   return stackIn_13_0;
                 }
-                var4 = var4 + (rn.field_q + MembershipPromotionScreen.field_m + (SectorCacheStore.field_j << 1));
+                var4 = var4 + (PendingAckRequest.field_q + MembershipPromotionScreen.field_m + (SectorCacheStore.field_j << 1));
               }
               var3_int++;
               continue;
@@ -826,11 +826,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (ClientGlobals.field_m == this &&
             !SentinelCommand.field_v) {
             PlayerContextMenu.field_e = true;
-            if (ob.field_u &&
+            if (PendingPackedReply.field_u &&
               ClockAndCookieHelpers.monotonicMillis(-82) - BirthDateEntryPanel.field_Y > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (var2.width < dc.field_c) {
+                if (var2.width < TableColumns.field_c) {
                   return;
                 }
                 if (var2.height < EmailSyntaxValidator.field_t) {
@@ -877,7 +877,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             System.out.println("error_game_" + param0);
             try {
-              JavaScriptBridge.callWindowFunction(Projectile.d((byte) -21), (byte) -96, "loggedout");
+              JavaScriptBridge.callWindowFunction(Projectile.getApplet((byte) -21), (byte) -96, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -915,7 +915,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          pa.field_f = true;
+          TutorialStepTable.field_f = true;
           PlayerContextMenu.field_e = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -952,8 +952,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var8_int = 65 / ((-41 - param3) / 58);
             try {
               if (null != ClientGlobals.field_m) {
-                rh.field_s = rh.field_s + 1;
-                if (rh.field_s < 3) {
+                PendingDataRequest.field_s = PendingDataRequest.field_s + 1;
+                if (PendingDataRequest.field_s < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
@@ -963,19 +963,19 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               PasswordFieldPainter.field_A = param1;
               EmailSyntaxValidator.field_t = param1;
               ChatMessage.field_i = param0;
-              dc.field_c = param0;
+              TableColumns.field_c = param0;
               NameSuggestionsPanel.field_X = 0;
               PlayerContextMenu.field_d = param5;
-              kf.field_p = 0;
+              HighscoreTable.field_p = 0;
               ClientGlobals.field_m = this;
-              SingleChildContainer.field_O = Projectile.d((byte) -21);
+              SingleChildContainer.field_O = Projectile.getApplet((byte) -21);
               dupTemp$0 = new SystemTaskService(param2, param4, param6, true);
               IterableDualNodeDeque.field_i = dupTemp$0;
               SingleChildContainer.field_M = dupTemp$0;
               var9 = IterableDualNodeDeque.field_i.requestThread(2, 1, (Runnable) (this));
               while (true) {
                 if (var9.field_a == 0) {
-                  MouseWheelInput.a((byte) 120, 10L);
+                  MouseWheelInput.sleepMillis((byte) 120, 10L);
                   if (var10 == 0) {
                     continue;
                   }

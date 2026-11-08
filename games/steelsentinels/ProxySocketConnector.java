@@ -16,7 +16,7 @@ final class ProxySocketConnector extends SocketConnector {
     static String field_k;
     static long field_l;
 
-    final static void sendListRequest(int param0, ud param1, int param2) {
+    final static void sendListRequest(int param0, RankingQuery param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
           if (param0 != 27153) {
@@ -151,13 +151,13 @@ final class ProxySocketConnector extends SocketConnector {
         field_r = null;
     }
 
-    final static void submitScoreRecord(int param0, byte param1, cf param2) {
+    final static void submitScoreRecord(int param0, byte param1, StatSubmission param2) {
         try {
           Explosion.field_A.addLast(3, param2);
           if (param1 != 123) {
             ProxySocketConnector.scrollToNextPage((byte) 48);
           }
-          ml.a(1, param2, param0);
+          ListRequestHelpers.sendStatSubmission(1, param2, param0);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "r.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -175,11 +175,11 @@ final class ProxySocketConnector extends SocketConnector {
           return;
         }
         if (VerticalScrollbar.field_ac >= 224) {
-          ModalPanel.a(256, (byte) 64);
+          ModalPanel.setSoundEffectVolume(256, (byte) 64);
           return;
         }
         int var1 = VerticalScrollbar.field_ac % 32;
-        ModalPanel.a(-var1 + VerticalScrollbar.field_ac + 32, (byte) 64);
+        ModalPanel.setSoundEffectVolume(-var1 + VerticalScrollbar.field_ac + 32, (byte) 64);
     }
 
     private final java.net.Socket connectThroughHttpProxy(int param0, String param1, String param2, int param3) throws IOException {
@@ -372,14 +372,14 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     final static void drawOverlayDialogs(boolean param0, boolean param1) {
-        if (NodeIterator.a(2)) {
+        if (NodeIterator.isOverlayOpen(2)) {
           param1 = false;
         }
         SocialListEntry.drawAccountOverlays(param1, -127);
         if (param0) {
           return;
         }
-        PasswordFieldPainter.e(0);
+        PasswordFieldPainter.drawQuickChatOverlay(0);
     }
 
     final static int writeCompressedString(PacketBuffer param0, String param1, int param2) {
@@ -399,7 +399,7 @@ final class ProxySocketConnector extends SocketConnector {
           var5 = (CharSequence) ((Object) param1);
           var4 = ClientGlobals.encodeExtendedBytes(-38, var5);
           param0.writeUnsignedSmart(var4.length, 32768);
-          param0.position = param0.position + ob.field_r.compress(param0.position, param0.payload, param2 ^ 115, var4, param2, var4.length);
+          param0.position = param0.position + PendingPackedReply.field_r.compress(param0.position, param0.payload, param2 ^ 115, var4, param2, var4.length);
           stackIn_1_0 = -var3_int + param0.position;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

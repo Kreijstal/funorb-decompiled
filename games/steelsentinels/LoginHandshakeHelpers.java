@@ -18,7 +18,7 @@ final class LoginHandshakeHelpers {
         FallingPickup.field_y.writeByte((byte) 121, param0);
         FallingPickup.field_y.writeByte((byte) 109, param2);
         FallingPickup.field_y.writeShort(param1, 59);
-        FallingPickup.field_y.rsaEncryptContents(qe.field_d, AccountNoticeDialog.field_ib, -10048);
+        FallingPickup.field_y.rsaEncryptContents(TextSpriteHelpers.field_d, AccountNoticeDialog.field_ib, -10048);
         ClockAndCookieHelpers.field_g.writeCipheredOpcode(18, (byte) -117);
         int fieldTemp$0 = ClockAndCookieHelpers.field_g.position + 1;
         ClockAndCookieHelpers.field_g.position = ClockAndCookieHelpers.field_g.position + 1;
@@ -36,7 +36,7 @@ final class LoginHandshakeHelpers {
     }
 
     final static void drawChatPanelAt(byte param0, boolean param1, int param2, int param3) {
-        FullscreenFocusCanvas.a(-1604006872, param1, param3, param2);
+        FullscreenFocusCanvas.drawChatInputPrompt(-1604006872, param1, param3, param2);
         if (param0 != 38) {
           CharSequence[] var5 = (CharSequence[]) null;
           LoginHandshakeHelpers.joinCharSequences((CharSequence[]) null, -124);
@@ -77,7 +77,7 @@ final class LoginHandshakeHelpers {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = LoginDialog.a(param0.length, 0, (byte) 50, param0);
+            stackIn_4_0 = LoginDialog.joinCharSequenceRange(param0.length, 0, (byte) 50, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

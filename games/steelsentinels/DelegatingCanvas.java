@@ -15,7 +15,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         field_f = null;
         if (param0 != 61) {
           SceneWidget var2 = (SceneWidget) null;
-          DelegatingCanvas.a((byte) 56, (SceneWidget) null, -94, true);
+          DelegatingCanvas.buildUnlockablesList((byte) 56, (SceneWidget) null, -94, true);
         }
         field_e = null;
     }
@@ -28,7 +28,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static int a(byte param0, SceneWidget param1, int param2, boolean param3) {
+    final static int buildUnlockablesList(byte param0, SceneWidget param1, int param2, boolean param3) {
         int var7 = 0;
         int var9 = 0;
         int stackIn_4_0 = 0;
@@ -51,7 +51,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         SceneWidget var16 = null;
         var13 = SteelSentinels.obfuscationControl;
         try {
-          if (!RasterBuffer.a((byte) 116)) {
+          if (!RasterBuffer.isSpecialItemUnlocked((byte) 116)) {
             stackIn_4_0 = param2;
             return stackIn_4_0;
           }
@@ -66,26 +66,26 @@ final class DelegatingCanvas extends java.awt.Canvas {
               boolean decompiledFrameRemainder0 = true;
               if (var7 == TriangleMesh.field_O[var9]) {
                 var5 = 2;
-                if (t.a(ArchiveRequest.field_D, var9, -20370)) {
+                if (NameTable.isBitSet(ArchiveRequest.field_D, var9, -20370)) {
                   var5 = 0;
                 }
                 if (!param3) {
                   decompiledFrameRemainder0 = (var5 != 0);
                   if (decompiledFrameRemainder0) {
-                    decompiledFrameRemainder0 = !(!LoadoutHelpers.isComponentCompatible(var9, ArticulatedPart.f((byte) -28), ArchiveRequest.field_D, (byte) 84, DirectByteStorage.field_m, rn.field_D));
+                    decompiledFrameRemainder0 = !(!LoadoutHelpers.isComponentCompatible(var9, ArticulatedPart.isMemberSession((byte) -28), ArchiveRequest.field_D, (byte) 84, DirectByteStorage.field_m, PendingAckRequest.field_D));
                   }
                 } else {
                   decompiledFrameRemainder0 = (var5 == 0);
                 }
                 if (decompiledFrameRemainder0) {
                   if (var5 != 0 &&
-                    qf.field_h[var9] <= PasswordFieldPainter.field_v) {
+                    RankingAndRasterHelpers.field_h[var9] <= PasswordFieldPainter.field_v) {
                     var5 = 1;
                   }
                   if (var6 != 0) {
                     var6 = 0;
                     var14 = new SceneWidget(-1L, (SceneWidget) null);
-                    var14.field_Pb = gj.field_a;
+                    var14.field_Pb = SpriteDrawHelpers.field_a;
                     var14.field_Kb = 2;
                     var14.setBounds(0, param2, 18, 0, var4_int);
                     param1.addChild(var14, 126);
@@ -150,7 +150,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static MouseWheelInput a(byte param0) {
+    final static MouseWheelInput createMouseWheelInput(byte param0) {
         try {
           Throwable var1 = null;
           MouseWheelInput stackIn_3_0 = null;

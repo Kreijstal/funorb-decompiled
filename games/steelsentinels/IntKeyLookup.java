@@ -16,11 +16,11 @@ final class IntKeyLookup {
     static SceneWidget field_h;
     static int field_d;
 
-    final static boolean c(byte param0) {
+    final static boolean isLoginOptionCleared(byte param0) {
         if (param0 <= 77) {
-          IntKeyLookup.d((byte) 44);
+          IntKeyLookup.tickOverlayAnimations((byte) 44);
         }
-        return !gf.field_a.isComplete((byte) -72) ? true : false;
+        return !GeneratedSpriteHelpers.field_a.isComplete((byte) -72) ? true : false;
     }
 
     final int get(int key, byte obfuscationGuard) {
@@ -43,7 +43,7 @@ final class IntKeyLookup {
         }
     }
 
-    final static String a(int param0, byte[] param1) {
+    final static String decodeWindowsCodePageString(int param0, byte[] param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -54,7 +54,7 @@ final class IntKeyLookup {
           if (param0 != 13) {
             field_g = (String) null;
           }
-          stackIn_3_0 = SoundCache.a((byte) 37, 0, param1, param1.length);
+          stackIn_3_0 = SoundCache.decodeWindowsCodePageText((byte) 37, 0, param1, param1.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,7 +112,7 @@ final class IntKeyLookup {
         }
     }
 
-    final static void a(int param0, PacketBuffer param1) {
+    final static void writeMachineId(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -142,8 +142,8 @@ final class IntKeyLookup {
             var2 = var8;
             if (null != LoginDialogHelpers.field_h) {
               try {
-                LoginDialogHelpers.field_h.a(-121, 0L);
-                LoginDialogHelpers.field_h.a(-121, var9);
+                LoginDialogHelpers.field_h.seek(-121, 0L);
+                LoginDialogHelpers.field_h.readFully(-121, var9);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;
@@ -184,9 +184,9 @@ final class IntKeyLookup {
         }
     }
 
-    final static void d(byte param0) {
+    final static void tickOverlayAnimations(byte param0) {
         PlayingSound.trackCanvasHeightChange(param0 - 14);
-        vd.a((byte) 63);
+        TransitionTimerHelpers.updateTransitionTimers((byte) 63);
         if (param0 != -66) {
           field_b = (String) null;
         }
@@ -194,7 +194,7 @@ final class IntKeyLookup {
 
     public static void releaseStatics(byte param0) {
         if (param0 >= -67) {
-          IntKeyLookup.c((byte) -9);
+          IntKeyLookup.isLoginOptionCleared((byte) -9);
         }
         field_f = null;
         field_g = null;
@@ -207,41 +207,41 @@ final class IntKeyLookup {
         field_k = null;
     }
 
-    final static void a(byte param0) {
+    final static void createButtonLabelSprites(byte param0) {
         RgbSprite var3 = new RgbSprite(120, 30);
         RgbSprite var4 = var3;
-        SoundCache.field_a[0] = qe.a(var4, (byte) -93, EditableTextWidget.field_eb);
-        SoundCache.field_a[1] = qe.a(var4, (byte) -93, gf.field_e);
-        SoundCache.field_a[2] = qe.a(var4, (byte) -93, ob.field_w);
-        SoundCache.field_a[3] = qe.a(var4, (byte) -93, fm.field_i);
-        SoundCache.field_a[4] = qe.a(var4, (byte) -93, BoundedRandomAccessFile.field_o);
-        SoundCache.field_a[5] = qe.a(var4, (byte) -93, gm.field_a);
-        SoundCache.field_a[9] = qe.a(var4, (byte) -93, SoundAndUrlHelpers.field_c);
-        SoundCache.field_a[10] = qe.a(var4, (byte) -93, hm.field_e);
-        SoundCache.field_a[11] = qe.a(var4, (byte) -93, BoundedRandomAccessFile.field_a);
-        SoundCache.field_a[12] = qe.a(var4, (byte) -93, jm.field_t);
-        SoundCache.field_a[13] = qe.a(var4, (byte) -93, cl.field_g);
-        SoundCache.field_a[14] = qe.a(var4, (byte) -93, DialWidgetPainter.field_p);
-        SoundCache.field_a[15] = qe.a(var4, (byte) -93, ValidationIndicator.field_X);
-        SoundCache.field_a[16] = qe.a(var4, (byte) -93, BirthDateEntryPanel.field_V);
-        lc.field_a = new IndexedSprite[SoundCache.field_a.length];
-        ArraySupport.copy(SoundCache.field_a, 0, lc.field_a, 0, SoundCache.field_a.length);
-        lc.field_a[5] = SoundCache.field_a[15];
-        lc.field_a[4] = SoundCache.field_a[14];
-        lc.field_a[3] = SoundCache.field_a[13];
-        lc.field_a[8] = SoundCache.field_a[7];
-        lc.field_a[7] = SoundCache.field_a[12];
-        lc.field_a[15] = null;
-        lc.field_a[14] = null;
-        lc.field_a[13] = null;
-        lc.field_a[12] = SoundCache.field_a[7];
-        rh.field_v[6].bindRasterTarget();
+        SoundCache.field_a[0] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, EditableTextWidget.field_eb);
+        SoundCache.field_a[1] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, GeneratedSpriteHelpers.field_e);
+        SoundCache.field_a[2] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, PendingPackedReply.field_w);
+        SoundCache.field_a[3] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, QuickChatParameterType.field_i);
+        SoundCache.field_a[4] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, BoundedRandomAccessFile.field_o);
+        SoundCache.field_a[5] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, EmailValidationHelpers.field_a);
+        SoundCache.field_a[9] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, SoundAndUrlHelpers.field_c);
+        SoundCache.field_a[10] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, LoadoutCostHelpers.field_e);
+        SoundCache.field_a[11] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, BoundedRandomAccessFile.field_a);
+        SoundCache.field_a[12] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, PendingIntReplyRequest.field_t);
+        SoundCache.field_a[13] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, LoginResultHelpers.field_g);
+        SoundCache.field_a[14] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, DialWidgetPainter.field_p);
+        SoundCache.field_a[15] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, ValidationIndicator.field_X);
+        SoundCache.field_a[16] = TextSpriteHelpers.renderOutlinedTextSprite(var4, (byte) -93, BirthDateEntryPanel.field_V);
+        SettingSearchHelpers.field_a = new IndexedSprite[SoundCache.field_a.length];
+        ArraySupport.copy(SoundCache.field_a, 0, SettingSearchHelpers.field_a, 0, SoundCache.field_a.length);
+        SettingSearchHelpers.field_a[5] = SoundCache.field_a[15];
+        SettingSearchHelpers.field_a[4] = SoundCache.field_a[14];
+        SettingSearchHelpers.field_a[3] = SoundCache.field_a[13];
+        SettingSearchHelpers.field_a[8] = SoundCache.field_a[7];
+        SettingSearchHelpers.field_a[7] = SoundCache.field_a[12];
+        SettingSearchHelpers.field_a[15] = null;
+        SettingSearchHelpers.field_a[14] = null;
+        SettingSearchHelpers.field_a[13] = null;
+        SettingSearchHelpers.field_a[12] = SoundCache.field_a[7];
+        PendingDataRequest.field_v[6].bindRasterTarget();
         if (param0 != 6) {
           return;
         }
-        BoundedUrlRequest.field_d.drawCentered(gf.field_e, 78, 26, 0, -1);
-        BoundedUrlRequest.field_d.drawCentered(ob.field_w, 130, 26, 0, -1);
-        Checkbox.field_bb.b((byte) 121);
+        BoundedUrlRequest.field_d.drawCentered(GeneratedSpriteHelpers.field_e, 78, 26, 0, -1);
+        BoundedUrlRequest.field_d.drawCentered(PendingPackedReply.field_w, 130, 26, 0, -1);
+        Checkbox.field_bb.bindRaster((byte) 121);
     }
 
     static {

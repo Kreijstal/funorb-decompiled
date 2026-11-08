@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class RgbSprite extends wi {
+class RgbSprite extends SpriteState {
     int[] field_E;
 
     void drawScaled(int param0, int param1, int param2, int param3) {

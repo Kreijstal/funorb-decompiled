@@ -13,7 +13,7 @@ final class WhirlpoolHasher {
     static int field_e;
     private long[] field_j;
     static SceneWidget field_m;
-    static fm field_n;
+    static QuickChatParameterType field_n;
     static RgbSprite[][] field_o;
     static String field_d;
     static String[] field_g;
@@ -82,7 +82,7 @@ final class WhirlpoolHasher {
               var17 = var17 + var18;
               incrementValue$1 = var16;
               var16++;
-              SoftwareRaster.field_g[incrementValue$1] = DateOfBirthValidator.a(var27 - (var27 >>> 8), var25Lifetime2) >>> 6;
+              SoftwareRaster.field_g[incrementValue$1] = DateOfBirthValidator.bitOr(var27 - (var27 >>> 8), var25Lifetime2) >>> 6;
               var18 = var18 + param12;
               continue;
             }
@@ -117,7 +117,7 @@ final class WhirlpoolHasher {
               var27Lifetime1 = (12582912 & var26Lifetime1) + (var27Lifetime1 & -1073692672);
               var27Lifetime1 = 1077952512 & (var27Lifetime1 | var27Lifetime1 >>> 1);
               var16Lifetime1--;
-              SoftwareRaster.field_g[var16Lifetime1] = DateOfBirthValidator.a(var25Lifetime1Lifetime1, -(var27Lifetime1 >>> 8) + var27Lifetime1) >>> 6;
+              SoftwareRaster.field_g[var16Lifetime1] = DateOfBirthValidator.bitOr(var25Lifetime1Lifetime1, -(var27Lifetime1 >>> 8) + var27Lifetime1) >>> 6;
               continue;
             }
             break;
@@ -171,7 +171,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_j[var3Lifetime1] = AccountNamePrompt.bitXor(this.field_j[var3Lifetime1], tm.field_i[var4][ClientUiHelpers.bitAnd((int)(this.field_h[ClientUiHelpers.bitAnd(7, -var4 + var3Lifetime1)] >>> var5), 255)]);
+              this.field_j[var3Lifetime1] = AccountNamePrompt.bitXor(this.field_j[var3Lifetime1], SessionUiHelpers.field_i[var4][ClientUiHelpers.bitAnd((int)(this.field_h[ClientUiHelpers.bitAnd(7, -var4 + var3Lifetime1)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -179,14 +179,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_h[var3Lifetime1Lifetime1] = this.field_j[var3Lifetime1Lifetime1];
           }
-          this.field_h[0] = AccountNamePrompt.bitXor(this.field_h[0], tm.field_e[var2Lifetime2]);
+          this.field_h[0] = AccountNamePrompt.bitXor(this.field_h[0], SessionUiHelpers.field_e[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_j[var3Lifetime1Lifetime2] = this.field_h[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_j[var3Lifetime1Lifetime2] = AccountNamePrompt.bitXor(this.field_j[var3Lifetime1Lifetime2], tm.field_i[var7][ClientUiHelpers.bitAnd((int)(this.field_c[ClientUiHelpers.bitAnd(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1), 255)]);
+              this.field_j[var3Lifetime1Lifetime2] = AccountNamePrompt.bitXor(this.field_j[var3Lifetime1Lifetime2], SessionUiHelpers.field_i[var7][ClientUiHelpers.bitAnd((int)(this.field_c[ClientUiHelpers.bitAnd(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -252,7 +252,7 @@ final class WhirlpoolHasher {
             var8 = param2[var5_int] << var6 & 255 | (255 & param2[var5_int + 1]) >>> -var6 + 8;
             if (0 <= var8 &&
               var8 < 256) {
-              this.field_b[this.field_l] = (byte)DateOfBirthValidator.a((int) this.field_b[this.field_l], var8 >>> var7);
+              this.field_b[this.field_l] = (byte)DateOfBirthValidator.bitOr((int) this.field_b[this.field_l], var8 >>> var7);
               this.field_i = this.field_i + (8 - var7);
               this.field_l = this.field_l + 1;
               if (this.field_i == 512) {
@@ -272,7 +272,7 @@ final class WhirlpoolHasher {
             stackIn_16_0 = param2[var5_int] << var6;
             stackIn_16_1 = 255;
             var8Lifetime1 = stackIn_16_0 & stackIn_16_1;
-            this.field_b[this.field_l] = (byte)DateOfBirthValidator.a((int) this.field_b[this.field_l], var8Lifetime1 >>> var7);
+            this.field_b[this.field_l] = (byte)DateOfBirthValidator.bitOr((int) this.field_b[this.field_l], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -341,7 +341,7 @@ final class WhirlpoolHasher {
           if (!param1) {
             this.field_k = (long[]) null;
           }
-          this.field_b[this.field_l] = (byte)DateOfBirthValidator.a((int) this.field_b[this.field_l], 128 >>> ClientUiHelpers.bitAnd(this.field_i, 7));
+          this.field_b[this.field_l] = (byte)DateOfBirthValidator.bitOr((int) this.field_b[this.field_l], 128 >>> ClientUiHelpers.bitAnd(this.field_i, 7));
           this.field_l = this.field_l + 1;
           if (this.field_l > 32) {
             while (this.field_l < 64) {
@@ -402,7 +402,7 @@ final class WhirlpoolHasher {
     }
 
     static {
-        field_n = new fm(2, 4, 4, 0);
+        field_n = new QuickChatParameterType(2, 4, 4, 0);
         field_d = "Cancel rematch";
         field_g = new String[]{"The Golem-class sentinel entered the war in the early stages to replace conventional armour. Even to this day it remains a strong weapons platform for supporting the larger chassis.", "Slave-class sentinels specialise in closing in and destroying targets at close range. They are fitted with powerful legs, capable of leaping onto buildings for added tactical movement in a combat situation.", "When speed and accuracy are required, the Aquila-class scout sentinel is the robot for the job. The default design is fitted with a targeting system for perfect accuracy with its lasers, and also anti-air support from its missile systems.", "Long-range fire support is granted through the Turtle-class sentinel. Fitted with multiple heavy rockets and an ordnance weapon point on its back, a constant barrage of destruction can be created while you slowly advance.", "Commando-class sentinels provide a powerful mix of EMP rockets, a long range sniper cannon and close-range support with plasma and thunder blade.", "The Hurricane-class sentinel was designed as an aerial missile platform. It leaps into the air to launch its payload while utilising its rail guns for long range sniping.", "The high-speed Scorpion-class chassis destroys targets at close range with its top-mounted ultra gun, while keeping air defences enabled with targeted laser beams.", "As the war progressed, earlier sentinels were replaced with the heavier Crusher-class. Featuring a back-mounted ordnance slot, stormhammer, thrusters and a range of weapon points, this sentinel provided well-supported power for any situation.", "The colossal Bertha-class sentinel was one of the first chassis designs to be used in the war. Low-tech, but massive in design, it relies on outlasting its opponents and dealing massive damage at long range with its heavy rocket systems.", "Only just entering operation, the Orbital-class sentinel was designed to be a space-borne weapons platform. At the last moment, however, it was converted for atmospheric use, with the addition of extra heavy guns for missile defence.", "As the most advanced sentinel within the war, the Valhalla-class design is feared by commanders throughout the systems. It contains state-of-the-art energy weapons to deal with all manner of situations, as well as the devastating fusion blade for close-range decapitation.", "The first and last Babel-class sentinel started the war. The Babel landed on Ilolian Prime, and proceeded to destroy the whole planetary defence force over weeks of fighting. Commanders throughout the systems knew at this point that the old wars had ended, and the age of the sentinel had begun."};
     }

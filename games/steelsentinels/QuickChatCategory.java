@@ -69,7 +69,7 @@ final class QuickChatCategory extends DualNode {
         int var2Lifetime1;
         if (this.field_A != null) {
           for (var2 = 0; var2 < this.field_A.length; var2++) {
-            this.field_A[var2] = DateOfBirthValidator.a(this.field_A[var2], 32768);
+            this.field_A[var2] = DateOfBirthValidator.bitOr(this.field_A[var2], 32768);
           }
         }
         if (param0 != -3) {
@@ -79,7 +79,7 @@ final class QuickChatCategory extends DualNode {
           var4 = 0;
           var2Lifetime1 = var4;
           while (var4 < this.field_C.length) {
-            this.field_C[var4] = DateOfBirthValidator.a(this.field_C[var4], 32768);
+            this.field_C[var4] = DateOfBirthValidator.bitOr(this.field_C[var4], 32768);
             var4++;
           }
         }
@@ -182,12 +182,12 @@ final class QuickChatCategory extends DualNode {
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vc[] var6 = null;
+        DisplayMode[] var6 = null;
         RuntimeException var6_ref = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
-        vc[] var10 = null;
+        DisplayMode[] var10 = null;
         SystemTask var11 = null;
         var9 = SteelSentinels.obfuscationControl;
         try {
@@ -195,7 +195,7 @@ final class QuickChatCategory extends DualNode {
             return null;
           }
           if (0 == param4) {
-            var10 = WeightedLruCache.a(38, param2);
+            var10 = WeightedLruCache.queryDisplayModes(38, param2);
             var6 = var10;
             if (var6 == null) {
               stackIn_8_0 = null;
@@ -219,7 +219,7 @@ final class QuickChatCategory extends DualNode {
           }
           var11 = param2.requestEnterFullscreen(param1, param5, param4, param3, 6);
           while (0 == var11.field_a) {
-            MouseWheelInput.a((byte) 127, 10L);
+            MouseWheelInput.sleepMillis((byte) 127, 10L);
           }
           if (param0 != 22230) {
             stackIn_34_0 = (java.awt.Frame) null;

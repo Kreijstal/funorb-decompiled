@@ -3,7 +3,7 @@
  */
 class PacketBuffer extends IntrusiveNode {
     byte[] payload;
-    static ja field_q;
+    static IconLookupHelpers field_q;
     int position;
     static String field_v;
     static int[] field_s;
@@ -31,7 +31,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$2] = (byte) 0;
           var5 = (CharSequence) ((Object) param1);
-          this.position = this.position + SectorCacheStore.a(param1.length(), var5, 0, -122, this.payload, this.position);
+          this.position = this.position + SectorCacheStore.encodeWindowsCodePageText(param1.length(), var5, 0, -122, this.payload, this.position);
           fieldTemp$3 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$3] = (byte) 0;
@@ -67,7 +67,7 @@ class PacketBuffer extends IntrusiveNode {
         return (this.payload[-1 + this.position] & 255) + ((-16777216 & this.payload[-4 + this.position] << 24) - (-((this.payload[this.position - 3] & 255) << 16) - (65280 & this.payload[-2 + this.position] << 8)));
     }
 
-    final void a(String param0, byte param1) {
+    final void writeBase38Name(String param0, byte param1) {
         int var8 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -176,7 +176,7 @@ class PacketBuffer extends IntrusiveNode {
         if (0 == var3) {
           return "";
         }
-        return SoundCache.a((byte) 37, var2, this.payload, var3);
+        return SoundCache.decodeWindowsCodePageText((byte) 37, var2, this.payload, var3);
     }
 
     final boolean verifyTrailingChecksum(byte param0) {
@@ -196,7 +196,7 @@ class PacketBuffer extends IntrusiveNode {
         field_s = null;
         field_q = null;
         if (param0 > -119) {
-          PacketBuffer.h((byte) 76);
+          PacketBuffer.needsSpecialPartTutorial((byte) 76);
         }
         field_v = null;
         field_o = null;
@@ -204,7 +204,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final int readUnsignedByte(byte obfuscationGuard) {
         if (obfuscationGuard >= -53) {
-          field_q = (ja) null;
+          field_q = (IconLookupHelpers) null;
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
@@ -220,11 +220,11 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static boolean h(byte param0) {
+    final static boolean needsSpecialPartTutorial(byte param0) {
         int var1;
         boolean stackIn_4_0 = false;
         var1 = -25 / ((param0 + 3) / 35);
-        stackIn_4_0 = (GzipDecoder.b(-99)) && ((8 & NameCheckResult.field_a) == 0);
+        stackIn_4_0 = (GzipDecoder.ownsSpecialPart(-99)) && ((8 & NameCheckResult.field_a) == 0);
         return stackIn_4_0;
     }
 
@@ -241,7 +241,7 @@ class PacketBuffer extends IntrusiveNode {
         try {
           var5_int = sourceOffset;
           if (obfuscationGuard != -122) {
-            field_q = (ja) null;
+            field_q = (IconLookupHelpers) null;
           }
           while (length + sourceOffset > var5_int) {
             fieldTemp$0 = this.position;
@@ -334,7 +334,7 @@ class PacketBuffer extends IntrusiveNode {
         var5 = -76 % ((48 - param0) / 62);
         var4 = -1 + this.position - var3;
         if (var4 != 0) {
-          return SoundCache.a((byte) 37, var3, this.payload, var4);
+          return SoundCache.decodeWindowsCodePageText((byte) 37, var3, this.payload, var4);
         }
         return "";
     }
@@ -402,7 +402,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int param0) {
-        this.payload = ni.a(param0, (byte) -45);
+        this.payload = ByteArrayPoolHelpers.acquireByteArray(param0, (byte) -45);
         this.position = 0;
     }
 
@@ -448,7 +448,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + SectorCacheStore.a(param0.length(), var4, 0, -112, this.payload, this.position);
+          this.position = this.position + SectorCacheStore.encodeWindowsCodePageText(param0.length(), var4, 0, -112, this.payload, this.position);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -576,7 +576,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final int readLargeSmart(boolean obfuscationGuard) {
         if (!obfuscationGuard) {
-          field_q = (ja) null;
+          field_q = (IconLookupHelpers) null;
         }
         if (this.payload[this.position] >= 0) {
           return this.readUnsignedShort((byte) -60);
@@ -805,7 +805,7 @@ class PacketBuffer extends IntrusiveNode {
 
     static {
         field_v = "Type your email address again to make sure it's correct";
-        field_q = new ja();
+        field_q = new IconLookupHelpers();
         field_s = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     }
 }

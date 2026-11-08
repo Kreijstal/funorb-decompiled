@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class DualNodeDequeIterator implements Iterator {
-    static hm field_b;
+    static LoadoutCostHelpers field_b;
     private IterableDualNodeDeque field_c;
     static String field_j;
     private DualNode field_f;
@@ -15,7 +15,7 @@ final class DualNodeDequeIterator implements Iterator {
     private DualNode field_g;
     static int field_d;
 
-    final static void a(boolean param0) {
+    final static void updateJinglePlayback(boolean param0) {
         int var1 = 0;
         if (null == GrowableIntList.field_c) {
           return;
@@ -38,17 +38,17 @@ final class DualNodeDequeIterator implements Iterator {
         return this.field_c.field_a != this.field_g;
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendQueuedRequests(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
-        jm var4 = null;
+        PendingIntReplyRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          var4 = (jm) (LoginStateQueries.field_c.first(13058));
+          var4 = (PendingIntReplyRequest) (LoginStateQueries.field_c.first(13058));
           while (var4 != null) {
-            rh.a(param0, 0, var4);
-            var4 = (jm) (LoginStateQueries.field_c.next((byte) -45));
+            PendingDataRequest.writeRequestPacket(param0, 0, var4);
+            var4 = (PendingIntReplyRequest) (LoginStateQueries.field_c.next((byte) -45));
           }
           if (param1 == -26077) {
             return;
@@ -82,7 +82,7 @@ final class DualNodeDequeIterator implements Iterator {
         this.field_f = null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 46) {
           field_a = null;
           field_i = null;
@@ -101,7 +101,7 @@ final class DualNodeDequeIterator implements Iterator {
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void fillGouraudTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17 = SteelSentinels.obfuscationControl;
         if (param12 > 14) {
           if (param15 <= param13) {
@@ -162,7 +162,7 @@ final class DualNodeDequeIterator implements Iterator {
         }
     }
 
-    final static ArticulatedPart a(int param0, ArticulatedPart param1) {
+    final static ArticulatedPart wrapPartInMount(int param0, ArticulatedPart param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -200,6 +200,6 @@ final class DualNodeDequeIterator implements Iterator {
         field_i = "You have the maximum number of favourites already saved. You must delete one before you can save any more.";
         field_h = "Holds 1 <times> <%0>";
         field_j = "Please enter your date of birth to enable chat:";
-        field_b = new hm();
+        field_b = new LoadoutCostHelpers();
     }
 }

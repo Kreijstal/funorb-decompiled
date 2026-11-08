@@ -20,7 +20,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         super(param0, param1);
     }
 
-    final dj type(byte param0) {
+    final NumberParsingHelpers type(byte param0) {
         if (param0 <= 47) {
           this.type((byte) 26);
           return PartInstruction.field_h;
@@ -28,14 +28,14 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         return PartInstruction.field_h;
     }
 
-    final static void d(int param0) {
+    final static void clearChatText(int param0) {
         if (param0 > 40) {
-          tf.field_g.setLength(0);
+          ChatHistoryHelpers.field_g.setLength(0);
           ChatPanelHelpers.field_b = 0;
           return;
         }
-        AlternateUsernameCredentials.a(-52, 18, 84, 62, 58, -55, -37);
-        tf.field_g.setLength(0);
+        AlternateUsernameCredentials.rectContains(-52, 18, 84, 62, 58, -55, -37);
+        ChatHistoryHelpers.field_g.setLength(0);
         ChatPanelHelpers.field_b = 0;
     }
 
@@ -51,7 +51,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
           field_y = null;
           return;
         }
-        AlternateUsernameCredentials.a(-89, 67, 9, -70, 59, 127, 12);
+        AlternateUsernameCredentials.rectContains(-89, 67, 9, -70, 59, 127, 12);
         field_t = null;
         field_s = null;
         field_x = null;
@@ -61,10 +61,10 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         field_y = null;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean rectContains(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         boolean stackIn_18_0 = false;
         if (param4 != 0) {
-          AlternateUsernameCredentials.a(-66, 110, -27, 62, 105, 97, 42);
+          AlternateUsernameCredentials.rectContains(-66, 110, -27, 62, 105, 97, 42);
           if (param3 > param6) {
             return false;
           }
@@ -89,7 +89,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         return stackIn_18_0;
     }
 
-    final static String a(byte param0, Throwable param1) throws IOException {
+    final static String formatThrowable(byte param0, Throwable param1) throws IOException {
         String var2;
         PrintWriter var4;
         int var9;

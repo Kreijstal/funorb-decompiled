@@ -12,7 +12,7 @@ abstract class WeightedCacheEntry extends DualNode {
     static String field_D;
     static byte[][] field_A;
 
-    final static void c(byte param0) {
+    final static void toggleCameraFollow(byte param0) {
         boolean stackIn_5_0 = false;
         String[] stackIn_7_0 = null;
         int stackIn_7_1 = 0;
@@ -27,7 +27,7 @@ abstract class WeightedCacheEntry extends DualNode {
         if (CachedTextLayout.field_p) {
           stackIn_8_2 = FrameStyleHelpers.field_b;
         } else {
-          stackIn_8_2 = fm.field_h;
+          stackIn_8_2 = QuickChatParameterType.field_h;
         }
         stackIn_7_0[stackIn_7_1] = stackIn_8_2;
         if (CachedTextLayout.field_p &&
@@ -38,7 +38,7 @@ abstract class WeightedCacheEntry extends DualNode {
         }
     }
 
-    final static int a(byte param0, boolean param1, int param2, CharSequence param3) {
+    final static int parseInt(byte param0, boolean param1, int param2, CharSequence param3) {
         int var8 = 0;
         int stackIn_41_0 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -121,9 +121,9 @@ abstract class WeightedCacheEntry extends DualNode {
         }
     }
 
-    abstract boolean h(int param0);
+    abstract boolean isSoftReference(int param0);
 
-    final static void a(ChatMessage param0, int param1) {
+    final static void acceptChatMessage(ChatMessage param0, int param1) {
         int var2_int = 0;
         ChatMessage var3 = null;
         int var4 = 0;
@@ -139,8 +139,8 @@ abstract class WeightedCacheEntry extends DualNode {
           }
           if (param0.field_w != 0 ||
             param0.field_n != 0) {
-            for (var2_int = 0; var2_int < uc.field_a; var2_int++) {
-              var3 = ph.field_e[var2_int];
+            for (var2_int = 0; var2_int < DesignerPageTables.field_a; var2_int++) {
+              var3 = ChatLineMenuHelpers.field_e[var2_int];
               if (var3.field_k == 2 &&
                 var3.field_w == param0.field_w &&
                 param0.field_n == var3.field_n) {
@@ -152,9 +152,9 @@ abstract class WeightedCacheEntry extends DualNode {
             SceneWidgetNode.field_B = param0.field_k;
             SocketJs5Transport.field_x = param0.field_p;
             PopupMenuSupport.field_b = param0.field_j;
-            pa.field_h = param0.field_l;
+            TutorialStepTable.field_h = param0.field_l;
           }
-          tf.a(param0, (byte) -115);
+          ChatHistoryHelpers.appendChatHistory(param0, (byte) -115);
           if (param1 >= -61) {
             field_C = (RgbSprite[]) null;
           }
@@ -173,7 +173,7 @@ abstract class WeightedCacheEntry extends DualNode {
         }
     }
 
-    final static String a(String param0, int param1, byte param2, BitmapFont param3) {
+    final static String truncateWithEllipsis(String param0, int param1, byte param2, BitmapFont param3) {
         Object var4 = null;
         String var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -192,7 +192,7 @@ abstract class WeightedCacheEntry extends DualNode {
         try {
           if (param2 != -45) {
             var6 = (Sentinel) null;
-            WeightedCacheEntry.a((RgbSprite) null, (Sentinel) null, 56);
+            WeightedCacheEntry.applyTeamColour((RgbSprite) null, (Sentinel) null, 56);
           }
           if (param0 != null &&
             param3.textWidth(param0) > param1) {
@@ -229,7 +229,7 @@ abstract class WeightedCacheEntry extends DualNode {
         }
     }
 
-    abstract Object d(byte param0);
+    abstract Object getValue(byte param0);
 
     WeightedCacheEntry(int param0) {
         this.field_z = param0;
@@ -243,11 +243,11 @@ abstract class WeightedCacheEntry extends DualNode {
         field_C = null;
         if (param0 != -1008) {
           CharSequence var2 = (CharSequence) null;
-          WeightedCacheEntry.a((byte) -111, true, -42, (CharSequence) null);
+          WeightedCacheEntry.parseInt((byte) -111, true, -42, (CharSequence) null);
         }
     }
 
-    final static void a(RgbSprite param0, Sentinel param1, int param2) {
+    final static void applyTeamColour(RgbSprite param0, Sentinel param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -266,7 +266,7 @@ abstract class WeightedCacheEntry extends DualNode {
         try {
           var3_int = 0;
           if (param2 != 14590) {
-            WeightedCacheEntry.c((byte) -71);
+            WeightedCacheEntry.toggleCameraFollow((byte) -71);
           }
           for (var4 = 0; var4 < param0.field_B; var4++) {
             for (var5 = 0; param0.field_z > var5; var5++) {

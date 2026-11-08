@@ -50,7 +50,7 @@ final class ScrollContainer extends SceneWidget {
     }
 
     ScrollContainer(String param0, SceneWidget param1, SceneWidget param2, VerticalScrollbar param3) {
-        this(WidgetStyleLayer.a((CharSequence) ((Object) param0), (byte) -48), param1, param2, param3);
+        this(WidgetStyleLayer.hashText((CharSequence) ((Object) param0), (byte) -48), param1, param2, param3);
     }
 
     final static void paintCanvasNow(int param0, int param1, int param2, java.awt.Canvas param3) {
@@ -192,7 +192,7 @@ final class ScrollContainer extends SceneWidget {
     }
 
     final static boolean isLoginPromptIdle(byte param0) {
-        if (!jn.field_g) {
+        if (!MusicTrackHelpers.field_g) {
           return false;
         }
         if (0 != ChatPanelHelpers.field_b) {
@@ -207,14 +207,14 @@ final class ScrollContainer extends SceneWidget {
 
     final static void configureFullscreenDialogFonts(int param0, BitmapFont param1, BitmapFont param2, int param3) {
         try {
-          ud.field_C = param3;
+          RankingQuery.field_C = param3;
           if (param0 != 2048) {
             field_Vb = -50;
           }
-          pa.field_k = param2;
-          wb.field_a = param1;
+          TutorialStepTable.field_k = param2;
+          RewardValueHelpers.field_a = param1;
           TutorialStep.setDialogCentre(74, SoftwareRaster.field_c / 2, SoftwareRaster.field_j / 2);
-          RasterBuffer.a(false, param2.field_U, param1.field_U, param2.field_U + param2.field_F, param1.field_F + param1.field_U);
+          RasterBuffer.setMenuOptionMetrics(false, param2.field_U, param1.field_U, param2.field_U + param2.field_F, param1.field_F + param1.field_U);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "kg.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

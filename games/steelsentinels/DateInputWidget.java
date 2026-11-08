@@ -19,7 +19,7 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
         return (ValidationSource) ((Object) this.field_U);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawDottedRectangle(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -138,7 +138,7 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
         super(param0, param1, param2, param3, param4);
     }
 
-    final static String a(java.applet.Applet param0, String param1, int param2) {
+    final static String readCookie(java.applet.Applet param0, String param1, int param2) {
         try {
           int var5 = 0;
           String var3 = null;
@@ -159,7 +159,7 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
           try {
             try {
               var3 = (String) (JavaScriptBridge.callWindowFunction(param0, (byte) -96, "getcookies"));
-              var4 = ModalStack.a(';', false, var3);
+              var4 = ModalStack.split(';', false, var3);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -224,16 +224,16 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
         field_T = null;
         if (!param0) {
           String var2 = (String) null;
-          DateInputWidget.a((java.applet.Applet) null, (String) null, 37);
+          DateInputWidget.readCookie((java.applet.Applet) null, (String) null, 37);
         }
         field_S = null;
         field_P = null;
         field_Q = null;
     }
 
-    final static void a(int param0, int param1, byte param2, BitmapFont param3, int param4, RgbSprite param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void configureDialogFrameStyle(int param0, int param1, byte param2, BitmapFont param3, int param4, RgbSprite param5, int param6, int param7, int param8, int param9, int param10) {
         try {
-          pa.field_b = param6;
+          TutorialStepTable.field_b = param6;
           NameSuggestionsPanel.field_W = param10;
           UrlAndReplyHelpers.field_e = param4;
           TextHotspotRegion.field_t = param8;
@@ -247,9 +247,9 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
         }
     }
 
-    final static int a(byte param0) {
+    final static int getPointerIdleTicks(byte param0) {
         int var1 = 117 / ((2 - param0) / 58);
-        return ob.field_q;
+        return PendingPackedReply.field_q;
     }
 
     static {

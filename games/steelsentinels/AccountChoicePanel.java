@@ -21,7 +21,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         field_Z = null;
         if (param0 != -48) {
           CharSequence var2 = (CharSequence) null;
-          AccountChoicePanel.a(115, (CharSequence) null);
+          AccountChoicePanel.normalizeAccountName(115, (CharSequence) null);
         }
         field_R = null;
         field_U = null;
@@ -35,7 +35,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         }
         int var5 = this.field_o + param2;
         int var6 = param0 + this.field_z;
-        tj.field_e.drawParagraph(SentinelAnimationEditor.field_j, var5 + 20, var6 + 20, -40 + this.field_x, -50 + this.field_E, 16777215, -1, 1, 0, tj.field_e.field_G);
+        HighscoreSubmissionFactory.field_e.drawParagraph(SentinelAnimationEditor.field_j, var5 + 20, var6 + 20, -40 + this.field_x, -50 + this.field_E, 16777215, -1, 1, 0, HighscoreSubmissionFactory.field_e.field_G);
         super.drawLayer(param0, (byte) -106, param2, param3);
     }
 
@@ -51,14 +51,14 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         try {
           var6_int = 70 % ((param1 + 85) / 36);
           if (this.field_Y == param3) {
-            TextLayoutLine.a(125);
+            TextLayoutLine.showEmptyLoginForm(125);
           } else {
             if (param3 != this.field_P) {
               if (this.field_W == param3) {
-                MarkerSliderPainter.a((byte) -26);
+                MarkerSliderPainter.showLoadingDialog((byte) -26);
               }
             } else {
-              AccountTermsPanel.h((byte) 45);
+              AccountTermsPanel.showAccountRegistration((byte) 45);
             }
           }
           return;
@@ -76,18 +76,18 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         }
     }
 
-    final static void j(int param0) {
+    final static void closeChatInput(int param0) {
         ChatPanelHelpers.field_b = 0;
         QuickChatInputHelpers.openQuickChatMenu(false);
         if (param0 != 13171) {
-          AccountChoicePanel.j(39);
+          AccountChoicePanel.closeChatInput(39);
         }
     }
 
     public AccountChoicePanel() {
         super(0, 0, 476, 225, (WidgetPainter) null);
         this.field_P = new TextButton(MatchingTextValidator.field_n, (UiListener) null);
-        this.field_Y = new TextButton(hg.field_f, (UiListener) null);
+        this.field_Y = new TextButton(HighscoreColumnHeader.field_f, (UiListener) null);
         this.field_W = new TextButton(SocialRequestHelpers.field_c, (UiListener) null);
         ThreeSliceButtonPainter var1 = new ThreeSliceButtonPainter();
         this.field_P.field_p = (WidgetPainter) ((Object) var1);
@@ -109,7 +109,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         this.addChild(this.field_W, -100);
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String normalizeAccountName(int param0, CharSequence param1) {
         int var4 = 0;
         int var2_int = 0;
         char[] var3 = null;
@@ -165,7 +165,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         }
     }
 
-    final static int a(int param0, CharSequence param1, char param2) {
+    final static int countChar(int param0, CharSequence param1, char param2) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -180,7 +180,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         try {
           var3_int = 0;
           if (param0 != 2019550017) {
-            AccountChoicePanel.j(42);
+            AccountChoicePanel.closeChatInput(42);
           }
           var4 = param1.length();
           for (var5 = 0; var4 > var5; var5++) {

@@ -59,7 +59,7 @@ final class SocialListUiHelpers {
         try {
           var1_int = 0;
           var2 = 0;
-          while (UiContainer.f(22759)) {
+          while (UiContainer.pollKeyEvent(22759)) {
             DualNodeDeque.field_f.handleVerticalKey(true);
             if (DualNodeDeque.field_f.isForwardAction(0)) {
               var1_int = 1;
@@ -79,21 +79,21 @@ final class SocialListUiHelpers {
             var3 = MessageMenuHelpers.field_b[DualNodeDeque.field_f.field_e];
             if (var3 == 2 ||
               5 == var3) {
-              NodeIterator.a((byte) -2);
+              NodeIterator.clearSharedReferences((byte) -2);
             }
           } else {
             if (var2 != 0 &&
-              in.field_a != 2) {
-              NodeIterator.a((byte) -2);
+              SocialPacketHelpers.field_a != 2) {
+              NodeIterator.clearSharedReferences((byte) -2);
             }
           }
           if (var3 == 0 &&
-            in.field_a == 2) {
+            SocialPacketHelpers.field_a == 2) {
             var4 = ClockAndCookieHelpers.monotonicMillis(-63) - rb.field_c;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               var3 = 2;
-              cl.a(114, true, 5);
+              LoginResultHelpers.buildPopupMenu(114, true, 5);
             }
           }
           stackIn_26_0 = var3;
@@ -109,10 +109,10 @@ final class SocialListUiHelpers {
         if (param0) {
           return (TextWidgetPainter) null;
         }
-        if (uc.field_i == null) {
-          uc.field_i = new TextWidgetPainter(SectorCacheStore.field_m, 20, 0, 0, 0, 11579568, -1, 0, 0, SectorCacheStore.field_m.field_G, -1, 2147483647, true);
+        if (DesignerPageTables.field_i == null) {
+          DesignerPageTables.field_i = new TextWidgetPainter(SectorCacheStore.field_m, 20, 0, 0, 0, 11579568, -1, 0, 0, SectorCacheStore.field_m.field_G, -1, 2147483647, true);
         }
-        return uc.field_i;
+        return DesignerPageTables.field_i;
     }
 
     public static void releaseStatics(int param0) {
@@ -229,7 +229,7 @@ final class SocialListUiHelpers {
             if (0 != var6.field_Eb) {
               TextAndMenuHelpers.openPlayerContextMenu(var6, -1, -1, (int[]) null, var6.field_Tb, var6.field_dc, 1073741824, 0L, AccountRegistrationPanel.field_W.field_Xb);
               var16 = AudioService.field_i;
-              var13_ref_String = sa.field_a;
+              var13_ref_String = LoadingStatusHelpers.field_a;
               var16.field_j.addItem(param1 ^ -3, 7, var13_ref_String);
               var17 = AudioService.field_i;
               var13 = TextButton.field_S;
@@ -239,13 +239,13 @@ final class SocialListUiHelpers {
             var6 = (SocialListEntry) (var4.next((byte) -11));
           }
           if (AccountRegistrationPanel.field_W.field_bc.field_Eb != 0) {
-            DelayedServerPacket.field_y = new AccountNamePrompt(AccountRegistrationPanel.field_W.field_bc.field_Rb, AccountRegistrationPanel.field_W.field_bc.field_cb, AccountRegistrationPanel.field_W.field_bc.field_zb, AccountRegistrationPanel.field_W.field_bc.field_Lb, AccountMessagePanel.field_W, kf.field_y, bd.field_f, bd.field_f);
+            DelayedServerPacket.field_y = new AccountNamePrompt(AccountRegistrationPanel.field_W.field_bc.field_Rb, AccountRegistrationPanel.field_W.field_bc.field_cb, AccountRegistrationPanel.field_W.field_bc.field_zb, AccountRegistrationPanel.field_W.field_bc.field_Lb, AccountMessagePanel.field_W, HighscoreTable.field_y, SolidSpriteHelpers.field_f, SolidSpriteHelpers.field_f);
             QuickChatHelpDialog.field_bc = 2;
           }
           if (AccountRegistrationPanel.field_W.field_Sb.field_Eb == 0) {
             return;
           }
-          DelayedServerPacket.field_y = new AccountNamePrompt(AccountRegistrationPanel.field_W.field_Sb.field_Rb, AccountRegistrationPanel.field_W.field_Sb.field_cb, AccountRegistrationPanel.field_W.field_Sb.field_zb, AccountRegistrationPanel.field_W.field_Sb.field_Lb, LoginDialogHelpers.field_g, kf.field_y, bd.field_f, bd.field_f);
+          DelayedServerPacket.field_y = new AccountNamePrompt(AccountRegistrationPanel.field_W.field_Sb.field_Rb, AccountRegistrationPanel.field_W.field_Sb.field_cb, AccountRegistrationPanel.field_W.field_Sb.field_zb, AccountRegistrationPanel.field_W.field_Sb.field_Lb, LoginDialogHelpers.field_g, HighscoreTable.field_y, SolidSpriteHelpers.field_f, SolidSpriteHelpers.field_f);
           QuickChatHelpDialog.field_bc = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

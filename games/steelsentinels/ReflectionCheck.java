@@ -31,15 +31,15 @@ final class ReflectionCheck extends IntrusiveNode {
     static char[] field_H;
     static int field_o;
 
-    final static void a(int param0, int param1) {
-        cf.field_o = param1 * 400 / 150;
-        cf.field_D = 100 * param1 / 150;
+    final static void configureSpeed(int param0, int param1) {
+        StatSubmission.field_o = param1 * 400 / 150;
+        StatSubmission.field_D = 100 * param1 / 150;
         if (param0 == -10931) {
-          cf.field_x = (param1 << 16) / 150;
+          StatSubmission.field_x = (param1 << 16) / 150;
           return;
         }
-        ReflectionCheck.a(-70, -65);
-        cf.field_x = (param1 << 16) / 150;
+        ReflectionCheck.configureSpeed(-70, -65);
+        StatSubmission.field_x = (param1 << 16) / 150;
     }
 
     public static void releaseStatics(byte param0) {
@@ -81,36 +81,36 @@ final class ReflectionCheck extends IntrusiveNode {
         field_z = new int[]{62, 61, 20, 3, 24, 24, 24, 20, 37, 37, 31, 1, 6, 22, 33, 21, -1, -1, -1};
         field_I = new int[30][][];
         field_N = new int[]{65, 99, 22, 22, 64, 67, 25, 25, 66, 32, 1, 6, 6, 11, 18, -1, -1, -1};
-        TickClock.a(56, new int[]{55, 53, -1, -1, -1, -1, -1, 56, 29, 29, 97, 17, -1, -1, -1, -1, -1, -1, -1}, 0, new int[][]{new int[]{1}, new int[]{1}, new int[]{1, 1}}, 0, 8000, -1);
-        TickClock.a(75, new int[]{55, 53, 18, 24, 24, 24, 54, 83, 24, 24, 56, 83, 24, 24, 83, 24, 24, 97, 17, -1, -1, -1, -1, -1, -1, -1}, 0, new int[][]{new int[]{3}, new int[]{3}, new int[]{3, 3}}, 0, 8000, -1);
-        TickClock.a(114, field_x, 0, new int[][]{new int[]{1, 1}, new int[]{8, 8}, new int[]{1, 0, 8}, new int[]{9}}, 0, 8000, 5);
-        TickClock.a(53, new int[]{57, 98, 21, -1, -1, 60, 58, 21, -1, -1, 59, 0, 5, -1, -1, -1, -1, -1, -1}, 0, new int[][]{new int[]{}}, 0, 8000, -1);
-        TickClock.a(57, new int[]{57, 98, 21, -1, -1, 60, 58, 21, -1, -1, 59, 0, 5, -1, -1, -1, -1, -1, -1}, 0, new int[][]{new int[]{1, 1, 1}, new int[]{8, 1, 1}, new int[]{0, 1, 1}, new int[]{0, 8, 1}, new int[]{9}}, 0, 8000, 5);
-        TickClock.a(119, field_P, 0, new int[][]{new int[]{1, 1, 1}, new int[]{21, 21, 21}, new int[]{9}, new int[]{8}}, 0, 8000, -1);
-        TickClock.a(79, field_P, 258, new int[][]{new int[]{9, 8}, new int[]{8, 8}, new int[]{9, 9}, new int[]{9, 8, 9}, new int[]{7}}, 2, 16000, 5);
-        TickClock.a(114, new int[]{0, 37, 96, -1, 1, -1, -1, 2, 30, 0, 21, 10, 26, -1, -1, -1, -1}, 0, new int[][]{}, 0, 8000, -1);
-        TickClock.a(90, new int[]{0, 37, 96, 29, 1, -1, -1, 2, 30, 0, 21, 10, 26, -1, -1, -1, -1}, 0, new int[][]{new int[]{1, 1, 1}, new int[]{8, 8}, new int[]{1, 9, 9}, new int[]{9, 8, 9}}, 0, 8000, 5);
-        TickClock.a(125, field_v, 0, new int[][]{}, 0, 8000, -1);
-        TickClock.a(100, field_x, 1, new int[][]{new int[]{9}, new int[]{1, 1, 1}, new int[]{7}, new int[]{8, 8}, new int[]{1, 1, 0, 0, 1, 1}}, 1, 16000, 5);
-        TickClock.a(66, field_P, 17, new int[][]{new int[]{3, 3, 3}, new int[]{7}, new int[]{7}, new int[]{10}, new int[]{8, 10, 8}}, 1, 16000, 5);
-        TickClock.a(91, new int[]{62, 61, -1, -1, -1, 37, 37, 31, 1, 6, 22, 33, -1, -1, -1, -1}, 33, new int[][]{new int[]{1, 1, 1, 1}, new int[]{7, 5}, new int[]{9, 9}, new int[]{7, 5, 5, 5}}, 1, 16000, 5);
-        TickClock.a(93, field_z, 49, new int[][]{new int[]{2, 9, 2}, new int[]{7, 8}, new int[]{8, 0, 7}, new int[]{10}}, 1, 16000, 5);
-        TickClock.a(117, field_x, 32, new int[][]{new int[]{7}, new int[]{10, 10}, new int[]{9, 9, 9}, new int[]{11, 0}, new int[]{11, 11}}, 0, 16000, 5);
-        TickClock.a(109, new int[]{65, 99, -1, -1, 64, -1, 66, 32, 1, 6, 11, 18, -1, -1, -1, -1}, 48, new int[][]{new int[]{9, 9}, new int[]{0, 7}, new int[]{20, 8, 20}, new int[]{11}}, 0, 16000, 5);
-        TickClock.a(116, field_N, 65, new int[][]{new int[]{9, 9, 9}, new int[]{7, 8}, new int[]{1, 1, 20}, new int[]{12}, new int[]{9, 9, 9}, new int[]{10, 10}}, 1, 16000, 5);
-        TickClock.a(68, field_z, 2, new int[][]{new int[]{9, 9, 9, 9}, new int[]{5, 5}, new int[]{11, 8, 8}, new int[]{12, 12}, new int[]{12, 9, 9, 9, 9}}, 2, 16000, 3);
-        TickClock.a(62, field_N, 18, new int[][]{new int[]{12, 12}, new int[]{9, 9, 9, 9}, new int[]{12, 7, 12}, new int[]{11, 11, 8}, new int[]{12, 10, 12}}, 2, 16000, 3);
-        TickClock.a(123, field_O, 34, new int[][]{new int[]{9, 7, 8}, new int[]{10, 7}, new int[]{11, 10}, new int[]{12, 11}, new int[]{12, 12, 12, 12}, new int[]{17}}, 2, 16000, 3);
-        TickClock.a(125, field_N, 50, new int[][]{new int[]{7, 8}, new int[]{9, 9}, new int[]{12, 12}, new int[]{1, 1, 0}, new int[]{10, 10}}, 2, 16000, 5);
-        TickClock.a(79, field_O, 66, new int[][]{new int[]{9, 9}, new int[]{9, 9, 9, 9}, new int[]{9, 9, 9, 9, 9, 9}, new int[]{9, 9, 9, 9, 9, 9, 9, 9}, new int[]{9, 9, 9, 9, 9, 9, 9, 9, 9, 9}, new int[]{13, 13, 9, 9, 9, 9}}, 2, 16000, 3);
-        TickClock.a(62, field_O, 81, new int[][]{new int[]{13}, new int[]{2, 2, 2}, new int[]{13, 9, 9, 9, 9}, new int[]{8, 8, 8}, new int[]{13, 13, 13}}, 1, 16000, 3);
-        TickClock.a(63, field_D, 64, new int[][]{new int[]{1, 1, 3, 3}, new int[]{2, 2, 2}, new int[]{0, 0, 9, 9}, new int[]{10}, new int[]{12, 12}, new int[]{11, 11}}, 0, 16000, 3);
-        TickClock.a(57, field_D, 97, new int[][]{new int[]{8, 8, 8}, new int[]{7, 7}, new int[]{13}, new int[]{20, 20}, new int[]{14}}, 1, 16000, 3);
-        TickClock.a(88, field_P, 82, new int[][]{new int[]{7}, new int[]{10}, new int[]{13}, new int[]{24}, new int[]{14}}, 2, 16000, 3);
-        TickClock.a(110, field_J, 3, new int[][]{new int[]{1, 1, 3, 3, 5}, new int[]{20, 20, 20, 8}, new int[]{10, 7}, new int[]{0, 0, 11}, new int[]{14}}, 3, 16000, 3);
-        TickClock.a(73, field_D, 19, new int[][]{new int[]{1}, new int[]{12, 12, 12, 12}, new int[]{14, 8}, new int[]{15}}, 3, 16000, 2);
-        TickClock.a(80, field_E, 113, new int[][]{new int[]{10, 11}, new int[]{8, 8}, new int[]{15}, new int[]{0, 12}, new int[]{24, 7, 7, 7}, new int[]{14}}, 1, 16000, 1);
-        TickClock.a(61, field_O, 129, new int[][]{new int[]{6, 6}, new int[]{13, 13}, new int[]{15}, new int[]{14, 24}, new int[]{23, 23, 23, 23}}, 1, 16000, 0);
+        TickClock.addLevelDefinition(56, new int[]{55, 53, -1, -1, -1, -1, -1, 56, 29, 29, 97, 17, -1, -1, -1, -1, -1, -1, -1}, 0, new int[][]{new int[]{1}, new int[]{1}, new int[]{1, 1}}, 0, 8000, -1);
+        TickClock.addLevelDefinition(75, new int[]{55, 53, 18, 24, 24, 24, 54, 83, 24, 24, 56, 83, 24, 24, 83, 24, 24, 97, 17, -1, -1, -1, -1, -1, -1, -1}, 0, new int[][]{new int[]{3}, new int[]{3}, new int[]{3, 3}}, 0, 8000, -1);
+        TickClock.addLevelDefinition(114, field_x, 0, new int[][]{new int[]{1, 1}, new int[]{8, 8}, new int[]{1, 0, 8}, new int[]{9}}, 0, 8000, 5);
+        TickClock.addLevelDefinition(53, new int[]{57, 98, 21, -1, -1, 60, 58, 21, -1, -1, 59, 0, 5, -1, -1, -1, -1, -1, -1}, 0, new int[][]{new int[]{}}, 0, 8000, -1);
+        TickClock.addLevelDefinition(57, new int[]{57, 98, 21, -1, -1, 60, 58, 21, -1, -1, 59, 0, 5, -1, -1, -1, -1, -1, -1}, 0, new int[][]{new int[]{1, 1, 1}, new int[]{8, 1, 1}, new int[]{0, 1, 1}, new int[]{0, 8, 1}, new int[]{9}}, 0, 8000, 5);
+        TickClock.addLevelDefinition(119, field_P, 0, new int[][]{new int[]{1, 1, 1}, new int[]{21, 21, 21}, new int[]{9}, new int[]{8}}, 0, 8000, -1);
+        TickClock.addLevelDefinition(79, field_P, 258, new int[][]{new int[]{9, 8}, new int[]{8, 8}, new int[]{9, 9}, new int[]{9, 8, 9}, new int[]{7}}, 2, 16000, 5);
+        TickClock.addLevelDefinition(114, new int[]{0, 37, 96, -1, 1, -1, -1, 2, 30, 0, 21, 10, 26, -1, -1, -1, -1}, 0, new int[][]{}, 0, 8000, -1);
+        TickClock.addLevelDefinition(90, new int[]{0, 37, 96, 29, 1, -1, -1, 2, 30, 0, 21, 10, 26, -1, -1, -1, -1}, 0, new int[][]{new int[]{1, 1, 1}, new int[]{8, 8}, new int[]{1, 9, 9}, new int[]{9, 8, 9}}, 0, 8000, 5);
+        TickClock.addLevelDefinition(125, field_v, 0, new int[][]{}, 0, 8000, -1);
+        TickClock.addLevelDefinition(100, field_x, 1, new int[][]{new int[]{9}, new int[]{1, 1, 1}, new int[]{7}, new int[]{8, 8}, new int[]{1, 1, 0, 0, 1, 1}}, 1, 16000, 5);
+        TickClock.addLevelDefinition(66, field_P, 17, new int[][]{new int[]{3, 3, 3}, new int[]{7}, new int[]{7}, new int[]{10}, new int[]{8, 10, 8}}, 1, 16000, 5);
+        TickClock.addLevelDefinition(91, new int[]{62, 61, -1, -1, -1, 37, 37, 31, 1, 6, 22, 33, -1, -1, -1, -1}, 33, new int[][]{new int[]{1, 1, 1, 1}, new int[]{7, 5}, new int[]{9, 9}, new int[]{7, 5, 5, 5}}, 1, 16000, 5);
+        TickClock.addLevelDefinition(93, field_z, 49, new int[][]{new int[]{2, 9, 2}, new int[]{7, 8}, new int[]{8, 0, 7}, new int[]{10}}, 1, 16000, 5);
+        TickClock.addLevelDefinition(117, field_x, 32, new int[][]{new int[]{7}, new int[]{10, 10}, new int[]{9, 9, 9}, new int[]{11, 0}, new int[]{11, 11}}, 0, 16000, 5);
+        TickClock.addLevelDefinition(109, new int[]{65, 99, -1, -1, 64, -1, 66, 32, 1, 6, 11, 18, -1, -1, -1, -1}, 48, new int[][]{new int[]{9, 9}, new int[]{0, 7}, new int[]{20, 8, 20}, new int[]{11}}, 0, 16000, 5);
+        TickClock.addLevelDefinition(116, field_N, 65, new int[][]{new int[]{9, 9, 9}, new int[]{7, 8}, new int[]{1, 1, 20}, new int[]{12}, new int[]{9, 9, 9}, new int[]{10, 10}}, 1, 16000, 5);
+        TickClock.addLevelDefinition(68, field_z, 2, new int[][]{new int[]{9, 9, 9, 9}, new int[]{5, 5}, new int[]{11, 8, 8}, new int[]{12, 12}, new int[]{12, 9, 9, 9, 9}}, 2, 16000, 3);
+        TickClock.addLevelDefinition(62, field_N, 18, new int[][]{new int[]{12, 12}, new int[]{9, 9, 9, 9}, new int[]{12, 7, 12}, new int[]{11, 11, 8}, new int[]{12, 10, 12}}, 2, 16000, 3);
+        TickClock.addLevelDefinition(123, field_O, 34, new int[][]{new int[]{9, 7, 8}, new int[]{10, 7}, new int[]{11, 10}, new int[]{12, 11}, new int[]{12, 12, 12, 12}, new int[]{17}}, 2, 16000, 3);
+        TickClock.addLevelDefinition(125, field_N, 50, new int[][]{new int[]{7, 8}, new int[]{9, 9}, new int[]{12, 12}, new int[]{1, 1, 0}, new int[]{10, 10}}, 2, 16000, 5);
+        TickClock.addLevelDefinition(79, field_O, 66, new int[][]{new int[]{9, 9}, new int[]{9, 9, 9, 9}, new int[]{9, 9, 9, 9, 9, 9}, new int[]{9, 9, 9, 9, 9, 9, 9, 9}, new int[]{9, 9, 9, 9, 9, 9, 9, 9, 9, 9}, new int[]{13, 13, 9, 9, 9, 9}}, 2, 16000, 3);
+        TickClock.addLevelDefinition(62, field_O, 81, new int[][]{new int[]{13}, new int[]{2, 2, 2}, new int[]{13, 9, 9, 9, 9}, new int[]{8, 8, 8}, new int[]{13, 13, 13}}, 1, 16000, 3);
+        TickClock.addLevelDefinition(63, field_D, 64, new int[][]{new int[]{1, 1, 3, 3}, new int[]{2, 2, 2}, new int[]{0, 0, 9, 9}, new int[]{10}, new int[]{12, 12}, new int[]{11, 11}}, 0, 16000, 3);
+        TickClock.addLevelDefinition(57, field_D, 97, new int[][]{new int[]{8, 8, 8}, new int[]{7, 7}, new int[]{13}, new int[]{20, 20}, new int[]{14}}, 1, 16000, 3);
+        TickClock.addLevelDefinition(88, field_P, 82, new int[][]{new int[]{7}, new int[]{10}, new int[]{13}, new int[]{24}, new int[]{14}}, 2, 16000, 3);
+        TickClock.addLevelDefinition(110, field_J, 3, new int[][]{new int[]{1, 1, 3, 3, 5}, new int[]{20, 20, 20, 8}, new int[]{10, 7}, new int[]{0, 0, 11}, new int[]{14}}, 3, 16000, 3);
+        TickClock.addLevelDefinition(73, field_D, 19, new int[][]{new int[]{1}, new int[]{12, 12, 12, 12}, new int[]{14, 8}, new int[]{15}}, 3, 16000, 2);
+        TickClock.addLevelDefinition(80, field_E, 113, new int[][]{new int[]{10, 11}, new int[]{8, 8}, new int[]{15}, new int[]{0, 12}, new int[]{24, 7, 7, 7}, new int[]{14}}, 1, 16000, 1);
+        TickClock.addLevelDefinition(61, field_O, 129, new int[][]{new int[]{6, 6}, new int[]{13, 13}, new int[]{15}, new int[]{14, 24}, new int[]{23, 23, 23, 23}}, 1, 16000, 0);
         field_M = new String[255];
         field_r = 1;
         field_G = 15;

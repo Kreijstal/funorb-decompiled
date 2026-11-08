@@ -67,7 +67,7 @@ final class TeamColourTinter {
         if (param0 < 75) {
           return;
         }
-        gf.field_a.complete(200, param1);
+        GeneratedSpriteHelpers.field_a.complete(200, param1);
     }
 
     final static PlayingSound playSampleAtVolume(byte param0, PcmSample param1, int param2) {
@@ -81,7 +81,7 @@ final class TeamColourTinter {
           if (param0 < 27) {
             TeamColourTinter.resolvePendingCheck((byte) -76, true);
           }
-          stackIn_3_0 = EmailCredentials.a(PcmSampleStream.createAtRatePercent(param1, 100, param2), -48);
+          stackIn_3_0 = EmailCredentials.playStream(PcmSampleStream.createAtRatePercent(param1, 100, param2), -48);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

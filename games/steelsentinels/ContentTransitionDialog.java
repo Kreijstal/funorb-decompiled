@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ContentTransitionDialog extends ResizableModalPanel {
-    private ja field_xb;
+    private IconLookupHelpers field_xb;
     static BinaryBitmapFont field_kb;
     static String field_ob;
     private int field_rb;
@@ -20,7 +20,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
     static SceneWidget field_wb;
     static int field_mb;
 
-    final static SceneWidget l(byte param0) {
+    final static SceneWidget getRegistrationSceneContent(byte param0) {
         int var1 = 116 / ((param0 + 52) / 48);
         return AccountRegistrationPanel.field_W.field_Wb;
     }
@@ -35,7 +35,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         }
         if (this.field_xb != null) {
           if (this.field_xb != TabbedPanel.field_Yb) {
-            if (ob.field_t == this.field_xb) {
+            if (PendingPackedReply.field_t == this.field_xb) {
               fieldTemp$11 = this.field_vb + 1;
               this.field_vb = this.field_vb + 1;
               if (fieldTemp$11 == this.field_tb) {
@@ -99,7 +99,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
     public static void releaseStatics(int param0) {
         field_wb = null;
         if (param0 != -12930) {
-          ContentTransitionDialog.l((byte) 66);
+          ContentTransitionDialog.getRegistrationSceneContent((byte) 66);
         }
         field_ob = null;
         field_jb = null;
@@ -113,7 +113,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           return;
         }
         this.field_vb = 0;
-        this.field_xb = ob.field_t;
+        this.field_xb = PendingPackedReply.field_t;
         this.installContent(-12243, this.field_pb);
         if (param0 < 6) {
           UiComponent var3 = (UiComponent) null;
@@ -123,7 +123,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         this.field_pb = null;
     }
 
-    final static int[] b(int param0, int param1, byte param2) {
+    final static int[] createColorRamp(int param0, int param1, byte param2) {
         int var10 = 0;
         int var11 = 0;
         int var12 = SteelSentinels.obfuscationControl;
@@ -227,7 +227,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
 
     final void finishTransition(byte param0) {
         if (this.field_xb != null) {
-          if (this.field_xb != ob.field_t) {
+          if (this.field_xb != PendingPackedReply.field_t) {
             this.resizeAndCenter((byte) -114, 12 + this.field_pb.field_x, this.field_rb + (12 + this.field_pb.field_E));
             this.installContent(-12243, this.field_pb);
           }

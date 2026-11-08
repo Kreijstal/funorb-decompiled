@@ -69,7 +69,7 @@ final class QuickChatPhraseCache {
 
     final QuickChatPhraseDefinition getPhrase(int param0, int param1) {
         byte[] var4 = null;
-        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_g.a((long)param0, -55));
+        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_g.get((long)param0, -55));
         if (param1 >= -73) {
           return (QuickChatPhraseDefinition) null;
         }
@@ -129,8 +129,8 @@ final class QuickChatPhraseCache {
           if (param2 != 1) {
             field_j = (String) null;
           }
-          if (StatefulTextPainter.a((byte) 30, param1, param0, param3)) {
-            return DropTargetWidget.a(true);
+          if (StatefulTextPainter.loadSpriteSheet((byte) 30, param1, param0, param3)) {
+            return DropTargetWidget.createSpriteFromDecodedSheet(true);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,7 +147,7 @@ final class QuickChatPhraseCache {
         }
     }
 
-    QuickChatPhraseCache(int param0, ResourceArchive param1, ResourceArchive param2, om param3) {
+    QuickChatPhraseCache(int param0, ResourceArchive param1, ResourceArchive param2, QuickChatCacheHook param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

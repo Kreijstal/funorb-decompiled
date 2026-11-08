@@ -33,9 +33,9 @@ final class ViewportController {
         this.field_o = ChatMessage.field_i;
         this.field_c.onResize(this.field_b, true, this.field_a);
         if (param0 != 32472) {
-          ViewportController.a(-128, -3);
+          ViewportController.selectLanguageStrings(-128, -3);
           ImageProducerRasterBuffer.field_x = false;
-          var2 = LabeledField.a(0, IterableDualNodeDeque.field_i, 0, this.field_a, 0, this.field_b);
+          var2 = LabeledField.openFullscreenCanvas(0, IterableDualNodeDeque.field_i, 0, this.field_a, 0, this.field_b);
           if (var2 == null) {
             this.restoreWindowedSize(15481);
             return var2;
@@ -43,7 +43,7 @@ final class ViewportController {
           return var2;
         }
         ImageProducerRasterBuffer.field_x = false;
-        var2Lifetime1 = LabeledField.a(0, IterableDualNodeDeque.field_i, 0, this.field_a, 0, this.field_b);
+        var2Lifetime1 = LabeledField.openFullscreenCanvas(0, IterableDualNodeDeque.field_i, 0, this.field_a, 0, this.field_b);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }
@@ -86,7 +86,7 @@ final class ViewportController {
             }
           }
           if (this.field_k > 0) {
-            kf.field_p = (this.field_k - ChatMessage.field_i) / 2;
+            HighscoreTable.field_p = (this.field_k - ChatMessage.field_i) / 2;
           }
           if (param0 <= -3) {
             return;
@@ -110,7 +110,7 @@ final class ViewportController {
           }
         }
         if (this.field_k > 0) {
-          kf.field_p = (this.field_k - ChatMessage.field_i) / 2;
+          HighscoreTable.field_p = (this.field_k - ChatMessage.field_i) / 2;
         }
         if (param0 <= -3) {
           return;
@@ -119,9 +119,9 @@ final class ViewportController {
         return;
     }
 
-    final static int[] a(boolean param0) {
+    final static int[] createEightIntArray(boolean param0) {
         if (!param0) {
-          ViewportController.a(57, -61);
+          ViewportController.selectLanguageStrings(57, -61);
           return new int[8];
         }
         return new int[8];
@@ -135,7 +135,7 @@ final class ViewportController {
         this.field_k = param2;
     }
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void sendShortCommand(int param0, byte param1, int param2) {
         int var4 = -117 / ((-11 - param1) / 35);
         CipherPacketBuffer var3 = ClockAndCookieHelpers.field_g;
         var3.writeCipheredOpcode(param2, (byte) -117);
@@ -146,10 +146,10 @@ final class ViewportController {
 
     final boolean canResizeViewport(byte param0) {
         int var2 = -28 / ((-8 - param0) / 49);
-        if (ed.field_a < this.field_p) {
+        if (SessionSeedHelpers.field_a < this.field_p) {
           return false;
         }
-        if (rd.field_b > 0) {
+        if (SpriteLoadingHelpers.field_b > 0) {
           return true;
         }
         return false;
@@ -166,11 +166,11 @@ final class ViewportController {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         String var3;
-        if (wb.field_c != null) {
+        if (RewardValueHelpers.field_c != null) {
           return;
         }
         if (!param0) {
-          if (0 >= rd.field_b) {
+          if (0 >= SpriteLoadingHelpers.field_b) {
             this.field_v = false;
           }
           if (this.field_v) {
@@ -180,7 +180,7 @@ final class ViewportController {
               return;
             }
             this.field_m = this.field_n;
-            if (this.field_p > ed.field_a) {
+            if (this.field_p > SessionSeedHelpers.field_a) {
               this.field_v = false;
             } else {
               this.applyDesiredSize(-95);
@@ -188,10 +188,10 @@ final class ViewportController {
             return;
           }
           if (ChatMessage.field_i < this.field_k) {
-            kf.field_p = (this.field_k - ChatMessage.field_i) / 2;
+            HighscoreTable.field_p = (this.field_k - ChatMessage.field_i) / 2;
           } else {
             if (this.field_k > 0) {
-              kf.field_p = 0;
+              HighscoreTable.field_p = 0;
             }
           }
           if (this.field_r == ChatMessage.field_i &&
@@ -202,8 +202,8 @@ final class ViewportController {
           return;
         }
         var3 = (String) null;
-        ViewportController.a((String) null, -86);
-        if (0 >= rd.field_b) {
+        ViewportController.drawPointerTooltip((String) null, -86);
+        if (0 >= SpriteLoadingHelpers.field_b) {
           this.field_v = false;
         }
         if (this.field_v) {
@@ -213,7 +213,7 @@ final class ViewportController {
             return;
           }
           this.field_m = this.field_n;
-          if (this.field_p > ed.field_a) {
+          if (this.field_p > SessionSeedHelpers.field_a) {
             this.field_v = false;
           } else {
             this.applyDesiredSize(-95);
@@ -221,10 +221,10 @@ final class ViewportController {
           return;
         }
         if (ChatMessage.field_i < this.field_k) {
-          kf.field_p = (this.field_k - ChatMessage.field_i) / 2;
+          HighscoreTable.field_p = (this.field_k - ChatMessage.field_i) / 2;
         } else {
           if (this.field_k > 0) {
-            kf.field_p = 0;
+            HighscoreTable.field_p = 0;
           }
         }
         if (this.field_r == ChatMessage.field_i &&
@@ -235,7 +235,7 @@ final class ViewportController {
         return;
     }
 
-    final static void a(String param0, int param1) {
+    final static void drawPointerTooltip(String param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -246,20 +246,20 @@ final class ViewportController {
         try {
           var2_int = LobbySetupHelpers.field_f;
           var3 = DelegatingCanvas.field_c;
-          var4 = bd.field_f.field_L.wrappedLineCount(param0, 500);
-          var5 = 6 + bd.field_f.field_L.getWrappedWidth(param0, 500);
+          var4 = SolidSpriteHelpers.field_f.field_L.wrappedLineCount(param0, 500);
+          var5 = 6 + SolidSpriteHelpers.field_f.field_L.getWrappedWidth(param0, 500);
           var6 = 2 + SocketConnector.field_b * var4;
-          var7 = UiContainer.a(12, 127, var2_int, var5);
+          var7 = UiContainer.clampPopupX(12, 127, var2_int, var5);
           var8 = QuickChatHelpDialog.placePopupVertically(var3, 0, 20, var6);
           SoftwareRaster.drawRectangleOutline(var7, var8, var5, var6, 0);
           SoftwareRaster.fillRectangle(1 + var7, 1 + var8, -2 + var5, var6 - 2, 16777088);
-          bd.field_f.field_L.drawParagraph(param0, 3 + var7, param1 + var8 - (-ClientGlobals.field_g + bd.field_f.field_L.field_G), 500, 1000, 0, -1, 0, 0, SocketConnector.field_b);
+          SolidSpriteHelpers.field_f.field_L.drawParagraph(param0, 3 + var7, param1 + var8 - (-ClientGlobals.field_g + SolidSpriteHelpers.field_f.field_L.field_G), 500, 1000, 0, -1, 0, 0, SocketConnector.field_b);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "jg.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final static void drawVerticalGrayGradient(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7 = 0;
         int var6_int = 0;
         int var8 = 0;
@@ -289,12 +289,12 @@ final class ViewportController {
         }
     }
 
-    final static void a(int param0, int param1) {
-        ud.field_w = GameKeyHandler.field_d[param0];
+    final static void selectLanguageStrings(int param0, int param1) {
+        RankingQuery.field_w = GameKeyHandler.field_d[param0];
         IntKeyLookup.field_g = ArticulatedPart.field_X[param0];
         EmailAvailabilityValidator.field_t = CachedTextLayout.field_j[param0];
         if (param1 != 1000) {
-          ViewportController.a(126, (byte) -10, -36);
+          ViewportController.sendShortCommand(126, (byte) -10, -36);
         }
     }
 
@@ -303,7 +303,7 @@ final class ViewportController {
           this.field_c.onResize(this.field_o, true, this.field_g);
           return;
         }
-        ViewportController.a(true);
+        ViewportController.createEightIntArray(true);
         this.field_c.onResize(this.field_o, true, this.field_g);
     }
 

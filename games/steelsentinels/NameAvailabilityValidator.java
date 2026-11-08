@@ -22,7 +22,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
     public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 != 1) {
-          NameAvailabilityValidator.a(83, 71, true);
+          NameAvailabilityValidator.hitTestPairedSprites(83, 71, true);
           field_x = null;
           field_v = null;
           field_r = null;
@@ -39,7 +39,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         field_o = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawInsetPanelFrame(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -85,7 +85,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_w)) {
-            var4 = DialWidgetPainter.a(false, param1);
+            var4 = DialWidgetPainter.pollAccountNameCheck(false, param1);
             if (var4 == null) {
               return null;
             }
@@ -119,14 +119,14 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final vd validateText(String param0, int param1) {
+    final TransitionTimerHelpers validateText(String param0, int param1) {
         AccountRequestResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
-        vd stackIn_3_0 = null;
-        vd stackIn_6_0 = null;
-        vd stackIn_13_0 = null;
-        vd stackIn_18_0 = null;
+        TransitionTimerHelpers stackIn_3_0 = null;
+        TransitionTimerHelpers stackIn_6_0 = null;
+        TransitionTimerHelpers stackIn_13_0 = null;
+        TransitionTimerHelpers stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -138,11 +138,11 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (param1 != -1) {
-            stackIn_6_0 = (vd) null;
+            stackIn_6_0 = (TransitionTimerHelpers) null;
             return stackIn_6_0;
           }
           if (!param0.equals(this.field_w)) {
-            var3 = DialWidgetPainter.a(false, param0);
+            var3 = DialWidgetPainter.pollAccountNameCheck(false, param0);
             if (var3 != null &&
               null == var3.field_e) {
               this.field_w = param0;
@@ -155,7 +155,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           if (!this.field_s) {
             stackIn_18_0 = ArchiveProvider.field_d;
           } else {
-            stackIn_18_0 = vf.field_b;
+            stackIn_18_0 = RequestResendHelpers.field_b;
           }
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -172,13 +172,13 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void clearSessionAndReload(int param0, java.applet.Applet param1) {
         try {
           MidiPcmStream.setSessionCookie(-128, "", param1);
           if (param0 != 0) {
             field_r = (String) null;
           }
-          CheckboxPainter.a(param1, 63);
+          CheckboxPainter.reloadPage(param1, 63);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ei.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -191,7 +191,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         this.field_w = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int getChatFilterMode(int param0, int param1) {
         int var2 = 0;
         if (param0 == 0) {
           var2 = BufferedSocket.field_c;
@@ -205,7 +205,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         return var2;
     }
 
-    final static RgbSprite[] a(int param0, RgbSprite[] param1) {
+    final static RgbSprite[] resetSpriteOffsets(int param0, RgbSprite[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RgbSprite var3 = null;
@@ -240,7 +240,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void sendShortRequest(int param0, byte param1, int param2) {
         CipherPacketBuffer var3 = ClockAndCookieHelpers.field_g;
         var3.writeCipheredOpcode(param2, (byte) -117);
         var3.writeByte((byte) 127, 3);
@@ -254,7 +254,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         var3.writeShort(param0, 98);
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int hitTestPairedSprites(int param0, int param1, boolean param2) {
         if (null == ValidatedTextWidget.field_ub) {
           return -1;
         }
@@ -262,10 +262,10 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           return 54;
         }
         if (RasterSnapshot.field_s > param1) {
-          if (rn.field_u > param1) {
+          if (PendingAckRequest.field_u > param1) {
             return -1;
           }
-          if (param1 >= rn.field_u + ValidatedTextWidget.field_ub.field_A) {
+          if (param1 >= PendingAckRequest.field_u + ValidatedTextWidget.field_ub.field_A) {
             return -1;
           }
           if (ClientException.field_m <= param0) {
@@ -277,8 +277,8 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           return -1;
         }
         if (RasterSnapshot.field_s + ValidatedTextWidget.field_ub.field_A <= param1) {
-          if (rn.field_u <= param1 &&
-            param1 < rn.field_u + ValidatedTextWidget.field_ub.field_A &&
+          if (PendingAckRequest.field_u <= param1 &&
+            param1 < PendingAckRequest.field_u + ValidatedTextWidget.field_ub.field_A &&
             ClientException.field_m <= param0) {
             if (ValidatedTextWidget.field_ub.field_F + ClientException.field_m <= param0) {
               return -1;
@@ -287,12 +287,12 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           }
           return -1;
         }
-        if (mc.field_a <= param0 &&
-          mc.field_a + ValidatedTextWidget.field_ub.field_F > param0) {
+        if (LoadingCaptionHelpers.field_a <= param0 &&
+          LoadingCaptionHelpers.field_a + ValidatedTextWidget.field_ub.field_F > param0) {
           return 0;
         }
-        if (rn.field_u <= param1 &&
-          param1 < rn.field_u + ValidatedTextWidget.field_ub.field_A &&
+        if (PendingAckRequest.field_u <= param1 &&
+          param1 < PendingAckRequest.field_u + ValidatedTextWidget.field_ub.field_A &&
           ClientException.field_m <= param0) {
           if (ValidatedTextWidget.field_ub.field_F + ClientException.field_m <= param0) {
             return -1;

@@ -7,7 +7,7 @@ final class ClockAndCookieHelpers {
     static NodeDeque field_b;
     static String[] field_d;
     static String field_f;
-    static ml field_e;
+    static ListRequestHelpers field_e;
     static CipherPacketBuffer field_g;
 
     final synchronized static long monotonicMillis(int param0) {
@@ -24,7 +24,7 @@ final class ClockAndCookieHelpers {
         if (param0) {
           return false;
         }
-        return cf.c((byte) 89);
+        return StatSubmission.isReconnectStage((byte) 89);
     }
 
     final static byte[] loadNamedFile(byte param0, String param1) {
@@ -38,7 +38,7 @@ final class ClockAndCookieHelpers {
           if (param0 != 9) {
             ClockAndCookieHelpers.countSetBits((byte) 11, -108);
           }
-          stackIn_3_0 = ChecksumAndFrameHelpers.field_e.a(param1, -742, "");
+          stackIn_3_0 = ChecksumAndFrameHelpers.field_e.getFileByName(param1, -742, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,17 +152,17 @@ final class ClockAndCookieHelpers {
         RuntimeException decompiledCaughtException = null;
         var4 = SteelSentinels.obfuscationControl;
         try {
-          if (!ArticulatedPart.f((byte) -23) &&
+          if (!ArticulatedPart.isMemberSession((byte) -23) &&
             MessageMenuHelpers.isComponentUnused(param1.componentId, param0 + 16155, false)) {
             return false;
           }
-          if (t.a(rn.field_D, param1.componentId, -20370)) {
+          if (NameTable.isBitSet(PendingAckRequest.field_D, param1.componentId, -20370)) {
             return true;
           }
           if (param1.field_Q == 1) {
             return false;
           }
-          var7 = DialWidget.a(uc.field_b[0], (byte) 125);
+          var7 = DialWidget.getComponentPreset(DesignerPageTables.field_b[0], (byte) 125);
           var6 = var7;
           var5 = var6;
           var2 = var5;
@@ -205,6 +205,6 @@ final class ClockAndCookieHelpers {
         field_d = new String[]{"PURPLE TEAM", "ORANGE TEAM", "GREEN TEAM"};
         field_b = new NodeDeque();
         field_f = "Cubes needed: ";
-        field_e = new ml();
+        field_e = new ListRequestHelpers();
     }
 }

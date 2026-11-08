@@ -68,7 +68,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_e.field_c = true;
             while (field_e.field_f) {
-              MouseWheelInput.a((byte) 127, 50L);
+              MouseWheelInput.sleepMillis((byte) 127, 50L);
             }
             field_e = null;
           }

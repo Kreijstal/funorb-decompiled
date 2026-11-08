@@ -77,7 +77,7 @@ final class MusicPatchNode extends IntrusiveNode {
           return;
         }
         try {
-          ob.field_r = param1;
+          PendingPackedReply.field_r = param1;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "hj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -126,11 +126,11 @@ final class MusicPatchNode extends IntrusiveNode {
             stackIn_8_0 = (ArticulatedPart) null;
             return stackIn_8_0;
           }
-          var6 = NodeDeque.a(var5, (byte) 67);
+          var6 = NodeDeque.findPartDefinition(var5, (byte) 67);
           if (var6 != null &&
             var6.field_Q == 1) {
             var7 = new ArticulatedPart(var6, param1);
-            var4_int = var7.a(var4_int, param3, param1, 0);
+            var4_int = var7.readComponentIds(var4_int, param3, param1, 0);
             for (var9 = 0; var9 < 8; var9++) {
               param2[var9] = -1;
             }

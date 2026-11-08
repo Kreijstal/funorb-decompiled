@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DiskCacheWorker implements Runnable {
-    static ml field_j;
+    static ListRequestHelpers field_j;
     static String field_g;
     static String field_e;
     static int[][] field_h;
@@ -47,7 +47,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final DiskCacheRequest a(int param0, int param1, SectorCacheStore param2) {
+    final DiskCacheRequest readImmediate(int param0, int param1, SectorCacheStore param2) {
         DiskCacheRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
@@ -79,7 +79,7 @@ final class DiskCacheWorker implements Runnable {
               var6 = (DiskCacheRequest) (this.field_i.next(false));
             }
           }
-          var4.field_L = param2.b(param1, false);
+          var4.field_L = param2.read(param1, false);
           if (param0 != 21598) {
             stackIn_17_0 = (DiskCacheRequest) null;
             return stackIn_17_0;
@@ -109,7 +109,7 @@ final class DiskCacheWorker implements Runnable {
             this.field_i.notifyAll();
           }
           if (param0 != 0) {
-            field_j = (ml) null;
+            field_j = (ListRequestHelpers) null;
           }
           try {
             this.field_k.join();
@@ -123,7 +123,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static void a(LobbyGame param0, byte param1, int param2, boolean param3) {
+    final static void updateGameOptionsPanel(LobbyGame param0, byte param1, int param2, boolean param3) {
         IconTextComponent dupTemp$0 = null;
         int var17_int = 0;
         int var24 = 0;
@@ -247,14 +247,14 @@ final class DiskCacheWorker implements Runnable {
             decompiledFrameRemainder1 = !(ViewportController.field_l.length < 2);
             if (decompiledFrameRemainder1) {
               if (param3) {
-                stackIn_22_0 = (-1 != qm.field_h) ? 1 : 0;
+                stackIn_22_0 = (-1 != DisplayNameAndAudioHelpers.field_h) ? 1 : 0;
               } else {
                 stackIn_22_0 = 0;
               }
               var6 = stackIn_22_0;
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
-                var7 = qm.field_h;
+                var7 = DisplayNameAndAudioHelpers.field_h;
                 for (var8_int = 0; var8_int < rb.field_i.length; var8_int++) {
                   rb.field_i[var8_int] = (byte) 0;
                 }
@@ -263,40 +263,40 @@ final class DiskCacheWorker implements Runnable {
           } else {
             for (var6 = 0; 5 > var6; var6++) {
               if (var4_int != 0 &&
-                un.field_h[0][var6 + 1].field_Eb != 0 &&
+                ChatHistoryAllocator.field_h[0][var6 + 1].field_Eb != 0 &&
                 var6 != param0.field_Nc) {
                 param0.field_Nc = var6;
                 var5 = 1;
               }
-              stackIn_35_0 = un.field_h[0][var6 + 1];
+              stackIn_35_0 = ChatHistoryAllocator.field_h[0][var6 + 1];
               stackIn_36_1 = (var4_int != 0);
               stackIn_35_0.field_T = stackIn_36_1;
               if (!MenuInputState.field_p &&
                 var6 == 3) {
-                un.field_h[0][var6 + 1].field_T = false;
+                ChatHistoryAllocator.field_h[0][var6 + 1].field_T = false;
               }
-              stackIn_42_0 = un.field_h[0][var6 + 1];
+              stackIn_42_0 = ChatHistoryAllocator.field_h[0][var6 + 1];
               stackIn_43_1 = (var6 == param0.field_Nc);
               stackIn_42_0.field_G = stackIn_43_1;
             }
-            if (un.field_h[0][2].field_K) {
+            if (ChatHistoryAllocator.field_h[0][2].field_K) {
               if (TextAndMenuHelpers.isGameOwner(-28548)) {
                 UiTheme.field_i = TextLayout.field_c;
               } else {
-                UiTheme.field_i = SocketConnector.formatTemplate(BoundedUrlRequest.field_a, -75, new String[]{nf.field_b.field_Xb});
+                UiTheme.field_i = SocketConnector.formatTemplate(BoundedUrlRequest.field_a, -75, new String[]{LoginEncryptionHelpers.field_b.field_Xb});
               }
             }
             decompiledFrameRemainder1 = !(ViewportController.field_l.length < 2);
             if (decompiledFrameRemainder1) {
               if (param3) {
-                stackIn_57_0 = (-1 != qm.field_h) ? 1 : 0;
+                stackIn_57_0 = (-1 != DisplayNameAndAudioHelpers.field_h) ? 1 : 0;
               } else {
                 stackIn_57_0 = 0;
               }
               var6 = stackIn_57_0;
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
-                var7 = qm.field_h;
+                var7 = DisplayNameAndAudioHelpers.field_h;
                 for (var8_int = 0; var8_int < rb.field_i.length; var8_int++) {
                   rb.field_i[var8_int] = (byte) 0;
                 }
@@ -305,19 +305,19 @@ final class DiskCacheWorker implements Runnable {
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            rb.field_i[var7 / 8] = (byte)DateOfBirthValidator.a((int) rb.field_i[var7 / 8], 1 << var7 % 8);
+            rb.field_i[var7 / 8] = (byte)DateOfBirthValidator.bitOr((int) rb.field_i[var7 / 8], 1 << var7 % 8);
           }
           if (decompiledFrameRemainder1) {
             stackIn_65_0 = (!param3) ? 0 : -1;
             for (var7 = stackIn_65_0; ViewportController.field_l.length > var7; var7++) {
               if (var6 != 0) {
-                stackIn_73_0 = (var7 != qm.field_h) ? 1 : 0;
+                stackIn_73_0 = (var7 != DisplayNameAndAudioHelpers.field_h) ? 1 : 0;
               } else {
                 stackIn_73_0 = 0;
               }
               var8_intLifetime1 = stackIn_73_0;
               if (var4_int != 0 &&
-                un.field_h[1][var7 + 1].field_Eb != 0) {
+                ChatHistoryAllocator.field_h[1][var7 + 1].field_Eb != 0) {
                 if (!param3) {
                   var9 = ViewportController.field_l[var7];
                   if (var9 != param0.field_Ub) {
@@ -338,16 +338,16 @@ final class DiskCacheWorker implements Runnable {
               }
               if (param3) {
                 if (var7 == -1) {
-                  un.field_h[1][1 + var7].field_G = true;
+                  ChatHistoryAllocator.field_h[1][1 + var7].field_G = true;
                   for (var9 = 0; ViewportController.field_l.length > var9; var9++) {
-                    dupTemp$0 = un.field_h[1][var7 + 1];
+                    dupTemp$0 = ChatHistoryAllocator.field_h[1][var7 + 1];
                     stackIn_96_0 = dupTemp$0;
                     stackIn_96_1 = dupTemp$0.field_G;
                     stackIn_97_2 = ((rb.field_i[var9 / 8] & 1 << (var9 & 7)) == 0);
                     stackIn_96_0.field_G = stackIn_96_1 & stackIn_97_2;
                   }
                 } else {
-                  stackIn_99_0 = un.field_h[1][var7 + 1];
+                  stackIn_99_0 = ChatHistoryAllocator.field_h[1][var7 + 1];
                   stackIn_99_1 = rb.field_i[var7 / 8];
                   stackIn_99_2 = 1;
                   stackIn_99_3 = var7 & 7;
@@ -356,18 +356,18 @@ final class DiskCacheWorker implements Runnable {
                 }
               } else {
                 var9 = ViewportController.field_l[var7];
-                stackIn_89_0 = un.field_h[1][1 + var7];
+                stackIn_89_0 = ChatHistoryAllocator.field_h[1][1 + var7];
                 stackIn_90_1 = (var9 == param0.field_Ub);
                 stackIn_89_0.field_G = stackIn_90_1;
               }
-              stackIn_106_0 = un.field_h[1][var7 + 1];
+              stackIn_106_0 = ChatHistoryAllocator.field_h[1][var7 + 1];
               stackIn_107_1 = (var4_int != 0) && (var8_intLifetime1 == 0);
               stackIn_106_0.field_T = stackIn_107_1;
             }
           }
           stackIn_111_0 = (param3) ? 0 : 1;
           for (var6Lifetime1 = stackIn_111_0; var6Lifetime1 < 3; var6Lifetime1++) {
-            var28 = un.field_h[2][var6Lifetime1];
+            var28 = ChatHistoryAllocator.field_h[2][var6Lifetime1];
             if (var4_int != 0 &&
               var28.field_Eb != 0) {
               if (param3) {
@@ -405,7 +405,7 @@ final class DiskCacheWorker implements Runnable {
           if (param3 &&
             1 < HighscoreSubmission.field_z) {
             for (var6Lifetime2 = 0; HighscoreSubmission.field_z + 1 > var6Lifetime2; var6Lifetime2++) {
-              var29 = un.field_h[3][var6Lifetime2];
+              var29 = ChatHistoryAllocator.field_h[3][var6Lifetime2];
               if (var4_int != 0 &&
                 0 != var29.field_Eb) {
                 CachedArchiveProvider.field_l = var6Lifetime2;
@@ -435,7 +435,7 @@ final class DiskCacheWorker implements Runnable {
           }
           var6Lifetime3 = 0;
           for (var7 = 0; var7 < UrlAndReplyHelpers.field_a; var7++) {
-            var30 = un.field_h[4 + var7];
+            var30 = ChatHistoryAllocator.field_h[4 + var7];
             var8_array = var30;
             stackIn_168_0 = (param3) ? -1 : 0;
             for (var9 = stackIn_168_0; var30.length - 1 > var9; var9++) {
@@ -449,26 +449,26 @@ final class DiskCacheWorker implements Runnable {
                 0 <= var9) {
                 if (SoundAndUrlHelpers.field_b != null &&
                   null != SoundAndUrlHelpers.field_b[var7] &&
-                  (~jj.field_i & SoundAndUrlHelpers.field_b[var7][var9]) > 0) {
+                  (~MeshMaterial.field_i & SoundAndUrlHelpers.field_b[var7][var9]) > 0) {
                   var14 = 1;
-                  var15 = ChecksumAndFrameHelpers.highestOneBit(~jj.field_i & SoundAndUrlHelpers.field_b[var7][var9], (byte) 51);
+                  var15 = ChecksumAndFrameHelpers.highestOneBit(~MeshMaterial.field_i & SoundAndUrlHelpers.field_b[var7][var9], (byte) 51);
                 }
                 if (null != LoadoutHelpers.field_d &&
                   LoadoutHelpers.field_d[var7] != null &&
-                  rd.field_b <= 0 &&
+                  SpriteLoadingHelpers.field_b <= 0 &&
                   LoadoutHelpers.field_d[var7][var9]) {
                   var10 = 1;
                 }
-                if (null != ja.field_b &&
-                  null != ja.field_b[var7]) {
-                  var16 = ja.field_b[var7][var9];
+                if (null != IconLookupHelpers.field_b &&
+                  null != IconLookupHelpers.field_b[var7]) {
+                  var16 = IconLookupHelpers.field_b[var7][var9];
                   if (0 < var16 &&
                     QuickChatInputHelpers.field_b < var16) {
                     var12 = 1;
                   }
                   if (var16 != 0 &&
                     !ProxyAuthenticationException.field_a &&
-                    rd.field_b <= 0) {
+                    SpriteLoadingHelpers.field_b <= 0) {
                     var10 = 1;
                   }
                 }
@@ -491,11 +491,11 @@ final class DiskCacheWorker implements Runnable {
                   var16Lifetime2 = QuickChatHelpDialog.field_cc[var7][var9];
                   if (var16Lifetime2 != 0 &&
                     !ProxyAuthenticationException.field_a &&
-                    rd.field_b <= 0) {
+                    SpriteLoadingHelpers.field_b <= 0) {
                     var10 = 1;
                   }
                   if (var16Lifetime2 > 0 &&
-                    ud.field_D < var16Lifetime2) {
+                    RankingQuery.field_D < var16Lifetime2) {
                     var11 = 1;
                   }
                 }
@@ -532,7 +532,7 @@ final class DiskCacheWorker implements Runnable {
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   HuffmanDecoder.field_h[var17_int] = false;
                 }
-                lc.a(var9, -1, param0, var7, -1, -89, 0, param3);
+                SettingSearchHelpers.findValidSettingCombination(var9, -1, param0, var7, -1, -89, 0, param3);
                 if (NodeDeque.field_d >= 2 &&
                   SoundAndUrlHelpers.field_e[12]) {
                   MembershipPromotionScreen.field_k = true;
@@ -575,11 +575,11 @@ final class DiskCacheWorker implements Runnable {
                     var18_ref = LinkButtonPainter.field_h[var7][var9];
                   }
                 }
-                if (fj.field_b == null) {
+                if (PasswordRuleHelpers.field_b == null) {
                   var19 = null;
                 } else {
-                  if (null != fj.field_b[var7]) {
-                    var19 = fj.field_b[var7][var9];
+                  if (null != PasswordRuleHelpers.field_b[var7]) {
+                    var19 = PasswordRuleHelpers.field_b[var7][var9];
                   } else {
                     var19 = null;
                   }
@@ -604,18 +604,18 @@ final class DiskCacheWorker implements Runnable {
                   var22 = var25;
                 } else {
                   if (var10 != 0) {
-                    var21 = in.field_c;
+                    var21 = SocialPacketHelpers.field_c;
                   } else {
                     if (var11 != 0) {
-                      var22_int = QuickChatHelpDialog.field_cc[var7][var9] - ud.field_D;
+                      var22_int = QuickChatHelpDialog.field_cc[var7][var9] - RankingQuery.field_D;
                       if (var22_int != 1) {
                         var21 = SocketConnector.formatTemplate(BattleTerrain.field_d, -34, new String[]{Integer.toString(var22_int)});
                       } else {
-                        var21 = wb.field_e;
+                        var21 = RewardValueHelpers.field_e;
                       }
                     }
                     if (var12 != 0) {
-                      var31 = SocketConnector.formatTemplate(MusicPatchEnvelope.field_c, -74, new String[]{Integer.toString(QuickChatInputHelpers.field_b), Integer.toString(ja.field_b[var7][var9])});
+                      var31 = SocketConnector.formatTemplate(MusicPatchEnvelope.field_c, -74, new String[]{Integer.toString(QuickChatInputHelpers.field_b), Integer.toString(IconLookupHelpers.field_b[var7][var9])});
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -631,10 +631,10 @@ final class DiskCacheWorker implements Runnable {
                     if (var14 != 0) {
                       var22 = CachedTextLayout.field_u;
                       if (var15 > 0 &&
-                        null != in.field_b &&
-                        in.field_b.length >= var15 &&
-                        in.field_b[var15 - 1] != null) {
-                        var22 = in.field_b[-1 + var15][0];
+                        null != SocialPacketHelpers.field_b &&
+                        SocialPacketHelpers.field_b.length >= var15 &&
+                        SocialPacketHelpers.field_b[var15 - 1] != null) {
+                        var22 = SocialPacketHelpers.field_b[-1 + var15][0];
                       }
                       if (var21 != null) {
                         var21 = (String) (var21) + "<br>" + (String) (var22);
@@ -720,7 +720,7 @@ final class DiskCacheWorker implements Runnable {
               stackIn_343_1 = (var4_int != 0) && (var16Lifetime1 == 0);
               stackIn_342_0.field_T = stackIn_343_1;
             }
-            var6Lifetime3 = var6Lifetime3 + (255 & wb.field_j[var7]);
+            var6Lifetime3 = var6Lifetime3 + (255 & RewardValueHelpers.field_j[var7]);
           }
           if (var5 != 0) {
             if (param3) {
@@ -779,7 +779,7 @@ final class DiskCacheWorker implements Runnable {
                 var7.field_G.write(79, var7.field_L.length, (int)var7.field_w, var7.field_L);
               } else {
                 if (var7.field_H == 3) {
-                  var7.field_L = var7.field_G.b((int)var7.field_w, false);
+                  var7.field_L = var7.field_G.read((int)var7.field_w, false);
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -797,7 +797,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final DiskCacheRequest a(byte param0, SectorCacheStore param1, int param2, byte[] param3) {
+    final DiskCacheRequest queueWrite(byte param0, SectorCacheStore param1, int param2, byte[] param3) {
         DiskCacheRequest var5 = null;
         RuntimeException var5_ref = null;
         DiskCacheRequest stackIn_2_0 = null;
@@ -842,7 +842,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = (int[][]) null;
         field_a = null;
         field_e = null;
@@ -855,7 +855,7 @@ final class DiskCacheWorker implements Runnable {
         field_d = null;
     }
 
-    final DiskCacheRequest a(SectorCacheStore param0, int param1, int param2) {
+    final DiskCacheRequest queueRead(SectorCacheStore param0, int param1, int param2) {
         DiskCacheRequest var4 = null;
         RuntimeException var4_ref = null;
         DiskCacheRequest stackIn_1_0 = null;
@@ -894,7 +894,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.requestThread(2, 5, (Runnable) (this));
           while (var2.field_a == 0) {
-            MouseWheelInput.a((byte) 121, 10L);
+            MouseWheelInput.sleepMillis((byte) 121, 10L);
           }
           if (var2.field_a == 2) {
             throw new RuntimeException();

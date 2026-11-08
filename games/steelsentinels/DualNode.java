@@ -13,7 +13,7 @@ class DualNode extends IntrusiveNode {
     DualNode dualPrevious;
     static String field_t;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         bitMasks = null;
         field_t = null;
         field_q = null;
@@ -40,14 +40,14 @@ class DualNode extends IntrusiveNode {
         this.dualNext = null;
     }
 
-    final long d(int param0) {
+    final long getDualKey(int param0) {
         if (param0 < 84) {
           return -44L;
         }
         return this.field_w;
     }
 
-    final void a(byte param0, long param1) {
+    final void setDualKey(byte param0, long param1) {
         if (param0 <= 41) {
           return;
         }
@@ -57,7 +57,7 @@ class DualNode extends IntrusiveNode {
         this.field_w = param1;
     }
 
-    final boolean a(byte param0) {
+    final boolean isDualLinked(byte param0) {
         if (this.dualPrevious == null) {
           return false;
         }

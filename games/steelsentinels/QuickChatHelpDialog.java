@@ -6,9 +6,9 @@ final class QuickChatHelpDialog extends SceneWidget {
     static NodeDeque field_Vb;
     static String field_Xb;
     static String field_Zb;
-    static dj field_Sb;
+    static NumberParsingHelpers field_Sb;
     static IndexedSprite field_Wb;
-    static c field_ac;
+    static PendingByteArrayRequest field_ac;
     static IconLabelControl field_Tb;
     static int[][] field_cc;
     static int field_bc;
@@ -26,7 +26,7 @@ final class QuickChatHelpDialog extends SceneWidget {
     }
 
     final static void showAccountScene(int param0) {
-        EditableTextWidget.c(true);
+        EditableTextWidget.openDefaultAccountOverlay(true);
         if (param0 != 0) {
           field_bc = 91;
         }
@@ -44,7 +44,7 @@ final class QuickChatHelpDialog extends SceneWidget {
           if (ReflectionCheck.field_o <= 0) {
             return false;
           }
-          if (!MouseWheelInput.a(105)) {
+          if (!MouseWheelInput.alwaysTrue(105)) {
             return true;
           }
           return false;
@@ -58,7 +58,7 @@ final class QuickChatHelpDialog extends SceneWidget {
         if (ReflectionCheck.field_o <= 0) {
           return false;
         }
-        if (!MouseWheelInput.a(105)) {
+        if (!MouseWheelInput.alwaysTrue(105)) {
           return true;
         }
         return false;
@@ -101,25 +101,25 @@ final class QuickChatHelpDialog extends SceneWidget {
         }
     }
 
-    final static ud getRankingQuery(int param0, boolean param1, int param2, int param3) {
-        ud var4;
+    final static RankingQuery getRankingQuery(int param0, boolean param1, int param2, int param3) {
+        RankingQuery var4;
         int var5;
-        ud var4Lifetime1;
+        RankingQuery var4Lifetime1;
         var5 = SteelSentinels.obfuscationControl;
         if (!param1) {
-          return (ud) null;
+          return (RankingQuery) null;
         }
-        var4 = (ud) (uf.field_f.first(13058));
+        var4 = (RankingQuery) (SocialTabsPanel.field_f.first(13058));
         while (var4 != null) {
           if (var4.field_t == param2) {
             return var4;
           }
-          var4 = (ud) (uf.field_f.next((byte) -86));
+          var4 = (RankingQuery) (SocialTabsPanel.field_f.next((byte) -86));
         }
-        var4Lifetime1 = new ud();
+        var4Lifetime1 = new RankingQuery();
         var4Lifetime1.field_u = param3;
         var4Lifetime1.field_t = param2;
-        uf.field_f.addLast(3, var4Lifetime1);
+        SocialTabsPanel.field_f.addLast(3, var4Lifetime1);
         ProxySocketConnector.sendListRequest(27153, var4Lifetime1, param0);
         return var4Lifetime1;
     }
@@ -140,7 +140,7 @@ final class QuickChatHelpDialog extends SceneWidget {
 
     final boolean pollClose(boolean param0, byte param1) {
         if (param1 > -125) {
-          field_ac = (c) null;
+          field_ac = (PendingByteArrayRequest) null;
           this.updateInputFullScreen((byte) 11, true);
           if (0 == VerticalScrollbar.field_gc) {
             return 0 != this.field_Yb.field_Eb ? true : false;
@@ -289,11 +289,11 @@ final class QuickChatHelpDialog extends SceneWidget {
           if (LoginForm.field_T == GzipDecoder.field_g) {
             return;
           }
-          if (DropTargetWidget.a(LoginForm.field_T, 0)) {
-            GameKeyHandler.field_e[LoginForm.field_T].s(126);
+          if (DropTargetWidget.isNonNegative(LoginForm.field_T, 0)) {
+            GameKeyHandler.field_e[LoginForm.field_T].releaseScreenQueries(126);
           }
           if (LoginForm.field_T == 14) {
-            MarkerSlider.f((byte) 3);
+            MarkerSlider.encodeSavedDesigns((byte) 3);
           }
           LoginForm.field_T = GzipDecoder.field_g;
           PlayingSound.field_w = Sprite.field_k;
@@ -301,23 +301,23 @@ final class QuickChatHelpDialog extends SceneWidget {
             TextHotspotRegion.field_v = false;
           }
           LoginForm.field_U = 0;
-          if (lc.field_e) {
-            if (LoginCredentials.field_f != ml.field_g) {
-              jn.a(true, (byte) 71, 200, LoginCredentials.field_f);
+          if (SettingSearchHelpers.field_e) {
+            if (LoginCredentials.field_f != ListRequestHelpers.field_g) {
+              MusicTrackHelpers.changeMusicTrack(true, (byte) 71, 200, LoginCredentials.field_f);
             }
             if (BoundedUrlRequest.field_i != null) {
-              BoundedUrlRequest.field_i.f((byte) -92);
+              BoundedUrlRequest.field_i.clearTransientEffects((byte) -92);
             }
             if (null != CachedTextLayout.field_A) {
-              CachedTextLayout.field_A.f((byte) -93);
+              CachedTextLayout.field_A.clearTransientEffects((byte) -93);
             }
             BoundedUrlRequest.field_i = null;
             CachedTextLayout.field_A = null;
-            lc.field_e = false;
+            SettingSearchHelpers.field_e = false;
           }
           if (ReportAbuseDialog.field_Sb) {
-            lc.field_c = null;
-            un.field_b = new NodeDeque();
+            SettingSearchHelpers.field_c = null;
+            ChatHistoryAllocator.field_b = new NodeDeque();
             var9 = DirectByteStorage.field_m;
             var7 = var9;
             var4 = var7;
@@ -341,9 +341,9 @@ final class QuickChatHelpDialog extends SceneWidget {
             return;
           }
           if (NodeIterator.field_d) {
-            TextButton.f(-12161);
+            TextButton.closeTransientDialogs(-12161);
             LobbyStateHelpers.disconnectLobby(true);
-            SoundCache.a(true);
+            SoundCache.clearSocialLists(true);
             NodeIterator.field_d = false;
           }
           return;
@@ -358,7 +358,7 @@ final class QuickChatHelpDialog extends SceneWidget {
         field_Xb = "EXCLUSIVE";
         field_Vb = new NodeDeque();
         field_Zb = "Not yet achieved";
-        field_Sb = new dj(2);
+        field_Sb = new NumberParsingHelpers(2);
         field_bc = -1;
         field_Ub = 0;
         field_dc = 0;

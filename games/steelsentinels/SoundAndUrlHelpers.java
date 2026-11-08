@@ -80,23 +80,23 @@ final class SoundAndUrlHelpers {
         }
         var3Lifetime2 = 0;
         if (BoundedUrlRequest.field_i != null) {
-          var3Lifetime2 = BoundedUrlRequest.field_i.d(true, param2) - 320;
+          var3Lifetime2 = BoundedUrlRequest.field_i.worldToScreenX(true, param2) - 320;
           var4 = Math.max(64, -(192 * Math.abs(var3Lifetime2) / 1280) + 256);
           var4 = ResourceArchive.field_e[param1] * var4 / 256;
           var5 = Math.max(0, Math.min(256, var3Lifetime2 / 10 + 128));
-          return RegistrationRequestDialog.a(var4, var5, 248, SentinelAnimationEditor.field_q[param1]);
+          return RegistrationRequestDialog.playSampleAtVolume(var4, var5, 248, SentinelAnimationEditor.field_q[param1]);
         }
         if (null != CachedTextLayout.field_A) {
-          var3Lifetime2 = -320 + CachedTextLayout.field_A.d(true, param2);
+          var3Lifetime2 = -320 + CachedTextLayout.field_A.worldToScreenX(true, param2);
           var4Lifetime1 = Math.max(64, -(192 * Math.abs(var3Lifetime2) / 1280) + 256);
           var4Lifetime1 = ResourceArchive.field_e[param1] * var4Lifetime1 / 256;
           var5Lifetime1 = Math.max(0, Math.min(256, var3Lifetime2 / 10 + 128));
-          return RegistrationRequestDialog.a(var4Lifetime1, var5Lifetime1, 248, SentinelAnimationEditor.field_q[param1]);
+          return RegistrationRequestDialog.playSampleAtVolume(var4Lifetime1, var5Lifetime1, 248, SentinelAnimationEditor.field_q[param1]);
         }
         var4Lifetime2 = Math.max(64, -(192 * Math.abs(var3Lifetime2) / 1280) + 256);
         var4Lifetime2 = ResourceArchive.field_e[param1] * var4Lifetime2 / 256;
         var5Lifetime2 = Math.max(0, Math.min(256, var3Lifetime2 / 10 + 128));
-        return RegistrationRequestDialog.a(var4Lifetime2, var5Lifetime2, 248, SentinelAnimationEditor.field_q[param1]);
+        return RegistrationRequestDialog.playSampleAtVolume(var4Lifetime2, var5Lifetime2, 248, SentinelAnimationEditor.field_q[param1]);
     }
 
     final static java.net.URL rewriteUrlPathParameters(int param0, java.net.URL param1, String param2, String param3, int param4) {

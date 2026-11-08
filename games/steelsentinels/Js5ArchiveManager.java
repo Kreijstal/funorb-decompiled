@@ -16,7 +16,7 @@ final class Js5ArchiveManager {
     static String[] field_f;
     static RgbSprite[] field_c;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void fillAlphaTrapezoid(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var9_int = 0;
         int var10 = 0;
@@ -41,7 +41,7 @@ final class Js5ArchiveManager {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isAccountNamePromptReady(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -44) {
           Js5ArchiveManager.releaseStatics((byte) 65);
@@ -50,7 +50,7 @@ final class Js5ArchiveManager {
         return stackIn_6_0;
     }
 
-    final boolean b(int param0) {
+    final boolean loadMasterIndex(int param0) {
         int var7 = 0;
         int var3;
         byte[] var4;
@@ -67,15 +67,15 @@ final class Js5ArchiveManager {
           return true;
         }
         if (null == this.field_h) {
-          if (this.field_g.c(105)) {
+          if (this.field_g.isUrgentQueueFull(105)) {
             return false;
           }
-          this.field_h = this.field_g.a((byte) 0, 255, 255, true, (byte) 112);
+          this.field_h = this.field_g.request((byte) 0, 255, 255, true, (byte) 112);
         }
         if (this.field_h.field_z) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_h.d((byte) -65));
+        var10 = new PacketBuffer(this.field_h.getData((byte) -65));
         var10.position = 5;
         var3 = var10.readUnsignedByte((byte) -103);
         var10.position = var10.position + var3 * 72;
@@ -108,7 +108,7 @@ final class Js5ArchiveManager {
         return true;
     }
 
-    final CachedArchiveProvider a(SectorCacheStore param0, byte param1, boolean param2, SectorCacheStore param3, int param4) {
+    final CachedArchiveProvider openProvider(SectorCacheStore param0, byte param1, boolean param2, SectorCacheStore param3, int param4) {
         CachedArchiveProvider stackIn_10_0 = null;
         CachedArchiveProvider stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -136,7 +136,7 @@ final class Js5ArchiveManager {
             this.field_a.position = 6 + param4 * 72;
             if (param1 <= 91) {
               var10 = (SectorCacheStore) null;
-              this.a((SectorCacheStore) null, (byte) 104, true, (SectorCacheStore) null, 114);
+              this.openProvider((SectorCacheStore) null, (byte) 104, true, (SectorCacheStore) null, 114);
             }
             var6_int = this.field_a.readInt(0);
             var7 = this.field_a.readInt(0);
@@ -179,7 +179,7 @@ final class Js5ArchiveManager {
         field_f = null;
     }
 
-    final void a(boolean param0) {
+    final void serviceProviders(boolean param0) {
         int var2;
         int var3;
         CachedArchiveProvider stackIn_15_0 = null;
@@ -193,13 +193,13 @@ final class Js5ArchiveManager {
         }
         for (var2 = 0; var2 < this.field_j.length; var2++) {
           if (this.field_j[var2] != null) {
-            this.field_j[var2].d(-119);
+            this.field_j[var2].servicePrefetchQueue(-119);
           }
         }
         for (var2Lifetime1 = 0; this.field_j.length > var2Lifetime1; var2Lifetime1++) {
           stackIn_15_0 = this.field_j[var2Lifetime1];
           if (stackIn_15_0 != null) {
-            this.field_j[var2Lifetime1].c((byte) -97);
+            this.field_j[var2Lifetime1].serviceBackgroundRequests((byte) -97);
           }
         }
     }
@@ -210,8 +210,8 @@ final class Js5ArchiveManager {
           this.field_b = param2;
           this.field_g = param0;
           this.field_k = param3;
-          if (!this.field_g.c(15)) {
-            this.field_h = this.field_g.a((byte) 0, 255, 255, true, (byte) 72);
+          if (!this.field_g.isUrgentQueueFull(15)) {
+            this.field_h = this.field_g.request((byte) 0, 255, 255, true, (byte) 72);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

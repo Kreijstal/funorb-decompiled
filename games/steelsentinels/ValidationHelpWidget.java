@@ -44,7 +44,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static void a(byte param0, int param1, int param2) {
+    final static void drawLogoIntro(byte param0, int param1, int param2) {
         int var3;
         int var4;
         int var5;
@@ -60,7 +60,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
         if (param0 <= 1) {
           var9 = (byte[]) null;
-          ValidationHelpWidget.a((byte) 92, (byte[]) null);
+          ValidationHelpWidget.copyBytes((byte) 92, (byte[]) null);
         }
         var3 = -135 + param2;
         var4 = param1 - 35;
@@ -71,18 +71,18 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         if (DateOfBirthValidator.field_h > 200) {
           var5 = (250 - DateOfBirthValidator.field_h << 8) / 50;
         }
-        IterableNodeHashTable.a(ai.field_o, (byte) -106);
-        lf.a();
+        IterableNodeHashTable.bindSpriteRaster(NotificationMessage.field_o, (byte) -106);
+        MeshRasterState.useRasterClip();
         SoftwareRaster.clear();
-        LoginForm.a(true);
+        LoginForm.renderLogoMeshes(true);
         if (var5 < 256) {
           SoftwareRaster.fillRectangleBlended(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j, 0, 256 - var5);
         }
         MatchingTextValidator.popRasterStateWithIntGuard(103);
         if (150 > DateOfBirthValidator.field_h) {
-          ai.field_o.drawHalfSize(var3, var4);
+          NotificationMessage.field_o.drawHalfSize(var3, var4);
         } else {
-          dj.field_c.drawShadedGrayscale(var3 + 15, 10 + var4, var5);
+          NumberParsingHelpers.field_c.drawShadedGrayscale(var3 + 15, 10 + var4, var5);
         }
         var6 = -125 + DateOfBirthValidator.field_h;
         if (0 < var6 &&
@@ -110,7 +110,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         return;
     }
 
-    final static void g(byte param0) {
+    final static void drawDesignerPanel(byte param0) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -261,10 +261,10 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         int[] var70 = null;
         var32 = SteelSentinels.obfuscationControl;
         try {
-          pa.field_e = -1;
+          TutorialStepTable.field_e = -1;
           SocialRequestHelpers.field_h = null;
-          if (dc.field_g != 1) {
-            stackIn_7_0 = (dc.field_g == 0) ? 1 : 0;
+          if (TableColumns.field_g != 1) {
+            stackIn_7_0 = (TableColumns.field_g == 0) ? 1 : 0;
           } else {
             stackIn_7_0 = 1;
           }
@@ -292,14 +292,14 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             if (null != ClientGlobals.field_a ||
               SentinelDesigner.field_a != 0) {
               GameApplet.field_l = true;
-              kf.field_s = true;
+              HighscoreTable.field_s = true;
             }
-            if (!kf.field_s &&
+            if (!HighscoreTable.field_s &&
               LobbySetupHelpers.field_f >= LinkButtonPainter.field_c.field_Rb &&
               LinkButtonPainter.field_c.field_Rb + LinkButtonPainter.field_c.field_zb > LobbySetupHelpers.field_f &&
               DelegatingCanvas.field_c >= LinkButtonPainter.field_c.field_cb &&
               DelegatingCanvas.field_c < LinkButtonPainter.field_c.field_cb + LinkButtonPainter.field_c.field_Lb) {
-              kf.field_s = true;
+              HighscoreTable.field_s = true;
             }
             if (var2 != 0 ||
               !(TeamColourTinter.field_a < 0) ||
@@ -308,27 +308,27 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               DialWidget.field_X = true;
             }
             if (LoadoutHelpers.field_h) {
-              kf.field_s = true;
+              HighscoreTable.field_s = true;
               BoundedRandomAccessFile.field_l = true;
               DialWidget.field_X = true;
               if (ImageProducerRasterBuffer.field_B == null &&
                 NameSuggestionsPanel.field_Y < 0 &&
-                null != hm.field_a) {
+                null != LoadoutCostHelpers.field_a) {
                 if (RegistrationRequestDialog.field_Ob != 0) {
                   if ((RegistrationRequestDialog.field_Ob & 16) != 0) {
-                    SpriteFrame.buildPartListWidgets(hm.field_a, 83);
+                    SpriteFrame.buildPartListWidgets(LoadoutCostHelpers.field_a, 83);
                   } else {
                     if ((2 & RegistrationRequestDialog.field_Ob) != 0) {
-                      MessageMenuHelpers.buildModuleListWidgets(4, hm.field_a);
+                      MessageMenuHelpers.buildModuleListWidgets(4, LoadoutCostHelpers.field_a);
                     }
                   }
                 } else {
-                  GzipDecoder.a(hm.field_a, (byte) 19);
+                  GzipDecoder.buildSettingsPanelRows(LoadoutCostHelpers.field_a, (byte) 19);
                 }
               }
               LoadoutHelpers.field_h = false;
             }
-            if ((!kf.field_s ||
+            if ((!HighscoreTable.field_s ||
               !GameApplet.field_l) &&
               0 == LoginForm.field_U) {
               var3_ref_gh__ = MouseInputHandler.field_h;
@@ -336,10 +336,10 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 var5_ref_gh = var3_ref_gh__[var4];
                 var5_ref_gh.drawFullScreen(true, (byte) 126);
               }
-              if (kf.field_s) {
+              if (HighscoreTable.field_s) {
                 SoftwareRaster.fillRectangle(LinkButtonPainter.field_c.field_Rb, LinkButtonPainter.field_c.field_cb, LinkButtonPainter.field_c.field_zb, LinkButtonPainter.field_c.field_Lb, 0);
                 LinkButtonPainter.field_c.drawFullScreen(true, (byte) 127);
-                kf.field_s = false;
+                HighscoreTable.field_s = false;
               }
               if (!(!GameApplet.field_l)) {
                 SoftwareRaster.fillRectangle(TextAndMenuHelpers.field_a.field_Rb, TextAndMenuHelpers.field_a.field_cb, TextAndMenuHelpers.field_a.field_zb, TextAndMenuHelpers.field_a.field_Lb, 0);
@@ -350,22 +350,22 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
             else {
               ContentTransitionDialog.field_jb.drawFullScreen(true, (byte) 127);
-              kf.field_s = false;
+              HighscoreTable.field_s = false;
               GameApplet.field_l = false;
             }
           }
           var3 = -68 / ((param0 - 80) / 33);
           if (PendingIntArrayRequest.field_v == null) {
-            if (uc.field_b == null) {
-              uc.field_b = ReflectionCheck.field_x;
+            if (DesignerPageTables.field_b == null) {
+              DesignerPageTables.field_b = ReflectionCheck.field_x;
             }
-            PendingIntArrayRequest.field_v = SentinelDesigner.a(uc.field_b, (byte) 109, di.field_c);
-            PendingIntArrayRequest.field_v.b(6993661, 83);
+            PendingIntArrayRequest.field_v = SentinelDesigner.buildChassisFromDesign(DesignerPageTables.field_b, (byte) 109, OptionMaskHelpers.field_c);
+            PendingIntArrayRequest.field_v.updateAttachedParts(6993661, 83);
           }
           var4 = 364;
           var5 = 59;
           var6 = 4096;
-          var7 = uc.field_b[0];
+          var7 = DesignerPageTables.field_b[0];
           if (0 != var7) {
             if (var7 != 55) {
               if (var7 != 57) {
@@ -436,24 +436,24 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           SoftwareRaster.drawVerticalLine(var9, 334, 26, 3355443);
           if (null != PendingIntArrayRequest.field_v &&
             null != ContentTransitionDialog.field_jb) {
-            vh.field_a = var5;
+            KeyRoutingHelpers.field_a = var5;
             DialWidgetPainter.field_c = var4 + Js5NetworkRequest.field_M;
-            ImageProducerRasterBuffer.field_y = vh.field_a;
+            ImageProducerRasterBuffer.field_y = KeyRoutingHelpers.field_a;
             LoadingScreenHelpers.field_d = DialWidgetPainter.field_c;
-            UiComponent.field_t = vh.field_a;
+            UiComponent.field_t = KeyRoutingHelpers.field_a;
             AccountTermsPanel.field_V = DialWidgetPainter.field_c;
             SoftwareRaster.setClip(221, 60, 629, 432);
             if (var1_int == 0) {
               var8 = null;
               if (PendingIntArrayRequest.field_v.componentId == 69) {
-                var33 = PendingIntArrayRequest.field_v.a(0, 2);
+                var33 = PendingIntArrayRequest.field_v.findSlotForType(0, 2);
                 if (var33 != null &&
                   null != var33.attachedPart) {
                   Js5Transport.field_r.drawTransparent(var4 + Js5NetworkRequest.field_M + 40, var5 - 135);
                 }
               }
               if (PendingIntArrayRequest.field_v.componentId == 75) {
-                var34 = PendingIntArrayRequest.field_v.a(0, 2);
+                var34 = PendingIntArrayRequest.field_v.findSlotForType(0, 2);
                 if (var34 != null &&
                   null != var34.attachedPart) {
                   Js5Transport.field_r.drawTransparent(4 + Js5NetworkRequest.field_M + var4, -178 + var5);
@@ -463,21 +463,21 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 }
               }
               if (PendingIntArrayRequest.field_v.componentId == 57) {
-                var35 = PendingIntArrayRequest.field_v.a(0, 2);
+                var35 = PendingIntArrayRequest.field_v.findSlotForType(0, 2);
                 if (var35 != null &&
                   null != var35.attachedPart) {
                   Js5Transport.field_r.drawTransparent(-3 + Js5NetworkRequest.field_M + var4, var5 - 156);
                 }
               }
               if (55 == PendingIntArrayRequest.field_v.componentId) {
-                var36 = PendingIntArrayRequest.field_v.a(0, 2);
+                var36 = PendingIntArrayRequest.field_v.findSlotForType(0, 2);
                 if (var36 != null &&
                   var36.attachedPart != null &&
                   var36.attachedPart.componentId == 95) {
                   Js5Transport.field_r.drawVerticalFlip(35 + Js5NetworkRequest.field_M + var4, var5 - 130);
                 }
               }
-              PendingIntArrayRequest.field_v.a(0, true, DialWidgetPainter.field_c, vh.field_a, (byte) 49, 0);
+              PendingIntArrayRequest.field_v.positionPartTree(0, true, DialWidgetPainter.field_c, KeyRoutingHelpers.field_a, (byte) 49, 0);
             }
             SoftwareRaster.resetClip();
             if (Js5NetworkRequest.field_M == 57 &&
@@ -525,10 +525,10 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
             var9 = 0;
             var10 = 0;
-            var7 = PendingIntArrayRequest.field_v.e((byte) -85);
+            var7 = PendingIntArrayRequest.field_v.getTotalTechValue((byte) -85);
             var11 = 0;
-            var12 = (int)((double)PendingIntArrayRequest.field_v.h(-31496) / Math.sqrt((double)PendingIntArrayRequest.field_v.getTotalArmour(8192)));
-            var13_int = (int)((double)PendingIntArrayRequest.field_v.j(0) / Math.sqrt((double)PendingIntArrayRequest.field_v.getTotalArmour(8192)));
+            var12 = (int)((double)PendingIntArrayRequest.field_v.getTotalJump(-31496) / Math.sqrt((double)PendingIntArrayRequest.field_v.getTotalArmour(8192)));
+            var13_int = (int)((double)PendingIntArrayRequest.field_v.getTotalThrust(0) / Math.sqrt((double)PendingIntArrayRequest.field_v.getTotalArmour(8192)));
             if (var12 < 0) {
               var12 = 0;
             }
@@ -538,8 +538,8 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var14 = 0;
             var15_int = 0;
             var16 = 0;
-            for (var17 = 0; var17 < PendingIntArrayRequest.field_v.i(-117); var17++) {
-              var18 = di.field_c[var17];
+            for (var17 = 0; var17 < PendingIntArrayRequest.field_v.getTotalModuleSlots(-117); var17++) {
+              var18 = OptionMaskHelpers.field_c[var17];
               if (var18 != 0) {
                 switch (var18) {
                   case 2:
@@ -608,8 +608,8 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               } else {
                 var11++;
               }
-              if (di.field_c[var17] != -1) {
-                var7 = var7 + ContextMenu.field_Sb[di.field_c[var17]];
+              if (OptionMaskHelpers.field_c[var17] != -1) {
+                var7 = var7 + ContextMenu.field_Sb[OptionMaskHelpers.field_c[var17]];
               }
             }
             if (var14 != 0) {
@@ -625,7 +625,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               var13_int = 17 * var13_int / 10;
             }
             var12 -= 5;
-            if (null != PendingIntArrayRequest.field_v.a(59, (byte) -103)) {
+            if (null != PendingIntArrayRequest.field_v.findPartByComponentId(59, (byte) -103)) {
               var12 += 5;
             }
             if (var12 < 0) {
@@ -714,8 +714,8 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                       }
                     }
                   }
-                  var38 = jj.field_h[var23 * 2];
-                  var29_ref_String = SocketConnector.formatTemplate(jj.field_h[2 * var23 + 1], -124, new String[]{Integer.toString(var30)});
+                  var38 = MeshMaterial.field_h[var23 * 2];
+                  var29_ref_String = SocketConnector.formatTemplate(MeshMaterial.field_h[2 * var23 + 1], -124, new String[]{Integer.toString(var30)});
                   if (var18_ref_int__[var23] == 0) {
                     var29_ref_String = MusicPatchPcmStream.field_E;
                   }
@@ -736,7 +736,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
             if (RegistrationRequestDialog.field_Ob != 1) {
               if (0 < (RegistrationRequestDialog.field_Ob & 2)) {
-                var42 = hm.field_a;
+                var42 = LoadoutCostHelpers.field_a;
                 if (((var42 != null)) && ((GameApplet.field_l ||
                   var2 != 0 ||
                   DialWidget.field_X))) {
@@ -747,7 +747,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               }
               else {
                 if ((RegistrationRequestDialog.field_Ob & 16) > 0) {
-                  var41 = hm.field_a;
+                  var41 = LoadoutCostHelpers.field_a;
                   if (((var41 != null)) && ((GameApplet.field_l ||
                     var2 != 0 ||
                     DialWidget.field_X))) {
@@ -762,7 +762,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                     if (var40 != null && (GameApplet.field_l ||
                       var2 != 0 ||
                       DialWidget.field_X)) {
-                      GzipDecoder.a(var40, (byte) 19);
+                      GzipDecoder.buildSettingsPanelRows(var40, (byte) 19);
                       GameApplet.field_l = true;
                     }
                   }
@@ -770,16 +770,16 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               }
             }
           }
-          if (1 != dc.field_g &&
-            dc.field_g != 0) {
+          if (1 != TableColumns.field_g &&
+            TableColumns.field_g != 0) {
             HuffmanDecoder.drawBalanceMeter(12, 140, 7786, 484, var7, 412);
           }
           if (ImageProducerRasterBuffer.field_B != null &&
             LobbySetupHelpers.field_f >= 0) {
             if (SocketJs5Transport.field_A != null) {
-              SocketJs5Transport.field_A.a(0, false, LobbySetupHelpers.field_f, DelegatingCanvas.field_c, (byte) 49, 8192);
+              SocketJs5Transport.field_A.positionPartTree(0, false, LobbySetupHelpers.field_f, DelegatingCanvas.field_c, (byte) 49, 8192);
             }
-            ImageProducerRasterBuffer.field_B.a(0, false, LobbySetupHelpers.field_f, DelegatingCanvas.field_c, (byte) 49, 16384);
+            ImageProducerRasterBuffer.field_B.positionPartTree(0, false, LobbySetupHelpers.field_f, DelegatingCanvas.field_c, (byte) 49, 16384);
           }
           if (NameSuggestionsPanel.field_Y != -1 &&
             LobbySetupHelpers.field_f >= 0) {
@@ -793,13 +793,13 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var10 = 401;
             var11 = 20;
             var12 = 60;
-            var13_int = NodeDeque.a((byte) -42, uc.field_b[0]);
+            var13_int = NodeDeque.indexOfUnlockItem((byte) -42, DesignerPageTables.field_b[0]);
             if (NumericDateInputWidget.field_eb != var13_int) {
               NumericDateInputWidget.field_eb = var13_int;
               SpriteCheckboxPainter.field_a = MouseWheelInput.field_c;
               var14 = 20;
-              jj.field_e.bindRasterTarget();
-              SoftwareRaster.fillRectangle(0, 0, jj.field_e.field_z, jj.field_e.field_B, 0);
+              MeshMaterial.field_e.bindRasterTarget();
+              SoftwareRaster.fillRectangle(0, 0, MeshMaterial.field_e.field_z, MeshMaterial.field_e.field_B, 0);
               SoftwareRaster.setClip(0, 0, var14, var14);
               if (0 > var13_int ||
                 !(var13_int < CachedTextLayout.field_E.length)) {
@@ -807,7 +807,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               }
               CachedTextLayout.field_E[var13_int].drawScaled(0, 0, 4 * var14, 4 * var14);
               SoftwareRaster.resetClip();
-              Checkbox.field_bb.b((byte) 122);
+              Checkbox.field_bb.bindRaster((byte) 122);
             }
             if (0 <= var13_int &&
               WhirlpoolHasher.field_g.length > var13_int &&
@@ -828,17 +828,17 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
           }
           var8_ref = BoundedUrlRequest.field_d;
-          if (dc.field_g == 15) {
-            pa.field_d[dc.field_g].drawStep(-40);
+          if (TableColumns.field_g == 15) {
+            TutorialStepTable.field_d[TableColumns.field_g].drawStep(-40);
           }
           if (RegistrationRequestDialog.field_Ob == 1 &&
-            0 <= t.field_h &&
-            DiskCacheRequest.field_K && (!(dc.field_g >= 0) ||
-            pa.field_d[dc.field_g].acceptSelection(t.field_h, -118))) {
-            var62 = FallingPickup.getUniqueChildComponentIds(t.field_h, (byte) 28);
+            0 <= NameTable.field_h &&
+            DiskCacheRequest.field_K && (!(TableColumns.field_g >= 0) ||
+            TutorialStepTable.field_d[TableColumns.field_g].acceptSelection(NameTable.field_h, -118))) {
+            var62 = FallingPickup.getUniqueChildComponentIds(NameTable.field_h, (byte) 28);
             var46 = var62;
             var9_ref_int__ = var46;
-            var64 = LoadingProgressDialog.b(t.field_h, (byte) -81);
+            var64 = LoadingProgressDialog.distinctPresetTail(NameTable.field_h, (byte) -81);
             var48 = var64;
             var10_ref_int__ = var48;
             var11 = 0;
@@ -849,7 +849,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             for (var14 = 0; var14 < var61.length; var14++) {
               var15_int = var61[var14];
               var16 = MusicCrossfadeStream.field_v[var15_int];
-              if (t.a(rn.field_D, var15_int, -20370)) {
+              if (NameTable.isBitSet(PendingAckRequest.field_D, var15_int, -20370)) {
                 var12 = var12 + var16;
               }
               var11 = var11 + var16;
@@ -857,35 +857,35 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var13 = var10_ref_int__;
             for (var14 = 0; java.lang.reflect.Array.getLength(var13) > var14; var14++) {
               var15_int = ((int[]) (var13))[var14];
-              var16 = qf.field_h[var15_int];
+              var16 = RankingAndRasterHelpers.field_h[var15_int];
               var11 = var11 + var16;
-              if (t.a(ArchiveRequest.field_D, var15_int, -20370)) {
+              if (NameTable.isBitSet(ArchiveRequest.field_D, var15_int, -20370)) {
                 var12 = var12 + var16;
               }
             }
             var45 = new StringBuilder("<col=ffffff>");
-            discarded$0 = var45.append(t.field_e[t.field_h]);
+            discarded$0 = var45.append(NameTable.field_e[NameTable.field_h]);
             discarded$1 = var45.append("</col> <col=0080ff>");
             var14 = var11 - var12;
             var12 = var12 * 100 / var11;
             discarded$2 = var45.append(Integer.toString(var12));
             discarded$3 = var45.append(ClockAndCookieHelpers.field_c);
             discarded$4 = var45.append("</col>");
-            discarded$5 = var45.append(qm.field_e);
+            discarded$5 = var45.append(DisplayNameAndAudioHelpers.field_e);
             if (var62.length > 0) {
               discarded$6 = var45.append(DebouncedValidator.field_c);
               var69 = var9_ref_int__;
               for (var16 = 0; var16 < var69.length; var16++) {
                 var17 = var69[var16];
                 discarded$8 = var45.append("<br>  ");
-                stackIn_348_0 = (!t.a(rn.field_D, var17, -20370)) ? 0 : 1;
+                stackIn_348_0 = (!NameTable.isBitSet(PendingAckRequest.field_D, var17, -20370)) ? 0 : 1;
                 var18 = stackIn_348_0;
                 if (var18 == 0) {
                   discarded$9 = var45.append("<col=808080>");
                 } else {
                   discarded$10 = var45.append("<col=0080ff>");
                 }
-                discarded$11 = var45.append(t.field_e[var17]);
+                discarded$11 = var45.append(NameTable.field_e[var17]);
                 discarded$12 = var45.append("</col>");
                 if (var18 == 0) {
                   discarded$13 = var45.append(" (<img=24>");
@@ -901,13 +901,13 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               if (var64.length != 1) {
                 discarded$16 = var45.append(DualNodeHashTable.field_i);
               } else {
-                discarded$17 = var45.append(ed.field_g);
+                discarded$17 = var45.append(SessionSeedHelpers.field_g);
               }
               var70 = var10_ref_int__;
               for (var16 = 0; var16 < var70.length; var16++) {
                 var17 = var70[var16];
                 discarded$18 = var45.append("<br>  ");
-                stackIn_367_0 = (!t.a(ArchiveRequest.field_D, var17, -20370)) ? 0 : 1;
+                stackIn_367_0 = (!NameTable.isBitSet(ArchiveRequest.field_D, var17, -20370)) ? 0 : 1;
                 var18 = stackIn_367_0;
                 if (var18 == 0) {
                   discarded$19 = var45.append("<col=808080>");
@@ -922,7 +922,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 discarded$23 = var45.append("</col>");
                 if (var18 == 0) {
                   discarded$24 = var45.append(" (<img=24>");
-                  discarded$25 = var45.append(qf.field_h[var17]);
+                  discarded$25 = var45.append(RankingAndRasterHelpers.field_h[var17]);
                   discarded$26 = var45.append(")");
                 }
               }
@@ -954,15 +954,15 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var11 = -1;
           if (0 == RegistrationRequestDialog.field_Ob ||
             (18 & RegistrationRequestDialog.field_Ob) != 0) {
-            if (0 <= pa.field_e) {
-              var9 = di.field_c[pa.field_e];
+            if (0 <= TutorialStepTable.field_e) {
+              var9 = OptionMaskHelpers.field_c[TutorialStepTable.field_e];
             }
-            if (t.field_h >= 0) {
-              var9 = t.field_h;
+            if (NameTable.field_h >= 0) {
+              var9 = NameTable.field_h;
             }
-            if (pa.field_e >= 0 &&
+            if (TutorialStepTable.field_e >= 0 &&
               var9 < 0) {
-              var10 = pa.field_e;
+              var10 = TutorialStepTable.field_e;
             }
           }
           var12 = -1;
@@ -1003,8 +1003,8 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             for (var14 = 0; var14 < 12; var14++) {
               var53 = ViewportController.field_h[var14];
               if (var53 != null) {
-                if ((ni.b(63) ||
-                  !(rd.field_b > 0)) &&
+                if ((ByteArrayPoolHelpers.isAccountCreationMode(63) ||
+                  !(SpriteLoadingHelpers.field_b > 0)) &&
                   MessageMenuHelpers.isComponentUnused(FunOrbClient.field_z[var14], -120, false)) {
                   stackIn_418_0 = 1;
                 } else {
@@ -1012,7 +1012,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 }
                 var16 = stackIn_418_0;
                 if (var16 == 0 &&
-                  t.a(rn.field_D, FunOrbClient.field_z[var14], -20370)) {
+                  NameTable.isBitSet(PendingAckRequest.field_D, FunOrbClient.field_z[var14], -20370)) {
                   if (LobbySetupHelpers.field_f >= var53.field_Rb &&
                     LobbySetupHelpers.field_f < 190 &&
                     var53.field_cb <= DelegatingCanvas.field_c &&
@@ -1027,7 +1027,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                     QuickChatPhraseCache.field_i = var14;
                     if (var13_int != QuickChatPhraseCache.field_i) {
                       WeightedLruCache.field_f = MouseWheelInput.field_c;
-                      CombatWorld.c(-2483, 97);
+                      CombatWorld.playSoundEffect(-2483, 97);
                     }
                     var18 = (-WeightedLruCache.field_f + MouseWheelInput.field_c) / 6 % 15;
                   }
@@ -1044,11 +1044,11 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 }
               }
             }
-            Checkbox.field_bb.b((byte) 124);
+            Checkbox.field_bb.bindRaster((byte) 124);
           } else {
             QuickChatPhraseCache.field_i = -1;
           }
-          if (0 <= dc.field_g) {
+          if (0 <= TableColumns.field_g) {
             var13_int = -1;
             if (var9 >= 0) {
               var13_int = var9;
@@ -1058,7 +1058,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               }
             }
             if (0 <= var13_int &&
-              !pa.field_d[dc.field_g].acceptSelection(var13_int, -111)) {
+              !TutorialStepTable.field_d[TableColumns.field_g].acceptSelection(var13_int, -111)) {
               var10 = -1;
               var9 = -1;
             }
@@ -1066,17 +1066,17 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           if (var10 >= 0 &&
             RegistrationRequestDialog.field_Ob == 0) {
             if (EmailAvailabilityValidator.field_w != var10) {
-              CombatWorld.c(-2483, 97);
+              CombatWorld.playSoundEffect(-2483, 97);
               EmailAvailabilityValidator.field_w = var10;
               GameApplet.field_l = true;
             }
             var10 = -1;
-          } else if (-2 == pa.field_e &&
+          } else if (-2 == TutorialStepTable.field_e &&
             RegistrationRequestDialog.field_Ob == 0) {
             if (EmailAvailabilityValidator.field_w != -2) {
               GameApplet.field_l = true;
               EmailAvailabilityValidator.field_w = -2;
-              CombatWorld.c(-2483, 97);
+              CombatWorld.playSoundEffect(-2483, 97);
             }
           } else if (0 > var9 &&
             var10 < 0) {
@@ -1093,18 +1093,18 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               if (0 != RegistrationRequestDialog.field_Ob) {
                 if ((18 & RegistrationRequestDialog.field_Ob) != 0) {
                   if (EmailAvailabilityValidator.field_w != var9) {
-                    CombatWorld.c(-2483, 97);
+                    CombatWorld.playSoundEffect(-2483, 97);
                     EmailAvailabilityValidator.field_w = var9;
                     GameApplet.field_l = true;
                   }
-                  var13 = t.field_e[var9];
+                  var13 = NameTable.field_e[var9];
                   var14_ref = var13;
                   var14_ref = var13;
                   if (var9 >= 17 &&
                     var9 < 17 + NodeHashTable.field_i.length) {
                     var55 = SocketConnector.field_g[-17 + var9];
                     var14_ref = var55;
-                    var17 = ja.a(var9, false);
+                    var17 = IconLookupHelpers.getComponentSlotIndex(var9, false);
                     if (var17 >= 0 &&
                       var17 < PasswordFieldPainter.field_B.length) {
                       var15 = SocketConnector.formatTemplate(LobbyStateHelpers.field_c, -117, new String[]{PasswordFieldPainter.field_B[var17]});
@@ -1128,7 +1128,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                     var14_ref = var21_ref;
                     var14_ref = var56;
                     var14_ref = var56;
-                    var57 = TextAndMenuHelpers.describeComponent(NodeDeque.a(var9, (byte) 67), -4097);
+                    var57 = TextAndMenuHelpers.describeComponent(NodeDeque.findPartDefinition(var9, (byte) 67), -4097);
                     var14_ref = var57;
                     var21_ref = var14_ref;
                     var14_ref = var21_ref;
@@ -1141,7 +1141,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                       var14_ref = var57;
                     }
                   }
-                  var17_ref_String = BirthDateEntryPanel.a(109, var9);
+                  var17_ref_String = BirthDateEntryPanel.specialAttackName(109, var9);
                   var14_ref = var17_ref_String;
                   var21_ref = var14_ref;
                   var14_ref = var21_ref;
@@ -1152,7 +1152,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 }
               } else {
                 if (EmailAvailabilityValidator.field_w != var9) {
-                  CombatWorld.c(-2483, 97);
+                  CombatWorld.playSoundEffect(-2483, 97);
                   GameApplet.field_l = true;
                   EmailAvailabilityValidator.field_w = var9;
                 }
@@ -1166,8 +1166,8 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 } else {
                   var13 = "GODULE";
                 }
-                if ((ni.b(51) ||
-                  !(rd.field_b > 0)) &&
+                if ((ByteArrayPoolHelpers.isAccountCreationMode(51) ||
+                  !(SpriteLoadingHelpers.field_b > 0)) &&
                   MessageMenuHelpers.isComponentUnused(var9, -81, true)) {
                   stackIn_489_0 = 1;
                 } else {
@@ -1175,12 +1175,12 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 }
                 var17 = stackIn_489_0;
                 if (var17 != 0) {
-                  var14_ref = of.field_b;
+                  var14_ref = SessionExitHelpers.field_b;
                 }
               }
             } else {
               if (EmailAvailabilityValidator.field_w != var10) {
-                CombatWorld.c(-2483, 97);
+                CombatWorld.playSoundEffect(-2483, 97);
                 EmailAvailabilityValidator.field_w = var10;
                 GameApplet.field_l = true;
               }
@@ -1191,11 +1191,11 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                     var13 = ImageProducerRasterBuffer.field_o;
                   } else {
                     var13 = ValidatedTextWidget.field_nb;
-                    var54 = dc.a(var10, 32);
+                    var54 = TableColumns.formatFlagLabels(var10, 32);
                     if (var54.length() <= 0) {
                       var14_ref = null;
                     } else {
-                      var14_ref = SocketConnector.formatTemplate(DualNodeDequeIterator.field_h, -68, new String[]{dc.a(var10, 32)});
+                      var14_ref = SocketConnector.formatTemplate(DualNodeDequeIterator.field_h, -68, new String[]{TableColumns.formatFlagLabels(var10, 32)});
                     }
                   }
                 } else {
@@ -1204,7 +1204,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               } else {
                 var13 = LobbyStateHelpers.field_e;
               }
-              if (ThreeSliceButtonPainter.field_v.a((byte) 2, SocialRequestHelpers.field_h) != -1) {
+              if (ThreeSliceButtonPainter.field_v.findAttachedComponentId((byte) 2, SocialRequestHelpers.field_h) != -1) {
                 if (var14_ref != null) {
                   var14_ref = (String) (var14_ref) + "<br><br>" + dg.field_c;
                 } else {
@@ -1213,8 +1213,8 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               }
             }
             boolean decompiledFrameRemainder0 = true;
-            if (var10 < 0 && (ni.b(57) ||
-              !(0 < rd.field_b))) {
+            if (var10 < 0 && (ByteArrayPoolHelpers.isAccountCreationMode(57) ||
+              !(0 < SpriteLoadingHelpers.field_b))) {
               stackIn_519_0 = var9;
               stackIn_519_1 = -86;
               stackIn_520_2 = (RegistrationRequestDialog.field_Ob == 0);
@@ -1229,7 +1229,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             boolean decompiledFrameRemainder1 = true;
             var17 = stackIn_523_0;
             if (var17 == 0) {
-              if (RasterBuffer.a((byte) 122) &&
+              if (RasterBuffer.isSpecialItemUnlocked((byte) 122) &&
                 0 <= var9 &&
                 (RegistrationRequestDialog.field_Ob & 1) == 0) {
                 var18 = 1;
@@ -1237,10 +1237,10 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 var20 = 0;
                 if (0 != RegistrationRequestDialog.field_Ob) {
                   var20 = MusicCrossfadeStream.field_v[var9];
-                  if (t.a(rn.field_D, var9, -20370)) {
+                  if (NameTable.isBitSet(PendingAckRequest.field_D, var9, -20370)) {
                     var18 = 0;
                   } else {
-                    if (!RasterSnapshot.a(DirectByteStorage.field_m, (byte) 123, rn.field_D, var9, ArticulatedPart.f((byte) -74))) {
+                    if (!RasterSnapshot.isPartAvailable(DirectByteStorage.field_m, (byte) 123, PendingAckRequest.field_D, var9, ArticulatedPart.isMemberSession((byte) -74))) {
                       var18 = 2;
                       var19 = 1;
                     } else {
@@ -1250,11 +1250,11 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                     }
                   }
                 } else {
-                  var20 = qf.field_h[var9];
-                  if (t.a(ArchiveRequest.field_D, var9, -20370)) {
+                  var20 = RankingAndRasterHelpers.field_h[var9];
+                  if (NameTable.isBitSet(ArchiveRequest.field_D, var9, -20370)) {
                     var18 = 0;
                   } else {
-                    if (LoadoutHelpers.isComponentCompatible(var9, ArticulatedPart.f((byte) -61), ArchiveRequest.field_D, (byte) 84, DirectByteStorage.field_m, rn.field_D)) {
+                    if (LoadoutHelpers.isComponentCompatible(var9, ArticulatedPart.isMemberSession((byte) -61), ArchiveRequest.field_D, (byte) 84, DirectByteStorage.field_m, PendingAckRequest.field_D)) {
                       if (var20 > PasswordFieldPainter.field_v) {
                         var18 = 2;
                       }
@@ -1298,7 +1298,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 }
               }
             } else {
-              var14_ref = of.field_b;
+              var14_ref = SessionExitHelpers.field_b;
               var21_ref = var14_ref;
               var14_ref = var21_ref;
               var21_ref = var14_ref;
@@ -1321,7 +1321,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               var21 = var21 + (5 + var20 * var25);
             }
             if (0 != (RegistrationRequestDialog.field_Ob & 16)) {
-              var26 = DropTargetWidget.a(0, 0, 17, true, var9);
+              var26 = DropTargetWidget.drawIconLabelRows(0, 0, 17, true, var9);
               if (var10 >= 0) {
                 var21 += 25;
               } else {
@@ -1375,7 +1375,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               SoftwareRaster.drawLine(var27, 1 + var28, ScrollContainer.cosine16(var12, (byte) -77) * var29 / 65536 + var27, 1 + var28 + var29 * jh.sine16(var12, 4096) / 65536, 1044724);
             }
             if ((RegistrationRequestDialog.field_Ob & 16) != 0) {
-              DropTargetWidget.a(var21 - 10, var22 + 10, 17, false, var9);
+              DropTargetWidget.drawIconLabelRows(var21 - 10, var22 + 10, 17, false, var9);
             }
             var21 = var21 + var26;
             if (var14_ref != null) {
@@ -1388,10 +1388,10 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var66 = new int[35];
             var58 = var66;
             var14_ref = var58;
-            var15_int = PendingIntArrayRequest.field_v.i(-115);
+            var15_int = PendingIntArrayRequest.field_v.getTotalModuleSlots(-115);
             for (var16 = 0; var15_int > var16; var16++) {
-              if (di.field_c[var16] >= 0) {
-                dupTemp$35 = di.field_c[var16];
+              if (OptionMaskHelpers.field_c[var16] >= 0) {
+                dupTemp$35 = OptionMaskHelpers.field_c[var16];
                 ((int[]) (var14_ref))[dupTemp$35] = ((int[]) (var14_ref))[dupTemp$35] + 1;
               }
             }
@@ -1418,23 +1418,23 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               var17 == 0) {
               var13 = SentinelDesigner.field_b[2];
             } else if (0 < var66[28] &&
-              PendingIntArrayRequest.field_v.h(-31496) <= 0) {
+              PendingIntArrayRequest.field_v.getTotalJump(-31496) <= 0) {
               var13 = SentinelDesigner.field_b[3];
             } else if (var66[29] > 0 &&
-              PendingIntArrayRequest.field_v.j(0) <= 0) {
+              PendingIntArrayRequest.field_v.getTotalThrust(0) <= 0) {
               var13 = SentinelDesigner.field_b[4];
             } else if (0 < var66[17] &&
               !Projectile.field_lb) {
               var13 = SentinelDesigner.field_b[5];
             } else if (var66[16] > 0 &&
-              !vc.field_d) {
+              !DisplayMode.field_d) {
               var13 = SentinelDesigner.field_b[6];
             } else if (0 < var66[22] &&
               !GameplayController.field_I &&
               !LoginDialog.field_Gb) {
               var13 = SentinelDesigner.field_b[7];
             } else if (var66[23] > 0 &&
-              !qf.field_b) {
+              !RankingAndRasterHelpers.field_b) {
               var13 = SentinelDesigner.field_b[8];
             } else if (0 < var66[25] &&
               !AccountMessagePanel.field_Q) {
@@ -1442,7 +1442,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             } else if (0 < var66[24] &&
               NameAvailabilityValidator.field_t < 5) {
               var13 = SentinelDesigner.field_b[10];
-            } else if (lc.field_f &&
+            } else if (SettingSearchHelpers.field_f &&
               !(10 <= NameAvailabilityValidator.field_t)) {
               var13 = SentinelDesigner.field_b[11];
             }
@@ -1453,7 +1453,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           }
           if (var13 != null &&
             EmailFormatError.field_b) {
-            var59 = jn.field_e + (String) (var13);
+            var59 = MusicTrackHelpers.field_e + (String) (var13);
             var15 = var59;
             var15 = var59;
             var14 = 283;
@@ -1472,50 +1472,50 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               var14 = Integer.parseInt(SocketJs5Transport.field_y.field_S.substring(5, 6));
               var17 = var14;
               if (var17 == 1) {
-                var15 = SocketConnector.formatTemplate(sl.field_j[0], -71, new String[]{Integer.toString(ContextMenu.field_Sb[var16])});
+                var15 = SocketConnector.formatTemplate(ArchiveLoadStep.field_j[0], -71, new String[]{Integer.toString(ContextMenu.field_Sb[var16])});
               } else {
                 if (2 != var17) {
                   if (var17 == 3) {
-                    var15 = sl.field_j[2];
+                    var15 = ArchiveLoadStep.field_j[2];
                   } else {
                     if (var17 != 4) {
                       if (5 != var17) {
                         if (var17 == 7) {
                           if (var16 != 20) {
-                            var15 = SocketConnector.formatTemplate(sl.field_j[5], -76, new String[]{Integer.toString(SpriteCheckboxPainter.a(var16, false) * 50 / 3)});
+                            var15 = SocketConnector.formatTemplate(ArchiveLoadStep.field_j[5], -76, new String[]{Integer.toString(SpriteCheckboxPainter.valueForKind(var16, false) * 50 / 3)});
                           } else {
-                            var15 = sl.field_j[6];
+                            var15 = ArchiveLoadStep.field_j[6];
                           }
                         }
                       } else {
-                        var15 = SocketConnector.formatTemplate(sl.field_j[4], -86, new String[]{Integer.toString(SpriteCheckboxPainter.a(var16, false) * 100)});
+                        var15 = SocketConnector.formatTemplate(ArchiveLoadStep.field_j[4], -86, new String[]{Integer.toString(SpriteCheckboxPainter.valueForKind(var16, false) * 100)});
                       }
                     } else {
-                      var15 = SocketConnector.formatTemplate(sl.field_j[3], -94, new String[]{Integer.toString(SpriteCheckboxPainter.a(var16, false))});
+                      var15 = SocketConnector.formatTemplate(ArchiveLoadStep.field_j[3], -94, new String[]{Integer.toString(SpriteCheckboxPainter.valueForKind(var16, false))});
                     }
                   }
                 } else {
-                  var15 = sl.field_j[1];
+                  var15 = ArchiveLoadStep.field_j[1];
                 }
               }
             } else {
-              var60 = NodeDeque.a((int)SocketJs5Transport.field_y.key, (byte) 67);
+              var60 = NodeDeque.findPartDefinition((int)SocketJs5Transport.field_y.key, (byte) 67);
               var14 = Integer.parseInt(SocketJs5Transport.field_y.field_S.substring(5, 6));
               if (0 == (RegistrationRequestDialog.field_Ob & 1) && (var14 == 2 ||
                 var14 == 3) && LobbySetupHelpers.field_f < -30 + SocketJs5Transport.field_y.field_Rb + SocketJs5Transport.field_y.field_zb) {
-                var14 = (var60.i(-118) <= 0) ? -1 : 6;
+                var14 = (var60.getTotalModuleSlots(-118) <= 0) ? -1 : 6;
               }
               var17 = var14;
               if (var17 == 0) {
-                var15 = SocketConnector.formatTemplate(sl.field_j[7], -111, new String[]{Integer.toString(var60.getTotalArmour(8192))});
+                var15 = SocketConnector.formatTemplate(ArchiveLoadStep.field_j[7], -111, new String[]{Integer.toString(var60.getTotalArmour(8192))});
               } else {
                 if (var17 != 1) {
                   if (var17 != 2) {
                     if (var17 == 3) {
                       if ((1 & RegistrationRequestDialog.field_Ob) != 0) {
-                        var17 = NodeDeque.a((byte) -97, var60.componentId);
+                        var17 = NodeDeque.indexOfUnlockItem((byte) -97, var60.componentId);
                         array$36 = new String[1];
-                        stackIn_708_0 = sl.field_j[10];
+                        stackIn_708_0 = ArchiveLoadStep.field_j[10];
                         stackIn_708_1 = -93;
                         stackIn_708_2 = array$36;
                         stackIn_708_3 = array$36;
@@ -1528,18 +1528,18 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                         stackIn_708_3[stackIn_708_4] = Integer.toString(stackIn_709_5);
                         var15 = SocketConnector.formatTemplate(stackIn_708_0, stackIn_708_1, stackIn_708_2);
                       } else {
-                        var15 = sl.field_j[2];
+                        var15 = ArchiveLoadStep.field_j[2];
                       }
                     } else {
                       if (var17 == 6) {
-                        var15 = SocketConnector.formatTemplate(TickClock.field_e, -46, new String[]{Integer.toString(var60.i(-128))});
+                        var15 = SocketConnector.formatTemplate(TickClock.field_e, -46, new String[]{Integer.toString(var60.getTotalModuleSlots(-128))});
                       }
                     }
                   } else {
                     if ((RegistrationRequestDialog.field_Ob & 1) != 0) {
-                      var17 = NodeDeque.a((byte) 77, var60.componentId);
+                      var17 = NodeDeque.indexOfUnlockItem((byte) 77, var60.componentId);
                       array$37 = new String[1];
-                      stackIn_702_0 = sl.field_j[9];
+                      stackIn_702_0 = ArchiveLoadStep.field_j[9];
                       stackIn_702_1 = -107;
                       stackIn_702_2 = array$37;
                       stackIn_702_3 = array$37;
@@ -1552,17 +1552,17 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                       stackIn_702_3[stackIn_702_4] = Integer.toString(stackIn_703_5);
                       var15 = SocketConnector.formatTemplate(stackIn_702_0, stackIn_702_1, stackIn_702_2);
                     } else {
-                      var15 = sl.field_j[1];
+                      var15 = ArchiveLoadStep.field_j[1];
                     }
                   }
                 } else {
-                  var15 = SocketConnector.formatTemplate(sl.field_j[8], -40, new String[]{Integer.toString(HighscoreSubmission.field_B[var60.componentId])});
+                  var15 = SocketConnector.formatTemplate(ArchiveLoadStep.field_j[8], -40, new String[]{Integer.toString(HighscoreSubmission.field_B[var60.componentId])});
                 }
               }
               if (var14 != 6 &&
                 0 <= SocketJs5Transport.field_y.field_S.indexOf("<img=2>") &&
                 SocketJs5Transport.field_y.field_S.indexOf("<img=3>") >= 0) {
-                var15 = sl.field_j[11];
+                var15 = ArchiveLoadStep.field_j[11];
                 var14 = 2;
               }
             }
@@ -1583,9 +1583,9 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               BoundedUrlRequest.field_d.drawLeft((String) (var15), 4 + var17, 10 + var18, 16777215, -1);
             }
           }
-          if (dc.field_g >= 0 &&
-            dc.field_g != 15) {
-            pa.field_d[dc.field_g].drawStep(-40);
+          if (TableColumns.field_g >= 0 &&
+            TableColumns.field_g != 15) {
+            TutorialStepTable.field_d[TableColumns.field_g].drawStep(-40);
             return;
           }
           return;
@@ -1596,7 +1596,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static byte[] a(byte param0, byte[] param1) {
+    final static byte[] copyBytes(byte param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -1630,7 +1630,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static SceneWidget a(boolean param0, int param1, int[] param2) {
+    final static SceneWidget createDesignSlotWidget(boolean param0, int param1, int[] param2) {
         SceneWidget stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
@@ -1711,7 +1711,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var27 = var36;
           var11 = var27;
           ArraySupport.copy(param2, param2.length - 8, var36, 0, 8);
-          var9.field_S = DelayedServerPacket.a(var37, var36, 2);
+          var9.field_S = DelayedServerPacket.computeDesignCode(var37, var36, 2);
           var9.field_nb = 1021128;
           var9.setBounds(0, 2, -4 + var5 - 15, -2 + var6, -var6 + var3_int);
           var9.field_Ib = 10;
@@ -1758,7 +1758,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 }
               }
             }
-            Checkbox.field_bb.b((byte) 125);
+            Checkbox.field_bb.bindRaster((byte) 125);
             var32 = new SceneWidget((long)var4, (SceneWidget) null);
             var32.field_Pb = var30;
             var32.setBounds(0, 20, var30.field_B, var6, var30.field_z);
@@ -1872,12 +1872,12 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         field_lb = null;
     }
 
-    final static int a(boolean param0, long param1) {
+    final static int bitCount(boolean param0, long param1) {
         param1 = (6148914691236517205L & param1 >>> 1) + (param1 & 6148914691236517205L);
         param1 = (3689348814741910323L & param1 >>> 2) + (3689348814741910323L & param1);
         if (param0) {
           byte[] var4 = (byte[]) null;
-          ValidationHelpWidget.a((byte) 37, (byte[]) null);
+          ValidationHelpWidget.copyBytes((byte) 37, (byte[]) null);
         }
         param1 = 1085102592571150095L & param1 + (param1 >>> 4);
         param1 = param1 + (param1 >>> 8);
@@ -1888,7 +1888,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
 
     final void drawLayer(int param0, byte param1, int param2, int param3) {
         String var5;
-        vd var6;
+        TransitionTimerHelpers var6;
         WidgetTextLayout var8;
         int var9;
         int var10;
@@ -1898,7 +1898,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         RgbSprite var14;
         RgbSprite var15;
         RgbSprite var16;
-        vd var6Lifetime1;
+        TransitionTimerHelpers var6Lifetime1;
         regionExit1: {
           regionExit2: {
             var13 = SteelSentinels.obfuscationControl;
@@ -1934,24 +1934,24 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         if (Bzip2State.field_J != var6Lifetime1 &&
           var6Lifetime1 != TextHotspotWidget.field_Y) {
           if (ArchiveProvider.field_d == var6Lifetime1) {
-            var15 = t.field_i[2];
+            var15 = NameTable.field_i[2];
             var15.drawAdditive(var9, var10 - (var15.field_F >> 1), 256);
-          } else if (vf.field_b == var6Lifetime1) {
-            var16 = t.field_i[1];
+          } else if (RequestResendHelpers.field_b == var6Lifetime1) {
+            var16 = NameTable.field_i[1];
             var16.drawAdditive(var9, -(var16.field_F >> 1) + var10, 256);
           }
         } else {
-          var14 = t.field_i[0];
+          var14 = NameTable.field_i[0];
           var11 = var14.field_z << 1;
           var12 = var14.field_B << 1;
           if (null != this.field_pb &&
             var11 <= this.field_pb.field_A &&
             var12 <= this.field_pb.field_F) {
-            IterableNodeHashTable.a(this.field_pb, (byte) -88);
+            IterableNodeHashTable.bindSpriteRaster(this.field_pb, (byte) -88);
             SoftwareRaster.clear();
           } else {
             this.field_pb = new RgbSprite(var11, var12);
-            IterableNodeHashTable.a(this.field_pb, (byte) -111);
+            IterableNodeHashTable.bindSpriteRaster(this.field_pb, (byte) -111);
           }
           var14.drawRotatedAboutPivot(112, 144, var14.field_z << 4, var14.field_B << 4, -this.field_jb << 10, 4096);
           MatchingTextValidator.popRasterStateWithIntGuard(111);

@@ -5,7 +5,7 @@ final class DualNodeDeque {
     private DualNode sentinel;
     static String field_b;
     static int[] field_c;
-    static hm field_a;
+    static LoadoutCostHelpers field_a;
     private DualNode traversalCursor;
     static MenuInputState field_f;
 
@@ -60,7 +60,7 @@ final class DualNodeDeque {
         this.traversalCursor = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void drawInsetBorder(int param0, int param1, int param2, int param3, byte param4) {
         int var7 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -117,7 +117,7 @@ final class DualNodeDeque {
         return null;
     }
 
-    final static void a(int param0, int param1, BitmapFont param2, int param3, int param4, byte param5, String param6, int param7) {
+    final static void drawLabeledFrame(int param0, int param1, BitmapFont param2, int param3, int param4, byte param5, String param6, int param7) {
         RgbSprite[] var8 = null;
         RuntimeException var8_ref = null;
         RuntimeException stackIn_8_0 = null;
@@ -128,7 +128,7 @@ final class DualNodeDeque {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = BirthDateEntryPanel.field_T;
-          jm.a(param1, param7, var8, 1, param3, param4);
+          PendingIntReplyRequest.drawNineSliceFrame(param1, param7, var8, 1, param3, param4);
           if (param6 != null) {
             param2.drawCentered(param6, param4 / 2 + param3, param2.field_U / 2 + param7 / 2 + param1, param0, -1);
           }
@@ -218,7 +218,7 @@ final class DualNodeDeque {
     static {
         field_b = "You have completed the training missions. Log in or create a free account to play multiplayer games or to begin the single player campaign.";
         field_c = new int[]{0, 1, 28, 5, 35, 4, 3, 22, 19};
-        field_a = new hm();
+        field_a = new LoadoutCostHelpers();
         field_f = new MenuInputState(1);
     }
 }

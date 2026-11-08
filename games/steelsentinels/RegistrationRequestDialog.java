@@ -5,7 +5,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     static NodeDeque field_Ub;
     private boolean field_Nb;
     private AccountRegistrationPanel field_Zb;
-    static uf field_Tb;
+    static SocialTabsPanel field_Tb;
     static String field_Pb;
     static volatile int field_Rb;
     static String field_Qb;
@@ -16,14 +16,14 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     static int field_Ob;
     static int[] field_Xb;
 
-    final static void n(int param0) {
+    final static void emptyGuardStub(int param0) {
         if (param0 != -6) {
           CharSequence var2 = (CharSequence) null;
-          RegistrationRequestDialog.a((CharSequence) null, -105);
+          RegistrationRequestDialog.isDecimalInteger((CharSequence) null, -105);
         }
     }
 
-    final static PlayingSound a(int param0, int param1, int param2, PcmSample param3) {
+    final static PlayingSound playSampleAtVolume(int param0, int param1, int param2, PcmSample param3) {
         RuntimeException var4 = null;
         PlayingSound stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -34,7 +34,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           if (param2 != 248) {
             field_Wb = (String) null;
           }
-          stackIn_3_0 = EmailCredentials.a(PcmSampleStream.createAtRatePercentQ6(param3, 100, param0, param1), -48);
+          stackIn_3_0 = EmailCredentials.playStream(PcmSampleStream.createAtRatePercentQ6(param3, 100, param0, param1), -48);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               var4 = param2.field_e;
               if (248 == param2.field_a) {
                 if (!param1) {
-                  ud.a(true);
+                  RankingQuery.setTuhstatbutCookie(true);
                 }
                 var4 = ClientUiHelpers.field_g;
                 this.field_Sb = true;
@@ -98,7 +98,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           if (param0 != 5) {
             field_Yb = (LoginConnectionStage) null;
           }
-          var5 = new AccountMessagePanel((AccountRequestDialog) (this), gf.field_d, var4);
+          var5 = new AccountMessagePanel((AccountRequestDialog) (this), GeneratedSpriteHelpers.field_d, var4);
           if (param2.field_d) {
             if (param2.field_f) {
               this.transitionToContent(new AccountTermsPanel(this), -22908735);
@@ -108,8 +108,8 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           } else {
             if (!this.field_Sb) {
               if (param2.field_a == 5) {
-                var5.addActionButton(11, cl.field_c, param0 ^ 110);
-                var5.addActionButton(17, qe.field_b, 74);
+                var5.addActionButton(11, LoginResultHelpers.field_c, param0 ^ 110);
+                var5.addActionButton(17, TextSpriteHelpers.field_b, 74);
               } else {
                 var5.addActionButton(-1, StrongCacheEntry.field_J, 75);
               }
@@ -121,7 +121,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
                 this.transitionToContent(var5, -22908735);
                 return;
               }
-              var5.addActionButton(9, rn.field_s, 74);
+              var5.addActionButton(9, PendingAckRequest.field_s, 74);
             } else {
               var5.addActionButton(7, ProxyAuthenticationException.field_d, 76);
             }
@@ -142,7 +142,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void layoutLobbyPanels(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -161,8 +161,8 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           ProxyAuthenticationException.field_g.setBounds(0, 3, -6 + DisplayNameForm.field_V.field_Lb, 3, -6 + var6_int);
           var7 = -5 + ProxyAuthenticationException.field_g.field_Lb;
           CombatWorld.field_H.setBounds(0, var7 - param1, param1, 5, param3 + 485 + 2 + param4);
-          vd.field_d.setBounds(0, 0, param1, param3, -DualNodeDequeIterator.field_e.field_zb + (-param3 + CombatWorld.field_H.field_zb));
-          DualNodeDequeIterator.field_e.setBounds(0, 0, param1, vd.field_d.field_zb + param3, DualNodeDequeIterator.field_e.field_zb);
+          TransitionTimerHelpers.field_d.setBounds(0, 0, param1, param3, -DualNodeDequeIterator.field_e.field_zb + (-param3 + CombatWorld.field_H.field_zb));
+          DualNodeDequeIterator.field_e.setBounds(0, 0, param1, TransitionTimerHelpers.field_d.field_zb + param3, DualNodeDequeIterator.field_e.field_zb);
           var7 = var7 - (2 + param1);
           BoundedRandomAccessFile.field_j.setBoundsAndLayout(param4 + param3 + 485 + 2, -2048, param4, var7 - 5, 2, 5, 5);
           if (AssetDecoders.field_b != null) {
@@ -175,16 +175,16 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           for (var12 = 0; var12 < 6; var12++) {
             if (5 <= var12 ||
               SocialListEntry.field_Yb[var12] != null) {
-              var13 = 3 + var11 * (2 + (-6 + DisplayNameForm.field_V.field_Lb)) / (1 + c.field_u);
+              var13 = 3 + var11 * (2 + (-6 + DisplayNameForm.field_V.field_Lb)) / (1 + PendingByteArrayRequest.field_u);
               var11++;
-              var7Lifetime1 = var11 * (-4 + DisplayNameForm.field_V.field_Lb) / (1 + c.field_u) + 1 - var13;
+              var7Lifetime1 = var11 * (-4 + DisplayNameForm.field_V.field_Lb) / (1 + PendingByteArrayRequest.field_u) + 1 - var13;
               if (var12 < 5) {
                 SocialListEntry.field_Yb[var12].setBounds(0, var13, var7Lifetime1, var6_int, var8);
                 LoadingScreenHelpers.field_b[var12].setBounds(0, 0, var7Lifetime1, param3, -param3 + var9);
                 IntKeyLookup.field_a[var12].setBounds(0, param5, var7Lifetime1 - param5 - param5, var9, param2);
                 ByteStorage.field_f[var12].setBounds(0, param5, -param5 + (var7Lifetime1 - param5), var10, -var10 + (-param3 + var8));
               } else {
-                fm.field_b.setBounds(param0 - 10, var13, var7Lifetime1, var6_int, var8);
+                QuickChatParameterType.field_b.setBounds(param0 - 10, var13, var7Lifetime1, var6_int, var8);
               }
             }
           }
@@ -200,33 +200,33 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         AccountRequestResult var2 = null;
         if (this.field_Q &&
           !this.field_Nb) {
-          var2 = TickClock.b((byte) 73);
+          var2 = TickClock.takeRegistrationResult((byte) 73);
           if (var2 != null) {
             this.handleRegistrationResult(5, false, var2);
           }
         }
         if (param0 != -8350) {
-          RegistrationRequestDialog.p((byte) -108);
+          RegistrationRequestDialog.isAccountOverlayOpen((byte) -108);
         }
         return super.updateAnimationsAndCheckClosed(param0 + 0);
     }
 
-    final static PendingIntArrayRequest a(int param0, int param1) {
+    final static PendingIntArrayRequest queueOutgoingRequest(int param0, int param1) {
         PendingIntArrayRequest var2 = new PendingIntArrayRequest();
         if (param1 != 19999) {
-          RegistrationRequestDialog.a(125, 90);
+          RegistrationRequestDialog.queueOutgoingRequest(125, 90);
         }
         MidiPcmStream.field_D.addLast(3, var2);
         SocialListUiHelpers.sendTwoByteRequest(param0, -17274);
         return var2;
     }
 
-    final static boolean p(byte param0) {
+    final static boolean isAccountOverlayOpen(byte param0) {
         int var1 = 77 / ((param0 - 28) / 44);
-        return null != tj.field_f ? true : false;
+        return null != HighscoreSubmissionFactory.field_f ? true : false;
     }
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean isDecimalInteger(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -235,7 +235,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -21) {
-            field_Tb = (uf) null;
+            field_Tb = (SocialTabsPanel) null;
           }
           stackIn_3_0 = TextAndBitHelpers.isIntegerInRadix(true, 10, false, param0);
           return stackIn_3_0;
@@ -259,7 +259,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           return;
         }
         try {
-          lc.a(0);
+          SettingSearchHelpers.beginStoredLogin(0);
           this.closeDialog(112);
           int var6_int = -27 / ((param1 + 85) / 36);
         } catch (RuntimeException runtimeException) {
@@ -268,7 +268,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     }
 
     RegistrationRequestDialog(ModalStack param0, AccountRegistrationPanel param1) {
-        super(param0, gf.field_d, LobbyGame.field_Jc, false, false);
+        super(param0, GeneratedSpriteHelpers.field_d, LobbyGame.field_Jc, false, false);
         try {
           this.field_Zb = param1;
         } catch (RuntimeException runtimeException) {
@@ -277,7 +277,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     }
 
     final void showIneligibleResult(int param0) {
-        this.handleRegistrationResult(5, true, CachedArchiveProvider.a(123, ClientUiHelpers.field_g, 248));
+        this.handleRegistrationResult(5, true, CachedArchiveProvider.createAccountResponse(123, ClientUiHelpers.field_g, 248));
         if (param0 < 77) {
           field_Yb = (LoginConnectionStage) null;
         }

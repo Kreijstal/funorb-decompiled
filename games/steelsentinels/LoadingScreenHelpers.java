@@ -27,7 +27,7 @@ final class LoadingScreenHelpers {
         try {
           DraggableWidget.field_U = param3;
           IconTextComponent.field_Xb = param4;
-          tf.field_c = param5;
+          ChatHistoryHelpers.field_c = param5;
           IconLabelControl.field_ac = param2;
           PopupMenuHelpers.field_b = param1;
           if (param0 > -46) {
@@ -49,7 +49,7 @@ final class LoadingScreenHelpers {
             LoadingScreenHelpers.dismissLoadingUi(-66);
           }
           SoftwareRaster.clear();
-          wn.a(0, true);
+          ChatPanelSetupHelpers.drawModalStack(0, true);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "en.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -57,8 +57,8 @@ final class LoadingScreenHelpers {
 
     final static void drawLoadingScreen(java.awt.Canvas param0, int param1) {
         try {
-          if (uj.field_d == 11) {
-            sl.a((byte) 3);
+          if (ReflectionCheckHelpers.field_d == 11) {
+            ArchiveLoadStep.noOperation((byte) 3);
           }
           if (param1 != -28003) {
             SpriteFrame var3 = (SpriteFrame) null;
@@ -73,14 +73,14 @@ final class LoadingScreenHelpers {
 
     final static void dismissLoadingUi(int param0) {
         int var1 = -81 % ((0 - param0) / 52);
-        SpriteCheckboxPainter.a(10);
+        SpriteCheckboxPainter.settleLoadingUi(10);
     }
 
     final static LobbyGame findLobbyGame(int param0, int param1) {
         if (param1 != 28858) {
           return (LobbyGame) null;
         }
-        return fm.field_a != null ? (LobbyGame) (fm.field_a.get((long)param0, (byte) 98)) : null;
+        return QuickChatParameterType.field_a != null ? (LobbyGame) (QuickChatParameterType.field_a.get((long)param0, (byte) 98)) : null;
     }
 
     static {

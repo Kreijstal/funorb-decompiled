@@ -80,14 +80,14 @@ final class LoginActionHelpers {
           if (param2 != 50) {
             LoginActionHelpers.pollLoginScreenAction(28, true, (byte) -92, -82);
           }
-          TextHotspotWidget.a(false, (byte) -65, param0, param1);
+          TextHotspotWidget.startLoginWithCredentials(false, (byte) -65, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "hh.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        AccountRequestDialog.a((byte) 24, 50);
+        AccountRequestDialog.setAnimationSpeed((byte) 24, 50);
         field_b = 0;
         field_h = "This entry doesn't match";
         field_e = "Encouraging rule breaking";

@@ -11,8 +11,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static TriangleMesh[] field_h;
     static RgbSprite[] field_a;
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
-        ChatPanelHelpers.drawChatPanel(param2, SocketConnector.field_b, param1, param3, 127, TextLayout.field_g, te.field_b);
+    final static void drawChatInputPrompt(int param0, boolean param1, int param2, int param3) {
+        ChatPanelHelpers.drawChatPanel(param2, SocketConnector.field_b, param1, param3, 127, TextLayout.field_g, FriendListHelpers.field_b);
         if (param0 != -1604006872) {
           field_g = (BitmapFont) null;
         }
@@ -21,7 +21,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final void a(SystemTaskService param0, int param1) {
+    final void closeFrame(SystemTaskService param0, int param1) {
         try {
           ChecksumAndFrameHelpers.exitFullscreenFrame(-1, param0, this.field_d);
           int var3_int = 121 / ((param1 + 15) / 60);
@@ -30,7 +30,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static void a(String[] args, int param1, String param2, byte param3) {
+    final static void handleRegistrationResult(String[] args, int param1, String param2, byte param3) {
         int var5 = 0;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -44,14 +44,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           DiskCacheWorker.field_j = BoundedRandomAccessFile.field_p;
           if (param1 == 255) {
-            stackIn_9_0 = !(13 <= wi.field_y);
-            qf.field_d = fn.a(stackIn_9_0, (byte) 69);
+            stackIn_9_0 = !(13 <= SpriteState.field_y);
+            RankingAndRasterHelpers.field_d = MusicAndEmailHelpers.createFlagResult(stackIn_9_0, (byte) 69);
           } else {
             if (param1 >= 100 &&
               param1 <= 105) {
-              qf.field_d = SoundAndUrlHelpers.createSuggestionResult((byte) -76, args);
+              RankingAndRasterHelpers.field_d = SoundAndUrlHelpers.createSuggestionResult((byte) -76, args);
             } else {
-              qf.field_d = CachedArchiveProvider.a(18, param2, param1);
+              RankingAndRasterHelpers.field_d = CachedArchiveProvider.createAccountResponse(18, param2, param1);
             }
           }
           if (param3 >= -101) {
@@ -78,15 +78,15 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static void a(boolean param0) {
+    final static void animateOverlayPosition(boolean param0) {
         int var1 = AudioService.field_h * AudioService.field_h;
         if (param0) {
           return;
         }
         int var2 = var1 - StatefulTextPainter.field_p * StatefulTextPainter.field_p;
-        int var3 = var2 * (jn.field_c - LoginDialogHelpers.field_b) / var1 + LoginDialogHelpers.field_b;
+        int var3 = var2 * (MusicTrackHelpers.field_c - LoginDialogHelpers.field_b) / var1 + LoginDialogHelpers.field_b;
         DisplayNameForm.field_V.setBounds(0, var3, 120, LoginCredentials.field_e, 640);
-        EmailAvailabilityValidator.a(TextLayout.field_g, 0, LoginDialogHelpers.field_e, 5, jn.field_c - 24, 640, 110);
+        EmailAvailabilityValidator.layoutQuickChatMenu(TextLayout.field_g, 0, LoginDialogHelpers.field_e, 5, MusicTrackHelpers.field_c - 24, 640, 110);
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {
@@ -118,14 +118,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isTextChoiceDialogOpen(byte param0) {
         if (param0 != 42) {
           return false;
         }
         return LoginMethod.field_d;
     }
 
-    final static int a(int[] param0, byte param1) {
+    final static int computeDesignPoints(int[] param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -192,7 +192,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, RgbSprite param4, int param5) {
+    final static void drawHorizontalFadeSprite(int param0, int param1, int param2, int param3, RgbSprite param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -227,7 +227,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var9 = 0;
           var10 = param4.field_F;
           if (param5 != -1) {
-            FullscreenFocusCanvas.a(-123, false, 41, 13);
+            FullscreenFocusCanvas.drawChatInputPrompt(-123, false, 41, 13);
           }
           var11 = param4.field_A;
           var12 = -var11 + SoftwareRaster.field_c;

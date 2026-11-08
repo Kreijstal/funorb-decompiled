@@ -46,9 +46,9 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    final static void n(int param0) {
+    final static void showLoginFormForRequest(int param0) {
         String var2 = (String) null;
-        WeightedLruCache.a(kf.field_o, (String) null, -80);
+        WeightedLruCache.openLoginForm(HighscoreTable.field_o, (String) null, -80);
         if (param0 != 0) {
           EditableTextWidget.releaseStatics(true);
         }
@@ -229,8 +229,8 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    final static void c(boolean param0) {
-        AgeValidator.a(0, IntKeyLookup.field_h, AudioService.field_a, bd.field_f, ClientException.field_g);
+    final static void openDefaultAccountOverlay(boolean param0) {
+        AgeValidator.buildAccountOverlay(0, IntKeyLookup.field_h, AudioService.field_a, SolidSpriteHelpers.field_f, ClientException.field_g);
         if (!param0) {
           field_kb = (RgbSprite) null;
         }

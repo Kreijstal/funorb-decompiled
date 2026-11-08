@@ -43,7 +43,7 @@ final class NodeHashTable {
         }
     }
 
-    final static void a(int param0) {
+    final static void releaseDecodeArrays(int param0) {
         MusicPatch.field_r = null;
         UiContainer.field_L = (byte[][]) null;
         PacketLoopHelpers.field_a = null;
@@ -140,7 +140,7 @@ final class NodeHashTable {
         return var3Lifetime1 + (value + (value >>> 31)) % divisor;
     }
 
-    final static void a(int param0, RgbSprite[] param1) {
+    final static void setSlideshowSprites(int param0, RgbSprite[] param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -195,7 +195,7 @@ final class NodeHashTable {
         return (IntrusiveNode) null;
     }
 
-    final static IndexedSprite a(IndexedSprite param0, int[] param1, boolean param2) {
+    final static IndexedSprite createRepalettedSprite(IndexedSprite param0, int[] param1, boolean param2) {
         IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
         IndexedSprite stackIn_3_0 = null;

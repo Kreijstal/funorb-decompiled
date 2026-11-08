@@ -11,24 +11,24 @@ abstract class MouseWheelInput {
     static String[] field_g;
     static String field_b;
 
-    final static boolean a(int param0) {
+    final static boolean alwaysTrue(int param0) {
         if (param0 != 105) {
           return false;
         }
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawFramedBox(int param0, int param1, int param2, int param3, int param4) {
         RgbSprite[] var5 = null;
         RgbSprite[] var5Lifetime1;
         if (param3 >= 6) {
           var5 = AgeValidator.field_s;
-          jm.a(param0, param2, var5, 1, param1, param4);
+          PendingIntReplyRequest.drawNineSliceFrame(param0, param2, var5, 1, param1, param4);
           return;
         }
-        MouseWheelInput.a(false);
+        MouseWheelInput.isQuickChatHelpOpen(false);
         var5Lifetime1 = AgeValidator.field_s;
-        jm.a(param0, param2, var5Lifetime1, 1, param1, param4);
+        PendingIntReplyRequest.drawNineSliceFrame(param0, param2, var5Lifetime1, 1, param1, param4);
     }
 
     public static void releaseStatics(int param0) {
@@ -47,7 +47,7 @@ abstract class MouseWheelInput {
         field_f = null;
     }
 
-    final static void a(byte param0, long param1) {
+    final static void sleepMillis(byte param0, long param1) {
         if (0L >= param1) {
           return;
         }
@@ -67,9 +67,9 @@ abstract class MouseWheelInput {
         }
     }
 
-    abstract void b(java.awt.Component param0, boolean param1);
+    abstract void detach(java.awt.Component param0, boolean param1);
 
-    final static void a(String param0, byte param1, int param2, String[] param3) {
+    final static void handleUsernameResponse(String param0, byte param1, int param2, String[] param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String[] var5 = null;
@@ -85,24 +85,24 @@ abstract class MouseWheelInput {
         var6 = SteelSentinels.obfuscationControl;
         try {
           var4_int = -56 % ((param1 - 65) / 35);
-          jn.field_b = BoundedRandomAccessFile.field_p;
+          MusicTrackHelpers.field_b = BoundedRandomAccessFile.field_p;
           if (255 == param2) {
-            stackIn_10_0 = !(wi.field_y >= 13);
-            TextHotspotRegion.field_x = fn.a(stackIn_10_0, (byte) 69);
+            stackIn_10_0 = !(SpriteState.field_y >= 13);
+            TextHotspotRegion.field_x = MusicAndEmailHelpers.createFlagResult(stackIn_10_0, (byte) 69);
             var7 = (String[]) null;
-            LoadingProgressDialog.a((byte) -54, (String[]) null);
+            LoadingProgressDialog.setNameSuggestions((byte) -54, (String[]) null);
             return;
           }
           if (100 > param2) {
-            TextHotspotRegion.field_x = CachedArchiveProvider.a(79, param0, param2);
+            TextHotspotRegion.field_x = CachedArchiveProvider.createAccountResponse(79, param0, param2);
             return;
           }
           if (105 < param2) {
-            TextHotspotRegion.field_x = CachedArchiveProvider.a(79, param0, param2);
+            TextHotspotRegion.field_x = CachedArchiveProvider.createAccountResponse(79, param0, param2);
             return;
           }
           var5 = param3;
-          LoadingProgressDialog.a((byte) -101, var5);
+          LoadingProgressDialog.setNameSuggestions((byte) -101, var5);
           TextHotspotRegion.field_x = SoundAndUrlHelpers.createSuggestionResult((byte) -76, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,16 +125,16 @@ abstract class MouseWheelInput {
         }
     }
 
-    abstract int b(int param0);
+    abstract int pollRotation(int param0);
 
     abstract void attach(java.awt.Component param0, boolean param1);
 
-    final static boolean a(boolean param0) {
+    final static boolean isQuickChatHelpOpen(boolean param0) {
         boolean stackIn_7_0 = false;
         if (param0) {
           return false;
         }
-        if (qf.field_e != null) {
+        if (RankingAndRasterHelpers.field_e != null) {
           stackIn_7_0 = true;
         } else {
           if (GzipDecoder.field_e) {

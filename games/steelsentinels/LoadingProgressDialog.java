@@ -12,7 +12,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
     private StripedProgressBar field_mb;
     static String field_ob;
 
-    final static int[] b(int param0, byte param1) {
+    final static int[] distinctPresetTail(int param0, byte param1) {
         int var5_int = 0;
         int incrementValue$0 = 0;
         int[] var2;
@@ -30,7 +30,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         int var6Lifetime1;
         int var4Lifetime1;
         var7 = SteelSentinels.obfuscationControl;
-        var12 = DialWidget.a(param0, (byte) 125);
+        var12 = DialWidget.getComponentPreset(param0, (byte) 125);
         var10 = var12;
         var8 = var10;
         var2 = var8;
@@ -82,9 +82,9 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         this.field_lb = true;
     }
 
-    final static long l(int param0) {
+    final static long millisSinceLastPacketRead(int param0) {
         if (param0 != 150) {
-          LoadingProgressDialog.b(-91, (byte) -45);
+          LoadingProgressDialog.distinctPresetTail(-91, (byte) -45);
         }
         return -QuickChatPhraseCache.field_b + ClockAndCookieHelpers.monotonicMillis(115);
     }
@@ -124,7 +124,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         try {
           this.field_jb = param1;
           if (this.field_jb != null) {
-            var3_int = gf.field_d.paragraphHeight(this.field_jb, 260, gf.field_d.field_G);
+            var3_int = GeneratedSpriteHelpers.field_d.paragraphHeight(this.field_jb, 260, GeneratedSpriteHelpers.field_d.field_G);
             this.resizeAndCenter((byte) 67, 300, 150 + var3_int);
           }
           this.field_mb = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -137,7 +137,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         }
     }
 
-    final static void a(byte param0, String[] param1) {
+    final static void setNameSuggestions(byte param0, String[] param1) {
         try {
           if (null != TextLayout.field_b) {
             TextLayout.field_b.field_S.setSuggestions(true, param1);
@@ -153,10 +153,10 @@ final class LoadingProgressDialog extends ResizableModalPanel {
 
     final void drawPanelBackground(int param0, int param1, boolean param2) {
         super.drawPanelBackground(param0, param1, param2);
-        gf.field_d.drawCentered(this.field_qb, param0 + (this.field_x >> 1), 103 + param1, 16777215, -1);
+        GeneratedSpriteHelpers.field_d.drawCentered(this.field_qb, param0 + (this.field_x >> 1), 103 + param1, 16777215, -1);
         if (null != this.field_jb) {
           SoftwareRaster.drawHorizontalLine(20 + param0, -7 + param1 + 120, 260, 8421504);
-          gf.field_d.drawParagraph(this.field_jb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, gf.field_d.field_G);
+          GeneratedSpriteHelpers.field_d.drawParagraph(this.field_jb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, GeneratedSpriteHelpers.field_d.field_G);
         }
     }
 

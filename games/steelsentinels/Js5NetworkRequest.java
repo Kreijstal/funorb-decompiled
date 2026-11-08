@@ -13,7 +13,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
     static SceneWidget field_N;
     PacketBuffer field_G;
 
-    final static void a(String param0, boolean param1, LobbyGame param2, int param3) {
+    final static void openLobbyGameContextMenu(String param0, boolean param1, LobbyGame param2, int param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -31,11 +31,11 @@ final class Js5NetworkRequest extends ArchiveRequest {
         String var12 = null;
         PlayerContextMenu var13 = null;
         try {
-          TextAndMenuHelpers.openPlayerContextMenu(param2, param2.getGameId(-13), -1, (int[]) null, (String) null, (String) null, 1073741824, 0L, rn.field_y);
+          TextAndMenuHelpers.openPlayerContextMenu(param2, param2.getGameId(-13), -1, (int[]) null, (String) null, (String) null, 1073741824, 0L, PendingAckRequest.field_y);
           if (param2.field_rc && (param2.field_sc == 2 ||
             !(NodeDeque.field_d < 2))) {
             var7 = AudioService.field_i;
-            var8 = SocketConnector.formatTemplate(sl.field_o, -71, new String[]{param0});
+            var8 = SocketConnector.formatTemplate(ArchiveLoadStep.field_o, -71, new String[]{param0});
             var7.field_j.addItem(2, 10, var8);
           }
           AudioService.field_i.addLobbyGameActions((byte) 64);
@@ -78,7 +78,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 10) {
           field_J = null;
           field_N = null;
@@ -91,7 +91,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
         field_L = null;
     }
 
-    final byte[] d(byte param0) {
+    final byte[] getData(byte param0) {
         if (this.field_z) {
           throw new RuntimeException();
         }
@@ -105,7 +105,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
         return this.field_G.payload;
     }
 
-    final static String a(int param0, int param1) {
+    final static String formatMinutesSeconds(int param0, int param1) {
         int var2 = 0;
         if (param0 == -1) {
           var2 = param1 / 60;
@@ -118,10 +118,10 @@ final class Js5NetworkRequest extends ArchiveRequest {
     Js5NetworkRequest() {
     }
 
-    final int g(int param0) {
+    final int getProgress(int param0) {
         if (param0 != 16) {
           LobbyGame var3 = (LobbyGame) null;
-          Js5NetworkRequest.a((String) null, false, (LobbyGame) null, 114);
+          Js5NetworkRequest.openLobbyGameContextMenu((String) null, false, (LobbyGame) null, 114);
           if (this.field_G != null) {
             return this.field_G.position * 100 / (-this.field_K + this.field_G.payload.length);
           }
@@ -133,21 +133,21 @@ final class Js5NetworkRequest extends ArchiveRequest {
         return 0;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawDimmedOverlay(byte param0, boolean param1) {
         if (param0 >= -54) {
-          Js5NetworkRequest.$cfr$intArgs$a$7ffe4b125357(43, true);
-          ArchiveProvider.a(true, (byte) 67, param1);
+          Js5NetworkRequest.drawDimmedOverlay(43, true);
+          ArchiveProvider.clearOrDimScreen(true, (byte) 67, param1);
           return;
         }
-        ArchiveProvider.a(true, (byte) 67, param1);
+        ArchiveProvider.clearOrDimScreen(true, (byte) 67, param1);
     }
 
-    final static void a(RgbSprite param0, byte param1) {
+    final static void setHeaderIconSprite(RgbSprite param0, byte param1) {
         try {
-          qi.field_i = param0;
+          LoginCredentialHelpers.field_i = param0;
           if (param1 != 69) {
             RgbSprite var3 = (RgbSprite) null;
-            Js5NetworkRequest.a((RgbSprite) null, (byte) -94);
+            Js5NetworkRequest.setHeaderIconSprite((RgbSprite) null, (byte) -94);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -160,12 +160,12 @@ final class Js5NetworkRequest extends ArchiveRequest {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
+    final static void drawDimmedOverlay(int param0, boolean param1) {
         if (param0 >= -54) {
-          Js5NetworkRequest.$cfr$intArgs$a$7ffe4b125357(43, true);
-          ArchiveProvider.a(true, (byte) 67, param1);
+          Js5NetworkRequest.drawDimmedOverlay(43, true);
+          ArchiveProvider.clearOrDimScreen(true, (byte) 67, param1);
           return;
         }
-        ArchiveProvider.a(true, (byte) 67, param1);
+        ArchiveProvider.clearOrDimScreen(true, (byte) 67, param1);
     }
 }

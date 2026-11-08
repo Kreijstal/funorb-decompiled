@@ -46,7 +46,7 @@ final class FallingPickup extends DualNode {
         int var6Lifetime1;
         var7 = SteelSentinels.obfuscationControl;
         try {
-          var2 = DialWidget.a(param0, (byte) 124);
+          var2 = DialWidget.getComponentPreset(param0, (byte) 124);
           if (null != var2 &&
             var2.length != 0) {
             var3 = new int[-9 + var2.length];
@@ -58,7 +58,7 @@ final class FallingPickup extends DualNode {
               stackIn_9_1 = var5_int;
               if (stackIn_9_0 > stackIn_9_1) {
                 stackIn_28_0 = 0;
-                stackIn_28_1 = MarkerSliderPainter.a((byte) -60, var3[var5_int]);
+                stackIn_28_1 = MarkerSliderPainter.componentIdForHotkey((byte) -60, var3[var5_int]);
                 if (var7 == 0) {
                   if (stackIn_28_0 <= stackIn_28_1) {
                     var3[var5_int] = -1;
@@ -132,7 +132,7 @@ final class FallingPickup extends DualNode {
           this.field_T = param0;
           if (!this.field_Q &&
             this.field_T.activeModuleType != -1) {
-            Bzip2State.a(true, this.field_T);
+            Bzip2State.consumeModuleCost(true, this.field_T);
           }
           if (43 != this.field_O) {
             this.field_T.field_tb = this.field_T.field_tb + 1;
@@ -403,7 +403,7 @@ final class FallingPickup extends DualNode {
             (decompiledFrameRemainder13) &&
             (decompiledFrameRemainder12) &&
             (decompiledFrameRemainder11)) {
-            param0.maximumCharge = param0.maximumCharge + GradientOutlineTextPainter.a(111, this.field_O);
+            param0.maximumCharge = param0.maximumCharge + GradientOutlineTextPainter.offsetInFiveToNineRange(111, this.field_O);
             param0.refillCharge(5);
             decompiledFrameRemainder18 = (var4 != 0);
           }
@@ -433,7 +433,7 @@ final class FallingPickup extends DualNode {
             (decompiledFrameRemainder14)) {
             var3_intLifetime2 = param0.charge;
             param0.charge = 10;
-            param0.b((byte) -31, (SentinelCommand) null);
+            param0.dischargeShockwave((byte) -31, (SentinelCommand) null);
             param0.charge = var3_intLifetime2;
             decompiledFrameRemainder18 = (var4 != 0);
           }
@@ -454,7 +454,7 @@ final class FallingPickup extends DualNode {
           }
           if ((decompiledFrameRemainder18) &&
             (decompiledFrameRemainder17)) {
-            param0.a((byte) -65);
+            param0.callAirstrike((byte) -65);
             decompiledFrameRemainder18 = (var4 != 0);
           }
           if (decompiledFrameRemainder18) {
@@ -463,7 +463,7 @@ final class FallingPickup extends DualNode {
             this.field_B.field_f = this.field_B.field_f + 10;
           }
           var3_intLifetime1 = 13 / ((param1 - 5) / 63);
-          if (param0.playerId == ed.field_j) {
+          if (param0.playerId == SessionSeedHelpers.field_j) {
             GrowableIntList.field_h = this.field_O;
             AccountChoicePanel.field_X = 0;
           }
@@ -588,7 +588,7 @@ final class FallingPickup extends DualNode {
               if (stackIn_72_0 >= stackIn_72_1) {
                 this.field_C = 0;
               }
-              this.field_P.field_E[this.field_C] = WeightedLruCache.a(this.field_O, (byte) -114).field_o[WeightedLruCache.a(this.field_O, (byte) -113).field_p[this.field_C]];
+              this.field_P.field_E[this.field_C] = WeightedLruCache.getIconSprite(this.field_O, (byte) -114).field_o[WeightedLruCache.getIconSprite(this.field_O, (byte) -113).field_p[this.field_C]];
               if (this.field_P.field_E[this.field_C] == 0) {
                 var6Lifetime2--;
               }
@@ -727,7 +727,7 @@ final class FallingPickup extends DualNode {
         RuntimeException var3 = null;
         var5 = SteelSentinels.obfuscationControl;
         try {
-          if (!SocketJs5Transport.a(param1, 4, param2)) {
+          if (!SocketJs5Transport.isValidDisplayName(param1, 4, param2)) {
             return false;
           }
           var3_int = 113 / ((5 - param0) / 50);
@@ -798,11 +798,11 @@ final class FallingPickup extends DualNode {
             return;
           }
           var11 = Math.min(256, this.field_K / 2);
-          if (null == sl.field_p) {
-            sl.field_p = new RgbSprite(var9, var8 + (var10 + 5));
+          if (null == ArchiveLoadStep.field_p) {
+            ArchiveLoadStep.field_p = new RgbSprite(var9, var8 + (var10 + 5));
           }
-          sl.field_p.bindRasterTarget();
-          SoftwareRaster.fillRectangle(0, 0, sl.field_p.field_z, sl.field_p.field_B, 0);
+          ArchiveLoadStep.field_p.bindRasterTarget();
+          SoftwareRaster.fillRectangle(0, 0, ArchiveLoadStep.field_p.field_z, ArchiveLoadStep.field_p.field_B, 0);
           var6 = var6 - (var10 - 5);
           var12 = this.field_K / 5 % 3;
           var5_int = var5_int - var9 / 2;
@@ -810,7 +810,7 @@ final class FallingPickup extends DualNode {
           if (this.field_Q) {
             var13 = 8921736;
           }
-          var14 = sl.field_p.field_B - var10;
+          var14 = ArchiveLoadStep.field_p.field_B - var10;
           if (!this.field_L ||
             !(Math.random() < 0.1)) {
             var15 = (var9 - var7) / 2 - (-(this.field_C % this.field_P.field_A / 2) - (this.field_P.field_D / 2 + (int)(2.0 * Math.sin((double)this.field_K * 0.2))));
@@ -839,18 +839,18 @@ final class FallingPickup extends DualNode {
             }
             SoftwareRaster.plotAdditive(stackIn_20_0, stackIn_20_1, stackIn_21_2);
           }
-          ml.field_c[var12].drawScaled(0, var14, var9, var10);
+          ListRequestHelpers.field_c[var12].drawScaled(0, var14, var9, var10);
           if (this.field_L) {
           }
           var6 = var6 - var10;
-          Checkbox.field_bb.b((byte) 123);
+          Checkbox.field_bb.bindRaster((byte) 123);
           if (var11 >= 256) {
-            sl.field_p.drawTransparent(var5_int, var6);
+            ArchiveLoadStep.field_p.drawTransparent(var5_int, var6);
             if (SteelSentinels.obfuscationControl == 0) {
               return;
             }
           }
-          sl.field_p.drawShadedGrayscale(var5_int, var6, var11);
+          ArchiveLoadStep.field_p.drawShadedGrayscale(var5_int, var6, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -890,7 +890,7 @@ final class FallingPickup extends DualNode {
           this.field_A = new Sentinel[var3_int];
           var4_int = 0;
           var5 = new NodeIterator(this.field_B.sentinels);
-          var6 = (Sentinel) (var5.b(2));
+          var6 = (Sentinel) (var5.first(2));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var6))) {
             stackIn_14_0 = -1;
@@ -940,7 +940,7 @@ final class FallingPickup extends DualNode {
             this.field_E = false;
           }
           if (!this.field_B.field_h) {
-            var4 = WeightedLruCache.a(this.field_O, (byte) -97);
+            var4 = WeightedLruCache.getIconSprite(this.field_O, (byte) -97);
             this.field_P = new RgbSprite(var4.field_a, var4.field_i);
             this.field_P.field_H = var4.field_n / 2;
             this.field_P.field_D = var4.field_j / 2;

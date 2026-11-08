@@ -37,28 +37,28 @@ abstract class FunOrbClient extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = SteelSentinels.obfuscationControl;
-          var4 = LoginActionHelpers.pollLoginScreenAction(SceneWidgetNode.field_D, param1, (byte) -66, jj.field_d);
+          var4 = LoginActionHelpers.pollLoginScreenAction(SceneWidgetNode.field_D, param1, (byte) -66, MeshMaterial.field_d);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = GameApplet.submitCredentialLogin(NameValidationHelpers.createLoginNameValue((byte) -89), CachedTextLayout.b(64), -121);
+            var5_int = GameApplet.submitCredentialLogin(NameValidationHelpers.createLoginNameValue((byte) -89), CachedTextLayout.createRememberedUsername(64), -121);
             if (var5_int != -1) {
-              MouseWheelInput.a(di.field_e, (byte) 118, var5_int, vh.field_d);
-              vh.field_d = null;
-              di.field_e = null;
+              MouseWheelInput.handleUsernameResponse(OptionMaskHelpers.field_e, (byte) 118, var5_int, KeyRoutingHelpers.field_d);
+              KeyRoutingHelpers.field_d = null;
+              OptionMaskHelpers.field_e = null;
             }
-            var11 = RasterSnapshot.a(true);
+            var11 = RasterSnapshot.takePendingLoginFlag(true);
             if (var11 != null) {
               TeamColourTinter.resolvePendingCheck((byte) 97, var11.booleanValue());
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = IconLabelControl.submitAccountCreation(TextHotspotWidget.a(false), 0, jj.a(true), this.field_q, PendingIntArrayRequest.getCurrentAccountName(91), TextHotspotRegion.e(37), DiskCacheRequest.h(82));
+            var5_intLifetime1 = IconLabelControl.submitAccountCreation(TextHotspotWidget.getPendingPassword(false), 0, MeshMaterial.getAccountStatusText(true), this.field_q, PendingIntArrayRequest.getCurrentAccountName(91), TextHotspotRegion.getNewsletterOptIn(37), DiskCacheRequest.getRegistrationAge(82));
             if (var5_intLifetime1 != -1) {
-              FullscreenFocusCanvas.a(vh.field_d, var5_intLifetime1, di.field_e, (byte) -128);
-              di.field_e = null;
-              vh.field_d = null;
+              FullscreenFocusCanvas.handleRegistrationResult(KeyRoutingHelpers.field_d, var5_intLifetime1, OptionMaskHelpers.field_e, (byte) -128);
+              OptionMaskHelpers.field_e = null;
+              KeyRoutingHelpers.field_d = null;
             }
           }
           if (3 == var4) {
@@ -68,57 +68,57 @@ abstract class FunOrbClient extends GameApplet {
               TextAndBitHelpers.resetTransferCounters(param2 ^ 7004);
             }
             if (!param0) {
-              var5_intLifetime2 = jj.a(-108, this.field_q, jj.a(true), this.field_A, false, TextHotspotWidget.a(false));
+              var5_intLifetime2 = MeshMaterial.performLogin(-108, this.field_q, MeshMaterial.getAccountStatusText(true), this.field_A, false, TextHotspotWidget.getPendingPassword(false));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  cl.a(di.field_e, var5_intLifetime2, 1);
-                  di.field_e = null;
+                  LoginResultHelpers.handleLoginResult(OptionMaskHelpers.field_e, var5_intLifetime2, 1);
+                  OptionMaskHelpers.field_e = null;
                 } else {
                   TextButton.field_P = PasswordFieldPainter.field_w;
-                  CombatWorld.c(11828);
+                  CombatWorld.updateNoticeText(11828);
                   QuickChatMenu.field_ac = false;
-                  uj.field_d = 10;
+                  ReflectionCheckHelpers.field_d = 10;
                 }
               }
             } else {
-              tf.field_b = false;
+              ChatHistoryHelpers.field_b = false;
             }
           }
           if (4 == var4) {
             if (!LoadingProgressDialog.field_ib) {
               QuickChatMenu.field_ac = true;
-              uj.field_d = 10;
+              ReflectionCheckHelpers.field_d = 10;
             } else {
-              NameAvailabilityValidator.a(param2 + 7014, Projectile.d((byte) -21));
+              NameAvailabilityValidator.clearSessionAndReload(param2 + 7014, Projectile.getApplet((byte) -21));
             }
           }
           if (5 == var4) {
-            t.a(true, Projectile.d((byte) -21));
+            NameTable.openQuitPage(true, Projectile.getApplet((byte) -21));
           }
           if (var4 == 6 &&
             IntrusiveNode.field_a) {
-            uj.field_d = 10;
+            ReflectionCheckHelpers.field_d = 10;
           }
           if (param2 != -7014) {
             return 20;
           }
           if (7 == var4) {
-            WeightedLruCache.a((byte) -81, Projectile.d((byte) -21));
+            WeightedLruCache.openServerListPage((byte) -81, Projectile.getApplet((byte) -21));
           }
           if (var4 == 8) {
-            NameAvailabilityValidator.a(0, Projectile.d((byte) -21));
+            NameAvailabilityValidator.clearSessionAndReload(0, Projectile.getApplet((byte) -21));
           }
           if (9 == var4) {
-            TabbedPanel.openSupportPage((byte) 49, Projectile.d((byte) -21));
+            TabbedPanel.openSupportPage((byte) 49, Projectile.getApplet((byte) -21));
           }
           if (var4 == 10) {
             ClockAndCookieHelpers.field_g.writeCipheredOpcode(17, (byte) -117);
           }
           if (var4 == 11) {
-            CheckboxPainter.a(Projectile.d((byte) -21), 63);
+            CheckboxPainter.reloadPage(Projectile.getApplet((byte) -21), 63);
           }
           if (12 == var4) {
-            BufferedRandomAccessFile.a(SocketConnector.getPendingUrlPath(param2 + 7014), Projectile.d((byte) -21), (byte) -47);
+            BufferedRandomAccessFile.openRelativeUrl(SocketConnector.getPendingUrlPath(param2 + 7014), Projectile.getApplet((byte) -21), (byte) -47);
           }
           if (var4 == 13) {
             try {
@@ -131,7 +131,7 @@ abstract class FunOrbClient extends GameApplet {
                   var9 = (String) null;
                   ChatMessage.discardText((String) null, (byte) -126);
                 } else {
-                  var7 = SoundCache.a((byte) 37, 0, var12.payload, var12.position);
+                  var7 = SoundCache.decodeWindowsCodePageText((byte) 37, 0, var12.payload, var12.position);
                   ChatMessage.discardText(var7, (byte) -105);
                 }
                 DelayedServerPacket.field_s = null;
@@ -146,7 +146,7 @@ abstract class FunOrbClient extends GameApplet {
             }
           }
           if (var4 == 15) {
-            uj.field_d = 10;
+            ReflectionCheckHelpers.field_d = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -209,7 +209,7 @@ abstract class FunOrbClient extends GameApplet {
             if (var9 != null) {
               this.field_q = Integer.parseInt(var9);
             }
-            ud.field_q = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            RankingQuery.field_q = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.startApplet(param3, param0, 32, (byte) 103, param1, this.field_F, param4);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -242,28 +242,28 @@ abstract class FunOrbClient extends GameApplet {
         if (!LoginStateQueries.isLoginFormActive(16731221)) {
           return -1;
         }
-        if (tf.field_b) {
+        if (ChatHistoryHelpers.field_b) {
           return -1;
         }
-        var2 = jj.a(-119, this.field_q, jj.a(true), this.field_A, true, TextHotspotWidget.a(false));
+        var2 = MeshMaterial.performLogin(-119, this.field_q, MeshMaterial.getAccountStatusText(true), this.field_A, true, TextHotspotWidget.getPendingPassword(false));
         if (var2 == -1) {
           return -1;
         }
         if (var2 != 0 &&
           var2 != 1) {
-          if (!am.field_b) {
+          if (!DesignerPageSetup.field_b) {
             this.showErrorPage("reconnect", -16946);
           }
-          of.a(10);
+          SessionExitHelpers.requestSessionExit(10);
           var3 = 102 / ((param0 + 32) / 54);
-          cl.a(di.field_e, var2, 1);
-          tf.field_b = true;
+          LoginResultHelpers.handleLoginResult(OptionMaskHelpers.field_e, var2, 1);
+          ChatHistoryHelpers.field_b = true;
           ProxySocketConnector.field_l = 15000L + ClockAndCookieHelpers.monotonicMillis(42);
           return var2;
         }
-        if (uj.field_d == 11 &&
+        if (ReflectionCheckHelpers.field_d == 11 &&
           TeamColourTinter.field_d == 0) {
-          CombatWorld.c(11828);
+          CombatWorld.updateNoticeText(11828);
         }
         return var2;
     }
@@ -274,19 +274,19 @@ abstract class FunOrbClient extends GameApplet {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         SceneWidgetNode.field_D = this.field_n;
-        ViewportController.a(SceneWidgetNode.field_D, param2 ^ 4192);
-        ValidationIndicator.a(IterableDualNodeDeque.field_i, this.field_t, param1, this.field_v, param3, this.field_C, this.field_B, SceneWidgetNode.field_D, 5000, this.field_r, (byte) 120, param2, this.field_F, this.field_D);
-        GrowableIntList.a(this.field_F, this.field_D, param3, this.field_B, IterableDualNodeDeque.field_i, (byte) -95, SceneWidgetNode.field_D, this.field_v, this.field_t);
-        ArchiveProvider.a((byte) 127);
-        WeightedLruCache.field_j = DelegatingCanvas.a((byte) 68);
-        hg.a((byte) -93, sl.field_n);
+        ViewportController.selectLanguageStrings(SceneWidgetNode.field_D, param2 ^ 4192);
+        ValidationIndicator.configureConnection(IterableDualNodeDeque.field_i, this.field_t, param1, this.field_v, param3, this.field_C, this.field_B, SceneWidgetNode.field_D, 5000, this.field_r, (byte) 120, param2, this.field_F, this.field_D);
+        GrowableIntList.initializeArchiveServices(this.field_F, this.field_D, param3, this.field_B, IterableDualNodeDeque.field_i, (byte) -95, SceneWidgetNode.field_D, this.field_v, this.field_t);
+        ArchiveProvider.initializeKeyCodeMap((byte) 127);
+        WeightedLruCache.field_j = DelegatingCanvas.createMouseWheelInput((byte) 68);
+        HighscoreColumnHeader.attachCanvasInput((byte) -93, ArchiveLoadStep.field_n);
         Sprite.field_h = param5;
         ArchiveIndex.field_r = param7;
-        ed.field_h = param4;
+        SessionSeedHelpers.field_h = param4;
         DualNode.field_p = param6;
         LoginConnectionStage.field_c = param0;
         this.initializePacketLengths(true);
-        di.a((byte) -128);
+        OptionMaskHelpers.clearOptionMask((byte) -128);
     }
 
     final int pollAccountUiActions(boolean param0, int param1) {
@@ -373,16 +373,16 @@ abstract class FunOrbClient extends GameApplet {
         int discarded$3 = 0;
         int var3 = SteelSentinels.obfuscationControl;
         if (LoginStateQueries.isLoginComplete(6995)) {
-          discarded$1 = this.processAccountUiActions(false, wb.field_c != null ? true : false, -7014);
+          discarded$1 = this.processAccountUiActions(false, RewardValueHelpers.field_c != null ? true : false, -7014);
         } else {
           if (AccountTermsPanel.field_Q >= 10) {
             if (!ClientGlobals.isIntroFinished(-104)) {
-              uj.b(29);
+              ReflectionCheckHelpers.advanceIntroTimer(29);
             } else {
-              if (uj.field_d == 0) {
+              if (ReflectionCheckHelpers.field_d == 0) {
                 discarded$3 = this.processAccountUiActions(false, false, -7014);
               } else {
-                ProxySocketConnector.serviceAccountInput(jj.field_d, (byte) 104);
+                ProxySocketConnector.serviceAccountInput(MeshMaterial.field_d, (byte) 104);
               }
             }
           }
@@ -403,7 +403,7 @@ abstract class FunOrbClient extends GameApplet {
         int var4 = -1 + ViewportController.field_f;
         byte[] var5 = new byte[var4];
         LoginConnectionStage.field_d.readCipheredBytes(0, var4, var5, 103);
-        UrlAndReplyHelpers.openUrl(var3 != 0, (byte) 99, IntKeyLookup.a(13, var5), Projectile.d((byte) -21));
+        UrlAndReplyHelpers.openUrl(var3 != 0, (byte) 99, IntKeyLookup.decodeWindowsCodePageString(13, var5), Projectile.getApplet((byte) -21));
         if (param0 != 3894) {
           this.enablePacketOne((byte) -96);
         }
@@ -423,8 +423,8 @@ abstract class FunOrbClient extends GameApplet {
         int var3Lifetime2;
         var5 = SteelSentinels.obfuscationControl;
         if (null != AssetDecoders.field_a) {
-          if (null == wb.field_c) {
-            var6 = BirthDateEntryPanel.g(param0 - 45);
+          if (null == RewardValueHelpers.field_c) {
+            var6 = BirthDateEntryPanel.getGameContainer(param0 - 45);
             var4 = var6.getSize();
             AssetDecoders.field_a.setDesiredSize(var4.height, (byte) -114, var4.width);
           }
@@ -433,23 +433,23 @@ abstract class FunOrbClient extends GameApplet {
         GameApplet.snapshotKeyboardInput(-27983);
         PacketLoopHelpers.pollMouseInput(param0 ^ param0);
         if (!QuickChatHelpDialog.shouldShowBootstrapLoadingScreen(0) &&
-          uj.field_d != 11) {
+          ReflectionCheckHelpers.field_d != 11) {
           BoundedRandomAccessFile.showPendingAccountNotice(-51);
         }
         if (WeightedLruCache.field_j != null) {
-          jj.field_d = WeightedLruCache.field_j.b(-1);
+          MeshMaterial.field_d = WeightedLruCache.field_j.pollRotation(-1);
         }
-        if (ud.e(-116)) {
+        if (RankingQuery.isLoggedIn(-116)) {
           var3 = MusicCrossfadeStream.getTargetFrameRate((byte) -123) * 1200;
           if (this.field_E ||
-            !(var3 >= SoundCache.b(-102)) &&
-            !(DateInputWidget.a((byte) -64) <= var3)) {
+            !(var3 >= SoundCache.getInputFrameCount(-102)) &&
+            !(DateInputWidget.getPointerIdleTicks((byte) -64) <= var3)) {
             this.field_E = false;
-            LoginForm.m(127);
-            of.a(10);
-            cl.a(un.field_g, 2, param0 ^ 4);
+            LoginForm.closeConnection(127);
+            SessionExitHelpers.requestSessionExit(10);
+            LoginResultHelpers.handleLoginResult(ChatHistoryAllocator.field_g, 2, param0 ^ 4);
             MatchingTextValidator.clearSpriteArray((byte) 82);
-            tf.field_b = true;
+            ChatHistoryHelpers.field_b = true;
             ProxySocketConnector.field_l = ClockAndCookieHelpers.monotonicMillis(-94) + 15000L;
           }
         }
@@ -457,12 +457,12 @@ abstract class FunOrbClient extends GameApplet {
           TeamColourTinter.field_d == 0) {
           stackIn_24_0 = (TeamColourTinter.field_d != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          TeamColourTinter.field_d = CipherPacketBuffer.j(param0 + 16);
+          TeamColourTinter.field_d = CipherPacketBuffer.serviceArchiveConnection(param0 + 16);
           if (var3Lifetime1 != 0) {
             if (TeamColourTinter.field_d == 0) {
-              if (11 == uj.field_d) {
+              if (11 == ReflectionCheckHelpers.field_d) {
                 if (!LoginStateQueries.isLoginFormActive(param0 ^ 16731216)) {
-                  CombatWorld.c(11828);
+                  CombatWorld.updateNoticeText(11828);
                   if (TeamColourTinter.field_d != -1 &&
                     TeamColourTinter.field_d != 0) {
                     ProxySocketConnector.field_l = ClockAndCookieHelpers.monotonicMillis(127) + 15000L;
@@ -495,26 +495,26 @@ abstract class FunOrbClient extends GameApplet {
         if (TeamColourTinter.field_d != -1 &&
           TeamColourTinter.field_d != 0) {
           if (10 <= AccountTermsPanel.field_Q) {
-            if (uj.field_d >= 10) {
-              of.a(10);
+            if (ReflectionCheckHelpers.field_d >= 10) {
+              SessionExitHelpers.requestSessionExit(10);
               if (TeamColourTinter.field_d == 3) {
-                cl.a(Bzip2State.field_F, 256, 1);
+                LoginResultHelpers.handleLoginResult(Bzip2State.field_F, 256, 1);
               } else {
                 if (TeamColourTinter.field_d == 4) {
-                  cl.a(un.field_c, 256, 1);
+                  LoginResultHelpers.handleLoginResult(ChatHistoryAllocator.field_c, 256, 1);
                 } else {
                   if (2 != TeamColourTinter.field_d) {
                     if (TeamColourTinter.field_d != 5) {
-                      cl.a(AlternateUsernameCredentials.field_s, 256, 1);
+                      LoginResultHelpers.handleLoginResult(AlternateUsernameCredentials.field_s, 256, 1);
                     } else {
-                      cl.a(Projectile.field_R, 5, 1);
+                      LoginResultHelpers.handleLoginResult(Projectile.field_R, 5, 1);
                     }
                   } else {
-                    cl.a(qf.field_j, 256, 1);
+                    LoginResultHelpers.handleLoginResult(RankingAndRasterHelpers.field_j, 256, 1);
                   }
                 }
               }
-              tf.field_b = true;
+              ChatHistoryHelpers.field_b = true;
             }
           } else {
             if (TeamColourTinter.field_d == 3) {
@@ -540,7 +540,7 @@ abstract class FunOrbClient extends GameApplet {
           TeamColourTinter.field_d != 0 ||
           LoginStateQueries.isLoginFormActive(16731221)) &&
           ProxySocketConnector.field_l <= ClockAndCookieHelpers.monotonicMillis(-111)) {
-          tf.field_b = false;
+          ChatHistoryHelpers.field_b = false;
           if (TeamColourTinter.field_d != -1 &&
             TeamColourTinter.field_d != 0) {
             TeamColourTinter.field_d = -1;
@@ -552,18 +552,18 @@ abstract class FunOrbClient extends GameApplet {
           PopupMenuHelpers.field_h = false;
         }
         if (AccountTermsPanel.field_Q == 0 &&
-          jj.a(-1)) {
+          MeshMaterial.pollArchiveManager(-1)) {
           AccountTermsPanel.field_Q = 1;
         }
         if (AccountTermsPanel.field_Q == 1) {
           if (SceneWidgetNode.field_D != 0) {
             ChecksumAndFrameHelpers.field_f = SceneWidgetNode.openResourceArchive(73, Sprite.field_h);
           }
-          WidgetStyleLayer.field_k = GameplayController.a(true, ed.field_h, param0 + 251, 1, false);
-          QuickChatPhraseCache.field_d = GameplayController.a(true, ArchiveIndex.field_r, param0 ^ 261, 1, false);
-          IconLabelControl.field_bc = GameplayController.a(true, LoginConnectionStage.field_c, 256, 1, false);
+          WidgetStyleLayer.field_k = GameplayController.openResourceArchive(true, SessionSeedHelpers.field_h, param0 + 251, 1, false);
+          QuickChatPhraseCache.field_d = GameplayController.openResourceArchive(true, ArchiveIndex.field_r, param0 ^ 261, 1, false);
+          IconLabelControl.field_bc = GameplayController.openResourceArchive(true, LoginConnectionStage.field_c, 256, 1, false);
           AccountTermsPanel.field_Q = 2;
-          tm.field_d = WidgetStyleLayer.field_k;
+          SessionUiHelpers.field_d = WidgetStyleLayer.field_k;
           MusicPatchPcmStream.field_t = QuickChatPhraseCache.field_d;
         }
         if (AccountTermsPanel.field_Q == 2) {
@@ -572,7 +572,7 @@ abstract class FunOrbClient extends GameApplet {
             if (!ChecksumAndFrameHelpers.field_f.ensureGroupAvailableByName(12145, "")) {
               ChecksumAndFrameHelpers.field_f = null;
             } else {
-              if (ChecksumAndFrameHelpers.field_f.a("", (byte) 90)) {
+              if (ChecksumAndFrameHelpers.field_f.isGroupLoadedByName("", (byte) 90)) {
                 ContextMenu.loadInterfaceText(ChecksumAndFrameHelpers.field_f, -128);
                 ChecksumAndFrameHelpers.field_f = null;
                 LobbyPlayer.resetFrameTimingHistory(0);
@@ -584,28 +584,28 @@ abstract class FunOrbClient extends GameApplet {
           }
         }
         if (AccountTermsPanel.field_Q == 3 &&
-          TextLayout.a(WidgetStyleLayer.field_k, IconLabelControl.field_bc, param0 ^ -6, QuickChatPhraseCache.field_d) &&
+          TextLayout.areCommonUiArchivesReady(WidgetStyleLayer.field_k, IconLabelControl.field_bc, param0 ^ -6, QuickChatPhraseCache.field_d) &&
           SoundAndUrlHelpers.areAllGroupsAvailable(IconLabelControl.field_bc, param0 - 58)) {
           ClientGlobals.releaseInputReferences(false);
-          RegistrationRequestDialog.n(-6);
+          RegistrationRequestDialog.emptyGuardStub(-6);
           ClientException.field_i = AgeValidator.field_q;
           IntrusiveNode.field_a = false;
-          AccountRegistrationPanel.a((byte) -127, LoadingProgressDialog.field_ib, IconLabelControl.field_bc, WidgetStyleLayer.field_k, QuickChatPhraseCache.field_d);
+          AccountRegistrationPanel.initializeAccountUiResources((byte) -127, LoadingProgressDialog.field_ib, IconLabelControl.field_bc, WidgetStyleLayer.field_k, QuickChatPhraseCache.field_d);
           if (SoundCache.field_j ||
-            null != uj.field_k) {
-            stackIn_113_0 = uj.field_k;
+            null != ReflectionCheckHelpers.field_k) {
+            stackIn_113_0 = ReflectionCheckHelpers.field_k;
             stackIn_114_1 = !(SoundCache.field_j);
             stackIn_117_2 = !(SoundCache.field_j);
-            EmailAvailabilityValidator.a(stackIn_113_0, stackIn_114_1, stackIn_117_2, param0 + 7);
+            EmailAvailabilityValidator.openLoginDialog(stackIn_113_0, stackIn_114_1, stackIn_117_2, param0 + 7);
           }
-          if (ud.field_q) {
-            MarkerSliderPainter.a((byte) 120);
+          if (RankingQuery.field_q) {
+            MarkerSliderPainter.showLoadingDialog((byte) 120);
           }
           if (null == ValidationIndicator.field_cb) {
-            ValidationIndicator.field_cb = DateOfBirthValidator.c((byte) 83);
+            ValidationIndicator.field_cb = DateOfBirthValidator.getSoundMixer((byte) 83);
             SentinelDesigner.field_e = LoginHandshakeHelpers.getSoundBufferMillis((byte) 62);
           }
-          TextLayout.a(IconLabelControl.field_bc, 73, SentinelDesigner.field_e, ValidationIndicator.field_cb);
+          TextLayout.prepareLogoAnimation(IconLabelControl.field_bc, 73, SentinelDesigner.field_e, ValidationIndicator.field_cb);
           QuickChatPhraseCache.field_d = null;
           WidgetStyleLayer.field_k = null;
           IconLabelControl.field_bc = null;
@@ -623,7 +623,7 @@ abstract class FunOrbClient extends GameApplet {
         if (AccountTermsPanel.field_Q == 11) {
           if (BirthDateEntryPanel.field_S != null && (!BirthDateEntryPanel.field_S.ensureIndex(true) ||
             !BirthDateEntryPanel.field_S.ensureAllGroupsAvailable(25))) {
-            mc.a(ModalStack.a((byte) -119, EmailAvailabilityValidator.field_t, IntKeyLookup.field_g, BirthDateEntryPanel.field_S), 0.0f, -21801);
+            LoadingCaptionHelpers.setLoadingProgress(ModalStack.formatArchiveLoadingProgress((byte) -119, EmailAvailabilityValidator.field_t, IntKeyLookup.field_g, BirthDateEntryPanel.field_S), 0.0f, -21801);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -637,10 +637,10 @@ abstract class FunOrbClient extends GameApplet {
         }
         if (AccountTermsPanel.field_Q == 13) {
           var3Lifetime2 = 1;
-          if (rh.field_q != null) {
-            stackIn_147_0 = (!rh.field_q.pollLoading(-2)) ? 0 : 1;
+          if (PendingDataRequest.field_q != null) {
+            stackIn_147_0 = (!PendingDataRequest.field_q.pollLoading(-2)) ? 0 : 1;
             var3Lifetime2 = stackIn_147_0;
-            mc.a(rh.field_q.field_i, rh.field_q.field_g, -21801);
+            LoadingCaptionHelpers.setLoadingProgress(PendingDataRequest.field_q.field_i, PendingDataRequest.field_q.field_g, -21801);
           }
           if (var3Lifetime2 != 0) {
             AccountTermsPanel.field_Q = 20;
@@ -648,12 +648,12 @@ abstract class FunOrbClient extends GameApplet {
         }
         if (!param1 &&
           ImageProducerRasterBuffer.field_x) {
-          pa.a(sl.field_n, 9174);
+          TutorialStepTable.detachInputListeners(ArchiveLoadStep.field_n, 9174);
           this.recreateCanvas(false);
-          hg.a((byte) -93, sl.field_n);
+          HighscoreColumnHeader.attachCanvasInput((byte) -93, ArchiveLoadStep.field_n);
         }
         if (dg.field_h[8]) {
-          sa.a((byte) -110);
+          LoadingStatusHelpers.sendReflectionCheckReplies((byte) -110);
         }
     }
 
@@ -662,7 +662,7 @@ abstract class FunOrbClient extends GameApplet {
           this.enablePacketSix(67);
         }
         String var2 = IconTextComponent.readIncomingString(8347);
-        MidiPcmStream.setSessionCookie(param0 - 14, var2, Projectile.d((byte) -21));
+        MidiPcmStream.setSessionCookie(param0 - 14, var2, Projectile.getApplet((byte) -21));
     }
 
     final void dispatchCommonPacket(int param0) {
@@ -683,7 +683,7 @@ abstract class FunOrbClient extends GameApplet {
           }
           if (1 != var2) {
             if (2 == var2) {
-              GrowableIntList.b(-116);
+              GrowableIntList.handleHighscoreResponse(-116);
             } else {
               if (var2 != 3) {
                 if (var2 == 4) {
@@ -693,19 +693,19 @@ abstract class FunOrbClient extends GameApplet {
                     UrlAndReplyHelpers.readPendingDataReply(-16786);
                   } else {
                     if (var2 == 6) {
-                      LoginForm.k(113);
+                      LoginForm.handleRankingsResponse(113);
                     } else {
                       if (var2 != 7) {
                         if (var2 == 8) {
-                          TickClock.a(IterableDualNodeDeque.field_i, false, LoginConnectionStage.field_d, ViewportController.field_f);
+                          TickClock.readReflectionCheckRequest(IterableDualNodeDeque.field_i, false, LoginConnectionStage.field_d, ViewportController.field_f);
                         } else {
                           if (var2 == 16) {
-                            StatefulTextPainter.b(-76);
+                            StatefulTextPainter.readLocalPlayerName(-76);
                           } else {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                te.a(2);
+                                FriendListHelpers.handleFriendListPacket(2);
                                 return;
                               }
                               if (var2 == 17) {
@@ -717,13 +717,13 @@ abstract class FunOrbClient extends GameApplet {
                                 return;
                               }
                               MusicCrossfadeStream.reportClientError("MGS1: " + ClientErrorSupport.describePacketHistory((byte) 94), -27, (Throwable) null);
-                              LoginForm.m(-93);
+                              LoginForm.closeConnection(-93);
                               return;
                             }
                             stackIn_31_0 = -98;
                             stackIn_32_1 = (12 == var2);
-                            var3 = AgeValidator.$cfr$intArgs$a$9d0e4b5217c4(stackIn_31_0, stackIn_32_1);
-                            WeightedCacheEntry.a(var3, -69);
+                            var3 = AgeValidator.readLoginReplyWithIntGuard(stackIn_31_0, stackIn_32_1);
+                            WeightedCacheEntry.acceptChatMessage(var3, -69);
                           }
                         }
                       } else {
@@ -733,7 +733,7 @@ abstract class FunOrbClient extends GameApplet {
                   }
                 }
               } else {
-                cd.a(0);
+                QuickChatPacketHelpers.handlePendingRequestReply(0);
               }
             }
           } else {
@@ -742,7 +742,7 @@ abstract class FunOrbClient extends GameApplet {
           return;
         }
         MusicCrossfadeStream.reportClientError("MGS2: " + ClientErrorSupport.describePacketHistory((byte) 94), -85, (Throwable) null);
-        LoginForm.m(-94);
+        LoginForm.closeConnection(-94);
     }
 
     private final void enablePacketSix(int param0) {

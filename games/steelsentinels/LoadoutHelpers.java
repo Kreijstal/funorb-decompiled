@@ -57,9 +57,9 @@ final class LoadoutHelpers {
             }
             for (var7 = 0; var7 < var15.length; var7++) {
               var8 = var15[var7];
-              if (t.a(param5, var8, -20370) ||
+              if (NameTable.isBitSet(param5, var8, -20370) ||
                 MusicPatchEnvelope.isItemUnlockable(param5, var8, param1, (byte) 96)) {
-                var18 = DialWidget.a(var8, (byte) 123);
+                var18 = DialWidget.getComponentPreset(var8, (byte) 123);
                 for (var10 = var18.length - 8; var10 < var18.length; var10++) {
                   if (param0 == var18[var10]) {
                     return true;
@@ -103,17 +103,17 @@ final class LoadoutHelpers {
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte((byte) 126, 5);
-        var2.writeByte((byte) 114, nf.field_b.field_Ub);
-        int var4 = nf.field_b.field_Nc + (nf.field_b.field_sc << 6);
+        var2.writeByte((byte) 114, LoginEncryptionHelpers.field_b.field_Ub);
+        int var4 = LoginEncryptionHelpers.field_b.field_Nc + (LoginEncryptionHelpers.field_b.field_sc << 6);
         var2.writeByte((byte) 127, var4);
-        var2.writeBytes(nf.field_b.field_Sb.length, (byte) -122, param0, nf.field_b.field_Sb);
+        var2.writeBytes(LoginEncryptionHelpers.field_b.field_Sb.length, (byte) -122, param0, LoginEncryptionHelpers.field_b.field_Sb);
         var2.backpatchByteLength((byte) -113, var2.position - var3);
     }
 
     final static void updateQuickChatHelpDialog(boolean param0, byte param1) {
-        if (qf.field_e != null &&
-          qf.field_e.pollClose(param0, (byte) -128)) {
-          qf.field_e = null;
+        if (RankingAndRasterHelpers.field_e != null &&
+          RankingAndRasterHelpers.field_e.pollClose(param0, (byte) -128)) {
+          RankingAndRasterHelpers.field_e = null;
         }
         if (param1 != -76) {
           field_b = -64;
@@ -166,7 +166,7 @@ final class LoadoutHelpers {
                 var5 = var9;
                 ArraySupport.copy(var3, 0, var5, 0, var13.length);
                 ArraySupport.copy(var3, var13.length, var4_ref_int__, 0, var14.length);
-                param1 = SentinelDesigner.a(var13, (byte) 97, var14);
+                param1 = SentinelDesigner.buildChassisFromDesign(var13, (byte) 97, var14);
               } else {
                 return;
               }
@@ -218,9 +218,9 @@ final class LoadoutHelpers {
             if (param1.componentId == 92) {
               MusicPatchNode.field_w = 700;
             }
-            param1.a(0, false, 31, 74, (byte) 49, 0);
+            param1.positionPartTree(0, false, 31, 74, (byte) 49, 0);
             MusicPatchNode.field_w = var3_int;
-            if (!ArticulatedPart.f((byte) -19)) {
+            if (!ArticulatedPart.isMemberSession((byte) -19)) {
               var4 = 0;
               var17 = LoginHandshakeHelpers.field_c[param0];
               var6_int = 0;
@@ -250,7 +250,7 @@ final class LoadoutHelpers {
                 break;
               }
             }
-            Checkbox.field_bb.b((byte) 123);
+            Checkbox.field_bb.bindRaster((byte) 123);
             return;
           }
           return;

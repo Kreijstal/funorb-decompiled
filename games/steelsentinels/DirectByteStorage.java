@@ -35,7 +35,7 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    final static java.net.URL a(int param0, java.net.URL param1, java.applet.Applet param2) {
+    final static java.net.URL appendSessionParameters(int param0, java.net.URL param1, java.applet.Applet param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_2_0 = null;
@@ -61,9 +61,9 @@ final class DirectByteStorage extends ByteStorage {
             var4Lifetime2 = var3;
           }
           var4Lifetime1 = null;
-          if (null != ja.field_h &&
-            !ja.field_h.equals(param2.getParameter("session"))) {
-            var4Lifetime1 = ja.field_h;
+          if (null != IconLookupHelpers.field_h &&
+            !IconLookupHelpers.field_h.equals(param2.getParameter("session"))) {
+            var4Lifetime1 = IconLookupHelpers.field_h;
           }
           stackIn_10_0 = SoundAndUrlHelpers.rewriteUrlPathParameters(-19571, param1, (String) (var3), (String) (var4Lifetime1), -1);
           return stackIn_10_0;
@@ -98,7 +98,7 @@ final class DirectByteStorage extends ByteStorage {
         field_k = null;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int nextPowerOfTwo(int param0, byte param1) {
         if (param1 == -32) {
           param0--;
           param0 = param0 | param0 >>> 1;
@@ -119,7 +119,7 @@ final class DirectByteStorage extends ByteStorage {
         field_k = "Add name";
         field_h = "Suggest muting this player";
         field_g = "Fullscreen";
-        field_m = ViewportController.a(true);
+        field_m = ViewportController.createEightIntArray(true);
         field_i = "Detail: High";
         field_j = 0;
     }

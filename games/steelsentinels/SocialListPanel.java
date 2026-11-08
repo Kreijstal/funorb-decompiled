@@ -91,8 +91,8 @@ final class SocialListPanel extends SceneWidget {
           return;
         }
         LoginMethod.field_d = false;
-        LabeledField.a(-1, 0);
-        jn.field_b = ClockAndCookieHelpers.field_e;
+        LabeledField.setPendingMessageId(-1, 0);
+        MusicTrackHelpers.field_b = ClockAndCookieHelpers.field_e;
         DiskCacheWorker.field_j = ClockAndCookieHelpers.field_e;
     }
 
@@ -126,11 +126,11 @@ final class SocialListPanel extends SceneWidget {
         PacketBuffer.field_o.setBounds(0, 0, 18, 0, TeamColourTinter.field_c.field_zb - (MenuInputState.field_p ? 2 + ReflectionCheck.field_G + 42 : 0));
         if (!param0) {
           field_ec = (SceneWidget) null;
-          uj.field_j.setBounds(0, 0, 18, -2 + (TeamColourTinter.field_c.field_zb - ReflectionCheck.field_G - 40), 42 + ReflectionCheck.field_G);
+          ReflectionCheckHelpers.field_j.setBounds(0, 0, 18, -2 + (TeamColourTinter.field_c.field_zb - ReflectionCheck.field_G - 40), 42 + ReflectionCheck.field_G);
           TabbedPanel.field_Sb.setBoundsAndLayout(TeamColourTinter.field_c.field_zb, -2048, ReflectionCheck.field_G, -20 + TeamColourTinter.field_c.field_Lb, 2, 0, 20);
           return;
         }
-        uj.field_j.setBounds(0, 0, 18, -2 + (TeamColourTinter.field_c.field_zb - ReflectionCheck.field_G - 40), 42 + ReflectionCheck.field_G);
+        ReflectionCheckHelpers.field_j.setBounds(0, 0, 18, -2 + (TeamColourTinter.field_c.field_zb - ReflectionCheck.field_G - 40), 42 + ReflectionCheck.field_G);
         TabbedPanel.field_Sb.setBoundsAndLayout(TeamColourTinter.field_c.field_zb, -2048, ReflectionCheck.field_G, -20 + TeamColourTinter.field_c.field_Lb, 2, 0, 20);
     }
 

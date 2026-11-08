@@ -199,7 +199,7 @@ final class ReportAbuseDialog extends SceneWidget {
           this.field_jc = new SceneWidget(0L, (SceneWidget) null);
           this.addChild(this.field_jc, 119);
           if (param11 != null) {
-            this.field_cc = new SceneWidget(0L, param8, cl.field_h);
+            this.field_cc = new SceneWidget(0L, param8, LoginResultHelpers.field_h);
             this.field_cc.field_nb = 11184810;
             this.field_cc.field_Kb = 1;
             this.field_jc.addChild(this.field_cc, 120);
@@ -211,7 +211,7 @@ final class ReportAbuseDialog extends SceneWidget {
             this.field_Tb.field_nb = 16764006;
             this.field_jc.addChild(this.field_Tb, 119);
             this.field_Tb.field_Db = "|";
-            if (!(di.field_h < 5) ||
+            if (!(OptionMaskHelpers.field_h < 5) ||
               !(NodeDeque.field_d < 2)) {
               regionExit1: {
                 stackIn_7_0 = this;
@@ -219,7 +219,7 @@ final class ReportAbuseDialog extends SceneWidget {
                 stackIn_7_2 = null;
                 stackIn_7_3 = 0L;
                 stackIn_7_4 = (IconLabelControl) (param9);
-                if (7 > di.field_h) {
+                if (7 > OptionMaskHelpers.field_h) {
                   stackIn_7_0Lifetime1 = this;
                   stackIn_7_1Lifetime1 = null;
                   stackIn_7_2Lifetime1 = null;
@@ -350,12 +350,12 @@ final class ReportAbuseDialog extends SceneWidget {
             this.field_jc.field_I = PopupMenuSupport.buildSolidFrameSprites(3, 2105376, 11579568, this.field_jc.field_Lb, 8421504, 13574);
             var23 = 26 + var19;
             var24 = 10 + var17Lifetime5 + (var22 + 24);
-            var25 = UiContainer.a(param2, 127, param0, var23);
+            var25 = UiContainer.clampPopupX(param2, 127, param0, var23);
             var26 = QuickChatHelpDialog.placePopupVertically(param1, 0, param3, var24);
             this.setBounds(0, var26, var24, var25, var23);
             return;
           }
-          this.field_cc = new SceneWidget(0L, param8, ed.field_b);
+          this.field_cc = new SceneWidget(0L, param8, SessionSeedHelpers.field_b);
           this.field_cc.field_Kb = 1;
           this.field_cc.field_nb = 11184810;
           this.field_jc.addChild(this.field_cc, 119);
@@ -368,7 +368,7 @@ final class ReportAbuseDialog extends SceneWidget {
           this.field_jc.field_I = PopupMenuSupport.buildSolidFrameSprites(3, 2105376, 11579568, this.field_jc.field_Lb, 8421504, 13574);
           var18Lifetime1 = 13 + var15_int + 13;
           var19Lifetime1 = 34 + var16Lifetime1;
-          var20Lifetime1 = UiContainer.a(param2, 127, param0, var18Lifetime1);
+          var20Lifetime1 = UiContainer.clampPopupX(param2, 127, param0, var18Lifetime1);
           var21Lifetime1 = QuickChatHelpDialog.placePopupVertically(param1, 0, param3, var19Lifetime1);
           this.setBounds(0, var21Lifetime1, var19Lifetime1, var20Lifetime1, var18Lifetime1);
           return;

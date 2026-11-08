@@ -55,7 +55,7 @@ final class AccountNamePrompt extends SceneWidget {
               this.field_Wb.length() > 0) {
               discarded$3 = this.field_Wb.append((char) var2);
             }
-            if (kf.a((char) var2, (byte) 120)) {
+            if (HighscoreTable.isAsciiLetter((char) var2, (byte) 120)) {
               discarded$5 = this.field_Wb.append((char) var2);
               if (NameAvailabilityValidator.field_q == 84) {
                 if (0 < this.field_Wb.length()) {
@@ -124,7 +124,7 @@ final class AccountNamePrompt extends SceneWidget {
           this.field_Wb.length() > 0) {
           discarded$0 = this.field_Wb.append((char) var2Lifetime1);
         }
-        if (kf.a((char) var2Lifetime1, (byte) 120)) {
+        if (HighscoreTable.isAsciiLetter((char) var2Lifetime1, (byte) 120)) {
           discarded$1 = this.field_Wb.append((char) var2Lifetime1);
           if (NameAvailabilityValidator.field_q == 84) {
             if (0 < this.field_Wb.length()) {
@@ -207,7 +207,7 @@ final class AccountNamePrompt extends SceneWidget {
           return this.field_Yb;
         }
         while (true) {
-          if (!UiContainer.f(22759)) {
+          if (!UiContainer.pollKeyEvent(22759)) {
             if (param0 != -2) {
               field_Vb = (String[]) null;
               this.field_Tb.field_S = this.field_Wb.toString();
@@ -235,7 +235,7 @@ final class AccountNamePrompt extends SceneWidget {
             this.field_Wb.length() > 0) {
             NameCheckResult.padWithChar(' ', 200, this.field_Wb, -1 + this.field_Wb.length());
           }
-          if (fj.a(LoginMethod.field_c, (CharSequence) ((Object) this.field_Wb), -99)) {
+          if (PasswordRuleHelpers.canAppendNameCharacter(LoginMethod.field_c, (CharSequence) ((Object) this.field_Wb), -99)) {
             discarded$1 = this.field_Wb.append(LoginMethod.field_c);
           } else {
             if (this.field_Wb.length() == 0 &&
@@ -299,7 +299,7 @@ final class AccountNamePrompt extends SceneWidget {
           this.field_Tb.setBounds(0, 3 + SocketConnector.field_b, SocketConnector.field_b, 5, var9_int);
           var10 = var9_int + 10;
           var11 = 3 + (2 * SocketConnector.field_b + 3);
-          var12 = UiContainer.a(param2, 127, param0, var10);
+          var12 = UiContainer.clampPopupX(param2, 127, param0, var10);
           var13 = QuickChatHelpDialog.placePopupVertically(param1, 0, param3, var11);
           this.setBounds(0, var13, var11, var12, var10);
           return;

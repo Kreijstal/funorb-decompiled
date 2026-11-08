@@ -379,7 +379,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
 
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, TriangleMesh param5, int param6, int param7) {
+    final static void renderMeshModel(int param0, int param1, int param2, int param3, int param4, TriangleMesh param5, int param6, int param7) {
         int stackIn_20_0 = 0;
         int[] stackIn_22_0 = null;
         int stackIn_23_1 = 0;
@@ -388,7 +388,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         int stackIn_31_0 = 0;
         int stackIn_34_0 = 0;
         int stackIn_37_0 = 0;
-        jj stackIn_44_0 = null;
+        MeshMaterial stackIn_44_0 = null;
         int stackIn_50_0 = 0;
         int stackIn_54_0 = 0;
         RuntimeException stackIn_59_0 = null;
@@ -405,7 +405,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        jj var21 = null;
+        MeshMaterial var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -455,7 +455,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           }
           if (decompiledSharedTail0) {
             var60 = var44.field_P;
-            BenefitsScreenHelpers.scatterFacesByPriority(var60, 0, qe.field_a, 0, -32513);
+            BenefitsScreenHelpers.scatterFacesByPriority(var60, 0, TextSpriteHelpers.field_a, 0, -32513);
           }
           if (param3 > -114) {
             field_H = (String) null;
@@ -466,7 +466,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           var8 = var41;
           var64 = new int[param5.field_u];
           var61 = HighscoreSubmission.field_A;
-          var62 = hm.field_c;
+          var62 = LoadoutCostHelpers.field_c;
           var63 = DelegatingCanvas.field_e;
           var13 = 0;
           while (param5.field_u > var13) {
@@ -497,7 +497,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
             }
             var14Lifetime2 = stackIn_20_0;
             var15Lifetime2 = var63[var13] * param2 + param4 * var61[var13] + param7 * var62[var13] >> 8;
-            stackIn_22_0 = kf.field_t;
+            stackIn_22_0 = HighscoreTable.field_t;
             if (var15Lifetime2 < 0) {
               stackIn_23_1 = -var15Lifetime2;
             } else {
@@ -583,7 +583,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
               var37 = var37 + var31 * 65793;
               var38 = var38 + 65793 * var32;
               var39 = var39 + 65793 * var33;
-              DualNodeDequeIterator.a(var37 >> 16, (var38 & 65525) >> 8, var39 >> 16, var39 >> 8 & 255, var26, var22, 255 & var37 >> 8, 255 & var38, 255 & var37, var27, 255 & var39, var24, 22, var23, var38 >> 16, var25);
+              DualNodeDequeIterator.fillGouraudTriangle(var37 >> 16, (var38 & 65525) >> 8, var39 >> 16, var39 >> 8 & 255, var26, var22, 255 & var37 >> 8, 255 & var38, 255 & var37, var27, 255 & var39, var24, 22, var23, var38 >> 16, var25);
             } else {
               var28 = var54[var18];
               var29 = var64[var18];
@@ -597,7 +597,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
               var32 = var30 & 65280;
               var33 = 1812004608 & var28 * var32 >>> 8 | (var28 * var31 & -16711831) >>> 8;
               var33 = var33 + var29 * 65793;
-              TextHotspotRegion.a(var27, var25, var23, var24, var26, var33 >> 1 & 8355711, false, var22);
+              TextHotspotRegion.drawShadedTriangle(var27, var25, var23, var24, var26, var33 >> 1 & 8355711, false, var22);
             }
             var13Lifetime1++;
           }
@@ -775,7 +775,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         super(param0, param1, param2, param3, param4, (UiListener) null);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawInsetPanelFrame(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1038,7 +1038,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] createBeveledFrameSprites(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_13_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_26_0 = 0;

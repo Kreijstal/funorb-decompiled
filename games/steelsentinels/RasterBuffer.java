@@ -14,7 +14,7 @@ abstract class RasterBuffer {
     static String field_d;
     int field_c;
 
-    final void b(byte param0) {
+    final void bindRaster(byte param0) {
         if (param0 <= 120) {
           return;
         }
@@ -25,9 +25,9 @@ abstract class RasterBuffer {
 
     abstract void drawImage(byte param0, java.awt.Graphics param1, int param2, int param3);
 
-    final static void a(boolean param0, int param1, int param2, int param3, int param4) {
+    final static void setMenuOptionMetrics(boolean param0, int param1, int param2, int param3, int param4) {
         EmailSyntaxValidator.field_r = param3;
-        rn.field_q = param4;
+        PendingAckRequest.field_q = param4;
         TextFieldValidator.field_l = param2;
         if (param0) {
           return;
@@ -35,7 +35,7 @@ abstract class RasterBuffer {
         GradientOutlineTextPainter.field_s = param1;
     }
 
-    final static boolean a(int param0, CipherPacketBuffer param1) {
+    final static boolean readBooleanBit(int param0, CipherPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -62,7 +62,7 @@ abstract class RasterBuffer {
         }
     }
 
-    final static boolean a(byte param0, int param1, int param2) {
+    final static boolean handleChatInputKey(byte param0, int param1, int param2) {
         StringBuilder discarded$0 = null;
         int var3;
         String var4_ref_String;
@@ -101,24 +101,24 @@ abstract class RasterBuffer {
           var3 = 0;
         }
         if (ChatPanelHelpers.field_b == 0 &&
-          null != ni.field_a) {
+          null != ByteArrayPoolHelpers.field_a) {
           var3 = 0;
         }
         if (param0 > -119) {
           field_j = (String) null;
         }
         if (ChatPanelHelpers.field_b == 2 &&
-          !StatefulTextPainter.b((byte) -62)) {
+          !StatefulTextPainter.isPrivateChatTargetOnline((byte) -62)) {
           var3 = 0;
         }
         if (NameAvailabilityValidator.field_q == 84) {
           if (var3 == 0) {
             if (ChatPanelHelpers.field_b != 0) {
-              AlternateUsernameCredentials.d(97);
+              AlternateUsernameCredentials.clearChatText(97);
             }
           } else {
-            if (tf.field_g.length() > 0) {
-              var4_ref_String = tf.field_g.toString();
+            if (ChatHistoryHelpers.field_g.length() > 0) {
+              var4_ref_String = ChatHistoryHelpers.field_g.toString();
               if (TextAndBitHelpers.containsFilterText(var4_ref_String, true)) {
                 var13 = (String) null;
                 var12 = (String) null;
@@ -126,21 +126,21 @@ abstract class RasterBuffer {
                 var15 = (String) null;
                 var14 = (String) null;
                 MusicCrossfadeStream.appendChatMessage((String) null, MouseWheelInput.field_e, 0, (byte) 21, (String) null, 2);
-                AlternateUsernameCredentials.d(81);
+                AlternateUsernameCredentials.clearChatText(81);
               } else {
                 var5 = ChatPanelHelpers.field_b;
                 if (0 == var5 &&
-                  nf.field_b != null) {
+                  LoginEncryptionHelpers.field_b != null) {
                   var5 = 1;
                 }
-                if (NameAvailabilityValidator.a(var5, 1) == 2) {
-                  TextLayoutLine.a(1, var5, param2, -18853);
+                if (NameAvailabilityValidator.getChatFilterMode(var5, 1) == 2) {
+                  TextLayoutLine.setChatFilterMode(1, var5, param2, -18853);
                 }
                 QuickChatPhraseCache.sendReport(param1, LoadingScreenHelpers.field_e, -6988, ChatPanelHelpers.field_b, -1, var4_ref_String);
-                AlternateUsernameCredentials.d(81);
+                AlternateUsernameCredentials.clearChatText(81);
               }
             } else {
-              AlternateUsernameCredentials.d(81);
+              AlternateUsernameCredentials.clearChatText(81);
             }
           }
           return true;
@@ -149,23 +149,23 @@ abstract class RasterBuffer {
           if (var3 == 0) {
             return true;
           }
-          if (0 >= tf.field_g.length()) {
+          if (0 >= ChatHistoryHelpers.field_g.length()) {
             return true;
           }
-          NameCheckResult.padWithChar(' ', 200, tf.field_g, -1 + tf.field_g.length());
+          NameCheckResult.padWithChar(' ', 200, ChatHistoryHelpers.field_g, -1 + ChatHistoryHelpers.field_g.length());
           return true;
         }
         var4 = LoginMethod.field_c;
-        if (!tf.a(2459, (char) var4)) {
+        if (!ChatHistoryHelpers.isRenderableCharacter(2459, (char) var4)) {
           return false;
         }
         if (var3 == 0) {
           return true;
         }
-        if (tf.field_g.length() >= 80) {
+        if (ChatHistoryHelpers.field_g.length() >= 80) {
           return true;
         }
-        discarded$0 = tf.field_g.append((char) var4);
+        discarded$0 = ChatHistoryHelpers.field_g.append((char) var4);
         var5Lifetime1 = 485;
         var17 = GrowableIntList.field_l;
         var7 = var17;
@@ -179,16 +179,16 @@ abstract class RasterBuffer {
         if (ChatPanelHelpers.field_b != 2) {
           var7Lifetime6 = "";
           if (ChatPanelHelpers.field_b == 0) {
-            if (nf.field_b == null &&
-              cd.field_g) {
+            if (LoginEncryptionHelpers.field_b == null &&
+              QuickChatPacketHelpers.field_g) {
               var7Lifetime6 = "[" + ThreeSliceButtonPainter.field_p + "] ";
             }
-            if (null != nf.field_b) {
+            if (null != LoginEncryptionHelpers.field_b) {
               if (!LobbyPlayer.field_lc) {
-                var7Lifetime6 = "[" + SocketConnector.formatTemplate(AccountChoicePanel.field_ab, -98, new String[]{nf.field_b.field_Xb}) + "] ";
+                var7Lifetime6 = "[" + SocketConnector.formatTemplate(AccountChoicePanel.field_ab, -98, new String[]{LoginEncryptionHelpers.field_b.field_Xb}) + "] ";
               } else {
                 if (null == PartInstruction.field_a) {
-                  var7Lifetime6 = "[" + SocketConnector.formatTemplate(AccountChoicePanel.field_ab, -98, new String[]{nf.field_b.field_Xb}) + "] ";
+                  var7Lifetime6 = "[" + SocketConnector.formatTemplate(AccountChoicePanel.field_ab, -98, new String[]{LoginEncryptionHelpers.field_b.field_Xb}) + "] ";
                 } else {
                   var7Lifetime6 = "[" + PartInstruction.field_a + "] ";
                 }
@@ -216,10 +216,10 @@ abstract class RasterBuffer {
             var5Lifetime1 = var5Lifetime1 - var9;
           }
         }
-        if (var5Lifetime1 >= BirthDateEntryPanel.field_X.textWidth(tf.field_g.toString())) {
+        if (var5Lifetime1 >= BirthDateEntryPanel.field_X.textWidth(ChatHistoryHelpers.field_g.toString())) {
           return true;
         }
-        NameCheckResult.padWithChar(' ', 200, tf.field_g, -1 + tf.field_g.length());
+        NameCheckResult.padWithChar(' ', 200, ChatHistoryHelpers.field_g, -1 + ChatHistoryHelpers.field_g.length());
         return true;
     }
 
@@ -237,7 +237,7 @@ abstract class RasterBuffer {
         field_h = null;
     }
 
-    final static boolean a(int param0, boolean param1, int param2) {
+    final static boolean isPlayerCountValidForMode(int param0, boolean param1, int param2) {
         if (param0 == 1) {
           if (param2 % 2 != 0) {
             return false;
@@ -258,12 +258,12 @@ abstract class RasterBuffer {
         return !(param2 < 2);
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isSpecialItemUnlocked(byte param0) {
         if (param0 <= 115) {
-          RasterBuffer.a(false, 31, -36, -44, -98);
-          return GzipDecoder.b(-124);
+          RasterBuffer.setMenuOptionMetrics(false, 31, -36, -44, -98);
+          return GzipDecoder.ownsSpecialPart(-124);
         }
-        return GzipDecoder.b(-124);
+        return GzipDecoder.ownsSpecialPart(-124);
     }
 
     static {

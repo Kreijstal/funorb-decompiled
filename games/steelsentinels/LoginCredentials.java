@@ -10,7 +10,7 @@ abstract class LoginCredentials {
     static MusicTrack field_f;
     static int field_e;
 
-    abstract dj type(byte param0);
+    abstract NumberParsingHelpers type(byte param0);
 
     public static void releaseStatics(int param0) {
         field_b = null;
@@ -23,7 +23,7 @@ abstract class LoginCredentials {
 
     abstract void writeTo(PacketBuffer param0, boolean param1);
 
-    final static int a(int param0, int param1) {
+    final static int padToByteBoundary(int param0, int param1) {
         int var2 = 0;
         if ((param0 & 7) != 0) {
           var2 = 8 - (7 & param0);

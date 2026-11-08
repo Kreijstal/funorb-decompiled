@@ -19,13 +19,13 @@ final class MarkerSliderPainter implements WidgetPainter {
     private int field_h;
     static String field_p;
 
-    final static void a(byte param0) {
+    final static void showLoadingDialog(byte param0) {
         int var1 = 45 / ((param0 - 70) / 41);
         HighscoreSubmission.showLoadingProgressDialog((byte) -113);
-        LabeledField.a(4, 0);
+        LabeledField.setPendingMessageId(4, 0);
     }
 
-    final static int a(byte param0, int param1) {
+    final static int componentIdForHotkey(byte param0, int param1) {
         int var2;
         int var3;
         var3 = SteelSentinels.obfuscationControl;

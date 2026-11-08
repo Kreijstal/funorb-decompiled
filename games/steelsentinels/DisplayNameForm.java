@@ -13,7 +13,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     private final boolean isFieldValid(int param0, ValidationProvider param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        vd var4 = null;
+        TransitionTimerHelpers var4 = null;
         UiComponent var5 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -30,7 +30,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
             this.onFocusedKey(-76, 19, 'ￂ', (UiComponent) null);
           }
           var4 = var3.validationState((byte) 21);
-          stackIn_8_0 = (var4 == vf.field_b);
+          stackIn_8_0 = (var4 == RequestResendHelpers.field_b);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -49,11 +49,11 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     public DisplayNameForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_Q = new ValidatedTextWidget("", (UiListener) null, 12);
-        TextWidgetPainter var1 = new TextWidgetPainter(SectorCacheStore.field_m, 0, 0, 0, 0, 16777215, -1, 3, 0, tj.field_e.field_G, -1, 2147483647, true);
+        TextWidgetPainter var1 = new TextWidgetPainter(SectorCacheStore.field_m, 0, 0, 0, 0, 16777215, -1, 3, 0, HighscoreSubmissionFactory.field_e.field_G, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(ChatMessage.field_h, var1, (UiListener) null);
         this.field_U = new TextButton(Sentinel.field_D, (UiListener) null);
-        this.field_T = new TextButton(tj.field_b, (UiListener) null);
-        this.field_Q.field_v = lc.field_i;
+        this.field_T = new TextButton(HighscoreSubmissionFactory.field_b, (UiListener) null);
+        this.field_Q.field_v = SettingSearchHelpers.field_i;
         this.field_Q.setValidator(true, new NameAvailabilityValidator(this.field_Q));
         this.field_U.field_K = false;
         this.field_U.field_p = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
@@ -65,7 +65,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         var2.setBounds(20, (byte) -117, var3, 270, 50);
         this.addChild(var2, -100);
         var3 += 50;
-        var3 = var3 + (this.addFieldWithHelpDefaultWidth(170, var3, -95, this.field_Q, LinkButtonPainter.field_b, cf.field_s) + 5);
+        var3 = var3 + (this.addFieldWithHelpDefaultWidth(170, var3, -95, this.field_Q, LinkButtonPainter.field_b, StatSubmission.field_s) + 5);
         this.field_U.setBounds(496 - var5 >> 1, (byte) -82, var3, var5, 40);
         this.field_T.setBounds(3 + var4, (byte) -86, 15 + var3, 60, 40);
         this.field_T.field_A = (UiListener) (this);
@@ -97,7 +97,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         if (!this.isFormValid((byte) -100)) {
           return;
         }
-        AccountRequestDialog.a((byte) 120, this.field_Q.field_y);
+        AccountRequestDialog.requestDisplayName((byte) 120, this.field_Q.field_y);
         if (param0 != 55) {
           this.onMoreSuggestions((byte) 61);
         }
@@ -221,7 +221,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new LabeledField(20, param1, 120 + param6, 25, param2, false, 120, param5, tj.field_e, 16777215, param0);
+          var10 = new LabeledField(20, param1, 120 + param6, 25, param2, false, 120, param5, HighscoreSubmissionFactory.field_e, 16777215, param0);
           this.addChild(var10, param5 ^ -106);
           var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param2)).validator(false), param4, 126, var10.field_E + param1, 25 + param6, param3);
           var9.field_A = (UiListener) (this);
@@ -280,7 +280,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     public final void onAction(int param0, byte param1, int param2, TextButton param3, int param4) {
         try {
           if (this.field_T == param3) {
-            TextLayoutLine.a(103);
+            TextLayoutLine.showEmptyLoginForm(103);
           } else {
             if (param3 == this.field_U) {
               this.submitDisplayName(55);

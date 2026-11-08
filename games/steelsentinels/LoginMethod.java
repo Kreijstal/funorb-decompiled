@@ -54,7 +54,7 @@ final class LoginMethod {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, RgbSprite[] param2, int param3, int param4, byte param5, int param6) {
+    final static void drawNineSliceFrame(int param0, int param1, RgbSprite[] param2, int param3, int param4, byte param5, int param6) {
         int var22 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -131,7 +131,7 @@ final class LoginMethod {
             }
             var19 = var15;
             if (param5 != -31) {
-              LoginMethod.a(true, 28);
+              LoginMethod.drawRootAndTooltip(true, 28);
             }
             var20 = var16;
             if (var20 < var19) {
@@ -239,14 +239,14 @@ final class LoginMethod {
         }
     }
 
-    final static void a(boolean param0, int param1) {
-        nd.a(param0, 230827172);
+    final static void drawRootAndTooltip(boolean param0, int param1) {
+        ChatFilterPackingHelpers.updatePanelAndTooltip(param0, 230827172);
         if (param1 > -121) {
           field_b = (String) null;
         }
     }
 
-    final static boolean a(int param0, byte param1) {
+    final static boolean isPowerOfTwo(int param0, byte param1) {
         if (param1 >= -70) {
           return false;
         }

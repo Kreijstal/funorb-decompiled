@@ -11,7 +11,7 @@ final class QuickChatInputHelpers {
 
     final static boolean handleQuickChatKey(int param0, int param1, int param2) {
         if (NameAvailabilityValidator.field_q == 13) {
-          LoginForm.a((byte) -126);
+          LoginForm.closeQuickChatIfOpen((byte) -126);
           return true;
         }
         int var3 = -28 / ((35 - param0) / 54);
@@ -76,10 +76,10 @@ final class QuickChatInputHelpers {
     final static void openQuickChatMenu(boolean param0) {
         if (param0) {
           QuickChatInputHelpers.openQuickChatMenu(true);
-          pa.a(12105, ImageProducerRasterBuffer.field_m);
+          TutorialStepTable.showQuickChatMenu(12105, ImageProducerRasterBuffer.field_m);
           return;
         }
-        pa.a(12105, ImageProducerRasterBuffer.field_m);
+        TutorialStepTable.showQuickChatMenu(12105, ImageProducerRasterBuffer.field_m);
     }
 
     static {

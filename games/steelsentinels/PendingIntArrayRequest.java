@@ -13,13 +13,13 @@ final class PendingIntArrayRequest extends IntrusiveNode {
 
     final static String getCurrentAccountName(int param0) {
         if (DiskCacheWorker.field_j == AccountTermsPanel.field_ab) {
-          return kf.field_o;
+          return HighscoreTable.field_o;
         }
-        if (!gf.field_a.isComplete((byte) -72)) {
-          return gf.field_a.getName(true);
+        if (!GeneratedSpriteHelpers.field_a.isComplete((byte) -72)) {
+          return GeneratedSpriteHelpers.field_a.getName(true);
         }
-        if (AccountTermsPanel.field_ab == jn.field_b) {
-          return gf.field_a.getName(true);
+        if (AccountTermsPanel.field_ab == MusicTrackHelpers.field_b) {
+          return GeneratedSpriteHelpers.field_a.getName(true);
         }
         if (param0 >= 80) {
           return LobbyPlayer.field_Xb;
@@ -43,10 +43,10 @@ final class PendingIntArrayRequest extends IntrusiveNode {
     }
 
     final static SceneWidget getActiveOverlayWidget(byte param0) {
-        if (fj.field_f > 0) {
+        if (PasswordRuleHelpers.field_f > 0) {
           return Js5NetworkRequest.field_L;
         }
-        if (bd.field_c > 0) {
+        if (SolidSpriteHelpers.field_c > 0) {
           return Js5NetworkRequest.field_L;
         }
         if (param0 != -66) {

@@ -42,20 +42,20 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
         this.field_Q = false;
         if (this.field_Jb) {
-          TextLayoutLine.d(0);
+          TextLayoutLine.showLoginForm(0);
         } else {
           if (this.field_Mb) {
-            EditableTextWidget.n(0);
+            EditableTextWidget.showLoginFormForRequest(0);
             return;
           }
           return;
         }
     }
 
-    final static void a(byte param0, String param1) {
+    final static void requestDisplayName(byte param0, String param1) {
         try {
-          TextButton.a(param1, (byte) -107);
-          LoginDialog.a((byte) -83, false, rh.field_p);
+          TextButton.setRequestedDisplayName(param1, (byte) -107);
+          LoginDialog.openAccountRequestDialog((byte) -83, false, PendingDataRequest.field_p);
           if (param0 < 108) {
             particleReuseBuffer = (ParticleEffect[]) null;
           }
@@ -98,15 +98,15 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               if (!this.field_Jb) {
                 stackIn_15_2 = StrongCacheEntry.field_J;
               } else {
-                stackIn_15_2 = sl.field_c;
+                stackIn_15_2 = ArchiveLoadStep.field_c;
               }
               ((AccountMessagePanel) (Object) stackIn_14_0).addActionButton(stackIn_14_1, stackIn_15_2, 88);
             } else {
-              var6.appendButton(-122, (UiListener) (this), sl.field_c);
+              var6.appendButton(-122, (UiListener) (this), ArchiveLoadStep.field_c);
             }
           } else {
-            var6.addActionButton(11, cl.field_c, 94);
-            var6.addActionButton(17, qe.field_b, 118);
+            var6.addActionButton(11, LoginResultHelpers.field_c, 94);
+            var6.addActionButton(17, TextSpriteHelpers.field_b, 118);
           }
           if (param2 == 3) {
             var6.addActionButton(7, ProxyAuthenticationException.field_d, 125);
@@ -115,7 +115,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               var6.addActionButton(8, StripedProgressBar.field_X, 69);
             } else {
               if (param2 == 6) {
-                var6.addActionButton(9, rn.field_s, 102);
+                var6.addActionButton(9, PendingAckRequest.field_s, 102);
               } else {
                 if (param2 != 9) {
                   this.transitionToContent(var6, -22908735);
@@ -157,7 +157,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void setAnimationSpeed(byte param0, int param1) {
         LoginActionHelpers.field_j = (param1 << 16) / 150;
         LoginActionHelpers.field_i = 100 * param1 / 150;
         LoginActionHelpers.field_f = 400 * param1 / 150;
@@ -170,10 +170,10 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
     public void onAction(int param0, byte param1, int param2, TextButton param3, int param4) {
         try {
           if (this.field_Db) {
-            LabeledField.a(3, 0);
+            LabeledField.setPendingMessageId(3, 0);
             this.closeDialog(106);
           } else {
-            BufferedRandomAccessFile.a("tochangedisplayname.ws", Projectile.d((byte) -21), (byte) -47);
+            BufferedRandomAccessFile.openRelativeUrl("tochangedisplayname.ws", Projectile.getApplet((byte) -21), (byte) -47);
           }
           int var6_int = 31 / ((param1 + 85) / 36);
         } catch (RuntimeException runtimeException) {
@@ -222,7 +222,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
     }
 
-    final static void a(boolean param0, int[] param1, int param2, int param3, int param4) {
+    final static void halveAndAddPixels(boolean param0, int[] param1, int param2, int param3, int param4) {
         int var8 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

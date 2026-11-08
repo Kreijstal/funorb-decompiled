@@ -27,26 +27,26 @@ final class LoginDialog extends ContentTransitionDialog {
         }
     }
 
-    final static kf a(byte param0, int param1, int param2, int param3, int param4) {
+    final static HighscoreTable findOrSendListRequest(byte param0, int param1, int param2, int param3, int param4) {
         int var7 = SteelSentinels.obfuscationControl;
-        kf var5 = (kf) (SentinelCommand.field_w.first(13058));
+        HighscoreTable var5 = (HighscoreTable) (SentinelCommand.field_w.first(13058));
         int var6 = -56 % ((-3 - param0) / 44);
         while (var5 != null) {
           if (var5.field_C == param2) {
             return var5;
           }
-          var5 = (kf) (SentinelCommand.field_w.next((byte) -28));
+          var5 = (HighscoreTable) (SentinelCommand.field_w.next((byte) -28));
         }
-        var5 = new kf();
+        var5 = new HighscoreTable();
         var5.field_u = param4;
         var5.field_w = param1;
         var5.field_C = param2;
         SentinelCommand.field_w.addLast(3, var5);
-        TextHotspotWidget.a(param3, var5, -2864);
+        TextHotspotWidget.sendListRequest(param3, var5, -2864);
         return var5;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawLobbyOverlays(byte param0, boolean param1) {
         SceneWidget stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
         SceneWidget stackIn_13_0 = null;
@@ -58,7 +58,7 @@ final class LoginDialog extends ContentTransitionDialog {
         if (param0 > -102) {
           return;
         }
-        ArchiveRequest.a(-640 + SoftwareRaster.field_c >> 1, 0, -102, 640 + SoftwareRaster.field_c >> 1, SoftwareRaster.field_j);
+        ArchiveRequest.pushClip(-640 + SoftwareRaster.field_c >> 1, 0, -102, 640 + SoftwareRaster.field_c >> 1, SoftwareRaster.field_j);
         if (SentinelCommand.field_t > 0) {
           if (null != Js5ArchiveManager.field_e) {
             Js5ArchiveManager.field_e.drawOpaque(QuickChatMenu.field_Ub.field_Y, 0);
@@ -70,8 +70,8 @@ final class LoginDialog extends ContentTransitionDialog {
           stackIn_14_1 = (param1) && (!LobbyStateHelpers.field_b);
           ((SceneWidget) (Object) stackIn_13_0).drawFullScreen(stackIn_14_1, (byte) 127);
         }
-        if (!(bd.field_c <= 0) ||
-          !(fj.field_f <= 0)) {
+        if (!(SolidSpriteHelpers.field_c <= 0) ||
+          !(PasswordRuleHelpers.field_f <= 0)) {
           if (null != Js5ArchiveManager.field_e) {
             Js5ArchiveManager.field_e.drawOpaque(SocialListPanel.field_ec.field_Y, 0);
           }
@@ -85,7 +85,7 @@ final class LoginDialog extends ContentTransitionDialog {
         MatchingTextValidator.popRasterStateWithIntGuard(98);
     }
 
-    final static void a(int param0, int param1, int param2, LobbyPlayer param3, ScrollContainer param4, int param5, int param6) {
+    final static void openSocialEntryMenu(int param0, int param1, int param2, LobbyPlayer param3, ScrollContainer param4, int param5, int param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -110,7 +110,7 @@ final class LoginDialog extends ContentTransitionDialog {
           var11 = param5;
           var12.field_j.layoutItems(var11, var10, var9, (byte) -101, var8);
           if (param2 != 4) {
-            LoginDialog.a((byte) -65, -107, 25, 12, -73);
+            LoginDialog.findOrSendListRequest((byte) -65, -107, 25, 12, -73);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -133,21 +133,21 @@ final class LoginDialog extends ContentTransitionDialog {
         }
     }
 
-    final static void a(byte param0, boolean param1, String param2) {
+    final static void openAccountRequestDialog(byte param0, boolean param1, String param2) {
         try {
           EmailAvailabilityValidator.field_p = param1;
           DelayedServerPacket.field_A = true;
-          ArrayWidgetContainer.field_O = new AccountRequestDialog(GradientOutlineTextPainter.field_p, gf.field_d, param2, LoginMethod.field_d, EmailAvailabilityValidator.field_p);
+          ArrayWidgetContainer.field_O = new AccountRequestDialog(GradientOutlineTextPainter.field_p, GeneratedSpriteHelpers.field_d, param2, LoginMethod.field_d, EmailAvailabilityValidator.field_p);
           GradientOutlineTextPainter.field_p.pushPanel(ArrayWidgetContainer.field_O, -118);
           if (param0 > -63) {
-            LoginDialog.m(57);
+            LoginDialog.buildMainScreenRoots(57);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bf.MB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void m(int param0) {
+    final static void buildMainScreenRoots(int param0) {
         Sprite.field_l = new SceneWidget(0L, (SceneWidget) null);
         if (param0 != 854) {
           field_zb = (String) null;
@@ -156,11 +156,11 @@ final class LoginDialog extends ContentTransitionDialog {
           Sprite.field_l.addChild(Explosion.field_C, 126);
         }
         Sprite.field_l.addChild(TeamColourTinter.field_c, 122);
-        BoundedRandomAccessFile.field_f = new uf(ThreeSliceButtonPainter.field_p, Sprite.field_l);
+        BoundedRandomAccessFile.field_f = new SocialTabsPanel(ThreeSliceButtonPainter.field_p, Sprite.field_l);
         QuickChatMenu.field_Ub = new SceneWidget(0L, (SceneWidget) null);
         QuickChatMenu.field_Ub.addChild(BoundedRandomAccessFile.field_f.field_d, param0 - 734);
         QuickChatMenu.field_Ub.addChild(BufferedSocket.field_i, 120);
-        TextHotspotRegion.d(0);
+        TextHotspotRegion.layoutLobbyWidgets(0);
     }
 
     final void transitionToContent(UiComponent param0, int param1) {
@@ -174,7 +174,7 @@ final class LoginDialog extends ContentTransitionDialog {
         }
     }
 
-    final static String a(int param0, int param1, byte param2, CharSequence[] param3) {
+    final static String joinCharSequenceRange(int param0, int param1, byte param2, CharSequence[] param3) {
         int var6_int = 0;
         int var7 = 0;
         StringBuilder discarded$0 = null;

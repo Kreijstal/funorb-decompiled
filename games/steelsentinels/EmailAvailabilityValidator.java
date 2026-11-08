@@ -14,7 +14,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
     private MatchingTextValidator field_x;
     static DisplayNameForm field_o;
 
-    final static void a(boolean param0, LobbyGame param1) {
+    final static void insertLobbyEntrySorted(boolean param0, LobbyGame param1) {
         LobbyGame var2 = null;
         int var3 = 0;
         LobbyGame var4 = null;
@@ -29,7 +29,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           var2 = (LobbyGame) (ClientErrorSupport.field_e.first(13058));
           if (!param0) {
             var4 = (LobbyGame) null;
-            EmailAvailabilityValidator.a(true, (LobbyGame) null);
+            EmailAvailabilityValidator.insertLobbyEntrySorted(true, (LobbyGame) null);
           }
           while (var2 != null) {
             if (var2.comesBeforeGame(param1, (byte) -63)) {
@@ -58,7 +58,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(String param0, boolean param1, boolean param2, int param3) {
+    final static void openLoginDialog(String param0, boolean param1, boolean param2, int param3) {
         SocialListPanel.resetLoginRequestState(-29713);
         if (param3 != 12) {
           return;
@@ -86,7 +86,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         try {
           if (param0 != 100) {
             var4 = (CipherPacketBuffer) null;
-            EmailAvailabilityValidator.a((CipherPacketBuffer) null, (byte) 97);
+            EmailAvailabilityValidator.readMeshMaterialRecords((CipherPacketBuffer) null, (byte) 97);
           }
           if (this.field_x.validateText(param1, -1) == ArchiveProvider.field_d) {
             stackIn_4_0 = this.field_x.messageForText(100, param1);
@@ -112,7 +112,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void sendGameSetupAction(int param0, byte param1) {
         CipherPacketBuffer var2 = ClockAndCookieHelpers.field_g;
         var2.writeCipheredOpcode(param0, (byte) -117);
         var2.writeByte((byte) 109, 1);
@@ -120,12 +120,12 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         int var3 = 30 / ((11 - param1) / 51);
     }
 
-    final vd validateText(String param0, int param1) {
+    final TransitionTimerHelpers validateText(String param0, int param1) {
         NameCheckResult var3 = null;
         RuntimeException var3_ref = null;
-        vd stackIn_2_0 = null;
-        vd stackIn_8_0 = null;
-        vd stackIn_13_0 = null;
+        TransitionTimerHelpers stackIn_2_0 = null;
+        TransitionTimerHelpers stackIn_8_0 = null;
+        TransitionTimerHelpers stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -145,7 +145,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
             this.field_r = var3.isAvailable(200);
           }
           if (this.field_r) {
-            stackIn_13_0 = vf.field_b;
+            stackIn_13_0 = RequestResendHelpers.field_b;
           } else {
             stackIn_13_0 = ArchiveProvider.field_d;
           }
@@ -185,28 +185,28 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        qf.field_c.setBounds(0, param1, param4, param3, param5);
+    final static void layoutQuickChatMenu(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        RankingAndRasterHelpers.field_c.setBounds(0, param1, param4, param3, param5);
         if (param6 <= 81) {
           field_n = (String[]) null;
         }
         if (IntKeyLookup.field_i != null) {
-          IntKeyLookup.field_i.layoutMenu(param2, param4, param0, (byte) 27, -ed.field_i + param0, param4);
+          IntKeyLookup.field_i.layoutMenu(param2, param4, param0, (byte) 27, -SessionSeedHelpers.field_i + param0, param4);
         }
     }
 
-    final static jj[] a(CipherPacketBuffer param0, byte param1) {
+    final static MeshMaterial[] readMeshMaterialRecords(CipherPacketBuffer param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        jj[] var4 = null;
-        jj var6_ref_jj = null;
+        MeshMaterial[] var4 = null;
+        MeshMaterial var6_ref_jj = null;
         int var6 = 0;
         int var7 = 0;
         Object stackIn_3_0 = null;
-        jj[] stackIn_6_0 = null;
-        jj[] stackIn_14_0 = null;
+        MeshMaterial[] stackIn_6_0 = null;
+        MeshMaterial[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -216,20 +216,20 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           var2_int = param0.readBits(-126, 8);
           if (0 < var2_int) {
             stackIn_3_0 = null;
-            return (jj[]) (stackIn_3_0);
+            return (MeshMaterial[]) (stackIn_3_0);
           }
           if (param1 <= 22) {
-            stackIn_6_0 = (jj[]) null;
+            stackIn_6_0 = (MeshMaterial[]) null;
             return stackIn_6_0;
           }
           var3 = param0.readBits(-77, 12);
-          var4 = new jj[var3];
+          var4 = new MeshMaterial[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (!RasterBuffer.a(-1766, param0)) {
-              var6 = param0.readBits(30, fm.a(-1 + var5, 80));
+            if (!RasterBuffer.readBooleanBit(-1766, param0)) {
+              var6 = param0.readBits(30, QuickChatParameterType.signedBitLength(-1 + var5, 80));
               var4[var5] = var4[var6];
             } else {
-              var6_ref_jj = new jj();
+              var6_ref_jj = new MeshMaterial();
               param0.readBits(-78, 24);
               param0.readBits(80, 24);
               var6_ref_jj.field_g = param0.readBits(94, 24);
@@ -256,7 +256,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, String param3, int param4, int param5) {
+    final static boolean drawHoverTextButton(int param0, int param1, int param2, String param3, int param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -295,7 +295,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
           if (param2 < 115) {
             return true;
           }
-          jm.a(param0, param4, var8, 1, param1, param5);
+          PendingIntReplyRequest.drawNineSliceFrame(param0, param4, var8, 1, param1, param5);
           if (param3 != null) {
             BirthDateEntryPanel.field_U.drawCentered(param3, param5 / 2 + param1, (1 + (param4 + BirthDateEntryPanel.field_U.field_U)) / 2 + param0, var7, -1);
           }
@@ -315,7 +315,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int mapPartIdToIndex(int param0, int param1) {
         int var2;
         int var3;
         var3 = SteelSentinels.obfuscationControl;

@@ -98,8 +98,8 @@ final class NumericDateInputWidget extends DateInputWidget {
         param2 = param2 + this.field_o;
         param0 = param0 + this.field_z;
         this.drawCenteredLabel(15853, this.field_fb, param2, UsernameCredentials.field_n, param0);
-        this.drawCenteredLabel(15853, this.field_gb, param2, qi.field_b, param0);
-        this.drawCenteredLabel(15853, this.field_db, param2, fj.field_g, param0);
+        this.drawCenteredLabel(15853, this.field_gb, param2, LoginCredentialHelpers.field_b, param0);
+        this.drawCenteredLabel(15853, this.field_db, param2, PasswordRuleHelpers.field_g, param0);
     }
 
     final int getMonthIndex(int param0) {
@@ -138,7 +138,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSubscribePage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException var2_ref = null;
@@ -150,7 +150,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           try {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
-              param0.getAppletContext().showDocument(DirectByteStorage.a(param1 - 9268, var2, param0), "_top");
+              param0.getAppletContext().showDocument(DirectByteStorage.appendSessionParameters(param1 - 9268, var2, param0), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = (Exception) (Object) decompiledCaughtException;

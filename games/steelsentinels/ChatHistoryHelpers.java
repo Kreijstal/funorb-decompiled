@@ -1,0 +1,128 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ChatHistoryHelpers {
+    static StringBuilder field_g;
+    static SceneWidget field_a;
+    static boolean field_b;
+    static String field_f;
+    static int field_c;
+    static RgbSprite field_e;
+    static String[] field_d;
+
+    final static void appendChatHistory(ChatMessage param0, byte param1) {
+        int dupTemp$3 = 0;
+        int dupTemp$0 = 0;
+        int var3 = 0;
+        int incrementValue$2 = 0;
+        int fieldTemp$1 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var2_intLifetime1;
+        int var2_intLifetime2;
+        var5 = SteelSentinels.obfuscationControl;
+        try {
+          for (var2_int = 0; var2_int < 3; var2_int++) {
+            SocialTabsPanel.field_a[var2_int] = 0;
+          }
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < DesignerPageTables.field_a; var2_intLifetime1++) {
+            if (param0.field_k == ChatLineMenuHelpers.field_e[var2_intLifetime1].field_k) {
+              dupTemp$3 = ChatLineMenuHelpers.field_e[var2_intLifetime1].getVisibilityClass((byte) 58);
+              SocialTabsPanel.field_a[dupTemp$3] = SocialTabsPanel.field_a[dupTemp$3] + 1;
+            }
+          }
+          dupTemp$0 = param0.getVisibilityClass((byte) 58);
+          SocialTabsPanel.field_a[dupTemp$0] = SocialTabsPanel.field_a[dupTemp$0] + 1;
+          if (param1 >= -103) {
+            return;
+          }
+          var2_intLifetime2 = 0;
+          for (var3 = 0; DesignerPageTables.field_a > var3; var3++) {
+            boolean decompiledFrameRemainder0 = true;
+            if (ChatLineMenuHelpers.field_e[var3].field_k == param0.field_k) {
+              var4 = ChatLineMenuHelpers.field_e[var3].getVisibilityClass((byte) 58);
+              if (ArchiveLoadSequence.field_h < SocialTabsPanel.field_a[var4]) {
+                SocialTabsPanel.field_a[var4] = SocialTabsPanel.field_a[var4] - 1;
+                decompiledFrameRemainder0 = false;
+              }
+            }
+            if (decompiledFrameRemainder0) {
+              incrementValue$2 = var2_intLifetime2;
+              var2_intLifetime2++;
+              ChatLineMenuHelpers.field_e[incrementValue$2] = ChatLineMenuHelpers.field_e[var3];
+            }
+          }
+          DesignerPageTables.field_a = var2_intLifetime2;
+          fieldTemp$1 = DesignerPageTables.field_a;
+          DesignerPageTables.field_a = DesignerPageTables.field_a + 1;
+          ChatLineMenuHelpers.field_e[fieldTemp$1] = param0;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_25_0 = var2;
+          stackIn_25_1 = new StringBuilder().append("tf.C(");
+          if (param0 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
+          }
+          throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static void drawQuickChatHelpOverlay(int param0, boolean param1) {
+        if (null != RankingAndRasterHelpers.field_e) {
+          SoftwareRaster.halveBrightnessRectangle(SoftwareRaster.field_i, SoftwareRaster.field_l, -SoftwareRaster.field_i + SoftwareRaster.field_b, SoftwareRaster.field_d - SoftwareRaster.field_l);
+          RankingAndRasterHelpers.field_e.drawFullScreen(param1, (byte) 127);
+        }
+        if (param0 != 0) {
+          field_a = (SceneWidget) null;
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_e = null;
+        field_g = null;
+        if (param0 != 26) {
+          return;
+        }
+        field_a = null;
+        field_f = null;
+        field_d = null;
+    }
+
+    final static boolean isRenderableCharacter(int param0, char param1) {
+        if (param1 >= 32 &&
+          param1 <= 126) {
+          return true;
+        }
+        if (param0 != 2459) {
+          return false;
+        }
+        if (param1 >= 160 &&
+          param1 <= 255) {
+          return true;
+        }
+        if (param1 != 8364 &&
+          338 != param1 &&
+          8212 != param1 &&
+          param1 != 339 &&
+          param1 != 376) {
+          return false;
+        }
+        return true;
+    }
+
+    static {
+        field_g = new StringBuilder(80);
+        field_f = "Loading music";
+        field_d = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
+    }
+}

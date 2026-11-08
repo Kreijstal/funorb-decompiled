@@ -1,0 +1,75 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class HighscoreTable extends IntrusiveNode {
+    String[][] field_x;
+    static String field_o;
+    static boolean field_s;
+    static int[] field_t;
+    int[][] field_z;
+    static String field_r;
+    int field_C;
+    static String field_v;
+    int field_u;
+    boolean field_q;
+    long[][] field_D;
+    int field_w;
+    static int field_p;
+    static String field_B;
+    static String[] field_A;
+    static SceneWidget field_y;
+
+    public static void releaseStatics(int param0) {
+        if (param0 == 90) {
+          field_r = null;
+          field_B = null;
+          field_t = null;
+          field_A = null;
+          field_o = null;
+          field_v = null;
+          field_y = null;
+          return;
+        }
+        field_B = (String) null;
+        field_r = null;
+        field_B = null;
+        field_t = null;
+        field_A = null;
+        field_o = null;
+        field_v = null;
+        field_y = null;
+    }
+
+    HighscoreTable() {
+    }
+
+    final static boolean isAsciiLetter(char param0, byte param1) {
+        int var2 = -27 % ((10 - param1) / 49);
+        if (param0 >= 65) {
+          if (90 >= param0) {
+            return true;
+          }
+          if (97 > param0) {
+            return false;
+          }
+          if (param0 <= 122) {
+            return true;
+          }
+          return false;
+        }
+        if (97 > param0) {
+          return false;
+        }
+        if (param0 > 122) {
+          return false;
+        }
+        return true;
+    }
+
+    static {
+        field_B = "WEAPONS";
+        field_r = "Some players haven't unlocked the currently selected game options.<br>Please view the '<%0>' tab on the left for details.";
+        field_v = "<%1> plummeted like a stalled brick";
+        field_p = 0;
+    }
+}

@@ -128,38 +128,38 @@ final class ClientUiHelpers {
         ImageProducerRasterBuffer.field_A[13] = TextAndBitHelpers.field_c;
         ImageProducerRasterBuffer.field_A[3] = CipherPacketBuffer.field_G;
         ImageProducerRasterBuffer.field_A[2] = UsernameCredentials.field_q;
-        ImageProducerRasterBuffer.field_A[7] = jn.field_a;
+        ImageProducerRasterBuffer.field_A[7] = MusicTrackHelpers.field_a;
         ImageProducerRasterBuffer.field_A[0] = BoundedUrlRequest.field_f;
         ImageProducerRasterBuffer.field_A[8] = null;
         ImageProducerRasterBuffer.field_A[6] = DirectByteStorage.field_g;
         ImageProducerRasterBuffer.field_A[5] = DualNode.field_s;
         ImageProducerRasterBuffer.field_A[9] = IntrusiveNode.field_m;
         ImageProducerRasterBuffer.field_A[1] = ParticleEffect.field_C;
-        ImageProducerRasterBuffer.field_A[11] = vc.field_l;
+        ImageProducerRasterBuffer.field_A[11] = DisplayMode.field_l;
         ImageProducerRasterBuffer.field_A[4] = IterableDualNodeDeque.field_h;
         stackIn_5_0 = ImageProducerRasterBuffer.field_A;
         stackIn_5_1 = 44;
         if (!ConditionalTextValue.field_h) {
-          stackIn_6_2 = sa.field_b;
+          stackIn_6_2 = LoadingStatusHelpers.field_b;
         } else {
-          stackIn_6_2 = o.field_a;
+          stackIn_6_2 = SocialStateHelpers.field_a;
         }
         stackIn_5_0[stackIn_5_1] = stackIn_6_2;
         stackIn_8_0 = ImageProducerRasterBuffer.field_A;
         stackIn_8_1 = 43;
         if (AlphaContainer.field_G) {
-          stackIn_9_2 = tm.field_f;
+          stackIn_9_2 = SessionUiHelpers.field_f;
         } else {
-          stackIn_9_2 = fj.field_i;
+          stackIn_9_2 = PasswordRuleHelpers.field_i;
         }
         stackIn_8_0[stackIn_8_1] = stackIn_9_2;
         ImageProducerRasterBuffer.field_A[param0] = AccountNoticeDialog.field_pb;
         ImageProducerRasterBuffer.field_A[14] = SentinelAnimationEditor.field_d[0];
-        ImageProducerRasterBuffer.field_A[23] = cf.field_v;
+        ImageProducerRasterBuffer.field_A[23] = StatSubmission.field_v;
         stackIn_11_0 = ImageProducerRasterBuffer.field_A;
         stackIn_11_1 = 41;
         if (!CachedTextLayout.field_p) {
-          stackIn_12_2 = fm.field_h;
+          stackIn_12_2 = QuickChatParameterType.field_h;
         } else {
           stackIn_12_2 = FrameStyleHelpers.field_b;
         }
@@ -181,7 +181,7 @@ final class ClientUiHelpers {
         ImageProducerRasterBuffer.field_A[19] = NodeDeque.field_a;
         stackIn_14_0 = ImageProducerRasterBuffer.field_A;
         stackIn_14_1 = 47;
-        if (tj.field_a) {
+        if (HighscoreSubmissionFactory.field_a) {
           stackIn_15_2 = SentinelAnimationEditor.field_u;
         } else {
           stackIn_15_2 = RasterBuffer.field_d;
@@ -192,13 +192,13 @@ final class ClientUiHelpers {
         stackIn_17_0 = ImageProducerRasterBuffer.field_A;
         stackIn_17_1 = 42;
         if (NameCheckResult.field_c) {
-          stackIn_18_2 = qm.field_c;
+          stackIn_18_2 = DisplayNameAndAudioHelpers.field_c;
         } else {
           stackIn_18_2 = ClientException.field_j;
         }
         stackIn_17_0[stackIn_17_1] = stackIn_18_2;
-        ImageProducerRasterBuffer.field_A[45] = un.field_e;
-        ImageProducerRasterBuffer.field_A[30] = ed.field_e;
+        ImageProducerRasterBuffer.field_A[45] = ChatHistoryAllocator.field_e;
+        ImageProducerRasterBuffer.field_A[30] = SessionSeedHelpers.field_e;
         stackIn_20_0 = ImageProducerRasterBuffer.field_A;
         stackIn_20_1 = 37;
         if (ModalStack.field_V) {
@@ -209,7 +209,7 @@ final class ClientUiHelpers {
         stackIn_20_0[stackIn_20_1] = stackIn_21_2;
         ImageProducerRasterBuffer.field_A[34] = Sprite.field_e;
         ImageProducerRasterBuffer.field_A[28] = LabeledField.field_cb;
-        ImageProducerRasterBuffer.field_A[25] = vf.field_a;
+        ImageProducerRasterBuffer.field_A[25] = RequestResendHelpers.field_a;
         ImageProducerRasterBuffer.field_A[40] = TriangleMesh.field_R;
         ImageProducerRasterBuffer.field_A[39] = QuickChatMenu.field_nc;
         GameKeyHandler.field_a = SocketConnector.formatTemplate(GameKeyHandler.field_a, param0 ^ -25, new String[]{NameValidationHelpers.replaceAllOccurrences("<img=26>", (byte) 11, "<img=17>", RasterBuffer.field_d)});
@@ -217,12 +217,12 @@ final class ClientUiHelpers {
     }
 
     final static void drawPopupMenu(byte param0) {
-        int var1 = rd.a((byte) -78);
+        int var1 = SpriteLoadingHelpers.getMessageMenuWidth((byte) -78);
         if (param0 >= -60) {
           field_d = (String) null;
         }
-        int var2 = TickClock.a(0);
-        NanoTickClock.field_l.drawFrame((ChecksumAndFrameHelpers.field_c << 1) + var1, -15203, -ChecksumAndFrameHelpers.field_c + PendingIntArrayRequest.field_q, var2 + (cl.field_b << 1), -cl.field_b + ValidationIndicator.field_W);
+        int var2 = TickClock.getPopupHeight(0);
+        NanoTickClock.field_l.drawFrame((ChecksumAndFrameHelpers.field_c << 1) + var1, -15203, -ChecksumAndFrameHelpers.field_c + PendingIntArrayRequest.field_q, var2 + (LoginResultHelpers.field_b << 1), -LoginResultHelpers.field_b + ValidationIndicator.field_W);
         PopupMenuHelpers.drawPopupMenuLines(118);
     }
 
@@ -247,7 +247,7 @@ final class ClientUiHelpers {
           }
           var4_int = param2.getGroupId(param3, 27);
           var5 = param2.getFileId(var4_int, -32759, param1);
-          stackIn_3_0 = vh.a(var5, param2, var4_int, (byte) 48);
+          stackIn_3_0 = KeyRoutingHelpers.loadRgbSprites(var5, param2, var4_int, (byte) 48);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

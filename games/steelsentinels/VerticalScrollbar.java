@@ -44,14 +44,14 @@ final class VerticalScrollbar extends SceneWidget {
         try {
           ce.field_p = PacketLoopHelpers.loadRgbSpriteByName(param1, "basic", "display_name_changed", false);
           ClientGlobals.field_j = new SocialListPanel(0L, NodeHashTableIterator.field_e, MarkerSliderPainter.field_i, DiskCacheWorker.field_d);
-          AccountRegistrationPanel.field_W = new SocialListPanel(0L, NodeHashTableIterator.field_e, DirectByteStorage.field_k, sa.field_a);
+          AccountRegistrationPanel.field_W = new SocialListPanel(0L, NodeHashTableIterator.field_e, DirectByteStorage.field_k, LoadingStatusHelpers.field_a);
           WhirlpoolHasher.field_m = new SceneWidget(0L, (SceneWidget) null);
-          vc.field_h = new SceneWidget(0L, bd.field_f);
-          vc.field_h.field_Kb = 1;
-          ClockAndCookieHelpers.field_a = new SceneWidget(0L, MusicCrossfadeStream.field_J, uj.field_g);
-          SceneWidgetNode.field_E = new SceneWidget(0L, kb.field_b, MenuInputState.field_i);
+          DisplayMode.field_h = new SceneWidget(0L, SolidSpriteHelpers.field_f);
+          DisplayMode.field_h.field_Kb = 1;
+          ClockAndCookieHelpers.field_a = new SceneWidget(0L, MusicCrossfadeStream.field_J, ReflectionCheckHelpers.field_g);
+          SceneWidgetNode.field_E = new SceneWidget(0L, DefaultQuickChatCacheHook.field_b, MenuInputState.field_i);
           CachedTextLayout.field_v = new SceneWidget(0L, ParticleEffect.field_K);
-          WhirlpoolHasher.field_m.addChild(vc.field_h, 121);
+          WhirlpoolHasher.field_m.addChild(DisplayMode.field_h, 121);
           WhirlpoolHasher.field_m.addChild(ClockAndCookieHelpers.field_a, 123);
           WhirlpoolHasher.field_m.addChild(SceneWidgetNode.field_E, 121);
           if (param0 != 109) {
@@ -59,12 +59,12 @@ final class VerticalScrollbar extends SceneWidget {
           }
           WhirlpoolHasher.field_m.addChild(ClientGlobals.field_j, 118);
           WhirlpoolHasher.field_m.addChild(CachedTextLayout.field_v, 120);
-          ClientGlobals.field_j.field_Xb.field_Tb.applyStyle(bd.field_f, 6402);
+          ClientGlobals.field_j.field_Xb.field_Tb.applyStyle(SolidSpriteHelpers.field_f, 6402);
           var5 = ClientGlobals.field_j.field_Xb.field_Tb;
           var6 = var5;
           ClientGlobals.field_j.field_Xb.field_Tb.field_Fb = 1;
           var6.field_Kb = 1;
-          AccountRegistrationPanel.field_W.field_Xb.field_Tb.applyStyle(bd.field_f, 6402);
+          AccountRegistrationPanel.field_W.field_Xb.field_Tb.applyStyle(SolidSpriteHelpers.field_f, 6402);
           var3 = AccountRegistrationPanel.field_W.field_Xb.field_Tb;
           AccountRegistrationPanel.field_W.field_Xb.field_Tb.field_Fb = 1;
           var3.field_Kb = 1;
@@ -299,7 +299,7 @@ final class VerticalScrollbar extends SceneWidget {
     }
 
     VerticalScrollbar(String param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
-        this(WidgetStyleLayer.a((CharSequence) ((Object) param0), (byte) -48), param1, param2, param3, param4);
+        this(WidgetStyleLayer.hashText((CharSequence) ((Object) param0), (byte) -48), param1, param2, param3, param4);
     }
 
     final void layoutScrollbar(int param0, int param1, int param2, int param3) {

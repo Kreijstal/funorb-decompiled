@@ -14,17 +14,17 @@ final class IsaacRandom {
     private int[] memory;
     private int remainingResults;
 
-    final static void b(byte param0) {
+    final static void clearChatHistory(byte param0) {
         int var1_int = 0;
         int var2 = SteelSentinels.obfuscationControl;
         try {
-          for (var1_int = 0; var1_int < uc.field_a; var1_int++) {
-            ph.field_e[var1_int] = null;
+          for (var1_int = 0; var1_int < DesignerPageTables.field_a; var1_int++) {
+            ChatLineMenuHelpers.field_e[var1_int] = null;
           }
           if (param0 != 124) {
-            IsaacRandom.b((byte) 117);
+            IsaacRandom.clearChatHistory((byte) 117);
           }
-          uc.field_a = 0;
+          DesignerPageTables.field_a = 0;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ie.A(" + param0 + ')');
         }
@@ -40,7 +40,7 @@ final class IsaacRandom {
         int var2Lifetime1;
         int var2Lifetime2;
         if (obfuscationGuard < 30) {
-          IsaacRandom.b((byte) -19);
+          IsaacRandom.clearChatHistory((byte) -19);
         }
         int var10 = -1640531527;
         int var5 = -1640531527;

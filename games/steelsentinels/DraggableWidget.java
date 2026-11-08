@@ -16,52 +16,52 @@ final class DraggableWidget extends SingleChildContainer {
     static String[] field_X;
     private int field_V;
 
-    final static void i(int param0) {
+    final static void updateMatchStatusCaption(int param0) {
         int var2;
         var2 = SteelSentinels.obfuscationControl;
         if (param0 != -1) {
           return;
         }
         if (null == BoundedUrlRequest.field_i) {
-          if ((1 << ed.field_j & BoundedUrlRequest.field_i.world.field_X) != 0) {
+          if ((1 << SessionSeedHelpers.field_j & BoundedUrlRequest.field_i.world.field_X) != 0) {
             ImageProducerRasterBuffer.field_A[12] = WhirlpoolHasher.field_d;
           } else {
             if (0 != BoundedUrlRequest.field_i.world.field_X) {
               ImageProducerRasterBuffer.field_A[12] = EmailSyntaxValidator.field_p;
             } else {
-              if ((1 << BoundedUrlRequest.field_i.world.playerCount) - 1 != (1 << ed.field_j | BoundedUrlRequest.field_i.field_N)) {
+              if ((1 << BoundedUrlRequest.field_i.world.playerCount) - 1 != (1 << SessionSeedHelpers.field_j | BoundedUrlRequest.field_i.field_N)) {
                 ImageProducerRasterBuffer.field_A[12] = dg.field_a;
               } else {
-                ImageProducerRasterBuffer.field_A[12] = hm.field_d;
+                ImageProducerRasterBuffer.field_A[12] = LoadoutCostHelpers.field_d;
               }
             }
           }
         } else {
           if (BoundedUrlRequest.field_i.field_J) {
-            if (0 != (BoundedUrlRequest.field_i.world.field_X & 1 << ed.field_j)) {
+            if (0 != (BoundedUrlRequest.field_i.world.field_X & 1 << SessionSeedHelpers.field_j)) {
               ImageProducerRasterBuffer.field_A[12] = ArrayWidgetContainer.field_H;
             } else {
               if (0 != BoundedUrlRequest.field_i.world.field_X) {
                 ImageProducerRasterBuffer.field_A[12] = DialWidget.field_Z;
               } else {
-                if ((BoundedUrlRequest.field_i.field_N | 1 << ed.field_j) != -1 + (1 << BoundedUrlRequest.field_i.world.playerCount)) {
-                  ImageProducerRasterBuffer.field_A[12] = cl.field_i;
+                if ((BoundedUrlRequest.field_i.field_N | 1 << SessionSeedHelpers.field_j) != -1 + (1 << BoundedUrlRequest.field_i.world.playerCount)) {
+                  ImageProducerRasterBuffer.field_A[12] = LoginResultHelpers.field_i;
                 } else {
                   ImageProducerRasterBuffer.field_A[12] = jh.field_g;
                 }
               }
             }
           } else {
-            if ((1 << ed.field_j & BoundedUrlRequest.field_i.world.field_X) != 0) {
+            if ((1 << SessionSeedHelpers.field_j & BoundedUrlRequest.field_i.world.field_X) != 0) {
               ImageProducerRasterBuffer.field_A[12] = WhirlpoolHasher.field_d;
             } else {
               if (0 != BoundedUrlRequest.field_i.world.field_X) {
                 ImageProducerRasterBuffer.field_A[12] = EmailSyntaxValidator.field_p;
               } else {
-                if ((1 << BoundedUrlRequest.field_i.world.playerCount) - 1 != (1 << ed.field_j | BoundedUrlRequest.field_i.field_N)) {
+                if ((1 << BoundedUrlRequest.field_i.world.playerCount) - 1 != (1 << SessionSeedHelpers.field_j | BoundedUrlRequest.field_i.field_N)) {
                   ImageProducerRasterBuffer.field_A[12] = dg.field_a;
                 } else {
-                  ImageProducerRasterBuffer.field_A[12] = hm.field_d;
+                  ImageProducerRasterBuffer.field_A[12] = LoadoutCostHelpers.field_d;
                 }
               }
             }

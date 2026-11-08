@@ -19,12 +19,12 @@ final class AlphaContainer extends SingleChildContainer {
           return;
         }
         CharSequence var2 = (CharSequence) null;
-        AlphaContainer.a(20, (CharSequence) null);
+        AlphaContainer.normalizeDisplayName(20, (CharSequence) null);
         field_W = null;
         field_S = null;
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String normalizeDisplayName(int param0, CharSequence param1) {
         int var6 = 0;
         StringBuilder discarded$0 = null;
         Object stackIn_16_0 = null;
@@ -48,14 +48,14 @@ final class AlphaContainer extends SingleChildContainer {
           var2_int = 0;
           var3 = param1.length();
           while (var3 > var2_int) {
-            if (AccountNoticeDialog.a(param1.charAt(var2_int), -33)) {
+            if (AccountNoticeDialog.isNameSeparator(param1.charAt(var2_int), -33)) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (AccountNoticeDialog.a(param1.charAt(-1 + var3), -33)) {
+            if (AccountNoticeDialog.isNameSeparator(param1.charAt(-1 + var3), -33)) {
               var3--;
               continue;
             }
@@ -73,7 +73,7 @@ final class AlphaContainer extends SingleChildContainer {
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param1.charAt(var6);
             if (IconTextComponent.isAllowedChar((byte) -30, (char) var7)) {
-              var8 = BufferedSocket.a((byte) 115, (char) var7);
+              var8 = BufferedSocket.normalizeNameCharacter((byte) 115, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }
@@ -124,7 +124,7 @@ final class AlphaContainer extends SingleChildContainer {
         }
         RgbSprite var6 = new RgbSprite(this.field_J.field_x, this.field_J.field_E);
         if (param1 <= -99) {
-          IterableNodeHashTable.a(var6, (byte) -90);
+          IterableNodeHashTable.bindSpriteRaster(var6, (byte) -90);
           this.field_J.drawLayer(0, (byte) -128, 0, param3);
           MatchingTextValidator.popRasterStateWithIntGuard(114);
           var6.drawShadedGrayscale(this.field_o + param2, this.field_z + param0, this.field_R);
@@ -132,14 +132,14 @@ final class AlphaContainer extends SingleChildContainer {
         }
     }
 
-    final static int a(boolean param0) {
+    final static int getMeasuredLayoutSize(boolean param0) {
         if (param0) {
           return -12;
         }
         return TickClock.field_d;
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendByteRequest(int param0, int param1) {
         CipherPacketBuffer var2 = ClockAndCookieHelpers.field_g;
         var2.writeCipheredOpcode(param0, (byte) -117);
         var2.writeByte((byte) 111, 1);

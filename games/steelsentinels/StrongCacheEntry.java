@@ -8,12 +8,12 @@ final class StrongCacheEntry extends WeightedCacheEntry {
     static String field_B;
     private Object field_I;
 
-    final Object d(byte param0) {
+    final Object getValue(byte param0) {
         int var2 = -124 / ((70 - param0) / 38);
         return this.field_I;
     }
 
-    final static void a(Object param0, int param1, SystemTaskService param2) {
+    final static void pumpPlatformEvents(Object param0, int param1, SystemTaskService param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -31,7 +31,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (param2.field_b.peekEvent() != null) {
-              MouseWheelInput.a((byte) 125, 1L);
+              MouseWheelInput.sleepMillis((byte) 125, 1L);
               continue;
             }
             break;
@@ -68,14 +68,14 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void openContextMenu(byte param0, boolean param1) {
         NodeDeque.field_g = LoginActionHelpers.field_i;
         GradientOutlineTextPainter.field_u = 0;
         ConditionalTextValue.field_e = 0;
         UiComponent.field_r = 0;
         jh.field_i = new MenuInputState(2);
         int var2 = 116 / ((param0 - 57) / 61);
-        jh.field_i.initializeSelection(param1, -1, 0, NameAvailabilityValidator.a(DelegatingCanvas.field_c, LobbySetupHelpers.field_f, true));
+        jh.field_i.initializeSelection(param1, -1, 0, NameAvailabilityValidator.hitTestPairedSprites(DelegatingCanvas.field_c, LobbySetupHelpers.field_f, true));
     }
 
     StrongCacheEntry(Object param0, int param1) {
@@ -96,7 +96,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         field_J = null;
     }
 
-    final boolean h(int param0) {
+    final boolean isSoftReference(int param0) {
         if (param0 != -29304) {
           return true;
         }

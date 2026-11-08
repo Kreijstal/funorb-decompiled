@@ -42,7 +42,7 @@ final class MessageMenuHelpers {
               return true;
             }
             var4 = FunOrbClient.field_z[var3_int];
-            var12 = DialWidget.a(var4, (byte) 124);
+            var12 = DialWidget.getComponentPreset(var4, (byte) 124);
             if (param2) {
               stackIn_18_0 = var12.length - 8;
             } else {
@@ -138,7 +138,7 @@ final class MessageMenuHelpers {
           var2_int = 0;
           var3 = 110 - CheckboxPainter.field_n - param0;
           var22 = new PartInstruction[]{};
-          var20 = PendingIntArrayRequest.field_v.a(var22, -21636, RegistrationRequestDialog.field_Ob);
+          var20 = PendingIntArrayRequest.field_v.collectSlotsAcceptingType(var22, -21636, RegistrationRequestDialog.field_Ob);
           var4 = var20;
           for (var5_int = 1; var5_int < var20.length; var5_int++) {
             if (0 != (var20[var5_int].field_q & 2)) {
@@ -162,8 +162,8 @@ final class MessageMenuHelpers {
             var2_int += 4;
             var8 = 0;
             if (null == ImageProducerRasterBuffer.field_B) {
-              if (t.field_h >= 0) {
-                var24 = NodeDeque.a(t.field_h, (byte) 67);
+              if (NameTable.field_h >= 0) {
+                var24 = NodeDeque.findPartDefinition(NameTable.field_h, (byte) 67);
                 if (var24 != null &&
                   (var7Lifetime1.field_q & var24.field_Q) != 0) {
                   var8 = 1;
@@ -195,7 +195,7 @@ final class MessageMenuHelpers {
             var10.field_Fb = 2;
             var10.setBounds(0, 64, 12, 2, -4 + var3);
             var11 = var7Lifetime1.field_q;
-            var12 = ThreeSliceButtonPainter.field_v.a((byte) 2, var7Lifetime1);
+            var12 = ThreeSliceButtonPainter.field_v.findAttachedComponentId((byte) 2, var7Lifetime1);
             var10.field_L = (BitmapFont) ((Object) BoundedUrlRequest.field_d);
             var26 = var7Lifetime1.attachedPart;
             if (var26 != null) {
@@ -214,13 +214,13 @@ final class MessageMenuHelpers {
                 var10.field_S = ImageProducerRasterBuffer.field_o;
               }
             }
-            var10.field_S = WeightedCacheEntry.a(var10.field_S, -(var10.field_ub * 2) + var10.field_zb, (byte) -45, var10.field_L);
+            var10.field_S = WeightedCacheEntry.truncateWithEllipsis(var10.field_S, -(var10.field_ub * 2) + var10.field_zb, (byte) -45, var10.field_L);
             var25.addChild(var10, 120);
             param1.addChild(var25, 124);
             var14 = new SceneWidget(-1L, (SceneWidget) null);
             var14.setBounds(0, 2, 78 - var10.field_Lb - 5, 2, -4 + var3);
             if (var26 != null) {
-              var13 = NodeDeque.a(var26.componentId, (byte) 67);
+              var13 = NodeDeque.findPartDefinition(var26.componentId, (byte) 67);
               ParticleEffect.renderPartIcon(var13, var14, (byte) -93, true, var3, 78 + (-var10.field_Lb - 5));
             }
             var25.addChild(var14, param0 + 117);
@@ -304,7 +304,7 @@ final class MessageMenuHelpers {
           if (!param4) {
             stackIn_4_0 = dg.field_f;
           } else {
-            stackIn_4_0 = cf.field_v;
+            stackIn_4_0 = StatSubmission.field_v;
           }
           var6 = stackIn_4_0;
           if (ContentTransitionDialog.field_mb == 0) {
@@ -359,7 +359,7 @@ final class MessageMenuHelpers {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          SceneWidget.field_hb = (IconLabelControl.field_ac + tf.field_c << 1) * PopupMenuSupport.field_c.field_m;
+          SceneWidget.field_hb = (IconLabelControl.field_ac + ChatHistoryHelpers.field_c << 1) * PopupMenuSupport.field_c.field_m;
           IterableDualNodeDeque.field_b = -(var7Lifetime1 >> 1) + (var7Lifetime1 + ProxyAuthenticationException.field_f);
           PendingIntArrayRequest.field_q = ProxyAuthenticationException.field_f - (var7Lifetime1 >> 1);
           if (param0 < 46) {
@@ -392,8 +392,8 @@ final class MessageMenuHelpers {
     }
 
     final static void readChatAvailability(boolean param0) {
-        fj.field_e = param0 ? true : false;
-        uc.field_g = 0 == LoginConnectionStage.field_d.readUnsignedByte((byte) -103) ? true : false;
+        PasswordRuleHelpers.field_e = param0 ? true : false;
+        DesignerPageTables.field_g = 0 == LoginConnectionStage.field_d.readUnsignedByte((byte) -103) ? true : false;
     }
 
     static {

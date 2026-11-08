@@ -15,7 +15,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
     static String field_L;
     static int field_I;
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
+    final static void updateChatPanel(int param0, boolean param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -29,17 +29,17 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           if (AudioService.field_h > StatefulTextPainter.field_p) {
             StatefulTextPainter.field_p = StatefulTextPainter.field_p + 1;
           }
-          if (Checkbox.field_bb.field_i != jn.field_c) {
-            LoginDialogHelpers.field_b = LoginDialogHelpers.field_b + (-jn.field_c + Checkbox.field_bb.field_i);
-            jn.field_c = Checkbox.field_bb.field_i;
+          if (Checkbox.field_bb.field_i != MusicTrackHelpers.field_c) {
+            LoginDialogHelpers.field_b = LoginDialogHelpers.field_b + (-MusicTrackHelpers.field_c + Checkbox.field_bb.field_i);
+            MusicTrackHelpers.field_c = Checkbox.field_bb.field_i;
           }
           if (param0 <= ~StatefulTextPainter.field_p) {
             return;
           }
-          FullscreenFocusCanvas.a(false);
+          FullscreenFocusCanvas.animateOverlayPosition(false);
           DisplayNameForm.field_V.updateInputFullScreen((byte) 115, param1);
           if (null != AssetDecoders.field_b) {
-            if (fj.field_e) {
+            if (PasswordRuleHelpers.field_e) {
               AssetDecoders.field_b.handlePointerFrame((byte) 108, param1, DisplayNameForm.field_V.field_cb, DisplayNameForm.field_V.field_Rb);
             } else {
               AssetDecoders.field_b = null;
@@ -49,19 +49,19 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             var5 = SocialListEntry.field_Yb[var4_int];
             if (var5 != null) {
               if (var5.field_Eb != 0) {
-                LinkButtonPainter.a(12, var4_int, var5);
+                LinkButtonPainter.openChatFilterMenu(12, var4_int, var5);
               }
-              var6 = NameAvailabilityValidator.a(var4_int, 1);
+              var6 = NameAvailabilityValidator.getChatFilterMode(var4_int, 1);
               IntKeyLookup.field_a[var4_int].field_Pb = SceneWidgetNode.field_y[var6];
               ByteStorage.field_f[var4_int].field_S = ClientUiHelpers.field_e[var6];
             }
           }
-          if (fm.field_b.field_Eb != 0) {
-            FunOrbClient.field_x = new ReportAbuseDialog(fm.field_b.field_Rb, fm.field_b.field_cb, fm.field_b.field_zb, fm.field_b.field_Lb, param2, AudioService.field_a, ClientException.field_g, hg.field_e, bd.field_f, QuickChatHelpDialog.field_Tb, ParticleEffect.field_K, (String) null, 0L);
+          if (QuickChatParameterType.field_b.field_Eb != 0) {
+            FunOrbClient.field_x = new ReportAbuseDialog(QuickChatParameterType.field_b.field_Rb, QuickChatParameterType.field_b.field_cb, QuickChatParameterType.field_b.field_zb, QuickChatParameterType.field_b.field_Lb, param2, AudioService.field_a, ClientException.field_g, HighscoreColumnHeader.field_e, SolidSpriteHelpers.field_f, QuickChatHelpDialog.field_Tb, ParticleEffect.field_K, (String) null, 0L);
           }
           var9 = Sprite.rebuildChatHistoryRows(param3, TextLayout.field_g, 85, SocketConnector.field_b);
           if (var9 != null) {
-            ph.a(var9, -1);
+            ChatLineMenuHelpers.openChatMessageContextMenu(var9, -1);
           }
           var8 = SocialRequestHelpers.buildChatInputPrompt(param0 ^ -2);
           if (var8 == null) {

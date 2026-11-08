@@ -145,7 +145,7 @@ abstract class BitmapFont extends DualNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = dj.a(var10, -110);
+                                  var9_int = NumberParsingHelpers.parseDecimalInt(var10, -110);
                                   var4 = var4 + this.field_E[var9_int].field_g;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -308,7 +308,7 @@ abstract class BitmapFont extends DualNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = dj.a(var13, -111);
+                                  var10 = NumberParsingHelpers.parseDecimalInt(var13, -111);
                                   var11_ref_ea = this.field_E[var10];
                                   if (this.field_C == null) {
                                     stackIn_27_0 = var11_ref_ea.field_d;
@@ -440,7 +440,7 @@ abstract class BitmapFont extends DualNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_N = SocketJs5Transport.a(true, 16, var7);
+                                field_N = SocketJs5Transport.parseDecimalInt(true, 16, var7);
                               }
                             } else {
                               field_V = -1;
@@ -450,7 +450,7 @@ abstract class BitmapFont extends DualNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_V = SocketJs5Transport.a(true, 16, var6);
+                          field_V = SocketJs5Transport.parseDecimalInt(true, 16, var6);
                         }
                       } else {
                         field_S = -1;
@@ -460,21 +460,21 @@ abstract class BitmapFont extends DualNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_S = SocketJs5Transport.a(true, 16, var5);
+                    field_S = SocketJs5Transport.parseDecimalInt(true, 16, var5);
                   }
                 } else {
                   field_A = field_L;
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_A = dj.a(var4, -120);
+                field_A = NumberParsingHelpers.parseDecimalInt(var4, -120);
               }
             } else {
               field_T = field_O;
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_T = SocketJs5Transport.a(true, 16, var3);
+            field_T = SocketJs5Transport.parseDecimalInt(true, 16, var3);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -699,7 +699,7 @@ abstract class BitmapFont extends DualNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = dj.a(var18, -115);
+                                    var16_int = NumberParsingHelpers.parseDecimalInt(var18, -115);
                                     var4 = var4 + this.field_E[var16_int].field_g;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {

@@ -35,7 +35,7 @@ final class AccountRequestResult {
           }
           if (var2 != null) {
             var4 = (CharSequence) ((Object) var2);
-            if (SentinelDesigner.a(-92, var4) != 0L) {
+            if (SentinelDesigner.encodeBase37Name(-92, var4) != 0L) {
               return;
             }
           }

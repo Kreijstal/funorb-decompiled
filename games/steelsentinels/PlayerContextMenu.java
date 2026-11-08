@@ -33,12 +33,12 @@ final class PlayerContextMenu {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param2);
-          if (!ArchiveProvider.a(true, var6)) {
+          if (!ArchiveProvider.isValidAccountName(true, var6)) {
             stackIn_2_0 = LoadingScreenHelpers.field_a;
             return stackIn_2_0;
           }
-          if (Projectile.a(86, param2)) {
-            stackIn_6_0 = o.field_f;
+          if (Projectile.isLocalAccountName(86, param2)) {
+            stackIn_6_0 = SocialStateHelpers.field_f;
             return stackIn_6_0;
           }
           if (DisplayNameForm.field_P != 2) {
@@ -48,7 +48,7 @@ final class PlayerContextMenu {
           if (param1 != 55) {
             field_l = (String) null;
           }
-          if (o.a(-42, param2)) {
+          if (SocialStateHelpers.isIgnored(-42, param2)) {
             stackIn_16_0 = SocketConnector.formatTemplate(BoundedRandomAccessFile.field_s, param1 - 78, new String[]{param2});
             return stackIn_16_0;
           }
@@ -56,7 +56,7 @@ final class PlayerContextMenu {
             stackIn_19_0 = NodeIterator.field_g;
             return stackIn_19_0;
           }
-          if (CheckboxPainter.a(param2, -112)) {
+          if (CheckboxPainter.isOnFriendList(param2, -112)) {
             stackIn_23_0 = SocketConnector.formatTemplate(QuickChatMenu.field_ic, -12, new String[]{param2});
             return stackIn_23_0;
           }
@@ -94,7 +94,7 @@ final class PlayerContextMenu {
 
     private final boolean openReportAbuse(int param0, int param1, int param2) {
         if (17 == param0) {
-          FunOrbClient.field_x = new ReportAbuseDialog(this.field_c.field_Rb, this.field_c.field_cb, this.field_c.field_zb, this.field_c.field_Lb, param2, AudioService.field_a, ClientException.field_g, hg.field_e, bd.field_f, QuickChatHelpDialog.field_Tb, ParticleEffect.field_K, this.field_k, this.field_h);
+          FunOrbClient.field_x = new ReportAbuseDialog(this.field_c.field_Rb, this.field_c.field_cb, this.field_c.field_zb, this.field_c.field_Lb, param2, AudioService.field_a, ClientException.field_g, HighscoreColumnHeader.field_e, SolidSpriteHelpers.field_f, QuickChatHelpDialog.field_Tb, ParticleEffect.field_K, this.field_k, this.field_h);
           return true;
         }
         if (param1 > 115) {
@@ -145,7 +145,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (param1 == 2) {
-          ViewportController.a(this.field_g, (byte) 112, param0);
+          ViewportController.sendShortCommand(this.field_g, (byte) 112, param0);
         } else {
           if (3 == param1) {
             ChatMessage.sendShortSetting((byte) -40, param0, this.field_g);
@@ -153,19 +153,19 @@ final class PlayerContextMenu {
             return true;
           }
           if (param1 == 10) {
-            NameAvailabilityValidator.a(this.field_g, (byte) -23, param0);
+            NameAvailabilityValidator.sendShortRequest(this.field_g, (byte) -23, param0);
             var4Lifetime2Lifetime1 = -14 / ((35 - param2) / 45);
             return true;
           }
           if (param1 == 15) {
-            DialWidget.a(this.field_g, param0, 5);
+            DialWidget.sendSelectedGameId(this.field_g, param0, 5);
             var4Lifetime2Lifetime2 = -14 / ((35 - param2) / 45);
             return true;
           }
           if (param1 != 16) {
             return false;
           }
-          DialWidget.a(0, param0, 5);
+          DialWidget.sendSelectedGameId(0, param0, 5);
           var4Lifetime2Lifetime3 = -14 / ((35 - param2) / 45);
           return true;
         }
@@ -214,11 +214,11 @@ final class PlayerContextMenu {
             if (0 == LoginForm.field_Z) {
               this.field_j.addItem(2, 12, FallingPickup.field_H);
             }
-            this.field_j.addItem(2, 13, og.field_a);
+            this.field_j.addItem(2, 13, QuickChatPopupHelpers.field_a);
           }
           if (param1.field_k == 2) {
             if (CachedArchiveProvider.field_y == 0) {
-              this.field_j.addItem(2, 12, fj.field_c);
+              this.field_j.addItem(2, 12, PasswordRuleHelpers.field_c);
             }
             this.field_j.addItem(2, 13, RasterBuffer.field_f);
           }
@@ -298,23 +298,23 @@ final class PlayerContextMenu {
             2 == param2) && DisplayNameForm.field_P == 2) {
             var7 = this.getDisplayName(param1 + 4);
             var4 = var7;
-            var5 = wi.a(this.field_k, (byte) 114);
-            var6 = o.a(-128, this.field_k) ? 1 : 0;
+            var5 = SpriteState.findFriend(this.field_k, (byte) 114);
+            var6 = SocialStateHelpers.isIgnored(-128, this.field_k) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_j.addItem(param1 ^ -4, 4, SocketConnector.formatTemplate(ImageProducerRasterBuffer.field_r, param1 - 121, new String[]{var7}));
               this.field_j.addItem(2, 6, SocketConnector.formatTemplate(GrowableIntList.field_g, param1 - 30, new String[]{var7}));
               if (param0 != null &&
                 param2 != 2 &&
-                !fj.field_e) {
+                !PasswordRuleHelpers.field_e) {
                 this.field_i = param0;
                 this.field_j.addItem(2, 19, SocketConnector.formatTemplate(SocialRequestHelpers.field_f, -75, new String[]{var7}));
               }
             }
             if (var5 != null) {
-              if (!ob.a((byte) -38, this.field_k) &&
-                !fj.field_e) {
-                if (!uc.field_g) {
+              if (!PendingPackedReply.isPrivateChatInputTo((byte) -38, this.field_k) &&
+                !PasswordRuleHelpers.field_e) {
+                if (!DesignerPageTables.field_g) {
                   this.field_j.addItem(2, 8, SocketConnector.formatTemplate(BufferedRandomAccessFile.field_c, -108, new String[]{var7}));
                 }
                 this.field_j.addItem(param1 + 4, 18, SocketConnector.formatTemplate(dg.field_b, param1 ^ 61, new String[]{var7}));
@@ -380,7 +380,7 @@ final class PlayerContextMenu {
           discarded$10 = this.getDisplayName(96);
           return;
         }
-        if (null == nf.field_b) {
+        if (null == LoginEncryptionHelpers.field_b) {
           if (param1 < -73) {
             return;
           }
@@ -395,10 +395,10 @@ final class PlayerContextMenu {
           return;
         }
         var7 = LoginStateQueries.findGamePlayer(this.field_h, false);
-        var4 = ThreeSliceButtonPainter.a(false, this.field_h);
+        var4 = ThreeSliceButtonPainter.findLobbyEntry(false, this.field_h);
         var5 = this.getDisplayName(2);
         if (var4 != null) {
-          if (!nf.field_b.field_rc) {
+          if (!LoginEncryptionHelpers.field_b.field_rc) {
             this.field_j.addItem(2, 1, SocketConnector.formatTemplate(WeightedCacheEntry.field_E, -88, new String[]{var5}));
             if (param1 < -73) {
               return;
@@ -406,7 +406,7 @@ final class PlayerContextMenu {
             discarded$5 = this.getDisplayName(96);
             return;
           }
-          if (nf.field_b.field_Mc < 0) {
+          if (LoginEncryptionHelpers.field_b.field_Mc < 0) {
             if (param1 < -73) {
               return;
             }
@@ -421,8 +421,8 @@ final class PlayerContextMenu {
           return;
         }
         if (var7 != null &&
-          nf.field_b.field_dc) {
-          if (nf.field_b.field_wc >= nf.field_b.field_Ub) {
+          LoginEncryptionHelpers.field_b.field_dc) {
+          if (LoginEncryptionHelpers.field_b.field_wc >= LoginEncryptionHelpers.field_b.field_Ub) {
             if (param1 < -73) {
               return;
             }
@@ -447,7 +447,7 @@ final class PlayerContextMenu {
             discarded$1 = this.getDisplayName(96);
             return;
           }
-          this.field_j.addItem(2, 0, SocketConnector.formatTemplate(t.field_j, -18, new String[]{var5}));
+          this.field_j.addItem(2, 0, SocketConnector.formatTemplate(NameTable.field_j, -18, new String[]{var5}));
           if (param1 < -73) {
             return;
           }
@@ -466,7 +466,7 @@ final class PlayerContextMenu {
         int var4;
         LobbyGame var5;
         var4 = SteelSentinels.obfuscationControl;
-        if (null != nf.field_b) {
+        if (null != LoginEncryptionHelpers.field_b) {
           if (param0 == 64) {
             return;
           }
@@ -487,15 +487,15 @@ final class PlayerContextMenu {
           this.field_j.addItem(param0 ^ 66, 3, SocketConnector.formatTemplate(AccountRegistrationPanel.field_Z, -38, new String[]{var3}));
         } else {
           if (var5.field_cc) {
-            this.field_j.addItem(param0 ^ 66, 2, SocketConnector.formatTemplate(cl.field_a, -126, new String[]{var3}));
+            this.field_j.addItem(param0 ^ 66, 2, SocketConnector.formatTemplate(LoginResultHelpers.field_a, -126, new String[]{var3}));
           } else {
             if (!var5.field_bc &&
               var5.field_dc) {
               if (!var5.field_rc) {
-                this.field_j.addItem(2, 2, SocketConnector.formatTemplate(cd.field_f, -70, new String[]{var3}));
+                this.field_j.addItem(2, 2, SocketConnector.formatTemplate(QuickChatPacketHelpers.field_f, -70, new String[]{var3}));
               } else {
                 if (var5.field_cc) {
-                  this.field_j.addItem(2, 2, SocketConnector.formatTemplate(cd.field_f, -70, new String[]{var3}));
+                  this.field_j.addItem(2, 2, SocketConnector.formatTemplate(QuickChatPacketHelpers.field_f, -70, new String[]{var3}));
                 }
               }
             }
@@ -513,11 +513,11 @@ final class PlayerContextMenu {
 
     final static int sine(int param0, int param1) {
         if (param0 == 20612) {
-          return lf.field_e[2047 & param1];
+          return MeshRasterState.field_e[2047 & param1];
         }
         String var3 = (String) null;
         PlayerContextMenu.requestAddIgnore(120, (byte) -58, (String) null);
-        return lf.field_e[2047 & param1];
+        return MeshRasterState.field_e[2047 & param1];
     }
 
     final static PaletteBitmapFont loadPaletteFont(ResourceArchive param0, ResourceArchive param1, boolean param2, String param3, String param4) {
@@ -541,7 +541,7 @@ final class PlayerContextMenu {
           }
           var5_int = param0.getGroupId(param3, 46);
           var6 = param0.getFileId(var5_int, -32759, param4);
-          stackIn_3_0 = in.a(param1, 112, var6, param0, var5_int);
+          stackIn_3_0 = SocialPacketHelpers.loadPaletteFont(param1, 112, var6, param0, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -582,7 +582,7 @@ final class PlayerContextMenu {
           PlayerContextMenu.releaseStatics(-11);
         }
         if (param2 == 8) {
-          ValidatedTextWidget.a(this.field_h, this.field_k, 2);
+          ValidatedTextWidget.openPrivateChatTo(this.field_h, this.field_k, 2);
           return true;
         }
         if (param2 == 18) {
@@ -590,29 +590,29 @@ final class PlayerContextMenu {
           return true;
         }
         if (param2 == 11) {
-          TextLayoutLine.a(0, this.field_f, param1, -18853);
+          TextLayoutLine.setChatFilterMode(0, this.field_f, param1, -18853);
           return true;
         }
         if (param2 == 12) {
-          TextLayoutLine.a(1, this.field_f, param1, -18853);
+          TextLayoutLine.setChatFilterMode(1, this.field_f, param1, -18853);
           return true;
         }
         if (param2 == 13) {
-          TextLayoutLine.a(2, this.field_f, param1, -18853);
+          TextLayoutLine.setChatFilterMode(2, this.field_f, param1, -18853);
           return true;
         }
         if (param2 == 14) {
-          ValidationIndicator.g(0);
+          ValidationIndicator.openChatInput(0);
           return true;
         }
         if (param2 == 20) {
-          AccountChoicePanel.j(13171);
+          AccountChoicePanel.closeChatInput(13171);
           return true;
         }
         if (param2 != 19) {
           return false;
         }
-        UiContainer.a(this.field_h, this.field_i, -116, this.field_f, this.field_k);
+        UiContainer.openQuickChatForRecipient(this.field_h, this.field_i, -116, this.field_f, this.field_k);
         return true;
     }
 
@@ -626,7 +626,7 @@ final class PlayerContextMenu {
         Object var4 = null;
         if (4 != param0) {
           if (param0 == 5) {
-            var5 = DialWidget.a(this.field_k, param2, true);
+            var5 = DialWidget.requestRemoveFriend(this.field_k, param2, true);
             if (var5 != null) {
               MusicCrossfadeStream.appendChatMessage((String) null, var5, 0, (byte) 21, this.field_k, 2);
               return true;
@@ -637,7 +637,7 @@ final class PlayerContextMenu {
             if (param0 != 7) {
               return false;
             }
-            var6 = rn.a(this.field_a, param2, this.field_k, true);
+            var6 = PendingAckRequest.requestRemoveIgnore(this.field_a, param2, this.field_k, true);
             if (var6 != null) {
               MusicCrossfadeStream.appendChatMessage((String) null, var6, 0, (byte) 21, this.field_k, 2);
               return true;
@@ -661,7 +661,7 @@ final class PlayerContextMenu {
 
     PlayerContextMenu(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_j = new ContextMenu(jn.field_h);
+          this.field_j = new ContextMenu(MusicTrackHelpers.field_h);
           this.field_k = param2;
           this.field_i = param6;
           this.field_g = param4;

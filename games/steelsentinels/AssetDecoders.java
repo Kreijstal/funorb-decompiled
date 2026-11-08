@@ -41,27 +41,27 @@ final class AssetDecoders {
     }
 
     final static void createTutorialSteps(byte param0) {
-        pa.field_d = new TutorialStep[17];
-        pa.field_d[0] = new TutorialStep(0, 170, 170, 300, 0, (RgbSprite) null, true);
+        TutorialStepTable.field_d = new TutorialStep[17];
+        TutorialStepTable.field_d[0] = new TutorialStep(0, 170, 170, 300, 0, (RgbSprite) null, true);
         if (param0 != 122) {
           return;
         }
-        pa.field_d[1] = new TutorialStep(1, 224, 110, 200, 0, (RgbSprite) null, false);
-        pa.field_d[2] = new TutorialStep(2, 224, 86, 400, 0, (RgbSprite) null, true);
-        pa.field_d[3] = new TutorialStep(3, 224, 60, 200, 0, (RgbSprite) null, false);
-        pa.field_d[4] = new TutorialStep(4, 224, 60, 285, 0, (RgbSprite) null, false);
-        pa.field_d[5] = new TutorialStep(5, 224, 60, 200, 0, (RgbSprite) null, false);
-        pa.field_d[6] = new TutorialStep(6, 224, 60, 285, 0, (RgbSprite) null, false);
-        pa.field_d[7] = new TutorialStep(7, 224, 120, 200, 0, (RgbSprite) null, false);
-        pa.field_d[8] = new TutorialStep(8, 224, 86, 285, 0, (RgbSprite) null, false);
-        pa.field_d[9] = new TutorialStep(9, 170, 86, 300, 0, (RgbSprite) null, true);
-        pa.field_d[10] = new TutorialStep(10, 224, 60, 200, 0, (RgbSprite) null, false);
-        pa.field_d[11] = new TutorialStep(11, 224, 60, 285, 0, (RgbSprite) null, false);
-        pa.field_d[12] = new TutorialStep(12, 224, 100, 285, 0, DialWidgetPainter.field_q[2], false);
-        pa.field_d[13] = new TutorialStep(13, 170, 174, 300, 0, (RgbSprite) null, true);
-        pa.field_d[14] = new TutorialStep(14, 224, 60, 200, 0, (RgbSprite) null, false);
-        pa.field_d[15] = new TutorialStep(15, 224, 60, 400, 0, DialWidgetPainter.field_q[2], false);
-        pa.field_d[16] = new TutorialStep(16, 170, 170, 300, 0, (RgbSprite) null, true);
+        TutorialStepTable.field_d[1] = new TutorialStep(1, 224, 110, 200, 0, (RgbSprite) null, false);
+        TutorialStepTable.field_d[2] = new TutorialStep(2, 224, 86, 400, 0, (RgbSprite) null, true);
+        TutorialStepTable.field_d[3] = new TutorialStep(3, 224, 60, 200, 0, (RgbSprite) null, false);
+        TutorialStepTable.field_d[4] = new TutorialStep(4, 224, 60, 285, 0, (RgbSprite) null, false);
+        TutorialStepTable.field_d[5] = new TutorialStep(5, 224, 60, 200, 0, (RgbSprite) null, false);
+        TutorialStepTable.field_d[6] = new TutorialStep(6, 224, 60, 285, 0, (RgbSprite) null, false);
+        TutorialStepTable.field_d[7] = new TutorialStep(7, 224, 120, 200, 0, (RgbSprite) null, false);
+        TutorialStepTable.field_d[8] = new TutorialStep(8, 224, 86, 285, 0, (RgbSprite) null, false);
+        TutorialStepTable.field_d[9] = new TutorialStep(9, 170, 86, 300, 0, (RgbSprite) null, true);
+        TutorialStepTable.field_d[10] = new TutorialStep(10, 224, 60, 200, 0, (RgbSprite) null, false);
+        TutorialStepTable.field_d[11] = new TutorialStep(11, 224, 60, 285, 0, (RgbSprite) null, false);
+        TutorialStepTable.field_d[12] = new TutorialStep(12, 224, 100, 285, 0, DialWidgetPainter.field_q[2], false);
+        TutorialStepTable.field_d[13] = new TutorialStep(13, 170, 174, 300, 0, (RgbSprite) null, true);
+        TutorialStepTable.field_d[14] = new TutorialStep(14, 224, 60, 200, 0, (RgbSprite) null, false);
+        TutorialStepTable.field_d[15] = new TutorialStep(15, 224, 60, 400, 0, DialWidgetPainter.field_q[2], false);
+        TutorialStepTable.field_d[16] = new TutorialStep(16, 170, 170, 300, 0, (RgbSprite) null, true);
     }
 
     final static boolean fillIncomingBuffer(byte param0, int param1) {
@@ -93,12 +93,12 @@ final class AssetDecoders {
           try {
             if (false) throw (IOException) null;
             if (0 <= var2_int &&
-              LoadingProgressDialog.l(150) <= 30000L) {
+              LoadingProgressDialog.millisSinceLastPacketRead(150) <= 30000L) {
               return false;
             }
-            LoginForm.m(-125);
+            LoginForm.closeConnection(-125);
           } catch (IOException iOException) {
-            LoginForm.m(-40);
+            LoginForm.closeConnection(-40);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -160,7 +160,7 @@ final class AssetDecoders {
           PacketLoopHelpers.field_a = new int[PacketLoopHelpers.field_d];
           BoundedRandomAccessFile.field_g = new byte[PacketLoopHelpers.field_d][];
           var17.position = -(8 * PacketLoopHelpers.field_d) - 7 + param1.length;
-          un.field_n = var17.readUnsignedShort((byte) -60);
+          ChatHistoryAllocator.field_n = var17.readUnsignedShort((byte) -60);
           AgeValidator.field_n = var17.readUnsignedShort((byte) -60);
           var3 = (255 & var17.readUnsignedByte((byte) -114)) + 1;
           var4 = 0;
@@ -285,38 +285,38 @@ final class AssetDecoders {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var4 = RasterBuffer.a(-1766, param1) ? 1 : 0;
-          var5 = RasterBuffer.a(-1766, param1) ? 1 : 0;
+          var4 = RasterBuffer.readBooleanBit(-1766, param1) ? 1 : 0;
+          var5 = RasterBuffer.readBooleanBit(-1766, param1) ? 1 : 0;
           var6 = new TriangleMesh();
           var6.field_L = (short)param1.readBits(71, 16);
-          var6.field_z = SpriteCheckboxPainter.a(var6.field_z, 16, param1, false);
-          var6.field_m = SpriteCheckboxPainter.a(var6.field_m, 16, param1, false);
-          var6.field_C = SpriteCheckboxPainter.a(var6.field_C, 16, param1, false);
+          var6.field_z = SpriteCheckboxPainter.readPackedShorts(var6.field_z, 16, param1, false);
+          var6.field_m = SpriteCheckboxPainter.readPackedShorts(var6.field_m, 16, param1, false);
+          var6.field_C = SpriteCheckboxPainter.readPackedShorts(var6.field_C, 16, param1, false);
           var6.field_w = (short)param1.readBits(95, 16);
-          var6.field_G = SpriteCheckboxPainter.a(var6.field_G, 16, param1, false);
-          var6.field_j = SpriteCheckboxPainter.a(var6.field_j, 16, param1, false);
-          var6.field_x = SpriteCheckboxPainter.a(var6.field_x, 16, param1, false);
+          var6.field_G = SpriteCheckboxPainter.readPackedShorts(var6.field_G, 16, param1, false);
+          var6.field_j = SpriteCheckboxPainter.readPackedShorts(var6.field_j, 16, param1, false);
+          var6.field_x = SpriteCheckboxPainter.readPackedShorts(var6.field_x, 16, param1, false);
           if (var4 != 0) {
             var6.field_u = (short)param1.readBits(-113, 16);
-            var6.field_g = SpriteCheckboxPainter.a(var6.field_g, 16, param1, false);
-            var6.field_H = SpriteCheckboxPainter.a(var6.field_H, 16, param1, false);
-            var6.field_F = SpriteCheckboxPainter.a(var6.field_F, 16, param1, false);
-            var6.field_M = SpriteCheckboxPainter.a(var6.field_M, 16, param1, false);
-            var6.field_V = SpriteCheckboxPainter.a(var6.field_V, 16, param1, false);
-            var6.field_T = SpriteCheckboxPainter.a(var6.field_T, 16, param1, false);
+            var6.field_g = SpriteCheckboxPainter.readPackedShorts(var6.field_g, 16, param1, false);
+            var6.field_H = SpriteCheckboxPainter.readPackedShorts(var6.field_H, 16, param1, false);
+            var6.field_F = SpriteCheckboxPainter.readPackedShorts(var6.field_F, 16, param1, false);
+            var6.field_M = SpriteCheckboxPainter.readPackedShorts(var6.field_M, 16, param1, false);
+            var6.field_V = SpriteCheckboxPainter.readPackedShorts(var6.field_V, 16, param1, false);
+            var6.field_T = SpriteCheckboxPainter.readPackedShorts(var6.field_T, 16, param1, false);
           }
           if (var5 != 0) {
             param1.readBits(-113, 16);
-            var6.field_y = SpriteCheckboxPainter.a(var6.field_y, 16, param1, false);
-            var6.field_i = SpriteCheckboxPainter.a(var6.field_i, 16, param1, false);
-            var6.field_E = SpriteCheckboxPainter.a(var6.field_E, 16, param1, false);
-            var6.field_k = SpriteCheckboxPainter.a(var6.field_k, 16, param1, false);
-            var6.field_Y = SpriteCheckboxPainter.a(var6.field_Y, 16, param1, false);
+            var6.field_y = SpriteCheckboxPainter.readPackedShorts(var6.field_y, 16, param1, false);
+            var6.field_i = SpriteCheckboxPainter.readPackedShorts(var6.field_i, 16, param1, false);
+            var6.field_E = SpriteCheckboxPainter.readPackedShorts(var6.field_E, 16, param1, false);
+            var6.field_k = SpriteCheckboxPainter.readPackedShorts(var6.field_k, 16, param1, false);
+            var6.field_Y = SpriteCheckboxPainter.readPackedShorts(var6.field_Y, 16, param1, false);
           }
-          if (RasterBuffer.a(-1766, param1)) {
-            var6.field_e = SpriteCheckboxPainter.a(var6.field_e, 16, param1, false);
+          if (RasterBuffer.readBooleanBit(-1766, param1)) {
+            var6.field_e = SpriteCheckboxPainter.readPackedShorts(var6.field_e, 16, param1, false);
           }
-          if (RasterBuffer.a(-1766, param1)) {
+          if (RasterBuffer.readBooleanBit(-1766, param1)) {
             var6.field_P = ClientUiHelpers.readPackedByteArray(16, param1, var6.field_P, -13035);
             var7 = 0;
             for (var8 = 0; var6.field_P.length > var8; var8++) {

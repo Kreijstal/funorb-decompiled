@@ -14,10 +14,10 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
     static int[] field_lb;
     static String[] field_mb;
 
-    final static void m(int param0) {
-        qf.field_e = new QuickChatHelpDialog(AudioService.field_a, ClientException.field_g, hg.field_e, bd.field_f, QuickChatHelpDialog.field_Tb, ParticleEffect.field_K);
+    final static void openQuickChatHelp(int param0) {
+        RankingAndRasterHelpers.field_e = new QuickChatHelpDialog(AudioService.field_a, ClientException.field_g, HighscoreColumnHeader.field_e, SolidSpriteHelpers.field_f, QuickChatHelpDialog.field_Tb, ParticleEffect.field_K);
         if (param0 != -6) {
-          AccountNoticeDialog.a('{', -67);
+          AccountNoticeDialog.isNameSeparator('{', -67);
         }
     }
 
@@ -36,7 +36,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         this.field_Q = false;
     }
 
-    AccountNoticeDialog(ModalStack param0, hm param1) {
+    AccountNoticeDialog(ModalStack param0, LoadoutCostHelpers param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -54,14 +54,14 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
             if (DualNodeDequeIterator.field_b == param1) {
               var3 = ValidationHelpWidget.field_gb;
               this.field_E = this.field_E + 10;
-              if (ph.b(12412)) {
+              if (ChatLineMenuHelpers.isCanvasResizeAllowed(12412)) {
                 this.field_E = this.field_E + 20;
-                var3 = tm.field_a;
+                var3 = SessionUiHelpers.field_a;
               }
             } else {
               if (LobbyStateHelpers.field_a == param1) {
                 this.field_E = this.field_E + 30;
-                var3 = sl.field_q;
+                var3 = ArchiveLoadStep.field_q;
               }
             }
           }
@@ -166,7 +166,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isNameSeparator(char param0, int param1) {
         if (param1 != -33) {
           return true;
         }
@@ -185,7 +185,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         return true;
     }
 
-    final static String a(CharSequence param0, boolean param1, int param2) {
+    final static String validatePlayerNameFormat(CharSequence param0, boolean param1, int param2) {
         int var6 = 0;
         String stackIn_4_0 = null;
         String stackIn_9_0 = null;
@@ -213,11 +213,11 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           var3_int = param0.length();
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var4 = AlphaContainer.a(1, param0);
+            var4 = AlphaContainer.normalizeDisplayName(1, param0);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!AccountNoticeDialog.a(var4.charAt(0), -33) &&
-                !AccountNoticeDialog.a(var4.charAt(var4.length() - 1), -33)) {
+              if (!AccountNoticeDialog.isNameSeparator(var4.charAt(0), -33) &&
+                !AccountNoticeDialog.isNameSeparator(var4.charAt(var4.length() - 1), -33)) {
                 var5 = 0;
                 if (param2 < 81) {
                   stackIn_22_0 = (String) null;
@@ -225,7 +225,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                 }
                 for (var6 = 0; param0.length() > var6; var6++) {
                   var7 = param0.charAt(var6);
-                  if (!AccountNoticeDialog.a((char) var7, -33)) {
+                  if (!AccountNoticeDialog.isNameSeparator((char) var7, -33)) {
                     var5 = 0;
                   } else {
                     var5++;
@@ -277,7 +277,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         field_nb = null;
         if (param0 != 0) {
           CharSequence var2 = (CharSequence) null;
-          AccountNoticeDialog.a((CharSequence) null, true, -55);
+          AccountNoticeDialog.validatePlayerNameFormat((CharSequence) null, true, -55);
         }
     }
 

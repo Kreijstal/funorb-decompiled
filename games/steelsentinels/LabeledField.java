@@ -26,14 +26,14 @@ final class LabeledField extends SingleChildContainer {
         return var3;
     }
 
-    final static void a(int param0, int param1) {
+    final static void setPendingMessageId(int param0, int param1) {
         if (param1 != 0) {
           LabeledField.releaseStatics((byte) -69);
         }
         TextHotspotWidget.field_V = param0;
     }
 
-    final static FullscreenFocusCanvas a(int param0, SystemTaskService param1, int param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas openFullscreenCanvas(int param0, SystemTaskService param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;
@@ -81,7 +81,7 @@ final class LabeledField extends SingleChildContainer {
           return;
         }
         if (param1 > -99) {
-          LabeledField.a(104, -35);
+          LabeledField.setPendingMessageId(104, -35);
         }
         int var7 = this.field_db ? -(this.field_ab * 2) - this.field_T + this.field_x : 0;
         this.field_Z.drawParagraph(this.field_U, var7 + (var5 + this.field_ab), var6 + this.field_ab, -this.field_ab + this.field_T, -(this.field_ab * 2) + this.field_E, this.field_Y, -1, !this.field_db ? 2 : 0, 1, this.field_Z.field_G);
@@ -183,8 +183,8 @@ final class LabeledField extends SingleChildContainer {
           field_eb[var0] = var0 * 197376;
         }
         for (var0Lifetime1 = 0; var0Lifetime1 < 16; var0Lifetime1++) {
-          field_W[16 + var0Lifetime1] = DateOfBirthValidator.a(field_W[16 + var0Lifetime1], var0Lifetime1 * 393216);
-          field_eb[16 + var0Lifetime1] = DateOfBirthValidator.a(field_eb[16 + var0Lifetime1], 6 * var0Lifetime1);
+          field_W[16 + var0Lifetime1] = DateOfBirthValidator.bitOr(field_W[16 + var0Lifetime1], var0Lifetime1 * 393216);
+          field_eb[16 + var0Lifetime1] = DateOfBirthValidator.bitOr(field_eb[16 + var0Lifetime1], 6 * var0Lifetime1);
         }
         for (var0Lifetime2 = 0; var0Lifetime2 < 32; var0Lifetime2++) {
           field_X[var0Lifetime2] = 257 * var0Lifetime2;

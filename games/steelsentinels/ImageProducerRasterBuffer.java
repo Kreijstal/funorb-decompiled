@@ -113,7 +113,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param2.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
           this.pushPixels(0);
           param2.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
-          this.b((byte) 122);
+          this.bindRaster((byte) 122);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ti.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -126,7 +126,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    final static void d(int param0) {
+    final static void shutdownAudioOutputs(int param0) {
         if (SoundAndUrlHelpers.field_a != null) {
           SoundAndUrlHelpers.field_a.dispose();
         }

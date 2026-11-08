@@ -12,7 +12,7 @@ final class NodeDeque {
     private IntrusiveNode traversalCursor;
     static int[] field_c;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -32,7 +32,7 @@ final class NodeDeque {
         }
     }
 
-    final static QuickChatCategory d(int param0) {
+    final static QuickChatCategory findFirstEnabledCategory(int param0) {
         int var1_int = 0;
         QuickChatCategory var2 = null;
         QuickChatCategory stackIn_5_0 = null;
@@ -44,7 +44,7 @@ final class NodeDeque {
           try {
             var1_int = param0;
             while (true) {
-              var2 = cd.field_e.getCategory((byte) -13, var1_int);
+              var2 = QuickChatPacketHelpers.field_e.getCategory((byte) -13, var1_int);
               if (var2.field_B) {
                 stackIn_5_0 = var2;
                 return stackIn_5_0;
@@ -129,7 +129,7 @@ final class NodeDeque {
         }
     }
 
-    final static ArticulatedPart a(int param0, byte param1) {
+    final static ArticulatedPart findPartDefinition(int param0, byte param1) {
         ArticulatedPart var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -140,7 +140,7 @@ final class NodeDeque {
         try {
           var2 = (ArticulatedPart) (QuickChatPhraseDefinition.field_H.first(13058));
           if (param1 != 67) {
-            NodeDeque.e((byte) 116);
+            NodeDeque.shouldRetryWithBackoff((byte) 116);
           }
           while (var2 != null) {
             if (var2.componentId == param0) {
@@ -162,16 +162,16 @@ final class NodeDeque {
         }
     }
 
-    final static IndexedSprite d(byte param0) {
+    final static IndexedSprite createIndexedSpriteFromDecodeBuffers(byte param0) {
         IndexedSprite stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         IndexedSprite var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         try {
-          var1 = new IndexedSprite(un.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], UiContainer.field_L[0], QuickChatInputHelpers.field_d);
+          var1 = new IndexedSprite(ChatHistoryAllocator.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], UiContainer.field_L[0], QuickChatInputHelpers.field_d);
           var2 = -124 % ((param0 + 33) / 62);
-          NodeHashTable.a(9324);
+          NodeHashTable.releaseDecodeArrays(9324);
           stackIn_1_0 = var1;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -222,7 +222,7 @@ final class NodeDeque {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -5) {
-            NodeDeque.d(-99);
+            NodeDeque.findFirstEnabledCategory(-99);
           }
           var2 = this.traversalCursor;
           if (var2 != this.sentinel) {
@@ -378,7 +378,7 @@ final class NodeDeque {
           param0.next = this.sentinel.next;
           param0.previous = this.sentinel;
           if (param1 != -21459) {
-            NodeDeque.e((byte) 47);
+            NodeDeque.shouldRetryWithBackoff((byte) 47);
           }
           param0.previous.next = param0;
           param0.next.previous = param0;
@@ -397,7 +397,7 @@ final class NodeDeque {
         }
     }
 
-    final static boolean e(byte param0) {
+    final static boolean shouldRetryWithBackoff(byte param0) {
         long var1_long = 0L;
         RuntimeException var1 = null;
         long var3 = 0L;
@@ -407,7 +407,7 @@ final class NodeDeque {
         var6 = SteelSentinels.obfuscationControl;
         try {
           var1_long = ClockAndCookieHelpers.monotonicMillis(77);
-          var3 = -sl.field_m + var1_long;
+          var3 = -ArchiveLoadStep.field_m + var1_long;
           if (var3 <= 30000L) {
             var5 = 3000;
             boolean decompiledSharedTail0 = !(Checkbox.field_Z >= 7);
@@ -429,19 +429,19 @@ final class NodeDeque {
               }
             }
             if (var3 > (long)var5) {
-              sl.field_m = var1_long;
+              ArchiveLoadStep.field_m = var1_long;
               Checkbox.field_Z = Checkbox.field_Z + 1;
               return true;
             }
             if (var6 == 0) {
               if (param0 != 17) {
-                NodeDeque.a(72, 96, 29, -125, false, -71, -107);
+                NodeDeque.handleOverlayPointerInput(72, 96, 29, -125, false, -71, -107);
               }
               return false;
             }
           }
           Checkbox.field_Z = 0;
-          sl.field_m = var1_long;
+          ArchiveLoadStep.field_m = var1_long;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -467,7 +467,7 @@ final class NodeDeque {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int indexOfUnlockItem(byte param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -503,7 +503,7 @@ final class NodeDeque {
         }
     }
 
-    final static void a(boolean param0, byte param1, boolean param2, int[] param3, TriangleMesh param4, boolean param5, int[] param6) {
+    final static void projectMesh(boolean param0, byte param1, boolean param2, int[] param3, TriangleMesh param4, boolean param5, int[] param6) {
         int stackIn_59_0 = 0;
         int stackIn_59_1 = 0;
         int stackIn_68_0 = 0;
@@ -586,9 +586,9 @@ final class NodeDeque {
           var9 = var23Lifetime1 * param6[5] + param6[4] * var22Lifetime1 + var21Lifetime1 * param6[3] >> 16 - ArchiveLoadSequence.field_j;
           var11 = var21Lifetime1 * param6[9] - (-(param6[10] * var22Lifetime1) - param6[11] * var23Lifetime1) >> 16;
           var10 = var21Lifetime1 * param6[6] - (-(param6[7] * var22Lifetime1) - param6[8] * var23Lifetime1) >> 16 - ArchiveLoadSequence.field_j;
-          var21Lifetime2 = lf.field_d;
+          var21Lifetime2 = MeshRasterState.field_d;
           var22Lifetime2 = 22 / ((param1 - 51) / 45);
-          var23Lifetime2 = lf.field_b;
+          var23Lifetime2 = MeshRasterState.field_b;
           var24Lifetime1 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
@@ -647,9 +647,9 @@ final class NodeDeque {
                   var25Lifetime1Lifetime1 = param4.field_r[var24Lifetime1];
                   var26Lifetime1Lifetime1 = param4.field_l[var24Lifetime1];
                   var27Lifetime1Lifetime1 = param4.field_t[var24Lifetime1];
-                  uf.field_b[var24Lifetime1] = (var12 * var25Lifetime1Lifetime1 + var15 * var26Lifetime1Lifetime1 + var18 * var27Lifetime1Lifetime1 >> 16) + var9;
-                  rn.field_w[var24Lifetime1] = (var16 * var26Lifetime1Lifetime1 + (var13 * var25Lifetime1Lifetime1 + var19 * var27Lifetime1Lifetime1) >> 16) + var10;
-                  fm.field_l[var24Lifetime1] = var11 + (var14 * var25Lifetime1Lifetime1 + var17 * var26Lifetime1Lifetime1 + var27Lifetime1Lifetime1 * var20 >> 16);
+                  SocialTabsPanel.field_b[var24Lifetime1] = (var12 * var25Lifetime1Lifetime1 + var15 * var26Lifetime1Lifetime1 + var18 * var27Lifetime1Lifetime1 >> 16) + var9;
+                  PendingAckRequest.field_w[var24Lifetime1] = (var16 * var26Lifetime1Lifetime1 + (var13 * var25Lifetime1Lifetime1 + var19 * var27Lifetime1Lifetime1) >> 16) + var10;
+                  QuickChatParameterType.field_l[var24Lifetime1] = var11 + (var14 * var25Lifetime1Lifetime1 + var17 * var26Lifetime1Lifetime1 + var27Lifetime1Lifetime1 * var20 >> 16);
                   var25Lifetime1Lifetime1 = param4.field_Z[var24Lifetime1];
                   var26Lifetime1Lifetime1 = param4.field_S[var24Lifetime1];
                   var27Lifetime1Lifetime1 = param4.field_Q[var24Lifetime1];
@@ -659,9 +659,9 @@ final class NodeDeque {
                   var25Lifetime1Lifetime1 = param4.field_a[var24Lifetime1];
                   var26Lifetime1Lifetime1 = param4.field_X[var24Lifetime1];
                   var27Lifetime1Lifetime1 = param4.field_B[var24Lifetime1];
-                  rd.field_a[var24Lifetime1] = (var18 * var27Lifetime1Lifetime1 + var12 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var15 >> 16) + var9;
+                  SpriteLoadingHelpers.field_a[var24Lifetime1] = (var18 * var27Lifetime1Lifetime1 + var12 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var15 >> 16) + var9;
                   ClientErrorSupport.field_c[var24Lifetime1] = var10 + (var27Lifetime1Lifetime1 * var19 + (var13 * var25Lifetime1Lifetime1 + var16 * var26Lifetime1Lifetime1) >> 16);
-                  fm.field_e[var24Lifetime1] = var11 + (var14 * var25Lifetime1Lifetime1 - (-(var26Lifetime1Lifetime1 * var17) - var27Lifetime1Lifetime1 * var20) >> 16);
+                  QuickChatParameterType.field_e[var24Lifetime1] = var11 + (var14 * var25Lifetime1Lifetime1 - (-(var26Lifetime1Lifetime1 * var17) - var27Lifetime1Lifetime1 * var20) >> 16);
                   var24Lifetime1++;
                   if (var31 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -700,7 +700,7 @@ final class NodeDeque {
                   var20 = param4.field_H[var18];
                   var21Lifetime2 = param4.field_F[var18];
                   HighscoreSubmission.field_A[var18] = var15 * var21Lifetime2 + var20 * var12 + var19 * var9 >> 16;
-                  hm.field_c[var18] = var10 * var19 + var20 * var13 + var16 * var21Lifetime2 >> 16;
+                  LoadoutCostHelpers.field_c[var18] = var10 * var19 + var20 * var13 + var16 * var21Lifetime2 >> 16;
                   DelegatingCanvas.field_e[var18] = var14 * var20 + (var19 * var11 + var17 * var21Lifetime2) >> 16;
                   var18++;
                 }
@@ -709,7 +709,7 @@ final class NodeDeque {
             stackIn_68_0 = var8;
             break;
           }
-          wi.a(stackIn_68_0, param4, var7_int, param2, 2147483647);
+          SpriteState.renderMeshFaces(stackIn_68_0, param4, var7_int, param2, 2147483647);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -737,15 +737,15 @@ final class NodeDeque {
         }
     }
 
-    final static RgbSprite[] a(byte param0, int param1, int param2) {
+    final static RgbSprite[] createPanelFrame(byte param0, int param1, int param2) {
         RuntimeException var3 = null;
         RgbSprite[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            NodeDeque.d(10);
+            NodeDeque.findFirstEnabledCategory(10);
           }
-          stackIn_4_0 = AccountMessagePanel.b(param1, -2, 1, param2);
+          stackIn_4_0 = AccountMessagePanel.createSolidFrameSprites(param1, -2, 1, param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -754,7 +754,7 @@ final class NodeDeque {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+    final static boolean handleOverlayPointerInput(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         RuntimeException var7 = null;
         boolean stackIn_13_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -762,14 +762,14 @@ final class NodeDeque {
           if (param0 != 11) {
             field_h = (String) null;
           }
-          if (NodeIterator.a(2)) {
-            t.a((byte) 125, param5, param4, param6);
+          if (NodeIterator.isOverlayOpen(2)) {
+            NameTable.updateQuickChatUi((byte) 125, param5, param4, param6);
             if (null != AudioService.field_i &&
               AudioService.field_i.handleMenuSelection(param4, param0 ^ 125, param3, param6, param1)) {
-              rh.a(false);
+              PendingDataRequest.closeContextMenu(false);
               param4 = false;
             }
-            SentinelCommandSimulator.a(param6, param4, (byte) -49);
+            SentinelCommandSimulator.handleNameEntryResult(param6, param4, (byte) -49);
             LobbyPlayer.updateReportAbuseDialog(param2, (byte) 119, param4);
             param4 = false;
           }

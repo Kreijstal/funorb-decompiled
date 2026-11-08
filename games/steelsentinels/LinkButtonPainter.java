@@ -19,7 +19,7 @@ final class LinkButtonPainter implements WidgetPainter {
     static String field_f;
     static int[] field_m;
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
+    final static void runFrontEndFrame(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
         int var12 = 58 / ((1 - param5) / 35);
         LobbySetupHelpers.initializeLobbyUi(16777215, param7, param2, param0, param3, (byte) -125, param4, param1, param11, param6, param10, param8, param9, 16777215);
     }
@@ -42,7 +42,7 @@ final class LinkButtonPainter implements WidgetPainter {
         try {
           if (param2 != -30) {
             var12 = (String) null;
-            LinkButtonPainter.a(113, (String) null, (byte) 12);
+            LinkButtonPainter.addTimedMessage(113, (String) null, (byte) 12);
           }
           if (!param1.field_C &&
             !param1.isFocused(0)) {
@@ -73,7 +73,7 @@ final class LinkButtonPainter implements WidgetPainter {
           } else {
             var10 = var10 + (-var8 + param1.field_E);
           }
-          DateInputWidget.a(var9 - 2, 4 + var7, var8, 0, var10 + 2);
+          DateInputWidget.drawDottedRectangle(var9 - 2, 4 + var7, var8, 0, var10 + 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class LinkButtonPainter implements WidgetPainter {
         }
     }
 
-    final static void a(int param0, int param1, SceneWidget param2) {
+    final static void openChatFilterMenu(int param0, int param1, SceneWidget param2) {
         PlayerContextMenu var9 = null;
         RgbSprite var10 = null;
         String var11 = null;
@@ -164,7 +164,7 @@ final class LinkButtonPainter implements WidgetPainter {
             var21.field_j.addItemWithIcon(12, var22, var23, -91);
             var24 = AudioService.field_i;
             var25 = SceneWidgetNode.field_y[2];
-            var26 = og.field_a;
+            var26 = QuickChatPopupHelpers.field_a;
             var24.field_j.addItemWithIcon(13, var25, var26, -64);
           }
           if (param1 == 2) {
@@ -174,7 +174,7 @@ final class LinkButtonPainter implements WidgetPainter {
             var27.field_j.addItemWithIcon(11, var28, var29, -125);
             var30 = AudioService.field_i;
             var31 = SceneWidgetNode.field_y[1];
-            var32 = qm.field_g;
+            var32 = DisplayNameAndAudioHelpers.field_g;
             var30.field_j.addItemWithIcon(12, var31, var32, -87);
             var33 = AudioService.field_i;
             var34 = SceneWidgetNode.field_y[2];
@@ -208,7 +208,7 @@ final class LinkButtonPainter implements WidgetPainter {
           field_m = null;
           return;
         }
-        LinkButtonPainter.a(93, -44, false, 19, -111, -38, true, -64, false, 87, true, true);
+        LinkButtonPainter.runFrontEndFrame(93, -44, false, 19, -111, -38, true, -64, false, 87, true, true);
         field_d = null;
         field_k = null;
         field_c = null;
@@ -218,7 +218,7 @@ final class LinkButtonPainter implements WidgetPainter {
         field_m = null;
     }
 
-    final static void a(int param0, String param1, byte param2) {
+    final static void addTimedMessage(int param0, String param1, byte param2) {
         int var3_int = 0;
         int var4 = SteelSentinels.obfuscationControl;
         int var3_intLifetime1;
@@ -228,7 +228,7 @@ final class LinkButtonPainter implements WidgetPainter {
             LoginActionHelpers.field_c[var3_int] = LoginActionHelpers.field_c[-1 + var3_int];
             CachedArchiveProvider.field_g[var3_int] = CachedArchiveProvider.field_g[var3_int - 1];
           }
-          WidgetStyleLayer.field_b[0] = WidgetStyleLayer.a(42, param1);
+          WidgetStyleLayer.field_b[0] = WidgetStyleLayer.toUpperCaseOutsideTags(42, param1);
           LoginActionHelpers.field_c[0] = 750;
           CachedArchiveProvider.field_g[0] = param0;
           var3_intLifetime1 = 18 % ((param2 - 86) / 34);
@@ -239,7 +239,7 @@ final class LinkButtonPainter implements WidgetPainter {
 
     public LinkButtonPainter() {
         this.field_n = 1;
-        this.field_l = tj.field_e;
+        this.field_l = HighscoreSubmissionFactory.field_e;
         this.field_i = 1;
     }
 

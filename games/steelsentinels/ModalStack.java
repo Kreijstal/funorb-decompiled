@@ -3,7 +3,7 @@
  */
 final class ModalStack extends SingleChildContainer {
     private NodeDeque field_T;
-    static vd field_S;
+    static TransitionTimerHelpers field_S;
     static long field_R;
     static int[][][] field_G;
     static boolean field_V;
@@ -12,7 +12,7 @@ final class ModalStack extends SingleChildContainer {
     final void updatePanels(byte param0) {
         int var4 = SteelSentinels.obfuscationControl;
         NodeIterator var2 = new NodeIterator(this.field_T);
-        ModalPanel var3 = (ModalPanel) (var2.b(2));
+        ModalPanel var3 = (ModalPanel) (var2.first(2));
         while (var3 != null) {
           if (var3.updateAnimationsAndCheckClosed(-8350)) {
             var3.unlink(4);
@@ -31,7 +31,7 @@ final class ModalStack extends SingleChildContainer {
         if (param0 < 119) {
           this.field_T = (NodeDeque) null;
         }
-        ModalPanel var3 = (ModalPanel) (var2.b(2));
+        ModalPanel var3 = (ModalPanel) (var2.first(2));
         while (var3 != null) {
           var3.field_Q = false;
           var3 = (ModalPanel) (var2.next(2));
@@ -39,7 +39,7 @@ final class ModalStack extends SingleChildContainer {
         this.field_J = null;
     }
 
-    final static int a(String param0, boolean param1, int param2, byte param3, int param4, ConditionalTextValue param5, ConditionalTextValue param6) {
+    final static int performAccountServerRequest(String param0, boolean param1, int param2, byte param3, int param4, ConditionalTextValue param5, ConditionalTextValue param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
         PacketBuffer stackIn_16_0 = null;
@@ -83,11 +83,11 @@ final class ModalStack extends SingleChildContainer {
           var15 = param5.getText(2134230754);
           var8 = param6.getText(2134230754);
           if (rb.field_h == null &&
-            !SectorCacheStore.a(119, false)) {
+            !SectorCacheStore.pollGameSocketConnection(119, false)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
-          if (SocialRequestHelpers.field_d == rn.field_v) {
+          if (SocialRequestHelpers.field_d == PendingAckRequest.field_v) {
             ClockAndCookieHelpers.field_g.position = 0;
             TextHotspotWidget.field_bb = null;
             if (param0 == null) {
@@ -113,7 +113,7 @@ final class ModalStack extends SingleChildContainer {
               ClockAndCookieHelpers.field_g.writeByte((byte) 127, 16);
               ClockAndCookieHelpers.field_g.position = ClockAndCookieHelpers.field_g.position + 1;
               var9 = ClockAndCookieHelpers.field_g.position;
-              qi.a(AccountNoticeDialog.field_ib, FallingPickup.field_y, ClockAndCookieHelpers.field_g, qe.field_d, 5);
+              LoginCredentialHelpers.writeEncryptedLoginBlock(AccountNoticeDialog.field_ib, FallingPickup.field_y, ClockAndCookieHelpers.field_g, TextSpriteHelpers.field_d, 5);
               ClockAndCookieHelpers.field_g.backpatchByteLength((byte) -32, -var9 + ClockAndCookieHelpers.field_g.position);
             } else {
               var9 = 0;
@@ -126,47 +126,47 @@ final class ModalStack extends SingleChildContainer {
               FallingPickup.field_y.writePrefixedString(13588, var15);
               FallingPickup.field_y.writePrefixedString(13588, var8);
               var17 = (CharSequence) ((Object) param0);
-              FallingPickup.field_y.writePrefixedString(13588, AccountChoicePanel.a(-105, var17));
+              FallingPickup.field_y.writePrefixedString(13588, AccountChoicePanel.normalizeAccountName(-105, var17));
               FallingPickup.field_y.writeShort(param4, 104);
               FallingPickup.field_y.writeByte((byte) 124, param2);
               FallingPickup.field_y.writeByte((byte) 117, var9);
               ClockAndCookieHelpers.field_g.writeByte((byte) 117, 18);
               ClockAndCookieHelpers.field_g.position = ClockAndCookieHelpers.field_g.position + 2;
               var10 = ClockAndCookieHelpers.field_g.position;
-              var11_ref_String = SceneWidget.readSettingsCookie(-58, Projectile.d((byte) -21));
+              var11_ref_String = SceneWidget.readSettingsCookie(-58, Projectile.getApplet((byte) -21));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               ClockAndCookieHelpers.field_g.writeString(var11_ref_String, -63);
-              qi.a(AccountNoticeDialog.field_ib, FallingPickup.field_y, ClockAndCookieHelpers.field_g, qe.field_d, 5);
+              LoginCredentialHelpers.writeEncryptedLoginBlock(AccountNoticeDialog.field_ib, FallingPickup.field_y, ClockAndCookieHelpers.field_g, TextSpriteHelpers.field_d, 5);
               ClockAndCookieHelpers.field_g.writeShortLengthPrefix(30, -var10 + ClockAndCookieHelpers.field_g.position);
             }
-            gj.a(0, -1);
-            rn.field_v = mc.field_c;
+            SpriteDrawHelpers.flushOutgoingPackets(0, -1);
+            PendingAckRequest.field_v = LoadingCaptionHelpers.field_c;
           }
-          if (mc.field_c == rn.field_v &&
+          if (LoadingCaptionHelpers.field_c == PendingAckRequest.field_v &&
             AssetDecoders.fillIncomingBuffer((byte) -96, 1)) {
             var9Lifetime1 = LoginConnectionStage.field_d.readUnsignedByte((byte) -62);
             LoginConnectionStage.field_d.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              vh.field_d = new String[var9Lifetime1 - 100];
-              rn.field_v = LinkButtonPainter.field_k;
+              KeyRoutingHelpers.field_d = new String[var9Lifetime1 - 100];
+              PendingAckRequest.field_v = LinkButtonPainter.field_k;
             } else {
               if (var9Lifetime1 == 248) {
-                MusicPatchEnvelope.setTuhstatbutMarker(-117, Projectile.d((byte) -21));
-                di.field_e = MembershipPromotionScreen.field_o;
-                LoginForm.m(83);
+                MusicPatchEnvelope.setTuhstatbutMarker(-117, Projectile.getApplet((byte) -21));
+                OptionMaskHelpers.field_e = MembershipPromotionScreen.field_o;
+                LoginForm.closeConnection(83);
                 AlphaContainer.field_T = false;
                 stackIn_32_0 = var9Lifetime1;
                 return stackIn_32_0;
               }
               if (var9Lifetime1 == 99) {
                 AssetDecoders.fillIncomingBuffer((byte) -85, LoginConnectionStage.getOne(-58));
-                TextHotspotWidget.field_bb = new Boolean(ai.a(LoginConnectionStage.field_d, -32599));
+                TextHotspotWidget.field_bb = new Boolean(NotificationMessage.readBooleanByte(LoginConnectionStage.field_d, -32599));
                 LoginConnectionStage.field_d.position = 0;
               } else {
-                rn.field_v = RegistrationRequestDialog.field_Yb;
+                PendingAckRequest.field_v = RegistrationRequestDialog.field_Yb;
                 ViewportController.field_f = -1;
                 ArrayWidgetContainer.field_N = var9Lifetime1;
               }
@@ -174,46 +174,46 @@ final class ModalStack extends SingleChildContainer {
           }
           if (param3 >= -22) {
             var14 = (String) null;
-            ModalStack.a(true, -27, -92, 49, (String) null, 58, 48, 104);
+            ModalStack.updateChatInputBox(true, -27, -92, 49, (String) null, 58, 48, 104);
           }
-          if (rn.field_v == LinkButtonPainter.field_k) {
+          if (PendingAckRequest.field_v == LinkButtonPainter.field_k) {
             var9Lifetime2 = 2;
             if (AssetDecoders.fillIncomingBuffer((byte) -128, var9Lifetime2)) {
               var10Lifetime1 = LoginConnectionStage.field_d.readUnsignedShort((byte) -60);
               LoginConnectionStage.field_d.position = 0;
               if (AssetDecoders.fillIncomingBuffer((byte) -97, var10Lifetime1)) {
-                var11 = vh.field_d.length;
+                var11 = KeyRoutingHelpers.field_d.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  vh.field_d[var12] = LoginConnectionStage.field_d.readPrefixedString((byte) -97);
+                  KeyRoutingHelpers.field_d[var12] = LoginConnectionStage.field_d.readPrefixedString((byte) -97);
                 }
-                LoginForm.m(-46);
+                LoginForm.closeConnection(-46);
                 AlphaContainer.field_T = false;
                 stackIn_44_0 = 100 + var11;
                 return stackIn_44_0;
               }
             }
           }
-          if (RegistrationRequestDialog.field_Yb == rn.field_v &&
-            LoginForm.n(37)) {
+          if (RegistrationRequestDialog.field_Yb == PendingAckRequest.field_v &&
+            LoginForm.isPacketPayloadReady(37)) {
             if (ArrayWidgetContainer.field_N == 255) {
               var9_ref_String = LoginConnectionStage.field_d.readNullableString(-77);
               if (var9_ref_String != null) {
-                LoginStateQueries.writeSettingsCookie(var9_ref_String, Projectile.d((byte) -21), 124);
+                LoginStateQueries.writeSettingsCookie(var9_ref_String, Projectile.getApplet((byte) -21), 124);
               }
             } else {
-              di.field_e = LoginConnectionStage.field_d.readString(1);
+              OptionMaskHelpers.field_e = LoginConnectionStage.field_d.readString(1);
             }
-            LoginForm.m(-98);
+            LoginForm.closeConnection(-98);
             AlphaContainer.field_T = false;
             stackIn_54_0 = ArrayWidgetContainer.field_N;
             return stackIn_54_0;
           }
           if (null == rb.field_h) {
             if (AlphaContainer.field_T) {
-              if (LoadingProgressDialog.l(150) <= 30000L) {
-                di.field_e = ValidatedTextWidget.field_mb;
+              if (LoadingProgressDialog.millisSinceLastPacketRead(150) <= 30000L) {
+                OptionMaskHelpers.field_e = ValidatedTextWidget.field_mb;
               } else {
-                di.field_e = CipherPacketBuffer.field_E;
+                OptionMaskHelpers.field_e = CipherPacketBuffer.field_E;
               }
               AlphaContainer.field_T = false;
               stackIn_61_0 = 249;
@@ -261,7 +261,7 @@ final class ModalStack extends SingleChildContainer {
         if (param0 != -1850) {
           field_R = -76L;
         }
-        var3 = (ModalPanel) (var2.b(2));
+        var3 = (ModalPanel) (var2.first(2));
         while (var3 != null) {
           if (var3.field_Q) {
             return var3;
@@ -305,7 +305,7 @@ final class ModalStack extends SingleChildContainer {
           field_R = 108L;
         }
         var2 = new NodeIterator(this.field_T);
-        var3 = (ModalPanel) (var2.b(2));
+        var3 = (ModalPanel) (var2.first(2));
         while (var3 != null) {
           if (var3.field_Q) {
             return var3.findFocusedChild(-1);
@@ -321,10 +321,10 @@ final class ModalStack extends SingleChildContainer {
           this.field_p.drawWidget(param2, (UiComponent) (this), (byte) -30, true, param0);
         }
         NodeIterator var5 = new NodeIterator(this.field_T);
-        UiComponent var6 = (UiComponent) (var5.c(2));
+        UiComponent var6 = (UiComponent) (var5.last(2));
         while (var6 != null) {
           var6.drawLayer(this.field_z + param0, (byte) -109, param2 + this.field_o, param3);
-          var6 = (UiComponent) (var5.a(true));
+          var6 = (UiComponent) (var5.previous(true));
         }
         if (param1 > -99) {
           this.topOpenPanel(117);
@@ -337,7 +337,7 @@ final class ModalStack extends SingleChildContainer {
           return;
         }
         NodeIterator var2 = new NodeIterator(this.field_T);
-        ModalPanel var3 = (ModalPanel) (var2.b(2));
+        ModalPanel var3 = (ModalPanel) (var2.first(2));
         while (var3 != null) {
           if (var3.refreshVisibilityAndCheckClosed(-102)) {
             var3.unlink(param0 - 99);
@@ -346,7 +346,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final static String a(byte param0, String param1, String param2, ResourceArchive param3) {
+    final static String formatArchiveLoadingProgress(byte param0, String param1, String param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -363,7 +363,7 @@ final class ModalStack extends SingleChildContainer {
             field_G = (int[][][]) null;
           }
           if (param3.ensureIndex(true)) {
-            stackIn_6_0 = param1 + " - " + param3.a((byte) -33) + "%";
+            stackIn_6_0 = param1 + " - " + param3.getOverallProgress((byte) -33) + "%";
             return stackIn_6_0;
           }
           stackIn_4_0 = (String) (param2);
@@ -394,7 +394,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7) {
+    final static void updateChatInputBox(boolean param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -402,28 +402,28 @@ final class ModalStack extends SingleChildContainer {
         RuntimeException var8 = null;
         try {
           if (CombatWorld.field_H.field_Eb != 0 &&
-            !fj.field_e) {
-            if (!uc.field_g) {
-              jn.field_g = true;
+            !PasswordRuleHelpers.field_e) {
+            if (!DesignerPageTables.field_g) {
+              MusicTrackHelpers.field_g = true;
             } else {
-              AccountChoicePanel.j(13171);
+              AccountChoicePanel.closeChatInput(13171);
             }
           }
-          if (jn.field_g) {
-            ResizableModalPanel.a(param1, param7, param1, param4, 20, param5, param2, param3, -126);
+          if (MusicTrackHelpers.field_g) {
+            ResizableModalPanel.layoutAccountScene(param1, param7, param1, param4, 20, param5, param2, param3, -126);
             LoginActionHelpers.field_a.updateInputFullScreen((byte) 121, param0);
             if (param0) {
-              if (vc.field_f.field_Eb != 0) {
-                jn.field_g = false;
+              if (DisplayMode.field_f.field_Eb != 0) {
+                MusicTrackHelpers.field_g = false;
               }
               if (Js5NetworkRequest.field_N.field_Eb != 0) {
-                AlternateUsernameCredentials.d(53);
-                jn.field_g = false;
+                AlternateUsernameCredentials.clearChatText(53);
+                MusicTrackHelpers.field_g = false;
               }
             }
           }
           if (param6 < 126) {
-            field_S = (vd) null;
+            field_S = (TransitionTimerHelpers) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -445,7 +445,7 @@ final class ModalStack extends SingleChildContainer {
         this.field_T = new NodeDeque();
     }
 
-    final static String[] a(char param0, boolean param1, String param2) {
+    final static String[] split(char param0, boolean param1, String param2) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;
@@ -467,7 +467,7 @@ final class ModalStack extends SingleChildContainer {
             ModalStack.releaseStatics((byte) 92);
           }
           var10 = (CharSequence) ((Object) param2);
-          var3_int = AccountChoicePanel.a(2019550017, var10, param0);
+          var3_int = AccountChoicePanel.countChar(2019550017, var10, param0);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
@@ -498,7 +498,7 @@ final class ModalStack extends SingleChildContainer {
 
     static {
         int var0_int = 0;
-        field_S = new vd();
+        field_S = new TransitionTimerHelpers();
         field_G = new int[13][26][];
         for (var0_int = 0; 13 > var0_int; var0_int++) {
           field_G[var0_int][25] = new int[8];

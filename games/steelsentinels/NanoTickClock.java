@@ -19,18 +19,18 @@ final class NanoTickClock extends TickClock {
     static char[] field_w;
     static int field_v;
 
-    final void c(byte param0) {
+    final void reset(byte param0) {
         this.field_n = 0L;
         if (this.field_k < this.field_m) {
           this.field_k = this.field_k + (-this.field_k + this.field_m);
         }
         if (param0 >= -116) {
           String var3 = (String) null;
-          NanoTickClock.a((ResourceArchive) null, (byte) 47, (String) null, (String) null);
+          NanoTickClock.loadIndexedSprite((ResourceArchive) null, (byte) 47, (String) null, (String) null);
         }
     }
 
-    final static IndexedSprite a(ResourceArchive param0, byte param1, String param2, String param3) {
+    final static IndexedSprite loadIndexedSprite(ResourceArchive param0, byte param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -79,8 +79,8 @@ final class NanoTickClock extends TickClock {
         }
     }
 
-    final long a(byte param0) {
-        this.field_k = this.field_k + this.d((byte) -84);
+    final long getSleepMillis(byte param0) {
+        this.field_k = this.field_k + this.averageFrameNanos((byte) -84);
         if (this.field_k < this.field_m) {
           return (-this.field_k + this.field_m) / 1000000L;
         }
@@ -94,7 +94,7 @@ final class NanoTickClock extends TickClock {
         field_l = null;
         field_j = null;
         if (param0 != 0) {
-          NanoTickClock.a(false);
+          NanoTickClock.getActiveCanvas(false);
         }
         field_y = null;
         field_t = null;
@@ -104,11 +104,11 @@ final class NanoTickClock extends TickClock {
         field_r = null;
     }
 
-    final static java.awt.Canvas a(boolean param0) {
+    final static java.awt.Canvas getActiveCanvas(boolean param0) {
         if (param0) {
           field_w = (char[]) null;
         }
-        return null == wb.field_c ? sl.field_n : (java.awt.Canvas) ((Object) wb.field_c);
+        return null == RewardValueHelpers.field_c ? ArchiveLoadStep.field_n : (java.awt.Canvas) ((Object) RewardValueHelpers.field_c);
     }
 
     final int advanceTicks(long param0, byte param1) {
@@ -136,7 +136,7 @@ final class NanoTickClock extends TickClock {
         return var4;
     }
 
-    private final long d(byte param0) {
+    private final long averageFrameNanos(byte param0) {
         int var9 = SteelSentinels.obfuscationControl;
         long var2 = System.nanoTime();
         long var4 = -this.field_n + var2;

@@ -37,10 +37,10 @@ final class LobbyPlayer extends SceneWidget {
           if (var4 != -2) {
             if (var4 != -1) {
               var5 = FunOrbClient.field_x.isMuteSelected((byte) 63) ? 1 : 0;
-              MouseInputHandler.a(0, var5 != 0, FunOrbClient.field_x.field_hc, var4, FunOrbClient.field_x.getEnteredText(true), param0);
+              MouseInputHandler.sendAbuseReport(0, var5 != 0, FunOrbClient.field_x.field_hc, var4, FunOrbClient.field_x.getEnteredText(true), param0);
             }
             FunOrbClient.field_x = null;
-            rh.a(false);
+            PendingDataRequest.closeContextMenu(false);
           }
         }
     }
@@ -52,56 +52,56 @@ final class LobbyPlayer extends SceneWidget {
           return;
         }
         if (param0 ||
-          null == nf.field_b) {
+          null == LoginEncryptionHelpers.field_b) {
           GzipDecoder.field_c = false;
         }
         if (!param0) {
-          if (null != nf.field_b) {
+          if (null != LoginEncryptionHelpers.field_b) {
             if (0 < SentinelCommand.field_t) {
               SentinelCommand.field_t = SentinelCommand.field_t - 1;
             } else {
-              if (bd.field_c > 0) {
-                bd.field_c = bd.field_c - 1;
+              if (SolidSpriteHelpers.field_c > 0) {
+                SolidSpriteHelpers.field_c = SolidSpriteHelpers.field_c - 1;
               } else {
-                if (fj.field_f < AudioService.field_h) {
-                  if (fj.field_f == 0) {
-                    AccountTermsPanel.a(false, true);
+                if (PasswordRuleHelpers.field_f < AudioService.field_h) {
+                  if (PasswordRuleHelpers.field_f == 0) {
+                    AccountTermsPanel.buildSocialPanels(false, true);
                   }
-                  fj.field_f = fj.field_f + 1;
+                  PasswordRuleHelpers.field_f = PasswordRuleHelpers.field_f + 1;
                 }
               }
             }
           } else {
-            if (ni.field_a != null) {
+            if (ByteArrayPoolHelpers.field_a != null) {
               if (SentinelCommand.field_t <= 0) {
-                if (0 >= fj.field_f) {
-                  if (AudioService.field_h > bd.field_c) {
-                    if (0 == bd.field_c) {
-                      AccountTermsPanel.a(true, true);
+                if (0 >= PasswordRuleHelpers.field_f) {
+                  if (AudioService.field_h > SolidSpriteHelpers.field_c) {
+                    if (0 == SolidSpriteHelpers.field_c) {
+                      AccountTermsPanel.buildSocialPanels(true, true);
                     }
-                    bd.field_c = bd.field_c + 1;
+                    SolidSpriteHelpers.field_c = SolidSpriteHelpers.field_c + 1;
                   }
                 } else {
-                  fj.field_f = fj.field_f - 1;
+                  PasswordRuleHelpers.field_f = PasswordRuleHelpers.field_f - 1;
                 }
               } else {
                 SentinelCommand.field_t = SentinelCommand.field_t - 1;
               }
             } else {
               GzipDecoder.field_c = false;
-              if (0 >= bd.field_c) {
-                if (fj.field_f > 0) {
-                  fj.field_f = fj.field_f - 1;
+              if (0 >= SolidSpriteHelpers.field_c) {
+                if (PasswordRuleHelpers.field_f > 0) {
+                  PasswordRuleHelpers.field_f = PasswordRuleHelpers.field_f - 1;
                 } else {
                   if (SentinelCommand.field_t < AudioService.field_h) {
                     if (SentinelCommand.field_t == 0) {
-                      LoginDialog.m(854);
+                      LoginDialog.buildMainScreenRoots(854);
                     }
                     SentinelCommand.field_t = SentinelCommand.field_t + 1;
                   }
                 }
               } else {
-                bd.field_c = bd.field_c - 1;
+                SolidSpriteHelpers.field_c = SolidSpriteHelpers.field_c - 1;
               }
             }
           }
@@ -109,11 +109,11 @@ final class LobbyPlayer extends SceneWidget {
           if (SentinelCommand.field_t > 0) {
             SentinelCommand.field_t = SentinelCommand.field_t - 1;
           } else {
-            if (0 < bd.field_c) {
-              bd.field_c = bd.field_c - 1;
+            if (0 < SolidSpriteHelpers.field_c) {
+              SolidSpriteHelpers.field_c = SolidSpriteHelpers.field_c - 1;
             } else {
-              if (fj.field_f > 0) {
-                fj.field_f = fj.field_f - 1;
+              if (PasswordRuleHelpers.field_f > 0) {
+                PasswordRuleHelpers.field_f = PasswordRuleHelpers.field_f - 1;
               }
             }
           }
@@ -135,7 +135,7 @@ final class LobbyPlayer extends SceneWidget {
         if (param0 != -36) {
           LobbyPlayer.updateReportAbuseDialog(-73, (byte) -40, false);
         }
-        return !this.a((byte) 30) ? true : false;
+        return !this.isDualLinked((byte) 30) ? true : false;
     }
 
     LobbyPlayer(String param0, String param1, long param2) {
@@ -146,7 +146,7 @@ final class LobbyPlayer extends SceneWidget {
           this.field_ec = param2;
           this.field_Vb = param1;
           var6 = (CharSequence) ((Object) this.field_mc);
-          AlphaContainer.a(1, var6);
+          AlphaContainer.normalizeDisplayName(1, var6);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -198,14 +198,14 @@ final class LobbyPlayer extends SceneWidget {
         int var2 = SteelSentinels.obfuscationControl;
         int var1_intLifetime1;
         try {
-          ContentTransitionDialog.field_qb.c((byte) -118);
+          ContentTransitionDialog.field_qb.reset((byte) -118);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             AccountMessagePanel.field_T[var1_int] = 0L;
           }
           for (var1_intLifetime1 = param0; 32 > var1_intLifetime1; var1_intLifetime1++) {
-            hg.field_c[var1_intLifetime1] = 0L;
+            HighscoreColumnHeader.field_c[var1_intLifetime1] = 0L;
           }
-          di.field_a = 0;
+          OptionMaskHelpers.field_a = 0;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "cc.B(" + param0 + ')');
         }
@@ -217,7 +217,7 @@ final class LobbyPlayer extends SceneWidget {
           this.field_mc = param1;
           this.field_Vb = param2;
           var5 = (CharSequence) ((Object) this.field_mc);
-          AlphaContainer.a(1, var5);
+          AlphaContainer.normalizeDisplayName(1, var5);
           int var4_int = -54 / ((54 - param0) / 38);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "cc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

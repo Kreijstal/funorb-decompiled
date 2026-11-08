@@ -27,8 +27,8 @@ final class FrameStyleHelpers {
             SpriteFrame var7 = (SpriteFrame) null;
             FrameStyleHelpers.setMenuButtonStyle((SpriteFrame) null, -18, -91, (SpriteFrame) null, 27, -75);
           }
-          vd.field_f = param0;
-          ud.field_y = param5;
+          TransitionTimerHelpers.field_f = param0;
+          RankingQuery.field_y = param5;
           TextAndMenuHelpers.field_c = param3;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "hf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
@@ -46,11 +46,11 @@ final class FrameStyleHelpers {
 
     final static RgbSprite[] buildBevelFrame(int param0, int param1, int param2, int param3, boolean param4) {
         if (param4) {
-          return ArrayWidgetContainer.a(3, 1, 4, param2, param1, param3, param0, 1, 1);
+          return ArrayWidgetContainer.createBeveledFrameSprites(3, 1, 4, param2, param1, param3, param0, 1, 1);
         }
         SpriteFrame var6 = (SpriteFrame) null;
         FrameStyleHelpers.setMenuButtonStyle((SpriteFrame) null, 52, -37, (SpriteFrame) null, -67, 63);
-        return ArrayWidgetContainer.a(3, 1, 4, param2, param1, param3, param0, 1, 1);
+        return ArrayWidgetContainer.createBeveledFrameSprites(3, 1, 4, param2, param1, param3, param0, 1, 1);
     }
 
     static {

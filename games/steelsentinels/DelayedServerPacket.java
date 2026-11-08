@@ -25,7 +25,7 @@ final class DelayedServerPacket extends IntrusiveNode {
         field_C = null;
         if (param0 != -1341) {
           int[] var2 = (int[]) null;
-          DelayedServerPacket.a((int[]) null, (int[]) null, -79);
+          DelayedServerPacket.computeDesignCode((int[]) null, (int[]) null, -79);
         }
         field_t = null;
         field_y = null;
@@ -33,7 +33,7 @@ final class DelayedServerPacket extends IntrusiveNode {
         field_u = null;
     }
 
-    final static void a(String param0, int param1, boolean param2, int param3, java.awt.Color param4) {
+    final static void drawAwtLoadingBar(String param0, int param1, boolean param2, int param3, java.awt.Color param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -49,7 +49,7 @@ final class DelayedServerPacket extends IntrusiveNode {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = sl.field_n.getGraphics();
+            var9 = ArchiveLoadStep.field_n.getGraphics();
             if (null == MouseInputHandler.field_f) {
               MouseInputHandler.field_f = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -62,7 +62,7 @@ final class DelayedServerPacket extends IntrusiveNode {
             }
             try {
               if (UiTheme.field_j == null) {
-                UiTheme.field_j = sl.field_n.createImage(304, 34);
+                UiTheme.field_j = ArchiveLoadStep.field_n.createImage(304, 34);
               }
               var10 = UiTheme.field_j.getGraphics();
               var10.setColor(param4);
@@ -98,7 +98,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            sl.field_n.repaint();
+            ArchiveLoadStep.field_n.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -121,7 +121,7 @@ final class DelayedServerPacket extends IntrusiveNode {
         }
     }
 
-    final static String a(int[] param0, int[] param1, int param2) {
+    final static String computeDesignCode(int[] param0, int[] param1, int param2) {
         String stackIn_137_0 = null;
         RuntimeException stackIn_140_0 = null;
         StringBuilder stackIn_140_1 = null;
@@ -156,11 +156,11 @@ final class DelayedServerPacket extends IntrusiveNode {
           for (var6Lifetime1 = 0; var6Lifetime1 < 8; var6Lifetime1++) {
             var3_int = 8388607 & (var3_int ^ 10 * var3_int);
           }
-          var5 = cd.field_c[1];
-          var6Lifetime2 = NodeDeque.a((byte) -84, param0[0]);
+          var5 = QuickChatPacketHelpers.field_c[1];
+          var6Lifetime2 = NodeDeque.indexOfUnlockItem((byte) -84, param0[0]);
           if (var6Lifetime2 >= 0 &&
-            var6Lifetime2 < cd.field_c.length) {
-            var5 = cd.field_c[var6Lifetime2];
+            var6Lifetime2 < QuickChatPacketHelpers.field_c.length) {
+            var5 = QuickChatPacketHelpers.field_c[var6Lifetime2];
           }
           if (var6Lifetime2 == 0) {
             var3_int = var3_int ^ 8176765;

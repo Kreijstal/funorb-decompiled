@@ -36,11 +36,11 @@ abstract class ResizableModalPanel extends ModalPanel {
         int var2 = 73 % ((55 - param0) / 39);
     }
 
-    final static SceneWidget k(int param0) {
+    final static SceneWidget getAccountSceneContent(int param0) {
         if (param0 != -4795) {
           return (SceneWidget) null;
         }
-        return rn.field_y.field_Ub;
+        return PendingAckRequest.field_y.field_Ub;
     }
 
     void drawPanelBackground(int param0, int param1, boolean param2) {
@@ -141,8 +141,8 @@ abstract class ResizableModalPanel extends ModalPanel {
         }
         Explosion.field_L.drawTransparent(this.field_x + param0 - 90, param1 + 10);
         if (param2) {
-          uc.a(jj.field_k, this.field_x - 10, 35 + param1, (byte) -39, param0 + 5);
-          uc.a(Explosion.field_J, this.field_x, this.field_E + (param1 - 22), (byte) -39, param0);
+          DesignerPageTables.drawThreeSliceBar(MeshMaterial.field_k, this.field_x - 10, 35 + param1, (byte) -39, param0 + 5);
+          DesignerPageTables.drawThreeSliceBar(Explosion.field_J, this.field_x, this.field_E + (param1 - 22), (byte) -39, param0);
           var5Lifetime2 = 169;
           var4Lifetime2 = -79 + this.field_E;
           var6Lifetime2 = 127;
@@ -158,8 +158,8 @@ abstract class ResizableModalPanel extends ModalPanel {
           }
         } else {
           field_gb = (String) null;
-          uc.a(jj.field_k, this.field_x - 10, 35 + param1, (byte) -39, param0 + 5);
-          uc.a(Explosion.field_J, this.field_x, this.field_E + (param1 - 22), (byte) -39, param0);
+          DesignerPageTables.drawThreeSliceBar(MeshMaterial.field_k, this.field_x - 10, 35 + param1, (byte) -39, param0 + 5);
+          DesignerPageTables.drawThreeSliceBar(Explosion.field_J, this.field_x, this.field_E + (param1 - 22), (byte) -39, param0);
           var5Lifetime2 = 169;
           var4Lifetime2 = -79 + this.field_E;
           var6Lifetime2 = 127;
@@ -258,7 +258,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         return super.updateAnimationsAndCheckClosed(-8350);
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void layoutAccountScene(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -272,19 +272,19 @@ abstract class ResizableModalPanel extends ModalPanel {
           }
           var9_int = 495;
           var10 = 5;
-          te.field_f.setBounds(0, var10, param0, 5, -10 + var9_int);
-          vd.field_d.setBounds(0, 0, param0, 0, te.field_f.field_zb - DualNodeDequeIterator.field_e.field_zb);
-          DualNodeDequeIterator.field_e.setBounds(0, 0, param0, vd.field_d.field_zb, DualNodeDequeIterator.field_e.field_zb);
+          FriendListHelpers.field_f.setBounds(0, var10, param0, 5, -10 + var9_int);
+          TransitionTimerHelpers.field_d.setBounds(0, 0, param0, 0, FriendListHelpers.field_f.field_zb - DualNodeDequeIterator.field_e.field_zb);
+          DualNodeDequeIterator.field_e.setBounds(0, 0, param0, TransitionTimerHelpers.field_d.field_zb, DualNodeDequeIterator.field_e.field_zb);
           var10 = var10 + (param0 + param6);
           int var12 = 105 % ((-62 - param8) / 61);
-          vc.field_f.setBounds(0, var10, param2, 5, vc.field_f.getContentWidth(-2147483648));
+          DisplayMode.field_f.setBounds(0, var10, param2, 5, DisplayMode.field_f.getContentWidth(-2147483648));
           var11 = Js5NetworkRequest.field_N.getContentWidth(-2147483648);
           Js5NetworkRequest.field_N.setBounds(0, var10, param2, var9_int + (-5 - var11), var11);
           LobbyPlayer.field_bc.setBounds(0, 0, param4, 0, var9_int);
           var13 = 5 + var10 + param2;
-          in.field_d.setBounds(0, param4, var13, 0, var9_int);
+          SocialPacketHelpers.field_d.setBounds(0, param4, var13, 0, var9_int);
           var13 = var13 + param4;
-          in.field_d.field_I = PopupMenuSupport.buildSolidFrameSprites(3, 2105376, 11579568, in.field_d.field_Lb, 8421504, 13574);
+          SocialPacketHelpers.field_d.field_I = PopupMenuSupport.buildSolidFrameSprites(3, 2105376, 11579568, SocialPacketHelpers.field_d.field_Lb, 8421504, 13574);
           LoginActionHelpers.field_a.setBounds(0, param7 - var13 / 2, var13, param1 - var9_int / 2, var9_int);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ac.DA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');

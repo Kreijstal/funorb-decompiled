@@ -37,7 +37,7 @@ final class ce extends IntrusiveNode {
     }
 
     static {
-        field_t = ViewportController.a(true);
+        field_t = ViewportController.createEightIntArray(true);
         field_u = "Please enter a year between <%0> and <%1>";
         field_w = false;
     }

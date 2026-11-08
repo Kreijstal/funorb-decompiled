@@ -31,17 +31,17 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    final static c a(int param0, boolean param1) {
-        c var2 = null;
-        c var2Lifetime1;
+    final static PendingByteArrayRequest sendTrackedRequest(int param0, boolean param1) {
+        PendingByteArrayRequest var2 = null;
+        PendingByteArrayRequest var2Lifetime1;
         if (param1) {
-          var2 = new c();
+          var2 = new PendingByteArrayRequest();
           RegistrationRequestDialog.field_Ub.addLast(3, var2);
           HighscoreSubmission.sendFlagRequest(87, param0);
           return var2;
         }
         field_m = 46;
-        var2Lifetime1 = new c();
+        var2Lifetime1 = new PendingByteArrayRequest();
         RegistrationRequestDialog.field_Ub.addLast(3, var2Lifetime1);
         HighscoreSubmission.sendFlagRequest(87, param0);
         return var2Lifetime1;

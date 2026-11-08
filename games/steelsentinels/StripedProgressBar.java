@@ -9,7 +9,7 @@ final class StripedProgressBar extends UiComponent {
     private RgbSprite[] field_R;
     boolean field_N;
     private int field_G;
-    static fm field_M;
+    static QuickChatParameterType field_M;
     private int field_T;
     private RgbSprite field_L;
     private int field_Q;
@@ -57,7 +57,7 @@ final class StripedProgressBar extends UiComponent {
         }
         this.drawStripedBar(var5, (byte) -8, var6, this.field_R[0]);
         if (this.field_I < 65536) {
-          ArchiveRequest.a((this.field_I * this.field_x >> 16) + var5, var6, 115, this.field_x + var5, this.field_E + var6);
+          ArchiveRequest.pushClip((this.field_I * this.field_x >> 16) + var5, var6, 115, this.field_x + var5, this.field_E + var6);
           this.drawStripedBar(var5, (byte) -87, var6, this.field_R[1]);
           MatchingTextValidator.popRasterStateWithIntGuard(97);
         }
@@ -116,7 +116,7 @@ final class StripedProgressBar extends UiComponent {
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
-        IterableNodeHashTable.a(var14, (byte) -116);
+        IterableNodeHashTable.bindSpriteRaster(var14, (byte) -116);
         if (param1 != 18634) {
           field_W = (int[]) null;
         }
@@ -153,7 +153,7 @@ final class StripedProgressBar extends UiComponent {
         var8 = SteelSentinels.obfuscationControl;
         try {
           var5_int = this.field_x + param0;
-          ArchiveRequest.a(this.field_L.field_A + param0, param2, 86, -this.field_L.field_A + var5_int, this.field_E + param2);
+          ArchiveRequest.pushClip(this.field_L.field_A + param0, param2, 86, -this.field_L.field_A + var5_int, this.field_E + param2);
           var6 = -this.field_G + param0;
           if (param1 >= -6) {
             field_P = (String) null;
@@ -164,7 +164,7 @@ final class StripedProgressBar extends UiComponent {
           }
           MatchingTextValidator.popRasterStateWithIntGuard(113);
           if (this.field_L.field_A + param0 >= SoftwareRaster.field_i) {
-            IterableNodeHashTable.a(this.field_Y, (byte) -75);
+            IterableNodeHashTable.bindSpriteRaster(this.field_Y, (byte) -75);
             param3.drawTransparent(-this.field_G, 0);
             param3.drawTransparent(2 * this.field_T - this.field_G, 0);
             this.field_K.drawMultiply(0, 0);
@@ -172,7 +172,7 @@ final class StripedProgressBar extends UiComponent {
             this.field_Y.drawTransparent(param0, param2);
           }
           if (SoftwareRaster.field_b >= var5_int - this.field_L.field_A) {
-            IterableNodeHashTable.a(this.field_Y, (byte) -63);
+            IterableNodeHashTable.bindSpriteRaster(this.field_Y, (byte) -63);
             for (var7 = -this.field_L.field_A + (this.field_x + this.field_G); 2 * this.field_T < var7; var7 = var7 - 2 * this.field_T) {
             }
             param3.drawTransparent(-var7, 0);
@@ -197,7 +197,7 @@ final class StripedProgressBar extends UiComponent {
         }
     }
 
-    final static EmailFormatError a(int param0, String param1) {
+    final static EmailFormatError validateEmailLocalPart(int param0, String param1) {
         EmailFormatError stackIn_3_0 = null;
         EmailFormatError stackIn_6_0 = null;
         EmailFormatError stackIn_9_0 = null;
@@ -223,7 +223,7 @@ final class StripedProgressBar extends UiComponent {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_3_0 = ud.field_A;
+            stackIn_3_0 = RankingQuery.field_A;
             return stackIn_3_0;
           }
           if (var2_int > 64) {
@@ -305,14 +305,14 @@ final class StripedProgressBar extends UiComponent {
         this.field_Y = new RgbSprite(this.field_E >> 1, this.field_E);
     }
 
-    final static void a(ResourceArchive param0, byte param1, BitmapFont param2) {
+    final static void initializeQuickChat(ResourceArchive param0, byte param1, BitmapFont param2) {
         int var6 = 0;
         int var7 = 0;
         int[] var16 = null;
         int var9 = 0;
         int var10 = SteelSentinels.obfuscationControl;
         int var3_int = SceneWidgetNode.field_D;
-        qf.field_c = new SceneWidget(0L, (SceneWidget) null);
+        RankingAndRasterHelpers.field_c = new SceneWidget(0L, (SceneWidget) null);
         int var4 = -124 / ((param1 + 78) / 32);
         if (param0 == null) {
           MusicCrossfadeStream.reportClientError("QC1", -29, (Throwable) null);
@@ -320,18 +320,18 @@ final class StripedProgressBar extends UiComponent {
         }
         param0.fileRetentionMode = 0;
         param0.discardPackedGroups = false;
-        cd.field_e = new QuickChatCategoryCache(var3_int, param0, param0);
-        ArchiveIndex.field_w = new QuickChatPhraseCache(var3_int, param0, param0, new kb());
-        QuickChatCategory var5 = NodeDeque.d(0);
+        QuickChatPacketHelpers.field_e = new QuickChatCategoryCache(var3_int, param0, param0);
+        ArchiveIndex.field_w = new QuickChatPhraseCache(var3_int, param0, param0, new DefaultQuickChatCacheHook());
+        QuickChatCategory var5 = NodeDeque.findFirstEnabledCategory(0);
         if (var5 == null) {
           MusicCrossfadeStream.reportClientError("QC2", -49, (Throwable) null);
           return;
         }
         try {
           SoundAndUrlHelpers.initFallbackShortcut(var5, 101);
-          AlternateUsernameCredentials.field_u = fm.a(65793, false, 2245737, 1127256, 65793, 4020342, 1513239, 0, 1513239, 5138823, 8947848, (BitmapFont) null, 65793);
-          Sprite.field_f = fm.a(0, false, 0, 0, 0, 0, 0, 16764006, 0, 0, 0, param2, 0);
-          UsernameCredentials.field_l = fm.a(0, false, 0, 0, 0, 0, 0, 16777215, 0, 0, 0, param2, 0);
+          AlternateUsernameCredentials.field_u = QuickChatParameterType.createThemedWidget(65793, false, 2245737, 1127256, 65793, 4020342, 1513239, 0, 1513239, 5138823, 8947848, (BitmapFont) null, 65793);
+          Sprite.field_f = QuickChatParameterType.createThemedWidget(0, false, 0, 0, 0, 0, 0, 16764006, 0, 0, 0, param2, 0);
+          UsernameCredentials.field_l = QuickChatParameterType.createThemedWidget(0, false, 0, 0, 0, 0, 0, 16777215, 0, 0, 0, param2, 0);
           var6 = SoftwareRaster.field_c;
           var7 = SoftwareRaster.field_j;
           var16 = SoftwareRaster.field_g;
@@ -341,8 +341,8 @@ final class StripedProgressBar extends UiComponent {
             SoftwareRaster.drawVerticalLine(var9, var9 + 1, 14 - (var9 << 1), 16777215);
           }
           SoftwareRaster.setTarget(var16, var6, var7);
-          ImageProducerRasterBuffer.field_m = BufferedSocket.a(UsernameCredentials.field_l, var5, false, Sprite.field_f, AlternateUsernameCredentials.field_u);
-          qf.field_c.field_M = new NodeDeque();
+          ImageProducerRasterBuffer.field_m = BufferedSocket.createQuickChatMenu(UsernameCredentials.field_l, var5, false, Sprite.field_f, AlternateUsernameCredentials.field_u);
+          RankingAndRasterHelpers.field_c.field_M = new NodeDeque();
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "bk.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -360,7 +360,7 @@ final class StripedProgressBar extends UiComponent {
         int var10 = SteelSentinels.obfuscationControl;
         int var2 = this.field_E >> 1;
         RgbSprite var3 = new RgbSprite(var2, this.field_E);
-        IterableNodeHashTable.a(var3, (byte) -62);
+        IterableNodeHashTable.bindSpriteRaster(var3, (byte) -62);
         int var4 = -8 % ((param0 + 87) / 36);
         for (var5 = 0; var5 < this.field_E; var5++) {
           for (var6 = 0; var6 < var2; var6++) {
@@ -388,7 +388,7 @@ final class StripedProgressBar extends UiComponent {
 
     static {
         field_X = "Play free version";
-        field_M = new fm(0, 2, 2, 1);
+        field_M = new QuickChatParameterType(0, 2, 2, 1);
         field_O = "EDD";
         field_H = "Your email address is used to identify this account";
         field_P = "Game";

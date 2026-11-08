@@ -27,7 +27,7 @@ final class ConditionalTextValue {
     }
 
     final static void initializeLoginStack(boolean param0) {
-        LoadoutHelpers.field_j = IntrusiveNode.a(125);
+        LoadoutHelpers.field_j = IntrusiveNode.getSharedUiTheme(125);
         GradientOutlineTextPainter.field_p = new ModalStack();
         ChecksumAndFrameHelpers.showLoginDialog(true, param0, -73);
     }

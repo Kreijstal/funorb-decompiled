@@ -270,14 +270,14 @@ class SceneWidget extends SceneWidgetNode {
         RuntimeException decompiledCaughtException = null;
         var2 = SteelSentinels.obfuscationControl;
         try {
-          GradientOutlineTextPainter.field_p.handlePointerFrame((byte) 86, true, FunOrbClient.field_u, bd.field_d);
+          GradientOutlineTextPainter.field_p.handlePointerFrame((byte) 86, true, FunOrbClient.field_u, SolidSpriteHelpers.field_d);
           GradientOutlineTextPainter.field_p.updatePanels((byte) -4);
-          while (UiContainer.f(22759)) {
+          while (UiContainer.pollKeyEvent(22759)) {
             GradientOutlineTextPainter.field_p.handleKey(true, NameAvailabilityValidator.field_q, LoginMethod.field_c);
           }
           if (-1 != TextHotspotWidget.field_V) {
             var1_int = TextHotspotWidget.field_V;
-            LabeledField.a(-1, 0);
+            LabeledField.setPendingMessageId(-1, 0);
             stackIn_6_0 = var1_int;
             return stackIn_6_0;
           }
@@ -285,14 +285,14 @@ class SceneWidget extends SceneWidgetNode {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (AccountTermsPanel.field_ab == jn.field_b) {
+          if (AccountTermsPanel.field_ab == MusicTrackHelpers.field_b) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
           if (param0 <= 96) {
             SceneWidget.releaseStatics(true);
           }
-          if (!gf.field_a.isComplete((byte) -72)) {
+          if (!GeneratedSpriteHelpers.field_a.isComplete((byte) -72)) {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
@@ -487,9 +487,9 @@ class SceneWidget extends SceneWidgetNode {
         var21 = this.field_qb + var19;
         var22 = this.field_sb + var20;
         if (!this.field_P) {
-          IterableDualNodeDeque.a((byte) -64, var16, this.field_zb, this.field_cb, this.field_Rb, this.field_Lb);
+          IterableDualNodeDeque.drawNineSlicePanel((byte) -64, var16, this.field_zb, this.field_cb, this.field_Rb, this.field_Lb);
         } else {
-          IterableDualNodeDeque.a((byte) -120, var16, param6, param9, param1, param7);
+          IterableDualNodeDeque.drawNineSlicePanel((byte) -120, var16, param6, param9, param1, param7);
         }
         if (var17 != null) {
           var23_int = var21 + this.field_Rb;
@@ -576,7 +576,7 @@ class SceneWidget extends SceneWidgetNode {
             SceneWidget.readSettingsCookie(25, (java.applet.Applet) null);
           }
           var5 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = this.findById(WidgetStyleLayer.a(var5, (byte) -48), 3318);
+          stackIn_3_0 = this.findById(WidgetStyleLayer.hashText(var5, (byte) -48), 3318);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -593,7 +593,7 @@ class SceneWidget extends SceneWidgetNode {
     }
 
     SceneWidget(String param0, SceneWidget param1) {
-        this(WidgetStyleLayer.a((CharSequence) ((Object) param0), (byte) -48), param1, 0, 0, 0, 0, (String) null);
+        this(WidgetStyleLayer.hashText((CharSequence) ((Object) param0), (byte) -48), param1, 0, 0, 0, 0, (String) null);
     }
 
     private final void updateInputTree(boolean param0, int param1, int param2, int param3, byte param4, int param5) {
@@ -740,7 +740,7 @@ class SceneWidget extends SceneWidgetNode {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
               var4 = (String) (JavaScriptBridge.callWindowFunction(param1, (byte) -96, "getcookies"));
-              var5 = ModalStack.a(';', false, var4);
+              var5 = ModalStack.split(';', false, var4);
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&

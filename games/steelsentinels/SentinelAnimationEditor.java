@@ -65,24 +65,24 @@ final class SentinelAnimationEditor {
         int var2Lifetime1;
         var5 = SteelSentinels.obfuscationControl;
         if (NameAvailabilityValidator.field_q == 16) {
-          this.field_t = jm.field_o;
+          this.field_t = PendingIntReplyRequest.field_o;
           this.field_f = -1;
           this.field_b = 0;
         }
         if (17 == NameAvailabilityValidator.field_q) {
           this.field_b = 1;
-          this.field_t = wb.field_g;
+          this.field_t = RewardValueHelpers.field_g;
           this.field_f = -1;
         }
         if (NameAvailabilityValidator.field_q == 18) {
           this.field_f = -1;
           this.field_b = 9;
-          this.field_t = lc.field_g;
+          this.field_t = SettingSearchHelpers.field_g;
         }
         if (NameAvailabilityValidator.field_q == 19) {
           this.field_f = -1;
           this.field_b = 14;
-          this.field_t = qe.field_e;
+          this.field_t = TextSpriteHelpers.field_e;
         }
         if (NameAvailabilityValidator.field_q == 20) {
           this.field_t = jh.field_d;
@@ -95,31 +95,31 @@ final class SentinelAnimationEditor {
         if (NameAvailabilityValidator.field_q == 41 &&
           SoundAndUrlHelpers.field_e[82] &&
           this.field_s != -1) {
-          for (var2 = 0; var2 < ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b].length; var2++) {
-            ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b][var2] = ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_s][var2];
+          for (var2 = 0; var2 < ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][this.field_b].length; var2++) {
+            ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][this.field_b][var2] = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][this.field_s][var2];
           }
           this.field_s = -1;
           Js5NetworkRequest.field_J[this.field_b].bindRasterTarget();
           SoftwareRaster.clear();
           this.field_l.field_r = this.field_b;
           this.field_l.field_J = this.field_b;
-          this.field_l.f(this.field_n, param0 ^ -27248);
-          this.field_l.a(128, 64, (byte) -116, LoginConnectionStage.field_a);
-          Checkbox.field_bb.b((byte) 127);
+          this.field_l.interpolateAnimationPose(this.field_n, param0 ^ -27248);
+          this.field_l.drawInWorld(128, 64, (byte) -116, LoginConnectionStage.field_a);
+          Checkbox.field_bb.bindRaster((byte) 127);
         }
         if (NameAvailabilityValidator.field_q == 65 &&
           -1 != this.field_f) {
-          ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b][this.field_f] = this.field_o;
+          ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][this.field_b][this.field_f] = this.field_o;
           Js5NetworkRequest.field_J[this.field_b].bindRasterTarget();
           SoftwareRaster.clear();
           this.field_l.field_J = this.field_b;
           this.field_l.field_r = this.field_b;
-          this.field_l.f(this.field_n, 22742);
-          this.field_l.a(128, 64, (byte) -116, LoginConnectionStage.field_a);
-          Checkbox.field_bb.b((byte) 127);
+          this.field_l.interpolateAnimationPose(this.field_n, 22742);
+          this.field_l.drawInWorld(128, 64, (byte) -116, LoginConnectionStage.field_a);
+          Checkbox.field_bb.bindRaster((byte) 127);
         }
         if (NameAvailabilityValidator.field_q == 49) {
-          this.field_p = ja.field_i;
+          this.field_p = IconLookupHelpers.field_i;
         }
         if (NameAvailabilityValidator.field_q == 70) {
           this.field_p = NodeHashTable.field_e;
@@ -128,7 +128,7 @@ final class SentinelAnimationEditor {
           this.field_p = rb.field_j;
         }
         if (NameAvailabilityValidator.field_q == 41) {
-          var2Lifetime1 = o.a((byte) 84, this.field_n);
+          var2Lifetime1 = SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n);
           System.out.println("Please send the following data to TdR so he can insert it into the game!");
           System.out.println("int[][] animation = sentinelanimations[" + var2Lifetime1 + "];");
           for (var3 = 0; var3 < 26; var3++) {
@@ -145,86 +145,86 @@ final class SentinelAnimationEditor {
         if (NameAvailabilityValidator.field_q == 96) {
           this.field_b = this.field_b - 1;
           this.field_f = -1;
-          if (this.field_t == jm.field_o) {
+          if (this.field_t == PendingIntReplyRequest.field_o) {
             this.field_b = 0;
           }
-          if (this.field_t == wb.field_g &&
+          if (this.field_t == RewardValueHelpers.field_g &&
             this.field_b < 1) {
-            this.field_b = this.field_b + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][3];
+            this.field_b = this.field_b + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][3];
           }
-          if (this.field_t == lc.field_g &&
+          if (this.field_t == SettingSearchHelpers.field_g &&
             9 > this.field_b) {
             this.field_b = 9;
           }
-          if (this.field_t == qe.field_e &&
+          if (this.field_t == TextSpriteHelpers.field_e &&
             this.field_b < 14) {
             this.field_b = 14;
           }
           if (jh.field_d == this.field_t &&
             this.field_b < 17) {
-            this.field_b = this.field_b + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7];
+            this.field_b = this.field_b + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7];
           }
         }
         if (NameAvailabilityValidator.field_q == 97) {
           this.field_b = this.field_b + 1;
           this.field_f = -1;
-          if (this.field_t == jm.field_o) {
+          if (this.field_t == PendingIntReplyRequest.field_o) {
             this.field_b = 0;
           }
-          if (this.field_t == wb.field_g &&
-            this.field_b >= ModalStack.field_G[o.a((byte) 84, this.field_n)][25][3] + 1) {
-            this.field_b = this.field_b - ModalStack.field_G[o.a((byte) 84, this.field_n)][25][3];
+          if (this.field_t == RewardValueHelpers.field_g &&
+            this.field_b >= ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][3] + 1) {
+            this.field_b = this.field_b - ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][3];
           }
-          if (this.field_t == lc.field_g &&
-            this.field_b >= 9 + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][4]) {
-            this.field_b = 8 + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][4];
+          if (this.field_t == SettingSearchHelpers.field_g &&
+            this.field_b >= 9 + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][4]) {
+            this.field_b = 8 + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][4];
           }
-          if (qe.field_e == this.field_t &&
+          if (TextSpriteHelpers.field_e == this.field_t &&
             this.field_b > 16) {
             this.field_b = 16;
           }
           if (this.field_t == jh.field_d &&
-            this.field_b >= ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7] + 17) {
-            this.field_b = this.field_b - ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7];
+            this.field_b >= ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7] + 17) {
+            this.field_b = this.field_b - ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7];
           }
         }
         if (26 == NameAvailabilityValidator.field_q) {
-          if (this.field_t != wb.field_g) {
-            if (lc.field_g == this.field_t) {
-              if (1 < ModalStack.field_G[o.a((byte) 84, this.field_n)][25][4]) {
-                dupTemp$0 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+          if (this.field_t != RewardValueHelpers.field_g) {
+            if (SettingSearchHelpers.field_g == this.field_t) {
+              if (1 < ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][4]) {
+                dupTemp$0 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                 dupTemp$0[4] = dupTemp$0[4] - 1;
               }
             } else {
               if (this.field_t == jh.field_d &&
-                ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7] > 3) {
-                dupTemp$1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+                ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7] > 3) {
+                dupTemp$1 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                 dupTemp$1[7] = dupTemp$1[7] - 1;
               }
             }
           } else {
-            if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][3] > 3) {
-              dupTemp$2 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+            if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][3] > 3) {
+              dupTemp$2 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
               dupTemp$2[3] = dupTemp$2[3] - 1;
             }
           }
         }
         if (NameAvailabilityValidator.field_q == 27) {
-          if (this.field_t == wb.field_g) {
-            if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][3] < 8) {
-              dupTemp$3 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+          if (this.field_t == RewardValueHelpers.field_g) {
+            if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][3] < 8) {
+              dupTemp$3 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
               dupTemp$3[3] = dupTemp$3[3] + 1;
             }
           } else {
-            if (this.field_t == lc.field_g) {
-              if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][4] < 5) {
-                dupTemp$4 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+            if (this.field_t == SettingSearchHelpers.field_g) {
+              if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][4] < 5) {
+                dupTemp$4 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                 dupTemp$4[4] = dupTemp$4[4] + 1;
               }
             } else {
               if (this.field_t == jh.field_d &&
-                ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7] < 8) {
-                dupTemp$5 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+                ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7] < 8) {
+                dupTemp$5 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                 dupTemp$5[7] = dupTemp$5[7] + 1;
               }
             }
@@ -234,58 +234,58 @@ final class SentinelAnimationEditor {
           this.handleEditorKey(47);
         }
         if (NameAvailabilityValidator.field_q == 71) {
-          if (wb.field_g == this.field_t) {
+          if (RewardValueHelpers.field_g == this.field_t) {
             if (SoundAndUrlHelpers.field_e[81]) {
-              if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][1] > 1) {
-                dupTemp$6 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+              if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][1] > 1) {
+                dupTemp$6 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                 dupTemp$6[1] = dupTemp$6[1] - 1;
               }
             } else {
-              if (1 < ModalStack.field_G[o.a((byte) 84, this.field_n)][25][0]) {
-                dupTemp$7 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+              if (1 < ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][0]) {
+                dupTemp$7 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                 dupTemp$7[0] = dupTemp$7[0] - 1;
               }
             }
           } else {
-            if (this.field_t != lc.field_g) {
+            if (this.field_t != SettingSearchHelpers.field_g) {
               if (jh.field_d == this.field_t) {
                 if (!SoundAndUrlHelpers.field_e[81]) {
-                  if (1 < ModalStack.field_G[o.a((byte) 84, this.field_n)][25][5]) {
-                    dupTemp$8 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+                  if (1 < ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][5]) {
+                    dupTemp$8 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                     dupTemp$8[5] = dupTemp$8[5] - 1;
                   }
                 } else {
-                  if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][6] > 1) {
-                    dupTemp$9 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+                  if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][6] > 1) {
+                    dupTemp$9 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                     dupTemp$9[6] = dupTemp$9[6] - 1;
                   }
                 }
               }
             } else {
-              if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][2] > 1) {
-                dupTemp$10 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+              if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][2] > 1) {
+                dupTemp$10 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                 dupTemp$10[2] = dupTemp$10[2] - 1;
               }
             }
           }
         }
         if (NameAvailabilityValidator.field_q == 72) {
-          if (this.field_t != wb.field_g) {
-            if (lc.field_g == this.field_t) {
-              if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][2] < 100) {
-                dupTemp$11 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+          if (this.field_t != RewardValueHelpers.field_g) {
+            if (SettingSearchHelpers.field_g == this.field_t) {
+              if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][2] < 100) {
+                dupTemp$11 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                 dupTemp$11[2] = dupTemp$11[2] + 1;
               }
             } else {
               if (jh.field_d == this.field_t) {
                 if (!SoundAndUrlHelpers.field_e[81]) {
-                  if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][5] < 256) {
-                    dupTemp$12 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+                  if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][5] < 256) {
+                    dupTemp$12 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                     dupTemp$12[5] = dupTemp$12[5] + 1;
                   }
                 } else {
-                  if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][6] < 25) {
-                    dupTemp$13 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+                  if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][6] < 25) {
+                    dupTemp$13 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                     dupTemp$13[6] = dupTemp$13[6] + 1;
                   }
                 }
@@ -293,13 +293,13 @@ final class SentinelAnimationEditor {
             }
           } else {
             if (SoundAndUrlHelpers.field_e[81]) {
-              if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][1] < 25) {
-                dupTemp$14 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+              if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][1] < 25) {
+                dupTemp$14 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                 dupTemp$14[1] = dupTemp$14[1] + 1;
               }
             } else {
-              if (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][0] < 256) {
-                dupTemp$15 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25];
+              if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][0] < 256) {
+                dupTemp$15 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25];
                 dupTemp$15[0] = dupTemp$15[0] + 1;
               }
             }
@@ -313,10 +313,10 @@ final class SentinelAnimationEditor {
           return;
         }
         try {
-          wn.field_f = param4;
+          ChatPanelSetupHelpers.field_f = param4;
           LobbyGame.field_ic = param2;
           CachedArchiveProvider.field_t = param1;
-          ob.field_v = true;
+          PendingPackedReply.field_v = true;
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "qj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -326,17 +326,17 @@ final class SentinelAnimationEditor {
         int fieldTemp$0 = 0;
         int var3;
         var3 = SteelSentinels.obfuscationControl;
-        if (this.field_t == jm.field_o) {
+        if (this.field_t == PendingIntReplyRequest.field_o) {
           this.field_l.field_Lb = false;
           this.field_l.field_U = 0;
           this.field_l.field_oc = 0;
         } else {
-          if (wb.field_g == this.field_t) {
+          if (RewardValueHelpers.field_g == this.field_t) {
             this.field_l.field_oc = 0;
             this.field_l.field_Lb = false;
             this.field_l.field_Pb = 0;
             this.field_l.field_U = 1;
-            if (this.field_p != ja.field_i) {
+            if (this.field_p != IconLookupHelpers.field_i) {
               if (this.field_p == rb.field_j) {
                 this.field_l.field_mb = 0;
                 this.field_e = 0;
@@ -345,21 +345,21 @@ final class SentinelAnimationEditor {
                 if (this.field_k > 200) {
                   this.field_k = this.field_k - 400;
                 }
-                this.field_e = this.field_k * (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][0] * this.field_g) / (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][1] * 10);
+                this.field_e = this.field_k * (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][0] * this.field_g) / (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][1] * 10);
                 this.field_e = (511 & this.field_e) - 256;
               }
             } else {
               this.field_e = 0;
             }
           } else {
-            if (lc.field_g != this.field_t) {
-              if (this.field_t != qe.field_e) {
+            if (SettingSearchHelpers.field_g != this.field_t) {
+              if (this.field_t != TextSpriteHelpers.field_e) {
                 if (this.field_t == jh.field_d) {
                   this.field_l.field_Lb = false;
                   this.field_l.field_Pb = 25;
                   this.field_l.field_oc = 0;
                   this.field_l.field_U = 1;
-                  if (ja.field_i == this.field_p) {
+                  if (IconLookupHelpers.field_i == this.field_p) {
                     this.field_e = 0;
                   } else {
                     if (this.field_p == rb.field_j) {
@@ -370,7 +370,7 @@ final class SentinelAnimationEditor {
                       if (this.field_k > 200) {
                         this.field_k = this.field_k - 400;
                       }
-                      this.field_e = this.field_k * (ModalStack.field_G[o.a((byte) 84, this.field_n)][25][5] * this.field_g) / (10 * ModalStack.field_G[o.a((byte) 84, this.field_n)][25][6]);
+                      this.field_e = this.field_k * (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][5] * this.field_g) / (10 * ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][6]);
                       this.field_e = -256 + (this.field_e & 511);
                     }
                   }
@@ -386,28 +386,28 @@ final class SentinelAnimationEditor {
             } else {
               fieldTemp$0 = this.field_l.field_oc;
               this.field_l.field_oc = this.field_l.field_oc + 1;
-              if (fieldTemp$0 >= ModalStack.field_G[o.a((byte) 84, this.field_n)][25][2]) {
+              if (fieldTemp$0 >= ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][2]) {
                 this.field_l.field_oc = 0;
               }
               this.field_l.field_Lb = false;
             }
           }
         }
-        this.field_l.g(-18, this.field_n);
+        this.field_l.advanceAnimation(-18, this.field_n);
         if (WeightedLruCache.field_d == 1 &&
           this.field_w != -1) {
           if (this.field_f != this.field_w) {
             this.field_f = this.field_w;
-            this.field_o = ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b][this.field_w];
+            this.field_o = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][this.field_b][this.field_w];
           }
-          ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b][this.field_w] = this.field_r;
+          ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][this.field_b][this.field_w] = this.field_r;
           Js5NetworkRequest.field_J[this.field_b].bindRasterTarget();
           SoftwareRaster.clear();
           this.field_l.field_r = this.field_b;
           this.field_l.field_J = this.field_b;
-          this.field_l.f(this.field_n, 22742);
-          this.field_l.a(128, 64, (byte) -116, LoginConnectionStage.field_a);
-          Checkbox.field_bb.b((byte) 127);
+          this.field_l.interpolateAnimationPose(this.field_n, 22742);
+          this.field_l.drawInWorld(128, 64, (byte) -116, LoginConnectionStage.field_a);
+          Checkbox.field_bb.bindRaster((byte) 127);
         }
         if (param0 <= 43) {
           SentinelAnimationEditor.releaseStatics(117);
@@ -480,8 +480,8 @@ final class SentinelAnimationEditor {
         int var8Lifetime2Lifetime2;
         int var8Lifetime2Lifetime3;
         var11 = SteelSentinels.obfuscationControl;
-        if (null != ModalStack.field_G[o.a((byte) 84, this.field_n)] &&
-          ModalStack.field_G[o.a((byte) 84, this.field_n)][25] != null) {
+        if (null != ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)] &&
+          ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25] != null) {
           SoftwareRaster.fillRectangle(0, 0, 640, 380, 0);
           SoftwareRaster.setClip(0, 0, 640, 396);
           var4 = this.field_w;
@@ -489,9 +489,9 @@ final class SentinelAnimationEditor {
           if (this.field_l.animatedParts.length > 0) {
             var2 = 320;
             var3 = 32;
-            var5_ref_int__ = ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b];
+            var5_ref_int__ = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][this.field_b];
             if (var5_ref_int__ == null) {
-              dupTemp$0 = ModalStack.field_G[o.a((byte) 84, this.field_n)];
+              dupTemp$0 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)];
               array$1 = new int[2 + this.field_l.animatedParts.length];
               dupTemp$0[this.field_b] = array$1;
               var5_ref_int__ = array$1;
@@ -504,11 +504,11 @@ final class SentinelAnimationEditor {
               var12 = var13;
               var5_ref_int__ = var12;
               for (var8 = 0; var30.length > var8; var8++) {
-                if (ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b].length > var8) {
-                  var12[var8] = ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b][var8];
+                if (ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][this.field_b].length > var8) {
+                  var12[var8] = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][this.field_b][var8];
                 }
               }
-              ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b] = var30;
+              ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][this.field_b] = var30;
             }
             var7_int = 48;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
@@ -590,17 +590,17 @@ final class SentinelAnimationEditor {
           } else {
             SoftwareRaster.fillRectangle(-128 + var2Lifetime1, var3Lifetime1, 257, 64, 3351057);
           }
-          var5Lifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][0];
-          var6Lifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][1];
+          var5Lifetime1 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][0];
+          var6Lifetime1 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][1];
           if (this.field_l.field_Pb > 0) {
-            var5Lifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][5];
-            var6Lifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][6];
+            var5Lifetime1 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][5];
+            var6Lifetime1 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][6];
           }
-          if (this.field_t == wb.field_g) {
+          if (this.field_t == RewardValueHelpers.field_g) {
             SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
             SoftwareRaster.drawVerticalLineAlpha(-64 + var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
             SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 + 64, -192 + var3Lifetime1, 192, 16777215, 64);
-            var7_intLifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][3];
+            var7_intLifetime1 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][3];
             SoftwareRaster.fillCircleBlended(var2Lifetime1 - this.field_g * ((this.field_b - 1) * var5Lifetime1) / var6Lifetime1, 7 + var3Lifetime1, 7, 16777215, 255 - (this.field_b - 1) * 256 / var7_intLifetime1);
             SoftwareRaster.fillCircleBlended(var2Lifetime1 - (var5Lifetime1 * (this.field_b - 1) * this.field_g / var6Lifetime1 + this.field_g * (var5Lifetime1 * var7_intLifetime1) / (var6Lifetime1 * 2)), var3Lifetime1 + 7, 7, 16711680, 128);
             SoftwareRaster.fillCircleBlended(-(var5Lifetime1 * (this.field_b - var7_intLifetime1 - 1) * this.field_g / var6Lifetime1) + var2Lifetime1, var3Lifetime1 + 7, 7, 16777215, (-var7_intLifetime1 + this.field_b - 1) * 256 / var7_intLifetime1 + 255);
@@ -612,7 +612,7 @@ final class SentinelAnimationEditor {
               SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
               SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 - 64, var3Lifetime1 - 192, 192, 16777215, 64);
               SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 + 64, var3Lifetime1 - 192, 192, 16777215, 64);
-              var7_intLifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7];
+              var7_intLifetime1 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7];
               var8Lifetime1 = this.field_g * var5Lifetime1 * (this.field_b - 17) / var6Lifetime1;
               SoftwareRaster.fillCircleBlended(-var8Lifetime1 + var2Lifetime1, var8Lifetime1 + 7 + var3Lifetime1, 7, 16777215, 255 - (this.field_b - 17) * 256 / var7_intLifetime1);
               var8Lifetime1Lifetime1 = -(this.field_g * var7_intLifetime1 * var5Lifetime1 / (var6Lifetime1 * 2)) + this.field_g * (this.field_b - 17) * var5Lifetime1 / var6Lifetime1;
@@ -633,14 +633,14 @@ final class SentinelAnimationEditor {
             SoftwareRaster.fillRectangle(-128 + var2Lifetime1, var3Lifetime1, 257, 64, 3351057);
           }
           SoftwareRaster.resetClip();
-          if (this.field_t == wb.field_g) {
+          if (this.field_t == RewardValueHelpers.field_g) {
             SoftwareRaster.setClip(var2Lifetime1 - 128, 130, 128 + var2Lifetime1, var3Lifetime1);
             if (0 > this.field_w ||
               !(this.field_l.animatedParts.length > this.field_w)) {
-              this.field_l.a(var3Lifetime1, this.field_e + var2Lifetime1, (byte) -116, MenuInputState.field_n);
+              this.field_l.drawInWorld(var3Lifetime1, this.field_e + var2Lifetime1, (byte) -116, MenuInputState.field_n);
             }
-            if (ja.field_i == this.field_p) {
-              var7_intLifetime3 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][3];
+            if (IconLookupHelpers.field_i == this.field_p) {
+              var7_intLifetime3 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][3];
               SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
               SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 - 64, -192 + var3Lifetime1, 192, 16777215, 64);
               SoftwareRaster.drawVerticalLineAlpha(64 + var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
@@ -658,10 +658,10 @@ final class SentinelAnimationEditor {
               SoftwareRaster.setClip(-128 + var2Lifetime1, 130, var2Lifetime1 + 128, var3Lifetime1);
               if (0 > this.field_w ||
                 !(this.field_w < this.field_l.animatedParts.length)) {
-                this.field_l.a(var3Lifetime1, var2Lifetime1 + this.field_e, (byte) -116, MenuInputState.field_n);
+                this.field_l.drawInWorld(var3Lifetime1, var2Lifetime1 + this.field_e, (byte) -116, MenuInputState.field_n);
               }
-              if (ja.field_i == this.field_p) {
-                var7_intLifetime3 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7];
+              if (IconLookupHelpers.field_i == this.field_p) {
+                var7_intLifetime3 = ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7];
                 SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
                 SoftwareRaster.drawVerticalLineAlpha(-64 + var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
                 SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 + 64, -192 + var3Lifetime1, 192, 16777215, 64);
@@ -692,28 +692,28 @@ final class SentinelAnimationEditor {
           var7Lifetime2 = var15;
           var7Lifetime3 = var15;
           var7Lifetime4 = var15;
-          if (this.field_t == jm.field_o) {
+          if (this.field_t == PendingIntReplyRequest.field_o) {
             var7Lifetime4 = var15 + "<col=ffffff>";
           }
           var16 = var7Lifetime4 + "1 - Edit idle anim</col><br>";
           var7Lifetime5 = var16;
           var7Lifetime6 = var16;
           var7Lifetime7 = var16;
-          if (wb.field_g == this.field_t) {
+          if (RewardValueHelpers.field_g == this.field_t) {
             var7Lifetime7 = var16 + "<col=ffffff>";
           }
           var17 = var7Lifetime7 + "2 - Edit walk anim</col><br>";
           var7Lifetime8 = var17;
           var7Lifetime9 = var17;
           var7Lifetime10 = var17;
-          if (lc.field_g == this.field_t) {
+          if (SettingSearchHelpers.field_g == this.field_t) {
             var7Lifetime10 = var17 + "<col=ffffff>";
           }
           var18 = var7Lifetime10 + "3 - Edit jump anim</col><br>";
           var7Lifetime11 = var18;
           var7Lifetime12 = var18;
           var7Lifetime13 = var18;
-          if (qe.field_e == this.field_t) {
+          if (TextSpriteHelpers.field_e == this.field_t) {
             var7Lifetime13 = var18 + "<col=ffffff>";
           }
           var19 = var7Lifetime13 + "4 - Edit air anim</col><br>";
@@ -724,22 +724,22 @@ final class SentinelAnimationEditor {
           var20 = var7Lifetime14 + "5 - Edit climb anim</col><br>";
           var21 = var20 + "<br>Left and Right change frame<br>Use the sliders to change angles and positions.<br>C - select a frame to copy, CTRL+P - pastes a frame<br>";
           var7Lifetime15 = var21;
-          if (this.field_t == wb.field_g) {
+          if (this.field_t == RewardValueHelpers.field_g) {
             var22 = var21 + "S - show treadmill animation<br>M - show moving animation<br>F - show still frame<br>";
             var23 = var22 + "Speed = " + var5Lifetime1 + " (<lt> and <gt> to change)<br>";
-            var24 = var23 + "Frame = " + (0 + this.field_b) + " of " + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][3] + " (arrow keys to change, + and - to change max frame no)<br>";
-            var7Lifetime15 = var24 + "FPS = " + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][1] + " (SHIFT + <lt> and <gt> to change)<br>";
+            var24 = var23 + "Frame = " + (0 + this.field_b) + " of " + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][3] + " (arrow keys to change, + and - to change max frame no)<br>";
+            var7Lifetime15 = var24 + "FPS = " + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][1] + " (SHIFT + <lt> and <gt> to change)<br>";
           }
-          if (this.field_t == lc.field_g) {
+          if (this.field_t == SettingSearchHelpers.field_g) {
             var25 = var7Lifetime15 + "S - show treadmill animation<br>M - show moving animation<br>";
-            var26 = var25 + "Frame = " + (1 + (this.field_b - 9)) + " of " + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][4] + " (arrow keys to change, + and - to change max frame no)<br>";
-            var7Lifetime15 = var26 + "Jump Animation Time = " + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][2] / 50 + "." + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][2] / 5 % 10 + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][2] * 2 % 10 + " secs (<lt> and <gt> to change)<br>";
+            var26 = var25 + "Frame = " + (1 + (this.field_b - 9)) + " of " + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][4] + " (arrow keys to change, + and - to change max frame no)<br>";
+            var7Lifetime15 = var26 + "Jump Animation Time = " + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][2] / 50 + "." + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][2] / 5 % 10 + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][2] * 2 % 10 + " secs (<lt> and <gt> to change)<br>";
           }
           if (jh.field_d == this.field_t) {
             var27 = var7Lifetime15 + "S - show treadmill animation<br>M - show moving animation<br>F - show still frame<br>";
             var28 = var27 + "Speed = " + var5Lifetime1 + " (<lt> and <gt> to change)<br>";
-            var29 = var28 + "Frame = " + (1 + (this.field_b - 17)) + " of " + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7] + " (arrow keys to change, + and - to change max frame no)<br>";
-            var7Lifetime15 = var29 + "FPS = " + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][6] + " (SHIFT + <lt> and <gt> to change)<br>";
+            var29 = var28 + "Frame = " + (1 + (this.field_b - 17)) + " of " + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][7] + " (arrow keys to change, + and - to change max frame no)<br>";
+            var7Lifetime15 = var29 + "FPS = " + ModalStack.field_G[SocialStateHelpers.getAnimationSetIndex((byte) 84, this.field_n)][25][6] + " (SHIFT + <lt> and <gt> to change)<br>";
           }
           DualNodeHashTable.field_h.drawParagraph(var7Lifetime15, 8, 8, 624, 100, 43724, 0, 0, 0, 12);
           return;

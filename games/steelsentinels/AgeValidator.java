@@ -11,7 +11,7 @@ final class AgeValidator extends TextFieldValidator {
     static String field_r;
     static RgbSprite[] field_p;
 
-    final static boolean b(String param0, int param1) {
+    final static boolean isRepeatedCharacter(String param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -65,20 +65,20 @@ final class AgeValidator extends TextFieldValidator {
         field_p = null;
     }
 
-    final vd validateText(String param0, int param1) {
+    final TransitionTimerHelpers validateText(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
         CharSequence var5 = null;
-        vd stackIn_3_0 = null;
-        vd stackIn_10_0 = null;
+        TransitionTimerHelpers stackIn_3_0 = null;
+        TransitionTimerHelpers stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!RegistrationRequestDialog.a(var4, -71)) {
+          if (!RegistrationRequestDialog.isDecimalInteger(var4, -71)) {
             stackIn_3_0 = ArchiveProvider.field_d;
             return stackIn_3_0;
           }
@@ -86,10 +86,10 @@ final class AgeValidator extends TextFieldValidator {
             field_s = (RgbSprite[]) null;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3_int = dj.a(var5, -124);
+          var3_int = NumberParsingHelpers.parseDecimalInt(var5, -124);
           if (0 < var3_int &&
             var3_int <= 130) {
-            return vf.field_b;
+            return RequestResendHelpers.field_b;
           }
           stackIn_10_0 = ArchiveProvider.field_d;
           return stackIn_10_0;
@@ -140,7 +140,7 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
+    final static void buildAccountOverlay(int param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -157,12 +157,12 @@ final class AgeValidator extends TextFieldValidator {
         String var7 = null;
         var6 = SteelSentinels.obfuscationControl;
         try {
-          if (tj.field_f != null) {
+          if (HighscoreSubmissionFactory.field_f != null) {
             return;
           }
-          jn.field_g = false;
-          if (!fj.field_e) {
-            if (!uc.field_g) {
+          MusicTrackHelpers.field_g = false;
+          if (!PasswordRuleHelpers.field_e) {
+            if (!DesignerPageTables.field_g) {
               var5 = BufferedSocket.field_h;
             } else {
               var5 = TickClock.field_b;
@@ -172,27 +172,27 @@ final class AgeValidator extends TextFieldValidator {
           }
           var7 = (String) null;
           ParticleEffect.showSavedLayout(-104, DebouncedValidator.field_e, var5, 0, (String) null);
-          vd.field_d.field_rb = ((ReportAbuseDialog.field_ic.field_rb & 16711422) >> 1) + (DebouncedValidator.field_e - ((16711422 & DebouncedValidator.field_e) >> 1));
-          vd.field_d.field_xb = (8355711 & ReportAbuseDialog.field_ic.field_xb >> 1) - ((16711422 & DebouncedValidator.field_e) >> 1) + DebouncedValidator.field_e;
+          TransitionTimerHelpers.field_d.field_rb = ((ReportAbuseDialog.field_ic.field_rb & 16711422) >> 1) + (DebouncedValidator.field_e - ((16711422 & DebouncedValidator.field_e) >> 1));
+          TransitionTimerHelpers.field_d.field_xb = (8355711 & ReportAbuseDialog.field_ic.field_xb >> 1) - ((16711422 & DebouncedValidator.field_e) >> 1) + DebouncedValidator.field_e;
           Checkbox.field_ab = DualNodeDequeIterator.field_e;
-          tj.field_f = vd.field_d;
-          vd.field_d.field_Mb = (ReportAbuseDialog.field_ic.field_Mb >> 1 & 8355711) - ((16711422 & DebouncedValidator.field_e) >> 1) + DebouncedValidator.field_e;
+          HighscoreSubmissionFactory.field_f = TransitionTimerHelpers.field_d;
+          TransitionTimerHelpers.field_d.field_Mb = (ReportAbuseDialog.field_ic.field_Mb >> 1 & 8355711) - ((16711422 & DebouncedValidator.field_e) >> 1) + DebouncedValidator.field_e;
           LoginActionHelpers.field_a = new SceneWidget(0L, param2);
           LobbyPlayer.field_bc = new SceneWidget(0L, param4);
-          in.field_d = new SceneWidget(0L, (SceneWidget) null);
-          te.field_f = new SceneWidget(0L, param1);
-          vd.field_d = new SceneWidget((long)param0, param3);
-          vd.field_d.field_L = BirthDateEntryPanel.field_X;
-          te.field_f.addChild(vd.field_d, 122);
+          SocialPacketHelpers.field_d = new SceneWidget(0L, (SceneWidget) null);
+          FriendListHelpers.field_f = new SceneWidget(0L, param1);
+          TransitionTimerHelpers.field_d = new SceneWidget((long)param0, param3);
+          TransitionTimerHelpers.field_d.field_L = BirthDateEntryPanel.field_X;
+          FriendListHelpers.field_f.addChild(TransitionTimerHelpers.field_d, 122);
           DualNodeDequeIterator.field_e = new SceneWidget(0L, Checkbox.field_ab);
-          te.field_f.addChild(DualNodeDequeIterator.field_e, 125);
-          vc.field_f = new SceneWidget(0L, ReportAbuseDialog.field_ic, NumericDateInputWidget.field_cb);
+          FriendListHelpers.field_f.addChild(DualNodeDequeIterator.field_e, 125);
+          DisplayMode.field_f = new SceneWidget(0L, ReportAbuseDialog.field_ic, NumericDateInputWidget.field_cb);
           Js5NetworkRequest.field_N = new SceneWidget(0L, ReportAbuseDialog.field_ic);
           LoginActionHelpers.field_a.addChild(LobbyPlayer.field_bc, 124);
-          LoginActionHelpers.field_a.addChild(in.field_d, 127);
-          in.field_d.addChild(te.field_f, 122);
-          in.field_d.addChild(vc.field_f, 119);
-          in.field_d.addChild(Js5NetworkRequest.field_N, 121);
+          LoginActionHelpers.field_a.addChild(SocialPacketHelpers.field_d, 127);
+          SocialPacketHelpers.field_d.addChild(FriendListHelpers.field_f, 122);
+          SocialPacketHelpers.field_d.addChild(DisplayMode.field_f, 119);
+          SocialPacketHelpers.field_d.addChild(Js5NetworkRequest.field_N, 121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -226,7 +226,7 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final static ChatMessage a(byte param0, boolean param1) {
+    final static ChatMessage readLoginReply(byte param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_25_0 = null;
@@ -247,13 +247,13 @@ final class AgeValidator extends TextFieldValidator {
         stackIn_3_0 = (0 != (var3 & 128));
         LobbySetupHelpers.field_e = stackIn_3_0;
         UrlAndReplyHelpers.field_b = var8.readUnsignedByte((byte) -121);
-        ni.field_d = var8.readLong((byte) -116);
+        ByteArrayPoolHelpers.field_d = var8.readLong((byte) -116);
         if (HuffmanDecoder.field_a != 2) {
           DualNodeHashTable.field_a = 0;
-          t.field_k = 0;
+          NameTable.field_k = 0;
         } else {
           DualNodeHashTable.field_a = var8.readUnsignedShort((byte) -60);
-          t.field_k = var8.readUnsignedMedium(false);
+          NameTable.field_k = var8.readUnsignedMedium(false);
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) -77) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
@@ -268,18 +268,18 @@ final class AgeValidator extends TextFieldValidator {
         }
         if (HuffmanDecoder.field_a == 1) {
           ContentTransitionDialog.field_lb = var8.readUnsignedShort((byte) -60);
-          uj.field_a = var8.readString(1);
+          ReflectionCheckHelpers.field_a = var8.readString(1);
         } else {
           if (HuffmanDecoder.field_a == 4) {
             ContentTransitionDialog.field_lb = var8.readUnsignedShort((byte) -60);
-            uj.field_a = var8.readString(1);
+            ReflectionCheckHelpers.field_a = var8.readString(1);
           } else {
-            uj.field_a = null;
+            ReflectionCheckHelpers.field_a = null;
             ContentTransitionDialog.field_lb = 0;
           }
         }
         if (!param1) {
-          WeightedCacheEntry.field_F = cd.a(var8, 80, (byte) -100);
+          WeightedCacheEntry.field_F = QuickChatPacketHelpers.readCompressedText(var8, 80, (byte) -100);
           ValidatedTextWidget.field_ob = null;
           return new ChatMessage(param1);
         }
@@ -316,7 +316,7 @@ final class AgeValidator extends TextFieldValidator {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static ChatMessage $cfr$intArgs$a$9d0e4b5217c4(int param0, boolean param1) {
+    final static ChatMessage readLoginReplyWithIntGuard(int param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_25_0 = null;
@@ -337,13 +337,13 @@ final class AgeValidator extends TextFieldValidator {
         stackIn_3_0 = (0 != (var3 & 128));
         LobbySetupHelpers.field_e = stackIn_3_0;
         UrlAndReplyHelpers.field_b = var8.readUnsignedByte((byte) -121);
-        ni.field_d = var8.readLong((byte) -116);
+        ByteArrayPoolHelpers.field_d = var8.readLong((byte) -116);
         if (HuffmanDecoder.field_a != 2) {
           DualNodeHashTable.field_a = 0;
-          t.field_k = 0;
+          NameTable.field_k = 0;
         } else {
           DualNodeHashTable.field_a = var8.readUnsignedShort((byte) -60);
-          t.field_k = var8.readUnsignedMedium(false);
+          NameTable.field_k = var8.readUnsignedMedium(false);
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) -77) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
@@ -358,18 +358,18 @@ final class AgeValidator extends TextFieldValidator {
         }
         if (HuffmanDecoder.field_a == 1) {
           ContentTransitionDialog.field_lb = var8.readUnsignedShort((byte) -60);
-          uj.field_a = var8.readString(1);
+          ReflectionCheckHelpers.field_a = var8.readString(1);
         } else {
           if (HuffmanDecoder.field_a == 4) {
             ContentTransitionDialog.field_lb = var8.readUnsignedShort((byte) -60);
-            uj.field_a = var8.readString(1);
+            ReflectionCheckHelpers.field_a = var8.readString(1);
           } else {
-            uj.field_a = null;
+            ReflectionCheckHelpers.field_a = null;
             ContentTransitionDialog.field_lb = 0;
           }
         }
         if (!param1) {
-          WeightedCacheEntry.field_F = cd.a(var8, 80, (byte) -100);
+          WeightedCacheEntry.field_F = QuickChatPacketHelpers.readCompressedText(var8, 80, (byte) -100);
           ValidatedTextWidget.field_ob = null;
           return new ChatMessage(param1);
         }

@@ -72,7 +72,7 @@ final class MusicPatchEnvelope {
             var9 = (int[]) null;
             MusicPatchEnvelope.isItemUnlockable((int[]) null, 21, true, (byte) -121);
           }
-          var4_int = NodeDeque.a((byte) 71, param1);
+          var4_int = NodeDeque.indexOfUnlockItem((byte) 71, param1);
           if (var4_int < 0) {
             return false;
           }
@@ -85,7 +85,7 @@ final class MusicPatchEnvelope {
           }
           var5 = 0;
           for (var6 = 0; var6 < 6; var6++) {
-            if (t.a(param0, FunOrbClient.field_z[var6], -20370)) {
+            if (NameTable.isBitSet(param0, FunOrbClient.field_z[var6], -20370)) {
               var5++;
             }
           }
@@ -95,7 +95,7 @@ final class MusicPatchEnvelope {
           }
           var6Lifetime1 = 0;
           for (var7 = 6; FunOrbClient.field_z.length > var7; var7++) {
-            if (t.a(param0, FunOrbClient.field_z[var7], -20370)) {
+            if (NameTable.isBitSet(param0, FunOrbClient.field_z[var7], -20370)) {
               var6Lifetime1++;
             }
           }

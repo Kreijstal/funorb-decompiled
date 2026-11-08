@@ -40,17 +40,17 @@ final class SocialListEntry extends SceneWidget {
           if (param0 < 54) {
             field_Xb = (String) null;
           }
-          var2 = new RgbSprite(param1.a("", -742, "final_frame.jpg"), (java.awt.Component) ((Object) sl.field_n));
+          var2 = new RgbSprite(param1.getFileByName("", -742, "final_frame.jpg"), (java.awt.Component) ((Object) ArchiveLoadStep.field_n));
           var3 = var2.field_A;
           var4 = var2.field_F;
-          ArchiveIndex.a(false);
-          dj.field_c = new RgbSprite(var3, 3 * var4 / 4);
-          dj.field_c.bindRasterTarget();
+          ArchiveIndex.pushRasterState(false);
+          NumberParsingHelpers.field_c = new RgbSprite(var3, 3 * var4 / 4);
+          NumberParsingHelpers.field_c.bindRasterTarget();
           var2.drawOpaque(0, 0);
-          BattleTerrain.field_k = new RgbSprite(var3, -dj.field_c.field_F + var4);
+          BattleTerrain.field_k = new RgbSprite(var3, -NumberParsingHelpers.field_c.field_F + var4);
           BattleTerrain.field_k.bindRasterTarget();
-          var2.drawOpaque(0, -dj.field_c.field_F);
-          BattleTerrain.field_k.field_H = dj.field_c.field_F;
+          var2.drawOpaque(0, -NumberParsingHelpers.field_c.field_F);
+          BattleTerrain.field_k.field_H = NumberParsingHelpers.field_c.field_F;
           MatchingTextValidator.popRasterStateWithIntGuard(107);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ah.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -85,7 +85,7 @@ final class SocialListEntry extends SceneWidget {
             field_Wb = -90;
           }
           if (param0) {
-            stackIn_12_0 = ValidationHelpWidget.a((byte) 89, param1);
+            stackIn_12_0 = ValidationHelpWidget.copyBytes((byte) 89, param1);
             return stackIn_12_0;
           }
           stackIn_10_0 = (byte[]) (param1);
@@ -108,13 +108,13 @@ final class SocialListEntry extends SceneWidget {
         ResourceArchive var3;
         ResourceArchive var3Lifetime1;
         if (SentinelCommand.field_t <= 0) {
-          if (bd.field_c > 0) {
+          if (SolidSpriteHelpers.field_c > 0) {
             if (GzipDecoder.field_c) {
               SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
               UsernameCredentials.field_r.drawFullScreen(param0, (byte) 127);
             }
           } else {
-            if (fj.field_f > 0 &&
+            if (PasswordRuleHelpers.field_f > 0 &&
               GzipDecoder.field_c) {
               SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
               UsernameCredentials.field_r.drawFullScreen(param0, (byte) 127);
@@ -122,8 +122,8 @@ final class SocialListEntry extends SceneWidget {
           }
         } else {
           if (!LobbyStateHelpers.field_b) {
-            if ((!(bd.field_c <= 0) ||
-              !(fj.field_f <= 0)) &&
+            if ((!(SolidSpriteHelpers.field_c <= 0) ||
+              !(PasswordRuleHelpers.field_f <= 0)) &&
               GzipDecoder.field_c) {
               SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
               UsernameCredentials.field_r.drawFullScreen(param0, (byte) 127);
@@ -131,8 +131,8 @@ final class SocialListEntry extends SceneWidget {
           } else {
             SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
             TeamColourTinter.field_b.drawFullScreen(param0, (byte) 127);
-            if (bd.field_c <= 0 &&
-              fj.field_f <= 0) {
+            if (SolidSpriteHelpers.field_c <= 0 &&
+              PasswordRuleHelpers.field_f <= 0) {
               if (param1 <= -25) {
                 return;
               }

@@ -71,19 +71,19 @@ abstract class ModalPanel extends UiContainer {
         return false;
     }
 
-    final static void a(byte param0) {
+    final static void returnToLogin(byte param0) {
         if (!QuickChatMenu.field_ac) {
           throw new IllegalStateException();
         }
         IntrusiveNode.field_a = true;
         if (param0 > 66) {
-          AccountTermsPanel.a(true, 40);
-          uj.field_d = 0;
+          AccountTermsPanel.openBlankLoginDialog(true, 40);
+          ReflectionCheckHelpers.field_d = 0;
           return;
         }
         field_W = (SceneWidget) null;
-        AccountTermsPanel.a(true, 40);
-        uj.field_d = 0;
+        AccountTermsPanel.openBlankLoginDialog(true, 40);
+        ReflectionCheckHelpers.field_d = 0;
     }
 
     final void resizeAndCenter(byte param0, int param1, int param2) {
@@ -91,7 +91,7 @@ abstract class ModalPanel extends UiContainer {
         int var4 = 103 / ((param0 - 0) / 45);
     }
 
-    final static void a(int param0, byte param1) {
+    final static void setSoundEffectVolume(int param0, byte param1) {
         PlayingSound var2 = null;
         int var3 = 0;
         boolean stackIn_14_0 = false;
@@ -102,7 +102,7 @@ abstract class ModalPanel extends UiContainer {
         try {
           VerticalScrollbar.field_ac = param0;
           if (param1 != 64) {
-            ModalPanel.a((byte) 37);
+            ModalPanel.returnToLogin((byte) 37);
           }
           var2 = (PlayingSound) (ClockAndCookieHelpers.field_b.first(13058));
           while (var2 != null) {
@@ -171,7 +171,7 @@ abstract class ModalPanel extends UiContainer {
 
     final void drawLayer(int param0, byte param1, int param2, int param3) {
         if (param1 > -99) {
-          ModalPanel.a(35, (byte) 1);
+          ModalPanel.setSoundEffectVolume(35, (byte) 1);
         }
         if (this.field_U == 0) {
           return;
@@ -184,42 +184,42 @@ abstract class ModalPanel extends UiContainer {
           super.drawLayer(param0, (byte) -121, param2, param3);
           return;
         }
-        if (lc.field_b == null) {
-          lc.field_b = new RgbSprite(this.field_x, this.field_E);
-          IterableNodeHashTable.a(lc.field_b, (byte) -103);
+        if (SettingSearchHelpers.field_b == null) {
+          SettingSearchHelpers.field_b = new RgbSprite(this.field_x, this.field_E);
+          IterableNodeHashTable.bindSpriteRaster(SettingSearchHelpers.field_b, (byte) -103);
           SoftwareRaster.clear();
           this.drawPanelBackground(0, 0, true);
           super.drawLayer(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
           MatchingTextValidator.popRasterStateWithIntGuard(111);
-          lc.field_b.drawShadedGrayscale(param2 + this.field_o, param0 + this.field_z, this.field_U);
+          SettingSearchHelpers.field_b.drawShadedGrayscale(param2 + this.field_o, param0 + this.field_z, this.field_U);
           return;
         }
-        if (this.field_x > lc.field_b.field_A) {
-          lc.field_b = new RgbSprite(this.field_x, this.field_E);
-          IterableNodeHashTable.a(lc.field_b, (byte) -103);
+        if (this.field_x > SettingSearchHelpers.field_b.field_A) {
+          SettingSearchHelpers.field_b = new RgbSprite(this.field_x, this.field_E);
+          IterableNodeHashTable.bindSpriteRaster(SettingSearchHelpers.field_b, (byte) -103);
           SoftwareRaster.clear();
           this.drawPanelBackground(0, 0, true);
           super.drawLayer(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
           MatchingTextValidator.popRasterStateWithIntGuard(111);
-          lc.field_b.drawShadedGrayscale(param2 + this.field_o, param0 + this.field_z, this.field_U);
+          SettingSearchHelpers.field_b.drawShadedGrayscale(param2 + this.field_o, param0 + this.field_z, this.field_U);
           return;
         }
-        if (lc.field_b.field_F < this.field_E) {
-          lc.field_b = new RgbSprite(this.field_x, this.field_E);
-          IterableNodeHashTable.a(lc.field_b, (byte) -103);
+        if (SettingSearchHelpers.field_b.field_F < this.field_E) {
+          SettingSearchHelpers.field_b = new RgbSprite(this.field_x, this.field_E);
+          IterableNodeHashTable.bindSpriteRaster(SettingSearchHelpers.field_b, (byte) -103);
           SoftwareRaster.clear();
           this.drawPanelBackground(0, 0, true);
           super.drawLayer(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
           MatchingTextValidator.popRasterStateWithIntGuard(111);
-          lc.field_b.drawShadedGrayscale(param2 + this.field_o, param0 + this.field_z, this.field_U);
+          SettingSearchHelpers.field_b.drawShadedGrayscale(param2 + this.field_o, param0 + this.field_z, this.field_U);
           return;
         }
-        IterableNodeHashTable.a(lc.field_b, (byte) -103);
+        IterableNodeHashTable.bindSpriteRaster(SettingSearchHelpers.field_b, (byte) -103);
         SoftwareRaster.clear();
         this.drawPanelBackground(0, 0, true);
         super.drawLayer(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
         MatchingTextValidator.popRasterStateWithIntGuard(111);
-        lc.field_b.drawShadedGrayscale(param2 + this.field_o, param0 + this.field_z, this.field_U);
+        SettingSearchHelpers.field_b.drawShadedGrayscale(param2 + this.field_o, param0 + this.field_z, this.field_U);
     }
 
     abstract void drawPanelBackground(int param0, int param1, boolean param2);

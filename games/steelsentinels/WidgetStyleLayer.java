@@ -17,14 +17,14 @@ final class WidgetStyleLayer {
     public static void releaseStatics(byte param0) {
         if (param0 != 12) {
           String var2 = (String) null;
-          WidgetStyleLayer.a(-105, (String) null);
+          WidgetStyleLayer.toUpperCaseOutsideTags(-105, (String) null);
         }
         field_i = null;
         field_k = null;
         field_b = null;
     }
 
-    final static void a(boolean param0, int param1, ScrollContainer param2, int param3, int param4) {
+    final static void layoutLobbyGameRows(boolean param0, int param1, ScrollContainer param2, int param3, int param4) {
         int var27_int = 0;
         ScrollContainer stackIn_41_0;
         int stackIn_41_1;
@@ -100,20 +100,20 @@ final class WidgetStyleLayer {
           var6 = param4;
           var7 = 0;
           var8 = 0;
-          if (null != nf.field_b && (null != LoadoutHelpers.field_d ||
-            null != ja.field_b ||
+          if (null != LoginEncryptionHelpers.field_b && (null != LoadoutHelpers.field_d ||
+            null != IconLookupHelpers.field_b ||
             QuickChatHelpDialog.field_cc != null ||
             SoundAndUrlHelpers.field_b != null)) {
             for (var9 = 0; UrlAndReplyHelpers.field_a > var9; var9++) {
-              var10_int = 255 & nf.field_b.field_Sb[var9];
+              var10_int = 255 & LoginEncryptionHelpers.field_b.field_Sb[var9];
               if (LoadoutHelpers.field_d != null &&
                 null != LoadoutHelpers.field_d[var9] &&
                 LoadoutHelpers.field_d[var9][var10_int]) {
                 var5_int = 1;
               }
-              if (ja.field_b != null &&
-                ja.field_b[var9] != null) {
-                var11_int = ja.field_b[var9][var10_int];
+              if (IconLookupHelpers.field_b != null &&
+                IconLookupHelpers.field_b[var9] != null) {
+                var11_int = IconLookupHelpers.field_b[var9][var10_int];
                 if (var6 < var11_int) {
                   var6 = var11_int;
                 }
@@ -159,7 +159,7 @@ final class WidgetStyleLayer {
                 var12.addChild(var12.field_oc, 126);
               }
               var12.field_oc.field_Kb = 2;
-              var12.field_cc = new SceneWidget(0L, bd.field_f);
+              var12.field_cc = new SceneWidget(0L, SolidSpriteHelpers.field_f);
               var12.addChild(var12.field_cc, param4 + 121);
               var12.markTreeDirty(-123);
               var12.field_hc = new SceneWidget(0L, ArchiveProvider.field_f);
@@ -208,7 +208,7 @@ final class WidgetStyleLayer {
                 var20 = "<img=" + (-1 + var12.field_jc) + ">" + var33;
               }
             } else {
-              var20 = "<img=" + (-4 + var12.field_jc + uc.field_l) + ">" + var33;
+              var20 = "<img=" + (-4 + var12.field_jc + DesignerPageTables.field_l) + ">" + var33;
             }
             var12.field_Sb.field_S = var20;
             if (!var12.isUnlisted((byte) -36)) {
@@ -235,25 +235,25 @@ final class WidgetStyleLayer {
               var12.field_hc.field_xb = var24_int;
               var12.field_hc.field_rb = var24_int;
               if (NanoTickClock.field_t == param2) {
-                if (!nf.field_b.field_rc) {
+                if (!LoginEncryptionHelpers.field_b.field_rc) {
                   var12.field_Yb.field_S = MusicPatchPcmStream.field_w;
                 }
               } else {
                 if (var12.field_Zb) {
                   var12.field_Sb.field_S = SocketConnector.formatTemplate(MatchingTextValidator.field_q, -51, new String[]{var20});
-                  var12.field_Yb.field_S = tj.field_b;
+                  var12.field_Yb.field_S = HighscoreSubmissionFactory.field_b;
                 } else {
                   if (var12.field_kc) {
                     var12.field_Sb.field_S = SocketConnector.formatTemplate(TextAndBitHelpers.field_g, -121, new String[]{var20});
                     var12.field_hc.field_S = DiskCacheWorker.field_g;
-                    var12.field_Yb.field_S = ai.field_p;
+                    var12.field_Yb.field_S = NotificationMessage.field_p;
                   } else {
                     var12.field_hc.field_S = ChecksumAndFrameHelpers.field_h;
                   }
                 }
               }
               var25_int = 0;
-              if (nf.field_b != null &&
+              if (LoginEncryptionHelpers.field_b != null &&
                 TextAndMenuHelpers.isGameOwner(-28548) &&
                 ~var12.field_ec != ~GameplayController.field_G) {
                 if (null != var12.field_hc.field_S) {
@@ -288,20 +288,20 @@ final class WidgetStyleLayer {
               if (var12.field_Sb.field_kb &&
                 var22 != 0) {
                 UiTheme.field_i = var12.field_Vb;
-                if (kf.field_A != null &&
-                  null != kf.field_A[var12.field_jc]) {
-                  UiTheme.field_i = UiTheme.field_i + " - " + kf.field_A[var12.field_jc];
+                if (HighscoreTable.field_A != null &&
+                  null != HighscoreTable.field_A[var12.field_jc]) {
+                  UiTheme.field_i = UiTheme.field_i + " - " + HighscoreTable.field_A[var12.field_jc];
                 }
               } else {
                 if (var12.field_Sb.field_kb &&
-                  null != kf.field_A &&
-                  kf.field_A[var12.field_jc] != null) {
-                  UiTheme.field_i = kf.field_A[var12.field_jc];
+                  null != HighscoreTable.field_A &&
+                  HighscoreTable.field_A[var12.field_jc] != null) {
+                  UiTheme.field_i = HighscoreTable.field_A[var12.field_jc];
                 }
               }
               var19 = var19 + SocketConnector.field_b;
             }
-            var23 = sa.a(var12.field_Wb, var20, (byte) -126);
+            var23 = LoadingStatusHelpers.getJoinFailureMessage(var12.field_Wb, var20, (byte) -126);
             var24 = var23;
             var30 = var24;
             var25 = var30;
@@ -327,7 +327,7 @@ final class WidgetStyleLayer {
                 if (0 != var12.field_Yb.field_Eb) {
                   ClientUiHelpers.sendLongCommand(param1, false, var12.field_ec);
                 } else {
-                  LoginDialog.a(0, TextButton.field_S, param4 + 4, var12, param2, 0, BufferedRandomAccessFile.field_j);
+                  LoginDialog.openSocialEntryMenu(0, TextButton.field_S, param4 + 4, var12, param2, 0, BufferedRandomAccessFile.field_j);
                 }
               }
             }
@@ -351,12 +351,12 @@ final class WidgetStyleLayer {
                     } else {
                       if ((~var12.field_qc & var8) != 0) {
                         var25_int = ChecksumAndFrameHelpers.highestOneBit(var8 & ~var12.field_qc, (byte) 67);
-                        var24Lifetime2 = SocketConnector.formatTemplate(qm.field_a, -124, new String[]{var20});
+                        var24Lifetime2 = SocketConnector.formatTemplate(DisplayNameAndAudioHelpers.field_a, -124, new String[]{var20});
                         if (0 < var25_int &&
-                          in.field_b != null &&
-                          in.field_b.length >= var25_int &&
-                          null != in.field_b[var25_int - 1]) {
-                          var24Lifetime2 = SocketConnector.formatTemplate(in.field_b[var25_int - 1][2], -58, new String[]{var20});
+                          SocialPacketHelpers.field_b != null &&
+                          SocialPacketHelpers.field_b.length >= var25_int &&
+                          null != SocialPacketHelpers.field_b[var25_int - 1]) {
+                          var24Lifetime2 = SocketConnector.formatTemplate(SocialPacketHelpers.field_b[var25_int - 1][2], -58, new String[]{var20});
                         }
                       }
                     }
@@ -387,10 +387,10 @@ final class WidgetStyleLayer {
                         var25_int = ChecksumAndFrameHelpers.highestOneBit(var8 & ~var12.field_qc, (byte) 94);
                         var24Lifetime2 = MusicPatch.field_w;
                         if (var25_int > 0 &&
-                          in.field_b != null &&
-                          in.field_b.length >= var25_int &&
-                          null != in.field_b[-1 + var25_int]) {
-                          var24Lifetime2 = in.field_b[var25_int - 1][1];
+                          SocialPacketHelpers.field_b != null &&
+                          SocialPacketHelpers.field_b.length >= var25_int &&
+                          null != SocialPacketHelpers.field_b[-1 + var25_int]) {
+                          var24Lifetime2 = SocialPacketHelpers.field_b[var25_int - 1][1];
                         }
                       }
                     }
@@ -407,7 +407,7 @@ final class WidgetStyleLayer {
                 var25 = null;
                 var26Lifetime1 = 0;
                 for (var27_int = 0; UrlAndReplyHelpers.field_a > var27_int; var27_int++) {
-                  var28 = nf.field_b.field_Sb[var27_int] & 255;
+                  var28 = LoginEncryptionHelpers.field_b.field_Sb[var27_int] & 255;
                   var29 = 0;
                   if (null != LoadoutHelpers.field_d &&
                     null != LoadoutHelpers.field_d[var27_int] &&
@@ -415,9 +415,9 @@ final class WidgetStyleLayer {
                     !var12.field_nc) {
                     var29 = 1;
                   }
-                  if (ja.field_b != null &&
-                    ja.field_b[var27_int] != null) {
-                    var30_int = ja.field_b[var27_int][var28];
+                  if (IconLookupHelpers.field_b != null &&
+                    IconLookupHelpers.field_b[var27_int] != null) {
+                    var30_int = IconLookupHelpers.field_b[var27_int][var28];
                     if (var30_int != 0 &&
                       !ProxyAuthenticationException.field_a &&
                       !var12.field_nc) {
@@ -464,18 +464,18 @@ final class WidgetStyleLayer {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + LabeledField.field_S + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + SocketConnector.formatTemplate(ph.field_f, -35, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + SocketConnector.formatTemplate(ChatLineMenuHelpers.field_f, -35, new String[]{(String) (var25)});
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + SocketConnector.formatTemplate(o.field_e, -65, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + SocketConnector.formatTemplate(SocialStateHelpers.field_e, -65, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + ProxyAuthenticationException.field_b + (String) (var25);
                   }
                 }
                 if (param2 == NanoTickClock.field_t &&
                   !TextAndMenuHelpers.isGameOwner(-28548)) {
-                  var27 = nf.field_b.field_Xb;
+                  var27 = LoginEncryptionHelpers.field_b.field_Xb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + SocketConnector.formatTemplate(MatchingTextValidator.field_r, -79, new String[]{var27});
                 }
                 UiTheme.field_i = (String) (var24Lifetime2);
@@ -501,7 +501,7 @@ final class WidgetStyleLayer {
     final WidgetStyleLayer setFlushBeforeApply(boolean param0, byte param1) {
         this.field_e = param0 ? true : false;
         if (param1 <= 123) {
-          WidgetStyleLayer.a(-101);
+          WidgetStyleLayer.closeQuickChatMenu(-101);
         }
         return this;
     }
@@ -545,7 +545,7 @@ final class WidgetStyleLayer {
         int var7 = 0;
         String var8 = null;
         try {
-          IterableDualNodeDeque.a((byte) -47, this.field_h, param1.field_x, param2 + param1.field_z, param0 + param1.field_o, param1.field_E);
+          IterableDualNodeDeque.drawNineSlicePanel((byte) -47, this.field_h, param1.field_x, param2 + param1.field_z, param0 + param1.field_o, param1.field_E);
           if (null != this.field_a) {
             var6_int = param0 + param1.field_o + this.field_g;
             if (param3.field_a == 1) {
@@ -596,7 +596,7 @@ final class WidgetStyleLayer {
           }
           if (param4) {
             var8 = (String) null;
-            WidgetStyleLayer.a(-126, (String) null);
+            WidgetStyleLayer.toUpperCaseOutsideTags(-126, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -619,7 +619,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final static long a(CharSequence param0, byte param1) {
+    final static long hashText(CharSequence param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         long var3 = 0L;
@@ -660,7 +660,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final WidgetStyleLayer setTextColor(int param0, int param1) {
+    final WidgetStyleLayer setOffsetY(int param0, int param1) {
         this.field_f = param0;
         if (param1 <= 13) {
           this.setShadowColor(52, -27);
@@ -668,7 +668,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final static String a(int param0, String param1) {
+    final static String toUpperCaseOutsideTags(int param0, String param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -756,7 +756,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final static void a(int param0) {
+    final static void closeQuickChatMenu(int param0) {
         if (param0 != 2) {
           field_b = (String[]) null;
         }
@@ -765,16 +765,16 @@ final class WidgetStyleLayer {
           IntKeyLookup.field_i.resetSelection(param0 ^ -125);
         }
         if (ChatPanelHelpers.field_b != 0) {
-          AlternateUsernameCredentials.d(86);
+          AlternateUsernameCredentials.clearChatText(86);
         }
-        ed.field_i = 0;
+        SessionSeedHelpers.field_i = 0;
     }
 
     final WidgetStyleLayer setFontColor(byte param0, int param1) {
         this.field_d = param1;
         if (param0 > -24) {
           CharSequence var4 = (CharSequence) null;
-          WidgetStyleLayer.a((CharSequence) null, (byte) -102);
+          WidgetStyleLayer.hashText((CharSequence) null, (byte) -102);
         }
         return this;
     }

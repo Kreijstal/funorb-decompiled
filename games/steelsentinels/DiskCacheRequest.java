@@ -9,9 +9,9 @@ final class DiskCacheRequest extends ArchiveRequest {
     int field_H;
     byte[] field_L;
 
-    final byte[] d(byte param0) {
+    final byte[] getData(byte param0) {
         if (param0 >= -49) {
-          DiskCacheRequest.h(-48);
+          DiskCacheRequest.getRegistrationAge(-48);
           if (!this.field_z) {
             return this.field_L;
           }
@@ -23,7 +23,7 @@ final class DiskCacheRequest extends ArchiveRequest {
         throw new RuntimeException();
     }
 
-    final static void a(int param0, java.awt.Canvas param1, boolean param2) {
+    final static void renderStartupScreen(int param0, java.awt.Canvas param1, boolean param2) {
         int var4 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -40,17 +40,17 @@ final class DiskCacheRequest extends ArchiveRequest {
               PlayerContextMenu.field_e = false;
               var3_int = 1;
             }
-            DelayedServerPacket.a(sa.b((byte) 118), CachedArchiveProvider.a(true), var3_int != 0, 300, DropTargetWidget.field_S);
+            DelayedServerPacket.drawAwtLoadingBar(LoadingStatusHelpers.getLoadingStatusText((byte) 118), CachedArchiveProvider.pollLoginUiArchiveProgress(true), var3_int != 0, 300, DropTargetWidget.field_S);
           } else {
             if (!ClientGlobals.isIntroFinished(-124)) {
               SoftwareRaster.clear();
-              ValidationHelpWidget.a((byte) 17, 240, 320);
+              ValidationHelpWidget.drawLogoIntro((byte) 17, 240, 320);
               ScrollContainer.paintCanvasNow(0, 0, 28594, param1);
             } else {
-              if (0 != uj.field_d) {
+              if (0 != ReflectionCheckHelpers.field_d) {
                 LoadingScreenHelpers.drawLoadingScreen(param1, -28003);
               } else {
-                ArchiveProvider.a(false, (byte) 88, param2);
+                ArchiveProvider.clearOrDimScreen(false, (byte) 88, param2);
                 ScrollContainer.paintCanvasNow(0, 0, 28594, param1);
               }
             }
@@ -71,9 +71,9 @@ final class DiskCacheRequest extends ArchiveRequest {
         }
     }
 
-    final static int h(int param0) {
+    final static int getRegistrationAge(int param0) {
         int var1 = 68 % ((param0 - 3) / 63);
-        return wi.field_y;
+        return SpriteState.field_y;
     }
 
     final static int atanFixed16ToAngle8192(int obfuscationGuard, int tangent16) {
@@ -102,9 +102,9 @@ final class DiskCacheRequest extends ArchiveRequest {
         return DateOfBirthValidator.field_m[134217728 / -tangent16] - 2048;
     }
 
-    final int g(int param0) {
+    final int getProgress(int param0) {
         if (param0 != 16) {
-          this.g(65);
+          this.getProgress(65);
           if (!this.field_z) {
             return 100;
           }
@@ -116,7 +116,7 @@ final class DiskCacheRequest extends ArchiveRequest {
         return 0;
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_J = null;
         if (param0 >= -20) {
           field_K = true;

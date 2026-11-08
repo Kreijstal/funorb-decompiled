@@ -14,7 +14,7 @@ public final class SteelSentinels extends FunOrbClient {
         java.awt.Canvas var2 = null;
         RuntimeException var2_ref = null;
         SceneWidget var3 = null;
-        ai var3_ref = null;
+        NotificationMessage var3_ref = null;
         int var4 = 0;
         int var5_int = 0;
         String var5 = null;
@@ -38,9 +38,9 @@ public final class SteelSentinels extends FunOrbClient {
         int var8Lifetime1;
         var13 = obfuscationControl;
         try {
-          var2 = NanoTickClock.a(false);
+          var2 = NanoTickClock.getActiveCanvas(false);
           if (QuickChatHelpDialog.shouldShowBootstrapLoadingScreen(0)) {
-            DiskCacheRequest.a(-111, var2, ParticleEffect.hasInputFocus(2));
+            DiskCacheRequest.renderStartupScreen(-111, var2, ParticleEffect.hasInputFocus(2));
             return;
           }
           if (!SceneWidget.field_pb) {
@@ -48,7 +48,7 @@ public final class SteelSentinels extends FunOrbClient {
             return;
           }
           if (!QuickChatCategoryCache.isPlayerDataReady(false)) {
-            mc.a(SentinelAnimationEditor.field_i, 100.0f, -21801);
+            LoadingCaptionHelpers.setLoadingProgress(SentinelAnimationEditor.field_i, 100.0f, -21801);
             LoadingScreenHelpers.drawLoadingScreen(var2, -28003);
             return;
           }
@@ -57,42 +57,42 @@ public final class SteelSentinels extends FunOrbClient {
           if (LoginForm.field_T != GzipDecoder.field_g) {
             if (LoginForm.field_T != 0) {
               if (GzipDecoder.field_g == 0) {
-                AudioService.a(LoginForm.field_T, PlayingSound.field_w, false, 125);
-                AudioService.a(GzipDecoder.field_g, PlayingSound.field_w, false, -40);
+                AudioService.drawScreen(LoginForm.field_T, PlayingSound.field_w, false, 125);
+                AudioService.drawScreen(GzipDecoder.field_g, PlayingSound.field_w, false, -40);
                 decompiledFrameRemainder1 = (var13 != 0);
               }
               if (decompiledFrameRemainder1) {
                 if (LoginForm.field_U >= 10) {
-                  AudioService.a(GzipDecoder.field_g, Sprite.field_k, false, 86);
+                  AudioService.drawScreen(GzipDecoder.field_g, Sprite.field_k, false, 86);
                   if (var13 != 0) {
-                    AudioService.a(LoginForm.field_T, PlayingSound.field_w, false, -110);
-                    AudioService.a(GzipDecoder.field_g, PlayingSound.field_w, false, -62);
-                    AudioService.a(LoginForm.field_T, PlayingSound.field_w, false, -34);
-                    AudioService.a(LoginForm.field_T, PlayingSound.field_w, true, -15);
+                    AudioService.drawScreen(LoginForm.field_T, PlayingSound.field_w, false, -110);
+                    AudioService.drawScreen(GzipDecoder.field_g, PlayingSound.field_w, false, -62);
+                    AudioService.drawScreen(LoginForm.field_T, PlayingSound.field_w, false, -34);
+                    AudioService.drawScreen(LoginForm.field_T, PlayingSound.field_w, true, -15);
                   }
                 } else {
-                  AudioService.a(LoginForm.field_T, PlayingSound.field_w, false, -110);
+                  AudioService.drawScreen(LoginForm.field_T, PlayingSound.field_w, false, -110);
                   if (var13 != 0) {
-                    AudioService.a(GzipDecoder.field_g, PlayingSound.field_w, false, -62);
-                    AudioService.a(LoginForm.field_T, PlayingSound.field_w, false, -34);
-                    AudioService.a(LoginForm.field_T, PlayingSound.field_w, true, -15);
+                    AudioService.drawScreen(GzipDecoder.field_g, PlayingSound.field_w, false, -62);
+                    AudioService.drawScreen(LoginForm.field_T, PlayingSound.field_w, false, -34);
+                    AudioService.drawScreen(LoginForm.field_T, PlayingSound.field_w, true, -15);
                   }
                 }
               }
             } else {
-              AudioService.a(GzipDecoder.field_g, PlayingSound.field_w, false, -62);
-              AudioService.a(LoginForm.field_T, PlayingSound.field_w, false, -34);
+              AudioService.drawScreen(GzipDecoder.field_g, PlayingSound.field_w, false, -62);
+              AudioService.drawScreen(LoginForm.field_T, PlayingSound.field_w, false, -34);
               if (var13 != 0) {
-                AudioService.a(LoginForm.field_T, PlayingSound.field_w, true, -15);
+                AudioService.drawScreen(LoginForm.field_T, PlayingSound.field_w, true, -15);
               }
             }
           } else {
-            AudioService.a(LoginForm.field_T, PlayingSound.field_w, true, -15);
+            AudioService.drawScreen(LoginForm.field_T, PlayingSound.field_w, true, -15);
           }
           if (!PlayingSound.field_w ||
             !Sprite.field_k) {
             boolean decompiledFrameCompleted0 = true;
-            TextLayout.a(PasswordFieldPainter.c(8), 25104);
+            TextLayout.drawLobbyAndChatPanels(PasswordFieldPainter.isFeatureAllowed(8), 25104);
             if (LoginForm.field_T == -2) {
               var3 = PendingIntArrayRequest.getActiveOverlayWidget((byte) -66);
               if (var3 != null) {
@@ -103,7 +103,7 @@ public final class SteelSentinels extends FunOrbClient {
                   SoftwareRaster.setClip(var4 + 4, 4 + var5_int + 42, var3.field_Rb - 4 + var3.field_zb, var3.field_cb + (-4 + var3.field_Lb));
                   if (null == EmailSyntaxValidator.field_s ||
                     SoundAndUrlHelpers.field_e[101]) {
-                    di.field_g = -1;
+                    OptionMaskHelpers.field_g = -1;
                     EmailSyntaxValidator.field_s = new CombatWorld(-1, 1, new String[]{}, new int[][]{null}, false, 0, 0, 2, false, false);
                     EmailSyntaxValidator.field_s.computerPlayerCount = 2;
                     if (var13 == 0) {
@@ -134,16 +134,16 @@ public final class SteelSentinels extends FunOrbClient {
                     }
                     var10.configureDesign(var12, true, false, -1, var11);
                     var10.field_Nb = 10;
-                    var10.d(-28033);
+                    var10.applyTeamColours(-28033);
                     var10.velocityY = 1000;
                     var10.field_Qb = 250;
-                    var10.j(-5);
+                    var10.chooseSpawnX(-5);
                     var6_ref_ee.sentinels.addLast(3, var10);
                   }
                   var8 = 310;
                   var9 = (Sentinel) (var6_ref_ee.sentinels.first(13058));
                   while (null != var9) {
-                    var9.a((byte) -22, var7, LobbySetupHelpers.field_f, DelegatingCanvas.field_c, var8);
+                    var9.hitTestAtPointer((byte) -22, var7, LobbySetupHelpers.field_f, DelegatingCanvas.field_c, var8);
                     var9 = (Sentinel) (var6_ref_ee.sentinels.next((byte) -119));
                     if (var13 != 0) {
                       decompiledFrameCompleted1 = false;
@@ -162,7 +162,7 @@ public final class SteelSentinels extends FunOrbClient {
                       } else {
                         var9_ref2 = (Projectile) (var6_ref_ee.field_db.first(13058));
                         while (null != var9_ref2) {
-                          var9_ref2.a(var8, var7, 4);
+                          var9_ref2.drawProjectile(var8, var7, 4);
                           var9_ref2 = (Projectile) (var6_ref_ee.field_db.next((byte) -39));
                           if (var13 != 0) {
                             break regionExit1;
@@ -188,22 +188,22 @@ public final class SteelSentinels extends FunOrbClient {
               }
             }
             if (decompiledFrameCompleted0) {
-              ProxySocketConnector.drawOverlayDialogs(false, PasswordFieldPainter.c(8));
+              ProxySocketConnector.drawOverlayDialogs(false, PasswordFieldPainter.isFeatureAllowed(8));
             }
-            ClientErrorSupport.updateOverlays(PasswordFieldPainter.c(8), (byte) -62);
+            ClientErrorSupport.updateOverlays(PasswordFieldPainter.isFeatureAllowed(8), (byte) -62);
           }
-          var3_ref = (ai) (bd.field_b.first(13058));
+          var3_ref = (NotificationMessage) (SolidSpriteHelpers.field_b.first(13058));
           if (var3_ref != null) {
             var4Lifetime1 = 6;
             var5_intLifetime1 = 250;
             var6 = var4Lifetime1 * 2 + 64;
             var7Lifetime1 = 0;
-            if (ob.field_o < var6) {
-              var7Lifetime1 = var7Lifetime1 + (ob.field_o - var6);
+            if (PendingPackedReply.field_o < var6) {
+              var7Lifetime1 = var7Lifetime1 + (PendingPackedReply.field_o - var6);
             }
             var8Lifetime1 = -var5_intLifetime1 + 640;
-            if ((500 - var6) < ob.field_o) {
-              var7Lifetime1 = var7Lifetime1 + (500 + (-ob.field_o - var6));
+            if ((500 - var6) < PendingPackedReply.field_o) {
+              var7Lifetime1 = var7Lifetime1 + (500 + (-PendingPackedReply.field_o - var6));
             }
             SoftwareRaster.fillRectangleBlended(var8Lifetime1, var7Lifetime1, var5_intLifetime1, var6, 0, 192);
             SoftwareRaster.drawRectangleOutlineAlpha(var8Lifetime1, var7Lifetime1, var5_intLifetime1, var6, 39398, 192);
@@ -222,36 +222,36 @@ public final class SteelSentinels extends FunOrbClient {
           var4Lifetime2 = 27 / ((param0 - 56) / 48);
           if (QuickChatMenu.isLegacyMenuOpen(true)) {
             SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
-            qf.a(100);
+            RankingAndRasterHelpers.drawPopupMenuWithFrame(100);
             decompiledFrameRemainder0 = (var13 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (!cf.c((byte) 92)) {
+            if (!StatSubmission.isReconnectStage((byte) 92)) {
               if ((LoginStateQueries.isMessageOverlayShown(-113)) &&
                 (!QuickChatMenu.isLegacyMenuOpen(true))) {
                 SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
                 ClientUiHelpers.drawPopupMenu((byte) -95);
                 if (var13 != 0) {
                   stackIn_134_0 = -64;
-                  if (wb.field_c != null) {
+                  if (RewardValueHelpers.field_c != null) {
                     stackIn_135_1 = true;
                   } else {
                     stackIn_135_1 = DelayedServerPacket.field_q;
                   }
-                  Js5NetworkRequest.$cfr$intArgs$a$7ffe4b125357(stackIn_134_0, stackIn_135_1);
+                  Js5NetworkRequest.drawDimmedOverlay(stackIn_134_0, stackIn_135_1);
                 }
               }
             } else {
               stackIn_134_0 = -64;
-              if (wb.field_c != null) {
+              if (RewardValueHelpers.field_c != null) {
                 stackIn_135_1 = true;
               } else {
                 stackIn_135_1 = DelayedServerPacket.field_q;
               }
-              Js5NetworkRequest.$cfr$intArgs$a$7ffe4b125357(stackIn_134_0, stackIn_135_1);
+              Js5NetworkRequest.drawDimmedOverlay(stackIn_134_0, stackIn_135_1);
             }
           }
-          if (in.field_i != in.field_h) {
+          if (SocialPacketHelpers.field_i != SocialPacketHelpers.field_h) {
             var5_intLifetime2 = 256 * SentinelDesigner.field_a / 16;
             if (var5_intLifetime2 > 0) {
               SoftwareRaster.fillRectangleBlended(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j, 0, var5_intLifetime2);
@@ -297,25 +297,25 @@ public final class SteelSentinels extends FunOrbClient {
         try {
           ClientUiHelpers.initializeMenuLabels(35);
           if (null != RasterSnapshot.field_x) {
-            if (tm.field_d.ensureIndex(true) &&
-              tm.field_d.a("basic", (byte) 90)) {
-              if (tm.field_d.ensureIndex(true) &&
-                tm.field_d.a("roman20", (byte) 90)) {
+            if (SessionUiHelpers.field_d.ensureIndex(true) &&
+              SessionUiHelpers.field_d.isGroupLoadedByName("basic", (byte) 90)) {
+              if (SessionUiHelpers.field_d.ensureIndex(true) &&
+                SessionUiHelpers.field_d.isGroupLoadedByName("roman20", (byte) 90)) {
                 if (MusicPatchPcmStream.field_t.ensureIndex(true) &&
-                  MusicPatchPcmStream.field_t.a("roman20", (byte) 90)) {
-                  if (tm.field_d.ensureIndex(true) &&
-                    tm.field_d.a("lobby", (byte) 90)) {
-                    if (tm.field_d.ensureIndex(true) &&
-                      tm.field_d.a("basicfont12", (byte) 90)) {
+                  MusicPatchPcmStream.field_t.isGroupLoadedByName("roman20", (byte) 90)) {
+                  if (SessionUiHelpers.field_d.ensureIndex(true) &&
+                    SessionUiHelpers.field_d.isGroupLoadedByName("lobby", (byte) 90)) {
+                    if (SessionUiHelpers.field_d.ensureIndex(true) &&
+                      SessionUiHelpers.field_d.isGroupLoadedByName("basicfont12", (byte) 90)) {
                       if (MusicPatchPcmStream.field_t.ensureIndex(true) &&
-                        MusicPatchPcmStream.field_t.a("basicfont12", (byte) 90)) {
+                        MusicPatchPcmStream.field_t.isGroupLoadedByName("basicfont12", (byte) 90)) {
                         if (MusicPatchPcmStream.field_t.ensureIndex(true) &&
-                          MusicPatchPcmStream.field_t.a("lobby", (byte) 90)) {
+                          MusicPatchPcmStream.field_t.isGroupLoadedByName("lobby", (byte) 90)) {
                           if (RasterSnapshot.field_x.ensureIndex(true) &&
                             RasterSnapshot.field_x.ensureAllGroupsAvailable(param0 ^ -43)) {
                             if (SceneWidgetNode.field_z.ensureIndex(true) &&
                               SceneWidgetNode.field_z.ensureAllGroupsAvailable(param0 ^ -43)) {
-                              qi.field_l = false;
+                              LoginCredentialHelpers.field_l = false;
                               if (ImageProducerRasterBuffer.field_t.ensureIndex(true) &&
                                 ImageProducerRasterBuffer.field_t.ensureAllGroupsAvailable(25)) {
                                 if (SectorCacheStore.field_i.ensureIndex(true) &&
@@ -323,76 +323,76 @@ public final class SteelSentinels extends FunOrbClient {
                                   if (GrowableIntList.field_i.ensureIndex(true) &&
                                     GrowableIntList.field_i.ensureAllGroupsAvailable(25)) {
                                     if (DualNode.field_x.ensureIndex(true) &&
-                                      DualNode.field_x.a("basic", (byte) 90)) {
+                                      DualNode.field_x.isGroupLoadedByName("basic", (byte) 90)) {
                                       if (LobbyStateHelpers.field_h.ensureIndex(true) &&
                                         LobbyStateHelpers.field_h.ensureAllGroupsAvailable(25)) {
                                         if (LobbySetupHelpers.field_a.ensureIndex(true) &&
-                                          LobbySetupHelpers.field_a.a("basic", (byte) 90)) {
+                                          LobbySetupHelpers.field_a.isGroupLoadedByName("basic", (byte) 90)) {
                                           if (IsaacRandom.field_k.ensureIndex(true) &&
                                             IsaacRandom.field_k.ensureAllGroupsAvailable(25)) {
                                             if (BufferedRandomAccessFile.field_k.ensureIndex(true) &&
                                               BufferedRandomAccessFile.field_k.ensureAllGroupsAvailable(param0 + 77)) {
                                               LoadingScreenHelpers.dismissLoadingUi(-59);
-                                              mc.a(ResourceArchive.field_n, 82.0f, param0 ^ 21787);
+                                              LoadingCaptionHelpers.setLoadingProgress(ResourceArchive.field_n, 82.0f, param0 ^ 21787);
                                               this.renderClient((byte) 111);
                                               RasterBuffer.field_e = new SoundCache(RasterSnapshot.field_x, SceneWidgetNode.field_z);
                                               RasterSnapshot.field_x = null;
                                               LobbyPlayer.resetFrameTimingHistory(0);
                                               return false;
                                             }
-                                            mc.a(ModalStack.a((byte) -128, SentinelAnimationEditor.field_i, sl.field_l, BufferedRandomAccessFile.field_k), 90.0f, -21801);
+                                            LoadingCaptionHelpers.setLoadingProgress(ModalStack.formatArchiveLoadingProgress((byte) -128, SentinelAnimationEditor.field_i, ArchiveLoadStep.field_l, BufferedRandomAccessFile.field_k), 90.0f, -21801);
                                             return false;
                                           }
-                                          mc.a(ClientErrorSupport.formatArchiveGroupProgress(IsaacRandom.field_k, (byte) 94, "", SentinelAnimationEditor.field_i, sl.field_l), 85.0f, -21801);
+                                          LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(IsaacRandom.field_k, (byte) 94, "", SentinelAnimationEditor.field_i, ArchiveLoadStep.field_l), 85.0f, -21801);
                                           return false;
                                         }
-                                        mc.a(ClientErrorSupport.formatArchiveGroupProgress(LobbySetupHelpers.field_a, (byte) 108, "basic", kb.field_c, og.field_c), 80.0f, -21801);
+                                        LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(LobbySetupHelpers.field_a, (byte) 108, "basic", DefaultQuickChatCacheHook.field_c, QuickChatPopupHelpers.field_c), 80.0f, -21801);
                                         return false;
                                       }
-                                      mc.a(ModalStack.a((byte) -78, LoadingScreenHelpers.field_f, ai.field_t, LobbyStateHelpers.field_h), 75.0f, -21801);
+                                      LoadingCaptionHelpers.setLoadingProgress(ModalStack.formatArchiveLoadingProgress((byte) -78, LoadingScreenHelpers.field_f, NotificationMessage.field_t, LobbyStateHelpers.field_h), 75.0f, -21801);
                                       return false;
                                     }
-                                    mc.a(ClientErrorSupport.formatArchiveGroupProgress(DualNode.field_x, (byte) 94, "basic", LoadingScreenHelpers.field_f, ai.field_t), 70.0f, -21801);
+                                    LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(DualNode.field_x, (byte) 94, "basic", LoadingScreenHelpers.field_f, NotificationMessage.field_t), 70.0f, -21801);
                                     return false;
                                   }
-                                  mc.a(ClientErrorSupport.formatArchiveGroupProgress(GrowableIntList.field_i, (byte) 101, "", tf.field_f, AccountTermsPanel.field_P), 60.0f, -21801);
+                                  LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(GrowableIntList.field_i, (byte) 101, "", ChatHistoryHelpers.field_f, AccountTermsPanel.field_P), 60.0f, -21801);
                                   return false;
                                 }
-                                mc.a(ModalStack.a((byte) -103, tf.field_f, AccountTermsPanel.field_P, SectorCacheStore.field_i), 45.0f, -21801);
+                                LoadingCaptionHelpers.setLoadingProgress(ModalStack.formatArchiveLoadingProgress((byte) -103, ChatHistoryHelpers.field_f, AccountTermsPanel.field_P, SectorCacheStore.field_i), 45.0f, -21801);
                                 return false;
                               }
-                              mc.a(ClientErrorSupport.formatArchiveGroupProgress(ImageProducerRasterBuffer.field_t, (byte) 99, "", rn.field_t, LoginHandshakeHelpers.field_a), 42.0f, -21801);
+                              LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(ImageProducerRasterBuffer.field_t, (byte) 99, "", PendingAckRequest.field_t, LoginHandshakeHelpers.field_a), 42.0f, -21801);
                               return false;
                             }
-                            mc.a(ClientErrorSupport.formatArchiveGroupProgress(SceneWidgetNode.field_z, (byte) 127, "", rn.field_t, LoginHandshakeHelpers.field_a), 40.0f, -21801);
+                            LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(SceneWidgetNode.field_z, (byte) 127, "", PendingAckRequest.field_t, LoginHandshakeHelpers.field_a), 40.0f, -21801);
                             return false;
                           }
-                          mc.a(ClientErrorSupport.formatArchiveGroupProgress(RasterSnapshot.field_x, (byte) 122, "", rn.field_t, LoginHandshakeHelpers.field_a), 20.0f, param0 - 21749);
+                          LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(RasterSnapshot.field_x, (byte) 122, "", PendingAckRequest.field_t, LoginHandshakeHelpers.field_a), 20.0f, param0 - 21749);
                           return false;
                         }
-                        mc.a(ClientErrorSupport.formatArchiveGroupProgress(MusicPatchPcmStream.field_t, (byte) 116, "lobby", kb.field_c, og.field_c), 17.0f, param0 - 21749);
+                        LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(MusicPatchPcmStream.field_t, (byte) 116, "lobby", DefaultQuickChatCacheHook.field_c, QuickChatPopupHelpers.field_c), 17.0f, param0 - 21749);
                         return false;
                       }
-                      mc.a(ClientErrorSupport.formatArchiveGroupProgress(MusicPatchPcmStream.field_t, (byte) 97, "basicfont12", kb.field_c, og.field_c), 15.0f, param0 - 21749);
+                      LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(MusicPatchPcmStream.field_t, (byte) 97, "basicfont12", DefaultQuickChatCacheHook.field_c, QuickChatPopupHelpers.field_c), 15.0f, param0 - 21749);
                       return false;
                     }
-                    mc.a(ClientErrorSupport.formatArchiveGroupProgress(tm.field_d, (byte) 120, "basicfont12", LoadingScreenHelpers.field_f, ai.field_t), 14.0f, -21801);
+                    LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(SessionUiHelpers.field_d, (byte) 120, "basicfont12", LoadingScreenHelpers.field_f, NotificationMessage.field_t), 14.0f, -21801);
                     return false;
                   }
-                  mc.a(ClientErrorSupport.formatArchiveGroupProgress(tm.field_d, (byte) 104, "lobby", LoadingScreenHelpers.field_f, ai.field_t), 13.0f, param0 - 21749);
+                  LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(SessionUiHelpers.field_d, (byte) 104, "lobby", LoadingScreenHelpers.field_f, NotificationMessage.field_t), 13.0f, param0 - 21749);
                   return false;
                 }
-                mc.a(ClientErrorSupport.formatArchiveGroupProgress(MusicPatchPcmStream.field_t, (byte) 111, "roman20", kb.field_c, og.field_c), 12.0f, -21801);
+                LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(MusicPatchPcmStream.field_t, (byte) 111, "roman20", DefaultQuickChatCacheHook.field_c, QuickChatPopupHelpers.field_c), 12.0f, -21801);
                 return false;
               }
-              mc.a(ClientErrorSupport.formatArchiveGroupProgress(tm.field_d, (byte) 116, "roman20", LoadingScreenHelpers.field_f, ai.field_t), 11.0f, param0 ^ 21787);
+              LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(SessionUiHelpers.field_d, (byte) 116, "roman20", LoadingScreenHelpers.field_f, NotificationMessage.field_t), 11.0f, param0 ^ 21787);
               return false;
             }
-            mc.a(ClientErrorSupport.formatArchiveGroupProgress(tm.field_d, (byte) 116, "basic", LoadingScreenHelpers.field_f, ai.field_t), 10.0f, -21801);
+            LoadingCaptionHelpers.setLoadingProgress(ClientErrorSupport.formatArchiveGroupProgress(SessionUiHelpers.field_d, (byte) 116, "basic", LoadingScreenHelpers.field_f, NotificationMessage.field_t), 10.0f, -21801);
             return false;
           }
           if (ImageProducerRasterBuffer.field_t != null) {
-            mc.a(ResourceArchive.field_n, 85.0f, -21801);
+            LoadingCaptionHelpers.setLoadingProgress(ResourceArchive.field_n, 85.0f, -21801);
             this.renderClient((byte) -116);
             SentinelAnimationEditor.field_q[71] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "deploying_in").decodeAllToPcm();
             SentinelAnimationEditor.field_q[72] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "five").decodeAllToPcm();
@@ -412,7 +412,7 @@ public final class SteelSentinels extends FunOrbClient {
             return false;
           }
           if (GrowableIntList.field_i != null) {
-            mc.a(QuickChatInputHelpers.field_a, 88.0f, -21801);
+            LoadingCaptionHelpers.setLoadingProgress(QuickChatInputHelpers.field_a, 88.0f, -21801);
             this.renderClient((byte) 104);
             LoginCredentials.field_f = MusicTrack.load(GrowableIntList.field_i, "", "md_title_music");
             NodeHashTableIterator.field_i = MusicTrack.load(GrowableIntList.field_i, "", "war_zone");
@@ -434,27 +434,27 @@ public final class SteelSentinels extends FunOrbClient {
           }
           if (LobbySetupHelpers.field_a == null) {
             if (null != IsaacRandom.field_k) {
-              MusicPatchNode.setHuffmanCodec((byte) 106, new HuffmanDecoder(IsaacRandom.field_k.a("huffman", -742, "")));
+              MusicPatchNode.setHuffmanCodec((byte) 106, new HuffmanDecoder(IsaacRandom.field_k.getFileByName("huffman", -742, "")));
               IsaacRandom.field_k = null;
               LobbyPlayer.resetFrameTimingHistory(0);
               return false;
             }
             BattleTerrain.buildPartCatalogue(false);
-            gf.a(0);
+            GeneratedSpriteHelpers.createGeneratedSprites(0);
             var2_int = 0;
             do {
               if (23 <= var2_int) {
                 LoginForm.field_T = 0;
                 GzipDecoder.field_g = 0;
                 ProxyAuthenticationException.setTargetFrameRate(50, (byte) -127);
-                jn.a(true, (byte) 92, 200, LoginCredentials.field_f);
+                MusicTrackHelpers.changeMusicTrack(true, (byte) 92, 200, LoginCredentials.field_f);
                 break;
               }
               GameKeyHandler.field_e[var2_int] = new SentinelDesigner(var2_int);
               var2_int++;
             } while (var6 == 0);
-            if (!ni.b(118)) {
-              TickClock.field_i = RegistrationRequestDialog.a(4, param0 + 20051);
+            if (!ByteArrayPoolHelpers.isAccountCreationMode(118)) {
+              TickClock.field_i = RegistrationRequestDialog.queueOutgoingRequest(4, param0 + 20051);
             }
             LobbyPlayer.resetFrameTimingHistory(0);
             if (param0 != -52) {
@@ -462,63 +462,63 @@ public final class SteelSentinels extends FunOrbClient {
             }
             return true;
           }
-          mc.a(ArchiveIndex.field_i, 90.0f, param0 - 21749);
+          LoadingCaptionHelpers.setLoadingProgress(ArchiveIndex.field_i, 90.0f, param0 - 21749);
           this.renderClient((byte) 109);
           var2_array = ArchiveLoadSequence.loadIndexedSpritesByName(-126, "basic", DualNode.field_x, "ranks");
-          LoginDialogHelpers.field_j = vd.a(MusicPatchPcmStream.field_t, "roman20", tm.field_d, param0 + 51, "");
+          LoginDialogHelpers.field_j = TransitionTimerHelpers.loadBinaryFontByName(MusicPatchPcmStream.field_t, "roman20", SessionUiHelpers.field_d, param0 + 51, "");
           NameCheckResult.field_f = UrlAndReplyHelpers.loadCoverageFontByName(DualNode.field_x, LobbySetupHelpers.field_a, (byte) -102, "biting30", "basic");
-          DualNodeHashTable.field_h = vd.a(LobbySetupHelpers.field_a, "basic", DualNode.field_x, param0 ^ 51, "smallfont");
-          BoundedUrlRequest.field_d = vd.a(LobbySetupHelpers.field_a, "basic", DualNode.field_x, -1, "tinyfont");
-          ValidationHelpWidget.field_lb = vd.a(MusicPatchPcmStream.field_t, "basicfont12", tm.field_d, param0 + 51, "");
+          DualNodeHashTable.field_h = TransitionTimerHelpers.loadBinaryFontByName(LobbySetupHelpers.field_a, "basic", DualNode.field_x, param0 ^ 51, "smallfont");
+          BoundedUrlRequest.field_d = TransitionTimerHelpers.loadBinaryFontByName(LobbySetupHelpers.field_a, "basic", DualNode.field_x, -1, "tinyfont");
+          ValidationHelpWidget.field_lb = TransitionTimerHelpers.loadBinaryFontByName(MusicPatchPcmStream.field_t, "basicfont12", SessionUiHelpers.field_d, param0 + 51, "");
           BirthDateEntryPanel.field_U = UrlAndReplyHelpers.loadCoverageFontByName(DualNode.field_x, LobbySetupHelpers.field_a, (byte) -93, "bitingfont", "basic");
           AlphaContainer.field_U = UrlAndReplyHelpers.loadCoverageFontByName(DualNode.field_x, LobbySetupHelpers.field_a, (byte) -84, "bitinghalf", "basic");
           SocialListPanel.field_Tb = PlayerContextMenu.loadPaletteFont(DualNode.field_x, LobbySetupHelpers.field_a, true, "basic", "menutitlefont");
-          cf.a("menu_overlays", "basic", (byte) -87, DualNode.field_x);
-          LobbyGameDecoding.field_a = GameplayController.a(DualNode.field_x, (byte) 42, "frame", "basic");
-          ClientGlobals.field_e = GameplayController.a(DualNode.field_x, (byte) -119, "frame_filled", "basic");
-          GradientOutlineTextPainter.field_o = GameplayController.a(DualNode.field_x, (byte) -60, "button_frame", "basic");
-          Js5Transport.field_l = GameplayController.a(DualNode.field_x, (byte) -122, "button_raised", "basic");
-          ja.field_e = GameplayController.a(DualNode.field_x, (byte) 36, "button_depressed", "basic");
-          if (ni.b(param0 ^ -44) ||
-            !(rd.field_b > 0)) {
+          StatSubmission.loadSpritesByName("menu_overlays", "basic", (byte) -87, DualNode.field_x);
+          LobbyGameDecoding.field_a = GameplayController.loadTiledFrameSprites(DualNode.field_x, (byte) 42, "frame", "basic");
+          ClientGlobals.field_e = GameplayController.loadTiledFrameSprites(DualNode.field_x, (byte) -119, "frame_filled", "basic");
+          GradientOutlineTextPainter.field_o = GameplayController.loadTiledFrameSprites(DualNode.field_x, (byte) -60, "button_frame", "basic");
+          Js5Transport.field_l = GameplayController.loadTiledFrameSprites(DualNode.field_x, (byte) -122, "button_raised", "basic");
+          IconLookupHelpers.field_e = GameplayController.loadTiledFrameSprites(DualNode.field_x, (byte) 36, "button_depressed", "basic");
+          if (ByteArrayPoolHelpers.isAccountCreationMode(param0 ^ -44) ||
+            !(SpriteLoadingHelpers.field_b > 0)) {
             var3 = ArchiveLoadSequence.loadIndexedSpritesByName(121, "basic", DualNode.field_x, "expansion");
             SocialListUiHelpers.field_c = new MembershipPromotionScreen((java.applet.Applet) (this), NameCheckResult.field_e, var3, SentinelDesigner.field_f);
           }
-          ClientException.field_c = cf.a("achievements_large", "basic", (byte) -79, DualNode.field_x);
-          ProxyAuthenticationException.field_h = cf.a("cursors", "basic", (byte) -54, DualNode.field_x);
+          ClientException.field_c = StatSubmission.loadSpritesByName("achievements_large", "basic", (byte) -79, DualNode.field_x);
+          ProxyAuthenticationException.field_h = StatSubmission.loadSpritesByName("cursors", "basic", (byte) -54, DualNode.field_x);
           var3_int = 0;
           do {
             if (!(var3_int < ProxyAuthenticationException.field_h.length)) {
-              ValidationHelpWidget.field_tb = PacketLoopHelpers.loadRgbSpriteByName(tm.field_d, "basic", "unachieved", false);
-              SingleChildContainer.field_P = PacketLoopHelpers.loadRgbSpriteByName(tm.field_d, "basic", "locked", false);
-              DropTargetWidget.field_G = PacketLoopHelpers.loadRgbSpriteByName(tm.field_d, "basic", "orbcoin", false);
+              ValidationHelpWidget.field_tb = PacketLoopHelpers.loadRgbSpriteByName(SessionUiHelpers.field_d, "basic", "unachieved", false);
+              SingleChildContainer.field_P = PacketLoopHelpers.loadRgbSpriteByName(SessionUiHelpers.field_d, "basic", "locked", false);
+              DropTargetWidget.field_G = PacketLoopHelpers.loadRgbSpriteByName(SessionUiHelpers.field_d, "basic", "orbcoin", false);
               GrowableIntList.field_d = new RgbSprite(40, 40);
               GrowableIntList.field_d.bindRasterTarget();
               ValidationHelpWidget.field_tb.drawScaled(0, 0, 40, 40);
               MusicCrossfadeStream.field_F = new RgbSprite(40, 40);
               MusicCrossfadeStream.field_F.bindRasterTarget();
               SingleChildContainer.field_P.drawScaled(0, 0, 40, 40);
-              Checkbox.field_bb.b((byte) 126);
+              Checkbox.field_bb.bindRaster((byte) 126);
               PopupMenuHelpers.padToFourPixelAlignment(false, ValidationHelpWidget.field_tb);
               PopupMenuHelpers.padToFourPixelAlignment(false, SingleChildContainer.field_P);
               PopupMenuHelpers.padToFourPixelAlignment(false, DropTargetWidget.field_G);
               WhirlpoolHasher.field_o = new RgbSprite[5][];
-              StatefulTextPainter.a((ResourceArchive) null, 2, DualNode.field_x);
-              Sprite.field_m = cf.a("darkblueboxfilled", "basic", (byte) -52, DualNode.field_x);
-              UrlAndReplyHelpers.field_f = cf.a("obviousdarkbluebox", "basic", (byte) -56, DualNode.field_x);
-              MatchingTextValidator.field_t = cf.a("darkbluebox", "basic", (byte) -54, DualNode.field_x);
-              sa.field_e = cf.a("darkerbluebox", "basic", (byte) -30, DualNode.field_x);
-              FullscreenFocusCanvas.field_a = cf.a("lightbluetabbox", "basic", (byte) -108, DualNode.field_x);
-              SocialRequestHelpers.field_b = cf.a("darkgrayboxfilled", "basic", (byte) -114, DualNode.field_x);
-              QuickChatCategoryCache.field_d = cf.a("darkgraybox", "basic", (byte) -67, DualNode.field_x);
-              pa.field_g = cf.a("sectiontab", "basic", (byte) -99, DualNode.field_x);
-              AccountMessagePanel.field_Y = cf.a("tabselected", "basic", (byte) -40, DualNode.field_x);
-              Checkbox.field_X = cf.a("tabunselected", "basic", (byte) -67, DualNode.field_x);
-              QuickChatPhraseCache.field_f = cf.a("tabmouseover", "basic", (byte) -71, DualNode.field_x);
-              CachedTextLayout.field_E = cf.a("sentinelimages", "basic", (byte) -111, DualNode.field_x);
+              StatefulTextPainter.loadWarzoneSprites((ResourceArchive) null, 2, DualNode.field_x);
+              Sprite.field_m = StatSubmission.loadSpritesByName("darkblueboxfilled", "basic", (byte) -52, DualNode.field_x);
+              UrlAndReplyHelpers.field_f = StatSubmission.loadSpritesByName("obviousdarkbluebox", "basic", (byte) -56, DualNode.field_x);
+              MatchingTextValidator.field_t = StatSubmission.loadSpritesByName("darkbluebox", "basic", (byte) -54, DualNode.field_x);
+              LoadingStatusHelpers.field_e = StatSubmission.loadSpritesByName("darkerbluebox", "basic", (byte) -30, DualNode.field_x);
+              FullscreenFocusCanvas.field_a = StatSubmission.loadSpritesByName("lightbluetabbox", "basic", (byte) -108, DualNode.field_x);
+              SocialRequestHelpers.field_b = StatSubmission.loadSpritesByName("darkgrayboxfilled", "basic", (byte) -114, DualNode.field_x);
+              QuickChatCategoryCache.field_d = StatSubmission.loadSpritesByName("darkgraybox", "basic", (byte) -67, DualNode.field_x);
+              TutorialStepTable.field_g = StatSubmission.loadSpritesByName("sectiontab", "basic", (byte) -99, DualNode.field_x);
+              AccountMessagePanel.field_Y = StatSubmission.loadSpritesByName("tabselected", "basic", (byte) -40, DualNode.field_x);
+              Checkbox.field_X = StatSubmission.loadSpritesByName("tabunselected", "basic", (byte) -67, DualNode.field_x);
+              QuickChatPhraseCache.field_f = StatSubmission.loadSpritesByName("tabmouseover", "basic", (byte) -71, DualNode.field_x);
+              CachedTextLayout.field_E = StatSubmission.loadSpritesByName("sentinelimages", "basic", (byte) -111, DualNode.field_x);
               MatchingTextValidator.field_t[4] = null;
               UrlAndReplyHelpers.field_f[4] = null;
-              AccountChoicePanel.field_T = cf.a("greybox", "basic", (byte) -90, DualNode.field_x);
+              AccountChoicePanel.field_T = StatSubmission.loadSpritesByName("greybox", "basic", (byte) -90, DualNode.field_x);
               AccountChoicePanel.field_T[4] = null;
               QuickChatPhraseDefinition.field_y = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "dropdown_mark", false);
               ResizableModalPanel.field_bb = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "button_cover", false);
@@ -564,38 +564,38 @@ public final class SteelSentinels extends FunOrbClient {
             if (!(var4_int < SoundCache.field_a.length)) {
               ArraySupport.copy(var3, 0, SoundCache.field_a, 6, 2);
               SoundCache.field_a[17] = SoundCache.field_a[7];
-              SocialListEntry.field_Zb = cf.a("scrolldown", "basic", (byte) -87, DualNode.field_x);
-              MusicCrossfadeStream.field_x = cf.a("scrollup", "basic", (byte) -33, DualNode.field_x);
-              jn.field_f = cf.a("scrollbar", "basic", (byte) -95, DualNode.field_x);
-              qi.field_a = cf.a("scrollvert", "basic", (byte) -104, DualNode.field_x);
-              MouseInputHandler.field_k = cf.a("frame_shiny", "basic", (byte) -123, DualNode.field_x);
-              Js5ArchiveManager.field_c = cf.a("frame_shiny_bright", "basic", (byte) -43, DualNode.field_x);
-              ResourceArchive.field_b = cf.a("frame_basic_bright", "basic", (byte) -128, DualNode.field_x);
-              MembershipPromotionScreen.field_p = cf.a("frame_basic_thin", "basic", (byte) -55, DualNode.field_x);
-              vh.field_b = cf.a("frame_basic", "basic", (byte) -127, DualNode.field_x);
-              TextButton.field_U = cf.a("display_frame", "basic", (byte) -35, DualNode.field_x);
+              SocialListEntry.field_Zb = StatSubmission.loadSpritesByName("scrolldown", "basic", (byte) -87, DualNode.field_x);
+              MusicCrossfadeStream.field_x = StatSubmission.loadSpritesByName("scrollup", "basic", (byte) -33, DualNode.field_x);
+              MusicTrackHelpers.field_f = StatSubmission.loadSpritesByName("scrollbar", "basic", (byte) -95, DualNode.field_x);
+              LoginCredentialHelpers.field_a = StatSubmission.loadSpritesByName("scrollvert", "basic", (byte) -104, DualNode.field_x);
+              MouseInputHandler.field_k = StatSubmission.loadSpritesByName("frame_shiny", "basic", (byte) -123, DualNode.field_x);
+              Js5ArchiveManager.field_c = StatSubmission.loadSpritesByName("frame_shiny_bright", "basic", (byte) -43, DualNode.field_x);
+              ResourceArchive.field_b = StatSubmission.loadSpritesByName("frame_basic_bright", "basic", (byte) -128, DualNode.field_x);
+              MembershipPromotionScreen.field_p = StatSubmission.loadSpritesByName("frame_basic_thin", "basic", (byte) -55, DualNode.field_x);
+              KeyRoutingHelpers.field_b = StatSubmission.loadSpritesByName("frame_basic", "basic", (byte) -127, DualNode.field_x);
+              TextButton.field_U = StatSubmission.loadSpritesByName("display_frame", "basic", (byte) -35, DualNode.field_x);
               TextButton.field_U[4] = null;
-              LinkButtonPainter.field_d = cf.a("config_tut_frame", "basic", (byte) -32, DualNode.field_x);
+              LinkButtonPainter.field_d = StatSubmission.loadSpritesByName("config_tut_frame", "basic", (byte) -32, DualNode.field_x);
               LinkButtonPainter.field_d[4] = null;
-              TextButton.field_Q = cf.a("popup_frame", "basic", (byte) -94, DualNode.field_x);
+              TextButton.field_Q = StatSubmission.loadSpritesByName("popup_frame", "basic", (byte) -94, DualNode.field_x);
               TextButton.field_Q[4] = null;
               CachedTextLayout.field_l = ArchiveLoadSequence.loadIndexedSpritesByName(125, "basic", DualNode.field_x, "mechbits");
-              IterableDualNodeDeque.field_j = cf.a("weaponclasses", "basic", (byte) -107, DualNode.field_x);
-              ja.field_d = ArchiveLoadSequence.loadIndexedSpritesByName(-123, "basic", DualNode.field_x, "batdrone");
+              IterableDualNodeDeque.field_j = StatSubmission.loadSpritesByName("weaponclasses", "basic", (byte) -107, DualNode.field_x);
+              IconLookupHelpers.field_d = ArchiveLoadSequence.loadIndexedSpritesByName(-123, "basic", DualNode.field_x, "batdrone");
               VerticalScrollbar.field_Zb = ArchiveLoadSequence.loadIndexedSpritesByName(param0 ^ 69, "basic", DualNode.field_x, "drones");
               AccountNoticeDialog.field_qb = ArchiveLoadSequence.loadIndexedSpritesByName(param0 + 163, "basic", DualNode.field_x, "bits_golem");
               Sentinel.field_nc = ArchiveLoadSequence.loadIndexedSpritesByName(42, "basic", DualNode.field_x, "bits_bird");
               PasswordFieldPainter.field_z = ArchiveLoadSequence.loadIndexedSpritesByName(-115, "basic", DualNode.field_x, "bits_slave");
-              wi.field_C = ArchiveLoadSequence.loadIndexedSpritesByName(125, "basic", DualNode.field_x, "bits_babel");
+              SpriteState.field_C = ArchiveLoadSequence.loadIndexedSpritesByName(125, "basic", DualNode.field_x, "bits_babel");
               FallingPickup.field_R = ArchiveLoadSequence.loadIndexedSpritesByName(-128, "basic", DualNode.field_x, "bits_valhalla");
               LobbyGame.field_Ec = ArchiveLoadSequence.loadIndexedSpritesByName(-128, "basic", DualNode.field_x, "bits_orbital");
               AlphaContainer.field_V = ArchiveLoadSequence.loadIndexedSpritesByName(61, "basic", DualNode.field_x, "bits_bertha");
-              vc.field_b = ArchiveLoadSequence.loadIndexedSpritesByName(67, "basic", DualNode.field_x, "bits_smasher");
+              DisplayMode.field_b = ArchiveLoadSequence.loadIndexedSpritesByName(67, "basic", DualNode.field_x, "bits_smasher");
               MembershipPromotionScreen.field_c = ArchiveLoadSequence.loadIndexedSpritesByName(76, "basic", DualNode.field_x, "bits_scorpion");
               ParticleEffect.field_L = ArchiveLoadSequence.loadIndexedSpritesByName(-116, "basic", DualNode.field_x, "bits_hurricane");
-              cf.field_u = ArchiveLoadSequence.loadIndexedSpritesByName(param0 - 65, "basic", DualNode.field_x, "bits_commando");
+              StatSubmission.field_u = ArchiveLoadSequence.loadIndexedSpritesByName(param0 - 65, "basic", DualNode.field_x, "bits_commando");
               Sprite.field_b = ArchiveLoadSequence.loadIndexedSpritesByName(param0 ^ -112, "basic", DualNode.field_x, "bits_turtle");
-              ml.field_c = ArchiveLoadSequence.loadIndexedSpritesByName(param0 + 19, "basic", DualNode.field_x, "droppod");
+              ListRequestHelpers.field_c = ArchiveLoadSequence.loadIndexedSpritesByName(param0 + 19, "basic", DualNode.field_x, "droppod");
               ArchiveProvider.field_a = ArchiveLoadSequence.loadIndexedSpritesByName(param0 ^ -128, "basic", DualNode.field_x, "infantary");
               IsaacRandom.field_d = ArchiveLoadSequence.loadIndexedSpritesByName(-123, "basic", DualNode.field_x, "modules");
               break;
@@ -603,7 +603,7 @@ public final class SteelSentinels extends FunOrbClient {
             AlternateUsernameCredentials.field_w[var4_int] = 14;
             var4_int++;
           } while (var6 == 0);
-          var3_array = rh.field_v;
+          var3_array = PendingDataRequest.field_v;
           var3_array[0] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_giantrobot", false);
           var3_array[1] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_queue", false);
           var3_array[2] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "Basic", "instr_walk", false);
@@ -627,50 +627,50 @@ public final class SteelSentinels extends FunOrbClient {
           var3_array[20] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_team", false);
           var3_array[25] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "instr_techvalue", false);
           ArchiveProvider.field_b = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "logo_menu_chromakey", false);
-          ob.field_z = (ArgbSprite) (ContextMenu.loadSprite("basic", -63, "main_lower_panel", DualNode.field_x));
+          PendingPackedReply.field_z = (ArgbSprite) (ContextMenu.loadSprite("basic", -63, "main_lower_panel", DualNode.field_x));
           TextHotspotWidget.field_eb = (ArgbSprite) (ContextMenu.loadSprite("basic", param0 ^ 75, "main_title_panel", DualNode.field_x));
           CachedArchiveProvider.field_j = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "menu_mesh", false);
           MidiPcmStream.field_db = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "menu_titlebar", false);
-          BirthDateEntryPanel.field_T = GameplayController.a(DualNode.field_x, (byte) -62, "menu_button_1", "basic");
-          GameplayController.a(DualNode.field_x, (byte) 107, "empty_button", "basic");
+          BirthDateEntryPanel.field_T = GameplayController.loadTiledFrameSprites(DualNode.field_x, (byte) -62, "menu_button_1", "basic");
+          GameplayController.loadTiledFrameSprites(DualNode.field_x, (byte) 107, "empty_button", "basic");
           AccountNamePrompt.field_Ub = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "prevbtn", false);
-          gm.field_b = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "nextbtn", false);
+          EmailValidationHelpers.field_b = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "nextbtn", false);
           CheckboxPainter.field_b = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lobby_icon", false);
-          vc.field_e = cf.a("statbars", "basic", (byte) -13, DualNode.field_x);
-          AccountChoicePanel.field_Z = cf.a("tags", "basic", (byte) -50, DualNode.field_x);
+          DisplayMode.field_e = StatSubmission.loadSpritesByName("statbars", "basic", (byte) -13, DualNode.field_x);
+          AccountChoicePanel.field_Z = StatSubmission.loadSpritesByName("tags", "basic", (byte) -50, DualNode.field_x);
           NodeHashTable.field_k = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "tagborder", false);
-          MarkerSliderPainter.field_f = cf.a("movekeys", "basic", (byte) -38, DualNode.field_x);
+          MarkerSliderPainter.field_f = StatSubmission.loadSpritesByName("movekeys", "basic", (byte) -38, DualNode.field_x);
           ValidatedTextWidget.field_wb = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "shiftkey", false);
-          TextLayout.field_e = cf.a("config_tabs", "basic", (byte) -33, DualNode.field_x);
+          TextLayout.field_e = StatSubmission.loadSpritesByName("config_tabs", "basic", (byte) -33, DualNode.field_x);
           RasterSnapshot.field_r[0] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "research_ring", false);
           DialWidgetPainter.field_q[0] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "research_icon", false);
           LinkButtonPainter.field_p = ArchiveLoadSequence.loadIndexedSpritesByName(param0 - 75, "basic", DualNode.field_x, "powerups");
-          gf.field_c = cf.a("headings_bar", "basic", (byte) -26, DualNode.field_x);
+          GeneratedSpriteHelpers.field_c = StatSubmission.loadSpritesByName("headings_bar", "basic", (byte) -26, DualNode.field_x);
           PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "solarite", false);
           Js5Transport.field_q = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "mansize", false);
-          gj.field_a = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "stripeybar", false);
+          SpriteDrawHelpers.field_a = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "stripeybar", false);
           Js5Transport.field_r = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "hackbit", false);
-          MouseInputHandler.field_d = cf.a("pretty_button_lit", "basic", (byte) -111, DualNode.field_x);
-          LobbyGame.field_Tb = cf.a("pretty_button_unlit", "basic", (byte) -50, DualNode.field_x);
-          AgeValidator.field_p = cf.a("menu_border", "basic", (byte) -31, DualNode.field_x);
-          SocialRequestHelpers.field_e = cf.a("bin_icon", "basic", (byte) -14, DualNode.field_x);
-          AccountChoicePanel.field_Q = cf.a("faces_idle", "basic", (byte) -87, DualNode.field_x);
-          WeightedCacheEntry.field_C = cf.a("faces_talk", "basic", (byte) -97, DualNode.field_x);
-          am.field_f = cf.a("tutor_buttons", "basic", (byte) -125, DualNode.field_x);
-          DialWidgetPainter.field_n = cf.a("shields", "basic", (byte) -58, DualNode.field_x);
-          AccountRegistrationPanel.field_gb = cf.a("explosion", "basic", (byte) -34, DualNode.field_x);
+          MouseInputHandler.field_d = StatSubmission.loadSpritesByName("pretty_button_lit", "basic", (byte) -111, DualNode.field_x);
+          LobbyGame.field_Tb = StatSubmission.loadSpritesByName("pretty_button_unlit", "basic", (byte) -50, DualNode.field_x);
+          AgeValidator.field_p = StatSubmission.loadSpritesByName("menu_border", "basic", (byte) -31, DualNode.field_x);
+          SocialRequestHelpers.field_e = StatSubmission.loadSpritesByName("bin_icon", "basic", (byte) -14, DualNode.field_x);
+          AccountChoicePanel.field_Q = StatSubmission.loadSpritesByName("faces_idle", "basic", (byte) -87, DualNode.field_x);
+          WeightedCacheEntry.field_C = StatSubmission.loadSpritesByName("faces_talk", "basic", (byte) -97, DualNode.field_x);
+          DesignerPageSetup.field_f = StatSubmission.loadSpritesByName("tutor_buttons", "basic", (byte) -125, DualNode.field_x);
+          DialWidgetPainter.field_n = StatSubmission.loadSpritesByName("shields", "basic", (byte) -58, DualNode.field_x);
+          AccountRegistrationPanel.field_gb = StatSubmission.loadSpritesByName("explosion", "basic", (byte) -34, DualNode.field_x);
           var3_array = ClientUiHelpers.loadRgbSpritesByName((byte) -115, "smoke", DualNode.field_x, "basic");
           LobbyPlayer.field_pc = new ArgbSprite[var3_array.length];
           var4_int = 0;
           do {
             if (var4_int >= var3_array.length) {
-              AccountMessagePanel.field_S = cf.a("plasma", "basic", (byte) -98, DualNode.field_x);
-              cf.a("dust", "basic", (byte) -81, DualNode.field_x);
+              AccountMessagePanel.field_S = StatSubmission.loadSpritesByName("plasma", "basic", (byte) -98, DualNode.field_x);
+              StatSubmission.loadSpritesByName("dust", "basic", (byte) -81, DualNode.field_x);
               LoginDialog.field_Cb = ArchiveLoadSequence.loadIndexedSpritesByName(-120, "basic", DualNode.field_x, "crowns");
               ValidatedTextWidget.field_sb = new RgbSprite(32, 32);
               ValidatedTextWidget.field_sb.bindRasterTarget();
               DropTargetWidget.field_G.drawScaledAveraged(0, 0, 32, 32);
-              Checkbox.field_bb.b((byte) 125);
+              Checkbox.field_bb.bindRaster((byte) 125);
               DropTargetWidget.field_G = null;
               break;
             }
@@ -682,14 +682,14 @@ public final class SteelSentinels extends FunOrbClient {
           var5 = 0;
           do {
             if (!(WeightedLruCache.field_m.length > var5)) {
-              ResourceArchive.a(te.field_c, (byte) 74, tm.field_d, (int[]) null, BufferedRandomAccessFile.field_k, var4, true, 4, 3, ModalPanel.field_R, var2_array, DebouncedValidator.field_b, var3_array2, MusicPatchPcmStream.field_t, DelayedServerPacket.field_w, ParticleEffect.field_y, ImageProducerRasterBuffer.field_u);
-              pa.a(tm.field_d, 111, MusicPatchPcmStream.field_t);
-              un.a(200, 126);
+              ResourceArchive.initializeGameAssets(FriendListHelpers.field_c, (byte) 74, SessionUiHelpers.field_d, (int[]) null, BufferedRandomAccessFile.field_k, var4, true, 4, 3, ModalPanel.field_R, var2_array, DebouncedValidator.field_b, var3_array2, MusicPatchPcmStream.field_t, DelayedServerPacket.field_w, ParticleEffect.field_y, ImageProducerRasterBuffer.field_u);
+              TutorialStepTable.setPromotionArchives(SessionUiHelpers.field_d, 111, MusicPatchPcmStream.field_t);
+              ChatHistoryAllocator.allocateChatHistory(200, 126);
               LobbySetupHelpers.field_a = null;
               LobbyPlayer.resetFrameTimingHistory(param0 ^ -52);
               break;
             }
-            var3_array2[var5] = cf.a(WeightedLruCache.field_m[var5], "basic", (byte) -63, DualNode.field_x);
+            var3_array2[var5] = StatSubmission.loadSpritesByName(WeightedLruCache.field_m[var5], "basic", (byte) -63, DualNode.field_x);
             var4[var5] = null;
             var5++;
           } while (var6 == 0);
@@ -715,18 +715,18 @@ public final class SteelSentinels extends FunOrbClient {
             stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
-          dupTemp$2 = bd.a(param1, param3, 248);
+          dupTemp$2 = SolidSpriteHelpers.createSolidSprite(param1, param3, 248);
           var5[6] = dupTemp$2;
           var5[3] = dupTemp$2;
           var5[2] = dupTemp$2;
           var5[1] = dupTemp$2;
           var5[0] = dupTemp$2;
-          dupTemp$3 = bd.a(param4, param3, 248);
+          dupTemp$3 = SolidSpriteHelpers.createSolidSprite(param4, param3, 248);
           var5[8] = dupTemp$3;
           var5[7] = dupTemp$3;
           var5[5] = dupTemp$3;
           if (param0 != 0) {
-            var5[4] = bd.a(param0, 64, 248);
+            var5[4] = SolidSpriteHelpers.createSolidSprite(param0, 64, 248);
           }
           stackIn_8_0 = var5;
           return stackIn_8_0;
@@ -755,7 +755,7 @@ public final class SteelSentinels extends FunOrbClient {
             }
             boolean decompiledFrameRemainder0 = true;
             if (TickClock.field_g == 0 &&
-              DualNode.field_x.a((byte) -38, "lw_midground_01", "basic")) {
+              DualNode.field_x.ensureFileAvailableByName((byte) -38, "lw_midground_01", "basic")) {
               TickClock.field_g = TickClock.field_g + 1;
               WhirlpoolHasher.field_o[1] = new RgbSprite[4];
               WhirlpoolHasher.field_o[1][0] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lw_midground_01", false);
@@ -763,59 +763,59 @@ public final class SteelSentinels extends FunOrbClient {
             }
             if (decompiledFrameRemainder0) {
               if (1 == TickClock.field_g &&
-                DualNode.field_x.a((byte) 113, "lw_midground_02", "basic")) {
+                DualNode.field_x.ensureFileAvailableByName((byte) 113, "lw_midground_02", "basic")) {
                 TickClock.field_g = TickClock.field_g + 1;
                 WhirlpoolHasher.field_o[1][1] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lw_midground_02", false);
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (2 != TickClock.field_g ||
-                  !DualNode.field_x.a((byte) -78, "lw_midground_03", "basic")) {
+                  !DualNode.field_x.ensureFileAvailableByName((byte) -78, "lw_midground_03", "basic")) {
                   if (TickClock.field_g == 3 &&
-                    DualNode.field_x.a((byte) 101, "lw_midground_04", "basic")) {
+                    DualNode.field_x.ensureFileAvailableByName((byte) 101, "lw_midground_04", "basic")) {
                     TickClock.field_g = TickClock.field_g + 1;
                     WhirlpoolHasher.field_o[1][3] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lw_midground_04", false);
                     decompiledFrameRemainder0 = (var3 != 0);
                   }
                   if (decompiledFrameRemainder0) {
                     if (TickClock.field_g != 4 ||
-                      !DualNode.field_x.a((byte) -56, "ct_midground_01", "basic")) {
+                      !DualNode.field_x.ensureFileAvailableByName((byte) -56, "ct_midground_01", "basic")) {
                       if (TickClock.field_g != 5 ||
-                        !DualNode.field_x.a((byte) 102, "ct_midground_02", "basic")) {
+                        !DualNode.field_x.ensureFileAvailableByName((byte) 102, "ct_midground_02", "basic")) {
                         if (TickClock.field_g != 6 ||
-                          !DualNode.field_x.a((byte) -117, "ct_midground_03", "basic")) {
+                          !DualNode.field_x.ensureFileAvailableByName((byte) -117, "ct_midground_03", "basic")) {
                           if (7 == TickClock.field_g &&
-                            DualNode.field_x.a((byte) -57, "ct_midground_04", "basic")) {
+                            DualNode.field_x.ensureFileAvailableByName((byte) -57, "ct_midground_04", "basic")) {
                             TickClock.field_g = TickClock.field_g + 1;
                             WhirlpoolHasher.field_o[2][3] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "ct_midground_04", false);
                             decompiledFrameRemainder0 = (var3 != 0);
                           }
                           if (decompiledFrameRemainder0) {
                             if (TickClock.field_g == 8 &&
-                              DualNode.field_x.a((byte) 107, "testsurface", "basic")) {
+                              DualNode.field_x.ensureFileAvailableByName((byte) 107, "testsurface", "basic")) {
                               TickClock.field_g = TickClock.field_g + 1;
                               AccountRegistrationPanel.field_R = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "testsurface", false);
                               decompiledFrameRemainder0 = (var3 != 0);
                             }
                             if (decompiledFrameRemainder0) {
                               if (TickClock.field_g != 9 ||
-                                !DualNode.field_x.a((byte) -63, "wz_texture", "basic")) {
+                                !DualNode.field_x.ensureFileAvailableByName((byte) -63, "wz_texture", "basic")) {
                                 if (TickClock.field_g == 10 &&
-                                  DualNode.field_x.a((byte) -81, "lw_texture", "basic")) {
+                                  DualNode.field_x.ensureFileAvailableByName((byte) -81, "lw_texture", "basic")) {
                                   TickClock.field_g = TickClock.field_g + 1;
                                   ValidatedTextWidget.field_rb[1] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "lw_texture", false);
                                   decompiledFrameRemainder0 = (var3 != 0);
                                 }
                                 if (decompiledFrameRemainder0) {
                                   if (11 == TickClock.field_g &&
-                                    DualNode.field_x.a((byte) -113, "ct_texture", "basic")) {
+                                    DualNode.field_x.ensureFileAvailableByName((byte) -113, "ct_texture", "basic")) {
                                     TickClock.field_g = TickClock.field_g + 1;
                                     ValidatedTextWidget.field_rb[2] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "ct_texture", false);
                                     decompiledFrameRemainder0 = (var3 != 0);
                                   }
                                   if ((decompiledFrameRemainder0) &&
                                     (decompiledFrameRemainder0 = (TickClock.field_g == 12)) &&
-                                    (decompiledFrameRemainder0 = !(!DualNode.field_x.a((byte) 127, "mn_texture", "basic")))) {
+                                    (decompiledFrameRemainder0 = !(!DualNode.field_x.ensureFileAvailableByName((byte) 127, "mn_texture", "basic")))) {
                                     TickClock.field_g = TickClock.field_g + 1;
                                     ValidatedTextWidget.field_rb[3] = PacketLoopHelpers.loadRgbSpriteByName(DualNode.field_x, "basic", "mn_texture", false);
                                     decompiledFrameRemainder0 = (var3 != 0);
@@ -887,137 +887,137 @@ public final class SteelSentinels extends FunOrbClient {
               return;
             }
             if (TickClock.field_g == 0 &&
-              LobbyStateHelpers.field_h.a((byte) -91, "wz_background.jpg", "warzone/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) -91, "wz_background.jpg", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
               return;
             }
             if (TickClock.field_g == 1 &&
-              LobbyStateHelpers.field_h.a((byte) -40, "lw_background.jpg", "lostworld/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) -40, "lw_background.jpg", "lostworld/")) {
               TickClock.field_g = TickClock.field_g + 1;
               return;
             }
             if (TickClock.field_g == 2 &&
-              LobbyStateHelpers.field_h.a((byte) 126, "ct_background.jpg", "city/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 126, "ct_background.jpg", "city/")) {
               TickClock.field_g = TickClock.field_g + 1;
               return;
             }
             if (3 == TickClock.field_g &&
-              LobbyStateHelpers.field_h.a((byte) -48, "mn_background.jpg", "moon/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) -48, "mn_background.jpg", "moon/")) {
               TickClock.field_g = TickClock.field_g + 1;
               return;
             }
             if (TickClock.field_g == 4 &&
-              LobbyStateHelpers.field_h.a((byte) 94, "wz_midground_01.png", "warzone/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 94, "wz_midground_01.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
               WhirlpoolHasher.field_o[0] = new RgbSprite[4];
-              WhirlpoolHasher.field_o[0][0] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_midground_01.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              WhirlpoolHasher.field_o[0][0] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_midground_01.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (TickClock.field_g == 5 &&
-              LobbyStateHelpers.field_h.a((byte) 109, "wz_midground_02.png", "warzone/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 109, "wz_midground_02.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              WhirlpoolHasher.field_o[0][1] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_midground_02.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              WhirlpoolHasher.field_o[0][1] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_midground_02.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (TickClock.field_g == 6 &&
-              LobbyStateHelpers.field_h.a((byte) 83, "wz_midground_03.png", "warzone/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 83, "wz_midground_03.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              WhirlpoolHasher.field_o[0][2] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_midground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              WhirlpoolHasher.field_o[0][2] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_midground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (7 == TickClock.field_g &&
-              LobbyStateHelpers.field_h.a((byte) 118, "wz_midground_04.png", "warzone/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 118, "wz_midground_04.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              WhirlpoolHasher.field_o[0][3] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_midground_04.png", TextAndBitHelpers.bitXor(param0, -721), "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              WhirlpoolHasher.field_o[0][3] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_midground_04.png", TextAndBitHelpers.bitXor(param0, -721), "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (TickClock.field_g == 8 &&
-              LobbyStateHelpers.field_h.a((byte) 88, "wz_foreground_01.png", "warzone/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 88, "wz_foreground_01.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
               DelayedServerPacket.field_x[0] = new RgbSprite[7];
-              DelayedServerPacket.field_x[0][0] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_01.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][0] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_foreground_01.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (9 == TickClock.field_g &&
-              LobbyStateHelpers.field_h.a((byte) 122, "wz_foreground_02.png", "warzone/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 122, "wz_foreground_02.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[0][1] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_02.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][1] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_foreground_02.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (TickClock.field_g == 10 &&
-              LobbyStateHelpers.field_h.a((byte) 84, "wz_foreground_03.png", "warzone/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 84, "wz_foreground_03.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[0][2] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][2] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_foreground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (TickClock.field_g == 11 &&
-              LobbyStateHelpers.field_h.a((byte) 122, "wz_foreground_04.png", "warzone/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 122, "wz_foreground_04.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[0][3] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_04.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][3] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_foreground_04.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (TickClock.field_g == 12 &&
-              LobbyStateHelpers.field_h.a((byte) -76, "wz_foreground_05.png", "warzone/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) -76, "wz_foreground_05.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[0][4] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_05.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][4] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_foreground_05.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (TickClock.field_g == 13 &&
-              LobbyStateHelpers.field_h.a((byte) 102, "wz_foreground_06.png", "warzone/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 102, "wz_foreground_06.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[0][5] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_06.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][5] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_foreground_06.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (TickClock.field_g == 14 &&
-              LobbyStateHelpers.field_h.a((byte) 93, "wz_foreground_07.png", "warzone/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 93, "wz_foreground_07.png", "warzone/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[0][6] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("wz_foreground_07.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[0][6] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("wz_foreground_07.png", -742, "warzone/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (TickClock.field_g == 15 &&
-              LobbyStateHelpers.field_h.a((byte) -54, "sb_foreground_01.png", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) -54, "sb_foreground_01.png", "fleetbattle/")) {
               DelayedServerPacket.field_x[1] = new RgbSprite[6];
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[1][0] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("sb_foreground_01.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[1][0] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("sb_foreground_01.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (16 == TickClock.field_g &&
-              LobbyStateHelpers.field_h.a((byte) -68, "sb_foreground_02.png", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) -68, "sb_foreground_02.png", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[1][1] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("sb_foreground_02.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[1][1] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("sb_foreground_02.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (17 == TickClock.field_g &&
-              LobbyStateHelpers.field_h.a((byte) -121, "sb_foreground_03.png", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) -121, "sb_foreground_03.png", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[1][2] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("sb_foreground_03.png", TextAndBitHelpers.bitXor(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[1][2] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("sb_foreground_03.png", TextAndBitHelpers.bitXor(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (18 == TickClock.field_g &&
-              LobbyStateHelpers.field_h.a((byte) -127, "sb_foreground_04.png", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) -127, "sb_foreground_04.png", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[1][3] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("sb_foreground_04.png", TextAndBitHelpers.bitXor(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[1][3] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("sb_foreground_04.png", TextAndBitHelpers.bitXor(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (TickClock.field_g == 19 &&
-              LobbyStateHelpers.field_h.a((byte) -70, "sb_foreground_05.png", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) -70, "sb_foreground_05.png", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[1][4] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("sb_foreground_05.png", TextAndBitHelpers.bitXor(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[1][4] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("sb_foreground_05.png", TextAndBitHelpers.bitXor(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (20 == TickClock.field_g &&
-              LobbyStateHelpers.field_h.a((byte) 126, "sb_foreground_06.png", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 126, "sb_foreground_06.png", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
-              DelayedServerPacket.field_x[1][5] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.a("sb_foreground_06.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.a(false))));
+              DelayedServerPacket.field_x[1][5] = (RgbSprite) ((Object) new ArgbSprite(LobbyStateHelpers.field_h.getFileByName("sb_foreground_06.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) NanoTickClock.getActiveCanvas(false))));
               return;
             }
             if (TickClock.field_g == 21 &&
-              LobbyStateHelpers.field_h.a((byte) -87, "planet.jpg", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) -87, "planet.jpg", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
               return;
             }
             if (TickClock.field_g == 22 &&
-              LobbyStateHelpers.field_h.a((byte) 123, "moon.jpg", "fleetbattle/")) {
+              LobbyStateHelpers.field_h.ensureFileAvailableByName((byte) 123, "moon.jpg", "fleetbattle/")) {
               TickClock.field_g = TickClock.field_g + 1;
               return;
             }
@@ -1694,7 +1694,7 @@ public final class SteelSentinels extends FunOrbClient {
         RuntimeException var2 = null;
         try {
           if (BirthDateEntryPanel.field_S != null) {
-            SectorCacheStore.a(0, BirthDateEntryPanel.field_S);
+            SectorCacheStore.loadLocalizedText(0, BirthDateEntryPanel.field_S);
             BirthDateEntryPanel.field_S = null;
             LobbyPlayer.resetFrameTimingHistory(0);
           }
@@ -1722,9 +1722,9 @@ public final class SteelSentinels extends FunOrbClient {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          ImageProducerRasterBuffer.d(7094);
-          if (null != wb.field_c) {
-            SoundCache.c(0);
+          ImageProducerRasterBuffer.shutdownAudioOutputs(7094);
+          if (null != RewardValueHelpers.field_c) {
+            SoundCache.exitFullscreen(0);
           }
           var2_int = 21 % ((param0 - 34) / 48);
           QuickChatPhraseDefinition.shutdownConnectionAndInput(0);
@@ -1774,42 +1774,42 @@ public final class SteelSentinels extends FunOrbClient {
         var8 = obfuscationControl;
         try {
           boolean decompiledFrameRemainder2 = true;
-          DualNodeDequeIterator.a(false);
-          if (in.field_h != in.field_i) {
-            if (~WeightedCacheEntry.field_G != ~in.field_i) {
-              if (LoginMethod.field_f == in.field_i) {
-                if (!ni.b(12)) {
-                  if (null != lc.field_c) {
-                    pa.a(3, (byte) -114, lc.field_c);
+          DualNodeDequeIterator.updateJinglePlayback(false);
+          if (SocialPacketHelpers.field_h != SocialPacketHelpers.field_i) {
+            if (~WeightedCacheEntry.field_G != ~SocialPacketHelpers.field_i) {
+              if (LoginMethod.field_f == SocialPacketHelpers.field_i) {
+                if (!ByteArrayPoolHelpers.isAccountCreationMode(12)) {
+                  if (null != SettingSearchHelpers.field_c) {
+                    TutorialStepTable.queueHighscoreSubmission(3, (byte) -114, SettingSearchHelpers.field_c);
                   }
-                  gf.c(-128);
+                  GeneratedSpriteHelpers.hideMessageOverlay(-128);
                   GzipDecoder.field_g = SentinelDesigner.field_i;
                   if (CachedTextLayout.field_y) {
                     CachedTextLayout.field_y = false;
-                    GradientOutlineTextPainter.a(-4, false);
+                    GradientOutlineTextPainter.requestFullscreen(-4, false);
                   }
                   if (ArchiveRequest.field_E &&
-                    GzipDecoder.b(-52)) {
+                    GzipDecoder.ownsSpecialPart(-52)) {
                     var3_int = GzipDecoder.field_g;
                     if (var3_int == 5 ||
                       var3_int == 6 ||
                       var3_int == 8) {
                       var3_int = SceneWidget.field_Jb;
                     }
-                    IterableNodeHashTable.a(-4, false, -1, var3_int);
+                    IterableNodeHashTable.switchScreen(-4, false, -1, var3_int);
                   }
-                  if (DropTargetWidget.a(GzipDecoder.field_g, 0)) {
+                  if (DropTargetWidget.isNonNegative(GzipDecoder.field_g, 0)) {
                     QuickChatHelpDialog.switchToRequestedScreen(true);
                   }
                 }
-                in.field_i = ConditionalTextValue.field_b;
+                SocialPacketHelpers.field_i = ConditionalTextValue.field_b;
                 decompiledFrameRemainder2 = (var8 != 0);
               }
               if (decompiledFrameRemainder2) {
                 SentinelDesigner.field_a = SentinelDesigner.field_a - 1;
                 decompiledFrameRemainder2 = (SentinelDesigner.field_a == 0);
                 if (decompiledFrameRemainder2) {
-                  in.field_i = in.field_h;
+                  SocialPacketHelpers.field_i = SocialPacketHelpers.field_h;
                   decompiledFrameRemainder2 = (var8 != 0);
                 }
               }
@@ -1819,14 +1819,14 @@ public final class SteelSentinels extends FunOrbClient {
               decompiledFrameRemainder2 = (SentinelDesigner.field_a == 16);
               if (decompiledFrameRemainder2) {
                 if (!CachedTextLayout.field_y) {
-                  ModalPanel.a((byte) 113);
+                  ModalPanel.returnToLogin((byte) 113);
                   if (var8 != 0) {
                     EmailFormatError.returnToLoginDialog(param0 ^ 116);
                   }
                 } else {
                   EmailFormatError.returnToLoginDialog(param0 ^ 116);
                 }
-                in.field_i = LoginMethod.field_f;
+                SocialPacketHelpers.field_i = LoginMethod.field_f;
                 decompiledFrameRemainder2 = (var8 != 0);
               }
             }
@@ -1842,9 +1842,9 @@ public final class SteelSentinels extends FunOrbClient {
                 if (LoginForm.field_T == -1) {
                   if ((!WeightedCacheEntry.field_H) &&
                     (decompiledFrameRemainder1 = (null != BoundedUrlRequest.field_i))) {
-                    BoundedUrlRequest.field_i.c(-68, true);
-                    while (UiContainer.f(22759)) {
-                      BoundedUrlRequest.field_i.g(97);
+                    BoundedUrlRequest.field_i.updateGame(-68, true);
+                    while (UiContainer.pollKeyEvent(22759)) {
+                      BoundedUrlRequest.field_i.handleKeyInput(97);
                       if (var8 != 0) {
                         decompiledFrameCompleted2 = false;
                         break;
@@ -1882,8 +1882,8 @@ public final class SteelSentinels extends FunOrbClient {
                     decompiledFrameRemainder1 = (var8 != 0);
                   }
                   if ((decompiledFrameRemainder1) &&
-                    (DropTargetWidget.a(LoginForm.field_T, param0 ^ 120))) {
-                    GameKeyHandler.field_e[LoginForm.field_T].b(true);
+                    (DropTargetWidget.isNonNegative(LoginForm.field_T, param0 ^ 120))) {
+                    GameKeyHandler.field_e[LoginForm.field_T].updateScreen(true);
                     if (var8 != 0) {
                       LoginForm.field_U = LoginForm.field_U + 1;
                       if (LoginForm.field_U == 20) {
@@ -1902,28 +1902,28 @@ public final class SteelSentinels extends FunOrbClient {
             if ((decompiledFrameCompleted2) && (WeightedCacheEntry.field_H &&
               !SectorCacheStore.field_n &&
               !TextLayout.field_d)) {
-              if (ob.field_y &&
-                jn.field_g) {
+              if (PendingPackedReply.field_y &&
+                MusicTrackHelpers.field_g) {
                 var3_int = 0;
               }
               BenefitsScreenHelpers.updateLobbyAndFlushRequests(13, var3_int != 0);
               if (CombatWorld.field_G ||
-                ob.field_y) {
+                PendingPackedReply.field_y) {
                 LoginHandshakeHelpers.drawChatPanelAt((byte) 38, var4 != 0, 320, 180);
               }
               if (CombatWorld.field_G &&
                 null != CachedTextLayout.field_A) {
-                CachedTextLayout.field_A.c(param0 ^ 37, var4 != 0);
+                CachedTextLayout.field_A.updateGame(param0 ^ 37, var4 != 0);
               }
-              if (ob.field_y) {
-                BoundedUrlRequest.field_i.c(-121, var4 != 0);
+              if (PendingPackedReply.field_y) {
+                BoundedUrlRequest.field_i.updateGame(-121, var4 != 0);
               }
-              while (UiContainer.f(22759)) {
+              while (UiContainer.pollKeyEvent(22759)) {
                 boolean decompiledFrameRemainder0 = true;
                 if (TextHotspotRegion.field_v) {
-                  if (ob.field_y ||
+                  if (PendingPackedReply.field_y ||
                     CombatWorld.field_G) {
-                    decompiledFrameRemainder0 = !(!TextWidgetPainter.a(13, 15, 12, false));
+                    decompiledFrameRemainder0 = !(!TextWidgetPainter.handleFrontEndKey(13, 15, 12, false));
                     if ((decompiledFrameRemainder0) &&
                       (var8 == 0)) {
                       continue;
@@ -1934,13 +1934,13 @@ public final class SteelSentinels extends FunOrbClient {
                     decompiledFrameRemainder0 = (var8 != 0);
                   }
                 }
-                if ((decompiledFrameRemainder0) && ((ob.field_y ||
-                  CombatWorld.field_G) && (jn.field_g ||
+                if ((decompiledFrameRemainder0) && ((PendingPackedReply.field_y ||
+                  CombatWorld.field_G) && (MusicTrackHelpers.field_g ||
                   NameAvailabilityValidator.field_q == 80 ||
-                  NameAvailabilityValidator.field_q == 10) && TextWidgetPainter.a(13, 15, 12, false))) {
+                  NameAvailabilityValidator.field_q == 10) && TextWidgetPainter.handleFrontEndKey(13, 15, 12, false))) {
                   continue;
                 }
-                stackIn_179_0 = jn.field_g;
+                stackIn_179_0 = MusicTrackHelpers.field_g;
                 if (var8 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -1949,19 +1949,19 @@ public final class SteelSentinels extends FunOrbClient {
                   continue;
                 }
                 if (CombatWorld.field_G) {
-                  CachedTextLayout.field_A.g(73);
+                  CachedTextLayout.field_A.handleKeyInput(73);
                 }
-                if (!ob.field_y) {
+                if (!PendingPackedReply.field_y) {
                   continue;
                 }
-                BoundedUrlRequest.field_i.g(51);
+                BoundedUrlRequest.field_i.handleKeyInput(51);
               }
             }
             if (decompiledFrameCompleted0) {
               stackIn_179_0 = WeightedCacheEntry.field_H;
             }
             if (!stackIn_179_0) {
-              IntKeyLookup.d((byte) -66);
+              IntKeyLookup.tickOverlayAnimations((byte) -66);
             }
             if (!TextHotspotRegion.field_v) {
               if (!(EmailCredentials.field_i <= 0)) {
@@ -1978,14 +1978,14 @@ public final class SteelSentinels extends FunOrbClient {
             }
             var5_int = AudioService.field_h * AudioService.field_h;
             var6 = var5_int - EmailCredentials.field_i * EmailCredentials.field_i;
-            var7 = vf.field_e + 120 * var6 / var5_int;
-            SentinelDesigner.d(0, var7);
-            if (bd.field_b.first(13058) != null) {
-              fieldTemp$0 = ob.field_o + 1;
-              ob.field_o = ob.field_o + 1;
+            var7 = RequestResendHelpers.field_e + 120 * var6 / var5_int;
+            SentinelDesigner.layoutLobbyBannerAt(0, var7);
+            if (SolidSpriteHelpers.field_b.first(13058) != null) {
+              fieldTemp$0 = PendingPackedReply.field_o + 1;
+              PendingPackedReply.field_o = PendingPackedReply.field_o + 1;
               if (fieldTemp$0 == 500) {
-                ob.field_o = 0;
-                bd.field_b.removeFirst(true);
+                PendingPackedReply.field_o = 0;
+                SolidSpriteHelpers.field_b.removeFirst(true);
               }
             }
           }
@@ -1993,15 +1993,15 @@ public final class SteelSentinels extends FunOrbClient {
             this.openArchives(-19);
           }
           if (GzipDecoder.field_g == -3) {
-            lc.field_c = null;
+            SettingSearchHelpers.field_c = null;
             var3 = GrowableIntList.field_l;
             var4_ref_String__ = new String[]{var3};
             var5_array = new int[var4_ref_String__.length][];
-            var5_array[0] = uc.field_b;
+            var5_array[0] = DesignerPageTables.field_b;
             var6 = 1;
             while (true) {
               if (var6 < var4_ref_String__.length) {
-                var5_array[var6] = uc.field_b;
+                var5_array[var6] = DesignerPageTables.field_b;
                 var6++;
                 if (var8 == 0) {
                   continue;
@@ -2011,7 +2011,7 @@ public final class SteelSentinels extends FunOrbClient {
               }
               break;
             }
-            var7 = di.field_g;
+            var7 = OptionMaskHelpers.field_g;
             switch ((var8 == 0
               || var7 == -1
               || var7 == 0
@@ -2062,7 +2062,7 @@ public final class SteelSentinels extends FunOrbClient {
                 break;
             }
             TextHotspotRegion.field_v = false;
-            jn.field_g = false;
+            MusicTrackHelpers.field_g = false;
             stackIn_251_0 = null;
             stackIn_251_1 = null;
             stackIn_251_2 = false;
@@ -2072,7 +2072,7 @@ public final class SteelSentinels extends FunOrbClient {
             stackIn_251_6 = 0;
             stackIn_251_7 = false;
             stackIn_251_8 = var5_array;
-            if (-1 != di.field_g) {
+            if (-1 != OptionMaskHelpers.field_g) {
               stackIn_252_0 = null;
               stackIn_252_1 = null;
               stackIn_252_9 = 0;
@@ -2083,18 +2083,18 @@ public final class SteelSentinels extends FunOrbClient {
             }
             BoundedUrlRequest.field_i = new GameplayController(stackIn_251_2, stackIn_251_3, stackIn_251_4, stackIn_251_5, stackIn_251_6, stackIn_251_7, stackIn_251_8, stackIn_252_9, 2, false, false);
             var7 = ArticulatedPart.field_B ? 1 : 0;
-            IterableNodeHashTable.a(-1, var7 != 0, -1, 0);
+            IterableNodeHashTable.switchScreen(-1, var7 != 0, -1, 0);
             Sprite.field_k = true;
           }
           if (-4 == GzipDecoder.field_g) {
             ClockAndCookieHelpers.field_g.writeCipheredOpcode(63, (byte) -117);
             ClockAndCookieHelpers.field_g.position = ClockAndCookieHelpers.field_g.position + 1;
             var3_int = ClockAndCookieHelpers.field_g.position;
-            ClockAndCookieHelpers.field_g.writeByte((byte) 124, uc.field_b.length);
+            ClockAndCookieHelpers.field_g.writeByte((byte) 124, DesignerPageTables.field_b.length);
             var4 = 0;
             while (true) {
-              if (var4 < uc.field_b.length) {
-                ClockAndCookieHelpers.field_g.writeByte((byte) 127, uc.field_b[var4]);
+              if (var4 < DesignerPageTables.field_b.length) {
+                ClockAndCookieHelpers.field_g.writeByte((byte) 127, DesignerPageTables.field_b[var4]);
                 var4++;
                 if (var8 == 0) {
                   continue;
@@ -2110,7 +2110,7 @@ public final class SteelSentinels extends FunOrbClient {
             EmailCredentials.field_i = AudioService.field_h;
           }
           if (GzipDecoder.field_g == -5) {
-            ChatMessage.sendShortSetting((byte) -43, 11, nf.field_b.getGameId(-26));
+            ChatMessage.sendShortSetting((byte) -43, 11, LoginEncryptionHelpers.field_b.getGameId(-26));
             TextLayout.field_d = true;
             GzipDecoder.field_g = LoginForm.field_T;
           }
@@ -2130,7 +2130,7 @@ public final class SteelSentinels extends FunOrbClient {
           this.initializeFramework(14, false, 5000, 71, 1, 0, 4, 2);
           var2 = new MidiPcmStream();
           var2.setChannelDefaultProgram(128, (byte) -123, 9);
-          qm.a(-31, IterableDualNodeDeque.field_i, 22050, var2, true, (java.awt.Component) ((Object) sl.field_n));
+          DisplayNameAndAudioHelpers.initializeAudio(-31, IterableDualNodeDeque.field_i, 22050, var2, true, (java.awt.Component) ((Object) ArchiveLoadStep.field_n));
           this.configureOptionalPacketHandlers(1, true, true, false, true, true, false);
           LoadoutHelpers.field_d = FunOrbClient.field_s;
           HuffmanDecoder.field_b = BirthDateEntryPanel.field_ab;
@@ -2145,7 +2145,7 @@ public final class SteelSentinels extends FunOrbClient {
           SocketJs5Transport.field_B[71] = 12;
           SocketJs5Transport.field_B[72] = 2;
           SocketJs5Transport.field_B[78] = -1;
-          uc.field_b = ReflectionCheck.field_x;
+          DesignerPageTables.field_b = ReflectionCheck.field_x;
           SoundAndUrlHelpers.field_b = SectorCacheStore.field_o;
           SocketJs5Transport.field_B[80] = 2;
           SocketJs5Transport.field_B[70] = 1;
@@ -2154,12 +2154,12 @@ public final class SteelSentinels extends FunOrbClient {
           SocketJs5Transport.field_B[58] = -2;
           SocketJs5Transport.field_B[63] = 1;
           SocketJs5Transport.field_B[77] = -1;
-          QuickChatHelpDialog.field_cc = te.field_a;
-          ja.field_b = DiskCacheWorker.field_h;
+          QuickChatHelpDialog.field_cc = FriendListHelpers.field_a;
+          IconLookupHelpers.field_b = DiskCacheWorker.field_h;
           SocketJs5Transport.field_B[60] = -1;
           SocketJs5Transport.field_B[74] = 1;
           SocketJs5Transport.field_B[64] = 1;
-          in.field_b = uc.field_h;
+          SocialPacketHelpers.field_b = DesignerPageTables.field_h;
           SocketJs5Transport.field_B[65] = 1;
           SocketJs5Transport.field_B[62] = 4;
           SocketJs5Transport.field_B[69] = 19;
@@ -2213,19 +2213,19 @@ public final class SteelSentinels extends FunOrbClient {
         int var15 = 0;
         var15 = obfuscationControl;
         try {
-          SoundCache.b(-108);
-          ScrollContainer.field_Vb = DateInputWidget.a((byte) -86);
-          Js5Transport.a(false);
-          if (wb.field_c != null &&
-            wb.field_c.field_b) {
-            SoundCache.c(param0 - 2);
-            og.a(-5213);
+          SoundCache.getInputFrameCount(-108);
+          ScrollContainer.field_Vb = DateInputWidget.getPointerIdleTicks((byte) -86);
+          Js5Transport.serviceAudio(false);
+          if (RewardValueHelpers.field_c != null &&
+            RewardValueHelpers.field_c.field_b) {
+            SoundCache.exitFullscreen(param0 - 2);
+            QuickChatPopupHelpers.refreshQuickChatPopupMenu(-5213);
           }
           if (param0 != 2) {
             this.init();
           }
           stackIn_13_1 = 5;
-          stackIn_14_2 = (wb.field_c != null);
+          stackIn_14_2 = (RewardValueHelpers.field_c != null);
           this.serviceFramework(stackIn_13_1, stackIn_14_2);
           if (MenuInputState.field_f) {
             this.openArchives(105);
@@ -2242,22 +2242,22 @@ public final class SteelSentinels extends FunOrbClient {
           if (SceneWidget.field_pb) {
             if (QuickChatCategoryCache.isPlayerDataReady(false)) {
               if (QuickChatMenu.isLegacyMenuOpen(true)) {
-                if (in.field_i == in.field_h) {
+                if (SocialPacketHelpers.field_i == SocialPacketHelpers.field_h) {
                   var2_int = SocialListUiHelpers.pollMessageMenuSelection(0);
                   switch (var2_int) {
                     case 2:
-                      SoundCache.c(0);
+                      SoundCache.exitFullscreen(0);
                     default:
                       break;
                     case 4:
                       CachedTextLayout.field_y = true;
-                      DebouncedValidator.a(0, ValidationIndicator.field_bb, param0 + 8);
+                      DebouncedValidator.setDesignerMode(0, ValidationIndicator.field_bb, param0 + 8);
                       if (var15 == 0) {
                         break;
                       }
                     case 3:
                       CachedTextLayout.field_y = false;
-                      GradientOutlineTextPainter.a(-4, true);
+                      GradientOutlineTextPainter.requestFullscreen(-4, true);
                       break;
                   }
                   this.processGameTick(param0 + 118, true);
@@ -2269,17 +2269,17 @@ public final class SteelSentinels extends FunOrbClient {
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (!cf.c((byte) 100)) {
+                if (!StatSubmission.isReconnectStage((byte) 100)) {
                   if (!LoginStateQueries.isMessageOverlayShown(-121)) {
                     this.processGameTick(120, false);
                     decompiledFrameRemainder0 = (var15 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    if (in.field_i == in.field_h) {
-                      var2_int = rn.c((byte) 90);
+                    if (SocialPacketHelpers.field_i == SocialPacketHelpers.field_h) {
+                      var2_int = PendingAckRequest.pollPopupMenuSelection((byte) 90);
                       if (var2_int == 1) {
                         ArchiveRequest.field_E = true;
-                        DebouncedValidator.a(0, BirthDateEntryPanel.field_Q, param0 + 8);
+                        DebouncedValidator.setDesignerMode(0, BirthDateEntryPanel.field_Q, param0 + 8);
                       }
                       this.processGameTick(param0 + 118, true);
                       decompiledFrameRemainder0 = (var15 != 0);
@@ -2291,21 +2291,21 @@ public final class SteelSentinels extends FunOrbClient {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  stackIn_77_1 = (null != wb.field_c);
+                  stackIn_77_1 = (null != RewardValueHelpers.field_c);
                   var2_int = this.pollAccountUiActions(stackIn_77_1, -3836);
                   if (var2_int == 1 ||
                     var2_int == 2) {
-                    if (wb.field_c != null) {
-                      SoundCache.c(0);
+                    if (RewardValueHelpers.field_c != null) {
+                      SoundCache.exitFullscreen(0);
                     }
                     if (var2_int == 2) {
-                      t.a(true, Projectile.d((byte) -21));
+                      NameTable.openQuitPage(true, Projectile.getApplet((byte) -21));
                     }
                   }
                   this.processGameTick(120, true);
                   if (var15 != 0) {
-                    ai.d(param0 + 103);
-                    ProxySocketConnector.serviceAccountInput(jj.field_d, (byte) 104);
+                    NotificationMessage.pollUnlockStateReply(param0 + 103);
+                    ProxySocketConnector.serviceAccountInput(MeshMaterial.field_d, (byte) 104);
                     if (this.loadClientResources((byte) -52)) {
                       SceneWidget.field_pb = true;
                     }
@@ -2313,33 +2313,33 @@ public final class SteelSentinels extends FunOrbClient {
                 }
               }
             } else {
-              ai.d(param0 + 103);
+              NotificationMessage.pollUnlockStateReply(param0 + 103);
               if (var15 != 0) {
-                ProxySocketConnector.serviceAccountInput(jj.field_d, (byte) 104);
+                ProxySocketConnector.serviceAccountInput(MeshMaterial.field_d, (byte) 104);
                 if (this.loadClientResources((byte) -52)) {
                   SceneWidget.field_pb = true;
                 }
               }
             }
           } else {
-            ProxySocketConnector.serviceAccountInput(jj.field_d, (byte) 104);
+            ProxySocketConnector.serviceAccountInput(MeshMaterial.field_d, (byte) 104);
             if (this.loadClientResources((byte) -52)) {
               SceneWidget.field_pb = true;
             }
           }
-          if (!ni.b(92)) {
+          if (!ByteArrayPoolHelpers.isAccountCreationMode(92)) {
             do {
-              var2 = (cf) (un.field_b.removeFirst(true));
+              var2 = (StatSubmission) (ChatHistoryAllocator.field_b.removeFirst(true));
               if (var2 == null) {
                 if (var15 == 0) {
                   break;
                 }
               } else {
-                ProxySocketConnector.submitScoreRecord(4, (byte) 123, (cf) (var2));
+                ProxySocketConnector.submitScoreRecord(4, (byte) 123, (StatSubmission) (var2));
               }
             } while (var15 == 0);
           }
-          if (!ni.b(74) &&
+          if (!ByteArrayPoolHelpers.isAccountCreationMode(74) &&
             Explosion.field_P != 0) {
             EmailFormatError.sendPendingStatUpdates((byte) -109);
           }
@@ -2357,11 +2357,11 @@ public final class SteelSentinels extends FunOrbClient {
               }
               if (ArrayWidgetContainer.field_N == 14) {
                 QuickChatHelpDialog.switchToRequestedScreen(true);
-                jj.field_i = nf.a(uc.field_b, DraggableWidget.field_G, (byte) 44);
+                MeshMaterial.field_i = LoginEncryptionHelpers.computeLoadoutFlags(DesignerPageTables.field_b, DraggableWidget.field_G, (byte) 44);
                 DelayedServerPacket.field_w[1] = (byte) 0;
-                if ((jj.field_i & SectorCacheStore.field_o[1][DelayedServerPacket.field_w[1]]) == 0) {
+                if ((MeshMaterial.field_i & SectorCacheStore.field_o[1][DelayedServerPacket.field_w[1]]) == 0) {
                   DelayedServerPacket.field_w[1] = (byte) 1;
-                  if (rd.field_b > 0) {
+                  if (SpriteLoadingHelpers.field_b > 0) {
                     DelayedServerPacket.field_w[1] = (byte) 2;
                   }
                 }
@@ -2374,8 +2374,8 @@ public final class SteelSentinels extends FunOrbClient {
                 if (DelayedServerPacket.field_w[1] == 2) {
                   DebouncedValidator.field_b[0] = 12;
                 }
-                BufferedSocket.a(DirectByteStorage.a(2000, (byte) -32), DialWidget.field_db.length, tm.a((byte) 50), 1024, DirectByteStorage.a(12, (byte) -32), AccountTermsPanel.a((byte) -127), ImageProducerRasterBuffer.field_u, (byte) -22, MidiPcmStream.getScrollContentWidget(3443), 150);
-                Bzip2State.a((byte) -98, HighscoreSubmission.getFriendListContent(800), wn.b((byte) 121));
+                BufferedSocket.initializeLobbyState(DirectByteStorage.nextPowerOfTwo(2000, (byte) -32), DialWidget.field_db.length, SessionUiHelpers.getActiveWidget((byte) 50), 1024, DirectByteStorage.nextPowerOfTwo(12, (byte) -32), AccountTermsPanel.getActiveTabContent((byte) -127), ImageProducerRasterBuffer.field_u, (byte) -22, MidiPcmStream.getScrollContentWidget(3443), 150);
+                Bzip2State.bindLobbyLists((byte) -98, HighscoreSubmission.getFriendListContent(800), ChatPanelSetupHelpers.getSocialListContent((byte) 121));
                 SectorCacheStore.field_n = false;
                 GzipDecoder.field_g = -2;
                 WeightedCacheEntry.field_H = true;
@@ -2384,16 +2384,16 @@ public final class SteelSentinels extends FunOrbClient {
               if (ArrayWidgetContainer.field_N == 15) {
                 if (WeightedCacheEntry.field_H) {
                   QuickChatHelpDialog.switchToRequestedScreen(true);
-                  TextButton.f(param0 ^ -12163);
-                  IsaacRandom.b((byte) 124);
+                  TextButton.closeTransientDialogs(param0 ^ -12163);
+                  IsaacRandom.clearChatHistory((byte) 124);
                   Sprite.field_k = false;
-                  ob.field_y = false;
+                  PendingPackedReply.field_y = false;
                   GzipDecoder.field_g = 0;
                   NodeIterator.field_d = true;
                   CombatWorld.field_G = false;
                   WeightedCacheEntry.field_H = false;
-                  lc.field_e = true;
-                  DateOfBirthValidator.c(103);
+                  SettingSearchHelpers.field_e = true;
+                  DateOfBirthValidator.closeAccountOverlay(103);
                 }
                 TextLayout.field_d = false;
                 SectorCacheStore.field_n = false;
@@ -2401,33 +2401,33 @@ public final class SteelSentinels extends FunOrbClient {
               }
               if (ArrayWidgetContainer.field_N == 10 &&
                 WeightedCacheEntry.field_H) {
-                in.a(11247);
+                SocialPacketHelpers.handleSocialListPacket(11247);
                 continue;
               }
               if (ArrayWidgetContainer.field_N == 80) {
                 var2_int = LoginConnectionStage.field_d.readUnsignedByte((byte) -123);
                 var3 = (byte)(255 & LoginConnectionStage.field_d.readUnsignedByte((byte) -123));
-                if (null == nf.field_b) {
+                if (null == LoginEncryptionHelpers.field_b) {
                   continue;
                 }
                 if (0 != var2_int) {
-                  nf.field_b.field_Sb[var2_int] = (byte) var3;
+                  LoginEncryptionHelpers.field_b.field_Sb[var2_int] = (byte) var3;
                   continue;
                 }
-                nf.field_b.field_Ub = var3;
+                LoginEncryptionHelpers.field_b.field_Ub = var3;
                 DebouncedValidator.field_b[0] = var3;
                 continue;
               }
               if (ArrayWidgetContainer.field_N == 11) {
-                var2 = AgeValidator.$cfr$intArgs$a$9d0e4b5217c4(-62, false);
-                WeightedCacheEntry.a((ChatMessage) (var2), -92);
+                var2 = AgeValidator.readLoginReplyWithIntGuard(-62, false);
+                WeightedCacheEntry.acceptChatMessage((ChatMessage) (var2), -92);
                 if (HuffmanDecoder.field_a != 1) {
                   continue;
                 }
                 if (BoundedUrlRequest.field_i == null) {
                   continue;
                 }
-                if (ph.field_e == null) {
+                if (ChatLineMenuHelpers.field_e == null) {
                   continue;
                 }
                 var3_ref = "";
@@ -2443,19 +2443,19 @@ public final class SteelSentinels extends FunOrbClient {
                 }
                 var4_ref = (String) (var3_ref) + BitmapFont.escapeMarkup(WeightedCacheEntry.field_F);
                 if (((ChatMessage) (var2)).field_g ||
-                  !o.a(-122, ((ChatMessage) (var2)).field_p)) {
-                  LinkButtonPainter.a(48127, (String) (var4_ref), (byte) 124);
+                  !SocialStateHelpers.isIgnored(-122, ((ChatMessage) (var2)).field_p)) {
+                  LinkButtonPainter.addTimedMessage(48127, (String) (var4_ref), (byte) 124);
                   NameValidationHelpers.field_e = NameValidationHelpers.field_e - 1;
                 }
                 continue;
               }
               if (ArrayWidgetContainer.field_N == 12) {
-                AgeValidator.$cfr$intArgs$a$9d0e4b5217c4(-127, true);
-                WeightedCacheEntry.a(new ChatMessage(true), -93);
+                AgeValidator.readLoginReplyWithIntGuard(-127, true);
+                WeightedCacheEntry.acceptChatMessage(new ChatMessage(true), -93);
                 continue;
               }
               if (ArrayWidgetContainer.field_N == 67) {
-                var2 = ViewportController.a(true);
+                var2 = ViewportController.createEightIntArray(true);
                 var3 = 0;
                 while (var3 < java.lang.reflect.Array.getLength(var2)) {
                   ((int[]) (var2))[var3] = LoginConnectionStage.field_d.readInt(0);
@@ -2473,7 +2473,7 @@ public final class SteelSentinels extends FunOrbClient {
                   var4_ref = var2;
                   var5 = 0;
                   while (var5 < 8) {
-                    ((int[]) (var3_ref))[var5] = DateOfBirthValidator.a(((int[]) (var3_ref))[var5], ((int[]) (var4_ref))[var5]);
+                    ((int[]) (var3_ref))[var5] = DateOfBirthValidator.bitOr(((int[]) (var3_ref))[var5], ((int[]) (var4_ref))[var5]);
                     var5++;
                   }
                 }
@@ -2481,10 +2481,10 @@ public final class SteelSentinels extends FunOrbClient {
                 var4_ref = var2;
                 var5 = 0;
                 while (var5 < 8) {
-                  ((int[]) (var3_ref))[var5] = DateOfBirthValidator.a(((int[]) (var3_ref))[var5], ((int[]) (var4_ref))[var5]);
+                  ((int[]) (var3_ref))[var5] = DateOfBirthValidator.bitOr(((int[]) (var3_ref))[var5], ((int[]) (var4_ref))[var5]);
                   var5++;
                 }
-                Projectile.c((byte) 10);
+                Projectile.refreshUnlockedPartFlags((byte) 10);
                 continue;
               }
               if (ArrayWidgetContainer.field_N == 60) {
@@ -2492,7 +2492,7 @@ public final class SteelSentinels extends FunOrbClient {
                 DraggableWidget.field_G = LoginConnectionStage.field_d.readInt(0);
                 var2_int = 0;
                 while (var2_int < 4) {
-                  rn.field_D[var2_int] = LoginConnectionStage.field_d.readInt(0);
+                  PendingAckRequest.field_D[var2_int] = LoginConnectionStage.field_d.readInt(0);
                   var2_int++;
                 }
                 var2_int = 0;
@@ -2505,7 +2505,7 @@ public final class SteelSentinels extends FunOrbClient {
                   LoginDialogHelpers.field_k[var2_int] = 0;
                   var2_int++;
                 }
-                DateOfBirthValidator.d(-30);
+                DateOfBirthValidator.clearSceneReferences(-30);
                 continue;
               }
               if (ArrayWidgetContainer.field_N == 77) {
@@ -2521,7 +2521,7 @@ public final class SteelSentinels extends FunOrbClient {
               if (ArrayWidgetContainer.field_N == 78) {
                 var2_int = 0;
                 while (var2_int < 3) {
-                  fm.field_f[var2_int] = LoginConnectionStage.field_d.readUnsignedByte((byte) -65);
+                  QuickChatParameterType.field_f[var2_int] = LoginConnectionStage.field_d.readUnsignedByte((byte) -65);
                   var2_int++;
                 }
                 var2_int = 0;
@@ -2533,14 +2533,14 @@ public final class SteelSentinels extends FunOrbClient {
                   }
                   break;
                 }
-                if ((16 & fm.field_f[0]) != 0) {
+                if ((16 & QuickChatParameterType.field_f[0]) != 0) {
                   stackIn_278_0 = 1;
                 } else {
                   stackIn_278_0 = 0;
                 }
                 var2_int = stackIn_278_0;
-                fm.field_f[0] = ClientUiHelpers.bitAnd(fm.field_f[0], 15);
-                if (fj.field_d <= fm.field_f[0]) {
+                QuickChatParameterType.field_f[0] = ClientUiHelpers.bitAnd(QuickChatParameterType.field_f[0], 15);
+                if (PasswordRuleHelpers.field_d <= QuickChatParameterType.field_f[0]) {
                   if (var2_int == 0) {
                     NodeIterator.field_f = 1;
                   } else {
@@ -2549,7 +2549,7 @@ public final class SteelSentinels extends FunOrbClient {
                 } else {
                   NodeIterator.field_f = 0;
                 }
-                if (!PacketBuffer.h((byte) -79)) {
+                if (!PacketBuffer.needsSpecialPartTutorial((byte) -79)) {
                   continue;
                 }
                 ClientGlobals.field_a = CombatWorld.field_k;
@@ -2563,11 +2563,11 @@ public final class SteelSentinels extends FunOrbClient {
                 var6 = LoginConnectionStage.field_d.readInt(0);
                 var7 = LoginConnectionStage.field_d.readInt(0);
                 if (var2_int < 2) {
-                  lc.field_c = tj.a(var6, var4, var5, -var2_int + 65535, var7, param0 ^ 19, var2_int + 0, new int[]{var3}, 3);
+                  SettingSearchHelpers.field_c = HighscoreSubmissionFactory.createHighscoreSubmission(var6, var4, var5, -var2_int + 65535, var7, param0 ^ 19, var2_int + 0, new int[]{var3}, 3);
                 }
-                qi.field_d = null;
-                qm.a(true);
-                bd.field_b.addLast(3, new ai((RgbSprite) null, SocketConnector.formatTemplate(PasswordValidator.field_q, param0 - 102, new String[]{Integer.toString(var3 / 516)})));
+                LoginCredentialHelpers.field_d = null;
+                DisplayNameAndAudioHelpers.ensureDefaultHighscoreTable(true);
+                SolidSpriteHelpers.field_b.addLast(3, new NotificationMessage((RgbSprite) null, SocketConnector.formatTemplate(PasswordValidator.field_q, param0 - 102, new String[]{Integer.toString(var3 / 516)})));
                 continue;
               }
               if (ArrayWidgetContainer.field_N == 72) {
@@ -2576,7 +2576,7 @@ public final class SteelSentinels extends FunOrbClient {
                 if (var2_int <= 0) {
                   continue;
                 }
-                DateOfBirthValidator.d(param0 - 44);
+                DateOfBirthValidator.clearSceneReferences(param0 - 44);
                 MusicPatchNode.field_F = var2_int;
                 continue;
               }
@@ -2585,9 +2585,9 @@ public final class SteelSentinels extends FunOrbClient {
                 var2_int = LoginConnectionStage.field_d.readUnsignedByte((byte) -113);
                 var3_ref = MarkerSliderPainter.field_o;
                 if (79 == ArrayWidgetContainer.field_N) {
-                  var3_ref = c.field_r;
+                  var3_ref = PendingByteArrayRequest.field_r;
                 }
-                bd.field_b.addLast(3, new ai((RgbSprite) null, SocketConnector.formatTemplate((String) (var3_ref), -105, new String[]{t.field_e[var2_int]})));
+                SolidSpriteHelpers.field_b.addLast(3, new NotificationMessage((RgbSprite) null, SocketConnector.formatTemplate((String) (var3_ref), -105, new String[]{NameTable.field_e[var2_int]})));
                 continue;
               }
               if (ArrayWidgetContainer.field_N == 70) {
@@ -2636,11 +2636,11 @@ public final class SteelSentinels extends FunOrbClient {
                   break;
                 }
                 var11_int = LoginConnectionStage.field_d.readByte((byte) -2);
-                di.field_g = -1;
+                OptionMaskHelpers.field_g = -1;
                 IconTextComponent.field_Yb = -2;
-                jn.field_g = false;
+                MusicTrackHelpers.field_g = false;
                 TextHotspotRegion.field_v = false;
-                lc.field_c = null;
+                SettingSearchHelpers.field_c = null;
                 stackIn_351_0 = -1;
                 if (stackIn_351_0 == var11_int) {
                   var11_int = -2;
@@ -2653,9 +2653,9 @@ public final class SteelSentinels extends FunOrbClient {
                   QuickChatHelpDialog.showAccountScene(0);
                 } else {
                   BoundedUrlRequest.field_i = var13;
-                  ob.field_y = true;
-                  in.c(2);
-                  DraggableWidget.i(-1);
+                  PendingPackedReply.field_y = true;
+                  SocialPacketHelpers.updateWorldMenuLabel(2);
+                  DraggableWidget.updateMatchStatusCaption(-1);
                   QuickChatHelpDialog.showAccountScene(0);
                 }
                 GzipDecoder.field_g = -1;
@@ -2664,26 +2664,26 @@ public final class SteelSentinels extends FunOrbClient {
                 continue;
               }
               if (ArrayWidgetContainer.field_N == 59) {
-                if (ob.field_y ||
+                if (PendingPackedReply.field_y ||
                   CombatWorld.field_G) {
                   QuickChatHelpDialog.switchToRequestedScreen(true);
-                  if (ob.field_y) {
-                    BoundedUrlRequest.field_i.a((byte) -128, false);
+                  if (PendingPackedReply.field_y) {
+                    BoundedUrlRequest.field_i.exitToMenuScreen((byte) -128, false);
                   }
-                  lc.field_e = true;
+                  SettingSearchHelpers.field_e = true;
                   GzipDecoder.field_g = -2;
                   CombatWorld.field_G = false;
-                  ob.field_y = false;
+                  PendingPackedReply.field_y = false;
                   Sprite.field_k = false;
                   TextHotspotRegion.field_v = true;
                   NameValidationHelpers.field_e = 0;
-                  DateOfBirthValidator.c(104);
+                  DateOfBirthValidator.closeAccountOverlay(104);
                 }
                 TextLayout.field_d = false;
                 continue;
               }
               var2 = null;
-              if (!ob.field_y) {
+              if (!PendingPackedReply.field_y) {
                 if (CombatWorld.field_G) {
                   var2 = CachedTextLayout.field_A;
                 }
@@ -2732,7 +2732,7 @@ public final class SteelSentinels extends FunOrbClient {
                 if (ArrayWidgetContainer.field_N == 76) {
                   var3 = LoginConnectionStage.field_d.readUnsignedByte((byte) -120);
                   var4 = LoginConnectionStage.field_d.readInt(0);
-                  ((GameplayController) (var2)).world.a(var4, 28669, var3);
+                  ((GameplayController) (var2)).world.cancelPendingCommands(var4, 28669, var3);
                   continue;
                 }
                 if (ArrayWidgetContainer.field_N == 71) {
@@ -2760,7 +2760,7 @@ public final class SteelSentinels extends FunOrbClient {
                   if (null == BoundedUrlRequest.field_i) {
                     continue;
                   }
-                  in.c(2);
+                  SocialPacketHelpers.updateWorldMenuLabel(2);
                   continue;
                 }
                 if (ArrayWidgetContainer.field_N == 64) {
@@ -2772,7 +2772,7 @@ public final class SteelSentinels extends FunOrbClient {
                   if (null == BoundedUrlRequest.field_i) {
                     continue;
                   }
-                  DraggableWidget.i(-1);
+                  DraggableWidget.updateMatchStatusCaption(-1);
                   continue;
                 }
                 if (66 == ArrayWidgetContainer.field_N) {
@@ -2780,7 +2780,7 @@ public final class SteelSentinels extends FunOrbClient {
                   if (null == BoundedUrlRequest.field_i) {
                     continue;
                   }
-                  DraggableWidget.i(-1);
+                  DraggableWidget.updateMatchStatusCaption(-1);
                   continue;
                 }
               }
@@ -2790,7 +2790,7 @@ public final class SteelSentinels extends FunOrbClient {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            gj.a(0, 0);
+            SpriteDrawHelpers.flushOutgoingPackets(0, 0);
             stackIn_440_0 = -2;
             stackIn_440_1 = LoginForm.field_T;
           }
@@ -2805,33 +2805,33 @@ public final class SteelSentinels extends FunOrbClient {
             var2_int = this.pollGameConnection((byte) -112);
             if (0 == var2_int ||
               var2_int == 1) {
-              DualNodeDequeIterator.a(2, -26077);
-              uc.a(true, 3);
+              DualNodeDequeIterator.resendQueuedRequests(2, -26077);
+              DesignerPageTables.resendScoreRequests(true, 3);
               LobbyGame.resendAchievementMessages((byte) 86, 4);
-              vf.a(false, 6);
-              ml.a(param0 - 74, 7);
-              gm.a((byte) -92);
+              RequestResendHelpers.resendQueuedRequests(false, 6);
+              ListRequestHelpers.resendQueuedListRequests(param0 - 74, 7);
+              EmailValidationHelpers.resetReflectionCheckQueue((byte) -92);
               if (1 != var2_int) {
                 if (WeightedCacheEntry.field_H) {
-                  ob.field_y = false;
+                  PendingPackedReply.field_y = false;
                   Sprite.field_k = false;
                   CombatWorld.field_G = false;
-                  lc.field_e = true;
+                  SettingSearchHelpers.field_e = true;
                   NodeIterator.field_d = true;
-                  if (!ob.field_y) {
-                    IterableNodeHashTable.a(0, false, param0 - 3, 0);
+                  if (!PendingPackedReply.field_y) {
+                    IterableNodeHashTable.switchScreen(0, false, param0 - 3, 0);
                     if (var15 != 0) {
                       UiTheme.field_s = PacketLoopHelpers.field_e;
-                      IterableNodeHashTable.a(11, false, -1, 0);
+                      IterableNodeHashTable.switchScreen(11, false, -1, 0);
                     }
                   } else {
                     UiTheme.field_s = PacketLoopHelpers.field_e;
-                    IterableNodeHashTable.a(11, false, -1, 0);
+                    IterableNodeHashTable.switchScreen(11, false, -1, 0);
                   }
                   QuickChatHelpDialog.switchToRequestedScreen(true);
-                  GameKeyHandler.field_e[LoginForm.field_T].a(false, 0, -102);
+                  GameKeyHandler.field_e[LoginForm.field_T].updatePointerSelection(false, 0, -102);
                   WeightedCacheEntry.field_H = false;
-                  DateOfBirthValidator.c(12);
+                  DateOfBirthValidator.closeAccountOverlay(12);
                 }
                 SectorCacheStore.field_n = false;
                 TextLayout.field_d = false;
@@ -2857,7 +2857,7 @@ public final class SteelSentinels extends FunOrbClient {
               var3 = 0;
             }
             if (var3 != 0) {
-              of.a(10);
+              SessionExitHelpers.requestSessionExit(10);
             }
           }
           return;
@@ -2873,16 +2873,16 @@ public final class SteelSentinels extends FunOrbClient {
         RuntimeException var2 = null;
         try {
           SteelSentinels.releaseStatics((byte) -10);
-          NodeDeque.c((byte) -29);
+          NodeDeque.releaseStatics((byte) -29);
           LobbyGameDecoding.releaseStatics(0);
           FrameStyleHelpers.releaseStatics(true);
-          fj.releaseStatics((byte) -120);
+          PasswordRuleHelpers.releaseStatics((byte) -120);
           PopupMenuHelpers.releaseStatics(125);
           SceneWidget.releaseStatics(false);
           GameKeyHandler.releaseStatics((byte) 100);
-          uc.releaseStatics(false);
+          DesignerPageTables.releaseStatics(false);
           ClientErrorSupport.releaseStatics(false);
-          am.releaseStatics(2);
+          DesignerPageSetup.releaseStatics(2);
           FunOrbClient.releaseStatics((byte) -111);
           ClientException.releaseStatics(false);
           GameApplet.releaseStatics(48);
@@ -2891,23 +2891,23 @@ public final class SteelSentinels extends FunOrbClient {
           MouseWheelInput.releaseStatics(72);
           SoftwareRaster.releaseStatics();
           ResourceArchive.releaseStatics(false);
-          un.releaseStatics(false);
+          ChatHistoryAllocator.releaseStatics(false);
           if (param0 < 22) {
             this.releaseClientStatics(48);
           }
           PacketBuffer.releaseStatics(-125);
           ClockAndCookieHelpers.releaseStatics(122);
           TeamColourTinter.releaseStatics(124);
-          of.releaseStatics((byte) 84);
-          in.releaseStatics(127);
-          ph.releaseStatics(80);
-          vh.releaseStatics(-67);
+          SessionExitHelpers.releaseStatics((byte) 84);
+          SocialPacketHelpers.releaseStatics(127);
+          ChatLineMenuHelpers.releaseStatics(80);
+          KeyRoutingHelpers.releaseStatics(-67);
           UrlAndReplyHelpers.releaseStatics((byte) -34);
-          pa.releaseStatics((byte) 56);
+          TutorialStepTable.releaseStatics((byte) 56);
           ChatPanelHelpers.releaseStatics((byte) -119);
           ChatMessage.releaseStatics(2);
           LobbyStateHelpers.releaseStatics((byte) -88);
-          wn.a((byte) -126);
+          ChatPanelSetupHelpers.releaseStatics((byte) -126);
           TickClock.releaseStatics(30);
           RasterBuffer.releaseStatics(690);
           ArchiveLoadSequence.releaseStatics(-1);
@@ -2915,39 +2915,39 @@ public final class SteelSentinels extends FunOrbClient {
           ViewportController.releaseStatics((byte) -109);
           MembershipPromotionScreen.releaseStatics((byte) -82);
           SoundCache.releaseStatics(94);
-          SentinelDesigner.h((byte) -104);
-          GameplayController.b(750);
-          nd.releaseStatics(-107);
+          SentinelDesigner.releaseStatics((byte) -104);
+          GameplayController.releaseStatics(750);
+          ChatFilterPackingHelpers.releaseStatics(-107);
           LoginActionHelpers.releaseStatics(false);
           Js5Transport.releaseStatics((byte) -91);
-          DiskCacheWorker.b(-1);
+          DiskCacheWorker.releaseStatics(-1);
           Js5ArchiveManager.releaseStatics((byte) -35);
           BufferedRandomAccessFile.releaseStatics(83);
           BufferedSocket.releaseStatics((byte) -45);
-          jn.releaseStatics((byte) 79);
+          MusicTrackHelpers.releaseStatics((byte) 79);
           IntrusiveNode.releaseStatics(4433);
-          cd.releaseStatics(false);
-          di.releaseStatics(-1);
+          QuickChatPacketHelpers.releaseStatics(false);
+          OptionMaskHelpers.releaseStatics(-1);
           TextAndBitHelpers.releaseStatics((byte) 80);
           ConditionalTextValue.releaseStatics(79);
-          lc.releaseStatics(1);
-          o.releaseStatics(-98);
-          dj.releaseStatics((byte) 94);
+          SettingSearchHelpers.releaseStatics(1);
+          SocialStateHelpers.releaseStatics(-98);
+          NumberParsingHelpers.releaseStatics((byte) 94);
           LoginCredentials.releaseStatics(-118);
           CipherPacketBuffer.releaseStatics(true);
           IsaacRandom.releaseStatics((byte) -94);
-          gj.releaseStatics(-102);
-          tf.releaseStatics((byte) 26);
+          SpriteDrawHelpers.releaseStatics(-102);
+          ChatHistoryHelpers.releaseStatics((byte) 26);
           VerticalScrollbar.releaseStatics(0);
           SceneWidgetNode.releaseStatics((byte) 93);
           AssetDecoders.releaseStatics((byte) -60);
-          CombatWorld.g(0);
+          CombatWorld.releaseStatics(0);
           ArticulatedPart.releaseStatics((byte) 20);
           MenuInputState.releaseStatics((byte) -18);
           SentinelAnimationEditor.releaseStatics(21841);
-          NodeIterator.e(5370);
+          NodeIterator.releaseStatics(5370);
           BitmapFont.releaseStatics();
-          vf.releaseStatics(-119);
+          RequestResendHelpers.releaseStatics(-119);
           jh.releaseStatics(30706);
           QuickChatInputHelpers.releaseStatics(false);
           SentinelCommand.releaseStatics((byte) -110);
@@ -2968,9 +2968,9 @@ public final class SteelSentinels extends FunOrbClient {
           ArchiveIndex.releaseStatics(0);
           GzipDecoder.releaseStatics(-1);
           ArchiveProvider.releaseStatics(38);
-          wi.g(573);
-          DualNode.f(8191);
-          rd.releaseStatics(8192);
+          SpriteState.releaseStatics(573);
+          DualNode.releaseStatics(8191);
+          SpriteLoadingHelpers.releaseStatics(8192);
           SocialListUiHelpers.releaseStatics(0);
           ModalStack.releaseStatics((byte) 127);
           RegistrationRequestDialog.releaseStatics((byte) -29);
@@ -2982,17 +2982,17 @@ public final class SteelSentinels extends FunOrbClient {
           LoginForm.releaseStatics(320);
           DisplayNameForm.releaseStatics(60);
           UiTheme.releaseStatics(103);
-          uj.releaseStatics(-1);
+          ReflectionCheckHelpers.releaseStatics(-1);
           VorbisSample.releaseStatics();
           VorbisFloor.releaseStatics();
           dg.releaseStatics((byte) -84);
           LoginStateQueries.releaseStatics(0);
-          tj.releaseStatics(true);
+          HighscoreSubmissionFactory.releaseStatics(true);
           Sprite.releaseStatics((byte) 66);
           PartInstruction.releaseStatics((byte) 17);
           FallingPickup.releaseStatics(-23261);
           MessageMenuHelpers.releaseStatics(-1);
-          qi.releaseStatics(-104);
+          LoginCredentialHelpers.releaseStatics(-104);
           LoadoutHelpers.releaseStatics(0);
           IconLabelControl.releaseStatics(127);
           ContextMenu.releaseStatics(false);
@@ -3001,52 +3001,52 @@ public final class SteelSentinels extends FunOrbClient {
           ReportAbuseDialog.releaseStatics(-114);
           LobbySetupHelpers.releaseStatics(1);
           HuffmanDecoder.releaseStatics(64);
-          qm.releaseStatics((byte) 37);
-          te.a((byte) -83);
+          DisplayNameAndAudioHelpers.releaseStatics((byte) 37);
+          FriendListHelpers.releaseStatics((byte) -83);
           SpriteFrame.releaseStatics(124);
-          gm.releaseStatics(-1);
-          gf.releaseStatics(-111);
+          EmailValidationHelpers.releaseStatics(-1);
+          GeneratedSpriteHelpers.releaseStatics(-111);
           rb.releaseStatics((byte) -82);
           LoadingScreenHelpers.releaseStatics(true);
           TextAndMenuHelpers.releaseStatics((byte) -105);
           BirthDateEntryPanel.releaseStatics(true);
-          ai.releaseStatics(0);
-          dc.releaseStatics(-38);
+          NotificationMessage.releaseStatics(0);
+          TableColumns.releaseStatics(-38);
           DualNodeDeque.releaseStatics((byte) 26);
           IconTextComponent.releaseStatics(15);
-          uf.releaseStatics(24);
-          nf.releaseStatics(55);
+          SocialTabsPanel.releaseStatics(24);
+          LoginEncryptionHelpers.releaseStatics(55);
           QuickChatHelpDialog.releaseStatics(-16);
           ParticleEffect.releaseStatics(-185837884);
           ReflectionCheck.releaseStatics((byte) 115);
           BoundedRandomAccessFile.releaseStatics(0);
-          bd.releaseStatics(-23333);
-          og.releaseStatics((byte) -88);
+          SolidSpriteHelpers.releaseStatics(-23333);
+          QuickChatPopupHelpers.releaseStatics((byte) -88);
           BenefitsScreenHelpers.releaseStatics((byte) -112);
-          AudioService.a((byte) -63);
+          AudioService.releaseStatics((byte) -63);
           SocketJs5Transport.releaseStatics(-2);
-          Js5NetworkRequest.h(10);
-          SectorCacheStore.a(15598);
-          DiskCacheRequest.i(-58);
+          Js5NetworkRequest.releaseStatics(10);
+          SectorCacheStore.releaseStatics(15598);
+          DiskCacheRequest.releaseStatics(-58);
           CachedArchiveProvider.releaseStatics(2);
           ChecksumAndFrameHelpers.releaseStatics(true);
           ArchiveRequest.releaseStatics((byte) 21);
           PopupMenuSupport.releaseStatics((byte) -114);
           AccountNoticeDialog.releaseStatics(0);
-          lf.releaseStatics();
-          jj.releaseStatics(-123);
+          MeshRasterState.releaseStatics();
+          MeshMaterial.releaseStatics(-123);
           TriangleMesh.releaseStatics((byte) -117);
-          tm.releaseStatics(5);
+          SessionUiHelpers.releaseStatics(5);
           ClientUiHelpers.releaseStatics((byte) 24);
           SoundAndUrlHelpers.releaseStatics(true);
-          sa.releaseStatics(false);
+          LoadingStatusHelpers.releaseStatics(false);
           DelegatingCanvas.releaseStatics((byte) 61);
-          mc.releaseStatics(23225);
+          LoadingCaptionHelpers.releaseStatics(23225);
           IntKeyLookup.releaseStatics((byte) -81);
           ByteStorage.releaseStatics(false);
           Bzip2Decoder.releaseStatics();
           Bzip2State.releaseStatics(-120);
-          ni.releaseStatics(42);
+          ByteArrayPoolHelpers.releaseStatics(42);
           PacketLoopHelpers.releaseStatics(0);
           CheckboxPainter.releaseStatics(true);
           StatefulTextPainter.releaseStatics(-21121);
@@ -3059,9 +3059,9 @@ public final class SteelSentinels extends FunOrbClient {
           ResizableModalPanel.releaseStatics((byte) 38);
           ModalPanel.releaseStatics((byte) 127);
           UiContainer.releaseStatics(-19969);
-          qe.releaseStatics(-31914);
-          sh.releaseStatics(-3274);
-          kb.releaseStatics(5);
+          TextSpriteHelpers.releaseStatics(-31914);
+          MenuLayoutHelpers.releaseStatics(-3274);
+          DefaultQuickChatCacheHook.releaseStatics(5);
           NameValidationHelpers.releaseStatics(0);
           QuickChatMenu.releaseStatics(-31097);
           QuickChatCategoryCache.releaseStatics((byte) -13);
@@ -3073,15 +3073,15 @@ public final class SteelSentinels extends FunOrbClient {
           ProxyAuthenticationException.releaseStatics(-61);
           NanoTickClock.releaseStatics(0);
           ImageProducerRasterBuffer.releaseStatics(65280);
-          ed.releaseStatics((byte) 99);
-          vc.releaseStatics(-13);
+          SessionSeedHelpers.releaseStatics((byte) 99);
+          DisplayMode.releaseStatics(-13);
           LoginHandshakeHelpers.releaseStatics((byte) -96);
           SynthInstrument.releaseStatics();
           ce.releaseStatics((byte) 77);
           SentinelCommandSimulator.releaseStatics((byte) -98);
           Explosion.releaseStatics(-2107133436);
           WhirlpoolHasher.releaseStatics((byte) 121);
-          qf.releaseStatics(false);
+          RankingAndRasterHelpers.releaseStatics(false);
           TabbedPanel.releaseStatics((byte) -72);
           AccountNamePrompt.releaseStatics(true);
           MusicPatch.releaseStatics((byte) -73);
@@ -3097,11 +3097,11 @@ public final class SteelSentinels extends FunOrbClient {
           ValidationHelpWidget.releaseStatics(-3413);
           Checkbox.releaseStatics(108);
           TextFieldValidator.releaseStatics((byte) 103);
-          wb.releaseStatics((byte) 87);
+          RewardValueHelpers.releaseStatics((byte) 87);
           AccountTermsPanel.releaseStatics(false);
           DialWidget.releaseStatics((byte) -122);
           MarkerSlider.releaseStatics(32);
-          cl.releaseStatics(5);
+          LoginResultHelpers.releaseStatics(5);
           DateOfBirthValidator.releaseStatics(false);
           NumericDateInputWidget.releaseStatics(0);
           ArrayWidgetContainer.releaseStatics((byte) -68);
@@ -3114,19 +3114,19 @@ public final class SteelSentinels extends FunOrbClient {
           IterableNodeHashTable.releaseStatics((byte) -127);
           IterableDualNodeDeque.releaseStatics(true);
           WeightedCacheEntry.releaseStatics(-1008);
-          fm.releaseStatics(4314);
+          QuickChatParameterType.releaseStatics(4314);
           StrongCacheEntry.releaseStatics(124);
           ProxySocketConnector.releaseStatics((byte) -117);
           AudioFilter.releaseStatics();
           LoginDialogHelpers.releaseStatics(false);
           NodeHashTableIterator.releaseStatics((byte) 22);
-          DualNodeDequeIterator.a((byte) 46);
-          kf.releaseStatics(90);
+          DualNodeDequeIterator.releaseStatics((byte) 46);
+          HighscoreTable.releaseStatics(90);
           HighscoreSubmission.releaseStatics(false);
-          hg.releaseStatics(108);
-          ud.releaseStatics(20000000);
+          HighscoreColumnHeader.releaseStatics(108);
+          RankingQuery.releaseStatics(20000000);
           PlayingSound.releaseStatics(100);
-          jm.releaseStatics(-89);
+          PendingIntReplyRequest.releaseStatics(-89);
           ThreeSliceButtonPainter.releaseStatics(100);
           LinkButtonPainter.releaseStatics(false);
           GradientOutlineTextPainter.releaseStatics(9);
@@ -3134,11 +3134,11 @@ public final class SteelSentinels extends FunOrbClient {
           SpriteCheckboxPainter.releaseStatics((byte) -86);
           AlphaContainer.releaseStatics(-13);
           SocialListEntry.releaseStatics(false);
-          sl.releaseStatics(-104);
+          ArchiveLoadStep.releaseStatics(-104);
           PendingIntArrayRequest.releaseStatics(0);
-          cf.releaseStatics((byte) 9);
-          c.releaseStatics((byte) 127);
-          rh.releaseStatics(false);
+          StatSubmission.releaseStatics((byte) 9);
+          PendingByteArrayRequest.releaseStatics((byte) 127);
+          PendingDataRequest.releaseStatics(false);
           NameCheckResult.releaseStatics(-127);
           LoginConnectionStage.releaseStatics(126);
           DelayedServerPacket.releaseStatics(-1341);
@@ -3146,16 +3146,16 @@ public final class SteelSentinels extends FunOrbClient {
           UsernameCredentials.releaseStatics((byte) -119);
           AlternateUsernameCredentials.releaseStatics(28873);
           EmailCredentials.releaseStatics((byte) -116);
-          TutorialStep.a(false);
-          ml.releaseStatics(107);
+          TutorialStep.releaseStatics(false);
+          ListRequestHelpers.releaseStatics(107);
           AccountRequestResult.releaseStatics((byte) -89);
           AccountMessagePanel.releaseStatics((byte) -90);
-          RasterSnapshot.d(-1);
+          RasterSnapshot.releaseStatics(-1);
           ClientGlobals.releaseStatics((byte) -27);
-          t.releaseStatics(-13375);
-          hm.releaseStatics((byte) 105);
-          ob.releaseStatics(18601);
-          rn.releaseStatics(3);
+          NameTable.releaseStatics(-13375);
+          LoadoutCostHelpers.releaseStatics((byte) 105);
+          PendingPackedReply.releaseStatics(18601);
+          PendingAckRequest.releaseStatics(3);
           WidgetStyleLayer.releaseStatics((byte) 12);
           TextLayoutLine.releaseStatics(-58);
           NameAvailabilityValidator.releaseStatics(1);
@@ -3164,9 +3164,9 @@ public final class SteelSentinels extends FunOrbClient {
           EmailAvailabilityValidator.releaseStatics((byte) 116);
           AgeValidator.releaseStatics(81);
           MatchingTextValidator.releaseStatics((byte) -113);
-          ja.releaseStatics(true);
+          IconLookupHelpers.releaseStatics(true);
           TextHotspotRegion.releaseStatics((byte) 29);
-          vd.releaseStatics((byte) 56);
+          TransitionTimerHelpers.releaseStatics((byte) 56);
           DebouncedValidator.releaseStatics(true);
           EmailFormatError.releaseStatics(8421504);
           this.field_t = null;

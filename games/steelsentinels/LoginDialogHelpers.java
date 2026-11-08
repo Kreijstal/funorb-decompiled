@@ -26,8 +26,8 @@ final class LoginDialogHelpers {
           if (!param2) {
             field_k = (int[]) null;
           }
-          if (StatefulTextPainter.a((byte) 30, param3, param0, param1)) {
-            stackIn_6_0 = NodeDeque.d((byte) 51);
+          if (StatefulTextPainter.loadSpriteSheet((byte) 30, param3, param0, param1)) {
+            stackIn_6_0 = NodeDeque.createIndexedSpriteFromDecodeBuffers((byte) 51);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -66,7 +66,7 @@ final class LoginDialogHelpers {
         if (param0 == 29) {
           LoginMethod.field_d = true;
           GradientOutlineTextPainter.field_p.refreshPanelVisibility(param0 + 95);
-          LoginDialog.a((byte) -83, false, CheckboxPainter.field_f);
+          LoginDialog.openAccountRequestDialog((byte) -83, false, CheckboxPainter.field_f);
           return;
         }
     }
@@ -113,7 +113,7 @@ final class LoginDialogHelpers {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          TextFieldValidator.a(new SpriteFrame(param7), new SpriteFrame(param16), new SpriteFrame(param6), param2, param17, param13, param8, param4, param9, param5, param19, param11, param10, param3, param12, param1, param0, param14, param18, param15);
+          TextFieldValidator.configureLobbyStyles(new SpriteFrame(param7), new SpriteFrame(param16), new SpriteFrame(param6), param2, param17, param13, param8, param4, param9, param5, param19, param11, param10, param3, param12, param1, param0, param14, param18, param15);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

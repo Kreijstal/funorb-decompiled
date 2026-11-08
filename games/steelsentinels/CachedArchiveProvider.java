@@ -29,7 +29,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     private long field_n;
     private boolean field_u;
 
-    private final ArchiveRequest a(byte param0, int param1, int param2) {
+    private final ArchiveRequest requestGroup(byte param0, int param1, int param2) {
         int stackIn_63_0 = 0;
         int stackIn_63_1 = 0;
         Object stackIn_95_0 = null;
@@ -67,19 +67,19 @@ final class CachedArchiveProvider extends ArchiveProvider {
           if (0 == param2) {
             if (null != this.field_E &&
               this.field_h[param1] != -1) {
-              var4 = this.field_k.a(21598, param1, this.field_E);
+              var4 = this.field_k.readImmediate(21598, param1, this.field_E);
             } else {
-              if (this.field_B.c(param0 - 15)) {
+              if (this.field_B.isUrgentQueueFull(param0 - 15)) {
                 return null;
               }
-              var4 = this.field_B.a((byte) 2, this.field_r, param1, true, (byte) 51);
+              var4 = this.field_B.request((byte) 2, this.field_r, param1, true, (byte) 51);
             }
           } else {
             if (1 == param2) {
               if (null == this.field_E) {
                 throw new RuntimeException();
               }
-              var4 = this.field_k.a(this.field_E, param1, 3);
+              var4 = this.field_k.queueRead(this.field_E, param1, 3);
             } else {
               if (param2 != 2) {
                 throw new RuntimeException();
@@ -90,10 +90,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (-1 != this.field_h[param1]) {
                 throw new RuntimeException();
               }
-              if (this.field_B.b((byte) 126)) {
+              if (this.field_B.isPrefetchQueueFull((byte) 126)) {
                 return null;
               }
-              var4 = this.field_B.a((byte) 2, this.field_r, param1, false, (byte) -94);
+              var4 = this.field_B.request((byte) 2, this.field_r, param1, false, (byte) -94);
             }
           }
           this.field_m.put((long)param1, (IntrusiveNode) (var4), -1816);
@@ -101,7 +101,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (((ArchiveRequest) (var4)).field_z) {
           return null;
         }
-        var18 = ((ArchiveRequest) (var4)).d((byte) -82);
+        var18 = ((ArchiveRequest) (var4)).getData((byte) -82);
         var13 = var18;
         var5 = var13;
         if (var4 instanceof DiskCacheRequest) {
@@ -151,8 +151,8 @@ final class CachedArchiveProvider extends ArchiveProvider {
             if (!((ArchiveRequest) (var4)).field_B) {
               return null;
             }
-            if (!this.field_B.c(62)) {
-              var4 = this.field_B.a((byte) 2, this.field_r, param1, true, (byte) 55);
+            if (!this.field_B.isUrgentQueueFull(62)) {
+              var4 = this.field_B.request((byte) 2, this.field_r, param1, true, (byte) 55);
               this.field_m.put((long)param1, (IntrusiveNode) (var4), -1816);
             }
             return null;
@@ -185,13 +185,13 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_B.a(14900);
+          this.field_B.resetConnection(14900);
           ((ArchiveRequest) (var4)).unlink(4);
           if (((ArchiveRequest) (var4)).field_B) {
-            if (this.field_B.c(-93)) {
+            if (this.field_B.isUrgentQueueFull(-93)) {
               return null;
             }
-            var4 = this.field_B.a((byte) 2, this.field_r, param1, true, (byte) -128);
+            var4 = this.field_B.request((byte) 2, this.field_r, param1, true, (byte) -128);
             this.field_m.put((long)param1, (IntrusiveNode) (var4), -1816);
           }
           return null;
@@ -199,7 +199,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         var5[-2 + var18.length] = (byte)(this.index.groupVersions[param1] >>> 8);
         var5[var18.length - 1] = (byte)this.index.groupVersions[param1];
         if (null != this.field_E) {
-          this.field_k.a((byte) 98, this.field_E, param1, var18);
+          this.field_k.queueWrite((byte) 98, this.field_E, param1, var18);
           stackIn_63_0 = -2;
           stackIn_63_1 = ~this.field_h[param1];
           if (stackIn_63_0 != stackIn_63_1) {
@@ -212,7 +212,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         return (ArchiveRequest) (var4);
     }
 
-    final void d(int param0) {
+    final void servicePrefetchQueue(int param0) {
         int var4 = 0;
         ArchiveRequest discarded$0 = null;
         ArchiveRequest discarded$1 = null;
@@ -237,10 +237,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 var2.unlink(4);
               } else {
                 if (this.field_h[var4] == 0) {
-                  discarded$0 = this.a((byte) -109, var4, 1);
+                  discarded$0 = this.requestGroup((byte) -109, var4, 1);
                 }
                 if (-1 == this.field_h[var4]) {
-                  discarded$1 = this.a((byte) -109, var4, 2);
+                  discarded$1 = this.requestGroup((byte) -109, var4, 2);
                 }
                 if (this.field_h[var4] == 1) {
                   var2.unlink(4);
@@ -263,7 +263,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         field_z = null;
     }
 
-    final static AccountRequestResult a(int param0, String param1, int param2) {
+    final static AccountRequestResult createAccountResponse(int param0, String param1, int param2) {
         AccountRequestResult var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -277,7 +277,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           var3.field_e = param1;
           if (param0 < 4) {
             var4 = (String) null;
-            CachedArchiveProvider.a(-111, (String) null, 49);
+            CachedArchiveProvider.createAccountResponse(-111, (String) null, 49);
           }
           var3.field_a = param2;
           stackIn_3_0 = var3;
@@ -314,15 +314,15 @@ final class CachedArchiveProvider extends ArchiveProvider {
           return this.index;
         }
         if (this.field_w == null) {
-          if (this.field_B.c(obfuscationGuard ^ -8)) {
+          if (this.field_B.isUrgentQueueFull(obfuscationGuard ^ -8)) {
             return null;
           }
-          this.field_w = (ArchiveRequest) ((Object) this.field_B.a((byte) 0, 255, this.field_r, true, (byte) -114));
+          this.field_w = (ArchiveRequest) ((Object) this.field_B.request((byte) 0, 255, this.field_r, true, (byte) -114));
         }
         if (this.field_w.field_z) {
           return null;
         }
-        var8 = this.field_w.d((byte) -52);
+        var8 = this.field_w.getData((byte) -52);
         var6 = var8;
         var5 = var6;
         var9 = var5;
@@ -341,10 +341,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
             this.index = null;
-            if (this.field_B.c(62)) {
+            if (this.field_B.isUrgentQueueFull(62)) {
               this.field_w = null;
             } else {
-              this.field_w = (ArchiveRequest) ((Object) this.field_B.a((byte) 0, 255, this.field_r, true, (byte) 33));
+              this.field_w = (ArchiveRequest) ((Object) this.field_B.request((byte) 0, 255, this.field_r, true, (byte) 33));
             }
             return null;
           }
@@ -357,17 +357,17 @@ final class CachedArchiveProvider extends ArchiveProvider {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
-            this.field_B.a(14900);
+            this.field_B.resetConnection(14900);
             this.index = null;
-            if (!this.field_B.c(89)) {
-              this.field_w = (ArchiveRequest) ((Object) this.field_B.a((byte) 0, 255, this.field_r, true, (byte) -127));
+            if (!this.field_B.isUrgentQueueFull(89)) {
+              this.field_w = (ArchiveRequest) ((Object) this.field_B.request((byte) 0, 255, this.field_r, true, (byte) -127));
             } else {
               this.field_w = null;
             }
             return null;
           }
           if (null != this.field_x) {
-            this.field_k.a((byte) 78, this.field_x, this.field_r, var8);
+            this.field_k.queueWrite((byte) 78, this.field_x, this.field_r, var8);
           }
         }
         this.field_w = null;
@@ -377,7 +377,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         return this.index;
     }
 
-    final void c(byte param0) {
+    final void serviceBackgroundRequests(byte param0) {
         ArchiveRequest discarded$0 = null;
         ArchiveRequest discarded$2 = null;
         ArchiveRequest discarded$1 = null;
@@ -395,7 +395,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         IntrusiveNode var3Lifetime1;
         var5 = SteelSentinels.obfuscationControl;
         if (param0 >= -56) {
-          discarded$0 = this.a((byte) -11, 3, -96);
+          discarded$0 = this.requestGroup((byte) -11, 3, -96);
         }
         boolean decompiledFrameRemainder0 = true;
         if (null != this.field_C) {
@@ -408,7 +408,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             while (var3 != null) {
               var4 = (int)var3.key;
               if (this.field_h[var4] == 0) {
-                discarded$2 = this.a((byte) -109, var4, 1);
+                discarded$2 = this.requestGroup((byte) -109, var4, 1);
               }
               if (this.field_h[var4] != 0) {
                 var3.unlink(4);
@@ -424,7 +424,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               }
               if (this.field_k.field_f < 250) {
                 if (this.field_h[this.field_p] == 0) {
-                  discarded$1 = this.a((byte) -109, this.field_p, 1);
+                  discarded$1 = this.requestGroup((byte) -109, this.field_p, 1);
                 }
                 if (this.field_h[this.field_p] == 0) {
                   var7 = new IntrusiveNode();
@@ -451,7 +451,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (1 != this.field_h[var4Lifetime1]) {
-                  discarded$4 = this.a((byte) -109, var4Lifetime1, 2);
+                  discarded$4 = this.requestGroup((byte) -109, var4Lifetime1, 2);
                 }
                 if (this.field_h[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
@@ -463,12 +463,12 @@ final class CachedArchiveProvider extends ArchiveProvider {
               scanLoop1: while (true) {
                 if (this.index.fileCounts.length > this.field_p) {
                   if (this.index.fileCounts[this.field_p] != 0) {
-                    if (this.field_B.b((byte) 102)) {
+                    if (this.field_B.isPrefetchQueueFull((byte) 102)) {
                       var2_intLifetime1 = 0;
                       break scanLoop1;
                     }
                     if (this.field_h[this.field_p] != 1) {
-                      discarded$3 = this.a((byte) -109, this.field_p, 2);
+                      discarded$3 = this.requestGroup((byte) -109, this.field_p, 2);
                     }
                     if (this.field_h[this.field_p] != 1) {
                       var6 = new IntrusiveNode();
@@ -514,12 +514,12 @@ final class CachedArchiveProvider extends ArchiveProvider {
     }
 
     final byte[] getEncodedGroup(int groupId, int obfuscationGuard) {
-        ArchiveRequest var3 = this.a((byte) -109, groupId, 0);
+        ArchiveRequest var3 = this.requestGroup((byte) -109, groupId, 0);
         if (var3 == null) {
           return null;
         }
         int var4 = -50 % ((40 - obfuscationGuard) / 32);
-        byte[] var5 = var3.d((byte) -80);
+        byte[] var5 = var3.getData((byte) -80);
         var3.unlink(4);
         return var5;
     }
@@ -527,7 +527,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     final int getGroupProgress(boolean obfuscationGuard, int groupId) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_m.get((long)groupId, 127));
         if (var3 != null) {
-          return var3.g(16);
+          return var3.getProgress(16);
         }
         if (obfuscationGuard) {
           this.field_C = (NodeDeque) null;
@@ -549,22 +549,22 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final static String e(int param0) {
+    final static String getLoginNameOrDefault(int param0) {
         int var1 = -29 % ((-61 - param0) / 57);
         String var2 = "";
         if (AccountNoticeDialog.field_kb != null) {
           var2 = AccountNoticeDialog.field_kb.getUsername((byte) -70);
         }
         if (0 == var2.length()) {
-          var2 = StatefulTextPainter.a((byte) -43);
+          var2 = StatefulTextPainter.getLocalPlayerName((byte) -43);
         }
         if (var2.length() == 0) {
-          var2 = un.field_a;
+          var2 = ChatHistoryAllocator.field_a;
         }
         return var2;
     }
 
-    final static int a(boolean param0) {
+    final static int pollLoginUiArchiveProgress(boolean param0) {
         if (2 > AccountTermsPanel.field_Q) {
           return 0;
         }
@@ -576,20 +576,20 @@ final class CachedArchiveProvider extends ArchiveProvider {
             if (!ChecksumAndFrameHelpers.field_f.ensureGroupAvailableByName(12145, "")) {
               return 29;
             }
-            if (!ChecksumAndFrameHelpers.field_f.a("", (byte) 90)) {
+            if (!ChecksumAndFrameHelpers.field_f.isGroupLoadedByName("", (byte) 90)) {
               return 29;
             }
           }
           if (!WidgetStyleLayer.field_k.ensureIndex(true)) {
             return 43;
           }
-          if (!WidgetStyleLayer.field_k.a("commonui", (byte) 90)) {
+          if (!WidgetStyleLayer.field_k.isGroupLoadedByName("commonui", (byte) 90)) {
             return 57;
           }
           if (!QuickChatPhraseCache.field_d.ensureIndex(true)) {
             return 71;
           }
-          if (!QuickChatPhraseCache.field_d.a("commonui", (byte) 90)) {
+          if (!QuickChatPhraseCache.field_d.isGroupLoadedByName("commonui", (byte) 90)) {
             return 80;
           }
           if (!IconLabelControl.field_bc.ensureIndex(true)) {
@@ -602,13 +602,13 @@ final class CachedArchiveProvider extends ArchiveProvider {
           if (!WidgetStyleLayer.field_k.ensureIndex(true)) {
             return 20;
           }
-          if (!WidgetStyleLayer.field_k.a("commonui", (byte) 90)) {
+          if (!WidgetStyleLayer.field_k.isGroupLoadedByName("commonui", (byte) 90)) {
             return 40;
           }
           if (!QuickChatPhraseCache.field_d.ensureIndex(true)) {
             return 50;
           }
-          if (!QuickChatPhraseCache.field_d.a("commonui", (byte) 90)) {
+          if (!QuickChatPhraseCache.field_d.isGroupLoadedByName("commonui", (byte) 90)) {
             return 60;
           }
           if (!IconLabelControl.field_bc.ensureIndex(true)) {
@@ -661,7 +661,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           stackIn_7_1 = (param8);
           this.field_u = stackIn_7_1;
           if (this.field_x != null) {
-            this.field_w = (ArchiveRequest) ((Object) this.field_k.a(21598, this.field_r, this.field_x));
+            this.field_w = (ArchiveRequest) ((Object) this.field_k.readImmediate(21598, this.field_r, this.field_x));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -16,7 +16,7 @@ final class GrowableIntList {
     static String field_b;
     static String field_m;
 
-    private final void a(int param0, boolean param1, int param2) {
+    private final void set(int param0, boolean param1, int param2) {
         int discarded$0 = 0;
         if (param2 > this.field_j) {
           this.field_j = param2;
@@ -26,11 +26,11 @@ final class GrowableIntList {
         }
         this.field_k[param2] = param0;
         if (!param1) {
-          discarded$0 = this.b(57, 50);
+          discarded$0 = this.capacityFor(57, 50);
         }
     }
 
-    private final int b(int param0, int param1) {
+    private final int capacityFor(int param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -51,7 +51,7 @@ final class GrowableIntList {
         return var3;
     }
 
-    final void d(int param0, int param1) {
+    final void removeAt(int param0, int param1) {
         if (param0 >= -97) {
           return;
         }
@@ -72,7 +72,7 @@ final class GrowableIntList {
         return this.field_j + 1;
     }
 
-    final static void b(int param0) {
+    final static void handleHighscoreResponse(int param0) {
         int var8_int = 0;
         String[][] dupTemp$0 = null;
         long[][] dupTemp$1 = null;
@@ -85,7 +85,7 @@ final class GrowableIntList {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        kf var4 = null;
+        HighscoreTable var4 = null;
         long var4_long = 0L;
         int var5 = 0;
         int var6 = 0;
@@ -121,32 +121,32 @@ final class GrowableIntList {
           var2 = var28.readUnsignedByte((byte) -61);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort((byte) -60);
-            var4 = (kf) (SentinelCommand.field_w.first(13058));
+            var4 = (HighscoreTable) (SentinelCommand.field_w.first(13058));
             while (var4 != null) {
               if (var3 != var4.field_C) {
-                var4 = (kf) (SentinelCommand.field_w.next((byte) -88));
+                var4 = (HighscoreTable) (SentinelCommand.field_w.next((byte) -88));
                 continue;
               }
               break;
             }
             if (var4 == null) {
-              LoginForm.m(98);
+              LoginForm.closeConnection(98);
               return;
             }
             var5 = var28.readUnsignedByte((byte) -68);
             if (var5 != 0) {
               var6 = var4.field_u;
               var7 = var4.field_w;
-              sa.field_f[0].field_d = false;
-              sa.field_f[0].field_b = null;
-              sa.field_f[0].field_g = field_l;
+              LoadingStatusHelpers.field_f[0].field_d = false;
+              LoadingStatusHelpers.field_f[0].field_b = null;
+              LoadingStatusHelpers.field_f[0].field_g = field_l;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                sa.field_f[var8_int].field_g = var28.readString(1);
-                sa.field_f[var8_int].field_d = false;
+                LoadingStatusHelpers.field_f[var8_int].field_g = var28.readString(1);
+                LoadingStatusHelpers.field_f[var8_int].field_d = false;
                 if (var28.readUnsignedByte((byte) -99) != 1) {
-                  sa.field_f[var8_int].field_b = null;
+                  LoadingStatusHelpers.field_f[var8_int].field_b = null;
                 } else {
-                  sa.field_f[var8_int].field_b = var28.readString(1);
+                  LoadingStatusHelpers.field_f[var8_int].field_b = var28.readString(1);
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -169,12 +169,12 @@ final class GrowableIntList {
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var28.readUnsignedByte((byte) -58);
-                  var21 = sa.field_f[var20].field_g;
+                  var21 = LoadingStatusHelpers.field_f[var20].field_g;
                   var22 = var28.readLong((byte) -97);
                   var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = sa.field_f[var20].field_b;
+                    var9[0][var12] = LoadingStatusHelpers.field_f[var20].field_b;
                     var10[0][var12] = var22;
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
@@ -184,7 +184,7 @@ final class GrowableIntList {
                     var12++;
                   }
                   if (var21 != null &&
-                    Projectile.a(67, var21)) {
+                    Projectile.isLocalAccountName(67, var21)) {
                     var8[1][var13] = field_l;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
@@ -197,10 +197,10 @@ final class GrowableIntList {
                     }
                   }
                   if (var14 < var6 &&
-                    !sa.field_f[var20].field_d) {
-                    sa.field_f[var20].field_d = true;
+                    !LoadingStatusHelpers.field_f[var20].field_d) {
+                    LoadingStatusHelpers.field_f[var20].field_d = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = sa.field_f[var20].field_b;
+                    var9[2][var14] = LoadingStatusHelpers.field_f[var20].field_b;
                     var10[2][var14] = var22;
                     var14++;
                     var28.position = var24;
@@ -229,7 +229,7 @@ final class GrowableIntList {
               break;
             }
             if (var6_ref_tc == null) {
-              LoginForm.m(122);
+              LoginForm.closeConnection(122);
               return;
             }
             var6_ref_tc.field_D = var4_long;
@@ -237,7 +237,7 @@ final class GrowableIntList {
             return;
           }
           MusicCrossfadeStream.reportClientError("HS1: " + ClientErrorSupport.describePacketHistory((byte) 94), -37, (Throwable) null);
-          LoginForm.m(86);
+          LoginForm.closeConnection(86);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -249,7 +249,7 @@ final class GrowableIntList {
     public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 < 78) {
-          GrowableIntList.b(97);
+          GrowableIntList.handleHighscoreResponse(97);
         }
         field_d = null;
         field_a = null;
@@ -260,16 +260,16 @@ final class GrowableIntList {
         field_g = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, SystemTaskService param4, byte param5, int param6, int param7, String param8) {
+    final static void initializeArchiveServices(int param0, int param1, int param2, int param3, SystemTaskService param4, byte param5, int param6, int param7, String param8) {
         try {
           PacketLoopHelpers.field_f = param8;
           rb.field_f = param2;
           UiComponent.field_B = param3;
-          wn.field_g = param0;
+          ChatPanelSetupHelpers.field_g = param0;
           ClientGlobals.field_k = param4;
           int var9_int = 48 / ((22 - param5) / 61);
           EmailSyntaxValidator.field_n = param1;
-          sh.field_a = param6;
+          MenuLayoutHelpers.field_a = param6;
           EditableTextWidget.field_ib = param7;
           FallingPickup.field_N = (Js5Transport) ((Object) new SocketJs5Transport());
           LobbyGame.field_oc = new DiskCacheWorker(param4);
@@ -279,7 +279,7 @@ final class GrowableIntList {
         }
     }
 
-    final int c(int param0, int param1) {
+    final int get(int param0, int param1) {
         if (param0 < 7) {
           return 2;
         }
@@ -293,18 +293,18 @@ final class GrowableIntList {
         throw new Error();
     }
 
-    final void a(int param0, byte param1) {
+    final void add(int param0, byte param1) {
         if (param1 != 22) {
           field_d = (RgbSprite) null;
         }
-        this.a(param0, true, 1 + this.field_j);
+        this.set(param0, true, 1 + this.field_j);
     }
 
     private final void growToIndex(int param0, int param1) {
         if (param0 != 2) {
-          GrowableIntList.b(64);
+          GrowableIntList.handleHighscoreResponse(64);
         }
-        int[] var4 = new int[this.b(param1, 73)];
+        int[] var4 = new int[this.capacityFor(param1, 73)];
         int[] var3 = var4;
         ArraySupport.copy(this.field_k, 0, var4, 0, this.field_k.length);
         this.field_k = var4;

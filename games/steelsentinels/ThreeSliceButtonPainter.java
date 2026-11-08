@@ -53,7 +53,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           if (param2 != -30) {
             this.field_t = -80;
           }
-          sl.a(this.field_y, param1.field_x, (param1.field_E - this.field_y[0].field_B >> 1) + (param1.field_z + param4), param0 + param1.field_o, var7, (byte) -119);
+          ArchiveLoadStep.drawThreeSliceBarAlpha(this.field_y, param1.field_x, (param1.field_E - this.field_y[0].field_B >> 1) + (param1.field_z + param4), param0 + param1.field_o, var7, (byte) -119);
           this.field_f.drawParagraph(param1.field_y, param1.field_o + param0, -2 + param4 + param1.field_z, param1.field_x, param1.field_E, var8, -1, 1, 1, this.field_f.field_G);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,7 +70,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         }
     }
 
-    final static void a(SceneWidget param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
+    final static void addLabeledProgressBar(SceneWidget param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
         int var11 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -111,7 +111,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
             SoftwareRaster.drawRectangleOutline(0, 0, var10.field_zb, var10.field_Lb, 10367841);
           }
           var13.addChild(var10, 121);
-          Checkbox.field_bb.b((byte) 121);
+          Checkbox.field_bb.bindRaster((byte) 121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,7 +142,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         field_s = null;
         if (param0 != 100) {
           String var2 = (String) null;
-          ThreeSliceButtonPainter.a((SceneWidget) null, (String) null, 70, 81, -71, -99, -90, -116, false);
+          ThreeSliceButtonPainter.addLabeledProgressBar((SceneWidget) null, (String) null, 70, 81, -71, -99, -90, -116, false);
         }
         field_r = null;
     }
@@ -151,7 +151,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         this(2188450, 2591221, 9543);
     }
 
-    final static LobbyPlayer a(boolean param0, long param1) {
+    final static LobbyPlayer findLobbyEntry(boolean param0, long param1) {
         if (param0) {
           return (LobbyPlayer) null;
         }
@@ -159,10 +159,10 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
     }
 
     private ThreeSliceButtonPainter(int param0, int param1, int param2) {
-        this.field_y = un.field_m;
+        this.field_y = ChatHistoryAllocator.field_m;
         this.field_t = param1;
         this.field_A = param0;
-        this.field_f = gf.field_d;
+        this.field_f = GeneratedSpriteHelpers.field_d;
         this.field_o = param2;
     }
 

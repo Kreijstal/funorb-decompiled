@@ -58,7 +58,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2, boolean param3, int param4) {
+    final static void updateGameRoomPanel(int param0, boolean param1, boolean param2, boolean param3, int param4) {
         SceneWidget stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
         int stackIn_34_0 = 0;
@@ -124,57 +124,57 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         var19 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameCompleted0 = true;
-          GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(48, fj.field_f);
-          if (null != nf.field_b) {
+          GzipDecoder.layoutSlidingSidePanels(48, PasswordRuleHelpers.field_f);
+          if (null != LoginEncryptionHelpers.field_b) {
             boolean decompiledFrameRemainder2 = true;
             QuickChatCategory.field_E.field_T = true;
-            var22 = rn.field_C;
+            var22 = PendingAckRequest.field_C;
             var26 = var22;
-            rn.field_C.field_Lb = 0;
+            PendingAckRequest.field_C.field_Lb = 0;
             var26.field_zb = 0;
             BoundedUrlRequest.field_q.field_Lb = 0;
             var6 = BoundedUrlRequest.field_q;
             var6.field_zb = 0;
-            var7 = rh.field_w;
-            rh.field_w.field_Lb = 0;
+            var7 = PendingDataRequest.field_w;
+            PendingDataRequest.field_w.field_Lb = 0;
             var7.field_zb = 0;
             if (!TextAndMenuHelpers.isGameOwner(-28548)) {
-              var9_ref_String = nf.field_b.field_Xb;
+              var9_ref_String = LoginEncryptionHelpers.field_b.field_Xb;
               EmailAvailabilityValidator.field_q.field_S = SocketConnector.formatTemplate(AccountChoicePanel.field_ab, -40, new String[]{var9_ref_String}).toUpperCase();
-              rh.field_w.setBounds(0, NanoTickClock.field_y.field_Lb - 40, 40, 0, NanoTickClock.field_y.field_zb);
-              rh.field_w.field_S = SocketConnector.formatTemplate(jj.field_f, -108, new String[]{var9_ref_String});
-              var8 = rh.field_w;
+              PendingDataRequest.field_w.setBounds(0, NanoTickClock.field_y.field_Lb - 40, 40, 0, NanoTickClock.field_y.field_zb);
+              PendingDataRequest.field_w.field_S = SocketConnector.formatTemplate(MeshMaterial.field_f, -108, new String[]{var9_ref_String});
+              var8 = PendingDataRequest.field_w;
               decompiledFrameRemainder2 = (var19 != 0);
             }
             if (decompiledFrameRemainder2) {
               EmailAvailabilityValidator.field_q.field_S = MouseWheelInput.field_f.toUpperCase();
               var9 = (2 + NanoTickClock.field_y.field_zb) / 2;
-              rn.field_C.setBounds(0, NanoTickClock.field_y.field_Lb - 40, 40, 0, -2 + var9);
-              if (nf.field_b.field_wc < nf.field_b.field_Ub) {
-                rn.field_C.field_S = RasterBuffer.field_j.toUpperCase();
-                rn.field_C.field_T = true;
+              PendingAckRequest.field_C.setBounds(0, NanoTickClock.field_y.field_Lb - 40, 40, 0, -2 + var9);
+              if (LoginEncryptionHelpers.field_b.field_wc < LoginEncryptionHelpers.field_b.field_Ub) {
+                PendingAckRequest.field_C.field_S = RasterBuffer.field_j.toUpperCase();
+                PendingAckRequest.field_C.field_T = true;
                 if (var19 != 0) {
-                  rn.field_C.field_S = TriangleMesh.field_U.toUpperCase();
-                  rn.field_C.field_T = false;
+                  PendingAckRequest.field_C.field_S = TriangleMesh.field_U.toUpperCase();
+                  PendingAckRequest.field_C.field_T = false;
                 }
               } else {
-                rn.field_C.field_S = TriangleMesh.field_U.toUpperCase();
-                rn.field_C.field_T = false;
+                PendingAckRequest.field_C.field_S = TriangleMesh.field_U.toUpperCase();
+                PendingAckRequest.field_C.field_T = false;
               }
-              rn.field_C.field_I = MenuInputState.field_j.field_I;
-              if (ja.field_a > 0) {
-                if (1 != ja.field_a) {
-                  var10_ref_String = SocketConnector.formatTemplate(MusicCrossfadeStream.field_B, param0 - 83, new String[]{Integer.toString(ja.field_a)});
+              PendingAckRequest.field_C.field_I = MenuInputState.field_j.field_I;
+              if (IconLookupHelpers.field_a > 0) {
+                if (1 != IconLookupHelpers.field_a) {
+                  var10_ref_String = SocketConnector.formatTemplate(MusicCrossfadeStream.field_B, param0 - 83, new String[]{Integer.toString(IconLookupHelpers.field_a)});
                   if (var19 != 0) {
                     var10_ref_String = EmailSyntaxValidator.field_o;
                   }
                 } else {
                   var10_ref_String = EmailSyntaxValidator.field_o;
                 }
-                rn.field_C.field_S = rn.field_C.field_S + "<br>" + var10_ref_String;
+                PendingAckRequest.field_C.field_S = PendingAckRequest.field_C.field_S + "<br>" + var10_ref_String;
                 if ((16 & Js5NetworkRequest.field_H) == 0 &&
                   !GzipDecoder.field_c) {
-                  rn.field_C.field_I = MenuInputState.field_j.field_Ab;
+                  PendingAckRequest.field_C.field_I = MenuInputState.field_j.field_Ab;
                 }
               }
               BoundedUrlRequest.field_q.setBounds(0, -40 + NanoTickClock.field_y.field_Lb, 40, var9, -var9 + NanoTickClock.field_y.field_zb);
@@ -224,16 +224,16 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                             stackIn_53_1 = -1;
                             if (stackIn_53_0 == stackIn_53_1) {
                               if (0 != var10) {
-                                stackIn_43_0 = nf.field_b.field_wc;
+                                stackIn_43_0 = LoginEncryptionHelpers.field_b.field_wc;
                               } else {
-                                stackIn_43_0 = nf.field_b.field_Ub;
+                                stackIn_43_0 = LoginEncryptionHelpers.field_b.field_Ub;
                               }
                               var17_int = stackIn_43_0;
                               if (var16 != var17_int) {
                                 break scanLoop2;
                               }
                             } else {
-                              if (~var16 != ~(255 & nf.field_b.field_Sb[var15]) &&
+                              if (~var16 != ~(255 & LoginEncryptionHelpers.field_b.field_Sb[var15]) &&
                                 var19 == 0) {
                                 break scanLoop2;
                               }
@@ -336,7 +336,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 }
               }
               if ((decompiledFrameRemainder2) && (!(var10 < 2) || var19 != 0) && (null != LoadoutHelpers.field_d ||
-                ja.field_b != null ||
+                IconLookupHelpers.field_b != null ||
                 null != QuickChatHelpDialog.field_cc ||
                 null != SoundAndUrlHelpers.field_b)) {
                 var11 = 0;
@@ -346,7 +346,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 var15 = 0;
                 var16 = 0;
                 while (UrlAndReplyHelpers.field_a > var16) {
-                  var17_int = 255 & nf.field_b.field_Sb[var16];
+                  var17_int = 255 & LoginEncryptionHelpers.field_b.field_Sb[var16];
                   stackIn_178_0 = null;
                   if (var19 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -357,9 +357,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                     LoadoutHelpers.field_d[var16][var17_int]) {
                     var11 = 1;
                   }
-                  if (ja.field_b != null &&
-                    null != ja.field_b[var16]) {
-                    var18_int = ja.field_b[var16][var17_int];
+                  if (IconLookupHelpers.field_b != null &&
+                    null != IconLookupHelpers.field_b[var16]) {
+                    var18_int = IconLookupHelpers.field_b[var16][var17_int];
                     if (var18_int != 0 &&
                       !ProxyAuthenticationException.field_a) {
                       var11 = 1;
@@ -455,7 +455,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                         break;
                       }
                     }
-                    UiTheme.field_i = SocketConnector.formatTemplate(kf.field_r, -74, new String[]{StripedProgressBar.field_P});
+                    UiTheme.field_i = SocketConnector.formatTemplate(HighscoreTable.field_r, -74, new String[]{StripedProgressBar.field_P});
                     break;
                   }
                 }
@@ -470,7 +470,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 }
                 var8.field_S = SocketConnector.formatTemplate(ArrayWidgetContainer.field_P, -68, new String[]{Integer.toString(var9)});
               }
-              uj.field_e.field_S = SocketConnector.formatTemplate(ClientErrorSupport.field_h, -32, new String[]{Integer.toString(nf.field_b.field_wc), Integer.toString(nf.field_b.field_Ub)});
+              ReflectionCheckHelpers.field_e.field_S = SocketConnector.formatTemplate(ClientErrorSupport.field_h, -32, new String[]{Integer.toString(LoginEncryptionHelpers.field_b.field_wc), Integer.toString(LoginEncryptionHelpers.field_b.field_Ub)});
             }
           }
           if (decompiledFrameCompleted0) {
@@ -483,7 +483,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             stackIn_170_2 = (param1) && (!param2) && (!GzipDecoder.field_c);
             ((SceneWidget) (Object) stackIn_169_0).updateInputFullScreen((byte) stackIn_169_1, stackIn_170_2);
             if (param0 != 0) {
-              TextWidgetPainter.a(126, false, true, true, 60);
+              TextWidgetPainter.updateGameRoomPanel(126, false, true, true, 60);
             }
             stackIn_176_0 = UsernameCredentials.field_r;
             stackIn_176_1 = -5;
@@ -492,11 +492,11 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             RegistrationRequestDialog.field_Tb.field_d.processTabPresses(param0 + 10000);
             stackIn_178_0 = null;
           }
-          if (stackIn_178_0 != nf.field_b) {
+          if (stackIn_178_0 != LoginEncryptionHelpers.field_b) {
             if (QuickChatCategory.field_E.field_Eb != 0) {
-              ChatMessage.sendShortSetting((byte) -119, param4, nf.field_b.getGameId(param0 ^ -33));
+              ChatMessage.sendShortSetting((byte) -119, param4, LoginEncryptionHelpers.field_b.getGameId(param0 ^ -33));
             }
-            if (rn.field_C.field_Eb != 0) {
+            if (PendingAckRequest.field_C.field_Eb != 0) {
               GzipDecoder.field_c = true;
             }
             if (BoundedUrlRequest.field_q.field_Eb != 0) {
@@ -505,7 +505,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (Js5ArchiveManager.field_i.field_Eb != 0) {
               GzipDecoder.field_c = false;
             }
-            DiskCacheWorker.a(nf.field_b, (byte) -115, param4, false);
+            DiskCacheWorker.updateGameOptionsPanel(LoginEncryptionHelpers.field_b, (byte) -115, param4, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -569,16 +569,16 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, boolean param3) {
+    final static boolean handleFrontEndKey(int param0, int param1, int param2, boolean param3) {
         if (param3) {
           return true;
         }
-        if (qf.field_e != null &&
+        if (RankingAndRasterHelpers.field_e != null &&
           NameAvailabilityValidator.field_q == 13) {
-          qf.field_e = null;
+          RankingAndRasterHelpers.field_e = null;
           return true;
         }
-        if (!jn.field_g) {
+        if (!MusicTrackHelpers.field_g) {
           if (GzipDecoder.field_e ||
             NameAvailabilityValidator.field_q == 9 ||
             10 == NameAvailabilityValidator.field_q ||
@@ -586,24 +586,24 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             return QuickChatInputHelpers.handleQuickChatKey(123, param0, param1);
           }
           if (NameAvailabilityValidator.field_q == 80 &&
-            ArchiveProvider.a(38)) {
-            jn.field_g = true;
+            ArchiveProvider.isAccountUnrestricted(38)) {
+            MusicTrackHelpers.field_g = true;
             return true;
           }
           return false;
         }
-        if (!ArchiveProvider.a(38)) {
+        if (!ArchiveProvider.isAccountUnrestricted(38)) {
           return false;
         }
-        int var4 = RasterBuffer.a((byte) -125, param2, param0) ? 1 : 0;
+        int var4 = RasterBuffer.handleChatInputKey((byte) -125, param2, param0) ? 1 : 0;
         if (NameAvailabilityValidator.field_q == 80 ||
           84 == NameAvailabilityValidator.field_q) {
           var4 = 1;
-          jn.field_g = false;
+          MusicTrackHelpers.field_g = false;
         }
         if (NameAvailabilityValidator.field_q == 13) {
-          AlternateUsernameCredentials.d(88);
-          jn.field_g = false;
+          AlternateUsernameCredentials.clearChatText(88);
+          MusicTrackHelpers.field_g = false;
           var4 = 1;
         }
         return var4 != 0;
@@ -805,7 +805,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = LoginActionHelpers.decodeBase37DisplayName(SentinelDesigner.a(-87, param1), (byte) -114);
+          var2 = LoginActionHelpers.decodeBase37DisplayName(SentinelDesigner.encodeBase37Name(-87, param1), (byte) -114);
           if (param0 < 89) {
             field_l = false;
           }
@@ -841,7 +841,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var13 = 0;
         var13 = SteelSentinels.obfuscationControl;
         try {
-          ArchiveRequest.a(param0 + param6.field_o, param2 + param6.field_z, 47, param6.field_x + (param6.field_o + param0), param6.field_E + param6.field_z + param2);
+          ArchiveRequest.pushClip(param0 + param6.field_o, param2 + param6.field_z, 47, param6.field_x + (param6.field_o + param0), param6.field_E + param6.field_z + param2);
           var9_int = this.contentWidth(5546, param6);
           var10 = this.contentHeight(-3, param6);
           boolean decompiledSharedTail0 = (this.field_i);
@@ -1034,7 +1034,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             }
             var10 = var18.lineForCharacter(-1, var8);
             var11 = var18.lineForCharacter(-1, var9);
-            ArchiveRequest.a(param4.field_o + param1, param4.field_z + param0, -78, param4.field_o + param1 + param4.field_x, param4.field_z + param0 + param4.field_E);
+            ArchiveRequest.pushClip(param4.field_o + param1, param4.field_z + param0, -78, param4.field_o + param1 + param4.field_x, param4.field_z + param0 + param4.field_E);
             var12 = var10;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var11 < var12))) {
@@ -1155,7 +1155,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           this.ensureTextLayout(-1, param1);
           if (param0 <= 40) {
-            TextWidgetPainter.a(-9, true, false, false, 56);
+            TextWidgetPainter.updateGameRoomPanel(-9, true, false, false, 56);
           }
           stackIn_3_0 = param1.field_s.maximumLineWidth((byte) -100) + this.field_b + this.field_n;
           return stackIn_3_0;
@@ -1220,7 +1220,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         TextLayout var14 = null;
         try {
           if (param4 <= 70) {
-            TextWidgetPainter.a(-106, 84, -5, false);
+            TextWidgetPainter.handleFrontEndKey(-106, 84, -5, false);
           }
           if (param0.isFocused(0)) {
             var13 = this.ensureTextLayout(-1, param0);
@@ -1239,7 +1239,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               stackIn_7_3 = var8.field_a;
             }
             var12 = stackIn_6_0 + Math.min(stackIn_6_1, Math.min(stackIn_6_2, stackIn_7_3));
-            ArchiveRequest.a(param0.field_o + param3, param2 + param0.field_z, 113, param0.field_x + (param0.field_o + param3), param0.field_E + (param0.field_z + param2));
+            ArchiveRequest.pushClip(param0.field_o + param3, param2 + param0.field_z, 113, param0.field_x + (param0.field_o + param3), param0.field_E + (param0.field_z + param2));
             LoadoutHelpers.field_j.drawLine(var11, var12, this.field_e, (byte) -121, var10, var10);
             MatchingTextValidator.popRasterStateWithIntGuard(120);
           }

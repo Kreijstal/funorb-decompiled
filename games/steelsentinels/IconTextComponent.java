@@ -38,7 +38,7 @@ final class IconTextComponent extends SceneWidget {
             }
             if (1 == DualNodeDequeIterator.field_d) {
               if (DateInputWidget.field_T.field_a == 2) {
-                stackIn_12_0 = gf.a(-1, 16777215);
+                stackIn_12_0 = GeneratedSpriteHelpers.handleConnectionFailure(-1, 16777215);
                 return stackIn_12_0;
               }
               if (DateInputWidget.field_T.field_a == 1) {
@@ -46,12 +46,12 @@ final class IconTextComponent extends SceneWidget {
               }
             }
             if (2 == DualNodeDequeIterator.field_d) {
-              nf.field_c = new BufferedSocket((java.net.Socket) (DateInputWidget.field_T.field_c), ClientGlobals.field_k);
+              LoginEncryptionHelpers.field_c = new BufferedSocket((java.net.Socket) (DateInputWidget.field_T.field_c), ClientGlobals.field_k);
               var2 = new PacketBuffer(13);
-              SpriteCheckboxPainter.a(var2, 12, EditableTextWidget.field_ib, rb.field_f, sh.field_a);
+              SpriteCheckboxPainter.writeServiceHeader(var2, 12, EditableTextWidget.field_ib, rb.field_f, MenuLayoutHelpers.field_a);
               var2.writeByte((byte) 120, 15);
-              var2.writeInt(true, wn.field_g);
-              nf.field_c.a(13, var2.payload, -100, 0);
+              var2.writeInt(true, ChatPanelSetupHelpers.field_g);
+              LoginEncryptionHelpers.field_c.write(13, var2.payload, -100, 0);
               DualNodeDequeIterator.field_d = DualNodeDequeIterator.field_d + 1;
               ChatMessage.field_f = 30000L + ClockAndCookieHelpers.monotonicMillis(-57);
             }
@@ -59,16 +59,16 @@ final class IconTextComponent extends SceneWidget {
               field_Wb = false;
             }
             if (DualNodeDequeIterator.field_d == 3) {
-              if (nf.field_c.readUnsignedByte(-124) > 0) {
-                var1_int = nf.field_c.available((byte) -94);
+              if (LoginEncryptionHelpers.field_c.readUnsignedByte(-124) > 0) {
+                var1_int = LoginEncryptionHelpers.field_c.available((byte) -94);
                 if (0 != var1_int) {
-                  stackIn_29_0 = gf.a(var1_int, 16777215);
+                  stackIn_29_0 = GeneratedSpriteHelpers.handleConnectionFailure(var1_int, 16777215);
                   return stackIn_29_0;
                 }
                 DualNodeDequeIterator.field_d = DualNodeDequeIterator.field_d + 1;
               } else {
                 if (ChatMessage.field_f < ClockAndCookieHelpers.monotonicMillis(40)) {
-                  stackIn_26_0 = gf.a(-2, 16777215);
+                  stackIn_26_0 = GeneratedSpriteHelpers.handleConnectionFailure(-2, 16777215);
                   return stackIn_26_0;
                 }
               }
@@ -76,16 +76,16 @@ final class IconTextComponent extends SceneWidget {
             if (DualNodeDequeIterator.field_d != 4) {
               return -1;
             }
-            FallingPickup.field_N.a(nf.field_c, BoundedUrlRequest.field_h, 6);
+            FallingPickup.field_N.attachTransport(LoginEncryptionHelpers.field_c, BoundedUrlRequest.field_h, 6);
             DualNodeDequeIterator.field_d = 0;
             DateInputWidget.field_T = null;
-            nf.field_c = null;
+            LoginEncryptionHelpers.field_c = null;
             stackIn_34_0 = 0;
             return stackIn_34_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return gf.a(-3, 16777215);
+            return GeneratedSpriteHelpers.handleConnectionFailure(-3, 16777215);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -112,7 +112,7 @@ final class IconTextComponent extends SceneWidget {
           if (ContextMenu.isAsciiLetterOrDigit(param1, -91)) {
             return true;
           }
-          var2 = cd.field_b;
+          var2 = QuickChatPacketHelpers.field_b;
           var3 = 0;
           if (param0 != -30) {
             IconTextComponent.isAllowedChar((byte) -42, 'A');
@@ -310,7 +310,7 @@ final class IconTextComponent extends SceneWidget {
             var30Lifetime1 = var30Lifetime1 - var25;
             var29Lifetime1 = var29Lifetime1 - var30Lifetime1;
             var28Lifetime1 -= 640;
-            Projectile.a(var31Lifetime1, var29Lifetime1, var17, var19, var26, var7, var27, var8, var9, var10, param0, var28Lifetime1, var5_int, var6);
+            Projectile.drawBubbleDistortionRow(var31Lifetime1, var29Lifetime1, var17, var19, var26, var7, var27, var8, var9, var10, param0, var28Lifetime1, var5_int, var6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -15,7 +15,7 @@ final class CombatWorld {
     BattleTerrain terrain;
     int playerCount;
     boolean field_j;
-    private t field_U;
+    private NameTable field_U;
     static boolean field_G;
     static SceneWidget field_H;
     boolean field_h;
@@ -67,7 +67,7 @@ final class CombatWorld {
     static String field_x;
     int gravityAcceleration;
 
-    private final void a(int param0, int param1) {
+    private final void launchNeutralBaseStrike(int param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -83,7 +83,7 @@ final class CombatWorld {
         }
     }
 
-    private final boolean e(int param0, int param1) {
+    private final boolean hasWallToRight(int param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int stackIn_32_0 = 0;
@@ -96,7 +96,7 @@ final class CombatWorld {
           if (this.terrain.getSecondaryHeightAt(false, param1) > 3000) {
             return false;
           }
-          if (!this.b(true, param1)) {
+          if (!this.hasSurfaceLayerAt(true, param1)) {
             return false;
           }
           if (param0 > -26) {
@@ -110,7 +110,7 @@ final class CombatWorld {
               if (stackIn_32_0 > 3000) {
                 return true;
               }
-              if (!this.b(true, param1)) {
+              if (!this.hasSurfaceLayerAt(true, param1)) {
                 return false;
               }
               param1++;
@@ -203,15 +203,15 @@ final class CombatWorld {
             this.field_h) {
             return;
           }
-          stackIn_27_0 = (di.field_g < 0) ? 0 : 1;
+          stackIn_27_0 = (OptionMaskHelpers.field_g < 0) ? 0 : 1;
           boolean decompiledFrameCompleted4 = true;
           boolean decompiledFrameRemainder4 = true;
           boolean decompiledFrameCompleted3 = true;
           var2_int = stackIn_27_0;
           if (!this.field_j &&
-            10 == di.field_g &&
+            10 == OptionMaskHelpers.field_g &&
             IconTextComponent.field_Yb > 0 &&
-            this.f(obfuscationGuard ^ -114)) {
+            this.hasNoSentinels(obfuscationGuard ^ -114)) {
             var3_ref_int____ = ReflectionCheck.field_I[QuickChatHelpDialog.field_Ub + 10 * DirectByteStorage.field_j];
             if (1 + this.field_cb < var3_ref_int____.length) {
               this.field_cb = this.field_cb + 1;
@@ -242,13 +242,13 @@ final class CombatWorld {
                     var8 = LoginDialogHelpers.field_f;
                   }
                   if (var5_ref_int__[var7] == 2) {
-                    var8 = qm.field_d;
+                    var8 = DisplayNameAndAudioHelpers.field_d;
                   }
                   if (var5_ref_int__[var7] == 3) {
                     var8 = CipherPacketBuffer.field_D;
                   }
                   if (var5_ref_int__[var7] == 4) {
-                    var8 = rn.field_o;
+                    var8 = PendingAckRequest.field_o;
                   }
                   if (var5_ref_int__[var7] == 5) {
                     var8 = MessageMenuHelpers.field_f;
@@ -287,7 +287,7 @@ final class CombatWorld {
                     var8 = Js5Transport.field_s;
                   }
                   if (17 == var5_ref_int__[var7]) {
-                    var8 = jm.field_p;
+                    var8 = PendingIntReplyRequest.field_p;
                   }
                   if (var5_ref_int__[var7] == 18) {
                     var8 = CachedTextLayout.field_k;
@@ -302,7 +302,7 @@ final class CombatWorld {
                     var8 = ValidationHelpWidget.field_ob;
                   }
                   if (var5_ref_int__[var7] == 23) {
-                    var8 = uj.field_i;
+                    var8 = ReflectionCheckHelpers.field_i;
                   }
                   if (var5_ref_int__[var7] == 24) {
                     var8 = AlternateUsernameCredentials.field_z;
@@ -471,9 +471,9 @@ final class CombatWorld {
                   if (var8 != null) {
                     if (0 == var5_ref_int__[var7]) {
                       var11 = new Sentinel(0, 0, this);
-                      var11.a(-1, 3, (int[]) (var8), 1);
+                      var11.applyDesign(-1, 3, (int[]) (var8), 1);
                       var11.field_Nb = 7;
-                      var11.j(obfuscationGuard - 32);
+                      var11.chooseSpawnX(obfuscationGuard - 32);
                       var12 = var11.playerId;
                       var13 = var11.worldX;
                       var11.worldY = -320000;
@@ -489,7 +489,7 @@ final class CombatWorld {
                         stackIn_49_1 = -1;
                         if (stackIn_49_0 != stackIn_49_1) {
                           var11 = new Sentinel(0, 0, this);
-                          var11.a(-1, 3, (int[]) (var8), 1);
+                          var11.applyDesign(-1, 3, (int[]) (var8), 1);
                           var11.field_Nb = 7;
                           this.sentinels.addLast(obfuscationGuard ^ 24, var11);
                           var11.field_W = var12;
@@ -523,7 +523,7 @@ final class CombatWorld {
                         }
                       }
                       this.sentinels.addLast(3, var11);
-                      var11.j(-5);
+                      var11.chooseSpawnX(-5);
                       var11.worldY = -320000;
                       var11.velocityX = 0;
                       var11.field_fc = var11.worldY;
@@ -550,7 +550,7 @@ final class CombatWorld {
               }
               var4 = 0;
               var5_ref_jc = new NodeIterator(this.field_e);
-              var6 = (FallingPickup) (var5_ref_jc.b(2));
+              var6 = (FallingPickup) (var5_ref_jc.first(2));
               while (var6 != null) {
                 var4 = var4 + var6.field_O;
                 var6 = (FallingPickup) (var5_ref_jc.next(2));
@@ -569,7 +569,7 @@ final class CombatWorld {
                   var8_int = var10_ref_mb.charge;
                   var7 = var10_ref_mb.maximumArmour;
                   var6_int = var10_ref_mb.armour;
-                  var9_int = var10_ref_mb.maximumCharge - GradientOutlineTextPainter.a(91, var10_ref_mb.activeModuleType);
+                  var9_int = var10_ref_mb.maximumCharge - GradientOutlineTextPainter.offsetInFiveToNineRange(91, var10_ref_mb.activeModuleType);
                 }
                 TabbedPanel.recordMissionCompletion(DirectByteStorage.field_j, -(var9_int * 50000) + (this.field_M + this.field_f), WeightedLruCache.field_a, QuickChatHelpDialog.field_Ub, -(var7 * 60000) + (-(var6_int * 128) + this.field_a), -(var8_int * 256) + (-(var4 * 100) + this.field_N), this.field_q, (byte) -65);
               }
@@ -611,13 +611,13 @@ final class CombatWorld {
                     var9 = LoginDialogHelpers.field_f;
                   }
                   if (2 == var4_ref_int__[var6_int]) {
-                    var9 = qm.field_d;
+                    var9 = DisplayNameAndAudioHelpers.field_d;
                   }
                   if (3 == var4_ref_int__[var6_int]) {
                     var9 = CipherPacketBuffer.field_D;
                   }
                   if (var4_ref_int__[var6_int] == 4) {
-                    var9 = rn.field_o;
+                    var9 = PendingAckRequest.field_o;
                   }
                   if (var4_ref_int__[var6_int] == 5) {
                     var9 = MessageMenuHelpers.field_f;
@@ -656,7 +656,7 @@ final class CombatWorld {
                     var9 = Js5Transport.field_s;
                   }
                   if (var4_ref_int__[var6_int] == 17) {
-                    var9 = jm.field_p;
+                    var9 = PendingIntReplyRequest.field_p;
                   }
                   if (var4_ref_int__[var6_int] == 18) {
                     var9 = CachedTextLayout.field_k;
@@ -915,17 +915,17 @@ final class CombatWorld {
               }
             }
           }
-          this.a((byte) 20);
+          this.updateComputerPlayers((byte) 20);
           this.simulationTick = this.simulationTick + 1;
           if (this.field_j &&
             0 != (7 & this.simulationTick)) {
             return;
           }
           if (4 == this.terrain.getTerrainType(68)) {
-            this.a(-27309);
+            this.advanceArenaHazards(-27309);
           }
           if (this.terrain.getTerrainType(49) == 1 &&
-            -1 == di.field_g) {
+            -1 == OptionMaskHelpers.field_g) {
             var3 = 1;
             var4 = 0;
             var5_ref_mb = (Sentinel) (this.sentinels.first(obfuscationGuard + 13031));
@@ -1051,7 +1051,7 @@ final class CombatWorld {
             var10_ref_mb.field_Nb = 11;
             this.field_A = var10_ref_mb.playerId;
             this.spawnedSpecialSentinel = var10_ref_mb;
-            var10_ref_mb.d(obfuscationGuard - 28060);
+            var10_ref_mb.applyTeamColours(obfuscationGuard - 28060);
             var10_ref_mb.field_ic = 131585;
             var10_ref_mb.field_Qb = 250;
             var10_ref_mb.velocityY = 1000;
@@ -1090,7 +1090,7 @@ final class CombatWorld {
               if (this.simulationTick % 3000 != 0) {
                 break regionExit6;
               }
-              if (this.h(126) >= 2) {
+              if (this.countNeutralSentinels(126) >= 2) {
                 break regionExit6;
               }
               var8 = null;
@@ -1117,10 +1117,10 @@ final class CombatWorld {
                       var8 = CipherPacketBuffer.field_D;
                       break regionExit7;
                     case 2:
-                      var8 = qm.field_d;
+                      var8 = DisplayNameAndAudioHelpers.field_d;
                       break regionExit7;
                     case 3:
-                      var8 = rn.field_o;
+                      var8 = PendingAckRequest.field_o;
                       break regionExit7;
                     case 4:
                       var8 = MessageMenuHelpers.field_f;
@@ -1141,7 +1141,7 @@ final class CombatWorld {
               while (var10 < 2) {
                 var11 = new Sentinel(0, 0, this);
                 var11.configureDesign((int[]) (var8), true, false, -1, 12);
-                var11.field_hb = this.a(false, var9_int);
+                var11.field_hb = this.pickRandomEntryInGroup(false, var9_int);
                 var11.field_Nb = 8;
                 this.sentinels.addLast(obfuscationGuard - 24, var11);
                 var11.worldX = -128;
@@ -1170,11 +1170,11 @@ final class CombatWorld {
               }
               var10 = var9_int;
               if (0 == var10) {
-                var8 = qm.field_d;
+                var8 = DisplayNameAndAudioHelpers.field_d;
               } else {
                 if (1 == var10 &&
                   var15 == 0) {
-                  var8 = rn.field_o;
+                  var8 = PendingAckRequest.field_o;
                 } else {
                   if (2 == var10) {
                     var8 = LobbyGame.field_Vb;
@@ -1185,7 +1185,7 @@ final class CombatWorld {
               while (var10 < 2) {
                 var11 = new Sentinel(0, 0, this);
                 var11.configureDesign((int[]) (var8), true, false, -1, 12);
-                var11.field_hb = this.a(false, var9_int);
+                var11.field_hb = this.pickRandomEntryInGroup(false, var9_int);
                 var11.field_Nb = 8;
                 this.sentinels.addLast(3, var11);
                 var11.worldX = this.random.nextIntBounded(83, this.terrain.getProfileLength(124)) << 4;
@@ -1221,7 +1221,7 @@ final class CombatWorld {
                 var8_int = this.random.nextIntBounded(60, 5);
               }
             }
-            var9 = new FallingPickup(this, this.a(false, var8_int));
+            var9 = new FallingPickup(this, this.pickRandomEntryInGroup(false, var8_int));
             ((FallingPickup) (var9)).field_z = this.random.nextIntBounded(80, this.terrain.getProfileLength(obfuscationGuard ^ 68) << 4);
             ((FallingPickup) (var9)).field_I = -180000;
             this.field_e.addLast(3, (IntrusiveNode) (var9));
@@ -1304,13 +1304,13 @@ final class CombatWorld {
               if (1650 != this.field_R ||
                 4 == this.terrain.getTerrainType(57)) {
                 if (!(1 < ClockAndCookieHelpers.countSetBits((byte) 119, var7))) {
-                  this.a(var6_array, (byte) -114);
+                  this.setRivalScores(var6_array, (byte) -114);
                   if (var15 != 0) {
-                    this.a(var6_array, (byte) -128);
+                    this.setRivalScores(var6_array, (byte) -128);
                   }
                 }
               } else {
-                this.a(var6_array, (byte) -128);
+                this.setRivalScores(var6_array, (byte) -128);
               }
             }
             var8 = (Projectile) (this.field_db.first(13058));
@@ -1370,7 +1370,7 @@ final class CombatWorld {
         }
     }
 
-    final boolean b(int param0, int param1) {
+    final boolean isOutsideBaseZone(int param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -1389,7 +1389,7 @@ final class CombatWorld {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void renderLogoGlowSprite(boolean param0) {
         RuntimeException runtimeException = null;
         RgbSprite var1 = null;
         RgbSprite var2 = null;
@@ -1399,11 +1399,11 @@ final class CombatWorld {
         var4 = SteelSentinels.obfuscationControl;
         try {
           var1 = new RgbSprite(540, 140);
-          IterableNodeHashTable.a(var1, (byte) -82);
-          lf.a();
+          IterableNodeHashTable.bindSpriteRaster(var1, (byte) -82);
+          MeshRasterState.useRasterClip();
           SoftwareRaster.clear();
           DateOfBirthValidator.field_h = 0;
-          LoginForm.a(param0);
+          LoginForm.renderLogoMeshes(param0);
           var2 = var1.copySprite();
           var3 = 0;
           while (var3 < 15) {
@@ -1425,7 +1425,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(byte param0) {
+    private final void updateComputerPlayers(byte param0) {
         IntrusiveNode stackIn_8_0 = null;
         Object stackIn_46_0 = null;
         Object stackIn_46_1 = null;
@@ -1500,9 +1500,9 @@ final class CombatWorld {
             var3 = var2;
           }
           if ((var2 == null ||
-            var2.i(99)) &&
+            var2.isWeaponReady(99)) &&
             (var3 == null ||
-            var3.i(68))) {
+            var3.isWeaponReady(68))) {
             this.field_w = this.field_w + 1;
             if (var13 != 0) {
               this.field_w = 0;
@@ -1529,7 +1529,7 @@ final class CombatWorld {
                       var7 = null;
                       var8 = 2147483647;
                       var9_ref_jc = new NodeIterator(this.sentinels);
-                      var10_ref_mb = (Sentinel) (var9_ref_jc.b(2));
+                      var10_ref_mb = (Sentinel) (var9_ref_jc.first(2));
                       while (var10_ref_mb != null) {
                         stackIn_46_0 = null;
                         stackOut_145_1 = var10_ref_mb;
@@ -1555,11 +1555,11 @@ final class CombatWorld {
                   var4++;
                   if (null == var2 ||
                     var2 == var6.field_Vb ||
-                    !var2.i(84) ||
-                    var3.i(104)) {
+                    !var2.isWeaponReady(84) ||
+                    var3.isWeaponReady(104)) {
                     if (null != var3 &&
                       var4 >= 3 &&
-                      !var3.i(83)) {
+                      !var3.isWeaponReady(83)) {
                       var4 = 0;
                       var7 = var3;
                     }
@@ -1571,7 +1571,7 @@ final class CombatWorld {
                     stackIn_128_1 = var6.field_Vb;
                     while (true) {
                       if (stackIn_128_0 != stackIn_128_1 &&
-                        ((Sentinel) (var7)).i(78) &&
+                        ((Sentinel) (var7)).isWeaponReady(78) &&
                         200 * var6.playerId > this.field_w) {
                         var7 = null;
                       }
@@ -1609,7 +1609,7 @@ final class CombatWorld {
                   }
                   if (var7 == null) {
                     var9_ref_jcLifetime1 = new NodeIterator(this.sentinels);
-                    var10_ref_mbLifetime1 = (Sentinel) (var9_ref_jcLifetime1.b(2));
+                    var10_ref_mbLifetime1 = (Sentinel) (var9_ref_jcLifetime1.first(2));
                     while (var10_ref_mbLifetime1 != null) {
                       stackOut_56_0 = var10_ref_mbLifetime1;
                       stackIn_128_0Lifetime1 = stackOut_56_0;
@@ -1619,7 +1619,7 @@ final class CombatWorld {
                         null != var10_ref_mbLifetime1 &&
                         !var10_ref_mbLifetime1.field_Hb &&
                         !var10_ref_mbLifetime1.field_pc &&
-                        !var10_ref_mbLifetime1.i(75) &&
+                        !var10_ref_mbLifetime1.isWeaponReady(75) &&
                         ~var6.teamId != ~var10_ref_mbLifetime1.teamId && (var7 == null ||
                         !(((Sentinel) (var7)).playerId < this.playerCount) ||
                         !(var10_ref_mbLifetime1.playerId >= this.playerCount))) {
@@ -1680,16 +1680,16 @@ final class CombatWorld {
                         var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                       } else {
                         if (var6.field_u) {
-                          if (!this.a((byte) 91, ((Sentinel) (var7)).worldX >> 4, var6.worldX >> 4)) {
+                          if (!this.isSurfaceContinuousBetween((byte) 91, ((Sentinel) (var7)).worldX >> 4, var6.worldX >> 4)) {
                             var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                           } else {
-                            var6.field_t = this.a((byte) 69, var6.worldX >> 4);
+                            var6.field_t = this.findSurfaceEdgeTarget((byte) 69, var6.worldX >> 4);
                           }
                         } else {
-                          if (!this.a((byte) 127, var6.worldX >> 4, ((Sentinel) (var7)).worldX >> 4)) {
+                          if (!this.isSurfaceContinuousBetween((byte) 127, var6.worldX >> 4, ((Sentinel) (var7)).worldX >> 4)) {
                             var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                           } else {
-                            var6.field_t = this.a((byte) -81, var6.worldX >> 4);
+                            var6.field_t = this.findSurfaceEdgeTarget((byte) -81, var6.worldX >> 4);
                           }
                         }
                       }
@@ -1725,15 +1725,15 @@ final class CombatWorld {
                 if ((decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder0)) {
                   if (!var6.field_u &&
-                    this.b(true, var6.worldX >> 4)) {
+                    this.hasSurfaceLayerAt(true, var6.worldX >> 4)) {
                     if (var6.worldX > ((Sentinel) (var7)).worldX) {
-                      if (this.a(var6.worldX >> 4, false)) {
+                      if (this.hasWallToLeft(var6.worldX >> 4, false)) {
                         var6.field_t = (var6.worldX >> 4) + 1500;
                       } else {
                         var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                       }
                     } else {
-                      if (!this.e(-44, var6.worldX >> 4)) {
+                      if (!this.hasWallToRight(-44, var6.worldX >> 4)) {
                         var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                       } else {
                         var6.field_t = -1500 + (var6.worldX >> 4);
@@ -1741,8 +1741,8 @@ final class CombatWorld {
                     }
                   } else {
                     if ((!(!var6.field_u)) &&
-                      (!(!this.a((byte) 61, ((Sentinel) (var7)).worldX >> 4, var6.worldX >> 4)))) {
-                      var6.field_t = this.a((byte) 50, var6.worldX >> 4);
+                      (!(!this.isSurfaceContinuousBetween((byte) 61, ((Sentinel) (var7)).worldX >> 4, var6.worldX >> 4)))) {
+                      var6.field_t = this.findSurfaceEdgeTarget((byte) 50, var6.worldX >> 4);
                     }
                   }
                   decompiledFrameRemainder2 = false;
@@ -1758,18 +1758,18 @@ final class CombatWorld {
                     var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                   } else {
                     if (!var6.field_u) {
-                      if (this.a((byte) 39, var6.worldX >> 4, ((Sentinel) (var7)).worldX >> 4)) {
-                        var6.field_t = this.a((byte) 124, var6.worldX >> 4);
+                      if (this.isSurfaceContinuousBetween((byte) 39, var6.worldX >> 4, ((Sentinel) (var7)).worldX >> 4)) {
+                        var6.field_t = this.findSurfaceEdgeTarget((byte) 124, var6.worldX >> 4);
                       } else {
                         var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                       }
                       decompiledFrameRemainder2 = false;
                     }
                     else {
-                      if (!this.a((byte) 95, ((Sentinel) (var7)).worldX >> 4, var6.worldX >> 4)) {
+                      if (!this.isSurfaceContinuousBetween((byte) 95, ((Sentinel) (var7)).worldX >> 4, var6.worldX >> 4)) {
                         var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                       } else {
-                        var6.field_t = this.a((byte) 93, var6.worldX >> 4);
+                        var6.field_t = this.findSurfaceEdgeTarget((byte) 93, var6.worldX >> 4);
                       }
                     }
                   }
@@ -1812,49 +1812,49 @@ final class CombatWorld {
               if (var6.secondaryCommands.isEmpty(7) &&
                 var6.pendingCommands.isEmpty(7)) {
                 if (109 == var8Lifetime1Lifetime1) {
-                  this.a(var9, (Sentinel) (var7), 16384, var10, var5, var6);
+                  this.planSmallDroneMoves(var9, (Sentinel) (var7), 16384, var10, var5, var6);
                 }
                 if (107 == var8Lifetime1Lifetime1) {
-                  this.a(var6, var5, var10, (Sentinel) (var7), 0, var9);
+                  this.planLandDroneMoves(var6, var5, var10, (Sentinel) (var7), 0, var9);
                 }
                 if (var8Lifetime1Lifetime1 == 108) {
-                  var10 = this.a((Sentinel) (var7), var9, (byte) -64, var10, var6, var5);
+                  var10 = this.planHoverDroneMoves((Sentinel) (var7), var9, (byte) -64, var10, var6, var5);
                 }
                 if (var8Lifetime1Lifetime1 == 0) {
-                  this.a(var10, var5, (byte) 21, (Sentinel) (var7), var6, var9);
+                  this.planGolemMoves(var10, var5, (byte) 21, (Sentinel) (var7), var6, var9);
                 }
                 if (var8Lifetime1Lifetime1 == 55) {
-                  this.a((byte) 68, var5, var10, var9, var6, (Sentinel) (var7));
+                  this.planSlaveMoves((byte) 68, var5, var10, var9, var6, (Sentinel) (var7));
                 }
                 if (57 == var8Lifetime1Lifetime1) {
-                  this.a(var9, 2714, var10, var5, var6, (Sentinel) (var7));
+                  this.planAquilaMoves(var9, 2714, var10, var5, var6, (Sentinel) (var7));
                 }
                 if (var8Lifetime1Lifetime1 == 62) {
-                  this.a(var10, var5, var6, var9, (Sentinel) (var7), (byte) 88);
+                  this.planTurtleMoves(var10, var5, var6, var9, (Sentinel) (var7), (byte) 88);
                 }
                 if (var8Lifetime1Lifetime1 == 65) {
-                  this.a(var5, var9, var10, var6, (Sentinel) (var7), false);
+                  this.planCommandoMoves(var5, var9, var10, var6, (Sentinel) (var7), false);
                 }
                 if (var8Lifetime1Lifetime1 == 69) {
-                  this.a(var6, (byte) -35, (Sentinel) (var7), var9, var5);
+                  this.planHurricaneMoves(var6, (byte) -35, (Sentinel) (var7), var9, var5);
                 }
                 if (var8Lifetime1Lifetime1 == 72) {
-                  this.a(var9, (Sentinel) (var7), var6, 20063, var5);
+                  this.planScorpionMoves(var9, (Sentinel) (var7), var6, 20063, var5);
                 }
                 if (var8Lifetime1Lifetime1 == 75) {
-                  this.a((byte) -121, var10, (Sentinel) (var7), var9, var6, var5);
+                  this.planCrusherMoves((byte) -121, var10, (Sentinel) (var7), var9, var6, var5);
                 }
                 if (var8Lifetime1Lifetime1 == 79) {
-                  this.a((byte) 57, var9, (Sentinel) (var7), var6, var5, var10);
+                  this.planBerthaMoves((byte) 57, var9, (Sentinel) (var7), var6, var5, var10);
                 }
                 if (84 == var8Lifetime1Lifetime1) {
-                  this.a(var10, var6, var9, (Sentinel) (var7), var5, 14432);
+                  this.planOrbitalMoves(var10, var6, var9, (Sentinel) (var7), var5, 14432);
                 }
                 if (var8Lifetime1Lifetime1 == 88) {
-                  this.a((Sentinel) (var7), var9, -128, var5, var6, var10);
+                  this.planValhallaMoves((Sentinel) (var7), var9, -128, var5, var6, var10);
                 }
                 if (var8Lifetime1Lifetime1 == 92) {
-                  this.a(-103, var5, (Sentinel) (var7), var9, var6);
+                  this.planBabelMoves(-103, var5, (Sentinel) (var7), var9, var6);
                 }
               }
             }
@@ -1868,7 +1868,7 @@ final class CombatWorld {
         }
     }
 
-    final static void c(int param0) {
+    final static void updateNoticeText(int param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1895,7 +1895,7 @@ final class CombatWorld {
               var2 != 0) {
               QuickChatInputHelpers.field_f = Js5Transport.field_k;
             }
-            QuickChatInputHelpers.field_f = LoginHandshakeHelpers.joinCharSequences(new CharSequence[]{(CharSequence) ((Object) QuickChatInputHelpers.field_f), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) in.field_f)}, param0 - 11828);
+            QuickChatInputHelpers.field_f = LoginHandshakeHelpers.joinCharSequences(new CharSequence[]{(CharSequence) ((Object) QuickChatInputHelpers.field_f), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) SocialPacketHelpers.field_f)}, param0 - 11828);
           }
           ArrayWidgetContainer.field_O.closeDialog(105);
           HighscoreSubmission.showLoadingProgressDialog((byte) 54);
@@ -1907,7 +1907,7 @@ final class CombatWorld {
         }
     }
 
-    final void g(int param0, int param1) {
+    final void destroyBase(int param0, int param1) {
         int stackIn_43_0 = 0;
         int stackIn_43_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1978,7 +1978,7 @@ final class CombatWorld {
             stackIn_43_1 = -108;
           }
           if (stackIn_43_0 > stackIn_43_1) {
-            CombatWorld.g(124);
+            CombatWorld.releaseStatics(124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1988,7 +1988,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(byte param0, int param1, int param2, int param3, Sentinel param4, Sentinel param5) {
+    private final void planSlaveMoves(byte param0, int param1, int param2, int param3, Sentinel param4, Sentinel param5) {
         SentinelCommand stackIn_25_0 = null;
         SentinelCommand stackIn_25_1 = null;
         int stackIn_25_2 = 0;
@@ -2086,7 +2086,7 @@ final class CombatWorld {
               }
             }
             if (var7_int >= 0 &&
-              this.a(this.gravityAcceleration, (byte) -95, var7_int, param4, param5, 2600, 5 + this.simulationTick + (param4.worldX + (param5.worldX + this.simulationTick)) % 100)) {
+              this.simulateShotHits(this.gravityAcceleration, (byte) -95, var7_int, param4, param5, 2600, 5 + this.simulationTick + (param4.worldX + (param5.worldX + this.simulationTick)) % 100)) {
               return;
             }
             stackIn_55_0 = 40000;
@@ -2136,7 +2136,7 @@ final class CombatWorld {
         }
     }
 
-    final void a(Sentinel[] param0, int[] param1, int[] param2, int param3, int[] param4, int[] param5) {
+    final void collectMatchResults(Sentinel[] param0, int[] param1, int[] param2, int param3, int[] param4, int[] param5) {
         Sentinel stackIn_5_0 = null;
         int stackIn_20_0 = 0;
         int stackIn_20_1 = 0;
@@ -2418,7 +2418,7 @@ final class CombatWorld {
                     if (-1 != param4[var10] &&
                       (param4[var10] & 32) != 0) {
                       param4[var10] = ClientUiHelpers.bitAnd(param4[var10], -33);
-                      param4[var10] = DateOfBirthValidator.a(param4[var10], 16);
+                      param4[var10] = DateOfBirthValidator.bitOr(param4[var10], 16);
                     }
                     var10++;
                   }
@@ -2468,7 +2468,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(Sentinel param0, int param1, int param2, int param3, Sentinel param4, int param5) {
+    private final void planValhallaMoves(Sentinel param0, int param1, int param2, int param3, Sentinel param4, int param5) {
         SentinelCommand stackIn_19_0 = null;
         SentinelCommand stackIn_19_1 = null;
         int stackIn_19_2 = 0;
@@ -2561,9 +2561,9 @@ final class CombatWorld {
             }
           }
           if (Math.abs(param1) > 50000 &&
-            this.a(this.gravityAcceleration, (byte) -119, 3, param4, param0, 2600, this.simulationTick + 15)) {
+            this.simulateShotHits(this.gravityAcceleration, (byte) -119, 3, param4, param0, 2600, this.simulationTick + 15)) {
           }
-          if (!this.a(this.gravityAcceleration, (byte) -72, 2, param4, param0, 2600, 15 + this.simulationTick)) {
+          if (!this.simulateShotHits(this.gravityAcceleration, (byte) -72, 2, param4, param0, 2600, 15 + this.simulationTick)) {
             if (param4.charge <= 1) {
               if (80000 < Math.abs(param1) &&
                 param4.charge > 0) {
@@ -2575,8 +2575,8 @@ final class CombatWorld {
                 param4.charge = param4.maximumCharge;
               }
             } else {
-              if (!this.a(this.gravityAcceleration, (byte) -67, 1, param4, param0, 1728, 25 + this.simulationTick) &&
-                !this.a(this.gravityAcceleration, (byte) -49, 0, param4, param0, 4608, 25 + this.simulationTick)) {
+              if (!this.simulateShotHits(this.gravityAcceleration, (byte) -67, 1, param4, param0, 1728, 25 + this.simulationTick) &&
+                !this.simulateShotHits(this.gravityAcceleration, (byte) -49, 0, param4, param0, 4608, 25 + this.simulationTick)) {
               }
             }
           }
@@ -2604,7 +2604,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(int param0, int param1, Sentinel param2, int param3, Sentinel param4, byte param5) {
+    private final void planTurtleMoves(int param0, int param1, Sentinel param2, int param3, Sentinel param4, byte param5) {
         boolean discarded$0 = false;
         SentinelCommand stackIn_18_0 = null;
         SentinelCommand stackIn_18_1 = null;
@@ -2661,16 +2661,16 @@ final class CombatWorld {
             param2.pendingCommands.addLast(3, var7Lifetime1);
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!this.a(this.gravityAcceleration, (byte) -78, 3, param2, param4, 2600, this.simulationTick + 15) &&
-            !this.a(this.gravityAcceleration, (byte) -64, 2, param2, param4, 2600, 15 + this.simulationTick)) {
+          if (!this.simulateShotHits(this.gravityAcceleration, (byte) -78, 3, param2, param4, 2600, this.simulationTick + 15) &&
+            !this.simulateShotHits(this.gravityAcceleration, (byte) -64, 2, param2, param4, 2600, 15 + this.simulationTick)) {
             if (80000 > Math.abs(param3) &&
               param2.charge > 0 &&
-              this.a(this.gravityAcceleration, (byte) -29, 1, param2, param4, 4608, this.simulationTick + 25)) {
-              discarded$0 = this.a(this.gravityAcceleration, (byte) -98, 0, param2, param4, 2304, this.simulationTick + 75);
+              this.simulateShotHits(this.gravityAcceleration, (byte) -29, 1, param2, param4, 4608, this.simulationTick + 25)) {
+              discarded$0 = this.simulateShotHits(this.gravityAcceleration, (byte) -98, 0, param2, param4, 2304, this.simulationTick + 75);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if ((decompiledFrameRemainder0) &&
-              (this.a(this.gravityAcceleration, (byte) -105, 0, param2, param4, 3072, 50 + this.simulationTick))) {
+              (this.simulateShotHits(this.gravityAcceleration, (byte) -105, 0, param2, param4, 3072, 50 + this.simulationTick))) {
             }
           }
           var7_int = 112 % ((param5 + 66) / 46);
@@ -2695,7 +2695,7 @@ final class CombatWorld {
         }
     }
 
-    final int d(int param0) {
+    final int findFreeComputerPlayerId(int param0) {
         boolean[] var2 = null;
         int var3 = 0;
         Sentinel var4_ref_mb = null;
@@ -2761,7 +2761,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(int param0, Sentinel param1, Sentinel param2, int param3, int param4) {
+    private final void planScorpionMoves(int param0, Sentinel param1, Sentinel param2, int param3, int param4) {
         SentinelCommand stackIn_14_0 = null;
         SentinelCommand stackIn_14_1 = null;
         int stackIn_14_2 = 0;
@@ -2871,7 +2871,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(int param0, Sentinel param1, int param2, int param3, int param4, Sentinel param5) {
+    private final void planSmallDroneMoves(int param0, Sentinel param1, int param2, int param3, int param4, Sentinel param5) {
         SentinelCommand stackIn_33_0 = null;
         SentinelCommand stackIn_33_1 = null;
         int stackIn_33_2 = 0;
@@ -3238,7 +3238,7 @@ final class CombatWorld {
         }
     }
 
-    final static void c(int param0, int param1) {
+    final static void playSoundEffect(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -3257,7 +3257,7 @@ final class CombatWorld {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean hasTuhstatbutCookie(int param0) {
         RuntimeException var1 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -3265,7 +3265,7 @@ final class CombatWorld {
           if (param0 <= 74) {
             field_x = (String) null;
           }
-          stackIn_4_0 = ChatMessage.hasTuhstatbutCookie(Projectile.d((byte) -21), 0);
+          stackIn_4_0 = ChatMessage.hasTuhstatbutCookie(Projectile.getApplet((byte) -21), 0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3274,7 +3274,7 @@ final class CombatWorld {
         }
     }
 
-    private final int[] a(int param0, byte param1, int param2, int param3, int param4, int param5) {
+    private final int[] computeBallisticAimAngles(int param0, byte param1, int param2, int param3, int param4, int param5) {
         int[] stackIn_16_0 = null;
         int[] stackIn_60_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -3383,7 +3383,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(int param0, Sentinel param1, int param2, Sentinel param3, int param4, int param5) {
+    private final void planOrbitalMoves(int param0, Sentinel param1, int param2, Sentinel param3, int param4, int param5) {
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_74_2 = null;
@@ -3521,13 +3521,13 @@ final class CombatWorld {
         }
     }
 
-    private final boolean b(boolean param0, int param1) {
+    private final boolean hasSurfaceLayerAt(boolean param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            this.a((int[]) null, (byte) 42);
+            this.setRivalScores((int[]) null, (byte) 42);
           }
           stackIn_7_0 = (this.terrain.getSurfaceProfileAt((byte) 125, param1) != this.terrain.getGroundHeightAt((byte) -100, param1));
           return stackIn_7_0;
@@ -3538,7 +3538,7 @@ final class CombatWorld {
         }
     }
 
-    private final boolean a(int param0, byte param1, int param2, Sentinel param3, Sentinel param4, int param5, int param6) {
+    private final boolean simulateShotHits(int param0, byte param1, int param2, Sentinel param3, Sentinel param4, int param5, int param6) {
         int stackIn_22_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_36_0 = 0;
@@ -3585,7 +3585,7 @@ final class CombatWorld {
         var30 = SteelSentinels.obfuscationControl;
         try {
           if ((11 == param3.field_Nb ||
-            di.field_g == 10 &&
+            OptionMaskHelpers.field_g == 10 &&
             DirectByteStorage.field_j == 1 &&
             !(QuickChatHelpDialog.field_Ub > 2)) && 0 < param3.field_Mb[param2]) {
             return false;
@@ -3606,7 +3606,7 @@ final class CombatWorld {
             stackIn_36_0 = (var10 != 0) ? 0 : 1;
             var10 = stackIn_36_0;
           }
-          var11 = this.a(var9, (byte) -88, param4.worldX - param3.worldX, param0, param5, -param3.worldY + param4.worldY);
+          var11 = this.computeBallisticAimAngles(var9, (byte) -88, param4.worldX - param3.worldX, param0, param5, -param3.worldY + param4.worldY);
           if (param3.field_Xb[param2] == 6) {
             var10 = 1;
           }
@@ -3624,19 +3624,19 @@ final class CombatWorld {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var14 <= var17))) {
             var15 = param3.weaponParts[var17];
-            stackIn_85_0 = ~ja.a(var15.componentId, false);
+            stackIn_85_0 = ~IconLookupHelpers.getComponentSlotIndex(var15.componentId, false);
             if (var30 == 0) {
               if (stackIn_85_0 == ~var8.actionVariant &&
                 var15.field_C <= 0) {
                 if (Math.abs(var11[0]) >= var15.field_K &&
                   Math.abs(var11[0]) <= var15.field_W && (var16 != 0 ||
                   !TextAndBitHelpers.isSymbolKeyCode(105, var15.componentId))) {
-                  var12[0] = mc.a(var12[0], 1L << var17);
+                  var12[0] = LoadingCaptionHelpers.bitOr(var12[0], 1L << var17);
                 }
                 if (Math.abs(var11[1]) >= var15.field_K &&
                   Math.abs(var11[1]) <= var15.field_W && (var16 != 0 ||
                   !TextAndBitHelpers.isSymbolKeyCode(-75, var15.componentId))) {
-                  var12[1] = mc.a(var12[1], 1L << var17);
+                  var12[1] = LoadingCaptionHelpers.bitOr(var12[1], 1L << var17);
                 }
                 var13 = var15.componentId;
               }
@@ -3667,7 +3667,7 @@ final class CombatWorld {
             var20.field_b = var9;
             var21 = param3.worldX;
             var22 = -(param3.field_Db << 3) + param3.worldY;
-            var23 = var20.a(var13, (byte) 121, var8.targetWorldX, var8.aimAngle, var22, var21, var8.targetWorldY);
+            var23 = var20.createSimulatedProjectile(var13, (byte) 121, var8.targetWorldX, var8.aimAngle, var22, var21, var8.targetWorldY);
             var23.field_I = true;
             if (null != var23) {
               var24 = 0;
@@ -3751,7 +3751,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(int[] param0, byte param1) {
+    private final void setRivalScores(int[] param0, byte param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -3767,7 +3767,7 @@ final class CombatWorld {
           }
           this.field_E = param0;
           if (0 <= this.field_A) {
-            this.i(-22017);
+            this.updateSpecialSentinelLead(-22017);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3784,7 +3784,7 @@ final class CombatWorld {
         }
     }
 
-    final String d(int param0, int param1) {
+    final String getPlayerName(int param0, int param1) {
         RuntimeException var3 = null;
         Object stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -3806,7 +3806,7 @@ final class CombatWorld {
             return stackIn_8_0;
           }
           if (this.computerPlayerCount <= (param1 - this.playerCount)) {
-            stackIn_13_0 = dc.field_a;
+            stackIn_13_0 = TableColumns.field_a;
             return stackIn_13_0;
           }
           stackIn_11_0 = NumericDateInputWidget.field_W + (-this.playerCount + param1 + 1);
@@ -3818,7 +3818,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(byte param0, int param1, Sentinel param2, int param3, Sentinel param4, int param5) {
+    private final void planCrusherMoves(byte param0, int param1, Sentinel param2, int param3, Sentinel param4, int param5) {
         int stackIn_34_0 = 0;
         int stackIn_38_1 = 0;
         SentinelCommand stackIn_48_0 = null;
@@ -3908,20 +3908,20 @@ final class CombatWorld {
             var7Lifetime1.scheduled = true;
             param4.pendingCommands.addLast(3, var7Lifetime1);
           }
-          if (!this.a(this.gravityAcceleration, (byte) -73, 3, param4, param2, 2600, this.simulationTick + 15)) {
+          if (!this.simulateShotHits(this.gravityAcceleration, (byte) -73, 3, param4, param2, 2600, this.simulationTick + 15)) {
             if (param4.charge > 0 &&
               param2.field_S > 50) {
-              if (this.a(this.gravityAcceleration * 4, (byte) -63, 2, param4, param2, 8448, 25 + this.simulationTick)) {
+              if (this.simulateShotHits(this.gravityAcceleration * 4, (byte) -63, 2, param4, param2, 8448, 25 + this.simulationTick)) {
                 return;
               }
-              if (!this.a(this.gravityAcceleration, (byte) -114, 1, param4, param2, 3072, 50 + this.simulationTick)) {
+              if (!this.simulateShotHits(this.gravityAcceleration, (byte) -114, 1, param4, param2, 3072, 50 + this.simulationTick)) {
                 return;
               }
               return;
             }
-            if (!this.a(this.gravityAcceleration, (byte) -57, 1, param4, param2, 3072, 50 + this.simulationTick) &&
+            if (!this.simulateShotHits(this.gravityAcceleration, (byte) -57, 1, param4, param2, 3072, 50 + this.simulationTick) &&
               param4.charge > 0 &&
-              !this.a(this.gravityAcceleration, (byte) -24, 2, param4, param2, 8448, 25 + this.simulationTick)) {
+              !this.simulateShotHits(this.gravityAcceleration, (byte) -24, 2, param4, param2, 8448, 25 + this.simulationTick)) {
             }
           }
           return;
@@ -3957,10 +3957,10 @@ final class CombatWorld {
         var5 = SteelSentinels.obfuscationControl;
         try {
           if (obfuscationGuard >= -126) {
-            discarded$1 = this.a(-73, false);
+            discarded$1 = this.hasWallToLeft(-73, false);
           }
           var3 = new NodeIterator(this.sentinels);
-          var4 = (Sentinel) (var3.b(2));
+          var4 = (Sentinel) (var3.first(2));
           while (var4 != null) {
             if (~var4.playerId == ~playerId) {
               stackIn_10_0 = var4;
@@ -4006,7 +4006,7 @@ final class CombatWorld {
         return stackIn_5_0;
     }
 
-    private final void a(Sentinel param0, int param1, int param2, Sentinel param3, int param4, int param5) {
+    private final void planLandDroneMoves(Sentinel param0, int param1, int param2, Sentinel param3, int param4, int param5) {
         SentinelCommand stackIn_10_0 = null;
         SentinelCommand stackIn_10_1 = null;
         int stackIn_10_2 = 0;
@@ -4033,7 +4033,7 @@ final class CombatWorld {
         var12 = SteelSentinels.obfuscationControl;
         try {
           if (param4 != 0) {
-            this.i(-54);
+            this.updateSpecialSentinelLead(-54);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0.field_t > 0) {
@@ -4106,7 +4106,7 @@ final class CombatWorld {
             var9 = this.gravityAcceleration;
             var10 = 0;
             var11 = 10922;
-            this.a(param1, param2, param5, var8, var10, var7Lifetime1Lifetime1, var9, var11, -1);
+            this.chooseAimAngle(param1, param2, param5, var8, var10, var7Lifetime1Lifetime1, var9, var11, -1);
             var7Lifetime1Lifetime1.scheduled = true;
             param0.pendingCommands.addLast(3, var7Lifetime1Lifetime1);
           }
@@ -4131,7 +4131,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(int param0) {
+    private final void advanceArenaHazards(int param0) {
         int stackIn_66_0 = 0;
         boolean stackIn_103_0 = false;
         int stackIn_119_0 = 0;
@@ -4193,12 +4193,12 @@ final class CombatWorld {
               var2_int = 1;
               if ((1 << var2_int + 4 & this.field_v) == 0) {
                 if ((1 << 5 - var2_int & this.field_v) == 0) {
-                  this.a(var2_int, (byte) 8, (Sentinel) null);
+                  this.launchBaseStrike(var2_int, (byte) 8, (Sentinel) null);
                   if (var15 != 0) {
-                    this.a(1, var2_int);
+                    this.launchNeutralBaseStrike(1, var2_int);
                   }
                 } else {
-                  this.a(1, var2_int);
+                  this.launchNeutralBaseStrike(1, var2_int);
                 }
               }
               if (var15 == 0) {
@@ -4208,12 +4208,12 @@ final class CombatWorld {
             var2_intLifetime2 = 0;
             if ((this.field_v & 1 << 4 + var2_intLifetime2) == 0) {
               if ((1 << -var2_intLifetime2 + 1 + 4 & this.field_v) == 0) {
-                this.a(var2_intLifetime2, (byte) 100, (Sentinel) null);
+                this.launchBaseStrike(var2_intLifetime2, (byte) 100, (Sentinel) null);
                 if (var15 != 0) {
-                  this.a(1, var2_intLifetime2);
+                  this.launchNeutralBaseStrike(1, var2_intLifetime2);
                 }
               } else {
-                this.a(1, var2_intLifetime2);
+                this.launchNeutralBaseStrike(1, var2_intLifetime2);
               }
             }
             if (var15 == 0) {
@@ -4259,7 +4259,7 @@ final class CombatWorld {
               }
               if (var4 != -1 &&
                 0 == (this.field_v & 1 << 4 + var4)) {
-                this.a(var4, (byte) -95, (Sentinel) null);
+                this.launchBaseStrike(var4, (byte) -95, (Sentinel) null);
               }
               if (var15 == 0) {
                 return;
@@ -4464,7 +4464,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, SentinelCommand param5, int param6, int param7, int param8) {
+    private final void chooseAimAngle(int param0, int param1, int param2, int param3, int param4, SentinelCommand param5, int param6, int param7, int param8) {
         int stackIn_16_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -4523,7 +4523,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, Sentinel param4, Sentinel param5) {
+    private final void planAquilaMoves(int param0, int param1, int param2, int param3, Sentinel param4, Sentinel param5) {
         SentinelCommand stackIn_21_0 = null;
         SentinelCommand stackIn_21_1 = null;
         int stackIn_21_2 = 0;
@@ -4647,7 +4647,7 @@ final class CombatWorld {
         }
     }
 
-    final void a(int param0, byte param1, Sentinel param2) {
+    final void launchBaseStrike(int param0, byte param1, Sentinel param2) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -4670,7 +4670,7 @@ final class CombatWorld {
           this.projectiles.addLast(3, var7);
           var8 = -114 % ((param1 + 59) / 32);
           var9 = new NodeIterator(this.sentinels);
-          var10 = (Sentinel) (var9.b(2));
+          var10 = (Sentinel) (var9.first(2));
           while (null != var10) {
             if (var11 != 0) {
               return;
@@ -4696,7 +4696,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(int param0, int param1, int param2, Sentinel param3, Sentinel param4, boolean param5) {
+    private final void planCommandoMoves(int param0, int param1, int param2, Sentinel param3, Sentinel param4, boolean param5) {
         SentinelCommand stackIn_36_0 = null;
         SentinelCommand stackIn_36_1 = null;
         int stackIn_36_2 = 0;
@@ -4772,11 +4772,11 @@ final class CombatWorld {
             return;
           }
           if (50000 < Math.abs(param1) &&
-            this.a(this.gravityAcceleration, (byte) -89, 2, param3, param4, 2600, this.simulationTick + 15)) {
+            this.simulateShotHits(this.gravityAcceleration, (byte) -89, 2, param3, param4, 2600, this.simulationTick + 15)) {
             return;
           }
           if (param3.charge <= 1) {
-            if (this.a(this.gravityAcceleration, (byte) -88, 0, param3, param4, 4352, this.simulationTick + 25) &&
+            if (this.simulateShotHits(this.gravityAcceleration, (byte) -88, 0, param3, param4, 4352, this.simulationTick + 25) &&
               Math.abs(param1) > 80000 &&
               param3.charge > 0) {
               var7Lifetime1 = new SentinelCommand(3, 0, this.simulationTick + 30);
@@ -4786,8 +4786,8 @@ final class CombatWorld {
               param3.pendingCommands.addLast(3, var7Lifetime1);
             }
           } else {
-            if (!this.a(this.gravityAcceleration, (byte) -126, 1, param3, param4, 1728, 25 + this.simulationTick) &&
-              !this.a(this.gravityAcceleration, (byte) -63, 0, param3, param4, 4352, 25 + this.simulationTick)) {
+            if (!this.simulateShotHits(this.gravityAcceleration, (byte) -126, 1, param3, param4, 1728, 25 + this.simulationTick) &&
+              !this.simulateShotHits(this.gravityAcceleration, (byte) -63, 0, param3, param4, 4352, 25 + this.simulationTick)) {
             }
           }
           return;
@@ -4811,7 +4811,7 @@ final class CombatWorld {
         }
     }
 
-    private final boolean a(byte param0, int param1, int param2) {
+    private final boolean isSurfaceContinuousBetween(byte param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -4821,8 +4821,8 @@ final class CombatWorld {
         boolean stackOut_14_0;
         var5 = SteelSentinels.obfuscationControl;
         try {
-          if (this.b(true, param1) &&
-            this.b(true, param2)) {
+          if (this.hasSurfaceLayerAt(true, param1) &&
+            this.hasSurfaceLayerAt(true, param2)) {
             if (param0 < 34) {
               return true;
             }
@@ -4834,7 +4834,7 @@ final class CombatWorld {
             param1++;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (param2 <= param1))) {
-              stackOut_14_0 = this.b(true, param1);
+              stackOut_14_0 = this.hasSurfaceLayerAt(true, param1);
               stackIn_22_0 = stackOut_14_0;
               stackIn_15_0 = stackOut_14_0;
               if (var5 == 0) {
@@ -4859,7 +4859,7 @@ final class CombatWorld {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_L = null;
           field_jb = null;
@@ -4869,7 +4869,7 @@ final class CombatWorld {
           field_I = null;
           field_S = null;
           if (param0 != 0) {
-            CombatWorld.c(-128);
+            CombatWorld.updateNoticeText(-128);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "ee.L(" + param0 + ')');
@@ -4913,7 +4913,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(byte param0, int param1, Sentinel param2, Sentinel param3, int param4, int param5) {
+    private final void planBerthaMoves(byte param0, int param1, Sentinel param2, Sentinel param3, int param4, int param5) {
         SentinelCommand stackIn_17_0 = null;
         SentinelCommand stackIn_17_1 = null;
         int stackIn_17_2 = 0;
@@ -5004,21 +5004,21 @@ final class CombatWorld {
           if (param0 != 57) {
             this.field_hb = -92;
           }
-          if (!this.a(this.gravityAcceleration, (byte) -57, 4, param3, param2, 2600, this.simulationTick + 15) &&
-            !this.a(this.gravityAcceleration, (byte) -61, 3, param3, param2, 2600, this.simulationTick + 15)) {
+          if (!this.simulateShotHits(this.gravityAcceleration, (byte) -57, 4, param3, param2, 2600, this.simulationTick + 15) &&
+            !this.simulateShotHits(this.gravityAcceleration, (byte) -61, 3, param3, param2, 2600, this.simulationTick + 15)) {
             if (param3.charge > 0 &&
               param2.field_S > 50) {
-              if (this.a(this.gravityAcceleration * 4, (byte) -88, 1, param3, param2, 8448, 15 + this.simulationTick)) {
+              if (this.simulateShotHits(this.gravityAcceleration * 4, (byte) -88, 1, param3, param2, 8448, 15 + this.simulationTick)) {
                 return;
               }
-              if (!this.a(this.gravityAcceleration, (byte) -29, 0, param3, param2, 2304, this.simulationTick + 25)) {
+              if (!this.simulateShotHits(this.gravityAcceleration, (byte) -29, 0, param3, param2, 2304, this.simulationTick + 25)) {
                 return;
               }
               return;
             }
-            if (!this.a(this.gravityAcceleration, (byte) -88, 0, param3, param2, 2304, this.simulationTick + 25) &&
+            if (!this.simulateShotHits(this.gravityAcceleration, (byte) -88, 0, param3, param2, 2304, this.simulationTick + 25) &&
               param3.charge > 0 &&
-              this.a(this.gravityAcceleration, (byte) -91, 1, param3, param2, 1728, 15 + this.simulationTick)) {
+              this.simulateShotHits(this.gravityAcceleration, (byte) -91, 1, param3, param2, 1728, 15 + this.simulationTick)) {
             }
           }
           return;
@@ -5042,7 +5042,7 @@ final class CombatWorld {
         }
     }
 
-    private final boolean a(int param0, boolean param1) {
+    private final boolean hasWallToLeft(int param0, boolean param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         boolean stackIn_24_1 = false;
@@ -5056,7 +5056,7 @@ final class CombatWorld {
           if (this.terrain.getSecondaryHeightAt(param1, param0) > 3000) {
             return false;
           }
-          if (!this.b(true, param0)) {
+          if (!this.hasSurfaceLayerAt(true, param0)) {
             return false;
           }
           param0--;
@@ -5068,7 +5068,7 @@ final class CombatWorld {
                 return true;
               }
               stackIn_24_1 = !(param1);
-              if (!this.b(stackIn_24_1, param0)) {
+              if (!this.hasSurfaceLayerAt(stackIn_24_1, param0)) {
                 return false;
               }
               param0--;
@@ -5087,13 +5087,13 @@ final class CombatWorld {
         }
     }
 
-    final boolean f(int param0) {
+    final boolean hasNoSentinels(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -36) {
-            this.b(-114, 97);
+            this.isOutsideBaseZone(-114, 97);
           }
           stackIn_7_0 = (this.sentinels.sentinel.next == this.sentinels.sentinel.previous);
           return stackIn_7_0;
@@ -5104,7 +5104,7 @@ final class CombatWorld {
         }
     }
 
-    private final int a(byte param0, int param1) {
+    private final int findSurfaceEdgeTarget(byte param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -5126,7 +5126,7 @@ final class CombatWorld {
           if (this.terrain.getProfileLength(65) / 2 <= param1) {
             var3_int = this.terrain.getProfileLength(108);
             while (param1 > 0) {
-              stackOut_4_0 = this.b(true, param1);
+              stackOut_4_0 = this.hasSurfaceLayerAt(true, param1);
               stackIn_22_0 = stackOut_4_0 ? 1 : 0;
               stackIn_5_0 = stackOut_4_0;
               if (var5 != 0) {
@@ -5148,7 +5148,7 @@ final class CombatWorld {
             (decompiledFrameCompleted2) &&
             (decompiledFrameCompleted1)) {
             while (!(this.terrain.getProfileLength(-128) <= param1)) {
-              stackOut_13_0 = this.b(true, param1);
+              stackOut_13_0 = this.hasSurfaceLayerAt(true, param1);
               stackIn_22_0 = stackOut_13_0 ? 1 : 0;
               stackIn_14_0 = stackOut_13_0;
               if (var5 != 0) {
@@ -5174,7 +5174,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(int param0, int param1, Sentinel param2, int param3, Sentinel param4) {
+    private final void planBabelMoves(int param0, int param1, Sentinel param2, int param3, Sentinel param4) {
         RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
@@ -5228,12 +5228,12 @@ final class CombatWorld {
           }
           param2.worldY = param2.worldY + (param4.field_Db << 3);
           if ((param4.field_Lb ||
-            !(param4.field_oc <= 0)) && !this.a(this.gravityAcceleration, (byte) -128, 3, param4, param2, 2600, this.simulationTick + 15)) {
+            !(param4.field_oc <= 0)) && !this.simulateShotHits(this.gravityAcceleration, (byte) -128, 3, param4, param2, 2600, this.simulationTick + 15)) {
           }
-          if (!this.a(this.gravityAcceleration, (byte) -97, 2, param4, param2, 2600, 15 + this.simulationTick)) {
+          if (!this.simulateShotHits(this.gravityAcceleration, (byte) -97, 2, param4, param2, 2600, 15 + this.simulationTick)) {
             if (param4.charge > 1) {
-              if ((!this.a(this.gravityAcceleration, (byte) -109, 1, param4, param2, 1728, 25 + this.simulationTick)) &&
-                (this.a(0, (byte) -69, 0, param4, param2, 4608, 25 + this.simulationTick)) &&
+              if ((!this.simulateShotHits(this.gravityAcceleration, (byte) -109, 1, param4, param2, 1728, 25 + this.simulationTick)) &&
+                (this.simulateShotHits(0, (byte) -69, 0, param4, param2, 4608, 25 + this.simulationTick)) &&
                 (param4.field_t == 0)) {
                 var6Lifetime1 = new SentinelCommand(3, 0, 3 + this.simulationTick);
                 var6Lifetime1.targetWorldY = param4.worldY - 20000;
@@ -5299,7 +5299,7 @@ final class CombatWorld {
         int var8 = 0;
         var8 = SteelSentinels.obfuscationControl;
         try {
-          stackIn_5_0 = (obfuscationGuard < ~di.field_g) ? 0 : 1;
+          stackIn_5_0 = (obfuscationGuard < ~OptionMaskHelpers.field_g) ? 0 : 1;
           var2_int = stackIn_5_0;
           var3 = 0;
           var4 = 0;
@@ -5338,7 +5338,7 @@ final class CombatWorld {
             if (0 < ClockAndCookieHelpers.countSetBits((byte) 123, var4)) {
               return;
             }
-            this.a(var6, (byte) -109);
+            this.setRivalScores(var6, (byte) -109);
             if (var8 == 0) {
               return;
             }
@@ -5347,7 +5347,7 @@ final class CombatWorld {
             var5 != 0) {
             return;
           }
-          this.a(var6, (byte) -111);
+          this.setRivalScores(var6, (byte) -111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5356,7 +5356,7 @@ final class CombatWorld {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final boolean isLineOfSightBlocked(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         boolean stackIn_8_0 = false;
         boolean stackIn_19_0 = false;
         boolean stackIn_32_0 = false;
@@ -5391,7 +5391,7 @@ final class CombatWorld {
               var9 = param3;
               while (var9 < param0) {
                 var10 = param2 * (-param3 + var9) / param1 + param4;
-                stackOut_7_0 = this.a(true, var10, var9);
+                stackOut_7_0 = this.isUnderOverhang(true, var10, var9);
                 stackIn_50_0 = stackOut_7_0;
                 stackIn_8_0 = stackOut_7_0;
                 if (var11 != 0) {
@@ -5412,7 +5412,7 @@ final class CombatWorld {
               var9Lifetime2 = param3;
               while (param0 < var9Lifetime2) {
                 var10Lifetime2 = (var9Lifetime2 - param3) * param2 / param1 + param4;
-                stackOut_18_0 = this.a(true, var10Lifetime2, var9Lifetime2);
+                stackOut_18_0 = this.isUnderOverhang(true, var10Lifetime2, var9Lifetime2);
                 stackIn_50_0 = stackOut_18_0;
                 stackIn_19_0 = stackOut_18_0;
                 if (var11 != 0) {
@@ -5436,7 +5436,7 @@ final class CombatWorld {
               var9Lifetime1 = param4;
               while (param6 > var9Lifetime1) {
                 var10Lifetime1 = param3 + (-param4 + var9Lifetime1) * param1 / param2;
-                stackOut_31_0 = this.a(true, var9Lifetime1, var10Lifetime1);
+                stackOut_31_0 = this.isUnderOverhang(true, var9Lifetime1, var10Lifetime1);
                 stackIn_50_0 = stackOut_31_0;
                 stackIn_32_0 = stackOut_31_0;
                 if (var11 != 0) {
@@ -5455,7 +5455,7 @@ final class CombatWorld {
               var9Lifetime1Lifetime1 = param4;
               while (param6 < var9Lifetime1Lifetime1) {
                 var10Lifetime1Lifetime1 = (var9Lifetime1Lifetime1 - param4) * param1 / param2 + param3;
-                stackOut_41_0 = this.a(true, var9Lifetime1Lifetime1, var10Lifetime1Lifetime1);
+                stackOut_41_0 = this.isUnderOverhang(true, var9Lifetime1Lifetime1, var10Lifetime1Lifetime1);
                 stackIn_50_0 = stackOut_41_0;
                 stackIn_42_0 = stackOut_41_0;
                 if (var11 != 0) {
@@ -5483,7 +5483,7 @@ final class CombatWorld {
         }
     }
 
-    private final int h(int param0) {
+    private final int countNeutralSentinels(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Sentinel var3 = null;
@@ -5522,7 +5522,7 @@ final class CombatWorld {
         }
     }
 
-    private final void i(int param0) {
+    private final void updateSpecialSentinelLead(int param0) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -5535,7 +5535,7 @@ final class CombatWorld {
           }
           this.field_p = true;
           if (param0 != -22017) {
-            this.a((byte) 105, -38, 41, -10, (Sentinel) null, (Sentinel) null);
+            this.planSlaveMoves((byte) 105, -38, 41, -10, (Sentinel) null, (Sentinel) null);
           }
           var2_int = 0;
           while (var2_int < this.field_E.length) {
@@ -5558,7 +5558,7 @@ final class CombatWorld {
         }
     }
 
-    private final boolean a(boolean param0, int param1, int param2) {
+    private final boolean isUnderOverhang(boolean param0, int param1, int param2) {
         RuntimeException var4 = null;
         boolean stackIn_13_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -5584,7 +5584,7 @@ final class CombatWorld {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void cancelPendingCommands(int param0, int param1, int param2) {
         Sentinel var4 = null;
         int var5 = 0;
         int stackIn_18_0 = 0;
@@ -5650,7 +5650,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(Sentinel param0, byte param1, Sentinel param2, int param3, int param4) {
+    private final void planHurricaneMoves(Sentinel param0, byte param1, Sentinel param2, int param3, int param4) {
         boolean discarded$0 = false;
         int stackIn_5_0 = 0;
         SentinelCommand stackIn_11_0 = null;
@@ -5697,7 +5697,7 @@ final class CombatWorld {
         var10 = SteelSentinels.obfuscationControl;
         try {
           var6 = null;
-          stackIn_5_0 = (param0.chassis.a(0, param0, new ArticulatedPart[]{}, 32768, param0.field_Xb[2]).length <= 0) ? 0 : 1;
+          stackIn_5_0 = (param0.chassis.collectWeaponsCoveringAngle(0, param0, new ArticulatedPart[]{}, 32768, param0.field_Xb[2]).length <= 0) ? 0 : 1;
           boolean decompiledFrameRemainder1 = true;
           var7 = stackIn_5_0;
           if (param0.field_t > 0) {
@@ -5799,10 +5799,10 @@ final class CombatWorld {
           boolean decompiledFrameRemainder0 = true;
           var8 = 41 % ((param1 - 31) / 61);
           if (!param0.field_Lb ||
-            !this.a(this.gravityAcceleration, (byte) -92, 2, param0, param2, 2600, 3 + this.simulationTick)) {
+            !this.simulateShotHits(this.gravityAcceleration, (byte) -92, 2, param0, param2, 2600, 3 + this.simulationTick)) {
             if (param0.charge > 1) {
-              if ((!this.a(this.gravityAcceleration, (byte) -75, 1, param0, param2, 4608, this.simulationTick + 3)) &&
-                (decompiledFrameRemainder0 = !(!this.a(this.gravityAcceleration, (byte) -26, 0, param0, param2, 1280, this.simulationTick + 3)))) {
+              if ((!this.simulateShotHits(this.gravityAcceleration, (byte) -75, 1, param0, param2, 4608, this.simulationTick + 3)) &&
+                (decompiledFrameRemainder0 = !(!this.simulateShotHits(this.gravityAcceleration, (byte) -26, 0, param0, param2, 1280, this.simulationTick + 3)))) {
                 var9 = new SentinelCommand(6, -param4, this.simulationTick + 50);
                 var9.scheduled = true;
                 param0.pendingCommands.addLast(3, var9);
@@ -5816,19 +5816,19 @@ final class CombatWorld {
               }
             }
             if ((decompiledFrameRemainder0) &&
-              (this.a(this.gravityAcceleration, (byte) -30, 0, param0, param2, 1280, this.simulationTick + 3))) {
+              (this.simulateShotHits(this.gravityAcceleration, (byte) -30, 0, param0, param2, 1280, this.simulationTick + 3))) {
               var9 = new SentinelCommand(6, -param4, this.simulationTick + 50);
               var9.scheduled = true;
               param0.pendingCommands.addLast(3, var9);
               if (var10 != 0) {
-                discarded$0 = this.a(this.gravityAcceleration, (byte) -87, 2, param0, param2, 2600, this.simulationTick + 15);
+                discarded$0 = this.simulateShotHits(this.gravityAcceleration, (byte) -87, 2, param0, param2, 2600, this.simulationTick + 15);
                 var9 = new SentinelCommand(6, -param4, 30 + this.simulationTick);
                 var9.scheduled = true;
                 param0.pendingCommands.addLast(3, var9);
               }
             }
           } else {
-            discarded$0 = this.a(this.gravityAcceleration, (byte) -87, 2, param0, param2, 2600, this.simulationTick + 15);
+            discarded$0 = this.simulateShotHits(this.gravityAcceleration, (byte) -87, 2, param0, param2, 2600, this.simulationTick + 15);
             var9 = new SentinelCommand(6, -param4, 30 + this.simulationTick);
             var9.scheduled = true;
             param0.pendingCommands.addLast(3, var9);
@@ -5858,7 +5858,7 @@ final class CombatWorld {
         }
     }
 
-    private final int a(boolean param0, int param1) {
+    private final int pickRandomEntryInGroup(boolean param0, int param1) {
         boolean discarded$1 = false;
         int[] var3 = null;
         RuntimeException var3_ref = null;
@@ -5867,7 +5867,7 @@ final class CombatWorld {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            discarded$1 = this.a(-35, (byte) 87, -74, (Sentinel) null, (Sentinel) null, -128, 75);
+            discarded$1 = this.simulateShotHits(-35, (byte) 87, -74, (Sentinel) null, (Sentinel) null, -128, 75);
           }
           var3 = new int[]{0, 6, 12, 18, 23, 29, RegistrationRequestDialog.field_Xb.length};
           var4 = var3[param1] + this.random.nextIntBounded(115, var3[1 + param1] - var3[param1]);
@@ -5880,7 +5880,7 @@ final class CombatWorld {
         }
     }
 
-    private final int a(Sentinel param0, int param1, byte param2, int param3, Sentinel param4, int param5) {
+    private final int planHoverDroneMoves(Sentinel param0, int param1, byte param2, int param3, Sentinel param4, int param5) {
         int stackIn_8_0 = 0;
         int stackIn_126_0 = 0;
         RuntimeException stackIn_130_0 = null;
@@ -5907,7 +5907,7 @@ final class CombatWorld {
         int var14Lifetime1;
         var16 = SteelSentinels.obfuscationControl;
         try {
-          if (10 == di.field_g &&
+          if (10 == OptionMaskHelpers.field_g &&
             DirectByteStorage.field_j == 0) {
             stackIn_8_0 = 1;
           } else {
@@ -6025,8 +6025,8 @@ final class CombatWorld {
               if (param4.field_Xb[0] != 1) {
                 var11_double = Math.atan2((double)param1, (double)(-param3));
                 var8.aimAngle = (int)(65536.0 * var11_double / 6.283185307179586);
-                var13_ref_nk__ = param4.chassis.a(0, param4, new ArticulatedPart[]{}, var8.aimAngle * param5, param4.field_Xb[0]);
-                param4.chassis.b((byte) -128, 0, param5, 0);
+                var13_ref_nk__ = param4.chassis.collectWeaponsCoveringAngle(0, param4, new ArticulatedPart[]{}, var8.aimAngle * param5, param4.field_Xb[0]);
+                param4.chassis.updateWorldPositions((byte) -128, 0, param5, 0);
                 var14 = 0;
                 var15 = 0;
                 scanLoop1: while (true) {
@@ -6073,7 +6073,7 @@ final class CombatWorld {
                 var12 = 0;
                 var13 = 8192;
                 var14Lifetime1 = 32768;
-                this.a(param5, param3, param1, var11, var13, var8, var12, var14Lifetime1, -1);
+                this.chooseAimAngle(param5, param3, param1, var11, var13, var8, var12, var14Lifetime1, -1);
                 var8.scheduled = true;
                 param4.pendingCommands.addLast(3, var8);
               }
@@ -6104,7 +6104,7 @@ final class CombatWorld {
         }
     }
 
-    private final void a(int param0, int param1, byte param2, Sentinel param3, Sentinel param4, int param5) {
+    private final void planGolemMoves(int param0, int param1, byte param2, Sentinel param3, Sentinel param4, int param5) {
         boolean discarded$0 = false;
         boolean discarded$1 = false;
         boolean discarded$2 = false;
@@ -6139,19 +6139,19 @@ final class CombatWorld {
           }
           if (param4.field_Xb[4] == 19) {
             if (!param4.field_u) {
-              discarded$0 = this.a(this.gravityAcceleration / 2, (byte) -76, 4, param4, param3, 2600, this.simulationTick + 5);
+              discarded$0 = this.simulateShotHits(this.gravityAcceleration / 2, (byte) -76, 4, param4, param3, 2600, this.simulationTick + 5);
               if ((var10 != 0) &&
                 (!param4.field_u)) {
-                discarded$1 = this.a(this.gravityAcceleration, (byte) -85, 4, param4, param3, 2600, 5 + this.simulationTick);
+                discarded$1 = this.simulateShotHits(this.gravityAcceleration, (byte) -85, 4, param4, param3, 2600, 5 + this.simulationTick);
               }
             }
           } else {
             if (!param4.field_u) {
-              discarded$1 = this.a(this.gravityAcceleration, (byte) -85, 4, param4, param3, 2600, 5 + this.simulationTick);
+              discarded$1 = this.simulateShotHits(this.gravityAcceleration, (byte) -85, 4, param4, param3, 2600, 5 + this.simulationTick);
             }
           }
           if (var8 == 0 &&
-            this.a(this.gravityAcceleration, (byte) -36, 2, param4, param3, 2304, 25 + this.simulationTick)) {
+            this.simulateShotHits(this.gravityAcceleration, (byte) -36, 2, param4, param3, 2304, 25 + this.simulationTick)) {
             if ((param4.field_t == 0) &&
               (!(30000 > Math.abs(param5)))) {
               var9 = new SentinelCommand(6, param1, this.simulationTick + 27);
@@ -6165,7 +6165,7 @@ final class CombatWorld {
                   param4.pendingCommands.addLast(3, var9);
                 }
                 if (Math.abs(param5) < 100000) {
-                  discarded$2 = this.a(0, (byte) -80, 0, param4, param3, 2304, 25 + this.simulationTick);
+                  discarded$2 = this.simulateShotHits(0, (byte) -80, 0, param4, param3, 2304, 25 + this.simulationTick);
                 }
               }
             }
@@ -6177,7 +6177,7 @@ final class CombatWorld {
               param4.pendingCommands.addLast(3, var9);
             }
             if (Math.abs(param5) < 100000) {
-              discarded$2 = this.a(0, (byte) -80, 0, param4, param3, 2304, 25 + this.simulationTick);
+              discarded$2 = this.simulateShotHits(0, (byte) -80, 0, param4, param3, 2304, 25 + this.simulationTick);
             }
           }
           if (param4.field_t > 0) {
@@ -6373,17 +6373,17 @@ final class CombatWorld {
                   stackIn_83_0.field_ib = stackIn_84_1;
                   var11.configureDesign(param3[var14], true, false, var14, var15);
                   if (this.field_F == 1 &&
-                    6100 < hm.a((byte) 126, var11.moduleTypes, var11.chassis)) {
+                    6100 < LoadoutCostHelpers.computeLoadoutCost((byte) 126, var11.moduleTypes, var11.chassis)) {
                     var11.configureDesign(ReflectionCheck.field_x, true, false, var14, var15);
                   }
                   if (this.field_U != null) {
-                    this.field_U.a(0, (byte) 123, var14, Integer.toString(var11.field_lb));
+                    this.field_U.setEntryText(0, (byte) 123, var14, Integer.toString(var11.field_lb));
                   }
                   this.sentinels.addLast(var11, -21459);
                 }
               }
               if (this.terrain.getTerrainType(115) == 4) {
-                var11.j(-5);
+                var11.chooseSpawnX(-5);
                 var11.worldY = -320000;
                 var11.field_Lb = true;
                 var11.velocityX = 0;
@@ -6394,7 +6394,7 @@ final class CombatWorld {
                 var11.field_z = 500;
                 var11.field_fc = var11.worldY;
               }
-              var11.d(-28033);
+              var11.applyTeamColours(-28033);
               this.field_Z[var13_int] = 50;
               var13_int++;
               continue;

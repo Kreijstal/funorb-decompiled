@@ -39,7 +39,7 @@ final class TriangleMesh {
     short[] field_j;
     short field_w;
     short[] field_z;
-    static fm field_A;
+    static QuickChatParameterType field_A;
     short[] field_e;
     int[] field_B;
     int field_W;
@@ -247,7 +247,7 @@ final class TriangleMesh {
         field_D = new String[]{"<%1> fell into <%0>'s flak", "<%1> was perforated by <%0>'s minigun", "<%1> was incinerated by <%0>", "<%1> felt <%0>'s electrostatic force", "<%1> was lasered by <%0>", "<%1> was melted by <%0>", "<%1> couldn't dodge <%0>'s missile", "<%1> was pierced by <%0>", "<%1> short-circuited because of <%0>", "<%1> was fragged by <%0>", "<%1> was electrocuted by <%0>", "<%1> fell into <%0>'s heavy flak", "<%1> was perforated by <%0>'s heavy gun", "<%1> decided to catch <%0>'s shell", "<%1> fell foul of <%0>'s artillery", "<%1> was sniped by <%0>", "<%1> got erased by <%0>", "<%1> was taught about the power of light by <%0>", "<%1> was vaporised by <%0>", "<%1> was engulfed by <%0>'s rocket spread", "<%1> got a present from <%0>", "<%1> caught <%0>'s lightning", "", "", "", "", "<%1> looked down the barrel of <%0>'s ultra gun", "<%1> rode <%0>'s shell", "<%1> had death rained down from <%0>", "<%1> was turned into slag by <%0>", "<%1> stared into <%0>'s sun for too long", "<%1> was atomised by <%0>", "<%1> fell to <%0>'s judgement", "<%1> was lost when <%0>'s rocket found its mark", "<%1> failed to avoid <%0>'s missile", "<%1> received serenity from <%0>"};
         field_U = "Game full";
         field_h = new String[]{"NAME", "RATING", "PLAYED", "WON", "DRAWN", "LOST"};
-        field_A = new fm(15, 0, 1, 0);
+        field_A = new QuickChatParameterType(15, 0, 1, 0);
         field_O = new int[]{0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 7, 4, 4, 4, 7, 0, 4, 5, 5, 6, 5, 3, 3, 6, 6, 4, 5, 3, 3, 7};
         field_d = -1;
         field_N = new int[128];

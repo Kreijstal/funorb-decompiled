@@ -14,7 +14,7 @@ class UsernameCredentials extends LoginCredentials {
     static String field_q;
     static String field_k;
 
-    final static boolean a(int param0, int param1, String param2, int param3, int param4, int param5) {
+    final static boolean drawHoverCaptionButton(int param0, int param1, String param2, int param3, int param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -47,9 +47,9 @@ class UsernameCredentials extends LoginCredentials {
             return false;
           }
           var8 = BirthDateEntryPanel.field_T;
-          jm.a(param1, param0, var8, 1, param4, param3);
+          PendingIntReplyRequest.drawNineSliceFrame(param1, param0, var8, 1, param4, param3);
           if (param2 != null) {
-            AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(param5 - 12448, param2), param4 + param3 / 2, param1 + (AlphaContainer.field_U.field_U + (param0 + 1)) / 2, var7, -1);
+            AlphaContainer.field_U.drawCentered(WidgetStyleLayer.toUpperCaseOutsideTags(param5 - 12448, param2), param4 + param3 / 2, param1 + (AlphaContainer.field_U.field_U + (param0 + 1)) / 2, var7, -1);
           }
           stackIn_20_0 = var6_int;
           return stackIn_20_0 != 0;
@@ -73,15 +73,15 @@ class UsernameCredentials extends LoginCredentials {
           if (param1) {
             field_q = (String) null;
           }
-          param0.a(this.field_m, (byte) -66);
+          param0.writeBase38Name(this.field_m, (byte) -66);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "fb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    dj type(byte param0) {
+    NumberParsingHelpers type(byte param0) {
         if (param0 <= 47) {
-          return (dj) null;
+          return (NumberParsingHelpers) null;
         }
         return QuickChatHelpDialog.field_Sb;
     }
@@ -113,7 +113,7 @@ class UsernameCredentials extends LoginCredentials {
         field_h = null;
     }
 
-    final static void b(int param0) {
+    final static void clearMeshDepthBuckets(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -123,7 +123,7 @@ class UsernameCredentials extends LoginCredentials {
         RuntimeException var1_ref = null;
         var4 = SteelSentinels.obfuscationControl;
         try {
-          var5 = qe.field_a;
+          var5 = TextSpriteHelpers.field_a;
           var1 = var5;
           var2 = param0;
           var3 = var5.length;

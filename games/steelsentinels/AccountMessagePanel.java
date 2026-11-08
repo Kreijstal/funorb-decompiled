@@ -49,7 +49,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         this.field_ab.drawParagraph(this.field_P, this.field_o + (param2 + 14), this.field_z + param0 + 10, this.field_x - 28, this.field_E, 16777215, -1, 0, 0, this.field_ab.field_G);
     }
 
-    final static RgbSprite[] b(int param0, int param1, int param2, int param3) {
+    final static RgbSprite[] createSolidFrameSprites(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = SteelSentinels.obfuscationControl;
         RgbSprite[] var7 = new RgbSprite[9];
@@ -57,11 +57,11 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         if (param1 != -2) {
           AccountMessagePanel.releaseStatics((byte) 112);
         }
-        var7[0] = bd.a(param0, param2, 248);
+        var7[0] = SolidSpriteHelpers.createSolidSprite(param0, param2, 248);
         for (var5 = 1; var5 < 9; var5++) {
           var7[var5] = var7[0];
         }
-        var4[4] = bd.a(param3, 64, 248);
+        var4[4] = SolidSpriteHelpers.createSolidSprite(param3, 64, 248);
         return var4;
     }
 
@@ -75,7 +75,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
             if (param3 == this.field_bb[var6_int]) {
               var7 = this.field_U[var6_int];
               if (var7 != -1) {
-                LabeledField.a(this.field_U[var6_int], 0);
+                LabeledField.setPendingMessageId(this.field_U[var6_int], 0);
                 break;
               }
               this.field_X.closeDialog(112);

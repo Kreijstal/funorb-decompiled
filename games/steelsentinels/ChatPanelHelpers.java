@@ -5,7 +5,7 @@ final class ChatPanelHelpers {
     static int field_b;
     static String field_a;
 
-    final static int findSubmittedScoreRow(HighscoreSubmission param0, int param1, int param2, kf param3) {
+    final static int findSubmittedScoreRow(HighscoreSubmission param0, int param1, int param2, HighscoreTable param3) {
         int var6 = 0;
         int var7 = 0;
         int stackIn_7_0 = 0;
@@ -32,7 +32,7 @@ final class ChatPanelHelpers {
             for (var6 = 0; var5 > var6; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (~param3.field_D[param2][var6] == ~param0.field_D &&
-                Projectile.a(-85, param3.field_x[param2][var6])) {
+                Projectile.isLocalAccountName(-85, param3.field_x[param2][var6])) {
                 for (var7 = 0; var7 < var4_int; var7++) {
                   if (param0.field_q[var7] != param3.field_z[param2][var7 + var6 * var4_int]) {
                     decompiledFrameCompleted0 = false;
@@ -79,9 +79,9 @@ final class ChatPanelHelpers {
         if (field_b == 2) {
           var8 = SingleChildContainer.field_L;
         } else {
-          var8 = qi.field_g;
+          var8 = LoginCredentialHelpers.field_g;
         }
-        ModalStack.a(param2, param1, param6, param0, var8, param5, 127, param3);
+        ModalStack.updateChatInputBox(param2, param1, param6, param0, var8, param5, 127, param3);
     }
 
     public static void releaseStatics(byte param0) {

@@ -26,15 +26,15 @@ final class ArchiveIndex {
     static String field_i;
     int[][] fileIds;
 
-    final static void a(boolean param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (sl.field_b.removeLast(-6533));
+    final static void pushRasterState(boolean param0) {
+        RasterSnapshot var1 = (RasterSnapshot) (ArchiveLoadStep.field_b.removeLast(-6533));
         if (var1 == null) {
           var1 = new RasterSnapshot();
         }
         var1.setRasterState(SoftwareRaster.field_b, SoftwareRaster.field_i, SoftwareRaster.field_c, SoftwareRaster.field_l, SoftwareRaster.field_g, SoftwareRaster.field_d, SoftwareRaster.field_j, (byte) -62);
         ValidationHelpWidget.field_qb.addLast(3, var1);
         if (param0) {
-          ArchiveIndex.a(true);
+          ArchiveIndex.pushRasterState(true);
         }
     }
 

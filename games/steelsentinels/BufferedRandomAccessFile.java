@@ -22,7 +22,7 @@ final class BufferedRandomAccessFile {
     private int field_h;
     static ResourceArchive field_k;
 
-    final void a(byte param0, byte[] param1, int param2, int param3) throws IOException {
+    final void readFully(byte param0, byte[] param1, int param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
@@ -89,7 +89,7 @@ final class BufferedRandomAccessFile {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param2 > 0)) {
-              this.b(-84);
+              this.refillReadBuffer(-84);
               var9_intLifetime1Lifetime1 = param2;
               if (this.field_g < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_g;
@@ -171,7 +171,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    private final void b(byte param0) throws IOException {
+    private final void flush(byte param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -218,16 +218,16 @@ final class BufferedRandomAccessFile {
         }
         if (param0 >= -43) {
           var8 = (java.applet.Applet) null;
-          BufferedRandomAccessFile.a((String) null, (java.applet.Applet) null, (byte) -111);
+          BufferedRandomAccessFile.openRelativeUrl((String) null, (java.applet.Applet) null, (byte) -111);
         }
     }
 
-    final long a(byte param0) {
+    final long length(byte param0) {
         int var2 = -54 / ((param0 - 45) / 43);
         return this.field_o;
     }
 
-    final static void d(int param0) {
+    final static void updateDesignerScreen(int param0) {
         String[] array$0 = null;
         int stackIn_18_0 = 0;
         int stackIn_34_0 = 0;
@@ -395,7 +395,7 @@ final class BufferedRandomAccessFile {
           var3 = stackIn_18_0;
           if (var3 != 0 ||
             BoundedRandomAccessFile.field_l) {
-            kf.field_s = true;
+            HighscoreTable.field_s = true;
           }
           BoundedRandomAccessFile.field_l = var3 != 0;
           if (TextAndMenuHelpers.field_a != null) {
@@ -420,8 +420,8 @@ final class BufferedRandomAccessFile {
             DialWidget.field_X) {
             GameApplet.field_l = true;
           }
-          if (dc.field_g >= 0) {
-            kf.field_s = true;
+          if (TableColumns.field_g >= 0) {
+            HighscoreTable.field_s = true;
             GameApplet.field_l = true;
           }
           DialWidget.field_X = var4 != 0;
@@ -440,38 +440,38 @@ final class BufferedRandomAccessFile {
           }
           if (null != PendingIntArrayRequest.field_v && (null == ThreeSliceButtonPainter.field_v ||
             ThreeSliceButtonPainter.field_v.componentId != PendingIntArrayRequest.field_v.componentId)) {
-            var5 = uc.field_b[0];
-            var73 = DialWidget.a(var5, (byte) 123);
+            var5 = DesignerPageTables.field_b[0];
+            var73 = DialWidget.getComponentPreset(var5, (byte) 123);
             for (var7_int = 0; var7_int < ContextMenu.field_bc.length; var7_int++) {
               ContextMenu.field_bc[var7_int] = -1;
             }
-            ThreeSliceButtonPainter.field_v = SentinelDesigner.a(var73, (byte) -50, ContextMenu.field_bc);
+            ThreeSliceButtonPainter.field_v = SentinelDesigner.buildChassisFromDesign(var73, (byte) -50, ContextMenu.field_bc);
           }
-          if (-2 == pa.field_e &&
+          if (-2 == TutorialStepTable.field_e &&
             VerticalScrollbar.field_gc == 1 &&
-            RasterBuffer.a((byte) 127)) {
-            for (var5 = 0; var5 < di.field_c.length; var5++) {
-              di.field_c[var5] = ContextMenu.field_bc[var5];
+            RasterBuffer.isSpecialItemUnlocked((byte) 127)) {
+            for (var5 = 0; var5 < OptionMaskHelpers.field_c.length; var5++) {
+              OptionMaskHelpers.field_c[var5] = ContextMenu.field_bc[var5];
             }
           }
           boolean decompiledFrameRemainder3 = true;
-          if (pa.field_e >= 0 &&
-            RasterBuffer.a((byte) 123)) {
+          if (TutorialStepTable.field_e >= 0 &&
+            RasterBuffer.isSpecialItemUnlocked((byte) 123)) {
             if (VerticalScrollbar.field_gc == 2) {
               if (NameSuggestionsPanel.field_Y < 0) {
-                di.field_c[pa.field_e] = -1;
+                OptionMaskHelpers.field_c[TutorialStepTable.field_e] = -1;
               } else {
                 GameApplet.field_l = true;
                 NameSuggestionsPanel.field_Y = -1;
               }
             } else {
               if ((VerticalScrollbar.field_gc == 1)) {
-                var5 = di.field_c[pa.field_e];
-                di.field_c[pa.field_e] = NameSuggestionsPanel.field_Y;
+                var5 = OptionMaskHelpers.field_c[TutorialStepTable.field_e];
+                OptionMaskHelpers.field_c[TutorialStepTable.field_e] = NameSuggestionsPanel.field_Y;
                 if (RegistrationRequestDialog.field_Ob != 0) {
                   RegistrationRequestDialog.field_Ob = 0;
                   var1_int = 1;
-                  kf.field_s = true;
+                  HighscoreTable.field_s = true;
                   GameApplet.field_l = true;
                 }
                 if (0 <= NameSuggestionsPanel.field_Y) {
@@ -487,33 +487,33 @@ final class BufferedRandomAccessFile {
             if (SocialRequestHelpers.field_h != null) {
               if (VerticalScrollbar.field_gc == 1 &&
                 SoundAndUrlHelpers.field_e[81] &&
-                RasterBuffer.a((byte) 118)) {
+                RasterBuffer.isSpecialItemUnlocked((byte) 118)) {
                 var34 = SocialRequestHelpers.field_h;
-                var6 = ThreeSliceButtonPainter.field_v.a((byte) 2, var34);
+                var6 = ThreeSliceButtonPainter.field_v.findAttachedComponentId((byte) 2, var34);
                 if ((!(var6 < 0)) && ((null == var34.attachedPart ||
                   var6 != var34.attachedPart.componentId))) {
                   if (null != var34.attachedPart &&
                     83 == var34.attachedPart.componentId) {
                     var1_int = 1;
                   }
-                  var34.attachedPart = new ArticulatedPart(NodeDeque.a(var6, (byte) 67));
-                  var7_int = SoundCache.a(125, var6);
+                  var34.attachedPart = new ArticulatedPart(NodeDeque.findPartDefinition(var6, (byte) 67));
+                  var7_int = SoundCache.getPartSlotIndex(125, var6);
                   if (var7_int >= 0) {
-                    var8 = PendingIntArrayRequest.field_v.c(0, SocialRequestHelpers.field_h.field_r);
+                    var8 = PendingIntArrayRequest.field_v.findCoreSlot(0, SocialRequestHelpers.field_h.field_r);
                     if (var8 != null) {
-                      var8.attachedPart = new ArticulatedPart(NodeDeque.a(var7_int, (byte) 67));
+                      var8.attachedPart = new ArticulatedPart(NodeDeque.findPartDefinition(var7_int, (byte) 67));
                     }
                   }
                   if (var6 == 83) {
                     var1_int = 1;
                   }
-                  CombatWorld.c(param0 - 6996144, 25);
+                  CombatWorld.playSoundEffect(param0 - 6996144, 25);
                 }
                 decompiledFrameRemainder3 = false;
               }
               else {
                 if (VerticalScrollbar.field_gc == 2 &&
-                  RasterBuffer.a((byte) 126)) {
+                  RasterBuffer.isSpecialItemUnlocked((byte) 126)) {
                   if (ImageProducerRasterBuffer.field_B != null) {
                     ImageProducerRasterBuffer.field_B = null;
                     SocketJs5Transport.field_A = null;
@@ -521,7 +521,7 @@ final class BufferedRandomAccessFile {
                     var35 = SocialRequestHelpers.field_h.attachedPart;
                     if (var35 != null && (var35.field_Q == 4 ||
                       var35.field_Q == 2048)) {
-                      var6_ref_qd = PendingIntArrayRequest.field_v.c(0, SocialRequestHelpers.field_h.field_r);
+                      var6_ref_qd = PendingIntArrayRequest.field_v.findCoreSlot(0, SocialRequestHelpers.field_h.field_r);
                       if (var6_ref_qd != null) {
                         var6_ref_qd.attachedPart = null;
                       }
@@ -536,7 +536,7 @@ final class BufferedRandomAccessFile {
                 }
                 else {
                   if (VerticalScrollbar.field_gc == 1 &&
-                    RasterBuffer.a((byte) 126)) {
+                    RasterBuffer.isSpecialItemUnlocked((byte) 126)) {
                     if ((RegistrationRequestDialog.field_Ob & 16) != 0 &&
                       ImageProducerRasterBuffer.field_B != null) {
                       if (!((ImageProducerRasterBuffer.field_B.field_Q & SocialRequestHelpers.field_h.field_q) <= 0)) {
@@ -544,7 +544,7 @@ final class BufferedRandomAccessFile {
                           var1_int = 1;
                         }
                         SocialRequestHelpers.field_h.attachedPart = new ArticulatedPart(ImageProducerRasterBuffer.field_B);
-                        CombatWorld.c(-2483, 25);
+                        CombatWorld.playSoundEffect(-2483, 25);
                       }
                       decompiledFrameRemainder3 = false;
                     }
@@ -556,9 +556,9 @@ final class BufferedRandomAccessFile {
                           if (ImageProducerRasterBuffer.field_B.componentId == 83) {
                             var1_int = 1;
                           }
-                          CombatWorld.c(-2483, 25);
+                          CombatWorld.playSoundEffect(-2483, 25);
                           if (null != SocketJs5Transport.field_A) {
-                            var5_ref_qd = PendingIntArrayRequest.field_v.c(param0 ^ 6993661, SocialRequestHelpers.field_h.field_r);
+                            var5_ref_qd = PendingIntArrayRequest.field_v.findCoreSlot(param0 ^ 6993661, SocialRequestHelpers.field_h.field_r);
                             if (var5_ref_qd != null) {
                               var5_ref_qd.attachedPart = SocketJs5Transport.field_A;
                             }
@@ -573,9 +573,9 @@ final class BufferedRandomAccessFile {
                           if (ImageProducerRasterBuffer.field_B.componentId == 83) {
                             var1_int = 1;
                           }
-                          CombatWorld.c(-2483, 25);
+                          CombatWorld.playSoundEffect(-2483, 25);
                           if (null != SocketJs5Transport.field_A) {
-                            var5_ref_qd = PendingIntArrayRequest.field_v.c(0, SocialRequestHelpers.field_h.field_r);
+                            var5_ref_qd = PendingIntArrayRequest.field_v.findCoreSlot(0, SocialRequestHelpers.field_h.field_r);
                             if (var5_ref_qd != null) {
                               var5_ref_qd.attachedPart = SocketJs5Transport.field_A;
                             }
@@ -588,7 +588,7 @@ final class BufferedRandomAccessFile {
                             SocketJs5Transport.field_A = null;
                             if (4 == ImageProducerRasterBuffer.field_B.field_Q ||
                               ImageProducerRasterBuffer.field_B.field_Q == 2048) {
-                              var36 = PendingIntArrayRequest.field_v.c(0, SocialRequestHelpers.field_h.field_r);
+                              var36 = PendingIntArrayRequest.field_v.findCoreSlot(0, SocialRequestHelpers.field_h.field_r);
                               if (var36 != null) {
                                 SocketJs5Transport.field_A = var36.attachedPart;
                                 var36.attachedPart = null;
@@ -624,9 +624,9 @@ final class BufferedRandomAccessFile {
               stackIn_163_0 = -2147483648;
             }
             var5 = stackIn_163_0;
-            if (null != vd.field_a &&
-              vd.field_a.field_Ub != null) {
-              stackIn_168_0 = vd.field_a.field_Ub.field_eb;
+            if (null != TransitionTimerHelpers.field_a &&
+              TransitionTimerHelpers.field_a.field_Ub != null) {
+              stackIn_168_0 = TransitionTimerHelpers.field_a.field_Ub.field_eb;
             } else {
               stackIn_168_0 = -2147483648;
             }
@@ -640,11 +640,11 @@ final class BufferedRandomAccessFile {
             }
             var7_int = stackIn_173_0;
             if (var5 != var7_int) {
-              kf.field_s = true;
+              HighscoreTable.field_s = true;
             }
-            if (null != vd.field_a &&
-              null != vd.field_a.field_Ub) {
-              stackIn_179_0 = vd.field_a.field_Ub.field_eb;
+            if (null != TransitionTimerHelpers.field_a &&
+              null != TransitionTimerHelpers.field_a.field_Ub) {
+              stackIn_179_0 = TransitionTimerHelpers.field_a.field_Ub.field_eb;
             } else {
               stackIn_179_0 = -2147483648;
             }
@@ -660,7 +660,7 @@ final class BufferedRandomAccessFile {
                 stackIn_185_0 = -2147483648;
               }
               var10_int = stackIn_185_0;
-              var37.applyScrollInput((byte) 96, jj.field_d * 32, 128, false, 32);
+              var37.applyScrollInput((byte) 96, MeshMaterial.field_d * 32, 128, false, 32);
               if (null == var37.field_Ub) {
                 stackIn_188_0 = -2147483648;
               } else {
@@ -668,7 +668,7 @@ final class BufferedRandomAccessFile {
               }
               var11_int = stackIn_188_0;
               if (var10_int != var11_int) {
-                kf.field_s = true;
+                HighscoreTable.field_s = true;
               }
               var12_int = -1;
               if (RegistrationRequestDialog.field_Ob == 0) {
@@ -690,7 +690,7 @@ final class BufferedRandomAccessFile {
                 LoginDialogHelpers.field_k[var12_int] = var37.field_Ub.field_eb;
               }
             }
-            var38 = vd.field_a;
+            var38 = TransitionTimerHelpers.field_a;
             if (var38 != null) {
               if (var38.field_Ub != null) {
                 stackIn_205_0 = var38.field_Ub.field_eb;
@@ -698,7 +698,7 @@ final class BufferedRandomAccessFile {
                 stackIn_205_0 = -2147483648;
               }
               var11_int = stackIn_205_0;
-              var38.applyScrollInput((byte) 96, 32 * jj.field_d, 128, false, 32);
+              var38.applyScrollInput((byte) 96, 32 * MeshMaterial.field_d, 128, false, 32);
               if (null != var38.field_Ub) {
                 stackIn_208_0 = var38.field_Ub.field_eb;
               } else {
@@ -765,13 +765,13 @@ final class BufferedRandomAccessFile {
                 SocketJs5Transport.field_A = null;
                 NameSuggestionsPanel.field_Y = -1;
                 ImageProducerRasterBuffer.field_B = null;
-                CombatWorld.c(-2483, 95);
+                CombatWorld.playSoundEffect(-2483, 95);
               }
             }
-            t.field_h = -1;
+            NameTable.field_h = -1;
             DiskCacheRequest.field_K = false;
             SocketJs5Transport.field_y = null;
-            var11 = rh.field_u;
+            var11 = PendingDataRequest.field_u;
             if (var11 != null) {
               if (RegistrationRequestDialog.field_Ob == 0) {
                 for (var12_int = 0; var12_int < 35; var12_int++) {
@@ -785,20 +785,20 @@ final class BufferedRandomAccessFile {
                     }
                     if (VerticalScrollbar.field_gc == 1 &&
                       DiskCacheRequest.field_K &&
-                      RasterBuffer.a((byte) 121)) {
+                      RasterBuffer.isSpecialItemUnlocked((byte) 121)) {
                       var15 = null;
-                      if (!t.a(ArchiveRequest.field_D, var12_int, -20370)) {
-                        if (LoadoutHelpers.isComponentCompatible(var12_int, ArticulatedPart.f((byte) -96), ArchiveRequest.field_D, (byte) 84, DirectByteStorage.field_m, rn.field_D)) {
-                          if (qf.field_h[var12_int] > PasswordFieldPainter.field_v) {
+                      if (!NameTable.isBitSet(ArchiveRequest.field_D, var12_int, -20370)) {
+                        if (LoadoutHelpers.isComponentCompatible(var12_int, ArticulatedPart.isMemberSession((byte) -96), ArchiveRequest.field_D, (byte) 84, DirectByteStorage.field_m, PendingAckRequest.field_D)) {
+                          if (RankingAndRasterHelpers.field_h[var12_int] > PasswordFieldPainter.field_v) {
                             var15 = BattleTerrain.field_g;
                             NameValidationHelpers.field_c = DialWidgetPainter.field_q[2];
                           }
                         } else {
                           var15 = DateInputWidget.field_R;
                           NameValidationHelpers.field_c = DialWidgetPainter.field_q[2];
-                          var16_int = EmailAvailabilityValidator.a(param0 ^ 6985420, var12_int);
+                          var16_int = EmailAvailabilityValidator.mapPartIdToIndex(param0 ^ 6985420, var12_int);
                           if (var16_int >= 0 &&
-                            !t.a(ArchiveRequest.field_D, var16_int, -20370)) {
+                            !NameTable.isBitSet(ArchiveRequest.field_D, var16_int, -20370)) {
                             var15 = MessageMenuHelpers.field_e;
                             var15 = SocketConnector.formatTemplate((String) (var15), -65, new String[]{field_m[var16_int], field_m[var12_int]});
                           }
@@ -814,7 +814,7 @@ final class BufferedRandomAccessFile {
                               var15 = DualNode.field_t;
                               break;
                             case 25:
-                              var15 = rd.field_c;
+                              var15 = SpriteLoadingHelpers.field_c;
                               break;
                             default:
                               break;
@@ -825,10 +825,10 @@ final class BufferedRandomAccessFile {
                         var15 = LoginDialogHelpers.field_i;
                       }
                       if (var15 == null &&
-                        !ni.b(param0 - 6993613)) {
+                        !ByteArrayPoolHelpers.isAccountCreationMode(param0 - 6993613)) {
                         BoundedRandomAccessFile.field_q = var12_int;
-                        SocketJs5Transport.field_v = qf.field_h[var12_int];
-                        CombatWorld.c(-2483, 95);
+                        SocketJs5Transport.field_v = RankingAndRasterHelpers.field_h[var12_int];
+                        CombatWorld.playSoundEffect(-2483, 95);
                       }
                       if (var15 != null) {
                         array$0 = new String[1];
@@ -847,18 +847,18 @@ final class BufferedRandomAccessFile {
                       }
                     } else {
                       if (1 == VerticalScrollbar.field_gc &&
-                        uc.a(var12_int, -3958) &&
-                        RasterBuffer.a((byte) 127)) {
+                        DesignerPageTables.isComponentSelectable(var12_int, -3958) &&
+                        RasterBuffer.isSpecialItemUnlocked((byte) 127)) {
                         NameSuggestionsPanel.field_Y = var12_int;
                         ImageProducerRasterBuffer.field_B = null;
                         SocketJs5Transport.field_A = null;
-                        CombatWorld.c(-2483, 100);
+                        CombatWorld.playSoundEffect(-2483, 100);
                       }
                     }
-                    t.field_h = var12_int;
+                    NameTable.field_h = var12_int;
                     if (null == SocketJs5Transport.field_y) {
                       var50 = new NodeIterator(var48.field_M);
-                      var16 = (SceneWidget) (var50.b(2));
+                      var16 = (SceneWidget) (var50.first(2));
                       while (var16 != null) {
                         if (var16.field_kb &&
                           var16.field_S != null &&
@@ -892,24 +892,24 @@ final class BufferedRandomAccessFile {
                     boolean decompiledFrameRemainder2 = true;
                     if (1 == VerticalScrollbar.field_gc &&
                       DiskCacheRequest.field_K &&
-                      RasterBuffer.a((byte) 117)) {
+                      RasterBuffer.isSpecialItemUnlocked((byte) 117)) {
                       var16_int = 0;
                       if (1 == var13_ref_nk.field_Q) {
-                        var17_ref = LoadingProgressDialog.b(var13_ref_nk.componentId, (byte) -85);
+                        var17_ref = LoadingProgressDialog.distinctPresetTail(var13_ref_nk.componentId, (byte) -85);
                         var18_ref_int__ = FallingPickup.getUniqueChildComponentIds(var13_ref_nk.componentId, (byte) 28);
                         var69 = (int[]) var17_ref;
                         var44 = var69;
                         var19_ref = var44;
                         for (var20_int = 0; var69.length > var20_int; var20_int++) {
                           var21_int = var69[var20_int];
-                          if (!t.a(ArchiveRequest.field_D, var21_int, param0 - 7014031)) {
-                            var16_int = var16_int + qf.field_h[var21_int];
+                          if (!NameTable.isBitSet(ArchiveRequest.field_D, var21_int, param0 - 7014031)) {
+                            var16_int = var16_int + RankingAndRasterHelpers.field_h[var21_int];
                           }
                         }
                         var19_ref_int__ = var18_ref_int__;
                         for (var20_int = 0; var20_int < var19_ref_int__.length; var20_int++) {
                           var21_int = var19_ref_int__[var20_int];
-                          if (!t.a(rn.field_D, var21_int, param0 - 7014031)) {
+                          if (!NameTable.isBitSet(PendingAckRequest.field_D, var21_int, param0 - 7014031)) {
                             var16_int = var16_int + MusicCrossfadeStream.field_v[var21_int];
                           }
                         }
@@ -917,8 +917,8 @@ final class BufferedRandomAccessFile {
                         var16_int = MusicCrossfadeStream.field_v[var13_ref_nk.componentId];
                       }
                       var17_ref = null;
-                      if (t.a(rn.field_D, var13_ref_nk.componentId, -20370)) {
-                        var17_ref = qi.field_e;
+                      if (NameTable.isBitSet(PendingAckRequest.field_D, var13_ref_nk.componentId, -20370)) {
+                        var17_ref = LoginCredentialHelpers.field_e;
                         NameValidationHelpers.field_c = DialWidgetPainter.field_q[0];
                       } else {
                         if (var16_int > PasswordFieldPainter.field_v) {
@@ -927,13 +927,13 @@ final class BufferedRandomAccessFile {
                         }
                       }
                       if (var17_ref == null &&
-                        !ni.b(88)) {
+                        !ByteArrayPoolHelpers.isAccountCreationMode(88)) {
                         SocketJs5Transport.field_v = var16_int;
                         BoundedRandomAccessFile.field_q = var13_ref_nk.componentId + 128;
-                        CombatWorld.c(-2483, 95);
+                        CombatWorld.playSoundEffect(-2483, 95);
                       }
                       if ((var17_ref != null)) {
-                        ClientGlobals.field_a = SocketConnector.formatTemplate((String) (var17_ref), param0 - 6993681, new String[]{t.field_e[var13_ref_nk.componentId]});
+                        ClientGlobals.field_a = SocketConnector.formatTemplate((String) (var17_ref), param0 - 6993681, new String[]{NameTable.field_e[var13_ref_nk.componentId]});
                       }
                       decompiledFrameRemainder2 = false;
                     }
@@ -941,36 +941,36 @@ final class BufferedRandomAccessFile {
                       if (VerticalScrollbar.field_gc == 1 &&
                         ClockAndCookieHelpers.isComponentAvailable(-16242, var13_ref_nk)) {
                         if ((var13_ref_nk.field_Q != 1) &&
-                          (decompiledFrameRemainder2 = !(!RasterBuffer.a((byte) 116)))) {
-                          decompiledFrameRemainder2 = !(!PendingIntArrayRequest.field_v.f(var13_ref_nk.field_Q, -1));
+                          (decompiledFrameRemainder2 = !(!RasterBuffer.isSpecialItemUnlocked((byte) 116)))) {
+                          decompiledFrameRemainder2 = !(!PendingIntArrayRequest.field_v.hasSlotForType(var13_ref_nk.field_Q, -1));
                         }
                         if (decompiledFrameRemainder2) {
                           if (var13_ref_nk.field_Q == 1 &&
                             var13_ref_nk.componentId != 55 &&
                             (4 & NameCheckResult.field_a) == 0 &&
-                            !RasterBuffer.a((byte) 120)) {
+                            !RasterBuffer.isSpecialItemUnlocked((byte) 120)) {
                             stackIn_296_0 = (var13_ref_nk.componentId == 57) ? 6 : 10;
-                            if (stackIn_296_0 > fm.field_f[0]) {
-                              ClientGlobals.field_a = dj.field_i;
+                            if (stackIn_296_0 > QuickChatParameterType.field_f[0]) {
+                              ClientGlobals.field_a = NumberParsingHelpers.field_i;
                               NameCheckResult.field_a = NameCheckResult.field_a | 4;
-                              if (!(ni.b(param0 - 6993572))) {
-                                MarkerSlider.f((byte) 3);
+                              if (!(ByteArrayPoolHelpers.isAccountCreationMode(param0 - 6993572))) {
+                                MarkerSlider.encodeSavedDesigns((byte) 3);
                               }
                               decompiledFrameRemainder2 = false;
                             }
                           }
                           if (decompiledFrameRemainder2) {
                             if (var13_ref_nk.field_Q == 1) {
-                              CombatWorld.c(-2483, 99);
-                              di.field_c = new int[8];
+                              CombatWorld.playSoundEffect(-2483, 99);
+                              OptionMaskHelpers.field_c = new int[8];
                               IconTextComponent.field_Wb = true;
                               for (var16_int = 0; var16_int < 8; var16_int++) {
-                                di.field_c[var16_int] = -1;
+                                OptionMaskHelpers.field_c[var16_int] = -1;
                               }
                               var12_int = 1;
-                              var16_array = DialWidget.a(var13_ref_nk.componentId, (byte) 123);
+                              var16_array = DialWidget.getComponentPreset(var13_ref_nk.componentId, (byte) 123);
                               if (var16_array != null) {
-                                uc.field_b = var16_array;
+                                DesignerPageTables.field_b = var16_array;
                               } else {
                                 var12_int = 0;
                                 PendingIntArrayRequest.field_v = new ArticulatedPart(var13_ref_nk);
@@ -978,13 +978,13 @@ final class BufferedRandomAccessFile {
                               NameSuggestionsPanel.field_Y = -1;
                               ImageProducerRasterBuffer.field_B = null;
                             } else {
-                              CombatWorld.c(param0 ^ -6995792, 100);
-                              t.field_h = var13_ref_nk.componentId;
+                              CombatWorld.playSoundEffect(param0 ^ -6995792, 100);
+                              NameTable.field_h = var13_ref_nk.componentId;
                               ImageProducerRasterBuffer.field_B = new ArticulatedPart(var13_ref_nk);
                               SocketJs5Transport.field_A = null;
-                              var16_int = SoundCache.a(119, var13_ref_nk.componentId);
+                              var16_int = SoundCache.getPartSlotIndex(119, var13_ref_nk.componentId);
                               if (var16_int >= 0) {
-                                SocketJs5Transport.field_A = new ArticulatedPart(NodeDeque.a(var16_int, (byte) 67));
+                                SocketJs5Transport.field_A = new ArticulatedPart(NodeDeque.findPartDefinition(var16_int, (byte) 67));
                               }
                               NameSuggestionsPanel.field_Y = -1;
                             }
@@ -992,13 +992,13 @@ final class BufferedRandomAccessFile {
                         }
                       }
                     }
-                    t.field_h = var13_ref_nk.componentId;
+                    NameTable.field_h = var13_ref_nk.componentId;
                     if (null != SocketJs5Transport.field_y) {
                       var13_ref_nk = (ArticulatedPart) (QuickChatPhraseDefinition.field_H.next((byte) -27));
                       continue;
                     }
                     var45 = new NodeIterator(((SceneWidget) (var14)).field_M);
-                    var17_ref = (SceneWidget) (var45.b(2));
+                    var17_ref = (SceneWidget) (var45.first(2));
                     while (var17_ref != null) {
                       if (((SceneWidget) (var17_ref)).field_kb &&
                         null != ((SceneWidget) (var17_ref)).field_S && (((SceneWidget) (var17_ref)).field_S.startsWith("<img=6>") ||
@@ -1040,7 +1040,7 @@ final class BufferedRandomAccessFile {
                         var1_int = 1;
                       } else {
                         var17 = 0;
-                        if (!ArticulatedPart.f((byte) -46)) {
+                        if (!ArticulatedPart.isMemberSession((byte) -46)) {
                           var18 = 0;
                           while (!(var18 >= LoginHandshakeHelpers.field_c[var13].length)) {
                             stackIn_350_0 = LoginHandshakeHelpers.field_c[var13][var18];
@@ -1055,16 +1055,16 @@ final class BufferedRandomAccessFile {
                           }
                         }
                         if (var17 == 0) {
-                          CombatWorld.c(-2483, 99);
-                          di.field_c = new int[8];
+                          CombatWorld.playSoundEffect(-2483, 99);
+                          OptionMaskHelpers.field_c = new int[8];
                           var12_int = 1;
                           for (var18 = 0; var18 < 8; var18++) {
-                            di.field_c[var18] = -1;
+                            OptionMaskHelpers.field_c[var18] = -1;
                           }
                           var18_ref_int__ = LoginHandshakeHelpers.field_c[var13];
                           NameSuggestionsPanel.field_Y = -1;
                           if (var18_ref_int__ != null) {
-                            uc.field_b = var18_ref_int__;
+                            DesignerPageTables.field_b = var18_ref_int__;
                           }
                           ImageProducerRasterBuffer.field_B = null;
                         }
@@ -1073,11 +1073,11 @@ final class BufferedRandomAccessFile {
                   }
                 }
                 if (var12_int != 0) {
-                  PendingIntArrayRequest.field_v = SentinelDesigner.a(uc.field_b, (byte) -53, di.field_c);
-                  PendingIntArrayRequest.field_v.b(6993661, 113);
+                  PendingIntArrayRequest.field_v = SentinelDesigner.buildChassisFromDesign(DesignerPageTables.field_b, (byte) -53, OptionMaskHelpers.field_c);
+                  PendingIntArrayRequest.field_v.updateAttachedParts(6993661, 113);
                 } else {
                   if (VerticalScrollbar.field_gc == 2 &&
-                    RasterBuffer.a((byte) 126)) {
+                    RasterBuffer.isSpecialItemUnlocked((byte) 126)) {
                     NameSuggestionsPanel.field_Y = -1;
                     ImageProducerRasterBuffer.field_B = null;
                     SocketJs5Transport.field_A = null;
@@ -1099,11 +1099,11 @@ final class BufferedRandomAccessFile {
                     GameApplet.field_l = true;
                     TeamColourTinter.field_a = var5;
                     LoadoutHelpers.field_h = true;
-                    kf.field_s = true;
+                    HighscoreTable.field_s = true;
                   }
                   if (var1_int != 0 &&
                     ContentTransitionDialog.field_jb != null) {
-                    DateOfBirthValidator.d(-95);
+                    DateOfBirthValidator.clearSceneReferences(-95);
                   }
                   decompiledFrameRemainder0 = (ContentTransitionDialog.field_jb == null);
                   if (decompiledFrameRemainder0) {
@@ -1116,7 +1116,7 @@ final class BufferedRandomAccessFile {
               }
             }
             if ((decompiledFrameRemainder1) && (decompiledFrameRemainder0) && (VerticalScrollbar.field_gc == 2 &&
-              RasterBuffer.a((byte) 126))) {
+              RasterBuffer.isSpecialItemUnlocked((byte) 126))) {
               NameSuggestionsPanel.field_Y = -1;
               ImageProducerRasterBuffer.field_B = null;
               SocketJs5Transport.field_A = null;
@@ -1141,11 +1141,11 @@ final class BufferedRandomAccessFile {
               GameApplet.field_l = true;
               TeamColourTinter.field_a = var5;
               LoadoutHelpers.field_h = true;
-              kf.field_s = true;
+              HighscoreTable.field_s = true;
             }
             if (var1_int != 0 &&
               ContentTransitionDialog.field_jb != null) {
-              DateOfBirthValidator.d(-95);
+              DateOfBirthValidator.clearSceneReferences(-95);
             }
             decompiledFrameRemainder0 = (ContentTransitionDialog.field_jb == null);
             if (decompiledFrameRemainder0) {
@@ -1155,16 +1155,16 @@ final class BufferedRandomAccessFile {
             }
           }
           if (decompiledFrameRemainder0) {
-            var6 = jj.field_e.field_z;
-            jj.field_e.bindRasterTarget();
+            var6 = MeshMaterial.field_e.field_z;
+            MeshMaterial.field_e.bindRasterTarget();
             SoftwareRaster.fillRectangle(0, 0, var6, var6, 0);
-            var7_int = NodeDeque.a((byte) 105, uc.field_b[0]);
+            var7_int = NodeDeque.indexOfUnlockItem((byte) 105, DesignerPageTables.field_b[0]);
             if (var7_int < 0 ||
               !(CachedTextLayout.field_E.length > var7_int)) {
               var7_int = 0;
             }
             CachedTextLayout.field_E[var7_int].drawScaled(0, 0, 4 * var6, 4 * var6);
-            Checkbox.field_bb.b((byte) 122);
+            Checkbox.field_bb.bindRaster((byte) 122);
             var6 = MusicPatchNode.field_w;
             MusicPatchNode.field_w = 4096;
             var7 = new SceneWidget();
@@ -1183,7 +1183,7 @@ final class BufferedRandomAccessFile {
             ThreeSliceButtonPainter.field_s.field_nb = 16777215;
             ThreeSliceButtonPainter.field_s.field_Ib = 17;
             var9 = new SceneWidget("", var7);
-            var9.field_I = vh.field_b;
+            var9.field_I = KeyRoutingHelpers.field_b;
             dg.field_g = new SceneWidget("", var7);
             dg.field_g.field_I = MembershipPromotionScreen.field_p;
             dg.field_g.field_Ab = ResourceArchive.field_b;
@@ -1216,14 +1216,14 @@ final class BufferedRandomAccessFile {
             var62 = new SceneWidget("", var7);
             var62.field_L = (BitmapFont) ((Object) BoundedUrlRequest.field_d);
             var62.field_ub = 4;
-            var62.field_I = pa.field_g;
+            var62.field_I = TutorialStepTable.field_g;
             var62.field_Fb = 0;
             var62.field_Ib = 15;
             var62.field_Kb = 1;
             var62.field_nb = 0;
             ContentTransitionDialog.field_jb = new SceneWidget();
             ContentTransitionDialog.field_jb.setBounds(0, 0, 480, 0, 640);
-            var17 = am.field_d.length;
+            var17 = DesignerPageSetup.field_d.length;
             var18 = 204 / var17;
             var19 = 10;
             for (var20_int = 0; var17 > var20_int; var20_int++) {
@@ -1246,7 +1246,7 @@ final class BufferedRandomAccessFile {
               }
               stackIn_493_0 = null;
               stackIn_493_1 = null;
-              stackIn_493_2 = am.field_d[var20_int];
+              stackIn_493_2 = DesignerPageSetup.field_d[var20_int];
               if (var21_int != 0) {
                 stackIn_494_0 = null;
                 stackIn_494_1 = null;
@@ -1285,12 +1285,12 @@ final class BufferedRandomAccessFile {
             var20.field_db = SocialListEntry.field_Zb[1];
             var20.field_Pb = SocialListEntry.field_Zb[0];
             var21 = new SceneWidget();
-            var21.field_I = qi.field_a;
+            var21.field_I = LoginCredentialHelpers.field_a;
             var55 = new SceneWidget();
-            var55.field_I = jn.field_f;
+            var55.field_I = MusicTrackHelpers.field_f;
             var23 = new VerticalScrollbar("", var54, var20, var21, var55);
             var56 = new SceneWidget("Dataview", (SceneWidget) null);
-            rh.field_u = var56;
+            PendingDataRequest.field_u = var56;
             for (var25 = 0; var25 < ArchiveLoadSequence.field_a.length; var25++) {
               ArchiveLoadSequence.field_a[var25] = null;
             }
@@ -1298,14 +1298,14 @@ final class BufferedRandomAccessFile {
             Js5NetworkRequest.field_O = var25;
             var26_int = -2;
             if (RegistrationRequestDialog.field_Ob != 0) {
-              var26_int = te.a(var56, var26_int, true, -1);
+              var26_int = FriendListHelpers.buildComponentPalette(var56, var26_int, true, -1);
             } else {
-              var26_int = DelegatingCanvas.a((byte) -46, var56, var26_int, true);
+              var26_int = DelegatingCanvas.buildUnlockablesList((byte) -46, var56, var26_int, true);
             }
             var27_ref = null;
             if (1 != RegistrationRequestDialog.field_Ob) {
-              if (!RasterBuffer.a((byte) 124)) {
-                var27_ref = ai.field_v;
+              if (!RasterBuffer.isSpecialItemUnlocked((byte) 124)) {
+                var27_ref = NotificationMessage.field_v;
               } else {
                 if ((2 & RegistrationRequestDialog.field_Ob) != 0) {
                   var27_ref = PasswordFieldPainter.field_E;
@@ -1338,9 +1338,9 @@ final class BufferedRandomAccessFile {
             }
             IterableDualNodeDeque.field_d = var26_int;
             if (RegistrationRequestDialog.field_Ob == 0) {
-              var26_int = DelegatingCanvas.a((byte) -70, var56, var26_int, false);
+              var26_int = DelegatingCanvas.buildUnlockablesList((byte) -70, var56, var26_int, false);
             } else {
-              var26_int = te.a(var56, var26_int, false, -1);
+              var26_int = FriendListHelpers.buildComponentPalette(var56, var26_int, false, -1);
             }
             var28 = 0;
             if (1 == RegistrationRequestDialog.field_Ob) {
@@ -1352,7 +1352,7 @@ final class BufferedRandomAccessFile {
                 }
               }
               if (var28 > 0) {
-                var26_int = CachedTextLayout.a(var56, true, var26_int + 4);
+                var26_int = CachedTextLayout.appendDesignSummaryRows(var56, true, var26_int + 4);
               }
             }
             if (var27_ref != null) {
@@ -1360,7 +1360,7 @@ final class BufferedRandomAccessFile {
             }
             var56.setBounds(0, 0, var26_int, 0, 0);
             var78 = (CharSequence) ((Object) "Scrollingview");
-            var60 = new ScrollContainer(WidgetStyleLayer.a(var78, (byte) -48), var56, (SceneWidget) null, var23);
+            var60 = new ScrollContainer(WidgetStyleLayer.hashText(var78, (byte) -48), var56, (SceneWidget) null, var23);
             TextAndBitHelpers.field_f = var60;
             var60.setBoundsAndLayout(LinkButtonPainter.field_c.field_zb - 2 * CheckboxPainter.field_n, -2048, TextAndBitHelpers.field_d, LinkButtonPainter.field_c.field_Lb - CheckboxPainter.field_n * 2, WeightedCacheEntry.field_y, CheckboxPainter.field_n, CheckboxPainter.field_n);
             LinkButtonPainter.field_c.addChild(var60, 124);
@@ -1397,18 +1397,18 @@ final class BufferedRandomAccessFile {
             } else {
               if ((2 & RegistrationRequestDialog.field_Ob) > 0) {
                 var66 = new SceneWidget("", var62);
-                var66.field_S = mc.field_b;
+                var66.field_S = LoadingCaptionHelpers.field_b;
                 var66.setBounds(0, 0, 18, 0, 110);
                 TextAndMenuHelpers.field_a.addChild(var66, param0 ^ 6993543);
                 var26 = new SceneWidget("DataListView", (SceneWidget) null);
-                hm.field_a = var26;
+                LoadoutCostHelpers.field_a = var26;
                 var27 = 4 + MessageMenuHelpers.buildModuleListWidgets(4, var26);
                 var26.field_I = MatchingTextValidator.field_t;
                 var26.setBounds(0, 20, var27, 0, 110);
                 if (var27 > 284) {
                   var80 = (CharSequence) ((Object) "Scrollingview2");
-                  var67 = new ScrollContainer(WidgetStyleLayer.a(var80, (byte) -48), var26, (SceneWidget) null, var23);
-                  vd.field_a = var67;
+                  var67 = new ScrollContainer(WidgetStyleLayer.hashText(var80, (byte) -48), var26, (SceneWidget) null, var23);
+                  TransitionTimerHelpers.field_a = var67;
                   var67.setBoundsAndLayout(110, -2048, TextAndBitHelpers.field_d, 301, WeightedCacheEntry.field_y, 0, 21);
                   TextAndMenuHelpers.field_a.addChild(var67, 119);
                 } else {
@@ -1418,21 +1418,21 @@ final class BufferedRandomAccessFile {
               } else {
                 if ((RegistrationRequestDialog.field_Ob & 16) <= 0) {
                   if (RegistrationRequestDialog.field_Ob == 0) {
-                    GzipDecoder.a(TextAndMenuHelpers.field_a, (byte) 19);
+                    GzipDecoder.buildSettingsPanelRows(TextAndMenuHelpers.field_a, (byte) 19);
                   }
                 } else {
                   var63 = new SceneWidget("", var62);
-                  var63.field_S = kf.field_B;
+                  var63.field_S = HighscoreTable.field_B;
                   var63.setBounds(0, 0, 18, 0, 110);
                   TextAndMenuHelpers.field_a.addChild(var63, 119);
-                  var26_int = og.a(true);
+                  var26_int = QuickChatPopupHelpers.getInstructionListHeight(true);
                   var27 = 254;
                   DelayedServerPacket.field_r = !(var27 >= var26_int);
                   var64 = new SceneWidget("DataListView", (SceneWidget) null);
                   if (!DelayedServerPacket.field_r) {
                     var64.field_I = MatchingTextValidator.field_t;
                   }
-                  hm.field_a = var64;
+                  LoadoutCostHelpers.field_a = var64;
                   var29 = SpriteFrame.buildPartListWidgets(var64, 112);
                   GameApplet.field_l = true;
                   stackIn_554_0 = var64;
@@ -1447,8 +1447,8 @@ final class BufferedRandomAccessFile {
                   ((SceneWidget) (Object) stackIn_554_0).setBounds(stackIn_554_1, stackIn_554_2, stackIn_554_3, stackIn_555_4, 110);
                   if (DelayedServerPacket.field_r) {
                     var79 = (CharSequence) ((Object) "Scrollingview2");
-                    var65 = new ScrollContainer(WidgetStyleLayer.a(var79, (byte) -48), var64, (SceneWidget) null, var23);
-                    vd.field_a = var65;
+                    var65 = new ScrollContainer(WidgetStyleLayer.hashText(var79, (byte) -48), var64, (SceneWidget) null, var23);
+                    TransitionTimerHelpers.field_a = var65;
                     var65.setBoundsAndLayout(107, -2048, TextAndBitHelpers.field_d, -2 + var27, WeightedCacheEntry.field_y, 0, 23);
                     TextAndMenuHelpers.field_a.addChild(var65, 121);
                   } else {
@@ -1462,7 +1462,7 @@ final class BufferedRandomAccessFile {
               var61.field_I = null;
             }
           }
-          EmailCredentials.b(param0 - 6993611);
+          EmailCredentials.refreshSpecialWeaponFlags(param0 - 6993611);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1471,14 +1471,14 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.a((byte) 115, param1, param1.length, 0);
+          this.readFully((byte) 115, param1, param1.length, 0);
           if (param0 >= -45) {
             BufferedRandomAccessFile.releaseStatics(-54);
           }
@@ -1497,7 +1497,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void setTextFieldLayout(int param0, int param1, int param2, int param3, byte param4) {
         MenuInputState.field_g = param2;
         WhirlpoolHasher.field_e = param0;
         IntrusiveNode.field_e = param3;
@@ -1507,7 +1507,7 @@ final class BufferedRandomAccessFile {
         IntKeyLookup.field_d = param1;
     }
 
-    final static void a(String param0, java.applet.Applet param1, byte param2) {
+    final static void openRelativeUrl(String param0, java.applet.Applet param1, byte param2) {
         try {
           java.net.URL var3 = null;
           RuntimeException stackIn_8_0 = null;
@@ -1521,7 +1521,7 @@ final class BufferedRandomAccessFile {
           try {
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param0);
-              var3 = DirectByteStorage.a(param2 ^ -47, var3, param1);
+              var3 = DirectByteStorage.appendSessionParameters(param2 ^ -47, var3, param1);
               if (param2 != -47) {
                 return;
               }
@@ -1557,7 +1557,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    private final void b(int param0) throws IOException {
+    private final void refillReadBuffer(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = SteelSentinels.obfuscationControl;
@@ -1584,7 +1584,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         if (param1 < 0L) {
           throw new IOException();
         }
@@ -1594,7 +1594,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_57_0 = null;
         StringBuilder stackIn_57_1 = null;
         String stackIn_58_2 = null;
@@ -1616,10 +1616,10 @@ final class BufferedRandomAccessFile {
             if (this.field_a != -1L) {
               if (this.field_l >= this.field_a) {
                 if (this.field_l > (this.field_a + (long)this.field_h)) {
-                  this.b((byte) -104);
+                  this.flush((byte) -104);
                 }
               } else {
-                this.b((byte) -104);
+                this.flush((byte) -104);
               }
             }
             if (this.field_a != -1L &&
@@ -1630,7 +1630,7 @@ final class BufferedRandomAccessFile {
               param1 = param1 - var5_int;
               this.field_l = this.field_l + (long)var5_int;
               this.field_h = this.field_p.length;
-              this.b((byte) -118);
+              this.flush((byte) -118);
             }
             if (param1 > this.field_p.length) {
               if (~this.field_l != ~this.field_e) {
@@ -1689,7 +1689,7 @@ final class BufferedRandomAccessFile {
           }
           if (param2 <= 17) {
             var11 = (java.applet.Applet) null;
-            BufferedRandomAccessFile.a((String) null, (java.applet.Applet) null, (byte) -7);
+            BufferedRandomAccessFile.openRelativeUrl((String) null, (java.applet.Applet) null, (byte) -7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -1724,11 +1724,11 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final void c(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 >= -122) {
           this.field_n = (byte[]) null;
         }
-        this.b((byte) -97);
+        this.flush((byte) -97);
         this.field_q.close(true);
     }
 

@@ -19,7 +19,7 @@ final class ResourceArchive {
     static int field_g;
     static SceneWidget field_h;
 
-    final synchronized boolean a(byte param0, int param1, int param2) {
+    final synchronized boolean ensureFileAvailable(byte param0, int param1, int param2) {
         if (!this.isValidFile(param2, param1, -17637)) {
           return false;
         }
@@ -52,7 +52,7 @@ final class ResourceArchive {
           fileId < 0 ||
           this.index.fileCapacities.length <= groupId ||
           fileId >= this.index.fileCapacities[groupId]) {
-          if (qi.field_l) {
+          if (LoginCredentialHelpers.field_l) {
             throw new IllegalArgumentException(groupId + " " + fileId);
           }
           return false;
@@ -323,7 +323,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           var4 = (CharSequence) ((Object) groupName);
-          var3_int = this.index.groupNameLookup.get(NameSuggestionsPanel.a(var4, false), (byte) 120);
+          var3_int = this.index.groupNameLookup.get(NameSuggestionsPanel.hashString(var4, false), (byte) 120);
           if (this.isValidGroup(var3_int, true)) {
             stackIn_10_0 = var3_int;
             return stackIn_10_0;
@@ -375,7 +375,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int a(byte param0) {
+    final synchronized int getOverallProgress(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -409,7 +409,7 @@ final class ResourceArchive {
         field_p = null;
         if (param0) {
           byte[] var2 = (byte[]) null;
-          ResourceArchive.a((String[][]) null, (byte) 89, (ResourceArchive) null, (int[]) null, (ResourceArchive) null, (RgbSprite[][]) null, false, 80, 61, (String[]) null, (IndexedSprite[]) null, (int[]) null, (RgbSprite[][]) null, (ResourceArchive) null, (byte[]) null, (String[][]) null, (byte[]) null);
+          ResourceArchive.initializeGameAssets((String[][]) null, (byte) 89, (ResourceArchive) null, (int[]) null, (ResourceArchive) null, (RgbSprite[][]) null, false, 80, 61, (String[]) null, (IndexedSprite[]) null, (int[]) null, (RgbSprite[][]) null, (ResourceArchive) null, (byte[]) null, (String[][]) null, (byte[]) null);
         }
         field_c = null;
         field_b = null;
@@ -428,7 +428,7 @@ final class ResourceArchive {
           this.index.fileCapacities[groupId] != 0) {
           return true;
         }
-        if (qi.field_l) {
+        if (LoginCredentialHelpers.field_l) {
           throw new IllegalArgumentException(Integer.toString(groupId));
         }
         return false;
@@ -452,7 +452,7 @@ final class ResourceArchive {
           }
           fileName = fileName.toLowerCase();
           var6 = (CharSequence) ((Object) fileName);
-          var4_int = this.index.fileNameLookups[groupId].get(NameSuggestionsPanel.a(var6, false), (byte) 114);
+          var4_int = this.index.fileNameLookups[groupId].get(NameSuggestionsPanel.hashString(var6, false), (byte) 114);
           if (obfuscationGuard != -32759) {
             var5 = (String) null;
             this.getGroupProgressByName((byte) -29, (String) null);
@@ -476,7 +476,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(byte param0, String param1, String param2) {
+    final boolean ensureFileAvailableByName(byte param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -497,14 +497,14 @@ final class ResourceArchive {
           param2 = param2.toLowerCase();
           param1 = param1.toLowerCase();
           var7 = (CharSequence) ((Object) param2);
-          var4_int = this.index.groupNameLookup.get(NameSuggestionsPanel.a(var7, false), (byte) 116);
+          var4_int = this.index.groupNameLookup.get(NameSuggestionsPanel.hashString(var7, false), (byte) 116);
           if (!this.isValidGroup(var4_int, true)) {
             return false;
           }
           var6 = -120 % ((param0 - 40) / 43);
           var8 = (CharSequence) ((Object) param1);
-          var5 = this.index.fileNameLookups[var4_int].get(NameSuggestionsPanel.a(var8, false), (byte) -77);
-          stackIn_8_0 = this.a((byte) 97, var5, var4_int);
+          var5 = this.index.fileNameLookups[var4_int].get(NameSuggestionsPanel.hashString(var8, false), (byte) -77);
+          stackIn_8_0 = this.ensureFileAvailable((byte) 97, var5, var4_int);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -526,7 +526,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(String param0, byte param1) {
+    final boolean isGroupLoadedByName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -544,8 +544,8 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.index.groupNameLookup.get(NameSuggestionsPanel.a(var4, false), (byte) 123);
-          stackIn_8_0 = this.a(var3_int, true);
+          var3_int = this.index.groupNameLookup.get(NameSuggestionsPanel.hashString(var4, false), (byte) 123);
+          stackIn_8_0 = this.ensureGroupLoaded(var3_int, true);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -579,7 +579,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNameLookup.get(NameSuggestionsPanel.a(var4, false), (byte) -121);
+          var3_int = this.index.groupNameLookup.get(NameSuggestionsPanel.hashString(var4, false), (byte) -121);
           if (var3_int >= 0) {
             return true;
           }
@@ -598,7 +598,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void a(String[][] param0, byte param1, ResourceArchive param2, int[] param3, ResourceArchive param4, RgbSprite[][] param5, boolean param6, int param7, int param8, String[] param9, IndexedSprite[] param10, int[] param11, RgbSprite[][] param12, ResourceArchive param13, byte[] param14, String[][] param15, byte[] param16) {
+    final static void initializeGameAssets(String[][] param0, byte param1, ResourceArchive param2, int[] param3, ResourceArchive param4, RgbSprite[][] param5, boolean param6, int param7, int param8, String[] param9, IndexedSprite[] param10, int[] param11, RgbSprite[][] param12, ResourceArchive param13, byte[] param14, String[][] param15, byte[] param16) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -634,7 +634,7 @@ final class ResourceArchive {
             ResourceArchive.releaseStatics(false);
           }
           var18 = (String[]) null;
-          UiComponent.a(param11, param5, 72, param15, param4, param3, param6, param13, param9, param10, param2, param0, param14, param12, param8, (String[]) null, param16, 1, param7);
+          UiComponent.initializeLobbyAssets(param11, param5, 72, param15, param4, param3, param6, param13, param9, param10, param2, param0, param14, param12, param8, (String[]) null, param16, 1, param7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -757,7 +757,7 @@ final class ResourceArchive {
         if (obfuscationGuard <= 20) {
           return (byte[]) null;
         }
-        return this.b(fileId, 126, groupId, (int[]) null);
+        return this.getFileWithKeys(fileId, 126, groupId, (int[]) null);
     }
 
     final synchronized boolean ensureIndex(boolean obfuscationGuard) {
@@ -793,9 +793,9 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNameLookup.get(NameSuggestionsPanel.a(var4, false), (byte) -95);
+          var3_int = this.index.groupNameLookup.get(NameSuggestionsPanel.hashString(var4, false), (byte) -95);
           if (param0 <= 66) {
-            this.a((String) (this.packedGroups[20]), (byte) -91);
+            this.isGroupLoadedByName((String) (this.packedGroups[20]), (byte) -91);
           }
           stackIn_6_0 = this.getGroupProgress(10407, var3_int);
           return stackIn_6_0;
@@ -846,7 +846,7 @@ final class ResourceArchive {
         return this.index.fileCapacities.length;
     }
 
-    final synchronized boolean a(int param0, boolean param1) {
+    final synchronized boolean ensureGroupLoaded(int param0, boolean param1) {
         if (!this.isValidGroup(param0, param1)) {
           return false;
         }
@@ -860,7 +860,7 @@ final class ResourceArchive {
         return false;
     }
 
-    final synchronized byte[] c(int param0, int param1) {
+    final synchronized byte[] getSingleFile(int param0, int param1) {
         if (!this.ensureIndex(true)) {
           return null;
         }
@@ -879,7 +879,7 @@ final class ResourceArchive {
         throw new RuntimeException();
     }
 
-    private final synchronized byte[] b(int param0, int param1, int param2, int[] param3) {
+    private final synchronized byte[] getFileWithKeys(int param0, int param1, int param2, int[] param3) {
         Object stackIn_12_0 = null;
         Object stackIn_26_0 = null;
         Object stackIn_29_0 = null;
@@ -942,7 +942,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized byte[] a(String param0, int param1, String param2) {
+    final synchronized byte[] getFileByName(String param0, int param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -970,13 +970,13 @@ final class ResourceArchive {
             return stackIn_5_0;
           }
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.index.groupNameLookup.get(NameSuggestionsPanel.a(var6, false), (byte) 117);
+          var4_int = this.index.groupNameLookup.get(NameSuggestionsPanel.hashString(var6, false), (byte) 117);
           if (!this.isValidGroup(var4_int, true)) {
             stackIn_8_0 = null;
             return (byte[]) (stackIn_8_0);
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.index.fileNameLookups[var4_int].get(NameSuggestionsPanel.a(var7, false), (byte) -17);
+          var5 = this.index.fileNameLookups[var4_int].get(NameSuggestionsPanel.hashString(var7, false), (byte) -17);
           stackIn_10_0 = this.getFile(var4_int, (byte) 56, var5);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -43,7 +43,7 @@ final class SentinelCommand extends IntrusiveNode {
             return stackIn_5_0;
           }
           var2 = new CoverageBitmapFont(param1, PacketLoopHelpers.field_a, TextButton.field_M, StrongCacheEntry.field_L, MusicPatch.field_r, QuickChatInputHelpers.field_d, UiContainer.field_L);
-          NodeHashTable.a(9324);
+          NodeHashTable.releaseDecodeArrays(9324);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

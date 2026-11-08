@@ -38,7 +38,7 @@ final class IterableNodeHashTable implements Iterable {
         field_g = null;
     }
 
-    final static boolean a(byte param0, int param1, int param2, boolean param3) {
+    final static boolean isRankedBefore(byte param0, int param1, int param2, boolean param3) {
         int var4;
         int var5;
         int var6;
@@ -58,8 +58,8 @@ final class IterableNodeHashTable implements Iterable {
           if (ChecksumAndFrameHelpers.field_d[param1] > ChecksumAndFrameHelpers.field_d[param2]) {
             return false;
           }
-          var4 = Sentinel.field_T[param1] + FallingPickup.field_G[param1] + jm.field_r[param1];
-          var5 = jm.field_r[param2] + FallingPickup.field_G[param2] + Sentinel.field_T[param2];
+          var4 = Sentinel.field_T[param1] + FallingPickup.field_G[param1] + PendingIntReplyRequest.field_r[param1];
+          var5 = PendingIntReplyRequest.field_r[param2] + FallingPickup.field_G[param2] + Sentinel.field_T[param2];
           var6 = -10 % ((-27 - param0) / 47);
           if (var4 < var5) {
             return true;
@@ -81,8 +81,8 @@ final class IterableNodeHashTable implements Iterable {
         if (AgeValidator.field_u[param1] > AgeValidator.field_u[param2]) {
           return false;
         }
-        var4Lifetime1 = Sentinel.field_T[param1] + FallingPickup.field_G[param1] + jm.field_r[param1];
-        var5Lifetime1 = jm.field_r[param2] + FallingPickup.field_G[param2] + Sentinel.field_T[param2];
+        var4Lifetime1 = Sentinel.field_T[param1] + FallingPickup.field_G[param1] + PendingIntReplyRequest.field_r[param1];
+        var5Lifetime1 = PendingIntReplyRequest.field_r[param2] + FallingPickup.field_G[param2] + Sentinel.field_T[param2];
         var6Lifetime1 = -10 % ((-27 - param0) / 47);
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
@@ -120,7 +120,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final IntrusiveNode a(long param0, byte param1) {
+    final IntrusiveNode get(long param0, byte param1) {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;
@@ -146,9 +146,9 @@ final class IterableNodeHashTable implements Iterable {
         return var5;
     }
 
-    final static void a(RgbSprite param0, byte param1) {
+    final static void bindSpriteRaster(RgbSprite param0, byte param1) {
         try {
-          ArchiveIndex.a(false);
+          ArchiveIndex.pushRasterState(false);
           if (param1 >= -60) {
             field_g = (String) null;
           }
@@ -173,7 +173,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
+    final static void switchScreen(int param0, boolean param1, int param2, int param3) {
         int var4;
         int var4Lifetime1;
         SceneWidget.field_Jb = param3;
@@ -182,40 +182,40 @@ final class IterableNodeHashTable implements Iterable {
           if (SentinelAnimationEditor.field_q[98] == null) {
             GzipDecoder.field_g = param0;
             LoginForm.field_U = 0;
-            decompiledFrameRemainder0 = !(!DropTargetWidget.a(GzipDecoder.field_g, ~param2));
+            decompiledFrameRemainder0 = !(!DropTargetWidget.isNonNegative(GzipDecoder.field_g, ~param2));
             if (decompiledFrameRemainder0) {
               var4 = 0;
               if (12 == GzipDecoder.field_g) {
                 var4 = -1;
               }
-              GameKeyHandler.field_e[GzipDecoder.field_g].a(param1, var4, -63);
+              GameKeyHandler.field_e[GzipDecoder.field_g].updatePointerSelection(param1, var4, -63);
               if (12 == GzipDecoder.field_g) {
-                StrongCacheEntry.a((byte) -114, param1);
+                StrongCacheEntry.openContextMenu((byte) -114, param1);
               }
               if (0 != GzipDecoder.field_g) {
                 return;
               }
               if (null != SentinelAnimationEditor.field_q[96]) {
-                TextFieldValidator.a(6940, SentinelAnimationEditor.field_q[96]);
+                TextFieldValidator.playSample(6940, SentinelAnimationEditor.field_q[96]);
               }
               return;
             }
           }
           if (decompiledFrameRemainder0) {
-            TextFieldValidator.a(6940, SentinelAnimationEditor.field_q[98]);
+            TextFieldValidator.playSample(6940, SentinelAnimationEditor.field_q[98]);
           }
         }
         if (decompiledFrameRemainder0) {
           GzipDecoder.field_g = param0;
           LoginForm.field_U = 0;
-          if (DropTargetWidget.a(GzipDecoder.field_g, ~param2)) {
+          if (DropTargetWidget.isNonNegative(GzipDecoder.field_g, ~param2)) {
             var4Lifetime1 = 0;
             if (12 == GzipDecoder.field_g) {
               var4Lifetime1 = -1;
             }
-            GameKeyHandler.field_e[GzipDecoder.field_g].a(param1, var4Lifetime1, -63);
+            GameKeyHandler.field_e[GzipDecoder.field_g].updatePointerSelection(param1, var4Lifetime1, -63);
             if (12 == GzipDecoder.field_g) {
-              StrongCacheEntry.a((byte) -114, param1);
+              StrongCacheEntry.openContextMenu((byte) -114, param1);
             }
           }
         }
@@ -223,7 +223,7 @@ final class IterableNodeHashTable implements Iterable {
           return;
         }
         if (null != SentinelAnimationEditor.field_q[96]) {
-          TextFieldValidator.a(6940, SentinelAnimationEditor.field_q[96]);
+          TextFieldValidator.playSample(6940, SentinelAnimationEditor.field_q[96]);
         }
     }
 

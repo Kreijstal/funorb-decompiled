@@ -14,7 +14,7 @@ final class TabbedPanel extends SceneWidget {
     static int field_cc;
     static LoginMethod field_Vb;
     static SceneWidget field_Zb;
-    static ja field_Yb;
+    static IconLookupHelpers field_Yb;
 
     final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.field_zb = param3;
@@ -29,7 +29,7 @@ final class TabbedPanel extends SceneWidget {
 
     final static void setDialogFrame(SpriteFrame param0, int param1, int param2, int param3) {
         try {
-          cl.field_b = param1;
+          LoginResultHelpers.field_b = param1;
           int var4_int = 50 % ((param3 - 53) / 62);
           ChecksumAndFrameHelpers.field_c = param2;
           NanoTickClock.field_l = param0;
@@ -50,7 +50,7 @@ final class TabbedPanel extends SceneWidget {
         int var7 = AlternateUsernameCredentials.field_x.get(11);
         int var8 = AlternateUsernameCredentials.field_x.get(12);
         int var9 = AlternateUsernameCredentials.field_x.get(13);
-        return cf.field_t[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + CombatWorld.field_jb[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return StatSubmission.field_t[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + CombatWorld.field_jb[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     TabbedPanel(long param0, SceneWidget param1, String[] param2, SceneWidget param3, SceneWidget[] param4, int param5) {
@@ -167,7 +167,7 @@ final class TabbedPanel extends SceneWidget {
                 return;
               }
               var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-              param1.getAppletContext().showDocument(DirectByteStorage.a(param0 - 49, var2, param1), "_top");
+              param1.getAppletContext().showDocument(DirectByteStorage.appendSessionParameters(param0 - 49, var2, param1), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -208,7 +208,7 @@ final class TabbedPanel extends SceneWidget {
         try {
           int var2_int = 46 % ((6 - param1) / 37);
           DropTargetWidget.field_U = param0;
-          LabeledField.a(12, 0);
+          LabeledField.setPendingMessageId(12, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "mj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -273,7 +273,7 @@ final class TabbedPanel extends SceneWidget {
           if (param2 > 32767) {
             param2 = 32767;
           }
-          if (1 + param3 <= fm.field_f[param0]) {
+          if (1 + param3 <= QuickChatParameterType.field_f[param0]) {
             if (param0 == 1) {
               if (param2 < jh.field_a[param3]) {
                 jh.field_a[param3] = param2;
@@ -285,10 +285,10 @@ final class TabbedPanel extends SceneWidget {
               }
             }
           } else {
-            fm.field_f[param0] = 1 + param3;
+            QuickChatParameterType.field_f[param0] = 1 + param3;
             if (param0 == 0 &&
-              fm.field_f[param0] == fj.field_d) {
-              if (ni.b(122)) {
+              QuickChatParameterType.field_f[param0] == PasswordRuleHelpers.field_d) {
+              if (ByteArrayPoolHelpers.isAccountCreationMode(122)) {
                 stackIn_11_0 = ReportAbuseDialog.field_ac;
               } else {
                 stackIn_11_0 = CombatWorld.field_k;
@@ -300,8 +300,8 @@ final class TabbedPanel extends SceneWidget {
               NameValidationHelpers.field_g = -1;
             }
             if (param0 == 0 &&
-              10 == fm.field_f[param0] &&
-              ni.b(param7 + 103)) {
+              10 == QuickChatParameterType.field_f[param0] &&
+              ByteArrayPoolHelpers.isAccountCreationMode(param7 + 103)) {
               ClientGlobals.field_a = DualNodeDeque.field_b;
             }
             if (1 == param0) {
@@ -311,7 +311,7 @@ final class TabbedPanel extends SceneWidget {
               jh.field_a[param3 + 10] = param2;
             }
           }
-          if (!ni.b(85)) {
+          if (!ByteArrayPoolHelpers.isAccountCreationMode(85)) {
             ClockAndCookieHelpers.field_g.writeCipheredOpcode(71, (byte) -117);
             ClockAndCookieHelpers.field_g.writeByte((byte) 114, 10 * param0 + param3);
             ClockAndCookieHelpers.field_g.writeShort(param2, 54);
@@ -330,7 +330,7 @@ final class TabbedPanel extends SceneWidget {
           var12_ref_int__ = var17;
           for (var13_int = 0; var13_int < var17.length; var13_int++) {
             var14 = var17[var13_int];
-            if (!t.a(rn.field_D, var14, -20370)) {
+            if (!NameTable.isBitSet(PendingAckRequest.field_D, var14, -20370)) {
               var10++;
             }
           }
@@ -339,7 +339,7 @@ final class TabbedPanel extends SceneWidget {
           var13_intLifetime1 = var19;
           while (var12_ref_int__Lifetime1.length > var19) {
             var14Lifetime1 = var12_ref_int__Lifetime1[var19];
-            if (!t.a(ArchiveRequest.field_D, var14Lifetime1, -20370)) {
+            if (!NameTable.isBitSet(ArchiveRequest.field_D, var14Lifetime1, -20370)) {
               var11++;
             }
             var19++;
@@ -351,7 +351,7 @@ final class TabbedPanel extends SceneWidget {
           var13 = var18;
           for (var14Lifetime2 = 0; var14Lifetime2 < var18.length; var14Lifetime2++) {
             var15 = var18[var14Lifetime2];
-            if (!t.a(rn.field_D, var15, -20370)) {
+            if (!NameTable.isBitSet(PendingAckRequest.field_D, var15, -20370)) {
               incrementValue$1 = var12;
               var12++;
               LoadoutHelpers.field_i[incrementValue$1] = var15;
@@ -361,7 +361,7 @@ final class TabbedPanel extends SceneWidget {
           var13Lifetime1 = var9;
           for (var14Lifetime3 = 0; var14Lifetime3 < var13Lifetime1.length; var14Lifetime3++) {
             var15Lifetime1 = var13Lifetime1[var14Lifetime3];
-            if (!t.a(ArchiveRequest.field_D, var15Lifetime1, -20370)) {
+            if (!NameTable.isBitSet(ArchiveRequest.field_D, var15Lifetime1, -20370)) {
               incrementValue$0 = var12Lifetime1;
               var12Lifetime1++;
               Js5Transport.field_g[incrementValue$0] = var15Lifetime1;
@@ -374,7 +374,7 @@ final class TabbedPanel extends SceneWidget {
             var11 <= 0) {
             return;
           }
-          DateOfBirthValidator.d(-106);
+          DateOfBirthValidator.clearSceneReferences(-106);
           for (var12Lifetime2 = 0; LoginDialogHelpers.field_k.length > var12Lifetime2; var12Lifetime2++) {
             LoginDialogHelpers.field_k[var12Lifetime2] = 0;
           }
@@ -390,6 +390,6 @@ final class TabbedPanel extends SceneWidget {
         field_ac = "Private";
         field_Xb = Math.atan2(1.0, 0.0);
         field_Vb = new LoginMethod("usename");
-        field_Yb = new ja();
+        field_Yb = new IconLookupHelpers();
     }
 }

@@ -8,5 +8,5 @@ interface ValidationSource {
 
     public abstract String validationMessage(boolean param0);
 
-    public abstract vd validationState(byte param0);
+    public abstract TransitionTimerHelpers validationState(byte param0);
 }

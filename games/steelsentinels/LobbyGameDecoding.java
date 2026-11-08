@@ -19,10 +19,10 @@ final class LobbyGameDecoding {
             LobbyGameDecoding.measureMenuText((String) null, -23, true);
           }
           if (!param2) {
-            stackIn_6_0 = pa.field_k.textWidth(param0);
+            stackIn_6_0 = TutorialStepTable.field_k.textWidth(param0);
             return stackIn_6_0;
           }
-          stackIn_4_0 = wb.field_a.textWidth(param0);
+          stackIn_4_0 = RewardValueHelpers.field_a.textWidth(param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -159,7 +159,7 @@ final class LobbyGameDecoding {
             return;
           }
           try {
-            JavaScriptBridge.callWindowFunctionWithArguments("resizing", (byte) -41, Projectile.d((byte) -21), new Object[]{new Integer(param0)});
+            JavaScriptBridge.callWindowFunctionWithArguments("resizing", (byte) -41, Projectile.getApplet((byte) -21), new Object[]{new Integer(param0)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;
@@ -190,10 +190,10 @@ final class LobbyGameDecoding {
             LobbyGameDecoding.measureMenuText((String) null, -23, true);
           }
           if (!param2) {
-            stackIn_6_0 = pa.field_k.textWidth(param0);
+            stackIn_6_0 = TutorialStepTable.field_k.textWidth(param0);
             return stackIn_6_0;
           }
-          stackIn_4_0 = wb.field_a.textWidth(param0);
+          stackIn_4_0 = RewardValueHelpers.field_a.textWidth(param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

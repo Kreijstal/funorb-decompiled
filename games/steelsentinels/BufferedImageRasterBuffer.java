@@ -27,7 +27,7 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
           var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_c, this.field_i), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
           this.field_b = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
           this.field_l = param2;
-          this.b((byte) 125);
+          this.bindRaster((byte) 125);
           return;
         }
         java.awt.Component var8 = (java.awt.Component) null;
@@ -36,7 +36,7 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
         var7Lifetime1 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6Lifetime1)).createCompatibleSampleModel(this.field_c, this.field_i), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
         this.field_b = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6Lifetime1), var7Lifetime1, false, new Hashtable()));
         this.field_l = param2;
-        this.b((byte) 125);
+        this.bindRaster((byte) 125);
     }
 
     public BufferedImageRasterBuffer() {

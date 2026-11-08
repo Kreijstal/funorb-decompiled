@@ -13,11 +13,11 @@ abstract class ByteStorage {
 
     abstract byte[] toByteArray(int param0);
 
-    final static fm[] b(boolean param0) {
+    final static QuickChatParameterType[] listTypeDescriptors(boolean param0) {
         if (!param0) {
-          return new fm[]{StripedProgressBar.field_M, IntrusiveNode.field_g, WhirlpoolHasher.field_n, gf.field_b, Explosion.field_D, MouseInputHandler.field_c, PlayingSound.field_p, ArticulatedPart.field_O, ParticleEffect.field_H, PasswordFieldPainter.field_x, wn.field_b, ml.field_b, sh.field_b, TriangleMesh.field_A};
+          return new QuickChatParameterType[]{StripedProgressBar.field_M, IntrusiveNode.field_g, WhirlpoolHasher.field_n, GeneratedSpriteHelpers.field_b, Explosion.field_D, MouseInputHandler.field_c, PlayingSound.field_p, ArticulatedPart.field_O, ParticleEffect.field_H, PasswordFieldPainter.field_x, ChatPanelSetupHelpers.field_b, ListRequestHelpers.field_b, MenuLayoutHelpers.field_b, TriangleMesh.field_A};
         }
-        return (fm[]) null;
+        return (QuickChatParameterType[]) null;
     }
 
     public static void releaseStatics(boolean param0) {

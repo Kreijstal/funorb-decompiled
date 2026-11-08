@@ -29,7 +29,7 @@ final class Explosion extends DualNode {
     static NodeDeque field_A;
     static RgbSprite[] field_J;
     static SceneWidget field_C;
-    static fm field_D;
+    static QuickChatParameterType field_D;
 
     final void drawShockwave(int param0, int param1, int param2) {
         int var4;
@@ -106,14 +106,14 @@ final class Explosion extends DualNode {
               var5[var6] = QuickChatInputHelpers.field_d[ClientUiHelpers.bitAnd((int) var10[var6], 255)];
               var6++;
             }
-            var1[var2] = new RgbSprite(un.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], var11);
+            var1[var2] = new RgbSprite(ChatHistoryAllocator.field_n, AgeValidator.field_n, PacketLoopHelpers.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], var11);
             var2++;
             continue scanLoop1;
           }
           stackIn_13_0 = 9324;
           break;
         }
-        NodeHashTable.a(stackIn_13_0);
+        NodeHashTable.releaseDecodeArrays(stackIn_13_0);
         return var1;
     }
 
@@ -184,7 +184,7 @@ final class Explosion extends DualNode {
                 this.projectile.sourceWeaponType == 9) && (this.ageTicks & 63) == 0) {
                 var14 = new NodeIterator(this.world.sentinels);
                 var6 = 0;
-                var7_ref_mb = (Sentinel) (var14.b(2));
+                var7_ref_mb = (Sentinel) (var14.first(2));
                 while (var7_ref_mb != null) {
                   stackIn_25_0 = var6;
                   stackIn_25_1 = this.affectedSentinels.length;
@@ -341,7 +341,7 @@ final class Explosion extends DualNode {
               var2 = this.field_F * this.field_F;
               var16 = new IsaacRandom(new int[]{this.world.simulationTick, this.worldX, this.worldY});
               var4_ref_jc = new NodeIterator(this.world.field_db);
-              var5_ref_wl = (Projectile) (var4_ref_jc.b(2));
+              var5_ref_wl = (Projectile) (var4_ref_jc.first(2));
               while (var5_ref_wl != null) {
                 var6 = -var5_ref_wl.worldX + this.worldX >> 4;
                 var7 = -var5_ref_wl.worldY + this.worldY >> 4;
@@ -440,19 +440,19 @@ final class Explosion extends DualNode {
                             var7Lifetime1 = this.projectile.field_O;
                             var17.field_S = var17.field_S - this.projectile.field_kb;
                             if (this.projectile.field_kb > var17.field_mc &&
-                              var17.h(-128)) {
+                              var17.isRecoveryTimerIdle(-128)) {
                               var17.field_mc = this.projectile.field_kb;
                             }
                             if (this.projectile.field_kb > 0 &&
                               var17.charge > 0 &&
-                              var17.h(-122)) {
+                              var17.isRecoveryTimerIdle(-122)) {
                               var17.consumeCharge(true, Math.min(var17.charge, this.projectile.field_kb / 50));
                             }
                             if (var17.field_S < 0) {
                               var17.field_S = 0;
                             }
                             if (0 < var17.armour) {
-                              var17.a((byte) 40, this.projectile);
+                              var17.recordHitBy((byte) 40, this.projectile);
                             }
                             if (!(var17.armour > 0) ||
                               this.projectile.sourceSentinel == null) {
@@ -474,12 +474,12 @@ final class Explosion extends DualNode {
                                 var17.field_z <= 0) {
                                 if (~this.projectile.sourceSentinel.teamId == ~var17.teamId) {
                                   if ((this.projectile.sourceSentinel != var17)) {
-                                    this.projectile.sourceSentinel.b(-(this.world.field_l * (var8_int * var17.field_lb / var17.maximumArmour)), 26511);
+                                    this.projectile.sourceSentinel.awardDamageScore(-(this.world.field_l * (var8_int * var17.field_lb / var17.maximumArmour)), 26511);
                                   }
                                   decompiledFrameRemainder0 = false;
                                 }
                                 else {
-                                  this.projectile.sourceSentinel.b(this.world.field_l * (var8_int * var17.field_lb / var17.maximumArmour), 26511);
+                                  this.projectile.sourceSentinel.awardDamageScore(this.world.field_l * (var8_int * var17.field_lb / var17.maximumArmour), 26511);
                                   this.projectile.sourceSentinel.field_Ac = this.projectile.sourceSentinel.field_Ac + var8_int;
                                 }
                               }
@@ -514,7 +514,7 @@ final class Explosion extends DualNode {
                               var17.field_S = var17.field_S >> var8_intLifetime1;
                             }
                             if (var17.armour > 0) {
-                              var17.a((byte) 68, this.projectile);
+                              var17.recordHitBy((byte) 68, this.projectile);
                             }
                             if (var17.armour > 0 &&
                               this.projectile.sourceSentinel != null) {
@@ -535,11 +535,11 @@ final class Explosion extends DualNode {
                               if (var17.field_Nb != 8 &&
                                 var17.field_z <= 0) {
                                 if (var17.teamId != var8.teamId) {
-                                  var8.b(this.world.field_l * (var17.field_lb * var9 / var17.maximumArmour), 26511);
+                                  var8.awardDamageScore(this.world.field_l * (var17.field_lb * var9 / var17.maximumArmour), 26511);
                                   var8.field_Ac = var8.field_Ac + var9;
                                 } else {
                                   if (var17 != var8) {
-                                    var8.b(-(this.world.field_l * (var17.field_lb * var9 / var17.maximumArmour)), 26511);
+                                    var8.awardDamageScore(-(this.world.field_l * (var17.field_lb * var9 / var17.maximumArmour)), 26511);
                                   }
                                 }
                               }
@@ -564,13 +564,13 @@ final class Explosion extends DualNode {
                                 var17.reduceArmour(128, -var17.field_S);
                               }
                             }
-                            if (var17.h(-122) &&
+                            if (var17.isRecoveryTimerIdle(-122) &&
                               var17.field_mc < var7Lifetime1 * this.projectile.field_kb / this.projectile.field_O) {
                               var17.field_mc = this.projectile.field_kb * var7Lifetime1 / this.projectile.field_O;
                             }
                             if (var7Lifetime1 * this.projectile.field_kb / this.projectile.field_O > 0 &&
                               var17.charge > 0 &&
-                              var17.h(-122)) {
+                              var17.isRecoveryTimerIdle(-122)) {
                               var17.consumeCharge(true, Math.min(var17.charge, var7Lifetime1 * this.projectile.field_kb / this.projectile.field_O / 50));
                             }
                             if (var17.hasModuleType(26, -27) &&
@@ -581,7 +581,7 @@ final class Explosion extends DualNode {
                             }
                             if (var17.field_Lb &&
                               !var17.hasModuleType(29, -27) &&
-                              3 != di.field_g) {
+                              3 != OptionMaskHelpers.field_g) {
                               var17.field_Dc = 200;
                             }
                           }
@@ -695,6 +695,6 @@ final class Explosion extends DualNode {
         field_Q = "Names cannot contain consecutive spaces";
         field_W = "Type your password again to make sure it's correct";
         field_A = new NodeDeque();
-        field_D = new fm(6, 0, 4, 2);
+        field_D = new QuickChatParameterType(6, 0, 4, 2);
     }
 }

@@ -3,7 +3,7 @@
  */
 final class LobbyStateHelpers {
     static ResourceArchive field_h;
-    static hm field_a;
+    static LoadoutCostHelpers field_a;
     static String field_e;
     static String field_d;
     static String field_c;
@@ -21,14 +21,14 @@ final class LobbyStateHelpers {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!StatefulTextPainter.a((byte) 30, param1, param2, param0)) {
+          if (!StatefulTextPainter.loadSpriteSheet((byte) 30, param1, param2, param0)) {
             stackIn_2_0 = null;
             return (RgbSprite) (stackIn_2_0);
           }
           if (param3 != 1048576) {
             LobbyStateHelpers.detectMaxMemoryMb((byte) 103);
           }
-          stackIn_6_0 = NameSuggestionsPanel.j(-100);
+          stackIn_6_0 = NameSuggestionsPanel.buildFirstRgbSprite(-100);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,30 +53,30 @@ final class LobbyStateHelpers {
         var2 = SteelSentinels.obfuscationControl;
         try {
           LoadoutHelpers.field_f = false;
-          nf.field_b = null;
-          ni.field_a = null;
+          LoginEncryptionHelpers.field_b = null;
+          ByteArrayPoolHelpers.field_a = null;
           if (IterableNodeHashTable.field_m != null) {
             IterableNodeHashTable.field_m.clear(6);
             IterableNodeHashTable.field_m = null;
           }
-          t.field_c = null;
+          NameTable.field_c = null;
           if (ClientErrorSupport.field_e != null) {
             ClientErrorSupport.field_e.clear(6);
             ClientErrorSupport.field_e = null;
           }
-          fm.field_a = null;
-          if (null != o.field_d) {
-            o.field_d.clear(6);
-            o.field_d = null;
+          QuickChatParameterType.field_a = null;
+          if (null != SocialStateHelpers.field_d) {
+            SocialStateHelpers.field_d.clear(6);
+            SocialStateHelpers.field_d = null;
           }
           LoginCredentials.field_b = null;
-          if (null != t.field_c) {
-            var4 = (LobbyPlayer) (t.field_c.first(90));
+          if (null != NameTable.field_c) {
+            var4 = (LobbyPlayer) (NameTable.field_c.first(90));
             while (var4 != null) {
               var4.unlinkDual(480);
-              var4 = (LobbyPlayer) (t.field_c.next((byte) -66));
+              var4 = (LobbyPlayer) (NameTable.field_c.next((byte) -66));
             }
-            t.field_c = null;
+            NameTable.field_c = null;
           }
           if (param0) {
             return;
@@ -200,7 +200,7 @@ final class LobbyStateHelpers {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                ed.field_a = (int)(var3.longValue() / 1048576L) + 1;
+                SessionSeedHelpers.field_a = (int)(var3.longValue() / 1048576L) + 1;
                 return;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -237,6 +237,6 @@ final class LobbyStateHelpers {
         field_e = "Head slot";
         field_i = "No options available";
         field_d = "No highscores";
-        field_a = new hm();
+        field_a = new LoadoutCostHelpers();
     }
 }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ArchiveProvider {
-    static vd field_d;
+    static TransitionTimerHelpers field_d;
     static SceneWidget field_f;
     static RgbSprite field_e;
     static int[] field_c;
@@ -11,7 +11,7 @@ abstract class ArchiveProvider {
 
     abstract ArchiveIndex getIndex(byte obfuscationGuard);
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean isValidAccountName(boolean param0, CharSequence param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -21,7 +21,7 @@ abstract class ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          if (!SocketJs5Transport.a(param1, 4, param0)) {
+          if (!SocketJs5Transport.isValidDisplayName(param1, 4, param0)) {
             return false;
           }
           var2_int = 0;
@@ -50,10 +50,10 @@ abstract class ArchiveProvider {
         }
     }
 
-    final static String a(char param0, int param1) {
+    final static String charToString(char param0, int param1) {
         if (param1 != 29448) {
           CharSequence var3 = (CharSequence) null;
-          ArchiveProvider.a(true, (CharSequence) null);
+          ArchiveProvider.isValidAccountName(true, (CharSequence) null);
           return String.valueOf(param0);
         }
         return String.valueOf(param0);
@@ -61,15 +61,15 @@ abstract class ArchiveProvider {
 
     abstract int getGroupProgress(boolean obfuscationGuard, int groupId);
 
-    final static boolean a(int param0) {
+    final static boolean isAccountUnrestricted(int param0) {
         if (param0 != 38) {
           field_b = (RgbSprite) null;
-          return !uc.field_g ? true : false;
+          return !DesignerPageTables.field_g ? true : false;
         }
-        return !uc.field_g ? true : false;
+        return !DesignerPageTables.field_g ? true : false;
     }
 
-    final static void a(byte param0) {
+    final static void initializeKeyCodeMap(byte param0) {
         SentinelAnimationEditor.field_a[44] = 71;
         SentinelAnimationEditor.field_a[93] = 43;
         SentinelAnimationEditor.field_a[59] = 57;
@@ -85,7 +85,7 @@ abstract class ArchiveProvider {
           SentinelAnimationEditor.field_a[61] = 27;
           return;
         }
-        ArchiveProvider.a(-119);
+        ArchiveProvider.isAccountUnrestricted(-119);
         SentinelAnimationEditor.field_a[222] = 58;
         SentinelAnimationEditor.field_a[192] = 28;
         SentinelAnimationEditor.field_a[520] = 59;
@@ -97,24 +97,24 @@ abstract class ArchiveProvider {
 
     abstract byte[] getEncodedGroup(int groupId, int obfuscationGuard);
 
-    final static void a(boolean param0, byte param1, boolean param2) {
+    final static void clearOrDimScreen(boolean param0, byte param1, boolean param2) {
         if (param0) {
           SoftwareRaster.fillRectangleBlended(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j, 0, 192);
           if (param1 <= 32) {
-            field_d = (vd) null;
-            wn.a(0, param0);
+            field_d = (TransitionTimerHelpers) null;
+            ChatPanelSetupHelpers.drawModalStack(0, param0);
             return;
           }
-          wn.a(0, param0);
+          ChatPanelSetupHelpers.drawModalStack(0, param0);
           return;
         }
         SoftwareRaster.clear();
         if (param1 <= 32) {
-          field_d = (vd) null;
-          wn.a(0, param0);
+          field_d = (TransitionTimerHelpers) null;
+          ChatPanelSetupHelpers.drawModalStack(0, param0);
           return;
         }
-        wn.a(0, param0);
+        ChatPanelSetupHelpers.drawModalStack(0, param0);
     }
 
     public static void releaseStatics(int param0) {
@@ -131,6 +131,6 @@ abstract class ArchiveProvider {
 
     static {
         field_c = new int[]{38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, -1, -1, -1, 7};
-        field_d = new vd();
+        field_d = new TransitionTimerHelpers();
     }
 }

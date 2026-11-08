@@ -14,7 +14,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
     public final void onSubmit(boolean param0, EditableTextWidget param1) {
         try {
           if (!param0) {
-            DateOfBirthValidator.d(116);
+            DateOfBirthValidator.clearSceneReferences(116);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "vn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -55,7 +55,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         return TextLayout.field_a;
     }
 
-    final static void d(int param0) {
+    final static void clearSceneReferences(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -63,13 +63,13 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         int var1_intLifetime1;
         var2 = SteelSentinels.obfuscationControl;
         try {
-          hm.field_a = null;
+          LoadoutCostHelpers.field_a = null;
           ContentTransitionDialog.field_jb = null;
-          vd.field_a = null;
+          TransitionTimerHelpers.field_a = null;
           TextAndBitHelpers.field_f = null;
-          kf.field_s = true;
+          HighscoreTable.field_s = true;
           GameApplet.field_l = true;
-          rh.field_u = null;
+          PendingDataRequest.field_u = null;
           TextAndMenuHelpers.field_a = null;
           for (var1_int = 0; MouseInputHandler.field_h.length > var1_int; var1_int++) {
             MouseInputHandler.field_h[var1_int] = null;
@@ -111,11 +111,11 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         return this.field_n.isIncomplete(-7034);
     }
 
-    static int a(int param0, int param1) {
+    static int bitOr(int param0, int param1) {
         return param0 | param1;
     }
 
-    final static String a(char param0, int param1, int param2) {
+    final static String repeatCharacter(char param0, int param1, int param2) {
         int var4 = 0;
         int var5 = SteelSentinels.obfuscationControl;
         char[] var6 = new char[param2];
@@ -129,24 +129,24 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         return (String) null;
     }
 
-    final static void c(int param0) {
+    final static void closeAccountOverlay(int param0) {
         if (param0 <= 0) {
-          DateOfBirthValidator.c((byte) -125);
-          vc.a(-1);
+          DateOfBirthValidator.getSoundMixer((byte) -125);
+          DisplayMode.resetSharedWidgets(-1);
           return;
         }
-        vc.a(-1);
+        DisplayMode.resetSharedWidgets(-1);
     }
 
-    final vd evaluateState(int param0) {
+    final TransitionTimerHelpers evaluateState(int param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        vd stackIn_2_0 = null;
-        vd stackIn_6_0 = null;
-        vd stackIn_10_0 = null;
+        TransitionTimerHelpers stackIn_2_0 = null;
+        TransitionTimerHelpers stackIn_6_0 = null;
+        TransitionTimerHelpers stackIn_10_0 = null;
         Throwable decompiledCaughtException = null;
         try {
           var2_int = this.field_n.getDay(-127);
@@ -171,13 +171,13 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           return ArchiveProvider.field_d;
         }
         if (param0 == -31992) {
-          return vf.field_b;
+          return RequestResendHelpers.field_b;
         }
         field_i = (String) null;
-        return vf.field_b;
+        return RequestResendHelpers.field_b;
     }
 
-    final static PcmStreamMixer c(byte param0) {
+    final static PcmStreamMixer getSoundMixer(byte param0) {
         if (param0 != 83) {
           DateOfBirthValidator.releaseStatics(true);
           return UiTheme.field_e;

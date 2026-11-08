@@ -21,7 +21,7 @@ final class PartInstruction {
     int field_j;
     int field_p;
     int field_l;
-    static dj field_h;
+    static NumberParsingHelpers field_h;
     static int field_g;
     static String field_a;
     static String field_c;
@@ -74,15 +74,15 @@ final class PartInstruction {
         var43 = SteelSentinels.obfuscationControl;
         try {
           if (param13 >= 0 &&
-            param1 < lf.field_h) {
+            param1 < MeshRasterState.field_h) {
             if (0 > param4 &&
               param10 < 0 &&
               param3 < 0) {
               return;
             }
-            if (param4 >= lf.field_g &&
-              lf.field_g <= param10 &&
-              lf.field_g <= param3) {
+            if (param4 >= MeshRasterState.field_g &&
+              MeshRasterState.field_g <= param10 &&
+              MeshRasterState.field_g <= param3) {
               return;
             }
             var28 = 95 % ((47 - param12) / 45);
@@ -217,32 +217,32 @@ final class PartInstruction {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var37Lifetime2 = lf.field_c[param1];
+                var37Lifetime2 = MeshRasterState.field_c[param1];
                 while (param1 < param8) {
                   var38 = var17_int >> 16;
-                  if (var38 < lf.field_g) {
+                  if (var38 < MeshRasterState.field_g) {
                     var39 = (var18 >> 16) - (var17_int >> 16);
                     if (var39 == 0) {
                       if (var38 >= 0 &&
-                        lf.field_g > var38) {
-                        lc.a(0, var21, var30, -75, 0, var37Lifetime2 + var38, param15, var39, var25, 0);
+                        MeshRasterState.field_g > var38) {
+                        SettingSearchHelpers.blendHalfGradientSpan(0, var21, var30, -75, 0, var37Lifetime2 + var38, param15, var39, var25, 0);
                       }
                     } else {
                       var40 = (var22 - var21) / var39;
                       var41 = (var26 - var25) / var39;
                       var42 = (var31 - var30) / var39;
-                      if (lf.field_g <= var38 + var39) {
-                        var39 = -1 + lf.field_g - var38;
+                      if (MeshRasterState.field_g <= var38 + var39) {
+                        var39 = -1 + MeshRasterState.field_g - var38;
                       }
                       if (0 <= var38) {
-                        lc.a(var41, var21, var30, 113, var42, var37Lifetime2 + var38, param15, var39, var25, var40);
+                        SettingSearchHelpers.blendHalfGradientSpan(var41, var21, var30, 113, var42, var37Lifetime2 + var38, param15, var39, var25, var40);
                       } else {
-                        lc.a(var41, -(var40 * var38) + var21, var30 - var42 * var38, -47, var42, var37Lifetime2, param15, var38 + var39, var25 - var41 * var38, var40);
+                        SettingSearchHelpers.blendHalfGradientSpan(var41, -(var40 * var38) + var21, var30 - var42 * var38, -47, var42, var37Lifetime2, param15, var38 + var39, var25 - var41 * var38, var40);
                       }
                     }
                   }
                   param1++;
-                  if (lf.field_h <= param1) {
+                  if (MeshRasterState.field_h <= param1) {
                     return;
                   }
                   var22 = var22 + var24;
@@ -304,32 +304,32 @@ final class PartInstruction {
               var25 = var25 + param1 * var27;
               param1 = 0;
             }
-            var36Lifetime1 = lf.field_c[param1];
+            var36Lifetime1 = MeshRasterState.field_c[param1];
             while (param1 < param13) {
               var37Lifetime1 = var17_int >> 16;
-              if (lf.field_g > var37Lifetime1) {
+              if (MeshRasterState.field_g > var37Lifetime1) {
                 var38Lifetime1 = (var18 >> 16) - (var17_int >> 16);
                 if (0 == var38Lifetime1) {
                   if (var37Lifetime1 >= 0 &&
-                    lf.field_g > var37Lifetime1) {
-                    lc.a(0, var21, var30, -43, 0, var36Lifetime1 + var37Lifetime1, param15, var38Lifetime1, var25, 0);
+                    MeshRasterState.field_g > var37Lifetime1) {
+                    SettingSearchHelpers.blendHalfGradientSpan(0, var21, var30, -43, 0, var36Lifetime1 + var37Lifetime1, param15, var38Lifetime1, var25, 0);
                   }
                 } else {
                   var39Lifetime1 = (-var21 + var22) / var38Lifetime1;
                   var40Lifetime1 = (var26 - var25) / var38Lifetime1;
                   var41Lifetime1 = (var31 - var30) / var38Lifetime1;
-                  if (var38Lifetime1 + var37Lifetime1 >= lf.field_g) {
-                    var38Lifetime1 = -var37Lifetime1 + lf.field_g - 1;
+                  if (var38Lifetime1 + var37Lifetime1 >= MeshRasterState.field_g) {
+                    var38Lifetime1 = -var37Lifetime1 + MeshRasterState.field_g - 1;
                   }
                   if (var37Lifetime1 >= 0) {
-                    lc.a(var40Lifetime1, var21, var30, -32, var41Lifetime1, var37Lifetime1 + var36Lifetime1, param15, var38Lifetime1, var25, var39Lifetime1);
+                    SettingSearchHelpers.blendHalfGradientSpan(var40Lifetime1, var21, var30, -32, var41Lifetime1, var37Lifetime1 + var36Lifetime1, param15, var38Lifetime1, var25, var39Lifetime1);
                   } else {
-                    lc.a(var40Lifetime1, -(var37Lifetime1 * var39Lifetime1) + var21, -(var41Lifetime1 * var37Lifetime1) + var30, 116, var41Lifetime1, var36Lifetime1, param15, var37Lifetime1 + var38Lifetime1, var25 - var37Lifetime1 * var40Lifetime1, var39Lifetime1);
+                    SettingSearchHelpers.blendHalfGradientSpan(var40Lifetime1, -(var37Lifetime1 * var39Lifetime1) + var21, -(var41Lifetime1 * var37Lifetime1) + var30, 116, var41Lifetime1, var36Lifetime1, param15, var37Lifetime1 + var38Lifetime1, var25 - var37Lifetime1 * var40Lifetime1, var39Lifetime1);
                   }
                 }
               }
               param1++;
-              if (lf.field_h <= param1) {
+              if (MeshRasterState.field_h <= param1) {
                 return;
               }
               var21 = var21 + var23;
@@ -523,7 +523,7 @@ final class PartInstruction {
     static {
         field_t = new int[]{6559605, 16752640, 65280};
         field_o = new LoginMethod("email");
-        field_h = new dj(0);
+        field_h = new NumberParsingHelpers(0);
         field_g = 0;
         field_c = ", and plummeted like a stalled brick";
     }

@@ -9,7 +9,7 @@ final class ArchiveLoadSequence {
     String field_i;
     static String field_b;
     static SceneWidget[] field_a;
-    private sl[] field_c;
+    private ArchiveLoadStep[] field_c;
     static int field_h;
     static String field_f;
     static int field_j;
@@ -32,7 +32,7 @@ final class ArchiveLoadSequence {
           var4_int = param2.getGroupId(param1, 41);
           var5 = param2.getFileId(var4_int, -32759, param3);
           var6 = -61 % ((-77 - param0) / 38);
-          stackIn_1_0 = rd.a(true, param2, var4_int, var5);
+          stackIn_1_0 = SpriteLoadingHelpers.loadIndexedSprites(true, param2, var4_int, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,7 +62,7 @@ final class ArchiveLoadSequence {
 
     final boolean pollLoading(int param0) {
         int var2;
-        sl var3;
+        ArchiveLoadStep var3;
         int var4;
         var4 = SteelSentinels.obfuscationControl;
         var2 = 69 / ((71 - param0) / 55);
@@ -73,12 +73,12 @@ final class ArchiveLoadSequence {
             return false;
           }
           if (var3.field_a >= 0 &&
-            !var3.field_d.a(var3.field_a, true)) {
+            !var3.field_d.ensureGroupLoaded(var3.field_a, true)) {
             this.updateProgress(var3, -9803, var3.field_d.getGroupProgress(10407, var3.field_a));
             return false;
           }
           if (null != var3.field_g &&
-            !var3.field_d.a(var3.field_g, (byte) 90)) {
+            !var3.field_d.isGroupLoadedByName(var3.field_g, (byte) 90)) {
             this.updateProgress(var3, -9803, var3.field_d.getGroupProgressByName((byte) 76, var3.field_g));
             return false;
           }
@@ -86,7 +86,7 @@ final class ArchiveLoadSequence {
             null == var3.field_g &&
             var3.field_e != null &&
             !var3.field_d.ensureAllGroupsAvailable(25)) {
-            this.updateProgress(var3, -9803, var3.field_d.a((byte) -33));
+            this.updateProgress(var3, -9803, var3.field_d.getOverallProgress((byte) -33));
             return false;
           }
           this.field_d = this.field_d + 1;
@@ -124,8 +124,8 @@ final class ArchiveLoadSequence {
           var11 = new int[1000];
           var10 = var11;
           var4 = var10;
-          var3_int = param2.a(0, var11, var3_int);
-          var6 = param2.i(-106);
+          var3_int = param2.writeComponentIds(0, var11, var3_int);
+          var6 = param2.getTotalModuleSlots(-106);
           for (var7_int = 0; var7_int < 8; var7_int++) {
             incrementValue$1 = var3_int;
             var3_int++;
@@ -205,7 +205,7 @@ final class ArchiveLoadSequence {
             var9 = param1;
             var10 = param6;
             for (var11 = param4; var11 < param3; var11++) {
-              var12 = un.field_j[var11];
+              var12 = ChatHistoryAllocator.field_j[var11];
               if (param5) {
                 stackIn_24_0 = ChecksumAndFrameHelpers.field_d[var12];
               } else {
@@ -213,10 +213,10 @@ final class ArchiveLoadSequence {
               }
               var13 = stackIn_24_0;
               if (var7_int < var13) {
-                un.field_j[var11] = un.field_j[var8];
+                ChatHistoryAllocator.field_j[var11] = ChatHistoryAllocator.field_j[var8];
                 incrementValue$0 = var8;
                 var8++;
-                un.field_j[incrementValue$0] = var12;
+                ChatHistoryAllocator.field_j[incrementValue$0] = var12;
                 if (var9 > var13) {
                   var9 = var13;
                 }
@@ -232,11 +232,11 @@ final class ArchiveLoadSequence {
           }
           for (var7_intLifetime1 = -1 + param3; param4 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param4; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
-              var9Lifetime1 = un.field_j[var8Lifetime1];
-              var10Lifetime1 = un.field_j[var8Lifetime1 + 1];
-              if (IterableNodeHashTable.a((byte) -127, var9Lifetime1, var10Lifetime1, param5)) {
-                un.field_j[var8Lifetime1] = var10Lifetime1;
-                un.field_j[1 + var8Lifetime1] = var9Lifetime1;
+              var9Lifetime1 = ChatHistoryAllocator.field_j[var8Lifetime1];
+              var10Lifetime1 = ChatHistoryAllocator.field_j[var8Lifetime1 + 1];
+              if (IterableNodeHashTable.isRankedBefore((byte) -127, var9Lifetime1, var10Lifetime1, param5)) {
+                ChatHistoryAllocator.field_j[var8Lifetime1] = var10Lifetime1;
+                ChatHistoryAllocator.field_j[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }
@@ -248,7 +248,7 @@ final class ArchiveLoadSequence {
         }
     }
 
-    private final void updateProgress(sl param0, int param1, int param2) {
+    private final void updateProgress(ArchiveLoadStep param0, int param1, int param2) {
         float var4_float = 0.0f;
         try {
           var4_float = (float)(1 + this.field_d) + (float)param2 / 100.0f;
@@ -272,19 +272,19 @@ final class ArchiveLoadSequence {
         }
         if (null != AudioService.field_i &&
           AudioService.field_i.isMenuOpen((byte) 126)) {
-          rh.a(false);
+          PendingDataRequest.closeContextMenu(false);
           return true;
         }
         if (FunOrbClient.field_x != null &&
           FunOrbClient.field_x.handleEscapeKey(-91)) {
           FunOrbClient.field_x = null;
-          rh.a(false);
+          PendingDataRequest.closeContextMenu(false);
           return true;
         }
-        if (Js5ArchiveManager.a(-91)) {
+        if (Js5ArchiveManager.isAccountNamePromptReady(-91)) {
           return true;
         }
-        if (vh.a(param3, param2, -80, param0)) {
+        if (KeyRoutingHelpers.routeKeyInput(param3, param2, -80, param0)) {
           return true;
         }
         return false;

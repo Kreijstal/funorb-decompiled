@@ -35,30 +35,30 @@ abstract class Js5Transport {
         field_h = null;
     }
 
-    final int a(byte param0) {
+    final int urgentCount(byte param0) {
         if (param0 != 16) {
           return 76;
         }
         return this.field_m.size((byte) -115) + this.field_a.size((byte) -105);
     }
 
-    final boolean b(byte param0) {
+    final boolean isPrefetchQueueFull(byte param0) {
         if (param0 >= 100) {
-          return this.d(-21033) >= 20 ? true : false;
+          return this.prefetchCount(-21033) >= 20 ? true : false;
         }
-        this.d((byte) 105);
-        return this.d(-21033) >= 20 ? true : false;
+        this.poll((byte) 105);
+        return this.prefetchCount(-21033) >= 20 ? true : false;
     }
 
-    final int d(int param0) {
+    final int prefetchCount(int param0) {
         if (param0 == -21033) {
           return this.field_j.size((byte) -102) + this.field_p.size((byte) -85);
         }
-        this.a(124);
+        this.resetConnection(124);
         return this.field_j.size((byte) -102) + this.field_p.size((byte) -85);
     }
 
-    final static boolean a(long param0, int[] param1, String param2, int param3, int param4) {
+    final static boolean canSendQuickChat(long param0, int[] param1, String param2, int param3, int param4) {
         RuntimeException var6 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
@@ -73,7 +73,7 @@ abstract class Js5Transport {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null && (param3 != 2 ||
-            qm.a((byte) -31, param2, param0))) {
+            DisplayNameAndAudioHelpers.isFriendOrGameMember((byte) -31, param2, param0))) {
             stackIn_9_0 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -101,13 +101,13 @@ abstract class Js5Transport {
         }
     }
 
-    abstract boolean d(byte param0);
+    abstract boolean poll(byte param0);
 
-    abstract void a(Object param0, boolean param1, int param2);
+    abstract void attachTransport(Object param0, boolean param1, int param2);
 
-    abstract void b(int param0);
+    abstract void close(int param0);
 
-    final static void a(boolean param0) {
+    final static void serviceAudio(boolean param0) {
         PlayingSound var1 = null;
         int var2 = 0;
         boolean stackIn_19_0 = false;
@@ -146,7 +146,7 @@ abstract class Js5Transport {
             if (stackIn_19_0) {
               return;
             }
-            ml.field_g = null;
+            ListRequestHelpers.field_g = null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -156,14 +156,14 @@ abstract class Js5Transport {
         }
     }
 
-    abstract void a(int param0);
+    abstract void resetConnection(int param0);
 
-    final boolean c(int param0) {
+    final boolean isUrgentQueueFull(int param0) {
         int var2 = -117 / ((-48 - param0) / 41);
-        return 20 <= this.a((byte) 16) ? true : false;
+        return 20 <= this.urgentCount((byte) 16) ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, SpriteFrame param6, byte param7, BitmapFont param8, int param9, SpriteFrame param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, BitmapFont param18, SpriteFrame param19, int param20) {
+    final static void configureMenuStyle(int param0, int param1, int param2, int param3, int param4, int param5, SpriteFrame param6, byte param7, BitmapFont param8, int param9, SpriteFrame param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, BitmapFont param18, SpriteFrame param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -181,11 +181,11 @@ abstract class Js5Transport {
         try {
           var21_int = 87 % ((-55 - param7) / 51);
           ScrollContainer.configureFullscreenDialogFonts(2048, param8, param18, param11);
-          RasterBuffer.a(false, param14, param0, param17, param9);
+          RasterBuffer.setMenuOptionMetrics(false, param14, param0, param17, param9);
           TutorialStep.setDialogCentre(52, param13, param1);
           FrameStyleHelpers.setMenuButtonStyle(param10, param2, param3, param6, -125, param16);
-          qe.a(param19, param12, param20, 3);
-          ph.a(param4, param5, param15, -97);
+          TextSpriteHelpers.setDialogFrameStyle(param19, param12, param20, 3);
+          ChatLineMenuHelpers.setPopupItemColours(param4, param5, param15, -97);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -225,7 +225,7 @@ abstract class Js5Transport {
         }
     }
 
-    final Js5NetworkRequest a(byte param0, int param1, int param2, boolean param3, byte param4) {
+    final Js5NetworkRequest request(byte param0, int param1, int param2, boolean param3, byte param4) {
         long var6 = ((long)param1 << 32) + (long)param2;
         Js5NetworkRequest var8 = new Js5NetworkRequest();
         var8.field_w = var6;
@@ -233,12 +233,12 @@ abstract class Js5Transport {
         var8.field_K = param0;
         var8.field_B = param3 ? true : false;
         if (param3) {
-          if (this.a((byte) 16) >= 20) {
+          if (this.urgentCount((byte) 16) >= 20) {
             throw new RuntimeException();
           }
           this.field_m.addLast((byte) 96, var8);
         } else {
-          if (!(this.d(-21033) < 20)) {
+          if (!(this.prefetchCount(-21033) < 20)) {
             throw new RuntimeException();
           }
           this.field_j.addLast((byte) 47, var8);

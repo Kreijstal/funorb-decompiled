@@ -47,9 +47,9 @@ final class MusicPatch extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) != 0) {
-                    var7 = param2.a((byte) -35, param3, var9 >> 2);
+                    var7 = param2.getVorbisSampleById((byte) -35, param3, var9 >> 2);
                   } else {
-                    var7 = param2.a(param3, var9 >> 2, -6923);
+                    var7 = param2.getSoundEffectById(param3, var9 >> 2, -6923);
                   }
                   if (var7 == null) {
                     var5_int = 0;
@@ -91,7 +91,7 @@ final class MusicPatch extends IntrusiveNode {
     }
 
     final static void resetTooltipState(int param0) {
-        t.field_l = -1;
+        NameTable.field_l = -1;
         SocialListUiHelpers.field_a = -1;
         SectorCacheStore.field_b = null;
         AlternateUsernameCredentials.field_A = false;
@@ -222,16 +222,16 @@ final class MusicPatch extends IntrusiveNode {
         var53 = null;
         var41 = SteelSentinels.obfuscationControl;
         try {
-          stackIn_3_0 = rn.field_y;
+          stackIn_3_0 = PendingAckRequest.field_y;
           stackIn_3_1 = 2;
           stackIn_3_2 = 2 * (2 + SocketConnector.field_b);
           stackIn_3_3 = param3 * (4 * (SocketConnector.field_b + 2));
-          stackIn_4_4 = (BenefitsScreenHelpers.field_c == rn.field_y);
+          stackIn_4_4 = (BenefitsScreenHelpers.field_c == PendingAckRequest.field_y);
           var7_int = ((ScrollContainer) (Object) stackIn_3_0).updateScrolling(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param2, (byte) -41) ? 1 : 0;
           if (param1 != 1) {
             return;
           }
-          var8 = rn.field_y.field_Ub.field_M;
+          var8 = PendingAckRequest.field_y.field_Ub.field_M;
           var9 = ClockAndCookieHelpers.monotonicMillis(param1 - 114);
           var11 = null;
           var12 = (LobbyGame) (var8.first(13058));
@@ -282,7 +282,7 @@ final class MusicPatch extends IntrusiveNode {
                 var12.field_uc.addChild(var12.field_ac, 126);
               }
               var12.field_tc = new SceneWidget(0L, (SceneWidget) null);
-              if ((1 << ja.field_f & var14) != 0) {
+              if ((1 << IconLookupHelpers.field_f & var14) != 0) {
                 var12.field_uc.addChild(var12.field_tc, 122);
               }
               var45 = var12.field_Fc;
@@ -321,7 +321,7 @@ final class MusicPatch extends IntrusiveNode {
               var12.addChild(var12.field_Dc, 121);
               var12.field_lc = new SceneWidget(0L, ParticleEffect.field_K);
               var12.addChild(var12.field_lc, 124);
-              var12.field_xc = new SceneWidget(0L, bd.field_f);
+              var12.field_xc = new SceneWidget(0L, SolidSpriteHelpers.field_f);
               var12.addChild(var12.field_xc, 121);
               var12.markTreeDirty(param1 ^ -104);
               var12.field_gc = new SceneWidget(0L, ArchiveProvider.field_f);
@@ -400,7 +400,7 @@ final class MusicPatch extends IntrusiveNode {
             var30 = var12.field_xc;
             var12.field_xc.field_Lb = 0;
             var30.field_zb = 0;
-            var12.field_zb = rn.field_y.field_Ub.field_zb;
+            var12.field_zb = PendingAckRequest.field_y.field_Ub.field_zb;
             var31 = 0;
             var32 = var12.field_Xb;
             if (!var12.isUnlisted(4219)) {
@@ -416,24 +416,24 @@ final class MusicPatch extends IntrusiveNode {
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var12.field_gc.field_S = rn.field_A;
+                  var12.field_gc.field_S = PendingAckRequest.field_A;
                 }
               } else {
                 if (var12.field_Mc < 0) {
                   if (var12.field_dc && (var12.field_cc ||
                     var12.field_vc)) {
-                    var12.field_gc.field_S = rn.field_A;
+                    var12.field_gc.field_S = PendingAckRequest.field_A;
                     decompiledFrameRemainder1 = false;
                   }
                   else {
                     if (var12.field_sc == 2) {
-                      var12.field_gc.field_S = cl.field_e;
+                      var12.field_gc.field_S = LoginResultHelpers.field_e;
                     } else {
                       var12.field_kc.field_S = FullscreenFocusCanvas.field_e;
                     }
                   }
                 } else {
-                  var12.field_kc.field_S = bd.field_e;
+                  var12.field_kc.field_S = SolidSpriteHelpers.field_e;
                 }
               }
               if (var12.field_gc.field_S == null) {
@@ -465,7 +465,7 @@ final class MusicPatch extends IntrusiveNode {
               var12.field_uc.setBounds(0, var31, SocketConnector.field_b, var33_intLifetime1, 365 + (-var33_intLifetime1 - 2));
               var34_int = LoginDialogHelpers.field_e;
               if ((1 << QuickChatHelpDialog.field_dc & var14Lifetime1) != 0) {
-                var50_ref = hg.field_i[var12.field_Nc];
+                var50_ref = HighscoreColumnHeader.field_i[var12.field_Nc];
                 var12.field_Fc.field_Pb = var50_ref;
                 var12.field_Fc.setBounds(0, 0, var12.field_uc.field_Lb, var34_int, var50_ref.field_z);
                 var34_int = var34_int + (LoginDialogHelpers.field_e + var50_ref.field_z);
@@ -477,7 +477,7 @@ final class MusicPatch extends IntrusiveNode {
                   stackIn_80_0 = 1;
                 }
                 var36 = stackIn_80_0;
-                stackIn_82_0 = jn.field_d;
+                stackIn_82_0 = MusicTrackHelpers.field_d;
                 if (var36 != 0) {
                   stackIn_83_1 = 1;
                 } else {
@@ -494,7 +494,7 @@ final class MusicPatch extends IntrusiveNode {
                 var12.field_ac.setBounds(0, 0, var12.field_uc.field_Lb, var34_int, var52_ref.field_z);
                 var34_int = var34_int + (LoginDialogHelpers.field_e + var52_ref.field_z);
               }
-              if ((1 << ja.field_f & var14Lifetime1) != 0) {
+              if ((1 << IconLookupHelpers.field_f & var14Lifetime1) != 0) {
                 stackIn_90_0 = DateInputWidget.field_Q;
                 if (var12.field_ec) {
                   stackIn_91_1 = 1;
@@ -550,7 +550,7 @@ final class MusicPatch extends IntrusiveNode {
               if (null != var12.field_hc) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
-                discarded$1 = var37.append(ph.field_a);
+                discarded$1 = var37.append(ChatLineMenuHelpers.field_a);
                 discarded$2 = var37.append(var12.field_hc[0]);
                 for (var38_intLifetime1 = 1; var38_intLifetime1 < var12.field_wc; var38_intLifetime1++) {
                   discarded$3 = var37.append(", ");
@@ -585,15 +585,15 @@ final class MusicPatch extends IntrusiveNode {
               var12.field_lb = var31 - var12.field_Lb;
             }
             if (var13 != 0) {
-              rn.field_y.field_Ub.positionAfter(2, (byte) 111, (SceneWidget) (var11), var12);
+              PendingAckRequest.field_y.field_Ub.positionAfter(2, (byte) 111, (SceneWidget) (var11), var12);
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < UrlAndReplyHelpers.field_a; var34_intLifetime2++) {
               if (var12.field_Gc[var34_intLifetime2].field_kb) {
-                if (fj.field_b == null) {
+                if (PasswordRuleHelpers.field_b == null) {
                   var35 = null;
                 } else {
-                  if (null != fj.field_b[var34_intLifetime2]) {
-                    var35 = fj.field_b[var34_intLifetime2][255 & var12.field_Sb[var34_intLifetime2]];
+                  if (null != PasswordRuleHelpers.field_b[var34_intLifetime2]) {
+                    var35 = PasswordRuleHelpers.field_b[var34_intLifetime2][255 & var12.field_Sb[var34_intLifetime2]];
                   } else {
                     var35 = null;
                   }
@@ -652,14 +652,14 @@ final class MusicPatch extends IntrusiveNode {
                 if (var12.field_rc && (!var12.field_dc ||
                   !var12.field_cc &&
                   !var12.field_vc)) {
-                  NameAvailabilityValidator.a(var12.getGameId(param1 - 34), (byte) -23, param6);
+                  NameAvailabilityValidator.sendShortRequest(var12.getGameId(param1 - 34), (byte) -23, param6);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ViewportController.a(var12.getGameId(param1 - 41), (byte) -74, param6);
+                  ViewportController.sendShortCommand(var12.getGameId(param1 - 41), (byte) -74, param6);
                 }
               } else {
-                Js5NetworkRequest.a(var32, param5, var12, 88);
+                Js5NetworkRequest.openLobbyGameContextMenu(var32, param5, var12, 88);
               }
             }
             var12 = (LobbyGame) (var8.next((byte) -123));

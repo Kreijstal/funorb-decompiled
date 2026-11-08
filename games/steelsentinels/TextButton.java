@@ -85,12 +85,12 @@ class TextButton extends UiComponent {
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void setRequestedDisplayName(String param0, byte param1) {
         try {
           EmailCredentials.field_k = param0;
           if (param1 != -107) {
             String var3 = (String) null;
-            TextButton.a((String) null, (byte) 82);
+            TextButton.setRequestedDisplayName((String) null, (byte) 82);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientErrorSupport.addExceptionContext((Throwable) ((Object) runtimeException), "oa.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -261,7 +261,7 @@ class TextButton extends UiComponent {
         }
     }
 
-    final static boolean a(int param0, boolean param1) {
+    final static boolean hasFeatureBit(int param0, boolean param1) {
         if (param0 == -1) {
           return true;
         }
@@ -271,13 +271,13 @@ class TextButton extends UiComponent {
         return false;
     }
 
-    final static void f(int param0) {
-        rh.a(false);
+    final static void closeTransientDialogs(int param0) {
+        PendingDataRequest.closeContextMenu(false);
         Explosion.clearAccountNamePrompt((byte) -70);
         FunOrbClient.field_x = null;
-        WidgetStyleLayer.a(2);
+        WidgetStyleLayer.closeQuickChatMenu(2);
         if (param0 != -12161) {
-          TextButton.f(-6);
+          TextButton.closeTransientDialogs(-6);
         }
     }
 
@@ -313,7 +313,7 @@ class TextButton extends UiComponent {
             this.field_L) {
             param1.refreshChildLayouts((byte) -45);
             if (param0 != 1) {
-              TextButton.a(-72, true);
+              TextButton.hasFeatureBit(-72, true);
             }
             this.field_I = true;
             if (null != this.field_A) {

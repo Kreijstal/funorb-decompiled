@@ -27,10 +27,10 @@ final class ChecksumAndFrameHelpers {
           while (true) {
             var3 = param1.requestExitFullscreen(param2, -1463474960);
             while (var3.field_a == 0) {
-              MouseWheelInput.a((byte) 121, 10L);
+              MouseWheelInput.sleepMillis((byte) 121, 10L);
             }
             if (var3.field_a != 1) {
-              MouseWheelInput.a((byte) 118, 100L);
+              MouseWheelInput.sleepMillis((byte) 118, 100L);
               continue;
             }
             break;
@@ -65,7 +65,7 @@ final class ChecksumAndFrameHelpers {
 
     final static void showLoginDialog(boolean param0, boolean param1, int param2) {
         String var4 = (String) null;
-        EmailAvailabilityValidator.a((String) null, param0, param1, 12);
+        EmailAvailabilityValidator.openLoginDialog((String) null, param0, param1, 12);
         int var3 = -36 % ((param2 + 22) / 36);
     }
 

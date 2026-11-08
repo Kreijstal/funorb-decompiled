@@ -46,30 +46,30 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
+    final static void loadWarzoneSprites(ResourceArchive param0, int param1, ResourceArchive param2) {
         java.awt.Canvas var3 = null;
         try {
-          var3 = NanoTickClock.a(false);
+          var3 = NanoTickClock.getActiveCanvas(false);
           if (var3 == null) {
             var3 = new java.awt.Canvas();
           }
           DelayedServerPacket.field_x = new RgbSprite[5][];
           if (param0 != null) {
             DelayedServerPacket.field_x[0] = new RgbSprite[7];
-            DelayedServerPacket.field_x[0][0] = (RgbSprite) ((Object) new ArgbSprite(param0.a("wz_foreground_01.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[0][1] = (RgbSprite) ((Object) new ArgbSprite(param0.a("wz_foreground_02.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[0][2] = (RgbSprite) ((Object) new ArgbSprite(param0.a("wz_foreground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[0][3] = (RgbSprite) ((Object) new ArgbSprite(param0.a("wz_foreground_04.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[0][4] = (RgbSprite) ((Object) new ArgbSprite(param0.a("wz_foreground_05.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[0][5] = (RgbSprite) ((Object) new ArgbSprite(param0.a("wz_foreground_06.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[0][6] = (RgbSprite) ((Object) new ArgbSprite(param0.a("wz_foreground_07.png", TextAndBitHelpers.bitXor(param1, -744), "warzone/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[0][0] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("wz_foreground_01.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[0][1] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("wz_foreground_02.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[0][2] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("wz_foreground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[0][3] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("wz_foreground_04.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[0][4] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("wz_foreground_05.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[0][5] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("wz_foreground_06.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[0][6] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("wz_foreground_07.png", TextAndBitHelpers.bitXor(param1, -744), "warzone/"), (java.awt.Component) ((Object) var3)));
             DelayedServerPacket.field_x[1] = new RgbSprite[6];
-            DelayedServerPacket.field_x[1][0] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_01.png", param1 - 744, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[1][1] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_02.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[1][2] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_03.png", TextAndBitHelpers.bitXor(param1, -744), "fleetbattle/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[1][3] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_04.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[1][4] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_05.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
-            DelayedServerPacket.field_x[1][5] = (RgbSprite) ((Object) new ArgbSprite(param0.a("sb_foreground_06.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[1][0] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("sb_foreground_01.png", param1 - 744, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[1][1] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("sb_foreground_02.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[1][2] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("sb_foreground_03.png", TextAndBitHelpers.bitXor(param1, -744), "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[1][3] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("sb_foreground_04.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[1][4] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("sb_foreground_05.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            DelayedServerPacket.field_x[1][5] = (RgbSprite) ((Object) new ArgbSprite(param0.getFileByName("sb_foreground_06.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
           }
           DelayedServerPacket.field_x[2] = new RgbSprite[6];
           DelayedServerPacket.field_x[2][0] = PacketLoopHelpers.loadRgbSpriteByName(param2, "basic", "ct_foreground_01", false);
@@ -88,7 +88,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
 
     public static void releaseStatics(int param0) {
         if (param0 != -21121) {
-          StatefulTextPainter.a((byte) 56);
+          StatefulTextPainter.getLocalPlayerName((byte) 56);
         }
         field_o = null;
     }
@@ -114,7 +114,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             stackIn_3_0 = (UiComponent) (param1);
           }
           var10 = (TextButton) (stackIn_3_0);
-          ArchiveRequest.a(param1.field_o + param0, param1.field_z + param4, -111, param1.field_x + param0 + param1.field_o, param1.field_E + param4 + param1.field_z);
+          ArchiveRequest.pushClip(param1.field_o + param0, param1.field_z + param4, -111, param1.field_x + param0 + param1.field_o, param1.field_E + param4 + param1.field_z);
           if (var10 != null) {
             param3 = param3 & var10.field_K;
           }
@@ -182,24 +182,24 @@ final class StatefulTextPainter extends TextWidgetPainter {
         var1.reset((byte) -107);
     }
 
-    final static boolean b(byte param0) {
+    final static boolean isPrivateChatTargetOnline(byte param0) {
         if (param0 > -9) {
-          StatefulTextPainter.b(54);
+          StatefulTextPainter.readLocalPlayerName(54);
         }
-        return qm.a((byte) -31, StripedProgressBar.field_U, ImageProducerRasterBuffer.field_p);
+        return DisplayNameAndAudioHelpers.isFriendOrGameMember((byte) -31, StripedProgressBar.field_U, ImageProducerRasterBuffer.field_p);
     }
 
-    final static String a(byte param0) {
+    final static String getLocalPlayerName(byte param0) {
         if (null == GrowableIntList.field_l) {
           return "";
         }
         if (param0 != -43) {
-          StatefulTextPainter.b((byte) 117);
+          StatefulTextPainter.isPrivateChatTargetOnline((byte) 117);
         }
         return GrowableIntList.field_l;
     }
 
-    final static boolean a(byte param0, int param1, int param2, ResourceArchive param3) {
+    final static boolean loadSpriteSheet(byte param0, int param1, int param2, ResourceArchive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -266,16 +266,16 @@ final class StatefulTextPainter extends TextWidgetPainter {
         return dupTemp$0;
     }
 
-    final static void b(int param0) {
+    final static void readLocalPlayerName(int param0) {
         GrowableIntList.field_l = LoginConnectionStage.field_d.readString(1);
         CharSequence var2 = (CharSequence) ((Object) GrowableIntList.field_l);
-        MembershipPromotionScreen.field_r = AlphaContainer.a(1, var2);
+        MembershipPromotionScreen.field_r = AlphaContainer.normalizeDisplayName(1, var2);
         if (param0 > -47) {
-          StatefulTextPainter.b(-63);
+          StatefulTextPainter.readLocalPlayerName(-63);
         }
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int multiplyFixed16(int param0, int param1, byte param2) {
         int var3 = param0 >> 16;
         if (param2 != -27) {
           StatefulTextPainter.releaseStatics(60);
@@ -382,11 +382,11 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static fm b(int param0, int param1) {
+    final static QuickChatParameterType findKindById(int param0, int param1) {
         int var3 = 0;
         int var4 = SteelSentinels.obfuscationControl;
-        fm[] var5 = ByteStorage.b(false);
-        fm[] var2 = var5;
+        QuickChatParameterType[] var5 = ByteStorage.listTypeDescriptors(false);
+        QuickChatParameterType[] var2 = var5;
         int var3Lifetime1;
         for (var3 = 0; var3 < var5.length; var3++) {
           if (param0 == var5[var3].field_c) {

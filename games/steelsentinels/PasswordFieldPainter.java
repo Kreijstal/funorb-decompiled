@@ -3,7 +3,7 @@
  */
 final class PasswordFieldPainter extends GradientOutlineTextPainter {
     static long field_w;
-    static fm field_x;
+    static QuickChatParameterType field_x;
     static String field_y;
     static String field_C;
     static int field_v;
@@ -13,7 +13,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
     static String field_E;
     static RgbSprite[][] field_D;
 
-    final static boolean c(int param0) {
+    final static boolean isFeatureAllowed(int param0) {
         if (param0 != 8) {
           PasswordFieldPainter.releaseStatics(28);
           if (!ParticleEffect.hasInputFocus(2)) {
@@ -33,10 +33,10 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
         return false;
     }
 
-    final static void e(int param0) {
+    final static void drawQuickChatOverlay(int param0) {
         if (GzipDecoder.field_e) {
           SoftwareRaster.halveBrightnessRectangle(SoftwareRaster.field_i, SoftwareRaster.field_l, SoftwareRaster.field_b - SoftwareRaster.field_i, -SoftwareRaster.field_l + SoftwareRaster.field_d);
-          qf.field_c.drawFullScreen(false, (byte) 127);
+          RankingAndRasterHelpers.field_c.drawFullScreen(false, (byte) 127);
         }
         if (param0 == 0) {
           return;
@@ -45,7 +45,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
     }
 
     PasswordFieldPainter(int param0) {
-        this(tj.field_e, param0);
+        this(HighscoreSubmissionFactory.field_e, param0);
     }
 
     final String getDisplayText(int param0, UiComponent param1) {
@@ -59,7 +59,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
           if (param0 != -1) {
             field_y = (String) null;
           }
-          stackIn_3_0 = DateOfBirthValidator.a('*', -7477, param1.field_y.length());
+          stackIn_3_0 = DateOfBirthValidator.repeatCharacter('*', -7477, param1.field_y.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -96,7 +96,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
     }
 
     static {
-        field_x = new fm(11, 0, 1, 2);
+        field_x = new QuickChatParameterType(11, 0, 1, 2);
         field_B = new String[]{"Close assault guns", "Flak cannons", "Explosive cannons", "Rifled cannons", "Artillery", "Bombs", "Energised kinetic weapons", "Laser weapons", "Super laser weapons", "Plasma weapons", "EMP weapons", "Rapier missiles", "Air death missiles", "Piercer rockets", "EMP rockets", "Airburst rockets", "Multirockets", "Heavy rockets", "Destructor rockets", "Atomics"};
         field_C = "This game has started.";
         field_y = "Music: ";

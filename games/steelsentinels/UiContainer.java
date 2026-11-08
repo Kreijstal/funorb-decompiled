@@ -21,9 +21,9 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         var4 = SteelSentinels.obfuscationControl;
         var2 = new NodeIterator(this.field_K);
         if (param0 != -1) {
-          UiContainer.f(-120);
+          UiContainer.pollKeyEvent(-120);
         }
-        var3 = (UiComponent) (var2.b(2));
+        var3 = (UiComponent) (var2.first(2));
         while (var3 != null) {
           if (var3.isFocused(~param0)) {
             return var3;
@@ -47,9 +47,9 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         var7 = SteelSentinels.obfuscationControl;
         try {
           var8 = new NodeIterator(this.field_K);
-          var6_ref_lh = (UiComponent) (var8.b(2));
+          var6_ref_lh = (UiComponent) (var8.first(2));
           if (param0 != 30373) {
-            UiContainer.a(76, 69, -95, -115);
+            UiContainer.clampPopupX(76, 69, -95, -115);
           }
           while (var6_ref_lh != null) {
             if (var6_ref_lh.isLinked((byte) -12)) {
@@ -98,12 +98,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int clampPopupX(int param0, int param1, int param2, int param3) {
         if (param2 + param3 <= SoftwareRaster.field_c) {
           return param2;
         }
         if (param1 != 127) {
-          UiContainer.f(-101);
+          UiContainer.pollKeyEvent(-101);
         }
         if (-param3 + param0 + param2 >= 0) {
           return -param3 + (param0 + param2);
@@ -118,10 +118,10 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           this.field_p.drawWidget(param2, (UiComponent) (this), (byte) -30, true, param0);
         }
         NodeIterator var5 = new NodeIterator(this.field_K);
-        UiComponent var6 = (UiComponent) (var5.c(2));
+        UiComponent var6 = (UiComponent) (var5.last(2));
         while (var6 != null) {
           var6.drawLayer(this.field_z + param0, (byte) -109, this.field_o + param2, param3);
-          var6 = (UiComponent) (var5.a(true));
+          var6 = (UiComponent) (var5.previous(true));
         }
         if (param1 > -99) {
           StringBuilder var8 = (StringBuilder) null;
@@ -150,7 +150,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (param1 <= 56) {
             return;
           }
-          var6 = (UiComponent) (var5.b(2));
+          var6 = (UiComponent) (var5.first(2));
           while (var6 != null) {
             if (var6.isLinked((byte) -12)) {
               var6.updateHover(this.field_o + param0, 112, param2, param3 + this.field_z);
@@ -191,7 +191,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             this.appendDebugTree((Hashtable) null, (StringBuilder) null, (byte) -47, 62);
           }
           var3 = new NodeIterator(this.field_K);
-          var4 = (UiComponent) (var3.b(2));
+          var4 = (UiComponent) (var3.first(2));
           while (var4 != null) {
             if (var4.focusNext(1, param1)) {
               return true;
@@ -230,7 +230,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             return false;
           }
           var8 = new NodeIterator(this.field_K);
-          var4 = (UiComponent) (var8.b(2));
+          var4 = (UiComponent) (var8.first(2));
           while (var4 != null) {
             if (var4.isFocused(0)) {
               var5 = new NodeIterator(this.field_K);
@@ -345,20 +345,20 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             return false;
           }
           var8 = new NodeIterator(this.field_K);
-          var4 = (UiComponent) (var8.c(2));
+          var4 = (UiComponent) (var8.last(2));
           while (var4 != null) {
             if (var4.isFocused(0)) {
               var5 = new NodeIterator(this.field_K);
-              var5.a(24192, var4);
-              var6 = (UiComponent) (var5.a(true));
+              var5.startReverseAt(24192, var4);
+              var6 = (UiComponent) (var5.previous(true));
               while (var6 != null) {
                 if (var6.focusNext(1, param0)) {
                   return true;
                 }
-                var6 = (UiComponent) (var5.a(true));
+                var6 = (UiComponent) (var5.previous(true));
               }
             }
-            var4 = (UiComponent) (var8.a(true));
+            var4 = (UiComponent) (var8.previous(true));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -375,9 +375,9 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    final static TickClock g(byte param0) {
+    final static TickClock createTickClock(byte param0) {
         if (param0 != 3) {
-          UiContainer.a(106, -66, -3, true, 74, -85, -31, 4);
+          UiContainer.drawFilledTriangle(106, -66, -3, true, 74, -85, -31, 4);
         }
         return (TickClock) ((Object) new NanoTickClock());
     }
@@ -395,7 +395,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         var10 = SteelSentinels.obfuscationControl;
         try {
           var7 = new NodeIterator(this.field_K);
-          var8 = (UiComponent) (var7.b(2));
+          var8 = (UiComponent) (var7.first(2));
           var9 = -102 / ((param0 - 36) / 32);
           while (var8 != null) {
             if (var8.isLinked((byte) -12)) {
@@ -420,7 +420,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
+    final static void drawFilledTriangle(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -511,7 +511,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (!param5) {
             field_M = 17;
           }
-          var9 = (UiComponent) (var8.b(2));
+          var9 = (UiComponent) (var8.first(2));
           while (var9 != null) {
             if (var9.isLinked((byte) -12)) {
               if (!var9.handlePointerPress(param0, param1, this.field_o + param2, param3, this.field_z + param4, true, param6)) {
@@ -552,7 +552,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             this.drawLayer(-58, (byte) 107, -39, -11);
           }
           var8 = new NodeIterator(this.field_K);
-          var9 = (UiComponent) (var8.b(2));
+          var9 = (UiComponent) (var8.first(2));
           while (var9 != null) {
             if (var9.isLinked((byte) -12)) {
               if (var9.isFocused(0) &&
@@ -579,7 +579,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    final static boolean f(int param0) {
+    final static boolean pollKeyEvent(int param0) {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
@@ -614,14 +614,14 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           field_N = (String[][]) null;
         }
         NodeIterator var2 = new NodeIterator(this.field_K);
-        UiComponent var3 = (UiComponent) (var2.b(param0 + 47));
+        UiComponent var3 = (UiComponent) (var2.first(param0 + 47));
         while (var3 != null) {
           var3.refreshChildLayouts((byte) -45);
           var3 = (UiComponent) (var2.next(2));
         }
     }
 
-    final static boolean a(long param0, int[] param1, int param2, int param3, String param4) {
+    final static boolean openQuickChatForRecipient(long param0, int[] param1, int param2, int param3, String param4) {
         QuickChatMenu var6 = null;
         RuntimeException var6_ref = null;
         CharSequence var7 = null;
@@ -632,7 +632,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!Js5Transport.a(param0, param1, param4, param3, -21)) {
+          if (!Js5Transport.canSendQuickChat(param0, param1, param4, param3, -21)) {
             return false;
           }
           if (param3 == 1) {
@@ -641,13 +641,13 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           ChatPanelHelpers.field_b = param3;
           LoadingScreenHelpers.field_e = param4;
           var7 = (CharSequence) ((Object) param4);
-          StripedProgressBar.field_U = AlphaContainer.a(1, var7);
+          StripedProgressBar.field_U = AlphaContainer.normalizeDisplayName(1, var7);
           ImageProducerRasterBuffer.field_p = param0;
           if (param2 >= -113) {
             return false;
           }
-          var6 = MarkerSlider.a(Sprite.field_f, UsernameCredentials.field_l, AlternateUsernameCredentials.field_u, param1, -90);
-          pa.a(12105, var6);
+          var6 = MarkerSlider.createQuickChatMenu(Sprite.field_f, UsernameCredentials.field_l, AlternateUsernameCredentials.field_u, param1, -90);
+          TutorialStepTable.showQuickChatMenu(12105, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -688,7 +688,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         try {
           var5 = new NodeIterator(this.field_K);
           var7 = -34 % ((-2 - param0) / 43);
-          var6 = (UiComponent) (var5.b(2));
+          var6 = (UiComponent) (var5.first(2));
           while (var6 != null) {
             discarded$3 = param2.append('\n');
             for (var8 = 0; param3 >= var8; var8++) {
@@ -726,7 +726,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           field_L = (byte[][]) null;
         }
         NodeIterator var3 = new NodeIterator(this.field_K);
-        UiComponent var4 = (UiComponent) (var3.b(2));
+        UiComponent var4 = (UiComponent) (var3.first(2));
         while (var4 != null) {
           var5 = var4.maximumRenderLayer(true);
           if (var5 > var2) {
@@ -747,7 +747,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         if (param0 != 0) {
           return (String) null;
         }
-        var3 = (UiComponent) (var2.b(2));
+        var3 = (UiComponent) (var2.first(2));
         while (var3 != null) {
           var4 = var3.getTooltip(param0 ^ 0);
           if (var4 != null) {
@@ -764,7 +764,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           return;
         }
         NodeIterator var2 = new NodeIterator(this.field_K);
-        UiComponent var3 = (UiComponent) (var2.b(2));
+        UiComponent var3 = (UiComponent) (var2.first(2));
         while (var3 != null) {
           var3.refreshLayout((byte) 102);
           var3 = (UiComponent) (var2.next(2));

@@ -5,7 +5,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
     static int field_a;
     static String field_b;
 
-    final static void b(int param0) {
+    final static void stepMusicVolumeDown(int param0) {
         int var1 = 0;
         if (32 < UiTheme.field_q) {
           var1 = UiTheme.field_q % 32;
@@ -21,7 +21,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static void a(PacketBuffer param0, int param1, int param2, int param3, int param4) {
+    final static void writeServiceHeader(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
           param0.writeByte((byte) 112, param1);
           param0.writeShort(17, 77);
@@ -33,7 +33,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2, int param3, int param4, int param5) {
+    final static void drawArrowIcon(int param0, boolean param1, boolean param2, int param3, int param4, int param5) {
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -112,7 +112,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
             }
           }
           if (!param1) {
-            SpriteCheckboxPainter.b(-92);
+            SpriteCheckboxPainter.stepMusicVolumeDown(-92);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -122,7 +122,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int valueForKind(int param0, boolean param1) {
         int var2;
         int var3;
         var3 = SteelSentinels.obfuscationControl;
@@ -181,7 +181,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         return 0;
     }
 
-    final static void a(int param0) {
+    final static void settleLoadingUi(int param0) {
         if (GradientOutlineTextPainter.field_p != null) {
           GradientOutlineTextPainter.field_p.removeHiddenPanels((byte) 103);
         }
@@ -214,14 +214,14 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           }
           var6_int = param0 + param1.field_o;
           var7 = param1.field_z + param4;
-          DualNodeDeque.a(var7, param1.field_x, param1.field_E, var6_int, (byte) 120);
-          var8 = t.field_i[1];
+          DualNodeDeque.drawInsetBorder(var7, param1.field_x, param1.field_E, var6_int, (byte) 120);
+          var8 = NameTable.field_i[1];
           if (param1 instanceof TextButton &&
             ((TextButton) (param1)).field_T) {
             var8.drawAdditive(1 + (var6_int + (param1.field_x - var8.field_z >> 1)), (-var8.field_B + param1.field_E >> 1) + (1 + var7), 256);
           }
           if (param1.isFocused(0)) {
-            DateInputWidget.a(var6_int + 2, -4 + param1.field_x, -4 + param1.field_E, param2 + 30, 2 + var7);
+            DateInputWidget.drawDottedRectangle(var6_int + 2, -4 + param1.field_x, -4 + param1.field_E, param2 + 30, 2 + var7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -238,7 +238,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static short[] a(short[] param0, int param1, CipherPacketBuffer param2, boolean param3) {
+    final static short[] readPackedShorts(short[] param0, int param1, CipherPacketBuffer param2, boolean param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -269,7 +269,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           var6 = (short)param2.readBits(-91, 16);
           if (param3) {
             var9 = (CipherPacketBuffer) null;
-            SpriteCheckboxPainter.a((short[]) null, 108, (CipherPacketBuffer) null, false);
+            SpriteCheckboxPainter.readPackedShorts((short[]) null, 108, (CipherPacketBuffer) null, false);
           }
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {

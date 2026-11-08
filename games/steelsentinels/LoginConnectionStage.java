@@ -85,7 +85,7 @@ final class LoginConnectionStage {
         if (param0 < 77) {
           LoginConnectionStage.getOne(-62);
         }
-        stackIn_8_0 = (this == uf.field_g) || (Projectile.field_N == this) || (this == AccountNoticeDialog.field_sb);
+        stackIn_8_0 = (this == SocialTabsPanel.field_g) || (Projectile.field_N == this) || (this == AccountNoticeDialog.field_sb);
         return stackIn_8_0;
     }
 
@@ -107,16 +107,16 @@ final class LoginConnectionStage {
               var7 = new SectorCacheStore(255, CachedTextLayout.field_o, new BufferedRandomAccessFile(ClientGlobals.field_k.field_g, 12000, 0), 2097152);
             }
             if (CachedTextLayout.field_o != null) {
-              if (rh.field_o == null) {
-                rh.field_o = new BufferedRandomAccessFile[ClientGlobals.field_k.field_a.length];
+              if (PendingDataRequest.field_o == null) {
+                PendingDataRequest.field_o = new BufferedRandomAccessFile[ClientGlobals.field_k.field_a.length];
               }
-              if (rh.field_o[param5] == null) {
-                rh.field_o[param5] = new BufferedRandomAccessFile(ClientGlobals.field_k.field_a[param5], 12000, 0);
+              if (PendingDataRequest.field_o[param5] == null) {
+                PendingDataRequest.field_o[param5] = new BufferedRandomAccessFile(ClientGlobals.field_k.field_a[param5], 12000, 0);
                 ClientGlobals.field_k.field_a[param5] = null;
               }
-              var8 = new SectorCacheStore(param5, CachedTextLayout.field_o, rh.field_o[param5], 2097152);
+              var8 = new SectorCacheStore(param5, CachedTextLayout.field_o, PendingDataRequest.field_o[param5], 2097152);
             }
-            var9 = ByteStorage.field_c.a((SectorCacheStore) (var7), (byte) 115, param3, (SectorCacheStore) (var8), param5);
+            var9 = ByteStorage.field_c.openProvider((SectorCacheStore) (var7), (byte) 115, param3, (SectorCacheStore) (var8), param5);
             if (param4) {
               var9.startPrefetch((byte) 74);
             }

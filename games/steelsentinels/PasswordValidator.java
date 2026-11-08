@@ -8,15 +8,15 @@ final class PasswordValidator extends TextFieldValidator {
     static String field_o;
     private EditableTextWidget field_p;
 
-    final vd validateText(String param0, int param1) {
+    final TransitionTimerHelpers validateText(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         String var5 = null;
-        vd stackIn_4_0 = null;
-        vd stackIn_7_0 = null;
-        vd stackIn_10_0 = null;
-        vd stackIn_12_0 = null;
+        TransitionTimerHelpers stackIn_4_0 = null;
+        TransitionTimerHelpers stackIn_7_0 = null;
+        TransitionTimerHelpers stackIn_10_0 = null;
+        TransitionTimerHelpers stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -26,18 +26,18 @@ final class PasswordValidator extends TextFieldValidator {
           var4 = param0.toLowerCase();
           if (param1 != -1) {
             var5 = (String) null;
-            PasswordValidator.b((String) null, 32);
+            PasswordValidator.hasNonAlphanumeric((String) null, 32);
           }
           if (var4.length() == 0) {
             stackIn_4_0 = ArchiveProvider.field_d;
             return stackIn_4_0;
           }
-          if (!ValidationIndicator.a(var4, (byte) 62, var3)) {
+          if (!ValidationIndicator.isPasswordAcceptable(var4, (byte) 62, var3)) {
             stackIn_7_0 = ArchiveProvider.field_d;
             return stackIn_7_0;
           }
           if (!this.containsEmailPart(1, param0)) {
-            stackIn_12_0 = vf.field_b;
+            stackIn_12_0 = RequestResendHelpers.field_b;
             return stackIn_12_0;
           }
           stackIn_10_0 = ArchiveProvider.field_d;
@@ -135,11 +135,11 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_6_0 = AccountNamePrompt.field_Zb;
             return stackIn_6_0;
           }
-          if (PasswordValidator.b(var5, 109)) {
+          if (PasswordValidator.hasNonAlphanumeric(var5, 109)) {
             stackIn_10_0 = ReflectionCheck.field_u;
             return stackIn_10_0;
           }
-          if (AgeValidator.b(var5, 29974)) {
+          if (AgeValidator.isRepeatedCharacter(var5, 29974)) {
             stackIn_14_0 = PlayingSound.field_s;
             return stackIn_14_0;
           }
@@ -152,18 +152,18 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_20_0;
           }
           if (var6.length() <= 0) {
-            stackIn_35_0 = tm.field_b;
+            stackIn_35_0 = SessionUiHelpers.field_b;
             return stackIn_35_0;
           }
-          if (AccountTermsPanel.a(var5, 300, var6)) {
+          if (AccountTermsPanel.containsTextOrReverse(var5, 300, var6)) {
             stackIn_24_0 = AccountChoicePanel.field_R;
             return stackIn_24_0;
           }
-          if (fj.a(var6, -7036, var5)) {
+          if (PasswordRuleHelpers.passwordContainsName(var6, -7036, var5)) {
             stackIn_28_0 = CipherPacketBuffer.field_C;
             return stackIn_28_0;
           }
-          if (!Projectile.a(var5, true, var6)) {
+          if (!Projectile.containsForwardOrReversed(var5, true, var6)) {
             stackIn_33_0 = AccountNamePrompt.field_Zb;
             return stackIn_33_0;
           }
@@ -200,7 +200,7 @@ final class PasswordValidator extends TextFieldValidator {
         field_r = null;
     }
 
-    final static void a(int param0, int param1, rh param2) {
+    final static void sendBlobWithCrc(int param0, int param1, PendingDataRequest param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         String var5 = null;
@@ -229,7 +229,7 @@ final class PasswordValidator extends TextFieldValidator {
             return;
           }
           var5 = (String) null;
-          PasswordValidator.b((String) null, 57);
+          PasswordValidator.hasNonAlphanumeric((String) null, 57);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -245,7 +245,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static boolean b(String param0, int param1) {
+    final static boolean hasNonAlphanumeric(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -259,7 +259,7 @@ final class PasswordValidator extends TextFieldValidator {
         try {
           for (var2_int = 0; param0.length() > var2_int; var2_int++) {
             var3 = param0.charAt(var2_int);
-            if (!kf.a((char) var3, (byte) -59) &&
+            if (!HighscoreTable.isAsciiLetter((char) var3, (byte) -59) &&
               !TextButton.isAsciiDigit(-4278, (char) var3)) {
               return true;
             }
