@@ -133,7 +133,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           if (param0 != 84) {
             field_F = (CommonGame) null;
           }
-          stackIn_3_0 = new ConsoleValue(KitStyleTile.k(39));
+          stackIn_3_0 = new ConsoleValue(KitStyleTile.createDemoIntegerValues(39));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -49,7 +49,7 @@ final class ClubState {
     int field_k;
     static String[] field_l;
 
-    final boolean a(byte param0) {
+    final boolean hasAuctionablePlayer(byte param0) {
         int var3 = 0;
         int var2;
         int var4;
@@ -77,7 +77,7 @@ final class ClubState {
         this.generateDefaultSquad(-27595);
     }
 
-    final boolean a(int param0) {
+    final boolean hasActiveAuctionEntries(int param0) {
         int var3 = Kickabout.field_G;
         AuctionLogEntry var2 = (AuctionLogEntry) (this.auctionLog.first(24009));
         while (var2 != null) {
@@ -542,7 +542,7 @@ final class ClubState {
         return (1 & this.field_n >> param1) == 1 ? true : false;
     }
 
-    final int d(int param0) {
+    final int findEmptySquadSlot(int param0) {
         int var3 = 0;
         int var4 = Kickabout.field_G;
         int var2 = param0;
@@ -588,10 +588,10 @@ final class ClubState {
         int var4Lifetime1;
         var10 = Kickabout.field_G;
         var14 = new Random(this.field_e);
-        var3 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-60, 3, var14);
-        this.field_w = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(91, 3, var14);
-        this.field_k = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(97, 16, var14) + 16;
-        this.field_R = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(127, 16, var14);
+        var3 = ProxySocketConnector.nextBoundedInt(-60, 3, var14);
+        this.field_w = ProxySocketConnector.nextBoundedInt(91, 3, var14);
+        this.field_k = ProxySocketConnector.nextBoundedInt(97, 16, var14) + 16;
+        this.field_R = ProxySocketConnector.nextBoundedInt(127, 16, var14);
         if (param0 != -27595) {
           this.field_E = -108;
         }
@@ -618,17 +618,17 @@ final class ClubState {
           if (var4 == 3) {
             var15.archetype = 1;
           }
-          var15.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, TrinketCatalog.field_a.length, var14);
-          var15.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(106, -1 + BuyPlayerDialog.field_G[var15.archetype].length, var14);
-          var15.power = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-86, 10, var14) + 6;
-          var15.tackle = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(97, 10, var14) + 6;
-          var15.speed = 6 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-111, 10, var14);
+          var15.initialIndex = ProxySocketConnector.nextBoundedInt(79, TrinketCatalog.field_a.length, var14);
+          var15.surnameIndex = 1 + ProxySocketConnector.nextBoundedInt(106, -1 + BuyPlayerDialog.field_G[var15.archetype].length, var14);
+          var15.power = ProxySocketConnector.nextBoundedInt(-86, 10, var14) + 6;
+          var15.tackle = ProxySocketConnector.nextBoundedInt(97, 10, var14) + 6;
+          var15.speed = 6 + ProxySocketConnector.nextBoundedInt(-111, 10, var14);
           var15.experience = 0;
           var15.trinketIds = new int[1];
           var15.trinketIds[0] = 0;
-          var6 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(84, 5, var14);
-          var7 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-70, 3, var14);
-          var8 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-57, 3, var14);
+          var6 = ProxySocketConnector.nextBoundedInt(84, 5, var14);
+          var7 = ProxySocketConnector.nextBoundedInt(-70, 3, var14);
+          var8 = ProxySocketConnector.nextBoundedInt(-57, 3, var14);
           var9 = var8;
           var9 = var9 | var7 << 4;
           var9 = var9 | var6 << 8;
@@ -657,7 +657,7 @@ final class ClubState {
         return new ManagerAction(9, var6);
     }
 
-    final static boolean a(byte param0, CharSequence param1) {
+    final static boolean isDecimalInteger(byte param0, CharSequence param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -668,7 +668,7 @@ final class ClubState {
           if (param0 != 15) {
             field_l = (String[]) null;
           }
-          stackIn_3_0 = LoginMethod.a(10, true, true, param1);
+          stackIn_3_0 = LoginMethod.isIntegerInRadix(10, true, true, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -684,14 +684,14 @@ final class ClubState {
         }
     }
 
-    final boolean d(byte param0) {
+    final boolean hasFourAvailablePlayers(byte param0) {
         int var3 = 0;
         int var2;
         int var4;
         var4 = Kickabout.field_G;
         var2 = 0;
         if (param0 < 3) {
-          this.d((byte) -19);
+          this.hasFourAvailablePlayers((byte) -19);
         }
         for (var3 = 0; var3 < 9; var3++) {
           if (!this.squad[var3].isEmpty(-2) &&
@@ -906,7 +906,7 @@ final class ClubState {
                 if (this.hasLogEntryForSlot((byte) -112, var5Lifetime1)) {
                   throw new IllegalStateException("User tried to sell a player in auction " + param0.toString());
                 }
-                this.field_x = this.field_x + ImageProducerRasterBuffer.a(this.squad[var5Lifetime1], true);
+                this.field_x = this.field_x + ImageProducerRasterBuffer.calculatePlayerSaleValue(this.squad[var5Lifetime1], true);
                 this.squad[var5Lifetime1] = new PlayerStats();
                 return;
               }

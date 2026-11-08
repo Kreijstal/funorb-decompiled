@@ -18,7 +18,7 @@ final class UiInputRoutingSupport {
         if (WeightedLruCache.hasBlockingInputPopup(false)) {
           TextFieldValidator.a(param5, param3, 14686, param0);
           if (TextButton.field_v != null &&
-            TextButton.field_v.a(param3, param1 - 52, param4, param2, param5)) {
+            TextButton.field_v.dispatchSelectedAction(param3, param1 - 52, param4, param2, param5)) {
             param3 = false;
             MusicPatchNode.closePlayerContextMenu(98);
           }

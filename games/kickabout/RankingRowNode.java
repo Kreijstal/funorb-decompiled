@@ -22,7 +22,7 @@ final class RankingRowNode extends UiLayoutNode {
         field_Gb = null;
     }
 
-    final static ConsoleExpression a(int param0, StringCursor param1) {
+    final static ConsoleExpression readQuotedExpression(int param0, StringCursor param1) {
         int fieldTemp$5 = 0;
         StringBuilder discarded$6 = null;
         StringBuilder discarded$7 = null;
@@ -106,7 +106,7 @@ final class RankingRowNode extends UiLayoutNode {
         var7Lifetime1 = 80 / ((68 - param0) / 48);
     }
 
-    final void b(int param0) {
+    final void drawRankingRow(int param0) {
         int var3 = 0;
         int var2 = (this.field_yb & 1) != 0 ? 0 : 196;
         int var3Lifetime1;
@@ -156,7 +156,7 @@ final class RankingRowNode extends UiLayoutNode {
         this.field_Hb = null;
     }
 
-    final void a(byte param0, ListingRow param1) {
+    final void updateRankingRow(byte param0, ListingRow param1) {
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         StringBuilder stackIn_9_1 = null;
@@ -204,7 +204,7 @@ final class RankingRowNode extends UiLayoutNode {
               return;
             }
             var4 = (ListingRow) null;
-            this.a((byte) 88, (ListingRow) null);
+            this.updateRankingRow((byte) 88, (ListingRow) null);
             return;
           }
           throw new IllegalArgumentException();

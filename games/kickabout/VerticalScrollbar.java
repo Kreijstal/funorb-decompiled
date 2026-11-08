@@ -582,7 +582,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                   var26.field_Jb = PlayerInputFactory.field_c;
                   var26.field_Mb = var5;
                 } else {
-                  var26.c((byte) -109);
+                  var26.unlink((byte) -109);
                 }
                 var26.unlinkSecondary(param0 ^ -71);
               }
@@ -591,7 +591,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             if (7 == var2) {
               var15 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.first(24009));
               while (var15 != null) {
-                var15.c((byte) -109);
+                var15.unlink((byte) -109);
                 var15.unlinkSecondary(-5);
                 var15 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.next(33));
               }
@@ -618,7 +618,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                   var31.field_Ab = var4;
                   var31.field_Db = PlayerInputFactory.field_c;
                 } else {
-                  var31.c((byte) -109);
+                  var31.unlink((byte) -109);
                 }
                 var31.unlinkSecondary(-95);
               }
@@ -627,7 +627,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             if (10 == var2) {
               var30 = (GameSetupPanel) (SquadSlotWidget.field_yb.first(24009));
               while (var30 != null) {
-                var30.c((byte) -109);
+                var30.unlink((byte) -109);
                 var30.unlinkSecondary(-98);
                 var30 = (GameSetupPanel) (SquadSlotWidget.field_yb.next(33));
               }
@@ -689,7 +689,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                       var22.field_Mb = var5Lifetime1;
                       var22.field_Jb = PlayerInputFactory.field_c;
                     } else {
-                      var22.c((byte) -109);
+                      var22.unlink((byte) -109);
                     }
                     var22.unlinkSecondary(-111);
                     PlayerContextMenu.field_i.field_gc = PlayerContextMenu.field_i.field_gc - 1;
@@ -773,7 +773,7 @@ final class VerticalScrollbar extends UiLayoutNode {
           }
           var3_ref_he = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.first(24009));
           while (var3_ref_he != null) {
-            var3_ref_he.c((byte) -109);
+            var3_ref_he.unlink((byte) -109);
             var3_ref_he.unlinkSecondary(9);
             var3_ref_he = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.next(33));
           }

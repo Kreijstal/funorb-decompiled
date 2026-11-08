@@ -54,7 +54,7 @@ final class SellPlayerDialog extends MessageDialog {
               ThumbnailStateFactory.field_d.participantStatus[0].controlledSlot = PitchDecorationSupport.field_d;
               LoggedPossession.a(false);
               TutorialScenerySupport.buildTutorialScenery(-1622);
-              LeagueWinnerDialog.g(99);
+              LeagueWinnerDialog.updateTutorialRestrictions(99);
             }
           } else {
             if (ButtonMenuScreen.d(-8)) {
@@ -276,7 +276,7 @@ final class SellPlayerDialog extends MessageDialog {
               return stackIn_18_0;
             }
             var6 = var4[var5];
-            var7 = LeagueWinnerDialog.a(var6, param1 ^ 134217728);
+            var7 = LeagueWinnerDialog.validateDomainLabel(var6, param1 ^ 134217728);
             if (var7 == null) {
               var5++;
               continue;
@@ -315,7 +315,7 @@ final class SellPlayerDialog extends MessageDialog {
           this.field_I = param0;
           var6 = param1.getDisplayName(100);
           String var3 = var6;
-          var4 = LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.a(param1, true), 26300);
+          var4 = LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.calculatePlayerSaleValue(param1, true), 26300);
           var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[34], new String[]{var6, var4});
           this.a(var5, this.field_t, this.field_D, -71, this.field_u);
         } catch (RuntimeException runtimeException) {

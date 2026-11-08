@@ -104,7 +104,7 @@ final class LoggedGoal extends IntrusiveNode {
         int var1 = -25 / ((28 - param0) / 44);
     }
 
-    final void a(CommonGame param0, int param1, int param2, int param3, FootballerAgent param4, int param5, FootballerAgent param6, int param7, int param8) {
+    final void captureKickGoal(CommonGame param0, int param1, int param2, int param3, FootballerAgent param4, int param5, FootballerAgent param6, int param7, int param8) {
         try {
           this.captureGoal(param7, param2, param3, 1, param5, param0, param1 + 87, param8);
           if (param1 != 32) {
@@ -133,7 +133,7 @@ final class LoggedGoal extends IntrusiveNode {
           this.kickVelocityY = param1.kickVelocityY;
           if (param0 != -4) {
             ResourceArchive var4 = (ResourceArchive) null;
-            LoggedGoal.a(-13, (ResourceArchive) null);
+            LoggedGoal.ensureArchiveAvailable(-13, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ch.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -208,7 +208,7 @@ final class LoggedGoal extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0, int param1, FootballerAgent param2, int param3, int param4, int param5, int param6, CommonGame param7, FootballerAgent param8) {
+    final void captureGoalFromAction(byte param0, int param1, FootballerAgent param2, int param3, int param4, int param5, int param6, CommonGame param7, FootballerAgent param8) {
         if (param0 != 35) {
           return;
         }
@@ -219,7 +219,7 @@ final class LoggedGoal extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, ResourceArchive param1) {
+    final static boolean ensureArchiveAvailable(int param0, ResourceArchive param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;

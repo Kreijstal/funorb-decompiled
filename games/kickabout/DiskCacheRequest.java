@@ -63,7 +63,7 @@ final class DiskCacheRequest extends ArchiveRequest {
             var3 = (java.applet.Applet) null;
             DiskCacheRequest.clearSessionAndReload((java.applet.Applet) null, false);
           }
-          stackIn_5_0 = (null != AchievementsScreen.a(param1, 145));
+          stackIn_5_0 = (null != AchievementsScreen.findSocialPlayerByName(param1, 145));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

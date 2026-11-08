@@ -42,7 +42,7 @@ final class WorldDrawEntry extends IntrusiveNode {
             param0.screenId != 26) {
             if (-1 == param0.screenId &&
               MyKitScreen.field_O) {
-              stackIn_22_0 = OffscreenPlayerArrow.b((byte) -75);
+              stackIn_22_0 = OffscreenPlayerArrow.getTutorialBackgroundOpacity((byte) -75);
               return stackIn_22_0;
             }
             stackIn_24_0 = 0;

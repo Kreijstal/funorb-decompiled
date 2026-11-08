@@ -182,10 +182,10 @@ final class MusicPatchPcmStream extends PcmStream {
             MusicPatchPcmStream.b(-60);
           }
           if (null != CachedArchiveSource.field_u) {
-            CachedArchiveSource.field_u.field_L.a(param1, -48);
+            CachedArchiveSource.field_u.field_L.setNameSuggestions(param1, -48);
           }
           if (PlayerInputEvent.field_n != null) {
-            PlayerInputEvent.field_n.field_G.a(param1, -71);
+            PlayerInputEvent.field_n.field_G.setNameSuggestions(param1, -71);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

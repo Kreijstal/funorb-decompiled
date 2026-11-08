@@ -475,7 +475,7 @@ final class SectorCacheStore {
                 var5.reset((byte) 104);
                 continue scanLoop1;
               }
-              var5.a((byte) 59, var6);
+              var5.updateRankingRow((byte) 59, var6);
               continue scanLoop1;
             }
             break;

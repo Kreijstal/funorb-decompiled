@@ -159,7 +159,7 @@ final class ParticipantStatus extends MatchAgent {
             stackIn_7_1 = stackIn_3_1;
             stackIn_7_2 = param0;
           }
-          stackIn_8_0 = ArrayWidgetContainer.a(stackIn_7_0, stackIn_7_1, stackIn_7_2, param3, param1, -123);
+          stackIn_8_0 = ArrayWidgetContainer.createFadingSoundPlayer(stackIn_7_0, stackIn_7_1, stackIn_7_2, param3, param1, -123);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -597,7 +597,7 @@ final class ParticipantStatus extends MatchAgent {
             stackIn_7_1 = stackIn_3_1;
             stackIn_7_2 = param0;
           }
-          stackIn_8_0 = ArrayWidgetContainer.a(stackIn_7_0, stackIn_7_1, stackIn_7_2, param3, param1, -123);
+          stackIn_8_0 = ArrayWidgetContainer.createFadingSoundPlayer(stackIn_7_0, stackIn_7_1, stackIn_7_2, param3, param1, -123);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

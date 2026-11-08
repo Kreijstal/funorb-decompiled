@@ -48,8 +48,8 @@ final class ScrollContainer extends UiLayoutNode {
         this.field_Gb.field_q = this.field_q;
         this.field_Db.field_J = 0;
         this.field_Gb.field_mb = this.field_mb;
-        this.field_Eb.c((byte) -109);
-        this.field_Kb.c((byte) -109);
+        this.field_Eb.unlink((byte) -109);
+        this.field_Kb.unlink((byte) -109);
         stackIn_3_0 = (this.field_Gb.field_q >= this.field_Db.field_q) ? 0 : 1;
         var4 = stackIn_3_0;
         stackIn_6_0 = (this.field_Gb.field_mb >= this.field_Db.field_mb) ? 0 : 1;

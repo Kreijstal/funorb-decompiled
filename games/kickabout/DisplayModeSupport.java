@@ -61,7 +61,7 @@ final class DisplayModeSupport {
         Sprite var29Lifetime1Lifetime3;
         Sprite var29Lifetime1Lifetime4;
         Sprite var29Lifetime1Lifetime5;
-        BytePlusOneCommand.a(param0, false, (ScrollPane) null, param2, (String) null, (int[]) null, 0L, (String) null, -1);
+        BytePlusOneCommand.createPlayerContextMenu(param0, false, (ScrollPane) null, param2, (String) null, (int[]) null, 0L, (String) null, -1);
         if (param2 == 0) {
           var9 = TextButton.field_v;
           var11 = ClassDescriptorSupport.field_d[0];
@@ -223,7 +223,7 @@ final class DisplayModeSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_4_0 = SquadGridWidget.a(param0.length, param0, 99, 0);
+            stackIn_4_0 = SquadGridWidget.joinCharSequences(param0.length, param0, 99, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

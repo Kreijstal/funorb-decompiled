@@ -62,7 +62,7 @@ final class BlobSubmission extends IntrusiveNode {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            KitStyleTile.a(param0, (byte) 103);
+            KitStyleTile.updateSessionLinks(param0, (byte) 103);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

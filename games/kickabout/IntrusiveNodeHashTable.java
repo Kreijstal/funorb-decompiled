@@ -19,7 +19,7 @@ final class IntrusiveNodeHashTable {
         IntrusiveNode var5 = null;
         try {
           if (param0.field_b != null) {
-            param0.c((byte) -109);
+            param0.unlink((byte) -109);
           }
           var5 = this.field_d[(int)((long)(this.field_b - 1) & param2)];
           param0.field_b = var5.field_b;
@@ -79,7 +79,7 @@ final class IntrusiveNodeHashTable {
             if (var4 == var3) {
               break;
             }
-            var4.c((byte) -109);
+            var4.unlink((byte) -109);
           }
         }
         this.field_c = null;

@@ -59,7 +59,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static ResourceArchive a(byte param0, int param1) {
+    final static ResourceArchive createResourceArchive(byte param0, int param1) {
         if (param0 <= -124) {
           return SetLagCommand.a(param1, (byte) -58, 1, false, false, true);
         }
@@ -81,7 +81,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         return this.field_f == param0;
     }
 
-    final static int a(PlayerStats param0, boolean param1) {
+    final static int calculatePlayerSaleValue(PlayerStats param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_6_0 = 0;
@@ -144,7 +144,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         field_k = null;
         field_j = null;
         if (param0 != -29) {
-          ImageProducerRasterBuffer.b(true);
+          ImageProducerRasterBuffer.updateMenuCamera(true);
         }
     }
 
@@ -188,7 +188,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         IntrusiveDeque.field_f = false;
     }
 
-    final static void b(boolean param0) {
+    final static void updateMenuCamera(boolean param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -215,7 +215,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         int var2Lifetime2Lifetime1;
         if (!param0) {
           PlayerStats var3 = (PlayerStats) null;
-          ImageProducerRasterBuffer.a((PlayerStats) null, false);
+          ImageProducerRasterBuffer.calculatePlayerSaleValue((PlayerStats) null, false);
           if (!CachedListingRow.field_h) {
             IterableNodeHashTable.a(true, (byte) 89);
             return;

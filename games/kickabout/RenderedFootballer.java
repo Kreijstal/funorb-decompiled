@@ -134,7 +134,7 @@ final class RenderedFootballer extends FootballerAgent {
             } else {
               ((Sprite) ((Object) var4)).draw(var5 - (((Sprite) ((Object) var4)).field_o >> 1), var6 - (((Sprite) ((Object) var4)).field_v >> 1));
             }
-            var7 = LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.a(param3.field_Eb, true), 26300);
+            var7 = LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.calculatePlayerSaleValue(param3.field_Eb, true), 26300);
             var8 = Math.max(param2.field_F + 15, 66 + (param2.field_F - (IsSixCommand.field_C.stringWidth(var7) >> 1)));
             IsSixCommand.field_C.drawText(var7, var8, param2.field_T + 51, 16777215, -1);
             if (!param1) {
@@ -238,7 +238,7 @@ final class RenderedFootballer extends FootballerAgent {
         } else {
           var2 = (KitPatternMaskSupport.field_c != 1) ? 62 : 68;
         }
-        var2 = var2 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(127, 2, MidiPcmStream.field_l);
+        var2 = var2 + ProxySocketConnector.nextBoundedInt(127, 2, MidiPcmStream.field_l);
         var3 = NotCommand.getCameraX(-2521);
         var4 = IsaacRandom.getCameraY(true);
         if (512 > Math.abs((this.positionX >> 16) - var3) &&
@@ -742,7 +742,7 @@ final class RenderedFootballer extends FootballerAgent {
         if (!this.field_cb) {
           this.field_H = this.field_H + var8;
           while (this.field_H >= 1.0) {
-            this.field_mb.a(127);
+            this.field_mb.tickAnimation(127);
             this.field_H = this.field_H - 1.0;
           }
           if (!this.field_nb) {
@@ -796,7 +796,7 @@ final class RenderedFootballer extends FootballerAgent {
           this.action == 12) &&
           (this.field_s ||
           !this.stats.usesTankAbilities((byte) 44, this.member))) {
-          return (PlayerContextMenu.b(this.field_m >> 8, this.field_k >> 8, (byte) 2) + 6144) % 8192 >> 2;
+          return (PlayerContextMenu.angleFromVector(this.field_m >> 8, this.field_k >> 8, (byte) 2) + 6144) % 8192 >> 2;
         }
         var2 = -68 / ((param0 + 17) / 51);
         if (this.directionX < 0) {

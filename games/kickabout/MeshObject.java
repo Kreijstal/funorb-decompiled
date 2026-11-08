@@ -235,7 +235,7 @@ abstract class MeshObject {
             FriendsListPanel.field_Db = false;
             OverlayLayerSupport.shutdownSharedAudio(-23217);
             DefaultPlayerFactory.buildSharedContextActions(119);
-            BytePlusOneCommand.g(0);
+            BytePlusOneCommand.setTutorialStage(0);
           }
           if (TickClock.field_j) {
             PlayerPortraitCacheEntry.field_g = null;

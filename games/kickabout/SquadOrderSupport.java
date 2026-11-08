@@ -18,7 +18,7 @@ final class SquadOrderSupport {
           var3 = (ManagerAction) (MusicPatchNode.field_h.last(-9033));
           while (var3 != null) {
             if (var3.actionType == 9) {
-              var3.c((byte) -109);
+              var3.unlink((byte) -109);
               var3 = (ManagerAction) (MusicPatchNode.field_h.last(-9033));
               continue;
             }

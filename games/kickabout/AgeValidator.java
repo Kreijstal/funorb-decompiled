@@ -165,7 +165,7 @@ final class AgeValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           var4 = (CharSequence) ((Object) param0);
-          if (!ClubState.a((byte) 15, var4)) {
+          if (!ClubState.isDecimalInteger((byte) 15, var4)) {
             stackIn_5_0 = PitchOptionTile.field_Bb;
             return stackIn_5_0;
           }

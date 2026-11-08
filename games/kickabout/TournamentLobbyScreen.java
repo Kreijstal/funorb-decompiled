@@ -60,13 +60,13 @@ final class TournamentLobbyScreen extends AppScreen {
         SoftwareRasterizer.fillRoundedRectangleBlended(40, GrayscalePaletteSupport.field_a.field_J - 42, 140 * this.field_X.length, 50, 8, 65793, 128);
         var2 = -9 / ((param0 - 35) / 36);
         for (var3 = 0; var3 < this.field_X.length; var3++) {
-          if (this.a(var3, -1)) {
-            this.field_X[var3].a(this.b(8, var3), this.tabCenterX(var3, 96), 13800);
+          if (this.isTabVisible(var3, -1)) {
+            this.field_X[var3].a(this.tabY(8, var3), this.tabCenterX(var3, 96), 13800);
           }
         }
     }
 
-    final static LoginMethod a(java.applet.Applet param0, int param1) {
+    final static LoginMethod readLastLoginMethod(java.applet.Applet param0, int param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
@@ -167,8 +167,8 @@ final class TournamentLobbyScreen extends AppScreen {
           var5 = this.field_X[var4].width;
           var6 = this.field_X[var4].height;
           var7 = -(var5 >> 1) + this.tabCenterX(var4, 96);
-          var8 = -(var6 >> 1) + this.b(8, var4);
-          if (this.a(var4, -1) &&
+          var8 = -(var6 >> 1) + this.tabY(8, var4);
+          if (this.isTabVisible(var4, -1) &&
             var7 <= param0 &&
             param0 < var7 + var5 &&
             var8 <= param2 &&
@@ -558,7 +558,7 @@ final class TournamentLobbyScreen extends AppScreen {
         }
         this.field_Z.handleArrowKeys(0, true);
         if (0 <= this.field_Z.selectedIndex) {
-          while (!this.a(this.field_Z.selectedIndex, -1)) {
+          while (!this.isTabVisible(this.field_Z.selectedIndex, -1)) {
             stackIn_47_0 = 96;
             stackIn_47_1 = param0;
             if (stackIn_47_0 != stackIn_47_1) {
@@ -575,7 +575,7 @@ final class TournamentLobbyScreen extends AppScreen {
         return true;
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean isTabVisible(int param0, int param1) {
         if (param1 != -1) {
           this.field_Y = (int[][]) null;
           return true;
@@ -614,21 +614,21 @@ final class TournamentLobbyScreen extends AppScreen {
             this.field_Z.resetPointerSelection(true, this.tabIndexAt(ArrayWidgetContainer.field_x, 98, TutorialCaptionSupport.field_j), (byte) -127);
           }
           this.readPlayerNames(param0, false);
-          this.a(-85, param0);
-          this.a(param0, (byte) 116);
+          this.readTournamentStatistics(-85, param0);
+          this.readRoundUpdate(param0, (byte) 116);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int f(int param0) {
+    final int getRoundIndex(int param0) {
         if (param0 <= 35) {
           return -3;
         }
         return this.field_W;
     }
 
-    final void a(CipherPacketBuffer param0, byte param1) {
+    final void readRoundUpdate(CipherPacketBuffer param0, byte param1) {
         boolean stackIn_7_1 = false;
         int stackIn_10_0 = 0;
         int stackIn_17_0 = 0;
@@ -795,14 +795,14 @@ final class TournamentLobbyScreen extends AppScreen {
         }
     }
 
-    private final int b(int param0, int param1) {
+    private final int tabY(int param0, int param1) {
         if (param0 != 8) {
           this.field_x = -76;
         }
         return -20 + GrayscalePaletteSupport.field_a.field_J;
     }
 
-    private final void e(int param0) {
+    private final void drawCurrentRound(int param0) {
         CoverageBitmapFont stackIn_2_0 = null;
         StringBuilder stackIn_2_1 = null;
         String stackIn_3_2 = null;
@@ -895,7 +895,7 @@ final class TournamentLobbyScreen extends AppScreen {
         }
     }
 
-    private final void b(byte param0) {
+    private final void drawTournamentBracket(byte param0) {
         int var14_int = 0;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
@@ -1192,7 +1192,7 @@ final class TournamentLobbyScreen extends AppScreen {
         int discarded$0 = 0;
         try {
           if (param2 > -28) {
-            discarded$0 = this.b(-108, -27);
+            discarded$0 = this.tabY(-108, -27);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lm.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -1215,10 +1215,10 @@ final class TournamentLobbyScreen extends AppScreen {
               this.drawStatsPanel(32);
             }
           } else {
-            this.b((byte) 111);
+            this.drawTournamentBracket((byte) 111);
           }
         } else {
-          this.e(-21109);
+          this.drawCurrentRound(-21109);
         }
         TeamManagementScreen.e(121);
         this.drawTabButtons(param0 ^ 28);
@@ -1254,7 +1254,7 @@ final class TournamentLobbyScreen extends AppScreen {
         field_j = null;
     }
 
-    final void a(int param0, CipherPacketBuffer param1) {
+    final void readTournamentStatistics(int param0, CipherPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var6 = Kickabout.field_G;
@@ -1313,7 +1313,7 @@ final class TournamentLobbyScreen extends AppScreen {
         }
     }
 
-    final static void d(int param0) {
+    final static void initializeTournamentStatics(int param0) {
         if (param0 != -1) {
           TournamentLobbyScreen.releaseStatics(false);
         }

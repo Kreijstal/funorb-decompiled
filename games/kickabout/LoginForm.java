@@ -109,7 +109,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                     PacketBuffer.g(4);
                   }
                 } else {
-                  PlayerContextMenu.a(false);
+                  PlayerContextMenu.requestLoginMenuMode(false);
                 }
               }
             } else {
@@ -299,7 +299,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_g = this.field_g + (5 + var7.paragraphHeight(this.field_D, -40 + this.field_n, var7.field_G));
           }
           var8 = GameplayHelpScreen.field_J;
-          var9 = TournamentLobbyScreen.a(AppletContextSupport.getActiveApplet(104), -7465);
+          var9 = TournamentLobbyScreen.readLastLoginMethod(AppletContextSupport.getActiveApplet(104), -7465);
           if (IsSixCommand.field_F == var9) {
             var8 = SetLagCommand.field_A;
           } else {

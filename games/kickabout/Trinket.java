@@ -433,7 +433,7 @@ final class Trinket {
                   if (stackIn_19_0) {
                     var2.stream.setInternalVolume(var2.baseVolume * IconButtonPainter.field_a + 128 >> 8);
                   }
-                  var2.c((byte) -109);
+                  var2.unlink((byte) -109);
                   var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.next(33));
                   decompiledFrameCompleted0 = false;
                   break;
@@ -441,7 +441,7 @@ final class Trinket {
               }
               if (decompiledFrameCompleted0) {
                 if (!stackIn_19_0) {
-                  var2.c((byte) -109);
+                  var2.unlink((byte) -109);
                 }
                 if (stackIn_19_0 ||
                   var4 != 0) {
@@ -464,7 +464,7 @@ final class Trinket {
                 if (stackIn_19_0Lifetime1) {
                   var2.stream.setInternalVolume(var2.baseVolume * IconButtonPainter.field_a + 128 >> 8);
                 } else {
-                  var2.c((byte) -109);
+                  var2.unlink((byte) -109);
                 }
                 var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.next(33));
               }

@@ -185,7 +185,7 @@ final class NanoTickClock extends TickClock {
           var1 = MachineTokenStorageSupport.field_e.field_B;
         } else {
           if (null != SortCriterion.field_l) {
-            var1 = SortCriterion.field_l.f(123);
+            var1 = SortCriterion.field_l.getRoundIndex(123);
           }
         }
         if (-1 == var1) {

@@ -29,7 +29,7 @@ final class PlayerSurnameSortCriterion extends SortCriterion {
         field_n = null;
     }
 
-    final static int b(int param0, int param1) {
+    final static int directionMaskFromAngle(int param0, int param1) {
         int var2;
         param0 = param0 >> 9;
         if (param0 < 0) {
@@ -61,7 +61,7 @@ final class PlayerSurnameSortCriterion extends SortCriterion {
         return var2;
     }
 
-    final static void a(int param0, int param1) {
+    final static void decodeChatFilters(int param0, int param1) {
         ServerTextTemplate.field_a = (param0 & 60) >> 4;
         ConsoleTokenCursor.field_b = (param0 & 14) >> 2;
         if (ServerTextTemplate.field_a > 2) {
@@ -99,7 +99,7 @@ final class PlayerSurnameSortCriterion extends SortCriterion {
           var4 = var8;
           var5 = ((ShopPlayerSlot) (param2)).field_Sb;
           if (param0 != 2) {
-            PlayerSurnameSortCriterion.b(83, 32);
+            PlayerSurnameSortCriterion.directionMaskFromAngle(83, 32);
           }
           var6 = BuyPlayerDialog.field_G[var8.archetype][var8.surnameIndex];
           var7 = BuyPlayerDialog.field_G[var5.archetype][var5.surnameIndex];

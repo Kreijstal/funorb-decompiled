@@ -33,9 +33,9 @@ final class WorldSpriteSequence {
         this.field_c = new Sprite[4];
         this.field_b = param1;
         var19 = new Random();
-        var5 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(87, 5, var19);
+        var5 = ProxySocketConnector.nextBoundedInt(87, 5, var19);
         var6 = new PlayerModelPreview(27, 64, param2, var5);
-        var7 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(83, 4, var19);
+        var7 = ProxySocketConnector.nextBoundedInt(83, 4, var19);
         var8 = FootballerPreview.a(-5275);
         var9 = new Sprite(54, 85);
         PacketBuffer.a(114, var9);

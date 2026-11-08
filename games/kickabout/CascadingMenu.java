@@ -25,7 +25,7 @@ final class CascadingMenu extends UiLayoutNode {
         return this.field_Bb + (null == this.field_Kb ? 0 : this.field_Kb.getTotalWidth((byte) 107));
     }
 
-    final boolean h(int param0) {
+    final boolean hasActivatedItem(int param0) {
         int var2;
         ContextMenuItem[] var3;
         int var4;
@@ -57,7 +57,7 @@ final class CascadingMenu extends UiLayoutNode {
         if (var2 == 0 &&
           -1 != this.field_Cb &&
           null != this.field_Ob[this.field_Cb]) {
-          stackIn_17_0 = (!this.field_Ob[this.field_Cb].h(-128)) ? 0 : 1;
+          stackIn_17_0 = (!this.field_Ob[this.field_Cb].hasActivatedItem(-128)) ? 0 : 1;
           var2 = stackIn_17_0;
         }
         return var2 != 0;
@@ -231,7 +231,7 @@ final class CascadingMenu extends UiLayoutNode {
         }
         if (null != this.field_Kb) {
           this.field_Kb.resetSelection(5075);
-          this.field_Kb.c((byte) -109);
+          this.field_Kb.unlink((byte) -109);
         }
         this.field_Cb = -1;
         this.field_Kb = null;
@@ -308,7 +308,7 @@ final class CascadingMenu extends UiLayoutNode {
           }
         }
         if (param1 > -20) {
-          this.h(-11);
+          this.hasActivatedItem(-11);
         }
     }
 

@@ -25,7 +25,7 @@ final class PlayerInputFactory {
     }
 
     final static void a(byte param0) {
-        FadingSoundPlayer var1 = ArrayWidgetContainer.a(72, false, DualLinkHashTable.field_e, 43, 128, 34);
+        FadingSoundPlayer var1 = ArrayWidgetContainer.createFadingSoundPlayer(72, false, DualLinkHashTable.field_e, 43, 128, 34);
         if (var1 != null) {
           var1.startFadeOut(150, (byte) -4);
           if (param0 != -25) {
@@ -58,7 +58,7 @@ final class PlayerInputFactory {
           }
           var7 = new RenderedFootballer(var6, param0.archetype, true);
           var7.setAction((byte) -31, 0);
-          var7.field_mb.setFrame(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-121, var7.field_mb.frameCount(true), new Random()), -38);
+          var7.field_mb.setFrame(ProxySocketConnector.nextBoundedInt(-121, var7.field_mb.frameCount(true), new Random()), -38);
           stackIn_3_0 = var7;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

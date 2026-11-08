@@ -41,7 +41,7 @@ final class LinkTextPainter implements WidgetPainter {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean isAwaitingLoginResponse(int param0) {
         if (param0 != 0) {
           field_f = (String) null;
           if (null == SpriteButtonPainter.field_y) {

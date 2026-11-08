@@ -46,7 +46,7 @@ final class ConsoleExpression extends IntrusiveNode {
             var5 = 44040192;
             var6 = 29360128;
           }
-          param3.field_h = PlayerContextMenu.a(true, var5 - param3.positionY, var6 - param3.positionX);
+          param3.field_h = PlayerContextMenu.directionMaskFromVector(true, var5 - param3.positionY, var6 - param3.positionX);
           param3.setAction((byte) -31, 2);
           param3.actionTime = param3.actionTime + 25;
           if (15 <= param3.field_o) {

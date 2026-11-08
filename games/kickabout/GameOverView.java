@@ -70,7 +70,7 @@ final class GameOverView extends MatchPhaseView {
         var4 = Kickabout.field_G;
         try {
           if (param0 != -109) {
-            discarded$1 = this.a((IntrusiveDeque) null, -84, -44, false);
+            discarded$1 = this.drawGoalLogTable((IntrusiveDeque) null, -84, -44, false);
           }
           if (0 > this.field_g) {
             return false;
@@ -107,7 +107,7 @@ final class GameOverView extends MatchPhaseView {
         }
     }
 
-    private final void i(int param0) {
+    private final void drawMatchStatisticsPages(int param0) {
         CoverageBitmapFont stackIn_4_0 = null;
         String stackIn_4_1 = null;
         int stackIn_4_2 = 0;
@@ -440,13 +440,13 @@ final class GameOverView extends MatchPhaseView {
           ByteArrayPool.field_d.drawCentered(LobbyPlayerRow.field_Ub.toUpperCase(), var2_int + 320, var9, param0, -1);
           var9 += 20;
           var10_ref = this.field_bb;
-          var9 = this.a(var10_ref, var2_int, var9, true);
+          var9 = this.drawGoalLogTable(var10_ref, var2_int, var9, true);
           var9 += 35;
           SoftwareRasterizer.fillRoundedRectangleBlended(42 + var2_int, var9 - 20, 552, 28, 10, 65793, 128);
           ByteArrayPool.field_d.drawCentered(CommonGame.field_a.toUpperCase(), var2_int + 320, var9, 16777215, -1);
           var10_refLifetime1 = this.field_q;
           var9 += 20;
-          var9 = this.a(var10_refLifetime1, var2_int, var9, true);
+          var9 = this.drawGoalLogTable(var10_refLifetime1, var2_int, var9, true);
           if (this.field_P != 0 &&
             this.field_M > this.field_P) {
             TeamManagementScreen.e(param0 - 16777091);
@@ -674,7 +674,7 @@ final class GameOverView extends MatchPhaseView {
         }
     }
 
-    private final void a(int param0, int param1, int param2, byte param3, int param4) {
+    private final void drawManagerRewards(int param0, int param1, int param2, byte param3, int param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         String var6 = null;
@@ -1153,7 +1153,7 @@ final class GameOverView extends MatchPhaseView {
             AuctionListing.pushRasterClip(31 + var3, -22914, var3 - 31, var4 - 17, var4 - 37);
             SoftwareRasterizer.fillRoundedRectangleBlended(-30 + var3, var4 - 32, 60, 30, 8, 65793, 128);
             TeamManagementScreen.e(param0 + 116);
-            PlayerContextMenu.a(var3 - 19, (byte) -82, -22 + var4);
+            PlayerContextMenu.drawAnimatedPlayerMarker(var3 - 19, (byte) -82, -22 + var4);
             IsSixCommand.field_C.drawText(WeightedLruCache.field_b, -6 + var3, -16 + var4, 16777215, -1);
           }
           var2_int = 245;
@@ -1166,33 +1166,33 @@ final class GameOverView extends MatchPhaseView {
             AuctionListing.pushRasterClip(31 + var3Lifetime1, -22914, -31 + var3Lifetime1, var4Lifetime1 - 17, -37 + var4Lifetime1);
             SoftwareRasterizer.fillRoundedRectangleBlended(var3Lifetime1 - 30, -32 + var4Lifetime1, 60, 30, 8, 65793, 128);
             TeamManagementScreen.e(126);
-            PlayerContextMenu.a(var3Lifetime1 - 19, (byte) 99, var4Lifetime1 - 22);
+            PlayerContextMenu.drawAnimatedPlayerMarker(var3Lifetime1 - 19, (byte) 99, var4Lifetime1 - 22);
             IsSixCommand.field_C.drawText(WeightedLruCache.field_b, var3Lifetime1 - 6, -16 + var4Lifetime1, 16777215, -1);
           }
           if (this.field_S != 2) {
             if (0 == this.field_S ||
               !(this.field_g >= 0) ||
               this.field_a.field_e) {
-              this.f(86);
+              this.drawParticipantResults(86);
               if ((var5 != 0) &&
                 (1 == this.field_S &&
                 !(0 > this.field_g) &&
                 !this.field_a.field_e)) {
-                this.a(300, 100, 170, (byte) 119, var2_int);
-                this.i(16777215);
+                this.drawManagerRewards(300, 100, 170, (byte) 119, var2_int);
+                this.drawMatchStatisticsPages(16777215);
               }
             } else {
               if (1 == this.field_S &&
                 !(0 > this.field_g) &&
                 !this.field_a.field_e) {
-                this.a(300, 100, 170, (byte) 119, var2_int);
+                this.drawManagerRewards(300, 100, 170, (byte) 119, var2_int);
                 if (var5 != 0) {
-                  this.i(16777215);
+                  this.drawMatchStatisticsPages(16777215);
                 }
               }
             }
           } else {
-            this.i(16777215);
+            this.drawMatchStatisticsPages(16777215);
           }
           if (this.field_a.field_f) {
             ByteArrayPool.field_d.drawText("FB", 5, 17, 16777215, -1);
@@ -1273,7 +1273,7 @@ final class GameOverView extends MatchPhaseView {
         }
     }
 
-    private final int a(IntrusiveDeque param0, int param1, int param2, boolean param3) {
+    private final int drawGoalLogTable(IntrusiveDeque param0, int param1, int param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -1449,7 +1449,7 @@ final class GameOverView extends MatchPhaseView {
         }
     }
 
-    private final void f(int param0) {
+    private final void drawParticipantResults(int param0) {
         int stackIn_5_0 = 0;
         boolean stackIn_17_0 = false;
         int stackIn_26_0 = 0;
@@ -1499,7 +1499,7 @@ final class GameOverView extends MatchPhaseView {
                   stackIn_40_0 = stackOut_16_0 ? 1 : 0;
                   stackIn_17_0 = stackOut_16_0;
                   if (stackIn_17_0) {
-                    PlayerContextMenu.a(var7 + 10, (byte) -119, var8 - 6);
+                    PlayerContextMenu.drawAnimatedPlayerMarker(var7 + 10, (byte) -119, var8 - 6);
                   }
                   MySquadScreen.field_U[this.field_a.field_g[this.field_O[var5][var9]].field_f].draw(var7, var8 - 16);
                   stackIn_26_0 = (var11 == 0) ? 16777215 : 11184810;
@@ -1795,7 +1795,7 @@ final class GameOverView extends MatchPhaseView {
             stackIn_53_0 = var7;
             return stackIn_53_0;
           }
-          ProxySocketConnector.a(param4, var7, 0);
+          ProxySocketConnector.exitFullscreen(param4, var7, 0);
           stackIn_51_0 = null;
           return (java.awt.Frame) (stackIn_51_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

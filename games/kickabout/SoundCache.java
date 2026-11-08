@@ -179,7 +179,7 @@ final class SoundCache {
             stackIn_18_0 = null;
             return (PcmSample) (stackIn_18_0);
           }
-          var9.c((byte) -109);
+          var9.unlink((byte) -109);
           this.field_c.put(var8Lifetime1, -82, var6);
           stackIn_20_0 = (PcmSample) (var8Lifetime1);
           return stackIn_20_0;

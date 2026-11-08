@@ -19,12 +19,12 @@ final class TrinketTile extends UiLayoutNode {
     final int getPriceTextColor(boolean param0) {
         if (!param0) {
           ResourceArchive var3 = (ResourceArchive) null;
-          TrinketTile.a((BitmapFont) null, (ResourceArchive) null, (byte) 38);
+          TrinketTile.initializeQuickChat((BitmapFont) null, (ResourceArchive) null, (byte) 38);
         }
         return RegistrationRequestState.field_h.field_x >= this.field_Db ? 16777215 : 16711680;
     }
 
-    final static void a(BitmapFont param0, ResourceArchive param1, byte param2) {
+    final static void initializeQuickChat(BitmapFont param0, ResourceArchive param1, byte param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -130,7 +130,7 @@ final class TrinketTile extends UiLayoutNode {
         this.field_Cb.field_J = this.field_mb - this.field_Cb.field_mb >> 1;
     }
 
-    final void i(byte param0) {
+    final void drawTileText(byte param0) {
         if (this.field_mb + this.field_T < SoftwareRasterizer.field_e ||
           SoftwareRasterizer.field_h < this.field_T) {
           return;

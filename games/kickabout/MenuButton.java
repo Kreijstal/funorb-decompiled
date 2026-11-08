@@ -35,7 +35,7 @@ final class MenuButton {
           ((ButtonMenuScreen) (AuctionLogEntry.field_h)).showTutorialTip((byte) 52);
         } else {
           if (this.kind == 0) {
-            if (GameLoopApplet.field_E.d((byte) 91)) {
+            if (GameLoopApplet.field_E.hasFourAvailablePlayers((byte) 91)) {
               if (GameLoopApplet.field_E.field_J[0]) {
                 PitchSurfaceLoader.enqueueTutorialChoice((byte) -124);
               } else {
@@ -172,7 +172,7 @@ final class MenuButton {
                                                                 }
                                                               } else {
                                                                 if (SplashScreen.field_m == null) {
-                                                                  ConsoleEvaluationException.a(param1, 0);
+                                                                  ConsoleEvaluationException.enterConfiguredFullscreen(param1, 0);
                                                                 } else {
                                                                   UiWidget.leaveFullscreen(0);
                                                                 }
@@ -223,7 +223,7 @@ final class MenuButton {
                 if (!GameLoopApplet.field_E.field_J[0]) {
                   SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 26);
                 } else {
-                  if (!GameLoopApplet.field_E.d((byte) 64)) {
+                  if (!GameLoopApplet.field_E.hasFourAvailablePlayers((byte) 64)) {
                     SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 5);
                   } else {
                     MouseWheelInput.a(-1822);
@@ -244,7 +244,7 @@ final class MenuButton {
         }
         int var3 = DateInputWidget.k(256);
         int var4 = var3 >> 3;
-        int var5 = 17 != this.kind ? IntrusiveNode.b((byte) -99) : LoadingProgressSupport.a((byte) 97);
+        int var5 = 17 != this.kind ? IntrusiveNode.getSoundEffectVolume((byte) -99) : LoadingProgressSupport.a((byte) 97);
         var5 = var5 + (param0 ? -var4 : var4);
         if (var5 < 0) {
           var5 = 0;
@@ -272,7 +272,7 @@ final class MenuButton {
           this.activate(-1, true);
         }
         if (null != this.field_b) {
-          this.field_b.updatePose(17 == this.kind ? LoadingProgressSupport.a((byte) 97) : IntrusiveNode.b((byte) -124), 1);
+          this.field_b.updatePose(17 == this.kind ? LoadingProgressSupport.a((byte) 97) : IntrusiveNode.getSoundEffectVolume((byte) -124), 1);
         }
         if (this.field_r &&
           param2 &&
@@ -461,7 +461,7 @@ final class MenuButton {
           var6 = param1 - (-var5 - 20);
           SoftwareRasterizer.drawRectangle(var6, param0 - 2, AlternateKeyedLoginCredentials.field_m, 4, 65793);
           if (this.kind != 17) {
-            stackIn_46_0 = IntrusiveNode.b((byte) -61);
+            stackIn_46_0 = IntrusiveNode.getSoundEffectVolume((byte) -61);
           } else {
             stackIn_46_0 = LoadingProgressSupport.a((byte) 97);
           }

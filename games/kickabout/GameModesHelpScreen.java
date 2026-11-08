@@ -489,11 +489,11 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           var5.speed = 50;
           var5.archetype = var4;
           var5.tackle = 50;
-          var5.surnameIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-110, BuyPlayerDialog.field_G[var5.archetype].length, var7);
-          var5.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-92, TrinketCatalog.field_a.length, var7);
-          var5.appearance = var5.appearance | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, 3, var7);
-          var5.appearance = var5.appearance | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(95, 3, var7) << 4;
-          var5.appearance = var5.appearance | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(91, 5, var7) << 8;
+          var5.surnameIndex = ProxySocketConnector.nextBoundedInt(-110, BuyPlayerDialog.field_G[var5.archetype].length, var7);
+          var5.initialIndex = ProxySocketConnector.nextBoundedInt(-92, TrinketCatalog.field_a.length, var7);
+          var5.appearance = var5.appearance | ProxySocketConnector.nextBoundedInt(-62, 3, var7);
+          var5.appearance = var5.appearance | ProxySocketConnector.nextBoundedInt(95, 3, var7) << 4;
+          var5.appearance = var5.appearance | ProxySocketConnector.nextBoundedInt(91, 5, var7) << 8;
           this.field_K[var3] = new SquadSlotWidget();
           this.field_K[var3].field_s = 45 + var3 % 3 * 52;
           this.field_K[var3].field_J = var3 / 3 * 75 + 178;

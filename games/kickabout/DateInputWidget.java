@@ -9,7 +9,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
     static String field_E;
     static String field_F;
 
-    abstract boolean b(boolean param0);
+    abstract boolean hasMissingDateParts(boolean param0);
 
     abstract int getYear(int param0);
 

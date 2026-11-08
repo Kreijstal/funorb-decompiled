@@ -35,7 +35,7 @@ final class ConsoleEvaluationException extends Exception {
         int var5 = 66 % ((73 - param0) / 52);
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void enterConfiguredFullscreen(boolean param0, int param1) {
         int var2;
         int var3;
         var3 = Kickabout.field_G;

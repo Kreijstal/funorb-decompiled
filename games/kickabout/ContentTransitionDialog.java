@@ -17,7 +17,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
     private final void b(UiWidget param0, int param1) {
         try {
           if (null != this.field_ab) {
-            this.field_ab.c((byte) -109);
+            this.field_ab.unlink((byte) -109);
           }
           if (param1 <= 50) {
             this.field_X = (RegistrationRequestState) null;

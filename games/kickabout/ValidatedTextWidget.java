@@ -102,7 +102,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           var2 = (ManagerAction) (MusicPatchNode.field_h.first(24009));
           while (var2 != null) {
             if (6 == var2.actionType) {
-              var2.c((byte) -109);
+              var2.unlink((byte) -109);
             }
             var2 = (ManagerAction) (MusicPatchNode.field_h.next(33));
           }

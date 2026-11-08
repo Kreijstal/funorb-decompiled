@@ -40,7 +40,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
             var1 = (SoundStreamHandle) (LoginCredentials.field_a.first(param0 + 24037));
             while (var1 != null) {
               if (!var1.owner.isLinked((byte) -113)) {
-                var1.c((byte) -109);
+                var1.unlink((byte) -109);
               }
               var1 = (SoundStreamHandle) (LoginCredentials.field_a.next(param0 ^ -59));
             }
@@ -51,7 +51,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
             while (var1Lifetime1 != null) {
               stackIn_15_0 = var1Lifetime1.owner.isLinked((byte) -113);
               if (!stackIn_15_0) {
-                var1Lifetime1.c((byte) -109);
+                var1Lifetime1.unlink((byte) -109);
               }
               var1Lifetime1 = (SoundStreamHandle) (IndexedSpriteState.field_c.next(33));
             }

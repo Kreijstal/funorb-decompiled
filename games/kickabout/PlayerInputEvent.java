@@ -173,7 +173,7 @@ final class PlayerInputEvent extends DualLinkNode {
           stackIn_35_0 = var3;
           stackIn_36_1 = (param0);
           stackIn_35_0.field_e = stackIn_36_1;
-          var3.c((byte) -109);
+          var3.unlink((byte) -109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

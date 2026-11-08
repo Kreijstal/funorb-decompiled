@@ -524,7 +524,7 @@ class FootballerAgent extends MatchAgent {
         this.field_k = (ClientUiUpdateSupport.cosine(param0, false) >> 8) * (this.field_q >> 8);
         this.field_m = (RotaryDialPainter.sine(param0, (byte) -23) >> 8) * (this.field_q >> 8);
         if (this.directionMask == 0) {
-          this.setDirectionFromMask(PlayerSurnameSortCriterion.b(param0, -25147), 26214);
+          this.setDirectionFromMask(PlayerSurnameSortCriterion.directionMaskFromAngle(param0, -25147), 26214);
         }
         this.actionTime = this.actionTime + this.stats.effectiveTackle(this.member, 0) / 5;
         this.controllingParticipant = param1;
@@ -737,9 +737,9 @@ class FootballerAgent extends MatchAgent {
           discarded$34 = var2.append("\n\t\tkeeperstate=[" + this.field_o + "," + this.field_t + "]");
         }
         StringBuilder discarded$35 = var2.append("\n\t\tdirec=\t[");
-        IntrusiveNode.a(this.directionMask, -28745, 4, var2);
+        IntrusiveNode.appendPaddedBinary(this.directionMask, -28745, 4, var2);
         StringBuilder discarded$36 = var2.append(',');
-        IntrusiveNode.a(this.field_h, -28745, 4, var2);
+        IntrusiveNode.appendPaddedBinary(this.field_h, -28745, 4, var2);
         StringBuilder discarded$37 = var2.append("," + this.directionX + "," + this.directionY + "]");
         StringBuilder discarded$38 = var2.append("\n\t\tkick=\t[" + this.field_z + "," + this.field_x + "," + this.field_P + "," + this.field_O + "]");
         StringBuilder discarded$129 = var2.append("\n\t\ttackle=\t[" + this.field_k + "," + this.field_m + "," + this.field_s + "," + this.field_r + "," + this.field_B + "]");

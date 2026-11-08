@@ -9,7 +9,7 @@ abstract class SocketConnector {
     int field_a;
     static String field_d;
 
-    final static void a(int param0, int param1, int[] param2, ColorQuantizationBox param3) {
+    final static void labelColorBoxCells(int param0, int param1, int[] param2, ColorQuantizationBox param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -51,7 +51,7 @@ abstract class SocketConnector {
         }
     }
 
-    abstract java.net.Socket a(int param0) throws IOException;
+    abstract java.net.Socket connect(int param0) throws IOException;
 
     public static void releaseStatics(int param0) {
         field_d = null;

@@ -14,7 +14,7 @@ final class SquadGridWidget extends UiLayoutNode {
     static String field_yb;
     SquadSlotWidget[] field_Eb;
 
-    final static void a(Sprite[] param0, boolean param1) {
+    final static void initializeCheckboxSprites(Sprite[] param0, boolean param1) {
         int var2_int = 0;
         int var3 = Kickabout.field_G;
         try {
@@ -167,7 +167,7 @@ final class SquadGridWidget extends UiLayoutNode {
         }
     }
 
-    final static void readListingRows(byte param0, CipherPacketBuffer param1, boolean param2) {
+    final static void readLeagueRankingPage(byte param0, CipherPacketBuffer param1, boolean param2) {
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_42_0 = null;
@@ -315,7 +315,7 @@ final class SquadGridWidget extends UiLayoutNode {
         return 75 * (param0 / 3);
     }
 
-    final static String a(int param0, CharSequence[] param1, int param2, int param3) {
+    final static String joinCharSequences(int param0, CharSequence[] param1, int param2, int param3) {
         int var6_int = 0;
         int var7 = 0;
         StringBuilder discarded$0 = null;
@@ -396,7 +396,7 @@ final class SquadGridWidget extends UiLayoutNode {
         field_yb = null;
     }
 
-    final static void b(int param0) {
+    final static void drawFadingChatMessages(int param0) {
         int var2 = 0;
         RuntimeException runtimeException = null;
         int var1_int = 0;
@@ -460,7 +460,7 @@ final class SquadGridWidget extends UiLayoutNode {
         }
     }
 
-    final static byte a(char param0, byte param1) {
+    final static byte encodeCp1252Char(char param0, byte param1) {
         int var2;
         int var3;
         {
@@ -535,7 +535,7 @@ final class SquadGridWidget extends UiLayoutNode {
         return (byte) 17;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void resendRankingsRequests(int param0, byte param1) {
         int var3 = 0;
         RankingsRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -558,7 +558,7 @@ final class SquadGridWidget extends UiLayoutNode {
         }
     }
 
-    final void k(byte param0) {
+    final void drawSquadSlots(byte param0) {
         int var4_int = 0;
         int var6 = 0;
         int var2;
@@ -595,7 +595,7 @@ final class SquadGridWidget extends UiLayoutNode {
         TeamManagementScreen.e(121);
     }
 
-    final static AccountRegistrationResponse a(boolean param0, int param1) {
+    final static AccountRegistrationResponse createTermsResponse(boolean param0, int param1) {
         AccountRegistrationResponse var2 = new AccountRegistrationResponse(true);
         var2.needsTerms = param0 ? true : false;
         if (param1 <= 29) {
@@ -604,7 +604,7 @@ final class SquadGridWidget extends UiLayoutNode {
         return var2;
     }
 
-    final static void h(byte param0) {
+    final static void initializeLocalizedUiTables(byte param0) {
         if (null != MatchingTextValidator.field_o) {
           return;
         }
@@ -750,7 +750,7 @@ final class SquadGridWidget extends UiLayoutNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$fbddc791f0bf(int param0, CipherPacketBuffer param1, boolean param2) {
+    final static void readLeagueRankingPage(int param0, CipherPacketBuffer param1, boolean param2) {
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_42_0 = null;

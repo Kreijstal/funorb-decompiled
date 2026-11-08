@@ -16,7 +16,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
     KitStyleDefinition field_Cb;
     private ClubState field_Hb;
 
-    final static void j(int param0) {
+    final static void updateTutorialCamera(int param0) {
         int var2;
         FootballerAgent var2_ref_nl;
         int var3;
@@ -144,25 +144,25 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         SoftwareDrawingSupport.outlineSpriteInPlace(PlayArea.field_e, 11184810);
         if (param1 != 23) {
           PcmStreamMixer var5 = (PcmStreamMixer) null;
-          KitStyleTile.a(-77, (ResourceArchive) null, 47, (PcmStreamMixer) null);
+          KitStyleTile.initializeLogoSequence(-77, (ResourceArchive) null, 47, (PcmStreamMixer) null);
         }
         PlayArea.field_e.drawHalfSize(-(PlayArea.field_e.field_o >> 2) + param2, param0 - (PlayArea.field_e.field_v >> 2));
     }
 
-    final static int[] k(int param0) {
+    final static int[] createDemoIntegerValues(int param0) {
         int var1 = 54 % ((param0 + 42) / 42);
         return new int[]{1, 2, 3, 4};
     }
 
-    final static void c(boolean param0) {
+    final static void finishSharedUiTransitions(boolean param0) {
         PlayerStats.finishUiTransitions(-1456);
         if (param0) {
           PcmStreamMixer var2 = (PcmStreamMixer) null;
-          KitStyleTile.a(-120, (ResourceArchive) null, 13, (PcmStreamMixer) null);
+          KitStyleTile.initializeLogoSequence(-120, (ResourceArchive) null, 13, (PcmStreamMixer) null);
         }
     }
 
-    final void h(int param0) {
+    final void drawKitTile(int param0) {
         boolean stackIn_4_1 = false;
         int stackIn_9_0 = 0;
         int stackIn_19_0 = 0;
@@ -251,7 +251,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         return;
     }
 
-    final static void a(int param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
+    final static void initializeLogoSequence(int param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
         try {
           ButtonMenuScreen.field_l = GameSoundEffect.getTargetFramesPerSecond((byte) 119) * param0 / 1000;
           GameAppletShell.decodeLogoAudio(param1, (byte) 60);
@@ -266,7 +266,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         }
     }
 
-    final void c(int param0, boolean param1) {
+    final void updateKitTile(int param0, boolean param1) {
         int stackIn_23_0 = 0;
         int stackIn_23_1 = 0;
         String stackIn_24_2 = null;
@@ -350,7 +350,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         return;
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_yb = null;
         field_zb = null;
         if (param0 != 4476) {
@@ -359,7 +359,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         field_Bb = null;
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void updateSessionLinks(java.applet.Applet param0, byte param1) {
         try {
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;

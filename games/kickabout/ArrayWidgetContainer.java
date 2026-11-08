@@ -11,7 +11,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
     UiWidget[] field_w;
     static PlatformTask field_A;
 
-    private final boolean a(UiWidget param0, int param1, int param2) {
+    private final boolean focusNextChildByStep(UiWidget param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         UiWidget var5 = null;
@@ -63,7 +63,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         if (param0 < 10) {
           return true;
         }
-        return this.a(true) != null ? true : false;
+        return this.getFocusedChild(true) != null ? true : false;
     }
 
     final StringBuilder appendDebugTree(int param0, int param1, Hashtable param2, StringBuilder param3) {
@@ -83,7 +83,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
           }
           if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
             this.appendWidgetDiagnosticProperties(param1, param3, param2, param0 ^ -3421);
-            this.a(param2, 10, param1, param3);
+            this.appendChildDebugTrees(param2, 10, param1, param3);
           }
           stackIn_6_0 = (StringBuilder) (param3);
           return stackIn_6_0;
@@ -107,7 +107,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final static FadingSoundPlayer a(int param0, boolean param1, boolean param2, int param3, int param4, int param5) {
+    final static FadingSoundPlayer createFadingSoundPlayer(int param0, boolean param1, boolean param2, int param3, int param4, int param5) {
         if (StrongCacheEntry.field_z.size(false) >= 16) {
           return null;
         }
@@ -117,7 +117,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         return var6;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_y = null;
         field_z = null;
         if (param0) {
@@ -126,7 +126,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         field_A = null;
     }
 
-    private final void a(Hashtable param0, int param1, int param2, StringBuilder param3) {
+    private final void appendChildDebugTrees(Hashtable param0, int param1, int param2, StringBuilder param3) {
         int var6 = 0;
         StringBuilder discarded$6 = null;
         int var8 = 0;
@@ -186,7 +186,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    private final boolean a(int param0, UiWidget param1) {
+    private final boolean focusPreviousChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -195,7 +195,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 9) {
-            stackIn_4_0 = this.a(-17305, param1, 1);
+            stackIn_4_0 = this.focusPreviousChildByStep(-17305, param1, 1);
             return stackIn_4_0;
           }
           return true;
@@ -218,7 +218,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         this.a((byte) -118);
     }
 
-    private final boolean b(UiWidget param0, int param1) {
+    private final boolean focusNextChild(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -229,7 +229,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
           if (param1 < 84) {
             this.getLastRenderPass((byte) 119);
           }
-          stackIn_3_0 = this.a(param0, -28, 1);
+          stackIn_3_0 = this.focusNextChildByStep(param0, -28, 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -281,9 +281,9 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
             return false;
           }
           if (!GameplayHelpScreen.field_G[81]) {
-            stackIn_19_0 = this.b(param2, 87);
+            stackIn_19_0 = this.focusNextChild(param2, 87);
           } else {
-            stackIn_19_0 = this.a(9, param2);
+            stackIn_19_0 = this.focusPreviousChild(9, param2);
           }
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -300,7 +300,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final static void a(int param0, CommonGame param1, int param2, Sprite[] param3) {
+    final static void initializePlayerArrows(int param0, CommonGame param1, int param2, Sprite[] param3) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -368,7 +368,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
             var4_int = -(param1.field_o >> 1) + 20;
             if (param2 != -75) {
               var8 = (String[]) null;
-              ArrayWidgetContainer.a(69, (String[]) null);
+              ArrayWidgetContainer.createNameSuggestionResponse(69, (String[]) null);
             }
             var5 = (param1.positionY - param0.positionY) / param0.velocityY;
             var5 = 9 * var5 >> 3;
@@ -417,7 +417,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final static AccountRegistrationResponse a(int param0, String[] param1) {
+    final static AccountRegistrationResponse createNameSuggestionResponse(int param0, String[] param1) {
         AccountRegistrationResponse var2 = null;
         RuntimeException var2_ref = null;
         AccountRegistrationResponse stackIn_2_0 = null;
@@ -575,7 +575,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    private final UiWidget a(boolean param0) {
+    private final UiWidget getFocusedChild(boolean param0) {
         int var3 = 0;
         UiWidget[] var2;
         UiWidget var4;
@@ -626,7 +626,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
             }
           }
           if (param4 != -1) {
-            ArrayWidgetContainer.a(-45, false, false, 110, 69, -102);
+            ArrayWidgetContainer.createFadingSoundPlayer(-45, false, false, 110, 69, -102);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -683,7 +683,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    private final boolean a(int param0, UiWidget param1, int param2) {
+    private final boolean focusPreviousChildByStep(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         UiWidget var5 = null;

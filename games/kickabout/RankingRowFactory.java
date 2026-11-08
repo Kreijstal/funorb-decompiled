@@ -120,7 +120,7 @@ final class RankingRowFactory {
         field_g = null;
     }
 
-    final static void a(byte param0, int param1, int param2) {
+    final static void trainPlayerStat(byte param0, int param1, int param2) {
         ManagerAction var3 = new ManagerAction(3, new int[]{param1, param2});
         AchievementSubmission.applyAndQueueManagerAction(var3, 106);
         if (25 == AuctionLogEntry.field_h.screenId) {

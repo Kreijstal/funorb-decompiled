@@ -300,7 +300,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           AuctionListing.pushRasterClip(-2 + AuctionTableWidget.field_Hb.field_q + (AuctionTableWidget.field_Hb.field_F - 15), -22914, AuctionTableWidget.field_Hb.field_F, 12 + (AuctionTableWidget.field_Hb.field_T - (-AuctionTableWidget.field_Hb.field_mb + 15)), AuctionTableWidget.field_Hb.field_T);
           var7 = (RankingRowNode) (AuctionTableWidget.field_Hb.field_Db.field_jb.first(24009));
           while (var7 != null) {
-            var7.b(-104);
+            var7.drawRankingRow(-104);
             var7 = (RankingRowNode) (AuctionTableWidget.field_Hb.field_Db.field_jb.next(param0 ^ -38));
           }
           TeamManagementScreen.e(118);

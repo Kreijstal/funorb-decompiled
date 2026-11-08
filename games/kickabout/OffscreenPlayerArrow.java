@@ -34,7 +34,7 @@ final class OffscreenPlayerArrow {
           if (TextHotspotWidget.intersectsPlayerViewport(var5, var6, 480)) {
             return;
           }
-          this.field_a = -PlayerContextMenu.b(-param1 + var6, -param0 + var5, (byte) 2);
+          this.field_a = -PlayerContextMenu.angleFromVector(-param1 + var6, -param0 + var5, (byte) 2);
           var7 = var5 - param0;
           var8 = -param1 + var6;
           this.field_g = GameKeyHandler.a(var8 * var8 + var7 * var7, (byte) -88) * 100 >> 10;
@@ -99,7 +99,7 @@ final class OffscreenPlayerArrow {
         field_e = null;
     }
 
-    final static int b(byte param0) {
+    final static int getTutorialBackgroundOpacity(byte param0) {
         int var1 = 0;
         int var2 = 0;
         if (HuffmanCodec.field_e == 1) {

@@ -60,7 +60,7 @@ final class FriendRemovalSupport {
             }
             break;
           }
-          var8.c((byte) -109);
+          var8.unlink((byte) -109);
           var8.unlinkSecondary(25);
           ListingRow.field_d = ListingRow.field_d - 1;
           var9 = FootballerAiOverlaySupport.field_d;

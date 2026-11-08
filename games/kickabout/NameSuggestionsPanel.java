@@ -10,7 +10,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
     static int field_G;
     static UiLayoutNode field_E;
 
-    final static int a(ColorQuantizationBox param0, int[][][] param1, boolean param2) {
+    final static int colorBoxMoment(ColorQuantizationBox param0, int[][][] param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -56,7 +56,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         field_I = null;
     }
 
-    final void a(String[] param0, int param1) {
+    final void setNameSuggestions(String[] param0, int param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -166,7 +166,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         ClientUiUpdateSupport.field_a.a((byte) -118, (UiWidget) (CachedArchiveSource.field_u));
     }
 
-    final static TextWidgetPainter h(byte param0) {
+    final static TextWidgetPainter getDefaultTextPainter(byte param0) {
         if (param0 != 66) {
           return (TextWidgetPainter) null;
         }

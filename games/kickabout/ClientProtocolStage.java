@@ -37,7 +37,7 @@ final class ClientProtocolStage {
           field_b = (String[]) null;
         }
         TrinketCountSortCriterion.b((byte) 44);
-        if (LinkTextPainter.b(0)) {
+        if (LinkTextPainter.isAwaitingLoginResponse(0)) {
           FootballerAiOverlaySupport.field_d.writeIsaacByte(1, (byte) -106);
           ClientPacketFlushSupport.flushPackets(0, false);
         }

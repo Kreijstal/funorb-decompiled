@@ -81,7 +81,7 @@ final class ConsoleTokenParser {
             }
             var5 = var28.readUnsignedByte((byte) -128);
             if (var5 == 0) {
-              var4.c((byte) -109);
+              var4.unlink((byte) -109);
               return;
             }
             var6 = var4.field_g;
@@ -110,7 +110,7 @@ final class ConsoleTokenParser {
             var17 = 0;
             var18 = var28.readUnsignedByte((byte) -106);
             if (0 >= var18) {
-              var4.c((byte) -109);
+              var4.unlink((byte) -109);
               return;
             }
             for (var19 = 0; var18 > var19; var19++) {
@@ -157,7 +157,7 @@ final class ConsoleTokenParser {
                 }
               }
             }
-            var4.c((byte) -109);
+            var4.unlink((byte) -109);
             return;
           }
           if (var2 == 1) {
@@ -175,7 +175,7 @@ final class ConsoleTokenParser {
               FormationView.b((byte) -116);
               return;
             }
-            var4_ref.c((byte) -109);
+            var4_ref.unlink((byte) -109);
             return;
           }
           UnreadMessagesScreen.a("HS1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);

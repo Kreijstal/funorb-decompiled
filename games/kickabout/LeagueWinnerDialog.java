@@ -9,7 +9,7 @@ final class LeagueWinnerDialog extends MessageDialog {
     static String field_I;
     static byte[] field_J;
 
-    final static int b(int param0, int param1) {
+    final static int atanFixedPoint(int param0, int param1) {
         if (param1 != 15832) {
           field_J = (byte[]) null;
         }
@@ -25,7 +25,7 @@ final class LeagueWinnerDialog extends MessageDialog {
         return 2048 - FullscreenErrorDialog.field_T[134217728 / param0];
     }
 
-    final static void g(int param0) {
+    final static void updateTutorialRestrictions(int param0) {
         int var1;
         int var2;
         var2 = Kickabout.field_G;
@@ -85,7 +85,7 @@ final class LeagueWinnerDialog extends MessageDialog {
         }
     }
 
-    final static void a(String[] args, int param1, String param2, int param3) {
+    final static void completeRegistrationResponse(String[] args, int param1, String param2, int param3) {
         int var5 = 0;
         String[] var7 = null;
         boolean stackIn_7_0 = false;
@@ -100,7 +100,7 @@ final class LeagueWinnerDialog extends MessageDialog {
         try {
           PitchAppearanceSupport.field_a = LinkTextPainter.field_d;
           if (param3 != -1) {
-            LeagueWinnerDialog.b(-9, -128);
+            LeagueWinnerDialog.atanFixedPoint(-9, -128);
           }
           if (255 != param1) {
             if (param1 < 100) {
@@ -111,12 +111,12 @@ final class LeagueWinnerDialog extends MessageDialog {
               } else {
                 var7 = args;
                 MusicPatchPcmStream.a(18267, var7);
-                JaggrabDownloader.field_h = ArrayWidgetContainer.a(-117, args);
+                JaggrabDownloader.field_h = ArrayWidgetContainer.createNameSuggestionResponse(-117, args);
               }
             }
           } else {
             stackIn_7_0 = !(SocialUiState.field_b >= 13);
-            JaggrabDownloader.field_h = SquadGridWidget.a(stackIn_7_0, param3 ^ -42);
+            JaggrabDownloader.field_h = SquadGridWidget.createTermsResponse(stackIn_7_0, param3 ^ -42);
             MusicPatchPcmStream.a(param3 ^ -18268, (String[]) null);
           }
           return;
@@ -159,7 +159,7 @@ final class LeagueWinnerDialog extends MessageDialog {
         FootballerAiOverlaySupport.field_d.writeIsaacByte(78, (byte) 113);
     }
 
-    final static AccountInputValidationResult a(String param0, int param1) {
+    final static AccountInputValidationResult validateDomainLabel(String param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
@@ -219,12 +219,12 @@ final class LeagueWinnerDialog extends MessageDialog {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_I = null;
         field_G = null;
         field_K = null;
         if (param0 != -93) {
-          LeagueWinnerDialog.g((byte) 67);
+          LeagueWinnerDialog.releaseStatics((byte) 67);
         }
         field_J = null;
     }

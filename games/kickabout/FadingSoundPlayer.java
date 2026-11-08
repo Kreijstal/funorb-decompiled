@@ -136,7 +136,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
     final void update(byte param0) {
         if (this.stream.isSamplePositionOutOfRange()) {
           if (0 == this.startDelay) {
-            this.c((byte) -109);
+            this.unlink((byte) -109);
           } else {
             this.startPlayback((byte) 99);
           }

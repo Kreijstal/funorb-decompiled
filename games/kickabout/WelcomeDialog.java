@@ -111,7 +111,7 @@ final class WelcomeDialog extends MessageDialog {
           if (var9.archetype == 2) {
             var9.trinketIds[0] = 3;
             for (var12 = 1; var9.trinketIds.length > var12; var12++) {
-              var9.trinketIds[var12] = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-115, 4, var8);
+              var9.trinketIds[var12] = ProxySocketConnector.nextBoundedInt(-115, 4, var8);
             }
           } else {
             for (var12 = 0; var12 < var9.trinketIds.length; var12++) {
@@ -120,9 +120,9 @@ final class WelcomeDialog extends MessageDialog {
               } else {
                 if (param1 > 2 &&
                   5 > param1) {
-                  var9.trinketIds[var12] = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-118, 2, var8);
+                  var9.trinketIds[var12] = ProxySocketConnector.nextBoundedInt(-118, 2, var8);
                 } else {
-                  var9.trinketIds[var12] = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(120, 3, var8);
+                  var9.trinketIds[var12] = ProxySocketConnector.nextBoundedInt(120, 3, var8);
                 }
               }
             }
@@ -142,7 +142,7 @@ final class WelcomeDialog extends MessageDialog {
             var9.archetype == 2) {
             var9.archetype = 3;
           }
-          var11 = 40 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-69, 4, var8) * 10;
+          var11 = 40 + ProxySocketConnector.nextBoundedInt(-69, 4, var8) * 10;
           if (var9.archetype == 0) {
             stackIn_18_0 = var9;
             stackIn_18_1 = ServerTextTemplate.field_d[param4];
@@ -152,7 +152,7 @@ final class WelcomeDialog extends MessageDialog {
             } else {
               stackIn_19_3 = 11;
             }
-            stackIn_18_0.tackle = stackIn_18_1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(stackIn_18_2, stackIn_19_3, var8);
+            stackIn_18_0.tackle = stackIn_18_1 + ProxySocketConnector.nextBoundedInt(stackIn_18_2, stackIn_19_3, var8);
             var9.speed = var11 * var9.tackle / 100;
             var9.power = (100 - var11) * var9.tackle / 100;
           }
@@ -165,7 +165,7 @@ final class WelcomeDialog extends MessageDialog {
             } else {
               stackIn_25_3 = 11;
             }
-            stackIn_24_0.speed = stackIn_24_1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(stackIn_24_2, stackIn_25_3, var8);
+            stackIn_24_0.speed = stackIn_24_1 + ProxySocketConnector.nextBoundedInt(stackIn_24_2, stackIn_25_3, var8);
             var9.tackle = var11 * var9.speed / 100;
             var9.power = (100 - var11) * var9.speed / 100;
           }
@@ -178,17 +178,17 @@ final class WelcomeDialog extends MessageDialog {
             } else {
               stackIn_31_3 = 11;
             }
-            stackIn_30_0.power = stackIn_30_1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(stackIn_30_2, stackIn_31_3, var8);
+            stackIn_30_0.power = stackIn_30_1 + ProxySocketConnector.nextBoundedInt(stackIn_30_2, stackIn_31_3, var8);
             var9.speed = var9.power * var11 / 100;
             var9.tackle = (-var11 + 100) * var9.power / 100;
           }
           if (2 == var9.archetype) {
-            var12 = ServerTextTemplate.field_d[param4] + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-41, 11, var8);
-            var11 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(81, 3, var8) * 10 + 60;
+            var12 = ServerTextTemplate.field_d[param4] + ProxySocketConnector.nextBoundedInt(-41, 11, var8);
+            var11 = ProxySocketConnector.nextBoundedInt(81, 3, var8) * 10 + 60;
             var9.tackle = var12 * var11 / 100;
-            var11 = 60 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-90, 3, var8) * 10;
+            var11 = 60 + ProxySocketConnector.nextBoundedInt(-90, 3, var8) * 10;
             var9.speed = var12 * var11 / 100;
-            var11 = 60 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(127, 3, var8) * 10;
+            var11 = 60 + ProxySocketConnector.nextBoundedInt(127, 3, var8) * 10;
             var9.power = var12 * var11 / 100;
           }
           var9.experience = 0;
@@ -205,7 +205,7 @@ final class WelcomeDialog extends MessageDialog {
           if (var9.archetype != 2) {
             var12++;
             if (param4 >= 4 &&
-              ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(89, 2, var8) == 0) {
+              ProxySocketConnector.nextBoundedInt(89, 2, var8) == 0) {
               var12++;
             }
           } else {
@@ -213,7 +213,7 @@ final class WelcomeDialog extends MessageDialog {
             if (param4 >= 5) {
               var12++;
             }
-            if (0 == ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-73, 2, var8)) {
+            if (0 == ProxySocketConnector.nextBoundedInt(-73, 2, var8)) {
               var12++;
             }
           }
@@ -221,7 +221,7 @@ final class WelcomeDialog extends MessageDialog {
           if (2 == var9.archetype) {
             var9.trinketIds[0] = 3;
             for (var13 = 1; var9.trinketIds.length > var13; var13++) {
-              var14 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-89, 100, var8);
+              var14 = ProxySocketConnector.nextBoundedInt(-89, 100, var8);
               for (var15 = 0; var15 < LoginDialog.field_eb[param4].length; var15++) {
                 if (var14 > LoginDialog.field_eb[param4][var15]) {
                   var14 = var14 - LoginDialog.field_eb[param4][var15];
@@ -235,7 +235,7 @@ final class WelcomeDialog extends MessageDialog {
             for (var13 = 0; var9.trinketIds.length > var13; var13++) {
               {
                 if (param4 >= 2) {
-                  var14 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(122, 100, var8);
+                  var14 = ProxySocketConnector.nextBoundedInt(122, 100, var8);
                   var17 = 0;
                   var15 = var17;
                   while (SingleChildContainer.field_v[param4].length > var17) {
@@ -253,11 +253,11 @@ final class WelcomeDialog extends MessageDialog {
             }
           }
         }
-        var9.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-67, TrinketCatalog.field_a.length, var8);
-        var9.surnameIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-98, BuyPlayerDialog.field_G[var9.archetype].length - 1, var8) + 1;
-        var10Lifetime1 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, 5, var8);
-        var11Lifetime1 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-114, 3, var8);
-        var12Lifetime1 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-41, 3, var8);
+        var9.initialIndex = ProxySocketConnector.nextBoundedInt(-67, TrinketCatalog.field_a.length, var8);
+        var9.surnameIndex = ProxySocketConnector.nextBoundedInt(-98, BuyPlayerDialog.field_G[var9.archetype].length - 1, var8) + 1;
+        var10Lifetime1 = ProxySocketConnector.nextBoundedInt(-62, 5, var8);
+        var11Lifetime1 = ProxySocketConnector.nextBoundedInt(-114, 3, var8);
+        var12Lifetime1 = ProxySocketConnector.nextBoundedInt(-41, 3, var8);
         var13Lifetime1 = var12Lifetime1;
         var13Lifetime1 = var13Lifetime1 | var11Lifetime1 << 4;
         var13Lifetime1 = var13Lifetime1 | var10Lifetime1 << 8;

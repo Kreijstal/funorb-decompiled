@@ -260,7 +260,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.field_l < 0) {
           if (this.field_r <= 0) {
             this.cancelRamp();
-            this.c((byte) -109);
+            this.unlink((byte) -109);
             return;
           }
           this.field_l = 0;
@@ -268,7 +268,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.field_l >= var7) {
           if (this.field_r >= 0) {
             this.cancelRamp();
-            this.c((byte) -109);
+            this.unlink((byte) -109);
             return;
           }
           this.field_l = var7 - 1;
@@ -395,7 +395,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_l >= var7) {
             this.field_l = var7;
             this.cancelRamp();
-            this.c((byte) -109);
+            this.unlink((byte) -109);
           }
           return;
         }
@@ -405,7 +405,7 @@ final class PcmSampleStream extends PcmStream {
         }
         this.field_l = -1;
         this.cancelRamp();
-        this.c((byte) -109);
+        this.unlink((byte) -109);
         return;
     }
 
@@ -666,7 +666,7 @@ final class PcmSampleStream extends PcmStream {
           this.field_q = 0;
           this.field_s = 0;
           this.field_v = 0;
-          this.c((byte) -109);
+          this.unlink((byte) -109);
           return true;
         }
         if (this.field_v >= var1) {
@@ -804,7 +804,7 @@ final class PcmSampleStream extends PcmStream {
         int var2Lifetime1;
         if (param0 == 0) {
           this.setInternalVolume(0);
-          this.c((byte) -109);
+          this.unlink((byte) -109);
           return;
         }
         if (this.field_s != 0) {
@@ -864,7 +864,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_k = 0;
         this.field_j = 0;
         this.field_v = 0;
-        this.c((byte) -109);
+        this.unlink((byte) -109);
     }
 
     private final static int mixForwardMonoAligned(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmSampleStream param8) {
@@ -1417,7 +1417,7 @@ final class PcmSampleStream extends PcmStream {
               this.field_q = 0;
               this.field_s = 0;
               this.field_v = 0;
-              this.c((byte) -109);
+              this.unlink((byte) -109);
               param0 = this.field_k;
             }
             this.field_k = 0;
@@ -1435,7 +1435,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.field_l < 0) {
           if (this.field_r <= 0) {
             this.cancelRamp();
-            this.c((byte) -109);
+            this.unlink((byte) -109);
             return;
           }
           this.field_l = 0;
@@ -1443,7 +1443,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.field_l >= var5) {
           if (this.field_r >= 0) {
             this.cancelRamp();
-            this.c((byte) -109);
+            this.unlink((byte) -109);
             return;
           }
           this.field_l = var5 - 1;
@@ -1556,7 +1556,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_l >= var5) {
             this.field_l = var5;
             this.cancelRamp();
-            this.c((byte) -109);
+            this.unlink((byte) -109);
           }
           return;
         }
@@ -1565,7 +1565,7 @@ final class PcmSampleStream extends PcmStream {
         }
         this.field_l = -1;
         this.cancelRamp();
-        this.c((byte) -109);
+        this.unlink((byte) -109);
     }
 
     private final static int mixReverseMonoAlignedRamp(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {

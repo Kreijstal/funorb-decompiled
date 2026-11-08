@@ -226,7 +226,7 @@ final class ModalStack extends SingleChildContainer {
                   UrlRequest.field_e = var7.field_Eb;
                 } else if (var7.field_sb != 0) {
                   var16 = var7.name;
-                  BytePlusOneCommand.a(var7, false, RotaryDialPainter.field_d.field_Cb, -1, var16, (int[]) null, 0L, (String) null, -1);
+                  BytePlusOneCommand.createPlayerContextMenu(var7, false, RotaryDialPainter.field_d.field_Cb, -1, var16, (int[]) null, 0L, (String) null, -1);
                   var5 = var7;
                   if (null != var7.field_zb &&
                     !BufferedCacheFile.isActivePrivateChatRecipient(118, TextButton.field_v.field_k) &&
@@ -372,7 +372,7 @@ final class ModalStack extends SingleChildContainer {
               return;
             }
             if (var3.finishAnimationAndCheckClosed(param0 - 4521)) {
-              var3.c((byte) -109);
+              var3.unlink((byte) -109);
             }
             var3 = (ModalPanel) (var2.next(0));
           }
@@ -529,7 +529,7 @@ final class ModalStack extends SingleChildContainer {
               return;
             }
             if (var3.advanceDialogAnimation(-1)) {
-              var3.c((byte) -109);
+              var3.unlink((byte) -109);
             }
             var3 = (ModalPanel) (var2.next(0));
           }

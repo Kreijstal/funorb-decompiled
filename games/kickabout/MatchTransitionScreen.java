@@ -43,11 +43,11 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         }
         PitchAppearanceSupport.setProjectionTarget(140.0, 60, 448.0, 672.0);
         if (MyKitScreen.field_O) {
-          KitStyleTile.j(13459);
+          KitStyleTile.updateTutorialCamera(13459);
         }
         SocialPlayerRow.resetCameraToTarget((byte) -125);
         System.gc();
-        AnimationPlayer.a((byte) 98);
+        AnimationPlayer.resetFrameTiming((byte) 98);
         DelayedServerPacket.a(-1, false, -2);
     }
 

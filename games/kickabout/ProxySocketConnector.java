@@ -10,7 +10,7 @@ final class ProxySocketConnector extends SocketConnector {
     static boolean field_e;
     static String field_h;
 
-    final static void a(int param0, int param1) {
+    final static void resendPendingSubmissions(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         BlobSubmission var4 = null;
@@ -48,7 +48,7 @@ final class ProxySocketConnector extends SocketConnector {
         field_h = null;
     }
 
-    final static int a(byte param0, int param1, Random param2) {
+    final static int nextBoundedInt(byte param0, int param1, Random param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -88,7 +88,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static void a(PlatformTaskDispatcher param0, java.awt.Frame param1, int param2) {
+    final static void exitFullscreen(PlatformTaskDispatcher param0, java.awt.Frame param1, int param2) {
         PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -137,7 +137,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final java.net.Socket a(int param0) throws IOException {
+    final java.net.Socket connect(int param0) throws IOException {
         int var9 = 0;
         int stackIn_5_0 = 0;
         java.net.ProxySelector stackIn_8_0;
@@ -313,7 +313,7 @@ final class ProxySocketConnector extends SocketConnector {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_18_0 = this.a((byte) 125, var4.getPort(), (String) (var5), var4.getHostName());
+          stackIn_18_0 = this.connectHttpTunnel((byte) 125, var4.getPort(), (String) (var5), var4.getHostName());
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -329,7 +329,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    private final java.net.Socket a(byte param0, int param1, String param2, String param3) throws IOException {
+    private final java.net.Socket connectHttpTunnel(byte param0, int param1, String param2, String param3) throws IOException {
         java.net.Socket stackIn_10_0 = null;
         Object stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
@@ -436,7 +436,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$7f8aad568c81(int param0, int param1, Random param2) {
+    final static int nextBoundedInt(int param0, int param1, Random param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

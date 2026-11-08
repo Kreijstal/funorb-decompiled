@@ -137,7 +137,7 @@ final class WeightedLruCache {
           }
           var9 = var7.getValue(-91);
           if (var9 == null) {
-            var7.c((byte) -109);
+            var7.unlink((byte) -109);
             var7.unlinkSecondary(62);
             this.field_f = this.field_f + var7.field_o;
             return null;
@@ -147,7 +147,7 @@ final class WeightedLruCache {
             this.field_e.put(var6, param1 ^ -27, var7.field_a);
             this.field_i.addLast(-8545, var6);
             ((WeightedCacheEntry) ((Object) var6)).field_l = 0L;
-            var7.c((byte) -109);
+            var7.unlink((byte) -109);
             var7.unlinkSecondary(53);
           } else {
             this.field_i.addLast(param1 ^ -8524, var7);
@@ -161,7 +161,7 @@ final class WeightedLruCache {
         }
         var8 = var7.getValue(-91);
         if (var8 == null) {
-          var7.c((byte) -109);
+          var7.unlink((byte) -109);
           var7.unlinkSecondary(62);
           this.field_f = this.field_f + var7.field_o;
           return null;
@@ -171,7 +171,7 @@ final class WeightedLruCache {
           this.field_e.put(var6Lifetime1, param1 ^ -27, var7.field_a);
           this.field_i.addLast(-8545, var6Lifetime1);
           ((WeightedCacheEntry) ((Object) var6Lifetime1)).field_l = 0L;
-          var7.c((byte) -109);
+          var7.unlink((byte) -109);
           var7.unlinkSecondary(53);
         } else {
           this.field_i.addLast(param1 ^ -8524, var7);
@@ -192,7 +192,7 @@ final class WeightedLruCache {
           if (param0 == null) {
             return;
           }
-          param0.c((byte) -109);
+          param0.unlink((byte) -109);
           param0.unlinkSecondary(-113);
           this.field_f = this.field_f + param0.field_o;
           return;

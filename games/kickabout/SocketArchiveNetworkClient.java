@@ -249,7 +249,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             }
             var5 = (PopupDialog) (ScrollPane.field_Jb.first(24009));
             while (var5 != null) {
-              var5.c((byte) -109);
+              var5.unlink((byte) -109);
               var5 = (PopupDialog) (ScrollPane.field_Jb.next(33));
             }
           }

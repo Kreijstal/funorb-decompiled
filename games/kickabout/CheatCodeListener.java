@@ -27,7 +27,7 @@ final class CheatCodeListener implements OverlayLayer {
           this.field_i[var4] = new RenderedFootballer(var6, var3, true);
           this.field_i[var4].directionMask = 1;
           this.field_i[var4].resetPose((byte) 127);
-          this.field_i[var4].field_mb.setFrame(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(85, this.field_i[var4].field_mb.frameCount(true), new Random()), 123);
+          this.field_i[var4].field_mb.setFrame(ProxySocketConnector.nextBoundedInt(85, this.field_i[var4].field_mb.frameCount(true), new Random()), 123);
         }
         if (param0 >= -10) {
           this.field_i = (RenderedFootballer[]) null;

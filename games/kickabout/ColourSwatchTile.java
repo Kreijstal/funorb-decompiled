@@ -8,7 +8,7 @@ final class ColourSwatchTile extends UiLayoutNode {
     int field_yb;
     static String field_Bb;
 
-    final static boolean a(int param0, AuctionListing param1) {
+    final static boolean isAuctionListingUnqueued(int param0, AuctionListing param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         AuctionListing var4 = null;
@@ -19,7 +19,7 @@ final class ColourSwatchTile extends UiLayoutNode {
         var3 = Kickabout.field_G;
         try {
           if (param0 != 140) {
-            ColourSwatchTile.b(108);
+            ColourSwatchTile.serviceFadingAudio(108);
           }
           var4 = (AuctionListing) (BuyPlayerDialog.field_K.first(param0 ^ 23877));
           while (var4 != null) {
@@ -51,7 +51,7 @@ final class ColourSwatchTile extends UiLayoutNode {
         return false;
     }
 
-    final void a(int param0) {
+    final void drawColorSwatch(int param0) {
         int var5 = 0;
         int var7 = 0;
         int var6 = 0;
@@ -115,7 +115,7 @@ final class ColourSwatchTile extends UiLayoutNode {
         }
     }
 
-    final static void b(int param0) {
+    final static void serviceFadingAudio(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         FadingSoundPlayer var3 = null;
@@ -131,7 +131,7 @@ final class ColourSwatchTile extends UiLayoutNode {
           if (param0 == 17702) {
             return;
           }
-          ColourSwatchTile.b(94);
+          ColourSwatchTile.serviceFadingAudio(94);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

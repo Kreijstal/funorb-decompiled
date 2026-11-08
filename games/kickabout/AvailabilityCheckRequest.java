@@ -97,7 +97,7 @@ final class AvailabilityCheckRequest {
           }
           while (var2 != null) {
             if (5 == var2.actionType) {
-              var2.c((byte) -109);
+              var2.unlink((byte) -109);
             }
             var2 = (ManagerAction) (MusicPatchNode.field_h.next(33));
           }

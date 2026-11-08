@@ -305,7 +305,7 @@ final class ScrollPane extends UiLayoutNode {
           ImageProducerRasterBuffer.c((byte) -77);
           if (ProxySocketConnector.field_e) {
             ProxySocketConnector.field_e = false;
-            ConsoleEvaluationException.a(false, 0);
+            ConsoleEvaluationException.enterConfiguredFullscreen(false, 0);
           }
         }
         WeightedLruCache.field_a = LeaguesScreen.field_A;
@@ -323,7 +323,7 @@ final class ScrollPane extends UiLayoutNode {
     }
 
     final static void a(int param0, int param1, int param2) {
-        PasswordValidator.a(0, param2, param0, true, (byte) -55);
+        PasswordValidator.drawAnimatedPlayerMarker(0, param2, param0, true, (byte) -55);
         int var3 = -114 / ((param1 - 16) / 57);
     }
 

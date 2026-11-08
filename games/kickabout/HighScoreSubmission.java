@@ -65,7 +65,7 @@ final class HighScoreSubmission extends IntrusiveNode {
             for (var8 = 0; var6 > var8; var8++) {
               var7[var8 >> 2] = var7[var8 >> 2] + (var2.readUnsignedByte((byte) -118) << (TextLayoutLine.bitwiseAnd(3, var8) << 8));
             }
-            var5.c((byte) -109);
+            var5.unlink((byte) -109);
             return;
           }
           if (var3 != 1) {
@@ -84,7 +84,7 @@ final class HighScoreSubmission extends IntrusiveNode {
             break;
           }
           if (var6_ref_hr != null) {
-            var6_ref_hr.c((byte) -109);
+            var6_ref_hr.unlink((byte) -109);
             return;
           }
           FormationView.b((byte) -116);

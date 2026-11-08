@@ -39,7 +39,7 @@ final class MySquadScreen extends TeamManagementScreen {
         ValidationIndicator.field_F = false;
         if (PlayArea.isGuestSession(100)) {
         } else {
-          if (!RegistrationRequestState.field_h.a(-4)) {
+          if (!RegistrationRequestState.field_h.hasActiveAuctionEntries(-4)) {
             ValidationIndicator.field_F = true;
           } else {
             FootballerAiOverlaySupport.field_d.writeIsaacByte(63, (byte) -86);
@@ -189,7 +189,7 @@ final class MySquadScreen extends TeamManagementScreen {
         boolean decompiledFrameRemainder0 = true;
         SoftwareRasterizer.darkenRectangle(this.field_V.field_F, this.field_V.field_T, this.field_V.field_q, this.field_V.field_mb);
         ByteArrayPool.field_d.drawText(ArchivePreloadEntry.field_b, 14 + this.field_V.field_F, 25 + this.field_V.field_T, 16777215, -1);
-        this.field_L.k((byte) -109);
+        this.field_L.drawSquadSlots((byte) -109);
         var4 = this.field_L.getSelectedSlot((byte) 21);
         var5 = IsSixCommand.field_C;
         if (var4 == null) {
@@ -345,7 +345,7 @@ final class MySquadScreen extends TeamManagementScreen {
         SquadSlotWidget var13;
         var12 = Kickabout.field_G;
         var13 = this.field_L.getSelectedSlot((byte) 21);
-        this.field_Q.c((byte) -109);
+        this.field_Q.unlink((byte) -109);
         this.field_X.field_jb = new IntrusiveDeque();
         var3 = -36 / ((param0 - 11) / 33);
         if (var13 != null) {

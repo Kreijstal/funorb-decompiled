@@ -105,7 +105,7 @@ final class SquadPickerDialog extends MessageDialog {
           this.field_H.field_J = 35 + param2 + 20;
           this.field_H.field_s = 20 + param1;
           this.field_H.draw(101, false);
-          this.field_H.k((byte) 84);
+          this.field_H.drawSquadSlots((byte) 84);
           if (-1 != this.field_H.field_Fb) {
             GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].drawCentered(param2 + 35 + 105, 23, param1 + 320);
             if (!GameLoopApplet.field_E.hasLogEntryForSlot((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
@@ -153,7 +153,7 @@ final class SquadPickerDialog extends MessageDialog {
         this.field_H.field_J = 35 + param2 + 20;
         this.field_H.field_s = 20 + param1;
         this.field_H.draw(101, false);
-        this.field_H.k((byte) 84);
+        this.field_H.drawSquadSlots((byte) 84);
         if (-1 != this.field_H.field_Fb) {
           GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].drawCentered(param2 + 35 + 105, 23, param1 + 320);
           if (!GameLoopApplet.field_E.hasLogEntryForSlot((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {

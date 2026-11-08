@@ -96,7 +96,7 @@ final class IconLabel extends UiLayoutNode {
               FormationView.b((byte) -116);
               return;
             }
-            var3_ref_k.c((byte) -109);
+            var3_ref_k.unlink((byte) -109);
             return;
           }
           if (var2 != 1) {
@@ -114,7 +114,7 @@ final class IconLabel extends UiLayoutNode {
             break;
           }
           if (var4 != null) {
-            var4.c((byte) -109);
+            var4.unlink((byte) -109);
             return;
           }
           FormationView.b((byte) -116);

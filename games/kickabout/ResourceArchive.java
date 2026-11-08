@@ -773,7 +773,7 @@ final class ResourceArchive {
             stackIn_35_0 = var11_ref_RuntimeException;
             stackIn_35_1 = new StringBuilder();
             stackIn_36_2 = (param1 != null);
-            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(TextHotspotRegion.a(false, var9.length, var9)).append(" ").append(TextHotspotRegion.a(false, var9.length - 2, var9)).append(" ").append(this.field_d.field_c[param0]).append(" ").append(this.field_d.field_g).toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(TextHotspotRegion.crc32Prefix(false, var9.length, var9)).append(" ").append(TextHotspotRegion.crc32Prefix(false, var9.length - 2, var9)).append(" ").append(this.field_d.field_c[param0]).append(" ").append(this.field_d.field_g).toString());
           }
           if (this.field_b) {
             this.field_e[param0] = null;

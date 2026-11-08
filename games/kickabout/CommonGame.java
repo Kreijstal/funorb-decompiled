@@ -647,7 +647,7 @@ final class CommonGame {
                         this.kickBall(var5_intLifetime1, var4_ref_nlLifetime1.field_O, var4_ref_nlLifetime1.stats.usesHotshotAbilities(var4_ref_nlLifetime1.member, (byte) -62), var4_ref_nlLifetime1.field_x, (byte) -66, var4_ref_nlLifetime1.field_P);
                         this.field_V.inheritControlSource((MatchAgent) (var4_ref_nlLifetime1), (byte) 84);
                         var6_ref_nl = this.field_P[-var2_int + 1][0];
-                        this.field_N.a(this, 32, this.phaseTime, var2_int, var4_ref_nlLifetime1, var5_intLifetime1, var6_ref_nl, this.field_V.field_o, var3Lifetime1);
+                        this.field_N.captureKickGoal(this, 32, this.phaseTime, var2_int, var4_ref_nlLifetime1, var5_intLifetime1, var6_ref_nl, this.field_V.field_o, var3Lifetime1);
                         var7Lifetime1 = this.findControllingParticipant((byte) 6, var2_int, var3Lifetime1);
                         if (var7Lifetime1 != -1) {
                           if (!var4_ref_nlLifetime1.field_O) {
@@ -825,7 +825,7 @@ final class CommonGame {
                         var6Lifetime1 = this.field_V.pixelY(879306160) - var4_ref_nlLifetime2.pixelY(true);
                         var7Lifetime2 = var6Lifetime1 * var6Lifetime1 + var5_intLifetime2Lifetime1 * var5_intLifetime2Lifetime1;
                         if (var7Lifetime2 < 784) {
-                          var8_intLifetime1 = PlayerContextMenu.b(var6Lifetime1, var5_intLifetime2Lifetime1, (byte) 2);
+                          var8_intLifetime1 = PlayerContextMenu.angleFromVector(var6Lifetime1, var5_intLifetime2Lifetime1, (byte) 2);
                           var9Lifetime2 = 511 & 693 * var4_ref_nlLifetime2.pixelX(-99);
                           if (256 > var9Lifetime2) {
                             var9Lifetime2 -= 512;
@@ -948,7 +948,7 @@ final class CommonGame {
                               } else {
                                 stackIn_356_6 = 3;
                               }
-                              ((LoggedGoal) (Object) stackIn_355_0).a((byte) stackIn_355_1, stackIn_355_2, stackIn_355_3, stackIn_355_4, stackIn_355_5, stackIn_356_6, var3Lifetime2Lifetime1, this, var5);
+                              ((LoggedGoal) (Object) stackIn_355_0).captureGoalFromAction((byte) stackIn_355_1, stackIn_355_2, stackIn_355_3, stackIn_355_4, stackIn_355_5, stackIn_356_6, var3Lifetime2Lifetime1, this, var5);
                               if (var5.controllingParticipant == -1) {
                                 break;
                               }
@@ -1889,7 +1889,7 @@ final class CommonGame {
             if (this.field_l) {
               return;
             }
-            var8 = PlayerContextMenu.b(var7, var6, (byte) 2);
+            var8 = PlayerContextMenu.angleFromVector(var7, var6, (byte) 2);
             var5.startTackle(var8, param0 - 61);
             if (-1 == this.field_V.possessorTeam) {
               this.adjustTackleForLooseBall(var5, (byte) 115);
@@ -1905,7 +1905,7 @@ final class CommonGame {
           var5.field_x = var6;
           var5.field_z = param1.value;
           var8Lifetime1 = var5.directionMask(5339);
-          var9 = PlayerContextMenu.a(true, var7, var6);
+          var9 = PlayerContextMenu.directionMaskFromVector(true, var7, var6);
           stackIn_41_0 = (SquadPickerDialog.b(170, var8Lifetime1 ^ var9) <= 1) ? 0 : 1;
           var10 = stackIn_41_0;
           var5.field_h = var9;

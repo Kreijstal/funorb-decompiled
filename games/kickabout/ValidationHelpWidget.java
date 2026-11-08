@@ -119,7 +119,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
     }
 
     ValidationHelpWidget(ValidationSource param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, NameSuggestionsPanel.h((byte) 66));
+        super(param1, NameSuggestionsPanel.getDefaultTextPainter((byte) 66));
         try {
           this.field_R = param0;
           this.field_O = param1;

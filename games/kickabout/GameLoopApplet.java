@@ -101,7 +101,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
               if (NetworkGameClient.field_t.pollReady(-27598)) {
                 MouseWheelInput.field_b = true;
                 this.applyPendingNavigation(55);
-                KitStyleTile.c(false);
+                KitStyleTile.finishSharedUiTransitions(false);
               }
             } else {
               this.dispatchInputEvents(18861);
@@ -176,7 +176,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                     ProxySocketConnector.field_e = true;
                   }
                 } else {
-                  ConsoleEvaluationException.a(true, 0);
+                  ConsoleEvaluationException.enterConfiguredFullscreen(true, 0);
                 }
               } else {
                 UiWidget.leaveFullscreen(0);

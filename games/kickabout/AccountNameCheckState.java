@@ -11,20 +11,20 @@ final class AccountNameCheckState {
     final static void advanceLoadingStep(int param0, int param1) {
         if (param1 > PlayerArchetypeSortCriterion.field_r) {
           PlayerArchetypeSortCriterion.field_r = param1;
-          NineSlicePanelPainter.field_c = MarkerSliderWidget.field_I[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(115, MarkerSliderWidget.field_I.length, MidiPcmStream.field_l)];
+          NineSlicePanelPainter.field_c = MarkerSliderWidget.field_I[ProxySocketConnector.nextBoundedInt(115, MarkerSliderWidget.field_I.length, MidiPcmStream.field_l)];
           DelayedServerPacket.a(1, param0 + 9863, param0);
           return;
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int firstQuadrantAngle(int param0, int param1, int param2) {
         if (param1 != 11277) {
           return -52;
         }
         if (param2 < param0) {
-          return 2048 - LeagueWinnerDialog.b((param2 << 16) / param0, 15832);
+          return 2048 - LeagueWinnerDialog.atanFixedPoint((param2 << 16) / param0, 15832);
         }
-        return LeagueWinnerDialog.b((param0 << 16) / param2, param1 ^ 4565);
+        return LeagueWinnerDialog.atanFixedPoint((param0 << 16) / param2, param1 ^ 4565);
     }
 
     public static void releaseStatics(int param0) {

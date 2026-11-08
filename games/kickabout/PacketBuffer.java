@@ -696,7 +696,7 @@ class PacketBuffer extends IntrusiveNode {
         RuntimeException var2_ref = null;
         var4 = Kickabout.field_G;
         try {
-          param1.c((byte) -109);
+          param1.unlink((byte) -109);
           var3 = -54 / ((param0 + 29) / 55);
           var2 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.first(24009));
           while (var2 != null) {

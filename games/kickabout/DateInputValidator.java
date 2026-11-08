@@ -126,9 +126,9 @@ final class DateInputValidator extends DebouncedValidationProvider implements Te
     public final boolean isInputEmpty(byte param0) {
         if (param0 != -28) {
           this.isInputEmpty((byte) 110);
-          return this.dateInput.b(true);
+          return this.dateInput.hasMissingDateParts(true);
         }
-        return this.dateInput.b(true);
+        return this.dateInput.hasMissingDateParts(true);
     }
 
     public final void onTextChanged(byte param0, TextInputWidget param1) {

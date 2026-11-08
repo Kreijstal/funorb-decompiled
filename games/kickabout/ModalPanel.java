@@ -102,7 +102,7 @@ abstract class ModalPanel extends WidgetContainer {
           var2 = (ManagerAction) (MusicPatchNode.field_h.first(24009));
           while (var2 != null) {
             if (var2.actionType == 4) {
-              var2.c((byte) -109);
+              var2.unlink((byte) -109);
             }
             var2 = (ManagerAction) (MusicPatchNode.field_h.next(33));
           }

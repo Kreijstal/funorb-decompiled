@@ -65,7 +65,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void removeListener(PcmMixerListener param0) {
-        param0.c((byte) -109);
+        param0.unlink((byte) -109);
         param0.onRemoved();
         IntrusiveNode var2 = this.field_i.field_c.field_d;
         if (var2 == this.field_i.field_c) {
@@ -76,7 +76,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final synchronized void removeSubstream(PcmStream param0) {
-        param0.c((byte) -109);
+        param0.unlink((byte) -109);
     }
 
     private final void insertListenerByFrameOffset(IntrusiveNode param0, PcmMixerListener param1) {

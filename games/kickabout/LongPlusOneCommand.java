@@ -14,7 +14,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
           return;
         }
         CommonGame var2 = (CommonGame) null;
-        LongPlusOneCommand.a((CommonGame) null, 1, -15);
+        LongPlusOneCommand.drawGoalkeeperDiagnostics((CommonGame) null, 1, -15);
         field_D = null;
     }
 
@@ -62,7 +62,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(CommonGame param0, int param1, int param2) {
+    final static void drawGoalkeeperDiagnostics(CommonGame param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         FootballerAgent var7 = null;

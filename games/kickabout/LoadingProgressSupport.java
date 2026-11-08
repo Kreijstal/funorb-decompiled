@@ -39,7 +39,7 @@ final class LoadingProgressSupport {
           var2.readInt(4);
           var2.readInt(4);
           var2.readInt(4);
-          var1.c((byte) -109);
+          var1.unlink((byte) -109);
           return;
         }
         var1Lifetime1 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.first(24009));
@@ -52,7 +52,7 @@ final class LoadingProgressSupport {
         var2Lifetime1.readInt(4);
         var2Lifetime1.readInt(4);
         var2Lifetime1.readInt(4);
-        var1Lifetime1.c((byte) -109);
+        var1Lifetime1.unlink((byte) -109);
     }
 
     final static void enqueueMessageDialog(int param0, int param1, PopupCard param2) {

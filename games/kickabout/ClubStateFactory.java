@@ -151,8 +151,8 @@ final class ClubStateFactory {
           if (param0) {
             var5.archetype = 0;
           }
-          var5.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-126, TrinketCatalog.field_a.length, var3);
-          var5.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, -1 + BuyPlayerDialog.field_G[var5.archetype].length, var3);
+          var5.initialIndex = ProxySocketConnector.nextBoundedInt(-126, TrinketCatalog.field_a.length, var3);
+          var5.surnameIndex = 1 + ProxySocketConnector.nextBoundedInt(-62, -1 + BuyPlayerDialog.field_G[var5.archetype].length, var3);
           var5.experience = 0;
           if (param0 &&
             var4 != 3) {
@@ -165,9 +165,9 @@ final class ClubStateFactory {
             var5.power = 50;
           }
           var5.trinketIds = new int[]{};
-          var6 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-48, 5, var3);
-          var7 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-40, 3, var3);
-          var8 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(107, 3, var3);
+          var6 = ProxySocketConnector.nextBoundedInt(-48, 5, var3);
+          var7 = ProxySocketConnector.nextBoundedInt(-40, 3, var3);
+          var8 = ProxySocketConnector.nextBoundedInt(107, 3, var3);
           var9 = var8;
           var9 = var9 | var7 << 4;
           var9 = var9 | var6 << 8;

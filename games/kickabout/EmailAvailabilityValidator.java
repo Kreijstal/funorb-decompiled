@@ -77,7 +77,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_m)) {
-            var3 = BlackFadeScreen.a(false, param0);
+            var3 = BlackFadeScreen.getEmailAvailabilityRequest(false, param0);
             if (!var3.isComplete((byte) -80)) {
               stackIn_8_0 = PlayerSurnameSortCriterion.field_p;
               return stackIn_8_0;

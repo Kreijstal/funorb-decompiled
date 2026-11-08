@@ -171,12 +171,12 @@ final class PlayerPortraitCacheEntry {
           ClubStateFactory.field_f = LinkTextPainter.field_d;
           if (param3 == 255) {
             stackIn_12_0 = !(SocialUiState.field_b >= 13);
-            ArchiveIndex.field_a = SquadGridWidget.a(stackIn_12_0, 124);
+            ArchiveIndex.field_a = SquadGridWidget.createTermsResponse(stackIn_12_0, 124);
             return;
           }
           if (param3 >= 100 &&
             105 >= param3) {
-            ArchiveIndex.field_a = ArrayWidgetContainer.a(-111, param1);
+            ArchiveIndex.field_a = ArrayWidgetContainer.createNameSuggestionResponse(-111, param1);
             return;
           }
           ArchiveIndex.field_a = TeamSelectionView.a(-126, param0, param3);

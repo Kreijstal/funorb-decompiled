@@ -79,10 +79,10 @@ abstract class NetworkGameClient extends GameAppletShell {
             PromotionDialog.a(5, (byte) -122);
           }
           if (LookupRecordUpdate.field_h[5]) {
-            ProxySocketConnector.a(-1, 6);
+            ProxySocketConnector.resendPendingSubmissions(-1, 6);
           }
           if (LookupRecordUpdate.field_h[6]) {
-            SquadGridWidget.a(7, (byte) -128);
+            SquadGridWidget.resendRankingsRequests(7, (byte) -128);
           }
           if (LookupRecordUpdate.field_h[8]) {
             ResourceArchive.initializeReflectionCheckQueue(-1);
@@ -121,7 +121,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         this.setBackground(java.awt.Color.black);
         ArchiveRequest.field_r = this.field_p;
         TextFieldNode.b(ArchiveRequest.field_r, 31900);
-        PlayerContextMenu.a(127, this.field_x, this.field_A, this.field_s, this.field_B, param7, param1, 5000, PlatformTaskState.field_c, ArchiveRequest.field_r, this.field_v, this.field_u, 5000, this.field_z);
+        PlayerContextMenu.initializeClientConnectionState(127, this.field_x, this.field_A, this.field_s, this.field_B, param7, param1, 5000, PlatformTaskState.field_c, ArchiveRequest.field_r, this.field_v, this.field_u, 5000, this.field_z);
         AppScreen.setServerConnectionParameters(this.field_z, param1, PlatformTaskState.field_c, ArchiveRequest.field_r, this.field_u, this.field_x, this.field_B, this.field_s, false);
         CipherPacketBuffer.initializeExtendedKeyMappings(255);
         SoundStreamHandle.field_f = TutorialChoiceDialog.createMouseWheelInput((byte) 3);
@@ -135,7 +135,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         ModalPanel.field_E = param2;
         AuctionsScreen.field_Q = param6;
         this.initializeAccountPacketLengths(0);
-        TournamentLobbyScreen.d(-1);
+        TournamentLobbyScreen.initializeTournamentStatics(-1);
     }
 
     final void enableBaseResponses(boolean param0, int param1) {
@@ -469,7 +469,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (DateInputValidator.field_d == 1) {
           if (ArchiveRequest.field_r != 0) {
-            LoginRequiredDialog.field_H = ImageProducerRasterBuffer.a((byte) -128, ModalPanel.field_E);
+            LoginRequiredDialog.field_H = ImageProducerRasterBuffer.createResourceArchive((byte) -128, ModalPanel.field_E);
           }
           SceneSpriteFactory.field_b = ContextMenu.a(false, SellPlayerDialog.field_G, 1, true, 118);
           SelectionMarkerSupport.field_c = ContextMenu.a(false, ClubState.field_y, 1, true, param0 ^ 125);
@@ -485,7 +485,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (LoginRequiredDialog.field_H.ensurePackedGroupByName(false, "")) {
                 AuctionListing.a(true, LoginRequiredDialog.field_H);
                 LoginRequiredDialog.field_H = null;
-                AnimationPlayer.a((byte) 51);
+                AnimationPlayer.resetFrameTiming((byte) 51);
               }
             } else {
               LoginRequiredDialog.field_H = null;
@@ -497,7 +497,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (DateInputValidator.field_d == 3 &&
           AppletContextSupport.a(SceneSpriteFactory.field_b, true, SelectionMarkerSupport.field_c, PlayerStats.field_k) &&
-          LoggedGoal.a(-2, PlayerStats.field_k)) {
+          LoggedGoal.ensureArchiveAvailable(-2, PlayerStats.field_k)) {
           IntValueNode.a(115);
           CachedArchiveSource.releaseStatics(param0 + 1);
           PitchCoordinateSupport.field_b = CheckboxLabelWidget.field_yb;
@@ -517,17 +517,17 @@ abstract class NetworkGameClient extends GameAppletShell {
             ButtonMenuScreen.field_y = FaceNormal.getSoundMixer(55);
             DemoIntegersCommand.field_D = TutorialCaptionSupport.a((byte) -88);
           }
-          KitStyleTile.a(DemoIntegersCommand.field_D, PlayerStats.field_k, param0 + 98, ButtonMenuScreen.field_y);
+          KitStyleTile.initializeLogoSequence(DemoIntegersCommand.field_D, PlayerStats.field_k, param0 + 98, ButtonMenuScreen.field_y);
           SceneSpriteFactory.field_b = null;
           SelectionMarkerSupport.field_c = null;
           PlayerStats.field_k = null;
           PasswordValidator.a((byte) -127, (java.applet.Applet) (this));
-          AnimationPlayer.a((byte) 120);
+          AnimationPlayer.resetFrameTiming((byte) 120);
           DateInputValidator.field_d = 10;
         }
         if (DateInputValidator.field_d == 10) {
           if (0 != ArchiveRequest.field_r) {
-            Trinket.field_b = ImageProducerRasterBuffer.a((byte) -125, AuctionsScreen.field_Q);
+            Trinket.field_b = ImageProducerRasterBuffer.createResourceArchive((byte) -125, AuctionsScreen.field_Q);
           }
           DateInputValidator.field_d = 11;
         }
@@ -1210,7 +1210,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (1 == var4) {
             var5_int = QuickChatKeysHelpPanel.a(RotaryDialWidget.j(61), (byte) -98, PlayingView.createAccountNameStatus(-1));
             if (-1 != var5_int) {
-              LeagueWinnerDialog.a(ValidatedTextWidget.field_X, var5_int, ListingRowCache.field_b, -1);
+              LeagueWinnerDialog.completeRegistrationResponse(ValidatedTextWidget.field_X, var5_int, ListingRowCache.field_b, -1);
               ListingRowCache.field_b = null;
               ValidatedTextWidget.field_X = null;
             }
@@ -1417,7 +1417,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var4 = MusicVolumeSupport.field_b - 1;
         byte[] var5 = new byte[var4];
         ByteArrayPool.field_e.readIsaacBytes((byte) -30, 0, var5, var4);
-        AccountNameAvailabilityValidator.openExternalUrl(0, BlackFadeScreen.a(var5, true), var3 != 0, AppletContextSupport.getActiveApplet(55));
+        AccountNameAvailabilityValidator.openExternalUrl(0, BlackFadeScreen.decodeCp1252Bytes(var5, true), var3 != 0, AppletContextSupport.getActiveApplet(55));
         int var6 = 115 % ((-74 - param0) / 48);
     }
 

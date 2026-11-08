@@ -271,7 +271,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_g = TextHotspotRegion.a(false, param0.length, param0);
+          this.field_g = TextHotspotRegion.crc32Prefix(false, param0.length, param0);
           if (this.field_g != param1) {
             throw new RuntimeException();
           }

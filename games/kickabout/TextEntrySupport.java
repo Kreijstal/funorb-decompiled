@@ -86,7 +86,7 @@ final class TextEntrySupport {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 10) {
-            stackIn_4_0 = BlackFadeScreen.a(param1, true, (byte) -103, 10);
+            stackIn_4_0 = BlackFadeScreen.parseIntegerInRadix(param1, true, (byte) -103, 10);
             return stackIn_4_0;
           }
           stackIn_2_0 = -120;

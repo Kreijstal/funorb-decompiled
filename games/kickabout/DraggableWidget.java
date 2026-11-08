@@ -306,7 +306,7 @@ final class DraggableWidget extends SingleChildContainer {
           return;
         }
         LeaguesHelpScreen.field_E.updateInput(0, param2);
-        int var4 = ClassNameSupport.field_g.h(-113) ? 1 : 0;
+        int var4 = ClassNameSupport.field_g.hasActivatedItem(-113) ? 1 : 0;
         if (WidgetContainer.field_A != 0 &&
           var4 == 0) {
           param2 = false;

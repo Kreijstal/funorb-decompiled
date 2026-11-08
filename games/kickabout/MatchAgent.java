@@ -297,7 +297,7 @@ abstract class MatchAgent {
               }
             }
             param0.appendCrc32(var4, false);
-            var17.c((byte) -109);
+            var17.unlink((byte) -109);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

@@ -163,7 +163,7 @@ final class ListingRowCache {
               }
             }
             if (-var6.field_f + var4 >= var7) {
-              var6.c((byte) -109);
+              var6.unlink((byte) -109);
               GoalSpriteLoader.field_f[var5] = GoalSpriteLoader.field_f[var5] - 1;
             }
             var6 = (CachedListingRow) (AuctionListingDialog.field_L[var5].next(-1));

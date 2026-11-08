@@ -273,7 +273,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
             if (!GameLoopApplet.field_E.field_J[0]) {
               SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 40);
             } else {
-              if (!GameLoopApplet.field_E.d((byte) 116)) {
+              if (!GameLoopApplet.field_E.hasFourAvailablePlayers((byte) 116)) {
                 SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 5);
               } else {
                 FootballerAiOverlaySupport.field_d.writeIsaacByte(90, (byte) 93);
@@ -297,7 +297,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
           if (!GameLoopApplet.field_E.field_J[0]) {
             SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 40);
           } else {
-            if (!GameLoopApplet.field_E.d((byte) 116)) {
+            if (!GameLoopApplet.field_E.hasFourAvailablePlayers((byte) 116)) {
               SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 5);
             } else {
               FootballerAiOverlaySupport.field_d.writeIsaacByte(90, (byte) 93);

@@ -664,7 +664,7 @@ final class MidiPcmStream extends PcmStream {
             if (0 > var3.field_s) {
               this.field_O[var3.field_q][var3.field_e] = null;
             }
-            var3.c((byte) -109);
+            var3.unlink((byte) -109);
           }
           var3 = (MusicPatchNode) (this.field_m.field_j.next(33));
         }
@@ -724,7 +724,7 @@ final class MidiPcmStream extends PcmStream {
           if (param3.field_s >= 0 && (param3.field_F == null ||
             param3.field_F.isSamplePositionOutOfRange())) {
             param3.clearReferences(true);
-            param3.c((byte) -109);
+            param3.unlink((byte) -109);
             if (0 < param3.field_E) {
               if (this.field_Q[param3.field_q][param3.field_E] != param3) {
                 return true;
@@ -829,7 +829,7 @@ final class MidiPcmStream extends PcmStream {
           }
           param3.clearReferences(true);
           if (0 <= param3.field_s) {
-            param3.c((byte) -109);
+            param3.unlink((byte) -109);
             if (param3.field_E > 0 &&
               param3 == this.field_Q[param3.field_q][param3.field_E]) {
               this.field_Q[param3.field_q][param3.field_E] = null;
@@ -1309,7 +1309,7 @@ final class MidiPcmStream extends PcmStream {
             return false;
           }
           if (param1.field_s >= 0) {
-            param1.c((byte) -109);
+            param1.unlink((byte) -109);
             if (param1.field_E > 0 &&
               this.field_Q[param1.field_q][param1.field_E] == param1) {
               this.field_Q[param1.field_q][param1.field_E] = null;

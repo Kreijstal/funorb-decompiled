@@ -10,7 +10,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
     static int[] field_E;
     static boolean field_C;
 
-    final static void a(UiLayoutNode param0, boolean param1, ScrollPane param2, int param3, String param4, int[] param5, long param6, String param7, int param8) {
+    final static void createPlayerContextMenu(UiLayoutNode param0, boolean param1, ScrollPane param2, int param3, String param4, int[] param5, long param6, String param7, int param8) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -302,7 +302,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -339,7 +339,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         }
     }
 
-    final static void g(int param0) {
+    final static void setTutorialStage(int param0) {
         try {
           MyKitScreen.field_O = false;
           HuffmanCodec.field_e = param0;

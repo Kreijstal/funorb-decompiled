@@ -573,7 +573,7 @@ final class DebugConsole extends ConsolePanel {
         String var12 = null;
         PlayerContextMenu var13 = null;
         try {
-          BytePlusOneCommand.a(param1, false, ShopPlayerSlot.field_Jb, -1, (String) null, (int[]) null, 0L, (String) null, param1.getGameId((byte) 77));
+          BytePlusOneCommand.createPlayerContextMenu(param1, false, ShopPlayerSlot.field_Jb, -1, (String) null, (int[]) null, 0L, (String) null, param1.getGameId((byte) 77));
           if (param1.field_Cb && (param1.field_Mb == 2 ||
             !(2 > ScrollContainer.field_Ib))) {
             var7 = TextButton.field_v;

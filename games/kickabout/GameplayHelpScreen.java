@@ -392,7 +392,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           RasterGammaSupport.field_b[var2] = new RenderedFootballer(AuctionItem.a(11, 16, 0, var3_int, 0, 0, 31, false, false, false), var3_int, true);
           RasterGammaSupport.field_b[var2].archetype = var3_int;
           RasterGammaSupport.field_b[var2].resetPose((byte) 127);
-          RasterGammaSupport.field_b[var2].field_mb.setFrame(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, RasterGammaSupport.field_b[var2].field_mb.frameCount(true), new Random()), -61);
+          RasterGammaSupport.field_b[var2].field_mb.setFrame(ProxySocketConnector.nextBoundedInt(79, RasterGammaSupport.field_b[var2].field_mb.frameCount(true), new Random()), -61);
         }
         CalendarSupport.field_a = new RenderedFootballer[2];
         PlayerStats var6 = new PlayerStats();

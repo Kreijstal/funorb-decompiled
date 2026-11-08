@@ -149,7 +149,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
     }
 
     private final void refreshSellButton(boolean param0) {
-        this.field_U.c((byte) -109);
+        this.field_U.unlink((byte) -109);
         SquadSlotWidget var2 = this.field_T.getSelectedSlot((byte) 21);
         if (var2 != null &&
           !var2.field_Gb) {
@@ -283,7 +283,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         super.drawScreen(param0, param1);
         SoftwareRasterizer.fillRectangleAlpha(this.field_Q.field_F, this.field_Q.field_T, this.field_Q.field_q, this.field_Q.field_mb, 65793, 96);
         ByteArrayPool.field_d.drawText(ArchivePreloadEntry.field_b, 14 + this.field_Q.field_F, this.field_Q.field_T + 25, 16777215, -1);
-        this.field_T.k((byte) 55);
+        this.field_T.drawSquadSlots((byte) 55);
         SoftwareRasterizer.fillRectangleAlpha(this.field_G.field_F, this.field_G.field_T, this.field_G.field_q, this.field_G.field_mb, 65793, 96);
         ByteArrayPool.field_d.drawText(MusicPatchNode.field_i, 14 + this.field_G.field_F, 21 + this.field_G.field_T, 16777215, -1);
         RenderedFootballer.drawPlayerSaleSummary(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.getSelectedSlot((byte) 21));

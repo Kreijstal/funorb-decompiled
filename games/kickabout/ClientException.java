@@ -27,7 +27,7 @@ final class ClientException extends RuntimeException {
         field_a = null;
     }
 
-    final static Sprite[] a(Sprite[] param0, byte param1) {
+    final static Sprite[] resetSpriteCanvasBounds(Sprite[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Sprite var3_ref_ut = null;
@@ -64,14 +64,14 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setMenuAnchor(int param0, int param1, int param2) {
         if (param1 == 0) {
           SocketArchiveNetworkClient.field_s = param0;
           TeamManagementScreen.field_A = param2;
           return;
         }
         Sprite[] var4 = (Sprite[]) null;
-        ClientException.a((Sprite[]) null, (byte) 5);
+        ClientException.resetSpriteCanvasBounds((Sprite[]) null, (byte) 5);
         SocketArchiveNetworkClient.field_s = param0;
         TeamManagementScreen.field_A = param2;
     }

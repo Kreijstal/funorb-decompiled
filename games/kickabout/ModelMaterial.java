@@ -96,13 +96,13 @@ final class ModelMaterial {
             }
             var13.resultValues = var4;
             var13.complete = true;
-            var13.c((byte) -109);
+            var13.unlink((byte) -109);
             return;
           }
           if (var3 == 1) {
             var14 = (AchievementSubmission) (ClassDescriptorSupport.field_a.first(24009));
             if (var14 != null) {
-              var14.c((byte) -109);
+              var14.unlink((byte) -109);
               return;
             }
             FormationView.b((byte) -116);
@@ -120,7 +120,7 @@ final class ModelMaterial {
           }
           var16_ref.resultValues = CachedTextLayout.createEightIntBuffer(-23091);
           var16_ref.complete = true;
-          var16_ref.c((byte) -109);
+          var16_ref.unlink((byte) -109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

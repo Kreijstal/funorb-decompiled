@@ -112,10 +112,10 @@ final class ClientUiOverlay implements OverlayLayer {
         int var17 = 0;
         var17 = Kickabout.field_G;
         try {
-          var13 = NameSuggestionsPanel.a(param2, GameModesHelpScreen.field_F, true);
-          var14 = NameSuggestionsPanel.a(param2, IntrusiveDeque.field_g, true);
-          var15 = NameSuggestionsPanel.a(param2, RenderedFootballer.field_fb, true);
-          var16 = NameSuggestionsPanel.a(param2, RandomAccessCacheFile.field_i, true);
+          var13 = NameSuggestionsPanel.colorBoxMoment(param2, GameModesHelpScreen.field_F, true);
+          var14 = NameSuggestionsPanel.colorBoxMoment(param2, IntrusiveDeque.field_g, true);
+          var15 = NameSuggestionsPanel.colorBoxMoment(param2, RenderedFootballer.field_fb, true);
+          var16 = NameSuggestionsPanel.colorBoxMoment(param2, RandomAccessCacheFile.field_i, true);
           var7 = ServerMessageScreen.a(2, param2.field_l, (byte) -99, var15, param2, var13, var16, param2.field_c + 1, var14);
           var4 = ReceivedAuctionItemRow.field_Mb;
           var9 = ServerMessageScreen.a(1, param2.field_d, (byte) -99, var15, param2, var13, var16, 1 + param2.field_i, var14);
@@ -298,7 +298,7 @@ final class ClientUiOverlay implements OverlayLayer {
           LobbyGameRecord.a(-121);
           if (null != PlayerContextMenu.field_i) {
             if (ShopPlayerSlot.a(PlayerContextMenu.field_i.field_Eb, -3, PlayerContextMenu.field_i.field_bc, PlayerContextMenu.field_i.field_gc)) {
-              stackIn_19_0 = (GameLoopApplet.field_E.d((byte) 46)) ? 1 : 0;
+              stackIn_19_0 = (GameLoopApplet.field_E.hasFourAvailablePlayers((byte) 46)) ? 1 : 0;
             } else {
               stackIn_19_0 = 0;
             }
@@ -356,7 +356,7 @@ final class ClientUiOverlay implements OverlayLayer {
             if (null != SplashScreen.field_m) {
               UiWidget.leaveFullscreen(0);
             } else {
-              ConsoleEvaluationException.a(true, param0 - 11516);
+              ConsoleEvaluationException.enterConfiguredFullscreen(true, param0 - 11516);
             }
             return true;
           }

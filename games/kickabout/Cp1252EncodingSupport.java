@@ -38,7 +38,7 @@ final class Cp1252EncodingSupport {
           if (param0 >= -8) {
             Cp1252EncodingSupport.releaseStatics(-88);
           }
-          var5 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-34, 16777200, param2) + 1;
+          var5 = ProxySocketConnector.nextBoundedInt(-34, 16777200, param2) + 1;
           var5 = 8355711 & var5 >> 1;
           var6 = ClubStateFactory.a(var5, 63);
           for (var7 = 0; var7 < var15.length; var7++) {

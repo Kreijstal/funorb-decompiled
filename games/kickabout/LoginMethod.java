@@ -21,7 +21,7 @@ final class LoginMethod {
         try {
           if (param1 > -49) {
             var4 = (CharSequence) null;
-            LoginMethod.a(56, true, true, (CharSequence) null);
+            LoginMethod.isIntegerInRadix(56, true, true, (CharSequence) null);
           }
           stackIn_3_0 = this.field_a.equals(param0);
           return stackIn_3_0;
@@ -43,7 +43,7 @@ final class LoginMethod {
         throw new IllegalStateException();
     }
 
-    final static boolean a(int param0, boolean param1, boolean param2, CharSequence param3) {
+    final static boolean isIntegerInRadix(int param0, boolean param1, boolean param2, CharSequence param3) {
         int var8 = 0;
         int stackIn_42_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -173,7 +173,7 @@ final class LoginMethod {
         }
     }
 
-    final static Sprite a(int param0, int param1, boolean param2, int param3) {
+    final static Sprite createRingSprite(int param0, int param1, boolean param2, int param3) {
         int var4 = (param1 << 1) + 1;
         Sprite var5 = new Sprite(var4, var4);
         PacketBuffer.a(56, var5);
@@ -195,7 +195,7 @@ final class LoginMethod {
     final static boolean a(boolean param0) {
         boolean stackIn_6_0 = false;
         if (param0) {
-          LoginMethod.a(12, -70, true, -119);
+          LoginMethod.createRingSprite(12, -70, true, -119);
         }
         stackIn_6_0 = (AuctionItem.field_e == -1) && (TournamentChampionDialog.g(0) < 10);
         return stackIn_6_0;

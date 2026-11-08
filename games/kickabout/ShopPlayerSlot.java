@@ -89,10 +89,10 @@ final class ShopPlayerSlot extends ListRow {
         if (SoftwareRasterizer.field_h >= this.field_T &&
           SoftwareRasterizer.field_e <= this.field_T + this.field_mb) {
           if (this.field_Lb) {
-            PlayerContextMenu.a(56 + this.field_F, (byte) 95, 39 + this.field_T);
+            PlayerContextMenu.drawAnimatedPlayerMarker(56 + this.field_F, (byte) 95, 39 + this.field_T);
             var3 = ConsoleTokenCursor.field_d.stringWidth(WeightedLruCache.field_b);
             ConsoleTokenCursor.field_d.drawText(WeightedLruCache.field_b, 70 + this.field_F, this.field_T + 44, 16763955, 5583616);
-            ClientPacketFlushSupport.a(31, 28 + (this.field_F + 56 + var3), this.field_T + 39, 8000);
+            ClientPacketFlushSupport.drawAnimatedPlayerMarker(31, 28 + (this.field_F + 56 + var3), this.field_T + 39, 8000);
           }
           var3Lifetime1 = this.field_F;
           var4 = TriangleMesh.getPlayerPortraitWithClubDefaults(this.field_Sb, param0 + 0, false);

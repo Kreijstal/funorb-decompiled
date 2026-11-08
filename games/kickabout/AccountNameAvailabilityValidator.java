@@ -160,7 +160,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               AppletJavaScriptBridge.evaluateScript("document.cookie=\"" + var5Lifetime6 + "\"", param0, (byte) -19);
             } catch (Throwable throwable) {
             }
-            KitStyleTile.a(param0, (byte) 99);
+            KitStyleTile.updateSessionLinks(param0, (byte) 99);
           } catch (RuntimeException runtimeException) {
             throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bv.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }
@@ -181,9 +181,9 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           return;
         }
         try {
-          BytePlusOneCommand.a(param5, false, param6, -1, param5.field_Rb, (int[]) null, param5.field_Ab, param5.field_Nb, -1);
-          TextButton.field_v.a(true, 0);
-          TextButton.field_v.a(0, -116, (int[]) null);
+          BytePlusOneCommand.createPlayerContextMenu(param5, false, param6, -1, param5.field_Rb, (int[]) null, param5.field_Ab, param5.field_Nb, -1);
+          TextButton.field_v.addGameSetupMenuItems(true, 0);
+          TextButton.field_v.addSocialMenuItems(0, -116, (int[]) null);
           TextButton.field_v.showMenu(-80);
           var12 = TextButton.field_v;
           var8 = param1;
@@ -420,14 +420,14 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           var18 = var28;
           var24 = new int[35937];
           for (var12Lifetime3 = 0; var12Lifetime3 < FullscreenFailureReason.field_d; var12Lifetime3++) {
-            SocketConnector.a(var12Lifetime3, 1, var24, var26[var12Lifetime3]);
-            var9Lifetime1 = NameSuggestionsPanel.a(var26[var12Lifetime3], RandomAccessCacheFile.field_i, true);
+            SocketConnector.labelColorBoxCells(var12Lifetime3, 1, var24, var26[var12Lifetime3]);
+            var9Lifetime1 = NameSuggestionsPanel.colorBoxMoment(var26[var12Lifetime3], RandomAccessCacheFile.field_i, true);
             if (var9Lifetime1 == 0) {
               var30[var12Lifetime3] = 0;
             } else {
-              var19 = NameSuggestionsPanel.a(var26[var12Lifetime3], GameModesHelpScreen.field_F, true) / var9Lifetime1 & 255;
-              var20 = NameSuggestionsPanel.a(var26[var12Lifetime3], IntrusiveDeque.field_g, true) / var9Lifetime1 & 255;
-              var21 = NameSuggestionsPanel.a(var26[var12Lifetime3], RenderedFootballer.field_fb, param0) / var9Lifetime1 & 255;
+              var19 = NameSuggestionsPanel.colorBoxMoment(var26[var12Lifetime3], GameModesHelpScreen.field_F, true) / var9Lifetime1 & 255;
+              var20 = NameSuggestionsPanel.colorBoxMoment(var26[var12Lifetime3], IntrusiveDeque.field_g, true) / var9Lifetime1 & 255;
+              var21 = NameSuggestionsPanel.colorBoxMoment(var26[var12Lifetime3], RenderedFootballer.field_fb, param0) / var9Lifetime1 & 255;
               var18[var12Lifetime3] = var21 + (var19 << 16) + (var20 << 8);
             }
           }

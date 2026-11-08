@@ -44,7 +44,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean hasMissingDateParts(boolean param0) {
         boolean stackIn_14_0 = false;
         if (!param0) {
           field_Q = (int[]) null;
@@ -151,7 +151,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    private final void a(UiWidget param0, String param1, int param2, byte param3, int param4) {
+    private final void drawCenteredWidgetLabel(UiWidget param0, String param1, int param2, byte param3, int param4) {
         try {
           if (param3 < 86) {
             field_R = 41;
@@ -162,7 +162,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final static IndexedSprite[] i(byte param0) {
+    final static IndexedSprite[] buildDecodedIndexedSprites(byte param0) {
         int var2 = 0;
         int var3 = Kickabout.field_G;
         IndexedSprite[] var1 = new IndexedSprite[MenuButton.field_l];
@@ -196,9 +196,9 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
         param3 = param3 + this.field_g;
         param2 = param2 + this.field_t;
-        this.a(this.field_L, LoginText.field_d, param3, (byte) 117, param2);
-        this.a(this.field_K, MatchAgent.field_d, param3, (byte) 96, param2);
-        this.a(this.field_P, TrinketTile.field_Ab, param3, (byte) 108, param2);
+        this.drawCenteredWidgetLabel(this.field_L, LoginText.field_d, param3, (byte) 117, param2);
+        this.drawCenteredWidgetLabel(this.field_K, MatchAgent.field_d, param3, (byte) 96, param2);
+        this.drawCenteredWidgetLabel(this.field_P, TrinketTile.field_Ab, param3, (byte) 108, param2);
     }
 
     public static void releaseStatics(int param0) {

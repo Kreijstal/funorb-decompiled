@@ -13,10 +13,10 @@ final class ClientPacketFlushSupport {
     static boolean field_g;
     static int field_c;
 
-    final static void a(int param0, int param1, int param2, int param3) {
-        PasswordValidator.a(0, param1, param2, false, (byte) -55);
+    final static void drawAnimatedPlayerMarker(int param0, int param1, int param2, int param3) {
+        PasswordValidator.drawAnimatedPlayerMarker(0, param1, param2, false, (byte) -55);
         if (param0 != 31) {
-          ClientPacketFlushSupport.a(28, -64, 64, 35);
+          ClientPacketFlushSupport.drawAnimatedPlayerMarker(28, -64, 64, 35);
         }
     }
 

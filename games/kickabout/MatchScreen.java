@@ -621,7 +621,7 @@ final class MatchScreen extends AppScreen {
           var3 = stackIn_24_0;
           MatchHudRoutingSupport.drawMatchHud((byte) 96, var3 != 0, this.field_z);
         }
-        SquadGridWidget.b(-109);
+        SquadGridWidget.drawFadingChatMessages(-109);
     }
 
     private final void createPhaseController(int param0) {

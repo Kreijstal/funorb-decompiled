@@ -18,7 +18,7 @@ final class IntrusiveDeque {
           return (IntrusiveNode) null;
         }
         if (this.field_c != var2) {
-          var2.c((byte) -109);
+          var2.unlink((byte) -109);
           return var2;
         }
         return null;
@@ -33,7 +33,7 @@ final class IntrusiveDeque {
           while (true) {
             var4 = this.field_c.field_d;
             if (this.field_c != var4) {
-              var4.c((byte) -109);
+              var4.unlink((byte) -109);
               continue;
             }
             break;
@@ -45,7 +45,7 @@ final class IntrusiveDeque {
         while (true) {
           var5 = this.field_c.field_d;
           if (this.field_c != var5) {
-            var5.c((byte) -109);
+            var5.unlink((byte) -109);
             continue;
           }
           break;
@@ -150,7 +150,7 @@ final class IntrusiveDeque {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = -var3 + ((var3 << 5) + SquadGridWidget.a(param1.charAt(var4), (byte) -104));
+            var3 = -var3 + ((var3 << 5) + SquadGridWidget.encodeCp1252Char(param1.charAt(var4), (byte) -104));
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;
@@ -245,7 +245,7 @@ final class IntrusiveDeque {
     final void addLast(IntrusiveNode param0, int param1) {
         try {
           if (null != param0.field_b) {
-            param0.c((byte) -109);
+            param0.unlink((byte) -109);
           }
           if (param1 != 3) {
             this.field_i = (IntrusiveNode) null;
@@ -267,7 +267,7 @@ final class IntrusiveDeque {
     final void addFirst(int param0, IntrusiveNode param1) {
         try {
           if (param1.field_b != null) {
-            param1.c((byte) -109);
+            param1.unlink((byte) -109);
           }
           param1.field_d = this.field_c.field_d;
           if (param0 != 0) {
@@ -375,7 +375,7 @@ final class IntrusiveDeque {
         IntrusiveNode var2 = this.field_c.field_d;
         if (var2 != this.field_c) {
           int var3 = -19 / ((param0 - 75) / 50);
-          var2.c((byte) -109);
+          var2.unlink((byte) -109);
           return var2;
         }
         return null;

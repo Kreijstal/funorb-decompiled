@@ -108,7 +108,7 @@ final class GoalStateAgent extends MatchAgent {
           if (param3) {
             field_h = (String) null;
           }
-          stackIn_6_0 = NumericDateInputWidget.i((byte) 83);
+          stackIn_6_0 = NumericDateInputWidget.buildDecodedIndexedSprites((byte) 83);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

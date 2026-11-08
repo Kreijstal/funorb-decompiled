@@ -65,14 +65,14 @@ final class SocialListProtocolSupport {
               var9 != 0) {
               var5 = var4_ref_String;
             }
-            var6 = AchievementsScreen.a(var4_ref_String, 145);
+            var6 = AchievementsScreen.findSocialPlayerByName(var4_ref_String, 145);
             var7 = var1.readString(-113);
             var8 = MatchAgent.normalizeAccountName(0, (CharSequence) ((Object) var4_ref_String));
             if (null == var8) {
               var8 = var4_ref_String;
             }
             if (var6 == null) {
-              var6 = AchievementsScreen.a(var7, 145);
+              var6 = AchievementsScreen.findSocialPlayerByName(var7, 145);
               if (var6 != null) {
                 HighScoreQuery.field_m.put(var6, (byte) -4, (long)var8.hashCode());
               }
@@ -108,7 +108,7 @@ final class SocialListProtocolSupport {
               var3 = var1.readString(111);
               BufferedSocket.field_h = ((String) (var3)).intern();
               var4 = var1.readUnsignedByte((byte) -115);
-              PlayerSurnameSortCriterion.a(var4, -1);
+              PlayerSurnameSortCriterion.decodeChatFilters(var4, -1);
               return;
             }
             UnreadMessagesScreen.a("F1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
@@ -149,7 +149,7 @@ final class SocialListProtocolSupport {
           var6Lifetime1.field_Eb = var5Lifetime1;
           var6Lifetime1.field_zb = (String) (var3Lifetime1);
           var6Lifetime1.name = var4_ref_StringLifetime1;
-          var6Lifetime1.c((byte) -109);
+          var6Lifetime1.unlink((byte) -109);
           var7_ref = (SocialPlayerRow) (GameplayHelpScreen.field_I.first(24009));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;

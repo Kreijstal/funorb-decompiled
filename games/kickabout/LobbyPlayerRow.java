@@ -209,7 +209,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         if (param2 != 240) {
           field_Ub = (String) null;
         }
-        return ArrayWidgetContainer.a(param3, TextInputWidget.field_O[param4], DualLinkHashTable.field_e ? !param1 ? true : false : param1, param4, param0, -121);
+        return ArrayWidgetContainer.createFadingSoundPlayer(param3, TextInputWidget.field_O[param4], DualLinkHashTable.field_e ? !param1 ? true : false : param1, param4, param0, -121);
     }
 
     final static void a(PcmSampleStream param0, boolean param1) {

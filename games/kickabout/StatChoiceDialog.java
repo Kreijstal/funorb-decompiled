@@ -147,7 +147,7 @@ final class StatChoiceDialog extends MessageDialog {
               }
             }
           } else {
-            RankingRowFactory.a((byte) -5, this.field_P, this.field_H);
+            RankingRowFactory.trainPlayerStat((byte) -5, this.field_P, this.field_H);
           }
         }
     }
@@ -385,7 +385,7 @@ final class StatChoiceDialog extends MessageDialog {
           var3 = (ManagerAction) (MusicPatchNode.field_h.first(24009));
           while (var3 != null) {
             if (8 == var3.actionType) {
-              var3.c((byte) -109);
+              var3.unlink((byte) -109);
             }
             var3 = (ManagerAction) (MusicPatchNode.field_h.next(33));
           }

@@ -67,7 +67,7 @@ class IntrusiveNode {
         return true;
     }
 
-    final static int d(byte param0) {
+    final static int getMenuHeight(byte param0) {
         if (param0 <= 44) {
           field_c = (String) null;
           return BufferedSocket.field_j;
@@ -101,7 +101,7 @@ class IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, StringBuilder param3) {
+    final static void appendPaddedBinary(int param0, int param1, int param2, StringBuilder param3) {
         int var5 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -120,7 +120,7 @@ class IntrusiveNode {
         }
     }
 
-    final void c(byte param0) {
+    final void unlink(byte param0) {
         if (this.field_b == null) {
           return;
         }
@@ -138,7 +138,7 @@ class IntrusiveNode {
         this.field_d = null;
     }
 
-    final static int b(byte param0) {
+    final static int getSoundEffectVolume(byte param0) {
         if (param0 >= -52) {
           return -83;
         }
@@ -148,7 +148,7 @@ class IntrusiveNode {
     final static boolean isAsciiDigit(int param0, char param1) {
         if (param0 != 12105) {
           StringBuilder var3 = (StringBuilder) null;
-          IntrusiveNode.a(-48, 1, 77, (StringBuilder) null);
+          IntrusiveNode.appendPaddedBinary(-48, 1, 77, (StringBuilder) null);
           if (param1 < 48) {
             return false;
           }

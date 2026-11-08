@@ -62,12 +62,12 @@ final class VertexNormal {
             stackIn_7_0 = ShopPlayerSlot.field_Db;
             return stackIn_7_0;
           }
-          var7 = AchievementsScreen.a(param0, 145);
+          var7 = AchievementsScreen.findSocialPlayerByName(param0, 145);
           if (var7 == null) {
             stackIn_10_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DoSomethingCommand.field_A, new String[]{param0});
             return stackIn_10_0;
           }
-          var7.c((byte) -109);
+          var7.unlink((byte) -109);
           var7.unlinkSecondary(66);
           StripedProgressBar.field_y = StripedProgressBar.field_y - 1;
           var5 = FootballerAiOverlaySupport.field_d;

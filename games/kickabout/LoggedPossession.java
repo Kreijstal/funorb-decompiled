@@ -118,7 +118,7 @@ final class LoggedPossession {
         if (param0 != -24) {
           return 63;
         }
-        return ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(112, param1, TextLineLayoutSupport.field_e);
+        return ProxySocketConnector.nextBoundedInt(112, param1, TextLineLayoutSupport.field_e);
     }
 
     final void recordTick(int param0, CommonGame param1) {

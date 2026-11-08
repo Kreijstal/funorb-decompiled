@@ -93,7 +93,7 @@ final class TrinketShopDialog extends MessageDialog {
               SoftwareRasterizer.drawRoundedRectangle(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
             }
           }
-          var6_ref_at.i((byte) -76);
+          var6_ref_at.drawTileText((byte) -76);
           var6_ref_at = (TrinketTile) (this.field_L.field_Db.field_jb.next(33));
         }
         if (this.field_t != var5) {

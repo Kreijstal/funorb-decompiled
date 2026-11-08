@@ -250,7 +250,7 @@ final class TeamSelectionAgent extends MatchAgent {
         var3 = Kickabout.field_G;
         var4 = new StringBuilder("AgentTeamSelection\t ready=");
         var1 = var4;
-        IntrusiveNode.a(this.readyMask, -28745, this.field_i, var1);
+        IntrusiveNode.appendPaddedBinary(this.readyMask, -28745, this.field_i, var1);
         StringBuilder discarded$74 = var1.append("\tselection=[");
         for (var2 = 0; var2 < this.selection.length; var2++) {
           if (this.selection[var2] >= 0) {

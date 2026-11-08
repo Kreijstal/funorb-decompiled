@@ -122,7 +122,7 @@ abstract class ArchiveNetworkClient {
           stackIn_17_1 = (!param4) ? false : true;
           stackIn_16_0.field_q = stackIn_17_1;
         } else {
-          ArchiveNetworkClient.a(14, -40, 39, -92);
+          ArchiveNetworkClient.setMenuTextColors(14, -40, 39, -92);
           var8.field_l = var6;
           stackIn_3_0 = var8;
           stackIn_4_1 = (!param4) ? false : true;
@@ -147,7 +147,7 @@ abstract class ArchiveNetworkClient {
 
     abstract void closeSocket(byte param0);
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void setMenuTextColors(int param0, int param1, int param2, int param3) {
         NumericDateInputWidget.field_R = param2;
         if (param3 != 20) {
           return;

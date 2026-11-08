@@ -92,7 +92,7 @@ final class ConsoleLexer {
               var2.addLast(ConsoleTokenParser.readBareToken(var3, false), 3);
               continue;
             }
-            var2.addLast(RankingRowNode.a(-9323, var3), 3);
+            var2.addLast(RankingRowNode.readQuotedExpression(-9323, var3), 3);
           }
           stackIn_20_0 = var2;
           return stackIn_20_0;

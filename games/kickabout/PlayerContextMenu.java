@@ -30,7 +30,7 @@ final class PlayerContextMenu {
         return false;
     }
 
-    final static int b(int param0, int param1, byte param2) {
+    final static int angleFromVector(int param0, int param1, byte param2) {
         if (param2 != 2) {
           field_i = (GameSetupPanel) null;
         }
@@ -48,25 +48,25 @@ final class PlayerContextMenu {
             return 0;
           }
           if (param0 >= 0) {
-            return AccountNameCheckState.a(param0, 11277, param1);
+            return AccountNameCheckState.firstQuadrantAngle(param0, 11277, param1);
           }
-          return -AccountNameCheckState.a(-param0, 11277, param1);
+          return -AccountNameCheckState.firstQuadrantAngle(-param0, 11277, param1);
         }
         if (param0 == 0) {
           return 4096;
         }
         if (param0 < 0) {
-          return AccountNameCheckState.a(-param0, param2 ^ 11279, -param1) - 4096;
+          return AccountNameCheckState.firstQuadrantAngle(-param0, param2 ^ 11279, -param1) - 4096;
         }
-        return -AccountNameCheckState.a(param0, 11277, -param1) + 4096;
+        return -AccountNameCheckState.firstQuadrantAngle(param0, 11277, -param1) + 4096;
     }
 
-    final static int a(boolean param0, int param1, int param2) {
+    final static int directionMaskFromVector(boolean param0, int param1, int param2) {
         if (param0) {
-          return PlayerSurnameSortCriterion.b(PlayerContextMenu.b(param1, param2, (byte) 2), -25147);
+          return PlayerSurnameSortCriterion.directionMaskFromAngle(PlayerContextMenu.angleFromVector(param1, param2, (byte) 2), -25147);
         }
         field_e = -64;
-        return PlayerSurnameSortCriterion.b(PlayerContextMenu.b(param1, param2, (byte) 2), -25147);
+        return PlayerSurnameSortCriterion.directionMaskFromAngle(PlayerContextMenu.angleFromVector(param1, param2, (byte) 2), -25147);
     }
 
     private final String getDisplayName(int param0) {
@@ -89,7 +89,7 @@ final class PlayerContextMenu {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void addGameSetupMenuItems(boolean param0, int param1) {
         LobbyPlayerRow var4;
         String var5;
         int var6;
@@ -161,9 +161,9 @@ final class PlayerContextMenu {
         return;
     }
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void drawAnimatedPlayerMarker(int param0, byte param1, int param2) {
         int var3 = -112 % ((param1 - 14) / 60);
-        ClientPacketFlushSupport.a(31, param0, param2, 0);
+        ClientPacketFlushSupport.drawAnimatedPlayerMarker(31, param0, param2, 0);
     }
 
     final void showMenu(int param0) {
@@ -226,7 +226,7 @@ final class PlayerContextMenu {
         return true;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6, int param7, PlatformTaskDispatcher param8, int param9, long param10, int param11, int param12, String param13) {
+    final static void initializeClientConnectionState(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6, int param7, PlatformTaskDispatcher param8, int param9, long param10, int param11, int param12, String param13) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -246,7 +246,7 @@ final class PlayerContextMenu {
             ResizableModalPanel.field_J = param4;
             if (param0 <= 119) {
               var16 = (String) null;
-              PlayerContextMenu.a(39, 24, true, 46, 63, true, -76, 49, (PlatformTaskDispatcher) null, 107, -22L, -59, -43, (String) null);
+              PlayerContextMenu.initializeClientConnectionState(39, 24, true, 46, 63, true, -76, 49, (PlatformTaskDispatcher) null, 107, -22L, -59, -43, (String) null);
             }
             ParticipantAgent.field_n = param5;
             ClassDescriptorSupport.field_g = param6;
@@ -405,7 +405,7 @@ final class PlayerContextMenu {
         if (param2 == 2) {
           return true;
         }
-        this.a(false, -126);
+        this.addGameSetupMenuItems(false, -126);
         return true;
     }
 
@@ -547,14 +547,14 @@ final class PlayerContextMenu {
         return;
     }
 
-    final static void a(boolean param0) {
+    final static void requestLoginMenuMode(boolean param0) {
         IndexedSpriteState.b(38, 17);
         if (param0) {
           PlayerContextMenu.releaseStatics(-102);
         }
     }
 
-    final void a(int param0, int param1, int[] param2) {
+    final void addSocialMenuItems(int param0, int param1, int[] param2) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -621,7 +621,7 @@ final class PlayerContextMenu {
         }
     }
 
-    final void a(ChatMessage param0, byte param1) {
+    final void addChatFilterMenuItems(ChatMessage param0, byte param1) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -655,7 +655,7 @@ final class PlayerContextMenu {
             return;
           }
           var4 = (String) null;
-          PlayerContextMenu.a(-113, 85, false, 126, -61, false, -59, 112, (PlatformTaskDispatcher) null, -96, 71L, 73, -56, (String) null);
+          PlayerContextMenu.initializeClientConnectionState(-113, 85, false, 126, -61, false, -59, 112, (PlatformTaskDispatcher) null, -96, 71L, 73, -56, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -671,7 +671,7 @@ final class PlayerContextMenu {
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4) {
+    final boolean dispatchSelectedAction(boolean param0, int param1, int param2, int param3, int param4) {
         int var6 = this.field_j.getSelectedActionId((byte) -126, param0);
         if (param1 == var6) {
           return false;

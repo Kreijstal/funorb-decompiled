@@ -320,7 +320,7 @@ final class LineupView extends MatchPhaseView {
           } else {
             stackIn_3_8 = 0;
           }
-          BytePlusOneCommand.a(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), stackIn_2_3, stackIn_2_4, (int[]) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
+          BytePlusOneCommand.createPlayerContextMenu(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), stackIn_2_3, stackIn_2_4, (int[]) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_c == 0 &&
             !CachedArchiveSource.isPublicChatInputActive((byte) -121) &&
             null == PlayerContextMenu.field_i &&
@@ -348,10 +348,10 @@ final class LineupView extends MatchPhaseView {
             var11.field_j.addItem(0, 20, var12);
           }
           TextButton.field_v.buildMenuItems(1);
-          TextButton.field_v.a(false, 0);
-          TextButton.field_v.a(param0.field_c, -118, param0.field_r);
+          TextButton.field_v.addGameSetupMenuItems(false, 0);
+          TextButton.field_v.addSocialMenuItems(param0.field_c, -118, param0.field_r);
           TextButton.field_v.showMenu(-120);
-          TextButton.field_v.a(param0, (byte) 11);
+          TextButton.field_v.addChatFilterMenuItems(param0, (byte) 11);
           var13 = TextButton.field_v;
           if (param1 != -60) {
             return;
@@ -536,7 +536,7 @@ final class LineupView extends MatchPhaseView {
           }
           var6 = param3.getParameter("currency");
           if (var6 != null &&
-            ClubState.a((byte) 15, (CharSequence) ((Object) var6))) {
+            ClubState.isDecimalInteger((byte) 15, (CharSequence) ((Object) var6))) {
             TextEntrySupport.parseDecimalInt(10, (CharSequence) ((Object) var6));
           }
           StringCursor.field_b = new Sprite[param1.length];

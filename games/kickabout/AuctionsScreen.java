@@ -631,7 +631,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         }
         if (this.field_R.field_sb == 1) {
           if (GameLoopApplet.field_E.canStartAuction(-3)) {
-            if (GameLoopApplet.field_E.a((byte) -97)) {
+            if (GameLoopApplet.field_E.hasAuctionablePlayer((byte) -97)) {
               RankingsScreen.queueNewAuctionDialog(25);
               ShopPlayerSlot.c(49, 55);
             } else {

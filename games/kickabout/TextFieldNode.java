@@ -205,7 +205,7 @@ final class TextFieldNode extends UiLayoutNode {
             var13 = var9;
             if (var13 != null &&
               var13.dueTime < var2_long) {
-              var13.c((byte) -109);
+              var13.unlink((byte) -109);
               var10 = 0;
               var6Lifetime1 = var10;
               while (var10 < var13.opcode) {

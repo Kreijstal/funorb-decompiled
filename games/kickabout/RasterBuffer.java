@@ -161,7 +161,7 @@ abstract class RasterBuffer {
             if (var11_int != 0) {
               discarded$0 = ClientPacketFlushSupport.field_a.append((char) var11_int);
               var3_int++;
-              var11_int = (char)(255 & SquadGridWidget.a((char) var11_int, (byte) -104));
+              var11_int = (char)(255 & SquadGridWidget.encodeCp1252Char((char) var11_int, (byte) -104));
             }
             if (var11_int == 32) {
               var5 = ClientPacketFlushSupport.field_a.length();

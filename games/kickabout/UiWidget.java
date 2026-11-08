@@ -57,7 +57,7 @@ class UiWidget extends IntrusiveNode {
           if (param4) {
             var5_int++;
           }
-          var6 = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(112, var5_int, LoginForm.field_E);
+          var6 = 1 + ProxySocketConnector.nextBoundedInt(112, var5_int, LoginForm.field_E);
           while (var6 > 0) {
             if (param0) {
               var6--;
@@ -94,22 +94,22 @@ class UiWidget extends IntrusiveNode {
             param4 = false;
           }
           if (param0) {
-            stackIn_44_0 = ConsoleTokenCursor.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-103, ConsoleTokenCursor.field_e.length, LoginForm.field_E)];
+            stackIn_44_0 = ConsoleTokenCursor.field_e[ProxySocketConnector.nextBoundedInt(-103, ConsoleTokenCursor.field_e.length, LoginForm.field_E)];
             return stackIn_44_0;
           }
           if (param1) {
-            stackIn_34_0 = GuestLoginSupport.field_a[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-123, GuestLoginSupport.field_a.length, LoginForm.field_E)];
+            stackIn_34_0 = GuestLoginSupport.field_a[ProxySocketConnector.nextBoundedInt(-123, GuestLoginSupport.field_a.length, LoginForm.field_E)];
             return stackIn_34_0;
           }
           if (param3) {
-            stackIn_42_0 = ConsoleCommand.field_y[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-121, ConsoleCommand.field_y.length, LoginForm.field_E)];
+            stackIn_42_0 = ConsoleCommand.field_y[ProxySocketConnector.nextBoundedInt(-121, ConsoleCommand.field_y.length, LoginForm.field_E)];
             return stackIn_42_0;
           }
           if (param4) {
-            stackIn_40_0 = SessionUrlSupport.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(120, SessionUrlSupport.field_e.length, LoginForm.field_E)];
+            stackIn_40_0 = SessionUrlSupport.field_e[ProxySocketConnector.nextBoundedInt(120, SessionUrlSupport.field_e.length, LoginForm.field_E)];
             return stackIn_40_0;
           }
-          stackIn_38_0 = ConsoleTokenCursor.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(95, ConsoleTokenCursor.field_e.length, LoginForm.field_E)];
+          stackIn_38_0 = ConsoleTokenCursor.field_e[ProxySocketConnector.nextBoundedInt(95, ConsoleTokenCursor.field_e.length, LoginForm.field_E)];
           return stackIn_38_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

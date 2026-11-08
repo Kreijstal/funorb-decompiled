@@ -60,7 +60,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final void a(PlatformTaskDispatcher param0, int param1) {
         try {
-          ProxySocketConnector.a(param0, this.field_c, 0);
+          ProxySocketConnector.exitFullscreen(param0, this.field_c, 0);
           if (param1 != 9) {
             java.awt.event.FocusEvent var4 = (java.awt.event.FocusEvent) null;
             this.focusGained((java.awt.event.FocusEvent) null);

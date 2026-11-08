@@ -40,10 +40,10 @@ final class PlayerModelPreview extends IntrusiveNode {
           if (param2 <= 25) {
             field_q = (GameKeyHandler) null;
           }
-          ClientException.a(param8, 0, param4);
+          ClientException.setMenuAnchor(param8, 0, param4);
           VertexNormal.a(param19, param6, param16, param9, param15, -110);
           ConsoleCommand.a(param3, param1, false, param12);
-          ArchiveNetworkClient.a(param20, param14, param17, 20);
+          ArchiveNetworkClient.setMenuTextColors(param20, param14, param17, 20);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,10 +160,10 @@ final class PlayerModelPreview extends IntrusiveNode {
         this.field_s = param3;
         Random var8 = new Random();
         var8 = var8;
-        this.field_o = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-34, 6, var8);
+        this.field_o = ProxySocketConnector.nextBoundedInt(-34, 6, var8);
         this.field_p = Cp1252EncodingSupport.a(-49, this.field_s, var8);
         this.field_h = new AnimationPlayer(1);
-        int var6 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-48, 5, var8);
+        int var6 = ProxySocketConnector.nextBoundedInt(-48, 5, var8);
         this.field_h.setClip(ClientInteractionSupport.field_b[var6], (byte) -107);
     }
 

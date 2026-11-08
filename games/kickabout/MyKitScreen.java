@@ -49,7 +49,7 @@ final class MyKitScreen extends TeamManagementScreen {
         this.handleScrollButtons(0);
         var4_ref_nt = (KitStyleTile) (this.field_F.field_jb.first(24009));
         while (var4_ref_nt != null) {
-          var4_ref_nt.c(-1, param1);
+          var4_ref_nt.updateKitTile(-1, param1);
           if (var4_ref_nt.field_Jb.field_sb == 0) {
             var4_ref_nt = (KitStyleTile) (this.field_F.field_jb.next(33));
             continue;
@@ -278,7 +278,7 @@ final class MyKitScreen extends TeamManagementScreen {
         AuctionListing.pushRasterClip(this.field_G.field_F + this.field_G.field_q, -22914, this.field_G.field_F, this.field_G.field_mb + this.field_G.field_T, this.field_G.field_T);
         var7 = (KitStyleTile) (this.field_F.field_jb.first(24009));
         while (var7 != null) {
-          var7.h(-24508);
+          var7.drawKitTile(-24508);
           var7 = (KitStyleTile) (this.field_F.field_jb.next(33));
         }
         TeamManagementScreen.e(124);
@@ -287,14 +287,14 @@ final class MyKitScreen extends TeamManagementScreen {
           var5 = (ColourSwatchTile) (this.field_J[var3Lifetime1].field_jb.first(24009));
           while (var5 != null) {
             if (!var5.isSelectedColor(false)) {
-              var5.a(param0 ^ -8);
+              var5.drawColorSwatch(param0 ^ -8);
             } else {
               var4 = var5;
             }
             var5 = (ColourSwatchTile) (this.field_J[var3Lifetime1].field_jb.next(33));
           }
           if (var4 != null) {
-            ((ColourSwatchTile) (var4)).a(param0 + 8);
+            ((ColourSwatchTile) (var4)).drawColorSwatch(param0 + 8);
           }
         }
     }
@@ -482,7 +482,7 @@ final class MyKitScreen extends TeamManagementScreen {
           MyKitScreen.ensureSoundLoaded(98, 120);
         }
         if (!LoadingProgressSupport.field_d.field_k[0].prepareTrackSamples(1, 176400, MatchTextInputOverlay.field_j, MatchUiLayoutSupport.field_a, LocalizedTextLoader.field_d[param1])) {
-          AnimationPlayer.a((byte) 113);
+          AnimationPlayer.resetFrameTiming((byte) 113);
           return false;
         }
         SoundCache.field_a[param1] = true;

@@ -34,15 +34,15 @@ final class TextHotspotRegion extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_double = (double)NameSuggestionsPanel.a(param1, GameModesHelpScreen.field_F, true);
-          var4 = (double)NameSuggestionsPanel.a(param1, IntrusiveDeque.field_g, true);
-          var6 = (double)NameSuggestionsPanel.a(param1, RenderedFootballer.field_fb, true);
+          var2_double = (double)NameSuggestionsPanel.colorBoxMoment(param1, GameModesHelpScreen.field_F, true);
+          var4 = (double)NameSuggestionsPanel.colorBoxMoment(param1, IntrusiveDeque.field_g, true);
+          var6 = (double)NameSuggestionsPanel.colorBoxMoment(param1, RenderedFootballer.field_fb, true);
           if (param0 <= 91) {
             stackIn_2_0 = 1.8026836499173446;
             return stackIn_2_0;
           }
           var8 = -IntTripleCommand.field_C[param1.field_c][param1.field_i][param1.field_k] + (IntTripleCommand.field_C[param1.field_c][param1.field_i][param1.field_e] + (IntTripleCommand.field_C[param1.field_c][param1.field_d][param1.field_k] + (-IntTripleCommand.field_C[param1.field_l][param1.field_i][param1.field_e] + (-IntTripleCommand.field_C[param1.field_l][param1.field_d][param1.field_k] + IntTripleCommand.field_C[param1.field_l][param1.field_d][param1.field_e]) + IntTripleCommand.field_C[param1.field_l][param1.field_i][param1.field_k] - IntTripleCommand.field_C[param1.field_c][param1.field_d][param1.field_e])));
-          stackIn_4_0 = var8 - (var6 * var6 + (var4 * var4 + var2_double * var2_double)) / (double)NameSuggestionsPanel.a(param1, RandomAccessCacheFile.field_i, true);
+          stackIn_4_0 = var8 - (var6 * var6 + (var4 * var4 + var2_double * var2_double)) / (double)NameSuggestionsPanel.colorBoxMoment(param1, RandomAccessCacheFile.field_i, true);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ final class TextHotspotRegion extends IntrusiveNode {
         }
     }
 
-    final static int a(boolean param0, int param1, byte[] param2) {
+    final static int crc32Prefix(boolean param0, int param1, byte[] param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

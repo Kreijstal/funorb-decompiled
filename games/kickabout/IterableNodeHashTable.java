@@ -15,7 +15,7 @@ final class IterableNodeHashTable implements Iterable {
         IntrusiveNode var5 = null;
         try {
           if (null != param0.field_b) {
-            param0.c((byte) -109);
+            param0.unlink((byte) -109);
           }
           if (param1 >= -14) {
             field_a = (String) null;

@@ -171,7 +171,7 @@ final class PasswordValidator extends TextFieldValidator {
           TeamManagementScreen.e(121);
           PacketBuffer.a(65, PacketBuffer.field_g);
           SoftwareRasterizer.clearFramebuffer();
-          var8Lifetime1 = PlayerContextMenu.b(-ValidationIndicator.field_K, TextButton.field_C, (byte) 2);
+          var8Lifetime1 = PlayerContextMenu.angleFromVector(-ValidationIndicator.field_K, TextButton.field_C, (byte) 2);
           if (param0 != 706856675) {
             field_j = (int[]) null;
           }
@@ -229,7 +229,7 @@ final class PasswordValidator extends TextFieldValidator {
         return (LobbyPlayerRow) (SquadPickerDialog.field_N.get(-3611, param0));
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, byte param4) {
+    final static void drawAnimatedPlayerMarker(int param0, int param1, int param2, boolean param3, byte param4) {
         if (param4 != -55) {
           PasswordValidator.a(124L, false);
         }

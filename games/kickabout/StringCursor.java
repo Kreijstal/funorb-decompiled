@@ -28,7 +28,7 @@ final class StringCursor {
         PlayerContextMenu var4Lifetime1;
         if (!param1) {
           if (var3 != null) {
-            TextButton.field_v.a(false, 0);
+            TextButton.field_v.addGameSetupMenuItems(false, 0);
             var4 = TextButton.field_v;
             var5_ref_String = ButtonMenuScreen.field_k;
             var4.field_j.addItem(0, 5, var5_ref_String);

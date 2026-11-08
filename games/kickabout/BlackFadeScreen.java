@@ -42,14 +42,14 @@ final class BlackFadeScreen extends AppScreen {
         }
     }
 
-    final static void b(byte param0) {
+    final static void drawQuickChatToggleHint(byte param0) {
         GuestLoginSupport.a((byte) -128, GrayscalePaletteSupport.field_a.field_J, 15);
         if (param0 != -85) {
           field_j = 82;
         }
     }
 
-    final static int a(CharSequence param0, boolean param1, byte param2, int param3) {
+    final static int parseIntegerInRadix(CharSequence param0, boolean param1, byte param2, int param3) {
         int var9 = 0;
         int stackIn_40_0 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -131,7 +131,7 @@ final class BlackFadeScreen extends AppScreen {
         }
     }
 
-    final static AvailabilityCheckRequest a(boolean param0, String param1) {
+    final static AvailabilityCheckRequest getEmailAvailabilityRequest(boolean param0, String param1) {
         RuntimeException var2 = null;
         AvailabilityCheckRequest stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -172,7 +172,7 @@ final class BlackFadeScreen extends AppScreen {
     public static void releaseStatics(int param0) {
         if (param0 <= 123) {
           byte[] var2 = (byte[]) null;
-          BlackFadeScreen.a((byte[]) null, false);
+          BlackFadeScreen.decodeCp1252Bytes((byte[]) null, false);
         }
         field_k = null;
         field_m = null;
@@ -194,7 +194,7 @@ final class BlackFadeScreen extends AppScreen {
         }
     }
 
-    final static String a(byte[] param0, boolean param1) {
+    final static String decodeCp1252Bytes(byte[] param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

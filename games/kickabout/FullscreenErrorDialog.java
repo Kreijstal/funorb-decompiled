@@ -58,7 +58,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
           if (param1 != -119) {
             return;
           }
-          param0.c((byte) -109);
+          param0.unlink((byte) -109);
           var2 = (GameSetupPanel) (SquadSlotWidget.field_yb.first(24009));
           while (var2 != null) {
             if (var2.a(param1 + 20843, param0)) {

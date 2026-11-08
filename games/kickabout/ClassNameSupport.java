@@ -49,7 +49,7 @@ final class ClassNameSupport {
             var4_ref_jm = (DelayedServerPacket) (ConsolePanel.field_i.first(24009));
             if (var4_ref_jm != null &&
               var4_ref_jm.dueTime < var2_long) {
-              var4_ref_jm.c((byte) -109);
+              var4_ref_jm.unlink((byte) -109);
               MusicVolumeSupport.field_b = var4_ref_jm.data.length;
               ByteArrayPool.field_e.field_n = 0;
               for (var5_int = 0; var5_int < MusicVolumeSupport.field_b; var5_int++) {

@@ -122,7 +122,7 @@ final class MatchHudRoutingSupport {
           if (!JaggrabDownloader.field_c) {
             return;
           }
-          BlackFadeScreen.b((byte) -85);
+          BlackFadeScreen.drawQuickChatToggleHint((byte) -85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

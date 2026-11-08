@@ -53,7 +53,7 @@ final class ReceivedAuctionItemRow extends ListRow {
                 ShopPlayerSlot.c(53, -3);
               } else {
                 if (GameLoopApplet.field_E.canStartAuction(-3)) {
-                  if (GameLoopApplet.field_E.d(-1) == -1) {
+                  if (GameLoopApplet.field_E.findEmptySquadSlot(-1) == -1) {
                     SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 2);
                     ShopPlayerSlot.c(53, 112);
                   } else {
@@ -86,7 +86,7 @@ final class ReceivedAuctionItemRow extends ListRow {
                   ShopPlayerSlot.c(53, -12);
                 } else {
                   if (GameLoopApplet.field_E.canStartAuction(-3)) {
-                    if (GameLoopApplet.field_E.d(-1) == -1) {
+                    if (GameLoopApplet.field_E.findEmptySquadSlot(-1) == -1) {
                       SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 2);
                       ShopPlayerSlot.c(53, 40);
                     } else {

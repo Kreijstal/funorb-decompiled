@@ -69,7 +69,7 @@ final class PlayingView extends MatchPhaseView {
         if (param0 >= -56) {
           return -33;
         }
-        return ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-61, param1, MidiPcmStream.field_l);
+        return ProxySocketConnector.nextBoundedInt(-61, param1, MidiPcmStream.field_l);
     }
 
     private final void playCrowdReaction(boolean param0, int param1, int param2) {
@@ -697,7 +697,7 @@ final class PlayingView extends MatchPhaseView {
           if (param0 != null) {
             var4 = (WorldDrawEntry) (param0.first(24009));
             while (var4 != null) {
-              var4.c((byte) -109);
+              var4.unlink((byte) -109);
               this.field_r.addLast(var4, 3);
               var4 = (WorldDrawEntry) (param0.next(33));
             }
@@ -894,7 +894,7 @@ final class PlayingView extends MatchPhaseView {
           return;
         }
         if (MyKitScreen.field_O) {
-          KitStyleTile.j(13459);
+          KitStyleTile.updateTutorialCamera(13459);
           return;
         }
         if (!param0) {
@@ -1156,7 +1156,7 @@ final class PlayingView extends MatchPhaseView {
           this.field_C = SetLagCommand.a((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].team);
           this.field_l = true;
           MainMenuScreen.a(this.field_h, param1, param0, true);
-          ArrayWidgetContainer.a(0, param0, var6_int, this.field_C);
+          ArrayWidgetContainer.initializePlayerArrows(0, param0, var6_int, this.field_C);
           CachedTextLayout.initializeMatchMinimap(param0, var6_int, 50);
           KitPatternMaskSupport.buildMatchKitPreviewSprites(-3, param0, this.field_h);
           ByteArrayPool.setActiveMatch(param0, this.field_h, 101);
@@ -1312,8 +1312,8 @@ final class PlayingView extends MatchPhaseView {
           var2Lifetime2 = 370;
           var3Lifetime2 = -45;
           SoftwareRasterizer.drawRectangle(SocialListLayoutSupport.worldToScreenX(0, var2Lifetime2), IntKeyLookup.projectPitchY((byte) -89, var3Lifetime2), 155 * InstrumentNoteMask.field_i >> 8, 45 * InstrumentNoteMask.field_i >> 8, 16711935);
-          LongPlusOneCommand.a(this.field_a, param0 ^ 72, 0);
-          LongPlusOneCommand.a(this.field_a, 48, 1);
+          LongPlusOneCommand.drawGoalkeeperDiagnostics(this.field_a, param0 ^ 72, 0);
+          LongPlusOneCommand.drawGoalkeeperDiagnostics(this.field_a, 48, 1);
         }
         if (LineupAgent.field_g &&
           this.field_a.phase == 4) {
@@ -1381,7 +1381,7 @@ final class PlayingView extends MatchPhaseView {
               this.field_t[var4] = this.field_t[1 + var4];
             }
             this.field_t[7] = (byte)Character.toLowerCase(param0);
-            var4Lifetime1 = TextHotspotRegion.a(false, 8, this.field_t);
+            var4Lifetime1 = TextHotspotRegion.crc32Prefix(false, 8, this.field_t);
             var5 = -1;
             for (var6 = 0; NamedValueContainer.field_d.length > var6; var6++) {
               if (var4Lifetime1 == NamedValueContainer.field_d[var6]) {

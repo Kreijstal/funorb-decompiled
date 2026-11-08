@@ -13,7 +13,7 @@ final class AnimationPlayer {
     static long field_c;
     private int field_i;
 
-    final boolean a(int param0) {
+    final boolean tickAnimation(int param0) {
         int dupTemp$0 = 0;
         int var2;
         if (null == this.field_d) {
@@ -100,7 +100,7 @@ final class AnimationPlayer {
         return ClientException.field_c.field_Ab;
     }
 
-    final static void a(byte param0) {
+    final static void resetFrameTiming(byte param0) {
         int var1_int = 0;
         int var2 = Kickabout.field_G;
         int var1_intLifetime1;
@@ -110,7 +110,7 @@ final class AnimationPlayer {
             ConsoleArgumentSupport.field_b[var1_int] = 0L;
           }
           if (param0 <= 40) {
-            AnimationPlayer.a((byte) 120);
+            AnimationPlayer.resetFrameTiming((byte) 120);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             AudioService.field_d[var1_intLifetime1] = 0L;

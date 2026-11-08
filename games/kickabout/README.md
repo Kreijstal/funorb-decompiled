@@ -2,8 +2,8 @@
 
 This directory is the single published Java tree. The scripts and reviewed rules live in dekobloko-work/readable; the current reverse dictionary is ../../decompilation/kickabout-naming.json.
 
-Resolved declarations: 545/545 classes and 3122/3957 methods have readable names; 440 constructors follow their class names.
-Remaining: 0 opaque class names and 835 opaque method names. The complete naming goal is still in progress.
+Resolved declarations: 545/545 classes and 3242/3957 methods have readable names; 440 constructors follow their class names.
+Remaining: 0 opaque class names and 715 opaque method names. The complete naming goal is still in progress.
 Audit with `node readable/naming-coverage.mjs kickabout` in dekobloko-work; it exits unsuccessfully while opaque names remain.
 
 Start with `CommonGame` for match phases and agents; `ParticipantAgent`, `TeamSelectionAgent`, `FormationAgent` and `LineupAgent` handle participant/team choices. `FootballerAgent`, `BallAgent` and `GoalStateAgent` hold play state.

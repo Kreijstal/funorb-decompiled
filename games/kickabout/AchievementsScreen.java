@@ -414,7 +414,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         return 88080384 + (100 * param1 + 500 << 16);
     }
 
-    final static SocialPlayerRow a(String param0, int param1) {
+    final static SocialPlayerRow findSocialPlayerByName(String param0, int param1) {
         String var2 = null;
         SocialPlayerRow var3 = null;
         String var4 = null;

@@ -1032,7 +1032,7 @@ final class SoftwareDrawingSupport {
         int var3 = 0;
         Random var2 = new Random();
         for (var3 = 0; var3 < field_o.length; var3++) {
-          field_o[var3] = param0 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(113, param1, var2) << 24;
+          field_o[var3] = param0 + ProxySocketConnector.nextBoundedInt(113, param1, var2) << 24;
         }
     }
 
@@ -1447,7 +1447,7 @@ final class SoftwareDrawingSupport {
           for (var10 = -36; var10 < 36; var10++) {
             var11 = var6.field_y[var8];
             if (var11 != 0) {
-              var12 = PlayerContextMenu.b(var9, var10, (byte) 2) + 8192 + 2048 & 8191;
+              var12 = PlayerContextMenu.angleFromVector(var9, var10, (byte) 2) + 8192 + 2048 & 8191;
               if (SoftwareDrawingSupport.isAngleInRange(var12, var4, var5) ||
                 SoftwareDrawingSupport.isAngleInRange(var12, var4 + 4096, var5)) {
                 var13 = Math.min(255, Math.min(Math.min(Math.abs((var4 + 4096 & 8191) - var12), Math.abs((var4 + var5 + 4096 & 8191) - var12)), Math.min(Math.abs((var4 & 8191) - var12), Math.abs((var4 + var5 & 8191) - var12))));

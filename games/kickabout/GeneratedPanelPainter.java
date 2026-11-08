@@ -20,7 +20,7 @@ final class GeneratedPanelPainter extends NineSlicePanelPainter {
     final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
         try {
           if (param0.field_b != null) {
-            param0.c((byte) -109);
+            param0.unlink((byte) -109);
           }
           param0.field_d = param1.field_d;
           param0.field_b = param1;

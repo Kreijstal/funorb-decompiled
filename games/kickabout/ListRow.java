@@ -55,7 +55,7 @@ abstract class ListRow extends UiLayoutNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 75 / ((66 - param0) / 50);
-          stackIn_1_0 = BlackFadeScreen.a(param1, true, (byte) 125, param2);
+          stackIn_1_0 = BlackFadeScreen.parseIntegerInRadix(param1, true, (byte) 125, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

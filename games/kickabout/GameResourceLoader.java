@@ -23,7 +23,7 @@ final class GameResourceLoader implements LoadingSequence {
           var2_ref_oi = (IntValueNode) (LoginText.field_f.first(24009));
           while (var2_ref_oi != null) {
             if (ClientPacketFlushSupport.isBitSet(var2_ref_oi.field_j, 0, BufferedSocket.field_f)) {
-              var2_ref_oi.c((byte) -109);
+              var2_ref_oi.unlink((byte) -109);
             }
             var2_ref_oi = (IntValueNode) (LoginText.field_f.next(param0 ^ -27629));
           }
@@ -68,7 +68,7 @@ final class GameResourceLoader implements LoadingSequence {
           ArgbSprite var14 = (ArgbSprite) null;
           this.a(28, (ArgbSprite) null);
         }
-        SquadGridWidget.h((byte) -19);
+        SquadGridWidget.initializeLocalizedUiTables((byte) -19);
         PlayerStats.finishUiTransitions(-1456);
         ResourceArchive var16 = CanvasResizePolicy.field_g;
         ResourceArchive var17 = IterableNodeHashTable.field_b;
@@ -80,14 +80,14 @@ final class GameResourceLoader implements LoadingSequence {
           }
           FixedVelocitySupport.field_b = null;
           IterableNodeHashTable.field_c = null;
-          AnimationPlayer.a((byte) 49);
+          AnimationPlayer.resetFrameTiming((byte) 49);
           return false;
         }
         if (HighScoreQuery.field_i != null) {
           CipherPacketBuffer.advanceLoadingProgress(61, 1);
           SpriteNumberPainter.loadPitchMusicTracks(HighScoreQuery.field_i, (byte) -122);
           HighScoreQuery.field_i = null;
-          AnimationPlayer.a((byte) 53);
+          AnimationPlayer.resetFrameTiming((byte) 53);
           return false;
         }
         if (!MyKitScreen.ensureSoundLoaded(111, Trinket.field_c)) {
@@ -161,7 +161,7 @@ final class GameResourceLoader implements LoadingSequence {
           }
           ArchiveIndex.field_m = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 96, "help_up"));
           QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 100, "help_dwn");
-          SquadGridWidget.a(ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -124, "menu", "tickbox"), true);
+          SquadGridWidget.initializeCheckboxSprites(ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -124, "menu", "tickbox"), true);
           LoadingProgressSupport.reportStageProgress(80, 100, 75);
           WeightedLruCache.field_h = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "hammer_icon"));
           CipherPacketBuffer.field_q = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 89, "hammer_icon_buy"));
@@ -193,7 +193,7 @@ final class GameResourceLoader implements LoadingSequence {
           LineupView.a(-70, RankingsScreen.field_A, 0, AnimationClip.field_g, 0, 16777215);
           Object var3 = null;
           EntityAfterimage.field_b = null;
-          AnimationPlayer.a((byte) 104);
+          AnimationPlayer.resetFrameTiming((byte) 104);
           return false;
         }
         if (ResourceArchive.field_f != null) {
@@ -240,21 +240,21 @@ final class GameResourceLoader implements LoadingSequence {
           this.a(11264, new ArgbSprite(ResourceArchive.field_f.takeFileByName("achievements_large.png", "", 63), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           MainMenuScreen.field_C = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.takeFileByName("ka_logo.png", "", 37), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           ResourceArchive.field_f = null;
-          AnimationPlayer.a((byte) 99);
+          AnimationPlayer.resetFrameTiming((byte) 99);
           return false;
         }
         if (MySquadScreen.field_H != null) {
           CipherPacketBuffer.advanceLoadingProgress(61, 4);
           GameMediaSupport.installHuffmanCodec(new HuffmanCodec(MySquadScreen.field_H.takeFileByName("huffman", "", 93)), false);
           MySquadScreen.field_H = null;
-          AnimationPlayer.a((byte) 78);
+          AnimationPlayer.resetFrameTiming((byte) 78);
           return false;
         }
         if (null != Kickabout.field_J) {
           CipherPacketBuffer.advanceLoadingProgress(61, 5);
           MatchScreen.loadMatchSprites((byte) -34, Kickabout.field_J);
           Kickabout.field_J = null;
-          AnimationPlayer.a((byte) 81);
+          AnimationPlayer.resetFrameTiming((byte) 81);
           return false;
         }
         if (KitStyleTile.field_Bb == null) {
@@ -265,7 +265,7 @@ final class GameResourceLoader implements LoadingSequence {
         KitStyleTile.field_Bb = null;
         ContextMenuItem.field_Eb = null;
         ListingRowCache.field_h = null;
-        AnimationPlayer.a((byte) 48);
+        AnimationPlayer.resetFrameTiming((byte) 48);
         return false;
     }
 
@@ -501,7 +501,7 @@ final class GameResourceLoader implements LoadingSequence {
         ArgbSprite var3;
         int var5;
         var5 = Kickabout.field_G;
-        AnimationClip.a(0, -76, false, ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, 3, new Random()));
+        AnimationClip.a(0, -76, false, ProxySocketConnector.nextBoundedInt(79, 3, new Random()));
         CipherPacketBuffer.advanceLoadingProgress(param0 ^ 12774, 7);
         TriangleRasterizer.setBrightnessAndRebuildPalette(0.6000000238418579f);
         GrayscalePaletteSupport.initializeGrayscalePalette(false);
@@ -547,7 +547,7 @@ final class GameResourceLoader implements LoadingSequence {
         if (param0 != 12763) {
           return;
         }
-        BufferedCacheFile.field_a = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-65, MarkerSliderWidget.field_E.length, new Random());
+        BufferedCacheFile.field_a = ProxySocketConnector.nextBoundedInt(-65, MarkerSliderWidget.field_E.length, new Random());
         PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
         SocialPlayerRow.resetCameraToTarget((byte) 51);
         DelayedServerPacket.a(-5, false, -2);
@@ -633,24 +633,24 @@ final class GameResourceLoader implements LoadingSequence {
         if (Trinket.field_b != null) {
           LocalizedTextLoader.loadLocalizedStrings(Trinket.field_b, 1);
           Trinket.field_b = null;
-          AnimationPlayer.a((byte) 85);
+          AnimationPlayer.resetFrameTiming((byte) 85);
         }
-        MySquadScreen.field_H = ImageProducerRasterBuffer.a((byte) -126, 3);
-        StatefulTextPainter.field_y = ImageProducerRasterBuffer.a((byte) -128, 11);
-        QuickChatKeysHelpPanel.field_Cb = ImageProducerRasterBuffer.a((byte) -128, 5);
-        EntityAfterimage.field_b = ImageProducerRasterBuffer.a((byte) -125, 6);
-        IterableNodeHashTable.field_c = ImageProducerRasterBuffer.a((byte) -127, 7);
-        FixedVelocitySupport.field_b = ImageProducerRasterBuffer.a((byte) -128, 8);
-        MatchTextInputOverlay.field_j = ImageProducerRasterBuffer.a((byte) -127, 9);
-        HighScoreQuery.field_i = ImageProducerRasterBuffer.a((byte) -127, 10);
+        MySquadScreen.field_H = ImageProducerRasterBuffer.createResourceArchive((byte) -126, 3);
+        StatefulTextPainter.field_y = ImageProducerRasterBuffer.createResourceArchive((byte) -128, 11);
+        QuickChatKeysHelpPanel.field_Cb = ImageProducerRasterBuffer.createResourceArchive((byte) -128, 5);
+        EntityAfterimage.field_b = ImageProducerRasterBuffer.createResourceArchive((byte) -125, 6);
+        IterableNodeHashTable.field_c = ImageProducerRasterBuffer.createResourceArchive((byte) -127, 7);
+        FixedVelocitySupport.field_b = ImageProducerRasterBuffer.createResourceArchive((byte) -128, 8);
+        MatchTextInputOverlay.field_j = ImageProducerRasterBuffer.createResourceArchive((byte) -127, 9);
+        HighScoreQuery.field_i = ImageProducerRasterBuffer.createResourceArchive((byte) -127, 10);
         if (param0 != 7312) {
           this.field_d = false;
         }
-        Kickabout.field_J = ImageProducerRasterBuffer.a((byte) -126, 12);
-        KitStyleTile.field_Bb = ImageProducerRasterBuffer.a((byte) -128, 14);
-        ContextMenuItem.field_Eb = ImageProducerRasterBuffer.a((byte) -126, 15);
-        ListingRowCache.field_h = ImageProducerRasterBuffer.a((byte) -126, 16);
-        ResourceArchive.field_f = ImageProducerRasterBuffer.a((byte) -126, 17);
+        Kickabout.field_J = ImageProducerRasterBuffer.createResourceArchive((byte) -126, 12);
+        KitStyleTile.field_Bb = ImageProducerRasterBuffer.createResourceArchive((byte) -128, 14);
+        ContextMenuItem.field_Eb = ImageProducerRasterBuffer.createResourceArchive((byte) -126, 15);
+        ListingRowCache.field_h = ImageProducerRasterBuffer.createResourceArchive((byte) -126, 16);
+        ResourceArchive.field_f = ImageProducerRasterBuffer.createResourceArchive((byte) -126, 17);
         ResourceArchive var4 = CanvasResizePolicy.field_g;
         ResourceArchive var3 = IterableNodeHashTable.field_b;
         BlobSubmission.field_h = new ArchivePreloader(55);

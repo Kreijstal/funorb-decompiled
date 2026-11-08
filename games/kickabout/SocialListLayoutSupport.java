@@ -34,7 +34,7 @@ final class SocialListLayoutSupport {
 
     final static void insertNodeBefore(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         if (null != param2.field_b) {
-          param2.c((byte) -109);
+          param2.unlink((byte) -109);
         }
         param2.field_b = param0.field_b;
         param2.field_d = param0;
@@ -143,7 +143,7 @@ final class SocialListLayoutSupport {
               }
             }
             if (var6.field_sb != 0) {
-              BytePlusOneCommand.a(var6, false, TournamentChampionDialog.field_F.field_Cb, -1, var6.field_yb, (int[]) null, 0L, var6.name, -1);
+              BytePlusOneCommand.createPlayerContextMenu(var6, false, TournamentChampionDialog.field_F.field_Cb, -1, var6.field_yb, (int[]) null, 0L, var6.name, -1);
               var16 = TextButton.field_v;
               var13_ref_String = IsSixCommand.field_D;
               var16.field_j.addItem(0, 7, var13_ref_String);

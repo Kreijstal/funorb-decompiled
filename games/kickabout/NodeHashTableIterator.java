@@ -54,7 +54,7 @@ final class NodeHashTableIterator implements Iterator {
               }
               var3 = var2_ref.field_d;
               if (((WorldDrawEntry) (var2_ref)).getSortY((byte) 120) < ((WorldDrawEntry) (var3)).getSortY((byte) -73)) {
-                var2_ref.c((byte) -109);
+                var2_ref.unlink((byte) -109);
                 GeneratedPanelPainter.a(var2_ref, var3, (byte) 127);
               }
               var2_ref = var3;
@@ -122,7 +122,7 @@ final class NodeHashTableIterator implements Iterator {
         if (this.field_g == null) {
           throw new IllegalStateException();
         }
-        this.field_g.c((byte) -109);
+        this.field_g.unlink((byte) -109);
         this.field_g = null;
     }
 

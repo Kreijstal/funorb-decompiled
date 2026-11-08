@@ -716,11 +716,11 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               }
             }
             if (var3 != 0) {
-              this.field_Ab.c((byte) -109);
+              this.field_Ab.unlink((byte) -109);
               this.field_Ab = null;
             } else {
               if (var5 != 0) {
-                this.field_Ab.c((byte) -109);
+                this.field_Ab.unlink((byte) -109);
                 this.field_Ab = null;
               }
             }
@@ -756,7 +756,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
             }
             if (var3 != 0 ||
               var5 != 0) {
-              this.field_Ab.c((byte) -109);
+              this.field_Ab.unlink((byte) -109);
               this.field_Ab = null;
             }
           } else {
@@ -800,7 +800,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                     IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MeshPreviewSupport.field_a, new String[]{this.field_Eb}));
                   }
                 }
-                this.field_Ab.c((byte) -109);
+                this.field_Ab.unlink((byte) -109);
                 this.field_Ab = null;
               } else {
               }
@@ -822,7 +822,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
             if (!this.field_lb) {
               if (var3 != 0 ||
                 var5 != 0) {
-                this.field_Ab.c((byte) -109);
+                this.field_Ab.unlink((byte) -109);
                 this.field_Ab = null;
               }
             } else {
@@ -830,14 +830,14 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialListProtocolSupport.field_d, new String[]{this.field_Eb}));
                 if (var3 != 0 ||
                   var5 != 0) {
-                  this.field_Ab.c((byte) -109);
+                  this.field_Ab.unlink((byte) -109);
                   this.field_Ab = null;
                 }
               } else {
                 IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MeshPreviewSupport.field_a, new String[]{this.field_Eb}));
                 if (var3 != 0 ||
                   var5 != 0) {
-                  this.field_Ab.c((byte) -109);
+                  this.field_Ab.unlink((byte) -109);
                   this.field_Ab = null;
                 }
               }
@@ -845,7 +845,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
           } else {
             if (var3 != 0 ||
               var5 != 0) {
-              this.field_Ab.c((byte) -109);
+              this.field_Ab.unlink((byte) -109);
               this.field_Ab = null;
             }
           }
