@@ -125,7 +125,7 @@ final class tl extends wh {
         return var3Lifetime1;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -62 % ((param0 - 26) / 42);
         field_k = null;
         field_j = null;

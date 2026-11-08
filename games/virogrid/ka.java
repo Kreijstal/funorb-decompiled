@@ -104,7 +104,7 @@ final class ka extends IntrusiveNode {
         gb.field_H.field_d = gb.field_H.field_d | param0;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 19 / ((55 - param0) / 49);
         field_n = null;
     }

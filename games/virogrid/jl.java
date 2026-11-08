@@ -9,11 +9,11 @@ final class jl extends WidgetContainer implements ta {
     private tg field_G;
     private tg field_H;
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         int var5 = param1 + this.field_l;
         int var6 = this.field_u + param2;
-        dj.arezzo14Font.a(ka.field_n, 20 + var5, 20 + var6, -40 + this.field_g, this.field_m - 50, 16777215, -1, 1, 0, dj.arezzo14Font.field_H);
-        super.a(param0, param1, param2, param3);
+        dj.arezzo14Font.drawParagraph(ka.field_n, 20 + var5, 20 + var6, -40 + this.field_g, this.field_m - 50, 16777215, -1, 1, 0, dj.arezzo14Font.field_H);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
     final static void a(int param0, int param1, String param2, int param3, byte param4, String param5) {
@@ -180,7 +180,7 @@ final class jl extends WidgetContainer implements ta {
         return ab.field_J;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_D = null;
         field_F = null;
         if (param0 != 15354) {

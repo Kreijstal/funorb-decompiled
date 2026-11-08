@@ -5,7 +5,7 @@ final class ef {
     static String[] field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -3) {
           ef.a((byte) 103, 47);
@@ -16,7 +16,7 @@ final class ef {
         if (param0 == 82) {
           return param1 == 2 ? true : false;
         }
-        ef.a(54);
+        ef.releaseStatics(54);
         return param1 == 2 ? true : false;
     }
 

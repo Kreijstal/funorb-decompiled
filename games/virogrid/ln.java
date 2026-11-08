@@ -37,7 +37,7 @@ final class ln {
         return false;
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         this.field_h = 0;
         if (param0 != 19) {
           return (IntrusiveNode) null;
@@ -364,9 +364,9 @@ final class ln {
         return var2_ref_l;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
-          ln.a(false);
+          ln.releaseStatics(false);
         }
         field_i = null;
         field_a = null;

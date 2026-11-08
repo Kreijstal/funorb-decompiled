@@ -11,7 +11,7 @@ final class bh {
     private int[][][] field_h;
     static int field_g;
 
-    final void a(PacketBuffer param0, wj param1) {
+    final void decode(PacketBuffer param0, wj param1) {
         int var3;
         int var4;
         int var5;
@@ -49,7 +49,7 @@ final class bh {
           }
           if (var4 != 0 ||
             this.field_d[1] != this.field_d[0]) {
-            param1.b(param0);
+            param1.decodeSegments(param0);
           }
         } else {
           var11 = this.field_d;
@@ -58,23 +58,23 @@ final class bh {
         }
     }
 
-    private final static float a(float param0) {
+    private final static float normalizeFrequency(float param0) {
         float var1 = 32.70319747924805f * (float)Math.pow(2.0, (double)param0);
         return var1 * 3.1415927410125732f / 11025.0f;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_f = (float[][]) null;
         field_c = (int[][]) null;
     }
 
-    private final float b(int param0, int param1, float param2) {
+    private final float interpolateRadius(int param0, int param1, float param2) {
         float var4 = (float)this.field_h[param0][0][param1] + param2 * (float)(this.field_h[param0][1][param1] - this.field_h[param0][0][param1]);
         var4 = var4 * 0.00152587890625f;
         return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));
     }
 
-    final int a(int param0, float param1) {
+    final int computeCoefficients(int param0, float param1) {
         float var5 = 0.0f;
         float var6 = 0.0f;
         int var7 = 0;
@@ -97,12 +97,12 @@ final class bh {
         if (this.field_b[param0] == 0) {
           return 0;
         }
-        var3Lifetime1 = this.b(param0, 0, param1);
-        field_f[param0][0] = -2.0f * var3Lifetime1 * (float)Math.cos((double)this.a(param0, 0, param1));
+        var3Lifetime1 = this.interpolateRadius(param0, 0, param1);
+        field_f[param0][0] = -2.0f * var3Lifetime1 * (float)Math.cos((double)this.interpolateFrequency(param0, 0, param1));
         field_f[param0][1] = var3Lifetime1 * var3Lifetime1;
         for (var4 = 1; var4 < this.field_b[param0]; var4++) {
-          var3Lifetime2 = this.b(param0, var4, param1);
-          var5 = -2.0f * var3Lifetime2 * (float)Math.cos((double)this.a(param0, var4, param1));
+          var3Lifetime2 = this.interpolateRadius(param0, var4, param1);
+          var5 = -2.0f * var3Lifetime2 * (float)Math.cos((double)this.interpolateFrequency(param0, var4, param1));
           var6 = var3Lifetime2 * var3Lifetime2;
           field_f[param0][var4 * 2 + 1] = field_f[param0][var4 * 2 - 1] * var6;
           field_f[param0][var4 * 2] = field_f[param0][var4 * 2 - 1] * var5 + field_f[param0][var4 * 2 - 2] * var6;
@@ -134,10 +134,10 @@ final class bh {
         this.field_h = new int[2][2][4];
     }
 
-    private final float a(int param0, int param1, float param2) {
+    private final float interpolateFrequency(int param0, int param1, float param2) {
         float var4 = (float)this.field_e[param0][0][param1] + param2 * (float)(this.field_e[param0][1][param1] - this.field_e[param0][0][param1]);
         var4 = var4 * 0.0001220703125f;
-        return bh.a(var4);
+        return bh.normalizeFrequency(var4);
     }
 
     static {

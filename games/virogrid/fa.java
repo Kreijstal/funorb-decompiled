@@ -99,12 +99,12 @@ final class fa extends IntrusiveNode {
                 pe.field_k = pe.field_k - 1;
               }
             }
-            Rasterizer.a(651 + (-var4 - 8), -pe.field_k + var2, 8 + var4, 52, 4, 0, 200);
+            Rasterizer.fillRoundedRectangleBlended(651 + (-var4 - 8), -pe.field_k + var2, 8 + var4, 52, 4, 0, 200);
             var6 = (int)kd.field_t - 8;
             var7 = 16;
             if (var6 > 8 &&
               var7 > 8) {
-              Rasterizer.e(646 - (int)kd.field_t, 2 + (var2 - 20), var6, var7, 4, 1141646);
+              Rasterizer.drawRoundedRectangle(646 - (int)kd.field_t, 2 + (var2 - 20), var6, var7, 4, 1141646);
             }
             var8 = null;
             if (he.field_ec == 1) {
@@ -114,7 +114,7 @@ final class fa extends IntrusiveNode {
               var8 = sl.textSwitch2d.toUpperCase();
             }
             if (0 == ai.field_f) {
-              vg.smallFont.b((String) (var8), -((int)kd.field_t >> 1) + (642 - (vg.smallFont.a((String) (var8)) >> 1)), -vg.smallFont.field_G + (var2 - 2 - 2), var3_int, -1);
+              vg.smallFont.drawLeft((String) (var8), -((int)kd.field_t >> 1) + (642 - (vg.smallFont.textWidth((String) (var8)) >> 1)), -vg.smallFont.field_G + (var2 - 2 - 2), var3_int, -1);
             } else {
               var9 = null;
               if (wn.field_C == 1) {
@@ -123,8 +123,8 @@ final class fa extends IntrusiveNode {
               if (2 == wn.field_C) {
                 var9 = sl.textSwitch2d.toUpperCase();
               }
-              vg.smallFont.c((String) (var8), 642 - ((int)kd.field_t >> 1) - (vg.smallFont.a((String) (var8)) >> 1), -2 - vg.smallFont.field_G + (var2 - 2), var3_int, -1, 256 - ai.field_f);
-              vg.smallFont.c((String) (var9), -((int)kd.field_t >> 1) + 642 - (vg.smallFont.a((String) (var8)) >> 1), -2 - vg.smallFont.field_G + (-2 + var2), var3_int, -1, ai.field_f);
+              vg.smallFont.drawLeftAlpha((String) (var8), 642 - ((int)kd.field_t >> 1) - (vg.smallFont.textWidth((String) (var8)) >> 1), -2 - vg.smallFont.field_G + (var2 - 2), var3_int, -1, 256 - ai.field_f);
+              vg.smallFont.drawLeftAlpha((String) (var9), -((int)kd.field_t >> 1) + 642 - (vg.smallFont.textWidth((String) (var8)) >> 1), -2 - vg.smallFont.field_G + (-2 + var2), var3_int, -1, ai.field_f);
             }
           }
           if (he.field_ec == 2 ||
@@ -143,11 +143,11 @@ final class fa extends IntrusiveNode {
                 var5Lifetime1 = 16777215;
               }
               var6Lifetime1 = 26 * var4Lifetime1 + 764 - (int)kd.field_t * 2 + 10;
-              Rasterizer.e(6 + var6Lifetime1, var2 - 16, 22, 16, 4, 1141646);
+              Rasterizer.drawRoundedRectangle(6 + var6Lifetime1, var2 - 16, 22, 16, 4, 1141646);
               if (var3_intLifetime1 != 256) {
-                kd.viewIcons[var4Lifetime1].b(var6Lifetime1 + 12, var2 - 13, var5Lifetime1);
+                kd.viewIcons[var4Lifetime1].drawTintedGrayscale(var6Lifetime1 + 12, var2 - 13, var5Lifetime1);
               } else {
-                kd.viewIcons[var4Lifetime1].b(12 + var6Lifetime1, -13 + var2, var5Lifetime1);
+                kd.viewIcons[var4Lifetime1].drawTintedGrayscale(12 + var6Lifetime1, -13 + var2, var5Lifetime1);
               }
             }
           }
@@ -184,13 +184,13 @@ final class fa extends IntrusiveNode {
               }
             }
           }
-          var4Lifetime3 = 16 + vg.smallFont.a(var3);
+          var4Lifetime3 = 16 + vg.smallFont.textWidth(var3);
           var5Lifetime2 = 20;
           var6Lifetime2 = nl.field_u - var4Lifetime3;
           var7Lifetime1 = hk.field_Jb;
-          Rasterizer.c(var6Lifetime2, -var5Lifetime2 + (var7Lifetime1 + 2), var4Lifetime3, var5Lifetime2, 4, 0);
-          Rasterizer.e(var6Lifetime2 + 3, -16 + var7Lifetime1, var4Lifetime3 - 6, 16, 4, 1141646);
-          vg.smallFont.b(var3, 8 + var6Lifetime2, -2 + var7Lifetime1 - vg.smallFont.field_G, 16777215, -1);
+          Rasterizer.fillRoundedRectangle(var6Lifetime2, -var5Lifetime2 + (var7Lifetime1 + 2), var4Lifetime3, var5Lifetime2, 4, 0);
+          Rasterizer.drawRoundedRectangle(var6Lifetime2 + 3, -16 + var7Lifetime1, var4Lifetime3 - 6, 16, 4, 1141646);
+          vg.smallFont.drawLeft(var3, 8 + var6Lifetime2, -2 + var7Lifetime1 - vg.smallFont.field_G, 16777215, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

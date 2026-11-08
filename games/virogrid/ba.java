@@ -77,7 +77,7 @@ abstract class ba {
 
     final static void b(int param0) {
         if (param0 != 14) {
-          ba.a(-71);
+          ba.releaseStatics(-71);
         }
     }
 
@@ -85,7 +85,7 @@ abstract class ba {
 
     abstract byte[] b(int param0, int param1);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != 14) {

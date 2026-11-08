@@ -86,14 +86,14 @@ final class kd extends qe {
             var8 = param0[1].field_u;
             param0[0].c(param4, param1, param5);
             param0[2].c(param3 + param4 - var7, param1, param5);
-            Rasterizer.b(od.field_m);
-            Rasterizer.h(param4 + var6_int, param1, -var7 + (param4 + param3), param1 + param0[1].field_z);
+            Rasterizer.saveClip(od.field_m);
+            Rasterizer.intersectClip(param4 + var6_int, param1, -var7 + (param4 + param3), param1 + param0[1].field_z);
             var9 = param4 + var6_int;
             var10 = param4 + (param3 - var7);
             for (param4 = var9; var10 > param4; param4 = param4 + var8) {
               param0[1].c(param4, param1, param5);
             }
-            Rasterizer.a(od.field_m);
+            Rasterizer.restoreClip(od.field_m);
             if (param2) {
               var12 = (Sprite[]) null;
               kd.a((Sprite[]) null, 31, true, 51, -96, 109);

@@ -30,7 +30,7 @@ final class jj {
         this.field_c = null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 < 55) {
           field_g = (String) null;
@@ -41,7 +41,7 @@ final class jj {
         field_m = null;
     }
 
-    final jj a(int param0, Sprite[] param1) {
+    final jj setFrameSprites(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
         jj stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -243,7 +243,7 @@ final class jj {
     final jj b(boolean param0, int param1) {
         this.field_b = param1;
         if (!param0) {
-          jj.a((byte) -66);
+          jj.releaseStatics((byte) -66);
         }
         return this;
     }
@@ -290,9 +290,9 @@ final class jj {
             if (param2.field_k == 2) {
               var7 = var7 + (param0.field_m - this.field_c.field_z);
             }
-            this.field_c.d(var6_int, var7);
+            this.field_c.drawTransparent(var6_int, var7);
           }
-          var6 = param2.c(param0, 218479361);
+          var6 = param2.getDisplayText(param0, 218479361);
           if (var6 != null &&
             param2.field_i != null &&
             0 <= this.field_b) {
@@ -322,7 +322,7 @@ final class jj {
             } else {
               stackIn_27_8 = 256;
             }
-            ((e) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param2.field_j, param2.field_k, param2.field_f);
+            ((e) (Object) stackIn_20_0).drawParagraphAlpha(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param2.field_j, param2.field_k, param2.field_f);
           }
           if (param1 != 2) {
             this.field_l = 118;

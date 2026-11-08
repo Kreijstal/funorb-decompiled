@@ -106,21 +106,21 @@ final class lj implements WidgetListener {
             this.a(107, (UiWidget) null, true, -95, -123);
           }
           var7 = 5592405;
-          Rasterizer.b(param0 + param1.field_l, param1.field_u + param3, param1.field_g, param1.field_m, this.field_l);
+          Rasterizer.fillRectangle(param0 + param1.field_l, param1.field_u + param3, param1.field_g, param1.field_m, this.field_l);
           if (param2) {
             var7 = 16777215;
           }
           var8 = param0 - (-param1.field_l - this.field_f);
           var9 = this.field_a + (param3 + param1.field_u);
-          Rasterizer.f(var8, var9, this.field_n, this.field_o, 5592405);
-          Rasterizer.b(var8, var9, this.field_n, this.field_o, var7);
+          Rasterizer.drawDropShadow(var8, var9, this.field_n, this.field_o, 5592405);
+          Rasterizer.fillRectangle(var8, var9, this.field_n, this.field_o, var7);
           if (var6.field_z) {
-            Rasterizer.a(var8, var9, this.field_n + var8, this.field_o + var9, 1);
-            Rasterizer.a(var8 + this.field_n, var9, var8, this.field_o + var9, 1);
+            Rasterizer.drawLine(var8, var9, this.field_n + var8, this.field_o + var9, 1);
+            Rasterizer.drawLine(var8 + this.field_n, var9, var8, this.field_o + var9, 1);
           }
           if (null != this.field_p) {
             var10 = this.field_n + (this.field_f + this.field_e);
-            this.field_p.a(param1.field_n, var10 + (param1.field_l + param0), param1.field_u + param3 + this.field_q, param1.field_g - var10 - this.field_e, -(this.field_e << 1) + param1.field_m, this.field_c, this.field_b, this.field_h, this.field_m, 0);
+            this.field_p.drawParagraph(param1.field_n, var10 + (param1.field_l + param0), param1.field_u + param3 + this.field_q, param1.field_g - var10 - this.field_e, -(this.field_e << 1) + param1.field_m, this.field_c, this.field_b, this.field_h, this.field_m, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

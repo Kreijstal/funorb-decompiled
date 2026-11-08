@@ -45,7 +45,7 @@ final class ca extends WidgetContainer implements bo, ta {
         }
     }
 
-    public final void a(wa param0, int param1) {
+    public final void onTextChanged(wa param0, int param1) {
         try {
           if (param1 != 13) {
             field_R = (String) null;
@@ -55,7 +55,7 @@ final class ca extends WidgetContainer implements bo, ta {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_L = null;
         field_Q = null;
         field_R = null;
@@ -225,7 +225,7 @@ final class ca extends WidgetContainer implements bo, ta {
           this.field_u = 15;
           var7 = dj.arezzo14Font;
           if (this.field_S != null) {
-            this.field_u = this.field_u + (var7.a(this.field_S, -40 + this.field_g, var7.field_H) + 5);
+            this.field_u = this.field_u + (var7.paragraphHeight(this.field_S, -40 + this.field_g, var7.field_H) + 5);
           }
           var8 = uh.field_g;
           var9 = bd.a(-78, mb.g((byte) 39));
@@ -358,7 +358,7 @@ final class ca extends WidgetContainer implements bo, ta {
         RuntimeException var3 = null;
         try {
           if (this.field_E == param1) {
-            this.field_K.a((UiWidget) (this), -8515);
+            this.field_K.focusNext((UiWidget) (this), -8515);
           }
           if (param0) {
             field_G = 96;
@@ -462,14 +462,14 @@ final class ca extends WidgetContainer implements bo, ta {
 
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         if (this.field_S != null) {
-          dj.arezzo14Font.a(this.field_S, this.field_l + param1 + 20, param2 - (-this.field_u - 15), -40 + this.field_g, this.field_m, 16777215, -1, 1, 0, dj.arezzo14Font.field_H);
+          dj.arezzo14Font.drawParagraph(this.field_S, this.field_l + param1 + 20, param2 - (-this.field_u - 15), -40 + this.field_g, this.field_m, 16777215, -1, 1, 0, dj.arezzo14Font.field_H);
         }
         if (this.field_J != null) {
-          Rasterizer.b(param1 + 10, param2 + 134, -20 + this.field_g, 4210752);
+          Rasterizer.drawHorizontalLine(param1 + 10, param2 + 134, -20 + this.field_g, 4210752);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
     final String f(int param0) {

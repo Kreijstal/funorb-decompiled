@@ -6,7 +6,7 @@ final class k {
     static byte[][] field_b;
     static int[] field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 1000) {
           field_a = null;
           field_b = (byte[][]) null;

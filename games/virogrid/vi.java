@@ -36,7 +36,7 @@ final class vi extends bk {
         pa.field_l = kh.field_e;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_m = null;
         if (param0 == 31856) {

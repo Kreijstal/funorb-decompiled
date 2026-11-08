@@ -6,7 +6,7 @@ interface gm {
 
     public abstract int b(int param0, UiWidget param1, int param2);
 
-    public abstract int a(int param0, UiWidget param1, int param2);
+    public abstract int getTextY(int param0, UiWidget param1, int param2);
 
     public abstract ie a(UiWidget param0, byte param1);
 

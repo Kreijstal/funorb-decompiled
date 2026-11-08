@@ -236,7 +236,7 @@ final class og implements Runnable {
               break;
             }
             if (this.field_p.position == this.field_p.payload.length) {
-              throw og.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_p.payload.length + " " + this.field_r));
+              throw og.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.field_p.payload.length + " " + this.field_r));
             }
             var1 = this;
             synchronized (var1) {
@@ -452,7 +452,7 @@ final class og implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_k = null;
         field_l = null;
@@ -490,7 +490,7 @@ final class og implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

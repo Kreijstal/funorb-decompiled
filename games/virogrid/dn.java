@@ -21,7 +21,7 @@ final class dn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -41,7 +41,7 @@ final class dn {
         if (param0 == 8192) {
           return;
         }
-        dn.a((byte) 73);
+        dn.releaseStatics((byte) 73);
     }
 
     static {

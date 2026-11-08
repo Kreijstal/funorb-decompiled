@@ -7,7 +7,7 @@ final class pi {
     static String field_c;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_d = null;
         if (param0 != -29216) {
@@ -359,7 +359,7 @@ final class pi {
               } else {
                 var12.field_tc.a(0, pg.field_e, 68, (byte) -110, var31);
               }
-              var12.field_Vb.field_V = e.a(var12.field_Vb.field_C, var32, 78);
+              var12.field_Vb.field_V = e.truncateWithEllipsis(var12.field_Vb.field_C, var32, 78);
               var12.field_Vb.a(70, pg.field_e, 78, (byte) -50, var31);
               if (var12.field_Vb.field_S &&
                 !var12.field_Vb.field_V.equals(var32)) {
@@ -372,7 +372,7 @@ final class pi {
               } else {
                 var12.field_Nb.field_lb = 2;
                 var12.field_Gb.field_V = "/" + var12.field_vc;
-                var33_int = (-var12.field_Gb.field_C.a("/") + 348) / 2;
+                var33_int = (-var12.field_Gb.field_C.textWidth("/") + 348) / 2;
                 var12.field_Nb.a(150, pg.field_e, -150 + var33_int, (byte) -67, var31);
                 var12.field_Gb.a(var33_int, pg.field_e, 198 - var33_int, (byte) -47, var31);
               }
@@ -476,7 +476,7 @@ final class pi {
                 }
                 var38 = var37.toString();
                 var12.field_uc.field_V = var38;
-                var39Lifetime1 = var12.field_uc.field_C.b(var38, -(var12.field_uc.field_z * 2) + var12.field_K);
+                var39Lifetime1 = var12.field_uc.field_C.wrappedLineCount(var38, -(var12.field_uc.field_z * 2) + var12.field_K);
                 var12.field_uc.a(0, pg.field_e * var39Lifetime1, var12.field_K, (byte) -100, var31);
                 var31 = var31 + pg.field_e * var39Lifetime1;
               }
@@ -493,7 +493,7 @@ final class pi {
             }
             var33 = ba.a(var32, var12.field_Eb, (byte) 83);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Tb.field_C.b(var33, -qi.field_d + var12.field_K - qi.field_d);
+              var34_intLifetime1 = var12.field_Tb.field_C.wrappedLineCount(var33, -qi.field_d + var12.field_K - qi.field_d);
               var12.field_Tb.field_H = 256 * var12.field_Mb / fn.field_c;
               var12.field_Tb.field_V = var33;
               var12.field_Tb.a(qi.field_d, var34_intLifetime1 * pg.field_e, -(2 * qi.field_d) + var12.field_K, (byte) -48, var31);

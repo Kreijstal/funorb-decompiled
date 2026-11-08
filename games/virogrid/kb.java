@@ -54,16 +54,16 @@ final class kb {
           var6 = Rasterizer.field_f;
           var7 = Rasterizer.field_d;
           da.field_h = new Sprite(10, 14);
-          da.field_h.b();
+          da.field_h.makeRasterTarget();
           var8 = 2;
           while (var8 < 7) {
-            Rasterizer.d(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
+            Rasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
             var8++;
             if (var9 != 0) {
               return;
             }
           }
-          Rasterizer.a(var7, var5, var6);
+          Rasterizer.setTarget(var7, var5, var6);
           dc.field_V = RasterBuffer.a(dh.field_k, sd.field_a, var4, 49, gk.field_e);
           cm.field_h.field_W = new IntrusiveDeque();
           return;
@@ -121,7 +121,7 @@ final class kb {
             field_b = (hm) null;
           }
           lm.a(param1 - 16865);
-          Rasterizer.a(param0.field_B, param0.field_u, param0.field_z);
+          Rasterizer.setTarget(param0.field_B, param0.field_u, param0.field_z);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

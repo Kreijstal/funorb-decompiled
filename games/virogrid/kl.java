@@ -201,14 +201,14 @@ final class kl extends WidgetContainer implements ta {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }
         e var5 = dj.arezzo14Font;
         if (this.field_H != null) {
-          var5.a(bg.field_Pb, this.field_l + param1, param2 + this.field_u, this.field_g, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_H);
+          var5.drawParagraph(bg.field_Pb, this.field_l + param1, param2 + this.field_u, this.field_g, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_H);
         }
     }
 

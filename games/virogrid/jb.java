@@ -31,7 +31,7 @@ final class jb extends rd {
         if (param0 > 44) {
           return false;
         }
-        this.a((byte) 30, -120, 125, 19);
+        this.drawLayer((byte) 30, -120, 125, 19);
         return false;
     }
 
@@ -158,7 +158,7 @@ final class jb extends rd {
 
     private final void a(UiWidget param0, String param1, int param2, int param3, int param4) {
         try {
-          dk.arezzo12Font.c(param1, param0.field_l + param3 + (param0.field_g >> 1), -5 + param2 + param0.field_u, 16777215, -1);
+          dk.arezzo12Font.drawCentered(param1, param0.field_l + param3 + (param0.field_g >> 1), -5 + param2 + param0.field_u, 16777215, -1);
           if (param4 < 6) {
             jb.a(75, -12);
           }
@@ -233,9 +233,9 @@ final class jb extends rd {
         }
     }
 
-    final void a(int param0, al param1) {
+    final void setBirthDateValidator(int param0, al param1) {
         try {
-          super.a(param0, param1);
+          super.setBirthDateValidator(param0, param1);
           this.field_G.field_o = (cd) ((Object) param1);
           this.field_H.field_o = (cd) ((Object) param1);
           this.field_F.field_o = (cd) ((Object) param1);
@@ -244,8 +244,8 @@ final class jb extends rd {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
         if (param3 == 0) {
           param1 = param1 + this.field_l;
           param2 = param2 + this.field_u;
@@ -298,7 +298,7 @@ final class jb extends rd {
         Throwable decompiledCaughtException = null;
         if (!param0) {
           var3 = (al) null;
-          this.a(-44, (al) null);
+          this.setBirthDateValidator(-44, (al) null);
         }
         try {
           stackIn_3_0 = Integer.parseInt(this.field_F.field_n);

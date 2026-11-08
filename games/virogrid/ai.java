@@ -41,8 +41,8 @@ final class ai {
           ai.a(false);
           var1_ref = (qg) (jk.field_a.b(15));
           if (var1_ref != null) {
-            Rasterizer.a(var1_ref.field_p, var1_ref.field_q, var1_ref.field_v);
-            Rasterizer.a(var1_ref.field_o, var1_ref.field_k, var1_ref.field_t, var1_ref.field_i);
+            Rasterizer.setTarget(var1_ref.field_p, var1_ref.field_q, var1_ref.field_v);
+            Rasterizer.setClip(var1_ref.field_o, var1_ref.field_k, var1_ref.field_t, var1_ref.field_i);
             var1_ref.field_p = null;
             sg.field_m.a(var1_ref, (byte) -84);
             return;
@@ -51,8 +51,8 @@ final class ai {
         }
         var1_refLifetime1 = (qg) (jk.field_a.b(15));
         if (var1_refLifetime1 != null) {
-          Rasterizer.a(var1_refLifetime1.field_p, var1_refLifetime1.field_q, var1_refLifetime1.field_v);
-          Rasterizer.a(var1_refLifetime1.field_o, var1_refLifetime1.field_k, var1_refLifetime1.field_t, var1_refLifetime1.field_i);
+          Rasterizer.setTarget(var1_refLifetime1.field_p, var1_refLifetime1.field_q, var1_refLifetime1.field_v);
+          Rasterizer.setClip(var1_refLifetime1.field_o, var1_refLifetime1.field_k, var1_refLifetime1.field_t, var1_refLifetime1.field_i);
           var1_refLifetime1.field_p = null;
           sg.field_m.a(var1_refLifetime1, (byte) -84);
           return;

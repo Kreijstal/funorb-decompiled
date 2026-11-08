@@ -33,7 +33,7 @@ final class am {
         am.a((byte) -28, 121);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 106 % ((51 - param0) / 33);
         field_c = null;
         field_a = null;

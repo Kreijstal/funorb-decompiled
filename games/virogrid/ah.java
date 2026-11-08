@@ -65,9 +65,9 @@ abstract class ah {
 
     abstract void a(int param0, int param1, int param2);
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         if (param0 != -115) {
           return;

@@ -52,7 +52,7 @@ final class w extends tg {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_F = null;
         field_M = null;
         field_L = null;
@@ -133,7 +133,7 @@ final class w extends tg {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         Sprite var15 = null;
         Sprite var16 = null;
         Sprite var12 = null;
@@ -142,7 +142,7 @@ final class w extends tg {
         int var11 = Virogrid.field_F ? 1 : 0;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }
@@ -156,32 +156,32 @@ final class w extends tg {
           if (null == hh.field_a) {
             hh.field_a = new Sprite(var9, var10);
             kb.a(hh.field_a, 16865);
-            var15.a(112, 144, var15.field_u << 4, var15.field_z << 4, -this.field_N << 10, 4096);
+            var15.drawRotatedAboutPivot(112, 144, var15.field_u << 4, var15.field_z << 4, -this.field_N << 10, 4096);
             ai.a(true);
-            hh.field_a.e(var5 - var15.field_u, -var15.field_z + var6, 256);
+            hh.field_a.drawAdditive(var5 - var15.field_u, -var15.field_z + var6, 256);
             return;
           }
           if (var9 > hh.field_a.field_w) {
             hh.field_a = new Sprite(var9, var10);
             kb.a(hh.field_a, 16865);
-            var15.a(112, 144, var15.field_u << 4, var15.field_z << 4, -this.field_N << 10, 4096);
+            var15.drawRotatedAboutPivot(112, 144, var15.field_u << 4, var15.field_z << 4, -this.field_N << 10, 4096);
             ai.a(true);
-            hh.field_a.e(var5 - var15.field_u, -var15.field_z + var6, 256);
+            hh.field_a.drawAdditive(var5 - var15.field_u, -var15.field_z + var6, 256);
             return;
           }
           if (hh.field_a.field_p < var10) {
             hh.field_a = new Sprite(var9, var10);
             kb.a(hh.field_a, 16865);
-            var15.a(112, 144, var15.field_u << 4, var15.field_z << 4, -this.field_N << 10, 4096);
+            var15.drawRotatedAboutPivot(112, 144, var15.field_u << 4, var15.field_z << 4, -this.field_N << 10, 4096);
             ai.a(true);
-            hh.field_a.e(var5 - var15.field_u, -var15.field_z + var6, 256);
+            hh.field_a.drawAdditive(var5 - var15.field_u, -var15.field_z + var6, 256);
             return;
           }
           kb.a(hh.field_a, 16865);
-          Rasterizer.c();
-          var15.a(112, 144, var15.field_u << 4, var15.field_z << 4, -this.field_N << 10, 4096);
+          Rasterizer.clear();
+          var15.drawRotatedAboutPivot(112, 144, var15.field_u << 4, var15.field_z << 4, -this.field_N << 10, 4096);
           ai.a(true);
-          hh.field_a.e(var5 - var15.field_u, -var15.field_z + var6, 256);
+          hh.field_a.drawAdditive(var5 - var15.field_u, -var15.field_z + var6, 256);
           return;
         }
         if (var8 == te.field_d) {
@@ -191,44 +191,44 @@ final class w extends tg {
           if (null == hh.field_a) {
             hh.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             kb.a(hh.field_a, 16865);
-            var16.a(112, 144, var16.field_u << 4, var16.field_z << 4, -this.field_N << 10, 4096);
+            var16.drawRotatedAboutPivot(112, 144, var16.field_u << 4, var16.field_z << 4, -this.field_N << 10, 4096);
             ai.a(true);
-            hh.field_a.e(var5 - var16.field_u, -var16.field_z + var6, 256);
+            hh.field_a.drawAdditive(var5 - var16.field_u, -var16.field_z + var6, 256);
             return;
           }
           if (var9Lifetime1 > hh.field_a.field_w) {
             hh.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             kb.a(hh.field_a, 16865);
-            var16.a(112, 144, var16.field_u << 4, var16.field_z << 4, -this.field_N << 10, 4096);
+            var16.drawRotatedAboutPivot(112, 144, var16.field_u << 4, var16.field_z << 4, -this.field_N << 10, 4096);
             ai.a(true);
-            hh.field_a.e(var5 - var16.field_u, -var16.field_z + var6, 256);
+            hh.field_a.drawAdditive(var5 - var16.field_u, -var16.field_z + var6, 256);
             return;
           }
           if (hh.field_a.field_p < var10Lifetime1) {
             hh.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             kb.a(hh.field_a, 16865);
-            var16.a(112, 144, var16.field_u << 4, var16.field_z << 4, -this.field_N << 10, 4096);
+            var16.drawRotatedAboutPivot(112, 144, var16.field_u << 4, var16.field_z << 4, -this.field_N << 10, 4096);
             ai.a(true);
-            hh.field_a.e(var5 - var16.field_u, -var16.field_z + var6, 256);
+            hh.field_a.drawAdditive(var5 - var16.field_u, -var16.field_z + var6, 256);
             return;
           }
           kb.a(hh.field_a, 16865);
-          Rasterizer.c();
-          var16.a(112, 144, var16.field_u << 4, var16.field_z << 4, -this.field_N << 10, 4096);
+          Rasterizer.clear();
+          var16.drawRotatedAboutPivot(112, 144, var16.field_u << 4, var16.field_z << 4, -this.field_N << 10, 4096);
           ai.a(true);
-          hh.field_a.e(var5 - var16.field_u, -var16.field_z + var6, 256);
+          hh.field_a.drawAdditive(var5 - var16.field_u, -var16.field_z + var6, 256);
           return;
         }
         if (var8 == ee.field_c) {
           var12 = bf.field_p[2];
-          var12.e(-(var12.field_w >> 1) + var5, var6 - (var12.field_p >> 1), 256);
+          var12.drawAdditive(-(var12.field_w >> 1) + var5, var6 - (var12.field_p >> 1), 256);
           return;
         }
         if (bm.field_i != var8) {
           return;
         }
         Sprite var13 = bf.field_p[1];
-        var13.e(var5 - (var13.field_w >> 1), -(var13.field_p >> 1) + var6, 256);
+        var13.drawAdditive(var5 - (var13.field_w >> 1), -(var13.field_p >> 1) + var6, 256);
     }
 
     final String d(int param0) {
@@ -257,7 +257,7 @@ final class w extends tg {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

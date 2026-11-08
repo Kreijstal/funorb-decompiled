@@ -277,10 +277,10 @@ final class nl extends aj {
         return (qe.field_m << 2) + (ca.field_D << 4) + BufferedSocket.field_t;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_v = null;
         if (param0 < 119) {
-          nl.c(46);
+          nl.releaseStatics(46);
         }
     }
 
@@ -346,7 +346,7 @@ final class nl extends aj {
             }
             return;
           }
-          ek.a(this.field_w, 0, param2.field_w, 0, 6);
+          ek.copy(this.field_w, 0, param2.field_w, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

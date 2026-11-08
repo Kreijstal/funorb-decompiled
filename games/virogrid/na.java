@@ -19,7 +19,7 @@ final class na extends SpriteWidget {
           oc.field_n = param0;
           qc.field_h = true;
           if (param2 != -1) {
-            na.e((byte) 44);
+            na.releaseStatics((byte) 44);
           }
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "na.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -55,7 +55,7 @@ final class na extends SpriteWidget {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Fb = null;
         field_Eb = null;
         if (param0 != 56) {
@@ -104,7 +104,7 @@ final class na extends SpriteWidget {
           for (var12 = 0; dl.field_a.length > var12; var12++) {
             var13 = new SpriteWidget(0L, param3, lb.field_b[var12]);
             var14 = new SpriteWidget(0L, param3, dl.field_a[var12]);
-            var15 = param3.field_C.a(dl.field_a[var12]);
+            var15 = param3.field_C.textWidth(dl.field_a[var12]);
             var13.a(20, 15, 65, (byte) -76, var10);
             if (var11 < var15) {
               var11 = var15;

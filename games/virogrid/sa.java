@@ -30,7 +30,7 @@ final class sa extends IntrusiveNode {
         int var1 = -105 / ((-9 - param0) / 56);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_o = null;
         int var1 = 84 / ((param0 - 23) / 62);

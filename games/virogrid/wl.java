@@ -9,7 +9,7 @@ final class wl {
     static int[] field_c;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_e = null;
         int var1 = -54 / ((param0 + 12) / 57);
@@ -82,15 +82,15 @@ final class wl {
 
     final static void a(PlatformTaskDispatcher param0, i param1, int param2, int param3, boolean param4, java.awt.Component param5, int param6, int param7) {
         try {
-          ua.a(param6, param4, 10);
+          ua.configure(param6, param4, 10);
           ae.field_g = ua.a(param0, param5, 0, param7);
           ac.field_c = ua.a(param0, param5, 1, param2);
           hd.field_g = new r();
           nf.field_e = 1000 * param2 / param6;
-          ac.field_c.a(hd.field_g);
+          ac.field_c.setStream(hd.field_g);
           vg.field_B = param1;
           vg.field_B.e(2, c.field_a);
-          ae.field_g.a(vg.field_B);
+          ae.field_g.setStream(vg.field_B);
           if (param3 <= 104) {
             field_b = -11;
           }

@@ -22,7 +22,7 @@ final class gn extends tg {
         }
     }
 
-    public static void g(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_H = null;
         if (!param0) {
           String var2 = (String) null;
@@ -44,7 +44,7 @@ final class gn extends tg {
         }
         Sprite var4 = new Sprite(oj.field_Kb, se.field_d, BufferedSocket.field_w[0], mb.field_bb[0], db.field_k[0], gb.field_F[0], var3);
         if (param0 != -9) {
-          gn.g(true);
+          gn.releaseStatics(true);
         }
         pe.b((byte) -28);
         return var4;

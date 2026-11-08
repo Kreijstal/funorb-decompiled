@@ -13,7 +13,7 @@ final class ul {
 
     final static void b(byte param0) {
         MouseInputHandler.field_b = MouseInputHandler.field_b - 1;
-        Rasterizer.a(ph.field_l[MouseInputHandler.field_b], kn.field_K[MouseInputHandler.field_b], se.field_e[MouseInputHandler.field_b]);
+        Rasterizer.setTarget(ph.field_l[MouseInputHandler.field_b], kn.field_K[MouseInputHandler.field_b], se.field_e[MouseInputHandler.field_b]);
         if (param0 >= 79) {
           Rasterizer.field_i = pb.field_i[MouseInputHandler.field_b];
           Rasterizer.field_k = CellAnimator.field_i[MouseInputHandler.field_b];
@@ -101,7 +101,7 @@ final class ul {
         this.field_d = param0;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_c = null;
         field_e = null;

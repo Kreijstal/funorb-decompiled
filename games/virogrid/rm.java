@@ -46,10 +46,10 @@ final class rm extends ah {
           var6 <= 0) {
           return;
         }
-        rm.b(Rasterizer.field_d, this.field_n, this.field_m, var5, var4, var7, var6, var8, var9, param2);
+        rm.blitAlpha(Rasterizer.field_d, this.field_n, this.field_m, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void b(int param0, int param1) {
+    final void drawFlippedHorizontal(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -90,10 +90,10 @@ final class rm extends ah {
           var5 <= 0) {
           return;
         }
-        rm.c(Rasterizer.field_d, this.field_n, this.field_m, 0, var4, var3, var6, var5, var7, var8);
+        rm.copyNonzeroPaletteRowsReversed(Rasterizer.field_d, this.field_n, this.field_m, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -134,10 +134,10 @@ final class rm extends ah {
           var5 <= 0) {
           return;
         }
-        rm.a(Rasterizer.field_d, this.field_n, this.field_m, 0, var4, var3, var6, var5, var7, var8);
+        rm.copyNonzeroPaletteRows(Rasterizer.field_d, this.field_n, this.field_m, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyNonzeroPaletteRows(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -223,7 +223,7 @@ final class rm extends ah {
         this.field_l = 0;
     }
 
-    private final static void c(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyNonzeroPaletteRowsReversed(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -307,7 +307,7 @@ final class rm extends ah {
         this.field_m = new int[param2];
     }
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitAlpha(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;

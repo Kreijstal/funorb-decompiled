@@ -14,7 +14,7 @@ final class ij extends IntrusiveNode {
     int field_g;
     static na field_j;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 != -25621) {
           field_n = (nh[]) null;
@@ -201,7 +201,7 @@ final class ij extends IntrusiveNode {
           var2 = ge.textBootsequenceHalloween;
         }
         String var3 = var2.substring(0, var1 <= var2.length() ? var1 : var2.length());
-        mc.menuFont.a(var3, 120, 100, 400, 200, 1141646, -1, 0, 0, 0);
+        mc.menuFont.drawParagraph(var3, 120, 100, 400, 200, 1141646, -1, 0, 0, 0);
         if (param0 != 105) {
           int[] var4 = (int[]) null;
           ij.a((int[]) null, 50, -10, -91, (int[]) null);

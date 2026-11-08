@@ -14,7 +14,7 @@ final class te extends IOException {
     static String field_a;
     static int field_h;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_b = null;
         field_a = null;

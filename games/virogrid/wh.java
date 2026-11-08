@@ -11,7 +11,7 @@ abstract class wh {
 
     final static int a(byte param0) {
         if (param0 != 5) {
-          wh.a(109);
+          wh.releaseStatics(109);
         }
         return (int)(1000000000L / hd.field_f);
     }
@@ -221,7 +221,7 @@ abstract class wh {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;

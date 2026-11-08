@@ -11,12 +11,12 @@ final class kg {
     private String field_f;
     static int field_e;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_c = null;
         field_g = null;
         if (param0 != 123) {
-          kg.b((byte) 16);
+          kg.releaseStatics((byte) 16);
         }
     }
 

@@ -261,7 +261,7 @@ final class sj {
 
     final static void a(il param0, boolean param1, int[] param2, int[] param3) {
         try {
-          param0.a(param2, param3);
+          param0.drawTransformed(param2, param3);
           if (param1) {
             field_l = (Js5Archive) null;
           }
@@ -270,7 +270,7 @@ final class sj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 118) {
           return;
         }

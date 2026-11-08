@@ -5,7 +5,7 @@ final class vj {
     static String field_a;
     static int[] field_b;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 == 17) {
           field_a = null;

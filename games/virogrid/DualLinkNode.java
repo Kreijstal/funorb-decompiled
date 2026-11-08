@@ -56,17 +56,17 @@ class DualLinkNode extends IntrusiveNode {
         int var3 = 0;
         int var3Lifetime1;
         if (param0) {
-          Rasterizer.b(0, 0, Rasterizer.field_e, Rasterizer.field_f, 0, 192);
+          Rasterizer.fillRectangleAlpha(0, 0, Rasterizer.field_e, Rasterizer.field_f, 0, 192);
           ci.b(param0, -126);
           var3 = -121 / ((79 - param1) / 35);
           return;
         }
-        Rasterizer.c();
+        Rasterizer.clear();
         ci.b(param0, -126);
         var3Lifetime1 = -121 / ((79 - param1) / 35);
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_n = null;
         field_g = null;
         field_m = null;

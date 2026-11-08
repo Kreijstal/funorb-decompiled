@@ -18,7 +18,7 @@ final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.
         }
     }
 
-    final synchronized int a(int param0) {
+    final synchronized int pollRotation(int param0) {
         if (param0 != -23273) {
           return -48;
         }

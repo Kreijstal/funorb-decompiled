@@ -21,7 +21,7 @@ final class wg {
           if (null == oj.field_Ub) {
             return false;
           }
-          int var2_int = oj.field_Ub.f(31479);
+          int var2_int = oj.field_Ub.available(31479);
           if (param1 < var2_int) {
             if (var2_int > -sh.field_qb.position + param0) {
               var2_int = param0 - sh.field_qb.position;
@@ -74,7 +74,7 @@ final class wg {
         }
     }
 
-    final static void a(int param0, int param1, int param2, long param3, PlatformTaskDispatcher param4, boolean param5, int param6, boolean param7, int param8, int param9, int param10, String param11, int param12, int param13) {
+    final static void initializeConnectionState(int param0, int param1, int param2, long param3, PlatformTaskDispatcher param4, boolean param5, int param6, boolean param7, int param8, int param9, int param10, String param11, int param12, int param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;

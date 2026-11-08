@@ -60,7 +60,7 @@ final class mc {
                   te.field_b.a((byte) 50, var14, var10);
                 }
               } else {
-                bb.a(var14, var5, param0, var4, 9);
+                bb.decompressInto(var14, var5, param0, var4, 9);
               }
               stackIn_23_0 = var6;
               return stackIn_23_0;

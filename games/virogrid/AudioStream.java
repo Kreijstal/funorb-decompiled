@@ -7,19 +7,19 @@ abstract class AudioStream extends IntrusiveNode {
     volatile boolean field_g;
     AudioStream field_h;
 
-    int a() {
+    int priority() {
         return 255;
     }
 
-    abstract int d();
+    abstract int activity();
 
-    abstract void b(int[] param0, int param1, int param2);
+    abstract void mixInto(int[] param0, int param1, int param2);
 
     final void a(int[] param0, int param1, int param2) {
         if (this.field_g) {
-          this.b(param0, param1, param2);
+          this.mixInto(param0, param1, param2);
         } else {
-          this.a(param2);
+          this.skipFrames(param2);
         }
     }
 
@@ -27,9 +27,9 @@ abstract class AudioStream extends IntrusiveNode {
         this.field_g = true;
     }
 
-    abstract void a(int param0);
+    abstract void skipFrames(int param0);
 
-    abstract AudioStream c();
+    abstract AudioStream firstSubStream();
 
-    abstract AudioStream b();
+    abstract AudioStream nextSubStream();
 }

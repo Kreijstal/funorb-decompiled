@@ -36,7 +36,7 @@ final class qi {
         try {
           var1_int = ih.field_a;
           if (param0 != -5205) {
-            qi.a(87);
+            qi.releaseStatics(87);
           }
           var2 = 0;
           if (2 == IntrusiveDeque.field_d) {
@@ -112,10 +112,10 @@ final class qi {
               var1_int = var1_int + bj.field_j;
             }
             if (0 > var4) {
-              j.field_h.b(var6, var8Lifetime1, var1_int + vc.field_bb, var5, -1);
+              j.field_h.drawLeft(var6, var8Lifetime1, var1_int + vc.field_bb, var5, -1);
               var1_int = var1_int + re.field_m;
             } else {
-              ti.field_g.b(var6, var8Lifetime1, var1_int + ag.field_e, var5, -1);
+              ti.field_g.drawLeft(var6, var8Lifetime1, var1_int + ag.field_e, var5, -1);
               var1_int = var1_int + (bj.field_j - (-oh.field_d - mi.field_c));
             }
           }
@@ -127,12 +127,12 @@ final class qi {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
         if (param0 != 25651) {
-          qi.a(-53);
+          qi.releaseStatics(-53);
         }
         field_e = null;
     }

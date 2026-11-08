@@ -76,7 +76,7 @@ class tg extends UiWidget {
 
     final boolean f(boolean param0) {
         if (!param0) {
-          tg.a((byte) 76);
+          tg.releaseStatics((byte) 76);
           return this.field_E;
         }
         return this.field_E;
@@ -115,7 +115,7 @@ class tg extends UiWidget {
         }
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -198,7 +198,7 @@ class tg extends UiWidget {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -51) {
           return;
         }
@@ -216,7 +216,7 @@ class tg extends UiWidget {
         try {
           if (this.field_C &&
             this.a(param5, param6, param4, (byte) 58, param3)) {
-            this.a(param0, -8515);
+            this.focusNext(param0, -8515);
             this.field_i = param1;
             if (this.field_o != null) {
               if (!(this.field_o instanceof pk)) {

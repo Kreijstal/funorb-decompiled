@@ -63,7 +63,7 @@ class UiWidget extends IntrusiveNode {
         if (var4 != 80) {
           return false;
         }
-        return this.a(this, -8515);
+        return this.focusNext(this, -8515);
     }
 
     StringBuilder a(Hashtable param0, byte param1, int param2, StringBuilder param3) {
@@ -104,7 +104,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -443,16 +443,16 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_t = null;
         if (param0) {
-          UiWidget.c(false);
+          UiWidget.releaseStatics(false);
         }
         field_j = null;
         field_v = null;
     }
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void drawLayer(byte param0, int param1, int param2, int param3) {
         if (param0 != 37) {
           this.a(15, (Hashtable) null, (byte) 35, (StringBuilder) null);
         }
@@ -500,7 +500,7 @@ class UiWidget extends IntrusiveNode {
         var4 = this.b((byte) -39);
         var5_int = param0;
         while (var5_int <= var4) {
-          this.a((byte) 37, param2, param1, var5_int);
+          this.drawLayer((byte) 37, param2, param1, var5_int);
           var5_int++;
           if (var6 == 0) {
             continue;

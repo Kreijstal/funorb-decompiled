@@ -7,7 +7,7 @@ final class rg extends RuntimeException {
     static ob field_d;
     String field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_b = null;
         int var1 = -64 / ((param0 - 11) / 45);

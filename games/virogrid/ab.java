@@ -14,7 +14,7 @@ final class ab extends gf implements ta {
     ab(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetListener) null);
         this.field_M = new jb(new cc(10000536), wd.field_a, 0, 0, 140, 25);
-        this.field_M.a(2, new al());
+        this.field_M.setBirthDateValidator(2, new al());
         this.field_N = new tg(md.field_c, (cd) (this));
         this.field_E = new UiWidget[]{(UiWidget) ((Object) this.field_M), (UiWidget) ((Object) this.field_N)};
         this.field_N.listener = (WidgetListener) ((Object) new hf());
@@ -154,12 +154,12 @@ final class ab extends gf implements ta {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
-        dk.arezzo12Font.b(bn.field_c, 4 + (this.field_l + param1), 4 + (dk.arezzo12Font.field_H + (this.field_u + param2)), 16777215, -1);
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
+        dk.arezzo12Font.drawLeft(bn.field_c, 4 + (this.field_l + param1), 4 + (dk.arezzo12Font.field_H + (this.field_u + param2)), 16777215, -1);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         if (param0 != -16349) {
           return;

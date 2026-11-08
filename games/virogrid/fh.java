@@ -20,7 +20,7 @@ final class fh {
           var1_int = da.field_g[0];
           for (var2 = 1; var2 < da.field_g.length; var2++) {
             var3 = da.field_g[var2];
-            ek.a(bf.field_m, var2 << 4, bf.field_m, var1_int, var3);
+            ek.copy(bf.field_m, var2 << 4, bf.field_m, var1_int, var3);
             var1_int = var1_int + var3;
           }
           if (param0 != -80) {
@@ -58,14 +58,14 @@ final class fh {
         }
         kb.a(ag.field_g, 16865);
         fk.a();
-        Rasterizer.c();
+        Rasterizer.clear();
         cm.a(11);
         if (var5 < 256) {
-          Rasterizer.b(0, 0, Rasterizer.field_e, Rasterizer.field_f, 0, 256 - var5);
+          Rasterizer.fillRectangleAlpha(0, 0, Rasterizer.field_e, Rasterizer.field_f, 0, 256 - var5);
         }
         ai.a(true);
         if (kf.field_e < 150) {
-          ag.field_g.e(var3, var4);
+          ag.field_g.drawHalfSize(var3, var4);
         } else {
           nd.field_d.a(15 + var3, var4 + 10, var5);
         }
@@ -74,13 +74,13 @@ final class fh {
           var6 < 50) {
           if (20 > var6) {
             var7 = 256 * var6 / 20;
-            cc.field_u.e(var3, var4, var7);
+            cc.field_u.drawAdditive(var3, var4, var7);
           } else {
             if (var6 >= 30) {
               var7 = 256 * (50 - var6) / 20;
-              cc.field_u.e(var3, var4, var7);
+              cc.field_u.drawAdditive(var3, var4, var7);
             } else {
-              cc.field_u.e(var3, var4, 256);
+              cc.field_u.drawAdditive(var3, var4, 256);
             }
           }
         }

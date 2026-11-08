@@ -57,7 +57,7 @@ final class va {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_f = null;
         field_c = null;
@@ -76,7 +76,7 @@ final class va {
         }
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] copyBytes(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -88,7 +88,7 @@ final class va {
         try {
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          ek.a(param0, param1, var3, 0, var2_int);
+          ek.copy(param0, param1, var3, 0, var2_int);
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -23,7 +23,7 @@ final class ji {
     final void a(int param0, byte[] param1, int param2, boolean param3) throws IOException {
         try {
           if (param3) {
-            ji.a(101);
+            ji.releaseStatics(101);
           }
           if (this.field_f < this.field_g + (long)param0) {
             this.field_h.seek(this.field_f);
@@ -87,7 +87,7 @@ final class ji {
           this.field_h.close();
           this.field_h = null;
           if (param0 != 0) {
-            ji.a(-9);
+            ji.releaseStatics(-9);
             return;
           }
           return;
@@ -95,10 +95,10 @@ final class ji {
         if (param0 == 0) {
           return;
         }
-        ji.a(-9);
+        ji.releaseStatics(-9);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_a = null;
         if (param0 <= -101) {

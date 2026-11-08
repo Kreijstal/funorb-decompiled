@@ -16,7 +16,7 @@ final class bg extends SpriteWidget {
     static ml field_Lb;
     private SpriteWidget field_Gb;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_Lb = null;
         field_Pb = null;
         if (param0 != 0) {
@@ -37,7 +37,7 @@ final class bg extends SpriteWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           param3 += 8;
-          var6_int = param1.field_C.a(param1.field_V, -(2 * param1.field_z) + param4, param1.field_fb);
+          var6_int = param1.field_C.paragraphHeight(param1.field_V, -(2 * param1.field_z) + param4, param1.field_fb);
           param1.a(0, var6_int, param4, (byte) -66, param3);
           param3 = param3 + (var6_int - 0);
           if (param2 < 37) {
@@ -208,15 +208,15 @@ final class bg extends SpriteWidget {
               discarded$0 = this.field_Ib.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_C.a(jg.field_c);
+            var17 = param6.field_C.textWidth(jg.field_c);
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_C.a(hn.field_s);
+            var17Lifetime2 = param6.field_C.textWidth(hn.field_s);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_C.a(ImageProducerRasterBuffer.field_p);
+            var17Lifetime3 = param6.field_C.textWidth(ImageProducerRasterBuffer.field_p);
             if (var16Lifetime2 < var17Lifetime3) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -306,7 +306,7 @@ final class bg extends SpriteWidget {
           this.field_Gb.a(0, this.field_Fb);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Fb.field_C.b(this.field_Fb.field_V, var15_int);
+          var17Lifetime1 = this.field_Fb.field_C.wrappedLineCount(this.field_Fb.field_V, var15_int);
           this.field_Fb.a(13, pg.field_e * var17Lifetime1, var15_int, (byte) -78, var16Lifetime1);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * pg.field_e;
           this.field_Gb.a(0, var16Lifetime1 + 10, 13 + (13 + var15_int), (byte) -45, 24);
@@ -386,7 +386,7 @@ final class bg extends SpriteWidget {
 
     final boolean d(boolean param0) {
         if (param0) {
-          bg.g(-40);
+          bg.releaseStatics(-40);
         }
         if (this.field_Nb != -2) {
           return false;
@@ -416,7 +416,7 @@ final class bg extends SpriteWidget {
         this.a(param1, (byte) 119);
         if (null != this.field_Kb) {
           this.field_Kb.field_V = this.field_Ib.toString();
-          this.field_Kb.field_tb = (this.field_K - this.field_Kb.field_C.a(this.field_Kb.field_V)) / 2;
+          this.field_Kb.field_tb = (this.field_K - this.field_Kb.field_C.textWidth(this.field_Kb.field_V)) / 2;
           if (this.field_Jb != null &&
             0 != this.field_Jb.field_nb) {
             stackIn_6_0 = this.field_Jb;

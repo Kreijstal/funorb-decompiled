@@ -9,18 +9,18 @@ final class tc extends ua {
     private javax.sound.sampled.AudioFormat field_w;
     private static String field_A;
 
-    final void g() {
+    final void closeDevice() {
         if (this.field_v != null) {
           this.field_v.close();
           this.field_v = null;
         }
     }
 
-    final int e() {
+    final int getQueuedFrames() {
         return this.field_x - (this.field_v.available() >> (field_q ? 2 : 1));
     }
 
-    final void a() {
+    final void writeMixBlock() {
         int var2 = 0;
         int var3 = 0;
         int var1 = 256;
@@ -42,7 +42,7 @@ final class tc extends ua {
         this.field_z = false;
     }
 
-    final void a(java.awt.Component param0) {
+    final void initDevice(java.awt.Component param0) {
         int var4 = 0;
         javax.sound.sampled.Mixer.Info[] var2;
         javax.sound.sampled.Mixer.Info[] var3;
@@ -96,7 +96,7 @@ final class tc extends ua {
         this.field_y = new byte[stackIn_19_1 << stackIn_20_2];
     }
 
-    final void f() throws javax.sound.sampled.LineUnavailableException {
+    final void flushDevice() throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var1 = null;
         this.field_v.flush();
         if (this.field_z) {

@@ -4,7 +4,7 @@
 final class v extends e {
     private byte[][] field_C;
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blitBinaryGlyphWithAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -27,7 +27,7 @@ final class v extends e {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+    private final static void blitMaskedGlyph(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
         int var15 = 0;
         int var20 = 0;
         int incrementValue$1 = 0;
@@ -90,7 +90,7 @@ final class v extends e {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -130,15 +130,15 @@ final class v extends e {
         if (param3 > 0 &&
           param4 > 0) {
           if (Rasterizer.field_b == null) {
-            v.a(Rasterizer.field_d, this.field_C[param0], param5, var11, var8, param3, param4, var9, var10);
+            v.blitBinaryGlyph(Rasterizer.field_d, this.field_C[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            v.a(Rasterizer.field_d, this.field_C[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, Rasterizer.field_b, Rasterizer.field_j);
+            v.blitMaskedGlyph(Rasterizer.field_d, this.field_C[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, Rasterizer.field_b, Rasterizer.field_j);
           }
           return;
         }
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void blitBinaryGlyph(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -180,7 +180,7 @@ final class v extends e {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
         int var9 = param1 + param2 * Rasterizer.field_e;
         int var10 = Rasterizer.field_e - param3;
@@ -217,7 +217,7 @@ final class v extends e {
           param4 <= 0) {
           return;
         }
-        v.a(Rasterizer.field_d, this.field_C[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        v.blitBinaryGlyphWithAlpha(Rasterizer.field_d, this.field_C[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
     v(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {

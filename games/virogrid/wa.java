@@ -529,7 +529,7 @@ class wa extends tg {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_M = null;
         field_L = null;
         field_S = null;
@@ -540,7 +540,7 @@ class wa extends tg {
         field_H = null;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         if (param0 != 37) {
           return;
         }
@@ -625,7 +625,7 @@ class wa extends tg {
 
     void e(int param0) {
         if (this.field_o instanceof bo) {
-          ((bo) (this.field_o)).a(this, 13);
+          ((bo) (this.field_o)).onTextChanged(this, 13);
           if (param0 != -29526) {
             this.j(117);
             return;

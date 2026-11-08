@@ -7,7 +7,7 @@ abstract class ll {
     static String field_c;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_a = null;
         int var1 = 10 % ((param0 - 41) / 60);

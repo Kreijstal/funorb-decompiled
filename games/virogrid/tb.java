@@ -11,7 +11,7 @@ final class tb extends IntrusiveNode {
     int field_i;
     private int[] field_g;
 
-    final boolean a(float param0, int param1, Js5Archive param2) {
+    final boolean buildPixels(float param0, int param1, Js5Archive param2) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;

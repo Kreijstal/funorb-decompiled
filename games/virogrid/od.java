@@ -27,8 +27,8 @@ abstract class od extends GameApplet {
         this.setBackground(java.awt.Color.black);
         ih.field_c = this.field_o;
         dg.a((byte) -53, ih.field_c);
-        wg.a(ih.field_c, 5000, this.field_p, this.field_s, ei.field_c, this.field_x, 64, param6, 5000, this.field_r, param0, this.field_v, this.field_w, this.field_z);
-        ch.a(this.field_p, ei.field_c, this.field_z, param0, this.field_v, ih.field_c, 86, this.field_r, this.field_w);
+        wg.initializeConnectionState(ih.field_c, 5000, this.field_p, this.field_s, ei.field_c, this.field_x, 64, param6, 5000, this.field_r, param0, this.field_v, this.field_w, this.field_z);
+        ch.initializeArchiveServices(this.field_p, ei.field_c, this.field_z, param0, this.field_v, ih.field_c, 86, this.field_r, this.field_w);
         lb.a(42);
         sb.field_d = s.a((byte) -110);
         nn.a(UiWidget.field_v, (byte) -128);
@@ -404,7 +404,7 @@ abstract class od extends GameApplet {
           vj.a((byte) -119);
         }
         if (null != sb.field_d) {
-          og.field_b = sb.field_d.a(-23273);
+          og.field_b = sb.field_d.pollRotation(-23273);
         }
         if (wl.b((byte) -70)) {
           var3 = 1200 * wh.a((byte) 5);
@@ -816,7 +816,7 @@ abstract class od extends GameApplet {
         tn.a(false);
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_t = null;
         if (param0) {
           return;

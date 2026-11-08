@@ -15,7 +15,7 @@ final class ng extends nk {
     private int field_U;
     static int field_P;
 
-    public static void g(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_N = null;
           field_T = null;
@@ -43,7 +43,7 @@ final class ng extends nk {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         String var5;
         wl var6;
         int var9;
@@ -92,7 +92,7 @@ final class ng extends nk {
             this.field_n = var17;
             this.e(-115);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawLayer(param0, param1, param2, param3);
           var6 = this.field_R.a(param0 - 22280);
           var31 = (gm) ((Object) this.listener);
           var9 = this.field_l + param1;
@@ -101,14 +101,14 @@ final class ng extends nk {
             te.field_d != var6) {
             if (var6 == ee.field_c) {
               var20 = bf.field_p[2];
-              var20.e(var9, var10 - (var20.field_p >> 1), 256);
+              var20.drawAdditive(var9, var10 - (var20.field_p >> 1), 256);
               return;
             }
             if (bm.field_i != var6) {
               return;
             }
             var19 = bf.field_p[1];
-            var19.e(var9, var10 - (var19.field_p >> 1), 256);
+            var19.drawAdditive(var9, var10 - (var19.field_p >> 1), 256);
             return;
           }
           var21 = bf.field_p[0];
@@ -127,13 +127,13 @@ final class ng extends nk {
                 kb.a(this.field_S, 16865);
               } else {
                 kb.a(this.field_S, 16865);
-                Rasterizer.c();
+                Rasterizer.clear();
               }
             }
           }
-          var21.a(112, 144, var21.field_u << 4, var21.field_z << 4, -this.field_U << 10, 4096);
+          var21.drawRotatedAboutPivot(112, 144, var21.field_u << 4, var21.field_z << 4, -this.field_U << 10, 4096);
           ai.a(true);
-          this.field_S.e(var9 - (var21.field_u >> 1), -var21.field_z + var10, 256);
+          this.field_S.drawAdditive(var9 - (var21.field_u >> 1), -var21.field_z + var10, 256);
           return;
         }
         if (te.field_d != var6) {
@@ -147,7 +147,7 @@ final class ng extends nk {
         if (!var5.equals(this.field_n)) {
           this.field_n = var5;
           this.e(-115);
-          super.a(param0, param1, param2, param3);
+          super.drawLayer(param0, param1, param2, param3);
           var6Lifetime1 = this.field_R.a(param0 - 22280);
           var33 = (gm) ((Object) this.listener);
           var9Lifetime1 = this.field_l + param1;
@@ -156,14 +156,14 @@ final class ng extends nk {
             te.field_d != var6Lifetime1) {
             if (var6Lifetime1 == ee.field_c) {
               var29 = bf.field_p[2];
-              var29.e(var9Lifetime1, var10Lifetime1 - (var29.field_p >> 1), 256);
+              var29.drawAdditive(var9Lifetime1, var10Lifetime1 - (var29.field_p >> 1), 256);
               return;
             }
             if (bm.field_i != var6Lifetime1) {
               return;
             }
             var28 = bf.field_p[1];
-            var28.e(var9Lifetime1, var10Lifetime1 - (var28.field_p >> 1), 256);
+            var28.drawAdditive(var9Lifetime1, var10Lifetime1 - (var28.field_p >> 1), 256);
             return;
           }
           var30 = bf.field_p[0];
@@ -179,19 +179,19 @@ final class ng extends nk {
             } else {
               if (var12Lifetime1 <= this.field_S.field_p) {
                 kb.a(this.field_S, 16865);
-                Rasterizer.c();
+                Rasterizer.clear();
               } else {
                 this.field_S = new Sprite(var11Lifetime1, var12Lifetime1);
                 kb.a(this.field_S, 16865);
               }
             }
           }
-          var30.a(112, 144, var30.field_u << 4, var30.field_z << 4, -this.field_U << 10, 4096);
+          var30.drawRotatedAboutPivot(112, 144, var30.field_u << 4, var30.field_z << 4, -this.field_U << 10, 4096);
           ai.a(true);
-          this.field_S.e(var9Lifetime1 - (var30.field_u >> 1), -var30.field_z + var10Lifetime1, 256);
+          this.field_S.drawAdditive(var9Lifetime1 - (var30.field_u >> 1), -var30.field_z + var10Lifetime1, 256);
           return;
         }
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         var6Lifetime2 = this.field_R.a(param0 - 22280);
         var32 = (gm) ((Object) this.listener);
         var9Lifetime2 = this.field_l + param1;
@@ -213,26 +213,26 @@ final class ng extends nk {
                 kb.a(this.field_S, 16865);
               } else {
                 kb.a(this.field_S, 16865);
-                Rasterizer.c();
+                Rasterizer.clear();
               }
             }
           }
-          var23.a(112, 144, var23.field_u << 4, var23.field_z << 4, -this.field_U << 10, 4096);
+          var23.drawRotatedAboutPivot(112, 144, var23.field_u << 4, var23.field_z << 4, -this.field_U << 10, 4096);
           ai.a(true);
-          this.field_S.e(var9Lifetime2 - (var23.field_u >> 1), -var23.field_z + var10Lifetime2, 256);
+          this.field_S.drawAdditive(var9Lifetime2 - (var23.field_u >> 1), -var23.field_z + var10Lifetime2, 256);
           return;
         }
         if (te.field_d != var6Lifetime2) {
           if (var6Lifetime2 == ee.field_c) {
             var26 = bf.field_p[2];
-            var26.e(var9Lifetime2, var10Lifetime2 - (var26.field_p >> 1), 256);
+            var26.drawAdditive(var9Lifetime2, var10Lifetime2 - (var26.field_p >> 1), 256);
             return;
           }
           if (bm.field_i != var6Lifetime2) {
             return;
           }
           var25 = bf.field_p[1];
-          var25.e(var9Lifetime2, var10Lifetime2 - (var25.field_p >> 1), 256);
+          var25.drawAdditive(var9Lifetime2, var10Lifetime2 - (var25.field_p >> 1), 256);
           return;
         }
         var24 = bf.field_p[0];
@@ -249,19 +249,19 @@ final class ng extends nk {
           } else {
             if (var12Lifetime3 <= this.field_S.field_p) {
               kb.a(this.field_S, 16865);
-              Rasterizer.c();
+              Rasterizer.clear();
             } else {
               this.field_S = new Sprite(var11Lifetime3, var12Lifetime3);
               kb.a(this.field_S, 16865);
             }
           }
         }
-        var24.a(112, 144, var24.field_u << 4, var24.field_z << 4, -this.field_U << 10, 4096);
+        var24.drawRotatedAboutPivot(112, 144, var24.field_u << 4, var24.field_z << 4, -this.field_U << 10, 4096);
         ai.a(true);
-        this.field_S.e(var9Lifetime2 - (var24.field_u >> 1), -var24.field_z + var10Lifetime2, 256);
+        this.field_S.drawAdditive(var9Lifetime2 - (var24.field_u >> 1), -var24.field_z + var10Lifetime2, 256);
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -293,7 +293,7 @@ final class ng extends nk {
           this.field_U = this.field_U + 1;
           super.a(param0, 114, param2, param3);
           if (param1 < 113) {
-            this.a((byte) -92, -86, 85, 41);
+            this.drawLayer((byte) -92, -86, 85, 41);
           }
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -304,7 +304,7 @@ final class ng extends nk {
         if (param0 >= 35) {
           return null;
         }
-        this.a((byte) 91, -66, 2, -100);
+        this.drawLayer((byte) 91, -66, 2, -100);
         return null;
     }
 

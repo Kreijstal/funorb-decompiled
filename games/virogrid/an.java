@@ -6,10 +6,10 @@ final class an {
     static byte[] field_c;
     static long field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 < 23) {
-          an.a((byte) -15);
+          an.releaseStatics((byte) -15);
         }
     }
 
@@ -26,10 +26,10 @@ final class an {
             field_a = -46L;
           }
           if (param0) {
-            stackIn_6_0 = jf.field_n.a(param2);
+            stackIn_6_0 = jf.field_n.textWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = pm.field_j.a(param2);
+          stackIn_4_0 = pm.field_j.textWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

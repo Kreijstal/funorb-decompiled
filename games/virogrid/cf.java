@@ -6,7 +6,7 @@ final class cf {
     static float field_c;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         int var1 = -95 / ((param0 - 66) / 45);
@@ -32,7 +32,7 @@ final class cf {
         int var9Lifetime1;
         try {
           if (param2 < 51) {
-            cf.a(105);
+            cf.releaseStatics(105);
           }
           qm.frameTopSprites = ke.a(32, param0, "commonui", "frame_top");
           qg.frameBottomSprites = ke.a(32, param0, "commonui", "frame_bottom");
@@ -69,18 +69,18 @@ final class cf {
           }
           var9Lifetime1 = var17.field_p;
           lm.a(0);
-          var17.b();
-          Rasterizer.e(0, 0, Rasterizer.field_e, Rasterizer.field_f);
+          var17.makeRasterTarget();
+          Rasterizer.grayscaleRectangle(0, 0, Rasterizer.field_e, Rasterizer.field_f);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.b();
-          var17.b(0, 0);
+          var18.makeRasterTarget();
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.b();
-          var17.b(var9Lifetime1 - var17.field_w, 0);
+          var11.makeRasterTarget();
+          var17.drawOpaque(var9Lifetime1 - var17.field_w, 0);
           var12 = new Sprite(var17.field_w - var9Lifetime1 * 2, var9Lifetime1);
-          var12.b();
-          var17.b(-var9Lifetime1, 0);
+          var12.makeRasterTarget();
+          var17.drawOpaque(-var9Lifetime1, 0);
           ai.a(true);
           td.buttonSprites = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
@@ -90,7 +90,7 @@ final class cf {
 
     final static void a(byte param0, boolean param1) {
         if (ij.field_j != null) {
-          Rasterizer.g(Rasterizer.field_i, Rasterizer.field_g, -Rasterizer.field_i + Rasterizer.field_k, Rasterizer.field_h - Rasterizer.field_g);
+          Rasterizer.darkenRectangle(Rasterizer.field_i, Rasterizer.field_g, -Rasterizer.field_i + Rasterizer.field_k, Rasterizer.field_h - Rasterizer.field_g);
           ij.field_j.a(param1, 24960);
         }
         if (param0 > -94) {

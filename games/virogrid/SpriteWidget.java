@@ -225,7 +225,7 @@ class SpriteWidget extends ke {
         this.a(Rasterizer.field_f, Rasterizer.field_e, 0, true, true, 0);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_yb = null;
         if (param0 != 2147483647) {
           return;
@@ -456,7 +456,7 @@ class SpriteWidget extends ke {
         int var4_intLifetime1;
         if (null != this.field_V &&
           null != this.field_C) {
-          var4_int = this.field_C.c(this.field_V, param0);
+          var4_int = this.field_C.getWrappedWidth(this.field_V, param0);
           if (var4_int > var3) {
             var3 = var4_int;
           }
@@ -536,7 +536,7 @@ class SpriteWidget extends ke {
         var9 = Rasterizer.field_g;
         var10 = Rasterizer.field_k;
         var11 = Rasterizer.field_h;
-        Rasterizer.h(this.field_Bb, this.field_J, this.field_Bb + this.field_K, this.field_J + this.field_ub);
+        Rasterizer.intersectClip(this.field_Bb, this.field_J, this.field_Bb + this.field_K, this.field_J + this.field_ub);
         var12 = 0;
         if (!vl.field_d &&
           param3 &&
@@ -576,7 +576,7 @@ class SpriteWidget extends ke {
         if (var12 != 0) {
           vl.field_d = true;
         }
-        Rasterizer.a(var8, var9, var10, var11);
+        Rasterizer.setClip(var8, var9, var10, var11);
         if (this.field_w != 0 &&
           this.field_X) {
           this.field_F = hk.field_Jb + (-this.field_U - param2);
@@ -675,7 +675,7 @@ class SpriteWidget extends ke {
         var13 = Rasterizer.field_g;
         var14 = Rasterizer.field_k;
         var15 = Rasterizer.field_h;
-        Rasterizer.h(this.field_Bb, this.field_J, this.field_Bb + this.field_K, this.field_J + this.field_ub);
+        Rasterizer.intersectClip(this.field_Bb, this.field_J, this.field_Bb + this.field_K, this.field_J + this.field_ub);
         param10 = param10 & this.field_Y;
         if (!this.field_mb) {
           param8 = this.field_S;
@@ -773,7 +773,7 @@ class SpriteWidget extends ke {
             var24 = var24 + (-var17.field_z + this.field_ub);
           }
           if (256 <= this.field_Ab) {
-            var17.d(var23_int, var24);
+            var17.drawTransparent(var23_int, var24);
           } else {
             var17.a(var23_int, var24, this.field_Ab);
           }
@@ -789,7 +789,7 @@ class SpriteWidget extends ke {
             this.field_eb != null) {
             var23Lifetime2 = var26 + this.field_eb;
           }
-          if (this.field_C.a(var23Lifetime2) <= this.field_K - 2 * this.field_z &&
+          if (this.field_C.textWidth(var23Lifetime2) <= this.field_K - 2 * this.field_z &&
             0 > var23Lifetime2.indexOf("<br>")) {
             if (this.field_D != 1) {
               if (this.field_D == 2) {
@@ -799,22 +799,22 @@ class SpriteWidget extends ke {
               var22 = var22 + (-this.field_C.field_G + (this.field_ub - this.field_C.field_H)) / 2;
             }
             if (this.field_lb == 0) {
-              this.field_C.c(var23Lifetime2, this.field_Bb + (this.field_z + var21), var22 + (this.field_J + this.field_C.field_H), var18, -1, this.field_H);
+              this.field_C.drawLeftAlpha(var23Lifetime2, this.field_Bb + (this.field_z + var21), var22 + (this.field_J + this.field_C.field_H), var18, -1, this.field_H);
             } else {
               if (this.field_lb == 1) {
-                this.field_C.b(var23Lifetime2, (this.field_K - 2 * this.field_z) / 2 + (this.field_z + this.field_Bb + var21), this.field_C.field_H + this.field_J + var22, var18, -1, this.field_H);
+                this.field_C.drawCenteredAlpha(var23Lifetime2, (this.field_K - 2 * this.field_z) / 2 + (this.field_z + this.field_Bb + var21), this.field_C.field_H + this.field_J + var22, var18, -1, this.field_H);
               } else {
                 if (2 != this.field_lb) {
-                  this.field_C.a(var23Lifetime2, this.field_z + this.field_Bb + var21, this.field_J + var22, -(this.field_z * 2) + this.field_K, this.field_ub, var18, -1, this.field_H, this.field_lb, this.field_D, this.field_fb);
+                  this.field_C.drawParagraphAlpha(var23Lifetime2, this.field_z + this.field_Bb + var21, this.field_J + var22, -(this.field_z * 2) + this.field_K, this.field_ub, var18, -1, this.field_H, this.field_lb, this.field_D, this.field_fb);
                 } else {
-                  this.field_C.a(var23Lifetime2, this.field_z + this.field_Bb + (var21 - (this.field_z * 2 - this.field_K)), this.field_J + (var22 + this.field_C.field_H), var18, -1, this.field_H);
+                  this.field_C.drawRightAlpha(var23Lifetime2, this.field_z + this.field_Bb + (var21 - (this.field_z * 2 - this.field_K)), this.field_J + (var22 + this.field_C.field_H), var18, -1, this.field_H);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_C.a(var23Lifetime2, this.field_z + (this.field_Bb + var21), var22 + this.field_J, -(2 * this.field_z) + this.field_K, this.field_ub, var18, -1, this.field_H, this.field_lb, this.field_D, this.field_fb);
+            this.field_C.drawParagraphAlpha(var23Lifetime2, this.field_z + (this.field_Bb + var21), var22 + this.field_J, -(2 * this.field_z) + this.field_K, this.field_ub, var18, -1, this.field_H, this.field_lb, this.field_D, this.field_fb);
           }
         }
         if (null != this.field_W) {
@@ -824,7 +824,7 @@ class SpriteWidget extends ke {
             var23_ref = (SpriteWidget) (this.field_W.a(16213));
           }
         }
-        Rasterizer.a(var12, var13, var14, var15);
+        Rasterizer.setClip(var12, var13, var14, var15);
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {

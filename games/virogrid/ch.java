@@ -76,7 +76,7 @@ final class ch {
         UiWidget.field_t.j(-4236);
     }
 
-    final static void a(int param0, PlatformTaskDispatcher param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
+    final static void initializeArchiveServices(int param0, PlatformTaskDispatcher param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
         ok.field_G = param8;
         co.field_g = param4;
         ed.field_b = param3;

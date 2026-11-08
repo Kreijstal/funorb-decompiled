@@ -55,7 +55,7 @@ final class IntrusiveDequeCursor {
 
     final static int a(boolean param0) {
         if (param0) {
-          IntrusiveDequeCursor.d(-1);
+          IntrusiveDequeCursor.releaseStatics(-1);
           return -gi.field_c + qg.field_g;
         }
         return -gi.field_c + qg.field_g;
@@ -323,7 +323,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode next(int param0) {
         if (param0 != 12677) {
           return (IntrusiveNode) null;
         }
@@ -344,7 +344,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_e = null;
         field_c = null;

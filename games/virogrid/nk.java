@@ -11,9 +11,9 @@ class nk extends tg {
     private pb field_L;
     static double[] field_K;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 20) {
-          nk.a(-69);
+          nk.releaseStatics(-69);
         }
         field_M = null;
         field_K = null;
@@ -32,17 +32,17 @@ class nk extends tg {
         }
     }
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void drawLayer(byte param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         if (0 != param3) {
           return;
         }
         gm var5 = (gm) ((Object) this.listener);
         pb var6 = this.field_L;
         if (var6 != null) {
-          var7 = var5.a(param1, (UiWidget) (this), param0 ^ -7537);
+          var7 = var5.getTextY(param1, (UiWidget) (this), param0 ^ -7537);
           var8 = var5.b(param0 - 587719076, (UiWidget) (this), param2);
           do {
             b.a(-2 + (var8 + var6.field_g), (byte) 69, -2 + var6.field_r + var7, var6.field_j + 2, 2 + var6.field_s);
@@ -201,7 +201,7 @@ class nk extends tg {
         }
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

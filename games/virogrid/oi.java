@@ -28,7 +28,7 @@ final class oi {
           }
           var10 = stackIn_10_0;
           var7 = var10;
-          var10.d(-16 + param0, param5 - 16);
+          var10.drawTransparent(-16 + param0, param5 - 16);
         } else {
           if ((1 << param3 & rn.field_c) != 0) {
             stackIn_4_0 = MouseWheelInput.achievementIcons[param3];
@@ -42,9 +42,9 @@ final class oi {
           var7 = var10;
           var7 = var9;
           if (param4 != 128) {
-            var9.a(param0 - (param4 >> 1), -(param4 >> 1) + param5, param4, param4);
+            var9.drawDownscaledAveraged(param0 - (param4 >> 1), -(param4 >> 1) + param5, param4, param4);
           } else {
-            var9.d(param0 - 64, -64 + param5);
+            var9.drawTransparent(param0 - 64, -64 + param5);
           }
         }
         if (param2) {
@@ -144,11 +144,11 @@ final class oi {
           }
           var8Lifetime1 = stackIn_35_0;
           if (param1 != 2) {
-            mc.menuFont.b(qk.achievementTitles[var6Lifetime1].toUpperCase(), 320, 60 + var7Lifetime1, 8437759, -1);
+            mc.menuFont.drawLeft(qk.achievementTitles[var6Lifetime1].toUpperCase(), 320, 60 + var7Lifetime1, 8437759, -1);
             if ((rn.field_c & 1 << var6Lifetime1) == 0) {
-              vg.smallFont.b(rk.field_g.toUpperCase(), 320, var7Lifetime1 + 78, 16711680, -1);
+              vg.smallFont.drawLeft(rk.field_g.toUpperCase(), 320, var7Lifetime1 + 78, 16711680, -1);
             } else {
-              vg.smallFont.b(fl.field_j.toUpperCase(), 320, 78 + var7Lifetime1, 65280, -1);
+              vg.smallFont.drawLeft(fl.field_j.toUpperCase(), 320, 78 + var7Lifetime1, 65280, -1);
             }
           }
           var9 = (int)(Math.cos((double)((float)id.field_r / 50.0f)) * 76.0);
@@ -170,68 +170,68 @@ final class oi {
           var25 = var7Lifetime1 + 108;
           if (vc.field_eb[var6Lifetime1] >= 1) {
             if (var10 < 0) {
-              ad.orbCoinIcon.a(-(var19 >> 1) + var9 + var24, -(var19 >> 1) + (var25 + (var9 / 2 + var10)), var19, var19);
+              ad.orbCoinIcon.drawDownscaledAveraged(-(var19 >> 1) + var9 + var24, -(var19 >> 1) + (var25 + (var9 / 2 + var10)), var19, var19);
             }
             if (vc.field_eb[var6Lifetime1] >= 2 &&
               var12 < 0) {
-              ad.orbCoinIcon.a(var11 + var24 - (var20 >> 1), -(var20 >> 1) - var11 / 2 + (var25 + var12), var20, var20);
+              ad.orbCoinIcon.drawDownscaledAveraged(var11 + var24 - (var20 >> 1), -(var20 >> 1) - var11 / 2 + (var25 + var12), var20, var20);
             }
             if (3 <= vc.field_eb[var6Lifetime1] &&
               var14 < 0) {
-              ad.orbCoinIcon.a(-(var21 >> 1) + (var24 + var13), -(var21 >> 1) - var13 / 2 + (var25 + var14), var21, var21);
+              ad.orbCoinIcon.drawDownscaledAveraged(-(var21 >> 1) + (var24 + var13), -(var21 >> 1) - var13 / 2 + (var25 + var14), var21, var21);
             }
             if (vc.field_eb[var6Lifetime1] >= 4 &&
               var16 < 0) {
-              ad.orbCoinIcon.a(-(var22 >> 1) + var24 + var15, var16 + var25 - var15 / 2 - (var22 >> 1), var22, var22);
+              ad.orbCoinIcon.drawDownscaledAveraged(-(var22 >> 1) + var24 + var15, var16 + var25 - var15 / 2 - (var22 >> 1), var22, var22);
             }
             if (vc.field_eb[var6Lifetime1] >= 5 &&
               0 > var18) {
-              ad.orbCoinIcon.a(var17 + var24 - (var23 >> 1), var25 - (var17 / 2 - var18 + (var23 >> 1)), var23, var23);
+              ad.orbCoinIcon.drawDownscaledAveraged(var17 + var24 - (var23 >> 1), var25 - (var17 / 2 - var18 + (var23 >> 1)), var23, var23);
             }
           }
           this.a(var24, 3624, false, var6Lifetime1, 128, var25);
           if (vc.field_eb[var6Lifetime1] >= 1) {
             if (var10 >= 0) {
-              ad.orbCoinIcon.a(var24 - (-var9 + (var19 >> 1)), -(var19 >> 1) + var10 + var25 + var9 / 2, var19, var19);
+              ad.orbCoinIcon.drawDownscaledAveraged(var24 - (-var9 + (var19 >> 1)), -(var19 >> 1) + var10 + var25 + var9 / 2, var19, var19);
             }
             if (vc.field_eb[var6Lifetime1] >= 2 &&
               0 <= var12) {
-              ad.orbCoinIcon.a(-(var20 >> 1) + var24 + var11, -(var20 >> 1) + var12 + var25 - var11 / 2, var20, var20);
+              ad.orbCoinIcon.drawDownscaledAveraged(-(var20 >> 1) + var24 + var11, -(var20 >> 1) + var12 + var25 - var11 / 2, var20, var20);
             }
             if (vc.field_eb[var6Lifetime1] >= 3 &&
               var14 >= 0) {
-              ad.orbCoinIcon.a(var13 + var24 - (var21 >> 1), -(var21 >> 1) + (var14 + var25 - var13 / 2), var21, var21);
+              ad.orbCoinIcon.drawDownscaledAveraged(var13 + var24 - (var21 >> 1), -(var21 >> 1) + (var14 + var25 - var13 / 2), var21, var21);
             }
             if (vc.field_eb[var6Lifetime1] >= 4 &&
               var16 >= 0) {
-              ad.orbCoinIcon.a(-(var22 >> 1) + var24 + var15, var16 + var25 - (var15 / 2 + (var22 >> 1)), var22, var22);
+              ad.orbCoinIcon.drawDownscaledAveraged(-(var22 >> 1) + var24 + var15, var16 + var25 - (var15 / 2 + (var22 >> 1)), var22, var22);
             }
             if (5 <= vc.field_eb[var6Lifetime1] &&
               var18 >= 0) {
-              ad.orbCoinIcon.a(-(var23 >> 1) + var24 + var17, -(var23 >> 1) + (var18 - var17 / 2 + var25), var23, var23);
+              ad.orbCoinIcon.drawDownscaledAveraged(-(var23 >> 1) + var24 + var17, -(var23 >> 1) + (var18 - var17 / 2 + var25), var23, var23);
             }
           }
           if (param1 != 2) {
-            vg.smallFont.b(qg.field_m.toUpperCase(), 320, var7Lifetime1 + 158, 8437759, -1);
-            vg.smallFont.b(Integer.toString(h.field_c[var6Lifetime1]), 420, 158 + var7Lifetime1, 8437759, -1);
-            vg.smallFont.b(DualLinkNode.field_i.toUpperCase(), 320, var7Lifetime1 + 178, 8437759, -1);
-            vg.smallFont.b(Integer.toString(vc.field_eb[var6Lifetime1]), 420, var7Lifetime1 + 178, 8437759, -1);
+            vg.smallFont.drawLeft(qg.field_m.toUpperCase(), 320, var7Lifetime1 + 158, 8437759, -1);
+            vg.smallFont.drawLeft(Integer.toString(h.field_c[var6Lifetime1]), 420, 158 + var7Lifetime1, 8437759, -1);
+            vg.smallFont.drawLeft(DualLinkNode.field_i.toUpperCase(), 320, var7Lifetime1 + 178, 8437759, -1);
+            vg.smallFont.drawLeft(Integer.toString(vc.field_eb[var6Lifetime1]), 420, var7Lifetime1 + 178, 8437759, -1);
             stackIn_82_0 = vg.smallFont;
             if (var8Lifetime1 == 0) {
               stackIn_83_1 = "???";
             } else {
               stackIn_83_1 = ak.achievementCriteria[var6Lifetime1].toUpperCase();
             }
-            ((v) (Object) stackIn_82_0).a(stackIn_83_1, 320, var7Lifetime1 + 92, 190, 80, 8437759, -1, 0, 0, 20);
+            ((v) (Object) stackIn_82_0).drawParagraph(stackIn_83_1, 320, var7Lifetime1 + 92, 190, 80, 8437759, -1, 0, 0, 20);
           }
         } else {
           if (param1 != 2) {
             if (qm.i(20)) {
-              vg.smallFont.c(pc.textCreateAccount1.toUpperCase(), 320, 270, 8437759, -1);
-              vg.smallFont.c(dd.textCreateAccount2.toUpperCase(), 320, 290, 8437759, -1);
-              vg.smallFont.a(kn.field_L.toUpperCase(), 160, 210, 320, 80, 8437759, -1, 1, 0, 20);
+              vg.smallFont.drawCentered(pc.textCreateAccount1.toUpperCase(), 320, 270, 8437759, -1);
+              vg.smallFont.drawCentered(dd.textCreateAccount2.toUpperCase(), 320, 290, 8437759, -1);
+              vg.smallFont.drawParagraph(kn.field_L.toUpperCase(), 160, 210, 320, 80, 8437759, -1, 1, 0, 20);
             } else {
-              vg.smallFont.a(kn.field_L.toUpperCase(), 160, 240, 320, 80, 8437759, -1, 1, 0, 20);
+              vg.smallFont.drawParagraph(kn.field_L.toUpperCase(), 160, 240, 320, 80, 8437759, -1, 1, 0, 20);
             }
           }
         }
@@ -239,7 +239,7 @@ final class oi {
         if (qm.i(20)) {
           var8Lifetime2 -= 20;
         }
-        vg.smallFont.c(dg.textRatedAchievements.toUpperCase(), 320, var8Lifetime2, 8437759, -1);
+        vg.smallFont.drawCentered(dg.textRatedAchievements.toUpperCase(), 320, var8Lifetime2, 8437759, -1);
         if (!qm.i(20)) {
           ah.a(400, 100, 350, 1141646, 120);
         }
@@ -277,26 +277,26 @@ final class oi {
         int var5;
         int var7;
         var7 = Virogrid.field_F ? 1 : 0;
-        Rasterizer.b(100, 0, 10, 400, 0);
-        Rasterizer.b(530, 0, 10, 400, 0);
+        Rasterizer.fillRectangle(100, 0, 10, 400, 0);
+        Rasterizer.fillRectangle(530, 0, 10, 400, 0);
         stackIn_2_0 = 110;
         stackIn_2_1 = 0;
         stackIn_2_2 = 420;
         stackIn_2_3 = 400;
         stackIn_3_4 = (param1 == 1) ? 127 : 263172;
-        Rasterizer.b(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4);
+        Rasterizer.fillRectangle(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4);
         if (this.field_e == 10) {
           return;
         }
-        var4 = -(hd.standardFont.a(lc.field_e[this.field_e]) / 2) + 320;
+        var4 = -(hd.standardFont.textWidth(lc.field_e[this.field_e]) / 2) + 320;
         if (param2 >= -61) {
           return;
         }
         var5 = 40;
         if (this.field_e == 0) {
-          Js5Archive.field_l.a(-(Js5Archive.field_l.field_j / 2) + 320, 20);
+          Js5Archive.field_l.draw(-(Js5Archive.field_l.field_j / 2) + 320, 20);
         } else {
-          hd.standardFont.b(lc.field_e[this.field_e], var4, var5, 1141646, -1);
+          hd.standardFont.drawLeft(lc.field_e[this.field_e], var4, var5, 1141646, -1);
         }
         ah.a(400, 100, 72, 1141646, 120);
         for (var6 = 0; this.field_f.field_o > var6; var6++) {
@@ -315,7 +315,7 @@ final class oi {
             if (8 != this.field_e) {
               if (this.field_e == 9 &&
                 param1 != 2) {
-                hd.standardFont.a(kn.field_J, 135, 78, 370, 180, 8437759, -1, 1, 0, 18);
+                hd.standardFont.drawParagraph(kn.field_J, 135, 78, 370, 180, 8437759, -1, 1, 0, 18);
                 return;
               }
             } else {
@@ -507,12 +507,12 @@ final class oi {
           var4 = var4 + vg.smallFont.field_H;
         }
         regionExit1: {
-          re.tinyFont.c(qe.field_j.toUpperCase(), 310, var5, var3, -1);
-          re.tinyFont.c(aj.field_h.toUpperCase(), 368, var4, var3, -1);
-          re.tinyFont.c(SpriteState.field_s.toUpperCase(), 420, var5, var3, -1);
-          re.tinyFont.c(ql.field_s.toUpperCase(), 458, var4, var3, -1);
+          re.tinyFont.drawCentered(qe.field_j.toUpperCase(), 310, var5, var3, -1);
+          re.tinyFont.drawCentered(aj.field_h.toUpperCase(), 368, var4, var3, -1);
+          re.tinyFont.drawCentered(SpriteState.field_s.toUpperCase(), 420, var5, var3, -1);
+          re.tinyFont.drawCentered(ql.field_s.toUpperCase(), 458, var4, var3, -1);
           var4 += 24;
-          re.tinyFont.c(SpriteState.field_o.toUpperCase(), 500, var5, var3, -1);
+          re.tinyFont.drawCentered(SpriteState.field_o.toUpperCase(), 500, var5, var3, -1);
           if (mm.field_j.field_s) {
             if (mm.field_j.field_j != null) {
               var6 = qg.field_s.toUpperCase();
@@ -535,7 +535,7 @@ final class oi {
                   } else {
                     stackIn_27_4 = 996169;
                   }
-                  Rasterizer.b(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4);
+                  Rasterizer.fillRectangle(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4);
                   var6 = "";
                   this.a(178, var8[3 + var10 * 4], var7[var10], var4, var8[4 * var10 + 2], var3, var10, var8[4 * var10 + 1], var8[var10 * 4]);
                 }
@@ -554,7 +554,7 @@ final class oi {
           }
         }
         var4Lifetime1 = 120 + vg.smallFont.field_H + 10 * ag.field_a[6] / 2;
-        vg.smallFont.c(var6, 320, var4Lifetime1, 8437759, -1);
+        vg.smallFont.drawCentered(var6, 320, var4Lifetime1, 8437759, -1);
         return;
     }
 
@@ -562,7 +562,7 @@ final class oi {
         String var17 = null;
         int var10_int = param1 + param7 + param4;
         if (param6 != -1) {
-          vg.smallFont.a(param6 + 1 + ". ", 140, param3, param5, -1);
+          vg.smallFont.drawRight(param6 + 1 + ". ", 140, param3, param5, -1);
         }
         if (var10_int != 0) {
           param4 = (param4 * 200 + var10_int) / (var10_int * 2);
@@ -570,22 +570,22 @@ final class oi {
           param7 = (param7 * 200 + var10_int) / (var10_int * 2);
         }
         String var12 = param2;
-        vg.smallFont.b(var12, 140, param3, param5, -1);
+        vg.smallFont.drawLeft(var12, 140, param3, param5, -1);
         String var13 = Integer.toString(param8);
-        vg.smallFont.c(var13, 310, param3, param5, -1);
+        vg.smallFont.drawCentered(var13, 310, param3, param5, -1);
         String var14 = var10_int < 50 ? Integer.toString(var10_int) : "50+";
         String var11 = var14;
-        vg.smallFont.c(var14, 368, param3, param5, -1);
+        vg.smallFont.drawCentered(var14, 368, param3, param5, -1);
         String var15 = param7 + "%";
-        vg.smallFont.c(var15, 420, param3, param5, -1);
+        vg.smallFont.drawCentered(var15, 420, param3, param5, -1);
         String var16 = param1 + "%";
         if (param0 != 178) {
           return;
         }
         try {
-          vg.smallFont.c(var16, 458, param3, param5, -1);
+          vg.smallFont.drawCentered(var16, 458, param3, param5, -1);
           var17 = param4 + "%";
-          vg.smallFont.c(var17, 500, param3, param5, -1);
+          vg.smallFont.drawCentered(var17, 500, param3, param5, -1);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "oi.CA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -675,7 +675,7 @@ final class oi {
     }
 
     private final void b(byte param0) {
-        vg.smallFont.c(mb.field_mb.toUpperCase(), 320, 197 + hd.standardFont.field_H, 8437759, -1);
+        vg.smallFont.drawCentered(mb.field_mb.toUpperCase(), 320, 197 + hd.standardFont.field_H, 8437759, -1);
         if (param0 > -1) {
           this.a((byte) -58, false, -58, 36);
         }
@@ -687,7 +687,7 @@ final class oi {
         if (param2 != 423239361) {
           field_b = 60L;
         }
-        if (this.field_f.b(83)) {
+        if (this.field_f.isForwardAction(83)) {
           if (14 != var4 &&
             var4 != 15) {
             vm.$cfr$intArgs$a$45c25716b3df(30, bg.field_Lb);
@@ -1050,7 +1050,7 @@ final class oi {
 
     private final void a(int param0, int param1, byte param2) {
         String var4 = em.instructionPages[param0];
-        int var5 = vg.smallFont.b(var4, 370);
+        int var5 = vg.smallFont.wrappedLineCount(var4, 370);
         int var7 = 100 % ((-48 - param2) / 63);
         int var6 = 16 + 18 * var5;
         ah.a(400, 100, 72, 1141646, 120);
@@ -1058,7 +1058,7 @@ final class oi {
         pe.a(73, 1141646, 120, (byte) -122, -1 + var6);
         pe.a(73, 1141646, 519, (byte) -110, -1 + var6);
         if (param1 != 2) {
-          vg.smallFont.a(var4, 135, 78, 370, 180, 8437759, -1, 0, 0, 18);
+          vg.smallFont.drawParagraph(var4, 135, 78, 370, 180, 8437759, -1, 0, 0, 18);
         }
     }
 
@@ -1176,7 +1176,7 @@ final class oi {
             break;
         }
         var20 = var7.toUpperCase();
-        var8 = mc.menuFont.a(var20);
+        var8 = mc.menuFont.textWidth(var20);
         var9 = this.c(108, param3);
         var10 = this.a((byte) -94, param3);
         var11 = this.d(22, param3);
@@ -1196,20 +1196,20 @@ final class oi {
           stackIn_57_0 = (param1) ? 12632256 : 7829367;
           var16 = stackIn_57_0;
         }
-        mc.menuFont.b(var20, var12, var11 + mc.menuFont.field_H, var16, -1);
+        mc.menuFont.drawLeft(var20, var12, var11 + mc.menuFont.field_H, var16, -1);
         if (var6 != 14 &&
           var6 != 15) {
           return;
         }
         var12 = var12 + ok.field_L;
-        Rasterizer.e(var12, -1 + var13 / 2 + var11, 121, 2, var16);
+        Rasterizer.drawRectangle(var12, -1 + var13 / 2 + var11, 121, 2, var16);
         if (14 == var6) {
           stackIn_64_0 = 120 * ag.field_c / 256;
         } else {
           stackIn_64_0 = c.field_a * 120 / 256;
         }
         var17 = stackIn_64_0;
-        Rasterizer.e(var17 + var12 - 1, 3 + var11, 3, -6 + var13, var16);
+        Rasterizer.drawRectangle(var17 + var12 - 1, 3 + var11, 3, -6 + var13, var16);
         return;
     }
 

@@ -59,7 +59,7 @@ final class mk extends dc implements ta {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -16) {
           return;
         }
@@ -112,7 +112,7 @@ final class mk extends dc implements ta {
         try {
           var2_int = param0.readUnsignedByte(11132);
           if (param1 > -41) {
-            mk.k(-49);
+            mk.releaseStatics(-49);
           }
           stackIn_5_0 = (var2_int != 1) ? 0 : 1;
           var3 = stackIn_5_0;

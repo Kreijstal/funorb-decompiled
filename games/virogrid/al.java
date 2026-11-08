@@ -82,7 +82,7 @@ final class al extends mi implements bo, wi {
               de.field_ob = md.a(param2, 7655);
               return;
             }
-            de.field_ob = lc.a(param1, param0, param3 ^ 29521);
+            de.field_ob = lc.createSuggestedUsernameQuery(param1, param0, param3 ^ 29521);
           } else {
             stackIn_6_0 = -32;
             stackIn_7_1 = !(13 <= nf.field_d);
@@ -247,17 +247,17 @@ final class al extends mi implements bo, wi {
 
     final static void i(int param0) {
         if (ae.field_g != null) {
-          ae.field_g.d();
+          ae.field_g.shutdown();
         }
         if (ac.field_c != null) {
-          ac.field_c.d();
+          ac.field_c.shutdown();
         }
         if (param0 != 100) {
           al.b(89, -96);
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           al.i(-50);
         }
@@ -268,7 +268,7 @@ final class al extends mi implements bo, wi {
 
     final static boolean h(int param0) {
         if (param0 < 25) {
-          al.g(78);
+          al.releaseStatics(78);
         }
         if (!qc.field_h) {
           return false;
@@ -326,14 +326,14 @@ final class al extends mi implements bo, wi {
           ne.field_g = param0;
           j.field_i = param2;
           if (param1 != 13) {
-            al.g(-11);
+            al.releaseStatics(-11);
           }
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "al.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public final void a(wa param0, int param1) {
+    public final void onTextChanged(wa param0, int param1) {
         try {
           this.b(false);
           if (param1 != 13) {

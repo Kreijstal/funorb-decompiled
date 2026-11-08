@@ -55,7 +55,7 @@ final class li {
         if (this.field_q <= qk.field_b) {
           this.c((byte) 22);
           if (param0 != -7927) {
-            li.b((byte) 33);
+            li.releaseStatics((byte) 33);
           }
           return;
         }
@@ -70,7 +70,7 @@ final class li {
         this.field_j = param1;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 112) {
           field_b = (String) null;
         }
@@ -81,7 +81,7 @@ final class li {
     final boolean c(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -1558) {
-          li.b((byte) -22);
+          li.releaseStatics((byte) -22);
         }
         stackIn_6_0 = (qk.field_b >= this.field_q) && (bn.field_d > 0);
         return stackIn_6_0;

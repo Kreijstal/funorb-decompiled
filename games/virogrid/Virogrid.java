@@ -116,9 +116,9 @@ public final class Virogrid extends od {
           re.tinyFont = a.a("", param5, -110, "tinyfont", param4);
           var13 = sn.a(param5, "starfield", "", false);
           sj.field_j = new Sprite(2560, 256);
-          sj.field_j.b();
-          var13.b(0, 0);
-          var13.b(1280, 0);
+          sj.field_j.makeRasterTarget();
+          var13.drawOpaque(0, 0);
+          var13.drawOpaque(1280, 0);
           ca.field_M.a((byte) 29);
           Js5Archive.field_l = vc.a(param5, "logo", "", (byte) 114);
           sn.a(param5, "splash", "", false);
@@ -143,13 +143,13 @@ public final class Virogrid extends od {
           var9_int = -67 / ((param1 + 11) / 58);
           for (var10 = 0; var8 > var10; var10++) {
             var11 = new Sprite(32, 32);
-            var11.b();
-            MouseWheelInput.achievementIcons[var10].b(0, 0, 32, 32);
+            var11.makeRasterTarget();
+            MouseWheelInput.achievementIcons[var10].drawScaledAveraged(0, 0, 32, 32);
             vd.field_Y[var10] = var11;
           }
           tn.field_b = new Sprite(32, 32);
-          tn.field_b.b();
-          mj.unachievedIcon.b(0, 0, 32, 32);
+          tn.field_b.makeRasterTarget();
+          mj.unachievedIcon.drawScaledAveraged(0, 0, 32, 32);
           ul.b((byte) 108);
           kd.viewIcons = ke.a(32, param5, "", "viewicons");
           discarded$0 = this.b(131586, -9105, 30136);
@@ -293,10 +293,10 @@ public final class Virogrid extends od {
               al.a(mi.field_e, param0 ^ -37, 80.0f);
               this.onCanvasCreated(true);
               oi.musicTracks = new MusicTrack[4];
-              oi.musicTracks[0] = MusicTrack.a(wm.field_w, "", "ataxx titlescreen");
-              oi.musicTracks[1] = MusicTrack.a(wm.field_w, "", "tetralink ingame 1");
-              oi.musicTracks[2] = MusicTrack.a(wm.field_w, "", "tetralink ingame 2");
-              oi.musicTracks[3] = MusicTrack.a(wm.field_w, "", "tetralink ingame 3");
+              oi.musicTracks[0] = MusicTrack.load(wm.field_w, "", "ataxx titlescreen");
+              oi.musicTracks[1] = MusicTrack.load(wm.field_w, "", "tetralink ingame 1");
+              oi.musicTracks[2] = MusicTrack.load(wm.field_w, "", "tetralink ingame 2");
+              oi.musicTracks[3] = MusicTrack.load(wm.field_w, "", "tetralink ingame 3");
               for (var3_int = 0; var3_int < 4; var3_int++) {
                 vg.field_B.a(BufferedSocket.field_d, 0, af.field_g, oi.musicTracks[var3_int], 0);
               }
@@ -325,7 +325,7 @@ public final class Virogrid extends od {
               return false;
             }
             if (null != md.field_h) {
-              cg.a(8799, new ii(md.field_h.a("", 100, "huffman")));
+              cg.setSharedAnimationFrameset(8799, new ii(md.field_h.a("", 100, "huffman")));
               md.field_h = null;
               sb.a(param0 - 86);
               return false;
@@ -493,7 +493,7 @@ public final class Virogrid extends od {
             var7 = id.a(var6, 32);
             var8 = nf.a(21855, var6);
             ae.field_e = new int[]{var3, var5, var4, var8, 0, -var7, 0, 65536, 0, var7, 0, var8};
-            ri.field_a.a(pe.field_j, ae.field_e);
+            ri.field_a.drawTransformed(pe.field_j, ae.field_e);
             ri.field_a.c();
           }
           if (param0 != -1933) {
@@ -595,7 +595,7 @@ public final class Virogrid extends od {
               gb.c((byte) -44);
               ci.field_s = new Sprite(640, 480);
               pj.a(ci.field_s, 256);
-              Rasterizer.b(0, 0, 640, 480, 3158064);
+              Rasterizer.fillRectangle(0, 0, 640, 480, 3158064);
               var3 = j.field_b;
               var4 = tm.field_g;
               jm.a(320, 240, -2);
@@ -614,26 +614,26 @@ public final class Virogrid extends od {
                 stackIn_34_0 = var20;
               }
               this.e((byte) -62);
-              kg.field_c.a(pe.field_j, bi.field_c);
-              nb.field_x.a(pe.field_j, bi.field_c);
-              kf.field_c.a(pe.field_j, bi.field_c);
-              cm.field_k.a(pe.field_j, bi.field_c);
-              ba.field_c.a(pe.field_j, bi.field_c);
-              RasterBuffer.field_j.a(pe.field_j, bi.field_c);
-              th.field_y.a(var20, bi.field_c);
-              pj.field_a.a(var20, bi.field_c);
-              qg.field_h.a(var20, bi.field_c);
-              jg.field_i.a(var20, bi.field_c);
-              ee.field_a.a(var20, bi.field_c);
-              og.field_l.a(var20, bi.field_c);
-              ab.field_L.a(var20, bi.field_c);
-              rc.field_o.a(var20, bi.field_c);
-              hn.field_x.a(var20, bi.field_c);
-              td.field_i.a(var20, bi.field_c);
+              kg.field_c.drawTransformed(pe.field_j, bi.field_c);
+              nb.field_x.drawTransformed(pe.field_j, bi.field_c);
+              kf.field_c.drawTransformed(pe.field_j, bi.field_c);
+              cm.field_k.drawTransformed(pe.field_j, bi.field_c);
+              ba.field_c.drawTransformed(pe.field_j, bi.field_c);
+              RasterBuffer.field_j.drawTransformed(pe.field_j, bi.field_c);
+              th.field_y.drawTransformed(var20, bi.field_c);
+              pj.field_a.drawTransformed(var20, bi.field_c);
+              qg.field_h.drawTransformed(var20, bi.field_c);
+              jg.field_i.drawTransformed(var20, bi.field_c);
+              ee.field_a.drawTransformed(var20, bi.field_c);
+              og.field_l.drawTransformed(var20, bi.field_c);
+              ab.field_L.drawTransformed(var20, bi.field_c);
+              rc.field_o.drawTransformed(var20, bi.field_c);
+              hn.field_x.drawTransformed(var20, bi.field_c);
+              td.field_i.drawTransformed(var20, bi.field_c);
               ul.b((byte) 109);
               jm.a(var3, var4, -2);
             }
-            ci.field_s.b(0, tm.field_g - 240);
+            ci.field_s.drawOpaque(0, tm.field_g - 240);
             if (ke.field_p.field_m) {
               var3Lifetime2 = id.field_r % 64;
               if (var3Lifetime2 >= 32) {
@@ -703,12 +703,12 @@ public final class Virogrid extends od {
                 var4_ref_pm = (pm) (ImageProducerRasterBuffer.field_n.a(16213));
               }
               ul.b((byte) 86);
-              c.field_d.d(j.field_b - (c.field_d.field_w >> 1), -(c.field_d.field_p >> 1) + tm.field_g);
+              c.field_d.drawTransparent(j.field_b - (c.field_d.field_w >> 1), -(c.field_d.field_p >> 1) + tm.field_g);
               if (!(ke.field_p.field_f <= 0)) {
-                rk.a(j.field_b - (c.field_d.field_w >> 1), tm.field_g - (c.field_d.field_p >> 1), (c.field_d.field_w >> 1) + j.field_b, -(c.field_d.field_p >> 1) + tm.field_g, 40, ke.field_p.field_f, pj.field_d);
-                rk.a((c.field_d.field_w >> 1) + j.field_b, -(c.field_d.field_p >> 1) + tm.field_g, (c.field_d.field_w >> 1) + j.field_b, tm.field_g + (c.field_d.field_p >> 1), 40, ke.field_p.field_f, pj.field_d);
-                rk.a((c.field_d.field_w >> 1) + j.field_b, tm.field_g + (c.field_d.field_p >> 1), -(c.field_d.field_w >> 1) + j.field_b, tm.field_g + (c.field_d.field_p >> 1), 40, ke.field_p.field_f, pj.field_d);
-                rk.a(j.field_b - (c.field_d.field_w >> 1), tm.field_g + (c.field_d.field_p >> 1), j.field_b - (c.field_d.field_w >> 1), tm.field_g - (c.field_d.field_p >> 1), 40, ke.field_p.field_f, pj.field_d);
+                rk.drawGlowingLine(j.field_b - (c.field_d.field_w >> 1), tm.field_g - (c.field_d.field_p >> 1), (c.field_d.field_w >> 1) + j.field_b, -(c.field_d.field_p >> 1) + tm.field_g, 40, ke.field_p.field_f, pj.field_d);
+                rk.drawGlowingLine((c.field_d.field_w >> 1) + j.field_b, -(c.field_d.field_p >> 1) + tm.field_g, (c.field_d.field_w >> 1) + j.field_b, tm.field_g + (c.field_d.field_p >> 1), 40, ke.field_p.field_f, pj.field_d);
+                rk.drawGlowingLine((c.field_d.field_w >> 1) + j.field_b, tm.field_g + (c.field_d.field_p >> 1), -(c.field_d.field_w >> 1) + j.field_b, tm.field_g + (c.field_d.field_p >> 1), 40, ke.field_p.field_f, pj.field_d);
+                rk.drawGlowingLine(j.field_b - (c.field_d.field_w >> 1), tm.field_g + (c.field_d.field_p >> 1), j.field_b - (c.field_d.field_w >> 1), tm.field_g - (c.field_d.field_p >> 1), 40, ke.field_p.field_f, pj.field_d);
               }
             }
             var3_ref_fl = (fl) (sh.field_tb.a((byte) -108));
@@ -717,7 +717,7 @@ public final class Virogrid extends od {
               var6Lifetime2 = 512 + (var3_ref_fl.field_m >> 12);
               var5Lifetime1 = var3_ref_fl.field_p >> 12;
               if (var6Lifetime2 > 0) {
-                Rasterizer.a((var4Lifetime2 << 13) / var6Lifetime2 + (j.field_b << 4), (tm.field_g << 4) + (var5Lifetime1 << 13) / var6Lifetime2, 65536 / var6Lifetime2, var3_ref_fl.field_o * 5 / 3, pj.field_d);
+                Rasterizer.fillRadialPaletteCircle((var4Lifetime2 << 13) / var6Lifetime2 + (j.field_b << 4), (tm.field_g << 4) + (var5Lifetime1 << 13) / var6Lifetime2, 65536 / var6Lifetime2, var3_ref_fl.field_o * 5 / 3, pj.field_d);
               }
               var3_ref_fl = (fl) (sh.field_tb.a(16213));
             }
@@ -800,7 +800,7 @@ public final class Virogrid extends od {
             ok.b(f.b(-844), 3410);
           }
           if (ug.a(param0)) {
-            Rasterizer.g(0, 0, Rasterizer.field_e, Rasterizer.field_f);
+            Rasterizer.darkenRectangle(0, 0, Rasterizer.field_e, Rasterizer.field_f);
             stackIn_66_0 = !param0;
             var4 = IntrusiveDequeCursor.a(stackIn_66_0) + 24;
             var5 = Virogrid.q(-80) + 26;
@@ -824,8 +824,8 @@ public final class Virogrid extends od {
                       var5 = 8;
                     }
                   }
-                  vd.field_Y[var4_ref_hj.field_i].d(8, var5);
-                  hd.standardFont.b(qk.achievementTitles[var4_ref_hj.field_i], 48, hd.standardFont.field_H + var5, 8437759, -1);
+                  vd.field_Y[var4_ref_hj.field_i].drawTransparent(8, var5);
+                  hd.standardFont.drawLeft(qk.achievementTitles[var4_ref_hj.field_i], 48, hd.standardFont.field_H + var5, 8437759, -1);
                 }
               } else {
                 var4 = 24 + rh.a(-16118);
@@ -839,7 +839,7 @@ public final class Virogrid extends od {
             ij.a(-119, (16 - wa.field_K) * 256 / 16);
           }
           if (hd.field_d >= 2) {
-            hd.standardFont.b(Integer.toString(mj.field_E), 4, 24, 16777215, -1);
+            hd.standardFont.drawLeft(Integer.toString(mj.field_E), 4, 24, 16777215, -1);
           }
           td.a(-30179, (java.awt.Canvas) (var8), 0, 0);
           return;
@@ -902,24 +902,24 @@ public final class Virogrid extends od {
           if (param0 != 1053) {
             return;
           }
-          var27 = Model.a(param1, "", "scenery_walls");
-          var4 = Model.a(param1, "", "scenery_walls2");
-          var5 = Model.a(param1, "", "scenery_game-table");
-          var6 = Model.a(param1, "", "scenery_floor");
-          var7 = Model.a(param1, "", "scenery_props1");
-          var8 = Model.a(param1, "", "scenery_props2");
-          var9 = Model.a(param1, "", "scenery_ceiling");
-          var10 = Model.a(param1, "", "scenery_door");
-          var11 = Model.a(param1, "", "scenery_game-screen_back");
-          var12 = Model.a(param1, "", "scenery_game-screen_front");
-          var13 = Model.a(param1, "", "scenery_game-screen_front-left");
-          var14 = Model.a(param1, "", "scenery_game-screen_back-left");
-          var15 = Model.a(param1, "", "scenery_game-screen_back-top");
-          var16 = Model.a(param1, "", "scenery_game-screen_front-right");
-          var17 = Model.a(param1, "", "scenery_game-screen_back-right");
-          var18 = Model.a(param1, "", "scenery_game-screen_front-top");
-          var19 = Model.a(param1, "", "scenery_game-screen_front-black");
-          var20 = Model.a(param1, "", "scenery_game-screen_back-black");
+          var27 = Model.load(param1, "", "scenery_walls");
+          var4 = Model.load(param1, "", "scenery_walls2");
+          var5 = Model.load(param1, "", "scenery_game-table");
+          var6 = Model.load(param1, "", "scenery_floor");
+          var7 = Model.load(param1, "", "scenery_props1");
+          var8 = Model.load(param1, "", "scenery_props2");
+          var9 = Model.load(param1, "", "scenery_ceiling");
+          var10 = Model.load(param1, "", "scenery_door");
+          var11 = Model.load(param1, "", "scenery_game-screen_back");
+          var12 = Model.load(param1, "", "scenery_game-screen_front");
+          var13 = Model.load(param1, "", "scenery_game-screen_front-left");
+          var14 = Model.load(param1, "", "scenery_game-screen_back-left");
+          var15 = Model.load(param1, "", "scenery_game-screen_back-top");
+          var16 = Model.load(param1, "", "scenery_game-screen_front-right");
+          var17 = Model.load(param1, "", "scenery_game-screen_back-right");
+          var18 = Model.load(param1, "", "scenery_game-screen_front-top");
+          var19 = Model.load(param1, "", "scenery_game-screen_front-black");
+          var20 = Model.load(param1, "", "scenery_game-screen_back-black");
           this.a(var11, (byte) 69);
           this.a(var12, (byte) 69);
           this.a(var13, (byte) 69);
@@ -946,7 +946,7 @@ public final class Virogrid extends od {
           var24 = 256;
           var25 = 0;
           if (db.b((byte) 13, 0)) {
-            var26 = Model.a(param1, "", "ghost_untextured");
+            var26 = Model.load(param1, "", "ghost_untextured");
             ri.field_a = (il) (var26.a(var21, var22, var23, var24, var25));
             var23 = 64;
             var21 = 42;
@@ -961,10 +961,10 @@ public final class Virogrid extends od {
           lk.field_Qb = (il) (var10.a(var21, var22, var23, var24, var25));
           var13.d();
           var14.d();
-          var14.a(var13, 0, 0, 0, false);
+          var14.mergeFrom(var13, 0, 0, 0, false);
           var16.d();
           var17.d();
-          var17.a(var16, 0, 0, 0, false);
+          var17.mergeFrom(var16, 0, 0, 0, false);
           th.field_y = (il) (var11.a(var21, var22, var23, var24, var25));
           ee.field_a = (il) (var12.a(var21, var22, var23, var24, var25));
           qg.field_h = (il) (var14.a(var21, var22, var23, var24, var25));
@@ -1537,11 +1537,11 @@ public final class Virogrid extends od {
           }
           boolean decompiledFrameRemainder0 = true;
           if (var2_int != 0) {
-            Rasterizer.b(0, 0, 640, 480, 3158064);
+            Rasterizer.fillRectangle(0, 0, 640, 480, 3158064);
             this.e((byte) -62);
             pc.a(mk.field_bb, (byte) -86);
             si.a(nk.field_K, new double[]{-110.0, 26.0, -410.0}, new double[]{-1.0, 0.0, 0.0}, 64.0, 114.0, mk.field_bb, 2621440, 10420224, 10485760, 26148864, ke.field_p.field_k);
-            lk.field_Qb.a(pe.field_j, bi.field_c);
+            lk.field_Qb.drawTransformed(pe.field_j, bi.field_c);
             var23 = new int[12];
             var18 = var23;
             var3 = var18;
@@ -1570,52 +1570,52 @@ public final class Virogrid extends od {
               da.field_k[2] = vm.field_d[2];
               da.field_k[0] = vm.field_d[0];
               qc.a(118);
-              vb.field_l.b();
-              Rasterizer.b(0, 0, 640, 480, 0);
-              kg.field_c.a(pe.field_j, bi.field_c);
-              nb.field_x.a(pe.field_j, bi.field_c);
-              kf.field_c.a(pe.field_j, bi.field_c);
-              cm.field_k.a(pe.field_j, bi.field_c);
-              ba.field_c.a(pe.field_j, bi.field_c);
-              RasterBuffer.field_j.a(pe.field_j, bi.field_c);
-              fl.field_s.a(pe.field_j, bi.field_c);
+              vb.field_l.makeRasterTarget();
+              Rasterizer.fillRectangle(0, 0, 640, 480, 0);
+              kg.field_c.drawTransformed(pe.field_j, bi.field_c);
+              nb.field_x.drawTransformed(pe.field_j, bi.field_c);
+              kf.field_c.drawTransformed(pe.field_j, bi.field_c);
+              cm.field_k.drawTransformed(pe.field_j, bi.field_c);
+              ba.field_c.drawTransformed(pe.field_j, bi.field_c);
+              RasterBuffer.field_j.drawTransformed(pe.field_j, bi.field_c);
+              fl.field_s.drawTransformed(pe.field_j, bi.field_c);
               if (var4Lifetime2 == 0) {
-                th.field_y.a(var23, this.field_J);
-                pj.field_a.a(var23, this.field_H);
+                th.field_y.drawTransformed(var23, this.field_J);
+                pj.field_a.drawTransformed(var23, this.field_H);
                 if (var5 == 0) {
                   if (var6 == 0) {
-                    qg.field_h.a(var23, this.field_M);
+                    qg.field_h.drawTransformed(var23, this.field_M);
                   }
-                  jg.field_i.a(var23, this.field_G);
+                  jg.field_i.drawTransformed(var23, this.field_G);
                 } else {
                   if (var6 == 0) {
-                    jg.field_i.a(var23, this.field_G);
+                    jg.field_i.drawTransformed(var23, this.field_G);
                   }
-                  qg.field_h.a(var23, this.field_M);
+                  qg.field_h.drawTransformed(var23, this.field_M);
                 }
               } else {
-                ee.field_a.a(var23, this.field_K);
-                og.field_l.a(var23, this.field_J);
+                ee.field_a.drawTransformed(var23, this.field_K);
+                og.field_l.drawTransformed(var23, this.field_J);
                 if (var5 == 0) {
                   if (var6 == 0) {
-                    ab.field_L.a(var23, this.field_D);
+                    ab.field_L.drawTransformed(var23, this.field_D);
                   }
-                  rc.field_o.a(var23, this.field_B);
+                  rc.field_o.drawTransformed(var23, this.field_B);
                 } else {
                   if (var6 == 0) {
-                    rc.field_o.a(var23, this.field_B);
+                    rc.field_o.drawTransformed(var23, this.field_B);
                   }
-                  ab.field_L.a(var23, this.field_D);
+                  ab.field_L.drawTransformed(var23, this.field_D);
                 }
               }
               if (var4Lifetime2 == 0) {
-                td.field_i.a(var23, this.field_L);
+                td.field_i.drawTransformed(var23, this.field_L);
               } else {
-                hn.field_x.a(var23, this.field_N);
+                hn.field_x.drawTransformed(var23, this.field_N);
               }
               ul.b((byte) 116);
             }
-            vb.field_l.d(0, 0);
+            vb.field_l.drawTransparent(0, 0);
             var7 = id.field_r % 64;
             if (32 > var7) {
               stackIn_80_0 = -16 + var7;
@@ -1695,7 +1695,7 @@ public final class Virogrid extends od {
               var14 = var7Lifetime3 * pe.field_j[8] + var12Lifetime2 * pe.field_j[7] + pe.field_j[6] * var11Lifetime1;
               var7Lifetime3Lifetime1 = var15 >> 22;
               if (var15 > 0) {
-                Rasterizer.a((j.field_b << 4) + (var13 >> 9) / var7Lifetime3Lifetime1, (var14 >> 9) / var7Lifetime3Lifetime1 + (tm.field_g << 4), 16384 / var7Lifetime3Lifetime1, var16_ref.field_o * 5 / 3, pj.field_d);
+                Rasterizer.fillRadialPaletteCircle((j.field_b << 4) + (var13 >> 9) / var7Lifetime3Lifetime1, (var14 >> 9) / var7Lifetime3Lifetime1 + (tm.field_g << 4), 16384 / var7Lifetime3Lifetime1, var16_ref.field_o * 5 / 3, pj.field_d);
               }
               var16_ref = (fl) (sh.field_tb.a(16213));
             }
@@ -1980,9 +1980,9 @@ public final class Virogrid extends od {
         try {
           var4 = new Sprite(57, 57);
           pj.a(var4, 256);
-          Rasterizer.c(29, 29, 27, 263172);
+          Rasterizer.fillCircle(29, 29, 27, 263172);
           for (var5 = 23; var5 >= 0; var5--) {
-            Rasterizer.c(29, 29, var5, param2 + var5 * param0);
+            Rasterizer.fillCircle(29, 29, var5, param2 + var5 * param0);
           }
           ul.b((byte) 93);
           if (param1 != -9105) {
@@ -2014,11 +2014,11 @@ public final class Virogrid extends od {
           lm.a(0);
           var5 = 120 / ((33 - param1) / 33);
           nd.field_d = new Sprite(var3, 3 * var4 / 4);
-          nd.field_d.b();
-          var2.b(0, 0);
+          nd.field_d.makeRasterTarget();
+          var2.drawOpaque(0, 0);
           dn.field_c = new Sprite(var3, -nd.field_d.field_p + var4);
-          dn.field_c.b();
-          var2.b(0, -nd.field_d.field_p);
+          dn.field_c.makeRasterTarget();
+          var2.drawOpaque(0, -nd.field_d.field_p);
           dn.field_c.field_x = nd.field_d.field_p;
           ai.a(true);
           return;
@@ -2083,294 +2083,294 @@ public final class Virogrid extends od {
         try {
           Virogrid.u(240);
           hj.a(17);
-          IntrusiveNode.b(-6325);
-          IntrusiveDeque.c(param0 - 32);
-          ud.a((byte) -94);
-          fj.a((byte) -99);
-          rh.b(param0 ^ 57);
-          bn.a((byte) -118);
+          IntrusiveNode.releaseStatics(-6325);
+          IntrusiveDeque.releaseStatics(param0 - 32);
+          ud.releaseStatics((byte) -94);
+          fj.releaseStatics((byte) -99);
+          rh.releaseStatics(param0 ^ 57);
+          bn.releaseStatics((byte) -118);
           rk.a(-97);
           GameKeyHandler.a((byte) -110);
           cg.a(-65);
-          nf.a(-28637);
-          wd.a(param0 ^ -8518);
+          nf.releaseStatics(-28637);
+          wd.releaseStatics(param0 ^ -8518);
           em.a(-85);
-          od.d(false);
-          rg.a(param0 ^ 64);
+          od.releaseStatics(false);
+          rg.releaseStatics(param0 ^ 64);
           GameApplet.b(param0 - 6490);
-          og.b(param0 + 74);
-          MouseInputHandler.a(param0 + 0);
+          og.releaseStatics(param0 + 74);
+          MouseInputHandler.releaseStatics(param0 + 0);
           MouseWheelInput.b(3981);
-          Rasterizer.a();
-          Js5Archive.a((byte) -104);
-          e.a();
+          Rasterizer.releaseStatics();
+          Js5Archive.releaseStatics((byte) -104);
+          e.releaseStatics();
           ak.a(4472);
-          PacketBuffer.b((byte) 110);
+          PacketBuffer.releaseStatics((byte) 110);
           hc.a(true);
-          se.a((byte) 79);
+          se.releaseStatics((byte) 79);
           rb.a((byte) -13);
           vm.a((byte) -106);
-          oh.a(true);
+          oh.releaseStatics(true);
           td.a(6666);
           kb.a(122);
           pc.a(-30114);
           ih.a(81);
           cj.a(-99);
-          nm.a(26523);
-          hm.b(param0 ^ -126);
+          nm.releaseStatics(26523);
+          hm.releaseStatics(param0 ^ -126);
           RasterBuffer.a(param0 ^ -28608);
           qc.a((byte) 9);
-          h.a(true);
-          li.b((byte) 112);
-          jg.a(28275);
+          h.releaseStatics(true);
+          li.releaseStatics((byte) 112);
+          jg.releaseStatics(28275);
           dk.a(-124);
-          sb.b(-851125662);
-          ha.a(param0 + 79);
-          nh.a(false);
-          BufferedSocket.d(-127);
+          sb.releaseStatics(-851125662);
+          ha.releaseStatics(param0 + 79);
+          nh.releaseStatics(false);
+          BufferedSocket.releaseStatics(-127);
           oi.c(122);
-          GameSession.b(23320);
-          pi.a(param0 ^ -29216);
-          il.a();
-          Model.b();
-          GameBoard.a(98);
+          GameSession.releaseStatics(23320);
+          pi.releaseStatics(param0 ^ -29216);
+          il.releaseStatics();
+          Model.releaseStatics();
+          GameBoard.releaseStatics(98);
           ee.b((byte) 119);
-          SpriteState.d(0);
-          DualLinkNode.c(true);
-          bd.a(95);
-          tn.f(param0 + 31);
-          ke.d(-51);
+          SpriteState.releaseStatics(0);
+          DualLinkNode.releaseStatics(true);
+          bd.releaseStatics(95);
+          tn.releaseStatics(param0 + 31);
+          ke.releaseStatics(-51);
           wg.a(0);
           sd.a((byte) 113);
-          ah.a((byte) -115);
+          ah.releaseStatics((byte) -115);
           ib.a(-60);
-          k.a(1000);
-          we.a((byte) -104);
-          gi.a((byte) -103);
-          en.g(0);
+          k.releaseStatics(1000);
+          we.releaseStatics((byte) -104);
+          gi.releaseStatics((byte) -103);
+          en.releaseStatics(0);
           qm.j(124);
-          SpriteWidget.f(param0 + 2147483647);
-          ga.i(param0 ^ -91);
+          SpriteWidget.releaseStatics(param0 + 2147483647);
+          ga.releaseStatics(param0 ^ -91);
           ao.g(-119);
           dj.a(false);
           um.g(0);
-          bg.g(param0);
-          lk.e((byte) 10);
-          an.a((byte) 26);
-          pl.a((byte) -120);
+          bg.releaseStatics(param0);
+          lk.releaseStatics((byte) 10);
+          an.releaseStatics((byte) 26);
+          pl.releaseStatics((byte) -120);
           pj.a(false);
-          oe.b(param0 + 0);
-          hk.d(false);
-          jm.a(param0 + 0);
+          oe.releaseStatics(param0 + 0);
+          hk.releaseStatics(false);
+          jm.releaseStatics(param0 + 0);
           he.g(7);
-          fk.c();
-          vl.a(false);
-          ll.a((byte) -64);
+          fk.releaseStatics();
+          vl.releaseStatics(false);
+          ll.releaseStatics((byte) -64);
           pg.b(param0 + 8192);
           s.a(-1);
           i.a((byte) -78);
-          ln.a(true);
-          wn.d(79);
-          qj.b();
-          pa.c(true);
-          ua.b();
-          eg.c(param0 ^ -55);
-          ef.a(-3);
-          kf.a(-1);
-          vj.b((byte) 17);
-          ea.a(-74);
-          sj.a((byte) 121);
+          ln.releaseStatics(true);
+          wn.releaseStatics(79);
+          qj.releaseStatics();
+          pa.releaseStatics(true);
+          ua.releaseStatics();
+          eg.releaseStatics(param0 ^ -55);
+          ef.releaseStatics(-3);
+          kf.releaseStatics(-1);
+          vj.releaseStatics((byte) 17);
+          ea.releaseStatics(-74);
+          sj.releaseStatics((byte) 121);
           jd.a(true);
-          ba.a(14);
+          ba.releaseStatics(14);
           fh.a(10061);
           vf.a(false);
-          je.h(-202);
+          je.releaseStatics(-202);
           b.j((byte) -22);
           vc.g((byte) 108);
-          de.g(false);
+          de.releaseStatics(false);
           sh.g(true);
-          qh.f(8246);
-          jl.f(15354);
-          ca.f((byte) 15);
-          uh.a(false);
+          qh.releaseStatics(8246);
+          jl.releaseStatics(15354);
+          ca.releaseStatics((byte) 15);
+          uh.releaseStatics(false);
           id.a((byte) 24);
           o.a((byte) 67);
-          ig.a(-77);
-          ii.a((byte) 6);
+          ig.releaseStatics(-77);
+          ii.releaseStatics((byte) 6);
           ac.a(-95);
-          qi.a(25651);
-          of.a((byte) 110);
-          lg.a(param0 ^ -122);
-          ne.a(false);
-          ul.a((byte) -96);
-          bk.a((byte) 122);
+          qi.releaseStatics(25651);
+          of.releaseStatics((byte) 110);
+          lg.releaseStatics(param0 ^ -122);
+          ne.releaseStatics(false);
+          ul.releaseStatics((byte) -96);
+          bk.releaseStatics((byte) 122);
           hg.f((byte) 103);
-          mm.a(false);
+          mm.releaseStatics(false);
           dd.b((byte) -58);
           CellAnimator.b(-314);
           ia.a(44);
-          ab.e(-16349);
-          va.a(-91);
-          na.e((byte) 56);
-          sk.a((byte) -52);
-          qf.c();
-          ff.a();
-          nn.a(53);
-          bf.c(param0 ^ 20391);
-          ji.a(-112);
-          am.b((byte) 88);
+          ab.releaseStatics(-16349);
+          va.releaseStatics(-91);
+          na.releaseStatics((byte) 56);
+          sk.releaseStatics((byte) -52);
+          qf.releaseStatics();
+          ff.releaseStatics();
+          nn.releaseStatics(53);
+          bf.releaseStatics(param0 ^ 20391);
+          ji.releaseStatics(-112);
+          am.releaseStatics((byte) 88);
           ei.a(-59);
           lb.b(7);
           lm.a((byte) -94);
           pn.c(true);
           qk.c(2);
-          ub.f(-121);
+          ub.releaseStatics(-121);
           gl.a(param0 + 3);
-          bl.d(false);
-          oa.c((byte) -127);
-          c.a(false);
-          nb.d(-30419);
+          bl.releaseStatics(false);
+          oa.releaseStatics((byte) -127);
+          c.releaseStatics(false);
+          nb.releaseStatics(-30419);
           rf.a(-24750);
-          mk.k(-16);
-          aj.a(false);
-          gj.c();
-          tf.a(0);
-          wm.c(0);
-          af.a(99);
+          mk.releaseStatics(-16);
+          aj.releaseStatics(false);
+          gj.releaseStatics();
+          tf.releaseStatics(0);
+          wm.releaseStatics(0);
+          af.releaseStatics(99);
           mn.a(0);
-          lh.b(false);
+          lh.releaseStatics(false);
           sm.a(param0 - 1);
-          cf.a(112);
-          ag.b(25);
-          g.b((byte) -108);
-          md.b(46);
-          wh.a(param0 - 23862);
-          bb.a();
+          cf.releaseStatics(112);
+          ag.releaseStatics(25);
+          g.releaseStatics((byte) -108);
+          md.releaseStatics(46);
+          wh.releaseStatics(param0 - 23862);
+          bb.releaseStatics();
           db.a(6);
-          bc.a((byte) -101);
-          aa.a(false);
+          bc.releaseStatics((byte) -101);
+          aa.releaseStatics(false);
           lj.a(67);
-          nl.c(120);
-          ql.a((byte) -87);
+          nl.releaseStatics(120);
+          ql.releaseStatics((byte) -87);
           rj.a(6);
           ie.b(0);
-          UiWidget.c(false);
-          tg.a((byte) -78);
-          ec.a(param0 - 3298);
-          dc.h(-126);
-          gg.g(-1);
-          WidgetContainer.e(1);
-          IntrusiveDequeCursor.d(param0 ^ 0);
+          UiWidget.releaseStatics(false);
+          tg.releaseStatics((byte) -78);
+          ec.releaseStatics(param0 - 3298);
+          dc.releaseStatics(-126);
+          gg.releaseStatics(-1);
+          WidgetContainer.releaseStatics(1);
+          IntrusiveDequeCursor.releaseStatics(param0 ^ 0);
           jk.a((byte) 110);
-          nj.b();
-          tk.a(0);
-          kh.a((byte) 81);
-          qa.a(8342);
+          nj.releaseStatics();
+          tk.releaseStatics(0);
+          kh.releaseStatics((byte) 81);
+          qa.releaseStatics(8342);
           mc.a(false);
-          oj.f((byte) -111);
+          oj.releaseStatics((byte) -111);
           wc.a(param0 + 200);
           ad.a(param0 + 90);
-          u.b((byte) -11);
-          th.e(-5);
+          u.releaseStatics((byte) -11);
+          th.releaseStatics(-5);
           sl.a(param0 + 1);
-          rn.a((byte) -38);
-          te.a((byte) 126);
-          mf.f(-93);
-          ImageProducerRasterBuffer.b((byte) 104);
-          ug.a(-97);
+          rn.releaseStatics((byte) -38);
+          te.releaseStatics((byte) 126);
+          mf.releaseStatics(-93);
+          ImageProducerRasterBuffer.releaseStatics((byte) 104);
+          ug.releaseStatics(-97);
           ch.a(0);
-          hl.a();
+          hl.releaseStatics();
           sg.d(-2);
-          WhirlpoolDigest.a((byte) -54);
+          WhirlpoolDigest.releaseStatics((byte) -54);
           hd.a(3881);
           d.e((byte) -73);
           fe.h(32498);
           ge.a(72);
           rc.a(param0 - 24021);
-          qd.a(true);
-          ej.f(2);
-          vd.l(-1);
-          wa.f((byte) 39);
+          qd.releaseStatics(true);
+          ej.releaseStatics(2);
+          vd.releaseStatics(-1);
+          wa.releaseStatics((byte) 39);
           mb.h((byte) 126);
           dg.a((byte) 41);
-          nk.a(35);
-          w.a(-116);
-          ng.g(false);
-          gn.g(true);
-          qe.b((byte) -36);
+          nk.releaseStatics(35);
+          w.releaseStatics(-116);
+          ng.releaseStatics(false);
+          gn.releaseStatics(true);
+          qe.releaseStatics((byte) -36);
           fn.b((byte) 97);
           ok.f(-100);
-          qn.c((byte) -124);
-          gb.e(117);
-          al.g(-1);
+          qn.releaseStatics((byte) -124);
+          gb.releaseStatics(117);
+          al.releaseStatics(-1);
           jb.a((byte) -99);
           gf.a((byte) 124);
-          dn.a((byte) 112);
-          bm.c(2797);
-          tl.b((byte) -71);
-          nd.a((byte) 114);
-          ce.a((byte) 107);
+          dn.releaseStatics((byte) 112);
+          bm.releaseStatics(2797);
+          tl.releaseStatics((byte) -71);
+          nd.releaseStatics((byte) 114);
+          ce.releaseStatics((byte) 107);
           vg.f(-114);
           gk.a((byte) -127);
-          eb.a(true);
-          dm.e(-48);
+          eb.releaseStatics(true);
+          dm.releaseStatics(-48);
           lc.a(-26834);
           mj.g(-108);
           ph.d(param0 ^ 121);
-          bh.a();
+          bh.releaseStatics();
           ed.a((byte) 51);
           j.b(param0 ^ -116);
-          f.b((byte) 103);
-          jf.a((byte) -124);
-          ij.a(-25621);
-          pm.a(0);
-          fl.a(-24488);
-          dh.a(-128);
-          pe.a((byte) -79);
+          f.releaseStatics((byte) 103);
+          jf.releaseStatics((byte) -124);
+          ij.releaseStatics(-25621);
+          pm.releaseStatics(0);
+          fl.releaseStatics(-24488);
+          dh.releaseStatics(-128);
+          pe.releaseStatics((byte) -79);
           la.a((byte) 108);
-          hf.b(param0 ^ -125);
-          ti.b(-88);
+          hf.releaseStatics(param0 ^ -125);
+          ti.releaseStatics(-88);
           cc.b(false);
           a.c(false);
-          ae.a((byte) -125);
-          kn.h(param0 ^ 0);
-          oc.c(false);
-          hn.a((byte) -9);
+          ae.releaseStatics((byte) -125);
+          kn.releaseStatics(param0 ^ 0);
+          oc.releaseStatics(false);
+          hn.releaseStatics((byte) -9);
           ai.b(false);
           gh.d(false);
           vb.b((byte) 112);
-          ka.c(-85);
-          sa.a((byte) -52);
-          kg.b((byte) 123);
-          dl.a(0);
-          bj.a((byte) -62);
+          ka.releaseStatics(-85);
+          sa.releaseStatics((byte) -52);
+          kg.releaseStatics((byte) 123);
+          dl.releaseStatics(0);
+          bj.releaseStatics((byte) -62);
           qg.a(114);
-          ob.a(param0 + 29137);
-          sf.a(100);
-          co.a((byte) 103);
+          ob.releaseStatics(param0 + 29137);
+          sf.releaseStatics(100);
+          co.releaseStatics((byte) 103);
           mh.b((byte) 51);
           re.b(-120);
-          vi.b(param0 + 31856);
-          bi.a(46);
-          CellFlip.a((byte) 21);
+          vi.releaseStatics(param0 + 31856);
+          bi.releaseStatics(46);
+          CellFlip.releaseStatics((byte) 21);
           ra.a(false);
-          tm.a(-74);
-          da.a(param0 ^ 8355711);
+          tm.releaseStatics(-74);
+          da.releaseStatics(param0 ^ 8355711);
           cm.c(115);
           fa.d(0);
-          jj.a((byte) 74);
+          jj.releaseStatics((byte) 74);
           ri.b(2);
-          di.h(46);
-          sn.c((byte) -89);
-          ve.c(true);
+          di.releaseStatics(46);
+          sn.releaseStatics((byte) -89);
+          ve.releaseStatics(true);
           kd.c((byte) -124);
-          kk.c((byte) -8);
-          ci.h(-104);
+          kk.releaseStatics((byte) -8);
+          ci.releaseStatics(-104);
           on.a((byte) 120);
           pb.a((byte) 111);
-          wl.a((byte) -75);
+          wl.releaseStatics((byte) -75);
           mi.e(12);
-          hh.a((byte) -124);
+          hh.releaseStatics((byte) -124);
           this.field_N = null;
           this.field_C = null;
           this.field_I = null;
@@ -2402,7 +2402,7 @@ public final class Virogrid extends od {
             var4 = (Model) null;
             discarded$1 = this.a((byte) -76, (Model) null);
           }
-          param0.a(256, 256, 256, 32);
+          param0.scaleVertices(256, 256, 256, 32);
           param0.a(0, -154, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -130,7 +130,7 @@ final class qd {
         return va.a(param1, false, param3, -116, param2, param0);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_i = null;
         field_f = null;

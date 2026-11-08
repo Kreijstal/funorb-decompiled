@@ -46,7 +46,7 @@ final class dg extends UiWidget {
           } else {
             var6 = param0;
           }
-          stackIn_6_0 = pl.a(var4_long, (String) (var6), 127, param2, param3);
+          stackIn_6_0 = pl.createCredentials(var4_long, (String) (var6), 127, param2, param3);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,7 +88,7 @@ final class dg extends UiWidget {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
             }
-            Rasterizer.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            Rasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         ai.a(true);
@@ -110,7 +110,7 @@ final class dg extends UiWidget {
           var5_int = param2 + this.field_g;
           GameApplet.a(param0 + this.field_m, 6, param2 + this.field_A.field_w, -this.field_A.field_w + var5_int, param0);
           for (var6 = -this.field_L + param2; var6 < var5_int; var6 = var6 + param1.field_w) {
-            param1.d(var6, param0);
+            param1.drawTransparent(var6, param0);
           }
           ai.a(!param3);
           if (param3) {
@@ -118,21 +118,21 @@ final class dg extends UiWidget {
           }
           if (Rasterizer.field_i <= this.field_A.field_w + param2) {
             kb.a(this.field_I, 16865);
-            param1.d(-this.field_L, 0);
-            param1.d(2 * this.field_J - this.field_L, 0);
-            this.field_B.c(0, 0);
+            param1.drawTransparent(-this.field_L, 0);
+            param1.drawTransparent(2 * this.field_J - this.field_L, 0);
+            this.field_B.drawMultiply(0, 0);
             ai.a(true);
-            this.field_I.d(param2, param0);
+            this.field_I.drawTransparent(param2, param0);
           }
           if (-this.field_A.field_w + var5_int <= Rasterizer.field_k) {
             kb.a(this.field_I, 16865);
             for (var7 = this.field_L + (-this.field_A.field_w + this.field_g); this.field_J * 2 < var7; var7 = var7 - this.field_J * 2) {
             }
-            param1.d(-var7, 0);
-            param1.d(-var7 + 2 * this.field_J, 0);
-            this.field_A.c(0, 0);
+            param1.drawTransparent(-var7, 0);
+            param1.drawTransparent(-var7 + 2 * this.field_J, 0);
+            this.field_A.drawMultiply(0, 0);
             ai.a(true);
-            this.field_I.d(-this.field_A.field_w + var5_int, param0);
+            this.field_I.drawTransparent(-this.field_A.field_w + var5_int, param0);
             return;
           }
           return;
@@ -150,7 +150,7 @@ final class dg extends UiWidget {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         Sprite discarded$0 = null;
         if (param3 != 0) {
           return;
@@ -171,7 +171,7 @@ final class dg extends UiWidget {
     private final void a(int param0) {
         this.field_D = new Sprite[]{this.c(this.field_F, this.field_H, -17), this.c(this.field_K, this.field_y, param0 ^ -46)};
         this.field_A = this.e(127);
-        this.field_B = this.field_A.c();
+        this.field_B = this.field_A.copyFlippedHorizontal();
         this.field_I = new Sprite(this.field_m >> 1, this.field_m);
         if (param0 != 10) {
           textRatedAchievements = (String) null;
@@ -217,13 +217,13 @@ final class dg extends UiWidget {
           var10 = var6 - var5;
           var11 = 128 + (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
           var12 = var11 >= 256 ? var8 | var9 : (var9 * var11 & 16711680 | -16711936 & var11 * var8) >>> 8;
-          Rasterizer.b(var7, var6, this.field_J, var12);
+          Rasterizer.drawHorizontalLine(var7, var6, this.field_J, var12);
           var8Lifetime1 = param0 & 16711935;
-          Rasterizer.b(var7 - 2 * this.field_J, var6, this.field_J, var12);
+          Rasterizer.drawHorizontalLine(var7 - 2 * this.field_J, var6, this.field_J, var12);
           var9Lifetime1 = 65280 & param0;
           var12Lifetime1 = var11 < 256 ? (var9Lifetime1 * var11 & 16711680 | -16711936 & var8Lifetime1 * var11) >>> 8 : var9Lifetime1 | var8Lifetime1;
-          Rasterizer.b(var7 + this.field_J, var6, this.field_J, var12Lifetime1);
-          Rasterizer.b(var7 - this.field_J, var6, this.field_J, var12Lifetime1);
+          Rasterizer.drawHorizontalLine(var7 + this.field_J, var6, this.field_J, var12Lifetime1);
+          Rasterizer.drawHorizontalLine(var7 - this.field_J, var6, this.field_J, var12Lifetime1);
         }
         ai.a(true);
         return var14;
@@ -276,9 +276,9 @@ final class dg extends UiWidget {
           }
           for (var6 = 0; 9 > var6; var6++) {
             var7 = (-var6 + 9) * var5 >>> 3;
-            Rasterizer.a(var3_int + (-param2 - var7), var4 - param0 - var7, param2 + var7 << 1, var7 + param0 << 1, 10, 1141646, 26);
+            Rasterizer.fillRoundedRectangleBlended(var3_int + (-param2 - var7), var4 - param0 - var7, param2 + var7 << 1, var7 + param0 << 1, 10, 1141646, 26);
           }
-          Rasterizer.a(-param2 + var3_int, -param0 + var4, param2 << 1, param0 << 1, 10, 0, 180);
+          Rasterizer.fillRoundedRectangleBlended(-param2 + var3_int, -param0 + var4, param2 << 1, param0 << 1, 10, 0, 180);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "dg.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }

@@ -5,14 +5,14 @@ final class bb {
     private static db field_a;
 
     private final static byte d(db param0) {
-        return (byte)bb.a(8, param0);
+        return (byte)bb.readBits(8, param0);
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_a = null;
     }
 
-    private final static int a(int param0, db param1) {
+    private final static int readBits(int param0, db param1) {
         int var2;
         while (param1.field_b < param0) {
           param1.field_j = param1.field_j << 8 | param1.field_i[param1.field_p] & 255;
@@ -28,7 +28,7 @@ final class bb {
         return var2;
     }
 
-    private final static void a(db param0) {
+    private final static void decodeBlocks(db param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -144,10 +144,10 @@ final class bb {
               }
             }
           }
-          bb.b(param0);
+          bb.buildSymbolMap(param0);
           var7 = param0.field_l + 2;
-          var8 = bb.a(3, param0);
-          var9 = bb.a(15, param0);
+          var8 = bb.readBits(3, param0);
+          var9 = bb.readBits(15, param0);
           var4 = 0;
           while (var4 < var9) {
             var5 = 0;
@@ -182,7 +182,7 @@ final class bb {
           }
           var6 = 0;
           while (var6 < var8) {
-            var17 = bb.a(5, param0);
+            var17 = bb.readBits(5, param0);
             var4 = 0;
             while (true) {
               if (var4 >= var7) {
@@ -216,7 +216,7 @@ final class bb {
                 var2 = param0.field_c[var6][var4];
               }
             }
-            bb.a(param0.field_C[var6], param0.field_F[var6], param0.field_s[var6], param0.field_c[var6], var2, var3, var7);
+            bb.buildHuffmanTables(param0.field_C[var6], param0.field_F[var6], param0.field_s[var6], param0.field_c[var6], var2, var3, var7);
             param0.field_m[var6] = var2;
           }
           var10 = param0.field_l + 1;
@@ -245,7 +245,7 @@ final class bb {
           }
           var12--;
           var18 = var22;
-          var19 = bb.a(var18, param0);
+          var19 = bb.readBits(var18, param0);
           while (var19 > ((int[]) (var23))[var18]) {
             var18++;
             var20 = bb.e(param0);
@@ -276,7 +276,7 @@ final class bb {
               param0.field_A = param0.field_A >> 8;
               param0.field_y = param0.field_y + 1;
               param0.field_r = var14;
-              bb.c(param0);
+              bb.emitBlock(param0);
               if (param0.field_y == param0.field_r + 1 &&
                 param0.field_e == 0) {
                 var26 = 1;
@@ -348,7 +348,7 @@ final class bb {
               }
               var12--;
               var18 = var22;
-              var19 = bb.a(var18, param0);
+              var19 = bb.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
                 var20 = bb.e(param0);
@@ -379,7 +379,7 @@ final class bb {
               }
               var12--;
               var18 = var22;
-              var19 = bb.a(var18, param0);
+              var19 = bb.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
                 var20 = bb.e(param0);
@@ -400,7 +400,7 @@ final class bb {
         }
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompressInto(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
@@ -415,7 +415,7 @@ final class bb {
           field_a.field_j = 0;
           field_a.field_L = 0;
           field_a.field_x = 0;
-          bb.a(field_a);
+          bb.decodeBlocks(field_a);
           param1 = param1 - field_a.field_B;
           field_a.field_i = null;
           field_a.field_q = null;
@@ -425,10 +425,10 @@ final class bb {
     }
 
     private final static byte e(db param0) {
-        return (byte)bb.a(1, param0);
+        return (byte)bb.readBits(1, param0);
     }
 
-    private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
+    private final static void buildHuffmanTables(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
         int var9 = 0;
         int dupTemp$0 = 0;
         int var7;
@@ -473,7 +473,7 @@ final class bb {
         }
     }
 
-    private final static void c(db param0) {
+    private final static void emitBlock(db param0) {
         int var1;
         int var2;
         int var3;
@@ -604,7 +604,7 @@ final class bb {
         return;
     }
 
-    private final static void b(db param0) {
+    private final static void buildSymbolMap(db param0) {
         int var1 = 0;
         param0.field_l = 0;
         for (var1 = 0; var1 < 256; var1++) {

@@ -12,7 +12,7 @@ final class kh {
     static SpriteWidget field_g;
     static SpriteWidget field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_e = null;
         field_f = (int[][]) null;
@@ -32,8 +32,8 @@ final class kh {
         pe var1Lifetime1;
         var2 = Virogrid.field_F ? 1 : 0;
         try {
-          ae.field_g.c();
-          ac.field_c.c();
+          ae.field_g.serviceOutput();
+          ac.field_c.serviceOutput();
           ql.field_t = ql.field_t - 1;
           if (ql.field_t == 0) {
             ql.field_t = 200;

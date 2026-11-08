@@ -87,14 +87,14 @@ final class kf {
         return this.b(-1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -1) {
           field_j = null;
           field_c = null;
           field_g = null;
           return;
         }
-        kf.a(12);
+        kf.releaseStatics(12);
         field_j = null;
         field_c = null;
         field_g = null;

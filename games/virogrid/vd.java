@@ -27,7 +27,7 @@ final class vd extends wa implements fg {
         return (String) null;
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_X = null;
         field_Z = null;
         if (param0 == -1) {

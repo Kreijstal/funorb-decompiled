@@ -72,7 +72,7 @@ final class ed {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == -629134904) {
-            stackIn_4_0 = tm.a(jh.a(param1, 100, param3, param0), 105);
+            stackIn_4_0 = tm.a(jh.createAtRatePercentQ6(param1, 100, param3, param0), 105);
             return stackIn_4_0;
           }
           stackIn_2_0 = (pe) null;

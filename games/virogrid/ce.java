@@ -191,7 +191,7 @@ final class ce extends ec {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 97) {
           return;
         }
@@ -296,7 +296,7 @@ final class ce extends ec {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            ce.a((byte) -87);
+            ce.releaseStatics((byte) -87);
           }
           stackIn_3_0 = co.a(false, param1, (byte) -101);
           return stackIn_3_0;

@@ -54,7 +54,7 @@ final class il extends cn {
     private static int[] field_T;
     private static int field_o;
 
-    final void a(int[] param0, int[] param1) {
+    final void drawTransformed(int[] param0, int[] param1) {
         int stackIn_15_0 = 0;
         int stackIn_21_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -97,7 +97,7 @@ final class il extends cn {
         int var23Lifetime1Lifetime1;
         field_cb = 0;
         if (!this.field_K) {
-          this.d();
+          this.calculateBounds();
         }
         var15 = param0[3] >> 2;
         var16 = param0[4] >> 2;
@@ -180,7 +180,7 @@ final class il extends cn {
           var27++;
         }
         try {
-          this.a((var20 & var16) != 0, false, 0L, (int) this.field_A, this.field_A << 1);
+          this.drawSortedFaces((var20 & var16) != 0, false, 0L, (int) this.field_A, this.field_A << 1);
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var21 = (Exception) (Object) decompiledCaughtException;
@@ -188,7 +188,7 @@ final class il extends cn {
         return;
     }
 
-    private final void a(boolean param0, boolean param1, long param2, int param3, int param4) {
+    private final void drawSortedFaces(boolean param0, boolean param1, long param2, int param3, int param4) {
         int incrementValue$12 = 0;
         int dupTemp$10 = 0;
         int[] arrayValue$11 = null;
@@ -344,7 +344,7 @@ final class il extends cn {
                 break regionExit1;
               }
               if (param1 &&
-                this.a(Js5Archive.field_n + fk.field_j, wm.field_F + fk.field_k, field_O[var9], field_O[var10], field_O[var11], var12, var13, var14_int)) {
+                this.isPointInTriangleBounds(Js5Archive.field_n + fk.field_j, wm.field_F + fk.field_k, field_O[var9], field_O[var10], field_O[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = w.field_K;
                 w.field_K = w.field_K + 1;
                 bc.field_b[fieldTemp$13] = param2;
@@ -400,7 +400,7 @@ final class il extends cn {
           ij.a(field_U, 0, 34, var7 - 1, field_G);
           if (this.field_M == null) {
             for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
-              this.a(field_G[var8Lifetime2]);
+              this.drawFace(field_G[var8Lifetime2]);
             }
             return;
           }
@@ -435,14 +435,14 @@ final class il extends cn {
                 var10Lifetime1 = stackIn_88_0;
                 var45 = field_L[var8Lifetime2];
                 for (var12Lifetime1 = 0; var12Lifetime1 < var10Lifetime1; var12Lifetime1++) {
-                  this.a(var45[var12Lifetime1]);
+                  this.drawFace(var45[var12Lifetime1]);
                 }
               }
               if (var9Lifetime1 > 64) {
                 var10Lifetime1 = field_v[var8Lifetime2] - 64 - 1;
                 var46 = field_y[var10Lifetime1];
                 for (var12Lifetime1 = 0; var12Lifetime1 < field_i[var10Lifetime1]; var12Lifetime1++) {
-                  this.a(var46[var12Lifetime1]);
+                  this.drawFace(var46[var12Lifetime1]);
                 }
               }
             }
@@ -537,7 +537,7 @@ final class il extends cn {
             if (var11Lifetime2 > var8Lifetime3) {
               incrementValue$4 = var12Lifetime2;
               var12Lifetime2++;
-              this.a(var14[incrementValue$4]);
+              this.drawFace(var14[incrementValue$4]);
               if (var12Lifetime2 == var13Lifetime2 &&
                 var14 != field_P[11]) {
                 var12Lifetime2 = 0;
@@ -558,7 +558,7 @@ final class il extends cn {
             if (var11Lifetime2 > var9Lifetime2) {
               incrementValue$5 = var12Lifetime2;
               var12Lifetime2++;
-              this.a(var14[incrementValue$5]);
+              this.drawFace(var14[incrementValue$5]);
               if (var12Lifetime2 == var13Lifetime2 &&
                 var14 != field_P[11]) {
                 var12Lifetime2 = 0;
@@ -579,7 +579,7 @@ final class il extends cn {
             if (var11Lifetime2 > var10Lifetime2) {
               incrementValue$6 = var12Lifetime2;
               var12Lifetime2++;
-              this.a(var14[incrementValue$6]);
+              this.drawFace(var14[incrementValue$6]);
               if (var12Lifetime2 == var13Lifetime2 &&
                 var14 != field_P[11]) {
                 var12Lifetime2 = 0;
@@ -601,14 +601,14 @@ final class il extends cn {
           var29 = 0;
           var19Lifetime1 = var29;
           while (var29 < var17Lifetime1) {
-            this.a(var49[var29]);
+            this.drawFace(var49[var29]);
             var29++;
           }
         }
         while (var11Lifetime2 != -1000) {
           incrementValue$3 = var12Lifetime2;
           var12Lifetime2++;
-          this.a(var14[incrementValue$3]);
+          this.drawFace(var14[incrementValue$3]);
           if (var12Lifetime2 == var13Lifetime2 &&
             var14 != field_P[11]) {
             var12Lifetime2 = 0;
@@ -625,7 +625,7 @@ final class il extends cn {
         return;
     }
 
-    private final void d() {
+    private final void calculateBounds() {
         int var9 = 0;
         int var1;
         int var2;
@@ -683,7 +683,7 @@ final class il extends cn {
         this.field_K = true;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_N = null;
         field_x = null;
         field_j = null;
@@ -826,7 +826,7 @@ final class il extends cn {
         }
     }
 
-    private final void d(int param0) {
+    private final void drawClippedFace(int param0) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1001,17 +1001,17 @@ final class il extends cn {
               var19 = var7;
             }
             if (this.field_R[param0] != -1) {
-              fk.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_h[0], field_h[1], field_h[2], field_w[var17], field_w[var18], field_w[var19], field_H[var17], field_H[var18], field_H[var19], field_J[var17], field_J[var18], field_J[var19], (int) this.field_ab[param0]);
+              fk.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_h[0], field_h[1], field_h[2], field_w[var17], field_w[var18], field_w[var19], field_H[var17], field_H[var18], field_H[var19], field_J[var17], field_J[var18], field_J[var19], (int) this.field_ab[param0]);
             } else {
-              fk.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_w[var17], field_w[var18], field_w[var19], field_H[var17], field_H[var18], field_H[var19], field_J[var17], field_J[var18], field_J[var19], (int) this.field_ab[param0]);
+              fk.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_w[var17], field_w[var18], field_w[var19], field_H[var17], field_H[var18], field_H[var19], field_J[var17], field_J[var18], field_J[var19], (int) this.field_ab[param0]);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             if (this.field_R[param0] != -1) {
-              fk.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_h[0], field_h[1], field_h[2]);
+              fk.drawShadedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_h[0], field_h[1], field_h[2]);
             } else {
-              fk.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, fk.field_l[this.field_Z[param0] & 65535]);
+              fk.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, fk.field_l[this.field_Z[param0] & 65535]);
             }
           }
         }
@@ -1043,25 +1043,25 @@ final class il extends cn {
           }
           var20Lifetime1Lifetime1 = this.field_ab[param0];
           if (this.field_R[param0] != -1) {
-            fk.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_h[0], field_h[1], field_h[2], field_w[var17Lifetime1], field_w[var18Lifetime1], field_w[var19Lifetime1], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_J[var17Lifetime1], field_J[var18Lifetime1], field_J[var19Lifetime1], var20Lifetime1Lifetime1);
-            fk.a(var14Lifetime3, var16, field_f[3], var11Lifetime3, var13Lifetime3, field_s[3], field_h[0], field_h[2], field_h[3], field_w[var17Lifetime1], field_w[var18Lifetime1], field_w[var19Lifetime1], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_J[var17Lifetime1], field_J[var18Lifetime1], field_J[var19Lifetime1], var20Lifetime1Lifetime1);
+            fk.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_h[0], field_h[1], field_h[2], field_w[var17Lifetime1], field_w[var18Lifetime1], field_w[var19Lifetime1], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_J[var17Lifetime1], field_J[var18Lifetime1], field_J[var19Lifetime1], var20Lifetime1Lifetime1);
+            fk.drawTexturedTriangle(var14Lifetime3, var16, field_f[3], var11Lifetime3, var13Lifetime3, field_s[3], field_h[0], field_h[2], field_h[3], field_w[var17Lifetime1], field_w[var18Lifetime1], field_w[var19Lifetime1], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_J[var17Lifetime1], field_J[var18Lifetime1], field_J[var19Lifetime1], var20Lifetime1Lifetime1);
           } else {
-            fk.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_w[var17Lifetime1], field_w[var18Lifetime1], field_w[var19Lifetime1], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_J[var17Lifetime1], field_J[var18Lifetime1], field_J[var19Lifetime1], var20Lifetime1Lifetime1);
-            fk.a(var14Lifetime3, var16, field_f[3], var11Lifetime3, var13Lifetime3, field_s[3], this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_w[var17Lifetime1], field_w[var18Lifetime1], field_w[var19Lifetime1], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_J[var17Lifetime1], field_J[var18Lifetime1], field_J[var19Lifetime1], var20Lifetime1Lifetime1);
+            fk.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_w[var17Lifetime1], field_w[var18Lifetime1], field_w[var19Lifetime1], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_J[var17Lifetime1], field_J[var18Lifetime1], field_J[var19Lifetime1], var20Lifetime1Lifetime1);
+            fk.drawTexturedTriangle(var14Lifetime3, var16, field_f[3], var11Lifetime3, var13Lifetime3, field_s[3], this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_w[var17Lifetime1], field_w[var18Lifetime1], field_w[var19Lifetime1], field_H[var17Lifetime1], field_H[var18Lifetime1], field_H[var19Lifetime1], field_J[var17Lifetime1], field_J[var18Lifetime1], field_J[var19Lifetime1], var20Lifetime1Lifetime1);
           }
         } else {
           if (this.field_R[param0] != -1) {
-            fk.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_h[0], field_h[1], field_h[2]);
-            fk.a(var14Lifetime3, var16, field_f[3], var11Lifetime3, var13Lifetime3, field_s[3], field_h[0], field_h[2], field_h[3]);
+            fk.drawShadedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_h[0], field_h[1], field_h[2]);
+            fk.drawShadedTriangle(var14Lifetime3, var16, field_f[3], var11Lifetime3, var13Lifetime3, field_s[3], field_h[0], field_h[2], field_h[3]);
           } else {
             var17Lifetime1 = fk.field_l[this.field_Z[param0] & 65535];
-            fk.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, var17Lifetime1);
-            fk.a(var14Lifetime3, var16, field_f[3], var11Lifetime3, var13Lifetime3, field_s[3], var17Lifetime1);
+            fk.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, var17Lifetime1);
+            fk.drawFlatTriangle(var14Lifetime3, var16, field_f[3], var11Lifetime3, var13Lifetime3, field_s[3], var17Lifetime1);
           }
         }
     }
 
-    private final void a(int param0) {
+    private final void drawFace(int param0) {
         int var2;
         int var3;
         int var4;
@@ -1070,7 +1070,7 @@ final class il extends cn {
         int var7;
         int var8;
         if (field_x[param0]) {
-          this.d(param0);
+          this.drawClippedFace(param0);
           return;
         }
         var2 = this.field_C[param0];
@@ -1096,15 +1096,15 @@ final class il extends cn {
             var7 = var4;
           }
           if (this.field_R[param0] != -1) {
-            fk.a(field_O[var2], field_O[var3], field_O[var4], field_j[var2], field_j[var3], field_j[var4], this.field_Z[param0], this.field_E[param0], this.field_R[param0], field_w[var5], field_w[var6], field_w[var7], field_H[var5], field_H[var6], field_H[var7], field_J[var5], field_J[var6], field_J[var7], (int) this.field_ab[param0]);
+            fk.drawTexturedTriangle(field_O[var2], field_O[var3], field_O[var4], field_j[var2], field_j[var3], field_j[var4], this.field_Z[param0], this.field_E[param0], this.field_R[param0], field_w[var5], field_w[var6], field_w[var7], field_H[var5], field_H[var6], field_H[var7], field_J[var5], field_J[var6], field_J[var7], (int) this.field_ab[param0]);
           } else {
-            fk.a(field_O[var2], field_O[var3], field_O[var4], field_j[var2], field_j[var3], field_j[var4], this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_w[var5], field_w[var6], field_w[var7], field_H[var5], field_H[var6], field_H[var7], field_J[var5], field_J[var6], field_J[var7], (int) this.field_ab[param0]);
+            fk.drawTexturedTriangle(field_O[var2], field_O[var3], field_O[var4], field_j[var2], field_j[var3], field_j[var4], this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_w[var5], field_w[var6], field_w[var7], field_H[var5], field_H[var6], field_H[var7], field_J[var5], field_J[var6], field_J[var7], (int) this.field_ab[param0]);
           }
         } else {
           if (this.field_R[param0] != -1) {
-            fk.a(field_O[var2], field_O[var3], field_O[var4], field_j[var2], field_j[var3], field_j[var4], this.field_Z[param0] & 65535, this.field_E[param0] & 65535, this.field_R[param0] & 65535);
+            fk.drawShadedTriangle(field_O[var2], field_O[var3], field_O[var4], field_j[var2], field_j[var3], field_j[var4], this.field_Z[param0] & 65535, this.field_E[param0] & 65535, this.field_R[param0] & 65535);
           } else {
-            fk.a(field_O[var2], field_O[var3], field_O[var4], field_j[var2], field_j[var3], field_j[var4], fk.field_l[this.field_Z[param0] & 65535]);
+            fk.drawFlatTriangle(field_O[var2], field_O[var3], field_O[var4], field_j[var2], field_j[var3], field_j[var4], fk.field_l[this.field_Z[param0] & 65535]);
           }
         }
     }
@@ -1125,7 +1125,7 @@ final class il extends cn {
         }
     }
 
-    private final static int c(int param0) {
+    private final static int clampHslLightness(int param0) {
         if (param0 < 2) {
           param0 = 2;
         } else {
@@ -1136,7 +1136,7 @@ final class il extends cn {
         return param0;
     }
 
-    private final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final boolean isPointInTriangleBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param1 < param2 &&
           param1 < param3 &&
           param1 < param4) {
@@ -1382,7 +1382,7 @@ final class il extends cn {
               } else {
                 var19 = param0.field_L[var16];
                 var14 = param1 + (param3 * var19.field_b + param4 * var19.field_d + param5 * var19.field_f) / (var8 + var8 / 2);
-                this.field_Z[var16] = il.c(var14);
+                this.field_Z[var16] = il.clampHslLightness(var14);
                 this.field_R[var16] = -1;
               }
             } else {
@@ -1393,7 +1393,7 @@ final class il extends cn {
                 var13 = param0.field_n[this.field_C[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_d + param5 * var13.field_i) / (var8 * var13.field_e);
-              this.field_Z[var16] = il.c(var14);
+              this.field_Z[var16] = il.clampHslLightness(var14);
               if (param0.field_g != null &&
                 param0.field_g[this.field_n[var16]] != null) {
                 var13 = param0.field_g[this.field_n[var16]];
@@ -1401,7 +1401,7 @@ final class il extends cn {
                 var13 = param0.field_n[this.field_n[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_d + param5 * var13.field_i) / (var8 * var13.field_e);
-              this.field_E[var16] = il.c(var14);
+              this.field_E[var16] = il.clampHslLightness(var14);
               if (param0.field_g != null &&
                 param0.field_g[this.field_D[var16]] != null) {
                 var13 = param0.field_g[this.field_D[var16]];
@@ -1409,7 +1409,7 @@ final class il extends cn {
                 var13 = param0.field_n[this.field_D[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_d + param5 * var13.field_i) / (var8 * var13.field_e);
-              this.field_R[var16] = il.c(var14);
+              this.field_R[var16] = il.clampHslLightness(var14);
             }
           } else {
             if (var10Lifetime2 != 0) {

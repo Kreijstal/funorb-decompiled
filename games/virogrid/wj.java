@@ -14,7 +14,7 @@ final class wj {
     private int field_e;
     private int[] field_g;
 
-    final void a() {
+    final void reset() {
         this.field_e = 0;
         this.field_k = 0;
         this.field_c = 0;
@@ -26,10 +26,10 @@ final class wj {
         this.field_h = param0.readUnsignedByte(11132);
         this.field_j = param0.readInt((byte) 105);
         this.field_f = param0.readInt((byte) 104);
-        this.b(param0);
+        this.decodeSegments(param0);
     }
 
-    final void b(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_i = param0.readUnsignedByte(11132);
         this.field_g = new int[this.field_i];
@@ -40,7 +40,7 @@ final class wj {
         }
     }
 
-    final int a(int param0) {
+    final int advance(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_b >= this.field_e) {
           fieldTemp$0 = this.field_k;

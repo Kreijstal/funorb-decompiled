@@ -9,7 +9,7 @@ final class ci extends qe {
     static String field_n;
     static Sprite field_s;
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -6) {
           return;
         }

@@ -8,10 +8,10 @@ final class ud {
     static long field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 != -94) {
-          ud.a((byte) -8);
+          ud.releaseStatics((byte) -8);
           field_d = null;
           return;
         }

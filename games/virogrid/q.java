@@ -9,7 +9,7 @@ final class q {
         }
     }
 
-    final static Object b(String param0, int param1, java.applet.Applet param2) throws Throwable {
+    final static Object callJavaScript(String param0, int param1, java.applet.Applet param2) throws Throwable {
         if (param1 != 6168) {
           return (Object) null;
         }

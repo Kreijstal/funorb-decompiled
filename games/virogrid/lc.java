@@ -29,7 +29,7 @@ final class lc {
         field_f = null;
     }
 
-    final static ck a(int param0, String param1, int param2) {
+    final static ck createSuggestedUsernameQuery(int param0, String param1, int param2) {
         ck var3 = null;
         RuntimeException var3_ref = null;
         ck stackIn_2_0 = null;

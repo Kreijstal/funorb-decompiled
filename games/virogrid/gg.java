@@ -14,7 +14,7 @@ abstract class gg extends WidgetContainer {
     static String field_J;
     static ao field_K;
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         if (0 == this.field_H) {
           return;
         }
@@ -23,7 +23,7 @@ abstract class gg extends WidgetContainer {
             return;
           }
           this.b(param2 + this.field_u, 40, param1 + this.field_l);
-          super.a((byte) 37, param1, param2, param3);
+          super.drawLayer((byte) 37, param1, param2, param3);
           return;
         }
         if (b.field_Eb == null ||
@@ -32,9 +32,9 @@ abstract class gg extends WidgetContainer {
           b.field_Eb = new Sprite(this.field_g, this.field_m);
         }
         kb.a(b.field_Eb, 16865);
-        Rasterizer.c();
+        Rasterizer.clear();
         this.b(0, 23, 0);
-        super.a(param0, -param1 - this.field_l, -param2 - this.field_u, param3);
+        super.drawLayer(param0, -param1 - this.field_l, -param2 - this.field_u, param3);
         ai.a(true);
         b.field_Eb.a(param1 + this.field_l, this.field_u + param2, this.field_H);
     }
@@ -48,7 +48,7 @@ abstract class gg extends WidgetContainer {
         return stackIn_4_0;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_K = null;
         field_F = null;
         field_I = null;

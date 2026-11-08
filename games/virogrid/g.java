@@ -30,7 +30,7 @@ final class g {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_a = null;
         field_b = null;
@@ -43,7 +43,7 @@ final class g {
     final static void a(byte param0) {
         kf.a(4, -1);
         if (param0 != -33) {
-          g.b((byte) 71);
+          g.releaseStatics((byte) 71);
         }
     }
 

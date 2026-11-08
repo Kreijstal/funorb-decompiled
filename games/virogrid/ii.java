@@ -14,7 +14,7 @@ final class ii {
         co.field_d = true;
         kb.field_c = true;
         if (param0 >= -94) {
-          ii.a((byte) 80);
+          ii.releaseStatics((byte) 80);
         }
         tm.field_l.a((byte) 76);
         gk.a(false, jm.field_a, false);
@@ -398,7 +398,7 @@ final class ii {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 6) {
           CharSequence var2 = (CharSequence) null;

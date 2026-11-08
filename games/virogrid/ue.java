@@ -102,19 +102,19 @@ final class ue {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_c = gj.a(16);
-        this.field_g = gj.a(24);
-        this.field_a = gj.a(24);
-        this.field_f = gj.a(24) + 1;
-        this.field_d = gj.a(6) + 1;
-        this.field_e = gj.a(8);
+        this.field_c = gj.readBits(16);
+        this.field_g = gj.readBits(24);
+        this.field_a = gj.readBits(24);
+        this.field_f = gj.readBits(24) + 1;
+        this.field_d = gj.readBits(6) + 1;
+        this.field_e = gj.readBits(8);
         int[] var1 = new int[this.field_d];
         for (var2 = 0; var2 < this.field_d; var2++) {
           var3 = 0;
-          var4 = gj.a(3);
-          var5 = gj.b() != 0 ? 1 : 0;
+          var4 = gj.readBits(3);
+          var5 = gj.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = gj.a(5);
+            var3 = gj.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class ue {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_d * 8) {
-          this.field_b[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? gj.a(8) : -1;
+          this.field_b[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? gj.readBits(8) : -1;
           var6++;
         }
     }

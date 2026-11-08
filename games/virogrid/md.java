@@ -148,7 +148,7 @@ final class md {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_c = null;
         field_e = null;

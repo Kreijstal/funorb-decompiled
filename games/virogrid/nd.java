@@ -51,12 +51,12 @@ final class nd {
         int[] var4 = new int[this.a(0, param1)];
         int[] var3 = var4;
         if (param0 == -50) {
-          ek.a(this.field_f, 0, var4, 0, this.field_f.length);
+          ek.copy(this.field_f, 0, var4, 0, this.field_f.length);
           this.field_f = var4;
           return;
         }
         field_a = (SpriteWidget) null;
-        ek.a(this.field_f, 0, var4, 0, this.field_f.length);
+        ek.copy(this.field_f, 0, var4, 0, this.field_f.length);
         this.field_f = var4;
     }
 
@@ -79,7 +79,7 @@ final class nd {
         }
         if (param1 <= this.field_i) {
           if (param1 != this.field_i) {
-            ek.a(this.field_f, 1 + param1, this.field_f, param1, -param1 + this.field_i);
+            ek.copy(this.field_f, 1 + param1, this.field_f, param1, -param1 + this.field_i);
           }
           this.field_i = this.field_i - 1;
           int var3 = -30 / ((31 - param0) / 58);
@@ -111,7 +111,7 @@ final class nd {
           nm.field_d = hg.field_q[ph.field_h];
           ph.field_h = ph.field_h + 1 & 127;
           if (param0 >= -95) {
-            nd.a((byte) -122);
+            nd.releaseStatics((byte) -122);
           }
           stackIn_7_0 = true;
         }
@@ -126,7 +126,7 @@ final class nd {
         return 1 + this.field_i;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_j = null;
         field_b = null;

@@ -64,10 +64,10 @@ final class WhirlpoolDigest {
               var2 = var2 + ng.field_P;
             }
             if (var4 >= 0) {
-              jf.field_n.b(var6, var8, ej.field_L + var2, var5, -1);
+              jf.field_n.drawLeft(var6, var8, ej.field_L + var2, var5, -1);
               var2 = var2 + (di.field_o + (ng.field_P + hd.field_e));
             } else {
-              pm.field_j.b(var6, var8, eg.field_l + var2, var5, -1);
+              pm.field_j.drawLeft(var6, var8, eg.field_l + var2, var5, -1);
               var2 = var2 + bn.field_b;
             }
           }
@@ -210,7 +210,7 @@ final class WhirlpoolDigest {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1369854352) {
-            WhirlpoolDigest.a((byte) 80);
+            WhirlpoolDigest.releaseStatics((byte) 80);
           }
           stackIn_5_0 = (kh.a((byte) 61, param0) != null);
           return stackIn_5_0;
@@ -283,7 +283,7 @@ final class WhirlpoolDigest {
             this.field_h = this.field_h + 1;
             this.field_e[fieldTemp$1] = (byte) 0;
           }
-          ek.a(this.field_d, 0, this.field_e, 32, 32);
+          ek.copy(this.field_d, 0, this.field_e, 32, 32);
           this.b((byte) -91);
           var4_int = 0;
           var5 = param0;
@@ -315,9 +315,9 @@ final class WhirlpoolDigest {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -54) {
-          WhirlpoolDigest.a((byte) 0);
+          WhirlpoolDigest.releaseStatics((byte) 0);
         }
         field_c = null;
     }

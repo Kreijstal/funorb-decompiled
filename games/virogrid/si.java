@@ -396,15 +396,15 @@ final class si {
         var18 = (int)var34[1];
         var19 = (int)(var35[1] - var33[1]);
         var20 = (int)(var36[1] - var34[1]);
-        rk.a(var15, var17, var16, var18, (int)((double)(param6 << 7) * var33[2]), param7, param5);
+        rk.drawGlowingLine(var15, var17, var16, var18, (int)((double)(param6 << 7) * var33[2]), param7, param5);
         if (var14 != 1) {
-          rk.a(var15, var17, var15, var17 + var19, (int)((double)(param6 << 7) * var33[2]), param7, param5);
+          rk.drawGlowingLine(var15, var17, var15, var17 + var19, (int)((double)(param6 << 7) * var33[2]), param7, param5);
         }
-        rk.a(var15, var17 + var19, var16, var18 + var20, (int)((double)(param6 << 7) * var33[2]), param7, param5);
+        rk.drawGlowingLine(var15, var17 + var19, var16, var18 + var20, (int)((double)(param6 << 7) * var33[2]), param7, param5);
         if (var14 == 2) {
           return;
         }
-        rk.a(var16, var18, var16, var18 + var20, (int)((double)(param6 << 7) * var34[2]), param7, param5);
+        rk.drawGlowingLine(var16, var18, var16, var18 + var20, (int)((double)(param6 << 7) * var34[2]), param7, param5);
         return;
     }
 

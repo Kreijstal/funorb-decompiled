@@ -34,7 +34,7 @@ final class ag extends java.awt.Canvas {
           }
           return stackIn_20_0;
         }
-        ag.b(55);
+        ag.releaseStatics(55);
         if (md.field_e != null) {
           return true;
         }
@@ -94,7 +94,7 @@ final class ag extends java.awt.Canvas {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_j = (int[][]) null;
         field_i = null;
@@ -118,7 +118,7 @@ final class ag extends java.awt.Canvas {
 
     final static int a(boolean param0) {
         if (!param0) {
-          ag.b(39);
+          ag.releaseStatics(39);
           return nf.field_d;
         }
         return nf.field_d;

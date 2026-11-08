@@ -153,7 +153,7 @@ final class cm extends IntrusiveNode {
                 uh.a((byte) 114, param0);
               }
             } else {
-              Rasterizer.c();
+              Rasterizer.clear();
               fh.a(240, 0, 320);
               td.a(-30179, param0, 0, 0);
             }

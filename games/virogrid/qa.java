@@ -40,7 +40,7 @@ final class qa implements be {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 == 8342) {
           field_d = null;
@@ -48,7 +48,7 @@ final class qa implements be {
           field_c = null;
           return;
         }
-        qa.a(-64);
+        qa.releaseStatics(-64);
         field_d = null;
         field_f = null;
         field_c = null;

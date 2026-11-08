@@ -391,7 +391,7 @@ final class Js5Archive {
                     var21 = var20;
                   }
                   if (param0 == var21) {
-                    ek.a(var43, var17Lifetime4, var44, var14Lifetime1, var19Lifetime2);
+                    ek.copy(var43, var17Lifetime4, var44, var14Lifetime1, var19Lifetime2);
                     var14Lifetime1 = var14Lifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -430,7 +430,7 @@ final class Js5Archive {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var29.readInt((byte) 122);
-                ek.a(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
+                ek.copy(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
                 var14_ref_int__[var19Lifetime1] = var14_ref_int__[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
               }
@@ -730,7 +730,7 @@ final class Js5Archive {
         return var4Lifetime1;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -104) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           Js5Archive.a((String) null, (java.applet.Applet) null, (byte) -81, true);

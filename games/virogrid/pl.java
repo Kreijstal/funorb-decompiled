@@ -97,7 +97,7 @@ final class pl {
         }
     }
 
-    final static bk a(long param0, String param1, int param2, String param3, boolean param4) {
+    final static bk createCredentials(long param0, String param1, int param2, String param3, boolean param4) {
         RuntimeException var6 = null;
         vi stackIn_3_0 = null;
         re stackIn_6_0 = null;
@@ -143,7 +143,7 @@ final class pl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         if (param0 < -88) {
           field_d = null;

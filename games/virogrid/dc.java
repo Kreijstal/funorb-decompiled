@@ -66,7 +66,7 @@ abstract class dc extends gg {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_R = null;
         int var1 = -67 % ((-62 - param0) / 53);
         field_V = null;
@@ -137,7 +137,7 @@ abstract class dc extends gg {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = Virogrid.field_F ? 1 : 0;
-        Rasterizer.a(6 + param2, param0 + 35, this.field_g - 12, this.field_m - 40, 2105376, 0);
+        Rasterizer.fillVerticalGradient(6 + param2, param0 + 35, this.field_g - 12, this.field_m - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -187,7 +187,7 @@ abstract class dc extends gg {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            Rasterizer.b(param2 + var10, var8, -var10 + var11, var9);
+            Rasterizer.drawHorizontalLine(param2 + var10, var8, -var10 + var11, var9);
           }
           var8++;
           var7++;
@@ -200,12 +200,12 @@ abstract class dc extends gg {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          Rasterizer.b(param2, var8Lifetime1, 6, var9Lifetime1);
-          Rasterizer.b(this.field_g + (param2 - 6), var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer.drawHorizontalLine(this.field_g + (param2 - 6), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        ed.jagexLogoGrey.d(-90 + this.field_g + param2, param0 + 10);
+        ed.jagexLogoGrey.drawTransparent(-90 + this.field_g + param2, param0 + 10);
         mb.a(-10 + this.field_g, (byte) -117, qm.frameTopSprites, param2 + 5, 35 + param0);
         mb.a(this.field_g, (byte) -117, qg.frameBottomSprites, param2, param0 + this.field_m - 22);
         var4Lifetime2 = this.field_m - 79;
@@ -216,8 +216,8 @@ abstract class dc extends gg {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          Rasterizer.b(param2, var8Lifetime2, 6, var9Lifetime2);
-          Rasterizer.b(this.field_g + param2 - 6, var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer.drawHorizontalLine(this.field_g + param2 - 6, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

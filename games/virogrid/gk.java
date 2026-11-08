@@ -188,7 +188,7 @@ final class gk implements Iterable {
                 if (var14 <= 0) {
                   stackIn_38_1 = var7.field_Hb;
                 } else {
-                  stackIn_38_1 = e.a(var7.field_Eb.field_C, var7.field_Hb, var14);
+                  stackIn_38_1 = e.truncateWithEllipsis(var7.field_Eb.field_C, var7.field_Hb, var14);
                 }
                 stackIn_37_0.field_V = stackIn_38_1;
                 var7.field_Eb.a(var13, pg.field_e, var14, (byte) -46, var9);

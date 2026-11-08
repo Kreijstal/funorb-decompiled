@@ -31,7 +31,7 @@ final class cg {
         }
     }
 
-    final static void a(int param0, ii param1) {
+    final static void setSharedAnimationFrameset(int param0, ii param1) {
         if (param0 != 8799) {
           return;
         }

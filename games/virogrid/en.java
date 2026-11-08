@@ -12,7 +12,7 @@ final class en extends SpriteWidget {
     static boolean field_Fb;
     static int field_Kb;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_Hb = null;
         field_Eb = null;
         if (param0 != 0) {

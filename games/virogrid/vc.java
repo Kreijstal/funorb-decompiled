@@ -16,12 +16,12 @@ final class vc extends dc {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, 22, param2);
-        on.arezzo14BoldFont.c(this.field_lb, param2 + (this.field_g >> 1), 103 + param0, 16777215, -1);
+        on.arezzo14BoldFont.drawCentered(this.field_lb, param2 + (this.field_g >> 1), 103 + param0, 16777215, -1);
         if (param1 < 8) {
           vc.g((byte) 3);
           if (this.field_kb != null) {
-            Rasterizer.b(20 + param2, 113 + param0, 260, 8421504);
-            on.arezzo14BoldFont.a(this.field_kb, param2 + 20, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, on.arezzo14BoldFont.field_H);
+            Rasterizer.drawHorizontalLine(20 + param2, 113 + param0, 260, 8421504);
+            on.arezzo14BoldFont.drawParagraph(this.field_kb, param2 + 20, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, on.arezzo14BoldFont.field_H);
             return;
           }
           return;
@@ -29,8 +29,8 @@ final class vc extends dc {
         if (this.field_kb == null) {
           return;
         }
-        Rasterizer.b(20 + param2, 113 + param0, 260, 8421504);
-        on.arezzo14BoldFont.a(this.field_kb, param2 + 20, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, on.arezzo14BoldFont.field_H);
+        Rasterizer.drawHorizontalLine(20 + param2, 113 + param0, 260, 8421504);
+        on.arezzo14BoldFont.drawParagraph(this.field_kb, param2 + 20, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, on.arezzo14BoldFont.field_H);
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
@@ -100,7 +100,7 @@ final class vc extends dc {
         try {
           this.field_kb = param1;
           if (null != this.field_kb) {
-            var3_int = on.arezzo14BoldFont.a(this.field_kb, 260, on.arezzo14BoldFont.field_H);
+            var3_int = on.arezzo14BoldFont.paragraphHeight(this.field_kb, 260, on.arezzo14BoldFont.field_H);
             this.c(150 + var3_int, 120, 300);
           }
           this.field_gb = new dg(13, 50, 274, 30, 15, 2113632, 4210752);

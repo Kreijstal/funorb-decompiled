@@ -44,12 +44,12 @@ final class eb implements Iterable {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_a = null;
         field_c = null;
         if (!param0) {
-          eb.a(false);
+          eb.releaseStatics(false);
         }
         field_b = null;
     }
@@ -227,7 +227,7 @@ final class eb implements Iterable {
               }
               var16 = stackIn_24_0;
               var9 = var16;
-              var10Lifetime1 = jk.field_b.field_C.a(var16) + 3 * jk.field_b.field_C.a('.');
+              var10Lifetime1 = jk.field_b.field_C.textWidth(var16) + 3 * jk.field_b.field_C.measureCharacterAdvance('.');
               jk.field_b.field_lb = 0;
               if ((SpriteState.field_y & 48) == 16) {
                 var9 = var16 + ".";

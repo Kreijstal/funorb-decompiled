@@ -24,7 +24,7 @@ final class on {
           }
           var2_int = ca.field_M.field_c;
           var3 = ca.field_M.field_b;
-          var4 = pa.field_o.field_C.a(param1, 272, pa.field_o.field_fb);
+          var4 = pa.field_o.field_C.paragraphHeight(param1, 272, pa.field_o.field_fb);
           var5 = 7 + var3 / 2 - (110 + var4 / 2);
           jj.field_a.a((var2_int - 320) / 2, var3 - (120 + var5 * 2), 320, (byte) -128, var5);
           jj.field_a.field_vb = ne.a(jj.field_a.field_ub, 3, 2105376, (byte) 106, 8421504, 11579568);

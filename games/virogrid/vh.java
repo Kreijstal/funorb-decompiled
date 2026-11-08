@@ -4,7 +4,7 @@
 final class vh extends e {
     private byte[][] field_C;
 
-    private final static byte[][] a(int[] param0, byte[][] param1) {
+    private final static byte[][] convertPaletteGlyphsToCoverageInPlace(int[] param0, byte[][] param1) {
         int var2_int = 0;
         int var5 = 0;
         byte[][] var2;
@@ -31,7 +31,7 @@ final class vh extends e {
         return param1;
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitCoverage(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$11 = 0;
@@ -60,7 +60,7 @@ final class vh extends e {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -100,15 +100,15 @@ final class vh extends e {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            vh.a(Rasterizer.field_d, this.field_C[param0], param5, var11, var8, param3, param4, var9, var10);
+            vh.blitCoverage(Rasterizer.field_d, this.field_C[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            v.a(Rasterizer.field_d, this.field_C[param0], param5, var11, var8, param3, param4, var9, var10);
+            v.blitBinaryGlyph(Rasterizer.field_d, this.field_C[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var9;
         int var10;
         int var11;
@@ -148,9 +148,9 @@ final class vh extends e {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            vh.a(Rasterizer.field_d, this.field_C[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            vh.blitCoverageAlpha(Rasterizer.field_d, this.field_C[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
-            v.a(Rasterizer.field_d, this.field_C[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            v.blitBinaryGlyphWithAlpha(Rasterizer.field_d, this.field_C[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
@@ -159,10 +159,10 @@ final class vh extends e {
     vh(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
         this.field_C = new byte[256][];
-        this.field_C = vh.a(param5, param6);
+        this.field_C = vh.convertPaletteGlyphsToCoverageInPlace(param5, param6);
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitCoverageAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$11 = 0;

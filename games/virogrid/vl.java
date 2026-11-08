@@ -70,7 +70,7 @@ final class vl implements kj {
             this.field_c = this.field_c + 1;
           }
           if (decompiledFrameRemainder1) {
-            if (!var12.a(param0, this.field_h, this.field_l)) {
+            if (!var12.buildPixels(param0, this.field_h, this.field_l)) {
               return null;
             }
             if (this.field_c == 0) {
@@ -99,7 +99,7 @@ final class vl implements kj {
           this.field_c = this.field_c + 1;
         }
         if (decompiledFrameRemainder0) {
-          if (!var9.a(param0, this.field_h, this.field_l)) {
+          if (!var9.buildPixels(param0, this.field_h, this.field_l)) {
             return null;
           }
           if (this.field_c == 0) {
@@ -113,7 +113,7 @@ final class vl implements kj {
         return var9.field_l;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         field_f = null;
         if (param0) {

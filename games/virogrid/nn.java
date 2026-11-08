@@ -173,7 +173,7 @@ final class nn {
         BufferedSocket.field_t = 2;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 53) {
           field_b = (SpriteWidget) null;
@@ -188,7 +188,7 @@ final class nn {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          uh.a((java.awt.Component) ((Object) param0), (byte) 97);
+          uh.attachKeyboardListeners((java.awt.Component) ((Object) param0), (byte) 97);
           if (param1 >= -40) {
             var3 = (Js5Archive) null;
             nn.a((Sprite[][]) null, (Sprite[][]) null, -23, (byte[]) null, (byte[]) null, (Js5Archive) null, (Js5Archive) null, false, -93, (String[][]) null, (String[][]) null, (String[]) null, (int[]) null, 76, (Js5Archive) null);

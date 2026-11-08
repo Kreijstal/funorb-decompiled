@@ -5,7 +5,7 @@ final class MusicTrack extends IntrusiveNode {
     ln field_h;
     byte[] field_g;
 
-    final static MusicTrack a(Js5Archive param0, String param1, String param2) {
+    final static MusicTrack load(Js5Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, 100, param2);
         if (var3 == null) {
           return null;
@@ -52,25 +52,25 @@ final class MusicTrack extends IntrusiveNode {
         var18[9] = 128;
         var22[9] = 128;
         var4 = new qj(this.field_g);
-        var5 = var4.a();
+        var5 = var4.trackCount();
         for (var6 = 0; var6 < var5; var6++) {
-          var4.f(var6);
-          var4.b(var6);
-          var4.d(var6);
+          var4.seekTrack(var6);
+          var4.readDelta(var6);
+          var4.saveTrackPosition(var6);
         }
         while (true) {
-          var6Lifetime1 = var4.f();
+          var6Lifetime1 = var4.nextTrack();
           var7 = var4.field_a[var6Lifetime1];
           while (true) {
             if (var4.field_a[var6Lifetime1] != var7) {
               break;
             }
-            var4.f(var6Lifetime1);
-            var8 = var4.e(var6Lifetime1);
+            var4.seekTrack(var6Lifetime1);
+            var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
-              var4.e();
-              var4.d(var6Lifetime1);
-              if (var4.d()) {
+              var4.markTrackDone();
+              var4.saveTrackPosition(var6Lifetime1);
+              if (var4.isDone()) {
                 return;
               }
               break;
@@ -106,13 +106,13 @@ final class MusicTrack extends IntrusiveNode {
                 var14.field_h[var11Lifetime2] = (byte) 1;
               }
             }
-            var4.b(var6Lifetime1);
-            var4.d(var6Lifetime1);
+            var4.readDelta(var6Lifetime1);
+            var4.saveTrackPosition(var6Lifetime1);
           }
         }
     }
 
-    final void b() {
+    final void releasePatchUsage() {
         this.field_h = null;
     }
 

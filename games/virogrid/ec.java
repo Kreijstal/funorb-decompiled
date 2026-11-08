@@ -63,7 +63,7 @@ abstract class ec extends UiWidget implements ja {
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_D = null;
         field_A = null;
@@ -134,7 +134,7 @@ abstract class ec extends UiWidget implements ja {
             var4 = (UiWidget) null;
             discarded$1 = this.a((byte) -30, (UiWidget) null);
           }
-          stackIn_7_0 = (this.field_x != null) && (!this.field_x.f(true)) && (this.field_x.a(param0, -8515));
+          stackIn_7_0 = (this.field_x != null) && (!this.field_x.f(true)) && (this.field_x.focusNext(param0, -8515));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -150,7 +150,7 @@ abstract class ec extends UiWidget implements ja {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -161,7 +161,7 @@ abstract class ec extends UiWidget implements ja {
           if (param1 != -8515) {
             this.d(-27);
           }
-          stackIn_6_0 = (this.field_x != null) && (this.field_x.a(param0, -8515));
+          stackIn_6_0 = (this.field_x != null) && (this.field_x.focusNext(param0, -8515));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -232,7 +232,7 @@ abstract class ec extends UiWidget implements ja {
             var4 = (UiWidget) null;
             discarded$1 = this.a((byte) 59, (UiWidget) null);
           }
-          stackIn_7_0 = (this.field_x != null) && (!this.field_x.f(true)) && (this.field_x.a(param1, -8515));
+          stackIn_7_0 = (this.field_x != null) && (!this.field_x.f(true)) && (this.field_x.focusNext(param1, -8515));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -311,7 +311,7 @@ abstract class ec extends UiWidget implements ja {
         }
     }
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void drawLayer(byte param0, int param1, int param2, int param3) {
         if (param3 == 0 &&
           this.listener != null) {
           this.listener.a(param1, (UiWidget) (this), true, param2, -23294);
@@ -320,7 +320,7 @@ abstract class ec extends UiWidget implements ja {
           field_y = (String) null;
         }
         if (this.field_x != null) {
-          this.field_x.a((byte) 37, param1 + this.field_l, param2 + this.field_u, param3);
+          this.field_x.drawLayer((byte) 37, param1 + this.field_l, param2 + this.field_u, param3);
         }
     }
 
@@ -424,7 +424,7 @@ abstract class ec extends UiWidget implements ja {
           return this.field_x != null ? this.field_x.b((byte) -39) : 0;
         }
         UiWidget var3 = (UiWidget) null;
-        this.a((UiWidget) null, 66);
+        this.focusNext((UiWidget) null, 66);
         return this.field_x != null ? this.field_x.b((byte) -39) : 0;
     }
 
@@ -436,7 +436,7 @@ abstract class ec extends UiWidget implements ja {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 < 73) {
-            ec.a(-26);
+            ec.releaseStatics(-26);
           }
           if (this.field_x == null) {
             return;

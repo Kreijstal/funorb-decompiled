@@ -10,7 +10,7 @@ final class ne {
     static um field_c;
     static String field_d;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         if (param0) {
           field_b = (String) null;
@@ -74,7 +74,7 @@ final class ne {
             var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             var3 = 0;
             if (param0 != 10448) {
-              ne.a(true);
+              ne.releaseStatics(true);
             }
             while (true) {
               if (var3 >= param1.length()) {
@@ -132,31 +132,31 @@ final class ne {
         int var7 = Rasterizer.field_e;
         int var8 = Rasterizer.field_f;
         Sprite var9 = new Sprite(param1, -(param1 * 2) + param0);
-        var9.b();
-        Rasterizer.a(0, 0, param1, param0 - 2 * param1, param5, param4);
+        var9.makeRasterTarget();
+        Rasterizer.fillVerticalGradient(0, 0, param1, param0 - 2 * param1, param5, param4);
         Sprite var10 = new Sprite(param1, param1);
-        var10.b();
-        Rasterizer.b(0, 0, param1, param1, param5);
+        var10.makeRasterTarget();
+        Rasterizer.fillRectangle(0, 0, param1, param1, param5);
         Sprite var11 = new Sprite(16, param1);
-        var11.b();
-        Rasterizer.b(0, 0, 16, param1, param5);
+        var11.makeRasterTarget();
+        Rasterizer.fillRectangle(0, 0, 16, param1, param5);
         Sprite var12 = new Sprite(param1, param1);
-        var12.b();
-        Rasterizer.b(0, 0, param1, param1, param4);
+        var12.makeRasterTarget();
+        Rasterizer.fillRectangle(0, 0, param1, param1, param4);
         Sprite var13 = new Sprite(16, param1);
-        var13.b();
+        var13.makeRasterTarget();
         if (param3 != 106) {
           field_c = (um) null;
         }
-        Rasterizer.b(0, 0, 16, param1, param4);
+        Rasterizer.fillRectangle(0, 0, 16, param1, param4);
         Object var14 = null;
         if (param2 > 0) {
           var16 = new Sprite(16, 16);
           var14 = var16;
-          var16.b();
-          Rasterizer.b(0, 0, 16, 16, param2);
+          var16.makeRasterTarget();
+          Rasterizer.fillRectangle(0, 0, 16, 16, param2);
         }
-        Rasterizer.a(var18, var7, var8);
+        Rasterizer.setTarget(var18, var7, var8);
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 

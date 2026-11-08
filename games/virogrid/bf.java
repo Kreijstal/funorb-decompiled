@@ -78,8 +78,8 @@ final class bf extends IntrusiveNode {
         fa var11 = null;
         var10 = Virogrid.field_F ? 1 : 0;
         try {
-          Rasterizer.b(param2, param3, param1 + 1, 10000536);
-          Rasterizer.b(param2, param4 + param3, 1 + param1, 12105912);
+          Rasterizer.drawHorizontalLine(param2, param3, param1 + 1, 10000536);
+          Rasterizer.drawHorizontalLine(param2, param4 + param3, 1 + param1, 12105912);
           var5_int = 1;
           if (!param0) {
             var11 = (fa) null;
@@ -138,7 +138,7 @@ final class bf extends IntrusiveNode {
         return d.h(0);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 20391) {
           field_s = null;
           field_m = null;

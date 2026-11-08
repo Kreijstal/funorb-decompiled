@@ -14,7 +14,7 @@ final class da extends IntrusiveNode {
     static double[] field_k;
     int field_j;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_i = null;
         if (param0 != 8355711) {
@@ -73,7 +73,7 @@ final class da extends IntrusiveNode {
                 wc.field_j = wc.field_j + 1;
               }
               var10 = re.a((byte) -100, var8_ref_cj);
-              var11 = var10 + e.b(var8_ref_cj.field_h);
+              var11 = var10 + e.escapeMarkup(var8_ref_cj.field_h);
               var12 = qd.a(param0 ^ -18302, var8_ref_cj);
               var8_ref_cj.field_t = new SpriteWidget(0L, wh.field_d, var11);
               var6 = var6 + param3;

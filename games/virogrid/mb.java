@@ -228,19 +228,19 @@ abstract class mb extends dc {
             var5_int = param2[0].field_u;
             var6 = param2[2].field_u;
             var7 = param2[1].field_u;
-            param2[0].d(param3, param4);
-            param2[2].d(-var6 + param0 + param3, param4);
-            Rasterizer.b(od.field_m);
-            Rasterizer.h(param3 + var5_int, param4, -var6 + param0 + param3, param2[1].field_z + param4);
+            param2[0].drawTransparent(param3, param4);
+            param2[2].drawTransparent(-var6 + param0 + param3, param4);
+            Rasterizer.saveClip(od.field_m);
+            Rasterizer.intersectClip(param3 + var5_int, param4, -var6 + param0 + param3, param2[1].field_z + param4);
             if (param1 != -117) {
               return;
             }
             var8 = param3 + var5_int;
             var9 = param0 + (param3 - var6);
             for (param3 = var8; var9 > param3; param3 = param3 + var7) {
-              param2[1].d(param3, param4);
+              param2[1].drawTransparent(param3, param4);
             }
-            Rasterizer.a(od.field_m);
+            Rasterizer.restoreClip(od.field_m);
             return;
           }
           return;
@@ -291,10 +291,10 @@ abstract class mb extends dc {
             return false;
           }
           if (param2 == 98) {
-            this.field_kb.a(param0, -8515);
+            this.field_kb.focusNext(param0, -8515);
           }
           if (param2 == 99) {
-            this.field_kb.a(param0, -8515);
+            this.field_kb.focusNext(param0, -8515);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

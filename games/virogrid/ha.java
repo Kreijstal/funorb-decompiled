@@ -13,7 +13,7 @@ final class ha {
     private ub field_h;
     private PacketBuffer field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 22) {
           field_g = (String) null;
         }
@@ -254,7 +254,7 @@ final class ha {
         if (this.field_h.field_t) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_h.b((byte) 39));
+        var10 = new PacketBuffer(this.field_h.getBytes((byte) 39));
         var10.position = 5;
         var3 = var10.readUnsignedByte(param0 + 11113);
         var10.position = var10.position + 72 * var3;

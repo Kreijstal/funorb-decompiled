@@ -23,7 +23,7 @@ final class sf extends WidgetContainer implements ta {
           this.field_D = param2;
           this.field_L = param1;
           this.field_G = param0;
-          var4_int = this.field_D != null ? this.field_L.a(this.field_D, 260, this.field_L.field_H) : 0;
+          var4_int = this.field_D != null ? this.field_L.paragraphHeight(this.field_D, 260, this.field_L.field_H) : 0;
           this.a(var4_int + 22, true, 0, 0, 288);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -73,9 +73,9 @@ final class sf extends WidgetContainer implements ta {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
-        this.field_L.a(this.field_D, param1 - (-this.field_l - 14), this.field_u + param2 + 10, -28 + this.field_g, this.field_m, 16777215, -1, 0, 0, this.field_L.field_H);
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
+        this.field_L.drawParagraph(this.field_D, param1 - (-this.field_l - 14), this.field_u + param2 + 10, -28 + this.field_g, this.field_m, 16777215, -1, 0, 0, this.field_L.field_H);
     }
 
     final static int a(byte param0, String param1, e param2, int param3, String[] param4) {
@@ -105,7 +105,7 @@ final class sf extends WidgetContainer implements ta {
         int var6Lifetime1;
         var13 = Virogrid.field_F ? 1 : 0;
         try {
-          var5_int = param2.a(param1);
+          var5_int = param2.textWidth(param1);
           if (param3 >= var5_int &&
             param1.indexOf("<br>") == -1) {
             param4[0] = param1;
@@ -122,7 +122,7 @@ final class sf extends WidgetContainer implements ta {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param1.substring(var7, var9 + 1).trim();
-              var12 = param2.a(var11);
+              var12 = param2.textWidth(var11);
               if (var12 >= param3) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;
@@ -144,7 +144,7 @@ final class sf extends WidgetContainer implements ta {
             param4[incrementValue$0] = param1.substring(var7, var8).trim();
           }
           if (param0 < 119) {
-            sf.a(-85);
+            sf.releaseStatics(-85);
           }
           stackIn_28_0 = var6Lifetime1;
           return stackIn_28_0;
@@ -174,7 +174,7 @@ final class sf extends WidgetContainer implements ta {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_K = null;
         field_O = null;
         if (param0 <= 52) {

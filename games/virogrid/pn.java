@@ -254,11 +254,11 @@ final class pn extends dk {
     }
 
     final static void a(boolean param0) {
-        ok.field_L = hd.standardFont.a(de.field_pb[14]);
+        ok.field_L = hd.standardFont.textWidth(de.field_pb[14]);
         if (param0) {
           pn.a(-7, (byte) 94);
         }
-        int var1 = hd.standardFont.a(de.field_pb[15]);
+        int var1 = hd.standardFont.textWidth(de.field_pb[15]);
         if (!(var1 <= ok.field_L)) {
           ok.field_L = var1;
         }
@@ -340,7 +340,7 @@ final class pn extends dk {
               var2Lifetime1 = (ub) (this.field_p.a(26605));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.field_B.f(31479);
+              var3_int = this.field_B.available(31479);
               if (var3_int < 0) {
                 throw new IOException();
               }

@@ -81,7 +81,7 @@ abstract class bk {
         return var1;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 110) {
           return;
         }

@@ -19,7 +19,7 @@ final class vm {
             if (!ad.field_h) {
               return;
             }
-            Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
+            Rasterizer.darkenRectangle(0, 0, Rasterizer.field_e, we.field_c.field_J);
             pm.field_n.a(param1, 24960);
             return;
           }
@@ -27,7 +27,7 @@ final class vm {
             if (!ad.field_h) {
               return;
             }
-            Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
+            Rasterizer.darkenRectangle(0, 0, Rasterizer.field_e, we.field_c.field_J);
             pm.field_n.a(param1, 24960);
             return;
           }
@@ -35,7 +35,7 @@ final class vm {
             return;
           }
           if (ad.field_h) {
-            Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
+            Rasterizer.darkenRectangle(0, 0, Rasterizer.field_e, we.field_c.field_J);
             pm.field_n.a(param1, 24960);
           }
           return;
@@ -48,7 +48,7 @@ final class vm {
             if (!ad.field_h) {
               return;
             }
-            Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
+            Rasterizer.darkenRectangle(0, 0, Rasterizer.field_e, we.field_c.field_J);
             pm.field_n.a(param1, 24960);
             return;
           }
@@ -56,12 +56,12 @@ final class vm {
             return;
           }
           if (ad.field_h) {
-            Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
+            Rasterizer.darkenRectangle(0, 0, Rasterizer.field_e, we.field_c.field_J);
             pm.field_n.a(param1, 24960);
           }
           return;
         }
-        Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
+        Rasterizer.darkenRectangle(0, 0, Rasterizer.field_e, we.field_c.field_J);
         jj.field_a.a(param1, 24960);
         if (param0 < 16) {
           field_b = (un) null;
@@ -70,12 +70,12 @@ final class vm {
           if (!ad.field_h) {
             return;
           }
-          Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
+          Rasterizer.darkenRectangle(0, 0, Rasterizer.field_e, we.field_c.field_J);
           pm.field_n.a(param1, 24960);
         } else {
           if (th.field_z > 0) {
             if (ad.field_h) {
-              Rasterizer.g(0, 0, Rasterizer.field_e, we.field_c.field_J);
+              Rasterizer.darkenRectangle(0, 0, Rasterizer.field_e, we.field_c.field_J);
               pm.field_n.a(param1, 24960);
             }
             return;
@@ -129,7 +129,7 @@ final class vm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 30) {
-            stackIn_4_0 = tm.a(jh.a(param1, 100, 96), param0 ^ 65);
+            stackIn_4_0 = tm.a(jh.createAtRatePercent(param1, 100, 96), param0 ^ 65);
             return stackIn_4_0;
           }
           stackIn_2_0 = (pe) null;
@@ -172,7 +172,7 @@ final class vm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 30) {
-            stackIn_4_0 = tm.a(jh.a(param1, 100, 96), param0 ^ 65);
+            stackIn_4_0 = tm.a(jh.createAtRatePercent(param1, 100, 96), param0 ^ 65);
             return stackIn_4_0;
           }
           stackIn_2_0 = (pe) null;

@@ -12,7 +12,7 @@ final class ti implements WidgetListener {
     private e field_d;
     static int field_b;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         int var1 = 108 % ((58 - param0) / 55);
         field_h = null;
@@ -96,9 +96,9 @@ final class ti implements WidgetListener {
           if (param4 != -23294) {
             return;
           }
-          this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_n + "</u>", param0 + param1.field_l, param1.field_u + param3, param1.field_g, param1.field_m, var6_int, -1, this.field_e, this.field_f, this.field_d.field_H + this.field_d.field_G);
+          this.field_d.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_n + "</u>", param0 + param1.field_l, param1.field_u + param3, param1.field_g, param1.field_m, var6_int, -1, this.field_e, this.field_f, this.field_d.field_H + this.field_d.field_G);
           if (param1.f(true)) {
-            var7 = this.field_d.a(param1.field_n);
+            var7 = this.field_d.textWidth(param1.field_n);
             var8 = this.field_d.field_G + this.field_d.field_H;
             var9 = param0 + param1.field_l;
             var10 = param3 + param1.field_u;

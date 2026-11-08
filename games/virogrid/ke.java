@@ -13,7 +13,7 @@ class ke extends DualLinkNode {
     ke() {
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         int var1 = -9 / ((8 - param0) / 47);
         field_o = null;

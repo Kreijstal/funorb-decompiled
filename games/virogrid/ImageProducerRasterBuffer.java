@@ -59,12 +59,12 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_p = null;
         field_q = null;
         if (param0 < 67) {
-          ImageProducerRasterBuffer.b((byte) 93);
+          ImageProducerRasterBuffer.releaseStatics((byte) 93);
           field_r = null;
           return;
         }

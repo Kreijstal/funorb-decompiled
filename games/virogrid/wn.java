@@ -57,7 +57,7 @@ final class wn extends IntrusiveNode {
         return new co[]{aa.field_b, Virogrid.field_O, nd.field_j};
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_n = null;
         field_i = null;

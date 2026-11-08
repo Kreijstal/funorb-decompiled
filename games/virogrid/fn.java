@@ -139,8 +139,8 @@ final class fn {
             }
             if (wl.field_d == null) {
               var36 = var8Lifetime7 + var20 + ": ";
-              var6Lifetime1 = var6Lifetime1 - hk.field_Ob.a(var36);
-              if (hk.field_Ob.a(oi.field_h.toString()) > var6Lifetime1) {
+              var6Lifetime1 = var6Lifetime1 - hk.field_Ob.textWidth(var36);
+              if (hk.field_Ob.textWidth(oi.field_h.toString()) > var6Lifetime1) {
                 gi.a(oi.field_h, -18340, oi.field_h.length() - 1, ' ');
               }
               return true;
@@ -148,8 +148,8 @@ final class fn {
             if (!bf.field_t) {
               var39 = "[" + oi.a(new String[]{wl.field_d.field_Qb}, ra.field_c, 2) + "] ";
               var40 = var39 + var20 + ": ";
-              var6Lifetime1 = var6Lifetime1 - hk.field_Ob.a(var40);
-              if (hk.field_Ob.a(oi.field_h.toString()) > var6Lifetime1) {
+              var6Lifetime1 = var6Lifetime1 - hk.field_Ob.textWidth(var40);
+              if (hk.field_Ob.textWidth(oi.field_h.toString()) > var6Lifetime1) {
                 gi.a(oi.field_h, -18340, oi.field_h.length() - 1, ' ');
               }
               return true;
@@ -157,8 +157,8 @@ final class fn {
             if (null == tl.field_e) {
               var37 = "[" + oi.a(new String[]{wl.field_d.field_Qb}, ra.field_c, 2) + "] ";
               var38 = var37 + var20 + ": ";
-              var6Lifetime1 = var6Lifetime1 - hk.field_Ob.a(var38);
-              if (hk.field_Ob.a(oi.field_h.toString()) > var6Lifetime1) {
+              var6Lifetime1 = var6Lifetime1 - hk.field_Ob.textWidth(var38);
+              if (hk.field_Ob.textWidth(oi.field_h.toString()) > var6Lifetime1) {
                 gi.a(oi.field_h, -18340, oi.field_h.length() - 1, ' ');
               }
               return true;
@@ -166,7 +166,7 @@ final class fn {
             var8Lifetime7 = "[" + tl.field_e + "] ";
           }
           var41 = var8Lifetime7 + var20 + ": ";
-          var6Lifetime1 = var6Lifetime1 - hk.field_Ob.a(var41);
+          var6Lifetime1 = var6Lifetime1 - hk.field_Ob.textWidth(var41);
         } else {
           var43 = (CharSequence) ((Object) va.field_d);
           var19 = oi.a(new String[]{ji.a(11, var43)}, lm.field_c, 2);
@@ -175,15 +175,15 @@ final class fn {
           var9 = oi.a(new String[]{var17}, mf.field_d, 2);
           var8Lifetime7 = var9;
           var8Lifetime7 = var9;
-          var10 = hk.field_Ob.a(var19);
-          var11 = hk.field_Ob.a(var9);
+          var10 = hk.field_Ob.textWidth(var19);
+          var11 = hk.field_Ob.textWidth(var9);
           if (var10 <= var11) {
             var6Lifetime1 = var6Lifetime1 - var11;
           } else {
             var6Lifetime1 = var6Lifetime1 - var10;
           }
         }
-        if (hk.field_Ob.a(oi.field_h.toString()) <= var6Lifetime1) {
+        if (hk.field_Ob.textWidth(oi.field_h.toString()) <= var6Lifetime1) {
           return true;
         }
         gi.a(oi.field_h, -18340, oi.field_h.length() - 1, ' ');
@@ -267,7 +267,7 @@ final class fn {
               param0 <= 105) {
               vb.field_c = md.a(param2, 7655);
             } else {
-              vb.field_c = lc.a(param0, param3, param1 ^ 29532);
+              vb.field_c = lc.createSuggestedUsernameQuery(param0, param3, param1 ^ 29532);
             }
           }
           if (param1 != 105) {

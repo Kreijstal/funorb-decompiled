@@ -54,7 +54,7 @@ final class ga extends SpriteWidget {
         return this.field_Nb;
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_Ob = null;
         if (param0 >= -47) {
           field_Ob = (dl) null;

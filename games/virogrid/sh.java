@@ -150,7 +150,7 @@ class sh extends mb implements ta {
             try {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (q.b("getcookies", 6168, param1));
+              var4 = (String) (q.callJavaScript("getcookies", 6168, param1));
               var5 = ql.a(var4, (byte) -123, ';');
               if (param0 >= 0) {
                 field_tb = (IntrusiveDeque) null;

@@ -19,7 +19,7 @@ final class kn extends ec {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         field_F = null;
         field_J = null;
@@ -31,7 +31,7 @@ final class kn extends ec {
         field_K = null;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         if (param3 != 0) {
           return;
         }
@@ -42,12 +42,12 @@ final class kn extends ec {
           return;
         }
         if (256 == this.field_H) {
-          this.field_x.a((byte) 37, param1 + this.field_l, this.field_u + param2, param3);
+          this.field_x.drawLayer((byte) 37, param1 + this.field_l, this.field_u + param2, param3);
           return;
         }
         Sprite var5 = new Sprite(this.field_x.field_g, this.field_x.field_m);
         kb.a(var5, 16865);
-        this.field_x.a(param0, 0, 0, param3);
+        this.field_x.drawLayer(param0, 0, 0, param3);
         ai.a(true);
         var5.a(param1 + this.field_l, this.field_u + param2, this.field_H);
     }

@@ -270,7 +270,7 @@ final class BufferedSocket implements Runnable {
         this.b(4155);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -124) {
           return;
         }
@@ -285,7 +285,7 @@ final class BufferedSocket implements Runnable {
         field_b = null;
     }
 
-    final int f(int param0) throws IOException {
+    final int available(int param0) throws IOException {
         if (this.field_l) {
           return 0;
         }
@@ -440,7 +440,7 @@ final class BufferedSocket implements Runnable {
         em.field_c = sg.field_i;
     }
 
-    final int a(int param0) throws IOException {
+    final int readUnsignedByte(int param0) throws IOException {
         if (param0 != -1) {
           this.field_l = false;
         }

@@ -13,7 +13,7 @@ final class tm extends IntrusiveNode {
     static je field_l;
     static int[] field_h;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_i = null;
         field_l = null;
@@ -102,46 +102,46 @@ final class tm extends IntrusiveNode {
             }
             var18 = var14;
             var19 = var15;
-            Rasterizer.b(nf.field_f);
+            Rasterizer.saveClip(nf.field_f);
             if (var19 < var18) {
               var19 = param1 + var8 * param4 / (var9 + var8);
               var18 = param1 + var8 * param4 / (var9 + var8);
             }
             if (param5[0] != null) {
-              Rasterizer.h(param0, param1, var16, var18);
-              param5[0].d(param0, param1);
-              Rasterizer.a(nf.field_f);
+              Rasterizer.intersectClip(param0, param1, var16, var18);
+              param5[0].drawTransparent(param0, param1);
+              Rasterizer.restoreClip(nf.field_f);
             }
             if (null != param5[2]) {
-              Rasterizer.h(var17, param1, var10, var18);
-              param5[2].d(var13, param1);
-              Rasterizer.a(nf.field_f);
+              Rasterizer.intersectClip(var17, param1, var10, var18);
+              param5[2].drawTransparent(var13, param1);
+              Rasterizer.restoreClip(nf.field_f);
             }
             if (param5[6] != null) {
-              Rasterizer.h(param0, var19, var16, var11);
-              param5[6].d(param0, var15);
-              Rasterizer.a(nf.field_f);
+              Rasterizer.intersectClip(param0, var19, var16, var11);
+              param5[6].drawTransparent(param0, var15);
+              Rasterizer.restoreClip(nf.field_f);
             }
             if (param5[8] != null) {
-              Rasterizer.h(var17, var19, var10, var11);
-              param5[8].d(var13, var15);
-              Rasterizer.a(nf.field_f);
+              Rasterizer.intersectClip(var17, var19, var10, var11);
+              param5[8].drawTransparent(var13, var15);
+              Rasterizer.restoreClip(nf.field_f);
             }
             if (param5[1] != null &&
               param5[1].field_u != 0) {
-              Rasterizer.h(var16, param1, var17, var18);
+              Rasterizer.intersectClip(var16, param1, var17, var18);
               for (var20 = var12; var13 > var20; var20 = var20 + param5[1].field_u) {
-                param5[1].d(var20, param1);
+                param5[1].drawTransparent(var20, param1);
               }
-              Rasterizer.a(nf.field_f);
+              Rasterizer.restoreClip(nf.field_f);
             }
             if (null != param5[7] &&
               param5[7].field_u != 0) {
-              Rasterizer.h(var16, var19, var17, var11);
+              Rasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param5[7].field_u) {
-                param5[7].d(var20Lifetime1, var15);
+                param5[7].drawTransparent(var20Lifetime1, var15);
               }
-              Rasterizer.a(nf.field_f);
+              Rasterizer.restoreClip(nf.field_f);
             }
             if (param2) {
               var23 = (Sprite[]) null;
@@ -149,30 +149,30 @@ final class tm extends IntrusiveNode {
             }
             if (null != param5[3] &&
               param5[3].field_z != 0) {
-              Rasterizer.h(param0, var18, var16, var19);
+              Rasterizer.intersectClip(param0, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param5[3].field_z) {
-                param5[3].d(param0, var20Lifetime2);
+                param5[3].drawTransparent(param0, var20Lifetime2);
               }
-              Rasterizer.a(nf.field_f);
+              Rasterizer.restoreClip(nf.field_f);
             }
             if (null != param5[5] &&
               param5[5].field_z != 0) {
-              Rasterizer.h(var17, var18, var10, var19);
+              Rasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param5[5].field_z) {
-                param5[5].d(var13, var20Lifetime3);
+                param5[5].drawTransparent(var13, var20Lifetime3);
               }
-              Rasterizer.a(nf.field_f);
+              Rasterizer.restoreClip(nf.field_f);
             }
             if (param5[4] != null &&
               0 != param5[4].field_u &&
               param5[4].field_z != 0) {
-              Rasterizer.h(var16, var18, var17, var19);
+              Rasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param5[4].field_z) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param5[4].field_u) {
-                  param5[4].d(var21, var20Lifetime4);
+                  param5[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
-              Rasterizer.a(nf.field_f);
+              Rasterizer.restoreClip(nf.field_f);
               return;
             }
             return;

@@ -41,7 +41,7 @@ final class ej extends ec {
           this.field_G = param9;
           this.field_B = param7;
           var12_int = this.field_I - this.field_B;
-          var13 = this.field_E.a(param10, var12_int, this.field_E.field_H) + this.field_B * 2;
+          var13 = this.field_E.paragraphHeight(param10, var12_int, this.field_E.field_H) + this.field_B * 2;
           if (param3 >= var13) {
             var13 = param3;
           } else {
@@ -92,7 +92,7 @@ final class ej extends ec {
         return (String) null;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_F = null;
         field_O = null;
         if (param0 == 2) {
@@ -106,20 +106,20 @@ final class ej extends ec {
     }
 
     final static void a(boolean param0, int param1) {
-        Rasterizer.c();
+        Rasterizer.clear();
         if (param1 != 25680) {
           ej.a(true, 87);
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var5 = param1 + this.field_l;
         int var6 = this.field_u + param2;
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         if (param3 == 0) {
           var7 = this.field_J ? -(this.field_B * 2) - this.field_I + this.field_g : 0;
-          this.field_E.a(this.field_K, this.field_B + var7 + var5, var6 + this.field_B, -this.field_B + this.field_I, -(this.field_B * 2) + this.field_m, this.field_G, -1, this.field_J ? 0 : 2, 1, this.field_E.field_H);
+          this.field_E.drawParagraph(this.field_K, this.field_B + var7 + var5, var6 + this.field_B, -this.field_B + this.field_I, -(this.field_B * 2) + this.field_m, this.field_G, -1, this.field_J ? 0 : 2, 1, this.field_E.field_H);
           return;
         }
     }

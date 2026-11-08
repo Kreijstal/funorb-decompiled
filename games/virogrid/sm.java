@@ -14,7 +14,7 @@ final class sm {
             tm.field_l.a(0, md.field_i);
           }
           md.field_i.a(param0, false, param2, param3);
-          Rasterizer.c();
+          Rasterizer.clear();
           ci.b(param1, -127);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "sm.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

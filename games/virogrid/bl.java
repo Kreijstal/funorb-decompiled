@@ -23,7 +23,7 @@ final class bl extends nb {
         return 100;
     }
 
-    final byte[] b(byte param0) {
+    final byte[] getBytes(byte param0) {
         if (param0 != 39) {
           return (byte[]) null;
         }
@@ -33,7 +33,7 @@ final class bl extends nb {
         return this.field_C;
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_D = null;
         field_A = null;
         field_G = null;

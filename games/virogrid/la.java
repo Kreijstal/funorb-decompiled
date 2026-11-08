@@ -18,9 +18,9 @@ final class la extends IntrusiveNode {
           return;
         }
         try {
-          gj.a(param1.a("headers.packvorbis", 100, ""));
+          gj.decodeSetup(param1.a("headers.packvorbis", 100, ""));
           var2 = gj.a(param1, "jagex logo2.packvorbis", "");
-          var2.a();
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -63,7 +63,7 @@ final class la extends IntrusiveNode {
               return;
             }
             vg.field_B.c(false);
-            ae.field_g.h();
+            ae.field_g.flushDeviceSafely();
             qi.field_b = param3;
             if (null != qi.field_b) {
               vg.field_B.a(param2, 37, qi.field_b);

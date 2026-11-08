@@ -123,7 +123,7 @@ final class sn extends qe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3) {
-            sn.c((byte) -70);
+            sn.releaseStatics((byte) -70);
           }
           var4_int = param0.a(-1, param2);
           var5 = param0.a(-125, var4_int, param1);
@@ -277,7 +277,7 @@ final class sn extends qe {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -63 / ((-50 - param0) / 36);
         field_p = null;
         field_n = null;

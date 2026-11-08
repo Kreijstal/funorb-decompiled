@@ -6,7 +6,7 @@ final class vn {
     private int field_a;
     private hl[] field_c;
 
-    final static vn a(Js5Archive param0, int param1, int param2) {
+    final static vn load(Js5Archive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, param2, 0);
         if (var3 == null) {
           return null;
@@ -14,7 +14,7 @@ final class vn {
         return new vn(new PacketBuffer(var3));
     }
 
-    private final byte[] a() {
+    private final byte[] mixSamples() {
         int var4 = 0;
         int var8 = 0;
         int var1;
@@ -41,7 +41,7 @@ final class vn {
           if (this.field_c[var4] != null) {
             var5 = this.field_c[var4].field_q * 22050 / 1000;
             var6 = this.field_c[var4].field_g * 22050 / 1000;
-            var13 = this.field_c[var4].a(var5, this.field_c[var4].field_q);
+            var13 = this.field_c[var4].synthesize(var5, this.field_c[var4].field_q);
             for (var8 = 0; var8 < var5; var8++) {
               var9 = var3[var8 + var6] + (var13[var8] >> 8);
               if ((var9 + 128 & -256) != 0) {
@@ -54,8 +54,8 @@ final class vn {
         return var3;
     }
 
-    final ml b() {
-        byte[] var1 = this.a();
+    final ml toPcmSample() {
+        byte[] var1 = this.mixSamples();
         return new ml(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
     }
 
@@ -68,7 +68,7 @@ final class vn {
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_c[var2] = new hl();
-            this.field_c[var2].a(param0);
+            this.field_c[var2].decode(param0);
           }
         }
         this.field_a = param0.readUnsignedShort((byte) 114);

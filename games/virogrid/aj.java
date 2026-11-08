@@ -295,7 +295,7 @@ class aj implements WidgetListener, gm {
             var6Lifetime1 != 3) {
             if (var6Lifetime1 == 1) {
               if (param0.field_r instanceof bm) {
-                ((bm) (param0.field_r)).a(this.c(param0, 218479361), (byte) -98, this.field_i, var3_int >> 1, var5);
+                ((bm) (param0.field_r)).a(this.getDisplayText(param0, 218479361), (byte) -98, this.field_i, var3_int >> 1, var5);
                 return;
               }
             } else {
@@ -303,7 +303,7 @@ class aj implements WidgetListener, gm {
                 if (!(param0.field_r instanceof bm)) {
                   return;
                 }
-                ((bm) (param0.field_r)).a((byte) -92, var3_int, this.c(param0, 218479361), var5, this.field_i);
+                ((bm) (param0.field_r)).a((byte) -92, var3_int, this.getDisplayText(param0, 218479361), var5, this.field_i);
               }
             }
             return;
@@ -311,7 +311,7 @@ class aj implements WidgetListener, gm {
           if (!(param0.field_r instanceof bm)) {
             return;
           }
-          ((bm) (param0.field_r)).a(var5, (byte) 59, this.field_i, 0, this.c(param0, 218479361));
+          ((bm) (param0.field_r)).a(var5, (byte) 59, this.field_i, 0, this.getDisplayText(param0, 218479361));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -350,7 +350,7 @@ class aj implements WidgetListener, gm {
         }
     }
 
-    public final int a(int param0, UiWidget param1, int param2) {
+    public final int getTextY(int param0, UiWidget param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -390,7 +390,7 @@ class aj implements WidgetListener, gm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > -35) {
-            aj.a(true);
+            aj.releaseStatics(true);
           }
           stackIn_3_0 = this.field_p + (param3.field_l + param0) - (-param3.field_k - param1);
           return stackIn_3_0;
@@ -408,7 +408,7 @@ class aj implements WidgetListener, gm {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         field_m = null;
         field_h = null;
@@ -417,7 +417,7 @@ class aj implements WidgetListener, gm {
           field_q = null;
           return;
         }
-        aj.a(true);
+        aj.releaseStatics(true);
         field_l = null;
         field_q = null;
     }
@@ -433,7 +433,7 @@ class aj implements WidgetListener, gm {
         try {
           this.a(param3, (byte) -122);
           if (param4) {
-            stackIn_4_0 = param3.field_r.a((byte) 120, param2 - this.b(-587719039, param3, param1), -this.a(param0, param3, -7510) + param5);
+            stackIn_4_0 = param3.field_r.a((byte) 120, param2 - this.b(-587719039, param3, param1), -this.getTextY(param0, param3, -7510) + param5);
             return stackIn_4_0;
           }
           stackIn_2_0 = -33;
@@ -465,7 +465,7 @@ class aj implements WidgetListener, gm {
             param0.field_r = (ie) ((Object) new bm());
           }
           if (this.field_s) {
-            ((bm) (param0.field_r)).a(this.field_k, this.field_j, true, this.field_f, this.c(param0, 218479361), this.field_i, this.b(param0, true), this.a(0, param0));
+            ((bm) (param0.field_r)).a(this.field_k, this.field_j, true, this.field_f, this.getDisplayText(param0, 218479361), this.field_i, this.b(param0, true), this.a(0, param0));
           } else {
             this.b(param0, -14040);
           }
@@ -524,19 +524,19 @@ class aj implements WidgetListener, gm {
             if (var13Lifetime1 != 0 &&
               var13Lifetime1 != 3) {
               if (var13Lifetime1 == 1) {
-                this.field_i.c(this.c(param7, 218479361), this.a(param2, param4, (byte) -42, param7) + (var10 >> 1), this.a((byte) 23, param7, param0, param3) + var12, param6, param1);
+                this.field_i.drawCentered(this.getDisplayText(param7, 218479361), this.a(param2, param4, (byte) -42, param7) + (var10 >> 1), this.a((byte) 23, param7, param0, param3) + var12, param6, param1);
               } else {
                 if ((var13Lifetime1 == 2)) {
-                  this.field_i.a(this.c(param7, 218479361), this.a(param2, param4, (byte) -107, param7) + var10, this.a((byte) -78, param7, param0, param3) + var12, param6, param1);
+                  this.field_i.drawRight(this.getDisplayText(param7, 218479361), this.a(param2, param4, (byte) -107, param7) + var10, this.a((byte) -78, param7, param0, param3) + var12, param6, param1);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_i.b(this.c(param7, 218479361), this.a(param2, param4, (byte) -88, param7), var12 + this.a((byte) 20, param7, param0, param3), param6, param1);
+              this.field_i.drawLeft(this.getDisplayText(param7, 218479361), this.a(param2, param4, (byte) -88, param7), var12 + this.a((byte) 20, param7, param0, param3), param6, param1);
             }
           } else {
-            this.field_i.a(this.c(param7, 218479361), this.a(param2, param4, (byte) -76, param7), this.a((byte) -110, param7, param0, param3), var10, var11, param6, param1, this.field_j, this.field_k, this.field_f);
+            this.field_i.drawParagraph(this.getDisplayText(param7, 218479361), this.a(param2, param4, (byte) -76, param7), this.a((byte) -110, param7, param0, param3), var10, var11, param6, param1, this.field_j, this.field_k, this.field_f);
           }
           ai.a(true);
           return;
@@ -618,7 +618,7 @@ class aj implements WidgetListener, gm {
         return this.field_i.field_H + this.field_i.field_G;
     }
 
-    String c(UiWidget param0, int param1) {
+    String getDisplayText(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

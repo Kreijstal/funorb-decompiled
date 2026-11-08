@@ -89,7 +89,7 @@ final class eg extends AudioStream {
         return (Sprite) null;
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -113,7 +113,7 @@ final class eg extends AudioStream {
         var11 = Virogrid.field_F ? 1 : 0;
         try {
           if (this.field_C <= 0) {
-            this.a(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_n) {
@@ -173,14 +173,14 @@ final class eg extends AudioStream {
               if (256 != var5) {
                 if (null != this.field_w &&
                   this.field_w.length >= var6) {
-                  ek.a(this.field_w, 0, var6);
-                  ek.a(this.field_q, 0, var6);
+                  ek.clear(this.field_w, 0, var6);
+                  ek.clear(this.field_q, 0, var6);
                 } else {
                   this.field_q = new int[var6];
                   this.field_w = new int[var6];
                 }
-                this.field_A.b(this.field_w, 0, param2);
-                this.field_x.b(this.field_q, 0, param2);
+                this.field_A.mixInto(this.field_w, 0, param2);
+                this.field_x.mixInto(this.field_q, 0, param2);
                 if (!ua.field_q) {
                   stackIn_47_0 = param1;
                 } else {
@@ -193,22 +193,22 @@ final class eg extends AudioStream {
                   param0[var7 + var8] = param0[var7 + var8] + (var5 * this.field_q[var8] + var4_int * this.field_w[var8] >> 8);
                 }
               } else {
-                this.field_x.b(param0, param1, param2);
+                this.field_x.mixInto(param0, param1, param2);
               }
             } else {
-              this.field_A.b(param0, param1, param2);
+              this.field_A.mixInto(param0, param1, param2);
             }
           }
           if (this.field_E != null &&
             this.field_v != 0) {
             if (this.field_w != null &&
               this.field_w.length >= var6) {
-              ek.a(this.field_w, 0, var6);
+              ek.clear(this.field_w, 0, var6);
             } else {
               this.field_q = new int[var6];
               this.field_w = new int[var6];
             }
-            this.field_m.b(this.field_w, 0, param2);
+            this.field_m.mixInto(this.field_w, 0, param2);
             if (!ua.field_q) {
               stackIn_60_0 = param1;
             } else {
@@ -246,15 +246,15 @@ final class eg extends AudioStream {
         return rk.field_f;
     }
 
-    final AudioStream b() {
+    final AudioStream nextSubStream() {
         return null;
     }
 
-    final AudioStream c() {
+    final AudioStream firstSubStream() {
         return null;
     }
 
-    final synchronized int d() {
+    final synchronized int activity() {
         return 2;
     }
 
@@ -307,7 +307,7 @@ final class eg extends AudioStream {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_G = null;
         if (param0 >= -43) {
@@ -432,20 +432,20 @@ final class eg extends AudioStream {
         return stackIn_7_0;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         var3 = Virogrid.field_F ? 1 : 0;
         if (this.field_k > 0 &&
           this.field_B != null) {
-          this.field_A.a(param0);
+          this.field_A.skipFrames(param0);
         }
         if (1048576 > this.field_k &&
           null != this.field_u) {
-          this.field_x.a(param0);
+          this.field_x.skipFrames(param0);
         }
         if (0 < this.field_v &&
           null != this.field_E) {
-          this.field_m.a(param0);
+          this.field_m.skipFrames(param0);
         }
         if (this.field_n) {
           if (0 < this.field_r &&

@@ -130,7 +130,7 @@ final class wd {
           var7 = Virogrid.field_F ? 1 : 0;
           try {
             try {
-              var3 = (String) (q.b("getcookies", 6168, param1));
+              var3 = (String) (q.callJavaScript("getcookies", 6168, param1));
               var4 = ql.a(var3, (byte) -123, ';');
               for (var5 = param0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -202,7 +202,7 @@ final class wd {
         return -wl.field_c[134217728 / param1] + 2048;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         field_d = null;

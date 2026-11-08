@@ -75,11 +75,11 @@ final class pc {
           pj.a(param0, 256);
           if (db.b((byte) 13, 0) &&
             sh.a(4712, 100) != 0) {
-            Rasterizer.b(0, 0, 200, 400, 0);
+            Rasterizer.fillRectangle(0, 0, 200, 400, 0);
             ul.b((byte) 96);
             return;
           }
-          Rasterizer.b(0, 0, 200, 400, 8421504);
+          Rasterizer.fillRectangle(0, 0, 200, 400, 8421504);
           if (param1 > -24) {
             pc.a(111);
           }
@@ -97,9 +97,9 @@ final class pc {
             var4 = var3[var2.field_o / 3];
             var4.field_m[1] = var2.field_l * 65793;
             if (!var2.field_p) {
-              var4.b(-31, 200);
+              var4.drawFlippedHorizontal(-31, 200);
             } else {
-              var4.a(-31, 200);
+              var4.draw(-31, 200);
             }
             var2 = (ij) (sk.field_a.a(16213));
           }

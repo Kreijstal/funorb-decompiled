@@ -8,7 +8,7 @@ final class lg {
     static dl field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         int var1 = 14 / ((param0 + 69) / 51);
         field_a = null;

@@ -54,7 +54,7 @@ abstract class mi implements le {
           mi.e(-16);
           hn.a(-1781, param0);
           if (en.field_Fb) {
-            Rasterizer.g(he.field_pc.field_c.field_tb, he.field_pc.field_c.field_F, he.field_pc.field_c.field_K, he.field_pc.field_c.field_ub);
+            Rasterizer.darkenRectangle(he.field_pc.field_c.field_tb, he.field_pc.field_c.field_F, he.field_pc.field_c.field_K, he.field_pc.field_c.field_ub);
             he.field_pc.field_c.a(param0, 24960);
             la.a(param1 ^ 8271, param0);
             return;
@@ -67,7 +67,7 @@ abstract class mi implements le {
           la.a(param1 ^ 8271, param0);
           return;
         }
-        Rasterizer.g(he.field_pc.field_c.field_tb, he.field_pc.field_c.field_F, he.field_pc.field_c.field_K, he.field_pc.field_c.field_ub);
+        Rasterizer.darkenRectangle(he.field_pc.field_c.field_tb, he.field_pc.field_c.field_F, he.field_pc.field_c.field_K, he.field_pc.field_c.field_ub);
         he.field_pc.field_c.a(param0, 24960);
         la.a(param1 ^ 8271, param0);
     }

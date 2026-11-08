@@ -83,7 +83,7 @@ final class th extends DualLinkNode {
         return var2.toString();
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = (String[][]) null;
         field_t = null;
         field_o = null;
@@ -124,7 +124,7 @@ final class th extends DualLinkNode {
             stackIn_13_0 = (byte[]) (param1);
             return stackIn_13_0;
           }
-          stackIn_11_0 = va.a(param1, 0);
+          stackIn_11_0 = va.copyBytes(param1, 0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

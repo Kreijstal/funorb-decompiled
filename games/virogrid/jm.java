@@ -21,7 +21,7 @@ final class jm {
         lg.field_a.a(oc.field_k, 2, 20, 0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         field_d = null;
@@ -80,7 +80,7 @@ final class jm {
         si.field_a = param0;
         tm.field_g = param1;
         si.field_b = param1;
-        fk.a(param0, param1);
+        fk.setProjectionCenter(param0, param1);
     }
 
     final static void a(int param0, byte param1) {
@@ -120,7 +120,7 @@ final class jm {
             36 >= param0) {
             var4_int = 0;
             if (param1 <= 85) {
-              jm.a(88);
+              jm.releaseStatics(88);
             }
             var5 = 0;
             var6 = 0;

@@ -56,7 +56,7 @@ abstract class hm {
         nd.a((byte) 40, de.field_sb, (String) null);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 0 / ((param0 + 49) / 54);
         field_b = null;

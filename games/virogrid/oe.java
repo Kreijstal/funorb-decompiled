@@ -9,7 +9,7 @@ final class oe {
     static String field_c;
     static hk[][] field_b;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 == 0) {
           field_b = (hk[][]) null;

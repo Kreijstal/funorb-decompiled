@@ -16,7 +16,7 @@ abstract class nb extends DualLinkNode {
 
     abstract int e(int param0);
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         field_q = (int[][]) null;
         field_p = null;
@@ -95,7 +95,7 @@ abstract class nb extends DualLinkNode {
         }
     }
 
-    abstract byte[] b(byte param0);
+    abstract byte[] getBytes(byte param0);
 
     nb() {
         this.field_t = true;

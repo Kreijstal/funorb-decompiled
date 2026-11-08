@@ -33,7 +33,7 @@ class IntrusiveNode {
         this.previous = null;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -6325) {
           return;

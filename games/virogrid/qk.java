@@ -579,21 +579,21 @@ final class qk {
             qk.a(true);
           }
           fk.a();
-          Rasterizer.c();
+          Rasterizer.clear();
           kf.field_e = 0;
           cm.a(11);
-          var2 = var1.d();
+          var2 = var1.copy();
           var3 = 0;
           while (var3 < 15) {
-            var2.d(-2, -2, 16777215);
-            Rasterizer.d(4, 4, 0, 0, 540, 140);
+            var2.drawSilhouette(-2, -2, 16777215);
+            Rasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
               return;
             }
           }
-          cc.field_u.b();
-          var1.e(0, 0);
+          cc.field_u.makeRasterTarget();
+          var1.drawHalfSize(0, 0);
           ai.a(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

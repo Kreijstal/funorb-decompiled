@@ -129,7 +129,7 @@ final class rk {
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void drawBubbleRowBelowCenter(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$1 = 0;
         int var14;
         int var15;
@@ -281,7 +281,7 @@ final class rk {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    final static void drawGlowingLine(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int var15 = 0;
         int var7 = param2 - param0;
         int var8 = param3 - param1;
@@ -392,7 +392,7 @@ final class rk {
         int var26 = var11 + var17;
         int var27 = var20;
         for (var28 = var9; var28 < var10; var28++) {
-          rk.a(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
+          rk.drawBubbleRowBelowCenter(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
           var26 = var26 + var27;
           var27 = var27 + var22;
           var25 += 640;

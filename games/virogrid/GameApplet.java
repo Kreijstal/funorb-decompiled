@@ -56,7 +56,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_i = true;
             System.out.println("error_game_" + param1);
             try {
-              q.b("loggedout", 6168, mb.g((byte) 16));
+              q.callJavaScript("loggedout", 6168, mb.g((byte) 16));
               if (param0 != -25296) {
                 this.windowDeiconified((java.awt.event.WindowEvent) null);
               }
@@ -121,7 +121,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             textColourBlue = (String) null;
           }
           lm.a(param1 - 6);
-          Rasterizer.h(param2, param4, param3, param0);
+          Rasterizer.intersectClip(param2, param4, param3, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -772,7 +772,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (SpriteState.field_t != 0L) {
-                    stackIn_102_0 = $cfr$lcmp(SpriteState.field_t, hc.a(-9986));
+                    stackIn_102_0 = compareLongs(SpriteState.field_t, hc.a(-9986));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_102_0 <= 0)) {
@@ -955,7 +955,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         textColourBlue = "blue";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

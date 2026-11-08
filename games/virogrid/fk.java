@@ -35,7 +35,7 @@ final class fk {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void drawShadedSpan(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int incrementValue$14 = 0;
         int incrementValue$13 = 0;
         int incrementValue$15 = 0;
@@ -154,7 +154,7 @@ final class fk {
 
     }
 
-    public static void c() {
+    public static void releaseStatics() {
         field_m = null;
         field_l = null;
         field_p = null;
@@ -172,7 +172,7 @@ final class fk {
         field_p = param0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18) {
+    final static void drawTexturedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18) {
         int localTemp$4 = 0;
         int localTemp$5 = 0;
         int localTemp$6 = 0;
@@ -298,7 +298,7 @@ final class fk {
                 while (true) {
                   param2--;
                   if (param2 >= 0) {
-                    fk.a(Rasterizer.field_d, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                    fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                     param4 = param4 + var28;
                     param3 = param3 + var26;
                     param6 = param6 + var31;
@@ -312,7 +312,7 @@ final class fk {
                 }
                 param1--;
                 while (param1 >= 0) {
-                  fk.a(Rasterizer.field_d, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var27;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
@@ -330,7 +330,7 @@ final class fk {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  fk.a(Rasterizer.field_d, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
@@ -344,7 +344,7 @@ final class fk {
               }
               param1--;
               while (param1 >= 0) {
-                fk.a(Rasterizer.field_d, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
@@ -383,7 +383,7 @@ final class fk {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  fk.a(Rasterizer.field_d, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
@@ -397,7 +397,7 @@ final class fk {
               }
               param2--;
               while (param2 >= 0) {
-                fk.a(Rasterizer.field_d, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param4 = param4 + var27;
                 param6 = param6 + var31;
@@ -415,7 +415,7 @@ final class fk {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fk.a(Rasterizer.field_d, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
@@ -429,7 +429,7 @@ final class fk {
             }
             param2--;
             while (param2 >= 0) {
-              fk.a(Rasterizer.field_d, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+              fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
               param5 = param5 + var28;
               param4 = param4 + var27;
               param6 = param6 + var31;
@@ -478,7 +478,7 @@ final class fk {
                 while (true) {
                   param1--;
                   if (param1 >= 0) {
-                    fk.a(Rasterizer.field_d, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                    fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                     param3 = param3 + var27;
                     param5 = param5 + var28;
                     param8 = param8 + var31;
@@ -492,7 +492,7 @@ final class fk {
                 }
                 param0--;
                 while (param0 >= 0) {
-                  fk.a(Rasterizer.field_d, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var26;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
@@ -510,7 +510,7 @@ final class fk {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  fk.a(Rasterizer.field_d, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param3 = param3 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
@@ -524,7 +524,7 @@ final class fk {
               }
               param0--;
               while (param0 >= 0) {
-                fk.a(Rasterizer.field_d, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var26;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
@@ -561,7 +561,7 @@ final class fk {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  fk.a(Rasterizer.field_d, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
@@ -575,7 +575,7 @@ final class fk {
               }
               param1--;
               while (param1 >= 0) {
-                fk.a(Rasterizer.field_d, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param3 = param3 + var26;
                 param8 = param8 + var31;
@@ -593,7 +593,7 @@ final class fk {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fk.a(Rasterizer.field_d, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
@@ -607,7 +607,7 @@ final class fk {
             }
             param1--;
             while (param1 >= 0) {
-              fk.a(Rasterizer.field_d, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+              fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param8 = param8 + var31;
@@ -655,7 +655,7 @@ final class fk {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  fk.a(Rasterizer.field_d, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                  fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var26;
                   param4 = param4 + var27;
                   param7 = param7 + var31;
@@ -669,7 +669,7 @@ final class fk {
               }
               param2--;
               while (param2 >= 0) {
-                fk.a(Rasterizer.field_d, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var28;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
@@ -687,7 +687,7 @@ final class fk {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fk.a(Rasterizer.field_d, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
@@ -701,7 +701,7 @@ final class fk {
             }
             param2--;
             while (param2 >= 0) {
-              fk.a(Rasterizer.field_d, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var28;
               param4 = param4 + var27;
               param7 = param7 + var31;
@@ -740,7 +740,7 @@ final class fk {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                fk.a(Rasterizer.field_d, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
@@ -754,7 +754,7 @@ final class fk {
             }
             param0--;
             while (param0 >= 0) {
-              fk.a(Rasterizer.field_d, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param5 = param5 + var28;
               param7 = param7 + var31;
@@ -772,7 +772,7 @@ final class fk {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              fk.a(Rasterizer.field_d, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param4 = param4 + var27;
               param7 = param7 + var31;
@@ -786,7 +786,7 @@ final class fk {
           }
           param0--;
           while (param0 >= 0) {
-            fk.a(Rasterizer.field_d, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+            fk.drawTexturedScanline(Rasterizer.field_d, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
             param3 = param3 + var26;
             param5 = param5 + var28;
             param7 = param7 + var31;
@@ -799,7 +799,7 @@ final class fk {
           return;
         }
         var20Lifetime1 = field_p.a(param18, (byte) 126);
-        fk.a(param0, param1, param2, param3, param4, param5, fk.c(var20Lifetime1, param6), fk.c(var20Lifetime1, param7), fk.c(var20Lifetime1, param8));
+        fk.drawShadedTriangle(param0, param1, param2, param3, param4, param5, fk.c(var20Lifetime1, param6), fk.c(var20Lifetime1, param7), fk.c(var20Lifetime1, param8));
     }
 
     private final static void b() {
@@ -807,7 +807,7 @@ final class fk {
         field_k = field_n / 2;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawFlatTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int localTemp$2 = 0;
@@ -864,7 +864,7 @@ final class fk {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  fk.a(Rasterizer.field_d, param0, param6, 0, param3 >> 16, param4 >> 16);
+                  fk.drawFlatSpan(Rasterizer.field_d, param0, param6, 0, param3 >> 16, param4 >> 16);
                   param4 = param4 + var9;
                   param3 = param3 + var7;
                   param0 = param0 + Rasterizer.field_e;
@@ -874,7 +874,7 @@ final class fk {
               }
               param1--;
               while (param1 >= 0) {
-                fk.a(Rasterizer.field_d, param0, param6, 0, param3 >> 16, param5 >> 16);
+                fk.drawFlatSpan(Rasterizer.field_d, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var8;
                 param3 = param3 + var7;
                 param0 = param0 + Rasterizer.field_e;
@@ -888,7 +888,7 @@ final class fk {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                fk.a(Rasterizer.field_d, param0, param6, 0, param4 >> 16, param3 >> 16);
+                fk.drawFlatSpan(Rasterizer.field_d, param0, param6, 0, param4 >> 16, param3 >> 16);
                 param4 = param4 + var9;
                 param3 = param3 + var7;
                 param0 = param0 + Rasterizer.field_e;
@@ -898,7 +898,7 @@ final class fk {
             }
             param1--;
             while (param1 >= 0) {
-              fk.a(Rasterizer.field_d, param0, param6, 0, param5 >> 16, param3 >> 16);
+              fk.drawFlatSpan(Rasterizer.field_d, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var8;
               param3 = param3 + var7;
               param0 = param0 + Rasterizer.field_e;
@@ -929,7 +929,7 @@ final class fk {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fk.a(Rasterizer.field_d, param0, param6, 0, param3 >> 16, param5 >> 16);
+                fk.drawFlatSpan(Rasterizer.field_d, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var9;
                 param3 = param3 + var7;
                 param0 = param0 + Rasterizer.field_e;
@@ -939,7 +939,7 @@ final class fk {
             }
             param2--;
             while (param2 >= 0) {
-              fk.a(Rasterizer.field_d, param0, param6, 0, param4 >> 16, param5 >> 16);
+              fk.drawFlatSpan(Rasterizer.field_d, param0, param6, 0, param4 >> 16, param5 >> 16);
               param5 = param5 + var9;
               param4 = param4 + var8;
               param0 = param0 + Rasterizer.field_e;
@@ -953,7 +953,7 @@ final class fk {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              fk.a(Rasterizer.field_d, param0, param6, 0, param5 >> 16, param3 >> 16);
+              fk.drawFlatSpan(Rasterizer.field_d, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var9;
               param3 = param3 + var7;
               param0 = param0 + Rasterizer.field_e;
@@ -963,7 +963,7 @@ final class fk {
           }
           param2--;
           while (param2 >= 0) {
-            fk.a(Rasterizer.field_d, param0, param6, 0, param5 >> 16, param4 >> 16);
+            fk.drawFlatSpan(Rasterizer.field_d, param0, param6, 0, param5 >> 16, param4 >> 16);
             param5 = param5 + var9;
             param4 = param4 + var8;
             param0 = param0 + Rasterizer.field_e;
@@ -1002,7 +1002,7 @@ final class fk {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  fk.a(Rasterizer.field_d, param2, param6, 0, param5 >> 16, param3 >> 16);
+                  fk.drawFlatSpan(Rasterizer.field_d, param2, param6, 0, param5 >> 16, param3 >> 16);
                   param3 = param3 + var8;
                   param5 = param5 + var9;
                   param2 = param2 + Rasterizer.field_e;
@@ -1012,7 +1012,7 @@ final class fk {
               }
               param0--;
               while (param0 >= 0) {
-                fk.a(Rasterizer.field_d, param2, param6, 0, param5 >> 16, param4 >> 16);
+                fk.drawFlatSpan(Rasterizer.field_d, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var7;
                 param5 = param5 + var9;
                 param2 = param2 + Rasterizer.field_e;
@@ -1026,7 +1026,7 @@ final class fk {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fk.a(Rasterizer.field_d, param2, param6, 0, param3 >> 16, param5 >> 16);
+                fk.drawFlatSpan(Rasterizer.field_d, param2, param6, 0, param3 >> 16, param5 >> 16);
                 param3 = param3 + var8;
                 param5 = param5 + var9;
                 param2 = param2 + Rasterizer.field_e;
@@ -1036,7 +1036,7 @@ final class fk {
             }
             param0--;
             while (param0 >= 0) {
-              fk.a(Rasterizer.field_d, param2, param6, 0, param4 >> 16, param5 >> 16);
+              fk.drawFlatSpan(Rasterizer.field_d, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var7;
               param5 = param5 + var9;
               param2 = param2 + Rasterizer.field_e;
@@ -1064,7 +1064,7 @@ final class fk {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fk.a(Rasterizer.field_d, param2, param6, 0, param5 >> 16, param4 >> 16);
+                fk.drawFlatSpan(Rasterizer.field_d, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var8;
                 param5 = param5 + var9;
                 param2 = param2 + Rasterizer.field_e;
@@ -1074,7 +1074,7 @@ final class fk {
             }
             param1--;
             while (param1 >= 0) {
-              fk.a(Rasterizer.field_d, param2, param6, 0, param3 >> 16, param4 >> 16);
+              fk.drawFlatSpan(Rasterizer.field_d, param2, param6, 0, param3 >> 16, param4 >> 16);
               param4 = param4 + var8;
               param3 = param3 + var7;
               param2 = param2 + Rasterizer.field_e;
@@ -1088,7 +1088,7 @@ final class fk {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              fk.a(Rasterizer.field_d, param2, param6, 0, param4 >> 16, param5 >> 16);
+              fk.drawFlatSpan(Rasterizer.field_d, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var8;
               param5 = param5 + var9;
               param2 = param2 + Rasterizer.field_e;
@@ -1098,7 +1098,7 @@ final class fk {
           }
           param1--;
           while (param1 >= 0) {
-            fk.a(Rasterizer.field_d, param2, param6, 0, param4 >> 16, param3 >> 16);
+            fk.drawFlatSpan(Rasterizer.field_d, param2, param6, 0, param4 >> 16, param3 >> 16);
             param4 = param4 + var8;
             param3 = param3 + var7;
             param2 = param2 + Rasterizer.field_e;
@@ -1136,7 +1136,7 @@ final class fk {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fk.a(Rasterizer.field_d, param1, param6, 0, param4 >> 16, param5 >> 16);
+                fk.drawFlatSpan(Rasterizer.field_d, param1, param6, 0, param4 >> 16, param5 >> 16);
                 param5 = param5 + var7;
                 param4 = param4 + var8;
                 param1 = param1 + Rasterizer.field_e;
@@ -1146,7 +1146,7 @@ final class fk {
             }
             param2--;
             while (param2 >= 0) {
-              fk.a(Rasterizer.field_d, param1, param6, 0, param4 >> 16, param3 >> 16);
+              fk.drawFlatSpan(Rasterizer.field_d, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var9;
               param4 = param4 + var8;
               param1 = param1 + Rasterizer.field_e;
@@ -1160,7 +1160,7 @@ final class fk {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              fk.a(Rasterizer.field_d, param1, param6, 0, param5 >> 16, param4 >> 16);
+              fk.drawFlatSpan(Rasterizer.field_d, param1, param6, 0, param5 >> 16, param4 >> 16);
               param5 = param5 + var7;
               param4 = param4 + var8;
               param1 = param1 + Rasterizer.field_e;
@@ -1170,7 +1170,7 @@ final class fk {
           }
           param2--;
           while (param2 >= 0) {
-            fk.a(Rasterizer.field_d, param1, param6, 0, param3 >> 16, param4 >> 16);
+            fk.drawFlatSpan(Rasterizer.field_d, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var9;
             param4 = param4 + var8;
             param1 = param1 + Rasterizer.field_e;
@@ -1201,7 +1201,7 @@ final class fk {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              fk.a(Rasterizer.field_d, param1, param6, 0, param4 >> 16, param3 >> 16);
+              fk.drawFlatSpan(Rasterizer.field_d, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var7;
               param4 = param4 + var8;
               param1 = param1 + Rasterizer.field_e;
@@ -1211,7 +1211,7 @@ final class fk {
           }
           param0--;
           while (param0 >= 0) {
-            fk.a(Rasterizer.field_d, param1, param6, 0, param5 >> 16, param3 >> 16);
+            fk.drawFlatSpan(Rasterizer.field_d, param1, param6, 0, param5 >> 16, param3 >> 16);
             param3 = param3 + var7;
             param5 = param5 + var9;
             param1 = param1 + Rasterizer.field_e;
@@ -1225,7 +1225,7 @@ final class fk {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            fk.a(Rasterizer.field_d, param1, param6, 0, param3 >> 16, param4 >> 16);
+            fk.drawFlatSpan(Rasterizer.field_d, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var7;
             param4 = param4 + var8;
             param1 = param1 + Rasterizer.field_e;
@@ -1235,7 +1235,7 @@ final class fk {
         }
         param0--;
         while (param0 >= 0) {
-          fk.a(Rasterizer.field_d, param1, param6, 0, param3 >> 16, param5 >> 16);
+          fk.drawFlatSpan(Rasterizer.field_d, param1, param6, 0, param3 >> 16, param5 >> 16);
           param3 = param3 + var7;
           param5 = param5 + var9;
           param1 = param1 + Rasterizer.field_e;
@@ -1249,7 +1249,7 @@ final class fk {
         field_e = (float)((double)field_e + (Math.random() * 0.03 - 0.015));
     }
 
-    private final static void b(int param0, int param1) {
+    private final static void buildColorPalette(int param0, int param1) {
         int var3 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -1351,7 +1351,7 @@ final class fk {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawShadedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int localTemp$2 = 0;
@@ -1434,7 +1434,7 @@ final class fk {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  fk.a(Rasterizer.field_d, param0, 0, 0, param3 >> 16, param4 >> 16, param6, var19);
+                  fk.drawShadedSpan(Rasterizer.field_d, param0, 0, 0, param3 >> 16, param4 >> 16, param6, var19);
                   param4 = param4 + var17;
                   param3 = param3 + var16;
                   param6 = param6 + var20;
@@ -1445,7 +1445,7 @@ final class fk {
               }
               param1--;
               while (param1 >= 0) {
-                fk.a(Rasterizer.field_d, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
+                fk.drawShadedSpan(Rasterizer.field_d, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
                 param5 = param5 + var15;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
@@ -1460,7 +1460,7 @@ final class fk {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                fk.a(Rasterizer.field_d, param0, 0, 0, param4 >> 16, param3 >> 16, param6, var19);
+                fk.drawShadedSpan(Rasterizer.field_d, param0, 0, 0, param4 >> 16, param3 >> 16, param6, var19);
                 param4 = param4 + var17;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
@@ -1471,7 +1471,7 @@ final class fk {
             }
             param1--;
             while (param1 >= 0) {
-              fk.a(Rasterizer.field_d, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
+              fk.drawShadedSpan(Rasterizer.field_d, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
               param5 = param5 + var15;
               param3 = param3 + var16;
               param6 = param6 + var20;
@@ -1504,7 +1504,7 @@ final class fk {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fk.a(Rasterizer.field_d, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
+                fk.drawShadedSpan(Rasterizer.field_d, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
                 param5 = param5 + var17;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
@@ -1515,7 +1515,7 @@ final class fk {
             }
             param2--;
             while (param2 >= 0) {
-              fk.a(Rasterizer.field_d, param0, 0, 0, param4 >> 16, param5 >> 16, param6, var19);
+              fk.drawShadedSpan(Rasterizer.field_d, param0, 0, 0, param4 >> 16, param5 >> 16, param6, var19);
               param5 = param5 + var17;
               param4 = param4 + var15;
               param6 = param6 + var20;
@@ -1530,7 +1530,7 @@ final class fk {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              fk.a(Rasterizer.field_d, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
+              fk.drawShadedSpan(Rasterizer.field_d, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
               param5 = param5 + var17;
               param3 = param3 + var16;
               param6 = param6 + var20;
@@ -1541,7 +1541,7 @@ final class fk {
           }
           param2--;
           while (param2 >= 0) {
-            fk.a(Rasterizer.field_d, param0, 0, 0, param5 >> 16, param4 >> 16, param6, var19);
+            fk.drawShadedSpan(Rasterizer.field_d, param0, 0, 0, param5 >> 16, param4 >> 16, param6, var19);
             param5 = param5 + var17;
             param4 = param4 + var15;
             param6 = param6 + var20;
@@ -1583,7 +1583,7 @@ final class fk {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  fk.a(Rasterizer.field_d, param2, 0, 0, param5 >> 16, param3 >> 16, param8, var19);
+                  fk.drawShadedSpan(Rasterizer.field_d, param2, 0, 0, param5 >> 16, param3 >> 16, param8, var19);
                   param3 = param3 + var15;
                   param5 = param5 + var17;
                   param8 = param8 + var20;
@@ -1594,7 +1594,7 @@ final class fk {
               }
               param0--;
               while (param0 >= 0) {
-                fk.a(Rasterizer.field_d, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
+                fk.drawShadedSpan(Rasterizer.field_d, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
                 param4 = param4 + var16;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
@@ -1609,7 +1609,7 @@ final class fk {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fk.a(Rasterizer.field_d, param2, 0, 0, param3 >> 16, param5 >> 16, param8, var19);
+                fk.drawShadedSpan(Rasterizer.field_d, param2, 0, 0, param3 >> 16, param5 >> 16, param8, var19);
                 param3 = param3 + var15;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
@@ -1620,7 +1620,7 @@ final class fk {
             }
             param0--;
             while (param0 >= 0) {
-              fk.a(Rasterizer.field_d, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
+              fk.drawShadedSpan(Rasterizer.field_d, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
               param4 = param4 + var16;
               param5 = param5 + var17;
               param8 = param8 + var20;
@@ -1650,7 +1650,7 @@ final class fk {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fk.a(Rasterizer.field_d, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
+                fk.drawShadedSpan(Rasterizer.field_d, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
                 param4 = param4 + var15;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
@@ -1661,7 +1661,7 @@ final class fk {
             }
             param1--;
             while (param1 >= 0) {
-              fk.a(Rasterizer.field_d, param2, 0, 0, param3 >> 16, param4 >> 16, param8, var19);
+              fk.drawShadedSpan(Rasterizer.field_d, param2, 0, 0, param3 >> 16, param4 >> 16, param8, var19);
               param4 = param4 + var15;
               param3 = param3 + var16;
               param8 = param8 + var20;
@@ -1676,7 +1676,7 @@ final class fk {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              fk.a(Rasterizer.field_d, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
+              fk.drawShadedSpan(Rasterizer.field_d, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
               param4 = param4 + var15;
               param5 = param5 + var17;
               param8 = param8 + var20;
@@ -1687,7 +1687,7 @@ final class fk {
           }
           param1--;
           while (param1 >= 0) {
-            fk.a(Rasterizer.field_d, param2, 0, 0, param4 >> 16, param3 >> 16, param8, var19);
+            fk.drawShadedSpan(Rasterizer.field_d, param2, 0, 0, param4 >> 16, param3 >> 16, param8, var19);
             param4 = param4 + var15;
             param3 = param3 + var16;
             param8 = param8 + var20;
@@ -1728,7 +1728,7 @@ final class fk {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fk.a(Rasterizer.field_d, param1, 0, 0, param4 >> 16, param5 >> 16, param7, var19);
+                fk.drawShadedSpan(Rasterizer.field_d, param1, 0, 0, param4 >> 16, param5 >> 16, param7, var19);
                 param5 = param5 + var16;
                 param4 = param4 + var15;
                 param7 = param7 + var20;
@@ -1739,7 +1739,7 @@ final class fk {
             }
             param2--;
             while (param2 >= 0) {
-              fk.a(Rasterizer.field_d, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
+              fk.drawShadedSpan(Rasterizer.field_d, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
               param3 = param3 + var17;
               param4 = param4 + var15;
               param7 = param7 + var20;
@@ -1754,7 +1754,7 @@ final class fk {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              fk.a(Rasterizer.field_d, param1, 0, 0, param5 >> 16, param4 >> 16, param7, var19);
+              fk.drawShadedSpan(Rasterizer.field_d, param1, 0, 0, param5 >> 16, param4 >> 16, param7, var19);
               param5 = param5 + var16;
               param4 = param4 + var15;
               param7 = param7 + var20;
@@ -1765,7 +1765,7 @@ final class fk {
           }
           param2--;
           while (param2 >= 0) {
-            fk.a(Rasterizer.field_d, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
+            fk.drawShadedSpan(Rasterizer.field_d, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
             param3 = param3 + var17;
             param4 = param4 + var15;
             param7 = param7 + var20;
@@ -1798,7 +1798,7 @@ final class fk {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              fk.a(Rasterizer.field_d, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
+              fk.drawShadedSpan(Rasterizer.field_d, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
               param3 = param3 + var16;
               param4 = param4 + var15;
               param7 = param7 + var20;
@@ -1809,7 +1809,7 @@ final class fk {
           }
           param0--;
           while (param0 >= 0) {
-            fk.a(Rasterizer.field_d, param1, 0, 0, param5 >> 16, param3 >> 16, param7, var19);
+            fk.drawShadedSpan(Rasterizer.field_d, param1, 0, 0, param5 >> 16, param3 >> 16, param7, var19);
             param3 = param3 + var16;
             param5 = param5 + var17;
             param7 = param7 + var20;
@@ -1824,7 +1824,7 @@ final class fk {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            fk.a(Rasterizer.field_d, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
+            fk.drawShadedSpan(Rasterizer.field_d, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
             param3 = param3 + var16;
             param4 = param4 + var15;
             param7 = param7 + var20;
@@ -1835,7 +1835,7 @@ final class fk {
         }
         param0--;
         while (param0 >= 0) {
-          fk.a(Rasterizer.field_d, param1, 0, 0, param3 >> 16, param5 >> 16, param7, var19);
+          fk.drawShadedSpan(Rasterizer.field_d, param1, 0, 0, param3 >> 16, param5 >> 16, param7, var19);
           param3 = param3 + var16;
           param5 = param5 + var17;
           param7 = param7 + var20;
@@ -1857,7 +1857,7 @@ final class fk {
         return (param0 & 65408) + param1;
     }
 
-    final static void a(int param0, int param1) {
+    final static void setProjectionCenter(int param0, int param1) {
         int var2 = field_m[0];
         int var3 = var2 / Rasterizer.field_e;
         int var4 = var2 - var3 * Rasterizer.field_e;
@@ -1865,7 +1865,7 @@ final class fk {
         field_k = param1 - var3;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
+    private final static void drawFlatSpan(int[] param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$12 = 0;
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
@@ -1983,7 +1983,7 @@ final class fk {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    private final static void drawTexturedScanline(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         int dupTemp$18 = 0;
         int dupTemp$19 = 0;
         int dupTemp$20 = 0;
@@ -2440,7 +2440,7 @@ final class fk {
 
     final static void a(float param0) {
         fk.b(param0);
-        fk.b(0, 512);
+        fk.buildColorPalette(0, 512);
     }
 
     static {

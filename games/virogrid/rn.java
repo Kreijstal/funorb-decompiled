@@ -20,10 +20,10 @@ abstract class rn {
         return new java.net.Socket(this.field_d, this.field_b);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         if (param0 != -38) {
-          rn.a((byte) 51);
+          rn.releaseStatics((byte) 51);
           field_a = null;
           field_g = null;
           return;
@@ -34,7 +34,7 @@ abstract class rn {
 
     final static void a(int param0) {
         if (ac.field_e) {
-          Rasterizer.g(Rasterizer.field_i, Rasterizer.field_g, Rasterizer.field_k - Rasterizer.field_i, -Rasterizer.field_g + Rasterizer.field_h);
+          Rasterizer.darkenRectangle(Rasterizer.field_i, Rasterizer.field_g, Rasterizer.field_k - Rasterizer.field_i, -Rasterizer.field_g + Rasterizer.field_h);
           cm.field_h.a(false, 24960);
         }
         if (param0 == -26808) {

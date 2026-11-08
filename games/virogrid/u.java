@@ -32,15 +32,15 @@ final class u extends DualLinkNode {
           }
         }
         if (param0 != 3818) {
-          u.b((byte) 57);
+          u.releaseStatics((byte) 57);
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_q = null;
         field_u = null;
         if (param0 != -11) {
-          u.b((byte) -54);
+          u.releaseStatics((byte) -54);
         }
         field_t = null;
     }

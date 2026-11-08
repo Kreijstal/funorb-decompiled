@@ -8,11 +8,11 @@ final class sk {
     static String field_c;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_b = null;
         if (param0 >= -47) {
-          sk.a((byte) 45);
+          sk.releaseStatics((byte) 45);
           field_a = null;
           return;
         }

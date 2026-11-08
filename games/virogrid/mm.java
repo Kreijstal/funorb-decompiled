@@ -117,7 +117,7 @@ final class mm {
         int var3 = 0;
         int var2 = 255 & param1;
         if (param0 <= 85) {
-          mm.a(true);
+          mm.releaseStatics(true);
         }
         if (var2 == 0) {
           throw new IllegalArgumentException("" + Integer.toString(var2, 16));
@@ -264,7 +264,7 @@ final class mm {
         this.field_a = 256;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           mm.a(-39, (byte) 66);
         }

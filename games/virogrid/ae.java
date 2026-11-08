@@ -10,7 +10,7 @@ final class ae implements WidgetListener {
     static int field_c;
     static ua field_g;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -122) {
           return;
         }
@@ -32,14 +32,14 @@ final class ae implements WidgetListener {
         try {
           var6_int = param1.field_l + param0;
           if (param4 != -23294) {
-            ae.a((byte) -21);
+            ae.releaseStatics((byte) -21);
           }
           var7 = param3 + param1.field_u;
           bf.a(true, param1.field_g, var6_int, var7, param1.field_m);
           var8 = bf.field_p[1];
           if (param1 instanceof tg &&
             ((tg) (param1)).field_z) {
-            var8.e(1 + var6_int + (param1.field_g - var8.field_u >> 1), 1 + var7 + (param1.field_m - var8.field_z >> 1), 256);
+            var8.drawAdditive(1 + var6_int + (param1.field_g - var8.field_u >> 1), 1 + var7 + (param1.field_m - var8.field_z >> 1), 256);
           }
           if (!param1.f(true)) {
             return;

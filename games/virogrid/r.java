@@ -7,15 +7,15 @@ final class r extends AudioStream {
     private int field_k;
     private int field_n;
 
-    final AudioStream c() {
+    final AudioStream firstSubStream() {
         return (AudioStream) (this.field_m.a((byte) -115));
     }
 
-    final AudioStream b() {
+    final AudioStream nextSubStream() {
         return (AudioStream) (this.field_m.a(16213));
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2 = 0;
         cl var3 = null;
         int var5 = 0;
@@ -35,7 +35,7 @@ final class r extends AudioStream {
           this.c(var2);
           param0 = param0 - var2;
           this.field_n = this.field_n + var2;
-          this.e();
+          this.commitElapsed();
           var3 = (cl) (this.field_l.a((byte) -124));
           var4 = var3;
           synchronized (var4) {
@@ -45,7 +45,7 @@ final class r extends AudioStream {
               this.a(var3.previous, var3);
             } else {
               var3.field_g = 0;
-              this.a(var3);
+              this.removeListener(var3);
             }
           }
         } while (param0 != 0);
@@ -55,12 +55,12 @@ final class r extends AudioStream {
     private final void c(int param0) {
         AudioStream var2 = (AudioStream) (this.field_m.a((byte) -106));
         while (var2 != null) {
-          var2.a(param0);
+          var2.skipFrames(param0);
           var2 = (AudioStream) (this.field_m.a(16213));
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         cl var5 = null;
         int var7 = 0;
@@ -81,7 +81,7 @@ final class r extends AudioStream {
           param1 = param1 + var4;
           param2 = param2 - var4;
           this.field_n = this.field_n + var4;
-          this.e();
+          this.commitElapsed();
           var5 = (cl) (this.field_l.a((byte) -74));
           var6 = var5;
           synchronized (var6) {
@@ -91,14 +91,14 @@ final class r extends AudioStream {
               this.a(var5.previous, var5);
             } else {
               var5.field_g = 0;
-              this.a(var5);
+              this.removeListener(var5);
             }
           }
         } while (param2 != 0);
         return;
     }
 
-    private final void a(cl param0) {
+    private final void removeListener(cl param0) {
         param0.a(false);
         param0.a();
         IntrusiveNode var2 = this.field_l.field_i.previous;
@@ -135,11 +135,11 @@ final class r extends AudioStream {
         }
     }
 
-    final int d() {
+    final int activity() {
         return 0;
     }
 
-    private final void e() {
+    private final void commitElapsed() {
         cl var1 = null;
         if (this.field_n > 0) {
           var1 = (cl) (this.field_l.a((byte) -116));

@@ -15,7 +15,7 @@ final class nm {
         return 250 < kf.field_e ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         if (param0 != 26523) {
@@ -57,7 +57,7 @@ final class nm {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (q.b("getcookies", 6168, param0));
+              var3 = (String) (q.callJavaScript("getcookies", 6168, param0));
               var4 = ql.a(var3, (byte) -123, ';');
               var5 = 0;
               if (param1 < 77) {
@@ -385,9 +385,9 @@ final class nm {
               throw new IllegalStateException();
             }
             rj.field_d = new String[var5];
-            ek.a(CellFlip.field_l, 0, rj.field_d, 0, var5);
+            ek.copy(CellFlip.field_l, 0, rj.field_d, 0, var5);
             Js5Archive.field_j = new String[-1 + var4 - var5];
-            ek.a(CellFlip.field_l, 1 + var5, Js5Archive.field_j, 0, -var5 + var4 - 1);
+            ek.copy(CellFlip.field_l, 1 + var5, Js5Archive.field_j, 0, -var5 + var4 - 1);
             var4 = sf.a((byte) 124, oi.a(new String[]{"<br><%0><br>"}, mh.field_e, 2), j.field_h, rf.field_b, CellFlip.field_l);
             var5 = -1;
             for (var6 = 0; var4 > var6; var6++) {
@@ -401,9 +401,9 @@ final class nm {
               throw new IllegalStateException();
             }
             dh.field_o = new String[var5];
-            ek.a(CellFlip.field_l, 0, dh.field_o, 0, var5);
+            ek.copy(CellFlip.field_l, 0, dh.field_o, 0, var5);
             de.field_rb = new String[-var5 + var4 - 1];
-            ek.a(CellFlip.field_l, var5 + 1, de.field_rb, 0, -var5 + (var4 - 1));
+            ek.copy(CellFlip.field_l, var5 + 1, de.field_rb, 0, -var5 + (var4 - 1));
             if (dh.field_o.length > rj.field_d.length) {
               stackIn_52_0 = dh.field_o.length;
             } else {

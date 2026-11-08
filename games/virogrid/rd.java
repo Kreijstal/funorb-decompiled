@@ -21,7 +21,7 @@ abstract class rd extends WidgetContainer implements fg {
 
     abstract boolean h(int param0);
 
-    void a(int param0, al param1) {
+    void setBirthDateValidator(int param0, al param1) {
         try {
           this.field_D = param1;
           this.field_D.field_h = this;

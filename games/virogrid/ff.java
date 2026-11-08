@@ -4,7 +4,7 @@
 final class ff {
     static int[] field_a;
 
-    public static void a() {
+    public static void releaseStatics() {
         field_a = null;
     }
 
@@ -23,7 +23,7 @@ final class ff {
         int var12;
         int var15;
         if (param0 >= param2.length) {
-          Rasterizer.b(0, 0, Rasterizer.field_e, Rasterizer.field_f, param1);
+          Rasterizer.fillRectangle(0, 0, Rasterizer.field_e, Rasterizer.field_f, param1);
           return;
         }
         var3 = param2[param0];

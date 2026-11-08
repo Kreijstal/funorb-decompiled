@@ -168,7 +168,7 @@ final class qh extends WidgetContainer implements im, ta, fc {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_N = null;
         field_R = null;
         if (param0 != 8246) {

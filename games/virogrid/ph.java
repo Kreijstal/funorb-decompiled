@@ -141,7 +141,7 @@ final class ph extends rn {
         if (var7 == null) {
           return this.a(false);
         }
-        throw ph.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw ph.<RuntimeException>rethrowUnchecked((Throwable) var7);
     }
 
     private final java.net.Socket a(String param0, int param1, String param2, int param3) throws IOException {
@@ -344,7 +344,7 @@ final class ph extends rn {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

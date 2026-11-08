@@ -42,7 +42,7 @@ final class pe extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         int var1 = -99 / ((-23 - param0) / 53);
     }
@@ -222,9 +222,9 @@ final class pe extends IntrusiveNode {
     pe(jh param0, IntrusiveNode param1) {
         try {
           this.field_g = param0;
-          this.field_i = param0.l();
+          this.field_i = param0.getTargetVolume();
           this.field_h = param1;
-          this.field_g.f(this.field_i * ag.field_c + 128 >> 8);
+          this.field_g.setVolumeQ6(this.field_i * ag.field_c + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

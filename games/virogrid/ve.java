@@ -95,7 +95,7 @@ final class ve extends qe {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_q = null;
         field_u = null;
         if (!param0) {

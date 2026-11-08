@@ -49,7 +49,7 @@ final class fj {
         bl.field_F = -2147483648;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_a = null;
         if (param0 > -47) {
@@ -99,7 +99,7 @@ final class fj {
             }
           }
           if (param1 != 9) {
-            fj.a((byte) 38);
+            fj.releaseStatics((byte) 38);
           }
           stackIn_13_0 = var4;
           return stackIn_13_0;

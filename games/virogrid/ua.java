@@ -54,7 +54,7 @@ class ua {
               }
               ((ua) ((Object) stackIn_10_0)).field_a = new int[stackIn_10_1 * stackIn_11_2];
               ((ua) ((Object) var4)).field_f = param3;
-              ((ua) ((Object) var4)).a(param1);
+              ((ua) ((Object) var4)).initDevice(param1);
               ((ua) ((Object) var4)).field_h = (param3 & -1024) + 1024;
               if (((ua) ((Object) var4)).field_h > 16384) {
                 ((ua) ((Object) var4)).field_h = 16384;
@@ -88,16 +88,16 @@ class ua {
         }
     }
 
-    void a(java.awt.Component param0) throws Exception {
+    void initDevice(java.awt.Component param0) throws Exception {
     }
 
-    final synchronized void h() {
+    final synchronized void flushDeviceSafely() {
         try {
           this.field_n = true;
           try {
-            this.f();
+            this.flushDevice();
           } catch (Exception exception) {
-            this.g();
+            this.closeDevice();
             this.field_k = hc.a(-9986) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -107,7 +107,7 @@ class ua {
         }
     }
 
-    final synchronized void d() {
+    final synchronized void shutdown() {
         int var2 = 0;
         int var1;
         if (field_b != null) {
@@ -128,16 +128,16 @@ class ua {
             field_b = null;
           }
         }
-        this.g();
+        this.closeDevice();
         this.field_a = null;
         this.field_c = true;
     }
 
-    final synchronized void a(AudioStream param0) {
+    final synchronized void setStream(AudioStream param0) {
         this.field_d = param0;
     }
 
-    private final void a(AudioStream param0, int param1) {
+    private final void enqueueByPriority(AudioStream param0, int param1) {
         int var3 = param1 >> 5;
         AudioStream var4 = this.field_t[var3];
         if (var4 == null) {
@@ -149,19 +149,19 @@ class ua {
         param0.field_i = param1;
     }
 
-    private final static void b(AudioStream param0) {
+    private final static void deactivateTree(AudioStream param0) {
         param0.field_g = false;
         if (param0.field_j != null) {
           param0.field_j.field_g = 0;
         }
-        AudioStream var1 = param0.c();
+        AudioStream var1 = param0.firstSubStream();
         while (var1 != null) {
-          ua.b(var1);
-          var1 = param0.b();
+          ua.deactivateTree(var1);
+          var1 = param0.nextSubStream();
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void configure(int param0, boolean param1, int param2) {
         if (param0 < 8000 ||
           param0 > 48000) {
           throw new IllegalArgumentException();
@@ -171,38 +171,38 @@ class ua {
         field_i = param2;
     }
 
-    void f() throws Exception {
+    void flushDevice() throws Exception {
     }
 
-    void a() throws Exception {
+    void writeMixBlock() throws Exception {
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         field_b = null;
     }
 
-    private final void a(int param0) {
+    private final void skipFrames(int param0) {
         this.field_j = this.field_j - param0;
         if (this.field_j < 0) {
           this.field_j = 0;
         }
         if (this.field_d != null) {
-          this.field_d.a(param0);
+          this.field_d.skipFrames(param0);
           return;
         }
     }
 
-    void g() {
+    void closeDevice() {
     }
 
     void b(int param0) throws Exception {
     }
 
-    int e() throws Exception {
+    int getQueuedFrames() throws Exception {
         return this.field_h;
     }
 
-    final synchronized void c() {
+    final synchronized void serviceOutput() {
         try {
           Throwable decompiledCaughtException = null;
           long var1 = 0L;
@@ -218,7 +218,7 @@ class ua {
               this.field_r = var1 - 6000L;
             }
             while (var1 > this.field_r + 5000L) {
-              this.a(256);
+              this.skipFrames(256);
               this.field_r = this.field_r + (long)(256000 / field_p);
               var1 = hc.a(-9986);
             }
@@ -239,7 +239,7 @@ class ua {
               this.field_k = 0L;
               this.field_n = true;
             }
-            var3_int = this.e();
+            var3_int = this.getQueuedFrames();
             if (this.field_g - var3_int > this.field_m) {
               this.field_m = this.field_g - var3_int;
             }
@@ -252,7 +252,7 @@ class ua {
               if (this.field_h > 16384) {
                 this.field_h = 16384;
               }
-              this.g();
+              this.closeDevice();
               this.b(this.field_h);
               var3_int = 0;
               this.field_n = true;
@@ -262,8 +262,8 @@ class ua {
               }
             }
             while (var3_int < var4) {
-              this.a(this.field_a, 256);
-              this.a();
+              this.mixBlock(this.field_a, 256);
+              this.writeMixBlock();
               var3_int += 256;
             }
             if (var1 > this.field_s) {
@@ -272,7 +272,7 @@ class ua {
               } else {
                 if (this.field_m == 0 &&
                   this.field_l == 0) {
-                  this.g();
+                  this.closeDevice();
                   this.field_k = var1 + 2000L;
                   return;
                 }
@@ -286,7 +286,7 @@ class ua {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = (Exception) (Object) decompiledCaughtException;
-            this.g();
+            this.closeDevice();
             this.field_k = var1 + 2000L;
           }
           return;
@@ -297,7 +297,7 @@ class ua {
         }
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void mixBlock(int[] param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -323,13 +323,13 @@ class ua {
         if (field_q) {
           var3 = var3 << 1;
         }
-        ek.a(param0, 0, var3);
+        ek.clear(param0, 0, var3);
         this.field_j = this.field_j - param1;
         if (this.field_d != null &&
           this.field_j <= 0) {
           this.field_j = this.field_j + (field_p >> 4);
-          ua.b(this.field_d);
-          this.a(this.field_d, this.field_d.a());
+          ua.deactivateTree(this.field_d);
+          this.enqueueByPriority(this.field_d, this.field_d.priority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -360,7 +360,7 @@ class ua {
                       continue;
                     }
                     var11.field_g = true;
-                    var13 = var11.d();
+                    var13 = var11.activity();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_g = var12.field_g + var13;
@@ -368,12 +368,12 @@ class ua {
                     if (var4 >= this.field_e) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.c();
+                    var14Lifetime2 = var11.firstSubStream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_i;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.a() >> 8);
-                        var14Lifetime2 = var11.b();
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.priority() >> 8);
+                        var14Lifetime2 = var11.nextSubStream();
                       }
                     }
                     var15 = var11.field_h;
@@ -415,7 +415,7 @@ class ua {
           this.field_j = 0;
         }
         if (this.field_d != null) {
-          this.field_d.b(param0, 0, param1);
+          this.field_d.mixInto(param0, 0, param1);
         }
         this.field_r = hc.a(-9986);
     }

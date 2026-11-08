@@ -19,7 +19,7 @@ final class qn extends tg {
     static SpriteWidget field_H;
     static PlatformTaskDispatcher field_R;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_I = null;
         field_R = null;
         field_H = null;
@@ -54,7 +54,7 @@ final class qn extends tg {
             throw new IllegalStateException("" + var2_int);
           }
           if (param1 != 13472) {
-            qn.c((byte) -24);
+            qn.releaseStatics((byte) -24);
           }
           var3 = tk.a(1, param0) ? 1 : 0;
           var4 = tk.a(1, param0) ? 1 : 0;

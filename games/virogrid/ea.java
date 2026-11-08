@@ -9,9 +9,9 @@ final class ea {
     static int field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -47) {
-          ea.a(35);
+          ea.releaseStatics(35);
           field_c = null;
           field_e = null;
           return;

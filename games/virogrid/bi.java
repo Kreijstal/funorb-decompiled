@@ -12,7 +12,7 @@ final class bi {
         String var4Lifetime2;
         String var4Lifetime3;
         if (!param2) {
-          bi.a(-33);
+          bi.releaseStatics(-33);
         }
         int var3 = null != la.field_h ? 1 : 0;
         if (um.field_Gb == 9) {
@@ -93,7 +93,7 @@ final class bi {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 46) {
           field_c = (int[]) null;
           field_c = null;

@@ -501,7 +501,7 @@ class PacketBuffer extends IntrusiveNode {
         return var3;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_i = null;
         field_k = null;
@@ -539,7 +539,7 @@ class PacketBuffer extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            PacketBuffer.b((byte) -127);
+            PacketBuffer.releaseStatics((byte) -127);
           }
           var3 = (CharSequence) ((Object) param0);
           stackIn_3_0 = wn.field_n.equals(c.a(var3, param1));

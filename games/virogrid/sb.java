@@ -410,7 +410,7 @@ final class sb implements Runnable {
         var3.a((byte) -121, param0);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;

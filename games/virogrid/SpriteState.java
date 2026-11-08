@@ -37,7 +37,7 @@ abstract class SpriteState extends DualLinkNode {
         return lg.field_a.field_Lb;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_v = null;
         if (param0 == 0) {
           field_o = null;
@@ -45,7 +45,7 @@ abstract class SpriteState extends DualLinkNode {
           field_s = null;
           return;
         }
-        SpriteState.d(87);
+        SpriteState.releaseStatics(87);
         field_o = null;
         field_q = null;
         field_s = null;

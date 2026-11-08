@@ -109,9 +109,9 @@ final class hk extends SpriteWidget {
         this.b(25, -10, -111);
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
-          hk.d(true);
+          hk.releaseStatics(true);
           field_Ib = null;
           field_Lb = null;
           field_Gb = null;

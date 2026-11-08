@@ -81,7 +81,7 @@ final class CellFlip extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 21) {
           field_l = null;
           field_o = null;
@@ -89,7 +89,7 @@ final class CellFlip extends IntrusiveNode {
           field_p = null;
           return;
         }
-        CellFlip.a((byte) -26);
+        CellFlip.releaseStatics((byte) -26);
         field_l = null;
         field_o = null;
         field_m = null;

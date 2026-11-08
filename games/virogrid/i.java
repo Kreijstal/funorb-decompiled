@@ -76,7 +76,7 @@ final class i extends AudioStream {
         }
     }
 
-    final synchronized AudioStream b() {
+    final synchronized AudioStream nextSubStream() {
         return null;
     }
 
@@ -141,14 +141,14 @@ final class i extends AudioStream {
         var7.field_k = 0;
         var7.field_o = -1;
         if (this.field_S[param3] != 0) {
-          var7.field_p = jh.b(var6, this.a(var7, param1 ^ 109), 0, this.a((byte) 106, var7));
+          var7.field_p = jh.createAtStepQ8(var6, this.a(var7, param1 ^ 109), 0, this.a((byte) 106, var7));
           stackIn_19_1 = !(0 <= var11.field_p[param0]);
           this.a(stackIn_19_1, -16257, var7);
         } else {
-          var7.field_p = jh.b(var6, this.a(var7, -123), this.a(param1 ^ 26253, var7), this.a((byte) 111, var7));
+          var7.field_p = jh.createAtStepQ8(var6, this.a(var7, -123), this.a(param1 ^ 26253, var7), this.a((byte) 111, var7));
         }
         if (~var11.field_p[param0] > param1) {
-          var7.field_p.e(-1);
+          var7.field_p.setLoopCount(-1);
         }
         if (var7.field_G >= 0) {
           var8 = this.field_u[param3][var7.field_G];
@@ -174,8 +174,8 @@ final class i extends AudioStream {
           if (param0 < 0 ||
             param0 == var3.field_h) {
             if (null != var3.field_p) {
-              var3.field_p.g(ua.field_p / 100);
-              if (var3.field_p.i()) {
+              var3.field_p.fadeOutAndUnlink(ua.field_p / 100);
+              if (var3.field_p.hasRemainingRampFrames()) {
                 this.field_L.field_n.a(var3.field_p);
               }
               var3.c(-11382);
@@ -248,12 +248,12 @@ final class i extends AudioStream {
         if (param0 <= 110) {
           return false;
         }
-        return this.field_O.c();
+        return this.field_O.isReady();
     }
 
     final synchronized void e(int param0) {
         int var3 = Virogrid.field_F ? 1 : 0;
-        rc var2 = (rc) (this.field_o.a((byte) 19));
+        rc var2 = (rc) (this.field_o.first((byte) 19));
         if (param0 != -1) {
           this.b(-51, (byte) -4);
         }
@@ -291,24 +291,24 @@ final class i extends AudioStream {
               var3 > this.field_s) {
               this.field_Q = -1;
               this.field_x = this.field_s;
-              this.field_C = this.field_O.c(this.field_x);
+              this.field_C = this.field_O.tickTime(this.field_x);
             }
             return;
           }
           while (~var3 == ~this.field_O.field_a[var2]) {
-            this.field_O.f(var2);
-            var6 = this.field_O.e(var2);
+            this.field_O.seekTrack(var2);
+            var6 = this.field_O.readMessage(var2);
             if (var6 != 1) {
               if ((128 & var6) != 0) {
                 this.b(var6, (byte) -108);
               }
-              this.field_O.b(var2);
-              this.field_O.d(var2);
+              this.field_O.readDelta(var2);
+              this.field_O.saveTrackPosition(var2);
               continue;
             }
-            this.field_O.e();
-            this.field_O.d(var2);
-            if (this.field_O.d()) {
+            this.field_O.markTrackDone();
+            this.field_O.saveTrackPosition(var2);
+            if (this.field_O.isDone()) {
               if (null != this.field_A) {
                 this.a(this.field_t, 37, this.field_A);
                 this.c(22228);
@@ -316,18 +316,18 @@ final class i extends AudioStream {
               }
               if (this.field_t &&
                 0 != var3) {
-                this.field_O.a(var4);
+                this.field_O.reset(var4);
               } else {
                 this.a((byte) -22, true);
-                this.field_O.g();
+                this.field_O.release();
                 return;
               }
             }
             break;
           }
-          var2 = this.field_O.f();
+          var2 = this.field_O.nextTrack();
           var3 = this.field_O.field_a[var2];
-          var4 = this.field_O.c(var3);
+          var4 = this.field_O.tickTime(var3);
         }
     }
 
@@ -351,29 +351,29 @@ final class i extends AudioStream {
         if (param0 != -8193) {
           this.field_G = (int[]) null;
         }
-        this.field_O.g();
+        this.field_O.release();
         this.field_A = null;
         this.a((byte) -22, param1);
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var5;
         int var6;
         boolean decompiledFrameRemainder0 = true;
         var6 = Virogrid.field_F ? 1 : 0;
-        if (this.field_O.c()) {
+        if (this.field_O.isReady()) {
           var2 = this.field_O.field_c * this.field_l / ua.field_p;
           while (true) {
             var3 = (long)var2 * (long)param0 + this.field_m;
             if (this.field_C - var3 < 0L) {
               var5 = (int)((-1L + (long)var2 + (this.field_C - this.field_m)) / (long)var2);
               this.field_m = this.field_m + (long)var5 * (long)var2;
-              this.field_L.a(var5);
+              this.field_L.skipFrames(var5);
               param0 = param0 - var5;
               this.c(22228);
-              if (this.field_O.c()) {
+              if (this.field_O.isReady()) {
                 continue;
               }
             } else {
@@ -381,11 +381,11 @@ final class i extends AudioStream {
             }
             break;
           }
-          this.field_L.a(param0);
+          this.field_L.skipFrames(param0);
           decompiledFrameRemainder0 = false;
         }
         else {
-          this.field_L.a(param0);
+          this.field_L.skipFrames(param0);
         }
 
     }
@@ -471,7 +471,7 @@ final class i extends AudioStream {
         }
     }
 
-    final synchronized int d() {
+    final synchronized int activity() {
         return 0;
     }
 
@@ -495,22 +495,22 @@ final class i extends AudioStream {
         int var6 = 0;
         int var7 = Virogrid.field_F ? 1 : 0;
         this.a(-8193, param3);
-        this.field_O.a(param0.field_g);
+        this.field_O.parse(param0.field_g);
         this.field_m = 0L;
         this.field_t = param2 ? true : false;
-        int var5_int = this.field_O.a();
+        int var5_int = this.field_O.trackCount();
         for (var6 = 0; var5_int > var6; var6++) {
-          this.field_O.f(var6);
-          this.field_O.b(var6);
-          this.field_O.d(var6);
+          this.field_O.seekTrack(var6);
+          this.field_O.readDelta(var6);
+          this.field_O.saveTrackPosition(var6);
         }
         if (param1) {
           return;
         }
         try {
-          this.field_Q = this.field_O.f();
+          this.field_Q = this.field_O.nextTrack();
           this.field_x = this.field_O.field_a[this.field_Q];
-          this.field_C = this.field_O.c(this.field_x);
+          this.field_C = this.field_O.tickTime(this.field_x);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "i.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -540,7 +540,7 @@ final class i extends AudioStream {
         try {
           param4.field_D = ua.field_p / 100;
           if (param4.field_o >= 0 && (param4.field_p == null ||
-            param4.field_p.j())) {
+            param4.field_p.isSamplePositionOutOfRange())) {
             param4.c(-11382);
             param4.a(false);
             if (0 < param4.field_G &&
@@ -558,7 +558,7 @@ final class i extends AudioStream {
             }
             param4.field_v = var6_int;
           }
-          param4.field_p.c(this.a(param4, -119));
+          param4.field_p.setSampleStepMagnitude(this.a(param4, -119));
           var7 = param4.field_t;
           var8 = 0;
           if (param3 != 123) {
@@ -616,16 +616,16 @@ final class i extends AudioStream {
             }
           }
           if (var8 == 0) {
-            param4.field_p.a(param4.field_D, this.a(-26254, param4), this.a((byte) 96, param4));
+            param4.field_p.rampVolumeAndPan(param4.field_D, this.a(-26254, param4), this.a((byte) 96, param4));
             return false;
           }
-          param4.field_p.g(param4.field_D);
+          param4.field_p.fadeOutAndUnlink(param4.field_D);
           if (param1 != null) {
-            param4.field_p.b(param1, param0, param2);
+            param4.field_p.mixInto(param1, param0, param2);
           } else {
-            param4.field_p.a(param2);
+            param4.field_p.skipFrames(param2);
           }
-          if (param4.field_p.i()) {
+          if (param4.field_p.hasRemainingRampFrames()) {
             this.field_L.field_n.a(param4.field_p);
           }
           param4.c(param3 - 11505);
@@ -683,7 +683,7 @@ final class i extends AudioStream {
           if (param4 < param1) {
             var7 = new int[]{param1};
           }
-          var8 = (sg) (param3.field_h.a((byte) 19));
+          var8 = (sg) (param3.field_h.first((byte) 19));
           while (var8 != null) {
             var9 = (int)var8.key;
             var12 = (rc) (this.field_o.a((long)var9, param4 ^ -14905));
@@ -707,7 +707,7 @@ final class i extends AudioStream {
             var8 = (sg) (param3.field_h.a(-117));
           }
           if (var6_int != 0) {
-            param3.b();
+            param3.releasePatchUsage();
           }
           stackIn_19_0 = var6_int;
           return stackIn_19_0 != 0;
@@ -806,7 +806,7 @@ final class i extends AudioStream {
         }
     }
 
-    final synchronized AudioStream c() {
+    final synchronized AudioStream firstSubStream() {
         return (AudioStream) ((Object) this.field_L);
     }
 
@@ -967,13 +967,13 @@ final class i extends AudioStream {
             var4_int = var4_int << 8;
             var5 = (int)((long)this.field_S[param2.field_h] * (long)var6 >> 6);
             if (var5 >= var4_int) {
-              param2.field_p.c(true);
+              param2.field_p.setReversePlayback(true);
               var5 = -1 + var4_int + (var4_int - var5);
             }
           } else {
             var5 = (int)((long)this.field_S[param2.field_h] * (long)var4_int >> 6);
           }
-          param2.field_p.d(var5);
+          param2.field_p.setPosition(var5);
           if (param1 != -16257) {
             field_y = -49;
           }
@@ -1264,7 +1264,7 @@ final class i extends AudioStream {
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var7 = 0;
@@ -1276,7 +1276,7 @@ final class i extends AudioStream {
         RuntimeException var4 = null;
         var8 = Virogrid.field_F ? 1 : 0;
         try {
-          if (this.field_O.c()) {
+          if (this.field_O.isReady()) {
             var4_int = this.field_O.field_c * this.field_l / ua.field_p;
             while (true) {
               var5 = this.field_m + (long)param2 * (long)var4_int;
@@ -1286,18 +1286,18 @@ final class i extends AudioStream {
               }
               var7 = (int)((-1L + (long)var4_int + this.field_C - this.field_m) / (long)var4_int);
               this.field_m = this.field_m + (long)var7 * (long)var4_int;
-              this.field_L.b(param0, param1, var7);
+              this.field_L.mixInto(param0, param1, var7);
               this.c(22228);
               param1 = param1 + var7;
               param2 = param2 - var7;
-              if (this.field_O.c()) {
+              if (this.field_O.isReady()) {
                 continue;
               }
-              this.field_L.b(param0, param1, param2);
+              this.field_L.mixInto(param0, param1, param2);
               return;
             }
           }
-          this.field_L.b(param0, param1, param2);
+          this.field_L.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

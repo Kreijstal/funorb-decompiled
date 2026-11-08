@@ -20,14 +20,14 @@ final class dh extends IntrusiveNode {
     boolean field_s;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_p = null;
         field_l = null;
         field_o = null;
         field_v = null;
         if (param0 > -119) {
-          dh.a(-91);
+          dh.releaseStatics(-91);
         }
     }
 

@@ -130,7 +130,7 @@ final class di extends qe {
         this.field_p = false;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         field_q = null;
         if (param0 >= 34) {

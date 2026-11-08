@@ -78,7 +78,7 @@ final class oa extends ba {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_u = null;
         int var1 = -86 % ((-52 - param0) / 61);
@@ -118,7 +118,7 @@ final class oa extends ba {
         if (this.field_l.field_t) {
           return null;
         }
-        var7 = this.field_l.b((byte) 39);
+        var7 = this.field_l.getBytes((byte) 39);
         var6 = var7;
         var5 = var6;
         var2 = var5;
@@ -242,7 +242,7 @@ final class oa extends ba {
         if (((nb) (var4)).field_t) {
           return null;
         }
-        var18 = ((nb) (var4)).b((byte) 39);
+        var18 = ((nb) (var4)).getBytes((byte) 39);
         var13 = var18;
         var5 = var13;
         if (var4 instanceof bl) {
@@ -466,7 +466,7 @@ final class oa extends ba {
         }
         if (this.field_d &&
           this.field_w <= hc.a(-9986)) {
-          var2 = (nb) (this.field_i.a((byte) 19));
+          var2 = (nb) (this.field_i.first((byte) 19));
           while (var2 != null) {
             if (!var2.field_t) {
               if (var2.field_v) {
@@ -534,7 +534,7 @@ final class oa extends ba {
         if (var3 == null) {
           return null;
         }
-        byte[] var4 = var3.b((byte) 39);
+        byte[] var4 = var3.getBytes((byte) 39);
         var3.a(false);
         return var4;
     }

@@ -14,7 +14,7 @@ final class mf extends hm {
     private int field_m;
     static String field_i;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         int var1 = 62 / ((param0 + 15) / 37);
         field_j = null;

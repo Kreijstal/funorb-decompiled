@@ -28,7 +28,7 @@ final class lk extends SpriteWidget {
         if (param0 == 0) {
           return !this.a(1) ? true : false;
         }
-        lk.e((byte) -9);
+        lk.releaseStatics((byte) -9);
         return !this.a(1) ? true : false;
     }
 
@@ -92,7 +92,7 @@ final class lk extends SpriteWidget {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Tb = null;
         if (param0 != 10) {
           return;

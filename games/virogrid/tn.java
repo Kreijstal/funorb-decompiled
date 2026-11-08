@@ -18,7 +18,7 @@ final class tn {
     static float field_g;
     private int field_f;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_l = null;
         field_b = null;
@@ -28,7 +28,7 @@ final class tn {
         field_j = null;
     }
 
-    final boolean b(int param0) {
+    final boolean isForwardAction(int param0) {
         if (param0 != 83) {
           return true;
         }

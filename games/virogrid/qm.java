@@ -267,7 +267,7 @@ final class qm extends SpriteWidget {
             if (var10 <= 0) {
               stackIn_22_1 = var6.field_Hb;
             } else {
-              stackIn_22_1 = e.a(var6.field_Eb.field_C, var6.field_Hb, var10);
+              stackIn_22_1 = e.truncateWithEllipsis(var6.field_Eb.field_C, var6.field_Hb, var10);
             }
             stackIn_21_0.field_V = stackIn_22_1;
             stackIn_25_0 = (var6.field_Eb.field_V.equals(var6.field_Hb)) ? 0 : 1;

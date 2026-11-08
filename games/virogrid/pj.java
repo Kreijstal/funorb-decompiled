@@ -68,7 +68,7 @@ final class pj {
           if (param1 != 256) {
             field_d = (int[]) null;
           }
-          param0.b();
+          param0.makeRasterTarget();
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "pj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

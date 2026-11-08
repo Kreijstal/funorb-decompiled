@@ -124,7 +124,7 @@ abstract class gf extends UiWidget implements ja {
         }
     }
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void drawLayer(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
         UiWidget var6;
         int var7;
@@ -140,13 +140,13 @@ abstract class gf extends UiWidget implements ja {
           for (var5 = this.field_E.length - 1; var5 >= 0; var5--) {
             var6 = this.field_E[var5];
             if (var6 != null) {
-              var6.a((byte) 37, param1 + this.field_l, this.field_u + param2, param3);
+              var6.drawLayer((byte) 37, param1 + this.field_l, this.field_u + param2, param3);
             }
           }
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         int var4 = 0;
         UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
@@ -167,7 +167,7 @@ abstract class gf extends UiWidget implements ja {
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
             if (var5 != null &&
-              var5.a(param0, -8515)) {
+              var5.focusNext(param0, -8515)) {
               return true;
             }
           }
@@ -413,7 +413,7 @@ abstract class gf extends UiWidget implements ja {
               for (var4_int = var4_int + param0; var4_int < this.field_E.length; var4_int = var4_int + param0) {
                 var6Lifetime2 = this.field_E[var4_int];
                 if (var6Lifetime2 != null &&
-                  var6Lifetime2.a(param1, -8515)) {
+                  var6Lifetime2.focusNext(param1, -8515)) {
                   return true;
                 }
               }
@@ -453,7 +453,7 @@ abstract class gf extends UiWidget implements ja {
         }
         if (param0 != -1) {
           var6 = (UiWidget) null;
-          this.a((UiWidget) null, -37);
+          this.focusNext((UiWidget) null, -37);
         }
     }
 
@@ -773,7 +773,7 @@ abstract class gf extends UiWidget implements ja {
               for (var4_int = var4_int - param1; var4_int >= 0; var4_int = var4_int - param1) {
                 var6 = this.field_E[var4_int];
                 if (var6 != null &&
-                  var6.a(param0, -8515)) {
+                  var6.focusNext(param0, -8515)) {
                   return true;
                 }
               }

@@ -41,10 +41,10 @@ final class bm extends ie {
           this.field_m = true;
           this.field_j = 0;
           this.field_h = param4;
-          var7 = this.a(false, param4, param2, param0);
+          var7 = this.createSingleLine(false, param4, param2, param0);
           var8 = var7;
           var7.field_d[0] = param3;
-          var8.field_d[param4.length()] = param3 + param2.a(param4);
+          var8.field_d[param4.length()] = param3 + param2.textWidth(param4);
           bd.a(param1 ^ 91, 0, var8, param2, param4);
           if (param1 == 59) {
             return;
@@ -120,9 +120,9 @@ final class bm extends ie {
           this.field_f = param4;
           this.field_h = param2;
           this.field_m = true;
-          var8 = this.a(false, param2, param4, param3);
+          var8 = this.createSingleLine(false, param2, param4, param3);
           var9 = var8;
-          var9.field_d[0] = -param4.a(param2) + param1;
+          var9.field_d[0] = -param4.textWidth(param2) + param1;
           var9.field_d[param2.length()] = param1;
           bd.a(37, 0, var9, param4, param2);
         } catch (RuntimeException runtimeException) {
@@ -185,7 +185,7 @@ final class bm extends ie {
           this.field_f = param5;
           this.field_m = false;
           this.field_p = param6;
-          var17 = new String[1 + param5.b(param4, param6)];
+          var17 = new String[1 + param5.wrappedLineCount(param4, param6)];
           var18 = var17;
           if (!param2) {
             var16 = (String) null;
@@ -233,12 +233,12 @@ final class bm extends ie {
             var14 = new ri(stackIn_37_2, stackIn_37_3, stackIn_38_4);
             var14.field_d[0] = 0;
             if (var13 != null) {
-              var14.field_d[var13.length()] = param5.a(var13);
+              var14.field_d[var13.length()] = param5.textWidth(var13);
               stackIn_42_0 = 62;
               if (param1 != 3) {
                 stackIn_43_1 = 0;
               } else {
-                stackIn_43_1 = this.a(var13, param5.a(var13), true, param6);
+                stackIn_43_1 = this.a(var13, param5.textWidth(var13), true, param6);
               }
               bd.a(stackIn_42_0, stackIn_43_1, var14, param5, var13);
             }
@@ -291,7 +291,7 @@ final class bm extends ie {
         return true;
     }
 
-    private final ri a(boolean param0, String param1, e param2, int param3) {
+    private final ri createSingleLine(boolean param0, String param1, e param2, int param3) {
         ri var5 = null;
         RuntimeException var5_ref = null;
         ri var6 = null;
@@ -343,7 +343,7 @@ final class bm extends ie {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 2797) {
           field_o = null;
           field_i = null;
@@ -374,8 +374,8 @@ final class bm extends ie {
           this.field_m = true;
           this.field_j = 1;
           this.field_f = param2;
-          var7 = this.a(false, param0, param2, param4);
-          var8 = param2.a(param0);
+          var7 = this.createSingleLine(false, param0, param2, param4);
+          var8 = param2.textWidth(param0);
           var7.field_d[0] = param3 - (var8 >> 1);
           var7.field_d[param0.length()] = (var8 >> 1) + param3;
           bd.a(94, 0, var7, param2, param0);

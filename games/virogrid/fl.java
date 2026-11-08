@@ -16,7 +16,7 @@ final class fl extends IntrusiveNode {
     static String field_g;
     int field_h;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_s = null;
         if (param0 == -24488) {
@@ -25,7 +25,7 @@ final class fl extends IntrusiveNode {
           field_g = null;
           return;
         }
-        fl.a(-64);
+        fl.releaseStatics(-64);
         field_r = null;
         field_j = null;
         field_g = null;

@@ -151,20 +151,20 @@ final class id {
           this.field_n = 3;
           this.field_e = 5592405;
           this.field_g = 3;
-          var4.a((byte) 119, 0).b(true, 15658734).a(-8779, bm.a(10066329, 8947848, 7829367, (byte) -103));
+          var4.a((byte) 119, 0).b(true, 15658734).setFrameSprites(-8779, bm.a(10066329, 8947848, 7829367, (byte) -103));
           if (param0 <= 81) {
             this.field_d = 10;
           }
-          var4.a((byte) 119, 1).a(-8779, bm.a(10066329, 11184810, 13421772, (byte) -82));
-          var4.a((byte) 96, 3).a(-8779, bm.a(7829367, 8947848, 10066329, (byte) -116)).a((byte) 64, 1).a(1, 127);
+          var4.a((byte) 119, 1).setFrameSprites(-8779, bm.a(10066329, 11184810, 13421772, (byte) -82));
+          var4.a((byte) 96, 3).setFrameSprites(-8779, bm.a(7829367, 8947848, 10066329, (byte) -116)).a((byte) 64, 1).a(1, 127);
           var5 = new Sprite[9];
           var6 = new kc(32, 32);
           var7_int = 0;
           do {
             if (!(var6.field_B.length > var7_int)) {
               var5[4] = (Sprite) ((Object) var6);
-              var4.a((byte) 123, 4).a(true, 0).a(-8779, var5);
-              var4.a((byte) 100, 5).a(-8779, sb.a(65793, (byte) 125, 0, 0, 0)).a(true, 0).b(true, -1);
+              var4.a((byte) 123, 4).a(true, 0).setFrameSprites(-8779, var5);
+              var4.a((byte) 100, 5).setFrameSprites(-8779, sb.a(65793, (byte) 125, 0, 0, 0)).a(true, 0).b(true, -1);
               this.field_l = (WidgetListener) ((Object) var4);
               break;
             }
@@ -176,14 +176,14 @@ final class id {
           var7 = new nl(var4, true);
           var7.field_j = 0;
           var7.a(md.a(true, 8947848), 4);
-          var7.a((byte) 86, 1).a(-8779, md.a(true, 11184810)).b(true, 2236962);
+          var7.a((byte) 86, 1).setFrameSprites(-8779, md.a(true, 11184810)).b(true, 2236962);
           this.field_i = (WidgetListener) ((Object) new lj(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$6 = new ql(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$7 = new rj(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new nl();
           var3.a(0, var8);
-          var8.a((byte) 78, 0).a(-8779, bm.a(7829367, 15658734, 10066329, (byte) -85)).b(true, 1118481).b(-1, -26973);
-          var8.a((byte) 109, 4).a(true, 0).a(-8779, var5);
+          var8.a((byte) 78, 0).setFrameSprites(-8779, bm.a(7829367, 15658734, 10066329, (byte) -85)).b(true, 1118481).b(-1, -26973);
+          var8.a((byte) 109, 4).a(true, 0).setFrameSprites(-8779, var5);
           this.field_h = (WidgetListener) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
@@ -199,14 +199,14 @@ final class id {
           var13 = new Sprite(7, 4);
           var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new nl(var4, true);
-          var14.a((byte) -119, var13.d());
-          var13.a();
+          var14.a((byte) -119, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new nl(var4, true);
-          var14Lifetime1.a((byte) -121, var13.d());
-          var13.a();
+          var14Lifetime1.a((byte) -121, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new nl(var4, true);
-          var14Lifetime2.a((byte) -114, var13.d());
-          var13.a();
+          var14Lifetime2.a((byte) -114, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime3 = new nl(var4, true);
           var14Lifetime3.a((byte) -122, var13);
           return;
@@ -287,7 +287,7 @@ final class id {
             if (var6 == 2) {
               var4 = oi.a(new String[]{va.field_d}, lm.field_c, 2);
               var8 = oi.a(new String[]{var3}, mf.field_d, param0 - 3061);
-              var7 = wa.field_I.field_K + di.field_n.field_K - (485 - hk.field_Ob.a(var8) + hk.field_Ob.a(var4));
+              var7 = wa.field_I.field_K + di.field_n.field_K - (485 - hk.field_Ob.textWidth(var8) + hk.field_Ob.textWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -332,7 +332,7 @@ final class id {
                 var4 = "<col=999999>" + var4 + vl.field_g + "</col>";
                 var5 = "";
               }
-              var9 = hk.field_Ob.a(var4);
+              var9 = hk.field_Ob.textWidth(var4);
               if (!ln.b(param0 ^ 2978)) {
                 if (di.field_n.field_S &&
                   var9 > nl.field_u - di.field_n.field_Bb) {
@@ -349,7 +349,7 @@ final class id {
                 }
               }
             }
-            we.a(mk.field_eb[var6], (byte) 21, var4 + e.b(oi.field_h.toString()), var7, var5);
+            we.a(mk.field_eb[var6], (byte) 21, var4 + e.escapeMarkup(oi.field_h.toString()), var7, var5);
             if (!qc.field_h) {
               wa.field_I.field_S = false;
             }
@@ -437,7 +437,7 @@ final class id {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_o.a(param0);
+          var5_int = this.field_o.textWidth(param0);
           var6 = this.field_o.field_A + this.field_o.field_G;
           var7 = param3;
           if (6 + var5_int + var7 > Rasterizer.field_e) {
@@ -447,9 +447,9 @@ final class id {
           if (Rasterizer.field_f < var8 + (var6 + 6)) {
             var8 = -6 + Rasterizer.field_f - var6;
           }
-          Rasterizer.e(var7, var8, var5_int + 6, var6 + 6, this.field_d);
-          Rasterizer.b(var7 + 1, var8 + 1, 4 + var5_int, var6 + 4, this.field_e);
-          this.field_o.b(param0, 3 + var7, this.field_o.field_A + var8 + 3, this.field_d, -1);
+          Rasterizer.drawRectangle(var7, var8, var5_int + 6, var6 + 6, this.field_d);
+          Rasterizer.fillRectangle(var7 + 1, var8 + 1, 4 + var5_int, var6 + 4, this.field_e);
+          this.field_o.drawLeft(param0, 3 + var7, this.field_o.field_A + var8 + 3, this.field_d, -1);
           var9 = 95 % ((37 - param1) / 46);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -533,7 +533,7 @@ final class id {
           }
           boolean decompiledFrameCompleted0 = true;
           var8 = Rasterizer.field_e >> 2;
-          var9 = this.field_o.a(param2);
+          var9 = this.field_o.textWidth(param2);
           var10 = this.field_o.field_G + this.field_o.field_H;
           var11 = 1;
           if (var9 > var8 ||
@@ -554,7 +554,7 @@ final class id {
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             var13Lifetime2 = 0;
             while (var13Lifetime2 < var11Lifetime1) {
-              var14 = this.field_o.a(nh.field_d[var13Lifetime2]);
+              var14 = this.field_o.textWidth(nh.field_d[var13Lifetime2]);
               stackIn_29_0 = ~var9;
               stackIn_29_1 = ~var14;
               if (var15 != 0) {
@@ -579,9 +579,9 @@ final class id {
           if (Rasterizer.field_f < (var6 + var10 + var13Lifetime1)) {
             var13Lifetime1 = -var6 + param1 - var10;
           }
-          Rasterizer.e(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_s);
-          Rasterizer.b(1 + var12, var13Lifetime1 + 1, var9 + var5_int - 2, var10 + var6 - 2, this.field_e);
-          this.field_o.a(param2, var12 + this.field_g, this.field_q + var13Lifetime1, var9, var10, this.field_d, -1, 0, 0, var7);
+          Rasterizer.drawRectangle(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_s);
+          Rasterizer.fillRectangle(1 + var12, var13Lifetime1 + 1, var9 + var5_int - 2, var10 + var6 - 2, this.field_e);
+          this.field_o.drawParagraph(param2, var12 + this.field_g, this.field_q + var13Lifetime1, var9, var10, this.field_d, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -604,7 +604,7 @@ final class id {
           if (param5 < 83) {
             this.field_s = 102;
           }
-          Rasterizer.b(param4, param1, param3, param2, param6, param0);
+          Rasterizer.fillRectangleAlpha(param4, param1, param3, param2, param6, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -620,7 +620,7 @@ final class id {
           if (param1 > -7) {
             this.field_n = -91;
           }
-          Rasterizer.a(param3, param0, param4, param5, param2);
+          Rasterizer.drawLine(param3, param0, param4, param5, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

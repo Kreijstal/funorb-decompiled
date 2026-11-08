@@ -32,7 +32,7 @@ final class rh {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         int var1 = 97 / ((-28 - param0) / 34);
@@ -40,7 +40,7 @@ final class rh {
 
     final static int a(int param0) {
         if (param0 != -16118) {
-          rh.b(4);
+          rh.releaseStatics(4);
           return sh.field_rb - dg.field_x;
         }
         return sh.field_rb - dg.field_x;

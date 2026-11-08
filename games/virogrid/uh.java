@@ -127,7 +127,7 @@ final class uh {
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, byte param1) {
         try {
           param0.setFocusTraversalKeysEnabled(false);
           if (param1 <= 94) {
@@ -148,7 +148,7 @@ final class uh {
         return param0 ^ param1;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         if (param0) {
           field_d = (String) null;

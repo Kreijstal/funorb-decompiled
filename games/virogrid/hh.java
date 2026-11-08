@@ -174,7 +174,7 @@ final class hh {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 > -122) {
           return;

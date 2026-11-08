@@ -24,7 +24,7 @@ class WidgetContainer extends UiWidget implements ja {
         if (param0 != -39) {
           field_x = (String) null;
         }
-        UiWidget var4 = (UiWidget) (var3.c(12677));
+        UiWidget var4 = (UiWidget) (var3.next(12677));
         while (var4 != null) {
           var5 = var4.b((byte) -39);
           if (var2 < var5) {
@@ -55,7 +55,7 @@ class WidgetContainer extends UiWidget implements ja {
             field_C = 97;
           }
           var5 = new IntrusiveDequeCursor(this.children);
-          var6 = (UiWidget) (var5.c(12677));
+          var6 = (UiWidget) (var5.next(12677));
           while (var6 != null) {
             discarded$3 = param1.append('\n');
             for (var7 = 0; var7 <= param2; var7++) {
@@ -124,7 +124,7 @@ class WidgetContainer extends UiWidget implements ja {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           field_B = (int[]) null;
         }
@@ -139,9 +139,9 @@ class WidgetContainer extends UiWidget implements ja {
           return;
         }
         int var7 = 3;
-        Rasterizer.c(param3, param5, param2, param6, (param6 >> 1) - 2, !param4 ? 1063506 : 1264494);
+        Rasterizer.fillRoundedRectangle(param3, param5, param2, param6, (param6 >> 1) - 2, !param4 ? 1063506 : 1264494);
         int var8 = 2 * var7;
-        Rasterizer.c(param3 + var7, var7 + param5, -var8 + param2, param6 - var8, -var7 + ((param6 >> 1) - 2), 2);
+        Rasterizer.fillRoundedRectangle(param3 + var7, var7 + param5, -var8 + param2, param6 - var8, -var7 + ((param6 >> 1) - 2), 2);
     }
 
     final void a(UiWidget param0, byte param1) {
@@ -170,7 +170,7 @@ class WidgetContainer extends UiWidget implements ja {
           if (param5 != 0) {
             this.f(false);
           }
-          var9 = (UiWidget) (var8.c(param5 ^ 12677));
+          var9 = (UiWidget) (var8.next(param5 ^ 12677));
           while (var9 != null) {
             if (var9.b(false)) {
               if (var9.f(true) &&
@@ -249,7 +249,7 @@ class WidgetContainer extends UiWidget implements ja {
               var5.b(1, var4);
               var6 = (UiWidget) (var5.a(-1));
               while (var6 != null) {
-                if (!var6.a(param1, param0 - 8517)) {
+                if (!var6.focusNext(param1, param0 - 8517)) {
                   var6 = (UiWidget) (var5.a(param0 - 3));
                   continue;
                 }
@@ -276,7 +276,7 @@ class WidgetContainer extends UiWidget implements ja {
     private final void d(byte param0) {
         int var4 = Virogrid.field_F ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
-        UiWidget var3 = (UiWidget) (var2.c(12677));
+        UiWidget var3 = (UiWidget) (var2.next(12677));
         if (param0 >= -17) {
           field_A = (String[]) null;
         }
@@ -301,7 +301,7 @@ class WidgetContainer extends UiWidget implements ja {
         var8 = Virogrid.field_F ? 1 : 0;
         try {
           var10 = new IntrusiveDequeCursor(this.children);
-          var9 = (UiWidget) (var10.c(12677));
+          var9 = (UiWidget) (var10.next(12677));
           while (var9 != null) {
             if (var9.b(false)) {
               if (var9.f(true) &&
@@ -338,7 +338,7 @@ class WidgetContainer extends UiWidget implements ja {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -350,12 +350,12 @@ class WidgetContainer extends UiWidget implements ja {
         var5 = Virogrid.field_F ? 1 : 0;
         try {
           var3 = new IntrusiveDequeCursor(this.children);
-          var4 = (UiWidget) (var3.c(12677));
+          var4 = (UiWidget) (var3.next(12677));
           if (param1 != -8515) {
             this.f(false);
           }
           while (var4 != null) {
-            if (var4.a(param0, -8515)) {
+            if (var4.focusNext(param0, -8515)) {
               return true;
             }
             var4 = (UiWidget) (var3.b(41));
@@ -390,7 +390,7 @@ class WidgetContainer extends UiWidget implements ja {
         this.d((byte) -102);
     }
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void drawLayer(byte param0, int param1, int param2, int param3) {
         int var7 = Virogrid.field_F ? 1 : 0;
         if (param0 != 37) {
           UiWidget var8 = (UiWidget) null;
@@ -403,7 +403,7 @@ class WidgetContainer extends UiWidget implements ja {
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.children);
         UiWidget var6 = (UiWidget) (var5.a((byte) 48));
         while (var6 != null) {
-          var6.a((byte) 37, this.field_l + param1, this.field_u + param2, param3);
+          var6.drawLayer((byte) 37, this.field_l + param1, this.field_u + param2, param3);
           var6 = (UiWidget) (var5.a(-1));
         }
     }
@@ -435,14 +435,14 @@ class WidgetContainer extends UiWidget implements ja {
             return false;
           }
           var8 = new IntrusiveDequeCursor(this.children);
-          var4 = (UiWidget) (var8.c(12677));
+          var4 = (UiWidget) (var8.next(12677));
           while (var4 != null) {
             if (var4.f(true)) {
               var5 = new IntrusiveDequeCursor(this.children);
               var5.a(param0 + 16150, var4);
               var6 = (UiWidget) (var5.b(41));
               while (var6 != null) {
-                if (var6.a(param1, param0 + 7719)) {
+                if (var6.focusNext(param1, param0 + 7719)) {
                   return true;
                 }
                 var6 = (UiWidget) (var5.b(41));
@@ -480,7 +480,7 @@ class WidgetContainer extends UiWidget implements ja {
           if (param2) {
             this.d((byte) -71);
           }
-          var9 = (UiWidget) (var8.c(12677));
+          var9 = (UiWidget) (var8.next(12677));
           while (var9 != null) {
             if (var9.b(false)) {
               if (var9.a(param0, param1, false, this.field_l + param3, param4, param5 + this.field_u, param6)) {
@@ -512,7 +512,7 @@ class WidgetContainer extends UiWidget implements ja {
         if (param0 != -1) {
           return;
         }
-        UiWidget var3 = (UiWidget) (var2.c(12677));
+        UiWidget var3 = (UiWidget) (var2.next(12677));
         while (var3 != null) {
           var3.c(-1);
           var3 = (UiWidget) (var2.b(41));
@@ -523,7 +523,7 @@ class WidgetContainer extends UiWidget implements ja {
         String var4 = null;
         int var5 = Virogrid.field_F ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
-        UiWidget var3 = (UiWidget) (var2.c(12677));
+        UiWidget var3 = (UiWidget) (var2.next(12677));
         while (var3 != null) {
           var4 = var3.d(70);
           if (var4 != null) {
@@ -547,7 +547,7 @@ class WidgetContainer extends UiWidget implements ja {
         if (param0 != -3) {
           field_x = (String) null;
         }
-        var3 = (UiWidget) (var2.c(param0 + 12680));
+        var3 = (UiWidget) (var2.next(param0 + 12680));
         while (var3 != null) {
           if (var3.f(true)) {
             return var3;
@@ -573,7 +573,7 @@ class WidgetContainer extends UiWidget implements ja {
           if (param1 < 113) {
             field_C = 3;
           }
-          var6 = (UiWidget) (var5.c(12677));
+          var6 = (UiWidget) (var5.next(12677));
           while (var6 != null) {
             if (var6.b(false)) {
               var6.a(param0 + this.field_l, 124, param2, this.field_u + param3);
@@ -609,7 +609,7 @@ class WidgetContainer extends UiWidget implements ja {
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           var7 = new IntrusiveDequeCursor(this.children);
-          var8 = (UiWidget) (var7.c(12677));
+          var8 = (UiWidget) (var7.next(12677));
           while (var8 != null) {
             if (var8.b(false)) {
               var8.a(param0, param1, param2 + this.field_l, param3, this.field_u + param4, 104);

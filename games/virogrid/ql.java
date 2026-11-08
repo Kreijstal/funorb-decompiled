@@ -234,36 +234,36 @@ final class ql implements WidgetListener {
         int var12Lifetime1;
         try {
           var14 = param1 instanceof qn ? (qn) (param1) : null;
-          Rasterizer.b(param0 + param1.field_l, param3 + param1.field_u, param1.field_g, param1.field_m, this.field_h);
+          Rasterizer.fillRectangle(param0 + param1.field_l, param3 + param1.field_u, param1.field_g, param1.field_m, this.field_h);
           if (var14 == null) {
           }
           var7 = var14.field_M + (param0 + param1.field_l);
           var8 = var14.field_N + (param3 + param1.field_u);
-          Rasterizer.c(var7, var8, var14.field_F, this.field_c);
+          Rasterizer.fillCircle(var7, var8, var14.field_F, this.field_c);
           if (-1 != var14.field_O) {
             var9 = 2.0 * ((double)var14.field_O * 3.141592653589793) / (double)var14.field_Q;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_F);
             var12 = (int)(Math.cos(var9) * (double)var14.field_F);
-            Rasterizer.c(var11 + var7, var12 + var8, 1, this.field_r);
+            Rasterizer.fillCircle(var11 + var7, var12 + var8, 1, this.field_r);
           }
           if (param4 != -23294) {
             ql.a((byte) -39, -110, 72, -97, -121, -28, 103);
           }
-          Rasterizer.c(var7, var8, 2, 1);
+          Rasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var14.field_G * 2.0 / (double)var14.field_Q;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_F);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_F);
-          Rasterizer.a(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          Rasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (null != this.field_g) {
             var13 = var14.field_F + var14.field_M + this.field_b;
-            this.field_g.a(param1.field_n, var13 + (param1.field_l + param0), param1.field_u + param3 + this.field_n, -var13 + (-this.field_b + param1.field_g), param1.field_m - (this.field_b << 1), this.field_l, this.field_a, 1, 1, 0);
+            this.field_g.drawParagraph(param1.field_n, var13 + (param1.field_l + param0), param1.field_u + param3 + this.field_n, -var13 + (-this.field_b + param1.field_g), param1.field_m - (this.field_b << 1), this.field_l, this.field_a, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "ql.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_m = null;
         field_k = null;

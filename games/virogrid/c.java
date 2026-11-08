@@ -47,7 +47,7 @@ final class c {
             break;
           }
           if (!param1) {
-            c.a(true);
+            c.releaseStatics(true);
           }
           var4 = -var2_int + var3;
           if (var4 < 1) {
@@ -149,7 +149,7 @@ final class c {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_d = null;
         field_b = null;

@@ -15,7 +15,7 @@ abstract class dm extends DualLinkNode {
 
     abstract Object b(byte param0);
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_v = null;
         field_t = null;
         field_o = null;

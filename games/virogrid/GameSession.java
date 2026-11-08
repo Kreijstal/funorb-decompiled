@@ -125,7 +125,7 @@ final class GameSession {
           }
         }
         boolean decompiledFrameRemainder2 = true;
-        vg.smallFont.a(gh.field_Fb);
+        vg.smallFont.textWidth(gh.field_Fb);
         if (this.field_D && (!this.online ||
           this.board.currentPlayer == this.localPlayer)) {
           fieldTemp$1 = this.field_i + 1;
@@ -324,7 +324,7 @@ final class GameSession {
         var3Lifetime3 = 1;
         for (var4 = 0; var4 < 4; var4++) {
           if (null != ve.field_v[var4]) {
-            var5 = vg.smallFont.a(ve.field_v[var4].toUpperCase());
+            var5 = vg.smallFont.textWidth(ve.field_v[var4].toUpperCase());
             if (var5 > var3Lifetime3) {
               var3Lifetime3 = var5;
             }
@@ -407,7 +407,7 @@ final class GameSession {
 
     private final void a(int param0, int param1, int param2, int param3, boolean param4) {
         if (0 < param1) {
-          Rasterizer.c(param0, param3, param1, param2);
+          Rasterizer.fillCircle(param0, param3, param1, param2);
         }
         if (param4) {
           this.a((byte) 104, false);
@@ -455,7 +455,7 @@ final class GameSession {
         gk.field_g.g(param0, 8);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 23320) {
           field_b = (String) null;
@@ -594,8 +594,8 @@ final class GameSession {
                 }
               }
             }
-            var8 = hd.standardFont.a(var6_ref_StringLifetime2) / 2;
-            var9 = mc.menuFont.a(var7_ref_StringLifetime1) / 2;
+            var8 = hd.standardFont.textWidth(var6_ref_StringLifetime2) / 2;
+            var9 = mc.menuFont.textWidth(var7_ref_StringLifetime1) / 2;
             if (var9 > var8) {
               var8 = var9;
             }
@@ -616,14 +616,14 @@ final class GameSession {
             var14 = 2 + (int)((Math.cos((double)((float)id.field_r / 20.0f)) + 1.0) * 8.0);
             for (var15 = 0; var15 < 9; var15++) {
               var16 = var14 * (-var15 + 9) >>> 3;
-              Rasterizer.a(-var8 + (var10 - var16), var12 + (var11 - var13 - var16), var8 + var16 << 1, var13 + var16 << 1, 10, 1141646, 26);
+              Rasterizer.fillRoundedRectangleBlended(-var8 + (var10 - var16), var12 + (var11 - var13 - var16), var8 + var16 << 1, var13 + var16 << 1, 10, 1141646, 26);
             }
-            Rasterizer.a(-var8 + var10, var12 + (-var13 + var11), var8 << 1, var13 << 1, 10, 0, 180);
+            Rasterizer.fillRoundedRectangleBlended(-var8 + var10, var12 + (-var13 + var11), var8 << 1, var13 << 1, 10, 0, 180);
             var4 = 1;
-            hd.standardFont.c(var6_ref_StringLifetime2, var10, -2 + var11 + hd.standardFont.field_H / 2, 16777215, -1);
+            hd.standardFont.drawCentered(var6_ref_StringLifetime2, var10, -2 + var11 + hd.standardFont.field_H / 2, 16777215, -1);
             var11 = var11 + (hd.standardFont.field_H / 2 * 5 - 2);
             if (!(var7_ref_StringLifetime1.length() <= 0)) {
-              mc.menuFont.c(var7_ref_StringLifetime1, var10, -2 + var11 + mc.menuFont.field_H / 2, 16777215, -1);
+              mc.menuFont.drawCentered(var7_ref_StringLifetime1, var10, -2 + var11 + mc.menuFont.field_H / 2, 16777215, -1);
             }
           }
           if (!this.online) {
@@ -643,7 +643,7 @@ final class GameSession {
               }
             }
             if (2147483647 != var6Lifetime2) {
-              Rasterizer.a(-4 + (-var6Lifetime2 + 651), -28, 8 + var6Lifetime2, 32 + var7, 4, 0, 200);
+              Rasterizer.fillRoundedRectangleBlended(-4 + (-var6Lifetime2 + 651), -28, 8 + var6Lifetime2, 32 + var7, 4, 0, 200);
             }
           }
           for (var6Lifetime3 = 0; 4 > var6Lifetime3; var6Lifetime3++) {
@@ -678,15 +678,15 @@ final class GameSession {
                 var12Lifetime1 = var11Lifetime2 + (32 + ve.field_B[var6Lifetime3]);
                 if (ve.field_A[var6Lifetime3] == 0) {
                   if (ve.field_v[var6Lifetime3] != null) {
-                    Rasterizer.e(var11Lifetime2, vg.smallFont.field_G - (vg.smallFont.field_H - var10Lifetime2), 32 + ve.field_B[var6Lifetime3], 18, 4, 1141646);
-                    vg.smallFont.b(ve.field_p[var6Lifetime3].toUpperCase(), -(vg.smallFont.a(ve.field_v[var6Lifetime3].toUpperCase()) >> 1) + (var12Lifetime1 + var11Lifetime2) / 2, var10Lifetime2, var7Lifetime2, -1);
+                    Rasterizer.drawRoundedRectangle(var11Lifetime2, vg.smallFont.field_G - (vg.smallFont.field_H - var10Lifetime2), 32 + ve.field_B[var6Lifetime3], 18, 4, 1141646);
+                    vg.smallFont.drawLeft(ve.field_p[var6Lifetime3].toUpperCase(), -(vg.smallFont.textWidth(ve.field_v[var6Lifetime3].toUpperCase()) >> 1) + (var12Lifetime1 + var11Lifetime2) / 2, var10Lifetime2, var7Lifetime2, -1);
                   }
                 } else {
                   if (ve.field_p[var6Lifetime3] != null) {
-                    vg.smallFont.c(ve.field_p[var6Lifetime3].toUpperCase(), (var11Lifetime2 + var12Lifetime1) / 2 - (vg.smallFont.a(ve.field_p[var6Lifetime3].toUpperCase()) >> 1), var10Lifetime2, var7Lifetime2, -1, 256 - ve.field_A[var6Lifetime3]);
+                    vg.smallFont.drawLeftAlpha(ve.field_p[var6Lifetime3].toUpperCase(), (var11Lifetime2 + var12Lifetime1) / 2 - (vg.smallFont.textWidth(ve.field_p[var6Lifetime3].toUpperCase()) >> 1), var10Lifetime2, var7Lifetime2, -1, 256 - ve.field_A[var6Lifetime3]);
                   }
                   if (null != ve.field_v[var6Lifetime3]) {
-                    vg.smallFont.c(ve.field_v[var6Lifetime3].toUpperCase(), -(vg.smallFont.a(ve.field_v[var6Lifetime3].toUpperCase()) >> 1) + (var12Lifetime1 + var11Lifetime2) / 2, var10Lifetime2, var7Lifetime2, -1, ve.field_A[var6Lifetime3]);
+                    vg.smallFont.drawLeftAlpha(ve.field_v[var6Lifetime3].toUpperCase(), -(vg.smallFont.textWidth(ve.field_v[var6Lifetime3].toUpperCase()) >> 1) + (var12Lifetime1 + var11Lifetime2) / 2, var10Lifetime2, var7Lifetime2, -1, ve.field_A[var6Lifetime3]);
                   }
                 }
               }
@@ -696,7 +696,7 @@ final class GameSession {
         if (this.online) {
           stackIn_125_0 = CellFlip.field_m;
           if (stackIn_125_0 != null) {
-            var4Lifetime1 = 18 + vg.smallFont.a(CellFlip.field_m.toUpperCase());
+            var4Lifetime1 = 18 + vg.smallFont.textWidth(CellFlip.field_m.toUpperCase());
             vi.field_k = vi.field_k + ((float)var4Lifetime1 - vi.field_k) * 0.5f;
             if (this.field_u == -2 &&
               param1) {
@@ -711,7 +711,7 @@ final class GameSession {
             var5Lifetime1 = stackIn_136_0;
             stackIn_139_0 = (var5Lifetime1 == 0) ? 1141646 : 16777215;
             var6Lifetime1 = stackIn_139_0;
-            Rasterizer.a(-4, -21 + (-2 + we.field_c.field_J), (int)vi.field_k + 8, 34, 4, 0, 200);
+            Rasterizer.fillRoundedRectangleBlended(-4, -21 + (-2 + we.field_c.field_J), (int)vi.field_k + 8, 34, 4, 0, 200);
             var7Lifetime1 = 256;
             var8Lifetime1 = -20 + we.field_c.field_J;
             var9Lifetime1 = 1;
@@ -719,9 +719,9 @@ final class GameSession {
             var11Lifetime1 = 18;
             if (var10Lifetime1 > 8 &&
               var11Lifetime1 > 8) {
-              Rasterizer.e(var9Lifetime1, var8Lifetime1, var10Lifetime1, var11Lifetime1, 4, 1141646);
+              Rasterizer.drawRoundedRectangle(var9Lifetime1, var8Lifetime1, var10Lifetime1, var11Lifetime1, 4, 1141646);
             }
-            vg.smallFont.b(CellFlip.field_m.toUpperCase(), ((int)vi.field_k >> 1) + var9Lifetime1, -2 + (we.field_c.field_J - 4), var6Lifetime1, -1, var7Lifetime1);
+            vg.smallFont.drawCenteredAlpha(CellFlip.field_m.toUpperCase(), ((int)vi.field_k >> 1) + var9Lifetime1, -2 + (we.field_c.field_J - 4), var6Lifetime1, -1, var7Lifetime1);
           }
         }
         if (param0 != -16) {
@@ -781,9 +781,9 @@ final class GameSession {
         var10 = Virogrid.field_F ? 1 : 0;
         try {
           pj.a(param2, 256);
-          Rasterizer.b(100, param0, 10, 400, 0);
-          Rasterizer.b(530, 0, 10, 400, 0);
-          Rasterizer.b(110, 0, 420, 400, 191);
+          Rasterizer.fillRectangle(100, param0, 10, 400, 0);
+          Rasterizer.fillRectangle(530, 0, 10, 400, 0);
+          Rasterizer.fillRectangle(110, 0, 420, 400, 191);
           for (var4_int = 0; var4_int < this.animator.displayedCells.length; var4_int++) {
             for (var5 = 0; var5 < this.animator.displayedCells[0].length; var5++) {
               var7 = -(this.cellSize * var5) - this.field_p + 370;
@@ -795,7 +795,7 @@ final class GameSession {
               var6 = stackIn_8_0;
               var8_int = 0;
               var9 = this.b(var4_int, var5, -2096, this.turnPulse(param0 ^ 6121), var8_int);
-              Rasterizer.c(var6, var7, this.field_o, var9);
+              Rasterizer.fillCircle(var6, var7, this.field_o, var9);
             }
           }
           var8 = (CellFlip) (this.animator.flips.a((byte) -117));
@@ -811,15 +811,15 @@ final class GameSession {
             var7Lifetime1 = -(this.cellSize * var8.column) - this.field_p + 370;
             if (var8.phase != 0) {
               if (var8.phase == 1) {
-                Rasterizer.b(var6Lifetime1 - (var8.field_n >> 1), 0, var8.field_n, var7Lifetime1, var9Lifetime1);
-                Rasterizer.c(var6Lifetime1, var7Lifetime1, var8.field_n, var9Lifetime1);
+                Rasterizer.fillRectangle(var6Lifetime1 - (var8.field_n >> 1), 0, var8.field_n, var7Lifetime1, var9Lifetime1);
+                Rasterizer.fillCircle(var6Lifetime1, var7Lifetime1, var8.field_n, var9Lifetime1);
               } else {
-                Rasterizer.b(var6Lifetime1 - (var8.field_n >> 1), 0, var8.field_n, var8.field_h, var9Lifetime1);
-                Rasterizer.c(var6Lifetime1, var8.field_h, var8.field_n >> 1, var9Lifetime1);
-                Rasterizer.c(var6Lifetime1, var7Lifetime1, this.field_o, var9Lifetime1);
+                Rasterizer.fillRectangle(var6Lifetime1 - (var8.field_n >> 1), 0, var8.field_n, var8.field_h, var9Lifetime1);
+                Rasterizer.fillCircle(var6Lifetime1, var8.field_h, var8.field_n >> 1, var9Lifetime1);
+                Rasterizer.fillCircle(var6Lifetime1, var7Lifetime1, this.field_o, var9Lifetime1);
               }
             } else {
-              Rasterizer.a(var6Lifetime1, 0, var6Lifetime1, var8.field_h, var9Lifetime1);
+              Rasterizer.drawLine(var6Lifetime1, 0, var6Lifetime1, var8.field_h, var9Lifetime1);
             }
             var8 = (CellFlip) (this.animator.flips.a(16213));
           }
@@ -898,10 +898,10 @@ final class GameSession {
                 var6 = oi.a(new String[]{this.board.playerNames[this.board.currentPlayer]}, rf.field_j, 2);
               }
             }
-            mc.menuFont.c(var6, 320, 30, var7, -1);
-            var8 = mc.menuFont.a(var6);
-            hd.standardFont.a(var4, Math.min(186, 320 + (-16 - var8 / 2)), 30, 30136, -1);
-            hd.standardFont.b(var5, Math.max(456, var8 / 2 + 336), 30, 16777215, -1);
+            mc.menuFont.drawCentered(var6, 320, 30, var7, -1);
+            var8 = mc.menuFont.textWidth(var6);
+            hd.standardFont.drawRight(var4, Math.min(186, 320 + (-16 - var8 / 2)), 30, 30136, -1);
+            hd.standardFont.drawLeft(var5, Math.max(456, var8 / 2 + 336), 30, 16777215, -1);
           } else {
             if (this.board.field_g) {
               var6_int = 1 - this.board.lastMovePlayer;
@@ -912,7 +912,7 @@ final class GameSession {
                 var6 = var7_ref_String;
                 var6 = var7_ref_String;
               }
-              mc.menuFont.c(var7_ref_String, 320, 30, 16777215, -1);
+              mc.menuFont.drawCentered(var7_ref_String, 320, 30, 16777215, -1);
             }
           }
         } else {
@@ -920,8 +920,8 @@ final class GameSession {
           pe.a(10, 1141646, 320, (byte) -124, 25);
           var16 = Integer.toString(this.board.pieceCounts[0]);
           var17 = Integer.toString(this.board.pieceCounts[1]);
-          hd.standardFont.a(var16, 316, 30, 30136, -1);
-          hd.standardFont.b(var17, 326, 30, 16777215, -1);
+          hd.standardFont.drawRight(var16, 316, 30, 30136, -1);
+          hd.standardFont.drawLeft(var17, 326, 30, 16777215, -1);
           if (this.board.currentPlayer >= 0) {
             var5 = oi.a(new String[]{Integer.toString((-1 + (this.turnTimer + 50)) / 50)}, ej.field_O, 2);
             stackIn_5_0 = (this.board.currentPlayer == 0) ? 30136 : 16777215;
@@ -937,14 +937,14 @@ final class GameSession {
               } else {
                 stackIn_10_4 = var6_int;
               }
-              ((v) (Object) stackIn_9_0).b(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_10_4, -1);
-              mc.menuFont.a(var5, 516, 30, 16777215, -1);
+              ((v) (Object) stackIn_9_0).drawLeft(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_10_4, -1);
+              mc.menuFont.drawRight(var5, 516, 30, 16777215, -1);
             } else {
               var14 = this.board.playerNames[this.board.currentPlayer];
               var7_ref_String = var14;
-              var8 = -hd.standardFont.a(var17) + 268;
+              var8 = -hd.standardFont.textWidth(var17) + 268;
               var9_ref_String = oi.a(new String[]{var14}, ec.field_y, 2);
-              while (var8 < hd.standardFont.a(var9_ref_String)) {
+              while (var8 < hd.standardFont.textWidth(var9_ref_String)) {
                 var15 = var7_ref_String.substring(0, var7_ref_String.length() - 1);
                 var7_ref_String = var15;
                 var9_ref_String = oi.a(new String[]{var15 + "..."}, ec.field_y, 2);
@@ -958,8 +958,8 @@ final class GameSession {
               } else {
                 stackIn_17_4 = 30136;
               }
-              ((v) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, -1);
-              mc.menuFont.b(var5, 124, 30, 16777215, -1);
+              ((v) (Object) stackIn_16_0).drawRight(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, -1);
+              mc.menuFont.drawLeft(var5, 124, 30, 16777215, -1);
             }
           }
           var5_int = 0;
@@ -1030,15 +1030,15 @@ final class GameSession {
             this.field_c > 0) {
             var6_int = 320;
             var7 = 224;
-            var8 = mc.menuFont.c(this.field_a, 23320) + 16;
-            var9 = 16 + mc.menuFont.a(this.field_a, 800, 20);
+            var8 = mc.menuFont.getWrappedWidth(this.field_a, 23320) + 16;
+            var9 = 16 + mc.menuFont.paragraphHeight(this.field_a, 800, 20);
             var10 = (int)(8.0 * (1.0 + Math.cos((double)((float)id.field_r / 20.0f)))) + 2;
             for (var11 = 0; var11 < 9; var11++) {
               var12 = var10 * (9 - var11) >>> 3;
-              Rasterizer.a(-(var8 / 2) + var6_int - var12, -var12 + (-(var9 / 2) + var7), var12 + var8 / 2 << 1, var9 / 2 + var12 << 1, 10, 1141646, this.field_c / 7);
+              Rasterizer.fillRoundedRectangleBlended(-(var8 / 2) + var6_int - var12, -var12 + (-(var9 / 2) + var7), var12 + var8 / 2 << 1, var9 / 2 + var12 << 1, 10, 1141646, this.field_c / 7);
             }
-            Rasterizer.a(-(var8 / 2) + var6_int, -(var9 / 2) + var7, var8, var9, 10, 0, this.field_c);
-            mc.menuFont.a(this.field_a, 320, 220, 0, 0, 16777215, -1, this.field_c, 1, 1, 20);
+            Rasterizer.fillRoundedRectangleBlended(-(var8 / 2) + var6_int, -(var9 / 2) + var7, var8, var9, 10, 0, this.field_c);
+            mc.menuFont.drawParagraphAlpha(this.field_a, 320, 220, 0, 0, 16777215, -1, this.field_c, 1, 1, 20);
           }
         }
         if (param0 <= 65) {
@@ -1072,7 +1072,7 @@ final class GameSession {
         }
         var5 = param1;
         if (param2 != 22273) {
-          GameSession.b(64);
+          GameSession.releaseStatics(64);
         }
         var6 = param3 ? 1 : 0;
         gb.a(-2, 0, var6 != 0, var5);
@@ -1152,9 +1152,9 @@ final class GameSession {
         var19 = Virogrid.field_F ? 1 : 0;
         try {
           pj.a(param0, 256);
-          Rasterizer.b(100, 0, 10, 400, 0);
-          Rasterizer.b(530, 0, 10, 400, 0);
-          Rasterizer.b(110, 0, 420, 400, 263172);
+          Rasterizer.fillRectangle(100, 0, 10, 400, 0);
+          Rasterizer.fillRectangle(530, 0, 10, 400, 0);
+          Rasterizer.fillRectangle(110, 0, 420, 400, 263172);
           var4_int = this.turnPulse(6121);
           if (param2 != 9) {
             return;
@@ -1187,9 +1187,9 @@ final class GameSession {
           if (var10 != 0) {
             var8 = this.cellScreenX(param1, 4347, this.animator.selectedRow);
             var9 = this.cellScreenY(this.animator.selectedColumn, 5975);
-            Rasterizer.c(var8, var9, this.field_d, 16776964);
-            Rasterizer.c(var8, var9, 1 + this.field_d, 16776964);
-            Rasterizer.c(var8, var9, this.field_d, 263172);
+            Rasterizer.fillCircle(var8, var9, this.field_d, 16776964);
+            Rasterizer.fillCircle(var8, var9, 1 + this.field_d, 16776964);
+            Rasterizer.fillCircle(var8, var9, this.field_d, 263172);
           }
           var12 += 100;
           var13 = 0;
@@ -1210,10 +1210,10 @@ final class GameSession {
             for (var7 = 0; var7 < this.animator.displayedCells[0].length; var7++) {
               var8Lifetime1 = this.cellScreenX(param1, 4347, var6);
               var9Lifetime1 = this.cellScreenY(var7, 5975);
-              Rasterizer.c(var8Lifetime1, var9Lifetime1, this.field_o, 996682);
+              Rasterizer.fillCircle(var8Lifetime1, var9Lifetime1, this.field_o, 996682);
               var15_int = this.b(var6, var7, -2096, var4_int, var13);
               if (var15_int == -1) {
-                Rasterizer.c(var8Lifetime1, var9Lifetime1, this.field_o - 3, 263172);
+                Rasterizer.fillCircle(var8Lifetime1, var9Lifetime1, this.field_o - 3, 263172);
                 if (var10 != 0) {
                   var16 = this.board.classifyMove(var7, this.animator.selectedRow, (byte) 99, var6, this.animator.selectedColumn);
                   if (var16 != -1) {
@@ -1242,11 +1242,11 @@ final class GameSession {
                   } else {
                     stackIn_59_4 = vb.field_j;
                   }
-                  Rasterizer.a(stackIn_58_0, stackIn_58_1, stackIn_58_2, stackIn_58_3, stackIn_59_4);
+                  Rasterizer.fillRadialPaletteCircle(stackIn_58_0, stackIn_58_1, stackIn_58_2, stackIn_58_3, stackIn_59_4);
                 }
                 if (this.turnTimer > sh.turnDurations[this.board.timeSetting] - 200 &&
                   this.turnTimer < -150 + sh.turnDurations[this.board.timeSetting]) {
-                  Rasterizer.f(var8Lifetime2, var9Lifetime2, this.field_d + 1, 16776964);
+                  Rasterizer.drawCircleOutline(var8Lifetime2, var9Lifetime2, this.field_d + 1, 16776964);
                 }
               }
             }
@@ -1260,7 +1260,7 @@ final class GameSession {
               if (-1 != var15_intLifetime1) {
                 if (this.animator.selectedRow == var6Lifetime2 &&
                   this.animator.selectedColumn == var7Lifetime2) {
-                  Rasterizer.c(var8Lifetime3, var9Lifetime3, this.field_o - 3, 263172);
+                  Rasterizer.fillCircle(var8Lifetime3, var9Lifetime3, this.field_o - 3, 263172);
                   var16Lifetime1 = -this.field_k + this.field_d;
                   this.a(var8Lifetime3, var16Lifetime1, var15_intLifetime1, var9Lifetime3, false);
                 } else {
@@ -1279,7 +1279,7 @@ final class GameSession {
                       this.localPlayer == this.board.currentPlayer) && (!this.board.finished &&
                       this.animator.selectedRow != -1 &&
                       this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.hoverRow, this.animator.selectedColumn, 2, this.animator.selectedRow, this.hoverColumn))) {
-                      Rasterizer.c(var8Lifetime3, var9Lifetime3, -3 + this.field_o, 263172);
+                      Rasterizer.fillCircle(var8Lifetime3, var9Lifetime3, -3 + this.field_o, 263172);
                       this.a(var8Lifetime3, -(var5 >> 1) + this.field_d, var15_intLifetime1, var9Lifetime3, false);
                     } else {
                       this.a(var8Lifetime3, this.field_d, var15_intLifetime1, var9Lifetime3, false);
@@ -1300,12 +1300,12 @@ final class GameSession {
                 (this.board.isLegalMove((int) (byte)this.board.currentPlayer, this.hoverRow, this.animator.selectedColumn, 2, this.animator.selectedRow, this.hoverColumn))) {
                 var8Lifetime4 = this.cellScreenX(param1, 4347, this.hoverRow);
                 var9Lifetime4 = this.cellScreenY(this.hoverColumn, 5975);
-                Rasterizer.f(var8Lifetime4, var9Lifetime4, this.field_d, 16776964);
+                Rasterizer.drawCircleOutline(var8Lifetime4, var9Lifetime4, this.field_d, 16776964);
               }
             } else {
               var8Lifetime4 = this.cellScreenX(param1, 4347, this.hoverRow);
               var9Lifetime4 = this.cellScreenY(this.hoverColumn, 5975);
-              Rasterizer.f(var8Lifetime4, var9Lifetime4, this.field_d, 16776964);
+              Rasterizer.drawCircleOutline(var8Lifetime4, var9Lifetime4, this.field_d, 16776964);
             }
           }
           var15 = (CellFlip) (this.animator.flips.a((byte) -70));
@@ -1625,16 +1625,16 @@ final class GameSession {
         }
         var26 = (2 * var8 + (var12 + var19)) * nf.a(21855, var10) / 65536 + var17;
         var27 = var18 + (2 * var8 + (var19 + var12)) * id.a(var10, 32) / 65536;
-        Rasterizer.a(param4 + 2, param1, 2 + var13, var14, 263172);
-        Rasterizer.a(-2 + param4, param1, var13 - 2, var14, 263172);
-        Rasterizer.a(param4, param1 + 2, var13, 2 + var14, 263172);
-        Rasterizer.a(param4, -2 + param1, var13, var14 - 2, 263172);
-        Rasterizer.a(param4 + 3, param1, 3 + var13, var14, 263172);
-        Rasterizer.a(-3 + param4, param1, var13 - 3, var14, 263172);
-        Rasterizer.a(param4, 3 + param1, var13, var14 + 3, 263172);
-        Rasterizer.a(param4, -3 + param1, var13, var14 - 3, 263172);
-        Rasterizer.c(param4, param1, 4, 0);
-        Rasterizer.c(param4, param1, 2, param3);
+        Rasterizer.drawLine(param4 + 2, param1, 2 + var13, var14, 263172);
+        Rasterizer.drawLine(-2 + param4, param1, var13 - 2, var14, 263172);
+        Rasterizer.drawLine(param4, param1 + 2, var13, 2 + var14, 263172);
+        Rasterizer.drawLine(param4, -2 + param1, var13, var14 - 2, 263172);
+        Rasterizer.drawLine(param4 + 3, param1, 3 + var13, var14, 263172);
+        Rasterizer.drawLine(-3 + param4, param1, var13 - 3, var14, 263172);
+        Rasterizer.drawLine(param4, 3 + param1, var13, var14 + 3, 263172);
+        Rasterizer.drawLine(param4, -3 + param1, var13, var14 - 3, 263172);
+        Rasterizer.fillCircle(param4, param1, 4, 0);
+        Rasterizer.fillCircle(param4, param1, 2, param3);
         var46 = new int[3];
         var46[0] = var15;
         var47 = new int[3];
@@ -1643,13 +1643,13 @@ final class GameSession {
         var47[0] = var16;
         var47[1] = var21;
         var47[2] = var23;
-        fk.a(var18, var25, var27, var17, var24, var26, 263172);
-        fk.a(var47[0], var47[1], var47[2], var46[0], var46[1], var46[2], param3);
-        Rasterizer.a(param4, param1, var13, var14, param3);
-        Rasterizer.a(param4 + 1, param1, var13 + 1, var14, param3);
-        Rasterizer.a(param4 - 1, param1, -1 + var13, var14, param3);
-        Rasterizer.a(param4, 1 + param1, var13, var14 + 1, param3);
-        Rasterizer.a(param4, param1 - 1, var13, var14 - 1, param3);
+        fk.drawFlatTriangle(var18, var25, var27, var17, var24, var26, 263172);
+        fk.drawFlatTriangle(var47[0], var47[1], var47[2], var46[0], var46[1], var46[2], param3);
+        Rasterizer.drawLine(param4, param1, var13, var14, param3);
+        Rasterizer.drawLine(param4 + 1, param1, var13 + 1, var14, param3);
+        Rasterizer.drawLine(param4 - 1, param1, -1 + var13, var14, param3);
+        Rasterizer.drawLine(param4, 1 + param1, var13, var14 + 1, param3);
+        Rasterizer.drawLine(param4, param1 - 1, var13, var14 - 1, param3);
         var30 = (2 + var19) / 2 * nf.a(21855, var7) / 65536 + param5;
         var31 = param0 + id.a(var7, 32) * ((2 + var19) / 2) / 65536;
         var32 = -(3 * nf.a(21855, var7) / 65536) + param4;
@@ -1659,7 +1659,7 @@ final class GameSession {
           var37 = (int)Math.round((double)(-var32 + var30) * var34 + (double)var32);
           var38 = (int)Math.round((double)var33 + (double)(-var33 + var31) * var34);
           var34 = var34 + 0.25;
-          Rasterizer.c(var37, var38, 1, 263172);
+          Rasterizer.fillCircle(var37, var38, 1, 263172);
           if (var34 > 1.0) {
             var34 = var34 - 1.0;
           }
@@ -1695,9 +1695,9 @@ final class GameSession {
         var10 = Virogrid.field_F ? 1 : 0;
         try {
           pj.a(param0, 256);
-          Rasterizer.b(110, 0, 420, 400, 127);
-          Rasterizer.b(100, 0, 10, 400, 0);
-          Rasterizer.b(530, 0, 10, 400, 0);
+          Rasterizer.fillRectangle(110, 0, 420, 400, 127);
+          Rasterizer.fillRectangle(100, 0, 10, 400, 0);
+          Rasterizer.fillRectangle(530, 0, 10, 400, 0);
           var4_int = 31 & id.field_r >> 1;
           if (var4_int >= 16) {
             var4_int = 32 - var4_int;
@@ -1711,8 +1711,8 @@ final class GameSession {
                 stackIn_11_0 = this.field_B + (140 + var5 * this.cellSize);
               }
               var7 = stackIn_11_0;
-              Rasterizer.c(var7, var8, this.field_o, 263172);
-              Rasterizer.c(var7, var8, this.field_d, 0);
+              Rasterizer.fillCircle(var7, var8, this.field_o, 263172);
+              Rasterizer.fillCircle(var7, var8, this.field_d, 0);
             }
           }
           var9 = 94 / ((param1 + 65) / 58);
@@ -1728,8 +1728,8 @@ final class GameSession {
               var7Lifetime1 = stackIn_20_0;
               var8Lifetime1 = -(this.cellSize * var11) - this.field_p + 370;
               if (this.animator.displayedCells[var5Lifetime1][var11] != -1) {
-                Rasterizer.c(var7Lifetime1, var8Lifetime1, this.field_o, 263172);
-                Rasterizer.c(var7Lifetime1, var8Lifetime1, this.field_d, 0);
+                Rasterizer.fillCircle(var7Lifetime1, var8Lifetime1, this.field_o, 263172);
+                Rasterizer.fillCircle(var7Lifetime1, var8Lifetime1, this.field_d, 0);
               }
               if ((!this.online ||
                 this.board.currentPlayer == this.localPlayer) &&
@@ -1738,7 +1738,7 @@ final class GameSession {
                 this.animator.field_h[var5Lifetime1][var11] &&
                 this.turnTimer > -200 + sh.turnDurations[this.board.timeSetting] &&
                 -150 + sh.turnDurations[this.board.timeSetting] > this.turnTimer)) {
-                Rasterizer.f(var7Lifetime1, var8Lifetime1, this.field_o, 16776964);
+                Rasterizer.drawCircleOutline(var7Lifetime1, var8Lifetime1, this.field_o, 16776964);
               }
               var11++;
             }
@@ -1755,7 +1755,7 @@ final class GameSession {
                 }
                 var7Lifetime2 = stackIn_53_0;
                 var8Lifetime2 = -(this.cellSize * this.hoverColumn) + (-this.field_p + 370);
-                Rasterizer.f(var7Lifetime2, var8Lifetime2, this.field_o, 16776964);
+                Rasterizer.drawCircleOutline(var7Lifetime2, var8Lifetime2, this.field_o, 16776964);
               }
             } else {
               if (param2) {
@@ -1765,7 +1765,7 @@ final class GameSession {
               }
               var7Lifetime2 = stackIn_53_0;
               var8Lifetime2 = -(this.cellSize * this.hoverColumn) + (-this.field_p + 370);
-              Rasterizer.f(var7Lifetime2, var8Lifetime2, this.field_o, 16776964);
+              Rasterizer.drawCircleOutline(var7Lifetime2, var8Lifetime2, this.field_o, 16776964);
             }
           }
           if (this.animator.selectedRow != -1 &&
@@ -1777,8 +1777,8 @@ final class GameSession {
             }
             var7Lifetime3 = stackIn_59_0;
             var8Lifetime3 = -this.field_p + (370 - this.animator.selectedColumn * this.cellSize);
-            Rasterizer.f(var7Lifetime3, var8Lifetime3, this.field_o, 16776964);
-            Rasterizer.f(var7Lifetime3, var8Lifetime3, 1 + this.field_o, 16776964);
+            Rasterizer.drawCircleOutline(var7Lifetime3, var8Lifetime3, this.field_o, 16776964);
+            Rasterizer.drawCircleOutline(var7Lifetime3, var8Lifetime3, 1 + this.field_o, 16776964);
           }
           this.drawStatusPanel(107, param2);
           ul.b((byte) 104);

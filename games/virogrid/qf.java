@@ -34,16 +34,16 @@ final class qf {
         fk.field_d = field_p;
         int var0 = field_q & 3;
         if (var0 == 0) {
-          fk.a(field_v[0], field_v[1], field_v[2], field_e[0], field_e[1], field_e[2], field_m, field_t, field_d);
+          fk.drawShadedTriangle(field_v[0], field_v[1], field_v[2], field_e[0], field_e[1], field_e[2], field_m, field_t, field_d);
         } else {
           if (var0 == 1) {
-            fk.a(field_v[0], field_v[1], field_v[2], field_e[0], field_e[1], field_e[2], field_j[field_m]);
+            fk.drawFlatTriangle(field_v[0], field_v[1], field_v[2], field_e[0], field_e[1], field_e[2], field_j[field_m]);
           } else {
             if (var0 == 2) {
-              fk.a(field_v[0], field_v[1], field_v[2], field_e[0], field_e[1], field_e[2], field_m, field_t, field_d, field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
+              fk.drawTexturedTriangle(field_v[0], field_v[1], field_v[2], field_e[0], field_e[1], field_e[2], field_m, field_t, field_d, field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
             } else {
               if (var0 == 3) {
-                fk.a(field_v[0], field_v[1], field_v[2], field_e[0], field_e[1], field_e[2], field_m, field_m, field_m, field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
+                fk.drawTexturedTriangle(field_v[0], field_v[1], field_v[2], field_e[0], field_e[1], field_e[2], field_m, field_m, field_m, field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
               }
             }
           }
@@ -198,16 +198,16 @@ final class qf {
             if (var12 != 1) {
               if (var12 != 2) {
                 if (var12 == 3) {
-                  fk.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_m, field_m, field_m, field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
+                  fk.drawTexturedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_m, field_m, field_m, field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
                 }
               } else {
-                fk.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_n[0], field_n[1], field_n[2], field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
+                fk.drawTexturedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_n[0], field_n[1], field_n[2], field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
               }
             } else {
-              fk.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_j[field_m]);
+              fk.drawFlatTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_j[field_m]);
             }
           } else {
-            fk.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_n[0], field_n[1], field_n[2]);
+            fk.drawShadedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_n[0], field_n[1], field_n[2]);
           }
         }
         if (var2 == 4) {
@@ -226,21 +226,21 @@ final class qf {
             if (var12Lifetime1 != 1) {
               if (var12Lifetime1 != 2) {
                 if (var12Lifetime1 == 3) {
-                  fk.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_m, field_m, field_m, field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
-                  fk.a(var9Lifetime3, var11, field_s[3], var6Lifetime3, var8Lifetime3, field_r[3], field_m, field_m, field_m, field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
+                  fk.drawTexturedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_m, field_m, field_m, field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
+                  fk.drawTexturedTriangle(var9Lifetime3, var11, field_s[3], var6Lifetime3, var8Lifetime3, field_r[3], field_m, field_m, field_m, field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
                 }
               } else {
-                fk.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_n[0], field_n[1], field_n[2], field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
-                fk.a(var9Lifetime3, var11, field_s[3], var6Lifetime3, var8Lifetime3, field_r[3], field_n[0], field_n[2], field_n[3], field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
+                fk.drawTexturedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_n[0], field_n[1], field_n[2], field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
+                fk.drawTexturedTriangle(var9Lifetime3, var11, field_s[3], var6Lifetime3, var8Lifetime3, field_r[3], field_n[0], field_n[2], field_n[3], field_f[0], field_f[1], field_f[2], field_i[0], field_i[1], field_i[2], field_u[0], field_u[1], field_u[2], field_b);
               }
             } else {
               var13 = field_j[field_m];
-              fk.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, var13);
-              fk.a(var9Lifetime3, var11, field_s[3], var6Lifetime3, var8Lifetime3, field_r[3], var13);
+              fk.drawFlatTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, var13);
+              fk.drawFlatTriangle(var9Lifetime3, var11, field_s[3], var6Lifetime3, var8Lifetime3, field_r[3], var13);
             }
           } else {
-            fk.a(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_n[0], field_n[1], field_n[2]);
-            fk.a(var9Lifetime3, var11, field_s[3], var6Lifetime3, var8Lifetime3, field_r[3], field_n[0], field_n[2], field_n[3]);
+            fk.drawShadedTriangle(var9Lifetime3, var10, var11, var6Lifetime3, var7Lifetime3, var8Lifetime3, field_n[0], field_n[1], field_n[2]);
+            fk.drawShadedTriangle(var9Lifetime3, var11, field_s[3], var6Lifetime3, var8Lifetime3, field_r[3], field_n[0], field_n[2], field_n[3]);
           }
         }
     }
@@ -314,7 +314,7 @@ final class qf {
         qf.b();
     }
 
-    public static void c() {
+    public static void releaseStatics() {
         field_e = null;
         field_v = null;
         field_g = null;

@@ -10,14 +10,14 @@ final class ub extends nb {
     int field_C;
     static qm field_z;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_z = null;
         field_E = null;
         int var1 = 125 % ((-84 - param0) / 36);
         field_D = null;
     }
 
-    final byte[] b(byte param0) {
+    final byte[] getBytes(byte param0) {
         if (param0 != 39) {
           return (byte[]) null;
         }

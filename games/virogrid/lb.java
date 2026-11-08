@@ -202,7 +202,7 @@ final class lb {
               if (GameBoard.field_j == param2) {
                 var21 += 42;
               }
-              var20 = e.a(var12.field_Lb.field_C, var20, var21);
+              var20 = e.truncateWithEllipsis(var12.field_Lb.field_C, var20, var21);
               stackIn_91_0 = (var20.equals(var12.field_Eb)) ? 0 : 1;
               var22 = stackIn_91_0;
               if (4 <= var12.field_Ub) {
@@ -303,7 +303,7 @@ final class lb {
               }
               var23 = he.a(var20, var12.field_Wb, true);
               if (var23 != null) {
-                var24_intLifetime1 = var12.field_Yb.field_C.b(var23, var12.field_K - qi.field_d - qi.field_d);
+                var24_intLifetime1 = var12.field_Yb.field_C.wrappedLineCount(var23, var12.field_K - qi.field_d - qi.field_d);
                 var12.field_Yb.field_V = var23;
                 var12.field_Yb.field_H = var12.field_Gb * 256 / fn.field_c;
                 var12.field_Yb.a(qi.field_d, pg.field_e * var24_intLifetime1, -(qi.field_d * 2) + var12.field_K, (byte) -122, var19);

@@ -78,7 +78,7 @@ final class nh {
           if (var2 > -1L &&
             var4 > var2) {
             var6 = (int)(var4 - var2);
-            ek.a(this.field_i, (int)(var2 - this.field_m), this.field_e, (int)(var2 - this.field_f), var6);
+            ek.copy(this.field_i, (int)(var2 - this.field_m), this.field_e, (int)(var2 - this.field_f), var6);
           }
           this.field_m = -1L;
           this.field_p = 0;
@@ -113,7 +113,7 @@ final class nh {
             if (this.field_m != -1L &&
               this.field_j >= this.field_m &&
               ((long)param1 + this.field_j) <= (this.field_m + (long)this.field_p)) {
-              ek.a(this.field_i, (int)(-this.field_m + this.field_j), param2, param0, param1);
+              ek.copy(this.field_i, (int)(-this.field_m + this.field_j), param2, param0, param1);
               this.field_j = this.field_j + (long)param1;
               return;
             }
@@ -129,7 +129,7 @@ final class nh {
               if (param1 < var9_int) {
                 var9_int = param1;
               }
-              ek.a(this.field_e, (int)(this.field_j - this.field_f), param2, param0, var9_int);
+              ek.copy(this.field_e, (int)(this.field_j - this.field_f), param2, param0, var9_int);
               param0 = param0 + var9_int;
               this.field_j = this.field_j + (long)var9_int;
               param1 = param1 - var9_int;
@@ -160,7 +160,7 @@ final class nh {
               if (var9_intLifetime1Lifetime1 > this.field_k) {
                 var9_intLifetime1Lifetime1 = this.field_k;
               }
-              ek.a(this.field_e, 0, param2, param0, var9_intLifetime1Lifetime1);
+              ek.copy(this.field_e, 0, param2, param0, var9_intLifetime1Lifetime1);
               this.field_j = this.field_j + (long)var9_intLifetime1Lifetime1;
               param0 = param0 + var9_intLifetime1Lifetime1;
               param1 = param1 - var9_intLifetime1Lifetime1;
@@ -203,7 +203,7 @@ final class nh {
               if (var9 > -1L &&
                 var11 > var9) {
                 var13 = (int)(-var9 + var11);
-                ek.a(this.field_i, (int)(-this.field_m + var9), param2, var7 + (int)(var9 - var5_long), var13);
+                ek.copy(this.field_i, (int)(-this.field_m + var9), param2, var7 + (int)(var9 - var5_long), var13);
                 if (this.field_j < var11) {
                   param1 = (int)((long)param1 - (var11 - this.field_j));
                   this.field_j = var11;
@@ -327,7 +327,7 @@ final class nh {
             if (this.field_m != -1L &&
               this.field_j + (long)param2 > this.field_m + (long)this.field_i.length) {
               var5_int = (int)((long)this.field_i.length - this.field_j + this.field_m);
-              ek.a(param1, param0, this.field_i, (int)(this.field_j - this.field_m), var5_int);
+              ek.copy(param1, param0, this.field_i, (int)(this.field_j - this.field_m), var5_int);
               param2 = param2 - var5_int;
               this.field_j = this.field_j + (long)var5_int;
               param0 = param0 + var5_int;
@@ -341,7 +341,7 @@ final class nh {
               if (this.field_m == -1L) {
                 this.field_m = this.field_j;
               }
-              ek.a(param1, param0, this.field_i, (int)(-this.field_m + this.field_j), param2);
+              ek.copy(param1, param0, this.field_i, (int)(-this.field_m + this.field_j), param2);
               this.field_j = this.field_j + (long)param2;
               if (-this.field_m + this.field_j > (long)this.field_p) {
                 this.field_p = (int)(this.field_j - this.field_m);
@@ -380,7 +380,7 @@ final class nh {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(-var5_long + var7);
-              ek.a(param1, (int)(var5_long + ((long)param0 - this.field_j)), this.field_e, (int)(var5_long - this.field_f), var9);
+              ek.copy(param1, (int)(var5_long + ((long)param0 - this.field_j)), this.field_e, (int)(var5_long - this.field_f), var9);
             }
             this.field_j = this.field_j + (long)param2;
             return;
@@ -404,7 +404,7 @@ final class nh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_s = null;
         if (param0) {
           field_r = (String) null;

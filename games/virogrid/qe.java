@@ -10,7 +10,7 @@ abstract class qe extends mi implements bo {
     static int field_m;
     static String field_l;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_l = null;
         if (param0 == -36) {
@@ -18,7 +18,7 @@ abstract class qe extends mi implements bo {
           field_j = null;
           return;
         }
-        qe.b((byte) 64);
+        qe.releaseStatics((byte) 64);
         field_h = null;
         field_j = null;
     }
@@ -47,7 +47,7 @@ abstract class qe extends mi implements bo {
           var2 = (pe) (co.field_a.a((byte) -105));
           while (var2 != null) {
             if (var2.field_h.b(false)) {
-              var2.field_g.f(ag.field_c * var2.field_i + 128 >> 8);
+              var2.field_g.setVolumeQ6(ag.field_c * var2.field_i + 128 >> 8);
             } else {
               var2.a(false);
             }
@@ -60,7 +60,7 @@ abstract class qe extends mi implements bo {
               if (!stackIn_14_0) {
                 var2Lifetime1.a(false);
               } else {
-                var2Lifetime1.field_g.f(128 + var2Lifetime1.field_i * ag.field_c >> 8);
+                var2Lifetime1.field_g.setVolumeQ6(128 + var2Lifetime1.field_i * ag.field_c >> 8);
               }
               var2Lifetime1 = (pe) (gk.field_f.a(16213));
             }
@@ -172,7 +172,7 @@ abstract class qe extends mi implements bo {
         return 86;
     }
 
-    public final void a(wa param0, int param1) {
+    public final void onTextChanged(wa param0, int param1) {
         if (param1 != 13) {
           return;
         }

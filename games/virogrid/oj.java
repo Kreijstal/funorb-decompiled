@@ -96,7 +96,7 @@ final class oj extends SpriteWidget {
             }
             this.field_Ib[var13] = new hk(0L, param2, (SpriteWidget) null, param3, (Sprite) (var14), param6[var13]);
             this.a(0, this.field_Ib[var13]);
-            var15 = var17.a(param6[var13]);
+            var15 = var17.textWidth(param6[var13]);
             if (var15 > this.field_Eb) {
               this.field_Eb = var15;
             }
@@ -270,7 +270,7 @@ final class oj extends SpriteWidget {
         return true;
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 123 % ((param0 + 52) / 43);
         field_Xb = null;
         field_Fb = null;
@@ -631,13 +631,13 @@ final class oj extends SpriteWidget {
           }
           var4Lifetime1 = 0;
           if (wn.field_C == 2) {
-            var4Lifetime1 = vg.smallFont.a(sl.textSwitch2d) + 17;
+            var4Lifetime1 = vg.smallFont.textWidth(sl.textSwitch2d) + 17;
             if (var4Lifetime1 < 135) {
               var4Lifetime1 = 135;
             }
           } else {
             if (wn.field_C == 1) {
-              var4Lifetime1 = vg.smallFont.a(o.textSwitch3d) + 17 + 8;
+              var4Lifetime1 = vg.smallFont.textWidth(o.textSwitch3d) + 17 + 8;
             }
           }
           kd.field_t = kd.field_t + 0.10000000149011612f * (-kd.field_t + (float)var4Lifetime1);
@@ -705,7 +705,7 @@ final class oj extends SpriteWidget {
           we.field_h = param1 * 6;
           ve.field_x = new int[we.field_h + (we.field_h * (1 + we.field_h) / 2 + 1)];
           if (param0 != -9) {
-            oj.f((byte) -16);
+            oj.releaseStatics((byte) -16);
           }
           for (var2_int = 0; var2_int < we.field_h; var2_int++) {
             var3 = var2_int * var2_int;

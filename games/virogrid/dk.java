@@ -76,8 +76,8 @@ abstract class dk {
               sg.field_l = hc.a(-9986) + 30000L;
             }
             if (ij.field_q == 3) {
-              if (0 < ng.field_N.f(31479)) {
-                var1_int = ng.field_N.a(param0 - 109);
+              if (0 < ng.field_N.available(31479)) {
+                var1_int = ng.field_N.readUnsignedByte(param0 - 109);
                 if (0 != var1_int) {
                   stackIn_28_0 = bk.a(var1_int, 1);
                   return stackIn_28_0;

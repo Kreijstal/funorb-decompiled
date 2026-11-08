@@ -119,7 +119,7 @@ final class hi {
     final int c() {
         int var1 = 0;
         while (this.field_c[var1] >= 0) {
-          var1 = gj.b() != 0 ? this.field_c[var1] : var1 + 1;
+          var1 = gj.readBit() != 0 ? this.field_c[var1] : var1 + 1;
         }
         return ~this.field_c[var1];
     }
@@ -153,17 +153,17 @@ final class hi {
         int var2Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
-        gj.a(24);
-        this.field_b = gj.a(16);
-        this.field_d = gj.a(24);
+        gj.readBits(24);
+        this.field_b = gj.readBits(16);
+        this.field_d = gj.readBits(24);
         this.field_a = new int[this.field_d];
-        stackIn_3_0 = (gj.b() == 0) ? 0 : 1;
+        stackIn_3_0 = (gj.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 != 0) {
           var2 = 0;
-          var3_int = gj.a(5) + 1;
+          var3_int = gj.readBits(5) + 1;
           while (var2 < this.field_d) {
-            var4_int = gj.a(pn.a(this.field_d - var2, (byte) -94));
+            var4_int = gj.readBits(pn.a(this.field_d - var2, (byte) -94));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
@@ -172,27 +172,27 @@ final class hi {
             var3_int++;
           }
         } else {
-          stackIn_13_0 = (gj.b() == 0) ? 0 : 1;
+          stackIn_13_0 = (gj.readBit() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           var14 = 0;
           var3_int = var14;
           while (var14 < this.field_d) {
             if (var2 != 0 &&
-              gj.b() == 0) {
+              gj.readBit() == 0) {
               this.field_a[var14] = 0;
             } else {
-              this.field_a[var14] = gj.a(5) + 1;
+              this.field_a[var14] = gj.readBits(5) + 1;
             }
             var14++;
           }
         }
         this.a();
-        var2Lifetime1 = gj.a(4);
+        var2Lifetime1 = gj.readBits(4);
         if (var2Lifetime1 > 0) {
-          var3 = gj.c(gj.a(32));
-          var4 = gj.c(gj.a(32));
-          var5Lifetime1 = gj.a(4) + 1;
-          stackIn_25_0 = (gj.b() == 0) ? 0 : 1;
+          var3 = gj.unpackFloat(gj.readBits(32));
+          var4 = gj.unpackFloat(gj.readBits(32));
+          var5Lifetime1 = gj.readBits(4) + 1;
+          stackIn_25_0 = (gj.readBit() == 0) ? 0 : 1;
           var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
             var7 = this.field_d * this.field_b;
@@ -201,7 +201,7 @@ final class hi {
           }
           this.field_f = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {
-            this.field_f[var8] = gj.a(var5Lifetime1);
+            this.field_f[var8] = gj.readBits(var5Lifetime1);
           }
           this.field_e = new float[this.field_d][this.field_b];
           if (var2Lifetime1 != 1) {

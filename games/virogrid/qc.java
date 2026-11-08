@@ -129,7 +129,7 @@ final class qc {
         return true;
     }
 
-    final static Sprite[] a(int param0, Sprite param1) {
+    final static Sprite[] centerOnlyPanelSlices(int param0, Sprite param1) {
         Sprite[] var2 = null;
         RuntimeException var2_ref = null;
         Sprite[] var3 = null;

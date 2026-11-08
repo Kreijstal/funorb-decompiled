@@ -18,7 +18,7 @@ final class jh extends AudioStream {
     private int field_v;
     private int field_w;
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, jh param11, int param12, int param13) {
+    private final static int mixReverseMonoInterpolatedRamp(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, jh param11, int param12, int param13) {
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
         param11.field_y = param11.field_y - param11.field_l * param5;
@@ -62,18 +62,18 @@ final class jh extends AudioStream {
         return param5;
     }
 
-    final AudioStream b() {
+    final AudioStream nextSubStream() {
         return null;
     }
 
-    private final synchronized void a(int param0, int param1) {
+    private final synchronized void setVolumeAndPan(int param0, int param1) {
         this.field_o = param0;
         this.field_k = param1;
         this.field_t = 0;
-        this.h();
+        this.refreshGains();
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, jh param10, int param11, int param12) {
+    private final static int mixReverseMonoInterpolated(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, jh param10, int param11, int param12) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         if (param11 != 0) {
@@ -110,7 +110,7 @@ final class jh extends AudioStream {
         return param5;
     }
 
-    final int a() {
+    final int priority() {
         int var1 = this.field_n * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_v == 0) {
@@ -123,7 +123,7 @@ final class jh extends AudioStream {
         return var1 > 255 ? 255 : var1;
     }
 
-    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, jh param8) {
+    private final static int mixForwardMonoAligned(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, jh param8) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -176,7 +176,7 @@ final class jh extends AudioStream {
         return param3;
     }
 
-    final static jh a(ml param0, int param1, int param2, int param3) {
+    final static jh createAtRatePercentQ6(ml param0, int param1, int param2, int param3) {
         if (param0.field_k == null) {
           return null;
         }
@@ -186,26 +186,26 @@ final class jh extends AudioStream {
         return null;
     }
 
-    private final void e() {
+    private final void cancelRamp() {
         if (this.field_t != 0) {
           if (this.field_o == -2147483648) {
             this.field_o = 0;
           }
           this.field_t = 0;
-          this.h();
+          this.refreshGains();
           return;
         }
     }
 
-    final synchronized int k() {
+    final synchronized int getSampleStepMagnitude() {
         return this.field_q < 0 ? -this.field_q : this.field_q;
     }
 
-    final synchronized void f(int param0) {
-        this.a(param0, this.f());
+    final synchronized void setVolumeQ6(int param0) {
+        this.setVolumeAndPan(param0, this.panQ14());
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, jh param10, int param11, int param12) {
+    private final static int mixForwardMonoInterpolated(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, jh param10, int param11, int param12) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         if (param11 != 0) {
@@ -242,7 +242,7 @@ final class jh extends AudioStream {
         return param5;
     }
 
-    final static jh a(ml param0, int param1, int param2) {
+    final static jh createAtRatePercent(ml param0, int param1, int param2) {
         if (param0.field_k == null) {
           return null;
         }
@@ -252,21 +252,21 @@ final class jh extends AudioStream {
         return null;
     }
 
-    private final int a(int[] param0, int param1, int param2, int param3, int param4) {
+    private final int mixForward(int[] param0, int param1, int param2, int param3, int param4) {
         int var6;
         do {
           if (this.field_t <= 0) {
             if (this.field_q == 256 &&
               (this.field_w & 255) == 0) {
               if (ua.field_q) {
-                return jh.a(0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, 0, param3, param2, this);
+                return jh.mixForwardStereoAligned(0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, 0, param3, param2, this);
               }
-              return jh.b(((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, 0, param3, param2, this);
+              return jh.mixForwardMonoAligned(((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, 0, param3, param2, this);
             }
             if (ua.field_q) {
-              return jh.c(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, 0, param3, param2, this, this.field_q, param4);
+              return jh.mixForwardStereoInterpolated(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, 0, param3, param2, this, this.field_q, param4);
             }
-            return jh.b(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, 0, param3, param2, this, this.field_q, param4);
+            return jh.mixForwardMonoInterpolated(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, 0, param3, param2, this, this.field_q, param4);
           }
           var6 = param1 + this.field_t;
           if (var6 > param3) {
@@ -276,26 +276,26 @@ final class jh extends AudioStream {
           if (this.field_q == 256 &&
             (this.field_w & 255) == 0) {
             if (!ua.field_q) {
-              param1 = jh.b(((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, this.field_m, 0, var6, param2, this);
+              param1 = jh.mixForwardMonoAlignedRamp(((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, this.field_m, 0, var6, param2, this);
             } else {
-              param1 = jh.a(0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, this.field_l, this.field_s, 0, var6, param2, this);
+              param1 = jh.mixForwardStereoAlignedRamp(0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, this.field_l, this.field_s, 0, var6, param2, this);
             }
           } else {
             if (!ua.field_q) {
-              param1 = jh.d(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, this.field_m, 0, var6, param2, this, this.field_q, param4);
+              param1 = jh.mixForwardMonoInterpolatedRamp(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, this.field_m, 0, var6, param2, this, this.field_q, param4);
             } else {
-              param1 = jh.a(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, this.field_l, this.field_s, 0, var6, param2, this, this.field_q, param4);
+              param1 = jh.mixForwardStereoInterpolatedRamp(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, this.field_l, this.field_s, 0, var6, param2, this, this.field_q, param4);
             }
           }
           this.field_t = this.field_t - param1;
           if (this.field_t != 0) {
             return param1;
           }
-        } while (!this.g());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
-    final int d() {
+    final int activity() {
         if (this.field_o == 0 &&
           this.field_t == 0) {
           return 0;
@@ -303,13 +303,13 @@ final class jh extends AudioStream {
         return 1;
     }
 
-    private final void h() {
+    private final void refreshGains() {
         this.field_n = this.field_o;
-        this.field_y = jh.b(this.field_o, this.field_k);
-        this.field_x = jh.c(this.field_o, this.field_k);
+        this.field_y = jh.leftGain(this.field_o, this.field_k);
+        this.field_x = jh.rightGain(this.field_o, this.field_k);
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void setPosition(int param0) {
         int var2 = ((ml) (this.field_j)).field_k.length << 8;
         if (param0 < -1) {
           param0 = -1;
@@ -320,15 +320,15 @@ final class jh extends AudioStream {
         this.field_w = param0;
     }
 
-    final synchronized void a(int param0, int param1, int param2) {
+    final synchronized void rampVolumeAndPan(int param0, int param1, int param2) {
         int var6 = 0;
         int var6Lifetime1;
         if (param0 == 0) {
-          this.a(param1, param2);
+          this.setVolumeAndPan(param1, param2);
           return;
         }
-        int var4 = jh.b(param1, param2);
-        int var5 = jh.c(param1, param2);
+        int var4 = jh.leftGain(param1, param2);
+        int var5 = jh.rightGain(param1, param2);
         if (this.field_y != var4) {
           var6 = param1 - this.field_n;
           if (this.field_n - param1 > var6) {
@@ -388,7 +388,7 @@ final class jh extends AudioStream {
         this.field_t = 0;
     }
 
-    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, jh param8) {
+    private final static int mixReverseMonoAligned(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, jh param8) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -441,11 +441,11 @@ final class jh extends AudioStream {
         return param3;
     }
 
-    final synchronized void g(int param0) {
+    final synchronized void fadeOutAndUnlink(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
-          this.f(0);
+          this.setVolumeQ6(0);
           this.a(false);
           return;
         }
@@ -509,15 +509,15 @@ final class jh extends AudioStream {
         this.a(false);
     }
 
-    final synchronized int f() {
+    final synchronized int panQ14() {
         return this.field_k < 0 ? -1 : this.field_k;
     }
 
-    final synchronized int l() {
+    final synchronized int getTargetVolume() {
         return this.field_o == -2147483648 ? 0 : this.field_o;
     }
 
-    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, jh param10) {
+    private final static int mixForwardStereoAligned(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, jh param10) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -583,14 +583,14 @@ final class jh extends AudioStream {
         return param4 >> 1;
     }
 
-    private final boolean g() {
+    private final boolean finishOrContinueVolumeRamp() {
         int var1;
         int var2;
         int var3;
         var1 = this.field_o;
         if (var1 != -2147483648) {
-          var2 = jh.b(var1, this.field_k);
-          var3 = jh.c(var1, this.field_k);
+          var2 = jh.leftGain(var1, this.field_k);
+          var3 = jh.rightGain(var1, this.field_k);
         } else {
           var3 = 0;
           var2 = 0;
@@ -600,7 +600,7 @@ final class jh extends AudioStream {
           this.field_y == var2 &&
           this.field_x == var3) {
           if (this.field_o != -2147483648) {
-            this.h();
+            this.refreshGains();
             return false;
           }
           this.field_o = 0;
@@ -659,7 +659,7 @@ final class jh extends AudioStream {
         return false;
     }
 
-    private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, jh param11, int param12, int param13) {
+    private final static int mixForwardMonoInterpolatedRamp(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, jh param11, int param12, int param13) {
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
         param11.field_y = param11.field_y - param11.field_l * param5;
@@ -703,7 +703,7 @@ final class jh extends AudioStream {
         return param5;
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -719,7 +719,7 @@ final class jh extends AudioStream {
         int var10Lifetime1;
         if (this.field_o == 0 &&
           this.field_t == 0) {
-          this.a(param2);
+          this.skipFrames(param2);
           return;
         }
         var4 = (ml) (this.field_j);
@@ -734,7 +734,7 @@ final class jh extends AudioStream {
         param2 = param2 + param1;
         if (this.field_w < 0) {
           if (this.field_q <= 0) {
-            this.e();
+            this.cancelRamp();
             this.a(false);
             return;
           }
@@ -742,7 +742,7 @@ final class jh extends AudioStream {
         }
         if (this.field_w >= var7) {
           if (this.field_q >= 0) {
-            this.e();
+            this.cancelRamp();
             this.a(false);
             return;
           }
@@ -752,7 +752,7 @@ final class jh extends AudioStream {
           if (!this.field_p) {
             if (this.field_q >= 0) {
               while (true) {
-                var9 = this.a(param0, var9, var6, param2, (int) var4.field_k[this.field_u]);
+                var9 = this.mixForward(param0, var9, var6, param2, (int) var4.field_k[this.field_u]);
                 if (this.field_w < var6) {
                   return;
                 }
@@ -760,7 +760,7 @@ final class jh extends AudioStream {
               }
             }
             while (true) {
-              var9 = this.b(param0, var9, var5, param2, (int) var4.field_k[this.field_r - 1]);
+              var9 = this.mixReverse(param0, var9, var5, param2, (int) var4.field_k[this.field_r - 1]);
               if (this.field_w >= var5) {
                 return;
               }
@@ -768,7 +768,7 @@ final class jh extends AudioStream {
             }
           }
           if (this.field_q < 0) {
-            var9 = this.b(param0, var9, var5, param2, (int) var4.field_k[this.field_u]);
+            var9 = this.mixReverse(param0, var9, var5, param2, (int) var4.field_k[this.field_u]);
             if (this.field_w >= var5) {
               return;
             }
@@ -776,13 +776,13 @@ final class jh extends AudioStream {
             this.field_q = -this.field_q;
           }
           while (true) {
-            var9 = this.a(param0, var9, var6, param2, (int) var4.field_k[this.field_r - 1]);
+            var9 = this.mixForward(param0, var9, var6, param2, (int) var4.field_k[this.field_r - 1]);
             if (this.field_w < var6) {
               return;
             }
             this.field_w = var6 + var6 - 1 - this.field_w;
             this.field_q = -this.field_q;
-            var9 = this.b(param0, var9, var5, param2, (int) var4.field_k[this.field_u]);
+            var9 = this.mixReverse(param0, var9, var5, param2, (int) var4.field_k[this.field_u]);
             if (this.field_w >= var5) {
               return;
             }
@@ -795,7 +795,7 @@ final class jh extends AudioStream {
           if (!this.field_p) {
             if (this.field_q < 0) {
               while (true) {
-                var9 = this.b(param0, var9, var5, param2, (int) var4.field_k[this.field_r - 1]);
+                var9 = this.mixReverse(param0, var9, var5, param2, (int) var4.field_k[this.field_r - 1]);
                 if (this.field_w >= var5) {
                   return;
                 }
@@ -811,7 +811,7 @@ final class jh extends AudioStream {
               this.field_v = 0;
             } else {
               while (true) {
-                var9 = this.a(param0, var9, var6, param2, (int) var4.field_k[this.field_u]);
+                var9 = this.mixForward(param0, var9, var6, param2, (int) var4.field_k[this.field_u]);
                 if (this.field_w < var6) {
                   return;
                 }
@@ -830,7 +830,7 @@ final class jh extends AudioStream {
           }
           else {
             if (this.field_q < 0) {
-              var9 = this.b(param0, var9, var5, param2, (int) var4.field_k[this.field_u]);
+              var9 = this.mixReverse(param0, var9, var5, param2, (int) var4.field_k[this.field_u]);
               if (this.field_w >= var5) {
                 return;
               }
@@ -842,7 +842,7 @@ final class jh extends AudioStream {
             }
             if (decompiledFrameRemainder0) {
               do {
-                var9 = this.a(param0, var9, var6, param2, (int) var4.field_k[this.field_r - 1]);
+                var9 = this.mixForward(param0, var9, var6, param2, (int) var4.field_k[this.field_r - 1]);
                 if (this.field_w < var6) {
                   return;
                 }
@@ -853,7 +853,7 @@ final class jh extends AudioStream {
                 if (fieldTemp$1 == 0) {
                   break;
                 }
-                var9 = this.b(param0, var9, var5, param2, (int) var4.field_k[this.field_u]);
+                var9 = this.mixReverse(param0, var9, var5, param2, (int) var4.field_k[this.field_u]);
                 if (this.field_w >= var5) {
                   return;
                 }
@@ -866,29 +866,29 @@ final class jh extends AudioStream {
           }
         }
         if (this.field_q >= 0) {
-          discarded$4 = this.a(param0, var9, var7, param2, 0);
+          discarded$4 = this.mixForward(param0, var9, var7, param2, 0);
           if (this.field_w >= var7) {
             this.field_w = var7;
-            this.e();
+            this.cancelRamp();
             this.a(false);
           }
           return;
         }
-        discarded$3 = this.b(param0, var9, 0, param2, 0);
+        discarded$3 = this.mixReverse(param0, var9, 0, param2, 0);
         if (this.field_w >= 0) {
           return;
         }
         this.field_w = -1;
-        this.e();
+        this.cancelRamp();
         this.a(false);
         return;
     }
 
-    final synchronized void e(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_v = param0;
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, jh param13, int param14, int param15) {
+    private final static int mixForwardStereoInterpolatedRamp(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, jh param13, int param14, int param15) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -947,7 +947,7 @@ final class jh extends AudioStream {
         return param5;
     }
 
-    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, jh param12) {
+    private final static int mixForwardStereoAlignedRamp(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, jh param12) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -1028,7 +1028,7 @@ final class jh extends AudioStream {
         return param4 >> 1;
     }
 
-    final static jh b(ml param0, int param1, int param2, int param3) {
+    final static jh createAtStepQ8(ml param0, int param1, int param2, int param3) {
         if (param0.field_k == null) {
           return null;
         }
@@ -1038,7 +1038,7 @@ final class jh extends AudioStream {
         return null;
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, jh param13, int param14, int param15) {
+    private final static int mixReverseStereoInterpolatedRamp(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, jh param13, int param14, int param15) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -1096,7 +1096,7 @@ final class jh extends AudioStream {
         return param5;
     }
 
-    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, jh param9) {
+    private final static int mixReverseMonoAlignedRamp(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, jh param9) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1158,11 +1158,11 @@ final class jh extends AudioStream {
         return param3;
     }
 
-    final synchronized void d(int param0, int param1) {
-        this.a(param0, param1, this.f());
+    final synchronized void rampVolumeQ6(int param0, int param1) {
+        this.rampVolumeAndPan(param0, param1, this.panQ14());
     }
 
-    private final static int c(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, jh param11, int param12, int param13) {
+    private final static int mixForwardStereoInterpolated(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, jh param11, int param12, int param13) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -1212,7 +1212,7 @@ final class jh extends AudioStream {
         return param5 >> 1;
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void setSampleStepMagnitude(int param0) {
         if (this.field_q < 0) {
           this.field_q = -param0;
         } else {
@@ -1220,29 +1220,29 @@ final class jh extends AudioStream {
         }
     }
 
-    final synchronized boolean j() {
+    final synchronized boolean isSamplePositionOutOfRange() {
         return this.field_w < 0 || this.field_w >= ((ml) (this.field_j)).field_k.length << 8;
     }
 
-    private final static int b(int param0, int param1) {
+    private final static int leftGain(int param0, int param1) {
         return param1 < 0 ? param0 : (int)((double)param0 * Math.sqrt((double)(16384 - param1) * 0.0001220703125) + 0.5);
     }
 
-    private final int b(int[] param0, int param1, int param2, int param3, int param4) {
+    private final int mixReverse(int[] param0, int param1, int param2, int param3, int param4) {
         int var6;
         do {
           if (this.field_t <= 0) {
             if (this.field_q == -256 &&
               (this.field_w & 255) == 0) {
               if (ua.field_q) {
-                return jh.b(0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, 0, param3, param2, this);
+                return jh.mixReverseStereoAligned(0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, 0, param3, param2, this);
               }
-              return jh.a(((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, 0, param3, param2, this);
+              return jh.mixReverseMonoAligned(((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, 0, param3, param2, this);
             }
             if (ua.field_q) {
-              return jh.b(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, 0, param3, param2, this, this.field_q, param4);
+              return jh.mixReverseStereoInterpolated(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, 0, param3, param2, this, this.field_q, param4);
             }
-            return jh.a(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, 0, param3, param2, this, this.field_q, param4);
+            return jh.mixReverseMonoInterpolated(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, 0, param3, param2, this, this.field_q, param4);
           }
           var6 = param1 + this.field_t;
           if (var6 > param3) {
@@ -1252,34 +1252,34 @@ final class jh extends AudioStream {
           if (this.field_q == -256 &&
             (this.field_w & 255) == 0) {
             if (!ua.field_q) {
-              param1 = jh.a(((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, this.field_m, 0, var6, param2, this);
+              param1 = jh.mixReverseMonoAlignedRamp(((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, this.field_m, 0, var6, param2, this);
             } else {
-              param1 = jh.b(0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, this.field_l, this.field_s, 0, var6, param2, this);
+              param1 = jh.mixReverseStereoAlignedRamp(0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, this.field_l, this.field_s, 0, var6, param2, this);
             }
           } else {
             if (!ua.field_q) {
-              param1 = jh.a(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, this.field_m, 0, var6, param2, this, this.field_q, param4);
+              param1 = jh.mixReverseMonoInterpolatedRamp(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_n, this.field_m, 0, var6, param2, this, this.field_q, param4);
             } else {
-              param1 = jh.b(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, this.field_l, this.field_s, 0, var6, param2, this, this.field_q, param4);
+              param1 = jh.mixReverseStereoInterpolatedRamp(0, 0, ((ml) (this.field_j)).field_k, param0, this.field_w, param1, this.field_y, this.field_x, this.field_l, this.field_s, 0, var6, param2, this, this.field_q, param4);
             }
           }
           this.field_t = this.field_t - param1;
           if (this.field_t != 0) {
             return param1;
           }
-        } while (!this.g());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
-    final synchronized boolean i() {
+    final synchronized boolean hasRemainingRampFrames() {
         return this.field_t != 0;
     }
 
-    final AudioStream c() {
+    final AudioStream firstSubStream() {
         return null;
     }
 
-    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, jh param10) {
+    private final static int mixReverseStereoAligned(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, jh param10) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -1345,7 +1345,7 @@ final class jh extends AudioStream {
         return param4 >> 1;
     }
 
-    final synchronized void c(boolean param0) {
+    final synchronized void setReversePlayback(boolean param0) {
         this.field_q = (this.field_q ^ this.field_q >> 31) + (this.field_q >>> 31);
         if (!param0) {
           return;
@@ -1353,7 +1353,7 @@ final class jh extends AudioStream {
         this.field_q = -this.field_q;
     }
 
-    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, jh param12) {
+    private final static int mixReverseStereoAlignedRamp(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, jh param12) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -1434,7 +1434,7 @@ final class jh extends AudioStream {
         return param4 >> 1;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1460,7 +1460,7 @@ final class jh extends AudioStream {
               param0 = this.field_t;
             }
             this.field_t = 0;
-            this.h();
+            this.refreshGains();
           }
         }
         var2 = (ml) (this.field_j);
@@ -1473,7 +1473,7 @@ final class jh extends AudioStream {
         }
         if (this.field_w < 0) {
           if (this.field_q <= 0) {
-            this.e();
+            this.cancelRamp();
             this.a(false);
             return;
           }
@@ -1481,7 +1481,7 @@ final class jh extends AudioStream {
         }
         if (this.field_w >= var5) {
           if (this.field_q >= 0) {
-            this.e();
+            this.cancelRamp();
             this.a(false);
             return;
           }
@@ -1594,7 +1594,7 @@ final class jh extends AudioStream {
         if (this.field_q >= 0) {
           if (this.field_w >= var5) {
             this.field_w = var5;
-            this.e();
+            this.cancelRamp();
             this.a(false);
           }
           return;
@@ -1603,7 +1603,7 @@ final class jh extends AudioStream {
           return;
         }
         this.field_w = -1;
-        this.e();
+        this.cancelRamp();
         this.a(false);
     }
 
@@ -1616,7 +1616,7 @@ final class jh extends AudioStream {
         this.field_o = param2;
         this.field_k = 8192;
         this.field_w = 0;
-        this.h();
+        this.refreshGains();
     }
 
     private jh(ml param0, int param1, int param2, int param3) {
@@ -1628,14 +1628,14 @@ final class jh extends AudioStream {
         this.field_o = param2;
         this.field_k = param3;
         this.field_w = 0;
-        this.h();
+        this.refreshGains();
     }
 
-    private final static int c(int param0, int param1) {
+    private final static int rightGain(int param0, int param1) {
         return param1 < 0 ? -param0 : (int)((double)param0 * Math.sqrt((double)param1 * 0.0001220703125) + 0.5);
     }
 
-    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, jh param9) {
+    private final static int mixForwardMonoAlignedRamp(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, jh param9) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1697,7 +1697,7 @@ final class jh extends AudioStream {
         return param3;
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, jh param11, int param12, int param13) {
+    private final static int mixReverseStereoInterpolated(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, jh param11, int param12, int param13) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;

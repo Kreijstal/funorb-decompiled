@@ -50,7 +50,7 @@ final class hn extends IntrusiveNode {
         }
         if (kh.field_d > 0) {
           if (ak.lobbyIcon != null) {
-            ak.lobbyIcon.b(WidgetContainer.field_y.field_tb, 0);
+            ak.lobbyIcon.drawOpaque(WidgetContainer.field_y.field_tb, 0);
           }
           stackIn_9_0 = WidgetContainer.field_y;
           stackIn_10_1 = (param1) && (!ao.field_Gb);
@@ -68,7 +68,7 @@ final class hn extends IntrusiveNode {
             stackIn_25_1 = (param1) && (!ad.field_h);
             ((SpriteWidget) (Object) stackIn_24_0).a(stackIn_25_1, 24960);
           } else {
-            ak.lobbyIcon.b(ao.field_Eb.field_tb, 0);
+            ak.lobbyIcon.drawOpaque(ao.field_Eb.field_tb, 0);
             stackIn_29_0 = ao.field_Eb;
             stackIn_30_1 = (param1) && (!ad.field_h);
             ((SpriteWidget) (Object) stackIn_29_0).a(stackIn_30_1, 24960);
@@ -86,7 +86,7 @@ final class hn extends IntrusiveNode {
               stackIn_47_1 = (param1) && (!ad.field_h);
               ((SpriteWidget) (Object) stackIn_46_0).a(stackIn_47_1, 24960);
             } else {
-              ak.lobbyIcon.b(ao.field_Eb.field_tb, 0);
+              ak.lobbyIcon.drawOpaque(ao.field_Eb.field_tb, 0);
               stackIn_51_0 = ao.field_Eb;
               stackIn_52_1 = (param1) && (!ad.field_h);
               ((SpriteWidget) (Object) stackIn_51_0).a(stackIn_52_1, 24960);
@@ -99,7 +99,7 @@ final class hn extends IntrusiveNode {
         ai.a(true);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_v = (int[][]) null;
         field_x = null;
         field_p = null;

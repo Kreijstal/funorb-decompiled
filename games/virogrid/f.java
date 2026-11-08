@@ -174,7 +174,7 @@ final class f implements Iterator {
           re.c((byte) 121);
         }
         if (param0 > -26) {
-          f.b((byte) -19);
+          f.releaseStatics((byte) -19);
         }
         bf.field_o = 0;
     }
@@ -204,7 +204,7 @@ final class f implements Iterator {
         return this.field_a != this.field_e.field_e;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_c = null;
         field_d = null;

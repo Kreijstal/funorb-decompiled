@@ -21,12 +21,12 @@ final class pa extends AudioStream {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    final void a(int param0) {
+    final void skipFrames(int param0) {
         int var2;
         wn var3;
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
-        this.field_n.a(param0);
+        this.field_n.skipFrames(param0);
         var3 = (wn) (this.field_k.a((byte) -111));
         while (var3 != null) {
           if (!this.field_m.b(-109, var3)) {
@@ -45,7 +45,7 @@ final class pa extends AudioStream {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         wn var6 = null;
@@ -58,7 +58,7 @@ final class pa extends AudioStream {
         RuntimeException var4 = null;
         var7 = Virogrid.field_F ? 1 : 0;
         try {
-          this.field_n.b(param0, param1, param2);
+          this.field_n.mixInto(param0, param1, param2);
           var6 = (wn) (this.field_k.a((byte) -93));
           while (var6 != null) {
             stackIn_4_0 = this.field_m.b(-124, var6);
@@ -139,7 +139,7 @@ final class pa extends AudioStream {
               if (!param1) {
                 ab.field_G = dg.a(param5, 16711935, param0, false);
               } else {
-                ab.field_G = pl.a(md.field_a, (String) null, param3 + 184, param0, false);
+                ab.field_G = pl.createCredentials(md.field_a, (String) null, param3 + 184, param0, false);
               }
               gk.field_g.position = 0;
               gk.field_g.a(14, -77);
@@ -250,7 +250,7 @@ final class pa extends AudioStream {
               if (0 >= bn.field_d &&
                 !cj.field_l) {
                 try {
-                  q.b("unzap", 6168, mb.g((byte) 32));
+                  q.callJavaScript("unzap", 6168, mb.g((byte) 32));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -334,7 +334,7 @@ final class pa extends AudioStream {
         }
     }
 
-    final AudioStream c() {
+    final AudioStream firstSubStream() {
         wn var1 = (wn) (this.field_k.a((byte) -77));
         if (var1 == null) {
           return null;
@@ -342,10 +342,10 @@ final class pa extends AudioStream {
         if (var1.field_p != null) {
           return (AudioStream) ((Object) var1.field_p);
         }
-        return this.b();
+        return this.nextSubStream();
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_o = (SpriteWidget) null;
         }
@@ -353,7 +353,7 @@ final class pa extends AudioStream {
         field_o = null;
     }
 
-    final int d() {
+    final int activity() {
         return 0;
     }
 
@@ -403,24 +403,24 @@ final class pa extends AudioStream {
             param2.field_B = 1048575 & param2.field_B + param1 * var4_int;
             if (param1 >= var5) {
               if (this.field_m.field_S[param2.field_h] == 0) {
-                param2.field_p = jh.b(param2.field_q, param2.field_p.k(), param2.field_p.l(), param2.field_p.f());
+                param2.field_p = jh.createAtStepQ8(param2.field_q, param2.field_p.getSampleStepMagnitude(), param2.field_p.getTargetVolume(), param2.field_p.panQ14());
               } else {
-                param2.field_p = jh.b(param2.field_q, param2.field_p.k(), 0, param2.field_p.f());
+                param2.field_p = jh.createAtStepQ8(param2.field_q, param2.field_p.getSampleStepMagnitude(), 0, param2.field_p.panQ14());
                 stackIn_8_0 = this.field_m;
                 stackIn_9_1 = !(param2.field_E.field_p[param2.field_l] >= 0);
                 ((i) (Object) stackIn_8_0).a(stackIn_9_1, -16257, param2);
               }
               if (param2.field_E.field_p[param2.field_l] < 0) {
-                param2.field_p.e(-1);
+                param2.field_p.setLoopCount(-1);
               }
               param1 = param2.field_B / var4_int;
             }
           }
           if (!param0) {
             var6 = (int[]) null;
-            this.b((int[]) null, 69, -108);
+            this.mixInto((int[]) null, 69, -108);
           }
-          param2.field_p.a(param1);
+          param2.field_p.skipFrames(param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -463,7 +463,7 @@ final class pa extends AudioStream {
                 param1.field_B = param1.field_B + var7_int * param0;
                 break;
               }
-              param1.field_p.b(param2, param4, var8);
+              param1.field_p.mixInto(param2, param4, var8);
               param4 = param4 + var8;
               param1.field_B = param1.field_B + (var8 * var7_int - 1048576);
               param0 = param0 - var8;
@@ -474,20 +474,20 @@ final class pa extends AudioStream {
               }
               var11 = param1.field_p;
               if (this.field_m.field_S[param1.field_h] != 0) {
-                param1.field_p = jh.b(param1.field_q, var11.k(), 0, var11.f());
+                param1.field_p = jh.createAtStepQ8(param1.field_q, var11.getSampleStepMagnitude(), 0, var11.panQ14());
                 stackIn_14_0 = this.field_m;
                 stackIn_15_1 = !(param1.field_E.field_p[param1.field_l] >= 0);
                 ((i) (Object) stackIn_14_0).a(stackIn_15_1, -16257, param1);
-                param1.field_p.d(var9, var11.l());
+                param1.field_p.rampVolumeQ6(var9, var11.getTargetVolume());
               } else {
-                param1.field_p = jh.b(param1.field_q, var11.k(), var11.l(), var11.f());
+                param1.field_p = jh.createAtStepQ8(param1.field_q, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.panQ14());
               }
               if (0 > param1.field_E.field_p[param1.field_l]) {
-                param1.field_p.e(-1);
+                param1.field_p.setLoopCount(-1);
               }
-              var11.g(var9);
-              var11.b(param2, param4, -param4 + param5);
-              if (!var11.i()) {
+              var11.fadeOutAndUnlink(var9);
+              var11.mixInto(param2, param4, -param4 + param5);
+              if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
               this.field_n.a(var11);
@@ -496,7 +496,7 @@ final class pa extends AudioStream {
           if (param3 != 46) {
             return;
           }
-          param1.field_p.b(param2, param4, param0);
+          param1.field_p.mixInto(param2, param4, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -518,7 +518,7 @@ final class pa extends AudioStream {
         }
     }
 
-    final AudioStream b() {
+    final AudioStream nextSubStream() {
         wn var1_ref = null;
         int var2 = Virogrid.field_F ? 1 : 0;
         do {

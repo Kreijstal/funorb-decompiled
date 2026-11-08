@@ -50,7 +50,7 @@ final class jg {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 28275) {
           return;
         }
@@ -89,7 +89,7 @@ final class jg {
             param0[0] <= 0) {
             return null;
           }
-          var9 = vn.a(this.field_f, param3, param2);
+          var9 = vn.load(this.field_f, param3, param2);
           if (var9 == null) {
             stackIn_9_0 = null;
             return (ml) (stackIn_9_0);
@@ -98,7 +98,7 @@ final class jg {
             var10 = (int[]) null;
             this.a((int[]) null, 119, 9);
           }
-          var11 = var9.b();
+          var11 = var9.toPcmSample();
           var8Lifetime1 = var11;
           this.field_a.a(var8Lifetime1, (byte) 2, var6);
           if (param0 != null) {
@@ -389,7 +389,7 @@ final class jg {
             }
             this.field_h.a(var9, (byte) 21, var6);
           }
-          var8Lifetime1 = var9.a(param0);
+          var8Lifetime1 = var9.decodeToPcm(param0);
           if (var8Lifetime1 == null) {
             return null;
           }

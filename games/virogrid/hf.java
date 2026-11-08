@@ -51,7 +51,7 @@ final class hf extends aj {
           stackIn_19_0 = (param2) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
           kd.a(this.field_x, param1.field_u + param3 + (param1.field_m - this.field_x[0].field_z >> 1), false, param1.field_g, param1.field_l + param0, var7);
-          this.field_i.a(param1.field_n, param0 + param1.field_l, param3 + param1.field_u - 2, param1.field_g, param1.field_m, var8, -1, 1, 1, this.field_i.field_H);
+          this.field_i.drawParagraph(param1.field_n, param0 + param1.field_l, param3 + param1.field_u - 2, param1.field_g, param1.field_m, var8, -1, 1, 1, this.field_i.field_H);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ final class hf extends aj {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         field_A = null;
         if (param0 >= -79) {

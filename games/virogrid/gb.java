@@ -20,7 +20,7 @@ final class gb extends tg {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_H = null;
         if (param0 > 112) {
           field_M = null;

@@ -227,9 +227,9 @@ final class jd {
           var7 = a.a("lobby", param3, -95, "largefont", param0);
           db.generalFont = a.a("lobby", param3, -63, "generalfont", param0);
           em.chatFont = a.a("lobby", param3, -56, "chatfont", param0);
-          var7.a(var5, var24);
-          db.generalFont.a(var5, var24);
-          em.chatFont.a(var5, var24);
+          var7.setInlineSprites(var5, var24);
+          db.generalFont.setInlineSprites(var5, var24);
+          em.chatFont.setInlineSprites(var5, var24);
           var8 = new SpriteWidget(0L, (SpriteWidget) null);
           var8.field_C = (e) ((Object) var7);
           var8.field_fb = pg.field_e;
@@ -382,10 +382,10 @@ final class jd {
           var17 = ke.a(32, param3, "lobby", "checkbox");
           vd.field_Z = new en(0L, var17[1], var17[0], 1, IntrusiveDequeCursor.field_e, (String) null);
           GameKeyHandler.field_b = new SpriteWidget(0L, (SpriteWidget) null);
-          GameKeyHandler.field_b.field_vb = qc.a(109, sn.a(param3, "slideregion", "lobby", false));
-          GameKeyHandler.field_b.field_x = qc.a(125, sn.a(param3, "slideregion_mouseover", "lobby", false));
-          GameKeyHandler.field_b.field_T = qc.a(91, sn.a(param3, "slideregion_mouseheld", "lobby", false));
-          GameKeyHandler.field_b.field_L = qc.a(63, sn.a(param3, "slideregion_disabled", "lobby", false));
+          GameKeyHandler.field_b.field_vb = qc.centerOnlyPanelSlices(109, sn.a(param3, "slideregion", "lobby", false));
+          GameKeyHandler.field_b.field_x = qc.centerOnlyPanelSlices(125, sn.a(param3, "slideregion_mouseover", "lobby", false));
+          GameKeyHandler.field_b.field_T = qc.centerOnlyPanelSlices(91, sn.a(param3, "slideregion_mouseheld", "lobby", false));
+          GameKeyHandler.field_b.field_L = qc.centerOnlyPanelSlices(63, sn.a(param3, "slideregion_disabled", "lobby", false));
           pb.field_p = new SpriteWidget(0L, (SpriteWidget) null);
           pb.field_p.field_vb = he.a(ke.a(32, param3, "lobby", "dragbar"), 0);
           pb.field_p.field_x = he.a(ke.a(32, param3, "lobby", "dragbar_mouseover"), 0);

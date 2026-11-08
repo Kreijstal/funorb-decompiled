@@ -28,11 +28,11 @@ final class b extends sh implements ta {
 
     final void l(int param0) {
         if (param0 < -85) {
-          this.a(lc.a(248, IntrusiveDequeCursor.field_d, 29493), true, 113);
+          this.a(lc.createSuggestedUsernameQuery(248, IntrusiveDequeCursor.field_d, 29493), true, 113);
           return;
         }
         this.field_Bb = false;
-        this.a(lc.a(248, IntrusiveDequeCursor.field_d, 29493), true, 113);
+        this.a(lc.createSuggestedUsernameQuery(248, IntrusiveDequeCursor.field_d, 29493), true, 113);
     }
 
     b(je param0, qh param1) {

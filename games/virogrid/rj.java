@@ -43,18 +43,18 @@ final class rj implements WidgetListener {
           var13 = (gb) (stackIn_6_0);
           if (var13 == null) {
           }
-          Rasterizer.b(param0 + param1.field_l, param3 + param1.field_u, param1.field_g, param1.field_m, this.field_k);
+          Rasterizer.fillRectangle(param0 + param1.field_l, param3 + param1.field_u, param1.field_g, param1.field_m, this.field_k);
           var7 = param1.field_g - var13.field_J * 2;
           var8 = param1.field_l + (param0 + var13.field_J);
           var9 = var13.field_K + param1.field_u + param3;
-          Rasterizer.a(var8, var9, var8 + var7, var9, this.field_a);
+          Rasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_a);
           for (var10 = -1 + var13.d((byte) -108); var10 >= 0; var10--) {
-            Rasterizer.c(var7 * var13.a(-1, var10) / var13.a(2147483647) + var8, var9, this.field_b, this.field_e);
+            Rasterizer.fillCircle(var7 * var13.a(-1, var10) / var13.a(2147483647) + var8, var9, this.field_b, this.field_e);
           }
           if (this.field_g == null) {
             return;
           }
-          this.field_g.c(var13.field_n, var8 + var7 / 2, this.field_g.field_J + var9 + var13.field_K, this.field_f, this.field_c);
+          this.field_g.drawCentered(var13.field_n, var8 + var7 / 2, this.field_g.field_J + var9 + var13.field_K, this.field_f, this.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

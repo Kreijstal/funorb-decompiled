@@ -51,7 +51,7 @@ final class pm extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         if (param0 == 0) {
           field_q = null;

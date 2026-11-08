@@ -15,7 +15,7 @@ final class bn {
         return -var3 + (var3 + param0) / param2;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_a = null;
         if (param0 > -108) {

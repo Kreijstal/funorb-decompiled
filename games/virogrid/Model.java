@@ -48,7 +48,7 @@ final class Model extends ll {
     private int[][] field_y;
     private byte[] field_I;
 
-    final static Model a(Js5Archive param0, String param1, String param2) {
+    final static Model load(Js5Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, 100, param2);
         if (var3 == null) {
           return null;
@@ -56,7 +56,7 @@ final class Model extends ll {
         return new Model(var3);
     }
 
-    private final void b(byte[] param0) {
+    private final void decodeLegacyFormat(byte[] param0) {
         int var2;
         int var3;
         PacketBuffer var4;
@@ -563,7 +563,7 @@ final class Model extends ll {
         }
     }
 
-    private final void a(byte[] param0) {
+    private final void decodeExtendedFormat(byte[] param0) {
         byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -980,7 +980,7 @@ final class Model extends ll {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void scaleVertices(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         for (var5 = 0; var5 < this.field_t; var5++) {
           this.field_x[var5] = this.field_x[var5] * param0 / param3;
@@ -994,7 +994,7 @@ final class Model extends ll {
         return (cn) ((Object) new il(this, param0, param1, param2, param3, param4));
     }
 
-    final void a(ll param0, int param1, int param2, int param3, boolean param4) {
+    final void mergeFrom(ll param0, int param1, int param2, int param3, boolean param4) {
         int var15 = 0;
         s dupTemp$0 = null;
         s dupTemp$1 = null;
@@ -1015,7 +1015,7 @@ final class Model extends ll {
         s var16Lifetime1;
         s var16Lifetime2;
         var6 = (Model) (param0);
-        var6.e();
+        var6.computeBounds();
         var6.d();
         field_u = field_u + 1;
         var7 = 0;
@@ -1103,12 +1103,12 @@ final class Model extends ll {
         }
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         field_K = null;
         field_H = null;
     }
 
-    private final void e() {
+    private final void computeBounds() {
         int var7 = 0;
         int var1;
         int var2;
@@ -1167,9 +1167,9 @@ final class Model extends ll {
         this.field_T = false;
         if (param0[param0.length - 1] == -1 &&
           param0[param0.length - 2] == -1) {
-          this.a(param0);
+          this.decodeExtendedFormat(param0);
         } else {
-          this.b(param0);
+          this.decodeLegacyFormat(param0);
         }
     }
 

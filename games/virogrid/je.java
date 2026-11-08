@@ -27,7 +27,7 @@ final class je extends ec {
         this.field_F = new IntrusiveDeque();
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_H = null;
         field_E = null;
         field_B = null;
@@ -87,7 +87,7 @@ final class je extends ec {
         int var3 = var2 - kh.field_d * kh.field_d;
         WidgetContainer.field_y.a(-(199 * var3 / var2) + var1, -124 + Rasterizer.field_f - 90, 199, (byte) -115, 90);
         if (param0 != -17491) {
-          je.h(84);
+          je.releaseStatics(84);
         }
         hg.field_p.a(var1 - (-202 - 438 * var3 / var2), -120 + (Rasterizer.field_f - 4), 438, (byte) -42, 0);
     }
@@ -95,7 +95,7 @@ final class je extends ec {
     final void i(int param0) {
         int var5 = Virogrid.field_F ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_F);
-        gg var3 = (gg) (var2.c(12677));
+        gg var3 = (gg) (var2.next(12677));
         while (var3 != null) {
           if (var3.f(3)) {
             var3.a(false);
@@ -115,7 +115,7 @@ final class je extends ec {
           field_H = (String) null;
         }
         var2 = new IntrusiveDequeCursor(this.field_F);
-        var3 = (gg) (var2.c(12677));
+        var3 = (gg) (var2.next(12677));
         while (var3 != null) {
           if (var3.field_G) {
             return var3;
@@ -129,7 +129,7 @@ final class je extends ec {
         int var5 = Virogrid.field_F ? 1 : 0;
         int var2 = -32 % ((param0 + 40) / 48);
         IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_F);
-        gg var4 = (gg) (var3.c(12677));
+        gg var4 = (gg) (var3.next(12677));
         while (var4 != null) {
           if (var4.a((byte) -75)) {
             var4.a(false);
@@ -146,11 +146,11 @@ final class je extends ec {
           }
           var3 = (gg) (param1);
           if (param0 != 0) {
-            je.h(112);
+            je.releaseStatics(112);
           }
           this.field_F.b(var3, (byte) -45);
           var3.field_G = true;
-          var3.a((UiWidget) (this), param0 ^ -8515);
+          var3.focusNext((UiWidget) (this), param0 ^ -8515);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "je.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -159,7 +159,7 @@ final class je extends ec {
     final void a(byte param0) {
         int var4 = Virogrid.field_F ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_F);
-        gg var3 = (gg) (var2.c(12677));
+        gg var3 = (gg) (var2.next(12677));
         if (param0 != 76) {
           this.g(true);
         }
@@ -176,7 +176,7 @@ final class je extends ec {
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_F);
-        var3 = (gg) (var2.c(12677));
+        var3 = (gg) (var2.next(12677));
         if (param0) {
           this.a((byte) -34);
         }
@@ -189,7 +189,7 @@ final class je extends ec {
         return null;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         int var7 = Virogrid.field_F ? 1 : 0;
         if (null != this.listener) {
           this.listener.a(param1, (UiWidget) (this), true, param2, -23294);
@@ -200,7 +200,7 @@ final class je extends ec {
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_F);
         UiWidget var6 = (UiWidget) (var5.a((byte) 48));
         while (var6 != null) {
-          var6.a((byte) 37, this.field_l + param1, param2 + this.field_u, param3);
+          var6.drawLayer((byte) 37, this.field_l + param1, param2 + this.field_u, param3);
           var6 = (UiWidget) (var5.a(-1));
         }
     }

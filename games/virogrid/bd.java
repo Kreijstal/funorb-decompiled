@@ -8,7 +8,7 @@ final class bd {
     static String[] field_a;
     static SpriteWidget field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 <= 45) {
           return;
@@ -73,7 +73,7 @@ final class bd {
           }
           var3 = wn.a(5);
           if (param0 >= -46) {
-            bd.a(-88);
+            bd.releaseStatics(-88);
           }
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
@@ -124,7 +124,7 @@ final class bd {
           while (param4.length() > var7) {
             var8 = param4.charAt(var7);
             if (var8 == 60) {
-              var6 = param2.field_d[0] + ((var5_int >> 8) + param3.a(param4.substring(0, var7)));
+              var6 = param2.field_d[0] + ((var5_int >> 8) + param3.textWidth(param4.substring(0, var7)));
             }
             if (var6 != -1) {
               param2.field_d[var7] = var6;
@@ -132,7 +132,7 @@ final class bd {
               if (var8 == 32) {
                 var5_int = var5_int + param1;
               }
-              param2.field_d[var7] = param2.field_d[0] + ((var5_int >> 8) + param3.a(param4.substring(0, var7 + 1)) - param3.a((char) var8));
+              param2.field_d[var7] = param2.field_d[0] + ((var5_int >> 8) + param3.textWidth(param4.substring(0, var7 + 1)) - param3.measureCharacterAdvance((char) var8));
             }
             if (62 == var8) {
               var6 = -1;

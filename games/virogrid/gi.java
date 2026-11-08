@@ -42,7 +42,7 @@ final class gi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 > -1) {
           StringBuilder var2 = (StringBuilder) null;
@@ -60,7 +60,7 @@ final class gi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 100) {
-            stackIn_4_0 = tm.a(jh.a(param0, 100, param2), param1 - 172);
+            stackIn_4_0 = tm.a(jh.createAtRatePercent(param0, 100, param2), param1 - 172);
             return stackIn_4_0;
           }
           stackIn_2_0 = (pe) null;
@@ -103,7 +103,7 @@ final class gi {
               stackIn_8_0 = var3;
               return stackIn_8_0;
             }
-            stackIn_6_0 = va.a(var3, 0);
+            stackIn_6_0 = va.copyBytes(var3, 0);
             return stackIn_6_0;
           }
           if (param0 instanceof wh) {

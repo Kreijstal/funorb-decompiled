@@ -152,13 +152,13 @@ final class GameBoard {
         return -1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_F = null;
         field_o = null;
         field_d = (String[][]) null;
         if (param0 <= 66) {
-          GameBoard.a(-93);
+          GameBoard.releaseStatics(-93);
         }
     }
 
@@ -517,7 +517,7 @@ final class GameBoard {
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           if (param1 <= 34) {
-            GameBoard.a(-104);
+            GameBoard.releaseStatics(-104);
           }
           var3_int = param0.readUnsignedByte(11132);
           if ((var3_int & 2) != 0) {

@@ -246,7 +246,7 @@ abstract class RasterBuffer {
     }
 
     final void a(byte param0) {
-        Rasterizer.a(this.field_l, this.field_c, this.field_b);
+        Rasterizer.setTarget(this.field_l, this.field_c, this.field_b);
         if (param0 != 29) {
           this.a((byte) -120);
         }

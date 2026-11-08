@@ -7,7 +7,7 @@ abstract class MouseWheelInput {
     static ob field_c;
     static Sprite[] achievementIcons;
 
-    abstract int a(int param0);
+    abstract int pollRotation(int param0);
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (param0 != -13079) {

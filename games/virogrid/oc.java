@@ -11,9 +11,9 @@ final class oc extends IntrusiveNode {
     static int field_k;
     static String field_h;
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
-          oc.c(false);
+          oc.releaseStatics(false);
           field_h = null;
           field_i = null;
           return;

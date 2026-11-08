@@ -111,7 +111,7 @@ final class wm {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         if (param0 != 0) {
           return;
@@ -227,7 +227,7 @@ final class wm {
     final static void c(byte param0) {
         nf.field_g = pg.field_g;
         if (param0 != -86) {
-          wm.c(-123);
+          wm.releaseStatics(-123);
         }
         we.field_l = 0;
         if (hm.field_c == i.field_y) {
